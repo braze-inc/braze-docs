@@ -47,7 +47,7 @@ The Braze Swift SDK separates features into standalone libraries to provide deve
 | Package | Details |
 | ------- | ------- |
 | `BrazeNotificationService` | Notification service extension library providing support for rich push notifications. |
-| `BrazePushStory` | Notification content extension library providing support for push stories. |
+| `BrazePushStory` | Notification content extension library providing support for Push Stories. |
 {: .ws-td-nw-1}
 
  Select the package that best suits your needs and click **Add Package**. Make sure you select `BrazeKit` at a minimum.

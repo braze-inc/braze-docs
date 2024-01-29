@@ -259,40 +259,6 @@ This event is triggered when a user visits a specified location. Use this to tra
 
 {% api %}
 
-## News Feed impression event
-
-{% alert note %}
-News Feed is being deprecated. Braze recommends that customers who use our News Feed tool move over to our Content Cards messaging channel—it's more flexible, customizable, and reliable. Check out the [migration guide]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) for more.
-{% endalert %}
-
-{% apitags %}
-Impression, News Feed
-{% endapitags %}
-
-This event occurs when the user views the entire News Feed, not a specific News Feed Card. Use this to track users viewing the News Feed.
-
-{% alert tip %}
-We do track other News Feed events; these are located in [Message Engagement Events]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/message_engagement_events/).
-{% endalert %}
-
-```json
-// News Feed Impression: users.behaviors.app.NewsFeedImpression
-{
-  "id": (required, string) unique id of this event,
-  "user_id": (required, string) Braze user id of the user,
-  "external_user_id": (optional, string) External ID of the user,
-  "time": (required, int) 10-digit UTC time of the event in seconds since the epoch,
-  "app_id": (required, string) id for the app on which the user action occurred,
-  "platform": (optional, string) platform of the device (one of 'ios', 'android', 'web', 'kindle', 'tvos', OR 'roku'),
-  "os_version": (optional, string) os version of the device used for the action,
-  "device_model": (optional, string) hardware model of the device,
-  "device_id": (optional, string) id of the device on which the event occurred
-}
-```
-
-{% endapi %}
-{% api %}
-
 ## Attribution events
 
 {% apitags %}

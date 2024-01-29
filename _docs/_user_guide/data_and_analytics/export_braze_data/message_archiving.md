@@ -166,7 +166,7 @@ When a message is sent outside of a campaign or Canvas, the campaign ID in the f
 
 ### How do I find more information about this send?
 
-Using the `dispatch_id` and `user_id`, you can cross-reference the templated message with our Currents data to find more information like the external user ID of who received it, the timestamp it was delivered, whether or not the user opened or clicked the message, and more.
+You can use either the `external_id` or `dispatch_id` in conjunction with the `user_id` to cross-reference the templated message with our Currents data to find more information like the timestamp it was delivered, whether or not the user opened or clicked the message, and more.
 
 ### How are retries handled?
 

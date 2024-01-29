@@ -121,7 +121,7 @@ Total number of clicks on Button 2 of the message.
 In-App Message
 {% endapitags %}
 
-Total number of choices selected when the user clicks the submit button on the survey question page of a [Simple Survey]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/templates/simple_survey/).
+Total number of choices selected when the user clicks the submit button on the survey question page of a [simple survey]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/templates/simple_survey/).
 
 {% endapi %}
 
@@ -173,7 +173,7 @@ The percentage of confidence that a certain variant of a message is outperformin
 In-App Message
 {% endapitags %}
 
-Total clicks on the call to action button on the confirmation page of a [Simple Survey]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/templates/simple_survey/).
+Total clicks on the call to action button on the confirmation page of a [simple survey]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/templates/simple_survey/).
 
 {% endapi %}
 
@@ -185,7 +185,7 @@ Total clicks on the call to action button on the confirmation page of a [Simple 
 In-App Message
 {% endapitags %}
 
-Total clicks on the close (x) button on the confirmation page of a [Simple Survey]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/templates/simple_survey/).
+Total clicks on the close (x) button on the confirmation page of a [simple survey]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/templates/simple_survey/).
 
 {% endapi %}
 
@@ -442,7 +442,7 @@ The total number of emails delivered that were marked as "spam."
 In-App Message
 {% endapitags %}
 
-Total clicks on the close (x) button on the survey question page of a [Simple Survey]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/templates/simple_survey/).
+Total clicks on the close (x) button on the survey question page of a [simple survey]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/templates/simple_survey/).
 
 {% endapi %}
 
@@ -454,7 +454,7 @@ Total clicks on the close (x) button on the survey question page of a [Simple Su
 In-App Message
 {% endapitags %}
 
-Total clicks on the submit button of a [Simple Survey]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/templates/simple_survey/).
+Total clicks on the submit button of a [simple survey]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/templates/simple_survey/).
 
 {% endapi %}
 

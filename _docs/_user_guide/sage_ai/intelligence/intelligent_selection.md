@@ -15,7 +15,7 @@ A variant that appears to be performing better than others will get sent to more
 ![A/B Testing section of a campaign or Canvas with Intelligent Selection enabled.][3]
 
 Intelligent Selection will:
-- Repeatedly look at performance data and shift campaign traffic toward winning variants gradually.
+- Repeatedly look at performance data and shift campaign traffic toward Winning Variants gradually.
 - Check that more users receive your best-performing variant without sacrificing statistical confidence.
 - Rule out underperforming variants and identify high-performing variants faster than a [traditional A/B test][1].
 - Test more frequently and with greater confidence that your users will see your best message. 
@@ -35,14 +35,14 @@ When adding variants into your Canvas, click on one of the variant percentages. 
 Intelligent Selection will not be available if you haven't yet added conversion events to your Canvas or if your campaign is composed of a solo variant or solo control group.
 
 {% alert note %}
-We do not allow the use of intelligent selection with campaigns with re-eligibility enabled in under 24 hours because it would affect the integrity of the control variant. Check out [Intelligence FAQ]({{site.baseurl}}/user_guide/intelligence/faqs/#why-is-re-eligibility-not-available-when-combined-with-intelligent-selection) to learn more.
+We do not allow the use of Intelligent Selection with campaigns with re-eligibility enabled in under 24 hours because it would affect the integrity of the control variant. Check out [Intelligence FAQ]({{site.baseurl}}/user_guide/intelligence/faqs/#why-is-re-eligibility-not-available-when-combined-with-intelligent-selection) to learn more.
 {% endalert %}
 
 ## For how long will it run?
 
 For campaigns and Canvases, Intelligent Selection will run until it gathers enough evidence about the "true" conversion rates of the variants. "Enough" is determined by a special metric called "regret." You can think of it as similar to Confidence: Intelligent Selection will turn itself off when there's enough data to know which variant is best. 
 
-In most cases, Intelligent Selection will choose one of the variants as the winning variant. This variant will be given 100% of the audience for future sends.
+In most cases, Intelligent Selection will choose one of the variants as the Winning Variant. This variant will be given 100% of the audience for future sends.
 
 {% alert note %}
 It's possible for Intelligent Selection to stop optimizing without picking a single clear winner. Intelligent Selection stops optimizing when it has a 95% confidence that continuing the experiment won't improve the conversion rate by more than 1% of its present rate.

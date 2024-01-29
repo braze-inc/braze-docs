@@ -23,8 +23,6 @@ If your Android push integration is already set up, and you're looking to migrat
 
 In this section, you'll learn how to register for push using Google's Firebase Cloud Messaging (FCM) API. If you'd like to view a sample app using FCM with the Braze Android SDK, see [Braze: Firebase Push Sample App.](https://github.com/braze-inc/braze-android-sdk/tree/master/samples/firebase-push)
 
-{% multi_lang_include firebase_cloud_messaging/early_access_banner.md %}
-
 ### Step 1: Add Firebase to your project
 
 First, you'll need to add Firebase to your Android project. For step-by-step instructions, see Google's [Firebase setup guide][49].

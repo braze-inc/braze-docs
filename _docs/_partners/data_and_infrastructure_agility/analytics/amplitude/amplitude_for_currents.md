@@ -80,9 +80,8 @@ Braze supports exporting the following data listed in the Currents [user behavio
 - Location: `users.behaviors.Location`
 - Purchase: `users.behaviors.Purchase`
 - Uninstall: `users.behaviors.Uninstall`
-- App (first session, news feed impression, session end, session start)
+- App (first session, session end, session start)
   - `users.behaviors.app.FirstSession`
-  - `users.behaviors.app.NewsFeedImpression`
   - `users.behaviors.app.SessionEnd`
   - `users.behaviors.app.SessionStart`
 - Subscription (global state change): `users.behaviors.subscription.GlobalStateChange`
@@ -116,10 +115,6 @@ Braze supports exporting the following data listed in the Currents [user behavio
   - `users.messages.inappmessage.Abort`
   - `users.messages.inappmessage.Click`
   - `users.messages.inappmessage.Impression`
-- News Feed card (abort, click, impression)
-  - `users.messages.newsfeedcard.Abort`
-  - `users.messages.newsfeedcard.Click`
-  - `users.messages.newsfeedcard.Impression`
 - Push notification (abort, bounce, iOSforeground, open, send)
   - `users.messages.pushnotification.Abort`
   - `users.messages.pushnotification.Bounce`
@@ -128,7 +123,6 @@ Braze supports exporting the following data listed in the Currents [user behavio
   - `users.messages.pushnotification.Send`
 - SMS (abort, carrier send, delivery, delivery failure, inbound receive, rejection, send, short link click)
   - `users.messages.sms.Abort`
-  - `users.messages.sms.CarrierSend`
   - `users.messages.sms.Delivery`
   - `users.messages.sms.DeliveryFailure`
   - `users.messages.sms.InboundReceive`

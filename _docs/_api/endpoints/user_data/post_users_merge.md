@@ -50,6 +50,8 @@ Authorization: Bearer YOUR_REST_API_KEY
 
 ### Merge behavior
 
+The behavior documented below is true for all Braze features that *are not* powered by Snowflake. User merges won't be reflected for the **Messaging History** tab, Segment Extensions, Query Builder, and Currents.
+
 {% alert important %}
 The endpoint does not guarantee the sequence of `merge_updates` objects being updated.
 {% endalert %}

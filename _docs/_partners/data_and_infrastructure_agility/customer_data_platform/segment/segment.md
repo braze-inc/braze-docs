@@ -265,12 +265,13 @@ Certain Segment special traits map to standard attribute profile fields in Braze
 Other reserved Braze profile fields such as `email_subscribe` and `push_subscribe` can be sent by using the Braze naming convention for these fields and passing them as traits within an identify call.
 
 ##### Adding a user to a subscription group
+
 You can also subscribe or unsubscribe a user from a given subscription group using the following fields in the traits parameter.
 
 Use the reserved Braze profile field called `braze_subscription_groups`, which can be associated with an array of objects. Each object in the array should have two reserved keys:
 
 1. `subscription_group_state`: Indicates whether the user is `"subscribed"` or `"unsubscribed"` to a specific subscription group.
-2. `subscription_group_id`: Represents the unique ID of the subscription group. You can find this ID in the Braze dashboard under `Subscription Group Management`.
+2. `subscription_group_id`: Represents the unique ID of the subscription group. You can find this ID in the Braze dashboard under **Subscription Group Management**.
 
 {% subtabs %}
 {% subtab Swift %}

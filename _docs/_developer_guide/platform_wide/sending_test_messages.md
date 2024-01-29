@@ -12,7 +12,7 @@ description: "This reference article covers sending test messages for different 
 
 ## Creating a designated test segment <a class="margin-fix" name="test-segment"></a>
 
-Once you set up a test segment, you can utilize it to test **any** of our messaging channels. The process configured properly will only need to be done once if configured properly.
+Once you set up a test segment, you can use it to test **any** of our messaging channels. If configured properly, the process will only need to be done once.
 
 To set up a test segment, navigate to the **Segments** page in the dashboard and create a new segment. Click **Add Filter** to choose one of the testing filters found towards the bottom of the dropdown menu.
 

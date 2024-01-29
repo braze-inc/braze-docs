@@ -9,7 +9,7 @@ toc_headers: "h2"
 
 # Manual integration
 
-> If you don't have access to a package manager, such as [Swift Package Manager]({{sitebase.url}}/docs/developer_guide/platform_integration_guides/swift/initial_sdk_setup/installation_methods/swift_package_manager/) or [CocoaPods]({{sitebase.url}}/docs/developer_guide/platform_integration_guides/swift/initial_sdk_setup/installation_methods/cocoapods/), you can manually integrate the Swift SDK instead.
+> If you don't have access to a package manager, such as [Swift Package Manager]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/initial_sdk_setup/installation_methods/swift_package_manager/) or [CocoaPods]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/initial_sdk_setup/installation_methods/cocoapods/), you can manually integrate the Swift SDK instead.
 
 ## Step 1: Download the Braze SDK
 
@@ -27,7 +27,7 @@ The Braze Swift SDK contains a variety of standalone XCFrameworks, which gives y
 | `BrazeLocation`            | No        | Location library that provides support for location analytics and geofence monitoring.                                                                                                                                                                                                                                |
 | `BrazeUI`                  | No        | Braze-provided user interface library for in-app messages and Content Cards.                                                                                                                                                                                                                                          |
 | `BrazeNotificationService` | No        | Notification service extension library that provides support for rich push notifications.  Do not add this library directly to your main application target, instead [add the `BrazeNotificationService` library separately](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/b2-rich-push-notifications). |
-| `BrazePushStory`           | No        | Notification content extension library that provides support for push stories. Do not add this library directly to your main application target, instead [add the `BrazePushStory` library separately](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/b3-push-stories).                                  |
+| `BrazePushStory`           | No        | Notification content extension library that provides support for Push Stories. Do not add this library directly to your main application target, instead [add the `BrazePushStory` library separately](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/b3-push-stories).                                  |
 {: .ws-td-nw-1 .reset-td-br-1 .reset-td-br-2}
 
 ## Step 3: Prepare your files

@@ -267,7 +267,7 @@ glossaries:
     tags:
       - Retargeting
   - name: Subscription Group
-    description: Segments your users by their Subscription Group for email or SMS/MMS. Archived Groups will not appear and cannot be used.
+    description: Segments your users by their subscription group for email or SMS/MMS. Archived Groups will not appear and cannot be used.
     tags:
       - Channel subscription behavior
   - name: Email Available
@@ -515,19 +515,19 @@ glossaries:
     tags:
       - Install Attribution
   - name: Churn Risk Category
-    description:  Segments your users by churn risk category according to a specific Prediction.
+    description:  Segments your users by churn risk category according to a specific prediction.
     tags:
       - Intelligence and predictive
   - name: Churn Risk Score
-    description: Segments your users by churn risk score according to a specific Prediction.
+    description: Segments your users by churn risk score according to a specific prediction.
     tags:
       - Intelligence and predictive
   - name: Event Likelihood Category
-    description: Segments your users by likelihood of performing an event according to a specific Prediction.
+    description: Segments your users by likelihood of performing an event according to a specific prediction.
     tags:
       - Intelligence and predictive
   - name: Event Likelihood Score
-    description: Segments your users by likelihood of performing an event according to a specific Prediction.
+    description: Segments your users by likelihood of performing an event according to a specific prediction.
     tags:
       - Intelligence and predictive
   - name: Intelligent Channel
