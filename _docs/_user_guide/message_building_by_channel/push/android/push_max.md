@@ -26,7 +26,7 @@ Some Android devices manufactured by Chinese Original Equipment Manufacturers (O
 
 - Available for Android push notifications only
 - Not supported for action-based or API-triggered messages
-- Not supported when the "most recently used device" option is enabled
+- Not supported when the option to [only send to the user's last used device]({{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message#device-options) is selected
 
 ## Prerequisites
 
