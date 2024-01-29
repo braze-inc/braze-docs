@@ -1229,6 +1229,60 @@ This event occurs when a user clicks on an in-app message.
 - If you are using Kafka to ingest [Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/) data, contact your customer success manager to enable sending `ad_id`.
 {% endapi %}
 
+{% api %}
+
+## In-app message abort events
+
+{% apitags %}
+In-App Messages, Abort
+{% endapitags %}
+
+This event occurs when an in-app message is aborted.
+
+```json
+// In-App Message Abort: users.messages.inappmessage.Abort
+{
+  "abort_log": (required, string) unique ID of this abort log,
+  "abort_type": (required, string) reason the message was aborted,
+  "ad_id": (optional, string) advertising identifier,
+  "ad_id_type": (optional, string) One of 'ios_idfa', 'google_ad_id', OR 'roku_ad_id',
+  "ad_tracking_enabled": (optional, boolean) whether advertising tracking is enabled for the device
+  "app_group_id": (required, string) API ID of the workspace associated with the event,
+  "app_id": (required, string) ID for the app on which the user action occurred,
+  "browser": (optional, string) for in-browser messages; name of the browser on which the message abort occurred,
+  "campaign_id": (optional, string) ID of the campaign if from a campaign,
+  "campaign_name": (optional, string) name of the campaign,
+  "message_variation_id": (optional, string) ID of the message variation if from a campaign,
+  "message_variation_name": (optional, string) the name of the message variation if from a campaign,
+  "canvas_id": (optional, string) ID of the Canvas if from a Canvas,
+  "canvas_name": (optional, string) name of the Canvas,
+  "canvas_variation_id": (optional, string) ID of the Canvas variation the user is in if from a Canvas,
+  "canvas_variation_name": (optional, string) name of the Canvas variation the user is in if from a Canvas,
+  "canvas_step_id": (optional, string) ID of the step for this message if from a Canvas,
+  "canvas_step_name": (optional, string) name of the Canvas step this event belongs to,
+  "card_id": (optional, string) ID of the card that was viewed,  
+  "carrier": (optional, string) name of the mobile phone carrier,
+  "device_id": (optional, string) ID of the device on which the event occurred,
+  "device_model": (optional, string) hardware model of the device,
+  "dispatch_id": (optional, string) ID of the message dispatch (unique ID for each 'transmission' sent from the Braze platform and users who are sent a schedule message get the same dispatch_id. Action-based or API-triggered messages get a unique dispatch_id per user
+  "external_user_id": (optional, string) External ID of the user,
+  "id": (required, string) unique ID of this event,
+  "message_variation_id": (optional, string) ID of the message variation if from a campaign,
+  "message_variation_name": (optional, string) the name of the message variation if from a campaign,
+  "os_version": (optional, string) os version of device used for the action,
+  "platform": (optional, string) platform of the device (one of 'ios', 'android', 'web', 'kindle', 'tvos', OR 'roku'),
+  "resolution": ???,
+  "send_id": (optional, string) ID of the message if specified for the campaign (See Send Identifier under API Identifier Types),
+  "time": (required, int) 10-digit UTC time of the event in seconds since the epoch,
+  "timezone": (optional, string) IANA time zone of the user at the time of the event,
+  "user_id": (required, string) Braze user ID of the user
+}
+```
+
+#### Property details
+- For `ad_id`, `ad_id_type` and `ad_tracking_enabled`, you need to explicitly collect the iOS IDFA and Android Google advertising ID through the native SDKs. Learn more about this setup for [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/swift_idfv/) and [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id).
+- If you are using Kafka to ingest [Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/) data, contact your customer success manager to enable sending `ad_id`.
+{% endapi %}
 
 {% api %}
 
