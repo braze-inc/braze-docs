@@ -79,7 +79,7 @@ You should now be able to launch your application and see sessions being logged 
 
 {% alert important %}
 
-The iOS bindings for Xamarin SDK version 4.0.0+ uses the [Braze Swift SDK](https://github.com/braze-inc/braze-swift-sdk/). All versions prior to this use the [legacy AppboyKit SDK](https://github.com/Appboy/Appboy-ios-sdk).
+The iOS bindings for Xamarin SDK version 4.0.0+ use the [Braze Swift SDK](https://github.com/braze-inc/braze-swift-sdk/). All prior versions use the [legacy AppboyKit SDK](https://github.com/Appboy/Appboy-ios-sdk).
 
 {% endalert %}
 
