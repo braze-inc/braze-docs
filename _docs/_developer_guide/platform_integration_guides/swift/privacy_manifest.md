@@ -46,6 +46,7 @@ Braze provides a [flexible approach](https://braze-inc.github.io/braze-swift-sdk
 For example, to include date of birth, and a few custom events and attributes in your "tracking" list, use the sample code below to reroute these individual data points to the Braze tracking domain. These data points will require a user to have accepted the Ad Tracking Transparency prompt in order to be send successfully.
 
 For the full list of data types that can be configured for tracking, refer to the tracking properties [here](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/configuration-swift.class/trackingproperty).
+
 ```swift
 import UIKit
 import BrazeKit
