@@ -79,7 +79,7 @@ You should now be able to launch your application and see sessions being logged 
 
 {% alert important %}
 
-The iOS bindings for Xamarin SDK version 4.0.0+ uses the [Braze Swift SDK][4]. All versions prior to this use the [legacy AppboyKit SDK][5].
+The iOS bindings for Xamarin SDK version 4.0.0+ uses the [Braze Swift SDK](https://github.com/braze-inc/braze-swift-sdk/). All versions prior to this use the [legacy AppboyKit SDK](https://github.com/Appboy/Appboy-ios-sdk).
 
 {% endalert %}
 
@@ -119,7 +119,7 @@ See the `AppDelegate.cs` file in the [TestApp.XamariniOS][110] sample app.
 
 Within your `Info.plist` file, add the following snippet:
 
->  Be sure to update `YOUR-SDK-ENDPOINT` with the correct value from your [Settings][5] page.
+>  Be sure to update `YOUR-SDK-ENDPOINT` with the correct value from your Settings page.
 
 ```csharp
 // C#
@@ -153,8 +153,6 @@ Braze should now be collecting data from your application and your basic integra
 
 [2]: http://developer.xamarin.com/guides/android/advanced_topics/java_integration_overview/binding_a_java_library_%28.jar%29/
 [3]: https://github.com/braze-inc/braze-xamarin-sdk
-[4]: https://github.com/braze-inc/braze-swift-sdk/
-[5]: https://github.com/Appboy/Appboy-ios-sdk
 [8]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/
 [9]: https://www.nuget.org/
 [12]: https://www.nuget.org/packages/Xamarin.Android.Support.v4/
