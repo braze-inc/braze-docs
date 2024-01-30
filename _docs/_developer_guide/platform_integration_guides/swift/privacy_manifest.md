@@ -15,7 +15,7 @@ By default, Braze does not collect any "[tracking data](https://developer.apple.
 
 The Braze privacy manifest, along with other privacy manifests you collect from other SDKs used, will be aggregated and displayed in the App Store to form your Privacy Nutrition label.
 
-If you collect other 1st party data in your app, be sure to include that when generating your [Privacy Report](https://developer.apple.com/documentation/bundleresources/privacy_manifest_files/describing_data_use_in_privacy_manifests#4239187) in Xcode.
+If you collect other 1st party data in your app, be sure to indicate that in your own privacy manifest when generating your [Privacy Report](https://developer.apple.com/documentation/bundleresources/privacy_manifest_files/describing_data_use_in_privacy_manifests#4239187) in Xcode.
 
 As of iOS 17.2, Apple will block any "tracking data" by default, until the user accepts the Ad Tracking Transparency prompt.
 
@@ -35,7 +35,7 @@ To support this privacy enhancement, Braze has added new features to our Swift S
 
 ### New Tracking Domains
 
-Braze has added new SDK API domains intended for "tracking" data. These domains will prefix `tracking-` to the hostname of your API endpoint and is automatically configured with no integration update needed. For example, if you initialize the SDK with an endpoint of `sdk.iad-01.braze.com`, Braze will send your declared tracking data to `sdk-tracking.iad-01.braze.com`.
+Braze has added new SDK API domains intended for "tracking" data. These domains will embed the `-tracking` suffix within the hostname of your API endpoint and is automatically configured with no integration update needed. For example, if you initialize the SDK with an endpoint of `sdk.iad-01.braze.com`, Braze will send your declared tracking data to `sdk-tracking.iad-01.braze.com`.
 
 ### Declaring Tracking Data
 
@@ -43,7 +43,7 @@ If you choose to collect user information through the Braze Swift SDK with plans
 
 Braze provides a [flexible approach](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/e1-privacy-tracking/) allowing you to dynamically add and remove individual data points from your tracking list.
 
-For example, to include date of birth, and a few custom events and attributes in your "tracking" list, use the sample code below to reroute these individual data points to the Braze tracking domain. These data points will require a user to have accepted the Ad Tracking Transparency prompt in order to be send succesfully.
+For example, to include date of birth, and a few custom events and attributes in your "tracking" list, use the sample code below to reroute these individual data points to the Braze tracking domain. These data points will require a user to have accepted the Ad Tracking Transparency prompt in order to be send successfully.
 
 ```swift
 import UIKit
