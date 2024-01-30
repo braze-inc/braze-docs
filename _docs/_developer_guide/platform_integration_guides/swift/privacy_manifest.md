@@ -31,7 +31,7 @@ In addition the default data Braze declares in the Privacy Manifest, you may cho
 
 Apple requires that you declare which data types you collect are used for "tracking" vs. "non-tracking" usage. The Braze Swift SDK provides flexible APIs to help you adhere to Apple policies while ensure end-users' privacy is respected.
 
-To support this privacy enhancement, Braze has added new features to our Swift SDK:
+To support this privacy enhancement, Braze has added new features to our Swift SDK to support customized tracking endpoints and data collection. For a complete tutorial, see our [Braze Swift SDK Tutorial on Privacy Tracking](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/e1-privacy-tracking/).
 
 ### New Tracking Domains
 
