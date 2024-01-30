@@ -28,9 +28,9 @@ Apple announced its commitment to expand the scope of App Tracking Transparency 
 
 #### Privacy manifests
 
-Privacy manifests allow developers to outline the privacy practices of their app&#8212;including third-party SDKs&#8212;in a standardized format. As part of this effort, Apple plans to identify and block iOS APIs that might be used for fingerprinting. If applications use such APIs, they will be obliged to list a "required reason" for using that API in the privacy manifest. 
+Privacy manifests allow developers to outline the privacy practices of their app&#8212;including third-party SDKs&#8212;in a standardized format. Starting in iOS 17.2, Apple will block iOS APIs that might be used for fingerprinting. If applications use such APIs, they will be obliged to list a "required reason" for using that API in the privacy manifest. 
 
-Braze will be releasing support for a Privacy Manifest as well as fine grained control over tracking and non-tracking data declaration.
+Additionally, Braze has released a Privacy Manifest and new flexible APIs to designate individual data points as "tracking" and "non-tracking". For more information, read our [Privacy Manifest](/docs/developer_guide/platform_integration_guides/swift/privacy_manifest) documentation.
 
 #### Code signing
 
