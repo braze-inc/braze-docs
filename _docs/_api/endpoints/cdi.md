@@ -26,6 +26,3 @@ guide_featured_list:
 
 ---
 
-{% alert important %}
-The Braze Cloud Data Ingestion endpoints are currently in early access. Contact your customer success manager if you're interested in participating in this early access.
-{% endalert %}
