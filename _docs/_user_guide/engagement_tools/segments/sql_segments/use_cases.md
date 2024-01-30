@@ -160,7 +160,7 @@ HAVING COUNT(id) > 0;
 `CANVAS_ID` is the number after `/canvas/` in your Canvas URL.
 {% endapi %}
 
-{% api }
+{% api %}
 ## Select users that made any purchase with a property array containing a specific value
 {% apitags %}
 Purchase, Property
