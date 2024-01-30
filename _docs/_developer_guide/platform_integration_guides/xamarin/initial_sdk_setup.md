@@ -77,6 +77,12 @@ You should now be able to launch your application and see sessions being logged 
 
 ## iOS
 
+{% alert important %}
+
+The iOS bindings for Xamarin SDK version 4.0.0+ uses the [Braze Swift SDK][4]. All versions prior to this use the [legacy AppboyKit SDK][5].
+
+{% endalert %}
+
 ### Step 1: Get the Xamarin binding
 
 A Xamarin binding is a way to use native libraries in Xamarin apps.  The implementation of a binding consists of building a C# interface to the library and then using that interface in your application.
@@ -147,6 +153,8 @@ Braze should now be collecting data from your application and your basic integra
 
 [2]: http://developer.xamarin.com/guides/android/advanced_topics/java_integration_overview/binding_a_java_library_%28.jar%29/
 [3]: https://github.com/braze-inc/braze-xamarin-sdk
+[4]: https://github.com/braze-inc/braze-swift-sdk/
+[5]: https://github.com/Appboy/Appboy-ios-sdk
 [8]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/
 [9]: https://www.nuget.org/
 [12]: https://www.nuget.org/packages/Xamarin.Android.Support.v4/
