@@ -71,9 +71,9 @@ Boolean attributes are useful for storing simple binary data about your users, l
 
 | Segmentation options | Dropdown filter | Input options | Examples |
 | ---------------------| --------------- | ------------- | -------- |
-| Check if the boolean value **is** either true, false, true or not set, or false or not set | **IS**  | **TRUE**, **FALSE**, **TRUE OR NOT SET**, or **FALSE OR NOT SET** | A boolean of `X` will be `true` if the user profile has the value `X`, `false` if the profile doesn't have `X`, `true or not set` if the profile has `X` or no value, and `false or not set` if the profile doesn't have `X` or any value.  |
-| Check if the boolean value **exists** on a user's profile | **IS NOT BLANK**  | **N/A** | A boolean of `X` will be `true` if the user profile has the value `X`. | 
-| Check if the boolean value **does not exist** on a user's profile | **IS BLANK**  | **N/A** | A boolean of `X` will be `true` if the user profile doesn't have the value `X`.|
+| Check if the boolean value **is** either true, false, true or not set, or false or not set | **IS**  | **TRUE**, **FALSE**, **TRUE OR NOT SET**, or **FALSE OR NOT SET** | If this filter specifies `coffee_drinker`, a user will match this filter in the following circumstances: <br> {::nomarkdown}<ul><li>If this filter is <code>true</code> and the user has the value <code>coffee_drinker</code></li><li>If this filter is <code>false</code> and the user doesn't have the value <code>coffee_drinker</code></li><li>If this filter is <code>true or not set</code> and the user has the value <code>coffee_drinker</code> or no value</li><li>If this filter is <code>false or not set</code> and the user doesn't have <code>coffee_drinker</code> or any value</li></ul>{:/} |
+| Check if the boolean value **exists** on a user's profile | **IS NOT BLANK**  | **N/A** | If this filter specifies `coffee_drinker` and a user has the value `coffee_drinker`, the user will match this filter. | 
+| Check if the boolean value **does not exist** on a user's profile | **IS BLANK**  | **N/A** | If this filter specifies `coffee_drinker`and a user doesn't have the value `coffee_drinker`, the user will match this filter.|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
 ### Numbers {#numbers}
@@ -90,12 +90,12 @@ Money spent should not be recorded by this method. Rather it should be recorded 
 
 | Segmentation options | Dropdown filter | Input options | Examples |
 | ---------------------| --------------- | ------------- | -------- |
-| Check if the numeric attribute **is exactly** a **number**| **EXACTLY** | **NUMBER** | An attribute value of `X` will be `true` if the user profile has the value `X`. |
-| Check if the numeric attribute **does not equal** a **number**| **DOES NOT EQUAL** | **NUMBER** | An attribute value of `X` will be `true` if the user profile does not have the value `X`.|
-| Check if the numeric attribute **is more than** a **number**| **MORE THAN** | **NUMBER** | An attribute value of `X` will be `true` if the user profile has a value greater than `X`. |
-| Check if the numeric attribute **is less than** a **number**| **LESS THAN** | **NUMBER** | An attribute value of `X` will be `true` if the user profile has a value less than `X`. |
-| Check if the numeric attribute **exists** on a user's profile | **IS NOT BLANK** | **N/A** | A numeric attribute `X` will be `true` if the user profile has the attribute, regardless of value. |
-| Check if the numeric attribute **does not exist** on a user's profile | **IS BLANK** | **N/A** | A numeric attribute `X` will be `true` if the user profile doesn't have the attribute, regardless of value.|
+| Check if the numeric attribute **is exactly** a **number**| **EXACTLY** | **NUMBER** | If this filter specifies `10` and a user profile has the value `10`, the user will match this filter. |
+| Check if the numeric attribute **does not equal** a **number**| **DOES NOT EQUAL** | **NUMBER** | If this filter specifies `10` and a user profile doesn't have the value `10`, the user will match this filter. |
+| Check if the numeric attribute **is more than** a **number**| **MORE THAN** | **NUMBER** | If this filter specifies `10` and a user profile has a value greater than `10`, the user will match this filter. |
+| Check if the numeric attribute **is less than** a **number**| **LESS THAN** | **NUMBER** | If this filter specifies `10` and a user profile has a value lesser than `10`, the user will match this filter. |
+| Check if the numeric attribute **exists** on a user's profile | **IS NOT BLANK** | **N/A** | If a user profile contains the specified numeric attribute, regardless of value, the user will match this filter. |
+| Check if the numeric attribute **does not exist** on a user's profile | **IS BLANK** | **N/A** | If a user profile doesn't contain the specified numeric attribute, the user will match this filter.|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
 #### Number attribute details
@@ -111,16 +111,16 @@ Note that if you input any values with spaces in between, before, or after words
 
 | Segmentation options | Dropdown filter | Input options | Examples |
 | ---------------------| --------------- | ------------- | -------- |
-| Check if the string attribute **exactly matches** an inputted string| **EQUALS** | **STRING**<br>Case sensitive | The string `A B C` will be `true` if the user profile has `A B C`.|
+| Check if the string attribute **exactly matches** an inputted string| **EQUALS** | **STRING**<br>Case sensitive | If this filter value specifies either `book` or `pen` and a user has `book` and `pen` on their profile, they will match this filter. |
 | Check if the string attribute **partially matches** an inputted string **OR** Regular Expression | **MATCHES REGEX** | **STRING** **OR** **REGULAR EXPRESSION**<br>Not case sensitive. | 
 | Check if the string attribute **does not partially match** an inputted string **OR** Regular Expression | **DOES NOT MATCH REGEX** * | **STRING** **OR** **REGULAR EXPRESSION**<br>Not case sensitive. |
-| Check if the string attribute **does not match** an inputted string| **DOES NOT EQUAL** | **STRING**<br>Not case sensitive.  | The string `A B C` will be `true` if the user profile doesn't have `A B C`.|
-| Check if the string attribute **exists** on a user's profile | **IS NOT BLANK** | **N/A** | The attribute `A` will be `true` if the user profile has `A`, regardless of value.|
-| Check if the string attribute **does not exist** on a user's profile | **BLANK** | **N/A** | The attribute `A` will be `true` if the user profile doesn't have `A`, regardless of value.|
-| Check if the string exactly matches **any** of the inputted strings | **IS ANY OF** | **STRING**<br>Case sensitive; multiple strings allowed | The strings `A B C`, `D E F`, and `G H I` will be `true` if the user profile has at least one of those strings. |
-| Check if the string attribute **does not exactly match any** of the inputted strings | **IS NONE OF** |**STRING**<br>Case sensitive; multiple strings allowed | The strings `A B C`, `D E F`, and `G H I` will be `true` if the user profile doesn't have any of those strings.|
-| Check if the string attribute **partially matches any** of the inputted strings | **CONTAINS ANY OF** | **STRING**<br>Case sensitive; multiple strings allowed | 
-| Check if the string attribute **does not partially match any** of the inputted strings | **DOESN'T CONTAIN ANY OF** | **STRING**<br>Case sensitive; multiple strings allowed | 
+| Check if the string attribute **does not match** an inputted string| **DOES NOT EQUAL** | **STRING**<br>Not case sensitive.  | If this filter value specifies either `book` or `pen` and a user doesn't have `book` or `pen` on their profile, they will match this filter.|
+| Check if the string attribute **exists** on a user's profile | **IS NOT BLANK** | **N/A** | If this filter value is `favorite_genre` and the user profile has the attribute `favorite_genre`, the user will match this filter regardless of their attribute value. For example, the user can have `sci-fi`, `romance`, or another value.|
+| Check if the string attribute **does not exist** on a user's profile | **BLANK** | **N/A** | If this filter value is `favorite_genre` and the user profile doesn't have the attribute `favorite_genre`, the user will match this filter.|
+| Check if the string exactly matches **any** of the inputted strings | **IS ANY OF** | **STRING**<br>Case sensitive; multiple strings allowed | If this filter specifies `book`, `bookmark`, and `reading light`, and a user profile has at least one of those strings, the user will match this filter. |
+| Check if the string attribute **does not exactly match any** of the inputted strings | **IS NONE OF** |**STRING**<br>Case sensitive; multiple strings allowed | If this filter specifies `book`, `bookmark`, and `reading light`, and a user profile doesn't contain any of those strings, the user will match the filter.|
+| Check if the string attribute **partially matches any** of the inputted strings | **CONTAINS ANY OF** | **STRING**<br>Case sensitive; multiple strings allowed | If this filter specifies `gold` and a user profile contains `gold` in any string, such as `gold_tier` or `former_gold_tier`, the user will match the filter. |
+| Check if the string attribute **does not partially match any** of the inputted strings | **DOESN'T CONTAIN ANY OF** | **STRING**<br>Case sensitive; multiple strings allowed | If this filter specifies `gold` and a user profile doesn't contain `gold` in any string, the user will match this filter.|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
 {% alert note %}
@@ -152,17 +152,17 @@ The option to increase the maximum length will not be available if the attribute
 
 | Segmentation options | Dropdown filter | Input options | Examples |
 | ---------------------| --------------- | ------------- | -------- |
-| Check if the array attribute **includes a value which exactly matches** an inputted value| **INCLUDES VALUE** | **STRING** | An attribute with the value `X` will be `true` if a user profile has `X`.|
-| Check if the array attribute **does not include a value which exactly matches** an inputted value| **DOESN'T INCLUDE VALUE** | **STRING** | An attribute with the value `X` will be `true` if a user profile doesn't have `X`.|
+| Check if the array attribute **includes a value which exactly matches** an inputted value| **INCLUDES VALUE** | **STRING** | If this filter specifies `sci-fi` and a user profile has the value `sci-fi`, the user will match this filter.|
+| Check if the array attribute **does not include a value which exactly matches** an inputted value| **DOESN'T INCLUDE VALUE** | **STRING** | If this filter specifies `sci-fi` and a user profile doesn't have the value `sci-fi`, the user will match this filter.|
 | Check if the array attribute **contains a value which partially matches** an inputted value **OR** Regular Expression | **MATCHES REGEX** | **STRING** **OR** **REGULAR EXPRESSION** | |
-| Check if the array attribute **has any value** | **HAS A VALUE** | **N/A** | An attribute will be `true` if a user profile has any values. |
-| Check if the array attribute **is empty** | **IS EMPTY** | **N/A** | An attribute will be `true` if a user profile doesn't have any values.|
-| Check if the array attribute **includes a value which exactly matches any** of the inputted values | **INCLUDES ANY OF** | **STRING**<br>Case sensitive; multiple values allowed | An attribute with string `A, B, C` will be `true` if a user profile has `A` or `B` or `C`.|
-| Check if the array attribute **does not include a value which exactly match any** of the inputted values | **INCLUDES NONE OF** | **STRING**<br>Case sensitive; multiple values allowed | An attribute with string `A, B, C` will be `true` if a user profile doesn't have `A` or `B` or `C`.|
-| Check if the array attribute **contains a value which partially matches any** of the inputted values | **VALUES CONTAIN ANY OF** | **STRING**<br>Case sensitive; multiple values allowed | |
-| Check if the array attribute **does not include a value which partially match any** of the inputted values | **VALUES DON'T CONTAIN ANY OF** | **STRING**<br>Case sensitive; multiple values allowed | |
-| Check if the array attribute **includes all** of the inputted values | **IS ALL OF** | **STRING**<br>Case sensitive; multiple values allowed | An attribute with `A, B, C` will be `true` if a user profile has all of `A, B, C`.|
-| Check if the array attribute **does not include all of** the inputted values | **ISN'T ALL OF** | **STRING**<br>Case sensitive; multiple values allowed | An attribute with `A, B, C` will be `true` if a user doesn't have all of `A, B, C`.|
+| Check if the array attribute **has any value** | **HAS A VALUE** | **N/A** | If this filter specifies `favorite_genres` and a user profile contains `favorite_genres` with any value, the user will match this filter. |
+| Check if the array attribute **is empty** | **IS EMPTY** | **N/A** | If this filter specifies `favorite_genres` and a user profile contains `favorite_genres` but has no values, the user will match this filter.|
+| Check if the array attribute **includes a value which exactly matches any** of the inputted values | **INCLUDES ANY OF** | **STRING**<br>Case sensitive; multiple values allowed | If this filter specifies `sci-fi, fantasy, romance` and a user profile has any combination of `sci-fi`, `fantasy`, or `romance`, including only one of them (such as only `sci-fi`). A user can have `horror` or another value in their string if they also have any of `sci-fi`, `romance`, and `romance`.|
+| Check if the array attribute **does not include a value which exactly match any** of the inputted values | **INCLUDES NONE OF** | **STRING**<br>Case sensitive; multiple values allowed | If this filter specifies `sci-fi, fantasy, romance` and a user profile doesn't have any combination of `sci-fi`, `fantasy`, or `romance`, the user will match this filter. The user can have `horror` or another value if they don't have any of `sci-fi`, `fantasy`, or `romance`.|
+| Check if the array attribute **contains a value which partially matches any** of the inputted values | **VALUES CONTAIN ANY OF** | **STRING**<br>Case sensitive; multiple values allowed | If this filter specifies `gold` and a user profile array contains `gold` in at least one string, the user will match this filter. This includes values like `gold_tier`, `former_gold_tier`, and others.|
+| Check if the array attribute **does not include a value which partially match any** of the inputted values | **VALUES DON'T CONTAIN ANY OF** | **STRING**<br>Case sensitive; multiple values allowed | If this filter specifies `gold` and a user profile array doesn't contain `gold` in any strings, the user will match this filter. This means users with values like `gold_tier` and `former_gold_tier` won't match this filter.|
+| Check if the array attribute **includes all** of the inputted values | **IS ALL OF** | **STRING**<br>Case sensitive; multiple values allowed | If this filter specifies `sci-fi, fantasy, romance` and a user profile has all of those values, the user will match this filter. The user can also have `horror` or other values and match this filter.|
+| Check if the array attribute **does not include all of** the inputted values | **ISN'T ALL OF** | **STRING**<br>Case sensitive; multiple values allowed |  If this filter specifies `sci-fi, fantasy, romance` and a user profile doesn't have all of those values, the user will match this filter.|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
 {% alert tip %}
