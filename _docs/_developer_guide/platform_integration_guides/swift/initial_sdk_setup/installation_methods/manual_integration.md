@@ -78,12 +78,13 @@ Decide whether you want to use **Static** or **Dynamic** XCFrameworks, then prep
    temp_bundles_dir
    └── BrazeKit.bundle
    ```
-3. If you're using the `BrazeLocation`, `BrazeUI`, or `BrazeUICompat` XCFrameworks, move their corresponding bundles into your temporary directory. Your directory should be similar to the following:
+3. If you're using the `BrazeLocation`, `BrazeUI`, `BrazeUICompat`, or `SDWebImage` XCFrameworks, move their corresponding bundles into your temporary directory. Your directory should be similar to the following:
    ```bash
    temp_bundles_dir
-   ├── BrazeKit.bundle
    ├── BrazeLocation.bundle
-   └── BrazeUICompat.bundle
+   ├── BrazeUI.bundle
+   ├── BrazeUICompat.bundle
+   └── SDWebImage.bundle
    ```
 {% alert note %}
 Only move over bundles for the [frameworks you prepared](#step-31-prepare-your-frameworks).
