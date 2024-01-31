@@ -420,6 +420,28 @@ SELECT
   FROM BRAZE.EXAMPLE_USER_DATA;
 ```
 {% endtab %}
+{% tab Databricks %}
+```json
+CREATE OR REPLACE TABLE BRAZE.EXAMPLE_USER_DATA (
+    attribute_1 string,
+    attribute_2 STRING,
+    attribute_3 NUMERIC,
+    my_user_id STRING
+);
+
+SELECT
+    CURRENT_TIMESTAMP as UPDATED_AT,
+    my_user_id as EXTERNAL_ID,
+    TO_JSON(
+      STRUCT(
+        attribute_1,
+        attribute_2,
+        attribute_3
+      )
+    ) as PAYLOAD 
+  FROM BRAZE.EXAMPLE_USER_DATA;
+```
+{% endtab %}
 {% endtabs %}
 
 ### Use the UPDATED_AT timestamp
@@ -458,7 +480,7 @@ You may include nested custom attributes in the payload column for a custom attr
 
 {% endtab %}
 {% tab Event %}
-To sync events, an event name and timestamp, as a string in ISO 8601 or in `yyyy-MM-dd'T'HH:mm:ss:SSSZ` format, are required. Other fields including `app_id` and `properties` are optional. 
+To sync events, an event name is required. The `time` field should be formatted as an ISO 8601 string or in `yyyy-MM-dd'T'HH:mm:ss:SSSZ` format. If the `time` field is not present, the `UPDATED_AT` column value is used as the event time. Other fields including `app_id` and `properties` are optional. 
 ```json
 {
     "app_id" : "your-app-id",
@@ -473,7 +495,7 @@ To sync events, an event name and timestamp, as a string in ISO 8601 or in `yyyy
 
 {% endtab %}
 {% tab Purchase %}
-To sync purchase events, event name, `product_id`, `currency`, `price`, and `timestamp` (as a string in ISO 8601 or in `yyyy-MM-dd'T'HH:mm:ss:SSSZ` format) are required. Other fields, including `app_id`, `quantity` and `properties` are optional. 
+To sync purchase events, event name, `product_id`, `currency`, and `price` are required. The `time` field, which is optional, should be formatted as an ISO 8601 string or in `yyyy-MM-dd'T'HH:mm:ss:SSSZ` format. If the `time` field is not present, the `UPDATED_AT` column value is used as the event time. Other fields, including `app_id`, `quantity` and `properties` are optional. 
 
 ```json
 {
@@ -500,7 +522,7 @@ To sync purchase events, event name, `product_id`, `currency`, `price`, and `tim
 | Number of integrations | There is no limit on how many integrations you can set up. However, you will only be able to set up one integration per table or view.                                             |
 | Number of rows         | There is no limit on the number of rows you can sync. Each row will only be synced once, based on the `UPDATED` column.                                                            |
 | Attributes per row     | Each row should contain a single user ID and a JSON object with up to 250 attributes. Each key in the JSON object counts as one attribute (that is, an array counts as one attribute). |
-| Payload size           | Each row can contain a payload of size up to 1 MB. Payloads greater than 1 MB will be rejected.                                                                                     |
+| Payload size           | Each row can contain a payload of up to 1 MB. Payloads greater than 1 MB will be rejected, and the error "Payload was greater than 1MB" will logged to the sync log along with the associated external ID and truncated payload. |
 | Data type              | You can sync user attributes, events, and purchases through Cloud Data Ingestion.                                                                                                  |
 | Braze region           | This product is available in all Braze regions. Any Braze region can connect to any source data region.                                                                              |
 | Source region       | Braze will connect to your data warehouse or cloud environment in any region or cloud provider.                                                                                        |

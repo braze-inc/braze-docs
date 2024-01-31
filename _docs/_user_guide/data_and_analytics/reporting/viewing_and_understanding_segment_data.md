@@ -38,6 +38,10 @@ You will see the following segment statistics, which update in real-time as you 
 | **Push Enabled (Opted In)** | Push enabled refers to the number of users with at least one push token. Some users may have multiple push tokens (for example, if they own an iPhone and iPad), so the number of push notifications you send to this segment may be greater than the number of "push enabled" users. Opted In refers to the number of users who have explicitly opted in to push notifications. Users must always explicitly opt-in for you to send them pushes. |
 {: .reset-td-br-1 .reset-td-br-2}
 
+### Segment Insights
+
+You can see how one segment is performing compared to another across a set of pre-selected KPIs by visiting the [Segment Insights]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_insights/) page of your dashboard.
+
 ### Messaging use and historical membership
 
 The **Messaging Use** section shows which campaigns have targeted your segment, while the **Historical Membership** section shows how the size of your segment changed over time. Use the dropdown to filter segment membership by date range. 
