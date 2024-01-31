@@ -2,6 +2,7 @@
 nav_title: Setting up your environment
 page_order: 1
 noindex: true
+hidden: true
 ---
 
 # Setting up your environment

@@ -1,28 +1,32 @@
 ---
-nav_title: Building the docs locally
-page_order: 2
+nav_title: Generating a preview
+page_order: 4 
 noindex: true
 ---
 
-# Building the docs locally
+# Generating a preview
 
-> Learn how to build the docs locally, so you can preview the changes in your current branch before [creating a Pull Request (PR)]({{site.baseurl}}/home/github/creating_a_pull_request/).
+> Learn how to generate a local site preview, so you can see how your work would look on Braze Docs.
+
+{% alert tip %}
+Every time you push to the Braze Docs GitHub repository, a Braze-hosted site preview is automatically generated. While generating a local site preview is helpful while you work on new content, the Braze-hosted site preview is great for checking your work on mobile or collaborating with others. 
+{% endalert %}
 
 ## Prerequisites
 
-To build the docs locally, you'll need to [set up your environment]({{site.baseurl}}/home/getting_started/setting_up_your_environment/)&#8212;a process you only need to complete a single time.
+To build the docs locally, you'll need to [set up your environment]({{site.baseurl}}/home/getting_started/setting_up_your_environment/).
 
-## Generating the site preview
+## Generating the preview
 
 ### Step 1: Checkout a branch
 
-In your terminal, [get the latest updates from `develop`]({{site.baseurl}}/home/github/getting_the_latest_updates/), then check out a branch.
+In your terminal, check out a branch to use for your site preview.
 
 ```bash
 git checkout BRANCH_NAME
 ```
 
-Replace `BRANCH_NAME` with one of your branches or another person's branch you'd like to preview. Your command should be similar to the following:
+Replace `BRANCH_NAME` with the name of one of your branches or another person's branch. Your command should be similar to the following:
 
 ```bash
 git checkout BD-2346-fixing-typo-swift
@@ -60,7 +64,7 @@ By default, your site preview will be generated on localhost [`http://127.0.0.1:
 
 To stop your local server, reopen the terminal and press <kbd>Control</kbd> + <kbd>C</kbd>.
 
-## Updating the site preview
+## Updating the preview
 
 In most cases, your site preview will update automatically when you make changes to the files in `braze-docs`. When this happens, your terminal will output a message similar to the following:
 

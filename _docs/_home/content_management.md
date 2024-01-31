@@ -1,12 +1,12 @@
 ---
 nav_title: Content Management
-page_order: 4
+page_order: 2 
 noindex: true
 ---
 
 # Content management
 
-> This is an overview for content management on Braze Docs. For walkthroughs on a specific topic, choose the related page from the navigation.
+> This is an overview of how content is managed on Braze Docs. For a walkthrough on a specific topic, choose its related page from the section navigation.
 
 ## Methodology
 
@@ -28,6 +28,10 @@ As a contributor, you'll primarily work within the following directories:
 | [`_includes`](https://github.com/braze-inc/braze-docs/tree/develop/_includes) | Contains text files (called "includes") that can be reused in any file within the `_docs` directory. Typically, includes are short, modular pieces of content that don't use standard formatting. The files stored in this location are important for [content reuse](#content-reuse).                                                                                                                                |
 | [`assets`](https://github.com/braze-inc/braze-docs/tree/develop/assets)       | Contains all the images for Braze Docs. Any text file in the `_docs` or `_includes` directory can link to this directory to display an image on its page.                                                                                                                                                                         |
 {: .reset-td-br-1 .reset-td-br-2}
+
+{% alert tip %}
+For a full walkthrough, see [Generating a preview]().
+{% endalert %}
 
 ## Pages
 
@@ -72,7 +76,7 @@ Learn how you can get started with Braze.
 {% endtab %}
 {% endtabs %}
 
-{% alert note %}
+{% alert tip %}
 For a full walkthrough, see [Creating a page]({{site.baseurl}}/home/content_management/pages/#creating-a-page).
 {% endalert %}
 
@@ -104,7 +108,7 @@ Your in-line image should be similar to the following:
 ```
 {% endraw %}
 
-{% alert note %}
+{% alert tip %}
 For a full walkthrough, see [Adding a new image]({{site.baseurl}}/home/content_management/images/#adding-a-new-image).
 {% endalert %}
 
@@ -229,7 +233,7 @@ braze-docs
         └── subsection_b.md # configured as a landing page  
 ```
 
-{% alert note %}
+{% alert tip %}
 For a full walkthrough, see [Creating a section]({{site.baseurl}}/home/content_management/sections/#creating-a-section).
 {% endalert %}
 
@@ -304,7 +308,7 @@ Learn how you can get started with Braze.
 {% endtab %}
 {% endtabs %}
 
-{% alert note %}
+{% alert tip %}
 For a full walkthrough, see [Reusing content]({{site.baseurl}}/home/content_management/reusing_content).
 {% endalert %}
 
@@ -360,11 +364,9 @@ layout: api_glossary
 {% endtab %}
 {% endtabs %}
 
-{% alert note %}
+{% alert tip %}
 For more information, see [Page layouts]({{site.baseurl}}/home/yaml_front_matter/page_layouts).
 {% endalert %}
-
-
 
 ## URLs
 

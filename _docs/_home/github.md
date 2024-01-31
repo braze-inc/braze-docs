@@ -1,6 +1,6 @@
 ---
 nav_title: GitHub
-page_order: 6
+page_order: 5
 noindex: true
 ---
 

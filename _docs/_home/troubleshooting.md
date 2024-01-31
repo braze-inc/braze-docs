@@ -1,6 +1,6 @@
 ---
 nav_title: Troubleshooting
-page_order: 9
+page_order: 8
 noindex: true
 ---
 

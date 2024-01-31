@@ -1,6 +1,6 @@
 ---
 nav_title: Styling examples
-page_order: 8
+page_order: 7 
 noindex: true
 ---
 

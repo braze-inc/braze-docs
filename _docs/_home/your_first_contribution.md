@@ -1,12 +1,12 @@
 ---
 nav_title: Your first contribution
-page_order: 3
+page_order: 1
 noindex: true
 ---
 
 # Your first contribution
 
-> If you're new to docs-as-code or Braze Docs, start here to make your first contribution. Otherwise, go to [Content Management]().
+> If you're new to docs-as-code or Braze Docs, start with this step-by-step tutorial. If you're an experienced contributor, see [Content Management]() instead.
 
 When you're finished with this tutorial, you'll be able to:
 
@@ -18,13 +18,7 @@ When you're finished with this tutorial, you'll be able to:
 
 ## Prerequisites
 
-Before you start, you'll need to complete the following:
-
-- [Sign the Contribution License Agreement (CLA)](https://www.braze.com/docs/cla)
-- [Review the Code of Conduct](https://github.com/braze-inc/braze-docs/blob/develop/CODE_OF_CONDUCT.md)
-- [Create a GitHub account](https://github.com/join)
-- [Set up your local environment]({{site.baseurl}}/home/getting_started/setting_up_your_local_environment/) (optional)
-- [Download the recommended software]({{site.baseurl}}/home/getting_started/recommended_software/) (optional)
+Before you make your first contributions, you'll need to complete the steps on [Contributing to Braze Docs]().
 
 ## Step 1: Explore the GitHub repository
 

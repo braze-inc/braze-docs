@@ -8,49 +8,148 @@ noindex: true
 
 > Thanks for contributing to Braze Docs! Every Tuesday and Thursday, we merge community contributions and deploy them to Braze Docs. Use this guide to get your changes merged during our next deployment.
 
-## Contribution License Agreement
+## Step 1: Sign the CLA
 
-Everybody that contributes to Braze Docs must sign the [Contribution License Agreement (CLA)](https://www.braze.com/docs/cla).
+Everybody that contributes to Braze Docs must sign the [Contribution License Agreement (CLA)](https://www.braze.com/docs/cla). If you don't sign the CLA, the `@cla-bot` on GitHub will automatically block your pull request. 
 
-{% alert warning %}
-On GitHub, `@cla-bot` will automatically block pull requests from contributors who haven't signed the CLA. 
+## Step 2: Set up your environment (optional)
+
+To make complex or multi-document changes, you'll need to set up your environment. If you only plan on making small, single-document changes, you can make changes directly in GitHub. For more information, continue to [Next steps](#next-steps).
+
+### Step 2.1: Get the required software
+
+At a minimum, you'll need the following types of software:
+
+- A terminal
+- A text editor
+- A ruby version manager
+
+If you're not sure which specific software products to choose, here's some recommendations:
+
+<style>
+table td {
+    word-break: break-word;
+}
+</style>
+<table>
+<thead>
+    <tr>
+        <th>Type</th>
+        <th>Product</th>
+        <th>Description</th>
+    </tr>
+</thead>
+<tbody>
+    <tr>
+        <td>Terminal</td>
+        <td><a href="https://wezfurlong.org/wezterm/index.html">Wezterm</a></td>
+        <td>A terminal emulator that allows you to run commands and interact with the Braze Docs repository from the commandline. If you're using a Windows operating system, you'll also need to install Windows Subsystem for Linux (WSL).</td>
+    </tr>
+    <tr>
+        <td>Terminal extension</td>
+        <td><a href="https://learn.microsoft.com/en-us/windows/wsl/install">Windows Subsystem for Linux (WSL)</a> *</td>
+        <td>WSL lets you install a Linux subsystem and run Unix-like commands on your Windows operating system. If you're contributing from a Windows operating system, we recommend installing WSL, so you can use any Unix-like command mentioned in the docs.<br><br><em>* Only available for Windows.</em></td>
+    </tr>
+    <tr>
+        <td>Package manager</td>
+        <td><a href="https://brew.sh/">Homebrew</a></td>
+        <td>A package manager that allows you to install and manage the various command-line interface (CLI) tools used for contributing to Braze Docs.</td>
+    </tr>
+    <tr>
+        <td>Ruby version manager</td>
+        <td><a href="https://github.com/rbenv/rbenv#using-package-managers">rbenv</a></td>
+        <td>A Ruby version manager that allows you to install and manage the required Ruby version for Braze Docs when you're setting up your local environment. If you'd like to use a different Ruby version manager, see <a href="https://www.ruby-lang.org/en/documentation/installation/#managers">Ruby's supported version managers</a>.</td>
+    </tr>
+    <tr>
+        <td>GitHub UI tool</td>
+        <td><a href="https://desktop.github.com/">GitHub Desktop</a></td>
+        <td>Many of our recommendations for advanced contributors assume you will be using your terminal to handle Git workflows. If you prefer to simplify things, you can use GitHub Desktop to provide a UI for steps like checking out branches, making commits, and opening pull requests.</td>
+    </tr>    
+    <tr>
+        <td>Text editor</td>
+        <td><a href="https://code.visualstudio.com/download">Visual Studio Code (VS Code)</a></td>
+        <td>A full-featured text editor by Microsoft that allows you to edit any file in the Braze Docs repository. To improve your experience, be sure to install the following plugins:
+            <ul>
+                <li><a href="https://marketplace.visualstudio.com/items?itemName=sissel.shopify-liquid">Liquid + Jekyll Linter</a></li>
+                <li><a href="https://marketplace.visualstudio.com/items?itemName=DavidAnson.vscode-markdownlint">Markdown Linter</a></li>
+                <li><a href="https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker">Spellchecker</a></li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <td>Text editor</td>
+        <td><a href="https://www.jetbrains.com/idea/download/">Intellij's IDEA Community Edition</a></td>
+        <td>A full-featured text editor by Intellij that allows you to edit any file in the Braze Docs repository. To improve your experience, be sure to install the following plugins:
+            <ul>
+                <li><a href="https://plugins.jetbrains.com/plugin/7793-markdown">Markdown Linter</a></li>
+                <li><a href="https://plugins.jetbrains.com/plugin/12175-grazie-lite">Spellchecker</a></li>
+            </ul>
+        </td>
+    </tr>
+</tbody>
+</table>
+{: .reset-td-br-1 .reset-td-br-2}
+
+{% alert note %}
+As of writing, all software is free of cost. If you find that a product is no longer free, [please let us know](https://github.com/braze-inc/braze-docs/issues/new?assignees=&labels=issue&projects=&template=report_an_issue.md&title=).
 {% endalert %}
 
-## Making changes
+### Step 2.2: Set up your GitHub account
 
-For small, single-document changes, you can [make changes directly in GitHub]({{site.baseurl}}/home/getting_started/your_first_contribution/?tab=github#make-a-change), like this:
+Next, [create a GitHub account](https://github.com/join) and [set up your SSH key](https://docs.github.com/en/enterprise-cloud@latest/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent).
 
-![Editing a file directly in GitHub.]({% image_buster /assets/img/contributing/editing_directly_in_github.png %})
+{% alert note %}
+If you're using [Windows Subsystem for Linux (WSL)](https://learn.microsoft.com/en-us/windows/wsl/install), set up your SSH key using the Linux setup instructions.
+{% endalert %}
 
-For complex or multi-document changes, you'll need to [set up your local environment]({{site.baseurl}}/home/getting_started/setting_up_your_environment), then [make your changes using Git]({{site.baseurl}}/home/getting_started/your_first_contribution/?tab=local%20environment#make-a-change), like this:
+### Step 2.3: Fork the repository
+
+Open the [Braze Docs GitHub repository](https://github.com/braze-inc/braze-docs), then select **Fork**.
+
+![The Braze Docs GitHub repository with the "Fork" button highlighted.]()
+
+{% alert tip %}
+For more information, see [**About forks**](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/about-forks).
+{% endalert %}
+
+Keep the default settings, then select **Create fork**.
+
+![The Braze Docs GitHub repository with the "Create fork" button highlighted.]()
+
+In your forked repository, select **Code** > **SSH** > <i class="fa-regular fa-clone"></i> **Copy**.
+
+![An example forked repository with the "Code" dropdown open and the "Copy" icon highlighted.]()
+
+In your terminal, open your home directory, then clone the Braze Docs repository.
 
 ```bash
-$ git push origin my-changes
-
-Enumerating objects: 4, done.
-Counting objects: 100% (4/4), done.
-Delta compression using up to 10 threads
-Compressing objects: 100% (2/2), done.
-Writing objects: 100% (3/3), 294 bytes | 294.00 KiB/s, done.
-Total 3 (delta 1), reused 1 (delta 0), pack-reused 0
-remote: Resolving deltas: 100% (1/1), completed with 1 local object.
-remote:
-remote: Create a pull request for 'my-branch' on GitHub by visiting:
-remote:      https://github.com/braze-inc/braze-docs/pull/new/my-branch
-remote:
-To github.com:braze-inc/braze-docs.git
- * [new branch]      my-branch -> my-branch
-branch 'my-branch' set up to track 'origin/my-branch'.
+cd ~
+git clone git@github.com:braze-inc/braze-docs.git
 ```
 
-## Creating a pull request
+### Step 2.4: Install Ruby
 
-After making your changes, you'll [create a pull request (PR)]({{site.baseurl}}/home/getting_started/your_first_contribution/#create-a-pull-request-pr). In your PR, you can add a summary, review your commit history, or [open a site preview]({{site.baseurl}}/home/getting_started/your_first_contribution/#preview-your-changes).
+To build the docs locally, you'll need Ruby version `2.7.4` installed. In the terminal, open `braze-docs` and check for Ruby version `2.7.4`.
 
-![An example pull request (PR) on GitHub.]({% image_buster /assets/img/contributing/creating_a_pull_request.png %})
+```bash
+cd ~/braze-docs
+ruby --version
+```
 
-## Requesting a review
+If this version isn't installed, use a [supported version manager](https://www.ruby-lang.org/en/documentation/installation/#managers) to install Ruby version `2.7.4`. For example, using [rbenv](https://github.com/rbenv/rbenv):
 
-After finalizing your pull request (PR), you'll [submit your PR for review]({{site.baseurl}}/home/getting_started/your_first_contribution/#request-a-review). A member of the Braze Docs team will review your work. If everything looks good, we'll merge your PR into the `develop` branch, and your changes will be deployed to Braze Docs on the next deployment day.
+```bash
+rbenv install 2.7.4
+```
 
-![A pull request (PR) recently merged into the 'develop' branch.]({% image_buster /assets/img/contributing/merging_a_pull_request.png %})
+### Step 2.5: Install dependencies
+
+Next, install the dependencies for Braze Docs. These are small programs used to generate your local Braze Docs site.
+
+```bash
+bundle install
+```
+
+## Next steps
+
+THIS.

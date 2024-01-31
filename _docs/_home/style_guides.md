@@ -1,7 +1,7 @@
 ---
 article_title: Style guides
 nav_title: Style guides
-page_order: 2
+page_order: 6 
 noindex: true
 ---
 
