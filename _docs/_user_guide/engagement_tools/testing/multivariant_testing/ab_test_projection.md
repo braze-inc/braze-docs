@@ -1,7 +1,7 @@
 ---
 nav_title: A/B Test Projection
 article_title: A/B Test Projection
-page_order: 4
+page_order: 20
 page_type: reference
 description: "This article explains how A/B Test Projection works."
 ---
@@ -22,11 +22,12 @@ Click **Run Projection**
 
 <img width="722" alt="image" src="https://github.com/braze-inc/braze-docs/assets/17167198/f9ad45a3-6565-467b-a7f6-35277bef7699">
 
-The subject line our AI predicts to be best will be highlighted with a label.
+The subject line our AI predicts to be best will be highlighted with a "Projected Winner" label.
 
 ### Data aggregation 
 
-Note that this feature requires Data Aggregation be enabled in your Company Settings. That is because this feature learns from historical A/B tests carried out on Braze. In order to get the benefit of the feature, we ask you to allow the AI to learn from the language patterns of your A/B tests.
+Note that this feature requires Data Aggregation be enabled in your Company Settings. That is because this feature learns from historical A/B tests carried out on Braze. In order to get the benefit of the feature, we ask you to allow the AI to learn from the language patterns of your A/B tests. If you'd like to opt out of data aggregation, you can do so in Company Settings. [Click here to learn more.
+](braze.com/docs)
 
 ### How we use your data?
 
