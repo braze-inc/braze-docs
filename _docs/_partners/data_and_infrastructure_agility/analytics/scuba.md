@@ -9,7 +9,7 @@ search_tag: Partner
 
 # Scuba Analytics
 
->[Scuba Analytics][1] is a full-stack, machine-learning-powered data collaboration platform designed for high-velocity time-series data. It redefines how organizations handle first-party and high-velocity time-series data, offering insights into customers and real-time competition tracking.
+>[Scuba Analytics][1] is a full-stack, machine-learning-powered data collaboration platform designed for high-velocity time-series data. Scuba allows you to selectively export users (also called actors) and load them into your Braze platform. In Scuba, custom actor properties are used to analyze behavioral trends, activate your data across various platforms, and conduct predictive modeling using machine learning.
 
 ## Prerequisites
 
@@ -17,10 +17,6 @@ To use Scuba Analytics with Braze, you'll need the following:
 
 - A [Braze REST API key]({{site.baseurl}}/user_guide/administrative/app_settings/api_settings_tab/#rest-api-keys) with the `users.track` permission.
 - A Scuba API token you can retrieve from the `https://{scuba_hostname}/api/create_token` endpoint.
-
-## Why Scuba?
-
-Scuba allows you to selectively export users (also called actors) and load them into your Braze platform. In Scuba, custom actor properties are used to analyze behavioral trends, activate your data across various platforms, and conduct predictive modeling using Machine Learning.
 
 ## Uploading your Scuba data to Braze
 
