@@ -15,7 +15,7 @@ search_tag: Partner
 
 To use Scuba Analytics with Braze, you'll need the following:
 
-- A [Braze REST API key]({{site.baseurl}}user_guide/administrative/app_settings/api_settings_tab/#rest-api-keys) with the `users.track` permission.
+- A [Braze REST API key]({{site.baseurl}}/user_guide/administrative/app_settings/api_settings_tab/#rest-api-keys) with the `users.track` permission.
 - A Scuba API token you can retrieve from the `https://{scuba_hostname}/api/create_token` endpoint.
 
 ## Why Scuba?
@@ -60,7 +60,7 @@ Replace the following:
 | `ACTOR_ID`              | The ID of the actor property your dataset belongs to. This ID matches your `external_id` in Braze. For more information, see [Glossary: Actor][5].                                              |
 | `PERIOD_START`          | The start period as a BQL-compatible date. For more information, see [BQL syntax and usage][6].                                                                                                 |
 | `PERIOD_END`            | The end period as a BQL-compatible date. For more information, see [BQL syntax and usage][6].                                                                                                   |
-| `RECORD_LIMIT`          | **Optional**: The maximum number of records to return. By default, Scuba returns a maximum of 100 records. You can change this by assigning any non-negative number to `scuba_record_limit`.    |
+| `RECORD_LIMIT`          | **Optional**: The maximum number of records to return. If `scuba_record_limit` is omitted, Scuba will return a maximum of 100 records. To change this, assignin any non-negative number to `scuba_record_limit`.    |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ### Default behavior
