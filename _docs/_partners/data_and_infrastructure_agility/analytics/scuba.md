@@ -69,7 +69,7 @@ By default, `update_existing_only` is set to `false` which will update your exis
 
 ### Rate limit
 
-To comply with Braze API rate limits, this endpoint restricts the number of entities processed to a maximum of 50,000 per minute.
+Scuba applies a rate limit of 50,000 requests per minute to this endpoint.
 
 ## Creating segments using Scuba's behavioral data
 
