@@ -15,8 +15,8 @@ search_tag: Partner
 
 To use Scuba Analytics with Braze, you'll need the following:
 
-- A [Braze REST API key]() with the `users.track` permission.
-- A [Scuba API token]() with the `TODO` permission.
+- A [Braze REST API key]({{site.baseurl}}user_guide/administrative/app_settings/api_settings_tab/#rest-api-keys) with the `users.track` permission.
+- A Scuba API token you can retrieve from the `https://{scuba_hostname}/api/create_token` endpoint.
 
 ## Why Scuba?
 
@@ -48,19 +48,19 @@ curl -X POST "https://scuba.pliant.io/a/scuba-connectors/prod/braze-activation" 
 
 Replace the following:
 
-| Placeholder             | Description                                                                                                                                                                                  |
-|-------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `BRAZE_API_ENDPOINT`    | The Braze REST endpoint URL of your current Braze instance. For more information, see [TODO]().                                                                                              |
-| `BRAZE_API_KEY`         | Your Braze REST API key with the `users.track` permission.                                                                                                                                   |
-| `HOSTNAME`              | The hostname of your current Scuba instance.                                                                                                                                                 |
-| `SCUBA_API_TOKEN`       | Your Scuba API token.                                                                                                                                                                        |
-| `TABLE_NAME`            | The table your dataset belongs to. For more information, see [TODO][3].                                                                                                                      |
-| `ACTOR_PROPERTY_NAME`   | The actor property your dataset belongs to. Only data matching this name will be returned. For more information, see [TODO][4].                                                              |
-| `ACTOR_PROPERTY_FILTER` | The audience search filter for your actor property.                                                                                                                                          |
-| `ACTOR_ID`              | The ID of the actor property your dataset belongs to. This ID matches your `external_id` in Braze. For more information, see [TODO][5].                                                      |
-| `PERIOD_START`          | The start period as a [BQL-compatible][6] date.                                                                                                                                              |
-| `PERIOD_END`            | The end period as a [BQL-compatible][6] date.                                                                                                                                                |
-| `RECORD_LIMIT`          | **Optional**: The maximum number of records to return. By default, Scuba returns a maximum of 100 records. You can change this by assigning any non-negative number to `scuba_record_limit`. |
+| Placeholder             | Description                                                                                                                                                                                     |
+|-------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `BRAZE_API_ENDPOINT`    | The Braze REST endpoint URL of your current Braze instance. For more information, see [Rest API keys]({{site.baseurl}}/user_guide/administrative/app_settings/api_settings_tab/#rest-api-keys). |
+| `BRAZE_API_KEY`         | Your Braze REST API key with the `users.track` permission.                                                                                                                                      |
+| `HOSTNAME`              | The hostname of your current Scuba instance.                                                                                                                                                    |
+| `SCUBA_API_TOKEN`       | Your Scuba API token.                                                                                                                                                                           |
+| `TABLE_NAME`            | The table your dataset belongs to. For more information, see [Glossary: Dataset table][3].                                                                                                      |
+| `ACTOR_PROPERTY_NAME`   | The actor property your dataset belongs to. Only data matching this name will be returned. For more information, see [Glossary: Actor property][4].                                             |
+| `ACTOR_PROPERTY_FILTER` | The audience search filter for your actor property.                                                                                                                                             |
+| `ACTOR_ID`              | The ID of the actor property your dataset belongs to. This ID matches your `external_id` in Braze. For more information, see [Glossary: Actor][5].                                              |
+| `PERIOD_START`          | The start period as a BQL-compatible date. For more information, see [BQL syntax and usage][6].                                                                                                 |
+| `PERIOD_END`            | The end period as a BQL-compatible date. For more information, see [BQL syntax and usage][6].                                                                                                   |
+| `RECORD_LIMIT`          | **Optional**: The maximum number of records to return. By default, Scuba returns a maximum of 100 records. You can change this by assigning any non-negative number to `scuba_record_limit`.    |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ### Default behavior
@@ -73,7 +73,7 @@ Scuba applies a rate limit of 50,000 requests per minute to this endpoint.
 
 ## Creating segments using Scuba's behavioral data
 
-After you [upload your Scuba data to Braze](#uploading-your-scuba-data-to-braze), you can create user segments in Braze using Scuba's behavioral data.
+After you [upload your data](#uploading-your-scuba-data-to-braze), you can create user segments in Braze using Scuba's behavioral data.
 
 ### Step 1: Create a new segment
 
