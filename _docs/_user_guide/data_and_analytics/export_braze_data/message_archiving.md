@@ -15,7 +15,7 @@ description: "This reference article covers message archiving, a feature that al
 Message archiving is available as an add-on feature. To get started with message archiving, reach out to your Braze customer success manager.
 
 {% alert important %}
-Turning on this feature will impact the delivery speed of your messages, as the S3 file upload is performed immediately before the message send to ensure accuracy. This introduces additional latency into the Braze sending pipeline, affecting sending speeds.
+Message archiving is only available for customers with AWS cloud hosting.
 {% endalert %}
 
 ## Overview
@@ -24,7 +24,11 @@ When this feature is turned on and you have connected an Amazon S3 bucket to Bra
 
 This file will contain the fields defined under [File references](#file-references) and reflect the final templated messages sent to the user. Any templated values defined in your campaign (for example, {% raw %}`{{${first_name}}}`{% endraw %}) will show the final value that the user received based on their profile information. This will allow you to retain a copy of the message sent to satisfy compliance, audit, or customer support requirements.
 
-The file will be saved in your S3 bucket using the following key structure:
+{% alert important %}
+Turning on this feature will impact the delivery speed of your messages, as the S3 file upload is performed immediately before the message send to ensure accuracy. This introduces additional latency into the Braze sending pipeline, affecting sending speeds.
+{% endalert %}
+
+The JSON will be saved in your S3 bucket using the following key structure:
 
 `sent_messages/channel/(one of: md5, e164 phone number, email, or push token)/(campaign_id OR canvas_step_id)/DispatchId.json.gz`
 
