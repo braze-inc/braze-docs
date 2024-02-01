@@ -66,8 +66,8 @@ Boolean attributes are useful for storing simple binary data about your users, l
 | Segmentation options | Dropdown filter | Input options | Examples |
 | ---------------------| --------------- | ------------- | -------- |
 | Check if the boolean value **is** either true, false, true or not set, or false or not set | **IS**  | **TRUE**, **FALSE**, **TRUE OR NOT SET**, or **FALSE OR NOT SET** | If this filter specifies `coffee_drinker`, a user will match this filter in the following circumstances: <br> {::nomarkdown}<ul><li>If this filter is <code>true</code> and the user has the value <code>coffee_drinker</code></li><li>If this filter is <code>false</code> and the user doesn't have the value <code>coffee_drinker</code></li><li>If this filter is <code>true or not set</code> and the user has the value <code>coffee_drinker</code> or no value</li><li>If this filter is <code>false or not set</code> and the user doesn't have <code>coffee_drinker</code> or any value</li></ul>{:/} |
-| Check if the boolean value **exists** on a user's profile | **IS NOT BLANK**  | **N/A** | If this filter specifies `coffee_drinker` and a user has the value `coffee_drinker`, the user will match this filter. | 
-| Check if the boolean value **does not exist** on a user's profile | **IS BLANK**  | **N/A** | If this filter specifies `coffee_drinker`and a user doesn't have the value `coffee_drinker`, the user will match this filter.|
+| Check if the boolean value **exists** on a user's profile and is not null | **IS NOT BLANK**  | **N/A** | If this filter specifies `coffee_drinker` and a user has the value `coffee_drinker`, the user will match this filter. | 
+| Check if the boolean value **does not exist** on a user's profile does not exist or is null | **IS BLANK**  | **N/A** | If this filter specifies `coffee_drinker`and a user doesn't have the value `coffee_drinker`, the user will match this filter.|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
 ### Numbers {#numbers}
@@ -88,8 +88,8 @@ Money spent should not be recorded by this method. Rather it should be recorded 
 | Check if the numeric attribute **does not equal** a **number**| **DOES NOT EQUAL** | **NUMBER** | If this filter specifies `10` and a user profile doesn't have the value `10`, the user will match this filter. |
 | Check if the numeric attribute **is more than** a **number**| **MORE THAN** | **NUMBER** | If this filter specifies `10` and a user profile has a value greater than `10`, the user will match this filter. |
 | Check if the numeric attribute **is less than** a **number**| **LESS THAN** | **NUMBER** | If this filter specifies `10` and a user profile has a value lesser than `10`, the user will match this filter. |
-| Check if the numeric attribute **exists** on a user's profile | **IS NOT BLANK** | **N/A** | If a user profile contains the specified numeric attribute, regardless of value, the user will match this filter. |
-| Check if the numeric attribute **does not exist** on a user's profile | **IS BLANK** | **N/A** | If a user profile doesn't contain the specified numeric attribute, the user will match this filter.|
+| Check if the numeric attribute **exists** on a user's profile and is not null | **IS NOT BLANK** | **N/A** | If a user profile contains the specified numeric attribute, regardless of value, the user will match this filter. |
+| Check if the numeric attribute **does not exist** on a user's profile or is null | **IS BLANK** | **N/A** | If a user profile doesn't contain the specified numeric attribute, the user will match this filter.|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
 #### Number attribute details
@@ -109,7 +109,7 @@ Note that if you input any values with spaces in between, before, or after words
 | Check if the string attribute **partially matches** an inputted string **OR** Regular Expression | **MATCHES REGEX** | **STRING** **OR** **REGULAR EXPRESSION**<br>Not case sensitive. | 
 | Check if the string attribute **does not partially match** an inputted string **OR** Regular Expression | **DOES NOT MATCH REGEX** * | **STRING** **OR** **REGULAR EXPRESSION**<br>Not case sensitive. |
 | Check if the string attribute **does not match** an inputted string| **DOES NOT EQUAL** | **STRING**<br>Not case sensitive.  | If this filter specifies either `book` or `pen` and a user profile doesn't have `book` or `pen`, the user will match this filter.|
-| Check if the string attribute **exists** on a user's profile | **IS NOT BLANK** | **N/A** | If this filter specifies `favorite_genre` and a user profile has the attribute `favorite_genre`, the user will match this filter regardless of their attribute value. For example, the user can have `sci-fi`, `romance`, or another value.|
+| Check if the string attribute **exists** on a user's profile and is not an empty string | **IS NOT BLANK** | **N/A** | If this filter specifies `favorite_genre` and a user profile has the attribute `favorite_genre`, the user will match this filter regardless of their attribute value. For example, the user can have `sci-fi`, `romance`, or another value.|
 | Check if the string attribute **does not exist** on a user's profile | **BLANK** | **N/A** | If this filter specifies `favorite_genre` and a user profile doesn't have the attribute `favorite_genre`, the user will match this filter.|
 | Check if the string exactly matches **any** of the inputted strings | **IS ANY OF** | **STRING**<br>Case sensitive; multiple strings allowed | If this filter specifies `book`, `bookmark`, and `reading light`, and a user profile has at least one of those strings, the user will match this filter. |
 | Check if the string attribute **does not exactly match any** of the inputted strings | **IS NONE OF** |**STRING**<br>Case sensitive; multiple strings allowed | If this filter specifies `book`, `bookmark`, and `reading light`, and a user profile doesn't contain any of those strings, the user will match the filter.|
@@ -188,8 +188,8 @@ The last date a custom event or purchase event occurred is automatically recorde
 | Check if the time attribute is **less than X number** of **days ago**| **LESS THAN** | **NUMBER OF DAYS AGO** | If this filter specifies `7` and a user profile has a date that is less than seven days ago, the user will match this filter.|
 | Check if the time attribute is **in more than X number** of **days in the future** | **IN MORE THAN** | **NUMBER OF DAYS IN FUTURE** | If this filter specifies `7` and a user profile has a date that is more than seven days in the future, the user will match this filter.|
 | Check if the time attribute is **less than X number** of **days in the future** | **IN LESS THAN** | **NUMBER OF DAYS IN FUTURE**  | If this filter specifies `7` and a user profile has a date that is less than seven days in the future, the user will match this filter.|
-| Check if the time attribute **exists** on a user's profile | **IS NOT BLANK** | **N/A** | If this filter specifies a time attribute that is on a user profile, the user will match this filter.|
-| Check if the time attribute **does not exist** on a user's profile | **IS BLANK** | **N/A** | If this filter specifies a time attribute that isn't on a user profile, the user will match this filter. |
+| Check if the time attribute **exists** on a user's profile and is not null | **IS NOT BLANK** | **N/A** | If this filter specifies a time attribute that is on a user profile, the user will match this filter.|
+| Check if the time attribute **does not exist** on a user's profile or is null | **IS BLANK** | **N/A** | If this filter specifies a time attribute that isn't on a user profile, the user will match this filter. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
 #### Time attribute details
