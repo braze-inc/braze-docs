@@ -42,6 +42,10 @@ You must ensure the following items are created and completed before setting up 
 | Google Consent Signals | [Google](https://support.google.com/google-ads/answer/14310715) |  If you want to serve ads to EEA/UK end users using Google’s Customer Match service, you’ll need to pass Braze the following custom attributes (boolean) as part of Google’s  EU User Consent Policy. More details can be found under [Collecting consent for EEA and UK end users](#collecting-consent-for-eea-and-uk-end-users): <br> - `$google_ad_user_data` <br> - `$google_ad_personalization` |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
+If using Braze SDKs to collect consent values, ensure you meet the following minimum versions:
+
+{% sdk_min_versions swift:7.6.0 android:1.3.2 web:3.0.0 %}
+
 ### Collecting consent for EEA and UK end users
 
 Google’s EU User Consent Policy requires advertisers to disclose the following to their EEA or UK end users, as well as obtain their consent for such: 
