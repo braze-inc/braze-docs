@@ -16,7 +16,7 @@ When creating a cross-reference, you can either use the in-line method or refere
 
 {% tabs %}
 {% tab in-line %}
-In your text editor, open the file you'd like to edit, then create your in-line link.
+Open the relevant Markdown file, then create your in-line link.
 
 {% raw %}
 ```markdown
@@ -39,11 +39,10 @@ Your in-line link should be similar to the following:
 Before continuing, [create your SSH token]({{site.baseurl}}/docs/developer_guide/platform_wide/sdk_authentication).
 ```
 {% endraw %}
-
-{% multi_lang_include contributing/minis/creating_a_pull_request.md %}
 {% endtab %}
+
 {% tab reference-style %}
-In your text editor, open the file you'd like to edit, then create your reference-style link.
+Open the relevant Markdown file, then create your reference-style link.
 
 ```markdown
 [LINK_TEXT][REFERENCE_NUMBER]
@@ -87,7 +86,5 @@ Your links should look similar to the following:
 [5]: {{site.baseurl}}/developer_guide/platform_wide/swift#step-2-uploading-your-token
 ```
 {% endraw %}
-
-{% multi_lang_include contributing/minis/creating_a_pull_request.md %}
 {% endtab %}
 {% endtabs %}

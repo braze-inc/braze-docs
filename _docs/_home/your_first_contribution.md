@@ -16,9 +16,7 @@ When you're finished with this tutorial, you'll be able to:
 - <i class="fa-solid fa-circle-check" style="color: #34a853;"></i> Preview your changes in a test site
 - <i class="fa-solid fa-circle-check" style="color: #34a853;"></i> Request a review from the Braze Docs team
 
-## Prerequisites
-
-Before you make your first contributions, you'll need to complete the steps on [Contributing to Braze Docs]().
+{% multi_lang_include contributing/prerequisites.md %}
 
 ## Step 1: Explore the GitHub repository
 

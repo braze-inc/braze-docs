@@ -14,7 +14,7 @@ noindex: true
 
 ### Step 1: Create a new file
 
-First, [create a new branch]({{site.baseurl}}/home/github/creating_a_new_branch), then open the directory you'd like to add a new page to.
+Open the directory you'd like to add a new page to.
 
 ![A text editor with the file tree open.]()
 
@@ -64,13 +64,13 @@ Replace the following:
 | `CONTENT`           | The body paragraph for your Heading 2 section.                                                                                                                                                                                              |
 {: .reset-td-br-1 .reset-td-br-2}
 
-You may add additional metadata and headings as needed, as this template is to get you started. For the full list of supported YAML metadata, see [YAML front matter]({{site.baseurl}}/home/yaml_front_matter/metadata/).
+{% alert tip %}
+This template is only to get you started&#8212;add [additional metadata]() and headings as needed.
+{% endalert %}
 
-When you're ready to add content to your new page, continue to [Modifying a page](#modifying-a-page).
+## Writing content
 
-## Modifying a page
-
-Other than the Braze-specific syntax covered in this section, all page content should use [standard Markdown syntax](https://www.markdownguide.org/basic-syntax/). {% multi_lang_include contributing/minis/creating_a_pull_request.md %}
+Other than the Braze-specific syntax shown in this section, all content be written using [standard Markdown syntax](https://www.markdownguide.org/basic-syntax/).
 
 ### Cross-referencing
 
@@ -88,7 +88,7 @@ For a full walkthrough, see [Cross-referencing]({{site.baseurl}}/home/content_ma
 
 ### Adding images
 
-To add images in your page, place the image's PNG file inside the relevant location within `assets/img`, then using the following syntax:
+To add images, place the image's PNG file inside the relevant location within `assets/img`, then use the following syntax:
 
 {% raw %}
 ```markdown

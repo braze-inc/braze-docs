@@ -19,7 +19,7 @@ When you create a new section, you can create a section with or without a landin
 
 {% tabs %}
 {% tab with landing page %}
-To create a section with a landing page, [create a new branch]({{site.baseurl}}/home/github/creating_a_new_branch/), then navigate to the relevant primary section or subsection and create a directory and Markdown file for your new section.
+To create a section with a landing page, open the relevant primary section or subsection, then create a directory and Markdown file for your new section.
 
 ```plaintext
 braze-docs
@@ -51,7 +51,7 @@ braze-docs
             └── getting_started.md
 ```
 
-Open your new Markdown file and add the following template to use the default landing-page layout. For other layouts, see [Layouts]({{site.baseurl}}/home/examples/layouts).
+Open your new Markdown file and add the following template to use the default landing-page layout. For other layouts, see [Layouts]({{site.baseurl}}/home/yaml_front_matter/page_layouts/).
 
 ```markdown
 ---
@@ -81,7 +81,7 @@ Replace the following:
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% alert tip %}
-You may add additional metadata and headings as needed, this template is just to get you started. For the full list of supported YAML metadata, see [YAML front matter]({{site.baseurl}}/home/yaml_front_matter).
+This template is only to get you started&#8212;add [additional metadata]() and headings as needed.
 {% endalert %}
 
 Next, open your new directory and create a Markdown file for each new page you want to add to your new section. Your directory structure should look similar to the following:
@@ -97,7 +97,7 @@ braze-docs
             └── getting_started.md
 ```
 
-[Add content]({{site.baseurl}}/home/content_management/pages/#modifying-a-page) to each page as needed. When you're finished, continue to [Ordering a section](#ordering-a-section).
+When you're finished [adding content]({{site.baseurl}}/home/content_management/pages/#writing-content) to each page, continue to the next section. 
 {% endtab %}
 
 {% tab without landing page %}
@@ -170,13 +170,19 @@ braze-docs
             └── getting_started.md
 ```
 
-[Add content]({{site.baseurl}}/home/content_management/pages/#modifying-a-page) to each page as needed. When you're finished, continue to [Ordering a section](#ordering-a-section).
+When you're finished [adding content]({{site.baseurl}}/home/content_management/pages/#writing-content) to each page, continue to the next section.
 {% endtab %}
 {% endtabs %}
 
 ## Ordering a section
 
-To order a section, first, [create a new branch]({{site.baseurl}}/home/github/creating_a_new_branch), then open one of the section's Markdown files in your text editor. Next, search for the `page_order` tag in your YAML metadata. If it doesn't exist, you can add it now.
+To order a section, open one of the Markdown files in that section and search for the [`page_order`]() tag within its YAML front matter.
+
+```markdown
+---
+page_order:
+---
+```
 
 The `page_order` tag represents a page's relative-order in a section on the left-side navigation bar and can be set to any non-negative number (such as `0`, `20`, or `5.5`). This means you'll need to know the `page_order` for each Markdown file in the current directory, but not any other directory (including subdirectories).
 
@@ -190,6 +196,3 @@ noindex: true
 config_only: true
 ---
 ```
-
-{% multi_lang_include contributing/minis/creating_a_pull_request.md %}
-

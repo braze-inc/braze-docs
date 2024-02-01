@@ -1,15 +1,15 @@
 ---
-nav_title: GitHub
+nav_title: Git and GitHub
 page_order: 5
 noindex: true
 ---
 
-# GitHub
+# Git and GitHub
 
-> Learn how to use GitHub and command-line Git to contribute to Braze Docs.
+> Learn how to use Git and GitHub to contribute to Braze Docs.
 
 {% alert tip %}
-If you're new to the Git or the command-line, start with our tutorial instead: [Your first contribution]({{site.baseurl}}/docs/home/getting_started/your_first_contribution/).
+If you're new to Git or the command-line, start with our tutorial instead: [Your first contribution]({{site.baseurl}}/docs/home/getting_started/your_first_contribution/).
 {% endalert %}
 
 ## Prerequisites

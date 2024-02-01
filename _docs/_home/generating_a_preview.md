@@ -9,12 +9,12 @@ noindex: true
 > Learn how to generate a local site preview, so you can see how your work would look on Braze Docs.
 
 {% alert tip %}
-Every time you push to the Braze Docs GitHub repository, a Braze-hosted site preview is automatically generated. While generating a local site preview is helpful while you work on new content, the Braze-hosted site preview is great for checking your work on mobile or collaborating with others. 
+Every time you push to the Braze Docs GitHub repository, a Braze-hosted site preview is automatically generated, which is great for checking your work on mobile or collaborating with others. 
 {% endalert %}
 
 ## Prerequisites
 
-To build the docs locally, you'll need to [set up your environment]({{site.baseurl}}/home/getting_started/setting_up_your_environment/).
+To generate a local site preview, you'll need to [set up your environment]({{site.baseurl}}/home/getting_started/setting_up_your_environment/).
 
 ## Generating the preview
 
@@ -77,13 +77,13 @@ Asset Pipeline: Saved 'global-128fd02b54e35ea79fcb21ea460fac06.js' to '/Users/al
 To see these updates in your browser, refresh the page.
 
 {% alert tip %}
-You can refresh the page in your browser by pressing <kbd>Command</kbd> + <kbd>R</kbd> on macOS or <kbd>Control</kbd> + <kbd>R</kbd> on Windows.
+You can refresh the page in your browser by pressing <kbd>Command</kbd> + <kbd>R</kbd> on macOS, or <kbd>Control</kbd> + <kbd>R</kbd> on Windows.
 {% endalert %}
 
 However, there are cases when your site preview will **not** be automatically updated, such as when:
 
-- File or directory names are changed
-- New files or directories are added
-- Content changes to files in the `_includes` directory
+- A file or directory name is changed
+- A new file or directory is added
+- The content of a file in the `_includes` directory is edited 
 
 To see these updates, you'll need to [stop your local server](#step-4-stop-your-local-server) and [start it again](#step-2-start-a-local-server).

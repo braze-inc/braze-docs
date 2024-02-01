@@ -27,7 +27,7 @@ braze-docs
         └── prerequisites.md
 ```
 
-Next, reference our [style guide](https://docs.google.com/document/u/2/d/e/2PACX-1vTluyDFO3ZEV7V6VvhXE4As_hSFwmnFFdU9g6_TrAYTgH1QmbRoEDDdn5GzKAB9vdBbIdyiFdoaJcNk/pub) to add content to your page. Your page should look similar to the following:
+Next, [add content]() to your page. If you plan on adding your include to a page that already has YAML front matter, do not add front matter to your include. Your page should look similar to the following:
 
 {% raw %}
 ```markdown
@@ -45,11 +45,9 @@ Anytime this [include is used](#using-an-include), the following will be rendere
 
 ![The "Creating a new page" document with the "Prerequisites" include rendered.]()
 
-{% multi_lang_include contributing/minis/creating_a_pull_request.md %}
+## Referencing an include
 
-## Using an include
-
-In your text editor, open a Markdown file, then add the include you'd like to use.
+Open a Markdown file and reference an include using the following syntax: 
 
 {% raw %}
 ```plaintext
@@ -57,9 +55,7 @@ In your text editor, open a Markdown file, then add the include you'd like to us
 ```
 {% endraw %}
 
-Replace `PATH_TO_INCLUDE` with the relative path from inside the `_includes` directory. Your reference should look like the following:
-
-### Example file tree
+Replace `PATH_TO_INCLUDE` with the relative path from inside the `_includes` directory. For example, given the following file tree:
 
 ```bash
 braze-docs
@@ -70,12 +66,10 @@ braze-docs
         └── prerequisites.md
 ```
 
-### Example include
+The reference would be similar to the following:
 
 {% raw %}
 ```plaintext
 {% multi_lang_include contributing/prerequisites.md %}
 ```
 {% endraw %}
-
-{% multi_lang_include contributing/minis/creating_a_pull_request.md %}

@@ -14,7 +14,7 @@ noindex: true
 
 ### Step 1: Upload the image file
 
-First, [create a new branch]({{site.baseurl}}/home/github/creating_a_new_branch), then go to `assets/img`. Generally, your new image should be added to the same directory as the other images on your page. However, you may use your best judgment. Confirm your new image follows our [Image Style Guide](https://docs.google.com/document/u/2/d/e/2PACX-1vRJSkwcjmjrTfLDagZccLpOMMyh5NN5SXRZSjz12cRAHbX4OrUmhvCmYpf_p5YB-9r4_jSOQLkicQIH/pub), then add the PNG file to the relevant subdirectory.
+In your text editor, open `assets` > `img`. Generally, your new image should be added to the same directory as the other images on your page. However, you may use your best judgment. Confirm your new image follows our [Image Style Guide](https://docs.google.com/document/u/2/d/e/2PACX-1vRJSkwcjmjrTfLDagZccLpOMMyh5NN5SXRZSjz12cRAHbX4OrUmhvCmYpf_p5YB-9r4_jSOQLkicQIH/pub), then add the PNG file to the relevant subdirectory.
 
 ![A text editor with the file tree open and a new image added to the 'img' directory.]()
 
@@ -47,9 +47,8 @@ Your in-line image should be similar to the following:
 ![The form for creating a new pull request on GitHub.]({% image_buster /assets/img/contributing/getting_started/github_pull_request.png %})
 ```
 {% endraw %}
-
-{% multi_lang_include contributing/minis/creating_a_pull_request.md %}
 {% endtab %}
+
 {% tab reference-style %}
 In your Markdown file, link to your new image using the reference-style syntax.
 
@@ -98,8 +97,6 @@ Your links should look similar to the following:
 [10]: {% image_buster /assets/img/contributing/getting_started/github_pull_request.png %}
 ```
 {% endraw %}
-
-{% multi_lang_include contributing/minis/creating_a_pull_request.md %}
 {% endtab %}
 {% endtabs %}
 
@@ -112,7 +109,7 @@ When updating an existing image, you can either add a new image file or replace 
 
 {% tabs local %}
 {% tab add new file%}
-First, [create a new branch]({{site.baseurl}}/home/github/creating_a_new_branch/), then open your page and look for the old [in-line]({{site.baseurl}}/home/content_management/images/?tab=in-line#step-2-link-to-the-image) or [reference-style]({{site.baseurl}}/home/content_management/images/?tab=reference-style#step-2-link-to-the-image) image link. It will mirror the following syntax:
+Open the relevant Markdown file and look for the old [in-line]({{site.baseurl}}/home/content_management/images/?tab=in-line#step-2-link-to-the-image) or [reference-style]({{site.baseurl}}/home/content_management/images/?tab=reference-style#step-2-link-to-the-image) image link. It will mirror the following syntax:
 
 {% raw %}
 ```markdown
@@ -128,11 +125,11 @@ Do not delete the old image file when you add your new one.
 
 ![A text editor with the file tree open and a new image added to the 'img' directory.]()
 
-Link to your image using the [in-line]({{site.baseurl}}/home/content_management/images/?tab=in-line#step-2-link-to-the-image) or [reference-style]({{site.baseurl}}/home/content_management/images/?tab=reference-style#step-2-link-to-the-image) syntax. {% multi_lang_include contributing/minis/creating_a_pull_request.md %}
+Link to your image using the [in-line]({{site.baseurl}}/home/content_management/images/?tab=in-line#step-2-link-to-the-image) or [reference-style]({{site.baseurl}}/home/content_management/images/?tab=reference-style#step-2-link-to-the-image) syntax.
 {% endtab %}
 
 {% tab overwrite existing file %}
-First, [create a new branch]({{site.baseurl}}/home/github/creating_a_new_branch/), then open your page and look for the old [in-line]({{site.baseurl}}/home/content_management/images/?tab=in-line#step-2-link-to-the-image) or [reference-style]({{site.baseurl}}/home/content_management/images/?tab=reference-style#step-2-link-to-the-image) image link. It will mirror the following syntax:
+Open the relevant Markdown file and look for the old [in-line]({{site.baseurl}}/home/content_management/images/?tab=in-line#step-2-link-to-the-image) or [reference-style]({{site.baseurl}}/home/content_management/images/?tab=reference-style#step-2-link-to-the-image) image link. It will mirror the following syntax:
 
 {% raw %}
 ```markdown
@@ -145,17 +142,13 @@ Confirm your new image follows our [Image Style Guide](https://docs.google.com/d
 Next, add your new image to the same directory as the original image. If asked, confirm you'd like to overwrite the image.
 
 ![A text editor asking the user to confirm they would like to overwrite the existing file.]()
-
-{% multi_lang_include contributing/minis/creating_a_pull_request.md %}
 {% endtab %}
 {% endtabs %}
 
 ## Removing an image
 
-To remove an image, [create a new branch]({{site.baseurl}}/home/github/creating_a_new_branch), then remove the [in-line]({{site.baseurl}}/home/content_management/images/?tab=in-line#step-2-link-to-the-image) or [reference-style]({{site.baseurl}}/home/content_management/images/?tab=reference-style#step-2-link-to-the-image) image link the page.
+To remove an image, open the relevant Markdown file and remove the [in-line]({{site.baseurl}}/home/content_management/images/?tab=in-line#step-2-link-to-the-image) or [reference-style]({{site.baseurl}}/home/content_management/images/?tab=reference-style#step-2-link-to-the-image) image link.
 
 {% alert warning %}
 Do not delete the image file from the repository.
 {% endalert %}
-
-{% multi_lang_include contributing/minis/creating_a_pull_request.md %}

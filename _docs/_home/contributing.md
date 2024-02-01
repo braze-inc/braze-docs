@@ -8,23 +8,27 @@ noindex: true
 
 > Thanks for contributing to Braze Docs! Every Tuesday and Thursday, we merge community contributions and deploy them to Braze Docs. Use this guide to get your changes merged during our next deployment.
 
+## Prerequisites
+
+Some understanding of Git is required to contribute to Braze Docs. If you're new to Git and don't know where to start, see [Git Book: Getting Started](https://git-scm.com/book/en/v2/Getting-Started-About-Version-Control). If you're looking for a refresher, see [Git and GitHub]().
+
 ## Step 1: Sign the CLA
 
-Everybody that contributes to Braze Docs must sign the [Contribution License Agreement (CLA)](https://www.braze.com/docs/cla). If you don't sign the CLA, the `@cla-bot` on GitHub will automatically block your pull request. 
+Everybody that contributes to Braze Docs must sign the [Contribution License Agreement (CLA)](https://www.braze.com/docs/cla). If you don't sign the CLA, the `@cla-bot` on GitHub will automatically block your pull request.
 
-## Step 2: Set up your environment (optional)
+## Step 2: Set up your environment
 
-To make complex or multi-document changes, you'll need to set up your environment. If you only plan on making small, single-document changes, you can make changes directly in GitHub. For more information, continue to [Next steps](#next-steps).
+Most documentation changes require you to set up your local environment. However, small single-document changes can be completed [directly in GitHub]().
 
 ### Step 2.1: Get the required software
 
-At a minimum, you'll need the following types of software:
+The following types of software are needed at a minimum: 
 
 - A terminal
 - A text editor
 - A ruby version manager
 
-If you're not sure which specific software products to choose, here's some recommendations:
+If you're not sure where to start, see the following: 
 
 <style>
 table td {
@@ -40,6 +44,11 @@ table td {
     </tr>
 </thead>
 <tbody>
+    <tr>
+        <td>Git GUI</td>
+        <td><a href="https://desktop.github.com/">GitHub Desktop</a></td>
+        <td>A graphical user interface (GUI) you can use to run Git commands, instead of typing commands in the terminal.</td>
+    </tr>    
     <tr>
         <td>Terminal</td>
         <td><a href="https://wezfurlong.org/wezterm/index.html">Wezterm</a></td>
@@ -60,11 +69,6 @@ table td {
         <td><a href="https://github.com/rbenv/rbenv#using-package-managers">rbenv</a></td>
         <td>A Ruby version manager that allows you to install and manage the required Ruby version for Braze Docs when you're setting up your local environment. If you'd like to use a different Ruby version manager, see <a href="https://www.ruby-lang.org/en/documentation/installation/#managers">Ruby's supported version managers</a>.</td>
     </tr>
-    <tr>
-        <td>GitHub UI tool</td>
-        <td><a href="https://desktop.github.com/">GitHub Desktop</a></td>
-        <td>Many of our recommendations for advanced contributors assume you will be using your terminal to handle Git workflows. If you prefer to simplify things, you can use GitHub Desktop to provide a UI for steps like checking out branches, making commits, and opening pull requests.</td>
-    </tr>    
     <tr>
         <td>Text editor</td>
         <td><a href="https://code.visualstudio.com/download">Visual Studio Code (VS Code)</a></td>
@@ -99,7 +103,7 @@ As of writing, all software is free of cost. If you find that a product is no lo
 Next, [create a GitHub account](https://github.com/join) and [set up your SSH key](https://docs.github.com/en/enterprise-cloud@latest/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent).
 
 {% alert note %}
-If you're using [Windows Subsystem for Linux (WSL)](https://learn.microsoft.com/en-us/windows/wsl/install), set up your SSH key using the Linux setup instructions.
+If you're using [WSL](https://learn.microsoft.com/en-us/windows/wsl/install), follow the Linux instructions to set up your SSH key.
 {% endalert %}
 
 ### Step 2.3: Fork the repository
@@ -109,7 +113,7 @@ Open the [Braze Docs GitHub repository](https://github.com/braze-inc/braze-docs)
 ![The Braze Docs GitHub repository with the "Fork" button highlighted.]()
 
 {% alert tip %}
-For more information, see [**About forks**](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/about-forks).
+For more information, see [GitHub: About forks](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/about-forks).
 {% endalert %}
 
 Keep the default settings, then select **Create fork**.
@@ -129,7 +133,7 @@ git clone git@github.com:braze-inc/braze-docs.git
 
 ### Step 2.4: Install Ruby
 
-To build the docs locally, you'll need Ruby version `2.7.4` installed. In the terminal, open `braze-docs` and check for Ruby version `2.7.4`.
+To [generate a local site preview](), you'll need Ruby version `2.7.4` installed. In the terminal, open `braze-docs` and check for Ruby version `2.7.4`.
 
 ```bash
 cd ~/braze-docs
@@ -152,4 +156,9 @@ bundle install
 
 ## Next steps
 
-THIS.
+If you're new to Git or docs-as-code, start with our tutorial: [Your first contribution](). Otherwise, you can check out one of the following:
+
+- [Content management]()
+- [YAML front matter]()
+- [Generating a preview]()
+- [Style guides]()

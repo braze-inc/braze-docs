@@ -12,13 +12,13 @@ Page URLs always match the directory structure of the Braze Docs repository. Whe
 
 ![Example of a 404 page on Braze Docs.]()
 
-By setting up URL redirects, you'll help prevent bookmarks from breaking for Braze Docs users.
+By setting up URL redirects, you'll help prevent user bookmarks from breaking.
 
 {% multi_lang_include contributing/prerequisites.md %}
 
 ## Redirecting a page
 
-To redirect the URL for an entire page, you'll use our global redirect file. First, [create a new branch]({{site.baseurl}}/home/github/creating_a_new_branch), then find the page's Markdown file and move or rename the file.
+To redirect the URL for an entire page, you'll use the global redirect file. First, move or rename the relevant Markdown file.
 
 ![A text editor with the file tree open on the left side.]()
 
@@ -44,11 +44,9 @@ Your redirect should be similar to the following:
 validurls['/docs/user_guide/data_and_analytics/engagement_reports'] = '/docs/user_guide/data_and_analytics/your_reports/engagement_reports';
 ```
 
-{% multi_lang_include contributing/minis/creating_a_pull_request.md %}
-
 ## Redirecting a heading
 
-To redirect the URL for an in-page heading, you'll use the `local_redirect` key within the page's YAML front matter. First, [create a new branch]({{site.baseurl}}/home/github/creating_a_new_branch), then open the page's Markdown file and rename the relevant heading.
+To redirect the URL for an in-page heading, you'll use the `local_redirect` key within the page's YAML front matter. First, move or rename the relevant Markdown file.
 
 ![A text editor with the file tree open on the left side.]()
 
@@ -79,5 +77,3 @@ description: "If you're new to the Braze SDK, learn how to get started."
 local_redirect:
   building-from-source: '/docs/developer_guide/getting_started/#using-our-install-script'
 ```
-
-{% multi_lang_include contributing/minis/creating_a_pull_request.md %}
