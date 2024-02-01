@@ -287,4 +287,6 @@ valid_partner_list:
   url: /docs/partners/message_orchestration/channel_extensions/email_templates/smartersends/
 - name: Typeform
   url: /docs/partners/message_orchestration/channel_extensions/surveys/typeform/
+- name: Scuba
+  url: /docs/partners/data_and_infrastructure_agility/analytics/scuba/
 ---

@@ -77,6 +77,10 @@ You should now be able to launch your application and see sessions being logged 
 
 ## iOS
 
+{% alert important %}
+The iOS bindings for Xamarin SDK version 4.0.0 and later use the [Braze Swift SDK](https://github.com/braze-inc/braze-swift-sdk/), while previous versions use the [legacy AppboyKit SDK](https://github.com/Appboy/Appboy-ios-sdk).
+{% endalert %}
+
 ### Step 1: Get the Xamarin binding
 
 A Xamarin binding is a way to use native libraries in Xamarin apps.  The implementation of a binding consists of building a C# interface to the library and then using that interface in your application.
@@ -113,7 +117,7 @@ See the `AppDelegate.cs` file in the [TestApp.XamariniOS][110] sample app.
 
 Within your `Info.plist` file, add the following snippet:
 
->  Be sure to update `YOUR-SDK-ENDPOINT` with the correct value from your [Settings][5] page.
+>  Be sure to update `YOUR-SDK-ENDPOINT` with the correct value from your Settings page.
 
 ```csharp
 // C#

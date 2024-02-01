@@ -18,7 +18,7 @@ To access the Deliverability Center, you'll need "Access Campaigns, Canvases, Ca
 
 ### Set up Google Postmaster account
 
-Before connecting to the Deliverability Center, you'll need to set up a Google Postmaster Tools account.
+Before connecting to the Deliverability Center, you'll need to set up a Google Postmaster Tools account. You can use a work or personal Gmail account to setup your Google Postmaster. 
 
 1. Go to the [Google Postmaster Tools dashboard](https://postmaster.google.com/managedomains?pli=1).
 2. In the bottom right, click the <i class="fas fa-plus-circle"></i> plus icon.
