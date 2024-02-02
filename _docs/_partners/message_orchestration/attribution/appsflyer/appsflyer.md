@@ -168,7 +168,7 @@ Deep links&#8212;links that direct users toward a specific page or place within 
 
 ### Step 1: Set up OneLink in AppsFlyer
 
-1. In AppsFlyer, select a OneLink template for your email campaigns. Ensure the template supports universal links (iOS) or App Links (Android). 
+1. In AppsFlyer, select a OneLink template for your email campaigns. Make sure the template supports universal links (iOS) or App Links (Android). 
 2. Configure your app to support deep linking with OneLink. See the [AppsFlyer documentation](https://dev.appsflyer.com/hc/docs/dl_work_flow#initial-setup) for details on configuring your app to support OneLink.
 
 ### Step 2: Configure your app to support universal links and App Links
