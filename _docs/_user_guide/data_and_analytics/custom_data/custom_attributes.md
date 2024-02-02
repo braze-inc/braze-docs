@@ -23,6 +23,8 @@ If you are using the [older navigation]({{site.baseurl}}/navigation), you can fi
 
 From this page, you can view, manage, or blocklist existing custom attributes, or create a new one. If you block a custom attribute, no data will be collected regarding that attribute, existing data will be unavailable unless reactivated, and blocklisted attributes will not show up in filters.
 
+Admins can also create custom attributes and mark them as PII from this page. These attributes will only be visible to admins and dashboard users with the “View Custom Attributes Marked as PII” permission.
+
 To remove custom attributes from user profiles, set the value to "null" in your API request to the [`/users/track` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track#user-track).
 
 ## Setting custom attributes
