@@ -24,13 +24,13 @@ This change does not impact Braze email click tracking and SMS link shortening s
 
 ### App Tracking Transparency
 
-Apple announced its commitment to expand the scope of App Tracking Transparency (ATT), which enables users to control whether an app can access their activity on apps and websites belonging to other companies. The iOS 17 release contains two key ATT features: privacy manifests and code signing.
+Apple announced its commitment to expand the scope of [Ad Tracking Transparency (ATT)](https://support.apple.com/en-us/HT212025), which enables users to control whether an app can access their activity on apps and websites belonging to other companies. The iOS 17 release contains two key ATT features: privacy manifests and code signing.
 
 #### Privacy manifests
 
-Privacy manifests allow developers to outline the privacy practices of their app&#8212;including third-party SDKs&#8212;in a standardized format. Starting in iOS 17.2, Apple will block iOS APIs that might be used for fingerprinting. If applications use such APIs, they will be obliged to list a "required reason" for using that API in the privacy manifest. 
+Apple now requires a privacy manifest file that describes the reason your app and third-party SDKs collect data, along with their data-collection methods. Starting with iOS 17.2, Apple will block all declared tracking endpoints in your app until the end-user accepts the ATT prompt.
 
-Additionally, Braze has released a Privacy Manifest and new flexible APIs to designate individual data points, such as "tracking" and "non-tracking". For more information, read our [Privacy Manifest]({{site.baseurl}}/docs/developer_guide/platform_integration_guides/swift/privacy_manifest).
+Braze has released our own privacy manifest, along with new flexible APIs that automatically reroute declared tracking data to dedicated `-tracking` endpoints. For more information, see [Braze's privacy manifest]({{site.baseurl}}/docs/developer_guide/platform_integration_guides/swift/privacy_manifest).
 
 #### Code signing
 

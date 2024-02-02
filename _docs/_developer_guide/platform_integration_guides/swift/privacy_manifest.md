@@ -19,7 +19,7 @@ By default, the Braze SDK does not collect tracking data. However, depending on 
 
 ## What is a privacy manifest?
 
-A privacy manifest is a file in your Xcode project that describes the reason your app and third-party SDKs collect data, along with the data-collection method. Each of your third-party SDKs that track data require its own privacy manifest file. When you [create your app's privacy report](https://developer.apple.com/documentation/bundleresources/privacy_manifest_files/describing_data_use_in_privacy_manifests#4239187), these privacy manifest files are automatically aggregated into a single report.
+A privacy manifest is a file in your Xcode project that describes the reason your app and third-party SDKs collect data, along with their data-collection methods. Each of your third-party SDKs that track data require its own privacy manifest. When you [create your app's privacy report](https://developer.apple.com/documentation/bundleresources/privacy_manifest_files/describing_data_use_in_privacy_manifests#4239187), these privacy manifest files are automatically aggregated into a single report.
 
 ## API tracking-data domains
 
