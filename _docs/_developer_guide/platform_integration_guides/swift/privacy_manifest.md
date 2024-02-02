@@ -15,19 +15,19 @@ description: "This article describes Braze's privacy manifest file used to decla
 
 Apple defines "tracking data" as data collected in your app about an end-user or device that's linked to Third-Party Data (such as targeted advertising), or a data broker. For a complete definition with examples, see [Apple: Tracking](https://developer.apple.com/app-store/app-privacy-details/#user-tracking).
 
-By default, the Braze SDK does not collect tracking data. However, depending on your Braze SDK configuration, you may be required to add a privacy manifest to your app.
+By default, the Braze SDK does not collect tracking data. However, depending on your Braze SDK configuration, you may be required to specify this data in your app's privacy manifest.
 
 ## What is a privacy manifest?
 
 A privacy manifest is a file in your Xcode project that describes the reason your app and third-party SDKs collect data, along with the data-collection method. Each of your third-party SDKs that track data require its own privacy manifest file. When you [create your app's privacy report](https://developer.apple.com/documentation/bundleresources/privacy_manifest_files/describing_data_use_in_privacy_manifests#4239187), these privacy manifest files are automatically aggregated into a single report.
 
-When an end-user launches your app for the first time, your app's privacy report will be used to generate an Ad Tracking Transparency agreement. Starting with iOS 17.2, Apple will block all tracking data in your app until the end-user accepts this agreement.
+Starting with iOS 17.2, Apple will block all declared tracking endpoints in your app until the end-user accepts the Ad Tracking Transparency prompt. Braze has added a new tracking endpoint that will automatically route declared tracking data, while keeping all non-tracking 1st party data to the original endpoint.
 
 ## Declaring Braze tracking data
 
 ### Step 1: Review your current policies
 
-Review your Braze SDK's current data-collection policies with your legal team to determine whether your app collects tracking data [as defined by Apple](#what-is-tracking-data). If you're not collecting any tracking data, you don't need to add a privacy manifest at this time. For more information about the Braze SDK's data-collection policies, see [SDK data collection]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/sdk_data_collection/).
+Review your Braze SDK's current data-collection policies with your legal team to determine whether your app collects tracking data [as defined by Apple](#what-is-tracking-data). If you're not collecting any tracking data, you don't need to customize your privacy manifest for Braze at this time. For more information about the Braze SDK's data-collection policies, see [SDK data collection]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/sdk_data_collection/).
 
 {% alert important %}
 If any of your non-Braze SDKs collect tracking data, you'll need to review those policies separately.
