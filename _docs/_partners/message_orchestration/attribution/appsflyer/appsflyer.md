@@ -168,7 +168,7 @@ Deep links&#8212;links that direct users toward a specific page or place within 
 
 ### Step 1: Set up OneLink in AppsFlyer
 
-1. In AppsFlyer, select a OneLink template for your email campaigns. Ensure the template supports universal links (iOS) or App Links (Android). 
+1. In AppsFlyer, select a OneLink template for your email campaigns. Make sure the template supports universal links (iOS) or App Links (Android). 
 2. Configure your app to support deep linking with OneLink. See the [AppsFlyer documentation](https://dev.appsflyer.com/hc/docs/dl_work_flow#initial-setup) for details on configuring your app to support OneLink.
 
 ### Step 2: Configure your app to support universal links and App Links
@@ -185,7 +185,7 @@ Set up the Apple App Site Association (AASA) file hosting to enable universal li
 
 1. Obtain an AASA file in one of the following methods:
     * If you've set up OneLink with universal links, you may already have an AASA file associated with OneLink. To obtain the AASA file, perform the following:
-        * Copy the OneLink subdomain of your OneLink template. Ensure the template supports universal links.
+        * Copy the OneLink subdomain of your OneLink template. Make sure the template supports universal links.
         * Paste it instead of the placeholder in the following URL: `<OneLinkSubdomain>.onelink.me/.well-known/apple-app-site-association`
         * To download the AASA file, paste the OneLink URL into your browser's address bar and press **Enter**. The file will then be downloaded to your computer, and you can open and view its contents using any text editor.
     * [Apple's guide on universal links](https://developer.apple.com/documentation/xcode/allowing_apps_and_websites_to_link_to_your_content) explains how to create the AASA file.
@@ -202,7 +202,7 @@ Set up the Digital Asset Links file hosting to enable App Links in your emails.
 
 1. Obtain a Digital Asset Links file in one of the following methods:
     * If you've set up OneLink with App Links, you may already have a Digital Asset Links file associated with OneLink. To obtain the file, perform the following:
-        * Copy the OneLink subdomain of your OneLink template. Ensure the template supports App Links.
+        * Copy the OneLink subdomain of your OneLink template. Make sure the template supports App Links.
         * Add `/.well-known/assetlinks.json` to the end of the OneLink URL.
         * To download the Digital Asset Links file, paste the OneLink URL into your browser's address bar and press **Enter**. For example, `https://<OneLinkSubdomain>.onelink.me/.well-known/assetlinks.json`. The file will then be downloaded to your computer, and you can open and view its contents using any text editor.
     * [Android's guide to App Links](https://developer.android.com/studio/write/app-link-indexing) explains how to create the Digital Asset Links file.
@@ -224,7 +224,7 @@ Set up the Apple App Site Association (AASA) file hosting to enable universal li
 
 1. Obtain an AASA file in one of the following methods:
     * If you've set up OneLink with universal links, you may already have an AASA file associated with OneLink. To obtain the AASA file, perform the following:
-        * Copy the OneLink subdomain of your OneLink template. Ensure the template supports universal links.
+        * Copy the OneLink subdomain of your OneLink template. Make sure the template supports universal links.
         * Paste it instead of the placeholder in the following URL: `<OneLinkSubdomain>.onelink.me/.well-known/apple-app-site-association`
         * To download the AASA file, paste the OneLink URL into your browser's address bar and press **Enter**. The file will then be downloaded to your computer, and you can open and view its contents using any text editor.
     * [Apple's guide on universal links](https://developer.apple.com/documentation/xcode/allowing_apps_and_websites_to_link_to_your_content) explains how to create the AASA file.
@@ -248,7 +248,7 @@ Set up the Digital Asset Links file hosting to enable App Links in your emails.
 
 1. Obtain a Digital Asset Links file in one of the following methods:
     * If you've set up OneLink with App Links, you may already have a Digital Asset Links file associated with OneLink. To obtain the file, perform the following:
-        * Copy the OneLink subdomain of your OneLink template. Ensure the template supports App Links.
+        * Copy the OneLink subdomain of your OneLink template. Make sure the template supports App Links.
         * Add `/.well-known/assetlinks.json` to the end of the OneLink URL.
         * To download the Digital Asset Links file, paste the OneLink URL into your browser's address bar and press **Enter**. For example, `https://<OneLinkSubdomain>.onelink.me/.well-known/assetlinks.json`. The file will then be downloaded to your computer, and you can open and view its contents using any text editor.
     * [Android's guide to App Links](https://developer.android.com/studio/write/app-link-indexing) explains how to create the Digital Asset Links file.
@@ -400,9 +400,7 @@ idfv={{most_recently_used_device.${id}}}
 {% endtab %}
 {% endtabs %}
 
-{% alert note %}
-**This recommendation is optional**: If you currently do not use any device identifiers&#8212;such as the IDFV or GAID&#8212;in your click tracking links, or do not plan to in the future, AppsFlyer will still be able to attribute these clicks through their probabilistic modeling.
-{% endalert %}
+
 
 [1]: {% image_buster /assets/img/braze_integration.png %}
 [2]: {% image_buster /assets/img/braze_attribution.png %}
