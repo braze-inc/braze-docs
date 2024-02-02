@@ -53,4 +53,24 @@ Using ``{{canvas_entry_properties.${catalog_update}.item_id}}`` will return the 
 Use this Liquid tag  ``{% catalog_items <name_of_your_catalog> {{canvas_entry_properties.${catalog_update}.item_id}}`` at the top of your message, then use ``items[0].<field_name>` to access data about that item throughout the message.
 {% endraw %}
 
+## Connecting an email capture form
+
+If you have an email capture form to collect user interest in receiving updates about a specific product, you can connect the form to back-in-stock notifications. To do this, you’ll create a custom event after capturing a user’s email address. You'll then use the `/users/track` endpoint to update the user when you send the custom event. 
+
+When you send Braze a `/users/track` request with only an email address, we will search for a user profile with that existing email address and subscribe the user. If we can’t find that email address, we’ll create a new user profile with only an email address so that they can receive messaging too.
+
+### Step 1: Create a custom event to subscribe a user from updates
+
+You'll need these attributes in your custom event:
+
+- `email_address`
+- `product_id` corresponding to the catalog item. If the `product_id` and catalog item name don't match, you can map them in Braze.
+- `catalog_name` is optional, but if you don't have one, you must set a default catalog for us to reference in the Braze platform.
+
+### Step 2: Create a custom event to remove a user from updates (optional)
+
+If you don’t have a custom event to remove a user, users will automatically be removed after 90 days You'll need the same attributes in Step 1 to create this custom event.
+
+After you create your custom event, your email form capture tool will subscribe users to updates for that specific product.
+
 [1]: {% image_buster /assets/img/back_in_stock_settings.png %} 
