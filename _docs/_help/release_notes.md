@@ -87,7 +87,7 @@ Braze CDI support for catalogs is now available for [Databricks sources]({{site.
 
 #### Manual Swift SDK integration
 
-We added the [Manual integration]({{site.baseurl}}}/developer_guide/platform_integration_guides/swift/initial_sdk_setup/installation_methods/manual_integration/article) article to the integration guides to describe how to manually integrate the Swift SDK without the use of a package manager.
+We added the [Manual integration]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/initial_sdk_setup/installation_methods/manual_integration/article) article to the integration guides to describe how to manually integrate the Swift SDK without the use of a package manager.
 
 #### Deprecations
 
