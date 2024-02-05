@@ -27,15 +27,9 @@ On the Shopify partner page, select **Go to Shopify App Store** to start the int
 
 ![]({% image_buster /assets/img/Shopify/shop_setup_1.png %}){: style="max-width:70%"}
 
-You’ll then be redirected to the Shopify App Store to install the Braze app.
-
-If your Shopify account is connected to multiple Shopify stores, verify that the store you will be installing the Braze app to appears in the dropdown menu at the top of the page. If the correct store isn't selected, select **Switch stores** and the appropriate store, and then select **Install**. 
+You’ll then be directed to a new tab to set up the integration on your Shopify website. Enter your Shopify store name. Make sure you've entered your store name, not your Shopify domain.
 
 ![]({% image_buster /assets/img/Shopify/shop_app_store.png %}){: style="max-width:70%"}
-
-You’ll then be redirected to Braze with the store name populated within Step 1 of your Shopify onboarding process. 
-
-![]({% image_buster /assets/img/Shopify/shopify_step_1.png %}){: style="max-width:70%"}
 
 {% alert note %}
 You can only connect one store per workspace at this time. If you have multiple Shopify stores that you’d like to connect to your workspace, reach out to your customer success manager for details on the Shopify multiple stores beta.
