@@ -58,7 +58,7 @@ guide_featured_list:
 
 ### Braze privacy manifest
 
-Braze has released our own privacy manifest, along with new flexible APIs that automatically reroute declared tracking data to dedicated `-tracking` endpoints. For more information, see [Braze's privacy manifest]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/privacy_manifest).
+Braze has released our own privacy manifest, along with new flexible APIs that automatically reroute declared tracking data to dedicated `-tracking` endpoints. For more information, see the [Braze privacy manifest]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/privacy_manifest).
 
 ### Google EU User Consent Policy
 
