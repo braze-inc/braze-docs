@@ -5,7 +5,7 @@ permalink: /list-unsubscribe/
 hidden: true
 ---
 
-## Using the list-unsubscribe header
+## List-unsubscribe header
 
 Using a list-unsubscribe header allows your recipients to unsubscribe easily from marketing emails by displaying an **Unsubscribe** button within the mailbox UI, and is not a part of the message body itself.
 

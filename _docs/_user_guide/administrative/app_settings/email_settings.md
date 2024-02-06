@@ -93,7 +93,7 @@ Once saved, Braze will send special instructions to the ESP in order to place th
 SSL enablement will wrap the URL of the tracking pixel with HTTPS instead of HTTP-if your SSL is misconfigured, it may affect the efficacy of the tracking pixel. 
 {% endalert %}
 
-## Using a list-unsubscribe header
+## List-unsubscribe header
 
 Using a list-unsubscribe header allows your recipients to unsubscribe easily from marketing emails by displaying an **Unsubscribe** button within the mailbox UI, and is not a part of the message body itself.
 
