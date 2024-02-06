@@ -44,7 +44,7 @@ If any of your non-Braze SDKs collect tracking data, you'll need to review those
 In your Xcode project, open `AppDelegate.swift` then list each [tracking property](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/configuration-swift.class/trackingproperty/) you want to declare by creating a static or dynamic tracking list. Keep in mind, Apple will block these properties until the end-user accepts their ATT prompt, so only list properties you and your legal team consider tracking.
 
 {% alert warning %}
-Be sure to follow the guide to ensure you are setting [`adTrackingEnabled`](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/e1-privacy-tracking/#Respond-to-App-Tracking-Transparency-permissions) when useres accept or decline the Ad Tracking Transparency Prompt. This will improve performance and retry logic within your app.
+Be sure to follow the guide to ensure you are setting [`adTrackingEnabled`](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/e1-privacy-tracking/#Respond-to-App-Tracking-Transparency-permissions) when users accept or decline the Ad Tracking Transparency Prompt. This will improve performance and retry logic within your app.
 {% endalert %}
 
 {% tabs %}
