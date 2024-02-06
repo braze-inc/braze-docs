@@ -72,6 +72,7 @@ Authorization: Bearer YOUR-REST-API-KEY
     ... (more variations)
   ],
   "tags": (array of strings) the tag names associated with the Canvas,
+  "teams" : (array) the names of the Teams associated with the Canvas,
   "steps": [
     {
       "name": (string) the name of step,
