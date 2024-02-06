@@ -73,7 +73,7 @@ If you choose to update a Content Block, it will update in all messages the Cont
 
 If you want to update a Content Block for a single message or make a copy to use in other messages, you can either copy the HTML from the original message to your new one or edit the original Content Block (it must have been used in a message already) and save it. You will get a prompt that allows you to save it as a new Content Block.
 
-After making edits to a Content Block, you can save and launch the updated Content Block by clicking **Launch Content Block**. Or, you select **More** > **Duplicate** to create a duplicate of your Content Block.
+After making edits to a Content Block, you can save and launch the updated Content Block by clicking **Launch Content Block**. Or, you can select **More** > **Duplicate** to create a duplicate of your Content Block.
 
 ![][2]
 
