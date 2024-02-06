@@ -54,7 +54,7 @@ A `dispatch_id` is generated and provided in your send events, which can be used
 
 #### Can I use message_extras with in-app messages?
 
-Support for `message_extras` in the in-app message channel is coming soon!
+Using`message_extras` in the in-app message channel is not supported at this time.
 
 [1]: {% image_buster /assets/img_archive/message_extras1.png %}
 [2]: {% image_buster /assets/img_archive/message_extras2.png %}
