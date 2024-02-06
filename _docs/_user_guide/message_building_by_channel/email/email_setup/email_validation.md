@@ -65,7 +65,7 @@ For most domains, the local part must follow these parameters:
 - Must be between 1 and 64 characters in length
 
 
-The following REGEX can be used to validate that an email address will be considered valid:
+The following regular expression can be used to validate if an email address will be considered valid:
 ```
 /\A([a-zA-Z0-9_\-\^+$'\&#\/!%\*=\?`\|~]|[[^\p{ASCII}\p{Space}]&&\p{Alnum}\p{Punct}\p{S}])(([a-zA-Z0-9_\-\^+$'\&#\/!%\*=\?`\|~\.]|[[^\p{ASCII}\p{Space}]&&\p{Alnum}\p{Punct}\p{S}])*([a-zA-Z0-9_\-\^+$'\&#\/!%\*=\?`\|~]|[[^\p{ASCII}\p{Space}]&&\p{Alnum}\p{Punct}\p{S}]))?\z/
 ```
