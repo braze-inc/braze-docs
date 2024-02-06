@@ -56,9 +56,9 @@ If Braze receives a request to add a user and the email address is considered in
 
 ## Local part validation rules
 
-### General Email Validation
+### General email validation
 
-For most domains (except for Microsoft domains, see below) the local part must follow these parameters:
+For most domains, the local part must follow these parameters:
 - Can contain any letter, number, including Unicode letters and numbers as well as the following characters: (+) (&) (#) (_) (-) (^) or (/)
 - Can contain but may not start or end with the following character: (.)
 - Cannot contain double quotes (")
@@ -69,7 +69,6 @@ The following REGEX can be used to validate that an email address will be consid
 ```
 /\A([a-zA-Z0-9_\-\^+$'\&#\/!%\*=\?`\|~]|[[^\p{ASCII}\p{Space}]&&\p{Alnum}\p{Punct}\p{S}])(([a-zA-Z0-9_\-\^+$'\&#\/!%\*=\?`\|~\.]|[[^\p{ASCII}\p{Space}]&&\p{Alnum}\p{Punct}\p{S}])*([a-zA-Z0-9_\-\^+$'\&#\/!%\*=\?`\|~]|[[^\p{ASCII}\p{Space}]&&\p{Alnum}\p{Punct}\p{S}]))?\z/
 ```
-
 
 {% alert important %}
 If the domain part is a Gmail address, the local part needs to be at least two characters long. This is in addition to the regular expression validation listed in this section.
