@@ -101,6 +101,20 @@ func applicationDidBecomeActive(_ application: UIApplication) {
 {% endtab %}
 {% endtabs %}
 
+### Step 3: Update the `adTrackingEnabled` field
+
+To ensure the Braze SDK does not continue to retry blocked tracking requests, be sure to set the `adTrackingEnabled` property when a user's tracking authorization status changes:
+
+```swift
+func applicationDidBecomeActive(_ application: UIApplication) {
+    // Request and check your user's tracking authorization status.
+    ATTrackingManager.requestTrackingAuthorization { status in
+      // Let Braze know whether user data is allowed to be collected for tracking.
+      let enableAdTracking = status == .authorized
+      AppDelegate.braze?.set(adTrackingEnabled: enableAdTracking)
+    }
+}
+```
 {% alert tip %}
 For a full walkthrough, see the [Privacy Tracking Data tutorial](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/e1-privacy-tracking/).
 {% endalert %}
