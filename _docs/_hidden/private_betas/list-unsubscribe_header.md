@@ -9,7 +9,7 @@ hidden: true
 
 Using a list-unsubscribe header allows your recipients to unsubscribe easily from marketing emails by displaying an **Unsubscribe** button within the mailbox UI, and is not a part of the message body itself.
 
-![][0]{: style="float:right;max-width:60%;margin-left:15px;"}
+![]({% image_buster /assets/img_archive/list_unsub_img1.png %}){: style="float:right;max-width:60%;margin-left:15px;"}
 
 When a recipient clicks **Unsubscribe**, the mailbox provider sends the unsubscribe request to the destination defined in the email header.
 
@@ -33,7 +33,7 @@ If you use Braze’s unsubscribe functionality to process unsubscribes on your b
 
 When Braze receives a list-unsubscribe request from a user, this user's global email subscription state is set to unsubscribed. If there isn't a match, Braze will not process this request.
 
-![Option to automatically include a list-unsubscribe header for emails sent to subscribed or opted-in users.]({% image_buster /assets/img/email_settings/email_unsubscribe_header.png %}){: style="max-width:70%;"}
+![Option to automatically include a list-unsubscribe header for emails sent to subscribed or opted-in users.]({% image_buster /assets/img/email_settings/email_unsubscribe_header.png %}){: style="max-width:80%;"}
 
 ### Customizing the list-unsubscribe header
 
@@ -50,4 +50,4 @@ If you're sending emails using your own custom unsubscribe functionality, you mu
 
 Select **Custom list-unsubscribe header** to add your own configured one-click unsubscribe endpoint, and optionally "mailto:". Braze requires an input for URL to support a custom list-unsubscribe header since the one-click unsubscribe HTTP is a requirement from Yahoo/Gmail for bulk senders.
 
-![]({% image_buster /assets/img/email_settings/email_unsubscribe_header_custom.png %}){: style="max-width:70%;"}
+![]({% image_buster /assets/img/email_settings/email_unsubscribe_header_custom.png %}){: style="max-width:80%;"}
