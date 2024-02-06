@@ -60,7 +60,7 @@ If Braze receives a request to add a user and the email address is considered in
 
 For most domains (except for Microsoft domains, see below) the local part must follow these parameters:
 - Can contain any letter, number, including Unicode letters and numbers as well as the following characters: (+) (&) (#) (_) (-) (^) or (/)
-- Can contain but may not start with or end with the following characters: (.) 
+- Can contain but may not start or end with the following character: (.)
 - Cannot contain double quotes (")
 - Must be between 1 and 64 characters in length
 
