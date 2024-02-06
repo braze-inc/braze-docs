@@ -56,6 +56,25 @@ If Braze receives a request to add a user and the email address is considered in
 
 ## Local part validation rules
 
+### General Email Validation
+
+For most domains (except for Microsoft domains, see below) the local part must follow these parameters:
+- Can contain any letter, number, including Unicode letters and numbers as well as the following characters: (+) (&) (#) (_) (-) (^) or (/)
+- Can contain but may not start with or end with the following characters: (.) 
+- Cannot contain double quotes (")
+- Must be between 1 and 64 characters in length
+
+
+The following REGEX can be used to validate that an email address will be considered valid:
+```
+/\A([a-zA-Z0-9_\-\^+$'\&#\/!%\*=\?`\|~]|[[^\p{ASCII}\p{Space}]&&\p{Alnum}\p{Punct}\p{S}])(([a-zA-Z0-9_\-\^+$'\&#\/!%\*=\?`\|~\.]|[[^\p{ASCII}\p{Space}]&&\p{Alnum}\p{Punct}\p{S}])*([a-zA-Z0-9_\-\^+$'\&#\/!%\*=\?`\|~]|[[^\p{ASCII}\p{Space}]&&\p{Alnum}\p{Punct}\p{S}]))?\z/
+```
+
+
+{% alert important %}
+If the domain part is a Gmail address, the local part needs to be at least two characters long. This is in addition to the regular expression validation listed in this section.
+{% endalert %}
+
 ### Microsoft domains
 
 If the host domain includes "msn", "hotmail", "outlook", or "live", then the following regular expression will be used to validate the local part: `/\A\w[\-\w]*(?:\.[\-\w]+)*\z/i`
@@ -70,23 +89,6 @@ The Microsoft address local part must follow these parameters:
 - Cannot end with a period (.)
 
 Note that the validation test checks if the local part, preceding the "+", matches the regular expression.
-
-### All other domains
-
-For all other domains, Braze allows email addresses matching the following regular expression for the local part:
-```
-/\A(?-mix:[a-zA-Z0-9_\-\^+$'\&#\/!%\*=\?`\|~]|[[^\p{ASCII}\p{Space}]&&\p{Alnum}\p{Punct}\p{S}])(?:(?-mix:[a-zA-Z0-9_\-\^+$'\&#\/!%\*=\?`\|~\.]|[[^\p{ASCII}\p{Space}]&&\p{Alnum}\p{Punct}\p{S}])*(?-mix:[a-zA-Z0-9_\-\^+$'\&#\/!%\*=\?`\|~]|[[^\p{ASCII}\p{Space}]&&\p{Alnum}\p{Punct}\p{S}]))?\z/
-```
-
-The local part must follow these parameters:
-- Can contain any letter, number, underscore, dash, or caret, including Unicode letters and numbers
-- Can contain but may not start with the following characters: (.) (+) (&) (#) or (/)
-- Can contain but may not end with a period (.)
-- Cannot contain double quotes (")
-
-{% alert important %}
-If the domain part is a Gmail address, the local part needs to be at least two characters long. This is in addition to the regular expression validation listed in this section.
-{% endalert %}
 
 ## Host part validation rules
 
