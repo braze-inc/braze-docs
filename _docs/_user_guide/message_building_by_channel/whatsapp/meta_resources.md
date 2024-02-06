@@ -23,6 +23,11 @@ Review the following Meta documentation for guidance with display names, phone n
 
 ## WhatsApp Product Updates 
 
+### February 2024: Marketing Conversations Experimentation
+*Last Updated February 2024*
+
+Starting February 6th, 2024, WhatsApp is testing new approaches, starting with consumers in India, to create more valuable experiences and maximize customer engagement with your brand’s marketing conversations. This may include limiting the number of marketing conversations a user receives from your brand in a given period, starting with a small number of conversations that are less likely to be read.
+
 ### October 2023: Template Pacing 
 *Last Updated October 2023*
 
