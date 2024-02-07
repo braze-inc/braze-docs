@@ -6,7 +6,7 @@ noindex: true
 
 # Your first contribution
 
-> If you're new to docs-as-code or Braze Docs, start with this step-by-step tutorial. If you're an experienced contributor, see [Content Management]() instead.
+> If you're new to docs-as-code or Braze Docs, start with this step-by-step tutorial. If you're an experienced contributor, see [Content Management]({{site.baseurl}}/contributing/content_management/) instead.
 
 When you're finished with this tutorial, you'll be able to:
 
@@ -24,8 +24,6 @@ The [Braze Docs GitHub repository](https://github.com/braze-inc/braze-docs) host
 
 ![The Braze Docs GitHub repository homepage.]()
 
-For more information, see [About our framework]({{site.baseurl}}/home/about_our_framework/).
-
 ## Step 2: Make a change
 
 Now that you're a little familiar with the docs repository, you're ready to start making changes. First, open Braze Docs and find a simple change you'd like to make. Next, choose how you'd like to make your change:
@@ -33,8 +31,8 @@ Now that you're a little familiar with the docs repository, you're ready to star
 - **Using GitHub (Basic):** For small, single-document changes, you can make changes directly from the GitHub website.
 - **Using your local environment (Advanced):** For complex or multi-document changes, you'll need to make changes from your local environment. If you're a documentation guru, this is the recommended method.
 
-{% alert important %}
-Before continuing, verify you've completed all [prerequisite tasks](#prerequisites).
+{% alert warning %}
+Before continuing, verify you've completed all [prerequisites](#prerequisites).
 {% endalert %}
 
 {% tabs %}
@@ -43,9 +41,7 @@ In the [Braze Docs GitHub repository](https://github.com/braze-inc/braze-docs), 
 
 ![The Braze Docs GitHub repository homepage with the '_docs' folder highlighted in the file tree.]()
 
-Each page's URL on Braze Docs reflects the repository's directory structure. Use your page's URL to find its corresponding text file in the `_docs` directory. For more information see [About our framework]({{site.baseurl}}/home/about_our_framework/).
-
-For example, `braze.com/home/yaml_front_matter/` can be found on the following page:
+Each page's URL on Braze Docs reflects the repository's directory structure. Use your page's URL to find its corresponding text file in the `_docs` directory. For example, `braze.com/home/yaml_front_matter/` can be found on the following page:
 
 ![The "YAML front matter" page in the "Contributing" section on Braze Docs.]()
 
@@ -57,13 +53,14 @@ When you're finished, select **Commit changes**.
 
 ![The Braze Docs GitHub repository with the "Commit changes" button highlighted after editing a file.]()
 {% endtab %}
+
 {% tab local environment %}
 Most modern text editors (such as [VS Code](https://code.visualstudio.com/Download) and [Intellij IDEA](https://www.jetbrains.com/idea/download/)) offer an in-app terminal for running commands and interacting with your project files. Open your text editor, then open your text editor's in-app terminal.
 
 ![Intellij IDEA with the in-app terminal open.]()
 
 {% alert tip %}
-If you're having trouble, feel free to use your stand-alone terminal instead.
+If you're having trouble, you can use a stand-alone terminal instead.
 {% endalert %}
 
 In the terminal, open the `braze-docs` directory.
@@ -72,7 +69,7 @@ In the terminal, open the `braze-docs` directory.
 cd ~/PATH_TO_REPOSITORY
 ```
 
-Replace `PATH_TO_REPOSITORY` with the location you saved the `braze-docs` repository when you [set up your environment]({{site.baseurl}}/home/getting_started/setting_up_your_environment/). Your command should be similar to the following:
+Replace `PATH_TO_REPOSITORY` with the location you saved the `braze-docs` repository when you [set up your environment]({{site.baseurl}}/contributing/#step-2-set-up-your-environment). Your command should be similar to the following:
 
 ```bash
 cd ~/braze/braze-docs
@@ -109,9 +106,11 @@ $ git checkout -b fixing-typo-in-metadata
 Switched to a new branch 'fixing-typo-in-metadata'
 ```
 
-In your text editor, open the document you want to change, then make your changes using [Markdown formatting](https://www.markdownguide.org/basic-syntax/). For help navigating the `braze-docs` repository, see [About our framework]({{site.baseurl}}/home/about_our_framework/).
+In your text editor, open the document you want to change, then make your changes using [Markdown formatting](https://www.markdownguide.org/basic-syntax/).
 
 ![A text editor with an example document open.]()
+
+{% multi_lang_include contributing/alerts/tip_locating_a_file.md %}
 
 When you're finished, save your changes, then select the terminal and check your Git status. The output is similar to the following:
 
@@ -192,9 +191,9 @@ In your PR, you can preview your changes in a test environment that's identical 
 
 Double-check your work using the following Braze style guides:
 
-- [Writing style guide]({{site.baseurl}}/home/style_guides/writing/)
-- [Images style guide]({{site.baseurl}}/home/style_guides/images/)
-- [Alerts style guide]({{site.baseurl}}/home/style_guides/alerts/)
+- [Writing style guide]({{site.baseurl}}/contributing/style_guides/writing/)
+- [Images style guide]({{site.baseurl}}/contributing/style_guides/images/)
+- [Alerts style guide]({{site.baseurl}}/contributing/style_guides/alerts/)
 
 If you'd like to make additional changes, see [Make additional changes](#step-6-make-additional-changes-optional). Otherwise, you can [request a review](#step-5-request-a-review) from the Braze Docs team.
 
@@ -234,8 +233,9 @@ Select **Commit directly to the BRANCH_NAME branch** > **Commit changes**, where
 
 ![The "Commit changes" button highlighted after choosing "Commit directly to BRANCH_NAME branch.]()
 
-When you're ready, [request a review]({{site.baseurl}}/docs/home/getting_started/your_first_contribution/?tab=local%20environment#request-a-review) next.
+When you're ready, you can [request a review](#step-5-request-a-review).
 {% endtab %}
+
 {% tab local environment %}
 In your PR, select <i class="fa-regular fa-clone"></i> **Copy** next to your branch name.
 
@@ -255,6 +255,6 @@ Switched to branch 'fixing-typo-in-metadata'
 Your branch is up to date with 'origin/fixing-typo-in-metadata'.
 ```
 
-In your text editor, open the document you want to change, then make your changes using the same process from step 2.
+In your text editor, open the document you want to change, then repeat the repeat the steps you completed earlier during [Step 2: Make a change](#step-2-make-a-change).
 {% endtab %}
 {% endtabs %}

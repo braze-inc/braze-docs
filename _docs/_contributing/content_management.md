@@ -25,12 +25,12 @@ As a contributor, you'll primarily work within the following directories:
 | Directory                                                                     | Description                                                                                                                                                                                                                                                                                                                       |
 |-------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | [`_docs`](https://github.com/braze-inc/braze-docs/tree/develop/_docs)         | Contains all the written content for Braze Docs as text files written in Markdown. Text files are organized into directories and subdirectories mirroring the docs site, such as `_api` for the [API section]({{site.baseurl}}/api/home) and `user_guide` for the [User Guide section]({{site.baseurl}}/user_guide/introduction). |
-| [`_includes`](https://github.com/braze-inc/braze-docs/tree/develop/_includes) | Contains text files (called "includes") that can be reused in any file within the `_docs` directory. Typically, includes are short, modular pieces of content that don't use standard formatting. The files stored in this location are important for [content reuse](#content-reuse).                                                                                                                                |
+| [`_includes`](https://github.com/braze-inc/braze-docs/tree/develop/_includes) | Contains text files (called "includes") that can be reused in any file within the `_docs` directory. Typically, includes are short, modular pieces of content that don't use standard formatting. The files stored in this location are important for [content reuse](#content-reuse).                                            |
 | [`assets`](https://github.com/braze-inc/braze-docs/tree/develop/assets)       | Contains all the images for Braze Docs. Any text file in the `_docs` or `_includes` directory can link to this directory to display an image on its page.                                                                                                                                                                         |
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% alert tip %}
-For a full walkthrough, see [Generating a preview]().
+For a full walkthrough, see [Generating a preview]({{site.baseurl}}/contributing/generating_a_preview/).
 {% endalert %}
 
 ## Pages
@@ -49,8 +49,8 @@ Replace the following:
 
 | Placeholder      | Description                                                                                                                              |
 |------------------|------------------------------------------------------------------------------------------------------------------------------------------|
-| `METADATA_KEY`   | The key representing a supported metadata type. For more information, see [Metadata]({{site.baseurl}}/home/yaml_front_matter/metadata/). |
-| `METADATA_VALUE` | The value assigned to the metadata type's key. For more information, see [Metadata]({{site.baseurl}}/home/yaml_front_matter/metadata/).  |
+| `METADATA_KEY`   | The key representing a supported metadata type. For more information, see [Metadata]({{site.baseurl}}/contributing/yaml_front_matter/metadata/). |
+| `METADATA_VALUE` | The value assigned to the metadata type's key. For more information, see [Metadata]({{site.baseurl}}/contributing/yaml_front_matter/metadata/).  |
 | `CONTENT`        | The page's content written in Markdown syntax.                                                                                           |
 {: .reset-td-br-1 .reset-td-br-2}
 
@@ -77,7 +77,7 @@ Learn how you can get started with Braze.
 {% endtabs %}
 
 {% alert tip %}
-For a full walkthrough, see [Creating a page]({{site.baseurl}}/home/content_management/pages/#creating-a-page).
+For a full walkthrough, see [Creating a page]({{site.baseurl}}/contributing/content_management/pages/#creating-a-page).
 {% endalert %}
 
 ## Images
@@ -109,7 +109,7 @@ Your in-line image should be similar to the following:
 {% endraw %}
 
 {% alert tip %}
-For a full walkthrough, see [Adding a new image]({{site.baseurl}}/home/content_management/images/#adding-a-new-image).
+For a full walkthrough, see [Adding a new image]({{site.baseurl}}/contributing/content_management/images/#adding-a-new-image).
 {% endalert %}
 
 ## Sections
@@ -120,12 +120,12 @@ Braze Docs is organized into [primary sections](#primary-sections) and [subsecti
 
 The primary sections on Braze Docs are:
 
-- [Braze Docs Home](https://www.braze.com/docs)
-- [User Guide](https://www.braze.com/docs/user_guide/introduction)
-- [Developer Guide](https://www.braze.com/docs/developer_guide/home)
-- [Braze API Guide](https://www.braze.com/docs/api/home)
-- [Technology Partners](https://www.braze.com/docs/partners/home)
-- [Braze Help](https://www.braze.com/docs/help/home)
+- [Braze Docs Home]({{site.baseurl}})
+- [User Guide]({{site.baseurl}}/user_guide/introduction)
+- [Developer Guide]({{site.baseurl}}/developer_guide/home)
+- [Braze API Guide]({{site.baseurl}}/api/home)
+- [Technology Partners]({{site.baseurl}}/partners/home)
+- [Braze Help]({{site.baseurl}}/help/home)
 
 These primary sections can be accessed on the site header from any page on Braze Docs.
 
@@ -234,7 +234,7 @@ braze-docs
 ```
 
 {% alert tip %}
-For a full walkthrough, see [Creating a section]({{site.baseurl}}/home/content_management/sections/#creating-a-section).
+For a full walkthrough, see [Creating a section]({{site.baseurl}}/contributing/content_management/sections/#creating-a-section).
 {% endalert %}
 
 In the `_primary_section` directory, `subsection_a` is not configured with a landing page, while `subsection_b` is configured with a landing page. In the following example, `subsection_a.md` has `config_only:` set to `true`, which prevents this page from being rendered as a landing page:
@@ -309,7 +309,7 @@ Learn how you can get started with Braze.
 {% endtabs %}
 
 {% alert tip %}
-For a full walkthrough, see [Reusing content]({{site.baseurl}}/home/content_management/reusing_content).
+For a full walkthrough, see [Reusing content]({{site.baseurl}}/contributing/content_management/reusing_content).
 {% endalert %}
 
 ## Layouts
@@ -365,7 +365,7 @@ layout: api_glossary
 {% endtabs %}
 
 {% alert tip %}
-For more information, see [Page layouts]({{site.baseurl}}/home/yaml_front_matter/page_layouts).
+For more information, see [Page layouts]({{site.baseurl}}/contributing/yaml_front_matter/page_layouts).
 {% endalert %}
 
 ## URLs
@@ -450,4 +450,3 @@ Page B URL: https://www.braze.com/docs/primary_section/subsection_b/page_b
 ```
 {% endtab %}
 {% endtabs %}
-

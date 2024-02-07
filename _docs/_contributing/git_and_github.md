@@ -12,9 +12,7 @@ noindex: true
 If you're new to Git or the command-line, start with our tutorial instead: [Your first contribution]({{site.baseurl}}/docs/home/getting_started/your_first_contribution/).
 {% endalert %}
 
-## Prerequisites
-
-Before you start, you'll need to [set up your environment]({{site.baseurl}}/home/getting_started/setting_up_your_environment/).
+{% multi_lang_include contributing/prerequisites.md %}
 
 ## Creating a branch
 

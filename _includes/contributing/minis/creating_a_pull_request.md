@@ -1,1 +1,0 @@
-When you're finished, save your changes and [create a pull request]({{site.baseurl}}/home/github/creating_a_pull_request/).

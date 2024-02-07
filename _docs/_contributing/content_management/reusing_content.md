@@ -6,11 +6,9 @@ noindex: true
 
 # Reusing content
 
-> Learn how to reuse content across Braze Docs, so you can improve content consistency and reduce the time for content creation.
+> Learn how to reuse content across Braze Docs, so you can improve content consistency and reduce the time for content creation. For general information about content reuse, see [Content Management]({{site.baseurl}}/contributing/content_management/#content-reuse).
 
 Content reuse in Jekyll is accomplished using includes. Includes are stored in the `_includes` directory as a regular Markdown file. Although, unlike the Markdown files in the `_docs` directory, these files don't need YAML front matter.
-
-For general information about content reuse, see [About our framework]({{site.baseurl}}/home/about_our_framework).
 
 {% multi_lang_include contributing/prerequisites.md %}
 
@@ -27,7 +25,7 @@ braze-docs
         └── prerequisites.md
 ```
 
-Next, [add content]() to your page. If you plan on adding your include to a page that already has YAML front matter, do not add front matter to your include. Your page should look similar to the following:
+Next, add content to your page. If you plan on adding your include to a page that already has YAML front matter, do not add front matter to your include. Your page should look similar to the following:
 
 {% raw %}
 ```markdown
@@ -41,7 +39,11 @@ Before you start, you'll need to complete the following:
 ```
 {% endraw %}
 
-Anytime this [include is used](#using-an-include), the following will be rendered when Jekyll builds the site:
+{% alert tip %}
+For a full walkthrough on adding content to your page, see [Pages]({{site.baseurl}}/contributing/content_management/pages/#writing-content)
+{% endalert %}
+
+Anytime this [include is used](#referencing-an-include), the following will be rendered when Jekyll builds the site:
 
 ![The "Creating a new page" document with the "Prerequisites" include rendered.]()
 

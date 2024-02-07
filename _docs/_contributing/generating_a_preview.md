@@ -12,9 +12,7 @@ noindex: true
 Every time you push to the Braze Docs GitHub repository, a Braze-hosted site preview is automatically generated, which is great for checking your work on mobile or collaborating with others. 
 {% endalert %}
 
-## Prerequisites
-
-To generate a local site preview, you'll need to [set up your environment]({{site.baseurl}}/home/getting_started/setting_up_your_environment/).
+{% multi_lang_include contributing/prerequisites.md %}
 
 ## Generating the preview
 

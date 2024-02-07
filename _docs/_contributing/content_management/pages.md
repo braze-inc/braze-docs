@@ -6,7 +6,7 @@ noindex: true
 
 # Pages
 
-> Learn how to create, modify, and remove pages on Braze Docs. For general information about pages, see [About our framework]({{site.baseurl}}/home/about_our_framework/#pages).
+> Learn how to create, modify, and remove pages on Braze Docs. If you'd like to create or reorder a section instead, see [Sections]({{site.baseurl}}/contributing/content_management/sections/). For general information about pages, see [Content Management]({{site.baseurl}}/contributing/content_management/#pages).
 
 {% multi_lang_include contributing/prerequisites.md %}
 
@@ -28,14 +28,14 @@ Create a new Markdown file for your page.
 PAGE_TITLE.md
 ```
 
-Replace `PAGE_TITLE` with the title of your page (be sure it adheres to the [Headings and Titles](https://docs.google.com/document/u/2/d/e/2PACX-1vTluyDFO3ZEV7V6VvhXE4As_hSFwmnFFdU9g6_TrAYTgH1QmbRoEDDdn5GzKAB9vdBbIdyiFdoaJcNk/pub#h.vs0awrl1ba2p) guideline). Use all lowercase characters, remove special characters, and replace spaces with underscores (`_`). Your filename should be similar to the following:
+Replace `PAGE_TITLE` with the title of your page, which should follow our [Style Guide]({{site.baseurl}}/contributing/style_guide/). Use all lowercase characters, remove special characters, and replace spaces with underscores (`_`). Your filename should be similar to the following:
 
 - **Page title:** Setting up your development environment for C++
 - **File name:** `setting_up_your_development_environment_for_cpp.md`
 
 ### Step 2: Add a layout
 
-To use the default page layout, copy and paste the following into your Markdown file. For other layouts, see [Layouts]({{site.baseurl}}/home/yaml_front_matter/page_layouts/).
+To use the default page layout, copy and paste the following into your Markdown file. For other layouts, see [Layouts]({{site.baseurl}}/contributing/yaml_front_matter/page_layouts/).
 
 ```markdown
 ---
@@ -65,7 +65,7 @@ Replace the following:
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% alert tip %}
-This template is only to get you started&#8212;add [additional metadata]() and headings as needed.
+This template is only to get you started&#8212;add [additional metadata]({{site.baseurl}}/contributing/yaml_front_matter/metadata/) and headings as needed.
 {% endalert %}
 
 ## Writing content
@@ -83,7 +83,7 @@ To cross-reference pages outside Braze Docs, use [standard Markdown link syntax]
 {% endraw %}
 
 {% alert note %}
-For a full walkthrough, see [Cross-referencing]({{site.baseurl}}/home/content_management/cross_referencing).
+For a full walkthrough, see [Cross-referencing]({{site.baseurl}}/contributing/content_management/cross_referencing/).
 {% endalert %}
 
 ### Adding images
@@ -97,5 +97,5 @@ To add images, place the image's PNG file inside the relevant location within `a
 {% endraw %}
 
 {% alert note %}
-For a full walkthrough, see [Adding a new image]({{site.baseurl}}/home/content_management/images/).
+For a full walkthrough, see [Adding a new image]({{site.baseurl}}/contributing/content_management/images/).
 {% endalert %}

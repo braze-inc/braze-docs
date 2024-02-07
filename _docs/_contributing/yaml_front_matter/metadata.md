@@ -172,7 +172,7 @@ channel:
 
 ### Navigation only
 
-The `config_only` key is used to hide a page's content without hiding it on left-side navigation bar. Use this key when [creating a section without a landing page]({{site.baseurl}}/home/content_management/sections/?tab=without%20landing%20page#creating-a-section). This key accepts the boolean values `true` or `false`.
+The `config_only` key is used to hide a page's content without hiding it on left-side navigation bar. Use this key when [creating a section without a landing page]({{site.baseurl}}/contributing/content_management/sections/?tab=without%20landing%20page#creating-a-section). This key accepts the boolean values `true` or `false`.
 
 **Usage example:**
 
@@ -212,7 +212,7 @@ The `layout` key is used to set the layout for a page. If `layout` is not set, t
 - `blank_config`
 - `redirect`
 
-For more information about each value, see [Page layouts]({{site.baseurl}}/home/yaml_front_matter/page_layouts/).
+For more information about each value, see [Page layouts]({{site.baseurl}}/contributing/yaml_front_matter/page_layouts/).
 
 **Usage example:**
 
@@ -224,7 +224,7 @@ page_layout: glossary_page
 
 ### Page order
 
-The `page_order` key is used to [order sections]({{site.baseurl}}/home/content_management/sections/#ordering-a-section) on the left-side navigation bar. This key accepts any non-negative number (such as `0`, `20`, or `5.5`).
+The `page_order` key is used to [order sections]({{site.baseurl}}/contributing/content_management/sections/#ordering-a-section) on the left-side navigation bar. This key accepts any non-negative number (such as `0`, `20`, or `5.5`).
 
 **Usage example:**
 
@@ -246,7 +246,7 @@ The `page_type` key is used to set formatting of a page. This key accepts any of
 - `partner`
 - `update`
 
-For more information about each value, see [Page types]({{site.baseurl}}/home/yaml_front_matter/page_layouts/).
+For more information about each value, see [Page types]({{site.baseurl}}/contributing/yaml_front_matter/page_layouts/).
 
 **Usage example:**
 

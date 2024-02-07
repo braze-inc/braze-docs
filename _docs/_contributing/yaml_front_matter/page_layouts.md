@@ -6,11 +6,11 @@ noindex: true
 
 #  Page layouts
 
-> The following page layouts can be assigned to the [`page_layout`]({{site.baseurl}}/home/yaml_front_matter/metadata/#page-layout) key in a page's YAML front matter. For more general information, see [About our framework]({{site.baseurl}}/home/about_our_framework/#layouts).
+> The following page layouts can be assigned to the [`page_layout`]({{site.baseurl}}/contributing/yaml_front_matter/metadata/#page-layout) key in a page's YAML front matter. For more general information, see [About our framework]({{site.baseurl}}/home/about_our_framework/#layouts).
 
 ## Prerequisites
 
-To use a page layout, you'll need to add the [`page_layout`]({{site.baseurl}}/home/yaml_front_matter/metadata/#page-layout) key to your YAML front matter:
+To use a page layout, you'll need to add the [`page_layout`]({{site.baseurl}}/contributing/yaml_front_matter/metadata/#page-layout) key to your YAML front matter:
 
 ```markdown
 ---
@@ -134,7 +134,7 @@ page_layout: glossary_page
 
 ### Redirect page URL
 
-The `redirect` value is used to [redirect URLs for in-page headings]({{site.baseurl}}/home/content_management/redirecting_urls/#redirecting-a-heading). 
+The `redirect` value is used to [redirect URLs for in-page headings]({{site.baseurl}}/contributing/content_management/redirecting_urls/#redirecting-a-heading). 
 
 {% tabs local %}
 {% tab example input %}

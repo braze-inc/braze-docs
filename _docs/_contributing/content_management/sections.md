@@ -6,7 +6,7 @@ noindex: true
 
 # Sections
 
-> Learn how to create and order sections on Braze Docs. If you'd like to create, modify, or delete an individual page instead, see [Pages]({{site.baseurl}}/home/content_management/pages/). For general information about sections, see [About our framework]({{site.baseurl}}/home/about_our_framework).
+> Learn how to create and order sections on Braze Docs. If you'd like to create, modify, or delete an individual page instead, see [Pages]({{site.baseurl}}/contributing/content_management/pages/). For general information about sections, see [Content Management]({{site.baseurl}}/contributing/content_management/).
 
 {% multi_lang_include contributing/prerequisites.md %}
 
@@ -15,7 +15,7 @@ noindex: true
 When you create a new section, you can create a section with or without a landing page.
 
 - **With landing page:** Use this method if your section needs a dedicated overview, such as a landing page for a "Getting started" section listing prerequisites and outlining the user journey.
-- **Without landing page:** Use this method if your section does not need a dedicated overview. Per the [Braze Docs Style Guide](https://docs.google.com/document/u/2/d/e/2PACX-1vTluyDFO3ZEV7V6VvhXE4As_hSFwmnFFdU9g6_TrAYTgH1QmbRoEDDdn5GzKAB9vdBbIdyiFdoaJcNk/pub#h.26dvs9p769cx), content should always be useful, so avoid adding a landing page if it offers little useful content.
+- **Without landing page:** Use this method if your section does not need a dedicated overview. As stated in our [Style Guide]({{site.baseurl}}/contributing/style_guide/), content should always be useful, so avoid adding a landing page if it offers little useful content.
 
 {% tabs %}
 {% tab with landing page %}
@@ -32,12 +32,12 @@ braze-docs
 
 Replace the following:
 
-| Placeholder       | Description                                                                                                                                                                                                                                                                                                                                                                             |
-|-------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `PRIMARY_SECTION` | The name of the primary section your new content belongs to. For more information, see [Primary sections]({{site.baseurl}}/home/about_our_framework/#primary-sections).                                                                                                                                                                                                                 |
-| `SUBSECTION`      | If applicable, the name of the subsection your new content belongs to. For more information, see [Subsections]({{site.baseurl}}/home/about_our_framework/#subsections).                                                                                                                                                                                                                 |
-| `NEW_DIRECTORY`   | The name of your new section (be sure it adheres to the [Headings and Titles](https://docs.google.com/document/u/2/d/e/2PACX-1vTluyDFO3ZEV7V6VvhXE4As_hSFwmnFFdU9g6_TrAYTgH1QmbRoEDDdn5GzKAB9vdBbIdyiFdoaJcNk/pub#h.vs0awrl1ba2p) guideline). Use all lowercase characters, remove special characters, and replace spaces with underscores (`_`). This name must match `NEW_FILE`.      |
-| `NEW_FILE`        | The name of your new section (be sure it adheres to the [Headings and Titles](https://docs.google.com/document/u/2/d/e/2PACX-1vTluyDFO3ZEV7V6VvhXE4As_hSFwmnFFdU9g6_TrAYTgH1QmbRoEDDdn5GzKAB9vdBbIdyiFdoaJcNk/pub#h.vs0awrl1ba2p) guideline). Use all lowercase characters, remove special characters, and replace spaces with underscores (`_`). This name must match `NEW_DIRECTORY`. |
+| Placeholder       | Description                                                                                                                                                                                                                                                 |
+|-------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `PRIMARY_SECTION` | The name of the primary section your new content belongs to. For more information, see [Primary sections]({{site.baseurl}}/contributing/content_management/#primary-sections).                                                                              |
+| `SUBSECTION`      | If applicable, the name of the subsection your new content belongs to. For more information, see [Subsections]({{site.baseurl}}/contributing/content_management/#subsections).                                                                              |
+| `NEW_DIRECTORY`   | The name of your new section, which should follow our [Style Guide]({{site.baseurl}}/contributing/style_guide/). Use all lowercase characters, remove special characters, and replace spaces with underscores (`_`). This name must match `NEW_FILE`.       |
+| `NEW_FILE`        | The name of your new section, which should follow our [Style Guide]({{site.baseurl}}/contributing/style_guide/). Use all lowercase characters, remove special characters, and replace spaces with underscores (`_`). This name must match `NEW_DIRECTORY`. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 Your directory structure should look similar to the following:
@@ -51,7 +51,7 @@ braze-docs
             └── getting_started.md
 ```
 
-Open your new Markdown file and add the following template to use the default landing-page layout. For other layouts, see [Layouts]({{site.baseurl}}/home/yaml_front_matter/page_layouts/).
+Open your new Markdown file and add the following template to use the default landing-page layout. For other layouts, see [Layouts]({{site.baseurl}}/contributing/yaml_front_matter/page_layouts/).
 
 ```markdown
 ---
@@ -81,7 +81,7 @@ Replace the following:
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% alert tip %}
-This template is only to get you started&#8212;add [additional metadata]() and headings as needed.
+This template is only to get you started&#8212;add [additional metadata]({{site.baseurl}}/contributing/yaml_front_matter/metadata/) and headings as needed.
 {% endalert %}
 
 Next, open your new directory and create a Markdown file for each new page you want to add to your new section. Your directory structure should look similar to the following:
@@ -97,11 +97,15 @@ braze-docs
             └── getting_started.md
 ```
 
-When you're finished [adding content]({{site.baseurl}}/home/content_management/pages/#writing-content) to each page, continue to the next section. 
+When you're finished adding content to each page, continue to the next section.
+
+{% alert tip %}
+For a full walkthrough on adding content to your page, see [Pages]({{site.baseurl}}/contributing/content_management/pages/#writing-content).
+{% endalert %}
 {% endtab %}
 
 {% tab without landing page %}
-To create a section without a landing page, [create a new branch]({{site.baseurl}}/home/github/creating_a_new_branch/), then navigate to the relevant primary section or subsection and create a directory and Markdown file for your new section.
+To create a section without a landing page, open the relevant primary section or subsection, then create a directory and Markdown file for your new section.
 
 ```plaintext
 braze-docs
@@ -116,10 +120,10 @@ Replace the following:
 
 | Placeholder       | Description                                                                                                                                                                                                                                                                                                                                                                             |
 |-------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `PRIMARY_SECTION` | The name of the primary section your new content belongs to. For more information, see [Primary sections]({{site.baseurl}}/home/about_our_framework/#primary-sections).                                                                                                                                                                                                                 |
-| `SUBSECTION`      | If applicable, the name of the subsection your new content belongs to. For more information, see [Subsections]({{site.baseurl}}/home/about_our_framework/#subsections).                                                                                                                                                                                                                 |
-| `NEW_DIRECTORY`   | The name of your new section (be sure it adheres to the [Headings and Titles](https://docs.google.com/document/u/2/d/e/2PACX-1vTluyDFO3ZEV7V6VvhXE4As_hSFwmnFFdU9g6_TrAYTgH1QmbRoEDDdn5GzKAB9vdBbIdyiFdoaJcNk/pub#h.vs0awrl1ba2p) guideline). Use all lowercase characters, remove special characters, and replace spaces with underscores (`_`). This name must match `NEW_FILE`.      |
-| `NEW_FILE`        | The name of your new section (be sure it adheres to the [Headings and Titles](https://docs.google.com/document/u/2/d/e/2PACX-1vTluyDFO3ZEV7V6VvhXE4As_hSFwmnFFdU9g6_TrAYTgH1QmbRoEDDdn5GzKAB9vdBbIdyiFdoaJcNk/pub#h.vs0awrl1ba2p) guideline). Use all lowercase characters, remove special characters, and replace spaces with underscores (`_`). This name must match `NEW_DIRECTORY`. |
+| `PRIMARY_SECTION` | The name of the primary section your new content belongs to. For more information, see [Primary sections]({{site.baseurl}}/contributing/content_management/#primary-sections).                                                                                                                                                                                                          |
+| `SUBSECTION`      | If applicable, the name of the subsection your new content belongs to. For more information, see [Subsections]({{site.baseurl}}/contributing/content_management/#subsections).                                                                                                                                                                                                          |
+| `NEW_DIRECTORY`   | The name of your new section, which should follow our [Style Guide]({{site.baseurl}}/contributing/style_guide/). Use all lowercase characters, remove special characters, and replace spaces with underscores (`_`). This name must match `NEW_FILE`.                                                                                                                                   |
+| `NEW_FILE`        | The name of your new section, which should follow our [Style Guide]({{site.baseurl}}/contributing/style_guide/). Use all lowercase characters, remove special characters, and replace spaces with underscores (`_`). This name must match `NEW_DIRECTORY`. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 Your directory structure should look similar to the following:
@@ -143,7 +147,7 @@ config_only: true
 ```
 
 {% alert tip %}
-You may add additional metadata and headings as needed, as this template is just to get you started. For the full list of supported YAML metadata, see [Metadata]({{site.baseurl}}/home/yaml_front_matter/metadata/).
+This template is only to get you started&#8212;add [additional metadata]({{site.baseurl}}/contributing/yaml_front_matter/metadata/) and headings as needed.
 {% endalert %}
 
 Replace `NAV_TITLE` with the title of your page as it will appear on the left-side navigation bar. Your page should look similar to the following:
@@ -170,13 +174,17 @@ braze-docs
             └── getting_started.md
 ```
 
-When you're finished [adding content]({{site.baseurl}}/home/content_management/pages/#writing-content) to each page, continue to the next section.
+When you're finished adding content to each page, continue to the next section.
+
+{% alert tip %}
+For a full walkthrough on adding content to your page, see [Pages]({{site.baseurl}}/contributing/content_management/pages/#writing-content).
+{% endalert %}
 {% endtab %}
 {% endtabs %}
 
 ## Ordering a section
 
-To order a section, open one of the Markdown files in that section and search for the [`page_order`]() tag within its YAML front matter.
+To order a section, open one of the Markdown files in that section and search for the [`page_order`]({{site.baseurl}}/contributing/yaml_front_matter/metadata/#page-order) key within its YAML front matter.
 
 ```markdown
 ---
@@ -184,9 +192,9 @@ page_order:
 ---
 ```
 
-The `page_order` tag represents a page's relative-order in a section on the left-side navigation bar and can be set to any non-negative number (such as `0`, `20`, or `5.5`). This means you'll need to know the `page_order` for each Markdown file in the current directory, but not any other directory (including subdirectories).
+The `page_order` key represents a page's relative-order in a section on the left-side navigation bar and can be set to any non-negative number (such as `0`, `20`, or `5.5`). This means you'll need to know the `page_order` for each Markdown file in the current directory, but not any other directory (including subdirectories).
 
-Set the `page_order` tag for each Markdown file in the current directory to any non-negative number. Your file should look similar to the following:
+Set the `page_order` key for each Markdown file in the current directory to any non-negative number. Your file should look similar to the following:
 
 ```markdown
 ---

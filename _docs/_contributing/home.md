@@ -10,7 +10,7 @@ noindex: true
 
 ## Prerequisites
 
-Some understanding of Git is required to contribute to Braze Docs. If you're new to Git and don't know where to start, see [Git Book: Getting Started](https://git-scm.com/book/en/v2/Getting-Started-About-Version-Control). If you're looking for a refresher, see [Git and GitHub]().
+Some understanding of Git is required to contribute to Braze Docs. If you're new to Git and don't know where to start, see [Git Book: Getting Started](https://git-scm.com/book/en/v2/Getting-Started-About-Version-Control). If you're looking for a refresher, see [Git and GitHub]({{site.baseurl}}/contributing/git_and_github/).
 
 ## Step 1: Sign the CLA
 
@@ -18,7 +18,7 @@ Everybody that contributes to Braze Docs must sign the [Contribution License Agr
 
 ## Step 2: Set up your environment
 
-Most documentation changes require you to set up your local environment. However, small single-document changes can be completed [directly in GitHub]().
+Most documentation changes require you to set up your local environment. However, small single-document changes can be completed [directly in GitHub]({{site.baseurl}}/contributing/your_first_contribution/?tab=github#step-2-make-a-change).
 
 ### Step 2.1: Get the required software
 
@@ -133,7 +133,7 @@ git clone git@github.com:braze-inc/braze-docs.git
 
 ### Step 2.4: Install Ruby
 
-To [generate a local site preview](), you'll need Ruby version `2.7.4` installed. In the terminal, open `braze-docs` and check for Ruby version `2.7.4`.
+To [generate a local site preview]({{site.baseurl}}/contributing/gerating_a_preview), you'll need Ruby version `2.7.4` installed. In the terminal, open `braze-docs` and check for Ruby version `2.7.4`.
 
 ```bash
 cd ~/braze-docs
@@ -156,9 +156,9 @@ bundle install
 
 ## Next steps
 
-If you're new to Git or docs-as-code, start with our tutorial: [Your first contribution](). Otherwise, you can check out one of the following:
+If you're new to Git or docs-as-code, start with our tutorial: [Your first contribution]({{site.baseurl}}/contributing/your_first_contribution/). Otherwise, you can check out one of the following:
 
-- [Content management]()
-- [YAML front matter]()
-- [Generating a preview]()
-- [Style guides]()
+- [Content management]({{site.baseurl}}/contributing/content_management/)
+- [YAML front matter]({{site.baseurl}}/contributing/yaml_front_matter)
+- [Generating a preview]({{site.baseurl}}/contributing/generating_a_preview/)
+- [Style guides]({{site.baseurl}}/contributing/style_guide)
