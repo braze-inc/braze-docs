@@ -36,7 +36,7 @@ To edit a specific user's permissions, either by assigning permissions to the de
 
 1. Go to the **Company Users** page. 
 2. Click the edit icon in the user's row.
-3. Select or deselect the **This user is an admin** checkbox.
+3. To make a user an admin, select **This user is an admin**. To demote an admin to a limited role, clear the checkbox.
 
 ![Selecting Administrator or Limited when editing a user][29]{: style="border:none"}
 
