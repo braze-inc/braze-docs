@@ -1,5 +1,7 @@
 ---
 nav_title: Sections
+article: Sections
+description: "Learn how to create and order sections on Braze Docs."
 page_order: 2
 noindex: true
 ---

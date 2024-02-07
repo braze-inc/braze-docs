@@ -1,12 +1,14 @@
 ---
-nav_title: Metadata 
+nav_title: Metadata
+article: Metadata
+description: "These are the metadata keys that can be added to a page's YAML front matter."
 page_order: 0
 noindex: true
 ---
 
 #  Metadata
 
-> The following metadata keys can be added to a page's YAML front matter. For more general information, see [Content Management]({{site.baseurl}}/contributing/content_management/#pages).
+> These are the metadata keys that can be added to a page's YAML front matter. For more general information, see [Content Management]({{site.baseurl}}/contributing/content_management/#pages).
 
 To add metadata to a Markdown file, you'll need to add Jekyll's front matter syntax to the beginning of your file:
 

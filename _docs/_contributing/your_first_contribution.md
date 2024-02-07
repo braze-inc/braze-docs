@@ -1,5 +1,7 @@
 ---
-nav_title: Your first contribution
+nav_title: Your First Contribution
+article: Your first contribution
+description: "If you're new to docs-as-code or Braze Docs, start with this step-by-step tutorial."
 page_order: 1
 noindex: true
 ---
@@ -10,11 +12,11 @@ noindex: true
 
 When you're finished with this tutorial, you'll be able to:
 
-- <i class="fa-solid fa-circle-check" style="color: #34a853;"></i> Navigate the Braze Docs GitHub repository
-- <i class="fa-solid fa-circle-check" style="color: #34a853;"></i> Make changes using the GitHub website or your local environment
-- <i class="fa-solid fa-circle-check" style="color: #34a853;"></i> Create pull-requests (PRs)
-- <i class="fa-solid fa-circle-check" style="color: #34a853;"></i> Preview your changes in a test site
-- <i class="fa-solid fa-circle-check" style="color: #34a853;"></i> Request a review from the Braze Docs team
+- Navigate the Braze Docs GitHub repository
+- Make changes using the GitHub website or your local environment
+- Create pull-requests (PRs)
+- Preview your changes in a test site
+- Request a review from the Braze Docs team
 
 {% multi_lang_include contributing/prerequisites.md %}
 

@@ -1,5 +1,7 @@
 ---
 nav_title: Contributing to Braze Docs
+article: Contributing to Braze Docs
+description: "Here's what you need to start contributing to Braze Docs!"
 page_order: 0
 noindex: true
 ---

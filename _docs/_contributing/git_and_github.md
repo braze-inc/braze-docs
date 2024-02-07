@@ -1,12 +1,14 @@
 ---
 nav_title: Git and GitHub
+article: Git and GitHub
+description: "Learn how to use Git and GitHub, so you can contribute to Braze Docs."
 page_order: 5
 noindex: true
 ---
 
 # Git and GitHub
 
-> Learn how to use Git and GitHub to contribute to Braze Docs.
+> Learn how to use Git and GitHub, so you can contribute to Braze Docs.
 
 {% alert tip %}
 If you're new to Git or the command-line, start with our tutorial instead: [Your first contribution]({{site.baseurl}}/contributing/your_first_contribution/).

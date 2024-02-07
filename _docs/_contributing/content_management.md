@@ -1,5 +1,7 @@
 ---
 nav_title: Content Management
+article: Content Management
+description: "This is an overview of how content is managed on Braze Docs."
 page_order: 2 
 noindex: true
 ---

@@ -1,11 +1,12 @@
 ---
-article_title: Style guides
-nav_title: Style guides
-page_order: 6 
+nav_title: Style Guides
+article: Braze Docs Style Guide
+description: "The Braze Docs Style Guide."
+page_order: 6
 noindex: true
 ---
 
-# Style guides
+# Braze Docs Style Guide
 
 Refer to the following Braze style guides when contributing to Braze Docs:
 

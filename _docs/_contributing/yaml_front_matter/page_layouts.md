@@ -1,12 +1,14 @@
 ---
-nav_title: Page Layouts 
+nav_title: Page Layouts
+article: Page layouts
+description: "These are the page layouts that can be assigned to the `page_layout` key in a page's YAML front matter."
 page_order: 2
 noindex: true
 ---
 
 #  Page layouts
 
-> The following page layouts can be assigned to the [`page_layout`]({{site.baseurl}}/contributing/yaml_front_matter/metadata/#page-layout) key in a page's YAML front matter. For more general information, see [Content Management]({{site.baseurl}}/contributing/content_management/#layouts).
+> These are the page layouts that can be assigned to the [`page_layout`]({{site.baseurl}}/contributing/yaml_front_matter/metadata/#page-layout) key in a page's YAML front matter. For more general information, see [Content Management]({{site.baseurl}}/contributing/content_management/#layouts).
 
 ## Prerequisites
 
