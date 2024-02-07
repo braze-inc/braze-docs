@@ -14,9 +14,11 @@ channel:
 
 Email deliverability is the core of campaign success. Using the Deliverability Center in the Braze dashboard, you can view your domains by **IP Reputation** or **Delivery Errors** to discover and troubleshoot any potential issues with email deliverability. 
 
+To access the Deliverability Center, you'll need "Access Campaigns, Canvases, Cards, Segments, Media Library" and "View Usage Data" [user permissions]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/).
+
 ### Set up Google Postmaster account
 
-Before connecting to the Deliverability Center, you'll need to set up a Google Postmaster Tools account.
+Before connecting to the Deliverability Center, you'll need to set up a Google Postmaster Tools account. You can use a work or personal Gmail account to setup your Google Postmaster. 
 
 1. Go to the [Google Postmaster Tools dashboard](https://postmaster.google.com/managedomains?pli=1).
 2. In the bottom right, click the <i class="fas fa-plus-circle"></i> plus icon.

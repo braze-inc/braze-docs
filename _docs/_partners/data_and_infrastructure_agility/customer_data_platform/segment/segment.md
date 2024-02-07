@@ -237,6 +237,11 @@ The Cloud Mode Actions destination offers a [create alias action](https://segmen
 
 It is also possible to engineer a workaround and use `braze_id` to send anonymous user data in cloud-mode. This requires manually including the user's `braze_id` in all your Segment API calls. You can learn more about how to set up this workaround in [Segment's documentation](https://segment.com/docs/connections/destinations/catalog/braze/#capture-the-braze_id-of-anonymous-users).
 
+Destinations data sent to Braze can be batched within Cloud Mode Actions. Batch sizes are capped at 75 events, and these batches will accumulate over a 30-second period before being flushed. Request batching is done per-action. For example, Identify Calls (attributes) will be batched in a request and Track Calls (custom events) will be batched in a second request. Braze recommends enabling this feature as it will reduce the number of requests being sent from Segment to Braze. In turn, this will reduce the risk of the destination hitting Braze rate limits and retrying requests. 
+
+You can turn on batching for an action by navigating to your Braze Destination > **Mappings**. From there, click the 3-dot icon to the right of the mapping and select **Edit Mapping**. Scroll to the bottom of the **Select mappings** section and make sure that **Batch Data to Braze** is set to **Yes**.
+
+
 {% tabs local %}
 {% tab Identify %}
 #### Identify
@@ -260,12 +265,13 @@ Certain Segment special traits map to standard attribute profile fields in Braze
 Other reserved Braze profile fields such as `email_subscribe` and `push_subscribe` can be sent by using the Braze naming convention for these fields and passing them as traits within an identify call.
 
 ##### Adding a user to a subscription group
+
 You can also subscribe or unsubscribe a user from a given subscription group using the following fields in the traits parameter.
 
 Use the reserved Braze profile field called `braze_subscription_groups`, which can be associated with an array of objects. Each object in the array should have two reserved keys:
 
 1. `subscription_group_state`: Indicates whether the user is `"subscribed"` or `"unsubscribed"` to a specific subscription group.
-2. `subscription_group_id`: Represents the unique ID of the subscription group. You can find this ID in the Braze dashboard under `Subscription Group Management`.
+2. `subscription_group_id`: Represents the unique ID of the subscription group. You can find this ID in the Braze dashboard under **Subscription Group Management**.
 
 {% subtabs %}
 {% subtab Swift %}
@@ -452,7 +458,7 @@ The proper format must be followed to ensure that you input your Braze SDK endpo
 Scenarios where data will not pass as expected:
 
 1. Nested custom attributes
-  - Although [nested custom attributes]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/nested_custom_attribute_support/) can technically be sent to Braze via a cloud-mode destination, the **entire payload** will be sent each time. This will incur [data points]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/nested_custom_attribute_support/#data-points) per key passed in the nested object each time the payload is sent.<br><br> To spend only a subset of data points when the payload sends, you can use the custom [destination functions](https://segment.com/docs/connections/functions/destination-functions/) feature owned by Segment. This feature in the Segment platform allows you to customize how data is sent to downstream destinations.
+  - Although [nested custom attributes]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/nested_custom_attribute_support/) can technically be sent to Braze through Segment, the **entire payload** will be sent each time. This will incur [data points]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/nested_custom_attribute_support/#data-points) per key passed in the nested object each time the payload is sent.<br><br> To spend only a subset of data points when the payload sends, you can use the custom [destination functions](https://segment.com/docs/connections/functions/destination-functions/) feature owned by Segment. This feature in the Segment platform allows you to customize how data is sent to downstream destinations.
 
   {% alert note %}
   Custom destination functions are controlled within Segment, and Braze has limited insight into functions that have been configured externally.

@@ -13,8 +13,6 @@ search_rank: 3
 
 > Learn how to migrate from Google's deprecated Cloud Messaging API to their fully-supported Firebase Cloud Messaging (FCM) API. For more information, see Google's [Firebase FAQ - 2023](https://firebase.google.com/support/faq#fcm-23-deprecation).
 
-{% multi_lang_include firebase_cloud_messaging/early_access_banner.md %}
-
 {% alert important %}
 If this is your first time setting up the push integration for Android, see [Standard Android push integration]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/integration/standard_integration) instead.
 {% endalert %}
@@ -48,6 +46,10 @@ Enter a service account name, ID, and description, then select **Create and cont
 ![The form for "Service account details."]({% image_buster /assets/img/android/push_integration/create_a_service_account/enter-service-account-details.png %})
 
 In the **Role** field, find and select **Firebase Cloud Messaging API Admin** from the list of roles. For more restrictive access, create a [custom role](https://cloud.google.com/iam/docs/creating-custom-roles) with the `cloudmessaging.messages.create` permission, then choose it from the list instead. When you're finished, select **Done**.
+
+{% alert warning %}
+Be sure to select **Firebase Cloud Messaging _API_ Admin**, not **Firebase Cloud Messaging Admin**.
+{% endalert %}
 
 ![The form for "Grant this service account access to project" with "Firebase Cloud Messaging API Admin" selected as the role.]({% image_buster /assets/img/android/push_integration/create_a_service_account/add-fcm-api-admin.png %})
 

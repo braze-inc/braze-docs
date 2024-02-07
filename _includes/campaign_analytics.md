@@ -210,15 +210,13 @@ Here are some key email-specific metrics that you won't see in other channels. T
 
 This statistic uses a proprietary analytical model created by Braze to reconstruct an estimate of the campaign's unique open rate as if machine opens did not exist. While we receive labels of "Machine Opens" on some open events from email senders (see above), these labels can often label actual opens as real opens. In other words, the "Other Opens" are likely an underestimate of real opens (by actual users). Instead, Braze uses click data from each campaign to infer the rate at which actual humans opened the message. This compensates for various machine opening mechanisms, including Apple’s MPP.
 
-The displayed statistic is generated 36 hours after email sending has begun. It will only run for scheduled email campaigns (one-time or recurring). If a campaign recurs, the estimate will be recalculated 36 hours after another send occurs.
+Estimated Real Open Rate is calculated 36 hours after email sending has begun and is recalculated every 24 hours thereafter. If a campaign recurs, the estimate is recalculated 36 hours after another send occurs.
+
+Typically around 10,000 delivered emails are required for the statistic to be computed successfully, though that number can vary depending on click rate. If the statistic can't be computed, then the column displays "--".
 
 ###### Limitations
 
-- Estimated Real Open Rate is being gradually rolled out and may not appear in your campaign analytics just yet.
-- Additionally, Estimated Real Open Rate is:
-   - Only available in campaigns
-   - Not reported in Current events
-   - Not retroactively calculated for past campaigns
+Estimated Real Open Rate is only available in campaigns, and is not reported in Current events. This metric is not retroactively calculated for campaigns launched before November 14, 2023.
 
 {% elsif include.channel == "in-app message" %}
 
@@ -322,15 +320,16 @@ Here are some key WhatsApp metrics you may see in your analytics. To see the def
 | Sends | The total number of sends successfully communicated between Braze and WhatsApp. However, this does not necessarily mean the message was received by the end user. |
 | Deliveries | The total number of WhatsApp messages sent that successfully made it to the end user's device. |
 | Reads | When a WhatsApp message is read by the end user. The end user's read receipts must be “On” for Braze to track reads. |
-| Failures | The total number of sends that were not successful because the Internet Service Provider returned a hard bounce. A hard bounce signifies a permanent deliverability failure. Failures are included in the _Sends_ count but are not included in the _Deliveries_ count.
+| Failures | The total number of sends that were not successful because WhatsApp could not deliver the message to the end user. Failures are included in the Sends count but are not included in the Deliveries count.
 {: .reset-td-br-1 .reset-td-br-2}
 
 #### End-user blocking and reporting metrics
+
 Additional metrics may be accessed via the [WhatsApp Manager dashboard](https://www.facebook.com/business/help/683499390267496?content_id=NZUBj7XjkYjYuWx), though [confirmation of your access](https://www.facebook.com/business/help/218116047387456) is necessary to access all available insights. 
 
 {% endif %}
 
-### Historical Performance
+### Historical performance
 
 The **Historical Performance** panel allows you to view the metrics from the **Message Performance** panel as a graph over time. Use the filters at the top of the panel to modify the stats and channels shown in the graph. The time range of this graph will always mirror the time range specified at the top of the page. 
 
@@ -348,7 +347,7 @@ If you select to only send to users who can see the latest Braze version of in-a
 
 {% if include.channel == "SMS" %}
 
-### Keyword Responses
+### Keyword responses
 
 The **Keyword Responses** panel shows you a timeline of the inbound keywords users replied with after receiving your message.  
 
@@ -360,17 +359,25 @@ Here, you can also view the response distribution of each keyword category to de
 
 {% endif %}
 
-### Conversion Event Details
+### Conversion event details
 
 The **Conversion Event Details** panel shows you the performance of your conversion events for your campaign. For more information, refer to [Conversion Events]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/#step-3-view-results).
 
 ![The Conversion Event Details panel.]({% image_buster /assets/img/cc-conversion.png %})
 
-### Conversion Correlation
+### Conversion correlation
 
-The **Conversion Correlation** panel gives you insight into what user attributes and behaviors help or hurt the outcomes you set for campaigns. For more information, refer to [Conversion Correlation]({{site.baseurl}}/user_guide/engagement_tools/testing/conversion_correlation/).
+The **Conversion Correlation** panel gives you insight into what user attributes and behaviors help or hurt the outcomes you set for campaigns. For more information, refer to [Conversion correlation]({{site.baseurl}}/user_guide/engagement_tools/testing/conversion_correlation/).
 
 ![The Conversion Correlation panel with an analysis on user attributes and behavior from the Primary Conversion Event - A.]({% image_buster /assets/img/convcorr.png %})
+
+{% if include.channel == "whatsapp" %}
+
+### Meta analytics
+
+In addition to Braze analytics, template-level analytics can be accessed in the WhatsApp Business Manager. For information, check out [Meta's documentation](https://www.facebook.com/business/help/218116047387456). 
+
+{% endif %}
 
 {% if include.channel == "SMS" %}
 
@@ -379,22 +386,22 @@ The **Conversion Correlation** panel gives you insight into what user attributes
 Like email, Braze receives user-level events related to an SMS message as it makes its journey to a user. Any inbound SMS event will also be sent as a Currents event through the [SMS InboundReceived]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events/#sms-inbound-received-events) event. This will allow you to perform additional actions or reporting on the messages your users are texting in outside of the Braze platform. 
 
 {% alert note %}
-Inbound messages are truncated past 1600 characters.
+Inbound messages are truncated past 1,600 characters.
 {% endalert %}
 
 {% endif %}
 
 {% if include.channel != "whatsapp" %}
 
-## Retention Report
+## Retention report
 
-Retention reports show you the rates at which your users have performed a selected retention event over time periods in a specific campaign or Canvas. For more information, refer to [Retention Reports]({{site.baseurl}}/user_guide/data_and_analytics/reporting/retention_reports/).
+Retention reports show you the rates at which your users have performed a selected retention event over time periods in a specific campaign or Canvas. For more information, refer to [Retention reports]({{site.baseurl}}/user_guide/data_and_analytics/reporting/retention_reports/).
 
-## Funnel Report
+## Funnel report
 
 Funnel reporting offers a visual report that allows you to analyze the journeys your customers take after receiving a campaign or Canvas. If your campaign or Canvas uses a control group or multiple variants, you will be able to understand how the different variants have impacted the conversion funnel at a more granular level and optimize based on this data.
 
-For more information, refer to [Funnel Reports]({{site.baseurl}}/user_guide/data_and_analytics/reporting/funnel_reports/).
+For more information, refer to [Funnel reports]({{site.baseurl}}/user_guide/data_and_analytics/reporting/funnel_reports/).
 
 {% endif %}
 

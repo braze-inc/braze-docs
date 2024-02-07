@@ -23,8 +23,6 @@ If your Android push integration is already set up, and you're looking to migrat
 
 In this section, you'll learn how to register for push using Google's Firebase Cloud Messaging (FCM) API. If you'd like to view a sample app using FCM with the Braze Android SDK, see [Braze: Firebase Push Sample App.](https://github.com/braze-inc/braze-android-sdk/tree/master/samples/firebase-push)
 
-{% multi_lang_include firebase_cloud_messaging/early_access_banner.md %}
-
 ### Step 1: Add Firebase to your project
 
 First, you'll need to add Firebase to your Android project. For step-by-step instructions, see Google's [Firebase setup guide][49].
@@ -57,6 +55,10 @@ Enter a service account name, ID, and description, then select **Create and cont
 ![The form for "Service account details."]({% image_buster /assets/img/android/push_integration/create_a_service_account/enter-service-account-details.png %})
 
 In the **Role** field, find and select **Firebase Cloud Messaging API Admin** from the list of roles. For more restrictive access, create a [custom role](https://cloud.google.com/iam/docs/creating-custom-roles) with the `cloudmessaging.messages.create` permission, then choose it from the list instead. When you're finished, select **Done**.
+
+{% alert warning %}
+Be sure to select **Firebase Cloud Messaging _API_ Admin**, not **Firebase Cloud Messaging Admin**.
+{% endalert %}
 
 ![The form for "Grant this service account access to project" with "Firebase Cloud Messaging API Admin" selected as the role.]({% image_buster /assets/img/android/push_integration/create_a_service_account/add-fcm-api-admin.png %})
 

@@ -53,7 +53,7 @@ Promotion cards in your product carousel are helpful to provide images to your o
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% alert tip %}
-We recommend uploading your product images to the Braze Media Library, then copy and pasting the URLs into the appropriate fields. Only static image formats (PNG and JPEG), are accepted. Some image formats (GIF) will upload but not display as expected.
+We recommend uploading your product images to the media library, then copy and pasting the URLs into the appropriate fields. Only static image formats (PNG and JPEG), are accepted. Some image formats (GIF) will upload but not display as expected.
 {% endalert %}
 
 ### Best practices

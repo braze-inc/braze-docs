@@ -10,7 +10,7 @@ search_rank: 1
 
 # Creating a Canvas
 
-> This reference article covers the necessary steps involved in creating, maintaining, and testing a Canvas. Follow this guide, or check out our [Canvas Braze Learning course](https://learning.braze.com/quick-overview-canvas-setup)!
+> This reference article covers the necessary steps involved in creating, maintaining, and testing a Canvas. Follow this guide, or check out our [Canvas Braze Learning course](https://learning.braze.com/quick-overview-canvas-setup).
 
 {% alert important %}
 As of February 28, 2023, you can no longer create or duplicate Canvases using the original Canvas experience. Braze recommends that customers who use the original Canvas experience move to Canvas Flow. It's an improved editing experience to better build and manage Canvases. Learn more about [cloning your Canvases to Canvas Flow]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/cloning_canvases/).
@@ -126,14 +126,13 @@ You can choose one of three ways in which users can enter your Canvas.
   {% endtab %}
 {% endtabs %}
 
-<!--Tag allows alert to be linked to-->
-<a id="important-edge-case"></a>
+After selecting your delivery method, adjust the settings to match your use case, then continue to setting your target audience.
 
-{% alert important %}
-Should the window of re-eligibility be less than the maximum duration of the Canvas, a user will be allowed to re-enter and receive more than one component's messages. In the edge case where a user's re-entry reaches the same component as its previous entry, Braze will deduplicate that component's messages. <br><br> If a user re-enters the Canvas, reaches the same component as their previous entry, and is eligible for an in-app message for each entry, the user will get the message twice (depending on in-app message priority) as long as they re-open a session two times.
-{% endalert %}
+{% details Deduplicate behavior for Canvases using the original editor %}
+Should the window of re-eligibility be less than the maximum duration of the Canvas, a user will be allowed to re-enter and receive more than one component's messages. In the edge case where a user's re-entry reaches the same component as its previous entry, Braze will deduplicate that component's messages. 
 
-After you choose your delivery method, adjust those settings appropriately and move on to setting your target audience.
+If a user re-enters the Canvas, reaches the same component as their previous entry, and is eligible for an in-app message for each entry, the user will get the message twice (depending on in-app message priority) as long as they re-open a session two times.
+{% enddetails %}
 
 ### Step 2c: Set your target entry audience
 
@@ -301,7 +300,7 @@ Keep in mind that multivariate Canvases allow you to test more than copy, but ti
 
 ![][18b]
 
-Intelligent Selection for Canvas optimizes your Canvas results by making gradual real-time adjustments to the distribution of users sorted into each variant. When the statistical algorithm determines a decisive winner among your variants it will rule out the underperforming variants and slot all future eligible recipients of the Canvas into the winning variants. 
+Intelligent Selection for Canvas optimizes your Canvas results by making gradual real-time adjustments to the distribution of users sorted into each variant. When the statistical algorithm determines a decisive winner among your variants it will rule out the underperforming variants and slot all future eligible recipients of the Canvas into the Winning Variants. 
 
 For this reason, Intelligent Selection works best on Canvases that have new users entering frequently.
 

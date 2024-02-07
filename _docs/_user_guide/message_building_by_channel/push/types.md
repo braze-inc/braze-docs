@@ -42,7 +42,7 @@ glossaries:
       - iOS
       - Android
   - name: "Push with Action Buttons"
-    description: "Push with Action Buttons are messages that allow you to provide options to your users and offer several calls to action."
+    description: "Push with action buttons are messages that allow you to provide options to your users and offer several calls to action."
     tags:
       - iOS
       - Android

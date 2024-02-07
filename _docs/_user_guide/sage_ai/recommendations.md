@@ -6,20 +6,20 @@ alias: "/recommendations/"
 description: "This reference article covers how to create an AI Item Recommendation for items in a catalog."
 ---
 
-# AI Item Recommendations
+# AI item recommendations
 
 > Learn how to create an AI Item Recommendation for items in a catalog.
 
-You can use AI Item Recommendations to calculate the most popular products or create personalized AI recommendations for a specific [catalog]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/). After you create your recommendation, you can use personalization to insert those products into your messages.
+You can use AI item recommendations to calculate the most popular products or create personalized AI recommendations for a specific [catalog]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/). After you create your recommendation, you can use personalization to insert those products into your messages.
 
 ## Prerequisites
 
-- You must have at least one [catalog][catalog] to use AI Item Recommendations.
+- You must have at least one [catalog][catalog] to use AI item recommendations.
 - You must have purchase or event data on Braze (custom events or the purchase object) that includes a reference to unique product IDs stored in a catalog.
 
 ### Important notes
 
-This article describes the free version of AI Item Recommendations. When using the free version:
+This article describes the free version of AI item recommendations. When using the free version:
 
 - You can create one recommendation per [recommendation type](#recommendation-type) in a workspace.
 - The items recommended to each user in a recommendation update once a week. The recommendation model itself will automatically update once a month.
@@ -43,8 +43,8 @@ First, give your recommendation a name and optional description.
 
 Next, select the recommendation type. Both recommendation types use the last 6 months of item interaction (purchase or custom event) data.
 
-- **Most popular:** Calculates the items from the catalog that users interact with most often in the entire workspace.
-- **Personalized:** Uses transformers, a new kind of deep learning, to predict each user's next most likely set of items to purchase or interact with. We calculate up to 30 of the next most likely items ranked from most to least likely.
+- **Most popular:** Calculates the items from the catalog that users interact with most often in the entire workspace. The interaction is defined by the event chosen in Step 3.
+- **Personalized:** Uses transformers, a new kind of deep learning, to predict each user's next most likely set of items to purchase or interact with. The interaction is defined by the event chosen in Step 3. We calculate up to 30 of the next most likely items ranked from most to least likely.
 
 <!--
 **Most recent:** Surfaces each user's most recent purchases.
@@ -91,8 +91,10 @@ The **Property Name** field will be pre-populated with a list of fields sent thr
 There are some requirements for selecting your property:
 
 - Must map to the `id` field of your selected catalog.
-- **If you selected Purchase Object:** Must be the `product_id` or a field of your interaction event's `properties`. This field can be nested.
-- **If you selected Custom Event:** Must be a field of your custom event's `properties`. This field can be nested.
+- **If you selected Purchase Object:** Must be the `product_id` or a field of your interaction event's `properties`. 
+- **If you selected Custom Event:** Must be a field of your custom event's `properties`.
+- The field can be nested
+- The field can be in an array (of multiple catalog items within a single event). It will automatically be flattened.
 
 ### Step 5: Train the recommendation
 

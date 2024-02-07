@@ -4,7 +4,6 @@ article_title: Push Max
 page_type: reference
 description: "Push Max amplifies Android push notifications by tracking failed push notifications and resending the push when the user is more likely to receive it."
 
-hidden: true
 permalink: /user_guide/message_building_by_channel/push/android/push_max/
 platform: Android
 channel:
@@ -17,10 +16,6 @@ channel:
 > Learn about Push Max and how you can use this feature to potentially improve the deliverability of Android push notifications to [Chinese OEM devices]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/chinese_push_deliverability/).
 
 
-{% alert important %}
-Push Max is currently in early access. Contact your Braze account manager if you're interested in participating in the early access.
-{% endalert %}
-
 ## What is Push Max?
 
 Push Max amplifies Android push notifications by tracking failed push notifications and resending the push when the user is more likely to receive it.
@@ -31,6 +26,7 @@ Some Android devices manufactured by Chinese Original Equipment Manufacturers (O
 
 - Available for Android push notifications only
 - Not supported for action-based or API-triggered messages
+- Not supported when the option to [only send to the user's last used device]({{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message#device-options) is selected
 
 ## Prerequisites
 

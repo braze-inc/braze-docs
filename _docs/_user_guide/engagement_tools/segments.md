@@ -34,6 +34,12 @@ guide_menu_list:
   - name: Segment Extension
     link: /docs/user_guide/engagement_tools/segments/segment_extension/
     fa_icon: fas fa-users
+  - name: SQL Segments
+    link: /docs/sql_segments/
+    fa_icon: fas fa-users
+  - name: Catalog Segments
+    link: /docs/catalog_segments/
+    fa_icon: fas fa-users
   - name: User Profiles
     link: /docs/user_guide/engagement_tools/segments/using_user_search/
     fa_icon: fas fa-users
@@ -46,4 +52,11 @@ guide_menu_list:
   - name: Regular Expressions
     link: /docs/user_guide/engagement_tools/segments/regex/
     fa_icon: fas fa-search
+
+guide_menu_title2: "Other"
+guide_menu_list2:
+  - name: Custom Attributes
+    link: /docs/user_guide/data_and_analytics/custom_data/custom_attributes/
+    fa_icon: fas fa-table
+
 ---

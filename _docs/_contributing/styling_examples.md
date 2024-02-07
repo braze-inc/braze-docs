@@ -648,14 +648,26 @@ Subtab 2a content
 ##### Markdown
 {% raw %}
 ```
-{% tabs %}
+{% tabs local %}
 {% tab Tab 1 %}
+tab content 1
 {% subtabs %}
-{% subtab Subtab 1 %}
-Subtab 1 content
+{% subtab Subtab 1a %}
+Subtab 1a content
 {% endsubtab %}
-{% subtab Subtab 2 %}
-Subtab 2 content
+{% subtab Subtab 2a %}
+Subtab 2a content
+{% endsubtab %}
+{% endsubtabs %}
+{% endtab %}
+{% tab Tab 2 %}
+tab content 2
+{% subtabs %}
+{% subtab Subtab 1b %}
+Subtab 1a content
+{% endsubtab %}
+{% subtab Subtab 2b %}
+Subtab 2a content
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}

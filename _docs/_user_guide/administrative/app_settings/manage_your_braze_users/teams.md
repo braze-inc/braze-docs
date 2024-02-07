@@ -7,11 +7,9 @@ description: "This reference article covers how to use Braze teams in the dashbo
 
 ---
 
-# [![Braze Learning course]({% image_buster /assets/img/bl_icon2.png %})](https://learning.braze.com/dive-into-braze-teams/869939){: style="float:right;width:120px;border:0;" class="noimgborder"}Teams
+# Teams
 
 > Braze admins can group their dashboard users into teams with varying user roles and permissions.
-
-{% multi_lang_include video.html id="UYjKrFcL9sQ" align="right" %}
 
 Teams can be set up across customer base location, language, and custom attributes so that team members and non-team members have different access to messaging features and customer data. Team filters and tags can be assigned across various engagement tools.
 

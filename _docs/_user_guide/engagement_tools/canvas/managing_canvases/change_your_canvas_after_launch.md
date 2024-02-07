@@ -40,7 +40,7 @@ If you want to edit or add more steps to your Canvas user journey, the following
 
 If you delete a [Delay]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/delay_step/) or [Action Paths]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/action_paths/) step, you can optionally redirect the users currently waiting in the step into another Canvas step. For Delays, users will remain in the step until the end of the delay period. For Action Paths, users will remain in the step until the end of the evaluation window.
 
-Note that when you launch a Canvas initially, Braze enqueues the users for the messages at this point. If you make an edit to the Canvas after launch, some users will already be enqueued and will not pick up the changes. If you stop the Canvas, duplicate it, then change it and launch this new version, the Canvas will re-evaluate all users again, not just users that have not already been enqueued.
+Note that when you launch a Canvas initially, Braze enqueues the users for the Message step they're at, not all subsequent messages in the Canvas. If you make an edit to the Canvas after launch, some users will already be enqueued and will not pick up the changes. If you stop the Canvas, duplicate it, then change it and launch this new version, the Canvas will re-evaluate all users again, not just users that have not already been enqueued.
 
 See the [Best practices](#best-practices) section for specific editing use cases. In general, it's best practice to avoid editing live Canvases as there may be unexpected behavior.
 

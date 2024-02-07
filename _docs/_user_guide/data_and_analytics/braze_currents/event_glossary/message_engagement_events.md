@@ -75,7 +75,7 @@ This event occurs when an WhatsApp message is read by the end user.
   "from_phone_number": (optional, string) phone number used to send,
   "message_variation_id": (optional, string) message variation ID of the variation this user received,
   "message_variation_name": (optional, string) name of the message variation this user received,
-  "subscription_group_id": (optional, string) ID of the sending Subscription Group,
+  "subscription_group_id": (optional, string) ID of the sending subscription group,
   "time": (optional, int) 10-digit UTC time of the event in seconds since the epoch,
   "to_phone_number": (optional, string) phone number of User receiving the message,
   "user_id": (required, string) Braze ID of the user that performed this event
@@ -113,7 +113,7 @@ This event occurs when an WhatsApp message sent made it successfully to the end-
   "from_phone_number": (optional, string) phone number used to send,
   "message_variation_id": (optional, string) message variation ID of the variation this user received,
   "message_variation_name": (optional, string) name of the message variation this user received,
-  "subscription_group_id": (optional, string) ID of the sending Subscription Group,
+  "subscription_group_id": (optional, string) ID of the sending subscription group,
   "time": (optional, int) 10-digit UTC time of the event in seconds since the epoch,
   "to_phone_number": (optional, string) phone number of User receiving the message,
   "user_id": (required, string) Braze ID of the user that performed this event
@@ -154,7 +154,7 @@ This event occurs when WhatsApp cannot deliver the message to the user. A hard b
   "message_variation_name": (optional, string) name of the message variation this user received,
   "provider_error_code": (optional, string) Error Code from WhatsApp,
   "provider_error_title": (optional, string) Description of failure from WhatsApp,
-  "subscription_group_id": (optional, string) ID of the sending Subscription Group,
+  "subscription_group_id": (optional, string) ID of the sending subscription group,
   "time": (optional, int) 10-digit UTC time of the event in seconds since the epoch,
   "to_phone_number": (optional, string) phone number of User receiving the message,
   "user_id": (required, string) Braze ID of the user that performed this event
@@ -192,7 +192,7 @@ This event occurs when a send request was successfully communicated between Braz
   "message_extras": (optional, string) Liquid tags related fields,
   "message_variation_id": (optional, string) message variation ID of the variation this user received,
   "message_variation_name": (optional, string) name of the message variation this user received,
-  "subscription_group_id": (optional, string) ID of the sending Subscription Group,
+  "subscription_group_id": (optional, string) ID of the sending subscription group,
   "time": (optional, int) 10-digit UTC time of the event in seconds since the epoch,
   "to_phone_number": (optional, string) phone number of User receiving the message,
   "user_id": (required, string) Braze ID of the user that performed this event
@@ -233,7 +233,7 @@ This event occurs if a WhatsApp message was aborted based on Liquid aborts, Quie
   "message_variation_id": (optional, string) message variation ID of the variation this user received,
   "message_variation_name": (optional, string) name of the message variation this user received,
   "send_id": (optional, string) message send ID this message belongs to,
-  "subscription_group_id": (optional, string) ID of the sending Subscription Group,
+  "subscription_group_id": (optional, string) ID of the sending subscription group,
   "time": (optional, int) 10-digit UTC time of the event in seconds since the epoch,
   "user_id": (required, string) Braze ID of the user that performed this event
 ```
@@ -271,7 +271,7 @@ This event occurs when one of your users sends a WhatsApp message to a phone num
   "message_variation_id": (optional, string) message variation ID of the variation this user received,
   "message_variation_name": (optional, string) name of the message variation this user received,
   "quick_reply_text": (optional, string) test of button pressed by the user,
-  "subscription_group_id": (optional, string) ID of the sending Subscription Group,
+  "subscription_group_id": (optional, string) ID of the sending subscription group,
   "time": (optional, int) 10-digit UTC time of the event in seconds since the epoch,
   "user_phone_number": (optional, string) the user’s phone number from which the message was received,
   "user_id": (required, string) Braze ID of the user that performed this event
@@ -648,8 +648,8 @@ This event occurs when Braze processes a push message for a user, communicating 
 ```
 
 #### Property details
-- For `ad_id`, `ad_id_type` and `ad_tracking_enabled`, you will need to explicitly collect the iOS IDFA and Android Google ADID through the native SDKs. Learn more about them here: [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/swift_idfv/), [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id).
-- If you are using Kafka to ingest [Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/) data, reach out to your customer success manager or account manager to enable the feature flipper for sending `ad_id`.
+- For `ad_id`, `ad_id_type` and `ad_tracking_enabled`, you need to explicitly collect the iOS IDFA and Android Google advertising ID through the native SDKs. Learn more about this setup for [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/swift_idfv/) and [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id).
+- If you are using Kafka to ingest [Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/) data, contact your customer success manager to enable sending `ad_id`.
 - `message_extras` allow you to annotate your send events with dynamic data from Connected Content, custom attributes (such as language, country), and Canvas entry properties. Refer to [Message extras]({{site.baseurl}}/message_extras_tag/) to learn more.
 {% endapi %}
 {% api %}
@@ -698,8 +698,8 @@ This event occurs when a user directly clicks on the Push notification to open t
 }
 ```
 #### Property details
-- For `ad_id`, `ad_id_type` and `ad_tracking_enabled`, you will need to explicitly collect the iOS IDFA and Android Google ADID through the native SDKs. Learn more about them here: [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/swift_idfv/), [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id).
-- If you are using Kafka to ingest [Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/) data, reach out to your customer success manager or account manager to enable the feature flipper for sending `ad_id`.
+- For `ad_id`, `ad_id_type` and `ad_tracking_enabled`, you need to explicitly collect the iOS IDFA and Android Google advertising ID through the native SDKs. Learn more about this setup for [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/swift_idfv/) and [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id).
+- If you are using Kafka to ingest [Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/) data, contact your customer success manager to enable sending `ad_id`.
 {% endapi %}
 {% api %}
 
@@ -740,8 +740,8 @@ This event is not supported by our [Swift SDK](https://github.com/braze-inc/braz
 }
 ```
 #### Property details
-- For `ad_id`, `ad_id_type` and `ad_tracking_enabled`, you will need to explicitly collect the iOS IDFA and Android Google ADID through the native SDKs. Learn more about them here: [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/swift_idfv/), [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id).
-- If you are using Kafka to ingest [Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/) data, reach out to your customer success manager or account manager to enable the feature flipper for sending `ad_id`.
+- For `ad_id`, `ad_id_type` and `ad_tracking_enabled`, you need to explicitly collect the iOS IDFA and Android Google advertising ID through the native SDKs. Learn more about this setup for [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/swift_idfv/) and [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id).
+- If you are using Kafka to ingest [Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/) data, contact your customer success manager to enable sending `ad_id`.
 {% endapi %}
 {% api %}
 
@@ -819,8 +819,10 @@ This event occurs when an email send request was successfully communicated betwe
   "message_extras": (optional, string) key-value pairs sent with this event
 }
 ```
+
 #### Property details
-- The behavior for `dispatch_id` differs between Canvas and campaigns because Braze treats Canvas steps (except for Entry Steps, which can be scheduled) as triggered events, even when they are "scheduled". Learn more about [dispatch ID behavior]({{site.baseurl}}/help/help_articles/data/dispatch_id/).
+
+- The behavior for `dispatch_id` differs between Canvas and campaigns because Braze treats Canvas steps (except for entry steps, which can be scheduled) as triggered events, even when they are scheduled. Learn more about [dispatch ID behavior]({{site.baseurl}}/help/help_articles/data/dispatch_id/).
 - `message_extras` allow you to annotate your send events with dynamic data from Connected Content, custom attributes (such as language, country), and Canvas entry properties. Refer to [Message extras]({{site.baseurl}}/message_extras_tag/) to learn more.
 {% endapi %}
 
@@ -862,10 +864,11 @@ This event occurs when an email sent made it successfully to the end-users inbox
   "from_domain": (optional, string) sending domain for the email
 }
 ```
-#### Property details
-- The behavior for `dispatch_id` differs between Canvas and campaigns because Braze treats Canvas steps (except for Entry Steps, which can be scheduled) as triggered events, even when they are "scheduled". Learn more about [dispatch ID behavior]({{site.baseurl}}/help/help_articles/data/dispatch_id/).
-{% endapi %}
 
+#### Property details
+
+- The behavior for `dispatch_id` differs between Canvas and campaigns because Braze treats Canvas steps (except for entry steps, which can be scheduled) as triggered events, even when they are scheduled. Learn more about [dispatch ID behavior]({{site.baseurl}}/help/help_articles/data/dispatch_id/).
+{% endapi %}
 
 {% api %}
 
@@ -906,8 +909,10 @@ This event occurs when a user opens an email. Multiple events may be generated f
   "is_amp": (optional, boolean) indicates that this is an AMP event
 }
 ```
+
 #### Property details
-- The behavior for `dispatch_id` differs between Canvas and campaigns because Braze treats Canvas steps (except for Entry Steps, which can be scheduled) as triggered events, even when they are "scheduled". Learn more about [dispatch ID behavior]({{site.baseurl}}/help/help_articles/data/dispatch_id/).
+
+- The behavior for `dispatch_id` differs between Canvas and campaigns because Braze treats Canvas steps (except for entry steps, which can be scheduled) as triggered events, even when they are scheduled. Learn more about [dispatch ID behavior]({{site.baseurl}}/help/help_articles/data/dispatch_id/).
 {% endapi %}
 
 {% api %}
@@ -951,8 +956,10 @@ This event occurs when a user clicks an email. Multiple events may be generated 
   "is_amp": (optional, boolean) indicates that this is an AMP event
 }
 ```
+
 #### Property details
-- The behavior for `dispatch_id` differs between Canvas and campaigns because Braze treats Canvas steps (except for Entry Steps, which can be scheduled) as triggered events, even when they are "scheduled". Learn more about [dispatch ID behavior]({{site.baseurl}}/help/help_articles/data/dispatch_id/).
+
+- The behavior for `dispatch_id` differs between Canvas and campaigns because Braze treats Canvas steps (except for entry steps, which can be scheduled) as triggered events, even when they are scheduled. Learn more about [dispatch ID behavior]({{site.baseurl}}/help/help_articles/data/dispatch_id/).
 {% endapi %}
 
 {% api %}
@@ -994,8 +1001,10 @@ This event occurs when an Internet Service Provider returns a hard bounce. A har
   "is_drop": (optional, boolean) indicates that this event counts as a drop event
 }
 ```
+
 #### Property details
-- The behavior for `dispatch_id` differs between Canvas and campaigns because Braze treats Canvas steps (except for Entry Steps, which can be scheduled) as triggered events, even when they are "scheduled". Learn more about [dispatch ID behavior]({{site.baseurl}}/help/help_articles/data/dispatch_id/).
+
+- The behavior for `dispatch_id` differs between Canvas and campaigns because Braze treats Canvas steps (except for entry steps, which can be scheduled) as triggered events, even when they are scheduled. Learn more about [dispatch ID behavior]({{site.baseurl}}/help/help_articles/data/dispatch_id/).
 {% endapi %}
 
 {% api %}
@@ -1036,8 +1045,10 @@ This event occurs when an Internet Service Provider returns a soft bounce. A sof
   "from_domain": (optional, string) sending domain for the email
 }
 ```
+
 #### Property details
-- The behavior for `dispatch_id` differs between Canvas and campaigns because Braze treats Canvas steps (except for Entry Steps, which can be scheduled) as triggered events, even when they are "scheduled". Learn more about [dispatch ID behavior]({{site.baseurl}}/help/help_articles/data/dispatch_id/).
+
+- The behavior for `dispatch_id` differs between Canvas and campaigns because Braze treats Canvas steps (except for entry steps, which can be scheduled) as triggered events, even when they are scheduled. Learn more about [dispatch ID behavior]({{site.baseurl}}/help/help_articles/data/dispatch_id/).
 {% endapi %}
 
 {% api %}
@@ -1077,9 +1088,10 @@ This event occurs when the end-user hits the "spam" button on the email. Note th
   "from_domain": (optional, string) sending domain for the email
 }
 ```
+
 #### Property details
 
-The behavior for `dispatch_id` differs between Canvas and campaigns because Braze treats Canvas steps (except for Entry Steps, which can be scheduled) as triggered events, even when they are "scheduled". Learn more about [dispatch ID behavior]({{site.baseurl}}/help/help_articles/data/dispatch_id/).
+The behavior for `dispatch_id` differs between Canvas and campaigns because Braze treats Canvas steps (except for entry steps, which can be scheduled) as triggered events, even when they are scheduled. Learn more about [dispatch ID behavior]({{site.baseurl}}/help/help_articles/data/dispatch_id/).
 {% endapi %}
 
 
@@ -1123,7 +1135,7 @@ The `Unsubscribe` event is actually a specialized click event that is fired when
 ```
 #### Property details
 
-The behavior for `dispatch_id` differs between Canvas and campaigns because Braze treats Canvas steps (except for Entry Steps, which can be scheduled) as triggered events, even when they are "scheduled". Learn more about [dispatch ID behavior]({{site.baseurl}}/help/help_articles/data/dispatch_id/).
+The behavior for `dispatch_id` differs between Canvas and campaigns because Braze treats Canvas steps (except for entry steps, which can be scheduled) as triggered events, even when they are scheduled. Learn more about [dispatch ID behavior]({{site.baseurl}}/help/help_articles/data/dispatch_id/).
 {% endapi %}
 
 {% api %}
@@ -1167,8 +1179,8 @@ This event occurs when a user views an in-app message.
 }
 ```
 #### Property details
-- For `ad_id`, `ad_id_type` and `ad_tracking_enabled`, you will need to explicitly collect the iOS IDFA and Android Google ADID through the native SDKs. Learn more about them here: [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/swift_idfv/), [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id).
-- If you are using Kafka to ingest [Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/) data, reach out to your customer success manager or account manager to enable the feature flipper for sending `ad_id`.
+- For `ad_id`, `ad_id_type` and `ad_tracking_enabled`, you need to explicitly collect the iOS IDFA and Android Google advertising ID through the native SDKs. Learn more about this setup for [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/swift_idfv/) and [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id).
+- If you are using Kafka to ingest [Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/) data, contact your customer success manager to enable sending `ad_id`.
 {% endapi %}
 
 {% api %}
@@ -1213,8 +1225,8 @@ This event occurs when a user clicks on an in-app message.
 }
 ```
 #### Property details
-- For `ad_id`, `ad_id_type` and `ad_tracking_enabled`, you will need to explicitly collect the iOS IDFA and Android Google ADID through the native SDKs. Learn more about them here: [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/swift_idfv/), [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id).
-- If you are using Kafka to ingest [Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/) data, reach out to your customer success manager or account manager to enable the feature flipper for sending `ad_id`.
+- For `ad_id`, `ad_id_type` and `ad_tracking_enabled`, you need to explicitly collect the iOS IDFA and Android Google advertising ID through the native SDKs. Learn more about this setup for [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/swift_idfv/) and [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id).
+- If you are using Kafka to ingest [Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/) data, contact your customer success manager to enable sending `ad_id`.
 {% endapi %}
 
 
@@ -1335,8 +1347,8 @@ This event occurs when a user views a Content Card.
 }
 ```
 #### Property details
-- For `ad_id`, `ad_id_type` and `ad_tracking_enabled`, you will need to explicitly collect the iOS IDFA and Android Google ad ID through the native SDKs. Learn more about them here: [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/swift_idfv/), [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id).
-- If you are using Kafka to ingest [Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/) data, reach out to your customer success manager or account manager to enable the feature flipper for sending `ad_id`.
+- For `ad_id`, `ad_id_type` and `ad_tracking_enabled`, you need to explicitly collect the iOS IDFA and Android Google advertising ID through the native SDKs. Learn more about this setup for [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/swift_idfv/) and [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id).
+- If you are using Kafka to ingest [Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/) data, contact your customer success manager to enable sending `ad_id`.
 {% endapi %}
 
 {% api %}
@@ -1379,8 +1391,8 @@ This event occurs when a user clicks a Content Card.
 }
 ```
 #### Property details
-- For `ad_id`, `ad_id_type` and `ad_tracking_enabled`, you will need to explicitly collect the iOS IDFA and Android Google  ad ID through the native SDKs. Learn more about them here: [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/swift_idfv/), [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id).
-- If you are using Kafka to ingest [Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/) data, reach out to your customer success manager or account manager to enable the feature flipper for sending `ad_id`.
+- For `ad_id`, `ad_id_type` and `ad_tracking_enabled`, you need to explicitly collect the iOS IDFA and Android Google advertising ID through the native SDKs. Learn more about this setup for [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/swift_idfv/) and [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id).
+- If you are using Kafka to ingest [Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/) data, contact your customer success manager to enable sending `ad_id`.
 {% endapi %}
 
 
@@ -1424,78 +1436,10 @@ This event occurs when a user dismisses a Content Card.
 }
 ```
 #### Property details
-- For `ad_id`, `ad_id_type` and `ad_tracking_enabled`, you will need to explicitly collect the iOS IDFA and Android Google ad ID through the native SDKs. Learn more about them here: [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/swift_idfv/), [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id).
-- If you are using Kafka to ingest [Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/) data, reach out to your customer success manager or account manager to enable the feature flipper for sending `ad_id`.
+- For `ad_id`, `ad_id_type` and `ad_tracking_enabled`, you need to explicitly collect the iOS IDFA and Android Google advertising ID through the native SDKs. Learn more about this setup for [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/swift_idfv/) and [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id).
+- If you are using Kafka to ingest [Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/) data, contact your customer success manager to enable sending `ad_id`.
 {% endapi %}
 
-{% api %}
-
-## News Feed impression event
-
-{% alert note %}
-News Feed is being deprecated. Braze recommends that customers who use our News Feed tool move over to our Content Cards messaging channel—it's more flexible, customizable, and reliable. Check out the [migration guide]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) for more.
-{% endalert %}
-
-{% apitags %}
-News Feed, Impressions
-{% endapitags %}
-
-This event occurs when a user views the News Feed.
-
-{% alert tip %}
-The [News Feed Impression]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/customer_behavior_events/#news-feed-impression-event) schema (`users.behaviors.app.NewsFeedImpression`) is located in the Customer Behavior Events glossary, as this data is not categorized as a Message Engagement Event. 
-{% endalert %}
-
-```json
-// News Feed Card Impression: users.messages.newsfeedcard.Impression
-{
-  "id": (required, string) unique ID of this event,
-  "user_id": (required, string) Braze user ID of the user,
-  "external_user_id": (optional, string) External ID of the user,
-  "app_id": (required, string) ID for the app on which the user action occurred,
-  "time": (required, int) 10-digit UTC time of the event in seconds since the epoch,
-  "timezone": (optional, string) IANA time zone of the user at the time of the event,
-  "card_id": (required, string) ID of the card that was viewed,  
-  "platform": (optional, string) platform of the device (one of 'ios', 'android', 'web', 'kindle', 'tvos', OR 'roku'),
-  "os_version": (optional, string) os version of device used for the action,
-  "device_model": (optional, string) hardware model of the device,
-  "device_id": (optional, string) ID of the device on which the event occurred
-}
-```
-{% endapi %}
-
-
-{% api %}
-
-## News Feed click events
-
-{% apitags %}
-News Feed, Clicks
-{% endapitags %}
-
-This event occurs when a user clicks the News Feed.
-
-{% alert tip %}
-The [News Feed Impression]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/customer_behavior_events/#news-feed-impression-event) schema (`users.behaviors.app.NewsFeedImpression`) is located in the Customer Behavior Events glossary, as this data is not categorized as a Message Engagement Event. 
-{% endalert %}
-
-```json
-// News Feed Card Click: users.messages.newsfeedcard.Click
-{
-  "id": (required, string) unique ID of this event,
-  "user_id": (required, string) Braze user ID of the user,
-  "external_user_id": (optional, string) External ID of the user,
-  "app_id": (required, string) ID for the app on which the user action occurred,
-  "time": (required, int) 10-digit UTC time of the event in seconds since the epoch,  
-  "timezone": (optional, string) IANA time zone of the user at the time of the event,  
-  "card_id": (required, string) ID of the card that was clicked,
-  "platform": (optional, string) platform of the device (one of 'ios', 'android', 'web', 'kindle', 'tvos', OR 'roku'),
-  "os_version": (optional, string) os version of device used for the action,
-  "device_model": (optional, string) hardware model of the device,
-  "device_id": (optional, string) ID of the device on which the event occurred
-}
-```
-{% endapi %}
 
 {% api %}
 
@@ -1571,43 +1515,6 @@ This event occurs when a user sends an SMS.
 #### Property details
 - `message_extras` allow you to annotate your send events with dynamic data from Connected Content, custom attributes (such as language, country), and Canvas entry properties. Refer to [Message extras]({{site.baseurl}}/message_extras_tag/) to learn more.
 
-{% endapi %}
-
-{% api %}
-
-## SMS sends to carrier events
-
-{% apitags %}
-SMS, Delivery
-{% endapitags %}
-
-This event occurs when an SMS is sent to the carrier.
-
-```json
-// SMS Delivery: users.messages.sms.CarrierSend
-{
-  "id": (required, string) unique ID of this event,
-  "user_id": (required, string) Braze user ID of the user,
-  "dispatch_id": (optional, string) ID of the message dispatch (unique ID for each 'transmission' sent from the Braze platform and users who are sent a schedule message get the same dispatch_id. Action-based or API-triggered messages get a unique dispatch_id per user,
-  "external_user_id": (optional, string) External ID of the user,
-  "time": (required, int) 10-digit UTC time of the event in seconds since the epoch,
-  "timezone": (optional, string) IANA time zone of the user at the time of the event,
-  "campaign_id": (optional, string) ID of the campaign if from a campaign,
-  "campaign_name": (optional, string) name of the campaign,
-  "message_variation_id": (optional, string) ID of the message variation if from a campaign,
-  "message_variation_name": (optional, string) the name of the message variation if from a campaign,
-  "to_phone_number": (optional, string) the number the message was sent to,
-  "subscription_group_id": (optional, string) ID of the subscription group targeted for this SMS message,
-  "from_phone_number": (optional, string) the from phone number of the message (Delivered and Undelivered only),
-  "canvas_id": (optional, string) ID of the Canvas if from a Canvas,
-  "canvas_name": (optional, string) name of the Canvas,
-  "canvas_variation_id": (optional, string) ID of the Canvas variation the user is in if from a Canvas,
-  "canvas_variation_name": (optional, string) name of the Canvas variation the user is in if from a Canvas,
-  "canvas_step_id": (optional, string) ID of the step for this message if from a Canvas,
-  "canvas_step_name": (optional, string) name of the Canvas step this event belongs to,
-  "send_id": (optional, string) message send ID this message belongs to
-}
-```
 {% endapi %}
 
 {% api %}
@@ -1860,8 +1767,6 @@ This event occurs when a user enters into the Canvas. This event tells you which
   "canvas_name": (optional, string) name of the Canvas,
   "canvas_variation_id": (required, string) ID of the Canvas variation the user is in if from a Canvas,
   "canvas_variation_name": (optional, string) name of the Canvas variation the user is in if from a Canvas,
-  "canvas_step_id": (optional, string) ID of the step the user entered into,
-  "canvas_step_name": (optional, string) name of the Canvas step this event belongs to,
   "in_control_group": (required, boolean) whether the user was enrolled in the control group for a Canvas
 }
 ```
@@ -1973,10 +1878,10 @@ This event occurs when the global subscription state of the user changes.
 // Global State Change: users.behaviors.subscription.GlobalStateChange
 {
   "id": (required, string) unique ID of this event,
-  "user_id": (required, string) Braze Braze ID of the user with this global subscription state change,
+  "user_id": (required, string) Braze ID of the user with this global subscription state change,
   "external_user_id": (optional, string) External ID of the user,
   "email_address": (optional, string) User email address,
-  "state_change_source": (optional, string) Source of the state change, e.g: REST, SDK, Dashboard, Preference Center etc.,
+  "state_change_source": (optional, string) Source of the state change, for example, REST, SDK, Dashboard, Preference Center, etc.,
   "subscription_status": (required, string) Global subscription status: Subscribed, Unsubscribed and Opt-In,
   "channel": (optional, string) Channel: only email for now,
   "time": (required, int) 10-digit UTC time of the state change event in seconds since the epoch,
@@ -2003,15 +1908,15 @@ This event occurs when the global subscription state of the user changes.
 | Source | Description |
 | --- | --- |
 | SDK | SDK endpoints |
-| Dashboard | When a user's subscription state is updated from the User Profile page in Dashboard |
+| Dashboard | When a user's subscription state is updated from the **User Profile** page in the dashboard |
 | Subscription Page | When a user unsubscribes through an email link that is not the preference center |
 | REST API | REST API endpoints |
 | CSV import | CSV user import |
 | Preference Center | When a user is updated from the preference center |
-| Inbound Message | When a user is updated by inbound messages from end-users through channels such as SMS |
+| Inbound Message | When a user is updated by inbound messages from end-users through channels, such as SMS |
 | Migration | When a user is updated by internal migrations or maintenance scripts |
-| User Merge | When a user is updated by the user merge process |
-| Canvas User Update Step | When a user is updated by the Canvas user update step |
+| User Merge | When a user is updated by the merging users process |
+| Canvas User Update Step | When a user is updated by the Canvas User Update step |
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% endapi %}

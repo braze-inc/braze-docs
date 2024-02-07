@@ -38,7 +38,7 @@ The following `ClaimType` names can be used to ensure the uniqueness of guests a
 - `first_name`: captures the user's first name. 
 - `last_name`: captures the user's last name.
 
-To use the Punchh dynamic coupon code API, a JWT Token must be constructed. Add the following Liquid template to your Braze dashboard:
+To use the Punchh dynamic coupon code API, a JWT Token must be constructed. Add the following Liquid template to your Braze dashboard in the message body of the channel you'd like to use:
 
 {% raw %}
 ```liquid

@@ -3,8 +3,7 @@ nav_title: Audience Sync to Criteo
 article_title: Canvas Audience Sync to Criteo
 description: "This reference article will cover how to use Braze Audience Sync to Criteo, to deliver advertisements based upon behavioral triggers, segmentation, and more."
 page_order: 4
-permalink: "/audience_sync_criteo/"
-hidden: true
+alias: "/audience_sync_criteo/"
 
 Tool:
   - Canvas
@@ -24,7 +23,8 @@ Using the Braze Audience Sync to Criteo, brands can elect to add user data from 
 This feature gives brands the option to control what specific first-party data is shared with Criteo. At Braze, the integrations you can and cannot share your first-party data with are given the utmost consideration. For more information, refer to our [privacy policy](https://www.braze.com/privacy).
 
 {% alert important %}
-Audience Sync to Criteo is currently in beta. Contact your Braze account manager if you’re interested in participating in the beta.
+**Audience Sync Pro disclaimer**<br>
+Braze Audience Sync to Criteo is an Audience Sync Pro integration. For more information on this integration, reach out to your Braze account manager. <br> 
 {% endalert %}
 
 ## Prerequisites 

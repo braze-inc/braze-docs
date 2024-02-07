@@ -240,7 +240,7 @@ Alternatively, to configure the Push Story workspace from your `Info.plist` file
 
 ## Next steps
 
-Next refer to the steps for integrating [Action Buttons]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/customization/action_buttons/), which is required for buttons to show on a Push Story message.
+Next refer to the steps for integrating [action buttons]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/customization/action_buttons/), which is required for buttons to show on a Push Story message.
 
 [1]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/
 [2]: {% image_buster /assets/img/ios/push_story/add_content_extension.png %}

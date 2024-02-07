@@ -16,10 +16,10 @@ You can use the search bar to find your work and other information within your B
 
 You can search for the following items and actions:
 
-- Campaigns
-- Canvases
-- Segments
-- Email templates
+- Campaign names
+- Canvas names
+- Segment names
+- Email template names
 - [Pages within Braze](#find-pages-that-have-been-renamed)
 
 {% alert tip %}
