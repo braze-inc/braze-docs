@@ -40,7 +40,7 @@ All user profile data (custom events, custom attributes, custom data) is stored 
 ## Blocklisting custom attributes, custom events, and products
 
 {% alert important %}
-Once an event or attribute is blocklisted, any campaign or Canvas using that event or attribute will be archived.
+Once an event or attribute is blocklisted, any segment, campaign, or Canvas using that event or attribute will be archived.
 {% endalert %}
 
 To stop tracking a specific custom attribute, event, or product, follow these steps:
