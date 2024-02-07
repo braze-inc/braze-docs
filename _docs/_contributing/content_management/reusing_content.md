@@ -16,7 +16,7 @@ Content reuse in Jekyll is accomplished using includes. Includes are stored in t
 
 ## Creating an include
 
-While include files can be stored anywhere in the `_includes` directory, it's best to keep related content together using subdirectories. First, create a new Markdown file with a `.md` extension. Your file tree should like similar to the following:
+Create a new Markdown file with a `.md` extension in the `_includes` directory. While include files can be stored anywhere in this directory, it's best to keep related content together using subdirectories. Your file tree should like similar to the following:
 
 ```bash
 braze-docs
@@ -24,30 +24,37 @@ braze-docs
     ├── alerts
     ├── archive
     └── contributing
-        └── prerequisites.md
+        └── site_generator.md
 ```
 
-Next, add content to your page. If you plan on adding your include to a page that already has YAML front matter, do not add front matter to your include. Your page should be similar to the following:
+Add content to your page, and be sure to follow the [Braze Docs Style Guide]({{site.baseurl}}/contributing/style_guide/). If you plan on adding your include to a page that already has YAML front matter, do not add front matter to your include. Your content should be similar to the following:
 
 {% raw %}
 ```markdown
-## Prerequisites
+## Site generator 
 
-Before you start, you'll need to [Review the Code of Conduct](https://github.com/braze-inc/braze-docs/blob/develop/CODE_OF_CONDUCT.md).
+Braze Docs is built using Jekyll, a popular static-site generator (SSG) that allows content files and design files to be stored in separate directories, such as `_docs` for content files and `assets` for design files. When the site is built, Jekyll intelligently merges each file and stores them as XML and HTML data in the `_site` directory. For more information, see [Jekyll Directory Structure](https://jekyllrb.com/docs/structure/).
+
+![The home page for Braze Docs.]({% image_buster /assets/img/contributing/braze_docs_github.png %})
+
+As a contributor, you'll primarily work within the following directories.
+
+| Directory                                                                     | Description                                                                                                                                                                                                                                                                                                                       |
+|-------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| [`_docs`](https://github.com/braze-inc/braze-docs/tree/develop/_docs)         | Contains all the written content for Braze Docs as text files written in Markdown. Text files are organized into directories and subdirectories mirroring the docs site, such as `_api` for the [API section]({{site.baseurl}}/api/home) and `user_guide` for the [User Guide section]({{site.baseurl}}/user_guide/introduction). |
+| [`_includes`](https://github.com/braze-inc/braze-docs/tree/develop/_includes) | Contains text files (called "includes") that can be reused in any file within the `_docs` directory. Typically, includes are short, modular pieces of content that don't use standard formatting. The files stored in this location are important for [content reuse](#content-reuse).                                            |
+| [`assets`](https://github.com/braze-inc/braze-docs/tree/develop/assets)       | Contains all the images for Braze Docs. Any text file in the `_docs` or `_includes` directory can link to this directory to display an image on its page.                                                                                                                                                                         |
+{: .reset-td-br-1 .reset-td-br-2}
 ```
 {% endraw %}
 
 {% alert tip %}
-For a full walkthrough on adding content to your page, see [Pages]({{site.baseurl}}/contributing/content_management/pages/#writing-content)
+For a full walkthrough, see [Writing Content]({{site.baseurl}}/contributing/content_management/pages/#writing-content).
 {% endalert %}
-
-Anytime the above [include is referenced](#referencing-an-include), the following will be rendered when Jekyll builds the site.
-
-![The "Creating a new page" document with the "Prerequisites" include rendered.]()
 
 ## Referencing an include
 
-Open a Markdown file and reference an include using the following syntax: 
+To reference an include, use the following syntax within the relevant Markdown file:
 
 {% raw %}
 ```plaintext
