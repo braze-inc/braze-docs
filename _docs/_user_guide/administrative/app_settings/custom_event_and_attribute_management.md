@@ -55,7 +55,7 @@ Once a custom event or attribute is blocklisted:
 - Existing data will be unavailable, unless reactivated
 - Blocklisted events and attributes will not show up in filters or graphs
 - References to blocklisted data within drafts of active Canvases will load as invalid values, which may cause errors
-- **Anything using the blocklisted event or attribute will be archived**
+- Anything using the blocklisted event or attribute will be archived
 
 To accomplish this, Braze sends the blocklisting information down to each device. This is important when thinking about blocklisting a huge number of events and attributes (hundreds of thousands or millions) as it would be a data intensive operation.
 
