@@ -24,8 +24,6 @@ These settings can be found at **Settings** > **Company Users**.
 If you're using the [older navigation]({{site.baseurl}}/navigation), **Company Users** is called **Manage Users** and is located under your account icon.
 {% endalert %}
 
-![Account users list on the Manage Settings page][30]
-
 |Level of Access|Permissions|
 |---|---|
 |Administrator|Administrators have access to all available features.|
@@ -34,15 +32,15 @@ If you're using the [older navigation]({{site.baseurl}}/navigation), **Company U
 
 ## Editing user permissions
 
-To edit a specific user's permissions, either by allowing them to remain as the default **Administrator** role or changing them to a **Limited** role, do the following:
+To edit a specific user's permissions, either by assigning permissions to the default **Limited** role or changing the user to an **Administrator** role, do the following:
 
 1. Go to the **Company Users** page. 
 2. Click the edit icon in the user's row.
-3. Select **Limited** in the **User Role** dropdown.
+3. To make a user an admin, select **This user is an admin**. To demote an admin to a limited role, clear the checkbox.
 
 ![Selecting Administrator or Limited when editing a user][29]{: style="border:none"}
 
-When you switch a user's permissions from **Administrator** to **Limited**, that user no longer has access to any portion of Braze until you set those specific permissions using the checkboxes that appear under the **Edit User** section.
+When you switch a user's permissions from **Administrator** to **Limited**, that user no longer has access to any portion of Braze until you set those specific permissions using the checkboxes that appear under the **Workspace-level permissions** section.
 
 ## Managing limited and team role permissions
 
