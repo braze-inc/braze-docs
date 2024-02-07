@@ -93,7 +93,7 @@ Once saved, Braze will send special instructions to the ESP in order to place th
 SSL enablement will wrap the URL of the tracking pixel with HTTPS instead of HTTP-if your SSL is misconfigured, it may affect the efficacy of the tracking pixel. 
 {% endalert %}
 
-## Enable list-unsubscribe header
+## List-unsubscribe header
 
 Using a list-unsubscribe header allows your recipients to unsubscribe easily from marketing emails by displaying an **Unsubscribe** button within the mailbox UI, and is not a part of the message body itself.
 
@@ -107,7 +107,7 @@ Enabling list-unsubscribe is a deliverability best practice and a requirement at
 
 When enabled, this feature is applied to the entire workspace. Braze currently supports the list-unsubscribe “mailto:” header. Upon receiving a list-unsubscribe request from a user, Braze will ensure this user is unsubscribed. If there is no match, Braze will not process this request.
 
-![Option to automatically include a list-unsubscribe header for emails sent to subscribed or opted-in users.]({% image_buster /assets/img/email_settings/email_unsubscribe_header.png %}){: style="max-width:70%;" }
+![Option to automatically include a list-unsubscribe header for emails sent to subscribed or opted-in users.]({% image_buster /assets/img_archive/email_unsubscribe_header_old.png %}){: style="max-width:70%;" }
 
 Note that the header is not automatically added for messages targeting unsubscribed users, as these represent transactional messages in Braze. 
 
@@ -153,7 +153,7 @@ _*Yahoo and Gmail will eventually deprecate the "mailto:" header and will only s
 
 Use the toggle to include "[TEST]" and "[SEED]" in your test and seed email subject lines. This can help identify any email campaigns sent as tests.
 
-![]({% image_buster /assets/img/email_settings/test_and_seed_email_subject_line.png %}){: style="max-width:70%;" }
+![]({% image_buster /assets/img/email_settings/test_and_seed_email_subject_line.png %}){: style="max-width:70%;"}
 
 ## Inline CSS on new emails by default
 
