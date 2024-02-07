@@ -43,7 +43,6 @@ After Braze has initiated this setup, follow these steps:
 2. Braze will verify if records have been added to your registry correctly.
 3. After this, you'll select a CDN and obtain SSL certificates from a third-party provider. 
 4. At this point, you'll set up your CDN. Note that Braze will not be able to help troubleshoot CDN configuration. Reach out to your CDN provider for any further assistance.
-5. Reach out to your customer success manager to get SSL turned on.
 
 ### What is a CDN, and why do I need it?
 
