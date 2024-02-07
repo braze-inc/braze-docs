@@ -56,7 +56,7 @@ table td {
     </tr>
     <tr>
         <td>Terminal extension</td>
-        <td><a href="https://learn.microsoft.com/en-us/windows/wsl/install">Windows Subsystem for Linux (WSL)</a> *</td>
+        <td><a href="https://learn.microsoft.com/en-us/windows/wsl/install">Windows Subsystem for Linux (WSL)*</a></td>
         <td>WSL lets you install a Linux subsystem and run Unix-like commands on your Windows operating system. If you're contributing from a Windows operating system, we recommend installing WSL, so you can use any Unix-like command mentioned in the docs.<br><br><em>* Only available for Windows.</em></td>
     </tr>
     <tr>
@@ -133,7 +133,7 @@ git clone git@github.com:braze-inc/braze-docs.git
 
 ### Step 2.4: Install Ruby
 
-To [generate a local site preview]({{site.baseurl}}/contributing/gerating_a_preview), you'll need Ruby version `2.7.4` installed. In the terminal, open `braze-docs` and check for Ruby version `2.7.4`.
+To [generate a local site preview]({{site.baseurl}}/contributing/generating_a_preview/), you'll need Ruby version `2.7.4` installed. In the terminal, open `braze-docs` and check for Ruby version `2.7.4`.
 
 ```bash
 cd ~/braze-docs
@@ -159,6 +159,6 @@ bundle install
 If you're new to Git or docs-as-code, start with our tutorial: [Your first contribution]({{site.baseurl}}/contributing/your_first_contribution/). Otherwise, you can check out one of the following:
 
 - [Content management]({{site.baseurl}}/contributing/content_management/)
-- [YAML front matter]({{site.baseurl}}/contributing/yaml_front_matter)
+- [YAML metadata]({{site.baseurl}}/contributing/yaml_front_matter/metadata/)
 - [Generating a preview]({{site.baseurl}}/contributing/generating_a_preview/)
 - [Style guides]({{site.baseurl}}/contributing/style_guide)

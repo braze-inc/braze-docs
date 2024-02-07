@@ -20,7 +20,7 @@ When you're finished with this tutorial, you'll be able to:
 
 ## Step 1: Explore the GitHub repository
 
-The [Braze Docs GitHub repository](https://github.com/braze-inc/braze-docs) hosts the source files for Braze Docs.
+The [Braze Docs GitHub repository](https://github.com/braze-inc/braze-docs) hosts the source files for Braze Docs. Take a few minutes to explore the repository, even if you don't understand everything yet. Over time, you'll become more familiar.
 
 ![The Braze Docs GitHub repository homepage.]()
 
@@ -69,7 +69,7 @@ In the terminal, open the `braze-docs` directory.
 cd ~/PATH_TO_REPOSITORY
 ```
 
-Replace `PATH_TO_REPOSITORY` with the location you saved the `braze-docs` repository when you [set up your environment]({{site.baseurl}}/contributing/#step-2-set-up-your-environment). Your command should be similar to the following:
+Replace `PATH_TO_REPOSITORY` with the location you saved the `braze-docs` repository when you [set up your environment]({{site.baseurl}}/contributing/home/#step-2-set-up-your-environment). Your command should be similar to the following:
 
 ```bash
 cd ~/braze/braze-docs
@@ -189,13 +189,7 @@ In your PR, you can preview your changes in a test environment that's identical 
 
 ![An example pull request with the "View deployment" button highlighted next to the Vercel bot.]()
 
-Double-check your work using the following Braze style guides:
-
-- [Writing style guide]({{site.baseurl}}/contributing/style_guides/writing/)
-- [Images style guide]({{site.baseurl}}/contributing/style_guides/images/)
-- [Alerts style guide]({{site.baseurl}}/contributing/style_guides/alerts/)
-
-If you'd like to make additional changes, see [Make additional changes](#step-6-make-additional-changes-optional). Otherwise, you can [request a review](#step-5-request-a-review) from the Braze Docs team.
+Use the [Braze Docs Style Guide]({{sitebase.url}}/contributing/style_guide/) to review your work. If you need to make additional changes, see [Make additional changes](#step-6-make-additional-changes-optional). Otherwise, you can [request a review](#step-5-request-a-review) from the Braze Docs team.
 
 ## Step 5: Request a review
 

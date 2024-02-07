@@ -6,7 +6,7 @@ noindex: true
 
 #  Metadata
 
-> The following metadata keys can be added to a page's YAML front matter. For more general information, see [About our framework]({{site.baseurl}}/home/about_our_framework/#pages).
+> The following metadata keys can be added to a page's YAML front matter. For more general information, see [Content Management]({{site.baseurl}}/contributing/content_management/#pages).
 
 To add metadata to a Markdown file, you'll need to add Jekyll's front matter syntax to the beginning of your file:
 
@@ -32,7 +32,7 @@ Replace the following:
 
 ### Article title
 
-The `article_title` key is used to set the page title for online search results and the end-user's browser tab. This key accepts any `string` value. For style guidelines, see [Naming Conventions](https://docs.google.com/document/u/2/d/e/2PACX-1vTluyDFO3ZEV7V6VvhXE4As_hSFwmnFFdU9g6_TrAYTgH1QmbRoEDDdn5GzKAB9vdBbIdyiFdoaJcNk/pub#h.n0sf2nl43bpo).
+The `article_title` key is used to set the page title for online search results and the end-user's browser tab. This key accepts any `string` value. For naming conventions, see the [Braze Docs Style Guide]({{site.baseurl}}/contributing/style_guide/).
 
 **Usage example:**
 
@@ -172,7 +172,7 @@ channel:
 
 ### Navigation only
 
-The `config_only` key is used to hide a page's content without hiding it on left-side navigation bar. Use this key when [creating a section without a landing page]({{site.baseurl}}/contributing/content_management/sections/?tab=without%20landing%20page#creating-a-section). This key accepts the boolean values `true` or `false`.
+The `config_only` key is used to hide a page's content without hiding it on left-side navigation bar. Use this key when [creating a section without a landing page]({{site.baseurl}}/contributing/content_management/sections?tab=without%20landing%20page#step-2-configure-your-section). This key accepts the boolean values `true` or `false`.
 
 **Usage example:**
 

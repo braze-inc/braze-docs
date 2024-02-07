@@ -6,20 +6,15 @@ noindex: true
 
 # Sections
 
-> Learn how to create and order sections on Braze Docs. If you'd like to create, modify, or delete an individual page instead, see [Pages]({{site.baseurl}}/contributing/content_management/pages/). For general information about sections, see [Content Management]({{site.baseurl}}/contributing/content_management/).
+> Learn how to create and order sections on Braze Docs. If you'd like to create, modify, or delete an individual page instead, see [Pages]({{site.baseurl}}/contributing/content_management/pages/). For general information about sections, see [Content Management]({{site.baseurl}}/contributing/content_management/#sections).
 
 {% multi_lang_include contributing/prerequisites.md %}
 
 ## Creating a section
 
-When you create a new section, you can create a section with or without a landing page.
+### Step 1: Create a directory and Markdown file
 
-- **With landing page:** Use this method if your section needs a dedicated overview, such as a landing page for a "Getting started" section listing prerequisites and outlining the user journey.
-- **Without landing page:** Use this method if your section does not need a dedicated overview. As stated in our [Style Guide]({{site.baseurl}}/contributing/style_guide/), content should always be useful, so avoid adding a landing page if it offers little useful content.
-
-{% tabs %}
-{% tab with landing page %}
-To create a section with a landing page, open the relevant primary section or subsection, then create a directory and Markdown file for your new section.
+Open the relevant primary section or subsection, then create a directory and Markdown file for your new section.
 
 ```plaintext
 braze-docs
@@ -36,8 +31,8 @@ Replace the following:
 |-------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | `PRIMARY_SECTION` | The name of the primary section your new content belongs to. For more information, see [Primary sections]({{site.baseurl}}/contributing/content_management/#primary-sections).                                                                              |
 | `SUBSECTION`      | If applicable, the name of the subsection your new content belongs to. For more information, see [Subsections]({{site.baseurl}}/contributing/content_management/#subsections).                                                                              |
-| `NEW_DIRECTORY`   | The name of your new section, which should follow our [Style Guide]({{site.baseurl}}/contributing/style_guide/). Use all lowercase characters, remove special characters, and replace spaces with underscores (`_`). This name must match `NEW_FILE`.       |
-| `NEW_FILE`        | The name of your new section, which should follow our [Style Guide]({{site.baseurl}}/contributing/style_guide/). Use all lowercase characters, remove special characters, and replace spaces with underscores (`_`). This name must match `NEW_DIRECTORY`. |
+| `NEW_DIRECTORY`   | The name of your new section, which should follow the [Braze Docs Style Guide]({{site.baseurl}}/contributing/style_guide/). Use all lowercase characters, remove special characters, and replace spaces with underscores (`_`). This name must match `NEW_FILE`.       |
+| `NEW_FILE`        | The name of your new section, which should follow the [Braze Docs Style Guide]({{site.baseurl}}/contributing/style_guide/). Use all lowercase characters, remove special characters, and replace spaces with underscores (`_`). This name must match `NEW_DIRECTORY`. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 Your directory structure should look similar to the following:
@@ -51,6 +46,15 @@ braze-docs
             └── getting_started.md
 ```
 
+### Step 2: Configure your section
+
+When you create a new section, you can configure it with or without a landing page.
+
+- **With landing page:** Use this method if your section needs a dedicated overview, such as a landing page for a "Getting started" section listing prerequisites and outlining the user journey.
+- **Without landing page:** Use this method if your section does not need a dedicated overview. As stated in the [Braze Docs Style Guide]({{site.baseurl}}/contributing/style_guide/), content should always be useful, so avoid adding a landing page if it offers little useful content.
+
+{% tabs %}
+{% tab with landing page %}
 Open your new Markdown file and add the following template to use the default landing-page layout. For other layouts, see [Layouts]({{site.baseurl}}/contributing/yaml_front_matter/page_layouts/).
 
 ```markdown
@@ -105,38 +109,6 @@ For a full walkthrough on adding content to your page, see [Pages]({{site.baseur
 {% endtab %}
 
 {% tab without landing page %}
-To create a section without a landing page, open the relevant primary section or subsection, then create a directory and Markdown file for your new section.
-
-```plaintext
-braze-docs
-└── _docs
-    └── PRIMARY_SECTION 
-        └── SUBSECTION 
-            ├── NEW_DIRECTORY 
-            └── NEW_FILE.md
-```
-
-Replace the following:
-
-| Placeholder       | Description                                                                                                                                                                                                                                                                                                                                                                             |
-|-------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `PRIMARY_SECTION` | The name of the primary section your new content belongs to. For more information, see [Primary sections]({{site.baseurl}}/contributing/content_management/#primary-sections).                                                                                                                                                                                                          |
-| `SUBSECTION`      | If applicable, the name of the subsection your new content belongs to. For more information, see [Subsections]({{site.baseurl}}/contributing/content_management/#subsections).                                                                                                                                                                                                          |
-| `NEW_DIRECTORY`   | The name of your new section, which should follow our [Style Guide]({{site.baseurl}}/contributing/style_guide/). Use all lowercase characters, remove special characters, and replace spaces with underscores (`_`). This name must match `NEW_FILE`.                                                                                                                                   |
-| `NEW_FILE`        | The name of your new section, which should follow our [Style Guide]({{site.baseurl}}/contributing/style_guide/). Use all lowercase characters, remove special characters, and replace spaces with underscores (`_`). This name must match `NEW_DIRECTORY`. |
-{: .reset-td-br-1 .reset-td-br-2}
-
-Your directory structure should look similar to the following:
-
-```plaintext
-braze-docs
-└── _docs
-    └── _developer_guide 
-        └── platform_wide 
-            ├── getting_started 
-            └── getting_started.md
-```
-
 Open your new Markdown file and add the following metadata to set your page's navigation title and disable the landing page:
 
 ```markdown

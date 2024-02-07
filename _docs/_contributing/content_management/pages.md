@@ -28,7 +28,7 @@ Create a new Markdown file for your page.
 PAGE_TITLE.md
 ```
 
-Replace `PAGE_TITLE` with the title of your page, which should follow our [Style Guide]({{site.baseurl}}/contributing/style_guide/). Use all lowercase characters, remove special characters, and replace spaces with underscores (`_`). Your filename should be similar to the following:
+Replace `PAGE_TITLE` with the title of your page, which should follow the [Braze Docs Style Guide]({{site.baseurl}}/contributing/style_guide/). Use all lowercase characters, remove special characters, and replace spaces with underscores (`_`). Your filename should be similar to the following:
 
 - **Page title:** Setting up your development environment for C++
 - **File name:** `setting_up_your_development_environment_for_cpp.md`
@@ -74,7 +74,15 @@ Other than the Braze-specific syntax shown in this section, all content be writt
 
 ### Cross-referencing
 
-To cross-reference pages outside Braze Docs, use [standard Markdown link syntax](https://www.markdownguide.org/basic-syntax/#links). To cross-reference pages on Braze Docs instead, use the following syntax:
+To reference a page hosted outside Braze Docs, use standard Markdown syntax.
+
+{% raw %}
+```markdown
+[LINK_TEXT](FULL_URL)
+```
+{% endraw %}
+
+To cross-reference a page hosted on Braze Docs, use the following Braze-specific syntax.
 
 {% raw %}
 ```markdown

@@ -9,7 +9,7 @@ noindex: true
 > Learn how to use Git and GitHub to contribute to Braze Docs.
 
 {% alert tip %}
-If you're new to Git or the command-line, start with our tutorial instead: [Your first contribution]({{site.baseurl}}/docs/home/getting_started/your_first_contribution/).
+If you're new to Git or the command-line, start with our tutorial instead: [Your first contribution]({{site.baseurl}}/contributing/your_first_contribution/).
 {% endalert %}
 
 {% multi_lang_include contributing/prerequisites.md %}

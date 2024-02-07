@@ -4,7 +4,7 @@ page_order: 2
 noindex: true
 ---
 
-# Content management
+# About content management
 
 > This is an overview of how content is managed on Braze Docs. To learn more about a specific topic, choose the related page in the navigation.
 

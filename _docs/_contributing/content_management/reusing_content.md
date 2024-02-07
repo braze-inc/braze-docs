@@ -43,7 +43,7 @@ Before you start, you'll need to complete the following:
 For a full walkthrough on adding content to your page, see [Pages]({{site.baseurl}}/contributing/content_management/pages/#writing-content)
 {% endalert %}
 
-Anytime this [include is used](#referencing-an-include), the following will be rendered when Jekyll builds the site:
+Anytime the above [include is referenced](#referencing-an-include), the following will be rendered when Jekyll builds the site:
 
 ![The "Creating a new page" document with the "Prerequisites" include rendered.]()
 
