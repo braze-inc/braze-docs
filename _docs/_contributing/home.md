@@ -12,7 +12,7 @@ noindex: true
 
 ## Prerequisites
 
-Some understanding of Git is required to contribute to Braze Docs. If you're new to Git and don't know where to start, see [Git Book: Getting Started](https://git-scm.com/book/en/v2/Getting-Started-About-Version-Control). If you're looking for a refresher, see [Git and GitHub]({{site.baseurl}}/contributing/git_and_github/).
+Some understanding of Git is required to contribute to Braze Docs. If you're new to Git and don't know where to start, see [Git Book: Getting Started](https://git-scm.com/book/en/v2/Getting-Started-About-Version-Control). If you just need a refresher, see [Git and GitHub]({{site.baseurl}}/contributing/git_and_github/).
 
 ## Step 1: Sign the CLA
 
@@ -20,17 +20,11 @@ Everybody that contributes to Braze Docs must sign the [Contribution License Agr
 
 ## Step 2: Set up your environment
 
-Most documentation changes require you to set up your local environment. However, small single-document changes can be completed [directly in GitHub]({{site.baseurl}}/contributing/your_first_contribution/?tab=github#step-2-make-a-change).
+Before you can make complex or multi-page changes to Braze Docs, you need to set up your local environment. However, small single-document changes can be completed [directly in GitHub]({{site.baseurl}}/contributing/your_first_contribution/?tab=github#step-2-make-a-change).
 
 ### Step 2.1: Get the required software
 
-The following types of software are needed at a minimum: 
-
-- A terminal
-- A text editor
-- A ruby version manager
-
-If you're not sure where to start, see the following: 
+At a minimum, you need a terminal, a text editor, and a ruby version manager. If you're not sure where to start, see the following:
 
 <style>
 table td {
@@ -69,7 +63,7 @@ table td {
     <tr>
         <td>Ruby version manager</td>
         <td><a href="https://github.com/rbenv/rbenv#using-package-managers">rbenv</a></td>
-        <td>A Ruby version manager that allows you to install and manage the required Ruby version for Braze Docs when you're setting up your local environment. If you'd like to use a different Ruby version manager, see <a href="https://www.ruby-lang.org/en/documentation/installation/#managers">Ruby's supported version managers</a>.</td>
+        <td>A Ruby version manager that allows you to install and manage the required Ruby version for Braze Docs when you're setting up your local environment. To use a different Ruby version manager, see <a href="https://www.ruby-lang.org/en/documentation/installation/#managers">Ruby's supported version managers</a>.</td>
     </tr>
     <tr>
         <td>Text editor</td>
@@ -158,7 +152,7 @@ bundle install
 
 ## Next steps
 
-If you're new to Git or docs-as-code, start with our tutorial: [Your first contribution]({{site.baseurl}}/contributing/your_first_contribution/). Otherwise, you can check out one of the following:
+If you're new to Git or docs-as-code, start with our tutorial: [Your first contribution]({{site.baseurl}}/contributing/your_first_contribution/). Otherwise, check out one of the following:
 
 - [Content management]({{site.baseurl}}/contributing/content_management/)
 - [YAML metadata]({{site.baseurl}}/contributing/yaml_front_matter/metadata/)

@@ -105,7 +105,7 @@ To request a PR review from a member of the Braze Docs team, open the [PR you pr
 
 ![An example pull request with the "Ready for review" button highlighted.]()
 
-In the **Reviewers** section, select the **settings gear**, then add `@docs-team` as the reviewer.
+**Reviewers** and type `@docs-team`. Select the team name and press <kbd>Esc</kbd> or click out of the dropdown to confirm your selection.
 
 ![An example pull request with the "@docs-team" added as the reviewer.]()
 

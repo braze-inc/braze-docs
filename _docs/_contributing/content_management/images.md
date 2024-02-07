@@ -118,14 +118,14 @@ Open the relevant Markdown file and look for the old [in-line]({{site.baseurl}}/
 
 ### Step 2: Update the image
 
-When updating an existing image, you can either add a new image file or replace the existing image file.
+When updating an existing image, you can either add a new image file or replace the existing image file. Be sure your new image follows the [Braze Docs Style Guide]({{site.baseurl}}/contributing/style_guide/).
 
 - **Add new file:** Use this method if the original image depicts completely out-of-date content, such as an image depicting a deprecated feature or workflow.
 - **Overwrite existing file:** Use this method if the original image depicts accurate content, but is visually out-of-date, such as an image depicting a technology partner's old branding. Always use this method when possible as it reduces the total number of images stored in the Braze Docs repository.
 
 {% tabs local %}
 {% tab add new file%}
-Generally, your new image should be added to the same directory as the other images on this page, however you may use your best judgment. Confirm your new image follows the [Braze Docs Style Guide]({{site.baseurl}}/contributing/style_guide/), then add the PNG file to the relevant location in `assets/img/`.
+Generally, your new image should be added to the same directory as the other images on this page, however you may use your best judgment. When you're ready, add the PNG file to the relevant location in `assets/img/`.
 
 {% alert warning %}
 Do not delete the old image file when you add your new one.
@@ -137,7 +137,10 @@ Link to your image using the [in-line]({{site.baseurl}}/contributing/content_man
 {% endtab %}
 
 {% tab overwrite existing file %}
-Confirm your new image follows the [Braze Docs Style Guide]({{site.baseurl}}/contributing/style_guide/), then save your image as a with the same exact name as the original image. For example, if the original image is named `getting_started_with_github_select_start3.png`, your new image should also be named `getting_started_with_github_select_start3.png`. 
+Rename your new image to match the name of the original image. In the following example, see how the image file names are identical:
+
+- **Original file name:** `getting_started_with_github_select_start3.png`
+- **New file name:** `getting_started_with_github_select_start3.png`
 
 Next, add your new image to the same directory as the original image. If asked, confirm you'd like to overwrite the image.
 

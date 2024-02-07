@@ -35,7 +35,6 @@ Next, add content to your page. If you plan on adding your include to a page tha
 
 Before you start, you'll need to complete the following:
 
-- [Sign the contributors license agreement]({{site.baseurl}}/cla)
 - [Review the Code of Conduct](https://github.com/braze-inc/braze-docs/blob/develop/CODE_OF_CONDUCT.md)
 - [Set up your local environment]({{site.baseurl}}/home/getting_started/setting_up_your_environment.md)
 ```

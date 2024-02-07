@@ -8,7 +8,7 @@ noindex: true
 
 # Pages
 
-> Learn how to create, modify, and remove pages on Braze Docs. If you'd like to create or reorder a section instead, see [Sections]({{site.baseurl}}/contributing/content_management/sections/). For general information about pages, see [Content Management]({{site.baseurl}}/contributing/content_management/#pages).
+> Learn how to create, modify, and remove pages on Braze Docs. To create or reorder a section instead, see [Sections]({{site.baseurl}}/contributing/content_management/sections/). For general information about pages, see [Content Management]({{site.baseurl}}/contributing/content_management/#pages).
 
 {% multi_lang_include contributing/prerequisites.md %}
 

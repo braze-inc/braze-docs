@@ -187,9 +187,13 @@ These comments will guide you through your PR description. When you're finished,
 
 ## Step 4: Preview your changes
 
-In your PR, you can preview your changes in a test environment that's identical to Braze Docs. **Vercel bot** will generate a new site preview anytime someone pushes to this PR. To open the site preview, select **View deployment**.
+In your PR, you can preview your changes in a test environment that's identical to Braze Docs. In most cases, **Vercel bot** will generate a new site preview anytime someone pushes to this PR. To open the site preview, select **View deployment**.
 
 ![An example pull request with the "View deployment" button highlighted next to the Vercel bot.]()
+
+{% alert note %}
+If **vercel bot** isn't generating a site preview, tag `@docs-team` for help.
+{% endalert %}
 
 Use the [Braze Docs Style Guide]({{sitebase.url}}/contributing/style_guide/) to review your work. If you need to make additional changes, see [Make additional changes](#step-6-make-additional-changes-optional). Otherwise, you can [request a review](#step-5-request-a-review) from the Braze Docs team.
 
