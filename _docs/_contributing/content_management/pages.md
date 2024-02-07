@@ -98,7 +98,7 @@ For a full walkthrough, see [Cross-referencing]({{site.baseurl}}/contributing/co
 
 ### Adding images
 
-To add images, place the image's PNG file inside the relevant location within `assets/img`, then use the following syntax:
+To add images, place the image's PNG file inside the relevant location within `assets/img`, then use the following syntax.
 
 {% raw %}
 ```markdown

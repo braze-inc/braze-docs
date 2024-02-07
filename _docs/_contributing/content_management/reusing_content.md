@@ -27,16 +27,13 @@ braze-docs
         └── prerequisites.md
 ```
 
-Next, add content to your page. If you plan on adding your include to a page that already has YAML front matter, do not add front matter to your include. Your page should look similar to the following:
+Next, add content to your page. If you plan on adding your include to a page that already has YAML front matter, do not add front matter to your include. Your page should be similar to the following:
 
 {% raw %}
 ```markdown
 ## Prerequisites
 
-Before you start, you'll need to complete the following:
-
-- [Review the Code of Conduct](https://github.com/braze-inc/braze-docs/blob/develop/CODE_OF_CONDUCT.md)
-- [Set up your local environment]({{site.baseurl}}/home/getting_started/setting_up_your_environment.md)
+Before you start, you'll need to [Review the Code of Conduct](https://github.com/braze-inc/braze-docs/blob/develop/CODE_OF_CONDUCT.md).
 ```
 {% endraw %}
 
@@ -44,7 +41,7 @@ Before you start, you'll need to complete the following:
 For a full walkthrough on adding content to your page, see [Pages]({{site.baseurl}}/contributing/content_management/pages/#writing-content)
 {% endalert %}
 
-Anytime the above [include is referenced](#referencing-an-include), the following will be rendered when Jekyll builds the site:
+Anytime the above [include is referenced](#referencing-an-include), the following will be rendered when Jekyll builds the site.
 
 ![The "Creating a new page" document with the "Prerequisites" include rendered.]()
 

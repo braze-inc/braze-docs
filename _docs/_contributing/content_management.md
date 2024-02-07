@@ -22,7 +22,7 @@ Braze Docs is built using Jekyll, a popular static-site generator (SSG) that all
 
 ![The home page for Braze Docs.]()
 
-As a contributor, you'll primarily work within the following directories:
+As a contributor, you'll primarily work within the following directories.
 
 | Directory                                                                     | Description                                                                                                                                                                                                                                                                                                                       |
 |-------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -47,7 +47,7 @@ METADATA_KEY: METADATA_VALUE
 # CONTENT
 ```
 
-Replace the following:
+Replace the following.
 
 | Placeholder      | Description                                                                                                                              |
 |------------------|------------------------------------------------------------------------------------------------------------------------------------------|
@@ -86,7 +86,7 @@ For a full walkthrough, see [Creating a page]({{site.baseurl}}/contributing/cont
 
 Images are stored as PNG files inside `assets/img`. The structure of the `img` directory does not need to match the structure of Braze Docs; however, it's best to group related images together into subdirectories.
 
-Each image can be linked to one or more pages using the following syntax:
+Each image can be linked to one or more pages using the following syntax.
 
 {% raw %}
 ```markdown
@@ -94,7 +94,7 @@ Each image can be linked to one or more pages using the following syntax:
 ```
 {% endraw %}
 
-Replace the following:
+Replace the following.
 
 | Placeholder | Description                                                                                                             |
 |-------------|-------------------------------------------------------------------------------------------------------------------------|
@@ -133,7 +133,7 @@ These primary sections can be accessed on the site header from any page on Braze
 
 ![The primary sections as shown on the site header on Braze Docs.]()
 
-Each primary section is built using [Jekyll collections](https://jekyllrb.com/docs/collections/), which allows related content to be grouped together for easy management. Keep in mind, while all primary sections are collections, not all collections are primary sections. You can find the full list of Braze Docs collections in the Jekyll configuration file, `_config.yml`:
+Each primary section is built using [Jekyll collections](https://jekyllrb.com/docs/collections/), which allows related content to be grouped together for easy management. Keep in mind, while all primary sections are collections, not all collections are primary sections. You can find the full list of Braze Docs collections in the Jekyll configuration file, `_config.yml`.
 
 ```yaml
 collections:
@@ -219,7 +219,7 @@ All primary sections on Braze Docs contain one or more subsection, each represen
 
 ![An example subsection on Braze Docs with its section expanded on the left-side navigation.]()
 
-Unlike primary sections, subsections can be configured with or without a landing page. Subsections without landing pages are helpful for organizing related content together while minimizing the number of non-useful pages in Braze Docs. Whether a subsection is configured with or without a landing page, all subsections represent both a directory and Markdown file in the repository. See the following example:
+Unlike primary sections, subsections can be configured with or without a landing page. Subsections without landing pages are helpful for organizing related content together while minimizing the number of non-useful pages in Braze Docs. Whether a subsection is configured with or without a landing page, all subsections represent both a directory and Markdown file in the repository. For an example, see the following.
 
 ```plaintext
 braze-docs
@@ -239,7 +239,7 @@ braze-docs
 For a full walkthrough, see [Creating a section]({{site.baseurl}}/contributing/content_management/sections/#creating-a-section).
 {% endalert %}
 
-In the `_primary_section` directory, `subsection_a` is not configured with a landing page, while `subsection_b` is configured with a landing page. In the following example, `subsection_a.md` has `config_only:` set to `true`, which prevents this page from being rendered as a landing page:
+In the `_primary_section` directory, `subsection_a` is not configured with a landing page, while `subsection_b` is configured with a landing page. In the following example, `subsection_a.md` has `config_only:` set to `true`, which prevents this page from being rendered as a landing page.
 
 {% tabs local %}
 {% tab example input %}
@@ -257,7 +257,7 @@ config_only: true
 {% endtab %}
 {% endtabs %}
 
-However, `subsection_b.md` doesn't use the `config_only:` key, so this page _is_ rendered as a landing page:
+However, `subsection_b.md` doesn't use the `config_only:` key, so this page _is_ rendered as a landing page.
 
 {% tabs local %}
 {% tab example input %}
@@ -392,7 +392,7 @@ https://www.braze.com/docs/primary_section/subsection_a/page_a
 {% endtab %}
 {% endtabs %}
 
-This includes URLs for pages located in a [subsection](#subsections) with `config_only:` set to `true`. Even though `config_only` subsections aren't rendered as pages, the subsection's directory name is still used to generate the URLs for pages in that directory. See the following example:
+This includes URLs for pages located in a [subsection](#subsections) with `config_only:` set to `true`. Even though `config_only` subsections aren't rendered as pages, the subsection's directory name is still used to generate the URLs for pages in that directory. For an example, see the following.
 
 ```plaintext
 braze-docs

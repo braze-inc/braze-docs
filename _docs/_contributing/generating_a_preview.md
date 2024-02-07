@@ -34,7 +34,7 @@ git checkout BD-2346-fixing-typo-swift
 
 ### Step 2: Start a local server
 
-When you start a local server, the files in your [current branch](#step-1-checkout-a-branch) are used to you build a local preview of Braze Docs. To start a local server using your current branch, run the following command in your `braze-docs` directory:
+When you start a local server, the files in your [current branch](#step-1-checkout-a-branch) are used to you build a local preview of Braze Docs. To start a local server using your current branch, run the following command in your `braze-docs` directory.
 
 ```bash
 rake

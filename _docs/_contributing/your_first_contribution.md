@@ -43,7 +43,7 @@ In the [Braze Docs GitHub repository](https://github.com/braze-inc/braze-docs), 
 
 ![The Braze Docs GitHub repository homepage with the '_docs' folder highlighted in the file tree.]()
 
-Each page's URL on Braze Docs reflects the repository's directory structure. Use your page's URL to find its corresponding text file in the `_docs` directory. For example, `braze.com/home/yaml_front_matter/` can be found on the following page:
+Each page's URL on Braze Docs reflects the repository's directory structure. Use your page's URL to find its corresponding text file in the `_docs` directory. For example, `braze.com/home/yaml_front_matter/` can be found on the following page.
 
 ![The "YAML front matter" page in the "Contributing" section on Braze Docs.]()
 
@@ -145,7 +145,7 @@ git commit -m "COMMIT_MESSAGE"
 Replace `COMMIT_MESSAGE` with a short sentence describing your changes. Your command should be similar to the following:
 
 ```bash
-$ git commit -m "Fixing a typo in the recommended software doc."
+$ git commit -m "Fixing a typo in the recommended software doc"
 [fixing-typo-in-recommended-software 8b05e34] Fixing a typo in the recommended software doc.
  1 file changed, 1 insertion(+), 1 deletion(-)
 ```

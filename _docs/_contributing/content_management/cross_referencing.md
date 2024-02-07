@@ -58,7 +58,7 @@ Replace the following:
 | `REFERENCE_NUMBER` | Assign any positive integer that's not already assigned to another reference-style link on this page. |
 {: .reset-td-br-1 .reset-td-br-2}
 
-Your references should look similar to the following:
+Your references should be similar to the following:
 
 ```markdown
 Before continuing, [create your SSH token][2]. When you're finished, see [Step 2: Uploading your token][5].
@@ -80,7 +80,7 @@ Replace the following:
 | `SHORT_URL`        | The page URL with `https://www.braze.com/docs` removed. |
 {: .reset-td-br-1 .reset-td-br-2}
 
-Your links should look similar to the following:
+Your links should be similar to the following:
 
 {% raw %}
 ```markdown

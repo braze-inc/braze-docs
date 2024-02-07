@@ -92,7 +92,7 @@ Replace the following:
 | `IMAGE` | The relative path to your image starting from the `img` directory. |
 {: .reset-td-br-1 .reset-td-br-2}
 
-Your links should look similar to the following:
+Your links should be similar to the following:
 
 {% raw %}
 ```markdown
@@ -108,7 +108,7 @@ Your links should look similar to the following:
 
 ### Step 1: Find the original reference
 
-Open the relevant Markdown file and look for the old [in-line]({{site.baseurl}}/contributing/content_management/images/?tab=in-line#step-2-link-to-the-image) or [reference-style]({{site.baseurl}}/contributing/content_management/images/?tab=reference-style#step-2-link-to-the-image) image link. It will mirror the following syntax:
+Open the relevant Markdown file and look for the old [in-line]({{site.baseurl}}/contributing/content_management/images/?tab=in-line#step-2-link-to-the-image) or [reference-style]({{site.baseurl}}/contributing/content_management/images/?tab=reference-style#step-2-link-to-the-image) image link, which will be similar the following.
 
 {% raw %}
 ```markdown
@@ -137,7 +137,7 @@ Link to your image using the [in-line]({{site.baseurl}}/contributing/content_man
 {% endtab %}
 
 {% tab overwrite existing file %}
-Rename your new image to match the name of the original image. In the following example, see how the image file names are identical:
+Rename your new image to match the name of the original image. In the following example, see how the image file names are identical.
 
 - **Original file name:** `getting_started_with_github_select_start3.png`
 - **New file name:** `getting_started_with_github_select_start3.png`

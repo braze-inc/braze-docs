@@ -63,7 +63,7 @@ git commit -m "COMMIT_MESSAGE"
 Replace `COMMIT_MESSAGE` with a short sentence describing your changes. Your output should be similar to the following:
 
 ```bash
-$ git commit -m "Fixing a typo in the recommended software doc."
+$ git commit -m "Fixing a typo in the recommended software doc
 [fixing-typo-in-recommended-software 8b05e34] Fixing a typo in the metadata doc.
  1 file changed, 1 insertion(+), 1 deletion(-)
 ```

@@ -24,7 +24,7 @@ Before you can make complex or multi-page changes to Braze Docs, you need to set
 
 ### Step 2.1: Get the required software
 
-At a minimum, you need a terminal, a text editor, and a ruby version manager. If you're not sure where to start, see the following:
+At a minimum, you need a terminal, a text editor, and a ruby version manager. If you're not sure where to start, see the following.
 
 <style>
 table td {
@@ -136,7 +136,7 @@ cd ~/braze-docs
 ruby --version
 ```
 
-If this version isn't installed, use a [supported version manager](https://www.ruby-lang.org/en/documentation/installation/#managers) to install Ruby version `2.7.4`. For example, using [rbenv](https://github.com/rbenv/rbenv):
+If this version isn't installed, use a [supported version manager](https://www.ruby-lang.org/en/documentation/installation/#managers) to install Ruby version `2.7.4`. For example, using [rbenv](https://github.com/rbenv/rbenv).
 
 ```bash
 rbenv install 2.7.4
@@ -152,7 +152,7 @@ bundle install
 
 ## Next steps
 
-If you're new to Git or docs-as-code, start with our tutorial: [Your first contribution]({{site.baseurl}}/contributing/your_first_contribution/). Otherwise, check out one of the following:
+If you're new to Git or docs-as-code, start with our tutorial: [Your first contribution]({{site.baseurl}}/contributing/your_first_contribution/). Otherwise, check out one of the following.
 
 - [Content management]({{site.baseurl}}/contributing/content_management/)
 - [YAML metadata]({{site.baseurl}}/contributing/yaml_front_matter/metadata/)

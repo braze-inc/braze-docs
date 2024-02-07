@@ -12,7 +12,7 @@ noindex: true
 
 ## Prerequisites
 
-To use a page layout, you'll need to add the [`page_layout`]({{site.baseurl}}/contributing/yaml_front_matter/metadata/#page-layout) key to your YAML front matter:
+To use a page layout, you'll need to add the [`page_layout`]({{site.baseurl}}/contributing/yaml_front_matter/metadata/#page-layout) key to your YAML front matter.
 
 ```markdown
 ---
@@ -22,7 +22,7 @@ page_layout: PAGE_LAYOUT_VALUE
 ---
 ```
 
-Replace `PAGE_LAYOUT_VALUE` with one of the values from the following sections:
+Replace `PAGE_LAYOUT_VALUE` with one of the values from the following sections.
 
 ## Accepted values
 

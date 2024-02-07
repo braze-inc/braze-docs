@@ -37,7 +37,7 @@ Replace the following:
 | `NEW_FILE`        | The name of your new section, which should follow the [Braze Docs Style Guide]({{site.baseurl}}/contributing/style_guide/). Use all lowercase characters, remove special characters, and replace spaces with underscores (`_`). This name must match `NEW_DIRECTORY`. |
 {: .reset-td-br-1 .reset-td-br-2}
 
-Your directory structure should look similar to the following:
+Your directory structure should be similar to the following:
 
 ```plaintext
 braze-docs
@@ -90,7 +90,7 @@ Replace the following:
 This template is only to get you started&#8212;add [additional metadata]({{site.baseurl}}/contributing/yaml_front_matter/metadata/) and headings as needed.
 {% endalert %}
 
-Next, open your new directory and create a Markdown file for each new page you want to add to your new section. Your directory structure should look similar to the following:
+Next, open your new directory and create a Markdown file for each new page you want to add to your new section. Your directory structure should be similar to the following:
 
 ```plaintext
 braze-docs
@@ -111,7 +111,7 @@ For a full walkthrough on adding content to your page, see [Pages]({{site.baseur
 {% endtab %}
 
 {% tab without landing page %}
-Open your new Markdown file and add the following metadata to set your page's navigation title and disable the landing page:
+Open your new Markdown file and add the following metadata to set your page's navigation title and disable the landing page.
 
 ```markdown
 ---
@@ -124,7 +124,7 @@ config_only: true
 This template is only to get you started&#8212;add [additional metadata]({{site.baseurl}}/contributing/yaml_front_matter/metadata/) and headings as needed.
 {% endalert %}
 
-Replace `NAV_TITLE` with the title of your page as it will appear on the left-side navigation bar. Your page should look similar to the following:
+Replace `NAV_TITLE` with the title of your page as it will appear on the left-side navigation bar. Your page should be similar to the following:
 
 ```markdown
 ---
@@ -135,7 +135,7 @@ config_only: true
 ---
 ```
 
-Next, open your new directory and create a Markdown file for each new page you want to add to your new section. Your directory structure should look similar to the following:
+Next, open your new directory and create a Markdown file for each new page you want to add to your new section. Your directory structure should be similar to the following:
 
 ```plaintext
 braze-docs
@@ -168,7 +168,7 @@ page_order:
 
 The `page_order` key represents a page's relative-order in a section on the left-side navigation bar and can be set to any non-negative number (such as `0`, `20`, or `5.5`). This means you'll need to know the `page_order` for each Markdown file in the current directory, but not any other directory (including subdirectories).
 
-Set the `page_order` key for each Markdown file in the current directory to any non-negative number. Your file should look similar to the following:
+Set the `page_order` key for each Markdown file in the current directory to any non-negative number. Your file should be similar to the following:
 
 ```markdown
 ---
