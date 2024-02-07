@@ -21,7 +21,7 @@ To create and manage custom attributes in the dashboard, go to **Data Settings**
 If you are using the [older navigation]({{site.baseurl}}/navigation), you can find **Custom Attributes** under **Manage Settings**.
 {% endalert %}
 
-From this page, you can view, manage, or blocklist existing custom attributes, or create a new one.
+From this page, you can view, manage, create, or blocklist existing custom attributes.
 
 Custom attributes can be blocklisted individually via the actions menu, or up to 10 attributes can be selected and blocklisted in bulk. If you block a custom attribute, no data will be collected regarding that attribute, existing data will be unavailable unless reactivated, and blocklisted attributes will not show up in filters or graphs. In addition, if the attribute is currently being referenced by filters or triggers in other areas of the Braze dashboard, a warning modal will appear explaining that all instances of the filters or triggers that reference it will be removed and archived.
 
