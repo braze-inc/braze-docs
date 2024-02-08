@@ -29,6 +29,10 @@ Starting with iOS 17.2, Apple will block all declared tracking endpoints in your
 
 ## Declaring Braze tracking data
 
+{% alert tip %}
+For a full walkthrough, see the [Privacy Tracking Data tutorial](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/e1-privacy-tracking/).
+{% endalert %}
+
 ### Step 1: Review your current policies
 
 Review your Braze SDK's current data-collection policies with your legal team to determine whether your app collects tracking data [as defined by Apple](#what-is-tracking-data). If you're not collecting any tracking data, you don't need to customize your privacy manifest for the Braze SDK at this time.
@@ -40,10 +44,6 @@ If any of your non-Braze SDKs collect tracking data, you'll need to review those
 {% endalert %}
 
 ### Step 2: Declare your tracking data
-
-{% alert tip %}
-For a full walkthrough, see the [Privacy Tracking Data tutorial](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/e1-privacy-tracking/).
-{% endalert %}
 
 In your Xcode project, open `AppDelegate.swift` then list each [tracking property](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/configuration-swift.class/trackingproperty/) you want to declare by creating a static or dynamic tracking list. Keep in mind, Apple will block these properties until the end-user accepts their ATT prompt, so only list the properties you and your legal team consider tracking.
 
