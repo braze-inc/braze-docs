@@ -63,8 +63,6 @@ On this page, you can view a number of user-specific attributes, such as gender,
 
 ## Performance data by segment
 
-### Results
-
 Your results will show the top (or bottom) campaigns, Canvases, or Canvas steps that you selected. For example, if you selected the top 10 campaigns for click rate, your results will show the top 10 campaigns ordered from highest to lowest click rate. Your columns will display all of the email engagement metrics for each row (campaigns, Canvases, or message steps).
 
 {% alert note %}
