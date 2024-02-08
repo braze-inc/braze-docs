@@ -8,7 +8,7 @@ noindex: true
 
 # About content management
 
-> This is an overview of how content is managed on Braze Docs. To learn more about a specific topic, choose the related page in the navigation.
+> This is an overview for how content is managed on Braze Docs. To learn more about a specific topic, choose the dedicated topic page in the navigation.
 
 ## Methodology
 
