@@ -22,7 +22,7 @@
 
   strong, b {
     font-weight: normal;
-    font-family: $braze-black;
+    font-family: $braze-medium;
   }
 
   .fa-external-link-alt {
@@ -101,10 +101,10 @@
           }
       }
       a {
-        font-family: $braze-black;
+        font-family: $braze-medium;
         display: inline;
         color: $black-shark;
-        font-weight: 700;
+        font-weight: normal;
         @media print {
           font-weight: normal;
         }
@@ -142,7 +142,7 @@
             margin-bottom: auto;
             font-size: 15px;
             display: inline-block;
-            font-family: $braze-black;
+            font-family: $braze-medium;
           }
           div {
             &.highlighter-rouge {
@@ -311,15 +311,18 @@
   }
 
   h1 {
-    font-size: 42px;
-    font-family: $braze-medium;
-    line-height: 1.5;
+    font-size: 2.5rem;
+    font-family: $braze-black;
+    line-height: 2rem;
+    padding-top: 1rem;
+    margin-bottom: 2rem;
     color: $black-shark;
 
   }
 
   h2 {
     font-size: 30px;
+    font-family: $braze-medium;
     line-height: 1.4;
     color: $navy-bay;
   }
@@ -334,14 +337,14 @@
 
   h4 {
     font-size: 20px;
-    font-family: $braze-black;
+    font-family: $braze-medium;
     line-height: 1.4;
     color: $navy-bay;
   }
 
   h5 {
     font-size: 16px;
-    font-family: $braze-black;
+    font-family: $braze-medium;
     line-height: 1.5;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -349,7 +352,7 @@
   }
 
   h6 {
-    font-family: $braze-black;
+    font-family: $braze-medium;
     line-height: 1.5;
     font-size: 16px;
     color: $navy-bay;
@@ -363,7 +366,7 @@
     }
   }
   .highlighter-rouge {
-    font-size: 14px;
+    font-size: 16px;
     font-family: $braze-code;
     font-weight: bold;
     color: $grey-dust;
@@ -475,17 +478,17 @@ table {
   margin-bottom: 20px;
   border: 1px solid $grey-ghost !important;
   >thead {
-    font-size: 12px;
-    text-transform: uppercase;
+    font-size: 16px;
+    text-transform: none;
     color: $black-shark;
-    font-family: $braze-black;
+    font-family: $braze-medium;
     border: 1px solid $grey-ghost;
     background-color: $grey-athens;
 
   }
   td {
     border: 1px solid $grey-ghost !important;
-    font-size: 14px;
+    font-size: 16px;
     word-break: break-all;
     @media (max-width: $window-large-px) {
       word-break: break-word;
@@ -554,19 +557,7 @@ table td code.highlighter-rouge {
 .highlight table {
   margin-bottom: 0px;
 }
-/*
-* Blockquotes
-*/
 
-blockquote {
-  color: $black-shark;
-  border-left: 2px solid $navy-bay !important;
-  padding: 20px 20px 2px 20px;
-  font-size: 16px;
-  font-style: normal;
-  background-color: $grey-athens;
-
-}
 /**
  * Clearfix
  */
