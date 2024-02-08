@@ -23,7 +23,7 @@ In Braze, go to **Partner Integrations** > **Technology Partners** and then sear
 If you are using the older navigation, you can find **Technology Partners** under **Integrations**.
 {% endalert %}
 
-On the Shopify partner page, select **Go to Shopify App Store** to start the integration process.
+On the Shopify partner page, select **Begin Setup** to start the integration process.
 
 ![]({% image_buster /assets/img/Shopify/shop_setup_1.png %}){: style="max-width:70%"}
 
