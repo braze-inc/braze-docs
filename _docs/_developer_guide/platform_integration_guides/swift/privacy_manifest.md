@@ -103,7 +103,7 @@ func applicationDidBecomeActive(_ application: UIApplication) {
 
 ### Step 3: Prevent infinite retry loops
 
-The `set(adTrackingEnabled: enableAdTracking)` method should be used to handle ATT permissions, which prevents the SDK from entering an infinite retry loop. To prevent this, your `adTrackingEnabled` property should be handled similar to the following:
+To prevent the SDK from entering an infinite retry loop, the `set(adTrackingEnabled: enableAdTracking)` method should be used to handle ATT permissions. The `adTrackingEnabled` property should be handled similar to the following:
 
 ```swift
 func applicationDidBecomeActive(_ application: UIApplication) {
