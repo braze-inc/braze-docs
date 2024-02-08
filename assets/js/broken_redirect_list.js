@@ -1091,6 +1091,5 @@ validurls['/docs/user_guide/administrative/app_settings/email_settings/#include-
 
 validurls['/docs/partners/data_and_infrastructure_agility/workflow_automation/flywheel/'] = '/docs/partners/data_and_infrastructure_agility/workflow_automation/growthloop/';
 
-validurls['/docs/contributing/'] = '/docs/contributing/home/';
 validurls['/docs/home/metadata/'] = '/docs/contributing/yaml_front_matter/metadata/';
 validurls['/docs/home/styling_test_page/'] = '/docs/contributing/styling_examples/';
