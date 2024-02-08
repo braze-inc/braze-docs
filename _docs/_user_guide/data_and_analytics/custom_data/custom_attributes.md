@@ -25,6 +25,8 @@ From this page, you can view, manage, create, or blocklist existing custom attri
 
 Custom attributes can be blocklisted individually via the actions menu, or up to 10 attributes can be selected and blocklisted in bulk. If you block a custom attribute, no data will be collected regarding that attribute, existing data will be unavailable unless reactivated, and blocklisted attributes will not show up in filters or graphs. In addition, if the attribute is currently being referenced by filters or triggers in other areas of the Braze dashboard, a warning modal will appear explaining that all instances of the filters or triggers that reference it will be removed and archived.
 
+Admins can also create custom attributes and mark them as PII from this page. These attributes will only be visible to admins and dashboard users with the “View Custom Attributes Marked as PII” permission.
+
 To remove custom attributes from user profiles, set the value to "null" in your API request to the [`/users/track` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track#user-track).
 
 ## Setting custom attributes

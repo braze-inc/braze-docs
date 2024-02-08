@@ -77,6 +77,7 @@ You can manage user permissions by group or on an individual basis when editing 
 |Launch Preference Centers| Allows users to launch [preference centers]({{site.baseurl}}/user_guide/message_building_by_channel/email/preference_center/overview/).|
 |Approve and Deny Campaigns| Allows users to approve or deny campaigns. The [approval workflow for campaigns]({{site.baseurl}}/user_guide/engagement_tools/campaigns/managing_campaigns/campaign_approval) must be turned on for this permission to apply. This setting is currently in early access. Contact your account manager if you're interested in participating in the early access. |
 | Approve and Deny Canvases| Allows users to approve or deny Canvases. The [approval workflow for Canvases]({{site.baseurl}}/canvas_approval) must be turned on for this permission to apply. |
+| View Custom Attributes Marked as PII | Allows this user to view custom attributes that are marked as PII without being an admin. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## App-by-app user permissions
