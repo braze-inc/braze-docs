@@ -1093,3 +1093,4 @@ validurls['/docs/partners/data_and_infrastructure_agility/workflow_automation/fl
 
 validurls['/docs/home/metadata/'] = '/docs/contributing/yaml_front_matter/metadata/';
 validurls['/docs/home/styling_test_page/'] = '/docs/contributing/styling_examples/';
+validurls['/docs/help/help_articles/docs/contribution'] = '/docs/contributing/home/';
