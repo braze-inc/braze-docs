@@ -25,7 +25,7 @@ guide_featured_list:
   fa_icon: fa-solid fa-database
 - name: Données Shopify dans Braze
   link: /docs/shopify_data/
-  fa_icon: fas fa-cogs
+  image: /assets/img/braze_icons/settings-01.svg
 - name: Remplissage Shopify
   link: /docs/partners/message_orchestration/channel_extensions/ecommerce/shopfiy/shopify_backfill/
   fa_icon: fa-solid fa-database

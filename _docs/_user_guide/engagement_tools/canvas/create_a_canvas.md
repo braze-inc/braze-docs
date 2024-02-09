@@ -35,7 +35,7 @@ guide_featured_list:
     fa_icon: fas fa-project-diagram
   - name: Content Cards in Canvas
     link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/canvas_by_channel/content-cards_in_canvas/
-    fa_icon: fas fa-columns
+    image: /assets/img/braze_icons/columns-01.svg
   - name: In-App Messages in Canvas
     link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/canvas_by_channel/in-app_messages_in_canvas/
     fa_icon: fas fa-mobile

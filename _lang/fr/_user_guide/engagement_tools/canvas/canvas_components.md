@@ -30,7 +30,7 @@ guide_featured_list:
     fa_icon: fa fa-bolt
   - name: Étape des chemins d’expérience
     link: /docs/user_guide/engagement_tools/canvas/canvas_components/experiment_step/
-    fa_icon: fas fa-columns
+    image: /assets/img/braze_icons/columns-01.svg
   - name: Étape de mise à jour de l’utilisateur
     link: /docs/user_guide/engagement_tools/canvas/canvas_components/user_update/
     fa_icon: fas fa-user-check

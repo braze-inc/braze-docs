@@ -19,7 +19,7 @@ guide_featured_list:
   fa_icon: fas fa-exclamation
 - name: "Email Validation"
   link: /docs/user_guide/message_building_by_channel/email/email_setup/email_validation/
-  fa_icon: fas fa-check-square
+  image: /assets/img/braze_icons/check-square-broken.svg
 - name: "Email Authentication"
   link: /docs/user_guide/message_building_by_channel/email/email_setup/authentication/
   fa_icon: fas fa-user-shield

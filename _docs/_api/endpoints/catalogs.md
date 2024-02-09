@@ -21,7 +21,7 @@ guide_featured_list:
     fa_icon: fas fa-list-ul
   - name: "POST: Create Catalog"
     link: /docs/api/endpoints/catalogs/catalog_management/synchronous/post_create_catalog/
-    fa_icon: fas fa-check
+    image: /assets/img/braze_icons/check-square-broken.svg
 
 optional_guide_menu_title: "Catalog items endpoints"
 guide_menu_title: "<h3>Asynchronous</h3>"
@@ -34,7 +34,7 @@ guide_menu_list:
     fa_icon: fas fa-user-edit
   - name: "POST: Create Multiple Catalog Items"
     link: /docs/api/endpoints/catalogs/catalog_items/asynchronous/post_create_catalog_items_bulk/
-    fa_icon: fas fa-check
+    image: /assets/img/braze_icons/check-square-broken.svg
   - name: "PUT: Update Multiple Catalog Items"
     link: /docs/api/endpoints/catalogs/catalog_items/asynchronous/put_update_catalog_items/
     fa_icon: fas fa-user-circle
@@ -55,7 +55,7 @@ guide_menu_list2:
     fa_icon: fas fa-user-edit
   - name: "POST: Create Catalog Item"
     link: /docs/api/endpoints/catalogs/catalog_items/synchronous/post_create_catalog_item/
-    fa_icon: fas fa-check
+    image: /assets/img/braze_icons/check-square-broken.svg
   - name: "PUT: Update Catalog Item"
     link: /docs/api/endpoints/catalogs/catalog_items/synchronous/put_update_catalog_item/
     fa_icon: fas fa-user-circle

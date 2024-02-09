@@ -26,10 +26,10 @@ guide_featured_list:
     fa_icon: fa fa-cog
   - name: Custom On-Click Behavior
     link: /docs/developer_guide/platform_integration_guides/ios/in-app_messaging/customization/behavior_on_click/
-    fa_icon: fa fa-mouse-pointer
+    image: /assets/img/braze_icons/navigation-point-01.svg
   - name: Custom View Controller
     link: /docs/developer_guide/platform_integration_guides/ios/in-app_messaging/customization/custom_view_controller/
-    fa_icon: fa fa-eye
+    image: /assets/img/braze_icons/eye.svg
   - name: Custom Triggering
     link: /docs/developer_guide/platform_integration_guides/ios/in-app_messaging/customization/custom_triggering/
     fa_icon: fa fa-check

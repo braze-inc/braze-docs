@@ -23,10 +23,10 @@ guide_menu_title: "Modèles de contenu"
 guide_menu_list:
   - name: Glossaire des codes ou API
     link: /docs/home/templates/api_glossary/
-    fa_icon: fas fa-book
+    image: /assets/img/braze_icons/book-closed.svg
   - name: Glossaire général
     link: /docs/home/templates/glossary_test_page/
-    fa_icon: fas fa-book
+    image: /assets/img/braze_icons/book-closed.svg
   - name: Page Partenaire avec vidéo
     link: /docs/home/templates/partner_page_template_video/
     fa_icon: fas fa-handshake

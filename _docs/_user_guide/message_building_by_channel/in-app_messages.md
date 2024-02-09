@@ -14,7 +14,7 @@ guide_featured_title: "Popular articles"
 guide_featured_list:
 - name: "About In-App Messages"
   link: /docs/user_guide/message_building_by_channel/in-app_messages/about/
-  fa_icon: fas fa-check
+  image: /assets/img/braze_icons/check-square-broken.svg
 - name: "Drag-And-Drop Editor"
   link: /docs/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/
   fa_icon: fas fa-mobile-alt
@@ -44,7 +44,7 @@ guide_menu_list:
   fa_icon: fas fa-poll
 - name: "Best Practices"
   link: /docs/user_guide/message_building_by_channel/in-app_messages/best_practices
-  fa_icon: fas fa-check-square
+  image: /assets/img/braze_icons/check-square-broken.svg
 - name: "FAQ"
   link: /docs/user_guide/message_building_by_channel/in-app_messages/faq/
   fa_icon: fas fa-question

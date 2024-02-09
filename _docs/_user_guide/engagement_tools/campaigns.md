@@ -13,7 +13,7 @@ guide_featured_title: "Sections"
 guide_featured_list:
   - name: Getting Started
     link: /docs/user_guide/engagement_tools/campaigns/getting_started/
-    fa_icon: fas fa-book-open
+    image: /assets/img/braze_icons/book-closed.svg
   - name: Building Campaigns
     link: /docs/user_guide/engagement_tools/campaigns/building_campaigns/
     fa_icon: fas fa-list-alt

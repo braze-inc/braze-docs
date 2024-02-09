@@ -21,7 +21,7 @@ guide_featured_list:
   fa_icon: fas fa-mobile
 - name: Content Blocks
   link: /docs/user_guide/engagement_tools/templates_and_media/content_blocks/
-  fa_icon: fas fa-columns
+  image: /assets/img/braze_icons/columns-01.svg
 - name: "Key-Value Pairs"
   link: /docs/user_guide/personalization_and_dynamic_content/key_value_pairs/
   fa_icon: fa-solid fa-key

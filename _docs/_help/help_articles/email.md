@@ -13,7 +13,7 @@ guide_menu_title: ""
 guide_menu_list:
   - name: Email Bounces
     link: /docs/help/help_articles/email/email_bounces
-    fa_icon: fas fa-envelope-open
+    image: /assets/img/braze_icons/mail-04.svg
   - name: Handling Increases in Click Rates
     link: /docs/help/help_articles/email/open_rates/
     fa_icon: fas fa-arrow-pointer

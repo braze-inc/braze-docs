@@ -47,10 +47,10 @@ guide_menu_title2: "Exporter les endpoints des événements personnalisés"
 guide_menu_list2:
   - name: "GET : Liste des événements personnalisés"
     link: /docs/api/endpoints/export/custom_events/get_custom_events/
-    fa_icon: fas fa-chart-line
+    image: /assets/img/braze_icons/line-chart-up-01.svg
   - name: "GET : Analyse d’événements personnalisés"
     link: /docs/api/endpoints/export/custom_events/get_custom_events_analytics/
-    fa_icon: fas fa-chart-line
+    image: /assets/img/braze_icons/line-chart-up-01.svg
 
 guide_menu_title3: "Exportation des endoints de l’indicateur clé de performance"
 guide_menu_list3:

@@ -14,7 +14,7 @@ glossary_filter_text: "Select endpoint type to narrow the glossary:"
 glossary_mid_text: "Endpoint Search"
 guide_featured_list:
   - name: API Overview
-    fa_icon: fa-solid fa-info
+    image: /assets/img/braze_icons/annotation-info.svg
     link: /docs/api/basics/
   - name: API Identifier Types
     link: /docs/api/identifier_types/
@@ -30,7 +30,7 @@ guide_featured_list:
     fa_icon: fa-solid fa-laptop-code
   - name: Rate Limits
     link: /docs/api/api_limits/
-    fa_icon: fa-solid fa-hand
+    image: /assets/img/braze_icons/hand.svg
 
 # channel to icon/fa or image mapping
 glossary_tags:

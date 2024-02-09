@@ -25,5 +25,5 @@ guide_featured_list:
   fa_icon: fas fa-users
 - name: Paramètres de l’entreprise
   link: /docs/user_guide/administrative/manage_your_braze_users/company-wide_settings_management/
-  fa_icon: fas fa-cogs
+  image: /assets/img/braze_icons/settings-01.svg
 ---

@@ -13,7 +13,7 @@ guide_featured_title: "Section Articles"
 guide_featured_list:
   - name: Démarrage
     link: /docs/user_guide/engagement_tools/campaigns/getting_started/
-    fa_icon: fas fa-book-open
+    image: /assets/img/braze_icons/book-closed.svg
   - name: Construire des campagnes
     link: /docs/user_guide/engagement_tools/campaigns/building_campaigns/
     fa_icon: fas fa-list-alt

@@ -17,13 +17,13 @@ guide_featured_title: "Using Braze"
 guide_featured_list:
 - name: Data Protection Technical Assistance for Data Subject Requests
   link: /docs/dp-technical-assistance/
-  fa_icon: fas fa-cogs
+  image: /assets/img/braze_icons/settings-01.svg
 - name: Email Open Pixel and Click Tracking
   link: /docs/user_guide/data_and_analytics/tracking/email_tracking#open-pixel-and-click-tracking-overview
   fa_icon: fa-solid fa-envelope
 - name: Default and Minimum SDK Data Collection
   link: /docs/user_guide/data_and_analytics/user_data_collection/sdk_data_collection/
-  fa_icon: fas fa-cogs
+  image: /assets/img/braze_icons/settings-01.svg
 - name: Canvas Audience Sync Data Privacy Considerations
   link: /docs/partners/canvas_steps/overview#data-privacy-considerations
   fa_icon: fa-solid fa-arrows-rotate

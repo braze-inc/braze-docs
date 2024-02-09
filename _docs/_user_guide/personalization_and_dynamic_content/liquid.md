@@ -24,13 +24,13 @@ guide_featured_list:
   fa_icon: fas fa-filter
 - name: Advanced Filters
   link: /docs/user_guide/personalization_and_dynamic_content/liquid/advanced_filters/
-  fa_icon: fas fa-cog
+  image: /assets/img/braze_icons/settings-01.svg
 - name: Setting Default Values
   link: /docs/user_guide/personalization_and_dynamic_content/liquid/setting_default_values/
   fa_icon: fas fa-table
 - name: Conditional Messaging Logic
   link: /docs/user_guide/personalization_and_dynamic_content/liquid/conditional_logic/
-  fa_icon: fas fa-columns
+  image: /assets/img/braze_icons/columns-01.svg
 - name: Aborting Messages
   link: /docs/user_guide/personalization_and_dynamic_content/liquid/aborting_messages/
   fa_icon: fas fa-undo

@@ -22,7 +22,7 @@ guide_featured_list:
     fa_icon: fas fa-mobile
   - name: Configuration des geofences
     link: /docs/user_guide/engagement_tools/locations_and_geofences/geofence_configuration/
-    fa_icon: fas fa-cog
+    image: /assets/img/braze_icons/settings-01.svg
   - name: Foire aux questions
     link: /docs/user_guide/engagement_tools/locations_and_geofences/faqs/
     fa_icon: fas fa-question

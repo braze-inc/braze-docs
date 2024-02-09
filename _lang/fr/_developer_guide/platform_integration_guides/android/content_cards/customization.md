@@ -19,13 +19,13 @@ guide_featured_title: "Section Articles"
 guide_featured_list:
   - name: Style personnalisé
     link: /docs/developer_guide/platform_integration_guides/android/content_cards/customization/custom_styling/
-    fa_icon: fa fa-paint-brush
+    image: /assets/img/braze_icons/brush-02.svg
   - name: Personnaliser le flux
     link: /docs/developer_guide/platform_integration_guides/android/content_cards/customization/default_feed/
     fa_icon: fa fa-cog
   - name: Gestion manuelle des clics
     link: /docs/developer_guide/platform_integration_guides/android/content_cards/customization/handling_clicks_manually/
-    fa_icon: fa fa-mouse-pointer
+    image: /assets/img/braze_icons/navigation-point-01.svg
   - name: Paires clé-valeur
     link: /docs/developer_guide/platform_integration_guides/android/content_cards/customization/key_value_pairs/
     fa_icon: fa fa-code
@@ -43,7 +43,7 @@ guide_featured_list:
     fa_icon: fa-solid fa-file-image
   - name: Cas d’utilisation de la vue carrousel
     link: /docs/developer_guide/platform_integration_guides/android/content_cards/customization/use_cases/carousel_view/
-    fa_icon: fa fa-arrows-h
+    image: /assets/img/braze_icons/switch-horizontal-01.svg
 
 ---
 <br><br>

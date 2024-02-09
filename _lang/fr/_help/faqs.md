@@ -63,7 +63,7 @@ guide_menu_list:
     fa_icon: fas fa-stream
   - name: "Meilleures pratiques pour e-mail"
     link: /docs/user_guide/message_building_by_channel/email/best_practices/
-    fa_icon: fas fa-envelope
+    image: /assets/img/braze_icons/mail-01.svg
   - name: "Meilleures pratiques pour les messages In-App"
     link: /docs/user_guide/message_building_by_channel/in-app_messages/best_practices/
     fa_icon: fas fa-mobile-alt

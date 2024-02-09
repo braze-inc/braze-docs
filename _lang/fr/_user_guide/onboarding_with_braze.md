@@ -21,7 +21,7 @@ guide_featured_list:
     fa_icon: fas fa-user-graduate
   - name: Présentation du SDK pour les marketeurs
     link: /docs/user_guide/onboarding_with_braze/web_sdk/
-    fa_icon: fas fa-globe
+    image: /assets/img/braze_icons/globe-02.svg
   - name: Points de données
     link: /docs/user_guide/onboarding_with_braze/data_points/
     fa_icon: fa fa-asterisk
@@ -30,7 +30,7 @@ guide_featured_list:
     fa_icon: fa fa-users
   - name: Configuration d’e-mail
     link: /docs/user_guide/onboarding_with_braze/email_setup/
-    fa_icon: fas fa-envelope
+    image: /assets/img/braze_icons/mail-01.svg
   - name: Configuration de SMS
     link: /docs/user_guide/onboarding_with_braze/sms_setup/
     fa_icon: fas fa-mobile

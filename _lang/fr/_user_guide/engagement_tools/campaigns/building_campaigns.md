@@ -20,7 +20,7 @@ guide_featured_list:
     fa_icon: fas fa-clock
   - name: Planifier votre campagne
     link: /docs/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/
-    fa_icon: fas fa-chart-line
+    image: /assets/img/braze_icons/line-chart-up-01.svg
   - name: Ciblage des utilisateurs
     link: /docs/user_guide/engagement_tools/campaigns/building_campaigns/targeting_users/
     fa_icon: fas fa-bullseye

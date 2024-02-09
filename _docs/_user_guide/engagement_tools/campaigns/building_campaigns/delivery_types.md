@@ -14,7 +14,7 @@ guide_featured_title: "Delivery types"
 guide_featured_list:
   - name: Scheduled Delivery
     link: /docs/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/scheduled_delivery/
-    fa_icon: fas fa-chart-line
+    image: /assets/img/braze_icons/line-chart-up-01.svg
   - name: Action-Based Delivery
     link: /docs/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/
     fa_icon: fas fa-table

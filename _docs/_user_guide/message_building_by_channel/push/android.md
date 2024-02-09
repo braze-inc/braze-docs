@@ -18,7 +18,7 @@ guide_featured_list:
   fa_icon: fas fa-mobile-alt
 - name: "Notification Options"
   link: /docs/user_guide/message_building_by_channel/push/android/notification_options/
-  fa_icon: fas fa-cog
+  image: /assets/img/braze_icons/settings-01.svg
 - name: "Rich Notifications"
   link: /docs/user_guide/message_building_by_channel/push/android/rich_notifications/
   fa_icon: fas fa-vial

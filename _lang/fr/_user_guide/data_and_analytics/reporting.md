@@ -20,7 +20,7 @@ guide_featured_list:
     fa_icon: fas fa-chart-pie
   - name: Engagement Reports (Rapports d’engagement)
     link: /docs/user_guide/data_and_analytics/reporting/engagement_reports/
-    fa_icon: fas fa-chart-line
+    image: /assets/img/braze_icons/line-chart-up-01.svg
   - name: Report Builder (Créateur de rapports)
     link: /docs/user_guide/data_and_analytics/reporting/report_builder/
     fa_icon: fas fa-wrench
@@ -41,7 +41,7 @@ guide_menu_list:
     fa_icon: fas fa-filter
   - name: Rapport Global Control
     link: /docs/user_guide/engagement_tools/testing/global_control_group/#viewing-reporting
-    fa_icon: fas fa-globe-americas
+    image: /assets/img/braze_icons/globe-04.svg
   - name: Rapport de rétention
     link: /docs/user_guide/engagement_tools/campaigns/testing_and_more/retention_reports/
     fa_icon: fas fa-user-check

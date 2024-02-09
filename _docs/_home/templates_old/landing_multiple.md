@@ -56,10 +56,10 @@ guide_menu_title: "Section 2"
 guide_menu_list:
   - name: Example 4
     link: /docs/home/templates/api_glossary/
-    fa_icon: fas fa-book
+    image: /assets/img/braze_icons/book-closed.svg
   - name: Example 5
     link: /docs/home/templates/glossary_test_page/
-    fa_icon: fas fa-book
+    image: /assets/img/braze_icons/book-closed.svg
   - name: Example 6
     link: /docs/home/templates/partner_page_template_video/
     fa_icon: fas fa-handshake

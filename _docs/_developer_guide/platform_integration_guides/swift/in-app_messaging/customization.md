@@ -19,7 +19,7 @@ guide_featured_list:
     fa_icon: fa fa-cogs
   - name: Custom On-Click Behavior
     link: /docs/developer_guide/platform_integration_guides/swift/in-app_messaging/customization/behavior_on_click/
-    fa_icon: fa fa-mouse-pointer
+    image: /assets/img/braze_icons/navigation-point-01.svg
   - name: Custom Triggering
     link: /docs/developer_guide/platform_integration_guides/swift/in-app_messaging/customization/custom_triggering/
     fa_icon: fa fa-check
@@ -28,7 +28,7 @@ guide_featured_list:
     fa_icon: fa fa-times
   - name: Example - App Store Review Prompt
     link: /docs/developer_guide/platform_integration_guides/swift/in-app_messaging/customization/custom_app_store_review_prompt/
-    fa_icon: fa fa-eye
+    image: /assets/img/braze_icons/eye.svg
 
 
 ---

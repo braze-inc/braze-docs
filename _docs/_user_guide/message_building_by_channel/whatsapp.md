@@ -44,7 +44,7 @@ guide_featured_list:
   fa_icon: fas fa-file-alt
 - name: "WhatsApp Best Practices"
   link: /docs/user_guide/message_building_by_channel/whatsapp/whatsapp_best_practices/
-  fa_icon: fas fa-check-square
+  image: /assets/img/braze_icons/check-square-broken.svg
 - name: "WhatsApp FAQ"
   link: /docs/user_guide/message_building_by_channel/whatsapp/faqs/
   fa_icon: fas fa-question

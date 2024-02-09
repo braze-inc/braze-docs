@@ -13,7 +13,7 @@ guide_featured_title: "Popular articles"
 guide_featured_list:
 - name: About Email
   link: /docs/user_guide/message_building_by_channel/email/about/
-  fa_icon: fas fa-check
+  image: /assets/img/braze_icons/check-square-broken.svg
 - name: Managing User Subscriptions
   link: /docs/user_guide/message_building_by_channel/email/managing_user_subscriptions/
   fa_icon: fas fa-users
@@ -22,7 +22,7 @@ guide_featured_list:
   fa_icon: fas fa-link
 - name: Create an Email Campaign
   link: /docs/user_guide/message_building_by_channel/email/html_editor/creating_an_email_campaign/
-  fa_icon: fas fa-envelope
+  image: /assets/img/braze_icons/mail-01.svg
 - name: Drag-And-Drop Editor
   link: /docs/user_guide/message_building_by_channel/email/drag_and_drop/
   fa_icon: fas fa-paint-brush
@@ -37,7 +37,7 @@ guide_menu_title: "More articles"
 guide_menu_list:
 - name: Email Setup
   link: /docs/user_guide/message_building_by_channel/email/email_setup/
-  fa_icon: fas fa-envelope
+  image: /assets/img/braze_icons/mail-01.svg
 - name: Preference Center
   link: /docs/user_guide/message_building_by_channel/email/preference_center/
   fa_icon: fa-solid fa-list-check
@@ -46,7 +46,7 @@ guide_menu_list:
   fa_icon: fas fa-align-left
 - name: Custom Email Footer
   link: /docs/user_guide/message_building_by_channel/email/custom_email_footer/
-  fa_icon: fas fa-envelope-circle-check
+  image: /assets/img/braze_icons/message-check-circle.svg
 - name: Inbox Vision
   link: /docs/user_guide/message_building_by_channel/email/inbox_vision/
   fa_icon: fas fa-inbox
@@ -67,7 +67,7 @@ guide_menu_list:
   fa_icon: fas fa-chart-pie
 - name: Best Practices
   link: /docs/user_guide/message_building_by_channel/email/best_practices/
-  fa_icon: fas fa-check-square
+  image: /assets/img/braze_icons/check-square-broken.svg
 - name: Frequently Asked Questions
   link: /docs/user_guide/message_building_by_channel/email/faq/
   fa_icon: fas fa-question

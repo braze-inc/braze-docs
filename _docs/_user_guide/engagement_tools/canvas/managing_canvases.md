@@ -14,7 +14,7 @@ guide_featured_title: "Section Articles"
 guide_featured_list:
   - name: Sending Test Canvases
     link: /docs/user_guide/engagement_tools/canvas/testing_canvases/sending_test_canvases/
-    fa_icon: fas fa-check-square
+    image: /assets/img/braze_icons/check-square-broken.svg
   - name: Editing Canvases After Launch
     link: /docs/user_guide/engagement_tools/canvas/managing_canvases/change_your_canvas_after_launch/
     fa_icon: fas fa-edit

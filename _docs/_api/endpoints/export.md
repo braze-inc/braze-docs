@@ -47,10 +47,10 @@ guide_menu_title2: "Export custom events endpoints"
 guide_menu_list2:
   - name: "GET: Custom Events List"
     link: /docs/api/endpoints/export/custom_events/get_custom_events/
-    fa_icon: fas fa-chart-line
+    image: /assets/img/braze_icons/line-chart-up-01.svg
   - name: "GET: Custom Event Analytics"
     link: /docs/api/endpoints/export/custom_events/get_custom_events_analytics/
-    fa_icon: fas fa-chart-line
+    image: /assets/img/braze_icons/line-chart-up-01.svg
 
 guide_menu_title3: "Export KPI endpoints"
 guide_menu_list3:

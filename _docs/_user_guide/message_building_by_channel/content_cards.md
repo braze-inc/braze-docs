@@ -13,13 +13,13 @@ guide_featured_title: "Section articles"
 guide_featured_list:
 - name: About Content Cards
   link: /docs/user_guide/message_building_by_channel/content_cards/about/
-  fa_icon: fas fa-check
+  image: /assets/img/braze_icons/check-square-broken.svg
 - name: Create a Content Card
   link: /docs/user_guide/message_building_by_channel/content_cards/create/
-  fa_icon: fas fa-columns
+  image: /assets/img/braze_icons/columns-01.svg
 - name: Card Creation
   link: /docs/user_guide/message_building_by_channel/content_cards/create/card_creation
-  fa_icon: fas fa-envelope-circle-check
+  image: /assets/img/braze_icons/message-check-circle.svg
 - name: Creative Details
   link: /docs/user_guide/message_building_by_channel/content_cards/creative_details/
   fa_icon: fas fa-paint-brush
@@ -34,6 +34,6 @@ guide_featured_list:
   fa_icon: fas fa-suitcase
 - name: Best Practices
   link: /docs/user_guide/message_building_by_channel/content_cards/best_practices
-  fa_icon: fas fa-check-square
+  image: /assets/img/braze_icons/check-square-broken.svg
 ---
 <br><br>

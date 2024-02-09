@@ -14,7 +14,7 @@ guide_featured_title: "Sections"
 guide_featured_list:
   - name: Démarrage
     link: /docs/user_guide/engagement_tools/canvas/get_started/
-    fa_icon: fas fa-book-open
+    image: /assets/img/braze_icons/book-closed.svg
   - name: Développement de Canvas
     link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/
     fa_icon: fas fa-paint-brush

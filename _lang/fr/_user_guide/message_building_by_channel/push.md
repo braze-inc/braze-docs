@@ -13,13 +13,13 @@ guide_featured_title: "Articles courants"
 guide_featured_list:
 - name: À propos des notifications push
   link: /docs/user_guide/message_building_by_channel/push/about/
-  fa_icon: fas fa-check
+  image: /assets/img/braze_icons/check-square-broken.svg
 - name: Types de notifications push
   link: /docs/user_guide/message_building_by_channel/push/types/
   fa_icon: fas fa-list
 - name: Enregistrement d’une notification push
   link: /docs/user_guide/message_building_by_channel/push/push_registration/
-  fa_icon: fas fa-check-square
+  image: /assets/img/braze_icons/check-square-broken.svg
 - name: Activation et abonnement aux notifications push
   link: /docs/user_guide/message_building_by_channel/push/users_and_subscriptions/
   fa_icon: fas fa-users
@@ -31,7 +31,7 @@ guide_menu_title: "Autres articles"
 guide_menu_list:
 - name: Options avancées
   link: /docs/user_guide/message_building_by_channel/push/advanced_push_options/
-  fa_icon: fas fa-gear
+  image: /assets/img/braze_icons/settings-01.svg
 - name: Amorces de notifications push
   link: /docs/user_guide/message_building_by_channel/push/best_practices/push_primer_messages/
   fa_icon: fas fa-mobile-alt
@@ -49,6 +49,6 @@ guide_menu_list:
   fa_icon: fas fa-desktop
 - name: Bonnes pratiques
   link: /docs/user_guide/message_building_by_channel/push/best_practices/
-  fa_icon: fas fa-check-square
+  image: /assets/img/braze_icons/check-square-broken.svg
 ---
 <br><br>

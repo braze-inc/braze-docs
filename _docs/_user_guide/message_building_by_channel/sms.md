@@ -15,7 +15,7 @@ guide_featured_title: "SMS"
 guide_featured_list:
 - name: "About SMS"
   link: /docs/user_guide/message_building_by_channel/sms/about_sms/
-  fa_icon: fas fa-check
+  image: /assets/img/braze_icons/check-square-broken.svg
 - name: "SMS Setup"
   link: /docs/user_guide/message_building_by_channel/sms/sms_setup/
   fa_icon: fas fa-mobile

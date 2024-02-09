@@ -33,7 +33,7 @@ guide_featured_list:
     fa_icon: fas fa-user-circle
   - name: "POST: Track Users"
     link: /docs/api/endpoints/user_data/post_user_track/
-    fa_icon: fas fa-database
+    image: /assets/img/braze_icons/database-01.svg
   - name: "POST: Merge Users"
     link: /docs/api/endpoints/user_data/post_users_merge/
     fa_icon: fas fa-users

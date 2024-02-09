@@ -14,10 +14,10 @@ guide_featured_list:
     fa_icon: fas fa-table
   - name: Analytics Overview
     link: /docs/developer_guide/platform_wide/analytics_overview/
-    fa_icon: fas fa-chart-line
+    image: /assets/img/braze_icons/line-chart-up-01.svg
   - name: Sending Test Messages
     link: /docs/developer_guide/platform_wide/sending_test_messages/
-    fa_icon: fas fa-comments
+    image: /assets/img/braze_icons/annotation.svg
   - name: SDK Authentication
     link: /docs/developer_guide/platform_wide/tv_and_ott
     fa_icon: ffas fa-user-shield fas 
@@ -26,5 +26,5 @@ guide_featured_list:
     fa_icon: fas fa-mobile
   - name: Feature Flags
     link: /docs/developer_guide/platform_wide/feature_flags/
-    fa_icon: fas fa-columns
+    image: /assets/img/braze_icons/columns-01.svg
 ---

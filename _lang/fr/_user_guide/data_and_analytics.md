@@ -15,10 +15,10 @@ guide_featured_list:
     fa_icon: fa-solid fa-check
   - name: Glossaire d’indicateurs de rapport
     link: /docs/user_guide/data_and_analytics/report_metrics/
-    fa_icon: fas fa-book-open
+    image: /assets/img/braze_icons/book-closed.svg
   - name: Configuration de reporting
     link: /docs/user_guide/data_and_analytics/configuring_reporting/
-    fa_icon: fas fa-cog
+    image: /assets/img/braze_icons/settings-01.svg
   - name: Création d’une formule
     link: /docs/user_guide/data_and_analytics/creating_a_formula/
     fa_icon: fas fa-flask
@@ -33,7 +33,7 @@ guide_featured_list:
     fa_icon: fas fa-wrench
   - name: Suivi
     link: /docs/user_guide/data_and_analytics/tracking/
-    fa_icon: fas fa-chart-line
+    image: /assets/img/braze_icons/line-chart-up-01.svg
   - name: Exportation de données Braze
     link: /docs/user_guide/data_and_analytics/export_braze_data/
     fa_icon: fas fa-file-export

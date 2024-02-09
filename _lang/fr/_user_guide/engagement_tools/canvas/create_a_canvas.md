@@ -38,7 +38,7 @@ guide_featured_list:
     fa_icon: fas fa-mobile
   - name: Cartes de contenu dans Canvas
     link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/content-cards_in_canvas/
-    fa_icon: fas fa-columns
+    image: /assets/img/braze_icons/columns-01.svg
  
 guide_menu_title: "Ressources supplémentaires"
 guide_menu_list:

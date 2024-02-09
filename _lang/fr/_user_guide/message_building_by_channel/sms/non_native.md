@@ -18,7 +18,7 @@ guide_featured_list:
   fa_icon: fas fa-mobile-alt
 - name: Migration des données utilisateur
   link: /docs/user_guide/message_building_by_channel/sms/non_native/user_data_migration/
-  fa_icon: fas fa-globe-americas
+  image: /assets/img/braze_icons/globe-04.svg
 - name: Processus de double abonnement
   link: /docs/user_guide/message_building_by_channel/sms/non_native/double_opt_in/
   fa_icon: fas fa-commenting

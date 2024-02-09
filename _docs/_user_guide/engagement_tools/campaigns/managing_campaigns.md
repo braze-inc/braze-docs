@@ -14,7 +14,7 @@ guide_featured_title: "Section Articles"
 guide_featured_list:
   - name: Approving Campaigns
     link: /docs/user_guide/engagement_tools/campaigns/managing_campaigns/campaign_approval
-    fa_icon: fas fa-check-square
+    image: /assets/img/braze_icons/check-square-broken.svg
   - name: Copying Across Workspaces
     link: /docs/user_guide/engagement_tools/campaigns/managing_campaigns/copying_to_workspace
     fa_icon: fas fa-copy

@@ -24,7 +24,7 @@ guide_featured_list:
   fa_icon: fas fa-phone-volume
 - name: Fuzzy Opt-Out
   link: /docs/user_guide/message_building_by_channel/sms/keywords/fuzzy_opt_out/
-  fa_icon: fa-solid fa-hand
+  image: /assets/img/braze_icons/hand.svg
 
 ---
 <br><br>

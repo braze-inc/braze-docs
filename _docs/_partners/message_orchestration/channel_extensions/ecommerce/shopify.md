@@ -22,7 +22,7 @@ guide_featured_list:
   fa_icon: fa fa-shopping-cart
 - name: Shopify Data in Braze
   link: /docs/shopify_data/
-  fa_icon: fas fa-cogs
+  image: /assets/img/braze_icons/settings-01.svg
 - name: Shopify Historical Backfill
   link: /docs/shopify_historical_backfill/
   fa_icon: fa-solid fa-database

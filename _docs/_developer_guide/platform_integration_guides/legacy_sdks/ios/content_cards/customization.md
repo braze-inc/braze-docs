@@ -17,13 +17,13 @@ guide_featured_title: "Section articles"
 guide_featured_list:
   - name: Custom Styling
     link: /docs/developer_guide/platform_integration_guides/ios/content_cards/customization/custom_styling/
-    fa_icon: fa fa-paint-brush
+    image: /assets/img/braze_icons/brush-02.svg
   - name: Customizing Feed
     link: /docs/developer_guide/platform_integration_guides/ios/content_cards/customization/customizing_feed/
     fa_icon: fa fa-cog
   - name: Handling Clicks Manually
     link: /docs/developer_guide/platform_integration_guides/ios/content_cards/customization/handling_clicks_manually/
-    fa_icon: fa fa-mouse-pointer
+    image: /assets/img/braze_icons/navigation-point-01.svg
   - name: Read & Unread Indicators
     link: /docs/developer_guide/platform_integration_guides/ios/content_cards/customization/read_unread_indicators/
     image: /assets/img/braze_icons/book-closed.svg
@@ -32,7 +32,7 @@ guide_featured_list:
     fa_icon: fa fa-id-badge
   - name: Carousel View Use Case
     link: /docs/developer_guide/platform_integration_guides/ios/content_cards/customization/use_cases/carousel_view/
-    fa_icon: fa fa-arrows-h
+    image: /assets/img/braze_icons/switch-horizontal-01.svg
 
 
 noindex: true

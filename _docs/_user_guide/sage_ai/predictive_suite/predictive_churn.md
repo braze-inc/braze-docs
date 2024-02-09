@@ -13,7 +13,7 @@ guide_featured_title: "Topics"
 guide_featured_list:
 - name: Creating A Churn Prediction
   link: /docs/user_guide/sage_ai/predictive_suite/predictive_churn/creating_a_churn_prediction/
-  fa_icon: fas fa-cogs
+  image: /assets/img/braze_icons/settings-01.svg
 - name: Prediction Analytics
   link: /docs/user_guide/sage_ai/predictive_suite/predictive_churn/prediction_analytics/
   fa_icon: fas fa-chart-bar

@@ -18,7 +18,7 @@ guide_featured_list:
   fa_icon: fas fa-clock
 - name: Canal intelligent
   link: /docs/user_guide/intelligence/intelligent_channel/
-  fa_icon: fas fa-envelope
+  image: /assets/img/braze_icons/mail-01.svg
 - name: Sélection intelligente
   link: /docs/user_guide/intelligence/intelligent_selection/
   fa_icon: fas fa-chart-bar

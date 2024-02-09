@@ -20,11 +20,11 @@ guide_featured_list:
     fa_icon: fas fa-user
   - name: "GET: View Preference Center Details"
     link: /docs/api/endpoints/preference_center/get_view_details_preference_center/
-    fa_icon: fas fa-envelope-open
+    image: /assets/img/braze_icons/mail-04.svg
   - name: "POST: Create Preference Center"
     link: /docs/api/endpoints/preference_center/post_create_preference_center/
-    fa_icon: fas fa-check
+    image: /assets/img/braze_icons/check-square-broken.svg
   - name: "PUT: Update Preference Center"
     link: /docs/api/endpoints/preference_center/put_update_preference_center/
-    fa_icon: fas fa-check-square
+    image: /assets/img/braze_icons/check-square-broken.svg
 ---

@@ -17,7 +17,7 @@ guide_featured_list:
     fa_icon: fas fa-mobile
   - name: Channel Performance Dashboard
     link: /docs/user_guide/data_and_analytics/analytics/email_performance_dashboard/
-    fa_icon: fas fa-chart-line
+    image: /assets/img/braze_icons/line-chart-up-01.svg
   - name: Conversions Dashboard
     link: /docs/user_guide/data_and_analytics/analytics/conversions_dashboard/
     fa_icon: fas fa-chart-simple

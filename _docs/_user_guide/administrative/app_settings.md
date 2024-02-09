@@ -34,10 +34,10 @@ guide_menu_list:
     fa_icon: fas fa-tags
   - name: Email Preferences
     link: /docs/user_guide/administrative/app_settings/email_settings/
-    fa_icon: fas fa-envelope
+    image: /assets/img/braze_icons/mail-01.svg
   - name: Push TTL Settings
     link: /docs/user_guide/administrative/app_settings/push_ttl_settings/
-    fa_icon: fas fa-cogs
+    image: /assets/img/braze_icons/settings-01.svg
 
 guide_menu_title2: "Company settings"
 guide_menu_list2:

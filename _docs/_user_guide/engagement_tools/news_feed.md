@@ -18,10 +18,10 @@ guide_featured_list:
     fa_icon: fas fa-newspaper
   - name: News Feed Categories
     link: /docs/user_guide/engagement_tools/news_feed/news_feed_categories/
-    fa_icon: fas fa-columns
+    image: /assets/img/braze_icons/columns-01.svg
   - name: Analytics
     link: /docs/user_guide/engagement_tools/news_feed/news_feed_analytics_and_retargeting_data/
-    fa_icon: fas fa-chart-line
+    image: /assets/img/braze_icons/line-chart-up-01.svg
   - name: Use Cases
     link: /docs/user_guide/engagement_tools/news_feed/news_feed_use_cases/
     fa_icon: fas fa-user-tie

@@ -17,7 +17,7 @@ guide_featured_list:
     fa_icon: fas fa-list
   - name: Understanding Campaign Status
     link: /docs/user_guide/engagement_tools/campaigns/getting_started/understanding_campaign_status/
-    fa_icon: fas fa-envelope
+    image: /assets/img/braze_icons/mail-01.svg
   - name: Campaign FAQ
     link: /docs/user_guide/engagement_tools/campaigns/faq/
     fa_icon: fas fa-question

@@ -19,10 +19,10 @@ guide_featured_title: "Section articles"
 guide_featured_list:
   - name: Custom Styling
     link: /docs/developer_guide/platform_integration_guides/android/news_feed/customization/custom_styling/
-    fa_icon: fa fa-paint-brush
+    image: /assets/img/braze_icons/brush-02.svg
   - name: Handling Clicks Manually
     link: /docs/developer_guide/platform_integration_guides/android/news_feed/customization/click_listener/
-    fa_icon: fa fa-mouse-pointer
+    image: /assets/img/braze_icons/navigation-point-01.svg
   - name: Key-Value Pairs
     link: /docs/developer_guide/platform_integration_guides/android/news_feed/customization/key_value_pairs/
     fa_icon: fa fa-code

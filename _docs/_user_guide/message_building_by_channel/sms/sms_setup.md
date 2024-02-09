@@ -14,7 +14,7 @@ guide_featured_title: "Section articles"
 guide_featured_list:
 - name: Terms to Know
   link: /docs/user_guide/message_building_by_channel/sms/sms_setup/terms/
-  fa_icon: fas fa-bookmark
+  image: /assets/img/braze_icons/book-closed.svg
 - name: Sending Phone Numbers
   link: /docs/user_guide/message_building_by_channel/sms/sms_setup/short_and_long_codes/
   fa_icon: fas fa-address-card

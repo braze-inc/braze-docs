@@ -20,7 +20,7 @@ guide_featured_list:
     fa_icon: fas fa-chart-pie
   - name: Engagement Reports
     link: /docs/user_guide/data_and_analytics/reporting/engagement_reports/
-    fa_icon: fas fa-chart-line
+    image: /assets/img/braze_icons/line-chart-up-01.svg
   - name: Report Builder
     link: /docs/user_guide/data_and_analytics/reporting/report_builder/
     fa_icon: fas fa-wrench
@@ -29,7 +29,7 @@ guide_menu_title: "More articles"
 guide_menu_list:
   - name: Configuring Reporting
     link: /docs/user_guide/data_and_analytics/reporting/configuring_reporting/
-    fa_icon: fas fa-cog
+    image: /assets/img/braze_icons/settings-01.svg
   - name: Campaign Analytics
     link: /docs/user_guide/data_and_analytics/reporting/campaign_analytics/
     fa_icon: fas fa-chart-bar
@@ -44,7 +44,7 @@ guide_menu_list:
     fa_icon: fas fa-filter
   - name: Global Control Report
     link: /docs/user_guide/engagement_tools/testing/global_control_group/#viewing-reporting
-    fa_icon: fas fa-globe-americas
+    image: /assets/img/braze_icons/globe-04.svg
   - name: Retention Report
     link: /docs/user_guide/engagement_tools/campaigns/testing_and_more/retention_reports/
     fa_icon: fas fa-user-check

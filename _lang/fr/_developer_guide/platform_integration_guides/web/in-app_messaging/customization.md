@@ -16,13 +16,13 @@ guide_featured_title: "Section Articles"
 guide_featured_list:
   - name: Style personnalisé
     link: /docs/developer_guide/platform_integration_guides/web/in-app_messaging/customization/custom_styling/
-    fa_icon: fa fa-paint-brush
+    image: /assets/img/braze_icons/brush-02.svg
   - name: Rejet de message
     link: /docs/developer_guide/platform_integration_guides/web/in-app_messaging/customization/message_dismissal/
     fa_icon: fa fa-times
   - name: Enregistrement des impressions et des clics
     link: /docs/developer_guide/platform_integration_guides/web/in-app_messaging/customization/logging_impressions_and_clicks/
-    fa_icon: fa fa-mouse-pointer
+    image: /assets/img/braze_icons/navigation-point-01.svg
   - name: Ouvrir le lien dans un nouvel onglet
     link: /docs/developer_guide/platform_integration_guides/web/in-app_messaging/customization/open_link_in_new_tab/
     fa_icon: fa fa-link

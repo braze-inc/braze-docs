@@ -25,7 +25,7 @@ guide_featured_list:
     fa_icon: fas fa-shopping-cart
   - name: Événements personnalisés
     link: /docs/user_guide/data_and_analytics/custom_data/custom_events/
-    fa_icon: fas fa-cog
+    image: /assets/img/braze_icons/settings-01.svg
   - name: Attributs personnalisés
     link: /docs/user_guide/data_and_analytics/custom_data/custom_attributes/
     fa_icon: fas fa-table

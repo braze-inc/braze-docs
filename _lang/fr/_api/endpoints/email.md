@@ -18,7 +18,7 @@ guide_featured_list:
     fa_icon: fas fa-reply-all
   - name: "GET : demander les adresses e-mail désinscrites"
     link: /docs/api/endpoints/email/get_query_unsubscribed_email_addresses/
-    fa_icon: fas fa-envelope
+    image: /assets/img/braze_icons/mail-01.svg
   - name: "POST : modifier le statut de l’abonnement aux e-mails"
     link: /docs/api/endpoints/email/post_email_subscription_status/
     fa_icon: fas fa-at
@@ -27,10 +27,10 @@ guide_featured_list:
     fa_icon: fas fa-reply-all
   - name: "POST : supprimer les courriers indésirables"
     link: /docs/api/endpoints/email/post_remove_spam/
-    fa_icon: fas fa-envelope-open
+    image: /assets/img/braze_icons/mail-04.svg
   - name: "POST : ajouter l’e-mail à la liste de blocage"
     link: /docs/api/endpoints/email/post_blocklist/
-    fa_icon: fas fa-envelope-open
+    image: /assets/img/braze_icons/mail-04.svg
 ---
 {% comment %}
 rediriger depuis email_sync.md

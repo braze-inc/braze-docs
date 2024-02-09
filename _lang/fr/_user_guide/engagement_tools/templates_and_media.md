@@ -16,10 +16,10 @@ guide_featured_title: "Section Articles"
 guide_featured_list:
   - name: Bibliothèque multimédia
     link: /docs/user_guide/engagement_tools/templates_and_media/media_library/
-    fa_icon: fas fa-book-open
+    image: /assets/img/braze_icons/book-closed.svg
   - name: Blocs de contenu
     link: /docs/user_guide/engagement_tools/templates_and_media/content_blocks/
-    fa_icon: fas fa-columns
+    image: /assets/img/braze_icons/columns-01.svg
   - name: Dupliquer des modèles
     link: /docs/user_guide/engagement_tools/templates_and_media/duplicate/
     fa_icon: fas fa-copy

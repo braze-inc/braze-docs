@@ -39,7 +39,7 @@ guide_menu_list:
     fa_icon: fas fa-newspaper
   - name: Exporter des données d’événements personnalisés
     link: /docs/user_guide/data_and_analytics/export_braze_data/export_custom_event_data/
-    fa_icon: fas fa-cog
+    image: /assets/img/braze_icons/settings-01.svg
   - name: API d’exportation
     link: /docs/user_guide/data_and_analytics/export_braze_data/export_apis/
     fa_icon: fas fa-server

@@ -19,19 +19,19 @@ guide_featured_list:
     fa_icon: fas fa-plug
   - name: Campaigns and Canvas
     link: /docs/help/help_articles/campaigns_and_canvas/
-    fa_icon: fas fa-comments
+    image: /assets/img/braze_icons/annotation.svg
   - name: Content Cards
     link: /docs/help/help_articles/content_cards/
     fa_icon: fas fa-stream
   - name: Data
     link: /docs/help/help_articles/data/
-    fa_icon: fas fa-chart-line
+    image: /assets/img/braze_icons/line-chart-up-01.svg
   - name: Docs
     link: /docs/help/help_articles/docs/
     fa_icon: fas fa-file-alt
   - name: Email
     link: /docs/help/help_articles/email/
-    fa_icon: fas fa-envelope
+    image: /assets/img/braze_icons/mail-01.svg
   - name: In-App Messages
     link: /docs/help/help_articles/in-app_messages/
     fa_icon: fas fa-mobile-alt

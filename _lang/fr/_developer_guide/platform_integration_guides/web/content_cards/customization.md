@@ -19,7 +19,7 @@ guide_featured_list:
     fa_icon: fa fa-television
   - name: Style personnalisé
     link: /docs/developer_guide/platform_integration_guides/web/content_cards/customization/custom_styling/
-    fa_icon: fa fa-paint-brush
+    image: /assets/img/braze_icons/brush-02.svg
   - name: Paires clé-valeur
     link: /docs/developer_guide/platform_integration_guides/web/content_cards/customization/key_value_pairs/
     fa_icon: fa fa-code

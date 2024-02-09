@@ -14,10 +14,10 @@ guide_top_text: "Utilisez les endpoints du centre de préférences de Braze pour
 guide_featured_list:
   - name: "POST : Créer un centre de préférences"
     link: /docs/api/endpoints/preference_center/post_create_preference_center/
-    fa_icon: fas fa-check
+    image: /assets/img/braze_icons/check-square-broken.svg
   - name: "PUT : Mettre à jour un centre de préférences"
     link: /docs/api/endpoints/preference_center/put_update_preference_center/
-    fa_icon: fas fa-check-square
+    image: /assets/img/braze_icons/check-square-broken.svg
   - name: "GET : Répertorier les centres de préférences"
     link: /docs/api/endpoints/preference_center/get_list_preference_center/
     fa_icon: fas fa-user
@@ -26,5 +26,5 @@ guide_featured_list:
     fa_icon: fas fa-wrench
   - name: "GET : Afficher les détails du centre de préférences"
     link: /docs/api/endpoints/preference_center/get_view_details_preference_center/
-    fa_icon: fas fa-envelope-open
+    image: /assets/img/braze_icons/mail-04.svg
 ---

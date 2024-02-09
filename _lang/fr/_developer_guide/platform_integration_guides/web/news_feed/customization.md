@@ -16,7 +16,7 @@ guide_featured_title: "Section Articles"
 guide_featured_list:
   - name: Style personnalisé
     link: /docs/developer_guide/platform_integration_guides/web/news_feed/customization/custom_styling/
-    fa_icon: fa fa-paint-brush
+    image: /assets/img/braze_icons/brush-02.svg
   - name: Paires clé-valeur
     link: /docs/developer_guide/platform_integration_guides/web/news_feed/customization/key_value_pairs/
     fa_icon: fa fa-code

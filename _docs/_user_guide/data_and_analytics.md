@@ -15,7 +15,7 @@ guide_featured_list:
     fa_icon: fa-solid fa-check
   - name: Report Metrics Glossary
     link: /docs/user_guide/data_and_analytics/report_metrics/
-    fa_icon: fas fa-book-open
+    image: /assets/img/braze_icons/book-closed.svg
   - name: Cloud Data Ingestion
     link: /docs/user_guide/data_and_analytics/cloud_ingestion/
     fa_icon: fa-solid fa-cloud
@@ -33,7 +33,7 @@ guide_featured_list:
     fa_icon: fas fa-wrench
   - name: Tracking
     link: /docs/user_guide/data_and_analytics/tracking/
-    fa_icon: fas fa-chart-line
+    image: /assets/img/braze_icons/line-chart-up-01.svg
   - name: Exporting Braze Data
     link: /docs/user_guide/data_and_analytics/export_braze_data/
     fa_icon: fas fa-file-export

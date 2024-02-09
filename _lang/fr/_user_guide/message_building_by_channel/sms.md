@@ -15,7 +15,7 @@ guide_featured_title: "SMS"
 guide_featured_list:
 - name: "À propos des SMS"
   link: /docs/user_guide/message_building_by_channel/sms/about_sms/
-  fa_icon: fas fa-check
+  image: /assets/img/braze_icons/check-square-broken.svg
 - name: "Lois et réglementations SMS"
   link: /docs/user_guide/message_building_by_channel/sms/sms_laws_and_regulations/
   fa_icon: fas fa-gavel

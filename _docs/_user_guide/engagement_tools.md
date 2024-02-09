@@ -12,7 +12,7 @@ guide_featured_title: "Build a messaging campaign"
 guide_featured_list:
   - name: Campaigns
     link: /docs/user_guide/engagement_tools/campaigns/
-    fa_icon: fas fa-envelope
+    image: /assets/img/braze_icons/mail-01.svg
   - name: Canvas
     link: /docs/user_guide/engagement_tools/canvas/
     fa_icon: fas fa-palette

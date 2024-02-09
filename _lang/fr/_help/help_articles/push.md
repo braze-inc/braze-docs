@@ -16,7 +16,7 @@ guide_menu_list:
     fa_icon: fas fa-exclamation-circle
   - name: Définition de l’activation Push
     link: /docs/help/help_articles/push/defining_push_enablement/
-    fa_icon: fas fa-book-open
+    image: /assets/img/braze_icons/book-closed.svg
   - name: Notifications push manquantes
     link: /docs/help/help_articles/push/no_push_notification_was_received/
     fa_icon: fas fa-comment-slash

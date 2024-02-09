@@ -20,7 +20,7 @@ guide_featured_list:
   fa_icon: fa-solid fa-comment-sms
 - name: "Sending Test Messages"
   link: /docs/user_guide/engagement_tools/campaigns/testing_and_more/sending_test_messages/
-  fa_icon: fas fa-envelope
+  image: /assets/img/braze_icons/mail-01.svg
 ---
 
 <br><br>

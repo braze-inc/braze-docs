@@ -39,7 +39,7 @@ guide_menu_list:
     fa_icon: fas fa-newspaper
   - name: Export Custom Event Data
     link: /docs/user_guide/data_and_analytics/export_braze_data/export_custom_event_data/
-    fa_icon: fas fa-cog
+    image: /assets/img/braze_icons/settings-01.svg
   - name: Export APIs
     link: /docs/user_guide/data_and_analytics/export_braze_data/export_apis/
     fa_icon: fas fa-server
@@ -58,7 +58,7 @@ guide_menu_description2: "Looking to take advantage of data export with Braze Cu
 guide_menu_list2:
   - name: Braze Currents
     link: /docs/user_guide/data_and_analytics/braze_currents
-    fa_icon: fas fa-database
+    image: /assets/img/braze_icons/database-01.svg
   - name: Setting up Currents
     link: /docs/user_guide/data_and_analytics/braze_currents/setting_up_currents/
     fa_icon: fas fa-warehouse

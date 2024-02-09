@@ -20,7 +20,7 @@ guide_featured_list:
   fa_icon: fas fa-table
 - name: Paramètres d’e-mail
   link: /docs/user_guide/administrative/app_settings/manage_app_group/email_settings/
-  fa_icon: fas fa-envelope-open
+  image: /assets/img/braze_icons/mail-04.svg
 - name: Paramètres TTL (Durée de vie) de notification push
   link: /docs/user_guide/administrative/app_settings/manage_app_group/push_ttl_settings/
   fa_icon: fas fa-exclamation

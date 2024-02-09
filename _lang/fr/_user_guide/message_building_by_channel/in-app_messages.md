@@ -14,7 +14,7 @@ guide_featured_title: "Articles courants"
 guide_featured_list:
 - name: "À propos des messages In-App"
   link: /docs/user_guide/message_building_by_channel/in-app_messages/about/
-  fa_icon: fas fa-check
+  image: /assets/img/braze_icons/check-square-broken.svg
 - name: "Créer un message in-app"
   link: /docs/user_guide/message_building_by_channel/in-app_messages/create/
   fa_icon: fas fa-mobile-alt
@@ -26,7 +26,7 @@ guide_featured_list:
   fa_icon: fas fa-paint-brush
 - name: "Personnaliser"
   link: /docs/user_guide/message_building_by_channel/in-app_messages/customize/
-  fa_icon: fas fa-cog
+  image: /assets/img/braze_icons/settings-01.svg
 
 guide_menu_title: "Autres articles"
 guide_menu_list:
@@ -47,7 +47,7 @@ guide_menu_list:
   fa_icon: fas fa-poll
 - name: "Bonnes pratiques"
   link: /docs/user_guide/message_building_by_channel/in-app_messages/best_practices
-  fa_icon: fas fa-check-square
+  image: /assets/img/braze_icons/check-square-broken.svg
 - name: "FAQ"
   link: /docs/user_guide/message_building_by_channel/in-app_messages/faq/
   fa_icon: fas fa-question

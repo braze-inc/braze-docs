@@ -13,13 +13,13 @@ guide_featured_title: "Section articles"
 guide_featured_list:
   - name: Events
     link: /docs/user_guide/data_and_analytics/custom_data/events/
-    fa_icon: fas fa-book
+    image: /assets/img/braze_icons/book-closed.svg
   - name: Purchase Events
     link: /docs/user_guide/data_and_analytics/custom_data/purchase_events/
     fa_icon: fas fa-shopping-cart
   - name: Custom Events
     link: /docs/user_guide/data_and_analytics/custom_data/custom_events/
-    fa_icon: fas fa-cog
+    image: /assets/img/braze_icons/settings-01.svg
   - name: Custom Attributes
     link: /docs/user_guide/data_and_analytics/custom_data/custom_attributes/
     fa_icon: fas fa-table
@@ -28,5 +28,5 @@ guide_featured_list:
     fa_icon: fas fa-list
   - name: Managing Custom Data
     link: /docs/user_guide/data_and_analytics/custom_data/managing_custom_data/
-    fa_icon: fas fa-check
+    image: /assets/img/braze_icons/check-square-broken.svg
 ---

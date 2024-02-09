@@ -20,7 +20,7 @@ guide_featured_list:
   fa_icon: fas fa-gavel
 - name: Termes à connaître
   link: /docs/user_guide/onboarding_with_braze/sms_setup/terms/
-  fa_icon: fas fa-bookmark
+  image: /assets/img/braze_icons/book-closed.svg
 - name: Codes courts et codes longs
   link: /docs/user_guide/onboarding_with_braze/sms_setup/short_and_long_codes/
   fa_icon: fas fa-address-card

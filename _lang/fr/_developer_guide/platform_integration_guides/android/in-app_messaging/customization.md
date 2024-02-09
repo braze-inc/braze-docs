@@ -19,13 +19,13 @@ guide_featured_title: "Section Articles"
 guide_featured_list:
   - name: Style personnalisé
     link: /docs/developer_guide/platform_integration_guides/android/in-app_messaging/customization/custom_styling/
-    fa_icon: fa fa-paint-brush
+    image: /assets/img/braze_icons/brush-02.svg
   - name: Écouteurs personnalisés
     link: /docs/developer_guide/platform_integration_guides/android/in-app_messaging/customization/custom_listeners/
     fa_icon: fa fa-cog
   - name: Gestion manuelle des clics
     link: /docs/developer_guide/platform_integration_guides/android/in-app_messaging/customization/custom_listeners/
-    fa_icon: fa fa-mouse-pointer
+    image: /assets/img/braze_icons/navigation-point-01.svg
   - name: Rejet de message
     link: /docs/developer_guide/platform_integration_guides/android/in-app_messaging/customization/message_dismissal/
     fa_icon: fa fa-times

@@ -13,10 +13,10 @@ guide_featured_title: "Articles courants"
 guide_featured_list:
 - name: À propos de l’e-mail
   link: /docs/user_guide/message_building_by_channel/email/about/
-  fa_icon: fas fa-check
+  image: /assets/img/braze_icons/check-square-broken.svg
 - name: Créer une campagne e-mail
   link: /docs/user_guide/message_building_by_channel/email/creating_an_email_campaign/
-  fa_icon: fas fa-envelope
+  image: /assets/img/braze_icons/mail-01.svg
 - name: Éditeur Drag & Drop
   link: /docs/user_guide/message_building_by_channel/email/drag_and_drop/
   fa_icon: fas fa-paint-brush
@@ -61,7 +61,7 @@ guide_menu_list:
   fa_icon: fas fa-chart-pie
 - name: Bonnes pratiques
   link: /docs/user_guide/message_building_by_channel/email/best_practices/
-  fa_icon: fas fa-check-square
+  image: /assets/img/braze_icons/check-square-broken.svg
 - name: Foire aux questions
   link: /docs/user_guide/message_building_by_channel/email/faq/
   fa_icon: fas fa-question

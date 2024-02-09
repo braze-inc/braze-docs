@@ -19,7 +19,7 @@ guide_featured_list:
     fa_icon: fab fa-apple
   - name: SDK Web
     link: /docs/developer_guide/platform_integration_guides/web/changelog/
-    fa_icon: fas fa-globe
+    image: /assets/img/braze_icons/globe-02.svg
   - name: SDK Cordova
     link: /docs/developer_guide/platform_integration_guides/cordova/changelog/
     image: /assets/img/cordova.png
@@ -52,7 +52,7 @@ guide_menu_list:
     fa_icon: fab fa-apple
   - name: SDK Web
     link: https://github.com/braze-inc/braze-web-sdk/blob/master/CHANGELOG.md
-    fa_icon: fas fa-globe
+    image: /assets/img/braze_icons/globe-02.svg
   - name: SDK Cordova
     link: https://github.com/Appboy/appboy-cordova-sdk/blob/master/CHANGELOG.md
     image: /assets/img/cordova.png

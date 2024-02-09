@@ -22,16 +22,16 @@ guide_featured_list:
   fa_icon: fas fa-sun
 - name: Suivi de conversion
   link: /docs/user_guide/message_building_by_channel/push/best_practices/conversion_tracking/
-  fa_icon: fas fa-chart-line
+  image: /assets/img/braze_icons/line-chart-up-01.svg
 - name: Format de message
   link: /docs/user_guide/message_building_by_channel/push/best_practices/message_format/
-  fa_icon: fas fa-envelope
+  image: /assets/img/braze_icons/mail-01.svg
 - name: Activation et abonnement aux notifications push
   link: /docs/user_guide/message_building_by_channel/push/users_and_subscriptions/
   fa_icon: fas fa-user-check
 - name: "Envoyer des messages de test"
   link: /docs/user_guide/engagement_tools/campaigns/testing_and_more/sending_test_messages/
-  fa_icon: fas fa-envelope
+  image: /assets/img/braze_icons/mail-01.svg
 - name: "À savoir avant l’envoi"
   link: /docs/know_before_send/
   fa_icon: fa-solid fa-paper-plane

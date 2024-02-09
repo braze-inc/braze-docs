@@ -24,13 +24,13 @@ guide_featured_list:
     fa_icon: fa-regular fa-file-audio
   - name: Notifications enrichies
     link: /docs/developer_guide/platform_integration_guides/swift/push_notifications/customization/rich_notifications/
-    fa_icon: fa fa-paint-brush
+    image: /assets/img/braze_icons/brush-02.svg
   - name: Badges
     link: /docs/developer_guide/platform_integration_guides/swift/push_notifications/customization/badges/
     fa_icon: fa fa-id-badge
   - name: Ignorer les notifications push internes
     link: /docs/developer_guide/platform_integration_guides/swift/push_notifications/customization/ignoring_internal_push/
-    fa_icon: fa fa-eye-slash
+    image: /assets/img/braze_icons/eye-off.svg
   - name: Paramètres avancés
     link: /docs/developer_guide/platform_integration_guides/swift/push_notifications/customization/advanced_settings/
     fa_icon: fa fa-cog

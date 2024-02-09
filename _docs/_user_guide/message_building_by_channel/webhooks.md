@@ -13,7 +13,7 @@ guide_featured_title: "Section articles"
 guide_featured_list:
 - name: About Webhooks
   link: /docs/user_guide/message_building_by_channel/webhooks/understanding_webhooks/
-  fa_icon: fas fa-check
+  image: /assets/img/braze_icons/check-square-broken.svg
 - name: Creating a Webhook
   link: /docs/user_guide/message_building_by_channel/webhooks/creating_a_webhook/
   fa_icon: fas fa-undo

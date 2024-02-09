@@ -23,7 +23,7 @@ guide_featured_list:
   fa_icon: fas fa-align-left
 - name: Global Style Settings
   link: /docs/dnd/global_style_settings/
-  fa_icon: fas fa-cogs
+  image: /assets/img/braze_icons/settings-01.svg
 - name: Inbox Vision
   link: /docs/user_guide/message_building_by_channel/email/inbox_vision/
   fa_icon: fas fa-inbox

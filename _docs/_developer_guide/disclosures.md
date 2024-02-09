@@ -16,15 +16,15 @@ guide_featured_list:
     fa_icon: fas fa-shield-alt
   - name: Open Source Software Disclosure
     link: /docs/developer_guide/disclosures/open_source_software_disclosure/
-    fa_icon: fas fa-globe
+    image: /assets/img/braze_icons/globe-02.svg
   - name: Innovation Statement
     link: /docs/help/innovation_statement/
-    fa_icon: fas fa-asterisk
+    image: /assets/img/braze_icons/asterisk-01.svg
   - name: Security Qualifications
     link: /docs/developer_guide/disclosures/security_qualifications/
     fa_icon: fas fa-user-shield
   - name: Data Protection Technical Assistance
     link: /docs/help/dp-technical-assistance/
-    fa_icon: fas fa-globe-europe
+    image: /assets/img/braze_icons/globe-04.svg
 
 ---

@@ -29,7 +29,7 @@ guide_menu_list:
     fa_icon: fas fa-bullseye
   - name: Localization
     link: /docs/user_guide/engagement_tools/campaigns/ideas_and_strategies/localizing_a_campaign/
-    fa_icon: fas fa-globe
+    image: /assets/img/braze_icons/globe-02.svg
   - name: Install Attribution Campaign
     link: /docs/user_guide/engagement_tools/campaigns/ideas_and_strategies/install_attribution/
     fa_icon: fas fa-chart-pie

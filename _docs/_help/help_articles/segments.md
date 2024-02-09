@@ -19,7 +19,7 @@ guide_menu_list:
     fa_icon: fas fa-users
   - name: Segmentation Logic
     link: /docs/help/help_articles/segments/segmentation_logic_with_and_or/
-    fa_icon: fas fa-columns
+    image: /assets/img/braze_icons/columns-01.svg
   - name: Search Exact Text
     link: /docs/help/help_articles/segments/search_exact_text/
     fa_icon: fas fa-magnifying-glass

@@ -19,7 +19,7 @@ guide_featured_list:
   fa_icon: fas fa-exclamation
 - name: "Validation des e-mails"
   link: /docs/user_guide/onboarding_with_braze/email_setup/email_validation/
-  fa_icon: fas fa-check-square
+  image: /assets/img/braze_icons/check-square-broken.svg
 - name: "Authentification par e-mail"
   link: /docs/user_guide/onboarding_with_braze/email_setup/authentication/
   fa_icon: fas fa-user-shield
