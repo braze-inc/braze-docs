@@ -8,6 +8,8 @@ description: "Learn how to declare your Braze tracking data in your app's privac
 
 # Privacy manifest
 
+
+
 > If your Braze SDK collects tracking data, Apple requires you to add a privacy manifest that describes your reason and method for collecting tracking data.
 
 ## What is tracking data?
