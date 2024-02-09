@@ -44,7 +44,7 @@ First, give your recommendation a name and optional description.
 Next, select the recommendation type. Both recommendation types use the last 6 months of item interaction (purchase or custom event) data.
 
 - **Most popular:** Calculates the items from the catalog that users interact with most often in the entire workspace. The interaction is defined by the event chosen in Step 3.
-- **AI Personalized:** Uses transformers, a new kind of deep learning, to predict each user's next most likely set of items to purchase or interact with. The interaction is defined by the event you choose in Step 3. We calculate up to 30 of the next most likely items ranked from most to least likely. Note that this type of Recommendation does not use Large Language Models are combine your data with any other Braze customer's.
+- **AI Personalized:** Uses transformers, a new kind of deep learning, to predict each user's next most likely set of items to purchase or interact with. The interaction is defined by the event you choose in Step 3. We calculate up to 30 of the next most likely items ranked from most to least likely. This type of recommendation does not use Large Language Models (LLMs) to combine your data with that of any other Braze customer.
 
 <!--
 **Most recent:** Surfaces each user's most recent purchases.
