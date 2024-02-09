@@ -26,7 +26,7 @@ guide_featured_list:
     fa_icon: fa fa-mouse-pointer
   - name: Indicateurs de messages non lus et lus
     link: /docs/developer_guide/platform_integration_guides/ios/content_cards/customization/read_unread_indicators/
-    fa_icon: fa fa-book
+    image: /assets/img/braze_icons/book-closed.svg
   - name: Badges
     link: /docs/developer_guide/platform_integration_guides/ios/content_cards/customization/badges/
     fa_icon: fa fa-id-badge

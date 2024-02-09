@@ -25,7 +25,7 @@ guide_featured_list:
     fa_icon: fa fa-cog
   - name: Customizing the Default Content Card Feed
     link: /docs/developer_guide/customization_guides/content_cards/customizing_feed/
-    fa_icon: fa fa-book
+    image: /assets/img/braze_icons/book-closed.svg
   - name: Logging Analytics 
     link: /docs/developer_guide/customization_guides/content_cards/logging_analytics/
     fa_icon: fa fa-mouse-pointer

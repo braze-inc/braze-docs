@@ -22,7 +22,7 @@ guide_featured_list:
     fa_icon: fa fa-code
   - name: Indicateurs de messages non lus et lus
     link: /docs/developer_guide/platform_integration_guides/web/news_feed/customization/read_and_unread/
-    fa_icon: fa fa-book
+    image: /assets/img/braze_icons/book-closed.svg
   - name: Badges
     link: /docs/developer_guide/platform_integration_guides/web/news_feed/customization/badges/
     fa_icon: fa fa-id-badge
