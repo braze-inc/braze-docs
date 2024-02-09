@@ -115,7 +115,8 @@
         -webkit-transition:  all ease $content_transition_time;
         -moz-transition:  all ease $content_transition_time;
         &:hover {
-          background-color: $braze-link-color;
+          background-color: transparent !important;
+          border-color: $black;
           img {
             background-color: transparent;
           }
