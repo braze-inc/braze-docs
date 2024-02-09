@@ -71,6 +71,5 @@ helpful_resources_list:
   - name: Release Notes
     link: /docs/help/release_notes/
   - name: Contributing to Braze Docs
-    link: /docs/contributing/
+    link: /docs/contributing/home/
 ---
-

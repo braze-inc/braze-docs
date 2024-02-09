@@ -28,10 +28,10 @@ The [Braze Docs GitHub repository](https://github.com/braze-inc/braze-docs) host
 
 ## Step 2: Make a change
 
-Now that you're a little familiar with the docs repository, you're ready to start making changes. First, open Braze Docs and find a simple change you'd like to make. Next, choose how you'd like to make your change:
+Now that you're a little familiar with the docs repository, you're ready to start making changes. First, open [Braze Docs]({{site.baseurl}}) and find a simple change you'd like to make, then decided how you'd like to make it:
 
-- **Using GitHub (Basic):** For small, single-document changes, you can make changes directly from the GitHub website.
-- **Using your local environment (Advanced):** For complex or multi-document changes, you'll need to make changes from your local environment. If you're a documentation guru, this is the recommended method.
+- **Using GitHub (Simple):** For small, single-document changes, you can make changes directly from the GitHub website.
+- **Using your local environment (Advanced):** For complex or multi-document changes, you'll need to make changes from your local environment. This is the recommended method.
 
 {% alert warning %}
 Before continuing, verify you've completed all [prerequisites](#prerequisites).
