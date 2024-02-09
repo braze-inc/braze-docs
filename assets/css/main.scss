@@ -1,4 +1,5 @@
-// Define font variables with fallbacks for different weights and styles of the Aribau Grotesk font family
+// Font variables for the default font, Aribau Grotesk, as well as fallback font styles and weights.
+// Some font variables share the same style or weight to prevent legacy variables from breaking.
 $braze-light: 'Aribau Grotesk Light', 'Aribau Grotesk', 'Aribau Grotesk Regular', Arial, Helvetica, sans-serif;
 $braze-light-oblique: 'Aribau Grotesk Light Italic','Aribau Grotesk', 'Aribau Grotesk Regular', Arial, Helvetica, sans-serif;
 $braze-thin: 'Aribau Grotesk Thin', 'Aribau Grotesk', 'Aribau Grotesk Regular', Arial, Helvetica, sans-serif;
