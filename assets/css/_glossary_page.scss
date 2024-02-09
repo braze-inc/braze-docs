@@ -98,7 +98,7 @@
     b {
       font-size: 30px;
       line-height: 1.4;
-      color: $braze-purple;
+      color: $braze-purple-dark;
       margin-top: 20px;
       margin-bottom: 10px;
     }
@@ -361,7 +361,8 @@
       -webkit-transition:  all ease $content_transition_time;
       -moz-transition:  all ease $content_transition_time;
       &:hover {
-        background-color: $braze-link-color;
+        background-color: transparent !important;
+        border-color: black;
         img {
           background-color: transparent;
         }
