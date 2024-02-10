@@ -75,8 +75,20 @@ braze-docs
 
 The reference would be similar to the following:
 
+{% tabs local %}
+{% tab example input %}
 {% raw %}
-```plaintext
+```markdown
+# Pages
+
+> Learn how to create, modify, and remove pages on Braze Docs.
+
 {% multi_lang_include contributing/prerequisites.md %}
 ```
 {% endraw %}
+{% endtab %}
+
+{% tab example output %}
+![Content reuse example on Braze Docs.]({% image_buster /assets/img/contributing/styling_examples/includes.png %})
+{% endtab %}
+{% endtabs %}

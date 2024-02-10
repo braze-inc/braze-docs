@@ -12,7 +12,7 @@ noindex: true
 
 Page URLs always match the directory structure of the Braze Docs repository. When a Markdown file is renamed or moved to a different directory, the original URL will result in a 404 error if a redirect isn't set up.
 
-![Example of a 404 page on Braze Docs.]()
+![Example of a 404 page on Braze Docs.]({% image_buster /assets/img/contributing/styling_examples/404.png %})
 
 By setting up URL redirects, you'll help prevent user bookmarks from breaking.
 
@@ -20,13 +20,44 @@ By setting up URL redirects, you'll help prevent user bookmarks from breaking.
 
 ## Redirecting a page
 
-To redirect the URL for an entire page, you'll use the global redirect file. First, move or rename the relevant Markdown file.
+You can choose to redirect a page's URL to the Braze Docs home page or a new location.
 
-![A text editor with the file tree open on the left side.]()
+- **Home page:** THIS.
+- **New location:** THIS.
 
-{% multi_lang_include contributing/alerts/tip_locating_a_file.md %}
+{% tabs local %}
+{% tab home page %}
+Open the relevant Markdown file and add the following key-value pair to the YAML front matter. If there's already a `layout` key, replace the existing key with the new one.
 
-Navigate to the `assets/js/` directory, then open the global redirect file: `broken_redirect_list.js`. At the bottom of the file, set up your redirect on a new line.
+```markdown
+---
+layout: blank_config
+---
+```
+
+Your YAML front matter should be similar to the following:
+
+```markdown
+---
+nav_title: Customization Guides
+config_only: true
+layout: blank_config
+page_order: 3
+---
+```
+{% endtab %}
+
+{% tab new location %}
+After you move or rename the relevant Markdown file, navigate to the `assets/js/` directory and open the global redirect file.
+
+```bash
+braze-docs
+└── assets
+    └── js
+        └── broken_redirect_list.js
+```
+
+At the of the file, create a redirect on a new line using the following syntax:
 
 ```javascript
 validurls['REDIRECT_FROM'] = 'REDIRECT_TO';
@@ -45,16 +76,12 @@ Your redirect should be similar to the following:
 ```javascript
 validurls['/docs/user_guide/data_and_analytics/engagement_reports'] = '/docs/user_guide/data_and_analytics/your_reports/engagement_reports';
 ```
+{% endtab %}
+{% endtabs %}
 
 ## Redirecting a heading
 
-To redirect the URL for an in-page heading, you'll use the `local_redirect` key within the page's YAML front matter. First, move or rename the relevant Markdown file.
-
-![A text editor with the file tree open on the left side.]()
-
-{% multi_lang_include contributing/alerts/tip_locating_a_file.md %}
-
-In the page's YAML front matter, set up the redirect.
+To redirect the URL for an in-page heading, you'll use the `local_redirect` key within the page's YAML front matter. First, move or rename the relevant Markdown file, the use the following syntax in the page's YAML front matter:
 
 ```
 local_redirect:

@@ -16,15 +16,7 @@ noindex: true
 
 ### Step 1: Create a new file
 
-Open the directory you'd like to add a new page to.
-
-![A text editor with the file tree open.]()
-
-{% alert tip %}
-The repository file tree mirrors the Braze Docs site URL. For example, the [Catalogs]({{site.baseurl}}/api/endpoints/catalogs/) page in the API guide is located here: `_api/endpoints/catalogs/`.
-{% endalert %}
-
-Create a new Markdown file for your page.
+Open the relevant directory, then create a new Markdown file for your page.
 
 ```bash
 PAGE_TITLE.md
@@ -34,6 +26,8 @@ Replace `PAGE_TITLE` with the title of your page, which should follow the [Braze
 
 - **Page title:** Setting up your development environment for C++
 - **File name:** `setting_up_your_development_environment_for_cpp.md`
+
+{% multi_lang_include contributing/alerts/tip_locating_a_file.md %}
 
 ### Step 2: Add a layout
 
@@ -72,7 +66,7 @@ This template is only to get you started&#8212;add [additional metadata]({{site.
 
 ## Writing content
 
-Other than the Braze-specific syntax shown in this section, all content be written using [standard Markdown syntax](https://www.markdownguide.org/basic-syntax/).
+Other than the Braze-specific syntax covered in this section, all content be written using [standard Markdown syntax](https://www.markdownguide.org/basic-syntax/).
 
 ### Cross-referencing
 

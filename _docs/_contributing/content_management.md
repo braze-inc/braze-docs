@@ -14,13 +14,13 @@ noindex: true
 
 Braze Docs is managed using docs-as-code, a method for managing documentation that mirrors the software development lifecycle by using a version control system. Braze Docs uses the Git version control system, which allows contributors to work on the same piece of documentation without overwriting each other's work. For more information, see [About version control and Git](https://docs.github.com/en/get-started/using-git/about-git#about-version-control-and-git).
 
-![The Braze Docs repository's home page on GitHub.]()
+![The Braze Docs repository's home page on GitHub.]({% image_buster /assets/img/contributing/github/home_page.png %})
 
 ## Site generator 
 
 Braze Docs is built using Jekyll, a popular static-site generator (SSG) that allows content files and design files to be stored in separate directories, such as `_docs` for content files and `assets` for design files. When the site is built, Jekyll intelligently merges each file and stores them as XML and HTML data in the `_site` directory. For more information, see [Jekyll Directory Structure](https://jekyllrb.com/docs/structure/).
 
-![The home page for Braze Docs.]()
+![The home page for Braze Docs.]({% image_buster /assets/img/contributing/styling_examples/home.png %})
 
 As a contributor, you'll primarily work within the following directories.
 
@@ -60,21 +60,21 @@ Replace the following.
 {% tab example input %}
 ```markdown
 ---
-nav_title: Getting started
-layout: default
-page_order: 5
+nav_title: Contributing to Braze Docs
+article: Contributing to Braze Docs
+description: "Here's what you need to start contributing to Braze Docs!"
+page_order: 0
+search_tag: Contributing
 ---
 
-# Getting started with Braze
+# Contributing to Braze Docs
 
-Learn how you can get started with Braze.
-
-## Step 1: Create an account
+> Thanks for contributing to Braze Docs! Every Tuesday and Thursday, we merge community contributions and deploy them to Braze Docs. Use this guide to get your changes merged during our next deployment.
 ```
 {% endtab %}
 
 {% tab example output %}
-![Example page on Braze Docs.]()
+![Example page on Braze Docs.]({% image_buster /assets/img/contributing/styling_examples/page.png %})
 {% endtab %}
 {% endtabs %}
 
@@ -131,7 +131,7 @@ The primary sections on Braze Docs are:
 
 These primary sections can be accessed on the site header from any page on Braze Docs.
 
-![The primary sections as shown on the site header on Braze Docs.]()
+![The primary sections as shown on the site header on Braze Docs.]({% image_buster /assets/img/contributing/styling_examples/header.png %})
 
 Each primary section is built using [Jekyll collections](https://jekyllrb.com/docs/collections/), which allows related content to be grouped together for easy management. Keep in mind, while all primary sections are collections, not all collections are primary sections. You can find the full list of Braze Docs collections in the Jekyll configuration file, `_config.yml`.
 
@@ -199,25 +199,22 @@ The landing page for each primary section is a standard Markdown file with the `
 ```markdown
 ---
 page_order: 0
-layout: dev_guide
-guide_top_header: "Braze Developer Guide"
-guide_top_text: "This is where developers can find all the integrations available with Braze.<br>For additional resources and to join the Braze developer community, visit the <a href='https://www.braze.com/dev-portal'>Braze developer portal</a>."
-article_title: Braze Developer Guide
-description: "This landing page is where developers can find all the integrations available with Braze."
+nav_title: Home
+article_title: Braze User Guide
+layout: user_guide
+user_top_header: "Braze User Guide"
 ---
 ```
 {% endtab %}
 
 {% tab example output %}
-![An example landing page on Braze Docs.]()
+![An example landing page on Braze Docs.]({% image_buster /assets/img/contributing/styling_examples/primary_section.png %})
 {% endtab %}
 {% endtabs %}
 
 ### Subsections
 
 All primary sections on Braze Docs contain one or more subsection, each representing an expandable item on the left-side navigation.
-
-![An example subsection on Braze Docs with its section expanded on the left-side navigation.]()
 
 Unlike primary sections, subsections can be configured with or without a landing page. Subsections without landing pages are helpful for organizing related content together while minimizing the number of non-useful pages in Braze Docs. Whether a subsection is configured with or without a landing page, all subsections represent both a directory and Markdown file in the repository. For an example, see the following.
 
@@ -253,7 +250,7 @@ config_only: true
 {% endtab %}
 
 {% tab example output %}
-![The left-side navigation on Braze Docs, showing an example of an expanded section without a landing page.]()
+![The left-side navigation on Braze Docs, showing an example of an expanded section without a landing page.]({% image_buster /assets/img/contributing/styling_examples/subsection_config_only.png %})
 {% endtab %}
 {% endtabs %}
 
@@ -270,7 +267,7 @@ page_order: 0
 {% endtab %}
 
 {% tab example output %}
-![The left-side navigation on Braze Docs, showing an example of an expanded section with a landing page.]()
+![The left-side navigation on Braze Docs, showing an example of an expanded section with a landing page.]({% image_buster /assets/img/contributing/styling_examples/subsection_landing_page.png %})
 {% endtab %}
 {% endtabs %}
 
@@ -296,17 +293,19 @@ Replace the following:
 
 {% tabs local %}
 {% tab example input %}
+{% raw %}
 ```markdown
-# Getting started with Braze
+# Pages
 
-Learn how you can get started with Braze.
+> Learn how to create, modify, and remove pages on Braze Docs.
 
-{% raw %}{% multi_lang_include braze/upgrade_notice.md %}{% endraw %}
+{% multi_lang_include contributing/prerequisites.md %}
 ```
+{% endraw %}
 {% endtab %}
 
 {% tab example output %}
-![Content reuse example on Braze Docs.]()
+![Content reuse example on Braze Docs.]({% image_buster /assets/img/contributing/styling_examples/includes.png %})
 {% endtab %}
 {% endtabs %}
 
@@ -332,37 +331,21 @@ Replace `LAYOUT_VALUE` with the name of the layout file and the file extension r
 
 ```plaintext
 braze-docs
-├── _build
-├── _config.yml
-├── _data
-├── _docs
-├── _includes
-│   └── api_glossary.html
-├── _lang
-├── _layouts
-├── _plugins
-├── _site
-├── assets
-├── config
-├── public
-├── scripts
-├── CODE_OF_CONDUCT.md
-├── CONTRIBUTING.md
-├── LICENSE
-└── README.md
+└── _layouts
+    └── api_page.html
 ```
 
 **In-page metadata**
 
 ```markdown
 ---
-layout: api_glossary
+layout: api_page
 ---
 ```
 {% endtab %}
 
 {% tab example output %}
-![API glossary layout example on Braze Docs.]()
+![API glossary layout example on Braze Docs.]({% image_buster /assets/img/contributing/styling_examples/layouts/api_page.png %})
 {% endtab %}
 {% endtabs %}
 
@@ -372,10 +355,8 @@ For more information, see [Page layouts]({{site.baseurl}}/contributing/yaml_fron
 
 ## URLs
 
-URLs on Braze Docs always match the directory structure within the docs repository.
+URLs on Braze Docs always match the directory structure within the docs repository. Given the following example file tree, the URL for `page_a.md` would be `https://www.braze.com/docs/primary_section/subsection_a/page_a`.
 
-{% tabs local %}
-{% tab example file tree %}
 ```plaintext
 braze-docs
 └── _docs
@@ -383,14 +364,6 @@ braze-docs
         └── subsection_a
             └── page_a.md
 ```
-{% endtab %}
-
-{% tab example url %}
-```plaintext
-https://www.braze.com/docs/primary_section/subsection_a/page_a
-```
-{% endtab %}
-{% endtabs %}
 
 This includes URLs for pages located in a [subsection](#subsections) with `config_only:` set to `true`. Even though `config_only` subsections aren't rendered as pages, the subsection's directory name is still used to generate the URLs for pages in that directory. For an example, see the following.
 
@@ -416,7 +389,7 @@ braze-docs
 ```markdown
 ---
 nav_title: Subsection A
-page_order: 0
+page_order: 1 
 config_only: true
 ---
 ```
@@ -437,7 +410,7 @@ Page B URL: https://www.braze.com/docs/primary_section/subsection_a/page_b
 ```markdown
 ---
 nav_title: Subsection B
-page_order: 0
+page_order: 2 
 ---
 ```
 

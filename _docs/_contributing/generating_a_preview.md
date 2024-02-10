@@ -58,7 +58,7 @@ Puma starting in single mode...
 
 By default, your site preview will be generated on localhost [`http://127.0.0.1:4000`](http://127.0.0.1:4000). To open your site preview, open the link in your web browser.
 
-![An example site preview running in a web browser.]()
+![An example site preview running in a web browser.]({% image_buster /assets/img/contributing/styling_examples/home.png %})
 
 ### Step 4: Stop your local server
 

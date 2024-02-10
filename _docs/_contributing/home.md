@@ -1,5 +1,5 @@
 ---
-nav_title: Contributing to Braze Docs
+nav_title: Home
 article: Contributing to Braze Docs
 description: "Here's what you need to start contributing to Braze Docs!"
 page_order: 0
@@ -106,7 +106,7 @@ If you're using [WSL](https://learn.microsoft.com/en-us/windows/wsl/install), fo
 
 Open the [Braze Docs GitHub repository](https://github.com/braze-inc/braze-docs), then select **Fork**.
 
-![The Braze Docs GitHub repository with the "Fork" button highlighted.]()
+![The Braze Docs GitHub repository with the "Fork" button highlighted.]({% image_buster /assets/img/contributing/github/fork_the_repository.png %})
 
 {% alert tip %}
 For more information, see [GitHub: About forks](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/about-forks).
@@ -114,11 +114,11 @@ For more information, see [GitHub: About forks](https://docs.github.com/en/pull-
 
 Keep the default settings, then select **Create fork**.
 
-![The Braze Docs GitHub repository with the "Create fork" button highlighted.]()
+![The Braze Docs GitHub repository with the "Create fork" button highlighted.]({% image_buster /assets/img/contributing/github/create_a_new_fork.png %})
 
 In your forked repository, select **Code** > **SSH** > <i class="fa-regular fa-clone"></i> **Copy**.
 
-![An example forked repository with the "Code" dropdown open and the "Copy" icon highlighted.]()
+![An example forked repository with the "Code" dropdown open and the "Copy" icon highlighted.]({% image_buster /assets/img/contributing/github/clone_the_fork.png %})
 
 In your terminal, open your home directory, then clone the Braze Docs repository.
 

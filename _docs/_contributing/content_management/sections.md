@@ -89,29 +89,10 @@ Replace the following:
 {% alert tip %}
 This template is only to get you started&#8212;add [additional metadata]({{site.baseurl}}/contributing/yaml_front_matter/metadata/) and headings as needed.
 {% endalert %}
-
-Next, open your new directory and create a Markdown file for each new page you want to add to your new section. Your directory structure should be similar to the following:
-
-```plaintext
-braze-docs
-└── _docs
-    └── _developer_guide 
-        └── platform_wide 
-            ├── getting_started 
-            │    ├── integrating_the_sdk.md 
-            │    └── setting_up_push_notifications.md
-            └── getting_started.md
-```
-
-When you're finished adding content to each page, continue to the next section.
-
-{% alert tip %}
-For a full walkthrough on adding content to your page, see [Pages]({{site.baseurl}}/contributing/content_management/pages/#writing-content).
-{% endalert %}
 {% endtab %}
 
 {% tab without landing page %}
-Open your new Markdown file and add the following metadata to set your page's navigation title and disable the landing page.
+Open your subsection's Markdown file and add the following metadata to set your page's navigation title and disable the landing page.
 
 ```markdown
 ---
@@ -134,8 +115,12 @@ noindex: true
 config_only: true
 ---
 ```
+{% endtab %}
+{% endtabs %}
 
-Next, open your new directory and create a Markdown file for each new page you want to add to your new section. Your directory structure should be similar to the following:
+### Step 3: Add additional pages
+
+In your new directory, create a Markdown file for each page. To use the default page layout, use the template in [Step 2]({{site.baseurl}}/contributing/content_management/sections/?tab=with%20landing%20page#step-2-configure-your-section). Your directory structure should be similar to the following:
 
 ```plaintext
 braze-docs
@@ -148,13 +133,11 @@ braze-docs
             └── getting_started.md
 ```
 
-When you're finished adding content to each page, continue to the next section.
+When you're finished adding content to each page, continue to [Ordering a section](#ordering-a-section).
 
 {% alert tip %}
 For a full walkthrough on adding content to your page, see [Pages]({{site.baseurl}}/contributing/content_management/pages/#writing-content).
 {% endalert %}
-{% endtab %}
-{% endtabs %}
 
 ## Ordering a section
 
@@ -168,13 +151,17 @@ page_order:
 
 The `page_order` key represents a page's relative-order in a section on the left-side navigation bar and can be set to any non-negative number (such as `0`, `20`, or `5.5`). This means you'll need to know the `page_order` for each Markdown file in the current directory, but not any other directory (including subdirectories).
 
-Set the `page_order` key for each Markdown file in the current directory to any non-negative number. Your file should be similar to the following:
+Set the `page_order` key for each Markdown file in the current directory to any non-negative number. In the following example, `page_order` is set to `2`.  
 
 ```markdown
 ---
-nav_title: Getting started
-page_order: 2
-noindex: true
-config_only: true
+nav_title: Subsection B
+page_order: 2 
 ---
+
+# Subsection B landing page
 ```
+
+The output is similar to the following:
+
+![The left-side navigation on Braze Docs, with the 'Section B' landing page listed third.]({% image_buster /assets/img/contributing/styling_examples/subsection_landing_page.png %})

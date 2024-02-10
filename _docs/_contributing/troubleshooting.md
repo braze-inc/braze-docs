@@ -10,9 +10,9 @@ noindex: true
 
 > If you're having trouble contributing to Braze Docs, review these common issues first. If the issue you're experiencing isn't listed, [let us know](https://github.com/braze-inc/braze-docs/issues/new?assignees=&labels=issue&projects=&template=report_an_issue.md&title=) so we can add it here.
 
-## Cross-reference link returns 404
+## Cross-reference link returns a 404
 
-If a cross-reference link on your page (such as `{% raw %}[Braze Developer Guide]({{site.baseurl}}/developer_guide/home){% endraw %}`) leads to a 404 page, check the URL for the following string.
+If a cross-reference link on your page (such as `{% raw %}[Braze Developer Guide]({{site.baseurl}}/developer_guide/home){% endraw %}`) returns a 404 page, check the URL for the following string.
 
 ```plaintext
 %7B%7Bsite.baseurl%7D%7D
@@ -24,10 +24,22 @@ A URL containing this string will be similar to the following:
 https://www.braze.com/docs/user_guide/personalization_and_dynamic_content/connected_content/%7B%7Bsite.baseurl%7D%7D/user_guide/administrative/app_settings/message_activity_log_tab
 ```
 
-If you find this string in the URL, one or more of your cross-reference links are surrounded in [Liquid raw tags](https://shopify.dev/docs/api/liquid/tags/raw). Move these tags so that they're only surrounding the Liquid content you want to display as raw.
+If you find this string in the URL, one or more of your cross-reference links are surrounded in the following [Liquid raw tag](https://shopify.dev/docs/api/liquid/tags/raw):
 
-![An image of Liquid's raw tag. An image is used here to prevent Liquid from linting the example.]()
+{% tabs local %}
+{% tab liquid raw tag %}
+![An image of Liquid's raw tag. An image is used here to prevent Liquid from linting the example.]({% image_buster /assets/img/contributing/liquid_examples/raw_tags.png %})
+{% endtab %}
+{% endtabs %}
 
-A cross-reference link surrounded by Liquid raw tags will be similar to the following:
+Move these tags so that they're only surrounding the Liquid content you want to display as raw.
 
-![An image of Liquid's raw tag used in an example code block. An image is used here to prevent Liquid from linting the example.]()
+{% tabs local %}
+{% tab before %}
+![Liquid raw tags incorrectly surround the content. An image is used here to prevent Liquid from linting the example.]({% image_buster /assets/img/contributing/liquid_examples/incorrect_raw_tags.png %})
+{% endtab %}
+
+{% tab after %}
+![Liquid raw tags correctly surround the content. An image is used here to prevent Liquid from linting the example.]({% image_buster /assets/img/contributing/liquid_examples/correct_raw_tags.png %})
+{% endtab %}
+{% endtabs %}

@@ -24,7 +24,7 @@ When you're finished with this tutorial, you'll be able to:
 
 The [Braze Docs GitHub repository](https://github.com/braze-inc/braze-docs) hosts the source files for Braze Docs. Take a few minutes to explore the repository, even if you don't understand everything yet. Over time, you'll become more familiar.
 
-![The Braze Docs GitHub repository homepage.]()
+![The Braze Docs GitHub repository homepage.]({% image_buster /assets/img/contributing/github/home_page.png %})
 
 ## Step 2: Make a change
 
@@ -41,25 +41,29 @@ Before continuing, verify you've completed all [prerequisites](#prerequisites).
 {% tab github %}
 In the [Braze Docs GitHub repository](https://github.com/braze-inc/braze-docs), select `_docs`.
 
-![The Braze Docs GitHub repository homepage with the '_docs' folder highlighted in the file tree.]()
+![The Braze Docs GitHub repository homepage with the '_docs' folder highlighted in the file tree.]({% image_buster /assets/img/contributing/github/select_docs_directory.png %})
 
-Each page's URL on Braze Docs reflects the repository's directory structure. Use your page's URL to find its corresponding text file in the `_docs` directory. For example, `braze.com/home/yaml_front_matter/` can be found on the following page.
+Each page's URL on Braze Docs reflects the repository's directory structure. Use your page's URL to find its corresponding Markdown file in the `_docs` directory. For example, the Markdown file for `braze.com/contributing/home` can be found in `_docs` > `_contributing` > `home.md`.
 
-![The "YAML front matter" page in the "Contributing" section on Braze Docs.]()
+![The "YAML front matter" page in the "Contributing" section on Braze Docs.]({% image_buster /assets/img/contributing/github/example_file_path.png %})
 
 Select **Edit this file**, then make your changes using [Markdown formatting](https://www.markdownguide.org/basic-syntax/).
 
-![An example page on Braze Docs with the "Edit this file" button highlighted.]()
+![An example page on Braze Docs with the "Edit this file" button highlighted.]({% image_buster /assets/img/contributing/github/edit_from_directory.png %})
 
 When you're finished, select **Commit changes**.
 
-![The Braze Docs GitHub repository with the "Commit changes" button highlighted after editing a file.]()
+![The Braze Docs GitHub repository with the "Commit changes" button highlighted after editing a file.]({% image_buster /assets/img/contributing/github/commit_changes.png %})
+
+In the next window, select **Propose changes**.
+
+![The "Propose changes" window after selecting "Commit changes" in GitHub.]({% image_buster /assets/img/contributing/github/propose_changes.png %})
 {% endtab %}
 
 {% tab local environment %}
 Most modern text editors (such as [VS Code](https://code.visualstudio.com/Download) and [Intellij IDEA](https://www.jetbrains.com/idea/download/)) offer an in-app terminal for running commands and interacting with your project files. Open your text editor, then open your text editor's in-app terminal.
 
-![Intellij IDEA with the in-app terminal open.]()
+![Intellij IDEA with the in-app terminal open.]({% image_buster /assets/img/contributing/text_editor_with_terminal.png %})
 
 {% alert tip %}
 If you're having trouble, you can use a stand-alone terminal instead.
@@ -109,8 +113,6 @@ Switched to a new branch 'fixing-typo-in-metadata'
 ```
 
 In your text editor, open the document you want to change, then make your changes using [Markdown formatting](https://www.markdownguide.org/basic-syntax/).
-
-![A text editor with an example document open.]()
 
 {% multi_lang_include contributing/alerts/tip_locating_a_file.md %}
 
@@ -171,9 +173,9 @@ branch 'fixing-typo-in-recommended-software' set up to track 'origin/fixing-typo
 
 ## Step 3: Create a pull-request (PR)
 
-On the homepage for the [Braze Docs GitHub repository](https://github.com/braze-inc/braze-docs), select **Open pull request**.
+If you are not already there, go back to the [repository homepage](https://github.com/braze-inc/braze-docs) and select **Compare & pull request**.
 
-![The Braze Docs GitHub repository homepage with the "Open pull request" button highlighted.]()
+![The Braze Docs GitHub repository homepage with the "Open pull request" button highlighted.]({% image_buster /assets/img/contributing/github/compare_and_pull_request.png %})
 
 In the PR description, you'll see Markdown comments similar to the following:
 
@@ -183,13 +185,13 @@ In the PR description, you'll see Markdown comments similar to the following:
 
 These comments will guide you through your PR description. When you're finished, select the pull request dropdown, then select **Draft pull request**.
 
-![An example pull request with the "Draft pull request" button highlighted.]()
+![An example pull request with the "Draft pull request" button highlighted.]({% image_buster /assets/img/contributing/github/draft_pull_request.png %})
 
 ## Step 4: Preview your changes
 
 In your PR, you can preview your changes in a test environment that's identical to Braze Docs. In most cases, **Vercel bot** will generate a new site preview anytime someone pushes to this PR. To open the site preview, select **View deployment**.
 
-![An example pull request with the "View deployment" button highlighted next to the Vercel bot.]()
+![An example pull request with the "View deployment" button highlighted next to the Vercel bot.]({% image_buster /assets/img/contributing/github/view_deployment.png %})
 
 {% alert note %}
 If **vercel bot** isn't generating a site preview, tag `@docs-team` for help.
@@ -201,11 +203,11 @@ Use the [Braze Docs Style Guide]({{sitebase.url}}/contributing/style_guide/) to 
 
 If you're ready for a member of the Braze Docs team to review your work, select **Ready for review**.
 
-![An example pull request with the "Ready for review" button highlighted.]()
+![An example pull request with the "Ready for review" button highlighted.]({% image_buster /assets/img/contributing/github/ready_for_review.png %})
 
 Next, in the **Reviewers** section, select the gear icon, then add `@docs-team` as a reviewer.
 
-![An example pull request with the "@docs-team" added as the reviewer.]()
+![An example pull request with the "@docs-team" added as the reviewer.]({% image_buster /assets/img/contributing/github/add_docs_team_as_reviewers.png %})
 
 If the docs team requests additional changes after their review, you'll be notified per your [GitHub notification settings](https://docs.github.com/en/account-and-profile/managing-subscriptions-and-notifications-on-github/setting-up-notifications/configuring-notifications). Otherwise, the docs team will approve and merge your changes.
 
@@ -217,29 +219,25 @@ After you or a member of the Braze Docs team reviews your work, you may need to 
 
 {% tabs %}
 {% tab github %}
-In your PR, select **Files Changed**.
+In your PR, select **Files changed**, then locate the file you'd like to update and select <i class="fa-solid fa-ellipsis"></i> **Show options** > **Edit file**.
 
-![An example pull request with the "Files Changes" tab highlighted.]()
-
-Locate the file you'd like to update, then select <i class="fa-solid fa-ellipsis"></i> **Show options** > **Edit file**.
-
-![The "Filed" section in an example pull request with the "Edit file" button highlighted.]()
+![The "Files changed" section in an example pull request with the "Edit file" button highlighted.]({% image_buster /assets/img/contributing/github/edit_from_pr.png %})
 
 When you're finished, select **Commit changes**.
 
-![A file from an example pull request with the "Commit changes" button highlighted after editing.]()
+![A file from an example pull request with the "Commit changes" button highlighted after editing.]({% image_buster /assets/img/contributing/github/commit_changes.png %})
 
 Select **Commit directly to the BRANCH_NAME branch** > **Commit changes**, where `BRANCH_NAME` is the name of your branch.
 
-![The "Commit changes" button highlighted after choosing "Commit directly to BRANCH_NAME branch.]()
+![The "Commit changes" button highlighted after choosing "Commit directly to BRANCH_NAME branch.]({% image_buster /assets/img/contributing/github/confirm_commited_changes.png %})
 
-When you're ready, you can [request a review](#step-5-request-a-review).
+When you're finished, [request a review](#step-5-request-a-review).
 {% endtab %}
 
 {% tab local environment %}
 In your PR, select <i class="fa-regular fa-clone"></i> **Copy** next to your branch name.
 
-![An example pull request with the "Copy" icon highlighted next to the branch name.]()
+![An example pull request with the "Copy" icon highlighted next to the branch name.]({% image_buster /assets/img/contributing/github/clone_the_fork.png %})
 
 In your text editor's terminal, checkout your branch and pull the latest updates from the remote branch in GitHub.
 

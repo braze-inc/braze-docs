@@ -14,11 +14,35 @@ noindex: true
 
 ## Adding a new image
 
-### Step 1: Upload the image file
+### Step 1: Add the image file
 
 In your text editor, open `assets` > `img`. Generally, your new image should be added to the same directory as the other images on your page. However, you may use your best judgment. Confirm your new image follows the [Braze Docs Style Guide]({{site.baseurl}}/contributing/style_guide/), then add the PNG file to the relevant subdirectory.
 
-![A text editor with the file tree open and a new image added to the 'img' directory.]()
+```bash
+braze-docs
+└── assets
+    └── img
+        └── DIRECTORY
+            └── FILE.png
+```
+
+Replace the following:
+
+| Placeholder | Description                                                                               |
+|-------------|-------------------------------------------------------------------------------------------|
+| `DIRECTORY` | The name of the relevant directory. If there's no relevant directory, you may create one. |
+| `FILE`      | The name of the file including the file extension.                                        |
+{: .reset-td-br-1 .reset-td-br-2}
+
+Your image file should be similar to the following:
+
+```bash
+braze-docs
+└── assets
+    └── img
+        └── contributing 
+            └── github_home_page.png
+```
 
 ### Step 2: Link to the image
 
@@ -104,8 +128,6 @@ Your links should be similar to the following:
 
 ## Updating an image
 
-
-
 ### Step 1: Find the original reference
 
 Open the relevant Markdown file and look for the old [in-line]({{site.baseurl}}/contributing/content_management/images/?tab=in-line#step-2-link-to-the-image) or [reference-style]({{site.baseurl}}/contributing/content_management/images/?tab=reference-style#step-2-link-to-the-image) image link, which will be similar the following.
@@ -120,10 +142,27 @@ Open the relevant Markdown file and look for the old [in-line]({{site.baseurl}}/
 
 When updating an existing image, you can either add a new image file or replace the existing image file. Be sure your new image follows the [Braze Docs Style Guide]({{site.baseurl}}/contributing/style_guide/).
 
+- **Overwrite existing file (recommended):** Use this method if the original image depicts accurate content, but is visually out-of-date, such as an image depicting old branding. This method reduces the total number of images stored in the Braze Docs repository.
 - **Add new file:** Use this method if the original image depicts completely out-of-date content, such as an image depicting a deprecated feature or workflow.
-- **Overwrite existing file:** Use this method if the original image depicts accurate content, but is visually out-of-date, such as an image depicting a technology partner's old branding. Always use this method when possible as it reduces the total number of images stored in the Braze Docs repository.
 
 {% tabs local %}
+{% tab overwrite existing file %}
+Rename your new image to match the name of the original image. In the following example, see how the image file names are identical.
+
+- **Original file name:** `getting_started_with_github_select_start3.png`
+- **New file name:** `getting_started_with_github_select_start3.png`
+
+Next, add your new image to the same directory as the original image. If asked, confirm you'd like to overwrite the image. Your image file should be similar to the following:
+
+```bash
+braze-docs
+└── assets
+    └── img
+        └── contributing 
+            └── getting_started_with_github_select_start3.png
+```
+{% endtab %}
+
 {% tab add new file%}
 Generally, your new image should be added to the same directory as the other images on this page, however you may use your best judgment. When you're ready, add the PNG file to the relevant location in `assets/img/`.
 
@@ -131,27 +170,40 @@ Generally, your new image should be added to the same directory as the other ima
 Do not delete the old image file when you add your new one.
 {% endalert %}
 
-![A text editor with the file tree open and a new image added to the 'img' directory.]()
+```bash
+braze-docs
+└── assets
+    └── img
+        └── DIRECTORY
+            └── FILE.png
+```
 
-Link to your image using the [in-line]({{site.baseurl}}/contributing/content_management/images/?tab=in-line#step-2-link-to-the-image) or [reference-style]({{site.baseurl}}/contributing/content_management/images/?tab=reference-style#step-2-link-to-the-image) syntax.
-{% endtab %}
+Replace the following:
 
-{% tab overwrite existing file %}
-Rename your new image to match the name of the original image. In the following example, see how the image file names are identical.
+| Placeholder | Description                                                                               |
+|-------------|-------------------------------------------------------------------------------------------|
+| `DIRECTORY` | The name of the relevant directory. If there's no relevant directory, you may create one. |
+| `FILE`      | The name of the file including the file extension.                                        |
+{: .reset-td-br-1 .reset-td-br-2}
 
-- **Original file name:** `getting_started_with_github_select_start3.png`
-- **New file name:** `getting_started_with_github_select_start3.png`
+Your image file should be similar to the following:
 
-Next, add your new image to the same directory as the original image. If asked, confirm you'd like to overwrite the image.
+```bash
+braze-docs
+└── assets
+    └── img
+        └── contributing 
+            └── github_home_page.png
+```
 
-![A text editor asking the user to confirm they would like to overwrite the existing file.]()
+After your image is added to the relevant directory, you can link to this image using the [in-line]({{site.baseurl}}/contributing/content_management/images/?tab=in-line#step-2-link-to-the-image) or [reference-style]({{site.baseurl}}/contributing/content_management/images/?tab=reference-style#step-2-link-to-the-image) syntax.
 {% endtab %}
 {% endtabs %}
 
 ## Removing an image
 
-To remove an image, open the relevant Markdown file and remove the [in-line]({{site.baseurl}}/contributing/content_management/images/?tab=in-line#step-2-link-to-the-image) or [reference-style]({{site.baseurl}}/contributing/content_management/images/?tab=reference-style#step-2-link-to-the-image) image link.
+To remove an image, open the relevant Markdown file and remove the [in-line]({{site.baseurl}}/contributing/content_management/images/?tab=in-line#step-2-link-to-the-image) or [reference-style]({{site.baseurl}}/contributing/content_management/images/?tab=reference-style#step-2-link-to-the-image) image link. Do not delete the image file from the repository.
 
 {% alert warning %}
-Do not delete the image file from the repository.
+When an image file is deleted, that image will break for other Braze Docs language translations.
 {% endalert %}
