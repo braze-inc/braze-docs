@@ -22,16 +22,17 @@ guide_featured_list:
     image: /assets/img/braze_icons/brush-02.svg
   - name: Custom Listeners
     link: /docs/developer_guide/platform_integration_guides/android/in-app_messaging/customization/custom_listeners/
-    fa_icon: fa fa-cog
+    image: /assets/img/braze_icons/settings-01.svg
   - name: Handling Clicks Manually
     link: /docs/developer_guide/platform_integration_guides/android/in-app_messaging/customization/custom_listeners/
     image: /assets/img/braze_icons/navigation-point-01.svg
   - name: Message Dismissal
     link: /docs/developer_guide/platform_integration_guides/android/in-app_messaging/customization/message_dismissal/
-    fa_icon: fa fa-times
+    image: /assets/img/braze_icons/message-x-circle.svg
   - name: Key-Value Pairs
     link: /docs/developer_guide/platform_integration_guides/android/in-app_messaging/customization/key_value_pairs/
-    fa_icon: fa fa-code
+    image: /assets/img/braze_icons/code-square-01.svg
+
   - name: GIFs
     link: /docs/developer_guide/platform_integration_guides/android/in-app_messaging/customization/gifs/
     fa_icon: fa-solid fa-file-image

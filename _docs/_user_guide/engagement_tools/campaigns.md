@@ -16,7 +16,7 @@ guide_featured_list:
     image: /assets/img/braze_icons/book-closed.svg
   - name: Building Campaigns
     link: /docs/user_guide/engagement_tools/campaigns/building_campaigns/
-    fa_icon: fas fa-list-alt
+    image: /assets/img/braze_icons/list.svg
   - name: Managing Campaigns
     link: /docs/user_guide/engagement_tools/campaigns/managing_campaigns/
     image: /assets/img/braze_icons/edit-05.svg

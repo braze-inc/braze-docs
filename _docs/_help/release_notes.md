@@ -13,31 +13,31 @@ guide_featured_title: "Release notes"
 guide_featured_list:
   - name: 2024
     link: /docs/help/release_notes/2024/
-    fa_icon: fas fa-calendar-alt
+    image: /assets/img/braze_icons/calendar-check-02.svg
   - name: 2023
     link: /docs/help/release_notes/2023/
-    fa_icon: fas fa-calendar-alt
+    image: /assets/img/braze_icons/calendar-check-02.svg
   - name: 2022
     link: /docs/help/release_notes/2022/
-    fa_icon: fas fa-calendar-alt
+    image: /assets/img/braze_icons/calendar-check-02.svg
   - name: 2021
     link: /docs/help/release_notes/2021/
-    fa_icon: fas fa-calendar-alt
+    image: /assets/img/braze_icons/calendar-check-02.svg
   - name: 2020
     link: /docs/help/release_notes/2020/
-    fa_icon: fas fa-calendar-alt
+    image: /assets/img/braze_icons/calendar-check-02.svg
   - name: 2019
     link: /docs/help/release_notes/2019/
-    fa_icon: fas fa-calendar-alt
+    image: /assets/img/braze_icons/calendar-check-02.svg
   - name: 2018
     link: /docs/help/release_notes/2018/
-    fa_icon: fas fa-calendar-alt
+    image: /assets/img/braze_icons/calendar-check-02.svg
   - name: 2017
     link: /docs/help/release_notes/2017/
-    fa_icon: fas fa-calendar-alt
+    image: /assets/img/braze_icons/calendar-check-02.svg
   - name: 2016
     link: /docs/help/release_notes/2016/
-    fa_icon: fas fa-calendar-alt
+    image: /assets/img/braze_icons/calendar-check-02.svg
   - name: Deprecations
     link: /docs/help/release_notes/deprecations/
     fa_icon: far fa-calendar-times

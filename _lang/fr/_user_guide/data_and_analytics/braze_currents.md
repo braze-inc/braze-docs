@@ -28,7 +28,7 @@ guide_featured_list:
   image: /assets/img/braze_icons/message-plus-square.svg
 - name: "Événements de comportement client"
   link: /docs/user_guide/data_and_analytics/braze_currents/customer_behavior_events/
-  fa_icon: fas fa-user
+  image: /assets/img/braze_icons/users-01.svg
 - name: "Comment Braze utilise Currents"
   link: /docs/user_guide/data_and_analytics/braze_currents/how_braze_uses_currents/
   fa_icon: fas fa-arrows-alt

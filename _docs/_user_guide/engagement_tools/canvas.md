@@ -20,7 +20,7 @@ guide_featured_list:
     fa_icon: fas fa-paint-brush
   - name: Canvas Components
     link: /docs/user_guide/engagement_tools/canvas/canvas_components/
-    fa_icon: fas fa-project-diagram 
+    image: /assets/img/braze_icons/dataflow-03.svg 
   - name: Managing Canvases
     link: /docs/user_guide/engagement_tools/canvas/managing_canvases/
     image: /assets/img/braze_icons/edit-05.svg
@@ -29,7 +29,7 @@ guide_featured_list:
     fa_icon: fas fa-vials
   - name: Ideas and Strategies
     link: /docs/user_guide/engagement_tools/canvas/ideas_and_strategies/
-    fa_icon: fas fa-bullseye
+    image: /assets/img/braze_icons/target-04.svg
   - name: Frequently Asked Questions
     link: /docs/user_guide/engagement_tools/canvas/faqs/
     fa_icon: fas fa-question

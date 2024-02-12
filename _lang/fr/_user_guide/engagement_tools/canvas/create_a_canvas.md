@@ -23,16 +23,16 @@ guide_featured_list:
     fa_icon: fas fa-code-branch
   - name: Comportements d’avancement
     link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/advancement/
-    fa_icon: fas fa-user
+    image: /assets/img/braze_icons/users-01.svg
   - name: Événements d'exception
     link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/exception_events/
     fa_icon: fas fa-exchange-alt
   - name: Propriétés d’entrée et propriétés de l’événement Canvas
     link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties/
-    fa_icon: fas fa-user-check
+    image: /assets/img/braze_icons/user-check-01.svg
   - name: Propriétés d’entrées persistantes
     link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/canvas_persistent_entry_properties/
-    fa_icon: fas fa-project-diagram
+    image: /assets/img/braze_icons/dataflow-03.svg
   - name: Messages in-app de Canvas
     link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/in-app_messages_in_canvas/
     fa_icon: fas fa-mobile

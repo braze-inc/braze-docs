@@ -30,7 +30,7 @@ guide_featured_list:
   fa_icon: fa-solid fa-tag
 - name: Canvas Persistent Entry Properties
   link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/canvas_persistent_entry_properties/
-  fa_icon: fas fa-project-diagram
+  image: /assets/img/braze_icons/dataflow-03.svg
 - name: Catalogs
   link: /docs/user_guide/personalization_and_dynamic_content/catalog/
   image: /assets/img/braze_icons/list.svg

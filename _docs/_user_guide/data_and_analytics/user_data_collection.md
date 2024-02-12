@@ -25,7 +25,7 @@ guide_featured_list:
     fa_icon: fa fa-thumbs-up
   - name: User Import
     link: /docs/user_guide/data_and_analytics/user_data_collection/user_import/
-    fa_icon: fas fa-user
+    image: /assets/img/braze_icons/users-01.svg
   - name: User Language Codes
     link: /docs/user_guide/data_and_analytics/user_data_collection/language_codes/
     fa_icon: fas fa-language

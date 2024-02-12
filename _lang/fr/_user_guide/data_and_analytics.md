@@ -30,7 +30,7 @@ guide_featured_list:
     image: /assets/img/braze_icons/users-01.svg
   - name: Données personnalisées
     link: /docs/user_guide/data_and_analytics/custom_data/
-    fa_icon: fas fa-wrench
+    image: /assets/img/braze_icons/tool-01.svg
   - name: Suivi
     link: /docs/user_guide/data_and_analytics/tracking/
     image: /assets/img/braze_icons/line-chart-up-01.svg

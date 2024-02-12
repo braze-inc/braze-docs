@@ -19,7 +19,7 @@ guide_featured_list:
   fa_icon: fas fa-cart-shopping
 - name: Selections
   link: /docs/user_guide/personalization_and_dynamic_content/catalogs/selections/
-  fa_icon: fas fa-list-alt
+  image: /assets/img/braze_icons/list.svg
 - name: Catalogs API Endpoints
   link: /docs/api/endpoints/catalogs/
   fa_icon: fas fa-server

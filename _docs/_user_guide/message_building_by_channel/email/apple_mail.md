@@ -13,7 +13,7 @@ guide_featured_title: "Section Articles"
 guide_featured_list:
 - name: Sending Emails to Apple Private Relay
   link: /docs/user_guide/message_building_by_channel/email/apple_mail/email_private_relay_apple_sso/
-  fa_icon: fa-solid fa-list-check
+  image: /assets/img/braze_icons/list.svg
 - name: Apple Mail Privacy Protection
   link: /docs/user_guide/message_building_by_channel/email/apple_mail/mpp/
   fa_icon: fab fa-apple

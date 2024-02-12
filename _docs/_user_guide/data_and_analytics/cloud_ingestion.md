@@ -17,7 +17,7 @@ guide_featured_list:
     fa_icon: fa-solid fa-users-between-lines
   - name: Available Integrations
     link: /docs/user_guide/data_and_analytics/cloud_ingestion/integrations/
-    fa_icon: fa-solid fa-gears
+    image: /assets/img/braze_icons/settings-01.svg
   - name: Sync Catalogs Data
     link: /docs/user_guide/data_and_analytics/cloud_ingestion/sync_catalogs_data/
     fa_icon: fa-solid fa-rotate

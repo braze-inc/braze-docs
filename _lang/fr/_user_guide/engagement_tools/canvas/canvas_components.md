@@ -24,16 +24,16 @@ guide_featured_list:
     fa_icon: fas fa-random
   - name: Étape de parcours d’audience
     link: /docs/user_guide/engagement_tools/canvas/canvas_components/audience_paths/
-    fa_icon: fa fa-users 
+    image: /assets/img/braze_icons/users-01.svg 
   - name: Étape de parcours d’action  
     link: /docs/user_guide/engagement_tools/canvas/canvas_components/action_paths/
-    fa_icon: fa fa-bolt
+    image: /assets/img/braze_icons/zap.svg
   - name: Étape des chemins d’expérience
     link: /docs/user_guide/engagement_tools/canvas/canvas_components/experiment_step/
     image: /assets/img/braze_icons/columns-01.svg
   - name: Étape de mise à jour de l’utilisateur
     link: /docs/user_guide/engagement_tools/canvas/canvas_components/user_update/
-    fa_icon: fas fa-user-check
+    image: /assets/img/braze_icons/user-check-01.svg
   - name: Facebook Audience Sync
     link: /docs/partners/canvas_steps/facebook_audience_sync/
     fa_icon: fab fa-facebook

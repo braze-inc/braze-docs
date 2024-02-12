@@ -14,10 +14,10 @@ guide_top_text: "Use the endpoints in this section to build a preference center,
 guide_featured_list:
   - name: "GET: Create Preference Center URL"
     link: /docs/api/endpoints/preference_center/get_create_url_preference_center/
-    fa_icon: fas fa-wrench
+    image: /assets/img/braze_icons/tool-01.svg
   - name: "GET: List Preference Centers"
     link: /docs/api/endpoints/preference_center/get_list_preference_center/
-    fa_icon: fas fa-user
+    image: /assets/img/braze_icons/users-01.svg
   - name: "GET: View Preference Center Details"
     link: /docs/api/endpoints/preference_center/get_view_details_preference_center/
     image: /assets/img/braze_icons/mail-04.svg

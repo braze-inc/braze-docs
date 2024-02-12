@@ -17,31 +17,31 @@ guide_featured_title: "Exporter les endpoints de campagne"
 guide_featured_list:
   - name: "GET : Analyse de campagne"
     link: /docs/api/endpoints/export/campaigns/get_campaign_analytics/
-    fa_icon: far fa-chart-bar
+    image: /assets/img/braze_icons/bar-chart-01.svg
   - name: "GET : Informations relatives à la campagne"
     link: /docs/api/endpoints/export/campaigns/get_campaign_details/
-    fa_icon: far fa-chart-bar
+    image: /assets/img/braze_icons/bar-chart-01.svg
   - name: "GET : Liste des campagnes"
     link: /docs/api/endpoints/export/campaigns/get_campaigns/
-    fa_icon: far fa-chart-bar
+    image: /assets/img/braze_icons/bar-chart-01.svg
   - name: "GET : Envoyer des analyses"
     link: /docs/api/endpoints/export/campaigns/get_send_analytics/
-    fa_icon: far fa-chart-bar
+    image: /assets/img/braze_icons/bar-chart-01.svg
 
 guide_menu_title: "Exporter les endpoints Canvas"
 guide_menu_list:
   - name: "GET : Analyse des séries de données de Canvas"
     link: /docs/api/endpoints/export/canvas/get_canvas_analytics/
-    fa_icon: fas fa-project-diagram
+    image: /assets/img/braze_icons/dataflow-03.svg
   - name: "GET : Résumé de l’analyse des Canvas"
     link: /docs/api/endpoints/export/canvas/get_canvas_analytics_summary/
-    fa_icon: fas fa-project-diagram
+    image: /assets/img/braze_icons/dataflow-03.svg
   - name: "GET : Informations relatives au Canvas"
     link: /docs/api/endpoints/export/canvas/get_canvas_details/
-    fa_icon: fas fa-project-diagram
+    image: /assets/img/braze_icons/dataflow-03.svg
   - name: "GET : Liste des Canvas"
     link: /docs/api/endpoints/export/canvas/get_canvases/
-    fa_icon: fas fa-project-diagram
+    image: /assets/img/braze_icons/dataflow-03.svg
 
 guide_menu_title2: "Exporter les endpoints des événements personnalisés"
 guide_menu_list2:
@@ -56,28 +56,28 @@ guide_menu_title3: "Exportation des endoints de l’indicateur clé de performan
 guide_menu_list3:
   - name: "GET : Indicateurs clé de performance pour les nouveaux utilisateurs quotidiens par date"
     link: /docs/api/endpoints/export/kpi/get_kpi_daily_new_users_date/
-    fa_icon: fas fa-bullseye
+    image: /assets/img/braze_icons/target-04.svg
   - name: "GET : Indicateurs clé de performance pour les utilisateurs actifs quotidiens par date"
     link: /docs/api/endpoints/export/kpi/get_kpi_dau_date/
-    fa_icon: fas fa-bullseye
+    image: /assets/img/braze_icons/target-04.svg
   - name: "GET : Indicateurs clé de performance pour les utilisateurs actifs mensuels au cours des 30 derniers jours"
     link: /docs/api/endpoints/export/kpi/get_kpi_mau_30_days/
-    fa_icon: fas fa-bullseye
+    image: /assets/img/braze_icons/target-04.svg
   - name: "GET : Indicateurs clé de performance pour les désinstallations par date"
     link: /docs/api/endpoints/export/kpi/get_kpi_uninstalls_date/
-    fa_icon: fas fa-bullseye
+    image: /assets/img/braze_icons/target-04.svg
 
 guide_menu_title4: "Exporter les endpoints du fil d’actualité"
 guide_menu_list4:
   - name: "GET : Statistiques d’engagement de carte de fil d’actualité"
     link: /docs/api/endpoints/export/news_feed/get_news_feed_card_analytics/
-    fa_icon: fas fa-stream
+    image: /assets/img/braze_icons/download-cloud-01.svg
   - name: "GET : Informations relatives à la carte de fil d’actualité"
     link: /docs/api/endpoints/export/news_feed/get_news_feed_card_details/
-    fa_icon: fas fa-stream
+    image: /assets/img/braze_icons/download-cloud-01.svg
   - name: "GET : Liste des cartes de fil d’actualité"
     link: /docs/api/endpoints/export/news_feed/get_news_feed_cards/
-    fa_icon: fas fa-stream
+    image: /assets/img/braze_icons/download-cloud-01.svg
 
 guide_menu_title5: "Endpoint d’exportation des achats"
 guide_menu_list5:
@@ -107,11 +107,11 @@ guide_menu_title8: "Exporter les endpoints de données utilisateur"
 guide_menu_list8:
   - name: "POST : Données utilisateur par identifiant"
     link: /docs/api/endpoints/export/user_data/post_users_identifier/
-    fa_icon: fas fa-user
+    image: /assets/img/braze_icons/users-01.svg
   - name: "POST : Données utilisateur par segment"
     link: /docs/api/endpoints/export/user_data/post_users_segment/
-    fa_icon: fas fa-user
+    image: /assets/img/braze_icons/users-01.svg
   - name: "POST : Données utilisateur par groupe de contrôle global"
     link: /docs/api/endpoints/export/user_data/post_users_global_control_group/
-    fa_icon: fas fa-user
+    image: /assets/img/braze_icons/users-01.svg
 ---

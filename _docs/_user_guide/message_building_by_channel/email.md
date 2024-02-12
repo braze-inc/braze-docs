@@ -40,7 +40,7 @@ guide_menu_list:
   image: /assets/img/braze_icons/mail-01.svg
 - name: Preference Center
   link: /docs/user_guide/message_building_by_channel/email/preference_center/
-  fa_icon: fa-solid fa-list-check
+  image: /assets/img/braze_icons/list.svg
 - name: CSS Inlining
   link: /docs/user_guide/message_building_by_channel/email/html_editor/css_inline/
   fa_icon: fas fa-align-left

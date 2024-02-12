@@ -18,13 +18,13 @@ guide_featured_list:
     link: /docs/api/basics/
   - name: API Identifier Types
     link: /docs/api/identifier_types/
-    fa_icon: fa-solid fa-clipboard-list
+    image: /assets/img/braze_icons/clipboard-check.svg
   - name: Objects & Filters
     link: /docs/api/objects_filters/
-    fa_icon: fa-solid fa-gear
+    image: /assets/img/braze_icons/settings-01.svg
   - name: Errors & Responses
     link: /docs/api/errors/
-    fa_icon: fa-solid fa-list-check
+    image: /assets/img/braze_icons/list.svg
   - name: Data Retention
     link: /docs/api/data_retention/
     image: /assets/img/braze_icons/laptop-02.svg

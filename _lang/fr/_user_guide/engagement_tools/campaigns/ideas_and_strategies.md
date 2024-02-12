@@ -20,13 +20,13 @@ guide_featured_list:
     fa_icon: far fa-user
   - name: Campagnes de reciblage
     link: /docs/user_guide/engagement_tools/campaigns/ideas_and_strategies/retargeting_campaigns/
-    fa_icon: fas fa-bullseye
+    image: /assets/img/braze_icons/target-04.svg
 
 guide_menu_title: "Autres articles"
 guide_menu_list:
   - name:  Bonnes pratiques
     link: /docs/user_guide/engagement_tools/campaigns/ideas_and_strategies/best_practices/
-    fa_icon: fas fa-bullseye
+    image: /assets/img/braze_icons/target-04.svg
   - name: Localisation
     link: /docs/user_guide/engagement_tools/campaigns/ideas_and_strategies/localizing_a_campaign/
     image: /assets/img/braze_icons/globe-02.svg
@@ -38,5 +38,5 @@ guide_menu_list:
     fa_icon: fas fa-mobile
   - name: Liens d’ajout au calendrier
     link: /docs/user_guide/engagement_tools/campaigns/ideas_and_strategies/add_to_calendar_links/
-    fa_icon: fas fa-calendar
+    image: /assets/img/braze_icons/calendar-date.svg
 ---

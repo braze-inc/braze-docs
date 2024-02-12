@@ -26,7 +26,7 @@ guide_featured_list:
   fa_icon: fas fa-address-card
 - name: Migration des données utilisateur
   link: /docs/user_guide/onboarding_with_braze/sms_setup/user_data_migration/
-  fa_icon: fas fa-user
+  image: /assets/img/braze_icons/users-01.svg
 - name: Envoi de message SMS
   link: /docs/user_guide/onboarding_with_braze/sms_setup/sms_sending/
   fa_icon: fas fa-comment-alt

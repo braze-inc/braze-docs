@@ -13,7 +13,7 @@ guide_featured_title: "Section Articles"
 guide_featured_list:
   - name: Suivi du pixel d’ouverture et des clics dans les e-mails
     link: /docs/user_guide/data_and_analytics/tracking/email_tracking/
-    fa_icon: fas fa-user
+    image: /assets/img/braze_icons/users-01.svg
   - name: Suivi de désinstallation
     link: /docs/user_guide/data_and_analytics/tracking/uninstall_tracking/
     fa_icon: fas fa-undo

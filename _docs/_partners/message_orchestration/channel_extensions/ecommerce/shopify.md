@@ -34,7 +34,7 @@ guide_featured_list:
   fa_icon: fas fa-cart-shopping
 - name: Use Cases
   link: /docs/shopify_use_cases/
-  fa_icon: fa fa-users
+  image: /assets/img/braze_icons/users-01.svg
 
 ---
 <br><br>

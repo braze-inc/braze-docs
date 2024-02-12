@@ -21,7 +21,7 @@ guide_featured_list:
   fa_icon: fa-solid fa-users
 - name: Paramètres
   link: /docs/user_guide/administrative/app_settings/
-  fa_icon: fa-solid fa-gears
+  image: /assets/img/braze_icons/settings-01.svg
 ---
 
 <br> 

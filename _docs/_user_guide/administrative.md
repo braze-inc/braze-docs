@@ -18,16 +18,16 @@ guide_featured_list:
   fa_icon: fa-regular fa-building
 - name: Billing
   link: /docs/user_guide/administrative/app_settings/subscription_and_usage/
-  fa_icon: fa fa-users
+  image: /assets/img/braze_icons/users-01.svg
 - name: Company Users
   link: /docs/user_guide/administrative/app_settings/manage_your_braze_users/
   fa_icon: fa-solid fa-users
 - name: Settings
   link: /docs/user_guide/administrative/app_settings/
-  fa_icon: fa-solid fa-gears
+  image: /assets/img/braze_icons/settings-01.svg
 - name: Privacy
   link: /docs/user_guide/administrative/privacy/
-  fa_icon: fas fa-user-shield
+  image: /assets/img/braze_icons/user-square.svg
 ---
 
 <br> 

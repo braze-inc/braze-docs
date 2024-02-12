@@ -20,7 +20,7 @@ guide_featured_list:
     image: /assets/img/braze_icons/brush-02.svg
   - name: Personnaliser le flux
     link: /docs/developer_guide/platform_integration_guides/ios/content_cards/customization/customizing_feed/
-    fa_icon: fa fa-cog
+    image: /assets/img/braze_icons/settings-01.svg
   - name: Gestion manuelle des clics
     link: /docs/developer_guide/platform_integration_guides/ios/content_cards/customization/handling_clicks_manually/
     image: /assets/img/braze_icons/navigation-point-01.svg
@@ -29,7 +29,7 @@ guide_featured_list:
     image: /assets/img/braze_icons/book-closed.svg
   - name: Badges
     link: /docs/developer_guide/platform_integration_guides/ios/content_cards/customization/badges/
-    fa_icon: fa fa-id-badge
+    image: /assets/img/braze_icons/key-01.svg
   - name: Cas d’utilisation de la vue carrousel
     link: /docs/developer_guide/platform_integration_guides/ios/content_cards/customization/use_cases/carousel_view/
     image: /assets/img/braze_icons/switch-horizontal-01.svg

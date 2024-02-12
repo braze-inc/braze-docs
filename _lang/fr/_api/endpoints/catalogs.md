@@ -49,7 +49,7 @@ guide_menu_list2:
     image: /assets/img/braze_icons/list.svg
   - name: "GET : Lister les détails de plusieurs produits du catalogue"
     link: /docs/api/endpoints/catalogs/catalog_items/synchronous/get_catalog_items_details_bulk/
-    fa_icon: fas fa-list-alt
+    image: /assets/img/braze_icons/list.svg
   - name: "PATCH : Éditer un produit du catalogue"
     link: /docs/api/endpoints/catalogs/catalog_items/synchronous/patch_catalog_item/
     image: /assets/img/braze_icons/user-edit.svg

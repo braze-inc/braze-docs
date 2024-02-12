@@ -21,7 +21,7 @@ guide_featured_list:
     image: /assets/img/braze_icons/mail-01.svg
   - name: "POST : modifier le statut de l’abonnement aux e-mails"
     link: /docs/api/endpoints/email/post_email_subscription_status/
-    fa_icon: fas fa-at
+    image: /assets/img/braze_icons/at-sign.svg
   - name: "POST : supprimer les rebonds élevés"
     link: /docs/api/endpoints/email/post_remove_hard_bounces/
     image: /assets/img/braze_icons/message-plus-square.svg

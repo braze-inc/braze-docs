@@ -13,13 +13,13 @@ guide_featured_title: "Section Articles"
 guide_featured_list:
 - name: Adding Users
   link: /docs/user_guide/administrative/app_settings/manage_your_braze_users/adding_users_to_your_dashboard/
-  fa_icon: fas fa-user-plus
+  image: /assets/img/braze_icons/user-plus-01.svg
 - name: Deleting Users
   link: /docs/user_guide/administrative/app_settings/manage_your_braze_users/adding_users_to_your_dashboard//
-  fa_icon: fas fa-user-times
+  /assets/img/braze_icons/user-minus-01.svg
 - name: Setting User Permissions
   link: /docs/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/
-  fa_icon: fas fa-user-shield
+  image: /assets/img/braze_icons/user-square.svg
 - name: Teams
   link: /docs/user_guide/administrative/app_settings/manage_your_braze_users/teams/
   image: /assets/img/braze_icons/users-01.svg

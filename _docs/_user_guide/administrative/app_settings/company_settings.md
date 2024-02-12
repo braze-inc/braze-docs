@@ -22,7 +22,7 @@ guide_featured_list:
   image: /assets/img/braze_icons/shield-01.svg
 - name: Automated User Provisioning
   link: /docs/user_guide/administrative/app_settings/company_settings/automated_user_provisioning/
-  fa_icon: fas fa-user-plus
+  image: /assets/img/braze_icons/user-plus-01.svg
 ---
 
 {% alert warning %}

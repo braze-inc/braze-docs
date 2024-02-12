@@ -22,7 +22,7 @@ guide_featured_list:
   fa_icon: fas fa-flask
 - name: Feature Flags in Canvas
   link: /docs/developer_guide/platform_wide/feature_flags/canvas/
-  fa_icon: fas fa-project-diagram
+  image: /assets/img/braze_icons/dataflow-03.svg
 - name: Frequently Asked Questions
   link: /docs/developer_guide/platform_wide/feature_flags/faq/
   fa_icon: fas fa-question

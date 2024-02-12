@@ -46,7 +46,7 @@ guide_menu_list2:
     fa_icon: fas fa-tools
   - name: Company Users
     link: /docs/user_guide/administrative/app_settings/manage_your_braze_users/
-    fa_icon: fas fa-user-cog
+    image: /assets/img/braze_icons/users-01.svg
   - name: Billing
     link: /docs/user_guide/administrative/app_settings/subscription_and_usage/
     fa_icon: fas fa-money-bill

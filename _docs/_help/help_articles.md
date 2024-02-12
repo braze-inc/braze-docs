@@ -22,7 +22,7 @@ guide_featured_list:
     image: /assets/img/braze_icons/annotation.svg
   - name: Content Cards
     link: /docs/help/help_articles/content_cards/
-    fa_icon: fas fa-stream
+    image: /assets/img/braze_icons/sticker-square.svg
   - name: Data
     link: /docs/help/help_articles/data/
     image: /assets/img/braze_icons/line-chart-up-01.svg

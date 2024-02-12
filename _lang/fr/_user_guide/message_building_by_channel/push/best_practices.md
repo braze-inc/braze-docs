@@ -28,7 +28,7 @@ guide_featured_list:
   image: /assets/img/braze_icons/mail-01.svg
 - name: Activation et abonnement aux notifications push
   link: /docs/user_guide/message_building_by_channel/push/users_and_subscriptions/
-  fa_icon: fas fa-user-check
+  image: /assets/img/braze_icons/user-check-01.svg
 - name: "Envoyer des messages de test"
   link: /docs/user_guide/engagement_tools/campaigns/testing_and_more/sending_test_messages/
   image: /assets/img/braze_icons/mail-01.svg

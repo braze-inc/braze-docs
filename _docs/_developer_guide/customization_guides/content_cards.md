@@ -22,7 +22,7 @@ guide_featured_list:
     image: /assets/img/braze_icons/brush-02.svg
   - name: Customizing Content Card Behavior
     link: /docs/developer_guide/customization_guides/content_cards/customizing_behavior/
-    fa_icon: fa fa-cog
+    image: /assets/img/braze_icons/settings-01.svg
   - name: Customizing the Default Content Card Feed
     link: /docs/developer_guide/customization_guides/content_cards/customizing_feed/
     image: /assets/img/braze_icons/book-closed.svg

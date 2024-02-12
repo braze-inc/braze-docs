@@ -21,7 +21,7 @@ guide_featured_list:
     fa_icon: fas fa-filter
   - name: Entonnoirs de segments
     link: /docs/user_guide/engagement_tools/segments/segment_funnels/
-    fa_icon: fas fa-user-slash
+    image: /assets/img/braze_icons/users-right.svg
 
 guide_menu_title: "Autres articles"
 guide_menu_list:

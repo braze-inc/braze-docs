@@ -22,7 +22,7 @@ guide_featured_list:
   fa_icon: fas fa-sms
 - name: Managing Consent
   link: /docs/user_guide/administrative/privacy/managing_consent
-  fa_icon: fas fa-user-shield
+  image: /assets/img/braze_icons/user-square.svg
 ---
 
 ## Legal Disclaimer

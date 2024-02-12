@@ -31,7 +31,7 @@ guide_menu_title: "Autres articles"
 guide_menu_list:
 - name: Centre de préférences
   link: /docs/user_guide/message_building_by_channel/email/preference_center/
-  fa_icon: fa-solid fa-list-check
+  image: /assets/img/braze_icons/list.svg
 - name: Inlining CSS
   link: /docs/user_guide/message_building_by_channel/email/css_inline/
   fa_icon: fas fa-align-left

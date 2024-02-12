@@ -21,7 +21,7 @@ guide_featured_title: "Endpoints des données utilisateur"
 guide_featured_list:
   - name: "POST : Créer un nouvel alias utilisateur"
     link: /docs/api/endpoints/user_data/post_user_alias/
-    fa_icon: fas fa-user
+    image: /assets/img/braze_icons/users-01.svg
   - name: "POST : Mettre à jour un alias d’utilisateur"
     link: /docs/api/endpoints/user_data/post_users_alias_update/
     image: /assets/img/braze_icons/user-edit.svg
@@ -42,7 +42,7 @@ guide_menu_title: "Endpoints de migration de l’ID externe"
 guide_menu_list:
   - name: "POST : renommer des ID externes"
     link: /docs/api/endpoints/user_data/external_id_migration/post_external_ids_rename/
-    fa_icon: fas fa-user
+    image: /assets/img/braze_icons/users-01.svg
   - name: "POST : supprimer les ID externes obsolètes"
     link: /docs/api/endpoints/user_data/external_id_migration/post_external_ids_remove/
     image: /assets/img/braze_icons/user-minus-01.svg

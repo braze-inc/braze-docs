@@ -41,6 +41,6 @@ guide_menu_list:
     fa_icon: fas fa-filter
   - name: Retention Reports
     link: /docs/user_guide/data_and_analytics/reporting/retention_reports/
-    fa_icon: fas fa-user-check
+    image: /assets/img/braze_icons/user-check-01.svg
 
 ---

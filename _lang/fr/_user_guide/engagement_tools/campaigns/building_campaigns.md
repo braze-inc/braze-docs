@@ -23,10 +23,10 @@ guide_featured_list:
     image: /assets/img/braze_icons/line-chart-up-01.svg
   - name: Ciblage des utilisateurs
     link: /docs/user_guide/engagement_tools/campaigns/building_campaigns/targeting_users/
-    fa_icon: fas fa-bullseye
+    image: /assets/img/braze_icons/target-04.svg
   - name: Événements de conversion
     link: /docs/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/
-    fa_icon: fas fa-calendar-check
+    image: /assets/img/braze_icons/calendar-check-02.svg
   - name: Limitation du taux et limite de fréquence
     link: /docs/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/
     fa_icon: fas fa-exclamation-triangle

@@ -31,7 +31,7 @@ guide_featured_list:
   fa_icon: fa-solid fa-database
 - name: Cas d’utilisation
   link: /docs/shopify_use_cases/
-  fa_icon: fa fa-users
+  image: /assets/img/braze_icons/users-01.svg
 
 ---
 <br><br>

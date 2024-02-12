@@ -11,7 +11,7 @@ guide_menu_title: ""
 guide_menu_list:
   - name: Deleting Users via API
     link: /docs/help/help_articles/api/delete_user/
-    fa_icon: fas fa-user-times
+    /assets/img/braze_icons/user-minus-01.svg
   - name: How campaign and Canvas attributes differ across sources
     link: /docs/help/help_articles/api/attribute_name_id_across_sources/
     fa_icon: fas fa-circle-info

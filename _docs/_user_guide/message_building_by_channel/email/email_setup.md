@@ -22,7 +22,7 @@ guide_featured_list:
   image: /assets/img/braze_icons/check-square-broken.svg
 - name: "Email Authentication"
   link: /docs/user_guide/message_building_by_channel/email/email_setup/authentication/
-  fa_icon: fas fa-user-shield
+  image: /assets/img/braze_icons/user-square.svg
 - name: "Importing Your Email List"
   link: /docs/user_guide/message_building_by_channel/email/email_setup/import_your_email_list/
   fa_icon: fas fa-list

@@ -18,7 +18,7 @@ guide_featured_list:
     fa_icon: fas fa-server
   - name: Mode d’emploi de Braze
     link: /docs/user_guide/onboarding_with_braze/learning_to_use_braze/
-    fa_icon: fas fa-user-graduate
+    image: /assets/img/braze_icons/graduation-hat-01.svg
   - name: Présentation du SDK pour les marketeurs
     link: /docs/user_guide/onboarding_with_braze/web_sdk/
     image: /assets/img/braze_icons/globe-02.svg
@@ -27,7 +27,7 @@ guide_featured_list:
     fa_icon: fa fa-asterisk
   - name: Abonnement et utilisation
     link: /docs/user_guide/onboarding_with_braze/subscription_and_usage/
-    fa_icon: fa fa-users
+    image: /assets/img/braze_icons/users-01.svg
   - name: Configuration d’e-mail
     link: /docs/user_guide/onboarding_with_braze/email_setup/
     image: /assets/img/braze_icons/mail-01.svg

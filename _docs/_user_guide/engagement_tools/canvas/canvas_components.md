@@ -24,19 +24,19 @@ guide_featured_list:
     fa_icon: fas fa-random
   - name: Audience Paths Step
     link: /docs/user_guide/engagement_tools/canvas/canvas_components/audience_paths/
-    fa_icon: fa fa-users 
+    image: /assets/img/braze_icons/users-01.svg 
   - name: Action Paths Step  
     link: /docs/user_guide/engagement_tools/canvas/canvas_components/action_paths/
-    fa_icon: fa fa-bolt
+    image: /assets/img/braze_icons/zap.svg
   - name: Experiment Paths Step
     link: /docs/user_guide/engagement_tools/canvas/canvas_components/experiment_step/
     image: /assets/img/braze_icons/columns-01.svg
   - name: User Update Step
     link: /docs/user_guide/engagement_tools/canvas/canvas_components/user_update/
-    fa_icon: fas fa-user-check
+    image: /assets/img/braze_icons/user-check-01.svg
   - name: Feature Flags in Canvas
     link: /docs/developer_guide/platform_wide/feature_flags/canvas/
-    fa_icon: fas fa-project-diagram
+    image: /assets/img/braze_icons/dataflow-03.svg
   - name: Canvas Audience Sync
     link: /docs/partners/canvas_steps/
     fa_icon: fa-solid fa-rotate

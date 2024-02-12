@@ -20,7 +20,7 @@ guide_featured_list:
     image: /assets/img/braze_icons/brush-02.svg
   - name: Badges
     link: /docs/developer_guide/platform_integration_guides/ios/news_feed/customization/badges/
-    fa_icon: fa fa-id-badge
+    image: /assets/img/braze_icons/key-01.svg
 
 
 

@@ -13,7 +13,7 @@ guide_featured_title: "Section articles"
 guide_featured_list:
   - name: Open Pixel and Click Tracking
     link: /docs/user_guide/data_and_analytics/tracking/email_tracking/
-    fa_icon: fas fa-user
+    image: /assets/img/braze_icons/users-01.svg
   - name: Uninstall Tracking
     link: /docs/user_guide/data_and_analytics/tracking/uninstall_tracking/
     fa_icon: fas fa-undo

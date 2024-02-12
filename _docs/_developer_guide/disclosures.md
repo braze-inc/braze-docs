@@ -22,7 +22,7 @@ guide_featured_list:
     image: /assets/img/braze_icons/asterisk-01.svg
   - name: Security Qualifications
     link: /docs/developer_guide/disclosures/security_qualifications/
-    fa_icon: fas fa-user-shield
+    image: /assets/img/braze_icons/user-square.svg
   - name: Data Protection Technical Assistance
     link: /docs/help/dp-technical-assistance/
     image: /assets/img/braze_icons/globe-04.svg

@@ -26,10 +26,10 @@ guide_menu_title: "More articles"
 guide_menu_list:
   - name: Re-eligibility for Campaigns
     link: /docs/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/reeligibility/
-    fa_icon: fas fa-user-clock
+    image: /assets/img/braze_icons/clock.svg
   - name: Campaign Calendar
     link: /docs/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/campaign_calendar/
-    fa_icon: fas fa-calendar-alt
+    image: /assets/img/braze_icons/calendar-check-02.svg
 ---
 
 

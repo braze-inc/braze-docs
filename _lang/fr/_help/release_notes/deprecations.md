@@ -26,7 +26,7 @@ guide_featured_list:
     fa_icon: fas fa-lock
   - name: Intégration du Webhook Twilio
     link: /docs/help/release_notes/deprecations/twilio/
-    fa_icon: fa fa-commenting
+    image: /assets/img/braze_icons/annotation.svg
   - name: Partenariat avec Grouparoo
     link: /docs/help/release_notes/deprecations/grouparoo
     fa_icon: fa-solid fa-user-group

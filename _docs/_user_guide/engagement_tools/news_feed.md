@@ -24,5 +24,5 @@ guide_featured_list:
     image: /assets/img/braze_icons/line-chart-up-01.svg
   - name: Use Cases
     link: /docs/user_guide/engagement_tools/news_feed/news_feed_use_cases/
-    fa_icon: fas fa-user-tie
+    image: /assets/img/braze_icons/user-circle.svg
 ---

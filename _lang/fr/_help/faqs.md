@@ -14,7 +14,7 @@ guide_featured_list:
     fa_icon: fas fa-brush
   - name: FAQ Campagnes
     link: /docs/user_guide/engagement_tools/campaigns/faq/
-    fa_icon: fas fa-paper-plane
+    image: /assets/img/braze_icons/send-01.svg
   - name: "FAQ sur les modèles d’e-mails et de liens"
     link: /docs/user_guide/message_building_by_channel/email/templates/faq/
     fa_icon: fas fa-link
@@ -60,7 +60,7 @@ guide_menu_title: "Bonnes pratiques"
 guide_menu_list:
   - name: "Meilleures pratiques pour les cartes de contenu"
     link: /docs/user_guide/message_building_by_channel/content_cards/best_practices/
-    fa_icon: fas fa-stream
+    image: /assets/img/braze_icons/sticker-square.svg
   - name: "Meilleures pratiques pour e-mail"
     link: /docs/user_guide/message_building_by_channel/email/best_practices/
     image: /assets/img/braze_icons/mail-01.svg

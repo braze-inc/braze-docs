@@ -26,6 +26,6 @@ guide_featured_list:
     image: /assets/img/braze_icons/globe-02.svg
   - name: Envoyer des Canvas de test
     link: /docs/user_guide/engagement_tools/canvas/testing_canvases/sending_test_canvases/
-    fa_icon: fas fa-user-check
+    image: /assets/img/braze_icons/user-check-01.svg
 
 ---
