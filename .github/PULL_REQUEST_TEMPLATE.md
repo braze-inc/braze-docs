@@ -47,7 +47,7 @@ Closes #**ISSUE_NUMBER_HERE**
 <details>
 <summary>❗ ATTN: Internal Reviewing Chart </summary>
 <br>
-<b>Work at Braze and not sure who to tag for review?</b> <br>Before tagging @josh-mccrowell-braze or @bre-fitzgerald for a general review, reference the following chart to see if a specific product vertical/reviewer applies to your pull request.
+<b>Work at Braze and not sure who to tag for review?</b> <br>Before tagging @josh-mccrowell-braze or @internetisaiah for a general review, reference the following chart to see if a specific product vertical/reviewer applies to your pull request.
 <br><br>
 <table>
 <tr>
