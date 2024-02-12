@@ -284,7 +284,7 @@ After adding a path to your property, click **Validate** to verify that the valu
 
 ![Filtering based on a most played song custom attribute where a listener has played a song over a specified number of times][6]
 
-To segment with nested custom attributes, select the "Nested Custom Attributes" filter to expose a dropdown from which you can select a specific nested custom attribute.
+To segment with nested custom attributes, select the **Nested Custom Attributes** filter to expose a dropdown from which you can select a specific nested custom attribute.
 
 ![][17]{: style="max-width:70%;"}
 
