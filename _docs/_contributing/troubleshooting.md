@@ -28,7 +28,7 @@ If you find this string in the URL, one or more of your cross-reference links ar
 
 {% tabs local %}
 {% tab liquid raw tag %}
-![An image of Liquid's raw tag. An image is used here to prevent Liquid from linting the example.]({% image_buster /assets/img/contributing/liquid_examples/raw_tags.png %})
+![An image of Liquid's raw tag. An image is used here to prevent Liquid from linting the example.]({% image_buster /assets/img/contributing/liquid_examples/raw_tags.png %}){: style="max-width:45%;"}
 {% endtab %}
 {% endtabs %}
 

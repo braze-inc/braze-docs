@@ -89,6 +89,6 @@ The reference would be similar to the following:
 {% endtab %}
 
 {% tab example output %}
-![Content reuse example on Braze Docs.]({% image_buster /assets/img/contributing/styling_examples/includes.png %})
+![Content reuse example on Braze Docs.]({% image_buster /assets/img/contributing/styling_examples/includes.png %}){: style="max-width:90%;"}
 {% endtab %}
 {% endtabs %}

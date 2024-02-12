@@ -87,7 +87,7 @@ branch 'fixing-typo-in-recommended-software' set up to track 'origin/fixing-typo
 
 Next, go to the [Braze Docs GitHub repository](https://github.com/braze-inc/braze-docs), then select **Compare & pull request**.
 
-![The Braze Docs GitHub repository with the "Open pull request" button highlighted.]({% image_buster /assets/img/contributing/github/compare_and_pull_request.png %})
+![The Braze Docs GitHub repository showing "Open pull request".]({% image_buster /assets/img/contributing/github/compare_and_pull_request.png %})
 
 In the PR description, you'll see Markdown comments similar to the following. Use these comments to help fill out your PR.
 
@@ -97,17 +97,17 @@ In the PR description, you'll see Markdown comments similar to the following. Us
 
 When you're finished, select the pull request dropdown, then select **Draft pull request**.
 
-![The Braze Docs GitHub repository with the "Draft pull request" button highlighted.]({% image_buster /assets/img/contributing/github/draft_pull_request.png %})
+![The Braze Docs GitHub repository showing "Draft pull request".]({% image_buster /assets/img/contributing/github/draft_pull_request.png %}){: style="max-width:65%;"}
 
 ## Requesting a review
 
 To request a PR review from a member of the Braze Docs team, open the [PR you previously created](#creating-a-pull-request) and select **Ready for review**.
 
-![An example pull request with the "Ready for review" button highlighted.]({% image_buster /assets/img/contributing/github/ready_for_review.png %})
+![An example pull request with the "Ready for review" button highlighted.]({% image_buster /assets/img/contributing/github/ready_for_review.png %}){: style="max-width:75%;"}
 
-**Reviewers** and type `@docs-team`. Select the team name and press <kbd>Esc</kbd> or click out of the dropdown to confirm your selection.
+**Reviewers** and type `docs-team`. Select the team name and press <kbd>Esc</kbd> or click out of the dropdown to confirm your selection.
 
-![An example pull request with the "@docs-team" added as the reviewer.]({% image_buster /assets/img/contributing/github/add_docs_team_as_reviewers.png %})
+![An example pull request with "docs-team" added as the reviewer.]({% image_buster /assets/img/contributing/github/add_docs_team_as_reviewers.png %}){: style="max-width:55%;"}
 
 If the Braze Docs team requests additional changes after their review, you'll be notified per your [GitHub notification settings](https://docs.github.com/en/account-and-profile/managing-subscriptions-and-notifications-on-github/setting-up-notifications/configuring-notifications). If no changes are required, the team will approve and merge your changes.
 
