@@ -55,7 +55,7 @@ Use this Liquid tag  ``{% catalog_items <name_of_your_catalog> {{canvas_entry_pr
 
 ## Connecting an email capture form
 
-If you have an email capture form to collect user interest in a specific product, you can connect the form to back-in-stock notifications and subscribe users to product updates. To do this, you’ll create a custom event after capturing a user’s email address. You'll then use the [`/users/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track#example-request-for-updating-a-user-profile-by-email-address) endpoint to update the user when you send the custom event. 
+If you have an [email capture form]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/templates/email_capture/) to collect user interest in a specific product, you can connect the form to back-in-stock notifications and subscribe users to product updates. To do this, you’ll create a custom event after capturing a user’s email address. You'll then use the [`/users/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track#example-request-for-updating-a-user-profile-by-email-address) endpoint to update the user when you send the custom event. 
 
 When you send Braze a `/users/track` request with only an email address, we will search for a user profile with that existing email address and subscribe the user. If we can’t find that email address, we’ll create a new user profile with only an email address so that they can receive messaging too.
 
