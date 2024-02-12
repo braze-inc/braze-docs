@@ -64,7 +64,7 @@ Closes #**ISSUE_NUMBER_HERE**
   </tr>
   <tr>
     <td>@bre-fitzgerald</td>
-    <td>Intelligence<br>In-App Messages<br>Channels</td>
+    <td>Intelligence<br>In-App Messages<br>Channels<br>Frontend Infrastructure & Experience (FIX)</td>
   </tr>
   <tr>
     <td>@lydia-xie</td>
