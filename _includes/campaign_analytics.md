@@ -1,6 +1,6 @@
-## Campaign Analytics
+## Campaign analytics
 
-Once you've launched your campaign, you can return to the details page for that campaign to view key metrics. Navigate to the **Campaigns** page and select your campaign to open the details page. For {% if include.channel == "Content Card" %}Content Cards {% elsif include.channel == "email" %}email {% elsif include.channel == "in-app message" %}in-app messages {% elsif include.channel == "push" %}push messages {% elsif include.channel == "SMS" %}SMS messages {% elsif include.channel == "whatsapp" %}WhatsApp messages {% elsif include.channel == "webhook" %}webhooks {% endif %}sent in Canvas, refer to [Canvas Analytics]({{site.baseurl}}/user_guide/engagement_tools/canvas/testing_canvases/measuring_and_testing_with_canvas_analytics/).
+Once you've launched your campaign, you can return to the details page for that campaign to view key metrics. Navigate to the **Campaigns** page and select your campaign to open the details page. For {% if include.channel == "Content Card" %}Content Cards {% elsif include.channel == "email" %}email {% elsif include.channel == "in-app message" %}in-app messages {% elsif include.channel == "push" %}push messages {% elsif include.channel == "SMS" %}SMS messages {% elsif include.channel == "whatsapp" %}WhatsApp messages {% elsif include.channel == "webhook" %}webhooks {% endif %}sent in Canvas, refer to [Canvas analytics]({{site.baseurl}}/user_guide/engagement_tools/canvas/testing_canvases/measuring_and_testing_with_canvas_analytics/).
 
 {% alert tip %}
 Looking for definitions for the terms and metrics listed in your report? Refer to our 
@@ -194,15 +194,15 @@ Your _Messages Sent_ refers to Content Cards available to be seen, while _Unique
 
 Here are some key email-specific metrics that you won't see in other channels. To see the definitions of all email metrics used in Braze, refer to our [Email Analytics Glossary]({{site.baseurl}}/user_guide/message_building_by_channel/email/reporting_and_analytics/analytics_glossary/).
 
-| Term | Definition |
+| Metric | Definition |
 | --- | --- |
-| Unique Clicks | The percentage of recipients that clicked within the email sent. Measured by [`dispatch_id`]({{site.baseurl}}/help/help_articles/data/dispatch_id/). This number should be between 5–10%. Anything greater than 10% is exceptional! |
-| Unique Opens | The percentage of recipients that opened your email. This can also include emails that are machine opened. This number should be between 10–20%. Anything greater than 20% is exceptional! |
-| Click to Open | The percentage of recipients that opened your email and then clicked on it. |
-| Spam | The percentage of users that marked your email as spam, or the email was designated as spam. If this metric is greater than 0.08, that could be a sign that either your message copy is too salesy or you should reconsider your email address collection methods (to confirm you're messaging those who are interested in your correspondence). |
-| Unsubs | The percentage of recipients that clicked the "Unsubscribe" link in your email. |
-| Other Opens | Includes emails that haven't been identified as _Machine Opens_. <br>For example, when a user opens an email on another platform (such as Gmail app on a phone, Gmail on desktop browser), this will be logged as an _Other Opens_. Note that a user can also open an email (such as the open counts toward _Other Opens_) before a _Machine Opens_ count is logged. If a user opens an email once (or more) after a machine open event from a non-Apple Mail inbox, then the amount of times that the user opens the email is calculated towards _Other Opens_ and only once towards _Unique Opens_. |
-| Estimated Real Opens | This is an estimate of how many unique opens there would be if machine opens did not exist. This is the result of a proprietary Braze statistical model. See the following section for details. |
+| Unique Clicks | The number of recipients that clicked within the email sent. This is tracked over a 7-day period and is measured by [`dispatch_id`]({{site.baseurl}}/help/help_articles/data/dispatch_id/). This number should be between 5–10%. Anything greater than 10% is exceptional! |
+| Unique Opens | The number of recipients that opened your email. This can also include emails that are machine opened and is tracked over a 7-day period. This number should be between 10–20%. Anything greater than 20% is exceptional! |
+| Click to Open Rate | The percentage of unique emails opened that have been clicked at least once. |
+| Spam Rate | The percentage of delivered emails marked or designated as spam. If this metric is greater than 0.08, that could be a sign that either your message copy is too salesy, or you should reconsider your email address collection methods (to confirm you're messaging those who are interested in your correspondence). |
+| Unsubscribers (Unsubs) | The number of messages resulting in an unsubscription. This occurs when a user clicks the unsubscribe link in your email. |
+| Other Opens | The number of recipients that opened your email, including emails that haven't been identified as _Machine Opens_. <br>For example, when a user opens an email on another platform (such as Gmail app on a phone, Gmail on desktop browser), this will be logged as an _Other Opens_. Note that a user can also open an email (such as the open counts toward _Other Opens_) before a _Machine Opens_ count is logged. If a user opens an email once (or more) after a machine open event from a non-Apple Mail inbox, then the amount of times that the user opens the email is calculated towards _Other Opens_ and only once towards _Unique Opens_. |
+| Estimated Real Opens | An estimate of how many unique opens there would be if machine opens did not exist. This is the result of a proprietary Braze statistical model. See the following section for details. |
 | Machine Opens | Includes the proportion of “opens” that are affected by Apple's Mail Privacy Protection (MPP) for iOS 15. <br>For example, if a user opens an email using the Mail app on an Apple device, this will be logged as a _Machine Opens_. This metric is tracked starting November 11, 2021 for SendGrid and December 2, 2021 for SparkPost. |
 {: .reset-td-br-1 .reset-td-br-2}
 
@@ -383,7 +383,7 @@ In addition to Braze analytics, template-level analytics can be accessed in the 
 
 ### SMS Currents events
 
-Like email, Braze receives user-level events related to an SMS message as it makes its journey to a user. Any inbound SMS event will also be sent as a Currents event through the [SMS InboundReceived]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events/#sms-inbound-received-events) event. This will allow you to perform additional actions or reporting on the messages your users are texting in outside of the Braze platform. 
+Like email, Braze receives user-level events related to an SMS message as it makes its journey to a user. Any inbound SMS event will also be sent as a Currents event through the [SMS InboundReceived]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events/#sms-inbound-received-events) event. This allows you to perform additional actions or reporting on the messages your users are texting in outside of the Braze platform. 
 
 {% alert note %}
 Inbound messages are truncated past 1,600 characters.
