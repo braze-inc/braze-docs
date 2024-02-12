@@ -61,7 +61,7 @@ When you send Braze a `/users/track` request with only an email address, we will
 
 ### Step 1: Create a custom event to subscribe a user from updates
 
-You'll need these attributes in your custom event:
+You'll need these custom event attributes to map to the catalog attributes:
 
 - `email_address`
 - `product_id` with a value corresponding to the catalog item. If you have a different event property name like `product_name` or `product ID`, you can map those names to `product_id` in the Braze platform.
