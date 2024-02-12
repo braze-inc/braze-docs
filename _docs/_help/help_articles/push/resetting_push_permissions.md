@@ -57,7 +57,7 @@ Your push permissions are now reset. Open a new tab to your site and try it out.
 ## Reset Firefox on desktop
 
 1. Next to your site URL, click <i class="fa-solid fa-circle-info" alt="info icon"></i> or <i class="fas fa-lock" alt="lock icon"></i>.
-2. Under **Permissions**, select <i class="fa-solid fa-circle-x" title="Clear this permission and ask again"></i> next to **Receive Notifications**.
+2. Under **Permissions**, next to **Receive Notifications**, select <i class="fa-solid fa-circle-xmark" title="Clear this permission and ask again"></i> to clear notification permissions.
 3. On the same menu, select **Clear Cookies and Site Data**.
 4. A dialog will appear to confirm your choice. Click **OK**.
 
