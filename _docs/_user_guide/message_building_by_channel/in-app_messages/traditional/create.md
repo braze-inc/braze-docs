@@ -361,6 +361,8 @@ In some scenarios, you may want to re-evaluate a user's eligibility as they trig
 
 When you select **Re-evaluate campaign eligibility before displaying**, an additional request to Braze will be made to confirm that the user is still eligible for this message before sending. Additionally, any [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/) variables or [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/) will be templated at that moment before the message is displayed.
 
+This prevents in-app messages from being sent to users within expired or archived campaigns. If you don't re-evaluate a user's eligibility, the user will receive the in-app message even after the campaign is expired or archived because the message is in your SDK and waiting for users to trigger it.
+
 {% alert note %}
 Enabling this option will result in a slight delay (< 100ms) between when a user triggers an in-app message and when the message is displayed due to the added eligibility and templating request.
 <br><br>
