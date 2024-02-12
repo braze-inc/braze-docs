@@ -16,7 +16,7 @@ guide_featured_title: "SMS"
 guide_featured_list:
 - name: Créer une campagne SMS
   link: /docs/user_guide/message_building_by_channel/sms/create/
-  fa_icon: fas fa-table
+  image: /assets/img/braze_icons/table.svg
 - name: Analyse de campagne SMS
   link: /docs/user_guide/message_building_by_channel/sms/sms_campaign_analytics/
   fa_icon: fas fa-mobile-alt
@@ -46,7 +46,7 @@ guide_menu_list:
   fa_icon: fas fa-phone-square
 - name: "Créer une campagne par MMS"
   link: /docs/user_guide/message_building_by_channel/sms/mms/create/
-  fa_icon: fas fa-table
+  image: /assets/img/braze_icons/table.svg
 - name: "FAQ MMS"
   link: /docs/user_guide/message_building_by_channel/sms/mms/faqs/
   fa_icon: fas fa-comment

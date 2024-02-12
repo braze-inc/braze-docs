@@ -22,7 +22,7 @@ guide_featured_list:
   fa_icon: fas fa-user-shield
 - name: Teams
   link: /docs/user_guide/administrative/manage_your_braze_users/teams/
-  fa_icon: fas fa-users
+  image: /assets/img/braze_icons/users-01.svg
 - name: Paramètres de l’entreprise
   link: /docs/user_guide/administrative/manage_your_braze_users/company-wide_settings_management/
   image: /assets/img/braze_icons/settings-01.svg

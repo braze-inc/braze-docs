@@ -27,7 +27,7 @@ guide_featured_list:
     fa_icon: fa-solid fa-list-check
   - name: Conservation des données
     link: /docs/api/data_retention/
-    fa_icon: fa-solid fa-laptop-code
+    image: /assets/img/braze_icons/laptop-02.svg
   - name: Limites de débit
     link: /docs/api/api_limits/
     image: /assets/img/braze_icons/hand.svg

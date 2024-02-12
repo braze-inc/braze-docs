@@ -22,7 +22,7 @@ guide_featured_list:
   fa_icon: far fa-user-circle
 - name: Connexion
   link: /docs/user_guide/administrative/access_braze/getting_your_account/
-  fa_icon: fas fa-user-circle
+  image: /assets/img/braze_icons/user-circle.svg
 - name: Réinitialiser votre mot de passe
   link: /docs/user_guide/administrative/access_braze/resetting_your_password/
   fa_icon: fas fa-unlock-alt

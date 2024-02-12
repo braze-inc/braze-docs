@@ -32,7 +32,7 @@ guide_featured_list:
   fa_icon: fas fa-comment-alt
 - name: Groupes d’abonnement SMS
   link: /docs/user_guide/onboarding_with_braze/sms_setup/sms_subscription_groups/
-  fa_icon: fas fa-users
+  image: /assets/img/braze_icons/users-01.svg
 - name: Étapes suivantes
   link: /docs/user_guide/onboarding_with_braze/sms_setup/next_steps/
   fa_icon: fas fa-forward

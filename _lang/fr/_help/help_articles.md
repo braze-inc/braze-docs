@@ -13,7 +13,7 @@ guide_featured_title: "Sujets"
 guide_featured_list:
   - name: Compte
     link: /docs/help/help_articles/account/
-    fa_icon: fas fa-user-circle
+    image: /assets/img/braze_icons/user-circle.svg
   - name: API
     link: /docs/help/help_articles/api/
     fa_icon: fas fa-plug
@@ -40,6 +40,6 @@ guide_featured_list:
     fa_icon: fas fa-comment-alt
   - name: Segments
     link: /docs/help/help_articles/segments/
-    fa_icon: fas fa-users
+    image: /assets/img/braze_icons/users-01.svg
 ---
 

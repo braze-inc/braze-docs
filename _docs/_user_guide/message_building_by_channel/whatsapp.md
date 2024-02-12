@@ -18,7 +18,7 @@ guide_featured_list:
   fa_icon: fa-brands fa-whatsapp
 - name: "WhatsApp Subscription Group"
   link: /docs/user_guide/message_building_by_channel/whatsapp/user_subscription/
-  fa_icon: fas fa-table
+  image: /assets/img/braze_icons/table.svg
 - name: "User Phone Numbers"
   link: /docs/user_guide/message_building_by_channel/whatsapp/user_phone_numbers/
   fa_icon: fa-solid fa-phone

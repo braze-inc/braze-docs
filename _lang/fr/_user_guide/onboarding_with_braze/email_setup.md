@@ -28,7 +28,7 @@ guide_featured_list:
   fa_icon: fas fa-list
 - name: "Aperçu SSL"
   link: /docs/user_guide/onboarding_with_braze/email_setup/ssl/
-  fa_icon: fas fa-mouse-pointer
+  image: /assets/img/braze_icons/navigation-point-01.svg
 - name: "Consentement et collecte d’adresses"
   link: /docs/user_guide/onboarding_with_braze/email_setup/consent_and_address_collection/
   fa_icon: fas fa-address-book

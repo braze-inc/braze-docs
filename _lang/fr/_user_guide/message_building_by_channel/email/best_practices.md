@@ -20,7 +20,7 @@ guide_featured_list:
     fa_icon: fas fa-paint-brush
   - name: "Cas d’utilisation"
     link: /docs/user_guide/message_building_by_channel/email/best_practices/use_cases/
-    fa_icon: fas fa-pen-square
+    image: /assets/img/braze_icons/edit-05.svg
   - name: "Gestion des abonnements aux e-mails"
     link: /docs/user_guide/message_building_by_channel/email/best_practices/managing_email_subscriptions/
     fa_icon: fas fa-tasks

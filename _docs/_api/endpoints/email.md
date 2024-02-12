@@ -15,7 +15,7 @@ guide_featured_title: ""
 guide_featured_list:
   - name: "GET: List Hard Bounces"
     link: /docs/api/endpoints/email/get_list_hard_bounces/
-    fa_icon: fas fa-reply-all
+    image: /assets/img/braze_icons/message-plus-square.svg
   - name: "GET: Query Unsubscribed Email Addresses"
     link: /docs/api/endpoints/email/get_query_unsubscribed_email_addresses/
     image: /assets/img/braze_icons/mail-01.svg
@@ -24,7 +24,7 @@ guide_featured_list:
     fa_icon: fas fa-at
   - name: "POST: Remove Hard Bounces"
     link: /docs/api/endpoints/email/post_remove_hard_bounces/
-    fa_icon: fas fa-reply-all
+    image: /assets/img/braze_icons/message-plus-square.svg
   - name: "POST: Remove Spam"
     link: /docs/api/endpoints/email/post_remove_spam/
     image: /assets/img/braze_icons/mail-04.svg

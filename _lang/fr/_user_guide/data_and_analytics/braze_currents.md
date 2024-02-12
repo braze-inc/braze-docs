@@ -25,7 +25,7 @@ guide_featured_list:
   fa_icon: fas fa-keyboard
 - name: "Événements d’engagement sur les messages"
   link: /docs/user_guide/data_and_analytics/braze_currents/message_engagement_events/
-  fa_icon: fas fa-reply-all
+  image: /assets/img/braze_icons/message-plus-square.svg
 - name: "Événements de comportement client"
   link: /docs/user_guide/data_and_analytics/braze_currents/customer_behavior_events/
   fa_icon: fas fa-user

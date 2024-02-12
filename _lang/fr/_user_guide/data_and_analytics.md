@@ -27,7 +27,7 @@ guide_featured_list:
     fa_icon: fas fa-swimmer
   - name: Collecte de données utilisateur
     link: /docs/user_guide/data_and_analytics/user_data_collection/
-    fa_icon: fas fa-users
+    image: /assets/img/braze_icons/users-01.svg
   - name: Données personnalisées
     link: /docs/user_guide/data_and_analytics/custom_data/
     fa_icon: fas fa-wrench
@@ -48,7 +48,7 @@ guide_featured_list:
     fa_icon: fas fa-chart-bar
   - name: Catalogues
     link: /docs/user_guide/personalization_and_dynamic_content/catalog/
-    fa_icon: fas fa-list-ul
+    image: /assets/img/braze_icons/list.svg
   - name: Générateur de requêtes
     link: /docs/user_guide/data_and_analytics/query_builder/
     fa_icon: fas fa-code

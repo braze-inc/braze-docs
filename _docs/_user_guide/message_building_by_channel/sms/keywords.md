@@ -21,7 +21,7 @@ guide_featured_list:
   fa_icon: fas fa-mobile-alt
 - name: Handling Unknown Phone Numbers
   link: /docs/user_guide/message_building_by_channel/sms/keywords/unknown_phone_numbers/
-  fa_icon: fas fa-phone-volume
+  image: /assets/img/braze_icons/phone.svg
 - name: Fuzzy Opt-Out
   link: /docs/user_guide/message_building_by_channel/sms/keywords/fuzzy_opt_out/
   image: /assets/img/braze_icons/hand.svg

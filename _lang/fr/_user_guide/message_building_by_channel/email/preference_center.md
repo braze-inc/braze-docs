@@ -16,7 +16,7 @@ guide_featured_list:
   fa_icon: fa-solid fa-list-check
 - name: Centre de préférences via API
   link: /docs/user_guide/message_building_by_channel/email/preference_center/preference_center_via_api/
-  fa_icon: fa-solid fa-laptop-code
+  image: /assets/img/braze_icons/laptop-02.svg
 
 ---
 <br><br>

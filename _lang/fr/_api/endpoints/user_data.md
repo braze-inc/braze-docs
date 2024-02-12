@@ -24,19 +24,19 @@ guide_featured_list:
     fa_icon: fas fa-user
   - name: "POST : Mettre à jour un alias d’utilisateur"
     link: /docs/api/endpoints/user_data/post_users_alias_update/
-    fa_icon: fas fa-user-edit
+    image: /assets/img/braze_icons/user-edit.svg
   - name: "POST : Supprimer les données utilisateur"
     link: /docs/api/endpoints/user_data/post_user_delete/
-    fa_icon: fas fa-user-minus
+    image: /assets/img/braze_icons/user-minus-01.svg
   - name: "POST : Identifier un utilisateur"
     link: /docs/api/endpoints/user_data/post_user_identify/
-    fa_icon: fas fa-user-circle
+    image: /assets/img/braze_icons/user-circle.svg
   - name: "POST : Suivre les utilisateurs"
     link: /docs/api/endpoints/user_data/post_user_track/
     image: /assets/img/braze_icons/database-01.svg
   - name: "POST : Fusionner les utilisateurs"
     link: /docs/api/endpoints/user_data/post_users_merge/
-    fa_icon: fas fa-users
+    image: /assets/img/braze_icons/users-01.svg
 
 guide_menu_title: "Endpoints de migration de l’ID externe"
 guide_menu_list:
@@ -45,5 +45,5 @@ guide_menu_list:
     fa_icon: fas fa-user
   - name: "POST : supprimer les ID externes obsolètes"
     link: /docs/api/endpoints/user_data/external_id_migration/post_external_ids_remove/
-    fa_icon: fas fa-user-minus
+    image: /assets/img/braze_icons/user-minus-01.svg
 ---

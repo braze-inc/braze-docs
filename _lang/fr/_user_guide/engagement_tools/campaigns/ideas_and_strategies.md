@@ -14,7 +14,7 @@ guide_featured_title: "Articles courants"
 guide_featured_list:
   - name: Campagnes d’utilisateurs actifs
     link: /docs/user_guide/engagement_tools/campaigns/ideas_and_strategies/active_user_campaigns/
-    fa_icon: fas fa-users
+    image: /assets/img/braze_icons/users-01.svg
   - name: Capturer les utilisateurs inactifs
     link: /docs/user_guide/engagement_tools/campaigns/ideas_and_strategies/capturing_lapsing_users/
     fa_icon: far fa-user

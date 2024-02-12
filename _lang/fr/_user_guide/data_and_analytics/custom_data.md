@@ -16,10 +16,10 @@ guide_featured_list:
     fa_icon: fas fa-list
   - name: Pré-remplissage des données personnalisées
     link: /docs/user_guide/data_and_analytics/custom_data/pre-populating_custom_data/
-    fa_icon: fas fa-table
+    image: /assets/img/braze_icons/table.svg
   - name: Liste de blocage ou suppression des données personnalisées
     link: /docs/user_guide/data_and_analytics/custom_data/blocklist_delete_custom_data/
-    fa_icon: fas fa-trash
+    image: /assets/img/braze_icons/trash-03.svg
   - name: Événements d’achat
     link: /docs/user_guide/data_and_analytics/custom_data/purchase_events/
     fa_icon: fas fa-shopping-cart
@@ -28,5 +28,5 @@ guide_featured_list:
     image: /assets/img/braze_icons/settings-01.svg
   - name: Attributs personnalisés
     link: /docs/user_guide/data_and_analytics/custom_data/custom_attributes/
-    fa_icon: fas fa-table
+    image: /assets/img/braze_icons/table.svg
 ---

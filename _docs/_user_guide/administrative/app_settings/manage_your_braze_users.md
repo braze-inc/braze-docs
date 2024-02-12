@@ -22,5 +22,5 @@ guide_featured_list:
   fa_icon: fas fa-user-shield
 - name: Teams
   link: /docs/user_guide/administrative/app_settings/manage_your_braze_users/teams/
-  fa_icon: fas fa-users
+  image: /assets/img/braze_icons/users-01.svg
 ---

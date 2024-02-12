@@ -18,5 +18,5 @@ guide_featured_list:
     fa_icon: fas fa-user
   - name: "POST : supprimer les ID externes obsolètes"
     link: /docs/api/endpoints/user_data/external_id_migration/post_external_ids_remove/
-    fa_icon: fas fa-user-minus
+    image: /assets/img/braze_icons/user-minus-01.svg
 ---

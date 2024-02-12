@@ -22,7 +22,7 @@ guide_featured_list:
   fa_icon: fas fa-location-arrow
 - name: Accessing Your Account
   link: /docs/user_guide/administrative/access_braze/accessing_your_account/
-  fa_icon: fas fa-user-circle
+  image: /assets/img/braze_icons/user-circle.svg
 - name: Language Settings
   link: /docs/user_guide/administrative/access_braze/language/
   fa_icon: fas fa-language

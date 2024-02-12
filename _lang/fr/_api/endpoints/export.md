@@ -89,19 +89,19 @@ guide_menu_title6: "Exporter les endpoints du segment"
 guide_menu_list6:
   - name: "GET : Liste des segments"
     link: /docs/api/endpoints/export/segments/get_segment/
-    fa_icon: fas fa-users
+    image: /assets/img/braze_icons/users-01.svg
   - name: "GET : Analyses des segments"
     link: /docs/api/endpoints/export/segments/get_segment_analytics/
-    fa_icon: fas fa-users
+    image: /assets/img/braze_icons/users-01.svg
   - name: "GET : Informations relatives au segment"
     link: /docs/api/endpoints/export/segments/get_segment_details/
-    fa_icon: fas fa-users
+    image: /assets/img/braze_icons/users-01.svg
 
 guide_menu_title7: "Exporter l’endpoint des sessions"
 guide_menu_list7:
   - name: "GET : Données de la série temporelle des sessions App"
     link: /docs/api/endpoints/export/sessions/get_sessions_analytics/
-    fa_icon: fas fa-tablet-alt
+    image: /assets/img/braze_icons/tablet-01.svg
 
 guide_menu_title8: "Exporter les endpoints de données utilisateur"
 guide_menu_list8:

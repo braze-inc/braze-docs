@@ -13,7 +13,7 @@ guide_featured_title: "Section articles"
 guide_featured_list:
 - name: Creating a Catalog
   link: /docs/user_guide/personalization_and_dynamic_content/catalogs/catalog/
-  fa_icon: fas fa-users
+  image: /assets/img/braze_icons/users-01.svg
 - name: Back-In-Stock Notifications
   link: /docs/user_guide/personalization_and_dynamic_content/catalogs/back_in_stock_notifications/
   fa_icon: fas fa-cart-shopping

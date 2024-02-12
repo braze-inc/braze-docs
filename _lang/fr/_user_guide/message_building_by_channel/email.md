@@ -22,10 +22,10 @@ guide_featured_list:
   fa_icon: fas fa-paint-brush
 - name: Modèles
   link: /docs/user_guide/message_building_by_channel/email/templates/
-  fa_icon: fas fa-table
+  image: /assets/img/braze_icons/table.svg
 - name: Gérer les inscriptions des utilisateurs
   link: /docs/user_guide/message_building_by_channel/email/managing_user_subscriptions/
-  fa_icon: fas fa-users
+  image: /assets/img/braze_icons/users-01.svg
 
 guide_menu_title: "Autres articles"
 guide_menu_list:

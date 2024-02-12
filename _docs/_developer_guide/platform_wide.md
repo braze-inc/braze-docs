@@ -11,7 +11,7 @@ guide_featured_title: "Section articles"
 guide_featured_list:
   - name: Getting Started
     link: /docs/developer_guide/platform_wide/getting_started/
-    fa_icon: fas fa-table
+    image: /assets/img/braze_icons/tablet-01.svg
   - name: Analytics Overview
     link: /docs/developer_guide/platform_wide/analytics_overview/
     image: /assets/img/braze_icons/line-chart-up-01.svg

@@ -16,7 +16,7 @@ guide_menu_list:
     fa_icon: fas fa-filter
   - name: Missing Users in Segment
     link: /docs/help/help_articles/segments/segment_showing_0_users/
-    fa_icon: fas fa-users
+    image: /assets/img/braze_icons/users-01.svg
   - name: Segmentation Logic
     link: /docs/help/help_articles/segments/segmentation_logic_with_and_or/
     image: /assets/img/braze_icons/columns-01.svg

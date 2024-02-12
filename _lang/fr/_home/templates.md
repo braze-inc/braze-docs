@@ -50,10 +50,10 @@ guide_menu_list:
     fa_icon: fas fa-chalkboard-teacher
   - name: Cas d’utilisation avec vidéo
     link: /docs/home/templates/use_case_video/
-    fa_icon: fas fa-user-edit
+    image: /assets/img/braze_icons/user-edit.svg
   - name: Cas d’utilisation
     link: /docs/home/templates/use_case/
-    fa_icon: fas fa-user-edit
+    image: /assets/img/braze_icons/user-edit.svg
 
 noindex: true
 

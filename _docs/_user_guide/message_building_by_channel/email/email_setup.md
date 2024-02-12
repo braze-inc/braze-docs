@@ -28,7 +28,7 @@ guide_featured_list:
   fa_icon: fas fa-list
 - name: "SSL Overview"
   link: /docs/user_guide/message_building_by_channel/email/email_setup/ssl/
-  fa_icon: fas fa-mouse-pointer
+  image: /assets/img/braze_icons/navigation-point-01.svg
 - name: "Consent and Address Collection"
   link: /docs/user_guide/message_building_by_channel/email/email_setup/consent_and_address_collection/
   fa_icon: fas fa-address-book

@@ -14,7 +14,7 @@ guide_featured_list:
   fa_icon: fa-regular fa-circle-user
 - name: Cohort Import Integration
   link: /docs/partners/isv_partners/cohort_import
-  fa_icon: fas fa-users
+  image: /assets/img/braze_icons/users-01.svg
 - name: Currents Integration
   link: /docs/partners/isv_partners/currents_integration
   fa_icon: fas fa-swimmer

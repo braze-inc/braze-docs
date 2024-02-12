@@ -30,10 +30,10 @@ guide_menu_list:
     fa_icon: fas fa-chart-pie
   - name: Segment Extension
     link: /docs/user_guide/engagement_tools/segments/segment_extension/
-    fa_icon: fas fa-users
+    image: /assets/img/braze_icons/users-01.svg
   - name: Profils utilisateur
     link: /docs/user_guide/engagement_tools/segments/using_user_search/
-    fa_icon: fas fa-users
+    image: /assets/img/braze_icons/users-01.svg
   - name: Recherche d’utilisateur
     link: /docs/user_guide/engagement_tools/segments/user_lookup/
     fa_icon: fas fa-magnifying-glass

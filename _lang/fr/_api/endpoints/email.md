@@ -15,7 +15,7 @@ guide_featured_title: ""
 guide_featured_list:
   - name: "GET : répertorier les taux de rebonds élevés"
     link: /docs/api/endpoints/email/get_list_hard_bounces/
-    fa_icon: fas fa-reply-all
+    image: /assets/img/braze_icons/message-plus-square.svg
   - name: "GET : demander les adresses e-mail désinscrites"
     link: /docs/api/endpoints/email/get_query_unsubscribed_email_addresses/
     image: /assets/img/braze_icons/mail-01.svg
@@ -24,7 +24,7 @@ guide_featured_list:
     fa_icon: fas fa-at
   - name: "POST : supprimer les rebonds élevés"
     link: /docs/api/endpoints/email/post_remove_hard_bounces/
-    fa_icon: fas fa-reply-all
+    image: /assets/img/braze_icons/message-plus-square.svg
   - name: "POST : supprimer les courriers indésirables"
     link: /docs/api/endpoints/email/post_remove_spam/
     image: /assets/img/braze_icons/mail-04.svg

@@ -17,6 +17,6 @@ guide_featured_list:
   fa_icon: fas fa-wand-magic-sparkles
 - name: AI Content QA
   link: /docs/user_guide/sage_ai/generative_ai/ai_content_qa/
-  fa_icon: fas fa-list-check
+  image: /assets/img/braze_icons/clipboard-check.svg
 
 ---

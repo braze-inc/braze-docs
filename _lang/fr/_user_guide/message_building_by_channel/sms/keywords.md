@@ -18,7 +18,7 @@ guide_featured_list:
   fa_icon: fas fa-mobile-alt
 - name: Gestion des numéros de téléphone inconnus
   link: /docs/user_guide/message_building_by_channel/sms/keywords/unknown_phone_numbers/
-  fa_icon: fas fa-phone-volume
+  image: /assets/img/braze_icons/phone.svg
 - name: Désabonnement vague
   link: /docs/user_guide/message_building_by_channel/sms/keywords/fuzzy_opt_out/
   image: /assets/img/braze_icons/hand.svg

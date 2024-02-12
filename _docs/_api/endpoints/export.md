@@ -95,19 +95,19 @@ guide_menu_title6: "Export segment endpoints"
 guide_menu_list6:
   - name: "GET: Segment List"
     link: /docs/api/endpoints/export/segments/get_segment/
-    fa_icon: fas fa-users
+    image: /assets/img/braze_icons/users-01.svg
   - name: "GET: Segment Analytics"
     link: /docs/api/endpoints/export/segments/get_segment_analytics/
-    fa_icon: fas fa-users
+    image: /assets/img/braze_icons/users-01.svg
   - name: "GET: Segment Details"
     link: /docs/api/endpoints/export/segments/get_segment_details/
-    fa_icon: fas fa-users
+    image: /assets/img/braze_icons/users-01.svg
 
 guide_menu_title7: "Export sessions endpoint"
 guide_menu_list7:
   - name: "GET: App Sessions Time-Series Data"
     link: /docs/api/endpoints/export/sessions/get_sessions_analytics/
-    fa_icon: fas fa-tablet-alt
+    image: /assets/img/braze_icons/tablet-01.svg
 
 guide_menu_title8: "Export user data endpoints"
 guide_menu_list8:

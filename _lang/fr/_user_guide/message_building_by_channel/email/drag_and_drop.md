@@ -17,7 +17,7 @@ guide_featured_list:
   fa_icon: fas fa-paint-brush
 - name: Création d’un modèle d’e-mail
   link: /docs/dnd/email_template/
-  fa_icon: fas fa-table
+  image: /assets/img/braze_icons/table.svg
 - name: Blocs éditeur
   link: /docs/dnd/editor_blocks/
   fa_icon: fas fa-align-left

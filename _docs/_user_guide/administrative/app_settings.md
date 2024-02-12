@@ -25,7 +25,7 @@ guide_featured_list:
     fa_icon: fas fa-list
   - name: Internal Groups
     link: /docs/user_guide/administrative/app_settings/internal_groups_tab/
-    fa_icon: fas fa-users
+    image: /assets/img/braze_icons/users-01.svg
 
 guide_menu_title: "Workspace settings"
 guide_menu_list:

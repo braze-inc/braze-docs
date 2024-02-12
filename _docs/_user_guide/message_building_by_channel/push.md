@@ -22,7 +22,7 @@ guide_featured_list:
   image: /assets/img/braze_icons/check-square-broken.svg
 - name: Push Enablement and Subscription
   link: /docs/user_guide/message_building_by_channel/push/users_and_subscriptions/
-  fa_icon: fas fa-users
+  image: /assets/img/braze_icons/users-01.svg
 - name: Creating a Push Message
   link: /docs/user_guide/message_building_by_channel/push/creating_a_push_message/
   fa_icon: fas fa-edit

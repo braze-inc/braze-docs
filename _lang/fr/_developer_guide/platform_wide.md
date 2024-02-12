@@ -11,7 +11,7 @@ guide_featured_title: "Section Articles"
 guide_featured_list:
   - name: Caractéristiques de la plateforme
     link: /docs/developer_guide/platform_wide/platform_features/
-    fa_icon: fas fa-table
+    image: /assets/img/braze_icons/table.svg
   - name: Configuration du groupe d’apps
     link: /docs/developer_guide/platform_wide/app_group_configuration/
     fa_icon: fas fa-mobile

@@ -27,7 +27,7 @@ guide_featured_list:
   image: /assets/img/braze_icons/settings-01.svg
 - name: Setting Default Values
   link: /docs/user_guide/personalization_and_dynamic_content/liquid/setting_default_values/
-  fa_icon: fas fa-table
+  image: /assets/img/braze_icons/table.svg
 - name: Conditional Messaging Logic
   link: /docs/user_guide/personalization_and_dynamic_content/liquid/conditional_logic/
   image: /assets/img/braze_icons/columns-01.svg
@@ -36,7 +36,7 @@ guide_featured_list:
   fa_icon: fas fa-undo
 - name: Liquid Use Cases
   link: /docs/user_guide/personalization_and_dynamic_content/liquid/liquid_use_cases/
-  fa_icon: fas fa-list-ul
+  image: /assets/img/braze_icons/list.svg
 - name: Frequently Asked Questions
   link: /docs/user_guide/personalization_and_dynamic_content/liquid/faq/
   fa_icon: fas fa-question

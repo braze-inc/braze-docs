@@ -79,5 +79,5 @@ guide_menu_title2: "Live Activity endpoints"
 guide_menu_list2:
   - name: "POST: Update Live Activity"
     link: /docs/api/endpoints/messaging/live_activity/update/
-    fa_icon: fas fa-tablet-alt
+    image: /assets/img/braze_icons/tablet-01.svg
 ---

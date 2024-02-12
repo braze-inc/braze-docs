@@ -19,7 +19,7 @@ guide_featured_list:
     fa_icon: fas fa-list-alt
   - name: Managing Campaigns
     link: /docs/user_guide/engagement_tools/campaigns/managing_campaigns/
-    fa_icon: fas fa-pen-square
+    image: /assets/img/braze_icons/edit-05.svg
   - name: Testing Campaigns
     link: /docs/user_guide/engagement_tools/campaigns/testing_and_more/
     fa_icon: fas fa-vials

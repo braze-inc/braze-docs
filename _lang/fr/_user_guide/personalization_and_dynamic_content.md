@@ -33,7 +33,7 @@ guide_featured_list:
   fa_icon: fas fa-project-diagram
 - name: Catalogues
   link: /docs/user_guide/personalization_and_dynamic_content/catalog/
-  fa_icon: fas fa-list-ul
+  image: /assets/img/braze_icons/list.svg
 ---
 
 <br>

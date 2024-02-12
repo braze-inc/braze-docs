@@ -21,10 +21,10 @@ guide_featured_list:
   fa_icon: fas fa-gavel
 - name: "Groupe d’abonnement SMS"
   link: /docs/user_guide/message_building_by_channel/sms/sms_subscription_group/
-  fa_icon: fas fa-table
+  image: /assets/img/braze_icons/table.svg
 - name: "Créer un SMS"
   link: /docs/user_guide/message_building_by_channel/sms/create/
-  fa_icon: fas fa-table
+  image: /assets/img/braze_icons/table.svg
 - name: "Raccourcissement de lien"
   link: /docs/user_guide/message_building_by_channel/sms/campaign/link_shortening/
   fa_icon: fa-solid fa-link
@@ -61,10 +61,10 @@ guide_menu_list:
   fa_icon: fas fa-phone-square
 - name: "Créer une campagne par MMS"
   link: /docs/user_guide/message_building_by_channel/sms/mms/create/
-  fa_icon: fas fa-table
+  image: /assets/img/braze_icons/table.svg
 - name: "Cartes de visite"
   link: /docs/user_guide/message_building_by_channel/sms/mms/contact_card/
-  fa_icon: fas fa-user-circle
+  image: /assets/img/braze_icons/user-circle.svg
 - name: "FAQ MMS"
   link: /docs/user_guide/message_building_by_channel/sms/mms/faqs/
   fa_icon: fas fa-question

@@ -13,7 +13,7 @@ guide_featured_title: "Section Articles"
 guide_featured_list:
   - name: Définitions des archives utilisateur
     link: /docs/user_guide/data_and_analytics/user_data_collection/user_archival/
-    fa_icon: fas fa-users
+    image: /assets/img/braze_icons/users-01.svg
   - name: Données collectées par défaut
     link: /docs/user_guide/data_and_analytics/user_data_collection/data_collected_by_default/
     fa_icon: fas fa-chart-bar

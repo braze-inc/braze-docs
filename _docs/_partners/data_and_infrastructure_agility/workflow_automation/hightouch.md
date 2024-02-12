@@ -10,10 +10,10 @@ description: "This landing page is home to all things Hightouch including integr
 guide_featured_list:
 - name: Hightouch
   link: /docs/partners/data_and_infrastructure_agility/workflow_automation/hightouch/hightouch/
-  fa_icon: fas fa-user-circle
+  image: /assets/img/braze_icons/user-circle.svg
 - name: Hightouch Cohort Import
   link: /docs/partners/data_and_infrastructure_agility/cohort_import/hightouch/
-  fa_icon: fas fa-users
+  image: /assets/img/braze_icons/users-01.svg
 - name: Hightouch Personalization API
   link: /docs/partners/data_and_infrastructure_agility/workflow_automation/hightouch/hightouch_personalization_api/
   fa_icon: fas fa-warehouse

@@ -22,7 +22,7 @@ guide_featured_list:
     image: /assets/img/braze_icons/settings-01.svg
   - name: Custom Attributes
     link: /docs/user_guide/data_and_analytics/custom_data/custom_attributes/
-    fa_icon: fas fa-table
+    image: /assets/img/braze_icons/table.svg
   - name: Event Naming Conventions
     link: /docs/user_guide/data_and_analytics/custom_data/event_naming_conventions/
     fa_icon: fas fa-list

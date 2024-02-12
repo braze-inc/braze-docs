@@ -27,7 +27,7 @@ guide_featured_list:
     fa_icon: fa-solid fa-list-check
   - name: Data Retention
     link: /docs/api/data_retention/
-    fa_icon: fa-solid fa-laptop-code
+    image: /assets/img/braze_icons/laptop-02.svg
   - name: Rate Limits
     link: /docs/api/api_limits/
     image: /assets/img/braze_icons/hand.svg

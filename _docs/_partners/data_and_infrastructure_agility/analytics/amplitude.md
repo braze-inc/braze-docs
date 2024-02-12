@@ -11,7 +11,7 @@ description: "This landing page is home to all things Amplitude, including Ampli
 guide_featured_list:
 - name: Amplitude Cohort Import
   link: /docs/partners/data_and_infrastructure_agility/cohort_import/amplitude/
-  fa_icon: fas fa-users
+  image: /assets/img/braze_icons/users-01.svg
 - name: Amplitude for Currents
   link: /docs/partners/data_and_infrastructure_agility/analytics/amplitude/amplitude_for_currents/
   fa_icon: fas fa-warehouse
@@ -20,7 +20,7 @@ guide_featured_list:
   fa_icon: fa-solid fa-lightbulb
 - name: Amplitude and Connected Content
   link: /docs/partners/data_and_infrastructure_agility/analytics/amplitude/amplitude_user_profile_api/
-  fa_icon: fas fa-user-circle
+  image: /assets/img/braze_icons/user-circle.svg
 ---
 
 <br> 

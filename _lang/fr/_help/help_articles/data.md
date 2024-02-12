@@ -12,7 +12,7 @@ guide_menu_title: ""
 guide_menu_list:
   - name: Modifier un attribut personnalisé ou un type d’événement
     link: /docs/help/help_articles/data/change_custom_data_type/
-    fa_icon: fas fa-table
+    image: /assets/img/braze_icons/table.svg
   - name: Comportement du Dispatch ID
     link: /docs/help/help_articles/data/dispatch_id/
     fa_icon: fas fa-id-badge

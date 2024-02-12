@@ -17,7 +17,7 @@ guide_featured_list:
     image: /assets/img/braze_icons/line-chart-up-01.svg
   - name: Action-Based Delivery
     link: /docs/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/
-    fa_icon: fas fa-table
+    image: /assets/img/braze_icons/table.svg
   - name: API-Triggered Delivery
     link: /docs/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/api_triggered_delivery/
     fa_icon: fas fa-exclamation

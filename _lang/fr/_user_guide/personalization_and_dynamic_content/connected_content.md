@@ -27,7 +27,7 @@ guide_featured_list:
   fa_icon: far fa-dot-circle
 - name: Extraction des données de profil utilisateur
   link: /docs/user_guide/personalization_and_dynamic_content/connected_content/user_profile_fields_connected_content/
-  fa_icon: fas fa-users
+  image: /assets/img/braze_icons/users-01.svg
 ---
 
 <br><br>

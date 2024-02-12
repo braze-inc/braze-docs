@@ -13,7 +13,7 @@ guide_featured_title: "Divulgations et qualifications"
 guide_featured_list:
   - name: Divulgation des vulnérabilités de sécurité
     link: /docs/developer_guide/disclosures/security_and_vulnerability_disclosure/
-    fa_icon: fas fa-shield-alt
+    image: /assets/img/braze_icons/shield-01.svg
   - name: Divulgation du logiciel Open Source
     link: /docs/developer_guide/disclosures/open_source_software_disclosure/
     image: /assets/img/braze_icons/globe-02.svg

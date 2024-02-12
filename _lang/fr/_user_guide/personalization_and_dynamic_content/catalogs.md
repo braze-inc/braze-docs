@@ -13,7 +13,7 @@ guide_featured_title: "Section Articles"
 guide_featured_list:
 - name: Création d’un catalogue
   link: /docs/user_guide/personalization_and_dynamic_content/catalogs/catalog/
-  fa_icon: fas fa-users
+  image: /assets/img/braze_icons/users-01.svg
 - name: Sélections
   link: /docs/user_guide/personalization_and_dynamic_content/catalogs/selections/
   fa_icon: fas fa-list-alt

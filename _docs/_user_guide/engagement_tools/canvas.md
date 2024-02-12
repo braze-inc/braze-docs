@@ -23,7 +23,7 @@ guide_featured_list:
     fa_icon: fas fa-project-diagram 
   - name: Managing Canvases
     link: /docs/user_guide/engagement_tools/canvas/managing_canvases/
-    fa_icon: fas fa-pen-square
+    image: /assets/img/braze_icons/edit-05.svg
   - name: Testing Canvases
     link: /docs/user_guide/engagement_tools/canvas/testing_canvases/
     fa_icon: fas fa-vials

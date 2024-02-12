@@ -79,5 +79,5 @@ guide_menu_title2: "Activité en direct des endpoints"
 guide_menu_list2:
   - name: "POST : Mettre à jour l’activité en direct"
     link: /docs/api/endpoints/messaging/live_activity/update/
-    fa_icon: fas fa-tablet-alt
+    image: /assets/img/braze_icons/tablet-01.svg
 ---

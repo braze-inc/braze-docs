@@ -18,7 +18,7 @@ guide_featured_list:
     fa_icon: fas fa-chart-pie
   - name: Managing Segments
     link: /docs/user_guide/engagement_tools/segments/managing_segments/
-    fa_icon: fas fa-pen-square
+    image: /assets/img/braze_icons/edit-05.svg
   - name: Segmentation Filters
     link: /docs/user_guide/engagement_tools/segments/segmentation_filters/
     fa_icon: fas fa-filter
@@ -33,16 +33,16 @@ guide_menu_list:
     fa_icon: fas fa-chart-pie
   - name: Segment Extension
     link: /docs/user_guide/engagement_tools/segments/segment_extension/
-    fa_icon: fas fa-users
+    image: /assets/img/braze_icons/users-01.svg
   - name: SQL Segments
     link: /docs/sql_segments/
-    fa_icon: fas fa-users
+    image: /assets/img/braze_icons/users-01.svg
   - name: Catalog Segments
     link: /docs/catalog_segments/
-    fa_icon: fas fa-users
+    image: /assets/img/braze_icons/users-01.svg
   - name: User Profiles
     link: /docs/user_guide/engagement_tools/segments/using_user_search/
-    fa_icon: fas fa-users
+    image: /assets/img/braze_icons/users-01.svg
   - name: Location Targeting
     link: /docs/user_guide/engagement_tools/segments/location_targeting/
     fa_icon: fas fa-street-view
@@ -57,6 +57,6 @@ guide_menu_title2: "Other"
 guide_menu_list2:
   - name: Custom Attributes
     link: /docs/user_guide/data_and_analytics/custom_data/custom_attributes/
-    fa_icon: fas fa-table
+    image: /assets/img/braze_icons/table.svg
 
 ---

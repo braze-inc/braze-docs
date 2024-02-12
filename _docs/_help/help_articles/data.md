@@ -12,7 +12,7 @@ guide_menu_title: ""
 guide_menu_list:
   - name: Changing Custom Attribute or Event Data Type
     link: /docs/help/help_articles/data/change_custom_data_type/
-    fa_icon: fas fa-table
+    image: /assets/img/braze_icons/table.svg
   - name: Dispatch ID Behavior
     link: /docs/help/help_articles/data/dispatch_id/
     fa_icon: fas fa-id-badge

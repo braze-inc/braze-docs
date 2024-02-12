@@ -16,7 +16,7 @@ guide_featured_list:
   image: /assets/img/braze_icons/check-square-broken.svg
 - name: Managing User Subscriptions
   link: /docs/user_guide/message_building_by_channel/email/managing_user_subscriptions/
-  fa_icon: fas fa-users
+  image: /assets/img/braze_icons/users-01.svg
 - name: Link Aliasing
   link: /docs/user_guide/message_building_by_channel/email/templates/link_aliasing/
   fa_icon: fas fa-link
@@ -28,7 +28,7 @@ guide_featured_list:
   fa_icon: fas fa-paint-brush
 - name: Templates
   link: /docs/user_guide/message_building_by_channel/email/templates/
-  fa_icon: fas fa-table
+  image: /assets/img/braze_icons/table.svg
 - name: Email Reporting
   link: /docs/user_guide/message_building_by_channel/email/reporting_and_analytics/email_reporting/
   fa_icon: fas fa-chart-bar

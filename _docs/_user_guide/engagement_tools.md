@@ -18,7 +18,7 @@ guide_featured_list:
     fa_icon: fas fa-palette
   - name: Templates & Media
     link: /docs/user_guide/engagement_tools/templates_and_media/
-    fa_icon: fas fa-table
+    image: /assets/img/braze_icons/table.svg
 
 guide_menu_title: "Target your audience"
 guide_menu_list:

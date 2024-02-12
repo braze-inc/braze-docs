@@ -23,7 +23,7 @@ guide_featured_list:
   fa_icon: fas fa-comment-alt
 - name: SMS Subscription Groups
   link: /docs/user_guide/message_building_by_channel/sms/sms_subscription_group/
-  fa_icon: fas fa-users
+  image: /assets/img/braze_icons/users-01.svg
   
 ---
 <br>
