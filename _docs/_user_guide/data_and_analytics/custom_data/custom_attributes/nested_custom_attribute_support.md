@@ -430,6 +430,8 @@ The option to regenerate schema will be disabled if it has been less than 24 hou
 If you want to reset the schema for an object array with an existing object, you need to create a new custom attribute. Schema regeneration does not delete existing objects.
 {% endalert %}
 
+If data does not appear as expected after regenerating the schema, the attribute may not be ingested often enough. User data is sampled on previous data sent to Braze for the given nested attribute. If the attribute isn't ingested enough, it won't be picked up for the schema.
+
 ## Data Points
 
 Any key that is updated consumes a data point. For example, this object initialized in the user profile counts as seven (7) data points:
