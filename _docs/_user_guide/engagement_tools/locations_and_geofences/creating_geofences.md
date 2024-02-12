@@ -6,7 +6,7 @@ page_type: reference
 description: "This reference article covers what geofences are, and how to create and configure geofence events."
 tool: 
   - Location
-search_rank: 1
+search_rank: 9
 ---
 
 # Geofences

@@ -191,7 +191,7 @@ exclude: [
   '*.log','MigrationTool','Archive','documentation','academy',
   '.sass-cache', '.git', '.vscode', 'system.properties',
   'CODE_OF_CONDUCT.md','CONTRIBUTING.md','LICENSE.md','_site',
-  'vercel.json'
+  'vercel.json','scripts'
 ]
 
 # Setting for image buster
@@ -208,7 +208,7 @@ asset_pipeline:
   display_path: docs/assets
   gzip: false
 
-lab_index_name: "LABSearch"
+learning_index_name: "BrazeLearningCourses"
 
 # Algolia Search index
 algolia:

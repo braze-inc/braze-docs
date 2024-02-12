@@ -1,17 +1,14 @@
 ---
-nav_title: Sync Catalogs Data
-article_title: Cloud Data Ingestion Sync Catalogs Data
+nav_title: Sync and Delete Catalog Data
+article_title: Sync and Delete Catalog Data
 page_order: 2.1
 page_type: reference
-description: "This reference article provides an overview of how to sync catalogs data."
+description: "This reference article provides an overview of how to sync catalog data."
 
 ---
 
-# Sync catalogs data
+# Sync and delete catalog data
 
-{% alert important %}
-Braze Cloud Data Ingestion support for catalogs is currently in early access, and is available for Snowflake, Redshift, and BigQuery sources. Contact your Braze account manager if you are interested in participating in the early access.
-{% endalert %}
  
 ## Step 1: Create a new catalog
 
@@ -20,12 +17,10 @@ Before creating a new Cloud Data Ingestion (CDI) integration for [catalogs]({{si
 - Create a catalog in the [Braze dashboard]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/catalog/#method-2-create-in-browser)
 - Create a catalog using the [Create catalog endpoint]({{site.baseurl}}/api/endpoints/catalogs/catalog_management/synchronous/post_create_catalog/)
 
-The key things to note when creating this catalog are:
-- You should use the same name for the catalog and CDI integration 
-- Any changes to the catalog schema (for example, adding new fields, changing field type) must be made through the catalogs dashboard before updated data is synced through CDI. We recommend making these updates when the sync is paused or not scheduled to run to avoid conflicts between your Snowflake data and the schema in Braze.
+Any changes to the catalog schema (for example, adding new fields, changing field type) must be made through the catalog dashboard before updated data is synced through CDI. We recommend making these updates when the sync is paused or not scheduled to run to avoid conflicts between your data warehouse data and the schema in Braze.
 
-## Step 2: Integrate Cloud Data Ingestion with catalogs data
-The setup for a catalogs sync closely follows the process for [user-data CDI integrations]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/integrations#product-setup). 
+## Step 2: Integrate Cloud Data Ingestion with catalog data
+The setup for a catalog sync closely follows the process for [user-data CDI integrations]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/integrations#product-setup). 
 
 {% tabs %}
 {% tab Snowflake %}
@@ -37,9 +32,11 @@ The setup for a catalogs sync closely follows the process for [user-data CDI int
     CREATE OR REPLACE TABLE BRAZE_CLOUD_PRODUCTION.INGESTION.CATALOGS_SYNC (
          UPDATED_AT TIMESTAMP_NTZ(9) NOT NULL DEFAULT SYSDATE(),
          --ID of the catalog item to be created or updated
-         ID VARCHAR(16777216),
+         ID VARCHAR(16777216) NOT NULL,
          --Catalog fields and values that should be added or updated
-         PAYLOAD VARCHAR(16777216) NOT NULL
+         PAYLOAD VARCHAR(16777216) NOT NULL,
+         --The catalog item associated with this ID should be deleted
+         DELETED BOOLEAN
     );
     ```
 2. Set up a role, warehouse, and user and grant proper permissions. If you already have credentials from an existing sync, you can reuse them, just make sure to extend access to the catalog source table.
@@ -72,11 +69,13 @@ The setup for a catalogs sync closely follows the process for [user-data CDI int
     CREATE DATABASE BRAZE_CLOUD_PRODUCTION;
     CREATE SCHEMA BRAZE_CLOUD_PRODUCTION.INGESTION;
     CREATE TABLE BRAZE_CLOUD_PRODUCTION.INGESTION.CATALOGS_SYNC (
-       updated_at timestamptz default sysdate,
+       updated_at timestamptz default sysdate not null,
        --ID of the catalog item to be created or updated
-       id varchar,
+       id varchar not null,
        --Catalog fields and values that should be added or updated
-       payload varchar(max)
+       payload varchar(max),
+       --The catalog item associated with this ID should be deleted
+       deleted boolean
     )
     ```
 2. Set up a user and grant proper permissions. If you already have credentials from an existing sync, you can reuse them, just make sure to extend access to the catalog source table.
@@ -92,17 +91,18 @@ The setup for a catalogs sync closely follows the process for [user-data CDI int
 {% endtab %}
 {% tab BigQuery %}
 
-1. Set up a source table in BigQuery. You can use the names in the following example or choose your own database, schema, and table names. You may also use a view or a materialized view instead of a table.
+1. Optionally, set up a new project or dataset to hold your source table. Create one or more tables to use for your CDI integration with the following fields:
 
 | FIELD NAME | TYPE | MODE |
 | --- | --- | --- |
 | UPDATED_AT | TIMESTAMP | REQUIRED |
 | PAYLOAD | JSON | REQUIRED |
 | ID | STRING | REQUIRED |
+| DELETED | BOOLEAN | OPTIONAL |
 
 {:start="2"}
 
-2. Set up a user and grant proper permissions. If you already have credentials from an existing sync, you can reuse those - just make sure to extend access to the Catalog source table. 
+2. Set up a user and grant proper permissions. If you already have credentials from an existing sync, you can reuse those&#8212;just make sure to extend access to the catalog source table. 
 The service account should have the below permissions:
 - BigQuery Connection User: This will allow Braze to make connections
 - BigQuery User: This will provide Braze access to run queries, read dataset metadata, and list tables.
@@ -113,11 +113,41 @@ The service account should have the below permissions:
 3. If you have network policies in place, you must give Braze network access to your BigQuery instance. For a list of IPs, see the [Cloud Data Ingestion]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/integrations/#step-1-set-up-tables-or-views).
 
 {% endtab %}
+{% tab Databricks %}
+
+1. Set up a source table in Databricks. You can use the names in the following example or choose your own database, schema, and table names. You may also use a view or a materialized view instead of a table.
+
+| FIELD NAME | TYPE | MODE |
+| --- | --- | --- |
+| UPDATED_AT | TIMESTAMP | REQUIRED |
+| PAYLOAD | JSON | REQUIRED |
+| ID | STRING | REQUIRED |
+| DELETED | BOOLEAN | NULLABLE |
+
+{:start="2"}
+
+2. Create a personal access token in your Databricks workspace.
+
+- a. Select your Databricks username, then select **User Settings** from the dropdown menu.
+
+- b. On the **Access tokens** tab, select **Generate new token**.
+
+- c. Enter a comment that helps you to identify this token, such as "Braze CDI". 
+
+- d. Change the token’s lifetime to no lifetime by leaving the **Lifetime (days)** box blank. Select **Generate**.
+
+- e. Copy the displayed token, and then select **Done**. 
+
+- f. Keep the token in a safe place until you need to enter it on the Braze dashboard during the credential creation step.
+
+{:start="3"}
+3. If you have network policies in place, you must give Braze network access to your Databricks instance. For a list of IPs, see the [Cloud Data Ingestion]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/integrations/#step-1-set-up-tables-or-views) page.
+
+{% endtab %}
 {% endtabs %}
 
 ## How the integration works
-- Each time the sync runs, we will pull in all rows where `UPDATED_AT` is after the last timestamp synced. 
-- To set up a source table that will fully refresh each time a sync runs, we’d recommend creating a view from your catalog data. For example, if you have a table of product data (`product_catalog_1`) with `product_id`, `price`, and three additional attributes, you could sync the below view:
+Each time the sync runs, Braze will pull in all rows where `UPDATED_AT` is after the last timestamp synced. To set up a source table that will fully refresh each time a sync runs, we recommend creating a view from your catalog data. For example, if you have a table of product data (`product_catalog_1`) with `product_id`, `price`, and three additional attributes, you could sync the below view:
 
 {% tabs %}
 {% tab Snowflake %}
@@ -169,7 +199,23 @@ CREATE view IF NOT EXISTS BRAZE_CLOUD_PRODUCTION.INGESTION.CATALOGS_SYNC AS (SEL
   FROM `BRAZE_CLOUD_PRODUCTION.INGESTION.product_catalog_1`);
 ```
 {% endtab %}
+{% tab Databricks %}
+```json
+CREATE view IF NOT EXISTS BRAZE_CLOUD_PRODUCTION.INGESTION.CATALOGS_SYNC AS (SELECT
+    last_updated as UPDATED_AT,
+    product_id as ID,
+    TO_JSON(
+      STRUCT(
+      attribute_1,
+      attribute_2,
+      attribute_3,
+      )
+    ) as PAYLOAD 
+  FROM `BRAZE_CLOUD_PRODUCTION.INGESTION.product_catalog_1`);
+```
+{% endtab %}
 {% endtabs %}
 
-- The data fetched from the integration will be used to create or update items in the target catalog based on the `id` provided. 
-- The sync will not consume data points, but all data synced will count towards your total catalog usage; this usage is measured based on total data stored, so you don’t need to worry about only syncing changed data. 
+- The data fetched from the integration will be used to create or update items in the target catalog based on the `id` provided.
+- If DELETED is set to `true`, the corresponding catalog item will be deleted.
+- The sync will not consume data points, but all data synced will count towards your total catalog usage; this usage is measured based on total data stored, so you don’t need to worry about only syncing changed data.

@@ -34,11 +34,11 @@ Contact your account manager or open a [support ticket][support] if you need acc
 
 ### Step 1: Get Mixpanel credentials
 
-In your Mixpanel dashboard, click into the **Project Settings**in either a new or existing project. Here you will find the Mixpanel API secret and Mixpanel Token. These credentials will be used in the next step to create your Currents connection. 
+In your Mixpanel dashboard, click into the **Project Settings** in either a new or existing project. Here you will find the Mixpanel API secret and Mixpanel Token. These credentials will be used in the next step to create your Currents connection. 
 
 ### Step 2: Create Braze Current
 
-In Braze, navigate to **Currents > + Create Current > Create Mixpanel Export**. Provide an integration name, contact email, Mixpanel API secret, and Mixpanel token in the listed fields. Next, select the events you want to track; a list of available events is provided. Lastly, click **Launch Current**
+In Braze, navigate to **Currents > **+ Create Current** > **Create Mixpanel Export**. Provide an integration name, contact email, Mixpanel API secret, and Mixpanel token in the listed fields. Next, select the events you want to track; a list of available events is provided. Lastly, click **Launch Current**.
 
 ![The Braze Mixpanel Currents page. This page includes fields for integration name, contact email, API secret, and mixpanel export token. The lower half of the Currents page lists available Currents events you can send.]({% image_buster /assets/img_archive/mixpanel4.png %}){: style="max-width:80%;"}
 
@@ -56,9 +56,8 @@ Braze supports exporting the following data listed in the Currents [user behavio
 - Location: `users.behaviors.Location`
 - Purchase: `users.behaviors.Purchase`
 - Uninstall: `users.behaviors.Uninstall`
-- App (first session, news feed impression, session end, session start)
+- App (first session, session end, session start)
   - `users.behaviors.app.FirstSession`
-  - `users.behaviors.app.NewsFeedImpression`
   - `users.behaviors.app.SessionEnd`
   - `users.behaviors.app.SessionStart`
 - Subscription (global state change): `users.behaviors.subscription.GlobalStateChange`
@@ -101,10 +100,6 @@ Braze supports exporting the following data listed in the Currents [user behavio
   - `users.messages.inappmessage.Abort`
   - `users.messages.inappmessage.Click`
   - `users.messages.inappmessage.Impression`
-- News Feed card (abort, click, impression)
-  - `users.messages.newsfeedcard.Abort`
-  - `users.messages.newsfeedcard.Click`
-  - `users.messages.newsfeedcard.Impression`
 - Push notification (abort, bounce, iOSforeground, open, send)
   - `users.messages.pushnotification.Abort`
   - `users.messages.pushnotification.Bounce`
@@ -113,7 +108,6 @@ Braze supports exporting the following data listed in the Currents [user behavio
   - `users.messages.pushnotification.Send`
 - SMS (abort, carrier send, delivery, delivery failure, inbound receive, rejection, send, short link click)
   - `users.messages.sms.Abort`
-  - `users.messages.sms.CarrierSend`
   - `users.messages.sms.Delivery`
   - `users.messages.sms.DeliveryFailure`
   - `users.messages.sms.InboundReceive`

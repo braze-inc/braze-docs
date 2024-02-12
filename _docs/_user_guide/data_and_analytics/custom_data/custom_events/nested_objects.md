@@ -151,7 +151,7 @@ Triggering a campaign with nested properties from the "Ordered" event:
 
 ### Segmentation
 
-To segment users based on nested event properties, you must use [segment extensions]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/). After you've generated a schema, the nested objects explorer will display in the segmentation section. 
+To segment users based on nested event properties, you must use [Segment Extensions]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/). After you've generated a schema, the nested objects explorer will display in the segmentation section. 
 
 ![][4]
 

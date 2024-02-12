@@ -62,7 +62,7 @@ Follow the prompts in the **Enter Credential Details** screen and provide the fo
 {% tabs %}
 {% tab User Consent Update %}
 
-1. When complete, click **Done** and choose **Add Action**. Note that the Action you choose will depend on what type of preference is being updated and your preferred endpoint.
+1. When complete, click **Done** and choose **Add Action**. Note that the action you choose will depend on what type of preference is being updated and your preferred endpoint.
 - To update a user’s global subscription preferences, choose the **POST User track - attributes** action.
 - To update a user’s subscription group preferences, choose the **POST User Track - Attributes** action or the **POST Set Users Subscription Group Status** action.<br>![]({% image_buster /assets/img/onetrust/onetrust4.png %})<br><br>
 2. Choose your desired Action, select your previously created Braze credentials, and click **Next**.<br>![]({% image_buster /assets/img/onetrust/onetrust5.png %})
@@ -81,10 +81,8 @@ Follow the prompts in the **Enter Credential Details** screen and provide the fo
 {% tabs %}
 {% tab User Consent Update %}
 
-1. Update the body to include any necessary dynamic values. Make sure the body of the action matches the schema provided in the Braze endpoint documentation. 
-- [POST User Track - Attributes Action endpoint schema](https://www.braze.com/docs/api/endpoints/user_data/post_user_track/)
-- [POST Set Users Subscription Group Status Action endpoint schema](https://www.braze.com/docs/api/endpoints/subscription_groups/post_update_user_subscription_group_status/)<br><br>
-2. Customize the workflow with additional parameters or conditional logic to meet your organization's needs.<br><br>
+1. Update the body to include any necessary dynamic values. Make sure the body of the action matches the [`/users/track` endpoint](https://www.braze.com/docs/api/endpoints/user_data/post_user_track/) and the [`/subscription/status/set` endpoint](https://www.braze.com/docs/api/endpoints/subscription_groups/post_update_user_subscription_group_status/).
+2. Customize the workflow with additional parameters or conditional logic to meet your organization's needs.
 3. When finished editing, click **Finish** and then **Activate** to enable the workflow.
 
 {% alert note %}
@@ -96,22 +94,24 @@ When using the OneTrust workflows to update subscription group preferences in Br
 {% endtab %}
 {% tab User Deletion %}
 
-1. Update the body to include any necessary dynamic values. Make sure the body of the action matches the schema provided in the Braze endpoint documentation. 
-- [POST User Delete Action endpoint schema](https://www.braze.com/docs/api/endpoints/user_data/post_user_delete/)<br><br>
-2. When finished editing, click **Finish** and then **Activate** to enable the workflow.<br>![]({% image_buster /assets/img/onetrust/onetrust10.png %})
+1. Update the body to include any necessary dynamic values. Make sure the body of the action matches the [`/users/delete` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_delete/).
+2. When finished editing, select **Finish** then **Activate** to enable the workflow.
+
+![]({% image_buster /assets/img/onetrust/onetrust10.png %})
 
 #### Update the data subject request workflow
 1. On the **Privacy Rights Automation** menu, select **Workflows**. 
-2. Within the Workflows screen, select the workflow you want to update with the Braze integration. Click the **Edit** button to enable editing.
-3. Click into the workflow step that you would like to add the Braze integration to and click **Add Connection**.
-4. Add the previously created Braze workflow as a system subtask.
+2. Select the workflow you want to update with the Braze integration. 
+3. Select the **Edit** button to enable editing.
+4. Next, select the workflow step to add the Braze integration to and click **Add Connection**.
+5. Add the previously created Braze workflow as a system subtask.
 
 {% endtab %}
 {% endtabs %}
 
 ## Other supported actions
 
-In addition to the **POST User track - Attributes**, **POST Set Users Subscription Group Status**, and **POST User Delete** actions, the Braze system supports many of Braze’s other endpoints that can be used to create custom workflows and used as subtasks within existing workflows. 
+In addition to the **POST User track - Attributes**, **POST Set Users Subscription Group Status**, and **POST User Delete** actions, Braze supports other endpoints that can be used to create custom workflows and used as subtasks within existing workflows. 
 
 To see a full list of supported actions:
 1. In OneTrust, click into **Systems** from your **Integrations** menu. 

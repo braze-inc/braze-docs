@@ -94,7 +94,7 @@ The setting to regenerate extensions daily is automatically turned off for unuse
 Braze will notify the company contact and creator of the extension when this setting is turned off. The option to regenerate extensions daily can be turned on again at any time.
 {% endalert %}
 
-## Step 4: Save your segment extension
+## Step 4: Save your Segment Extension
 
 Once you click **Save**, your extension will begin processing. The length of time it takes to generate your extension depends on how many users you have, how many custom events or purchase events you're capturing, and how many days you're looking back in history.
 

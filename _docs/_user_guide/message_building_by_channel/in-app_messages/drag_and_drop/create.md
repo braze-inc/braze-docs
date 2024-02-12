@@ -87,7 +87,7 @@ To add a custom font:
 
 1. Go to the **Content** section in the **Message styles** tab.
 2. Click **Add custom font**.
-3. Upload your font using the Media Library. 
+3. Upload your font using the media library. 
 
 We accept the following file types for fonts: `.ttf`, `.woff`, `.otf`, `.woff2`. For more information, see [Asset files]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/html_in-app_messages#asset-files).
 
@@ -229,7 +229,7 @@ Yes, you can segment based on button clicks for up to two buttons in your messag
 
 #### Can I customize my in-app message using custom HTML or JavaScript or transfer existing HTML messages into the editor?
 
-No.
+You can’t directly transfer existing HTML messages into the editor, but you can insert raw HTML, CSS, and JavaScript into a Custom Code block. You can use Custom Code blocks to embed third-party videos and advanced Liquid, such as Connected Content or conditional statements.
 
 #### How can I create a slideup in-app message?
 

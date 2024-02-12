@@ -188,7 +188,7 @@ $(document).ready(function () {
                   },
                 },
                 {
-                  indexName: algolia_lab_index,
+                  indexName: algolia_learning_index,
                   query,
                   params: {
                     hitsPerPage: 2,
