@@ -4,6 +4,11 @@ article_title: "Creating an in-app message with drag-and-drop"
 description: "This reference article covers creating an in-app message with the drag-and-drop editor, prerequisites, creative details, and more."
 alias: "/create_dnd_iam/"
 page_order: 1
+local_redirect: #set-message-level-styles, #add-a-custom-font, #drag-and-drop-in-app-message-components, #creative-details
+  set-message-level-styles: '/docs/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/style_settings/#message-level-styles'
+  add-a-custom-font: '/docs/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/style_settings/#custom-fonts'
+  drag-and-drop-in-app-message-components: '/docs/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/style_settings/#message-components'
+  creative-details: '/docs/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/style_settings/#creative-details'
 ---
 
 # Creating an in-app message with drag-and-drop
@@ -66,12 +71,12 @@ Click **Build message** to begin designing your in-app message in the drag-and-d
 
 You can also access all templates from the **Templates** section of the dashboard.
 
-## Step 3: Add additional pages (optional)
+## Step 3: Add additional pages (optional) {#multi-page}
 
 Adding pages to your in-app message lets you guide users through a sequential flow, like an onboarding flow or welcome journey. You can manage pages from the **Pages** section of the **Build** tab.
 
 {% alert note %}
-The ability to add pages to your in-app message is in early access. Contact your Braze account manager if you’re interested in participating in the multi-page in-app messages early access.
+The ability to add pages to your in-app message is in early access. Contact your Braze account manager if you’re interested in participating in the early access for multi-page in-app messages.
 {% endalert %}
 
 ![]({% image_buster /assets/img_archive/dnd_iam_mockup.png %})

@@ -13,7 +13,11 @@ The drag-and-drop editing experience is divided into two sections: **Build** and
 
 ## Message-level styles
 
-You can set certain styles to be applied across all relevant blocks in your in-app message from the **Message Styles** tab. The styles set in this section are used everywhere in your message except where you override it for a specific block. For an easier design experience, we recommend that you set up message-level styles first before you customize styles at the block level.
+You can set certain styles to be applied across all relevant blocks in your in-app message from the **Message Styles** tab. For example, you may want to customize the font of all the text or the color of all links in your message.
+
+The styles set in this section are used everywhere in your message except where you override it for a specific block. If your message has [multiple pages]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/create#multi-page), you can also override the message-level styles for individual pages, with the exception of display type and max width.
+
+For an easier design experience, we recommend that you set up message-level styles first before you customize styles at the block level.
 
 To return to the **Message Styles** tab at any time:
 
