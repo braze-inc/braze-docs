@@ -69,7 +69,7 @@ You'll need these attributes in your custom event:
 
 ### Step 2: Create a custom event to remove a user from updates (optional)
 
-If you don’t have a custom event to remove a user, users will automatically be removed after 90 days You'll need the same attributes in Step 1 to create this custom event.
+If you don’t have a custom event to remove a user, users will automatically be removed after 90 days. You'll need the same attributes in Step 1 to create this custom event.
 
 After you create your custom event, your email form capture tool will subscribe users to updates for that specific product.
 
