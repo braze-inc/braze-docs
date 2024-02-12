@@ -171,7 +171,7 @@ For this use case, use multiple-choice selection with each choice being an app f
 [2]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#custom-attribute-data-types
 [3]: {{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/
 [4]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/reporting/
-[5]: {{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/custom_event_and_attribute_management/
+[5]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/managing_custom_data
 [6]: {{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events/#api_fzzdoylmrtwe
 
 [7]: {% image_buster /assets/img_archive/simple_survey_use_case_1.png %}
