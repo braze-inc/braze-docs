@@ -284,6 +284,10 @@ After adding a path to your property, click **Validate** to verify that the valu
 
 ![Filtering based on a most played song custom attribute where a listener has played a song over a specified number of times][6]
 
+To segment with nested custom attributes, select the **Nested Custom Attributes** filter to expose a dropdown from which you can select a specific nested custom attribute.
+
+![][17]{: style="max-width:70%;"}
+
 When working with nested custom attributes segmentation, you'll have access to a new comparator grouped by data type. For example, since `play_analytics.count` is a number, you can select a comparator under the **Number** category.
 
 ![A user choosing an operator based on the data type for the nested custom attribute][7]
@@ -458,3 +462,4 @@ Updating a custom attribute object to `null` also consumes a data point.
 [14]: {% image_buster /assets/img_archive/nca_multi_criteria.png %}
 [15]: {% image_buster /assets/img_archive/nca_triggered_changes.png %}
 [16]: {% image_buster /assets/img_archive/nca_triggered_changes2.png %}
+[17]: {% image_buster /assets/img_archive/nested_custom_attributes.png %}
