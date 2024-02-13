@@ -39,10 +39,7 @@ Move these tags so that they're only surrounding the Liquid content you want to 
 {% tabs local %}
 {% tab before %}
 <code>
-&#123;% raw %}
-Learn how to use Liquid's <code>&#123;&#123; page_title }}</code> tag. For more information, see [Liquid tags]({{site.baseurl}}/contributing/liquid/).
-
-&#123;% endraw %}
+&#123;% raw %} Learn how to use Liquid's <code>&#123;&#123; page_title }} tag. For more information, see [Liquid tags]({{site.baseurl}}/contributing/liquid/). &#123;% endraw %}
 </code>
 {% endtab %}
 
