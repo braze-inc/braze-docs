@@ -28,9 +28,7 @@ If you find this string in the URL, one or more of your cross-reference links ar
 
 {% tabs local %}
 {% tab liquid raw tag %}
-<code>&#123;% raw %}</code> expression <code>&#123;% endraw %}</code>
-```
-![An image of Liquid's raw tag. An image is used here to prevent Liquid from linting the example.]({% image_buster /assets/img/contributing/liquid_examples/raw_tags.png %}){: style="max-width:45%;"}
+<code>&#123;% raw %}</code> Example <code>&#123;% endraw %}</code>
 {% endtab %}
 {% endtabs %}
 
@@ -39,13 +37,13 @@ Move these tags so that they're only surrounding the Liquid content you want to 
 {% tabs local %}
 {% tab before %}
 <code>&#123;% raw %}</code>
-Learn how to use Liquid's `{{ page_title }}` tag. For mroe information, see [Liquid tags]({{site.baseurl}}/contributing/liquid/).
+
+Learn how to use Liquid's `{{ page_title }}` tag. For more information, see [Liquid tags]({{site.baseurl}}/contributing/liquid/).
+
 <code>&#123;% endraw %}</code>
-```
-![Liquid raw tags incorrectly surround the content. An image is used here to prevent Liquid from linting the example.]({% image_buster /assets/img/contributing/liquid_examples/incorrect_raw_tags.png %})
 {% endtab %}
 
 {% tab after %}
-![Liquid raw tags correctly surround the content. An image is used here to prevent Liquid from linting the example.]({% image_buster /assets/img/contributing/liquid_examples/correct_raw_tags.png %})
+Learn how to Liquid's <code>&#123;% raw %}</code> `{{ page_title }}` <code>&#123;% endraw %}</code> tag. For more information, see [Liquid tags]({{site.baseurl}}/contributing/liquid/).
 {% endtab %}
 {% endtabs %}
