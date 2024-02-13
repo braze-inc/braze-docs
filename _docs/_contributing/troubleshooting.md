@@ -24,12 +24,12 @@ A URL containing this string will be similar to the following:
 https://www.braze.com/docs/user_guide/personalization_and_dynamic_content/connected_content/%7B%7Bsite.baseurl%7D%7D/user_guide/administrative/app_settings/message_activity_log_tab
 ```
 
-If you find this string in the URL, one or more of your cross-reference links are surrounded in the following [Liquid raw tag](https://shopify.dev/docs/api/liquid/tags/raw):
+If you find this string in the URL, one or more of your cross-reference links are surrounded in [Liquid raw tags](https://shopify.dev/docs/api/liquid/tags/raw).
 
 {% tabs local %}
 {% tab liquid raw tag %}
 <code>
-&#123;% raw %} Example &#123;% endraw %}
+&#123;% raw %} &#123;% endraw %}
 </code>
 {% endtab %}
 {% endtabs %}
@@ -39,13 +39,13 @@ Move these tags so that they're only surrounding the Liquid content you want to 
 {% tabs local %}
 {% tab before %}
 <code>
-&#123;% raw %} Learn how to use Liquid's <code>&#123;&#123; page_title }} tag. For more information, see [Liquid tags]({{site.baseurl}}/contributing/liquid/). &#123;% endraw %}
+&#123;% raw %} Learn how to use Liquid's <code>&#123;&#123; page_title }} tag. For more information, see [Liquid tags](&#123;&#123;site.baseurl}}/contributing/liquid/). &#123;% endraw %}
 </code>
 {% endtab %}
 
 {% tab after %}
 <code>
-Learn how to Liquid's &#123;% raw %} &#123;&#123; page_title }} &#123;% endraw %} tag. For more information, see [Liquid tags]({{site.baseurl}}/contributing/liquid/).
+Learn how to Liquid's &#123;% raw %} &#123;&#123; page_title }} &#123;% endraw %} tag. For more information, see [Liquid tags](&#123;&#123;site.baseurl}}/contributing/liquid/).
 </code>
 {% endtab %}
 {% endtabs %}
