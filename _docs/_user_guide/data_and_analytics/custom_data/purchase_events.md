@@ -17,7 +17,7 @@ Purchase events are purchase actions taken by your users. These events are used 
 
 You can log purchases by passing a [purchase object]({{site.baseurl}}/api/objects_filters/purchase_object/) through the [`/users/track` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track/).
 
-The following lists methods across various platforms that are used to log purchases. Within these pages, you will also find documentation on how to add properties and quantities to your purchase event. You can futher target your users based on these properties.
+The following lists methods across various platforms that are used to log purchases. Within these pages, you will also find documentation on how to add properties and quantities to your purchase event. You can further target your users based on these properties.
 
 - [Android and FireOS]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/logging_purchases/)
 - [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/logging_purchases/)
@@ -59,7 +59,7 @@ The following segmentation filters are available when targeting users:
 
 For details on each filter, refer to the [Segmentation filters]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters) glossary and filter by "Purchase behavior".
 
-![Filtering for users that have made exactly five purchases][1]
+![Filtering for users who made exactly three purchases][1]{: style="max-width:80%;"}
 
 {% alert tip %} 
 If you would like to segment on the number of times a specific purchase has occurred, you should record that purchase individually as an [incrementing custom attribute]({{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#custom-attribute-storage).
@@ -150,14 +150,14 @@ Refer to [purchase properties object]({{site.baseurl}}/api/objects_filters/purch
 
 Event property segmentation allows you to target users based not just on custom events taken but also on the properties associated with those events. This feature adds additional filtering options when segmenting purchase and custom events.
 
-![][6]
+![][6]{: style="max-width:80%;margin-left:15px;"}
 
 These segmentation filters include:
 - Has done the custom event with property Y with value V X times in the last Y days.
 - Has made any purchases with property Y with value V X times in the last Y days.
 - Adds the ability to segment within 1, 3, 7, 14, 21, and 30 days.
 
-Unlike with [segment extensions]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/), segments used are updated in real-time, support an unlimited amount of segments, offer a look back history of at most 30 days, and incur data points. Because of the additional data point charge, you must contact your Braze customer success manager to get event properties turned on for your custom events.
+Unlike with [Segment Extensions]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/), segments used are updated in real-time, support an unlimited amount of segments, offer a look back history of at most 30 days, and incur data points. Because of the additional data point charge, you must contact your Braze customer success manager to get event properties turned on for your custom events.
 
 When approved, additional properties can be added in the dashboard under **Data Settings** > **Custom Events** by clicking **Manage Properties**. You can then use these event properties in the target step of the campaign or Canvas builder.
 
@@ -211,7 +211,7 @@ If you would like to log purchases at the order level instead of the product lev
 
 You may occasionally identify purchase events that either consume too many data points, are no longer useful to your marketing strategy, or were recorded in error. To stop this data from being sent to Braze, you can blocklist the custom data object while your engineering team works to remove it from the backend of your app or website.
 
-In the Braze dashboard, you can manage blocklisting from **Data Settings** > **Products**. Check out [Custom events and attribute management]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/custom_event_and_attribute_management/) to learn more.
+In the Braze dashboard, you can manage blocklisting from **Data Settings** > **Products**. Check out [Managing custom data]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/managing_custom_data/) to learn more.
 
 {% alert note %}
 If you are using the [older navigation]({{site.baseurl}}/navigation), you can find **Products** under **Manage Settings**.

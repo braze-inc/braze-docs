@@ -18,13 +18,13 @@ This process is intended to help Braze provide accurate statistics regarding cam
 
 That is, personal data processed and stored should be kept for no longer than is necessary and personal data should only be processed for legitimate business purposes. Archived users will also have their unsubscribe status deleted in compliance with GDPR.
 
-{% alert note %} Customers have full control over whether a user is inactive or dormant, and can prevent archiving of user profiles by recording a data point at regular intervals. Braze Canvas offers the ability to do this automatically, allowing you to effectively turn off this functionality for some or all of your inactive or dormant users. {% endalert %}
+{% alert note %} Customers have full control over whether a user is inactive or dormant. Braze Canvas offers the ability to do this automatically, allowing you to effectively turn off this functionality for some or all of your inactive or dormant users. {% endalert %}
 
 ## User archival definitions
 
 ### Active users
 
-Braze defines an "active user" for a given period of time as any user who has recorded a session in a mobile app or website, had at least one data point recorded for them (for example, custom event, purchase, user attribute), has been sent a message or interacted with a message.
+Braze defines an "active user" for a given period of time as any user who has recorded a session in a mobile app or website, has been updated, has been sent a message, or has interacted with a message.
 
 If you set user IDs to identify users when a new user logs in they will be counted as a separate active user. Users who are updated via the API will also be counted as an active user in the time period that they are updated.
 
@@ -37,7 +37,7 @@ If you set user IDs to identify users when a new user logs in they will be count
 - Can't receive push. For example, they have uninstalled the app or disabled push permissions.
 - Haven't used any mobile app or visited a website in a workspace in more than six months.
 - Haven't received any messages from a workspace in more than six months.
-- Braze hasn't processed any data points for this user profile in more than six months.
+- Haven't been updated in more than six months.
 
 In this case, these users cannot be messaged and are not engaging with your brand. These users have effectively churned.
 
@@ -47,7 +47,7 @@ In this case, these users cannot be messaged and are not engaging with your bran
 
 - Haven't used any mobile app or visited a website in a workspace in more than 12 months.
 - Haven't received any messages from a workspace in more than 12 months.
-- Braze hasn't processed any data points for this user profile in more than 12 months.
+- Haven't been updated in more than 12 months.
 
 ## Spam blocking
 

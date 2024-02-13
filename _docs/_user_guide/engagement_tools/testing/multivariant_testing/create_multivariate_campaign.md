@@ -94,7 +94,7 @@ In addition, the ideal length of your test may also vary depending on the channe
 
 For instance, if you're testing a push, you may achieve significant results faster than when testing email, since users see pushes immediately, but it may be days before they see or open an email. If you're testing in-app messages, keep in mind that users must open the app in order to see the campaign, so you should wait longer in order to collect results from both your most active app openers as well as your more typical users.
 
-If you're unsure how long your test should run for, the [Intelligent Selection][6] feature can be useful for finding a winning variant efficiently.
+If you're unsure how long your test should run for, the [Intelligent Selection][6] feature can be useful for finding a Winning Variant efficiently.
 
 ### Choosing a segment {#choosing-a-segment}
 

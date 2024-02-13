@@ -10,7 +10,7 @@ tool: Segments
 
 # Catalog segments
 
-> Catalog segments are an audience of users based on catalog data in SQL Segment Extensions. These SQL Segment Extensions can be referenced in a segment and then targeted by campaigns and Canvases. 
+> Catalog segments are a type of SQL Segment Extension that is created by combining catalog data with data from custom events or purchases. They can be referenced in a segment and then targeted by campaigns and Canvases. 
 
 {% alert important %}
 Catalog segments are currently in early access. Contact your customer success manager if you're interested in participating in this early access.

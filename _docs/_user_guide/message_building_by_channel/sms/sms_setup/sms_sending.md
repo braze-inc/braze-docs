@@ -15,16 +15,20 @@ channel:
 
 ## SMS sending basics
 
-1. **Select Your Subscription Group**<br>
+### Select your subscription group
+
 SMS messages must be sent from a [subscription group]({{site.baseurl}}/user_guide/onboarding_with_braze/sms_setup/sms_subscription_groups/). A subscription group is a collection of sending phone numbers (such as short codes, long codes, and/or alphanumeric sender IDs) that are used for a specific type of messaging purpose. You must designate a subscription group to ensure only subscribed users are targeted. Some clients may find they have multiple subscription groups for different use cases, such as transactional SMS messaging and promotional SMS messaging.<br><br>
 
-2. **Input Message Body**<br>
-An SMS message body accepts up to 1600 characters, including Emojis, Liquid, and Connected Content. A single campaign send can result in many message segment sends. Braze SMS message bodies can be composed of either [GSM-7](https://en.wikipedia.org/wiki/GSM_03.38) or [UCS-2](https://en.wikipedia.org/wiki/Universal_Coded_Character_Set) encoding standards. In the event that a UCS-2 character (for example, an Emoji) is used, the message body will automatically format for that encoding standard.<br><br> 
+### Input message body
 
-3. **Understand Message Segments & Character Limits**<br>
+An SMS message body accepts up to 1,600 characters, including emojis, Liquid, and Connected Content. A single campaign send can result in many message segment sends. Braze SMS message bodies can be composed of either [GSM-7](https://en.wikipedia.org/wiki/GSM_03.38) or [UCS-2](https://en.wikipedia.org/wiki/Universal_Coded_Character_Set) encoding standards. In the event that a UCS-2 character (for example, an Emoji) is used, the message body will automatically format for that encoding standard.<br><br> 
+
+### Understand message segments and character limits
+
 SMS message segments are how the SMS industry counts messages. A message segment is a grouping of up to a defined number of characters (160 for GSM-7 encoding; 67 for UCS-2 encoding) that will be sent in a single SMS dispatch. If you dispatch an SMS with 161 characters using GSM-7 encoding, you will see that there are two (2) message segments that were sent. Sending multiple message segments may result in additional charges.<br><br>
 
-4. **Keyword Customization (Optional)**<br>
+### Keyword customization (optional)
+
 Regulations require that there are responses to all Opt-In, Opt-Out, and Help/Info SMS keyword responses. With Braze, you are able to define your own keywords to trigger Opt-In, Opt-Out, and Help responses, manage your own responses that get sent to users, and define keyword sets for different languages. For more, refer to our collection on [Keyword processing]({{site.baseurl}}/user_guide/message_building_by_channel/sms/keywords/).
 
 {% alert tip %}
@@ -43,7 +47,7 @@ To overcome this limitation, during the Subscription Groups [setup process][5], 
 
 #### Best practices
 
-1. **Get Permission**. One of the most important rules for using SMS as a business is that you must first gain permission from customers to contact them. Failing to do so can damage your brand and result in hefty legal fees.<br><br>
+1. **Get permission**. One of the most important rules for using SMS as a business is that you must first gain permission from customers to contact them. Failing to do so can damage your brand and result in hefty legal fees.<br><br>
 2. **Choose the right number for your use case**. Three main types of phone numbers can send and receive SMS messages: long codes, short codes, and alphanumeric sender IDs, and their capabilities and availability in different regions vary. Think in advance if your business is served better with a vanity code. <br><br>
 3. **Pay attention to timing**. Keep in mind that customers are more responsive to materials that are addressed directly to them. A little personalization goes a long way, such as using the recipients first name or adding a conversational touch that reflects your customers' interests.<br><br>
 4. **Engage in two-way conversations**. SMS is such an effective channel for engaging with customers that it's important to anticipate - and effectively handle - responses to your messages. 85% of consumers not only want to be able to receive information but also reply to businesses or engage in a conversation.<br><br>

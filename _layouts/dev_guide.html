@@ -56,6 +56,9 @@ hide_breadcrumb: false
 
 
     <h2 class="guide_featured_title"> {{ page.guide_featured_title }} </h2>
+    {%- if page.guide_featured_description -%}
+    <p>{{ page.guide_featured_description | markdownify }}</p>
+    {%- endif -%}
     <div id="guide_featured_list">
 
       {%- for menu_list in page.guide_featured_list  -%}
@@ -85,6 +88,9 @@ hide_breadcrumb: false
     {%- if page.guide_menu_title -%}
     <h2 class="guide_menu_title"> {{ page.guide_menu_title }} </h2>
     {%- endif -%}
+    {%- if page.guide_menu_description -%}
+    <p>{{ page.guide_menu_description | markdownify }}</p>
+    {%- endif -%}
     <div id="guide_list">
 
       {%- for menu_list in page.guide_menu_list  -%}
@@ -110,6 +116,9 @@ hide_breadcrumb: false
     </div>
     {%- if page.guide_menu_title2 -%}
     <h2 class="guide_menu_title"> {{ page.guide_menu_title2 }} </h2>
+    {%- if page.guide_menu_description2 -%}
+    <p>{{ page.guide_menu_description2 | markdownify }}</p>
+    {%- endif -%}
     <div id="guide_list">
 
       {%- for menu_list in page.guide_menu_list2  -%}
@@ -137,6 +146,9 @@ hide_breadcrumb: false
     {%- endif -%}
     {%- if page.guide_menu_title3 -%}
     <h2 class="guide_menu_title"> {{ page.guide_menu_title3 }} </h2>
+    {%- if page.guide_menu_description3 -%}
+    <p>{{ page.guide_menu_description3 | markdownify }}</p>
+    {%- endif -%}
     <div id="guide_list">
 
       {%- for menu_list in page.guide_menu_list3  -%}
@@ -163,6 +175,9 @@ hide_breadcrumb: false
     {%- endif -%}
     {%- if page.guide_menu_title4 -%}
     <h2 class="guide_menu_title"> {{ page.guide_menu_title4 }} </h2>
+    {%- if page.guide_menu_description4 -%}
+    <p>{{ page.guide_menu_description4 | markdownify }}</p>
+    {%- endif -%}
     <div id="guide_list">
 
       {%- for menu_list in page.guide_menu_list4  -%}
@@ -189,6 +204,9 @@ hide_breadcrumb: false
     {%- endif -%}
     {%- if page.guide_menu_title5 -%}
     <h2 class="guide_menu_title"> {{ page.guide_menu_title5 }} </h2>
+    {%- if page.guide_menu_description5 -%}
+    <p>{{ page.guide_menu_description5 | markdownify }}</p>
+    {%- endif -%}
     <div id="guide_list">
 
       {%- for menu_list in page.guide_menu_list5  -%}
@@ -215,6 +233,9 @@ hide_breadcrumb: false
     {%- endif -%}
     {%- if page.guide_menu_title6 -%}
     <h2 class="guide_menu_title"> {{ page.guide_menu_title6 }} </h2>
+    {%- if page.guide_menu_description6 -%}
+    <p>{{ page.guide_menu_description6 | markdownify }}</p>
+    {%- endif -%}
     <div id="guide_list">
 
       {%- for menu_list in page.guide_menu_list6  -%}
@@ -241,6 +262,9 @@ hide_breadcrumb: false
     {%- endif -%}
     {%- if page.guide_menu_title7 -%}
     <h2 class="guide_menu_title"> {{ page.guide_menu_title7 }} </h2>
+    {%- if page.guide_menu_description7 -%}
+    <p>{{ page.guide_menu_description7 | markdownify }}</p>
+    {%- endif -%}
     <div id="guide_list">
 
       {%- for menu_list in page.guide_menu_list7  -%}
@@ -267,6 +291,9 @@ hide_breadcrumb: false
     {%- endif -%}
     {%- if page.guide_menu_title8 -%}
     <h2 class="guide_menu_title"> {{ page.guide_menu_title8 }} </h2>
+    {%- if page.guide_menu_description8 -%}
+    <p>{{ page.guide_menu_description8 | markdownify }}</p>
+    {%- endif -%}
     <div id="guide_list">
 
       {%- for menu_list in page.guide_menu_list8  -%}

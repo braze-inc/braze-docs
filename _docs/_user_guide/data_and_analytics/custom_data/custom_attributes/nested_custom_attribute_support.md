@@ -284,6 +284,10 @@ After adding a path to your property, click **Validate** to verify that the valu
 
 ![Filtering based on a most played song custom attribute where a listener has played a song over a specified number of times][6]
 
+To segment with nested custom attributes, select the **Nested Custom Attributes** filter to expose a dropdown from which you can select a specific nested custom attribute.
+
+![][17]{: style="max-width:70%;"}
+
 When working with nested custom attributes segmentation, you'll have access to a new comparator grouped by data type. For example, since `play_analytics.count` is a number, you can select a comparator under the **Number** category.
 
 ![A user choosing an operator based on the data type for the nested custom attribute][7]
@@ -304,7 +308,8 @@ You can also use the **Copy Liquid for segment** feature to generate Liquid code
 
 When you select **Copy Liquid for segment**, Braze will automatically generate Liquid code that returns an object array that only contains accounts that are active and taxable.
 
-{%raw%}
+{% raw %}
+
 ```
 {% assign segmented_nested_objects = '' | split: '' %}
 {% assign obj_array = {{custom_attribute.${accounts}}} %}
@@ -320,7 +325,8 @@ From here, you can use `segmented_nested_objects` and personalize your message. 
 ```
 Get to your {{segmented_nested_objects[0].goal}} goal faster, make a deposit using our new fast deposit feature!
 ```
-{%endraw%}
+
+{% endraw %}
 
 This returns the following message to your customer: "Get to your retirement goal faster, make a deposit using our new fast deposit feature!"
 
@@ -413,7 +419,22 @@ Check that a schema has been generated if you don't see the option to insert nes
 
 ### Regenerate schemas {#regenerate-schema}
 
-After a schema has been generated, it can be regenerated once every 24 hours. Locate your custom attribute and click the <i class="fas fa-plus"></i> plus button to view the current schema. Then click <i class="fas fa-arrows-rotate"></i> **Regenerate Schema**. This option will be disabled if it has been less than 24 hours since the schema was last regenerated.
+After a schema has been generated, it can be regenerated once every 24 hours. This section describes how to regenerate your schema. For more detailed information on schemas, refer to the section in this article on [generating a schema](#generate-schema).
+
+To regenerate the schema for your nested custom attribute:
+
+1. Go to **Data Settings** > **Custom Attributes**.
+2. Search for your nested custom attribute.
+3. In the **Attribute Name** column for your attribute, click <i class="fas fa-plus"></i> to manage the schema.
+4. A modal will appear. Click **Regenerate Schema**.
+
+The option to regenerate schema will be disabled if it has been less than 24 hours since the schema was last regenerated. Regenerating the schema will only detect new objects and will not delete objects that currently exist in the schema.
+
+{% alert important %}
+If you want to reset the schema for an object array with an existing object, you need to create a new custom attribute. Schema regeneration does not delete existing objects.
+{% endalert %}
+
+If data does not appear as expected after regenerating the schema, the attribute may not be ingested often enough. User data is sampled on previous data sent to Braze for the given nested attribute. If the attribute isn't ingested enough, it won't be picked up for the schema.
 
 ## Data Points
 
@@ -458,3 +479,4 @@ Updating a custom attribute object to `null` also consumes a data point.
 [14]: {% image_buster /assets/img_archive/nca_multi_criteria.png %}
 [15]: {% image_buster /assets/img_archive/nca_triggered_changes.png %}
 [16]: {% image_buster /assets/img_archive/nca_triggered_changes2.png %}
+[17]: {% image_buster /assets/img_archive/nested_custom_attributes.png %}

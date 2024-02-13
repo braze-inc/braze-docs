@@ -62,7 +62,7 @@ Selecting "OR" for your filters means that your segment will contain users satis
 
 #### Filter operators
 
-Depending on the specific filter you select, you will have different operators for identifying filter values. To dive deeper into the operators available for different types of custom attributes, see [Custom attribute storage]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes). Note that when using the “is any of” operator, the maximum number of items you can include in that field is 256.
+Depending on the specific filter you select, you will have different operators for identifying filter values. To dive deeper into the operators available for different types of custom attributes, see [Custom attribute storage]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#setting-custom-attributes). Note that when using the “is any of” operator, the maximum number of items you can include in that field is 256.
 
 {% alert note %}
 Braze doesn't generate profiles for users until they've used the app for the first time, so you can't target users who haven't opened your app yet.

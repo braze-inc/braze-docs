@@ -4,7 +4,7 @@ article_title: Campaign Analytics
 page_order: 4.5
 layout: dev_guide
 guide_top_header: "Campaign analytics"
-guide_top_text: "The Campaign Analytics gives you real-time updates on high-level results of each campaign and variant within that campaign, as well as message-level details. Choose your messaging channel from those listed to learn more about Campaign Analytics specific to that channel. We also recommend you check out our <a href='https://learning.braze.com/campaign-setup-delivery-targeting-conversions'>Campaign Setup</a> Braze Learning course for an overview of these analytics."
+guide_top_text: "Campaign analytics gives you real-time updates on high-level results of each campaign and variant within that campaign, as well as message-level details. Choose your messaging channel from those listed to learn more about campaign analytics specific to that channel. We also recommend you check out our <a href='https://learning.braze.com/campaign-setup-delivery-targeting-conversions'>Campaign Setup</a> Braze Learning course for an overview of these analytics."
 
 page_type: landing
 description: "This landing page covers campaign reporting for each messaging channel and retention and funnel reports."
@@ -18,7 +18,7 @@ guide_featured_list:
   - name: Email
     link: /docs/user_guide/message_building_by_channel/email/reporting_and_analytics/email_reporting/
     image: /assets/img/icons/email.svg
-  - name: In-app messages
+  - name: In-App Messages
     link: /docs/user_guide/message_building_by_channel/in-app_messages/reporting/
     image: /assets/img/icons/in-app_message.svg
   - name: Push

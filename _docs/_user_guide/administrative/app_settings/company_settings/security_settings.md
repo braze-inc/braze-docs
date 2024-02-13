@@ -112,7 +112,7 @@ The following fields can be hidden from Braze users who don't have **View PII** 
 
 | Standard attributes | Custom attributes |
 | ------------------- | ----------------- |
-| {::nomarkdown} <ul> <li>Email address </li> <li> Phone number </li> <li> First name </li> <li> Last name </li> <li> Gender </li> <li> Birthday </li> <li> Device IDs </li> <li> Most recent location </li> </ul> {:/} | {::nomarkdown} <ul> <li> All custom attributes </li> </ul> {:/} |
+| {::nomarkdown} <ul> <li>Email address </li> <li> Phone number </li> <li> First name </li> <li> Last name </li> <li> Gender </li> <li> Birthday </li> <li> Device IDs </li> <li> Most recent location </li> </ul> {:/} | {::nomarkdown} <ul> <li> All custom attributes<ul><li>Individual custom attributes can be marked as PII if you don't need to hide all attributes.</li></ul></li> </ul> {:/} |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ### Limited areas

@@ -90,9 +90,8 @@ More questions you can answer with this report:
 
 {% endtab %}
 {% tab Funnel Report %}
-**Funnel Report**
 
-Use Funnel Reports for [campaigns]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/campaign_funnel_report/) or [Canvases]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_funnel_reports/) to analyze the journeys your customers take after receiving a campaign. You can choose which native or custom events to include in each funnel analysis and then dive into how each variant performs against their selected conversion funnel.
+Use funnel reports for [campaigns]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/campaign_funnel_report/) or [Canvases]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_funnel_reports/) to analyze the journeys your customers take after receiving a campaign. You can choose which native or custom events to include in each funnel analysis and then dive into how each variant performs against their selected conversion funnel.
 
 Check out this report to:
 
@@ -112,7 +111,6 @@ More questions you can answer with this report:
 
 {% tabs local %}
 {% tab Report Builder %}
-**Report Builder**
 
 Use the [Report Builder]({{site.baseurl}}/user_guide/data_and_analytics/reporting/report_builder/) to compare the results of multiple campaigns or Canvases in a single view and quickly determine which engagement strategies most impacted your key metrics.
 
@@ -273,9 +271,8 @@ More questions you can answer with report:
 
 {% tabs local %}
 {% tab Funnel Report %}
-**Funnel Report**
 
-Use Funnel Reports for [campaigns]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/campaign_funnel_report/) or [Canvases]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_funnel_reports/) to analyze the journeys your customers take after receiving a campaign. You can choose which native or custom events to include in each funnel analysis and then dive into how each variant performs against their selected conversion funnel.
+Use funnel reports for [campaigns]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/campaign_funnel_report/) or [Canvases]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_funnel_reports/) to analyze the journeys your customers take after receiving a campaign. You can choose which native or custom events to include in each funnel analysis and then dive into how each variant performs against their selected conversion funnel.
 
 Check out this report to:
 
@@ -294,7 +291,7 @@ More questions you can answer with this report:
 
 [Predictive Churn]({{site.baseurl}}/user_guide/predictive_suite/predictive_churn/) is the first model in the [Braze Predictive Suite]({{site.baseurl}}/user_guide/predictive_suite/). Use Predictive Churn to define and generate predictions, providing a proactive approach toward minimizing future churn.
 
-Since every business defines churn and retention differently, you can simply input your definitions into Predictive Churn, and Braze will do the rest. You can also create campaigns or Canvases to act off the predictions or build Segments for further analysis.
+Since every business defines churn and retention differently, you can simply input your definitions into Predictive Churn, and Braze will do the rest. You can also create campaigns or Canvases to act off the predictions or build segments for further analysis.
 
 More questions you can answer with this feature:
 

@@ -4,33 +4,33 @@ article_title: Media Library FAQ
 page_order: 5
 page_type: FAQ
 tool: Media
-description: "This article provides answers to frequently asked questions about the Braze Media Library."
+description: "This article provides answers to frequently asked questions about the media library in Braze."
 
 ---
 
 # Frequently asked questions
 
-> This page provides answers to frequently asked questions about the Braze Media Library.
+> This page provides answers to frequently asked questions about the media library in Braze.
 
-### Are there storage limits for images within the Media Library?
+### Are there storage limits for images within the media library?
 
-No, there are no storage limits for images within the Media Library.
+No, there are no storage limits for images within the media library.
 
 ### Are there expiration dates for uploaded assets?
 
-No, uploaded assets will not expire when added to the Media Library.
+No, uploaded assets will not expire when added to the media library.
 
 ### Can I upload video assets?
 
-No, the Media Library doesn't support video files. We recommend you host these externally, or on a platform such as YouTube.
+No, the media library doesn't support video files. We recommend you host these externally, or on a platform such as YouTube.
 
 ### Can I crop all image types?
 
-No, the Media Library doesn't support cropping GIF images.
+No, the media library doesn't support cropping GIF images.
 
 ### How do I crop an existing image?
 
-You can crop an existing image by selecting the image from the Media Library and clicking **Crop & Save New Image**. 
+You can crop an existing image by selecting the image from the media library and clicking **Crop & Save New Image**. 
 
 ![][2]{: height="75%" width="75%"}
 
