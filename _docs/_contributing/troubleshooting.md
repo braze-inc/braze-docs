@@ -28,7 +28,9 @@ If you find this string in the URL, one or more of your cross-reference links ar
 
 {% tabs local %}
 {% tab liquid raw tag %}
-<code>&#123;% raw %}</code> Example <code>&#123;% endraw %}</code>
+<code>
+&#123;% raw %} Example &#123;% endraw %}
+</code>
 {% endtab %}
 {% endtabs %}
 
@@ -36,14 +38,17 @@ Move these tags so that they're only surrounding the Liquid content you want to 
 
 {% tabs local %}
 {% tab before %}
-<code>&#123;% raw %}</code>
-
+<code>
+&#123;% raw %}
 Learn how to use Liquid's <code>&#123;&#123; page_title }}</code> tag. For more information, see [Liquid tags]({{site.baseurl}}/contributing/liquid/).
 
-<code>&#123;% endraw %}</code>
+&#123;% endraw %}
+</code>
 {% endtab %}
 
 {% tab after %}
-Learn how to Liquid's <code>&#123;% raw %} &#123;&#123; page_title }} &#123;% endraw %}</code> tag. For more information, see [Liquid tags]({{site.baseurl}}/contributing/liquid/).
+<code>
+Learn how to Liquid's &#123;% raw %} &#123;&#123; page_title }} &#123;% endraw %} tag. For more information, see [Liquid tags]({{site.baseurl}}/contributing/liquid/).
+</code>
 {% endtab %}
 {% endtabs %}
