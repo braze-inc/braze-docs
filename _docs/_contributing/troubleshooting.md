@@ -28,6 +28,9 @@ If you find this string in the URL, one or more of your cross-reference links ar
 
 {% tabs local %}
 {% tab liquid raw tag %}
+```plaintext
+{% raw %} expression {% endraw %}
+```
 ![An image of Liquid's raw tag. An image is used here to prevent Liquid from linting the example.]({% image_buster /assets/img/contributing/liquid_examples/raw_tags.png %}){: style="max-width:45%;"}
 {% endtab %}
 {% endtabs %}
@@ -36,6 +39,11 @@ Move these tags so that they're only surrounding the Liquid content you want to 
 
 {% tabs local %}
 {% tab before %}
+```plaintext
+{% raw %}
+Learn how to use Liquid's `{{ page_title }}` tag. For mroe information, see [Liquid tags]({{site.baseurl}}/contributing/liquid/).
+{% endraw %}
+```
 ![Liquid raw tags incorrectly surround the content. An image is used here to prevent Liquid from linting the example.]({% image_buster /assets/img/contributing/liquid_examples/incorrect_raw_tags.png %})
 {% endtab %}
 
