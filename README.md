@@ -10,7 +10,7 @@ If you'd like to help improve the docs, you can:
 
 ## Quick start
 
-> Note: For a full walkthrough, see [Contributing to Braze Docs](https://www.braze.com/docs/contributing/home/).
+> **Note:** For a full walkthrough, see [Contributing to Braze Docs](https://www.braze.com/docs/contributing/home/).
 
 To build the docs locally, you'll need Ruby version `3.2.2` installed. In the terminal, open `braze-docs` and check for Ruby version `3.2.2`.
 
