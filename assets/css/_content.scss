@@ -163,7 +163,7 @@
             display: inline;
           }
           &::before {
-            content: counter(li);
+            content: counter(li) '.' ; // Add a period right after the counter value
             font-family: $braze-black;
             color: $black-shark;
             display: inline-block;
