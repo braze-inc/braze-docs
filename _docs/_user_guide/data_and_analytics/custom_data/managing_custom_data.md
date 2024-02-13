@@ -25,8 +25,7 @@ If you are using the [older navigation]({{site.baseurl}}/navigation), you can fi
 ![Navigate to Custom Attributes or Custom Events or Products.][21]{: style="max-width:90%;" }
 
 {: start="2"}
-2. To add a custom attribute, event, or product, go to the respective page and click **Add Custom Attributes** or **Add Custom Events** or **Add Products**.<br><br> For custom attributes, select a [data type][20] for this attribute (for instance, boolean or string). An attribute's data type will determine the segmentation filters available for that attribute. <br><br>![Add new attribute or event][22]{: style="max-width:80%;" }
-{: start="3"}
+2. To add a custom attribute, event, or product, go to the respective page and click **Add Custom Attributes** or **Add Custom Events** or **Add Products**.<br><br>For custom attributes, select a [data type][20] for this attribute (for instance, boolean or string). An attribute's data type will determine the segmentation filters available for that attribute. <br><br>![Add new attribute or event][22]{: style="max-width:80%;" }
 3. Click **Save**.
 
 ### Naming custom events and custom attributes
@@ -35,7 +34,7 @@ Custom events and custom attributes are case-sensitive. Keep this in mind when y
 
 ## Managing properties
 
-Once you have created a custom event or product, you can click **Manage Properties** for that event or product to add new properties, blocklist existing properties, and view which campaigns or Canvases use this property in a [trigger event]({{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/triggered_delivery/#step-1-select-a-trigger-event).
+After you have created a custom event or product, you can click **Manage Properties** for that event or product to add new properties, blocklist existing properties, and view which campaigns or Canvases use this property in a [trigger event]({{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/triggered_delivery/#step-1-select-a-trigger-event).
 
 ![Custom properties for a custom event.][73]{: style="max-width:80%"}
 
@@ -56,7 +55,7 @@ For instructions and details about blocklisting custom data, refer to [Managing 
 ### Blocklisting custom attributes, custom events, and products
 
 {% alert important %}
-Once an event or attribute is blocklisted, any segment, campaign, or Canvas using that event or attribute will be archived.
+When an event or attribute is blocklisted, any segment, campaign, or Canvas using that event or attribute will be archived.
 {% endalert %}
 
 To stop tracking a specific custom attribute, event, or product, follow these steps:
@@ -69,7 +68,7 @@ To stop tracking a specific custom attribute, event, or product, follow these st
 
 You can blocklist up to 300 custom attributes and 300 custom events. To prevent collecting certain device attributes, see our [SDK guide][88].
 
-Once a custom event or attribute is blocklisted, the following applies:
+When a custom event or attribute is blocklisted, the following applies:
 
 - No data will be collected regarding that event or attribute
 - Existing data will be unavailable, unless reactivated
@@ -122,7 +121,7 @@ If you choose to force the data type for an attribute, any data that comes in th
 For more information on specific filter options exposed by different data type comparisons, check out [Configuring reporting][43]. And for more information on the different available data types, refer to [Custom attribute data types][44].
 
 {% alert note %}
-Data sent to Braze is immutable and cannot be deleted or modified once we've received it. However, you can use any of the steps listed in the preceding sections to exercise control over what you're tracking in your dashboard.
+Data sent to Braze is immutable and cannot be deleted or modified after we've received it. However, you can use any of the steps listed in the preceding sections to exercise control over what you're tracking in your dashboard.
 {% endalert %}
 
 
