@@ -95,6 +95,9 @@ collections:
     output: true
     default_nav_url: home/
     page_order: 6
+  contributing:
+    output: true
+    default_nav_url: contributing/
   hidden: # Hidden pages not directly linked via navigation
     title: Braze
     output: true
@@ -152,6 +155,12 @@ defaults:
     scope:
       path: ""
       type: "help"
+    values:
+      nav_level: 1
+  -
+    scope:
+      path: ""
+      type: "contributing"
     values:
       nav_level: 1
   -
