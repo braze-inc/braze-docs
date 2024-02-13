@@ -1,10 +1,24 @@
+// References for hosting fonts
+@font-face { 
+  font-family: "Aribau Grotesk Light"; 
+  src: url("../assets/fonts/AribauGrotesk-Light.woff");  
+  font-family: "Aribau Grotesk Regular"; 
+  src: url("../assets/fonts/AribauGrotesk-Regular.woff");
+  font-family: "Aribau Grotesk Regular Italic"; 
+  src: url("../assets/fonts/AribauGrotesk-RegularItalic.woff");
+  font-family: "Aribau Grotesk Bold"; 
+  src: url("../assets/fonts/AribauGrotesk-Bold.woff");
+  font-family: "Aribau Grotesk Black"; 
+  src: url("../assets/fonts/AribauGrotesk-Black.woff");
+} 
+
 // Font variables for the default font, Aribau Grotesk, as well as fallback font styles and weights.
 // Some font variables share the same style or weight to prevent legacy variables from breaking.
 $braze-light: 'Aribau Grotesk Light', 'Aribau Grotesk', 'Aribau Grotesk Regular', Arial, Helvetica, sans-serif;
 $braze-light-oblique: 'Aribau Grotesk Light Italic','Aribau Grotesk', 'Aribau Grotesk Regular', Arial, Helvetica, sans-serif;
 $braze-thin: 'Aribau Grotesk Thin', 'Aribau Grotesk', 'Aribau Grotesk Regular', Arial, Helvetica, sans-serif;
 $braze-regular: 'Aribau Grotesk Regular', 'Aribau Grotesk', 'Aribau Grotesk Regular', Arial, Helvetica, sans-serif;
-$braze-regular-oblique: 'Aribau Grotesk Italic', 'Aribau Grotesk', 'Aribau Grotesk Regular', Arial, Helvetica, sans-serif;
+$braze-regular-oblique: 'Aribau Grotesk Regular Italic', 'Aribau Grotesk', 'Aribau Grotesk Regular', Arial, Helvetica, sans-serif;
 $braze-heavy: 'Aribau Grotesk Bold', 'Aribau Grotesk', 'Aribau Grotesk Regular', Arial, Helvetica, sans-serif;
 $braze-heavy-oblique:'Aribau Grotesk Bold Italic', 'Aribau Grotesk', 'Aribau Grotesk Regular', Arial, Helvetica, sans-serif;
 $braze-medium: 'Aribau Grotesk Bold', 'Aribau Grotesk', 'Aribau Grotesk Regular', Arial, Helvetica, sans-serif;
