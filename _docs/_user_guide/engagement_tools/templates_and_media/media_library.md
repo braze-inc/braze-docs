@@ -67,8 +67,6 @@ For more information, refer to [In-app message creative details]({{site.baseurl}
 ##### More resources
 
 - [Push image and text specifications]({{site.baseurl}}/user_guide/message_building_by_channel/push/about/#image-and-text-specifications)
-- [iOS rich notifications]({{site.baseurl}}/user_guide/message_building_by_channel/push/ios/rich_notifications/)
-- [Android rich notifications]({{site.baseurl}}/user_guide/message_building_by_channel/push/android/rich_notifications/)
 
 ## Accessing the Media Library from a message composer
 

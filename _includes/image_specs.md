@@ -33,10 +33,10 @@ All in-app messages have a recommended image size of 500 KB, maximum image size 
 
 | Type | Aspect ratio | Image quality | Notes |
 | --- | --- | --- | --- |
-| Portrait full screen with text | 5:4 | High resolution 1200 x 1000 px <br>Minimum resolution 600 x 500 px | Cropping can occur on all sides, but the image will always fill the top 50% of the viewport. |
-| Portrait full screen (image only) | 10:16 | High resolution 1200 x 2000 px <br> Minimum resolution 600 x 1000 px | Cropping can occur on the left and right edges on taller devices. |
-| Landscape full screen with text | 16:5 | High resolution 2000 x 600 px <br>Minimum resolution 1000 x 300 px | Cropping can occur on all sides, but the image will always fill the top 50% of the viewport. |
-| Landscape full screen (image only) | 16:10 | High resolution 2000 x 600 px <br> Minimum resolution 1000 x 600 px | Cropping can occur on the left and right edges on taller devices. |
+| Portrait full screen with text | 6:5 | High resolution 1200 x 1000 px <br>Minimum resolution 600 x 500 px | Cropping can occur on all sides, but the image will always fill the top 50% of the viewport. |
+| Portrait full screen (image only) | 3:5 | High resolution 1200 x 2000 px <br> Minimum resolution 600 x 1000 px | Cropping can occur on the left and right edges on taller devices. |
+| Landscape full screen with text | 10:3 | High resolution 2000 x 600 px <br>Minimum resolution 1000 x 300 px | Cropping can occur on all sides, but the image will always fill the top 50% of the viewport. |
+| Landscape full screen (image only) | 5:3 | High resolution 2000 x 600 px <br> Minimum resolution 1000 x 600 px | Cropping can occur on the left and right edges on taller devices. |
 | Slideup | 1:1 | High resolution 150 x 150 px <br> Minimum resolution 50 x 50 px | Images of various aspect ratios will fit into a square image container, without cropping. |
 | Modal (image only) | 1:1 | High resolution 1200 x 2000 px <br> Minimum resolution 600 x 600 px | The message will resize to fit images of most aspect ratios. |
 | Modal with text | 29:10 | High resolution 1450 x 500 px <br> Minimum resolution 600 x 205 px | Tall images will scale down and be horizontally centered. Wide images will be clipped on the left and right edges. |
@@ -59,9 +59,9 @@ The recommended image size for all push images is 500 KB.
 
 | Image type | Aspect ratio | Image quality | Maximum image size | File types | Notes |
 | --- | --- | --- | --- | --- | --- |
-| iOS | 2:1 (recommended) | 1038 x 1038 px maximum | 5 MB | PNG, JPG, GIF | As of January 2020, iOS rich push notifications can handle images 1038 x 1038 px as long as they are under 10 MB, but we recommend using as small a file size as possible. In practice, sending large files can cause both unnecessary network stress and make download timeouts more common.|
+| iOS | 2:1 (recommended) | 1038 x 1038 px maximum | 5 MB | PNG, JPG, GIF | As of January 2020, iOS rich push notifications can handle images 1038 x 1038 px as long as they are under 10 MB, but we recommend using as small a file size as possible. In practice, sending large files can cause both unnecessary network stress and make download timeouts more common.<br><br>For more information, see [iOS rich notifications]({{site.baseurl}}/user_guide/message_building_by_channel/push/ios/rich_notifications/).|
 | Android push icon | 1:1 | N/A | 500 KB | PNG, JPG | |
-| Android expanded notification | 2:1 | Small: 512 x 256 px<br>Medium: 1024 x 512 px<br>Large: 2048 x 1024 px | 500 KB | PNG, JPG | |
+| Android expanded notification image | 2:1 | Small: 512 x 256 px<br>Medium: 1024 x 512 px<br>Large: 2048 x 1024 px | 500 KB | PNG, JPG | Used in [Android rich notifications]({{site.baseurl}}/user_guide/message_building_by_channel/push/android/rich_notifications/)|
 | Android incline image | 3:2 | N/A | N/A | PNG, JPG | For more details, see [Android inline image push]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/inline_image_push/).|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 .reset-td-br-5 .reset-td-br-6}
 

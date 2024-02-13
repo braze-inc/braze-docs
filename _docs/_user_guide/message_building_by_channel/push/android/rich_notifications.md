@@ -44,6 +44,8 @@ Add the **Summary Text/Image Caption** that you'd like to display before the ima
 
 Add your image in the **Expanded Notification Image** field in the composer of the message. Images can be uploaded directly through the dashboard or by specifying a content URL that is hosted elsewhere.
 
+For details about supported images, check out [Image specifications]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/media_library/#push).
+
 ![][8]
 
 ### Step 4: Continue creating your campaign
