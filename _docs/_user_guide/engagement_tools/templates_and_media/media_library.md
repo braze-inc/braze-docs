@@ -58,73 +58,17 @@ All images uploaded to the Media Library must be less than 5&nbsp;MB. Supported 
 
 {% multi_lang_include image_specs.md variable_name="in-app messages"  %}
 
-{% tabs local %}
-{% tab Full screen %}
-
-| Layout | Image quality | Notes |
-| ----- | ----- | ----- |
-| Image and text | High resolution 1200 x 1000&nbsp;px<br><br>Minimum resolution 600 x 500&nbsp;px | Cropping can occur on all sides, but the image will always fill the top 50% of the viewport. |
-| Image only | High resolution 1200 x 2000&nbsp;px<br><br>Minimum resolution 600 x 1000&nbsp;px | Cropping can occur on the left and right edges on taller devices. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
-
-{% endtab %}
-{% tab Modal %}
-
-| Layout | Image quality | Notes |
-| ----- | ----- | ----- |
-| Image and text | High resolution 1450 x 500&nbsp;px<br><br>Minimum resolution 600 x 205&nbsp;px | Tall images will scale down and be horizontally centered. Wide images will be clipped on the left and right edges. |
-| Image only | High resolution 1200 x 2000&nbsp;px<br><br>Minimum resolution 600 x 600&nbsp;px | The message will resize to fit images of most aspect ratios.|
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
-
-{% endtab %}
-{% tab Slideup %}
-
-| Layout | Image quality | Notes |
-| ----- | ----- | ----- | ----- |
-| Image and text | High resolution 150 x 150&nbsp;px<br><br>Minimum resolution 50 x 50&nbsp;px | Images of various aspect ratios will fit into a square image container, without cropping.|
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
-
-{% endtab %}
-{% endtabs %}
-
 For more information, refer to [In-app message creative details]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/creative_details/).
 
 ### Push
 
 {% multi_lang_include image_specs.md variable_name="push notifications"  %}
 
-{% tabs local %}
-{% tab iOS %}
-
-| Aspect ratio | Image quality | Notes |
-| ---- | ---- | ---- |
-| 2:1 aspect ratio (recommended) | 1038 x 1038&nbsp;px maximum | As of January 2020, iOS rich push notifications can handle images 1038 x 1038&nbsp;px as long as they are under 10&nbsp;MB, but we recommend using as small a file size as possible. In practice, sending large files can cause both unnecessary network stress and make download timeouts more common.|
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
-
 ##### More resources
 
 - [Push image and text specifications]({{site.baseurl}}/user_guide/message_building_by_channel/push/about/#image-and-text-specifications)
 - [iOS rich notifications]({{site.baseurl}}/user_guide/message_building_by_channel/push/ios/rich_notifications/)
-
-{% endtab %}
-{% tab Android %}
-
-Android rich notifications do not support GIFs.
-
-| Image type | Aspect ratio | Image quality |
-| ---- | ----- | ---- |
-| Push icon | 1:1 aspect ratio | N/A |
-| Expanded notification | 2:1 aspect ratio | Small: 512 x 256&nbsp;px<br>Medium: 1024 x 512&nbsp;px<br>Large: 2048 x 1024&nbsp;px |
-| Inline image | 3:2 aspect ratio | N/A |
-
-##### More resources
-
-- [Push image and text specifications]({{site.baseurl}}/user_guide/message_building_by_channel/push/about/#image-and-text-specifications)
 - [Android rich notifications]({{site.baseurl}}/user_guide/message_building_by_channel/push/android/rich_notifications/)
-- [Android inline image push]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/inline_image_push/)
-
-{% endtab %}
-{% endtabs %}
 
 ## Accessing the Media Library from a message composer
 
