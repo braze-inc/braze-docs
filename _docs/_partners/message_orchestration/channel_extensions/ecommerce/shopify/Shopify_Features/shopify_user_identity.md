@@ -1,6 +1,6 @@
 ---
 nav_title: Shopify User Identity Management
-article_title: "Shopify user identity management"
+article_title: "Shopify User Identity Management"
 description: "This reference article outlines the Shopify user identity management feature."
 page_type: partner
 search_tag: Partner
@@ -82,7 +82,7 @@ During the Shopify setup process, Braze provides flexible controls to sync your 
 
 ### Collecting email or SMS subscribers
 
-During your set up of the Shopify store in Braze, you will have the option to sync your email and SMS subscribers from Shopify into Braze. 
+During your setup of the Shopify store in Braze, you will have the option to sync your email and SMS subscribers from Shopify into Braze. 
 
 #### Collect email subscribers
 
@@ -90,7 +90,7 @@ To enable email subscriber collection, turn on the feature within your Shopify s
 
 ![]({% image_buster /assets/img/Shopify/collect_email.png %})
 
-When enabled, Braze will sync updates to your Shopify email subscribers and updates to their email subscription states in real time. If you don't enable the override option, your Shopify customers will either be subscribed or unsubscribed from the subscription group associated with your Shopify store.
+When enabled, Braze will sync updates to your Shopify email subscribers and updates to their email subscription states in real-time. If you don't enable the override option, your Shopify customers will either be subscribed or unsubscribed from the subscription group associated with your Shopify store.
 
 If you enable the override option, Braze will update the global subscription state on the user profile. This means that if your customers are marked as unsubscribed in Shopify, Braze will mark the global subscription state as unsubscribed on the user profile and unsubscribe the customer from all available email subscription groups. As a result, no messages will be sent to users who were globally unsubscribed from email.
 
@@ -102,7 +102,7 @@ When you are ready to collect your Shopify SMS subscribers, enable SMS subscribe
 
 ![]({% image_buster /assets/img/Shopify/collect_sms.png %})
 
-When enabled, Braze will sync updates to your Shopify SMS subscribers and their SMS subscription states in real time. If you don't enable the override option, your Shopify customers will either be subscribed or unsubscribed from the subscription group associated with your Shopify store.
+When enabled, Braze will sync updates to your Shopify SMS subscribers and their SMS subscription states in real-time. If you don't enable the override option, your Shopify customers will either be subscribed or unsubscribed from the subscription group associated with your Shopify store.
 
 SMS subscribers don't have global subscription states, so you don't need to consider them when using an override option. A user can only be unsubscribed or subscribed to an SMS subscription group.
 
