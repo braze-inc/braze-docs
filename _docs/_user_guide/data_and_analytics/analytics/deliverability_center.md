@@ -97,10 +97,6 @@ For more ideas on improving deliverability, read [Deliverability pitfalls and sp
 
 ## Set up Microsoft Smart Network Data Services (SNDS)
 
-{% alert important %}
-Microsoft SNDS in the Deliverability Center is currently in early access. Contact your account manager if you're interested in participating in this early access.
-{% endalert %}
-
 If Microsoft is your main mailbox provider, you can use this integration to access and view your Microsoft reputation data. This way, you can monitor the health of your IPs to help determine how your emails are being received.
 
 {% alert important %}

@@ -56,7 +56,7 @@ Authorization: Bearer YOUR-REST-API-KEY
     "message": (required, string) the status of the export, returns 'success' when completed without errors,
     "cards" : [
         {
-            "id" : (string) the ard API identifier,
+            "id" : (string) the card API identifier,
             "type" : (string) type of the card - NewsItem (classic cards), CaptionedImage, Banner
             "title" : (string) the title of the card,
             "tags" : (array) the tag names associated with the card

@@ -29,6 +29,10 @@ Starting with iOS 17.2, Apple will block all declared tracking endpoints in your
 
 ## Declaring Braze tracking data
 
+{% alert tip %}
+For a full walkthrough, see the [Privacy Tracking Data tutorial](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/e1-privacy-tracking/).
+{% endalert %}
+
 ### Step 1: Review your current policies
 
 Review your Braze SDK's current data-collection policies with your legal team to determine whether your app collects tracking data [as defined by Apple](#what-is-tracking-data). If you're not collecting any tracking data, you don't need to customize your privacy manifest for the Braze SDK at this time.
@@ -41,7 +45,7 @@ If any of your non-Braze SDKs collect tracking data, you'll need to review those
 
 ### Step 2: Declare your tracking data
 
-In your Xcode project, open `AppDelegate.swift` then list each [tracking property](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/configuration-swift.class/trackingproperty/) you want to declare by creating a static or dynamic tracking list. Keep in mind, Apple will block these properties until the end-user accepts their ATT prompt, so only list properties you and your legal team consider tracking.
+In your Xcode project, open `AppDelegate.swift` then list each [tracking property](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/configuration-swift.class/trackingproperty/) you want to declare by creating a static or dynamic tracking list. Keep in mind, Apple will block these properties until the end-user accepts their ATT prompt, so only list the properties you and your legal team consider tracking.
 
 {% tabs %}
 {% tab static example %}
@@ -76,7 +80,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 {% endtab %}
 
 {% tab dynamic example %}
-In the following example, the tracking list is automatically updated after the end-user accepts the ATT prompt. The `set(adTrackingEnabled: enableAdTracking)` method is used to handle the ATT permissions, which prevents the SDK from entering an infinite retry loop.
+In the following example, the tracking list is automatically updated after the end-user accepts the ATT prompt.
 
 ```swift
 func applicationDidBecomeActive(_ application: UIApplication) {
@@ -97,6 +101,17 @@ func applicationDidBecomeActive(_ application: UIApplication) {
 {% endtab %}
 {% endtabs %}
 
-{% alert tip %}
-For a full walkthrough, see the [Privacy Tracking Data tutorial](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/e1-privacy-tracking/).
-{% endalert %}
+### Step 3: Prevent infinite retry loops
+
+To prevent the SDK from entering an infinite retry loop, use the `set(adTrackingEnabled: enableAdTracking)` method to handle ATT permissions. The `adTrackingEnabled` property in your method should be handled similar to the following:
+
+```swift
+func applicationDidBecomeActive(_ application: UIApplication) {
+    // Request and check your user's tracking authorization status.
+    ATTrackingManager.requestTrackingAuthorization { status in
+      // Let Braze know whether user data is allowed to be collected for tracking.
+      let enableAdTracking = status == .authorized
+      AppDelegate.braze?.set(adTrackingEnabled: enableAdTracking)
+    }
+}
+```

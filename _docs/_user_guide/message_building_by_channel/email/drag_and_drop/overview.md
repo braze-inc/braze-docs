@@ -202,6 +202,8 @@ Basic Liquid is supported in the drag-and-drop email editor. To add personalizat
 3. Search for the attribute to be added.
 4. Copy your generated Liquid snippet and paste it into a content block in your email body.
 
+Liquid personalization is not supported for image blocks and button link type fields. 
+
 #### Dynamic images
 
 You can choose to include dynamic images in your email messaging by including Liquid in your image source attribute. For example, instead of a static image, you can insert {% raw %} `https://example.com/images/?imageBanner={{first_name}}` {% endraw %} as the image URL to include a user's first name in the image. This helps personalize your emails to each user.
