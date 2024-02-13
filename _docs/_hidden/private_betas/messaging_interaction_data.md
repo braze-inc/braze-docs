@@ -9,7 +9,7 @@ hidden: true
 
 > This article covers information about campaign and Canvas interaction data and its availability.
 
-## What is messaging interaction data?
+### What is messaging interaction data?
 
 Messaging interaction data refers to how a user interacts with a campaign or Canvas they received (for example, when a user opens campaign A or a user receives variant A). This data can be accessed for retargeting the moment you need it.
 
