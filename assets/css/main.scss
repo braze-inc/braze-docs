@@ -1,16 +1,38 @@
 // References for hosting fonts
-@font-face { 
-  font-family: "Aribau Grotesk Light"; 
-  src: url("../assets/fonts/AribauGrotesk-Light.woff");  
-  font-family: "Aribau Grotesk Regular"; 
+@font-face {
+  font-family: "Aribau Grotesk Light";
+  src: url("../assets/fonts/AribauGrotesk-Light.woff");
+  font-weight: lighter;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Aribau Grotesk Regular";
   src: url("../assets/fonts/AribauGrotesk-Regular.woff");
-  font-family: "Aribau Grotesk Regular Italic"; 
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Aribau Grotesk Regular Italic";
   src: url("../assets/fonts/AribauGrotesk-RegularItalic.woff");
-  font-family: "Aribau Grotesk Bold"; 
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Aribau Grotesk Bold";
   src: url("../assets/fonts/AribauGrotesk-Bold.woff");
-  font-family: "Aribau Grotesk Black"; 
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Aribau Grotesk Black";
   src: url("../assets/fonts/AribauGrotesk-Black.woff");
-} 
+  font-weight: normal;
+  font-style: normal;
+}
 
 // Font variables for the default font, Aribau Grotesk, as well as fallback font styles and weights.
 // Some font variables share the same style or weight to prevent legacy variables from breaking.
