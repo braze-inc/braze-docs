@@ -22,9 +22,6 @@ By setting up URL redirects, you'll help prevent user bookmarks from breaking.
 
 You can choose to redirect a page's URL to the Braze Docs home page or a new location.
 
-- **Home page:** THIS.
-- **New location:** THIS.
-
 {% tabs local %}
 {% tab home page %}
 Open the relevant Markdown file and add the following key-value pair to the YAML front matter. If there's already a `layout` key, replace the existing key with the new one.
