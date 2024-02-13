@@ -45,7 +45,7 @@ The output will be similar to the following:
 ```bash
 == Sinatra (v3.0.4) has taken the stage on 4000 for development with backup from Puma
 Puma starting in single mode...
-* Puma version: 6.3.1 (ruby 2.7.8-p225) ("Mugi No Toki Itaru")
+* Puma version: 6.3.1 (ruby 3.2.2-p225) ("Mugi No Toki Itaru")
 *  Min threads: 8
 *  Max threads: 32
 *  Environment: development
