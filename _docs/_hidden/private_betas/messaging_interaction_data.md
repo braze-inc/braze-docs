@@ -23,7 +23,7 @@ Filters for a last received or engaged with message don't rely on campaign-speci
 
 For active campaigns and Canvases, interaction data is always available in real-time.
 
-For stopped campaigns and Canvases, these campaigns and Canvases have their interaction data expired after three months, unless they are used in retargeting filters. When expired, the data will be moved to long-term storage with limited availability. 
+For stopped campaigns and Canvases, these campaigns and Canvases have their interaction data expired after three months, unless they are used in retargeting filters. When expired, the data will be moved to long-term storage with limited availability.
 
 However, this is temporary because you can restore this data by using its interaction data for retargeting.
 
@@ -42,11 +42,11 @@ It will vary how long the interaction data takes to restore, but in most cases, 
 
 #### Restoring by tag
 
-You can also restore interaction data for expired campaigns or Canvases with a given tag. 
+You can also restore interaction data for expired campaigns or Canvases with a given tag.
 
-1. Go to the Campaigns or Canvas page and search by the relevant tag. 
+1. Go to the Campaigns or Canvas page and search by the relevant tag.
 2. Select the desired campaigns or Canvases.
-3. Click **Restore interaction data** to restore the data for those campaigns or Canvases. 
+3. Click **Restore interaction data** to restore the data for those campaigns or Canvases.
 
 After another three months of inactivity, these campaigns or Canvases will expire again.
 
