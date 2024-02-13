@@ -14,7 +14,7 @@ When you're finished with this tutorial, you'll be able to:
 
 - Navigate the Braze Docs GitHub repository
 - Make changes using the GitHub website or your local environment
-- Create pull-requests (PRs)
+- Create pull requests (PRs)
 - Preview your changes in a test site
 - Request a review from the Braze Docs team
 
@@ -28,14 +28,10 @@ The [Braze Docs GitHub repository](https://github.com/braze-inc/braze-docs) host
 
 ## Step 2: Make a change
 
-Now that you're a little familiar with the docs repository, you're ready to start making changes. First, open [Braze Docs]({{site.baseurl}}) and find a simple change you'd like to make, then decided how you'd like to make it:
+Now that you're a little familiar with the docs repository, you're ready to start making changes. First, open [Braze Docs]({{site.baseurl}}) and find a simple change you'd like to make, then decide how you'd like to make it:
 
 - **Using GitHub (Simple):** For small, single-document changes, you can make changes directly from the GitHub website.
 - **Using your local environment (Advanced):** For complex or multi-document changes, you'll need to make changes from your local environment. This is the recommended method.
-
-{% alert warning %}
-Before continuing, verify you've completed all [prerequisites](#prerequisites).
-{% endalert %}
 
 {% tabs %}
 {% tab github %}
@@ -61,6 +57,10 @@ In the next window, select **Propose changes**.
 {% endtab %}
 
 {% tab local environment %}
+{% alert important %}
+Before continuing, verify you've completed all [prerequisites](#prerequisites).
+{% endalert %}
+
 Most modern text editors (such as [VS Code](https://code.visualstudio.com/Download) and [Intellij IDEA](https://www.jetbrains.com/idea/download/)) offer an in-app terminal for running commands and interacting with your project files. Open your text editor, then open your text editor's in-app terminal.
 
 ![Intellij IDEA with the in-app terminal open.]({% image_buster /assets/img/contributing/text_editor_with_terminal.png %})

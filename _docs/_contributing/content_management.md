@@ -18,7 +18,7 @@ Braze Docs is managed using docs-as-code, a method for managing documentation th
 
 ## Site generator 
 
-Braze Docs is built using Jekyll, a popular static-site generator (SSG) that allows content files and design files to be stored in separate directories, such as `_docs` for content files and `assets` for design files. When the site is built, Jekyll intelligently merges each file and stores them as XML and HTML data in the `_site` directory. For more information, see [Jekyll Directory Structure](https://jekyllrb.com/docs/structure/).
+Braze Docs is built using Jekyll, a popular static-site generator that allows content files and design files to be stored in separate directories, such as `_docs` for content files and `assets` for design files. When the site is built, Jekyll intelligently merges each file and stores them as XML and HTML data in the `_site` directory. For more information, see [Jekyll Directory Structure](https://jekyllrb.com/docs/structure/).
 
 ![The home page for Braze Docs.]({% image_buster /assets/img/contributing/styling_examples/home.png %})
 
