@@ -57,13 +57,54 @@ All in-app messages have a recommended image size of 500 KB, maximum image size 
 
 The recommended image size for all push images is 500 KB.
 
-| Image type | Aspect ratio | Image quality | Maximum image size | File types | Notes |
-| --- | --- | --- | --- | --- | --- |
-| iOS | 2:1 (recommended) | 1038 x 1038 px maximum | 5 MB | PNG, JPG, GIF | As of January 2020, iOS rich push notifications can handle images 1038 x 1038 px as long as they are under 10 MB, but we recommend using as small a file size as possible. In practice, sending large files can cause both unnecessary network stress and make download timeouts more common.<br><br>For more information, see [iOS rich notifications]({{site.baseurl}}/user_guide/message_building_by_channel/push/ios/rich_notifications/).|
-| Android push icon | 1:1 | N/A | 500 KB | PNG, JPG | |
-| Android expanded notification image | 2:1 | Small: 512 x 256 px<br>Medium: 1024 x 512 px<br>Large: 2048 x 1024 px | 500 KB | PNG, JPG | Used in [Android rich notifications]({{site.baseurl}}/user_guide/message_building_by_channel/push/android/rich_notifications/)|
-| Android incline image | 3:2 | N/A | N/A | PNG, JPG | For more details, see [Android inline image push]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/inline_image_push/).|
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 .reset-td-br-5 .reset-td-br-6}
+<style>
+table td {
+    word-break: break-word;
+}
+</style>
+
+<table>
+  <tr>
+    <th>Image type</th>
+    <th>Aspect ratio</th>
+    <th>Image quality</th>
+    <th>Maximum image size</th>
+    <th>File types</th>
+    <th>Notes</th>
+  </tr>
+  <tr>
+    <td>iOS</td>
+    <td>2:1 (recommended)</td>
+    <td>1038 x 1038 px maximum</td>
+    <td>5 MB</td>
+    <td>PNG, JPG, GIF</td>
+    <td>As of January 2020, iOS rich push notifications can handle images 1038 x 1038 px as long as they are under 10 MB, but we recommend using as small a file size as possible. In practice, sending large files can cause both unnecessary network stress and make download timeouts more common.<br><br>For more information, see <a href="{{site.baseurl}}/user_guide/message_building_by_channel/push/ios/rich_notifications/">iOS rich notifications</a>.</td>
+  </tr>
+  <tr>
+    <td>Android push icon</td>
+    <td>1:1</td>
+    <td>N/A</td>
+    <td>500 KB</td>
+    <td>PNG, JPG</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Android expanded notification image</td>
+    <td>2:1</td>
+    <td>Small: 512 x 256 px<br>Medium: 1024 x 512 px<br>Large: 2048 x 1024 px</td>
+    <td>500 KB</td>
+    <td>PNG, JPG</td>
+    <td>Used in <a href="{{site.baseurl}}/user_guide/message_building_by_channel/push/android/rich_notifications/">Android rich notifications</a></td>
+  </tr>
+  <tr>
+    <td>Android incline image</td>
+    <td>3:2</td>
+    <td>N/A</td>
+    <td>N/A</td>
+    <td>PNG, JPG</td>
+    <td>For more details, see <a href="{{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/inline_image_push/">Android inline image push</a>.</td>
+  </tr>
+</table>
 
 {% endif %}
 
