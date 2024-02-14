@@ -14,7 +14,9 @@ channel: email
 
 ## Unsubscribed email addresses
 
-Braze will automatically unsubscribe any user who manually unsubscribes from your email through a [custom footer]({{site.baseurl}}/user_guide/message_building_by_channel/email/custom_email_footer). If a user has marked one or more of your emails as spam, Braze will only send transactional emails to this user. If the user updates their email address, normal email sending will resume.
+Braze will automatically unsubscribe any user who manually unsubscribes from your email through a [custom footer]({{site.baseurl}}/user_guide/message_building_by_channel/email/custom_email_footer). If the user updates their email address and **Resubscribe users when they update their email** is enabled in your **Sending Configuration** settings, normal email sending will resume.
+
+If a user has marked one or more of your emails as spam, Braze will only send transactional emails to this user.
 
 {% alert tip %}
 Refer to our [IP warming]({{site.baseurl}}/user_guide/onboarding_with_braze/email_setup/ip_warming/) best practices for guidance on how to reengage your users effectively.
