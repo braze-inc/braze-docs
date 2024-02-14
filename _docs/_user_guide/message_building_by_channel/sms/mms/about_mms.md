@@ -33,7 +33,7 @@ A [subscription group][1] is a collection of sending phone numbers (short codes,
 
 ### MMS message limits and throughput
 
-For MMS, the message limit is 5&nbsp;MB (this includes the multimedia asset and the message body size). To be on the safer side, Braze recommends not exceeding 4&nbsp;MB for your multimedia asset while also including a message body.
+For MMS, the message limit is 5&nbsp;MB (this includes the multimedia asset and the message body size). To be on the safer side, Braze recommends not exceeding 600&nbsp;KB for your multimedia asset while also including a message body.
 
 MMS throughput is one segment per second via a long code.
 
