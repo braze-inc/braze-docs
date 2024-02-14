@@ -10,10 +10,6 @@ hidden: true
 
 > Use the drag-and-drop email capture in-app message template to collect users' email addresses and grow your subscription groups.
 
-{% alert important %}
-The email capture form is currently in early access. Contact your Braze account manager if you're interested in participating in the early access.
-{% endalert %}
-
 ## SDK requirements
 
 ### Minimum SDK versions

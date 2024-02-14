@@ -39,6 +39,10 @@ All user profile data (custom events, custom attributes, custom data) is stored 
 
 ## Blocklisting custom attributes, custom events, and products
 
+{% alert important %}
+Once an event or attribute is blocklisted, any segment, campaign, or Canvas using that event or attribute will be archived.
+{% endalert %}
+
 To stop tracking a specific custom attribute, event, or product, follow these steps:
 
 1. Search for it in the **Custom Attributes**, **Custom Events**, or **Products** pages.
@@ -54,6 +58,7 @@ Once a custom event or attribute is blocklisted:
 - No data will be collected regarding that event or attribute
 - Existing data will be unavailable, unless reactivated
 - Blocklisted events and attributes will not show up in filters or graphs
+- References to blocklisted data within drafts of active Canvases will load as invalid values, which may cause errors
 - Anything using the blocklisted event or attribute will be archived
 
 To accomplish this, Braze sends the blocklisting information down to each device. This is important when thinking about blocklisting a huge number of events and attributes (hundreds of thousands or millions) as it would be a data intensive operation.

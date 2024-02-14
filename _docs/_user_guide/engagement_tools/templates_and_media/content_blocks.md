@@ -73,11 +73,17 @@ If you choose to update a Content Block, it will update in all messages the Cont
 
 If you want to update a Content Block for a single message or make a copy to use in other messages, you can either copy the HTML from the original message to your new one or edit the original Content Block (it must have been used in a message already) and save it. You will get a prompt that allows you to save it as a new Content Block.
 
-After making edits to a Content Block, you can select **Save as draft**, or save and launch the updated Content Block by clicking **Launch Content Block**.
+After making edits to a Content Block, you can save and launch the updated Content Block by clicking **Launch Content Block**. Or, you can select **More** > **Duplicate** to create a duplicate of your Content Block.
 
 ![][2]
 
 You can also [duplicate]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/duplicate/) a Content Block. This creates a draft copy of the Content Block.
+
+### Previewing Content Blocks
+
+After adding a Content Block in an active campaign or Canvas, you can preview this Content Block from the Content Blocks Library by hovering over the Content Block and selecting the <i class="fa fa-eye preview-icon"></i> **Preview** icon.
+
+![][7]
 
 ### Nesting Content Blocks
 
@@ -114,3 +120,4 @@ If you accidentally archive a Content Block, you can unarchive it.
 [4]: {% image_buster /assets/img/unarchive-content-block.png %}
 [5]: {{site.baseurl}}/api/endpoints/templates/
 [6]: {{site.baseurl}}/user_guide/engagement_tools/templates_and_media/
+[7]: {% image_buster /assets/img/preview_tab_content_block.png %}
