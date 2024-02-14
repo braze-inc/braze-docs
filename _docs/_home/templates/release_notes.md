@@ -4,6 +4,7 @@ page_order: 0
 noindex: true
 page_type: reference
 description: "This article contains a template for release notes."
+permalink: /home/Templates/release_notes/
 ---
 
 # January 1, 2024 release
