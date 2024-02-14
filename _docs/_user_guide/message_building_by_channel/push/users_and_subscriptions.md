@@ -15,7 +15,7 @@ channel:
 
 ## Push subscription states {#push-sub-states}
 
-A "Push Subscription State" in Braze identifies a **user's** global preference for their desire to receive push notifications. Because the subscription state is user-based, it is not specific to any individual app. Subscription states become helpful flags when deciding which users to target for push notifications. 
+A "Push Subscription State" in Braze identifies a **user's** global preference for their desire to receive push notifications. Because the subscription state is user-based, it is not specific to any individual app. Subscription states become helpful flags when deciding which users to target for push notifications.
 
 {% alert note %}
 A user's push subscription state applies to their entire user profile, which includes all of the user's devices. 
@@ -109,7 +109,7 @@ There are two ways a [push token][push-tokens] can be classified that are essent
 When a user profile has a valid foreground push token associated with an app, Braze considers the user "push registered" for the given app. Braze, then, provides a specific segmentation filter, `Push Enabled for App,` to help identify these users.
 
 {% alert note %}
-The `Push Enabled for App` filter only considers the presence of a valid foreground and background push token for the given app. However, the more generic `Push Enabled` filter segments users who have explicitly activated push notifications for any apps in your workspace. This count includes only foreground push and doesn't include users who have unsubscribed. You can learn more about these and other filters in [Segmentation filters]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters).
+The `Push Enabled for App` filter only considers the presence of a valid foreground and background push token for the given app. However, the more generic [`Push Enabled`](#push-enabled) filter segments users who have explicitly activated push notifications for any apps in your workspace. This count includes only foreground push and doesn't include users who have unsubscribed. You can learn more about these and other filters in [Segmentation filters]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters).
 {% endalert %}
 
 ### Multiple users on one device
@@ -126,7 +126,7 @@ Because there isn't a way for push providers (APNs/FCM) to distinguish between m
 
 ### Multiple devices and one user
 
-The push subscription state is user-based and is not specific to any individual app. The state of the push subscription is the value that was last set. So if a user has opted-in to push notifications, their push subscription state is `Opted-in` across all eligible devices. If a user later opts out of push notifications, their push subscription state is updated to `Unsubscribed` and no push-registered devices can receive push notifications.
+The push subscription state is user-based and is not specific to any individual app. The state of the push subscription is the value that was last set. So if a user has opted-in to push notifications, their push subscription state is `Opted-in` across all eligible devices. If a user later explicitly unsubscribes from push notifications through your application or other methods your brand provides, their push subscription state is updated to `Unsubscribed` and no push-registered devices can receive push notifications.
 
 ## Push Enabled filter {#push-enabled}
 

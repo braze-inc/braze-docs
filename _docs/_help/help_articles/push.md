@@ -23,5 +23,8 @@ guide_menu_list:
   - name: Migrating Push Tokens
     link: /docs/help/help_articles/push/push_token_migration/
     fa_icon: fas fa-map-signs
+  - name: Resetting Push Permissions
+    link: /docs/help/help_articles/push/resetting_push_permissions/
+    fa_icon: fas fa-circle-check
 
 ---
