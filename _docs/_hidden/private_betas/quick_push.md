@@ -62,7 +62,7 @@ If you select multiple devices for mobile platforms, such as both iOS and Androi
 
 ### Device-specific settings
 
-Settings specific to iOS and Android are not supported when multiple platforms or devices are selected. This includes settings like notification channels and groups, TTL, display priority, sounds, and more.
+Settings specific to iOS and Android are not supported when multiple platforms or devices are selected. This includes settings like [push action buttons]({{site.baseurl}}/user_guide/message_building_by_channel/push/advanced_push_options/push_action_buttons/), notification channels and groups, TTL, display priority, sounds, and more.
 
 For more information on device-specific settings, refer to the following article collections:
 
