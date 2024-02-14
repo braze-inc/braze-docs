@@ -57,7 +57,7 @@ Tealium does not batch consent events (subscription preferences) or user deletio
 | Requirement | Description |
 | ----------- | ----------- |
 | Tealium account | A [Tealium account](https://my.tealiumiq.com/) with server and/or client-side access is required to take advantage of this partnership. | 
-| Installed source and Tealium source [libraries](https://docs.tealium.com/server-side/data-sources/about-data-sources/) | The origin of any data sent into Tealium, such as mobile apps, websites, or backend servers.<br><br>You must install the libraries into your app, site, or server before being able to set up a successful Tealium connector. |
+| Installed source and Tealium source [libraries](https://docs.tealium.com/platforms/) | The origin of any data sent into Tealium, such as mobile apps, websites, or backend servers.<br><br>You must install the libraries into your app, site, or server before being able to set up a successful Tealium connector. |
 | Braze REST and SDK endpoint | Your REST or SDK endpoint URL. Your endpoint will depend on the [Braze URL for your instance]({{site.baseurl}}/api/basics/#endpoints). |
 | Braze app identifier key (side-by-side only) | Your app identifier key. <br><br>This can be found within the **Braze Dashboard > Manage Settings > API Key**. |
 | Code version (side-by-side only) | Corresponds to SDK version and should be in major.minor format (for example, 3.2 not 3.0.1). The code version should be 3.0 or higher. |
@@ -117,7 +117,7 @@ Braze mobile remote commands do not support all Braze methods and messaging chan
 
 ### Braze Web SDK tag
 
-Use the Braze Web SDK Tag to deploy Braze's Web SDK to your website. [Tealium iQ Tag Management](https://docs.tealium.com/iq-tag-management/) allows customers to add Braze as a tag within the Tealium dashboard to track visitor activity. Tags are typically used by marketers to understand the efficacy of online advertising, email marketing, and site personalization.
+Use the Braze Web SDK Tag to deploy Braze's Web SDK to your website. [Tealium iQ Tag Management](https://docs.tealium.com/client-side-tags/braze-web-sdk-tag/) allows customers to add Braze as a tag within the Tealium dashboard to track visitor activity. Tags are typically used by marketers to understand the efficacy of online advertising, email marketing, and site personalization.
 
 1. In Tealium, navigate to **iQ > Tags > + Add Tag > Braze Web SDK**.
 2. In the Tag Configuration dialogue box, enter the API Key (your Braze app identifier key), Base URL (Braze SDK endpoint), and [Braze Web SDK code version](https://github.com/braze-inc/braze-web-sdk/blob/master/CHANGELOG.md). You can also enable logging to log information in the web console for debugging purposes.
