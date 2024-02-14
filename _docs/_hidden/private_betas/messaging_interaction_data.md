@@ -14,18 +14,16 @@ hidden: true
 Messaging interaction data refers to how a user interacts with a campaign or Canvas they received (for example, when a user opens campaign A or a user receives variant A). This data can be accessed for retargeting the moment you need it.
 
 {% alert important %}
-Starting early 2024, messaging interaction data will be available according to the process outlined here.
+Starting in early 2024, messaging interaction data will be available according to the process outlined here.
 {% endalert %}
 
 Filters for a last received or engaged with message don't rely on campaign-specific interaction data.
 
 ### When is messaging interaction data available?
 
-For active campaigns and Canvases, interaction data is always available in real-time.
+For active campaigns and Canvases, interaction data is always available in real time.
 
-For stopped campaigns and Canvases, these campaigns and Canvases have their interaction data expired after three months, unless they are used in retargeting filters. When expired, the data will be moved to long-term storage with limited availability.
-
-However, this is temporary because you can restore this data by using its interaction data for retargeting.
+Stopped campaigns and Canvases will have their interaction data expire after three months unless they are used in retargeting filters. After expiration, the data will be moved to long-term storage with limited availability. However, this is temporary because you can restore this data.
 
 ### How do I restore messaging interaction data?
 
@@ -38,7 +36,7 @@ To restore your interaction data, follow these steps:
 
 You can also restore interaction data for multiple campaigns from the Campaigns page by selecting the campaigns and clicking the Restore interaction data button.
 
-It will vary how long the interaction data takes to restore, but in most cases, this process can range 5 to 15 minutes. You will receive an email after the restoration is complete.
+It will vary how long the interaction data takes to restore, but in most cases, this process can range from 5 to 15 minutes. You will receive an email after the restoration is complete.
 
 #### Restoring by tag
 
