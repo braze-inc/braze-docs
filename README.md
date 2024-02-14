@@ -10,19 +10,19 @@ If you'd like to help improve the docs, you can:
 
 ## Quick start
 
-> Note: For a full walkthrough, see [Contributing to Braze Docs](https://www.braze.com/docs/contributing/home/).
+> **Note:** For a full walkthrough, see [Contributing to Braze Docs](https://www.braze.com/docs/contributing/home/).
 
-To build the docs locally, you'll need Ruby version `2.7.4` installed. In the terminal, open `braze-docs` and check for Ruby version `2.7.4`.
+To build the docs locally, you'll need Ruby version `3.2.2` installed. In the terminal, open `braze-docs` and check for Ruby version `3.2.2`.
 
 ```bash
 cd ~/braze-docs
 ruby --version
 ```
 
-If it's not, use a [supported version manager](https://www.ruby-lang.org/en/documentation/installation/#managers) to install Ruby version `2.7.4`. For example, using [rbenv](https://github.com/rbenv/rbenv):
+If it's not, use a [supported version manager](https://www.ruby-lang.org/en/documentation/installation/#managers) to install Ruby version `3.2.2`. For example, using [rbenv](https://github.com/rbenv/rbenv):
 
 ```bash
-rbenv install 2.7.4
+rbenv install 3.2.2
 ```
 
 Next, install project dependencies.

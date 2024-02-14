@@ -129,17 +129,17 @@ git clone git@github.com:braze-inc/braze-docs.git
 
 ### Step 2.4: Install Ruby
 
-To [generate a local site preview]({{site.baseurl}}/contributing/generating_a_preview/), you'll need Ruby version `2.7.4` installed. In the terminal, open `braze-docs` and check for Ruby version `2.7.4`.
+To [generate a local site preview]({{site.baseurl}}/contributing/generating_a_preview/), you'll need Ruby version `3.2.2` installed. In the terminal, open `braze-docs` and check for Ruby version `3.2.2`.
 
 ```bash
 cd ~/braze-docs
 ruby --version
 ```
 
-If this version isn't installed, use a [supported version manager](https://www.ruby-lang.org/en/documentation/installation/#managers) to install Ruby version `2.7.4`. For example, using [rbenv](https://github.com/rbenv/rbenv).
+If this version isn't installed, use a [supported version manager](https://www.ruby-lang.org/en/documentation/installation/#managers) to install Ruby version `3.2.2`. For example, using [rbenv](https://github.com/rbenv/rbenv).
 
 ```bash
-rbenv install 2.7.4
+rbenv install 3.2.2
 ```
 
 ### Step 2.5: Install dependencies
