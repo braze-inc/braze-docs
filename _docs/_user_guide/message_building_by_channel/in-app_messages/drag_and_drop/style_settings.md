@@ -44,7 +44,7 @@ The message-level font will only apply to the current message and any duplicated
 
 ![]({% image_buster /assets/img_archive/dnd_iam_create.gif %})
 
-The drag-and-drop editor uses two key components to make in-app message composition quick and easy: **rows** and **blocks**. All blocks must be placed in a row.
+The drag-and-drop editor uses two key components for composing in-app messages: **rows** and **blocks**. All blocks must be placed in a row.
 
 ### Rows
 
