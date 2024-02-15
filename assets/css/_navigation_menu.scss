@@ -63,8 +63,8 @@ $nav_bottom_height: 60px;
     top: $header_height;
     padding: 0px;
 
-    font-size: 13px;
-    line-height: 18px;
+    font-size: 14px;
+    line-height: 20px;
     // top: $header_height;
     height: calc(100vh - #{$header_height + $banner_height} );
 
@@ -113,7 +113,7 @@ $nav_bottom_height: 60px;
   padding-left: 0px;
   padding-right: 0px;
 
-  font-size: 13px;
+  font-size: 14px;
   line-height: 18px;
   .showall {
     display: block;
