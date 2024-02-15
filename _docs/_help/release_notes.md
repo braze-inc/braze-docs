@@ -119,7 +119,7 @@ You can append a [BCC address]({{site.baseurl}}/user_guide/administrative/app_se
 
 #### One-click unsubscribe links for emails
 
-Using a [list-unsubscribe header]({{site.baseurl}}/user_guide/administrative/app_settings/email_settings/#list-unsubscribe-header) allows your recipients to unsubscribe easily from marketing emails by displaying an **Unsubscribe** button within the mailbox UI, and not the message body.
+Using a [list-unsubscribe header]({{site.baseurl}}/user_guide/administrative/app_settings/email_settings/#list-unsubscribe-header) allows your recipients to unsubscribe with one click from marketing emails by displaying an **Unsubscribe** button within the mailbox UI, and not the message body.
 
 ### New Braze partnerships
 
