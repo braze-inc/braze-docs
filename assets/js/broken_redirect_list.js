@@ -1090,3 +1090,13 @@ validurls['/docs/email_engagement_dashboard/'] = '/docs/user_guide/data_and_anal
 validurls['/docs/user_guide/administrative/app_settings/email_settings/#include-a-list-unsubscribe-header'] = '/docs/user_guide/administrative/app_settings/email_settings/#enable-list-unsubscribe-header';
 
 validurls['/docs/partners/data_and_infrastructure_agility/workflow_automation/flywheel/'] = '/docs/partners/data_and_infrastructure_agility/workflow_automation/growthloop/';
+
+validurls['/docs/campaign_data_retention/'] = '/docs/messaging_interaction_data/';
+
+validurls['/docs/user_guide/administrative/app_settings/custom_event_and_attribute_management/'] = '/docs/user_guide/data_and_analytics/custom_data/managing_custom_data/';
+
+validurls['/docs/home/metadata/'] = '/docs/contributing/yaml_front_matter/metadata/';
+validurls['/docs/home/styling_test_page/'] = '/docs/contributing/styling_examples/';
+validurls['/docs/help/help_articles/docs/contribution'] = '/docs/contributing/home/';
+
+// validurls['OLD'] = 'NEW';

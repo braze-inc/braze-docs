@@ -63,6 +63,8 @@ On this page, you can view a number of user-specific attributes, such as gender,
 
 ## Performance data by segment
 
+Your results will show the top (or bottom) campaigns, Canvases, or Canvas steps that you selected. For example, if you selected the top 10 campaigns for click rate, your results will show the top 10 campaigns ordered from highest to lowest click rate. Your columns will display all of the email engagement metrics for each row (campaigns, Canvases, or message steps).
+
 {% alert note %}
 The ability to break down performance data by segment in Query Builder report templates is currently in early access. Contact your customer success manager if you're interested in participating in this early access.
 {% endalert %}
@@ -104,6 +106,13 @@ The following email metrics are available in this report:
 
 Metrics from non-email channels are not yet available.
 
+#### Results
+
+Your results will show email engagement metrics by segment for the campaigns or Canvases you selected. If you didn't select specific campaigns or Canvases, your report will show the email metrics for each segment across all email campaigns and Canvases within your report’s time frame. 
+
+- **Rows:** Segments
+- **Columns:** Email engagement metrics
+
 ### Viewing metrics for variants or steps
 
 To view email performance broken down by segment at the campaign variant level, Canvas variant level, or Canvas step level, first choose a variant or step-level report (these are reports that have “for variants or steps” in the title), and then use the **Variables** tab to specify the following:
@@ -113,6 +122,13 @@ To view email performance broken down by segment at the campaign variant level, 
 - Canvas step (optional)
 
 The metrics are the same as those offered for the [campaign or Canvas level](#campaign-canvas-email) template. If you choose multiple variants, your results will be grouped by variant.
+
+#### Results
+
+Your results will show email engagement metrics by segment for your selected variants or steps. 
+
+- **Rows:** Segments
+- **Columns:** Email engagement metrics
 
 {% endtab %}
 
@@ -139,7 +155,23 @@ The following metrics are available for emails:
 
 All rate metrics use unique email recipients as the denominator.
 
+#### Definitions
+
+- “Upon receipt” refers to purchase events or revenue that occurred within your specified conversion window, after users received the specified campaigns or Canvases. 
+
+- “Upon click” refers to the purchase events or revenue that occurred after the purchase events, within your specified conversion window, after users clicked the specified campaigns or Canvases.
+
+For example, let's say a segment contains 10 users and five of them made a purchase after receiving your email. If one of those five made a purchase after clicking your email, your "unique purchases upon receipt" rate would be 50% and your "unique purchases upon click" rate would be 10%.
+
 ![The report shows email metrics including unique purchases upon receipt, revenue upon receipt, unique purchases upon click, revenue upon click, unique recipients, and unique email clicks.]({% image_buster /assets/img_archive/segment_breakdown_results.png %})
+
+#### Results
+
+Your results will show purchase metrics by segment for your selected campaigns or Canvases. If you didn't select specific campaigns or Canvases, your report will show the purchase metrics for each segment across all email campaigns or Canvases within your report’s time frame. 
+
+- **Rows:** Segments
+- **Columns:** Purchase metrics
+
 
 ### Viewing metrics for variants or steps
 
@@ -150,6 +182,13 @@ To view purchase and revenue metrics broken down by segment for a specific campa
 - (Optional) Canvas step
 - Time range
 - (Optional) Specific product
+
+#### Results
+
+Your results will show purchase metrics by segment for the variants or steps you selected.
+
+- **Rows:** Segments
+- **Columns:** Purchase metrics
 
 {% endtab %}
 {% tab Top/bottom messaging for email engagement %}
@@ -181,6 +220,10 @@ To view this report, you must specify the following variables in the **Variables
 - **Number of reports:** Select top or bottom results and the number of results, such as Top 10 or Bottom 15
 - **Message type:** Specify if your results are campaigns, Canvases, or Canvas steps
 
+#### Results
+
+Your results will show the top (or bottom) campaigns, Canvases, or Canvas steps that you selected. For example, if you selected the top 10 campaigns for click rate, your results will show the top 10 campaigns ordered from highest to lowest click rate. Your columns will display all of the email engagement metrics for each row (campaigns, Canvases, or message steps).
+
 {% endtab %}
 {% tab Top/bottom messaging for purchases %}
 
@@ -206,6 +249,18 @@ To view this report, you must specify the following variables in the **Variables
 - **Number of reports:** Select top or bottom results and the number of results, such as Top 10 or Bottom 15
 - **Message type:** Specify if your results are campaigns, Canvases, or Canvas steps
 - **Conversion window:** The number of days after email receipt or click to which Braze will attribute purchases or revenue 
+
+#### Definitions
+
+- “Upon receipt” refers to purchase events or revenue that occurred within your specified conversion window, after users received the specified campaigns or Canvases. 
+
+- “Upon click” refers to the purchase events or revenue that occurred after the purchase events, within your specified conversion window, after users clicked the specified campaigns or Canvases.
+
+For example, let's say a segment contains 10 users and five of them made a purchase after receiving your email. If one of those five made a purchase after clicking your email, your "unique purchases upon receipt" rate would be 50% and your "unique purchases upon click" rate would be 10%.
+
+#### Results
+
+Your results will show the top (or bottom) campaigns, Canvases, or Canvas steps that you selected. For example, if you selected top 10 campaigns for "revenue upon click", your results will show the top 10 campaigns ordered from highest to lowest "revenue upon click". Your columns will display all of the purchase metrics for each row (campaigns, Canvases, or message steps).
 
 {% endtab %}
 {% endtabs %}

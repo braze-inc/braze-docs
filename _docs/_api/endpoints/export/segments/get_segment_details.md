@@ -53,7 +53,8 @@ Authorization: Bearer YOUR-REST-API-KEY
       "name" : (string) the segment name,
       "description" : (string) a human-readable description of filters,
       "text_description" : (string) the segment description, 
-      "tags" : (array) the tag names associated with the segment formatted as strings
+      "tags" : (array) the tag names associated with the segment formatted as strings,
+      "teams" : (array) the names of the Teams associated with the campaign
 }
 ```
 

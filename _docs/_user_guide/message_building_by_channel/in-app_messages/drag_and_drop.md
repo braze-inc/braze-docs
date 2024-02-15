@@ -13,6 +13,9 @@ guide_featured_list:
 - name: Creating an In-App Message
   link: /docs/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/create/
   fa_icon: fas fa-mobile-alt
+- name: Style Settings
+  link: /docs/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/style_settings/
+  fa_icon: fas fa-palette
 - name: Editor Blocks
   link: /docs/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/editor_blocks/
   fa_icon: fas fa-align-left
