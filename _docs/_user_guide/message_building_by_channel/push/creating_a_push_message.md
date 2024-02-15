@@ -38,7 +38,7 @@ If you intend to target multiple devices and platforms, such as any combination 
 
 Refer to the following decision chart before creating a multichannel or push notification campaign:
 
-![]({% image_buster /assets/img_archive/flowchart_quickpush.png %})
+!["Flowchart for selecting campaign type. Starts by deciding if you're targeting multiple devices and platforms. If no, it leads to 'Select Push Notification.' If yes, it asks 'What type of push message?' and options are 'Standard push' leading to a decision point 'Do you need to use device-specific settings?' If no, it leads to 'Select Push Notification and use quick push.' If yes, it goes to 'Select Multichannel.' Back to 'What type of push message?', if the answer is 'Push Stories or Inline image,' it directs to 'Select Multichannel."]({% image_buster /assets/img_archive/flowchart_quickpush.png %})
 
 If you select **Push Notification** and choose to target multiple devices and platforms, you’re automatically creating a quick push campaign. With quick push, certain device-specific settings are not available:
 
