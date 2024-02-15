@@ -141,7 +141,7 @@ Braze provides the following statistics on segment size. All estimated statistic
 
 For each filter group, you can view estimated reachable users. Click **Expand extra funnel statistics** to see a breakdown across channels.
 
-![][]
+![A filter group with a filter for a First Name that isn't blank and using an app more than 1 time.][4]
 
 #### Segment statistics
 
