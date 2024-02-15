@@ -16,7 +16,7 @@ guide_featured_list:
   fa_icon: fa-solid fa-money-bill
 - name: Dynamic Code Generation
   link: /docs/partners/message_orchestration/channel_extensions/loyalty/punchh/code_generation/
-  fa_icon: fa-solid fa-code
+  image: /assets/img/braze_icons/code-square-01.svg
 
 ---
 

@@ -31,7 +31,7 @@ guide_featured_list:
     image: /assets/img/braze_icons/users-01.svg
   - name: Ingestion de données Cloud
     link: /docs/user_guide/data_and_analytics/user_data_collection/cloud_ingestion/
-    fa_icon: fa-solid fa-cloud
+    image: /assets/img/braze_icons/upload-cloud-01.svg
   - name: Codes de langue utilisateur
     link: /docs/user_guide/data_and_analytics/user_data_collection/language_codes/
     fa_icon: fas fa-language

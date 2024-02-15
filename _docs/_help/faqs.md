@@ -41,10 +41,10 @@ guide_featured_list:
     fa_icon: fa-brands fa-whatsapp
   - name: "Intelligence FAQ"
     link: /docs/user_guide/intelligence/faqs/
-    fa_icon: fa-regular fa-lightbulb
+    image: /assets/img/braze_icons/lightbulb-05.svg
   - name: "Email Drag-and-Drop Editor FAQ"
     link: /docs/user_guide/message_building_by_channel/email/drag_and_drop/faq/
-    fa_icon: fa-regular fa-lightbulb
+    image: /assets/img/braze_icons/lightbulb-05.svg
   - name: "API and CSV Export FAQ"
     link: /docs/user_guide/data_and_analytics/export_braze_data/faqs/
     fa_icon: fa-solid fa-file-export

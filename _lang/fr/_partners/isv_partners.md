@@ -11,7 +11,7 @@ guide_featured_title: "Documentation du partenaire"
 guide_featured_list:
 - name: Intégration de l’API
   link: /docs/partners/isv_partners/api_partner
-  fa_icon: fa-regular fa-circle-user
+  image: /assets/img/braze_icons/user-circle.svg
 - name: Intégration de l’importation de la cohorte
   link: /docs/partners/isv_partners/cohort_import
   image: /assets/img/braze_icons/users-01.svg

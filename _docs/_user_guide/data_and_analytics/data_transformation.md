@@ -15,7 +15,7 @@ guide_featured_list:
     fa_icon: fa-solid fa-database
   - name: Creating a Transformation
     link: /docs/user_guide/data_and_analytics/data_transformation/creating_a_transformation/
-    fa_icon: fa-solid fa-arrows-turn-to-dots
+    image: /assets/img/braze_icons/flip-forward.svg
   - name: Use Cases
     link: /docs/user_guide/data_and_analytics/data_transformation/use_cases/
     fa_icon: fa-solid fa-users

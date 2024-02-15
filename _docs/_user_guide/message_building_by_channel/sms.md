@@ -36,7 +36,7 @@ guide_featured_list:
   fa_icon: fa-solid fa-user
 - name: "Message Copy and Segment Calculator"
   link: /docs/user_guide/message_building_by_channel/sms/campaign/segments/
-  fa_icon: fa-solid fa-calculator
+  image: /assets/img/braze_icons/calculator.svg
 - name: "Keyword Processing and Use Cases"
   link: /docs/user_guide/message_building_by_channel/sms/keywords/
   fa_icon: fas fa-key

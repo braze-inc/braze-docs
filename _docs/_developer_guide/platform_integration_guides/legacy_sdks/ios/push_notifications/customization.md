@@ -20,7 +20,7 @@ guide_featured_list:
     image: /assets/img/braze_icons/annotation-alert.svg
   - name: Custom Sounds
     link: /docs/developer_guide/platform_integration_guides/ios/push_notifications/customization/custom_sounds/
-    fa_icon: fa-regular fa-file-audio
+    image: /assets/img/braze_icons/play-square.svg
   - name: Rich Notifications
     link: /docs/developer_guide/platform_integration_guides/ios/push_notifications/customization/rich_notifications/
     image: /assets/img/braze_icons/brush-02.svg

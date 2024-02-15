@@ -20,7 +20,7 @@ guide_featured_list:
     image: /assets/img/braze_icons/annotation-alert.svg
   - name: Sons personnalisés
     link: /docs/developer_guide/platform_integration_guides/swift/push_notifications/customization/custom_sounds/
-    fa_icon: fa-regular fa-file-audio
+    image: /assets/img/braze_icons/play-square.svg
   - name: Notifications enrichies
     link: /docs/developer_guide/platform_integration_guides/swift/push_notifications/customization/rich_notifications/
     image: /assets/img/braze_icons/brush-02.svg

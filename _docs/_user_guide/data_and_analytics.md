@@ -12,13 +12,13 @@ guide_featured_title: "Topics"
 guide_featured_list:
   - name: Data Points Overview
     link: /docs/user_guide/data_and_analytics/data_points/
-    fa_icon: fa-solid fa-check
+    image: /assets/img/braze_icons/check-square-broken.svg
   - name: Report Metrics Glossary
     link: /docs/user_guide/data_and_analytics/report_metrics/
     image: /assets/img/braze_icons/book-closed.svg
   - name: Cloud Data Ingestion
     link: /docs/user_guide/data_and_analytics/cloud_ingestion/
-    fa_icon: fa-solid fa-cloud
+    image: /assets/img/braze_icons/upload-cloud-01.svg
   - name: Creating a Formula
     link: /docs/user_guide/data_and_analytics/creating_a_formula/
     fa_icon: fas fa-flask
@@ -42,7 +42,7 @@ guide_featured_list:
     fa_icon: fa-solid fa-database
   - name: Your Analytics Dashboard
     link: /docs/user_guide/data_and_analytics/analytics/
-    fa_icon: fa-solid fa-chart-simple
+    image: /assets/img/braze_icons/trend-up-01.svg
   - name: Your Reports
     link: /docs/user_guide/data_and_analytics/reporting/
     fa_icon: fas fa-chart-bar

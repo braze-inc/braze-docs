@@ -21,7 +21,7 @@ resources_list:
     fa_icon: fa-solid fa-note-sticky
   - name: Braze Learning Login
     link: https://learning.braze.com/
-    fa_icon: fa-solid fa-chalkboard-user
+    image: /assets/img/braze_icons/user-square.svg
   - name: Media Resources
     link: https://www.youtube.com/channel/UCEXVTEWeAHx1OlddOMRTaOg
     fa_icon: fa-brands fa-youtube

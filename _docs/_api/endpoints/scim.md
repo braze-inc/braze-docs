@@ -16,7 +16,7 @@ guide_featured_title: ""
 guide_featured_list:
   - name: "POST: Create Dashboard User Account"
     link: /docs/post_create_user_account/
-    fa_icon: fa-solid fa-circle-plus
+    image: /assets/img/braze_icons/plus-circle.svg
   - name: "GET: Look Up Existing Dashboard User Account"
     link: /docs/get_see_user_account_information/
     fa_icon: fa-solid fa-eye

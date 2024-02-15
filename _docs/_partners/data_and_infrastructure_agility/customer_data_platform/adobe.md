@@ -17,5 +17,5 @@ guide_featured_list:
   image: /assets/img/braze_icons/user-circle.svg
 - name: Event Forwarding Extension
   link: /docs/partners/data_and_infrastructure_agility/customer_data_platform/adobe/event_forwarding_extension/
-  fa_icon: fa-solid fa-arrow-right
+  image: /assets/img/braze_icons/arrow-square-right.svg
 ---

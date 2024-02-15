@@ -12,7 +12,7 @@ guide_featured_title: "Sujets"
 guide_featured_list:
   - name: Aperçu des points de données
     link: /docs/user_guide/data_and_analytics/data_points/
-    fa_icon: fa-solid fa-check
+    image: /assets/img/braze_icons/check-square-broken.svg
   - name: Glossaire d’indicateurs de rapport
     link: /docs/user_guide/data_and_analytics/report_metrics/
     image: /assets/img/braze_icons/book-closed.svg
@@ -39,10 +39,10 @@ guide_featured_list:
     fa_icon: fas fa-file-export
   - name: Ingestion de données Cloud
     link: /docs/user_guide/data_and_analytics/user_data_collection/cloud_ingestion/
-    fa_icon: fa-solid fa-cloud
+    image: /assets/img/braze_icons/upload-cloud-01.svg
   - name: Votre tableau de bord d’analytiques
     link: /docs/user_guide/data_and_analytics/analytics/
-    fa_icon: fa-solid fa-chart-simple
+    image: /assets/img/braze_icons/trend-up-01.svg
   - name: Vos rapports
     link: /docs/user_guide/data_and_analytics/reporting/
     fa_icon: fas fa-chart-bar

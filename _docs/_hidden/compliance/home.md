@@ -35,10 +35,10 @@ guide_menu_list:
   fa_icon: fa-solid fa-thumbs-up
 - name: Innovation Statement
   link: /docs/developer_guide/disclosures/innovation_statement
-  fa_icon: fa-regular fa-lightbulb
+  image: /assets/img/braze_icons/lightbulb-05.svg
 - name: Data Privacy Framework Notice
   link: https://www.braze.com/company/legal/data-privacy-framework-notice
-  fa_icon: fa-solid fa-book
+  image: /assets/img/braze_icons/book-closed.svg
 
 guide_menu_title2: "Security"
 guide_menu_list2:

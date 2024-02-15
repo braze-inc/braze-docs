@@ -18,7 +18,7 @@ guide_featured_list:
   fa_icon: fa-solid fa-envelope
 - name: "In-App Messaging"
   link: /docs/user_guide/message_building_by_channel/in-app_messages/
-  fa_icon: fa-regular fa-comment-dots
+  image: /assets/img/braze_icons/annotation-dots.svg
 - name: News Feed
   link: /docs/user_guide/engagement_tools/news_feed/
   fa_icon: fa-solid fa-newspaper
@@ -33,7 +33,7 @@ guide_featured_list:
   fa_icon: fa-brands fa-whatsapp
 - name: Webhooks
   link: /docs/user_guide/message_building_by_channel/webhooks/
-  fa_icon: fa-solid fa-arrows-spin
+  image: /assets/img/braze_icons/brackets.svg
 ---
 
 ## Choosing a message channel

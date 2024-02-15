@@ -26,7 +26,7 @@ guide_featured_list:
   image: /assets/img/braze_icons/settings-01.svg
 - name: Canvas Audience Sync Data Privacy Considerations
   link: /docs/partners/canvas_steps/overview#data-privacy-considerations
-  fa_icon: fa-solid fa-arrows-rotate
+  image: /assets/img/braze_icons/fingerprint-03.svg
 - name: Braze Data Retention
   link: /docs/api/data_retention#data-retention-handled-by-braze-for-specific-features-of-the-braze-services
   fa_icon: fa-solid fa-database
@@ -35,7 +35,7 @@ guide_featured_list:
   fa_icon: fa-solid fa-user
 - name: Additional Privacy Resources
   link: https://www.braze.com/resources/search?section%5B%5D=articles&q=privacy
-  fa_icon: fa-solid fa-book
+  image: /assets/img/braze_icons/book-closed.svg
 
 guide_menu_title: "Legal"
 guide_menu_list:
@@ -62,10 +62,10 @@ guide_menu_list:
   fa_icon: fa-solid fa-thumbs-up
 - name: Innovation Statement
   link: /docs/developer_guide/disclosures/innovation_statement
-  fa_icon: fa-regular fa-lightbulb
+  image: /assets/img/braze_icons/lightbulb-05.svg
 - name: Data Privacy Framework Notice
   link: https://www.braze.com/company/legal/data-privacy-framework-notice
-  fa_icon: fa-solid fa-book
+  image: /assets/img/braze_icons/book-closed.svg
 
 guide_menu_title2: "Security"
 guide_menu_list2:
