@@ -4,7 +4,7 @@ page_order: 0
 noindex: true
 page_type: reference
 description: "This article contains a template for release notes."
-permalink: /templates/release_notes/
+permalink: /contributing/templates/release_notes/
 hidden: true
 ---
 
