@@ -53,8 +53,8 @@ guide_menu_list2:
     
 guide_menu_title3: "Data settings"
 guide_menu_list3:
-  - name: Custom Event and Attribute Management
-    link: /docs/user_guide/administrative/app_settings/custom_event_and_attribute_management/
-    fa_icon: fas fa-tasks
+  - name: Custom Data
+    link: /docs/user_guide/data_and_analytics/custom_data/managing_custom_data/
+    fa_icon: fas fa-database
 
 ---

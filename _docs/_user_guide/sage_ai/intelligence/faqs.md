@@ -37,7 +37,7 @@ Intelligent Selection allocates variants for sending based on the current status
 
 Intelligent Selection will stop optimizing when it has 95% confidence that continuing the experiment won't improve the conversion rate by more than 1% of its current rate.
 
-### Why can I not enable Intelligent Selection in my Canvas or campaign (grayed out)?
+### Why can't I enable Intelligent Selection in my Canvas or campaign (grayed out)?
 
 Intelligent Selection will be unavailable if:
 
@@ -94,10 +94,10 @@ We don't recommend using both Intelligent Timing and Quiet Hours for your campai
 
 ### Can I use Intelligent Timing and rate-limiting?
 
-Braze does not recommend using Intelligent Timing and rate-limiting as there is no guarantee about when the message will be delivered.
+Braze doesn't recommend using Intelligent Timing and rate-limiting because there is no guarantee about when the message will be delivered.
 
 ### Can I use Intelligent Timing while IP warming?
 
-Braze does not recommend using Intelligent Timing when users are first IP warming, as some of its behaviors can cause difficulties hitting daily volumes. This is caused by Intelligent Timing evaluating campaign segments twice. Once when the campaign is first built, and a second time before sending to users to verify they should still be in that segment. 
+Braze doesn't recommend using Intelligent Timing when users are first IP warming, as some of its behaviors can cause difficulties hitting daily volumes. This is caused by Intelligent Timing evaluating campaign segments twice. Once when the campaign is first built, and a second time before sending to users to verify they should still be in that segment. 
 
 This can cause segments to shift and change, often leading to some users falling out of the segment on the second evaluation. These users don't get replaced, impacting how close to the maximum user cap you can achieve.
