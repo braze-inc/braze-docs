@@ -183,6 +183,13 @@ To view purchase and revenue metrics broken down by segment for a specific campa
 - Time range
 - (Optional) Specific product
 
+#### Results
+
+Your results will show purchase metrics by segment for the variants or steps you selected.
+
+- **Rows:** Segments
+- **Columns:** Purchase metrics
+
 {% endtab %}
 {% tab Top/bottom messaging for email engagement %}
 
@@ -212,6 +219,10 @@ To view this report, you must specify the following variables in the **Variables
 - **Metrics:** Select one of the metrics by which to rank your results
 - **Number of reports:** Select top or bottom results and the number of results, such as Top 10 or Bottom 15
 - **Message type:** Specify if your results are campaigns, Canvases, or Canvas steps
+
+#### Results
+
+Your results will show the top (or bottom) campaigns, Canvases, or Canvas steps that you selected. For example, if you selected the top 10 campaigns for click rate, your results will show the top 10 campaigns ordered from highest to lowest click rate. Your columns will display all of the email engagement metrics for each row (campaigns, Canvases, or message steps).
 
 {% endtab %}
 {% tab Top/bottom messaging for purchases %}
