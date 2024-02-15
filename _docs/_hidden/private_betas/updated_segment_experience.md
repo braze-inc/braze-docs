@@ -141,6 +141,8 @@ Braze provides the following statistics on segment size. All estimated statistic
 
 For each filter group, you can view estimated reachable users. Click **Expand extra funnel statistics** to see a breakdown across channels.
 
+![][]
+
 #### Segment statistics
 
 For an entire segment, you can view estimated reachable users, as well as estimated user counts for each channel, at the bottom of the page. You can also view an exact count of reachable users (for both the segment overall and a per channel basis) by clicking **Calculate exact statistics**.
@@ -164,6 +166,7 @@ You can unarchive the segment by navigating to it within the **Segments** page, 
 [1]: {% image_buster /assets/img_archive/Segment1.png %}
 [2]: {% image_buster /assets/img_archive/Segment2.png %}
 [3]: {% image_buster /assets/img_archive/segment_step4.png %}
+[4]: {% image_buster /assets/img_archive/segment_filter_stats.png %}
 [5]: {% image_buster /assets/img_archive/segment_app_selection.png %}
 [6]: {% image_buster /assets/img_archive/user_lookup.png %}
 [7]: {% image_buster /assets/img_archive/user_lookup_match.png %}
