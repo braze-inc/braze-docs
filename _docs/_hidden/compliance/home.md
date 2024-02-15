@@ -6,48 +6,20 @@ layout: dev_guide
 permalink: /compliance-documentation/
 noindex: true
 guide_top_header: "Compliance Documentation"
-guide_top_text: "> Welcome to the Compliance Center. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-guide_top_text2: "<h4>Lorem</h4><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-guide_top_text3: "<h4>Ipsum lorem</h4><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+guide_top_text: "_Revision Date: 1 March, 2024_"
+guide_top_text2: "<h2>What is included in the Compliance Documentation?</h2><br>The Compliance Documentation below sets forth specific terms applicable to your purchased product, channel, feature, functionality or service:<br><ul><li>For Braze Services functionality that allows customers to interact with, integrate with or access the product, website, application or service of a Third-Party Provider, the Compliance Documentation contains the Third-Party Provider terms applicable to your use of such functionality; and</li><li>Any general industry practices and standards that Braze customers are required to comply with for the use of such Braze product, channel, feature, functionality or service.</li></ul>"
+guide_top_text3: "<h2>Updates to the Compliance Documentation</h2><br>You can subscribe to receive updates to our documentation (including the Compliance Documentation) through Braze’s GitHub repository."
+guide_top_text4: "<h2>How to find the relevant Compliance Documentation</h2><br>Below is the list of our products, channels, features, functionalities and services that have applicable Compliance Documentation. If you are using multiple products, all relevant Compliance Documentation applies."
 
-guide_menu_title: "Legal"
+guide_menu_title: ""
 guide_menu_list:
-- name: Data Processing Addendum (PDF)
-  link: https://marketing-assets.braze.com/production/hero/Braze-DPA-Rev-June-2023-Final-copy.pdf?v=1685959392
-  fa_icon: fa-solid fa-gavel
-- name: DPA FAQs
-  link: https://www.braze.com/company/legal/dpa
-  fa_icon: fa-solid fa-question
-- name: Standard Contractual Clauses
-  link: https://www.braze.com/company/legal/scc
-  fa_icon: fa-solid fa-gavel
-- name: Braze Subprocessors
-  link: https://www.braze.com/company/legal/subprocessors
-  fa_icon: fa-sharp fa-solid fa-network-wired
-- name: Transparency Report
-  link: https://www.braze.com/company/legal/transparency-report
-  fa_icon: fa-solid fa-magnifying-glass
-- name: GDPR FAQs
-  link: https://www.braze.com/company/legal/gdpr-faq
-  fa_icon: fa-solid fa-question
-- name: Acceptable Use Policy
-  link: https://www.braze.com/company/legal/aup
-  fa_icon: fa-solid fa-thumbs-up
-- name: Innovation Statement
-  link: /docs/developer_guide/disclosures/innovation_statement
-  fa_icon: fa-regular fa-lightbulb
-- name: Data Privacy Framework Notice
-  link: https://www.braze.com/company/legal/data-privacy-framework-notice
-  fa_icon: fa-solid fa-book
-
-guide_menu_title2: "Security"
-guide_menu_list2:
-- name: Security, Privacy, and Architecture Datasheet
+- name: SMS Channel
   link: https://www.braze.com/company/legal/security-schedule
   fa_icon: fa-solid fa-lock
-- name: Braze Security Certifications
+- name: WhatsApp Channel
   link: /docs/developer_guide/disclosures/security_qualifications/#soc-2-examination
-  fa_icon: fa-solid fa-lock
+  fa_icon: fa-solid fa-gavel
+
 
 ---
 
