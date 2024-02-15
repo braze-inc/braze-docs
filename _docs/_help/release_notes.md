@@ -117,6 +117,10 @@ The new help article [Notification Payload Size]({{site.baseurl}}/help/help_arti
 
 You can append a [BCC address]({{site.baseurl}}/user_guide/administrative/app_settings/email_settings/?tab=bcc%20address#outbound-email-settings) to an email message. This will send an identical copy of the message your user receives to your BCC inbox. This allows you to retain copies of messages you sent your users for compliance requirements or customer support issues.
 
+#### One-click unsubscribe links for emails
+
+Using a [list-unsubscribe header]({{site.baseurl}}/user_guide/administrative/app_settings/email_settings/#list-unsubscribe-header) allows your recipients to unsubscribe easily from marketing emails by displaying an **Unsubscribe** button within the mailbox UI, and not the message body.
+
 ### New Braze partnerships
 
 #### Criteo - Canvas Audience Sync
