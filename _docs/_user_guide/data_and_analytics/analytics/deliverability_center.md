@@ -18,7 +18,7 @@ To access the Deliverability Center, you'll need "Access Campaigns, Canvases, Ca
 
 ### Set up Google Postmaster account
 
-Before connecting to the Deliverability Center, you'll need to set up a Google Postmaster Tools account.
+Before connecting to the Deliverability Center, you'll need to set up a Google Postmaster Tools account. You can use a work or personal Gmail account to setup your Google Postmaster. 
 
 1. Go to the [Google Postmaster Tools dashboard](https://postmaster.google.com/managedomains?pli=1).
 2. In the bottom right, click the <i class="fas fa-plus-circle"></i> plus icon.
@@ -96,10 +96,6 @@ Refer to this table to understand what percentage of your inbound and outbound t
 For more ideas on improving deliverability, read [Deliverability pitfalls and spam traps][6]. Be sure to reference our [Email best practices][7] for things you should check for before sending an email campaign.
 
 ## Set up Microsoft Smart Network Data Services (SNDS)
-
-{% alert important %}
-Microsoft SNDS in the Deliverability Center is currently in early access. Contact your account manager if you're interested in participating in this early access.
-{% endalert %}
 
 If Microsoft is your main mailbox provider, you can use this integration to access and view your Microsoft reputation data. This way, you can monitor the health of your IPs to help determine how your emails are being received.
 
