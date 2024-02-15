@@ -195,7 +195,7 @@ Ensure your content follows the [Braze Docs Style Guide]({{sitebase.url}}/contri
 {% tab github %}
 In a PR comment, tag `@braze-inc/docs-team` to request a site preview.
 
-![An example comment tagging the Braze Docs team to request a site preview.]({% image_buster /assets/img/contributing/github/tag_docs_team_in_comment.png %})
+![An example comment tagging the Braze Docs team to request a site preview.]({% image_buster /assets/img/contributing/github/tag_docs_team_in_comment.png %}){: style="max-width:83%;"}
 
 To open the site preview, select **View deployment**.
 
