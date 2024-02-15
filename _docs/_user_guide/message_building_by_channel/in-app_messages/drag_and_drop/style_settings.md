@@ -1,13 +1,13 @@
 ---
 nav_title: Style Settings
-article_title: "In-app message style settings"
+article_title: "In-App Message Style Settings"
 description: "This reference article covers the styling options available when creating an in-app message with the drag-and-drop editor."
 page_order: 3
 ---
 
 # In-app message style settings
 
-The drag-and-drop editing experience is divided into two sections: **Build** and **Preview & Test**. This article covers what you need to know for working within the **Build** tab of the editor, and assumes you've already [created an in-app message]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/create/).
+> The drag-and-drop editing experience is divided into two sections: **Build** and **Preview & Test**. This article covers what you need to know for working within the **Build** tab of the editor and assumes you've already [created an in-app message]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/create/).
 
 ![]({% image_buster /assets/img_archive/dnd_iam_message_styles.png %}){: style="float:right;max-width:25%;margin-left:15px;max-width:30%"}
 
@@ -15,9 +15,9 @@ The drag-and-drop editing experience is divided into two sections: **Build** and
 
 You can set certain styles to be applied across all relevant blocks in your in-app message from the **Message Styles** tab. For example, you may want to customize the font of all the text or the color of all links in your message.
 
-The styles set in this section are used everywhere in your message except where you override it for a specific block. If your message has [multiple pages]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/create#multi-page), you can also override the message-level styles for individual pages, with the exception of display type and max width.
+The styles in this section are used everywhere in your message except where you override it for a specific block. If your message has [multiple pages]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/create#multi-page), you can also override the message-level styles for individual pages, except for display type and max width.
 
-For an easier design experience, we recommend that you set up message-level styles first before you customize styles at the block level.
+For an easier design experience, we recommend setting up message-level styles before you customize styles at the block level.
 
 To return to the **Message Styles** tab at any time:
 
@@ -26,7 +26,7 @@ To return to the **Message Styles** tab at any time:
 
 ### Custom fonts
 
-We accept the following file types for fonts: `.ttf`, `.woff`, `.otf`, `.woff2`. For more information, see [Asset files]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/html_in-app_messages#asset-files).
+We accept the following file types for fonts: `.ttf`, `.woff`, `.otf`, and `.woff2`. For more information, see [Asset files]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/html_in-app_messages#asset-files).
 
 You can add multiple variations of a font family, as some styling options may not be available for custom fonts. Currently, we don't support adding fonts via URL.
 
@@ -62,15 +62,15 @@ As a best practice, format your row and column properties before formatting any 
 
 ### Blocks
 
-Blocks represent different types of content you can use in your message. Simply drag one inside an existing row segment, and it will auto-adjust to the cell width.
+Blocks represent different types of content you can use in your message. Drag one inside an existing row segment, and it will auto-adjust to the cell width.
 
 {% alert tip %}
-Before you add blocks, set up [message-level styles](#set-message-level-styles) for the message container, font, colors, and anything else you want to customize. You can then customize individual blocks as needed. The **Close Button** will remain at the top section of your message so that users always have an option to dismiss the message.
+Before you add blocks, set up [message-level styles](#set-message-level-styles) for the message container, font, colors, and anything else you want to customize. You can then customize individual blocks as needed. The **Close Button** will remain at the top section of your message so that users always have the option to dismiss the message.
 {% endalert %}
 
 ![]({% image_buster /assets/img_archive/dnd_iam_editor_blocks.png %}){: style="max-width:40%"}
 
-Every block has its own settings, such as granular control on padding. The right-side panel automatically switches to a styling panel for the selected content element. For more information, see [Editor Block Properties]({{site.baseurl}}/editor_blocks_dnd_iam/).
+Every block has its settings, such as granular control on padding. The right-side panel automatically switches to a styling panel for the selected content element. For more information, see [Editor block properties]({{site.baseurl}}/editor_blocks_dnd_iam/).
 
 As you build your in-app message, you can select a mobile, tablet, or desktop view in the toolbar to preview how your in-app message will look for your user groups. This will ensure that your content is responsive, and you can make any necessary adjustments along the way.
 
@@ -94,23 +94,23 @@ If you're having trouble selecting a certain block, you can use the up arrow in 
 
 ![]({% image_buster /assets/img_archive/dnd_iam_liquid.png %}){: style="float:right;max-width:25%;margin-left:15px"}
 
-To add [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid) into your in-app message, select <i class="fa-solid fa-circle-plus"></i> **Add Personalization** from the editor toolbar. Here, you can add various personalization types such as default attributes, device attributes, custom attributes, and more!
+To add [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid) into your in-app message, select <i class="fa-solid fa-circle-plus"></i> **Add Personalization** from the editor toolbar. Here, you can add various personalization types such as default attributes, device attributes, custom attributes, and more.
 
-Next, take your generated Liquid snippet and insert it into your message. After you've finished designing and building your in-app message, go to **Preview & Test** to preview your message.
+Next, take your generated Liquid snippet and insert it into your message. After designing and building your in-app message, go to **Preview & Test** to preview your message.
 
 ### Using the AI copywriter
 
-When a text block is selected in your in-app message, click <i class="fa-solid fa-wand-magic-sparkles" title="AI copywriter"></i> in the block toolbar to launch the [AI-powered copywriting assistant]({{site.baseurl}}/user_guide/intelligence/ai_copywriting/). The AI copywriting assistant passes a brief product name or description to OpenAI’s GPT3 copy generation tool to generate human-like marketing copy for use in your messaging.
+When a text block is selected in your in-app message, click <i class="fa-solid fa-wand-magic-sparkles" title="AI copywriter"></i> in the block toolbar to launch the [AI-powered copywriting assistant]({{site.baseurl}}/user_guide/intelligence/ai_copywriting/). The AI copywriting assistant passes a brief product name or description to OpenAI’s GPT3 copy generation tool to generate human-like marketing copy for your messaging.
 
 {% alert tip %}
-You can save a few clicks by highlighting text inside the block before clicking the icon. The highlighted text will be added to the tool and copy will be generated immediately.
+You can save a few clicks by highlighting text inside the block before clicking the icon. The highlighted text will be added to the tool, and copy will be generated immediately.
 {% endalert %}
 
 ![]({% image_buster /assets/img_archive/dnd_iam_ai_copywriter.gif %})
 
 ### Resetting styles to default
 
-Properties that you have changed from their default styling are marked with an orange dot. To quickly reset a specific property to its default style, hover over the field and select **Reset to default**.
+Properties that you have changed from their default styling are marked with an orange dot. To reset a specific property to its default style, hover over the field and select **Reset to default**.
 
 ![]({% image_buster /assets/img_archive/dnd_iam_reset_styles.gif %}){: style="max-width:45%"}
 
