@@ -94,7 +94,7 @@ target 'MyAppNotificationContentExtension' do
 end
 ```
 
-### Step 4: Reinstall your CocoaPod dependencies
+### Step 4: Reinstall your CocoaPods dependencies
 
 In the terminal, go to your iOS directory and reinstall your CocoaPod dependencies.
 
