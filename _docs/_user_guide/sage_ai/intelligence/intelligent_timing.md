@@ -114,7 +114,7 @@ In Canvas Flow, Intelligent Timing is set in Message steps. To use Intelligent T
 3. Select **Using Intelligent Timing**.
 4. Specify a [fallback time](#fallback-time).
 
-Messages send within 24 hours of the user entering the Message step, at the next occurrence of their optimal time. Message steps that target multiple channels may send or attempt to send messages at different times for different channels. When the first message in a Message step attempts to send, all users are auto-advanced.
+A user who enters this step will receive the message at their optimal time on the day they enter IF that time has not yet passed. Note that if a user's optimal time (in local time) has passed on the day they enter a message step, it will send on the next day at the optimal time. Message steps that target multiple channels may send or attempt to send messages at different times for different channels. When the first message in a Message step attempts to send, all users are auto-advanced.
 
 #### Delay steps and Intelligent Timing
 

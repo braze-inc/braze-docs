@@ -32,7 +32,7 @@ To get started, you need to authenticate your Braze account within your Simon Da
 - Sync Traits and Contact Properties
 
 {% alert note %}  
-Simon only sends the changing data on each sync to Braze to minimize costs for unchanging data. You choose which traits you want to sync, and only the values that have changed for those traits are sent during your pipe refresh. See [Sync Traits and Contact Properties](#sync-traits-and-contact-properties) for more.
+When using the Simon and Braze integration, Simon only sends deltas on each sync to Braze avoiding costs for irrelevant data. See [Sync Traits and Contact Properties](#sync-traits-and-contact-properties) for more.
 {% endalert %}
 
 ## Integration
@@ -82,7 +82,6 @@ After Contact Traits is activated by your account manager:
 
 ![Selecting sync traits in Simon Data.][10]
 
-On the first sync, all Traits and Contact Properties are updated. For all syncs after, only the traits you selected here that have changed will re-sync when your pipe refreshes. If you don't choose any traits, Simon sends all Traits and Contact Properties that have changed by default. In both cases, unchanged traits will not be sent.
 
 
 
