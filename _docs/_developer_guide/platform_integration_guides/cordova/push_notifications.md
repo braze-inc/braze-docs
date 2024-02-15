@@ -30,13 +30,13 @@ In your Xcode project, create a notification service extension. For a full walkt
 Open your Podfile and add `BrazeNotificationService` to the notification service extension target [you just created](#step-1-create-a-notification-service-extension). If `BrazeNotificationService` is already added to a target, remove it before continuing. To avoid duplicate symbol errors, use static linking.
 
 ```ruby
-target 'NOTIFICATION_SERVICE_EXTENTION' do
+target 'NOTIFICATION_SERVICE_EXTENSION' do
   use_frameworks! :linkage => :static
   pod 'BrazeNotificationService'
 end
 ```
 
-Replace `NOTIFICATION_SERVICE_EXTENTION` with the name of your notification service extension. Your Podfile should be similar to the following:
+Replace `NOTIFICATION_SERVICE_EXTENSION` with the name of your notification service extension. Your Podfile should be similar to the following:
 
 ```ruby
 target 'MyAppRichNotificationService' do
@@ -45,7 +45,7 @@ target 'MyAppRichNotificationService' do
 end
 ```
 
-### Step 3: Reinstall your CocoaPod dependencies
+### Step 3: Reinstall your CocoaPods dependencies
 
 In the terminal, go to your project's iOS directory and reinstall your CocoaPod dependencies.
 
@@ -79,13 +79,13 @@ Replace `PUSH_APP_GROUP` with the name of your push app group. Your `config.xml`
 Open your Podfile and add `BrazePushStory` to the notification content extension target [you created previously](#step-1-create-a-notification-content-extension). To avoid duplicate symbol errors, use static linking.
 
 ```ruby
-target 'NOTIFICATION_CONTENT_EXTENTION' do
+target 'NOTIFICATION_CONTENT_EXTENSION' do
   use_frameworks! :linkage => :static
   pod 'BrazePushStory'
 end
 ```
 
-Replace `NOTIFICATION_CONTENT_EXTENTION` with the name of your notification content extension. Your Podfile should be similar to the following:
+Replace `NOTIFICATION_CONTENT_EXTENSION` with the name of your notification content extension. Your Podfile should be similar to the following:
 
 ```ruby
 target 'MyAppNotificationContentExtension' do
