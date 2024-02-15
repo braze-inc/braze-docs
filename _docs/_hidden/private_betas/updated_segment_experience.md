@@ -82,7 +82,7 @@ If a user falls into your exclusion group criteria, they will not be part of you
 
 Create an exclusion group by adding filters like you would for filter groups. The estimated excluded users statistic is the number of users normally targeted by this segment but are excluded because of exclusion group criteria.
 
-Excluded users will not be counted as part of your segment’s **Total reachable users** statistic.
+Excluded users will not be counted as part of your segment’s _Total reachable users_ statistic.
 
 ![An exclusion group with two filters.][12]
 
