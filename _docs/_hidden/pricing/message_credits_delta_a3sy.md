@@ -13,13 +13,17 @@ Below is the reference table for each channel and message destination we offer.
 
 Definition for the columns are as follows:
 **Channel:** High level channel grouping we use to organize our billing
+
 **Channel Credit Ratio:** Baseline credit amount for each channel
+
 **Destination:** Specific region or country messages are being sent to as part of a given channel
+
 **Multiplier:** Tied to the channel/destination combination; will scale the channel credit ratio down or up depending on how cheap or expensive the destination is
+
 **Credits Consumed with One Message:** Exactly how many credits you are using for per message
 
 {% alert note %}
-<b>Note:</b> Different channels will have different units of measure for what defines a credit consumed.<br><br>
+Different channels will have different units of measure for what defines a credit consumed.<br><br>
 <b>WhatsApp:</b> Conversations<br>
 <b>SMS:</b> Segments<br>
 <b>MMS:</b> Segments<br><br>
