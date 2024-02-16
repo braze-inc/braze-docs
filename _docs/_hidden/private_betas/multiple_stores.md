@@ -31,12 +31,10 @@ With Braze’s multiple-store support, you can:
 
 ### Setting up an additional store
 1. After you have installed your first store, select the **+ Connect New Store** option.<br>![][1]{: style="max-width:70%;"}<br><br>
-2. You will be prompted to go through the onboarding flow for this new store. More details can be found in our [Setting up Shopify]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/shopify/setting_up_shopify/) guide.<br><br>Note that the settings from the previous store will be carried over, but you can update these accordingly.<br><br>
+2. You will be prompted to go through the onboarding flow for this new store. More details can be found in our [Setting up Shopify]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/shopify/setting_up_shopify/) guide.<br><br>Note that the settings from the previous store can be carried over, but you can update the settings accordingly as you progress through your onboarding.<br><br>
 3. For the collect email or SMS subscribers step:
 - To appropriately collect email and SMS subscriptions for each store, you must assign unique subscription groups to each store setup. 
-- We suggest that you **do not** enable “Override existing global state for users” as it can globally unsubscribe your customers if they interacted with more than one of your stores. 
-- **Customers with multiple regions and markets as stores**: Confirm you set the correct email subscription group to the right store for every store install. To track a user's most recent subscription state from any store, you must enable the “Override existing global state for users” option when installing each store. Doing so will override the Braze global email subscription state and the email subscription group.
-- **Customers with multiple brands as stores**: Currently, we do not have support to override only the email subscription group without also overriding the global email subscription state. We aim to provide this support ahead of general availability.<br><br>
+- We suggest that you **do not** enable “Override existing global state for users” as it can globally unsubscribe your customers if they interacted with more than one of your stores.<br><br>
 4. Repeat this installation for as many stores as you need.<br><br>
 5. To view each store’s integration and configure advanced settings, click into a store in the drop-down menu:<br>![][2]{: style="max-width:70%;"}
 
