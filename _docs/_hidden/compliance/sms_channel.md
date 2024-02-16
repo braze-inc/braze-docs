@@ -7,7 +7,7 @@ page_order: 2
 noindex: true
 ---
 
-# Compliance Documentation for SMS/MMS Services
+# Compliance Documentation for SMS/MMS Services ("SMS Channel")
 
 _Revision Date: 1 March 2024_
 
