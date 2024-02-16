@@ -122,10 +122,6 @@ The three cards on this page show your projected lift, overall results, and the 
 
 ![Personalized Paths tab for a Canvas. The cards show the Projected Lift, Overall Conversions (with Personalized Paths), and Projected Unique Opens (with Winning Path).]({% image_buster /assets/img/experiment_step/experiment_personalized_analytics_tab2.png %})
 
-The table on this page shows the metrics for each variant from the Personalized Variant send. Your **Audience %** adds up to the percentage of the target segment you reserved for the Personalized Variant group.
-
-![]({% image_buster /assets/img_archive/ab_analytics_pv_2.png %})
-
 {% endtab %}
 {% endtabs %}
 
