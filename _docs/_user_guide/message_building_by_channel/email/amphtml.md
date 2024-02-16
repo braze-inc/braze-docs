@@ -13,7 +13,7 @@ channel:
 
 > With [AMP for email](https://amp.dev/about/email), you can add interactive elements to your emails and elevate your communications with your customers, delivering a full experience directly to your user's inbox. 
 
-AMP makes this possible through its use of various components that can be used to help build exciting in email offerings such as surveys, feedback questionnaires, voting campaigns, reviews, subscription centers, and more. Tools like these offer significant opportunities to increase engagement and retention. 
+AMP makes this possible through its use of various components that can be used to help build exciting in email offerings such as surveys, feedback questionnaires, voting campaigns, reviews, subscription centers, and more. Tools like these offer significant opportunities to increase engagement and retention.
 
 ## Requirements
 
@@ -73,9 +73,13 @@ You can utilize AMP for email using our API. When you use any of our [Messaging 
 
 ## Writing your AMP email
 
-Build your AMP email using [components](#components). Check out our [example use cases](#example-use-cases), and then use the [Braze API](#api-usage) to send your message. Be sure to use `amp_body` for your AMP HTML.
+Build your AMP email using [components](#components). Check out our [use cases](#use-cases), and then use the [Braze API](#api-usage) to send your message. Be sure to use `amp_body` for your AMP HTML.
 
 In addition to the AMP HTML, we require a regular HTML `body` version and suggest a `plaintext_body` version of your AMP email. All AMP emails are sent out multipart, meaning Braze sends out an email that supports HTML, plaintext, and AMP HTML. This becomes useful in the event that your email is sent via a provider who does not yet support AMP for email, automatically defaulting to the appropriate version based on the user and their device.
+
+{% alert note %}
+When you're building an AMP email, check that you're in the AMP editor as AMP code should not be added to the HTML editor.
+{% endalert %}
 
 Refer to these additional resources:
 
