@@ -1,7 +1,7 @@
 ---
 nav_title: Compliance Documentation
 article_title: Compliance Documentation
-page_order: 60
+page_order: 1
 layout: dev_guide
 permalink: /compliance_documentation/
 noindex: true
@@ -22,15 +22,15 @@ guide_top_text3: "<h2>How to find the relevant Compliance Documentation</h2><br>
 guide_menu_title: ""
 guide_menu_list:
 - name: SMS Channel
-  link: https://www.braze.com/company/legal/security-schedule
-  fa_icon: fa-solid fa-lock
+  link: /docs/compliance_documentation_sms/
+  fa_icon: fa-solid fa-comment-sms
 - name: WhatsApp Channel
-  link: /docs/developer_guide/disclosures/security_qualifications/#soc-2-examination
-  fa_icon: fa-solid fa-gavel
+  link: /docs/compliance_documentation_whatsapp/
+  fa_icon: fa-brands fa-whatsapp
 
 
 ---
-
+<br><br>
 {% alert important %}
 **Legal Disclaimer**<br>
 The information provided here is provided for educational purposes only and should not be construed as legal advice. Braze encourages all of our customers to seek their own legal advice on their use of Braze in compliance with data protection laws and regulations.
