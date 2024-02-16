@@ -10,7 +10,7 @@ layout: dev_guide
 > Connect multiple Shopify stores to a single workspace with our new beta for multiple store support to have a holistic view of your customers across all markets or brands. Build and launch automation programs and journeys in a single workspace without duplicating efforts across multiple instances. 
 
 {% alert important %}
-Shopify multiple store support is currently being provided as a beta version, which may contain bugs. The feature may also change, iterate, and evolve as the product team continues development. 
+Support for multiple Shopify stores is available in beta, which may contain bugs. This feature is subject to change as development continues.
 {% endalert %}
 
 ## Prerequisites
