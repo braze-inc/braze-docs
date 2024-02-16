@@ -67,7 +67,7 @@ The `glossary_page` value is used to apply the glossary page format. In the foll
 {% endtabs %}
 
 {% alert tip %}
-In certain layouts, a value like "guide_top_text:" might benefit from having Markdown formatting. You can use Markdown formatting for certain YAML values. To do so, add `>` as the YAML value, and indent the text afterwards. 
+In certain layouts, a value like `"guide_top_text:"` might benefit from having Markdown formatting. You can use Markdown formatting for certain YAML values. To do so, add `>` as the YAML value, and indent the text afterwards. 
 <br>
 For example:<br>
 guide_top_text: ><br>
