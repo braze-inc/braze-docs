@@ -80,6 +80,8 @@ Authorization: Bearer YOUR-REST-API-KEY
 |`override_frequency_capping`| Optional | Boolean | Ignore `frequency_capping` for campaigns, defaults to `false`. |
 |`recipient_subscription_state`| Optional | String | Use this to send messages to only users who have opted in (`opted_in`), only users who have subscribed or are opted in (`subscribed`) or to all users, including unsubscribed users (`all`). <br><br>Using `all` users is useful for transactional email messaging. Defaults to `subscribed`. |
 |`messages`| Optional | Messaging objects | See [available messaging objects]({{site.baseurl}}/api/objects_filters/#messaging-objects). |
+|`link_shortening_enabled`| Optional | Boolean | Set `link_shortening_enabled` to `true` to turn on link shortening and campaign-level click tracking. To use tracking, a `campaign_id` and `message_variation_id` must be present.|
+|`user_click_tracking_enabled`| Optional | Boolean | Set `user_click_tracking_enabled` to `true` to turn on link shortening, and campaign-level and user-level click tracking. You can use the tracked data to create segments of users who clicked URLs. To use tracking, a `campaign_id` and `message_variation_id` must be present. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ## Example request
