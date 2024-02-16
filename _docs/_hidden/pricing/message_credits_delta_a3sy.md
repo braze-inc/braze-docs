@@ -12,6 +12,7 @@ noindex: true
 Below is the reference table for each channel and message destination we offer.
 
 Definition for the columns are as follows:
+
 **Channel:** High level channel grouping we use to organize our billing
 
 **Channel Credit Ratio:** Baseline credit amount for each channel
