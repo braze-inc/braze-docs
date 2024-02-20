@@ -16,7 +16,7 @@ In Campaign composition, insert your message variants along with their subject l
 
 <img width="518" alt="image" src="https://github.com/braze-inc/braze-docs/assets/17167198/8e74835c-76e4-4241-9763-c4f86a622c75">
 
-A window will open where you will see the subject lines of any message variants you have already created. Optionally, you may insert up to 8 additional subject lines by entering one manually into the box and running the projection.
+A window will open where you will see the subject lines of any message variants you have already created. Optionally, you may insert additional subject lines (up to a maximum of ten) by entering one manually into the box and running the projection.
 
 Click **Run Projection**
 
