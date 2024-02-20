@@ -10,6 +10,8 @@ description: "This article explains how A/B test projection works, how to run a 
 
 > A/B test projection uses neural networks to predict which subject lines perform best. Our model extracts linguistic features from winning A/B tests performed on Braze and uses those statistical language patterns to teach our AI what makes better subject lines.
 
+ {% alert note %} This feature is currently in early access. Contact your Braze customer success or account manager if you're interested in participating in the early access. {% endalert %}
+
 ## Running a projection
 
 In campaign composition, insert your message variants and their subject lines into the editor. When ready, go to the **Target Audience** step of the campaign creation flow. In the **A/B Testing** panel, select **Run Projection**.
