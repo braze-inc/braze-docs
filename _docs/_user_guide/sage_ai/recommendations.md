@@ -48,7 +48,7 @@ Next, select the recommendation type. Both recommendation types use the last 6 m
 - **AI Personalized:** Uses transformers, a new kind of deep learning, to predict each user's next most likely set of items to purchase or interact with. The interaction is defined by the event you choose in Step 3. We calculate up to 30 of the next most likely items ranked from most to least likely. This type of recommendation does not use Large Language Models (LLMs) to combine your data with that of any other Braze customer.
 
 {% alert tip %}
-When using either Most Recent and AI Personalized, users with insufficient data to create individualized recommendations will receive Most Popular items as a fallback. The proportion of users receiving the Most Popular fallback is displayed on the Analytics page.
+When using **Most recent** or **AI Personalized**, users with insufficient data to create individualized recommendations will receive **Most popular** items as a fallback. The proportion of users receiving the **Most popular** fallback is displayed on the **Analytics** page.
 {% endalert %}
 
 ![][2-1]
@@ -57,7 +57,7 @@ If not already populated, select the [catalog][catalog] that this recommendation
 
 #### Add a selection
 
-If you'd like more control over your recommendation, choose a [selection]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/selections/) to apply custom filters. Selections filter recommendations by specific columns in your catalog, such as brand, size, or location. If your selection contains Liquid, the selection can't be used in your recommendation.
+If you'd like more control over your recommendation, choose a [selection]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/selections/) to apply custom filters. Selections filter recommendations by specific columns in your catalog, such as brand, size, or location. Selections that contain Liquid can't be used in your recommendation.
 
 ![][2-2]
 
@@ -258,12 +258,12 @@ These metrics are defined in the following table.
 
 The next section shows a breakdown of items in the catalog, split into two possible columns:
 
-- **Personalized or Most recent items:** This column lists each item in the catalog in order of most often to least often recommended to users. This column also shows how many users were assigned each item by the model.
-- **Most Popular items:** This column lists each item in the catalog in order of popularity. Popularity here refers to items in the catalog that users interact with most often in the entire workspace. Most popular is used as the fallback when personalized or most recent cannot be computed for an individual user.
+- **Personalized items** or **Most recent items:** This column lists each item in the catalog in descending order of most often recommended to users. This column also shows how many users were assigned each item by the model.
+- **Most Popular items:** This column lists each item in the catalog in descending order of popularity. Popularity here refers to items in the catalog that users interact with most often in the entire workspace. Most popular is used as the fallback when personalized or most recent cannot be computed for an individual user.
 
 ![][6]
 
-For your reference, the final section shows a summary of your chosen recommendation configuration, as well as when the recommendation was last updated.
+The **Recommendation overview** shows a summary of your chosen recommendation configuration, including when the recommendation was last updated.
 
 ![][7]{: style="max-width:45%" }
 
