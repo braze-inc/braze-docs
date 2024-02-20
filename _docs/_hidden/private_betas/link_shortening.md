@@ -13,15 +13,15 @@ hidden: true
 Link shortening and click tracking can be enabled at the [message variant-level]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/#step-1-create-your-campaign) in both campaigns and Canvases. 
 
 The length of the URL will be determined by the type of tracking that is enabled:
-- **Basic tracking** enables campaign-level click tracking. Static URLs will have a length of 20 characters, and personalized URLs will have a length of 25 characters.
-- **Advanced tracking** enables campaign-level and user-level click tracking. Static URLs with advanced tracking will have a length of 27–28 characters and allow you to create segments of users who have clicked on URLs. For personalized URLs, they will have a length of 32–33 characters.
+- **Basic tracking** enables campaign-level click tracking. Static URLs will have a length of 20 characters, and dynamic URLs will have a length of 25 characters.
+- **Advanced tracking** enables campaign-level and user-level click tracking. Static URLs with advanced tracking will have a length of 27–28 characters and allow you to create segments of users who have clicked on URLs. For dynamic URLs, they will have a length of 32–33 characters.
 
-Links will be shortened using our shared short domain (`brz.ai`). An example URL may look something like this: `https://brz.ai/8jshX` (basic, static) or `https://brz.ai/8jshX/2dj8d` (advanced, personalized). Refer to [Testing](#testing) for more information.
+Links will be shortened using our shared short domain (`brz.ai`). An example URL may look something like this: `https://brz.ai/8jshX` (basic, static) or `https://brz.ai/8jshX/2dj8d` (advanced, dynamic). Refer to [Testing](#testing) for more information.
 
 Static shortened URLs will be valid for one year from the date they were created. Shortened URLs that contain Liquid personalization will be valid for two months.
 
 {% alert important %}
-Personalized URL shortening and tracking is currently in early access. Contact your Braze account manager if you're interested in participating in the early access.
+Dynamic URL shortening and tracking is currently in early access. Contact your Braze account manager if you're interested in participating in the early access.
 {% endalert %}
 
 {% alert note %}
@@ -38,7 +38,7 @@ For Braze to recognize URLs, they must start with _http://_ or _https://_. When 
 
 ![][3]
 
-### Personalization in URLs
+### Liquid personalization in URLs
 
 URLs can also be personalized using any of the supported Liquid personalization tags. This is useful if you intend to add dynamic UTM parameters to your URLs or send unique links to users. For example, you can direct users to their abandoned cart or to a specific product that is back in stock. An example URL may follow this format: {% raw %}`https://example.com/?campaign_utm={{campaign.${api_id}}}&user_attribute={{custom_attribute.${attribute1}}}`{% endraw %}.
 
@@ -83,7 +83,7 @@ If a draft is created within an active Canvas, a shortened URL will not be gener
 ![][2]
 
 {% alert note %}
-Liquid personalization and shortened URLs are templated on the **Test** tab after a user has been selected. Ensure a user is selected to receive an accurate character count!
+Liquid personalization and shortened URLs are templated in the **Test** tab after a user has been selected. Make sure a user is selected to receive an accurate character count.
 {% endalert %}
 
 ## Click tracking
@@ -92,7 +92,7 @@ When link shortening is enabled, the SMS and MMS performance table include a col
 
 ![][4]
 
-The Historical Performance and SMS Overview chart also includes an option for  **Total Clicks** and shows a daily time series of click events.
+The **Historical Performance** and SMS Overview charts also include an option for **Total Clicks** and show a daily time series of click events.
 
 ## Retargeting users
 
@@ -127,7 +127,7 @@ Campaigns sent with link shortening enabled will use the assigned domain associa
 
 ### Link shortening
 
-#### Does Link Shortening work with URLs that contain Liquid?
+#### Does link shortening work with URLs that contain Liquid?
 
 No. Currently, only static URLs are shortened.
 
@@ -151,7 +151,7 @@ Yes! Both static and dynamic parameters can be added.
 
 Static URLs are valid for one year from the time of URL registration (such as first send).
 
-Personalized URs are valid for three months from the time of URL registration.
+Dynamic URs are valid for three months from the time of URL registration.
 
 #### Will Link Shortening work with deep links or universal links?
 
