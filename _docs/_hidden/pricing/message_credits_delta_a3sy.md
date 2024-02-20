@@ -416,6 +416,8 @@ Column definitions are as follows:
 {: .reset-td-br-1 .reset-td-br-2}
 {% enddetails %}
 
+---
+
 ## WhatsApp channel details
 
 ### Conversation type definitions
