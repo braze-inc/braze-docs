@@ -161,6 +161,13 @@ The following table summarizes mailbox provider support for “mailto:” header
 
 _*Yahoo and Gmail will eventually deprecate the "mailto:" header and will only support one-click._
 
+Displaying the header is ultimately determined by the mailbox provider. To check if the list-unsubscribe header is included in the raw (text) email for the recipient in Gmail, do the following:
+
+1. Click **Show Original** in the email. This opens a new tab with the raw version of the email and its headers.
+2. Search for "List-Unsubscribe".
+
+If the header is in the raw version of the email but is not displayed, the mailbox provider has determined to not show the unsubscribe option, meaning we don't have further insight as to why the mailbox provider isn't displaying the header. Seeing the list-unsubscribe header is ultimately reputation-based. In most cases, the better your sender reputation with the inbox, the less likely the list-unsubscribe header will appear. 
+
 ## Append email subject lines
 
 Use the toggle to include "[TEST]" and "[SEED]" in your test and seed email subject lines. This can help identify any email campaigns sent as tests.
