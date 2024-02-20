@@ -416,7 +416,7 @@ Column definitions are as follows:
 {: .reset-td-br-1 .reset-td-br-2}
 {% enddetails %}
 
----
+<hr>
 
 ## WhatsApp channel details
 
