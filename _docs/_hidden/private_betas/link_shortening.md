@@ -92,7 +92,7 @@ When link shortening is enabled, the SMS and MMS performance table include a col
 
 ![][4]
 
-The **Historical Performance** and SMS Overview charts also include an option for **Total Clicks** and show a daily time series of click events.
+The **Historical Performance** and **SMS/MMS Performance** charts also include an option for **Total Clicks** and show a daily time series of click events.
 
 ## Retargeting users
 
