@@ -94,7 +94,7 @@ table td {
     <td>Small: 512 x 256 px<br>Medium: 1024 x 512 px<br>Large: 2048 x 1024 px</td>
     <td>500 KB</td>
     <td>PNG, JPG</td>
-    <td>Used in <a href="{{site.baseurl}}/user_guide/message_building_by_channel/push/android/rich_notifications/">Android rich notifications</a></td>
+    <td>Used in <a href="{{site.baseurl}}/user_guide/message_building_by_channel/push/android/rich_notifications/">Android rich notifications</a>.</td>
   </tr>
   <tr>
     <td>Android incline image</td>
