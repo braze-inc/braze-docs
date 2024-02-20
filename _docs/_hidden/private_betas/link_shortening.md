@@ -30,7 +30,7 @@ If you plan to use the Sage AI [Intelligent Channel filter]({{site.baseurl}}/use
 
 ### Enabling link shortening
 
-To enable link shortening, ensure the link shortening toggle in the message composer is enabled. From there, choose whether to use basic or advanced tracking by selecting the respective radial button. 
+To enable link shortening, make sure the link shortening toggle in the message composer is enabled. From there, choose whether to use basic or advanced tracking by selecting the respective radial button. 
 
 ![][1]
 
