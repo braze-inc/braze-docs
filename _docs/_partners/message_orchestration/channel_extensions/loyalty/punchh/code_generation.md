@@ -46,13 +46,14 @@ To use the Punchh dynamic coupon code API, a JWT Token must be constructed. Add 
 
 {% capture payload %}{"campaign_id":"CAMPAIGN_ID","email":"{{${email_address}}}","first_name":"{{${first_name}}}","last_name":"{{${last_name}}}"}{% endcapture %}
 
-{% capture signature_structure %}{{header | base64_encode}}.{{payload | base64_encode}}{% endcapture %}
+{% capture signature_structure %}{{header | base64_encode}}.{{payload | base64_encode | remove: '='}}{% endcapture %}
 
 {% assign secret = "DYNAMIC_COUPON_GENERATION_TOKEN" %}
 
-{% assign final_signature = {{signature_structure | hmac_sha256_base64: {{secret}} %}
+{% assign final_signature = {{signature_structure | hmac_sha256_base64: secret}} %}
 
 {% capture jwt %}{{signature_structure}}.{{final_signature | remove: '='}}{% endcapture %}
+
 ```
 {% endraw %}
 
