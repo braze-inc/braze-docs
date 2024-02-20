@@ -11,9 +11,7 @@ channel:
 
 # AMP for email
 
-> With [AMP for email](https://amp.dev/about/email), you can add interactive elements to your emails and elevate your communications with your customers, delivering a full experience directly to your user's inbox. 
-
-AMP makes this possible through its use of various components that can be used to help build exciting in email offerings such as surveys, feedback questionnaires, voting campaigns, reviews, subscription centers, and more. Tools like these offer significant opportunities to increase engagement and retention.
+> With [AMP for email](https://amp.dev/about/email), you can add interactive elements to your emails and elevate your communications with your customers, delivering a full experience directly to your user's inbox. AMP makes this possible through its use of various components that can be used to help build exciting in email offerings such as surveys, feedback questionnaires, voting campaigns, reviews, subscription centers, and more. Tools like these can offer opportunities to increase engagement and retention.
 
 ## Requirements
 
@@ -21,15 +19,15 @@ Braze is not responsible for users registering with Google or meeting the necess
 
 | Requirement   | Description |
 | --------------| ----------- |
-| AMP for email turned on | AMP is available for everyone. Reach out to your account manager, and they can work with our product team to enable this feature for you. |
+| AMP for email turned on | AMP is available for everyone. Reach out to your account manager if you're interested in enabling this feature. |
 | Gmail account enablement | See [Enabling Gmail account](#enabling-gmail-account). |
-| Google sender authentication | Gmail authenticates the sender of AMP emails with DKIM, SPF, and DMARC. These must be set up for your account, learn more [here](https://developers.google.com/gmail/ampemail/security-requirements#sender_authentication). <br><br>- [Domain Keys Identified Mail](https://en.wikipedia.org/wiki/DomainKeys_Identified_Mail) (DKIM) <br>- [Sender Policy Framework](https://en.wikipedia.org/wiki/Sender_Policy_Framework)(SPF)<br>- [Domain-based Message Authentication, Reporting, and Conformance](https://en.wikipedia.org/wiki/DMARC)(DMARC)
+| Google sender authentication | Gmail [authenticates the sender](https://developers.google.com/gmail/ampemail/security-requirements#sender_authentication) of AMP emails with DKIM, SPF, and DMARC. These must be set up for your account. <br><br>- [Domain Keys Identified Mail](https://en.wikipedia.org/wiki/DomainKeys_Identified_Mail) (DKIM) <br>- [Sender Policy Framework](https://en.wikipedia.org/wiki/Sender_Policy_Framework)(SPF)<br>- [Domain-based Message Authentication, Reporting, and Conformance](https://en.wikipedia.org/wiki/DMARC)(DMARC)
 | AMP email elements | A compelling AMP email includes the strategic use of various components. Refer to the Essentials tab in the [Components](#components) section below. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ### Supported clients
 
-Before you can send AMP emails to users, you must register with our clients. The registration process involves sending a test AMPHTML email to get approved. Approval times vary client to client. Follow the register links for more information.
+Before you can send AMP emails to users, you must register with our clients. The registration process involves sending a test AMP HTML email to get approved. Approval times vary client to client. Follow the register links for more information.
 
 | Client | Register Link |
 | ------ | -------- |
@@ -38,17 +36,17 @@ Before you can send AMP emails to users, you must register with our clients. The
 | Yahoo | [Yahoo](https://senders.yahooinc.com/amp/) |
 | Mail.ru | [Mail.ru](https://postmaster.mail.ru/amp/) |
 
-For a full list of supported platforms, visit the [AMP documentation](https://amp.dev/support/faq/email-support). 
+For a full list of supported platforms, refer to [AMP documentation](https://amp.dev/support/faq/email-support). 
 
 ### Enabling Gmail account
 
 Go to your Gmail settings, and select **Enable Dynamic Email** under **General**.
 
-![][1]
+![An example of Gmail settings with the "Enable dynamic email" checkbox selected.][1]
 
 ## API usage
 
-You can utilize AMP for email using our API. When you use any of our [Messaging endpoints]({{site.baseurl}}/api/endpoints/messaging/) to send an email, add `amp_body` as an object specification, as shown below.
+You can also use AMP for email with our API. If you use any of the Braze [Messaging endpoints]({{site.baseurl}}/api/endpoints/messaging/) to send an email, add `amp_body` as an object specification as shown below.
 
 ### Email object specification
 
@@ -59,7 +57,7 @@ You can utilize AMP for email using our API. When you use any of our [Messaging 
   "from": (required, valid email address in the format "Display Name <email@address.com>"),
   "reply_to": (optional, valid email address in the format "email@address.com" - defaults to your workspace's default reply to if not set),
   "plaintext_body": (optional, valid plaintext, defaults to autogenerating plaintext from "body" when this is not set),
-  "amp_body": (optional, updates the text-amp-html MIME type) the email body in AMPHTML. The MIME (Multipurpose Internet Mail Extensions) type to be referenced is "text/x-amp-html",
+  "amp_body": (optional, updates the text-amp-html MIME type) the email body in AMP HTML. The MIME (Multipurpose Internet Mail Extensions) type to be referenced is "text/x-amp-html",
   "body": (required unless email_template_id is given, valid HTML),
   "preheader": (optional*, string) Recommended length 50-100 characters,
   "email_template_id": (optional, string) If provided, we will use the subject/body/should_inline_css values from the given email template UNLESS they are specified here, in which case we will override the provided template,
@@ -71,11 +69,11 @@ You can utilize AMP for email using our API. When you use any of our [Messaging 
 }
 ```
 
-## Writing your AMP email
+## Creating your AMP email
 
-Build your AMP email using [components](#components). Check out our [use cases](#use-cases), and then use the [Braze API](#api-usage) to send your message. Be sure to use `amp_body` for your AMP HTML.
+First, build your AMP email using [components](#components). Next, use the [Braze API](#api-usage) to send your message, making sure to include `amp_body` for your AMP HTML.
 
-In addition to the AMP HTML, we require a regular HTML `body` version and suggest a `plaintext_body` version of your AMP email. All AMP emails are sent out multipart, meaning Braze sends out an email that supports HTML, plaintext, and AMP HTML. This becomes useful in the event that your email is sent via a provider who does not yet support AMP for email, automatically defaulting to the appropriate version based on the user and their device.
+In addition to the AMP HTML, we require a regular HTML `body` version and suggest a `plaintext_body` version of your AMP email. All AMP emails are sent out multipart, meaning Braze sends out an email that supports HTML, plaintext, and AMP HTML. This becomes useful in the event that your email is sent via a provider who doesn't yet support AMP for email since the email will automatically defaulting to the appropriate version based on the user and their device.
 
 {% alert note %}
 When you're building an AMP email, check that you're in the AMP editor as AMP code should not be added to the HTML editor.
@@ -83,9 +81,9 @@ When you're building an AMP email, check that you're in the AMP editor as AMP co
 
 Refer to these additional resources:
 
-- [AMP's tutorial](https://amp.dev/documentation/guides-and-tutorials/start/create_email?format=email)
+- [AMP tutorial](https://amp.dev/documentation/guides-and-tutorials/start/create_email?format=email)
 - [Sample code](https://gist.github.com/CrystalOnScript/988c3f0a2eb406da27e9d9bf13a8bf73) to see how the final product should look. 
-- [AMP's full email components library](https://amp.dev/documentation/components/?format=email/)
+- [AMP email components library](https://amp.dev/documentation/components/?format=email/)
 
 ### Components
 
@@ -146,7 +144,7 @@ Any component that requires authenticating the user must use [Google access toke
 {% endtab %}
 {% endtabs %}
 
-For a full list of AMP components, check out the [AMP documentation](https://amp.dev/documentation/components/?format=email).  
+For a full list of AMP components, check out [AMP documentation](https://amp.dev/documentation/components/?format=email).  
 
 ### Use cases
 
@@ -180,7 +178,8 @@ In addition, the `<amp-image-lightbox>` component allows the user to view a deta
 
 For emails that mostly rely on text copy, the `<amp-fit-text>` component allows you to manage the size and fit of text within a specified area.
 
-Some examples:
+Examples include:
+
 - Scaling the text to fit an area
 - Scaling the text to fit the area using a maximum font size where you can set the maximum font size
 - Truncating the text when content overflows area
@@ -190,9 +189,9 @@ Some examples:
 
 ### Using amp-mustache
 
-Similar to Liquid, AMP supports a scripting language for more advanced use cases. This component is called [amp-mustache](https://amp.dev/documentation/components/amp-mustache/?format=email).  When including any Mustache mark-up language you will need to wrap it around the [raw](https://shopify.github.io/liquid/tags/raw/) tag from Liquid. Note that Liquid and Mustache share syntax styling. 
+Similar to Liquid, AMP supports a scripting language for more advanced use cases. This component is called [`amp-mustache`](https://amp.dev/documentation/components/amp-mustache/?format=email). When including any Mustache markup language, you'll need to wrap it around the [`raw`](https://shopify.github.io/liquid/tags/raw/) tag from Liquid. Note that Liquid and Mustache share syntax styling. 
 
-By wrapping your content around the `raw` tag, the Braze processing engine will correctly ignore any content between the raw tags and send out the Mustache variable your team needs.
+By wrapping your content around the `raw` tag, the Braze processing engine will ignore any content between the `raw` tags and send out the Mustache variable your team needs.
 
 ## Metrics and analytics
 
@@ -206,9 +205,9 @@ By wrapping your content around the `raw` tag, the Braze processing engine will 
 
 ## Testing and troubleshooting
 
-Note that total clicks and unique clicks do not account for any click that happened from an AMP message (HTML and plaintext only). AMP-specific clicks are attributed to the `amp_click` metric.
+Note that total clicks and unique clicks don't account for any clicks that occur from an AMP message (HTML and plaintext only). AMP-specific clicks are attributed to the *amp_click* metric.
 
-Before you send your AMP email, we recommend that you test according to [Gmail's guidelines](https://developers.google.com/gmail/ampemail/testing-dynamic-email).
+Before you send your AMP email, we recommend that you test according to these [Gmail guidelines](https://developers.google.com/gmail/ampemail/testing-dynamic-email).
 
 For your AMP email to be delivered to any Gmail account, the email must meet the following conditions:
 - The AMP for email security requirements must be met.
@@ -228,5 +227,5 @@ We advocate not segmenting to send to all different types of users. This is beca
 Check in with your engineering team to build out the AMP elements. After these elements are set up, we encourage you to include design resources and elements you have to add an extra layer of polish.
 {% enddetails %}
 
-[1]: {% image_buster /assets/img/dynamic-content.png %} "Dynamic Content"
+[1]: {% image_buster /assets/img/dynamic-content.png %}
 [support]: {{site.baseurl}}/support_contact/
