@@ -17,7 +17,7 @@ tool:
 
 You should always [preview and test your messages]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/testing/) on a variety of devices to confirm that the most important areas of your image and message appear as expected.
 
-{% alert tip %} Create assets with confidence! Our in-app message image templates and safe zone overlays are designed to play nicely with devices of all sizes. [Download Design Templates ZIP]({% image_buster /assets/download_file/Braze-In-App-Message-Design-Templates.zip %}) {% endalert %}
+{% alert tip %} Create assets with confidence! Our in-app message image templates and safe-zone overlays are designed to play nicely with devices of all sizes. [Download Design Templates ZIP]({% image_buster /assets/download_file/Braze-In-App-Message-Design-Templates.zip %}). {% endalert %}
 
 {% multi_lang_include image_specs.md variable_name='payload size' %}
 
