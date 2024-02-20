@@ -1,16 +1,16 @@
 ---
 nav_title: Quick Push Campaigns
 article_title: Quick Push Campaigns
-permalink: "/quick_push/"
-hidden: true
+alias: "/quick_push/"
+description: "This article describes things to know when creating a push campaign using the quick push editing experience."
 ---
 
 # Quick push campaigns
 
-When creating a push campaign in Braze, you can select multiple platforms and devices to craft one message for all platforms in a single editing experience.
+When creating a push campaign in Braze, you can select multiple platforms and devices to craft one message for all platforms in a single editing experience called quick push.
 
 {% alert important %}
-This functionality is currently in early access and is only available for campaigns.
+This functionality is only available for campaigns.
 {% endalert %}
 
 ## Use cases
