@@ -24,7 +24,7 @@ The subject line our AI predicts to be best will be highlighted with a **Project
 
 ### How accurate are the projections?
 
-In testing, we found the projections to be about 70% accurate when picking between pairs of messages in real A/B tests. That's of course much better than randomly guessing, however it does not mean perfect accuracy. You should take this into account when interpreting the messages that the model projects to win.
+In testing, we found the projections to be about 70% accurate when picking between pairs of messages in real A/B tests. Take this into account when interpreting the messages that the model projects to win.
 
 ### How do we use your data?
 
