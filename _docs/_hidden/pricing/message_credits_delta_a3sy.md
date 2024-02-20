@@ -3,6 +3,7 @@ nav_title: Message Credits - Delta
 permalink: "/message_credits_delta_a3sy/"
 hidden: true
 noindex: true
+hide_toc: true
 ---
 
 # Message Credits - Delta (Confidential)
@@ -33,6 +34,7 @@ Column definitions are as follows:
 
 ## Credit ratio table for Message Credits - Delta
 
+{% details Click to expand %}
 |**Channel**           |**Channel Credit Ratio**|**Destination**                                    |**Multiplier**|**Credits Consumed with One Message**|
 |------------------|--------------------|-----------------------------------------------|----------|------------------------|
 |MMS - US / CA     |3                   |United States                                  |1.00      |3.00                    |
@@ -412,6 +414,7 @@ Column definitions are as follows:
 |WhatsApp          |10                  |United Kingdom Service                         |1.05      |10.50                   |
 |WhatsApp          |10                  |United Kingdom Utility                         |1.05      |10.50                   |
 {: .reset-td-br-1 .reset-td-br-2}
+{% enddetails %}
 
 ## WhatsApp channel details
 
