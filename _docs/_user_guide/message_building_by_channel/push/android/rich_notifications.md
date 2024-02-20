@@ -50,7 +50,7 @@ For details about supported images, check out [Image specifications]({{site.base
 
 ### Step 4: Continue creating your campaign
 
-Once your rich notification content is uploaded to the dashboard, you can simply continue [scheduling your campaign][6].
+After your rich notification content is uploaded to the dashboard, you can continue [scheduling your campaign][6].
 
 [3]: {{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/#creating-a-push-message
 [6]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/
