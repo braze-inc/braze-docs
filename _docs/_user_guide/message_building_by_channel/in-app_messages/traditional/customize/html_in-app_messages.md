@@ -65,7 +65,7 @@ window.addEventListener("ab.BridgeReady", function(){
 
 ### JavaScript Bridge methods {#bridge}
 
-The following JavaScript methods are supported within Braze HTML in-app messages:
+The following JavaScript methods are supported within Braze HTML in-app messages (please note, you cannot reference Liquid to insert customAttributes into JS Bridge methods):
 
 <style>
 /* Makes first column wider */
