@@ -49,18 +49,18 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/track' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer YOUR-API-KEY-HERE' \
 --data-raw '{
-"attributes" : [
-  {
-	"push_token_import" : false,
-	"external_id": "example_external_id",
-	"country": "US",
-	"language": "en",
-	"YOUR_CUSTOM_ATTRIBUTE": "YOUR_VALUE",
-	"push_tokens": [
-	  {"app_id": "APP_ID_OF_OS", "token": "PUSH_TOKEN_STRING"}
-	]
-  }
-]
+  "attributes" : [
+    {
+      "push_token_import" : false,
+      "external_id": "example_external_id",
+      "country": "US",
+      "language": "en",
+      "YOUR_CUSTOM_ATTRIBUTE": "YOUR_VALUE",
+      "push_tokens": [
+        {"app_id": "APP_ID_OF_OS", "token": "PUSH_TOKEN_STRING"}
+      ]
+    }
+  ]
 }'
 ```
 
@@ -74,30 +74,30 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/track' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer YOUR-API-KEY-HERE' \
 --data-raw '{
-"attributes": [ 
-  {
-	"push_token_import" : true,
-	"email": "braze.test1@testbraze.com",
-	"country": "US",
-	"language": "en",
-	"YOUR_CUSTOM_ATTRIBUTE": "YOUR_VALUE",
-	"push_tokens": [
-	  {"app_id": "APP_ID_OF_OS", "token": "PUSH_TOKEN_STRING", "device_id": "DEVICE_ID"}
-	]
-  },
-    
-  {
-	"push_token_import" : true,
-	"email": "braze.test2@testbraze.com",
-	"country": "US",
-	"language": "en",
-	"YOUR_CUSTOM_ATTRIBUTE_1": "YOUR_VALUE",
-	"YOUR_CUSTOM_ATTRIBUTE_2": "YOUR_VALUE",
-	"push_tokens": [
-	  {"app_id": "APP_ID_OF_OS", "token": "PUSH_TOKEN_STRING", "device_id": "DEVICE_ID"}  
-	]
-  }
-]
+  "attributes": [ 
+    {
+      "push_token_import" : true,
+      "email": "braze.test1@testbraze.com",
+      "country": "US",
+      "language": "en",
+      "YOUR_CUSTOM_ATTRIBUTE": "YOUR_VALUE",
+      "push_tokens": [
+        {"app_id": "APP_ID_OF_OS", "token": "PUSH_TOKEN_STRING", "device_id": "DEVICE_ID"}
+      ]
+    },
+      
+    {
+      "push_token_import" : true,
+      "email": "braze.test2@testbraze.com",
+      "country": "US",
+      "language": "en",
+      "YOUR_CUSTOM_ATTRIBUTE_1": "YOUR_VALUE",
+      "YOUR_CUSTOM_ATTRIBUTE_2": "YOUR_VALUE",
+      "push_tokens": [
+        {"app_id": "APP_ID_OF_OS", "token": "PUSH_TOKEN_STRING", "device_id": "DEVICE_ID"}  
+      ]
+    }
+  ]
 }'
 ```
 
