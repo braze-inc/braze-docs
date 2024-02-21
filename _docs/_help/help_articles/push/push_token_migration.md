@@ -61,6 +61,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/track' \
 	]
   }
 ]
+}'
 ```
 
 ### Migration if external ID is not present
@@ -97,6 +98,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/track' \
 	]
   }
 ]
+}'
 ```
 
 After import, when the anonymous user launches the Braze-enabled version of your app, Braze will automatically move their imported push token to their Braze user profile and clean up the temporary profile.
