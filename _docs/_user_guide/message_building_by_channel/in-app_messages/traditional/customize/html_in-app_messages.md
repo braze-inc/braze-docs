@@ -65,7 +65,7 @@ window.addEventListener("ab.BridgeReady", function(){
 
 ### JavaScript Bridge methods {#bridge}
 
-The following JavaScript methods are supported within Braze HTML in-app messages (please note, you cannot reference Liquid to insert customAttributes into JS Bridge methods):
+The following JavaScript methods are supported within Braze HTML in-app messages:
 
 <style>
 /* Makes first column wider */
@@ -80,6 +80,10 @@ The following JavaScript methods are supported within Braze HTML in-app messages
   word-break: break-word;
 }
 </style>
+
+{% alert note %}
+You cannot reference Liquid to insert <code>customAttributes</code> into JavaScript Bridge methods.
+{% endalert %}
 
 {% multi_lang_include archive/appboyBridge.md %}
 
