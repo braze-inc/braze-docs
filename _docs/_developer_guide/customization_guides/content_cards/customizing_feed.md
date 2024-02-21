@@ -112,6 +112,8 @@ You can change the order in which your Content Cards are displayed. This allows 
 
 {% tabs %}
 {% tab Android %}
+{% subtabs android %}
+{% subtab Android View System %}
 
 The [`ContentCardsFragment`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards/-content-cards-fragment/index.html) relies on a [`IContentCardsUpdateHandler`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards.handlers/-i-content-cards-update-handler/index.html) to handle any sorting or modifications of Content Cards before they are displayed in the feed. A custom update handler can be set via [`setContentCardUpdateHandler`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards/-content-cards-fragment/set-content-card-update-handler.html) on your `ContentCardsFragment`.
 
@@ -253,6 +255,38 @@ class DefaultContentCardsUpdateHandler : IContentCardsUpdateHandler {
 
 The `ContentCardsFragment` source can be found on [GitHub](https://github.com/braze-inc/braze-android-sdk/blob/master/android-sdk-ui/src/main/java/com/braze/ui/contentcards/ContentCardsFragment.kt).
 
+{% endsubtab %}
+{% subtab Jetpack Compose %}
+When using Jetpack Compose, you can easily filter and sort the Content Cards by setting the `cardUpdateHandler` parameter. For example:
+
+```kotlin
+ContentCardsList(
+    cardUpdateHandler = {
+        it.sortedWith { cardA, cardB ->
+            // A displays above B
+            if (cardA.isPinned && !cardB.isPinned) {
+                return@sortedWith -1
+            }
+            // B displays above A
+            if (!cardA.isPinned && cardB.isPinned) {
+                return@sortedWith 1
+            }
+            // At this point, both A & B are pinned or both A & B are non-pinned
+            // A displays above B since A is newer
+            if (cardA.updated > cardB.updated) {
+                return@sortedWith -1
+            }
+            // B displays above A since A is newer
+            if (cardA.updated < cardB.updated) {
+                return@sortedWith 1
+            }
+            0
+        }
+    }
+)
+```
+{% endsubtab %}
+{% endsubtabs %}
 {% endtab %}
 {% tab iOS %}
 
