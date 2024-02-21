@@ -29,7 +29,7 @@ cordova plugin add https://github.com/braze-inc/braze-cordova-sdk#master
 
 ## Configure the plugin
 
-In your `config.xml`, add a `preference` element under the android `platform` element that contains your Braze API key with the name `com.braze.api_key` and optionally, a custom API endpoint with the name `com.braze.android_api_endpoint`:
+In your `config.xml`, add a `preference` element under the Android `platform` element that contains your Braze API key with the name `com.braze.api_key` and optionally, a custom API endpoint with the name `com.braze.android_api_endpoint`:
 
 ```xml
 <platform name="android">
@@ -71,7 +71,7 @@ The Cordova Android SDK also allows for various other settings to be configured 
 | `push_deep_link_back_stack_activity_class_name` | Sets the activity that Braze will add to the back stack when automatically following deep links for push. |
 | `should_opt_in_when_push_authorized` | Sets if Braze should automatically opt-in the user when push is authorized. |
 
-Example configuration:
+Example for setting extra configurations:
 
 ```xml
 <platform name="android">
