@@ -126,7 +126,7 @@ curl --location --request PUT 'https://server_name_goes_here.punchh.com/api2/mob
 
 #### Available events to sync {#available-events-to-sync}
 
-1. **Guest:** Triggered upon any signup, update to guest profile, deactivated or deleted.
+1. **Guest:** Triggered upon any signup, update to guest profile, deactivated or deleted
 2. **Loyalty Check-in:** Triggered for loyalty transactions or earning by scanning barcode from the receipt
 3. **Gift Check-in:** Triggered for points gifted from a campaign
 4. **Redemption:** Triggered in case of any reward redemption excluding Punchh coupons, as those would be sent separately as coupon events, including issuance as well as redemption
