@@ -8,7 +8,7 @@ hide_toc: true
 
 # Message Credits - Delta (Confidential)
 
-> Message Credits is Braze’s cross-channel packaging structure for our native SMS, MMS, and WhatsApp offerings. We use Message Credits to provide a flexible and transparent experience when taking advantage of Braze messaging channels. You may use the allotment of credits purchased across any of the channels presented in the table on this page. 
+> Message Credits is Braze’s cross-channel packaging structure for our native SMS, MMS, and WhatsApp offerings. We use Message Credits to provide a flexible and transparent experience when taking advantage of Braze messaging channels. You may use the allotment of credits purchased across any of the channels presented in the table on this page.
 
 {% alert note %}
 Different channels will have different units of measure for what defines a credit consumed.<br><br>
@@ -20,7 +20,7 @@ In other words, credits used for WhatsApp messages will be calculated on convers
 Lastly, carrier fees are billed separately (in arrears) and are not considered as part of this Message Credits SKU.
 {% endalert %}
 
-## Definitions 
+## Definitions
 
 Column definitions are as follows:
 
@@ -416,7 +416,7 @@ Column definitions are as follows:
 {: .reset-td-br-1 .reset-td-br-2}
 {% enddetails %}
 
-<hr>
+------
 
 ## WhatsApp channel details
 
@@ -426,11 +426,11 @@ Column definitions are as follows:
 
 **Utility Conversations:** Business-initiated conversations facilitating a specific, agreed-upon request or transaction, or update to a customer about an ongoing transaction, including post-purchase notifications and recurring billing statements
 
-**Authentication Conversations:** Enable businesses to authenticate users with one-time passcodes, potentially at multiple steps in the login process (for example, account verification, account recovery, integrity challenges). 
-* Authentication conversations will only be supported on a case-by-case basis and Braze cannot guarantee specific SLAs. Additionally, Braze does not support PIN generation. 
+**Authentication Conversations:** Enable businesses to authenticate users with one-time passcodes, potentially at multiple steps in the login process (for example, account verification, account recovery, integrity challenges).
+* Authentication conversations will only be supported on a case-by-case basis and Braze cannot guarantee specific SLAs. Additionally, Braze does not support PIN generation.
 
 **Service Conversations:** User-initiated conversations that are responded to with a non-templated
-message. 
+message.
 
 {% alert note %}
 User-initiated conversations that are responded to with a message template will be billed based on the template that the business responds with (for example, marketing, utility, or authentication).
