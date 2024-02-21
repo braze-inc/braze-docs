@@ -29,12 +29,11 @@ cordova plugin add https://github.com/braze-inc/braze-cordova-sdk#master
 
 ## Configure the plugin
 
-In your `config.xml`, add a `preference` element under the Android `platform` element that contains your Braze API key with the name `com.braze.api_key` and optionally, a custom API endpoint with the name `com.braze.android_api_endpoint`:
+In your `config.xml`, add a `preference` element under the Android `platform` element that contains your Braze API key with the name `com.braze.api_key`:
 
 ```xml
 <platform name="android">
     <preference name="com.braze.api_key" value="YOUR_API_KEY" />
-    <preference name="com.braze.android_api_endpoint" value="CUSTOM_API_ENDPOINT" />
 </platform>
 ```
 
