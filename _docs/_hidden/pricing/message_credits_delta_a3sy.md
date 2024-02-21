@@ -37,6 +37,10 @@ Column definitions are as follows:
 {% details Click to expand %}
 |**Channel**           |**Channel Credit Ratio**|**Destination**                                    |**Multiplier**|**Credits Consumed with One Message**|
 |------------------|--------------------|-----------------------------------------------|----------|------------------------|
+|SMS - US / CA     |1                   |United States                                  |1.00      |1.00                    |
+|SMS - US / CA     |1                   |United States Toll Free                        |1.50      |1.50                    |
+|SMS - US / CA     |1                   |Canada                                         |1.00      |1.00                    |
+|SMS - US / CA     |1                   |Canada Toll Free                               |1.30      |1.30                    |
 |MMS - US / CA     |3                   |United States                                  |1.00      |3.00                    |
 |MMS - US / CA     |3                   |United States Toll Free                        |2.00      |6.00                    |
 |MMS - US / CA     |3                   |Canada Long Code                               |1.50      |4.50                    |
@@ -281,10 +285,6 @@ Column definitions are as follows:
 |SMS / MMS - Global|10                  |Yemen                                          |6.03      |60.30                   |
 |SMS / MMS - Global|10                  |Zambia                                         |6.76      |67.60                   |
 |SMS / MMS - Global|10                  |Zimbabwe                                       |3.55      |35.50                   |
-|SMS - US / CA     |1                   |United States                                  |0.90      |0.90                    |
-|SMS - US / CA     |1                   |United States Toll Free                        |1.50      |1.50                    |
-|SMS - US / CA     |1                   |Canada                                         |1.00      |1.00                    |
-|SMS - US / CA     |1                   |Canada Toll Free                               |1.30      |1.30                    |
 |WhatsApp          |10                  |Argentina Authentication                       |0.95      |9.50                    |
 |WhatsApp          |10                  |Argentina Marketing                            |1.65      |16.50                   |
 |WhatsApp          |10                  |Argentina Service                              |0.85      |8.50                    |
@@ -313,11 +313,11 @@ Column definitions are as follows:
 |WhatsApp          |10                  |Germany Marketing                              |3.60      |36.00                   |
 |WhatsApp          |10                  |Germany Service                                |2.15      |21.50                   |
 |WhatsApp          |10                  |Germany Utility                                |2.25      |22.50                   |
-|WhatsApp          |10                  |India Authentication                           |N/A       |N/A                     |
+|WhatsApp          |N/A                 |India Authentication                           |N/A       |N/A                     |
 |WhatsApp          |10                  |India Marketing                                |0.25      |2.50                    |
 |WhatsApp          |10                  |India Service                                  |0.10      |1.00                    |
 |WhatsApp          |10                  |India Utility                                  |0.10      |1.00                    |
-|WhatsApp          |10                  |Indonesia Authentication                       |N/A       |N/A                     |
+|WhatsApp          |N/A                 |Indonesia Authentication                       |N/A       |N/A                     |
 |WhatsApp          |10                  |Indonesia Marketing                            |1.10      |11.00                   |
 |WhatsApp          |10                  |Indonesia Service                              |0.50      |5.00                    |
 |WhatsApp          |10                  |Indonesia Utility                              |0.55      |5.50                    |
