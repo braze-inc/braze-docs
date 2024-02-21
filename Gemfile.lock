@@ -23,7 +23,7 @@ GIT
 
 GIT
   remote: https://github.com/zzhaobraze/rack-reverse-proxy
-  revision: 5c9dd9dddcf03c5e07ae90520321d24cef48e1f9
+  revision: cca71f7438110e923deee3b3ce1c0dba4bf8e3b8
   branch: master
   specs:
     rack-reverse-proxy (1.0.0.pre.unreleased)
@@ -49,8 +49,8 @@ GEM
     ffi (1.16.3)
     filesize (0.2.0)
     forwardable-extended (2.6.0)
-    google-protobuf (3.25.2)
-    google-protobuf (3.25.2-x86_64-linux)
+    google-protobuf (3.25.3)
+    google-protobuf (3.25.3-x86_64-linux)
     http_parser.rb (0.8.0)
     httpclient (2.8.3)
     i18n (1.14.1)
@@ -104,7 +104,7 @@ GEM
     puma (6.4.2)
       nio4r (~> 2.0)
     racc (1.7.3)
-    rack (3.0.9)
+    rack (3.0.9.1)
     rack-jekyll (0.3.5)
       jekyll
       rack
@@ -127,10 +127,10 @@ GEM
     rouge (4.2.0)
     ruby2_keywords (0.0.5)
     safe_yaml (1.0.5)
-    sass-embedded (1.70.0)
+    sass-embedded (1.71.1)
       google-protobuf (~> 3.25)
       rake (>= 13.0.0)
-    sass-embedded (1.70.0-x86_64-linux-gnu)
+    sass-embedded (1.71.1-x86_64-linux-gnu)
       google-protobuf (~> 3.25)
     sassc (2.4.0)
       ffi (~> 1.9)
