@@ -1,98 +1,67 @@
 ### Release notes
 
-The release notes template is used for...
+You can use this template to create release notes for Braze Docs. For an example, see [January 9, 2024 release]({{site.baseurl}}/help/release_notes/2024/1_9_24/).
 
-{% details See template %}
+{% details Show template %}
 {% raw %}
 `````markdown
 ---
-nav_title: Release Notes
-page_order: 2
+nav_title: ARTICLE_TITLE
+description: "This article contains release notes for DATE."
+page_order: ORDER_NUMBER
 page_type: reference
-description: "This article contains a template for release notes."
-permalink: /contributing/templates/release_notes/
-
-noindex: true
 ---
 
-# [Month Day, Year] release
+<!-- The title should include the date the release note is made live. For example, "February 21, 2024 release". -->
+# MONTH DAY, YEAR release
 
-## [Section 1]
+<!-- An example section containing "Release type" includes for each section. You may add addtional sections, subsections, includes, images, and links as needed. -->
+## SECTION_TITLE
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+CONTENT.
 
-## [Section 2]
-
-### Ipsum
+### SUBSECTION_TITLE
 
 {% multi_lang_include release_type.md release="Early access" %}
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+CONTENT.
 
-### Dolor
+### SUBSECTION_TITLE
 
 {% multi_lang_include release_type.md release="General availability" %}
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+CONTENT.
 
-Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-
-### Sit amet
+### SUBSECTION_TITLE
 
 {% multi_lang_include release_type.md release="Beta" %}
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+CONTENT.
 
-### Consectetur
+### SUBSECTION_TITLE
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+CONTENT.
 
-## [Section 3]
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-
-## [Section 4]
-
-### Adipiscing
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-
-## [Section 5]
-
-### Elit
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-
-#### Sed do eiusmod tempor
-
-{% multi_lang_include release_type.md release="General availability" %}
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-
-## [Section 6]
-
-### Laboris
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-
+<!-- Use this section to highlight new Braze parternships by including an overview of each integration and a link to the related partner page on Braze Docs. -->
 ## New Braze partnerships
 
-### Incididunt - Canvas Audience Sync
+### PARTNER_NAME
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+CONTENT.
 
-### Ut labore - Dynamic content
+### PARTNER_NAME
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+CONTENT.
 
+<!-- Use this section list any new SDKs or SDK updates that are already released. -->
 ## SDK updates
 
 The following SDK updates have been released. Breaking updates are listed below; all other updates can be found by checking the corresponding SDK changelogs.
 
-- [Example](https://github.com/braze-inc/braze-expo-plugin/blob/main/CHANGELOG.md)
-    - More details on this example
-- [Other example](https://github.com/braze-inc/braze-react-native-sdk/blob/8.3.0/CHANGELOG.md)
-- [Other example](https://github.com/braze-inc/braze-unity-sdk/blob/master/CHANGELOG.md)
+- [SDK_NAME](LINK_TO_GITHUB_CHANGELOG)
+    - OPTIONAL_CONTEXT.
+- [SDK_NAME](LINK_TO_GITHUB_CHANGELOG)
+- [SDK_NAME](LINK_TO_GITHUB_CHANGELOG)
 `````
 {% endraw %}
 {% enddetails %}

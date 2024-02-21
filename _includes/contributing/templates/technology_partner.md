@@ -1,113 +1,115 @@
 ### Technology partner
 
-The technology partner template is used for...
+Use this template to create documentation for a technology partner. For an example, see [Scuba Analytics]({{site.baseurl}}/partners/data_and_infrastructure_agility/analytics/scuba/).
 
-{% details See template %}
+{% details Show template %}
 {% raw %}
 `````markdown
 ---
 nav_title: NAV_TITLE
 article_title: ARTICLE_TITLE
 description: "SHORT_DESCRIPTION."
-alias: /partners/your_partner_name/
+alias: /partners/PARTNER_NAME/
 page_type: partner
 search_tag: Partner
 layout: dev_guide
 ---
 
 <!-- In most cases, the ARTICLE_TITLE will be your company name. If your tool requires several seperate pages on Braze Docs, you can add a relevant page descriptor to your title, such as "MyCompany Analytics." -->
-
 # ARTICLE_TITLE
 
-<!-- A description of your page containing an introduction to your company, a link to your main site, and a consice overview of this integration. Note that the description starts with the '>' character. -->
-
+<!-- The description starts with a '>' character and contains an introduction to your company, a link to your main site, and a consice overview of your integration. In a following paragraph, highlight the the relationship between your company and Braze and how this partnership helps your customers. -->
 > DESCRIPTION.
 
-<!-- A section covering the relationship between your company and Braze. Explain how Braze and your company partner together to tighten the bond between the Braze user and their customer. -->
+ADDITIONAL_INFORMATION.
 
-CONTENT.
-
+<!-- Most partner integrations will require the following prerequisites. However, you may add additional prerequisites as needed. -->
 ## Prerequisites
-
-<!-- Most partner integrations require the following prerequisites. You can add additional prerequisites as needed. -->
 
 Before you start, you'll need the following:
 
 | Prerequisite          | Description                                                                                                                                |
 |-----------------------|--------------------------------------------------------------------------------------------------------------------------------------------|
-| A [Partner] account   | A [Partner] account is required to take advantage of this partnership.                                                                     |
+| A PARTNER_NAME account   | A PARTNER_NAME account is required to take advantage of this partnership.                                                                     |
 | A Braze REST API key  | A Braze REST API key with `users.track` permissions. <br><br> This can be created in the Braze dashboard from **Settings** > **API Keys**. |
-| A Braze REST endpoint | [Your REST endpoint URL][1]. Your endpoint will depend on the Braze URL for your instance.                                                 |
+| A Braze REST endpoint | [Your REST endpoint URL]({{site.baseurl}}/developer_guide/rest_api/basics/#endpoints). Your endpoint will depend on the Braze URL for your instance.                                                 |
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% alert note %}
 If you are using the [older navigation]({{site.baseurl}}/navigation), you can create an API key at **Developer Console** > **API Settings**.
 {% endalert %}
 
+<!-- An optional section you can use to outline the typical or atypical use cases for your integration. -->
 ## Use cases
 
-<!-- An optional section used to outline the typical or atypical use cases for this integration. -->
-
 CONTENT.
 
+<!-- Create step-by-step instructions for integrating your tool with Braze. It's important to be concise and only outline the minimum neccesary steps. -->
 ## Integrating TOOL_NAME
 
-<! -- Create step-by-step instructions for integrating your tool with Braze. It's important to be concise and only outline the minimum neccesary steps. If you need to outline different integrations steps (such a side-by-side, server-to-server, or basic integration), consider creating multiple subsections. -->
-
 CONTENT.
 
 ### Step 1: ACTION_TO_COMPLETE
 
 CONTENT.
 
-### Step 2: ACTION_TO_COMPLETE
+<!-- Use the "Make a post request", "Default behavior," and "Rate limit" sections to outline how users can make a POST request. If this information isn't required for your integration, you can remove these sections. -->
+### Step 2: Make a post request
 
-CONTENT.
-
-### Step 3: ACTION_TO_COMPLETE
-
-CONTENT.
-
-{% details Webhook formatting %}
-```
-### Step 2: Create a [Partner] webhook in Braze
-To create a [Partner] webhook template to use in future campaigns or Canvases, navigate to the **Templates & Media** section in the Braze platform. If you would like to create a one-off [Partner] webhook campaign or use an existing template, select **Webhook** in Braze when creating a new campaign.
-Once you have selected the [Partner] webhook template, you should see the following:
-- **Webhook URL**: [Partner Webhook URL]
-- **Request Body**: Raw Text
-#### Request headers and method
-[Partner] requires an `HTTP Header` for authorization. The following will already be included within the template as key-value pairs.
-- **HTTP Method**: POST
-- **Request Header**:
-    - **Authorization**: Bearer [PARTNER_AUTHORIZATION_HEADER]
-    - **Content-Type**: application/json
-#### Request body
-Include code of your webhook request body.
-### Step 3: Preview your request
-Preview your request in the **Preview** panel or navigate to the `Test` tab, where you can select a random user, an existing user or customize your own to test your webhook.
 {% alert important %}
-Remember to save your template before leaving the page! <br>Updated webhook templates can be found in the **Saved Webhook Templates** list when creating a new [webhook campaign]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/).
+The following request uses curl. For better API request management, we recommend using an API client, such as Postman.
 {% endalert %}
+
+To upload your PARTNER_NAME data to Braze, make a POST request to `PARTNER_POST_URL` using the `application/json` content-type:
+
+```bash
+curl -X POST "PARTNER_POST_URL" \
+-H "content-type: application/json" \
+-d '{"braze_host":"BRAZE_API_ENDPOINT", \
+"braze_api_key":"BRAZE_API_KEY", \
+"PARTNER_host":"HOSTNAME", \
+"PARTNER_token":"PARTNER_NAME_API_TOKEN"}'
 ```
-{% enddetails %}
 
-## Customizing [tool name]
+Replace the following:
 
-Customization is an **optional** section. Here, you could outline specific ways to customize your integration between the two partners.
+| Placeholder             | Description                                                                                                                                                                                     |
+|-------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `BRAZE_API_ENDPOINT`    | The Braze REST endpoint URL of your current Braze instance. For more information, see [Rest API keys]({{site.baseurl}}/user_guide/administrative/app_settings/api_settings_tab/#rest-api-keys). |
+| `BRAZE_API_KEY`         | Your Braze REST API key with the `users.track` permission.                                                                                                                                      |
+| `HOSTNAME`              | The hostname of your current PARTNER_NAME instance.                                                                                                                                                    |
+| `PARTNER_NAME_API_TOKEN`       | Your PARTNER_NAME API token.                                                                                                                                                                           |
+{: .reset-td-br-1 .reset-td-br-2}
 
-## Using [tool name] with Braze
+#### Default behavior
 
-This section should describe how to use the integration in Braze. Let users know how to access the data (if any) provided to Braze through the integration and how to leverage it in Braze messaging.
+CONTENT.
+
+#### Rate limit
+
+CONTENT.
+
+<!-- An optional section you can use to outline additional customization steps. It's important to be concise and only outline the minimum neccesary steps. -->
+## Customizing TOOL_NAME
 
 ### Step 1: ACTION_TO_COMPLETE
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+CONTENT.
 
 ### Step 2: ACTION_TO_COMPLETE
 
-Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+CONTENT.
 
-[1]: {{site.baseurl}}/developer_guide/rest_api/basics/#endpoints
+<!-- A section outlinning how to use your integration with Braze. For example: how to access the data sent to Braze, or how to leverage your integration with Braze messaging. -->
+## Using TOOL_NAME with Braze
+
+### Step 1: ACTION_TO_COMPLETE
+
+CONTENT.
+
+### Step 2: ACTION_TO_COMPLETE
+
+CONTENT.
 `````
 {% endraw %}
 {% enddetails %}
