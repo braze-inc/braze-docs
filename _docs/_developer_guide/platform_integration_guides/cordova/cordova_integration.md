@@ -20,14 +20,14 @@ description: "This article covers initial SDK setup steps for iOS, Android, and 
 A custom API endpoint can be configured via the `config.xml`. For example, to use the EU endpoint, see the following:
 
 #### Android
-```
+```xml
 <platform name="android">
     ...
     <preference name="com.braze.android_api_endpoint" value="sdk.fra-01.braze.eu" />
 </platform>
 ```
 #### iOS
-```
+```xml
 <platform name="ios">
     ...
     <preference name="com.braze.ios_api_endpoint" value="sdk.fra-01.braze.eu" />
