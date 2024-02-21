@@ -40,11 +40,19 @@ For Braze to recognize URLs, they must start with _http://_ or _https://_. When 
 
 ### Liquid personalization in URLs
 
-URLs can also be personalized using any of the supported Liquid personalization tags. This is useful if you intend to add dynamic UTM parameters to your URLs or send unique links to users. For example, you can direct users to their abandoned cart or to a specific product that is back in stock. An example URL may follow this format: {% raw %}`https://example.com/?campaign_utm={{campaign.${api_id}}}&user_attribute={{custom_attribute.${attribute1}}}`{% endraw %}.
+You can dynamically construct your URL directly within the Braze composer, allowing you to add dynamic UTM parameters to your URLs or send user’s unique links (such as directing users to their abandoned cart or to a specific product that is back in stock).
 
-We also support the shortening of custom-defined Liquid variables, such as in the examples below.
+#### Construct a URL with supported Liquid personalization tags
 
-#### Construct a URL using Liquid variables
+URLs can be dynamically generated through the use of any [supported Liquid personalization tags]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/).
+
+{% raw %}
+```liquid
+https://example.com/?campaign_utm={{campaign.${api_id}}}&user_attribute={{custom_attribute.${attribute1}}}
+```
+{% endraw %}
+
+We also support the shortening of custom-defined Liquid variables. Several examples are shown below:
 
 {% raw %}
 ```liquid
@@ -75,7 +83,7 @@ We always recommend that you preview and test your message before launching a ca
 
 Navigate to the **Test** tab to preview and send an SMS to [content test groups]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/internal_groups_tab#content-test-groups) or an individual user. The preview will update with relevant personalization and the shortened URL. The number of characters and [billable segments]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/segments/) will also update to reflect the rendered personalization and the shortened URL. 
 
-Make sure to save the campaign or Canvas before sending a test message to receive the shortened URL that will be dispatched in your message. If the campaign or Canvas is not saved before a test send, the test send will contain a placeholder URL.
+Make sure to save the campaign or Canvas before sending a test message to receive a representation of the shortened URL that will be dispatched in your message. If the campaign or Canvas is not saved before a test send, the test send will contain a placeholder URL.
 
 {% alert important %}
 If a draft is created within an active Canvas, a shortened URL will not be generated. The actual shortened URL will be generated when the Canvas draft is made active.
@@ -128,13 +136,9 @@ Campaigns sent with link shortening enabled will use the assigned domain associa
 
 ### Link shortening
 
-#### Does link shortening work with URLs that contain Liquid?
-
-No. Currently, only static URLs are shortened.
-
 #### Are the links I receive when test sending real URLs?
 
-If the campaign has been saved as a draft before test sending, yes! Otherwise, it is a placeholder link. Note that the exact URL sent in a launched campaign may differ from the one sent via a test send.
+If the campaign has been saved as a draft before test sending, yes. Otherwise, it is a placeholder link. Note that the exact URL sent in a launched campaign may differ from the one sent via a test send.
 
 #### Does the Braze SDK need to be installed in order to shorten links?
 
@@ -146,13 +150,13 @@ Yes. When Advanced Tracking is turned on, you can retarget users who have clicke
 
 #### Can I add UTM parameters to a URL before it is shortened?
 
-Yes! Both static and dynamic parameters can be added. 
+Yes. Both static and dynamic parameters can be added. 
 
 #### How long do shortened URLs remain valid?
 
 Static URLs are valid for one year from the time of URL registration (such as first send).
 
-Dynamic URs are valid for three months from the time of URL registration.
+Dynamic URs are valid for two months from the time of URL registration.
 
 #### Will Link Shortening work with deep links or universal links?
 
