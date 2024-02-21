@@ -22,14 +22,9 @@ description: "This article outlines details about the Start Live Activity endpoi
 
 ## Prerequisites
 
-To use this endpoint, you'll need to generate an API key with the `messages.live_activity.update` permission.
+To use this endpoint, you'll need to generate an API key with the `messages.live_activity.start` permission.
 
-
-This integration requires updates to your iOS app integration:
-
-1. Update your `resumeActivities` method with a new `pushToStartEnabled` parameter to `true`.
-2. Register for push-to-start tokens for an activity type with the Braze Swift SDK using the [`liveActivities.registerPushToStart`](todo) method. This should include the Activity Type (i.e. `SportsGameTrackerAttributes`) and the activity name (i.e. `SportsGameTracker`). Refer to [Live Activities]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/live_activities/live_activities/) for more information on registration.
-3. todo: anything required to receive updates? or point to update docs
+This integration requires updates to your iOS app integration. Refer to the Braze Swift SDK's [Live Activities documentation]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/live_activities/live_activities) for further details.
 
 Once you have registered your activity, you can POST a payload to remotely start the live activity for a given segment. See Apple's documentation on [updating your Live Activity with push notification payloads](https://developer.apple.com/documentation/activitykit/updating-and-ending-your-live-activity-with-activitykit-push-notifications) for more information.
 
