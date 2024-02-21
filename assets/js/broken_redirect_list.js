@@ -1097,8 +1097,9 @@ validurls['/docs/user_guide/administrative/app_settings/custom_event_and_attribu
 
 validurls['/docs/home/metadata/'] = '/docs/contributing/yaml_front_matter/metadata/';
 validurls['/docs/home/styling_test_page/'] = '/docs/contributing/styling_examples/';
-validurls['/docs/help/help_articles/docs/contribution'] = '/docs/contributing/home';
-validurls['/docs/hidden/wip_partnerships/WIP_guidelines'] = '/docs/contributing/home';
+validurls['/docs/help/help_articles/docs/contribution'] = '/docs/contributing/home/';
+validurls['/docs/hidden/wip_partnerships/WIP_guidelines'] = '/docs/contributing/home/';
 validurls['/docs/hidden/wip_partnerships/partnership_template'] = '/docs/contributing/templates/#technology-partner';
+validurls['/docs/help/help_articles/docs/contribution/'] = '/docs/contributing/home/';
 
 // validurls['OLD'] = 'NEW';
