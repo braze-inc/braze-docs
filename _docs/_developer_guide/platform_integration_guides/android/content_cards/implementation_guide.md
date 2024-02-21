@@ -254,10 +254,13 @@ enum ContentCardClass {
 
 ## Custom card rendering {#customizing-card-rendering-for-android}
 
+{% tabs %}
+{% tab Android View System %}
+
 The following lists information on how to change how any card is rendered in the `recyclerView`. The `IContentCardsViewBindingHandler` interface defines how all Content Cards get rendered. You can customize this to change anything you want:
 
-{% tabs %}
-{% tab JAVA %}
+{% subtabs %}
+{% subtab JAVA %}
 
 ```java
 public class DefaultContentCardsViewBindingHandler implements IContentCardsViewBindingHandler {
@@ -344,8 +347,8 @@ public class DefaultContentCardsViewBindingHandler implements IContentCardsViewB
 }
 ```
 
-{% endtab %}
-{% tab KOTLIN %}
+{% endsubtab %}
+{% subtab KOTLIN %}
 
 ```kotlin
 class DefaultContentCardsViewBindingHandler : IContentCardsViewBindingHandler {
@@ -424,15 +427,15 @@ class DefaultContentCardsViewBindingHandler : IContentCardsViewBindingHandler {
 }
 ```
 
-{% endtab %}
-{% endtabs %}
+{% endsubtab %}
+{% endsubtabs %}
 
 This code can also be found here [`DefaultContentCardsViewBindingHandler`][56].
 
 And here's how to use this class:
 
-{% tabs %}
-{% tab JAVA %}
+{% subtabs %}
+{% subtab JAVA %}
 
 ```java
 IContentCardsViewBindingHandler viewBindingHandler = new DefaultContentCardsViewBindingHandler();
@@ -441,8 +444,8 @@ ContentCardsFragment fragment = getMyCustomFragment();
 fragment.setContentCardsViewBindingHandler(viewBindingHandler);
 ```
 
-{% endtab %}
-{% tab KOTLIN %}
+{% endsubtab %}
+{% subtab KOTLIN %}
 
 ```kotlin
 val viewBindingHandler = DefaultContentCardsViewBindingHandler()
@@ -451,11 +454,46 @@ val fragment = getMyCustomFragment()
 fragment.setContentCardsViewBindingHandler(viewBindingHandler)
 ```
 
-{% endtab %}
-{% endtabs %}
+{% endsubtab %}
+{% endsubtabs %}
 
 Additional relevant resources on this topic are available in this article on [Android Data Binding](https://medium.com/google-developers/android-data-binding-recyclerview-db7c40d9f0e4).
 
+{% endtab %}
+{% tab Jetpack Compose %}
+To completely customize in Jetpack Compose, create a custom Composable function that will either 1) Render the composable and return `true` or 2) Render nothing and return `false`.  When `false` is returned, the card will be rendered by Braze.
+
+```kotlin
+val myCustomCardRenderer: @Composable ((Card) -> Boolean) = { card ->
+    if (card.cardType == CardType.TEXT_ANNOUNCEMENT) {
+        val textCard = card as TextAnnouncementCard
+        Box(
+            Modifier
+                .padding(10.dp)
+                .fillMaxWidth()
+                .background(color = Color.Red)
+        ) {
+            Text(
+                modifier = Modifier
+                    .align(Alignment.Center)
+                    .fillMaxWidth()
+                    .basicMarquee(iterations = Int.MAX_VALUE),
+                fontSize = 35.sp,
+                text = textCard.description
+            )
+        }
+        true
+    } else {
+        false
+    }
+}
+
+ContentCardsList(
+    customCardComposer = myCustomCardRenderer
+)
+```
+{% endtab %}
+{% endtabs %}
 ## Card dismissal
 
 Disabling swipe-to-dismiss functionality is done on a per-card basis via the [`card.isDismissibleByUser()`][9] method. Cards can be intercepted before display using the [`ContentCardsFragment.setContentCardUpdateHandler()`][8] method.
