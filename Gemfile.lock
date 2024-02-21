@@ -23,7 +23,7 @@ GIT
 
 GIT
   remote: https://github.com/zzhaobraze/rack-reverse-proxy
-  revision: 5c9dd9dddcf03c5e07ae90520321d24cef48e1f9
+  revision: cca71f7438110e923deee3b3ce1c0dba4bf8e3b8
   branch: master
   specs:
     rack-reverse-proxy (1.0.0.pre.unreleased)
@@ -50,7 +50,6 @@ GEM
     filesize (0.2.0)
     forwardable-extended (2.6.0)
     google-protobuf (3.25.2)
-    google-protobuf (3.25.2-x86_64-linux)
     http_parser.rb (0.8.0)
     httpclient (2.8.3)
     i18n (1.14.1)
@@ -95,8 +94,6 @@ GEM
     nokogiri (1.16.2)
       mini_portile2 (~> 2.8.2)
       racc (~> 1.4)
-    nokogiri (1.16.2-x86_64-linux)
-      racc (~> 1.4)
     pathutil (0.16.2)
       forwardable-extended (~> 2.6)
     progressbar (1.13.0)
@@ -130,8 +127,6 @@ GEM
     sass-embedded (1.70.0)
       google-protobuf (~> 3.25)
       rake (>= 13.0.0)
-    sass-embedded (1.70.0-x86_64-linux-gnu)
-      google-protobuf (~> 3.25)
     sassc (2.4.0)
       ffi (~> 1.9)
     sinatra (4.0.0)
@@ -151,7 +146,6 @@ GEM
 
 PLATFORMS
   ruby
-  x86_64-linux
 
 DEPENDENCIES
   algolia_html_extractor!
