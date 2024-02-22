@@ -254,7 +254,7 @@ enum ContentCardClass {
 
 ## Custom card rendering {#customizing-card-rendering-for-android}
 
-{% tabs %}
+{% tabs local %}
 {% tab Android View System %}
 
 The following lists information on how to change how any card is rendered in the `recyclerView`. The `IContentCardsViewBindingHandler` interface defines how all Content Cards get rendered. You can customize this to change anything you want:

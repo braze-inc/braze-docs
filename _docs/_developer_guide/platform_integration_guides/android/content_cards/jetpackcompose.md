@@ -63,17 +63,6 @@ BrazeStyle(
 
 ### Further customization
 
-#### Filtering content cards
-When using Jetpack Compose, you can easily filter and sort the Content Cards by setting the `cardUpdateHandler` parameter. For example, to only show Short News Content Cards, you can use:
-
-```kotlin
-ContentCardsList(
-    cardUpdateHandler = {
-        it.filter { card -> card.cardType == CardType.SHORT_NEWS}
-    }
-) 
-```
-
 #### Handling card clicks
 To handle card clicks, pass in a function that takes a `Card` and returns a `Boolean` to `onCardClicked`. If `true` is returned, Braze will not process anything on the click besides logging it for analytics. If `false` is returned, Braze will handle the the click.
 
@@ -100,44 +89,4 @@ ContentCardsList(
         // Do what you need with the card
     }
 )
-```
-
-#### Complete card customization
-To handle ALL the aspects of rendering a card, pass a function to the `customCardComposer` that can take a card and then either compose it and return `true`, or return `false` and have the card rendered in the default manner. This can be useful is you want to render using a 3rd party library such as Lottie.
-
-If you use this, you are responsible for handling all aspects of card rendering (unread, pinned, etc.). You also need to handle card clicks (See `BrazeContentCardUtils.handleCardClick`). For example, if you'd like to intercept cards and turn them into a basic marquee, you could do this:
-
-```kotlin
-// Moving this to a val to make the code easier to read
-val myCustomCardRenderer: @Composable ((Card) -> Boolean) = { card ->
-    if (card.extras.containsKey("marquee")) {
-        val textCard = card as TextAnnouncementCard
-        Box(
-            Modifier
-                .padding(10.dp)
-                .fillMaxWidth()
-                .background(color = Color.Red)
-                .clickable {
-                    BrazeContentCardUtils.handleCardClick(context, card, clickHandler)
-                }
-        ) {
-            Text(
-                modifier = Modifier
-                    .align(Alignment.Center)
-                    .fillMaxWidth()
-                    .basicMarquee(iterations = Int.MAX_VALUE),
-                fontSize = 35.sp,
-                text = textCard.description
-            )
-        }
-        true
-    } else {
-        false
-    }
-}
-...
-ContentCardsList(
-    customCardComposer = myCustomCardRenderer
-)
-
 ```
