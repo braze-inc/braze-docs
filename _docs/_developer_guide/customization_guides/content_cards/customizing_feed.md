@@ -110,10 +110,8 @@ The default rate limit for manually refreshing the feed is 3 calls per 10 minute
 
 You can change the order in which your Content Cards are displayed. This allows you to fine tune the user experience by prioritizing certain types of content, such as time-sensitive promotions.
 
-{% tabs %}
-{% tab Android %}
-{% subtabs android %}
-{% subtab Android View System %}
+{% tabs local %}
+{% tab Android View System %}
 
 The [`ContentCardsFragment`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards/-content-cards-fragment/index.html) relies on a [`IContentCardsUpdateHandler`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards.handlers/-i-content-cards-update-handler/index.html) to handle any sorting or modifications of Content Cards before they are displayed in the feed. A custom update handler can be set via [`setContentCardUpdateHandler`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards/-content-cards-fragment/set-content-card-update-handler.html) on your `ContentCardsFragment`.
 
@@ -191,7 +189,6 @@ public class DefaultContentCardsUpdateHandler implements IContentCardsUpdateHand
 {% endsubtab %}
 {% subtab Kotlin %}
 
-
 ```kotlin
 class DefaultContentCardsUpdateHandler : IContentCardsUpdateHandler {
   override fun handleCardUpdate(event: ContentCardsUpdatedEvent): List<Card> {
@@ -255,8 +252,8 @@ class DefaultContentCardsUpdateHandler : IContentCardsUpdateHandler {
 
 The `ContentCardsFragment` source can be found on [GitHub](https://github.com/braze-inc/braze-android-sdk/blob/master/android-sdk-ui/src/main/java/com/braze/ui/contentcards/ContentCardsFragment.kt).
 
-{% endsubtab %}
-{% subtab Jetpack Compose %}
+{% endtab %}
+{% tab Jetpack Compose %}
 When using Jetpack Compose, you can easily filter and sort the Content Cards by setting the `cardUpdateHandler` parameter. For example:
 
 ```kotlin
@@ -285,8 +282,6 @@ ContentCardsList(
     }
 )
 ```
-{% endsubtab %}
-{% endsubtabs %}
 {% endtab %}
 {% tab iOS %}
 
