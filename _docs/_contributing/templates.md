@@ -8,7 +8,7 @@ page_order: 4
 
 > You can use these templates to create [pages]({{site.baseurl}}/contributing/content_management/pages/) or [sections]({{site.baseurl}}/contributing/content_management/sections/) on Braze Docs.
 
-Read HTML comments like the following to learn more about a section in the template:
+Read HTML comments like the following to learn more about each section in a template:
 
 ```markdown
 <!-- Here's an HTML comment! -->
