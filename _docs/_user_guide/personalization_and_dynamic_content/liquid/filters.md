@@ -246,6 +246,7 @@ Straight quotes are different from curly quotes in Liquid. Be careful when copyi
 | [sha1][6.8]    | Converts a string into a SHA-1 hash. Refer to [Encoding Filters][3] for more.  | ✅  Yes   |
 | hmac_sha1_hex<br>(previously [hmac_sha_1][6.10]) | Converts a string into a SHA-1 hash using a hash message authentication code (HMAC). Pass the secret key for the message as a parameter to the filter. Refer to [Encoding Filters][3] for more. | ✅  Yes   |
 | [hmac_sha256][6.11]    | Converts a string into a SHA-256 hash using a hash message authentication code (HMAC). Pass the secret key for the message as a parameter to the filter.       | ✅  Yes   |
+| hmac_sha512 | Converts a string into a SHA-512 hash using a hash message authentication code (HMAC). Pass the secret key for the message as a parameter to the filter. | ✅  Yes  |
 | [newline_to_br][6.12]     | Inserts a `<br>` line break HTML tag in front of each line break in a string.        | ✅  Yes   |
 | [pluralize][6.13]   | Outputs the singular or plural version of an English string based on the value of a number.      | ⛔  No    |
 | [prepend][6.14]     | Prepends characters to a string.      | ✅  Yes   |
