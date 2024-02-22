@@ -36,7 +36,7 @@ If you are using the [older navigation]({{site.baseurl}}/navigation), this page 
 
 When a phone number is updated on a user profile, the new phone number inherits the subscription group status of the user. If the phone number is updated to a number that already exists in Braze, the subscription status of that existing phone number is inherited.
 
-For example, if User #1 has a phone number that is subscribed to several subscription groups and that phone number then gets added to User #2, User #2 will be subscribed to the same subscription groups. To prevent a user from inheriting the existing subscriptions, you can reset the subscription groups of the old number via REST API whenever a user changes their number. Note that if there are multiple users who share this phone number, they will all be unsubscribed.
+For example, if User A has a phone number that is subscribed to several subscription groups and that phone number then gets added to User B, User B will be subscribed to the same subscription groups. To prevent a user from inheriting the existing subscriptions, you can reset the subscription groups of the old number via REST API whenever a user changes their number. If multiple users share this phone number, they will all be unsubscribed.
 
 ### How to check a user's SMS subscription group
 
