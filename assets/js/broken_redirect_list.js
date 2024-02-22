@@ -370,7 +370,7 @@ validurls['/docs/user_guide/data_and_analytics/custom_data/nested_object_support
 validurls['/docs/user_guide/data_and_analytics/custom_data/custom_events/#nested-objects'] = '/user_guide/data_and_analytics/custom_data/custom_events/nested_objects/';
 validurls['/docs/services_handbook_21/'] = '/docs/assets/download_file/Braze_Success_and_Support_Services_Handbook_21.pdf';
 validurls['/docs/services_handbook_22/'] = '/docs/assets/download_file/Braze_Success_and_Support_Services_Handbook_22.pdf';
-validurls['/docs/hidden/private_betas/view_pii/'] = '/docs/user_guide/administrative/app_settings/company_settings/security_settings#view-pii/';
+validurls['/docs/hidden/private_betas/view_pii/'] = '/docs/user_guide/administrative/app_settings/company_settings/security_settings/#view-pii/';
 validurls['/docs/hidden/private_betas/partners/adobe/'] = '/docs/partners/adobe';
 validurls['/docs/hidden/private_betas/link_aliasing/'] = '/docs/link_aliasing/';
 validurls['/docs/hidden/private_betas/shopify/'] = '/docs/partners/shopify/';
