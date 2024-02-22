@@ -15,6 +15,23 @@ page_type: reference
 <!-- The title should include the date the release note is made live. For example, "February 21, 2024 release". -->
 # MONTH DAY, YEAR release
 
+<!-- Fill out the following four sections ("Data flexibility," "Unlocking creativity," "Robust channels," and "AI and ML automation") using the example section under the next HTML comment. -->
+## Data flexibility
+
+CONTENT.
+
+## Unlocking creativity
+
+CONTENT.
+
+## Robust channels
+
+CONTENT.
+
+## AI and ML automation
+
+CONTENT.
+
 <!-- An example section containing "Release type" includes for each section. You may add addtional sections, subsections, includes, images, and links as needed. -->
 ## SECTION_TITLE
 
