@@ -31,388 +31,2654 @@ Column definitions are as follows:
 | **Credits Consumed with One Message** | Exact number of Message Credits used to send one message    |
 {: .reset-td-br-1 .reset-td-br-2}
 
+### Calculation example
+
+
 
 ## Credit ratio table for Message Credits - Delta
 
 {% details Click to expand %}
-|**Channel**           |**Channel Credit Ratio**|**Destination**                                    |**Multiplier**|**Credits Consumed with One Message**|
-|------------------|--------------------|-----------------------------------------------|----------|------------------------|
-|SMS - US / CA     |1                   |United States                                  |1.00      |1.00                    |
-|SMS - US / CA     |1                   |United States Toll Free                        |1.50      |1.50                    |
-|SMS - US / CA     |1                   |Canada                                         |1.00      |1.00                    |
-|SMS - US / CA     |1                   |Canada Toll Free                               |1.30      |1.30                    |
-|MMS - US / CA     |3                   |United States                                  |1.00      |3.00                    |
-|MMS - US / CA     |3                   |United States Toll Free                        |2.00      |6.00                    |
-|MMS - US / CA     |3                   |Canada Long Code                               |1.50      |4.50                    |
-|MMS - US / CA     |3                   |Canada Short Code                              |4.00      |12.00                   |
-|MMS - US / CA     |3                   |Canada Toll Free                               |1.30      |3.90                    |
-|SMS / MMS - Global|10                  |Abkhazia                                       |0.62      |6.20                    |
-|SMS / MMS - Global|10                  |Afghanistan                                    |9.47      |94.70                   |
-|SMS / MMS - Global|10                  |Albania                                        |2.29      |22.90                   |
-|SMS / MMS - Global|10                  |Algeria                                        |5.23      |52.30                   |
-|SMS / MMS - Global|10                  |American Samoa                                 |4.74      |47.40                   |
-|SMS / MMS - Global|10                  |Andorra                                        |3.32      |33.20                   |
-|SMS / MMS - Global|10                  |Angola                                         |2.24      |22.40                   |
-|SMS / MMS - Global|10                  |Anguilla                                       |3.33      |33.30                   |
-|SMS / MMS - Global|10                  |Antigua and Barbuda                            |2.47      |24.70                   |
-|SMS / MMS - Global|10                  |Argentina                                      |1.02      |10.20                   |
-|SMS / MMS - Global|10                  |Armenia                                        |3.49      |34.90                   |
-|SMS / MMS - Global|10                  |Aruba                                          |2.61      |26.10                   |
-|SMS / MMS - Global|10                  |Australia SMS                                  |0.36      |3.60                    |
-|SMS / MMS - Global|10                  |Australia MMS                                  |3.10      |31.00                   |
-|SMS / MMS - Global|10                  |Austria                                        |1.77      |17.70                   |
-|SMS / MMS - Global|10                  |Azerbaijan                                     |9.77      |97.70                   |
-|SMS / MMS - Global|10                  |Bahamas                                        |1.23      |12.30                   |
-|SMS / MMS - Global|10                  |Bahrain                                        |0.92      |9.20                    |
-|SMS / MMS - Global|10                  |Bangladesh                                     |5.81      |58.10                   |
-|SMS / MMS - Global|10                  |Barbados                                       |3.09      |30.90                   |
-|SMS / MMS - Global|10                  |Belarus                                        |6.35      |63.50                   |
-|SMS / MMS - Global|10                  |Belgium                                        |2.40      |24.00                   |
-|SMS / MMS - Global|10                  |Belize                                         |6.90      |69.00                   |
-|SMS / MMS - Global|10                  |Benin                                          |3.64      |36.40                   |
-|SMS / MMS - Global|10                  |Bermuda                                        |2.99      |29.90                   |
-|SMS / MMS - Global|10                  |Bhutan                                         |10.10     |101.00                  |
-|SMS / MMS - Global|10                  |Bolivia                                        |3.66      |36.60                   |
-|SMS / MMS - Global|10                  |Bosnia and Herzegovina                         |2.12      |21.20                   |
-|SMS / MMS - Global|10                  |Botswana                                       |2.52      |25.20                   |
-|SMS / MMS - Global|10                  |Brazil                                         |0.25      |2.50                    |
-|SMS / MMS - Global|10                  |Brunei                                         |0.50      |5.00                    |
-|SMS / MMS - Global|10                  |Bulgaria                                       |2.70      |27.00                   |
-|SMS / MMS - Global|10                  |Burkina Faso                                   |3.35      |33.50                   |
-|SMS / MMS - Global|10                  |Burundi                                        |9.47      |94.70                   |
-|SMS / MMS - Global|10                  |Cambodia                                       |4.30      |43.00                   |
-|SMS / MMS - Global|10                  |Cameroon                                       |3.49      |34.90                   |
-|SMS / MMS - Global|10                  |Cape Verde                                     |3.66      |36.60                   |
-|SMS / MMS - Global|10                  |Caribbean Netherlands                          |2.17      |21.70                   |
-|SMS / MMS - Global|10                  |Cayman Islands                                 |3.37      |33.70                   |
-|SMS / MMS - Global|10                  |Central African Republic                       |3.07      |30.70                   |
-|SMS / MMS - Global|10                  |Chad                                           |7.30      |73.00                   |
-|SMS / MMS - Global|10                  |Chile                                          |1.64      |16.40                   |
-|SMS / MMS - Global|10                  |China                                          |0.64      |6.40                    |
-|SMS / MMS - Global|10                  |Colombia                                       |0.02      |0.20                    |
-|SMS / MMS - Global|10                  |Comoros                                        |6.19      |61.90                   |
-|SMS / MMS - Global|10                  |Congo                                          |5.04      |50.40                   |
-|SMS / MMS - Global|10                  |Cook Islands                                   |3.52      |35.20                   |
-|SMS / MMS - Global|10                  |Costa Rica                                     |1.06      |10.60                   |
-|SMS / MMS - Global|10                  |Croatia                                        |2.31      |23.10                   |
-|SMS / MMS - Global|10                  |Cuba                                           |2.12      |21.20                   |
-|SMS / MMS - Global|10                  |Curacao                                        |0.99      |9.90                    |
-|SMS / MMS - Global|10                  |Cyprus                                         |2.18      |21.80                   |
-|SMS / MMS - Global|10                  |Czech Republic                                 |1.01      |10.10                   |
-|SMS / MMS - Global|10                  |Denmark                                        |1.01      |10.10                   |
-|SMS / MMS - Global|10                  |Djibouti                                       |4.09      |40.90                   |
-|SMS / MMS - Global|10                  |Dominica                                       |3.79      |37.90                   |
-|SMS / MMS - Global|10                  |Dominican Republic                             |1.29      |12.90                   |
-|SMS / MMS - Global|10                  |DR Congo                                       |5.77      |57.70                   |
-|SMS / MMS - Global|10                  |Ecuador                                        |2.76      |27.60                   |
-|SMS / MMS - Global|10                  |Egypt                                          |2.43      |24.30                   |
-|SMS / MMS - Global|10                  |El Salvador                                    |2.45      |24.50                   |
-|SMS / MMS - Global|10                  |Equatorial Guinea                              |4.36      |43.60                   |
-|SMS / MMS - Global|10                  |Eritrea                                        |2.48      |24.80                   |
-|SMS / MMS - Global|10                  |Estonia                                        |2.41      |24.10                   |
-|SMS / MMS - Global|10                  |Eswatini                                       |0.58      |5.80                    |
-|SMS / MMS - Global|10                  |Ethiopia                                       |8.63      |86.30                   |
-|SMS / MMS - Global|10                  |Falkland Islands                               |3.43      |34.30                   |
-|SMS / MMS - Global|10                  |Faroe Islands                                  |1.70      |17.00                   |
-|SMS / MMS - Global|10                  |Fiji                                           |4.16      |41.60                   |
-|SMS / MMS - Global|10                  |Finland                                        |1.46      |14.60                   |
-|SMS / MMS - Global|10                  |France                                         |0.98      |9.80                    |
-|SMS / MMS - Global|10                  |French Guiana                                  |4.64      |46.40                   |
-|SMS / MMS - Global|10                  |French Polynesia                               |4.53      |45.30                   |
-|SMS / MMS - Global|10                  |Gabon                                          |6.64      |66.40                   |
-|SMS / MMS - Global|10                  |Gambia                                         |4.18      |41.80                   |
-|SMS / MMS - Global|10                  |Georgia                                        |2.63      |26.30                   |
-|SMS / MMS - Global|10                  |Germany                                        |1.88      |18.80                   |
-|SMS / MMS - Global|10                  |Ghana                                          |2.26      |22.60                   |
-|SMS / MMS - Global|10                  |Gibraltar                                      |2.75      |27.50                   |
-|SMS / MMS - Global|10                  |Greece                                         |0.99      |9.90                    |
-|SMS / MMS - Global|10                  |Greenland                                      |1.03      |10.30                   |
-|SMS / MMS - Global|10                  |Grenada                                        |4.09      |40.90                   |
-|SMS / MMS - Global|10                  |Guadeloupe                                     |3.40      |34.00                   |
-|SMS / MMS - Global|10                  |Guam                                           |1.73      |17.30                   |
-|SMS / MMS - Global|10                  |Guatemala                                      |3.20      |32.00                   |
-|SMS / MMS - Global|10                  |Guernsey                                       |0.87      |8.70                    |
-|SMS / MMS - Global|10                  |Guinea                                         |3.82      |38.20                   |
-|SMS / MMS - Global|10                  |Guinea-Bissau                                  |3.97      |39.70                   |
-|SMS / MMS - Global|10                  |Guyana                                         |4.50      |45.00                   |
-|SMS / MMS - Global|10                  |Haiti                                          |5.94      |59.40                   |
-|SMS / MMS - Global|10                  |Honduras                                       |2.13      |21.30                   |
-|SMS / MMS - Global|10                  |Hong Kong                                      |1.35      |13.50                   |
-|SMS / MMS - Global|10                  |Hungary                                        |1.91      |19.10                   |
-|SMS / MMS - Global|10                  |Iceland                                        |1.75      |17.50                   |
-|SMS / MMS - Global|10                  |India                                          |1.00      |10.00                   |
-|SMS / MMS - Global|10                  |Indonesia                                      |6.63      |66.30                   |
-|SMS / MMS - Global|10                  |Iran                                           |6.25      |62.50                   |
-|SMS / MMS - Global|10                  |Iraq                                           |4.79      |47.90                   |
-|SMS / MMS - Global|10                  |Ireland                                        |1.31      |13.10                   |
-|SMS / MMS - Global|10                  |Isle of Man                                    |0.81      |8.10                    |
-|SMS / MMS - Global|10                  |Israel                                         |3.74      |37.40                   |
-|SMS / MMS - Global|10                  |Italy                                          |0.87      |8.70                    |
-|SMS / MMS - Global|10                  |Ivory Coast                                    |2.48      |24.80                   |
-|SMS / MMS - Global|10                  |Jamaica                                        |3.05      |30.50                   |
-|SMS / MMS - Global|10                  |Japan                                          |1.02      |10.20                   |
-|SMS / MMS - Global|10                  |Jersey                                         |0.70      |7.00                    |
-|SMS / MMS - Global|10                  |Jordan                                         |5.56      |55.60                   |
-|SMS / MMS - Global|10                  |Kazakhstan                                     |5.52      |55.20                   |
-|SMS / MMS - Global|10                  |Kenya                                          |2.62      |26.20                   |
-|SMS / MMS - Global|10                  |Kiribati                                       |3.67      |36.70                   |
-|SMS / MMS - Global|10                  |Korea Republic of                              |0.69      |6.90                    |
-|SMS / MMS - Global|10                  |Kosovo                                         |0.97      |9.70                    |
-|SMS / MMS - Global|10                  |Kuwait                                         |3.34      |33.40                   |
-|SMS / MMS - Global|10                  |Kyrgyzstan                                     |6.12      |61.20                   |
-|SMS / MMS - Global|10                  |Laos PDR                                       |1.54      |15.40                   |
-|SMS / MMS - Global|10                  |Latvia                                         |1.80      |18.00                   |
-|SMS / MMS - Global|10                  |Lebanon                                        |3.07      |30.70                   |
-|SMS / MMS - Global|10                  |Lesotho                                        |5.14      |51.40                   |
-|SMS / MMS - Global|10                  |Liberia                                        |3.47      |34.70                   |
-|SMS / MMS - Global|10                  |Libya                                          |8.17      |81.70                   |
-|SMS / MMS - Global|10                  |Liechtenstein                                  |0.84      |8.40                    |
-|SMS / MMS - Global|10                  |Lithuania                                      |1.37      |13.70                   |
-|SMS / MMS - Global|10                  |Luxembourg                                     |1.86      |18.60                   |
-|SMS / MMS - Global|10                  |Macao                                          |1.49      |14.90                   |
-|SMS / MMS - Global|10                  |Macedonia                                      |1.88      |18.80                   |
-|SMS / MMS - Global|10                  |Madagascar                                     |9.40      |94.00                   |
-|SMS / MMS - Global|10                  |Malawi                                         |5.72      |57.20                   |
-|SMS / MMS - Global|10                  |Malaysia                                       |1.47      |14.70                   |
-|SMS / MMS - Global|10                  |Maldives                                       |1.80      |18.00                   |
-|SMS / MMS - Global|10                  |Mali                                           |3.97      |39.70                   |
-|SMS / MMS - Global|10                  |Malta                                          |1.64      |16.40                   |
-|SMS / MMS - Global|10                  |Marshall Islands                               |4.00      |40.00                   |
-|SMS / MMS - Global|10                  |Martinique                                     |3.33      |33.30                   |
-|SMS / MMS - Global|10                  |Mauritania                                     |6.51      |65.10                   |
-|SMS / MMS - Global|10                  |Mauritius                                      |4.02      |40.20                   |
-|SMS / MMS - Global|10                  |Mayotte                                        |2.33      |23.30                   |
-|SMS / MMS - Global|10                  |Mexico                                         |0.27      |2.70                    |
-|SMS / MMS - Global|10                  |Micronesia                                     |1.85      |18.50                   |
-|SMS / MMS - Global|10                  |Moldova                                        |1.59      |15.90                   |
-|SMS / MMS - Global|10                  |Monaco                                         |4.68      |46.80                   |
-|SMS / MMS - Global|10                  |Mongolia                                       |7.03      |70.30                   |
-|SMS / MMS - Global|10                  |Montenegro                                     |2.87      |28.70                   |
-|SMS / MMS - Global|10                  |Montserrat                                     |2.77      |27.70                   |
-|SMS / MMS - Global|10                  |Morocco                                        |2.64      |26.40                   |
-|SMS / MMS - Global|10                  |Mozambique                                     |2.76      |27.60                   |
-|SMS / MMS - Global|10                  |Myanmar                                        |5.84      |58.40                   |
-|SMS / MMS - Global|10                  |Namibia                                        |1.58      |15.80                   |
-|SMS / MMS - Global|10                  |Nauru                                          |1.12      |11.20                   |
-|SMS / MMS - Global|10                  |Nepal                                          |3.82      |38.20                   |
-|SMS / MMS - Global|10                  |Netherlands                                    |1.65      |16.50                   |
-|SMS / MMS - Global|10                  |New Caledonia                                  |4.44      |44.40                   |
-|SMS / MMS - Global|10                  |New Zealand                                    |1.92      |19.20                   |
-|SMS / MMS - Global|10                  |Nicaragua                                      |1.95      |19.50                   |
-|SMS / MMS - Global|10                  |Niger                                          |7.49      |74.90                   |
-|SMS / MMS - Global|10                  |Nigeria                                        |5.01      |50.10                   |
-|SMS / MMS - Global|10                  |Niue                                           |4.86      |48.60                   |
-|SMS / MMS - Global|10                  |Norfolk Island                                 |0.71      |7.10                    |
-|SMS / MMS - Global|10                  |North Macedonia                                |0.34      |3.40                    |
-|SMS / MMS - Global|10                  |Northern Cyprus                                |0.20      |2.00                    |
-|SMS / MMS - Global|10                  |Norway                                         |1.05      |10.50                   |
-|SMS / MMS - Global|10                  |Oman                                           |3.60      |36.00                   |
-|SMS / MMS - Global|10                  |Pakistan                                       |7.46      |74.60                   |
-|SMS / MMS - Global|10                  |Palau                                          |2.52      |25.20                   |
-|SMS / MMS - Global|10                  |Palestinian Territory                          |7.68      |76.80                   |
-|SMS / MMS - Global|10                  |Panama                                         |2.23      |22.30                   |
-|SMS / MMS - Global|10                  |Papua New Guinea                               |19.01     |190.10                  |
-|SMS / MMS - Global|10                  |Paraguay                                       |1.84      |18.40                   |
-|SMS / MMS - Global|10                  |Peru                                           |0.81      |8.10                    |
-|SMS / MMS - Global|10                  |Philippines                                    |0.28      |2.80                    |
-|SMS / MMS - Global|10                  |Poland                                         |0.52      |5.20                    |
-|SMS / MMS - Global|10                  |Portugal                                       |0.60      |6.00                    |
-|SMS / MMS - Global|10                  |Puerto Rico                                    |1.06      |10.60                   |
-|SMS / MMS - Global|10                  |Qatar                                          |0.52      |5.20                    |
-|SMS / MMS - Global|10                  |Reunion/Mayotte                                |4.82      |48.20                   |
-|SMS / MMS - Global|10                  |Romania                                        |1.06      |10.60                   |
-|SMS / MMS - Global|10                  |Russia                                         |9.54      |95.40                   |
-|SMS / MMS - Global|10                  |Rwanda                                         |4.66      |46.60                   |
-|SMS / MMS - Global|10                  |Saint Kitts and Nevis                          |0.92      |9.20                    |
-|SMS / MMS - Global|10                  |Saint Lucia                                    |1.07      |10.70                   |
-|SMS / MMS - Global|10                  |Saint Pierre and Miquelon                      |2.31      |23.10                   |
-|SMS / MMS - Global|10                  |Saint Vincent and The Grenadines               |1.06      |10.60                   |
-|SMS / MMS - Global|10                  |Samoa                                          |4.68      |46.80                   |
-|SMS / MMS - Global|10                  |San Marino                                     |2.76      |27.60                   |
-|SMS / MMS - Global|10                  |Sao Tome and Principe                          |3.29      |32.90                   |
-|SMS / MMS - Global|10                  |Saudi Arabia                                   |1.91      |19.10                   |
-|SMS / MMS - Global|10                  |Senegal                                        |5.15      |51.50                   |
-|SMS / MMS - Global|10                  |Serbia                                         |6.09      |60.90                   |
-|SMS / MMS - Global|10                  |Seychelles                                     |0.94      |9.40                    |
-|SMS / MMS - Global|10                  |Sierra Leone                                   |4.73      |47.30                   |
-|SMS / MMS - Global|10                  |Singapore                                      |0.70      |7.00                    |
-|SMS / MMS - Global|10                  |Sint Maarten                                   |0.16      |1.60                    |
-|SMS / MMS - Global|10                  |Slovakia                                       |2.23      |22.30                   |
-|SMS / MMS - Global|10                  |Slovenia                                       |3.76      |37.60                   |
-|SMS / MMS - Global|10                  |Solomon Islands                                |2.09      |20.90                   |
-|SMS / MMS - Global|10                  |Somalia                                        |4.74      |47.40                   |
-|SMS / MMS - Global|10                  |South Africa                                   |0.32      |3.20                    |
-|SMS / MMS - Global|10                  |South Ossetia                                  |2.05      |20.50                   |
-|SMS / MMS - Global|10                  |South Sudan                                    |0.80      |8.00                    |
-|SMS / MMS - Global|10                  |Spain                                          |0.80      |8.00                    |
-|SMS / MMS - Global|10                  |Sri Lanka                                      |5.60      |56.00                   |
-|SMS / MMS - Global|10                  |St Kitts and Nevis                             |2.80      |28.00                   |
-|SMS / MMS - Global|10                  |St Lucia                                       |2.59      |25.90                   |
-|SMS / MMS - Global|10                  |St Pierre and Miquelon                         |3.80      |38.00                   |
-|SMS / MMS - Global|10                  |St Vincent Grenadines                          |4.08      |40.80                   |
-|SMS / MMS - Global|10                  |Sudan                                          |4.15      |41.50                   |
-|SMS / MMS - Global|10                  |Suriname                                       |3.28      |32.80                   |
-|SMS / MMS - Global|10                  |Swaziland                                      |2.32      |23.20                   |
-|SMS / MMS - Global|10                  |Sweden                                         |0.86      |8.60                    |
-|SMS / MMS - Global|10                  |Switzerland                                    |0.60      |6.00                    |
-|SMS / MMS - Global|10                  |Syria                                          |7.86      |78.60                   |
-|SMS / MMS - Global|10                  |Taiwan                                         |0.84      |8.40                    |
-|SMS / MMS - Global|10                  |Tajikistan                                     |11.35     |113.50                  |
-|SMS / MMS - Global|10                  |Tanzania                                       |5.38      |53.80                   |
-|SMS / MMS - Global|10                  |Thailand                                       |0.36      |3.60                    |
-|SMS / MMS - Global|10                  |Timor-Leste                                    |2.86      |28.60                   |
-|SMS / MMS - Global|10                  |Togo                                           |3.84      |38.40                   |
-|SMS / MMS - Global|10                  |Tonga                                          |3.14      |31.40                   |
-|SMS / MMS - Global|10                  |Trinidad and Tobago                            |3.02      |30.20                   |
-|SMS / MMS - Global|10                  |Tunisia                                        |7.06      |70.60                   |
-|SMS / MMS - Global|10                  |Turkey                                         |0.77      |7.70                    |
-|SMS / MMS - Global|10                  |Turkmenistan                                   |5.04      |50.40                   |
-|SMS / MMS - Global|10                  |Turks and Caicos Islands                       |3.38      |33.80                   |
-|SMS / MMS - Global|10                  |Tuvalu                                         |3.36      |33.60                   |
-|SMS / MMS - Global|10                  |Uganda                                         |4.05      |40.50                   |
-|SMS / MMS - Global|10                  |Ukraine                                        |2.86      |28.60                   |
-|SMS / MMS - Global|10                  |United Arab Emirates                           |1.24      |12.40                   |
-|SMS / MMS - Global|10                  |United Kingdom                                 |0.65      |6.50                    |
-|SMS / MMS - Global|10                  |Unknown                                        |3.92      |39.20                   |
-|SMS / MMS - Global|10                  |Uruguay                                        |2.15      |21.50                   |
-|SMS / MMS - Global|10                  |Uzbekistan                                     |6.88      |68.80                   |
-|SMS / MMS - Global|10                  |Vanuatu                                        |4.18      |41.80                   |
-|SMS / MMS - Global|10                  |Venezuela                                      |2.15      |21.50                   |
-|SMS / MMS - Global|10                  |Vietnam                                        |3.05      |30.50                   |
-|SMS / MMS - Global|10                  |Virgin Islands, British                        |4.73      |47.30                   |
-|SMS / MMS - Global|10                  |Virgin Islands, U.S.                           |0.50      |5.00                    |
-|SMS / MMS - Global|10                  |Wallis and Futuna                              |2.77      |27.70                   |
-|SMS / MMS - Global|10                  |Yemen                                          |6.03      |60.30                   |
-|SMS / MMS - Global|10                  |Zambia                                         |6.76      |67.60                   |
-|SMS / MMS - Global|10                  |Zimbabwe                                       |3.55      |35.50                   |
-|WhatsApp          |10                  |Argentina Authentication                       |0.95      |9.50                    |
-|WhatsApp          |10                  |Argentina Marketing                            |1.65      |16.50                   |
-|WhatsApp          |10                  |Argentina Service                              |0.85      |8.50                    |
-|WhatsApp          |10                  |Argentina Utility                              |1.10      |11.00                   |
-|WhatsApp          |10                  |Brazil Authentication                          |0.85      |8.50                    |
-|WhatsApp          |10                  |Brazil Marketing                               |1.65      |16.50                   |
-|WhatsApp          |10                  |Brazil Service                                 |0.80      |8.00                    |
-|WhatsApp          |10                  |Brazil Utility                                 |0.95      |9.50                    |
-|WhatsApp          |10                  |Chile Authentication                           |1.40      |14.00                   |
-|WhatsApp          |10                  |Chile Marketing                                |2.35      |23.50                   |
-|WhatsApp          |10                  |Chile Service                                  |1.20      |12.00                   |
-|WhatsApp          |10                  |Chile Utility                                  |1.55      |15.50                   |
-|WhatsApp          |10                  |Colombia Authentication                        |0.20      |2.00                    |
-|WhatsApp          |10                  |Colombia Marketing                             |0.35      |3.50                    |
-|WhatsApp          |10                  |Colombia Service                               |0.15      |1.50                    |
-|WhatsApp          |10                  |Colombia Utility                               |0.25      |2.50                    |
-|WhatsApp          |10                  |Egypt Authentication                           |1.65      |16.50                   |
-|WhatsApp          |10                  |Egypt Marketing                                |2.85      |28.50                   |
-|WhatsApp          |10                  |Egypt Service                                  |1.70      |17.00                   |
-|WhatsApp          |10                  |Egypt Utility                                  |1.80      |18.00                   |
-|WhatsApp          |10                  |France Authentication                          |1.85      |18.50                   |
-|WhatsApp          |10                  |France Marketing                               |3.80      |38.00                   |
-|WhatsApp          |10                  |France Service                                 |2.30      |23.00                   |
-|WhatsApp          |10                  |France Utility                                 |2.05      |20.50                   |
-|WhatsApp          |10                  |Germany Authentication                         |2.05      |20.50                   |
-|WhatsApp          |10                  |Germany Marketing                              |3.60      |36.00                   |
-|WhatsApp          |10                  |Germany Service                                |2.15      |21.50                   |
-|WhatsApp          |10                  |Germany Utility                                |2.25      |22.50                   |
-|WhatsApp          |N/A                 |India Authentication                           |N/A       |N/A                     |
-|WhatsApp          |10                  |India Marketing                                |0.25      |2.50                    |
-|WhatsApp          |10                  |India Service                                  |0.10      |1.00                    |
-|WhatsApp          |10                  |India Utility                                  |0.10      |1.00                    |
-|WhatsApp          |N/A                 |Indonesia Authentication                       |N/A       |N/A                     |
-|WhatsApp          |10                  |Indonesia Marketing                            |1.10      |11.00                   |
-|WhatsApp          |10                  |Indonesia Service                              |0.50      |5.00                    |
-|WhatsApp          |10                  |Indonesia Utility                              |0.55      |5.50                    |
-|WhatsApp          |10                  |Israel Authentication                          |0.45      |4.50                    |
-|WhatsApp          |10                  |Israel Marketing                               |0.95      |9.50                    |
-|WhatsApp          |10                  |Israel Service                                 |0.50      |5.00                    |
-|WhatsApp          |10                  |Israel Utility                                 |0.50      |5.00                    |
-|WhatsApp          |10                  |Italy Authentication                           |1.00      |10.00                   |
-|WhatsApp          |10                  |Italy Marketing                                |1.85      |18.50                   |
-|WhatsApp          |10                  |Italy Service                                  |1.00      |10.00                   |
-|WhatsApp          |10                  |Italy Utility                                  |1.10      |11.00                   |
-|WhatsApp          |10                  |Malaysia Authentication                        |0.50      |5.00                    |
-|WhatsApp          |10                  |Malaysia Marketing                             |2.30      |23.00                   |
-|WhatsApp          |10                  |Malaysia Service                               |0.60      |6.00                    |
-|WhatsApp          |10                  |Malaysia Utility                               |0.55      |5.50                    |
-|WhatsApp          |10                  |Mexico Authentication                          |0.65      |6.50                    |
-|WhatsApp          |10                  |Mexico Marketing                               |1.15      |11.50                   |
-|WhatsApp          |10                  |Mexico Service                                 |0.30      |3.00                    |
-|WhatsApp          |10                  |Mexico Utility                                 |0.70      |7.00                    |
-|WhatsApp          |10                  |Netherlands Authentication                     |1.90      |19.00                   |
-|WhatsApp          |10                  |Netherlands Marketing                          |4.25      |42.50                   |
-|WhatsApp          |10                  |Netherlands Service                            |2.35      |23.50                   |
-|WhatsApp          |10                  |Netherlands Utility                            |2.10      |21.00                   |
-|WhatsApp          |10                  |Nigeria Authentication                         |0.75      |7.50                    |
-|WhatsApp          |10                  |Nigeria Marketing                              |1.35      |13.50                   |
-|WhatsApp          |10                  |Nigeria Service                                |0.80      |8.00                    |
-|WhatsApp          |10                  |Nigeria Utility                                |0.85      |8.50                    |
-|WhatsApp          |10                  |North America Authentication                   |0.35      |3.50                    |
-|WhatsApp          |10                  |North America Marketing                        |0.65      |6.50                    |
-|WhatsApp          |10                  |North America Service                          |0.25      |2.50                    |
-|WhatsApp          |10                  |North America Utility                          |0.40      |4.00                    |
-|WhatsApp          |10                  |Other Authentication                           |0.80      |8.00                    |
-|WhatsApp          |10                  |Other Marketing                                |1.60      |16.00                   |
-|WhatsApp          |10                  |Other Service                                  |0.40      |4.00                    |
-|WhatsApp          |10                  |Other Utility                                  |0.90      |9.00                    |
-|WhatsApp          |10                  |Pakistan Authentication                        |0.60      |6.00                    |
-|WhatsApp          |10                  |Pakistan Marketing                             |1.25      |12.50                   |
-|WhatsApp          |10                  |Pakistan Service                               |0.40      |4.00                    |
-|WhatsApp          |10                  |Pakistan Utility                               |0.65      |6.50                    |
-|WhatsApp          |10                  |Peru Authentication                            |1.00      |10.00                   |
-|WhatsApp          |10                  |Peru Marketing                                 |1.85      |18.50                   |
-|WhatsApp          |10                  |Peru Service                                   |0.50      |5.00                    |
-|WhatsApp          |10                  |Peru Utility                                   |1.10      |11.00                   |
-|WhatsApp          |10                  |Rest of Africa Authentication                  |0.40      |4.00                    |
-|WhatsApp          |10                  |Rest of Africa Marketing                       |0.60      |6.00                    |
-|WhatsApp          |10                  |Rest of Africa Service                         |0.95      |9.50                    |
-|WhatsApp          |10                  |Rest of Africa Utility                         |0.40      |4.00                    |
-|WhatsApp          |10                  |Rest of Asia Pacific Authentication            |1.15      |11.50                   |
-|WhatsApp          |10                  |Rest of Asia Pacific Marketing                 |1.95      |19.50                   |
-|WhatsApp          |10                  |Rest of Asia Pacific Service                   |0.60      |6.00                    |
-|WhatsApp          |10                  |Rest of Asia Pacific Utility                   |1.25      |12.50                   |
-|WhatsApp          |10                  |Rest of Central & Eastern Europe Authentication|1.50      |15.00                   |
-|WhatsApp          |10                  |Rest of Central & Eastern Europe Marketing     |2.30      |23.00                   |
-|WhatsApp          |10                  |Rest of Central & Eastern Europe Service       |0.65      |6.50                    |
-|WhatsApp          |10                  |Rest of Central & Eastern Europe Utility       |1.65      |16.50                   |
-|WhatsApp          |10                  |Rest of Latin America Authentication           |1.20      |12.00                   |
-|WhatsApp          |10                  |Rest of Latin America Marketing                |1.95      |19.50                   |
-|WhatsApp          |10                  |Rest of Latin America Service                  |1.10      |11.00                   |
-|WhatsApp          |10                  |Rest of Latin America Utility                  |1.30      |13.00                   |
-|WhatsApp          |10                  |Rest of Middle East Authentication             |0.45      |4.50                    |
-|WhatsApp          |10                  |Rest of Middle East Marketing                  |0.90      |9.00                    |
-|WhatsApp          |10                  |Rest of Middle East Service                    |0.60      |6.00                    |
-|WhatsApp          |10                  |Rest of Middle East Utility                    |0.55      |5.50                    |
-|WhatsApp          |10                  |Rest of Western Europe Authentication          |1.00      |10.00                   |
-|WhatsApp          |10                  |Rest of Western Europe Marketing               |1.55      |15.50                   |
-|WhatsApp          |10                  |Rest of Western Europe Service                 |1.05      |10.50                   |
-|WhatsApp          |10                  |Rest of Western Europe Utility                 |1.10      |11.00                   |
-|WhatsApp          |10                  |Russia Authentication                          |1.15      |11.50                   |
-|WhatsApp          |10                  |Russia Marketing                               |2.15      |21.50                   |
-|WhatsApp          |10                  |Russia Service                                 |1.05      |10.50                   |
-|WhatsApp          |10                  |Russia Utility                                 |1.25      |12.50                   |
-|WhatsApp          |10                  |Saudi Arabia Authentication                    |0.60      |6.00                    |
-|WhatsApp          |10                  |Saudi Arabia Marketing                         |1.10      |11.00                   |
-|WhatsApp          |10                  |Saudi Arabia Service                           |0.50      |5.00                    |
-|WhatsApp          |10                  |Saudi Arabia Utility                           |0.65      |6.50                    |
-|WhatsApp          |10                  |South Africa Authentication                    |0.50      |5.00                    |
-|WhatsApp          |10                  |South Africa Marketing                         |1.00      |10.00                   |
-|WhatsApp          |10                  |South Africa Service                           |0.45      |4.50                    |
-|WhatsApp          |10                  |South Africa Utility                           |0.55      |5.50                    |
-|WhatsApp          |10                  |Spain Authentication                           |0.90      |9.00                    |
-|WhatsApp          |10                  |Spain Marketing                                |1.65      |16.50                   |
-|WhatsApp          |10                  |Spain Service                                  |1.00      |10.00                   |
-|WhatsApp          |10                  |Spain Utility                                  |1.00      |10.00                   |
-|WhatsApp          |10                  |Turkey Authentication                          |0.20      |2.00                    |
-|WhatsApp          |10                  |Turkey Marketing                               |0.30      |3.00                    |
-|WhatsApp          |10                  |Turkey Service                                 |0.10      |1.00                    |
-|WhatsApp          |10                  |Turkey Utility                                 |0.25      |2.50                    |
-|WhatsApp          |10                  |United Arab Emirates Authentication            |0.45      |4.50                    |
-|WhatsApp          |10                  |United Arab Emirates Marketing                 |0.90      |9.00                    |
-|WhatsApp          |10                  |United Arab Emirates Service                   |0.50      |5.00                    |
-|WhatsApp          |10                  |United Arab Emirates Utility                   |0.55      |5.50                    |
-|WhatsApp          |10                  |United Kingdom Authentication                  |0.95      |9.50                    |
-|WhatsApp          |10                  |United Kingdom Marketing                       |1.85      |18.50                   |
-|WhatsApp          |10                  |United Kingdom Service                         |1.05      |10.50                   |
-|WhatsApp          |10                  |United Kingdom Utility                         |1.05      |10.50                   |
+<table>
+    <tr>
+        <td>**Channel**</td>
+        <td>**Channel Credit Ratio**</td>
+        <td>**Destination**</td>
+        <td>**Multiplier**</td>
+        <th style="background-color: lightgrey;">*Credits Consumed with One Message**</th>
+    </tr>
+    <tr>
+        <td>SMS - US / CA</td>
+        <td>1</td>
+        <td>United States</td>
+        <td>1.00</td>
+        <td>1.00</td>
+    </tr>
+    <tr>
+        <td>SMS - US / CA</td>
+        <td>1</td>
+        <td>United States Toll Free</td>
+        <td>1.50</td>
+        <td>1.50</td>
+    </tr>
+    <tr>
+        <td>SMS - US / CA</td>
+        <td>1</td>
+        <td>Canada</td>
+        <td>1.00</td>
+        <td>1.00</td>
+    </tr>
+    <tr>
+        <td>SMS - US / CA</td>
+        <td>1</td>
+        <td>Canada Toll Free</td>
+        <td>1.30</td>
+        <td>1.30</td>
+    </tr>
+    <tr>
+        <td>MMS - US / CA</td>
+        <td>3</td>
+        <td>United States</td>
+        <td>1.00</td>
+        <td>3.00</td>
+    </tr>
+    <tr>
+        <td>MMS - US / CA</td>
+        <td>3</td>
+        <td>United States Toll Free</td>
+        <td>2.00</td>
+        <td>6.00</td>
+    </tr>
+    <tr>
+        <td>MMS - US / CA</td>
+        <td>3</td>
+        <td>Canada Long Code</td>
+        <td>1.50</td>
+        <td>4.50</td>
+    </tr>
+    <tr>
+        <td>MMS - US / CA</td>
+        <td>3</td>
+        <td>Canada Short Code</td>
+        <td>4.00</td>
+        <td>12.00</td>
+    </tr>
+    <tr>
+        <td>MMS - US / CA</td>
+        <td>3</td>
+        <td>Canada Toll Free</td>
+        <td>1.30</td>
+        <td>3.90</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Abkhazia</td>
+        <td>0.62</td>
+        <td>6.20</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Afghanistan</td>
+        <td>9.47</td>
+        <td>94.70</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Albania</td>
+        <td>2.29</td>
+        <td>22.90</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Algeria</td>
+        <td>5.23</td>
+        <td>52.30</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>American Samoa</td>
+        <td>4.74</td>
+        <td>47.40</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Andorra</td>
+        <td>3.32</td>
+        <td>33.20</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Angola</td>
+        <td>2.24</td>
+        <td>22.40</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Anguilla</td>
+        <td>3.33</td>
+        <td>33.30</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Antigua and Barbuda</td>
+        <td>2.47</td>
+        <td>24.70</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Argentina</td>
+        <td>1.02</td>
+        <td>10.20</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Armenia</td>
+        <td>3.49</td>
+        <td>34.90</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Aruba</td>
+        <td>2.61</td>
+        <td>26.10</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Australia SMS</td>
+        <td>0.36</td>
+        <td>3.60</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Australia MMS</td>
+        <td>3.10</td>
+        <td>31.00</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Austria</td>
+        <td>1.77</td>
+        <td>17.70</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Azerbaijan</td>
+        <td>9.77</td>
+        <td>97.70</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Bahamas</td>
+        <td>1.23</td>
+        <td>12.30</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Bahrain</td>
+        <td>0.92</td>
+        <td>9.20</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Bangladesh</td>
+        <td>5.81</td>
+        <td>58.10</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Barbados</td>
+        <td>3.09</td>
+        <td>30.90</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Belarus</td>
+        <td>6.35</td>
+        <td>63.50</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Belgium</td>
+        <td>2.40</td>
+        <td>24.00</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Belize</td>
+        <td>6.90</td>
+        <td>69.00</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Benin</td>
+        <td>3.64</td>
+        <td>36.40</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Bermuda</td>
+        <td>2.99</td>
+        <td>29.90</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Bhutan</td>
+        <td>10.10</td>
+        <td>101.00</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Bolivia</td>
+        <td>3.66</td>
+        <td>36.60</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Bosnia and Herzegovina</td>
+        <td>2.12</td>
+        <td>21.20</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Botswana</td>
+        <td>2.52</td>
+        <td>25.20</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Brazil</td>
+        <td>0.25</td>
+        <td>2.50</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Brunei</td>
+        <td>0.50</td>
+        <td>5.00</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Bulgaria</td>
+        <td>2.70</td>
+        <td>27.00</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Burkina Faso</td>
+        <td>3.35</td>
+        <td>33.50</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Burundi</td>
+        <td>9.47</td>
+        <td>94.70</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Cambodia</td>
+        <td>4.30</td>
+        <td>43.00</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Cameroon</td>
+        <td>3.49</td>
+        <td>34.90</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Cape Verde</td>
+        <td>3.66</td>
+        <td>36.60</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Caribbean Netherlands</td>
+        <td>2.17</td>
+        <td>21.70</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Cayman Islands</td>
+        <td>3.37</td>
+        <td>33.70</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Central African Republic</td>
+        <td>3.07</td>
+        <td>30.70</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Chad</td>
+        <td>7.30</td>
+        <td>73.00</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Chile</td>
+        <td>1.64</td>
+        <td>16.40</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>China</td>
+        <td>0.64</td>
+        <td>6.40</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Colombia</td>
+        <td>0.02</td>
+        <td>0.20</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Comoros</td>
+        <td>6.19</td>
+        <td>61.90</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Congo</td>
+        <td>5.04</td>
+        <td>50.40</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Cook Islands</td>
+        <td>3.52</td>
+        <td>35.20</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Costa Rica</td>
+        <td>1.06</td>
+        <td>10.60</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Croatia</td>
+        <td>2.31</td>
+        <td>23.10</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Cuba</td>
+        <td>2.12</td>
+        <td>21.20</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Curacao</td>
+        <td>0.99</td>
+        <td>9.90</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Cyprus</td>
+        <td>2.18</td>
+        <td>21.80</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Czech Republic</td>
+        <td>1.01</td>
+        <td>10.10</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Denmark</td>
+        <td>1.01</td>
+        <td>10.10</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Djibouti</td>
+        <td>4.09</td>
+        <td>40.90</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Dominica</td>
+        <td>3.79</td>
+        <td>37.90</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Dominican Republic</td>
+        <td>1.29</td>
+        <td>12.90</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>DR Congo</td>
+        <td>5.77</td>
+        <td>57.70</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Ecuador</td>
+        <td>2.76</td>
+        <td>27.60</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Egypt</td>
+        <td>2.43</td>
+        <td>24.30</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>El Salvador</td>
+        <td>2.45</td>
+        <td>24.50</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Equatorial Guinea</td>
+        <td>4.36</td>
+        <td>43.60</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Eritrea</td>
+        <td>2.48</td>
+        <td>24.80</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Estonia</td>
+        <td>2.41</td>
+        <td>24.10</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Eswatini</td>
+        <td>0.58</td>
+        <td>5.80</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Ethiopia</td>
+        <td>8.63</td>
+        <td>86.30</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Falkland Islands</td>
+        <td>3.43</td>
+        <td>34.30</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Faroe Islands</td>
+        <td>1.70</td>
+        <td>17.00</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Fiji</td>
+        <td>4.16</td>
+        <td>41.60</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Finland</td>
+        <td>1.46</td>
+        <td>14.60</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>France</td>
+        <td>0.98</td>
+        <td>9.80</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>French Guiana</td>
+        <td>4.64</td>
+        <td>46.40</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>French Polynesia</td>
+        <td>4.53</td>
+        <td>45.30</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Gabon</td>
+        <td>6.64</td>
+        <td>66.40</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Gambia</td>
+        <td>4.18</td>
+        <td>41.80</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Georgia</td>
+        <td>2.63</td>
+        <td>26.30</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Germany</td>
+        <td>1.88</td>
+        <td>18.80</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Ghana</td>
+        <td>2.26</td>
+        <td>22.60</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Gibraltar</td>
+        <td>2.75</td>
+        <td>27.50</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Greece</td>
+        <td>0.99</td>
+        <td>9.90</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Greenland</td>
+        <td>1.03</td>
+        <td>10.30</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Grenada</td>
+        <td>4.09</td>
+        <td>40.90</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Guadeloupe</td>
+        <td>3.40</td>
+        <td>34.00</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Guam</td>
+        <td>1.73</td>
+        <td>17.30</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Guatemala</td>
+        <td>3.20</td>
+        <td>32.00</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Guernsey</td>
+        <td>0.87</td>
+        <td>8.70</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Guinea</td>
+        <td>3.82</td>
+        <td>38.20</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Guinea-Bissau</td>
+        <td>3.97</td>
+        <td>39.70</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Guyana</td>
+        <td>4.50</td>
+        <td>45.00</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Haiti</td>
+        <td>5.94</td>
+        <td>59.40</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Honduras</td>
+        <td>2.13</td>
+        <td>21.30</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Hong Kong</td>
+        <td>1.35</td>
+        <td>13.50</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Hungary</td>
+        <td>1.91</td>
+        <td>19.10</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Iceland</td>
+        <td>1.75</td>
+        <td>17.50</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>India</td>
+        <td>1.00</td>
+        <td>10.00</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Indonesia</td>
+        <td>6.63</td>
+        <td>66.30</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Iran</td>
+        <td>6.25</td>
+        <td>62.50</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Iraq</td>
+        <td>4.79</td>
+        <td>47.90</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Ireland</td>
+        <td>1.31</td>
+        <td>13.10</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Isle of Man</td>
+        <td>0.81</td>
+        <td>8.10</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Israel</td>
+        <td>3.74</td>
+        <td>37.40</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Italy</td>
+        <td>0.87</td>
+        <td>8.70</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Ivory Coast</td>
+        <td>2.48</td>
+        <td>24.80</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Jamaica</td>
+        <td>3.05</td>
+        <td>30.50</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Japan</td>
+        <td>1.02</td>
+        <td>10.20</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Jersey</td>
+        <td>0.70</td>
+        <td>7.00</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Jordan</td>
+        <td>5.56</td>
+        <td>55.60</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Kazakhstan</td>
+        <td>5.52</td>
+        <td>55.20</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Kenya</td>
+        <td>2.62</td>
+        <td>26.20</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Kiribati</td>
+        <td>3.67</td>
+        <td>36.70</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Korea Republic of</td>
+        <td>0.69</td>
+        <td>6.90</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Kosovo</td>
+        <td>0.97</td>
+        <td>9.70</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Kuwait</td>
+        <td>3.34</td>
+        <td>33.40</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Kyrgyzstan</td>
+        <td>6.12</td>
+        <td>61.20</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Laos PDR</td>
+        <td>1.54</td>
+        <td>15.40</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Latvia</td>
+        <td>1.80</td>
+        <td>18.00</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Lebanon</td>
+        <td>3.07</td>
+        <td>30.70</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Lesotho</td>
+        <td>5.14</td>
+        <td>51.40</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Liberia</td>
+        <td>3.47</td>
+        <td>34.70</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Libya</td>
+        <td>8.17</td>
+        <td>81.70</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Liechtenstein</td>
+        <td>0.84</td>
+        <td>8.40</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Lithuania</td>
+        <td>1.37</td>
+        <td>13.70</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Luxembourg</td>
+        <td>1.86</td>
+        <td>18.60</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Macao</td>
+        <td>1.49</td>
+        <td>14.90</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Macedonia</td>
+        <td>1.88</td>
+        <td>18.80</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Madagascar</td>
+        <td>9.40</td>
+        <td>94.00</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Malawi</td>
+        <td>5.72</td>
+        <td>57.20</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Malaysia</td>
+        <td>1.47</td>
+        <td>14.70</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Maldives</td>
+        <td>1.80</td>
+        <td>18.00</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Mali</td>
+        <td>3.97</td>
+        <td>39.70</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Malta</td>
+        <td>1.64</td>
+        <td>16.40</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Marshall Islands</td>
+        <td>4.00</td>
+        <td>40.00</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Martinique</td>
+        <td>3.33</td>
+        <td>33.30</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Mauritania</td>
+        <td>6.51</td>
+        <td>65.10</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Mauritius</td>
+        <td>4.02</td>
+        <td>40.20</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Mayotte</td>
+        <td>2.33</td>
+        <td>23.30</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Mexico</td>
+        <td>0.27</td>
+        <td>2.70</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Micronesia</td>
+        <td>1.85</td>
+        <td>18.50</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Moldova</td>
+        <td>1.59</td>
+        <td>15.90</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Monaco</td>
+        <td>4.68</td>
+        <td>46.80</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Mongolia</td>
+        <td>7.03</td>
+        <td>70.30</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Montenegro</td>
+        <td>2.87</td>
+        <td>28.70</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Montserrat</td>
+        <td>2.77</td>
+        <td>27.70</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Morocco</td>
+        <td>2.64</td>
+        <td>26.40</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Mozambique</td>
+        <td>2.76</td>
+        <td>27.60</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Myanmar</td>
+        <td>5.84</td>
+        <td>58.40</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Namibia</td>
+        <td>1.58</td>
+        <td>15.80</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Nauru</td>
+        <td>1.12</td>
+        <td>11.20</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Nepal</td>
+        <td>3.82</td>
+        <td>38.20</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Netherlands</td>
+        <td>1.65</td>
+        <td>16.50</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>New Caledonia</td>
+        <td>4.44</td>
+        <td>44.40</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>New Zealand</td>
+        <td>1.92</td>
+        <td>19.20</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Nicaragua</td>
+        <td>1.95</td>
+        <td>19.50</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Niger</td>
+        <td>7.49</td>
+        <td>74.90</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Nigeria</td>
+        <td>5.01</td>
+        <td>50.10</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Niue</td>
+        <td>4.86</td>
+        <td>48.60</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Norfolk Island</td>
+        <td>0.71</td>
+        <td>7.10</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>North Macedonia</td>
+        <td>0.34</td>
+        <td>3.40</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Northern Cyprus</td>
+        <td>0.20</td>
+        <td>2.00</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Norway</td>
+        <td>1.05</td>
+        <td>10.50</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Oman</td>
+        <td>3.60</td>
+        <td>36.00</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Pakistan</td>
+        <td>7.46</td>
+        <td>74.60</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Palau</td>
+        <td>2.52</td>
+        <td>25.20</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Palestinian Territory</td>
+        <td>7.68</td>
+        <td>76.80</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Panama</td>
+        <td>2.23</td>
+        <td>22.30</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Papua New Guinea</td>
+        <td>19.01</td>
+        <td>190.10</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Paraguay</td>
+        <td>1.84</td>
+        <td>18.40</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Peru</td>
+        <td>0.81</td>
+        <td>8.10</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Philippines</td>
+        <td>0.28</td>
+        <td>2.80</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Poland</td>
+        <td>0.52</td>
+        <td>5.20</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Portugal</td>
+        <td>0.60</td>
+        <td>6.00</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Puerto Rico</td>
+        <td>1.06</td>
+        <td>10.60</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Qatar</td>
+        <td>0.52</td>
+        <td>5.20</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Reunion/Mayotte</td>
+        <td>4.82</td>
+        <td>48.20</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Romania</td>
+        <td>1.06</td>
+        <td>10.60</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Russia</td>
+        <td>9.54</td>
+        <td>95.40</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Rwanda</td>
+        <td>4.66</td>
+        <td>46.60</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Saint Kitts and Nevis</td>
+        <td>0.92</td>
+        <td>9.20</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Saint Lucia</td>
+        <td>1.07</td>
+        <td>10.70</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Saint Pierre and Miquelon</td>
+        <td>2.31</td>
+        <td>23.10</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Saint Vincent and The Grenadines</td>
+        <td>1.06</td>
+        <td>10.60</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Samoa</td>
+        <td>4.68</td>
+        <td>46.80</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>San Marino</td>
+        <td>2.76</td>
+        <td>27.60</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Sao Tome and Principe</td>
+        <td>3.29</td>
+        <td>32.90</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Saudi Arabia</td>
+        <td>1.91</td>
+        <td>19.10</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Senegal</td>
+        <td>5.15</td>
+        <td>51.50</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Serbia</td>
+        <td>6.09</td>
+        <td>60.90</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Seychelles</td>
+        <td>0.94</td>
+        <td>9.40</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Sierra Leone</td>
+        <td>4.73</td>
+        <td>47.30</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Singapore</td>
+        <td>0.70</td>
+        <td>7.00</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Sint Maarten</td>
+        <td>0.16</td>
+        <td>1.60</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Slovakia</td>
+        <td>2.23</td>
+        <td>22.30</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Slovenia</td>
+        <td>3.76</td>
+        <td>37.60</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Solomon Islands</td>
+        <td>2.09</td>
+        <td>20.90</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Somalia</td>
+        <td>4.74</td>
+        <td>47.40</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>South Africa</td>
+        <td>0.32</td>
+        <td>3.20</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>South Ossetia</td>
+        <td>2.05</td>
+        <td>20.50</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>South Sudan</td>
+        <td>0.80</td>
+        <td>8.00</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Spain</td>
+        <td>0.80</td>
+        <td>8.00</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Sri Lanka</td>
+        <td>5.60</td>
+        <td>56.00</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>St Kitts and Nevis</td>
+        <td>2.80</td>
+        <td>28.00</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>St Lucia</td>
+        <td>2.59</td>
+        <td>25.90</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>St Pierre and Miquelon</td>
+        <td>3.80</td>
+        <td>38.00</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>St Vincent Grenadines</td>
+        <td>4.08</td>
+        <td>40.80</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Sudan</td>
+        <td>4.15</td>
+        <td>41.50</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Suriname</td>
+        <td>3.28</td>
+        <td>32.80</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Swaziland</td>
+        <td>2.32</td>
+        <td>23.20</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Sweden</td>
+        <td>0.86</td>
+        <td>8.60</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Switzerland</td>
+        <td>0.60</td>
+        <td>6.00</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Syria</td>
+        <td>7.86</td>
+        <td>78.60</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Taiwan</td>
+        <td>0.84</td>
+        <td>8.40</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Tajikistan</td>
+        <td>11.35</td>
+        <td>113.50</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Tanzania</td>
+        <td>5.38</td>
+        <td>53.80</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Thailand</td>
+        <td>0.36</td>
+        <td>3.60</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Timor-Leste</td>
+        <td>2.86</td>
+        <td>28.60</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Togo</td>
+        <td>3.84</td>
+        <td>38.40</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Tonga</td>
+        <td>3.14</td>
+        <td>31.40</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Trinidad and Tobago</td>
+        <td>3.02</td>
+        <td>30.20</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Tunisia</td>
+        <td>7.06</td>
+        <td>70.60</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Turkey</td>
+        <td>0.77</td>
+        <td>7.70</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Turkmenistan</td>
+        <td>5.04</td>
+        <td>50.40</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Turks and Caicos Islands</td>
+        <td>3.38</td>
+        <td>33.80</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Tuvalu</td>
+        <td>3.36</td>
+        <td>33.60</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Uganda</td>
+        <td>4.05</td>
+        <td>40.50</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Ukraine</td>
+        <td>2.86</td>
+        <td>28.60</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>United Arab Emirates</td>
+        <td>1.24</td>
+        <td>12.40</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>United Kingdom</td>
+        <td>0.65</td>
+        <td>6.50</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Unknown</td>
+        <td>3.92</td>
+        <td>39.20</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Uruguay</td>
+        <td>2.15</td>
+        <td>21.50</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Uzbekistan</td>
+        <td>6.88</td>
+        <td>68.80</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Vanuatu</td>
+        <td>4.18</td>
+        <td>41.80</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Venezuela</td>
+        <td>2.15</td>
+        <td>21.50</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Vietnam</td>
+        <td>3.05</td>
+        <td>30.50</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Virgin Islands, British</td>
+        <td>4.73</td>
+        <td>47.30</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Virgin Islands, U.S.</td>
+        <td>0.50</td>
+        <td>5.00</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Wallis and Futuna</td>
+        <td>2.77</td>
+        <td>27.70</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Yemen</td>
+        <td>6.03</td>
+        <td>60.30</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Zambia</td>
+        <td>6.76</td>
+        <td>67.60</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>10</td>
+        <td>Zimbabwe</td>
+        <td>3.55</td>
+        <td>35.50</td>
+    </tr>
+    <tr>
+        <td>WhatsApp</td>
+        <td>10</td>
+        <td>Argentina Authentication</td>
+        <td>0.95</td>
+        <td>9.50</td>
+    </tr>
+    <tr>
+        <td>WhatsApp</td>
+        <td>10</td>
+        <td>Argentina Marketing</td>
+        <td>1.65</td>
+        <td>16.50</td>
+    </tr>
+    <tr>
+        <td>WhatsApp</td>
+        <td>10</td>
+        <td>Argentina Service</td>
+        <td>0.85</td>
+        <td>8.50</td>
+    </tr>
+    <tr>
+        <td>WhatsApp</td>
+        <td>10</td>
+        <td>Argentina Utility</td>
+        <td>1.10</td>
+        <td>11.00</td>
+    </tr>
+    <tr>
+        <td>WhatsApp</td>
+        <td>10</td>
+        <td>Brazil Authentication</td>
+        <td>0.85</td>
+        <td>8.50</td>
+    </tr>
+    <tr>
+        <td>WhatsApp</td>
+        <td>10</td>
+        <td>Brazil Marketing</td>
+        <td>1.65</td>
+        <td>16.50</td>
+    </tr>
+    <tr>
+        <td>WhatsApp</td>
+        <td>10</td>
+        <td>Brazil Service</td>
+        <td>0.80</td>
+        <td>8.00</td>
+    </tr>
+    <tr>
+        <td>WhatsApp</td>
+        <td>10</td>
+        <td>Brazil Utility</td>
+        <td>0.95</td>
+        <td>9.50</td>
+    </tr>
+    <tr>
+        <td>WhatsApp</td>
+        <td>10</td>
+        <td>Chile Authentication</td>
+        <td>1.40</td>
+        <td>14.00</td>
+    </tr>
+    <tr>
+        <td>WhatsApp</td>
+        <td>10</td>
+        <td>Chile Marketing</td>
+        <td>2.35</td>
+        <td>23.50</td>
+    </tr>
+    <tr>
+        <td>WhatsApp</td>
+        <td>10</td>
+        <td>Chile Service</td>
+        <td>1.20</td>
+        <td>12.00</td>
+    </tr>
+    <tr>
+        <td>WhatsApp</td>
+        <td>10</td>
+        <td>Chile Utility</td>
+        <td>1.55</td>
+        <td>15.50</td>
+    </tr>
+    <tr>
+        <td>WhatsApp</td>
+        <td>10</td>
+        <td>Colombia Authentication</td>
+        <td>0.20</td>
+        <td>2.00</td>
+    </tr>
+    <tr>
+        <td>WhatsApp</td>
+        <td>10</td>
+        <td>Colombia Marketing</td>
+        <td>0.35</td>
+        <td>3.50</td>
+    </tr>
+    <tr>
+        <td>WhatsApp</td>
+        <td>10</td>
+        <td>Colombia Service</td>
+        <td>0.15</td>
+        <td>1.50</td>
+    </tr>
+    <tr>
+        <td>WhatsApp</td>
+        <td>10</td>
+        <td>Colombia Utility</td>
+        <td>0.25</td>
+        <td>2.50</td>
+    </tr>
+    <tr>
+        <td>WhatsApp</td>
+        <td>10</td>
+        <td>Egypt Authentication</td>
+        <td>1.65</td>
+        <td>16.50</td>
+    </tr>
+    <tr>
+        <td>WhatsApp</td>
+        <td>10</td>
+        <td>Egypt Marketing</td>
+        <td>2.85</td>
+        <td>28.50</td>
+    </tr>
+    <tr>
+        <td>WhatsApp</td>
+        <td>10</td>
+        <td>Egypt Service</td>
+        <td>1.70</td>
+        <td>17.00</td>
+    </tr>
+    <tr>
+        <td>WhatsApp</td>
+        <td>10</td>
+        <td>Egypt Utility</td>
+        <td>1.80</td>
+        <td>18.00</td>
+    </tr>
+    <tr>
+        <td>WhatsApp</td>
+        <td>10</td>
+        <td>France Authentication</td>
+        <td>1.85</td>
+        <td>18.50</td>
+    </tr>
+    <tr>
+        <td>WhatsApp</td>
+        <td>10</td>
+        <td>France Marketing</td>
+        <td>3.80</td>
+        <td>38.00</td>
+    </tr>
+    <tr>
+        <td>WhatsApp</td>
+        <td>10</td>
+        <td>France Service</td>
+        <td>2.30</td>
+        <td>23.00</td>
+    </tr>
+    <tr>
+        <td>WhatsApp</td>
+        <td>10</td>
+        <td>France Utility</td>
+        <td>2.05</td>
+        <td>20.50</td>
+    </tr>
+    <tr>
+        <td>WhatsApp</td>
+        <td>10</td>
+        <td>Germany Authentication</td>
+        <td>2.05</td>
+        <td>20.50</td>
+    </tr>
+    <tr>
+        <td>WhatsApp</td>
+        <td>10</td>
+        <td>Germany Marketing</td>
+        <td>3.60</td>
+        <td>36.00</td>
+    </tr>
+    <tr>
+        <td>WhatsApp</td>
+        <td>10</td>
+        <td>Germany Service</td>
+        <td>2.15</td>
+        <td>21.50</td>
+    </tr>
+    <tr>
+        <td>WhatsApp</td>
+        <td>10</td>
+        <td>Germany Utility</td>
+        <td>2.25</td>
+        <td>22.50</td>
+    </tr>
+    <tr>
+        <td>WhatsApp</td>
+        <td>N/A</td>
+        <td>India Authentication</td>
+        <td>N/A</td>
+        <td>N/A</td>
+    </tr>
+    <tr>
+        <td>WhatsApp</td>
+        <td>10</td>
+        <td>India Marketing</td>
+        <td>0.25</td>
+        <td>2.50</td>
+    </tr>
+    <tr>
+        <td>WhatsApp</td>
+        <td>10</td>
+        <td>India Service</td>
+        <td>0.10</td>
+        <td>1.00</td>
+    </tr>
+    <tr>
+        <td>WhatsApp</td>
+        <td>10</td>
+        <td>India Utility</td>
+        <td>0.10</td>
+        <td>1.00</td>
+    </tr>
+    <tr>
+        <td>WhatsApp</td>
+        <td>N/A</td>
+        <td>Indonesia Authentication</td>
+        <td>N/A</td>
+        <td>N/A</td>
+    </tr>
+    <tr>
+        <td>WhatsApp</td>
+        <td>10</td>
+        <td>Indonesia Marketing</td>
+        <td>1.10</td>
+        <td>11.00</td>
+    </tr>
+    <tr>
+        <td>WhatsApp</td>
+        <td>10</td>
+        <td>Indonesia Service</td>
+        <td>0.50</td>
+        <td>5.00</td>
+    </tr>
+    <tr>
+        <td>WhatsApp</td>
+        <td>10</td>
+        <td>Indonesia Utility</td>
+        <td>0.55</td>
+        <td>5.50</td>
+    </tr>
+    <tr>
+        <td>WhatsApp</td>
+        <td>10</td>
+        <td>Israel Authentication</td>
+        <td>0.45</td>
+        <td>4.50</td>
+    </tr>
+    <tr>
+        <td>WhatsApp</td>
+        <td>10</td>
+        <td>Israel Marketing</td>
+        <td>0.95</td>
+        <td>9.50</td>
+    </tr>
+    <tr>
+        <td>WhatsApp</td>
+        <td>10</td>
+        <td>Israel Service</td>
+        <td>0.50</td>
+        <td>5.00</td>
+    </tr>
+    <tr>
+        <td>WhatsApp</td>
+        <td>10</td>
+        <td>Israel Utility</td>
+        <td>0.50</td>
+        <td>5.00</td>
+    </tr>
+    <tr>
+        <td>WhatsApp</td>
+        <td>10</td>
+        <td>Italy Authentication</td>
+        <td>1.00</td>
+        <td>10.00</td>
+    </tr>
+    <tr>
+        <td>WhatsApp</td>
+        <td>10</td>
+        <td>Italy Marketing</td>
+        <td>1.85</td>
+        <td>18.50</td>
+    </tr>
+    <tr>
+        <td>WhatsApp</td>
+        <td>10</td>
+        <td>Italy Service</td>
+        <td>1.00</td>
+        <td>10.00</td>
+    </tr>
+    <tr>
+        <td>WhatsApp</td>
+        <td>10</td>
+        <td>Italy Utility</td>
+        <td>1.10</td>
+        <td>11.00</td>
+    </tr>
+    <tr>
+        <td>WhatsApp</td>
+        <td>10</td>
+        <td>Malaysia Authentication</td>
+        <td>0.50</td>
+        <td>5.00</td>
+    </tr>
+    <tr>
+        <td>WhatsApp</td>
+        <td>10</td>
+        <td>Malaysia Marketing</td>
+        <td>2.30</td>
+        <td>23.00</td>
+    </tr>
+    <tr>
+        <td>WhatsApp</td>
+        <td>10</td>
+        <td>Malaysia Service</td>
+        <td>0.60</td>
+        <td>6.00</td>
+    </tr>
+    <tr>
+        <td>WhatsApp</td>
+        <td>10</td>
+        <td>Malaysia Utility</td>
+        <td>0.55</td>
+        <td>5.50</td>
+    </tr>
+    <tr>
+        <td>WhatsApp</td>
+        <td>10</td>
+        <td>Mexico Authentication</td>
+        <td>0.65</td>
+        <td>6.50</td>
+    </tr>
+    <tr>
+        <td>WhatsApp</td>
+        <td>10</td>
+        <td>Mexico Marketing</td>
+        <td>1.15</td>
+        <td>11.50</td>
+    </tr>
+    <tr>
+        <td>WhatsApp</td>
+        <td>10</td>
+        <td>Mexico Service</td>
+        <td>0.30</td>
+        <td>3.00</td>
+    </tr>
+    <tr>
+        <td>WhatsApp</td>
+        <td>10</td>
+        <td>Mexico Utility</td>
+        <td>0.70</td>
+        <td>7.00</td>
+    </tr>
+    <tr>
+        <td>WhatsApp</td>
+        <td>10</td>
+        <td>Netherlands Authentication</td>
+        <td>1.90</td>
+        <td>19.00</td>
+    </tr>
+    <tr>
+        <td>WhatsApp</td>
+        <td>10</td>
+        <td>Netherlands Marketing</td>
+        <td>4.25</td>
+        <td>42.50</td>
+    </tr>
+    <tr>
+        <td>WhatsApp</td>
+        <td>10</td>
+        <td>Netherlands Service</td>
+        <td>2.35</td>
+        <td>23.50</td>
+    </tr>
+    <tr>
+        <td>WhatsApp</td>
+        <td>10</td>
+        <td>Netherlands Utility</td>
+        <td>2.10</td>
+        <td>21.00</td>
+    </tr>
+    <tr>
+        <td>WhatsApp</td>
+        <td>10</td>
+        <td>Nigeria Authentication</td>
+        <td>0.75</td>
+        <td>7.50</td>
+    </tr>
+    <tr>
+        <td>WhatsApp</td>
+        <td>10</td>
+        <td>Nigeria Marketing</td>
+        <td>1.35</td>
+        <td>13.50</td>
+    </tr>
+    <tr>
+        <td>WhatsApp</td>
+        <td>10</td>
+        <td>Nigeria Service</td>
+        <td>0.80</td>
+        <td>8.00</td>
+    </tr>
+    <tr>
+        <td>WhatsApp</td>
+        <td>10</td>
+        <td>Nigeria Utility</td>
+        <td>0.85</td>
+        <td>8.50</td>
+    </tr>
+    <tr>
+        <td>WhatsApp</td>
+        <td>10</td>
+        <td>North America Authentication</td>
+        <td>0.35</td>
+        <td>3.50</td>
+    </tr>
+    <tr>
+        <td>WhatsApp</td>
+        <td>10</td>
+        <td>North America Marketing</td>
+        <td>0.65</td>
+        <td>6.50</td>
+    </tr>
+    <tr>
+        <td>WhatsApp</td>
+        <td>10</td>
+        <td>North America Service</td>
+        <td>0.25</td>
+        <td>2.50</td>
+    </tr>
+    <tr>
+        <td>WhatsApp</td>
+        <td>10</td>
+        <td>North America Utility</td>
+        <td>0.40</td>
+        <td>4.00</td>
+    </tr>
+    <tr>
+        <td>WhatsApp</td>
+        <td>10</td>
+        <td>Other Authentication</td>
+        <td>0.80</td>
+        <td>8.00</td>
+    </tr>
+    <tr>
+        <td>WhatsApp</td>
+        <td>10</td>
+        <td>Other Marketing</td>
+        <td>1.60</td>
+        <td>16.00</td>
+    </tr>
+    <tr>
+        <td>WhatsApp</td>
+        <td>10</td>
+        <td>Other Service</td>
+        <td>0.40</td>
+        <td>4.00</td>
+    </tr>
+    <tr>
+        <td>WhatsApp</td>
+        <td>10</td>
+        <td>Other Utility</td>
+        <td>0.90</td>
+        <td>9.00</td>
+    </tr>
+    <tr>
+        <td>WhatsApp</td>
+        <td>10</td>
+        <td>Pakistan Authentication</td>
+        <td>0.60</td>
+        <td>6.00</td>
+    </tr>
+    <tr>
+        <td>WhatsApp</td>
+        <td>10</td>
+        <td>Pakistan Marketing</td>
+        <td>1.25</td>
+        <td>12.50</td>
+    </tr>
+    <tr>
+        <td>WhatsApp</td>
+        <td>10</td>
+        <td>Pakistan Service</td>
+        <td>0.40</td>
+        <td>4.00</td>
+    </tr>
+    <tr>
+        <td>WhatsApp</td>
+        <td>10</td>
+        <td>Pakistan Utility</td>
+        <td>0.65</td>
+        <td>6.50</td>
+    </tr>
+    <tr>
+        <td>WhatsApp</td>
+        <td>10</td>
+        <td>Peru Authentication</td>
+        <td>1.00</td>
+        <td>10.00</td>
+    </tr>
+    <tr>
+        <td>WhatsApp</td>
+        <td>10</td>
+        <td>Peru Marketing</td>
+        <td>1.85</td>
+        <td>18.50</td>
+    </tr>
+    <tr>
+        <td>WhatsApp</td>
+        <td>10</td>
+        <td>Peru Service</td>
+        <td>0.50</td>
+        <td>5.00</td>
+    </tr>
+    <tr>
+        <td>WhatsApp</td>
+        <td>10</td>
+        <td>Peru Utility</td>
+        <td>1.10</td>
+        <td>11.00</td>
+    </tr>
+    <tr>
+        <td>WhatsApp</td>
+        <td>10</td>
+        <td>Rest of Africa Authentication</td>
+        <td>0.40</td>
+        <td>4.00</td>
+    </tr>
+    <tr>
+        <td>WhatsApp</td>
+        <td>10</td>
+        <td>Rest of Africa Marketing</td>
+        <td>0.60</td>
+        <td>6.00</td>
+    </tr>
+    <tr>
+        <td>WhatsApp</td>
+        <td>10</td>
+        <td>Rest of Africa Service</td>
+        <td>0.95</td>
+        <td>9.50</td>
+    </tr>
+    <tr>
+        <td>WhatsApp</td>
+        <td>10</td>
+        <td>Rest of Africa Utility</td>
+        <td>0.40</td>
+        <td>4.00</td>
+    </tr>
+    <tr>
+        <td>WhatsApp</td>
+        <td>10</td>
+        <td>Rest of Asia Pacific Authentication</td>
+        <td>1.15</td>
+        <td>11.50</td>
+    </tr>
+    <tr>
+        <td>WhatsApp</td>
+        <td>10</td>
+        <td>Rest of Asia Pacific Marketing</td>
+        <td>1.95</td>
+        <td>19.50</td>
+    </tr>
+    <tr>
+        <td>WhatsApp</td>
+        <td>10</td>
+        <td>Rest of Asia Pacific Service</td>
+        <td>0.60</td>
+        <td>6.00</td>
+    </tr>
+    <tr>
+        <td>WhatsApp</td>
+        <td>10</td>
+        <td>Rest of Asia Pacific Utility</td>
+        <td>1.25</td>
+        <td>12.50</td>
+    </tr>
+    <tr>
+        <td>WhatsApp</td>
+        <td>10</td>
+        <td>Rest of Central &amp; Eastern Europe Authentication</td>
+        <td>1.50</td>
+        <td>15.00</td>
+    </tr>
+    <tr>
+        <td>WhatsApp</td>
+        <td>10</td>
+        <td>Rest of Central &amp; Eastern Europe Marketing</td>
+        <td>2.30</td>
+        <td>23.00</td>
+    </tr>
+    <tr>
+        <td>WhatsApp</td>
+        <td>10</td>
+        <td>Rest of Central &amp; Eastern Europe Service</td>
+        <td>0.65</td>
+        <td>6.50</td>
+    </tr>
+    <tr>
+        <td>WhatsApp</td>
+        <td>10</td>
+        <td>Rest of Central &amp; Eastern Europe Utility</td>
+        <td>1.65</td>
+        <td>16.50</td>
+    </tr>
+    <tr>
+        <td>WhatsApp</td>
+        <td>10</td>
+        <td>Rest of Latin America Authentication</td>
+        <td>1.20</td>
+        <td>12.00</td>
+    </tr>
+    <tr>
+        <td>WhatsApp</td>
+        <td>10</td>
+        <td>Rest of Latin America Marketing</td>
+        <td>1.95</td>
+        <td>19.50</td>
+    </tr>
+    <tr>
+        <td>WhatsApp</td>
+        <td>10</td>
+        <td>Rest of Latin America Service</td>
+        <td>1.10</td>
+        <td>11.00</td>
+    </tr>
+    <tr>
+        <td>WhatsApp</td>
+        <td>10</td>
+        <td>Rest of Latin America Utility</td>
+        <td>1.30</td>
+        <td>13.00</td>
+    </tr>
+    <tr>
+        <td>WhatsApp</td>
+        <td>10</td>
+        <td>Rest of Middle East Authentication</td>
+        <td>0.45</td>
+        <td>4.50</td>
+    </tr>
+    <tr>
+        <td>WhatsApp</td>
+        <td>10</td>
+        <td>Rest of Middle East Marketing</td>
+        <td>0.90</td>
+        <td>9.00</td>
+    </tr>
+    <tr>
+        <td>WhatsApp</td>
+        <td>10</td>
+        <td>Rest of Middle East Service</td>
+        <td>0.60</td>
+        <td>6.00</td>
+    </tr>
+    <tr>
+        <td>WhatsApp</td>
+        <td>10</td>
+        <td>Rest of Middle East Utility</td>
+        <td>0.55</td>
+        <td>5.50</td>
+    </tr>
+    <tr>
+        <td>WhatsApp</td>
+        <td>10</td>
+        <td>Rest of Western Europe Authentication</td>
+        <td>1.00</td>
+        <td>10.00</td>
+    </tr>
+    <tr>
+        <td>WhatsApp</td>
+        <td>10</td>
+        <td>Rest of Western Europe Marketing</td>
+        <td>1.55</td>
+        <td>15.50</td>
+    </tr>
+    <tr>
+        <td>WhatsApp</td>
+        <td>10</td>
+        <td>Rest of Western Europe Service</td>
+        <td>1.05</td>
+        <td>10.50</td>
+    </tr>
+    <tr>
+        <td>WhatsApp</td>
+        <td>10</td>
+        <td>Rest of Western Europe Utility</td>
+        <td>1.10</td>
+        <td>11.00</td>
+    </tr>
+    <tr>
+        <td>WhatsApp</td>
+        <td>10</td>
+        <td>Russia Authentication</td>
+        <td>1.15</td>
+        <td>11.50</td>
+    </tr>
+    <tr>
+        <td>WhatsApp</td>
+        <td>10</td>
+        <td>Russia Marketing</td>
+        <td>2.15</td>
+        <td>21.50</td>
+    </tr>
+    <tr>
+        <td>WhatsApp</td>
+        <td>10</td>
+        <td>Russia Service</td>
+        <td>1.05</td>
+        <td>10.50</td>
+    </tr>
+    <tr>
+        <td>WhatsApp</td>
+        <td>10</td>
+        <td>Russia Utility</td>
+        <td>1.25</td>
+        <td>12.50</td>
+    </tr>
+    <tr>
+        <td>WhatsApp</td>
+        <td>10</td>
+        <td>Saudi Arabia Authentication</td>
+        <td>0.60</td>
+        <td>6.00</td>
+    </tr>
+    <tr>
+        <td>WhatsApp</td>
+        <td>10</td>
+        <td>Saudi Arabia Marketing</td>
+        <td>1.10</td>
+        <td>11.00</td>
+    </tr>
+    <tr>
+        <td>WhatsApp</td>
+        <td>10</td>
+        <td>Saudi Arabia Service</td>
+        <td>0.50</td>
+        <td>5.00</td>
+    </tr>
+    <tr>
+        <td>WhatsApp</td>
+        <td>10</td>
+        <td>Saudi Arabia Utility</td>
+        <td>0.65</td>
+        <td>6.50</td>
+    </tr>
+    <tr>
+        <td>WhatsApp</td>
+        <td>10</td>
+        <td>South Africa Authentication</td>
+        <td>0.50</td>
+        <td>5.00</td>
+    </tr>
+    <tr>
+        <td>WhatsApp</td>
+        <td>10</td>
+        <td>South Africa Marketing</td>
+        <td>1.00</td>
+        <td>10.00</td>
+    </tr>
+    <tr>
+        <td>WhatsApp</td>
+        <td>10</td>
+        <td>South Africa Service</td>
+        <td>0.45</td>
+        <td>4.50</td>
+    </tr>
+    <tr>
+        <td>WhatsApp</td>
+        <td>10</td>
+        <td>South Africa Utility</td>
+        <td>0.55</td>
+        <td>5.50</td>
+    </tr>
+    <tr>
+        <td>WhatsApp</td>
+        <td>10</td>
+        <td>Spain Authentication</td>
+        <td>0.90</td>
+        <td>9.00</td>
+    </tr>
+    <tr>
+        <td>WhatsApp</td>
+        <td>10</td>
+        <td>Spain Marketing</td>
+        <td>1.65</td>
+        <td>16.50</td>
+    </tr>
+    <tr>
+        <td>WhatsApp</td>
+        <td>10</td>
+        <td>Spain Service</td>
+        <td>1.00</td>
+        <td>10.00</td>
+    </tr>
+    <tr>
+        <td>WhatsApp</td>
+        <td>10</td>
+        <td>Spain Utility</td>
+        <td>1.00</td>
+        <td>10.00</td>
+    </tr>
+    <tr>
+        <td>WhatsApp</td>
+        <td>10</td>
+        <td>Turkey Authentication</td>
+        <td>0.20</td>
+        <td>2.00</td>
+    </tr>
+    <tr>
+        <td>WhatsApp</td>
+        <td>10</td>
+        <td>Turkey Marketing</td>
+        <td>0.30</td>
+        <td>3.00</td>
+    </tr>
+    <tr>
+        <td>WhatsApp</td>
+        <td>10</td>
+        <td>Turkey Service</td>
+        <td>0.10</td>
+        <td>1.00</td>
+    </tr>
+    <tr>
+        <td>WhatsApp</td>
+        <td>10</td>
+        <td>Turkey Utility</td>
+        <td>0.25</td>
+        <td>2.50</td>
+    </tr>
+    <tr>
+        <td>WhatsApp</td>
+        <td>10</td>
+        <td>United Arab Emirates Authentication</td>
+        <td>0.45</td>
+        <td>4.50</td>
+    </tr>
+    <tr>
+        <td>WhatsApp</td>
+        <td>10</td>
+        <td>United Arab Emirates Marketing</td>
+        <td>0.90</td>
+        <td>9.00</td>
+    </tr>
+    <tr>
+        <td>WhatsApp</td>
+        <td>10</td>
+        <td>United Arab Emirates Service</td>
+        <td>0.50</td>
+        <td>5.00</td>
+    </tr>
+    <tr>
+        <td>WhatsApp</td>
+        <td>10</td>
+        <td>United Arab Emirates Utility</td>
+        <td>0.55</td>
+        <td>5.50</td>
+    </tr>
+    <tr>
+        <td>WhatsApp</td>
+        <td>10</td>
+        <td>United Kingdom Authentication</td>
+        <td>0.95</td>
+        <td>9.50</td>
+    </tr>
+    <tr>
+        <td>WhatsApp</td>
+        <td>10</td>
+        <td>United Kingdom Marketing</td>
+        <td>1.85</td>
+        <td>18.50</td>
+    </tr>
+    <tr>
+        <td>WhatsApp</td>
+        <td>10</td>
+        <td>United Kingdom Service</td>
+        <td>1.05</td>
+        <td>10.50</td>
+    </tr>
+    <tr>
+        <td>WhatsApp</td>
+        <td>10</td>
+        <td>United Kingdom Utility</td>
+        <td>1.05</td>
+        <td>10.50</td>
+    </tr>
+</table>
 {: .reset-td-br-1 .reset-td-br-2}
 {% enddetails %}
 
