@@ -39,12 +39,16 @@ Column definitions are as follows:
 
 {% details Click to expand %}
 <table>
+    <colgroup>
+        <col span="4" style="background-color:background-color: rgba(0,0,0,.5);">
+        <col style="background-color:#f0f0f5">
+    </colgroup>
     <tr>
-        <td>**Channel**</td>
-        <td>**Channel Credit Ratio**</td>
-        <td>**Destination**</td>
-        <td>**Multiplier**</td>
-        <th style="background-color: lightgrey;">*Credits Consumed with One Message**</th>
+        <th><b>Channel</b></th>
+        <th><b>Channel Credit Ratio</b></th>
+        <th><b>Destination</b></th>
+        <th><b>Multiplier</b></th>
+        <th class="credits-column"><b>Credits Consumed with One Message</b></th>
     </tr>
     <tr>
         <td>SMS - US / CA</td>
