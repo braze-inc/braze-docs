@@ -91,7 +91,7 @@ In-app messages start with one page by default. To add a new page:
 3. Name the page something meaningful. This will help you when connecting pages together.
 
 {% alert tip %}
-While there is no limit to the number of pages you can add, in-app messages can't be sent if the message body is larger than 500 KB.
+There is a limit of 10 pages per in-app message.
 {% endalert %}
 
 To duplicate an existing page:
