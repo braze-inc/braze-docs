@@ -40,7 +40,7 @@ Column definitions are as follows:
 {% details Click to expand %}
 <table>
     <colgroup>
-        <col span="4" style="background-color:background-color: rgba(0,0,0,.5);">
+        <col span="4" style="background-color:background-color:#FFFFFF;">
         <col style="background-color:#f0f0f5">
     </colgroup>
     <tr>
