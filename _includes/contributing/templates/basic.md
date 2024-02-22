@@ -1,5 +1,3 @@
-### Basic
-
 You can use this template to create any page or section for Braze Docs. For an example, see [Generating a preview]({{site.baseurl}}/contributing/generating_a_preview/).
 
 {% details Show template %}

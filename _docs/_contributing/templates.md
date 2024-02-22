@@ -1,16 +1,14 @@
 ---
 nav_title: Templates
 article: Templates
-page_order: 8
+page_order: 4
 ---
 
 # Templates
 
 > You can use these templates to create [pages]({{site.baseurl}}/contributing/content_management/pages/) or [sections]({{site.baseurl}}/contributing/content_management/sections/) on Braze Docs.
 
-## Available templates
-
-Read HTML comments like the following to learn about the sections in each template:
+Read HTML comments like the following to learn more about a section in the template:
 
 ```markdown
 <!-- Here's an HTML comment! -->
@@ -20,9 +18,17 @@ Read HTML comments like the following to learn about the sections in each templa
 You can keep these comments in your file while writing, but you'll need to remove them before publishing.
 {% endalert %}
 
+## Available templates
+
+### Basic
+
 {% multi_lang_include contributing/templates/basic.md %}
 
+### Technology partner
+
 {% multi_lang_include contributing/templates/technology_partner.md %}
+
+### Release notes
 
 {% multi_lang_include contributing/templates/release_notes.md %}
 

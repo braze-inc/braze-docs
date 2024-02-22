@@ -29,40 +29,17 @@ Replace `PAGE_TITLE` with the title of your page, which should follow the [Braze
 
 {% multi_lang_include contributing/alerts/tip_locating_a_file.md %}
 
-### Step 2: Add a layout
+### Step 2: Add a template
 
-To use the default page layout, copy and paste the following into your Markdown file. For other layouts, see [Layouts]({{site.baseurl}}/contributing/yaml_front_matter/page_layouts/).
+Copy and paste one of the following templates into your Markdown file. For more information, see [Templates]({{site.baseurl}}/contributing/templates/).
 
-```markdown
----
-nav_title: NAV_TITLE
-article_title: ARTICLE_TITLE
-description: SHORT_DESCRIPTION
----
+#### Basic template
 
-# ARTICLE_TITLE
+{% multi_lang_include contributing/templates/basic.md %}
 
-> SHORT_DESCRIPTION
+#### Technology partner template
 
-## HEADING
-
-CONTENT
-```
-
-Replace the following:
-
-| Placeholder         | Description                                                                                                                                                                                                                                 |
-|---------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `NAV_TITLE`         | The title of your page as it will appear on the left-side navigation bar. In almost all cases, `nav_title` should exactly match `article_title`.                                 |
-| `ARTICLE_TITLE`     | The title of your page. The `ARTICLE_TITLE` value in the metadata is used for search engine results, while the `ARTICLE_TITLE` value in Heading 1 is used for the title rendered on the page.                                               |
-| `SHORT_DESCRIPTION` | A short, 1-2 sentence description of your page. The `SHORT_DESCRIPTION` value in YAML the metadata is used for search engine results, while the `SHORT_DESCRIPTION` value after Heading 1 is used for the description rendered on the page. |
-| `HEADING`           | The title of your Heading 2 section.                                                                                                                                                                                                        |
-| `CONTENT`           | The body paragraph for your Heading 2 section.                                                                                                                                                                                              |
-{: .reset-td-br-1 .reset-td-br-2}
-
-{% alert tip %}
-This template is only to get you started&#8212;add [additional metadata]({{site.baseurl}}/contributing/yaml_front_matter/metadata/) and headings as needed.
-{% endalert %}
+{% multi_lang_include contributing/templates/technology_partner.md %}
 
 ## Writing content
 
