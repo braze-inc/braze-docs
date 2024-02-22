@@ -88,7 +88,7 @@ Example for setting extra configurations:
 </platform>
 ```
 
-See [iOS Cordova plugin][5] for more details.
+See [iOS Cordova plugin][3] for more details.
 
 ### Numerical preference example
 
@@ -129,19 +129,9 @@ If you want to turn off iOS automatic push registration, set the following confi
 </platform>
 ```
 
-### Optional IDFA collection
-
-To enable the automatic collection of the [iOS IDFA][3], set the following configuration preferences:
-
-```xml
-<platform name="ios">
-    <preference name="com.braze.ios_enable_idfa_automatic_collection" value="YES" />
-</platform>
-```
-
 ### Location collection and geofences
 
-To enable location collection and Braze Geofences, use the `geofence-branch` instead of the default `master` branch. By default, the Braze SDK disables location collection and Braze Geofences. Additionally, use the following preferences configuration:
+To enable location collection and Braze Geofences, use the [`geofence-branch`][4] instead of the default `master` branch. By default, the Braze SDK disables location collection and Braze Geofences. Additionally, use the following preferences configuration:
 
 ```xml
 <platform name="ios">
@@ -156,14 +146,25 @@ The `geofence-branch` can be added to your Cordova project with the following:
 cordova plugin add https://github.com/braze-inc/braze-cordova-sdk#geofence-branch
 ```
 
-See [iOS Geofences][4] for more details.
+See [iOS Geofences][5] for more details.
 
-### Initial setup complete
+### Optional IDFA collection
+
+To enable the automatic collection of the [iOS IDFA][6], set the following configuration preference in your `config.xml`:
+
+```xml
+<platform name="ios">
+    <preference name="com.braze.ios_enable_idfa_automatic_collection" value="YES" />
+</platform>
+```
+
+## Initial setup complete
 
 Once the initial setup is complete, you can access the `BrazePlugin` JavaScript interface in your app.
 
 [1]: https://github.com/braze-inc/braze-cordova-sdk
 [2]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/integration/
-[3]: https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/set(identifierforadvertiser:)/
-[4]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/advanced_use_cases/locations_and_geofences/
-[5]: https://github.com/braze-inc/braze-cordova-sdk/blob/master/src/ios/BrazePlugin.m
+[3]: https://github.com/braze-inc/braze-cordova-sdk/blob/master/src/ios/BrazePlugin.m
+[4]: https://github.com/braze-inc/braze-cordova-sdk/tree/geofence-branch
+[5]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/advanced_use_cases/locations_and_geofences/
+[6]: https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/set(identifierforadvertiser:)/

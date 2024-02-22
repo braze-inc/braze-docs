@@ -152,20 +152,31 @@ To enable location collection and Braze Geofences, use the [`geofence-branch`][3
 </platform>
 ```
 
-The geofence-branch can be added to your Cordova project with the following:
+The `geofence-branch` can be added to your Cordova project with the following:
 
 ```
 cordova plugin add https://github.com/braze-inc/braze-cordova-sdk#geofence-branch
 ```
 
+See [Android Geofences][4] for more details.
+
 ### Delaying automatic session tracking
 
-Set `<preference name="com.braze.android_disable_auto_session_tracking" value="true" />` in your `config.xml` to disable the Android Cordova plugin from automatically tracking sessions. To start tracking sessions, call `BrazePlugin.startSessionTracking()`. Note that this will not retroactively track sessions and will only start tracking sessions starting from the next `Activity.onStart()`.
+To disable the Android Cordova plugin from automatically tracking sessions, set the following configuration preference in your `config.xml`:
+
+```xml
+<platform name="android">
+    <preference name="com.braze.android_disable_auto_session_tracking" value="true" />
+</platform>
+```
+
+To start tracking sessions, call `BrazePlugin.startSessionTracking()`. Note that this will not retroactively track sessions and will only start tracking sessions starting from the next `Activity.onStart()`.
 
 ## Initial setup complete
 
-Once the initial setup is complete, you can access your app's `BrazePlugin` JavaScript interface.
+Once the initial setup is complete, you can access the `BrazePlugin` JavaScript interface in your app.
 
 [1]: https://github.com/braze-inc/braze-cordova-sdk
 [2]: https://github.com/braze-inc/braze-cordova-sdk/blob/master/src/android/BrazePlugin.kt
 [3]: https://github.com/braze-inc/braze-cordova-sdk/tree/geofence-branch
+[4]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/locations_and_geofences/
