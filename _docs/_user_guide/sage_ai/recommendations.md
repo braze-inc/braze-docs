@@ -1,7 +1,7 @@
 ---
 nav_title: AI Item Recommendations
 article_title: AI Item Recommendations
-page_order: 100
+page_order: 15
 alias: "/recommendations/"
 description: "This reference article covers how to create an AI Item Recommendation for items in a catalog."
 ---
@@ -43,12 +43,13 @@ First, give your recommendation a name and optional description.
 
 Next, select the recommendation type. Both recommendation types use the last 6 months of item interaction (purchase or custom event) data.
 
-- **Most popular:** Calculates the items from the catalog that users interact with most often in the entire workspace.
-- **Personalized:** Uses transformers, a new kind of deep learning, to predict each user's next most likely set of items to purchase or interact with. We calculate up to 30 of the next most likely items ranked from most to least likely.
+- **Most popular:** Calculates the items from the catalog that users interact with most often in the entire workspace. The interaction is defined by the event chosen in Step 3.
+- **Most recent:** Creates a list of the products a user has interacted with most recently.
+- **AI Personalized:** Uses transformers, a new kind of deep learning, to predict each user's next most likely set of items to purchase or interact with. The interaction is defined by the event you choose in Step 3. We calculate up to 30 of the next most likely items ranked from most to least likely. This type of recommendation does not use Large Language Models (LLMs) to combine your data with that of any other Braze customer.
 
-<!--
-**Most recent:** Surfaces each user's most recent purchases.
--->
+{% alert tip %}
+When using **Most recent** or **AI Personalized**, users with insufficient data to create individualized recommendations will receive **Most popular** items as a fallback. The proportion of users receiving the **Most popular** fallback is displayed on the **Analytics** page.
+{% endalert %}
 
 ![][2-1]
 
@@ -56,7 +57,7 @@ If not already populated, select the [catalog][catalog] that this recommendation
 
 #### Add a selection
 
-If you'd like more control over your recommendation, choose a [selection]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/selections/) to apply custom filters. Selections filter recommendations by specific columns in your catalog, such as brand, size, or location. If your selection contains Liquid, the selection can't be used in your recommendation.
+If you'd like more control over your recommendation, choose a [selection]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/selections/) to apply custom filters. Selections filter recommendations by specific columns in your catalog, such as brand, size, or location. Selections that contain Liquid can't be used in your recommendation.
 
 ![][2-2]
 
@@ -80,7 +81,9 @@ If you choose **Custom Event**, select your event from the list.
 
 ### Step 4: Choose the corresponding property name {#property-name}
 
-To create a recommendation, you need to tell Braze which field of your interaction event (purchase object or custom event) has the unique indentifier that matches the `id` field of an item in the catalog. Select this field for the **Property Name**.
+To create a recommendation, you need to tell Braze which field of your interaction event (purchase object or custom event) has the unique indentifier that matches the `id` field of an item in the catalog. Not sure? See [heading name](#heading).
+
+Select this field for the **Property Name**.
 
 The **Property Name** field will be pre-populated with a list of fields sent through the SDK to Braze. If enough data is provided, these properties will also be ranked in order of probability to be the correct property. Select the one that corresponds to the `id` field of the catalog.
 
@@ -91,10 +94,141 @@ The **Property Name** field will be pre-populated with a list of fields sent thr
 There are some requirements for selecting your property:
 
 - Must map to the `id` field of your selected catalog.
-- **If you selected Purchase Object:** Must be the `product_id` or a field of your interaction event's `properties`. 
+- **If you selected Purchase Object:** Must be the `product_id` or a field of your interaction event's `properties`.
 - **If you selected Custom Event:** Must be a field of your custom event's `properties`.
 - The field can be nested
 - The field can be in an array (of multiple catalog items within a single event). It will automatically be flattened.
+
+#### Example mappings
+
+The following example mappings both refer to this sample catalog:
+
+<style type="text/css">
+.tg td{word-break:normal;}
+.tg th{word-break:normal;font-size: 14px; font-weight: bold; background-color: #f4f4f7; text-transform: lowercase; color: #212123; font-family: "Sailec W00 Bold",Arial,Helvetica,sans-serif;}
+.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top;word-break:normal}
+</style>
+<table class="tg">
+<thead>
+  <tr>
+    <th class="tg-0pky">id</th>
+    <th class="tg-0pky">title</th>
+    <th class="tg-0pky">price</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="tg-0pky">ADI-BL-7</td>
+    <td class="tg-0pky">Adidas Black Size 7</td>
+    <td class="tg-0pky">100.00 USD</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">ADI-RD-8</td>
+    <td class="tg-0pky">Adidas Red Size 8</td>
+    <td class="tg-0pky">100.00 USD</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">ADI-WH-9</td>
+    <td class="tg-0pky">Adidas White Size 9</td>
+    <td class="tg-0pky">100.00 USD</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">ADI-PP-10</td>
+    <td class="tg-0pky">Adidas Purple Size 10</td>
+    <td class="tg-0pky">75.00 USD</td>
+  </tr>
+</tbody>
+</table>
+
+{% tabs %}
+{% tab Custom event %}
+
+Let's say you want to use the custom event `added_to_cart` so that you can recommend similar products before the customer checks out. The event `added_to_cart` has an event property of `product_sku`.
+
+Then the `product_sku` property must include at least one of the values from the `id` column in the sample catalog: "ADI-BL-7", "ADI-RD-8", "ADI-WH-9", or "ADI-PP-10". You don't need events for every catalog item, but you need some of them so that the recommendation engine has enough content to work with.
+
+##### Example custom event object
+
+This event has `"product_sku": "ADI-BL-7"`, which matches the first item in the sample catalog.
+
+```json
+{
+  "events" : [
+    {
+      "external_id" : "user1",
+      "app_id" : "your-app-id",
+      "name" : "added_to_cart",
+      "time" : "2024-07-16T19:20:30+01:00",
+      "properties" : {
+        "product_sku": "ADI-BL-7"
+      }
+    }
+  ]
+}
+```
+
+{% endtab %}
+{% tab Purchase object %}
+
+A purchase object gets passed through the API when a purchase has been made.
+
+In terms of mapping, a similar logic applies for purchase objects as it does for custom events, except you can choose between using the purchase object's `product_id` or a field in the `properties` object.
+
+Remember, you don't need events for every catalog item, but you do need some of them so that the recommendation engine has enough content to work with.
+
+##### Example purchase object mapped to product ID
+
+This event has `"product_id": "ADI-BL-7`, which maps to the first item in the catalog.
+
+```json
+{
+  "purchases": [
+    {
+      "external_id": "user1",
+      "app_id": "11ae5b4b-2445-4440-a04f-bf537764c9ad",
+      "product_id": "ADI-BL-7",
+      "currency": "USD",
+      "price": 100.00,
+      "time": "2024-07-16T19:20:30+01:00",
+      "properties": {
+        "color": "black",
+        "checkout_duration": 180,
+        "size": "7",
+        "brand": "Adidas"
+      }
+    }
+  ]
+}
+```
+
+##### Example purchase object mapped to a properties field
+
+This event has a property of `"sku": "ADI-RD-8"`, which maps to the second item in the catalog.
+
+```json
+{
+  "purchases": [
+    {
+      "external_id": "user1",
+      "app_id": "11ae5b4b-2445-4440-a04f-bf537764c9ad",
+      "product_id": "shoes",
+      "currency": "USD",
+      "price": 100.00,
+      "time": "2024-07-16T19:20:30+01:00",
+      "properties": {
+        "sku": "ADI-RD-8",
+        "color": "red",
+        "checkout_duration": 180,
+        "size": "8",
+        "brand": "Adidas"
+      }
+    }
+  ]
+}
+```
+
+{% endtab %}
+{% endtabs %}
 
 ### Step 5: Train the recommendation
 
@@ -119,17 +253,17 @@ These metrics are defined in the following table.
 | ------------------- | ---------- |
 | Precision           | The percentage of time the model correctly guessed the next item a user purchased. Precision is heavily dependent on your specific catalog size and mix, and should be used as a guide to understand how often the model is correct.<br><br>In past testing, we have seen models perform well with precision numbers ranging from 6-20%. This metric updates when the model next retrains.  |
 | Coverage            | What percentage of available items in the catalog are recommended to at least one user. You can expect to see higher item coverage with personalized item recommendations over most popular ones. |
-| Recommendation type | Percentage of users who will receive personalized recommendations versus the fallback of most popular items. The fallback is sent to users who don’t have enough data to generate a personalized recommendation. |
+| Recommendation type | Percentage of users who will receive personalized or most recent recommendations versus the fallback of most popular items. The fallback is sent to users who don’t have enough data to generate a personalized or most recent recommendation. |
 {: .reset-td-br-1 .reset-td-br-2}
 
-The next section shows a breakdown of items in the catalog, split into two columns:
+The next section shows a breakdown of items in the catalog, split into two possible columns:
 
-- **Personalized items:** This column lists each item in the catalog in order of most often to least often recommended to users. This column also shows how many users were assigned each item by the model.
-- **Most Popular items:** This column lists each item in the catalog in order of popularity. Popularity here refers to items in the catalog that users interact with most often in the entire workspace.
+- **Personalized items** or **Most recent items:** This column lists each item in the catalog in descending order of most often recommended to users. This column also shows how many users were assigned each item by the model.
+- **Most Popular items:** This column lists each item in the catalog in descending order of popularity. Popularity here refers to items in the catalog that users interact with most often in the entire workspace. Most popular is used as the fallback when personalized or most recent cannot be computed for an individual user.
 
 ![][6]
 
-For your reference, the final section shows a summary of your chosen recommendation configuration, as well as when the recommendation was last updated.
+The **Recommendation overview** shows a summary of your chosen recommendation configuration, including when the recommendation was last updated.
 
 ![][7]{: style="max-width:45%" }
 

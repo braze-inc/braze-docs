@@ -3,16 +3,11 @@ nav_title: Email Capture
 article_title: Email Capture
 alias: "/email_capture/"
 description: "This reference page covers how to create an email capture form with the in-app message drag-and-drop editor."
-hidden: true
 ---
 
 # Email capture form
 
 > Use the drag-and-drop email capture in-app message template to collect users' email addresses and grow your subscription groups.
-
-{% alert important %}
-The email capture form is currently in early access. Contact your Braze account manager if you're interested in participating in the early access.
-{% endalert %}
 
 ## SDK requirements
 

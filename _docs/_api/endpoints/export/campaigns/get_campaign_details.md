@@ -61,6 +61,7 @@ Authorization: Bearer YOUR-REST-API-KEY
     "first_sent" : (string) the date and hour of first sent as ISO 8601 date,
     "last_sent" : (string) the date and hour of last sent as ISO 8601 date,
     "tags" : (array) the tag names associated with the campaign,
+    "teams" : (array) the names of the Teams associated with the campaign,
     "messages": {
         "message_variation_id": (string) { // <=This is the actual id
             "channel": (string) the channel type of the message, must be either email, ios_push, webhook, content_card, in-app_message, or sms,

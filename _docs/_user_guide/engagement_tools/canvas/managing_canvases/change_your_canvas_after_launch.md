@@ -122,9 +122,13 @@ Check out these best practices to keep in mind when editing or adding to your Ca
 
 You can launch your Canvas with disconnected steps and also save these Canvases post-launch. Before disconnecting a step from your workflow, we recommend checking the analytics view of the steps for users pending.
 
-Let's say a user is in a disconnected step of your Canvas Flow workflow. This user will advance to the subsequent step if there is one. The step's settings will dictate how the user should advance. 
+Let's say a user is in a disconnected step of your Canvas workflow. This user will advance to the subsequent step if there is one. The step's settings will dictate how the user should advance. 
 
-By creating or editing disconnected steps, you can make changes to these independent steps\ without having to directly connect them to the rest of your Canvas. This helps with testing your steps prior to going launching your Canvas again. 
+By creating or editing disconnected steps, you can make changes to these independent steps without having to directly connect them to the rest of your Canvas. This helps with testing your steps prior to going launching your Canvas again. 
+
+### Experiment Path step
+
+If your Canvas has an active or in progress Experiment Path step and you update the active Canvas (even if it's not to the Experiment Path step), the in-progress experiment will restart. To avoid your users from re-entering the experiment path, you can duplicate and create a new Canvas instead of updating the Canvas.
 
 ### Time delays
 

@@ -15,6 +15,7 @@ search_tag: Partner
 The Braze and Punchh integration allows you to sync data for gifting and loyalty purposes across the two platforms. Data published in Braze will be available for segmentation and can sync user data back into Punchh via Braze webhooks.
 
 ## What are the benefits?
+
 - Ingest loyalty data from Punchh to Braze in real-time. 
 - Leverage and layer powerful audience data from Braze to deliver meaningful and dynamic cross-channel experiences (app, mobile, web, email, and SMS)
   - Did customers open emails? Did customers open the app near a store?
@@ -33,10 +34,12 @@ The Braze and Punchh integration allows you to sync data for gifting and loyalty
 ## What else should I know?
 
 #### Before integrating
+
 - When utilizing the Braze integration, two campaigns will be required, one in Punchh and the second in Braze. For example, if you send a campaign with an offer attached, the gifting campaign will be configured within Punchh, and the notification can be sent from Braze.
 - Guests should already exist in Punchh and Braze. Punchh will filter out any customer who is not already a loyalty guest.
 
 #### Important things to note
+
 - Punchh has added the ability to disable the sending of default user attributes to Braze, so the customer does not incur data point overages. This is configured during the adapter setup.
 - If using custom segments on recurring campaigns, the campaign name must be used instead of the campaign ID, as the IDs change each time the campaign runs.
 - Communication channels available within each Punchh gifting campaign include rich messages, push notifications, SMS, and email.
@@ -116,20 +119,20 @@ curl --location --request PUT 'https://server_name_goes_here.punchh.com/api2/mob
 {% endtabs %}
 
 {% alert note %}
-Platform configuration: To enable external identifiers in Punchh, from the Punchh dashboard, navigate to **Cockpit > Dashboard > External User Identifier**.
+**Platform configuration:** To enable external identifiers in Punchh, from the Punchh dashboard, navigate to **Cockpit** > **Dashboard** > **External User Identifier**.
 {% endalert %}
 
 ### Step 2: Braze adapter setup in Punchh
 
 #### Available events to sync {#available-events-to-sync}
 
-1. Guest - triggered upon any signup, update to guest profile, deactivated or deleted, etc.
-2. Loyalty Check-in - triggered for loyalty transactions or earning by scanning barcode from the receipt
-3. Gift Check-in - triggered for points gifted from a campaign
-4. Redemption - triggered in case of any reward redemption excluding Punchh coupons, as those would be sent separately as coupon events, including issuance as well as redemption
-5. Rewards - triggered from rewards gifted from campaigns, activity, conversion from points to rewards, admin gifting, etc.
-6. Transaction Notifications - triggered upon transactional activity for a user within the Punchh system. For example, point expiration.
-7. Marketing Notifications - triggered based on different campaign setups in Punchh for an associated segment of users
+1. **Guest:** Triggered upon any signup, update to guest profile, deactivated or deleted
+2. **Loyalty Check-in:** Triggered for loyalty transactions or earning by scanning barcode from the receipt
+3. **Gift Check-in:** Triggered for points gifted from a campaign
+4. **Redemption:** Triggered in case of any reward redemption excluding Punchh coupons, as those would be sent separately as coupon events, including issuance as well as redemption
+5. **Rewards:** Triggered from rewards gifted from campaigns, activity, conversion from points to rewards, or admin gifting
+6. **Transaction Notifications:** Triggered upon transactional activity for a user within the Punchh system (for example, point expiration)
+7. **Marketing Notifications:** Triggered based on different campaign setups in Punchh for an associated segment of users
 
 {% alert note %}
 Reference Punchh documentation on what sample payloads for these available events may look like. 
@@ -137,10 +140,10 @@ Reference Punchh documentation on what sample payloads for these available event
 
 Work with your Punchh Implementation manager to set up this adapter.
 
-To set up the Braze and Punchh integration:
+To set up the Braze and Punchh integration, do the following:
 
-1. In the Punchh dashboard, navigate to **Cockpit > Dashboard > Major Features > Enable Webhook Management** and toggle on **Enable Webhook Management**.<br><br>
-2. Next, enable adapters by navigating to **Settings > Webhooks Manager > Configurations > Show Adapters Tab** and toggle on **Show Adapters Tab**.<br><br>
+1. In the Punchh dashboard, navigate to **Cockpit** > **Dashboard** > **Major Features** > **Enable Webhook Management** and toggle on **Enable Webhook Management**.<br><br>
+2. Next, enable adapters by navigating to **Settings** > **Webhooks Manager** > **Configurations** > **Show Adapters Tab** and toggle on **Show Adapters Tab**.<br><br>
 3. Navigate to **Webhooks Manager** under the **Settings** tab, select the **Adapters** tab, and click **Create Adapter**. <br><br>![][1]<br><br>
 4. Fill in the adapter name, description, and admin email. Select **Braze** as your adapter and provide your Braze REST API endpoint and Braze API key.<br><br>
 5. Next, select the available events you would like to enable. A list of these events can be found in [Available events to sync](#available-events-to-sync).<br><br>![][3]<br><br>
@@ -150,7 +153,7 @@ To set up the Braze and Punchh integration:
 
 Braze can add users to a Punchh segment through webhooks utilizing Punchh Custom Segments.
 
-1. Create a custom segment in Punchh and note the `custom_segment_id` present in the Punchh segment dashboard URL as shown below. Both classic or beta segment builders can be used. However, beta is recommended as classic will eventually be deprecated.<br><br>In the Punchh platform, navigate to **Guest > Segment > Custom List > New Custom List**.<br><br>![][8]<br><br>
+1. Create a custom segment in Punchh and note the `custom_segment_id` present in the Punchh segment dashboard URL as shown below. Both classic or beta segment builders can be used. However, beta is recommended as classic will eventually be deprecated.<br><br>In the Punchh platform, navigate to **Guest** > **Segment** > **Custom List** > **New Custom List**.<br><br>![][8]<br><br>
 
 2. Create a webhook campaign in Braze using the Punchh endpoint for adding a user to a custom segment as the webhook URL. Here, you can provide the `custom_segment_id` pulled from the URL and `user_id` as key-value pairs.<br><br>![][4]<br><br>
 
@@ -179,7 +182,7 @@ Property filters can be added to further filter the triggering event. For exampl
 
 In many cases, Braze campaigns and Canvases being triggered by Punchh events can be set to an "All Users" audience since the segmentation of users triggering these events will be determined within Punchh. However, customers looking to further refine the audience of users who will receive the Braze messaging triggered by the event can do so by adding additional filters and segments in the **Target Audiences** section of the campaign composer or the **Entry Audience** of the Canvas composer. 
 
-### Example use cases
+### Use cases
 
 {% tabs local %}
 {% tab Signup %}
@@ -205,7 +208,6 @@ Considerations:
 
 {% endtab %}
 {% tab Mass offer %}
-
 #### Mass offer campaign
 
 When utilizing a mass offer campaign for gifting, a mass offer campaign will need to be configured within Punchh and a messaging campaign in Braze.
@@ -219,22 +221,20 @@ Punchh configurations required:
 - Segment: Custom list or customer choice
 - Reward: Customer choice
 
-**If using Punchh for segmentation and gifting, and Braze for messaging:**<br>
+**Using Punchh for segmentation and gifting, and Braze for messaging:**<br>
 For example, a $2 off reward is sent to a segment configurable within Punchh with messaging sent through Braze.<br>
-![A user segment can be configured in Punchh, and users receive a gift through a Punchh mass offer campaign. Next, a reward event is triggered, and then the Braze messaging campaign is triggered.]({% image_buster /assets/img/punchh/usecase4.png %}){: style="max-width:125%;"}
+![A user segment can be configured in Punchh, and users receive a gift through a Punchh mass offer campaign. Next, a reward event is triggered, and then the Braze messaging campaign is triggered.]({% image_buster /assets/img/punchh/usecase6.png %}){: style="max-width:80%;"}
 
-**If using Braze segmentation and messaging, but Punchh for gifting:**<br>
+**Using Braze segmentation and messaging, and Punchh for gifting:**<br>
 For example, a $2 off reward and messaging sent to a segment with attributes not available in Punchh.<br>
-![A user segment can be configured in Braze, and then a message can be sent from Braze to Braze segment. Next, the users are sent to the Punchh custom segment through a Braze webhook with segment and user ID. After this, the user receives a gift through Punchh mass offer campaign with a custom segment. After this the reward event is triggered.]({% image_buster /assets/img/punchh/usecase5.png %}){: style="max-width:125%;"}
+![A user segment can be configured in Braze, and then a message can be sent from Braze to Braze segment. Next, the users are sent to the Punchh custom segment through a Braze webhook with segment and user ID. After this, the user receives a gift through Punchh mass offer campaign with a custom segment. After this the reward event is triggered.]({% image_buster /assets/img/punchh/usecase5.png %}){: style="max-width:80%;"}
 
-**If using Braze segmentation and Punchh for gifting and/or messaging:**<br>
+**Using Braze segmentation and Punchh for gifting or messaging, or both:**<br>
 For example, a $2 off reward is sent to a segment with attributes not available in Punchh, but no messaging is required, or the messaging can be sent through Punchh (note that all guests must be present in Punchh).<br>
-![A user segment can be configured in Braze, and the users are sent to Punchh custom segment through a Braze webhook with segment and user ID. After this, the user receives a gift through Punchh mass offer campaign with a custom segment. After this the reward event is triggered.]({% image_buster /assets/img/punchh/usecase6.png %}){: style="max-width:75%;"}
-
+![A user segment can be configured in Braze, and the users are sent to Punchh custom segment through a Braze webhook with segment and user ID. After this, the user receives a gift through Punchh mass offer campaign with a custom segment. After this the reward event is triggered.]({% image_buster /assets/img/punchh/usecase4.png %})
 
 {% endtab %}
 {% tab Recurring mass offer %}
-
 #### Recurring mass offer campaign
 
 When utilizing a recurring mass offer campaign for gifting, a mass offer campaign will need to be configured within Punchh and a messaging campaign set up in Braze. A Punchh custom segment will be required if the customer wants to use Braze segmentation (only recommended if utilizing attributes unavailable within Punchh). Otherwise, Punchh segmentation can be used, and the Braze messaging campaign will be triggered based on the reward event.
@@ -248,8 +248,7 @@ Considerations:
 
 {% endtab %}
 {% tab Post check-in offer with notification %}
-
-### Post check-in offer campaign with notification
+#### Post check-in offer campaign with notification
 
 When utilizing a post check-in offer campaign, Braze will send the notification regarding the gifting, and when the guest makes a check-in, they will then be gifted from the Punchh post check-in campaign. Therefore, a post check-in offer campaign will need to be configured within Punchh and a messaging campaign in Braze (if notifying the customers of the campaign).
 
@@ -264,7 +263,6 @@ For example, an email notifying guests to visit this weekend for double points t
 
 {% endtab %}
 {% tab Post check-in offer without notification %}
-
 #### Post check-in offer campaign without notification
 
 When utilizing a post check-in offer campaign that does not first notify customers, the campaign will gift (optional messaging) and trigger any notification within Braze. Therefore, a post check-in offer campaign must be configured within Punchh; however, a custom list is not required. Instead, you can choose the segment you would like within Punchh. 
@@ -280,8 +278,7 @@ For example, a surprise and delight Braze campaign is sent to a segment availabl
 
 {% endtab %}
 {% tab Anniversary %}
-
-#### Anniversary Campaign 
+#### Anniversary campaign 
 
 When utilizing an anniversary campaign, a user will first be gifted for their anniversary from the Punchh campaign. This gifting (reward event) will trigger the messaging campaign within Braze that notifies the user of the gifting. Therefore, a custom list is not required. Instead, you can choose the segment and anniversary setting within Punchh.
 
@@ -298,7 +295,6 @@ Considerations:
 
 {% endtab %}
 {% tab Recall %}
-
 #### Recall campaign
 
 When targeting users based on inactivity, a recall campaign can be used. The customer can create the segment and campaign within Punchh but utilize Braze for messaging.

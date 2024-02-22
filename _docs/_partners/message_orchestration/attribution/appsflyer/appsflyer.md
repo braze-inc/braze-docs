@@ -24,7 +24,9 @@ You can also pass your AppsFlyer audiences (cohorts) directly to Braze with the 
 |---|---|
 | AppsFlyer account | An AppsFlyer account is required to take advantage of this partnership. |
 | iOS or Android app | This integration supports iOS and Android apps. Depending on your platform, code snippets may be required in your application. Details on these requirements can be found in step 1 of the integration process. |
-| AppsFlyer SDK | In addition to the required Braze SDK, you must install the [AppsFlyer SDK](https://dev.appsflyer.com/hc/docs/getting-started). |
+| AppsFlyer SDK | In addition to the required Braze SDK, you must install the [AppsFlyer SDK](https://dev.appsflyer.com/hc/docs/getting-started).
+| Email domain setup complete | You must have completed the [IP and domain setup step]({{site.baseurl}}/user_guide/message_building_by_channel/email/email_setup/setting_up_ips_and_domains/) of setting up your email during Braze onboarding. |
+| SSL certificate | Your [SSL certificate]({{site.baseurl}}/user_guide/message_building_by_channel/email/email_setup/ssl#acquiring-an-ssl-certificate) must be configured. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## Integration
@@ -152,21 +154,224 @@ Your user base can be segmented by attribution data in the Braze dashboard using
 
 Additionally, attribution data for a particular user is available on each user's profile in the Braze dashboard.
 
-## Facebook, Snapchat, and X (formerly Twitter) attribution data
-
+{% alert note %}
 Attribution data for Facebook and X (formerly Twitter) campaigns is not available through our partners. These media sources do not permit their partners to share attribution data with third parties and, therefore, our partners cannot send that data to Braze.
+{% endalert %}
 
-## Email deep linking and click tracking
+## Integrate AppsFlyer with an Email Service Provider for deep linking
 
-Deep links, links that direct users toward a specific page or place within an app or website, are crucial in creating a tailored user experience. While widely used, issues often come up when using them with click tracking, another vital feature used in collecting user data. These issues are due to ESPs (Email Service Providers) wrapping deep links in their own click recording domain, breaking the original link. 
+AppsFlyer integrates with both SendGrid and SparkPost as Email Service Providers (ESPs) to support deep linking and click tracking. Follow the instructions below to integrate with your ESP of choice.
 
-There are, however, ESPs like SendGrid that support both universal linking and click tracking. Braze recommends integrating [OneLink-based attribution links][3] into your SendGrid or [SparkPost](https://support.appsflyer.com/hc/en-us/articles/360014381317-SparkPost-integration-with-AppsFlyer) email system to seamlessly deep link from emails.
+{% alert tip %}
+Deep links&#8212;links that direct users toward a specific page or place within an app or website&#8212;are used to create a tailored user experience. While widely used, issues can arise when using emailed deep links with click tracking, another important feature used in collecting user data. These issues are due to ESPs wrapping deep links in a click-recording domain, breaking the original link. As such, supporting deep links requires additional setup. By integrating AppsFlyer with either SendGrid or SparkPost, you avoid these issues. Learn more about this topic in [Universal links and App Links]({{site.baseurl}}/help/help_articles/email/universal_links/).
+{% endalert %}
 
-Learn more about this topic in [Universal links and App Links]({{site.baseurl}}/help/help_articles/email/universal_links/).
+### Step 1: Set up OneLink in AppsFlyer
+
+1. In AppsFlyer, select a OneLink template for your email campaigns. Make sure the template supports universal links (iOS) or App Links (Android). 
+2. Configure your app to support deep linking with OneLink. See the [AppsFlyer documentation](https://dev.appsflyer.com/hc/docs/dl_work_flow#initial-setup) for details on configuring your app to support OneLink.
+
+### Step 2: Configure your app to support universal links and App Links
+
+Universal links (iOS) or App Links (Android) are allowed by the device's operating system to open a specified app when clicked.
+
+Perform the following steps to support universal links and App Links.
+
+{% tabs local %}
+{% tab SendGrid %}
+{% subtabs %}
+{% subtab iOS %}
+Set up the Apple App Site Association (AASA) file hosting to enable universal links in your emails.
+
+1. Obtain an AASA file in one of the following methods:
+    * If you've set up OneLink with universal links, you may already have an AASA file associated with OneLink. To obtain the AASA file, perform the following:
+        * Copy the OneLink subdomain of your OneLink template. Make sure the template supports universal links.
+        * Paste it instead of the placeholder in the following URL: `<OneLinkSubdomain>.onelink.me/.well-known/apple-app-site-association`
+        * To download the AASA file, paste the OneLink URL into your browser's address bar and press **Enter**. The file will then be downloaded to your computer, and you can open and view its contents using any text editor.
+    * [Apple's guide on universal links](https://developer.apple.com/documentation/xcode/allowing_apps_and_websites_to_link_to_your_content) explains how to create the AASA file.
+2. Host the AASA file in your click-recording domain server. The file should be hosted in the path: `click.example.com/.well-known/apple-app-site-association`. 
+
+See the [SendGrid documentation](https://docs.sendgrid.com/ui/sending-email/universal-links) to learn how to configure the AASA file for SendGrid and set up CDN services to host the AASA file.
+
+{% alert important %}
+Once the AASA file is hosted, any change of your OneLink configuration (modification or replacement) requires generating a new AASA file.
+{% endalert %}
+{% endsubtab %}
+{% subtab Android %}
+Set up the Digital Asset Links file hosting to enable App Links in your emails.
+
+1. Obtain a Digital Asset Links file in one of the following methods:
+    * If you've set up OneLink with App Links, you may already have a Digital Asset Links file associated with OneLink. To obtain the file, perform the following:
+        * Copy the OneLink subdomain of your OneLink template. Make sure the template supports App Links.
+        * Add `/.well-known/assetlinks.json` to the end of the OneLink URL.
+        * To download the Digital Asset Links file, paste the OneLink URL into your browser's address bar and press **Enter**. For example, `https://<OneLinkSubdomain>.onelink.me/.well-known/assetlinks.json`. The file will then be downloaded to your computer, and you can open and view its contents using any text editor.
+    * [Android's guide to App Links](https://developer.android.com/studio/write/app-link-indexing) explains how to create the Digital Asset Links file.
+2. Host the Digital Asset Links file in your click-recording domain server. The file should be hosted in the path: `click.example.com/.well-known/apple-app-site-association`.
+
+See the [SendGrid documentation](https://docs.sendgrid.com/ui/sending-email/universal-links) to learn how to configure the Digital Asset Links file for SendGrid and set up CDN services to host the Digital Asset Links file.
+
+{% alert important %}
+Once the Digital Asset Links file is hosted, any change of your OneLink configuration (modification or replacement) requires generating a new file.
+{% endalert %}
+{% endsubtab %}
+{% endsubtabs %}
+{% endtab %}
+{% tab SparkPost %}
+{% subtabs %}
+{% subtab iOS %}
+#### Step 2a: Set up AASA file hosting
+Set up the Apple App Site Association (AASA) file hosting to enable universal links in your emails.
+
+1. Obtain an AASA file in one of the following methods:
+    * If you've set up OneLink with universal links, you may already have an AASA file associated with OneLink. To obtain the AASA file, perform the following:
+        * Copy the OneLink subdomain of your OneLink template. Make sure the template supports universal links.
+        * Paste it instead of the placeholder in the following URL: `<OneLinkSubdomain>.onelink.me/.well-known/apple-app-site-association`
+        * To download the AASA file, paste the OneLink URL into your browser's address bar and press **Enter**. The file will then be downloaded to your computer, and you can open and view its contents using any text editor.
+    * [Apple's guide on universal links](https://developer.apple.com/documentation/xcode/allowing_apps_and_websites_to_link_to_your_content) explains how to create the AASA file.
+2. Host the AASA file in your click-recording domain server. The file should be hosted in the path: `click.example.com/.well-known/apple-app-site-association`. 
+
+See the [SparkPost documentation](https://support.sparkpost.com/docs/tech-resources/deep-links-self-serve) to learn how to configure the AASA file for SparkPost and set custom link sub-paths.
+
+{% alert important %}
+Once the AASA file is hosted, any change of your OneLink configuration (modification or replacement) requires generating a new AASA file.
+{% endalert %}
+
+#### Step 2b: Redirect your click-tracking domain to your AASA file host
+During your [email configuration]({{site.baseurl}}/user_guide/message_building_by_channel/email/email_setup/setting_up_ips_and_domains/), you created a CNAME record in your DNS server. Perform the following steps after you verify your click-tracking domain in Braze. 
+
+1. Delete the CNAME record that redirects your subdomain to the SparkPost domain.
+2. Create a CNAME record that redirects your click-tracking domain to the CDN hosting your app AASA file, instead of the record you deleted above.
+{% endsubtab %}
+{% subtab Android %}
+#### Step 2a: Set up Digital Asset Links file hosting
+Set up the Digital Asset Links file hosting to enable App Links in your emails.
+
+1. Obtain a Digital Asset Links file in one of the following methods:
+    * If you've set up OneLink with App Links, you may already have a Digital Asset Links file associated with OneLink. To obtain the file, perform the following:
+        * Copy the OneLink subdomain of your OneLink template. Make sure the template supports App Links.
+        * Add `/.well-known/assetlinks.json` to the end of the OneLink URL.
+        * To download the Digital Asset Links file, paste the OneLink URL into your browser's address bar and press **Enter**. For example, `https://<OneLinkSubdomain>.onelink.me/.well-known/assetlinks.json`. The file will then be downloaded to your computer, and you can open and view its contents using any text editor.
+    * [Android's guide to App Links](https://developer.android.com/studio/write/app-link-indexing) explains how to create the Digital Asset Links file.
+2. Host the Digital Asset Links file in your click-recording domain server. The file should be hosted in the path: `click.example.com/.well-known/apple-app-site-association`.
+
+See the [SparkPost documentation](https://support.sparkpost.com/docs/tech-resources/deep-links-self-serve) to learn how to configure the Digital Asset Links file for SparkPost and set custom link sub-paths.
+
+{% alert important %}
+Once the Digital Asset Links file is hosted, any change of your OneLink configuration (modification or replacement) requires generating a new file.
+{% endalert %}
+
+#### Step 2b: Redirect your click-tracking domain to your digital asset links file host
+During your [email configuration]({{site.baseurl}}/user_guide/message_building_by_channel/email/email_setup/setting_up_ips_and_domains/), you created a CNAME record in your DNS server. Perform the following steps after you verify your click-tracking domain in Braze. 
+
+1. Delete the CNAME record that redirects your subdomain to the SparkPost domain.
+2. Create a CNAME record that redirects your click-tracking domain to the CDN hosting your app Digital Asset Links file, instead of the record you deleted above.
+
+{% endsubtab %}
+{% endsubtabs %}
+{% endtab %}
+{% endtabs %}
+
+### Step 3: Configure your AppsFlyer SDK to support deep linking
+
+{% tabs local %}
+{% tab SendGrid %}
+{% subtabs %}
+{% subtab iOS %}
+#### Step 3a: Configure your SDK to support the AASA file
+After you host the AASA file in your click-recording domain, configure your AppsFlyer SDK to support the AASA file.
+
+1. In Xcode, select your project.
+2. Select **Capabilities.**
+3. Turn on **Associated Domains.**
+4. Click **+**, and enter your click domain. For example, `applinks:click.example.com`.
+When a click on the universal link occurs, your app is opened and the SDK is initiated. To enable the app to extract the OneLink behind the click domain and resolve the deep link, perform the following:
+
+#### Step 3b: Handle the deep link data
+1. Provide the click recording domain to the SDK API [`resolveDeepLinkURLs`](https://dev.appsflyer.com/hc/docs/ios-sdk-reference-appsflyerlib#resolvedeeplinkurls). This API needs to be called before SDK initialization. `AppsFlyerLib.shared().resolveDeepLinkURLs = ["click.example.com","spgo.io"]`
+2. Use the [`onAppOpenAttribution`](https://dev.appsflyer.com/hc/docs/ios-sdk-reference-appsflyerlibdelegate#onappopenattribution) API to get the deep link parameters and handle the deep link data.
+
+{% endsubtab %}
+{% subtab Android %}
+#### Step 3a: Configure your SDK to support the Digital Asset Links file
+
+After you host the Digital Asset Links file in your click-recording domain in the previous step, configure your SDK to support the file.
+
+In your Android manifest, add the click domain host and any prefix in the activity tag of the activity you want to deep link into.
+
+```xml
+<activity android:name=".DeepLinkActivity">
+    <intent-filter android:autoVerify="true">
+      <action android:name="android.intent.action.VIEW" />
+      <category android:name="android.intent.category.DEFAULT" />
+      <category android:name="android.intent.category.BROWSABLE" />
+      <data
+        android:scheme="https"
+        android:host="click.example.com"
+        android:pathPrefix="/campaign"
+      />
+    </intent-filter>
+  </activity>
+```
+
+#### Step 3b: Handle the deep link data
+When a click on an App Link occurs, your app is opened and the SDK is initiated.  To enable the app to extract the OneLink behind the click domain and resolve the deep link, list the click domains in the SDK method [`setResolveDeepLinkURLs`](https://support.appsflyer.com/hc/en-us/articles/4408735106193#resolve-wrapped-deep-link-urls). This property needs to be set before SDK initialization. `AppsFlyerLib.getInstance().setResolveDeepLinkURLs("clickdomain.com", "myclickdomain.com", "anotherclickdomain.com");`
+{% endsubtab %}
+{% endsubtabs %}
+{% endtab %}
+{% tab SparkPost %}
+{% subtabs %}
+{% subtab iOS %}
+#### Step 3a: Configure your SDK to support the AASA file
+After you host the AASA file in your click-recording domain, configure your SDK to support the AASA file.
+
+1. In Xcode, select your project.
+2. Select **Capabilities.**
+3. Turn on **Associated Domains.**
+4. Click **+**, and enter your click domain. For example, `applinks:click.example.com`.
+
+#### Step 3b: Handle the deep link data
+When a click on the universal link occurs, your app is opened and the SDK is initiated. To enable the SDK to extract the OneLink behind the click domain, perform the following:
+1. List the click domains in the SDK property  [`resolveDeepLinkURLs`](https://dev.appsflyer.com/hc/docs/ios-sdk-reference-appsflyerlib#resolvedeeplinkurls). Make sure to set this property before SDK initialization.
+2. Make sure that List <em>spgo.io</em> is one of the listed domains. SparkPost owns this domain and it's part of the redirection flow. `AppsFlyerLib.shared().resolveDeepLinkURLs = ["click.example.com","spgo.io"]`
+3. Use the [`onAppOpenAttribution`](https://dev.appsflyer.com/hc/docs/ios-sdk-reference-appsflyerlibdelegate#onappopenattribution) API to get the deep link parameters and handle the deep link data.
+{% endsubtab %}
+{% subtab Android %}
+#### Step 3a: Configure your SDK to support the Digital Asset Links file
+
+After you host the Digital Asset Links file in your click-recording domain in the previous step, configure your SDK to support the file.
+
+In your Android manifest, add the click domain host and any prefix in the activity tag of the activity you want to deep link into.
+
+```xml
+<activity android:name=".DeepLinkActivity">
+    <intent-filter android:autoVerify="true">
+      <action android:name="android.intent.action.VIEW" />
+      <category android:name="android.intent.category.DEFAULT" />
+      <category android:name="android.intent.category.BROWSABLE" />
+      <data
+        android:scheme="https"
+        android:host="click.example.com"
+        android:pathPrefix="/campaign"
+      />
+    </intent-filter>
+  </activity>
+```
+
+#### Step 3b: Handle the App Link data
+When a click on an App Link occurs, your app is opened and the SDK is initiated. To enable the app to extract the OneLink behind the click domain and resolve the deep link, perform the following:
+
+1. List the click domains in the SDK method [`setResolveDeepLinkURLs`](https://support.appsflyer.com/hc/en-us/articles/4408735106193#resolve-wrapped-deep-link-urls). This property needs to be set before SDK initialization.
+2. Make sure that List *spgo.io* is one of the listed domains. SparkPost owns this domain and it's part of the redirection flow. `AppsFlyerLib.getInstance().setResolveDeepLinkURLs("clickdomain.com", "myclickdomain.com", "spgo.io");`
+{% endsubtab %}
+{% endsubtabs %}
+{% endtab %}
+{% endtabs %}
+
+Once you've completed the integration steps, you can perform QA and troubleshooting by sending a deep link using OneLink. See the [AppsFlyer documentation](https://support.appsflyer.com/hc/en-us/articles/360001437497-Integrating-AppsFlyer-and-Braze#step-3-sending-your-first-email::2ffdb79a) for details on using OneLink.
 
 ### AppsFlyer click tracking URLs in Braze (optional)
 
-You can use AppsFlyer's [OneLink attribution links](https://support.AppsFlyer.com/hc/en-us/articles/360001294118) in Braze campaigns across push, email, and more. This allows you to send back install or re-engagement attribution data from their Braze campaigns into AppsFlyer. As a result, you'll be able to measure your marketing efforts more effectively and make data-driven decisions on where to invest more resources for the maximum ROI.
+You can use AppsFlyer's [OneLink attribution links](https://support.AppsFlyer.com/hc/en-us/articles/360001294118) in Braze campaigns across push, email, and more. This allows you to send back install or re-engagement attribution data from their Braze campaigns into AppsFlyer. As a result, you'll be able to measure your marketing efforts more effectively and make data-driven decisions.
 
 You can simply create your OneLink tracking URL in AppsFlyer and directly insert it into your Braze campaigns. AppsFlyer will then use their [probabilistic attribution methodologies](https://support.AppsFlyer.com/hc/en-us/articles/207447053-Attribution-model-explained#probabilistic-modeling) to attribute the user that has clicked on the link. We recommend appending your AppsFlyer tracking links with a device identifier to improve the accuracy of attributions from your Braze campaigns. This will deterministically attribute the user that has clicked on the link.
 
@@ -195,10 +400,7 @@ idfv={{most_recently_used_device.${id}}}
 {% endtab %}
 {% endtabs %}
 
-{% alert note %}
-**This recommendation is purely optional**<br>
-If you currently do not use any device identifiers - such as the IDFV or GAID - in your click tracking links, or do not plan to in the future, AppsFlyer will still be able to attribute these clicks through their probabilistic modeling.
-{% endalert %}
+
 
 [1]: {% image_buster /assets/img/braze_integration.png %}
 [2]: {% image_buster /assets/img/braze_attribution.png %}
