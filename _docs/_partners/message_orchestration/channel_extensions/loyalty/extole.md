@@ -59,7 +59,7 @@ Below are the default events, event properties, and user attributes that are sen
 | `outcome` | A participant has converted or completed the desired outcome event configured for the program. | Event name  <br>Event time  <br>Partner (Extole)  <br>Email  <br>External ID  <br>Coupon code  <br>Attributed reward IDs  <br>Partner conversion ID  <br>Value (cart value)  <br>First name  <br>Last name  <br>Share link |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
-### Extole Rewards
+### Extole rewards
 
 By default, Extole will send reward events in the `FULFILLED` state to Braze so that you can trigger reward notifications via a Braze campaign or canvas. See the table below for additional reward states you may be interested in sending from Extole to Braze.
 
@@ -77,7 +77,7 @@ By default, Extole will send reward events in the `FULFILLED` state to Braze so 
 
 ## Customization
 
-### Lookup and Create Users in Braze
+### Lookup and create users in Braze
 
 For certain use cases, such as a new email or SMS subscription where Extole does not have an external id (user id) for the user, Extole can check for the user's identifier using Braze's Export User by Identifier endpoint. If the user exists within Braze, Extole will add and update any profile attributes. If the request does not return a user profile, Extole will instead use the User Track endpoint to create a User Alias with the user's email address as the Alias Name.
 
