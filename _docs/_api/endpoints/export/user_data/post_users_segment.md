@@ -22,8 +22,6 @@ Beginning December 2021, the following changed for this API:<br><br>1. The `fiel
 
 User data is exported as multiple files of user JSON objects separated by new lines (such as one JSON object per line). Data is exported to an automatically generated URL, or to an S3 bucket if this integration is already set up.
 
-This endpoint is currently not supported by Google Cloud Storage.
-
 Note that a company may run at most one export per segment using this endpoint at a given time. Wait for your export to complete before trying again. 
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#cfa6fa98-632c-4f25-8789-6c3f220b9457 {% endapiref %}
@@ -38,7 +36,7 @@ To use this endpoint, you'll need an [API key]({{site.baseurl}}/api/basics#rest-
 
 ## Credentials-based response details
 
-If you have added your [S3][1] or [Azure][2] credentials to Braze, then each file will be uploaded in your bucket as a ZIP file with the key format that looks like `segment-export/SEGMENT_ID/YYYY-MM-dd/RANDOM_UUID-TIMESTAMP_WHEN_EXPORT_STARTED/filename.zip`. If using Azure, make sure that you have the **Make this the default data export destination** box checked in the Azure partner overview page in Braze. Generally, we will create 1 file per 5,000 users to optimize processing. Exporting smaller segments within a large workspace may result in multiple files. You can then extract the files and concatenate all of the `json` files to a single file if needed. If you specify an `output_format` of `gzip`, then the file extension will be `.gz` instead of `.zip`.
+If you have added your [S3][1], [Azure][2], or [Google Cloud Storage][3] credentials to Braze, then each file will be uploaded in your bucket as a ZIP file with the key format that looks like `segment-export/SEGMENT_ID/YYYY-MM-dd/RANDOM_UUID-TIMESTAMP_WHEN_EXPORT_STARTED/filename.zip`. If using Azure, make sure that you have the **Make this the default data export destination** box checked in the Azure partner overview page in Braze. Generally, we will create 1 file per 5,000 users to optimize processing. Exporting smaller segments within a large workspace may result in multiple files. You can then extract the files and concatenate all of the `json` files to a single file if needed. If you specify an `output_format` of `gzip`, then the file extension will be `.gz` instead of `.zip`.
 
 {% details Export pathing breakdown for ZIP %}
 **ZIP format:**
@@ -475,5 +473,6 @@ For help with CSV and API exports, visit [Export troubleshooting]({{site.baseurl
 
 [1]: {{site.baseurl}}/partners/data_and_infrastructure_agility/cloud_storage/amazon_s3
 [2]: {{site.baseurl}}/partners/data_and_infrastructure_agility/cloud_storage/microsoft_azure_blob_storage_for_currents/
+[3]: {{site.baseurl}}/partners/data_and_infrastructure_agility/cloud_storage/google_cloud_storage_for_currents/
 
 {% endapi %}
