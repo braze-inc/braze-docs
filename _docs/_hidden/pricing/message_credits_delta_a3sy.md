@@ -2688,6 +2688,16 @@ Column definitions are as follows:
 
 ------
 
+## Segment details
+
+### SMS definition
+
+SMS message segments are how the SMS industry counts messages. A message segment is a grouping of up to a defined number of characters (160 for GSM-7 encoding; 67 for UCS-2 encoding) that will be sent in a single SMS dispatch. If you dispatch an SMS with 161 characters using GSM-7 encoding, you will see that there are two (2) message segments that were sent. Sending multiple message segments will result in additional charges.
+
+### MMS definition
+
+For MMS, the message limit is 5 MB (this includes the multimedia asset and the message body size). To be on the safer side, Braze recommends not exceeding 600 KB for your multimedia asset while also including a message body.
+
 ## WhatsApp channel details
 
 ### Conversation type definitions
