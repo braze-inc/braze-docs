@@ -17,45 +17,45 @@ To customize your Braze Web SDK, you'll need to [integrate the SDK]({{site.baseu
 
 ## Logging
 
-To enable logging, you can use [`enableLogging`](#enablelogging) which provides basic logging, or [`setLogger`](#setlogger) which provides custom logging.
+To enable logging, you can use [`enableLogging`](#enablelogging) for basic logging, or [`setLogger`](#setlogger) for custom logging.
 
 ### enableLogging
 
-`enableLogging` is used to enable basic logging for the Braze Web SDK. When enabled, Braze will log to the javascript console which is visible to all users. Consider removing `enableLogging` from your code or switch to using [`setLogger`](#setlogger) before releasing to production.
-
-#### Usage
-
-, and accepts the boolean values `true` or `false`.
+Use `enableLogging` to log basic debugging messages to the javascript console.
 
 ```javascript
-
+enableLogging: true
 ```
 
-#### Example
+Your method should be similar to the following:
 
 ```javascript
-
+braze.initialize('YOUR-API-KEY', {
+    baseUrl: 'sdk.iad-03.braze.com',
+    enableLogging: true
+});
+braze.openSession();
 ```
+
+{% alert important %}
+These logs will be visible to all users, so consider removing `enableLogging`, or switch to [`setLogger`](#setlogger), before releasing your code to production.
+{% endalert %}
 
 ### setLogger
 
-`setLogger` is used to create custom log messages.
-
-`setLogger` accepts any string, and, by default, outputs this string to the browser console.
-
-By default, Braze logs to the browser console. Call this method to set a custom log action and enable debug-level log statements.
-
-#### Usage
+Use `setLogger` to log custom debugging messages to the javascript console.
 
 ```javascript
-setLogger(loggerFunction: (message: string) => void): void
+setLogger(loggerFunction: (message: STRING) => void): void
 ```
 
-#### Example
+Replace `STRING` with a single string parameter which will be used as your message. Your method should be similar to the following:
 
 ```javascript
-setLogger(function(message) {
+braze.initialize('YOUR-API-KEY');
+braze.setLogger(function(message) {
     // Custom log handling
-    console.log("Custom Logger: " + message);
+    console.log("Braze Custom Logger: " + message);
 });
+braze.openSession();
 ```
