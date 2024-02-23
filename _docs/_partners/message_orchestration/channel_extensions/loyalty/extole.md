@@ -77,7 +77,7 @@ By default, Extole will send reward events in the `FULFILLED` state to Braze so 
 
 ## Customization
 
-### Lookup and create users in Braze
+### Find and create users in Braze
 
 For certain use cases, such as a new email or SMS subscription where Extole does not have an external id (user id) for the user, Extole can check for the user's identifier using Braze's Export User by Identifier endpoint. If the user exists within Braze, Extole will add and update any profile attributes. If the request does not return a user profile, Extole will instead use the User Track endpoint to create a User Alias with the user's email address as the Alias Name.
 
