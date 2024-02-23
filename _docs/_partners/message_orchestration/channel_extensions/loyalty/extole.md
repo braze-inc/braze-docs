@@ -46,7 +46,7 @@ Complete the following steps to quickly get your integration up and running. You
 7. Select your Braze External ID key mapping, which is how Extole updates user profiles in Braze. You can map the Braze External ID key to Extole's `email_address` or `partner_user_id` for the user.
 8. Complete the connection by saving your settings. Once this is done, Extole events will be able to flow into your Braze account.
 
-### Extole Program Events
+### Extole program events
 
 Below are the default events, event properties, and user attributes that are sent into Braze. In addition to the default events listed here, you can add any other Extole events to your integration. Please work with your Extole Implementation or Customer Success Manager to identify and add any additional events you would like to send to Braze.
 
