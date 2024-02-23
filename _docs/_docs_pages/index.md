@@ -43,7 +43,7 @@ doc_menu_list:
   - name: Compliance Documentation
     bg_color: '#ff9349'
     image: /assets/img/new-icons/file-contract-solid.svg
-    link: /docs/compliance_documentation/
+    link: /compliance_documentation/
     description: "Compliance documentation sets forth specific terms applicable to your purchased product, channel, feature, functionality or service."
 
 popular_topic_list:
