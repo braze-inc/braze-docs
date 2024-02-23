@@ -16,7 +16,7 @@ guide_top_text: >
   * For Braze Services functionality that allows customers to interact with, integrate with or access the product, website, application or service of a Third-Party Provider, the Compliance Documentation contains the Third-Party Provider terms applicable to your use of such functionality; and
 
   * Any general industry practices and standards that Braze customers are required to comply with for the use of such Braze product, channel, feature, functionality or service.
-guide_top_text2: "<h2>Updates to the Compliance Documentation</h2><br>You can subscribe to receive updates to our documentation (including the Compliance Documentation) through Braze’s GitHub repository."
+guide_top_text2: "<h2>Updates to the Compliance Documentation</h2><br>You can subscribe to receive updates to our documentation (including the Compliance Documentation) through <a href="https://github.com/braze-inc/braze-docs">Braze’s GitHub repository</a>."
 guide_top_text3: "<h2>How to find the relevant Compliance Documentation</h2><br>Below is the list of our products, channels, features, functionalities and services that have applicable Compliance Documentation. If you are using multiple products, all relevant Compliance Documentation applies."
 
 guide_menu_title: ""
@@ -30,8 +30,3 @@ guide_menu_list:
 
 
 ---
-<br><br>
-{% alert important %}
-**Legal Disclaimer**<br>
-The information provided here is provided for educational purposes only and should not be construed as legal advice. Braze encourages all of our customers to seek their own legal advice on their use of Braze in compliance with data protection laws and regulations.
-{% endalert %}
