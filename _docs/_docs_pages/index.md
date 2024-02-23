@@ -40,6 +40,11 @@ doc_menu_list:
     image: /assets/img/new-icons/circle-info-solid.svg
     link: /docs/help/home
     description: "Find articles to help troubleshoot issues you may encounter and learn more about best practices to communicate with your users."
+  - name: Compliance Documentation
+    bg_color: '#ff9349'
+    image: /assets/img/new-icons/circle-info-solid.svg
+    link: /docs/compliance_documentation/
+    description: "Compliance documentation sets forth specific terms applicable to your purchased product, channel, feature, functionality or service."
 
 popular_topic_list:
   - name: Braze API Dictionary
