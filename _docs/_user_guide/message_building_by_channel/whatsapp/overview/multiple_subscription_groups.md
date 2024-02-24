@@ -1,5 +1,5 @@
 ---
-nav_title: Multiple Business Accounts and Phone Numbers  
+nav_title: Multiple Business Accounts 
 article_title: Multiple WhatsApp Business Accounts and Phone Numbers  
 page_order: 0
 description: "This reference article covers the steps to add WhatsApp Business accounts and phone numbers."
@@ -22,7 +22,7 @@ Having multiple WhatsApp Business accounts is useful if you want to send WhatsAp
 
 Business accounts that are nested within the same Meta Business Manager will also share user access permission management and catalogs (not yet supported on Braze).
 
-### Adding an additional WhatsApp Business account
+### Adding a WhatsApp Business account
 
 You can add up to 10 WhatsApp Business accounts per workspace. To add an account:
 
@@ -32,10 +32,24 @@ You can add up to 10 WhatsApp Business accounts per workspace. To add an account
 
 ## Multiple subscription groups and phone numbers
 
-Subscription groups are a Braze concept, but as Meta supports multiple phone numbers under a single WhatsApp Business Account, the feature is supported. Message templates are shared among all phone numbers in the same WhatsApp Business account. For details about WhatsApp subscription groups, view [Subscription groups]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/user_subscription/).
+Subscription groups are a Braze feature that is supported by Meta. Message templates are shared among all phone numbers in the same WhatsApp Business account. For details about WhatsApp subscription groups, view [Subscription groups]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/user_subscription/).
 
-### Adding an additional subscription group and phone number
+Each WhatsApp phone number will appear as a separate WhatsApp chat to users. Each phone number within a WhatsApp Business account operates independently from each other, so they can have the same or different values for the following: 
+- Display name 
+- Status 
+- Quality rating 
+- Messaging limit 
 
+### Adding a subscription group and phone number
 
+You can add up to 20 subscription groups (and sending phone numbers) per WhatsApp Business account. To add a subscription group and phone number:
+
+1. Go to **Technology Partners** > **WhatsApp** and select **Add Subscription Group and Number**.![WhatsApp Messaging Integration section with options to add a business account or add a subscription group and number.][1]<br>
+2. Go through the sign up workflow. In the **Select your WhatsApp Business Account** step, select your existing WhatsApp Business account and add a new phone number. This number must follow all the requirements of any WhatsApp phone number, including not being registered to any other WhatsApp accounts.
+
+### Removing a subscription group and phone number 
+
+1. Go **Audience** > **Subscriptions** and archive the subscription group.
+2. Go to your Meta manager and delete the phone number.
 
 [1]: {% image_buster /assets/img/whatsapp/multiple_wabas.png %} 
