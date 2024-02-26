@@ -54,7 +54,7 @@ https://example.com/?campaign_utm={{campaign.${api_id}}}&user_attribute={{custom
 
 We also support the shortening of custom-defined Liquid variables. Several examples are shown below:
 
-#### Construct a URL using Liquid variables
+#### Create a URL using Liquid variables
 
 {% raw %}
 ```liquid
