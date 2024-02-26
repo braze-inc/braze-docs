@@ -33,7 +33,7 @@ Next, open Firebase Console, then select <i class="fa-solid fa-gear"></i>&nbsp;*
 
 Select **Cloud Messaging**. Under **Cloud Messaging API (Legacy)**, verify the **Sender ID** matches the one listed in your Braze dashboard.
 
-![The Firebase project's "Cloud Messaging" page with the "Sender ID" highlighted.]({% image_buster /assets/img/android/push_integration/set_up_automatic_token_registration/copy-sender-id.png %})
+![The Firebase project's "Cloud Messaging" page with the "Sender ID" highlighted.]({% image_buster /assets/img/android/push_integration/migration/verify-sender-id/verify-sender-id-firebase.png %})
 
 ## Step 2: Create a service account
 
