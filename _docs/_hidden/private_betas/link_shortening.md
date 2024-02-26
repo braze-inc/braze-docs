@@ -144,7 +144,7 @@ If the campaign has been saved as a draft before test sending, yes. Otherwise, i
 
 #### Does the Braze SDK need to be installed in order to shorten links?
 
-No, Link Shortening will work without any SDK integration.
+No. Link shortening works without any SDK integration.
 
 #### Do I know which individual users are clicking on a URL?
 
