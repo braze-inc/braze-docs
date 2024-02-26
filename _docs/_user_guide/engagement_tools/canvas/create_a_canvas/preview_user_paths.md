@@ -44,7 +44,7 @@ To view more details for entrance criteria, click **See more**. Steps with segme
 
 For scheduled Canvases, the test user will enter at the next scheduled entrance time. For action-based Canvases with start dates, the test user will enter on the start date and time. 
 
-While the default starts times still apply, the entrance time is configurable in all instances (so you can simulate a date in the past or future). However, you can't test before the Canvas's start date or after it's end date.
+While the default starts times still apply, the entrance time is configurable in all instances, meaning you can simulate a date in the past or future. However, you can't test before the start date or after end date for the Canvas.
 
 Message and Delay steps show the time at which a user would progress or receive the message without needing to reconfigure the delays. Note that while the steps will indicate whether Intelligent Timing is used, this preview of the user path does not calculate an estimate for a test user.
 
@@ -54,12 +54,10 @@ If your Canvas includes an Action Paths step, select whether a user took an acti
 
 ## When users enter and exit
 
-Test users will enter the preview even if they are not eligible in real life. If they are not eligible, you can see why they would not have met the criteria.
+Test users will enter the preview even if they are not eligible in real life. If they are not eligible, you can see why they would not have met the criteria. You can see the results in the sidebar for when users enter and exit the Canvas.
 
-Exit criteria are now supported. You can see the results in the sidebar.
-
-- If you test an Action Path with actions that correspond to exit criteria (including event properties), exit criteria will be triggered and the test run will end
-- If you test a Message step that corresponds to exit criteria, exit criteria will be triggered and the test run will end
+- If you test an Action Path with actions that correspond to exit criteria (including event properties), exit criteria will be triggered and the test run will end.
+- If you test a Message step that corresponds to exit criteria, exit criteria will be triggered and the test run will end.
 - At this point, you can't select a specific event or property within an action path to trigger exit criteria (only the path as a whole). If a user could potentially meet multiple exit criteria, the first one that is processed and that they meet is shown as the result.
 
 ## Experiment Paths and Canvas variants
@@ -72,11 +70,15 @@ Exit criteria are now supported. You can see the results in the sidebar.
 
 You can opt to send test messages to an internal test group or an individual user as the test run populates. This means that only messages the user encounters along the test path will be sent. The recipients will receive messages with their own attributes by default, but you can override these with the test user’s attributes.
 
+To send all test messages in a Canvas at once, regardless of the path and without previewing the path, you can click **Send All Test Messages** in the **Test Sends** tab. 
+
 ## Responsiveness
 
-At the moment, filters within steps in this preview mode are not responsive to the timing assumed by the test run. For example, if an audience path references an event that has occurred on or after a specific date, and the test run shows the results for a future date, the filter will not take that future date into account.
+Canvas steps are responsive to timing when previewing user paths. Updates made via the User Update step are reflected in subsequent steps in the flow, but are not applied to the actual user profile. The effects of a user entering a variant are reflected in future steps in a preview.
 
-Similarly, filters won’t recognize actions that occurred as a result of the test user interacting with other steps in the Canvas. For example, this preview mode won’t recognize that a user encountered a Message step that was “sent” earlier in the Canvas, and it won’t recognize that the test user “took action” to advance through an action path.
+Similarly, filters will recognize actions that occurred as a result of the test user interacting with other steps in the Canvas. For example, this preview mode recognizes that a user encountered a Message step that was “sent” earlier in the Canvas, and it will recognize that the test user “took action” to advance through an action path. 
+
+Refer to [Exit criteria]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/exit_criteria) for more details on responsive behavior.
 
 ## Connected Content
 
