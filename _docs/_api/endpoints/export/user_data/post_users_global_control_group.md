@@ -16,7 +16,7 @@ description: "This article outlines details about the Export users in Global Con
 
 > Use this endpoint to export all users within a Global Control Group. 
 
-User data is exported as multiple files of user JSON objects separated by new lines (such as one JSON object per line).
+User data is exported as multiple files of user JSON objects separated by new lines (such as one JSON object per line). All users in the Global Control Group are included each time the files are generated. Braze doesn't store a history of when users are added and removed from a Global Control Group.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#aa3d8b90-d984-48f0-9287-57aa30469de2 {% endapiref %}
 
