@@ -67,6 +67,52 @@ To detect sessions via your user, find your user on the dashboard and navigate t
 
 ![The app usage section of a user profile showing the number of sessions, last used date, and first used date.][session_tracking_7]
 
+## Subscribing to session updates
+
+The Braze SDK provides a [`subscribeToSessionUpdates(_:)`][1] method to listen for session updates:
+
+{% tabs %}
+{% tab swift %}
+
+```swift
+// This subscription is maintained through a Braze cancellable, which will observe for changes until the subscription is cancelled.
+// You must keep a strong reference to the cancellable to keep the subscription active.
+// The subscription is canceled either when the cancellable is deinitialized or when you call its `.cancel()` method.
+let cancellable = AppDelegate.braze?.subscribeToSessionUpdates { event in
+  switch event {
+  case .started(let id):
+    print("Session \(id) has started")
+  case .ended(let id):
+    print("Session \(id) has ended")
+  }
+}
+```
+
+{% endtab %}
+{% tab OBJECTIVE-C %}
+
+```objc
+// This subscription is maintained through a Braze cancellable, which will observe for changes until the subscription is cancelled.
+// You must keep a strong reference to the cancellable to keep the subscription active.
+// The subscription is canceled either when the cancellable is deinitialized or when you call its `.cancel()` method.
+BRZCancellable *cancellable = [AppDelegate.braze subscribeToSessionUpdates:^(BRZSessionEvent * _Nonnull event) {
+  switch (event.state) {
+    case BRZSessionStateStarted:
+      NSLog(@"Session %@ has started", event.sessionId);
+      break;
+    case BRZSessionStateEnded:
+      NSLog(@"Session %@ has ended", event.sessionId);
+      break;
+    default:
+      break;
+  }
+}];
+```
+
+{% endtab %}
+{% endtabs %}
+
+[1]: https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/subscribetosessionupdates(_:)
 [session_tracking_1]: https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/configuration-swift.class
 [session_tracking_3]: https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/configuration-swift.class
 [session_tracking_5]: https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#initialize
