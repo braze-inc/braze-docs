@@ -28,11 +28,8 @@ Column definitions are as follows:
 | **Channel Credit Ratio** | Baseline credit amount for each channel |
 | **Destination** | Specific final region, country, or type of message being sent through the Braze platform |
 | **Multiplier** | Scaler to the Channel Credit Ratio, depending on pricing of the specific destination |
-| **Credits Consumed with One Message** | Exact number of Message Credits used to send one message    |
+| **Credits Consumed with One Message** | Exact number of Message Credits used to send one message (credits consumed with one message = channel credit ratio x destination multiplier)  |
 {: .reset-td-br-1 .reset-td-br-2}
-
-### Calculation example
-
 
 
 ## Credit ratio table for Message Credits - Delta
@@ -2688,32 +2685,36 @@ Column definitions are as follows:
 
 ------
 
-## Segment details
+## SMS/MMS channel details
 
-### SMS definition
+### SMS segments
 
 SMS message segments are how the SMS industry counts messages. A message segment is a grouping of up to a defined number of characters (160 for GSM-7 encoding; 67 for UCS-2 encoding) that will be sent in a single SMS dispatch. If you dispatch an SMS with 161 characters using GSM-7 encoding, you will see that there are two (2) message segments that were sent. Sending multiple message segments will result in additional charges.
 
-### MMS definition
+### MMS segments
 
 For MMS, the message limit is 5 MB (this includes the multimedia asset and the message body size). To be on the safer side, Braze recommends not exceeding 600 KB for your multimedia asset while also including a message body.
 
 ## WhatsApp channel details
 
+WhatsApp is a channel focused on two-way messaging and thus anchors on Conversations (instead of number of individual messages). A Conversation is a 24-hour thread between a business and an end-user.
+
 ### Conversation type definitions
 
-**Marketing Conversations:** Business-initiated conversations that may include promotions or offers, informational updates like a back-in-stock alert, or invitations for customers to respond or take action
+**Marketing Conversations:** Business-initiated conversations that enable you to achieve a wide range of goals, from generating awareness to driving sales and retargeting customers. Examples include new product, service, or feature announcements, targeted promotions/offers, and cart abandonment reminders.
 
-**Utility Conversations:** Business-initiated conversations facilitating a specific, agreed-upon request or transaction, or update to a customer about an ongoing transaction, including post-purchase notifications and recurring billing statements
+**Utility Conversations:** Business-initiated conversations that enable you to follow-up on user actions or requests. Examples include opt-in confirmation, order/delivery management (e.g., delivery update), account updates or alerts (e.g., payment reminder), or feedback surveys.
 
-**Authentication Conversations:** Enable businesses to authenticate users with one-time passcodes, potentially at multiple steps in the login process (for example, account verification, account recovery, integrity challenges).
-* Authentication conversations will only be supported on a case-by-case basis and Braze cannot guarantee specific SLAs. Additionally, Braze does not support PIN generation.
-
-**Service Conversations:** User-initiated conversations that are responded to with a non-templated
-message.
+**Authentication Conversations:** Enable you to authenticate users with one-time passcodes, potentially at multiple steps in the login process (e.g., account verification, account recovery, integrity challenges).
 
 {% alert note %}
-User-initiated conversations that are responded to with a message template will be billed based on the template that the business responds with (for example, marketing, utility, or authentication).
+Authentication conversations will only be supported on a case-by-case basis and Braze cannot guarantee specific SLAs. Additionally, Braze does not support PIN generation.
+{% endalert %}
+
+**Service Conversations:** User-initiated conversations that are responded to with a non-templated message.
+
+{% alert note %}
+User-initiated conversations that are responded to with a marketing or utility template will be charged as such.
 {% endalert %}
 
 ## Billing region breakdown
