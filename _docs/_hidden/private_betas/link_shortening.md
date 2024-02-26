@@ -4,7 +4,7 @@ permalink: "/updated_link_shortening/"
 hidden: true
 ---
 
-# Link Shortening
+# Link shortening
 
 > Link shortening and click tracking allow you to automatically shorten URLs contained in SMS messages and collect click-through-rate analytics, providing additional engagement metrics to help understand how your users are engaging with your SMS campaigns. 
 
