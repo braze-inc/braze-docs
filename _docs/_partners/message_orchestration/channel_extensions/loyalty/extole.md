@@ -35,7 +35,7 @@ The following use cases showcase a few ways you can leverage Extole’s integrat
 
 Complete the following steps to quickly get your integration up and running. Your Extole implementation and customer success managers will support you through this process and answer any questions you may have.
 
-### Connect to Your Braze Account
+### Connect to your Braze account
 
 1. Select the Braze integration on the [Partners](https://my.extole.com/partners) page of your My Extole account.
 2. Within the Braze integration, hit the Install button to initiate the connection between Extole and Braze.
