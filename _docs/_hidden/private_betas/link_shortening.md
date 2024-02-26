@@ -42,7 +42,7 @@ For Braze to recognize URLs, they must start with _http://_ or _https://_. When 
 
 You can dynamically construct your URL directly within the Braze composer, allowing you to add dynamic UTM parameters to your URLs or send user’s unique links (such as directing users to their abandoned cart or to a specific product that is back in stock).
 
-#### Construct a URL with supported Liquid personalization tags
+#### Create a URL with supported Liquid personalization tags
 
 URLs can be dynamically generated through the use of any [supported Liquid personalization tags]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/).
 
