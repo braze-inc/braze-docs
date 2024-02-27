@@ -46,69 +46,68 @@ Column definitions are as follows:
         <th><b>Destination</b></th>
         <th><b>Multiplier</b></th>
         <th class="credits-column"><b>Credits Consumed with One Message</b></th>
-    </tr>
     <tbody><tr>
     <td>SMS - US / CA</td>
-    <td>0.7</td>
+    <td>0.4</td>
     <td>United States</td>
     <td>1.00</td>
-    <td>0.70</td>
+    <td>0.40</td>
     </tr>
     <tr>
     <td>SMS - US / CA</td>
-    <td>0.7</td>
+    <td>0.4</td>
     <td>United States Toll Free</td>
     <td>1.50</td>
-    <td>1.05</td>
+    <td>0.60</td>
     </tr>
     <tr>
     <td>SMS - US / CA</td>
-    <td>0.7</td>
+    <td>0.4</td>
     <td>Canada</td>
     <td>1.00</td>
-    <td>0.70</td>
+    <td>0.40</td>
     </tr>
     <tr>
     <td>SMS - US / CA</td>
-    <td>0.7</td>
+    <td>0.4</td>
     <td>Canada Toll Free</td>
     <td>1.30</td>
-    <td>0.91</td>
+    <td>0.52</td>
     </tr>
     <tr>
     <td>MMS - US / CA</td>
-    <td>2</td>
+    <td>1.2</td>
     <td>United States</td>
     <td>1.00</td>
-    <td>2.00</td>
+    <td>1.20</td>
     </tr>
     <tr>
     <td>MMS - US / CA</td>
-    <td>2</td>
+    <td>1.2</td>
     <td>United States Toll Free</td>
     <td>2.00</td>
-    <td>4.00</td>
+    <td>2.40</td>
     </tr>
     <tr>
     <td>MMS - US / CA</td>
-    <td>2</td>
+    <td>1.2</td>
     <td>Canada Long Code</td>
     <td>1.50</td>
-    <td>3.00</td>
+    <td>1.80</td>
     </tr>
     <tr>
     <td>MMS - US / CA</td>
-    <td>2</td>
+    <td>1.2</td>
     <td>Canada Short Code</td>
     <td>4.00</td>
-    <td>8.00</td>
+    <td>4.80</td>
     </tr>
     <tr>
     <td>MMS - US / CA</td>
-    <td>2</td>
+    <td>1.2</td>
     <td>Canada Toll Free</td>
     <td>1.30</td>
-    <td>2.60</td>
+    <td>1.56</td>
     </tr>
     <tr>
     <td>SMS / MMS - Global</td>
@@ -2679,7 +2678,7 @@ Column definitions are as follows:
     <td>1.05</td>
     <td>10.50</td>
     </tr>
-</tbody></table>
+    </tbody></table>
 {: .reset-td-br-1 .reset-td-br-2}
 {% enddetails %}
 
