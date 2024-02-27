@@ -35,7 +35,7 @@ guide_featured_list:
     image: /assets/img/braze_icons/key-01.svg
   - name: GIF
     link: /docs/developer_guide/platform_integration_guides/android/news_feed/customization/gifs/
-    fa_icon: fa-solid fa-file-image
+    fa_icon: /assets/img/braze_icons/image-01.svg
 
 
 ---

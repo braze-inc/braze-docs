@@ -41,7 +41,7 @@ guide_featured_list:
     image: /assets/img/braze_icons/message-x-circle.svg
   - name: GIF
     link: /docs/developer_guide/platform_integration_guides/android/content_cards/customization/GIFs/
-    fa_icon: fa-solid fa-file-image
+    fa_icon: /assets/img/braze_icons/image-01.svg
   - name: Cas d’utilisation de la vue carrousel
     link: /docs/developer_guide/platform_integration_guides/android/content_cards/customization/use_cases/carousel_view/
     image: /assets/img/braze_icons/switch-horizontal-01.svg

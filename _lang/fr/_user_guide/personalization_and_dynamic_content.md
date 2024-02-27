@@ -24,7 +24,7 @@ guide_featured_list:
   image: /assets/img/braze_icons/columns-01.svg
 - name: "Paires clé-valeur"
   link: /docs/user_guide/personalization_and_dynamic_content/key_value_pairs/
-  fa_icon: fa-solid fa-key
+  fa_icon: /assets/img/braze_icons/key-01.svg
 - name: Promotion Codes
   link: /docs/user_guide/personalization_and_dynamic_content/promotion_codes/
   fa_icon: fa-solid fa-tag

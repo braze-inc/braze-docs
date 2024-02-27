@@ -14,13 +14,13 @@ guide_menu_title: "Legal"
 guide_menu_list:
 - name: Data Processing Addendum (PDF)
   link: https://marketing-assets.braze.com/production/hero/Braze-DPA-Rev-June-2023-Final-copy.pdf?v=1685959392
-  fa_icon: fa-solid fa-gavel
+  fa_icon: image: /assets/img/braze_icons/briefcase-02.svg
 - name: DPA FAQs
   link: https://www.braze.com/company/legal/dpa
   fa_icon: fa-solid fa-question
 - name: Standard Contractual Clauses
   link: https://www.braze.com/company/legal/scc
-  fa_icon: fa-solid fa-gavel
+  fa_icon: /assets/img/braze_icons/briefcase-02.svg
 - name: Braze Subprocessors
   link: https://www.braze.com/company/legal/subprocessors
   fa_icon: fa-sharp fa-solid fa-network-wired

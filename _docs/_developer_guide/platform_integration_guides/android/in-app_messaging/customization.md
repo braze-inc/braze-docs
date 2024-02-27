@@ -35,7 +35,7 @@ guide_featured_list:
 
   - name: GIFs
     link: /docs/developer_guide/platform_integration_guides/android/in-app_messaging/customization/gifs/
-    fa_icon: fa-solid fa-file-image
+    fa_icon: /assets/img/braze_icons/image-01.svg
   - name: YouTube in HTML
     link: /docs/developer_guide/platform_integration_guides/android/in-app_messaging/customization/youtube_in_html/
     fa_icon: fa-brands fa-youtube
