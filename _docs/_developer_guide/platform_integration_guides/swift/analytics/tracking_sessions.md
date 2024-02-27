@@ -75,7 +75,7 @@ The Braze SDK provides a [`subscribeToSessionUpdates(_:)`][1] method to listen f
 {% tab swift %}
 
 ```swift
-// This subscription is maintained through a Braze cancellable, which will observe for changes until the subscription is cancelled.
+// This subscription is maintained through a Braze cancellable, which will observe changes until the subscription is cancelled.
 // You must keep a strong reference to the cancellable to keep the subscription active.
 // The subscription is canceled either when the cancellable is deinitialized or when you call its `.cancel()` method.
 let cancellable = AppDelegate.braze?.subscribeToSessionUpdates { event in
@@ -92,7 +92,7 @@ let cancellable = AppDelegate.braze?.subscribeToSessionUpdates { event in
 {% tab OBJECTIVE-C %}
 
 ```objc
-// This subscription is maintained through a Braze cancellable, which will observe for changes until the subscription is cancelled.
+// This subscription is maintained through a Braze cancellable, which will observe changes until the subscription is cancelled.
 // You must keep a strong reference to the cancellable to keep the subscription active.
 // The subscription is canceled either when the cancellable is deinitialized or when you call its `.cancel()` method.
 BRZCancellable *cancellable = [AppDelegate.braze subscribeToSessionUpdates:^(BRZSessionEvent * _Nonnull event) {
