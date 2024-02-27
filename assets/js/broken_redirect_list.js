@@ -802,6 +802,7 @@ validurls['/docs/user_guide/message_building_by_channel/email/email_private_rela
 validurls['/docs/user_guide/message_building_by_channel/email/mpp/'] = '/docs/user_guide/message_building_by_channel/email/apple_mail/mpp/';
 
 validurls['/docs/user_guide/data_and_analytics/query_builder/custom_sql/'] = '/docs/user_guide/data_and_analytics/query_builder/#custom-sql';
+validurls['/docs/sql_segments_tables/'] = '/docs/user_guide/engagement_tools/segments/sql_segments/sql_segments_tables/';
 
 validurls['/docs/frequency_capping_tag/'] = '/docs/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/#frequency-capping';
 validurls['/docs/user_guide/data_and_analytics/user_data_collection/cloud_ingestion'] = '/docs/user_guide/data_and_analytics/cloud_ingestion/';
