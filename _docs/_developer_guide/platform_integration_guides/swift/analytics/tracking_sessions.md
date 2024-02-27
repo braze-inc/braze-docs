@@ -112,7 +112,21 @@ BRZCancellable *cancellable = [AppDelegate.braze subscribeToSessionUpdates:^(BRZ
 {% endtab %}
 {% endtabs %}
 
+Alternatively, in Swift, you can use the [`sessionUpdatesStream`][2] `AsyncStream` to observe changes in asynchronous contexts:
+
+```swift
+for await event in braze.sessionUpdatesStream {
+  switch event {
+  case .started(let id):
+    print("Session \(id) has started")
+  case .ended(let id):
+    print("Session \(id) has ended")
+  }
+}
+```
+
 [1]: https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/subscribetosessionupdates(_:)
+[2]: https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/sessionupdatesstream
 [session_tracking_1]: https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/configuration-swift.class
 [session_tracking_3]: https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/configuration-swift.class
 [session_tracking_5]: https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#initialize
