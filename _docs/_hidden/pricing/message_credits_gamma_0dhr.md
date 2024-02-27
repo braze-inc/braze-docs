@@ -46,6 +46,7 @@ Column definitions are as follows:
         <th><b>Destination</b></th>
         <th><b>Multiplier</b></th>
         <th class="credits-column"><b>Credits Consumed with One Message</b></th>
+    </tr>
     <tbody><tr>
     <td>SMS - US / CA</td>
     <td>0.4</td>
@@ -2678,7 +2679,7 @@ Column definitions are as follows:
     <td>1.05</td>
     <td>10.50</td>
     </tr>
-    </tbody></table>
+</tbody></table>
 {: .reset-td-br-1 .reset-td-br-2}
 {% enddetails %}
 
