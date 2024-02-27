@@ -171,6 +171,72 @@ class GlideIntegrationApplication : Application() {
 {% endtab %}
 {% endtabs %}
 
+### Custom Image Loading with Jetpack Compose
+
+To override image loading with Jetpack Compose, you can pass in a value to `imageComposable`. This function will take a `Card` and the function should render the image and also the modifiers needed. Alternatively, you can use `customCardComposer` of `ContentCardsList` to render the entire card.
+
+In this example, we're using Glide's Compose library.
+
+```kotlin
+ContentCardsList(
+    cardStyle = ContentCardStyling(
+        imageComposable = { card ->
+            when (card.cardType) {
+                CardType.CAPTIONED_IMAGE -> {
+                    val captionedImageCard = card as CaptionedImageCard
+                    GlideImage(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .wrapContentHeight()
+                            .run {
+                                if (captionedImageCard.aspectRatio > 0) {
+                                    aspectRatio(captionedImageCard.aspectRatio)
+                                } else {
+                                    this
+                                }
+                            },
+                        contentScale = ContentScale.Crop,
+                        model = captionedImageCard.url,
+                        loading = placeholder(R.drawable.pushpin),
+                        contentDescription = ""
+                    )
+                }
+                CardType.IMAGE -> {
+                    val imageOnlyCard = card as ImageOnlyCard
+                    GlideImage(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .run {
+                                if (imageOnlyCard.aspectRatio > 0) {
+                                    aspectRatio(imageOnlyCard.aspectRatio)
+                                } else {
+                                    this
+                                }
+                            },
+                        contentScale = ContentScale.Crop,
+                        model = imageOnlyCard.url,
+                        loading = placeholder(R.drawable.pushpin),
+                        contentDescription = ""
+                    )
+                }
+                CardType.SHORT_NEWS -> {
+                    val shortNews = card as ShortNewsCard
+                    GlideImage(
+                        modifier = Modifier
+                            .width(100.dp)
+                            .height(100.dp),
+                        model = shortNews.url,
+                        loading = placeholder(R.drawable.pushpin),
+                        contentDescription = ""
+                    )
+                }
+                else -> Unit
+            }
+        }
+    )
+)
+```
+
 [gifs-56]: http://developer.android.com/reference/android/app/Application.html
 [gifs-59]: https://github.com/braze-inc/braze-android-sdk#version-support
 [gifs-60]: http://developer.android.com/guide/topics/manifest/application-element.html#nm
