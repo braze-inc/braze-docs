@@ -24,7 +24,7 @@ guide_featured_list:
   fa_icon: fa-solid fa-newspaper
 - name: Messagerie de notification push
   link: /docs/user_guide/message_building_by_channel/push/
-  fa_icon: fa-solid fa-mobile-screen-button
+  fa_icon: /assets/img/braze_icons/marker-pin-01.svg
 - name: SMS & MMS
   link: /docs/user_guide/message_building_by_channel/sms/
   fa_icon: fa-solid fa-comment-sms

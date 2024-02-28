@@ -13,10 +13,10 @@ guide_featured_title: "Section Articles"
 guide_featured_list:
   - name: Suivi de localisation
     link: /docs/user_guide/engagement_tools/locations_and_geofences/location_tracking
-    fa_icon: fas fa-map-marker-alt
+    fa_icon: /assets/img/braze_icons/marker-pin-01.svg
   - name: Création de geofences
     link: /docs/user_guide/engagement_tools/locations_and_geofences/creating_geofences/
-    fa_icon: fas fa-map-marker-alt
+    fa_icon: /assets/img/braze_icons/marker-pin-01.svg
   - name: Intégrations mobiles
     link: /docs/user_guide/engagement_tools/locations_and_geofences/mobile_integrations/
     fa_icon: fas fa-mobile

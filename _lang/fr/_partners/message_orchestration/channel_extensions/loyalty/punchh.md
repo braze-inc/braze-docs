@@ -13,7 +13,7 @@ description: "Cette page d’accueil contient tout ce qui concerne Punchh, y com
 guide_featured_list:
 - name: Punchh
   link: /docs/partners/message_orchestration/channel_extensions/loyalty/punchh/punchh/
-  fa_icon: fa-solid fa-money-bill
+  fa_icon: /assets/img/braze_icons/bank-note-02.svg
 - name: Génération de code dynamique
   link: /docs/partners/message_orchestration/channel_extensions/loyalty/punchh/code_generation/
   image: /assets/img/braze_icons/code-square-01.svg

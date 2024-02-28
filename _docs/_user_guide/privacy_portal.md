@@ -50,10 +50,10 @@ guide_menu_list:
   fa_icon: /assets/img/braze_icons/briefcase-02.svg
 - name: Braze Subprocessors
   link: https://www.braze.com/company/legal/subprocessors
-  fa_icon: fa-sharp fa-solid fa-network-wired
+  fa_icon: /assets/img/braze_icons/dataflow-04.svg
 - name: Transparency Report
   link: https://www.braze.com/company/legal/transparency-report
-  fa_icon: fa-solid fa-magnifying-glass
+  fa_icon: /assets/img/braze_icons/book-open-01.svg
 - name: GDPR FAQs
   link: https://www.braze.com/company/legal/gdpr-faq
   fa_icon: fa-solid fa-question
@@ -71,10 +71,10 @@ guide_menu_title2: "Security"
 guide_menu_list2:
 - name: Security, Privacy, and Architecture Datasheet
   link: https://www.braze.com/company/legal/security-schedule
-  fa_icon: fa-solid fa-lock
+  fa_icon: /assets/img/braze_icons/lock-01.svg
 - name: Braze Security Certifications
   link: /docs/developer_guide/disclosures/security_qualifications/#soc-2-examination
-  fa_icon: fa-solid fa-lock
+  fa_icon: /assets/img/braze_icons/lock-01.svg
 
 ---
 

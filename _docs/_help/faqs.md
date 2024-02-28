@@ -26,7 +26,7 @@ guide_featured_list:
     fa_icon: fas fa-mobile-alt
   - name: "Locations and Geofences FAQ"
     link: /docs/user_guide/engagement_tools/locations_and_geofences/faqs/
-    fa_icon: fas fa-map-marker-alt
+    fa_icon: /assets/img/braze_icons/marker-pin-01.svg
   - name: "Media Library FAQ"
     link: /docs/user_guide/engagement_tools/templates_and_media/faqs/
     fa_icon: fas fa-images

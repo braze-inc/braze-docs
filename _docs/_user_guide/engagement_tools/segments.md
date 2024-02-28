@@ -48,7 +48,7 @@ guide_menu_list:
     fa_icon: fas fa-street-view
   - name: Beacon and Geofence Support
     link: /docs/user_guide/engagement_tools/segments/beacon_support/
-    fa_icon: fas fa-map-marker-alt
+    fa_icon: /assets/img/braze_icons/marker-pin-01.svg
   - name: Regular Expressions
     link: /docs/user_guide/engagement_tools/segments/regex/
     fa_icon: fas fa-search

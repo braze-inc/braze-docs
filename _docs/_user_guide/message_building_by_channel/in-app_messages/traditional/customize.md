@@ -24,7 +24,7 @@ guide_featured_list:
   fa_icon: fa-solid fa-envelope-open-text
 - name: "Color Profiles and CSS"
   link: /docs/user_guide/message_building_by_channel/in-app_messages/traditional/customize/color_profiles_and_css/
-  fa_icon: fa-solid fa-palette
+  fa_icon: /assets/img/braze_icons/palette.svg
 - name: "Video"
   link: /docs/user_guide/message_building_by_channel/in-app_messages/traditional/customize/video/
   fa_icon: fa-solid fa-video

@@ -17,7 +17,7 @@ guide_featured_list:
     fa_icon: fas fa-vials
   - name: Récepteur de diffusion personnalisée de notifications push pour Android
     link: /docs/help/release_notes/deprecations/custom_broadcast_receiver/
-    fa_icon: fa-solid fa-mobile
+    fa_icon: /assets/img/braze_icons/phone-01.svg
   - name: Configuration du SDK Eclipse
     link: /docs/help/release_notes/deprecations/eclipse_setup_deprecated/
     fa_icon: fas fa-circle
