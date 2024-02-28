@@ -15,7 +15,7 @@ search_rank: 1
 
 > This reference article covers the Content Card integration using Jetpack Compose for your Android or FireOS application.
 
-In Android, the Content Card feed is available to add into your Compose application by simply adding `ContentCardList()`. 
+In Android, the Content Card feed is available to add into your Compose application by simply adding `ContentCardsList()`. 
 
 ```kotlin
 setContent {
