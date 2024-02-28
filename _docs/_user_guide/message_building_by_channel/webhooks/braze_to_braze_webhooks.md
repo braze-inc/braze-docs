@@ -14,16 +14,19 @@ description: "This article covers how to create a Braze to Braze webhook for key
 
 ## Prerequisites
 
-To create a Braze to Braze webhook, you'll need an [API key][3] with permissions for the endpoint you want to reach. For example, if you're using the `/users/track` endpoint, you'll need an API key with `users.track` permissions.
+To create a Braze to Braze webhook, you'll need an [API key][3] with permissions for the endpoint you want to reach.
 
 ## Use cases
 
 While there's a lot you can do with Braze to Braze webhooks, here are some common use cases to get you started:
 
-- Write or update custom attributes on a user profile.
-- Reference an event property throughout a Canvas by storing the event property on the user profile as an attribute.
 - Increment an integer custom attribute for a counter when a user receives a message.
 - Trigger a second Canvas from an initial Canvas.
+
+{% alert tip %}
+Instead of using a Braze to Braze webhook to connect with the `/users/track` endpoint, you can use the [User Update step]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/user_update/) in Canvas to track a user's attributes, events, and purchases in a JSON composer. This way, these updates are batched so Braze can process them more efficiently than a Braze-to-Braze webhook.
+{% endalert %}
+
 
 The example use cases on this page assume that you're already familiar with [how webhooks work][4] and how to [create a webhook][5] in Braze.
 
