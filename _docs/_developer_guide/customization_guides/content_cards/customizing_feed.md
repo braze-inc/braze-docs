@@ -361,7 +361,7 @@ For more information on customizing Content Card style elements, see [Customizin
 {% tab Jetpack Compose %}
 If the `ContentCardsList` determines that the user does not qualify for any Content Cards, it displays the empty feed error message.
 
-To customize this, you can pass in an `emptyString` to `ContentCardList`. You can also pass in `emptyTextStyle` to `ContentCardListStyling` to further customize this message.
+To customize this, you can pass in an `emptyString` to `ContentCardsList`. You can also pass in `emptyTextStyle` to `ContentCardListStyling` to further customize this message.
 
 ```kotlin
 ContentCardsList(
