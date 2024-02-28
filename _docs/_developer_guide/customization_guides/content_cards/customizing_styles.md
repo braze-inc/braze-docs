@@ -80,7 +80,7 @@ To customize your Content Card styling, override this default style. To override
 
 By default, Android and FireOS SDK Content Cards match the standard Android UI guidelines to provide a seamless experience.
 
-Styling can be applied in two ways. The first is to pass a `ContentCardListStyling` and `ContentCardStyling` to `ContentCardList()`
+Styling can be applied in two ways. The first is to pass a `ContentCardListStyling` and `ContentCardStyling` to `ContentCardsList()`
 
 ```kotlin
 ContentCardsList(
