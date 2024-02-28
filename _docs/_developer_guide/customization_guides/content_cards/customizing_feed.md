@@ -359,7 +359,7 @@ The style used to display this message can be found via [`Braze.ContentCardsDisp
 For more information on customizing Content Card style elements, see [Customizing style]({{site.baseurl}}/developer_guide/customization_guides/content_cards/customizing_styles).
 {% endtab %}
 {% tab Jetpack Compose %}
-If the ContentCardList determines that the user does not qualify for any Content Cards, it displays the empty feed error message.
+If the `ContentCardsList` determines that the user does not qualify for any Content Cards, it displays the empty feed error message.
 
 To customize this, you can pass in an `emptyString` to `ContentCardList`. You can also pass in `emptyTextStyle` to `ContentCardListStyling` to further customize this message.
 
