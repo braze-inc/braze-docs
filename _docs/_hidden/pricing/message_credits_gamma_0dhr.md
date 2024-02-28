@@ -2720,25 +2720,32 @@ User-initiated conversations that are responded to with a marketing or utility t
 ## Billing region breakdown
 
 #### North America
+
 United States, Canada
 
 #### Rest of Africa
+
 Algeria, Angola, Benin, Botswana, Burkina Faso, Burundi, Cameroon, Chad, Congo, Eritrea, Ethiopia, Gabon, Gambia, Ghana,  Guinea-Bissau, Ivory Coast, Kenya, Lesotho, Liberia, Libya,
 Madagascar, Malawi, Mali, Mauritania, Morocco, Mozambique, Namibia, Niger, Rwanda, Senegal, Sierra Leone, Somalia, South Sudan, Sudan, Swaziland, Tanzania, Togo, Tunisia, Uganda, Zambia
 
 #### Rest of Asia Pacific
+
 Afghanistan, Australia, Bangladesh, Cambodia, China, Hong Kong, Japan, Laos, Mongolia, Nepal, New Zealand, Papua New Guinea, Philippines, Singapore, Sri Lanka, Taiwan, Tajikistan, Thailand,
 Turkmenistan, Uzbekistan, Vietnam
 
 #### Rest of Central & Eastern Europe
+
 Albania, Armenia, Azerbaijan, Belarus, Bulgaria, Croatia, Czech Republic, Georgia, Greece, Hungary, Latvia, Lithuania, Macedonia, Moldova, Poland, Romania, Serbia, Slovakia, Slovenia, Ukraine
 
 #### Rest of Latin America
+
 Bolivia, Costa Rica, Dominican Republic, Ecuador, El Salvador,
 Guatemala, Haiti, Honduras, Jamaica, Nicaragua, Panama, Paraguay, Puerto Rico, Uruguay, Venezuela
 
 #### Rest of Middle East
+
 Bahrain, Iraq, Jordan, Kuwait, Lebanon, Oman, Qatar, Yemen
 
 #### Rest of Western Europe
+
 Austria, Belgium, Denmark, Finland, Ireland, Norway, Portugal, Sweden, Switzerland
