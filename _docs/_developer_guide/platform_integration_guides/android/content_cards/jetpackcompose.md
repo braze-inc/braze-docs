@@ -24,7 +24,7 @@ setContent {
 ```
 
 ### Styling Content Cards
-Styling can be applied in two ways. The first is to pass a `ContentCardListStyling` and `ContentCardStyling` to `ContentCardList()`
+Styling can be applied in two ways. The first is to pass a `ContentCardListStyling` and `ContentCardStyling` to `ContentCardsList()`
 
 ```kotlin
 ContentCardsList(
