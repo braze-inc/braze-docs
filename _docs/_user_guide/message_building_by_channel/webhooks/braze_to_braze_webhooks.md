@@ -27,7 +27,7 @@ While there's a lot you can do with Braze to Braze webhooks, here are some commo
 Instead of using a Braze to Braze webhook to connect with the `/users/track` endpoint, you can use the [User Update step]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/user_update/) in Canvas to track a user's attributes, events, and purchases in a JSON composer. This way, these updates are batched so Braze can process them more efficiently than a Braze-to-Braze webhook.
 {% endalert %}
 
-The example use cases on this page assume that you're already familiar with [how webhooks work][4] and how to [create a webhook][5] in Braze.
+The use cases on this page assume that you're already familiar with [how webhooks work][4] and how to [create a webhook][5] in Braze.
 
 ## Steps for creating a Braze to Braze webhook
 
@@ -52,7 +52,7 @@ In order to reference an event property throughout a Canvas, you need to add the
 Follow the general steps for creating a Braze to Braze webhook, and refer to the following when configuring your webhook:
 
 - **Webhook URL:** Your [REST endpoint URL][7] followed by `/users/track`. For example, for the US-06 instance, the URL would be `https://rest.iad-06.braze.com/users/track`.
-- **Request Body:** Raw Text
+- **Request Body:** Raw text
 
 #### Request headers and method
 
