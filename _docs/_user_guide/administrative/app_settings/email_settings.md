@@ -185,7 +185,7 @@ If you have multiple custom unsubscribe flows for managing many brands or lists 
 No, that doesn't adhere to RFC 8058, meaning you won't be compliant with Yahoo and Gmail's one-click unsubscribe requirement.
 {% enddetails %}
 
-{% details Will I need to edit past email campaigns/canvases to apply the one-click unsubscribe setting after enabling it? %}
+{% details Will I need to edit past email campaigns and Canvases to apply the one-click unsubscribe setting after enabling it? %}
 No, once the setting is enabled under **Email Preferences**, Braze will automatically add the one-click unsubscribe headers to all outgoing marketing and promotional messages.
 {% enddetails %}
 
