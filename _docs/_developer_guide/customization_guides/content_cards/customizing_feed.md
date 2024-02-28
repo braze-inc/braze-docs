@@ -372,7 +372,7 @@ ContentCardsList(
 )
 ```
 
-If you have a Composable you would like to display instead, you can pass in `emptyComposable` to `ContentCardList`. If `emptyComposable` is specified, the `emptyString` will not be used.
+If you have a Composable you would like to display instead, you can pass in `emptyComposable` to `ContentCardsList`. If `emptyComposable` is specified, the `emptyString` will not be used.
 
 ```kotlin
 ContentCardsList(
