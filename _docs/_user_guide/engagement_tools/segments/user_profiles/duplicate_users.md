@@ -29,12 +29,12 @@ To begin the merge process, select **Merge duplicates**.
 
 ![One of the duplicate user's profiles.]()
 
-Choose which user profile to keep and which to merge, then select **Merge profiles** when you're ready. Repeat this process until you've merged all duplicate profiles.
+Choose which user profile to keep and which to merge, then select **Merge profiles**. Repeat this process until you've merged all duplicate profiles.
 
 ![The individual merge page for a duplicate profile.]()
 
 {% alert warning %}
-Duplicate profiles are deleted after merging and cannot be recovered.
+Merged user profiles cannot be recovered after merging.
 {% endalert %}
 
 ## Bulk merging
@@ -74,7 +74,7 @@ In the following example, Braze used the user's email address to flag duplicate 
 If you're satisfied with the results of your preview, select **Merge all duplicates**.
 
 {% alert warning %}
-Duplicate profiles that are deleted after merging cannot be recovered.
+Merged user profiles cannot be recovered after merging.
 {% endalert %}
 
 ![The "Manage Audience" page with "Merge all duplicates" highlighted.]()
