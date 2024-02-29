@@ -79,6 +79,14 @@ In Braze, select <i class="fa-solid fa-gear"></i>&nbsp;**Settings** > **App Sett
 
 Under **Push Notification Settings**, select **Upload JSON File**, then choose the file [you generated earlier](#step-3-generate-json-credentials). When you're finished, select **Save**.
 
+{% alert tip %}
+To make sure your push messages send, confirm the following:
+
+- Your credentials exist in the correct Google Cloud Platform project ID (correct sender ID).
+- Your credentials have the correct permission scope.
+- You uploaded the correct credentials to the correct Braze workspace (correct sender ID).
+{% endalert %}
+
 ![The form for "Push Notification Settings" with the private key updated in the "Firebase Cloud Messaging Server Key" field.]({% image_buster /assets/img/android/push_integration/migration/upload_json_credentials/upload-json-file.png %})
 
 {% alert warning %}
