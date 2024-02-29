@@ -1,6 +1,6 @@
 ---
 nav_title: Multiple Business Accounts 
-article_title: Multiple WhatsApp Business Accounts and Phone Numbers  
+article_title: Multiple WhatsApp Business Accounts and Phone Numbers
 page_order: 0
 description: "This reference article covers the steps to add WhatsApp Business accounts and phone numbers."
 page_type: reference
@@ -10,7 +10,7 @@ channel:
 
 # Multiple WhatsApp Business accounts and phone numbers
 
-> You can add multiple WhatsApp Business accounts and subscription groups (and phone numbers) to each workspace. Each subscription group is connected to one unique phone number, so you can't connect the same phone number to multiple subscription groups or connect multiple phone numbers to a subscription group.
+> You can add multiple WhatsApp Business accounts and subscription groups (and phone numbers) to each workspace. <br><br>Each subscription group is connected to one unique phone number, so you can't connect the same phone number to multiple subscription groups or connect multiple phone numbers to a subscription group.
 
 {% alert important %}
 Adding multiple WhatsApp Business accounts and phone numbers is currently in early access. Contact your Braze account manager if you're interested in participating in the early access.
@@ -32,7 +32,7 @@ You can add up to 10 WhatsApp Business accounts per workspace. To add an account
 
 ## Multiple subscription groups and phone numbers
 
-Subscription groups are a Braze feature that is supported by Meta. Message templates are shared among all phone numbers in the same WhatsApp Business account. For details about WhatsApp subscription groups, view [Subscription groups]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/user_subscription/).
+Message templates are shared among all phone numbers in the same WhatsApp Business account. For details about WhatsApp subscription groups, view [Subscription groups]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/user_subscription/).
 
 Each WhatsApp phone number will appear as a separate WhatsApp chat to users. Each phone number within a WhatsApp Business account operates independently from each other, so they can have the same or different values for the following: 
 - Display name 
