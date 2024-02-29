@@ -27,7 +27,7 @@ guide_featured_list:
   image: /assets/img/braze_icons/table.svg
 - name: "Raccourcissement de lien"
   link: /docs/user_guide/message_building_by_channel/sms/campaign/link_shortening/
-  fa_icon: /assets/img/braze_icons/link-03.svg
+  image: /assets/img/braze_icons/link-03.svg
 - name: "Reciblage utilisateur"
   link: /docs/user_guide/message_building_by_channel/sms/campaign/retargeting/
   fa_icon: fa-solid fa-user

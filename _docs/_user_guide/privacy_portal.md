@@ -41,25 +41,25 @@ guide_menu_title: "Legal"
 guide_menu_list:
 - name: Data Processing Addendum (PDF)
   link: https://marketing-assets.braze.com/production/hero/Braze-DPA-Rev-June-2023-Final-copy.pdf?v=1685959392
-  fa_icon: /assets/img/braze_icons/briefcase-02.svg
+  image: /assets/img/braze_icons/briefcase-02.svg
 - name: DPA FAQs
   link: https://www.braze.com/company/legal/dpa
-  fa_icon: /assets/img/braze_icons/annotation-question.svg
+  image: /assets/img/braze_icons/annotation-question.svg
 - name: Standard Contractual Clauses
   link: https://www.braze.com/company/legal/scc
-  fa_icon: /assets/img/braze_icons/briefcase-02.svg
+  image: /assets/img/braze_icons/briefcase-02.svg
 - name: Braze Subprocessors
   link: https://www.braze.com/company/legal/subprocessors
-  fa_icon: /assets/img/braze_icons/dataflow-04.svg
+  image: /assets/img/braze_icons/dataflow-04.svg
 - name: Transparency Report
   link: https://www.braze.com/company/legal/transparency-report
-  fa_icon: /assets/img/braze_icons/search-refraction.svg
+  image: /assets/img/braze_icons/search-refraction.svg
 - name: GDPR FAQs
   link: https://www.braze.com/company/legal/gdpr-faq
-  fa_icon: /assets/img/braze_icons/annotation-question.svg
+  image: /assets/img/braze_icons/annotation-question.svg
 - name: Acceptable Use Policy
   link: https://www.braze.com/company/legal/aup
-  fa_icon: /assets/img/braze_icons/thumbs-up.svg
+  image: /assets/img/braze_icons/thumbs-up.svg
 - name: Innovation Statement
   link: /docs/developer_guide/disclosures/innovation_statement
   image: /assets/img/braze_icons/lightbulb-05.svg
@@ -71,10 +71,10 @@ guide_menu_title2: "Security"
 guide_menu_list2:
 - name: Security, Privacy, and Architecture Datasheet
   link: https://www.braze.com/company/legal/security-schedule
-  fa_icon: /assets/img/braze_icons/lock-01.svg
+  image: /assets/img/braze_icons/lock-01.svg
 - name: Braze Security Certifications
   link: /docs/developer_guide/disclosures/security_qualifications/#soc-2-examination
-  fa_icon: /assets/img/braze_icons/lock-01.svg
+  image: /assets/img/braze_icons/lock-01.svg
 
 ---
 

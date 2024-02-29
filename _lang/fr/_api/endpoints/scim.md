@@ -28,7 +28,7 @@ guide_featured_list:
     fa_icon: fa-solid fa-pencil
   - name: "SUPPRIMER : Supprimer le compte utilisateur de tableau de bord"
     link: /docs/delete_existing_dashboard_user/
-    fa_icon: /assets/img/braze_icons/trash-01.svg
+    image: /assets/img/braze_icons/trash-01.svg
 ---
 
 

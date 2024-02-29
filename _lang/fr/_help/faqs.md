@@ -26,7 +26,7 @@ guide_featured_list:
     fa_icon: fas fa-mobile-alt
   - name: "FAQ sur les localisations et geofences"
     link: /docs/user_guide/engagement_tools/locations_and_geofences/faqs/
-    fa_icon: /assets/img/braze_icons/marker-pin-01.svg
+    image: /assets/img/braze_icons/marker-pin-01.svg
   - name: "FAQ sur la bibliothèque multimédia"
     link: /docs/user_guide/engagement_tools/templates_and_media/faqs/
     fa_icon: fas fa-images
@@ -47,7 +47,7 @@ guide_featured_list:
     image: /assets/img/braze_icons/lightbulb-05.svg
   - name: "FAQ sur l’exportation API et CSV"
     link: /docs/user_guide/data_and_analytics/export_braze_data/faqs/
-    fa_icon: /assets/img/braze_icons/file-download-01.svg
+    image: /assets/img/braze_icons/file-download-01.svg
   - name: "FAQ sur les indicateurs de fonctionnalité"
     link: /docs/developer_guide/platform_wide/feature_flags/faq/
     fa_icon: fa-solid fa-flag

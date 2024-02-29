@@ -24,10 +24,10 @@ guide_featured_list:
   image: /assets/img/braze_icons/columns-01.svg
 - name: "Paires clé-valeur"
   link: /docs/user_guide/personalization_and_dynamic_content/key_value_pairs/
-  fa_icon: /assets/img/braze_icons/key-01.svg
+  image: /assets/img/braze_icons/key-01.svg
 - name: Promotion Codes
   link: /docs/user_guide/personalization_and_dynamic_content/promotion_codes/
-  fa_icon: /assets/img/braze_icons/tag-01.svg
+  image: /assets/img/braze_icons/tag-01.svg
 - name: Propriétés d’entrées persistantes Canvas
   link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/canvas_persistent_entry_properties/
   image: /assets/img/braze_icons/dataflow-03.svg

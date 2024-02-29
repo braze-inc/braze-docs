@@ -13,10 +13,10 @@ guide_featured_title: ""
 guide_featured_list:
   - name: "Overview"
     link: /docs/partners/canvas_steps/overview
-    fa_icon: /assets/img/braze_icons/refresh-ccw-02.svg
+    image: /assets/img/braze_icons/refresh-ccw-02.svg
   - name: "Frequently Asked Questions"
     link: /docs/partners/canvas_steps/faq
-    fa_icon: /assets/img/braze_icons/annotation-question.svg
+    image: /assets/img/braze_icons/annotation-question.svg
 
 guide_menu_title: "Available sync partners"
 guide_menu_list:

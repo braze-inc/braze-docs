@@ -12,7 +12,7 @@ guide_featured_title: "Available channels"
 guide_featured_list:
 - name: Content Cards
   link: /docs/user_guide/message_building_by_channel/content_cards/
-  fa_icon: /assets/img/braze_icons/table.svg
+  image: /assets/img/braze_icons/table.svg
 - name: Email Messaging
   link: /docs/user_guide/message_building_by_channel/email/
   fa_icon: fa-solid fa-envelope
@@ -24,7 +24,7 @@ guide_featured_list:
   fa_icon: fa-solid fa-newspaper
 - name: Push Messaging
   link: /docs/user_guide/message_building_by_channel/push/
-  fa_icon: /assets/img/braze_icons/marker-pin-01.svg
+  image: /assets/img/braze_icons/marker-pin-01.svg
 - name: SMS & MMS
   link: /docs/user_guide/message_building_by_channel/sms/
   fa_icon: fa-solid fa-comment-sms

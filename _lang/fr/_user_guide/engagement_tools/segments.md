@@ -42,7 +42,7 @@ guide_menu_list:
     fa_icon: fas fa-street-view
   - name: Prise en charge des balises et geofences
     link: /docs/user_guide/engagement_tools/segments/beacon_support/
-    fa_icon: /assets/img/braze_icons/marker-pin-01.svg
+    image: /assets/img/braze_icons/marker-pin-01.svg
   - name: Expressions régulières
     link: /docs/user_guide/engagement_tools/segments/regex/
     fa_icon: fas fa-search

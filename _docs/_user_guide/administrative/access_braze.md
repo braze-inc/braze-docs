@@ -31,7 +31,7 @@ guide_featured_list:
   fa_icon: fas fa-sign-in-alt
 - name: Product Portal
   link: /docs/user_guide/administrative/access_braze/portal/
-  fa_icon: /assets/img/braze_icons/annotation-question.svg
+  image: /assets/img/braze_icons/annotation-question.svg
 ---
 ## Supported browsers
 

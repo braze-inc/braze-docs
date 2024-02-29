@@ -18,5 +18,5 @@ guide_menu_list:
     fa_icon: fas fa-id-badge
   - name: Liste d’exclusion versus Suppression
     link: /docs/help/help_articles/data/blocklisting_deletion/
-    fa_icon: /assets/img/braze_icons/trash-01.svg
+    image: /assets/img/braze_icons/trash-01.svg
 ---
