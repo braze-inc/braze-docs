@@ -214,8 +214,6 @@ You can add more steps to your Canvas workflow by dragging and dropping componen
 
 ![]({% image_buster /assets/img_archive/add_components_flow.png %})
 
-As your Canvas journey increases in steps, the maximum duration is the longest possible time a user can take to complete this Canvas. This is calculated by adding the delays and trigger windows of each step for each variant for the longest path. For example, if your Canvas has a Delay step with a delay of 3 days and a Message step, the maximum duration of your Canvas will be 3 days.
-
 {% alert tip %}
 As you begin to add more steps, you can view your entire Canvas using either the **Detailed View** or **Simplified View**. **Simplified View** shows just the component icons as a high-level visual of your user journey, whereas **Detailed View** shows the expanded step details. Depending on your preferences, you can toggle between these views!
 {% endalert %}
@@ -223,6 +221,10 @@ As you begin to add more steps, you can view your entire Canvas using either the
 {% alert warning %}
 A Canvas built using Canvas Flow can contain up to 200 steps. If your Canvas exceeds 200 steps, loading issues will occur.
 {% endalert %}
+
+#### Maximum duration
+
+As your Canvas journey increases in steps, the maximum duration is the longest possible time a user can take to complete this Canvas. This is calculated by adding the delays and trigger windows of each step for each variant for the longest path. For example, if your Canvas has a Delay step with a delay of 3 days and a Message step, the maximum duration of your Canvas will be 3 days.
 
 ### Editing a step
 
