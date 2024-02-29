@@ -222,6 +222,10 @@ As you begin to add more steps, you can view your entire Canvas using either the
 A Canvas built using Canvas Flow can contain up to 200 steps. If your Canvas exceeds 200 steps, loading issues will occur.
 {% endalert %}
 
+#### Maximum duration
+
+As your Canvas journey increases in steps, the maximum duration is the longest possible time a user can take to complete this Canvas. This is calculated by adding the delays and trigger windows of each step for each variant for the longest path. For example, if your Canvas has a Delay step with a delay of 3 days and a Message step, the maximum duration of your Canvas will be 3 days.
+
 ### Editing a step
 
 Looking to edit a step in your user journey? Check out how to do this depending on your Canvas workflow!

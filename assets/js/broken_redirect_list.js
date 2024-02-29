@@ -1104,4 +1104,6 @@ validurls['/docs/help/help_articles/docs/contribution/'] = '/docs/contributing/h
 
 validurls['/docs/user_guide/administrative/app_settings/manage_your_braze_users/deleting_users_from_your_account/#deleting-braze-account-users'] = '/docs/user_guide/administrative/app_settings/manage_your_braze_users/adding_users_to_your_dashboard/#deleting-braze-users';
 
+validurls['/docs/list-unsubscribe/'] = '/docs/user_guide/administrative/app_settings/email_settings/#list-unsubscribe-header';
+
 // validurls['OLD'] = 'NEW';
