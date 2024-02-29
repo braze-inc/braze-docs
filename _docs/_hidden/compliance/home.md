@@ -17,7 +17,7 @@ guide_menu_list:
   fa_icon: /assets/img/braze_icons/briefcase-02.svg
 - name: DPA FAQs
   link: https://www.braze.com/company/legal/dpa
-  fa_icon: fa-solid fa-question
+  fa_icon: /assets/img/braze_icons/annotation-question.svg
 - name: Standard Contractual Clauses
   link: https://www.braze.com/company/legal/scc
   fa_icon: /assets/img/braze_icons/briefcase-02.svg
@@ -26,13 +26,13 @@ guide_menu_list:
   fa_icon: /assets/img/braze_icons/dataflow-04.svg
 - name: Transparency Report
   link: https://www.braze.com/company/legal/transparency-report
-  fa_icon: /assets/img/braze_icons/book-open-01.svg
+  fa_icon: /assets/img/braze_icons/search-refraction.svg
 - name: GDPR FAQs
   link: https://www.braze.com/company/legal/gdpr-faq
-  fa_icon: fa-solid fa-question
+  fa_icon: /assets/img/braze_icons/annotation-question.svg
 - name: Acceptable Use Policy
   link: https://www.braze.com/company/legal/aup
-  fa_icon: fa-solid fa-thumbs-up
+  fa_icon: /assets/img/braze_icons/thumbs-up.svg
 - name: Innovation Statement
   link: /docs/developer_guide/disclosures/innovation_statement
   image: /assets/img/braze_icons/lightbulb-05.svg

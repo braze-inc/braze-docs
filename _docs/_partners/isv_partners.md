@@ -26,7 +26,7 @@ guide_featured_list:
   fa_icon: fa-solid fa-database
 - name: Best Practices
   link: /docs/partners/isv_partners/best_practices
-  fa_icon: fa-solid fa-thumbs-up
+  fa_icon: /assets/img/braze_icons/thumbs-up.svg
 
 ---
 <br><br>

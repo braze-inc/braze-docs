@@ -27,7 +27,7 @@ guide_featured_list:
   fa_icon: /assets/img/braze_icons/palette.svg
 - name: "Video"
   link: /docs/user_guide/message_building_by_channel/in-app_messages/traditional/customize/video/
-  fa_icon: fa-solid fa-video
+  fa_icon: /assets/img/braze_icons/video-recorder.svg
 
 local_redirect: # Local hash url redirect list
   custom-html-messages: '/docs/user_guide/message_building_by_channel/in-app_messages/traditional/customize/html_in-app_messages/'

@@ -28,6 +28,6 @@ guide_featured_list:
     fa_icon: fa-solid fa-pencil
   - name: "DELETE: Remove Dashboard User Account"
     link: /docs/delete_existing_dashboard_user/
-    fa_icon: fa-solid fa-trash
+    fa_icon: /assets/img/braze_icons/trash-01.svg
 ---
 

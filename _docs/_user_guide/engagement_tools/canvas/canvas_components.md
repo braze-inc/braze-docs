@@ -39,7 +39,7 @@ guide_featured_list:
     image: /assets/img/braze_icons/dataflow-03.svg
   - name: Canvas Audience Sync
     link: /docs/partners/canvas_steps/
-    fa_icon: fa-solid fa-rotate
+    fa_icon: /assets/img/braze_icons/refresh-ccw-02.svg
 ---
 
 ## About Canvas components

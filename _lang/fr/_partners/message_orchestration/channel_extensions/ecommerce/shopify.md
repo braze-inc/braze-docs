@@ -16,7 +16,7 @@ guide_featured_list:
   fa_icon: fa-brands fa-shopify
 - name: Intégration SDK Web avec Shopify ScriptTag
   link: /docs/scripttag_web_sdk_integration/
-  fa_icon: fa-solid fa-tag
+  fa_icon: /assets/img/braze_icons/tag-01.svg
 - name: Configuration de Shopify
   link: /docs/partners/message_orchestration/channel_extensions/ecommerce/shopify/setting_up_shopify/
   fa_icon: fa fa-shopping-cart
