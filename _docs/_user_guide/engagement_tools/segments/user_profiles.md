@@ -29,17 +29,9 @@ If you are using the [older navigation]({{site.baseurl}}/navigation), **Search U
 
 If a match is found, you can view the information you've recorded for this user with the Braze SDK.
 
-Most searches return one user profile. However, if you search for an email that belongs to more than one user, all user profiles that match that email will be returned. If you do enter a non-unique email, click **Next** to view the other profiles that are associated with that email.
+If your search returns multiple user profiles, you can merge each profile individually or preform a bulk user merge. For a full walkthrough, see [Duplicate Users](/user_guide/engagement_tools/segments/user_profiles/duplicate_users/).
 
 ![Search results with a banner that reads "Multiple users match your search criteria" and two buttons labeled Previous and Next.][1]
-
-### Merge profiles
-
-If your search returns multiple user profiles, merging profiles can be a method to tidy up your Braze user profiles.
-
-To merge user profiles, these user profiles must be found using the same search query (for example, searching "testuser" returns three different user profiles). Click the **Merge duplicates** button to merge the user profiles. You can select which user profile to keep, meaning this profile will be kept and will gain attributes from the merged profile (the user profile to merge). 
-
-Once user profiles are merged, this action cannot be undone. For a list of fields that can be merged, refer to [Merge updates behavior]({{site.baseurl}}/api/endpoints/user_data/post_users_merge/#merge_updates-behavior).
 
 ## Use cases
 
