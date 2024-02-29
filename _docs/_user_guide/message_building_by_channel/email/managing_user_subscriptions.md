@@ -12,8 +12,6 @@ channel:
 
 > Learn about the different user subscription states, how to create and manage subscription groups, and how to segment users based on their subscriptions.
 
-This document is for informational purposes only. It is not intended to provide, nor may it be relied upon as providing legal advice in any capacity. Sending marketing and transactional emails may be subject to specific legal requirements. To ensure that you are doing so in compliance with all applicable laws, rules, and regulations specific to your company, you should seek the advice of your legal counsel and/or regulatory compliance team.
-
 ## Subscription states {#subscription-states}
 
 Braze has three global subscription states for email users (listed in the following table), which are the final gatekeeper between your messages and your users. For example, users who are considered `unsubscribed` will not receive messages targeted at the global subscription state of `subscribed` or `opted-in`.
@@ -130,10 +128,6 @@ Note that when a user selects "Unsubscribe from all of the above types of emails
 If you don't want to use the default Braze footer in your emails, you can create a workspace-wide custom email footer which you can template into every email using the {% raw %}`{{${email_footer}}}`{% endraw %} Liquid attribute.
 
 This way, you don't have to create a new footer for every email template or email campaign you use. For steps, refer to [Custom email footer]({{site.baseurl}}/user_guide/message_building_by_channel/email/custom_email_footer/).
-
-#### Managing subscription states for Chinese IP addresses
-
-If you anticipate that your email recipients will have a Chinese IP address, then you should not rely solely on an unsubscribe link in the footer of your email to maintain your `unsubscribed` lists. Instead, use a [list unsubscribe header]({{site.baseurl}}/user_guide/administrative/app_settings/email_settings#enable-list-unsubscribe-header). In addition, consider offering multiple additional methods for users to unsubscribe, such as a [custom unsubscribe page]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions#creating-a-custom-unsubscribe-page) or an [opt-in page]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions#creating-a-custom-opt-in-page).
 
 ### Creating a custom unsubscribe page
 

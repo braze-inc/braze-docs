@@ -2,7 +2,7 @@
 nav_title: Styling Examples
 article: Styling examples
 description: "This is how pages are styled on Braze Docs, including headers, tabs, codeblocks, and more."
-page_order: 8 
+page_order: 7 
 noindex: true
 ---
 

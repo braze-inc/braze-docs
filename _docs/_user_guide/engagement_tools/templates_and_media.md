@@ -23,9 +23,6 @@ guide_featured_list:
   - name: Managing Templates
     link: /docs/user_guide/engagement_tools/templates_and_media/managing_templates/
     fa_icon: fas fa-archive
-  - name: Image Specifications
-    link: /docs/user_guide/engagement_tools/templates_and_media/image_specs/
-    fa_icon: fas fa-image    
   - name: Frequently Asked Questions
     link: /docs/user_guide/engagement_tools/templates_and_media/faqs/
     fa_icon: fas fa-question
