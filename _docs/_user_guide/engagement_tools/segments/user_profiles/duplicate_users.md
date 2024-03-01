@@ -7,7 +7,11 @@ page_order: 0
 
 # Duplicate users
 
-> Learn how to find and merge duplicate users, so you can maximize the effectiveness of your campaigns and Canvases. To merge duplicate users using the Braze REST API, see [POST: Merge Users]({{site.baseurl}}/api/endpoints/user_data/post_users_merge/).
+> Learn how to find and merge duplicate users, so you can maximize the effectiveness of your campaigns and Canvases.
+
+{% alert tip %}
+To merge duplicate users using the Braze REST API, see [POST: Merge Users]({{site.baseurl}}/api/endpoints/user_data/post_users_merge/).
+{% endalert %}
 
 ## Individual merging
 
@@ -34,12 +38,12 @@ Choose which user profile to keep and which to merge, then select **Merge profil
 ![The individual merge page for a duplicate profile.]()
 
 {% alert warning %}
-Merged user profiles cannot be recovered after merging.
+Duplicate user profiles cannot be recovered after merging.
 {% endalert %}
 
 ## Bulk merging
 
-When you bulk merge duplicate users, Braze finds profiles with matching identifiers (such as an email address) and merges all their data into the most recently updated profile. This profile is used as the new primary profile and the other profiles are deleted.
+When you bulk merge duplicate users, Braze finds profiles with matching identifiers (such as an email address) and merges all their data into the most recently updated profile. This will be used as their new primary profile. Now when that user logs in using a previously-merged profile, Braze will update their primary profile instead.
 
 ### Step 1: Go to Manage Audience
 
@@ -63,9 +67,10 @@ In the following example, Braze used the user's email address to flag duplicate 
 {% tab example csv file %}
 | Email Address        | External ID | Phone Number | Braze ID                 | Identifier for rule | Profile to keep | Profile to merge |
 |----------------------|-------------|--------------|--------------------------|---------------------|-----------------|------------------|
-| alex@company.com     |             |              | 65fcaa547f470494d1370 | email               | TRUE            | FALSE            |
-| alex@company.com |             |              | 65fcaa547f47d004d1348 | email               | FALSE           | TRUE             |
-| alex@company.com |             |              | 65fcaa547f47d0049135c | email               | FALSE           | TRUE             |
+| alex@company.com     |   A8i3mkd99          |      (555) 123-4567 | 65fcaa547f470494d1370 | email               | TRUE            | FALSE            |
+| alex@company.com |  A8i3mkd99           |      (555) 987-6543 | 65fcaa547f47d004d1348 | email               | FALSE           | TRUE             |
+| alex@company.com |   A8i3mkd99          |      (555) 321-0987 | 65fcaa547f47d0049135c | email               | FALSE           | TRUE             |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 {% endtab %}
 {% endtabs %}
 
@@ -74,7 +79,7 @@ In the following example, Braze used the user's email address to flag duplicate 
 If you're satisfied with the results of your preview, select **Merge all duplicates**.
 
 {% alert warning %}
-Merged user profiles cannot be recovered after merging.
+Duplicate user profiles cannot be recovered after merging.
 {% endalert %}
 
 ![The "Manage Audience" page with "Merge all duplicates" highlighted.]()
