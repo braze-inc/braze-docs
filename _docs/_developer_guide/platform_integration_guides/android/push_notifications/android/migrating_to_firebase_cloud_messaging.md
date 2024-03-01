@@ -11,7 +11,7 @@ search_rank: 3
 
 # Migrating to the Firebase Cloud Messaging API
 
-> Learn how to migrate from Google's deprecated Cloud Messaging API to their fully-supported Firebase Cloud Messaging (FCM) API. For more information, see Google's [Firebase FAQ - 2023](https://firebase.google.com/support/faq#fcm-23-deprecation).
+> Learn how to migrate from Google's deprecated Cloud Messaging API to their fully-supported Firebase Cloud Messaging (FCM) API. We use new keys if they exist, otherwise we use old keys. For more information, see Google's [Firebase FAQ - 2023](https://firebase.google.com/support/faq#fcm-23-deprecation).
 
 {% alert important %}
 If this is your first time setting up the push integration for Android, see [Standard Android push integration]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/integration/standard_integration) instead.
@@ -60,6 +60,10 @@ Next, generate JSON credentials for your FCM service account. On Google Cloud IA
 ![The project's service account homepage with the "Actions" menu open.]({% image_buster /assets/img/android/push_integration/generate_json_credentials/select-manage-keys.png %})
 
 Select **Add Key** > **Create new key**.
+
+{% alert note %}
+Creating a new key will not remove your legacy ones. If there's an issue with your new key, or you delete it in the future, Braze can use your legacy keys as a backup.
+{% endalert %}
 
 ![The selected service account with the "Add Key" menu open.]({% image_buster /assets/img/android/push_integration/generate_json_credentials/select-create-new-key.png %})
 
