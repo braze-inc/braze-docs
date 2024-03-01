@@ -130,6 +130,7 @@ The following SDK updates have been released. Breaking updates are listed below;
     - This will be the final release for the Objective-C SDK before end-of-life on March 1, 2024 (in favor of using the [Swift SDK](https://github.com/braze-inc/braze-swift-sdk/)).
     - Updates the minimum required version of SDWebImage from 5.8.2 to 5.18.7. This version includes the privacy manifest for SDWebImage, which appears on the [privacy-impacting SDKs list](https://developer.apple.com/support/third-party-SDK-requirements/).
 - [Flutter SDK 8.1.0](https://pub.dev/packages/braze_plugin/changelog)
+- [Unity 5.2.0](https://github.com/braze-inc/braze-unity-sdk/blob/master/CHANGELOG.md)
 - [React Native SDK 8.4.0](https://github.com/braze-inc/braze-react-native-sdk/blob/8.4.0/CHANGELOG.md)
 - [Xamarin SDK Version 4.0.2](https://github.com/braze-inc/braze-xamarin-sdk/blob/master/CHANGELOG.md)
 - [Swift SDK 7.7.0-8.0.1](https://github.com/braze-inc/braze-swift-sdk/blob/main/CHANGELOG.md#801)
