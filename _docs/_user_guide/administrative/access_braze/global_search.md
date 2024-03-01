@@ -83,7 +83,7 @@ Search for channels to see quick create options among your top 10 results. For e
 
 ### Filter for archived content
 
-You can include archived content in your search results by toggling on **Show Archived Content**. By default, the toggle is off and archived content isn't included.
+You can include archived content in your search results by selecting **Show Archived Content**. By default, the toggle is off, and archived content isn't included.
 
 ![The "Show Archived Content" toggle.][4]
 
