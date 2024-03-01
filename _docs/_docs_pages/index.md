@@ -35,6 +35,16 @@ doc_menu_list:
     image: /assets/img/new-icons/api.svg
     link: /docs/api/home/
     description: "Braze provides a high-performance REST API to allow you to track users, send messages, export data, and more."
+  - name: Help
+    bg_color: '#ff9349'
+    image: /assets/img/new-icons/circle-info-solid.svg
+    link: /docs/help/home
+    description: "Find articles to help troubleshoot issues you may encounter and learn more about best practices to communicate with your users."
+  - name: Compliance Documentation
+    bg_color: '#ff9349'
+    image: /assets/img/new-icons/file-contract-solid.svg
+    link: /docs/compliance_documentation/
+    description: "Compliance documentation sets forth specific terms applicable to your purchased product, channel, feature, functionality, or service."
 
 popular_topic_list:
   - name: Braze API Dictionary
@@ -65,5 +75,6 @@ helpful_resources_list:
     link: /docs/dp-technical-assistance/
   - name: Release Notes
     link: /docs/help/release_notes/
+  - name: Contributing to Braze Docs
+    link: /docs/contributing/home/
 ---
-

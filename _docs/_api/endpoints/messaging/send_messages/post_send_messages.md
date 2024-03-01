@@ -22,9 +22,9 @@ If you are targeting a segment, a record of your request will be stored in the [
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#946cb701-96e3-48d7-868c-f079785b6d24 {% endapiref %}
 
-{% alert note %}
+## Prerequisites
+
 To use this endpoint, you'll need to generate an API key with the `messages.send` permission.
-{% endalert %}
 
 ## Rate limit
 

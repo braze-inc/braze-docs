@@ -4,8 +4,7 @@ article_title: Cloud Data Ingestion Endpoints
 search_tag: Endpoint
 page_order: 0.5
 layout: dev_guide
-hidden: true
-permalink: /api/cdi/
+alias: /api/cdi/
 
 description: "This landing page lists the Braze Cloud Data Ingestion endpoints."
 page_type: landing
@@ -27,6 +26,3 @@ guide_featured_list:
 
 ---
 
-{% alert important %}
-The Braze Cloud Data Ingestion endpoints are currently in early access. Contact your customer success manager if you're interested in participating in this early access.
-{% endalert %}

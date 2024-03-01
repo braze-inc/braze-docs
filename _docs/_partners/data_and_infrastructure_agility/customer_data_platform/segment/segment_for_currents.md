@@ -29,18 +29,21 @@ The Braze and Segment integration allows you to leverage Braze Currents to expor
 
 ### Step 1: Obtain Segment write key
 
-1. In your Segment dashboard, select your Segment source. Next, go to **Settings > API keys**. Here you will find the **Segment Write Key**.
-2. In Braze, navigate to **Partner Integrations** > **Data Export**.
-3. Click **+ Create New Current** > **Segment Data Export**.
-4. Next, provide an integration name, contact email, Segment write key, and Segment region.
-
-![The Segment Currents page in Braze. Here, you can find fields for integration name, contact email, segment region, and API key.][3]
+In your Segment dashboard, select your Segment source. Next, go to **Settings > API keys**. Here you will find the **Segment Write Key**.
 
 {% alert warning %}
 It's important to keep your Segment write key up to date. If your connector's credentials expire, the connector will stop sending events. If this persists for more than **48 hours**, the connector's events will be dropped, and data will be permanently lost.
 {% endalert %}
 
-### Step 2: Export message engagement events 
+### Step 2: Create a new Currents connector
+
+1. In Braze, navigate to **Partner Integrations** > **Data Export**.
+2. Click **+ Create New Current** > **Segment Data Export**.
+3. Next, provide an integration name, contact email, Segment write key, and Segment region.
+
+![The Segment Currents page in Braze. Here, you can find fields for integration name, contact email, segment region, and API key.][3]
+
+### Step 3: Export message engagement events
 
 Next, select the message engagement events you would like to export. Reference the following export events and properties table listed. All events sent to Segment will include the user's `external_user_id` as the `userId`. At this time, Braze does not send event data for users who do not have their `external_user_id` set.
 
@@ -54,14 +57,16 @@ If you intend to create more than one of the same Currents connectors (for examp
 
 To read more, visit Segment [documentation](https://segment.com/docs/connections/sources/catalog/cloud-apps/braze/).
 
+## Updating your Current
+
+{% multi_lang_include updating_currents.md %}
+
 ## Supported Currents events
 
 Braze supports exporting the following data listed in the Currents [user behavior]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/customer_behavior_events/) and [message engagement]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events/) event glossaries to Segment:
  
 ### Behaviors
 - Uninstall: `users.behaviors.Uninstall`
-- App (news feed impression)
-  - `users.behaviors.app.NewsFeedImpression`
 - Subscription (global state change): `users.behaviors.subscription.GlobalStateChange`
 - Subscription group (state change): `users.behaviors.subscriptiongroup.StateChange`
   
@@ -102,10 +107,6 @@ Braze supports exporting the following data listed in the Currents [user behavio
   - `users.messages.inappmessage.Abort`
   - `users.messages.inappmessage.Click`
   - `users.messages.inappmessage.Impression`
-- News Feed card (abort, click, impression)
-  - `users.messages.newsfeedcard.Abort`
-  - `users.messages.newsfeedcard.Click`
-  - `users.messages.newsfeedcard.Impression`
 - Push notification (abort, bounce, iOSforeground, open, send)
   - `users.messages.pushnotification.Abort`
   - `users.messages.pushnotification.Bounce`
@@ -114,7 +115,6 @@ Braze supports exporting the following data listed in the Currents [user behavio
   - `users.messages.pushnotification.Send`
 - SMS (abort, carrier send, delivery, delivery failure, inbound receive, rejection, send, short link click)
   - `users.messages.sms.Abort`
-  - `users.messages.sms.CarrierSend`
   - `users.messages.sms.Delivery`
   - `users.messages.sms.DeliveryFailure`
   - `users.messages.sms.InboundReceive`

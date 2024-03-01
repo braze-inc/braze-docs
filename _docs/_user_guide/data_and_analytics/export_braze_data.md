@@ -52,5 +52,20 @@ guide_menu_list:
   - name: Frequently Asked Questions
     link: /docs/user_guide/data_and_analytics/export_braze_data/faqs/
     fa_icon: fas fa-question
+
+guide_menu_title2: Data export with Currents
+guide_menu_description2: "Looking to take advantage of data export with Braze Currents? The Currents tool is a real-time data stream of your engagement events that is the most robust, yet granular export out of the Braze platform. Check out these articles for more."
+guide_menu_list2:
+  - name: Braze Currents
+    link: /docs/user_guide/data_and_analytics/braze_currents
+    fa_icon: fas fa-database
+  - name: Setting up Currents
+    link: /docs/user_guide/data_and_analytics/braze_currents/setting_up_currents/
+    fa_icon: fas fa-warehouse
+  - name: How Braze uses Currents
+    link: /docs/user_guide/data_and_analytics/braze_currents/how_braze_uses_currents/
+    fa_icon: fas fa-arrows-alt
+
 ---
+<br><br>
 

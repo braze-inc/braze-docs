@@ -93,7 +93,7 @@ Nous vous recommandons également de vous renseigner au sujet des [numéros de t
 
 
 [1]: {% image_buster /assets/img/whatsapp/whatsapp1.png %} 
-[2]: {% image_buster /assets/img/whatsapp/whatsapp2.gif %} 
+[2]: {% image_buster /assets/img/whatsapp/whatsapp10.png %} 
 [3]: {% image_buster /assets/img/whatsapp/whatsapp2.png %} 
 [4]: {% image_buster /assets/img/whatsapp/whatsapp3.png %} 
 [5]: {% image_buster /assets/img/whatsapp/whatsapp4.png %} 

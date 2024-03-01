@@ -121,7 +121,7 @@ Total number of clicks on Button 2 of the message.
 In-App Message
 {% endapitags %}
 
-Total number of choices selected when the user clicks the submit button on the survey question page of a [Simple Survey]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/templates/simple_survey/).
+Total number of choices selected when the user clicks the submit button on the survey question page of a [simple survey]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/templates/simple_survey/).
 
 {% endapi %}
 
@@ -173,7 +173,7 @@ The percentage of confidence that a certain variant of a message is outperformin
 In-App Message
 {% endapitags %}
 
-Total clicks on the call to action button on the confirmation page of a [Simple Survey]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/templates/simple_survey/).
+Total clicks on the call to action button on the confirmation page of a [simple survey]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/templates/simple_survey/).
 
 {% endapi %}
 
@@ -185,7 +185,7 @@ Total clicks on the call to action button on the confirmation page of a [Simple 
 In-App Message
 {% endapitags %}
 
-Total clicks on the close (x) button on the confirmation page of a [Simple Survey]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/templates/simple_survey/).
+Total clicks on the close (x) button on the confirmation page of a [simple survey]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/templates/simple_survey/).
 
 {% endapi %}
 
@@ -396,7 +396,11 @@ The total direct revenue divided by unique recipients. This metric is only avail
 Content Cards, Email, In-App Message, Web Push, iOS Push, Android Push, Webhook, SMS, WhatsApp
 {% endapitags %}
 
-The total number of messages sent in a campaign. Note that upon launching a scheduled campaign, this metric will include all messages sent, regardless of whether they have been sent out yet due to rate limiting. This does not mean the message was received or delivered to a device, only that the message was sent. This metric is provided by Braze.
+*Sends*, or *Messages Sent*, is the total number of messages sent in a campaign. Upon launching a scheduled campaign, this metric will include all messages sent, regardless of whether they have been sent out yet due to rate limiting. This does not mean the message was received or delivered to a device, only that the message was sent. This metric is provided by Braze.
+
+{% alert tip %}
+For Content Cards, this metric is calculated differently depending on what you selected for **Card creation**. See [Card creation]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/create/card_creation/) for details.
+{% endalert %}
 
 <span class="calculation-line">Calculation: Count</span>
 
@@ -438,7 +442,7 @@ The total number of emails delivered that were marked as "spam."
 In-App Message
 {% endapitags %}
 
-Total clicks on the close (x) button on the survey question page of a [Simple Survey]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/templates/simple_survey/).
+Total clicks on the close (x) button on the survey question page of a [simple survey]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/templates/simple_survey/).
 
 {% endapi %}
 
@@ -450,7 +454,7 @@ Total clicks on the close (x) button on the survey question page of a [Simple Su
 In-App Message
 {% endapitags %}
 
-Total clicks on the submit button of a [Simple Survey]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/templates/simple_survey/).
+Total clicks on the submit button of a [simple survey]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/templates/simple_survey/).
 
 {% endapi %}
 

@@ -12,7 +12,7 @@ alias: /scim/automated_user_provisioning/
 
 > Learn what you need to provide for automated user provisioning and how and where to use your generated System for Cross-domain Identity Management (SCIM) token and SCIM API endpoint. You can then call this endpoint with your API to automatically provision new dashboard users.
 
-To access this page, go to **Settings** > **Admin Settings** > **Automated User Provisioning**.
+To access this page, go to **Settings** > **Admin Settings** > **SCIM Provisioning**.
 
 {% alert note %}
 If you're using the [older navigation]({{site.baseurl}}/navigation), select your account dropdown and go to **Company Settings** > **Automated User Provisioning**.

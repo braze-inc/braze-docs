@@ -19,7 +19,11 @@ Open your project and navigate to your project's settings. Select the **Swift Pa
 
 ![][3]
 
-Enter the URL of our iOS Swift SDK repository "https://github.com/braze-inc/braze-swift-sdk" in the text field. Under the **Dependency Rule** section, select the SDK version. Finally, click **Add Package**. 
+{% alert note %}
+Starting in version 7.4.0, the Braze Swift SDK has additional distribution channels as [static XCFrameworks](https://github.com/braze-inc/braze-swift-sdk-prebuilt-static) and [dynamic XCFrameworks](https://github.com/braze-inc/braze-swift-sdk-prebuilt-dynamic). If you'd like to use either of these formats instead, follow the installation instructions from its respective repository.
+{% endalert %}
+
+Enter the URL of our iOS Swift SDK repository `https://github.com/braze-inc/braze-swift-sdk` in the text field. Under the **Dependency Rule** section, select the SDK version. Finally, click **Add Package**.
 
 ![][4]
 
@@ -32,15 +36,21 @@ The Braze Swift SDK separates features into standalone libraries to provide deve
 | `BrazeKit` | Main SDK library providing support for analytics and push notifications. |
 | `BrazeLocation` | Location library providing support for location analytics and geofence monitoring. |
 | `BrazeUI` | Braze-provided user interface library for in-app messages and Content Cards. |
-| `BrazeNotificationService` | Notification service extension library providing support for rich push notifications. |
-| `BrazePushStory` | Notification content extension library providing support for push stories. |
 {: .ws-td-nw-1}
+
+#### Extension libraries
 
 {% alert warning %}
 [BrazeNotificationService](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/b2-rich-push-notifications) and [BrazePushStory](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/b3-push-stories) are extension modules that provide additional functionality and should not be added directly to your main application target. Instead follow the linked guides to integrate them separately into their respective target extensions.
 {% endalert %}
 
- Select the package that best suits your needs and click **Add Package**. Make sure you select `BrazeKit` at a minimum. 
+| Package | Details |
+| ------- | ------- |
+| `BrazeNotificationService` | Notification service extension library providing support for rich push notifications. |
+| `BrazePushStory` | Notification content extension library providing support for Push Stories. |
+{: .ws-td-nw-1}
+
+ Select the package that best suits your needs and click **Add Package**. Make sure you select `BrazeKit` at a minimum.
 
 ![][5]
 

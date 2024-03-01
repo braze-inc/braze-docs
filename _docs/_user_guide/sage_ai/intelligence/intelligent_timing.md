@@ -90,9 +90,9 @@ Learn more about [when Braze checks the eligibility criteria for segments and fi
 
 ##### A/B tests with optimizations
 
-If you are leveraging [A/B testing with an optimization]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/create_multivariate_campaign/#optimizations), such as automatically sending the winning variant after the A/B test is over, the duration of the campaign will increase. By default, Intelligent Timing campaigns will send the winning variant to the remaining users the day after the initial test, but you can change this send date.
+If you are leveraging [A/B testing with an optimization]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/create_multivariate_campaign/#optimizations), such as automatically sending the Winning Variant after the A/B test is over, the duration of the campaign will increase. By default, Intelligent Timing campaigns will send the Winning Variant to the remaining users the day after the initial test, but you can change this send date.
 
-We recommend that if you're using both Intelligent Timing and A/B testing, schedule the winning variant to send 2 days after the initial test instead of 1 day.
+We recommend that if you're using both Intelligent Timing and A/B testing, schedule the Winning Variant to send 2 days after the initial test instead of 1 day.
 
 ![A/B Testing section of the Target Audiences step where the test ends and sends the Winning Variant two days after the initial test starts.][5]
 
@@ -114,7 +114,7 @@ In Canvas Flow, Intelligent Timing is set in Message steps. To use Intelligent T
 3. Select **Using Intelligent Timing**.
 4. Specify a [fallback time](#fallback-time).
 
-Messages send within 24 hours of the user entering the Message step, at the next occurrence of their optimal time. Message steps that target multiple channels may send or attempt to send messages at different times for different channels. When the first message in a Message step attempts to send, all users are auto-advanced.
+A user who enters this step will receive the message at their optimal time on the day they enter IF that time has not yet passed. Note that if a user's optimal time (in local time) has passed on the day they enter a message step, it will send on the next day at the optimal time. Message steps that target multiple channels may send or attempt to send messages at different times for different channels. When the first message in a Message step attempts to send, all users are auto-advanced.
 
 #### Delay steps and Intelligent Timing
 
@@ -195,9 +195,9 @@ Braze needs a certain amount of engagement data to make a good estimate. If ther
 
 ### Sending past the scheduled date
 
-Your Intelligent Timing campaign might be sending past the scheduled date if you are leveraging [A/B testing with an optimization]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/create_multivariate_campaign/#optimizations). Campaigns using A/B testing optimizations can automatically send the winning variant after the initial test is over, increasing the duration of the campaign. By default, campaigns with an optimization will send the winning variant to the remaining users the day after the initial test, but you can change this send date.
+Your Intelligent Timing campaign might be sending past the scheduled date if you are leveraging [A/B testing with an optimization]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/create_multivariate_campaign/#optimizations). Campaigns using A/B testing optimizations can automatically send the Winning Variant after the initial test is over, increasing the duration of the campaign. By default, campaigns with an optimization will send the Winning Variant to the remaining users the day after the initial test, but you can change this send date.
 
-If you use Intelligent Timing, we recommend leaving more time for the A/B test to finish and scheduling the winning variant to send for 2 days after the initial test instead of 1 day.
+If you use Intelligent Timing, we recommend leaving more time for the A/B test to finish and scheduling the Winning Variant to send for 2 days after the initial test instead of 1 day.
 
 
 [1]: {% image_buster /assets/img/intelligent_timing_1.png %}

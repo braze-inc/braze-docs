@@ -15,15 +15,17 @@ description: "This article outlines details about the Search for an existing das
 /scim/v2/Users?filter=userName%20eq%20user%40test.com
 {% endapimethod %}
 
-> This endpoint allows you to look up an existing dashboard user account by specifying their email in the filter query parameter. 
+> Use this endpoint to look up an existing dashboard user account by specifying their email in the filter query parameter. 
 
 Note that when the query parameter is URL encoded it will read like this:
 
 `/scim/v2/Users?filter=userName%20eq%20%22user@test.com%22`
 
-For information on how to obtain a SCIM token, visit [Automated user provisioning]({{site.baseurl}}/scim/automated_user_provisioning/).
-
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#5037d810-b822-4c54-bb51-f30470a42a95 {% endapiref %}
+
+## Prerequisites
+
+To use this endpoint, you'll need a SCIM token. For more information, refer to [Automated user provisioning]({{site.baseurl}}/scim/automated_user_provisioning/).
 
 ## Rate limit
 

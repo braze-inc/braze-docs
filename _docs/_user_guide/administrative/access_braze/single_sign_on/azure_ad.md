@@ -62,8 +62,6 @@ If you are using the [older navigation]({{site.baseurl}}/navigation), you can fi
 {% tab User Attributes %}
 You can manage the values of these attributes from the **User Attributes** section on the **Application Integration** page.
 
-![User Attributes section of the Application Integration page in Azure.]({% image_buster /assets/img/azure_10.png %})
-
 Use the following attribute pairings:
 
 - `givenname` = `user.givenname`

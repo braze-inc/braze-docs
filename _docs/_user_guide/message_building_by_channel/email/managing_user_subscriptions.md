@@ -12,6 +12,8 @@ channel:
 
 > Learn about the different user subscription states, how to create and manage subscription groups, and how to segment users based on their subscriptions.
 
+This document is for informational purposes only. It is not intended to provide, nor may it be relied upon as providing legal advice in any capacity. Sending marketing and transactional emails may be subject to specific legal requirements. To ensure that you are doing so in compliance with all applicable laws, rules, and regulations specific to your company, you should seek the advice of your legal counsel and/or regulatory compliance team.
+
 ## Subscription states {#subscription-states}
 
 Braze has three global subscription states for email users (listed in the following table), which are the final gatekeeper between your messages and your users. For example, users who are considered `unsubscribed` will not receive messages targeted at the global subscription state of `subscribed` or `opted-in`.
@@ -65,9 +67,7 @@ You can export individual user profiles in JSON format using the [Export users b
 
 Subscription groups are segment filters that can further narrow your audience from the [global subscription states](#subscription-states). You can add up to 100 subscription groups per workspace. These groups allow you to present more granular subscription options to end-users.
 
-For example, suppose you send out multiple categories of email campaigns (promotional, newsletter, or product updates). In that case, you can use subscription groups to let your customers pick and choose which email categories they want to subscribe or unsubscribe from in bulk from a single page, using an [email preference center](#email-preference-center). 
-
-Alternatively, you could use subscription groups to let your customers choose how frequently they want to receive emails from you, by creating subscription groups for daily, weekly, or monthly emails.
+For example, suppose you send out multiple categories of email campaigns (promotional, newsletter, or product updates). In that case, you can use subscription groups to let your customers pick and choose which email categories they want to subscribe or unsubscribe from in bulk from a single page, using an [email preference center](#email-preference-center). Alternatively, you could use subscription groups to let your customers choose how frequently they want to receive emails from you, by creating subscription groups for daily, weekly, or monthly emails.
 
 Use the [Subscription Group endpoints][25] to programmatically manage the subscription groups that you have stored on the Braze dashboard to the **Subscription Group** page.
 
@@ -101,6 +101,12 @@ You can archive your group from the **Subscription Groups** page. Find your grou
 
 Braze will not process any state changes for users in archived groups. For example, if you archive "Subscription Group A" while Susie is `subscribed` to it, they will remain "`subscribed`" to this group, even if they clicks an unsubscribe link (this shouldn't matter to Susie because "Subscription Group A" is archived and you can't send any messages using it).
 
+#### Viewing subscription group sizes
+
+You can reference the **Subscription Group Timeseries** graph in the **Subscription Groups** page to see the subscription group size based on the number of users over a period of time. These subscription group sizes are also consistent with other areas of Braze, such as segment size calculation.
+
+![][10]
+
 #### Viewing subscription groups in campaign analytics
 
 You can see the number of users who changed their subscription state (subscribed or unsubscribed) from a specific email campaign on that campaign's analytics page.
@@ -124,6 +130,10 @@ Note that when a user selects "Unsubscribe from all of the above types of emails
 If you don't want to use the default Braze footer in your emails, you can create a workspace-wide custom email footer which you can template into every email using the {% raw %}`{{${email_footer}}}`{% endraw %} Liquid attribute.
 
 This way, you don't have to create a new footer for every email template or email campaign you use. For steps, refer to [Custom email footer]({{site.baseurl}}/user_guide/message_building_by_channel/email/custom_email_footer/).
+
+#### Managing subscription states for Chinese IP addresses
+
+If you anticipate that your email recipients will have a Chinese IP address, then you should not rely solely on an unsubscribe link in the footer of your email to maintain your `unsubscribed` lists. Instead, use a [list unsubscribe header]({{site.baseurl}}/user_guide/administrative/app_settings/email_settings#enable-list-unsubscribe-header). In addition, consider offering multiple additional methods for users to unsubscribe, such as a [custom unsubscribe page]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions#creating-a-custom-unsubscribe-page) or an [opt-in page]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions#creating-a-custom-opt-in-page).
 
 ### Creating a custom unsubscribe page
 
@@ -167,6 +177,7 @@ For example, this can be useful if you want to target users who have neither opt
 
 ![Email Subscription Status used as a segment filter.][18]
 
+[10]: {% image_buster /assets/img_archive/subscription_group_graph.png %}
 [11]: {% image_buster /assets/img/custom_unsubscribe.png %}
 [12]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/setting_custom_attributes/#setting-up-user-subscriptions
 [13]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/setting_custom_attributes/#setting-up-user-subscriptions

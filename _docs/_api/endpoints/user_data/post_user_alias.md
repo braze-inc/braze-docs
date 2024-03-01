@@ -24,9 +24,9 @@ Up to 50 user aliases may be specified per request.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#5cf18e64-fd02-452f-8c90-9a0f7c4d0487 {% endapiref %}
 
-{% alert note %}
-To use this endpoint, you'll need to generate an API key with the `users.alias.new` permission.
-{% endalert %}
+## Prerequisites
+
+To use this endpoint, you'll need an [API key]({{site.baseurl}}/api/api_key/) with the `users.alias.new` permission.
 
 ## Rate limit
 
@@ -36,7 +36,7 @@ To use this endpoint, you'll need to generate an API key with the `users.alias.n
 
 ```
 Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
+Authorization: Bearer YOUR_REST_API_KEY
 ```
 
 ```json
@@ -66,7 +66,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 ```
 curl --location --request POST 'https://rest.iad-01.braze.com/users/alias/new' \
 --header 'Content-Type: application/json' \
---header 'Authorization: Bearer YOUR-API-KEY-HERE' \
+--header 'Authorization: Bearer YOUR_REST_API_KEY' \
 --data-raw '{
   "user_aliases" :[
     {
@@ -82,7 +82,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/alias/new' \
 
 ```json
 Content-Type: application/json
-Authorization: Bearer YOUR-API-KEY-HERE
+Authorization: Bearer YOUR_REST_API_KEY
 {
     "aliases_processed": 1,
     "message": "success"

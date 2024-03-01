@@ -49,7 +49,7 @@ Other fields allow you to insert your name, subheader, address, and other contac
 
 Once you've input all the necessary fields, click **Generate Contact Card**, and it will be automatically attached to your campaign or Canvas. From here, you can add a message, test your Contact Card, and launch your campaign or Canvas.
 
-The Contact card will also be saved in the [Media Library]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/media_library/#media-library) to easily reuse in future campaigns and Canvases.
+The Contact card will also be saved in the [media library]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/media_library/#media-library) to easily reuse in future campaigns and Canvases.
 
 ## Adding an existing contact card
 

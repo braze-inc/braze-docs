@@ -98,7 +98,7 @@ To download this report, do the following:
 
 This report only contains the most recent 10,000 security events for your account. If you need specific event data, contact technical support.
 
-## Viewing personally identifiable information (PII)
+## Viewing personally identifiable information (PII) {#view-pii}
 
 The **View PII** permission is only accessible to a few select Braze users. For the existing team permission capabilities, see [Setting user permissions]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/user_permissions/#available-limited-and-team-role-permissions).
 
@@ -112,7 +112,7 @@ The following fields can be hidden from Braze users who don't have **View PII** 
 
 | Standard attributes | Custom attributes |
 | ------------------- | ----------------- |
-| {::nomarkdown} <ul> <li>Email address </li> <li> Phone number </li> <li> First name </li> <li> Last name </li> <li> Gender </li> <li> Birthday </li> <li> Device IDs </li> <li> Most recent location </li> </ul> {:/} | {::nomarkdown} <ul> <li> All custom attributes </li> </ul> {:/} |
+| {::nomarkdown} <ul> <li>Email address </li> <li> Phone number </li> <li> First name </li> <li> Last name </li> <li> Gender </li> <li> Birthday </li> <li> Device IDs </li> <li> Most recent location </li> </ul> {:/} | {::nomarkdown} <ul> <li> All custom attributes<ul><li>Individual custom attributes can be marked as PII if you don't need to hide all attributes.</li></ul></li> </ul> {:/} |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ### Limited areas

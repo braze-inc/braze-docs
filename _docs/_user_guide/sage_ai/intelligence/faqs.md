@@ -37,7 +37,7 @@ Intelligent Selection allocates variants for sending based on the current status
 
 Intelligent Selection will stop optimizing when it has 95% confidence that continuing the experiment won't improve the conversion rate by more than 1% of its current rate.
 
-### Why can I not enable Intelligent Selection in my Canvas or campaign (grayed out)?
+### Why can't I enable Intelligent Selection in my Canvas or campaign (grayed out)?
 
 Intelligent Selection will be unavailable if:
 
@@ -57,6 +57,14 @@ Intelligent timing predicts when a user is most likely to open or click.
 
 The most popular app time is determined by the average session start time for the workspace (in local time). This metric can be found in the dashboard when previewing times for a campaign, shown in red.
 
+### Does Intelligent Timing account for machine opens?
+
+Yes, machine opens are filtered out by Intelligent Timing, so they do not influence its output.
+
+### How can I make sure Intelligent Timing works as well as possible?
+
+Intelligent Timing uses each user's individual history of message engagement at whatever times they received messages. Before using Intelligent Timing, make sure that you have sent users messages at different times of the day. That way, you can "sample" when might be the best time for each user. Inadequately sampling different times of day may result in Intelligent Timing picking a suboptimal time of send for a user. 
+
 ### How far in advance should I launch an Intelligent Timing campaign to successfully deliver it to all users in all time zones?
 
 Braze calculates the optimal time at midnight in Samoa time, one of the first time zones in the world. In a single day, it spans approximately 48 hours. For example, someone whose optimal time is 12:01 am and lives in Australia has already had their optimal time pass, and it's "too late" to send to them. For these reasons, you need to schedule 48 hours in advance to ensure that everyone in the world who uses your app will get it successfully delivered.
@@ -67,9 +75,9 @@ Braze needs a baseline number of data points to make a good estimate. If there i
 
 ### Why is my Intelligent Timing campaign sending past the scheduled date?
 
-Your Intelligent Timing campaign might be sending past the scheduled date because you are leveraging A/B testing. Campaigns using A/B testing can automatically send the winning variant after the A/B test is over, increasing the duration of campaign sending. By default, Intelligent Timing campaigns will be scheduled to send out the winning variant to the remaining users for the following day, but you can change this send date.
+Your Intelligent Timing campaign might be sending past the scheduled date because you are leveraging A/B testing. Campaigns using A/B testing can automatically send the Winning Variant after the A/B test is over, increasing the duration of campaign sending. By default, Intelligent Timing campaigns will be scheduled to send out the Winning Variant to the remaining users for the following day, but you can change this send date.
 
-We recommend that if you have Intelligent Timing campaigns, leave more time for the A/B test to finish and schedule the winning variant to send for two days out instead of one. 
+We recommend that if you have Intelligent Timing campaigns, leave more time for the A/B test to finish and schedule the Winning Variant to send for two days out instead of one. 
 
 ### When does Braze check the eligibility criteria for segment and audience filters?
 
@@ -86,10 +94,10 @@ We don't recommend using both Intelligent Timing and Quiet Hours for your campai
 
 ### Can I use Intelligent Timing and rate-limiting?
 
-Braze does not recommend using Intelligent Timing and rate-limiting as there is no guarantee about when the message will be delivered.
+Braze doesn't recommend using Intelligent Timing and rate-limiting because there is no guarantee about when the message will be delivered.
 
 ### Can I use Intelligent Timing while IP warming?
 
-Braze does not recommend using Intelligent Timing when users are first IP warming, as some of its behaviors can cause difficulties hitting daily volumes. This is caused by Intelligent Timing evaluating campaign segments twice. Once when the campaign is first built, and a second time before sending to users to verify they should still be in that segment. 
+Braze doesn't recommend using Intelligent Timing when users are first IP warming, as some of its behaviors can cause difficulties hitting daily volumes. This is caused by Intelligent Timing evaluating campaign segments twice. Once when the campaign is first built, and a second time before sending to users to verify they should still be in that segment. 
 
 This can cause segments to shift and change, often leading to some users falling out of the segment on the second evaluation. These users don't get replaced, impacting how close to the maximum user cap you can achieve.

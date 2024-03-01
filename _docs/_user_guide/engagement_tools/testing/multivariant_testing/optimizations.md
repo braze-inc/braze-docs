@@ -6,7 +6,7 @@ page_type: reference
 description: "Learn how to use Winning Variant or Personalized Variant when creating multivariate and A/B tests."
 ---
 
-# Optimizing A/B tests with winning variant or personalized variants
+# Optimizing A/B tests with Winning Variant or Personalized Variants
 
 When [creating an A/B test][1] for email, push, webhook, SMS, and WhatsApp campaigns scheduled to send once, you can select an optimization. There are two optimization options: **Winning Variant** and **Personalized Variant**.
 
@@ -18,36 +18,36 @@ Both options work by sending an initial test to a percentage of your target segm
 Optimizations are located in the **Target Audiences** step of campaign creation, under **A/B Testing**.
 {% endalert %}
 
-## Winning variant
+## Winning Variant
 
-Sending the winning variant is similar to a standard A/B test. Users in this group will receive the winning variant when the initial test is complete.
+Sending the Winning Variant is similar to a standard A/B test. Users in this group will receive the Winning Variant when the initial test is complete.
 
-1. Select **Winning Variant**, then specify what percentage of your campaign audience should be assigned to the winning variant group.
+1. Select **Winning Variant**, then specify what percentage of your campaign audience should be assigned to the Winning Variant group.
 2. Configure the following additional settings.
 
 | Field | Description |
 | --- | --- | 
 | Optimization metric | The metric to optimize for. Choose between *Unique Opens* or *Clicks* for email, *Opens* for push, or *Primary Conversion Rate* for all channels. Selecting *Opens* or *Clicks* to determine the winner does not affect what you choose for the campaign's [conversion events]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/). <br><br>Keep in mind that if you're using a control group, users in the control group can't perform *Opens* or *Clicks*, so the performance of the control group is guaranteed to be `0`. As a result, the control group can't win the A/B test. However, you may still want to use a control group to track other metrics for users who do not receive a message. |
 | Initial test start date | The date and time the initial test starts. |
-| Initial test end date | The date and time the initial test ends. This is when the winning variant is sent to the remaining users.<br><br>When sending in users' local time or with Intelligent Timing, the winning variant must be sent at least 24 hours after the A/B test to ensure delivery to all users in the winning variant group. |
+| Initial test end date | The date and time the initial test ends. This is when the Winning Variant is sent to the remaining users.<br><br>When sending in users' local time or with Intelligent Timing, the Winning Variant must be sent at least 24 hours after the A/B test to ensure delivery to all users in the Winning Variant group. |
 | Fallback | What happens if no variant wins by a statistically significant margin. Choose between sending the best performing variant anyway, or ending the test and not sending any further messages. |
 {: .reset-td-br-1 .reset-td-br-2}
 
-## Personalized variant
+## Personalized Variant
 
-Use personalized variants to send each user in your target segment the variant they're most likely to engage with.
+Use Personalized Variants to send each user in your target segment the variant they're most likely to engage with.
 
-To determine the best variant for each user, Braze will send an initial test to a portion of your target audience to look for associations between user characteristics and message preferences. Based on how users respond to each variant in the initial test, these characteristics are used to determine which remaining users will get each variant. If no associations are found and no personalizations can be made, the winning variant is automatically sent to the remaining users. To learn more about how personalized variants are determined, refer to [Multivariate and A/B test analytics]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/multivariate_analytics/#personalized-variant).
+To determine the best variant for each user, Braze will send an initial test to a portion of your target audience to look for associations between user characteristics and message preferences. Based on how users respond to each variant in the initial test, these characteristics are used to determine which remaining users will get each variant. If no associations are found and no personalizations can be made, the Winning Variant is automatically sent to the remaining users. To learn more about how Personalized Variants are determined, refer to [Multivariate and A/B test analytics]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/multivariate_analytics/#personalized-variant).
 
-1. Select **Personalized Variant**, then specify what percentage of your campaign audience should be assigned to the personalized variant group.
+1. Select **Personalized Variant**, then specify what percentage of your campaign audience should be assigned to the Personalized Variant group.
 2. Configure the following additional settings.
 
 | Field | Description |
 | --- | --- | 
 | Optimization metric | The metric to optimize for. Choose between *Unique Opens* or *Clicks* for email, *Opens* for push, or *Primary Conversion Rate* for all channels. Selecting *Opens* or *Clicks* to determine the winner does not affect what you choose for the campaign's [conversion events]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/conversion_events/#conversion-events). <br><br>Keep in mind that if you're using a control group, users in the control group can't perform *Opens* or *Clicks*, so the performance of the control group is guaranteed to be `0`. As a result, the control group can't win the A/B test. However, you may still want to use a control group to track other metrics for users who do not receive a message. |
 | Initial test start date | The date and time the initial test starts. |
-| Initial test end date | The date and time the initial test ends. This is when personalized variants are sent to the remaining users. We recommend 24 hours as a baseline to ensure statistically significant and meaningful results. The more time you allow for the test, the more responses will be received and the more Braze can optimize. This is especially important for email campaigns. Initial tests for personalized variants shouldn't last any less than 4 hours.<br><br>When sending in users' local time or with Intelligent Timing, personalized variants must be sent at least 24 hours after the A/B test to ensure delivery to all users in the personalized variant group. |
-| Fallback | What happens if no personalized variants are found. Choose between sending the winning variant instead, or ending the test and not sending any further messages. |
+| Initial test end date | The date and time the initial test ends. This is when Personalized Variants are sent to the remaining users. We recommend 24 hours as a baseline to ensure statistically significant and meaningful results. The more time you allow for the test, the more responses will be received and the more Braze can optimize. This is especially important for email campaigns. Initial tests for Personalized Variants shouldn't last any less than 4 hours.<br><br>When sending in users' local time or with Intelligent Timing, Personalized Variants must be sent at least 24 hours after the A/B test to ensure delivery to all users in the Personalized Variant group. |
+| Fallback | What happens if no Personalized Variants are found. Choose between sending the Winning Variant instead, or ending the test and not sending any further messages. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## Analytics

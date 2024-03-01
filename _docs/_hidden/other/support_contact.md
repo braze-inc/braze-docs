@@ -798,7 +798,9 @@ $( document ).ready(function() {
   };
   var hiddenlist = {
     'appgroup': '00N0V000009G0NE',
-    'appgroupid': '00N0V000009G0N9'
+    'appgroupid': '00N0V000009G0N9',
+    'companyid': '00NVP0000002y6X',
+    'developerid': '00NVP0000004UvZ',
   };
 
   $.each(autofilllist, function(k,v){
@@ -1143,6 +1145,7 @@ $( document ).ready(function() {
 
     sf_submit.addParameter('external','1');
     sf_submit.send();
+
     var gs_submit = new iframeform('https://c9616da7-4322-4bed-9b51-917c1874fb31.trayapp.io/support_request');
     gs_submit.addParameter('Name', user_name);
     gs_submit.addParameter('Email', user_email);
@@ -1167,6 +1170,11 @@ $( document ).ready(function() {
           gs_submit.addParameter(gs_mapping[selopt.attr('name')],selval.val());
         }
       }
+    });
+    $.each(hiddenlist, function(k,v){
+      if ($.urlParam(k) ){
+        gs_submit.addParameter(v,$.urlParam(k));
+      };
     });
     gs_submit.send();
 

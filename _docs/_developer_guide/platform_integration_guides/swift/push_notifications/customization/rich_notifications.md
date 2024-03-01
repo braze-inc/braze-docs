@@ -72,6 +72,14 @@ For instructions to implement Push Stories, see the [documentation]({{site.baseu
 After updating the Podfile, navigate to the directory of your Xcode app project within your terminal and run `pod install`.
 
 {% endtab %}
+
+{% tab Manual %}
+
+To add `BrazeNotificationService.xcframework` to your `Notification Service Extension`, see [Manual integration]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/initial_sdk_setup/installation_methods/manual_integration/).
+
+![]({% image_buster /assets/img/swift/rich_push/manual1.png %})
+
+{% endtab %}
 {% endtabs %}
 
 #### Using your own UNNotificationServiceExtension

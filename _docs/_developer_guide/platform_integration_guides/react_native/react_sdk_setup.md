@@ -85,6 +85,7 @@ In your `app.json`, add the Braze Expo Plugin. You can provide the following con
 | `androidNotificationAccentColor` | string  |  Android only. Sets the Android notification accent color.                                                                      |
 | `androidNotificationLargeIcon` | string  |  Android only. Sets the Android notification large icon.                                                                    |
 | `androidNotificationSmallIcon` | string  |  Android only. Sets the Android notification small icon.                                                                      |
+| `iosRequestPushPermissionsAutomatically` | boolean  |  iOS only. Whether the user should automatically be prompted for push permissions on app launch. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 Example configuration:
@@ -115,6 +116,7 @@ Example configuration:
           "androidNotificationAccentColor": "#ff3344",
           "androidNotificationLargeIcon": "@drawable/custom_app_large_icon",
           "androidNotificationSmallIcon": "@drawable/custom_app_small_icon",
+          "iosRequestPushPermissionsAutomatically": false,
         }
       ],
     ]
@@ -135,7 +137,7 @@ Run your application as specified in the [Expo docs](https://docs.expo.dev/workf
 {% endtab %}
 {% tab Android %}
 
-#### Step 2.1a: Add our repository
+#### Step 2.1: Add our repository
 
 In your top-level project `build.gradle`, add the following under `buildscript` > `dependencies`:
 
@@ -151,7 +153,7 @@ buildscript {
 
 This will add Kotlin to your project.
 
-#### Step 2.1b: Configure the Braze SDK
+#### Step 2.2: Configure the Braze SDK
 
 To connect to Braze servers, create a `braze.xml` file in your project's `res/values` folder. Paste the following code and replace the API key and endpoint with your values:
 
@@ -170,7 +172,7 @@ Add the required permissions to your `AndroidManifest.xml` file:
 <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 ```
 
-#### Step 2.1c: Implement user session tracking
+#### Step 2.3: Implement user session tracking
 
 The calls to `openSession()` and `closeSession()` are handled automatically.
 Add the following code to the `onCreate()` method of your `MainApplication` class:
@@ -201,7 +203,7 @@ override fun onCreate() {
 {% endsubtab %}
 {% endsubtabs %}
 
-#### Step 2.1d: Handle intent updates
+#### Step 2.4: Handle intent updates
 
 If your MainActivity has `android:launchMode` set to `singleTask`, add the following code to your `MainActivity` class:
 
@@ -227,17 +229,33 @@ override fun onNewIntent(intent: Intent) {
 {% endtab %}
 {% tab iOS %}
 
-#### Step 2.1b: Install pods
+#### Step 2.1: (Optional) Configure Podfile for dynamic XCFrameworks
+
+To import certain Braze libraries, such as BrazeUI, into an Objective-C++ file, you will need to use the `#import` syntax. Starting in version 7.4.0 of the Braze Swift SDK, binaries have an [optional distribution channel as dynamic XCFrameworks](https://github.com/braze-inc/braze-swift-sdk-prebuilt-dynamic), which are compatible with this syntax.
+
+If you'd like to use this distribution channel, manually override the CocoaPods source locations in your Podfile. Reference the sample below and replace `{your-version}` with the relevant version you wish to import:
+
+```ruby
+pod 'BrazeKit', :podspec => 'https://raw.githubusercontent.com/braze-inc/braze-swift-sdk-prebuilt-dynamic/{your-version}/BrazeKit.podspec'
+pod 'BrazeUI', :podspec => 'https://raw.githubusercontent.com/braze-inc/braze-swift-sdk-prebuilt-dynamic/{your-version}/BrazeUI.podspec'
+pod 'BrazeLocation', :podspec => 'https://raw.githubusercontent.com/braze-inc/braze-swift-sdk-prebuilt-dynamic/{your-version}/BrazeLocation.podspec'
+```
+
+#### Step 2.2: Install pods
 
 Since React Native automatically links the libraries to the native platform, you can install the SDK with the help of CocoaPods.
 
 From the root folder of the project:
 
 ```bash
+# To install using the React Native New Architecture
+cd ios && RCT_NEW_ARCH_ENABLED=1 pod install
+
+# To install using the React Native legacy architecture
 cd ios && pod install
 ```
 
-#### Step 2.2b: Configure the Braze SDK
+#### Step 2.3: Configure the Braze SDK
 
 {% subtabs local %}
 {% subtab SWIFT %}

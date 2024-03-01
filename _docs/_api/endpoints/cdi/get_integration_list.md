@@ -3,8 +3,7 @@ nav_title: "GET: List Integrations"
 article_title: "GET: List Integrations"
 search_tag: Endpoint
 page_order: 1
-hidden: true
-permalink: /api/cdi/get_integration_list/
+alias: /api/cdi/get_integration_list/
 layout: api_page
 page_type: reference
 description: "This article outlines details about the List integrations Braze endpoint."
@@ -18,9 +17,6 @@ description: "This article outlines details about the List integrations Braze en
 
 > Use this endpoint to return a list of existing integrations.
 
-{% alert important %}
-This endpoint is currently in early access. Contact your customer success manager if you're interested in participating in this early access.
-{% endalert %}
 
 {% alert note %}
 To use this endpoint, you'll need to generate an API key with the `cdi.integration_list` permission.

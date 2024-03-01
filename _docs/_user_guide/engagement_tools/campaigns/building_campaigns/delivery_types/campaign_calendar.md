@@ -32,7 +32,13 @@ To download a copy of your data, select <i class="fa-solid fa-bars" style="color
 
 ## Send calendar
 
-The send calendar displays all your scheduled campaigns for the current month. You can change the month by selecting <i class="fa-solid fa-chevron-left" style="color: #2e7487;"></i> **See previous month** or <i class="fa-solid fa-chevron-right" style="color: #2e7487;"></i>**See next month**. To return to the current month, select **Today**.
+The send calendar displays all your scheduled campaigns for the current month.
+
+{% alert note %}
+In-app messages are always action-based, so you won't see any in-app message campaigns in the send calendar.
+{% endalert %}
+
+You can change the month by selecting <i class="fa-solid fa-chevron-left" style="color: #2e7487;"></i>&nbsp;**See previous month** or <i class="fa-solid fa-chevron-right" style="color: #2e7487;"></i>&nbsp;**See next month**. To return to the current month, select **Today**.
 
 ![The Send Calendar displaying all scheduled campaigns in the current month.]({% image_buster /assets/img/campaign_calendar/content_calendar_sends.png %})
 

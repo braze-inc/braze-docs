@@ -85,7 +85,7 @@ For example, if we are defining a feature flag that shows an out-of-stock banner
 |`dismissible`|`boolean`|`false`|
 
 {% alert tip %}
-There is no limit to the number of properties you can add, though a feature flag's properties are limited to 10kB in total.
+There is no limit to the number of properties you can add, though a feature flag's properties are limited to 10kB in total. Both property values and keys are limited to 255 characters in length.
 {% endalert %}
 
 #### Targeting
@@ -584,7 +584,7 @@ m.Braze.refreshFeatureFlags()
 
 ### Listen for changes {#updates}
 
-You can configure the Braze SDK to listen and update your app when feature flags have been refreshed.
+You can configure the Braze SDK to listen and update your app when the SDK refreshes any feature flags.
 
 This is useful if you want to update your app if a user is no longer eligible for a feature. For example, setting some state in your app based on whether or not a feature is enabled, or one of its property values.
 
@@ -751,7 +751,7 @@ To avoid users being enabled and disabled by different entry points, you should 
 
 ### Planning ahead
 
-Always play it safe. When considering new features that may require a kill-switch, it's better to release new code with a feature flag and not need it than it is to realize a new app update is required.
+Always play it safe. When considering new features that may require an off switch, it's better to release new code with a feature flag and not need it than it is to realize a new app update is required.
 
 ### Be descriptive
 

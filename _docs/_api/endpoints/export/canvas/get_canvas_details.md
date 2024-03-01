@@ -18,9 +18,9 @@ description: "This article outlines details about the Export Canvas details Braz
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#5188873c-13a3-4aaf-a54b-9fa1daeac5f8 {% endapiref %}
 
-{% alert note %}
-To use this endpoint, you'll need to generate an API key with the `canvas.details` permission.
-{% endalert %}
+## Prerequisites
+
+To use this endpoint, you'll need an [API key]({{site.baseurl}}/api/basics#rest-api-key/) with the `canvas.details` permission.
 
 ## Rate limit
 
@@ -72,6 +72,7 @@ Authorization: Bearer YOUR-REST-API-KEY
     ... (more variations)
   ],
   "tags": (array of strings) the tag names associated with the Canvas,
+  "teams" : (array) the names of the Teams associated with the Canvas,
   "steps": [
     {
       "name": (string) the name of step,

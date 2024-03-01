@@ -24,9 +24,9 @@ News Feed is being deprecated. Braze recommends that customers who use our News 
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#9fa7a3bc-4a02-4de2-bc4c-8f111750665e {% endapiref %}
 
-{% alert note %}
-To use this endpoint, you'll need to generate an API key with the `feed.list` permission.
-{% endalert %}
+## Prerequisites
+
+To use this endpoint, you'll need an [API key]({{site.baseurl}}/api/basics#rest-api-key/) with the `feed.list` permission.
 
 ## Rate limit
 
@@ -56,7 +56,7 @@ Authorization: Bearer YOUR-REST-API-KEY
     "message": (required, string) the status of the export, returns 'success' when completed without errors,
     "cards" : [
         {
-            "id" : (string) the ard API identifier,
+            "id" : (string) the card API identifier,
             "type" : (string) type of the card - NewsItem (classic cards), CaptionedImage, Banner
             "title" : (string) the title of the card,
             "tags" : (array) the tag names associated with the card

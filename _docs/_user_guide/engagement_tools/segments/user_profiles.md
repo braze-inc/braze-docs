@@ -88,14 +88,14 @@ The **Engagement** tab contains information about a user's interactions with the
 | Install attribution | Information about how and when a user installed your app. Learn more about [understanding user installs]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/install_attribution/). |
 | Miscellaneous | The user's [random bucket number]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/ab_testing_with_random_buckets/). |
 | Canvas messages received | Canvas messages this user has received and when. Select a message from the list to view it. |
-| Predictions | [Churn Prediction]({{site.baseurl}}/user_guide/predictive_suite/predictive_churn) and [Event Prediction]({{site.baseurl}}/user_guide/predictive_suite/predictive_purchases) scores for this user. |
+| Predictions | [Churn prediction]({{site.baseurl}}/user_guide/predictive_suite/predictive_churn) and [event prediction]({{site.baseurl}}/user_guide/predictive_suite/predictive_purchases) scores for this user. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ![][3]
 
 ### Messaging History tab
 
-The **Message History** tab of the user profile shows recent messaging related events (about 40) for an individual user from the past 30 days. These events include the messages that the user was sent, received, interacted with, and more.
+The **Message History** tab of the user profile shows recent messaging related events (about 40) for an individual user from the past 30 days. These events include the messages that the user was sent, received, interacted with, and more. Note that the data in this tab isn't updated after a user is merged.
 
 {% alert note %}
 If you have feedback on this table, or would like to see specific events, please email [user-targeting@braze.com](mailto:user-targeting@braze.com?subject=Messaging%20History%20Tab%20Feedback) with the subject line "Messaging History Tab Feedback".

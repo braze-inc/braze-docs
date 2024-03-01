@@ -11,7 +11,7 @@ description: "This article contains release notes for July 2020."
 
 Using Liquid, you can have your messages pull from a list of [promotion codes][1] you upload. This feature offers expiry dates of up to six months and supports u to 20MM individual codes per list.
 
-## Variant Retention Report
+## Variant retention report
 
 When looking at a retention report for a [campaign][2] or [canvas][3], you can now view the results broken down by variant. 
 

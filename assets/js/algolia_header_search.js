@@ -184,7 +184,7 @@ $(document).ready(function () {
                   },
                 },
                 {
-                  indexName: algolia_lab_index,
+                  indexName: algolia_learning_index,
                   query,
                   params: {
                     hitsPerPage: 2,
@@ -217,7 +217,7 @@ $(document).ready(function () {
           item({ item, createElement }) {
             var result_template = '';
             switch(item['__autocomplete_indexName']) {
-              case 'LABSearch':
+              case "BrazeLearningCourses":
                 result_template = parseLABSearch(item);
                 break;
               default:

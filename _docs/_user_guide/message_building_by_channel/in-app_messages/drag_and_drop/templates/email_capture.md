@@ -3,16 +3,11 @@ nav_title: Email Capture
 article_title: Email Capture
 alias: "/email_capture/"
 description: "This reference page covers how to create an email capture form with the in-app message drag-and-drop editor."
-hidden: true
 ---
 
-# Phone number capture form
+# Email capture form
 
 > Use the drag-and-drop email capture in-app message template to collect users' email addresses and grow your subscription groups.
-
-{% alert important %}
-The email capture form is currently in early access. Contact your Braze account manager if you're interested in participating in the early access.
-{% endalert %}
 
 ## SDK requirements
 
@@ -32,7 +27,7 @@ If you want to include text links that do not dismiss the message, users must be
 If you include a link in your in-app message that redirects to a URL and the end user is not on the minimum SDK versions specified, clicking on the link will close the message, and the user will not be able to return to the message to submit the form.
 {% endalert %}
 
-## Creating a phone number capture form
+## Creating an email capture form
 
 When creating a drag-and-drop in-app message, select **Email capture** for your template and click **Build message**. This template is supported for both mobile apps and web browsers.
 
@@ -40,7 +35,7 @@ When creating a drag-and-drop in-app message, select **Email capture** for your 
 
 Before you start customizing your template, you can set message-level styles for the entire message using the side menu. For example, you may want to customize the font of all the text or the color of all the links included in your message. You can also make the message a modal or fullscreen display type.
 
-### Step 2: Customize your phone number capture component
+### Step 2: Customize your email capture component
 
 To get started building your email capture form, select the email capture element in the editor. By default, collected email addresses will have the global subscription group **Subscribed**. To opt in users to specific subscription groups, refer to [Updating email subscription states]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions#updating-email-subscription-states).
 
@@ -54,6 +49,10 @@ If the user enters an email address that includes any unaccepted special charact
 
 We recommend including opt-in language and links to your brand’s privacy policy and terms and conditions in your message. We have provided a placeholder disclaimer in the template solely as an example, but this should not be relied upon for compliance purposes. Be sure to work with your legal team to develop language that is tailored to your specific brand.
 
+{% alert note %}
+Deliverability best practices often exceed legal requirements, and our recommendation is to always obtain explicit consent to send emails and allow users to easily decline.
+{% endalert %}
+
 ### Step 4: Style your message
 
 You can customize the look and feel of your message using the drag-and-drop [in-app message components][3].
@@ -66,7 +65,7 @@ Once your campaign has launched, you can analyze results in real time to see how
 
 ### Double opt-in verification
 
-To make sure that anyone who signed up for your list really meant to sign up for your list, we recommend getting a second confirmation from anyone who signed up via your email capture form by sending a [double opt-in](https://www.braze.com/resources/articles/embracing-the-email-double-opt-in) flow.
+To make sure that anyone who signed up for your list really meant to sign up for your list and provided the correct email address, we recommend getting a second confirmation from anyone who signed up via your email capture form by sending a [double opt-in](https://www.braze.com/resources/articles/embracing-the-email-double-opt-in) flow.
 
 One of the ways you can set this up is through Canvas Flow:
 

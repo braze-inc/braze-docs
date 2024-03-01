@@ -14,10 +14,16 @@ channel: push
 
 ## Step 1: Complete native setup
 
+### Prerequisites
+
+For any iOS integration method, ensure that you have first generated an APNs certificate and uploaded it to the Braze dashboard. If you do not have an existing push key or certificate from Apple or want to generate a new one, follow [the Swift integration instructions]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/integration/).
+
 {% tabs %}
 {% tab Expo %}
 
-Set the `enableBrazeIosPush` and `enableFirebaseCloudMessaging` props to enable push for iOS and Android, respectively.
+Set the `enableBrazeIosPush` and `enableFirebaseCloudMessaging` options in your `app.json` file to enable push for iOS and Android, respectively. Refer to the configuration instructions [here]({{site.baseurl}}/developer_guide/platform_integration_guides/react_native/react_sdk_setup/#step-2-complete-native-setup) for more details.
+
+Note that you will need to use these settings instead of the native setup instructions if you are depending on additional push notification libraries like [Expo Notifications](https://docs.expo.dev/versions/latest/sdk/notifications/).
 
 {% endtab %}
 {% tab Android %}
@@ -56,10 +62,7 @@ Add your `google-services.json` file path to your `app.json`. This file is requi
 {% endtab %}
 {% tab iOS %}
 
-Follow the [iOS integration instructions](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/b1-standard-push-notifications/) to implement in Swift, or refer to [Push notifications integration]({{site.base.url}}/docs/developer_guide/platform_integration_guides/swift/push_notifications/integration/?tab=objective-c#automatic-push-integration) for instructions to implement in Swift or Objective-C. If you prefer not to request push permission upon launching the app, you should omit the `requestAuthorizationWithOptions:completionHandler:` call in your AppDelegate and follow the step below.
-
-### Generating a new push key
-If you do not have an existing push key or certificate from Apple or want to generate a new one, follow [the iOS integration instructions]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/integration/) to generate a new push key and upload it to the Braze dashboard.
+Follow the [iOS integration instructions](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/b1-standard-push-notifications/) to implement in Swift, or refer to [Push notifications integration]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/integration/?tab=objective-c#automatic-push-integration) for instructions to implement in Swift or Objective-C. If you prefer not to request push permission upon launching the app, you should omit the `requestAuthorizationWithOptions:completionHandler:` call in your AppDelegate and follow the step below.
 
 ### Migrating a push key from expo-notifications
 If you were previously using `expo-notifications` to manage your push key, run `expo fetch:ios:certs` from your application's root folder. This will download your push key (a .p8 file), which can then be uploaded to the Braze dashboard.
@@ -100,6 +103,10 @@ Braze.addListener(Braze.Events.PUSH_NOTIFICATION_EVENT, data => {
 ```
 
 #### Push notification event fields
+
+{% alert note %}
+Because of platform limitations on iOS, the Braze SDK can only process push payloads while the app is in the foreground. Listeners will only trigger for the `push_opened` event type on iOS after a user has interacted with a push.
+{% endalert %}
 
 For a full list of push notification fields, refer to the table below:
 
@@ -148,7 +155,6 @@ For iOS, add `populateInitialUrlFromLaunchOptions` to your AppDelegate's `didFin
 For example:
 
 ```objc
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
   self.moduleName = @"BrazeProject";
@@ -165,25 +171,35 @@ For example:
 
   return [super application:application didFinishLaunchingWithOptions:launchOptions];
 }
-
 ```
 
 ### Step 3.2b: Add `getInitialURL()`
 
-Add the `getInitialURL()` method to handle when a deep link opens your app.
+Add the `Linking.getInitialURL()` method to handle when a deep link opens your app.
+
+You should also call the `Braze.getInitialURL` method to handle deep links from iOS push notification clicks while your app is not running. Braze provides this workaround since React Native's Linking API does not support this scenario due to a race condition on app startup.
 
 For example:
 
 ```javascript
-    Linking.getInitialURL()
-      .then(url => {
-        if (url) {
-          console.log('Linking.getInitialURL is ' + url);
-          showToast('Linking.getInitialURL is ' + url);
-          handleOpenUrl({ url });
-        }
-      })
-      .catch(err => console.error('Error getting initial URL', err));
+Linking.getInitialURL()
+  .then(url => {
+    if (url) {
+      console.log('Linking.getInitialURL is ' + url);
+      showToast('Linking.getInitialURL is ' + url);
+      handleOpenUrl({ url });
+    }
+  })
+  .catch(err => console.error('Error getting initial URL', err));
+
+// Handles deep links when an iOS app is launched from a hard close via push click.
+Braze.getInitialURL(url => {
+  if (url) {
+    console.log('Braze.getInitialURL is ' + url);
+    showToast('Braze.getInitialURL is ' + url);
+    handleOpenUrl({ url });
+  }
+});
 ```
 
 {% endtab %}
