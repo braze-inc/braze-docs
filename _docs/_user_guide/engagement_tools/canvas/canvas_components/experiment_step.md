@@ -48,7 +48,7 @@ You can also choose whether users in the control group should continue down the 
 ![Experiment Settings where you can add paths and distribute the percentage of users in each path.][1]
 
 {% alert note %}
-If Canvas re-eligibility is enabled, users who enter the Canvas and go down a randomly chosen path will go down the same path again if they become re-eligible and re-enter the Canvas. This maintains the validity of the experiment and associated analytics.
+If Canvas re-eligibility is enabled, users who enter the Canvas and go down a randomly chosen path will go down the same path again if they become re-eligible and re-enter the Canvas. This maintains the validity of the experiment and associated analytics. If instead you'd like the Experiment Step to always randomize path assignment, enable **Randomized Paths in Experiment Paths**. This option is not available when using either Winning or Personalized Paths.
 {% endalert %}
 
 ### Step 2: Turn on Winning Path or Personalized Paths (optional) {#step-2}
