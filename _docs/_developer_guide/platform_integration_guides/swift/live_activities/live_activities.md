@@ -269,6 +269,10 @@ When a Live Activity is active, it is shown on both a user's lock screen and Dyn
 
 See our [`/messages/live_activity/update` endpoint][1] article for full details.
 
+## Troubleshooting
+
+For further troubleshooting details or frequently asked questions, refer to our [FAQ][11].
+
 [1]: {{site.baseurl}}/api/endpoints/messaging/live_activity/update
 [2]: https://developer.apple.com/documentation/activitykit/displaying-live-data-with-live-activities#Understand-constraints
 [3]: https://developer.apple.com/documentation/activitykit/displaying-live-data-with-live-activities
@@ -279,3 +283,4 @@ See our [`/messages/live_activity/update` endpoint][1] article for full details.
 [8]: {% image_buster /assets/img/LiveActivities1.png %}
 [9]: {% image_buster /assets/img/LiveActivities2.png %}
 [10]: {% image_buster /assets/img/LiveActivities4.png %}
+[11]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/live_activities/faq/
