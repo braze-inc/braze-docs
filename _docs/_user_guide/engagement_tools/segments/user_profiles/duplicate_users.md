@@ -21,7 +21,7 @@ If a user search returns duplicate profiles, you can merge each profile individu
 
 In Braze, select **Audience** > **User Search**.
 
-![The "User Search" tile highlighted in the navigation menu.]({% image_buster /assets/img/audience_management/duplicate_users/individual_merging/select_search_users.png %})
+![The "User Search" tile highlighted in the navigation menu.]({% image_buster /assets/img/audience_management/duplicate_users/individual_merging/select_search_users.png %}){: style="max-width:90%;"}
 
 Enter a unique identifier, such as an email address or phone number, for the duplicate profile, then select **Search**.
 
@@ -49,7 +49,7 @@ When you bulk merge duplicate users, Braze finds profiles with matching identifi
 
 In the Braze dashboard, select **Audience** > **Manage Audience**.
 
-![The "Manage Audience" tile highlighted in the navigation menu.]({% image_buster /assets/img/audience_management/duplicate_users/bulk_merging/select_manage_audience.png %})
+![The "Manage Audience" tile highlighted in the navigation menu.]({% image_buster /assets/img/audience_management/duplicate_users/bulk_merging/select_manage_audience.png %}){: style="max-width:90%;"}
 
 ### Step 2: Preview the results (optional)
 
