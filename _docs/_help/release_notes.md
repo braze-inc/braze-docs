@@ -62,6 +62,12 @@ Google is updating their [EU User Consent Policy](https://www.google.com/about/c
 
 ### Data flexibility
 
+#### Merge duplicate users
+
+{% multi_lang_include release_type.md release="Early access" %}
+
+In the Braze dashboard, you can now [search for and merge duplicate users]({{site.baseurl}}/_user_guide/engagement_tools/segments/user_profiles/duplicate_users) to maximize the effectiveness of your campaigns and Canvases. You can individually merge user profiles or perform a bulk merge, which merges all profiles with matching identifiers into the most recently updated user profile.
+
 #### Message archiving support for AWS S3 and Google Cloud Storage
 
 You can use [message archiving]({{site.baseurl}}/) to save a copy of your messages sent to users for archival or compliance purposes to your AWS S3 bucket, Azure Blob Storage container or Google Cloud Storage bucket.
