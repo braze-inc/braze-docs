@@ -24,12 +24,10 @@ valid_partner_list:
   url: /docs/partners/message_orchestration/attribution/appsflyer/  
 - name: Tinyclues
   url: /docs/partners/data_and_infrastructure_agility/cohort_import/tinyclues/
-- name: mParticle
-  url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/mParticle/mparticle/#cohort-import
 - name: Hightouch
   url: /docs/partners/data_and_infrastructure_agility/workflow_automation/hightouch/
 - name: Heap
   url: /docs/partners/data_and_infrastructure_agility/cohort_import/heap/
-- name: Storyly
-  url: /docs/partners/data_and_infrastructure_agility/cohort_import/storyly/
+- name: Segment
+  url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/segment/segment_engage/
 ---
