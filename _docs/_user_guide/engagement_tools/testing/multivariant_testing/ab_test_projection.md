@@ -6,11 +6,13 @@ page_type: reference
 description: "This article explains how A/B test projection works, how to run a projection, and how Braze uses your data."
 ---
 
-# A/B Test Projection
+# A/B test projection
 
 > A/B test projection uses neural networks to predict which subject lines perform best. Our model extracts linguistic features from winning A/B tests performed on Braze and uses those statistical language patterns to teach our AI what makes better subject lines.
 
- {% alert note %} This feature is currently in early access. Contact your Braze customer success or account manager if you're interested in participating in the early access. {% endalert %}
+{% alert note %} 
+This feature is currently in early access. Contact your Braze customer success or account manager if you're interested in participating in the early access.
+{% endalert %}
 
 ## Running a projection
 
@@ -26,7 +28,7 @@ The subject line our AI predicts to be best will be highlighted with a **Project
 
 ### How accurate are the projections?
 
-In testing, we found the projections to be about 70% accurate when picking between pairs of messages in real A/B tests. Take this into account when interpreting the messages that the model projects to win.
+In testing, we found the projections to be about 70% accurate when picking between pairs of messages in real A/B tests. Consider this when interpreting the messages the model projects to win.
 
 ### How do we use your data?
 
