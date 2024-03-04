@@ -76,7 +76,7 @@ To send all test messages in a Canvas at once, regardless of the path and withou
 
 Canvas steps are responsive to timing when previewing user paths. Updates made via the User Update step are reflected in subsequent steps in the flow, but are not applied to the actual user profile. The effects of a user entering a variant are reflected in future steps in a preview.
 
-Similarly, filters will recognize actions that occurred as a result of the test user interacting with other steps in the Canvas. For example, this preview mode recognizes that a user encountered a Message step that was “sent” earlier in the Canvas, and it will recognize that the test user “took action” to advance through an action path. 
+Similarly, filters will recognize actions that occurred as a result of the test user interacting with other steps in the Canvas. For example, this preview mode recognizes that a user encountered a Message step that was “sent” earlier in the Canvas, and it will recognize that the test user “took action” to advance through an action path.
 
 Refer to [Exit criteria]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/exit_criteria) for more details on responsive behavior.
 
