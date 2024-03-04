@@ -11,14 +11,14 @@ COMMIT_LOGS=$(git log --first-parent "$LATEST_COMMIT_HASH"..origin/develop --pre
 # Parses the commit logs, formats them, then writes them to the temp file.
 echo "$COMMIT_LOGS" | while IFS=»¦« read -r title body; do
     if [[ $title =~ Merge\ pull\ request\ \#([0-9]+) ]]; then
-        NUMBER=${BASH_REMATCH[1]}
-        TITLE=${body//¦«/}
+        PR_NUMBER=${BASH_REMATCH[1]}
+        PR_TITLE=${body//¦«/}
         # If applicable, removes the Jira ticket number from the PR title.
-        TITLE=$(echo "$TITLE" | sed -E 's/^BD-[0-9]+[:| ]*//')
-        echo "- [#$NUMBER](https://github.com/braze-inc/braze-docs/pull/$NUMBER) - $TITLE" >> "$TEMP_FILE"
+        PR_TITLE=$(echo "$PR_TITLE" | sed -E 's/^BD-[0-9]+[:| ]*//')
+        echo "- [#$PR_NUMBER](https://github.com/braze-inc/braze-docs/pull/$PR_NUMBER) - $PR_TITLE" >> "$TEMP_FILE"
     fi
 done
 
-# Return the results in reverse order and clean up files.
+# Returns the results in reverse order and clean up files.
 tac "$TEMP_FILE"
 rm "$TEMP_FILE"
