@@ -161,6 +161,51 @@ The following table summarizes mailbox provider support for “mailto:” header
 
 _*Yahoo and Gmail will eventually deprecate the "mailto:" header and will only support one-click._
 
+<<<<<<< HEAD
+=======
+Displaying the header is ultimately determined by the mailbox provider. To check if the list-unsubscribe header is included in the raw (text) email for the recipient in Gmail, do the following:
+
+1. Select **Show Original** in the email. This opens a new tab with the raw version of the email and its headers.
+2. Search for "List-Unsubscribe".
+
+If the header is in the raw version of the email but is not displayed, the mailbox provider has determined to not show the unsubscribe option, meaning we don't have further insight as to why the mailbox provider isn't displaying the header. Seeing the list-unsubscribe header is ultimately reputation-based. In most cases, the better your sender reputation with the inbox, the less likely the list-unsubscribe header will appear.
+
+#### Add one-click unsubscribe to email headers
+
+If you have multiple custom unsubscribe flows for managing many brands or lists in a single workspace, you can manually add a custom one-click unsubscribe header to your email headers.
+
+1. Go to **Sending Settings** in your email campaign.
+2. Select **Advanced**.
+3. Click **+ Add New Header** and add the following:
+* For **List-Unsubscribe-Post**, enter `List-Unsubscribe=One-Click`.
+* For **List-Unsubscribe**, enter your one-click unsubscribe link.
+
+![]({% image_buster /assets/img/email_settings/one-click_unsubscribe_to_email_header.png %})
+
+#### Frequently asked questions
+
+{% details Can the one-click unsubscribe URL (via list-unsubscribe header) link to a preference center? %}
+No, that doesn't adhere to RFC 8058, meaning you won't be compliant with Yahoo and Gmail's one-click unsubscribe requirement.
+{% enddetails %}
+
+{% details Will I need to edit past email campaigns and Canvases to apply the one-click unsubscribe setting after enabling it? %}
+No, once the setting is enabled under **Email Preferences**, Braze will automatically add the one-click unsubscribe headers to all outgoing marketing and promotional messages.
+{% enddetails %}
+
+{% details I can see the list-unsubscribe and one-click unsubscribe header in the original message or raw data, but why don't I see the Unsubscribe button in Gmail or Yahoo? %}
+Gmail and Yahoo ultimately decide whether or not to display the list-unsubscribe or one-click unsubscribe header. For new senders or senders with low sender reputation, this can occasionally cause the unsubscribe button to not display. 
+{% enddetails %}
+
+{% details Does the custom one-click unsubscribe header support Liquid? %}
+Yes, Liquid and conditional logic are supported to allow for dynamic one-click unsubscribe URLs for the header.
+{% enddetails %}
+
+#### Tips
+
+* If the URL isn’t wrapped between `<` and `>` and doesn't start with `https://`, you’ll receive the following message: “Failed to save settings. Please fix any errors before saving.”
+* If you're adding conditional logic, avoid having output values that add whitespaces to your URL as Braze does not remove these whitespaces.
+
+>>>>>>> origin
 ## Append email subject lines
 
 Use the toggle to include "[TEST]" and "[SEED]" in your test and seed email subject lines. This can help identify any email campaigns sent as tests.
