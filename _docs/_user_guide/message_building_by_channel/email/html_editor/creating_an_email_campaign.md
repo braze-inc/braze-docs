@@ -79,7 +79,7 @@ We recommend selecting one editing experience per email campaign. For example, c
 After you've selected your template, you'll see an overview of your email where you can quickly jump to the fullscreen editor to draft your email, change your sending info, and view warnings about deliverability or law compliance. 
 
 {% alert tip %}
-To add motion in an email that can render an accurate preview, use GIFs instead of elements that requires JavaScript as most inboxes don't support JavaScript.
+To add motion in an email with an accurate preview, use GIFs instead of elements that require JavaScript, as most inboxes don't support JavaScript.
 {% endalert %}
 
 ![Email Variants panel for composing your email.][14]{: style="max-width:75%" }
