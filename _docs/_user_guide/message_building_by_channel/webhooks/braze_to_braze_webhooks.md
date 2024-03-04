@@ -37,66 +37,7 @@ While the specifics of your webhook request will vary from use case to use case,
 2. Choose **Blank Template**.
 3. In the **Compose** tab, specify the **Webhook URL** and **Request Body** as noted for your use case.
 4. In the **Settings** tab, specify your **HTTP Method** and **Request Headers** as noted for your use case.
-5. Continue to build out the rest of your webhook as needed. Note that some use cases require specific delivery settings, such as triggering the campaign or Canvas off of a custom event.
-
-### Use case: Add an event or attribute to a user's profile
-
-With this use case, you can update a user's profile with an event, event property, or attribute as part of a campaign or Canvas. For example, a B2C website may add an attribute of `purchase_lapsers=true` to a user's profile if they don't convert from an abandoned cart campaign or Canvas to allow those users to be retargeted with subsequent messaging.
-
-Another common use case is a workaround to make event properties persist throughout a Canvas, rather than just the first step. This involves adding an event property as a custom attribute so that you can reference that event property throughout a Canvas. Using [Canvas persistent entry properties][6] solves for this issue.
-
-{% alert important %}
-In order to reference an event property throughout a Canvas, you need to add the event property to the user profile as an attribute in the first step of the Canvas. Additionally, the Canvas itself must be triggered off of that event.
-{% endalert %}
-
-Follow the general steps for creating a Braze to Braze webhook, and refer to the following when configuring your webhook:
-
-- **Webhook URL:** Your [REST endpoint URL][7] followed by `/users/track`. For example, for the US-06 instance, the URL would be `https://rest.iad-06.braze.com/users/track`.
-- **Request Body:** Raw text
-
-#### Request headers and method
-
-Braze requires an HTTP header for authorization that includes your API key and another that declares your `content-type`.
-
-- **Request Header:**
-  - **Authorization:** Bearer `YOUR_API_KEY`
-  - **Content-Type:** application/json
-- **HTTP Method:** POST
-
-Replace `YOUR_API_KEY` with a Braze API key with `users.track` permissions. You can create an API key within the Braze dashboard at **Settings** > **API Keys**.
-
-{% alert note %}
-If you are using the [older navigation]({{site.baseurl}}/navigation), you can create an API key from **Developer Console** > **API Settings**.
-{% endalert %}
-
-![][1]
-
-#### Request body
-
-Add your user track request in the request body. For more details, refer to [User track][8]. The following is an example request body for this endpoint when adding an event property as a custom attribute to a user's profile:
-
-{% raw %}
-
-```json
-{
-  "attributes": [
-    {
-      "external_id": "{{${user_id}}}",
-      "new_custom_attribute": "{{event_properties.${your_event_property}}}"
-    }
-  ]
-}
-```
-
-{% endraw %}
-
-{% alert note %}
-Each custom event, event attribute, or attribute updated on a user's profile counts toward your [data point]({{site.baseurl}}/user_guide/onboarding_with_braze/data_points/) consumption. 
-{% endalert %}
-
-#### Additional settings
- 
-For your Delivery settings, select **Action-Based Delivery**. Set the **Trigger Action** to "Perform Custom Event" and choose the action that should trigger this webhook.
+5. Continue to build out the rest of your webhook as needed. Some use cases require specific delivery settings, such as triggering the campaign or Canvas off of a custom event.
 
 ### Use case: Increment an integer custom attribute for a counter
 
