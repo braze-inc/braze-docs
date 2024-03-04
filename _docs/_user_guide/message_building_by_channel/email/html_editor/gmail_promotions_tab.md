@@ -86,7 +86,7 @@ Due to Google's privacy and safety regulations, emails with annotations must be 
 
 ### How are clicks on a promotion card or product carousel tracked?
 
-If you're using links within each promotion card or product carousel, these clicks are tracked by email click tracking. Email opens are tracked when a user opens the email.  
+Braze or any other ESPs are not able to insert link tracking on links in the header section. This means clicks cannot be tracked on a promotion card or product carousel.
 
 ### Is there a way to see how many users received a product carousel?
 
