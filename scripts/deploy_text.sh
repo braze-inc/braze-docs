@@ -1,36 +1,24 @@
 #!/bin/bash
 
-# TODO: create logic for if there's no PRs ready for deploy
-# TODO: write script description + rewrite all command comments 
-# TODO: cleanup/reformat script using bash scripting best practices
-# TODO: add 'gh' and 'jq' to dev dependencies
-# TODO: create how to guide and add to confluence
+TEMP_FILE=$(mktemp)
 
-echo "Deploy text is generating..."
+# Gets the latest commit hash from origin/master that is not in origin/develop.
+LATEST_COMMIT_HASH=$(git log --max-count=1 --format="%H" origin/master ^origin/develop)
 
-# Fetch PR list
-PR_LIST=$(gh pr list --state all --limit 1000 --json mergedAt,number,title,url)
+# Gets the log of commits starting from the latest commit hash.
+COMMIT_LOGS=$(git log --first-parent "$LATEST_COMMIT_HASH"..origin/develop --pretty=%s»¦«%b)
 
-# Filter out PRs with 'mergedAt' as null and sort by date in descending order
-SORTED_PR_LIST=$(echo "$PR_LIST" | jq '[.[] | select(.mergedAt != null)] | sort_by(.mergedAt) | reverse')
+# Parses the commit logs, formats them, then writes them to the temp file.
+echo "$COMMIT_LOGS" | while IFS=»¦« read -r title body; do
+    if [[ $title =~ Merge\ pull\ request\ \#([0-9]+) ]]; then
+        NUMBER=${BASH_REMATCH[1]}
+        TITLE=${body//¦«/}
+        # If applicable, removes the Jira ticket number from the PR title.
+        TITLE=$(echo "$TITLE" | sed -E 's/^BD-[0-9]+[:| ]*//')
+        echo "- [#$NUMBER](https://github.com/braze-inc/braze-docs/pull/$NUMBER) - $TITLE" >> "$TEMP_FILE"
+    fi
+done
 
-# Find the index of the most recent "Deploy -" PR
-# TODO: find better method. Try to do something like "check for last 1000 PRs in 'develop', then check
-# TODO: last 1000 PRs in 'master'. get a list of all PRs in 'develop' that are not in 'master'."
-DEPLOY_INDEX=$(echo "$SORTED_PR_LIST" \
-  | jq -r 'to_entries | map(select(.value.title | startswith("Deploy -"))) | .[0].key')
-
-# Remove the last deploy entry and all entries below it
-FILTERED_PR_LIST=$(echo "$SORTED_PR_LIST" | jq --argjson DEPLOY_INDEX "$DEPLOY_INDEX" 'del(.[$DEPLOY_INDEX:])')
-
-# Output the result in Markdown format with modified title
-DEPLOY_TEXT=$(echo "$FILTERED_PR_LIST" \
-  | jq -r '.[] | "- [#" + (.number|tostring) + "](" + .url + ") - " + (.title | gsub("BD-[^ ]+"; ""))' \
-  | tr -s ' ' | sort -t "[" -k2,2n)
-
-cat << EOF
-Complete! Copy your deploy text below:
-
-$DEPLOY_TEXT
-EOF
-
+# Return the results in reverse order and clean up files.
+tac "$TEMP_FILE"
+rm "$TEMP_FILE"
