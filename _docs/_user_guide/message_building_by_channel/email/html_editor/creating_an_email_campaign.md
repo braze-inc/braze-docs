@@ -85,7 +85,7 @@ To add motion in an email with an accurate preview, use GIFs instead of elements
 ![Email Variants panel for composing your email.][14]{: style="max-width:75%" }
 
 {% alert important %}
-Braze will automatically remove HTML event handlers referenced as attributes. This does modify the HTML, and it is recommended to validate or re-check the email after it's completed. Learn more about [HTML handlers](https://www.w3schools.com/tags/ref_eventattributes.asp).
+Braze will automatically remove HTML event handlers referenced as attributes. This will modify the HTML, so it is recommended to re-check the email after it's completed. Learn more about [HTML handlers](https://www.w3schools.com/tags/ref_eventattributes.asp).
 {% endalert %}
 
 {% alert tip %}
