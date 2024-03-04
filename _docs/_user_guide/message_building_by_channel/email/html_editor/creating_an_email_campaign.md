@@ -78,18 +78,20 @@ We recommend selecting one editing experience per email campaign. For example, c
 
 After you've selected your template, you'll see an overview of your email where you can quickly jump to the fullscreen editor to draft your email, change your sending info, and view warnings about deliverability or law compliance. 
 
-Composing your email in the drag-and-drop editor? Refer to the [drag-and-drop editor overview]({{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/overview/) for help composing your email. 
+{% alert tip %}
+To add motion in an email that can render an accurate preview, use GIFs instead of elements that requires JavaScript as most inboxes don't support JavaScript.
+{% endalert %}
 
 ![Email Variants panel for composing your email.][14]{: style="max-width:75%" }
+
+{% alert important %}
+Braze will automatically remove HTML event handlers referenced as attributes. This does modify the HTML, and it is recommended to validate or re-check the email after it's completed. Learn more about [HTML handlers](https://www.w3schools.com/tags/ref_eventattributes.asp).
+{% endalert %}
 
 {% alert tip %}
 Need help creating awesome copy? Try using the [AI copywriting assistant]({{site.baseurl}}/user_guide/intelligence/ai_copywriting/). Input a product name or description and the AI will generate human-like marketing copy for use in your messaging.
 
 ![Launch AI Copywriter button, located in the Body tab of the email composer.]({% image_buster /assets/img/ai_copywriter/ai_copywriter_email.png %}){: style="max-width:80%"}
-{% endalert %}
-
-{% alert important %}
-Braze will automatically remove HTML event handlers referenced as attributes. Note that this does modify the HTML, and it is recommended to validate or re-check the email after it's completed. Learn more about [HTML handlers](https://www.w3schools.com/tags/ref_eventattributes.asp).
 {% endalert %}
 
 ### Step 3a: Add email headers and extras
