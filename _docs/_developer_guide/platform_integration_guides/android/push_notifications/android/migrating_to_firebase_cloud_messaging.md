@@ -61,6 +61,10 @@ Next, generate JSON credentials for your FCM service account. On Google Cloud IA
 
 Select **Add Key** > **Create new key**.
 
+{% alert note %}
+Creating a new key will not remove your legacy ones. If you accidentally delete your new key by selecting **Revert Credentials**, Braze will use your legacy keys as a backup.
+{% endalert %}
+
 ![The selected service account with the "Add Key" menu open.]({% image_buster /assets/img/android/push_integration/generate_json_credentials/select-create-new-key.png %})
 
 Choose **JSON**, then select **Create**.
