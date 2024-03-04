@@ -19,6 +19,8 @@ To complete the installation, you will need the [app identifier API key]({{site.
 
 - Requires React Native v0.71+ (as of version 9.0.0)
 
+For the full compatibility matrix, refer to the version support in our [public React Native SDK repository](https://github.com/braze-inc/braze-react-native-sdk?tab=readme-ov-file#version-support).
+
 ### React Native New Architecture Support
 
 {% sdk_min_versions reactnative:2.0.1 %}
