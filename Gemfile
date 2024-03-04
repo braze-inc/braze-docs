@@ -22,5 +22,6 @@ gem "jekyll_asset_pipeline"
 group :jekyll_plugins do
   gem "algolia_html_extractor", git: "https://github.com/zzhaobraze/html-extractor", branch: "master"
   gem "jekyll-algolia", "~> 1.0", git: "https://github.com/zzhaobraze/jekyll-algolia", branch: "master"
+  gem "jekyll-last-modified-at"
 end
 
