@@ -66,7 +66,7 @@ Google is updating their [EU User Consent Policy](https://www.google.com/about/c
 
 {% multi_lang_include release_type.md release="Early access" %}
 
-In the Braze dashboard, you can now [search for and merge duplicate users]({{site.baseurl}}/_user_guide/engagement_tools/segments/user_profiles/duplicate_users) to maximize the effectiveness of your campaigns and Canvases. You can individually merge user profiles or perform a bulk merge, which merges all profiles with matching identifiers into the most recently updated user profile.
+In the Braze dashboard, you can now [search for and merge duplicate users]({{site.baseurl}}/user_guide/engagement_tools/segments/user_profiles/duplicate_users) to maximize the effectiveness of your campaigns and Canvases. You can individually merge user profiles or perform a bulk merge, which merges all profiles with matching identifiers into the most recently updated user profile.
 
 #### Search for archived content
 
