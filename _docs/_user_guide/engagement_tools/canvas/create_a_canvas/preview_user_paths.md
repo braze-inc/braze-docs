@@ -48,10 +48,6 @@ While the default starts times still apply, the entrance time is configurable in
 
 Message and Delay steps show the time at which a user would progress or receive the message without needing to reconfigure the delays. Note that while the steps will indicate whether Intelligent Timing is used, this preview of the user path does not calculate an estimate for a test user.
 
-## Action Paths and events
-
-If your Canvas includes an Action Paths step, select whether a user took an action or not in the step. During this preview, an event isn’t performed, meaning that event properties aren’t applied based on the step’s outcome. The same is true for the Canvas entry in that Braze does not perform the entry event or API trigger, so the event and API trigger properties are not applied based on the Canvas entry.
-
 ## When users enter and exit
 
 Test users will enter the preview even if they are not eligible in real life. If they are not eligible, you can see why they would not have met the criteria. You can see the results in the sidebar for when users enter and exit the Canvas.
@@ -59,6 +55,7 @@ Test users will enter the preview even if they are not eligible in real life. If
 - If you test an Action Path with actions that correspond to exit criteria (including event properties), exit criteria will be triggered and the test run will end.
 - If you test a Message step that corresponds to exit criteria, exit criteria will be triggered and the test run will end.
 - At this point, you can't select a specific event or property within an action path to trigger exit criteria (only the path as a whole). If a user could potentially meet multiple exit criteria, the first one that is processed and that they meet is shown as the result.
+- Events, API triggers, and Canvas entry properties are not applied based on the Canvas entry. They won't affect the outcomes of subsequent steps.
 
 ## Experiment Paths and Canvas variants
 
