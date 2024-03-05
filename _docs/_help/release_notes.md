@@ -92,11 +92,13 @@ You can now choose a [message tone]({{site.baseurl}}/user_guide/sage_ai/generati
 
 You can choose when Braze evaluates audience eligibility and personalization for new Content Card campaigns and Canvas steps by specifying when the card is [created]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/create/card_creation/). 
 
+<!--
 #### Preview user paths
 
 {% multi_lang_include release_type.md release="General availability" %}
 
 Experience the Canvas journey you’ve created for your users, including previewing the timing and messages they will receive. These [test runs]({{site.baseurl}}/preview_user_paths/) act as quality assurance that your messages are sent to the right audience, all before sending the Canvas.
+-->
 
 #### Quick push campaigns
 
