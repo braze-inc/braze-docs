@@ -161,8 +161,6 @@ The following table summarizes mailbox provider support for “mailto:” header
 
 _*Yahoo and Gmail will eventually deprecate the "mailto:" header and will only support one-click._
 
-<<<<<<< HEAD
-=======
 Displaying the header is ultimately determined by the mailbox provider. To check if the list-unsubscribe header is included in the raw (text) email for the recipient in Gmail, do the following:
 
 1. Select **Show Original** in the email. This opens a new tab with the raw version of the email and its headers.
@@ -205,7 +203,6 @@ Yes, Liquid and conditional logic are supported to allow for dynamic one-click u
 * If the URL isn’t wrapped between `<` and `>` and doesn't start with `https://`, you’ll receive the following message: “Failed to save settings. Please fix any errors before saving.”
 * If you're adding conditional logic, avoid having output values that add whitespaces to your URL as Braze does not remove these whitespaces.
 
->>>>>>> origin
 ## Append email subject lines
 
 Use the toggle to include "[TEST]" and "[SEED]" in your test and seed email subject lines. This can help identify any email campaigns sent as tests.

@@ -129,13 +129,10 @@ If you don't want to use the default Braze footer in your emails, you can create
 
 This way, you don't have to create a new footer for every email template or email campaign you use. For steps, refer to [Custom email footer]({{site.baseurl}}/user_guide/message_building_by_channel/email/custom_email_footer/).
 
-<<<<<<< HEAD
-=======
 #### Managing subscription states for Chinese IP addresses
 
 If you anticipate that your email recipients will have a Chinese IP address, then you should not rely solely on an unsubscribe link in your email to maintain your `unsubscribed` lists. Instead, provide alternate ways for users to easily unsubscribe, such as opening a support ticket through your support portal or emailing a customer representative. 
 
->>>>>>> origin
 ### Creating a custom unsubscribe page
 
 When users click an unsubscribe URL in an email, they are taken to a default landing page that confirms the change to their subscription.
