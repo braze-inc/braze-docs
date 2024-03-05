@@ -461,7 +461,12 @@ Additional relevant resources on this topic are available in this article on [An
 
 {% endtab %}
 {% tab Jetpack Compose %}
-To completely customize in Jetpack Compose, create a custom Composable function that will either 1) Render the composable and return `true` or 2) Render nothing and return `false`.  When `false` is returned, the card will be rendered by Braze.
+To fully customize cards in Jetpack Compose, create a custom Composable function does the following:
+
+1. Render the Composable and return `true`.
+2. Render nothing and return `false`.  When `false` is returned, Braze will render the card.
+
+In the following example, the Composable function renders `TEXT_ANNOUNCEMENT` cards, while Braze automatically renders the rest:
 
 ```kotlin
 val myCustomCardRenderer: @Composable ((Card) -> Boolean) = { card ->
@@ -494,6 +499,7 @@ ContentCardsList(
 ```
 {% endtab %}
 {% endtabs %}
+
 ## Card dismissal
 
 Disabling swipe-to-dismiss functionality is done on a per-card basis via the [`card.isDismissibleByUser()`][9] method. Cards can be intercepted before display using the [`ContentCardsFragment.setContentCardUpdateHandler()`][8] method.

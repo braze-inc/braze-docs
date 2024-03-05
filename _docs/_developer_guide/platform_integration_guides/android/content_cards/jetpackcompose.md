@@ -15,7 +15,7 @@ search_rank: 1
 
 > This reference article covers the Content Card integration using Jetpack Compose for your Android or FireOS application.
 
-In Android, the Content Card feed is available to add into your Compose application by simply adding `ContentCardsList()`. 
+In Android, you can add the Content Card feed to your Compose application using `ContentCardsList()`. For example:
 
 ```kotlin
 setContent {
@@ -24,7 +24,8 @@ setContent {
 ```
 
 ### Styling Content Cards
-Styling can be applied in two ways. The first is to pass a `ContentCardListStyling` and `ContentCardStyling` to `ContentCardsList()`
+
+You can apply styling in one of two ways. The first is to pass a `ContentCardListStyling` and `ContentCardStyling` to `ContentCardsList()`, like in the following example:
 
 ```kotlin
 ContentCardsList(
@@ -42,7 +43,7 @@ ContentCardsList(
 )
 ```
 
-Alternatively, you can also use `BrazeStyle` to create a global styling that can be used for Braze components below it in the Compose tree.
+The second is to use BrazeStyle to create a global styling for Braze components, like in the following example:
 
 ```kotlin
 BrazeStyle(
@@ -64,6 +65,7 @@ BrazeStyle(
 ### Further customization
 
 #### Handling card clicks
+
 To handle card clicks, pass in a function that takes a `Card` and returns a `Boolean` to `onCardClicked`. If `true` is returned, Braze will not process anything on the click besides logging it for analytics. If `false` is returned, Braze will handle the the click.
 
 ```kotlin
@@ -80,7 +82,8 @@ ContentCardsList(
 )
 ```
 
-#### Handling card dismissal
+#### Enabling dismissal notifications
+
 To be notified when a card is dismissed, pass a function to the `onCardDismissed` function.
 
 ```kotlin

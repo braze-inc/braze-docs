@@ -80,7 +80,7 @@ To customize your Content Card styling, override this default style. To override
 
 By default, Android and FireOS SDK Content Cards match the standard Android UI guidelines to provide a seamless experience.
 
-Styling can be applied in two ways. The first is to pass a `ContentCardListStyling` and `ContentCardStyling` to `ContentCardsList()`
+You can apply styling in one of two ways. The first is to pass a `ContentCardListStyling` and `ContentCardStyling` to `ContentCardsList()`, like in the following example:
 
 ```kotlin
 ContentCardsList(
@@ -98,7 +98,7 @@ ContentCardsList(
 )
 ```
 
-Alternatively, you can also use `BrazeStyle` to create a global styling that can be used for Braze components below it in the Compose tree.
+The second is to use BrazeStyle to create a global styling for Braze components, like in the following example:
 
 ```kotlin
 BrazeStyle(
@@ -240,8 +240,9 @@ Here is a truncated example with a custom font family, `my_custom_font_family`, 
 For more information about font customization in the Android SDK, see the [font family guide]({{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/font_customization/#font-customization).
 {% endtab %}
 {% tab Jetpack Compose %}
+To change the default font programmatically, you can set the `titleTextStyle` of `ContentCardStyling`.
 
-To change the default font programmatically, you can set the `titleTextStyle` of `ContentCardStyling`. You can also set it for a specific card type by setting `titleTextStyle` on `BrazeShortNewsContentCardStyling` and passing that into the `shortNewsContentCardStyle` of `ContentCardStyling`.
+You can also set `titleTextStyle` for a specific card type by setting it on `BrazeShortNewsContentCardStyling` and passing it to the `shortNewsContentCardStyle` of `ContentCardStyling`.
 
 ```kotlin
 val fontFamily = FontFamily(
@@ -431,7 +432,7 @@ Change the color of the unread indicator bar by altering the value in `com_braze
 {% endtab %}
 {% tab Jetpack Compose %}
 
-Change the color of the unread indicator bar by altering the value in `unreadIndicatorColor` in `ContentCardStyling`:
+To change the color of the unread indicator bar, modify the value of `unreadIndicatorColor` in `ContentCardStyling`:
 
 ```kotlin
 ContentCardStyling(
@@ -499,6 +500,11 @@ To change the color of the unread indicator of a card, add custom CSS to your we
 Hide the unread indicator bar by setting [`setUnreadBarVisible`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards.view/-content-card-view-holder/set-unread-bar-visible.html?query=fun%20setUnreadBarVisible(isVisible:%20Boolean)) on `ContentCardViewHolder` to `false`. 
 
 {% endtab %}
+
+{% tab Jetpack Compose %}
+Disabling the unread indicator is not supported in Jetpack Compose.
+{% endtab %}
+
 {% tab iOS %}
 {% subtabs %}
 {% subtab Swift %}

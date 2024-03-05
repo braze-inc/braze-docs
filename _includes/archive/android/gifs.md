@@ -173,9 +173,9 @@ class GlideIntegrationApplication : Application() {
 
 ### Custom Image Loading with Jetpack Compose
 
-To override image loading with Jetpack Compose, you can pass in a value to `imageComposable`. This function will take a `Card` and the function should render the image and also the modifiers needed. Alternatively, you can use `customCardComposer` of `ContentCardsList` to render the entire card.
+To override image loading with Jetpack Compose, you can pass in a value to `imageComposable`. This function will take a `Card` and render the image and the modifiers needed. Alternatively, you can use `customCardComposer` of `ContentCardsList` to render the entire card.
 
-In this example, we're using Glide's Compose library.
+In the following example, Glide's Compose library is used for the listed cards:
 
 ```kotlin
 ContentCardsList(

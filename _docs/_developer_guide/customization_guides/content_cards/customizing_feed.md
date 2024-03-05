@@ -327,11 +327,9 @@ braze.showContentCards(null, (cards) => {
 {% endtab %}
 {% endtabs %}
 
-## Change "empty feed" language
+## Customizing "empty feed" message
 
-When a user does not qualify for any Content Cards, the SDK displays an "empty feed" error message stating: "We have no updates. Please check again later." 
-
-You can configure what is displayed in this empty feed message.
+When a user does not qualify for any Content Cards, the SDK displays an "empty feed" error message stating: "We have no updates. Please check again later." You can customize this "empty feed" error message similar to the following:
 
 ![An empty feed error message that reads "This is a custom empty state message."][1]
 
@@ -359,9 +357,7 @@ The style used to display this message can be found via [`Braze.ContentCardsDisp
 For more information on customizing Content Card style elements, see [Customizing style]({{site.baseurl}}/developer_guide/customization_guides/content_cards/customizing_styles).
 {% endtab %}
 {% tab Jetpack Compose %}
-If the `ContentCardsList` determines that the user does not qualify for any Content Cards, it displays the empty feed error message.
-
-To customize this, you can pass in an `emptyString` to `ContentCardsList`. You can also pass in `emptyTextStyle` to `ContentCardListStyling` to further customize this message.
+To customize the "empty feed" error message with Jetpack Compose, you can pass in an `emptyString` to `ContentCardsList`. You can also pass in `emptyTextStyle` to `ContentCardListStyling` to further customize this message.
 
 ```kotlin
 ContentCardsList(
@@ -384,7 +380,6 @@ ContentCardsList(
     }
 )
 ```
-
 {% endtab %}
 {% tab iOS %}
 {% subtabs local %}
