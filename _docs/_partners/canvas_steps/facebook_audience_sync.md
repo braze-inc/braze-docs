@@ -173,9 +173,10 @@ At this time, value-based custom audiences are not supported by Braze. If you ar
 
 At this time, value-based lookalike custom audiences are not supposed by Braze. If you attempt to sync to this audience, this can cause errors for your Audience Sync step. To resolve this, follow these steps:
 
-1. Go to your Facebook Ad Manager dashboard.
+1. Go to your Facebook Ad Manager dashboard and select **Audiences**.
 2. Select **Create audience** > **Custom audience**.
-4. Upload your CSV or list without the **value** column, which corresponds to the lookalike values.
+3. Select **Customer list**.
+4. Upload your CSV or list without the **value** column, which corresponds to the lookalike values. Select **No, continue with a customer list that doesn't include customer value**.
 5. Finish creating your custom audience.
 6. In Braze, update the Facebook Audience Sync step with the custom audience you created.
 {% enddetails %}
