@@ -35,7 +35,7 @@ guide_menu_list:
   fa_icon: fas fa-vial
 - name: "Reporting"
   link: /docs/user_guide/message_building_by_channel/in-app_messages/reporting/
-  fa_icon: fas fa-chart-bar
+  image: /assets/img/braze_icons/bar-chart-01.svg
 - name: "Mode sombre"
   link: /docs/user_guide/message_building_by_channel/in-app_messages/dark-mode/
   fa_icon: fas fa-mobile

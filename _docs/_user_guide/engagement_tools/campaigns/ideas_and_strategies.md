@@ -17,7 +17,7 @@ guide_featured_list:
     image: /assets/img/braze_icons/users-01.svg
   - name: Capturing Lapsing Users
     link: /docs/user_guide/engagement_tools/campaigns/ideas_and_strategies/capturing_lapsing_users/
-    fa_icon: far fa-user
+    image: /assets/img/braze_icons/users-01.svg
   - name: Retargeting Campaigns
     link: /docs/user_guide/engagement_tools/campaigns/ideas_and_strategies/retargeting_campaigns/
     image: /assets/img/braze_icons/target-04.svg
@@ -32,7 +32,7 @@ guide_menu_list:
     image: /assets/img/braze_icons/globe-02.svg
   - name: Install Attribution Campaign
     link: /docs/user_guide/engagement_tools/campaigns/ideas_and_strategies/install_attribution/
-    fa_icon: fas fa-chart-pie
+    image: /assets/img/braze_icons/pie-chart-01.svg
   - name: Feature Awareness and New App Version
     link: /docs/user_guide/engagement_tools/campaigns/ideas_and_strategies/new_features/
     fa_icon: fas fa-mobile

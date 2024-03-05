@@ -25,7 +25,7 @@ guide_featured_list:
     fa_icon: fas fa-copy
   - name: Archiver des modèles
     link: /docs/user_guide/engagement_tools/templates_and_media/archive/
-    fa_icon: fas fa-archive
+    image: /assets/img/braze_icons/archive.svg
   - name: Foire aux questions
     link: /docs/user_guide/engagement_tools/templates_and_media/faqs/
     fa_icon: fas fa-question

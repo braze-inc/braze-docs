@@ -17,7 +17,7 @@ guide_featured_list:
   fa_icon: fas fa-paintbrush
 - name: Dark Mode
   link: /docs/user_guide/message_building_by_channel/in-app_messages/traditional/dark-mode/
-  fa_icon: fas fa-circle-half-stroke
+  image: /assets/img/braze_icons/circle-cut.svg
 
 guide_menu_title: Templates
 guide_menu_list:

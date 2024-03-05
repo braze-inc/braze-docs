@@ -20,7 +20,7 @@ guide_featured_list:
   image: /assets/img/braze_icons/table.svg
 - name: Blocs éditeur
   link: /docs/dnd/editor_blocks/
-  fa_icon: fas fa-align-left
+  image: /assets/img/braze_icons/align-left.svg
 - name: Paramètres de style global
   link: /docs/dnd/global_style_settings/
   image: /assets/img/braze_icons/settings-01.svg

@@ -17,7 +17,7 @@ guide_featured_list:
     fa_icon: fas fa-list
   - name: Données du segment
     link: /docs/user_guide/data_and_analytics/reporting/viewing_and_understanding_segment_data/
-    fa_icon: fas fa-chart-pie
+    image: /assets/img/braze_icons/pie-chart-01.svg
   - name: Engagement Reports (Rapports d’engagement)
     link: /docs/user_guide/data_and_analytics/reporting/engagement_reports/
     image: /assets/img/braze_icons/line-chart-up-01.svg
@@ -29,10 +29,10 @@ guide_menu_title: "Autres articles"
 guide_menu_list:
   - name: Analyse de campagne
     link: /docs/user_guide/data_and_analytics/reporting/campaign_analytics/
-    fa_icon: fas fa-chart-bar
+    image: /assets/img/braze_icons/bar-chart-01.svg
   - name: Analytique Canvas
     link: /docs/user_guide/engagement_tools/canvas/get_started/measuring_and_testing_with_canvas_analytics/
-    fa_icon: fas fa-chart-area
+    image: /assets/img/braze_icons/line-chart-down-01.svg
   - name: Événements personnalisés
     link: /docs/user_guide/data_and_analytics/custom_data/custom_events/#custom-event-analytics
     image: /assets/img/braze_icons/calendar-check-02.svg
@@ -50,7 +50,7 @@ guide_menu_list:
     fa_icon: fas fa-piggy-bank
   - name: Segment Insights
     link: /docs/user_guide/engagement_tools/segments/segment_insights/#segment-insights
-    fa_icon: fas fa-chart-pie
+    image: /assets/img/braze_icons/pie-chart-01.svg
   - name: Rapport du groupe de contrôle global
     link: /docs/user_guide/data_and_analytics/reporting/global_control_group_reporting/
     fa_icon: fa-solid fa-earth-americas

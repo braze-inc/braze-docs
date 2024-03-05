@@ -15,7 +15,7 @@ guide_featured_title: "Popular articles"
 guide_featured_list:
   - name: Creating a Segment
     link: /docs/user_guide/engagement_tools/segments/creating_a_segment/
-    fa_icon: fas fa-chart-pie
+    image: /assets/img/braze_icons/pie-chart-01.svg
   - name: Managing Segments
     link: /docs/user_guide/engagement_tools/segments/managing_segments/
     image: /assets/img/braze_icons/edit-05.svg
@@ -30,7 +30,7 @@ guide_menu_title: "More articles"
 guide_menu_list:
   - name: Segment Insights
     link: /docs/user_guide/engagement_tools/segments/segment_insights/
-    fa_icon: fas fa-chart-pie
+    image: /assets/img/braze_icons/pie-chart-01.svg
   - name: Segment Extension
     link: /docs/user_guide/engagement_tools/segments/segment_extension/
     image: /assets/img/braze_icons/users-01.svg

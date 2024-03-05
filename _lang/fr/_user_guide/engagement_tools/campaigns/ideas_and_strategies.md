@@ -17,7 +17,7 @@ guide_featured_list:
     image: /assets/img/braze_icons/users-01.svg
   - name: Capturer les utilisateurs inactifs
     link: /docs/user_guide/engagement_tools/campaigns/ideas_and_strategies/capturing_lapsing_users/
-    fa_icon: far fa-user
+    image: /assets/img/braze_icons/users-01.svg
   - name: Campagnes de reciblage
     link: /docs/user_guide/engagement_tools/campaigns/ideas_and_strategies/retargeting_campaigns/
     image: /assets/img/braze_icons/target-04.svg
@@ -32,7 +32,7 @@ guide_menu_list:
     image: /assets/img/braze_icons/globe-02.svg
   - name: Campagne d’attribution d’installation
     link: /docs/user_guide/engagement_tools/campaigns/ideas_and_strategies/install_attribution/
-    fa_icon: fas fa-chart-pie
+    image: /assets/img/braze_icons/pie-chart-01.svg
   - name: Connaissance des fonctionnalités et nouvelle version de l’application
     link: /docs/user_guide/engagement_tools/campaigns/ideas_and_strategies/new_features/
     fa_icon: fas fa-mobile

@@ -18,7 +18,7 @@ guide_featured_list:
   image: /assets/img/braze_icons/building-02.svg
 - name: Gérer vos utilisateurs Braze
   link: /docs/user_guide/administrative/manage_your_braze_users/
-  fa_icon: fa-solid fa-users
+  image: /assets/img/braze_icons/users-01.svg
 - name: Paramètres
   link: /docs/user_guide/administrative/app_settings/
   image: /assets/img/braze_icons/settings-01.svg

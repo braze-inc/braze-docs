@@ -22,6 +22,6 @@ guide_featured_list:
     fa_icon: far fa-dot-circle
   - name: Suivi analytique des segments
     link: /docs/user_guide/data_and_analytics/tracking/segment_analytics_tracking/
-    fa_icon: fas fa-chart-bar
+    image: /assets/img/braze_icons/bar-chart-01.svg
     
 ---

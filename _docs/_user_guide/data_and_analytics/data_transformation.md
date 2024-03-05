@@ -18,6 +18,6 @@ guide_featured_list:
     image: /assets/img/braze_icons/flip-forward.svg
   - name: Use Cases
     link: /docs/user_guide/data_and_analytics/data_transformation/use_cases/
-    fa_icon: fa-solid fa-users
+    image: /assets/img/braze_icons/users-01.svg
 ---
 <br><br>

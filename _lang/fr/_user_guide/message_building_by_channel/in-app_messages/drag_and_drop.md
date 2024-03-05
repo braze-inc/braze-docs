@@ -15,7 +15,7 @@ guide_featured_list:
   fa_icon: fas fa-mobile-alt
 - name: Blocs éditeur
   link: /docs/editor_blocks_dnd_iam/
-  fa_icon: fas fa-align-left
+  image: /assets/img/braze_icons/align-left.svg
 
 ---
 <br><br>

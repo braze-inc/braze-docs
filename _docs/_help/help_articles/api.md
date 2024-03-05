@@ -14,7 +14,7 @@ guide_menu_list:
     image: /assets/img/braze_icons/user-minus-01.svg
   - name: How campaign and Canvas attributes differ across sources
     link: /docs/help/help_articles/api/attribute_name_id_across_sources/
-    fa_icon: fas fa-circle-info
+    image: /assets/img/braze_icons/info-circle.svg
 
 noindex: true
 ---

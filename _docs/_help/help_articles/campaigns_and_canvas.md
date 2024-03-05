@@ -15,7 +15,7 @@ guide_menu_title: ""
 guide_menu_list:
   - name: Canvas Delivery Issues
     link: /docs/help/help_articles/campaigns_and_canvas/canvas_not_sending/
-    fa_icon: far fa-paper-plane
+    image: /assets/img/braze_icons/send-01.svg
   - name: Checking Location Data
     link: /docs/help/help_articles/campaigns_and_canvas/locations_data_in_campaigns/
     fa_icon: fas fa-location-arrow
@@ -27,10 +27,10 @@ guide_menu_list:
     fa_icon: fas fa-code
   - name: Low Campaign or Canvas Conversions
     link: /docs/help/help_articles/campaigns_and_canvas/conversions_low/
-    fa_icon: fas fa-cart-arrow-down
+    image: /assets/img/braze_icons/shopping-cart-03.svg
   - name: Untriggered Campaign or Canvas
     link: /docs/help/help_articles/campaigns_and_canvas/not_triggering/
-    fa_icon: far fa-times-circle
+    image: /assets/img/braze_icons/x-circle.svg
   - name: Using Event Logging
     link: /docs/help/help_articles/campaigns_and_canvas/using_event_logging/
     fa_icon: fas fa-clipboard-list

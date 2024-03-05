@@ -28,7 +28,7 @@ guide_featured_list:
   fa_icon: fas fa-vial
 - name: Reporting
   link: /docs/user_guide/message_building_by_channel/content_cards/reporting/
-  fa_icon: fas fa-chart-pie
+  image: /assets/img/braze_icons/pie-chart-01.svg
 - name: Migrating from News Feed
   link: /docs/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/
   fa_icon: fas fa-suitcase

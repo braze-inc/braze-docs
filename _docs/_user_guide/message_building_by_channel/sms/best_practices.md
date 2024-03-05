@@ -14,7 +14,7 @@ guide_featured_title: "Section articles"
 guide_featured_list:
 - name: "Know Before You Send"
   link: /docs/know_before_send/
-  fa_icon: fa-solid fa-paper-plane
+  image: /assets/img/braze_icons/send-01.svg
 - name: "Opt-ins"
   link: /docs/user_guide/message_building_by_channel/sms/best_practices/opt-ins/
   fa_icon: fa-solid fa-comment-sms

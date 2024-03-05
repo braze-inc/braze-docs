@@ -13,7 +13,7 @@ guide_featured_title: "Section articles"
 guide_featured_list:
   - name: SDK Data Collection
     link: /docs/user_guide/data_and_analytics/user_data_collection/data_collected_by_default/
-    fa_icon: fas fa-chart-bar
+    image: /assets/img/braze_icons/bar-chart-01.svg
   - name: User Profile Lifecycle
     link: /docs/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/
     fa_icon: fas fa-sync

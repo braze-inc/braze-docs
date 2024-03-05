@@ -17,7 +17,7 @@ guide_featured_list:
     fa_icon: fas fa-palette
   - name: Fonctionnalités basées sur le temps
     link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/time_based_canvas/
-    fa_icon: fas fa-clock
+    image: /assets/img/braze_icons/clock.svg
   - name: Création de branches
     link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/branching/
     fa_icon: fas fa-code-branch

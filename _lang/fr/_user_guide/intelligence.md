@@ -15,13 +15,13 @@ guide_featured_title: "Outils et fonctionnalités"
 guide_featured_list:
 - name: Timing Intelligent
   link: /docs/user_guide/intelligence/intelligent_timing/
-  fa_icon: fas fa-clock
+  image: /assets/img/braze_icons/clock.svg
 - name: Canal intelligent
   link: /docs/user_guide/intelligence/intelligent_channel/
   image: /assets/img/braze_icons/mail-01.svg
 - name: Sélection intelligente
   link: /docs/user_guide/intelligence/intelligent_selection/
-  fa_icon: fas fa-chart-bar
+  image: /assets/img/braze_icons/bar-chart-01.svg
 
 guide_menu_title: "Ressources supplémentaires"
 guide_menu_list:

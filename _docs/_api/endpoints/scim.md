@@ -25,7 +25,7 @@ guide_featured_list:
     fa_icon: fa-solid fa-eye
   - name: "PUT: Update Dashboard User Account"
     link: /docs/post_update_existing_user_account/
-    fa_icon: fa-solid fa-pencil
+    image: /assets/img/braze_icons/pencil-01.svg
   - name: "DELETE: Remove Dashboard User Account"
     link: /docs/delete_existing_dashboard_user/
     image: /assets/img/braze_icons/trash-01.svg

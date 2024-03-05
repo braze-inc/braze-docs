@@ -31,7 +31,7 @@ guide_featured_list:
   image: /assets/img/braze_icons/users-01.svg
 - name: "Comment Braze utilise Currents"
   link: /docs/user_guide/data_and_analytics/braze_currents/how_braze_uses_currents/
-  fa_icon: fas fa-arrows-alt
+  image: /assets/img/braze_icons/expand-05.svg
 - name: "Transférer des données d’Amazon"
   link: /docs/user_guide/data_and_analytics/braze_currents/s3_to_snowflake/
   fa_icon: fab fa-amazon

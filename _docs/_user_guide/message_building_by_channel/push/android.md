@@ -24,6 +24,6 @@ guide_featured_list:
   fa_icon: fas fa-vial
 - name: "Advanced Campaign Settings"
   link: /docs/user_guide/message_building_by_channel/push/android/advanced_campaign_settings/
-  fa_icon: fas fa-chart-bar
+  image: /assets/img/braze_icons/bar-chart-01.svg
 ---
 <br><br>

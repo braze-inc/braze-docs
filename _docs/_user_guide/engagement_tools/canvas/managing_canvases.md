@@ -26,11 +26,11 @@ guide_featured_list:
     fa_icon: fas fa-list
   - name: Cloning Canvases
     link: /docs/user_guide/engagement_tools/canvas/managing_canvases/cloning_canvases/
-    fa_icon: fas fa-clone
+    image: /assets/img/braze_icons/copy-04.svg
   - name: Duplicating Canvases
     link: /docs/user_guide/engagement_tools/campaigns/managing_campaigns/duplicating_segments_and_campaigns/#duplicating_canvases/
     fa_icon: fas fa-copy
   - name: Archiving Canvases
     link: /docs/user_guide/engagement_tools/canvas/managing_canvases/archiving_canvases/
-    fa_icon: fas fa-archive
+    image: /assets/img/braze_icons/archive.svg
 ---

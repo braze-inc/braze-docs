@@ -31,7 +31,7 @@ guide_featured_list:
   image: /assets/img/braze_icons/table.svg
 - name: Email Reporting
   link: /docs/user_guide/message_building_by_channel/email/reporting_and_analytics/email_reporting/
-  fa_icon: fas fa-chart-bar
+  image: /assets/img/braze_icons/bar-chart-01.svg
 
 guide_menu_title: "More articles"
 guide_menu_list:
@@ -43,7 +43,7 @@ guide_menu_list:
   image: /assets/img/braze_icons/list.svg
 - name: CSS Inlining
   link: /docs/user_guide/message_building_by_channel/email/html_editor/css_inline/
-  fa_icon: fas fa-align-left
+  image: /assets/img/braze_icons/align-left.svg
 - name: Custom Email Footer
   link: /docs/user_guide/message_building_by_channel/email/custom_email_footer/
   image: /assets/img/braze_icons/message-check-circle.svg
@@ -64,7 +64,7 @@ guide_menu_list:
   fa_icon: fab fa-apple
 - name: Email Analytics Glossary
   link: /docs/user_guide/message_building_by_channel/email/reporting_and_analytics/analytics_glossary/
-  fa_icon: fas fa-chart-pie
+  image: /assets/img/braze_icons/pie-chart-01.svg
 - name: Best Practices
   link: /docs/user_guide/message_building_by_channel/email/best_practices/
   image: /assets/img/braze_icons/check-square-broken.svg

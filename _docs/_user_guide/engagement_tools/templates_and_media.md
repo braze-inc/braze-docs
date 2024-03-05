@@ -22,7 +22,7 @@ guide_featured_list:
     image: /assets/img/braze_icons/columns-01.svg
   - name: Managing Templates
     link: /docs/user_guide/engagement_tools/templates_and_media/managing_templates/
-    fa_icon: fas fa-archive
+    image: /assets/img/braze_icons/archive.svg
   - name: Frequently Asked Questions
     link: /docs/user_guide/engagement_tools/templates_and_media/faqs/
     fa_icon: fas fa-question

@@ -14,7 +14,7 @@ guide_featured_title: "Section Articles"
 guide_featured_list:
   - name: "Recommandations"
     link: /docs/user_guide/message_building_by_channel/email/best_practices/guidelines_and_tips/
-    fa_icon: fas fa-award
+    image: /assets/img/braze_icons/award-03.svg
   - name: "Style des e-mails"
     link: /docs/user_guide/message_building_by_channel/email/best_practices/email_styling/
     fa_icon: fas fa-paint-brush
@@ -35,6 +35,6 @@ guide_featured_list:
     image: /assets/img/braze_icons/mail-01.svg
   - name: "À savoir avant l’envoi"
     link: /docs/know_before_send/
-    fa_icon: fa-solid fa-paper-plane
+    image: /assets/img/braze_icons/send-01.svg
 
 ---

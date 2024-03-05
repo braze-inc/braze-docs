@@ -20,13 +20,13 @@ guide_featured_list:
     fa_icon: fas fa-edit
   - name: Archiver des campagnes
     link: /docs/user_guide/engagement_tools/campaigns/managing_campaigns/archiving_campaigns/
-    fa_icon: fas fa-archive
+    image: /assets/img/braze_icons/archive.svg
   - name: Dupliquer des campagnes
     link: /docs/user_guide/engagement_tools/campaigns/managing_campaigns/duplicating_segments_and_campaigns/
     fa_icon: fas fa-copy
   - name: Alertes de campagne
     link: /docs/user_guide/engagement_tools/campaigns/managing_campaigns/campaign_alerts/
-    fa_icon: fas fa-bell
+    image: /assets/img/braze_icons/bell-03.svg
   - name: Recherche de campagnes
     link: /docs/user_guide/engagement_tools/campaigns/managing_campaigns/search_campaigns/
     fa_icon: fas fa-magnifying-glass

@@ -15,7 +15,7 @@ guide_featured_title: "Articles courants"
 guide_featured_list:
   - name: Exporter des résultats de campagne
     link: /docs/user_guide/data_and_analytics/export_braze_data/export_campaign_results_data/
-    fa_icon: fas fa-chart-bar
+    image: /assets/img/braze_icons/bar-chart-01.svg
   - name: Exporter des résultats de Canvas
     link: /docs/user_guide/data_and_analytics/export_braze_data/export_canvas_data/
     fa_icon: fas fa-palette
@@ -48,7 +48,7 @@ guide_menu_list:
     fa_icon: fas fa-file-excel
   - name: Résolution des problèmes d’exportation
     link: /docs/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/
-    fa_icon: far fa-question-circle
+    image: /assets/img/braze_icons/help-circle.svg
   - name: Foire aux questions
     link: /docs/user_guide/data_and_analytics/export_braze_data/faqs/
     fa_icon: fas fa-question

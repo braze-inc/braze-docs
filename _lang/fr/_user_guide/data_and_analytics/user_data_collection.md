@@ -16,7 +16,7 @@ guide_featured_list:
     image: /assets/img/braze_icons/users-01.svg
   - name: Données collectées par défaut
     link: /docs/user_guide/data_and_analytics/user_data_collection/data_collected_by_default/
-    fa_icon: fas fa-chart-bar
+    image: /assets/img/braze_icons/bar-chart-01.svg
   - name: Cycle de vie du profil de l'utilisateur
     link: /docs/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/
     fa_icon: fas fa-sync

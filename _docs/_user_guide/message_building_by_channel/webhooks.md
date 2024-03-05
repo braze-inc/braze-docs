@@ -25,5 +25,5 @@ guide_featured_list:
   fa_icon: fas fa-exchange-alt
 - name: Reporting
   link: /docs/user_guide/message_building_by_channel/webhooks/reporting/
-  fa_icon: fas fa-chart-bar
+  image: /assets/img/braze_icons/bar-chart-01.svg
 ---

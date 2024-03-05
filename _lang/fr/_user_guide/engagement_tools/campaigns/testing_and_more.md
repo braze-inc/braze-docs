@@ -22,16 +22,16 @@ guide_featured_list:
     image: /assets/img/braze_icons/columns-01.svg
   - name: Test A/B et multivarié
     link: /docs/user_guide/engagement_tools/testing/multivariant_testing/
-    fa_icon: fa-solid fa-vials
+    image: /assets/img/braze_icons/beaker-02.svg
 
 guide_menu_title: "Articles supplémentaires"
 guide_menu_list:
   - name: Analyse de campagne
     link: /docs/user_guide/data_and_analytics/reporting/campaign_analytics/
-    fa_icon: fas fa-chart-pie
+    image: /assets/img/braze_icons/pie-chart-01.svg
   - name: Rapports de rétention
     link: /docs/user_guide/data_and_analytics/reporting/retention_reports/
-    fa_icon: fas fa-chart-area
+    image: /assets/img/braze_icons/line-chart-down-01.svg
   - name: Rapports d'entonnoir
     link: /docs/user_guide/data_and_analytics/reporting/funnel_reports/
     fa_icon: fas fa-filter

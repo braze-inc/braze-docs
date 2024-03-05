@@ -17,10 +17,10 @@ guide_featured_list:
     image: /assets/img/braze_icons/check-square-broken.svg
   - name: Clonage des Canvas
     link: /docs/user_guide/engagement_tools/canvas/managing_canvases/cloning_canvases/
-    fa_icon: fas fa-clone
+    image: /assets/img/braze_icons/copy-04.svg
   - name: Archivage de Canvas
     link: /docs/user_guide/engagement_tools/canvas/managing_canvases/archiving_canvases/
-    fa_icon: fas fa-archive
+    image: /assets/img/braze_icons/archive.svg
   - name: Modification de votre Canvas après le lancement
     link: /docs/user_guide/engagement_tools/canvas/managing_canvases/change_your_canvas_after_launch/
     fa_icon: fas fa-edit

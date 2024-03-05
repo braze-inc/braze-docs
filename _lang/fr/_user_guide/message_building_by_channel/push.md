@@ -37,7 +37,7 @@ guide_menu_list:
   fa_icon: fas fa-mobile-alt
 - name: Reporting
   link: /docs/user_guide/message_building_by_channel/push/push_reporting/
-  fa_icon: fas fa-chart-bar
+  image: /assets/img/braze_icons/bar-chart-01.svg
 - name: Options Android
   link: /docs/user_guide/message_building_by_channel/push/android/
   fa_icon: fab fa-android

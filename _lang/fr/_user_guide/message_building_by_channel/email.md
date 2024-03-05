@@ -34,7 +34,7 @@ guide_menu_list:
   image: /assets/img/braze_icons/list.svg
 - name: Inlining CSS
   link: /docs/user_guide/message_building_by_channel/email/css_inline/
-  fa_icon: fas fa-align-left
+  image: /assets/img/braze_icons/align-left.svg
 - name: Inbox Vision
   link: /docs/user_guide/message_building_by_channel/email/inbox_vision/
   fa_icon: fas fa-inbox
@@ -55,10 +55,10 @@ guide_menu_list:
   fa_icon: fas fa-bolt
 - name: Reporting E-mail
   link: /docs/user_guide/message_building_by_channel/email/reporting_and_analytics/email_reporting/
-  fa_icon: fas fa-chart-bar
+  image: /assets/img/braze_icons/bar-chart-01.svg
 - name: Glossaire analytique pour l’e-mail
   link: /docs/user_guide/message_building_by_channel/email/reporting_and_analytics/analytics_glossary/
-  fa_icon: fas fa-chart-pie
+  image: /assets/img/braze_icons/pie-chart-01.svg
 - name: Bonnes pratiques
   link: /docs/user_guide/message_building_by_channel/email/best_practices/
   image: /assets/img/braze_icons/check-square-broken.svg

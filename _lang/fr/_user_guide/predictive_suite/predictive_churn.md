@@ -16,10 +16,10 @@ guide_featured_list:
   image: /assets/img/braze_icons/settings-01.svg
 - name: Analyses prédictives
   link: /docs/user_guide/predictive_suite/predictive_churn/prediction_analytics/
-  fa_icon: fas fa-chart-bar
+  image: /assets/img/braze_icons/bar-chart-01.svg
 - name: Écrire aux utilisateurs
   link: /docs/user_guide/predictive_suite/predictive_churn/messaging_users/
-  fa_icon: fas fa-arrow-right
+  image: /assets/img/braze_icons/arrow-narrow-right.svg
 - name: Résolution des problèmes
   link: /docs/user_guide/predictive_suite/predictive_churn/prediction_faq/
   fa_icon: fas fa-question

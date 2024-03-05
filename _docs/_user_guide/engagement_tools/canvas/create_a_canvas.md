@@ -20,7 +20,7 @@ guide_featured_list:
     fa_icon: fa-solid fa-comment
   - name: Time-Based Functionalities
     link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/time_based_canvas/
-    fa_icon: fas fa-clock
+    image: /assets/img/braze_icons/clock.svg
   - name: Exception Events
     link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/exception_events/
     fa_icon: fas fa-exchange-alt

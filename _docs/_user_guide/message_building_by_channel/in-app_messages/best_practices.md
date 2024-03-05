@@ -19,6 +19,6 @@ guide_featured_list:
   image: /assets/img/braze_icons/mail-01.svg
 - name: "Know Before You Send"
   link: /docs/know_before_send/
-  fa_icon: fa-solid fa-paper-plane
+  image: /assets/img/braze_icons/send-01.svg
   
 ---

@@ -45,7 +45,7 @@ guide_featured_list:
     image: /assets/img/braze_icons/trend-up-01.svg
   - name: Your Reports
     link: /docs/user_guide/data_and_analytics/reporting/
-    fa_icon: fas fa-chart-bar
+    image: /assets/img/braze_icons/bar-chart-01.svg
   - name: Catalogs
     link: /docs/user_guide/personalization_and_dynamic_content/catalog/
     image: /assets/img/braze_icons/list.svg

@@ -24,7 +24,7 @@ guide_menu_title: "Ciblez votre audience"
 guide_menu_list:
   - name: Segments
     link: /docs/user_guide/engagement_tools/segments/
-    fa_icon: fas fa-chart-pie
+    image: /assets/img/braze_icons/pie-chart-01.svg
   - name: Position et geofences 
     link: /docs/user_guide/engagement_tools/locations_and_geofences/
     fa_icon: fas fa-street-view

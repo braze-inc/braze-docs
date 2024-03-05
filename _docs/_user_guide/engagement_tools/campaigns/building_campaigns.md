@@ -17,7 +17,7 @@ guide_featured_list:
     fa_icon: fas fa-list
   - name: Time-Based Functionalities
     link: /docs/user_guide/engagement_tools/campaigns/building_campaigns/time_based_campaign/
-    fa_icon: fas fa-clock
+    image: /assets/img/braze_icons/clock.svg
   - name: Scheduling Your Campaign
     link: /docs/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/
     image: /assets/img/braze_icons/line-chart-up-01.svg

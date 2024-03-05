@@ -16,10 +16,10 @@ guide_featured_list:
   image: /assets/img/braze_icons/settings-01.svg
 - name: Prediction Analytics
   link: /docs/user_guide/sage_ai/predictive_suite/predictive_events/prediction_analytics/
-  fa_icon: fas fa-chart-bar
+  image: /assets/img/braze_icons/bar-chart-01.svg
 - name: Messaging Users
   link: /docs/user_guide/sage_ai/predictive_suite/predictive_events/messaging_users/
-  fa_icon: fas fa-arrow-right
+  image: /assets/img/braze_icons/arrow-narrow-right.svg
 
 ---
 

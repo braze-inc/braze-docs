@@ -28,9 +28,9 @@ guide_featured_list:
   fa_icon: fas fa-vial
 - name: "Advanced Campaign Settings"
   link: /docs/user_guide/message_building_by_channel/push/ios/advanced_campaign_settings/
-  fa_icon: fas fa-chart-bar
+  image: /assets/img/braze_icons/bar-chart-01.svg
 - name: "Utilizing Badge Count"
   link: /docs/user_guide/message_building_by_channel/push/ios/utilizing_badge_count/
-  fa_icon: fas fa-bell
+  image: /assets/img/braze_icons/bell-03.svg
 ---
 <br><br>

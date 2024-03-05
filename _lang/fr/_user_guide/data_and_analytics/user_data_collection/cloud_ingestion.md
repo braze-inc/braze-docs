@@ -14,7 +14,7 @@ guide_featured_title: "Section Articles"
 guide_featured_list:
   - name: Aperçu et bonnes pratiques
     link: /docs/user_guide/data_and_analytics/user_data_collection/cloud_ingestion/overview/
-    fa_icon: fa-solid fa-users-between-lines
+    image: /assets/img/braze_icons/cloud-blank-01.svg
   - name: Intégration Snowflake
     link: /docs/user_guide/data_and_analytics/user_data_collection/cloud_ingestion/snowflake/
     fa_icon: fa-solid fa-snowflake

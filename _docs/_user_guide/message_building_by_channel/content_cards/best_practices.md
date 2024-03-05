@@ -14,7 +14,7 @@ guide_featured_title: "Section Articles"
 guide_featured_list:
 - name: "Know Before You Send"
   link: /docs/know_before_send/
-  fa_icon: fa-solid fa-paper-plane
+  image: /assets/img/braze_icons/send-01.svg
 - name: "Sending Test Messages"
   link: /docs/user_guide/engagement_tools/campaigns/testing_and_more/sending_test_messages/
   image: /assets/img/braze_icons/mail-01.svg

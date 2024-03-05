@@ -40,7 +40,7 @@ guide_featured_list:
     image: /assets/img/braze_icons/calendar-check-02.svg
   - name: Deprecations
     link: /docs/help/release_notes/deprecations/
-    fa_icon: far fa-calendar-times
+    image: /assets/img/braze_icons/calendar-minus-01.svg
   - name: SDK Changelogs
     link: /docs/developer_guide/platform_integration_guides/sdk_changelogs/
     fa_icon: fas fa-file-code

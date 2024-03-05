@@ -14,7 +14,7 @@ guide_featured_title: "Section articles"
 guide_featured_list:
   - name: Overview and Best Practices
     link: /docs/user_guide/data_and_analytics/cloud_ingestion/overview/
-    fa_icon: fa-solid fa-users-between-lines
+    image: /assets/img/braze_icons/cloud-blank-01.svg
   - name: Available Integrations
     link: /docs/user_guide/data_and_analytics/cloud_ingestion/integrations/
     image: /assets/img/braze_icons/settings-01.svg

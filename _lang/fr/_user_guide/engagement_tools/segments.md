@@ -15,7 +15,7 @@ guide_featured_title: "Articles courants"
 guide_featured_list:
   - name: Créer un segment
     link: /docs/user_guide/engagement_tools/segments/creating_a_segment/
-    fa_icon: fas fa-chart-pie
+    image: /assets/img/braze_icons/pie-chart-01.svg
   - name: Filtres de segmentation
     link: /docs/user_guide/engagement_tools/segments/segmentation_filters/
     fa_icon: fas fa-filter
@@ -27,7 +27,7 @@ guide_menu_title: "Autres articles"
 guide_menu_list:
   - name: Segment Insights
     link: /docs/user_guide/engagement_tools/segments/segment_insights/
-    fa_icon: fas fa-chart-pie
+    image: /assets/img/braze_icons/pie-chart-01.svg
   - name: Segment Extension
     link: /docs/user_guide/engagement_tools/segments/segment_extension/
     image: /assets/img/braze_icons/users-01.svg

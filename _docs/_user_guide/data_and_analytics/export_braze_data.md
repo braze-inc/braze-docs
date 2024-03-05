@@ -15,7 +15,7 @@ guide_featured_title: "Popular articles"
 guide_featured_list:
   - name: Export Campaign Results
     link: /docs/user_guide/data_and_analytics/export_braze_data/export_campaign_results_data/
-    fa_icon: fas fa-chart-bar
+    image: /assets/img/braze_icons/bar-chart-01.svg
   - name: Export Canvas Results
     link: /docs/user_guide/data_and_analytics/export_braze_data/export_canvas_data/
     fa_icon: fas fa-palette
@@ -48,7 +48,7 @@ guide_menu_list:
     fa_icon: fas fa-file-excel
   - name: Export Troubleshooting
     link: /docs/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/
-    fa_icon: far fa-question-circle
+    image: /assets/img/braze_icons/help-circle.svg
   - name: Frequently Asked Questions
     link: /docs/user_guide/data_and_analytics/export_braze_data/faqs/
     fa_icon: fas fa-question
@@ -64,7 +64,7 @@ guide_menu_list2:
     fa_icon: fas fa-warehouse
   - name: How Braze uses Currents
     link: /docs/user_guide/data_and_analytics/braze_currents/how_braze_uses_currents/
-    fa_icon: fas fa-arrows-alt
+    image: /assets/img/braze_icons/expand-05.svg
 
 ---
 <br><br>

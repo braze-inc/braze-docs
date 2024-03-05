@@ -21,7 +21,7 @@ guide_featured_list:
   image: /assets/img/braze_icons/users-01.svg
 - name: Company Users
   link: /docs/user_guide/administrative/app_settings/manage_your_braze_users/
-  fa_icon: fa-solid fa-users
+  image: /assets/img/braze_icons/users-01.svg
 - name: Settings
   link: /docs/user_guide/administrative/app_settings/
   image: /assets/img/braze_icons/settings-01.svg
