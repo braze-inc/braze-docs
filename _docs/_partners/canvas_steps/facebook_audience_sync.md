@@ -166,10 +166,21 @@ Facebook does not provide this information for privacy reasons.
 {% enddetails %}
 
 {% details Does Braze support value-based custom audiences? %}
-At this time, value-based custom audiences are not supported by Braze. If you are interested in syncing these types of custom audiences, reach out to your customer success manager or contact support.
+At this time, value-based custom audiences are not supported by Braze. If you are interested in syncing these types of custom audiences, reach out to your customer success manager or contact Support.
 {% enddetails %}
 
-{% details I’ve received an email related to Facebook custom audience terms of service. What should I do to resolve this?  %}
+{% details How do I resolve an issue with syncing a value-based lookalike custom audience? %}
+
+At this time, value-based lookalike custom audiences are not supposed by Braze. If you attempt to sync to this audience, this can cause errors for your Audience Sync step. To resolve this, follow these steps:
+
+1. Go to your Facebook Ad Manager dashboard.
+2. Select **Create audience** > **Custom audience**.
+4. Upload your CSV or list without the **value** column, which corresponds to the lookalike values.
+5. Finish creating your custom audience.
+6. In Braze, update the Facebook Audience Sync step with the custom audience you created.
+{% enddetails %}
+
+{% details I’ve received an email related to Facebook custom audience terms of service. What should I do to resolve this? %}
 In order to use Audience Sync to Facebook, you will need to ensure that you have accepted these terms of service agreement. 
 
 If your ad account is directly associated with your personal Facebook account, follow this link and accept the TOS: [https://www.facebook.com/ads/manage/customaudiences/tos.php](https://www.facebook.com/ads/manage/customaudiences/tos.php)
@@ -181,7 +192,6 @@ Once you have accepted your Facebook custom audiences terms of service, you will
 1. Refresh your Facebook access token with Braze by disconnecting and reconnecting your Facebook account.
 2.  Re-enable your Facebook Audience Sync step by editing and updating your Canvas.
 Braze will then be able to sync users as soon as they reach the Facebook audience step.
-
 {% enddetails %}
 
 
