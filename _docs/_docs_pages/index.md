@@ -43,8 +43,8 @@ doc_menu_list:
   - name: Compliance Documentation
     bg_color: '#ff9349'
     image: /assets/img/new-icons/file-contract-solid.svg
-    link: /compliance_documentation/
-    description: "Compliance documentation sets forth specific terms applicable to your purchased product, channel, feature, functionality, or service."
+    link: /docs/compliance_documentation/
+    description: "Compliance documentation outlines specific terms applicable to your purchased product or service."
 
 popular_topic_list:
   - name: Braze API Dictionary
@@ -67,7 +67,7 @@ popular_topic_list:
 helpful_resources_list:
   - name: Innovation Statement
     link: /docs/innovation_statement/
-  - name: Support & Success Services Handbook
+  - name: Entitlements, Support & Success Services Handbooks
     link: /docs/handbooks/
   - name: Data Retention
     link: /docs/api/data_retention/
