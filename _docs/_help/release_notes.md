@@ -94,6 +94,10 @@ You can now choose a [message tone]({{site.baseurl}}/user_guide/sage_ai/generati
 
 ### Robust channels
 
+#### Card creation
+
+You can choose when Braze evaluates audience eligibility and personalization for new Content Card campaigns and Canvas steps by specifying when the card is [created]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/create/card_creation/). 
+
 #### Preview user paths
 
 {% multi_lang_include release_type.md release="General availability" %}
