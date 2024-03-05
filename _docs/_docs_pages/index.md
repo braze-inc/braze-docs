@@ -44,7 +44,7 @@ doc_menu_list:
     bg_color: '#ff9349'
     image: /assets/img/new-icons/file-contract-solid.svg
     link: /docs/compliance_documentation/
-    description: "Compliance documentation sets forth specific terms applicable to your purchased product, channel, feature, functionality, or service."
+    description: "Compliance documentation outlines specific terms applicable to your purchased product or service."
 
 popular_topic_list:
   - name: Braze API Dictionary
