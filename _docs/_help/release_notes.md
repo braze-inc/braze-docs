@@ -58,7 +58,7 @@ guide_featured_list:
 
 ### Google EU User Consent Policy
 
-Google is updating their [EU User Consent Policy](https://www.google.com/about/company/user-consent-policy/) in response to changes to the [Digital Markets Act (DMA)](https://ads-developers.googleblog.com/2023/10/updates-to-customer-match-conversion.html), which goes into effect March 6, 2024. This new change requires advertisers to disclose certain information to their EEA and UK end users, as well as obtain necessary consents from them. As part of this upcoming change, you can [collect both consent signals in Braze as custom attributes]({{site.baseurl}}/partners/canvas_steps/google_audience_sync/#collecting-consent-for-eea-and-uk-end-users). Braze will sync the data from these custom attributes to the appropriate consent fields in Google.
+Google is updating their [EU User Consent Policy](https://www.google.com/about/company/user-consent-policy/) in response to changes to the [Digital Markets Act (DMA)](https://ads-developers.googleblog.com/2023/10/updates-to-customer-match-conversion.html), which is in effect as of March 6, 2024. This new change requires advertisers to disclose certain information to their EEA and UK end users, as well as obtain necessary consents from them. As part of this upcoming change, you can [collect both consent signals in Braze as custom attributes]({{site.baseurl}}/partners/canvas_steps/google_audience_sync/#collecting-consent-for-eea-and-uk-end-users). Braze will sync the data from these custom attributes to the appropriate consent fields in Google.
 
 ### Data flexibility
 
