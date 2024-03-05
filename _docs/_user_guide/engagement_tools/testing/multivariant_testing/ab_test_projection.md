@@ -2,6 +2,7 @@
 nav_title: A/B Test Projection
 article_title: A/B Test Projection
 page_order: 20
+hidden: true
 page_type: reference
 description: "This article explains how A/B test projection works, how to run a projection, and how Braze uses your data."
 ---

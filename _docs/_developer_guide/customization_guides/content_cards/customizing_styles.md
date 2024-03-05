@@ -76,6 +76,48 @@ To customize your Content Card styling, override this default style. To override
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
+{% tab Jetpack Compose %}
+
+By default, Android and FireOS SDK Content Cards match the standard Android UI guidelines to provide a seamless experience.
+
+You can apply styling in one of two ways. The first is to pass a `ContentCardListStyling` and `ContentCardStyling` to `ContentCardsList()`, like in the following example:
+
+```kotlin
+ContentCardsList(
+    style = ContentCardListStyling(listBackgroundColor = Color.Red),
+    cardStyle = ContentCardStyling(
+        titleTextStyle = TextStyle(
+            fontFamily = fontFamily,
+            fontSize = 25.sp
+        ),
+        shadowRadius = 10.dp,
+        shortNewsContentCardStyle = BrazeShortNewsContentCardStyling(
+            shadowRadius = 15.dp
+        )
+    )
+)
+```
+
+The second is to use BrazeStyle to create a global styling for Braze components, like in the following example:
+
+```kotlin
+BrazeStyle(
+    contentCardStyle = ContentCardStyling(
+        textAnnouncementContentCardStyle = BrazeTextAnnouncementContentCardStyling(
+            cardBackgroundColor = Color.Red,
+            descriptionTextStyle = TextStyle(
+                fontFamily = fontFamily,
+                fontSize = 25.sp,
+            )
+        ),
+        titleTextColor = Color.Magenta
+    )
+) {
+    // Your app here, including any ContentCardsList() in it
+}
+```
+
+{% endtab %}
 {% tab iOS %}
 
 The Content Cards view controller allows you to customize the appearance and behavior of all cells via the [`BrazeContentCardUI.ViewController.Attributes`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazecontentcardui/viewcontroller/attributes-swift.struct) struct. Configuring Content Cards using `Attributes` is an easy option, allowing you to launch your Content Cards UI with minimal setup. 
@@ -197,6 +239,23 @@ Here is a truncated example with a custom font family, `my_custom_font_family`, 
 
 For more information about font customization in the Android SDK, see the [font family guide]({{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/font_customization/#font-customization).
 {% endtab %}
+{% tab Jetpack Compose %}
+To change the default font programmatically, you can set the `titleTextStyle` of `ContentCardStyling`.
+
+You can also set `titleTextStyle` for a specific card type by setting it on `BrazeShortNewsContentCardStyling` and passing it to the `shortNewsContentCardStyle` of `ContentCardStyling`.
+
+```kotlin
+val fontFamily = FontFamily(
+    Font(R.font.sailec_bold)
+)
+
+ContentCardStyling(
+    titleTextStyle = TextStyle(
+        fontFamily = fontFamily
+    )
+)
+```
+{% endtab %}
 {% tab iOS %}
 {% subtabs %}
 {% subtab Swift %}
@@ -260,6 +319,34 @@ To set a custom pinned icon, override the `Braze.ContentCards.PinnedIcon` style.
   </style>
 ```
 
+{% endtab %}
+{% tab Jetpack Compose %}
+
+To change the default pinned icon, you can set the `pinnedResourceId` of `ContentCardStyling`.  For example:
+
+```kotlin
+ContentCardStyling(
+    pinnedResourceId = R.drawable.pushpin,
+    pinnedImageAlignment = Alignment.TopCenter
+)
+```
+
+You can also specify a Composable in `pinnedComposable` of `ContentCardStyling`. If `pinnedComposable` is specified, it will override the `pinnedResourceId` value.
+
+```kotlin
+ContentCardStyling(
+    pinnedComposable = {
+        Box(Modifier.fillMaxWidth()) {
+            Text(
+                modifier = Modifier
+                    .align(Alignment.Center)
+                    .width(50.dp),
+                text = "This message is not read. Please read it."
+            )
+        }
+    }
+)
+```
 {% endtab %}
 {% tab iOS %}
 {% subtabs %}
@@ -343,6 +430,17 @@ Change the color of the unread indicator bar by altering the value in `com_braze
 ```
 
 {% endtab %}
+{% tab Jetpack Compose %}
+
+To change the color of the unread indicator bar, modify the value of `unreadIndicatorColor` in `ContentCardStyling`:
+
+```kotlin
+ContentCardStyling(
+    unreadIndicatorColor = Color.Red
+)
+```
+
+{% endtab %}
 {% tab iOS %}
 
 {% subtabs %}
@@ -402,6 +500,11 @@ To change the color of the unread indicator of a card, add custom CSS to your we
 Hide the unread indicator bar by setting [`setUnreadBarVisible`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards.view/-content-card-view-holder/set-unread-bar-visible.html?query=fun%20setUnreadBarVisible(isVisible:%20Boolean)) on `ContentCardViewHolder` to `false`. 
 
 {% endtab %}
+
+{% tab Jetpack Compose %}
+Disabling the unread indicator is not supported in Jetpack Compose.
+{% endtab %}
+
 {% tab iOS %}
 {% subtabs %}
 {% subtab Swift %}
