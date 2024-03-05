@@ -254,7 +254,7 @@ The `ContentCardsFragment` source can be found on [GitHub](https://github.com/br
 
 {% endtab %}
 {% tab Jetpack Compose %}
-When using Jetpack Compose, you can easily filter and sort the Content Cards by setting the `cardUpdateHandler` parameter. For example:
+To filter and sort Content Cards in Jetpack Compose, set the `cardUpdateHandler` parameter. For example:
 
 ```kotlin
 ContentCardsList(
@@ -546,7 +546,7 @@ customContentCardsFragment.contentCardUpdateHandler = getUpdateHandlerForFeedTyp
 {% endsubtabs %}
 {% endtab %}
 {% tab Jetpack Compose %}
-The `cardUpdateHandler` can be used to filter the content cards to only cards you want to appear in this particular feed.
+To filter which content cards are shown in this feed, use `cardUpdateHandler`. For example:
 
 ```kotlin
 ContentCardsList(
