@@ -43,7 +43,7 @@ ContentCardsList(
 )
 ```
 
-The second is to use BrazeStyle to create a global styling for Braze components, like in the following example:
+The second is to use `BrazeStyle` to create a global styling for Braze components, like in the following example:
 
 ```kotlin
 BrazeStyle(
@@ -82,7 +82,7 @@ ContentCardsList(
 )
 ```
 
-#### Enabling dismissal notifications
+#### Enabling notifications for dismissals
 
 To be notified when a card is dismissed, pass a function to the `onCardDismissed` function.
 
