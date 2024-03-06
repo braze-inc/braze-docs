@@ -17,10 +17,10 @@ guide_featured_list:
     fa_icon: fa-solid fa-users-between-lines
   - name: Data Warehouse Integrations
     link: /docs/user_guide/data_and_analytics/cloud_ingestion/integrations/
-    fa_icon: fa-solid fa-gears
+    fa_icon: fa-solid fa-database
   - name: File Storage Integrations
     link: /docs/user_guide/data_and_analytics/cloud_ingestion/file_storage_integrations/
-    fa_icon: fa-solid fa-gears  
+    fa_icon: fa-solid fa-folder-open  
   - name: Sync Catalogs Data
     link: /docs/user_guide/data_and_analytics/cloud_ingestion/sync_catalogs_data/
     fa_icon: fa-solid fa-rotate
