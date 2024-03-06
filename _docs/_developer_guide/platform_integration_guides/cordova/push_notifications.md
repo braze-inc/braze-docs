@@ -5,19 +5,21 @@ platform:
   - Cordova
   - iOS
   - Android
-page_order: 4
+page_order: 1
 page_type: reference
 description: "This article covers implementing push notifications on Cordova."
 channel: push
 ---
 
-# Push notifications
+# Push notification integration
 
 > Learn how to integrate basic iOS push notifications for the Cordova Braze SDK. Rich push notifications and push stories are already available for Android by default. To integrate full push notification capabilities for either platform, see the [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/integration/) or [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/integration/standard_integration/) push notification integration guides.
 
 {% alert important %}
 Anytime you add, remove, or update your Cordova plugins, Cordova will overwrite the Podfile in your Xcode project. This means you'll need to repeat this process anytime you modify your Cordova plugins.
 {% endalert %}
+
+{% multi_lang_include cordova/prerequisites.md %}
 
 ## Rich push notifications
 
