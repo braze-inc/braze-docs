@@ -1,7 +1,7 @@
 ---
-nav_title: Integrations
-article_title: Braze Cloud Data Ingestion Integrations
-description: "This reference article covers Braze Cloud Data Ingestion and how to sync relevant user data to your Snowflake, Redshift, and BigQuery integration."
+nav_title: Data Warehouse Integrations
+article_title: Braze Cloud Data Ingestion Integrations - Data Warehouses
+description: "This reference article covers Braze Cloud Data Ingestion and how to sync relevant data with your Snowflake, Redshift, BigQuery, and Databricks integration."
 page_order: 2
 page_type: reference
 
