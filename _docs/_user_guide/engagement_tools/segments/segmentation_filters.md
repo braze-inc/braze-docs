@@ -534,6 +534,10 @@ glossaries:
     description: Segment your users by their most active channel in the last three months.
     tags:
       - Intelligence and predictive
+  - name: Message Open Likelihood
+    description: Filters your users based on their likelihood to open a message on a specified channel on a scale of 0-100%.
+    tags:
+      - Intelligence and predictive
   - name: Number of Facebook Friends Using App
     description: Segments your users by how many Facebook friends they have who use the same app.
     tags:
