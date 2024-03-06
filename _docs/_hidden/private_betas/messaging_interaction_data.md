@@ -17,7 +17,7 @@ Messaging interaction data refers to how a user interacts with a campaign or Can
 Starting in early 2024, messaging interaction data will be available according to the process outlined here.
 {% endalert %}
 
-Filters for a last received or engaged with message don't rely on campaign-specific interaction data. 
+Filters for a last received or engaged with message (such as Last Clicked/Opened Any Email) don't rely on campaign-specific interaction data.
 
 #### What's impacted
 
@@ -47,7 +47,6 @@ The following features will **not** be affected by the expiration of interaction
 
 - Campaign and Canvas setup 
 - Campaign and Canvas analytics
-- Last Clicked/Opened Any Email filter
 - Analytics reports (such as Report Builder, Query Builder, and Engagement Reports)
 - Currents
 - Snowflake Data Share
