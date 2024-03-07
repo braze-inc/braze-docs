@@ -11,53 +11,41 @@ hidden: true
 
 ### What is messaging interaction data?
 
-Messaging interaction data refers to how a user interacts with a campaign or Canvas they received (for example, when a user opens campaign A or a user receives variant A). This data can be accessed for retargeting the moment you need it.
+Messaging interaction data refers to how a user interacts with a campaign or Canvas they received (for example, when a user opens campaign A or a user receives variant A). This data is used for retargeting.
 
 {% alert important %}
 Starting in early 2024, messaging interaction data will be available according to the process outlined here.
 {% endalert %}
-
-Filters for a last received or engaged with message (such as Last Clicked/Opened Any Email) don't rely on campaign-specific interaction data.
-
-#### What's impacted
-
-These following features will be affected by the expiration of interaction data:
-
-{% alert note %}
-These features can become available again if you restore the interaction data.
-{% endalert %}
-
-- User profile
-    - The **Engagement** tab will not include the campaign under "Campaigns Received" or Canvas under "Canvas Messages Received"
-- Retargeting filters
-    - The objects will not be listed for any retargeting filter.
-- Tag filters
-    - Tag filters can still be used for retargeting, but will only include interaction data from objects that were not offloaded. For example:
-        - Campaign A with tag "Tag1" has been offloaded
-        - Campaign B with tag "Tag1" has not been offloaded
-        - Segment with tag filter "Received message from Campaign or Canvas with Tag" with "Tag1" will only include users who received Campaign B
-- Data exports
-    - The `/users/export` endpoint will not include the object's interaction data.
-    - "User Data" CSV export on object summary page can't be exported.
-- The campaign or Canvas can't be launched
-
-#### What's not impacted
-
-The following features will **not** be affected by the expiration of interaction data:
-
-- Campaign and Canvas setup 
-- Campaign and Canvas analytics
-- Analytics reports (such as Report Builder, Query Builder, and Engagement Reports)
-- Currents
-- Snowflake Data Share
-- Segment Extensions
-- Data points
 
 ### When is messaging interaction data available?
 
 For active campaigns and Canvases, interaction data is always available in real time.
 
 Stopped campaigns and Canvases will have their interaction data expire after three months unless they are used in retargeting filters. After expiration, the data will be moved to long-term storage with limited availability. However, this is temporary because you can restore this data.
+
+#### Features that use interaction data
+
+The following features use messaging interaction data:
+
+- Retargeting filters, including filters that retarget by tag
+- **Campaigns Received** and **Canvas Messages Received** lists on the user profile
+- `/users/export` endpoint
+- **User Data** CSV exports on campaign and Canvas summary pages
+
+These features will not include expired interaction data in their results. To include expired interaction data in the results for these features, restore the campaign or Canvas with expired data.
+
+#### Features that don't use interaction data
+
+The following features **do not** use messaging interaction data, meaning these features are unaffected by the expiration of messaging interaction data:
+
+- Campaign and Canvas setup
+- Campaign and Canvas analytics
+- Analytics reports (such as Report Builder, Query Builder, and Engagement Reports)
+- Currents
+- Snowflake Data Share
+- Segment Extensions
+- Data points
+- Filters for a last received or engaged with message (such as Last Clicked/Opened Any Email)
 
 ### How do I restore messaging interaction data?
 
