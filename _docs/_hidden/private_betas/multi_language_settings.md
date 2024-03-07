@@ -14,8 +14,6 @@ description: "This article provides an overview of multi-language settings in th
 Multi-language settings are currently in early access. Contact your account manager if you're interested in participating in this early access.
 {% endalert %}
 
-![][1]
-
 ## Prerequisites
 
 In order to edit and manage multi-language support, you must have the "Manage Multi-Language Settings" user permission.
@@ -29,7 +27,7 @@ In order to edit and manage multi-language support, you must have the "Manage Mu
 5. (Optional) Select the country to be associated with the language.
 6. Select **Add locale**. 
 
-![An example of French added as a locale for users whose country is Canada.][2]
+![An example of French added as a locale for users whose country is Canada.][2]{: style="max-width:80%;"}
 
 ## Use locales in messaging
 
@@ -38,16 +36,9 @@ To use locales in your messaging, follow these steps:
 1. Compose an email campaign or Canvas with all text and image or link URLs wrapped in translation tags.<br>![][3]
 2. In the editor, select **Multi-language** and add your locales for the message using the dropdown.
 3. Select **Download template** to download the translation template as a CSV. Then, fill in the translations in the CSV.
-
-{% alert note %}
-To update the translations, update the CSV and re-upload the file. 
-{% endalert %}
-{:start="4"}
-
 4. Select **Upload translations** to upload the CSV file with the completed translations. 
 
-In the **Preview & Test** section, you can select **Multi-language User** to preview the message to check if your message translates as expected.
+To update the translations, update the CSV and re-upload the file. In the **Preview & Test** section, you can select **Multi-language User** to preview the message to check if your message translates as expected.
 
-[1]: {% image_buster /assets/img/multi-language_support/multi-language_support.png %}
 [2]: {% image_buster /assets/img/multi-language_support/add_locale.png %}
 [3]: {% image_buster /assets/img/multi-language_support/translation_html_editor_example.png %}
