@@ -59,7 +59,7 @@ To verify which permissions your service account has, open Google Cloud, then go
 
 ![The "View By Principles" tab with the number of excess permissions listed for each principal.]({% image_buster /assets/img/android/push_integration/create_a_service_account/select-excess-permissions.png %})
 
-Review the current permissions listed for the selected role.
+Now you can review the current permissions assigned to your selected role.
 
 ![The list of current permissions assigned to the selected role.]({% image_buster /assets/img/android/push_integration/create_a_service_account/review-permissions.png %}){: style="max-width:75%;"}
 
