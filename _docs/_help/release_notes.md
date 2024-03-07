@@ -58,7 +58,7 @@ guide_featured_list:
 
 ### Google EU User Consent Policy
 
-Google is updating their [EU User Consent Policy](https://www.google.com/about/company/user-consent-policy/) in response to changes to the [Digital Markets Act (DMA)](https://ads-developers.googleblog.com/2023/10/updates-to-customer-match-conversion.html), which goes into effect March 6, 2024. This new change requires advertisers to disclose certain information to their EEA and UK end users, as well as obtain necessary consents from them. As part of this upcoming change, you can [collect both consent signals in Braze as custom attributes]({{site.baseurl}}/partners/canvas_steps/google_audience_sync/#collecting-consent-for-eea-and-uk-end-users). Braze will sync the data from these custom attributes to the appropriate consent fields in Google.
+Google is updating their [EU User Consent Policy](https://www.google.com/about/company/user-consent-policy/) in response to changes to the [Digital Markets Act (DMA)](https://ads-developers.googleblog.com/2023/10/updates-to-customer-match-conversion.html), which is in effect as of March 6, 2024. This new change requires advertisers to disclose certain information to their EEA and UK end users, as well as obtain necessary consents from them. As part of this upcoming change, you can [collect both consent signals in Braze as custom attributes]({{site.baseurl}}/partners/canvas_steps/google_audience_sync/#collecting-consent-for-eea-and-uk-end-users). Braze will sync the data from these custom attributes to the appropriate consent fields in Google.
 
 ### Data flexibility
 
@@ -92,13 +92,11 @@ You can now choose a [message tone]({{site.baseurl}}/user_guide/sage_ai/generati
 
 You can choose when Braze evaluates audience eligibility and personalization for new Content Card campaigns and Canvas steps by specifying when the card is [created]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/create/card_creation/). 
 
-<!--
 #### Preview user paths
 
 {% multi_lang_include release_type.md release="General availability" %}
 
 Experience the Canvas journey you’ve created for your users, including previewing the timing and messages they will receive. These [test runs]({{site.baseurl}}/preview_user_paths/) act as quality assurance that your messages are sent to the right audience, all before sending the Canvas.
--->
 
 #### Quick push campaigns
 
