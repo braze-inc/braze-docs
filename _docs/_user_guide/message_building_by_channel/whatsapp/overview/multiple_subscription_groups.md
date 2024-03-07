@@ -50,6 +50,6 @@ You can add up to 20 subscription groups (and sending phone numbers) per WhatsAp
 ### Removing a subscription group and phone number 
 
 1. Go **Audience** > **Subscriptions** and archive the subscription group.
-2. Go to your Meta manager and delete the phone number.
+2. Go to your Meta Business manager and delete the phone number.
 
 [1]: {% image_buster /assets/img/whatsapp/multiple_wabas.png %} 
