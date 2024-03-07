@@ -7,7 +7,7 @@ page_type: reference
 
 ---
 
-# Cloud Data Ingestion integrations
+# Cloud Data Ingestion - Data Warehouse Integrations
 
 ## Product setup
 
