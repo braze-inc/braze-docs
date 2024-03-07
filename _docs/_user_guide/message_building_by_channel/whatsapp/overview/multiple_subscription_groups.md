@@ -27,7 +27,7 @@ Business accounts that are nested within the same Meta Business Manager will als
 You can add up to 10 WhatsApp Business accounts per workspace. To add an account:
 
 1. Go **Technology Partners** > **WhatsApp** and select **Add WhatsApp Business Account**. ![WhatsApp Messaging Integration section with options to add a business account or add a subscription group and number.][1]<br>
-2. Go through the sign up workflow. In the **Select your WhatsApp Business Account** step, select **Create a new WhatsApp Business Account**.
+2. Go through the sign-up workflow. In the **Select your WhatsApp Business Account** step, select **Create a new WhatsApp Business Account**.
 3. Add a phone number. This number must follow all the requirements of any WhatsApp phone number, including not being registered to any other WhatsApp accounts. 
 
 ## Multiple subscription groups and phone numbers
