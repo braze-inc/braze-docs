@@ -53,7 +53,17 @@ Be sure to select **Firebase Cloud Messaging _API_ Admin**, not **Firebase Cloud
 
 ![The form for "Grant this service account access to project" with "Firebase Cloud Messaging API Admin" selected as the role.]({% image_buster /assets/img/android/push_integration/create_a_service_account/add-fcm-api-admin.png %})
 
-## Step 3: Generate JSON credentials
+## Step 3: Verify permissions (optional)
+
+To verify which permissions your service account has, open Google Cloud, then go to your project and select **IAM**. Under **View By Principals**, select **Excess Permissions**.
+
+![The "View By Principles" tab with the number of excess permissions listed for each principal.]({% image_buster /assets/img/android/push_integration/create_a_service_account/select-excess-permissions.png %})
+
+Review the current permissions listed for the selected role.
+
+![The list of current permissions assigned to the selected role.]({% image_buster /assets/img/android/push_integration/create_a_service_account/review-permissions.png %}){: style="max-width:75%;"}
+
+## Step 4: Generate JSON credentials
 
 Next, generate JSON credentials for your FCM service account. On Google Cloud IAM & Admin, go to **Service Accounts**, then choose your project. Locate the FCM service account [you created earlier](#step-2-create-a-service-account), then select <i class="fa-solid fa-ellipsis-vertical"></i>&nbsp;**Actions** > **Manage Keys**.
 
@@ -75,7 +85,7 @@ Choose **JSON**, then select **Create**.
 Private keys could pose a security risk if compromised. Store your JSON credentials in a secure location for now&#8212;you'll delete your key after you upload it to Braze.
 {% endalert %}
 
-## Step 4: Upload your JSON credentials to Braze
+## Step 5: Upload your JSON credentials to Braze
 
 In Braze, select <i class="fa-solid fa-gear"></i>&nbsp;**Settings** > **App Settings**.
 
