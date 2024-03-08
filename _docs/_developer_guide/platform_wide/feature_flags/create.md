@@ -240,7 +240,7 @@ braze.logFeatureFlagImpression("expanded_user_profile");
 {% tab Swift %}
 
 ```swift
-braze.featureFlags.logImpression(id: "expanded_user_profile")
+braze.featureFlags.logFeatureFlagImpression(id: "expanded_user_profile")
 ```
 
 {% endtab %}
