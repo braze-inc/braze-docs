@@ -43,35 +43,40 @@ Complete the following steps to quickly get your integration up and running. You
 4. Enter your Braze API URL. This URL depends on which instance your Braze account is provisioned to. You can find it [here](https://www.braze.com/docs/api/basics/#endpoints).
 5. Add any additional Extole events you'd like to send to Braze beyond the defaults. The default events, event properties, and user attributes are described in the [Extole Events table](https://dev.extole.com/docs/braze#extole-program-events) below.
 6. Add any additional Reward states you'd like to send to Braze beyond the default `FULFILLED` state. Refer to the [Extole Rewards table](https://dev.extole.com/docs/braze#extole-rewards) below for a description of all available reward states.
-7. Select your Braze External ID key mapping, which is how Extole updates user profiles in Braze. You can map the Braze External ID key to Extole's `email_address` or `partner_user_id` for the user.
+7. Select your Braze External ID key mapping, which is how Extole updates user profiles in Braze. You can map the Braze External ID key to Extole's `email_address` or `partner_user_id` for the user. Note: We recommend using `external_id` instead of `email_address`as it is more secure.
 8. Complete the connection by saving your settings. Once this is done, Extole events will be able to flow into your Braze account.
 
 ### Extole program events
 
-Below are the default events, event properties, and user attributes that are sent into Braze. In addition to the default events listed here, you can add any other Extole events to your integration. Please work with your Extole Implementation or Customer Success Manager to identify and add any additional events you would like to send to Braze.
+Below are the default events, event properties, and user attributes Extole will send into Braze. In addition to the default events listed here, you can add any other Extole events to your integration. Please work with your Extole Implementation or Customer Success Manager to identify and add any additional events you would like to send to Braze.
 
-| Event | Description | Default Properties & User Attributes |
-| ----------- | ----------- | ----------- |
-| `extole_created_share_link` | A participant creates their share link by entering their email in the Extole Share Experience. | Event name  <br>Event time  <br>Partner (Extole)  <br>Email  <br>External ID  <br>Funnel (advocate or friend)  <br>Program  <br>First name  <br>Last name  <br>Share link |
-| `extole_shared` | A participant shares their referral link with a friend. | Event name  <br>Event time  <br>Partner (Extole)  <br>Email  <br>External ID  <br>Funnel (advocate or friend)  <br>Program  <br>Share channel  <br>First name  <br>Last name |
-| `subscribed` | A participant has opted-in to receive marketing messages. | Email  <br>List type  <br>External ID  <br>Email subscribe (opted in) |
-| `unsubscribed` | A participant has opted-out of receiving Extole email communications.| Email  <br>External ID  <br>Subscription state (unsubscribed)  <br>Subscription group ID  <br>List type |
-| `outcome` | A participant has converted or completed the desired outcome event configured for the program. | Event name  <br>Event time  <br>Partner (Extole)  <br>Email  <br>External ID  <br>Coupon code  <br>Attributed reward IDs  <br>Partner conversion ID  <br>Value (cart value)  <br>First name  <br>Last name  <br>Share link |
+| Event | Description | Event Properties | User Attributes |
+| ----------- | ----------- | ----------- | ----------- |
+| `extole_created_share_link` | A participant creates their share link by entering their email in the Extole Share Experience. | Event name  <br>Event time  <br>Partner (Extole)  <br>Funnel (advocate or friend)  <br>Program | <br>External ID <br>Email  <br>Share link |
+| `extole_shared` | A participant shares their referral link with a friend. | Event name  <br>Event time  <br>Partner (Extole)  <br>External ID  <br>Funnel (advocate or friend)  <br>Program  <br>Share channel | Email <br>First name <br>Last Name |
+| `outcome` - The outcome is dynamic based on the configuration of your program (e.g., `extole_shipped`, `extole_converted`, etc.)| A participant has converted or completed the desired outcome event configured for the program. | Dynamic per program | Email <br>First name <br>Last Name |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+
+### Extole subscription states
+
+| Subscription State | Description | Event Properties | User Attributes |
+| ----------- | ----------- | ----------- | ----------- |
+| `subscribed` | A participant has opted-in to receive marketing messages. | NA | Email  <br>List type  <br>External ID  <br>Email subscribe (opted in) |
+| `unsubscribed` | A participant has opted-out of receiving Extole email communications.| Email  <br>External ID  <br>Subscription state (unsubscribed)  <br>Subscription group ID  | List type |
 
 ### Extole rewards
 
 By default, Extole will send reward events in the `FULFILLED` state to Braze so that you can trigger reward notifications via a Braze campaign or canvas. See the table below for additional reward states you may be interested in sending from Extole to Braze.
 
-| Reward State | Description | Default Properties & User Attributes |
-| ----------- | ----------- | ----------- |
-| `FULFILLED` - Default | The reward has been assigned a value (e.g., coupon, gift card, etc.) by an Extole reward supplier. | Event name  <br>Event time  <br>Partner  <br>Email  <br>Face value  <br>Coupon code  <br>Face value type  <br>First name  <br>Last name |
-| `EARNED` | A reward has been created and associated with a person. | Event name  <br>Event time  <br>Partner  <br>Email  <br>Face value  <br>Coupon code  <br>Face value type  <br>First name  <br>Last name |
-| `SENT` | The reward has been fulfilled and has been sent either via email or on a device to the recipient. | Event name  <br>Event time  <br>Partner  <br>Email  <br>Face value  <br>Coupon code  <br>Face value type  <br>First name  <br>Last name |
-| `REDEEMED` | The reward has been used by the recipient, as evidenced in a conversion or  redemption event sent to Extole.| Event name  <br>Event time  <br>Partner  <br>Email  <br>Face value  <br>Coupon code  <br>Face value type  <br>First name  <br>Last name |
-| `FAILED` | An issue has prevented the reward from being issued or sent, requiring attention. | Event name  <br>Event time  <br>Partner  <br>Email  <br>Face value  <br>Coupon code  <br>Face value type  <br>First name  <br>Last name |
-| `CANCELED` | The reward has been deactivated and will return to inventory. | Event name  <br>Event time  <br>Partner  <br>Email  <br>Face value  <br>Coupon code  <br>Face value type  <br>First name  <br>Last name |
-| `REVOKED` | The fulfilled reward has been invalidated. For example, Extole requested a gift card from a supplier and then subsequently determined that the card was sent in error. If the supplier supports revoking the reward, we would request the funds back and the reward would no longer be valid. | Event name  <br>Event time  <br>Partner  <br>Email  <br>Face value  <br>Coupon code  <br>Face value type  <br>First name  <br>Last name |
+| Reward State | Description | Event Properties | User Attributes |
+| ----------- | ----------- | ----------- | ----------- |
+| `FULFILLED` - Default | The reward has been assigned a value (e.g., coupon, gift card, etc.) by an Extole reward supplier. | Email <br>Face value  <br>Coupon code  <br>Face value type  | Email <br>First name  <br>Last name |
+| `EARNED` | A reward has been created and associated with a person. | Email <br>Face value  <br>Coupon code  <br>Face value type  | Email <br>First name  <br>Last name |
+| `SENT` | The reward has been fulfilled and has been sent either via email or on a device to the recipient. | Email <br>Face value  <br>Coupon code  <br>Face value type  | Email <br>First name  <br>Last name |
+| `REDEEMED` | The reward has been used by the recipient, as evidenced in a conversion or  redemption event sent to Extole.| Email <br>Face value  <br>Coupon code  <br>Face value type  | Email <br>First name  <br>Last name |
+| `FAILED` | An issue has prevented the reward from being issued or sent, requiring attention. | Email <br>Face value  <br>Coupon code  <br>Face value type  | Email <br>First name  <br>Last name |
+| `CANCELED` | The reward has been deactivated and will return to inventory. | Email <br>Face value  <br>Face value type  | Email <br>First name  <br>Last name |
+| `REVOKED` | The fulfilled reward has been invalidated. For example, Extole requested a gift card from a supplier and then subsequently determined that the card was sent in error. If the supplier supports revoking the reward, we would request the funds back and the reward would no longer be valid. | Email <br>Face value   <br>Face value type  | Email <br>First name  <br>Last name |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 
