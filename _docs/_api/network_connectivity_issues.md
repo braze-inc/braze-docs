@@ -2,14 +2,14 @@
 nav_title: API Network Connectivity Issues
 article_title: API Network Connectivity Issues
 page_order: 4
-description: "This reference article touches on API connectivity issues and how to troubleshoot them." 
+description: "This reference article touches on API connectivity issues and how to troubleshoot them."
 page_type: reference
 
 ---
 
 # API network connectivity issues
 
-> This reference article touches on API connectivity issues and how to troubleshoot them. 
+> This reference article touches on API connectivity issues and how to troubleshoot them.
 
 Braze API endpoints use a CDN that routes traffic to the closest POP based on DNS information.  If you are having issues connecting or notice that you are connecting to a POP that is not efficient, make sure to use your provider's DNS servers or DNS servers that are set up in the same data center as your server and have proper IP location meta-information associated with them.
 
@@ -26,10 +26,11 @@ For more information about MTR, check out these resources based on your operatin
 
 ## Allowlisting Braze API endpoints IP ranges
 
-To allowlist Braze API endpoints through your firewall, our CDN provides access to the list of assigned IP ranges via a JSON dump. For a list of Fastly.com IP ranges, refer to their [public IP list][3].
+To allowlist Braze API endpoints through your firewall, our CDN provides access to the list of assigned IP ranges via a JSON dump. For a list of Braze API IP ranges, refer to both [Fastly's public IP list][3] and [Cloudflare's public IP list][6]. Note that these IPs may change.
 
 [1]: https://www.privateinternetaccess.com/helpdesk/kb/articles/what-is-an-mtr-test-and-how-do-i-run-one-2
 [2]: http://www.fastly-debug.com/
 [3]: https://api.fastly.com/public-ip-list
 [4]: https://www.digitalocean.com/community/tutorials/how-to-use-traceroute-and-mtr-to-diagnose-network-issues
 [5]: https://formulae.brew.sh/formula/mtr
+[6]: https://api.cloudflare.com/client/v4/ips

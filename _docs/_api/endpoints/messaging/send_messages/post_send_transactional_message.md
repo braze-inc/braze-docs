@@ -17,7 +17,7 @@ description: "This article outlines details about the Send transactional email m
 
 > Use this endpoint to send immediate, one-off transactional messages to a designated user. 
 
-This endpoint is used alongside the creation of a [Transactional Email campaign]({{site.baseurl}}/api/api_campaigns/transactional_campaigns) and corresponding campaign ID.
+This endpoint is used alongside the creation of a Braze [Transactional Email campaign]({{site.baseurl}}/api/api_campaigns/transactional_campaigns) and corresponding campaign ID.
 
 {% alert important %}
 Transactional Email is currently available as part of select Braze packages. Reach out to your Braze customer success manager for more details.
@@ -27,9 +27,9 @@ Similar to the [Send triggered campaign endpoint]({{site.baseurl}}/api/endpoints
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#cec874e1-fa51-42a6-9a8d-7fc57d6a63bc {% endapiref %}
 
-{% alert note %}
+## Prerequisites
+
 To use this endpoint, you'll need to generate an API key with the `transactional.send` permission.
-{% endalert %}
 
 ## Rate limit
 

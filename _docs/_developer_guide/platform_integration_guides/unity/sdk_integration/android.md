@@ -58,6 +58,7 @@ If your app does not have an `AndroidManifest.xml`, you can use the following as
 
     <!-- Calls the necessary Braze methods to ensure that analytics are collected and that push notifications are properly forwarded to the Unity application. -->
     <activity android:name="com.braze.unity.BrazeUnityPlayerActivity" 
+      android:theme="@style/UnityThemeSelector"
       android:label="@string/app_name" 
       android:configChanges="fontScale|keyboard|keyboardHidden|locale|mnc|mcc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|uiMode|touchscreen" 
       android:screenOrientation="sensor">

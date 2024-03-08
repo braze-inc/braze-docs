@@ -18,6 +18,9 @@ guide_featured_list:
 - name: CocoaPods
   link: /docs/developer_guide/platform_integration_guides/swift/initial_sdk_setup/installation_methods/cocoapods/
   image: /assets/img/cocoapods.png
+- name: Manual Integration
+  link: /docs/developer_guide/platform_integration_guides/swift/initial_sdk_setup/installation_methods/manual_integration/
+  fa_icon: fas fa-toolbox
 - name: "Completing the Integration"
   link: /docs/developer_guide/platform_integration_guides/swift/initial_sdk_setup/completing_integration/
   fa_icon: fas fa-flag-checkered

@@ -1,7 +1,7 @@
 ---
 nav_title: WhatsApp
 article_title: WhatsApp
-page_order: 4
+page_order: 5
 layout: dev_guide
 channel:
   - WhatsApp
@@ -13,7 +13,7 @@ alias: /whatsapp/
 
 guide_featured_title: "WhatsApp"
 guide_featured_list:
-- name: "WhatsApp Overview"
+- name: "WhatsApp Setup"
   link: /docs/user_guide/message_building_by_channel/whatsapp/overview
   fa_icon: fa-brands fa-whatsapp
 - name: "WhatsApp Subscription Group"

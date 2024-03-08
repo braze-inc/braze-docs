@@ -59,7 +59,6 @@ Braze supports exporting the following data listed in the Currents [user behavio
 
 ### Behaviors
 - Uninstall: `users.behaviors.Uninstall`
-- App (news feed impression): `users.behaviors.app.NewsFeedImpression`
 - Subscription (global state change): `users.behaviors.subscription.GlobalStateChange`
 - Subscription group (state change): `users.behaviors.subscriptiongroup.StateChange`
   
@@ -91,10 +90,6 @@ Braze supports exporting the following data listed in the Currents [user behavio
   - `users.messages.inappmessage.Abort`
   - `users.messages.inappmessage.Click`
   - `users.messages.inappmessage.Impression`
-- News Feed card (abort, click, impression)
-  - `users.messages.newsfeedcard.Abort`
-  - `users.messages.newsfeedcard.Click`
-  - `users.messages.newsfeedcard.Impression`
 - Push notification (abort, bounce, open, send)
   - `users.messages.pushnotification.Abort`
   - `users.messages.pushnotification.Bounce`
@@ -102,7 +97,6 @@ Braze supports exporting the following data listed in the Currents [user behavio
   - `users.messages.pushnotification.Send`
 - SMS (abort, carrier send, delivery, delivery failure, inbound receive, rejection, send, short link click)
   - `users.messages.sms.Abort`
-  - `users.messages.sms.CarrierSend`
   - `users.messages.sms.Delivery`
   - `users.messages.sms.DeliveryFailure`
   - `users.messages.sms.InboundReceive`

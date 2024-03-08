@@ -121,7 +121,7 @@ If you are using the [older navigation]({{site.baseurl}}/navigation), you can fi
 
 Next, click **Create Current** and select **Amazon S3 Data Export**.
 
-Name your current, and then in the **Credentials** section, make sure the **AWS Secret Access Key** radio button is selected, then input your S3 access ID, AWS secret access key, and AWS S3 bucket name in the designated fields.
+Name your Current, and then in the **Credentials** section, make sure the **AWS Secret Access Key** radio button is selected, then input your S3 access ID, AWS secret access key, and AWS S3 bucket name in the designated fields.
 
 ![]({{site.baseurl}}/assets/img/currents-s3-example.png)
 
@@ -131,8 +131,8 @@ Keep your AWS access key ID and secret access key up to date. If your connector'
 
 You can also add the following customization based on your needs:
 
-- Folder Path (defaults to `currents`) 
-- Server-Side, At-Rest AES-256 Encryption (defaults to OFF) - Includes the `x-amz-server-side-encryption` header
+- **Folder Path:** Defaults to `currents`. If this folder does not exist, Braze will automatically create one for you. 
+- **Server-Side, At-Rest AES-256 Encryption:** Defaults to OFF and includes the `x-amz-server-side-encryption` header.
 
 Click **Launch Current** to continue.
 

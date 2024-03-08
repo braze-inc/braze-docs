@@ -4,7 +4,7 @@ nav_title: Segmentation Filters
 article_title: Segmentation Filters
 layout: glossary_page
 glossary_top_header: "Segmentation Filters"
-glossary_top_text: The Braze SDK provides you with a powerful arsenal of filters to segment and target your users based off of specific features and attributes. You can search or narrow these filters by filter category.
+glossary_top_text: The Braze SDK provides you with a powerful arsenal of filters to segment and target your users based off of specific features and attributes. You can search or narrow these filters by filter category.<br><br>To learn about the different custom attribute data types you can use to segment users, view <a href="/docs/user_guide/data_and_analytics/custom_data/custom_attributes/#custom-attribute-data-types">Custom attribute data types</a>.
 
 page_type: glossary
 tool: Segments
@@ -35,7 +35,7 @@ glossary_tags:
 
 glossaries:
   - name: Segment Membership
-    description: Allows you to filter based on segment membership anywhere that filters are used (such as segments, campaigns, and others) and target multiple different segments within one campaign. Note that segments already using the Segment Membership Filter cannot be further included/nested into other segments.
+    description: Allows you to filter based on segment membership anywhere that filters are used (such as segments, campaigns, and others) and target multiple different segments within one campaign. <br><br>Note that segments already using this filter cannot be further included/nested into other segments. You must recreate the segment you're trying to include by using the same filters.
     tags:
       - Segment or CSV membership
   - name: Braze Segment Extensions
@@ -51,7 +51,7 @@ glossaries:
     tags:
       - Custom attributes
   - name: Nested Custom Attributes
-    description: Attributes that are the properties of custom attributes.
+    description: Attributes that are the properties of custom attributes.<br><br>When filtering a nested time custom attribute, you can choose to filter based on "Day of Year" or "Time". "Day of Year" will check only the month and day for comparison. "Time" will compare the full timestamp, including the year.
     tags:
       - Custom attributes
   - name: Day of Recurring Event
@@ -267,7 +267,7 @@ glossaries:
     tags:
       - Retargeting
   - name: Subscription Group
-    description: Segments your users by their Subscription Group for email or SMS/MMS. Archived Groups will not appear and cannot be used.
+    description: Segments your users by their subscription group for email or SMS/MMS. Archived Groups will not appear and cannot be used.
     tags:
       - Channel subscription behavior
   - name: Email Available
@@ -443,15 +443,15 @@ glossaries:
     tags:
       - Advertising use cases 
   - name: Device Google Ad ID
-    description: lorem ipsum
+    description: Segments your users by the Google ad ID.
     tags:
       - Advertising use cases
   - name: Device Roku Ad ID
-    description: 
+    description: Segments your users by the Roku ad ID.
     tags:
       - Advertising use cases
   - name: Device Windows Ad ID
-    description: lorem ipsum
+    description: Segments your users by the Windows ad ID.
     tags:
       - Advertising use cases  
   - name: Ad Tracking Enabled
@@ -515,19 +515,19 @@ glossaries:
     tags:
       - Install Attribution
   - name: Churn Risk Category
-    description:  Segments your users by churn risk category according to a specific Prediction.
+    description:  Segments your users by churn risk category according to a specific prediction.
     tags:
       - Intelligence and predictive
   - name: Churn Risk Score
-    description: Segments your users by churn risk score according to a specific Prediction.
+    description: Segments your users by churn risk score according to a specific prediction.
     tags:
       - Intelligence and predictive
   - name: Event Likelihood Category
-    description: Segments your users by likelihood of performing an event according to a specific Prediction.
+    description: Segments your users by likelihood of performing an event according to a specific prediction.
     tags:
       - Intelligence and predictive
   - name: Event Likelihood Score
-    description: Segments your users by likelihood of performing an event according to a specific Prediction.
+    description: Segments your users by likelihood of performing an event according to a specific prediction.
     tags:
       - Intelligence and predictive
   - name: Intelligent Channel
@@ -543,11 +543,11 @@ glossaries:
     tags:
       - Social activity
   - name: Connected Twitter
-    description: Segments your users by whether they connected your app to Twitter.
+    description: Segments your users by whether they connected your app to X (formerly Twitter).
     tags:
       - Social activity
   - name: Number of Twitter Followers
-    description: Segments your users by how many Twitter followers they have.
+    description: Segments your users by how many X (formerly Twitter) followers they have.
     tags:
       - Social activity
 ---

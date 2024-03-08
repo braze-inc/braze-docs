@@ -11,7 +11,7 @@ alias: /know_before_send/
 Launch your campaigns and Canvases with confidence! After visiting our [pre-launch guide](https://labplaybooks.braze.com/canvas-playbooks#/subpage/b2rj8), refer to this final list of checks or "gotchas" for Content Cards, email, in-app messages, push, and SMS.
 
 {% alert note %}
-While we provide an extensive list of resources for customers to reference pre-send, each channel has individual nuances that continue to grow as we evolve our products. The checks listed below are helpful suggestions, and we recommend thoroughly testing your campaigns and large sends before sending. 
+While we provide an extensive list of resources to reference pre-send, each channel has individual nuances that continue to grow as we evolve our products. The checks listed below are helpful suggestions, and we recommend thoroughly testing your campaigns and large sends before sending. 
 {% endalert %}
 
 ## General
@@ -21,7 +21,7 @@ While we provide an extensive list of resources for customers to reference pre-s
 - [**Necessary frequency capping overrides**]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/#frequency-capping): There are some campaigns, like transactional messages, that you will want to always reach the user, even if you have already reached their frequency cap (for example, a delivery notification). If you want a particular campaign to override frequency capping rules, you can set this up in the Braze dashboard when scheduling that campaign's delivery by toggling frequency capping off.
 
 #### Things to know
-- [**Global control groups**]({{site.baseurl}}/user_guide/engagement_tools/testing/global_control_group#global-control-group): If you are using a global control group, a percentage of users will not receive any campaigns or Canvases. (you can create exceptions with [exclusion settings]({{site.baseurl}}/user_guide/engagement_tools/testing/global_control_group/#step-3-assign-exclusion-settings)). To see a list of these users, export them via CSV or [API]({{site.baseurl}}/api/endpoints/export/user_data/post_users_global_control_group/).
+- [**Global control groups**]({{site.baseurl}}/user_guide/engagement_tools/testing/global_control_group#global-control-group): If you are using a global control group, a percentage of users will not receive any campaigns or Canvases. (You can create exceptions with [exclusion settings]({{site.baseurl}}/user_guide/engagement_tools/testing/global_control_group/#step-3-assign-exclusion-settings)). To see a list of these users, export them via CSV or [API]({{site.baseurl}}/api/endpoints/export/user_data/post_users_global_control_group/).
 - [**Canvas rate limits**]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/#rate-limiting): In a Canvas, the rate limit applies across the entire Canvas, not the individual steps. For example, if you were to set a 10,000 message per minute rate limit on a Canvas with multiple steps, it will still be limited to 10,000 messages because the limit will have been reached at the first step.
 - **Frequency capping**: 
   - Frequency capping rules will be applied to push, email, SMS, and webhooks, but not to in-app messages and Content Cards.
@@ -44,7 +44,7 @@ While we provide an extensive list of resources for customers to reference pre-s
 ## Push
 
 #### Things to check
-- [**Opted-in/subscribed and push enabled**]({{site.baseurl}}/user_guide/message_building_by_channel/push/users_and_subscriptions/): In order for users to receive a push message from Braze, they need their subscription statuses to be either opted-in (iOS) or subscribed (Android) and `Push Enabled = True`. Note that Android 13 introduces a major change in how users manage apps that send push notifications. The Braze [Android 13 SDK upgrade guide]({{site.baseurl}}/developer_guide/platform_integration_guides/android/android_13/) will continue to update as new Android 13 beta versions are released.
+- [**Opted-in/subscribed and push enabled**]({{site.baseurl}}/user_guide/message_building_by_channel/push/users_and_subscriptions/): For users to receive a push message from Braze, they need their subscription statuses to be either opted-in (iOS) or subscribed (Android) and `Push Enabled = True`. Note that Android 13 introduces a major change in how users manage apps that send push notifications. The Braze [Android 13 SDK upgrade guide]({{site.baseurl}}/developer_guide/platform_integration_guides/android/android_13/) will continue to update as new Android 13 beta versions are released.
 
 #### Things to know
 - **Web push**: If you have Braze [Web SDK setup]({{site.baseurl}}/user_guide/message_building_by_channel/push/web), consider utilizing Web push to engage users. Web push works the same way app push notifications operate on your phone. For more information on composing a web push, check out [Creating a push notification]({{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/#creating-a-push-message).
@@ -53,9 +53,9 @@ While we provide an extensive list of resources for customers to reference pre-s
 ## SMS
 
 #### Things to check
-- **Allotments and throughput**: Understand what SMS allotments are currently attached to your account (short code, long code, etc.) and [how much throughput that provides you]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_setup/short_and_long_codes/) to ensure you have enough throughput to send in your desired time.
+- **Allotments and throughput**: Understand what SMS allotments are currently attached to your account (short code, long code, and similar) and [how much throughput that provides you]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_setup/short_and_long_codes/) to confirm you have enough throughput to send in your desired time.
 - **Estimate segment from SMS copy**: Test your SMS copy in the [SMS segment calculator]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/segments/#things-to-keep-in-mind-as-you-create-your-copy). Keep in mind that the number of SMS segments should be taken into account with your throughput capabilities. (Audience * SMS segments = Throughput needed). Refer to SMS FAQ on [avoiding overages]({{site.baseurl}}/user_guide/message_building_by_channel/sms/faqs/#how-can-i-avoid-overages).
-- **SMS laws and regulations**: [Review SMS laws, regulations, and abuse prevention]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_laws_and_regulations/) to ensure that you are using the SMS services in compliance with all applicable laws. Make sure you should seek the advice of your legal counsel before sending.
+- **SMS laws and regulations**: [Review SMS laws, regulations, and abuse prevention]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_laws_and_regulations/) to confirm that you are using the SMS services in compliance with all applicable laws. Make sure you should seek the advice of your legal counsel before sending.
 
 #### Things to know
 - **SMS message defaulting**: SMS messages are normally defaulted to be sent from the short code in the sender pool.
@@ -78,7 +78,7 @@ While we provide an extensive list of resources for customers to reference pre-s
 #### Things to know
 - **Active Content Card campaigns limit**: You can have up to 500 active Content Card campaigns. This count includes Content Cards sent with either [card creation]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/create/card_creation/) option.  
 - [**Reporting terms**]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/reporting/): Review terms such as total impressions, unique impressions, and unique recipients as the definitions can sometimes cause confusion.
-- **Content Card refresh**: By default, Braze refreshes Content Card requests as they sync at session start, on feed down swipe (mobile), and when the cards view is shown if the last refresh was over one minute ago.
+- **Content Card refresh**: By default, Braze refreshes Content Card requests as they sync at session start, on feed down swipe (mobile), and when the cards view is opened if the last refresh was over one minute ago.
 - **Caching Content Cards**: Content Card caching options can be found in our [Android/FireOS]({{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/customization/custom_styling/#customizing-card-rendering-for-android) and [Web](https://js.appboycdn.com/web-sdk/latest/doc/modules/appboy.html#getcachedcontentcards) docs. 
 - **Frequency capping**: Frequency capping does not apply to Content Cards.
 - **Impressions**: Impressions are generally logged when a card is seen. For example, if you have a full inbox of Content Cards, an impression will not be logged until the user scrolls to the specific Content Card. There are some nuances between the Web, Android, and iOS platforms.  

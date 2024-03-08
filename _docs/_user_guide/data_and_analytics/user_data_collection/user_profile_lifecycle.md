@@ -36,7 +36,7 @@ Once a user is recognizable in your app (by providing a form of user ID or email
 Additional benefits of using an `external_id` include the following: 
 
 - Provide a consistent user experience across multiple devices and platforms (for example, not sending lapsing user notifications to a user's Android tablet when they are a loyal user of the app on the iPhone).
-- Improve the accuracy of your analytics by ensuring users aren't creating a new user profile every time they uninstall and reinstall, or install the app on a different device.
+- Improve the accuracy of your analytics by confirming users aren't creating a new user profile every time they uninstall and reinstall, or install the app on a different device.
 - Enable import of user data from sources outside the app using the [User Data endpoints]({{site.baseurl}}/api/endpoints/user_data/) and target users with transactional messages using our [Messaging endpoints]({{site.baseurl}}/api/endpoints/messaging/).
 - Search for individual users using our "Testing" [filters]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/) within the segmenter, and on the [User Search]({{site.baseurl}}/user_guide/engagement_tools/segments/using_user_search/) page.
 
@@ -63,15 +63,15 @@ For information on how to set an `external_id` against a user profile, see our d
 
 ## User aliases
 
-To refer to users by other identifiers than only the Braze `external_id`, set user aliases against a user profile. Any alias set against a user profile will act in addition to the user's `braze_id` or `external_id` as opposed to replacing it. There's no limit to the number of aliases that you can set against a user profile.
+To refer to users by identifiers other than only the Braze `external_id`, set user aliases against a user profile. Any alias set against a user profile will act in addition to the user's `braze_id` or `external_id` as opposed to replacing it. There's no limit to the number of aliases that you can set against a user profile.
 
-Each alias consists of two parts: a label, which defines the key of the alias, and a name, which defines the value. An alias name for any single label must be unique across the user base. If you attempt to update a second user profile with a pre-existing label and name combination, the user profile will not be updated.
+Each alias functions as a key-value pair that consists of two parts: an `alias_label`, which defines the key of the alias, and an `alias_name`, which defines the value. An `alias_name` for any single label must be unique across the user base (just like with `external_id`). If you attempt to update a second user profile with a pre-existing label and name combination, the user profile will not be updated.
 
 Unlike an `external_id`, an alias can be updated with a new name for a given label after it is set either via our [User Data endpoints][32] or by passing a new name via the SDK. The user alias will then be visible when exporting that user's data.
 
-![Two different user profiles for separate users with the same user alias label but different alias values][29]
+![Two different user profiles for separate users with the same user alias label but different alias names][29]
 
-User aliases also allow you to tag anonymous users with an identifier. For example, if a user provides your ecommerce site with their email address but hasn't yet signed up, the email address can be used as an alias for that anonymous user. These users can then be exported using their aliases or referenced by the API.
+User aliases also allow you to tag anonymous users with an identifier. For example, if a user provides your e-commerce site with their email address but hasn't yet signed up, the email address can be used as an alias for that anonymous user. These users can then be exported using their aliases or referenced by the API.
 
 If an anonymous user profile with an alias is later recognized with an `external_id`, they will be treated as a normal identified user profile, but will retain their existing alias and can still be referenced by that alias.
 
@@ -87,7 +87,7 @@ Having trouble picturing how this may look for the user profile lifecycle of you
 
 ## Advanced use case information
 
-You can set a new user alias for existing identified user profiles via our SDK and our API using the [User Data endpoints][27]. However, user aliases can't be set via the API for an unknown user profile.
+You can set a new user alias for existing identified user profiles via our SDK and our API using the [User Data endpoints][27]. However, user aliases can't be set via the API for an existing unknown user profile.
 
 If you attempt to set a pre-existing `external_id` on an anonymous user profile which shares a matching alias name but has different labels, only the alias label on the pre-existing known user profile will be maintained.
 

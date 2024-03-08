@@ -95,6 +95,9 @@ collections:
     output: true
     default_nav_url: home/
     page_order: 6
+  contributing:
+    output: true
+    default_nav_url: contributing/
   hidden: # Hidden pages not directly linked via navigation
     title: Braze
     output: true
@@ -157,6 +160,12 @@ defaults:
   -
     scope:
       path: ""
+      type: "contributing"
+    values:
+      nav_level: 1
+  -
+    scope:
+      path: ""
       type: "hidden"
     values:
       hide_feedback: true
@@ -191,7 +200,7 @@ exclude: [
   '*.log','MigrationTool','Archive','documentation','academy',
   '.sass-cache', '.git', '.vscode', 'system.properties',
   'CODE_OF_CONDUCT.md','CONTRIBUTING.md','LICENSE.md','_site',
-  'vercel.json'
+  'vercel.json','scripts'
 ]
 
 # Setting for image buster
@@ -208,7 +217,7 @@ asset_pipeline:
   display_path: docs/assets
   gzip: false
 
-lab_index_name: "LABSearch"
+learning_index_name: "BrazeLearningCourses"
 
 # Algolia Search index
 algolia:

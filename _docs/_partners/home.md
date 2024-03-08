@@ -233,8 +233,8 @@ valid_partner_list:
   url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/actioniq/
 - name: Airbyte
   url: /docs/partners/data_and_infrastructure_agility/workflow_automation/airbyte/
-- name: Flywheel
-  url: /docs/partners/data_and_infrastructure_agility/workflow_automation/flywheel/
+- name: GrowthLoop
+  url: /docs/partners/data_and_infrastructure_agility/workflow_automation/growthloop/
 - name: Mozart Data
   url: /docs/partners/data_and_infrastructure_agility/workflow_automation/mozart_data/
 - name: loplat
@@ -287,4 +287,6 @@ valid_partner_list:
   url: /docs/partners/message_orchestration/channel_extensions/email_templates/smartersends/
 - name: Typeform
   url: /docs/partners/message_orchestration/channel_extensions/surveys/typeform/
+- name: Scuba
+  url: /docs/partners/data_and_infrastructure_agility/analytics/scuba/
 ---

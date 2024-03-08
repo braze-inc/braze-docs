@@ -21,9 +21,9 @@ If a catalog item doesn't exist, this endpoint will create the item in your cata
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#ab30a4fc-60bc-4460-885c-1b92af8bc061 {% endapiref %}
 
-{% alert note %}
-To use this endpoint, you'll need to generate an API key with the `catalogs.replace_items` permission.
-{% endalert %}
+## Prerequisites
+
+To use this endpoint, you'll need an [API key]({{site.baseurl}}/api/basics#rest-api-key/) with the `catalogs.replace_items` permission.
 
 ## Rate limit
 

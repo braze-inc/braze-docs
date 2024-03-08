@@ -5,70 +5,135 @@ page_order: 5
 description: "This reference article outlines how to use Punchh dynamic code generation in Braze."
 page_type: partner
 search_tag: Partner
-
 ---
 
 # Dynamic code generation
 
-> A coupon code is a unique code that can be used by a single user (either single or multiple use). The Punchh framework generates coupon codes, which can be processed within a mobile app or at the POS.
+> A coupon code is a unique code that can be used by a single user (either single or multiple use). The Punchh framework generates coupon codes, which can be processed within a mobile app or at the point-of-sale (POS) system.
 
-Using the Punchh coupon framework and Braze, the following scenarios can be achieved:
-1. Generate a coupon code when the guest clicks a coupon generation link in an email: The coupon code will be generated dynamically and shown on a web page.
-2. Generate a coupon code when the guest opens an email: The coupon code will be generated dynamically and shown as an image within the email.
+Using the Punchh coupon framework and Braze, you can achieve the following scenarios:
+
+- Generate a coupon code when the guest clicks a coupon generation link in an email: The coupon code will be generated dynamically and shown on a web page.
+- Generate a coupon code when the guest opens an email: The coupon code will be generated dynamically and shown as an image within the email.
 
 ## How to integrate Punchh dynamic coupon code generation
 
 ### Step 1: Create a coupon campaign in Punchh
 
 1. Using a Punchh coupon campaign, create a dynamic generation coupon campaign as shown in the following image.
-2. The Punchh coupon framework will generate the following parameters to enable dynamic coupon generation: 
+2. The Punchh coupon framework will generate the following parameters to enable dynamic coupon generation:
     - Dynamic coupon generation token: This is a system-generated security token for encryption.
     - Dynamic coupon generation URL: This URL will be embedded in the email as a link or image, as required by the business.
 
-![][2]{: style="max-width:60%;"}    
+![The form for creating a coupon campagin in Punchh.][2]{: style="max-width:60%;"}
 
 ### Step 2: Generate signature and construct URL
 
-JWT.IO library is used to decode, verify, and generate JSON web tokens, an open, industry-standard RFC 7519 method for securely representing claims between two parties. 
+The JWT.IO library decodes, verifies, and generates JSON web tokens, an open, industry-standard RFC 7519 method for representing claims securely between two parties. 
 
-The `ClaimType` names mentioned below can be used to ensure the uniqueness of guests and coupons.
+The following `ClaimType` names can be used to ensure the uniqueness of guests and coupons:
+
 - `email`: represents the user's email address. 
 - `campaign_id`: represents the system-generated Punchh campaign ID. 
 - `first_name`: captures the user's first name. 
 - `last_name`: captures the user's last name.
 
-To use the Punchh dynamic coupon code API, a JWT Token must be constructed. The following shows how this can be accomplished using Liquid within Braze:
+To use the Punchh dynamic coupon code API, a JWT Token must be constructed. Add the following Liquid template to your Braze dashboard in the message body of the channel you'd like to use:
 
 {% raw %}
 ```liquid
-{% capture header %}{"typ":"JWT","alg":"HS256"}{% endcapture %}
+{% capture header %}{"alg":"HS256","typ":"JWT"}{% endcapture %}
 
-{% capture payload %} {"email":"{{${email_address}}}","first_name":"{{${first_name}}}","last_name":"{{${last_name}}}","campaign_id":YOUR-CAMPAIGN-ID}{% endcapture %}
+{% capture payload %}{"campaign_id":"CAMPAIGN_ID","email":"{{${email_address}}}","first_name":"{{${first_name}}}","last_name":"{{${last_name}}}"}{% endcapture %}
 
-{% capture signature_structure %}{{header | base64_encode}}.{{payload | base64_encode}}{% endcapture %}
+{% capture signature_structure %}{{header | base64_encode}}.{{payload | base64_encode | remove: '='}}{% endcapture %}
 
-{% assign secret = "YOUR-DYNAMIC-COUPON-GENERATION-TOKEN" %}
+{% assign secret = "DYNAMIC_COUPON_GENERATION_TOKEN" %}
 
-{% assign final_signature = {{signature_structure | hmac_sha256_base64: {{secret}} %}
+{% assign final_signature = {{signature_structure | hmac_sha256_base64: secret}} %}
 
 {% capture jwt %}{{signature_structure}}.{{final_signature | remove: '='}}{% endcapture %}
+
 ```
-{% endraw %} 
-### Step 3: Append coupon code in email content
+{% endraw %}
+
+Replace the following:
+
+| Placeholder        | Description                                          |
+|--------------------|------------------------------------------------------|
+| `SERVER_NAME`                     | The name of your server.              |
+| `DYNAMIC_COUPON_GENERATION_TOKEN` | Your dynamic coupon generation token. |
+| `CAMPAIGN_ID`                     | Your campaign ID.                     |
+
+### Step 3: Append coupon code to message body
 
 #### Link to Punchh web page
 
-On clicking the coupon URL, the user will be redirected to a Punchh-hosted web page, where the generated coupon will be displayed to the user as shown in the following image. For example,
-`https://SERVER_NAME_GOES_HERE.punchh.com/request_coupons/YOUR-DYNAMIC-COUPON-GENERATION-TOKEN?sign={{jwt}}`
+To link to a Puncch-hosted web page, add the following snippet to your message body.
 
-![][1]
+{% raw %}
+```liquid
+https://SERVER_NAME.punchh.com/request_coupons/DYNAMIC_COUPON_GENERATION_TOKEN?sign={{jwt}}
+```
+{% endraw %}
+
+Replace the following:
+
+| Placeholder        | Description                                          |
+|--------------------|------------------------------------------------------|
+| `SERVER_NAME`                     | The name of your server.              |
+| `DYNAMIC_COUPON_GENERATION_TOKEN` | Your dynamic coupon generation token. |
+
+When a user clicks the coupon URL, they'll be redirected to a Punchh-hosted web page, where their generated coupon will be displayed.
+
+![Example confirmation message after a user successfully generates a coupon code.][1]
+
+#### Extract code via JSON as plain text
+
+To return a JSON response, add `.json` before the sign query parameter of the Punchh URL as shown in the following snippet:
+
+{% raw %}
+```liquid
+https://SERVER_NAME.punchh.com/request_coupons/DYNAMIC_COUPON_GENERATION_TOKEN.json?sign={{jwt}}
+```
+{% endraw %}
+
+Replace the following:
+
+| Placeholder        | Description                                          |
+|--------------------|------------------------------------------------------|
+| `SERVER_NAME`                     | The name of your server.              |
+| `DYNAMIC_COUPON_GENERATION_TOKEN` | Your dynamic coupon generation token. |
+
+You could then leverage [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/making_an_api_call/) to insert the code as plain text into any message body. For example:
+
+{% raw %}
+```liquid
+{% connected_content https://SERVER_NAME.punchh.com/request_coupons/DYNAMIC_COUPON_GENERATION_TOKEN.json?sign={{jwt}} :save punchh_coupon %}
+{{punchh_coupon.coupon}}
+```
+{% endraw %}
 
 #### Link image inside email content
 
-The coupon code will be shown as an image within the email. For example,
-`<img src="https://SERVER_NAME_GOES_HERE.punchh.com/request_coupons/YOUR-DYNAMIC-COUPON-GENERATION-TOKEN.png?sign={{jwt}}">`
+To link the coupon code inside an image, add the following snippet to your message body:
 
-![][3]
+{% raw %}
+```liquid
+<img src="https://SERVER_NAME.punchh.com/request_coupons/DYNAMIC_COUPON_GENERATION_TOKEN.png?sign={{jwt}}">`
+```
+{% endraw %}
+
+Replace the following:
+
+| Placeholder        | Description                                          |
+|--------------------|------------------------------------------------------|
+| `SERVER_NAME`                     | The name of your server.              |
+| `DYNAMIC_COUPON_GENERATION_TOKEN` | Your dynamic coupon generation token. |
+
+Your output will be similar to the following:
+
+![Rendered output of the coupon code image tag.][3]
 
 ## Associated error messages
 

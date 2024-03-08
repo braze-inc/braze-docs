@@ -601,7 +601,7 @@ Cet événement se produit lorsqu’un utilisateur clique directement sur la not
   "device_model": (string) hardware model of the device,
   "device_id": (string) id of the device that we made a delivery attempt to,
   "button_action_type": (string) Action type of the push notification,
-  button. One of [URI, DEEP_LINK, NONE, CLOSE, SHARE]. null if not
+  button. One of [URI, DEEP_LINK, NONE, CLOSE]. null if not
   from a button click,
   "button_string": (string) identifier (button_string) of the push notification button clicked. null if not from a button click,
   "send_id": (string) id of the message if specified for the campaign (See Send Identifier under API Identifier Types),

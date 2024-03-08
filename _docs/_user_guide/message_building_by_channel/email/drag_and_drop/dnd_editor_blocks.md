@@ -33,7 +33,7 @@ The following table describes how users can use each editor block type.
 |`Button`| Adds a standard button. Properties for this block allow for editing and setting links easily. | 
 |`Divider`| Inserts a solid, dotted, or dashed line to help with spacing.|
 |`Spacer`| Adds space, or "padding", between other blocks. |
-|`Image`| Inserts an image from the Media Library. | 
+|`Image`| Inserts an image from the media library. | 
 |`Video`| Creates a link to the video content. |
 |`Social`| Inserts social media platform icon. Custom images can be uploaded for brand specific icons. |
 |`Icons`| Inserts an icon. Custom images can be uploaded. An oversized placeholder icon will be used until an image is uploaded. |

@@ -2,15 +2,15 @@
 nav_title: Personalized Paths 
 article_title: Personalized Paths in Experiment Paths 
 page_type: reference
-description: "Personalized Paths is similar to Personalized Variant in campaigns and lets you personalize entire Canvas journeys based on each person's conversion likelihood."
+description: "Personalized Paths lets you personalize any point of a Canvas journey for individual users based on conversion likelihood."
 tool: Canvas
 ---
 
 # Personalized Paths in Experiment Paths
 
-> Personalized Paths is similar to [Personalized Variant]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/optimizations/#personalized-variant) in campaigns and lets you personalize entire Canvas journeys for individual users based on conversion likelihood.
+> Personalized Paths is similar to [Personalized Variant]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/optimizations/#personalized-variant) in campaigns and lets you personalize any point of a Canvas journey for individual users based on conversion likelihood.
 
-When Personalized Paths is turned on in an Experiment Path step, a portion of users are held in a delay group while Braze tests the remaining paths against each other. After a period of time you choose, Braze sends users held in the delay group down the best-performing path for each user. Users who enter after the experiment is over will be sent down the path that performs best overall.
+When Personalized Paths is turned on in an Experiment Path step, a portion of users are held in a delay group while Braze tests the remaining paths against each other. After a period of time you choose, Braze sends users held in the delay group down the path that is most likely to result in conversion for each user based on what was learned during the testing window. Users who enter after the experiment is over will be sent down the path that performs best overall.
 
 ## Prerequisites
 
@@ -38,7 +38,7 @@ Then set the **Experiment Window**. The **Experiment Window** determines how lon
 
 ### Step 3: Determine fallback
 
-By default, if the results of the test aren't enough to determine a statistically significant winner, all future users will be sent down the best-performing path.
+By default, if the results of the test aren't enough to determine a statistically significant winner, all future users will be sent down the single best-performing path.
 
 Alternatively, you can select **Continue sending all future users the mix of paths**.
 
@@ -69,9 +69,22 @@ If Personalized Paths was turned on, your analytics view is separated into two t
 
 The **Initial Experiment** tab shows the metrics for each path during the experiment window. You can see a summary of how all the paths performed for the specified conversion events.
 
-![Results of an initial test sent to determine the best performing variant for each user. A table shows the performance of each variant based on various metrics for the target channel.]({% image_buster /assets/img/experiment_step/experiment_personalized_analytics_tab1.png %})
+![Results of an initial experiment sent to determine the best performing path for each user. A table shows the performance of each path based on various metrics for the target channel.]({% image_buster /assets/img/experiment_step/experiment_personalized_analytics_tab1.png %})
 
-This page also shows a breakdown of users' preferred paths based on a combination of certain characteristics. These characteristics are:
+By default, the test looks for associations between user’s custom events and their path preferences. This analysis detects whether custom events increase or decrease likelihood of responding to a particular path. These relationships are then used to determine which users gets assigned which path after the experiment window passes.
+
+The relationships between custom events and message preferences are displayed in the table on the **Initial Experiment** tab.
+
+![]({% image_buster /assets/img_archive/ab_analytics_pv_3.png %})
+
+If the test can't find a meaningful relationship between custom events and path preferences, the test will fall back to a session-based analysis method.
+
+{% details Fallback analysis method %}
+
+**Session-based analysis method**<br>
+If the fallback method is used to determine Personalized Paths, the **Initial Experiment** tab shows a breakdown of users' preferred variants based on a combination of certain characteristics.
+
+These characteristics are:
 
 - **Recency:** When they last had a session
 - **Frequency:** How often they have sessions
@@ -89,22 +102,25 @@ Ultimately, Braze combines all this data to select a tailored message path for e
 The time intervals for each bucket are determined based on Canvas-specific user data, which may vary between Canvases.
 {% endalert %}
 
+**How Personalized Paths are selected**<br>
+With this method, an individual user's recommended message is the sum of the effects of their specific recency, frequency, and tenure. Recency, frequency, and tenure are split into buckets, as illustrated in the **User Characteristics** table. The time range of each bucket is determined by the data for users in each individual Canvas and will change from Canvas to Canvas.
+
+Each bucket can have a different contribution or "push" towards each path. The strength of the push for each bucket is determined from user responses in the initial experiment using [logistic regression](https://en.wikipedia.org/wiki/Logistic_regression). This table only summarizes the results by displaying which path users in each bucket tended to engage with. Any individual user's actual Personalized Path depends on the sum of the effects of the three buckets they're in—one for each characteristic.
+
+{% enddetails %}
+
 {% endtab %}
 {% tab Personalized Paths %}
 
 The **Personalized Paths** tab shows the results of the final experiment, where the users in the Delay Group were sent down the best-performing path for them.
 
-The three cards on this page show your projected lift, overall results, and the projected results if you sent just the winning path instead. Even if there's no lift, which can sometimes happen, the result is the same as sending only the winning path (a traditional A/B test).
+The three cards on this page show your projected lift, overall results, and the projected results if you sent just the Winning Path instead. Even if there's no lift, which can sometimes happen, the result is the same as sending only the Winning Path (a traditional A/B test).
 
 - **Projected lift:** The improvement in your selected conversion event due to using Personalized Paths instead of sending every user down the overall best-performing path.
 - **Overall results:** The results of the second send based on your conversion event.
-- **Projected results:** The projected results of the second send based on your chosen optimization metric if you had sent just the winning variant instead.
+- **Projected results:** The projected results of the second send based on your chosen optimization metric if you had sent just the Winning Variant instead.
 
 ![Personalized Paths tab for a Canvas. The cards show the Projected Lift, Overall Conversions (with Personalized Paths), and Projected Unique Opens (with Winning Path).]({% image_buster /assets/img/experiment_step/experiment_personalized_analytics_tab2.png %})
-
-The table on this page shows the metrics for each variant from the personalized variant send. Your **Audience %** adds up to the percentage of the target segment you reserved for the personalized variant group.
-
-![]({% image_buster /assets/img_archive/ab_analytics_pv_2.png %})
 
 {% endtab %}
 {% endtabs %}

@@ -40,7 +40,7 @@ Integrate the loplat SDK and the Braze SDK in your app using the steps provided 
 
 ### Step 2: Sync the Braze and loplat X dashboards and create a campaign
 
-Create a new API key in the Braze dashboard. Copy the API key and paste it at **Settings > API Settings** in the loplat X dashboard. See the [loplat X user's guide](https://loplat-loplat.gitbook.io/loplat-x-user-guide-en/integration/braze) for more details.
+Create a new API key in the Braze dashboard. Copy the API key and paste it at **Settings > API Settings** in the loplat X dashboard. See the [loplat X user's guide](https://loplatx-user-guide.notion.site/Campaign-integration-b92f8120cbe74d19a3a5f593657b4e8e?pvs=25) for more details.
 
 #### API-triggered delivery
 
@@ -65,7 +65,7 @@ With the integration, you can apply location conditions by sending geofence info
 [2]: https://www.loplat.com/loplat-x#usecase
 [3]: mailto:support@loplat.com
 [4]: https://developers.loplat.com/braze/
-[5]: https://loplat-loplat.gitbook.io/loplat-x-user-guide-en/campaigns/create/campaign-integration#1.-braze-greater-than-loplat-x-api-triggered-delivery
-[6]: https://loplat-loplat.gitbook.io/loplat-x-user-guide-en/campaigns/create/campaign-integration
+[5]: https://loplatx-user-guide.notion.site/Campaign-integration-b92f8120cbe74d19a3a5f593657b4e8e#2ed232c885014f19b1870b9fca4230fb
+[6]: https://loplatx-user-guide.notion.site/Campaign-integration-b92f8120cbe74d19a3a5f593657b4e8e#f898aa55ef74440aba76dd9a0e3e7598
 [7]: {% image_buster /assets/img/loplat/loplat_api_triggered_delivery.png %}
 [8]: {% image_buster /assets/img/loplat/loplat_action_based_delivery.png %}

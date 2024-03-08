@@ -53,7 +53,7 @@ Promotion cards in your product carousel are helpful to provide images to your o
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% alert tip %}
-We recommend uploading your product images to the Braze Media Library, then copy and pasting the URLs into the appropriate fields. Only static image formats (PNG and JPEG), are accepted. Some image formats (GIF) will upload but not display as expected.
+We recommend uploading your product images to the media library, then copy and pasting the URLs into the appropriate fields. Only static image formats (PNG and JPEG), are accepted. Some image formats (GIF) will upload but not display as expected.
 {% endalert %}
 
 ### Best practices
@@ -86,7 +86,7 @@ Due to Google's privacy and safety regulations, emails with annotations must be 
 
 ### How are clicks on a promotion card or product carousel tracked?
 
-If you're using links within each promotion card or product carousel, these clicks are tracked by email click tracking. Email opens are tracked when a user opens the email.  
+Braze or any other ESPs are not able to insert link tracking on links in the header section. This means clicks cannot be tracked on a promotion card or product carousel.
 
 ### Is there a way to see how many users received a product carousel?
 

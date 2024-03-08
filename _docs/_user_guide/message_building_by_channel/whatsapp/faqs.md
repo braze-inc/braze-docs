@@ -132,7 +132,7 @@ WhatsApp allows for variable parameters to be inserted into message templates. M
 The Braze team does not have visibility into template rejections. You should work directly with your WhatsApp Business manager to edit and resubmit the template. Make sure to provide a sample template where necessary. Double-check that your template follows Meta's [business](https://www.whatsapp.com/legal/business-policy/?fbclid=IwAR2qWg6yFKdyjDMxJkbNSM38FLGsxXxffC1qStY2gaHOyp-gl_8g72rZNIw) or [commerce](https://www.whatsapp.com/legal/commerce-policy/?fbclid=IwAR3bzN3LTZ-7kO-wnO7X3smtPKGy0asxaFod-U1Ub8B9JUpnrfy1_y7LpAQ) policies.
 
 #### Can the rich media be targeted or personalized in Braze? 
-Images can be uploaded from the Media Library but cannot be dynamically targeted. For URLs, the last part of the link can be dynamically populated using Liquid. 
+Images can be uploaded from the media library but cannot be dynamically targeted. For URLs, the last part of the link can be dynamically populated using Liquid. 
 
 ### Deliverability 
 
@@ -164,7 +164,7 @@ You can use WhatsApp Liquid properties to forward inbound WhatsApp message conte
 To send information into Braze, for example, to indicate that a user is in an active support conversation, you can log a custom attribute (such as a boolean "has existing support chat = true/false") and use that as segmentation criteria in their marketing campaigns. You can also deep link between two chat threads to direct users to the support thread from the marketing thread and the reverse. 
 
 #### Does Braze store user responses? 
-Yes. Inbound and outbound messaging is available in the [Messaging History tab]({{site.baseurl}}/user_guide/engagement_tools/segments/user_profiles/#messaging-history-tab)of a user’s profile. 
+Messages are only stored long enough to process them. To access user messages, use Currents. 
 
 #### How do user phone numbers need to be stored in Braze? 
 User phone numbers need to be stored in [E.164 format]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/user_phone_numbers/#formatting).

@@ -81,6 +81,10 @@ The following JavaScript methods are supported within Braze HTML in-app messages
 }
 </style>
 
+{% alert note %}
+You cannot reference Liquid to insert <code>customAttributes</code> into JavaScript Bridge methods.
+{% endalert %}
+
 {% multi_lang_include archive/appboyBridge.md %}
 
 ## Link-based actions
@@ -169,7 +173,7 @@ Keep in mind that your mobile app users need to upgrade to the supported SDK ver
 
 #### Asset files
 
-When creating custom code in-app messages with HTML upload, you can upload campaign assets to the Braze [Media Library]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/media_library/) to reference in your message.
+When creating custom code in-app messages with HTML upload, you can upload campaign assets to the [media library]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/media_library/) to reference in your message.
 
 The following file types are supported for upload:
 
@@ -181,16 +185,16 @@ The following file types are supported for upload:
 | CSS Files        | `.css`                            |
 {: .reset-td-br-1 .reset-td-br-2}
 
-Braze recommends uploading assets to the Media Library for two reasons:
+Braze recommends uploading assets to the media library for two reasons:
 
-1. Assets added to a campaign via the Media Library allow your messages to be displayed even while the user is offline, or has a poor internet connection.
+1. Assets added to a campaign via the media library allow your messages to be displayed even while the user is offline, or has a poor internet connection.
 2. Assets uploaded to Braze can be reused across campaigns.
 
 ##### Adding asset files
 
 You can add new or existing assets to your campaign.
 
-To add new assets to your campaign, use the drag-and-drop section to upload a file. Assets added in this section will also be automatically added to the Media Library. To add assets that you've already uploaded to the Media Library, select **Add from Media Library**.
+To add new assets to your campaign, use the drag-and-drop section to upload a file. Assets added in this section will also be automatically added to the media library. To add assets that you've already uploaded to the media library, select **Add from Media Library**.
 
 After your assets are added, they will appear in the **Assets for this campaign** section. 
 

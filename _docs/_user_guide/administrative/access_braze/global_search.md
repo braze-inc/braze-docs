@@ -16,10 +16,10 @@ You can use the search bar to find your work and other information within your B
 
 You can search for the following items and actions:
 
-- Campaigns
-- Canvases
-- Segments
-- Email templates
+- Campaign names
+- Canvas names
+- Segment names
+- Email template names
 - [Pages within Braze](#find-pages-that-have-been-renamed)
 
 {% alert tip %}
@@ -81,6 +81,12 @@ Search for channels to see quick create options among your top 10 results. For e
 
 --->
 
+### Filter for archived content
+
+You can include archived content in your search results by selecting **Show Archived Content**. By default, the toggle is off, and archived content isn't included.
+
+![The "Show Archived Content" toggle.][4]
+
 ### Search for emojis
 
 Do you use emojis when naming your work in Braze? Search for them! You can use emojis as search queries. 😎
@@ -89,3 +95,4 @@ Do you use emojis when naming your work in Braze? Search for them! You can use e
 [1]: {% image_buster /assets/img/global_search/global_search.png %}
 [2]: {% image_buster /assets/img/global_search/search_create_campaign.png %}
 [3]: {% image_buster /assets/img/global_search/global_search2.png %}
+[4]: {% image_buster /assets/img/global_search/archived_content.png %}

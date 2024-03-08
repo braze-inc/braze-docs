@@ -27,19 +27,9 @@ To access a user's profile, go to the **Search Users** page and search for a use
 If you are using the [older navigation]({{site.baseurl}}/navigation), **Search Users** is **User Search** and can be found under **Users**.
 {% endalert %}
 
-If a match is found, you can view the information you've recorded for this user with the Braze SDK.
-
-Most searches return one user profile. However, if you search for an email that belongs to more than one user, all user profiles that match that email will be returned. If you do enter a non-unique email, click **Next** to view the other profiles that are associated with that email.
+If a match is found, you can view the information you've recorded for this user with the Braze SDK. Otherwise, if your search returns multiple user profiles, you can merge each profile individually or perform a bulk user merge. For a full walkthrough, see [Duplicate Users]({{site.baseurl}}/user_guide/engagement_tools/segments/user_profiles/duplicate_users/).
 
 ![Search results with a banner that reads "Multiple users match your search criteria" and two buttons labeled Previous and Next.][1]
-
-### Merge profiles
-
-If your search returns multiple user profiles, merging profiles can be a method to tidy up your Braze user profiles.
-
-To merge user profiles, these user profiles must be found using the same search query (for example, searching "testuser" returns three different user profiles). Click the **Merge duplicates** button to merge the user profiles. You can select which user profile to keep, meaning this profile will be kept and will gain attributes from the merged profile (the user profile to merge). 
-
-Once user profiles are merged, this action cannot be undone. For a list of fields that can be merged, refer to [Merge updates behavior]({{site.baseurl}}/api/endpoints/user_data/post_users_merge/#merge_updates-behavior).
 
 ## Use cases
 
@@ -88,14 +78,14 @@ The **Engagement** tab contains information about a user's interactions with the
 | Install attribution | Information about how and when a user installed your app. Learn more about [understanding user installs]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/install_attribution/). |
 | Miscellaneous | The user's [random bucket number]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/ab_testing_with_random_buckets/). |
 | Canvas messages received | Canvas messages this user has received and when. Select a message from the list to view it. |
-| Predictions | [Churn Prediction]({{site.baseurl}}/user_guide/predictive_suite/predictive_churn) and [Event Prediction]({{site.baseurl}}/user_guide/predictive_suite/predictive_purchases) scores for this user. |
+| Predictions | [Churn prediction]({{site.baseurl}}/user_guide/predictive_suite/predictive_churn) and [event prediction]({{site.baseurl}}/user_guide/predictive_suite/predictive_purchases) scores for this user. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ![][3]
 
 ### Messaging History tab
 
-The **Message History** tab of the user profile shows recent messaging related events (about 40) for an individual user from the past 30 days. These events include the messages that the user was sent, received, interacted with, and more.
+The **Message History** tab of the user profile shows recent messaging related events (about 40) for an individual user from the past 30 days. These events include the messages that the user was sent, received, interacted with, and more. Note that the data in this tab isn't updated after a user is merged.
 
 {% alert note %}
 If you have feedback on this table, or would like to see specific events, please email [user-targeting@braze.com](mailto:user-targeting@braze.com?subject=Messaging%20History%20Tab%20Feedback) with the subject line "Messaging History Tab Feedback".

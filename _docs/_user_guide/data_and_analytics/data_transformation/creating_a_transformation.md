@@ -8,7 +8,7 @@ description: "This reference article provides steps to create a transformation u
 
 # Creating a transformation
 
-> Braze Data Transformation enables you to build and manage webhook integrations to automate data flow from external platforms into Braze user profiles. This integrated user data can then power even more sophisticated marketing use cases.
+> Braze Data Transformation enables you to build and manage webhook integrations to automate data flow from external platforms into Braze. These webhook integrations can then power even more sophisticated marketing use cases.
 
 ## Prerequisites 
 
@@ -49,9 +49,9 @@ Braze Data Transformation may not yet support external platforms that require sp
 
 ## Step 4: Write transformation code
 
-If you have little to no experience with JavaScript code or prefer more detailed instructions, follow the **Beginner** tab for writing your transformation code.
+If you have little to no experience with JavaScript code or prefer more detailed instructions, follow the **Beginner - POST: Track users** or **Beginner - PUT: Update catalog item** tab for writing your transformation code.
 
-If you're a developer or have significant experience with JavaScript code, follow the **Advanced** tab for high-level instructions on writing your transformation code.
+If you're a developer or have significant experience with JavaScript code, follow the **Advanced - POST: Track users** tab for high-level instructions on writing your transformation code.
 
 {% alert tip %}
 Braze Data Transformation has an AI copilot that asks ChatGPT to help you write your code, instead of using the default template. Access the AI copilot by clicking <i class="fa-solid fa-wand-magic-sparkles"></i> **Generate transformation code**. To use this, a webhook must be sent to your transformation.
@@ -60,7 +60,7 @@ Braze Data Transformation has an AI copilot that asks ChatGPT to help you write 
 {% endalert %}
 
 {% tabs %}
-{% tab Beginner %}
+{% tab Beginner - POST: Track users %}
 
 Here, you will write transformation code to define how you’d like to map various webhook values to Braze user profiles.
 
@@ -120,7 +120,55 @@ Here, you will write transformation code to define how you’d like to map vario
 Your webhook integration is now complete!
 
 {% endtab %}
-{% tab Advanced %}
+{% tab Beginner - PUT: Update catalog item %}
+
+Here, you will write transformation code to define how you’d like to map various webhook values to Braze catalog item updates.
+
+1. New transformations will include this default template in the **Transformation Code** section:
+    ```
+    // This is a default template that you can use as a starting point
+    // Feel free to delete this entirely to start from scratch, or to edit specific components
+
+
+    // First, this code defines a variable, "brazecall", to build a PUT /catalogs/{catlalog_name}/items/{item_id} request
+    // Everything from the incoming webhook is accessible via the special variable "payload"
+    // As such, you can template in desired values in your request with JS dot notation, such as payload.x.y.z
+
+
+    let brazecall = {
+    // For Braze Data Transformations to update Catalog items, the special variables "catalog_name" and "item_id" are required
+    // These variables are used to specify the catalog name and item ID which would otherwise go in the request URL
+    "catalog_name": "catalog_name",
+    "item_id": payload.item_id,
+    // After the special variables, construct the Catalogs update request as usual below
+    "items": [
+      {
+        "catalog_column1": "string",
+        "catalog_column2": 1,
+        "catalog_column3": true,
+        "catalog_column4": "2021-09-03T09:03:19.967+00:00",
+        "catalog_column5": {
+          "Latitude": 33.6112,
+          "Longitude": -117.8711
+        }
+      }
+    ]
+    };
+
+    // After the request body is assigned to brazecall, you will want to explicitly return brazecall to create an output
+    return brazecall;
+    ```
+
+2. Transformations for `/catalogs` destinations require a `catalog_name` and `item_id` to define the specific catalog and item that you’d like to update. You can hard code these values, or template in the value with a webhook value via a payload line. Use dot notation to access payload object properties.<br><br>
+3. Define how to update the `item_id` (from Step 2 of this section) by modifying the items array. Again, you can hard code these values or template in a webhook value via a payload line. <br><br> If you're looking at the Braze catalog as a table, the `item_id` is a row in your catalog, and item objects (starting with “catalog_column1”) are column values for that row. Note that “catalog_column1” is a placeholder, so your catalog may not have this field. The item objects should only contain fields that exist in the catalog.<br><br>
+4. Click Validate to return a preview of your code’s output and to check if it is an acceptable request for the Update catalog item endpoint.<br><br>
+5. Activate your transformation. For additional help with your code before activating it, contact your Braze account manager.<br><br>
+6. Make sure to check if your source platform has a setting to start sending webhooks. Your transformation code will run for each incoming webhook, and the catalog items will begin updating.
+
+Your webhook integration is now complete!
+
+{% endtab %}
+{% tab Advanced - POST: Track users %}
 
 In this step, you will transform the webhook payload from the source platform to a JavaScript object return value. This return value must adhere to Braze’s `/users/track` request body format:
 
@@ -143,19 +191,19 @@ External network requests, third-party libraries, and non-JSON webhooks are not 
 
 ## Step 5: Monitor your transformation
 
-After activating your transformation, refer to the analytics on the **Transformations** page to monitor its performance.
+After activating your transformation, refer to the analytics on the main **Transformations** page for a high level view of its performance.
 
-- **Incoming Requests:** This is the number of webhooks received at this transformation’s URL. If incoming requests are 0, your source platform hasn’t sent over any webhooks, or the connection cannot be made.
-- **Deliveries:** After receiving incoming requests, Data Transformation applies your transformation code to create a Braze `/users/track` request.
+* **Incoming Requests:** This is the number of webhooks received at this transformation’s URL. If incoming requests are 0, your source platform hasn’t sent over any webhooks, or the connection cannot be made.
+* **Deliveries:** After receiving incoming requests, Data Transformation applies your transformation code to send to your selected Braze destination.
 
-The number of deliveries will never exceed the number of incoming requests. However, it's a good goal to have 100% of incoming requests leading to deliveries.
+It’s a good goal to have 100% of incoming requests leading to deliveries. The number of deliveries will never exceed the number of incoming requests.
+
+For more detailed monitoring and troubleshooting, refer to the **Logs** page for specific logs. This is where the last 1,000 incoming requests to all transformations across all workspaces are logged. You can click each log to view the incoming request body, transformation output, and response body from the transformation’s destination. You can use these details to troubleshoot any errors.
 
 ### Troubleshooting
 
-- If deliveries are 0, check your transformation code to ensure there are no syntax errors and that it compiles. Then, check whether the output is a valid `/users/track` request.
-- If deliveries are less than the number of incoming requests, that indicates that at least some webhooks are delivered successfully transformed to `/users/track`. Your transformation code doesn't account for 100% of the webhooks received.
-- If your source platform has logs, check for inconsistencies across different webhooks.
-- If your transformation code has if/else logic, check if one of the control flows is the cause of failure.
+- If deliveries are 0, check your transformation code to ensure there are no syntax errors and that it compiles. Then, check whether the output is a valid destination request.
+- If deliveries are less than the number of incoming requests, this indicates that at least some webhooks are delivered successfully. Refer to transformation logs for example errors, and look to see if the transformation output is expected. It’s possible that your transformation code is not accounting for every variation of webhooks received.
 
 
 [4]: {% image_buster /assets/img/data_transformation/data_transformation3.png %}

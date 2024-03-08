@@ -13,7 +13,7 @@ tool:
 
 > Learn about the **Home** page (previously the **Overview** page) and the statistics available there.
 
-The **Home** page on the dashboard provides key mobile metrics for you to track and understand the performance of your app and gives you an at-a-glance high-level understanding of your app's userbase.
+The **Home** page on the dashboard provides key metrics for you to track and understand the performance of your app or website, and gives you an at-a-glance high-level understanding of your userbase.
 
 {% alert note %}
 If you are using the [older navigation]({{site.baseurl}}/navigation), this is your **Overview** page.
@@ -23,7 +23,7 @@ If you are using the [older navigation]({{site.baseurl}}/navigation), this is yo
 
 ## Reading the dashboard
 
-By default, the dashboard shows the last 30 days of data for all apps. Your metrics are all calculated based on the selected date range.
+By default, the dashboard shows the last 30 days of data for all apps and sites. Your metrics are all calculated based on the selected date range.
 
 ![Date range and app fields on the Home dashboard.][5]{: style="max-width:60%;"}
 
@@ -45,18 +45,18 @@ The following are the definitions of these statistics, how we calculate them, an
 
 ### Users
 
-*Users* is the total number of users created in that workspace. This includes all users we have recorded using your app at any point in time, and those who might not be associated with a specific app or website. This number is the percentage of how many of your lifetime users are represented as *Monthly Active Users* (MAU) which is useful for seeing user retention over a long period of time.
+*Users* is the total number of users created in that workspace. This includes all users we have recorded using your app or website at any point in time, and those who might not be associated with a specific app or website. This number is the percentage of how many of your lifetime users are represented as *Monthly Active Users* (MAU) which is useful for seeing user retention over a long period of time.
 
 A low MAU to user ratio may indicate that you need to diversify your messaging channels or increase your efforts in reaching out to lapsing users. See our quick win on [capturing lapsing users][3] for more info. In general, the MAU to lifetime ratio will inevitably decrease over time due to user churn, but Braze tools can help you minimize this effect by keeping users engaged longer.
 
 ### Lifetime sessions
 
-This is the total count of sessions that Braze has recorded since integration. Simply put, a session is each time a user uses the app. For a more precise definition on how sessions are defined by platform, visit the corresponding 
+This is the total count of sessions that Braze has recorded since integration. Simply put, a session is each time a user uses the app or visits your website. For a more precise definition on how sessions are defined by platform, visit the corresponding 
 [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/tracking_sessions/), [Android and FireOS]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/tracking_sessions/), or [Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/tracking_sessions/) session tracking developer articles.
 
 ### Monthly active users
 
-*Monthly Active Users* (MAU) is the number of users that have recorded a session in your app in the last 30 days. MAU are calculated nightly with a rolling 30-day window. MAU provides you with a good understanding of an app's health over an extended period of time as it smooths out the inconsistencies between days of varying usage intensity.
+*Monthly Active Users* (MAU) is the number of users that have recorded a session in your app or site in the last 30 days. MAU are calculated nightly with a rolling 30-day window. MAU provides you with a good understanding of an app or site's health over an extended period of time as it smooths out the inconsistencies between days of varying usage intensity.
 
 The percentage next to the MAU count shows the change in MAU for this period compared to the previous period.
 
@@ -68,21 +68,21 @@ Anonymous users will also count towards your MAU. For mobile devices, anonymous 
 
 ### Daily active users
 
-*Daily Active Users* (DAU) displays the number of unique users who record at least one session in your app on a given day. DAU can be a useful statistic for examining the day-to-day variability of usage of your app and tailoring your messaging campaigns to be as effective as possible. For example, your app's usage may see an appreciable spike on weekends - this would inform you that you could reach more users with in-app messages on these days as opposed to weekdays.
+*Daily Active Users* (DAU) displays the number of unique users who record at least one session in your app or site on a given day. DAU can be a useful statistic for examining the day-to-day variability of usage of your app or site and tailoring your messaging campaigns to be as effective as possible. For example, your app's usage may see an appreciable spike on weekends - this would inform you that you could reach more users with in-app messages on these days as opposed to weekdays.
 
 ### New users
 
-*New Users* tells you how many users who have previously never recorded a session have started using your app. This number is a total of new users over the given time period. This statistic can be very valuable for tracking the effectiveness of your advertising efforts.
+*New Users* tells you how many users who have previously never recorded a session have started using your app or site. This number is a total of new users over the given time period. This statistic can be very valuable for tracking the effectiveness of your advertising efforts.
 
-> When you initially release your app with Braze, all users will look like new users since Braze has never recorded a session for them before.
+> When you initially integrate Braze, all users will look like new users since Braze has never recorded a session for them before.
 
 ### Stickiness
 
-Your app's *Stickiness* value is a ratio of a given periods' DAU to MAU. In essence, stickiness measures the percentage of your MAU that come back on a daily basis. 
+The *Stickiness* value is a ratio of a given periods' DAU to MAU. In essence, stickiness measures the percentage of your MAU that come back on a daily basis.
 
-For example, if the date range is set to 30 days, a ratio of 50% indicates that on average an active user is using the app for 15 out of 30 days or that about half of your active users come back on a daily basis. Stickiness is an important metric for app success because most users don't quit using an app because they actively hate it, but rather because it doesn't become a part of their daily routine. Therefore, you can use stickiness as a proxy for measuring how well you're engaging your users.
+For example, if the date range is set to 30 days, a ratio of 50% indicates that on average an active user is using the app or website for 15 out of 30 days or that about half of your active users come back on a daily basis. Stickiness is an important metric for success because most users don't quit using an app because they actively hate it, but rather because it doesn't become a part of their daily routine. Therefore, you can use stickiness as a proxy for measuring how well you're engaging your users.
 
-The percentage next to the stickiness ratio shows the change in stickiness for this period compared to the previous period. 
+The percentage next to the stickiness ratio shows the change in stickiness for this period compared to the previous period.
 
 $$\text{Change in stickiness} = \frac{\text{Stickiness of last period} - \text{Stickiness of this period}}{\text{Stickiness of last period}}$$
 
@@ -94,11 +94,11 @@ The MAU value is calculated nightly and will not update until the next day.
 
 ### Daily sessions
 
-*Daily Sessions* is the number of sessions recorded on a given day. Comparing this value to your DAU count can inform you of how many times your users open the app on days where they record at least one session.
+*Daily Sessions* is the number of sessions recorded on a given day. Comparing this value to your DAU count can inform you of how many times your users open the app or visit your website on days where they record at least one session.
 
 ### Daily sessions per MAU
 
-*Daily Sessions per MAU* is the ratio of Daily Sessions to MAU on a given day. This statistic tells you how many sessions per day you can expect to have logged per MAU. On aggregate, this can give you an idea of the relative frequency of when your users use your app. That is, if your *Daily Sessions per MAU* were on average 0.5, then you could expect each MAU to record a session about every 2 days.  
+*Daily Sessions per MAU* is the ratio of Daily Sessions to MAU on a given day. This statistic tells you how many sessions per day you can expect to have logged per MAU. On aggregate, this can give you an idea of the relative frequency of when your users use your app or site. That is, if your *Daily Sessions per MAU* were on average 0.5, then you could expect each MAU to record a session about every 2 days.  
 
 [1]: {% image_buster /assets/img_archive/home_dashboard.png %}
 [2]: {% image_buster /assets/img_archive/home_dashboard_breakdown.png %}
