@@ -55,7 +55,7 @@ Below are the default events, event properties, and user attributes Extole will 
 | `extole_created_share_link` | A participant creates their share link by entering their email in the Extole Share Experience. | Event name  <br>Event time  <br>Partner (Extole)  <br>Funnel (advocate or friend)  <br>Program | <br>External ID <br>Email  <br>Share link |
 | `extole_shared` | A participant shares their referral link with a friend. | Event name  <br>Event time  <br>Partner (Extole)  <br>External ID  <br>Funnel (advocate or friend)  <br>Program  <br>Share channel | Email <br>First name <br>Last Name |
 | `outcome` - The outcome is dynamic based on the configuration of your program (e.g., `extole_shipped`, `extole_converted`, etc.)| A participant has converted or completed the desired outcome event configured for the program. | Dynamic per program | Email <br>First name <br>Last Name |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
 ### Extole subscription states
 
@@ -63,6 +63,7 @@ Below are the default events, event properties, and user attributes Extole will 
 | ----------- | ----------- | ----------- | ----------- |
 | `subscribed` | A participant has opted-in to receive marketing messages. | NA | Email  <br>List type  <br>External ID  <br>Email subscribe (opted in) |
 | `unsubscribed` | A participant has opted-out of receiving Extole email communications.| Email  <br>External ID  <br>Subscription state (unsubscribed)  <br>Subscription group ID  | List type |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
 ### Extole rewards
 
@@ -77,7 +78,7 @@ By default, Extole will send reward events in the `FULFILLED` state to Braze so 
 | `FAILED` | An issue has prevented the reward from being issued or sent, requiring attention. | Email <br>Face value  <br>Coupon code  <br>Face value type  | Email <br>First name  <br>Last name |
 | `CANCELED` | The reward has been deactivated and will return to inventory. | Email <br>Face value  <br>Face value type  | Email <br>First name  <br>Last name |
 | `REVOKED` | The fulfilled reward has been invalidated. For example, Extole requested a gift card from a supplier and then subsequently determined that the card was sent in error. If the supplier supports revoking the reward, we would request the funds back and the reward would no longer be valid. | Email <br>Face value   <br>Face value type  | Email <br>First name  <br>Last name |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
 
 ## Customization
