@@ -40,5 +40,15 @@ To use locales in your messaging, follow these steps:
 
 To update the translations, update the CSV and re-upload the file. In the **Preview & Test** section, you can select **Multi-language User** to preview the message to check if your message translates as expected.
 
+## Frequently asked questions
+
+#### How many locales can I add?
+
+You can add up to 200 locales.
+
+#### Where are the translation files stored in Braze?
+
+Translation files are stored at a campaign level.
+
 [2]: {% image_buster /assets/img/multi-language_support/add_locale.png %}
 [3]: {% image_buster /assets/img/multi-language_support/translation_html_editor_example.png %}
