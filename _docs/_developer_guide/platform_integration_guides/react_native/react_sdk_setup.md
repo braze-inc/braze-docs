@@ -13,17 +13,7 @@ search_rank: 1
 
 ## Prerequisites and compatibility
 
-<<<<<<< Updated upstream
-To complete the installation, you will need the [app identifier API key]({{site.baseurl}}/api/identifier_types/) as well as the [SDK endpoint]({{site.baseurl}}/api/basics/#endpoints). Both are located under **Manage Settings** in the dashboard.
-
-## Prerequisites and compatibility
-
-- Requires React Native v0.71+ (as of version 9.0.0)
-
-For the full compatibility matrix, refer to the version support in our [public React Native SDK repository](https://github.com/braze-inc/braze-react-native-sdk?tab=readme-ov-file#version-support).
-=======
 To set up this SDK, React Native v0.71 or later is required. For the full list of supported versions, see the GitHub repository for the [React Native Braze SDK](https://github.com/braze-inc/braze-react-native-sdk?tab=readme-ov-file#version-support).
->>>>>>> Stashed changes
 
 ### React Native New Architecture Support
 
