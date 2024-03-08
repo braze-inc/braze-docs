@@ -11,8 +11,9 @@ search_rank: 1
 
 > This reference article covers how to install the Braze SDK for React Native. Installing the Braze React Native SDK provides basic analytics functionality and lets you integrate in-app messages and Content Cards for both iOS and Android with just one codebase.
 
-You will need to complete installation steps on both platforms separately.
+## Prerequisites and compatibility
 
+<<<<<<< Updated upstream
 To complete the installation, you will need the [app identifier API key]({{site.baseurl}}/api/identifier_types/) as well as the [SDK endpoint]({{site.baseurl}}/api/basics/#endpoints). Both are located under **Manage Settings** in the dashboard.
 
 ## Prerequisites and compatibility
@@ -20,6 +21,9 @@ To complete the installation, you will need the [app identifier API key]({{site.
 - Requires React Native v0.71+ (as of version 9.0.0)
 
 For the full compatibility matrix, refer to the version support in our [public React Native SDK repository](https://github.com/braze-inc/braze-react-native-sdk?tab=readme-ov-file#version-support).
+=======
+To set up this SDK, React Native v0.71 or later is required. For the full list of supported versions, see the GitHub repository for the [React Native Braze SDK](https://github.com/braze-inc/braze-react-native-sdk?tab=readme-ov-file#version-support).
+>>>>>>> Stashed changes
 
 ### React Native New Architecture Support
 
@@ -69,9 +73,9 @@ In your `app.json`, add the Braze Expo Plugin. You can provide the following con
 
 | Method                                    | Type     | Description                                                                                                                                            |
 | ------------------------------------------| ---------| -------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `androidApiKey`                           | string   |  Required. The API key for your Android application.                                                                                                   |
-| `iosApiKey`                               | string   |  Required. The API key for your iOS application.                                                                                                       |
-| `baseUrl`                                 | string   |  Required. The [SDK endpoint]({{site.baseurl}}/api/basics/#endpoints) for your application.                                                            |
+| `androidApiKey`                           | string   |  Required. The [API key]({{site.baseurl}}/api/identifier_types/) for your Android application, located in your Braze dashboard under **Manage Settings**.                                                                                                  |
+| `iosApiKey`                               | string   |  Required. The [API key]({{site.baseurl}}/api/identifier_types/) for your iOS application, located in your Braze dashboard under **Manage Settings**.                                                                                                       |
+| `baseUrl`                                 | string   |  Required. The [SDK endpoint]({{site.baseurl}}/api/basics/#endpoints) for your application, located in your Braze dashboard under **Manage Settings**.                                                           |
 | `enableBrazeIosPush`                      | boolean  |  iOS only. Whether to use Braze to handle push notifications on iOS. Introduced in React Native SDK v1.38.0 and Expo Plugin v0.4.0.                    |
 | `enableFirebaseCloudMessaging`            | boolean  |  Android only. Whether to use Firebase Cloud Messaging for push notifications. Introduced in React Native SDK v1.38.0 and Expo Plugin v0.4.0.          |
 | `firebaseCloudMessagingSenderId`          | string   |  Android only. Your Firebase Cloud Messaging sender ID. Introduced in React Native SDK v1.38.0 and Expo Plugin v0.4.0.                                 |
@@ -158,7 +162,7 @@ This will add Kotlin to your project.
 
 #### Step 2.2: Configure the Braze SDK
 
-To connect to Braze servers, create a `braze.xml` file in your project's `res/values` folder. Paste the following code and replace the API key and endpoint with your values:
+To connect to Braze servers, create a `braze.xml` file in your project's `res/values` folder. Paste the following code and replace the API [key]({{site.baseurl}}/api/identifier_types/) and [endpoint]({{site.baseurl}}/api/basics/#endpoints) with your values:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -268,7 +272,7 @@ Import the Braze SDK at the top of the `AppDelegate.swift` file:
 import BrazeKit
 ```
 
-In the `application(_:didFinishLaunchingWithOptions:)` method, replace the API key and endpoint with your app's values. Then, create the Braze instance using the configuration, and create a static property on the `AppDelegate` for easy access:
+In the `application(_:didFinishLaunchingWithOptions:)` method, replace the API [key]({{site.baseurl}}/api/identifier_types/) and [endpoint]({{site.baseurl}}/api/basics/#endpoints) with your app's values. Then, create the Braze instance using the configuration, and create a static property on the `AppDelegate` for easy access:
 
 {% alert note %}
 Our example assumes an implementation of [RCTAppDelegate](https://github.com/facebook/react-native/blob/e64756ae5bb5c0607a4d97a134620fafcb132b3b/packages/react-native/Libraries/AppDelegate/RCTAppDelegate.h), which provides a number of abstractions in the React Native setup. If you are using a different setup for your app, be sure to adjust your implementation as needed.
@@ -311,7 +315,7 @@ Import the Braze SDK at the top of the `AppDelegate.m` file:
 #import "BrazeReactBridge.h"
 ```
 
-In the `application:didFinishLaunchingWithOptions:` method, replace the API key and endpoint with your app's values. Then, create the Braze instance using the configuration, and create a static property on the `AppDelegate` for easy access:
+In the `application:didFinishLaunchingWithOptions:` method, replace the API [key]({{site.baseurl}}/api/identifier_types/) and [endpoint]({{site.baseurl}}/api/basics/#endpoints) with your app's values. Then, create the Braze instance using the configuration, and create a static property on the `AppDelegate` for easy access:
 
 {% alert note %}
 Our example assumes an implementation of [RCTAppDelegate](https://github.com/facebook/react-native/blob/e64756ae5bb5c0607a4d97a134620fafcb132b3b/packages/react-native/Libraries/AppDelegate/RCTAppDelegate.h), which provides a number of abstractions in the React Native setup. If you are using a different setup for your app, be sure to adjust your implementation as needed.
