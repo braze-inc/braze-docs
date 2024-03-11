@@ -2,7 +2,7 @@
 nav_title: Redirecting URLs
 article: Redirecting URLs
 description: "Learn how to redirect URLs for pages and page headings on Braze Docs."
-page_order: 6
+page_order: 5
 noindex: true
 ---
 
