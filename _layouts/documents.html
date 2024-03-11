@@ -44,11 +44,10 @@ layout: default
     <div id="breadcrumb">
     </div>
     {%- endunless -%}
-    <div class="last_modified_at">
-        Last updated on {{ page.last_modified_at | date: '%B %d, %Y' }}.
+    <div class="last_modified_at" style="font-size: 13px;">
+      Updated {{ page.last_modified_at | date: '%B %d, %Y' }}
     </div>
     {{ content }}
-
     </div>
 
     {%- unless hide_bottom_nav -%}
