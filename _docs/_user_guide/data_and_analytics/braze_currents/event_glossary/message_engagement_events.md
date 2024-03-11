@@ -1486,6 +1486,10 @@ SMS, Sends
 
 This event occurs when a user sends an SMS.
 
+{% alert note %}
+`CarrierSend` is supported only for customers on legacy infrastructure.
+{% endalert %}
+
 ```json
 // SMS Send: users.messages.sms.Send
 {
@@ -1563,6 +1567,10 @@ SMS, Rejection
 {% endapitags %}
 
 This event occurs when an SMS send gets rejected by the carrier, this can happen for several reasons. Use this event and the provided error codes to help troubleshoot issues with SMS delivery.
+
+{% alert note %}
+`CarrierSend` is supported only for customers on legacy infrastructure.
+{% endalert %}
 
 ```json
 // SMS Rejection: users.messages.sms.Rejection
