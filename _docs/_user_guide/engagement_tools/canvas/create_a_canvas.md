@@ -27,6 +27,9 @@ guide_featured_list:
   - name: Exit Criteria
     link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/exit_criteria/
     image: /assets/img/braze_icons/users-right.svg
+  - name: Preview User Paths
+    link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/preview_user_paths/
+    fa_icon: fas fa-users-viewfinder
   - name: Canvas Entry Properties and Event Properties
     link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties/
     image: /assets/img/braze_icons/user-check-01.svg

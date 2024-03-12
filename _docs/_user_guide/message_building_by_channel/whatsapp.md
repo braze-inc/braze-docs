@@ -1,7 +1,7 @@
 ---
 nav_title: WhatsApp
 article_title: WhatsApp
-page_order: 4
+page_order: 5
 layout: dev_guide
 channel:
   - WhatsApp

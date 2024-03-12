@@ -166,11 +166,8 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 Using the example provided, we can see that someone bought a backpack with the properties: color, monogram, checkout duration, size, and brand. We can then create segments with these properties by using [purchase event properties][2] or send custom messages through a channel using Liquid. For example, "Hello **Ann F.**, Thanks for purchasing that **red, medium backpack** for **$40.00**! Thanks for shopping at **Backpack Locker**!"
 
-If you do want to save, store and track properties to segment with, you need to set them up as custom attributes. This can be done with the power of webhooks! Using webhooks, you can tell Braze to "listen" for whenever a purchase event happens and then set up the webhook so that it parses the properties and saves them as custom attributes. Now that these properties are custom attributes, we can see and segment these properties in the dashboard.
+If you do want to save, store and track properties to segment with, you need to set them up as custom attributes. This can be done using [Segment Extensions]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/), which allow you to target users based on custom event or purchase behavior stored for the lifetime of that user profile.
 
-For information on how to set up this type of webhook, check out [Braze to Braze webhooks][1].
-
-[1]: {{site.baseurl}}/user_guide/message_building_by_channel/webhooks/braze_to_braze_webhooks/
 [2]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/purchase_events/#purchase-properties
 [20]: http://en.wikipedia.org/wiki/ISO_4217 "ISO 4217 Currency Code"
 [21]: {{site.baseurl}}/api/api_key/#the-app-identifier-api-key

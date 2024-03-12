@@ -1,20 +1,15 @@
 ---
 nav_title: Preview User Paths
 article_title: Preview User Paths
-permalink: /preview_user_paths/
+alias: /preview_user_paths/
 description: "This reference article covers how to preview user paths in Canvas."
 Tool:
   - Canvas
-hidden: true
 ---
 
 # Preview user paths in Canvas
 
-> Experience the Canvas journey you've created for your users. This includes previewing the timing and messages they will receive. These test runs act as quality assurance that your messages are sent to the right audience, all before sending the Canvas.
-
-{% alert important %}
-Previewing user paths in Canvas is currently in early access and only available in pre-launch draft Canvases. Contact your Braze account manager if you're interested in participating in the early access.
-{% endalert %}
+> Experience the Canvas journey you've created for your users. This includes previewing the timing and messages they will receive. These test runs act as quality assurance that your messages are sent to the right audience, all before sending your Canvas.
 
 ## Start a test run
 
@@ -37,6 +32,7 @@ The following steps are supported:
 - Delay
 - Action Path
 - Experiment Path
+- User Update (only in the UI editor, meaning steps using JSON editor will be skipped)
 
 If the test overlaps with a step type that isn't listed above, the unsupported step will be skipped, and the test user will continue to the next supported step.
 
@@ -46,22 +42,20 @@ To view more details for entrance criteria, click **See more**. Steps with segme
 
 ## Previews for timing
 
-For scheduled Canvases, the test user will enter at the next scheduled entrance time. For action-based Canvases with start dates, the test user will enter on the start date and time.
+For scheduled Canvases, the test user will enter at the next scheduled entrance time. For action-based Canvases with start dates, the test user will enter on the start date and time. 
+
+While the default starts times still apply, the entrance time is configurable in all instances, meaning you can simulate a date in the past or future. However, you can't test before the start date or after end date for the Canvas.
 
 Message and Delay steps show the time at which a user would progress or receive the message without needing to reconfigure the delays. Note that while the steps will indicate whether Intelligent Timing is used, this preview of the user path does not calculate an estimate for a test user.
 
-## Action Paths and events
-
-If your Canvas includes an Action Paths step, select whether a user took an action or not in the step. During this preview, an event isn’t performed, meaning that event properties aren’t applied based on the step’s outcome. The same is true for the Canvas entry in that Braze does not perform the entry event or API trigger, so the event and API trigger properties are not applied based on the Canvas entry.
-
 ## When users enter and exit
 
-Test users will enter the preview even if they are not eligible in real life. If they are not eligible, you can see why they would not have met the criteria.
+Test users will enter the preview even if they are not eligible in real life. If they are not eligible, you can see why they would not have met the criteria. You can see the results in the sidebar for when users enter and exit the Canvas.
 
-While exit criteria are not yet supported, you can still view the exits in the sidebar and the Canvas body. For testing purposes, the following are assumed to be true:
-
-- Re-eligibility is allowed.
-- Rate limiting and frequency capping are valid.
+- If you test an Action Path with actions that correspond to exit criteria (including event properties), exit criteria will be triggered and the test run will end.
+- If you test a Message step that corresponds to exit criteria, exit criteria will be triggered and the test run will end.
+- At this point, you can't select a specific event or property within an action path to trigger exit criteria (only the path as a whole). If a user could potentially meet multiple exit criteria, the first one that is processed and that they meet is shown as the result.
+- Events, API triggers, and Canvas entry properties are not applied based on the Canvas entry. They won't affect the outcomes of subsequent steps.
 
 ## Experiment Paths and Canvas variants
 
@@ -73,11 +67,15 @@ While exit criteria are not yet supported, you can still view the exits in the s
 
 You can opt to send test messages to an internal test group or an individual user as the test run populates. This means that only messages the user encounters along the test path will be sent. The recipients will receive messages with their own attributes by default, but you can override these with the test user’s attributes.
 
+To send all test messages in a Canvas at once, regardless of the path and without previewing the path, you can click **Send All Test Messages** in the **Test Sends** tab. 
+
 ## Responsiveness
 
-At the moment, filters within steps in this preview mode are not responsive to the timing assumed by the test run. For example, if an audience path references an event that has occurred on or after a specific date, and the test run shows the results for a future date, the filter will not take that future date into account.
+Canvas steps are responsive to timing when previewing user paths. Updates made via the User Update step are reflected in subsequent steps in the flow, but are not applied to the actual user profile. The effects of a user entering a variant are reflected in future steps in a preview.
 
-Similarly, filters won’t recognize actions that occurred as a result of the test user interacting with other steps in the Canvas. For example, this preview mode won’t recognize that a user encountered a Message step that was “sent” earlier in the Canvas, and it won’t recognize that the test user “took action” to advance through an action path.
+Similarly, filters will recognize actions that occurred as a result of the test user interacting with other steps in the Canvas. For example, this preview mode recognizes that a user encountered a Message step that was “sent” earlier in the Canvas, and it will recognize that the test user “took action” to advance through an action path.
+
+Refer to [Exit criteria]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/exit_criteria) for more details on responsive behavior.
 
 ## Connected Content
 

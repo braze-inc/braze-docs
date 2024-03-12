@@ -1519,6 +1519,47 @@ This event occurs when a user sends an SMS.
 
 {% api %}
 
+## SMS sends to carrier events
+
+{% apitags %}
+SMS, Delivery
+{% endapitags %}
+
+{% alert important %}
+`CarrierSend` is supported only for customers on legacy infrastructure.
+{% endalert %}
+
+This event occurs when an SMS is sent to the carrier.
+
+```json
+// SMS Delivery: users.messages.sms.CarrierSend
+{
+  "id": (required, string) unique ID of this event,
+  "user_id": (required, string) Braze user ID of the user,
+  "dispatch_id": (optional, string) ID of the message dispatch (unique ID for each 'transmission' sent from the Braze platform and users who are sent a schedule message get the same dispatch_id. Action-based or API-triggered messages get a unique dispatch_id per user,
+  "external_user_id": (optional, string) External ID of the user,
+  "time": (required, int) 10-digit UTC time of the event in seconds since the epoch,
+  "timezone": (optional, string) IANA time zone of the user at the time of the event,
+  "campaign_id": (optional, string) ID of the campaign if from a campaign,
+  "campaign_name": (optional, string) name of the campaign,
+  "message_variation_id": (optional, string) ID of the message variation if from a campaign,
+  "message_variation_name": (optional, string) the name of the message variation if from a campaign,
+  "to_phone_number": (optional, string) the number the message was sent to,
+  "subscription_group_id": (optional, string) ID of the subscription group targeted for this SMS message,
+  "from_phone_number": (optional, string) the from phone number of the message (Delivered and Undelivered only),
+  "canvas_id": (optional, string) ID of the Canvas if from a Canvas,
+  "canvas_name": (optional, string) name of the Canvas,
+  "canvas_variation_id": (optional, string) ID of the Canvas variation the user is in if from a Canvas,
+  "canvas_variation_name": (optional, string) name of the Canvas variation the user is in if from a Canvas,
+  "canvas_step_id": (optional, string) ID of the step for this message if from a Canvas,
+  "canvas_step_name": (optional, string) name of the Canvas step this event belongs to,
+  "send_id": (optional, string) message send ID this message belongs to
+}
+```
+{% endapi %}
+
+{% api %}
+
 ## SMS delivery events
 
 {% apitags %}

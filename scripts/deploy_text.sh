@@ -1,4 +1,8 @@
 #!/bin/bash
+#
+# This script generates the body text for deployment PRs in the Braze Docs repository.
+# 
+# Usage: ~/braze-docs/scripts/deploy_text.sh
 
 TEMP_FILE=$(mktemp)
 
@@ -20,5 +24,10 @@ echo "$COMMIT_LOGS" | while IFS=»¦« read -r title body; do
 done
 
 # Returns the results in reverse order and clean up files.
-tac "$TEMP_FILE"
+if command -v tac &> /dev/null
+then
+    tac "$TEMP_FILE" # 'tac' is used by default
+else
+    tail -r "$TEMP_FILE" # 'tail -r' is used if tac isn't available
+fi
 rm "$TEMP_FILE"

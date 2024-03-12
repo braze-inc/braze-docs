@@ -28,12 +28,12 @@ guide_featured_list:
 - name: SMS & MMS
   link: /docs/user_guide/message_building_by_channel/sms/
   fa_icon: fa-solid fa-comment-sms
-- name: WhatsApp
-  link: /docs/user_guide/message_building_by_channel/whatsapp/
-  fa_icon: fa-brands fa-whatsapp
 - name: Webhooks
   link: /docs/user_guide/message_building_by_channel/webhooks/
   image: /assets/img/braze_icons/brackets.svg
+- name: WhatsApp
+  link: /docs/user_guide/message_building_by_channel/whatsapp/
+  fa_icon: fa-brands fa-whatsapp
 ---
 
 ## Choosing a message channel
