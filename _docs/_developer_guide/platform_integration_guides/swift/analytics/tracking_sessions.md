@@ -109,7 +109,7 @@ BRZCancellable *cancellable = [AppDelegate.braze subscribeToSessionUpdates:^(BRZ
 {% endtab %}
 {% endtabs %}
 
-Alternatively, in Swift, you can use the [`sessionUpdatesStream`][2] `AsyncStream` to observe changes in asynchronous contexts:
+Alternatively, in Swift, you can use the [`sessionUpdatesStream`][2] `AsyncStream` to observe asynchronous changes:
 
 ```swift
 for await event in braze.sessionUpdatesStream {
