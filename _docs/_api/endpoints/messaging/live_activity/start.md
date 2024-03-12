@@ -97,7 +97,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/messages/live_acti
     },
     // One of the following required:
     "segment_id": "{YOUR-SEGMENT-API-IDENTIFIER}", // Optional
-    "audience": {...}, // Optional
+    "custom_audience": {...}, // Optional
     "external_user_ids": ["user-id1", "user-id2"], // Optional
 }'
 ```
