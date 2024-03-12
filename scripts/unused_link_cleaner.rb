@@ -1,3 +1,12 @@
+# This script deletes unused shortlinks from the bottom of a file, such as:
+#   [1]: {{site.baseurl}}/contributing/your_first_contribution/
+# 
+# Usage: ruby unused_link_cleaner.rb [option]
+#
+# Options:
+#   PATH/TO/FILE              Delete unused shortlinks in a single file.
+#   PATH/TO/DIRECTORY         Recursively delete unused shortlinks in a directory.
+
 require 'fileutils'
 require "readline"
 
