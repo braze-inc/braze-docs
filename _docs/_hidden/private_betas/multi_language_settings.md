@@ -67,7 +67,7 @@ Not currently. Contact your account manager or leave [product feedback]({{site.b
 Make the edit in the CSV, then upload the file again to make a change to the translated copy.
 
 #### Can I use Liquid in a translation tag?
-
+Not currently. Contact your account manager or leave [product feedback]({{site.baseurl}}/user_guide/administrative/access_braze/portal/) with more details on how you plan to use Liquid in your translation tag.
 
 #### Can I nest translation tags?
 No.
