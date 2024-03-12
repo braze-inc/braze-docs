@@ -87,7 +87,7 @@ struct SportsActivityAttributes: ActivityAttributes {
 ## Step 2a: Registering and Starting a Live Activity remotely {#starting}
 
 {% alert note %}
-Live Activity push-to-start features require iOS 17.2+.
+Live Activity push-to-start features require iOS 17.2+ and will become available in a future version of the Braze Swift SDK.
 {% endalert %}
 
 This section discusses how to remotely initiate a Live Activity using a push notification. If you wish to only initialize activities locally from your app, refer to [Step 2b](#registering).
