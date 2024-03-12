@@ -31,15 +31,30 @@ In order to edit and manage multi-language support, you must have the "Manage Mu
 
 ## Use locales in messaging
 
-To use locales in your messaging, follow these steps:
+To use locales in your messaging, compose an email campaign or Canvas. Select between the HTML editor and drag-and-drop editor, then follow these steps.
 
-1. Compose an email campaign or Canvas with all text and image or link URLs wrapped in translation tags.<br>![][3]
-2. Save the message.
-3. In the editor, select **Multi-language** and add your locales for the message using the dropdown.
+{% tabs %}
+{% tab HTML editor %}
+
+1. Highlight the text you want translated. Select **Add translation tag**. <br>![][3]
+2. Save the message as a draft.
+3. Select **Multi-language** and add your locales for the message using the dropdown.
 4. Select **Download template** to download the translation template as a CSV. Then, fill in the translations in the CSV.
-5. Select **Upload translations** to upload the CSV file with the completed translations. 
+5. Select **Upload translations** to upload the CSV file with the completed translations.
 
-To update the translations, update the CSV and re-upload the file. 
+{% endtab %}
+{% tab Drag-and-drop editor %}
+
+1. Add translation tags `{% translation %}` and `{%endtranslation%}` to wrap all text and image or link URLs to be translated.<br>![][3]
+2. After adding the tags, save your message as a draft.
+3. Select **Multi-language** and add your locales for the message using the dropdown.
+4. Select **Download template** to download the translation template as a CSV. Then, fill in the translations in the CSV.
+5. Select **Upload translations** to upload the CSV file with the completed translations.
+
+{% endtab %}
+{% endtabs %}
+
+To update the translations, update the CSV and re-upload the file. This means any changes to the IDs or locales in the CSV will not automatically update in your message.
 
 ## Preview your locales
 
@@ -77,14 +92,14 @@ Yes. However, be sure to check that the HTML styling is not translated with the 
 
 #### What validations or extra checks does Braze do?
 
-| Scenario | Validation in Braze |
-| --- | --- |
-| A translation file is missing locales associated with the current message. | This translation file won't be uploaded. |
-| A translation file is missing text blocks, such as a text within Liquid translation tags, from the current email message. | This translation file won't be uploaded. |
-| The translation file includes the default text that doesn't match the text blocks in the current email message. | This translation file won't be uploaded. |
-| The translation file includes locales that don't exist in **Multi-Language Support** settings. | These locales will not be saved in Braze. |
+| Scenario                                                                                                                                                 | Validation in Braze                                                                                            |
+|----------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------|
+| A translation file is missing locales associated with the current message.                                                                               | This translation file won't be uploaded.                                                                       |
+| A translation file is missing text blocks, such as a text within Liquid translation tags, from the current email message.                                | This translation file won't be uploaded.                                                                       |
+| The translation file includes the default text that doesn't match the text blocks in the current email message.                                          | This translation file won't be uploaded.                                                                       |
+| The translation file includes locales that don't exist in **Multi-Language Support** settings.                                                           | These locales will not be saved in Braze.                                                                      |
 | The translation file includes text blocks that don't exist in the current message (such as the current draft at the time the translations are uploaded). | The text blocks that don't exist in your current message will not be saved from the translation file to Braze. |
-| Removing a locale from the message after that locale has already been uploaded to the message as part of the translation file. | Removing the locale will remove any translations associated with the locale in your message. |
+| Removing a locale from the message after that locale has already been uploaded to the message as part of the translation file.                           | Removing the locale will remove any translations associated with the locale in your message.                   |
 {: .reset-td-br-1 .reset-td-br-2}
 
 
