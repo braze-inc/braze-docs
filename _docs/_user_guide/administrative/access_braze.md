@@ -13,13 +13,13 @@ guide_featured_title: "Section articles"
 guide_featured_list:
 - name: Navigation
   link: /docs/user_guide/administrative/access_braze/navigation/
-  fa_icon: fas fa-list
+  image: /assets/img/braze_icons/list.svg
 - name: Searching Your Dashboard
   link: /docs/user_guide/administrative/access_braze/global_search/
   fa_icon: fas fa-search
 - name: API and SDK Endpoints
   link: /docs/user_guide/administrative/access_braze/sdk_endpoints/
-  fa_icon: fas fa-location-arrow
+  image: /assets/img/braze_icons/navigation-pointer-01.svg
 - name: Accessing Your Account
   link: /docs/user_guide/administrative/access_braze/accessing_your_account/
   image: /assets/img/braze_icons/user-circle.svg

@@ -28,7 +28,7 @@ guide_featured_list:
   fa_icon: fa-solid fa-database
 - name: Shopify Catalogs
   link: /docs/shopify_catalogs/
-  fa_icon: fas fa-list
+  image: /assets/img/braze_icons/list.svg
 - name: Back-In-Stock Notifications
   link: /docs/back_in_stock/
   fa_icon: fas fa-cart-shopping

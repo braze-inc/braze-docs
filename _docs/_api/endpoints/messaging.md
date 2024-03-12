@@ -64,16 +64,16 @@ guide_menu_title: "Send messages endpoints"
 guide_menu_list:
   - name: "POST: Create Send IDs"
     link: /docs/api/endpoints/messaging/send_messages/post_create_send_ids/
-    fa_icon: fas fa-id-card
+    image: /assets/img/braze_icons/user-square.svg
   - name: "POST: Send Messages Immediately"
     link: /docs/api/endpoints/messaging/send_messages/post_send_messages/
     image: /assets/img/braze_icons/send-01.svg
   - name: "POST: Send API-Triggered Campaign Messages Immediately"
     link: /docs/api/endpoints/messaging/send_messages/post_send_triggered_campaigns/
-    fa_icon: fas fa-inbox
+    image: /assets/img/braze_icons/inbox-01.svg
   - name: "POST: Send API-Triggered Canvas Messages Immediately"
     link: /docs/api/endpoints/messaging/send_messages/post_send_triggered_canvases/
-    fa_icon: fas fa-inbox
+    image: /assets/img/braze_icons/inbox-01.svg
 
 guide_menu_title2: "Live Activity endpoints"
 guide_menu_list2:

@@ -14,7 +14,7 @@ guide_featured_title: "Section Articles"
 guide_featured_list:
   - name: Créer une campagne
     link: /docs/user_guide/engagement_tools/campaigns/building_campaigns/creating_campaign/
-    fa_icon: fas fa-list
+    image: /assets/img/braze_icons/list.svg
   - name: Fonctionnalités basées sur le temps
     link: /docs/user_guide/engagement_tools/campaigns/building_campaigns/time_based_campaign/
     image: /assets/img/braze_icons/clock.svg

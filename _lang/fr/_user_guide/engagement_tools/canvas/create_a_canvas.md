@@ -14,7 +14,7 @@ guide_featured_title: "Section Articles"
 guide_featured_list:
   - name: Création d’un Canvas
     link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/
-    fa_icon: fas fa-palette
+    image: /assets/img/braze_icons/palette.svg
   - name: Fonctionnalités basées sur le temps
     link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/time_based_canvas/
     image: /assets/img/braze_icons/clock.svg

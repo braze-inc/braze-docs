@@ -13,7 +13,7 @@ guide_featured_title: "Section Articles"
 guide_featured_list:
   - name: Conventions de nommage des événements
     link: /docs/user_guide/data_and_analytics/custom_data/event_naming_conventions/
-    fa_icon: fas fa-list
+    image: /assets/img/braze_icons/list.svg
   - name: Pré-remplissage des données personnalisées
     link: /docs/user_guide/data_and_analytics/custom_data/pre-populating_custom_data/
     image: /assets/img/braze_icons/table.svg

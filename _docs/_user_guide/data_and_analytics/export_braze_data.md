@@ -18,7 +18,7 @@ guide_featured_list:
     image: /assets/img/braze_icons/bar-chart-01.svg
   - name: Export Canvas Results
     link: /docs/user_guide/data_and_analytics/export_braze_data/export_canvas_data/
-    fa_icon: fas fa-palette
+    image: /assets/img/braze_icons/palette.svg
   - name: Export Segment Data
     link: /docs/user_guide/data_and_analytics/export_braze_data/segment_data_to_csv/
     image: /assets/img/braze_icons/file-download-02.svg

@@ -16,7 +16,7 @@ guide_featured_list:
   fa_icon: fas fa-server
 - name: Endpoints SDK
   link: /docs/user_guide/administrative/access_braze/sdk_endpoints/
-  fa_icon: fas fa-location-arrow
+  image: /assets/img/braze_icons/navigation-pointer-01.svg
 - name: Obtenir votre compte
   link: /docs/user_guide/administrative/access_braze/getting_your_account/
   fa_icon: far fa-user-circle

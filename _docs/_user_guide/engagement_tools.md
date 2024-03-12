@@ -15,7 +15,7 @@ guide_featured_list:
     image: /assets/img/braze_icons/mail-01.svg
   - name: Canvas
     link: /docs/user_guide/engagement_tools/canvas/
-    fa_icon: fas fa-palette
+    image: /assets/img/braze_icons/palette.svg
   - name: Templates & Media
     link: /docs/user_guide/engagement_tools/templates_and_media/
     image: /assets/img/braze_icons/table.svg

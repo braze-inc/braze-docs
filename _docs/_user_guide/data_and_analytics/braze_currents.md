@@ -22,7 +22,7 @@ guide_featured_list:
   fa_icon: fas fa-handshake
 - name: "Event Delivery Semantics"
   link: /docs/user_guide/data_and_analytics/braze_currents/event_delivery_semantics/
-  fa_icon: fas fa-keyboard
+  image: /assets/img/braze_icons/key-01.svgboard
 - name: "Message Engagement Events"
   link: /docs/user_guide/data_and_analytics/braze_currents/message_engagement_events/
   image: /assets/img/braze_icons/message-plus-square.svg

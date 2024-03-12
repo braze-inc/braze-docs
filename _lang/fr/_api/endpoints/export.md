@@ -83,7 +83,7 @@ guide_menu_title5: "Endpoint d’exportation des achats"
 guide_menu_list5:
   - name: "GET : Répertorier les ID de produit"
     link: /docs/api/endpoints/export/purchases/get_list_product_id/
-    fa_icon: fas fa-list
+    image: /assets/img/braze_icons/list.svg
 
 guide_menu_title6: "Exporter les endpoints du segment"
 guide_menu_list6:

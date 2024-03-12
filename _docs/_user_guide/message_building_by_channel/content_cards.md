@@ -22,7 +22,7 @@ guide_featured_list:
   image: /assets/img/braze_icons/message-check-circle.svg
 - name: Creative Details
   link: /docs/user_guide/message_building_by_channel/content_cards/creative_details/
-  fa_icon: fas fa-paint-brush
+  /assets/img/braze_icons/brush-02.svg
 - name: Testing
   link: /docs/user_guide/message_building_by_channel/content_cards/testing/
   fa_icon: fas fa-vial

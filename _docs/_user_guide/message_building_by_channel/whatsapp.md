@@ -24,7 +24,7 @@ guide_featured_list:
   fa_icon: fa-solid fa-phone
 - name: "Create a WhatsApp Campaign"
   link: /docs/user_guide/message_building_by_channel/whatsapp/whatsapp_campaign/create/
-  fa_icon: fas fa-mobile-alt
+  image: /assets/img/braze_icons/phone-02.svg
 - name: "User Retargeting"
   link: /docs/user_guide/message_building_by_channel/whatsapp/whatsapp_campaign/user_retargeting/
   fa_icon: fa-solid fa-user

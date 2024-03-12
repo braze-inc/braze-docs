@@ -17,13 +17,13 @@ guide_featured_list:
   image: /assets/img/braze_icons/check-square-broken.svg
 - name: "Drag-And-Drop Editor"
   link: /docs/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/
-  fa_icon: fas fa-mobile-alt
+  image: /assets/img/braze_icons/phone-02.svg
 - name: "Traditional Editor"
   link: /docs/user_guide/message_building_by_channel/in-app_messages/traditional/
-  fa_icon: fas fa-mobile-alt
+  image: /assets/img/braze_icons/phone-02.svg
 - name: "Creative Details"
   link: /docs/user_guide/message_building_by_channel/in-app_messages/creative_details/
-  fa_icon: fas fa-paint-brush
+  /assets/img/braze_icons/brush-02.svg
 
 guide_menu_title: "More articles"
 guide_menu_list:

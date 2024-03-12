@@ -15,7 +15,7 @@ guide_featured_list:
   image: /assets/img/braze_icons/message-dots-circle.svg
 - name: Gestion des mots-clés personnalisés
   link: /docs/user_guide/message_building_by_channel/sms/keywords/custom_keyword_handling/
-  fa_icon: fas fa-mobile-alt
+  image: /assets/img/braze_icons/phone-02.svg
 - name: Gestion des numéros de téléphone inconnus
   link: /docs/user_guide/message_building_by_channel/sms/keywords/unknown_phone_numbers/
   image: /assets/img/braze_icons/phone.svg

@@ -17,7 +17,7 @@ guide_featured_list:
     image: /assets/img/braze_icons/book-closed.svg
   - name: Développement de Canvas
     link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/
-    fa_icon: fas fa-paint-brush
+    /assets/img/braze_icons/brush-02.svg
   - name: Composants Canvas
     link: /docs/user_guide/engagement_tools/canvas/canvas_components/
     image: /assets/img/braze_icons/dataflow-03.svg 

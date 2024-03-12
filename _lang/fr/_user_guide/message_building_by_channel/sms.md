@@ -36,16 +36,16 @@ guide_featured_list:
   image: /assets/img/braze_icons/calculator.svg
 - name: "Traitement des mots-clés et cas d’utilisation"
   link: /docs/user_guide/message_building_by_channel/sms/keywords/
-  fa_icon: fas fa-key
+  image: /assets/img/braze_icons/key-01.svg
 - name: "Numéro de téléphone de l’utilisateur"
   link: /docs/user_guide/message_building_by_channel/sms/phone_numbers/user_phone_numbers/
-  fa_icon: fas fa-phone
+  image: /assets/img/braze_icons/phone-02.svg
 - name: "Envoyer des numéros de téléphone"
   link: /docs/user_guide/message_building_by_channel/sms/phone_numbers/sending_phone_numbers/
-  fa_icon: fas fa-phone-square
+  image: /assets/img/braze_icons/phone-02.svg-square
 - name: "Rapports SMS"
   link: /docs/user_guide/message_building_by_channel/sms/sms_campaign_analytics/
-  fa_icon: fas fa-mobile-alt
+  image: /assets/img/braze_icons/phone-02.svg
 - name: "FAQ SMS"
   link: /docs/user_guide/message_building_by_channel/sms/faqs/
   fa_icon: fas fa-question
@@ -55,10 +55,10 @@ guide_menu_title: "MMS"
 guide_menu_list:
 - name: "À propos des MMS"
   link: /docs/user_guide/message_building_by_channel/sms/mms/about_mms/
-  fa_icon: fas fa-paint-brush
+  /assets/img/braze_icons/brush-02.svg
 - name: "Codes courts et longs MMS"
   link: /docs/user_guide/message_building_by_channel/sms/mms/mms_short_long_codes/
-  fa_icon: fas fa-phone-square
+  image: /assets/img/braze_icons/phone-02.svg-square
 - name: "Créer une campagne par MMS"
   link: /docs/user_guide/message_building_by_channel/sms/mms/create/
   image: /assets/img/braze_icons/table.svg

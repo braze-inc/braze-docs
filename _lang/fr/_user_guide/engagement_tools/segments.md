@@ -36,7 +36,7 @@ guide_menu_list:
     image: /assets/img/braze_icons/users-01.svg
   - name: Recherche d’utilisateur
     link: /docs/user_guide/engagement_tools/segments/user_lookup/
-    fa_icon: fas fa-magnifying-glass
+    image: /assets/img/braze_icons/search-refraction.svg
   - name: Ciblage de localisation
     link: /docs/user_guide/engagement_tools/segments/location_targeting/
     fa_icon: fas fa-street-view

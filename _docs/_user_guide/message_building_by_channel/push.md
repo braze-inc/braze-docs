@@ -16,7 +16,7 @@ guide_featured_list:
   image: /assets/img/braze_icons/check-square-broken.svg
 - name: Push Types
   link: /docs/user_guide/message_building_by_channel/push/types/
-  fa_icon: fas fa-list
+  image: /assets/img/braze_icons/list.svg
 - name: Push Registration
   link: /docs/user_guide/message_building_by_channel/push/push_registration/
   image: /assets/img/braze_icons/check-square-broken.svg
@@ -34,7 +34,7 @@ guide_menu_list:
   image: /assets/img/braze_icons/settings-01.svg
 - name: Push Primers
   link: /docs/user_guide/message_building_by_channel/push/best_practices/push_primer_messages/
-  fa_icon: fas fa-mobile-alt
+  image: /assets/img/braze_icons/phone-02.svg
 - name: Reporting
   link: /docs/user_guide/message_building_by_channel/push/push_reporting/
   image: /assets/img/braze_icons/bar-chart-01.svg

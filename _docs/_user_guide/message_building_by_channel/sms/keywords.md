@@ -15,10 +15,10 @@ guide_featured_list:
   image: /assets/img/braze_icons/message-dots-circle.svg
 - name: SMS Double Opt-In
   link: /docs/user_guide/message_building_by_channel/sms/keywords/sms_double_opt_in/
-  fa_icon: fas fa-mobile-alt
+  image: /assets/img/braze_icons/phone-02.svg
 - name: Custom Keyword Handing
   link: /docs/user_guide/message_building_by_channel/sms/keywords/custom_keyword_handling/
-  fa_icon: fas fa-mobile-alt
+  image: /assets/img/braze_icons/phone-02.svg
 - name: Handling Unknown Phone Numbers
   link: /docs/user_guide/message_building_by_channel/sms/keywords/unknown_phone_numbers/
   image: /assets/img/braze_icons/phone.svg

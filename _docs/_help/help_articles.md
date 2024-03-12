@@ -34,7 +34,7 @@ guide_featured_list:
     image: /assets/img/braze_icons/mail-01.svg
   - name: In-App Messages
     link: /docs/help/help_articles/in-app_messages/
-    fa_icon: fas fa-mobile-alt
+    image: /assets/img/braze_icons/phone-02.svg
   - name: Push
     link: /docs/help/help_articles/push/
     image: /assets/img/braze_icons/message-square-02.svg

@@ -83,13 +83,13 @@ guide_menu_title5: "Export purchase endpoints"
 guide_menu_list5:
   - name: "GET: Product IDs List"
     link: /docs/api/endpoints/export/purchases/get_list_product_id/
-    fa_icon: fas fa-list
+    image: /assets/img/braze_icons/list.svg
   - name: "GET: Number of Purchases"
     link: /docs/api/endpoints/export/purchases/get_number_of_purchases/
-    fa_icon: fas fa-list
+    image: /assets/img/braze_icons/list.svg
   - name: "GET: Revenue Data by Time"
     link: /docs/api/endpoints/export/purchases/get_revenue_series/
-    fa_icon: fas fa-list
+    image: /assets/img/braze_icons/list.svg
 
 guide_menu_title6: "Export segment endpoints"
 guide_menu_list6:

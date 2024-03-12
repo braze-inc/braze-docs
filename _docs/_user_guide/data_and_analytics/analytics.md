@@ -23,6 +23,6 @@ guide_featured_list:
     fa_icon: fas fa-chart-simple
   - name: Deliverability Center
     link: /docs/user_guide/data_and_analytics/analytics/deliverability_center/
-    fa_icon: fas fa-location-arrow
+    image: /assets/img/braze_icons/navigation-pointer-01.svg
 ---
 <br><br>

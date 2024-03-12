@@ -25,7 +25,7 @@ guide_featured_list:
   image: /assets/img/braze_icons/user-square.svg
 - name: "Importing Your Email List"
   link: /docs/user_guide/message_building_by_channel/email/email_setup/import_your_email_list/
-  fa_icon: fas fa-list
+  image: /assets/img/braze_icons/list.svg
 - name: "SSL Overview"
   link: /docs/user_guide/message_building_by_channel/email/email_setup/ssl/
   image: /assets/img/braze_icons/navigation-point-01.svg

@@ -22,6 +22,6 @@ guide_menu_list:
     image: /assets/img/braze_icons/message-x-circle.svg
   - name: Migration des jetons Push
     link: /docs/help/help_articles/push/push_token_migration/
-    fa_icon: fas fa-map-signs
+    image: /assets/img/braze_icons/map-01.svg
 
 ---

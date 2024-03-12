@@ -19,7 +19,7 @@ guide_featured_list:
   image: /assets/img/braze_icons/message-square-02.svg
 - name: "Customizable App Icons"
   link: /docs/user_guide/message_building_by_channel/push/ios/customizable_app_icons/
-  fa_icon: fas fa-mobile-alt
+  image: /assets/img/braze_icons/phone-02.svg
 - name: "Notification Options"
   link: /docs/user_guide/message_building_by_channel/push/ios/notification_options/
   image: /assets/img/braze_icons/settings-01.svg

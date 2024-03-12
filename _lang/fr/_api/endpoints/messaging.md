@@ -64,16 +64,16 @@ guide_menu_title: "Endpoints des messages d’envoi"
 guide_menu_list:
   - name: "POST : créer des ID d’envoi"
     link: /docs/api/endpoints/messaging/send_messages/post_create_send_ids/
-    fa_icon: fas fa-id-card
+    image: /assets/img/braze_icons/user-square.svg
   - name: "POST : envoyer les messages immédiatement"
     link: /docs/api/endpoints/messaging/send_messages/post_send_messages/
     image: /assets/img/braze_icons/send-01.svg
   - name: "POST : envoyer immédiatement les messages de campagnes déclenchés par API"
     link: /docs/api/endpoints/messaging/send_messages/post_send_triggered_campaigns/
-    fa_icon: fas fa-inbox
+    image: /assets/img/braze_icons/inbox-01.svg
   - name: "POST : envoyer immédiatement les messages Canvas déclenchés par API"
     link: /docs/api/endpoints/messaging/send_messages/post_send_triggered_canvases/
-    fa_icon: fas fa-inbox
+    image: /assets/img/braze_icons/inbox-01.svg
 
 guide_menu_title2: "Activité en direct des endpoints"
 guide_menu_list2:

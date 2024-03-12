@@ -17,13 +17,13 @@ guide_featured_list:
   image: /assets/img/braze_icons/check-square-broken.svg
 - name: "Créer un message in-app"
   link: /docs/user_guide/message_building_by_channel/in-app_messages/create/
-  fa_icon: fas fa-mobile-alt
+  image: /assets/img/braze_icons/phone-02.svg
 - name: "Éditeur Drag & Drop"
   link: /docs/user_guide/message_building_by_channel/in-app_messages/drag_and_drop
-  fa_icon: fas fa-paint-brush
+  /assets/img/braze_icons/brush-02.svg
 - name: "Détails créatifs"
   link: /docs/user_guide/message_building_by_channel/in-app_messages/creative_details/
-  fa_icon: fas fa-paint-brush
+  /assets/img/braze_icons/brush-02.svg
 - name: "Personnaliser"
   link: /docs/user_guide/message_building_by_channel/in-app_messages/customize/
   image: /assets/img/braze_icons/settings-01.svg

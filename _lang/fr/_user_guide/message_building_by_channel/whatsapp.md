@@ -24,7 +24,7 @@ guide_featured_list:
   fa_icon: fa-solid fa-phone
 - name: "Créer une campagne WhatsApp"
   link: /docs/user_guide/message_building_by_channel/whatsapp/create/
-  fa_icon: fas fa-mobile-alt
+  image: /assets/img/braze_icons/phone-02.svg
 - name: "Abonnements et désabonnements"
   link: /docs/user_guide/message_building_by_channel/whatsapp/opt-ins_and_opt-outs/
   

@@ -14,7 +14,7 @@ guide_featured_title: "Section Articles"
 guide_featured_list:
 - name: Aperçu
   link: /docs/dnd/overview/
-  fa_icon: fas fa-paint-brush
+  /assets/img/braze_icons/brush-02.svg
 - name: Création d’un modèle d’e-mail
   link: /docs/dnd/email_template/
   image: /assets/img/braze_icons/table.svg
@@ -26,7 +26,7 @@ guide_featured_list:
   image: /assets/img/braze_icons/settings-01.svg
 - name: Inbox Vision
   link: /docs/user_guide/message_building_by_channel/email/inbox_vision/
-  fa_icon: fas fa-inbox
+  image: /assets/img/braze_icons/inbox-01.svg
 
 
 ---

@@ -19,7 +19,7 @@ guide_featured_list:
   image: /assets/img/braze_icons/mail-01.svg
 - name: Éditeur Drag & Drop
   link: /docs/user_guide/message_building_by_channel/email/drag_and_drop/
-  fa_icon: fas fa-paint-brush
+  /assets/img/braze_icons/brush-02.svg
 - name: Modèles
   link: /docs/user_guide/message_building_by_channel/email/templates/
   image: /assets/img/braze_icons/table.svg
@@ -37,10 +37,10 @@ guide_menu_list:
   image: /assets/img/braze_icons/align-left.svg
 - name: Inbox Vision
   link: /docs/user_guide/message_building_by_channel/email/inbox_vision/
-  fa_icon: fas fa-inbox
+  image: /assets/img/braze_icons/inbox-01.svg
 - name: E-mails transactionnels
   link: /docs/user_guide/message_building_by_channel/email/transactional_message_api_campaign/
-  fa_icon: fas fa-money-bill
+  image: /assets/img/braze_icons/bank-note-02.svg
 - name: Outil de promotion Gmail
   link: /docs/user_guide/message_building_by_channel/email/gmail_promotions_tab/
   fa_icon: fas fa-trophy

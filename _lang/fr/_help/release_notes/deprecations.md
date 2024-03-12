@@ -23,7 +23,7 @@ guide_featured_list:
     fa_icon: fas fa-circle
   - name: "Désactivation de TLS 1.0 et 1.1"
     link: /docs/help/release_notes/deprecations/tls_deprecation/
-    fa_icon: fas fa-lock
+    image: /assets/img/braze_icons/lock-01.svg
   - name: Intégration du Webhook Twilio
     link: /docs/help/release_notes/deprecations/twilio/
     image: /assets/img/braze_icons/annotation.svg

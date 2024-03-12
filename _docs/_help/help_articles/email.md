@@ -22,5 +22,5 @@ guide_menu_list:
     image: /assets/img/braze_icons/code-02.svg
   - name: Universal Links and App Links
     link: /docs/help/help_articles/email/universal_links/
-    fa_icon: fas fa-link
+    image: /assets/img/braze_icons/link-03.svg
 ---

@@ -17,13 +17,13 @@ guide_featured_list:
     image: /assets/img/braze_icons/send-01.svg
   - name: "FAQ sur les modèles d’e-mails et de liens"
     link: /docs/user_guide/message_building_by_channel/email/templates/faq/
-    fa_icon: fas fa-link
+    image: /assets/img/braze_icons/link-03.svg
   - name: "FAQ sur les Exportations"
     link: /docs/user_guide/data_and_analytics/export_braze_data/faqs/
     image: /assets/img/braze_icons/file-download-01.svg
   - name: "FAQ sur les messages In-App"
     link: /docs/user_guide/message_building_by_channel/in-app_messages/faq/
-    fa_icon: fas fa-mobile-alt
+    image: /assets/img/braze_icons/phone-02.svg
   - name: "FAQ sur les localisations et geofences"
     link: /docs/user_guide/engagement_tools/locations_and_geofences/faqs/
     image: /assets/img/braze_icons/marker-pin-01.svg
@@ -66,7 +66,7 @@ guide_menu_list:
     image: /assets/img/braze_icons/mail-01.svg
   - name: "Meilleures pratiques pour les messages In-App"
     link: /docs/user_guide/message_building_by_channel/in-app_messages/best_practices/
-    fa_icon: fas fa-mobile-alt
+    image: /assets/img/braze_icons/phone-02.svg
   - name: "Bonnes pratiques de notification push"
     link: /docs/user_guide/message_building_by_channel/push/best_practices/
     image: /assets/img/braze_icons/message-square-02.svg

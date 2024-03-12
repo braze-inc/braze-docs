@@ -14,7 +14,7 @@ guide_featured_title: "Section articles"
 guide_featured_list:
   - name: Creating a Canvas
     link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/
-    fa_icon: fas fa-palette
+    image: /assets/img/braze_icons/palette.svg
   - name: Commenting in Canvas
     link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/canvas_comments/
     fa_icon: fa-solid fa-comment

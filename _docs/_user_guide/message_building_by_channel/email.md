@@ -19,13 +19,13 @@ guide_featured_list:
   image: /assets/img/braze_icons/users-01.svg
 - name: Link Aliasing
   link: /docs/user_guide/message_building_by_channel/email/templates/link_aliasing/
-  fa_icon: fas fa-link
+  image: /assets/img/braze_icons/link-03.svg
 - name: Create an Email Campaign
   link: /docs/user_guide/message_building_by_channel/email/html_editor/creating_an_email_campaign/
   image: /assets/img/braze_icons/mail-01.svg
 - name: Drag-And-Drop Editor
   link: /docs/user_guide/message_building_by_channel/email/drag_and_drop/
-  fa_icon: fas fa-paint-brush
+  /assets/img/braze_icons/brush-02.svg
 - name: Templates
   link: /docs/user_guide/message_building_by_channel/email/templates/
   image: /assets/img/braze_icons/table.svg
@@ -49,10 +49,10 @@ guide_menu_list:
   image: /assets/img/braze_icons/message-check-circle.svg
 - name: Inbox Vision
   link: /docs/user_guide/message_building_by_channel/email/inbox_vision/
-  fa_icon: fas fa-inbox
+  image: /assets/img/braze_icons/inbox-01.svg
 - name: Transactional Emails
   link: /docs/user_guide/message_building_by_channel/email/transactional_message_api_campaign/
-  fa_icon: fas fa-money-bill
+  image: /assets/img/braze_icons/bank-note-02.svg
 - name: Gmail Promotion Tool
   link: /docs/user_guide/message_building_by_channel/email/html_editor/gmail_promotions_tab/
   fa_icon: fas fa-trophy

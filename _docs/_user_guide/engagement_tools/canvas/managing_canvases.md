@@ -23,7 +23,7 @@ guide_featured_list:
     fa_icon: fa-solid fa-floppy-disk
   - name: Canvas Version History
     link: /docs/user_guide/engagement_tools/canvas/managing_canvases/canvas_version_history/
-    fa_icon: fas fa-list
+    image: /assets/img/braze_icons/list.svg
   - name: Cloning Canvases
     link: /docs/user_guide/engagement_tools/canvas/managing_canvases/cloning_canvases/
     image: /assets/img/braze_icons/copy-04.svg

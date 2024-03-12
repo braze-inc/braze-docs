@@ -14,7 +14,7 @@ guide_featured_title: "Section Articles"
 guide_featured_list:
   - name: Campaign Basics
     link: /docs/user_guide/engagement_tools/campaigns/getting_started/campaign_basics/
-    fa_icon: fas fa-list
+    image: /assets/img/braze_icons/list.svg
   - name: Understanding Campaign Status
     link: /docs/user_guide/engagement_tools/campaigns/getting_started/understanding_campaign_status/
     image: /assets/img/braze_icons/mail-01.svg

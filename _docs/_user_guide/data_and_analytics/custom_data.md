@@ -25,7 +25,7 @@ guide_featured_list:
     image: /assets/img/braze_icons/table.svg
   - name: Event Naming Conventions
     link: /docs/user_guide/data_and_analytics/custom_data/event_naming_conventions/
-    fa_icon: fas fa-list
+    image: /assets/img/braze_icons/list.svg
   - name: Managing Custom Data
     link: /docs/user_guide/data_and_analytics/custom_data/managing_custom_data/
     image: /assets/img/braze_icons/check-square-broken.svg

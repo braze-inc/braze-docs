@@ -12,7 +12,7 @@ guide_featured_title: "Section articles"
 guide_featured_list:
 - name: Creating an In-App Message
   link: /docs/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/create/
-  fa_icon: fas fa-mobile-alt
+  image: /assets/img/braze_icons/phone-02.svg
 - name: Editor Blocks
   link: /docs/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/editor_blocks/
   image: /assets/img/braze_icons/align-left.svg
@@ -21,6 +21,6 @@ guide_menu_title: Templates
 guide_menu_list:
 - name: Phone Number Capture
   link: /docs/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/templates/phone_number_capture/
-  fa_icon: fas fa-phone
+  image: /assets/img/braze_icons/phone-02.svg
 ---
 <br><br>

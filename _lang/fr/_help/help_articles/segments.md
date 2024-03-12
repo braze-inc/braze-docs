@@ -22,7 +22,7 @@ guide_menu_list:
     image: /assets/img/braze_icons/columns-01.svg
   - name: Rechercher le texte exact
     link: /docs/help/help_articles/segments/search_exact_text/
-    fa_icon: fas fa-magnifying-glass
+    image: /assets/img/braze_icons/search-refraction.svg
   - name: Exporter des segments volumineux
     link: /docs/help/help_articles/segments/exporting_large_segments/
     image: /assets/img/braze_icons/file-download-01.svg

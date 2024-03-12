@@ -15,7 +15,7 @@ guide_featured_list:
   image: /assets/img/braze_icons/phone.svg
 - name: Gestion des mots-clés personnalisés
   link: /docs/user_guide/message_building_by_channel/sms/non_native/custom_keyword_handling/
-  fa_icon: fas fa-mobile-alt
+  image: /assets/img/braze_icons/phone-02.svg
 - name: Migration des données utilisateur
   link: /docs/user_guide/message_building_by_channel/sms/non_native/user_data_migration/
   image: /assets/img/braze_icons/globe-04.svg

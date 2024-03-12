@@ -16,13 +16,13 @@ guide_featured_list:
     fa_icon: fas fa-briefcase
   - name: API Keys
     link: /docs/user_guide/administrative/app_settings/api_settings_tab/
-    fa_icon: fas fa-key
+    image: /assets/img/braze_icons/key-01.svg
   - name: Message Activity Log
     link: /docs/user_guide/administrative/app_settings/message_activity_log_tab/
-    fa_icon: fas fa-list
+    image: /assets/img/braze_icons/list.svg
   - name: Event User Log
     link: /docs/user_guide/administrative/app_settings/event_user_log_tab/
-    fa_icon: fas fa-list
+    image: /assets/img/braze_icons/list.svg
   - name: Internal Groups
     link: /docs/user_guide/administrative/app_settings/internal_groups_tab/
     image: /assets/img/braze_icons/users-01.svg
@@ -49,7 +49,7 @@ guide_menu_list2:
     image: /assets/img/braze_icons/users-01.svg
   - name: Billing
     link: /docs/user_guide/administrative/app_settings/subscription_and_usage/
-    fa_icon: fas fa-money-bill
+    image: /assets/img/braze_icons/bank-note-02.svg
     
 guide_menu_title3: "Data settings"
 guide_menu_list3:

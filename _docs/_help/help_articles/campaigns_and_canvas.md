@@ -18,7 +18,7 @@ guide_menu_list:
     image: /assets/img/braze_icons/send-01.svg
   - name: Checking Location Data
     link: /docs/help/help_articles/campaigns_and_canvas/locations_data_in_campaigns/
-    fa_icon: fas fa-location-arrow
+    image: /assets/img/braze_icons/navigation-pointer-01.svg
   - name: Handling a Large Control Group
     link: /docs/help/help_articles/campaigns_and_canvas/more_people_in_control_group/
     fa_icon: far fa-dot-circle

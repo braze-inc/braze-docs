@@ -14,7 +14,7 @@ guide_featured_title: "Section articles"
 guide_featured_list:
   - name: Reports Overview
     link: /docs/user_guide/data_and_analytics/reporting/reports_overview
-    fa_icon: fas fa-list
+    image: /assets/img/braze_icons/list.svg
   - name: Segment Data
     link: /docs/user_guide/data_and_analytics/reporting/viewing_and_understanding_segment_data/
     image: /assets/img/braze_icons/pie-chart-01.svg
@@ -50,10 +50,10 @@ guide_menu_list:
     image: /assets/img/braze_icons/user-check-01.svg
   - name: Revenue Data
     link: /docs/user_guide/data_and_analytics/export_braze_data/exporting_revenue_data/#revenue-data
-    fa_icon: fas fa-piggy-bank
+    image: /assets/img/braze_icons/piggy-bank-02.svg
   - name: Revenue Report
     link: /docs/user_guide/data_and_analytics/reporting/revenue_report/
-    fa_icon: fas fa-piggy-bank
+    image: /assets/img/braze_icons/piggy-bank-02.svg
   - name: Segment Insights
     link: /docs/user_guide/engagement_tools/segments/segment_insights/#segment-insights
     image: /assets/img/braze_icons/pie-chart-01.svg

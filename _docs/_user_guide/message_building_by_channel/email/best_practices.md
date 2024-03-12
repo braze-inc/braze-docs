@@ -17,7 +17,7 @@ guide_featured_list:
     image: /assets/img/braze_icons/award-03.svg
   - name: "Email Styling"
     link: /docs/user_guide/message_building_by_channel/email/best_practices/email_styling/
-    fa_icon: fas fa-paint-brush
+    /assets/img/braze_icons/brush-02.svg
   - name: "Use Cases"
     link: /docs/user_guide/message_building_by_channel/email/best_practices/use_cases/
     image: /assets/img/braze_icons/edit-05.svg

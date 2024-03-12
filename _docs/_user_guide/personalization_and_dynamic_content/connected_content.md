@@ -12,7 +12,7 @@ guide_featured_title: "Section articles"
 guide_featured_list:
 - name: Making An API Call
   link: /docs/user_guide/personalization_and_dynamic_content/connected_content/making_an_api_call/
-  fa_icon: fas fa-location-arrow
+  image: /assets/img/braze_icons/navigation-pointer-01.svg
 - name: Local Connected Content Variables
   link: /docs/user_guide/personalization_and_dynamic_content/connected_content/local_connected_content_variables/
   fa_icon: fas fa-server

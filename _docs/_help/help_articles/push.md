@@ -22,7 +22,7 @@ guide_menu_list:
     image: /assets/img/braze_icons/message-x-circle.svg
   - name: Migrating Push Tokens
     link: /docs/help/help_articles/push/push_token_migration/
-    fa_icon: fas fa-map-signs
+    image: /assets/img/braze_icons/map-01.svg
   - name: Resetting Push Permissions
     link: /docs/help/help_articles/push/resetting_push_permissions/
     fa_icon: fas fa-circle-check

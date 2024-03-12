@@ -32,5 +32,5 @@ guide_featured_list:
     image: /assets/img/braze_icons/bell-03.svg
   - name: Searching for Campaigns
     link: /docs/user_guide/engagement_tools/campaigns/managing_campaigns/search_campaigns/
-    fa_icon: fas fa-magnifying-glass
+    image: /assets/img/braze_icons/search-refraction.svg
 ---

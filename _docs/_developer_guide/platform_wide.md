@@ -23,7 +23,7 @@ guide_featured_list:
     fa_icon: ffas fa-user-shield fas 
   - name: Workspace Configuration
     link: /docs/developer_guide/platform_wide/app_group_configuration/
-    fa_icon: fas fa-mobile
+    image: /assets/img/braze_icons/phone-02.svg
   - name: Feature Flags
     link: /docs/developer_guide/platform_wide/feature_flags/
     image: /assets/img/braze_icons/columns-01.svg
