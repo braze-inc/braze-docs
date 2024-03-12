@@ -30,7 +30,7 @@ guide_featured_list:
   fa_icon: fa-solid fa-user
 - name: "Opt-in and Opt-outs"
   link: /docs/user_guide/message_building_by_channel/whatsapp/message_processing/opt-ins_and_opt-outs/
-  
+  image: /assets/img/braze_icons/message-dots-circle.svg
 - name: "Messaging Users"
   link: /docs/user_guide/message_building_by_channel/whatsapp/message_processing/user_messages/
   fa_icon: fa-solid fa-comments

@@ -12,7 +12,7 @@ guide_featured_title: "Section articles"
 guide_featured_list:
 - name: Using Liquid
   link: /docs/user_guide/personalization_and_dynamic_content/liquid/using_liquid/
-  fa_icon: fas fa-flask
+  image: /assets/img/braze_icons/beaker-02.svg
 - name: Supported Personalization Tags
   link: /docs/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/
   fa_icon: fas fa-tag

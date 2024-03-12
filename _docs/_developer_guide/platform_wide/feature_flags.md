@@ -19,7 +19,7 @@ guide_featured_list:
   image: /assets/img/braze_icons/columns-01.svg
 - name: Feature Flag Experiments
   link: /docs/developer_guide/platform_wide/feature_flags/experiments/
-  fa_icon: fas fa-flask
+  image: /assets/img/braze_icons/beaker-02.svg
 - name: Feature Flags in Canvas
   link: /docs/developer_guide/platform_wide/feature_flags/canvas/
   image: /assets/img/braze_icons/dataflow-03.svg

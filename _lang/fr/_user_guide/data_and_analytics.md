@@ -21,7 +21,7 @@ guide_featured_list:
     image: /assets/img/braze_icons/settings-01.svg
   - name: Création d’une formule
     link: /docs/user_guide/data_and_analytics/creating_a_formula/
-    fa_icon: fas fa-flask
+    image: /assets/img/braze_icons/beaker-02.svg
   - name: Currents
     link: /docs/user_guide/data_and_analytics/braze_currents/
     fa_icon: fas fa-swimmer

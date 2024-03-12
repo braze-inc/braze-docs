@@ -12,7 +12,7 @@ guide_featured_title: "Topics"
 guide_featured_list:
 - name: Liquid
   link: /docs/user_guide/personalization_and_dynamic_content/liquid/
-  fa_icon: fas fa-flask
+  image: /assets/img/braze_icons/beaker-02.svg
 - name: Connected Content
   link: /docs/user_guide/personalization_and_dynamic_content/connected_content/
   fa_icon: fas fa-server

@@ -56,7 +56,7 @@ guide_featured_list:
     fa_icon: fa-brands fa-swift
   - name: "Liquid FAQ"
     link: /docs/user_guide/personalization_and_dynamic_content/liquid/faq/
-    fa_icon: fas fa-flask
+    image: /assets/img/braze_icons/beaker-02.svg
 
 
 guide_menu_title: "Best practices"

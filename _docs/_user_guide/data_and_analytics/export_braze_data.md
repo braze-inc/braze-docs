@@ -33,7 +33,7 @@ guide_menu_list:
     fa_icon: far fa-dot-circle
   - name: Export Revenue Data
     link: /docs/user_guide/data_and_analytics/export_braze_data/exporting_revenue_data/
-    fa_icon: fas fa-hand-holding-usd
+    image: /assets/img/braze_icons/coins-hand.svg
   - name: Export News Feed Data
     link: /docs/user_guide/data_and_analytics/export_braze_data/export_news_feed_data/
     fa_icon: fas fa-newspaper
