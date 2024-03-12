@@ -13,13 +13,13 @@ guide_menu_title: ""
 guide_menu_list:
   - name: Common Push Error Messages
     link: /docs/help/help_articles/push/push_error_codes/
-    fa_icon: fas fa-exclamation-circle
+    image: /assets/img/braze_icons/alert-circle.svg
   - name: Defining Push Enablement
     link: /docs/help/help_articles/push/defining_push_enablement/
     image: /assets/img/braze_icons/book-closed.svg
   - name: Missing Push Notifications
     link: /docs/help/help_articles/push/no_push_notification_was_received/
-    fa_icon: fas fa-comment-slash
+    image: /assets/img/braze_icons/message-x-circle.svg
   - name: Migrating Push Tokens
     link: /docs/help/help_articles/push/push_token_migration/
     fa_icon: fas fa-map-signs

@@ -37,7 +37,7 @@ guide_featured_list:
   fa_icon: fab fa-amazon
 - name: "Transfer Data to Redshift"
   link: /docs/user_guide/data_and_analytics/braze_currents/transferring_data_to_redshift/
-  fa_icon: fas fa-exchange-alt
+  image: /assets/img/braze_icons/switch-horizontal-01.svg
 
 ---
 

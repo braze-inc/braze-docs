@@ -43,7 +43,7 @@ guide_featured_list:
     image: /assets/img/braze_icons/calendar-minus-01.svg
   - name: SDK Changelogs
     link: /docs/developer_guide/platform_integration_guides/sdk_changelogs/
-    fa_icon: fas fa-file-code
+    image: /assets/img/braze_icons/file-code-01.svg
 
 ---
 

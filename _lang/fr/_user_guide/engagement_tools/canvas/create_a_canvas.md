@@ -26,7 +26,7 @@ guide_featured_list:
     image: /assets/img/braze_icons/users-01.svg
   - name: Événements d'exception
     link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/exception_events/
-    fa_icon: fas fa-exchange-alt
+    image: /assets/img/braze_icons/switch-horizontal-01.svg
   - name: Propriétés d’entrée et propriétés de l’événement Canvas
     link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties/
     image: /assets/img/braze_icons/user-check-01.svg
@@ -44,5 +44,5 @@ guide_menu_title: "Ressources supplémentaires"
 guide_menu_list:
   - name: Assistant de rédaction IA
     link: /docs/user_guide/intelligence/ai_copywriting/
-    fa_icon: fas fa-edit
+    image: /assets/img/braze_icons/edit-05.svg
 ---

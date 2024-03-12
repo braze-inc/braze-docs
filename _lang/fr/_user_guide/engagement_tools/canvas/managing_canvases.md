@@ -23,8 +23,8 @@ guide_featured_list:
     image: /assets/img/braze_icons/archive.svg
   - name: Modification de votre Canvas après le lancement
     link: /docs/user_guide/engagement_tools/canvas/managing_canvases/change_your_canvas_after_launch/
-    fa_icon: fas fa-edit
+    image: /assets/img/braze_icons/edit-05.svg
   - name: Duplication de Canvas
     link: /docs/user_guide/engagement_tools/campaigns/managing_campaigns/duplicating_segments_and_campaigns/#duplicating_canvases/
-    fa_icon: fas fa-copy
+    image: /assets/img/braze_icons/copy-04.svg
 ---

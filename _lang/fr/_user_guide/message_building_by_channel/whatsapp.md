@@ -27,13 +27,13 @@ guide_featured_list:
   fa_icon: fas fa-mobile-alt
 - name: "Abonnements et désabonnements"
   link: /docs/user_guide/message_building_by_channel/whatsapp/opt-ins_and_opt-outs/
-  fa_icon: fas fa-commenting
+  
 - name: "Réponses rapides"
   link: /docs/user_guide/message_building_by_channel/whatsapp/quick_replies/
   fa_icon: fa-solid fa-comments
 - name: "Rapports WhatsApp"
   link: /docs/user_guide/message_building_by_channel/whatsapp/whatsapp_campaign_analytics/
-  fa_icon: fas fa-file-alt
+  image: /assets/img/braze_icons/file-06.svg
 - name: "FAQ WhatsApp"
   link: /docs/user_guide/message_building_by_channel/whatsapp/faqs/
   fa_icon: fas fa-question

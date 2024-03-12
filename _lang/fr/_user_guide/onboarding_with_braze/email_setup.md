@@ -34,7 +34,7 @@ guide_featured_list:
   fa_icon: fas fa-address-book
 - name: "Écueils de délivrabilité et pièges à spam"
   link: /docs/user_guide/onboarding_with_braze/email_setup/deliverability_pitfalls_and_spam_traps/
-  fa_icon: fas fa-exclamation-triangle
+  image: /assets/img/braze_icons/alert-triangle.svg
 ---
 
 ## Conditions

@@ -16,7 +16,7 @@ guide_featured_title: "Section Articles"
 guide_featured_list:
 - name: "Campagne d’amorce de notification push"
   link: /docs/user_guide/message_building_by_channel/push/ios/create_push_primer/
-  fa_icon: fas fa-comment-alt
+  image: /assets/img/braze_icons/message-square-02.svg
 - name: "Icônes d’application personnalisables"
   link: /docs/user_guide/message_building_by_channel/push/ios/customizable_app_icons/
   fa_icon: fas fa-mobile-alt

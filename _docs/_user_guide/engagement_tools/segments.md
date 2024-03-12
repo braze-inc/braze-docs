@@ -21,7 +21,7 @@ guide_featured_list:
     image: /assets/img/braze_icons/edit-05.svg
   - name: Segmentation Filters
     link: /docs/user_guide/engagement_tools/segments/segmentation_filters/
-    fa_icon: fas fa-filter
+    image: /assets/img/braze_icons/flag-02.svg
   - name: Segment Funnels
     link: /docs/user_guide/engagement_tools/segments/segment_funnels/
     image: /assets/img/braze_icons/users-right.svg

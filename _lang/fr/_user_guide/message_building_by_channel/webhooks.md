@@ -22,5 +22,5 @@ guide_featured_list:
   image: /assets/img/braze_icons/table.svg
 - name: Webhooks Braze à Braze
   link: /docs/user_guide/message_building_by_channel/webhooks/braze_to_braze_webhooks/
-  fa_icon: fas fa-exchange-alt
+  image: /assets/img/braze_icons/switch-horizontal-01.svg
 ---

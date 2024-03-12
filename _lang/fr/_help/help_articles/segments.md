@@ -13,7 +13,7 @@ guide_menu_title: ""
 guide_menu_list:
   - name: Options de filtre modifiées
     link: /docs/help/help_articles/segments/my_filter_options_have_changed/
-    fa_icon: fas fa-filter
+    image: /assets/img/braze_icons/flag-02.svg
   - name: Utilisateurs manquants dans le segment
     link: /docs/help/help_articles/segments/segment_showing_0_users/
     image: /assets/img/braze_icons/users-01.svg
@@ -25,6 +25,6 @@ guide_menu_list:
     fa_icon: fas fa-magnifying-glass
   - name: Exporter des segments volumineux
     link: /docs/help/help_articles/segments/exporting_large_segments/
-    fa_icon: fas fa-file-export
+    image: /assets/img/braze_icons/file-download-01.svg
 
 ---

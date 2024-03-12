@@ -24,7 +24,7 @@ guide_menu_list:
     fa_icon: far fa-dot-circle
   - name: Journalisation des Propriétés de l’événement personnalisé
     link: /docs/help/help_articles/campaigns_and_canvas/using_custom_event_properties/
-    fa_icon: fas fa-code
+    image: /assets/img/braze_icons/code-02.svg
   - name: Faibles conversions dans une campagne ou un Canvas
     link: /docs/help/help_articles/campaigns_and_canvas/conversions_low/
     image: /assets/img/braze_icons/shopping-cart-03.svg

@@ -21,7 +21,7 @@ guide_featured_list:
     fa_icon: fas fa-palette
   - name: Export Segment Data
     link: /docs/user_guide/data_and_analytics/export_braze_data/segment_data_to_csv/
-    fa_icon: fas fa-file-csv
+    image: /assets/img/braze_icons/file-download-02.svg
 
 guide_menu_title: "More articles"
 guide_menu_list:

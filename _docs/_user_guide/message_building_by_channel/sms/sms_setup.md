@@ -20,7 +20,7 @@ guide_featured_list:
   fa_icon: fas fa-address-card
 - name: SMS Message Sending
   link: /docs/user_guide/message_building_by_channel/sms/sms_setup/sms_sending/
-  fa_icon: fas fa-comment-alt
+  image: /assets/img/braze_icons/message-square-02.svg
 - name: SMS Subscription Groups
   link: /docs/user_guide/message_building_by_channel/sms/sms_subscription_group/
   image: /assets/img/braze_icons/users-01.svg

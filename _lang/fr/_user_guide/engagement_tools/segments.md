@@ -18,7 +18,7 @@ guide_featured_list:
     image: /assets/img/braze_icons/pie-chart-01.svg
   - name: Filtres de segmentation
     link: /docs/user_guide/engagement_tools/segments/segmentation_filters/
-    fa_icon: fas fa-filter
+    image: /assets/img/braze_icons/flag-02.svg
   - name: Entonnoirs de segments
     link: /docs/user_guide/engagement_tools/segments/segment_funnels/
     image: /assets/img/braze_icons/users-right.svg

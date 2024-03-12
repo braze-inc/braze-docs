@@ -38,7 +38,7 @@ guide_menu_list:
     image: /assets/img/braze_icons/calendar-check-02.svg
   - name: Rapport d’entonnoir
     link: /docs/user_guide/engagement_tools/campaigns/testing_and_more/campaign_funnel_report/
-    fa_icon: fas fa-filter
+    image: /assets/img/braze_icons/flag-02.svg
   - name: Rapport Global Control
     link: /docs/user_guide/engagement_tools/testing/global_control_group/#viewing-reporting
     image: /assets/img/braze_icons/globe-04.svg

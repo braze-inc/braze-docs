@@ -15,7 +15,7 @@ guide_featured_title: "Section articles"
 guide_featured_list:
 - name: "Custom HTML"
   link: /docs/user_guide/message_building_by_channel/in-app_messages/traditional/customize/html_in-app_messages/
-  fa_icon: fas fa-code
+  image: /assets/img/braze_icons/code-02.svg
 - name: "Web Modal with CSS"
   link: /docs/user_guide/message_building_by_channel/in-app_messages/customize/color_profiles_and_css/#web-modal-css
   fa_icon: fa-brands fa-css3-alt

@@ -24,7 +24,7 @@ guide_menu_list:
     fa_icon: far fa-dot-circle
   - name: Logging Custom Event Properties
     link: /docs/help/help_articles/campaigns_and_canvas/using_custom_event_properties/
-    fa_icon: fas fa-code
+    image: /assets/img/braze_icons/code-02.svg
   - name: Low Campaign or Canvas Conversions
     link: /docs/help/help_articles/campaigns_and_canvas/conversions_low/
     image: /assets/img/braze_icons/shopping-cart-03.svg

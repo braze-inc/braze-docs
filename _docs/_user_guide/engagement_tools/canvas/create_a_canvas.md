@@ -23,7 +23,7 @@ guide_featured_list:
     image: /assets/img/braze_icons/clock.svg
   - name: Exception Events
     link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/exception_events/
-    fa_icon: fas fa-exchange-alt
+    image: /assets/img/braze_icons/switch-horizontal-01.svg
   - name: Exit Criteria
     link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/exit_criteria/
     image: /assets/img/braze_icons/users-right.svg
@@ -50,5 +50,5 @@ guide_menu_title: "Additional resources"
 guide_menu_list:
   - name: AI Copywriting Assistant
     link: /docs/user_guide/intelligence/ai_copywriting/
-    fa_icon: fas fa-edit
+    image: /assets/img/braze_icons/edit-05.svg
 ---

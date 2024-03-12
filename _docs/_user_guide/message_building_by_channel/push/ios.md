@@ -16,7 +16,7 @@ guide_featured_title: "Section articles"
 guide_featured_list:
 - name: "Push Primer Campaign"
   link: /docs/user_guide/message_building_by_channel/push/ios/create_push_primer/
-  fa_icon: fas fa-comment-alt
+  image: /assets/img/braze_icons/message-square-02.svg
 - name: "Customizable App Icons"
   link: /docs/user_guide/message_building_by_channel/push/ios/customizable_app_icons/
   fa_icon: fas fa-mobile-alt

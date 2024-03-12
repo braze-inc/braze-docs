@@ -34,7 +34,7 @@ guide_featured_list:
   fa_icon: far fa-handshake
 - name: FAQ SMS
   link: /docs/user_guide/message_building_by_channel/sms/faqs/
-  fa_icon: fas fa-comment
+  image: /assets/img/braze_icons/message-circle-01.svg
 
 guide_menu_title: "MMS"
 guide_menu_list:
@@ -49,7 +49,7 @@ guide_menu_list:
   image: /assets/img/braze_icons/table.svg
 - name: "FAQ MMS"
   link: /docs/user_guide/message_building_by_channel/sms/mms/faqs/
-  fa_icon: fas fa-comment
+  image: /assets/img/braze_icons/message-circle-01.svg
   
 ---
 

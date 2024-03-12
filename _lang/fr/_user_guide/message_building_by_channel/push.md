@@ -25,7 +25,7 @@ guide_featured_list:
   image: /assets/img/braze_icons/users-01.svg
 - name: Création d’un message de notification push
   link: /docs/user_guide/message_building_by_channel/push/creating_a_push_message/
-  fa_icon: fas fa-edit
+  image: /assets/img/braze_icons/edit-05.svg
 
 guide_menu_title: "Autres articles"
 guide_menu_list:
@@ -46,7 +46,7 @@ guide_menu_list:
   fa_icon: fab fa-apple
 - name: Notification push Web
   link: /docs/user_guide/message_building_by_channel/push/web/
-  fa_icon: fas fa-desktop
+  image: /assets/img/braze_icons/monitor-01.svg
 - name: Bonnes pratiques
   link: /docs/user_guide/message_building_by_channel/push/best_practices/
   image: /assets/img/braze_icons/check-square-broken.svg

@@ -30,7 +30,7 @@ guide_featured_list:
   fa_icon: fa-solid fa-user
 - name: "Opt-in and Opt-outs"
   link: /docs/user_guide/message_building_by_channel/whatsapp/message_processing/opt-ins_and_opt-outs/
-  fa_icon: fas fa-commenting
+  
 - name: "Messaging Users"
   link: /docs/user_guide/message_building_by_channel/whatsapp/message_processing/user_messages/
   fa_icon: fa-solid fa-comments
@@ -41,7 +41,7 @@ guide_featured_list:
   fa_icon: fas fa-vials
 - name: "WhatsApp Reporting"
   link: /docs/user_guide/message_building_by_channel/whatsapp/whatsapp_campaign_analytics/
-  fa_icon: fas fa-file-alt
+  image: /assets/img/braze_icons/file-06.svg
 - name: "WhatsApp Best Practices"
   link: /docs/user_guide/message_building_by_channel/whatsapp/whatsapp_best_practices/
   image: /assets/img/braze_icons/check-square-broken.svg

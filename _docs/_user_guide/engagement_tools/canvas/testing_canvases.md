@@ -25,5 +25,5 @@ guide_featured_list:
     image: /assets/img/braze_icons/line-chart-down-01.svg
   - name: Funnel Reports
     link: /docs/user_guide/data_and_analytics/reporting/funnel_reports/
-    fa_icon: fas fa-filter
+    image: /assets/img/braze_icons/flag-02.svg
 ---

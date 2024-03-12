@@ -15,7 +15,7 @@ guide_featured_title: "Section Articles"
 guide_featured_list:
   - name: Message Step
     link: /docs/user_guide/engagement_tools/canvas/canvas_components/message_step/
-    fa_icon: fas fa-comment-alt
+    image: /assets/img/braze_icons/message-square-02.svg
   - name: Delay Step
     link: /docs/user_guide/engagement_tools/canvas/canvas_components/delay_step/
     fa_icon: fas fa-stopwatch

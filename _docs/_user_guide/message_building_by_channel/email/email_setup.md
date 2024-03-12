@@ -34,7 +34,7 @@ guide_featured_list:
   fa_icon: fas fa-address-book
 - name: "Deliverability Pitfalls and Spam Traps"
   link: /docs/user_guide/message_building_by_channel/email/email_setup/deliverability_pitfalls_and_spam_traps/
-  fa_icon: fas fa-exclamation-triangle
+  image: /assets/img/braze_icons/alert-triangle.svg
 ---
 
 ## Requirements

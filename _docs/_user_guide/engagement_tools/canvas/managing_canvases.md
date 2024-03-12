@@ -17,7 +17,7 @@ guide_featured_list:
     image: /assets/img/braze_icons/check-square-broken.svg
   - name: Editing Canvases After Launch
     link: /docs/user_guide/engagement_tools/canvas/managing_canvases/change_your_canvas_after_launch/
-    fa_icon: fas fa-edit
+    image: /assets/img/braze_icons/edit-05.svg
   - name: Saving Drafts for Canvas
     link: /docs/user_guide/engagement_tools/canvas/managing_canvases/canvas_drafts/
     fa_icon: fa-solid fa-floppy-disk
@@ -29,7 +29,7 @@ guide_featured_list:
     image: /assets/img/braze_icons/copy-04.svg
   - name: Duplicating Canvases
     link: /docs/user_guide/engagement_tools/campaigns/managing_campaigns/duplicating_segments_and_campaigns/#duplicating_canvases/
-    fa_icon: fas fa-copy
+    image: /assets/img/braze_icons/copy-04.svg
   - name: Archiving Canvases
     link: /docs/user_guide/engagement_tools/canvas/managing_canvases/archiving_canvases/
     image: /assets/img/braze_icons/archive.svg

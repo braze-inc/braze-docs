@@ -12,7 +12,7 @@ guide_featured_title: "Section articles"
 guide_featured_list:
 - name: Default Opt-In/Opt-Out
   link: /docs/user_guide/message_building_by_channel/sms/keywords/optin_optout/
-  fa_icon: fas fa-commenting
+  image: /assets/img/braze_icons/message-dots-circle.svg
 - name: SMS Double Opt-In
   link: /docs/user_guide/message_building_by_channel/sms/keywords/sms_double_opt_in/
   fa_icon: fas fa-mobile-alt

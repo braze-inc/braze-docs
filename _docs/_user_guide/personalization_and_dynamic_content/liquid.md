@@ -18,10 +18,10 @@ guide_featured_list:
   fa_icon: fas fa-tag
 - name: Operators
   link: /docs/user_guide/personalization_and_dynamic_content/liquid/operators/
-  fa_icon: fas fa-code
+  image: /assets/img/braze_icons/code-02.svg
 - name: Filters
   link: /docs/user_guide/personalization_and_dynamic_content/liquid/filters/
-  fa_icon: fas fa-filter
+  image: /assets/img/braze_icons/flag-02.svg
 - name: Advanced Filters
   link: /docs/user_guide/personalization_and_dynamic_content/liquid/advanced_filters/
   image: /assets/img/braze_icons/settings-01.svg

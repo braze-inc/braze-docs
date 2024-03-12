@@ -28,7 +28,7 @@ guide_featured_list:
     image: /assets/img/braze_icons/line-chart-up-01.svg
   - name: Docs
     link: /docs/help/help_articles/docs/
-    fa_icon: fas fa-file-alt
+    image: /assets/img/braze_icons/file-06.svg
   - name: E-mail
     link: /docs/help/help_articles/email/
     image: /assets/img/braze_icons/mail-01.svg
@@ -37,7 +37,7 @@ guide_featured_list:
     fa_icon: fas fa-mobile-alt
   - name: Notification push
     link: /docs/help/help_articles/push/
-    fa_icon: fas fa-comment-alt
+    image: /assets/img/braze_icons/message-square-02.svg
   - name: Segments
     link: /docs/help/help_articles/segments/
     image: /assets/img/braze_icons/users-01.svg

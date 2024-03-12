@@ -29,7 +29,7 @@ guide_featured_list:
   image: /assets/img/braze_icons/users-01.svg
 - name: Envoi de message SMS
   link: /docs/user_guide/onboarding_with_braze/sms_setup/sms_sending/
-  fa_icon: fas fa-comment-alt
+  image: /assets/img/braze_icons/message-square-02.svg
 - name: Groupes d’abonnement SMS
   link: /docs/user_guide/onboarding_with_braze/sms_setup/sms_subscription_groups/
   image: /assets/img/braze_icons/users-01.svg

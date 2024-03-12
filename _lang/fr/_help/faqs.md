@@ -20,7 +20,7 @@ guide_featured_list:
     fa_icon: fas fa-link
   - name: "FAQ sur les Exportations"
     link: /docs/user_guide/data_and_analytics/export_braze_data/faqs/
-    fa_icon: fas fa-file-export
+    image: /assets/img/braze_icons/file-download-01.svg
   - name: "FAQ sur les messages In-App"
     link: /docs/user_guide/message_building_by_channel/in-app_messages/faq/
     fa_icon: fas fa-mobile-alt
@@ -32,7 +32,7 @@ guide_featured_list:
     fa_icon: fas fa-images
   - name: "FAQ MMS"
     link: /docs/user_guide/message_building_by_channel/sms/mms/faqs/
-    fa_icon: fas fa-comment
+    image: /assets/img/braze_icons/message-circle-01.svg
   - name: "FAQ SMS"
     link: /docs/user_guide/message_building_by_channel/sms/faqs/
     fa_icon: fas fa-comment-dots
@@ -69,7 +69,7 @@ guide_menu_list:
     fa_icon: fas fa-mobile-alt
   - name: "Bonnes pratiques de notification push"
     link: /docs/user_guide/message_building_by_channel/push/best_practices/
-    fa_icon: fas fa-comment-alt
+    image: /assets/img/braze_icons/message-square-02.svg
   - name: "Meilleures pratiques pour les SMS"
     link: /docs/user_guide/message_building_by_channel/sms/best_practices/
     fa_icon: fa-solid fa-comment-sms

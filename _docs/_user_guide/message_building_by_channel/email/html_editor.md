@@ -17,7 +17,7 @@ guide_featured_list:
     image: /assets/img/braze_icons/mail-01.svg
   - name: "CSS Inlining"
     link: /docs/user_guide/message_building_by_channel/email/html_editor/css_inline/
-    fa_icon: fas fa-file-code
+    image: /assets/img/braze_icons/file-code-01.svg
   - name: "Gmail Promotions Tab"
     link: /docs/user_guide/message_building_by_channel/email/html_editor/gmail_promotions_tab/
     image: /assets/img/braze_icons/message-check-circle.svg

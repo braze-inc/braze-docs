@@ -21,7 +21,7 @@ guide_featured_list:
   image: /assets/img/braze_icons/globe-04.svg
 - name: Processus de double abonnement
   link: /docs/user_guide/message_building_by_channel/sms/non_native/double_opt_in/
-  fa_icon: fas fa-commenting
+  image: /assets/img/braze_icons/message-dots-circle.svg
 
 ---
 <br><br>

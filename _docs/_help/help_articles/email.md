@@ -19,7 +19,7 @@ guide_menu_list:
     image: /assets/img/braze_icons/cursor-click-02.svg
   - name: Troubleshooting HTML Rendering in Test Emails 
     link: /docs/help/help_articles/email/html_looks_strange/
-    fa_icon: fas fa-code
+    image: /assets/img/braze_icons/code-02.svg
   - name: Universal Links and App Links
     link: /docs/help/help_articles/email/universal_links/
     fa_icon: fas fa-link

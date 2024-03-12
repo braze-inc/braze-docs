@@ -22,7 +22,7 @@ guide_featured_list:
     image: /assets/img/braze_icons/columns-01.svg
   - name: Dupliquer des modèles
     link: /docs/user_guide/engagement_tools/templates_and_media/duplicate/
-    fa_icon: fas fa-copy
+    image: /assets/img/braze_icons/copy-04.svg
   - name: Archiver des modèles
     link: /docs/user_guide/engagement_tools/templates_and_media/archive/
     image: /assets/img/braze_icons/archive.svg

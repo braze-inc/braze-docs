@@ -36,7 +36,7 @@ guide_featured_list:
     image: /assets/img/braze_icons/line-chart-up-01.svg
   - name: Exporting Braze Data
     link: /docs/user_guide/data_and_analytics/export_braze_data/
-    fa_icon: fas fa-file-export
+    image: /assets/img/braze_icons/file-download-01.svg
   - name: Data Transformation
     link: /docs/user_guide/data_and_analytics/data_transformation/
     fa_icon: fa-solid fa-database
@@ -51,7 +51,7 @@ guide_featured_list:
     image: /assets/img/braze_icons/list.svg
   - name: Query Builder
     link: /docs/user_guide/data_and_analytics/query_builder/
-    fa_icon: fas fa-code
+    image: /assets/img/braze_icons/code-02.svg
 
 ---
 <br><br>
