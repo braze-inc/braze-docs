@@ -40,7 +40,7 @@ let braze = Braze(configuration: configuration)
 AppDelegate.braze = braze
 ```
 {% endtab %}
-{% tab OBJECTIVE-C %}
+{% tab objective-c %}
 
 ```objc
 // Sets the session timeout to 60 seconds
@@ -69,11 +69,10 @@ To detect sessions via your user, find your user on the dashboard and navigate t
 
 ## Subscribing to session updates
 
-The Braze SDK provides a [`subscribeToSessionUpdates(_:)`][1] method to listen for session updates:
+To listen to session updates, use the [`subscribeToSessionUpdates(_:)`][1] method:
 
 {% tabs %}
 {% tab swift %}
-
 ```swift
 // This subscription is maintained through a Braze cancellable, which will observe changes until the subscription is cancelled.
 // You must keep a strong reference to the cancellable to keep the subscription active.
@@ -87,10 +86,9 @@ let cancellable = AppDelegate.braze?.subscribeToSessionUpdates { event in
   }
 }
 ```
-
 {% endtab %}
-{% tab OBJECTIVE-C %}
 
+{% tab objective-c %}
 ```objc
 // This subscription is maintained through a Braze cancellable, which will observe changes until the subscription is cancelled.
 // You must keep a strong reference to the cancellable to keep the subscription active.
@@ -108,7 +106,6 @@ BRZCancellable *cancellable = [AppDelegate.braze subscribeToSessionUpdates:^(BRZ
   }
 }];
 ```
-
 {% endtab %}
 {% endtabs %}
 
