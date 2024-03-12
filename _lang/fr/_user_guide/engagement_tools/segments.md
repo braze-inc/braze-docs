@@ -45,5 +45,5 @@ guide_menu_list:
     image: /assets/img/braze_icons/marker-pin-01.svg
   - name: Expressions régulières
     link: /docs/user_guide/engagement_tools/segments/regex/
-    fa_icon: fas fa-search
+    image: /assets/img/braze_icons/search-sm.svg
 ---

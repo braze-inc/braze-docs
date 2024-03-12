@@ -16,7 +16,7 @@ guide_featured_list:
   image: /assets/img/braze_icons/check-square-broken.svg
 - name: Créer un webhook
   link: /docs/user_guide/message_building_by_channel/webhooks/creating_a_webhook/
-  fa_icon: fas fa-undo
+  image: /assets/img/braze_icons/refresh-ccw-01.svg
 - name: Créer un modèle de webhook
   link: /docs/user_guide/message_building_by_channel/webhooks/webhook_template/
   image: /assets/img/braze_icons/table.svg

@@ -15,7 +15,7 @@ guide_featured_list:
   image: /assets/img/braze_icons/beaker-02.svg
 - name: Balises de personnalisation prises en charge
   link: /docs/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/
-  fa_icon: fas fa-tag
+  image: /assets/img/braze_icons/tag-01.svg
 - name: Opérateurs
   link: /docs/user_guide/personalization_and_dynamic_content/liquid/operators/
   image: /assets/img/braze_icons/code-02.svg
@@ -33,7 +33,7 @@ guide_featured_list:
   image: /assets/img/braze_icons/columns-01.svg
 - name: Abandon des messages
   link: /docs/user_guide/personalization_and_dynamic_content/liquid/aborting_messages/
-  fa_icon: fas fa-undo
+  image: /assets/img/braze_icons/refresh-ccw-01.svg
 - name: Scénarios d’utilisation de Liquid
   link: /docs/user_guide/personalization_and_dynamic_content/liquid/liquid_use_cases/
   image: /assets/img/braze_icons/list.svg

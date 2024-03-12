@@ -18,7 +18,7 @@ guide_featured_list:
     image: /assets/img/braze_icons/message-square-02.svg
   - name: Étape de délai
     link: /docs/user_guide/engagement_tools/canvas/canvas_components/delay_step/
-    fa_icon: fas fa-stopwatch
+    image: /assets/img/braze_icons/clock-stopwatch.svg
   - name: Étape de décision de séparation
     link: /docs/user_guide/engagement_tools/canvas/canvas_components/decision_split/
     fa_icon: fas fa-random

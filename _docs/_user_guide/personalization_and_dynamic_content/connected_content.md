@@ -15,13 +15,13 @@ guide_featured_list:
   image: /assets/img/braze_icons/navigation-pointer-01.svg
 - name: Local Connected Content Variables
   link: /docs/user_guide/personalization_and_dynamic_content/connected_content/local_connected_content_variables/
-  fa_icon: fas fa-server
+  image: /assets/img/braze_icons/server-01.svg
 - name: Aborting Connected Content
   link: /docs/user_guide/personalization_and_dynamic_content/connected_content/aborting_connected_content/
   fa_icon: fas fa-eject
 - name: Connected Content Retries
   link: /docs/user_guide/personalization_and_dynamic_content/connected_content/connected_content_retries/
-  fa_icon: fas fa-undo
+  image: /assets/img/braze_icons/refresh-ccw-01.svg
 - name: Public APIs
   link: /docs/user_guide/personalization_and_dynamic_content/connected_content/public_apis/
   fa_icon: far fa-dot-circle

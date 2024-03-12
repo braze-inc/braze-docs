@@ -41,7 +41,7 @@ guide_menu_list:
   fa_icon: fas fa-mobile
 - name: "Invitation à l’évaluation de l’App Store"
   link: /docs/user_guide/message_building_by_channel/in-app_messages/ios_app_rating_prompt/
-  fa_icon: fas fa-star
+  image: /assets/img/braze_icons/star-01.svg
 - name: "Enquête simple"
   link: /docs/user_guide/message_building_by_channel/in-app_messages/templates/simple_survey/
   fa_icon: fas fa-poll

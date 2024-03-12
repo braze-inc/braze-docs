@@ -15,7 +15,7 @@ guide_featured_list:
   image: /assets/img/braze_icons/beaker-02.svg
 - name: Contenu connecté
   link: /docs/user_guide/personalization_and_dynamic_content/connected_content/
-  fa_icon: fas fa-server
+  image: /assets/img/braze_icons/server-01.svg
 - name: "Lien profond au contenu d’application"
   link: /docs/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/
   fa_icon: fas fa-mobile

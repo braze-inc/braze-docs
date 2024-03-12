@@ -13,13 +13,13 @@ guide_featured_title: "Section Articles"
 guide_featured_list:
 - name: Préférences de notification push détaillées
   link: /docs/user_guide/message_building_by_channel/push/best_practices/detailed_push_preferences/
-  fa_icon: fas fa-tasks
+  image: /assets/img/braze_icons/list.svg
 - name: Amorces de notifications push
   link: /docs/user_guide/message_building_by_channel/push/best_practices/push_primer_messages/
   fa_icon: far fa-dot-circle
 - name: Politiques de temporisation 
   link: /docs/user_guide/message_building_by_channel/push/best_practices/sunset_policies/
-  fa_icon: fas fa-sun
+  image: /assets/img/braze_icons/sun-setting-03.svg
 - name: Suivi de conversion
   link: /docs/user_guide/message_building_by_channel/push/best_practices/conversion_tracking/
   image: /assets/img/braze_icons/line-chart-up-01.svg

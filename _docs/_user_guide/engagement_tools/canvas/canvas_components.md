@@ -18,7 +18,7 @@ guide_featured_list:
     image: /assets/img/braze_icons/message-square-02.svg
   - name: Delay Step
     link: /docs/user_guide/engagement_tools/canvas/canvas_components/delay_step/
-    fa_icon: fas fa-stopwatch
+    image: /assets/img/braze_icons/clock-stopwatch.svg
   - name: Decision Split Step
     link: /docs/user_guide/engagement_tools/canvas/canvas_components/decision_split/
     fa_icon: fas fa-random

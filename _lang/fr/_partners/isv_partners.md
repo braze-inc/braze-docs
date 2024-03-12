@@ -17,7 +17,7 @@ guide_featured_list:
   image: /assets/img/braze_icons/users-01.svg
 - name: Intégration de Currents
   link: /docs/partners/isv_partners/currents_integration
-  fa_icon: fas fa-swimmer
+  image: /assets/img/braze_icons/waves.svg
 
 ---
 <br><br>

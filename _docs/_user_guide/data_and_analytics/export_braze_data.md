@@ -42,7 +42,7 @@ guide_menu_list:
     image: /assets/img/braze_icons/settings-01.svg
   - name: Export APIs
     link: /docs/user_guide/data_and_analytics/export_braze_data/export_apis/
-    fa_icon: fas fa-server
+    image: /assets/img/braze_icons/server-01.svg
   - name: Opening CSV Exports in Excel
     link: /docs/user_guide/data_and_analytics/export_braze_data/opening_csv_reports_in_excel/
     fa_icon: fas fa-file-excel

@@ -38,7 +38,7 @@ guide_menu_list:
   fa_icon: fas fa-mobile
 - name: "App Store Rating Prompt"
   link: /docs/user_guide/message_building_by_channel/in-app_messages/ios_app_rating_prompt/
-  fa_icon: fas fa-star
+  image: /assets/img/braze_icons/star-01.svg
 - name: "Simple Survey"
   link: /docs/user_guide/message_building_by_channel/in-app_messages/traditional/templates/simple_survey/
   fa_icon: fas fa-poll

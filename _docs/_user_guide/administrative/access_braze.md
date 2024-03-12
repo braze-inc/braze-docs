@@ -16,7 +16,7 @@ guide_featured_list:
   image: /assets/img/braze_icons/list.svg
 - name: Searching Your Dashboard
   link: /docs/user_guide/administrative/access_braze/global_search/
-  fa_icon: fas fa-search
+  image: /assets/img/braze_icons/search-sm.svg
 - name: API and SDK Endpoints
   link: /docs/user_guide/administrative/access_braze/sdk_endpoints/
   image: /assets/img/braze_icons/navigation-pointer-01.svg

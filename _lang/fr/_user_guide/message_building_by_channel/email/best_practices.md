@@ -23,13 +23,13 @@ guide_featured_list:
     image: /assets/img/braze_icons/edit-05.svg
   - name: "Gestion des abonnements aux e-mails"
     link: /docs/user_guide/message_building_by_channel/email/best_practices/managing_email_subscriptions/
-    fa_icon: fas fa-tasks
+    image: /assets/img/braze_icons/list.svg
   - name: "Services E-mail"
     link: /docs/user_guide/message_building_by_channel/email/best_practices/email_services/
     fa_icon: fas fa-concierge-bell
   - name: "Politiques de temporisation "
     link: /docs/user_guide/message_building_by_channel/email/best_practices/sunset_policies/
-    fa_icon: fas fa-sun
+    image: /assets/img/braze_icons/sun-setting-03.svg
   - name: "Envoyer des messages de test"
     link: /docs/user_guide/engagement_tools/campaigns/testing_and_more/sending_test_messages/
     image: /assets/img/braze_icons/mail-01.svg

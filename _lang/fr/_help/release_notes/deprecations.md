@@ -14,7 +14,7 @@ guide_featured_title: "Articles obsolètes"
 guide_featured_list:
   - name: Partenariat Apptimize
     link: /docs/help/release_notes/deprecations/apptimize/
-    fa_icon: fas fa-vials
+    image: /assets/img/braze_icons/beaker-02.svg
   - name: Récepteur de diffusion personnalisée de notifications push pour Android
     link: /docs/help/release_notes/deprecations/custom_broadcast_receiver/
     image: /assets/img/braze_icons/phone-01.svg

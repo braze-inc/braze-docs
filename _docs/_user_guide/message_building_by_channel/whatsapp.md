@@ -38,7 +38,7 @@ guide_featured_list:
   link: /docs/user_guide/message_building_by_channel/whatsapp/message_processing/handling_unknown_numbers/
 - name: "WhatsApp Marketing Experiment"
   link: /docs/user_guide/message_building_by_channel/whatsapp/message_processing/experiments/
-  fa_icon: fas fa-vials
+  image: /assets/img/braze_icons/beaker-02.svg
 - name: "WhatsApp Reporting"
   link: /docs/user_guide/message_building_by_channel/whatsapp/whatsapp_campaign_analytics/
   image: /assets/img/braze_icons/file-06.svg

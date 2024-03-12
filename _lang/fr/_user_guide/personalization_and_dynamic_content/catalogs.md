@@ -19,6 +19,6 @@ guide_featured_list:
   image: /assets/img/braze_icons/list.svg
 - name: Endpoints des API de catalogues
   link: /docs/api/endpoints/catalogs/
-  fa_icon: fas fa-server
+  image: /assets/img/braze_icons/server-01.svg
 ---
 <br><br>

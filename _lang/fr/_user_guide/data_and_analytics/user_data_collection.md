@@ -19,7 +19,7 @@ guide_featured_list:
     image: /assets/img/braze_icons/bar-chart-01.svg
   - name: Cycle de vie du profil de l'utilisateur
     link: /docs/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/
-    fa_icon: fas fa-sync
+    image: /assets/img/braze_icons/refresh-ccw-05.svg
   - name: Exemple de cas d’utilisation de collecte de données
     link: /docs/user_guide/data_and_analytics/user_data_collection/collection_use_case/
     fa_icon: fas fa-taxi

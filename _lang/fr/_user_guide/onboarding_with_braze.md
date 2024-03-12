@@ -15,7 +15,7 @@ guide_featured_list:
     fa_icon: fas fa-sticky-note
   - name: Intégration
     link: /docs/user_guide/onboarding_with_braze/integration/
-    fa_icon: fas fa-server
+    image: /assets/img/braze_icons/server-01.svg
   - name: Mode d’emploi de Braze
     link: /docs/user_guide/onboarding_with_braze/learning_to_use_braze/
     image: /assets/img/braze_icons/graduation-hat-01.svg

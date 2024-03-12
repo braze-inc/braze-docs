@@ -8,10 +8,10 @@ guide_featured_title: "Modèles de pages d’accueil"
 guide_featured_list:
   - name: "Page d’accueil pour une seule section avec icônes d’immobilisations"
     link: /docs/home/templates/landing_single/
-    fa_icon: fas fa-th-large
+    image: /assets/img/braze_icons/layout-grid-01.svg
   - name: Page d’accueil pour une seule section avec images
     link: /docs/home/templates/landing_images/
-    fa_icon: fas fa-th-large
+    image: /assets/img/braze_icons/layout-grid-01.svg
   - name: "Page d’accueil multisection avec icônes d’immobilisations"
     link: /docs/home/templates/landing_multiple/
     fa_icon: fas fa-th

@@ -16,7 +16,7 @@ guide_featured_list:
     image: /assets/img/braze_icons/users-01.svg
   - name: Uninstall Tracking
     link: /docs/user_guide/data_and_analytics/tracking/uninstall_tracking/
-    fa_icon: fas fa-undo
+    image: /assets/img/braze_icons/refresh-ccw-01.svg
   - name: Influenced Opens
     link: /docs/user_guide/data_and_analytics/tracking/influenced_opens/
     fa_icon: far fa-dot-circle

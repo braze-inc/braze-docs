@@ -26,6 +26,6 @@ guide_featured_list:
     image: /assets/img/braze_icons/columns-01.svg
   - name: Télévision et OTT
     link: /docs/developer_guide/platform_wide/tv_and_ott
-    fa_icon: fas fa-tv
+    image: /assets/img/braze_icons/tv-02.svg
 
 ---

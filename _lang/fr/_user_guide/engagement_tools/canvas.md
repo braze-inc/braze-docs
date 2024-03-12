@@ -26,7 +26,7 @@ guide_featured_list:
     image: /assets/img/braze_icons/edit-05.svg
   - name: Test de Canvas
     link: /docs/user_guide/engagement_tools/canvas/testing_canvases/
-    fa_icon: fas fa-vials
+    image: /assets/img/braze_icons/beaker-02.svg
   - name: Idées et stratégies
     link: /docs/user_guide/engagement_tools/canvas/ideas_and_strategies/
     image: /assets/img/braze_icons/target-04.svg

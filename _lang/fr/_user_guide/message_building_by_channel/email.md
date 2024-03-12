@@ -43,7 +43,7 @@ guide_menu_list:
   image: /assets/img/braze_icons/bank-note-02.svg
 - name: Outil de promotion Gmail
   link: /docs/user_guide/message_building_by_channel/email/gmail_promotions_tab/
-  fa_icon: fas fa-trophy
+  image: /assets/img/braze_icons/trophy-01.svg
 - name: SSO Apple Private Relay
   link: /docs/user_guide/message_building_by_channel/email/email_private_relay_apple_sso/
   fa_icon: fab fa-apple

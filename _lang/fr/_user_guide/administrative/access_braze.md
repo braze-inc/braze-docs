@@ -13,7 +13,7 @@ guide_featured_title: "Section Articles"
 guide_featured_list:
 - name: Instances de Braze
   link: /docs/user_guide/administrative/access_braze/braze_instances/
-  fa_icon: fas fa-server
+  image: /assets/img/braze_icons/server-01.svg
 - name: Endpoints SDK
   link: /docs/user_guide/administrative/access_braze/sdk_endpoints/
   image: /assets/img/braze_icons/navigation-pointer-01.svg

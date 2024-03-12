@@ -36,7 +36,7 @@ guide_menu_list:
     image: /assets/img/braze_icons/copy-04.svg
   - name: "POST : Créer des blocs de contenu"
     link: /docs/api/endpoints/templates/content_blocks_templates/post_create_email_content_block/
-    fa_icon: fas fa-th-large
+    image: /assets/img/braze_icons/layout-grid-01.svg
   - name: "POST : Mettre à jour le bloc de contenu"
     link: /docs/api/endpoints/templates/content_blocks_templates/post_update_content_block/
     image: /assets/img/braze_icons/mail-04.svg

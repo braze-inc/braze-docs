@@ -20,7 +20,7 @@ guide_featured_list:
     image: /assets/img/braze_icons/annotation.svg
   - name: SDK Authentication
     link: /docs/developer_guide/platform_wide/tv_and_ott
-    fa_icon: ffas fa-user-shield fas 
+    image: /assets/img/braze_icons/user-square.svg 
   - name: Workspace Configuration
     link: /docs/developer_guide/platform_wide/app_group_configuration/
     image: /assets/img/braze_icons/phone-02.svg

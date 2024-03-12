@@ -24,7 +24,7 @@ guide_featured_list:
     image: /assets/img/braze_icons/beaker-02.svg
   - name: Currents
     link: /docs/user_guide/data_and_analytics/braze_currents/
-    fa_icon: fas fa-swimmer
+    image: /assets/img/braze_icons/waves.svg
   - name: Collecte de données utilisateur
     link: /docs/user_guide/data_and_analytics/user_data_collection/
     image: /assets/img/braze_icons/users-01.svg

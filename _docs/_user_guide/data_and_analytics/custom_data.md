@@ -16,7 +16,7 @@ guide_featured_list:
     image: /assets/img/braze_icons/book-closed.svg
   - name: Purchase Events
     link: /docs/user_guide/data_and_analytics/custom_data/purchase_events/
-    fa_icon: fas fa-shopping-cart
+    image: /assets/img/braze_icons/shopping-cart-03.svg
   - name: Custom Events
     link: /docs/user_guide/data_and_analytics/custom_data/custom_events/
     image: /assets/img/braze_icons/settings-01.svg

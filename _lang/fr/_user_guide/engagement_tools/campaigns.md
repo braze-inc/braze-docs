@@ -22,7 +22,7 @@ guide_featured_list:
     image: /assets/img/braze_icons/edit-05.svg
   - name: Tester les campagnes
     link: /docs/user_guide/engagement_tools/campaigns/testing_and_more/
-    fa_icon: fas fa-vials
+    image: /assets/img/braze_icons/beaker-02.svg
   - name: Idées et stratégies
     link: /docs/user_guide/engagement_tools/campaigns/ideas_and_strategies/
     fa_icon: fas fa-lightbulb

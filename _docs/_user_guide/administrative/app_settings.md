@@ -31,7 +31,7 @@ guide_menu_title: "Workspace settings"
 guide_menu_list:
   - name: Tags
     link: /docs/user_guide/administrative/app_settings/tags/
-    fa_icon: fas fa-tags
+    image: /assets/img/braze_icons/tag-01.svgs
   - name: Email Preferences
     link: /docs/user_guide/administrative/app_settings/email_settings/
     image: /assets/img/braze_icons/mail-01.svg

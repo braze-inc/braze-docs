@@ -26,5 +26,5 @@ guide_featured_list:
   fa_icon: fas fa-exclamation
 - name: Balises
   link: /docs/user_guide/administrative/app_settings/manage_app_group/tags/
-  fa_icon: fas fa-tags
+  image: /assets/img/braze_icons/tag-01.svgs
 ---
