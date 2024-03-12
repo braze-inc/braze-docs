@@ -103,12 +103,14 @@ When the campaign is scheduled, edits to anything other than the message composi
 
 ### What is the "safe zone" before messages on a scheduled campaign are enqueued?
 
+You can safely make changes to messages within the following safe zones:
+
 - **One-time scheduled campaigns** can be edited up until the scheduled send time.
 - **Recurring scheduled campaigns** can be edited up until the scheduled send time.
 - **Local Send Time campaigns** can be edited up to 24 hours prior to the scheduled send time.
 - **Optimal Send Time campaigns** can be edited up to 24 hours prior to the day the campaign is scheduled to send on.
 
-### What if I make an edit within the "safe zone"?
+### What if I make an edit to the send time within the "safe zone"?
 
 Changing the send time on campaigns within this time can lead to undesired behavior, for example:
 

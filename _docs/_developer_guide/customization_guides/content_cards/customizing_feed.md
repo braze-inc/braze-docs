@@ -28,7 +28,7 @@ You can configure the SDK to refresh manually at specific times as well.
 To dynamically show up-to-date Content Cards without manually refreshing, select **At first impression** during card creation. These cards will be refreshed once they are available.
 {% endalert %}
 
-{% tabs %}
+{% tabs local %}
 {% tab Android %}
 
 Request a manual refresh of Braze Content Cards from the Android SDK at any time by calling [`requestContentCardsRefresh`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-i-braze/request-content-cards-refresh.html). 
@@ -111,7 +111,7 @@ The default rate limit for manually refreshing the feed is 3 calls per 10 minute
 You can change the order in which your Content Cards are displayed. This allows you to fine tune the user experience by prioritizing certain types of content, such as time-sensitive promotions.
 
 {% tabs %}
-{% tab Android %}
+{% tab Android View System %}
 
 The [`ContentCardsFragment`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards/-content-cards-fragment/index.html) relies on a [`IContentCardsUpdateHandler`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards.handlers/-i-content-cards-update-handler/index.html) to handle any sorting or modifications of Content Cards before they are displayed in the feed. A custom update handler can be set via [`setContentCardUpdateHandler`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards/-content-cards-fragment/set-content-card-update-handler.html) on your `ContentCardsFragment`.
 
@@ -189,7 +189,6 @@ public class DefaultContentCardsUpdateHandler implements IContentCardsUpdateHand
 {% endsubtab %}
 {% subtab Kotlin %}
 
-
 ```kotlin
 class DefaultContentCardsUpdateHandler : IContentCardsUpdateHandler {
   override fun handleCardUpdate(event: ContentCardsUpdatedEvent): List<Card> {
@@ -254,6 +253,36 @@ class DefaultContentCardsUpdateHandler : IContentCardsUpdateHandler {
 The `ContentCardsFragment` source can be found on [GitHub](https://github.com/braze-inc/braze-android-sdk/blob/master/android-sdk-ui/src/main/java/com/braze/ui/contentcards/ContentCardsFragment.kt).
 
 {% endtab %}
+{% tab Jetpack Compose %}
+To filter and sort Content Cards in Jetpack Compose, set the `cardUpdateHandler` parameter. For example:
+
+```kotlin
+ContentCardsList(
+    cardUpdateHandler = {
+        it.sortedWith { cardA, cardB ->
+            // A displays above B
+            if (cardA.isPinned && !cardB.isPinned) {
+                return@sortedWith -1
+            }
+            // B displays above A
+            if (!cardA.isPinned && cardB.isPinned) {
+                return@sortedWith 1
+            }
+            // At this point, both A & B are pinned or both A & B are non-pinned
+            // A displays above B since A is newer
+            if (cardA.updated > cardB.updated) {
+                return@sortedWith -1
+            }
+            // B displays above A since A is newer
+            if (cardA.updated < cardB.updated) {
+                return@sortedWith 1
+            }
+            0
+        }
+    }
+)
+```
+{% endtab %}
 {% tab iOS %}
 
 {% subtabs %}
@@ -298,16 +327,14 @@ braze.showContentCards(null, (cards) => {
 {% endtab %}
 {% endtabs %}
 
-## Change "empty feed" language
+## Customizing "empty feed" message
 
-When a user does not qualify for any Content Cards, the SDK displays an "empty feed" error message stating: "We have no updates. Please check again later." 
-
-You can configure what is displayed in this empty feed message.
+When a user does not qualify for any Content Cards, the SDK displays an "empty feed" error message stating: "We have no updates. Please check again later." You can customize this "empty feed" error message similar to the following:
 
 ![An empty feed error message that reads "This is a custom empty state message."][1]
 
 {% tabs %}
-{% tab Android %}
+{% tab Android View System %}
 
 If the [`ContentCardsFragment`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards/-content-cards-fragment/index.html) determines that the user does not qualify for any Content Cards, it displays the empty feed error message.
 
@@ -328,6 +355,31 @@ The style used to display this message can be found via [`Braze.ContentCardsDisp
 ```
 
 For more information on customizing Content Card style elements, see [Customizing style]({{site.baseurl}}/developer_guide/customization_guides/content_cards/customizing_styles).
+{% endtab %}
+{% tab Jetpack Compose %}
+To customize the "empty feed" error message with Jetpack Compose, you can pass in an `emptyString` to `ContentCardsList`. You can also pass in `emptyTextStyle` to `ContentCardListStyling` to further customize this message.
+
+```kotlin
+ContentCardsList(
+    emptyString = "No messages today",
+    style = ContentCardListStyling(
+        emptyTextStyle = TextStyle(...)
+    )
+)
+```
+
+If you have a Composable you would like to display instead, you can pass in `emptyComposable` to `ContentCardsList`. If `emptyComposable` is specified, the `emptyString` will not be used.
+
+```kotlin
+ContentCardsList(
+    emptyComposable = {
+        Image(
+            painter = painterResource(id = R.drawable.noMessages),
+            contentDescription = "No messages"
+        )
+    }
+)
+```
 {% endtab %}
 {% tab iOS %}
 {% subtabs local %}
@@ -376,7 +428,7 @@ For this example, we'll set a key-value pair with the key `feed_type` that will 
 Once key-value pairs have been assigned, create a feed with logic that will display the cards you wish to display and filter cards of other types. In this example, we will only display cards with a matching key-value pair of `feed_type: "Transactional"`.
 
 {% tabs %}
-{% tab Android %}
+{% tab Android View System %}
 
 Filtering out Content Cards can be achieved by reading the key-value pairs set on the dashboard via [`Card.getExtras()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/extras.html) and filtering (or performing any other logic you'd like) using a custom update handler.
 
@@ -492,6 +544,19 @@ customContentCardsFragment.contentCardUpdateHandler = getUpdateHandlerForFeedTyp
 
 {% endsubtab %}
 {% endsubtabs %}
+{% endtab %}
+{% tab Jetpack Compose %}
+To filter which content cards are shown in this feed, use `cardUpdateHandler`. For example:
+
+```kotlin
+ContentCardsList(
+     cardUpdateHandler = {
+         it.filter { card ->
+             card.extras["feed_type"] == "Transactional"
+         }
+     }
+ )
+ ```
 {% endtab %}
 {% tab iOS %}
 

@@ -133,7 +133,7 @@ This way, you don't have to create a new footer for every email template or emai
 
 #### Managing subscription states for Chinese IP addresses
 
-If you anticipate that your email recipients will have a Chinese IP address, then you should not rely solely on an unsubscribe link in the footer of your email to maintain your `unsubscribed` lists. Instead, use a [list unsubscribe header]({{site.baseurl}}/user_guide/administrative/app_settings/email_settings#enable-list-unsubscribe-header). In addition, consider offering multiple additional methods for users to unsubscribe, such as a [custom unsubscribe page]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions#creating-a-custom-unsubscribe-page) or an [opt-in page]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions#creating-a-custom-opt-in-page).
+If you anticipate that your email recipients will have a Chinese IP address, then you should not rely solely on an unsubscribe link in your email to maintain your `unsubscribed` lists. Instead, provide alternate ways for users to easily unsubscribe, such as opening a support ticket through your support portal or emailing a customer representative. 
 
 ### Creating a custom unsubscribe page
 
