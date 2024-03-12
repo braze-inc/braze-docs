@@ -45,7 +45,7 @@ To use locales in your messaging, compose an email campaign or Canvas. Select be
 {% endtab %}
 {% tab Drag-and-drop editor %}
 
-1. Add translation tags `{% translation %}` and `{%endtranslation%}` to wrap all text and image or link URLs to be translated.<br>![][3]
+1. Add translation tags {% raw %}`{% translation %}` and `{%endtranslation%}`{% endraw %} to wrap all text and image or link URLs to be translated.<br>![][3]
 2. After adding the tags, save your message as a draft.
 3. Select **Multi-language** and add your locales for the message using the dropdown.
 4. Select **Download template** to download the translation template as a CSV. Then, fill in the translations in the CSV.
