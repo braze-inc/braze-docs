@@ -72,7 +72,7 @@ Once you have registered your activity, you can POST a payload to remotely start
 ## Example request
 
 ```json
-curl --location --request POST 'https://rest.iad-01.braze.com/messages/live_activity/update' \
+curl --location --request POST 'https://rest.iad-01.braze.com/messages/live_activity/start' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer {YOUR-REST-API-KEY}' \
 --data-raw '{
@@ -94,7 +94,8 @@ curl --location --request POST 'https://rest.iad-01.braze.com/messages/live_acti
             "body": "The game is starting! Tune in soon!",
             "title": "Chiefs v. Bills"
         }
-    }
+    },
+    // At least one of the following required:
     "segment_id": "{YOUR-SEGMENT-API-IDENTIFIER}", // Optional
     "audience": {...}, // Optional
     "external_user_ids": ["user-id1", "user-id2"], // Optional
