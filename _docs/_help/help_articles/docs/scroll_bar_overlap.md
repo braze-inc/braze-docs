@@ -27,8 +27,6 @@ Here's what your updated scroll bar should look like now:
 
 ![Example of fixed scroll bar without overlap][3]
 
-_Last updated on March 27, 2019_
-
 {% comment %}
 Insert this where there is a single line of long code that might cause issues:
 _Can't see the code because of the scroll bar? See how to fix that [here]({{site.baseurl}}/help/help_articles/docs/scroll_bar_overlap/)._

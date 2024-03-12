@@ -26,7 +26,5 @@ In short, avoid configuring an action-based campaign or Canvas with the same tri
 
 Still need help? Open a [support ticket]({{site.baseurl}}/braze_support/).
 
-_Last updated on November 16, 2022_
-
 [1]: {{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/customer_behavior_events/#session-start-event/
 [2]: {{site.baseurl}}/user_guide/engagement_tools/testing/race_conditions/#race-conditions/

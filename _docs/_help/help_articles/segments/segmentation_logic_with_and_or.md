@@ -56,8 +56,6 @@ Another way to ensure you're building the right logic is to create your segment 
 
 Still need help? Open a [support ticket]({{site.baseurl}}/braze_support/).
 
-_Last updated on June 3, 2022_
-
 [1]: {% image_buster /assets/img_archive/or_operator_segment.png %}
 [33]: {% image_buster /assets/img_archive/NikeSneakers.png %}
 [35]: {{site.baseurl}}/user_guide/data_and_analytics/reporting/viewing_and_understanding_segment_data/

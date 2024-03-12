@@ -36,7 +36,5 @@ To merge these user profiles:
  3. Import those attributes to the user profile either via API or CSV. 
  4. Remove the users via API, essentially deleting these duplicate users and the data outlined above.
 
-_Last updated on September 13, 2023_
-
 [1]: {{site.baseurl}}/api/endpoints/user_data/#user-delete-endpoint/
 [2]: {{site.baseurl}}/user_guide/data_and_analytics/analytics/understanding_your_app_usage_data/#lifetime-users

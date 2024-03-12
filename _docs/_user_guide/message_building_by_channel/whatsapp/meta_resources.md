@@ -24,12 +24,10 @@ Review the following Meta documentation for guidance with display names, phone n
 ## WhatsApp Product Updates 
 
 ### February 2024: Marketing Conversations Experimentation
-*Last Updated February 2024*
 
 Starting February 6th, 2024, WhatsApp is testing new approaches, starting with consumers in India, to create more valuable experiences and maximize customer engagement with your brand’s marketing conversations. This may include limiting the number of marketing conversations a user receives from your brand in a given period, starting with a small number of conversations that are less likely to be read.
 
 ### October 2023: Template Pacing 
-*Last Updated October 2023*
 
 Starting October 12th, 2023, WhatsApp is introducing a concept called “template pacing” for marketing messages. Instead of sending your message to your entire campaign audience simultaneously, “template pacing” initially delivers the message to a smaller subset of users to gather real-time feedback from campaign recipients before sending the remaining messages. 
 
@@ -42,7 +40,6 @@ Ultimately, this update provides you with a quicker feedback loop (30 minutes ve
 **If you have any further questions about this update, please reach out to your Meta partner representative.**
 
 ### June 2023: Messaging Experimentation 
-*Last Updated June 2023*
 
 Starting June 14, 2023, Meta is introducing new experimentation practices to the WhatsApp platform in order to assess how marketing messages impact consumer experience and engagement. This experiment may affect your marketing messages sent on the WhatsApp Business API with Braze.
 

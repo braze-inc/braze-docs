@@ -33,8 +33,6 @@ Confirm that your developers are passing location data to Braze. Normally, the p
 
 Still need help? Open a [support ticket]({{site.baseurl}}/braze_support/).
 
-_Last updated on November 16, 2022_
-
 [25]: {% image_buster /assets/img_archive/trouble7.png %}
 [26]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/location_tracking/
 [27]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/location_tracking/

@@ -18,7 +18,5 @@ This is a great way to find anonymous users. You can also use this information t
 
 Still need help? Open a [support ticket]({{site.baseurl}}/braze_support/).
 
-_Last updated on November 16, 2022_
-
 [1]: {{site.baseurl}}/user_guide/administrative/app_settings/developer_console/event_user_log_tab
 [2]: {{site.baseurl}}/user_guide/administrative/app_settings/developer_console/internal_groups_tab/#adding-test-users
