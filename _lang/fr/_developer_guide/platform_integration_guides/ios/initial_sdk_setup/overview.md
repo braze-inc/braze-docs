@@ -28,7 +28,7 @@ guide_featured_list:
   fa_icon: fas fa-flag-checkered
 - name: "Autres personnalisations SDK facultatives"
   link: /docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/other_sdk_customizations/
-  fa_icon: fas fa-id-card-alt
+  image: /assets/img/braze_icons/user-square.svg-alt
 
 ---
 

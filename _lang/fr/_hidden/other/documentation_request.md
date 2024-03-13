@@ -418,7 +418,7 @@ hide_toc: true
     });
   </script>
 
-<div id="braze_internal" ><i class="fa-solid fa-lock"></i> Interne uniquement. Ne pas partager avec les clients.</div>
+<div id="braze_internal" ><i class="/assets/img/braze_icons/lock-01.svg"></i> Interne uniquement. Ne pas partager avec les clients.</div>
 <div class="container-fluid" id="main-container">
 
       <div id="doc_div">

@@ -15,13 +15,13 @@ guide_featured_title: "Popular articles"
 guide_featured_list:
   - name: Export Campaign Results
     link: /docs/user_guide/data_and_analytics/export_braze_data/export_campaign_results_data/
-    fa_icon: fas fa-chart-bar
+    image: /assets/img/braze_icons/bar-chart-01.svg
   - name: Export Canvas Results
     link: /docs/user_guide/data_and_analytics/export_braze_data/export_canvas_data/
-    fa_icon: fas fa-palette
+    image: /assets/img/braze_icons/palette.svg
   - name: Export Segment Data
     link: /docs/user_guide/data_and_analytics/export_braze_data/segment_data_to_csv/
-    fa_icon: fas fa-file-csv
+    image: /assets/img/braze_icons/file-download-02.svg
 
 guide_menu_title: "More articles"
 guide_menu_list:
@@ -33,22 +33,22 @@ guide_menu_list:
     fa_icon: far fa-dot-circle
   - name: Export Revenue Data
     link: /docs/user_guide/data_and_analytics/export_braze_data/exporting_revenue_data/
-    fa_icon: fas fa-hand-holding-usd
+    image: /assets/img/braze_icons/coins-hand.svg
   - name: Export News Feed Data
     link: /docs/user_guide/data_and_analytics/export_braze_data/export_news_feed_data/
     fa_icon: fas fa-newspaper
   - name: Export Custom Event Data
     link: /docs/user_guide/data_and_analytics/export_braze_data/export_custom_event_data/
-    fa_icon: fas fa-cog
+    image: /assets/img/braze_icons/settings-01.svg
   - name: Export APIs
     link: /docs/user_guide/data_and_analytics/export_braze_data/export_apis/
-    fa_icon: fas fa-server
+    image: /assets/img/braze_icons/server-01.svg
   - name: Opening CSV Exports in Excel
     link: /docs/user_guide/data_and_analytics/export_braze_data/opening_csv_reports_in_excel/
     fa_icon: fas fa-file-excel
   - name: Export Troubleshooting
     link: /docs/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/
-    fa_icon: far fa-question-circle
+    image: /assets/img/braze_icons/help-circle.svg
   - name: Frequently Asked Questions
     link: /docs/user_guide/data_and_analytics/export_braze_data/faqs/
     fa_icon: fas fa-question
@@ -58,13 +58,13 @@ guide_menu_description2: "Looking to take advantage of data export with Braze Cu
 guide_menu_list2:
   - name: Braze Currents
     link: /docs/user_guide/data_and_analytics/braze_currents
-    fa_icon: fas fa-database
+    image: /assets/img/braze_icons/database-01.svg
   - name: Setting up Currents
     link: /docs/user_guide/data_and_analytics/braze_currents/setting_up_currents/
     fa_icon: fas fa-warehouse
   - name: How Braze uses Currents
     link: /docs/user_guide/data_and_analytics/braze_currents/how_braze_uses_currents/
-    fa_icon: fas fa-arrows-alt
+    image: /assets/img/braze_icons/expand-05.svg
 
 ---
 <br><br>

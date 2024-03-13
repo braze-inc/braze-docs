@@ -12,10 +12,10 @@ guide_featured_title: "Section Articles"
 guide_featured_list:
 - name: Création d’un message In-App
   link: /docs/create_dnd_iam/
-  fa_icon: fas fa-mobile-alt
+  image: /assets/img/braze_icons/phone-02.svg
 - name: Blocs éditeur
   link: /docs/editor_blocks_dnd_iam/
-  fa_icon: fas fa-align-left
+  image: /assets/img/braze_icons/align-left.svg
 
 ---
 <br><br>

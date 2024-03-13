@@ -18,7 +18,7 @@ guide_featured_list:
     image: /assets/img/icons/strategy_playbook.svg
   - name: Architecture Overview
     link: /docs/developer_guide/platform_wide/getting_started/architecture_overview/
-    fa_icon: fas fa-table-columns
+    image: /assets/img/braze_icons/columns-01.svg
   - name: Analytics Overview
     link: /docs/developer_guide/platform_wide/getting_started/analytics_overview/
     image: /assets/img/icons/segments.svg

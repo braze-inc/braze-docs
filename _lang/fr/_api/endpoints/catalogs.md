@@ -15,50 +15,50 @@ guide_featured_title: "Endpoints de gestion de catalogue<br><br>"
 guide_featured_list:
   - name: "DELETE : Supprimer un catalogue"
     link: /docs/api/endpoints/catalogs/catalog_management/synchronous/delete_catalog/
-    fa_icon: fas fa-pen-square
+    image: /assets/img/braze_icons/edit-05.svg
   - name: "GET : Lister des catalogues"
     link: /docs/api/endpoints/catalogs/catalog_management/synchronous/get_list_catalogs/
-    fa_icon: fas fa-list-ul
+    image: /assets/img/braze_icons/list.svg
   - name: "POST : Créer un catalogue"
     link: /docs/api/endpoints/catalogs/catalog_management/synchronous/post_create_catalog/
-    fa_icon: fas fa-check
+    image: /assets/img/braze_icons/check-square-broken.svg
 
 optional_guide_menu_title: "Endpoints des produits du catalogue"
 guide_menu_title: "<h3>Asynchrone</h3>"
 guide_menu_list:
   - name: "DELETE : Supprimer plusieurs endpoints des produits du catalogue"
     link: /docs/api/endpoints/catalogs/catalog_items/asynchronous/delete_catalog_items_bulk/
-    fa_icon: fas fa-pen-square
+    image: /assets/img/braze_icons/edit-05.svg
   - name: "PATCH : Éditer plusieurs produits du catalogue"
     link: /docs/api/endpoints/catalogs/catalog_items/asynchronous/patch_catalog_items_bulk/
-    fa_icon: fas fa-user-edit
+    image: /assets/img/braze_icons/user-edit.svg
   - name: "POST : créer plusieurs produits du catalogue"
     link: /docs/api/endpoints/catalogs/catalog_items/asynchronous/post_create_catalog_items_bulk/
-    fa_icon: fas fa-check
+    image: /assets/img/braze_icons/check-square-broken.svg
   - name: "PUT : créer plusieurs produits du catalogue"
     link: /docs/api/endpoints/catalogs/catalog_items/asynchronous/put_update_catalog_items/
-    fa_icon: fas fa-user-circle
+    image: /assets/img/braze_icons/user-circle.svg
 
 guide_menu_title2: "<h3>Synchrone</h3>"
 guide_menu_list2:  
   - name: "DELETE : Supprimer un produit du catalogue"
     link: /docs/api/endpoints/catalogs/catalog_items/synchronous/delete_catalog_item/
-    fa_icon: fas fa-pen-square
+    image: /assets/img/braze_icons/edit-05.svg
   - name: "GET : Lister les détails du produit du catalogue"
     link: /docs/api/endpoints/catalogs/catalog_items/synchronous/get_catalog_item_details/
-    fa_icon: fas fa-list-ul
+    image: /assets/img/braze_icons/list.svg
   - name: "GET : Lister les détails de plusieurs produits du catalogue"
     link: /docs/api/endpoints/catalogs/catalog_items/synchronous/get_catalog_items_details_bulk/
-    fa_icon: fas fa-list-alt
+    image: /assets/img/braze_icons/list.svg
   - name: "PATCH : Éditer un produit du catalogue"
     link: /docs/api/endpoints/catalogs/catalog_items/synchronous/patch_catalog_item/
-    fa_icon: fas fa-user-edit
+    image: /assets/img/braze_icons/user-edit.svg
   - name: "POST : Créer un produit du catalogue"
     link: /docs/api/endpoints/catalogs/catalog_items/synchronous/post_create_catalog_item/
-    fa_icon: fas fa-check
+    image: /assets/img/braze_icons/check-square-broken.svg
   - name: "PUT : Créer un produit du catalogue"
     link: /docs/api/endpoints/catalogs/catalog_items/synchronous/put_update_catalog_item/
-    fa_icon: fas fa-user-circle
+    image: /assets/img/braze_icons/user-circle.svg
 
 
 ---

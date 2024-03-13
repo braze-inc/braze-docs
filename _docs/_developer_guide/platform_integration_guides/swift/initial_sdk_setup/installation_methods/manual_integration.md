@@ -21,17 +21,13 @@ Go to the [Braze SDK release page on GitHub](https://github.com/braze-inc/braze-
 
 The Braze Swift SDK contains a variety of standalone XCFrameworks, which gives you the freedom to integrate the features you want&#8212;without needing to integrate them all. Reference the following table to choose your XCFrameworks:
 
-| Package                    | Required? | Description                                                                                                                                                                                                                                                                                                              |
-| -------------------------- | --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `BrazeKit`                 | Yes       | Main SDK library that provides support for analytics and push notifications.                                                                                                                                                                                                                                             |
-| `BrazeLocation`            | No        | Location library that provides support for location analytics and geofence monitoring.                                                                                                                                                                                                                                   |
-| `BrazeUI`                  | No        | Braze-provided user interface library for in-app messages and Content Cards.                                                                                                                                                                                                                                             |
-| `BrazeNotificationService` | No        | Notification service extension library that provides support for rich push notifications. Do not add this library directly to your main application target, instead [add the `BrazeNotificationService` library separately](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/b2-rich-push-notifications).     |
-| `BrazePushStory`           | No        | Notification content extension library that provides support for Push Stories. Do not add this library directly to your main application target, instead [add the `BrazePushStory` library separately](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/b3-push-stories).                                     |
-| `BrazeKitCompat`           | No        | Compatibility library containing all the `Appboy` and `ABK*` classes and methods that were available in the `Appboy-iOS-SDK` version 4.X.X. For usage details, refer to the minimal migration scenario in the [migration guide](https://braze-inc.github.io/braze-swift-sdk/documentation/braze/appboy-migration-guide/). |
-| `BrazeUICompat`            | No        | Compatibility library containing all the `ABK*` classes and methods that were available in the `AppboyUI` library from `Appboy-iOS-SDK` version 4.X.X. For usage details, refer to the minimal migration scenario in the [migration guide](https://braze-inc.github.io/braze-swift-sdk/documentation/braze/appboy-migration-guide/). |
-| `SDWebImage`               | No        | Dependency used only by `BrazeUICompat` in the minimal migration scenario. |
-
+| Package                    | Required? | Description                                                                                                                                                                                                                                                                                                           |
+|----------------------------|-----------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `BrazeKit`                 | Yes       | Main SDK library that provides support for analytics and push notifications.                                                                                                                                                                                                                                          |
+| `BrazeLocation`            | No        | Location library that provides support for location analytics and geofence monitoring.                                                                                                                                                                                                                                |
+| `BrazeUI`                  | No        | Braze-provided user interface library for in-app messages and Content Cards.                                                                                                                                                                                                                                          |
+| `BrazeNotificationService` | No        | Notification service extension library that provides support for rich push notifications.  Do not add this library directly to your main application target, instead [add the `BrazeNotificationService` library separately](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/b2-rich-push-notifications). |
+| `BrazePushStory`           | No        | Notification content extension library that provides support for Push Stories. Do not add this library directly to your main application target, instead [add the `BrazePushStory` library separately](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/b3-push-stories).                                  |
 {: .ws-td-nw-1 .reset-td-br-1 .reset-td-br-2}
 
 ## Step 3: Prepare your files
@@ -82,13 +78,12 @@ Decide whether you want to use **Static** or **Dynamic** XCFrameworks, then prep
    temp_bundles_dir
    └── BrazeKit.bundle
    ```
-3. If you're using the `BrazeLocation`, `BrazeUI`, `BrazeUICompat`, or `SDWebImage` XCFrameworks, move their corresponding bundles into your temporary directory. Your directory should be similar to the following:
+3. If you're using the `BrazeLocation`, `BrazeUI`, or `BrazeUICompat` XCFrameworks, move their corresponding bundles into your temporary directory. Your directory should be similar to the following:
    ```bash
    temp_bundles_dir
+   ├── BrazeKit.bundle
    ├── BrazeLocation.bundle
-   ├── BrazeUI.bundle
-   ├── BrazeUICompat.bundle
-   └── SDWebImage.bundle
+   └── BrazeUICompat.bundle
    ```
 {% alert note %}
 Only move over bundles for the [frameworks you prepared](#step-31-prepare-your-frameworks).

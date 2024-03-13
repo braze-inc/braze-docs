@@ -279,7 +279,7 @@ Use the reserved Braze profile field called `braze_subscription_groups`, which c
 analytics.identify(
   userId: "{your-user}",
   traits: [
-    "braze_subscription_groups": [
+    "braze_subscription_group": [
       [
         "subscription_group_id": "{your-group-id}",
         "subscription_group_state": "subscribed"
@@ -298,7 +298,7 @@ analytics.identify(
 analytics.identify(
   "{your-user}",
   buildJsonObject {
-    put("braze_subscription_groups", buildJsonArray {
+    put("braze_subscription_group", buildJsonArray {
         add(
           buildJsonObject {
             put("subscription_group_id", "{your-group-id}")

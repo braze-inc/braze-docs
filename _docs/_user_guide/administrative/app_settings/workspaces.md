@@ -105,7 +105,7 @@ There's no limit to the number of workspaces you can favorite, but we recommend 
 To rename your workspace:
 
 1. Go to **Settings** > **App Settings**.
-2. Hover over your workspace’s name and click <i class="fa-solid fa-pencil" style="color: #0b8294;"></i>.
+2. Hover over your workspace’s name and click <i class="image: /assets/img/braze_icons/pencil-01.svg" style="color: #0b8294;"></i>.
 3. Give your workspace a new name, then click <i class="fa-solid fa-square-check" style="color: #0b8294;"></i> **Save**.
 
 ![][8]

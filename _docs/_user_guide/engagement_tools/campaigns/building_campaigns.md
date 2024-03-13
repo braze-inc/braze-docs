@@ -14,27 +14,27 @@ guide_featured_title: "Section articles"
 guide_featured_list:
   - name: Creating a Campaign
     link: /docs/user_guide/engagement_tools/campaigns/building_campaigns/creating_campaign/
-    fa_icon: fas fa-list
+    image: /assets/img/braze_icons/list.svg
   - name: Time-Based Functionalities
     link: /docs/user_guide/engagement_tools/campaigns/building_campaigns/time_based_campaign/
-    fa_icon: fas fa-clock
+    image: /assets/img/braze_icons/clock.svg
   - name: Scheduling Your Campaign
     link: /docs/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/
-    fa_icon: fas fa-chart-line
+    image: /assets/img/braze_icons/line-chart-up-01.svg
   - name: Targeting Users
     link: /docs/user_guide/engagement_tools/campaigns/building_campaigns/targeting_users/
-    fa_icon: fas fa-bullseye
+    image: /assets/img/braze_icons/target-04.svg
   - name: Conversion Events
     link: /docs/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/
-    fa_icon: fas fa-calendar-check
+    image: /assets/img/braze_icons/calendar-check-02.svg
   - name: Rate Limiting and Frequency Capping
     link: /docs/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/
-    fa_icon: fas fa-exclamation-triangle
+    image: /assets/img/braze_icons/alert-triangle.svg
 
 guide_menu_title: "Additional resources"
 guide_menu_list:
   - name: AI Copywriting Assistant
     link: /docs/user_guide/intelligence/ai_copywriting/
-    fa_icon: fas fa-edit
+    image: /assets/img/braze_icons/edit-05.svg
 
 ---

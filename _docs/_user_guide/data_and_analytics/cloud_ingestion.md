@@ -14,16 +14,16 @@ guide_featured_title: "Section articles"
 guide_featured_list:
   - name: Overview and Best Practices
     link: /docs/user_guide/data_and_analytics/cloud_ingestion/overview/
-    fa_icon: fa-solid fa-users-between-lines
+    image: /assets/img/braze_icons/cloud-blank-01.svg
   - name: Available Integrations
     link: /docs/user_guide/data_and_analytics/cloud_ingestion/integrations/
-    fa_icon: fa-solid fa-gears
+    image: /assets/img/braze_icons/settings-01.svg
   - name: Sync Catalogs Data
     link: /docs/user_guide/data_and_analytics/cloud_ingestion/sync_catalogs_data/
-    fa_icon: fa-solid fa-rotate
+    image: /assets/img/braze_icons/refresh-ccw-02.svg
   - name: Delete Users with CDI
     link: /docs/user_guide/data_and_analytics/cloud_ingestion/delete_users/
-    fa_icon: fa-solid fa-trash
+    image: /assets/img/braze_icons/trash-01.svg
 ---
 
 [1]: {% image_buster /assets/img/cloud_ingestion/ingestion_1.png %}

@@ -16,7 +16,7 @@ guide_featured_title: ""
 guide_featured_list:
   - name: "POST: Create Dashboard User Account"
     link: /docs/post_create_user_account/
-    fa_icon: fa-solid fa-circle-plus
+    image: /assets/img/braze_icons/plus-circle.svg
   - name: "GET: Look Up Existing Dashboard User Account"
     link: /docs/get_see_user_account_information/
     fa_icon: fa-solid fa-eye
@@ -25,9 +25,9 @@ guide_featured_list:
     fa_icon: fa-solid fa-eye
   - name: "PUT: Update Dashboard User Account"
     link: /docs/post_update_existing_user_account/
-    fa_icon: fa-solid fa-pencil
+    image: /assets/img/braze_icons/pencil-01.svg
   - name: "DELETE: Remove Dashboard User Account"
     link: /docs/delete_existing_dashboard_user/
-    fa_icon: fa-solid fa-trash
+    image: /assets/img/braze_icons/trash-01.svg
 ---
 

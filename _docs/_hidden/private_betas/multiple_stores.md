@@ -7,10 +7,10 @@ layout: dev_guide
 
 # Shopify multiple store support
 
-> Connect multiple Shopify stores to a single workspace with our new beta for multiple store support to have a holistic view of your customers across all markets or brands. Build and launch automation programs and journeys in a single workspace without duplicating efforts across multiple instances. 
+> Connect multiple Shopify stores to a single app group with our new beta for multiple store support to have a holistic view of your customers across all markets or brands. Build and launch automation programs and journeys in a single workspace without duplicating efforts across multiple instances. 
 
 {% alert important %}
-Support for multiple Shopify stores is available in beta, which may contain bugs. This feature is subject to change as development continues.
+Shopify multiple store Support is currently being provided as a beta version, which may contain bugs. The feature may also change, iterate, and evolve as the product team continues development. 
 {% endalert %}
 
 ## Prerequisites
@@ -30,13 +30,13 @@ With Braze’s multiple-store support, you can:
 - Manage email and SMS subscriptions across different stores
 
 ### Setting up an additional store
-1. After you have installed your first store, select the **+ Connect New Store** option.<br>![][1]{: style="max-width:70%;"}<br><br>
-2. You will be prompted to go through the onboarding flow for this new store. More details can be found in our [Setting up Shopify]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/shopify/setting_up_shopify/) guide.<br><br>Note that the settings from the previous store can be carried over, but you can update the settings accordingly as you progress through your onboarding.<br><br>
+1. After you have installed your first store, select the **+ Connect New Store** option.<br>![][1]<br><br>
+2. You will be prompted to go through the onboarding flow for this new store. More details can be found in our [Setting up Shopify]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/shopify/setting_up_shopify/) guide.<br><br>Note that the settings from the previous store will be carried over, but you can update these accordingly.<br><br>
 3. For the collect email or SMS subscribers step:
-- To appropriately collect email and SMS subscriptions for each store, you must assign unique subscription groups to each store setup. 
-- We suggest that you **do not** enable “Override existing global state for users” as it can globally unsubscribe your customers if they interacted with more than one of your stores.<br><br>
+- **Customers with multiple regions and markets as stores**: Confirm you set the correct email subscription group to the right store for every store install. To track a user's most recent subscription state from any store, you must enable the “Override existing global state for users” option when installing each store. Doing so will override the Braze global email subscription state and the email subscription group.
+- **Customers with multiple brands as stores**: Currently, we do not have support to override only the email subscription group without also overriding the global email subscription state. We aim to provide this support ahead of general availability.<br><br>
 4. Repeat this installation for as many stores as you need.<br><br>
-5. To view each store’s integration and configure advanced settings, click into a store in the drop-down menu:<br>![][2]{: style="max-width:70%;"}
+5. To view each store’s integration and configure advanced settings, click into a store in the drop-down menu:<br>![][2]
 
 ## Shopify data
 
@@ -57,7 +57,7 @@ To use custom events when creating or editing a segment, select the **Nested Cus
 
 You can specify your path by typing it into the field or clicking the plus button and selecting the path.
 
-![4]{:style="max-width:70%;"}
+![4]{:style="max-width:60%;"}
 
 ### Shopify custom events
 
@@ -84,6 +84,13 @@ If the user’s Shopify customer ID, email address, or phone number exists alrea
 {% alert warning %}
 Braze will update the user profile with Shopify customer data from the store with the most recent activity. This means that any attributes, such as email, phone number, sending phone, city, etc., can be overwritten with the most recent store activity. For example, if a user has a different phone number in two different stores, Braze will update the user profile with the phone number from the store with the most recent activity.
 {% endalert %}
+
+## Not currently supported
+
+The following features and functionalities are not currently supported; however, we plan to provide such support if and when we make this feature generally available:
+- Ability to import a catalog for each store
+- Ability to override only a specific email subscription group state without overriding the global email subscription status. This is ideal for stores with multiple brands that want email subscriptions from different stores to be managed and updated individually without impacting other email subscription groups and the overall global state.
+- `shopify_storefront` property is not supported for [ScriptTag events]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/shopify/shopify_data_processing#supported-shopify-events).
 
 [1]: {% image_buster /assets/img/multiple_stores.png %}
 [2]: {% image_buster /assets/img/multiple_stores2.png %}

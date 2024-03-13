@@ -15,48 +15,48 @@ guide_featured_title: "Popular articles"
 guide_featured_list:
   - name: Creating a Segment
     link: /docs/user_guide/engagement_tools/segments/creating_a_segment/
-    fa_icon: fas fa-chart-pie
+    image: /assets/img/braze_icons/pie-chart-01.svg
   - name: Managing Segments
     link: /docs/user_guide/engagement_tools/segments/managing_segments/
-    fa_icon: fas fa-pen-square
+    image: /assets/img/braze_icons/edit-05.svg
   - name: Segmentation Filters
     link: /docs/user_guide/engagement_tools/segments/segmentation_filters/
-    fa_icon: fas fa-filter
+    image: /assets/img/braze_icons/flag-02.svg
   - name: Segment Funnels
     link: /docs/user_guide/engagement_tools/segments/segment_funnels/
-    fa_icon: fas fa-user-slash
+    image: /assets/img/braze_icons/users-right.svg
 
 guide_menu_title: "More articles"
 guide_menu_list:
   - name: Segment Insights
     link: /docs/user_guide/engagement_tools/segments/segment_insights/
-    fa_icon: fas fa-chart-pie
+    image: /assets/img/braze_icons/pie-chart-01.svg
   - name: Segment Extension
     link: /docs/user_guide/engagement_tools/segments/segment_extension/
-    fa_icon: fas fa-users
+    image: /assets/img/braze_icons/users-01.svg
   - name: SQL Segments
     link: /docs/sql_segments/
-    fa_icon: fas fa-users
+    image: /assets/img/braze_icons/users-01.svg
   - name: Catalog Segments
     link: /docs/catalog_segments/
-    fa_icon: fas fa-users
+    image: /assets/img/braze_icons/users-01.svg
   - name: User Profiles
     link: /docs/user_guide/engagement_tools/segments/using_user_search/
-    fa_icon: fas fa-users
+    image: /assets/img/braze_icons/users-01.svg
   - name: Location Targeting
     link: /docs/user_guide/engagement_tools/segments/location_targeting/
     fa_icon: fas fa-street-view
   - name: Beacon and Geofence Support
     link: /docs/user_guide/engagement_tools/segments/beacon_support/
-    fa_icon: fas fa-map-marker-alt
+    image: /assets/img/braze_icons/marker-pin-01.svg
   - name: Regular Expressions
     link: /docs/user_guide/engagement_tools/segments/regex/
-    fa_icon: fas fa-search
+    image: /assets/img/braze_icons/search-sm.svg
 
 guide_menu_title2: "Other"
 guide_menu_list2:
   - name: Custom Attributes
     link: /docs/user_guide/data_and_analytics/custom_data/custom_attributes/
-    fa_icon: fas fa-table
+    image: /assets/img/braze_icons/table.svg
 
 ---

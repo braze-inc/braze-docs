@@ -16,7 +16,7 @@ guide_menu_list:
     fa_icon: fas fa-low-vision
   - name: Messages In-App non affichés
     link: /docs/help/help_articles/in-app_messages/in-app_messages_not_displaying/
-    fa_icon: fas fa-comment-slash
+    
 
 
 ---

@@ -1,5 +1,5 @@
 $search_border_color: #D9D9D9;
-$search_color: $navy-bay;
+$search_color: $braze-purple-dark;
 $search_min_width: 250px;
 
 $search_title_width: 250px;
@@ -418,15 +418,15 @@ $search_icon: #D4D4D4;
         font-size: 13px;
         line-height: 50px;
         font-family: $braze-black;
-        color: $navy-bay;
+        color: $braze-purple-dark;
         position: absolute;
         right: 0;
         margin: auto 15px auto 0;
         cursor: pointer;
         a {
-          color: $navy-bay;
+          color: $braze-purple;
           &:hover {
-            color: $navy-bay;
+            color: $braze-purple;
             text-decoration: none;
           }
         }

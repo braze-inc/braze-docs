@@ -61,7 +61,7 @@ You're connected! The promotion is now connected to Braze, and all entries colle
 - Tracking campaign name
 
 ### Does ViralSweep update subscribers?
-Yes. If you run a promotion and ViralSweep passes someone to Braze, then you run another promotion in the future and the same person enters, that person's information will automatically be updated in Braze (if any new information is provided). Mainly, the referral URL will be updated with the newest URL for each promotion they enter, and the promotion ID field will contain the ID of all the promotions they have entered.
+Yes. If you run a promotion and ViralSweep passes someone to Braze, and then you run another promotion later, and the same person enters, ViralSweep will automatically update their information in Braze (if any new information is provided). The referral URL will also be updated with the newest URL for each promotion they enter.
 
 ## Troubleshooting
 

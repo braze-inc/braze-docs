@@ -16,7 +16,7 @@ guide_featured_list:
   fa_icon: fas fa-fingerprint
 - name: Limiter l’Authentification unique (SSO) SAML
   link: /docs/user_guide/administrative/access_braze/single_sign_on/set_up/#restriction
-  fa_icon: fas fa-lock
+  image: /assets/img/braze_icons/lock-01.svg
 - name: Azure AD
   link: /docs/user_guide/administrative/access_braze/single_sign_on/azure_ad/
   image: /assets/img/azure_ad.png

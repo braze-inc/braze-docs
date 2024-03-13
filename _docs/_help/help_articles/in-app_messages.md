@@ -16,7 +16,7 @@ guide_menu_list:
     fa_icon: fas fa-low-vision
   - name: In-App Messages Not Displaying
     link: /docs/help/help_articles/in-app_messages/in-app_messages_not_displaying/
-    fa_icon: fas fa-comment-slash
+    image: /assets/img/braze_icons/message-x-circle.svg
 
 
 ---

@@ -14,7 +14,7 @@ guide_featured_title: "Section Articles"
 guide_featured_list:
   - name: Canvas Basics
     link: /docs/user_guide/engagement_tools/canvas/get_started/the_basics/
-    fa_icon: fas fa-list
+    image: /assets/img/braze_icons/list.svg
   - name: Canvas Outlines
     link: /docs/user_guide/engagement_tools/canvas/get_started/canvas_outlines/
     fa_icon: fas fa-code-branch

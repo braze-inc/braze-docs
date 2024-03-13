@@ -19,6 +19,6 @@ guide_featured_list:
   fa_icon: far fa-dot-circle
 - name: "Push Stories"
   link: /docs/user_guide/message_building_by_channel/push/advanced_push_options/push_stories/
-  fa_icon: fas fa-book-open
+  image: /assets/img/braze_icons/book-closed.svg
 ---
 <br><br>

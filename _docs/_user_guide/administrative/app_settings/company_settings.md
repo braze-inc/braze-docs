@@ -19,10 +19,10 @@ guide_featured_list:
   fa_icon: far fa-dot-circle
 - name: Security Settings
   link: /docs/user_guide/administrative/app_settings/company_settings/security_settings/
-  fa_icon: fas fa-shield-alt
+  image: /assets/img/braze_icons/shield-01.svg
 - name: Automated User Provisioning
   link: /docs/user_guide/administrative/app_settings/company_settings/automated_user_provisioning/
-  fa_icon: fas fa-user-plus
+  image: /assets/img/braze_icons/user-plus-01.svg
 ---
 
 {% alert warning %}

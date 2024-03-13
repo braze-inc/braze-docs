@@ -11,10 +11,10 @@ guide_menu_title: ""
 guide_menu_list:
   - name: Supprimer des utilisateurs via l’API
     link: /docs/help/help_articles/api/delete_user/
-    fa_icon: fas fa-user-times
+    image: /assets/img/braze_icons/user-minus-01.svg
   - name: Comment les attributs de campagne et les attributs Canvas diffèrent entre les sources
     link: /docs/help/help_articles/api/attribute_name_id_across_sources/
-    fa_icon: fas fa-circle-info
+    image: /assets/img/braze_icons/info-circle.svg
 
 noindex: true
 ---

@@ -13,7 +13,7 @@ guide_featured_list:
   fa_icon: fab fa-amazon
 - name: Atelier Amazon Personalize
   link: /docs/partners/message_personalization/dynamic_content/amazon_personalize/workshop/
-  fa_icon: fas fa-wrench
+  image: /assets/img/braze_icons/tool-01.svg
 ---
 
 <br> 

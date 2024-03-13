@@ -17,7 +17,7 @@ guide_featured_list:
   fa_icon: fa-brands fa-swift
 - name: Web
   link: /docs/developer_guide/platform_integration_guides/web/initial_sdk_setup/
-  fa_icon: fas fa-globe
+  image: /assets/img/braze_icons/globe-02.svg
   nav_link: web
 
 guide_menu_title: "All integrations"

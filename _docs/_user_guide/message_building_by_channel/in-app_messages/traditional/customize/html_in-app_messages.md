@@ -81,10 +81,6 @@ The following JavaScript methods are supported within Braze HTML in-app messages
 }
 </style>
 
-{% alert note %}
-You cannot reference Liquid to insert <code>customAttributes</code> into JavaScript Bridge methods.
-{% endalert %}
-
 {% multi_lang_include archive/appboyBridge.md %}
 
 ## Link-based actions

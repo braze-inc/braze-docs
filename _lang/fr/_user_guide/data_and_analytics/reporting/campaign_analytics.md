@@ -33,9 +33,9 @@ guide_menu_title: "Autres articles"
 guide_menu_list:
   - name: Rapports d'entonnoir
     link: /docs/user_guide/data_and_analytics/reporting/funnel_reports/
-    fa_icon: fas fa-filter
+    image: /assets/img/braze_icons/flag-02.svg
   - name: Rapports de rétention
     link: /docs/user_guide/data_and_analytics/reporting/retention_reports/
-    fa_icon: fas fa-user-check
+    image: /assets/img/braze_icons/user-check-01.svg
 
 ---

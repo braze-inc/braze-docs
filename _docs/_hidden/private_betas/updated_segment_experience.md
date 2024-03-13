@@ -74,18 +74,6 @@ Braze doesn't generate profiles for users until they've used the app for the fir
 Segments already using the Segment Membership Filter cannot be further included or nested into other segments.
 {% endalert %}
 
-#### Exclusion groups (optional)
-
-When building a segment, you can apply one or multiple exclusion groups. Exclusion groups contain criteria that identify users to exclude from your segment, and will always be connected to your filter groups with an "AND NOT" operator.
-
-If a user falls into your exclusion group criteria, they will not be part of your segment, even if they meet the criteria within your filter groups.
-
-Create an exclusion group by adding filters like you would for filter groups. The estimated excluded users statistic is the number of users normally targeted by this segment but are excluded because of exclusion group criteria.
-
-Excluded users will not be counted as part of your segment’s _Total reachable users_ statistic.
-
-![An exclusion group with two filters.][12]
-
 #### Testing segments
 
 After adding apps and filters to your segment, you can test if your segment is set up as expected by looking up a user to confirm if they match the segment criteria. To do so, click **Lookup User** and search for a user’s `external_id` or `braze_id`.
@@ -113,7 +101,19 @@ However, the segmentation stats or preview may not show this individual user bec
 
 Braze has testing filters to target specific users by user ID or email address.
 
-### Step 5: Save your segment
+### Step 5: Add an exclusion group to your segment (optional)
+
+When building a segment, you can apply one or multiple exclusion groups. Exclusion groups contain criteria that identify users to exclude from your segment, and will always be connected to your filter groups with an "AND NOT" operator.
+
+If a user falls into your exclusion group criteria, they will not be part of your segment, even if they meet the criteria within your filter groups.
+
+Create an exclusion group by adding filters, the same way you would for filter groups. The estimated excluded users statistic is the number of users that would normally be targeted by this segment, but are excluded because of exclusion group criteria.
+
+Excluded users will not be counted as part of your segment’s **Total reachable users** statistic.
+
+![An exclusion group with two filters.][12]
+
+### Step 6: Save your segment
 
 Once you've clicked **Save**, you're ready to start sending messages to your users!
 
@@ -141,8 +141,6 @@ Braze provides the following statistics on segment size. All estimated statistic
 
 For each filter group, you can view estimated reachable users. Click **Expand extra funnel statistics** to see a breakdown across channels.
 
-![A filter group with a filter for a First Name that isn't blank and using an app more than 1 time.][4]
-
 #### Segment statistics
 
 For an entire segment, you can view estimated reachable users, as well as estimated user counts for each channel, at the bottom of the page. You can also view an exact count of reachable users (for both the segment overall and a per channel basis) by clicking **Calculate exact statistics**.
@@ -166,7 +164,6 @@ You can unarchive the segment by navigating to it within the **Segments** page, 
 [1]: {% image_buster /assets/img_archive/Segment1.png %}
 [2]: {% image_buster /assets/img_archive/Segment2.png %}
 [3]: {% image_buster /assets/img_archive/segment_step4.png %}
-[4]: {% image_buster /assets/img_archive/segment_filter_stats.png %}
 [5]: {% image_buster /assets/img_archive/segment_app_selection.png %}
 [6]: {% image_buster /assets/img_archive/user_lookup.png %}
 [7]: {% image_buster /assets/img_archive/user_lookup_match.png %}

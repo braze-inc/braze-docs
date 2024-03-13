@@ -18,22 +18,22 @@ guide_featured_title: "Section Articles"
 guide_featured_list:
   - name: Boutons d’action
     link: /docs/developer_guide/platform_integration_guides/swift/push_notifications/customization/action_buttons/
-    fa_icon: fa fa-exclamation
+    image: /assets/img/braze_icons/annotation-alert.svg
   - name: Sons personnalisés
     link: /docs/developer_guide/platform_integration_guides/swift/push_notifications/customization/custom_sounds/
-    fa_icon: fa-regular fa-file-audio
+    image: /assets/img/braze_icons/play-square.svg
   - name: Notifications enrichies
     link: /docs/developer_guide/platform_integration_guides/swift/push_notifications/customization/rich_notifications/
-    fa_icon: fa fa-paint-brush
+    image: /assets/img/braze_icons/brush-02.svg
   - name: Badges
     link: /docs/developer_guide/platform_integration_guides/swift/push_notifications/customization/badges/
-    fa_icon: fa fa-id-badge
+    image: /assets/img/braze_icons/key-01.svg
   - name: Ignorer les notifications push internes
     link: /docs/developer_guide/platform_integration_guides/swift/push_notifications/customization/ignoring_internal_push/
-    fa_icon: fa fa-eye-slash
+    image: /assets/img/braze_icons/eye-off.svg
   - name: Paramètres avancés
     link: /docs/developer_guide/platform_integration_guides/swift/push_notifications/customization/advanced_settings/
-    fa_icon: fa fa-cog
+    image: /assets/img/braze_icons/settings-01.svg
 
 
 ---

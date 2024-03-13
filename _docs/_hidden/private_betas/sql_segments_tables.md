@@ -1,11 +1,8 @@
 ---
 nav_title: "SQL Table Reference"
-article_title: SQL Table Reference
-page_order: 3
-page_type: reference
+permalink: "/sql_segments_tables/"
+hidden: true
 toc_headers: h2
-description: "This article contains tables and columns available to be queried in the Query Builder or when generating SQL Segment Extensions."
-tool: Segments
 ---
 
 <style>

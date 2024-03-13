@@ -22,19 +22,19 @@ guide_featured_list:
   fa_icon: fa fa-shopping-cart
 - name: Shopify Data in Braze
   link: /docs/shopify_data/
-  fa_icon: fas fa-cogs
+  image: /assets/img/braze_icons/settings-01.svg
 - name: Shopify Historical Backfill
   link: /docs/shopify_historical_backfill/
   fa_icon: fa-solid fa-database
 - name: Shopify Catalogs
   link: /docs/shopify_catalogs/
-  fa_icon: fas fa-list
+  image: /assets/img/braze_icons/list.svg
 - name: Back-In-Stock Notifications
   link: /docs/back_in_stock/
   fa_icon: fas fa-cart-shopping
 - name: Use Cases
   link: /docs/shopify_use_cases/
-  fa_icon: fa fa-users
+  image: /assets/img/braze_icons/users-01.svg
 
 ---
 <br><br>

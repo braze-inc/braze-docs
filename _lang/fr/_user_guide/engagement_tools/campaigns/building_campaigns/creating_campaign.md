@@ -34,6 +34,6 @@ guide_featured_list:
   image: /assets/img/webhook_icon.png
 - name: Campagne multicanale
   link: /docs/user_guide/engagement_tools/campaigns/faq/#how-do-you-create-a-multichannel-campaign
-  fa_icon: fas fa-plus
+  image: /assets/img/braze_icons/plus.svg
 
 ---

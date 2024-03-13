@@ -26,31 +26,16 @@ Not sure whether your message should be sent using a campaign or a Canvas? Campa
 **Steps:**
 
 1. Go to **Messaging** > **Campaigns** and click **Create Campaign**.
+{% alert note %}
+If you are using the [older navigation]({{site.baseurl}}/navigation), you can find **Campaigns** under **Engagement**.
+{% endalert %}
+
+{:start=“2"}
 2. Select **Push Notification**, or, for campaigns targeting multiple channels, select **Multichannel Campaign**.
 3. Name your campaign something clear and meaningful.
 4. Add [Teams]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/teams/) and [Tags]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/tags/) as needed.
    * Tags make your campaigns easier to find and build reports out of. For example, when using the [Report Builder]({{site.baseurl}}/user_guide/data_and_analytics/reporting/report_builder/), you can filter by particular tags.
 5. Add and name as many variants as you need for your campaign. You can choose different platforms, message types, and layouts for each of your added variants. For more on this topic, refer to [Multivariate and A/B testing]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/).
-
-{% details Deciding between regular or multichannel push campaign %}
-
-If you intend to target multiple devices and platforms, such as any combination of mobile, web, Kindle, iOS, and Android, your selection at this step can impact the availability of some features and settings later on.
-
-Refer to the following decision chart before creating a multichannel or push notification campaign:
-
-!["Flowchart for selecting campaign type. Starts by deciding if you're targeting multiple devices and platforms. If no, it leads to 'Select Push Notification.' If yes, it asks 'What type of push message?' and options are 'Standard push' leading to a decision point 'Do you need to use device-specific settings?' If no, it leads to 'Select Push Notification and use quick push.' If yes, it goes to 'Select Multichannel.' Back to 'What type of push message?', if the answer is 'Push Stories or Inline image,' it directs to 'Select Multichannel."]({% image_buster /assets/img_archive/flowchart_quickpush.png %})
-
-If you select **Push Notification** and choose to target multiple devices and platforms, you’re automatically creating a quick push campaign. With quick push, certain device-specific settings are not available:
-
-- Push action buttons
-- Notification channels and groups
-- Push time-to-live (TTL)
-- Display priority
-- Sounds
-
-See [Quick push campaigns]({{site.baseurl}}/quick_push) to understand what’s different in this editing experience before you continue.
-
-{% enddetails %}
 
 {% alert tip %}
 If all of the messages in your campaign are going to be similar or have the same content, compose your message before adding additional variants. You can then choose **Copy from Variant** from the **Add Variant** dropdown.
@@ -73,24 +58,15 @@ If all of the messages in your campaign are going to be similar or have the same
 
 ## Step 2: Specify delivery platforms
 
-Start by choosing which device and platform combination should receive the push. Use this selection to limit the delivery of a push notification to a specific set of apps.
+Start by choosing which platform should receive the push: iOS, Android, or Web. Use this selection to limit the delivery of a push notification to a specific set of apps. For multichannel campaigns or Canvases, click **Add Messaging Channel** to add additional push platforms. 
 
-There are a few different ways to do this depending on your previous selections:
-
-| Previous selection | Options |
-| --- | --- | 
-| Push notification campaign | Select one or more platforms and devices. If you choose to target multiple devices and platforms, you’re automatically creating a quick push campaign. This provides an editing experience optimized for crafting one message for all selected platforms in a single editor. See [Quick push campaigns]({{site.baseurl}}/quick_push) to understand what's different in this editing experience. |
-| Multichannel campaign | Click **Add Messaging Channel** to add additional push platforms. Because platform selections are specific to each variant, you can try testing message engagement per platform.
-| Canvas | In your Message step, click **+ Add more** to add additional push platforms. Similar to multichannel campaigns, platform selections are specific to each variant. |
-{: .reset-td-br-1 .reset-td-br-2}
+Because platform selections are specific to each variant, you could try testing message engagement per platform!
 
 ## Step 3: Select notification type (iOS and Android)
 
-If you're creating a quick push campaign, the notification type is automatically set to Standard Push and cannot be changed.
+For iOS and Android, select your notification type:
 
 ![Notification Type with Standard Push selected as an example.][3]{: style="float:right;max-width:40%;margin-left:15px;"}
-
-Otherwise, for iOS and Android, select your notification type:
 
 - Standard Push
 - [Push Stories]({{site.baseurl}}/user_guide/message_building_by_channel/push/advanced_push_options/push_stories/)
