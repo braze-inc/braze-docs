@@ -12,7 +12,7 @@ page_order: 0
 
 ### Step 1: Add the SDK to your project
 
-If you're on Cordova 6 or later, you can the add the SDK directly from GitHub. Alternatively, you can download a ZIP of the [GitHub repository](https://github.com/braze-inc/braze-cordova-sdk) and add the SDK manually.
+If you're on Cordova 6 or later, you can add the SDK directly from GitHub. Alternatively, you can download a ZIP of the [GitHub repository](https://github.com/braze-inc/braze-cordova-sdk) and add the SDK manually.
 
 {% tabs local %}
 {% tab geofence disabled %}
