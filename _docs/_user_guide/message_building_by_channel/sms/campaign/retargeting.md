@@ -87,7 +87,7 @@ Filter for users who have replied to a specific SMS campaign or Canvas component
 
 Messages can be triggered as users send messages inbound based on keyword categories (user sent any one of the keywords) or other keywords (user sent a keyword that does not fall into one of the existing categories). These triggers are set in the Delivery step of the campaign builder.
 
-Braze removes leading and trailing spaces from inbound messages, so outbound messages will trigger even if inbound messages have additional spaces.
+When evaluating if an inbound message meets a defined trigger event, the leading and trailing spaces are removed before evaluation begins.
 
 {% alert tip %} 
 If an action-based Canvas is triggered by an inbound SMS message, you can reference SMS properties in the first [Message step]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/) of the Canvas.
