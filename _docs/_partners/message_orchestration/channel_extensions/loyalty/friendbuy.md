@@ -1,32 +1,44 @@
 ---
 nav_title: Friendbuy
 article_title: Friendbuy
-page_order: 1
-
-description: "Friendbuy integration set-up documentation."
-alias: /partners/Friendbuy/
-
+description: "Learn how to integrate Friendbuy with Braze."
+alias: /partners/friendbuy/
 page_type: partner
 search_tag: Partner
 layout: dev_guide
+
 ---
 
 # Friendbuy
 
 > Leverage the integration between Friendbuy and Braze to expand your email and SMS capabilities while effortlessly automating your referral and loyalty program communications. Braze will generate customer profiles for all the opted-in phone numbers collected via Friendbuy.
 
-## Installation Instructions
+## Prerequisites
 
-1. REST Endpoint is needed to integrate with Braze. This can be found [here][1].
-  - Use the table provided on the API overview page to match the URL of the dashboard you use to the correct REST Endpoint.
-  - To find your URL, log into Braze. If the URL you see is https://dashboard-01.braze.com, the corresponding REST Endpoint would be https://rest.iad-01.braze.com.
-  - If you need assistance, open a [support ticket](https://www.braze.com/docs/braze_support/).
-2. Confirm your API Key. In your Braze account, go to **Settings > API Keys**. A REST API key is required with every request to the Braze API. When generating a new API key, be sure to select the *User Data* and *Email* permissions.
-3. Log into your [Friendbuy][3] account and go to **Developer Center > Integrations** tab > click on **Add integration** on the Braze integration card.
-4. Paste your **REST Endpoint**, and your **API Key** in the provided fields.
-    ![integration form fields][101]
-5. Click **Install Integration....**
-6. Go back into your **Friendbuy** account and refresh the page to confirm the Braze integration has been successfully installed. A blue checkmark and success message will appear on the card confirming installation.
+Before you start, you'll need the following:
+
+| Prerequisite          | Description                                                                                                                              |
+|-----------------------|------------------------------------------------------------------------------------------------------------------------------------------|
+| A Friendbuy account   | A [Friendbuy account][1] is required to take advantage of this partnership.                                                              |
+| A Braze REST API key  | A Braze REST API key with `users.track` permissions. This can be created in the Braze dashboard from **Settings** > **API Keys**.        |
+| A Braze REST endpoint | [Your REST endpoint URL]({{site.baseurl}}/developer_guide/rest_api/basics/#endpoints), which depends on the URL for your Braze instance. |
+{: .reset-td-br-1 .reset-td-br-2}
+
+{% alert note %}
+If you are using the [older navigation]({{site.baseurl}}/navigation), you can create an API key at **Developer Console** > **API Settings**.
+{% endalert %}
+
+## Integrating Friendbuy
+
+In [Friendbuy][1], go to **Developer Center** > **Integrations**, then on the Braze integration card select **Add integration**.
+
+![The Braze integration card in Friendbuy.]()
+
+In FIELD_NAME, enter your REST endpoint and API Key, then select **Install Integration**.
+
+![The Friendbuy integration form.][101]
+
+Go to back to your [Friendbuy account][1] and refresh the page. If you successfully integrated Braze, you'll see a message similar to the following:
 
 ![integration installed][102]
 
@@ -46,23 +58,22 @@ We use the international standard (E.164) to confirm valid phone numbers. If an 
 
 ### Custom Attributes
 
-| Custom Attribute Name            | Definition                                                                                          | Data Type |
-|----------------------------------|-----------------------------------------------------------------------------------------------------|-----------|
-| **Friendbuy Referral Status**    | Referrers are categorized as *Advocate* and referees are categorized as *Referred Friend*           | String    |
-| **Friendbuy Customer Name**      | The name the customer entered when submitting their info through a referral widget                 | String    |
-| **Friendbuy Referral Link**      | A personal referral link (PURL) generated for an Advocate. For example, https://fbuy.io/EzcW        | String    |
+| Custom Attribute Name            | Definition                                                                                                                                         | Data Type |
+|----------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------|-----------|
+| **Friendbuy Referral Status**    | Referrers are categorized as *Advocate* and referees are categorized as *Referred Friend*                                                          | String    |
+| **Friendbuy Customer Name**      | The name the customer entered when submitting their info through a referral widget                                                                 | String    |
+| **Friendbuy Referral Link**      | A personal referral link (PURL) generated for an Advocate. For example, https://fbuy.io/EzcW                                                       | String    |
 | **Friendbuy Date of Last Share** | The date and time the Advocate last shared with a Friend via any share channel. If the Advocate has not shared yet, the property won't be visible. | Time      |
-| **Friendbuy Campaign ID**        | The Campaign ID associated with the personal referral link generated for an Advocate                | String    |
-| **Friendbuy Campaign Name**      | The Campaign Name associated with the personal referral link generated for an Advocate              | String    |
-| **Friendbuy Coupon Code**        | The most recent Referral coupon code distributed to the customer. Note: only one code will be displayed | String    |
-| **Friendbuy Coupon Value**       | The currency value of the most recent coupon code distributed to the customer.                      | Number    |
-| **Friendbuy Coupon Status**      | The status of the most recent coupon code distributed to the customer. Note: status will be 'distributed' or 'redeemed' | String    |
-| **Friendbuy Coupon Currency**    | Currency code (USD, CAD, etc.) or percent (%) associated with the most recent coupon code distributed to the customer. | String    |
-| **Friendbuy Coupon Campaign ID** | The Campaign ID associated with the coupon code generated for a customer.                           | String    |
+| **Friendbuy Campaign ID**        | The Campaign ID associated with the personal referral link generated for an Advocate                                                               | String    |
+| **Friendbuy Campaign Name**      | The Campaign Name associated with the personal referral link generated for an Advocate                                                             | String    |
+| **Friendbuy Coupon Code**        | The most recent Referral coupon code distributed to the customer. Note: only one code will be displayed                                            | String    |
+| **Friendbuy Coupon Value**       | The currency value of the most recent coupon code distributed to the customer.                                                                     | Number    |
+| **Friendbuy Coupon Status**      | The status of the most recent coupon code distributed to the customer. Note: status will be 'distributed' or 'redeemed'                            | String    |
+| **Friendbuy Coupon Currency**    | Currency code (USD, CAD, etc.) or percent (%) associated with the most recent coupon code distributed to the customer.                             | String    |
+| **Friendbuy Coupon Campaign ID** | The Campaign ID associated with the coupon code generated for a customer.                                                                          | String    |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
-[1]: https://www.braze.com/docs/api/basics/
-[3]: https://retailer.friendbuy.io/
-
+[1]: https://retailer.friendbuy.io/
 [101]: {% image_buster /assets/img/Friendbuy/install_form.png %}
 [102]: {% image_buster /assets/img/Friendbuy/install_success.png %}
 [103]: {% image_buster /assets/img/Friendbuy/referral_widget.png %}
