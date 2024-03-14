@@ -41,11 +41,14 @@ You can use these additional methods to build a custom Content Cards Feed within
 
 | Method                                         | Description                                                                                            |
 | ---------------------------------------------- | ------------------------------------------------------------------------------------------------------ |
-| `Braze.requestContentCardsRefresh()`     | Requests the latest Content Cards from the Braze SDK server.                                           |
-| `Braze.getContentCards()`                | Retrieves Content Cards from the Braze SDK. This will return the latest list of cards from the server. |
-| `Braze.logContentCardClicked(cardId)`    | Logs a click for the given Content Card ID.                                                            |
-| `Braze.logContentCardImpression(cardId)` | Logs an impression for the given Content Card ID.                                                      |
-| `Braze.logContentCardDismissed(cardId)`  | Logs a dismissal for the given Content Card ID.                                                        |
+| `Braze.launchContentCards()`                   | Launches the Content Cards UI element.                                                                 |
+| `Braze.requestContentCardsRefresh()`           | Requests the latest Content Cards from the Braze SDK server.                                           |
+| `Braze.getContentCards()`                      | Retrieves Content Cards from the Braze SDK. This will return the latest list of cards from the server. |
+| `Braze.getCachedContentCards()`                | Returns the most recent Content Cards array from the cache.                                            |
+| `Braze.logContentCardClicked(cardId)`          | Logs a click for the given Content Card ID.                                                            |
+| `Braze.logContentCardImpression(cardId)`       | Logs an impression for the given Content Card ID.                                                      |
+| `Braze.logContentCardDismissed(cardId)`        | Logs a dismissal for the given Content Card ID.                                                        |
+| `Braze.processContentCardClickAction(cardId)`  | Perform the action of a particular card.                                                               |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## Test displaying sample Content Card
