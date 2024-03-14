@@ -48,7 +48,7 @@ Enter a service account name, ID, and description, then select **Create and cont
 In the **Role** field, find and select **Firebase Cloud Messaging API Admin** from the list of roles. For more restrictive access, create a [custom role](https://cloud.google.com/iam/docs/creating-custom-roles) with the `cloudmessaging.messages.create` permission, then choose it from the list instead. When you're finished, select **Done**.
 
 {% alert warning %}
-Be sure to select __Firebase Cloud Messaging **API** Admin__, not __Firebase Cloud Messaging Admin__.
+Be sure to select _Firebase Cloud Messaging **API** Admin_, not _Firebase Cloud Messaging Admin_.
 {% endalert %}
 
 ![The form for "Grant this service account access to project" with "Firebase Cloud Messaging API Admin" selected as the role.]({% image_buster /assets/img/android/push_integration/create_a_service_account/add-fcm-api-admin.png %})
