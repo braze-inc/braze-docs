@@ -141,7 +141,7 @@ You can use custom event properties to further narrow your audience for a partic
 
 ![Custom event property filters for an abandoned card. Two filters are combined with an AND operator to send this campaign to users who abandoned their card with a cart value between 100 and 200 dollars][16]
 
-Nested custom event properties are also supported in [Action-Based Delivery][19].
+Nested custom event properties are also supported in [action-based delivery][19].
 
 ![Custom event property filters for an abandoned card. One filter is selected if any items in the cart have a price more than 100 dollars.][20]
 
