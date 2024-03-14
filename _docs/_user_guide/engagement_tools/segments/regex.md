@@ -137,6 +137,10 @@ $( document ).ready(function() {
 
 ## Frequently asked questions
 
+#### Does the `does not match regex` filter include blank values?
+
+No. If the value is blank, the user will not be included in the `does not match regex` filter.
+
 #### How do I filter for inbox-specific email addresses when segmenting?
 
 {% raw %}

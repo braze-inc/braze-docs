@@ -1105,6 +1105,13 @@ validurls['/docs/help/help_articles/docs/contribution/'] = '/docs/contributing/h
 
 validurls['/docs/user_guide/administrative/app_settings/manage_your_braze_users/deleting_users_from_your_account/#deleting-braze-account-users'] = '/docs/user_guide/administrative/app_settings/manage_your_braze_users/adding_users_to_your_dashboard/#deleting-braze-users';
 
+validurls['/docs/developer_guide/platform_integration_guides/cordova/cordova_integration/'] = '/docs/developer_guide/platform_integration_guides/cordova/initial_setup/integration/';
+validurls['/docs/developer_guide/platform_integration_guides/cordova/initial_sdk_setup/android/'] = '/docs/developer_guide/platform_integration_guides/cordova/initial_setup/integration/?tab=android';
+validurls['/docs/developer_guide/platform_integration_guides/cordova/initial_sdk_setup/ios/'] = '/docs/developer_guide/platform_integration_guides/cordova/initial_setup/integration/?tab=ios';
+validurls['/docs/developer_guide/platform_integration_guides/cordova/cordova_integration/#analytics'] = '/docs/developer_guide/platform_integration_guides/cordova/analytics/'
+validurls['/docs/developer_guide/platform_integration_guides/cordova/cordova_integration/#in-app-messaging'] = '/docs/developer_guide/platform_integration_guides/cordova/other_integrations/';
+validurls['/docs/developer_guide/platform_integration_guides/cordova/cordova_integration/#news-feed'] = '/docs/developer_guide/platform_integration_guides/cordova/other_integrations/';
+
 validurls['/docs/list-unsubscribe/'] = '/docs/user_guide/administrative/app_settings/email_settings/#list-unsubscribe-header';
 
 // validurls['OLD'] = 'NEW';

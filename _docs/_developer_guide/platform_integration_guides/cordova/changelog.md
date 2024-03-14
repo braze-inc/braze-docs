@@ -1,7 +1,7 @@
 ---
 nav_title: Changelog
 article_title: Changelog for Cordova SDK
-page_order: 30
+page_order: 10
 page_type: update
 platform: 
   - Cordova

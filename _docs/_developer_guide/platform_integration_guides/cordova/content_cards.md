@@ -1,35 +1,29 @@
 ---
 nav_title: Content Cards
-article_title: Content Cards Integration for Cordova
-platform: 
-  - Cordova
-  - iOS
-  - Android
-page_order: 3
-channel: content cards
-page_type: reference
-description: "This article covers integrate and customize Content Cards for Cordova."
-
+article_title: Content Cards integration
+page_order: 2
 ---
 
-# Content Card integration
+# Content Cards integration
 
-> This article covers how to set up Content Cards for Cordova. 
+> Learn how to integrate Content Cards for the Cordova Braze SDK.
 
-To get started, the Braze SDKs include a default card feed. To show the card feed you can use the `BrazePlugin.launchContentCards()` method.
+{% multi_lang_include cordova/prerequisites.md %}
 
-The default card feed included with the Braze SDK will handle all analytics tracking, dismissals, and rendering for a user's Content Cards.
+## Card Feeds
 
-## Customization
+The Braze SDK includes a default card feed. To show the default card feed, you can use the `launchContentCards()` method. This method handles all analytics tracking, dismissals, and rendering for a user's Content Cards.
+
+## Content Cards
 
 You can use these additional methods to build a custom Content Cards Feed within your app:
 
 |Method | Description |
 |---|---|
-|`BrazePlugin.requestContentCardsRefresh()`|Sends a background request to request the latest Content Cards from the Braze SDK server.|
-|`BrazePlugin.getContentCardsFromServer(successCallback, errorCallback)`|Retrieves Content Cards from the Braze SDK. This will request the latest Content Cards from the server and return the list of cards upon completion.|
-|`BrazePlugin.getContentCardsFromCache(successCallback, errorCallback)`|Retrieves Content Cards from the Braze SDK. This will return the latest list of cards from the local cache, which was updated at the last refresh.|
-|`BrazePlugin.logContentCardClicked(cardId)`|Logs a click for the given Content Card ID.|
-|`BrazePlugin.logContentCardImpression(cardId)`|Logs an impression for the given Content Card ID.|
-|`BrazePlugin.logContentCardDismissed(cardId)`|Logs a dismissal for the given Content Card ID.|
+|`requestContentCardsRefresh()`|Sends a background request to request the latest Content Cards from the Braze SDK server.|
+|`getContentCardsFromServer(successCallback, errorCallback)`|Retrieves Content Cards from the Braze SDK. This will request the latest Content Cards from the server and return the list of cards upon completion.|
+|`getContentCardsFromCache(successCallback, errorCallback)`|Retrieves Content Cards from the Braze SDK. This will return the latest list of cards from the local cache, which was updated at the last refresh.|
+|`logContentCardClicked(cardId)`|Logs a click for the given Content Card ID.|
+|`logContentCardImpression(cardId)`|Logs an impression for the given Content Card ID.|
+|`logContentCardDismissed(cardId)`|Logs a dismissal for the given Content Card ID.|
 {: .reset-td-br-1 .reset-td-br-2}
