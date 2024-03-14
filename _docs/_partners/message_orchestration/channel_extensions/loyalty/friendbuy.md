@@ -5,7 +5,6 @@ description: "Learn how to integrate Friendbuy with Braze."
 alias: /partners/friendbuy/
 page_type: partner
 search_tag: Partner
-layout: dev_guide
 
 ---
 
@@ -34,29 +33,15 @@ In [Friendbuy][1], go to **Developer Center** > **Integrations**, then on the Br
 
 ![The Braze integration card in Friendbuy.]()
 
-In FIELD_NAME, enter your REST endpoint and API Key, then select **Install Integration**.
+In the form, enter your REST endpoint and API Key, then select **Install Integration**.
 
 ![The Friendbuy integration form.][101]
 
-Go to back to your [Friendbuy account][1] and refresh the page. If you successfully integrated Braze, you'll see a message similar to the following:
+Go to back to your [Friendbuy account][1] and refresh the page. If your integration was successful, you'll see a message similar to the following:
 
 ![integration installed][102]
 
-## How customer data is sent to Braze
-
-Customer data collected in your referral program will be added to the respective Braze profile after a customer interacts with your referral program widgets. Email is used as the identifier for creating and updating Braze profiles. Important to note, customer data will **only** be sent to Braze if the customer **opts-in** through the referral widget by selecting the opt-in boxes.
-
-For example, if a customer enters both their email and phone number in the widget but only checks the opt-in box for email marketing (and leaves the SMS marketing opt-in box unchecked), then only the email address will be sent to Braze. If a customer submits their contact information without either opt-in box checked, customer data will not be sent to Braze since consent was not collected.
-
-The opt-in checkboxes are required to collect consent from the customer indicating they would like to receive additional emails and/or SMS messages from your company. See an example referral widget below:
-
-![referral widget][103]
-
-{% alert note %}
-We use the international standard (E.164) to confirm valid phone numbers. If an invalid number is submitted, it will not be sent to Braze. Ex: 555-555-5555.
-{% endalert %}
-
-### Custom Attributes
+### Custom attributes
 
 | Custom Attribute Name            | Definition                                                                                                                                         | Data Type |
 |----------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------|-----------|
@@ -73,7 +58,26 @@ We use the international standard (E.164) to confirm valid phone numbers. If an 
 | **Friendbuy Coupon Campaign ID** | The Campaign ID associated with the coupon code generated for a customer.                                                                          | String    |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
+## Default behavior
+
+Before customer data can be sent to Braze, customers must opt-in through the referral widget by checking one or more boxes of the following boxes:
+
+![referral widget][103]
+
+{% alert note %}
+Friendbuy uses the international standard (E.164) to verify real phone numbers. Invalid numbers, such as `555-555-5555`, will not be sent to Braze.
+{% endalert %}
+
+### Examples
+
+| Checkbox selected | Behavior                                                        |
+|-------------------|-----------------------------------------------------------------|
+| Email only        | Only the customer's email address is sent to Braze.             |
+| Phone only        | Only the customer's phone number is sent to Braze.              |
+| Neither           | No customer data is sent to Braze.                              |
+| Both              | The customer's email address and phone number is sent to Braze. |
+
 [1]: https://retailer.friendbuy.io/
-[101]: {% image_buster /assets/img/Friendbuy/install_form.png %}
-[102]: {% image_buster /assets/img/Friendbuy/install_success.png %}
-[103]: {% image_buster /assets/img/Friendbuy/referral_widget.png %}
+[101]: {% image_buster /assets/img/friendbuy/install_form.png %}
+[102]: {% image_buster /assets/img/friendbuy/install_success.png %}
+[103]: {% image_buster /assets/img/friendbuy/referral_widget.png %}
