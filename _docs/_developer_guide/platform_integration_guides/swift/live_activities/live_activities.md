@@ -25,7 +25,7 @@ Additional prerequisites include:
 
 - Live Activities are only available for iPhones and iPads on iOS 16.1 and later. To use this feature, ensure that your project is targeting this iOS version.
 - The `Push Notification` entitlement must be added under **Signing & Capabilities** in your Xcode project.
-- Remotely starting a Live Activity via push notifications will be introduced in a future version of the Braze Swift SDK and requires iOS 17.2 and later.
+- Remotely starting a Live Activity via push notifications was introduced in version 8.2.0 of the Braze Swift SDK and requires iOS 17.2 and later.
 
 {% alert note %}
 Note that, whereas Live Activities function similarly to push notifications, they are controlled by different user settings. A user can opt into Live Activities but out of push notifications, and the other way around. By default, users are automatically opted in to Live Activity features and can opt out on a per-app basis.
@@ -38,7 +38,7 @@ To manage the lifecycle of a Live Activity, follow these four steps.
 1. [Create the Live Activity.](#developing) Develop the Live Activity UI using WidgetKit and SwiftUI. Initialize a Live Activity object with the relevant data models for your static and dynamic states.<br><br>
 
 2. Start the Live Activity<br><br>
-   a. [via push-to-start.](#starting) Register a Live Activity type with the Braze SDK using the `registerPushToStart` method and remotely start an activity of that type using our [`/messages/live_activity/start` endpoint]({{site.baseurl}}/api/endpoints/messaging/live_activity/start).<br><br>
+   a. [via push-to-start.](#starting) Register a Live Activity type with the Braze SDK using the [`registerPushToStart`](<http://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/liveactivities-swift.class/registerpushtostart(fortype:name:)>) method and remotely start an activity of that type using our [`/messages/live_activity/start` endpoint]({{site.baseurl}}/api/endpoints/messaging/live_activity/start).<br><br>
    b. [locally in your app.](#registering) Register a locally started Live Activity instance with the Braze SDK using the [`launchActivity`](<https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/liveactivities-swift.class/launchactivity(pushtokentag:activity:fileid:line:)>) method with the Live Activity object and unique activity tag.<br><br>
 
 3. [Resume Live Activity tracking.](#resuming) Resume token-tracking tasks for subsequent app launches.<br><br>
@@ -87,7 +87,7 @@ struct SportsActivityAttributes: ActivityAttributes {
 ## Step 2a: Registering and Starting a Live Activity remotely {#starting}
 
 {% alert note %}
-Live Activity push-to-start features require iOS 17.2+ and will become available in a future version of the Braze Swift SDK.
+Live Activity push-to-start features require iOS 17.2+ and is available in version 8.2.0+ of the Braze Swift SDK.
 {% endalert %}
 
 This section discusses how to remotely initiate a Live Activity using a push notification. If you wish to only initialize activities locally from your app, refer to [Step 2b](#registering).
