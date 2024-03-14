@@ -3,13 +3,13 @@ nav_title: Custom Events
 article_title: Custom Events
 page_order: 9
 page_type: reference
-description: "This reference article describes custom events and properties, segmentation, their usage, Canvas entry properties, where to view relevant analytics, and more."
+description: "This reference article describes custom events and properties, segmentation, usage, Canvas entry properties, where to view relevant analytics, and more."
 search_rank: 2
 ---
 
 # [![Braze Learning course]({% image_buster /assets/img/bl_icon2.png %})](https://learning.braze.com/custom-events-and-attributes){: style="float:right;width:120px;border:0;" class="noimgborder"}Custom events
 
-> This article describes custom events and properties, segmentation, their usage, Canvas entry properties, where to view relevant analytics, and more. To learn more about events in Braze, refer to [Events]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/events).
+> This article describes custom events and properties, segmentation, usage, Canvas entry properties, where to view relevant analytics, and more. To learn more about events in Braze, refer to [Events]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/events).
 
 ## Overview
 
@@ -34,9 +34,9 @@ To create and manage custom events in the dashboard, go to **Data Settings** > *
 If you are using the [older navigation]({{site.baseurl}}/navigation), you can find **Custom Events** under **Manage Settings**.
 {% endalert %}
 
-From this page, you can view, manage, create, or blocklist existing custom events.
+You can view, manage, create, or blocklist existing custom events on this page.
 
-Custom events can be blocklisted individually via the actions menu, or up to 10 events can be selected and blocklisted in bulk. If you block a custom event, no data will be collected regarding that event, existing data will be unavailable unless reactivated, and blocklisted events will not show up in filters or graphs. In addition, if the event is currently being referenced by filters or triggers in other areas of the Braze dashboard, a warning modal will appear explaining that all instances of the filters or triggers that reference it will be removed and archived.
+Custom events can be blocklisted individually via the actions menu, or up to 10 events can be selected and blocklisted in bulk. If you block a custom event, no data will be collected regarding that event, existing data will be unavailable unless reactivated, and blocklisted events will not show up in filters or graphs. In addition, if the event is currently referenced by filters or triggers in other areas of the Braze dashboard, a warning modal will appear explaining that all instances of the filters or triggers that reference it will be removed and archived.
 
 ### Logging custom events
 
@@ -84,27 +84,27 @@ Braze notes the number of times these events have occurred as well as the last t
 If you are using the [older navigation]({{site.baseurl}}/navigation), you can find the **Custom Events** report under **Data**.
 {% endalert %}
 
-On the **Custom Events Report** page in the dashboard, you can view in aggregate how often each custom event occurs, as well as by segment over time for more detailed analysis. This is particularly useful to view how your campaigns have affected custom event activity by looking at the gray lines Braze overlays on the time series to indicate the last time a campaign was sent.
+On the **Custom Events Report** page in the dashboard, you can view in aggregate how often each custom event occurs and by segment over time for more detailed analysis. This is particularly useful for viewing how your campaigns have affected custom event activity by looking at the gray lines Braze overlays on the time series indicate the last time a campaign was sent.
 
 ![Custom event counts graph on the Custom Events page in the dashboard showing trends for a custom event][8]
 
-You can also use **Filters** to breakdown your custom events by hour, monthly average users (MAU), segments, or KPI formulas. 
+You can also use **Filters** to break down your custom events by hour, monthly average users (MAU), segments, or KPI formulas. 
 
 ![Custom event graph filters][9]{: style="max-width:40%;"}
 
 {% alert tip %}
-[Incrementing custom attributes]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#integers) can be used to keep a counter on a user action similar to a custom event. However, you will not be able to view custom attribute data in a time series. User actions that do not need to be analyzed in time series should be recorded using this method.
+[Incrementing custom attributes]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#integers) can be used to keep a counter on a user action similar to a custom event. However, you cannot view custom attribute data in a time series. User actions that do not need to be analyzed in a time series should be recorded using this method.
 {% endalert %}
 
 ### Custom events analytics not showing?
 
-Segments created with custom event data cannot show previous historic data from before they were created.
+Segments created with custom event data cannot show previous historical data from before they were created.
 
 ## Custom event properties
 
 Custom event properties are custom event metadata or attributes that describe a specific occurrence of an event. These properties can then be used for further qualifying trigger conditions, increasing personalization in messaging, tracking conversions, and generating more sophisticated analytics through raw data export.
 
-Custom event properties are not stored on the Braze profile and therefore do not consume data points (see [Data points](#data-points) below for exceptions).
+Custom event properties are not stored on the Braze profile and, therefore do not consume data points (see [Data points](#data-points) below for exceptions).
 
 {% alert important %}
 Each custom event or purchase can have up to 256 distinct custom event properties. If a custom event or purchase is logged with more than 256 properties, only the first 256 will be captured and available for use.
@@ -112,7 +112,7 @@ Each custom event or purchase can have up to 256 distinct custom event propertie
 
 ### Expected format
 
-The properties values should be an object where the keys are the property names and the values are the property values. Property names must be non-empty strings less than or equal to 255 characters, with no leading dollar signs (`$`).
+The property values should be an object where the keys are the property names and the values are the property values. Property names must be non-empty strings less than or equal to 255 characters, with no leading dollar signs (`$`).
 
 Property values can be any of the following data types:
 
@@ -137,7 +137,7 @@ Custom event properties can be used to qualify campaign triggers, track conversi
 
 #### Trigger messages
 
-You can use custom event properties to further narrow your audience for a particular campaign or Canvas. For example, if you have an ecommerce application and want to send a message to a user when they abandon their cart, you could improve your target audience and allow for increased campaign personalization by adding a custom event property of `cart value`.
+Use custom event properties to narrow your audience further for a particular campaign or Canvas. For example, if you have an ecommerce application and want to send a message to a user when they abandon their cart, you could improve your target audience and allow for increased campaign personalization by adding a custom event property of `cart value`.
 
 ![Custom event property filters for an abandoned card. Two filters are combined with an AND operator to send this campaign to users who abandoned their card with a cart value between 100 and 200 dollars][16]
 
@@ -149,7 +149,7 @@ Nested custom event properties are also supported in [action-based delivery][19]
 
 You can also use custom event properties for personalization within the messaging template. Any campaign using [action-based delivery][19] with a trigger event can use custom event properties from that event for messaging personalization.
 
-For example, if you have a gaming application and want to send a message to users who had completed a level, you could further personalize your message with a property for the time it took users to complete that level. In this example, the message is personalized for three different segments using [conditional logic][18]. The custom event property called `time_spent` can be included in the message by calling ``{% raw %} {{event_properties.${time_spent}}} {% endraw %}``.
+For example, if you have a gaming application and want to send a message to users who have completed a level, you could further personalize your message with a property for the time it took users to complete that level. In this example, the message is personalized for three different segments using [conditional logic][18]. The custom event property called `time_spent` can be included in the message by calling ``{% raw %} {{event_properties.${time_spent}}} {% endraw %}``.
 
 {% alert warning %}
 If the user has no internet connection, triggered in-app messages with templated custom event properties (for example, {% raw %}``{{event_properties.${time_spent}}}``{% endraw %}) will fail and not display.
@@ -162,9 +162,9 @@ If the user has no internet connection, triggered in-app messages with templated
 
 #### Segmentation
 
-Event property segmentation allows you to target users based not just on custom events taken but the properties associated with those events. This feature adds more filtering options when segmenting purchase and custom events.
+Event property segmentation allows you to target users based on custom events taken and the properties associated with those events. This feature adds more filtering options when segmenting purchase and custom events.
 
-Event properties for custom events are updated in real time for any segment that uses them. You can manage properties from the **Data Settings** > **Custom Events** page by clicking **Manage Properties** for your custom event. Custom event properties used in certain segment filters have a maximum look back history of 30 days.
+Event properties for custom events are updated in real-time for any segment that uses them. You can manage properties from the **Data Settings** > **Custom Events** page by clicking **Manage Properties** for your custom event. Custom event properties used in certain segment filters have a maximum look-back history of 30 days.
 
 {% alert note %}
 If you'd like to create segments based on event property recency and frequency, reach out to your customer success manager to enable segmentation for specific custom event properties. When enabled, you can access additional filtering options when segmenting.
@@ -172,7 +172,7 @@ If you'd like to create segments based on event property recency and frequency, 
 
 These segmentation filters include:
 
-- Has done custom event with property A with value B, X times in the last Y days.
+- Has done a custom event with property A with value B, X times in the last Y days.
 - Has made any purchases with property A with value B, X times in the last Y days.
 - Adds the ability to segment within 1, 3, 7, 14, 21, and 30 days.
 
@@ -197,7 +197,7 @@ You can leverage `canvas_entry_properties` and `event_properties` in your Canvas
 [Canvas entry properties]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object/) are the properties you map for Canvases that are action-based or API-triggered. Note that the `canvas_entry_properties` object has a maximum size limit of 50 KB.
 
 {% alert note %}
-For in-app message channels specifically, `canvas_entry_properties` can only be referenced in Canvas Flow and in the original Canvas editor if you have persistent entry properties enabled in the original editor as part of the previous early access.
+For in-app message channels specifically, `canvas_entry_properties` can only be referenced in Canvas Flow and the original Canvas editor if you have persistent entry properties enabled in the original editor as part of the previous early access.
 {% endalert %}
 
 For Canvas Flow messaging, `canvas_entry_properties` can be used in Liquid in any Message step. Use this Liquid when referencing these properties: ``{% raw %} canvas_entry_properties.${property_name} {% endraw %}``. Note that the events must be custom events or purchase events to be used this way. 
@@ -221,7 +221,7 @@ For the Canvases built with the original editor, `canvas_entry_properties` can b
 You can't use `event_properties` in the lead Message step. Instead, you must use `canvas_entry_properties` or add an Action Paths step with the corresponding event **before** the Message step that includes `event_properties`.
 {% endalert %}
 
-Event properties refer to the properties that you set for custom events and purchases. These `event_properties` can be used in campaigns with action-based delivery as well as Canvases.
+Event properties refer to the properties you set for custom events and purchases. These `event_properties` can be used in campaigns with action-based delivery and Canvases.
 
 In Canvas Flow, custom event and purchase event properties can be used in Liquid in any Message step that follows an Action Paths step. Make sure to use {% raw %} ``{{event_properties.${property_name}}}``{% endraw %} if referencing these `event_properties`. These events must be custom events or purchase events to be used this way in the Message component.
 
@@ -240,7 +240,7 @@ For the original Canvas editor, `event_properties` can't be used in scheduled fu
 
 ### Nested objects {#nested-objects}
 
-You can use nested objects—objects that are inside of another object—to send nested JSON data as properties of custom events and purchases. This nested data can be used for templating personalized information in messages, for triggering message sends, and for segmentation.
+You can use nested objects (objects inside of another object) to send nested JSON data as properties of custom events and purchases. This nested data can be used for templating personalized information in messages, triggering message sends, and segmentation.
 
 To learn more, refer to our dedicated article on [Nested objects]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/nested_objects/).
 
