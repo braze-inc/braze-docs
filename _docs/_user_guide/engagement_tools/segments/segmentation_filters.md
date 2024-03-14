@@ -291,7 +291,7 @@ glossaries:
     tags:
       - Channel subscription behavior
   - name: Push Enabled For App
-    description: Segments by whether or not your user has push enabled for your app on their device. This count includes both foreground and background push.
+    description: Segments by whether users have push enabled for your app on their device. These users are reachable via push but might not be opted in. This count includes users who have provisionally authorized, foreground and background push tokens.
     tags:
       - Channel subscription behavior
   - name: Background Push Enabled
