@@ -33,7 +33,7 @@ Next, open Firebase Console, then select <i class="fa-solid fa-gear"></i>&nbsp;*
 
 Select **Cloud Messaging**. Under **Cloud Messaging API (Legacy)**, verify the **Sender ID** matches the one listed in your Braze dashboard.
 
-![The Firebase project's "Cloud Messaging" page with the "Sender ID" highlighted.]({% image_buster /assets/img/android/push_integration/set_up_automatic_token_registration/copy-sender-id.png %})
+![The Firebase project's "Cloud Messaging" page with the "Sender ID" highlighted.]({% image_buster /assets/img/android/push_integration/migration/verify-sender-id/verify-sender-id-firebase.png %})
 
 ## Step 2: Create a service account
 
@@ -61,6 +61,10 @@ Next, generate JSON credentials for your FCM service account. On Google Cloud IA
 
 Select **Add Key** > **Create new key**.
 
+{% alert note %}
+Creating a new key will not remove your legacy ones. If you accidentally delete your new key by selecting **Revert Credentials**, Braze will use your legacy keys as a backup.
+{% endalert %}
+
 ![The selected service account with the "Add Key" menu open.]({% image_buster /assets/img/android/push_integration/generate_json_credentials/select-create-new-key.png %})
 
 Choose **JSON**, then select **Create**.
@@ -78,6 +82,14 @@ In Braze, select <i class="fa-solid fa-gear"></i>&nbsp;**Settings** > **App Sett
 ![The "Settings" menu open in Braze with "App Settings" highlighted.]({% image_buster /assets/img/android/push_integration/upload_json_credentials/select-app-settings.png %})
 
 Under **Push Notification Settings**, select **Upload JSON File**, then choose the file [you generated earlier](#step-3-generate-json-credentials). When you're finished, select **Save**.
+
+{% alert tip %}
+To make sure your push messages send, confirm the following:
+
+- Your credentials exist in the correct Google Cloud Platform project ID (correct sender ID).
+- Your credentials have the correct permission scope.
+- You uploaded the correct credentials to the correct Braze workspace (correct sender ID).
+{% endalert %}
 
 ![The form for "Push Notification Settings" with the private key updated in the "Firebase Cloud Messaging Server Key" field.]({% image_buster /assets/img/android/push_integration/migration/upload_json_credentials/upload-json-file.png %})
 

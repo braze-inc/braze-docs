@@ -106,6 +106,7 @@ A valid team permission object is a JSON object with the following key-value pai
 | Manage Email Settings | `manage_email_settings` |
 | Manage Subscription Groups | `manage_subscription_groups` |
 | Manage Approval Settings | `manage_approval_settings` |
+| Manage Catalogs Dashboard Permission | `manage_catalogs_dashboard_permission` |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ### Team permission strings {#team}

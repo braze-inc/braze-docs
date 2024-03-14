@@ -370,7 +370,7 @@ validurls['/docs/user_guide/data_and_analytics/custom_data/nested_object_support
 validurls['/docs/user_guide/data_and_analytics/custom_data/custom_events/#nested-objects'] = '/user_guide/data_and_analytics/custom_data/custom_events/nested_objects/';
 validurls['/docs/services_handbook_21/'] = '/docs/assets/download_file/Braze_Success_and_Support_Services_Handbook_21.pdf';
 validurls['/docs/services_handbook_22/'] = '/docs/assets/download_file/Braze_Success_and_Support_Services_Handbook_22.pdf';
-validurls['/docs/hidden/private_betas/view_pii/'] = '/docs/view_pii';
+validurls['/docs/hidden/private_betas/view_pii/'] = '/docs/user_guide/administrative/app_settings/company_settings/security_settings/#view-pii/';
 validurls['/docs/hidden/private_betas/partners/adobe/'] = '/docs/partners/adobe';
 validurls['/docs/hidden/private_betas/link_aliasing/'] = '/docs/link_aliasing/';
 validurls['/docs/hidden/private_betas/shopify/'] = '/docs/partners/shopify/';
@@ -606,7 +606,7 @@ validurls['/docs/user_guide/engagement_tools/canvas/canvas_components/'] = '/doc
 validurls['/docs/user_guide/engagement_tools/campaigns/ideas_and_strategies/best_practices/'] = '/docs/user_guide/engagement_tools/campaigns/ideas_and_strategies/getting_high_ratings/';
 validurls['/docs/developer_guide/platform_integration_guides/android/push_notifications/advanced_settings/#delivery-options'] = '/docs/developer_guide/platform_integration_guides/android/push_notifications/android/customization/advanced_settings/#ttl';
 
-validurls['/docs/view_pii'] = '/docs/user_guide/administrative/company_settings/security_settings/#view-pii';
+validurls['/docs/view_pii/'] = '/docs/user_guide/administrative/app_settings/company_settings/security_settings/#view-pii';
 
 validurls['/docs/user_guide/engagement_tools/testing/multivariant_testing/#creating-tests'] = '/docs/user_guide/engagement_tools/testing/multivariant_testing/create_multivariate_campaign/';
 validurls['/docs/user_guide/engagement_tools/testing/multivariant_testing/#viewing-results-of-a-multivariate-campaign'] = '/docs/user_guide/engagement_tools/testing/multivariant_testing/multivariate_analytics/';
@@ -802,6 +802,7 @@ validurls['/docs/user_guide/message_building_by_channel/email/email_private_rela
 validurls['/docs/user_guide/message_building_by_channel/email/mpp/'] = '/docs/user_guide/message_building_by_channel/email/apple_mail/mpp/';
 
 validurls['/docs/user_guide/data_and_analytics/query_builder/custom_sql/'] = '/docs/user_guide/data_and_analytics/query_builder/#custom-sql';
+validurls['/docs/sql_segments_tables/'] = '/docs/user_guide/engagement_tools/segments/sql_segments/sql_segments_tables/';
 
 validurls['/docs/frequency_capping_tag/'] = '/docs/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/#frequency-capping';
 validurls['/docs/user_guide/data_and_analytics/user_data_collection/cloud_ingestion'] = '/docs/user_guide/data_and_analytics/cloud_ingestion/';
@@ -931,8 +932,9 @@ validurls['/docs/developer_guide/platform_wide/tv_and_ott/'] = '/docs/developer_
 validurls['/docs/user_guide/engagement_tools/canvas/create_a_canvas/canvas_persistent_entry_properties/'] = '/docs/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties/canvas_persistent_entry_properties/';
 validurls['/docs/user_guide/engagement_tools/canvas/create_a_canvas/content-cards_in_canvas/'] = '/docs/user_guide/engagement_tools/canvas/create_a_canvas/canvas_by_channel/content-cards_in_canvas/';
 validurls['/docs/user_guide/engagement_tools/canvas/create_a_canvas/in-app_messages_in_canvas/'] = '/docs/user_guide/engagement_tools/canvas/create_a_canvas/canvas_by_channel/in-app_messages_in_canvas/';
-validurls['/docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/other_sdk_customizations/swift_idfv/'] = '/docs/developer_guide/platform_integration_guides/swift/initial_sdk_setup/swift_idfv/';
+validurls['/docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/other_sdk_customizations/swift_idfv/'] = '/docs/developer_guide/platform_integration_guides/swift/analytics/swift_idfv/';
 validurls['/docs/developer_guide/platform_integration_guides/swift/initial_sdk_setup/swift_idfv/'] = '/docs/developer_guide/platform_integration_guides/swift/analytics/swift_idfv/';
+validurls['/docs/developer_guide/platform_integration_guides/swift/initial_sdk_setup/other_sdk_customizations/swift_idfv'] = '/docs/developer_guide/platform_integration_guides/swift/analytics/swift_idfv/';
 validurls['/docs/user_guide/onboarding_with_braze'] = '/docs/user_guide/getting_started/';
 validurls['/docs/user_guide/onboarding_with_braze/learning_to_use_braze/'] = '/docs/user_guide/getting_started/';
 validurls['/docs/user_guide/onboarding_with_braze/web_sdk/'] = '/docs/user_guide/getting_started/web_sdk/';
@@ -947,14 +949,14 @@ validurls['/docs/help/release_notes/2021/12_14_21/'] = '/docs/help/release_notes
 
 validurls['/docs/partners/message_orchestration/channel_extensions/ecommerce/shopify/shopify#prerequisites'] = '/docs/partners/message_orchestration/channel_extensions/ecommerce/shopify/shopify_overview/#requirements';
 validurls['/docs/partners/message_orchestration/channel_extensions/ecommerce/shopify/setting_up_shopify/#shopify-setup-within-braze'] = '/docs/partners/message_orchestration/channel_extensions/ecommerce/shopify/setting_up_shopify/';
-validurls['/docs/partners/message_orchestration/channel_extensions/ecommerce/shopify_backfill/'] = '/docs/partners/message_orchestration/channel_extensions/ecommerce/Shopify_Features/shopify_backfill/';
-validurls['/docs/partners/message_orchestration/channel_extensions/ecommerce/shopify/shopify_data_processing/'] = '/docs/partners/message_orchestration/channel_extensions/ecommerce/shopify/Using_Shopify/shopify_data_in_braze/';
+validurls['/docs/partners/message_orchestration/channel_extensions/ecommerce/shopify_backfill/'] = '/docs/partners/message_orchestration/channel_extensions/ecommerce/shopify_features/shopify_backfill/';
+validurls['/docs/partners/message_orchestration/channel_extensions/ecommerce/shopify/shopify_data_processing/'] = '/docs/partners/message_orchestration/channel_extensions/ecommerce/shopify/using_shopify/shopify_data_in_braze/';
 validurls['/docs/partners/message_orchestration/channel_extensions/ecommerce/shopify/shopify/'] = '/docs/partners/message_orchestration/channel_extensions/ecommerce/shopify/shopify_overview/';
-validurls['/docs/partners/message_orchestration/channel_extensions/ecommerce/shopify/shopify_catalogs/'] = '/docs/partners/message_orchestration/channel_extensions/ecommerce/shopify/Shopify_Features/shopify_catalogs/';
-validurls['/docs/partners/message_orchestration/channel_extensions/ecommerce/shopify/shopify_catalogs/#troubleshooting/'] = '/docs/partners/message_orchestration/channel_extensions/ecommerce/shopify/Shopify_Features/shopify_catalogs/#troubleshooting/';
-validurls['/docs/partners/message_orchestration/channel_extensions/ecommerce/shopify/shopify_catalogs/back_in_stock/'] = '/docs/partners/message_orchestration/channel_extensions/ecommerce/shopify/Shopify_Features/shopify_catalogs/back_in_stock/';
-validurls['/docs/partners/message_orchestration/channel_extensions/ecommerce/shopify/shopify_data_in_braze/'] = '/docs/partners/message_orchestration/channel_extensions/ecommerce/shopify/Using_Shopify/shopify_data_in_braze/';
-validurls['/docs/partners/message_orchestration/channel_extensions/ecommerce/shopify/use_cases/'] = '/docs/partners/message_orchestration/channel_extensions/ecommerce/shopify/Using_Shopify/use_cases/';
+validurls['/docs/partners/message_orchestration/channel_extensions/ecommerce/shopify/shopify_catalogs/'] = '/docs/partners/message_orchestration/channel_extensions/ecommerce/shopify/shopify_features/shopify_catalogs/';
+validurls['/docs/partners/message_orchestration/channel_extensions/ecommerce/shopify/shopify_catalogs/#troubleshooting/'] = '/docs/partners/message_orchestration/channel_extensions/ecommerce/shopify/shopify_features/shopify_catalogs/#troubleshooting/';
+validurls['/docs/partners/message_orchestration/channel_extensions/ecommerce/shopify/shopify_catalogs/back_in_stock/'] = '/docs/partners/message_orchestration/channel_extensions/ecommerce/shopify/shopify_features/shopify_catalogs/back_in_stock/';
+validurls['/docs/partners/message_orchestration/channel_extensions/ecommerce/shopify/shopify_data_in_braze/'] = '/docs/partners/message_orchestration/channel_extensions/ecommerce/shopify/using_shopify/shopify_data_in_braze/';
+validurls['/docs/partners/message_orchestration/channel_extensions/ecommerce/shopify/use_cases/'] = '/docs/partners/message_orchestration/channel_extensions/ecommerce/shopify/using_shopify/use_cases/';
 validurls['/docs/partners/message_orchestration/channel_extensions/ecommerce/shopify/scripttag_web_sdk_integration/'] = '/docs/partners/message_orchestration/channel_extensions/ecommerce/shopify/getting_started_shopify/';
 
 validurls['/docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/overview/'] = '/docs/developer_guide/platform_integration_guides/legacy_sdks/ios/initial_sdk_setup/overview/';
@@ -1097,6 +1099,9 @@ validurls['/docs/user_guide/administrative/app_settings/custom_event_and_attribu
 validurls['/docs/home/metadata/'] = '/docs/contributing/yaml_front_matter/metadata/';
 validurls['/docs/home/styling_test_page/'] = '/docs/contributing/styling_examples/';
 validurls['/docs/help/help_articles/docs/contribution'] = '/docs/contributing/home/';
+validurls['/docs/hidden/wip_partnerships/wip_guidelines'] = '/docs/contributing/home/';
+validurls['/docs/hidden/wip_partnerships/partnership_template'] = '/docs/contributing/templates/#technology-partner';
+validurls['/docs/help/help_articles/docs/contribution/'] = '/docs/contributing/home/';
 
 validurls['/docs/user_guide/administrative/app_settings/manage_your_braze_users/deleting_users_from_your_account/#deleting-braze-account-users'] = '/docs/user_guide/administrative/app_settings/manage_your_braze_users/adding_users_to_your_dashboard/#deleting-braze-users';
 
@@ -1106,5 +1111,7 @@ validurls['/docs/developer_guide/platform_integration_guides/cordova/initial_sdk
 validurls['/docs/developer_guide/platform_integration_guides/cordova/cordova_integration/#analytics'] = '/docs/developer_guide/platform_integration_guides/cordova/analytics/'
 validurls['/docs/developer_guide/platform_integration_guides/cordova/cordova_integration/#in-app-messaging'] = '/docs/developer_guide/platform_integration_guides/cordova/other_integrations/';
 validurls['/docs/developer_guide/platform_integration_guides/cordova/cordova_integration/#news-feed'] = '/docs/developer_guide/platform_integration_guides/cordova/other_integrations/';
+
+validurls['/docs/list-unsubscribe/'] = '/docs/user_guide/administrative/app_settings/email_settings/#list-unsubscribe-header';
 
 // validurls['OLD'] = 'NEW';
