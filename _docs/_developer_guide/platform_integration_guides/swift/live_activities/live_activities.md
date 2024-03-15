@@ -29,17 +29,17 @@ Additional prerequisites include:
 Note that, whereas Live Activities function similarly to push notifications, they are controlled by different user settings. A user can opt into Live Activities but out of push notifications, and the other way around.
 {% endalert %}
 
-## Implementing a Live Activity
+## Live Activity overview
 
-To manage the lifecycle of a Live Activity, follow these four steps.
+The process for managing a Live Activity can be broken down into four steps:
 
-1. [Create the Live Activity UI](#developing) using WidgetKit and SwiftUI. Initialize a Live Activity object with the relevant data models for your static and dynamic states.
+1. **[Develop](#developing):** Develop the Live Activity using WidgetKit and SwiftUI, then initialize a Live Activity object with the relevant data models for your static and dynamic states.
 
-2. [Register the Live Activity](#registering) with the Braze SDK using the [`launchActivity`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/liveactivities-swift.class/launchactivity(pushtokentag:activity:fileid:line:)) method with the Live Activity object and unique activity tag.
+2. **[Register](#registering):** Register the Live Activity with the Braze SDK using the [`launchActivity`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/liveactivities-swift.class/launchactivity(pushtokentag:activity:fileid:line:)) method with the Live Activity object and unique activity tag.
 
-3. [Update the Live Activity](#updating) using our [`/messages/live_activity/update` endpoint]({{site.baseurl}}/api/endpoints/messaging/live_activity/update).
+3. **[Update](#updating):** Update the Live Activity using our [`/messages/live_activity/update` endpoint]({{site.baseurl}}/api/endpoints/messaging/live_activity/update).
 
-4. [End the Live Activity](#ending) for all recipients by publishing an update to [`/messages/live_activity/update`]({{site.baseurl}}/api/endpoints/messaging/live_activity/update) with the parameter `"end_activity": true`.
+4. **[End](#ending):** End the Live Activity for all recipients by publishing an update to [`/messages/live_activity/update`]({{site.baseurl}}/api/endpoints/messaging/live_activity/update) with the parameter `"end_activity": true`.
 
 ## Step 1: Developing your Live Activity {#developing}
 
