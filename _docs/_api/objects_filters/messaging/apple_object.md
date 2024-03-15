@@ -42,7 +42,7 @@ description: "This reference article lists and explains the different Apple obje
 You must include an Apple Push Object in `messages` if you want users you have targeted to receive a push on their iOS Devices. The total number of bytes in your `alert` string, `extra` object and other optional parameters should not exceed 1912. The Messaging API will return an error if you exceed the message size allowed by Apple. Messages that include the keys `ab` or `aps` in the `extra` object will be rejected.
 
 {% alert note %}
-If you are sending the Apple Push Object as part of a Live Activities payload, include your `sound` string in the `alert` object instead of at the top level.
+If you're sending the Apple Push Object as part of a Live Activities payload, be sure to include your `sound` string in the `alert` object.
 {% endalert %}
 
 ### Apple push alert object
