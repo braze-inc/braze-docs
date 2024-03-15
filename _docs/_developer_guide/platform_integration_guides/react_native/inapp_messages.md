@@ -148,9 +148,12 @@ AppDelegate.braze = braze;
 ## Analytics
 
 To log analytics using your `BrazeInAppMessage`, pass the instance into the desired analytics function:
-- `logInAppMessageClicked`
-- `logInAppMessageImpression`
-- `logInAppMessageButtonClicked` (along with the button index)
+
+| Method                                   | Description                                                                                            |
+| ---------------------------------------- | ------------------------------------------------------------------------------------------------------ |
+| `logInAppMessageClicked()`               | Logs a click for the provided in-app message data.                                                     |
+| `logInAppMessageImpression()`            | Logs an impression for the provided in-app message data.                                               |
+| `logInAppMessageButtonClicked()`         | Logs a button click for the provided in-app message button data.                                       |
 
 For example:
 ```js
@@ -161,6 +164,16 @@ Braze.logInAppMessageImpression(inAppMessage);
 // Log button index `0` being clicked
 Braze.logInAppMessageButtonClicked(inAppMessage, 0);
 ```
+
+## Other in-app message methods
+
+You can use these additional methods when utilizing in-app messages in your app:
+
+| Method                                   | Description                                                                                            |
+| ---------------------------------------- | ------------------------------------------------------------------------------------------------------ |
+| `hideCurrentInAppMessage()`              | Dismisses the currently displayed in app message.                                                      |
+| `performInAppMessageButtonAction()`      | Performs the action for an in-app message button.                                                      |
+| `performInAppMessageAction()`            | Performs the action for an in-app message.                                                             |
 
 ## Test displaying a sample in-app message
 
