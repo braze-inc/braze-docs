@@ -15,18 +15,18 @@ description: "This article outlines details about the Start Live Activity endpoi
 /messages/live_activity/start
 {% endapimethod %}
 
-> Use this endpoint to remotely start [Live Activities]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/live_activities/live_activities/) displayed in your iOS app. This endpoint requires additional SDK setup.
+> Use this endpoint to remotely start [Live Activities]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/live_activities/live_activities/) displayed in your iOS app. This endpoint requires additional setup.
 
+After you create a Live Activity, you can make a POST request to remotely start the activity for a given segment. For more information about Apple's Live Activities, see [Starting and updating Live Activities with ActivityKit push notifications](https://developer.apple.com/documentation/activitykit/starting-and-updating-live-activities-with-activitykit-push-notifications).
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#2300226e-f26a-4154-9bcc-5883f1f294cd {% endapiref %}
 
 ## Prerequisites
 
-To use this endpoint, you'll need to generate an API key with the `messages.live_activity.start` permission.
+To use this endpoint, you'll need to complete the following:
 
-This integration requires updates to your iOS app integration. Refer to the Braze Swift SDK's [Live Activities documentation]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/live_activities/live_activities) for further details.
-
-Once you have registered your activity, you can POST a payload to remotely start the live activity for a given segment. See Apple's documentation on [starting and updating your Live Activity with push notification payloads](https://developer.apple.com/documentation/activitykit/starting-and-updating-live-activities-with-activitykit-push-notifications) for more information.
+- Generate an API key with the `messages.live_activity.start` permission.
+- [Create a Live Activity]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/live_activities/live_activities/#step-1-create-a-live-activity) using the Braze Swift SDK.
 
 ## Rate limit
 
