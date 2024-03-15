@@ -33,13 +33,13 @@ Note that, whereas Live Activities function similarly to push notifications, the
 
 To manage the lifecycle of a Live Activity, follow these four steps.
 
-1. [Create the Live Activity.](#developing) Develop the Live Activity UI using WidgetKit and SwiftUI. Initialize a Live Activity object with the relevant data models for your static and dynamic states.<br><br>
+1. [Create the Live Activity UI](#developing) using WidgetKit and SwiftUI. Initialize a Live Activity object with the relevant data models for your static and dynamic states.
 
-2. [Register the Live Activity](#registering) Register a Live Activity with the Braze SDK using the [`launchActivity`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/liveactivities-swift.class/launchactivity(pushtokentag:activity:fileid:line:)) method with the Live Activity object and unique activity tag.<br><br>
+2. [Register the Live Activity](#registering) with the Braze SDK using the [`launchActivity`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/liveactivities-swift.class/launchactivity(pushtokentag:activity:fileid:line:)) method with the Live Activity object and unique activity tag.
 
-3. [Update the Live Activity](#updating) Publish updates to the Live Activity using our [`/messages/live_activity/update` endpoint]({{site.baseurl}}/api/endpoints/messaging/live_activity/update).<br><br>
+3. [Update the Live Activity](#updating) using our [`/messages/live_activity/update` endpoint]({{site.baseurl}}/api/endpoints/messaging/live_activity/update).
 
-4. [End the Live Activity](#ending) End a Live Activity for all recipients by publishing an update to [`/messages/live_activity/update`]({{site.baseurl}}/api/endpoints/messaging/live_activity/update) with the parameter `"end_activity": true`.
+4. [End the Live Activity](#ending) for all recipients by publishing an update to [`/messages/live_activity/update`]({{site.baseurl}}/api/endpoints/messaging/live_activity/update) with the parameter `"end_activity": true`.
 
 ## Step 1: Developing your Live Activity {#developing}
 
@@ -128,9 +128,8 @@ Your Live Activity widget would display this initial content to your users.
 
 ### Resuming Live Activity tracking
 
-You will need to ensure that Braze tracks your Live Activity upon app launch.
+To ensure that Braze tracks your Live Activity upon app launch:
 
-To do this:
 1. Open your `AppDelegate` file.
 2. Import the `ActivityKit` module if it’s available.
 3. Call [`resumeActivities(ofType:)`][6] in `application(_:didFinishLaunchingWithOptions:)` for all `ActivityAttributes` types you have registered in your application.
