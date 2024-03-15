@@ -105,7 +105,7 @@ The time intervals for each bucket are determined based on Canvas-specific user 
 **How Personalized Paths are selected**<br>
 With this method, an individual user's recommended message is the sum of the effects of their specific recency, frequency, and tenure. Recency, frequency, and tenure are split into buckets, as illustrated in the **User Characteristics** table. The time range of each bucket is determined by the data for users in each individual Canvas and will change from Canvas to Canvas.
 
-Each bucket can have a different contribution or "push" towards each path. The strength of the push for each bucket is determined from user responses in the initial experiment using [logistic regression](https://en.wikipedia.org/wiki/Logistic_regression). This table only summarizes the results by displaying which path users in each bucket tended to engage with. Any individual user's actual Personalized Path depends on the sum of the effects of the three buckets they're in—one for each characteristic.
+Each bucket can have a different contribution or "push" toward each path. The strength of the push for each bucket is determined from user responses in the initial experiment using [logistic regression](https://en.wikipedia.org/wiki/Logistic_regression). This table only summarizes the results by displaying which path users in each bucket tended to engage with. Any individual user's actual Personalized Path depends on the sum of the effects of the three buckets they're in—one for each characteristic.
 
 {% enddetails %}
 
