@@ -1159,6 +1159,7 @@ This event occurs when a user views an in-app message.
   "app_id": (required, string) ID for the app on which the user action occurred,
   "campaign_id": (optional, string) ID of the campaign if from a campaign,
   "campaign_name": (optional, string) name of the campaign,
+  "message_extras": (, string) a JSON string of the tagged key-value pairs during Liquid rendering,
   "message_variation_id": (optional, string) ID of the message variation if from a campaign,
   "message_variation_name": (optional, string) the name of the message variation if from a campaign,
   "canvas_id": (optional, string) ID of the Canvas if from a Canvas,
@@ -1178,6 +1179,11 @@ This event occurs when a user views an in-app message.
   "ad_tracking_enabled": (optional, boolean) whether advertising tracking is enabled for the device
 }
 ```
+
+{% alert note %}
+The `message_extras` field will be active on April 4, 2024.
+{% endalert %}
+
 #### Property details
 - For `ad_id`, `ad_id_type` and `ad_tracking_enabled`, you need to explicitly collect the iOS IDFA and Android Google advertising ID through the native SDKs. Learn more about this setup for [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/swift_idfv/) and [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id).
 - If you are using Kafka to ingest [Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/) data, contact your customer success manager to enable sending `ad_id`.
