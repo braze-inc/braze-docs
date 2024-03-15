@@ -145,35 +145,18 @@ AppDelegate.braze = braze;
 {% endtab %}
 {% endtabs %}
 
-## Analytics
+## Analytics and action methods
 
-To log analytics using your `BrazeInAppMessage`, pass the instance into the desired analytics function:
+You can use these methods by passing your `BrazeInAppMessage` instance to log analytics and perform actions:
 
-| Method                                   | Description                                                                                            |
-| ---------------------------------------- | ------------------------------------------------------------------------------------------------------ |
-| `logInAppMessageClicked()`               | Logs a click for the provided in-app message data.                                                     |
-| `logInAppMessageImpression()`            | Logs an impression for the provided in-app message data.                                               |
-| `logInAppMessageButtonClicked()`         | Logs a button click for the provided in-app message button data.                                       |
-
-For example:
-```js
-// Log a click
-Braze.logInAppMessageClicked(inAppMessage);
-// Log an impression
-Braze.logInAppMessageImpression(inAppMessage);
-// Log button index `0` being clicked
-Braze.logInAppMessageButtonClicked(inAppMessage, 0);
-```
-
-## Actions & other methods
-
-You can use these additional methods when utilizing in-app messages in your app:
-
-| Method                                   | Description                                                                                            |
-| ---------------------------------------- | ------------------------------------------------------------------------------------------------------ |
-| `hideCurrentInAppMessage()`              | Dismisses the currently displayed in app message.                                                      |
-| `performInAppMessageButtonAction()`      | Performs the action for an in-app message button.                                                      |
-| `performInAppMessageAction()`            | Performs the action for an in-app message.                                                             |
+| Method                                                    | Description                                                                           |
+| --------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| `logInAppMessageClicked(inAppMessage)`                    | Logs a click for the provided in-app message data.                                    |
+| `logInAppMessageImpression(inAppMessage)`                 | Logs an impression for the provided in-app message data.                              |
+| `logInAppMessageButtonClicked(inAppMessage, buttonId)`    | Logs a button click for the provided in-app message data and button ID.               |
+| `hideCurrentInAppMessage()`                               | Dismisses the currently displayed in app message.                                     |
+| `performInAppMessageAction(inAppMessage)`                 | Performs the action for an in-app message.                                            |
+| `performInAppMessageButtonAction(inAppMessage, buttonId)` | Performs the action for an in-app message button.                                     |
 
 ## Test displaying a sample in-app message
 
@@ -193,7 +176,7 @@ The in-app message model is available in the React Native SDK.
 
 ### In-app message model properties
 
-The in-app message model provides the base for all in-app messages. Braze has four in-app message types that share the same data model: *slideup*, *modal*, *full* and *HTML full*.
+The in-app message model provides the base for all in-app messages. Braze has four in-app message types that share the same data model: **slideup**, **modal**, **full** and **HTML full**.
 
 |Property          | Description                                                                                                            |
 |------------------|------------------------------------------------------------------------------------------------------------------------|
