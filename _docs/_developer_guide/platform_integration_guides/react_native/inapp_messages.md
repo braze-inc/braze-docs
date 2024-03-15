@@ -154,7 +154,7 @@ You can use these methods by passing your `BrazeInAppMessage` instance to log an
 | `logInAppMessageClicked(inAppMessage)`                    | Logs a click for the provided in-app message data.                                    |
 | `logInAppMessageImpression(inAppMessage)`                 | Logs an impression for the provided in-app message data.                              |
 | `logInAppMessageButtonClicked(inAppMessage, buttonId)`    | Logs a button click for the provided in-app message data and button ID.               |
-| `hideCurrentInAppMessage()`                               | Dismisses the currently displayed in app message.                                     |
+| `hideCurrentInAppMessage()`                               | Dismisses the currently displayed in-app message.                                     |
 | `performInAppMessageAction(inAppMessage)`                 | Performs the action for an in-app message.                                            |
 | `performInAppMessageButtonAction(inAppMessage, buttonId)` | Performs the action for an in-app message button.                                     |
 
@@ -172,11 +172,11 @@ A sample implementation can be found in BrazeProject, within the [React Native S
 
 ## In-app message data model
 
-The in-app message model is available in the React Native SDK.
+The in-app message model is available in the React Native SDK. Braze has four in-app message types that share the same data model: **slideup**, **modal**, **full** and **HTML full**.
 
 ### In-app message model properties
 
-The in-app message model provides the base for all in-app messages. Braze has four in-app message types that share the same data model: **slideup**, **modal**, **full** and **HTML full**.
+The in-app message model provides the base for all in-app messages.
 
 |Property          | Description                                                                                                            |
 |------------------|------------------------------------------------------------------------------------------------------------------------|

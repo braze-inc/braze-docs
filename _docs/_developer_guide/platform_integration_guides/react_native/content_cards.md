@@ -124,9 +124,7 @@ For a full reference of the captioned image card, see the [Android][12] and [iOS
 
 ### Classic Content Card model properties
 
-There are two classic card types, the **text announcement card** and the **short news card**:
-    - A classic card without an image included will result in a text announcement card.
-    - If an image is included, you will receive a short news card.
+There are two classic card types, the **text announcement card** and the **short news card**. A classic card without an image included will result in a text announcement card. If an image is included, you will receive a short news card.
 
 |Property           | Description                                                                                                       |
 |-------------------|-------------------------------------------------------------------------------------------------------------------|
