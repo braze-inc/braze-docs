@@ -1175,9 +1175,15 @@ This event occurs when a user views an in-app message.
   "device_id": (optional, string) ID of the device on which the event occurred,
   "ad_id": (optional, string) advertising identifier,
   "ad_id_type": (optional, string) One of 'ios_idfa', 'google_ad_id', OR 'roku_ad_id',
-  "ad_tracking_enabled": (optional, boolean) whether advertising tracking is enabled for the device
+  "ad_tracking_enabled": (optional, boolean) whether advertising tracking is enabled for the device,
+  "message_extras": (optional, string) a JSON string of the tagged key-value pairs during Liquid rendering
 }
 ```
+
+{% alert note %}
+The `message_extras` field will be active on April 4, 2024.
+{% endalert %}
+
 #### Property details
 - For `ad_id`, `ad_id_type` and `ad_tracking_enabled`, you need to explicitly collect the iOS IDFA and Android Google advertising ID through the native SDKs. Learn more about this setup for [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/swift_idfv/) and [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id).
 - If you are using Kafka to ingest [Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/) data, contact your customer success manager to enable sending `ad_id`.
