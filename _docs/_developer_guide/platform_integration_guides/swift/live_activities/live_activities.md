@@ -25,27 +25,15 @@ Additional prerequisites include:
 
 - Live Activities are only available for iPhones and iPads on iOS 16.1 and later. To use this feature, ensure that your project is targeting this iOS version.
 - The `Push Notification` entitlement must be added under **Signing & Capabilities** in your Xcode project.
-- Remotely starting a Live Activity via push notifications was introduced in version 8.2.0 of the Braze Swift SDK and requires iOS 17.2 and later.
+- Starting with version 8.2.0 of the Braze Swift SDK, you can [remotely register a Live Activity](#step-2-register-the-activity). To use this feature, iOS 17.2 or later is required.
 
 {% alert note %}
-Note that, whereas Live Activities function similarly to push notifications, they are controlled by different user settings. A user can opt into Live Activities but out of push notifications, and the other way around. By default, users are automatically opted in to Live Activity features and can opt out on a per-app basis.
+While Live Activities and push notifications are similar, their system permissions are separate. By default, all Live Activity features are enabled, but users may disable this feature per app.
 {% endalert %}
 
 ## Implementing a Live Activity
 
-In this section, TODO...
-
-1. **[Create](#developing):** Create the Live Activity using WidgetKit and SwiftUI, then initialize a Live Activity object with the relevant data models for your static and dynamic states.
-
-2. **[Register](#registering):** Register the Live Activity with the Braze SDK by starting it [remotely]() or [locally]().
-
-3. **[Resume](#resuming):** Resume token-tracking tasks for subsequent app launches using the Live Activity.
-
-4. **[Update](#updating):** Update the Live Activity using our [`/messages/live_activity/update` endpoint]({{site.baseurl}}/api/endpoints/messaging/live_activity/update).
-
-5. **[End](#ending):** End the Live Activity for all recipients by publishing an update to [`/messages/live_activity/update`]({{site.baseurl}}/api/endpoints/messaging/live_activity/update) with the parameter `"end_activity": true`.
-
-### Step 1: Create a Live Activity
+### Step 1: Create an activity
 
 First, ensure that you have followed [Displaying live data with Live Activities][3] in Apple’s documentation to set up Live Activities in your iOS application. As part of this task, make sure you include `NSSupportsLiveActivities` set to `YES` in your `Info.plist`.
 
@@ -84,26 +72,26 @@ struct SportsActivityAttributes: ActivityAttributes {
 
 ### Step 2: Register the activity
 
-Intro TODO...
+First, choose how you want to register your activity:
 
-- **Remote:** TODO
-- **Local:** TODO
-
-{% alert note %}
-The Live Activity push-to-start features requires iOS 17.2 or later. It is available starting with version 8.2.0 of the Braze Swift SDK.
-{% endalert %}
+- **Remote:** Use the [`registerPushToStart`](http://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/liveactivities-swift.class/registerpushtostart(fortype:name:)) method, then start an activity using the [`/messages/live_activity/start`]({{site.baseurl}}/api/endpoints/messaging/live_activity/start) endpoint.
+- **Local:** Use the [`launchActivity`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/liveactivities-swift.class/launchactivity(pushtokentag:activity:fileid:line:)) method to create push tokens for the Braze SDK to manage.
 
 {% tabs local %}
 {% tab remote %}
+{% alert important %}
+To remotely register a Live Activity, iOS 17.2 or later is required.
+{% endalert %}
+
 #### Step 2.1: Add BrazeKit to your widget extension
 
-First, ensure that your Live Activity app extension includes `BrazeKit` under its `Frameworks and Libraries` by going to your Xcode project, clicking on your Live Activity app extension target, and navigating to the `General` tab.
+In your Xcode project, select your app name, then **General**. Under **Frameworks and Libraries**, confirm `BrazeKit` is listed.
 
 ![The BrazeKit framework under Frameworks and Libraries in a sample Xcode project.]({% image_buster /assets/img/endpoint_live_activities/four.png %}).
 
 #### Step 2.2: Add the BrazeLiveActivityAttributes protocol
 
-Next, add conformance to the `BrazeLiveActivityAttributes` protocol in your `ActivityAttributes` implementation. This will also require you to add the `brazeActivityId` string to your attributes model. You do not need to assign any value to this string.
+In your `ActivityAttributes` implementation, add conformance to the `BrazeLiveActivityAttributes` protocol, then add the `brazeActivityId` string to your attributes model. You do not need to assign a value to this string.
 
 ```swift
 import BrazeKit
@@ -127,15 +115,15 @@ struct SportsActivityAttributes: ActivityAttributes, BrazeLiveActivityAttributes
 
 #### Step 2.3: Register for push-to-start
 
-Now, register the Live Activity attributes type with Braze. This will track any push-to-start tokens for this Live Activity type as well as any incoming Live Activity instances of this type that were initiated from a Braze push notification.
-
-For our example, we’ll create class called `LiveActivityManager` as an interface for our Live Activity objects. Then, we'll register our our `SportActivityAttributes` implementation using the `registerPushToStart` method.
+Next, register the Live Activity type, so Braze can track all push-to-start tokens and Live Activity instances associated with this type.
 
 {% alert warning %}
-Push-to-start tokens are only generated by Apple's operating system at the first app install after rebooting the device. While this behavior may be refined in the future, ensure that your users' tokens are reliably registered by calling `registerPushToStart` in your `didFinishLaunchingWithOptions` method.
+The iOS operating system only generates push-to-start tokens during the first app install after a device is restarted. To ensure your tokens are reliably registered, call `registerPushToStart` in your `didFinishLaunchingWithOptions` method.
 {% endalert %}
 
 ###### Example
+
+In the following example, the `LiveActivityManager` class handles Live Activity objects. Then, the `registerPushToStart` method registers `SportActivityAttributes`:
 
 ```swift
 import BrazeKit
@@ -161,9 +149,7 @@ class LiveActivityManager {
 {% endtab %}
 
 {% tab local %}
-Next, you will use Braze methods to track and manage your Live Activities. This step is only required for Live Activity instances that were initialized locally in your Swift code.
-
-Updates to a Live Activity can be sent using ActivityKit (Apple’s framework for managing a Live Activity) or remote push notifications. In this instance, you will use ActivityKit to get a push token, which the Braze SDK can manage for you. This allows you to update Live Activities through the Braze API, as Braze will send the push token to the Apple Push Notification service (APNs) on the backend.
+You can use [Apple's ActivityKit framework](https://developer.apple.com/documentation/activitykit) to get a push token, which the Braze SDK can manage for you. This allows you to update Live Activities through the Braze API, as Braze will send the push token to the Apple Push Notification service (APNs) on the backend.
 
 1. Create an instance of your Live Activity implementation using Apple’s ActivityKit APIs.
 2. Set the `pushType` parameter as `.token`. 
@@ -211,7 +197,7 @@ Your Live Activity widget would display this initial content to your users.
 {% endtab %}
 {% endtabs %}
 
-### Step 3: Resume tracking
+### Step 3: Resume activity tracking
 
 To ensure Braze tracks your Live Activity upon app launch:
 

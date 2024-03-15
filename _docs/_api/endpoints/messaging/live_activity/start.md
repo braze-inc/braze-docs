@@ -17,7 +17,7 @@ description: "This article outlines details about the Start Live Activity endpoi
 
 > Use this endpoint to remotely start [Live Activities]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/live_activities/live_activities/) displayed in your iOS app. This endpoint requires additional setup.
 
-After you create a Live Activity, you can make a POST request to remotely start the activity for a given segment. For more information about Apple's Live Activities, see [Starting and updating Live Activities with ActivityKit push notifications](https://developer.apple.com/documentation/activitykit/starting-and-updating-live-activities-with-activitykit-push-notifications).
+After you create a Live Activity, you can make a POST request to remotely start your activity for any given segment. For more information about Apple's Live Activities, see [Starting and updating Live Activities with ActivityKit push notifications](https://developer.apple.com/documentation/activitykit/starting-and-updating-live-activities-with-activitykit-push-notifications).
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#2300226e-f26a-4154-9bcc-5883f1f294cd {% endapiref %}
 
