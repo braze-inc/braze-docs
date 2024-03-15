@@ -67,7 +67,7 @@ A sample implementation of this can be found in BrazeProject within the [React N
 
 ## Content Card data model
 
-The Content Cards data model is available in the Cordova SDK. For a full reference of the Content Card data model, see the [Android][6] and [iOS][7] documentation.
+The Content Cards data model is available in the React Native SDK. For a full reference of the Content Card data model, see the [Android][6] and [iOS][7] documentation.
 
 Braze has four unique Content Cards card types that share a base model: `image only`, `captioned image`, `classic (text announcement)` and `classic (short news)`. Each type inherits common properties from a base model and has the following additional properties.
 

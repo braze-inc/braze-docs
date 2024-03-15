@@ -165,7 +165,7 @@ Braze.logInAppMessageImpression(inAppMessage);
 Braze.logInAppMessageButtonClicked(inAppMessage, 0);
 ```
 
-## Other in-app message methods
+## Actions & other methods
 
 You can use these additional methods when utilizing in-app messages in your app:
 
@@ -187,6 +187,50 @@ Follow these steps to test a sample in-app message.
 
 A sample implementation can be found in BrazeProject, within the [React Native SDK][7]. Additional Android and iOS implementation samples can be found in the [Android][8] and [iOS][9] SDK.
 
+## In-app message data model
+
+The in-app message model is available in the React Native SDK.
+
+### In-app message model properties
+
+The in-app message model provides the base for all in-app messages. Braze has four in-app message types that share the same data model: `slideup`, `modal`, `full` and `html full`.
+
+|Property          | Description                                                                                                            |
+|------------------|------------------------------------------------------------------------------------------------------------------------|
+|`inAppMessageJsonString` | The message JSON representation.                                                                                |
+|`message`         | The message text.                                                                                                      |
+|`header`          | The message header.                                                                                                    |
+|`uri`             | The URI associated with the button click action.                                                                       |
+|`imageUrl`        | The message image URL.                                                                                                 |
+|`zippedAssetsUrl` | The zipped assets prepared to display HTML content.                                                                    |
+|`useWebView`      | Indicates whether the button click action should redirect using a web view.                                            |
+|`duration`        | The message display duration.                                                                                          |
+|`clickAction`     | The button click action type. The three types are: `NEWS_FEED`, `URI`, and `NONE`.                                     |
+|`dismissType`     | The message close type. The two types are: `SWIPE` and `AUTO_DISMISS`.                                                 |
+|`messageType`     | The in-app message type supported by the SDK. The four types are: `SLIDEUP`, `MODAL`, `FULL` and `HTML_FULL`.          |
+|`extras`          | The message extras dictionary (default: `[:]`).                                                                        |
+|`buttons`         | The list of buttons on the in-app message.                                                                             |
+|`toString()`      | The message as a String representation.                                                                                |
+{: .reset-td-br-1 .reset-td-br-2}
+
+For a full reference of the in-app message model, see the [Android][10] and [iOS][11] documentation.
+
+### In-app message button model properties
+
+Buttons can be added to in-app messages to perform actions and log analytics. The button model provides the base for all in-app message buttons.
+
+|Property          | Description                                                                                                                 |
+|------------------|-----------------------------------------------------------------------------------------------------------------------------|
+|`text`            | The text on the button.                                                                                                     |
+|`uri`             | The URI associated with the button click action.                                                                            |
+|`useWebView`      | Indicates whether the button click action should redirect using a web view.                                                 |
+|`clickAction`     | The type of click action processed when the user clicks on the button. The three types are: `NEWS_FEED`, `URI`, and `NONE`. |
+|`id`              | The button ID on the message.                                                                                               |
+|`toString()`      | The button as a String representation.                                                                                      |
+{: .reset-td-br-1 .reset-td-br-2}
+
+For a full reference of button model, see the [Android][12] and [iOS][13] documentation.
+
 [1]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/in-app_messaging/customization/custom_listeners/#custom-manager-listener
 [2]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/in-app_messaging/customization/custom_listeners/#step-1-implement-an-in-app-message-manager-listener
 [5]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/create/
@@ -194,3 +238,7 @@ A sample implementation can be found in BrazeProject, within the [React Native S
 [7]: https://github.com/braze-inc/braze-react-native-sdk
 [8]: https://github.com/braze-inc/braze-android-sdk
 [9]: https://github.com/braze-inc/braze-swift-sdk
+[10]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/index.html
+[11]: https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/inappmessage
+[12]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/-message-button/index.html
+[13]: https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/inappmessage/button
