@@ -193,7 +193,7 @@ The in-app message model is available in the React Native SDK.
 
 ### In-app message model properties
 
-The in-app message model provides the base for all in-app messages. Braze has four in-app message types that share the same data model: `slideup`, `modal`, `full` and `html full`.
+The in-app message model provides the base for all in-app messages. Braze has four in-app message types that share the same data model: *slideup*, *modal*, *full* and *HTML full*.
 
 |Property          | Description                                                                                                            |
 |------------------|------------------------------------------------------------------------------------------------------------------------|
@@ -208,7 +208,7 @@ The in-app message model provides the base for all in-app messages. Braze has fo
 |`clickAction`     | The button click action type. The three types are: `NEWS_FEED`, `URI`, and `NONE`.                                     |
 |`dismissType`     | The message close type. The two types are: `SWIPE` and `AUTO_DISMISS`.                                                 |
 |`messageType`     | The in-app message type supported by the SDK. The four types are: `SLIDEUP`, `MODAL`, `FULL` and `HTML_FULL`.          |
-|`extras`          | The message extras dictionary (default: `[:]`).                                                                        |
+|`extras`          | The message extras dictionary. Default value: `[:]`.                                                                   |
 |`buttons`         | The list of buttons on the in-app message.                                                                             |
 |`toString()`      | The message as a String representation.                                                                                |
 {: .reset-td-br-1 .reset-td-br-2}

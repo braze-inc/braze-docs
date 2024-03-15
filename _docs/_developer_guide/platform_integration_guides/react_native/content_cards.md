@@ -39,16 +39,16 @@ If you choose to build your own UI to display cards, you must call `logContentCa
 
 You can use these additional methods to build a custom Content Cards Feed within your app:
 
-| Method                                         | Description                                                                                            |
-| ---------------------------------------------- | ------------------------------------------------------------------------------------------------------ |
-| `Braze.launchContentCards()`                   | Launches the Content Cards UI element.                                                                 |
-| `Braze.requestContentCardsRefresh()`           | Requests the latest Content Cards from the Braze SDK server.                                           |
-| `Braze.getContentCards()`                      | Retrieves Content Cards from the Braze SDK. This will return the latest list of cards from the server. |
-| `Braze.getCachedContentCards()`                | Returns the most recent Content Cards array from the cache.                                            |
-| `Braze.logContentCardClicked(cardId)`          | Logs a click for the given Content Card ID.                                                            |
-| `Braze.logContentCardImpression(cardId)`       | Logs an impression for the given Content Card ID.                                                      |
-| `Braze.logContentCardDismissed(cardId)`        | Logs a dismissal for the given Content Card ID.                                                        |
-| `Braze.processContentCardClickAction(cardId)`  | Perform the action of a particular card.                                                               |
+| Method                                   | Description                                                                                            |
+| ---------------------------------------- | ------------------------------------------------------------------------------------------------------ |
+| `launchContentCards()`                   | Launches the Content Cards UI element.                                                                 |
+| `requestContentCardsRefresh()`           | Requests the latest Content Cards from the Braze SDK server.                                           |
+| `getContentCards()`                      | Retrieves Content Cards from the Braze SDK. This will return the latest list of cards from the server. |
+| `getCachedContentCards()`                | Returns the most recent Content Cards array from the cache.                                            |
+| `logContentCardClicked(cardId)`          | Logs a click for the given Content Card ID.                                                            |
+| `logContentCardImpression(cardId)`       | Logs an impression for the given Content Card ID.                                                      |
+| `logContentCardDismissed(cardId)`        | Logs a dismissal for the given Content Card ID.                                                        |
+| `processContentCardClickAction(cardId)`  | Perform the action of a particular card.                                                               |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## Test displaying sample Content Card
@@ -69,11 +69,11 @@ A sample implementation of this can be found in BrazeProject within the [React N
 
 The Content Cards data model is available in the React Native SDK. For a full reference of the Content Card data model, see the [Android][6] and [iOS][7] documentation.
 
-Braze has four unique Content Cards card types that share a base model: `image only`, `captioned image`, `classic (text announcement)` and `classic (short news)`. Each type inherits common properties from a base model and has the following additional properties.
+Braze has four unique Content Cards card types that share a base model: *image only*, *captioned image*, *classic (text announcement)* and *classic (short news)*. Each type inherits common properties from a base model and has the following additional properties.
 
 ### Base Content Card model properties
 
-The `base card` model provides foundational behavior for all cards.
+The base card model provides foundational behavior for all cards.
 
 |Property      | Description                                                                                                            |
 |--------------|------------------------------------------------------------------------------------------------------------------------|
@@ -93,26 +93,26 @@ The `base card` model provides foundational behavior for all cards.
 
 For a full reference of the base card, see the [Android][8] and [iOS][9] documentation.
 
-### Image Only Card model properties
+### Image only Content Card model properties
 
-`Image only cards` are clickable, full-sized images.
+Image only cards are clickable, full-sized images.
 
 |Property           | Description                                                                                                       |
 |-------------------|-------------------------------------------------------------------------------------------------------------------|
-|`type`             | The Content Card type, `"ImageOnly"`.                                                                             |
+|`type`             | The Content Card type, `IMAGE_ONLY`.                                                                              |
 |`image`            | The URL of the card's image.                                                                                      |
 |`imageAspectRatio` | The aspect ratio of the card's image. It is meant to serve as a hint before image loading completes. Note that the property may not be supplied in certain circumstances. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 For a full reference of the image only card, see the [Android][10] and [iOS][11] documentation.
 
-### Captioned Image Card model properties
+### Captioned image Content Card model properties
 
-`Captioned image cards` are clickable, full-sized images with accompanying descriptive text.
+Captioned image cards are clickable, full-sized images with accompanying descriptive text.
 
 |Property           | Description                                                                                                       |
 |-------------------|-------------------------------------------------------------------------------------------------------------------|
-|`type`             | The Content Card type, `"Captioned"`.                                                                             |
+|`type`             | The Content Card type, `CAPTIONED`.                                                                               |
 |`image`            | The URL of the card's image.                                                                                      |
 |`imageAspectRatio` | The aspect ratio of the card's image. It is meant to serve as a hint before image loading completes. Note that the property may not be supplied in certain circumstances. |
 |`title`            | The title text for the card.                                                                                      |
@@ -122,15 +122,15 @@ For a full reference of the image only card, see the [Android][10] and [iOS][11]
 
 For a full reference of the captioned image card, see the [Android][12] and [iOS][13] documentation.
 
-### Classic Card model properties
+### Classic Content Card model properties
 
-There are two classic card types, the `text announcement card` and the `short news card`:
-- A classic card without an image included will result in a `text announcement card`.
-- If an image is included, you will receive a `short news card`.
+There are two classic card types, the *text announcement card* and the *short news card*:
+    - A classic card without an image included will result in a text announcement card.
+    - If an image is included, you will receive a short news card.
 
 |Property           | Description                                                                                                       |
 |-------------------|-------------------------------------------------------------------------------------------------------------------|
-|`type`             | The Content Card type, `"Classic"`.                                                                               |
+|`type`             | The Content Card type, `CLASSIC`.                                                                                 |
 |`image`            | (Optional) The URL of the card's image.                                                                           |
 |`title`            | The title text for the card.                                                                                      |
 |`cardDescription`  | The description text for the card.                                                                                |
