@@ -1159,7 +1159,6 @@ This event occurs when a user views an in-app message.
   "app_id": (required, string) ID for the app on which the user action occurred,
   "campaign_id": (optional, string) ID of the campaign if from a campaign,
   "campaign_name": (optional, string) name of the campaign,
-  "message_extras": (, string) a JSON string of the tagged key-value pairs during Liquid rendering,
   "message_variation_id": (optional, string) ID of the message variation if from a campaign,
   "message_variation_name": (optional, string) the name of the message variation if from a campaign,
   "canvas_id": (optional, string) ID of the Canvas if from a Canvas,
@@ -1176,7 +1175,8 @@ This event occurs when a user views an in-app message.
   "device_id": (optional, string) ID of the device on which the event occurred,
   "ad_id": (optional, string) advertising identifier,
   "ad_id_type": (optional, string) One of 'ios_idfa', 'google_ad_id', OR 'roku_ad_id',
-  "ad_tracking_enabled": (optional, boolean) whether advertising tracking is enabled for the device
+  "ad_tracking_enabled": (optional, boolean) whether advertising tracking is enabled for the device,
+  "message_extras": (optional, string) a JSON string of the tagged key-value pairs during Liquid rendering
 }
 ```
 
