@@ -182,7 +182,7 @@ The current version of the Braze Web SDK via Shopify ScriptTag integration is v4
 
 **Monthly Active Users (MAU)**
 
-The Web SDK tracks sessions of your Shopify customers and guests. As a result, this will accrue as MAU within your Braze dashboard reporting and towards your MAU allotments. It is important to note that anonymous users will also count toward your MAU. For mobile devices, anonymous users are device-dependent. For web users, anonymous users are browser cache-dependent.
+The Web SDK tracks sessions of your Shopify customers and guests. As a result, this will accrue as MAU within your Braze dashboard reporting and toward your MAU allotments. It is important to note that anonymous users will also count toward your MAU. For mobile devices, anonymous users are device-dependent. For web users, anonymous users are browser cache-dependent.
 
 {% endtab %}
 
@@ -314,7 +314,7 @@ The current version of the Braze Web SDK should be v4.0+.
 
 **Monthly Active Users (MAU)**
 
-The Web SDK tracks the sessions of your Shopify customers and guests. As a result, this will accrue as MAU within your Braze dashboard reporting and towards your MAU allotments. It is important to note that anonymous users will also count toward your MAU. For mobile devices, anonymous users are device-dependent. For web users, anonymous users are browser cache-dependent.
+The Web SDK tracks the sessions of your Shopify customers and guests. As a result, this will accrue as MAU within your Braze dashboard reporting and toward your MAU allotments. It is important to note that anonymous users will also count toward your MAU. For mobile devices, anonymous users are device-dependent. For web users, anonymous users are browser cache-dependent.
 
 {% endtab %}
 {% tab Headless Shopify site %}
