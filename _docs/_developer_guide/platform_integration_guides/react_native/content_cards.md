@@ -63,10 +63,96 @@ Follow these steps to test a sample Content Card.
 
 For more integrations, follow the [Android integration instructions][2] or the [iOS integration instructions][3], depending on your platform.
 
-A sample implementation of this can be found in BrazeProject within the [React SDK][1].
+A sample implementation of this can be found in BrazeProject within the [React Native SDK][1].
+
+## Content Card data model
+
+The Content Cards data model is available in the Cordova SDK. For a full reference of the Content Card data model, see the [Android][6] and [iOS][7] documentation.
+
+Braze has four unique Content Cards card types that share a base model: `image only`, `captioned image`, `classic (text announcement)` and `classic (short news)`. Each type inherits common properties from a base model and has the following additional properties.
+
+### Base Content Card model properties
+
+The `base card` model provides foundational behavior for all cards.
+
+|Property      | Description                                                                                                            |
+|--------------|------------------------------------------------------------------------------------------------------------------------|
+|`id`          | The card's ID set by Braze.                                                                                            |
+|`created`     | The UNIX timestamp of the card's creation time from Braze.                                                             |
+|`expiresAt`   | The UNIX timestamp of the card's expiration time. When the value is less than 0, it means the card never expires.      |
+|`viewed`      | Whether the card is read or unread by the user. This does not log analytics.                                           |
+|`clicked`     | Whether the card has been clicked by the user.                                                                         |
+|`pinned`      | Whether the card is pinned.                                                                                            |
+|`dismissed`   | Whether the user has dismissed this card. Marking a card as dismissed that has already been dismissed will be a no-op. |
+|`dismissible` | Whether the card is dismissible by the user.                                                                           |
+|`url`         | (Optional) The url string associated with the card click action.                                                       |
+|`openURLInWebView` | Whether URLs for this card should be opened in Braze's WebView or not.                                            |
+|`isControl`   | Whether this card is a control card. Control cards should not be displayed to the user.                                |
+|`extras`      | The map of key-value extras for this card.                                                                             |
+{: .reset-td-br-1 .reset-td-br-2}
+
+For a full reference of the base card, see the [Android][8] and [iOS][9] documentation.
+
+### Image Only Card model properties
+
+`Image only cards` are clickable, full-sized images.
+
+|Property           | Description                                                                                                       |
+|-------------------|-------------------------------------------------------------------------------------------------------------------|
+|`type`             | The Content Card type, `"ImageOnly"`.                                                                             |
+|`image`            | The URL of the card's image.                                                                                      |
+|`imageAspectRatio` | The aspect ratio of the card's image. It is meant to serve as a hint before image loading completes. Note that the property may not be supplied in certain circumstances. |
+{: .reset-td-br-1 .reset-td-br-2}
+
+For a full reference of the image only card, see the [Android][10] and [iOS][11] documentation.
+
+### Captioned Image Card model properties
+
+`Captioned image cards` are clickable, full-sized images with accompanying descriptive text.
+
+|Property           | Description                                                                                                       |
+|-------------------|-------------------------------------------------------------------------------------------------------------------|
+|`type`             | The Content Card type, `"Captioned"`.                                                                             |
+|`image`            | The URL of the card's image.                                                                                      |
+|`imageAspectRatio` | The aspect ratio of the card's image. It is meant to serve as a hint before image loading completes. Note that the property may not be supplied in certain circumstances. |
+|`title`            | The title text for the card.                                                                                      |
+|`cardDescription`  | The description text for the card.                                                                                |
+|`domain`           | (Optional) The link text for the property URL, e.g., "blog.appboy.com". It can be displayed on the card's UI to indicate the action/direction of clicking on the card. |
+{: .reset-td-br-1 .reset-td-br-2}
+
+For a full reference of the captioned image card, see the [Android][12] and [iOS][13] documentation.
+
+### Classic Card model properties
+
+There are two classic card types, the `text announcement card` and the `short news card`:
+- A classic card without an image included will result in a `text announcement card`.
+- If an image is included, you will receive a `short news card`.
+
+|Property           | Description                                                                                                       |
+|-------------------|-------------------------------------------------------------------------------------------------------------------|
+|`type`             | The Content Card type, `"Classic"`.                                                                               |
+|`image`            | (Optional) The URL of the card's image.                                                                           |
+|`title`            | The title text for the card.                                                                                      |
+|`cardDescription`  | The description text for the card.                                                                                |
+|`domain`           | (Optional) The link text for the property URL, e.g., "blog.appboy.com". It can be displayed on the card's UI to indicate the action/direction of clicking on the card. |
+{: .reset-td-br-1 .reset-td-br-2}
+
+For a full reference of the text announcement card, see the [Android][14] and [iOS][15] documentation. For a full reference of the short news card, see the [Android][16] and [iOS][17] documentation.
 
 [1]: https://github.com/braze-inc/braze-react-native-sdk
 [2]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/data_models/
 [3]: https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/c2-contentcardsui
 [4]: {{site.baseurl}}/user_guide/message_building_by_channel/content_cards/create
 [5]: {% image_buster /assets/img/react-native/content-card-test.png %} "Content Card Campaign Test"
+[6]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/index.html
+[7]: https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcard
+[8]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/index.html
+[9]: https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcard/data-swift.struct
+[10]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-image-only-card/index.html
+[11]: https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcard/imageonly-swift.struct
+[12]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-captioned-image-card/index.html
+[13]: https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcard/captionedimage-swift.struct
+[14]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-text-announcement-card/index.html
+[15]: https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcard/classic-swift.struct
+[16]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-short-news-card/index.html
+[17]: https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcard/classicimage-swift.struct
