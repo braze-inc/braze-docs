@@ -26,7 +26,7 @@ After you register a Live Activity, you can pass a JSON payload to update your A
 To use this endpoint, you'll need to complete the following:
 
 - Generate an API key with the `messages.live_activity.update` permission.
-- Register a Live Activity [remotely]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/live_activities/live_activities/?tab=remote#step-2-register-the-activity) or [locally]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/live_activities/live_activities/?tab=local#step-2-register-the-activity) using the Braze Swift SDK.
+- Register a Live Activity [remotely]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/live_activities/live_activities/?tab=remote#step-2-start-the-activity) or [locally]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/live_activities/live_activities/?tab=local#step-2-start-the-activity) using the Braze Swift SDK.
 
 ## Rate limit
 

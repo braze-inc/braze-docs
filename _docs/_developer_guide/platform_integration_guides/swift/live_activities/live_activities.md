@@ -25,7 +25,7 @@ Additional prerequisites include:
 
 - Live Activities are only available for iPhones and iPads on iOS 16.1 and later. To use this feature, ensure that your project is targeting this iOS version.
 - The `Push Notification` entitlement must be added under **Signing & Capabilities** in your Xcode project.
-- Starting with version 8.2.0 of the Braze Swift SDK, you can [remotely register a Live Activity](#step-2-register-the-activity). To use this feature, iOS 17.2 or later is required.
+- Starting with version 8.2.0 of the Braze Swift SDK, you can [remotely register a Live Activity](#step-2-start-the-activity). To use this feature, iOS 17.2 or later is required.
 
 {% alert note %}
 While Live Activities and push notifications are similar, their system permissions are separate. By default, all Live Activity features are enabled, but users may disable this feature per app.
