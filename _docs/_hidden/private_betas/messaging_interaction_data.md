@@ -80,7 +80,9 @@ Campaigns that use retargeting filters that are retargeting by tag are not exemp
 
 ### When was messaging interaction data available in the past?
 
-Previously, messaging interaction data was deleted when a campaign or Canvas had not sent messages in 25 calendar months and was not used for retargeting in any active campaigns, Canvases, or Content Cards. 
+Previously, message interaction data was deleted when a campaign or Canvas:
+- Had not sent messages in 25 calendar months, AND
+- Was not used for retargeting in any active campaigns, Canvases, or Content Cards.
 
 Campaigns and Canvases with previously deleted messaging interaction data cannot be used in retargeting filters for campaigns, Canvases, and segments.
 
