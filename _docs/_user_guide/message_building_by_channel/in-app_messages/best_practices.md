@@ -9,7 +9,7 @@ page_type: landing
 description: "This landing page is home to best practices for building and sending in-app messages."
 channel: in-app messages
 
-guide_featured_title: "Section Articles"
+guide_featured_title: "Section articles"
 guide_featured_list:
 - name: Prep Guide
   link: /docs/user_guide/message_building_by_channel/in-app_messages/best_practices/prep_guide/
