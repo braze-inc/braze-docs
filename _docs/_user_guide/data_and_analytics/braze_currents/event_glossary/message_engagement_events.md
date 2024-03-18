@@ -885,7 +885,7 @@ This event occurs when a user opens an email. Multiple events may be generated f
 {
   "id": (required, string) unique ID of this event,
   "user_id": (required, string) Braze user ID of the user,
-  "dispatch_id": (optional, string) ID of the message dispatch (unique ID for each 'transmission' sent from the Braze platform). Users who are sent a schedule message get the same dispatch_id. Action-based or API-triggered messages get a unique dispatch_id per user.,
+  "dispatch_id": (optional, string) ID of the message dispatch (unique ID for each 'transmission' sent from the Braze platform). Users who are sent a schedule message get the same dispatch_id. Action-based or API-triggered messages get a unique dispatch_id per user,
   "external_user_id": (optional, string) External ID of the user,
   "time": (required, int) 10-digit UTC time of the event in seconds since the epoch,
   "timezone": (optional, string) IANA time zone of the user at the time of the event,
@@ -906,7 +906,12 @@ This event occurs when a user opens an email. Multiple events may be generated f
   "machine_open": (optional, string) Indicator of whether the email was opened by an automated process, such as Apple or Google mail pre-fetching. Currently "true" or null, but additional granularity (for example, "Apple" or "Google" to indicate which process made the fetch) may be added in the future.,
   "esp": (optional, string) ESP related to the event (SparkPost or SendGrid),
   "from_domain": (optional, string) sending domain for the email,
-  "is_amp": (optional, boolean) indicates that this is an AMP event
+  "is_amp": (optional, boolean) indicates that this is an AMP event,
+  "device_class": (optional, string) type of device used, such as 'mobile', 'desktop', 'tablet', 'other',
+  "device_os": (optional, string) the operating system used, such as 'os x', 'android', 'iOS',
+  "browser": (optional, string) browser used, such as 'chrome', 'edge', 'safari',
+  "device_model": (optional, string) model of device used, such as 'iPhone',
+  "mailbox_provider": (optional, string) the mailbox provider
 }
 ```
 
@@ -953,7 +958,12 @@ This event occurs when a user clicks an email. Multiple events may be generated 
   "link_alias": (optional, string) alias name set when the message was sent - null unless link aliasing is enabled,
   "esp": (optional, string) ESP related to the event (SparkPost or SendGrid),
   "from_domain": (optional, string) sending domain for the email,
-  "is_amp": (optional, boolean) indicates that this is an AMP event
+  "is_amp": (optional, boolean) indicates that this is an AMP event,
+  "device_class": (optional, string) type of device used, such as 'mobile', 'desktop', 'tablet', 'other',
+  "device_os": (optional, string) the operating system used, such as 'os x', 'android', 'iOS',
+  "browser": (optional, string) browser used, such as 'chrome', 'edge', 'safari',
+  "device_model": (optional, string) model of device used, such as 'iPhone',
+  "mailbox_provider": (optional, string) the mailbox provider
 }
 ```
 
