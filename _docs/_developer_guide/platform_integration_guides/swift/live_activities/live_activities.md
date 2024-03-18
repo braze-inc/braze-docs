@@ -70,12 +70,12 @@ struct SportsActivityAttributes: ActivityAttributes {
 }
 ```
 
-### Step 2: Register the activity
+### Step 2: Start the activity
 
 First, choose how you want to register your activity:
 
-- **Remote:** Use the [`registerPushToStart`](http://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/liveactivities-swift.class/registerpushtostart(fortype:name:)) method, then start an activity using the [`/messages/live_activity/start`]({{site.baseurl}}/api/endpoints/messaging/live_activity/start) endpoint.
-- **Local:** Use the [`launchActivity`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/liveactivities-swift.class/launchactivity(pushtokentag:activity:fileid:line:)) method to create push tokens for the Braze SDK to manage.
+- **Remotely:** Use the [`registerPushToStart`](http://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/liveactivities-swift.class/registerpushtostart(fortype:name:)) method, then start an activity using the [`/messages/live_activity/start`]({{site.baseurl}}/api/endpoints/messaging/live_activity/start) endpoint.
+- **Locally:** Use the [`launchActivity`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/liveactivities-swift.class/launchactivity(pushtokentag:activity:fileid:line:)) method to create push tokens for the Braze SDK to manage.
 
 {% tabs local %}
 {% tab remote %}
@@ -160,7 +160,7 @@ Once you have registered the Live Activity, the Braze SDK will extract and obser
 
 #### Example
 
-For our example, we’ll create class called `LiveActivityManager` as an interface for our Live Activity objects. Then, we'll set the `pushTokenTag` to `"live-activity-1"`.
+For our example, we’ll create class called `LiveActivityManager` as an interface for our Live Activity objects. Then, we'll set the `pushTokenTag` to `"sports-game-2024-03-15"`.
 
 ```swift
 import BrazeKit
@@ -183,7 +183,7 @@ class LiveActivityManager {
       // Register your Live Activity with Braze using the pushTokenTag.
       // This method returns a Swift background task.
       // You may keep a reference to this task if you need to cancel it wherever appropriate, or ignore the return value if you wish.
-      let liveActivityObserver: Task = AppDelegate.braze?.liveActivities.launchActivity(pushTokenTag: "live-activity-1",
+      let liveActivityObserver: Task = AppDelegate.braze?.liveActivities.launchActivity(pushTokenTag: "sports-game-2024-03-15",
                                                                                         activity: activity)
     }
   }
