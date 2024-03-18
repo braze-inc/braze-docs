@@ -36,7 +36,7 @@ To use locales in your messaging, compose an email campaign or Canvas. Select be
 {% tabs %}
 {% tab HTML editor %}
 
-1. Highlight the text you want translated. Select **Add translation tag**. <br>![]({% image_buster /assets/img/multi-language_support/translation_html_editor_example.png %})
+1. Highlight the text you want translated. Select **Insert Translation Tag**. This will wrap your text with translation tags. <br>![]({% image_buster /assets/img/multi-language_support/html_editor_translation_tag_example.png %})
 2. Save the message as a draft.
 3. Select **Multi-language** and add your locales for the message using the dropdown.
 4. Select **Download template** to download the translation template as a CSV. Then, fill in the translations in the CSV. <br>![]({% image_buster /assets/img/multi-language_support/translation_csv_example.png %})
@@ -45,7 +45,7 @@ To use locales in your messaging, compose an email campaign or Canvas. Select be
 {% endtab %}
 {% tab Drag-and-drop editor %}
 
-1. Add translation tags {% raw %}`{% translation %}` and `{%endtranslation%}`{% endraw %} to wrap all text and image or link URLs to be translated.<br>![]({% image_buster /assets/img/multi-language_support/translation_html_editor_example.png %})
+1. Add translation tags {% raw %}`{% translation %}` and `{%endtranslation%}`{% endraw %} to wrap all text and image or link URLs to be translated.<br>![]({% image_buster /assets/img/multi-language_support/dnd_editor_translation_example.png %})
 2. After adding the tags, save your message as a draft.
 3. Select **Multi-language** and add your locales for the message using the dropdown.
 4. Select **Download template** to download the translation template as a CSV. Then, fill in the translations in the CSV. <br>![]({% image_buster /assets/img/multi-language_support/translation_csv_example.png %})
