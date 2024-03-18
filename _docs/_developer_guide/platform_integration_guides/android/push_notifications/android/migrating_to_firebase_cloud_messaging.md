@@ -41,7 +41,7 @@ Log in to [Google Cloud Console](https://console.cloud.google.com/apis/api/fcm.g
 
 Ensure the [Firebase Cloud Messaging API](https://console.cloud.google.com/apis/library/fcm.googleapis.com) is enabled.
 
-![Enabled Firebase Cloud Messaging API]({% image_buster /assets/img/android/push_integration/firebase-cloud-messaging-api-enabled.png %})
+![Enabled Firebase Cloud Messaging API]({% image_buster /assets/img/android/push_integration/create_a_service_account/firebase-cloud-messaging-api-enabled.png %})
 
 ## Step 3: Create a Service Account
 
