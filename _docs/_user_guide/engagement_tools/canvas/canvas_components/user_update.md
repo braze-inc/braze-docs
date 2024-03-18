@@ -14,7 +14,7 @@ tool: Canvas
 
 > The User Update component allows you to update a user's attributes, events, and purchases in a JSON composer, so there's no need to include sensitive information like API keys.
 
-With User Update, updates don't count towards your users.Track per minute rate limit. Instead, these updates are batched so Braze can process them more efficiently than a Braze-to-Braze webhook. Note that this component doesn't consume [data points]({{site.baseurl}}/user_guide/onboarding_with_braze/data_points/) when being used to update non-billable data points (such as subscription groups).
+With User Update, updates don't count toward your users.Track per minute rate limit. Instead, these updates are batched so Braze can process them more efficiently than a Braze-to-Braze webhook. Note that this component doesn't consume [data points]({{site.baseurl}}/user_guide/onboarding_with_braze/data_points/) when being used to update non-billable data points (such as subscription groups).
 
 Users will only advance to the next Canvas steps after the relevant user updates have been completed. If your subsequent messaging relies on the user updates that you're making, you can ensure that these updates have been completed prior to when the messages send.
 

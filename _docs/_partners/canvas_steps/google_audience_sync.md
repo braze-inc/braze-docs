@@ -72,7 +72,7 @@ For more information, refer to [Google Tag Manager]({{site.baseurl}}/developer_g
 
 Braze will sync `UNSPECIFIED` for any user that does not have either consent attribute set to Google. This consent will be determine by Google on whether this user will be served ads.
 
-Braze will only suppress the user if either consent attribute to set to `DENIED` and you are attempting to add them to an audience. Per [Google](https://support.google.com/google-ads/answer/14310715#:~:text=from%20an%20audience%3F-,If%20you%20set%20the%20consent%20status%20as%20DENIED%2C%20you%20will%20get,the%20data%20in%20the%20job%20cannot%20be%20used%20for%20ad%20personalisation.,-If%20the%20EEA), if the user's consent status is `DENIED` for either attribute, Google will return an error. These users with `DENIED` consent will be counted towards the *Users Not Synced* metric. Consent statuses does not impact removing users from an audience.
+Braze will only suppress the user if either consent attribute to set to `DENIED` and you are attempting to add them to an audience. Per [Google](https://support.google.com/google-ads/answer/14310715#:~:text=from%20an%20audience%3F-,If%20you%20set%20the%20consent%20status%20as%20DENIED%2C%20you%20will%20get,the%20data%20in%20the%20job%20cannot%20be%20used%20for%20ad%20personalisation.,-If%20the%20EEA), if the user's consent status is `DENIED` for either attribute, Google will return an error. These users with `DENIED` consent will be counted toward the *Users Not Synced* metric. Consent statuses does not impact removing users from an audience.
 
 #### Managing revoked consent
 

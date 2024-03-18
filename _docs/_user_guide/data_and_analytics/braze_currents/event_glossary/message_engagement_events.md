@@ -885,7 +885,7 @@ This event occurs when a user opens an email. Multiple events may be generated f
 {
   "id": (required, string) unique ID of this event,
   "user_id": (required, string) Braze user ID of the user,
-  "dispatch_id": (optional, string) ID of the message dispatch (unique ID for each 'transmission' sent from the Braze platform). Users who are sent a schedule message get the same dispatch_id. Action-based or API-triggered messages get a unique dispatch_id per user.,
+  "dispatch_id": (optional, string) ID of the message dispatch (unique ID for each 'transmission' sent from the Braze platform). Users who are sent a schedule message get the same dispatch_id. Action-based or API-triggered messages get a unique dispatch_id per user,
   "external_user_id": (optional, string) External ID of the user,
   "time": (required, int) 10-digit UTC time of the event in seconds since the epoch,
   "timezone": (optional, string) IANA time zone of the user at the time of the event,
@@ -906,7 +906,12 @@ This event occurs when a user opens an email. Multiple events may be generated f
   "machine_open": (optional, string) Indicator of whether the email was opened by an automated process, such as Apple or Google mail pre-fetching. Currently "true" or null, but additional granularity (for example, "Apple" or "Google" to indicate which process made the fetch) may be added in the future.,
   "esp": (optional, string) ESP related to the event (SparkPost or SendGrid),
   "from_domain": (optional, string) sending domain for the email,
-  "is_amp": (optional, boolean) indicates that this is an AMP event
+  "is_amp": (optional, boolean) indicates that this is an AMP event,
+  "device_class": (optional, string) type of device used, such as 'mobile', 'desktop', 'tablet', 'other',
+  "device_os": (optional, string) the operating system used, such as 'os x', 'android', 'iOS',
+  "browser": (optional, string) browser used, such as 'chrome', 'edge', 'safari',
+  "device_model": (optional, string) model of device used, such as 'iPhone',
+  "mailbox_provider": (optional, string) the mailbox provider
 }
 ```
 
@@ -953,7 +958,12 @@ This event occurs when a user clicks an email. Multiple events may be generated 
   "link_alias": (optional, string) alias name set when the message was sent - null unless link aliasing is enabled,
   "esp": (optional, string) ESP related to the event (SparkPost or SendGrid),
   "from_domain": (optional, string) sending domain for the email,
-  "is_amp": (optional, boolean) indicates that this is an AMP event
+  "is_amp": (optional, boolean) indicates that this is an AMP event,
+  "device_class": (optional, string) type of device used, such as 'mobile', 'desktop', 'tablet', 'other',
+  "device_os": (optional, string) the operating system used, such as 'os x', 'android', 'iOS',
+  "browser": (optional, string) browser used, such as 'chrome', 'edge', 'safari',
+  "device_model": (optional, string) model of device used, such as 'iPhone',
+  "mailbox_provider": (optional, string) the mailbox provider
 }
 ```
 
@@ -1175,9 +1185,15 @@ This event occurs when a user views an in-app message.
   "device_id": (optional, string) ID of the device on which the event occurred,
   "ad_id": (optional, string) advertising identifier,
   "ad_id_type": (optional, string) One of 'ios_idfa', 'google_ad_id', OR 'roku_ad_id',
-  "ad_tracking_enabled": (optional, boolean) whether advertising tracking is enabled for the device
+  "ad_tracking_enabled": (optional, boolean) whether advertising tracking is enabled for the device,
+  "message_extras": (optional, string) a JSON string of the tagged key-value pairs during Liquid rendering
 }
 ```
+
+{% alert note %}
+The `message_extras` field will be active on April 4, 2024.
+{% endalert %}
+
 #### Property details
 - For `ad_id`, `ad_id_type` and `ad_tracking_enabled`, you need to explicitly collect the iOS IDFA and Android Google advertising ID through the native SDKs. Learn more about this setup for [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/swift_idfv/) and [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id).
 - If you are using Kafka to ingest [Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/) data, contact your customer success manager to enable sending `ad_id`.

@@ -126,9 +126,9 @@ table td {
 | Profile data | Email address | |
 | Profile data | Gender | |
 | Profile data | Age group | |
-| Profile data | Country | When manually collected. Does not count towards consumption when automatically collected. |
+| Profile data | Country | When manually collected. Does not count toward consumption when automatically collected. |
 | Profile data | City | |
-| Profile data | Language | When manually collected. Does not count towards consumption when automatically collected. |
+| Profile data | Language | When manually collected. Does not count toward consumption when automatically collected. |
 | Profile data | Most recent device locale | |
 | Profile data | Time zone | |
 | Profile data | Date of birth (DOB) | |

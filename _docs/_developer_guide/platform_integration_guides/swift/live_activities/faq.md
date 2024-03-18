@@ -32,7 +32,7 @@ No, this is not currently supported.
 
 ### What happens if a push notification is sent while a Live Activity is active? 
 
-![A phone screen with a Bulls vs Bears sports game live activity towards the middle of the screen and push notification lorem ipsum text at the bottom of the screen.][4]{: style="max-width:30%;float:right;margin-left:15px;"}
+![A phone screen with a Bulls vs Bears sports game live activity toward the middle of the screen and push notification lorem ipsum text at the bottom of the screen.][4]{: style="max-width:30%;float:right;margin-left:15px;"}
 
 Live Activities and push notifications occupy different screen real estate and won't conflict on a user's screen.
 
@@ -59,6 +59,10 @@ The API keys you use need to be given the correct permissions to access the diff
 ### Does the `messages/send` endpoint share rate limits with the `messages/live_activity/update` endpoint? 
 
 The `messages/live_activity/update` endpoint has a separate rate limit from any other Braze endpoint. By default, the rate limit for the `messages/live_activity/update` endpoint is 250,000 requests per hour per workspace. See the [rate limit article][5] for more information.
+
+### Why aren't my push-to-start tokens being generated?
+
+Starting with iOS 17.2 and later, Apple has limited their `pushToStartToken` and `pushToStartTokenUpdates` APIs. In practice, push-to-start tokens are only generated during the first app launch in `application(_:didFinishLaunchingWithOptions:)` after the first install. If this step needs to be repeated, tokens can only be generated again after rebooting and re-installing the app, or by manually creating a new instance of that Live Activity.
 
 ### What other things should I watch out for during troubleshooting?
 

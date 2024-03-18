@@ -79,7 +79,7 @@ Select an exception event that will disqualify users from receiving this campaig
 
 You can read more about how to employ exception events in our section on [use cases]({{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/triggered_delivery/#use-cases).
 
-> If you send out a campaign with the trigger event that matches the exception event, the initial campaign will be canceled. Instead of sending out both campaigns, your user's first campaign will be canceled and Braze will automatically re-schedule a new campaign based on the exception event's message delivery time.<br><br>For example, if your first trigger event starts at 5 minutes and the exception event's time starts at 10 minutes, you would rely on the exception event's 10 minutes as the official campaign's message delivery time.
+> If you send a campaign with a trigger event that matches the exception event, Braze will cancel the campaign and automatically re-schedule a new campaign based on the exception event's message delivery time. For example, if your first trigger event starts at five minutes and the exception event starts at 10 minutes, you would rely on the exception event's 10 minutes as the official campaign's message delivery time.
 
 {% alert note %}
 You cannot make a "session start" both the trigger event and exception event for a campaign. However, you always have the choice to select any other custom event outside of this option.

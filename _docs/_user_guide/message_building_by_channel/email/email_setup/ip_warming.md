@@ -79,7 +79,7 @@ All of the consequences of not IP warming can be avoidable if you follow these I
 
 ### Start with small sending volumes of email
 
-Increase the amount you send each day as gradually as possible. Abrupt, high-volume email campaigns are regarded with the most skepticism by ISPs. Therefore, you should begin by sending small amounts of email and scale gradually towards the volume of email you ultimately intend to send. Regardless of volume, we suggest warming up your IP to be safe. See [IP warming schedule](#ip-warming-schedule).
+Increase the amount you send each day as gradually as possible. Abrupt, high-volume email campaigns are regarded with the most skepticism by ISPs. Therefore, you should begin by sending small amounts of email and scale gradually toward the volume of email you ultimately intend to send. Regardless of volume, we suggest warming up your IP to be safe. See [IP warming schedule](#ip-warming-schedule).
 
 ### Have engaging introductory content
 
