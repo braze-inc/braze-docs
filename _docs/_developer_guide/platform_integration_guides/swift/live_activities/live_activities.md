@@ -74,8 +74,8 @@ struct SportsActivityAttributes: ActivityAttributes {
 
 First, choose how you want to register your activity:
 
-- **Remotely:** Use the [`registerPushToStart`](http://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/liveactivities-swift.class/registerpushtostart(fortype:name:)) method, then start an activity using the [`/messages/live_activity/start`]({{site.baseurl}}/api/endpoints/messaging/live_activity/start) endpoint.
-- **Locally:** Use the [`launchActivity`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/liveactivities-swift.class/launchactivity(pushtokentag:activity:fileid:line:)) method to create push tokens for the Braze SDK to manage.
+- **Remotely:** Use the [`registerPushToStart`](<http://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/liveactivities-swift.class/registerpushtostart(fortype:name:)>) method, then start an activity using the [`/messages/live_activity/start`]({{site.baseurl}}/api/endpoints/messaging/live_activity/start) endpoint.
+- **Locally:** Create an instance of your Live Activity and then use the [`launchActivity`](<https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/liveactivities-swift.class/launchactivity(pushtokentag:activity:fileid:line:)>) method to create push tokens for the Braze SDK to manage.
 
 {% tabs local %}
 {% tab remote %}
@@ -146,6 +146,11 @@ class LiveActivityManager {
 
 }
 ```
+
+#### Step 2.4: Send a push-to-start event
+
+Send a remote push-to-start notification, referring to the documentation for the [`/messages/live_activity/start`]({{site.baseurl}}/api/endpoints/messaging/live_activity/start) endpoint.
+
 {% endtab %}
 
 {% tab local %}
