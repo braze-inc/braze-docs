@@ -62,7 +62,7 @@ The `messages/live_activity/update` endpoint has a separate rate limit from any 
 
 ### Why aren't my push-to-start tokens being generated?
 
-As of iOS 17.2+, there are certain limitations in Apple's `pushToStartToken` and `pushToStartTokenUpdates` APIs. In practice, push-to-start tokens are only generated on the first app launch in `application(_:didFinishLaunchingWithOptions:)` after the first install. If this step needs to be repeated, tokens can only be generated again after rebooting and re-installing the app, or by manually creating a new instance of that Live Activity.
+Starting with iOS 17.2 and later, Apple has limited their `pushToStartToken` and `pushToStartTokenUpdates` APIs. In practice, push-to-start tokens are only generated during the first app launch in `application(_:didFinishLaunchingWithOptions:)` after the first install. If this step needs to be repeated, tokens can only be generated again after rebooting and re-installing the app, or by manually creating a new instance of that Live Activity.
 
 ### What other things should I watch out for during troubleshooting?
 
