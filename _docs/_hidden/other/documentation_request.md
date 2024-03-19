@@ -445,6 +445,12 @@ hide_toc: true
               </div>
               </div>
               <div class="form-group">
+                <label for="doc_due_date" id="doc_due_date_label">Due Date</label>
+                <div class="input-group">
+                  <input type="date" class="form-control" id="doc_due_date" maxlength="80" name="Due_Date" value="" />
+                  </div>
+              </div>
+              <div class="form-group">
 
                 <label for="doc_email" id="doc_email_label">Email address</label>
                 <div class="input-group">
