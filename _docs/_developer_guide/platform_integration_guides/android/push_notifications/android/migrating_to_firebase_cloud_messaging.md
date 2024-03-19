@@ -48,7 +48,7 @@ Enter a service account name, ID, and description, then select **Create and cont
 In the **Role** field, find and select **Firebase Cloud Messaging API Admin** from the list of roles. For more restrictive access, create a [custom role](https://cloud.google.com/iam/docs/creating-custom-roles) with the `cloudmessaging.messages.create` permission, then choose it from the list instead. When you're finished, select **Done**.
 
 {% alert warning %}
-Be sure to select **Firebase Cloud Messaging _API_ Admin**, not **Firebase Cloud Messaging Admin**.
+Be sure to select _Firebase Cloud Messaging **API** Admin_, not _Firebase Cloud Messaging Admin_.
 {% endalert %}
 
 ![The form for "Grant this service account access to project" with "Firebase Cloud Messaging API Admin" selected as the role.]({% image_buster /assets/img/android/push_integration/create_a_service_account/add-fcm-api-admin.png %})
@@ -60,6 +60,10 @@ Next, generate JSON credentials for your FCM service account. On Google Cloud IA
 ![The project's service account homepage with the "Actions" menu open.]({% image_buster /assets/img/android/push_integration/generate_json_credentials/select-manage-keys.png %})
 
 Select **Add Key** > **Create new key**.
+
+{% alert note %}
+Creating a new key will not remove your legacy ones. If you accidentally delete your new key by selecting **Revert Credentials**, Braze will use your legacy keys as a backup.
+{% endalert %}
 
 ![The selected service account with the "Add Key" menu open.]({% image_buster /assets/img/android/push_integration/generate_json_credentials/select-create-new-key.png %})
 
@@ -78,6 +82,14 @@ In Braze, select <i class="fa-solid fa-gear"></i>&nbsp;**Settings** > **App Sett
 ![The "Settings" menu open in Braze with "App Settings" highlighted.]({% image_buster /assets/img/android/push_integration/upload_json_credentials/select-app-settings.png %})
 
 Under **Push Notification Settings**, select **Upload JSON File**, then choose the file [you generated earlier](#step-3-generate-json-credentials). When you're finished, select **Save**.
+
+{% alert tip %}
+To make sure your push messages send, confirm the following:
+
+- Your credentials exist in the correct Google Cloud Platform project ID (correct sender ID).
+- Your credentials have the correct permission scope.
+- You uploaded the correct credentials to the correct Braze workspace (correct sender ID).
+{% endalert %}
 
 ![The form for "Push Notification Settings" with the private key updated in the "Firebase Cloud Messaging Server Key" field.]({% image_buster /assets/img/android/push_integration/migration/upload_json_credentials/upload-json-file.png %})
 

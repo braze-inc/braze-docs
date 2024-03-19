@@ -9,7 +9,7 @@ guide_top_text: "This page is located at <b>Settings</b> > <b>Admin Settings</b>
 page_type: landing
 description: "This landing page lists articles on admin settings. Here, you can find help on configuring contact information, notification preferences, and security settings."
 
-guide_featured_title: "Section Articles"
+guide_featured_title: "Section articles"
 guide_featured_list:
 - name: Contact Information
   link: /docs/user_guide/administrative/app_settings/company_settings/contact_information/

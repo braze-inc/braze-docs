@@ -97,7 +97,7 @@ Each piece of customer data imported via CSV will overwrite the existing value o
 - External IDs uploaded via CSV will not consume data points. If you are uploading a CSV to segment existing Braze users by uploading only external IDs, this can be done without consuming data points. If you were to add additional data like user email or phone number in your import, that would overwrite existing user data, consuming your data points.
   - CSV imports for segmentation purposes (imports made with external_id, braze_id, or user_alias_name as the only field) will not consume data points.
 - Blank values will not overwrite existing values on the user profile, and you do not need to include all existing user attributes in your CSV file.
-- Updating `email_subscribe`, `push_subscribe`, `subscription_group_id`, or `subscription_state` will not count towards data point consumption.
+- Updating `email_subscribe`, `push_subscribe`, `subscription_group_id`, or `subscription_state` will not count toward data point consumption.
 
 {% alert important %}
 Setting `language` or `country` on a user via CSV import or API will prevent Braze from automatically capturing this information via the SDK.

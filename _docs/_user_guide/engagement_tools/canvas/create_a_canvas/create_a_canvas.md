@@ -212,15 +212,19 @@ By default, the Canvas variant assignment is locked in when users enter the Canv
 
 You can add more steps to your Canvas workflow by dragging and dropping components from the **Components** sidebar. Or, when you click the <i class="fas fa-plus-circle"></i> plus button, you can also add a component with the popover menu.
 
-![]({% image_buster /assets/img_archive/add_components_flow.png %})
-
 {% alert tip %}
-As you begin to add more steps, you can view your entire Canvas using either the **Detailed View** or **Simplified View**. **Simplified View** shows just the component icons as a high-level visual of your user journey, whereas **Detailed View** shows the expanded step details. Depending on your preferences, you can toggle between these views!
+As you begin to add more steps, you can switch up the zoom level to focus in on details or take in the entire user journey. Zoom in with <kbd>Shift</kbd> + <kbd>+</kbd> or zoom out with <kbd>Shift</kbd> + <kbd>-</kbd>.
 {% endalert %}
+
+![]({% image_buster /assets/img_archive/add_components_flow.png %})
 
 {% alert warning %}
 A Canvas built using Canvas Flow can contain up to 200 steps. If your Canvas exceeds 200 steps, loading issues will occur.
 {% endalert %}
+
+#### Maximum duration
+
+As your Canvas journey increases in steps, the maximum duration is the longest possible time a user can take to complete this Canvas. This is calculated by adding the delays and trigger windows of each step for each variant for the longest path. For example, if your Canvas has a Delay step with a delay of 3 days and a Message step, the maximum duration of your Canvas will be 3 days.
 
 ### Editing a step
 

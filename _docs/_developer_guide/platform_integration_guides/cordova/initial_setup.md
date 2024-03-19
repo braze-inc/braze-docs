@@ -1,7 +1,7 @@
 ---
-nav_title: Initial SDK Setup
+page_order: 0
+nav_title: Initial Setup
 config_only: true
 noindex: true
 layout: blank_config
-page_order: 0
 ---

@@ -14,7 +14,7 @@ search_tag: Partner
 
 {% multi_lang_include video.html id="8a57e44be7da423e9699cedd6c241eae" source="loom"%}
 
-Any integration you set up will count towards your account's data point volume.
+Any integration you set up will count toward your account's data point volume.
 
 ### Step 1: Get the Braze data import key
 

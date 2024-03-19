@@ -12,7 +12,7 @@ tool:
 page_type: landing
 description: "This landing page is home to resources on Canvas testing including articles on sending test Canvases, Canvas analytics, retention reports, and funnel reports."
 
-guide_featured_title: "Section Articles"
+guide_featured_title: "Section articles"
 guide_featured_list:
   - name: Sending Test Canvases
     link: /docs/user_guide/engagement_tools/canvas/testing_canvases/sending_test_canvases/

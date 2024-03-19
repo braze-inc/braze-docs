@@ -34,7 +34,7 @@ It's also important to understand your [active users]({{site.baseurl}}/user_guid
 
 ### Feature awareness
 
-If your goal is to draw your users towards a new feature or app version, use a multichannel strategy with a focus on in-app channels. [In-app messages][5] and [Content Cards][7] are generally less disruptive if a user doesn't wish to update immediately. Be sure to include [deep links]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/) to the appropriate app store.
+If your goal is to draw your users toward a new feature or app version, use a multichannel strategy with a focus on in-app channels. [In-app messages][5] and [Content Cards][7] are generally less disruptive if a user doesn't wish to update immediately. Be sure to include [deep links]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/) to the appropriate app store.
 
 Persuading users to update their app or change how they use your app can be difficult, so let them know about all the benefits of the new version or features and how it will improve their experience with your app. 
 

@@ -8,13 +8,13 @@ Braze requires an external image library to display animated GIFs with {{ includ
 While the examples in this article are specific to GIFs, you can also follow this guide to display SVGs if the custom image library you're integrating supports SVG files.
 {% endalert %}
 
-### Custom image library integration {#gifs-delegate-integration}
+## Custom image library integration {#gifs-delegate-integration}
 
 Braze offers the ability to use a custom image library to display animated GIFs with {{ include.channel }}.
 
 Although the example below uses [Glide][gifs-67], any image library that supports GIFs is compatible.
 
-#### Step 1: Creating the image loader delegate
+### Step 1: Creating the image loader delegate
 
 The Image Loader delegate must implement the following methods:
 
@@ -139,7 +139,7 @@ class GlideBrazeImageLoader : IBrazeImageLoader {
 {% endtab %}
 {% endtabs %}
 
-#### Step 2: Setting the image loader delegate
+### Step 2: Setting the image loader delegate
 
 The Braze SDK will use any custom image loader set with [`setBrazeImageLoader`][gifs-66]. We recommend setting the custom image loader in a custom application subclass:
 
@@ -170,6 +170,72 @@ class GlideIntegrationApplication : Application() {
 
 {% endtab %}
 {% endtabs %}
+
+## Custom Image Loading with Jetpack Compose
+
+To override image loading with Jetpack Compose, you can pass in a value to `imageComposable`. This function will take a `Card` and render the image and the modifiers needed. Alternatively, you can use `customCardComposer` of `ContentCardsList` to render the entire card.
+
+In the following example, Glide's Compose library is used for the cards listed in the `imageComposable` function:
+
+```kotlin
+ContentCardsList(
+    cardStyle = ContentCardStyling(
+        imageComposable = { card ->
+            when (card.cardType) {
+                CardType.CAPTIONED_IMAGE -> {
+                    val captionedImageCard = card as CaptionedImageCard
+                    GlideImage(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .wrapContentHeight()
+                            .run {
+                                if (captionedImageCard.aspectRatio > 0) {
+                                    aspectRatio(captionedImageCard.aspectRatio)
+                                } else {
+                                    this
+                                }
+                            },
+                        contentScale = ContentScale.Crop,
+                        model = captionedImageCard.url,
+                        loading = placeholder(R.drawable.pushpin),
+                        contentDescription = ""
+                    )
+                }
+                CardType.IMAGE -> {
+                    val imageOnlyCard = card as ImageOnlyCard
+                    GlideImage(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .run {
+                                if (imageOnlyCard.aspectRatio > 0) {
+                                    aspectRatio(imageOnlyCard.aspectRatio)
+                                } else {
+                                    this
+                                }
+                            },
+                        contentScale = ContentScale.Crop,
+                        model = imageOnlyCard.url,
+                        loading = placeholder(R.drawable.pushpin),
+                        contentDescription = ""
+                    )
+                }
+                CardType.SHORT_NEWS -> {
+                    val shortNews = card as ShortNewsCard
+                    GlideImage(
+                        modifier = Modifier
+                            .width(100.dp)
+                            .height(100.dp),
+                        model = shortNews.url,
+                        loading = placeholder(R.drawable.pushpin),
+                        contentDescription = ""
+                    )
+                }
+                else -> Unit
+            }
+        }
+    )
+)
+```
 
 [gifs-56]: http://developer.android.com/reference/android/app/Application.html
 [gifs-59]: https://github.com/braze-inc/braze-android-sdk#version-support

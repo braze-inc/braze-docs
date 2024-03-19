@@ -14,7 +14,7 @@ description: "This reference article covers sending test messages for different 
 
 Once you set up a test segment, you can use it to test **any** of our messaging channels. If configured properly, the process will only need to be done once.
 
-To set up a test segment, navigate to the **Segments** page in the dashboard and create a new segment. Click **Add Filter** to choose one of the testing filters found towards the bottom of the dropdown menu.
+To set up a test segment, navigate to the **Segments** page in the dashboard and create a new segment. Click **Add Filter** to choose one of the testing filters found toward the bottom of the dropdown menu.
 
 ![A Braze test campaign displaying the filters available in the targeting step.][1]
 
