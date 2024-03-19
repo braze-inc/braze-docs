@@ -263,7 +263,7 @@ The SMS could not be sent due to queues overflow (sending SMS at a rate higher t
 iOS Push
 {% endapitags %}
 
-The total number (and percentage) of push notifications that were directly opened from that push. *Direct Opens* isn't the same as `USERS_MESSAGES_PUSHNOTIFICATION_OPEN_SHARED` in the Snowflake raw table schema.
+The total number (and percentage) of push notifications that were directly opened from that push.
 
 <span class="calculation-line">Calculation: (Direct Opens) / (Deliveries)</span>
 
