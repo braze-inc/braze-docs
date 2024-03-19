@@ -41,7 +41,7 @@ Custom attribute objects can contain [data types][1], such as:
 - Key names and string values have a size limit of 255 characters.
 - Key names cannot contain spaces.
 - Not all Braze Partners support nested custom attributes. Refer to the [Partner documentation]({{site.baseurl}}/partners/home) to confirm if the integration supports this feature.
-- Nested custom attributes cannot be used as a filter when making a Connected Content API call.
+- Nested custom attributes cannot be used as a filter when making a Connected Audience API call.
 
 ## API example
 
