@@ -31,16 +31,43 @@ While there are no limits to how many text characters you can include in an in-a
 
 All in-app messages have a recommended image size of 500 KB, maximum image size of 5 MB, and support PNG, JPG, and GIF file types.
 
+{% tabs %}
+{% tab Portrait %}
+
 | Type | Aspect ratio | Image quality | Notes |
 | --- | --- | --- | --- |
 | Portrait full screen with text | 6:5 | High resolution 1200 x 1000 px <br>Minimum resolution 600 x 500 px | Cropping can occur on all sides, but the image will always fill the top 50% of the viewport. |
-| Portrait full screen (image only) | 3:5 | High resolution 1200 x 2000 px <br> Minimum resolution 600 x 1000 px | Cropping can occur on the left and right edges on taller devices. |
+| Portrait full screen (image only, with or without buttons) | 3:5 | High resolution 1200 x 2000 px <br> Minimum resolution 600 x 1000 px | Cropping can occur on the left and right edges on taller devices. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 }
+
+{% endtab %}
+{% tab Landscape %}
+
+| Type | Aspect ratio | Image quality | Notes |
+| --- | --- | --- | --- |
 | Landscape full screen with text | 10:3 | High resolution 2000 x 600 px <br>Minimum resolution 1000 x 300 px | Cropping can occur on all sides, but the image will always fill the top 50% of the viewport. |
-| Landscape full screen (image only) | 5:3 | High resolution 2000 x 600 px <br> Minimum resolution 1000 x 600 px | Cropping can occur on the left and right edges on taller devices. |
+| Landscape full screen (image only, with or without buttons) | 5:3 | High resolution 2000 x 600 px <br> Minimum resolution 1000 x 600 px | Cropping can occur on the left and right edges on taller devices. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 }
+
+{% endtab %}
+{% tab Slideup %}
+
+| Type | Aspect ratio | Image quality | Notes |
+| --- | --- | --- | --- |
 | Slideup | 1:1 | High resolution 150 x 150 px <br> Minimum resolution 50 x 50 px | Images of various aspect ratios will fit into a square image container, without cropping. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 }
+
+{% endtab %}
+{% tab Modal %}
+
+| Type | Aspect ratio | Image quality | Notes |
+| --- | --- | --- | --- |
 | Modal (image only) | 1:1 | High resolution 1200 x 2000 px <br> Minimum resolution 600 x 600 px | The message will resize to fit images of most aspect ratios. |
 | Modal with text | 29:10 | High resolution 1450 x 500 px <br> Minimum resolution 600 x 205 px | Tall images will scale down and be horizontally centered. Wide images will be clipped on the left and right edges. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 }
+
+{% endtab %}
+{% endtabs %}
 
 {% endif %}
 

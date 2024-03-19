@@ -134,7 +134,7 @@ Refer to the following table for details on the `Spacer` editor block.
 
 ### Image
 
-Refer to the following table for details on the `Image` editor block.
+Refer to the following table for details on the `Image` editor block. For dynamic images (images with Liquid), you must set a fallback image to use the auto-width settings.
 
 | properties | description |
 |---|---|
