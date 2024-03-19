@@ -14,7 +14,7 @@ Warning! Don't make any changes to this document without approval from the legal
 
 # Data Protection Technical Assistance
 
-There are a range of data protection laws that regulate what organizations can do with personal data (“**Data Protection Laws**”), including the EU and UK General Data Protection Regulation (“**GDPR**”), the California Consumer Privacy Act (“**CCPA**”) and the Health Insurance Portability and Accountability Act (“**HIPAA**”). There are other national, state, and industry-specific Data Protection Laws and regulations that may apply to your business.
+There are a range of data protection laws that regulate what organizations can do with personal data (“Data Protection Laws”), including the EU and UK General Data Protection Regulation (“GDPR”), the California Consumer Privacy Act (“CCPA”) and the Health Insurance Portability and Accountability Act (“HIPAA”). There are other national, state, and industry-specific Data Protection Laws and regulations that may apply to your business.
 
 These Data Protection Laws grant individuals ‘privacy rights’ over their personal data. Organizations are required to receive and respond to requests from individuals who exercise their privacy rights. The Braze platform can assist you in your compliance with these Data Protection Laws by providing features to facilitate certain actions required under such laws. This document provides technical instructions to use these features to manage privacy rights requests. It is up to you to determine which Data Protection Laws apply to your business, and to act in compliance with them.
 
@@ -24,21 +24,24 @@ None of the following is intended to be, nor shall it be deemed to be, legal adv
 
 ## Terminology
 
-For the purposes of this document, any reference to personal data may also be understood as a reference to personal information or personally identifiable information (“**Personal Data**”). For simplicity's sake, we generally rely on the language of the GDPR when addressing the rights of end users. The language of the GDPR is often interchangeable or closely aligned with a defined term or concept from other Data Protection Laws. 
+For the purposes of this document, any reference to personal data may also be understood as a reference to personal information or personally identifiable information (“Personal Data”). For simplicity’s sake, we generally rely on the language of the GDPR when addressing the rights of end users. The language of the GDPR is often interchangeable or closely aligned with a defined term or concept from other Data Protection Laws.
 
 ## The Basics
 
 Most privacy laws define three primary stakeholders who are involved in the processing of Personal Data: data subjects, data controllers, and data processors. Each group has different rights and responsibilities regarding the use of Personal Data:
+
 - A data subject is an individual whose Personal Data is being processed by the data processor or data controller
 - A data controller is an entity that determines the purposes and means of the processing of Personal Data
 - A data processor is an entity that processes Personal Data on behalf and on the instructions of the data controller
 
-In relation to the Braze platform: 
+In relation to the Braze platform:
+
 - The data subjects are, for example, the end users of your customer application (e.g., your customers/clients) or your employees who are dashboard users in your instance of the Braze platform.
 - You, the Braze customer, are the data controller who decides how and why the Personal Data of the data subjects will be collected and processed within the Braze platform.
 - Braze is a data processor who processes Personal Data in the Braze platform on your behalf and in accordance with the instructions that we receive from you.
 
 The above are GDPR terms, but for example, comparable terms under the CCPA are:
+
 - “consumers” for data subjects.
 - “businesses” for data controllers.
 - “service providers” for data processors.
@@ -53,12 +56,13 @@ The right to be informed encompasses your obligation to provide ‘fair processi
 
 Most Data Protection Laws emphasize the need for transparency in connection with how you use Personal Data. This is the responsibility of the data controllers, who will typically maintain a privacy notice that is easily accessible to users of their products and services and covers the processing done by Braze.
 
-## The Right of Access 
+## The Right of Access
 
 Under Data Protection Laws, data subjects may have the right to obtain:
+
 - Confirmation that their Personal Data is being processed,
 - Access to their Personal Data, and
-- Other supplementary information as determined by the applicable Data Protection Law. 
+- Other supplementary information as determined by the applicable Data Protection Law.
 
 ### Braze Recommendation
 
