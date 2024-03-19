@@ -1824,7 +1824,7 @@ Field | Type | Description
 `canvas_step_message_variation_api_id` | `null,`&nbsp;`string` | API ID of the Canvas step message variation this user received
 `gender` | `null,`&nbsp;`string` | [PII] gender of the user
 `country` | `null,`&nbsp;`string` | [PII] country of the user
-`timezone` | `null,`&nbsp;`string` | timezone of the user
+`timezone` | `null,`&nbsp;`string` | time zone of the user
 `language` | `null,`&nbsp;`string` | [PII] language of the user
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
