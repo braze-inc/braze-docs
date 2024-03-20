@@ -215,6 +215,7 @@ validurls['/docs/user_guide/message_building_by_channel/sms/phone_numbers/short_
 validurls['/docs/user_guide/message_building_by_channel/sms/phone_numbers/best_practices/'] = '/docs/user_guide/message_building_by_channel/sms/sms_setup/sms_sending/#sending-best-practices/';
 validurls['/docs/user_guide/onboarding_with_braze/sms_setup/about_sms/'] = '/docs/user_guide/message_building_by_channel/sms/about_sms/';
 validurls['/docs/user_guide/onboarding_with_braze/sms_setup/next_steps/'] = '/docs/user_guide/message_building_by_channel/sms/';
+validurls['/docs/user_guide/message_building_by_channel/sms/phone_numbers/sending_phone_numbers/'] = '/docs/user_guide/message_building_by_channel/sms/sms_setup/short_and_long_codes/';
 
 validurls['/docs/user_guide/onboarding_with_braze/sms_setup/short_and_long_codes/'] = '/docs/user_guide/message_building_by_channel/sms/sms_setup/short_and_long_codes/';
 validurls['/docs/user_guide/onboarding_with_braze/sms_setup/sms_laws_and_regulations/'] = '/docs/user_guide/message_building_by_channel/sms/sms_laws_and_regulations/';
