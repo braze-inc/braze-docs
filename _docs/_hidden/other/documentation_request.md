@@ -445,7 +445,8 @@ hide_toc: true
               </div>
               </div>
               <div class="form-group">
-                <label for="doc_due_date" id="doc_due_date_label">Due Date</label>
+                <label for="doc_due_date" id="doc_due_date_label">Due date (optional)</label>
+                <div class="sublabel">If this request is time-sensitive or related to a feature release, please enter a due date.</div>
                 <div class="input-group">
                   <input type="date" class="form-control" id="doc_due_date" maxlength="80" name="Due_Date" value="" />
                   </div>
