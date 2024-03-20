@@ -1535,10 +1535,6 @@ SMS, Delivery
 `CarrierSend` is supported only for users on legacy infrastructure.
 {% endalert %}
 
-{% alert note %}
-`Sends to Carrier` is deprecated, but will continue to be supported for users that already have it.
-{% endalert %}
-
 This event occurs when an SMS is sent to the carrier.
 
 ```json
