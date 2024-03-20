@@ -1,13 +1,13 @@
 ---
-nav_title: Deep Linking
-article_title: Deep Linking for iOS
+nav_title: Deep Linking V1
+article_title: Deep Linking V1
 platform: Swift
 page_order: 1
 description: "This article covers how to implement the universal deep linking delegate for your iOS app and examples on how to deep link to app settings for the Swift SDK."
 
 ---
 
-# Deep linking
+# Deep linking V1
 
 > Deep linking is a way of providing a link that launches a native app, shows specific content, or takes some specific action. If you're looking to implement deep links in your iOS app for the first time, follow these steps.
 
