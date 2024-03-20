@@ -27,15 +27,17 @@ Select a trigger event. This can include any of the following:
 - Performing the campaign's primary conversion event
 - Adding an email address to a user profile
 - Changing a custom attribute value
+- Updating a subscription status
 - Updating a subscription group status
-- Interacting with News Feed cards (see [Campaign Connector][33])
 - Interacting with other campaigns
+- Interacting with News Feed cards (see [Campaign Connector][33])
 - Entering a location
 - Performing the exception event for another campaign
 - Interacting with a Canvas step
 - Triggering a geofence
 - Sending an SMS inbound message
 - Sending a WhatsApp inbound message
+- Click shortened SMS Link
 
 You can also further filter trigger events through Braze [custom event properties][32], allowing for customizable event properties for custom events and in-app purchases. This feature allows you to further tailor which users receive a message based on the specific attributes of the custom event, allowing for greater campaign personalization and more sophisticated data collection. 
 
