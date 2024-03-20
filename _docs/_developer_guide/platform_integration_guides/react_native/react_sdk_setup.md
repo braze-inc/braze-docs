@@ -32,7 +32,7 @@ If your iOS app conforms to `RCTAppDelegate` and was following our previous `App
 ## Step 1: Integrate the Braze library
 
 {% tabs local %}
-{% tab bash %}
+{% tab npm %}
 ```bash
 npm install @braze/react-native-sdk
 ```
