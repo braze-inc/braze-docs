@@ -39,8 +39,8 @@ Authorization: Bearer YOUR-REST-API-KEY
 }
 ```
 
-Customers using the API for server-to-server calls may need to allowlist the appropriate API URL if they're behind a firewall.
+If you use the API for server-to-server calls, you may need to allowlist the appropriate API URL if they're behind a firewall.
 
-Message scheduling endpoint responses will include the message's `dispatch_id` for reference back to the dispatch of the message. The `dispatch_id` is the id of the message dispatch (unique id for each 'transmission' sent from the Braze platform).
+Message scheduling endpoint responses will include the message's `dispatch_id` for reference back to the dispatch of the message. The `dispatch_id` is the ID of the message dispatch (unique ID for each 'transmission' sent from Braze).
 
 [33]: {{site.baseurl}}/user_guide/sage_ai/intelligence/intelligent_timing/

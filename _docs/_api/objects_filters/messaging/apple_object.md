@@ -39,7 +39,7 @@ description: "This reference article lists and explains the different Apple obje
 }
 ```
 
-You must include an Apple Push Object in `messages` if you want users you have targeted to receive a push on their iOS Devices. The total number of bytes in your `alert` string, `extra` object and other optional parameters should not exceed 1912. The Messaging API will return an error if you exceed the message size allowed by Apple. Messages that include the keys `ab` or `aps` in the `extra` object will be rejected.
+You must include an Apple push object in `messages` if you want users you have targeted to receive a push on their iOS devices. The total number of bytes in your `alert` string, `extra` object and other optional parameters should not exceed 1912. The Messaging API will return an error if you exceed the message size allowed by Apple. Messages that include the keys `ab` or `aps` in the `extra` object will be rejected.
 
 ### Apple push alert object
 
@@ -59,7 +59,7 @@ In most cases, `alert` can be specified as a string in an `apple_push` object.
 
 ## Apple push action button object
 
-You must include the `category` field in the Apple Push Object to use iOS push action buttons. Including the `category` field will display any associated push action buttons; only include the `buttons` field if you want to additionally define the buttons' individual click actions. The Braze SDK provides a set of default push action buttons for you to use shown in the following table. You can also use your own buttons if they have been registered in your app.
+You must include the `category` field in the Apple push object to use iOS push action buttons. Including the `category` field will display any associated push action buttons; only include the `buttons` field if you want to additionally define the buttons' individual click actions. The Braze SDK provides a set of default push action buttons for you to use shown in the following table. You can also use your own buttons if they have been registered in your app.
 
 ### Apple push action button object for Braze default buttons
 
