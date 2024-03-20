@@ -414,6 +414,10 @@ For Content Cards, this metric is calculated differently depending on what you s
 SMS
 {% endapitags %}
 
+{% alert note %}
+*Sends to Carrier* is deprecated, but will continue to be supported for users that already have it.
+{% endalert %}
+
 This stat is the sum of Confirmed Deliveries, Rejections, and Sends where delivery or rejection was not confirmed by the carrier. There are instances where carriers do not provide delivery or rejected confirmation, as some carriers do not provide this confirmation or were unable to do so at the time of send.
 
 <span class="calculation-line">Calculation: Count</span>
