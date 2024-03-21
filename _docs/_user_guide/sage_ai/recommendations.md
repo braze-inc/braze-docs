@@ -17,6 +17,7 @@ You can use AI item recommendations to calculate the most popular products or cr
 - You must have at least one [catalog][catalog] to use AI item recommendations.
 - This feature works best for Catalogs with hundreds or thousands of items.
 - You must have purchase or event data on Braze (custom events or the purchase object) that includes a reference to unique product IDs stored in a catalog.
+- A rough minimum for Item Recommendations to be created is 30,000 users with purchase or interaction data, though this can vary.
 
 ### Important notes
 
