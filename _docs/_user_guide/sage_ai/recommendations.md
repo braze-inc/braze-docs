@@ -15,6 +15,7 @@ You can use AI item recommendations to calculate the most popular products or cr
 ## Prerequisites
 
 - You must have at least one [catalog][catalog] to use AI item recommendations.
+- This feature works best for Catalogs with hundreds or thousands of items.
 - You must have purchase or event data on Braze (custom events or the purchase object) that includes a reference to unique product IDs stored in a catalog.
 
 ### Important notes
@@ -41,11 +42,11 @@ First, give your recommendation a name and optional description.
 
 ### Step 2: Define your recommendation {#recommendation-type}
 
-Next, select the recommendation type. Both recommendation types use the last 6 months of item interaction (purchase or custom event) data.
+Next, select the recommendation type. All recommendation types use the last 6 months of item interaction (purchase or custom event) data. The interaction mentioned below refers to either a purchase event or custom event chosen in Step 3.
 
-- **Most popular:** Calculates the items from the catalog that users interact with most often in the entire workspace. The interaction is defined by the event chosen in Step 3.
-- **Most recent:** Creates a list of the products a user has interacted with most recently.
-- **AI Personalized:** Uses transformers, a new kind of deep learning, to predict each user's next most likely set of items to purchase or interact with. The interaction is defined by the event you choose in Step 3. We calculate up to 30 of the next most likely items ranked from most to least likely. This type of recommendation does not use Large Language Models (LLMs) to combine your data with that of any other Braze customer.
+- **Most popular:** Calculates up to 30 items from the catalog that all users in the workspace interact with most often, e.g. Most Purchased Products. 
+- **Most recent:** Creates a list of up to 30 products a user has interacted with most recently. 
+- **AI Personalized:** Uses transformers, a new kind of deep learning, to predict each user's next most likely set of items to interact with.  We calculate up to 30 of the next most likely items ranked from most to least likely. This type of recommendation does not use Large Language Models (LLMs) to combine your data with that of any other Braze customer.
 
 {% alert tip %}
 When using **Most recent** or **AI Personalized**, users with insufficient data to create individualized recommendations will receive **Most popular** items as a fallback. The proportion of users receiving the **Most popular** fallback is displayed on the **Analytics** page.
