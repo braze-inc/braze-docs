@@ -35,7 +35,7 @@ Select a trigger event. This can include any of the following:
     - Click in-app message buttons
     - Click email
     - Click alias in email
-    - Clicked alias in any campaign or canvas step
+    - Clicked alias in any campaign or Canvas step
     - Open email
     - Open email (machine opens)
     - Open email (other opens)
