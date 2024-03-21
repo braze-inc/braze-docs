@@ -27,9 +27,32 @@ Select a trigger event. This can include any of the following:
 - Performing the campaign's primary conversion event
 - Adding an email address to a user profile
 - Changing a custom attribute value
+- Updating a subscription status
 - Updating a subscription group status
-- Interacting with News Feed cards (see [Campaign Connector][33])
 - Interacting with other campaigns
+    - View in-app message
+    - Click in-app message
+    - Click in-app message buttons
+    - Click email
+    - Click alias in email
+    - Clicked alias in any campaign or Canvas step
+    - Open email
+    - Open email (machine opens)
+    - Open email (other opens)
+    - Directly open push notification
+    - Click push notification button
+    - Click push story page
+    - Perform conversion event
+    - Receive email
+    - Receive SMS
+    - Click shortened SMS link
+    - Receive push notification
+    - Receive webhook
+    - Are enrolled in control group
+    - View Content Card
+    - Click Content Card
+    - Dismiss Content Card
+- Interacting with News Feed cards (see [Campaign Connector][33])
 - Entering a location
 - Performing the exception event for another campaign
 - Interacting with a Canvas step
