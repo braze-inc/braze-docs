@@ -117,7 +117,7 @@ Captioned image cards are clickable, full-sized images with accompanying descrip
 |`imageAspectRatio` | The aspect ratio of the card's image. It is meant to serve as a hint before image loading completes. Note that the property may not be supplied in certain circumstances. |
 |`title`            | The title text for the card.                                                                                      |
 |`cardDescription`  | The description text for the card.                                                                                |
-|`domain`           | (Optional) The link text for the property URL, e.g., "braze.com/resources/". It can be displayed on the card's UI to indicate the action/direction of clicking on the card. |
+|`domain`           | (Optional) The link text for the property URL, e.g., `"braze.com/resources/"`. It can be displayed on the card's UI to indicate the action/direction of clicking on the card. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 For a full reference of the captioned image card, see the [Android][12] and [iOS][13] documentation.
@@ -132,7 +132,7 @@ Classic cards have a title, description, and an optional image on the left of th
 |`image`            | (Optional) The URL of the card's image.                                                                           |
 |`title`            | The title text for the card.                                                                                      |
 |`cardDescription`  | The description text for the card.                                                                                |
-|`domain`           | (Optional) The link text for the property URL, e.g., "braze.com/resources/". It can be displayed on the card's UI to indicate the action/direction of clicking on the card. |
+|`domain`           | (Optional) The link text for the property URL, e.g., `"braze.com/resources/"`. It can be displayed on the card's UI to indicate the action/direction of clicking on the card. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 For a full reference of the text announcement card, see the [Android][14] and [iOS][15] documentation. For a full reference of the short news card, see the [Android][16] and [iOS][17] documentation.
