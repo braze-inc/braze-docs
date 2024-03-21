@@ -87,7 +87,7 @@ For customers who onboarded with Braze on or after September 16, 2021, we apply 
 <!---/canvas/trigger/send-->
 
 {% elsif include.endpoint == "send endpoints" %}
-When specifying a segment or Connected Audience in your request, we apply a rate limit of 250 requests per minute to this endpoint. Otherwise, if specifying an `external_id`, this endpoint has a default rate limit of 250,000 requests per hour, as documented in [API rate limits]({{site.baseurl}}/api/api_limits/).
+When specifying a segment or connected audience in your request, we apply a rate limit of 250 requests per minute to this endpoint. Otherwise, if specifying an `external_id`, this endpoint has a default rate limit of 250,000 requests per hour, as documented in [API rate limits]({{site.baseurl}}/api/api_limits/).
 
 <!---/transactional/v1/campaigns/{campaign_id}/send -->
 
@@ -127,7 +127,7 @@ Braze endpoints support [batching API requests]({{site.baseurl}}/api/api_limits/
 
 - Up to 50 specific `external_ids`, each with individual message parameters
 - A segment of any size created in the Braze dashboard, specified by its `segment_id`
-- An audience segment of any size, defined in the request as a [Connected Audience]({{site.baseurl}}/api/objects_filters/connected_audience/) object
+- An audience segment of any size, defined in the request as a [connected audience]({{site.baseurl}}/api/objects_filters/connected_audience/) object
 
 {% endif %}
 
