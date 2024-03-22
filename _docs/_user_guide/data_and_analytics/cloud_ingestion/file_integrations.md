@@ -24,7 +24,7 @@ The integration requires the following resources:
 Braze Cloud Data Ingestion support for S3 is currently in early access. Contact your Braze account manager if you are interested in participating in the early access. 
 {% endalert %}
 
-## Setting up Cloud Data Ingest in AWS
+## Setting up Cloud Data Ingestion in AWS
 
 Follow these steps to set up a Cloud Data Integest integration in your AWS account:
 
