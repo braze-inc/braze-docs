@@ -22,7 +22,7 @@ To learn more about Liquid, catalogs, and Connected Content, check out these Bra
 - [Connected Content Fundamentals](https://learning.braze.com/path/dynamic-personalization-with-liquid/connected-content-fundamentals)
 
 {% alert important %}
-Rules-based recommendations are based on fixed logic that you must manually set. This means your recommendations won’t adjust to a user's individual purchase history and tastes unless you update the logic.<br><br>To create personalized AI recommendations that automatically adjust to a user’s history, check out [AI item recommendations]({{site.baseurl}}/user_guide/sage_ai/recommendations/).
+Rules-based recommendations are based on fixed logic that you must manually set. This means your recommendations won’t adjust to a user's purchase history and tastes unless you update the logic.<br><br>To create personalized AI recommendations that automatically adjust to a user’s history, check out [AI item recommendations]({{site.baseurl}}/user_guide/sage_ai/recommendations/).
 {% endalert %}
 
 ## Creating a catalogs recommendation engine
