@@ -154,5 +154,5 @@ To complete the setup on AWS, you will create an IAM role and attach the IAM pol
 
 4. Add a contact email for notifications if the sync breaks because of access or permissions issues. Optionally, turn on notifications for user-level errors and sync successes. <br><br> ![]({% image_buster /assets/img/cloud_ingestion/s3_ingestion_3.png %})<br><br>
 
-{: start ="5"}
+{: start="5"}
 5. Finally, test the connection and save the sync. <br><br>![]({% image_buster /assets/img/cloud_ingestion/s3_ingestion_4.png %})
