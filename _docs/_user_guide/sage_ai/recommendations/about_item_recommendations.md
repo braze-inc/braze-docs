@@ -223,7 +223,7 @@ For example, a tech e-commerce platform could alert tech enthusiasts about the l
 3. Make sure **Randomize Sort Order** is turned off.
 4. For **Sort Field**, select your date added field.
 5. Set **Sort Order** to descending.
-6. Use the selection in messaging.
+6. [Use the selection in messaging]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/selections/#using-selections-in-messaging).
 
 {% enddetails %}
 
@@ -271,7 +271,7 @@ For example, an online bookstore could offer a "Surprise Me" feature, recommendi
 1. [Create a selection]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/selections/#creating-a-selection) based on your catalog.
 2. (Optional) Add any filters if desired.
 3. Turn on **Randomize Sort Order**.
-4. Use the selection in messaging.
+4. [Use the selection in messaging]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/selections/#using-selections-in-messaging).
 
 {% enddetails %}
 
