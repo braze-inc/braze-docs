@@ -57,7 +57,7 @@ Some use cases for this model include recommending:
 
 ### Selections-based recommendations {#selections-based}
 
-Selections are specific groups of catalog data. When you use a selection, you're essentially setting up custom filters based on specific columns in your catalog. This could include filters for brand, size, location, date added, and more. It gives you control over what you’re recommendation by allowing you to define criteria that items must meet to be shown to users.
+[Selections]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/selections/) are specific groups of catalog data. When you use a selection, you're essentially setting up custom filters based on specific columns in your catalog. This could include filters for brand, size, location, date added, and more. It gives you control over what you’re recommendation by allowing you to define criteria that items must meet to be shown to users.
 
 The previous three types all involve setting up and training a recommendation model in Braze. While you can use selections in those models as well, you can also accomplish some recommendation use cases with just catalog selections and Liquid personalization.
 
