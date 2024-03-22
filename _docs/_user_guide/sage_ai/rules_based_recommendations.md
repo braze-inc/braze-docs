@@ -35,7 +35,7 @@ Rules-based recommendations are based on fixed logic that you must manually set.
 
 ### Catalogs use case
 
-Let’s say you have a health food app and want to create a content card campaign that sends different recipes based on how long a user has been signed up for your app. 
+Let’s say you have a health food app and want to create a Content Card campaign that sends different recipes based on how long a user has been signed up for your app. 
 
 1. Create and upload a catalog via CSV that includes the following information:<br>- **id:** A unique number that correlates to the number of days since the user signed up with your app. For example, `3` correlates to three days.<br>- **type:** The recipe category, such as `comfort`, `fresh`, and others.<br>- **title:** The title of the content card that will be sent for each ID, such as “Make ahead for lunch this week” or “Let’s taco about it”.<br>- **link:** The link to the recipe article.<br>- **image_url:** The image that corresponds to the recipe.
 
