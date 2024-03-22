@@ -240,4 +240,54 @@ If you have another Firebase Messaging Service you would also like to use, you c
 }
 ```
 
+## Additional functionality: Rich push notifications & Push Stories
+
+Rich push notifications and push stories are already available for Android by default. For iOS, you can either follow the native integration instructions for [rich push notifications][2] and [push stories][3], or refer to the following section below to configure these features using the Braze Expo plugin.
+
+### Rich Push Notifications
+
+To enable rich push notifications on iOS via Expo, simply configure the `enableBrazeIosRichPush` property to `true` in your `expo.plugins` object in `app.json`:
+
+```json
+{
+  "expo": {
+    "plugins": [
+      [
+        "@braze/expo-plugin",
+        {
+          ...
+          "enableBrazeIosRichPush": true
+        }
+      ]
+    ]
+  }
+}
+```
+
+### Push Stories
+
+First, ensure that you have an app group defined for your application. For further details on app groups, refer to [Adding an App Group][4].
+
+To enable push stories on iOS via Expo, configure the `enableBrazeIosPushStories` property to `true` and assign your app group ID to `iosPushStoryAppGroup` in your `expo.plugins` object in `app.json`:
+
+```json
+{
+  "expo": {
+    "plugins": [
+      [
+        "@braze/expo-plugin",
+        {
+          ...
+          "enableBrazeIosPushStories": true,
+          "iosPushStoryAppGroup": "group.com.company.myApp.PushStories"
+        }
+      ]
+    ]
+  }
+}
+```
+
 [1]: {% image_buster /assets/img/react-native/push-notification-test.png %} "Push Campaign Test"
+[2]: https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/b2-rich-push-notifications/
+[3]: https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/b3-push-stories/
+[4]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/push_story/#adding-an-app-group
