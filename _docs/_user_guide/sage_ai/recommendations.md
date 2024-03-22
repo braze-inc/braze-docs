@@ -44,23 +44,29 @@ First, give your recommendation a name and optional description.
 
 Next, select the recommendation type. All recommendation types use the last 6 months of item interaction (purchase or custom event) data. The interaction mentioned below refers to either a purchase event or custom event chosen in Step 3.
 
-- **Most popular:** Calculates up to 30 items from the catalog that all users in the workspace interact with most often, e.g. Most Purchased Products. 
-- **Most recent:** Creates a list of up to 30 products a user has interacted with most recently. 
-- **AI Personalized:** Uses transformers, a new kind of deep learning, to predict each user's next most likely set of items to interact with.  We calculate up to 30 of the next most likely items ranked from most to least likely. This type of recommendation does not use Large Language Models (LLMs) to combine your data with that of any other Braze customer.
+- **Most popular:** Calculates up to 30 items from the catalog that all users in the workspace interact with most often, such as the most purchased products.
+- **Most recent:** Creates a list of up to 30 products a user has interacted with most recently.
+- **AI Personalized:** Uses transformers, a new kind of deep learning, to predict each user's next most likely set of items to interact with. We calculate up to 30 of the next most likely items ranked from most to least likely. This type of recommendation does not use Large Language Models (LLMs) to combine your data with that of any other Braze customer.
 
 {% alert tip %}
 When using **Most recent** or **AI Personalized**, users with insufficient data to create individualized recommendations will receive **Most popular** items as a fallback. The proportion of users receiving the **Most popular** fallback is displayed on the **Analytics** page.
 {% endalert %}
 
-#### Exclude prior purchases or interactions
+#### Step 2a: Exclude prior purchases or interactions (optional)
 
-If you'd like to exclude items a user may have purchased or interacted with prior, check the box that says "Do not recommend items users have previously interacted with." This allows you to make sure items a user has already purchased or interacted with don't get surfaced again in a message. However, please note that items purchased or interacted with since the last Recommendation update may not be excluded successfully. For the free version of Item Recommendations, this means within a week. For AI Item Recommendations Pro, this means the last 24 hours. For example, when using AI Item Recommendations Pro, if a user purchases an Item and gets an e-mail 30 minutes later, the item they just purchased will likely not be excluded from that e-mail. However, messages sent more than 24 hours later will not contain that last purchase.
+To avoid suggesting items that a user has already purchased or interacted with, select **Do not recommend items users have previously interacted with**. This option is only available when the recommendation **Type** is set to **AI Personalized**.
 
-![][2-1]
+![][2-3]
+
+This setting makes sure that items a user has already bought or interacted with are not surfaced in messages again, provided the recommendation has been updated recently. Items purchased or interacted with between recommendation updates may still appear. For the free version of Item Recommendations, updates happen weekly. For AI Item Recommendations Pro, updates happen every 24 hours.
+
+For example, when using AI Item Recommendations Pro, if a user purchases something and then receives a marketing email within 30 minutes, the item they just purchased might not be excluded from the email in time. However, any messages sent after 24 hours won't include that item.
+
+#### Step 2b: Select a catalog
 
 If not already populated, select the [catalog][catalog] that this recommendation will pull items from.
 
-#### Add a selection
+#### Step 2c: Add a selection (optional)
 
 If you'd like more control over your recommendation, choose a [selection]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/selections/) to apply custom filters. Selections filter recommendations by specific columns in your catalog, such as brand, size, or location. Selections that contain Liquid can't be used in your recommendation.
 
@@ -288,6 +294,7 @@ After your recommendation finishes training, you can personalize your messages w
 [1]: {% image_buster /assets/img/item_recs_1.png %}
 [2-1]: {% image_buster /assets/img/item_recs_2-1.png %}
 [2-2]: {% image_buster /assets/img/item_recs_2-2.png %}
+[2-3]: {% image_buster /assets/img/item_recs_2-3.png %}
 [3]: {% image_buster /assets/img/item_recs_3.png %}
 [4]: {% image_buster /assets/img/item_recs_4.png %}
 [5]: {% image_buster /assets/img/item_recs_analytics_1.png %}
