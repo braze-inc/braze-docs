@@ -17,7 +17,7 @@ search_tag: Partner
 
 To integrate Census in the Census platform, navigate to the **Connections** tab and select **New Destination** to create a new Braze service connection.
 
-In the prompt that appears, name this connection, and provide your Braze endpoint URL and Braze REST API key (and, optionally, your data import key to sync cohorts).
+In the prompt that appears, name this connection, and provide your Braze endpoint URL, Braze REST API key, and data import key. The data import key is required to sync cohorts and can be found in Braze by going to **Partner Integrations** > **Technology Partners** > **Census**.
 
 ![][8]{: style="max-width:60%;"}
 
@@ -34,28 +34,15 @@ To sync customers to Braze, you must build a sync. Here, you will define where t
 7. Lastly, map the Census data fields to the equivalent Braze fields.<br>![Census mapping][11]{: style="max-width:80%;"}<br><br>
 8. Confirm details and create the sync. 
 
-After the sync runs, you will find the user data in Braze. You can now create and add a Braze segment to future Braze campaigns and Canvases to target these users. 
+Now you can run your sync!
+
+During a sync, any fields that you map will first be synced to the user object to update what already exists in Braze. After that, the updated user will be added to the specified cohort.
+
+After the sync, you can create and add a Braze segment with a Census cohort filter to future Braze campaigns and Canvases to target those users. 
 
 {% alert note %}
 When using the Census and Braze integration, Census will only send the deltas (changing data) on each sync to Braze. 
 {% endalert %}
-
-## Supported objects
-
-Census currently supports syncing of the following Braze objects:
-
-| Object name | Sync Behaviors |
-| --- | --- |
-| User | Update, Create, Mirror, Delete |
-| Cohort | Update, Create, Mirror | 
-| Catalog | Update, Create, Mirror |
-| Subscription Group Membership | Mirror |
-| Event | Append |
-{: .reset-td-br-1 .reset-td-br-2}
-
-Additionally, Census supports sending [structured data](https://docs.getcensus.com/destinations/braze#supported-objects) to Braze: 
-- User push tokens: To send push tokens, your data should be structured as an array of objects with 2-3 values: `app_id`, `token`, and an optional `device_id`.
-- Nested custom attributes: Both objects and arrays are supported. As of April 2022, this feature is still in early access. You may need to contact your Braze account manager for access.
 
 [1]: https://www.getcensus.com/
 [8]: {% image_buster /assets/img/census/add_service.png %}
