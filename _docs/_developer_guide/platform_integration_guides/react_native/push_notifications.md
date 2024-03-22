@@ -219,27 +219,6 @@ Starting in macOS 13, on certain devices, you can test iOS push notifications on
 
 ![A Braze push campaign showing you can add your own user ID as a test recipient to test your push notification.][1]
 
-## Optional: Forward Android push to another FirebaseMessagingService
-
-If you have another Firebase Messaging Service you would also like to use, you can also specify a fallback Firebase Messaging Service to call if your application receives a push that isn't from Braze.
-
-```json
-{
-  "expo": {
-    "plugins": [
-      [
-        "@braze/expo-plugin",
-        {
-          ...
-          "androidFirebaseMessagingFallbackServiceEnabled": true,
-          "androidFirebaseMessagingFallbackServiceClasspath": "com.company.OurFirebaseMessagingService"
-        }
-      ]
-    ]
-  }
-}
-```
-
 ## Additional functionality: Rich push notifications & Push Stories
 
 Rich push notifications and push stories are already available for Android by default. For iOS, you can either follow the native integration instructions for [rich push notifications][2] and [push stories][3], or refer to the following section below to configure these features using the Braze Expo plugin.
@@ -280,6 +259,27 @@ To enable push stories on iOS via Expo, configure the `enableBrazeIosPushStories
           ...
           "enableBrazeIosPushStories": true,
           "iosPushStoryAppGroup": "group.com.company.myApp.PushStories"
+        }
+      ]
+    ]
+  }
+}
+```
+
+## Optional: Forward Android push to another FirebaseMessagingService
+
+If you have another Firebase Messaging Service you would also like to use, you can also specify a fallback Firebase Messaging Service to call if your application receives a push that isn't from Braze.
+
+```json
+{
+  "expo": {
+    "plugins": [
+      [
+        "@braze/expo-plugin",
+        {
+          ...
+          "androidFirebaseMessagingFallbackServiceEnabled": true,
+          "androidFirebaseMessagingFallbackServiceClasspath": "com.company.OurFirebaseMessagingService"
         }
       ]
     ]
