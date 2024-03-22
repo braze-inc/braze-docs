@@ -45,7 +45,7 @@ Let’s say you have a health food app and want to create a content card campaig
 ![][1]
 
 {: start="3"}
-3. Create a content card campaign. In the composer, enter Liquid logic to determine which users should receive the campaign, and which recipe and image should display. In this use case, Braze will pull the user’s `start_date` (or sign up date) and compare it to the current date. The difference in days will determine which content card is sent. 
+3. Create a Content Card campaign. In the composer, enter Liquid logic to determine which users should receive the campaign, and which recipe and image should display. In this use case, Braze will pull the user’s `start_date` (or sign-up date) and compare it to the current date. The difference in days will determine which Content Card is sent. 
 
 ![][2]
 
