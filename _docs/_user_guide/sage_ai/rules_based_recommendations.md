@@ -40,7 +40,7 @@ Let’s say you have a health food app and want to create a content card campaig
 1. Create and upload a catalog via CSV that includes the following information:<br>- **id:** A unique number that correlates to the number of days since the user signed up with your app. For example, `3` correlates to three days.<br>- **type:** The recipe category, such as `comfort`, `fresh`, and others.<br>- **title:** The title of the content card that will be sent for each ID, such as “Make ahead for lunch this week” or “Let’s taco about it”.<br>- **link:** The link to the recipe article.<br>- **image_url:** The image that corresponds to the recipe.
 
 {: start="2"}
-2. After the catalog is uploaded to Braze, check the preview of a select number of catalog items to confirm the information imported accurately. The items may be randomized in the preview, but this won’t affect the output of the recommendation engine. 
+2. After the catalog is uploaded to Braze, check the preview of a select number of catalog items to confirm the information imported accurately. The items may be randomized in the preview, but this won’t affect the output of the recommendation engine.
 
 ![][1]
 
