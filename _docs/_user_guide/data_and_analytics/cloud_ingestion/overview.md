@@ -1,6 +1,6 @@
 ---
 nav_title: Overview
-article_title: Cloud Data Ingestion Overview and Best Practices
+article_title: Cloud Data Ingestion Overview 
 page_order: 0
 page_type: reference
 description: "This reference article provides an overview of Cloud Data Ingestion, best practices, and product limitations."
@@ -9,13 +9,26 @@ description: "This reference article provides an overview of Cloud Data Ingestio
 
 # Braze Cloud Data Ingestion overview
 
-> Braze Cloud Data Ingestion allows you to set up a direct connection from your data warehouse to Braze to sync relevant user attributes, events, and purchases. When synced to Braze, this data can be leveraged for use cases such as personalization or segmentation. Cloud Data Ingestion connects your data in Snowflake, Redshift, BigQuery, or Databricks to Braze.
+> Braze Cloud Data Ingestion allows you to set up a direct connection from your data warehouse or file storage system to Braze to sync relevant user or catalog data. When synced to Braze, this data can be leveraged for use cases such as personalization, triggering, or segmentation. 
 
 ## How it works
 
-With Braze Cloud Data Ingestion, you set up an integration between your data warehouse instance and Braze workspace to sync data on a recurring basis. This sync runs on a schedule you set, and each integration can have a different schedule. Syncs can run as frequently as every 15 minutes or as infrequently as once per month. For customers who need syncs to occur more frequently than 15 minutes, please speak with your customer success manager, or consider using REST API calls for real-time data ingestion.
+With Braze Cloud Data Ingestion (CDI), you set up an integration between your data warehouse instance and Braze workspace to sync data on a recurring basis. This sync runs on a schedule you set, and each integration can have a different schedule. Syncs can run as frequently as every 15 minutes or as infrequently as once per month. For customers who need syncs to occur more frequently than 15 minutes, please speak with your customer success manager, or consider using REST API calls for real-time data ingestion.
 
 When a sync runs, Braze will directly connect to your data warehouse instance, retrieve all new data from the specified table, and update the corresponding data on your Braze dashboard. Each time the sync runs, any updated data will be reflected in Braze.
+
+## Supported data sources
+
+Cloud Data Ingestion can sync data from the following sources to Braze:
+
+- Data warehouse sources 
+   - Amazon Redshift
+   - Databricks 
+   - Google BigQuery
+   - Snowflake
+
+- File storage sources 
+   - Amazon S3
 
 ## Supported data types 
 
