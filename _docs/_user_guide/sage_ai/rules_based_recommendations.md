@@ -28,10 +28,10 @@ Rules-based recommendations are based on fixed logic that you must manually set.
 ## Creating a catalogs recommendation engine
 
 1. [Create a catalog]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/catalog/) of products.
-2. For each product, add a list of recommended products as a string separated by a delimiter (like a pipe `|`) in a column called “product_recommendations”.
+2. For each product, add a list of recommended products as a string separated by a delimiter (like a pipe `|`) in a column named “product_recommendations”.
 3. Pass the product ID that you want to find recommendations for to the catalog.
 4. Get the `product_recommendations` value for that catalog item and split it by the delimiter with a Liquid split filter.
-5. Pass one or more of those IDs back to the catalog to collect the other details for those products.
+5. Pass one or more of those IDs back to the catalog to collect the other product details.
 
 ### Catalogs use case
 
