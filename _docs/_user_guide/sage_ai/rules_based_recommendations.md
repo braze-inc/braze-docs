@@ -93,7 +93,7 @@ Let’s say you have a health food app and want to create a content card campaig
 {% endraw %}
 
 {: start="4"}
-4. In the **On click behavior** section, enter Liquid logic for where users should be redirected when they click the content card on iOS, Android, and Web devices. 
+4. In the **On click behavior** section, enter Liquid logic for where users should be redirected when they click the Content Card on iOS, Android, and Web devices. 
 
 {% raw %}
 ```liquid
