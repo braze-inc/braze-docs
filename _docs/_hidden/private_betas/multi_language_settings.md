@@ -24,14 +24,14 @@ In order to edit and manage multi-language support, you must have the "Manage Mu
 2. Select **Add locale**.
 3. Enter a name for the locale.
 4. For the **User attributes**, select the language to be added using the **Language** dropdown.
-5. (Optional) Select the country to be associated with the language.
+5. (optional) Select the country to be associated with the language.
 6. Select **Add locale**. 
 
 ![An example of French added as a locale for users whose country is Canada.][2]{: style="max-width:80%;"}
 
 ## Use locales in messaging
 
-To use locales in your messaging, compose an email campaign or Canvas. Select between the HTML editor and drag-and-drop editor, then follow the steps based on your editor.
+To use locales in your messaging, compose an email campaign or Canvas. Select either the HTML editor or drag-and-drop editor, then follow the steps based on your editor.
 
 {% tabs %}
 {% tab HTML editor %}

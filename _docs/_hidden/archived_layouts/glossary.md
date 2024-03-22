@@ -35,7 +35,7 @@ noindex: true
 |---|---|---|
 |`name`| Alphanumeric | Name your glossary item.| 
 |`description`| String, Alphanumeric | Describe your glossary item. | 
-|`calculation`| String | (Optional) Describe how your glossary item is calculated (usually used when describing data or metrics. | 
+|`calculation`| String | (optional) Describe how your glossary item is calculated (usually used when describing data or metrics. | 
 |`tags`| Alphanumeric | Should match what is listed as a `name` under `glossary_tags`. List as many as applicable. Writing `All` will include the item in all filters.|
 
 ## Example
