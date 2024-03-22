@@ -106,7 +106,7 @@ Let’s say you have a health food app and want to create a content card campaig
 ```
 {% endraw %}
 
-![][3]{: style="max-width:40%;"}<br><br>
+![][3]{: style="max-width:60%;"}<br><br>
 
 {: start="5"}
 5. Go to the **Test** tab and select **Custom user** under **Preview message as user**. Enter a date in the **Custom attribute** field to preview the Content Card that would be sent to a user who signed up on that date. <br><br>
