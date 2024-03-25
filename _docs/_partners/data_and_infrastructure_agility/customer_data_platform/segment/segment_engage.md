@@ -30,10 +30,6 @@ The Braze and Segment integration allows you to use [Engage](https://segment.com
 
 ## Cohorts Destination integration
 
-{% alert note %}
-The Cohorts Destination is currently in early access. To get access to this feature, reach out to your Braze customer team.
-{% endalert %}
-
 ### Step 1: Create an Engage audience
 1. In Segment, navigate to the **Audiences** tab in Engage, and click **New**.
 2. Create your audience. A lightning bolt in the top corner of the page will indicate if the audience updates in real-time.

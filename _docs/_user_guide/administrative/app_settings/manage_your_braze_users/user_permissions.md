@@ -48,6 +48,10 @@ You can manage user permissions by group or on an individual basis when editing 
 
 ![Manage User Permissions][89]
 
+{% alert important %}
+Beginning in early April 2024, users will need the “Access Campaigns, Canvases, Cards, Segments, Media Library” permission to create or upload promotion code lists.
+{% endalert %}
+
 |Permission Name|Definition/Parameters|
 |---|---|
 |Admin|Allows users to access all available features. This is the default setting for all new users. Can update company settings (company name and time zone), which limited users cannot do.|

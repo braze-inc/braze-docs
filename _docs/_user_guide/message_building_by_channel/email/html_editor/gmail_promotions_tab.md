@@ -20,8 +20,8 @@ First, forward your domains and subdomains to Google’s Promotions Tab outreach
 
 Follow these steps to build a Gmail promotion card for an email campaign. Note that navigating away from the **Content** section in the editor will reset the fields and information in the **Gmail Promotion** tab. Complete the setup of your promotion card, and copy the HTML generated so you don't lose your HTML code.
 
-1. [Create your email campaign][7] as you usually would. 
-2. Go to the **Content** section in the editor and select the **Gmail Promotion** tab.
+1. [Create your email campaign][7], and select the **HTML Editor** as your editing experience.
+2. Go to the **Content** section in the HTML editor, and select the **Gmail Promotion** tab.
 3. Fill out the fields under **Basic Information**, then click **Generate HTML Code**. This will help generate the script for your Gmail Promo Tab card under the **Copy and Paste HTML code into `<Head>`** section. <br> ![An example of how to build a card.][2]
 4. Choose whether to include only a discount offer, promotion cards, or both for your Gmail Promotion card. <br> ![Options to include a discount offer and promotion cards.][10]{: style="max-width:50%;"}
 5. Copy and paste the script into the `<head>` element of your email's HTML.
