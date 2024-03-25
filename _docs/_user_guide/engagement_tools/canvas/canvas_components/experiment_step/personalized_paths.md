@@ -1,4 +1,4 @@
----
+d---
 nav_title: Personalized Paths 
 article_title: Personalized Paths in Experiment Paths 
 page_type: reference
@@ -8,13 +8,17 @@ tool: Canvas
 
 # Personalized Paths in Experiment Paths
 
-> Personalized Paths is similar to [Personalized Variant]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/optimizations/#personalized-variant) in campaigns and lets you personalize any point of a Canvas journey for individual users based on conversion likelihood. 
+> Personalized Paths is similar to [Personalized Variant]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/optimizations/#personalized-variant) in campaigns and lets you personalize any point of a Canvas journey for individual users based on conversion likelihood.
 
-When Personalized Paths is turned on in an Experiment Path step, a portion of users are held in a delay group while Braze tests the remaining paths against each other. After a period of time you choose, Braze sends users held in the delay group down the path that is most likely to result in conversion for each user based on what was learned during the testing window. Users who enter after the experiment is over will be sent down the path that performs best overall.
+When Personalized Paths is turned on in an Experiment Path step, a group of users are held back in a delay group. The remaining users pass into an initial test to train a look-alike model for a duration you configure. Then after the test completes, a model is created to learn which user behaviors were associated with greater likelihood to convert on a given path. Finally, each user in the delay group is sent down the path most likely to result in conversion for them based on the behaviors they exhibit and what the look-alike model learned during the initial test.
 
 ## Prerequisites
 
-You can use Personalized Paths in your Experiment Step when your Canvas is set to send once. Personalized Paths is not yet available for recurring or triggered Canvases.
+You can use Personalized Paths in your Experiment Step when your Canvas is set to send once. Personalized Paths is not available for recurring or triggered Canvases.
+
+{% alert important %}
+Personalized Paths is currently in beta. If you are interested in participating in the beta, reach out to your customer success manager.
+{% endalert %}
 
 ## Using Personalized Paths
 
@@ -52,7 +56,7 @@ Finish setting up your Canvas as needed, then launch it. When the first user has
 
 ![][5]{: style="max-width:75%;" }
 
-When the experiment window passes and the experiment is complete, Braze will send users in the delay group to their respective paths with the highest personalized likelihood of conversion.
+When the experiment window passes and the experiment is complete, Braze will send users in the delay group to their respective paths with the highest personalized likelihood of conversion based on the recommendation of the look-alike model.
 
 ![][6]{: style="max-width:75%;" }
 
