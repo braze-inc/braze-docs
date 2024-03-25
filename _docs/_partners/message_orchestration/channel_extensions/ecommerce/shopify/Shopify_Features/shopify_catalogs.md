@@ -1,24 +1,28 @@
 ---
-nav_title: Shopify Catalogs
-article_title: Shopify Catalogs
+nav_title: Shopify Product Syncs
+article_title: Shopify Product Syncs
 alias: /shopify_catalogs/
 page_order: 2
 description: "This reference article covers how to import your products from Shopify into Braze catalogs."
 ---
 
-# Shopify catalogs 
+# Shopify product syncs 
 
-> Shopify catalogs allow you to import your products from your Shopify store into a Braze [catalog]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs), making it easier and automated to bring in product data for deeper personalization of your messages. 
+> Shopify catalogs allow you to sync your products from your Shopify store into a Braze [catalog]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs), automating how you bring in product data for deeper personalization of your messages. 
 
 Shopify catalogs will update in near real-time as you make edits and changes to the products in your Shopify store. You can enrich your abandoned cart, order confirmation, and more with the most up-to-date product details and information.
 
-## Setting up Shopify catalog sync
+## Setting up your Shopify product sync {#setting-up}
 
-If you have already installed your Shopify store, you can still import your products by following the instructions below. 
+If you have already installed your Shopify store, you can still sync your products by following the instructions below. 
 
 ### Step 1: Turn on the sync
 
-You can activate the sync for importing your products to our catalog through the Shopify install flow or on the Shopify partner page. Products imported into a catalog will contribute to your [Catalog limit]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/catalog/#limits).
+YOu can sync your products to a Braze catalog through the Shopify install flow or on the Shopify partner page. 
+
+![Step 3 of the set up process with "Shopify Variant ID" as the "Catalog product identifier".][1]{: style="max-width:70%;"}
+
+Products synced to a Braze catalog will contribute to your [Catalog limit]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/catalog/#limits).
 
 ### Step 2: Select your product identifier
 
@@ -32,19 +36,19 @@ This will be the primary identifier you use to reference Braze catalog informati
 
 {% alert note %}
 If you are selecting SKU as your catalog ID, make sure that all your products and variants in your store have a SKU set and they are unique. 
-- If an item has a missing SKU, Braze cannot import that product into the catalog. 
-- If you have more than one product with the same SKU, this can cause unexpected behavior, such as an error in the import, or result in product information being overridden unintentionally by the duplicate SKU. 
+- If an item has a missing SKU, Braze cannot sync that product into the catalog. 
+- If you have more than one product with the same SKU, this can cause unexpected behavior or result in product information being overridden unintentionally by the duplicate SKU.
 {% endalert %}
 
-### Step 3: Import in progress
+### Step 3: Sync in progress
 
-You will receive a dashboard notification, and your status will display as “In Progress” to indicate the initial import is starting. Note that the time it takes for the import to finish will depend on how many products and variants Braze will need to sync over from Shopify. During this time, you can leave this page and wait for a dashboard notification or email to notify you when this is complete.
+You will receive a dashboard notification, and your status will display as “In Progress” to indicate the initial sync is starting. Note that the time it takes for the sync to finish will depend on how many products and variants Braze will need to sync over from Shopify. During this time, you can leave this page and wait for a dashboard notification or email to notify you when this is complete.
 
-Note that if your initial import exceeds your [catalog limit](https://www.braze.com/docs/user_guide/personalization_and_dynamic_content/catalogs/catalog/#limits), the import will stop syncing any more products. If you exceed the limit after the import is successful due to new products being added over time, the sync will no longer be active. In both these cases, product updates from Shopify will no longer be reflected in Braze. Reach out to your account manager to consider upgrading your tier. 
+Note that if your initial sync exceeds your [catalog limit](https://www.braze.com/docs/user_guide/personalization_and_dynamic_content/catalogs/catalog/#limits), Braze will stop syncing any more products. If you exceed the limit after the sync is successful due to new products being added over time, the sync will no longer be active. In both these cases, product updates from Shopify will no longer be reflected in Braze. Reach out to your account manager to consider upgrading your tier. 
 
-### Step 4: Import completed
+### Step 4: Sync completed
 
-You will receive a dashboard notification and an email after the import has been completed. The Shopify partner page will also update the status under Shopify catalogs to “Syncing,” you can view your products by clicking the catalog name on the Shopify partner page.
+You will receive a dashboard notification and an email after the sync is successful. The Shopify partner page will also update the status under Shopify catalogs to “Syncing". You can view your products by clicking the catalog name on the Shopify partner page.
 
 Refer to [Catalogs additional use cases](https://www.braze.com/docs/user_guide/personalization_and_dynamic_content/catalogs/catalog/#additional-use-cases) to learn more about how to leverage catalog data to personalize your message.
 
@@ -76,18 +80,20 @@ Modifying the Shopify catalog in any way may unintentionally interfere with real
 
 ## Changing catalog ID
 
-To change the product identifier for your Shopify catalog, you will need to deactivate the sync. Confirm you have stopped any sends using this Shopify catalog data first. Re-run the Shopify catalog initial import and select your desired product identifier by following the [catalog sync](#setting-up-shopify-catalog-sync) steps.
+To change the product identifier for your Shopify catalog, you will need to deactivate the sync. Confirm you have stopped any sends using this Shopify catalog data first. Re-run the Shopify catalog initial sync and select your desired product identifier by following the [product sync](#setting-up) steps.
 
-## Deactivating your Shopify catalogs
+## Deactivating your product sync {#deactivate}
 
-Deactivating the Shopify catalog feature will delete your entire catalog and products. This can also impact any sends that may be actively using the product data from this catalog. Confirm that you have either updated or paused these sends before deactivation, as this could result in your messaging sending missing product details. Do not delete the Shopify catalog directly on the catalogs page.
+Deactivating the Shopify product sync feature will delete your entire catalog and products. This can also impact any sends that may be actively using the product data from this catalog. Confirm that you have either updated or paused these sends before deactivation, as this could result in your messaging sending missing product details. Do not delete the Shopify catalog directly on the catalogs page.
 
 ## Troubleshooting
-If your Shopify catalog runs into an error during import or syncing, it could be a result of the following errors. Follow the instructions on how to correct the issue and resolve the sync:
+If your Shopify product sync runs into an error, it could be a result of the following errors. Follow the instructions on how to correct the issue and resolve the sync:
 
 | Error | Reason | Solution |
 | --- | --- | --- |
-| Server Error | This occurs if there is a server error on Shopify’s side when we attempt to import or sync your products. | [Deactivate sync](#deactivating-your-shopify-catalogs) and re-import your entire inventory of products again. |
-| Duplicate SKU Error | This occurs if you use a SKU as your catalog item ID and have products with the same SKU. Since catalog item ID has to be unique, all your products must have unique SKUs. | Audit your full list of products and variants in Shopify to ensure that there are no duplicate SKUs. If there are duplicate SKUs, update these to be unique SKUs only in your Shopify store account. After this is corrected, [deactivate sync](#deactivating-your-shopify-catalogs) and re-import your entire inventory of products again. |
-| Catalog Limit Exceeded | This occurs if you exceed your catalog limit. Braze will be unable to finish the import or keep the syncing active due to no more storage availability. | There are two solutions to this issue:<br><br>1. Reach out to your account manager to upgrade your tier to increase your catalog limit. <br><br>2. Free up storage space by deleting any of the following:<br>- Catalog items from other catalogs<br>- Other catalogs<br>- Selections created |
+| Server Error | This occurs if there is a server error on Shopify’s side when we attempt to sync your products. | [Deactivate sync](#deactivate) and re-sync your entire inventory of products again. |
+| Duplicate SKU Error | This occurs if you use a SKU as your catalog item ID and have products with the same SKU. Since catalog item ID has to be unique, all your products must have unique SKUs. | Audit your full list of products and variants in Shopify to make sure that there are no duplicate SKUs. If there are duplicate SKUs, update these to be unique SKUs only in your Shopify store account. After this is corrected, [deactivate sync](#deactivate) and re-sync your entire inventory of products again. |
+| Catalog Limit Exceeded | This occurs if you exceed your catalog limit. Braze will be unable to finish the sync or keep the syncing active due to no more storage availability. | There are two solutions to this issue:<br><br>1. Reach out to your account manager to upgrade your tier to increase your catalog limit. <br><br>2. Free up storage space by deleting any of the following:<br>- Catalog items from other catalogs<br>- Other catalogs<br>- Selections created |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+
+[1]: {% image_buster /assets/img/Shopify/sync_products_step1.png %}
