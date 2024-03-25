@@ -75,7 +75,7 @@ By default, the test looks for associations between user’s custom events and t
 
 The relationships between custom events and message preferences are displayed in the table on the **Initial Experiment** tab.
 
-![]({% image_buster /assets/img_archive/ab_analytics_pv_3.png %})
+![]({% image_buster /assets/img_archive/experiment_personalized_analytics_custom_data.png %})
 
 If the test can't find a meaningful relationship between custom events and path preferences, the test will fall back to a session-based analysis method.
 
