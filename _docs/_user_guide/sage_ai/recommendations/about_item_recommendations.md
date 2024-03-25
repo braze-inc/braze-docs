@@ -103,7 +103,7 @@ Predict and recommend the items a user is most likely to purchase next, based on
 
 {% details How to set up %}
 
-1. Create an [AI Item Recommendation]({{site.baseurl}}/recommendations).
+1. Create an [AI Item Recommendation]({{site.baseurl}}/ai_item_recommendations).
 2. Set the **Type** to **AI Personalized**.
 3. Select your catalog.
 4. (Optional) Add a selection to filter your recommendation to only relevant items.
@@ -127,7 +127,7 @@ Remind users of their interest in items that they recently added to their cart, 
 
 {% details How to set up %}
 
-1. Create an [AI Item Recommendation]({{site.baseurl}}/recommendations).
+1. Create an [AI Item Recommendation]({{site.baseurl}}/ai_item_recommendations).
 2. Set the **Type** to **Most recent**.
 3. Select your catalog.
 4. (Optional) Add a selection to filter your recommendation to only relevant items.
@@ -151,7 +151,7 @@ Encourage users to explore items that they’ve recently liked or items that are
 
 {% details How to set up %}
 
-1. Create an [AI Item Recommendation]({{site.baseurl}}/recommendations).
+1. Create an [AI Item Recommendation]({{site.baseurl}}/ai_item_recommendations).
 2. Set the **Type** to **Most recent**.
 3. Select your catalog.
 4. (Optional) Add a selection to filter your recommendation to only relevant items.
@@ -175,7 +175,7 @@ Encourage users to explore popular items in your catalog based on purchases. To 
 
 {% details How to set up %}
 
-1. Create an [AI Item Recommendation]({{site.baseurl}}/recommendations).
+1. Create an [AI Item Recommendation]({{site.baseurl}}/ai_item_recommendations).
 2. Set the **Type** to **Most popular**.
 3. Select your catalog.
 4. (Optional) Add a selection to filter your recommendation to only relevant items. For example, the food delivery service might have a selection to filter for restaurant location or type of dish.
@@ -199,7 +199,7 @@ Highlight items that have gained attention across your user base through views t
 
 {% details How to set up %}
 
-1. Create an [AI Item Recommendation]({{site.baseurl}}/recommendations).
+1. Create an [AI Item Recommendation]({{site.baseurl}}/ai_item_recommendations).
 2. Set the **Type** to **Most popular**.
 3. Select your catalog.
 4. (Optional) Add a selection to filter your recommendation to only relevant items.
@@ -248,7 +248,7 @@ For example, a fashion retailer could promote clothes and accessories that are t
 
 {% details How to set up %}
 
-1. Create an [AI Item Recommendation]({{site.baseurl}}/recommendations).
+1. Create an [AI Item Recommendation]({{site.baseurl}}/ai_item_recommendations).
 2. Set the **Type** to **Most popular**.
 3. Select your catalog.
 4. (Optional) Add a selection to filter your recommendation to only relevant items.
@@ -294,7 +294,7 @@ Encourage users to revisit items that they’ve recently clicked on, based on a 
 
 {% details How to set up %}
 
-1. Create an [AI Item Recommendation]({{site.baseurl}}/recommendations).
+1. Create an [AI Item Recommendation]({{site.baseurl}}/ai_item_recommendations).
 2. Set the **Type** to **Most recent**.
 3. Select your catalog.
 4. (Optional) Add a selection to filter your recommendation to only relevant items.
@@ -322,7 +322,7 @@ Promote items that users have recently interacted with, including views, clicks,
 
 {% details How to set up %}
 
-1. Create an [AI Item Recommendation]({{site.baseurl}}/recommendations).
+1. Create an [AI Item Recommendation]({{site.baseurl}}/ai_item_recommendations).
 2. Set the **Type** to **Most recent**.
 3. Select your catalog.
 4. (Optional) Add a selection to filter your recommendation to only relevant items.
@@ -332,4 +332,4 @@ Promote items that users have recently interacted with, including views, clicks,
 
 {% enddetails %}
 
-[1]: {{site.baseurl}}/recommendations
+[1]: {{site.baseurl}}/ai_item_recommendations
