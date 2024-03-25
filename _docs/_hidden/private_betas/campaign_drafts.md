@@ -23,4 +23,4 @@ To reference the active campaign, select **View Active Campaign** in the footer 
 
 ### In-app message prioritization
 
-In-app message priority will only update immediately (prior to the draft launching) when you select **Set Exact Priority** and specify the priority in relation to other campaigns or Canvases.
+In-app message priority will only update immediately (before the draft launches) when you select **Set Exact Priority** and specify the priority in relation to other campaigns or Canvases.
