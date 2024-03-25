@@ -291,6 +291,18 @@ After your recommendation finishes training, you can personalize your messages w
 5. For **Information to Display**, select which fields from the catalog should be included for each item. The values for these fields for each item will be drawn from the catalog associated with this recommendation.
 6. Click the **Copy** icon and paste the Liquid wherever it needs to go in your message.
 
+## Frequently asked questions
+
+### What causes "Most popular" items to be mixed into other models' recommendations?
+
+When our recommendation engine curates a list for you, it first prioritizes personalized selections based on the specific model you’ve chosen, like "Most recent" or "AI Personalized". If this model can’t fill the complete list of 30 recommendations for whatever reason, some of your most popular items among all users are then added to make sure each user always has a full set of recommendations.
+
+This happens under a few specific conditions:
+
+- The model finds fewer than 30 items that match your criteria.
+- Relevant items are no longer available or in stock.
+- Items don’t meet the current selection criteria, perhaps due to a change in stock or user preferences.
+
 [1]: {% image_buster /assets/img/item_recs_1.png %}
 [2-1]: {% image_buster /assets/img/item_recs_2-1.png %}
 [2-2]: {% image_buster /assets/img/item_recs_2-2.png %}
