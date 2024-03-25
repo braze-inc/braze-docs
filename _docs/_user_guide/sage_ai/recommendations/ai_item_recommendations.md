@@ -6,20 +6,17 @@ alias: "/ai_item_recommendations/"
 description: "This reference article covers how to create an AI Item Recommendation for items in a catalog."
 ---
 
-# AI Item Recommendations
+# AI item recommendations
 
 > Learn how to create an AI Item Recommendation for items in a catalog.
 
-Use AI item recommendations to calculate the most popular products or create personalized AI recommendations for a specific [catalog]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/). After you create your recommendation, you can use personalization to insert those products into your messages.
-
-{% alert tip %}
-**Did you know?** You can also recommend items to your customers just by using catalog selections. Check out our detailed list of recommendation use cases for inspiration.
-{% endalert %}
+You can use AI item recommendations to calculate the most popular products or create personalized AI recommendations for a specific [catalog]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/). After you create your recommendation, you can use personalization to insert those products into your messages.
 
 ## Prerequisites
 
-- You must have at least one [catalog][catalog] to use AI item recommendations.
+- You must have at least one [catalog][catalog] to use any of the recommendation types described below.
 - You must have purchase or event data on Braze (custom events or the purchase object) that includes a reference to unique product IDs stored in a catalog.
+- AI Personalized recommendations work best with hundreds or thousands of items and typically at least 30,000 users with purchase or interaction data. This is only a rough guide and can vary. The other recommendation types can work with less data.
 
 ### Important notes
 
@@ -45,21 +42,31 @@ First, give your recommendation a name and optional description.
 
 ### Step 2: Define your recommendation {#recommendation-type}
 
-Next, select the recommendation type. All recommendation types use the last 6 months of item interaction (purchase or custom event) data.
+Next, select the recommendation type. All recommendation types use the last 6 months of item interaction (purchase or custom event) data. The interaction mentioned below refers to either a purchase event or custom event chosen in Step 3.
 
-- **Most popular:** Calculates the items from the catalog that users interact with most often in the entire workspace. The interaction is defined by the event chosen in Step 3.
-- **Most recent:** Creates a list of the products a user has interacted with most recently.
-- **AI Personalized:** Uses transformers, a new kind of deep learning, to predict each user's next most likely set of items to purchase or interact with. The interaction is defined by the event you choose in Step 3. We calculate up to 30 of the next most likely items ranked from most to least likely. This type of recommendation does not use Large Language Models (LLMs) to combine your data with that of any other Braze customer.
+- **Most popular:** Calculates up to 30 items from the catalog that all users in the workspace interact with most often, such as the most purchased products.
+- **Most recent:** Creates a list of up to 30 products a user has interacted with most recently.
+- **AI Personalized:** Uses transformers, a new kind of deep learning, to predict each user's next most likely set of items to interact with. We calculate up to 30 of the next most likely items ranked from most to least likely. This type of recommendation does not use Large Language Models (LLMs) to combine your data with that of any other Braze customer.
 
 {% alert tip %}
 When using **Most recent** or **AI Personalized**, users with insufficient data to create individualized recommendations will receive **Most popular** items as a fallback. The proportion of users receiving the **Most popular** fallback is displayed on the **Analytics** page.
 {% endalert %}
 
-![][2-1]
+#### Step 2a: Exclude prior purchases or interactions (optional)
+
+To avoid suggesting items that a user has already purchased or interacted with, select **Do not recommend items users have previously interacted with**. This option is only available when the recommendation **Type** is set to **AI Personalized**.
+
+![][2-3]
+
+This setting makes sure that items a user has already bought or interacted with are not surfaced in messages again, provided the recommendation has been updated recently. Items purchased or interacted with between recommendation updates may still appear. For the free version of Item Recommendations, updates happen weekly. For AI Item Recommendations Pro, updates happen every 24 hours.
+
+For example, when using AI Item Recommendations Pro, if a user purchases something and then receives a marketing email within 30 minutes, the item they just purchased might not be excluded from the email in time. However, any messages sent after 24 hours won't include that item.
+
+#### Step 2b: Select a catalog
 
 If not already populated, select the [catalog][catalog] that this recommendation will pull items from.
 
-#### Add a selection
+#### Step 2c: Add a selection (optional)
 
 If you'd like more control over your recommendation, choose a [selection]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/selections/) to apply custom filters. Selections filter recommendations by specific columns in your catalog, such as brand, size, or location. Selections that contain Liquid can't be used in your recommendation.
 
@@ -284,9 +291,22 @@ After your recommendation finishes training, you can personalize your messages w
 5. For **Information to Display**, select which fields from the catalog should be included for each item. The values for these fields for each item will be drawn from the catalog associated with this recommendation.
 6. Click the **Copy** icon and paste the Liquid wherever it needs to go in your message.
 
+## Frequently asked questions
+
+### What causes "Most popular" items to be mixed into other models' recommendations?
+
+When our recommendation engine curates a list for you, it first prioritizes personalized selections based on the specific model you’ve chosen, like "Most recent" or "AI Personalized". If this model can’t fill the complete list of 30 recommendations for whatever reason, some of your most popular items among all users are then added to make sure each user always has a full set of recommendations.
+
+This happens under a few specific conditions:
+
+- The model finds fewer than 30 items that match your criteria.
+- Relevant items are no longer available or in stock.
+- Items don’t meet the current selection criteria, perhaps due to a change in stock or user preferences.
+
 [1]: {% image_buster /assets/img/item_recs_1.png %}
 [2-1]: {% image_buster /assets/img/item_recs_2-1.png %}
 [2-2]: {% image_buster /assets/img/item_recs_2-2.png %}
+[2-3]: {% image_buster /assets/img/item_recs_2-3.png %}
 [3]: {% image_buster /assets/img/item_recs_3.png %}
 [4]: {% image_buster /assets/img/item_recs_4.png %}
 [5]: {% image_buster /assets/img/item_recs_analytics_1.png %}
