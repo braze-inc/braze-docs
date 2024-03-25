@@ -10,7 +10,7 @@ tool: Canvas
 
 > Personalized Paths is similar to [Personalized Variant]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/optimizations/#personalized-variant) in campaigns and lets you personalize any point of a Canvas journey for individual users based on conversion likelihood.
 
-When Personalized Paths is turned on in an Experiment Path step, a group of users are held back in a delay group. The remaining users pass into an initial test to train a look-alike model for a duration you configure. Then after the test completes, a model is created to learn which user behaviors were associated with greater likelihood to convert on a given path. Finally, each user in the delay group is sent down the path most likely to result in conversion for them based on the behaviors they exhibit and what the look-alike model learned during the initial test.
+When Personalized Paths is turned on in an Experiment Path step, a group of users is held back in a delay group. The remaining users pass into an initial test to train a look-alike model for a duration you configure. After the test, a model is created to learn which user behaviors were associated with a greater likelihood of converting on a given path. Finally, each user in the delay group is sent down the path most likely to result in conversion for them based on the behaviors they exhibit and what the look-alike model learned during the initial test.
 
 ## Prerequisites
 
