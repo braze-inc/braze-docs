@@ -1,4 +1,4 @@
-d---
+---
 nav_title: Personalized Paths 
 article_title: Personalized Paths in Experiment Paths 
 page_type: reference
