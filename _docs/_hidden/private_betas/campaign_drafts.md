@@ -20,3 +20,7 @@ To create a draft, do the following:
 2. Select the **Save as Draft** button in the campaign footer. Note that edits to the active campaign cannot be made while a draft of a campaign exists. You can update the campaign to apply changes, or discard the draft.
 
 To reference the active campaign, select **View Active Campaign** in the footer from the analytics view or the campaign header from the draft. To return to an active campaign, select **Edit Draft** from the analytics view or the active campaign view.
+
+### In-app message prioritization
+
+In-app message priority will only update immediately (prior to the draft launching) when you select **Set Exact Priority** and specify the priority in relation to other campaigns or Canvases.
