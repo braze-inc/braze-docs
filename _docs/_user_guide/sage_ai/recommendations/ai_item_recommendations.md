@@ -18,13 +18,6 @@ You can use AI item recommendations to calculate the most popular products or cr
 - You must have purchase or event data on Braze (custom events or the purchase object) that includes a reference to unique product IDs stored in a catalog.
 - AI Personalized recommendations work best with hundreds or thousands of items and typically at least 30,000 users with purchase or interaction data. This is only a rough guide and can vary. The other recommendation types can work with less data.
 
-### Important notes
-
-This article describes the free version of AI item recommendations. When using the free version:
-
-- You can create one recommendation per [recommendation type](#recommendation-type) in a workspace.
-- The items recommended to each user in a recommendation update once a week. The recommendation model itself will automatically update once a month.
-
 ## Creating an AI Item Recommendation
 
 To create an item recommendation:
@@ -92,7 +85,7 @@ If you choose **Custom Event**, select your event from the list.
 
 ### Step 4: Choose the corresponding property name {#property-name}
 
-To create a recommendation, you need to tell Braze which field of your interaction event (purchase object or custom event) has the unique indentifier that matches the `id` field of an item in the catalog. Not sure? See [heading name](#heading).
+To create a recommendation, you need to tell Braze which field of your interaction event (purchase object or custom event) has the unique indentifier that matches the `id` field of an item in the catalog. Not sure? See [requirements](#requirements).
 
 Select this field for the **Property Name**.
 
@@ -100,7 +93,7 @@ The **Property Name** field will be pre-populated with a list of fields sent thr
 
 ![][4]
 
-#### Requirements
+#### Requirements {#requirements}
 
 There are some requirements for selecting your property:
 
@@ -270,7 +263,7 @@ These metrics are defined in the following table.
 The next section shows a breakdown of items in the catalog, split into two possible columns:
 
 - **Personalized items** or **Most recent items:** This column lists each item in the catalog in descending order of most often recommended to users. This column also shows how many users were assigned each item by the model.
-- **Most Popular items:** This column lists each item in the catalog in descending order of popularity. Popularity here refers to items in the catalog that users interact with most often in the entire workspace. Most popular is used as the fallback when personalized or most recent cannot be computed for an individual user.
+- **Most Popular items:** This column lists each item in the catalog in descending order of popularity. Popularity here refers to items in the catalog that users interact with most often in the entire workspace. Most popular is used as the fallback when personalized or most recent cannot be calculated for an individual user.
 
 ![][6]
 
@@ -290,6 +283,18 @@ After your recommendation finishes training, you can personalize your messages w
 4. For **Number of Predicted Items**, enter how many top products you'd like to be inserted. For example, you can display the top three most purchased items.
 5. For **Information to Display**, select which fields from the catalog should be included for each item. The values for these fields for each item will be drawn from the catalog associated with this recommendation.
 6. Click the **Copy** icon and paste the Liquid wherever it needs to go in your message.
+
+## AI Item Recommendations tiers
+
+The following table describes the differences between the free and pro version of AI Item Recommendations:
+
+| Area                   | Free version                          | AI Item Recommendations Pro              |
+| :---------------------- | ------------------------------------- | :--------------------------------------- |
+| Item update frequency   | Weekly                                | Daily                                    |
+| Model update frequency  | Monthly                               | Weekly                                   |
+| Maximum recommendations | 1 recommendation per type<sup>1</sup> | 100 recommendations per type<sup>1</sup> |
+
+<sup>1. Available recommendation types are AI Personalized, Most recent, and Most popular.</sup>
 
 ## Frequently asked questions
 

@@ -17,27 +17,31 @@ All recommendation types require you to have at least one [catalog]({{site.baseu
 
 When setting out to recommend items to your customers, there are a few approaches you can take:
 
-- [AI personalized](#ai)
+- [AI Personalized](#ai)
 - [Most popular](#most-popular)
 - [Most recent](#most-recent)
 - [Selections-based](#selections-based)
 - [Rules-based](#rules-based)
 
-### AI personalized recommendations {#ai}
+### AI Personalized recommendations {#ai}
 
-Part of the [AI Item Recommendations][1] feature, AI personalized recommendations takes advantage of deep learning to predict what your users are most likely to be interested in next based on what they’ve shown interest for in the past. This method provides a dynamic and tailored recommendation system that adapts to user behavior.
+Part of the [AI Item Recommendations][1] feature, AI Personalized recommendations takes advantage of deep learning to predict what your users are most likely to be interested in next based on what they’ve shown interest for in the past. This method provides a dynamic and tailored recommendation system that adapts to user behavior.
 
-AI personalized recommendations use the last 6 months of item interaction data, like purchases or custom events, to build the recommendation model. For users without enough data for a personalized list, the most popular items serve as a fallback so your users are still getting relevant suggestions.
+AI Personalized recommendations use the last 6 months of item interaction data, like purchases or custom events, to build the recommendation model. For users without enough data for a personalized list, the most popular items serve as a fallback so your users are still getting relevant suggestions.
 
 With AI Item Recommendations, you can also further filter the items available with selections. However, selections with Liquid cannot be used in AI recommendations, so keep that in mind when building your catalog selections.
 
 For examples, see the [Use cases](#use-cases) section in this article.
 
+{% alert tip %}
+AI Personalized recommendations work best with hundreds or thousands of items and typically at least 30,000 users with purchase or interaction data. This is only a rough guide and can vary. The other recommendation types can work with less data.
+{% endalert %}
+
 ### Most popular item recommendations {#most-popular}
 
-Part of the [AI Item Recommendations][1] feature, the “Most popular” recommendation type features items that users engage with the most.
+In addition to the "AI Personalized" model, the [AI Item Recommendations][1] feature also includes a recommendation model for "Most popular", which features items that users engage with most.
 
-Some use cases for this model include recommending:
+Based on the interaction data being tracked, use cases for this model could include recommending:
 
 - [Most popular items](#most-popular-items)
 - [Most popular liked items](#liked-items)
@@ -46,9 +50,9 @@ Some use cases for this model include recommending:
 
 ### Most recent item recommendations {#most-recent}
 
-Part of the [AI Item Recommendations][1] feature, the “Most recent” recommendation type features items that a user has interacted with most recently. Use this model to reduce churn by encouraging lapsing users to re-engage with relevant content.
+In addition to the "AI Personalized" model, the [AI Item Recommendations][1] feature also includes a recommendation model for "Most recent", which features items that users engage with most. Use this model to reduce churn by encouraging lapsing users to re-engage with relevant content.
 
-Some use cases for this model include recommending:
+Based on the interaction data being tracked, use cases for this model could include recommending:
 
 - [Recently clicked items](#recently-clicked-items)
 - [Recently liked items](#liked-items)
