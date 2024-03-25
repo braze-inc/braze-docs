@@ -41,6 +41,10 @@ description: "This reference article lists and explains the different Apple obje
 
 You must include an Apple push object in `messages` if you want users you have targeted to receive a push on their iOS devices. The total number of bytes in your `alert` string, `extra` object and other optional parameters should not exceed 1912. The Messaging API will return an error if you exceed the message size allowed by Apple. Messages that include the keys `ab` or `aps` in the `extra` object will be rejected.
 
+{% alert note %}
+If you're sending the Apple Push Object as part of a Live Activities payload, be sure to include your `sound` string in the `alert` object.
+{% endalert %}
+
 ### Apple push alert object
 
 In most cases, `alert` can be specified as a string in an `apple_push` object.
@@ -53,7 +57,8 @@ In most cases, `alert` can be specified as a string in an `apple_push` object.
    "title_loc_args": (optional, array of strings) variable string values to appear in place of the format specifiers in title_loc_key,
    "action_loc_key": (optional, string) if a string is specified, the system displays an alert that includes the Close and View buttons, the string is used as a key to get a localized string in the current localization to use for the right button's title instead of "View",
    "loc_key": (optional, string) a key to an alert-message string in a Localizable.strings file for the current localization,
-   "loc_args": (optional, array of strings) variable string values to appear in place of the format specifiers in loc_key
+   "loc_args": (optional, array of strings) variable string values to appear in place of the format specifiers in loc_key,
+   "sound": (optional, string) the location of a custom notification sound within the app (live activities only),
 }
 ```
 
