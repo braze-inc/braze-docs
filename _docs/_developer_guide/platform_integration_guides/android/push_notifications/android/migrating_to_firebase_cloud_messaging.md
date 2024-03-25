@@ -37,11 +37,9 @@ Select **Cloud Messaging**. Under **Cloud Messaging API (Legacy)**, verify the *
 
 ## Step 2: Enable the Firebase Cloud Messaging API
 
-Log in to [Google Cloud Console](https://console.cloud.google.com/apis/api/fcm.googleapis.com/quotas) and ensure the correct Project is selected. Tis project should match the one used in your Android app.
+In Google Cloud, select the project your Android app is using, then enable the [Firebase Cloud Messaging API](https://console.cloud.google.com/apis/library/fcm.googleapis.com).
 
-Ensure the [Firebase Cloud Messaging API](https://console.cloud.google.com/apis/library/fcm.googleapis.com) is enabled.
-
-![Enabled Firebase Cloud Messaging API]({% image_buster /assets/img/android/push_integration/create_a_service_account/firebase-cloud-messaging-api-enabled.png %})
+![Enabled Firebase Cloud Messaging API]({% image_buster /assets/img/android/push_integration/create_a_service_account/firebase-cloud-messaging-api-enabled.png %}){: style="max-width:80%;"}
 
 ## Step 3: Create a Service Account
 
