@@ -2,7 +2,7 @@
 nav_title: AI Item Recommendations
 article_title: AI Item Recommendations
 page_order: 15
-alias: "/recommendations/"
+alias: "/ai_item_recommendations/"
 description: "This reference article covers how to create an AI Item Recommendation for items in a catalog."
 ---
 

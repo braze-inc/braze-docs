@@ -68,7 +68,7 @@ Some use cases include recommending:
 
 ### Rules-based recommendations {#rules-based}
 
-A rules-based recommendation engine uses user data and product information to suggest relevant items to users within messages. It uses Liquid and either Braze catalogs or Connected Content to dynamically personalize content based on user behavior and attributes.
+A [rules-based recommendation]({{site.baseurl}}/rules_based_recommendations/) engine uses user data and product information to suggest relevant items to users within messages. It uses Liquid and either Braze catalogs or Connected Content to dynamically personalize content based on user behavior and attributes.
 
 Rules-based recommendations are based on fixed logic that you must manually set. This means your recommendations won’t adjust to a user's individual purchase history and tastes unless you update the logic, therefore this method is best for recommendations that don’t need frequent updates.
 
