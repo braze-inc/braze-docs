@@ -67,7 +67,7 @@ Note that you cannot use templates in a catalog name. For example, you cannot ha
 {% endraw %}
 
 {% alert important %}
-Your CSV file can be rejected if you go above your version's [tier](#tiers). 
+Your CSV file can be rejected if you go above your [tier](#tiers). 
 {% endalert %}
 
 You can also update the CSV file after selecting to create a catalog in the browser. Click **Update Catalog > Upload CSV**, then select whether to update, add, or delete items in your catalog.
