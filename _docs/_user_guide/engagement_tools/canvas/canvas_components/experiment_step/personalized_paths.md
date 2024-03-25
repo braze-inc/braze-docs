@@ -16,10 +16,6 @@ When Personalized Paths is turned on in an Experiment Path step, a group of user
 
 You can use Personalized Paths in your Experiment Step when your Canvas is set to send once. Personalized Paths is not available for recurring or triggered Canvases.
 
-{% alert important %}
-Personalized Paths is currently in beta. If you are interested in participating in the beta, reach out to your customer success manager.
-{% endalert %}
-
 ## Using Personalized Paths
 
 ### Step 1: Add an Experiment Path
