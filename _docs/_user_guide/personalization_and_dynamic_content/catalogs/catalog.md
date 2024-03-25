@@ -216,6 +216,42 @@ This returns as the following:
 Check out [selections]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/selections/) to create groups of data for more personalized messaging!
 {% endalert %}
 
+### Using Liquid `if` statements
+
+You can use catalog items to create conditional statements. For example, you can trigger a certain message to display when a specific item is selected in your campaign.
+
+To do this, you'll use a Liquid `if` statement in a format like this:
+
+{% raw %}
+```liquid
+{% catalog_items Test-list %}
+{% if {{items[0].first-item}} == true %}
+Do this
+{% else %}
+Do that
+{% endif %}
+```
+{% endraw %}
+
+Note that you must declare the catalog list before using `if` statements. In the example above, `Test-list` is the catalog list.
+
+#### Example Liquid `if` snippet
+
+In this example, different messages will display if the custom attribute `venue_name` has more then 10 characters or less then 10 characters. If `venue_name` is `blank`, nothing will display.
+
+{% raw %}
+```liquid
+{% catalog_selection_items item-list selections %} 
+{% if items[0].venue_name.size > 10 %}
+Message if the venue name's size is more than 10 characters. 
+{% elsif items[0].venue_name.size < 10 %}
+Message if the venue name's size is less than 10 characters. 
+{% else %} 
+{% abort_message(no venue_name) %} 
+{% endif %}
+```
+{% endraw %}
+
 ### Using images {#using-images}
 
 You can also reference images in the catalog to use in your messaging. To do so, use the `catalogs` tag and `item` object in the Liquid field for images.
