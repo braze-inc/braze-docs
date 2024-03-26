@@ -27,7 +27,7 @@ Shopify collections sync is currently in beta. Contact your Braze account manage
 ### Beta functionality
 
 - Braze will support up to 30 collections
-- Sort order for your collection is not maintained or supported at this time. For now, the sort order is based on the following:
+- Sort order for your collection is not maintained or supported at this time. For now, we use the Shopify sort order that is returned from the sync, which is based on the following:
     - The most recent items added to your collection.
     - The order in which items are updated during continuous syncs.
 
@@ -41,7 +41,7 @@ Be aware of the following behavior in the beta: <br><br>If you update the Shopif
 
 ### Step 1: Configure the sort order of your Shopify collection
 
-1. Specify the order in which results are returned. This includes an option to randomize the sort order.
+1. Specify the order in which your Shopify collection results are returned by selecting the **Sort Order** on the **Selections** tab for your Shopify collection. This includes an option to randomize the sort order.
 2. Enter the maximum number of results (up to 50) for the **Limit number**.
 3. Select **Update Selection**.
 
