@@ -17,11 +17,25 @@ search_rank: 3
 If this is your first time setting up the push integration for Android, see [Standard Android push integration]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/integration/standard_integration) instead.
 {% endalert %}
 
-## Step 1: Verify your Sender ID
+## Step 1: Verify your Project ID
+
+First, open Google Cloud. On your project's home page, check the number in the **Project ID** field—you’ll compare this to the one in your Firebase project next.
+
+![The Google Cloud project's home page with the "Project ID" highlighted.]({% image_buster /assets/img/android/push_integration/migration/verify-project-id/project-id-gcp.png %})
+
+Next, open Firebase Console, then select <i class="fa-solid fa-gear"></i>&nbsp;**Settings** > **Project settings**.
+
+![The Firebase project with the "Settings" menu open.]({% image_buster /assets/img/android/push_integration/set_up_automatic_token_registration/select-project-settings.png %})
+
+In the **General** tab, verify the **Project ID** matches the one listed in your Google Cloud project.
+
+![The Firebase project's "Settings" page with the "Project ID" highlighted.]({% image_buster /assets/img/android/push_integration/migration/verify-project-id/project-id-gfb.png %})
+
+## Step 2: Verify your Sender ID
 
 First, open Braze, then select <i class="fa-solid fa-gear"></i>&nbsp;**Settings** > **App Settings**.
 
-![The "Settings" menu open in Braze with "App Settings" highlighted.]({% image_buster /assets/img/android/push_integration/upload_json_credentials/select-app-settings.png %})
+![The "Settings" menu open in Braze with "App Settings" highlighted.]({% image_buster /assets/img/android/push_integration/upload_json_credentials/select-app-settings.png %}){: style="max-width:80%;"}
 
 Under your Android app's **Push Notification Settings**, check the number in the **Firebase Cloud Messaging Sender ID** field&#8212;you'll compare this to the one in your Firebase project next.
 
@@ -35,13 +49,13 @@ Select **Cloud Messaging**. Under **Cloud Messaging API (Legacy)**, verify the *
 
 ![The Firebase project's "Cloud Messaging" page with the "Sender ID" highlighted.]({% image_buster /assets/img/android/push_integration/migration/verify-sender-id/verify-sender-id-firebase.png %})
 
-## Step 2: Enable the Firebase Cloud Messaging API
+## Step 3: Enable the Firebase Cloud Messaging API
 
 In Google Cloud, select the project your Android app is using, then enable the [Firebase Cloud Messaging API](https://console.cloud.google.com/apis/library/fcm.googleapis.com).
 
 ![Enabled Firebase Cloud Messaging API]({% image_buster /assets/img/android/push_integration/create_a_service_account/firebase-cloud-messaging-api-enabled.png %}){: style="max-width:80%;"}
 
-## Step 3: Create a Service Account
+## Step 4: Create a Service Account
 
 Next, create a new service account, so Braze can make authorized API calls when registering FCM tokens. In Google Cloud, go to **Service Accounts**, then choose your project. On the **Service Accounts** page, select **Create Service Account**.
 
@@ -59,7 +73,7 @@ Be sure to select _Firebase Cloud Messaging **API** Admin_, not _Firebase Cloud 
 
 ![The form for "Grant this service account access to project" with "Firebase Cloud Messaging API Admin" selected as the role.]({% image_buster /assets/img/android/push_integration/create_a_service_account/add-fcm-api-admin.png %})
 
-## Step 4: Generate JSON credentials
+## Step 5: Generate JSON credentials
 
 Next, generate JSON credentials for your FCM service account. On Google Cloud IAM & Admin, go to **Service Accounts**, then choose your project. Locate the FCM service account [you created earlier](#step-2-create-a-service-account), then select <i class="fa-solid fa-ellipsis-vertical"></i>&nbsp;**Actions** > **Manage Keys**.
 
@@ -81,7 +95,7 @@ Choose **JSON**, then select **Create**.
 Private keys could pose a security risk if compromised. Store your JSON credentials in a secure location for now&#8212;you'll delete your key after you upload it to Braze.
 {% endalert %}
 
-## Step 5: Upload your JSON credentials to Braze
+## Step 6: Upload your JSON credentials to Braze
 
 In Braze, select <i class="fa-solid fa-gear"></i>&nbsp;**Settings** > **App Settings**.
 
@@ -89,7 +103,7 @@ In Braze, select <i class="fa-solid fa-gear"></i>&nbsp;**Settings** > **App Sett
 
 Under **Push Notification Settings**, select **Upload JSON File**, then choose the file [you generated earlier](#step-3-generate-json-credentials). When you're finished, select **Save**.
 
-## Step 6: Test your Push integration
+## Step 7: Test your Push integration
 
 Once your new credential is uploaded, try sending a test push notification to confirm your integration is set up correctly.
 
