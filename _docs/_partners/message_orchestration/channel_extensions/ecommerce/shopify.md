@@ -26,7 +26,7 @@ guide_featured_list:
 - name: Shopify Historical Backfill
   link: /docs/shopify_historical_backfill/
   fa_icon: fa-solid fa-database
-- name: Shopify Catalogs
+- name: Shopify Product Syncs
   link: /docs/shopify_catalogs/
   fa_icon: fas fa-list
 - name: Back-In-Stock Notifications
