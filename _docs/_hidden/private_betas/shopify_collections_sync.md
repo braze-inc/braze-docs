@@ -16,13 +16,11 @@ Shopify collections sync is currently in beta. Contact your Braze account manage
 
 ## Setting up Shopify collections sync
 
-1. While setting up your Shopify store, select the checkbox to **Sync Shopify collections** in the **Sync products** step.<br><br>![Step 4 of the Shopify product sync with the "Sync Shopify collections" checkbox selected.][1]
+To sync your products from your Shopify store to Braze, select the checkbox to **Sync Shopify collections** in the **Sync products** step of integrating Shopify.<br><br>![Step 4 of the Shopify product sync with the "Sync Shopify collections" checkbox selected.][1]
 
-{: start="2"}
-2. After your products have been synced, you can view which products are associated with your collections by viewing your Shopify catalog. <br><br>![Catalog table row showing a product in the collections of "best-sellers" and "frontpage".][2]
+Once your products have been synced, you can view which products are associated with your collections by viewing your Shopify catalog. <br><br>![Catalog table row showing a product in the collections of "best-sellers" and "frontpage".][2]
 
-{: start="3"}
-3. From your Shopify catalog, you can view your Shopify collection in the **Selections** tab. <br><br>![The Selections tab showing a list of two collections: "best-sellers" and "frontpage".][3]
+From your Shopify catalog, you can view your Shopify collection in the **Selections** tab. <br><br>![The Selections tab showing a list of two collections: "best-sellers" and "frontpage".][3]
 
 ### Beta functionality
 
@@ -34,7 +32,7 @@ Shopify collections sync is currently in beta. Contact your Braze account manage
 
 ## Using Shopify collections
 
-You can use your Shopify collection similar to how you'd use a [Braze selection]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/selections/).
+Use your Shopify collections to personalize a message for each user in your campaign, similar to how you'd use a [Braze selection]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/selections/).
 
 {% alert warning %}
 Be aware of the following behavior in the beta: <br><br>If you update the Shopify collection description or the filter settings, you will break your Shopify collection sync. As a result, your Shopify collection will not work as expected. 
