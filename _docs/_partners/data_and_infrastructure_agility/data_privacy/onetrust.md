@@ -24,7 +24,7 @@ The Braze and OneTrust integration allows you to use the OneTrust workflow build
 
 ## Integration
 
-The following integration provides guidance on creating a user consent update workflow and a user delete workflow. For more details on additionally supported braze endpoints, refer to [Other supported actions](#Other-supported-actions).
+The following integration provides guidance on creating a user consent update workflow and a user delete workflow. For more details on additionally supported Braze endpoints, refer to [Other supported actions](#Other-supported-actions).
 
 ### Add Braze credentials to OneTrust
 

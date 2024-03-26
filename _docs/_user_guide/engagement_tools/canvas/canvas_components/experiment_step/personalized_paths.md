@@ -10,15 +10,11 @@ tool: Canvas
 
 > Personalized Paths is similar to [Personalized Variant]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/optimizations/#personalized-variant) in campaigns and lets you personalize any point of a Canvas journey for individual users based on conversion likelihood.
 
-When Personalized Paths is turned on in an Experiment Path step, a portion of users are held in a delay group while Braze tests the remaining paths against each other. After a period of time you choose, Braze sends users held in the delay group down the path that is most likely to result in conversion for each user based on what was learned during the testing window. Users who enter after the experiment is over will be sent down the path that performs best overall.
+When Personalized Paths is turned on in an Experiment Path step, a group of users is held back in a delay group. The remaining users pass into an initial test to train a look-alike model for a duration you configure. After the test, a model is created to learn which user behaviors were associated with a greater likelihood of converting on a given path. Finally, each user in the delay group is sent down the path most likely to result in conversion for them based on the behaviors they exhibit and what the look-alike model learned during the initial test.
 
 ## Prerequisites
 
 You can use Personalized Paths in your Experiment Step when your Canvas is set to send once. Personalized Paths is not available for recurring or triggered Canvases.
-
-{% alert important %}
-Personalized Paths is currently in beta. If you are interested in participating in the beta, reach out to your customer success manager.
-{% endalert %}
 
 ## Using Personalized Paths
 
@@ -56,7 +52,7 @@ Finish setting up your Canvas as needed, then launch it. When the first user has
 
 ![][5]{: style="max-width:75%;" }
 
-When the experiment window passes and the experiment is complete, Braze will send users in the delay group to their respective paths with the highest personalized likelihood of conversion.
+When the experiment window passes and the experiment is complete, Braze will send users in the delay group to their respective paths with the highest personalized likelihood of conversion based on the recommendation of the look-alike model.
 
 ![][6]{: style="max-width:75%;" }
 
@@ -75,7 +71,7 @@ By default, the test looks for associations between user’s custom events and t
 
 The relationships between custom events and message preferences are displayed in the table on the **Initial Experiment** tab.
 
-![]({% image_buster /assets/img_archive/ab_analytics_pv_3.png %})
+![]({% image_buster /assets/img_archive/experiment_personalized_analytics_custom_data.png %})
 
 If the test can't find a meaningful relationship between custom events and path preferences, the test will fall back to a session-based analysis method.
 
@@ -105,7 +101,7 @@ The time intervals for each bucket are determined based on Canvas-specific user 
 **How Personalized Paths are selected**<br>
 With this method, an individual user's recommended message is the sum of the effects of their specific recency, frequency, and tenure. Recency, frequency, and tenure are split into buckets, as illustrated in the **User Characteristics** table. The time range of each bucket is determined by the data for users in each individual Canvas and will change from Canvas to Canvas.
 
-Each bucket can have a different contribution or "push" towards each path. The strength of the push for each bucket is determined from user responses in the initial experiment using [logistic regression](https://en.wikipedia.org/wiki/Logistic_regression). This table only summarizes the results by displaying which path users in each bucket tended to engage with. Any individual user's actual Personalized Path depends on the sum of the effects of the three buckets they're in—one for each characteristic.
+Each bucket can have a different contribution or "push" toward each path. The strength of the push for each bucket is determined from user responses in the initial experiment using [logistic regression](https://en.wikipedia.org/wiki/Logistic_regression). This table only summarizes the results by displaying which path users in each bucket tended to engage with. Any individual user's actual Personalized Path depends on the sum of the effects of the three buckets they're in—one for each characteristic.
 
 {% enddetails %}
 

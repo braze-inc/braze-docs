@@ -92,13 +92,11 @@ You can now choose a [message tone]({{site.baseurl}}/user_guide/sage_ai/generati
 
 You can choose when Braze evaluates audience eligibility and personalization for new Content Card campaigns and Canvas steps by specifying when the card is [created]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/create/card_creation/). 
 
-<!--
 #### Preview user paths
 
 {% multi_lang_include release_type.md release="General availability" %}
 
 Experience the Canvas journey you’ve created for your users, including previewing the timing and messages they will receive. These [test runs]({{site.baseurl}}/preview_user_paths/) act as quality assurance that your messages are sent to the right audience, all before sending the Canvas.
--->
 
 #### Quick push campaigns
 
@@ -273,7 +271,7 @@ We've updated sections of our Braze and Shopify integration documentation, inclu
 
 - [Getting started with Shopify]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/shopify/getting_started_shopify/)
 - [Setting up Shopify in Braze]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/shopify/setting_up_shopify/)
-- [Shopify user identity management]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/shopify/Shopify_Features/shopify_user_identity/)
+- [Shopify user identity management]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/shopify/shopify_features/shopify_user_identity/)
 
 ### Data flexibility
 
@@ -362,7 +360,7 @@ The **Subscription Group Timeseries** graph that appears on the **Subscription G
 
 {% multi_lang_include release_type.md release="General availability" %}
 
-[AI item recommendations]({{site.baseurl}}/user_guide/sage_ai/recommendations/) is a deep learning-based product recommendation engine that uses collective user purchasing behavior to recommend items. You can use AI item recommendations to calculate the most popular products or create personalized AI recommendations for a specific catalog. After you create your recommendation, you can use personalization to insert those products into your messages.
+[AI item recommendations]({{site.baseurl}}/ai_item_recommendations) is a deep learning-based product recommendation engine that uses collective user purchasing behavior to recommend items. You can use AI item recommendations to calculate the most popular products or create personalized AI recommendations for a specific catalog. After you create your recommendation, you can use personalization to insert those products into your messages.
 
 ### New Braze partnerships
 

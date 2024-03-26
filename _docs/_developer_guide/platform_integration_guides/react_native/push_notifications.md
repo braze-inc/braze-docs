@@ -155,14 +155,12 @@ For a full list of push notification fields, refer to the table below:
 | `android`          | Object    | Represents Android-specific fields. |
 {: .reset-td-br-1 .reset-td-br-2}
 
-
 ## Step 3: Enable deep linking (optional)
 
-To enable Braze to handle deep links inside of React components when a push notification is clicked, follow the additional steps.
+To enable Braze to handle deep links inside React components when a push notification is clicked, follow the additional steps.
 
 {% tabs %}
 {% tab Expo %}
-
 Our [BrazeProject sample app](https://github.com/braze-inc/braze-react-native-sdk/tree/master/BrazeProject) contains a complete example of implemented deep links. To learn more about what deep links are, see our [FAQ article]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/#what-is-deep-linking).
 
 {% endtab %}
@@ -238,7 +236,7 @@ Starting in macOS 13, on certain devices, you can test iOS push notifications on
 
 ![A Braze push campaign showing you can add your own user ID as a test recipient to test your push notification.][1]
 
-## Forwarding Android push to additional FMS (optional)
+## Forwarding Android push to additional FMS
 
 If you want to use an additional Firebase Messaging Service (FMS), you can specify a fallback FMS to call if your application receives a push that isn't from Braze. For example:
 
@@ -259,4 +257,58 @@ If you want to use an additional Firebase Messaging Service (FMS), you can speci
 }
 ```
 
+## Enabling rich push notifications for iOS
+
+{% alert tip %}
+Rich push notifications are available for Android by default.
+{% endalert %}
+
+To enable rich push notifications on iOS using Expo, configure the `enableBrazeIosRichPush` property to `true` in your `expo.plugins` object in `app.json`:
+
+```json
+{
+  "expo": {
+    "plugins": [
+      [
+        "@braze/expo-plugin",
+        {
+          ...
+          "enableBrazeIosRichPush": true
+        }
+      ]
+    ]
+  }
+}
+```
+
+## Enabling push stories for iOS
+
+{% alert tip %}
+Push stories are available for Android by default.
+{% endalert %}
+
+To enable push stories on iOS using Expo, ensure you have an app group defined for your application. For more information, see [Adding an App Group][4].
+
+Next, configure the `enableBrazeIosPushStories` property to `true` and assign your app group ID to `iosPushStoryAppGroup` in your `expo.plugins` object in `app.json`:
+
+```json
+{
+  "expo": {
+    "plugins": [
+      [
+        "@braze/expo-plugin",
+        {
+          ...
+          "enableBrazeIosPushStories": true,
+          "iosPushStoryAppGroup": "group.com.company.myApp.PushStories"
+        }
+      ]
+    ]
+  }
+}
+```
+
 [1]: {% image_buster /assets/img/react-native/push-notification-test.png %} "Push Campaign Test"
+[2]: https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/b2-rich-push-notifications/
+[3]: https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/b3-push-stories/
+[4]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/push_story/#adding-an-app-group

@@ -75,6 +75,10 @@ The **Add Stats** step shows you statistics for the types of campaigns or Canvas
 | SMS | Sends, Sends to Carrier, Confirmed Deliveries, Delivery Failures, Rejections |
 {: .reset-td-br-1 .reset-td-br-2}
 
+{% alert note %}
+*Sends to Carrier* is deprecated, but will continue to be supported for users that already have it.
+{% endalert %}
+
 ### Step 4: Complete report setup
 
 Give your report a name, choose how your report will be formatted, and select your recipients. By default, Engagement Reports are sent as a ZIP file where data is comma-delimited (where each piece of data is separated by a comma).

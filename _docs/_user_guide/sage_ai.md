@@ -34,7 +34,7 @@ guide_menu_list:
 - name: Personalized Paths
   link: /docs/user_guide/engagement_tools/canvas/canvas_components/experiment_step/personalized_paths/
   image: /assets/img/icons/strategy_playbook.svg
-- name: Item Recommendations
+- name: Recommendations
   link: /docs/user_guide/sage_ai/recommendations/
   image: /assets/img/icons/loyalty_heart.svg
 ---

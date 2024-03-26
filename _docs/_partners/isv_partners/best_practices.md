@@ -176,7 +176,7 @@ Connected Contents' versatility makes this a feature used by many of our custome
 - Localization and translation
 
 Things to be aware of:
-- Braze does not charge for API calls and will not count towards your data point allotment.
+- Braze does not charge for API calls and will not count toward your data point allotment.
 - There is a limit of 1 MB for Connected Content responses.
 - Connected Content calls will happen when the message is sent, except for in-app messages, which will make this call when the message is viewed.
 - Connected Content calls do not follow redirects.Braze requires that server response time is less than 2 seconds for performance reasons; if the server takes longer than 2 seconds to respond, the content will not be inserted.

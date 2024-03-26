@@ -1,7 +1,7 @@
 ---
 nav_title: Sync and Delete Catalog Data
 article_title: Sync and Delete Catalog Data
-page_order: 2.1
+page_order: 4
 page_type: reference
 description: "This reference article provides an overview of how to sync catalog data."
 
@@ -218,4 +218,4 @@ CREATE view IF NOT EXISTS BRAZE_CLOUD_PRODUCTION.INGESTION.CATALOGS_SYNC AS (SEL
 
 - The data fetched from the integration will be used to create or update items in the target catalog based on the `id` provided.
 - If DELETED is set to `true`, the corresponding catalog item will be deleted.
-- The sync will not consume data points, but all data synced will count towards your total catalog usage; this usage is measured based on total data stored, so you don’t need to worry about only syncing changed data.
+- The sync will not consume data points, but all data synced will count toward your total catalog usage; this usage is measured based on total data stored, so you don’t need to worry about only syncing changed data.
