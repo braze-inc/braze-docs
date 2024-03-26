@@ -79,13 +79,13 @@ Using the Shopify integration, you can collect email and SMS subscribers from yo
 
 You can optionally sync your products in near real-time from your Shopify store into a Braze catalog, automating the process to bring in product data for deeper personalization of your messages. To learn more, check out [Shopify product syncs]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/shopify/shopify_features/shopify_catalogs/).
 
-![]({% image_buster /assets/img/Shopify/shopify_step_4_catalog.png %}){: style="max-width:60%"}
+![]({% image_buster /assets/img/Shopify/shopify_step_4_catalog.png %}){: style="max-width:70%"}
 
 ### Step 5: Enable in-browser messaging 
 
 You can optionally use an additional channel on your Shopify store for in-browser messages by turning on this feature. This allows you to use our basic message types like slide-up, modal, full screen, simple surveys, and custom HTML.
 
-![]({% image_buster /assets/img/Shopify/shopify_step_5_channels.png %}){: style="max-width:60%"}
+![]({% image_buster /assets/img/Shopify/shopify_step_5_channels.png %}){: style="max-width:70%"}
 
 If you enable in-browser messages, the Braze Web SDK must be implemented for tracking. If you implement the Braze Web SDK either through [Shopify ScriptTag]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/shopify/getting_started_shopify/?tab=shopify%20scripttag#supported-features) or directly into your Shopify’s site [`theme.liquid`]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/shopify/getting_started_shopify/?tab=theme.liquid#supported-features), Braze will automatically generate the basic in-browser message implementation script onto your site. If you implement the Web SDK to your [headless Shopify site]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/shopify/getting_started_shopify/#implement-web-sdk) or plan to add customizations to in-browser messages, you must manually add in-browser messages onto your site using our [developer guide](/developer_guide/platform_integration_guides/web/in-app_messaging/integration/). 
 
@@ -97,7 +97,7 @@ After you configure your setup, select **Finish Setup**.
 
 That’s it! The “Connection Pending” status will update to “Connected” and will display the timestamp of when the connection was established. You’ll also see if each Shopify feature has successfully been enabled on the page. 
 
-![]({% image_buster /assets/img/Shopify/shopify_connected_store.png %}){: style="max-width:60%"}
+![]({% image_buster /assets/img/Shopify/shopify_connected_store.png %}){: style="max-width:70%"}
 
 ### Advanced Settings (optional) 
 
@@ -124,7 +124,7 @@ Your installation may still be pending for one of the following reasons:
 
 
 If your app installation is pending for 1 hour, Braze will fail the installation, and you will be prompted to Retry Setup.<br><br>
-![Shopify]({% image_buster /assets/img/Shopify/shopify_integration8.png %}){: style="max-width:80%;"}
+![Shopify]({% image_buster /assets/img/Shopify/shopify_integration8.png %}){: style="max-width:70%;"}
 {% enddetails %}
 
 
@@ -137,7 +137,7 @@ Your install may have failed for one of the following reasons:
 
 
 If this happens, you will be able to select **Retry Setup** and start the installation process again.<br><br>
-![Shopify]({% image_buster /assets/img/Shopify/shopify_integration16.png %}){: style="max-width:80%;"}
+![Shopify]({% image_buster /assets/img/Shopify/shopify_integration16.png %}){: style="max-width:70%;"}
 {% enddetails %}
 
 
