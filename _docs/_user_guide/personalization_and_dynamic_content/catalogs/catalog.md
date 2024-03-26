@@ -10,7 +10,16 @@ description: "This reference article covers how to create and use catalogs to re
 
 > With catalogs, you can reference non-user data in your Braze campaigns through [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid). 
 
-Creating a catalog involves importing a CSV file of non-user data into Braze. This allows you to then access that information to enrich your messages. You can bring in any type of data into a catalog. This data is typically some sort of metadata from your company such as product information for an ecommerce business, or course information for an education provider. 
+Creating a catalog involves importing a CSV file of non-user data into Braze. This allows you to then access that information to enrich your messages. You can bring in any type of data into a catalog. This data is typically some sort of metadata from your company such as product information for an ecommerce business, or course information for an education provider.
+
+Some common use cases for catalogs include:
+
+- Products
+- Services
+- Food
+- Upcoming events
+- Music
+- Packages
 
 Once this information is imported, you can begin accessing it in messages in a similar way to accessing custom attributes or custom event properties through Liquid.
 
@@ -67,7 +76,7 @@ Note that you cannot use templates in a catalog name. For example, you cannot ha
 {% endraw %}
 
 {% alert important %}
-Your CSV file can be rejected if you go above [company limitations](#limits). 
+Your CSV file can be rejected if you go above your [tier](#tiers). 
 {% endalert %}
 
 You can also update the CSV file after selecting to create a catalog in the browser. Click **Update Catalog > Upload CSV**, then select whether to update, add, or delete items in your catalog.
@@ -285,11 +294,11 @@ You can also manually piece together catalogs Liquid logic. However, note that i
 
 As you create more catalogs, you can leverage the [Catalogs Endpoints]({{site.baseurl}}/api/endpoints/catalogs/) to manage the growing data and information. This includes the ability to create, edit, and delete catalog items, and to list catalog item details.
 
-## Limitations {#limits}
+## Catalog tiers {#tiers}
 
-The following table describes the limitations that apply at a catalog level:
+The following table describes the differences between the free and pro version of catalogs:
 
-| Limitation Area | Free version | Catalogs Pro |
+| Area | Free version | Catalogs Pro |
 |---|---|---|
 | CSV file size | Up to 100&nbsp;MB for all CSV files combined across your company | Up to 2&nbsp;GB for a single CSV file |
 | Characters limit for item value | Up to 5,000 characters in one value. For example, if you had a field labeled `description`, the maximum number of characters within the field is 5,000. | Up to 5,000 characters in one value. For example, if you had a field labeled `description`, the maximum number of characters within the field is 5,000. |
@@ -297,7 +306,7 @@ The following table describes the limitations that apply at a catalog level:
 | Selections | Up to 30 selections per catalog | Up to 30 selections per catalog |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
-### Storage limits
+### Catalog storage
 
 {% alert important %}
 The package entitlement shown in the Braze dashboard is rounded to the nearest unit for visual purposes; however, you are still entitled to the full entitlement purchased. To request an upgrade for catalog storage, contact your Braze account manager.
@@ -305,11 +314,11 @@ The package entitlement shown in the Braze dashboard is rounded to the nearest u
 
 #### Free version
 
-The storage limit for the free version of catalogs is 100&nbsp;MB. You can have unlimited items as long as it's under 100&nbsp;MB. Selections will contribute to this size limit. The more complex a selection is, the more storage it will take up.
+The storage size for the free version of catalogs is up to 100&nbsp;MB. You can have unlimited items as long as it's under 100&nbsp;MB. Selections will contribute to your storage. The more complex a selection is, the more storage it will take up.
 
 #### Catalogs Pro
 
-At a company level, the storage limit for Catalogs Pro will be based on the size of catalog data: 5&nbsp;GB, 10&nbsp;GB, or 15&nbsp;GB. Note that the free version's storage (100&nbsp;MB) is included in each of these plans.
+At a company level, the maximum storage for Catalogs Pro will be based on the size of catalog data: 5&nbsp;GB, 10&nbsp;GB, or 15&nbsp;GB. Note that the free version's storage (100&nbsp;MB) is included in each of these plans.
 
 [1]: {% image_buster /assets/img_archive/catalog_CSV_upload.png %}
 [2]: {% image_buster /assets/img_archive/use_catalog_personalization.png %}

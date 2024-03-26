@@ -74,8 +74,8 @@ All of the following error codes indicate that no messages will be sent.
 |---|---|
 | `5XX Internal Server Error` | Retry your request with exponential backoff.|
 | `400 Bad Request` | Bad syntax.|
-| `400 No Recipients` | There are no external IDs or segment IDs or no push tokens in the request.|
-| `400 Invalid Campaign ID` | No Messaging API campaign was found for the campaign ID you provided.|
+| `400 No Recipients` | There are no external IDs or segment IDs, or no push tokens in the request.|
+| `400 Invalid Campaign ID` | No messaging API campaign was found for your provided campaign ID.|
 | `400 Message Variant Unspecified` | You provide a campaign ID but no message variation ID.|
 | `400 Invalid Message Variant` | You provided a valid campaign ID, but the message variation ID doesn't match any of that campaign's messages.|
 | `400 Mismatched Message Type` | You provided a message variation of the wrong message type for at least one of your messages.|

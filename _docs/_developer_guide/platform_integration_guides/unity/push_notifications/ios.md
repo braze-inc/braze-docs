@@ -35,13 +35,13 @@ Open the Braze Configuration Settings in the Unity Editor by navigating to **Bra
 
 Check **Integrate Push With Braze** to automatically register users for push notifications, pass push tokens to Braze, track analytics for push opens, and take advantage of our default push notification handling.
 
-### (Optional): Enable background push
+### Enable background push (optional)
 
 Check **Enable Background Push** if you want to enable `background mode` for push notifications. This allows the system to wake your application from the `suspended` state when a push notification arrives, enabling your application to download content in response to push notifications. Checking this option is required for our uninstall tracking functionality.
 
 ![The Unity editor shows the Braze configuration options. In this editor, the "Automate Unity iOS integration", "Integrate push with braze", and "Enable background push" are enabled.][29]
 
-### (Optional): Disable automatic registration
+### Disable automatic registration (optional)
 
 Users who have not yet opted-in to push notifications will automatically be authorized for push upon opening your application. To disable this feature and manually register users for push, check **Disable Automatic Push Registration**.
 

@@ -30,7 +30,7 @@ The Braze and Amperity integration offers a unified view of your customers acros
 | Braze REST API key | A Braze REST API key with `users.track` permissions. <br> This can be created in the Braze dashboard by navigating to **Developer Console** > **Rest API Key** > **Create New API Key**. |
 | Braze instance | Your Braze instance can be obtained from your Braze onboarding manager or be found on the [API overview page]({{site.baseurl}}/api/basics#endpoints). |
 | Braze REST endpoint | Your Braze endpoint URL. Your endpoint will depend on your Braze instance. |
-| (Optional) Currents connector | The S3 Currents connector. |
+| Currents connector (optional) | The S3 Currents connector. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## Data mapping
