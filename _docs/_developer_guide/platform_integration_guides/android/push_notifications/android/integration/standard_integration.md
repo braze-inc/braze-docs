@@ -44,7 +44,13 @@ dependencies {
 }
 ```
 
-### Step 3: Create a service account
+### Step 3: Enable the Firebase Cloud Messaging API
+
+In Google Cloud, select the project your Android app is using, then enable the [Firebase Cloud Messaging API](https://console.cloud.google.com/apis/library/fcm.googleapis.com).
+
+![Enabled Firebase Cloud Messaging API]({% image_buster /assets/img/android/push_integration/create_a_service_account/firebase-cloud-messaging-api-enabled.png %}){: style="max-width:80%;"}
+
+### Step 4: Create a service account
 
 Next, create a new service account, so Braze can make authorized API calls when registering FCM tokens. In Google Cloud, go to **Service Accounts**, then choose your project. On the **Service Accounts** page, select **Create Service Account**.
 
@@ -62,7 +68,7 @@ Be sure to select **Firebase Cloud Messaging _API_ Admin**, not **Firebase Cloud
 
 ![The form for "Grant this service account access to project" with "Firebase Cloud Messaging API Admin" selected as the role.]({% image_buster /assets/img/android/push_integration/create_a_service_account/add-fcm-api-admin.png %})
 
-### Step 4: Generate JSON credentials
+### Step 5: Generate JSON credentials
 
 Next, generate JSON credentials for your FCM service account. On Google Cloud IAM & Admin, go to **Service Accounts**, then choose your project. Locate the FCM service account [you created earlier](#step-3-create-a-service-account), then select <i class="fa-solid fa-ellipsis-vertical"></i>&nbsp;**Actions** > **Manage Keys**.
 
@@ -80,7 +86,7 @@ Choose **JSON**, then select **Create**. Be sure to remember where you downloade
 Private keys could pose a security risk if compromised. Store your JSON credentials in a secure location&#8212;you'll delete your key after you upload it to Braze.
 {% endalert %}
 
-### Step 5: Upload your JSON credentials to Braze
+### Step 6: Upload your JSON credentials to Braze
 
 Next, upload your JSON credentials to your Braze dashboard. In Braze, select <i class="fa-solid fa-gear"></i>&nbsp;**Settings** > **App Settings**.
 
@@ -94,7 +100,7 @@ Under your Android app's **Push Notification Settings**, choose **Firebase**, th
 Private keys could pose a security risk if compromised. Now that your key is uploaded to Braze, delete the file [you generated previously](#step-4-generate-json-credentials).
 {% endalert %}
 
-### Step 6: Set up automatic token registration
+### Step 7: Set up automatic token registration
 
 When one of your users opt-in for push notifications, your app needs to generate an FCM token on their device before you can send them push notifications. With the Braze SDK, you can enable automatic FCM token registration for each user's device in your project's Braze configuration files.
 
@@ -184,7 +190,7 @@ Braze.configure(this, brazeConfig)
 If you'd like manually register FCM tokens instead, you can call [`Braze.setRegisteredPushToken()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze/registered-push-token.html) inside your app's [`onCreate()`](https://developer.android.com/reference/android/app/Application.html#onCreate()) method.
 {% endalert %}
 
-### Step 7: Remove unnecessary permissions
+### Step 8: Remove unnecessary permissions
 
 With your new push integration set up, the following permissions are no longer needed by Braze in your project's `braze.xml` file:
 
@@ -196,7 +202,7 @@ With your new push integration set up, the following permissions are no longer n
   <uses-permission android:name="YOUR-APPLICATION-PACKAGE-NAME.permission.C2D_MESSAGE" />
   ```
 
-### Step 8: Remove automatic requests in your application class
+### Step 9: Remove automatic requests in your application class
 
 To prevent Braze from triggering unnecessary network requests everytime you send silent push notifications, remove any automatic network requests configured in your `Application` class's `onCreate()` method. For more information see, [Android Developer Reference: Application](https://developer.android.com/reference/android/app/Application).
 
