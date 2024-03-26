@@ -75,13 +75,13 @@ Using the Shopify integration, you can collect email and SMS subscribers from yo
 
 ![]({% image_buster /assets/img/Shopify/shopify_step_3_email.png %}){: style="max-width:70%"}
 
-#### Set up Shopify catalogs (optional)
+### Step 4: Set up Shopify catalogs (optional)
 
 You can optionally import your products in near real-time from your Shopify store into a Braze catalog, automating the process to bring in product data for deeper personalization of your messages. To learn more, check out [Shopify catalogs]({{site.baseurl}}https://www.braze.com/docs/partners/message_orchestration/channel_extensions/ecommerce/shopify/shopify_features/shopify_catalogs/)
 
 ![]({% image_buster /assets/img/Shopify/shopify_step_4_catalog.png %}){: style="max-width:60%"}
 
-### Step 4: Enable in-browser messaging 
+### Step 5: Enable in-browser messaging 
 
 You can optionally use an additional channel on your Shopify store for in-browser messages by turning on this feature. This allows you to use our basic message types like slide-up, modal, full screen, simple surveys, and custom HTML.
 
@@ -89,17 +89,13 @@ You can optionally use an additional channel on your Shopify store for in-browse
 
 If you enable in-browser messages, the Braze Web SDK must be implemented for tracking. If you implement the Braze Web SDK either through [Shopify ScriptTag]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/shopify/getting_started_shopify/?tab=shopify%20scripttag#supported-features) or directly into your Shopify’s site [`theme.liquid`]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/shopify/getting_started_shopify/?tab=theme.liquid#supported-features), Braze will automatically generate the basic in-browser message implementation script onto your site. If you implement the Web SDK to your [headless Shopify site]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/shopify/getting_started_shopify/#implement-web-sdk) or plan to add customizations to in-browser messages, you must manually add in-browser messages onto your site using our [developer guide](/developer_guide/platform_integration_guides/web/in-app_messaging/integration/). 
 
-### Step 5: Install the Braze app
+### Step 6: Finish setup
 
-You’ll then be redirected to your Shopify store to install the Braze app. 
+After you configure your setup, select **Finish Setup**.
 
-![]({% image_buster /assets/img/Shopify/shop_setup_8.png %}){: style="max-width:60%"}
+![]({% image_buster /assets/img/Shopify/finish_setup.png %}){: style="max-width:70%"}
 
-After installing the app, select **Install** to be redirected to the Braze dashboard.
-
-![]({% image_buster /assets/img/Shopify/shopify_app_install.png %}){: style="max-width:60%"}
-
-After the Braze app is installed, you will receive an email notification and Braze will begin ingesting your selected Shopify data. You will also receive email notifications when your historical backfill and initial catalog import are completed. Additionally, the "Connection Pending" status will update to "Connected" and will display the timestamp of when the connection was established.
+That’s it! The “Connection Pending” status will update to “Connected” and will display the timestamp of when the connection was established. You’ll also see if each Shopify feature has successfully been enabled on the page. 
 
 ![]({% image_buster /assets/img/Shopify/shopify_connected_store.png %}){: style="max-width:60%"}
 
