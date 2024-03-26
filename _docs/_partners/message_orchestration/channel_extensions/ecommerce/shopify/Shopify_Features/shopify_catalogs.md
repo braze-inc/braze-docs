@@ -1,14 +1,14 @@
 ---
-nav_title: Shopify Product Syncs
-article_title: Shopify Product Syncs
+nav_title: Shopify Product Sync
+article_title: Shopify Product Sync
 alias: /shopify_catalogs/
 page_order: 2
 description: "This reference article covers how to import your products from Shopify into Braze catalogs."
 ---
 
-# Shopify product syncs 
+# Shopify product sync 
 
-> Shopify catalogs allow you to sync your products from your Shopify store into a Braze [catalog]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs), automating how you bring in product data for deeper personalization of your messages. 
+> You can sync your products from your Shopify store into a Braze [catalog]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs), automating how you bring in product data for deeper personalization of your messages. 
 
 Shopify catalogs will update in near real-time as you make edits and changes to the products in your Shopify store. You can enrich your abandoned cart, order confirmation, and more with the most up-to-date product details and information.
 

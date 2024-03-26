@@ -59,9 +59,9 @@ Using the Shopify integration, you can collect email and SMS subscribers from yo
 
 ![]({% image_buster /assets/img/Shopify/shopify_step_3_email.png %}){: style="max-width:60%"}
 
-#### Set up Shopify catalogs (optional)
+#### Sync Shopify products with Braze (optional)
 
-You can optionally import your products in near real-time from your Shopify store into a Braze catalog, automating the process to bring in product data for deeper personalization of your messages. To learn more, check out [Shopify catalogs]({{site.baseurl}}https://www.braze.com/docs/partners/message_orchestration/channel_extensions/ecommerce/shopify/shopify_features/shopify_catalogs/)
+You can optionally import your products in near real-time from your Shopify store into a Braze catalog, automating the process to bring in product data for deeper personalization of your messages. To learn more, check out [Shopify product syncs]({{site.baseurl}}https://www.braze.com/docs/partners/message_orchestration/channel_extensions/ecommerce/shopify/shopify_features/shopify_catalogs/)
 
 ![]({% image_buster /assets/img/Shopify/shopify_step_4_catalog.png %}){: style="max-width:60%"}
 
