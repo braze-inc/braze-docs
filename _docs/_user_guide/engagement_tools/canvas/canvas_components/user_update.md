@@ -56,7 +56,7 @@ An [array of objects]({{site.baseurl}}/user_guide/data_and_analytics/custom_data
 
 #### Example: Updating the user's wishlist
 
-By adding or removing an item to an array, you can update the user's wishlist. <!--Note for Josh - want to resize the example images -->
+By adding or removing an item to an array, you can update the user's wishlist.
 
 ![][9]{: style="max-width:90%;"}
 
@@ -90,7 +90,6 @@ You can use a Canvas to track when a user has items in their shopping cart, when
 }
 ```
 
-
 {:start="2"}
 2. Create a [custom event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) called `add_item_to_cart` that is logged when a user adds an item to the basket. 
 3. Create a Canvas with a target audience of users with this custom event. Now, when a user adds an item to their cart, this Canvas is triggered. You can then target messaging directly to that user, offering coupon codes once they've reached a certain spend, abandoned their cart for a certain amount of time, or anything else you wish. 
@@ -116,7 +115,6 @@ The `shopping_cart` attribute carries the total of many custom events: the total
   ]
 }
 ```
-
 
 ## Set Canvas entry property as an attribute
 
