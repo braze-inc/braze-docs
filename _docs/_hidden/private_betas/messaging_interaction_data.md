@@ -21,7 +21,9 @@ Starting in early 2024, messaging interaction data will be available according t
 
 For active campaigns and Canvases, interaction data is always available in real time.
 
-Stopped campaigns and Canvases will have their interaction data expire after three months unless they are used in retargeting filters. After expiration, the data will be moved to long-term storage with limited availability. However, this is temporary because you can restore this data.
+Stopped campaigns and Canvases will have their interaction data expire after three months unless they are used in retargeting filters. Expired interaction data is moved to long-term storage and will not be available in the dashboard.
+
+As outlined below, the interaction data may be stored to the dashboard at any time.
 
 #### Features that use interaction data
 
@@ -77,5 +79,13 @@ Campaigns that use retargeting filters that are retargeting by tag are not exemp
 - Received Message from Campaign or Canvas with Tag
 - Clicked/Opened Campaign or Canvas With Tag
 - Last Received Message from Campaign or Canvas With Tag
+
+### When was messaging interaction data available in the past?
+
+Previously, message interaction data was deleted when a campaign or Canvas:
+- Had not sent messages in 25 calendar months, AND
+- Was not used for retargeting in any active campaigns, Canvases, or Content Cards.
+
+Campaigns and Canvases with previously deleted messaging interaction data cannot be used in retargeting filters for campaigns, Canvases, and segments.
 
 [1]: {% image_buster /assets/img/restore_interaction_data.png %}

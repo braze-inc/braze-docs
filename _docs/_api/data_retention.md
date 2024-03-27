@@ -14,7 +14,7 @@ Warning! Don't make any changes to this document without approval from the legal
 
 # Braze Data Retention Information
 
-*Last revised on January 20th, 2023*
+*Last revised on March 27th, 2024*
 
 > This article covers general Braze data retention information.<br><br>Data stored in Braze is retained and usable for segmentation, personalization, and targeting for the lifetime of the Customer's account. This means data such as user profile attributes, custom attributes, custom events, and purchases are stored indefinitely for active users unless removed by the Customer, for the duration of the contract.<br><br>Braze has features, processes, and APIs in place to automatically implement good data hygiene practices for compliance with GDPR and other best practices. These are described below.
 
@@ -44,49 +44,9 @@ Each week, Braze runs a process to remove Inactive and Dormant Users from the Br
 Customers have full control over whether or not a user is Inactive or Dormant and can prevent archiving of user profiles by recording a data point at regular intervals. Braze Canvas offers the ability to do this automatically, allowing you to effectively turn off this functionality for some or all of your Inactive or Dormant Users. 
 {% endalert %}
 
-#### Campaign and Canvas Interactions Data 
+#### Campaign and Canvas Interactions Data
 
-{% tabs %}
-{% tab Campaign Interactions Data %}
-##### What is it?
-
-Campaign Interactions are data related to End Users' interactions with a campaign. They are used for retargeting filters and to determine campaign re-eligibility.
-
-##### When is it deleted?
-
-Braze automatically deletes from the Customer's workspaces the Campaign Interactions for campaigns that have not sent any messages in 25 calendar months and are not used for retargeting in any campaigns, Canvases, or Content Cards in an active status.
-
-##### What happens after deletion?
-
-- Campaigns with no Campaign Interactions cannot be used in retargeting filters for campaigns, Canvases, and Segments.
-- Any active campaign that has not sent any messages in 25 months, and is not being used for retargeting in any active campaigns, Canvases, or Cards, will be stopped because campaign eligibility resets. You can re-launch the campaign after reviewing the re-eligibility setting.
-
-##### How to reset the clock to avoid deletion?
-
-To retain Campaign Interactions for a particular campaign, you can send a message using that campaign at least once within the 25 months since the last message was sent or use that campaign in the **Received Message from Campaign** filter in any active campaign, Canvas, or Card. You can request a shorter data retention than 25 months via your Braze customer success manager.
-
-{% endtab %}
-{% tab Canvas Interactions Data %}
-
-##### What is it? 
-
-Canvas Interactions are data related to End Users' interactions with a Canvas or Canvas step. They are used for retargeting filters and to determine Canvas re-eligibility.
-
-##### When is it deleted?
-
-Braze automatically deletes from the Customer's workspaces the Canvas Interactions for Canvases that have not sent any messages in 25 calendar months and are not used for retargeting by any active campaigns or Canvases.
-
-##### What happens after deletion?
-
-- Canvases with no Canvas Interactions cannot be used in retargeting filters for campaigns, Canvases, and Segments.
-- Any active Canvas that has not been used to send messages in 25 months, and is not being used for retargeting in any active campaigns, Canvases, or Cards, will be stopped because Canvas eligibility resets. You can re-launch the Canvas after reviewing the re-eligibility setting.
-- You will not be able to reference these Canvas Interactions in retargeting features, such as filters, and you will not be able to pull the deleted data from the `/users/export` API.
-
-##### How to reset the clock to avoid deletion?
-
-To retain Canvas Interactions for a particular Canvas, you can send a message using that Canvas at least once within the 25 months since the last message was sent or use that Canvas in the **Received Message from Campaign** filter in any active campaign, Canvas, or Card. You can request a shorter data retention than 25 months via your Braze customer success manager.
-{% endtab %}
-{% endtabs %}
+Messaging interaction data refers to how a user interacts with a campaign or Canvas they received (for example, when a user opens campaign A or a user receives variant A). This data is used for retargeting. You can read more about messaging interaction data availability on [About messaging interaction data availability]({{site.baseurl}}/messaging_interaction_data/).
 
 ## Data Retention Handled by Braze
 
