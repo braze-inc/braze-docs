@@ -12,8 +12,6 @@ search_rank: 10
 
 A variant that appears to be performing better than others will get sent to more users, while underperforming variants will be targeted at fewer users. Each adjustment is made using a [statistical algorithm][227] that makes sure we are adjusting for real performance differences and not just random chance.
 
-![A/B Testing section of a campaign or Canvas with Intelligent Selection enabled.][3]
-
 Intelligent Selection will:
 - Repeatedly look at performance data and shift campaign traffic toward Winning Variants gradually.
 - Check that more users receive your best-performing variant without sacrificing statistical confidence.
@@ -40,7 +38,7 @@ We do not allow the use of Intelligent Selection with campaigns with re-eligibil
 
 ## For how long will it run?
 
-For campaigns and Canvases, Intelligent Selection will run until it gathers enough evidence about the "true" conversion rates of the variants. "Enough" is determined by a special metric called "regret." You can think of it as similar to Confidence: Intelligent Selection will turn itself off when there's enough data to know which variant is best. 
+For campaigns and Canvases, Intelligent Selection will run until it gathers enough evidence about the "true" conversion rates of the variants. "Enough" is determined by a special metric called "regret." You can think of it as similar to confidence in that Intelligent Selection will turn itself off when there's enough data to know which variant is best.
 
 In most cases, Intelligent Selection will choose one of the variants as the Winning Variant. This variant will be given 100% of the audience for future sends.
 
