@@ -40,16 +40,6 @@ To remove a custom attribute, select an attribute name using the dropdown. You c
 
 ![][5]{: style="max-width:90%;"}
 
-### Updating arrays
-
-The user update step can add or remove attributes to an [array of objects]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/array_of_objects/). Select an array attribute name from your list of attributes and enter the key value.
-
-#### Example: Updating the user's wishlist
-
-By adding or removing an item to an array, you can update the user's wishlist. <!--Note for Josh - want to resize the example images -->
-
-![][9]{: style="max-width:90%;"}
-
 ### Increasing and decreasing values
 
 The user update step can increase or decrease an attribute value. Select the attribute, select **Increment By** or **Decrement By**, and enter a number. 
@@ -60,17 +50,72 @@ By incrementing a custom attribute that tracks an event, you could track the num
 
 ![][7]{: style="max-width:90%;"}
 
-### Aggregating attributes
+### Updating an array of objects
 
-The user update step can calculate fields and aggregate user data. <!--The exact steps and best practices to do this TBD-->
+An [array of objects]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/array_of_objects/) is a custom attribute stored on a user's profile that is data rich. This allows you to create a history of the user's interactions with your brand. The user update step can add or remove attributes to this array of objects. To update an array, select the array attribute name from your list of attributes and enter the key value.
 
-#### Example: Calculate shopping cart total
+#### Example: Updating the user's wishlist
 
-<!--TBD-->
+By adding or removing an item to an array, you can update the user's wishlist. <!--Note for Josh - want to resize the example images -->
 
-#### Example: Calculate user's total lifetime value
+![][9]{: style="max-width:90%;"}
 
-<!--TBD-->
+### Calculated fields using an array of objects
+
+Additionally, the user update step can combine the values of custom attributes. For example, you might store all of the products that a user has purchased on their profile in an array of objects called `purchases`. Assuming these product objects have attributes such as `item_price`, each time a new purchase is added to the user's profile, a custom attribute like `lifetime_value` can be increased by the `item_price` value. This allows you to create segments based on a custom attribute that is calculated field, such as purchase history or total lifetime value.
+
+#### Example: Calculated fields - shopping cart 
+
+You can use a Canvas to track when a user has items in their shopping cart, when they add new items, when they remove items, and what the total shopping cart value is. 
+
+1. First, create custom array of objects called `shopping_cart`. Here is an quick example of what this attribute might look like. Note that each item has a unique `product_id` that has more complex data in its own nested array of objects, including `price`.
+
+```javascript
+{
+  "attributes": [
+    {
+      "shopping_cart": [
+       {
+         "total_cart_value": number,
+         "shipping": number,
+         "items_in_cart": number,
+         "product_id": array,
+         "gift": boolean,
+         "discount_code": "enum",
+         "timestamp": {"$time" : "{{$isoTimestamp}}"},
+       }
+      ]
+    }
+  ]
+}
+```
+
+
+{:start="2"}
+2. Create a [custom event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) called `add_item_to_cart` that is logged when a user adds an item to the basket. 
+3. Create a Canvas with a target audience of users with this custom event. Now, when a user adds an item to their cart, this Canvas is triggered. You can then target messaging directly to that user, offering coupon codes once they've reached a certain spend, abandoned their cart for a certain amount of time, or anything else you wish. 
+
+The `shopping_cart` attribute carries the total of many custom events: the total cost of all the items, the total number of items in the cart, if the shopping cart contains a gift, and so on. On a technical level, it might look something like this:
+
+```javascript
+{
+  "attributes": [
+    {
+      "shopping_cart": [
+       {
+         "total_cart_value": 22.99,
+         "shipping": 4.99,
+         "items_in_cart": 2,
+         "product_id": ["1001", "1002"]
+         "gift": yes,
+         "discount_code": "flashsale1000",
+         "timestamp": {"$time" : "{{$isoTimestamp}}"},
+       }
+      ]
+    }
+  ]
+}
+```
 
 
 ## Set Canvas entry property as an attribute
