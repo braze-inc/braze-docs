@@ -52,7 +52,9 @@ By incrementing a custom attribute that tracks an event, you could track the num
 
 ### Updating an array of objects
 
-An [array of objects]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/array_of_objects/) is a custom attribute stored on a user's profile that is data rich. This allows you to create a history of the user's interactions with your brand. The user update step can add or remove attributes to this array of objects. To update an array, select the array attribute name from your list of attributes and enter the key value.
+An [array of objects]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/array_of_objects/) is a custom attribute stored on a user's profile that is data rich. This allows you to create a history of the user's interactions with your brand. This allows you to create segments based on a custom attribute that is calculated field, such as purchase history or total lifetime value.
+
+The user update step can add or remove attributes to this array of objects. To update an array, select the array attribute name from your list of attributes and enter the key value.
 
 #### Example: Updating the user's wishlist
 
@@ -60,11 +62,7 @@ By adding or removing an item to an array, you can update the user's wishlist.
 
 ![][9]{: style="max-width:90%;"}
 
-### Calculated fields using an array of objects
-
-Additionally, the user update step can combine the values of custom attributes. For example, you might store all of the products that a user has purchased on their profile in an array of objects called `purchases`. Assuming these product objects have attributes such as `item_price`, each time a new purchase is added to the user's profile, a custom attribute like `lifetime_value` can be increased by the `item_price` value. This allows you to create segments based on a custom attribute that is calculated field, such as purchase history or total lifetime value.
-
-#### Example: Calculated fields - shopping cart 
+#### Example: Calculating the shopping cart total
 
 You can use a Canvas to track when a user has items in their shopping cart, when they add new items, when they remove items, and what the total shopping cart value is. 
 
