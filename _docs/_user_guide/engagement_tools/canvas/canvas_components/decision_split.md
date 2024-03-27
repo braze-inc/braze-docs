@@ -14,6 +14,7 @@ tool: Canvas
 > The Decision Split component in Canvas allows you to deliver personalized, real-time experiences for your users. 
 
 This component can be used to create Canvas branches based on whether a user matches a query.
+
 ![][1]{: style="float:right;max-width:20%;margin-left:15px;margin-top:15px;margin-bottom:15px;"}
 
 ## Create a decision split 
@@ -41,7 +42,7 @@ Let's say that you're creating an onboarding flow. You might start with a welcom
 If there is no step following one of the paths, users who go down that path will exit the Canvas. 
 
 {% alert important %}
-A decision split cannot have full step sibling steps. In other words, you cannot create a full step that branches into a filter step and a full step. This restriction exists because if there was a branch with a filter step and a full step, it wouldn't be clear which branch users would go down.
+A decision split cannot have full step sibling steps. In other words, you can't create a full step that branches into a filter step and a full step. This restriction exists because if there was a branch with a filter step and a full step, it wouldn't be clear which branch users would go down.
 <br>
 A filter step can only connect to one next step.
 {% endalert %}
@@ -52,7 +53,7 @@ Refer to the following table for descriptions of analytics for this step:
 
 | Metric | Description |
 |---|---|
-| Entered | The total number of times the step has been entered. If your Canvas has re-eligibility and a user enters a Decision Split component twice, two entries will be recorded. |
+| Entered | The total number of times the step has been entered. If your Canvas has re-eligibility and a user enters a Decision Split step twice, two entries will be recorded. |
 | Yes | The number of entries that met the specified criteria and proceeded down the "yes" path. |
 | No | The number of entries that did not meet the specified criteria and proceeded down the "no" path. |
 {: .reset-td-br-1 .reset-td-br-2}

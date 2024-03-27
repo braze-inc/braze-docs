@@ -4,14 +4,14 @@ article_title: Message
 alias: "/message_step/"
 page_order: 5
 page_type: reference
-description: "This reference article covers how to create a stand-alone message using the Canvas messaging step."
+description: "This reference article covers how to create a stand-alone message using the Message step."
 tool: Canvas
 
 ---
 
 # Message 
 
-> Message Steps allow you to add a standalone message where you want in your Canvas flow.
+> Message steps allow you to add a standalone message where you want in your Canvas Flow.
 
 ![][1]{: style="float:right;max-width:25%;margin-left:15px;"}
 
@@ -27,7 +27,7 @@ All users who enter the Message step will advance to the next step when any one 
 - A message is aborted
 - A user isn't reachable by channel, so the message is not sent
 
-![Set up Messages settings for a Canvas Message component that includes the option to select your message channel and customize delivery settings.][2]{: style="max-width:75%;"}
+![Set up Messages settings for a Message step that includes the option to select your message channel and customize delivery settings.][2]{: style="max-width:75%;"}
 
 {% raw %}
 If an action-based Canvas is triggered by an inbound SMS message, you can reference SMS properties in the first Message step of the Canvas. For example, in the Message step, you could use `{{sms.${inbound_message_body}}}` or `{{sms.${inbound_media_urls}}}`.
@@ -98,10 +98,10 @@ Refer to the following table for definitions of Message component metrics:
 
 | Metric | Description |
 | --- | --- |
-| Entries | The number of times the component has been entered. If your Canvas has re-eligibility and a user enters a Message component twice, two entries will be recorded. |
+| Entries | The number of times the step has been entered. If your Canvas has re-eligibility and a user enters a Message step twice, two entries will be recorded. |
 | Proceeded to Next Step | The number of entries that proceeded to the next step in the Canvas. |
-| Sends | The total number of messages the component has sent. If your Canvas re-eligibility and a user enters a Message component twice, two entries will be recorded. |
-| Unique Recipients | The number of users who have received messages from this component. |
+| Sends | The total number of messages the step has sent. If your Canvas re-eligibility and a user enters a Message step twice, two entries will be recorded. |
+| Unique Recipients | The number of users who have received messages from this step. |
 | Primary Conversion Event | The number of times a defined event occurred after interacting with or viewing a received message from a Braze campaign. You define this event when building the campaign. |
 | Revenue | The total revenue in dollars from campaign recipients within the set primary conversion window. |
 {: .reset-td-br-1 .reset-td-br-2}
