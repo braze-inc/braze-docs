@@ -44,7 +44,7 @@ Each week, Braze runs a process to remove Inactive and Dormant Users from the Br
 Customers have full control over whether or not a user is Inactive or Dormant and can prevent archiving of user profiles by recording a data point at regular intervals. Braze Canvas offers the ability to do this automatically, allowing you to effectively turn off this functionality for some or all of your Inactive or Dormant Users. 
 {% endalert %}
 
-#### Messaging interaction data availability
+#### Campaign and Canvas Interactions Data
 
 Messaging interaction data refers to how a user interacts with a campaign or Canvas they received (for example, when a user opens campaign A or a user receives variant A). This data is used for retargeting. You can read more about messaging interaction data availability on [About messaging interaction data availability]({{site.baseurl}}/messaging_interaction_data/).
 
