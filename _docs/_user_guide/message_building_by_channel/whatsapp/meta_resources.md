@@ -23,6 +23,13 @@ Review the following Meta documentation for guidance with display names, phone n
 
 ## WhatsApp Product Updates 
 
+### April 2024: Read rates will affect quality rating for marketing templates 
+*Last Updated March 2024*
+
+WhatsApp is testing new approaches, starting with consumers in India, to create more valuable experiences and maximize engagement with businesses’ marketing conversations. This may include limiting the number of marketing conversations a person receives from any business in a given period, starting with a small number of conversations that are less likely to be read. Braze will get an error code if a message is not delivered.
+
+WhatsApp will start considering read rates as part of our quality rating for marketing templates, alongside traditional metrics like blocks and reports. WhatsApp may temporarily pause marketing message campaigns with low read rates, giving businesses time to iterate on the templates with the lowest engagement before scaling volume beginning on April 1, 2024. 
+
 ### February 2024: Marketing Conversations Experimentation
 *Last Updated February 2024*
 
