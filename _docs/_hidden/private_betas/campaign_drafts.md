@@ -12,6 +12,8 @@ page_type: reference
 
 If you have a campaign that requires large-scale changes, you can create a separate draft for these edits.
 
+![A draft of an active campaign with an option to view the active campaign.][1]
+
 You can create drafts within an active campaign to build, save, and quality-check prior to launching these changes in the active campaign. These drafts don't have any analytics since the draft changes aren't launched yet. A campaign can only have one draft at a time.
 
 To create a draft, do the following:
@@ -24,3 +26,5 @@ To reference the active campaign, select **View Active Campaign** in the footer 
 ### In-app message prioritization
 
 In-app message priority will only update immediately (before the draft launches) when you select **Set Exact Priority** and specify the priority in relation to other campaigns or Canvases.
+
+[1]: {% image_buster /assets/img/campaign_draft.png %} 
