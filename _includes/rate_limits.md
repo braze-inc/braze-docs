@@ -87,7 +87,7 @@ For customers who onboarded with Braze on or after September 16, 2021, we apply 
 <!---/canvas/trigger/send-->
 
 {% elsif include.endpoint == "send endpoints" %}
-When specifying a segment or Connected Audience in your request, we apply a rate limit of 250 requests per minute to this endpoint. Otherwise, if specifying an `external_id`, this endpoint has a default rate limit of 250,000 requests per hour, as documented in [API rate limits]({{site.baseurl}}/api/api_limits/).
+When specifying a segment or connected audience in your request, we apply a rate limit of 250 requests per minute to this endpoint. Otherwise, if specifying an `external_id`, this endpoint has a default rate limit of 250,000 requests per hour, as documented in [API rate limits]({{site.baseurl}}/api/api_limits/).
 
 <!---/transactional/v1/campaigns/{campaign_id}/send -->
 
@@ -97,7 +97,7 @@ Braze Transactional Emails are not subject to a rate limit. Depending on your ch
 <!---/sends/id/create-->
 
 {% elsif include.endpoint == "sends id create" %}
-The daily maximum number of custom send identifiers that can be created via this endpoint is 100 for a given workspace. Each `send_id` and `campaign_id` combination that you create will count towards your daily limit. The response headers for any valid request include the current rate limit status, see [API rate limits]({{site.baseurl}}/api/api_limits/) for details.
+The daily maximum number of custom send identifiers that can be created via this endpoint is 100 for a given workspace. Each `send_id` and `campaign_id` combination that you create will count toward your daily limit. The response headers for any valid request include the current rate limit status, see [API rate limits]({{site.baseurl}}/api/api_limits/) for details.
 
 <!---/subscription/status/set-->
 {% elsif include.endpoint == "subscription status set" %}
@@ -127,7 +127,7 @@ Braze endpoints support [batching API requests]({{site.baseurl}}/api/api_limits/
 
 - Up to 50 specific `external_ids`, each with individual message parameters
 - A segment of any size created in the Braze dashboard, specified by its `segment_id`
-- An audience segment of any size, defined in the request as a [Connected Audience]({{site.baseurl}}/api/objects_filters/connected_audience/) object
+- An audience segment of any size, defined in the request as a [connected audience]({{site.baseurl}}/api/objects_filters/connected_audience/) object
 
 {% endif %}
 

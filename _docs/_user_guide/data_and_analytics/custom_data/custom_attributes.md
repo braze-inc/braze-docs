@@ -25,6 +25,8 @@ From this page, you can view, manage, create, or blocklist existing custom attri
 
 Custom attributes can be blocklisted individually via the actions menu, or up to 10 attributes can be selected and blocklisted in bulk. If you block a custom attribute, no data will be collected regarding that attribute, existing data will be unavailable unless reactivated, and blocklisted attributes will not show up in filters or graphs. In addition, if the attribute is currently being referenced by filters or triggers in other areas of the Braze dashboard, a warning modal will appear explaining that all instances of the filters or triggers that reference it will be removed and archived.
 
+Admins can also create custom attributes and mark them as PII from this page. These attributes will only be visible to admins and dashboard users with the “View Custom Attributes Marked as PII” permission.
+
 To remove custom attributes from user profiles, set the value to "null" in your API request to the [`/users/track` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track#user-track).
 
 ## Setting custom attributes
@@ -65,12 +67,12 @@ The following data types may be stored as custom attributes:
 
 Boolean attributes are useful for storing simple binary data about your users, like subscription statuses. You can find users that explicitly have a variable set to a true or false value, in addition to those that don't have any record of that attribute recorded yet.
 
-| Segmentation Options | Dropdown Filter | Input Options |
-| ---------------------| --------------- | ------------- |
-| Check if the boolean value **is** either true, false, true or not set, or false or not set | **IS**  | **TRUE**, **FALSE**, **TRUE OR NOT SET**, or **FALSE OR NOT SET** |
-| Check if the boolean value **exists** on a user's profile | **IS NOT BLANK**  | **N/A** |
-| Check if the boolean value **does not exist** on a user's profile | **IS BLANK**  | **N/A** |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+| Segmentation options | Dropdown filter | Input options | Examples |
+| ---------------------| --------------- | ------------- | -------- |
+| Check if the boolean value **is** either true, false, true or not set, or false or not set | **IS**  | **TRUE**, **FALSE**, **TRUE OR NOT SET**, or **FALSE OR NOT SET** | If this filter specifies `coffee_drinker`, a user will match this filter in the following circumstances: <br> {::nomarkdown}<ul><li>If this filter is <code>true</code> and the user has the value <code>coffee_drinker</code></li><li>If this filter is <code>false</code> and the user doesn't have the value <code>coffee_drinker</code></li><li>If this filter is <code>true or not set</code> and the user has the value <code>coffee_drinker</code> or no value</li><li>If this filter is <code>false or not set</code> and the user doesn't have <code>coffee_drinker</code> or any value</li></ul>{:/} |
+| Check if the boolean value **exists** on a user's profile and is not null | **IS NOT BLANK**  | **N/A** | If this filter specifies `coffee_drinker` and a user has a value for the attribute `coffee_drinker`, the user will match this filter. | 
+| Check if the boolean value **does not exist** on a user's profile or is null | **IS BLANK**  | **N/A** | If this filter specifies `coffee_drinker`and a user either doesn’t have the attribute `coffee_drinker` or the value for `coffee_drinker` is null, the user will match this filter.|
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
 ### Numbers {#numbers}
 
@@ -84,15 +86,15 @@ Numeric attributes include [integers](https://en.wikipedia.org/wiki/Integer) and
 Money spent should not be recorded by this method. Rather it should be recorded via our [purchase methods](#purchase-revenue-tracking).
 {% endalert %}
 
-| Segmentation Options | Dropdown Filter | Input Options |
-| ---------------------| --------------- | ------------- |
-| Check if the numeric attribute **is exactly** a **number**| **EXACTLY** | **NUMBER** |
-| Check if the numeric attribute **does not equal** a **number**| **DOES NOT EQUAL** | **NUMBER** |
-| Check if the numeric attribute **is more than** a **number**| **MORE THAN** | **NUMBER** |
-| Check if the numeric attribute **is less than** a **number**| **LESS THAN** | **NUMBER** |
-| Check if the numeric attribute **exists** on a user's profile | **IS NOT BLANK** | **N/A** |
-| Check if the numeric attribute **does not exist** on a user's profile | **IS BLANK** | **N/A** |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+| Segmentation options | Dropdown filter | Input options | Examples |
+| ---------------------| --------------- | ------------- | -------- |
+| Check if the numeric attribute **is exactly** a **number**| **EXACTLY** | **NUMBER** | If this filter specifies `10` and a user profile has the value `10`, the user will match this filter. |
+| Check if the numeric attribute **does not equal** a **number**| **DOES NOT EQUAL** | **NUMBER** | If this filter specifies `10` and a user profile doesn't have the value `10`, the user will match this filter. |
+| Check if the numeric attribute **is more than** a **number**| **MORE THAN** | **NUMBER** | If this filter specifies `10` and a user profile has a value greater than `10`, the user will match this filter. |
+| Check if the numeric attribute **is less than** a **number**| **LESS THAN** | **NUMBER** | If this filter specifies `10` and a user profile has a value lesser than `10`, the user will match this filter. |
+| Check if the numeric attribute **exists** on a user's profile and is not null | **IS NOT BLANK** | **N/A** | If a user profile contains the specified numeric attribute, regardless of value, the user will match this filter. |
+| Check if the numeric attribute **does not exist** on a user's profile or is null | **IS BLANK** | **N/A** | If a user profile doesn't contain the specified numeric attribute or the attribute’s value is null, the user will match this filter.|
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
 #### Number attribute details
 
@@ -105,19 +107,19 @@ String attributes are useful for storing user input, such as a favorite brand, a
 
 Note that if you input any values with spaces in between, before, or after words, then Braze will also check for the same spaces.
 
-| Segmentation Options | Dropdown Filter | Input Options |
-| ---------------------| --------------- | ------------- |
-| Check if the string attribute **exactly matches** an inputted string| **EQUALS** | **STRING**<br>Case sensitive |
-| Check if the string attribute **partially matches** an inputted string **OR** Regular Expression | **MATCHES REGEX** | **STRING** **OR** **REGULAR EXPRESSION**<br>Not case sensitive. |
-| Check if the string attribute **does not partially match** an inputted string **OR** Regular Expression | **DOES NOT MATCH REGEX** * | **STRING** **OR** **REGULAR EXPRESSION**<br>Not case sensitive. |
-| Check if the string attribute **does not match** an inputted string| **DOES NOT EQUAL** | **STRING**<br>Not case sensitive.  |
-| Check if the string attribute **exists** on a user's profile | **IS NOT BLANK** | **N/A** |
-| Check if the string attribute **does not exist** on a user's profile | **BLANK** | **N/A** |
-| Check if the string exactly matches **any** of the inputted strings | **IS ANY OF** | **STRING**<br>Case sensitive; multiple strings allowed |
-| Check if the string attribute **does not exactly match any** of the inputted strings | **IS NONE OF** | **STRING**<br>Case sensitive; multiple strings allowed |
-| Check if the string attribute **partially matches any** of the inputted strings | **CONTAINS ANY OF** | **STRING**<br>Case sensitive; multiple strings allowed |
-| Check if the string attribute **does not partially match any** of the inputted strings | **DOESN'T CONTAIN ANY OF** | **STRING**<br>Case sensitive; multiple strings allowed |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+| Segmentation options | Dropdown filter | Input options | Examples |
+| ---------------------| --------------- | ------------- | -------- |
+| Check if the string attribute **exactly matches** an inputted string| **EQUALS** | **STRING**<br>Case sensitive | If this filter specifies `book` and a user profile has a string attribute for `last_item_purchased` that contains `book`, the user will match this filter. |
+| Check if the string attribute **partially matches** an inputted string **OR** Regular Expression | **MATCHES REGEX** | **STRING** **OR** **REGULAR EXPRESSION** <br>Not case sensitive; maximum of 32,764 characters | 
+| Check if the string attribute **does not partially match** an inputted string **OR** Regular Expression | **DOES NOT MATCH REGEX** * | **STRING** **OR** **REGULAR EXPRESSION**<br>Not case sensitive; maximum of 32,764 characters |
+| Check if the string attribute **does not match** an inputted string| **DOES NOT EQUAL** | **STRING**<br>Not case sensitive  | If this filter specifies `book` and a user profile has a string attribute for `last_item_purchased` that doesn't contain `book`, the user will match this filter.|
+| Check if the string attribute **exists** on a user's profile and is not an empty string | **IS NOT BLANK** | **N/A** | If this filter specifies `favorite_genre` and a user profile has the attribute `favorite_genre`, the user will match this filter regardless of their attribute value. For example, the user can have `sci-fi`, `romance`, or another value.|
+| Check if the string attribute **does not exist** on a user's profile | **BLANK** | **N/A** | If this filter specifies `favorite_genre` and a user profile doesn't have the attribute `favorite_genre`, the user will match this filter.|
+| Check if the string exactly matches **any** of the inputted strings | **IS ANY OF** | **STRING**<br>Case sensitive; multiple strings allowed (256 maximum) | If this filter specifies `book`, `bookmark`, and `reading light`, and a user profile has at least one of those strings, the user will match this filter. |
+| Check if the string attribute **does not exactly match any** of the inputted strings | **IS NONE OF** |**STRING**<br>Case sensitive; multiple strings allowed (256 maximum) | If this filter specifies `book`, `bookmark`, and `reading light`, and a user profile doesn't contain any of those strings, the user will match the filter.|
+| Check if the string attribute **partially matches any** of the inputted strings | **CONTAINS ANY OF** | **STRING**<br>Case sensitive; multiple strings allowed (256 maximum) | If this filter specifies `gold` and a user profile contains `gold` in any string, such as `gold_tier` or `former_gold_tier`, the user will match the filter. |
+| Check if the string attribute **does not partially match any** of the inputted strings | **DOESN'T CONTAIN ANY OF** | **STRING**<br>Case sensitive; multiple strings allowed (256 maximum) | If this filter specifies `gold` and a user profile doesn't contain `gold` in any string, the user will match this filter.|
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
 {% alert note %}
 A date string such as "12-1-2021" or "12/1/2021" will be converted to a datetime object and treated as a [time attribute]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#time).
@@ -146,20 +148,20 @@ Note that If you input any values with spaces in between, before, or after words
 The option to increase the maximum length will not be available if the attribute is set to automatically detect the data type; the data type must be set to array.
 {% endalert %}
 
-| Segmentation Options | Dropdown Filter | Input Options |
-| ---------------------| --------------- | ------------- |
-| Check if the array attribute **includes a value which exactly matches** an inputted value| **INCLUDES VALUE** | **STRING** |
-| Check if the array attribute **does not include a value which exactly matches** an inputted value| **DOESN'T INCLUDE VALUE** | **STRING** |
-| Check if the array attribute **contains a value which partially matches** an inputted value **OR** Regular Expression | **MATCHES REGEX** | **STRING** **OR** **REGULAR EXPRESSION** |
-| Check if the array attribute **has any value** | **HAS A VALUE** | **N/A** |
-| Check if the array attribute **is empty** | **IS EMPTY** | **N/A** |
-| Check if the array attribute **includes a value which exactly matches any** of the inputted values | **INCLUDES ANY OF** | **STRING**<br>Case sensitive; multiple values allowed |
-| Check if the array attribute **does not include a value which exactly match any** of the inputted values | **INCLUDES NONE OF** | **STRING**<br>Case sensitive; multiple values allowed |
-| Check if the array attribute **contains a value which partially matches any** of the inputted values | **VALUES CONTAIN ANY OF** | **STRING**<br>Case sensitive; multiple values allowed |
-| Check if the array attribute **does not include a value which partially match any** of the inputted values | **VALUES DON'T CONTAIN ANY OF** | **STRING**<br>Case sensitive; multiple values allowed |
-| Check if the array attribute **includes all** of the inputted values | **IS ALL OF** | **STRING**<br>Case sensitive; multiple values allowed |
-| Check if the array attribute **does not include all of** the inputted values | **ISN'T ALL OF** | **STRING**<br>Case sensitive; multiple values allowed |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+| Segmentation options | Dropdown filter | Input options | Examples |
+| ---------------------| --------------- | ------------- | -------- |
+| Check if the array attribute **includes a value which exactly matches** an inputted value| **INCLUDES VALUE** | **STRING** | If this filter specifies `sci-fi` and a user profile has the value `sci-fi`, the user will match this filter.|
+| Check if the array attribute **does not include a value which exactly matches** an inputted value| **DOESN'T INCLUDE VALUE** | **STRING** | If this filter specifies `sci-fi` and a user profile doesn't have the value `sci-fi`, the user will match this filter.|
+| Check if the array attribute **contains a value which partially matches** an inputted value **OR** Regular Expression | **MATCHES REGEX** | **STRING** **OR** **REGULAR EXPRESSION**<br>Maximum of 32,764 characters | |
+| Check if the array attribute **has any value** or is not empty | **HAS A VALUE** | **N/A** | If this filter specifies `favorite_genres` and a user profile contains `favorite_genres` with any value, the user will match this filter. |
+| Check if the array attribute **is empty** or does not exist | **IS EMPTY** | **N/A** | If this filter specifies `favorite_genres` and a user profile doesn't contain `favorite_genres` or contains `favorite_genres` but has no values, the user will match this filter.|
+| Check if the array attribute **includes a value which exactly matches any** of the inputted values | **INCLUDES ANY OF** | **STRING**<br>Case sensitive; multiple values allowed (256 maximum) | If this filter specifies `sci-fi, fantasy, romance` and a user profile has any combination of `sci-fi`, `fantasy`, or `romance`, including only one of them (such as only `sci-fi`). A user can have `horror` or another value in their string if they also have any of `sci-fi`, `fantasy`, and `romance`.|
+| Check if the array attribute **does not include a value which exactly match any** of the inputted values | **INCLUDES NONE OF** | **STRING**<br>Case sensitive; multiple values allowed (256 maximum) | If this filter specifies `sci-fi, fantasy, romance` and a user profile doesn't have any combination of `sci-fi`, `fantasy`, or `romance`, the user will match this filter. The user can have `horror` or another value if they don't have any of `sci-fi`, `fantasy`, or `romance`.|
+| Check if the array attribute **contains a value which partially matches any** of the inputted values | **VALUES CONTAIN ANY OF** | **STRING**<br>Case sensitive; multiple values allowed (256 maximum) | If this filter specifies `gold` and a user profile array contains `gold` in at least one string, the user will match this filter. This includes string values like `gold_tier`, `former_gold_tier`, and others.|
+| Check if the array attribute **does not include a value which partially match any** of the inputted values | **VALUES DON'T CONTAIN ANY OF** | **STRING**<br>Case sensitive; multiple values allowed (256 maximum) | If this filter specifies `gold` and a user profile array doesn't contain `gold` in any strings, the user will match this filter. This means users with string values like `gold_tier` and `former_gold_tier` won't match this filter.|
+| Check if the array attribute **includes all** of the inputted values | **IS ALL OF** | **STRING**<br>Case sensitive; multiple values allowed (256 maximum) | If this filter specifies `sci-fi, fantasy, romance` and a user profile has all of those values, the user will match this filter. The user can also have `horror` or other values and match this filter.|
+| Check if the array attribute **does not include all of** the inputted values | **ISN'T ALL OF** | **STRING**<br>Case sensitive; multiple values allowed (256 maximum)|  If this filter specifies `sci-fi, fantasy, romance` and a user profile doesn't have all of those values, the user will match this filter.|
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
 {% alert tip %}
 For more on how to use our regular expressions filter, check out this documentation on [Perl compatible regular expressions](http://www.regextester.com/pregsyntax.html) (PCRE).
@@ -182,17 +184,17 @@ For example, to build a segment that targets users with a time attribute between
 The last date a custom event or purchase event occurred is automatically recorded and shouldn't be recorded again via a custom time attribute.
 {% endalert %}
 
-| Segmentation Options | Dropdown Filter | Input Options |
-| ---------------------| --------------- | ------------- |
-| Check if the time attribute **is before** a **selected date**| **BEFORE** | **CALENDAR DATE SELECTOR** |
-| Check if the time attribute **is after** a **selected date**| **AFTER** | **CALENDAR DATE SELECTOR** |
-| Check if the time attribute is **more than X number** of **days ago** | **MORE THAN** | **NUMBER OF DAYS AGO** |
-| Check if the time attribute is **less than X number** of **days ago**| **LESS THAN** | **NUMBER OF DAYS AGO** |
-| Check if the time attribute is **in more than X number** of **days in the future** | **IN MORE THAN** | **NUMBER OF DAYS IN FUTURE** |
-| Check if the time attribute is **less than X number** of **days in the future** | **IN LESS THAN** | **NUMBER OF DAYS IN FUTURE**  |
-| Check if the time attribute **exists** on a user's profile | **IS NOT BLANK** | **N/A** |
-| Check if the time attribute **does not exist** on a user's profile | **IS BLANK** | **N/A** |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+| Segmentation options | Dropdown filter | Input options | Examples |
+| ---------------------| --------------- | ------------- | -------- |
+| Check if the time attribute **is before** a **selected date**| **BEFORE** | **CALENDAR DATE SELECTOR** | If this filter specifies `2024-01-31` and a user profile has a date before `2024-1-31`, the user will match this filter. |
+| Check if the time attribute **is after** a **selected date**| **AFTER** | **CALENDAR DATE SELECTOR** | If this filter specifies `2024-01-31` and a user profile has a date after `2024-1-31`, the user will match this filter. |
+| Check if the time attribute is **more than X number** of **days ago** | **MORE THAN** | **NUMBER OF DAYS AGO** | If this filter specifies `7` and a user profile has a date that is more than seven days ago, the user will match this filter. |
+| Check if the time attribute is **less than X number** of **days ago**| **LESS THAN** | **NUMBER OF DAYS AGO** | If this filter specifies `7` and a user profile has a date that is less than seven days ago, the user will match this filter.|
+| Check if the time attribute is **in more than X number** of **days in the future** | **IN MORE THAN** | **NUMBER OF DAYS IN FUTURE** | If this filter specifies `7` and a user profile has a date that is more than seven days in the future, the user will match this filter.|
+| Check if the time attribute is **less than X number** of **days in the future** | **IN LESS THAN** | **NUMBER OF DAYS IN FUTURE**  | If this filter specifies `7` and a user profile has a date that is less than seven days in the future, the user will match this filter.|
+| Check if the time attribute **exists** on a user's profile and is not null | **IS NOT BLANK** | **N/A** | If this filter specifies a time attribute that is on a user profile, the user will match this filter.|
+| Check if the time attribute **does not exist** on a user's profile or is null | **IS BLANK** | **N/A** | If this filter specifies a time attribute that isn't on a user profile, the user will match this filter. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
 #### Time attribute details
 
@@ -210,23 +212,35 @@ You can use nested custom attributes to send objects as a data type for custom a
 
 Use an array of objects to group related attributes. For more details, refer to our article on [Array of objects]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/array_of_objects/).
 
+### Consolidated operators
+
+We've consolidated the list of operators available to use in attribute filters, custom attribute filters, and nested custom attribute filters. If you have existing filters using these operators, they will be automatically updated to use the new operators.
+
+| Data type | Old operator | New operator | Value |
+| --- | --- | --- | --- |
+| String | equals | is any of | At least 1 value |
+| String | does not equal | is none of | At least 1 value |
+| Array | includes value | includes any of | At least 1 value |
+| Array | doesn't include value | includes none of | At least 1 value |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+
 ## Purchase and revenue tracking {#purchase-revenue-tracking}
 
 Using our purchase methods to record in-app purchases establishes the Lifetime Value (LTV) for each individual user profile. This data is viewable within our revenue page in time-series.
 
-| Segmentation Options | Dropdown Filter | Input Options |
-| ---------------------| --------------- | ------------- |
-| Check if the total number of dollars spent **is greater than** a **number**| **GREATER THAN** | **NUMBER** |
-| Check if the total number of dollars spent **is less than** a **number**| **LESS THAN** | **NUMBER** |
-| Check if total number of dollars spent **is exactly** a **number**| **EXACTLY** | **NUMBER** |
-| Check if the purchase last occurred **after X date** | **AFTER** | **TIME** |
-| Check if the purchase last occurred **before X date** | **BEFORE** | **TIME** |
-| Check if the purchase last occurred **more than X days ago** | **MORE THAN** | **TIME** |
-| Check if the purchase last occurred **less than X days ago** | **LESS THAN** | **TIME** |
-| Check if the purchase occurred **more than X (Max = 50) number of times** | **MORE THAN** | in the past **Y Days (Y = 1,3,7,14,21,30)** |
-| Check if the purchase occurred **less than X (Max = 50) number of times** | **LESS THAN** | in the past **Y Days (Y = 1,3,7,14,21,30)** |
-| Check if the purchase occurred **exactly X (Max = 50) number of times** | **EXACTLY** | in the past **Y Days (Y = 1,3,7,14,21,30)** |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+| Segmentation options | Dropdown filter | Input options | Examples |
+| ---------------------| --------------- | ------------- | -------- |
+| Check if the total number of dollars spent **is greater than** a **number**| **GREATER THAN** | **NUMBER** | If this filter specifies `500` and a user profile has a value greater than `500`, the user will match this filter. |
+| Check if the total number of dollars spent **is less than** a **number**| **LESS THAN** | **NUMBER** | If this filter specifies `500` and a user profile has a value less than `500`, the user will match this filter.|
+| Check if total number of dollars spent **is exactly** a **number**| **EXACTLY** | **NUMBER** | If this filter specifies `500` and a user profile has the value `500`, the user will match this filter. |
+| Check if the purchase last occurred **after X date** | **AFTER** | **TIME** | If this filter specifies `2024/31/1` and a user's last purchase was after `2024/31/1`, the user will match this filter.|
+| Check if the purchase last occurred **before X date** | **BEFORE** | **TIME** | If this filter specifies `2024/31/1` and a user's last purchase was before `2024/31/1`, the user will match this filter.|
+| Check if the purchase last occurred **more than X days ago** | **MORE THAN** | **TIME** | If this filter specifies `7` and a user's last purchase was more than seven days ago from today, the user will match this filter.|
+| Check if the purchase last occurred **less than X days ago** | **LESS THAN** | **TIME** |  If this filter specifies `7` and a user's last purchase was less than seven days ago from today, the user will match this filter.|
+| Check if the purchase occurred **more than X (Max = 50) number of times** | **MORE THAN** | in the past **Y Days (Y = 1,3,7,14,21,30)** |  If this filter specifies `7` times and `21` days, and a user made more than seven purchases in the past 21 days, the user will match this filter.|
+| Check if the purchase occurred **less than X (Max = 50) number of times** | **LESS THAN** | in the past **Y Days (Y = 1,3,7,14,21,30)** | If this filter specifies `7` times and `21` days, and a user made less than seven purchases in the past 21 days, the user will match this filter.|
+| Check if the purchase occurred **exactly X (Max = 50) number of times** | **EXACTLY** | in the past **Y Days (Y = 1,3,7,14,21,30)** | If this filter specifies `7` times and `21` days, and a user made seven purchases in the past 21 days, the user will match this filter.|
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
 {% alert tip %}
 If you would like to segment on the number of times a specific purchase has occurred, you should also record that purchase individually as an [incrementing custom attribute]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/setting_custom_attributes/#incrementingdecrementing-custom-attributes).

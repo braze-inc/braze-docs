@@ -34,7 +34,7 @@ The Braze and mParticle integration allows you to seamlessly control the flow of
 
 ### Audiences
 
-Use Braze and mParticle's partnership to configure your integration and import mParticle audiences directly into Braze for retargeting, creating a full loop of data from one system to another. Any integration you set up will count towards your account's data point volume.
+Use Braze and mParticle's partnership to configure your integration and import mParticle audiences directly into Braze for retargeting, creating a full loop of data from one system to another. Any integration you set up will count toward your account's data point volume.
 
 #### Forwarding Audiences
 

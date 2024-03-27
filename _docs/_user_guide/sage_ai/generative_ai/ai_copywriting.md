@@ -17,12 +17,13 @@ To generate copy using the AI copywriting assistant, follow these steps:
    * In the drag-and-drop editor for in-app messages, select a text block and select <i class="fa-solid fa-wand-magic-sparkles" title="AI Copywriter"></i> in the block's toolbar.
 2. Enter a product name or description in the input field.
 3. Select the output language. This can be different from your input language.
-4. Select an approximate output length. 
-5. Click **Generate Copy**.
+4. Choose a message tone from the available options. This will determine the style of the copy generated.
+5. Select an approximate output length. 
+6. Click **Generate Copy**.
 
 The response will be fetched from OpenAI and provided to you. Feel free to experiment and try variations to your heart's content. 
 
-![AI copywriting assistant modal showing the input "Braze Marketing Automation", which generated the output: "Looking to take your marketing to the next level? Braze Marketing Automation is the solution for you! With our powerful tools, you'll be able to create, send, and track your marketing campaigns with ease. So why wait? Sign up today and see the results yourself!"][1]
+![AI copywriting assistant modal showing the input "Braze Marketing Automation", which generated the output: "Looking to take your marketing to the next level? Braze Marketing Automation is the solution for you! With our powerful tools, you'll be able to create, send, and track your marketing campaigns with ease. So why wait? Sign up today and see the results yourself!"][1]{: style="max-width:70%;"}
 
 All we do behind the scenes is instruct GPT to generate a creative ad for your product name or description in the desired format. No other customization is performed. The rest is the magic of GPT! 
 

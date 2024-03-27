@@ -17,10 +17,11 @@ Use Braze user profile field names (listed as follows or any listed in the secti
 
 ```json
 {
-  // One of "external_id" or "user_alias" or "braze_id" is required
-  "external_id" : (optional, string) see External User ID,
-  "user_alias" : (optional, User Alias Object),
-  "braze_id" : (optional, string) Braze User Identifier,
+  // One of "external_id" or "user_alias" or "braze_id" or "email" is required
+  "external_id" : (optional, string) see external user ID,
+  "user_alias" : (optional, User alias object),
+  "braze_id" : (optional, string) Braze user identifier,
+  "email": (optional, string) User email address,
   // Setting this flag to true will put the API in "Update Only" mode.
   // When using a "user_alias", "Update Only" defaults to true.
   "_update_existing_only" : (optional, boolean),

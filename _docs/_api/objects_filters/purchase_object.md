@@ -19,18 +19,19 @@ A purchase object is an object that gets passed through the API when a purchase 
 
 ```json
 {
-  // One of "external_id" or "user_alias" or "braze_id" is required.
-  "external_id" : (optional, string) External User ID,
-  "user_alias" : (optional, User Alias Object), User Alias,
-  "braze_id" : (optional, string) Braze User Identifier,
+  // One of "external_id" or "user_alias" or "braze_id" or "email" is required.
+  "external_id" : (optional, string) External user ID,
+  "user_alias" : (optional, User Alias Object) User alias object,
+  "braze_id" : (optional, string) Braze user identifier,
+  "email": (optional, string) User email address,
   "app_id" : (optional, string) see App Identifier,
   // See the following product_id naming conventions for clarification.
-  "product_id" : (required, string), identifier for the purchase, for example, Product Name or Product Category,
+  "product_id" : (required, string) identifier for the purchase, for example, Product Name or Product Category,
   "currency" : (required, string) ISO 4217 Alphabetic Currency Code,
   //Revenue from a purchase object is calculated as the product of quantity and price.
   "price" : (required, float) value in the base currency unit (for example, Dollars for USD, Yen for JPY),
   "quantity" : (optional, integer) the quantity purchased (defaults to 1, must be <= 100 -- currently, Braze treats a quantity _X_ as _X_ separate purchases with quantity 1),
-  "time" : (required, datetime as string in ISO 8601), Time of purchase,
+  "time" : (required, datetime as string in ISO 8601) Time of purchase,
   // See the following purchase object explanation for clarification.
   "properties" : (optional, Properties Object) properties of the event,
   // Setting this flag to true will put the API in "Update Only" mode.
@@ -39,17 +40,17 @@ A purchase object is an object that gets passed through the API when a purchase 
 }
 ```
 
-- [External User ID]({{site.baseurl}}/api/basics/#user-ids)
+- [External user ID]({{site.baseurl}}/api/basics/#user-ids)
 - [App identifier]({{site.baseurl}}/api/identifier_types/)
 - [ISO 4217 Currency Code Wiki][20]
 - [ISO 8601 Time Code Wiki][22]
 
 ## Purchase product_id
 
-Within the purchase object, The `product_id` is an identifier for the purchase (e.g, `Product Name` or `Product Category`):
+Within the purchase object, the `product_id` is an identifier for the purchase (such as `Product Name` or `Product Category`):
 
-- Braze allows you to store a maximum of 5,000 `product_id`s in the dashboard.
-- `product_id` maximum is 255 characters
+- Braze allows you to store up to 5,000 `product_id`s in the dashboard.
+- The `product_id` can be up to 255 characters.
 
 ### Product ID naming conventions
 
@@ -59,9 +60,10 @@ This helps make products easy to identify for segmentation and triggering.
 
 ### Log purchases at the order level
 
-If you want to log purchases at the order level instead of the product level, you can use order name or order category as the `product_id` (for example, Online Order or Completed Order).
+If you want to log purchases at the order level instead of the product level, you can use order name or order category as the `product_id` (such as `Online Order` or `Completed Order`).
 
-For example, to log purchases at the order level in the Web SDK: 
+For example, to log purchases at the order level in the Web SDK:
+
 ```html
 POST https://YOUR_REST_API_URL/users/track
 Content-Type: application/json
@@ -109,9 +111,9 @@ Event property objects that contain array or object values can have an event pro
 
 ### Purchase property naming conventions
 
-It is important to note that this feature is enabled **per product**, not per purchase. For example, if a customer has a high volume of distinct products, but each has the same properties, segmenting becomes rather meaningless, 
+It is important to note that this feature is enabled **per product**, not per purchase. For example, if a customer has a high volume of distinct products, but each has the same properties, segmenting becomes rather meaningless.
 
-In this instance, this is why when setting the data structures, we recommend using product names at a "group-level" instead of something granular. For example, a train ticket company should have products for "single trip", "return trip", "multi-city", and not specific transactions such as "transaction 123", "transaction 046", etc. Or for example, with the purchase event 'food', properties would be best set as "cake" and "sandwich".
+In this instance, this is why when setting the data structures, we recommend using product names at a "group-level" instead of something granular. For example, a train ticket company should have products for "single trip", "return trip", "multi-city", and not specific transactions such as "transaction 123" or "transaction 046". Or for example, with the purchase event "food", properties would be best set as "cake" and "sandwich".
 
 ### Example purchase object
 ```html
@@ -166,11 +168,8 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 Using the example provided, we can see that someone bought a backpack with the properties: color, monogram, checkout duration, size, and brand. We can then create segments with these properties by using [purchase event properties][2] or send custom messages through a channel using Liquid. For example, "Hello **Ann F.**, Thanks for purchasing that **red, medium backpack** for **$40.00**! Thanks for shopping at **Backpack Locker**!"
 
-If you do want to save, store and track properties to segment with, you need to set them up as custom attributes. This can be done with the power of webhooks! Using webhooks, you can tell Braze to "listen" for whenever a purchase event happens and then set up the webhook so that it parses the properties and saves them as custom attributes. Now that these properties are custom attributes, we can see and segment these properties in the dashboard.
+If you do want to save, store and track properties to segment with, you need to set them up as custom attributes. This can be done using [Segment Extensions]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/), which allow you to target users based on custom event or purchase behavior stored for the lifetime of that user profile.
 
-For information on how to set up this type of webhook, check out [Braze to Braze webhooks][1].
-
-[1]: {{site.baseurl}}/user_guide/message_building_by_channel/webhooks/braze_to_braze_webhooks/
 [2]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/purchase_events/#purchase-properties
 [20]: http://en.wikipedia.org/wiki/ISO_4217 "ISO 4217 Currency Code"
 [21]: {{site.baseurl}}/api/api_key/#the-app-identifier-api-key

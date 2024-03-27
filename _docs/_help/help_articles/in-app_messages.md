@@ -6,7 +6,7 @@ guide_top_header: "In-App Message Help Articles"
 guide_top_text: "The following help articles provide troubleshooting information for common issues with in-app messages."
 
 page_type: landing
-description: "This landing page is home to help articles related to common issues with in-app messages."
+description: "This landing page is home to help articles on common issues with in-app messages."
 channel: in-app messages
 noindex: true
 guide_menu_title: ""

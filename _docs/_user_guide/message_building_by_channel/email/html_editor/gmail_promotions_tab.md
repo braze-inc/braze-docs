@@ -20,8 +20,8 @@ First, forward your domains and subdomains to Google’s Promotions Tab outreach
 
 Follow these steps to build a Gmail promotion card for an email campaign. Note that navigating away from the **Content** section in the editor will reset the fields and information in the **Gmail Promotion** tab. Complete the setup of your promotion card, and copy the HTML generated so you don't lose your HTML code.
 
-1. [Create your email campaign][7] as you usually would. 
-2. Go to the **Content** section in the editor and select the **Gmail Promotion** tab.
+1. [Create your email campaign][7], and select the **HTML Editor** as your editing experience.
+2. Go to the **Content** section in the HTML editor, and select the **Gmail Promotion** tab.
 3. Fill out the fields under **Basic Information**, then click **Generate HTML Code**. This will help generate the script for your Gmail Promo Tab card under the **Copy and Paste HTML code into `<Head>`** section. <br> ![An example of how to build a card.][2]
 4. Choose whether to include only a discount offer, promotion cards, or both for your Gmail Promotion card. <br> ![Options to include a discount offer and promotion cards.][10]{: style="max-width:50%;"}
 5. Copy and paste the script into the `<head>` element of your email's HTML.
@@ -86,7 +86,7 @@ Due to Google's privacy and safety regulations, emails with annotations must be 
 
 ### How are clicks on a promotion card or product carousel tracked?
 
-If you're using links within each promotion card or product carousel, these clicks are tracked by email click tracking. Email opens are tracked when a user opens the email.  
+Braze or any other ESPs are not able to insert link tracking on links in the header section. This means clicks cannot be tracked on a promotion card or product carousel.
 
 ### Is there a way to see how many users received a product carousel?
 

@@ -25,7 +25,7 @@ Push notifications are a great tool for attracting new users and making re-engag
 
 | Use Case | Explanation |
 | -------- | ----------- |
-| Initial Onboarding | Until users take the initial steps towards using your app (such as registering an account), their value is severely limited. Use push notifications to urge users to complete these steps so they can begin using your app in full. |
+| Initial Onboarding | Until users take the initial steps toward using your app (such as registering an account), their value is severely limited. Use push notifications to urge users to complete these steps so they can begin using your app in full. |
 | First Purchases | After users are comfortable using your app, you can use push notifications to help convert them into in-app purchasers. |
 | New Features | Push notifications can be effective in notifying disengaged users about new features that might attract them back to your app. |
 | Time Sensitive Offers | If you have a clock ticking on an offer, sometimes push is a great way to let your users know about it before it expires. These messages generally carry a high sense of urgency and are optimal for reminding recently-lapsed users about your app.<br><br> For example, suppose your app is a game and you offer your users an in-game currency bonus if they maintain a streak of playing the game daily. Alerting a user that that streak is in danger of being broken could be a reasonable push if they've exceeded a certain number of days. |

@@ -11,10 +11,6 @@ channel:
 
 # Custom keyword handling
 
-{% alert important %}
-Are you currently a non-native SMS client? If so, visit the [non-native SMS documentation](/docs/user_guide/message_building_by_channel/sms/non_native/) for your corresponding keyword handling article.
-{% endalert %}
-
 > This reference article covers how Braze deals with two-way SMS messaging and auto-responses. This includes explanations on how keyword triggering works as well as custom keyword categories and multi-language support.
 
 ## Two-way messaging (custom keyword responses)
@@ -36,7 +32,7 @@ To define your own keywords, do the following:
 
 1. In the Braze dashboard, go to **Audience** > **Subscription Groups** and select your SMS subscription group.<br><br>
 2. Under **SMS Global Keywords**, click the pencil icon next to the keyword category you want to add a keyword to. ![]({% image_buster /assets/img/sms/sms_keywords.png %})<br><br>
-3. In the tab that opens, add a keyword you want to trigger this keyword category. Note that keywords are case sensitive, and universal keywords like `START`, `YES`, and `UNSTOP` cannot be changed. ![Editing keywords for "Opt-In" category. Added keywords are "START", "UNSTOP", and "YES". The reply message field reads "You have been unsubscribed to messages from this number. Reply HELP for help. Reply STOP to unsubscribe. Message and data rates may apply."]({% image_buster /assets/img/sms/keyword_edit2.png %})
+3. In the tab that opens, add a keyword you want to trigger this keyword category. Note that keywords are case insensitive, and universal keywords like `START`, `YES`, and `UNSTOP` cannot be changed. ![Editing keywords for "Opt-In" category. Added keywords are "START", "UNSTOP", and "YES". The reply message field reads "You have been unsubscribed to messages from this number. Reply HELP for help. Reply STOP to unsubscribe. Message and data rates may apply."]({% image_buster /assets/img/sms/keyword_edit2.png %})
 
 The following rules apply to keywords and keyword responses:
 

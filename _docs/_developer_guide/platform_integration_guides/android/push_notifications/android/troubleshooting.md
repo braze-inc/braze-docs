@@ -42,6 +42,14 @@ Braze provides push notification errors within the message activity log. This er
 
 ## Troubleshooting scenarios
 
+### Push isn't sending
+
+Your push messages might not be sending because of the following situations:
+
+- Your credentials exist in the wrong Google Cloud Platform project ID (wrong sender ID).
+- Your credentials have the wrong permission scope.
+- You uploaded wrong credentials to the wrong Braze workspace (wrong sender ID).
+
 ### No "push registered" users showing in the Braze dashboard (prior to sending messages)
 
 Confirm that your app is correctly configured to allow push notifications. Common failure points to check include:

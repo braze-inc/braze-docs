@@ -29,7 +29,7 @@ Yes, they do. Keep this in mind when testing messages.
 
 ### Does a user need to be part of an SMS subscription group to receive SMS test messages?
 
-No. However, SMS test messages can only be sent to valid phone numbers in the database.
+Yes, they do. Users must have a valid phone number and be part of the SMS subscription group used for the test send.
 
 ### Do you need to rate-limit how fast you send SMS messages?
 

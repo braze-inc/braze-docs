@@ -414,6 +414,10 @@ For Content Cards, this metric is calculated differently depending on what you s
 SMS
 {% endapitags %}
 
+{% alert note %}
+*Sends to Carrier* is deprecated, but will continue to be supported for users that already have it.
+{% endalert %}
+
 This stat is the sum of Confirmed Deliveries, Rejections, and Sends where delivery or rejection was not confirmed by the carrier. There are instances where carriers do not provide delivery or rejected confirmation, as some carriers do not provide this confirmation or were unable to do so at the time of send.
 
 <span class="calculation-line">Calculation: Count</span>
@@ -477,25 +481,6 @@ The total number (and percentage) of users who clicked within the delivered emai
     </ul>
 </span>
 {:/}
-
-{% endapi %}
-
-{% api %}
-
-### Total Direct Purchases
-
-{% apitags %}
-Email, Content Cards, In-App Message, Web Push, iOS Push, Android Push
-{% endapitags %}
-
-The total number of purchases made, based on last-click attribution*. This metric counts multiple purchases from a single user, for example if one user makes two purchases, the count will increment by two. This metric is only available on Campaign Comparison Reports, via the [Report Builder]({{site.baseurl}}/user_guide/data_and_analytics/reporting/report_builder/).
-
-*Last-click attribution means that in order for revenue to be attributed to a campaign, that campaign must:
-
-1. Be the last campaign the user clicked prior to purchasing, and
-2. Be clicked by the user less than 3 days prior to purchasing.
-
-<span class="calculation-line">Calculation: (Total Direct Purchases)</span>
 
 {% endapi %}
 
@@ -601,23 +586,6 @@ Distinct number of recipients who have clicked within a message at least once. T
     </ul>
 </span>
 {:/}
-
-{% endapi %}
-
-{% api %}
-
-### Unique Direct Purchases
-
-{% apitags %}
-Email, Content Cards, In-App Message, Web Push, iOS Push, Android Push
-{% endapitags %}
-
-The number of users who purchased, based on last-click attribution*. This metric is only available on Campaign Comparison Reports, via the [Report Builder]({{site.baseurl}}/user_guide/data_and_analytics/reporting/report_builder).
-
-*Last-click attribution means that in order for revenue to be attributed to a campaign, that campaign must:
-
-1. Be the last campaign the user clicked prior to purchasing, and
-2. Be clicked by the user less than 3 days prior to purchasing.
 
 {% endapi %}
 

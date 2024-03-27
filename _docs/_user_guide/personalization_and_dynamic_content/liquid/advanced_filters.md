@@ -51,11 +51,9 @@ The `assign` tag can be combined with HTML to save you time and effort when crea
 | `property_accessor` | Takes a hash and hash key and returns the value in that hash at that key |
 {: .reset-td-br-1 .reset-td-br-2}
 
-Example hash : `{"a" => 42, "b" => 0}`
-
-Example input: `{{hash | property_accessor: 'a'}}`
-
-Example output: `42`
+**Example hash:** `{"a" => 42, "b" => 0}`
+**Example input:** `{{hash | property_accessor: 'a'}}`
+**Example output:** `42`
 
 Additionally, the property accessor filter allows you to template a custom attribute into a hash key to access a particular hash value.
 

@@ -85,7 +85,7 @@ For example, if we are defining a feature flag that shows an out-of-stock banner
 |`dismissible`|`boolean`|`false`|
 
 {% alert tip %}
-There is no limit to the number of properties you can add, though a feature flag's properties are limited to 10kB in total.
+There is no limit to the number of properties you can add, though a feature flag's properties are limited to 10kB in total. Both property values and keys are limited to 255 characters in length.
 {% endalert %}
 
 #### Targeting
@@ -240,7 +240,7 @@ braze.logFeatureFlagImpression("expanded_user_profile");
 {% tab Swift %}
 
 ```swift
-braze.featureFlags.logImpression(id: "expanded_user_profile")
+braze.featureFlags.logFeatureFlagImpression(id: "expanded_user_profile")
 ```
 
 {% endtab %}

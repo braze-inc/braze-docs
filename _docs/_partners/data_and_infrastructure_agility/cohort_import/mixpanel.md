@@ -12,7 +12,7 @@ search_tag: Partner
 
 ## Data import integration
 
-Any integration you set up will count towards your account's data point volume.
+Any integration you set up will count toward your account's data point volume.
 
 {% alert important %}
 In adherence to Mixpanel's data retention policies, events sent before January 1, 2010 will be removed during import.

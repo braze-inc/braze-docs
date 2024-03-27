@@ -27,10 +27,11 @@ Tracking Custom Events article:
 
 ```json
 {
-  // One of "external_id" or "user_alias" or "braze_id" is required
-  "external_id" : (optional, string), External User ID,
-  "user_alias" : (optional, User Alias Object), User Alias Object,
-  "braze_id" : (optional, string) Braze User Identifier,
+  // One of "external_id" or "user_alias" or "braze_id" or "email" is required
+  "external_id" : (optional, string) External user ID,
+  "user_alias" : (optional, User Alias Object) User alias object,
+  "braze_id" : (optional, string) Braze user identifier,
+  "email": (optional, string) User email address,
   "app_id" : (optional, string) see App Identifier,
   "name" : (required, string) the name of the event,
   "time" : (required, datetime as string in ISO 8601 or in `yyyy-MM-dd'T'HH:mm:ss:SSSZ` format),

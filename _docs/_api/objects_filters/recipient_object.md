@@ -13,27 +13,27 @@ description: "This reference article explains the different components of the Br
 
 Either `external_user_id` or `user_alias` is required in this object. **Requests must specify only one.**
 
-The recipients object allows you to combine the [User Alias object]({{site.baseurl}}/api/objects_filters/user_alias_object/), the [Trigger Properties object]({{site.baseurl}}/api/objects_filters/trigger_properties_object/), and the [Canvas Entry Properties object]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object/).
+The recipients object allows you to combine the [user alias object]({{site.baseurl}}/api/objects_filters/user_alias_object/), the [trigger properties object]({{site.baseurl}}/api/objects_filters/trigger_properties_object/), and the [Canvas entry properties object]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object/).
 
 ## Object body
 
 ```json
 [{
-  "user_alias": (optional, User Alias Object) User Alias of user to receive message,
-  "external_user_id": (optional, string) see External User Id,
+  "user_alias": (optional, User Alias Object) User alias of user to receive message,
+  "external_user_id": (optional, string) see External user ID,
   "trigger_properties": (optional, object) personalization key-value pairs for this user when sending a campaign or message; see Trigger Properties,
   "canvas_entry_properties": (optional, object) personalization key-value pairs for this user when triggering a Canvas; see Canvas Entry Properties
 }]
 ```
 
-- [User Aliases]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/#user-aliases)
-- [External User ID]({{site.baseurl}}/api/objects_filters/user_attributes_object/#braze-user-profile-fields)
+- [User aliases]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/#user-aliases)
+- [External user ID]({{site.baseurl}}/api/objects_filters/user_attributes_object/#braze-user-profile-fields)
 
 ## Recipient object deduping
 
-When making an API call with the Recipient Object, **if there exists a duplicated recipient targeting the same address (that is, email, push), the user will be deduped**, meaning identical users will be removed, leaving one. 
+When making an API call with the recipient object, **if there exists a duplicated recipient targeting the same address (that is, email, push), the user will be deduped**, meaning identical users will be removed, leaving one. 
 
-For example, if the same `external_user_id` is used, then only 1 message will be received. Consider making multiple API calls if you need a work-around for this behavior.
+For example, if the same `external_user_id` is used, then only one message will be received. Consider making multiple API calls if you need a workaround for this behavior.
 
 ```json
 {"campaign_id":"#####","recipients":[

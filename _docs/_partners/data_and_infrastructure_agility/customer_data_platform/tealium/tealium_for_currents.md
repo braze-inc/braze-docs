@@ -20,7 +20,7 @@ The Braze and Tealium integration allows you to seamlessly control the flow of i
 
 | Requirement | Description |
 | ----------- | ----------- |
-| Tealium EventStream and/or Tealium AudienceStream | A [Tealium account](https://my.tealiumiq.com/) is required to take advantage of this partnership. |
+| Tealium EventStream or Tealium AudienceStream | A [Tealium account](https://my.tealiumiq.com/) is required to take advantage of this partnership. |
 | Currents | In order to export data back into Tealium, you need to have [Braze Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/#access-currents) set up for your account. |
 | Tealium URL | These can be obtained by navigating to your Tealium dashboard and copying the ingestion URL.|
 {: .reset-td-br-1 .reset-td-br-2}
@@ -29,7 +29,7 @@ The Braze and Tealium integration allows you to seamlessly control the flow of i
 
 ### Step 1: Create a data source for Braze within Tealium
 
-Instructions for creating a data source can be found on the [Tealium](https://community.tealiumiq.com/t5/Customer-Data-Hub/Braze-Currents-Incoming-Webhook-Setup-Guide/ta-p/36303) site. When completed, Tealium will provide a data source URL to copy, which you will use in the next step.
+Instructions for creating a data source can be found on the [Tealium](https://docs.tealium.com/server-side/data-sources/webhooks/braze-currents/) site. When completed, Tealium will provide a data source URL to copy, which you will use in the next step.
 
 ### Step 2: Create Current
 
