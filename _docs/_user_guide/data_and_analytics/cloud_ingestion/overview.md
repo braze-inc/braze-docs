@@ -358,7 +358,7 @@ The `UPDATED_AT` column should be in UTC to prevent issues with daylight savings
 
 ### Separate EXTERNAL_ID from PAYLOAD column
 
-The PAYLOAD object should not include an external id or other id type. 
+The PAYLOAD object should not include an external ID or other ID type. 
 
 ### Remove an attribute
 
