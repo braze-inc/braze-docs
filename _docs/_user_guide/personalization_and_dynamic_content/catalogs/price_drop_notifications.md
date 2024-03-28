@@ -15,7 +15,7 @@ Price drop notifications for catalogs are currently in early access and is not s
 
 ## How it works
 
-When the selected custom event is performed by a user, and has a `type` property that includes `price_drop`, it can be used to create a price drop subscription for a combination of that user and catalog item that it occurred for, Once the item's price drops by the specified amount, users can be notified through a Canvas.
+When the selected custom event is performed by a user, and has a `type` property that includes `price_drop`, it can be used to create a price drop subscription for a combination of that user and catalog item that it occurred for. Once the item's price drops by the specified amount, users can be notified through a Canvas.
 
 Price drop notifications are determined by notification rules. If the user has not opted in to notifications, they will be filtered out and will not receive messaging.
 
