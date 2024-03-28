@@ -21,7 +21,7 @@ Price drop notifications are determined by notification rules. If the user has n
 
 Users are only subscribed for 90 days. If an item does not drop in price within 90 days, the user is removed from the subscription. Braze will process up to 10 item updates per minute. This means if you update 11 items in one minute, only the first 10 items will trigger the notifications.
 
-## Setting up Price drop notifications
+## Setting up price drop notifications
 
 Follow these steps to set up price drop notifications in a specific catalog.
 
@@ -61,8 +61,8 @@ Now, your customers will be notified when an item's price drops.
 {% raw %}
 To template in details about the catalog item that has dropped in price, you can use the `canvas_entry_properties` Liquid tag to access the `item_id`. 
 
-Using ``{{canvas_entry_properties.${catalog_update}}}`` will return the ID of the item that dropped in price.
-Use this Liquid tag  ``{% catalog_items <name_of_your_catalog> {{canvas_entry_properties.${catalog_update}}} %}`` at the top of your message, then use ``items[0].<field_name>` to access data about that item throughout the message.
+Using ``{{canvas_entry_properties.${catalog_update}.item_id}}`` will return the ID of the item that dropped in price.
+Use this Liquid tag  ``{% catalog_items <name_of_your_catalog> {{canvas_entry_properties.${catalog_update}}} %}`` at the top of your message, then use ``{{items[0].<field_name>}}` to access data about that item throughout the message.
 {% endraw %}
 
 [1]: {% image_buster /assets/img/price_drop_notification.png %} 
