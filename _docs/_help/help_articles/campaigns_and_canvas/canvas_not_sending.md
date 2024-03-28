@@ -34,5 +34,3 @@ Consider the following questions for your target audience:
 - Do the users qualify to receive the first step of your variants? For example, if the first step of your Canvas is a push notification, but the entry audience is all push-disabled, then no users will receive messages.
 
 Still need help? Review the steps for [creating a Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/), or open a [support ticket]({{site.baseurl}}/braze_support/).
-
-_Last updated on November 16, 2022_

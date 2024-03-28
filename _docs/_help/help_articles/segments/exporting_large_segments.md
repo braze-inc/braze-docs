@@ -21,5 +21,3 @@ You can also leverage the following endpoints to export user data for a specific
 - [`/users/export/global_control_group`]({{site.baseurl}}/api/endpoints/export/user_data/post_users_global_control_group/)
 
 Still need help? Open a [support ticket]({{site.baseurl}}/braze_support/).
-
-_Last updated on October 24, 2022_

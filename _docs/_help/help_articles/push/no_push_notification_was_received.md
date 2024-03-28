@@ -65,8 +65,6 @@ Check that you're using the correct type of push notification. For example, if y
 
 Still need help? Open a [support ticket]({{site.baseurl}}/braze_support/).
 
-_Last updated on January 21, 2021_
-
 [1]: {{site.baseurl}}/user_guide/engagement_tools/segments/using_user_search/#engagement-tab
 [2]: {% image_buster /assets/img_archive/trouble1.png %}
 [3]: {% image_buster /assets/img_archive/trouble2.png %}

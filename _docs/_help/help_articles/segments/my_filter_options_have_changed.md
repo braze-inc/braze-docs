@@ -22,6 +22,4 @@ Keep in mind that changing the data type of a custom attribute in the dashboard 
 
 Still need help? Open a [support ticket]({{site.baseurl}}/braze_support/).
 
-_Last updated on May 5, 2021_
-
 [36]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#custom-attribute-data-types

@@ -30,8 +30,6 @@ To learn more about managing your email subscriptions and campaign, check out [B
 
 Still need help? Open a [support ticket]({{site.baseurl}}/braze_support/).
 
-_Last updated on November 16, 2022_
-
 [1]: {{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions
 [2]: {{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices
 [3]: {{site.baseurl}}/user_guide/administrative/app_settings/message_activity_log_tab/

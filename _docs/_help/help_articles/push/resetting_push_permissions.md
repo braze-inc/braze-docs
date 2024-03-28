@@ -83,6 +83,3 @@ These steps are for macOS only, as Apple does not support Web Push for Safari on
 8. Click **Done**.
 
 Your push permissions are now reset. Open a new tab to your site and try it out.
-
-
-*Last updated on February 12, 2024*

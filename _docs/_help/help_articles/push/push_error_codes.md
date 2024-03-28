@@ -56,5 +56,3 @@ This generally happens when someone uninstalls. Braze queries the APNS Feedback 
 
 {% endtab %}
 {% endtabs %}
-
-_Last updated on January 24, 2021_

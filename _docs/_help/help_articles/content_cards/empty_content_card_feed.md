@@ -18,5 +18,3 @@ If you want a new user to receive cards, do one of the following:
 - Create an action-based delivery campaign. They will receive this card the next time they perform the selected action.
 
 Still need help? Open a [support ticket]({{site.baseurl}}/braze_support/).
-
-_Last updated on April 17, 2023_

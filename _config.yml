@@ -39,6 +39,7 @@ kramdown:
 
 plugins:
   - jekyll-algolia
+  - jekyll-last-modified-at # https://github.com/gjtorikian/jekyll-last-modified-at
 
 # Allows the DocSearch element to be inspected. Set to true locally, but don't
 # check in in that state, or it will cause undesirable behavior in prod.
