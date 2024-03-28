@@ -1866,7 +1866,7 @@ This event occurs when a user is enrolled in a control variant set on a multi-va
 Subscription
 {% endapitags %}
 
-This event occurs when the subscription state of a user in a subscription group changes.
+This event occurs when the subscription state of a user in a subscription group changes, including if the subscription state is changed to the same state.
 
 {% alert important %}
 Subscription groups are only available for email, SMS, and WhatsApp channels at this time.
@@ -1929,7 +1929,7 @@ Subscription groups are only available for email, SMS, and WhatsApp channels at 
 Subscription
 {% endapitags %}
 
-This event occurs when the global subscription state of the user changes.
+This event occurs when the global subscription state of the user changes, including if the subscription state doesn't change for the user.
 
 ```json
 // Global State Change: users.behaviors.subscription.GlobalStateChange
