@@ -31,7 +31,7 @@ With Audience Paths, you can:
 
 ![][1]{: style="float:right;max-width:20%;margin-left:15px;"}
 
-To create an Audience Paths component, perform the following steps: 
+To add an Audience Paths step, do the following: 
 
 1. Add a step to your Canvas. 
 2. Drag and drop the component from the sidebar, or click <i class="fas fa-plus-circle"></i> **Add** at the bottom of a step and select **Audience Paths**.
@@ -40,13 +40,13 @@ The default Audience Paths component contains two default audience groups, **Gro
 
 ### Defining audience groups
 
-The following screenshot shows the layout of an expanded Audience Paths component. Here, you can define up to eight audience groups (one preset and seven customizable). To define an audience group, select the group name from the Audience Paths composer. You can rename your audience group, choose the filters and segments that apply to your group, and add or delete groups.
+The following screenshot shows the layout of an expanded Audience Paths step. Here, you can define up to eight audience groups (one preset and seven customizable). To define an audience group, select the group name from the Audience Paths editor. You can rename your audience group, choose the filters and segments that apply to your group, and add or delete groups.
 
-For example, if you wanted to send a group of users helpful food recommendations, you might select custom attribute filters you have already built out such as "Loves Asian Cuisine", "Loves Latin Cuisine", "Loves European Cuisine", etc. 
+For example, if you wanted to send a group of users helpful food recommendations, you might select custom attribute filters you have already built out such as "Loves Asian Cuisine", "Loves Latin Cuisine", and "Loves European Cuisine". 
 
 ![][3]{: style="max-width:90%;margin-left:15px;"}
 
-After the Audience Paths component is completed, each audience group will have a separate branch. You can continue using Audience Paths to further filter your audience, or continue your Canvas journey with the standard Canvas components. 
+After the Audience Paths step is complete, each audience group will have a separate branch. You can continue using Audience Paths to further filter your audience, or continue your Canvas journey with the standard Canvas steps. 
 
 ![][4]{: style="max-width:90%;margin-left:15px;"}
 
@@ -60,14 +60,15 @@ After adding segments and filters to your audience, you can test if your audienc
 
 The true power of Audience Paths lies in the ability to assign priority. While this feature doesn't need to be used strategically, some marketers may find themselves pushing certain products to users such as specials or limited-edition releases. 
 
-By assigning a high priority to these groups, you can target users that fall into specific filters and segments while still targeting users that might not fit those specific criteria—all in a single Canvas component.
+By assigning a high priority to these groups, you can target users that fall into specific filters and segments while still targeting users that might not fit those specific criteria—all in a single Canvas step.
 
 ![][2]{: style="float:right;max-width:40%;margin-left:15px;margin-bottom:15px;"}
+
 For example, let's say you wanted to send a group of users ads for new products. You'd start by ranking filters that fall under those products high on the Audience Path. If you were creating a marketing campaign for the company "Big Brand" and a new shoe brand had just released, you might select filters like "Likes Big Brand Shoes" or "Likes Big Brand", and send different email messages based on what filtered group they fall into. 
 
-When users enter this Audience Paths component, they will first be evaluated if they fall under the highest-ranked audience group: audience group 1 "Likes Big Brand Shoes". If so, they will continue to the next component defined in your Canvas. If they don't "Like Big Brand Shoes", they will then be evaluated for the next audience group, audience group 2 "Likes Big Brand", and will continue to the next Canvas component if the criteria are met. Lastly, users don't fall into the previous groups would fall into the **Everybody Else** group and continue to the next Canvas component you define for that path.
+When users enter this Audience Paths component, they will first be evaluated if they fall under the highest-ranked audience group: Audience Group A "Likes Big Brand Shoes". If so, they will continue to the next component defined in your Canvas. If they don't "Like Big Brand Shoes", they will then be evaluated for the next audience group, Audience Group B "Likes Big Brand", and will continue to the next Canvas component if the criteria are met. Lastly, users don't fall into the previous groups would fall into the **Everybody Else** group and continue to the next Canvas component you define for that path.
 
-You can also see the performance of this component using [Canvas analytics][5].
+You can also see the performance of this step using [Canvas analytics]({{site.baseurl}}/user_guide/engagement_tools/canvas/testing_canvases/measuring_and_testing_with_canvas_analytics/#performance-visualization).
 
 ### Segmenting Audience Paths with random bucket numbers
 
@@ -79,8 +80,6 @@ In this scenario, try using [Experiment Paths]({{site.baseurl}}/user_guide/engag
 
 [0]: {% image_buster /assets/img/audience_path/audience_path.png %}
 [1]: {% image_buster /assets/img/audience_path/audience_path1.png %}
-[1]: {% image_buster /assets/img/audience_path/audience_path1.png %}
 [2]: {% image_buster /assets/img/audience_path/audience_path2.png %}
 [3]: {% image_buster /assets/img/audience_path/audience_path3.png %}
 [4]: {% image_buster /assets/img/audience_path/audience_path4.png %}
-[5]: {{site.baseurl}}/user_guide/engagement_tools/canvas/testing_canvases/measuring_and_testing_with_canvas_analytics/#performance-visualization

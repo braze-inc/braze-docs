@@ -59,7 +59,7 @@ Here, you will find the REST endpoint and generate your Braze data import key. A
 3. Provide the data import key and Braze REST endpoint.
 4. Save the connection, and it will be available to link to any new or existing audience.
 
-![The AppsFlyer audiences platform partner connection configuration page. The lower part of the images shows that the Braze external id box is checked.][6]{: style="max-width:80%;"}
+![The AppsFlyer audiences platform partner connection configuration page. The lower part of the images shows that the Braze external ID box is checked.][6]{: style="max-width:80%;"}
 
 ### Step 4: Using AppsFlyer Audiences cohorts in Braze
 
