@@ -770,12 +770,6 @@ var ticket_lookuptable = {
           'Links':  ['']
         }
       }
-    },
-    'Other' :{
-      'ShowSubmit': true,
-      'Label': '* Category',
-      'LinksTitle': ['Help Articles','Best Practices and Frequently Asked Questions','SDK Changelog','Documentation Release Notes'],
-      'Links': ['{{site.baseurl}}/help/help_articles/','{{site.baseurl}}/help/faqs/', '{{site.baseurl}}/developer_guide/platform_integration_guides/sdk_changelogs','{{site.baseurl}}/help/release_notes/']
     }
   }
 }
