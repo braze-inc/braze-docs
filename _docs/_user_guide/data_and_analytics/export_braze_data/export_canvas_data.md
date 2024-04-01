@@ -24,7 +24,7 @@ To export data for a Canvas, do the following:
   - **CSV Export User Data** or
   - **CSV Export Email Address**.
 
-You can also export user data for all the recipients of a Canvas as a CSV file.
+You can also export user data for all the entrants of a Canvas as a CSV file.
 
 ## Exporting data for a component (original workflow only)
 
