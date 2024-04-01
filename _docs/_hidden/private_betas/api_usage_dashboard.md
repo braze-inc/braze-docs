@@ -65,4 +65,4 @@ The **Last 3 Hours** and **Last 6 Hours** options will show traffic by minutes. 
 
 The API usage dashboard includes all REST API requests that Braze received and returned a `2XX`, `4XX`, or `5XX` response for. This includes Data Transformation outputs and Cloud Data Ingestion syncs. SDK traffic and User Update steps are not included in this dashboard.
 
-During periods of high usage, you can refresh the dashboard up to 4 times per minute. You may need to wait a few minutes before refreshing the dashboard again.
+Data shown in the dashboard may have up to a 15 minute delay in showing recent traffic. During periods of high usage, you can refresh the dashboard up to 4 times per minute. You may need to wait a few minutes before refreshing the dashboard again.
