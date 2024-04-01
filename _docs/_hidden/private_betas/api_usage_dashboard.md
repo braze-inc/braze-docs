@@ -26,7 +26,7 @@ The default dashboard is a view of all incoming REST API requests for your works
 
 ### Filters
 
-The dashboard can be filtered to show a more narrow view of REST API traffic for your workspace. These filters include:
+Apply filters to narrow the view of REST API traffic for your workspace. Available filters include:
 
 - API endpoint
 - API key
@@ -34,7 +34,7 @@ The dashboard can be filtered to show a more narrow view of REST API traffic for
 
 ### Group data
 
-The dashboard can be configured to group data into various data series. The grouping options are:
+Group data into various data series to explore different patterns in your usage. Available grouping options are:
 
 - Response codes (default)
 - API endpoint
@@ -43,7 +43,7 @@ The dashboard can be configured to group data into various data series. The grou
 
 ### Date
 
-The dashboard can be configured to show a smaller or greater time range. The available date options include:
+Adjust the date filter to show a smaller or greater time range as needed. Available date options include:
 
 - Today (default)
 - Custom
