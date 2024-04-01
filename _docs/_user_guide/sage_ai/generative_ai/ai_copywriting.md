@@ -18,18 +18,21 @@ To generate copy using the AI copywriting assistant, follow these steps:
 2. Enter a product name or description in the input field.
 3. Select the output language. This can be different from your input language.
 4. Choose a message tone from the available options. This will determine the style of the copy generated.
-5. Select an approximate output length. 
+5. Select an approximate output length. You can also choose a channel to set the length, or short, medium, or long.
+6. Optional: For Mobile Push, check the box labeled "Reference past campaign data" to use your previous Mobile Push campaigns as a stylistic example for GPT to use as a starting point for generating new copy.
 6. Click **Generate Copy**.
 
-The response will be fetched from OpenAI and provided to you. Feel free to experiment and try variations to your heart's content. 
+We use the information you provide to prompt GPT to write copy for you. The response will be fetched from OpenAI and provided to you. 
 
-![AI copywriting assistant modal showing the input "Braze Marketing Automation", which generated the output: "Looking to take your marketing to the next level? Braze Marketing Automation is the solution for you! With our powerful tools, you'll be able to create, send, and track your marketing campaigns with ease. So why wait? Sign up today and see the results yourself!"][1]{: style="max-width:70%;"}
-
-All we do behind the scenes is instruct GPT to generate a creative ad for your product name or description in the desired format. No other customization is performed. The rest is the magic of GPT! 
+![AI copywriting assistant modal showing various features available"][1]{: style="max-width:70%;"}
 
 {% alert important %}
 We filter out responses for offensive content that violates OpenAI's [content policy](https://beta.openai.com/docs/usage-guidelines/content-policy).
 {% endalert %}
+
+## Using past campaign data
+
+When using Mobile Push, if you check the box labeled "Reference past campaign data", randomly selected previous mobile push campaigns will be sent to OpenAI so that GPT can use it as a basis for its copy generation. If you do not wish to leverage this ability, simply leave this box unchecked. See below for more information on how we and OpenAI use your data.
 
 ## What is GPT?
 
@@ -37,10 +40,10 @@ We filter out responses for offensive content that violates OpenAI's [content po
 
 ## How is my data used and sent to OpenAI?
 
-In order to generate copy, Braze will send your query to OpenAI. All queries sent to OpenAI from Braze are anonymized, meaning that OpenAI will not be able to identify from whom the query was sent unless you include uniquely identifiable information in the input you provide. Per [OpenAI’s policy](https://openai.com/policies/api-data-usage-policies), data sent to OpenAI’s API via Braze is not used to train or improve their models and will be deleted after 30 days. Between you and Braze, any content generated using GPT is your intellectual property. Braze will not assert any claims of copyright ownership on such content and makes no warranty of any kind with respect to any AI-generated content.
+In order to generate copy, Braze will send your query to OpenAI. All queries sent to OpenAI from Braze are anonymized, meaning that OpenAI will not be able to identify from whom the query was sent unless you include uniquely identifiable information in the input you provide or in your past campaign data when enabling the option labeled "Reference past campaign data". Per [OpenAI’s policy](https://openai.com/policies/api-data-usage-policies), data sent to OpenAI’s API via Braze is not used to train or improve their models and will be deleted after 30 days. Between you and Braze, any content generated using GPT is your intellectual property. Braze will not assert any claims of copyright ownership on such content and makes no warranty of any kind with respect to any AI-generated content.
 
 ## More AI tools
 
 You can also [generate an image using AI]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/media_library/#generate-ai) from the media library. This leverages DALL·E 2, an AI system from OpenAI that can create realistic images and art from a description in natural language.
 
-[1]: {% image_buster /assets/img/ai_copywriter/gpt3.png %} "GPT3"
+[1]: {% image_buster /assets/img/ai_copywriter/ai_copywriter_with_rag.png %} "GPT3"
