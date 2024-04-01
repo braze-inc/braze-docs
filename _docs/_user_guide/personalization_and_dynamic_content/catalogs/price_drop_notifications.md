@@ -63,4 +63,4 @@ To template in details about the catalog item that has dropped in price, you can
 Using {%raw%}``{{canvas_entry_properties.${catalog_update}.item_id}}``{%endraw%} will return the ID of the item that dropped in price.
 Use this Liquid tag {%raw%}``{% catalog_items <name_of_your_catalog> {{canvas_entry_properties.${catalog_update}}} %}``{%endraw%} at the top of your message, then use {%raw%}`{{items[0].<field_name>}}`{%endraw%} to access data about that item throughout the message.
 
-[1]: {% image_buster /assets/img/price_drop_notification.png %} 
+[1]: {% image_buster /assets/img/price_drop_notifications.png %} 
