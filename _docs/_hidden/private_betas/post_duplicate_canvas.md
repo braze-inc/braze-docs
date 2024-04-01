@@ -8,7 +8,7 @@ description: "This article outlines details about the Duplicating Canvases endpo
 ---
 
 {% api %}
-# Duplicate campaigns via API
+# Duplicate Canvases via API
 {% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %} 
 /canvas/duplicate
 {% endapimethod %}
