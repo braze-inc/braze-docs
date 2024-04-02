@@ -32,7 +32,7 @@ We filter out responses for offensive content that violates OpenAI's [content po
 
 ## Using past campaign data
 
-When using Mobile Push, if you check the box labeled "Reference past campaign data", randomly selected previous mobile push campaigns will be sent to OpenAI so that GPT can use it as a basis for its copy generation. If you do not wish to leverage this ability, simply leave this box unchecked. See below for more information on how we and OpenAI use your data.
+When using push as your output length, if you select **Reference past campaign data**, randomly selected previous mobile push campaigns will be sent to OpenAI so that GPT can use it as a basis for its copy generation. Leave this box unchecked if you do not want to leverage this ability. See the following sections for more information on how Braze and OpenAI use your data.
 
 ## What is GPT?
 
