@@ -87,6 +87,7 @@ You can manage these user claims and values from the **Manage claim** section.
 {% endtab %}
 {% endtabs %}
 
+{: start="8"}
 8. Go to the **Set up Single Sign-On with SAML** page, then scroll to the **SAML Signing Certificate** section and download the appropriate **Certificate (Base64)** based on your requirements.
 9. Go to the **Set up Braze** section and copy the appropriate URLs for use in the [Braze configuration](#step-3).
 
