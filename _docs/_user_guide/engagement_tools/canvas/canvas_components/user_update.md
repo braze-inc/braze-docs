@@ -18,7 +18,7 @@ With User Update, updates don't count toward your users.Track per minute rate li
 
 Users will only advance to the next Canvas steps after the relevant user updates have been completed. If your subsequent messaging relies on the user updates that you're making, you can ensure that these updates have been completed prior to when the messages send.
 
-## Creating a User Update
+## Creating a user update
 
 Drag and drop the component from the sidebar, or click the <i class="fas fa-plus-circle"></i> plus button at the bottom of the variant or step and select **User Update**. 
 
@@ -46,7 +46,7 @@ The user update step can increase or decrease an attribute value. Select the att
 
 #### Example: Track weekly progress
 
-By incrementing a custom attribute that tracks an event, you could track the number of classes that a user has taken in a week. Using this component, the class count can reset at the start of the week and begin tracking again. 
+By incrementing a custom attribute that tracks an event, you can track the number of classes that a user has taken in a week. Using this component, the class count can reset at the start of the week and begin tracking again. 
 
 ![][7]{: style="max-width:90%;"}
 
@@ -54,19 +54,19 @@ By incrementing a custom attribute that tracks an event, you could track the num
 
 An [array of objects]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/array_of_objects/) is a custom attribute stored on a user's profile that is data rich. This allows you to create a history of the user's interactions with your brand. This allows you to create segments based on a custom attribute that is calculated field, such as purchase history or total lifetime value.
 
-The user update step can add or remove attributes to this array of objects. To update an array, select the array attribute name from your list of attributes and enter the key value.
+The User Update step can add or remove attributes to this array of objects. To update an array, select the array attribute name from your list of attributes and enter the key value.
 
-#### Example: Updating the user's wishlist
+#### Example: Updating a user's wishlist
 
-By adding or removing an item to an array, you can update the user's wishlist.
+Adding or removing an item to an array updates the user's wishlist.
 
 ![][9]{: style="max-width:90%;"}
 
 #### Example: Calculating the shopping cart total
 
-You can use a Canvas to track when a user has items in their shopping cart, when they add new items, when they remove items, and what the total shopping cart value is. 
+Track when a user has items in their shopping cart, when they add new items or remove items, and what the total shopping cart value is. 
 
-1. First, create custom array of objects called `shopping_cart`. Here is an quick example of what this attribute might look like. Note that each item has a unique `product_id` that has more complex data in its own nested array of objects, including `price`.
+1. Create custom array of objects called `shopping_cart`. The following example shows what this attribute may look like. Each item has a unique `product_id` that has more complex data in its own nested array of objects, including `price`.
 
 ```javascript
 {
@@ -89,10 +89,10 @@ You can use a Canvas to track when a user has items in their shopping cart, when
 ```
 
 {:start="2"}
-2. Create a [custom event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) called `add_item_to_cart` that is logged when a user adds an item to the basket. 
-3. Create a Canvas with a target audience of users with this custom event. Now, when a user adds an item to their cart, this Canvas is triggered. You can then target messaging directly to that user, offering coupon codes once they've reached a certain spend, abandoned their cart for a certain amount of time, or anything else you wish. 
+2. Create a [custom event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) named `add_item_to_cart` that is logged when a user adds an item to the basket. 
+3. Create a Canvas with a target audience of users with this custom event. Now, when a user adds an item to their cart, this Canvas is triggered. You can then target messaging directly to that user, offering coupon codes once they've reached a certain spend, abandoned their cart for a certain amount of time, or anything else that aligns with your use case. 
 
-The `shopping_cart` attribute carries the total of many custom events: the total cost of all the items, the total number of items in the cart, if the shopping cart contains a gift, and so on. On a technical level, it might look something like this:
+The `shopping_cart` attribute carries the total of many custom events: the total cost of all the items, the total number of items in the cart, if the shopping cart contains a gift, and so on. This can look something like the following:
 
 ```javascript
 {
@@ -114,7 +114,7 @@ The `shopping_cart` attribute carries the total of many custom events: the total
 }
 ```
 
-## Set Canvas entry property as an attribute
+## Setting Canvas entry property as an attribute
 
 You can use the user update step to persist a `canvas_entry_property`. Let’s say you have an event that triggers when an item is added to a cart. You can store the ID of the most recent item added to cart and use that for a remarketing campaign. Use the personalization feature to retrieve a Canvas entry property and store it in an attribute.
 
@@ -143,7 +143,7 @@ Using the advanced composer, you can also preview and test that the user profile
 
 ![][6]{: style="max-width:90%;"}
 
-### Limitations
+### Considerations
 
 You don't need to include sensitive data like your API key while using the JSON composer as this is automatically provided by the platform. As such, the following fields are unneeded and should not be used in the JSON composer:
 * External user ID
