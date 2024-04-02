@@ -92,8 +92,8 @@ All of the following error codes indicate that no messages will be sent.
 | `401 Unauthorized` | Invalid API key |
 | `403 Forbidden` | The rate plan doesn't support, or the account is otherwise inactivated.|
 | `403 Access Denied` | The REST API key you are using does not have sufficient permissions, check the API key permissions under the **Settings** page.|
-| `404 Not Found` | Invalid URL |
-| `429 Rate Limited` | Over rate limit|
+| `404 Not Found` | Invalid URL. |
+| `429 Rate Limited` | Over rate limit. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% endraw %}
