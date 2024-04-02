@@ -770,12 +770,6 @@ var ticket_lookuptable = {
           'Links':  ['']
         }
       }
-    },
-    'Other' :{
-      'ShowSubmit': true,
-      'Label': '* Category',
-      'LinksTitle': ['Help Articles','Best Practices and Frequently Asked Questions','SDK Changelog','Documentation Release Notes'],
-      'Links': ['{{site.baseurl}}/help/help_articles/','{{site.baseurl}}/help/faqs/', '{{site.baseurl}}/developer_guide/platform_integration_guides/sdk_changelogs','{{site.baseurl}}/help/release_notes/']
     }
   }
 }
@@ -1181,7 +1175,7 @@ $( document ).ready(function() {
     $('#ticket_mainform').hide();
 
     $('#ticket_thankyou').fadeIn("slow");
-    $('#ticket_thankyou_msg').html('<h3>Thanks for your submission!</h3>A member of our Support Team will respond to your ticket soon.<br />If you did not get a confirmation email, Check your browser\'s addon, content/privacy setting and email spam folder.<br />Otherwise, Contact your Success Manager (or email us at <a href="mailto:support@braze.com">support@braze.com</a>) to make sure your ticket has been submitted.');
+    $('#ticket_thankyou_msg').html('<h3>Thanks for your submission!</h3>A member of our Support team will respond to your ticket soon.<br />If you did not get a confirmation email, check your browser\'s addon, content/privacy setting and email spam folder.<br />Otherwise, contact your success manager (or email us at <a href="mailto:support@braze.com">support@braze.com</a>) to make sure your ticket has been submitted.');
     $("html, body").animate({ scrollTop: 0 }, "slow");
   });
   $('#ticket_issue').popover();
