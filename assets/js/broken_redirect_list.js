@@ -1113,5 +1113,6 @@ validurls['/docs/developer_guide/platform_integration_guides/cordova/cordova_int
 validurls['/docs/developer_guide/platform_integration_guides/cordova/cordova_integration/#news-feed'] = '/docs/developer_guide/platform_integration_guides/cordova/other_integrations/';
 
 validurls['/docs/list-unsubscribe/'] = '/docs/user_guide/administrative/app_settings/email_settings/#list-unsubscribe-header';
+validurls['/docs/user_guide/data_and_analytics/cloud_ingestion/file_integrations/'] = 'docs/user_guide/data_and_analytics/cloud_ingestion/file_storage_integrations/';
 
 // validurls['OLD'] = 'NEW';
