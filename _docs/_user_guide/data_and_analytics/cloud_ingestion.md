@@ -19,7 +19,7 @@ guide_featured_list:
     link: /docs/user_guide/data_and_analytics/cloud_ingestion/integrations/
     fa_icon: fa-solid fa-database
   - name: File Storage Integrations
-    link: /docs/user_guide/data_and_analytics/cloud_ingestion/file_storage_integrations/
+    link: /docs/user_guide/data_and_analytics/cloud_ingestion/file_integrations/
     fa_icon: fa-solid fa-folder-open  
   - name: Sync Catalogs Data
     link: /docs/user_guide/data_and_analytics/cloud_ingestion/sync_catalogs_data/
