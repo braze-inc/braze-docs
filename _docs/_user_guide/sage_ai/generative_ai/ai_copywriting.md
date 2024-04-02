@@ -16,11 +16,11 @@ To generate copy using the AI copywriting assistant, follow these steps:
 1. From your message composer, select <i class="fa-solid fa-wand-magic-sparkles"></i> **Launch AI Copywriter**.
    * In the drag-and-drop editor for in-app messages, select a text block and select <i class="fa-solid fa-wand-magic-sparkles" title="AI Copywriter"></i> in the block's toolbar.
 2. Enter a product name or description in the input field.
-3. Select the output language. This can be different from your input language.
+3. Select an approximate output length. You can also choose a channel to set the length, or short, medium, or long.
 4. Choose a message tone from the available options. This will determine the style of the copy generated.
-5. Select an approximate output length. You can also choose a channel to set the length, or short, medium, or long.
-6. Optional: For Mobile Push, check the box labeled "Reference past campaign data" to use your previous Mobile Push campaigns as a stylistic example for GPT to use as a starting point for generating new copy.
-6. Click **Generate Copy**.
+5. Optional: For Mobile Push, check the box labeled "Reference past campaign data" to use your previous Mobile Push campaigns as a stylistic example for GPT to use as a starting point for generating new copy.
+6. Select the output language. This can be different from your input language.
+7. Click **Generate**.
 
 We use the information you provide to prompt GPT to write copy for you. The response will be fetched from OpenAI and provided to you. 
 
