@@ -89,11 +89,11 @@ All of the following error codes indicate that no messages will be sent.
 | `400 Android Push Length Exceeded` | JSON payload is more than 4,000 bytes.|
 | `400 Bad Request` | Cannot parse `send_at` datetime.|
 | `400 Bad Request` | In your request, `in_local_time` is true but `time` has passed in your company’s time zone.|
-| `401 Unauthorized` | Invalid API key.|
+| `401 Unauthorized` | Invalid API key |
 | `403 Forbidden` | The rate plan doesn't support, or the account is otherwise inactivated.|
 | `403 Access Denied` | The REST API key you are using does not have sufficient permissions, check the API key permissions under the **Settings** page.|
-| `404 Not Found` | Unknown REST API key.|
-| `429 Rate Limited` | Over rate limit.|
+| `404 Not Found` | Invalid URL. |
+| `429 Rate Limited` | Over rate limit. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% endraw %}

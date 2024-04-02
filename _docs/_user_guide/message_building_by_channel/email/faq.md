@@ -77,9 +77,7 @@ Users will be prevented from entering the Canvas and no further messages will be
 
 ### Can Braze track unsubscribe links counted toward the "Unsubscribe" metric?
 
-Braze does not offer this functionality as unsubscribe links are custom and clicks to an unsubscribe link does not guarantee an unsubscribe actually occurred. 
-
-**Workaround:** To achieve this same result, you could send an API call to Braze to update any user profiles where you recorded unsubscribes from your custom link. 
+Braze tracks unsubscribe links if the following Liquid is used within emails: {%raw%}`${set_user_to_unsubscribed_url}`{%endraw%}
 
 ### Can I add a "view this email in a browser" link to my emails?
 

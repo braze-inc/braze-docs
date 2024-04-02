@@ -1929,7 +1929,7 @@ Subscription groups are only available for email, SMS, and WhatsApp channels at 
 Subscription
 {% endapitags %}
 
-This event occurs when the global subscription state of the user changes.
+This event occurs when Braze receives a request to update the global subscription state of the user, even if the request doesn't alter the current subscription state for the user.
 
 ```json
 // Global State Change: users.behaviors.subscription.GlobalStateChange
