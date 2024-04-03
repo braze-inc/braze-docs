@@ -104,7 +104,7 @@ At the bottom of the page, add your reference.
 
 {% raw %}
 ```markdown
-[REFERENCE_NUMBER]: {{site.baseurl}}SHORT_URL
+[REFERENCE_NUMBER]: {% image_buster /assets/img/DIRECTORY/IMAGE.png %}
 ```
 {% endraw %}
 
