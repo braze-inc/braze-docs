@@ -28,7 +28,7 @@ guide_menu_list:
     image: /assets/img/braze_icons/google.svg
   - name: Criteo Audience Sync
     link: /docs/partners/canvas_steps/criteo_audience_sync
-    fa_icon: fa-brands fa-bolt-lightning
+    image: /assets/img/braze_icons/lightning-01.svg
   - name: Pinterest Audience Sync
     link: /docs/partners/canvas_steps/pinterest_audience_sync
     image: /assets/img/braze_icons/pinterest.svg

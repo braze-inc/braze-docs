@@ -15,7 +15,7 @@ resources_list:
     fa_icon: fa-solid fa-circle-info
   - name: Best Practices and FAQ
     link: /docs/help/faqs/
-    fa_icon: fa-brands fa-readme
+    image: /assets/img/braze_icons/book-open-01.svg
   - name: Release Notes
     link: /docs/help/release_notes/most_recent/
     fa_icon: fa-solid fa-note-sticky
