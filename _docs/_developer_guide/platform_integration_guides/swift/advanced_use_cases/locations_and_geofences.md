@@ -41,6 +41,11 @@ configuration.location.brazeLocationProvider = BrazeLocationProvider()
 configuration.location.automaticLocationCollection = true
 configuration.location.geofencesEnabled = true
 configuration.location.automaticGeofenceRequests = true
+
+// Configurations for background geofence reporting with `When In Use` authorization.
+configuration.location.allowBackgroundGeofenceUpdates = true
+configuration.location.distanceFilter = 8000
+
 let braze = Braze(configuration: configuration)
 AppDelegate.braze = braze
 ```
@@ -57,12 +62,27 @@ configuration.location.brazeLocationProvider = [[BrazeLocationProvider alloc] in
 configuration.location.automaticLocationCollection = YES;
 configuration.location.geofencesEnabled = YES;
 configuration.location.automaticGeofenceRequests = YES;
+
+// Configurations for background geofence reporting with `When In Use` authorization.
+configuration.location.allowBackgroundGeofenceUpdates = YES;
+configuration.location.distanceFilter = 8000;
+
 Braze *braze = [[Braze alloc] initWithConfiguration:configuration];
 AppDelegate.braze = braze;
 ```
 
 {% endtab %}
 {% endtabs %}
+
+### Configuring geofences for background reporting
+
+By default, geofences are monitored only when your app is in the foreground, or in all application states if your user has granted `Always` authorization. If you wish to additionally receive geofence events while your app is in the background and only has `When In Use` authorization, add the `Background Mode -> Location updates` capability to your Xcode project and enable the `allowBackgroundGeofenceUpdates` configuration.
+
+When this setting is enabled, Braze will extend your app's "in use" status by continuously monitoring location updates. This behavior only applies when your app is in the background, not when it has been suspended. When your app re-opens, background tasks will cease in favor of standard foreground processing.
+
+{% alert important %}
+To prevent battery drain and rate limiting, be sure to also configure the `distanceFilter` to a reasonable value based on your app's use case. Setting this property to a higher value will lower the sensitivity, which will avoid pinging your user's location too frequently.
+{% endalert %}
 
 ## Step 4: Check for Braze background push
 
@@ -76,9 +96,13 @@ This description will be shown when the system location prompt requests authoriz
 
 ## Step 6: Request authorization from the user
 
-The geofences feature is only functional while `Always` location authorization or `AuthorizedWhenInUse` with the `Background Mode -> Location updates` capability enabled is granted.
+{% alert note %}
+Calling `requestAlwaysAuthorization()` does not guarantee that you will receive `Always` authorization. By default, this method grants your app `When In Use` authorization and will prompt your user to promote their location permissions after some period of time. Alternatively, your user can manually change this in their device settings.
 
-To request for `Always` or `AuthorizedWhenInUse` location authorization, use the following code:
+If you wish to immediately prompt your user for `Always` authorization, first call `requestWhenInUseAuthorization()`. Then, after receiving `When In Use` permissions, subsequently call `requestAlwaysAuthorization()`. The system will only allow you to present this prompt once.
+{% endalert %}
+
+To request for `Always` or `When In Use` location authorization, use the following code:
 
 {% tabs %}
 {% tab swift %}
