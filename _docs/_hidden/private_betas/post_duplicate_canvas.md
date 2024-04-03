@@ -36,7 +36,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ```json
 {
-  "canvas_id_id": (required, string) The Canvas identifier,
+  "canvas_id": (required, string) The Canvas identifier,
   "name": (required, string) The name of the resulting Canvas,
   "description": (optional, string) The description of the resulting Canvas,
   "tag_names": (optional, string) The tags of the resulting Canvas,
