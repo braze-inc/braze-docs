@@ -16,7 +16,7 @@ guide_featured_list:
     image: /assets/img/braze_icons/user-circle.svg
   - name: API
     link: /docs/help/help_articles/api/
-    fa_icon: fas fa-plug
+    fa_icon: image: /assets/img/braze_icons/api.svg
   - name: Campaigns and Canvas
     link: /docs/help/help_articles/campaigns_and_canvas/
     image: /assets/img/braze_icons/annotation.svg
