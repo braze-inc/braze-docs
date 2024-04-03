@@ -9,7 +9,7 @@ description: "visionOS support"
 
 # visionOS
 
-With the release of the Apple Vision Pro, Apple has introduced a new platform called visionOS. Starting with the Braze Swift SDK [8.0.0](https://github.com/braze-inc/braze-swift-sdk/blob/main/CHANGELOG.md#800), visionOS is supported as a first class platform.
+With the release of the Apple Vision Pro, Apple has introduced a new platform called visionOS. Starting with the Braze Swift SDK [8.0.0](https://github.com/braze-inc/braze-swift-sdk/blob/main/CHANGELOG.md#800), visionOS is supported as a first-class platform.
 
 > Please refer to our [sample apps]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/sample_apps/) for working examples of visionOS integration.
 
@@ -38,5 +38,5 @@ We expect that future visionOS updates will address these limitations.
 
 ## Unsupported Features
 
-Currently, Geofences Monitoring is not supported. The geofences related CoreLocation APIs are not made available by Apple on visionOS.
-
+- Currently, Geofences Monitoring is not supported. The Core Location APIs for region monitoring are not made available by Apple on visionOS.
+- Live Activities are not supported, as ActivityKit is only available on iOS and iPadOS.
