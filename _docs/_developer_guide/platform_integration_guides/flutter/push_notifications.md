@@ -87,16 +87,23 @@ Complete one of the following native integration guides:
 
 ## Step 2: Listen for push notification events (optional)
 
-You can additionally subscribe to events where Braze has detected and handled an incoming push notification. In your application, call `subscribeToPushNotificationEvents()` and pass in a code block to be executed once a push event is triggered.
+You can subscribe to events where Braze has detected and handled an incoming push notification. In your application, call `subscribeToPushNotificationEvents()` and pass in a code block to be executed once a push event is triggered.
 
 {% alert note %}
 Braze push notification events are available on both Android and iOS. Due to platform differences, iOS will only detect Braze push events when a user has interacted with a notification.
 {% endalert %}
 
 ```dart
-braze.subscribeToPushNotificationEvents((BrazePushEvent pushEvent) {
+// Create stream subscription
+StreamSubscription pushEventsStreamSubscription;
+
+pushEventsStreamSubscription = braze.subscribeToPushNotificationEvents((BrazePushEvent pushEvent) {
   print("Push Notification event of type ${pushEvent.payloadType} seen. Title ${pushEvent.title}\n and deeplink ${pushEvent.url}");
+  // Handle push notification events
 });
+
+// Cancel stream subscription
+pushEventsStreamSubscription.cancel();
 ```
 
 #### Push notification event fields
