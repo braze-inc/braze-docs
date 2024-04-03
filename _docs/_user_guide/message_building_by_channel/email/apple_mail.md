@@ -16,7 +16,7 @@ guide_featured_list:
   image: /assets/img/braze_icons/list.svg
 - name: Apple Mail Privacy Protection
   link: /docs/user_guide/message_building_by_channel/email/apple_mail/mpp/
-  fa_icon: fab fa-apple
+  image: /assets/img/braze_icons/apple.svg
 
 ---
 <br><br>

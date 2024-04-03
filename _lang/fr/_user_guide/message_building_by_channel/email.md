@@ -46,10 +46,10 @@ guide_menu_list:
   image: /assets/img/braze_icons/trophy-01.svg
 - name: SSO Apple Private Relay
   link: /docs/user_guide/message_building_by_channel/email/email_private_relay_apple_sso/
-  fa_icon: fab fa-apple
+  image: /assets/img/braze_icons/apple.svg
 - name: Protection de la confidentialité dans Apple Mail
   link: /docs/user_guide/message_building_by_channel/email/mpp/
-  fa_icon: fab fa-apple
+  image: /assets/img/braze_icons/apple.svg
 - name: AMP pour e-mail
   link: /docs/user_guide/message_building_by_channel/email/amphtml/
   fa_icon: fas fa-bolt

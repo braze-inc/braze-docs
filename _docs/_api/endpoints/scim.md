@@ -19,10 +19,10 @@ guide_featured_list:
     image: /assets/img/braze_icons/plus-circle.svg
   - name: "GET: Look Up Existing Dashboard User Account"
     link: /docs/get_see_user_account_information/
-    fa_icon: fa-solid fa-eye
+    image: /assets/img/braze_icons/eye.svg
   - name: "GET: Search Existing Dashboard User Account by Email"
     link: /docs/get_search_existing_dashboard_user_email/
-    fa_icon: fa-solid fa-eye
+    image: /assets/img/braze_icons/eye.svg
   - name: "PUT: Update Dashboard User Account"
     link: /docs/post_update_existing_user_account/
     image: /assets/img/braze_icons/pencil-01.svg

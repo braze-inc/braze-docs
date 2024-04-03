@@ -20,7 +20,7 @@ guide_featured_list:
     image: /assets/img/braze_icons/settings-01.svg
   - name: Customizing Orientation
     link: /docs/developer_guide/platform_integration_guides/ios/in-app_messaging/customization/customizing_orientation/
-    fa_icon: fa fa-arrows
+    image: /assets/img/braze_icons/arrow-square-right.svg
   - name: Custom Display Handling
     link: /docs/developer_guide/platform_integration_guides/ios/in-app_messaging/customization/handing_in_app_display/
     image: /assets/img/braze_icons/settings-01.svg

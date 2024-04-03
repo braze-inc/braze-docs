@@ -43,7 +43,7 @@ guide_menu_list:
   fa_icon: fab fa-android
 - name: iOS Options
   link: /docs/user_guide/message_building_by_channel/push/ios/
-  fa_icon: fab fa-apple
+  image: /assets/img/braze_icons/apple.svg
 - name: Web Push
   link: /docs/user_guide/message_building_by_channel/push/web/
   image: /assets/img/braze_icons/monitor-01.svg

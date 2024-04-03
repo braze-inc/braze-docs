@@ -58,10 +58,10 @@ guide_menu_list:
   image: /assets/img/braze_icons/trophy-01.svg
 - name: Apple Private Relay SSO
   link: /docs/user_guide/message_building_by_channel/email/apple_mail/email_private_relay_apple_sso/
-  fa_icon: fab fa-apple
+  image: /assets/img/braze_icons/apple.svg
 - name: Apple Mail Privacy Protection
   link: /docs/user_guide/message_building_by_channel/email/apple_mail/mpp/
-  fa_icon: fab fa-apple
+  image: /assets/img/braze_icons/apple.svg
 - name: Email Analytics Glossary
   link: /docs/user_guide/message_building_by_channel/email/reporting_and_analytics/analytics_glossary/
   image: /assets/img/braze_icons/pie-chart-01.svg

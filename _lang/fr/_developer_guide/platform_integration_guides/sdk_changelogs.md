@@ -13,10 +13,10 @@ guide_featured_list:
     image: /assets/img/android.png
   - name: SDK iOS (Swift)
     link: /docs/developer_guide/platform_integration_guides/ios/changelog/swift_changelog/
-    fa_icon: fab fa-apple
+    image: /assets/img/braze_icons/apple.svg
   - name: SDK iOS (Objective-C)
     link: /docs/developer_guide/platform_integration_guides/ios/changelog/objc_changelog/
-    fa_icon: fab fa-apple
+    image: /assets/img/braze_icons/apple.svg
   - name: SDK Web
     link: /docs/developer_guide/platform_integration_guides/web/changelog/
     image: /assets/img/braze_icons/globe-02.svg
@@ -46,10 +46,10 @@ guide_menu_list:
     image: /assets/img/android.png
   - name: SDK iOS (Swift)
     link: https://github.com/braze-inc/braze-swift-sdk/blob/main/CHANGELOG.md
-    fa_icon: fab fa-apple
+    image: /assets/img/braze_icons/apple.svg
   - name: SDK iOS (Objective-C)
     link: https://github.com/Appboy/appboy-ios-sdk/blob/master/CHANGELOG.md
-    fa_icon: fab fa-apple
+    image: /assets/img/braze_icons/apple.svg
   - name: SDK Web
     link: https://github.com/braze-inc/braze-web-sdk/blob/master/CHANGELOG.md
     image: /assets/img/braze_icons/globe-02.svg
