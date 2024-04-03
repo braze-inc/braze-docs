@@ -2,7 +2,7 @@
 nav_title: Alpaco
 article_title: Alpaco
 alias: /partners/Alpaco
-description: "This reference article outlines the partnership between Braze and Alpaco, an online email marketing tool that offers a drag-and-drop email editor with unparalleled level of control of design and output."
+description: "The Braze and Alpaco integration leverages Alpaco's syntax to create and export data-driven email templates to Braze."
 page_type: partner
 search_tag: Partner
 
@@ -10,15 +10,17 @@ search_tag: Partner
 
 # Alpaco
 
-> [Alpaco](https://alpaco.email/) is an online email marketing tool that offers a drag-and-drop email editor with unparalleled level of control of design and output. Alpaco offers a collaborative platform for marketers, copywriters, designers and developers for an optimal workflow, before exporting the email to Braze for campaign creation.
+> [Alpaco](https://alpaco.email/) is an online email marketing tool that offers a drag-and-drop email editor for a new level of control over your design and output. The Braze and Alpaco integration allows you to create and export data-driven template emails from Alpaco to Braze. 
 
-The Braze and Alpaco integration leverages Alpaco's syntax to create and export data-driven email templates to Braze.
+{% alert note %}
+Alpaco supports [full Liquid](https://shopify.github.io/liquid/) variables, and as such also fully supports any Liquid variables used in your Braze configurations.
+{% endalert %}
 
 ## Prerequisites
 
 | Requirement | Description |
 | ------------| ----------- |
-| Alpaco account | A Alpaco account is required to take advantage of this partnership. |
+| Alpaco account | An Alpaco account is required to take advantage of this partnership. |
 | Braze REST API key | A Braze REST API key with full **Templates** permissions. <br><br> This can be created in the Braze dashboard from **Settings** > **API Keys**. |
 | Cluster instance | Your Braze [cluster instance]({{site.baseurl}}/api/basics/#endpoints) aligns with your Braze dashboard and REST endpoint. <br><br> For example, if your dashboard URL is `https://dashboard-03.braze.com`, your endpoint will be `dashboard-03`.  |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
@@ -27,30 +29,34 @@ The Braze and Alpaco integration leverages Alpaco's syntax to create and export 
 
 Provide your Braze REST API key and cluster instance to the Alpaco customer success team. The team will then set up the initial integration for you.
 
-{% alert important %}
+{% alert note %}
 This is a one-time setup and any exports in the future will automatically utilize this API key.
 {% endalert %}
 
-### Step 1: Create a email template in Alpaco
+## Exporting Alpaco emails to Braze
 
-Create an email template in the Alpaco platform. Use the different settings and options to create an on-brand template to your liking. Click **Save** when you're happy with your template.<br>Alpaco supports [full Liquid](https://shopify.github.io/liquid/) variables, and as such also fully supports any Liquid variables used in your Braze configurations.
+### Step 1: Create an email template in Alpaco
+
+In the Alpaco platform, use the different settings and options to create a template that expresses your brand identity. Click **Save** when you're happy with your template.
 
 ![Alpaco Create template]({% image_buster /assets/img/alpaco/alpaco_1.png %})
 
-### Step 2: Export template to Braze
-After the template is created, navigate to the lobby and create an email with the template and click **Review**.
+### Step 2: Review the email
 
+After the template is created, navigate to the lobby and create an email with the template. Click **Review** to make sure everything looks right.
 
 ![Alpaco Create email]({% image_buster /assets/img/alpaco/alpaco_2.png %})
 
-### Step 3: Export template to Braze
-Click **Export** and chose the recently created integration to your Braze enviroment, made by the Alpaco customer sucess team.<br>
-Making changes to an email in Alpaco, and exporting it again will result in updating the email in Braze.
+### Step 3: Export email to Braze
+
+Click **Export** and choose the Braze integration to export your email template to Braze. 
+
+If you want to make changes to your email template, make those changes in Alpaco, and then export them back into Braze. This will update the email template in Braze with your changes.
 
 ![Alpaco Export email]({% image_buster /assets/img/alpaco/alpaco_3.png %})
 
-## Usage
+## Using Alpaco email templates in Braze
 
-Find your uploaded Alpaco email in your Braze account's **Templates & Media > Email Templates** section. You can now use this emails to start sending on-brand and full data-driven email messages to your customers!
+Find your uploaded Alpaco email by navigating to **Templates & Media > Email Templates** in the Braze dashboard. You can now use this template to send on-brand and data-driven emails to your users.
 
 [1]: {{site.baseurl}}/user_guide/message_building_by_channel/email/creating_an_email_template/
