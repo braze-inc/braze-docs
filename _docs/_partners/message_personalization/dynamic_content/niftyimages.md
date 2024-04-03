@@ -33,7 +33,7 @@ To benefit from this partnership, you will need to have a NiftyImages Account.
 # Steps to create your NiftyImage
 ## In this example we will create a personalized Image using Customer's FIRST NAME. 
 
-![alt text](<braze image-2.png>)
+![ALT_TEXT.]({% image_buster /assets/img/niftyimages/2.png %})
 
 # Step 1: Choose your Merge Tag
 ## Select the Merge Tag you wish to use in your image.  Merge Tags are passed in the URL from Braze and inserted dynamically into the the image
