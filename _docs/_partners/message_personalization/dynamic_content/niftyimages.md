@@ -1,4 +1,14 @@
-# [NiftyImages] (https://NiftyImages.com)
+---
+nav_title: NiftyImages
+article_title: NiftyImages
+description: "SHORT_DESCRIPTION."
+alias: /partners/NiftyImages/
+page_type: partner
+search_tag: Partner
+layout: dev_guide
+---
+
+# NiftyImages
 
 > [NiftyImages] (https://NiftyImages.com) is a real-time email personalization software that allows marketers to send relevant and up to date email communication more efficiently while increasing engagement and revenue. It is a user-friendly and self-serve tool that allows marketers to add dynamic content to their emails easily and quickly.
 
