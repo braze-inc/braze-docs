@@ -75,9 +75,9 @@ In your project's `app.json` file, add the path to your `google-services.json` f
 
 Generate an Apple Push Notification service (APNs) certificate and uploaded it to the Braze dashboard. For a full walkthrough, see [Uploading your APNs certificate]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/integration/#step-1-upload-your-apns-certificate).
 
-### Step 1.2: Choose an integration method
+### Step 1.2: Add push notification support to your app
 
-If you don't plan on requesting push permissions when the app launched, omit the `requestAuthorizationWithOptions:completionHandler:` call in your AppDelegate, then skip to [Step 2](#step-2-request-push-notifications-permission). Otherwise, complete one of the following native integration guides:
+Complete one of the following native integration guides:
 
 - [Swift only](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/b1-standard-push-notifications/)
 - [Swift or Objective-C]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/integration/?tab=objective-c#automatic-push-integration)
