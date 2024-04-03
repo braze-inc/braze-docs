@@ -85,7 +85,7 @@ Complete one of the following native integration guides:
 {% endtab %}
 {% endtabs %}
 
-### Step 2: Listen for push notification events (optional)
+## Step 2: Listen for push notification events (optional)
 
 You can additionally subscribe to events where Braze has detected and handled an incoming push notification. In your application, call `subscribeToPushNotificationEvents()` and pass in a code block to be executed once a push event is triggered.
 
