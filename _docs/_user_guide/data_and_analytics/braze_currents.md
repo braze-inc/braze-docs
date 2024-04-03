@@ -34,7 +34,7 @@ guide_featured_list:
   image: /assets/img/braze_icons/expand-05.svg
 - name: "Transfer Data from Amazon"
   link: /docs/user_guide/data_and_analytics/braze_currents/s3_to_snowflake/
-  fa_icon: fab fa-amazon
+  image: /assets/img/braze_icons/amazon.svg
 - name: "Transfer Data to Redshift"
   link: /docs/user_guide/data_and_analytics/braze_currents/transferring_data_to_redshift/
   image: /assets/img/braze_icons/switch-horizontal-01.svg

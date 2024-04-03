@@ -15,7 +15,7 @@ guide_featured_title: "WhatsApp"
 guide_featured_list:
 - name: "Aperçu WhatsApp"
   link: /docs/user_guide/message_building_by_channel/whatsapp/overview
-  fa_icon: fa-brands fa-whatsapp
+  image: /assets/img/braze_icons/whatsapp.svg
 - name: "Groupe d’abonnement WhatsApp"
   link: /docs/user_guide/message_building_by_channel/whatsapp/user_subscription/
   image: /assets/img/braze_icons/table.svg

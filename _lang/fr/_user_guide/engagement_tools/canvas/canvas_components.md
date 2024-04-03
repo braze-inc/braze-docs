@@ -36,10 +36,10 @@ guide_featured_list:
     image: /assets/img/braze_icons/user-check-01.svg
   - name: Facebook Audience Sync
     link: /docs/partners/canvas_steps/facebook_audience_sync/
-    fa_icon: fab fa-facebook
+    image: /assets/img/braze_icons/facebook.svg
   - name: Google Audience Sync
     link: /docs/partners/advertising_technologies/social/canvas_steps/google_audience_sync/
-    fa_icon: fab fa-google
+    image: /assets/img/braze_icons/google.svg
 ---
 
 ## À propos des composants Canvas

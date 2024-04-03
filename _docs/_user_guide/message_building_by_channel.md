@@ -33,7 +33,7 @@ guide_featured_list:
   image: /assets/img/braze_icons/brackets.svg
 - name: WhatsApp
   link: /docs/user_guide/message_building_by_channel/whatsapp/
-  fa_icon: fa-brands fa-whatsapp
+  image: /assets/img/braze_icons/whatsapp.svg
 ---
 
 ## Choosing a message channel

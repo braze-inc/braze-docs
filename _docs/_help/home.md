@@ -24,7 +24,7 @@ resources_list:
     image: /assets/img/braze_icons/user-square.svg
   - name: Media Resources
     link: https://www.youtube.com/channel/UCEXVTEWeAHx1OlddOMRTaOg
-    fa_icon: fa-brands fa-youtube
+    image: /assets/img/braze_icons/youtube.svg
   - name: Braze Support
     link: /docs/braze_support/
     fa_icon: fa-solid fa-envelope

@@ -14,7 +14,7 @@ guide_featured_list:
   nav_link: android
 - name: Swift
   link: /docs/developer_guide/platform_integration_guides/swift/initial_sdk_setup/overview/
-  fa_icon: fa-brands fa-swift
+  image: /assets/img/braze_icons/swift.svg
 - name: Web
   link: /docs/developer_guide/platform_integration_guides/web/initial_sdk_setup/
   image: /assets/img/braze_icons/globe-02.svg

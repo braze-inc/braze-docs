@@ -18,7 +18,7 @@ guide_featured_list:
   image: /assets/img/braze_icons/code-02.svg
 - name: "Web Modal with CSS"
   link: /docs/user_guide/message_building_by_channel/in-app_messages/customize/color_profiles_and_css/#web-modal-css
-  fa_icon: fa-brands fa-css3-alt
+  image: /assets/img/braze_icons/css3.svg
 - name: "Email Capture Form"
   link: /docs/user_guide/message_building_by_channel/in-app_messages/traditional/customize/email_capture_form/
   fa_icon: fa-solid fa-envelope-open-text

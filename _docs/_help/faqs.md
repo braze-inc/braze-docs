@@ -38,7 +38,7 @@ guide_featured_list:
     fa_icon: fas fa-comment-dots
   - name: "WhatsApp FAQ"
     link: /docs/user_guide/message_building_by_channel/whatsapp/faqs/
-    fa_icon: fa-brands fa-whatsapp
+    image: /assets/img/braze_icons/whatsapp.svg
   - name: "Intelligence FAQ"
     link: /docs/user_guide/intelligence/faqs/
     image: /assets/img/braze_icons/lightbulb-05.svg
@@ -53,7 +53,7 @@ guide_featured_list:
     fa_icon: fa-solid fa-flag
   - name: "Live Activities FAQ"
     link: /docs/developer_guide/platform_integration_guides/swift/live_activities/faq/
-    fa_icon: fa-brands fa-swift
+    image: /assets/img/braze_icons/swift.svg
   - name: "Liquid FAQ"
     link: /docs/user_guide/personalization_and_dynamic_content/liquid/faq/
     image: /assets/img/braze_icons/beaker-02.svg

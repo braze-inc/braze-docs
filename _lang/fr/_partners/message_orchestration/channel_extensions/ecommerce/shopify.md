@@ -13,7 +13,7 @@ guide_featured_title: "Articles"
 guide_featured_list:
 - name: Aperçu de Shopify
   link: /docs/shopify_overview/
-  fa_icon: fa-brands fa-shopify
+  image: /assets/img/braze_icons/shopify.svg
 - name: Intégration SDK Web avec Shopify ScriptTag
   link: /docs/scripttag_web_sdk_integration/
   image: /assets/img/braze_icons/tag-01.svg

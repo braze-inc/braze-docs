@@ -30,7 +30,7 @@ guide_featured_list:
   fa_icon: fa-solid fa-comment-sms
 - name: WhatsApp
   link: /docs/user_guide/message_building_by_channel/whatsapp/
-  fa_icon: fa-brands fa-whatsapp
+  image: /assets/img/braze_icons/whatsapp.svg
 - name: Webhooks
   link: /docs/user_guide/message_building_by_channel/webhooks/
   image: /assets/img/braze_icons/brackets.svg

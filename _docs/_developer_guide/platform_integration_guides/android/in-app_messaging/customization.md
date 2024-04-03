@@ -38,10 +38,10 @@ guide_featured_list:
     image: /assets/img/braze_icons/image-01.svg
   - name: YouTube in HTML
     link: /docs/developer_guide/platform_integration_guides/android/in-app_messaging/customization/youtube_in_html/
-    fa_icon: fa-brands fa-youtube
+    image: /assets/img/braze_icons/youtube.svg
   - name: Google Review Prompt
     link: /docs/developer_guide/platform_integration_guides/android/in-app_messaging/customization/google_review_prompt/
-    fa_icon: fa-brands fa-google
+    image: /assets/img/braze_icons/google.svg
 
 
 ---

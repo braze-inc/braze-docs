@@ -40,7 +40,7 @@ guide_menu_list:
   image: /assets/img/braze_icons/bar-chart-01.svg
 - name: Android Options
   link: /docs/user_guide/message_building_by_channel/push/android/
-  fa_icon: fab fa-android
+  image: /assets/img/braze_icons/android.svg
 - name: iOS Options
   link: /docs/user_guide/message_building_by_channel/push/ios/
   image: /assets/img/braze_icons/apple.svg

@@ -13,7 +13,7 @@ guide_featured_title: "Featured articles"
 guide_featured_list:
 - name: Shopify Overview
   link: /docs/shopify_overview/
-  fa_icon: fa-brands fa-shopify
+  image: /assets/img/braze_icons/shopify.svg
 - name: Getting Started with Shopify
   link: /docs/getting_started_shopify/
   fa_icon: fa fa-shopping-cart
