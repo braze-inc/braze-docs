@@ -455,10 +455,6 @@ Snowflake credits are not shared between features. For example, credits across S
 
 Credit usage is correlated to the run time of your SQL query. The longer the run time is, the higher the portion of a Snowflake credit a query will cost. Run time can vary depending on the complexity and size of your queries over time. The more complex and frequent queries you run, the larger your resource allocation and the faster your run time becomes.
 
-{% alert note %}
-The ability to track credit usage for each query is coming soon.
-{% endalert %}
-
 Credits are not used when writing, editing, or saving reports within the Braze SQL editor. Your credits will reset to 5 on the first of each month at 12 am UTC. You can monitor your monthly credit usage at the top of the Query Builder page.
 
 ![Query Builder showing the amount of credits used in the current month.][1]{: style="max-width:60%;"}
