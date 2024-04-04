@@ -2,7 +2,7 @@
 nav_title: Dashboard Builder
 article_title: Dashboard Builder
 permalink: "/dashboard_builder/"
-description: "This reference article covers how to save a draft for a campaign that has already launched."
+description: "This reference article covers how to use Dashboard Builder to create dashboards and visualizations using reports created in Query Builder."
 page_type: reference
 hidden: true
 ---
