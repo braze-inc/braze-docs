@@ -1,33 +1,27 @@
 ---
 nav_title: Initial SDK Setup
-article_title: Initial SDK Setup for Web
+article_title: Initial setup for the Braze Web SDK
 platform: Web
 page_order: 0
 page_type: reference
-description: "This article covers the initial SDK setup for the Braze Web SDK."
-search_rank: 4
 ---
 
-# Initial SDK setup
+# Initial SDK setup for web
 
-> This reference article covers how to install the Braze Web SDK. The Braze Web SDK lets you collect analytics and display rich in-app messages, push, and Content Card messages to your web users.
-
-See our [JavaScript Documentation][9] for a complete technical reference.
+> This reference article covers how to install the Braze Web SDK. The Braze Web SDK lets you collect analytics and display rich in-app messages, push, and Content Card messages to your web users. See our [JavaScript Documentation][9] for a complete technical reference.
 
 {% multi_lang_include archive/web-v4-rename.md %}
 
 ## Step 1: Install the Braze library
 
-There are three easy ways to integrate the Web SDK to include analytics and messaging components on your site. Be sure to view our [Push integration guide][16] if you plan to use Web push features.
-
-If your website uses a `Content-Security-Policy`, then follow our [CSP Header Guide][19] in addition to the following integration steps.
+You can install the Braze library using one of the following methods. If your website uses a `Content-Security-Policy`, refer to our [CSP Header Guide][19] before installing the library.
 
 {% alert important %}
 While most ad blockers will not block the Braze Web SDK, some more restrictive ad blockers are known to cause issues.
 {% endalert %}
 
-### Option 1: NPM or Yarn {#install-npm}
-
+{% tabs local %}
+{% tab package manager %}
 If your site uses NPM or Yarn package managers, you can add the [Braze NPM package](https://www.npmjs.com/package/@braze/web-sdk) as a dependency.
 
 Typescript definitions are now included as of v3.0.0. For notes on upgrading from 2.x to 3.x, see our [Changelog][17].
@@ -45,36 +39,33 @@ import * as braze from "@braze/web-sdk";
 // or, using `require`
 const braze = require("@braze/web-sdk");
 ```
+{% endtab %}
 
-### Option 2: Google tag manager {#install-gtm}
-
+{% tab google tag manager %}
 The Braze Web SDK can be installed from the Google Tag Manager Template Library. Two tags are supported:
 
 1. Initialization tag: loads the Web SDK onto your website and optionally sets the External User ID.
 2. Actions tag: used to trigger custom events, purchases, change user IDs, or toggle SDK tracking.
 
 Visit the [Google Tag Manager integration guide][18] for more information.
+{% endtab %}
 
-### Option 3: Braze CDN {#install-cdn}
-
+{% tab braze cdn %}
 Add the Braze Web SDK directly to your HTML by referencing our CDN-hosted script, which loads the library asynchronously.
 
 <script src="https://braze-inc.github.io/embed-like-gist/embed.js?target=https%3A%2F%2Fgithub.com%2Fbraze-inc%2Fbraze-web-sdk%2Fblob%2Fmaster%2Fsnippets%2Floading-snippet.js&style=github&showBorder=on&showLineNumbers=on&showFileMeta=on&showCopy=on"></script>
+{% endtab %}
+{% endtabs %}
 
-
-## Step 2: Initialize Braze
+## Step 2: Initialize the SDK
 
 Once the Braze Web SDK is added to your website, initialize the library with the API key and [SDK endpoint URL]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints) found in **Settings** > **App Settings** within your Braze dashboard.
-
-{% alert note %}
-If you are using the [older navigation]({{site.baseurl}}/navigation), you can find this information from **Manage Settings** > **Settings**.
-{% endalert %}
 
 {% alert note %}
 If you've configured your Braze initialization options in a Tag Manager, you can skip this step.
 {% endalert %}
 
-For a complete list of options for `braze.initialize()` see our [JavaScript documentation](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#initialize).
+For a complete list of options for `braze.initialize()`, along with our other JavaScript methods, see our [JavaScript documentation](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#initialize).
 
 ```javascript
 // initialize the SDK
@@ -100,37 +91,74 @@ if (isLoggedIn){
 braze.openSession();
 ```
 
-See our [JavaScript reference documentation][9] for all other JavaScript methods.
-
-{% alert note %}
-Anonymous users on mobile or web devices may be counted toward your [MAU]({{site.baseurl}}/user_guide/data_and_analytics/reporting/understanding_your_app_usage_data/#monthly-active-users). As a result, you may want to conditionally load or initialize the SDK to exclude these users from your MAU count.
+{% alert important %}
+Anonymous users on mobile or web devices may be counted towards your [MAU]({{site.baseurl}}/user_guide/data_and_analytics/reporting/understanding_your_app_usage_data/#monthly-active-users). As a result, you may want to conditionally load or initialize the SDK to exclude these users from your MAU count.
 {% endalert %}
 
-## Step 3: Web push (optional)
+## Step 3: Set up push notifications (optional)
 
-Additional setup is required to use Web push notifications. See [Push notifications][16] for instructions.
+To set up push notifications for the Braze Web SDK, additional set up is required. For a full walkthrough, see [Push notifications for web][16].
 
-## Troubleshooting {#error-logging}
+## Logging
 
-To assist in troubleshooting, you can enable verbose logging in the SDK. This is useful for development but is visible to all users, so you should remove this option or provide an alternate logger with `braze.setLogger()` in your production environment. 
+To quickly enable logging, you can add `?brazeLogging=true` as a parameter to your website URL. Alternatively, you can enable [basic](#basic-logging) or [custom](#custom-logging) logging.
 
-To enable verbose logs, use the `enableLogging` initialization option, or `toggleLogging()` any point after the SDK is already initialized.
+### Basic logging
 
-You can also add `?brazeLogging=true` as a URL parameter to the website to enable verbose logs.
+{% tabs local %}
+{% tab before initialization %}
+Use `enableLogging` to log basic debugging messages to the javascript console before the SDK is initialized.
 
 ```javascript
-braze.initialize("YOUR-API-KEY-HERE", {
-    baseUrl: "YOUR-API-ENDPOINT",
-    enableLogging: true
-});
-
-// or, after initialization:
-
-braze.toggleLogging()
+enableLogging: true
 ```
 
-If you use a server-side rendering framework, see our additional integration steps for integration [Vite](#vite) or other [SSR frameworks](#ssr). Note that verbose logging won't send any extra or new user information to Braze.
+Your method should be similar to the following:
 
+```javascript
+braze.initialize('API-KEY', {
+    baseUrl: 'API-ENDPOINT',
+    enableLogging: true
+});
+braze.openSession();
+```
+{% endtab %}
+
+{% tab after initialization %}
+Use `braze.toggleLogging()` to log basic debugging messages to the javascript console after the SDK is initialized. Your method should be similar to the following:
+
+```javascript
+braze.initialize('API-KEY', {
+    baseUrl: 'API-ENDPOINT',
+});
+braze.openSession();
+...
+braze.toggleLogging();
+```
+{% endtab %}
+{% endtabs %}
+
+{% alert important %}
+Basic logs are visible to all users, so consider disabling, or switch to [`setLogger`](#custom-logging), before releasing your code to production.
+{% endalert %}
+
+### Custom logging
+
+Use `setLogger` to log custom debugging messages to the javascript console. Unlike basic logs, these logs are not visible to users.
+
+```javascript
+setLogger(loggerFunction: (message: STRING) => void): void
+```
+
+Replace `STRING` with your message as a single string parameter. Your method should be similar to the following:
+
+```javascript
+braze.initialize('API-KEY');
+braze.setLogger(function(message) {
+    console.log("Braze Custom Logger: " + message);
+});
+braze.openSession();
+```
 
 ## Upgrading the SDK
 
@@ -247,4 +275,3 @@ When using Jest, you may see an error similar to `SyntaxError: Unexpected token 
 [17]: https://github.com/braze-inc/braze-web-sdk/blob/master/UPGRADE_GUIDE.md
 [18]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/google_tag_manager/
 [19]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/content_security_policy/
-<!-- wesley wanted an empty line at the end -->
