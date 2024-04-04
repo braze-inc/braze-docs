@@ -29,16 +29,16 @@ Dashboard Builder is currently in early access. Contact your customer success ma
 
 | Metrics | Definition |
 | --- | --- |
-| Total Last Touch Revenue | A sum of all campaign and Canvas revenue events that had a last-touch event within the selected date range and attribution window. |
-| Total Purchase Conversions | A count of all campaign and Canvas revenue events that had a qualifying last-touch event. |
-| Average Days to Convert | The average time between all campaign and Canvas purchase events that had a qualifying last-touch event. |
+| Total Last Touch Revenue | A sum of all campaign and Canvas revenue events with a last-touch event within the selected date range and attribution window. |
+| Total Purchase Conversions | A count of all campaign and Canvas revenue events with a qualifying last-touch event. |
+| Average Days to Convert | The average time between all campaign and Canvas purchase events with a qualifying last-touch event. |
 | Revenue per Recipient | Sum of the revenue from qualified revenue events divided by the number of unique users that received a message within the date range. |
 | Unique Purchasers | Count of the unique users with a qualified revenue event. |
-| Revenue by Country | Sum of all campaign and Canvas revenue events that had a last-touch event, grouped by country. |
-| Revenue by Campaign | Sum of all campaign and Canvas revenue events that had a qualifying last-touch event, grouped by campaign. |
-| Revenue by Canvas | Sum of all campaign and Canvas revenue events that had a qualifying last-touch event, grouped by Canvas. |
-| Revenue by Channel | Sum of all campaign and Canvas revenue events that had a qualifying last-touch event, grouped by Canvas. | 
-| Revenue Time Series | Sum of all campaign and Canvas revenue events that had a qualifying last-touch event, grouped by day in UTC. |
+| Revenue by Country | Sum of all campaign and Canvas revenue events with a last-touch event, grouped by country. |
+| Revenue by Campaign | Sum of all campaign and Canvas revenue events with a qualifying last-touch event, grouped by campaign. |
+| Revenue by Canvas | Sum of all campaign and Canvas revenue events with a qualifying last-touch event, grouped by Canvas. |
+| Revenue by Channel | Sum of all campaign and Canvas revenue events with a qualifying last-touch event, grouped by Canvas. | 
+| Revenue Time Series | Sum of all campaign and Canvas revenue events with a qualifying last-touch event, grouped by day in UTC. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 #### Devices and carriers
