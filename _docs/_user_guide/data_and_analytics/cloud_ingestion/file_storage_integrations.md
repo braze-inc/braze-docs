@@ -53,7 +53,7 @@ Be sure to take note of the ARN and the URL of the SQS as you’ll be using it i
 <br><br>![]({% image_buster /assets/img/cloud_ingestion/s3_ARN.png %})
 <br><br>
 
-Append the following statement to the queue's access policy, being careful to replace `YOUR-BUCKET-NAME-HERE` with your bucket name, and `YOUR-SQS-ARN` with your SQS queue ARN, and `YOUR-AWS-ACCOUNT-ID` with your AWS account ID..  
+Append the following statement to the queue's access policy, being careful to replace `YOUR-BUCKET-NAME-HERE` with your bucket name, and `YOUR-SQS-ARN` with your SQS queue ARN, and `YOUR-AWS-ACCOUNT-ID` with your AWS account ID. 
 :  
 
 ``` json 
