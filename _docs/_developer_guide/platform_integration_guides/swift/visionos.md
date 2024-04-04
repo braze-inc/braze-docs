@@ -19,7 +19,7 @@ Most of the features available on iOS are supported on visionOS. This includes:
 - Analytics (sessions, custom events, purchases, etc.)
 - In-App Messaging (data models and UI)
 - Content Cards (data models and UI)
-- Push Notifications
+- Push Notifications (user-visible, with action buttons and silent notifications)
 - Feature Flags
 - Location Analytics
 
