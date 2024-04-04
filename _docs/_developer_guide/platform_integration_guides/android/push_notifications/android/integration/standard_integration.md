@@ -19,13 +19,17 @@ With push notifications, you can re-engage your app users by sending time-sensit
 If your Android push integration is already set up, and you're looking to migrate from Google's deprecated Cloud Messaging API, see [Migrating to the Firebase Cloud Messaging API]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/migrating_to_firebase_cloud_messaging).
 {% endalert %}
 
+## Rate limit
+
+Firebase Cloud Messaging (FCM) API has a default rate limit of 600,000 requests per minute. If you reach this limit, Braze will automatically try again in a few minutes. To request an increase, contact [Firebase Support](https://firebase.google.com/support).
+
 ## Registering for push
 
-In this section, you'll learn how to register for push using Google's Firebase Cloud Messaging (FCM) API. If you'd like to view a sample app using FCM with the Braze Android SDK, see [Braze: Firebase Push Sample App.](https://github.com/braze-inc/braze-android-sdk/tree/master/samples/firebase-push)
+In this section, you'll learn how to register for push using Google's Firebase Cloud Messaging (FCM) API. If you'd like to view a sample app using FCM with the Braze Android SDK, see [Braze: Firebase Push Sample App](https://github.com/braze-inc/braze-android-sdk/tree/master/samples/firebase-push).
 
 ### Step 1: Add Firebase to your project
 
-First, you'll need to add Firebase to your Android project. For step-by-step instructions, see Google's [Firebase setup guide][49].
+First, add Firebase to your Android project. For step-by-step instructions, see Google's [Firebase setup guide][49].
 
 ### Step 2: Add Cloud Messaging to your dependencies
 
