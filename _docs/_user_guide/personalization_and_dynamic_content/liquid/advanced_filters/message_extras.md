@@ -62,7 +62,7 @@ A `dispatch_id` is generated and provided in your send events, which can be used
 
 Yes, you can use `message_extras` in your in-app messages as long as your users' devices are on the following minimum SDK versions:
 
-{% sdk_min_versions web:5.2.0 android:30.4.0 swift:8.3.0 %}
+{% sdk_min_versions web:5.2.0 android:30.4.0 swift:8.4.0 %}
 
 [1]: {% image_buster /assets/img_archive/message_extras1.png %}
 [2]: {% image_buster /assets/img_archive/message_extras2.png %}

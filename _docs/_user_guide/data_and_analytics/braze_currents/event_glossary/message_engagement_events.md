@@ -1191,7 +1191,7 @@ This event occurs when a user views an in-app message.
 ```
 
 {% alert note %}
-The `message_extras` field will be active on April 4, 2024.
+The `message_extras` field is active as of April 4, 2024.
 {% endalert %}
 
 #### Property details
@@ -1199,7 +1199,7 @@ The `message_extras` field will be active on April 4, 2024.
 - If you are using Kafka to ingest [Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/) data, contact your customer success manager to enable sending `ad_id`.
 - `message_extras` allow you to annotate your in-app message impression events with dynamic data from Connected Content, custom attributes (such as language, country), and Canvas entry properties. The following minimum SDK versions are required, refer to [Message extras]({{site.baseurl}}/message_extras_tag/) to learn more:
 
-{% sdk_min_versions web:5.2.0 android:30.4.0 swift:8.3.0 %}
+{% sdk_min_versions web:5.2.0 android:30.4.0 swift:8.4.0 %}
 
 {% endapi %}
 
