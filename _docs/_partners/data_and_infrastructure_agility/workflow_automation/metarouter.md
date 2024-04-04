@@ -50,7 +50,7 @@ In Enterprise MetaRouter, Navigate to the Integrations section. Select the New I
 
 MetaRouter’s required parameters are the instance URL and the API key.  Add the information into the provided text box and Apply Changes.
 
-![alt text](img1.png)
+![Adding Braze as an integration in MetaRouter.]({% image_buster /assets/img/metarouter/img1.png %})
 
 <!-- Use the "Make a post request", "Default behavior," and "Rate limit" sections to outline how users can make a POST request. If this information isn't required for your integration, you can remove these sections. -->
 ### Step 2: Add Event Mapping
@@ -59,7 +59,7 @@ Add event mapping for each of the identity outputs. Configure the events that yo
 
 In the top header, select “Save as New Revision” to implement changes.
 
-![alt text](img2.png)
+![Add event mapping for each of the identity outputs.]({% image_buster /assets/img/metarouter/img2.png %})
 
 <!-- A section outlinning how to use your integration with Braze. For example: how to access the data sent to Braze, or how to leverage your integration with Braze messaging. -->
 ## Using MetaRouter with Braze
