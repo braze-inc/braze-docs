@@ -880,6 +880,10 @@ Email, Opens
 
 This event occurs when a user opens an email. Multiple events may be generated for the same campaign if a user opens the email multiple times.
 
+{% alert important %}
+It's known behavior that the email open event fields `browser`, `device_os`, `device_model`, and `mailbox_provider` are empty. You can ignore these for now.
+{% endalert %}
+
 ```json
 // Email Open: users.messages.email.Open
 {
@@ -929,6 +933,10 @@ Email, Clicks
 {% endapitags %}
 
 This event occurs when a user clicks an email. Multiple events may be generated for the same campaign if a user clicks multiple times or clicks different links within the email.
+
+{% alert important %}
+It's known behavior that the email clicks event fields `browser`, `device_os`, `device_model`, and `mailbox_provider` are empty. You can ignore these for now.
+{% endalert %}
 
 ```json
 // Email Click: users.messages.email.Click
