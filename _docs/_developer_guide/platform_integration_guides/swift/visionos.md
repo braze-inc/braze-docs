@@ -9,7 +9,7 @@ description: "This article covers the features supported on visionOS."
 
 # visionOS
 
-With the release of the Apple Vision Pro, Apple has introduced a new platform called visionOS. Starting with the Braze Swift SDK [8.0.0](https://github.com/braze-inc/braze-swift-sdk/blob/main/CHANGELOG.md#800), visionOS is supported as a first-class platform.
+With the release of the Apple Vision Pro, Apple has introduced a new platform called [visionOS](https://developer.apple.com/visionos/). Starting with the Braze Swift SDK [8.0.0](https://github.com/braze-inc/braze-swift-sdk/blob/main/CHANGELOG.md#800), visionOS is supported as a first-class platform.
 
 > Please refer to our [sample apps]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/sample_apps/) for working examples of visionOS integration.
 
