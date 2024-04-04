@@ -27,9 +27,9 @@ page_order: 4.8
 | User data                 | Lorem ipsum |
 {: .reset-td-br-1 .reset-td-br-2}
 
-## Catalogs
+## Updating multiple items in a catalog
 
-## Email lists and addresses
+## Removing emails from the Braze spam list
 
 At MovieCanon, a streaming services company, the developer team is responsible for periodically auditing their email lists to identify and keep users who are subscribed to their email campaigns. As part of this audit, they want to remove this list of emails from their spam list:
 
@@ -61,7 +61,7 @@ After sending this payload successfully, we’ll see this response that confirms
   "message": "success"
 ```
 
-## Export
+## Auditing all Canvases
 
 Siege Valley Health is a hospital system that includes 10 operating hospitals and research centers with thousands of patients. Their marketing team wants to compare the Canvases sent to their patients to remind them to schedule an appointment for their flu shots from their past 3 years of using Braze. Siege Valley Health’s marketing team also wants a quick and efficient way to see both the list of Canvases and the analytics summary.
 
@@ -96,7 +96,12 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 Let’s move on to the next task of viewing the analytics summary for the first Canvas from Seige Valley Health’s list of Canvases.
 
-## SMS
+## Checking upcoming scheduled campaigns and Canvases
+
+## Viewing an older preference center
+
+
+## Removing invalid phone numbers
 
 At CashBlastr, their primary goal is to streamline how people can send and receive quick payments. As a financial service company, they want to keep their list of phone numbers for their customers up-to-date and accurate. Their developer team has been tasked to remove the following list of phone numbers that have been marked as “invalid” so the marketing team’s SMS messages can reach the appropriate CashBlastr customers.
 
@@ -123,7 +128,13 @@ After sending this payload successfully, we’ll see this response that confirms
 }
 ```
 
-## Templates
+
+## Viewing a user's subscription groups
+
+
+
+
+## Updating an HTML template for email messaging
 
 At WorkFriends, a social network for helping build connections between workers from different industries, their marketing team is responsible for sending email campaigns to their users. These campaigns often include reminders for local events, weekly newsletters, and profile activity highlights.
 
