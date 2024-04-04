@@ -2,7 +2,7 @@
 nav_title: MetaRouter
 article_title: MetaRouter
 description: "Elevate your customer data management in Braze, with MetaRouter.  This high-performance, server-side tag management solution offers maximum compliance and control with seamless deployment options, whether on a MetaRouter hosted private cloud or your own infrastructure."
-alias: /partners/metarouter/
+alias: /partners/MetaRouter/
 page_type: partner
 search_tag: Partner
 layout: dev_guide
@@ -20,10 +20,13 @@ MetaRouter elevates your Braze experience by seamlessly integrating as a powerfu
 
 Before you start, you'll need the following:
 
-- A MetaRouter account: A MetaRouter Enterprise account https://enterprise.metarouter.io/.
-- MetaRouter cluster: An active cluster
-- A Braze REST API key: A Braze REST API key with `users.track` permissions. This can be created in the Braze dashboard from **Settings** > **API Keys**.
-- A Braze REST endpoint: [Your REST endpoint URL]({{site.baseurl}}/developer_guide/rest_api/basics/#endpoints). Your endpoint will depend on the Braze URL for your instance.
+| Requirement | Description |
+|---|---|
+| A MetaRouter account | A [MetaRouter Enterprise account](https://enterprise.metarouter.io/).|
+| A MetaRouter cluster | An active cluster |
+| Braze REST API key | A Braze REST API key with `users.track` permissions. <br><br> This can be created in the Braze dashboard from **Settings** > **API Keys**. |
+| A Braze REST endpoint | [Your REST endpoint URL]({{site.baseurl}}/developer_guide/rest_api/basics/#endpoints). Your endpoint will depend on the Braze URL for your instance.|
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 {% alert note %}
 If you are using the [older navigation]({{site.baseurl}}/navigation), you can create an API key at **Developer Console** > **API Settings**.
