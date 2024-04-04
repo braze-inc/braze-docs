@@ -46,7 +46,7 @@ Dashboard Builder is currently in early access. Contact your customer success ma
 | Metrics | Definition |
 | --- | --- |
 | Device Carriers | Count of users in the selected date range who opened a push notification, grouped by device carrier. |
-| Device Model | Count of users in the selected date range who opened a push notificatio, grouped by device model. |
+| Device Model | Count of users in the selected date range who opened a push notification, grouped by device model. |
 | Device Operating System | Count of users in the selected date range who opened a push notification, grouped by device operating system. |
 | Device Screen Size | Count of users in the selected date range who opened a push notification, grouped by device screen resolution (size). |
 {: .reset-td-br-1 .reset-td-br-2}
