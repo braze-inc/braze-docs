@@ -338,8 +338,12 @@ glossaries:
     description: Segments your users by the earliest time that a user made a purchase from your app.
     tags:
       - Purchase behavior
+  - name: Last Made Purchase
+    description: Filter users by the last time they made a purchase.
+    tags: 
+      - Purchase behavior
   - name: Last Purchased Product
-    description: Filter users by when they first purchased a specific product.
+    description: Filter users by when they last purchased a specific product.
     tags:
       - Purchase behavior
   - name: Money Spent
