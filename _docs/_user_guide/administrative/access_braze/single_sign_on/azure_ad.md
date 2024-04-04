@@ -32,30 +32,18 @@ If you are using the [older navigation]({{site.baseurl}}/navigation), you can fi
 ### Step 1: Add Braze from the gallery
 
 1. Go to the Azure Portal and click **Azure Active Directory** in the left navigation panel.
-2. Go to **Enterprise Applications**, then select **All applications**. <br><br>![Azure portal selecting all enterprise applications.]({% image_buster /assets/img/azure_2.png %})
-
-{: start="3"}
+2. Go to **Enterprise Applications**, then select **All applications**.
 3. Add a new application by clicking **+ New application** in the top of the dialog.
 4. Search for **Braze** in the search box, select it from the result panel, then click **Add**.
 
 ### Step 2: Configure Azure AD single sign-on
 
 1. In your Azure Portal, go to the **Braze Application Integration** page and select **Single sign-on**.
-2. Select **SAML/WS-Fed** as your method from the **Select a single sign-on method** dialog to open the **Set up Single Sign-On with SAML** page.<br><br>![Azure portal select a single sign-on method dialog.]({% image_buster /assets/img/azure_6.png %})
-
-{: start="3"}
-3. Click the edit icon to open the **Basic SAML Configuration** dialog.<br><br>![Azure portal editing basic SAML configuration.]({% image_buster /assets/img/azure_7.png %})
-
-{: start="4"}
-4. Configure the application in IdP-initiated mode by entering a URL that combines your [Braze instance]({{site.baseurl}}/user_guide/administrative/access_braze/braze_instances/#braze-instances) with the following pattern: `https://<SUBDOMAIN>.braze.com/auth/saml/callback`.<br><br>![Azure portal editing basic SAML configuration.]({% image_buster /assets/img/azure_8.png %})
-
-{: start="5"}
-5. Configure RelayState by inputting your RelayState generated API key in the RelayState box.<br><br>![]({% image_buster /assets/img/relaystate2.png %})
-
-{: start="6"}
-6. If you want to configure the application in SP-initiated mode, click **Set additional URLs** and enter a URL that combines your [Braze instance]({{site.baseurl}}/user_guide/administrative/access_braze/braze_instances/#braze-instances) with the following pattern: `https://<SUBDOMAIN>.braze.com/sign_in`.<br><br>![Azure portal setting additional sign on URLs.]({% image_buster /assets/img/azure_9.png %})
-
-{: start="7"}
+2. In the **Select a single sign-on method** dialog, select **SAML/WS-Fed** as your method
+3. In the **Set up Single Sign-On with SAML** page, select the edit icon for **Basic SAML Configuration**.
+4. Configure the application in IdP-initiated mode by entering a **Reply URL** that combines your [Braze instance]({{site.baseurl}}/user_guide/administrative/access_braze/braze_instances/#braze-instances) with the following pattern: `https://<SUBDOMAIN>.braze.com/auth/saml/callback`.
+5. Optionally configure RelayState by entering your Relay State generated API key into the **Relay State (Optional)** field.
+6. If you want to configure the application in SP-initiated mode, select **Set additional URLs** and enter a sign on URL that combines your [Braze instance]({{site.baseurl}}/user_guide/administrative/access_braze/braze_instances/#braze-instances) with the following pattern: `https://<SUBDOMAIN>.braze.com/sign_in`.
 7. Format SAML assertions in the specific format expected by Braze. Refer to the following tabs on user attributes and user claims to understand how these attributes and values must be formatted.
 
 {% tabs %}
@@ -80,9 +68,7 @@ It is critically important that the email field match what is set up for your us
 {% endtab %}
 {% tab User Claims %}
 
-On the **Set up Single Sign-On with SAML** page, click **Edit** to open the **User Attributes** dialog. Then, edit the claims according to the proper format.
-
-![User Attributes dialog in Azure.]({% image_buster /assets/img/azure_11.png %})
+On the **Set up Single Sign-On with SAML** page, select **Edit** to open the **User Attributes** dialog. Then, edit the user claims according to the proper format.
 
 Use the following claim name pairings:
 
@@ -96,18 +82,14 @@ Use the following claim name pairings:
 It is critically important that the email field match what is set up for your users in Braze. In most cases, this will be the same as `user.userprincipalname` however, if you have a different configuration, work with your system administrator to ensure that these fields match exactly.
 {% endalert %}
 
-You can manage these user claims and values from the **Manage user claims** dialog:
-
-![Manage claim dialog in Azure]({% image_buster /assets/img/azure_12.png %})
+You can manage these user claims and values from the **Manage claim** section.
 
 {% endtab %}
 {% endtabs %}
 
 {: start="8"}
-8. Go to the **Set up Single Sign-On with SAML** page, then scroll to the **SAML Signing Certificate** section and download the appropriate **Certificate (Base64)** based on your requirements.<br><br>![Azure download SAML signing certificate.]({% image_buster /assets/img/azure_13.png %})
-
-{: start="9"}
-9. Go to the **Set up Braze** section and copy the appropriate URLs for use in the [Braze configuration](#step-3).<br><br>![Azure URLs for configuration.]({% image_buster /assets/img/azure_14.png %})
+8. Go to the **Set up Single Sign-On with SAML** page, then scroll to the **SAML Signing Certificate** section and download the appropriate **Certificate (Base64)** based on your requirements.
+9. Go to the **Set up Braze** section and copy the appropriate URLs for use in the [Braze configuration](#step-3).
 
 ### Step 3: Configure Azure AD within Braze {#step-3}
 
@@ -130,8 +112,6 @@ If you are using the [older navigation]({{site.baseurl}}/navigation), select you
 | `Target URL` | This is the login URL provided by Azure AD.|
 | `Certificate` | The `x.509` PEM encoded certificate is provided by your identity provider. |
 {: .reset-td-br-1 .reset-td-br-2}
-
-![Opening Security Settings and adding SAML SSO details.]({% image_buster /assets/img/samlsso.gif %})
 
 {% alert tip %}
 If you want your Braze account users to only sign in with SAML SSO, you can [restrict single sign-on authentication]({{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/set_up/#restriction) from the **Company Settings** page.

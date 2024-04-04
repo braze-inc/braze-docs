@@ -17,6 +17,10 @@ search_rank: 3
 If this is your first time setting up the push integration for Android, see [Standard Android push integration]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/integration/standard_integration) instead.
 {% endalert %}
 
+## Rate limit
+
+Firebase Cloud Messaging (FCM) API has a default rate limit of 600,000 requests per minute. If you reach this limit, Braze will automatically try again in a few minutes. To request an increase, contact [Firebase Support](https://firebase.google.com/support).
+
 ## Step 1: Verify your Project ID
 
 First, open Google Cloud. On your project's home page, check the number in the **Project ID** field—you’ll compare this to the one in your Firebase project next.

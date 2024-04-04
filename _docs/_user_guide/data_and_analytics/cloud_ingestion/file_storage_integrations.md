@@ -167,6 +167,7 @@ To complete the setup on AWS, you will create an IAM role and attach the IAM pol
 {: start="5"}
 5. Finally, test the connection and save the sync. <br><br>![]({% image_buster /assets/img/cloud_ingestion/s3_ingestion_4.png %})
 
+
 ## Required file formats
 
 Cloud Data Ingestion supports JSON, CSV, and Parquet files. Each file must contain one or more of the supported identifier columns, and a payload column as a JSON string. *Unlike with data warehouse sources, the UPDATED_AT column is not required nor supported.* 
@@ -219,6 +220,4 @@ s3-qa-load-0-d0daa196-cdf5-4a69-84ae-4797303aee75,"{""name"": ""SNXIM"", ""age""
 s3-qa-load-1-d0daa196-cdf5-4a69-84ae-4797303aee75,"{""name"": ""0J747"", ""age"": 73, ""subscriber"": false, ""retention"": {""previous_purchases"": 22, ""vip"": false}, ""last_visit"": ""2023-08-08T16:03:26.598816""}"
 s3-qa-load-2-d0daa196-cdf5-4a69-84ae-4797303aee75,"{""name"": ""EP1U0"", ""age"": 99, ""subscriber"": false, ""retention"": {""previous_purchases"": 23, ""vip"": false}, ""last_visit"": ""2023-08-08T16:03:26.598822""}"
 ```  
-{% endtabs %}
-
-
+{% endtabs %}  

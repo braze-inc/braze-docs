@@ -19,17 +19,35 @@ Starting in early 2024, messaging interaction data will be available according t
 
 ### When is messaging interaction data available?
 
-For active campaigns and Canvases, interaction data is always available in real time.
+Interaction data is always available. For active campaigns and Canvases, interaction data is always available in real time. 
 
-Stopped campaigns and Canvases will have their interaction data expire after three months unless they are used in retargeting filters. Expired interaction data is moved to long-term storage and will not be available in the dashboard.
+For stopped campaigns and Canvases, their interaction data expires after three months unless it's used in retargeting filters by active campaigns or Canvases. Expired interaction data is moved to long-term storage and is not available for use unless restored using the process described below.
 
-As outlined below, the interaction data may be stored to the dashboard at any time.
+Expired interaction data is never deleted and can be restored at any time.
 
 #### Features that use interaction data
 
 The following features use messaging interaction data:
 
-- Retargeting filters, including filters that retarget by tag
+- Retargeting filters that retarget on a specific campaign or Canvas
+    - Clicked Alias in Campaign
+    - Clicked Alias in Canvas Step
+    - Clicked/Opened Campaign
+    - Clicked/Opened Step
+    - Converted From Campaign
+    - Converted From Canvas
+    - Entered Canvas Variation
+    - In Campaign Control Group
+    - In Canvas Control Group
+    - Last Received Message from Specific Campaign
+    - Last Received Message from Specific Canvas Step
+    - Received Campaign Variant
+    - Received Message from Campaign
+    - Received Message from Canvas Step
+- Retargeting filters that retarget on campaigns or Canvases of a certain tag
+    - Received Message from Campaign or Canvas with Tag
+    - Clicked/Opened Campaign or Canvas With Tag
+    - Last Received Message from Campaign or Canvas With Tag
 - **Campaigns Received** and **Canvas Messages Received** lists on the user profile
 - `/users/export` endpoint
 - **User Data** CSV exports on campaign and Canvas summary pages
@@ -47,7 +65,25 @@ The following features **do not** use messaging interaction data, meaning these 
 - Snowflake Data Share
 - Segment Extensions
 - Data points
-- Filters for a last received or engaged with message (such as Last Clicked/Opened Any Email)
+- The following retargeting filters:
+    - Clicked Alias in Any Campaign or Canvas Step
+    - Feature Flags
+    - Hard Bounced
+    - Has Marked You As Spam
+    - Has Never Received a Message from Campaign or Canvas Step
+    - Invalid Phone Number
+    - Last Engaged With Message
+    - Last Enrolled in Any Control Group
+    - Last In App Message Impression
+    - Last Received Any Message
+    - Last Received Email 
+    - Last Received Push
+    - Last Received SMS
+    - Last Received Webhook
+    - Last Received WhatsApp
+    - Last Sent Specific SMS Inbound Keyword Category
+    - Last Viewed News Feed
+    - News Feed View Count
 
 ### How do I restore messaging interaction data?
 
@@ -66,9 +102,9 @@ It will vary how long the interaction data takes to restore, but in most cases, 
 
 You can also restore interaction data for expired campaigns or Canvases with a given tag.
 
-1. Go to the Campaigns or Canvas page and search by the relevant tag.
-2. Select the desired campaigns or Canvases.
-3. Click **Restore interaction data** to restore the data for those campaigns or Canvases.
+1. Go to the **Campaigns** or **Canvas** page and search by the relevant tag.
+2. Select your campaigns or Canvases.
+3. Select **Restore interaction data** to restore the data for those campaigns or Canvases.
 
 After another three months of inactivity, these campaigns or Canvases will expire again.
 

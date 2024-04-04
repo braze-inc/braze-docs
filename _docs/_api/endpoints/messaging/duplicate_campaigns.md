@@ -5,7 +5,7 @@ search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "This article outlines details about the Duplicating campaigns endpoint."
+description: "This article outlines details about the Duplicate campaigns endpoint."
 
 ---
 {% api %}
@@ -16,13 +16,13 @@ description: "This article outlines details about the Duplicating campaigns endp
 
 > Use this endpoint to duplicate campaigns. This API endpoint is similar to [duplicating campaigns in the Braze dashboard][1].
 
-{% alert note %}
-To use this endpoint, you'll need to generate an API key with the `campaigns.duplicate` permission.
-{% endalert %}
-
 {% alert important %}
 Duplicating a campaign via API is currently in early access. Contact your Braze account manager if you're interested in participating in the early access.
 {% endalert %}
+
+## Prerequisites
+
+To use this endpoint, you'll need to generate an API key with the `campaigns.duplicate` permission.
 
 ## Rate limit
 
