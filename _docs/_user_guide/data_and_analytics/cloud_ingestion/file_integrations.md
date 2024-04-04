@@ -42,9 +42,18 @@ Take note of the region you’ve created the bucket in, as you will create an SQ
 
 ### Step 2: Create SQS resources
 
-Create an SQS queue in the same region you created the S3 bucket. This queue will be used to track when objects are added to the bucket(s) you’ve created.
+Create an SQS queue to track when objects are added to the bucket you’ve created.
 
-You can create this queue with default configuration settings until you reach the access policy step. When setting up the access policy, choose Advanced options. Append the following statement to the queue's access policy: 
+{% alert important %}
+Note: Be sure to create this SQS in the same region you created the bucket in. {% endalert %}
+
+Use default configuration settings until you reach the access policy step. When setting up the access policy, choose Advanced options. 
+
+Be sure to take note of the ARN and the URL of the SQS as you’ll be using it in your changes, and later on when making the IAM Policy and CDI Integration. 
+<br><br>![]({% image_buster /assets/img/cloud_ingestion/s3_ARN.png %})
+<br><br>
+
+Append the following statement to the queue's access policy, being careful to replace the SQS ARN, account ID, and bucket name with the IDs for your account and AWS resources:  
 
 ``` json 
 {
