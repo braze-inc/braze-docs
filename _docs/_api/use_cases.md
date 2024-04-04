@@ -59,6 +59,7 @@ After sending this payload successfully, we’ll see this response that confirms
 ```json
 {
   "message": "success"
+}
 ```
 
 ## Auditing all Canvases
