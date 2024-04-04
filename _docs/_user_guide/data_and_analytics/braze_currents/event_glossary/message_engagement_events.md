@@ -1866,7 +1866,7 @@ This event occurs when a user is enrolled in a control variant set on a multi-va
 Subscription
 {% endapitags %}
 
-This event occurs when the subscription state of a user in a subscription group changes.
+This event occurs when Braze receives a request to update the subscription state of the user, even if the request doesn’t alter the current subscription state for the user.
 
 {% alert important %}
 Subscription groups are only available for email, SMS, and WhatsApp channels at this time.
