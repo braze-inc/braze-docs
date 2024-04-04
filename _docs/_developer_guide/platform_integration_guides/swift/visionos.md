@@ -4,7 +4,7 @@ article_title: visionOS
 page_order: 7.2
 platform: 
   - iOS
-description: "visionOS support"
+description: "This article covers the features supported on visionOS."
 ---
 
 # visionOS
