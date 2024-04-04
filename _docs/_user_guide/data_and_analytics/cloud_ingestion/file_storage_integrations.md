@@ -180,7 +180,8 @@ Cloud Data Ingestion supports JSON, CSV, and Parquet files. Each file must conta
 - `PAYLOAD` - This is a JSON string of the fields you want to sync to the user in Braze.
 
 {% alert note %}
-For examples of all supported file types, please see the sample files in [braze-examples](https://github.com/braze-inc/braze-examples/tree/main/cloud-data-ingestion/braze-examples/payloads/file_storage) {% endalert %}
+Files added to the S3 source bucket should not exceed 512MB. Files larger than 512MB will result in an error and will not be synced to Braze.
+ {% endalert %}
 
 
 {% tabs %}
@@ -221,3 +222,5 @@ s3-qa-load-1-d0daa196-cdf5-4a69-84ae-4797303aee75,"{""name"": ""0J747"", ""age""
 s3-qa-load-2-d0daa196-cdf5-4a69-84ae-4797303aee75,"{""name"": ""EP1U0"", ""age"": 99, ""subscriber"": false, ""retention"": {""previous_purchases"": 23, ""vip"": false}, ""last_visit"": ""2023-08-08T16:03:26.598822""}"
 ```  
 {% endtabs %}  
+
+For examples of all supported file types, please see the sample files in [braze-examples](https://github.com/braze-inc/braze-examples/tree/main/cloud-data-ingestion/braze-examples/payloads/file_storage).  
