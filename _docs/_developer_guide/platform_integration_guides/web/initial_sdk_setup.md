@@ -116,8 +116,8 @@ enableLogging: true
 Your method should be similar to the following:
 
 ```javascript
-braze.initialize('YOUR-API-KEY', {
-    baseUrl: 'sdk.iad-03.braze.com',
+braze.initialize('API-KEY', {
+    baseUrl: 'API-ENDPOINT',
     enableLogging: true
 });
 braze.openSession();
@@ -125,11 +125,11 @@ braze.openSession();
 {% endtab %}
 
 {% tab after initialization %}
-Use `braze.toggleLogging()` to log basic debugging messages to the javascript console after the SDK is initialized.
+Use `braze.toggleLogging()` to log basic debugging messages to the javascript console after the SDK is initialized. Your method should be similar to the following:
 
 ```javascript
-braze.initialize('YOUR-API-KEY', {
-    baseUrl: 'sdk.iad-03.braze.com',
+braze.initialize('API-KEY', {
+    baseUrl: 'API-ENDPOINT',
     enableLogging: true
 });
 braze.openSession();
@@ -154,9 +154,8 @@ setLogger(loggerFunction: (message: STRING) => void): void
 Replace `STRING` with your message as a single string parameter. Your method should be similar to the following:
 
 ```javascript
-braze.initialize('YOUR-API-KEY');
+braze.initialize('API-KEY');
 braze.setLogger(function(message) {
-    // Custom log handling
     console.log("Braze Custom Logger: " + message);
 });
 braze.openSession();
