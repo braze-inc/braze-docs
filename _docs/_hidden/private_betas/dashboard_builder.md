@@ -19,7 +19,7 @@ Dashboard Builder is currently in early access. Contact your customer success ma
 
 ## Running a dashboard template
 
-1. Go to **Analytics** > **Dashboard Builder**. The home page lists all existing dashboards within your workspace, with Braze created templates at the top. These are denoted with "(Braze)" in the title.
+1. Go to **Analytics** > **Dashboard Builder**. The home page lists all existing dashboards within your workspace, with Braze-created templates at the top. These are denoted with "(Braze)" in the title.
 2. Select the dashboard you’re interested in.
 3. Select **Run Dashboard** to generate a dashboard using that template.
 
