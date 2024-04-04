@@ -130,7 +130,6 @@ Use `braze.toggleLogging()` to log basic debugging messages to the javascript co
 ```javascript
 braze.initialize('API-KEY', {
     baseUrl: 'API-ENDPOINT',
-    enableLogging: true
 });
 braze.openSession();
 ...
