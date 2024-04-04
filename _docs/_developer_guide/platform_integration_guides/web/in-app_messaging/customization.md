@@ -22,7 +22,7 @@ guide_featured_list:
     image: /assets/img/braze_icons/message-x-circle.svg
   - name: Logging Impressions and Clicks
     link: /docs/developer_guide/platform_integration_guides/web/in-app_messaging/customization/logging_impressions_and_clicks/
-    image: /assets/img/braze_icons/navigation-point-01.svg
+    image: /assets/img/braze_icons/navigation-pointer-01.svg
   - name: Open Link in New Tab
     link: /docs/developer_guide/platform_integration_guides/web/in-app_messaging/customization/open_link_in_new_tab/
     image: /assets/img/braze_icons/link-03.svg

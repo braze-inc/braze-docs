@@ -26,7 +26,7 @@ guide_featured_list:
     image: /assets/img/braze_icons/settings-01.svg
   - name: Comportement du clic personnalisé
     link: /docs/developer_guide/platform_integration_guides/ios/in-app_messaging/customization/behavior_on_click/
-    image: /assets/img/braze_icons/navigation-point-01.svg
+    image: /assets/img/braze_icons/navigation-pointer-01.svg
   - name: Contrôleur de visualisation personnalisée
     link: /docs/developer_guide/platform_integration_guides/ios/in-app_messaging/customization/custom_view_controller/
     image: /assets/img/braze_icons/eye.svg

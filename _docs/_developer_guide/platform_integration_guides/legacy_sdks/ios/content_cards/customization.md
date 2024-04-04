@@ -23,7 +23,7 @@ guide_featured_list:
     image: /assets/img/braze_icons/settings-01.svg
   - name: Handling Clicks Manually
     link: /docs/developer_guide/platform_integration_guides/ios/content_cards/customization/handling_clicks_manually/
-    image: /assets/img/braze_icons/navigation-point-01.svg
+    image: /assets/img/braze_icons/navigation-pointer-01.svg
   - name: Read & Unread Indicators
     link: /docs/developer_guide/platform_integration_guides/ios/content_cards/customization/read_unread_indicators/
     image: /assets/img/braze_icons/book-closed.svg

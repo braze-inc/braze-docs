@@ -19,7 +19,7 @@ guide_featured_list:
     image: /assets/img/braze_icons/settings-01.svg
   - name: Custom On-Click Behavior
     link: /docs/developer_guide/platform_integration_guides/swift/in-app_messaging/customization/behavior_on_click/
-    image: /assets/img/braze_icons/navigation-point-01.svg
+    image: /assets/img/braze_icons/navigation-pointer-01.svg
   - name: Custom Triggering
     link: /docs/developer_guide/platform_integration_guides/swift/in-app_messaging/customization/custom_triggering/
     image: /assets/img/braze_icons/check-square-broken.svg

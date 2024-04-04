@@ -25,7 +25,7 @@ guide_featured_list:
     image: /assets/img/braze_icons/settings-01.svg
   - name: Gestion manuelle des clics
     link: /docs/developer_guide/platform_integration_guides/android/content_cards/customization/handling_clicks_manually/
-    image: /assets/img/braze_icons/navigation-point-01.svg
+    image: /assets/img/braze_icons/navigation-pointer-01.svg
   - name: Paires clé-valeur
     link: /docs/developer_guide/platform_integration_guides/android/content_cards/customization/key_value_pairs/
     image: /assets/img/braze_icons/code-square-01.svg

@@ -25,7 +25,7 @@ guide_featured_list:
     image: /assets/img/braze_icons/settings-01.svg
   - name: Handling Clicks Manually
     link: /docs/developer_guide/platform_integration_guides/android/in-app_messaging/customization/custom_listeners/
-    image: /assets/img/braze_icons/navigation-point-01.svg
+    image: /assets/img/braze_icons/navigation-pointer-01.svg
   - name: Message Dismissal
     link: /docs/developer_guide/platform_integration_guides/android/in-app_messaging/customization/message_dismissal/
     image: /assets/img/braze_icons/message-x-circle.svg

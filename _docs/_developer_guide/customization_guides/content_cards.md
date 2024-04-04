@@ -28,7 +28,7 @@ guide_featured_list:
     image: /assets/img/braze_icons/book-closed.svg
   - name: Logging Analytics 
     link: /docs/developer_guide/customization_guides/content_cards/logging_analytics/
-    image: /assets/img/braze_icons/navigation-point-01.svg
+    image: /assets/img/braze_icons/navigation-pointer-01.svg
   - name: Creating Custom Content Cards
     link: /docs/developer_guide/customization_guides/content_cards/creating_custom_content_cards
     image: /assets/img/braze_icons/switch-horizontal-01.svg
