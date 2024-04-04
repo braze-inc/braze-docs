@@ -53,7 +53,8 @@ Be sure to take note of the ARN and the URL of the SQS as you’ll be using it i
 <br><br>![]({% image_buster /assets/img/cloud_ingestion/s3_ARN.png %})
 <br><br>
 
-Append the following statement to the queue's access policy, being careful to replace the SQS ARN, account ID, and bucket name with the IDs for your account and AWS resources:  
+Append the following statement to the queue's access policy, being careful to replace `YOUR-BUCKET-NAME-HERE` with your bucket name, and `YOUR-SQS-ARN` with your SQS queue ARN, and `YOUR-AWS-ACCOUNT-ID` with your AWS account ID..  
+:  
 
 ``` json 
 {
@@ -135,7 +136,7 @@ To complete the setup on AWS, you will create an IAM role and attach the IAM pol
 
 1. Within the same IAM section of the console where you created the IAM policy, go to **Roles** > **Create Role**. <br><br>![]({{site.baseurl}}/assets/img/create_role_1_list.png)<br><br>
 
-2. Retrieve the Braze AWS account ID from your Braze dashboard. Go to **Partner Integrations** > **Technology Partners** and select **Amazon S3**. Here you will find the Account ID needed to create your role. 
+2. Retrieve the Braze AWS account ID from your Braze dashboard. Go to **Partner Integrations** > **Technology Partners** and select **Amazon S3**. Here you will find the Account ID needed to create your role. <br><br>![]({{site.baseurl}}/assets/img/cloud_ingestion/s3_find_account.png)<br><br>
 
 3. In AWS, select **Another AWS Account** as the trusted entity selector type. Provide your Braze account ID, select the **Require external ID** checkbox, and enter an external ID for Braze to use. Select **Next** when complete. <br><br> ![The S3 "Create Role" page. This page has fields for role name, role description, trusted entities, policies, and permissions boundary.]({{site.baseurl}}/assets/img/create_role_2_another.png)
 
