@@ -28,7 +28,7 @@ Most of the features available on iOS are supported on visionOS. This includes:
 The following features are partially supported on visionOS:
 - Rich Push Notifications
   - Images display as expected
-  - GIFs and videos display the preview thumbnail, it is not currently possible to play the media
+  - GIFs and videos display the preview thumbnail, but it is not currently possible to play the media
   - Audio playback is not supported
 - Push Stories
   - The _Next_ button to navigate between Push Story pages is not working as intended
