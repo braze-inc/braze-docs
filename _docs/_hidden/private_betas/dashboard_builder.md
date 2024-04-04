@@ -9,7 +9,7 @@ hidden: true
 
 # Dashboard Builder
 
-> Use Dashboard Builder to create dashboards and visualizations using reports created in Query Builder. You can get started with the pre-built SQL query templates in Query Builder, or write your own custom SQL queries to unlock even more insights. 
+> Use Dashboard Builder to create dashboards and visualizations using reports created in Query Builder. You can get started with the pre-built SQL query templates in Query Builder or write your own custom SQL queries to unlock even more insights.
 
 Braze provides pre-built dashboard templates for frequent use cases such as analysis of revenue using last-touch attribution. Note that the ability to edit a template dashboard is not yet available.
 
