@@ -75,11 +75,9 @@ For best practices on how to handle these responses, refer to [Handling increase
 
 Users will be prevented from entering the Canvas and no further messages will be sent out. For email campaigns and Canvases, the stop button does not mean that send will immediately stop. This is because after the send requests are sent out, they cannot be stopped from being delivered to the user.
 
-### Can Braze track unsubscribe links counted towards the "Unsubscribe" metric?
+### Can Braze track unsubscribe links counted toward the "Unsubscribe" metric?
 
-Braze does not offer this functionality as unsubscribe links are custom and clicks to an unsubscribe link does not guarantee an unsubscribe actually occurred. 
-
-**Workaround:** To achieve this same result, you could send an API call to Braze to update any user profiles where you recorded unsubscribes from your custom link. 
+Braze tracks unsubscribe links if the following Liquid is used within emails: {%raw%}`${set_user_to_unsubscribed_url}`{%endraw%}
 
 ### Can I add a "view this email in a browser" link to my emails?
 

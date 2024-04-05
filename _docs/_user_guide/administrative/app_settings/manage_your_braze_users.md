@@ -9,7 +9,7 @@ guide_top_text: "As your company's Braze account administrator, you may find tha
 page_type: landing
 description: "This landing page lists articles on managing your Braze users, such as adding and deleting users, setting user permissions, creating teams, and managing company settings."
 
-guide_featured_title: "Section Articles"
+guide_featured_title: "Section articles"
 guide_featured_list:
 - name: Adding Users
   link: /docs/user_guide/administrative/app_settings/manage_your_braze_users/adding_users_to_your_dashboard/

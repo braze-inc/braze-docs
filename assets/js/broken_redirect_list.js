@@ -257,7 +257,7 @@ validurls['/docs/partners/braze_currents/data_partner_integrations/amplitude/dat
 validurls['/docs/partners/technology_partners/data_and_infrastructure_agility/customer_data_platform/segment/']='/docs/partners/data_and_infrastructure_agility/customer_data_platform/segment/';
 validurls['/docs/partners/braze_currents/data_storage_events/customer_behavior_events/'] = '/docs/user_guide/data_and_analytics/braze_currents/event_glossary/customer_behavior_events/';
 validurls['/docs/partners/braze_currents/data_storage_events/message_engagement_events/'] = '/docs/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events/';
-validurls['/docs/user_guide/message_building_by_channel/sms/phone_numbers/sending_phone_numbers/'] = '/docs/user_guide/message_building_by_channel/sms/phone_numbers/short_and_long_codes/';
+validurls['/docs/user_guide/message_building_by_channel/sms/phone_numbers/sending_phone_numbers/'] = '/docs/user_guide/message_building_by_channel/sms/sms_setup/short_and_long_codes/';
 validurls['/docs/partners/additional_channels/direct_mail/inkit/'] = '/docs/partners/message_orchestration/additional_channels/direct_mail/inkit/';
 validurls['/docs/partners/additional_channels/direct_mail/lob/'] = '/docs/partners/message_orchestration/additional_channels/direct_mail/lob/';
 validurls['/docs/partners/additional_channels/instant_chat/messenger/'] = '/docs/partners/message_orchestration/additional_channels/messaging/messenger/';
@@ -1100,3 +1100,16 @@ validurls['/docs/home/metadata/'] = '/docs/contributing/yaml_front_matter/metada
 validurls['/docs/home/styling_test_page/'] = '/docs/contributing/styling_examples/';
 validurls['/docs/help/help_articles/docs/contribution'] = '/docs/contributing/home/';
 
+validurls['/docs/user_guide/administrative/app_settings/manage_your_braze_users/deleting_users_from_your_account/#deleting-braze-account-users'] = '/docs/user_guide/administrative/app_settings/manage_your_braze_users/adding_users_to_your_dashboard/#deleting-braze-users';
+
+validurls['/docs/developer_guide/platform_integration_guides/cordova/cordova_integration/'] = '/docs/developer_guide/platform_integration_guides/cordova/initial_setup/integration/';
+validurls['/docs/developer_guide/platform_integration_guides/cordova/initial_sdk_setup/android/'] = '/docs/developer_guide/platform_integration_guides/cordova/initial_setup/integration/?tab=android';
+validurls['/docs/developer_guide/platform_integration_guides/cordova/initial_sdk_setup/ios/'] = '/docs/developer_guide/platform_integration_guides/cordova/initial_setup/integration/?tab=ios';
+validurls['/docs/developer_guide/platform_integration_guides/cordova/cordova_integration/#analytics'] = '/docs/developer_guide/platform_integration_guides/cordova/analytics/'
+validurls['/docs/developer_guide/platform_integration_guides/cordova/cordova_integration/#in-app-messaging'] = '/docs/developer_guide/platform_integration_guides/cordova/other_integrations/';
+validurls['/docs/developer_guide/platform_integration_guides/cordova/cordova_integration/#news-feed'] = '/docs/developer_guide/platform_integration_guides/cordova/other_integrations/';
+
+validurls['/docs/list-unsubscribe/'] = '/docs/user_guide/administrative/app_settings/email_settings/#list-unsubscribe-header';
+validurls['/docs/user_guide/data_and_analytics/cloud_ingestion/file_integrations/'] = 'docs/user_guide/data_and_analytics/cloud_ingestion/file_storage_integrations/';
+
+// validurls['OLD'] = 'NEW';

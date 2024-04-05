@@ -10,7 +10,7 @@ page_type: landing
 description: "This landing page is home to articles that can guide your planning for your Canvas and the journey you plan to take your users through."
 tool: Canvas
 search_rank: 2
-guide_featured_title: "Section Articles"
+guide_featured_title: "Section articles"
 guide_featured_list:
   - name: Canvas Basics
     link: /docs/user_guide/engagement_tools/canvas/get_started/the_basics/

@@ -9,7 +9,7 @@ page_type: landing
 description: "This landing page includes resources on getting started with email campaigns including setting up your IPs and domains, IP warming, email validation, and more."
 channel: email
 
-guide_featured_title: "Section Articles"
+guide_featured_title: "Section articles"
 guide_featured_list:
 - name: "Setting Up IPs and Domains"
   link: /docs/user_guide/message_building_by_channel/email/email_setup/setting_up_ips_and_domains/

@@ -10,7 +10,7 @@ page_type: landing
 description: "This landing page is home to articles related to the HTML editor for email."
 channel: email
 
-guide_featured_title: "Section Articles"
+guide_featured_title: "Section articles"
 guide_featured_list:
   - name: "Creating an Email with Custom HTML"
     link: /docs/user_guide/message_building_by_channel/email/html_editor/creating_an_email_campaign/

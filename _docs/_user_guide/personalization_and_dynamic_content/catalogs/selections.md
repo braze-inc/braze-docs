@@ -7,41 +7,51 @@ description: "This reference article covers how to create and use selections wit
 
 # Selections
 
-> Selections are groups of data that can be used to personalize a message for each user in your campaign. After creating a [catalog]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalog/), you can further reference this data by incorporating selections in your Braze campaigns. Note that the free tier of catalogs allows one selection to be created per catalog. 
+> Learn how to create and use selections with your catalogs.
+
+Selections are groups of data that can be used to personalize a message for each user in your campaign. When you use a selection, you’re essentially setting up custom filters based on specific columns in your catalog. This could include filters for brand, size, location, date added, and more. It gives you control over what you’re showing to users by allowing you to define criteria that items must meet first.
+
+After creating a [catalog]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalog/), you can further reference your catalog data by incorporating selections in your Braze campaigns or recommendations.
+
+![The Selections section in an example catalog.][1]
+
+## Things to know
+
+- You can create up to 30 selections per catalog.
+- Selections are great for refining recommendations from Braze catalog data. If you're looking for inspiration, check out [About item recommendations]({{site.baseurl}}/user_guide/sage_ai/recommendations/about_item_recommendations/) for example use cases.
 
 ## Creating a selection
 
 To create a selection, do the following.
 
-1. Select your catalog and go to the **Selection** tab, then click **Create Selection**. 
-2. Select the catalog column from the **Filter Field** dropdown. 
-3. Select the operator and enter the attribute. 
-
-{% alert note %}
-You can create up to 30 selections per catalog.
-{% endalert %}
-
-{: start="4"}
-4. In the **Sort type** section, specify the order in which results are returned. This includes an option to randomize the sort order. 
-5. Enter the maximum number of results, up to 50, for the **Limit number** under the **Results limit** section.
-6. Click **Create Selection** and the selection will display above the catalog data. 
-7. Create a campaign, then click the plus sign in the **Message** composer.
-8. In the **Add Personalization** modal, select:
-- **Catalog Items** as the **Personalization Type**
-- The catalog name
-- The type of selection
-
-{% alert important %}
-String fields with more than 1,000 characters cannot be filtered.
-{% endalert %}
-
-![The Add Personalization modal with the following selections: "Catalog Items" for "Personalization Type", "Games" for "Catalog Name", "Selections" for "Selection Type", "game_selection" for "Selection", and "title" and "description_en" for "Information to Display".][6]{: style="max-width:70%;"}
+1. Go to **Catalogs** and select your catalog from the list.
+2. Select the **Selection** tab and click **Create Selection**.
+3. Give your selection a name and optional description.
+4. For **Filter Field**, select the catalog column you want to filter by. String fields with more than 1,000 characters cannot be selected for filters.
+5. Finish defining your filter criteria by selecting the relevant operator (for example, "equals" or "does not equal") and attribute.
+6. In the **Sort type** section, determine how results are sorted. By default, results are returned in no particular order. To specify sorting by a specific field, turn off **Randomize Sort Order** and specify the **Sort Field** and **Sort Order** (ascending or descending).
+7. In the **Results limit** section, enter the maximum number of results, up to 50.
+8. Click **Create Selection**.
 
 ### Liquid in selection results
 
 Using any Liquid in catalogs, such as custom attributes and custom events, can result in different results returned for each user in your selection.
 
-![The Selections section in an example catalog.][1]
+![Filter settings for catalog selection where the attribute is set to a Liquid custom attribute.][7]
+
+## Using selections in messaging
+
+After creating your selection, personalize your messages with Liquid to insert the filtered items from that catalog. You can have Braze generate the Liquid for you from the personalization window found in message composers:
+
+1. In any message composers that support personalization, click <i class="fa-solid fa-circle-plus" style="color: #12aec5;" title="Add personalization"></i> to open the personalization window.
+2. For **Personalization Type**, select **Catalog Items**.
+3. Select your catalog name.
+4. For **Item selection method**, select **Use a selection**.
+4. Select your selection from the list.
+5. For **Information to Display**, select which fields from the catalog should be included for each item.
+6. Click the **Copy** icon and paste the Liquid wherever it needs to go in your message.
+
+![The Add Personalization modal with the following selections: "Catalog Items" for "Personalization Type", "Games" for "Catalog Name", "Selections" for "Selection Type", "game_selection" for "Selection", and "title" and "description_en" for "Information to Display".][6]{: style="max-width:70%;"}
 
 ## Use case
 
@@ -70,3 +80,4 @@ Using the same personalization, you can also send three meal recommendations for
 [4]: {% image_buster /assets/img_archive/catalog_selections4.png %}
 [5]: {% image_buster /assets/img_archive/catalog_selections5.png %}
 [6]: {% image_buster /assets/img_archive/catalog_selections6.png %}
+[7]: {% image_buster /assets/img_archive/catalog_selections7.png %}

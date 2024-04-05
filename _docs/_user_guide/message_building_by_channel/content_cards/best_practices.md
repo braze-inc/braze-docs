@@ -10,7 +10,7 @@ page_type: landing
 description: "This landing page is home to best practices that highlight things that you should know and check for prior to card send."
 channel: Content Card
 
-guide_featured_title: "Section Articles"
+guide_featured_title: "Section articles"
 guide_featured_list:
 - name: "Know Before You Send"
   link: /docs/know_before_send/

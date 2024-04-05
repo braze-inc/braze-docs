@@ -10,7 +10,7 @@ page_type: landing
 description: "This landing page is home to email best practices. Here, you can find tips, use cases, and best practices to refine your email messaging."
 channel: email
 
-guide_featured_title: "Section Articles"
+guide_featured_title: "Section articles"
 guide_featured_list:
   - name: "Guidelines"
     link: /docs/user_guide/message_building_by_channel/email/best_practices/guidelines_and_tips/

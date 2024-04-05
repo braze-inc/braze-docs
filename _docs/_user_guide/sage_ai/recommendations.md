@@ -1,13 +1,28 @@
 ---
-nav_title: AI Item Recommendations
-article_title: AI Item Recommendations
+nav_title: Recommendations
+article_title: Recommendations
 page_order: 15
-alias: "/recommendations/"
-description: "This reference article covers how to create an AI Item Recommendation for items in a catalog."
+layout: dev_guide
+search_rank: 1
+guide_top_header: "Recommendations"
+guide_top_text: "Step up your recommendation game with Braze. Here is a collection of what you need to know about setting up recommendation engines so that you can suggest items or content that users actually want. From customizing experiences with AI to building your own engines with Liquid or Connected Content, you'll find everything you need to make every recommendation count."
+description: "This landing page homes articles related to building and using recommendation engines in Braze."
+
+guide_featured_title: "Articles"
+guide_featured_list:
+- name: About Recommendations
+  link: /docs/user_guide/sage_ai/recommendations/about_item_recommendations/
+  fa_icon: fas fa-book
+- name: AI Item Recommendations
+  link: /docs/user_guide/sage_ai/recommendations/ai_item_recommendations/
+  fa_icon: fas fa-person-circle-question 
+- name: Rules-based Recommendations
+  link: /docs/user_guide/sage_ai/recommendations/rules_based_recommendations/
+  fa_icon: fas fa-list
 ---
 
-# AI item recommendations
 
+<<<<<<< HEAD
 > Learn how to create an AI Item Recommendation for items in a catalog.
 
 You can use AI item recommendations to calculate the most popular products or create personalized AI recommendations for a specific [catalog]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/). After you create your recommendation, you can use personalization to insert those products into your messages.
@@ -289,3 +304,6 @@ After your recommendation finishes training, you can personalize your messages w
 [7]: {% image_buster /assets/img/item_recs_analytics_3.png %}
 [10]: {% image_buster /assets/img/add_personalization.png %}
 [catalog]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/
+=======
+<br><br>
+>>>>>>> develop

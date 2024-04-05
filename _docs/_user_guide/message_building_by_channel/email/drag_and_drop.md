@@ -10,7 +10,7 @@ guide_top_text: "The drag-and-drop editor allows you to create completely custom
 channel: email
 tool: Media
 
-guide_featured_title: "Section Articles"
+guide_featured_title: "Section articles"
 guide_featured_list:
 - name: Creating a Drag-and-Drop Email
   link: /docs/dnd/overview/

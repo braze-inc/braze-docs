@@ -71,7 +71,7 @@ Table | Description
 [USERS_MESSAGES_PUSHNOTIFICATION_BOUNCE_SHARED](#USERS_MESSAGES_PUSHNOTIFICATION_BOUNCE_SHARED) | When a push notification bounces
 [USERS_MESSAGES_PUSHNOTIFICATION_INFLUENCEDOPEN_SHARED](#USERS_MESSAGES_PUSHNOTIFICATION_INFLUENCEDOPEN_SHARED) | When a user opens the app after receiving a notification without clicking on the notification
 [USERS_MESSAGES_PUSHNOTIFICATION_IOSFOREGROUND_SHARED](#USERS_MESSAGES_PUSHNOTIFICATION_IOSFOREGROUND_SHARED) | When a user receives a push notification while the app is open
-[USERS_MESSAGES_PUSHNOTIFICATION_OPEN_SHARED](#USERS_MESSAGES_PUSHNOTIFICATION_OPEN_SHARED) | When a user opens a push notification or clicks a push notification button (including a CLOSE button that does NOT open the app)
+[USERS_MESSAGES_PUSHNOTIFICATION_OPEN_SHARED](#USERS_MESSAGES_PUSHNOTIFICATION_OPEN_SHARED) | When a user opens a push notification or clicks a push notification button (including a CLOSE button that does NOT open the app). <br><br> Push button actions have multiple outcomes. No, Decline, and Cancel actions are "clicks", and Accept actions are "opens". Both are represented in this table, but they can be distinguished in the **BUTTON_ACTION_TYPE** column. For example, a query can be used to group by a `BUTTON_ACTION_TYPE` that is not No, Decline, or Cancel.
 [USERS_MESSAGES_PUSHNOTIFICATION_SEND_SHARED](#USERS_MESSAGES_PUSHNOTIFICATION_SEND_SHARED) | When we send a push notification to a user
 [USERS_MESSAGES_SMS_ABORT_SHARED](#USERS_MESSAGES_SMS_ABORT_SHARED) | An originally scheduled SMS message was aborted for some reason.
 [USERS_MESSAGES_SMS_CARRIERSEND_SHARED](#USERS_MESSAGES_SMS_CARRIERSEND_SHARED) | When an SMS message is sent to carrier
@@ -1821,7 +1821,7 @@ Field | Type | Description
 `canvas_step_message_variation_api_id` | `null,`&nbsp;`string` | API ID of the Canvas step message variation this user received
 `gender` | `null,`&nbsp;`string` | [PII] gender of the user
 `country` | `null,`&nbsp;`string` | [PII] country of the user
-`timezone` | `null,`&nbsp;`string` | timezone of the user
+`timezone` | `null,`&nbsp;`string` | time zone of the user
 `language` | `null,`&nbsp;`string` | [PII] language of the user
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 

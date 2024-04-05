@@ -213,7 +213,7 @@ By default, the Canvas variant assignment is locked in when users enter the Canv
 You can add more steps to your Canvas workflow by dragging and dropping components from the **Components** sidebar. Or, when you click the <i class="fas fa-plus-circle"></i> plus button, you can also add a component with the popover menu.
 
 {% alert tip %}
-As you begin to add more steps, you can switch up the zoom level to focus in on details or take in the entire user journey. Zoom in with <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>+</kbd> or zoom out with <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>-</kbd>.
+As you begin to add more steps, you can switch up the zoom level to focus in on details or take in the entire user journey. Zoom in with <kbd>Shift</kbd> + <kbd>+</kbd> or zoom out with <kbd>Shift</kbd> + <kbd>-</kbd>.
 {% endalert %}
 
 ![]({% image_buster /assets/img_archive/add_components_flow.png %})

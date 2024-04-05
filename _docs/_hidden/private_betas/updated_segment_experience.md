@@ -74,6 +74,18 @@ Braze doesn't generate profiles for users until they've used the app for the fir
 Segments already using the Segment Membership Filter cannot be further included or nested into other segments.
 {% endalert %}
 
+#### Exclusion groups (optional)
+
+When building a segment, you can apply one or multiple exclusion groups. Exclusion groups contain criteria that identify users to exclude from your segment, and will always be connected to your filter groups with an "AND NOT" operator.
+
+If a user falls into your exclusion group criteria, they will not be part of your segment, even if they meet the criteria within your filter groups.
+
+Create an exclusion group by adding filters like you would for filter groups. The _Estimated Reachable Users_ statistic in an exclusion group shows the estimated number of users remaining in your segment after the exclusion criteria is applied.
+
+Excluded users will not be counted as part of your segment’s _Total reachable users_ statistic.
+
+![An exclusion group with two filters.][12]
+
 #### Testing segments
 
 After adding apps and filters to your segment, you can test if your segment is set up as expected by looking up a user to confirm if they match the segment criteria. To do so, click **Lookup User** and search for a user’s `external_id` or `braze_id`.

@@ -9,7 +9,7 @@ description: "This landing page includes articles on the Braze email preference 
 channel:
   - email
 
-guide_featured_title: "Section Articles"
+guide_featured_title: "Section articles"
 guide_featured_list:
 - name: Overview
   link: /docs/user_guide/message_building_by_channel/email/preference_center/overview/
