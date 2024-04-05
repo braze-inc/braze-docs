@@ -14,7 +14,7 @@ description: "This reference article describes how to create back-in-stock notif
 Back-in-stock notifications for Braze Shopify catalogs are currently in early access. Contact your account manager if you're interested in participating in this early access.
 {% endalert %}
 
-When a customer clicks an item, we'll automatically subscribe them to receive back-in-stock notifications for that item. Once the item's inventory quantity meets your inventory rule (such as an inventory larger than 100), all subscribers will be elgible for notifications through a campaign or Canvas. However, only users who opted into notifications will receive notifications. 
+When a customer clicks an item, we'll automatically subscribe them to receive back-in-stock notifications for that item. Once the item's inventory quantity is greater than zero, all subscribers will be elgible for notifications through a campaign or Canvas. However, only users who opted into notifications will receive notifications. 
 
 ## How back-in-stock notifications work
 
@@ -39,10 +39,10 @@ Follow these steps to set up back-in-stock notifications in a specific catalog.
     - **Notify all subscribed users** notifies all customers who are waiting when the item is back in stock. 
     - **Notify a certain number of users per a certain number of minutes** notifies a specified number of customers per your configured notification period. Braze will notify the specified numbers of customers in increments until there are no more customers to notify, or until the item goes out of stock. Your notification rate cannot exceed notifying 10,000 users per minute.
 3. Select the **Back in stock** toggle.
-4. Set the **Inventory field in catalog**. This is the catalog field that will be used to determine if item is out of stock. The field must be number type.
-3. Save your settings.
+4. Select the **Inventory field in catalog** as `inventory_quantity`. This will check the Shopify `inventory_quantity` field within your product syncs. If the value is greater than zero, then customers that are subscribed will be eligible to receive the back in stock notification.
+5. Save your settings.
 
-![Catalog settings that show the back in stock feature turned on. The notification rules are to notify a thousand users every ten minutes.][1]
+![Catalog settings that show the back in stock feature turned on. The notification rules are to notify a thousand users every ten minutes.][1]{: style="max-width:70%;"}
 
 {% alert important %}
 Notification rules in these settings do not replace Canvas notification settings, such as Quiet Hours.
@@ -63,8 +63,18 @@ Now, your customers can be notified when an item is back in stock.
 {% raw %}
 To template in details about the catalog item that's back in stock, you can use the `canvas_entry_properties` Liquid tag to access the `item_id`. 
 
-Using ``{{canvas_entry_properties.${catalog_update}}}`` will return the ID of the item that came back in stock.
-Use this Liquid tag  ``{% catalog_items <name_of_your_catalog> {{canvas_entry_properties.${catalog_update}}} %}`` at the top of your message, then use ``items[0].<field_name>` to access data about that item throughout the message.
+To return the ID of the item that is back in stock, use the Liquid tag ``{{canvas_entry_properties.${catalog_update}}}``. To access data about that item throughout your message, put the Liquid tag  ``{% catalog_items <name_of_your_catalog> {{canvas_entry_properties.${catalog_update}}} %}`` at the top of your message, then use ``items[0].<field_name>` to place the data in your message.
+{% endraw %}
+
+Here is a sample Liquid template that will display the item's product title, image URL, and price:
+
+{% raw %}
+```liquid
+{% catalog_items shop-1234_shopify_catalog {{canvas_entry_properties.${catalog_update}.item_id}} %}
+{{ items[0].shopify_product_title }}
+{{ items[0].product_image_url }}
+{{ items[0].price }}
+```
 {% endraw %}
 
 ## Considerations
