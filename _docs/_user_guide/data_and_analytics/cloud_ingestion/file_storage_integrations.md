@@ -11,7 +11,7 @@ page_type: reference
 
 > This article covers how to set up Cloud Data Ingestion support and sync relevant data from S3 to Braze.
 
-You can use Cloud Data Ingestion for S3 to directly integrate one or more S3 buckets in your AWS account with Braze. When new files are published to S3, a message is posted to SQS, and Braze Cloud Data Ingestion takes in those new files. 
+You can use Cloud Data Ingestion (CDI) for S3 to directly integrate one or more S3 buckets in your AWS account with Braze. When new files are published to S3, a message is posted to SQS, and Braze Cloud Data Ingestion takes in those new files. 
 
 Cloud Data Ingestion supports JSON, CSV, and Parquet files, and attributes, event, purchase, and user delete data.
 
@@ -24,9 +24,20 @@ The integration requires the following resources:
 Braze Cloud Data Ingestion support for S3 is currently in early access. Contact your Braze account manager if you are interested in participating in the early access. 
 {% endalert %}
 
-## Setting up Cloud Data Ingestion in AWS
+## Definitions
 
-Follow these steps to set up a Cloud Data Integest integration in your AWS account:
+First, let's just define some of the terms used during this task.
+
+| Word | Definition |
+| --- | --- |
+| ACLs | asdfa df Note to self - only used once in the default settings section. Is it needed? |
+| ARN | The asdfasdf |
+| IAM role | The asdfasdf |
+| SQS | The asdfasdf |
+{: .reset-td-br-1 .reset-td-br-2 }
+ 
+
+## Setting up Cloud Data Ingestion in AWS
 
 ### Step 1: Create a source bucket
 
@@ -45,16 +56,16 @@ Take note of the region you’ve created the bucket in, as you will create an SQ
 Create an SQS queue to track when objects are added to the bucket you’ve created.
 
 {% alert important %}
-Note: Be sure to create this SQS in the same region you created the bucket in. {% endalert %}
+Be sure to create this SQS in the same region you created the bucket in. 
+{% endalert %}
 
 Use default configuration settings until you reach the access policy step. When setting up the access policy, choose **Advanced options**. 
 
-Be sure to take note of the ARN and the URL of the SQS as you’ll be using it in your changes, and later on when making the IAM Policy and CDI Integration. 
+Be sure to take note of the ARN and the URL of the SQS as you’ll be using it frequently during this configuration. 
 <br><br>![]({% image_buster /assets/img/cloud_ingestion/s3_ARN.png %})
 <br><br>
 
-Append the following statement to the queue's access policy, being careful to replace `YOUR-BUCKET-NAME-HERE` with your bucket name, and `YOUR-SQS-ARN` with your SQS queue ARN, and `YOUR-AWS-ACCOUNT-ID` with your AWS account ID. 
-:  
+Append the following statement to the queue's access policy, being careful to replace `YOUR-BUCKET-NAME-HERE` with your bucket name, and `YOUR-SQS-ARN` with your SQS queue ARN, and `YOUR-AWS-ACCOUNT-ID` with your AWS account ID: 
 
 ``` json 
 {
@@ -78,11 +89,11 @@ Append the following statement to the queue's access policy, being careful to re
 
 ### Step 3: Add an event notification to the S3 bucket
 
-1. In the bucket created in Step 1, go to **Properties** > **Event notifications**.
+1. In the bucket created in step 1, go to **Properties** > **Event notifications**.
 
 2. Give the configuration a name. Optionally, specify a prefix or suffix to target if you only want a subset of files to be ingested by Braze.
 
-3. Under **Destination** select **SQS queue** and provide the ARN of the SQS you created in Step 2.
+3. Under **Destination** select **SQS queue** and provide the ARN of the SQS you created in step 2.
 
 ### Step 4: Create an IAM policy
 
@@ -90,7 +101,7 @@ Create an IAM policy to allow Braze to interact with your source bucket. To get 
 
 1. Go to the IAM section of the AWS Console, select **Policies** in the navigation bar, then select **Create Policy**.<br><br>![]({{site.baseurl}}/assets/img/create_policy_1_list.png)<br><br>
 
-2. Open the **JSON** tab and input the following code snippet into the **Policy Document** section. Replace `YOUR-BUCKET-NAME-HERE` with your bucket name, and `YOUR-SQS-ARN-HERE` with your SQS queue name.  
+2. Open the **JSON** tab and input the following code snippet into the **Policy Document** section, taking care to replace `YOUR-BUCKET-NAME-HERE` with your bucket name, and `YOUR-SQS-ARN-HERE` with your SQS queue name: 
 
 ```json
 {
@@ -130,22 +141,22 @@ Create an IAM policy to allow Braze to interact with your source bucket. To get 
 
 ![]({{site.baseurl}}/assets/img/create_policy_4_created.png)
 
-### Step 5: IAM Role
+### Step 5: Create an IAM role
 
-To complete the setup on AWS, you will create an IAM role and attach the IAM policy from Step 4 to it. 
+To complete the setup on AWS, you will create an IAM role and attach the IAM policy from step 4 to it. 
 
 1. Within the same IAM section of the console where you created the IAM policy, go to **Roles** > **Create Role**. <br><br>![]({{site.baseurl}}/assets/img/create_role_1_list.png)<br><br>
 
-2. Retrieve the Braze AWS account ID from your Braze dashboard. Go to **Partner Integrations** > **Technology Partners** and select **Amazon S3**. Here you will find the Account ID needed to create your role. <br><br>![]({{site.baseurl}}/assets/img/cloud_ingestion/s3_find_account.png)<br><br>
+2. Retrieve the Braze AWS account ID from your Braze dashboard. Go to **Partner Integrations** > **Technology Partners** and select **Amazon S3**. Here you will find the account ID needed to create your role. <br><br>![]({{site.baseurl}}/assets/img/cloud_ingestion/s3_find_account.png)<br><br>
 
 3. In AWS, select **Another AWS Account** as the trusted entity selector type. Provide your Braze account ID, select the **Require external ID** checkbox, and enter an external ID for Braze to use. Select **Next** when complete. <br><br> ![The S3 "Create Role" page. This page has fields for role name, role description, trusted entities, policies, and permissions boundary.]({{site.baseurl}}/assets/img/create_role_2_another.png)
 
-4. Attach the policy created in Step 4 to the role. Search for the policy in the search bar, and select a checkmark next to the policy to attach it. Select **Next** when complete.<br><br>![Role ARN]({{site.baseurl}}/assets/img/create_role_3_attach.png)<br><br>Give the role a name and a description, and click **Create Role**.<br><br>![Role ARN]({{site.baseurl}}/assets/img/create_role_4_name.png)<br><br>
+4. Attach the policy created in step 4 to the role. Search for the policy in the search bar, and select a checkmark next to the policy to attach it. Select **Next** when complete.<br><br>![Role ARN]({{site.baseurl}}/assets/img/create_role_3_attach.png)<br><br>Give the role a name and a description, and click **Create Role**.<br><br>![Role ARN]({{site.baseurl}}/assets/img/create_role_4_name.png)<br><br>
 
 {: start="5"}
-5. Take note of the ARN of the role you just created and the external-id you generated, as you’ll use them to create the CDI Integration.  
+5. Take note of the ARN of the role you just created and the external-id you generated, as you’ll use them to create the Cloud Data Ingestion integration.  
 
-## Setting up Cloud Data Ingest in Braze
+## Setting up Cloud Data Ingestion in Braze
 
 1. To create a new integration, go to **Data Settings** > **Cloud Data Ingestion**, select **Create New Data Sync**, and select **S3 Import** from the file sources section. 
 
@@ -155,7 +166,7 @@ To complete the setup on AWS, you will create an IAM role and attach the IAM pol
 - SQS URL (must be unique for each new integration)
 - Bucket Name
 - Folder Path (optional)
-- Region.  
+- Region  
 
 ![]({% image_buster /assets/img/cloud_ingestion/s3_ingestion_1.png %})
 
@@ -170,7 +181,8 @@ To complete the setup on AWS, you will create an IAM role and attach the IAM pol
 
 ## Required file formats
 
-Cloud Data Ingestion supports JSON, CSV, and Parquet files. Each file must contain one or more of the supported identifier columns, and a payload column as a JSON string. *Unlike with data warehouse sources, the UPDATED_AT column is not required nor supported.* 
+Cloud Data Ingestion supports JSON, CSV, and Parquet files. Each file must contain one or more of the supported identifier columns, and a payload column as a JSON string. 
+
 - User identifiers. Your source file may contain one or more user identifier columns or keys. Each row should only contain one identifier, but a source file may have multiple identifier types. 
     - `EXTERNAL_ID` - This identifies the user you want to update. This should match the `external_id` value used in Braze. 
     - `ALIAS_NAME` and `ALIAS_LABEL` - These two columns create a user alias object. `alias_name` should be a unique identifier, and `alias_label` specifies the type of alias. Users may have multiple aliases with different labels but only one `alias_name` per `alias_label`.
@@ -180,9 +192,12 @@ Cloud Data Ingestion supports JSON, CSV, and Parquet files. Each file must conta
 - `PAYLOAD` - This is a JSON string of the fields you want to sync to the user in Braze.
 
 {% alert note %}
-Files added to the S3 source bucket should not exceed 512MB. Files larger than 512MB will result in an error and will not be synced to Braze.
- {% endalert %}
+Unlike with data warehouse sources, the `UPDATED_AT` column is not required nor supported. 
+{% endalert %}
 
+{% alert note %}
+Files added to the S3 source bucket should not exceed 512MB. Files larger than 512MB will result in an error and will not be synced to Braze.
+{% endalert %}
 
 {% tabs %}
 {% tab JSON Attributes %}
@@ -196,7 +211,8 @@ Files added to the S3 source bucket should not exceed 512MB. Files larger than 5
 {"external_id":"s3-qa-6","payload":"{\"name\": \"T93MJ\", \"age\": 47, \"subscriber\": true, \"retention\": {\"previous_purchases\": 10, \"vip\": false}, \"last_visit\": \"2023-08-08T16:03:26.600856\"}"}
 ```  
 {% alert important %}
-Every line in your source file must contain valid JSON, or the file will be skipped. {% endalert %}
+Every line in your source file must contain valid JSON, or the file will be skipped. 
+{% endalert %}
 {% endtab %}
 {% tab JSON Custom Events %}
 ``` json  
@@ -204,7 +220,8 @@ Every line in your source file must contain valid JSON, or the file will be skip
 {"external_id":"s3-qa-1","payload":"{\"app_id\": \"YOUR_APP_ID\", \"name\": \"view-206\", \"time\": \"2024-04-02T14:34:08\", \"properties\": {\"bool_value\": false, \"preceding_event\": \"unsubscribe\", \"important_number\": 206}}"}
 ```  
 {% alert important %}
-Every line in your source file must contain valid JSON, or the file will be skipped. {% endalert %}
+Every line in your source file must contain valid JSON, or the file will be skipped. 
+{% endalert %}
 {% endtab %}
 {% tab JSON Purchase Events %}
 ``` json  
