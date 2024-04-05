@@ -81,6 +81,6 @@ Here is a sample Liquid template that will display the item's product title, ima
 
 - Users are only subscribed for 90 days. If the item isn't back in stock in 90 days, the user is unsubscribed.
 - When using the **Notify all subscribed users** notification rule, Braze will notify 100,000 over 10 minutes.
-- Braze will process at most 10 item updates over one minute. If you update 11 items in one minute, only the first 10 will be able to trigger a back-in-stock notification.
+- Braze will process at most 10 item updates over one minute. If you update 11 items in one minute, only the first 10 can trigger a back-in-stock notification.
 
 [1]: {% image_buster /assets/img/back_in_stock_settings.png %} 
