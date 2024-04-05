@@ -1477,7 +1477,7 @@ This event occurs when a user dismisses a Content Card.
 SMS, Clicks
 {% endapitags %}
 
-This event occurs when a user clicks an SMS short link.
+This event occurs when a user clicks an SMS short link and advanced tracking for [link shortening]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/link_shortening/) is enabled.
 
 ```json
 // SMS Send: users.messages.sms.ShortLinkClick
