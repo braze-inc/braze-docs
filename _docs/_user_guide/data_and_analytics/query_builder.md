@@ -26,7 +26,7 @@ If you are using the [older navigation]({{site.baseurl}}/navigation), you can fi
 {% endalert %}
 
 {:start="2"}
-2. Click **Create New SQL Report**. If you need inspiration or help in crafting your query, select **Query Template** and choose a template from the list. Otherwise, select **SQL Editor** to head straight to the editor.
+2. Click **Create SQL Query**. If you need inspiration or help in crafting your query, select **Query Template** and choose a template from the list. Otherwise, select **SQL Editor** to head straight to the editor.
 3. Your report is automatically given a name with the current date and time. Hover over the name and click <i class="fas fa-pencil" alt="Edit"></i> to give your SQL query a meaningful name.
 4. Write your SQL query in the editor or [get help from AI](#ai-query-builder) from the **AI Query Builder** tab. If you choose to write your own SQL, see [custom SQL](#custom-sql) for requirements and resources.
 5. Click **Run Query**.
