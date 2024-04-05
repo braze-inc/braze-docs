@@ -97,7 +97,7 @@ This description will be shown when the system location prompt requests authoriz
 ## Step 6: Request authorization from the user
 
 {% alert note %}
-Calling `requestAlwaysAuthorization()` does not guarantee that you will receive `Always` authorization. By default, this method grants your app `When In Use` authorization and will prompt your user to promote their location permissions after some period of time. Alternatively, your user can manually change this in their device settings.
+Calling `requestAlwaysAuthorization()` does not guarantee that you will receive `Always` authorization. By default, this method grants your app `When In Use` authorization and will prompt your user again after some period of time to promote their location permissions to `Always`. Alternatively, your user can manually change this in their device settings.
 
 If you wish to immediately prompt your user for `Always` authorization, first call `requestWhenInUseAuthorization()`. Then, after receiving `When In Use` permissions, subsequently call `requestAlwaysAuthorization()`. The system will only allow you to present this prompt once.
 {% endalert %}
