@@ -14,7 +14,7 @@ description: "This reference article describes how to create back-in-stock notif
 Back-in-stock notifications for Braze Shopify catalogs are currently in early access. Contact your account manager if you're interested in participating in this early access.
 {% endalert %}
 
-When a customer clicks an item, we'll automatically subscribe them to receive back-in-stock notifications for that item. Once the item's inventory quantity is greater than zero, all subscribers will be elgible for notifications through a campaign or Canvas. However, only users who opted into notifications will receive notifications. 
+When a customer clicks an item, we'll automatically subscribe them to receive back-in-stock notifications for that item. Once the item's inventory quantity is greater than zero, all subscribers will be eligible for notifications through a campaign or Canvas. However, only users who opted into notifications will receive notifications. 
 
 ## How back-in-stock notifications work
 
