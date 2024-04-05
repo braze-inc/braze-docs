@@ -6,16 +6,12 @@ alias: /partners/MetaRouter/
 page_type: partner
 search_tag: Partner
 layout: dev_guide
---- cd
+---
 
-<!-- In most cases, the ARTICLE_TITLE will be your company name. If your tool requires several seperate pages on Braze Docs, you can add a relevant page descriptor to your title, such as "MyCompany Analytics." -->
 # MetaRouter
 
-<!-- The description starts with a '>' character and contains an introduction to your company, a link to your main site, and a consice overview of your integration. In a following paragraph, highlight the the relationship between your company and Braze and how this partnership helps your customers. -->
-> 
-MetaRouter elevates your Braze experience by seamlessly integrating as a powerful server-side tag management platform. It empowers you to orchestrate a complete customer data journey within Braze, from reliable fully first-party data collection enriched by up to 30%, to real-time event stream activation for personalized journeys. This translates to deeper customer insights, more sophisticated journeys, and ultimately, a maximized return on investment in Braze. Additionally, MetaRouter streamlines implementation by eliminating the need for Braze tags or other third-party tags, granting you granular, parameter-by-parameter control over the data flowing into Braze.
+> MetaRouter elevates your Braze experience by seamlessly integrating as a powerful server-side tag management platform. It empowers you to orchestrate a complete customer data journey within Braze, from reliable fully first-party data collection enriched by up to 30%, to real-time event stream activation for personalized journeys. Additionally, MetaRouter streamlines implementation by eliminating the need for Braze tags or other third-party tags, granting you granular, parameter-by-parameter control over the data flowing into Braze.
 
-<!-- Most partner integrations will require the following prerequisites. However, you may add additional prerequisites as needed. -->
 ## Prerequisites
 
 Before you start, you'll need the following:
@@ -32,8 +28,6 @@ Before you start, you'll need the following:
 If you are using the [older navigation]({{site.baseurl}}/navigation), you can create an API key at **Developer Console** > **API Settings**.
 {% endalert %}
 
-
-<!-- Create step-by-step instructions for integrating your tool with Braze. It's important to be concise and only outline the minimum neccesary steps. -->
 ## Integrating Braze and MetaRouter
 
 1. Establish your MetaRouter Cluster.
@@ -43,25 +37,18 @@ If you are using the [older navigation]({{site.baseurl}}/navigation), you can cr
 5. Set up your first pipeline.
 6. Verify that events are being sent to MetaRouter and your integration.
 
-
 ### Step 1: Add Braze as an Integration
 
-In Enterprise MetaRouter, Navigate to the Integrations section. Select the New Integration. Select Braze and give the integration a name. 
-
-MetaRouter’s required parameters are the instance URL and the API key.  Add the information into the provided text box and Apply Changes.
+In Enterprise MetaRouter, select **Integrations** > **New Integration** > **Braze**, then name your integration. Next enter your instance URL and API key, then select **Apply Changes**.
 
 ![Adding Braze as an integration in MetaRouter.]({% image_buster /assets/img/metarouter/img1.png %})
 
-<!-- Use the "Make a post request", "Default behavior," and "Rate limit" sections to outline how users can make a POST request. If this information isn't required for your integration, you can remove these sections. -->
 ### Step 2: Add Event Mapping
 
-Add event mapping for each of the identity outputs. Configure the events that you want to send to Braze.
-
-In the top header, select “Save as New Revision” to implement changes.
+Add event mapping for each of the identity outputs, then configure the events you want to send to Braze. When you're finished, select **Save as New Revision**.
 
 ![Add event mapping for each of the identity outputs.]({% image_buster /assets/img/metarouter/img2.png %})
 
-<!-- A section outlinning how to use your integration with Braze. For example: how to access the data sent to Braze, or how to leverage your integration with Braze messaging. -->
 ## Using MetaRouter with Braze
 
  - Retries can be built in.
