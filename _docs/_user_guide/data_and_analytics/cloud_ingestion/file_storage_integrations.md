@@ -24,16 +24,15 @@ The integration requires the following resources:
 Braze Cloud Data Ingestion support for S3 is currently in early access. Contact your Braze account manager if you are interested in participating in the early access. 
 {% endalert %}
 
-## Definitions
+## AWS definitions
 
 First, let's just define some of the terms used during this task.
 
 | Word | Definition |
 | --- | --- |
-| ACLs | asdfa df Note to self - only used once in the default settings section. Is it needed? |
-| ARN | The asdfasdf |
-| IAM role | The asdfasdf |
-| SQS | The asdfasdf |
+| Amazon Resource Name (ARN) | The ARN is a unique identifier for AWS resources. |
+| Identity and Access Management (IAM) | IAM is a web service that lets you securely control access to AWS resources. In this tutorial, you will create an IAM policy and assign it to an IAM role to integrate your S3 bucket with Braze Cloud Data Ingestion. |
+| Amazon Simple Queue Service (SQS) | SQS is a hosted queue that lets you integrate distributed software systems and components. |
 {: .reset-td-br-1 .reset-td-br-2 }
  
 
