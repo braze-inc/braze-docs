@@ -5,7 +5,6 @@ description: "Elevate your customer data management in Braze, with MetaRouter.  
 alias: /partners/MetaRouter/
 page_type: partner
 search_tag: Partner
-layout: dev_guide
 ---
 
 # MetaRouter
