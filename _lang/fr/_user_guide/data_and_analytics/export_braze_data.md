@@ -51,6 +51,6 @@ guide_menu_list:
     image: /assets/img/braze_icons/help-circle.svg
   - name: Foire aux questions
     link: /docs/user_guide/data_and_analytics/export_braze_data/faqs/
-    fa_icon: fas fa-question
+    image: /assets/img/braze_icons/annotation-question.svg
 ---
 

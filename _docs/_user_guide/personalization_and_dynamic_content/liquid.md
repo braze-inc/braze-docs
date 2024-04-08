@@ -39,7 +39,7 @@ guide_featured_list:
   image: /assets/img/braze_icons/list.svg
 - name: Frequently Asked Questions
   link: /docs/user_guide/personalization_and_dynamic_content/liquid/faq/
-  fa_icon: fas fa-question
+  image: /assets/img/braze_icons/annotation-question.svg
   
 ---
 

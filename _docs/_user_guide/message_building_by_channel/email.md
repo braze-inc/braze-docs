@@ -70,7 +70,7 @@ guide_menu_list:
   image: /assets/img/braze_icons/check-square-broken.svg
 - name: Frequently Asked Questions
   link: /docs/user_guide/message_building_by_channel/email/faq/
-  fa_icon: fas fa-question
+  image: /assets/img/braze_icons/annotation-question.svg
 
 
 ---

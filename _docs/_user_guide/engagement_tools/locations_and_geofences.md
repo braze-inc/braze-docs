@@ -22,7 +22,7 @@ guide_featured_list:
     fa_icon: fas fa-mobile
   - name: Frequently Asked Questions
     link: /docs/user_guide/engagement_tools/locations_and_geofences/faqs/
-    fa_icon: fas fa-question
+    image: /assets/img/braze_icons/annotation-question.svg
 ---
 
 ## About locations and geofences
