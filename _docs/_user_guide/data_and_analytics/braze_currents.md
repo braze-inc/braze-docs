@@ -19,7 +19,7 @@ guide_featured_list:
   fa_icon: fas fa-warehouse
 - name: "Available Partners"
   link: /docs/user_guide/data_and_analytics/braze_currents/available_partners/
-  fa_icon: fas fa-handshake
+  image: /assets/img/braze_icons/heart-hand.svg
 - name: "Event Delivery Semantics"
   link: /docs/user_guide/data_and_analytics/braze_currents/event_delivery_semantics/
   image: /assets/img/braze_icons/key-01.svgboard

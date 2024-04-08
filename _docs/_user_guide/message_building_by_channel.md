@@ -15,7 +15,7 @@ guide_featured_list:
   image: /assets/img/braze_icons/table.svg
 - name: Email Messaging
   link: /docs/user_guide/message_building_by_channel/email/
-  fa_icon: fa-solid fa-envelope
+  image: /assets/img/braze_icons/mail-01.svg
 - name: "In-App Messaging"
   link: /docs/user_guide/message_building_by_channel/in-app_messages/
   image: /assets/img/braze_icons/annotation-dots.svg
@@ -27,7 +27,7 @@ guide_featured_list:
   image: /assets/img/braze_icons/marker-pin-01.svg
 - name: SMS & MMS
   link: /docs/user_guide/message_building_by_channel/sms/
-  fa_icon: fa-solid fa-comment-sms
+  image: /assets/img/braze_icons/message-text-circle-01.svg
 - name: Webhooks
   link: /docs/user_guide/message_building_by_channel/webhooks/
   image: /assets/img/braze_icons/brackets.svg

@@ -25,7 +25,7 @@ guide_featured_list:
   image: /assets/img/braze_icons/settings-01.svg
 - name: Shopify Historical Backfill
   link: /docs/shopify_historical_backfill/
-  fa_icon: fa-solid fa-database
+  image: /assets/img/braze_icons/database-01.svg
 - name: Shopify Product Syncs
   link: /docs/shopify_catalogs/
   image: /assets/img/braze_icons/list.svg

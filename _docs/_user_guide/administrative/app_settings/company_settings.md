@@ -16,7 +16,7 @@ guide_featured_list:
   fa_icon: fas fa-address-book
 - name: Notification Preferences
   link: /docs/user_guide/administrative/app_settings/company_settings/notification_preferences/
-  fa_icon: far fa-dot-circle
+  image: /assets/img/braze_icons/target-05.svg
 - name: Security Settings
   link: /docs/user_guide/administrative/app_settings/company_settings/security_settings/
   image: /assets/img/braze_icons/shield-01.svg

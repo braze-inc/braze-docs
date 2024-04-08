@@ -55,6 +55,6 @@ guide_menu_title3: "Data settings"
 guide_menu_list3:
   - name: Custom Data
     link: /docs/user_guide/data_and_analytics/custom_data/managing_custom_data/
-    fa_icon: fas fa-database
+    image: /assets/img/braze_icons/database-01.svg
 
 ---

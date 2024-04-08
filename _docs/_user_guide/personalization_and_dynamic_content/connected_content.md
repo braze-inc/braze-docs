@@ -24,7 +24,7 @@ guide_featured_list:
   image: /assets/img/braze_icons/refresh-ccw-01.svg
 - name: Public APIs
   link: /docs/user_guide/personalization_and_dynamic_content/connected_content/public_apis/
-  fa_icon: far fa-dot-circle
+  image: /assets/img/braze_icons/target-05.svg
 - name: Pulling User Profile Data
   link: /docs/user_guide/personalization_and_dynamic_content/connected_content/user_profile_fields_connected_content/
   image: /assets/img/braze_icons/users-01.svg

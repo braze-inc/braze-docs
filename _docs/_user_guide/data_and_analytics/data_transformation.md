@@ -12,7 +12,7 @@ guide_featured_title: "Section articles"
 guide_featured_list:
   - name: Overview and Best Practices
     link: /docs/user_guide/data_and_analytics/data_transformation/overview/
-    fa_icon: fa-solid fa-database
+    image: /assets/img/braze_icons/database-01.svg
   - name: Creating a Transformation
     link: /docs/user_guide/data_and_analytics/data_transformation/creating_a_transformation/
     image: /assets/img/braze_icons/flip-forward.svg

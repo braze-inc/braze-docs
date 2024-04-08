@@ -20,7 +20,7 @@ guide_featured_list:
   image: /assets/img/braze_icons/settings-01.svg
 - name: Email Open Pixel and Click Tracking
   link: /docs/user_guide/data_and_analytics/tracking/email_tracking#open-pixel-and-click-tracking-overview
-  fa_icon: fa-solid fa-envelope
+  image: /assets/img/braze_icons/mail-01.svg
 - name: Default and Minimum SDK Data Collection
   link: /docs/user_guide/data_and_analytics/user_data_collection/sdk_data_collection/
   image: /assets/img/braze_icons/settings-01.svg
@@ -29,7 +29,7 @@ guide_featured_list:
   image: /assets/img/braze_icons/fingerprint-03.svg
 - name: Braze Data Retention
   link: /docs/api/data_retention#data-retention-handled-by-braze-for-specific-features-of-the-braze-services
-  fa_icon: fa-solid fa-database
+  image: /assets/img/braze_icons/database-01.svg
 - name: User Archival
   link: /docs/user_archival/
   fa_icon: fa-solid fa-user

@@ -39,7 +39,7 @@ guide_featured_list:
     image: /assets/img/braze_icons/file-download-01.svg
   - name: Data Transformation
     link: /docs/user_guide/data_and_analytics/data_transformation/
-    fa_icon: fa-solid fa-database
+    image: /assets/img/braze_icons/database-01.svg
   - name: Your Analytics Dashboard
     link: /docs/user_guide/data_and_analytics/analytics/
     image: /assets/img/braze_icons/trend-up-01.svg

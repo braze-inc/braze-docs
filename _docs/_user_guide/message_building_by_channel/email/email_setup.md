@@ -13,10 +13,10 @@ guide_featured_title: "Section articles"
 guide_featured_list:
 - name: "Setting Up IPs and Domains"
   link: /docs/user_guide/message_building_by_channel/email/email_setup/setting_up_ips_and_domains/
-  fa_icon: far fa-dot-circle
+  image: /assets/img/braze_icons/target-05.svg
 - name: "IP Warming"
   link: /docs/user_guide/message_building_by_channel/email/email_setup/ip_warming/
-  fa_icon: fas fa-exclamation
+  image: /assets/img/braze_icons/annotation-alert.svg
 - name: "Email Validation"
   link: /docs/user_guide/message_building_by_channel/email/email_setup/email_validation/
   image: /assets/img/braze_icons/check-square-broken.svg

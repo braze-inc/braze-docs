@@ -30,7 +30,7 @@ guide_menu_list:
     fa_icon: fa-solid fa-clock-rotate-left
   - name: Export Overview Data
     link: /docs/user_guide/data_and_analytics/export_braze_data/exporting_app_usage_data/
-    fa_icon: far fa-dot-circle
+    image: /assets/img/braze_icons/target-05.svg
   - name: Export Revenue Data
     link: /docs/user_guide/data_and_analytics/export_braze_data/exporting_revenue_data/
     image: /assets/img/braze_icons/coins-hand.svg
@@ -45,7 +45,7 @@ guide_menu_list:
     image: /assets/img/braze_icons/server-01.svg
   - name: Opening CSV Exports in Excel
     link: /docs/user_guide/data_and_analytics/export_braze_data/opening_csv_reports_in_excel/
-    fa_icon: fas fa-file-excel
+    image: /assets/img/braze_icons/file-02.svg
   - name: Export Troubleshooting
     link: /docs/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/
     image: /assets/img/braze_icons/help-circle.svg

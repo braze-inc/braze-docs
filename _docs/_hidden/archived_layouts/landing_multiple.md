@@ -62,5 +62,5 @@ guide_menu_list:
     image: /assets/img/braze_icons/book-closed.svg
   - name: Example 6
     link: /docs/home/templates/partner_page_template_video/
-    fa_icon: fas fa-handshake
+    image: /assets/img/braze_icons/heart-hand.svg
 ---

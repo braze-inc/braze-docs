@@ -27,7 +27,7 @@ resources_list:
     image: /assets/img/braze_icons/youtube.svg
   - name: Braze Support
     link: /docs/braze_support/
-    fa_icon: fa-solid fa-envelope
+    image: /assets/img/braze_icons/mail-01.svg
 
 popular_topic_list:
   - name: Know Before You Send

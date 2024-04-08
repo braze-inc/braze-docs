@@ -17,7 +17,7 @@ guide_featured_list:
     image: /assets/img/braze_icons/palette.svg
   - name: Commenting in Canvas
     link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/canvas_comments/
-    fa_icon: fa-solid fa-comment
+    image: /assets/img/braze_icons/message-circle-01.svg
   - name: Time-Based Functionalities
     link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/time_based_canvas/
     image: /assets/img/braze_icons/clock.svg

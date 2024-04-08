@@ -35,7 +35,7 @@ guide_featured_list:
     image: /assets/img/braze_icons/message-circle-01.svg
   - name: "SMS FAQ"
     link: /docs/user_guide/message_building_by_channel/sms/faqs/
-    fa_icon: fas fa-comment-dots
+    image: /assets/img/braze_icons/message-text-circle-01.svg
   - name: "WhatsApp FAQ"
     link: /docs/user_guide/message_building_by_channel/whatsapp/faqs/
     image: /assets/img/braze_icons/whatsapp.svg
@@ -75,7 +75,7 @@ guide_menu_list:
     image: /assets/img/braze_icons/message-square-02.svg
   - name: "SMS Best Practices"
     link: /docs/user_guide/message_building_by_channel/sms/best_practices/
-    fa_icon: fa-solid fa-comment-sms
+    image: /assets/img/braze_icons/message-text-circle-01.svg
 
 
 local_redirect: #what-does-local-time-zone-delivery-offer
