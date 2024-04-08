@@ -366,7 +366,7 @@ You can add up to three public keys for each app: a primary, a seconday, and a t
 
 ### Assign a new primary key
 
-To assign your secondary or tertiary key as the new primary key:
+To assign a secondary or tertiary key as your new primary key:
 
 1. Open the Braze dashboard and select **Settings** > **App Settings**.
 2. Choose an app from your list of available apps.
@@ -374,7 +374,7 @@ To assign your secondary or tertiary key as the new primary key:
 
 ### Deleting a key
 
-Primary keys can't be deleted, so first [assign a new primary key](#assign-a-new-primary-key) if needed. To delete a non-primary key:
+Primary keys cannot be deleted. To delete one, first [assign a new primary](#assign-a-new-primary-key), then delete your key. To delete a non-primary key:
 
 1. Open the Braze dashboard and select **Settings** > **App Settings**.
 2. Choose an app from your list of available apps.
