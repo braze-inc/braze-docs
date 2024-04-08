@@ -14,7 +14,7 @@ guide_featured_list:
   image: /assets/img/braze_icons/phone-02.svg
 - name: Customize
   link: /docs/user_guide/message_building_by_channel/in-app_messages/traditional/customize/
-  fa_icon: fas fa-paintbrush
+  image: /assets/img/braze_icons/brush-02.svg
 - name: Dark Mode
   link: /docs/user_guide/message_building_by_channel/in-app_messages/traditional/dark-mode/
   image: /assets/img/braze_icons/circle-cut.svg

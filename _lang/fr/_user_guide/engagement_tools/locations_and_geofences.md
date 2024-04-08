@@ -19,7 +19,7 @@ guide_featured_list:
     image: /assets/img/braze_icons/marker-pin-01.svg
   - name: Intégrations mobiles
     link: /docs/user_guide/engagement_tools/locations_and_geofences/mobile_integrations/
-    fa_icon: fas fa-mobile
+    image: /assets/img/braze_icons/phone-02.svg
   - name: Configuration des geofences
     link: /docs/user_guide/engagement_tools/locations_and_geofences/geofence_configuration/
     image: /assets/img/braze_icons/settings-01.svg

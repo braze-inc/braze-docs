@@ -13,7 +13,7 @@ guide_featured_title: "Section Articles"
 guide_featured_list:
 - name: Coordonnées
   link: /docs/user_guide/administrative/company_settings/contact_information/
-  fa_icon: fas fa-address-book
+  image: /assets/img/braze_icons/book-open-01.svg
 - name: Préférences de notification
   link: /docs/user_guide/administrative/company_settings/notification_preferences/
   fa_icon: far fa-dot-circle

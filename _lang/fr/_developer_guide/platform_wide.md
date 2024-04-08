@@ -14,7 +14,7 @@ guide_featured_list:
     image: /assets/img/braze_icons/table.svg
   - name: Configuration du groupe d’apps
     link: /docs/developer_guide/platform_wide/app_group_configuration/
-    fa_icon: fas fa-mobile
+    image: /assets/img/braze_icons/phone-02.svg
   - name: Aperçu analytique
     link: /docs/developer_guide/platform_wide/analytics_overview/
     image: /assets/img/braze_icons/line-chart-up-01.svg

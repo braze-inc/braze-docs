@@ -16,6 +16,6 @@ guide_featured_list:
   image: /assets/img/braze_icons/users-01.svg
 - name: Tealium pour Currents
   link: /docs/partners/data_and_infrastructure_agility/customer_data_platform/tealium/tealium_for_currents/
-  fa_icon: fas fa-warehouse
+  image: /assets/img/braze_icons/building-01.svg
 ---
 <br>

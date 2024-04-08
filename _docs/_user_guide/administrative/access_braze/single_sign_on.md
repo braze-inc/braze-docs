@@ -13,7 +13,7 @@ guide_featured_title: "SAML SSO Topics"
 guide_featured_list:
 - name: Custom SAML SSO Set Up
   link: /docs/user_guide/administrative/access_braze/single_sign_on/set_up/
-  fa_icon: fas fa-fingerprint
+  image: /assets/img/braze_icons/fingerprint-03.svg
 - name: Restrict to SAML SSO
   link: /docs/user_guide/administrative/access_braze/single_sign_on/set_up/#restriction
   image: /assets/img/braze_icons/lock-01.svg

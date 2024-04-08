@@ -16,7 +16,7 @@ guide_featured_list:
   fa_icon: far fa-dot-circle
 - name: "Réchauffement d’adresses IP"
   link: /docs/user_guide/onboarding_with_braze/email_setup/ip_warming/
-  fa_icon: fas fa-exclamation
+  image: /assets/img/braze_icons/alert-circle.svg
 - name: "Validation des e-mails"
   link: /docs/user_guide/onboarding_with_braze/email_setup/email_validation/
   image: /assets/img/braze_icons/check-square-broken.svg
@@ -31,7 +31,7 @@ guide_featured_list:
   image: /assets/img/braze_icons/navigation-pointer-01.svg
 - name: "Consentement et collecte d’adresses"
   link: /docs/user_guide/onboarding_with_braze/email_setup/consent_and_address_collection/
-  fa_icon: fas fa-address-book
+  image: /assets/img/braze_icons/book-open-01.svg
 - name: "Écueils de délivrabilité et pièges à spam"
   link: /docs/user_guide/onboarding_with_braze/email_setup/deliverability_pitfalls_and_spam_traps/
   image: /assets/img/braze_icons/alert-triangle.svg

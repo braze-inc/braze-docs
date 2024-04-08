@@ -14,7 +14,7 @@ guide_featured_title: "Section Articles"
 guide_featured_list:
   - name: Données d'aperçu
     link: /docs/user_guide/data_and_analytics/analytics/understanding_your_app_usage_data/
-    fa_icon: fas fa-mobile
+    image: /assets/img/braze_icons/phone-02.svg
   - name: Tableau de bord des performances E-mail
     link: /docs/user_guide/data_and_analytics/analytics/email_performance_dashboard/
     image: /assets/img/braze_icons/line-chart-up-01.svg

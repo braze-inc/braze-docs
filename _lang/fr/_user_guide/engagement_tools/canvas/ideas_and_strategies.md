@@ -20,7 +20,7 @@ guide_featured_list:
     image: /assets/img/braze_icons/check-square-broken.svg
   - name: Lancement avec Canvas Flow
     link: /docs/user_guide/engagement_tools/canvas/ideas_and_strategies/launching_canvas_flow/
-    fa_icon: fas fa-code-branch
+    image: /assets/img/braze_icons/git-branch-01.svg
   - name: Localisation
     link: /docs/user_guide/engagement_tools/canvas/ideas_and_strategies/localization/
     image: /assets/img/braze_icons/globe-02.svg

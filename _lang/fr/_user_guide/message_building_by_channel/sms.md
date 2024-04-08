@@ -18,7 +18,7 @@ guide_featured_list:
   image: /assets/img/braze_icons/check-square-broken.svg
 - name: "Lois et réglementations SMS"
   link: /docs/user_guide/message_building_by_channel/sms/sms_laws_and_regulations/
-  fa_icon: fas fa-gavel
+  image: /assets/img/braze_icons/briefcase-02.svg
 - name: "Groupe d’abonnement SMS"
   link: /docs/user_guide/message_building_by_channel/sms/sms_subscription_group/
   image: /assets/img/braze_icons/table.svg

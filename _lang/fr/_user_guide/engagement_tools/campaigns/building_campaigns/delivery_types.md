@@ -20,7 +20,7 @@ guide_featured_list:
     image: /assets/img/braze_icons/table.svg
   - name: Livraison déclenchée par API
     link: /docs/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/api_triggered_delivery/
-    fa_icon: fas fa-exclamation
+    image: /assets/img/braze_icons/alert-circle.svg
 
 guide_menu_title: "Autres articles"
 guide_menu_list:

@@ -32,24 +32,24 @@ guide_menu_title: "Autres articles"
 guide_menu_list:
 - name: "Test"
   link: /docs/user_guide/message_building_by_channel/in-app_messages/testing/
-  fa_icon: fas fa-vial
+  image: /assets/img/braze_icons/beaker-02.svg
 - name: "Reporting"
   link: /docs/user_guide/message_building_by_channel/in-app_messages/reporting/
   image: /assets/img/braze_icons/bar-chart-01.svg
 - name: "Mode sombre"
   link: /docs/user_guide/message_building_by_channel/in-app_messages/dark-mode/
-  fa_icon: fas fa-mobile
+  image: /assets/img/braze_icons/phone-02.svg
 - name: "Invitation à l’évaluation de l’App Store"
   link: /docs/user_guide/message_building_by_channel/in-app_messages/ios_app_rating_prompt/
   image: /assets/img/braze_icons/star-01.svg
 - name: "Enquête simple"
   link: /docs/user_guide/message_building_by_channel/in-app_messages/templates/simple_survey/
-  fa_icon: fas fa-poll
+  image: /assets/img/braze_icons/bar-chart-07.svg
 - name: "Bonnes pratiques"
   link: /docs/user_guide/message_building_by_channel/in-app_messages/best_practices
   image: /assets/img/braze_icons/check-square-broken.svg
 - name: "FAQ"
   link: /docs/user_guide/message_building_by_channel/in-app_messages/faq/
-  fa_icon: fas fa-question
+  image: /assets/img/braze_icons/annotation-question.svg
 ---
 <br><br>

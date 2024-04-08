@@ -29,19 +29,19 @@ guide_menu_title: "More articles"
 guide_menu_list:
 - name: "Testing"
   link: /docs/user_guide/message_building_by_channel/in-app_messages/testing/
-  fa_icon: fas fa-vial
+  image: /assets/img/braze_icons/beaker-02.svg
 - name: "Reporting"
   link: /docs/user_guide/message_building_by_channel/in-app_messages/reporting/
   image: /assets/img/braze_icons/bar-chart-01.svg
 - name: "Dark Mode"
   link: /docs/user_guide/message_building_by_channel/in-app_messages/traditional/dark-mode/
-  fa_icon: fas fa-mobile
+  image: /assets/img/braze_icons/phone-02.svg
 - name: "App Store Rating Prompt"
   link: /docs/user_guide/message_building_by_channel/in-app_messages/ios_app_rating_prompt/
   image: /assets/img/braze_icons/star-01.svg
 - name: "Simple Survey"
   link: /docs/user_guide/message_building_by_channel/in-app_messages/traditional/templates/simple_survey/
-  fa_icon: fas fa-poll
+  image: /assets/img/braze_icons/bar-chart-07.svg
 - name: "Best Practices"
   link: /docs/user_guide/message_building_by_channel/in-app_messages/best_practices
   image: /assets/img/braze_icons/check-square-broken.svg

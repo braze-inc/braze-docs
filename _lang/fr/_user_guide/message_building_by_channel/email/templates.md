@@ -13,7 +13,7 @@ guide_featured_title: "Section Articles"
 guide_featured_list:
 - name: Création d’un modèle d’e-mail
   link: /docs/user_guide/message_building_by_channel/email/templates/email_template/
-  fa_icon: fas fa-paintbrush
+  image: /assets/img/braze_icons/brush-02.svg
 - name: Téléchargement d’un modèle d’e-mail
   link: /docs/user_guide/message_building_by_channel/email/templates/html_email_template/
   fa_icon: fas fa-upload

@@ -47,7 +47,7 @@ guide_featured_list:
     image: /assets/img/braze_icons/layout-grid-01.svg
   - name: Exemple 2
     link: /docs/home/templates/landing_multiple/
-    fa_icon: fas fa-th
+    image: /assets/img/braze_icons/layout-grid-02.svg
   - name: Exemple 3
     link: /docs/home/templates/landing_images/
     image: /assets/img/braze_icons/layout-grid-01.svg

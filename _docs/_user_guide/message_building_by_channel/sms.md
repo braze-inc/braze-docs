@@ -18,10 +18,10 @@ guide_featured_list:
   image: /assets/img/braze_icons/check-square-broken.svg
 - name: "SMS Setup"
   link: /docs/user_guide/message_building_by_channel/sms/sms_setup/
-  fa_icon: fas fa-mobile
+  image: /assets/img/braze_icons/phone-02.svg
 - name: "SMS Laws and Regulations"
   link: /docs/user_guide/message_building_by_channel/sms/sms_laws_and_regulations/
-  fa_icon: fas fa-gavel
+  image: /assets/img/braze_icons/briefcase-02.svg
 - name: "SMS Subscription Group"
   link: /docs/user_guide/message_building_by_channel/sms/sms_subscription_group/
   image: /assets/img/braze_icons/table.svg

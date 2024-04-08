@@ -36,7 +36,7 @@ guide_menu_list:
     image: /assets/img/braze_icons/coins-hand.svg
   - name: Export News Feed Data
     link: /docs/user_guide/data_and_analytics/export_braze_data/export_news_feed_data/
-    fa_icon: fas fa-newspaper
+    image: /assets/img/braze_icons/announcement-02.svg
   - name: Export Custom Event Data
     link: /docs/user_guide/data_and_analytics/export_braze_data/export_custom_event_data/
     image: /assets/img/braze_icons/settings-01.svg
@@ -61,7 +61,7 @@ guide_menu_list2:
     image: /assets/img/braze_icons/database-01.svg
   - name: Setting up Currents
     link: /docs/user_guide/data_and_analytics/braze_currents/setting_up_currents/
-    fa_icon: fas fa-warehouse
+    image: /assets/img/braze_icons/building-01.svg
   - name: How Braze uses Currents
     link: /docs/user_guide/data_and_analytics/braze_currents/how_braze_uses_currents/
     image: /assets/img/braze_icons/expand-05.svg

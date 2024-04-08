@@ -29,7 +29,7 @@ guide_featured_list:
     image: /assets/img/braze_icons/marker-pin-01.svg
   - name: "Media Library FAQ"
     link: /docs/user_guide/engagement_tools/templates_and_media/faqs/
-    fa_icon: fas fa-images
+    image: /assets/img/braze_icons/image-01.svg
   - name: "MMS FAQ"
     link: /docs/user_guide/message_building_by_channel/sms/mms/faqs/
     image: /assets/img/braze_icons/message-circle-01.svg

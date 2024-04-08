@@ -17,7 +17,7 @@ guide_featured_list:
     image: /assets/img/braze_icons/list.svg
   - name: Aperçu Canvas
     link: /docs/user_guide/engagement_tools/canvas/get_started/canvas_outlines/
-    fa_icon: fas fa-code-branch
+    image: /assets/img/braze_icons/git-branch-01.svg
   - name: FAQ Canvas
     link: /docs/user_guide/engagement_tools/canvas/faqs/
     image: /assets/img/braze_icons/annotation-question.svg

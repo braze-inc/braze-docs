@@ -16,7 +16,7 @@ guide_featured_list:
   image: /assets/img/braze_icons/users-01.svg
 - name: Hightouch Personalization API
   link: /docs/partners/data_and_infrastructure_agility/workflow_automation/hightouch/hightouch_personalization_api/
-  fa_icon: fas fa-warehouse
+  image: /assets/img/braze_icons/building-01.svg
 ---
 
 <br> 
