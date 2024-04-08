@@ -47,6 +47,6 @@ guide_menu_list:
   image: /assets/img/braze_icons/check-square-broken.svg
 - name: "FAQ"
   link: /docs/user_guide/message_building_by_channel/in-app_messages/faq/
-  fa_icon: fas fa-question
+  image: /assets/img/braze_icons/annotation-question.svg
 ---
 <br><br>

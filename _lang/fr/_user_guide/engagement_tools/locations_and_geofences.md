@@ -25,7 +25,7 @@ guide_featured_list:
     image: /assets/img/braze_icons/settings-01.svg
   - name: Foire aux questions
     link: /docs/user_guide/engagement_tools/locations_and_geofences/faqs/
-    fa_icon: fas fa-question
+    image: /assets/img/braze_icons/annotation-question.svg
 ---
 
 ## À propos des emplacements et geofences

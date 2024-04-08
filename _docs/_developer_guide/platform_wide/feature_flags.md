@@ -25,7 +25,7 @@ guide_featured_list:
   image: /assets/img/braze_icons/dataflow-03.svg
 - name: Frequently Asked Questions
   link: /docs/developer_guide/platform_wide/feature_flags/faq/
-  fa_icon: fas fa-question
+  image: /assets/img/braze_icons/annotation-question.svg
 ---
 
 <br><br>

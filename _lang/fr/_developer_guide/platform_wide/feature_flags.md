@@ -22,7 +22,7 @@ guide_featured_list:
   /assets/img/braze_icons/brush-02.svg
 - name: Foire aux questions
   link: /docs/developer_guide/platform_wide/feature_flags/faq/
-  fa_icon: fas fa-question
+  image: /assets/img/braze_icons/annotation-question.svg
 ---
 
 <br><br>

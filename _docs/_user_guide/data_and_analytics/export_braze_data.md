@@ -51,7 +51,7 @@ guide_menu_list:
     image: /assets/img/braze_icons/help-circle.svg
   - name: Frequently Asked Questions
     link: /docs/user_guide/data_and_analytics/export_braze_data/faqs/
-    fa_icon: fas fa-question
+    image: /assets/img/braze_icons/annotation-question.svg
 
 guide_menu_title2: Data export with Currents
 guide_menu_description2: "Looking to take advantage of data export with Braze Currents? The Currents tool is a real-time data stream of your engagement events that is the most robust, yet granular export out of the Braze platform. Check out these articles for more."

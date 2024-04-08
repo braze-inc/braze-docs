@@ -25,7 +25,7 @@ guide_featured_list:
     image: /assets/img/braze_icons/archive.svg
   - name: Frequently Asked Questions
     link: /docs/user_guide/engagement_tools/templates_and_media/faqs/
-    fa_icon: fas fa-question
+    image: /assets/img/braze_icons/annotation-question.svg
 ---
 
 ## About templates and media

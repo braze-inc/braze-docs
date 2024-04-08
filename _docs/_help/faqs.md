@@ -11,7 +11,7 @@ guide_featured_title: "FAQ articles"
 guide_featured_list:
   - name: Canvas FAQ
     link: /docs/user_guide/engagement_tools/canvas/faqs/
-    fa_icon: fas fa-brush
+    f/assets/img/braze_icons/brush-02.svg
   - name: Campaign FAQ
     link: /docs/user_guide/engagement_tools/campaigns/faq/
     image: /assets/img/braze_icons/send-01.svg

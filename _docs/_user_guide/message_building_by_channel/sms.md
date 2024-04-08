@@ -51,7 +51,7 @@ guide_featured_list:
   image: /assets/img/braze_icons/phone-02.svg
 - name: "SMS Frequently Asked Questions"
   link: /docs/user_guide/message_building_by_channel/sms/faqs/
-  fa_icon: fas fa-question
+  image: /assets/img/braze_icons/annotation-question.svg
 
 
 guide_menu_title: "MMS"
@@ -70,5 +70,5 @@ guide_menu_list:
   image: /assets/img/braze_icons/user-circle.svg
 - name: "MMS Frequently Asked Questions"
   link: /docs/user_guide/message_building_by_channel/sms/mms/faqs/
-  fa_icon: fas fa-question
+  image: /assets/img/braze_icons/annotation-question.svg
 ---

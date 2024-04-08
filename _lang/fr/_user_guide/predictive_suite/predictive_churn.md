@@ -22,7 +22,7 @@ guide_featured_list:
   image: /assets/img/braze_icons/arrow-narrow-right.svg
 - name: Résolution des problèmes
   link: /docs/user_guide/predictive_suite/predictive_churn/prediction_faq/
-  fa_icon: fas fa-question
+  image: /assets/img/braze_icons/annotation-question.svg
 
 ---
 

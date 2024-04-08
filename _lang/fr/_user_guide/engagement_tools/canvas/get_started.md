@@ -20,5 +20,5 @@ guide_featured_list:
     fa_icon: fas fa-code-branch
   - name: FAQ Canvas
     link: /docs/user_guide/engagement_tools/canvas/faqs/
-    fa_icon: fas fa-question
+    image: /assets/img/braze_icons/annotation-question.svg
 ---

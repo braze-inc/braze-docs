@@ -27,7 +27,7 @@ guide_menu_title: "Ressources supplémentaires"
 guide_menu_list:
 - name: FAQ Intelligence
   link: /docs/user_guide/intelligence/faqs/
-  fa_icon: fas fa-question
+  image: /assets/img/braze_icons/annotation-question.svg
 - name: Test A/B et multivarié
   link: /docs/user_guide/intelligence/multivariate_testing/
   fa_icon: fas fa-vial
