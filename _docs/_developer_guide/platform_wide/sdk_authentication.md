@@ -359,7 +359,7 @@ braze.setBrazeSdkAuthenticationErrorCallback((BrazeSdkAuthenticationError error)
 
 You can add up to three public keys for each app: a primary, a seconday, and a tertiary. You can also add the same key to more than one app if needed. To add a public key:
 
-1. Open the Braze dashboard and select **Settings** > **App Settings**.
+1. Go to the Braze dashboard and select **Settings** > **App Settings**.
 2. Choose an app from your list of available apps.
 3. Under **SDK Authentication**, select **Add Public Key**.
 4. Enter an optional description, paste in your public key, then select **Add Public Key**.
@@ -368,15 +368,15 @@ You can add up to three public keys for each app: a primary, a seconday, and a t
 
 To assign a secondary or tertiary key as your new primary key:
 
-1. Open the Braze dashboard and select **Settings** > **App Settings**.
+1. Go to the Braze dashboard and select **Settings** > **App Settings**.
 2. Choose an app from your list of available apps.
 3. Under **SDK Authentication**, choose a key and select **Manage** > **Make Primary Key**.
 
 ### Deleting a key
 
-Primary keys cannot be deleted. To delete one, first [assign a new primary](#assign-a-new-primary-key), then delete your key. To delete a non-primary key:
+To delete a primary key, first [assign a new primary](#assign-a-new-primary-key), then delete your key. To delete a non-primary key:
 
-1. Open the Braze dashboard and select **Settings** > **App Settings**.
+1. Go to the Braze dashboard and select **Settings** > **App Settings**.
 2. Choose an app from your list of available apps.
 3. Under **SDK Authentication**, choose a non-primary key and select **Manage** > **Delete Public Key**.
 
