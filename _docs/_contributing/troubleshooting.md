@@ -2,7 +2,7 @@
 nav_title: Troubleshooting
 article: Troubleshooting
 description: "Troubleshooting steps for common issues you may experience while contributing to Braze Docs."
-page_order: 8
+page_order: 9
 noindex: true
 ---
 
@@ -10,9 +10,27 @@ noindex: true
 
 > If you're having trouble contributing to Braze Docs, review these common issues first. If the issue you're experiencing isn't listed, [let us know](https://github.com/braze-inc/braze-docs/issues/new?assignees=&labels=issue&projects=&template=report_an_issue.md&title=) so we can add it here.
 
+## Redirect isn't working
+
+If a [redirect you set up]({{site.baseurl}}/contributing/content_management/redirecting_urls/) in the global redirect file (`assets/js/broken_redirect_list.js`) isn't working, double-check your URL string for any uppercase characters. If you find any, convert them to lowercase (even if the corresponding filename in the `_docs` directory contains uppercase characters).
+
+{% tabs local %}
+{% tab before %}
+```javascript
+validurls['/docs/hidden/WIP_Partnerships/WIP_Guidelines'] = '/docs/contributing/home/';
+```
+{% endtab %}
+
+{% tab after %}
+```javascript
+validurls['/docs/hidden/wip_partnerships/wip_guidelines'] = '/docs/contributing/home/';
+```
+{% endtab %}
+{% endtabs %}
+
 ## Cross-reference link returns a 404
 
-If a cross-reference link on your page (such as `{% raw %}[Braze Developer Guide]({{site.baseurl}}/developer_guide/home){% endraw %}`) returns a 404 page, check the URL for the following string.
+If a [cross-reference link]({{site.baseurl}}/contributing/content_management/cross_referencing/) on your page (such as `{% raw %}[Braze Developer Guide]({{site.baseurl}}/developer_guide/home){% endraw %}`) returns a 404 page, check the URL for the following string.
 
 ```plaintext
 %7B%7Bsite.baseurl%7D%7D

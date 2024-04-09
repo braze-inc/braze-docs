@@ -57,7 +57,7 @@ When you create a new section, you can configure it with or without a landing pa
 
 {% tabs %}
 {% tab with landing page %}
-Open your new Markdown file and add the following template to use the default landing-page layout. For other layouts, see [Layouts]({{site.baseurl}}/contributing/yaml_front_matter/page_layouts/).
+Open your new Markdown file and add the following template. For more templates, see [Templates]({{site.baseurl}}/contributing/templates/).
 
 ```markdown
 ---

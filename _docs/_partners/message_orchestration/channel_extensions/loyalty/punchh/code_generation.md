@@ -11,7 +11,7 @@ search_tag: Partner
 
 > A coupon code is a unique code that can be used by a single user (either single or multiple use). The Punchh framework generates coupon codes, which can be processed within a mobile app or at the point-of-sale (POS) system.
 
-Using the Punchh coupon framework and Braze, the following scenarios can be achieved:
+Using the Punchh coupon framework and Braze, you can achieve the following scenarios:
 
 - Generate a coupon code when the guest clicks a coupon generation link in an email: The coupon code will be generated dynamically and shown on a web page.
 - Generate a coupon code when the guest opens an email: The coupon code will be generated dynamically and shown as an image within the email.
@@ -46,13 +46,14 @@ To use the Punchh dynamic coupon code API, a JWT Token must be constructed. Add 
 
 {% capture payload %}{"campaign_id":"CAMPAIGN_ID","email":"{{${email_address}}}","first_name":"{{${first_name}}}","last_name":"{{${last_name}}}"}{% endcapture %}
 
-{% capture signature_structure %}{{header | base64_encode}}.{{payload | base64_encode}}{% endcapture %}
+{% capture signature_structure %}{{header | base64_encode}}.{{payload | base64_encode | remove: '='}}{% endcapture %}
 
 {% assign secret = "DYNAMIC_COUPON_GENERATION_TOKEN" %}
 
-{% assign final_signature = {{signature_structure | hmac_sha256_base64: {{secret}} %}
+{% assign final_signature = {{signature_structure | hmac_sha256_base64: secret}} %}
 
 {% capture jwt %}{{signature_structure}}.{{final_signature | remove: '='}}{% endcapture %}
+
 ```
 {% endraw %}
 

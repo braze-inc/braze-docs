@@ -370,7 +370,7 @@ validurls['/docs/user_guide/data_and_analytics/custom_data/nested_object_support
 validurls['/docs/user_guide/data_and_analytics/custom_data/custom_events/#nested-objects'] = '/user_guide/data_and_analytics/custom_data/custom_events/nested_objects/';
 validurls['/docs/services_handbook_21/'] = '/docs/assets/download_file/Braze_Success_and_Support_Services_Handbook_21.pdf';
 validurls['/docs/services_handbook_22/'] = '/docs/assets/download_file/Braze_Success_and_Support_Services_Handbook_22.pdf';
-validurls['/docs/hidden/private_betas/view_pii/'] = '/docs/view_pii';
+validurls['/docs/hidden/private_betas/view_pii/'] = '/docs/user_guide/administrative/app_settings/company_settings/security_settings/#view-pii/';
 validurls['/docs/hidden/private_betas/partners/adobe/'] = '/docs/partners/adobe';
 validurls['/docs/hidden/private_betas/link_aliasing/'] = '/docs/link_aliasing/';
 validurls['/docs/hidden/private_betas/shopify/'] = '/docs/partners/shopify/';
@@ -606,7 +606,7 @@ validurls['/docs/user_guide/engagement_tools/canvas/canvas_components/'] = '/doc
 validurls['/docs/user_guide/engagement_tools/campaigns/ideas_and_strategies/best_practices/'] = '/docs/user_guide/engagement_tools/campaigns/ideas_and_strategies/getting_high_ratings/';
 validurls['/docs/developer_guide/platform_integration_guides/android/push_notifications/advanced_settings/#delivery-options'] = '/docs/developer_guide/platform_integration_guides/android/push_notifications/android/customization/advanced_settings/#ttl';
 
-validurls['/docs/view_pii'] = '/docs/user_guide/administrative/company_settings/security_settings/#view-pii';
+validurls['/docs/view_pii/'] = '/docs/user_guide/administrative/app_settings/company_settings/security_settings/#view-pii';
 
 validurls['/docs/user_guide/engagement_tools/testing/multivariant_testing/#creating-tests'] = '/docs/user_guide/engagement_tools/testing/multivariant_testing/create_multivariate_campaign/';
 validurls['/docs/user_guide/engagement_tools/testing/multivariant_testing/#viewing-results-of-a-multivariate-campaign'] = '/docs/user_guide/engagement_tools/testing/multivariant_testing/multivariate_analytics/';
@@ -802,6 +802,7 @@ validurls['/docs/user_guide/message_building_by_channel/email/email_private_rela
 validurls['/docs/user_guide/message_building_by_channel/email/mpp/'] = '/docs/user_guide/message_building_by_channel/email/apple_mail/mpp/';
 
 validurls['/docs/user_guide/data_and_analytics/query_builder/custom_sql/'] = '/docs/user_guide/data_and_analytics/query_builder/#custom-sql';
+validurls['/docs/sql_segments_tables/'] = '/docs/user_guide/engagement_tools/segments/sql_segments/sql_segments_tables/';
 
 validurls['/docs/frequency_capping_tag/'] = '/docs/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/#frequency-capping';
 validurls['/docs/user_guide/data_and_analytics/user_data_collection/cloud_ingestion'] = '/docs/user_guide/data_and_analytics/cloud_ingestion/';
@@ -945,7 +946,6 @@ validurls['/docs/developer_guide/platform_wide/analytics_overview/'] = '/docs/de
 validurls['/docs/user_guide/engagement_tools/canvas/canvas_components/experiment_step/personal_path'] = '/docs/user_guide/engagement_tools/canvas/canvas_components/experiment_step/personalized_paths/';
 
 validurls['/docs/help/release_notes/2021/12_14_21/'] = '/docs/help/release_notes/2021/december/';
-
 
 validurls['/docs/partners/message_orchestration/channel_extensions/ecommerce/shopify/shopify#prerequisites'] = '/docs/partners/message_orchestration/channel_extensions/ecommerce/shopify/shopify_overview/#requirements';
 validurls['/docs/partners/message_orchestration/channel_extensions/ecommerce/shopify/setting_up_shopify/#shopify-setup-within-braze'] = '/docs/partners/message_orchestration/channel_extensions/ecommerce/shopify/setting_up_shopify/';
@@ -1099,6 +1099,9 @@ validurls['/docs/user_guide/administrative/app_settings/custom_event_and_attribu
 validurls['/docs/home/metadata/'] = '/docs/contributing/yaml_front_matter/metadata/';
 validurls['/docs/home/styling_test_page/'] = '/docs/contributing/styling_examples/';
 validurls['/docs/help/help_articles/docs/contribution'] = '/docs/contributing/home/';
+validurls['/docs/hidden/wip_partnerships/wip_guidelines'] = '/docs/contributing/home/';
+validurls['/docs/hidden/wip_partnerships/partnership_template'] = '/docs/contributing/templates/#technology-partner';
+validurls['/docs/help/help_articles/docs/contribution/'] = '/docs/contributing/home/';
 
 validurls['/docs/user_guide/administrative/app_settings/manage_your_braze_users/deleting_users_from_your_account/#deleting-braze-account-users'] = '/docs/user_guide/administrative/app_settings/manage_your_braze_users/adding_users_to_your_dashboard/#deleting-braze-users';
 
