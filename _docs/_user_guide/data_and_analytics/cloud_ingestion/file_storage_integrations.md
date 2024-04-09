@@ -50,19 +50,21 @@ The default settings are:
 
 Take note of the region you’ve created the bucket in, as you will create an SQS queue in the same region in the next step.
 
-### Step 2: Create SQS resources
+### Step 2: Create SQS queue
 
-Create an SQS queue to track when objects are added to the bucket you’ve created.
+Create an SQS queue to track when objects are added to the bucket you’ve created. Use the default configuration settings for now.
 
 {% alert important %}
 Be sure to create this SQS in the same region you created the bucket in. 
 {% endalert %}
 
-Use default configuration settings until you reach the access policy step. When setting up the access policy, choose **Advanced options**. 
-
 Be sure to take note of the ARN and the URL of the SQS as you’ll be using it frequently during this configuration. 
 <br><br>![]({% image_buster /assets/img/cloud_ingestion/s3_ARN.png %})
 <br><br>
+
+### Step 3: Set up access policy
+
+To set up the access policy, choose **Advanced options**. 
 
 Append the following statement to the queue's access policy, being careful to replace `YOUR-BUCKET-NAME-HERE` with your bucket name, and `YOUR-SQS-ARN` with your SQS queue ARN, and `YOUR-AWS-ACCOUNT-ID` with your AWS account ID: 
 
@@ -86,7 +88,7 @@ Append the following statement to the queue's access policy, being careful to re
 } 
 ```
 
-### Step 3: Add an event notification to the S3 bucket
+### Step 4: Add an event notification to the S3 bucket
 
 1. In the bucket created in step 1, go to **Properties** > **Event notifications**.
 
@@ -94,7 +96,7 @@ Append the following statement to the queue's access policy, being careful to re
 
 3. Under **Destination** select **SQS queue** and provide the ARN of the SQS you created in step 2.
 
-### Step 4: Create an IAM policy
+### Step 5: Create an IAM policy
 
 Create an IAM policy to allow Braze to interact with your source bucket. To get started, sign in to the AWS management console as an account administrator. 
 
@@ -140,7 +142,7 @@ Create an IAM policy to allow Braze to interact with your source bucket. To get 
 
 ![]({{site.baseurl}}/assets/img/create_policy_4_created.png)
 
-### Step 5: Create an IAM role
+### Step 6: Create an IAM role
 
 To complete the setup on AWS, you will create an IAM role and attach the IAM policy from step 4 to it. 
 
