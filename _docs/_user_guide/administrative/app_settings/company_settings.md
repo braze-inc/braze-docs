@@ -13,10 +13,10 @@ guide_featured_title: "Section articles"
 guide_featured_list:
 - name: Contact Information
   link: /docs/user_guide/administrative/app_settings/company_settings/contact_information/
-  fa_icon: fas fa-address-book
+  image: /assets/img/braze_icons/book-open-01.svg
 - name: Notification Preferences
   link: /docs/user_guide/administrative/app_settings/company_settings/notification_preferences/
-  fa_icon: far fa-dot-circle
+  image: /assets/img/braze_icons/target-05.svg
 - name: Security Settings
   link: /docs/user_guide/administrative/app_settings/company_settings/security_settings/
   image: /assets/img/braze_icons/shield-01.svg

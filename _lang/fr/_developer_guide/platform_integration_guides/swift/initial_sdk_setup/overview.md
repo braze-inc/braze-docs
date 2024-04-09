@@ -17,7 +17,7 @@ guide_featured_list:
   image: /assets/img/cocoapods.png
 - name: Gestionnaire de paquets Swift (SPM)
   link: /docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/installation_methods/swift_package_manager/
-  image: /assets/img/swift.png
+  image: /assets/img/braze_icons/swift.svg
 - name: Carthage
   link: /docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/installation_methods/carthage_integration/
   image: /assets/img/carthage.jpeg
@@ -29,7 +29,7 @@ guide_featured_list:
   fa_icon: fas fa-flag-checkered
 - name: "Autres personnalisations SDK facultatives"
   link: /docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/other_sdk_customizations/
-  image: /assets/img/braze_icons/user-square.svg-alt
+  image: /assets/img/braze_icons/user-square.svg
 
 ---
 

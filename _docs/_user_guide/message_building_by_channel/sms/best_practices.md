@@ -17,7 +17,7 @@ guide_featured_list:
   image: /assets/img/braze_icons/send-01.svg
 - name: "Opt-ins"
   link: /docs/user_guide/message_building_by_channel/sms/best_practices/opt-ins/
-  fa_icon: fa-solid fa-comment-sms
+  image: /assets/img/braze_icons/message-text-circle-01.svg
 - name: "Sending Test Messages"
   link: /docs/user_guide/engagement_tools/campaigns/testing_and_more/sending_test_messages/
   image: /assets/img/braze_icons/mail-01.svg

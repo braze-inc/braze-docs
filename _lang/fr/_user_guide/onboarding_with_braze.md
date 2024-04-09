@@ -33,7 +33,7 @@ guide_featured_list:
     image: /assets/img/braze_icons/mail-01.svg
   - name: Configuration de SMS
     link: /docs/user_guide/onboarding_with_braze/sms_setup/
-    fa_icon: fas fa-mobile
+    image: /assets/img/braze_icons/phone-02.svg
 
 search_rank: 4
 ---

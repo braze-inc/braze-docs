@@ -19,10 +19,10 @@ guide_featured_list:
     image: /assets/img/braze_icons/marker-pin-01.svg
   - name: Mobile Integrations
     link: /docs/user_guide/engagement_tools/locations_and_geofences/mobile_integrations/
-    fa_icon: fas fa-mobile
+    image: /assets/img/braze_icons/phone-02.svg
   - name: Frequently Asked Questions
     link: /docs/user_guide/engagement_tools/locations_and_geofences/faqs/
-    fa_icon: fas fa-question
+    image: /assets/img/braze_icons/annotation-question.svg
 ---
 
 ## About locations and geofences

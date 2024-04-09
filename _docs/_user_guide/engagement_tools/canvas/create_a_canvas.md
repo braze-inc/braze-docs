@@ -17,7 +17,7 @@ guide_featured_list:
     image: /assets/img/braze_icons/palette.svg
   - name: Commenting in Canvas
     link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/canvas_comments/
-    fa_icon: fa-solid fa-comment
+    image: /assets/img/braze_icons/message-circle-01.svg
   - name: Time-Based Functionalities
     link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/time_based_canvas/
     image: /assets/img/braze_icons/clock.svg
@@ -41,7 +41,7 @@ guide_featured_list:
     image: /assets/img/braze_icons/columns-01.svg
   - name: In-App Messages in Canvas
     link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/canvas_by_channel/in-app_messages_in_canvas/
-    fa_icon: fas fa-mobile
+    image: /assets/img/braze_icons/phone-02.svg
   - name: Advancement Behaviors
     link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/advancement/
     image: /assets/img/braze_icons/users-01.svg

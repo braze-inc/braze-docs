@@ -30,13 +30,13 @@ guide_menu_list:
     fa_icon: fa-solid fa-clock-rotate-left
   - name: Export Overview Data
     link: /docs/user_guide/data_and_analytics/export_braze_data/exporting_app_usage_data/
-    fa_icon: far fa-dot-circle
+    image: /assets/img/braze_icons/target-05.svg
   - name: Export Revenue Data
     link: /docs/user_guide/data_and_analytics/export_braze_data/exporting_revenue_data/
     image: /assets/img/braze_icons/coins-hand.svg
   - name: Export News Feed Data
     link: /docs/user_guide/data_and_analytics/export_braze_data/export_news_feed_data/
-    fa_icon: fas fa-newspaper
+    image: /assets/img/braze_icons/announcement-02.svg
   - name: Export Custom Event Data
     link: /docs/user_guide/data_and_analytics/export_braze_data/export_custom_event_data/
     image: /assets/img/braze_icons/settings-01.svg
@@ -45,13 +45,13 @@ guide_menu_list:
     image: /assets/img/braze_icons/server-01.svg
   - name: Opening CSV Exports in Excel
     link: /docs/user_guide/data_and_analytics/export_braze_data/opening_csv_reports_in_excel/
-    fa_icon: fas fa-file-excel
+    image: /assets/img/braze_icons/file-02.svg
   - name: Export Troubleshooting
     link: /docs/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/
     image: /assets/img/braze_icons/help-circle.svg
   - name: Frequently Asked Questions
     link: /docs/user_guide/data_and_analytics/export_braze_data/faqs/
-    fa_icon: fas fa-question
+    image: /assets/img/braze_icons/annotation-question.svg
 
 guide_menu_title2: Data export with Currents
 guide_menu_description2: "Looking to take advantage of data export with Braze Currents? The Currents tool is a real-time data stream of your engagement events that is the most robust, yet granular export out of the Braze platform. Check out these articles for more."
@@ -61,7 +61,7 @@ guide_menu_list2:
     image: /assets/img/braze_icons/database-01.svg
   - name: Setting up Currents
     link: /docs/user_guide/data_and_analytics/braze_currents/setting_up_currents/
-    fa_icon: fas fa-warehouse
+    image: /assets/img/braze_icons/building-01.svg
   - name: How Braze uses Currents
     link: /docs/user_guide/data_and_analytics/braze_currents/how_braze_uses_currents/
     image: /assets/img/braze_icons/expand-05.svg

@@ -36,7 +36,7 @@ guide_featured_list:
   image: /assets/img/braze_icons/file-06.svg
 - name: "FAQ WhatsApp"
   link: /docs/user_guide/message_building_by_channel/whatsapp/faqs/
-  fa_icon: fas fa-question
+  image: /assets/img/braze_icons/annotation-question.svg
 
 ---
 <br><br>

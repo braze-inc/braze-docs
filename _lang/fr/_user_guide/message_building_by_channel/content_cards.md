@@ -28,7 +28,7 @@ guide_featured_list:
   image: /assets/img/braze_icons/settings-01.svg
 - name: Test
   link: /docs/user_guide/message_building_by_channel/content_cards/testing/
-  fa_icon: fas fa-vial
+  image: /assets/img/braze_icons/beaker-02.svg
 - name: Reporting
   link: /docs/user_guide/message_building_by_channel/content_cards/reporting/
   image: /assets/img/braze_icons/pie-chart-01.svg

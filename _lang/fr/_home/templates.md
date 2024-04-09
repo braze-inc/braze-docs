@@ -14,10 +14,10 @@ guide_featured_list:
     image: /assets/img/braze_icons/layout-grid-01.svg
   - name: "Page d’accueil multisection avec icônes d’immobilisations"
     link: /docs/home/templates/landing_multiple/
-    fa_icon: fas fa-th
+    image: /assets/img/braze_icons/layout-grid-02.svg
   - name: "Page d’accueil multisection avec images"
     link: /docs/home/templates/landing_multiple_images/
-    fa_icon: fas fa-th
+    image: /assets/img/braze_icons/layout-grid-02.svg
 
 guide_menu_title: "Modèles de contenu"
 guide_menu_list:
@@ -29,10 +29,10 @@ guide_menu_list:
     image: /assets/img/braze_icons/book-closed.svg
   - name: Page Partenaire avec vidéo
     link: /docs/home/templates/partner_page_template_video/
-    fa_icon: fas fa-handshake
+    image: /assets/img/braze_icons/users-check.svg
   - name: Page Partenaire
     link: /docs/home/templates/partner_page_template/
-    fa_icon: fas fa-handshake
+    image: /assets/img/braze_icons/users-check.svg
   - name: Référence avec vidéo
     link: /docs/home/templates/reference_video/
     fa_icon: fas fa-graduation-cap

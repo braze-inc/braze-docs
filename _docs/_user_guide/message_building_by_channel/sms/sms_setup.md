@@ -17,7 +17,7 @@ guide_featured_list:
   image: /assets/img/braze_icons/book-closed.svg
 - name: Sending Phone Numbers
   link: /docs/user_guide/message_building_by_channel/sms/sms_setup/short_and_long_codes/
-  fa_icon: fas fa-address-card
+  image: /assets/img/braze_icons/phone-outgoing-01.svg
 - name: SMS Message Sending
   link: /docs/user_guide/message_building_by_channel/sms/sms_setup/sms_sending/
   image: /assets/img/braze_icons/message-square-02.svg

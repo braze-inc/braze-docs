@@ -28,7 +28,7 @@ guide_featured_list:
     image: /assets/img/braze_icons/archive.svg
   - name: Foire aux questions
     link: /docs/user_guide/engagement_tools/templates_and_media/faqs/
-    fa_icon: fas fa-question
+    image: /assets/img/braze_icons/annotation-question.svg
 ---
 
 ## À propos des modèles et des médias

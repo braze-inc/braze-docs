@@ -25,7 +25,7 @@ guide_featured_list:
   image: /assets/img/braze_icons/mail-01.svg
 - name: Drag-And-Drop Editor
   link: /docs/user_guide/message_building_by_channel/email/drag_and_drop/
-  /assets/img/braze_icons/brush-02.svg
+  image: /assets/img/braze_icons/brush-02.svg
 - name: Templates
   link: /docs/user_guide/message_building_by_channel/email/templates/
   image: /assets/img/braze_icons/table.svg
@@ -70,7 +70,7 @@ guide_menu_list:
   image: /assets/img/braze_icons/check-square-broken.svg
 - name: Frequently Asked Questions
   link: /docs/user_guide/message_building_by_channel/email/faq/
-  fa_icon: fas fa-question
+  image: /assets/img/braze_icons/annotation-question.svg
 
 
 ---

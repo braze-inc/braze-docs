@@ -25,13 +25,13 @@ guide_featured_list:
   image: /assets/img/braze_icons/settings-01.svg
 - name: Shopify Historical Backfill
   link: /docs/shopify_historical_backfill/
-  fa_icon: fa-solid fa-database
+  image: /assets/img/braze_icons/database-01.svg
 - name: Shopify Product Syncs
   link: /docs/shopify_catalogs/
   image: /assets/img/braze_icons/list.svg
 - name: Back-In-Stock Notifications
   link: /docs/back_in_stock/
-  fa_icon: fas fa-cart-shopping
+  image: /assets/img/braze_icons/shopping-cart-03.svg
 - name: Use Cases
   link: /docs/shopify_use_cases/
   image: /assets/img/braze_icons/users-01.svg

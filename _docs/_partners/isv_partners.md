@@ -23,7 +23,7 @@ guide_featured_list:
   fa_icon: fa-solid fa-snowflake
 - name: Data Transformation
   link: /docs/partners/isv_partners/data_transformation
-  fa_icon: fa-solid fa-database
+  image: /assets/img/braze_icons/database-01.svg
 - name: Best Practices
   link: /docs/partners/isv_partners/best_practices
   image: /assets/img/braze_icons/thumbs-up.svg

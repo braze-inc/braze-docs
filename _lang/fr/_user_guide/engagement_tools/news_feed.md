@@ -15,7 +15,7 @@ guide_featured_title: "Section Articles"
 guide_featured_list:
   - name: Créer un élément de Fil d’actualité
     link: /docs/user_guide/engagement_tools/news_feed/creating_a_news_feed_item/
-    fa_icon: fas fa-newspaper
+    image: /assets/img/braze_icons/announcement-02.svg
   - name: Catégories de fil d’actualité
     link: /docs/user_guide/engagement_tools/news_feed/news_feed_categories/
     image: /assets/img/braze_icons/columns-01.svg

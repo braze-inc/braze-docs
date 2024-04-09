@@ -18,7 +18,7 @@ guide_featured_list:
   image: /assets/img/braze_icons/server-01.svg
 - name: "Deep Linking to In-App Content"
   link: /docs/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/
-  fa_icon: fas fa-mobile
+  image: /assets/img/braze_icons/phone-02.svg
 - name: Content Blocks
   link: /docs/user_guide/engagement_tools/templates_and_media/content_blocks/
   image: /assets/img/braze_icons/columns-01.svg

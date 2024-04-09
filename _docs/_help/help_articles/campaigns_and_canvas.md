@@ -21,7 +21,7 @@ guide_menu_list:
     image: /assets/img/braze_icons/navigation-pointer-01.svg
   - name: Handling a Large Control Group
     link: /docs/help/help_articles/campaigns_and_canvas/more_people_in_control_group/
-    fa_icon: far fa-dot-circle
+    image: /assets/img/braze_icons/target-05.svg
   - name: Logging Custom Event Properties
     link: /docs/help/help_articles/campaigns_and_canvas/using_custom_event_properties/
     image: /assets/img/braze_icons/code-02.svg
@@ -33,7 +33,7 @@ guide_menu_list:
     image: /assets/img/braze_icons/x-circle.svg
   - name: Using Event Logging
     link: /docs/help/help_articles/campaigns_and_canvas/using_event_logging/
-    fa_icon: fas fa-clipboard-list
+    image: /assets/img/braze_icons/list.svg
 
     
 ---

@@ -21,7 +21,7 @@ guide_featured_list:
   image: /assets/img/braze_icons/css3.svg
 - name: "Email Capture Form"
   link: /docs/user_guide/message_building_by_channel/in-app_messages/traditional/customize/email_capture_form/
-  fa_icon: fa-solid fa-envelope-open-text
+  image: /assets/img/braze_icons/mail-04.svg
 - name: "Color Profiles and CSS"
   link: /docs/user_guide/message_building_by_channel/in-app_messages/traditional/customize/color_profiles_and_css/
   image: /assets/img/braze_icons/palette.svg

@@ -33,7 +33,7 @@ guide_featured_list:
   image: /assets/img/braze_icons/message-dots-circle.svg
 - name: "Messaging Users"
   link: /docs/user_guide/message_building_by_channel/whatsapp/message_processing/user_messages/
-  fa_icon: fa-solid fa-comments
+  image: /assets/img/braze_icons/message-chat-circle.svg
 - name: "Handling Unknown Phone Numbers"
   link: /docs/user_guide/message_building_by_channel/whatsapp/message_processing/handling_unknown_numbers/
 - name: "WhatsApp Marketing Experiment"
@@ -47,7 +47,7 @@ guide_featured_list:
   image: /assets/img/braze_icons/check-square-broken.svg
 - name: "WhatsApp FAQ"
   link: /docs/user_guide/message_building_by_channel/whatsapp/faqs/
-  fa_icon: fas fa-question
+  image: /assets/img/braze_icons/annotation-question.svg
 
 ---
 <br><br>

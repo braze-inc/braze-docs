@@ -18,10 +18,10 @@ guide_featured_list:
   image: /assets/img/braze_icons/check-square-broken.svg
 - name: "SMS Setup"
   link: /docs/user_guide/message_building_by_channel/sms/sms_setup/
-  fa_icon: fas fa-mobile
+  image: /assets/img/braze_icons/phone-02.svg
 - name: "SMS Laws and Regulations"
   link: /docs/user_guide/message_building_by_channel/sms/sms_laws_and_regulations/
-  fa_icon: fas fa-gavel
+  image: /assets/img/braze_icons/briefcase-02.svg
 - name: "SMS Subscription Group"
   link: /docs/user_guide/message_building_by_channel/sms/sms_subscription_group/
   image: /assets/img/braze_icons/table.svg
@@ -45,23 +45,23 @@ guide_featured_list:
   image: /assets/img/braze_icons/phone-02.svg
 - name: "Sending Phone Numbers"
   link: /docs/user_guide/message_building_by_channel/sms/sms_setup/short_and_long_codes/
-  image: /assets/img/braze_icons/phone-02.svg-square
+  image: /assets/img/braze_icons/phone-02.svg
 - name: "SMS Reporting"
   link: /docs/user_guide/message_building_by_channel/sms/sms_campaign_analytics/
   image: /assets/img/braze_icons/phone-02.svg
 - name: "SMS Frequently Asked Questions"
   link: /docs/user_guide/message_building_by_channel/sms/faqs/
-  fa_icon: fas fa-question
+  image: /assets/img/braze_icons/annotation-question.svg
 
 
 guide_menu_title: "MMS"
 guide_menu_list:
 - name: "About MMS"
   link: /docs/user_guide/message_building_by_channel/sms/mms/about_mms/
-  /assets/img/braze_icons/brush-02.svg
+  image: /assets/img/braze_icons/brush-02.svg
 - name: "MMS Short and Long Codes"
   link: /docs/user_guide/message_building_by_channel/sms/mms/mms_short_long_codes/
-  image: /assets/img/braze_icons/phone-02.svg-square
+  image: /assets/img/braze_icons/phone-02.svg
 - name: "Creating an MMS Campaign"
   link: /docs/user_guide/message_building_by_channel/sms/mms/create/
   image: /assets/img/braze_icons/table.svg
@@ -70,5 +70,5 @@ guide_menu_list:
   image: /assets/img/braze_icons/user-circle.svg
 - name: "MMS Frequently Asked Questions"
   link: /docs/user_guide/message_building_by_channel/sms/mms/faqs/
-  fa_icon: fas fa-question
+  image: /assets/img/braze_icons/annotation-question.svg
 ---

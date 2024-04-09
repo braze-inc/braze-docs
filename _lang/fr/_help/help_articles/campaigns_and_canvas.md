@@ -33,7 +33,7 @@ guide_menu_list:
     image: /assets/img/braze_icons/x-circle.svg
   - name: Journalisation des événements
     link: /docs/help/help_articles/campaigns_and_canvas/using_event_logging/
-    fa_icon: fas fa-clipboard-list
+    image: /assets/img/braze_icons/list.svg
 
     
 ---

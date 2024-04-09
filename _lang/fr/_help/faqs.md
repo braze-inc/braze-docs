@@ -11,7 +11,7 @@ guide_featured_title: "Articles FAQ"
 guide_featured_list:
   - name: FAQ Canvas
     link: /docs/user_guide/engagement_tools/canvas/faqs/
-    fa_icon: fas fa-brush
+    image: /assets/img/braze_icons/brush-02.svg
   - name: FAQ Campagnes
     link: /docs/user_guide/engagement_tools/campaigns/faq/
     image: /assets/img/braze_icons/send-01.svg
@@ -29,7 +29,7 @@ guide_featured_list:
     image: /assets/img/braze_icons/marker-pin-01.svg
   - name: "FAQ sur la bibliothèque multimédia"
     link: /docs/user_guide/engagement_tools/templates_and_media/faqs/
-    fa_icon: fas fa-images
+    image: /assets/img/braze_icons/brush-02.svg
   - name: "FAQ MMS"
     link: /docs/user_guide/message_building_by_channel/sms/mms/faqs/
     image: /assets/img/braze_icons/message-circle-01.svg

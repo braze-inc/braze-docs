@@ -17,13 +17,13 @@ guide_featured_list:
   fa_icon: fas fa-comment-dots
 - name: Lois et réglementations SMS
   link: /docs/user_guide/onboarding_with_braze/sms_setup/sms_laws_and_regulations/
-  fa_icon: fas fa-gavel
+  image: /assets/img/braze_icons/briefcase-02.svg
 - name: Termes à connaître
   link: /docs/user_guide/onboarding_with_braze/sms_setup/terms/
   image: /assets/img/braze_icons/book-closed.svg
 - name: Codes courts et codes longs
   link: /docs/user_guide/onboarding_with_braze/sms_setup/short_and_long_codes/
-  fa_icon: fas fa-address-card
+  image: /assets/img/braze_icons/phone-outgoing-01.svg
 - name: Migration des données utilisateur
   link: /docs/user_guide/onboarding_with_braze/sms_setup/user_data_migration/
   image: /assets/img/braze_icons/users-01.svg

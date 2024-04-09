@@ -17,7 +17,7 @@ guide_featured_list:
     image: /assets/img/braze_icons/user-square.svg
   - name: Email
     link: /docs/user_guide/message_building_by_channel/email/reporting_and_analytics/email_reporting/
-    /assets/img/braze_icons/mail-01.svg
+    image: /assets/img/braze_icons/mail-01.svg
   - name: In-App Messages
     link: /docs/user_guide/message_building_by_channel/in-app_messages/reporting/
     image: /assets/img/braze_icons/message-text-circle-01.svg

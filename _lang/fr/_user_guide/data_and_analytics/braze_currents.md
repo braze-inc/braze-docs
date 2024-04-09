@@ -16,10 +16,10 @@ guide_featured_title: "Section Articles"
 guide_featured_list:
 - name: "Configuration de Currents"
   link: /docs/user_guide/data_and_analytics/braze_currents/setting_up_currents/
-  fa_icon: fas fa-warehouse
+  image: /assets/img/braze_icons/building-01.svg
 - name: "Partenaires disponibles"
   link: /docs/user_guide/data_and_analytics/braze_currents/available_partners/
-  fa_icon: fas fa-handshake
+  image: /assets/img/braze_icons/users-check.svg
 - name: "Sémantique des événements de livraison"
   link: /docs/user_guide/data_and_analytics/braze_currents/event_delivery_semantics/
   image: /assets/img/braze_icons/key-01.svgboard

@@ -17,7 +17,7 @@ guide_featured_list:
     image: /assets/img/braze_icons/book-closed.svg
   - name: Building Canvases
     link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/
-    /assets/img/braze_icons/brush-02.svg
+    image: /assets/img/braze_icons/brush-02.svg
   - name: Canvas Components
     link: /docs/user_guide/engagement_tools/canvas/canvas_components/
     image: /assets/img/braze_icons/dataflow-03.svg 
@@ -32,7 +32,7 @@ guide_featured_list:
     image: /assets/img/braze_icons/target-04.svg
   - name: Frequently Asked Questions
     link: /docs/user_guide/engagement_tools/canvas/faqs/
-    fa_icon: fas fa-question
+    image: /assets/img/braze_icons/annotation-question.svg
 ---
 
 {% alert important %}

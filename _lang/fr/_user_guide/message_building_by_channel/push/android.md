@@ -24,7 +24,7 @@ guide_featured_list:
   image: /assets/img/braze_icons/settings-01.svg
 - name: "Notifications enrichies"
   link: /docs/user_guide/message_building_by_channel/push/android/rich_notifications/
-  fa_icon: fas fa-vial
+  image: /assets/img/braze_icons/beaker-02.svg
 - name: "Paramètres de campagne avancés"
   link: /docs/user_guide/message_building_by_channel/push/android/advanced_campaign_settings/
   image: /assets/img/braze_icons/bar-chart-01.svg

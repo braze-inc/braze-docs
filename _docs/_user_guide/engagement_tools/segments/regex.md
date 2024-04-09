@@ -22,7 +22,7 @@ In the linked Braze Learning course, we show you how regular expressions can be 
 
 - [Regular expression basics](https://learning.braze.com/regular-expression-basics-for-braze) Braze Learning course
 - [Regex Cheat Sheet]({{site.baseurl}}/regex_cheat_sheet/)
-- <i class="fas fa-file-alt"></i> [Sample Data RTF][dummydata]
+- [Sample Data RTF][dummydata]
 
 ## Regex debugger
 

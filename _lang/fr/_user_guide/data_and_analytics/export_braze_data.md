@@ -36,7 +36,7 @@ guide_menu_list:
     image: /assets/img/braze_icons/coins-hand.svg
   - name: Exporter les données du Fil d'actualité
     link: /docs/user_guide/data_and_analytics/export_braze_data/export_news_feed_data/
-    fa_icon: fas fa-newspaper
+    image: /assets/img/braze_icons/announcement-02.svg
   - name: Exporter des données d’événements personnalisés
     link: /docs/user_guide/data_and_analytics/export_braze_data/export_custom_event_data/
     image: /assets/img/braze_icons/settings-01.svg
@@ -51,6 +51,6 @@ guide_menu_list:
     image: /assets/img/braze_icons/help-circle.svg
   - name: Foire aux questions
     link: /docs/user_guide/data_and_analytics/export_braze_data/faqs/
-    fa_icon: fas fa-question
+    image: /assets/img/braze_icons/annotation-question.svg
 ---
 

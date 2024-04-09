@@ -20,7 +20,7 @@ guide_featured_list:
     image: /assets/img/braze_icons/clock.svg
   - name: Création de branches
     link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/branching/
-    fa_icon: fas fa-code-branch
+    image: /assets/img/braze_icons/git-branch-01.svg
   - name: Comportements d’avancement
     link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/advancement/
     image: /assets/img/braze_icons/users-01.svg
@@ -35,7 +35,7 @@ guide_featured_list:
     image: /assets/img/braze_icons/dataflow-03.svg
   - name: Messages in-app de Canvas
     link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/in-app_messages_in_canvas/
-    fa_icon: fas fa-mobile
+    image: /assets/img/braze_icons/phone-02.svg
   - name: Cartes de contenu dans Canvas
     link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/content-cards_in_canvas/
     image: /assets/img/braze_icons/columns-01.svg

@@ -16,7 +16,7 @@ guide_featured_list:
   image: /assets/img/cocoapods.png
 - name: Swift Package Manager (SPM)
   link: /docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/installation_methods/swift_package_manager/
-  image: /assets/img/swift.png
+  image: /assets/img/braze_icons/swift.svg
 - name: Carthage
   link: /docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/installation_methods/carthage_integration/
   image: /assets/img/carthage.jpeg
@@ -28,7 +28,7 @@ guide_featured_list:
   image: /assets/img/braze_icons/flag-05.svg
 - name: "Other Optional SDK Customizations"
   link: /docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/other_sdk_customizations/
-  image: /assets/img/braze_icons/user-square.svg-alt
+  image: /assets/img/braze_icons/user-square.svg
 
 noindex: true
 ---

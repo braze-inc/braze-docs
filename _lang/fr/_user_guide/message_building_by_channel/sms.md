@@ -18,7 +18,7 @@ guide_featured_list:
   image: /assets/img/braze_icons/check-square-broken.svg
 - name: "Lois et réglementations SMS"
   link: /docs/user_guide/message_building_by_channel/sms/sms_laws_and_regulations/
-  fa_icon: fas fa-gavel
+  image: /assets/img/braze_icons/briefcase-02.svg
 - name: "Groupe d’abonnement SMS"
   link: /docs/user_guide/message_building_by_channel/sms/sms_subscription_group/
   image: /assets/img/braze_icons/table.svg
@@ -42,13 +42,13 @@ guide_featured_list:
   image: /assets/img/braze_icons/phone-02.svg
 - name: "Envoyer des numéros de téléphone"
   link: /docs/user_guide/message_building_by_channel/sms/phone_numbers/sending_phone_numbers/
-  image: /assets/img/braze_icons/phone-02.svg-square
+  image: /assets/img/braze_icons/phone-02.svg
 - name: "Rapports SMS"
   link: /docs/user_guide/message_building_by_channel/sms/sms_campaign_analytics/
   image: /assets/img/braze_icons/phone-02.svg
 - name: "FAQ SMS"
   link: /docs/user_guide/message_building_by_channel/sms/faqs/
-  fa_icon: fas fa-question
+  image: /assets/img/braze_icons/annotation-question.svg
 
 
 guide_menu_title: "MMS"
@@ -58,7 +58,7 @@ guide_menu_list:
   /assets/img/braze_icons/brush-02.svg
 - name: "Codes courts et longs MMS"
   link: /docs/user_guide/message_building_by_channel/sms/mms/mms_short_long_codes/
-  image: /assets/img/braze_icons/phone-02.svg-square
+  image: /assets/img/braze_icons/phone-02.svg
 - name: "Créer une campagne par MMS"
   link: /docs/user_guide/message_building_by_channel/sms/mms/create/
   image: /assets/img/braze_icons/table.svg
@@ -67,5 +67,5 @@ guide_menu_list:
   image: /assets/img/braze_icons/user-circle.svg
 - name: "FAQ MMS"
   link: /docs/user_guide/message_building_by_channel/sms/mms/faqs/
-  fa_icon: fas fa-question
+  image: /assets/img/braze_icons/annotation-question.svg
 ---

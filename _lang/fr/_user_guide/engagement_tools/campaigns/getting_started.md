@@ -20,5 +20,5 @@ guide_featured_list:
     image: /assets/img/braze_icons/mail-01.svg
   - name: FAQ Campagnes
     link: /docs/user_guide/engagement_tools/campaigns/faq/
-    fa_icon: fas fa-question
+    image: /assets/img/braze_icons/annotation-question.svg
 ---
