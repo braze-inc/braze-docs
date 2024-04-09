@@ -18,7 +18,7 @@ Most features available on iOS are also available on visionOS, including:
 - Analytics (sessions, custom events, purchases, etc.)
 - In-App Messaging (data models and UI)
 - Content Cards (data models and UI)
-- Push Notifications (user-visible, with action buttons and silent notifications)
+- Push Notifications (user-visible with action buttons and silent notifications)
 - Feature Flags
 - Location Analytics
 
@@ -26,13 +26,13 @@ Most features available on iOS are also available on visionOS, including:
 
 Some features are only partially supported on visionOS, but Apple is likely to address these limitations in the future:
 
-- Rich Push Notifications:
-  - Images display as expected
-  - GIFs and videos display the preview thumbnail, but it is not currently possible to play the media
-  - Audio playback is not supported
-- Push Stories:
-  - The _Next_ button to navigate between Push Story pages is not working as intended
-  - Scrolling and clicking on the Push Story page works as expected
+- Rich Push Notifications
+  - Images are supported.
+  - GIFs and videos display the preview thumbnail, but cannot be played.
+  - Audio playback is not supported.
+- Push Stories
+  - Scrolling and selecting the Push Story page is supported.
+  - Navigating between Push Story pages using **Next** is not supported.
 
 ## Unsupported features
 
