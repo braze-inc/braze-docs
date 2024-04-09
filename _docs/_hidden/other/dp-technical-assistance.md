@@ -123,7 +123,7 @@ Note that the email address or phone number associated with the end user’s pro
             <li>Future message send events</li>
             </ul>
     </ul>
-    <p>Settings for this may be accessed via company settings > admin settings > security settings. Data deletion preferences are set per event type or category. Only a user with Administrator preferences can make changes to these settings. Alternatively, an Administrator can delegate these permissions to another user.</p>
+    <p>Settings for this may be accessed via <b>Company Settings</b> > <b>Admin Settings</b> > <b>Security Settings</b>. Data deletion preferences are set per event type or category. Only a user with Administrator preferences can make changes to these settings. Alternatively, an Administrator can delegate these permissions to another user.</p>
     <p>If an event type or message extra is set to be included in the deletion process, the data in this field will be deleted going forward for users for whom you’re running a User Delete REST API Endpoint. In addition, when you select this deletion preference, at the next scheduled deletion job, data from these fields will be deleted from any existing anonymised data sets that contain these fields. Restoring the deleted data fields will not be possible.</p>
     </td>
   </tr>
