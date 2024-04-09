@@ -127,7 +127,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 }
 ```
 
-After sending this payload successfully, we’ll see this response that confirms the invalid phone numbers from CashBlastr have been removed from the Braze invalid list.
+After sending this payload, we’ll see this response that confirms the invalid phone numbers from CashBlastr have been removed from the Braze invalid list.
 
 ```json
 {
@@ -137,14 +137,17 @@ After sending this payload successfully, we’ll see this response that confirms
 
 ## Viewing a user's subscription groups
 
+Let's say you're a marketer at SandwichEmperor, a quick service restaurant chain in the United States, and you want to check the subscription group statuses for a randomized list of your users for SMS.
 
+Using the `/subscription/status/get` endpoint, you can accomplish this task by doing the following:
 
+This endpoint also lists the subscription group statuses of your users for emails as well.
 
 ## Updating an HTML template for email messaging
 
 At WorkFriends, a social network for helping build connections between workers from different industries, their marketing team is responsible for sending email campaigns to their users. These campaigns often include reminders for local events, weekly newsletters, and profile activity highlights.
 
-In this scenario, let’s say WorkFriends has historically used a singular HTML template with its legacy branding. In an effort to align their brand identity, they want to see if there’s any helpful information in this HTML template before transitioning to a new template.
+In this scenario, let’s say WorkFriends has historically used a singular HTML template with its legacy branding. In an effort to align their brand identity, they want to see if there’s any helpful information in this HTML template to leverage, before they transition to a new template.
 
 {% details Here’s the response that the WorkFriends team would receive. %}
 
