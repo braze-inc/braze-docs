@@ -104,7 +104,7 @@ The `messages` response will contain information about each message. The followi
     "custom_plain_text": (string) the custom plain text,
     "should_inline_css": (boolean) whether there should be inline CSS,
     "should_whitespace_header": (boolean) whether there should be a whitespace header,
-    "email_headers": (array) list of email header
+    "email_headers": (array) list of email headers
 }
 ```
 
