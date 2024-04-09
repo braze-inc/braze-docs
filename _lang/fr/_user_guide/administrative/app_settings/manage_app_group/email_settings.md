@@ -57,7 +57,7 @@ Si vous avez besoin que tous les messages d’e-mail envoyés par Braze aient un
 
 ## Pixel de suivi de l’ouverture d’e-mail
 
-[![Cours d’apprentissage Braze]({% image_buster /assets/img/bl_icon2.png %})](https://learning.braze.com/email-open-tracking-pixel/){: style="float:right;width:120px;border:0;" class="noimgborder"}
+[![Cours d’apprentissage Braze]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/email-open-tracking-pixel/){: style="float:right;width:120px;border:0;" class="noimgborder"}
 
 Le pixel de suivi d’ouverture de messagerie est une image de 1 px par 1 px invisible qui est automatiquement insérée dans votre e-mail HTML. Ce pixel aide Braze à détecter si les utilisateurs finaux ont ouvert votre e-mail. Les informations sur l’ouverture des e-mails peuvent être très utiles, car elles aident les utilisateurs à déterminer des stratégies de marketing efficaces en comprenant les taux d’ouverture correspondants.
 

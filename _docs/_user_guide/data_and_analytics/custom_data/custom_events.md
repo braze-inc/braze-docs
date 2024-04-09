@@ -7,7 +7,7 @@ description: "This reference article describes custom events and properties, seg
 search_rank: 2
 ---
 
-# [![Braze Learning course]({% image_buster /assets/img/bl_icon2.png %})](https://learning.braze.com/custom-events-and-attributes){: style="float:right;width:120px;border:0;" class="noimgborder"}Custom events
+# [![Braze Learning course]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/custom-events-and-attributes){: style="float:right;width:120px;border:0;" class="noimgborder"}Custom events
 
 > This article describes custom events and properties, segmentation, usage, Canvas entry properties, where to view relevant analytics, and more. To learn more about events in Braze, refer to [Events]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/events).
 

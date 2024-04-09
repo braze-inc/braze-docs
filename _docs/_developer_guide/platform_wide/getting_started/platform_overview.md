@@ -15,7 +15,7 @@ platform:
   - Unity
 ---
 
-# [![Braze Learning course]({% image_buster /assets/img/bl_icon2.png %})](https://learning.braze.com/path/developer){: style="float:right;width:120px;border:0;" class="noimgborder"}Getting started: Platform overview
+# [![Braze Learning course]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/path/developer){: style="float:right;width:120px;border:0;" class="noimgborder"}Getting started: Platform overview
 
 > This article covers the basic parts and capabilities of the Braze platform. Links from this article connect to essential Braze topics.
 

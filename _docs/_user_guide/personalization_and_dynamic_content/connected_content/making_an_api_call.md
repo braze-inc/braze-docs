@@ -6,7 +6,7 @@ description: "This reference article covers how to make a Connected Content API 
 search_rank: 2
 ---
 
-# [![Braze Learning course]({% image_buster /assets/img/bl_icon2.png %})](https://learning.braze.com/connected-content){: style="float:right;width:120px;border:0;" class="noimgborder"}Making an API call
+# [![Braze Learning course]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/connected-content){: style="float:right;width:120px;border:0;" class="noimgborder"}Making an API call
 
 > Use Connected Content to insert any information accessible via API directly into messages you send to users. You can pull content either directly from your web server or from publicly accessible APIs.
 
