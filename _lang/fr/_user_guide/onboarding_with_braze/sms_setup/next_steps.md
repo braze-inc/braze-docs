@@ -43,7 +43,7 @@ guide_menu_list:
   /assets/img/braze_icons/brush-02.svg
 - name: "Codes courts et longs MMS"
   link: /docs/user_guide/message_building_by_channel/sms/mms/mms_short_long_codes/
-  image: /assets/img/braze_icons/phone-02.svg-square
+  image: /assets/img/braze_icons/phone-02.svg
 - name: "Créer une campagne par MMS"
   link: /docs/user_guide/message_building_by_channel/sms/mms/create/
   image: /assets/img/braze_icons/table.svg

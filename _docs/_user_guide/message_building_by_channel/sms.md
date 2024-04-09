@@ -45,7 +45,7 @@ guide_featured_list:
   image: /assets/img/braze_icons/phone-02.svg
 - name: "Sending Phone Numbers"
   link: /docs/user_guide/message_building_by_channel/sms/sms_setup/short_and_long_codes/
-  image: /assets/img/braze_icons/phone-02.svg-square
+  image: /assets/img/braze_icons/phone-02.svg
 - name: "SMS Reporting"
   link: /docs/user_guide/message_building_by_channel/sms/sms_campaign_analytics/
   image: /assets/img/braze_icons/phone-02.svg
@@ -61,7 +61,7 @@ guide_menu_list:
   image: /assets/img/braze_icons/brush-02.svg
 - name: "MMS Short and Long Codes"
   link: /docs/user_guide/message_building_by_channel/sms/mms/mms_short_long_codes/
-  image: /assets/img/braze_icons/phone-02.svg-square
+  image: /assets/img/braze_icons/phone-02.svg
 - name: "Creating an MMS Campaign"
   link: /docs/user_guide/message_building_by_channel/sms/mms/create/
   image: /assets/img/braze_icons/table.svg

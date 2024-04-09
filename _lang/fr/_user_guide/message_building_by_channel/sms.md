@@ -42,7 +42,7 @@ guide_featured_list:
   image: /assets/img/braze_icons/phone-02.svg
 - name: "Envoyer des numéros de téléphone"
   link: /docs/user_guide/message_building_by_channel/sms/phone_numbers/sending_phone_numbers/
-  image: /assets/img/braze_icons/phone-02.svg-square
+  image: /assets/img/braze_icons/phone-02.svg
 - name: "Rapports SMS"
   link: /docs/user_guide/message_building_by_channel/sms/sms_campaign_analytics/
   image: /assets/img/braze_icons/phone-02.svg
@@ -58,7 +58,7 @@ guide_menu_list:
   /assets/img/braze_icons/brush-02.svg
 - name: "Codes courts et longs MMS"
   link: /docs/user_guide/message_building_by_channel/sms/mms/mms_short_long_codes/
-  image: /assets/img/braze_icons/phone-02.svg-square
+  image: /assets/img/braze_icons/phone-02.svg
 - name: "Créer une campagne par MMS"
   link: /docs/user_guide/message_building_by_channel/sms/mms/create/
   image: /assets/img/braze_icons/table.svg
