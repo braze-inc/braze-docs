@@ -10,8 +10,7 @@ search_tag: Partner
 
 # Alpaco
 
-> [Alpaco](https://alpaco.email/) is an online email marketing tool that offers a drag-and-drop email editor for a new level of control of design and output. 
-The Braze and Alpaco integration allows you to create and export on-brand,- and fully data-driven emails to Braze. 
+> [Alpaco](https://alpaco.email/) is an online email marketing tool that offers a drag-and-drop email editor for a new level of control of design and output. The Braze and Alpaco integration allows you to export on-brand and data-driven emails to Braze. 
 
 {% alert note %}
 Alpaco supports [full Liquid](https://shopify.github.io/liquid/) variables, and as such also fully supports any Liquid variables used in your Braze configurations.
