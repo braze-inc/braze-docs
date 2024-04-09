@@ -23,7 +23,7 @@ guide_featured_list:
     image: /assets/img/braze_icons/file-download-01.svg
   - name: "In-App Messages FAQ"
     link: /docs/user_guide/message_building_by_channel/in-app_messages/faq/
-    image: /assets/img/braze_icons/phone-02.svg-alt
+    image: /assets/img/braze_icons/channel-in-app-messages.svg
   - name: "Locations and Geofences FAQ"
     link: /docs/user_guide/engagement_tools/locations_and_geofences/faqs/
     image: /assets/img/braze_icons/marker-pin-01.svg
@@ -44,13 +44,13 @@ guide_featured_list:
     image: /assets/img/braze_icons/lightbulb-05.svg
   - name: "Email Drag-and-Drop Editor FAQ"
     link: /docs/user_guide/message_building_by_channel/email/drag_and_drop/faq/
-    image: /assets/img/braze_icons/lightbulb-05.svg
+    image: /assets/img/braze_icons/channel-email.svg
   - name: "API and CSV Export FAQ"
     link: /docs/user_guide/data_and_analytics/export_braze_data/faqs/
     image: /assets/img/braze_icons/file-download-01.svg
   - name: "Feature Flag FAQ"
     link: /docs/developer_guide/platform_wide/feature_flags/faq/
-    fa_icon: fa-solid fa-flag
+    image: /assets/img/braze_icons/flag-01.svg
   - name: "Live Activities FAQ"
     link: /docs/developer_guide/platform_integration_guides/swift/live_activities/faq/
     image: /assets/img/braze_icons/swift.svg
