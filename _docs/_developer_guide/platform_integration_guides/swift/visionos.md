@@ -24,7 +24,7 @@ Most features available on iOS are also available on visionOS, including:
 
 ## Partially supported features
 
-Some features are only partially supported on visionOS, but Apple is likely to address these limitations in the future:
+Some features are only partially supported on visionOS, but Apple is likely to address these in the future:
 
 - Rich Push Notifications
   - Images are supported.
