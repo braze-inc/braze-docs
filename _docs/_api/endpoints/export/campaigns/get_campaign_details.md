@@ -92,16 +92,19 @@ The `messages` response will contain information about each message. The followi
 ```json
 {
     "channel": "email",
+    "name": (string) the name of the variant,
+    "extras": (array) the email extras,
     "subject": (string) the subject,
-    "preheader": (string) the preheader,
-    "should_whitespace_header": (boolean) whether there should be a whitespace header,
     "body": (string) the HTML body,
-    "custom_plain_text": (string) the custom plain text,
-    "inline_css": the inline CSS,
     "from": (string) the from address and display name,
     "reply_to": (string) the reply-to for message, if different than "from" address,
     "title": (string) the name of the email,
-    "extras": (hash) any key-value pairs provided
+    "amp_body": (string) the AMP HTML body,
+    "preheader": (string) the preheader,
+    "custom_plain_text": (string) the custom plain text,
+    "should_inline_css": (boolean) whether there should be inline CSS,
+    "should_whitespace_header": (boolean) whether there should be a whitespace header,
+    "email_headers": (array) list of email header
 }
 ```
 
