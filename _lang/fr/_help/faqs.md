@@ -72,7 +72,7 @@ guide_menu_list:
     image: /assets/img/braze_icons/message-square-02.svg
   - name: "Meilleures pratiques pour les SMS"
     link: /docs/user_guide/message_building_by_channel/sms/best_practices/
-    fa_icon: fa-solid fa-comment-sms
+    image: /assets/img/braze_icons/sms.svg
 
 
 local_redirect: #what-does-local-time-zone-delivery-offer

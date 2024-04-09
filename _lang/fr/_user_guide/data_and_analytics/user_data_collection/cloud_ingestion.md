@@ -17,7 +17,7 @@ guide_featured_list:
     image: /assets/img/braze_icons/cloud-blank-01.svg
   - name: Intégration Snowflake
     link: /docs/user_guide/data_and_analytics/user_data_collection/cloud_ingestion/snowflake/
-    fa_icon: fa-solid fa-snowflake
+    image: /assets/img/braze_icons/snowflake-01.svg
   - name: Intégration Redshift
     link: /docs/user_guide/data_and_analytics/user_data_collection/cloud_ingestion/redshift/
     image: /assets/img/braze_icons/settings-01.svg

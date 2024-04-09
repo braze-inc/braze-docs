@@ -22,7 +22,7 @@ guide_featured_list:
     image: /assets/img/braze_icons/data.svg
   - name: Data Collection Best Practices
     link: /docs/user_guide/data_and_analytics/user_data_collection/best_practices/
-    fa_icon: fa fa-thumbs-up
+    image: /assets/img/braze_icons/thumbs-up.svg
   - name: User Import
     link: /docs/user_guide/data_and_analytics/user_data_collection/user_import/
     image: /assets/img/braze_icons/users-01.svg

@@ -16,10 +16,10 @@ guide_featured_list:
   image: /assets/img/braze_icons/shopify.svg
 - name: Getting Started with Shopify
   link: /docs/getting_started_shopify/
-  fa_icon: fa fa-shopping-cart
+  image: /assets/img/braze_icons/shopping-cart-03.svg
 - name: Setting Up Shopify
   link: /docs/setting_up_shopify/
-  fa_icon: fa fa-shopping-cart
+  image: /assets/img/braze_icons/shopping-cart-03.svg
 - name: Shopify Data in Braze
   link: /docs/shopify_data/
   image: /assets/img/braze_icons/settings-01.svg
