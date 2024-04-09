@@ -19,7 +19,7 @@ guide_featured_list:
   image: /assets/img/braze_icons/swift.svg
 - name: Carthage
   link: /docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/installation_methods/carthage_integration/
-  image: /assets/img/carthage.jpeg
+  image: /assets/img/carthage.png
 - name: Manual (Manuel)
   link: /docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/installation_methods/manual_integration_options/
   fa_icon: fas fa-toolbox

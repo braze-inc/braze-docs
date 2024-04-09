@@ -58,10 +58,10 @@ guide_menu_title: "Section 2"
 guide_menu_list:
   - name: Example 4
     link: /docs/home/templates/api_glossary/
-    image: /assets/img/push_icon.png
+    image: /assets/img/braze_icons/channel-mobile-push.svg
   - name: Example 5
     link: /docs/home/templates/glossary_test_page/
-    image: /assets/img/webhook_icon.png
+    image: /assets/img/braze_icons/channel-webhook.svg
   - name: Example 6
     link: /docs/home/templates/partner_page_template_video/
     image: /assets/img/server.png
