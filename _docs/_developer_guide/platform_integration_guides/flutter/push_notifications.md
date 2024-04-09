@@ -18,13 +18,7 @@ channel: push
 {% tab Android %}
 ### Step 1.1: Register for push
 
-Register for using Google’s Firebase Cloud Messaging (FCM) API. For a full walkthrough, refer to the following steps from the [Native Android push integration guide]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/integration/standard_integration/):
-
-1. [Add Firebase to your project]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/integration/standard_integration/#step-1-add-firebase-to-your-project).
-2. [Add Cloud Messaging to your dependencies]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/integration/standard_integration/#step-2-add-cloud-messaging-to-your-dependencies).
-3. [Create a service account]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/integration/standard_integration/#step-3-create-a-service-account).
-4. [Generate JSON credentials]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/integration/standard_integration/#step-4-generate-json-credentials).
-5. [Upload your JSON credentials to Braze]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/integration/standard_integration/#step-5-upload-your-json-credentials-to-braze).
+Register for using Google’s Firebase Cloud Messaging (FCM) API. For a full walkthrough, follow steps 1 - 6 from the [Native Android push integration guide]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/integration/standard_integration/). Then, optionally follow the instructions in the rest of the page for any parts relevant to your application.
 
 ### Step 1.2: Add your Google Sender ID
 
@@ -60,10 +54,7 @@ Generate an Apple Push Notification service (APNs) certificate and uploaded it t
 
 ### Step 1.2: Add push notification support to your app
 
-Complete one of the following native integration guides:
-
-- [Swift only](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/b1-standard-push-notifications/)
-- [Swift or Objective-C]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/integration/?tab=objective-c#automatic-push-integration)
+Follow the [native iOS integration guide]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/integration/?tab=objective-c#automatic-push-integration).
 
 {% endtab %}
 {% endtabs %}
