@@ -8,7 +8,7 @@ page_order: 4.8
 
 # Use cases
 
-> The Braze REST API provides a wide range of endpoints designed to help manage and optimize your customer engagement strategy. In this article, we’ll explore several use cases for each endpoint category: catalogs, email lists and addresses, export, messages, preference center, SMS, subscription groups, templates, and user data.<br><br>Each section introduces a scenario with a step-by-step guide, code sample, and expected outcome. By the end of this guide, you’ll better understand how to use the Braze REST API to enhance your customer engagement efforts.
+> The Braze REST API provides a wide range of endpoints designed to help manage and optimize your customer engagement strategy. In this article, we’ll explore several use cases for each endpoint collection: catalogs, email lists and addresses, export, messages, preference center, SMS, subscription groups, templates, and user data.<br><br>Each section introduces a scenario with a step-by-step guide, code sample, and expected outcome. By the end of this article, you’ll better understand how to use the Braze REST API to enhance your customer engagement efforts.
 
 ## Braze REST API collection
 
@@ -71,35 +71,39 @@ Siege Valley Health is a hospital system that includes 10 operating hospitals an
 Let’s dive into how we can accomplish these two tasks using a combination of endpoints rather than filtering through the Braze dashboard.
 
 {% details Here’s the response that the Seige Valley Health marketing team would receive. %}
-
 ```json
 Content-Type: application/json
 Authorization: Bearer YOUR-REST-API-KEY
 {
   "canvases" : [
   	{
-  		"id" : (string) the Canvas API identifier,
-  		"last_edited": (ISO 8601 string) the last edited time for the message,
-  		"name" : (string) the Canvas name,
-  		"tags" : (array) the tag names associated with the Canvas formatted as strings,
+  		"id": "canvas_identifier",
+  		"last_edited": "2020-07-10 15:00:00.000",
+  		"name": "PatientReminder_FluShot_2020",
+  		"tags": {
+        "flu_shots", "patienthealth", "2020"
+      },
   	},
   	{
-  		"id" : (string) the Canvas API identifier,
-  		"last_edited": (ISO 8601 string) the last edited time for the message,
-  		"name" : (string) the Canvas name,
-  		"tags" : (array) the tag names associated with the Canvas formatted as strings,
+  		"id": "canvas_identifier",
+  		"last_edited": "2020-07-17 15:00:00.000",
+  		"name": "PatientReminder2_FluShot_2020",
+  		"tags": {
+        "flu_shots", "patienthealth", "reminder", "2020"
+      },
   	},
     ... (more Canvases)
   ],
   "message": 'success'
 }
 ```
-
 {% enddetails %}
 
 Let’s move on to the next task of viewing the analytics summary for the first Canvas from Seige Valley Health’s list of Canvases.
 
 ## Checking upcoming scheduled campaigns and Canvases
+
+
 
 ## Viewing an older preference center
 
@@ -130,7 +134,6 @@ After sending this payload successfully, we’ll see this response that confirms
   "message": "success"
 }
 ```
-
 
 ## Viewing a user's subscription groups
 
