@@ -22,7 +22,7 @@ guide_featured_list:
   image: /assets/img/braze_icons/message-check-circle.svg
 - name: Creative Details
   link: /docs/user_guide/message_building_by_channel/content_cards/creative_details/
-  /assets/img/braze_icons/brush-02.svg
+  image: /assets/img/braze_icons/brush-02.svg
 - name: Testing
   link: /docs/user_guide/message_building_by_channel/content_cards/testing/
   image: /assets/img/braze_icons/beaker-02.svg

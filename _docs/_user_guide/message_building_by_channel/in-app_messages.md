@@ -23,7 +23,7 @@ guide_featured_list:
   image: /assets/img/braze_icons/phone-02.svg
 - name: "Creative Details"
   link: /docs/user_guide/message_building_by_channel/in-app_messages/creative_details/
-  /assets/img/braze_icons/brush-02.svg
+  image: /assets/img/braze_icons/brush-02.svg
 
 guide_menu_title: "More articles"
 guide_menu_list:

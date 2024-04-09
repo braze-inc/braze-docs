@@ -14,7 +14,7 @@ guide_featured_title: "Section articles"
 guide_featured_list:
 - name: Creating a Drag-and-Drop Email
   link: /docs/dnd/overview/
-  /assets/img/braze_icons/brush-02.svg
+  image: /assets/img/braze_icons/brush-02.svg
 - name: Creating an Email Template
   link: /docs/dnd/email_template/
   image: /assets/img/braze_icons/table.svg
