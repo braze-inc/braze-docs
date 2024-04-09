@@ -1,21 +1,20 @@
 ---
-nav_title: visionOS
-article_title: visionOS
+nav_title: visionOS support
+article_title: visionOS support
 page_order: 7.2
 platform: 
   - iOS
 description: "This article covers the features supported on visionOS."
 ---
 
-# visionOS
+# visionOS support
 
-With the release of the Apple Vision Pro, Apple has introduced a new platform called [visionOS](https://developer.apple.com/visionos/). Starting with the Braze Swift SDK [8.0.0](https://github.com/braze-inc/braze-swift-sdk/blob/main/CHANGELOG.md#800), visionOS is supported as a first-class platform.
+> Starting with [Braze Swift SDK 8.0.0](https://github.com/braze-inc/braze-swift-sdk/blob/main/CHANGELOG.md#800), you can leverage Braze with [visionOS](https://developer.apple.com/visionos/), Apple's spacial-computing platform for the Apple Vision Pro. For a sample visionOS app using Braze, see [Sample Apps]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/sample_apps/).
 
-> Please refer to our [sample apps]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/sample_apps/) for working examples of visionOS integration.
+## Fully supported features
 
-## Supported Features
+Most features available on iOS are also available on visionOS, including:
 
-Most of the features available on iOS are supported on visionOS. This includes:
 - Analytics (sessions, custom events, purchases, etc.)
 - In-App Messaging (data models and UI)
 - Content Cards (data models and UI)
@@ -23,20 +22,19 @@ Most of the features available on iOS are supported on visionOS. This includes:
 - Feature Flags
 - Location Analytics
 
-## Partially Supported Features
+## Partially supported features
 
-The following features are partially supported on visionOS:
-- Rich Push Notifications
+Some features are only partially supported on visionOS, but Apple is likely to address these limitations in the future:
+
+- Rich Push Notifications:
   - Images display as expected
   - GIFs and videos display the preview thumbnail, but it is not currently possible to play the media
   - Audio playback is not supported
-- Push Stories
+- Push Stories:
   - The _Next_ button to navigate between Push Story pages is not working as intended
   - Scrolling and clicking on the Push Story page works as expected
 
-We expect that future visionOS updates will address these limitations.
+## Unsupported features
 
-## Unsupported Features
-
-- Currently, Geofences Monitoring is not supported. The Core Location APIs for region monitoring are not made available by Apple on visionOS.
-- Live Activities are not supported, as ActivityKit is only available on iOS and iPadOS.
+- Geofences Monitoring is not supported. Apple has not made the Core Location APIs for region monitoring available on visionOS.
+- Live Activities are not supported. Currently, ActivityKit is only available on iOS and iPadOS.
