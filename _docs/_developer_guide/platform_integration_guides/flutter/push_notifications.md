@@ -42,32 +42,15 @@ Next, open your project's `app.json` file and set your `firebaseCloudMessagingSe
 "firebaseCloudMessagingSenderId": "693679403398"
 ```
 
-### Step 1.3: Add the path to your Google Services JSON
+### Step 1.3: Update your `braze.xml`
 
-In your project's `app.json` file, add the path to your `google-services.json` file. This file is required when setting `enableFirebaseCloudMessaging: true` in your configuration.
+Add the following lines to your `braze.xml` file, replacing `FIREBASE_SENDER_ID` with your own ID:
 
-```json
-{
-  "expo": {
-    "android": {
-      "googleServicesFile": "PATH_TO_GOOGLE_SERVICES"
-    },
-    "plugins": [
-      [
-        "@braze/expo-plugin",
-        {
-          "androidApiKey": "YOUR-ANDROID-API-KEY",
-          "iosApiKey": "YOUR-IOS-API-KEY",
-          "enableBrazeIosPush": true,
-          "enableFirebaseCloudMessaging": true,
-          "firebaseCloudMessagingSenderId": "YOUR-FCM-SENDER-ID",
-          "androidHandlePushDeepLinksAutomatically": true
-        }
-      ],
-    ]
-  }
-}
+```xml
+<bool translatable="false" name="com_braze_firebase_cloud_messaging_registration_enabled">true</bool>
+<string translatable="false" name="com_braze_firebase_cloud_messaging_sender_id">FIREBASE_SENDER_ID</string>
 ```
+
 {% endtab %}
 
 {% tab iOS %}
@@ -116,18 +99,18 @@ For a full list of push notification fields, refer to the table below:
 
 | Field Name         | Type      | Description |
 | ------------------ | --------- | ----------- |
-| `payload_type`     | String    | Specifies the notification payload type. The two values that are sent from the Braze Flutter SDK are `push_opened` and `push_received`.  Only `push_opened` events are supported on iOS. |
+| `payloadType`     | String    | Specifies the notification payload type. The two values that are sent from the Braze Flutter SDK are `push_opened` and `push_received`.  Only `push_opened` events are supported on iOS. |
 | `url`              | String    | Specifies the URL that was opened by the notification. |
-| `use_webview`      | Boolean   | If `true`, URL will open in-app in a modal webview. If `false`, the URL will open in the device browser. |
+| `useWebview`      | Boolean   | If `true`, URL will open in-app in a modal webview. If `false`, the URL will open in the device browser. |
 | `title`            | String    | Represents the title of the notification. |
 | `body`             | String    | Represents the body or content text of the notification. |
-| `summary_text`     | String    | Represents the summary text of the notification. This is mapped from `subtitle` on iOS. |
-| `badge_count`      | Number   | Represents the badge count of the notification. |
+| `summaryText`     | String    | Represents the summary text of the notification. This is mapped from `subtitle` on iOS. |
+| `badgeCount`      | Number   | Represents the badge count of the notification. |
 | `timestamp`        | Number | Represents the time at which the payload was received by the application. |
-| `is_silent`        | Boolean   | If `true`, the payload is received silently. For details on sending Android silent push notifications, refer to [Silent push notifications on Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/silent_push_notifications). For details on sending iOS silent push notifications, refer to [Silent push notifications on iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/silent_push_notifications/). |
-| `is_braze_internal`| Boolean   | This will be `true` if a notification payload was sent for an internal SDK feature, such as geofences sync, Feature Flag sync, or uninstall tracking. The payload is received silently for the user. |
-| `image_url`        | String    | Specifies the URL associated with the notification image. |
-| `braze_properties` | Object    | Represents Braze properties associated with the campaign (key-value pairs). |
+| `isSilent`        | Boolean   | If `true`, the payload is received silently. For details on sending Android silent push notifications, refer to [Silent push notifications on Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/silent_push_notifications). For details on sending iOS silent push notifications, refer to [Silent push notifications on iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/silent_push_notifications/). |
+| `isBrazeInternal`| Boolean   | This will be `true` if a notification payload was sent for an internal SDK feature, such as geofences sync, Feature Flag sync, or uninstall tracking. The payload is received silently for the user. |
+| `imageUrl`        | String    | Specifies the URL associated with the notification image. |
+| `brazeProperties` | Object    | Represents Braze properties associated with the campaign (key-value pairs). |
 | `ios`              | Object    | Represents iOS-specific fields. |
 | `android`          | Object    | Represents Android-specific fields. |
 {: .reset-td-br-1 .reset-td-br-2}
