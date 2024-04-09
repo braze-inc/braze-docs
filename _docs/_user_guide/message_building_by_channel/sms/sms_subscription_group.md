@@ -34,9 +34,9 @@ There are two subscription states for SMS users: `subscribed` and `unsubscribed`
 If you are using the [older navigation]({{site.baseurl}}/navigation), this page is called **User Import** and can be found under **Users**.
 {% endalert %}
 
-When a phone number is updated on a user profile, the new phone number inherits the subscription group status of the user. If the phone number is updated to a number that already exists in Braze, the subscription status of that existing phone number is inherited.
+#### Updated phone numbers and subscription groups
 
-For example, if User A has a phone number that is subscribed to several subscription groups and that phone number then gets added to User B, User B will be subscribed to the same subscription groups. To prevent a user from inheriting the existing subscriptions, you can reset the subscription groups of the old number via REST API whenever a user changes their number. If multiple users share this phone number, they will all be unsubscribed.
+When a phone number is updated on a user profile, the new phone number inherits the subscription group status of the old number. 
 
 ### How to check a user's SMS subscription group
 

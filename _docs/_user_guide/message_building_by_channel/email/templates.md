@@ -19,10 +19,10 @@ guide_featured_list:
   fa_icon: fas fa-upload
 - name: Link Aliasing
   link: /docs/user_guide/message_building_by_channel/email/templates/link_aliasing/
-  fa_icon: fas fa-link
+  image: /assets/img/braze_icons/link-03.svg
 - name: Link Templates
   link: /docs/user_guide/message_building_by_channel/email/templates/link_template/
-  fa_icon: fas fa-link
+  image: /assets/img/braze_icons/link-03.svg
 - name: Frequently Asked Questions
   link: /docs/user_guide/message_building_by_channel/email/templates/faq/
   fa_icon: fas fa-question

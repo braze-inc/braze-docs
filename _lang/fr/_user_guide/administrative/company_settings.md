@@ -19,7 +19,7 @@ guide_featured_list:
   fa_icon: far fa-dot-circle
 - name: Paramètres de sécurité
   link: /docs/user_guide/administrative/company_settings/security_settings/
-  fa_icon: fas fa-shield-alt
+  image: /assets/img/braze_icons/shield-01.svg
 ---
 <br>
 

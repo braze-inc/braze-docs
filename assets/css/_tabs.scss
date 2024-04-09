@@ -62,7 +62,7 @@
           border-bottom-color: transparent ;
           text-transform: uppercase;
           &:hover {
-            color: $blue-scooter;
+            color: $braze-purple;
             background-color: $white;
           }
         }
@@ -80,11 +80,11 @@
           border-bottom-color: transparent ;
           cursor: default;
           a {
-            color: $blue-scooter;
+            color: $braze-purple;
             border-bottom-width: 2px;
             border-bottom-color: transparent ;
             &:hover {
-              color: $blue-scooter;
+              color: $braze-purple;
               background-color: $white;
             }
           }
@@ -94,7 +94,7 @@
     ul.ab-sub_nav-sub_tabs {
       > li {
         &.sub_active {
-          color: $blue-scooter;
+          color: $braze-purple;
           background-color: $white ;
           border: 1px solid $grey-ghost ;
           border-radius: 4px 4px 0 0;
@@ -103,11 +103,11 @@
           border-bottom-color: transparent ;
           cursor: default;
           a {
-            color: $blue-scooter;
+            color: $braze-purple;
             border-bottom-width: 2px;
             border-bottom-color: transparent ;
             &:hover {
-              color: $blue-scooter;
+              color: $braze-purple;
               background-color: $white;
             }
           }

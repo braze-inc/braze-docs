@@ -9,7 +9,7 @@ $nav_toggle_up: 'f0d8'; //"f102"; /* 102 Double Arrow Up */
 $nav_toggle_down: 'f0d7'; //"f103"; /* 103 Double Arrow Down */
 
 $nav_margin_left: 20px;
-$nav_active_color: $blue-scooter;
+$nav_active_color: $braze-purple;
 $nav_background-color: $grey-athens;
 $nav_font_size: 12px;
 $nav_transition_time: 0.35s;
@@ -63,8 +63,8 @@ $nav_bottom_height: 60px;
     top: $header_height;
     padding: 0px;
 
-    font-size: 13px;
-    line-height: 18px;
+    font-size: 14px;
+    line-height: 20px;
     // top: $header_height;
     height: calc(100vh - #{$header_height + $banner_height} );
 
@@ -113,7 +113,7 @@ $nav_bottom_height: 60px;
   padding-left: 0px;
   padding-right: 0px;
 
-  font-size: 13px;
+  font-size: 14px;
   line-height: 18px;
   .showall {
     display: block;
@@ -351,7 +351,7 @@ $nav_bottom_height: 60px;
       cursor: pointer;
     }
     .mark, mark {
-      background-color: $blue-scooter;
+      background-color: $braze-purple;
     }
   }
 

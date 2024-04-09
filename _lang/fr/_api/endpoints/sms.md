@@ -18,5 +18,5 @@ guide_featured_list:
     fa_icon: fas fa-clipboard-list
   - name: "POST : Supprimer les numéros de téléphone non valides"
     link: /docs/api/endpoints/sms/post_remove_invalid_numbers/
-    fa_icon: fas fa-phone-volume
+    image: /assets/img/braze_icons/phone.svg
 ---

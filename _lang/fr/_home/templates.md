@@ -8,10 +8,10 @@ guide_featured_title: "Modèles de pages d’accueil"
 guide_featured_list:
   - name: "Page d’accueil pour une seule section avec icônes d’immobilisations"
     link: /docs/home/templates/landing_single/
-    fa_icon: fas fa-th-large
+    image: /assets/img/braze_icons/layout-grid-01.svg
   - name: Page d’accueil pour une seule section avec images
     link: /docs/home/templates/landing_images/
-    fa_icon: fas fa-th-large
+    image: /assets/img/braze_icons/layout-grid-01.svg
   - name: "Page d’accueil multisection avec icônes d’immobilisations"
     link: /docs/home/templates/landing_multiple/
     fa_icon: fas fa-th
@@ -23,10 +23,10 @@ guide_menu_title: "Modèles de contenu"
 guide_menu_list:
   - name: Glossaire des codes ou API
     link: /docs/home/templates/api_glossary/
-    fa_icon: fas fa-book
+    image: /assets/img/braze_icons/book-closed.svg
   - name: Glossaire général
     link: /docs/home/templates/glossary_test_page/
-    fa_icon: fas fa-book
+    image: /assets/img/braze_icons/book-closed.svg
   - name: Page Partenaire avec vidéo
     link: /docs/home/templates/partner_page_template_video/
     fa_icon: fas fa-handshake
@@ -50,10 +50,10 @@ guide_menu_list:
     fa_icon: fas fa-chalkboard-teacher
   - name: Cas d’utilisation avec vidéo
     link: /docs/home/templates/use_case_video/
-    fa_icon: fas fa-user-edit
+    image: /assets/img/braze_icons/user-edit.svg
   - name: Cas d’utilisation
     link: /docs/home/templates/use_case/
-    fa_icon: fas fa-user-edit
+    image: /assets/img/braze_icons/user-edit.svg
 
 noindex: true
 

@@ -15,22 +15,22 @@ guide_featured_list:
     fa_icon: fas fa-sticky-note
   - name: Intégration
     link: /docs/user_guide/onboarding_with_braze/integration/
-    fa_icon: fas fa-server
+    image: /assets/img/braze_icons/server-01.svg
   - name: Mode d’emploi de Braze
     link: /docs/user_guide/onboarding_with_braze/learning_to_use_braze/
-    fa_icon: fas fa-user-graduate
+    image: /assets/img/braze_icons/graduation-hat-01.svg
   - name: Présentation du SDK pour les marketeurs
     link: /docs/user_guide/onboarding_with_braze/web_sdk/
-    fa_icon: fas fa-globe
+    image: /assets/img/braze_icons/globe-02.svg
   - name: Points de données
     link: /docs/user_guide/onboarding_with_braze/data_points/
     fa_icon: fa fa-asterisk
   - name: Abonnement et utilisation
     link: /docs/user_guide/onboarding_with_braze/subscription_and_usage/
-    fa_icon: fa fa-users
+    image: /assets/img/braze_icons/users-01.svg
   - name: Configuration d’e-mail
     link: /docs/user_guide/onboarding_with_braze/email_setup/
-    fa_icon: fas fa-envelope
+    image: /assets/img/braze_icons/mail-01.svg
   - name: Configuration de SMS
     link: /docs/user_guide/onboarding_with_braze/sms_setup/
     fa_icon: fas fa-mobile

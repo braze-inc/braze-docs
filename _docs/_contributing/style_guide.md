@@ -2,7 +2,7 @@
 nav_title: Style Guides
 article: Braze Docs Style Guide
 description: "The Braze Docs Style Guide."
-page_order: 7
+page_order: 6
 noindex: true
 ---
 

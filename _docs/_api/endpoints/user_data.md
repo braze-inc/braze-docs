@@ -21,29 +21,29 @@ guide_featured_title: "User Data Endpoints"
 guide_featured_list:
   - name: "POST: Create a New User Alias"
     link: /docs/api/endpoints/user_data/post_user_alias/
-    fa_icon: fas fa-user
+    image: /assets/img/braze_icons/users-01.svg
   - name: "POST: Update a User Alias"
     link: /docs/api/endpoints/user_data/post_users_alias_update/
-    fa_icon: fas fa-user-edit
+    image: /assets/img/braze_icons/user-edit.svg
   - name: "POST: Delete User Data"
     link: /docs/api/endpoints/user_data/post_user_delete/
-    fa_icon: fas fa-user-minus
+    image: /assets/img/braze_icons/user-minus-01.svg
   - name: "POST: Identify a User"
     link: /docs/api/endpoints/user_data/post_user_identify/
-    fa_icon: fas fa-user-circle
+    image: /assets/img/braze_icons/user-circle.svg
   - name: "POST: Track Users"
     link: /docs/api/endpoints/user_data/post_user_track/
-    fa_icon: fas fa-database
+    image: /assets/img/braze_icons/database-01.svg
   - name: "POST: Merge Users"
     link: /docs/api/endpoints/user_data/post_users_merge/
-    fa_icon: fas fa-users
+    image: /assets/img/braze_icons/users-01.svg
 
 guide_menu_title: "External ID migration endpoints"
 guide_menu_list:
   - name: "POST: Rename External IDs"
     link: /docs/api/endpoints/user_data/external_id_migration/post_external_ids_rename/
-    fa_icon: fas fa-user
+    image: /assets/img/braze_icons/users-01.svg
   - name: "POST: Remove Deprecated External IDs"
     link: /docs/api/endpoints/user_data/external_id_migration/post_external_ids_remove/
-    fa_icon: fas fa-user-minus
+    image: /assets/img/braze_icons/user-minus-01.svg
 ---

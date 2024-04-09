@@ -13,13 +13,13 @@ guide_featured_list:
     image: /assets/img/android.png
   - name: SDK iOS (Swift)
     link: /docs/developer_guide/platform_integration_guides/ios/changelog/swift_changelog/
-    fa_icon: fab fa-apple
+    image: /assets/img/braze_icons/apple.svg
   - name: SDK iOS (Objective-C)
     link: /docs/developer_guide/platform_integration_guides/ios/changelog/objc_changelog/
-    fa_icon: fab fa-apple
+    image: /assets/img/braze_icons/apple.svg
   - name: SDK Web
     link: /docs/developer_guide/platform_integration_guides/web/changelog/
-    fa_icon: fas fa-globe
+    image: /assets/img/braze_icons/globe-02.svg
   - name: SDK Cordova
     link: /docs/developer_guide/platform_integration_guides/cordova/changelog/
     image: /assets/img/cordova.png
@@ -46,13 +46,13 @@ guide_menu_list:
     image: /assets/img/android.png
   - name: SDK iOS (Swift)
     link: https://github.com/braze-inc/braze-swift-sdk/blob/main/CHANGELOG.md
-    fa_icon: fab fa-apple
+    image: /assets/img/braze_icons/apple.svg
   - name: SDK iOS (Objective-C)
     link: https://github.com/Appboy/appboy-ios-sdk/blob/master/CHANGELOG.md
-    fa_icon: fab fa-apple
+    image: /assets/img/braze_icons/apple.svg
   - name: SDK Web
     link: https://github.com/braze-inc/braze-web-sdk/blob/master/CHANGELOG.md
-    fa_icon: fas fa-globe
+    image: /assets/img/braze_icons/globe-02.svg
   - name: SDK Cordova
     link: https://github.com/Appboy/appboy-cordova-sdk/blob/master/CHANGELOG.md
     image: /assets/img/cordova.png

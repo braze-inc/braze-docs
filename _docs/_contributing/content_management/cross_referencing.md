@@ -20,9 +20,6 @@ When creating a cross-reference, you can either use the in-line method or refere
 {% tab in-line %}
 Open the relevant Markdown file, then create your in-line link.
 
-{% subtabs %}
-{% subtab Markdown %}
-
 {% raw %}
 ```markdown
 [LINK_TEXT]({{site.baseurl}}/SHORT_URL)
@@ -44,34 +41,6 @@ Your in-line link should be similar to the following:
 Before continuing, [create your SSH token]({{site.baseurl}}/docs/developer_guide/platform_wide/sdk_authentication).
 ```
 {% endraw %}
-{% endsubtab %}
-
-{% subtab HTML %}
-
-{% raw %}
-```markdown
-<a href='[SHORT_URL]'>[LINK_TEXT]</a>
-```
-{% endraw %}
-
-Replace the following:
-
-| Placeholder | Description                                        |
-|-------------|----------------------------------------------------|
-| `LINK_TEXT` | The page title or related action.                  |
-| `SHORT_URL` | The page URL with `https://www.braze.com` removed. |
-{: .reset-td-br-1 .reset-td-br-2}
-
-Your in-line link should be similar to the following:
-
-{% raw %}
-```markdown
-To learn about the different custom attribute data types you can use to segment users, view <a href="/docs/user_guide/data_and_analytics/custom_data/custom_attributes/#custom-attribute-data-types">Custom attribute data types</a>.
-```
-{% endraw %}
-{% endsubtab %}
-{% endsubtabs %}
-
 {% endtab %}
 
 {% tab reference-style %}

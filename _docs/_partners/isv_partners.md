@@ -11,13 +11,13 @@ guide_featured_title: "Partner Documentation"
 guide_featured_list:
 - name: API Integration
   link: /docs/partners/isv_partners/api_partner
-  fa_icon: fa-regular fa-circle-user
+  image: /assets/img/braze_icons/user-circle.svg
 - name: Cohort Import Integration
   link: /docs/partners/isv_partners/cohort_import
-  fa_icon: fas fa-users
+  image: /assets/img/braze_icons/users-01.svg
 - name: Currents Integration
   link: /docs/partners/isv_partners/currents_integration
-  fa_icon: fas fa-swimmer
+  image: /assets/img/braze_icons/waves.svg
 - name: Snowflake Data Sharing
   link: /docs/partners/isv_partners/snowflake_datasharing
   fa_icon: fa-solid fa-snowflake
@@ -26,7 +26,7 @@ guide_featured_list:
   fa_icon: fa-solid fa-database
 - name: Best Practices
   link: /docs/partners/isv_partners/best_practices
-  fa_icon: fa-solid fa-thumbs-up
+  image: /assets/img/braze_icons/thumbs-up.svg
 
 ---
 <br><br>

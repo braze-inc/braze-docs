@@ -19,22 +19,22 @@ guide_featured_list:
   fa_icon: fas fa-exclamation
 - name: "Validation des e-mails"
   link: /docs/user_guide/onboarding_with_braze/email_setup/email_validation/
-  fa_icon: fas fa-check-square
+  image: /assets/img/braze_icons/check-square-broken.svg
 - name: "Authentification par e-mail"
   link: /docs/user_guide/onboarding_with_braze/email_setup/authentication/
-  fa_icon: fas fa-user-shield
+  image: /assets/img/braze_icons/user-square.svg
 - name: "Importation de votre liste d’e-mails"
   link: /docs/user_guide/onboarding_with_braze/email_setup/import_your_email_list/
-  fa_icon: fas fa-list
+  image: /assets/img/braze_icons/list.svg
 - name: "Aperçu SSL"
   link: /docs/user_guide/onboarding_with_braze/email_setup/ssl/
-  fa_icon: fas fa-mouse-pointer
+  image: /assets/img/braze_icons/navigation-pointer-01.svg
 - name: "Consentement et collecte d’adresses"
   link: /docs/user_guide/onboarding_with_braze/email_setup/consent_and_address_collection/
   fa_icon: fas fa-address-book
 - name: "Écueils de délivrabilité et pièges à spam"
   link: /docs/user_guide/onboarding_with_braze/email_setup/deliverability_pitfalls_and_spam_traps/
-  fa_icon: fas fa-exclamation-triangle
+  image: /assets/img/braze_icons/alert-triangle.svg
 ---
 
 ## Conditions

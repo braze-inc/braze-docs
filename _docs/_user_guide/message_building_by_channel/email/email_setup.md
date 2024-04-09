@@ -19,22 +19,22 @@ guide_featured_list:
   fa_icon: fas fa-exclamation
 - name: "Email Validation"
   link: /docs/user_guide/message_building_by_channel/email/email_setup/email_validation/
-  fa_icon: fas fa-check-square
+  image: /assets/img/braze_icons/check-square-broken.svg
 - name: "Email Authentication"
   link: /docs/user_guide/message_building_by_channel/email/email_setup/authentication/
-  fa_icon: fas fa-user-shield
+  image: /assets/img/braze_icons/user-square.svg
 - name: "Importing Your Email List"
   link: /docs/user_guide/message_building_by_channel/email/email_setup/import_your_email_list/
-  fa_icon: fas fa-list
+  image: /assets/img/braze_icons/list.svg
 - name: "SSL Overview"
   link: /docs/user_guide/message_building_by_channel/email/email_setup/ssl/
-  fa_icon: fas fa-mouse-pointer
+  image: /assets/img/braze_icons/navigation-pointer-01.svg
 - name: "Consent and Address Collection"
   link: /docs/user_guide/message_building_by_channel/email/email_setup/consent_and_address_collection/
   fa_icon: fas fa-address-book
 - name: "Deliverability Pitfalls and Spam Traps"
   link: /docs/user_guide/message_building_by_channel/email/email_setup/deliverability_pitfalls_and_spam_traps/
-  fa_icon: fas fa-exclamation-triangle
+  image: /assets/img/braze_icons/alert-triangle.svg
 ---
 
 ## Requirements

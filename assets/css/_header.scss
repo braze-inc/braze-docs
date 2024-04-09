@@ -128,7 +128,7 @@ $header_transition_time: 0.25s;
   }
 
   font-size: $header_nav_font_size;
-  background-color: $navy-bay;
+  background-color: $braze-purple-dark;
 
   #nav_logo {
     display: inline-block;
@@ -237,7 +237,7 @@ $header_transition_time: 0.25s;
           border-color: transparent;
           &:hover {
             border-bottom-width: 2px;
-            border-color: $blue-scooter;
+            border-color: $braze-pink;
           }
           transition: all ease $header_transition_time;
           -webkit-transition:  all ease $header_transition_time;
@@ -270,7 +270,7 @@ $header_transition_time: 0.25s;
             color: $white;
             border-bottom-width: 2px;
             @media (min-width:  $window-medium-px) {
-              border-color: $blue-scooter !important;
+              border-color: $braze-pink !important;
             }
           }
         }
@@ -316,7 +316,7 @@ $header_transition_time: 0.25s;
         display: inline;
         &:hover {
           border-bottom-width: 2px;
-          border-color: $blue-scooter;
+          border-color: $braze-pink;
         }
       }
     }
@@ -344,7 +344,7 @@ $header_transition_time: 0.25s;
       #nav_responsive_dropdown {
         div {
           border-bottom-width: 2px;
-          border-color: $blue-scooter;
+          border-color: $braze-pink;
         }
         //padding-right: 10px;
         margin-left: 10px;
@@ -390,7 +390,7 @@ $header_transition_time: 0.25s;
         &.dropdown-menu  {
           position: absolute;
           margin: 0;
-          background-color: $navy-bay;
+          background-color: $braze-purple-dark;
           min-width: 15rem;
           // border-top-left-radius: 0px;
           // border-top-right-radius: 0px;
@@ -415,7 +415,7 @@ $header_transition_time: 0.25s;
               background-color: transparent;
               div {
                 border-bottom-width: 2px;
-                border-color: $blue-scooter;
+                border-color: $braze-pink;
               }
             }
             div {
@@ -424,7 +424,7 @@ $header_transition_time: 0.25s;
               display: inline;
               &:hover {
                 border-bottom-width: 2px;
-                border-color: $blue-scooter;
+                border-color: $braze-pink;
               }
             }
           }

@@ -14,11 +14,11 @@ guide_featured_list:
   nav_link: android
 - name: iOS
   link: /docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/overview/
-  fa_icon: fab fa-apple
+  image: /assets/img/braze_icons/apple.svg
   nav_link : iOS
 - name: Web
   link: /docs/developer_guide/platform_integration_guides/web/initial_sdk_setup/
-  fa_icon: fas fa-globe
+  image: /assets/img/braze_icons/globe-02.svg
   nav_link : Web
 
 guide_menu_title: "Toutes les intégrations"

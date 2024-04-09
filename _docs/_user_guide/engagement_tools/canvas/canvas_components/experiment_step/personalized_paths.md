@@ -65,7 +65,7 @@ If Personalized Paths was turned on, your analytics view is separated into two t
 
 The **Initial Experiment** tab shows the metrics for each path during the experiment window. You can see a summary of how all the paths performed for the specified conversion events.
 
-![Results of an initial experiment sent to determine the best performing path for each user. A table shows the performance of each path based on various metrics for the target channel.]({% image_buster /assets/img/experiment_step/experiment_personalized_analytics_tab1.png %})
+![Results of an initial test sent to determine the best performing variant for each user. A table shows the performance of each variant based on various metrics for the target channel.]({% image_buster /assets/img/experiment_step/experiment_personalized_analytics_tab1.png %})
 
 By default, the test looks for associations between user’s custom events and their path preferences. This analysis detects whether custom events increase or decrease likelihood of responding to a particular path. These relationships are then used to determine which users gets assigned which path after the experiment window passes.
 
@@ -117,6 +117,10 @@ The three cards on this page show your projected lift, overall results, and the 
 - **Projected results:** The projected results of the second send based on your chosen optimization metric if you had sent just the Winning Variant instead.
 
 ![Personalized Paths tab for a Canvas. The cards show the Projected Lift, Overall Conversions (with Personalized Paths), and Projected Unique Opens (with Winning Path).]({% image_buster /assets/img/experiment_step/experiment_personalized_analytics_tab2.png %})
+
+The table on this page shows the metrics for each variant from the Personalized Variant send. Your **Audience %** adds up to the percentage of the target segment you reserved for the Personalized Variant group.
+
+![]({% image_buster /assets/img_archive/ab_analytics_pv_2.png %})
 
 {% endtab %}
 {% endtabs %}

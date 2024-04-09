@@ -2,7 +2,7 @@
 nav_title: Git and GitHub
 article: Git and GitHub
 description: "Learn how to use Git and GitHub, so you can contribute to Braze Docs."
-page_order: 6
+page_order: 5
 noindex: true
 ---
 

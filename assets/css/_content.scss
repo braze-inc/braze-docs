@@ -22,7 +22,7 @@
 
   strong, b {
     font-weight: normal;
-    font-family: $braze-black;
+    font-family: $braze-medium;
   }
 
   .fa-external-link-alt {
@@ -86,157 +86,149 @@
         border-width: 0;
         border-style: solid;
       }
-
-    .gist-it-gist {
-      .prettyprint {
-        font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-        font-size: 11.5px;
-        font-weight: 700;
-        line-height: 23px;
-        color: $grey-dust;
-      }
-    }
-    .gist-meta {
-        a  {
-          color: $black-shark !important;
+      .gist-it-gist {
+        .prettyprint {
+          font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+          font-size: 11.5px;
+          font-weight: 700;
+          line-height: 23px;
+          color: $grey-dust;
         }
-    }
-    a {
-      font-family: $braze-black;
-      display: inline;
-      color: $black-shark;
-      font-weight: 700;
-      @media print {
+      }
+      .gist-meta {
+          a  {
+            color: $black-shark !important;
+          }
+      }
+      a {
+        font-family: $braze-medium;
+        display: inline;
+        color: $black-shark;
         font-weight: normal;
-      }
-      border-bottom-width: 2px;
-      border-color: $braze-link-color;
-      text-decoration: none;
-      transition: all ease $content_transition_time;
-      -webkit-transition:  all ease $content_transition_time;
-      -moz-transition:  all ease $content_transition_time;
-      &:hover {
-        background-color: $braze-link-color;
+        @media print {
+          font-weight: normal;
+        }
+        border-bottom-width: 2px;
+        border-color: $braze-link-color;
+        text-decoration: none;
+        transition: all ease $content_transition_time;
+        -webkit-transition:  all ease $content_transition_time;
+        -moz-transition:  all ease $content_transition_time;
+        &:hover {
+          background-color: transparent !important;
+          border-color: $black;
+          img {
+            background-color: transparent;
+          }
+        }
+
         img {
-          background-color: transparent;
+          vertical-align: middle;
         }
       }
 
+
+      ul {
+        list-style: square;
+        margin-left:20px;
+        > li {
+          p {
+            display: inline-block;
+          }
+          &::before {
+            content: none;
+            color: $black-shark;
+            margin-right: 10px;
+            margin-top: auto;
+            margin-bottom: auto;
+            font-size: 15px;
+            display: inline-block;
+            font-family: $braze-medium;
+          }
+          div {
+            &.highlighter-rouge {
+              margin-top: 15px;
+            }
+          }
+        }
+      }
+
+      ol {
+        list-style: none;
+        counter-reset: li;
+        margin-left: 20px;
+        > li {
+          counter-increment: li;
+          p {
+            display: inline;
+          }
+          &::before {
+            content: counter(li) '.' ; // Add a period right after the counter value
+            font-family: $braze-black;
+            color: $black-shark;
+            display: inline-block;
+            margin-right: 10px;
+            margin-top: auto;
+            margin-bottom: auto;
+
+          }
+          div {
+            &.highlighter-rouge {
+              margin-top: 15px;
+            }
+          }
+        }
+      }
+      @for $oli from 1 through 9 {
+        ol[start="#{$oli}"] {
+          counter-reset: li #{$oli - 1};
+        }
+      }
       img {
-        vertical-align: middle;
-      }
-    }
-
-
-    ul {
-      list-style: square;
-      margin-left:20px;
-      > li {
-        p {
-          display: inline-block;
-        }
-        &::before {
-          content: none;
-          color: $black-shark;
-          margin-right: 10px;
-          margin-top: auto;
-          margin-bottom: auto;
-          font-size: 15px;
-          display: inline-block;
-          font-family: $braze-black;
-        }
-        div {
-          &.highlighter-rouge {
-            margin-top: 15px;
-          }
-        }
-      }
-    }
-
-    ol {
-      list-style: none;
-      counter-reset: li;
-      margin-left: 20px;
-      > li {
-        counter-increment: li;
-        p {
-          display: inline;
-        }
-        &::before {
-          content: counter(li);
-          font-family: $braze-black;
-          color: $black-shark;
-          display: inline-block;
-          margin-right: 10px;
-          margin-top: auto;
-          margin-bottom: auto;
-
-        }
-        div {
-          &.highlighter-rouge {
-            margin-top: 15px;
-          }
-        }
-      }
-    }
-    @for $oli from 1 through 9 {
-      ol[start="#{$oli}"] {
-        counter-reset: li #{$oli - 1};
-      }
-    }
-
-    hr {
-      border: 0;
-      height: 0;
-      border-top: 1px solid rgba(0, 0, 0, 0.1);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-    }
-
-    img {
-      border: 1px solid $grey-ghost;
-      border-width: 1px;
-      border-style: solid;
-    }
-    iframe {
-      &.media_embed {
-        margin-bottom: 15px;
-        margin-right: 15px;
         border: 1px solid $grey-ghost;
-        max-width: 100%;
-        @media (min-width: $window-xlarge-px) {
-          &.right {
-            margin-left: 45px;
-            margin-right: 0px;
-            margin-bottom: 30px;
-            max-width: 50%;
-            float: right;
-          }
-          &.left {
-            margin-left: 0px;
-            margin-right: 45px;
-            margin-bottom: 30px;
-            max-width: 50%;
-            float: left;
+        border-width: 1px;
+        border-style: solid;
+      }
+      iframe {
+        &.media_embed {
+          margin-bottom: 15px;
+          margin-right: 15px;
+          border: 1px solid $grey-ghost;
+          max-width: 100%;
+          @media (min-width: $window-xlarge-px) {
+            &.right {
+              margin-left: 45px;
+              margin-right: 0px;
+              margin-bottom: 30px;
+              max-width: 50%;
+              float: right;
+            }
+            &.left {
+              margin-left: 0px;
+              margin-right: 45px;
+              margin-bottom: 30px;
+              max-width: 50%;
+              float: left;
+            }
           }
         }
-      }
-    }
-    .footnote {
-      &::before {
-        content: "[";
-      }
-      &::after {
-        content: "]";
-      }
-    }
-    .footnotes {
-      li {
-        &::before {
-          content: counter(li) ':';
-        }
-      }
-    }
 
+      }
+      .footnote {
+        &::before {
+          content: "[";
+        }
+        &::after {
+          content: "]";
+        }
+      }
+      .footnotes {
+        li {
+          &::before {
+            content: counter(li) ':';
+          }
+        }
+      }
   }
 
 
@@ -320,17 +312,20 @@
   }
 
   h1 {
-    font-size: 42px;
-    font-family: $braze-medium;
-    line-height: 1.5;
+    font-size: 2.5rem;
+    font-family: $braze-black;
+    line-height: 2rem;
+    padding-top: 1rem;
+    margin-bottom: 2rem;
     color: $black-shark;
 
   }
 
   h2 {
     font-size: 30px;
+    font-family: $braze-medium;
     line-height: 1.4;
-    color: $navy-bay;
+    color: $braze-purple-dark;
   }
 
   h3 {
@@ -343,14 +338,14 @@
 
   h4 {
     font-size: 20px;
-    font-family: $braze-black;
+    font-family: $braze-medium;
     line-height: 1.4;
-    color: $navy-bay;
+    color: $braze-purple-dark;
   }
 
   h5 {
     font-size: 16px;
-    font-family: $braze-black;
+    font-family: $braze-medium;
     line-height: 1.5;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -358,10 +353,10 @@
   }
 
   h6 {
-    font-family: $braze-black;
+    font-family: $braze-medium;
     line-height: 1.5;
     font-size: 16px;
-    color: $navy-bay;
+    color: $braze-purple-dark;
   }
   p {
     margin-bottom: 25px;
@@ -372,7 +367,7 @@
     }
   }
   .highlighter-rouge {
-    font-size: 14px;
+    font-size: 16px;
     font-family: $braze-code;
     font-weight: bold;
     color: $grey-dust;
@@ -484,17 +479,17 @@ table {
   margin-bottom: 20px;
   border: 1px solid $grey-ghost !important;
   >thead {
-    font-size: 12px;
-    text-transform: uppercase;
+    font-size: 16px;
+    text-transform: none;
     color: $black-shark;
-    font-family: $braze-black;
+    font-family: $braze-medium;
     border: 1px solid $grey-ghost;
     background-color: $grey-athens;
 
   }
   td {
     border: 1px solid $grey-ghost !important;
-    font-size: 14px;
+    font-size: 16px;
     word-break: break-all;
     @media (max-width: $window-large-px) {
       word-break: break-word;
@@ -563,19 +558,7 @@ table td code.highlighter-rouge {
 .highlight table {
   margin-bottom: 0px;
 }
-/*
-* Blockquotes
-*/
 
-blockquote {
-  color: $black-shark;
-  border-left: 2px solid $navy-bay !important;
-  padding: 20px 20px 2px 20px;
-  font-size: 16px;
-  font-style: normal;
-  background-color: $grey-athens;
-
-}
 /**
  * Clearfix
  */
@@ -610,7 +593,7 @@ blockquote {
 
 blockquote {
   color: $black-shark;
-  border-left: 2px solid $navy-bay !important;
+  border-left: 2px solid $braze-purple-dark !important;
   padding: 20px 20px 2px 20px;
   font-size: 16px;
   font-style: normal;
@@ -621,7 +604,7 @@ blockquote {
 /* Sub intro */
 .subintro {
   background-color: $grey-athens;
-  border-left: 2px solid $navy-bay !important;
+  border-left: 2px solid $braze-purple-dark !important;
   font-size: 16px;
   font-style: normal;
   color: $black-shark;

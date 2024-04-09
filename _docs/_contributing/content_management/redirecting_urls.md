@@ -68,8 +68,6 @@ Replace the following:
 | `REDIRECT_TO`   | The URL you want to redirect _to_ with `https://www.braze.com/` removed from the URL string.   |
 {: .reset-td-br-1 .reset-td-br-2}
 
-{% multi_lang_include contributing/alerts/warning_urls_must_be_lowercase.md %}
-
 Your redirect should be similar to the following:
 
 ```javascript
@@ -84,7 +82,7 @@ To redirect the URL for an in-page heading, you'll use the `local_redirect` key 
 
 ```
 local_redirect:
-  OLD_HEADING: 'NEW_HEADING_URL'
+  OLD_HEADING: 'NEW_URL'
 ```
 
 Replace the following:
@@ -94,8 +92,6 @@ Replace the following:
 | `OLD_HEADING`     | The old heading in [Markdown syntax](https://www.markdownguide.org/basic-syntax/#an-example-putting-the-parts-together) with the `#` removed. |
 | `NEW_HEADING_URL` | The new heading URL you want to redirect _to_ with `https://www.braze.com/` removed from the URL string.                                      |
 {: .reset-td-br-1 .reset-td-br-2}
-
-{% multi_lang_include contributing/alerts/warning_urls_must_be_lowercase.md %}
 
 Your redirect should be similar to the following:
 

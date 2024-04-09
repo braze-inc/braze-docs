@@ -20,19 +20,19 @@ guide_featured_list:
   fa_icon: fas fa-gavel
 - name: Termes à connaître
   link: /docs/user_guide/onboarding_with_braze/sms_setup/terms/
-  fa_icon: fas fa-bookmark
+  image: /assets/img/braze_icons/book-closed.svg
 - name: Codes courts et codes longs
   link: /docs/user_guide/onboarding_with_braze/sms_setup/short_and_long_codes/
   fa_icon: fas fa-address-card
 - name: Migration des données utilisateur
   link: /docs/user_guide/onboarding_with_braze/sms_setup/user_data_migration/
-  fa_icon: fas fa-user
+  image: /assets/img/braze_icons/users-01.svg
 - name: Envoi de message SMS
   link: /docs/user_guide/onboarding_with_braze/sms_setup/sms_sending/
-  fa_icon: fas fa-comment-alt
+  image: /assets/img/braze_icons/message-square-02.svg
 - name: Groupes d’abonnement SMS
   link: /docs/user_guide/onboarding_with_braze/sms_setup/sms_subscription_groups/
-  fa_icon: fas fa-users
+  image: /assets/img/braze_icons/users-01.svg
 - name: Étapes suivantes
   link: /docs/user_guide/onboarding_with_braze/sms_setup/next_steps/
   fa_icon: fas fa-forward

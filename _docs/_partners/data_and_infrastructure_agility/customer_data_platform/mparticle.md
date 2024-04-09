@@ -10,7 +10,7 @@ page_order: 6
 guide_featured_list:
 - name: mParticle
   link: /docs/partners/data_and_infrastructure_agility/customer_data_platform/mparticle/mparticle
-  fa_icon: fas fa-user-circle
+  image: /assets/img/braze_icons/user-circle.svg
 - name: mParticle for Currents
   link: /docs/partners/data_and_infrastructure_agility/customer_data_platform/mparticle/mparticle_for_currents/
   fa_icon: fas fa-warehouse

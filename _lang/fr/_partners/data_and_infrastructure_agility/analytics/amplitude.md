@@ -17,7 +17,7 @@ guide_featured_list:
   fa_icon: fa-solid fa-lightbulb
 - name: Amplitude et Contenu connecté
   link: /docs/partners/data_and_infrastructure_agility/analytics/amplitude/amplitude_user_profile_api/
-  fa_icon: fas fa-user-circle
+  image: /assets/img/braze_icons/user-circle.svg
 ---
 
 <br> 
