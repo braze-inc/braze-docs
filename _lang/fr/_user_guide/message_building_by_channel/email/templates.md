@@ -16,7 +16,7 @@ guide_featured_list:
   image: /assets/img/braze_icons/brush-02.svg
 - name: Téléchargement d’un modèle d’e-mail
   link: /docs/user_guide/message_building_by_channel/email/templates/html_email_template/
-  fa_icon: fas fa-upload
+  image: /assets/img/braze_icons/upload-01-alt.svg
 - name: Aliasage de lien
   link: /docs/user_guide/message_building_by_channel/email/templates/link_aliasing/
   image: /assets/img/braze_icons/link-03.svg

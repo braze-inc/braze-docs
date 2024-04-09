@@ -25,10 +25,10 @@ guide_featured_list:
   image: /assets/img/braze_icons/user-circle.svg
 - name: Language Settings
   link: /docs/user_guide/administrative/access_braze/language/
-  fa_icon: fas fa-language
+  image: /assets/img/braze_icons/globe-04.svg
 - name: SAML and Single Sign-On
   link: /docs/user_guide/administrative/access_braze/single_sign_on/
-  fa_icon: fas fa-sign-in-alt
+  image: /assets/img/braze_icons/log-in-01.svg
 - name: Product Portal
   link: /docs/user_guide/administrative/access_braze/portal/
   image: /assets/img/braze_icons/annotation-question.svg

@@ -18,7 +18,7 @@ guide_featured_list:
   image: /assets/img/braze_icons/server-01.svg
 - name: Aborting Connected Content
   link: /docs/user_guide/personalization_and_dynamic_content/connected_content/aborting_connected_content/
-  fa_icon: fas fa-eject
+  image: /assets/img/braze_icons/stop-circle.svg
 - name: Connected Content Retries
   link: /docs/user_guide/personalization_and_dynamic_content/connected_content/connected_content_retries/
   image: /assets/img/braze_icons/refresh-ccw-01.svg

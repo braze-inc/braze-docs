@@ -45,7 +45,7 @@ guide_menu_list:
     image: /assets/img/braze_icons/server-01.svg
   - name: Ouvrir les exportations CSV dans Excel
     link: /docs/user_guide/data_and_analytics/export_braze_data/opening_csv_reports_in_excel/
-    fa_icon: fas fa-file-excel
+    image: /assets/img/braze_icons/download-01.svg
   - name: Résolution des problèmes d’exportation
     link: /docs/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/
     image: /assets/img/braze_icons/help-circle.svg

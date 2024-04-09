@@ -16,5 +16,5 @@ guide_featured_list:
   image: /assets/img/braze_icons/users-01.svg
 - name: Developer Console
   link: /docs/user_guide/administrative/app_settings/developer_console/
-  fa_icon: fas fa-terminal
+  image: /assets/img/braze_icons/terminal-square.svg
 ---

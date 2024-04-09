@@ -15,7 +15,7 @@ guide_menu_list:
     image: /assets/img/braze_icons/table.svg
   - name: Comportement du Dispatch ID
     link: /docs/help/help_articles/data/dispatch_id/
-    fa_icon: fas fa-id-badge
+    image: /assets/img/braze_icons/key-01.svg
   - name: Liste d’exclusion versus Suppression
     link: /docs/help/help_articles/data/blocklisting_deletion/
     image: /assets/img/braze_icons/trash-01.svg

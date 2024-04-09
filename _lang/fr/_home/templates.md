@@ -35,19 +35,19 @@ guide_menu_list:
     image: /assets/img/braze_icons/users-check.svg
   - name: Référence avec vidéo
     link: /docs/home/templates/reference_video/
-    fa_icon: fas fa-graduation-cap
+    image: /assets/img/braze_icons/graduation-hat-01.svg
   - name: Article de référence
     link: /docs/home/templates/reference/
-    fa_icon: fas fa-graduation-cap
+    image: /assets/img/braze_icons/graduation-hat-01.svg
   - name: Solution technique
     link: /docs/home/templates/solution/
-    fa_icon: fas fa-calculator
+    image: /assets/img/braze_icons/calculator.svg
   - name: Tutoriel avec vidéo
     link: /docs/home/templates/tutorial_video/
-    fa_icon: fas fa-chalkboard-teacher
+    image: /assets/img/braze_icons/stand.svg
   - name: Tutoriel
     link: /docs/home/templates/tutorial/
-    fa_icon: fas fa-chalkboard-teacher
+    image: /assets/img/braze_icons/stand.svg
   - name: Cas d’utilisation avec vidéo
     link: /docs/home/templates/use_case_video/
     image: /assets/img/braze_icons/user-edit.svg

@@ -12,7 +12,7 @@ guide_featured_title: "Section Articles"
 guide_featured_list:
   - name: Termes à connaître
     link: /docs/user_guide/onboarding_with_braze/terms_to_know/
-    fa_icon: fas fa-sticky-note
+    image: /assets/img/braze_icons/stand.svg
   - name: Intégration
     link: /docs/user_guide/onboarding_with_braze/integration/
     image: /assets/img/braze_icons/server-01.svg

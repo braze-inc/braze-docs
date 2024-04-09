@@ -15,7 +15,7 @@ guide_menu_list:
     image: /assets/img/braze_icons/table.svg
   - name: Dispatch ID Behavior
     link: /docs/help/help_articles/data/dispatch_id/
-    fa_icon: fas fa-id-badge
+    image: /assets/img/braze_icons/key-01.svg
   - name: Blocklisting versus Deleting
     link: /docs/help/help_articles/data/blocklisting_deletion/
     image: /assets/img/braze_icons/trash-01.svg

@@ -14,7 +14,7 @@ guide_featured_list:
   image: /assets/img/braze_icons/edit-05.svg
 - name: AI Image Generator
   link: /docs/user_guide/engagement_tools/templates_and_media/media_library/#generate-ai
-  fa_icon: fas fa-wand-magic-sparkles
+  image: /assets/img/braze_icons/image-03.svg
 - name: AI Content QA
   link: /docs/user_guide/sage_ai/generative_ai/ai_content_qa/
   image: /assets/img/braze_icons/clipboard-check.svg

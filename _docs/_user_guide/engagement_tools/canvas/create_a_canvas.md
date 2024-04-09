@@ -29,7 +29,7 @@ guide_featured_list:
     image: /assets/img/braze_icons/users-right.svg
   - name: Preview User Paths
     link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/preview_user_paths/
-    fa_icon: fas fa-users-viewfinder
+    image: /assets/img/braze_icons/dataflow-03.svg
   - name: Canvas Entry Properties and Event Properties
     link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties/
     image: /assets/img/braze_icons/user-check-01.svg

@@ -35,7 +35,7 @@ guide_featured_list:
     image: /assets/img/braze_icons/message-circle-01.svg
   - name: "FAQ SMS"
     link: /docs/user_guide/message_building_by_channel/sms/faqs/
-    fa_icon: fas fa-comment-dots
+    image: /assets/img/braze_icons/annotation-dots.svg
   - name: "FAQ WhatsApp"
     link: /docs/user_guide/message_building_by_channel/whatsapp/faqs/
     image: /assets/img/braze_icons/whatsapp.svg

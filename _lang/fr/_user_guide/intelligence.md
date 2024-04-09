@@ -36,7 +36,8 @@ guide_menu_list:
   image: /assets/img/braze_icons/edit-05.svg
 - name: Générateur d’images IA
   link: /docs/user_guide/engagement_tools/templates_and_media/media_library/#generate-ai
-  fa_icon: fas fa-wand-magic-sparkles
+  image: /assets/img/braze_icons/image-03.svg
+
 
 ---
 

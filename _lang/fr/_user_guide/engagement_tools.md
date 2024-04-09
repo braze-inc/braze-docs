@@ -27,5 +27,5 @@ guide_menu_list:
     image: /assets/img/braze_icons/pie-chart-01.svg
   - name: Position et geofences 
     link: /docs/user_guide/engagement_tools/locations_and_geofences/
-    fa_icon: fas fa-street-view
+    image: /assets/img/braze_icons/marker-pin-06.svg
 ---

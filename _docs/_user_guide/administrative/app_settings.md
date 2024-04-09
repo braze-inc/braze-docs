@@ -13,7 +13,7 @@ guide_featured_title: "Setup and testing"
 guide_featured_list:
   - name: Workspace Management
     link: /docs/user_guide/administrative/app_settings/app_group_management/
-    fa_icon: fas fa-briefcase
+    image: /assets/img/braze_icons/briefcase-01.svg
   - name: API Keys
     link: /docs/user_guide/administrative/app_settings/api_settings_tab/
     image: /assets/img/braze_icons/key-01.svg
@@ -43,7 +43,7 @@ guide_menu_title2: "Company settings"
 guide_menu_list2:
   - name: Admin Settings
     link: /docs/user_guide/administrative/app_settings/company_settings/
-    fa_icon: fas fa-tools
+    image: /assets/img/braze_icons/tool-02.svg
   - name: Company Users
     link: /docs/user_guide/administrative/app_settings/manage_your_braze_users/
     image: /assets/img/braze_icons/users-01.svg

@@ -26,7 +26,7 @@ guide_featured_list:
     image: /assets/img/braze_icons/list.svg
   - name: "Services E-mail"
     link: /docs/user_guide/message_building_by_channel/email/best_practices/email_services/
-    fa_icon: fas fa-concierge-bell
+    image: /assets/img/braze_icons/email.svg
   - name: "Politiques de temporisation "
     link: /docs/user_guide/message_building_by_channel/email/best_practices/sunset_policies/
     image: /assets/img/braze_icons/sun-setting-03.svg

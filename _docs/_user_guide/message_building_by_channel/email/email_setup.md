@@ -31,7 +31,7 @@ guide_featured_list:
   image: /assets/img/braze_icons/navigation-pointer-01.svg
 - name: "Consent and Address Collection"
   link: /docs/user_guide/message_building_by_channel/email/email_setup/consent_and_address_collection/
-  fa_icon: fas fa-address-book
+  image: /assets/img/braze_icons/book-closed.svg
 - name: "Deliverability Pitfalls and Spam Traps"
   link: /docs/user_guide/message_building_by_channel/email/email_setup/deliverability_pitfalls_and_spam_traps/
   image: /assets/img/braze_icons/alert-triangle.svg

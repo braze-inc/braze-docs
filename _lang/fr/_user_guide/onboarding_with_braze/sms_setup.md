@@ -14,7 +14,7 @@ guide_featured_title: "Section Articles"
 guide_featured_list:
 - name: À propos des SMS
   link: /docs/user_guide/onboarding_with_braze/sms_setup/about_sms/
-  fa_icon: fas fa-comment-dots
+  image: /assets/img/braze_icons/annotation-dots.svg
 - name: Lois et réglementations SMS
   link: /docs/user_guide/onboarding_with_braze/sms_setup/sms_laws_and_regulations/
   image: /assets/img/braze_icons/briefcase-02.svg
@@ -35,7 +35,7 @@ guide_featured_list:
   image: /assets/img/braze_icons/users-01.svg
 - name: Étapes suivantes
   link: /docs/user_guide/onboarding_with_braze/sms_setup/next_steps/
-  fa_icon: fas fa-forward
+  image: /assets/img/braze_icons/fast-forward.svg
   
 ---
 <br>
