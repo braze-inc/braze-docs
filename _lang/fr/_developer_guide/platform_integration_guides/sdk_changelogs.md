@@ -10,7 +10,7 @@ guide_featured_title: "Journaux de modifications sur Docs"
 guide_featured_list:
   - name: SDK Android
     link: /docs/developer_guide/platform_integration_guides/android/changelog/
-    image: /assets/img/android.png
+    image: /assets/img/braze_icons/android.svg
   - name: SDK iOS (Swift)
     link: /docs/developer_guide/platform_integration_guides/ios/changelog/swift_changelog/
     image: /assets/img/braze_icons/apple.svg
@@ -43,7 +43,7 @@ guide_menu_title: "Journaux de modifications sur GitHub"
 guide_menu_list:
   - name: SDK Android
     link: https://github.com/braze-inc/braze-android-sdk/blob/master/CHANGELOG.md
-    image: /assets/img/android.png
+    image: /assets/img/braze_icons/android.svg
   - name: SDK iOS (Swift)
     link: https://github.com/braze-inc/braze-swift-sdk/blob/main/CHANGELOG.md
     image: /assets/img/braze_icons/apple.svg

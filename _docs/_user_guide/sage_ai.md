@@ -21,7 +21,7 @@ guide_featured_list:
   image: /assets/img/braze_icons/stars-01.svg
 - name: Generative AI
   link: /docs/user_guide/sage_ai/generative_ai/
-  image: /assets/img/braze_icons/lightbulb-02
+  image: /assets/img/braze_icons/lightbulb-02.svg
 
 guide_menu_title: "Other"
 guide_menu_list:
