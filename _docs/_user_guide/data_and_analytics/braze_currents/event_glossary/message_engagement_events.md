@@ -46,7 +46,7 @@ Note that Currents will drop events with excessively large payloads of greater t
 {% endalert %}
 
 {% alert note %}
-Objects related to Canvas Flow have IDs that can be used for grouping and translated to human-readable names via the [Canvas Details endpoint]({{site.baseurl}}/api/endpoints/export/canvas/get_canvas_details/).
+Objects related to Canvas Flow have IDs that can be used for grouping and translated to human-readable names via the [Export Canvas details endpoint]({{site.baseurl}}/api/endpoints/export/canvas/get_canvas_details/).
 {% endalert %}
 
 {% alert note %}
