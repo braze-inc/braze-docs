@@ -33,7 +33,7 @@ guide_menu_list:
   image: /assets/img/braze_icons/dataflow-03.svg
 - name: Personalized Paths
   link: /docs/user_guide/engagement_tools/canvas/canvas_components/experiment_step/personalized_paths/
-  image: /assets/img/braze_icons/chevron-up-double
+  image: /assets/img/braze_icons/chevron-up-double.svg
 - name: Recommendations
   link: /docs/user_guide/sage_ai/recommendations/
   image: /assets/img/braze_icons/hearts.svg

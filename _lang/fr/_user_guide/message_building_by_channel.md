@@ -27,7 +27,7 @@ guide_featured_list:
   image: /assets/img/braze_icons/marker-pin-01.svg
 - name: SMS & MMS
   link: /docs/user_guide/message_building_by_channel/sms/
-  image: /assets/img/braze_icons/sms.svg
+  image: /assets/img/braze_icons/channel-sms.svg
 - name: WhatsApp
   link: /docs/user_guide/message_building_by_channel/whatsapp/
   image: /assets/img/braze_icons/whatsapp.svg
