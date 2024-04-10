@@ -880,6 +880,10 @@ Email, Opens
 
 This event occurs when a user opens an email. Multiple events may be generated for the same campaign if a user opens the email multiple times.
 
+{% alert important %}
+It's known behavior that the email open event fields `browser`, `device_os`, `device_model`, and `mailbox_provider` are empty. You can ignore these for now.
+{% endalert %}
+
 ```json
 // Email Open: users.messages.email.Open
 {
@@ -929,6 +933,10 @@ Email, Clicks
 {% endapitags %}
 
 This event occurs when a user clicks an email. Multiple events may be generated for the same campaign if a user clicks multiple times or clicks different links within the email.
+
+{% alert important %}
+It's known behavior that the email clicks event fields `browser`, `device_os`, `device_model`, and `mailbox_provider` are empty. You can ignore these for now.
+{% endalert %}
 
 ```json
 // Email Click: users.messages.email.Click
@@ -1191,12 +1199,16 @@ This event occurs when a user views an in-app message.
 ```
 
 {% alert note %}
-The `message_extras` field will be active on April 4, 2024.
+The `message_extras` field is active as of April 4, 2024.
 {% endalert %}
 
 #### Property details
 - For `ad_id`, `ad_id_type` and `ad_tracking_enabled`, you need to explicitly collect the iOS IDFA and Android Google advertising ID through the native SDKs. Learn more about this setup for [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/swift_idfv/) and [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id).
 - If you are using Kafka to ingest [Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/) data, contact your customer success manager to enable sending `ad_id`.
+- `message_extras` allow you to annotate your in-app message impression events with dynamic data from Connected Content, custom attributes (such as language, country), and Canvas entry properties. The following minimum SDK versions are required, refer to [Message extras]({{site.baseurl}}/message_extras_tag/) to learn more:
+
+{% sdk_min_versions web:5.2.0 android:30.4.0 swift:8.4.0 %}
+
 {% endapi %}
 
 {% api %}
@@ -1465,7 +1477,7 @@ This event occurs when a user dismisses a Content Card.
 SMS, Clicks
 {% endapitags %}
 
-This event occurs when a user clicks an SMS short link.
+This event occurs when a user clicks an SMS short link. We only generate and send this event to Currents or Snowflake data sharing when a user clicks an SMS short link sent from a campaign where advanced [link shortening]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/link_shortening/) is enabled.
 
 ```json
 // SMS Send: users.messages.sms.ShortLinkClick
@@ -1866,7 +1878,7 @@ This event occurs when a user is enrolled in a control variant set on a multi-va
 Subscription
 {% endapitags %}
 
-This event occurs when the subscription state of a user in a subscription group changes.
+This event occurs when Braze receives a request to update the subscription state of the user, even if the request doesn’t alter the current subscription state for the user.
 
 {% alert important %}
 Subscription groups are only available for email, SMS, and WhatsApp channels at this time.
