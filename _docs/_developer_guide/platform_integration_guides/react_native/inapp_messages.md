@@ -216,6 +216,8 @@ For a full reference of button model, see the [Android][12] and [iOS][13] docume
 
 ## GIF Support
 
+The Braze React Native SDK allows you to incorporate animated GIFs into your in-app messages, with distinct implementation methods for Android and iOS platforms.
+
 {% tabs %}
 {% tab Android %}
 On the Android SDK, HTML in-app messages support displaying animated GIFs by default. For all other in-app messages, a custom image library is required. For more details, refer to the guide for [GIFs](https://www.braze.com/docs/developer_guide/platform_integration_guides/android/in-app_messaging/customization/gifs/).

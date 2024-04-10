@@ -139,6 +139,8 @@ For a full reference of the classic (text announcement) Content Card, see the [A
 
 ## GIF Support
 
+The Braze React Native SDK allows you to incorporate animated GIFs into your Content Cards, with distinct implementation methods for Android and iOS platforms.
+
 {% tabs %}
 {% tab Android %}
 The Android SDK requires an external image library to display animated GIFs with Content Cards. For more details, refer to the guide for [GIFs](https://www.braze.com/docs/developer_guide/platform_integration_guides/android/content_cards/GIFs/).
