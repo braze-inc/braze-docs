@@ -25,7 +25,13 @@ Once this information is imported, you can begin accessing it in messages in a s
 
 ## Preparing your CSV file
 
-Before creating a catalog, be sure to have your CSV file ready if your preferred catalog creation method is to upload. 
+Before creating a catalog, be sure to have your CSV file ready if your preferred catalog creation method is to upload.
+
+{% alert note %}
+Need more space to accommodate for your CSV files? Contact your Braze account manager for more information about upgrading your catalogs.
+{% endalert %}
+
+### CSV file guidelines
 
 Note these guidelines when creating your CSV file. The first column of the CSV file must be a header of `id`, and each item's `id` must be unique. All other column names must be unique. Additionally, the following limitations apply to catalog CSV files:
 
@@ -36,11 +42,7 @@ Note these guidelines when creating your CSV file. The first column of the CSV f
 - Maximum field value (cell) of 5,000 characters
 - Only letters, numbers, hyphens, and underscores for `id` and header values
 
-Make sure that you are encoding your CSV file using the UTF-8 format to upload your CSV file in the next step successfully. We also recommend formatting all text in your CSV files as lowercase.
-
-{% alert note %}
-Need more space to accommodate for your CSV files? Contact your Braze account manager for more information about upgrading your catalogs.
-{% endalert %}
+We also recommend formatting all text in your CSV files as lowercase. Make sure you're encoding your CSV file using the UTF-8 format to upload your CSV file in the next step successfully.
 
 ## Selecting your method
 
