@@ -141,10 +141,10 @@ For a full reference of the classic (text announcement) Content Card, see the [A
 
 {% tabs %}
 {% tab Android %}
-The Android SDK requires an external image library to display animated GIFs with Content Cards. For more details, refer to the guide for [GIFs][18].
+The Android SDK requires an external image library to display animated GIFs with Content Cards. For more details, refer to the guide for [GIFs](https://www.braze.com/docs/developer_guide/platform_integration_guides/android/content_cards/GIFs/).
 {% endtab %}
 {% tab iOS %}
-The Swift SDK does not provide animated GIF support by default. Support can be added by wrapping a third party or your own view in an instance of `GIFViewProvider`. For more details on GIF support, refer to the tutorial for [GIF Support][19].
+The Swift SDK does not provide animated GIF support by default. Support can be added by wrapping a third party or your own view in an instance of `GIFViewProvider`. For more details on GIF support, refer to the tutorial for [GIF Support](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/c3-gif-support/).
 {% endtab %}
 {% endtabs %}
 
@@ -165,5 +165,3 @@ The Swift SDK does not provide animated GIF support by default. Support can be a
 [15]: https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcard/classic-swift.struct
 [16]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-short-news-card/index.html
 [17]: https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcard/classicimage-swift.struct
-[18]: https://www.braze.com/docs/developer_guide/platform_integration_guides/android/content_cards/GIFs/
-[19]: https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/c3-gif-support/

@@ -218,10 +218,10 @@ For a full reference of button model, see the [Android][12] and [iOS][13] docume
 
 {% tabs %}
 {% tab Android %}
-On the Android SDK, HTML in-app messages support displaying animated GIFs by default. For all other in-app messages, a custom image library is required. For more details, refer to the guide for [GIFs][14].
+On the Android SDK, HTML in-app messages support displaying animated GIFs by default. For all other in-app messages, a custom image library is required. For more details, refer to the guide for [GIFs](https://www.braze.com/docs/developer_guide/platform_integration_guides/android/in-app_messaging/customization/gifs/).
 {% endtab %}
 {% tab iOS %}
-On the Swift SDK, all Braze in-app messages support displaying animated GIFs by default. For more details, refer to the tutorial for [GIF Support][15].
+On the Swift SDK, all Braze in-app messages support displaying animated GIFs by default. For more details, refer to the tutorial for [GIF Support](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/c3-gif-support).
 {% endtab %}
 {% endtabs %}
 
@@ -236,5 +236,3 @@ On the Swift SDK, all Braze in-app messages support displaying animated GIFs by 
 [11]: https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/inappmessage
 [12]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/-message-button/index.html
 [13]: https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/inappmessage/button
-[14]: https://www.braze.com/docs/developer_guide/platform_integration_guides/android/in-app_messaging/customization/gifs/
-[15]: https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/c3-gif-support
