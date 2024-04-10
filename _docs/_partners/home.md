@@ -293,4 +293,6 @@ valid_partner_list:
   url: /docs/partners/message_orchestration/channel_extensions/email_templates/alpaco/
 - name: NiftyImages
   url: /docs/partners/message_personalization/dynamic_content/niftyimages
+- name: MetaRouter
+  url: /docs/partners/data_and_infrastructure_agility/workflow_automation/metarouter/
 ---
