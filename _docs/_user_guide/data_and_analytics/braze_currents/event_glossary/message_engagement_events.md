@@ -50,7 +50,7 @@ Objects related to Canvas Flow have IDs that can be used for grouping and transl
 {% endalert %}
 
 {% alert note %}
-Certain fields might take a bit longer to display their most recent state. These fields are:
+Certain fields might take a bit longer to display their most recent state after a Campaign or Canvas is updated. These fields are:
 <ul>
   <li>"campaign_name"</li>
   <li>"canvas_name"</li>
