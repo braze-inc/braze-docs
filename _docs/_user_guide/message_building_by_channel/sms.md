@@ -33,7 +33,7 @@ guide_featured_list:
   image: /assets/img/braze_icons/link-03.svg
 - name: "User Retargeting"
   link: /docs/user_guide/message_building_by_channel/sms/campaign/retargeting/
-  fa_icon: fa-solid fa-user
+  image: /assets/img/braze_icons/users-01.svg
 - name: "Message Copy and Segment Calculator"
   link: /docs/user_guide/message_building_by_channel/sms/campaign/segments/
   image: /assets/img/braze_icons/calculator.svg

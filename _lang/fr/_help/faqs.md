@@ -50,7 +50,7 @@ guide_featured_list:
     image: /assets/img/braze_icons/file-download-01.svg
   - name: "FAQ sur les indicateurs de fonctionnalité"
     link: /docs/developer_guide/platform_wide/feature_flags/faq/
-    fa_icon: fa-solid fa-flag
+    image: /assets/img/braze_icons/flag-02.svg
   - name: "FAQ sur les activités en direct"
     link: /docs/developer_guide/platform_integration_guides/swift/live_activities/faq/
     image: /assets/img/braze_icons/swift.svg

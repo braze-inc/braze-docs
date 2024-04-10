@@ -24,7 +24,7 @@ guide_featured_list:
     image: /assets/img/braze_icons/globe-02.svg
   - name: Points de données
     link: /docs/user_guide/onboarding_with_braze/data_points/
-    fa_icon: fa fa-asterisk
+    image: /assets/img/braze_icons/asterisk-01.svg
   - name: Abonnement et utilisation
     link: /docs/user_guide/onboarding_with_braze/subscription_and_usage/
     image: /assets/img/braze_icons/users-01.svg

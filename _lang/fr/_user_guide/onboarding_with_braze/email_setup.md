@@ -13,7 +13,7 @@ guide_featured_title: "Section Articles"
 guide_featured_list:
 - name: "Configuration des IP et des domaines"
   link: /docs/user_guide/onboarding_with_braze/email_setup/setting_up_ips_and_domains/
-  fa_icon: far fa-dot-circle
+  image: /assets/img/braze_icons/target-05.svg
 - name: "Réchauffement d’adresses IP"
   link: /docs/user_guide/onboarding_with_braze/email_setup/ip_warming/
   image: /assets/img/braze_icons/alert-circle.svg

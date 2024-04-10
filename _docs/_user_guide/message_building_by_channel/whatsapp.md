@@ -21,13 +21,13 @@ guide_featured_list:
   image: /assets/img/braze_icons/table.svg
 - name: "User Phone Numbers"
   link: /docs/user_guide/message_building_by_channel/whatsapp/user_phone_numbers/
-  fa_icon: fa-solid fa-phone
+  image: /assets/img/braze_icons/phone-02.svg
 - name: "Create a WhatsApp Campaign"
   link: /docs/user_guide/message_building_by_channel/whatsapp/whatsapp_campaign/create/
   image: /assets/img/braze_icons/phone-02.svg
 - name: "User Retargeting"
   link: /docs/user_guide/message_building_by_channel/whatsapp/whatsapp_campaign/user_retargeting/
-  fa_icon: fa-solid fa-user
+  image: /assets/img/braze_icons/users-01.svg
 - name: "Opt-in and Opt-outs"
   link: /docs/user_guide/message_building_by_channel/whatsapp/message_processing/opt-ins_and_opt-outs/
   image: /assets/img/braze_icons/message-dots-circle.svg

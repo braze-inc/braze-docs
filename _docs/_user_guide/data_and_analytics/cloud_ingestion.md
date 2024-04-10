@@ -14,13 +14,13 @@ guide_featured_title: "Section articles"
 guide_featured_list:
   - name: Overview and Best Practices
     link: /docs/user_guide/data_and_analytics/cloud_ingestion/overview/
-    fa_icon: fa-solid fa-users-between-lines
+    image: /assets/img/braze_icons/users-01.svg
   - name: Data Warehouse Integrations
     link: /docs/user_guide/data_and_analytics/cloud_ingestion/integrations/
     image: /assets/img/braze_icons/cloud-blank-01.svg
   - name: File Storage Integrations
     link: /docs/user_guide/data_and_analytics/cloud_ingestion/file_storage_integrations/
-    fa_icon: fa-solid fa-folder-open  
+    image: /assets/img/braze_icons/folder.svg 
   - name: Sync Catalogs Data
     link: /docs/user_guide/data_and_analytics/cloud_ingestion/sync_catalogs_data/
     image: /assets/img/braze_icons/refresh-ccw-02.svg

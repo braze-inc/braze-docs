@@ -29,7 +29,7 @@ guide_featured_list:
     image: /assets/img/braze_icons/annotation.svg
   - name: Partenariat avec Grouparoo
     link: /docs/help/release_notes/deprecations/grouparoo
-    fa_icon: fa-solid fa-user-group
+    image: /assets/img/braze_icons/users-01.svg
     
 ---
 

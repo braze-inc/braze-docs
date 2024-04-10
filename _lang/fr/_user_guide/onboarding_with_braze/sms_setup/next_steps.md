@@ -28,10 +28,10 @@ guide_featured_list:
   image: /assets/img/braze_icons/phone-02.svg
 - name: Gestion des mots-clés
   link: /docs/user_guide/message_building_by_channel/sms/keywords/optin_optout/#managing-keywords-and-auto-responses
-  fa_icon: far fa-handshake
+  image: /assets/img/braze_icons/user-check-02.svg
 - name: Gestion personnalisée des mots-clés
   link: /docs/user_guide/message_building_by_channel/sms/keywords/keyword_handling/
-  fa_icon: far fa-handshake
+  image: /assets/img/braze_icons/user-check-02.svg
 - name: FAQ SMS
   link: /docs/user_guide/message_building_by_channel/sms/faqs/
   image: /assets/img/braze_icons/message-circle-01.svg

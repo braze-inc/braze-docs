@@ -16,7 +16,7 @@ guide_featured_list:
   image: /assets/img/braze_icons/list.svg
 - name: Amorces de notifications push
   link: /docs/user_guide/message_building_by_channel/push/best_practices/push_primer_messages/
-  fa_icon: far fa-dot-circle
+  image: /assets/img/braze_icons/target-05.svg
 - name: Politiques de temporisation 
   link: /docs/user_guide/message_building_by_channel/push/best_practices/sunset_policies/
   image: /assets/img/braze_icons/sun-setting-03.svg
