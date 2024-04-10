@@ -20,7 +20,7 @@ guide_featured_list:
     image: /assets/img/braze_icons/edit-05.svg
   - name: Saving Drafts for Canvas
     link: /docs/user_guide/engagement_tools/canvas/managing_canvases/canvas_drafts/
-    fa_icon: fa-solid fa-floppy-disk
+    image: /assets/img/braze_icons/save-03.svg
   - name: Canvas Version History
     link: /docs/user_guide/engagement_tools/canvas/managing_canvases/canvas_version_history/
     image: /assets/img/braze_icons/list.svg

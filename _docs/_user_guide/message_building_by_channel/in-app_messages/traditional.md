@@ -23,7 +23,7 @@ guide_menu_title: Templates
 guide_menu_list:
 - name: Simple Survey
   link: /docs/user_guide/message_building_by_channel/in-app_messages/traditional/templates/simple_survey/
-  fa_icon: fas fa-clipboard
+  image: /assets/img/braze_icons/clipboard.svg
 ---
 
 <br><br>

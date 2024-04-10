@@ -9,7 +9,7 @@ description: "Cette page d’accueil est l’endroit où les développeurs peuve
 guide_featured_title: "Intégrations disponibles"
 guide_featured_list:
 - name: Android et FireOS
-  image: /assets/img/android.png
+  image: /assets/img/braze_icons/android.svg
   link: /docs/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/
   nav_link: android
 - name: iOS

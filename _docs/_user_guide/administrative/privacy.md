@@ -19,7 +19,7 @@ guide_featured_list:
   image: /assets/img/braze_icons/message-check-circle.svg
 - name: SMS Laws and Regulations
   link: /docs/user_guide/message_building_by_channel/sms/sms_laws_and_regulations
-  fa_icon: fas fa-sms
+  image: /assets/img/braze_icons/sms.svg
 - name: Managing Consent
   link: /docs/user_guide/administrative/privacy/managing_consent
   image: /assets/img/braze_icons/user-square.svg

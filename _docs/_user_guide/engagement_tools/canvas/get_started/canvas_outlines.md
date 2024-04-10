@@ -10,7 +10,7 @@ tool: Canvas
 
 # Canvas outlines
 
-[![Braze Learning course]({% image_buster /assets/img/bl_icon2.png %})](https://learning.braze.com/page/courses){: style="float:right;width:120px;border:0;" class="noimgborder"}
+[![Braze Learning course]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/page/courses){: style="float:right;width:120px;border:0;" class="noimgborder"}
 
 > The following article lists several examples that demonstrate how you can use Canvas to accomplish targeted, personalized messaging using a combination of [Delay]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/delay_step/) and [Message]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/) steps.
 

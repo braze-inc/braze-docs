@@ -17,7 +17,7 @@ guide_featured_title: "Section Articles"
 guide_featured_list:
   - name: Notifications push d’images insérées pour Android
     link: /docs/developer_guide/platform_integration_guides/android/push_notifications/android/customization/inline_image_push/
-    fa_icon: fa-regular fa-image
+    image: /assets/img/braze_icons/image-01.svg
   - name: Notifications push HTML
     link: /docs/developer_guide/platform_integration_guides/android/push_notifications/android/customization/html_rendered_push/
     image: /assets/img/braze_icons/pencil-01.svg

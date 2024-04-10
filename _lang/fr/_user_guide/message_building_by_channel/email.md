@@ -52,7 +52,7 @@ guide_menu_list:
   image: /assets/img/braze_icons/apple.svg
 - name: AMP pour e-mail
   link: /docs/user_guide/message_building_by_channel/email/amphtml/
-  fa_icon: fas fa-bolt
+  image: /assets/img/braze_icons/lightning-02.svg
 - name: Reporting E-mail
   link: /docs/user_guide/message_building_by_channel/email/reporting_and_analytics/email_reporting/
   image: /assets/img/braze_icons/bar-chart-01.svg

@@ -53,5 +53,5 @@ guide_menu_list:
     image: /assets/img/braze_icons/pie-chart-01.svg
   - name: Rapport du groupe de contrôle global
     link: /docs/user_guide/data_and_analytics/reporting/global_control_group_reporting/
-    fa_icon: fa-solid fa-earth-americas
+    image: /assets/img/braze_icons/globe-slated-02.svg
 ---

@@ -10,7 +10,7 @@ guide_featured_title: "Changelogs on Braze Docs"
 guide_featured_list:
   - name: Android SDK
     link: /docs/developer_guide/platform_integration_guides/android/changelog/
-    image: /assets/img/android.png
+    image: /assets/img/braze_icons/android.svg
   - name: iOS SDK (Swift)
     link: /docs/developer_guide/platform_integration_guides/swift/changelog/
     image: /assets/img/braze_icons/apple.svg
@@ -43,7 +43,7 @@ guide_menu_title: "Changelogs on GitHub"
 guide_menu_list:
   - name: Android SDK
     link: https://github.com/braze-inc/braze-android-sdk/blob/master/CHANGELOG.md
-    image: /assets/img/android.png
+    image: /assets/img/braze_icons/android.svg
   - name: iOS SDK (Swift)
     link: https://github.com/braze-inc/braze-swift-sdk/blob/main/CHANGELOG.md
     image: /assets/img/braze_icons/apple.svg

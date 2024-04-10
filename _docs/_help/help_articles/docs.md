@@ -15,6 +15,6 @@ guide_menu_list:
     image: /assets/img/braze_icons/edit-05.svg
   - name: Scroll Bar Overlap
     link: /docs/help/help_articles/docs/scroll_bar_overlap/
-    fa_icon: fas fa-caret-square-right
+    image: /assets/img/braze_icons/arrow-square-right.svg
 
 ---

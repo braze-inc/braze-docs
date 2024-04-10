@@ -15,19 +15,19 @@ guide_featured_list:
   image: /assets/img/braze_icons/table.svg
 - name: Messagerie par e-mail
   link: /docs/user_guide/message_building_by_channel/email/
-  fa_icon: fa-solid fa-envelope
+  image: /assets/img/braze_icons/email.svg
 - name: "Envoi de messages in-app"
   link: /docs/user_guide/message_building_by_channel/in-app_messages/
   image: /assets/img/braze_icons/annotation-dots.svg
 - name: Fil d’actualité
   link: /docs/user_guide/engagement_tools/news_feed/
-  fa_icon: fa-solid fa-newspaper
+  image: /assets/img/braze_icons/announcement-02.svg
 - name: Messagerie de notification push
   link: /docs/user_guide/message_building_by_channel/push/
   image: /assets/img/braze_icons/marker-pin-01.svg
 - name: SMS & MMS
   link: /docs/user_guide/message_building_by_channel/sms/
-  fa_icon: fa-solid fa-comment-sms
+  image: /assets/img/braze_icons/sms.svg
 - name: WhatsApp
   link: /docs/user_guide/message_building_by_channel/whatsapp/
   image: /assets/img/braze_icons/whatsapp.svg

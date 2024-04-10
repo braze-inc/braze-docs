@@ -45,7 +45,7 @@ guide_menu_list:
     image: /assets/img/braze_icons/users-01.svg
   - name: Location Targeting
     link: /docs/user_guide/engagement_tools/segments/location_targeting/
-    fa_icon: fas fa-street-view
+    image: /assets/img/braze_icons/marker-pin-06.svg
   - name: Beacon and Geofence Support
     link: /docs/user_guide/engagement_tools/segments/beacon_support/
     image: /assets/img/braze_icons/marker-pin-01.svg

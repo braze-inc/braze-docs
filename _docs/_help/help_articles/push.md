@@ -25,6 +25,6 @@ guide_menu_list:
     image: /assets/img/braze_icons/map-01.svg
   - name: Resetting Push Permissions
     link: /docs/help/help_articles/push/resetting_push_permissions/
-    fa_icon: fas fa-circle-check
+    image: /assets/img/braze_icons/check-circle.svg
 
 ---

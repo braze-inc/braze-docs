@@ -27,7 +27,7 @@ guide_menu_title: "More articles"
 guide_menu_list:
   - name: Message Archiving
     link: /docs/user_guide/data_and_analytics/export_braze_data/message_archiving/
-    fa_icon: fa-solid fa-clock-rotate-left
+    image: /assets/img/braze_icons/clock-rewind.svg
   - name: Export Overview Data
     link: /docs/user_guide/data_and_analytics/export_braze_data/exporting_app_usage_data/
     image: /assets/img/braze_icons/target-05.svg

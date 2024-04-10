@@ -21,7 +21,7 @@ guide_featured_list:
   image: /assets/img/braze_icons/annotation-dots.svg
 - name: News Feed
   link: /docs/user_guide/engagement_tools/news_feed/
-  fa_icon: fa-solid fa-newspaper
+  image: /assets/img/braze_icons/announcement-02.svg
 - name: Push Messaging
   link: /docs/user_guide/message_building_by_channel/push/
   image: /assets/img/braze_icons/marker-pin-01.svg

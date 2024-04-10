@@ -21,7 +21,7 @@ guide_menu_list:
     image: /assets/img/braze_icons/navigation-pointer-01.svg
   - name: Gérer un gros groupe de contrôle
     link: /docs/help/help_articles/campaigns_and_canvas/more_people_in_control_group/
-    fa_icon: far fa-dot-circle
+    image: /assets/img/braze_icons/target-05.svg
   - name: Journalisation des Propriétés de l’événement personnalisé
     link: /docs/help/help_articles/campaigns_and_canvas/using_custom_event_properties/
     image: /assets/img/braze_icons/code-02.svg

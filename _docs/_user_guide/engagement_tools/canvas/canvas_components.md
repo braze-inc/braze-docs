@@ -21,7 +21,7 @@ guide_featured_list:
     image: /assets/img/braze_icons/clock-stopwatch.svg
   - name: Decision Split Step
     link: /docs/user_guide/engagement_tools/canvas/canvas_components/decision_split/
-    fa_icon: fas fa-random
+    image: /assets/img/braze_icons/dataflow-04.svg
   - name: Audience Paths Step
     link: /docs/user_guide/engagement_tools/canvas/canvas_components/audience_paths/
     image: /assets/img/braze_icons/users-01.svg 

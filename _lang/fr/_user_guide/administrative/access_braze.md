@@ -19,14 +19,14 @@ guide_featured_list:
   image: /assets/img/braze_icons/navigation-pointer-01.svg
 - name: Obtenir votre compte
   link: /docs/user_guide/administrative/access_braze/getting_your_account/
-  fa_icon: far fa-user-circle
+  image: /assets/img/braze_icons/user-circle.svg
 - name: Connexion
   link: /docs/user_guide/administrative/access_braze/getting_your_account/
   image: /assets/img/braze_icons/user-circle.svg
 - name: Réinitialiser votre mot de passe
   link: /docs/user_guide/administrative/access_braze/resetting_your_password/
-  fa_icon: fas fa-unlock-alt
+  image: /assets/img/braze_icons/lock-unlocked-01.svg
 - name: SAML et authentification unique
   link: /docs/user_guide/administrative/access_braze/single_sign_on/
-  fa_icon: fas fa-sign-in-alt
+  image: /assets/img/braze_icons/log-in-01.svg
 ---

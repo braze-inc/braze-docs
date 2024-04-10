@@ -15,7 +15,7 @@ platform:
   - Unity
 ---
 
-# [![Braze Learning course]({% image_buster /assets/img/bl_icon2.png %})](https://learning.braze.com/sdk-integration-basics){: style="float:right;width:120px;border:0;" class="noimgborder"}Getting started: Integration overview
+# [![Braze Learning course]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/sdk-integration-basics){: style="float:right;width:120px;border:0;" class="noimgborder"}Getting started: Integration overview
 
 > This article provides a basic overview of the onboarding process.
 

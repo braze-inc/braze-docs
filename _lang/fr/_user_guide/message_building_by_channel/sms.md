@@ -30,7 +30,7 @@ guide_featured_list:
   image: /assets/img/braze_icons/link-03.svg
 - name: "Reciblage utilisateur"
   link: /docs/user_guide/message_building_by_channel/sms/campaign/retargeting/
-  fa_icon: fa-solid fa-user
+  image: /assets/img/braze_icons/user-01.svg
 - name: "Texte de message et calculatrice de segments"
   link: /docs/user_guide/message_building_by_channel/sms/campaign/segments/
   image: /assets/img/braze_icons/calculator.svg

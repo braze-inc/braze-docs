@@ -14,7 +14,7 @@ guide_featured_list:
   image: /assets/img/braze_icons/building-01.svg
 - name: Recommandé par Amplitude
   link: /docs/partners/data_and_infrastructure_agility/analytics/amplitude/amplitude_audiences/
-  fa_icon: fa-solid fa-lightbulb
+  image: /assets/img/braze_icons/lightbulb-05.svg
 - name: Amplitude et Contenu connecté
   link: /docs/partners/data_and_infrastructure_agility/analytics/amplitude/amplitude_user_profile_api/
   image: /assets/img/braze_icons/user-circle.svg

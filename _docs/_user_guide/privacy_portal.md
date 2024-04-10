@@ -32,7 +32,7 @@ guide_featured_list:
   image: /assets/img/braze_icons/database-01.svg
 - name: User Archival
   link: /docs/user_archival/
-  fa_icon: fa-solid fa-user
+  image: /assets/img/braze_icons/users-01.svg
 - name: Additional Privacy Resources
   link: https://www.braze.com/resources/search?section%5B%5D=articles&q=privacy
   image: /assets/img/braze_icons/book-closed.svg

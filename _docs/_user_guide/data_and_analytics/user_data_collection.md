@@ -19,16 +19,16 @@ guide_featured_list:
     image: /assets/img/braze_icons/refresh-ccw-05.svg
   - name: Data Collection Use Case Example
     link: /docs/user_guide/data_and_analytics/user_data_collection/collection_use_case/
-    fa_icon: fas fa-taxi
+    image: /assets/img/braze_icons/data.svg
   - name: Data Collection Best Practices
     link: /docs/user_guide/data_and_analytics/user_data_collection/best_practices/
-    fa_icon: fa fa-thumbs-up
+    image: /assets/img/braze_icons/thumbs-up.svg
   - name: User Import
     link: /docs/user_guide/data_and_analytics/user_data_collection/user_import/
     image: /assets/img/braze_icons/users-01.svg
   - name: User Language Codes
     link: /docs/user_guide/data_and_analytics/user_data_collection/language_codes/
-    fa_icon: fas fa-language
+    image: /assets/img/braze_icons/globe-04.svg
 ---
 
 <br>

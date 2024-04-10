@@ -16,7 +16,7 @@ guide_featured_list:
   image: /assets/img/braze_icons/users-01.svg
 - name: Back-In-Stock Notifications
   link: /docs/user_guide/personalization_and_dynamic_content/catalogs/back_in_stock_notifications/
-  fa_icon: fas fa-cart-shopping
+  image: /assets/img/braze_icons/shopping-cart-03.svg
 - name: Selections
   link: /docs/user_guide/personalization_and_dynamic_content/catalogs/selections/
   image: /assets/img/braze_icons/list.svg

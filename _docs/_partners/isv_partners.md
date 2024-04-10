@@ -20,7 +20,7 @@ guide_featured_list:
   image: /assets/img/braze_icons/waves.svg
 - name: Snowflake Data Sharing
   link: /docs/partners/isv_partners/snowflake_datasharing
-  fa_icon: fa-solid fa-snowflake
+  image: /assets/img/braze_icons/snowflake.svg
 - name: Data Transformation
   link: /docs/partners/isv_partners/data_transformation
   image: /assets/img/braze_icons/database-01.svg

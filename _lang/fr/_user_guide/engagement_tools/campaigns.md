@@ -25,7 +25,7 @@ guide_featured_list:
     image: /assets/img/braze_icons/beaker-02.svg
   - name: Idées et stratégies
     link: /docs/user_guide/engagement_tools/campaigns/ideas_and_strategies/
-    fa_icon: fas fa-lightbulb
+    image: /assets/img/braze_icons/lightbulb-02.svg
   - name: Foire aux questions
     link: /docs/user_guide/engagement_tools/campaigns/faq/
     image: /assets/img/braze_icons/annotation-question.svg

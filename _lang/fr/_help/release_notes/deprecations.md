@@ -20,7 +20,7 @@ guide_featured_list:
     image: /assets/img/braze_icons/phone-01.svg
   - name: Configuration du SDK Eclipse
     link: /docs/help/release_notes/deprecations/eclipse_setup_deprecated/
-    fa_icon: fas fa-circle
+    image: /assets/img/braze_icons/x.svg
   - name: "Désactivation de TLS 1.0 et 1.1"
     link: /docs/help/release_notes/deprecations/tls_deprecation/
     image: /assets/img/braze_icons/lock-01.svg
@@ -29,7 +29,7 @@ guide_featured_list:
     image: /assets/img/braze_icons/annotation.svg
   - name: Partenariat avec Grouparoo
     link: /docs/help/release_notes/deprecations/grouparoo
-    fa_icon: fa-solid fa-user-group
+    image: /assets/img/braze_icons/users-01.svg
     
 ---
 
