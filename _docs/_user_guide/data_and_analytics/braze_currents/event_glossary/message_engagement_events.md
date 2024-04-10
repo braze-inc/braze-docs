@@ -50,17 +50,17 @@ Objects related to Canvas Flow have IDs that can be used for grouping and transl
 {% endalert %}
 
 {% alert note %}
-Certain events might take a bit longer to display their most recent state. These events are:
+Certain fields might take a bit longer to display their most recent state. These fields are:
 <ul>
-  <li>const val CAMPAIGN_NAME = "campaign_name"</li>
-  <li>const val CANVAS_NAME = "canvas_name"</li>
-  <li>const val CANVAS_STEP_NAME = "canvas_step_name"</li>
-  <li>const val CONVERSION_BEHAVIOR = "conversion_behavior"</li>
-  <li>const val CANVAS_VARIATION_NAME = "canvas_variation_name"</li>
-  <li>const val EXPERIMENT_SPLIT_NAME = "experiment_split_name"</li>
-  <li>const val MESSAGE_VARIATION_NAME = "message_variation_name"</li>
+  <li>"campaign_name"</li>
+  <li>"canvas_name"</li>
+  <li>"canvas_step_name"</li>
+  <li>"conversion_behavior"</li>
+  <li>"canvas_variation_name"</li>
+  <li>"experiment_split_name"</li>
+  <li>"message_variation_name"</li>
 </ul>
-If complete consistency is required, we recommend waiting an hour from the last update to these events to ensure they're current.
+If complete consistency is required, we recommend waiting an hour from the last update to these fields before sending out your messaging to your users.
 {% endalert %}
 
 {% api %}
