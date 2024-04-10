@@ -292,5 +292,5 @@ valid_partner_list:
 - name: Alpaco
   url: /docs/partners/message_orchestration/channel_extensions/email_templates/alpaco/
 - name: MetaRouter
-  url: docs/partners/data_and_infrastructure_agility/workflow_automation/metarouter
+  url: /docs/partners/data_and_infrastructure_agility/workflow_automation/metarouter/
 ---

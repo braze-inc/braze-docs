@@ -31,5 +31,5 @@ valid_partner_list:
 - name: Mozart Data
   url: /docs/partners/data_and_infrastructure_agility/workflow_automation/mozart_data/
 - name: MetaRouter
-  url: docs/partners/data_and_infrastructure_agility/workflow_automation/metarouter
+  url: /docs/partners/data_and_infrastructure_agility/workflow_automation/metarouter/
 ---
