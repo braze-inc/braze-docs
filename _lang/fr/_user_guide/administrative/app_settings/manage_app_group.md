@@ -26,5 +26,5 @@ guide_featured_list:
   image: /assets/img/braze_icons/alert-circle.svg
 - name: Balises
   link: /docs/user_guide/administrative/app_settings/manage_app_group/tags/
-  image: /assets/img/braze_icons/tag-01.svgs
+  image: /assets/img/braze_icons/tag-01.svg
 ---

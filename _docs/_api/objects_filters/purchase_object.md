@@ -19,18 +19,19 @@ A purchase object is an object that gets passed through the API when a purchase 
 
 ```json
 {
-  // One of "external_id" or "user_alias" or "braze_id" is required.
-  "external_id" : (optional, string) External User ID,
-  "user_alias" : (optional, User Alias Object), User Alias,
-  "braze_id" : (optional, string) Braze User Identifier,
+  // One of "external_id" or "user_alias" or "braze_id" or "email" is required.
+  "external_id" : (optional, string) External user ID,
+  "user_alias" : (optional, User Alias Object) User alias object,
+  "braze_id" : (optional, string) Braze user identifier,
+  "email": (optional, string) User email address,
   "app_id" : (optional, string) see App Identifier,
   // See the following product_id naming conventions for clarification.
-  "product_id" : (required, string), identifier for the purchase, for example, Product Name or Product Category,
+  "product_id" : (required, string) identifier for the purchase, for example, Product Name or Product Category,
   "currency" : (required, string) ISO 4217 Alphabetic Currency Code,
   //Revenue from a purchase object is calculated as the product of quantity and price.
   "price" : (required, float) value in the base currency unit (for example, Dollars for USD, Yen for JPY),
   "quantity" : (optional, integer) the quantity purchased (defaults to 1, must be <= 100 -- currently, Braze treats a quantity _X_ as _X_ separate purchases with quantity 1),
-  "time" : (required, datetime as string in ISO 8601), Time of purchase,
+  "time" : (required, datetime as string in ISO 8601) Time of purchase,
   // See the following purchase object explanation for clarification.
   "properties" : (optional, Properties Object) properties of the event,
   // Setting this flag to true will put the API in "Update Only" mode.

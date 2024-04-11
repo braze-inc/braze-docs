@@ -3,7 +3,6 @@ nav_title: Email Capture
 article_title: Email Capture
 alias: "/email_capture/"
 description: "This reference page covers how to create an email capture form with the in-app message drag-and-drop editor."
-hidden: true
 ---
 
 # Email capture form

@@ -20,3 +20,5 @@ guide_featured_list:
   link: /docs/user_guide/sage_ai/recommendations/rules_based_recommendations/
   image: /assets/img/braze_icons/list.svg
 ---
+
+<br><br>

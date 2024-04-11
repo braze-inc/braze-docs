@@ -22,7 +22,7 @@ guide_featured_list:
   image: /assets/img/braze_icons/heart-hand.svg
 - name: "Event Delivery Semantics"
   link: /docs/user_guide/data_and_analytics/braze_currents/event_delivery_semantics/
-  image: /assets/img/braze_icons/key-01.svgboard
+  image: /assets/img/braze_icons/data.svg
 - name: "Message Engagement Events"
   link: /docs/user_guide/data_and_analytics/braze_currents/message_engagement_events/
   image: /assets/img/braze_icons/message-plus-square.svg

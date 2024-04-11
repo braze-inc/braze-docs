@@ -17,7 +17,7 @@ guide_featured_list:
   image: /assets/img/braze_icons/send-01.svg
 - name: "Abonnements"
   link: /docs/user_guide/message_building_by_channel/sms/best_practices/opt-ins/
-  image: /assets/img/braze_icons/sms.svg
+  image: /assets/img/braze_icons/channel-sms.svg
 - name: "Envoyer des messages de test"
   link: /docs/user_guide/engagement_tools/campaigns/testing_and_more/sending_test_messages/
   image: /assets/img/braze_icons/mail-01.svg

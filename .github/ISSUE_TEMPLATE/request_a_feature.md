@@ -2,12 +2,16 @@
 name: Request a feature
 about: Help improve Braze Docs.
 title: ''
-labels: enhancement
-assignees: ''
+labels: Feature
+assignees: internetisaiah, josh-mccrowell-braze
 
 ---
 
-> This template is for requesting docs-related features such as in-page tabbing, accessibility improvements, or content organization. To report a docs issue, see [Report an issue](https://github.com/braze-inc/braze-docs/issues/new?assignees=&labels=issue&projects=&template=report_an_issue.md&title=).
+<!--
+This template is for requesting docs-related features such as in-page tabbing, accessibility improvements, or content organization. To report a docs issue instead, see:
+
+https://github.com/braze-inc/braze-docs/issues/new?assignees=&labels=issue&projects=&template=report_an_issue.md&title=
+-->
 
 ### Feature description
 <!-- A clear and concise description of the feature. -->
