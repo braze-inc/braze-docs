@@ -132,7 +132,8 @@ Replace `FIREBASE_SENDER_ID` with the value you copied from your Firebase projec
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-  <string translatable="false" name="com_braze_api_key">12345ABC-6789-DEFG-0123-HIJK456789LM</string><bool translatable="false" name="com_braze_firebase_cloud_messaging_registration_enabled">true</bool>
+  <string translatable="false" name="com_braze_api_key">12345ABC-6789-DEFG-0123-HIJK456789LM</string>
+  <bool translatable="false" name="com_braze_firebase_cloud_messaging_registration_enabled">true</bool>
 <string translatable="false" name="com_braze_firebase_cloud_messaging_sender_id">603679405392</string>
 </resources>
 ```
