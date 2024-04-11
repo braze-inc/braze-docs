@@ -67,6 +67,8 @@ To detect sessions via your user, find your user on the dashboard and navigate t
 
 ![The app usage section of a user profile showing the number of sessions, last used date, and first used date.][session_tracking_7]
 
+App-specific details will display only if the user has used more than one app.
+
 ## Subscribing to session updates
 
 To listen to session updates, use the [`subscribeToSessionUpdates(_:)`][1] method:
