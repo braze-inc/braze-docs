@@ -76,14 +76,11 @@ AppDelegate.braze = braze;
 
 ### Configuring geofences for background reporting
 
-By default, geofences are only monitored in two instances:
+By default, geofences are only monitored if your app is in the foreground, or it has `Always` authorization (which monitors all application states).
 
-1. Your app is in the foreground.
-2. All application states _if_ the user has granted you `Always` authorization.
+However, you can choose to monitor geofence events when your app is in the background or when it has `When In Use` authorization by adding the `Background Mode -> Location updates` capability to your Xcode project and enabling `allowBackgroundGeofenceUpdates`. This let's Braze extend your app's "in use" status by continuously monitoring location updates.
 
-To receive geofence events even if your app is in the background or you have `When In Use` authorization, add the `Background Mode -> Location updates` capability to your Xcode project and enable the `allowBackgroundGeofenceUpdates` configuration.
-
-When this setting is enabled, Braze extends your app's "in use" status by continuously monitoring location updates. This behavior only applies when your app is in the background, not when its suspended. When your app re-opens, background processes will be paused and foreground processes will be prioritized instead.
+`allowBackgroundGeofenceUpdates` only works when your app is in the background. When it re-opens, it's existing background processes are paused, so foreground processes can be prioritized instead.
 
 {% alert important %}
 To prevent battery drain and rate limiting, be sure to configure `distanceFilter` to a value that meets your app's specific needs. Setting `distanceFilter` to a higher value prevents your app from requesting your user's location too frequently.
