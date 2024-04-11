@@ -221,19 +221,19 @@ Link here: [Braze.com](https://www.braze.com){: height="36px" width="36px"}
 ## Image Test
 {% tabs %}
 {% tab Styling %}
-Image: ![Logo]({% image_buster /assets/img/braze-logo-mark.png %}){: style="max-width:30%;"}
+Image: ![Logo]({% image_buster /assets/img/braze-logo-mark.png %}){: style="max-width:30%;" class="noimgborder"}
 
 #### Linked Image Test
 
-Linked Image: [![Braze]({% image_buster /assets/img/braze-logo-mark.png %}){: style="max-width:30%;"}](https://www.braze.com)
+Linked Image: [![Braze]({% image_buster /assets/img/braze-logo-mark.png %}){: style="max-width:30%;" class="noimgborder"}](https://www.braze.com)
 
 #### Image Styling
 
-![Text]({% image_buster /assets/img/logo-braze-fa.svg %}){: style="max-width:30%; color: green" }
+![Text]({% image_buster /assets/img/logo-braze-fa.svg %}){: style="max-width:30%; color: green" class="noimgborder"}
 
 #### Anchoring Images
 
-![Text]({% image_buster /assets/img/logo-braze-fa.svg %}){: style="float:right;max-width:30%; color: green" }
+![Text]({% image_buster /assets/img/logo-braze-fa.svg %}){: style="float:right;max-width:30%; color: green" class="noimgborder"}
 <br><br><br><br><br>
 {% endtab %}
 {% tab Markdown %}
