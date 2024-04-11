@@ -8,9 +8,11 @@ hide_toc: true
 
 # Braze Go
 
-> Braze Go is not available in all markets. If you are interested in learning more about Braze Go, contact your account manager.
+> Braze Go offers streamlined access to the Braze customer engagement platform to help your marketing teams start anywhere and go everywhere. Designed for simplicity and efficiency, Braze Go is tailored for select emerging markets.
 
-Braze Go offers streamlined access to the Braze customer engagement platform to help your marketing teams start anywhere and go everywhere. Designed for simplicity and efficiency, Braze Go is tailored for select emerging markets.
+{% alert important %}
+Braze Go is not available in all markets. If you are interested in learning more about Braze Go, contact your account manager.
+{% endalert %}
 
 Braze Go offers all of the same functionality as Braze, with the focused changes to the following features: 
 
