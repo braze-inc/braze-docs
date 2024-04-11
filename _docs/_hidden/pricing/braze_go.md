@@ -10,23 +10,23 @@ hide_toc: true
 
 > Braze Go is not available in all markets. If you are interested in learning more about Braze Go, contact your account manager.
 
-Braze Go offers streamlined access to the Braze customer engagement platform to help your marketing teams start anywhere and go everywhere. Built with all of our cross-channel and real-time capabilities, Braze Go is tailored to the need for agile and efficient marketing that drives exceptional ROI in select emerging markets.
+Braze Go offers streamlined access to the Braze customer engagement platform to help your marketing teams start anywhere and go everywhere. Designed for simplicity and efficiency, Braze Go is tailored for select emerging markets.
 
 Braze Go offers all of the same functionality as Braze, with the focused changes to the following features: 
 
-- A maximum of 30 active campaigns is allowed
-- A maximum of 20 active Canvases is allowed
-- The total REST API default rate limit is 50k/hour per app group
+- You can have up to 30 active campaigns.
+- You can have up to 20 active Canvases.
+- The total REST API default rate limit is 50,000 per hour, per app group.
     - For non-Braze Go usage, learn more about [REST API limits]({{site.baseurl}}/api/api_limits/#rate-limits-by-request-type).
-- Campaign and Canvas interaction data retention is 2 months with no restoration
+- Campaign and Canvas interaction data retention is 2 months with no restoration.
     - For non-Braze Go usage, learn more about [messaging interaction data availability]({{site.baseurl}}/messaging_interaction_data/).
 
 {% alert note %}
 Interaction data for campaigns and Canvases is different from Snowflake data and has no effect whatsoever.
 {% endalert %}
 
-- Braze-to-Braze webhooks are not allowed
-- Filters related to tags are not allowed. Specifically, these are the "campaign or canvas with tag” filters:
+- Braze-to-Braze webhooks are not supported.
+- Filters related to tags are not supported, specifically the following filters:
     - Clicked or Opened Campaign or Canvas with Tag
     - Last Received Message from Campaign or Canvas with Tag
     - Received Campaign or Canvas with Tag
