@@ -10,13 +10,13 @@ tool: Reports
 
 # Query Builder Templates
 
-> Access [Query Builder]({{site.baseurl}}/user_guide/data_and_analytics/query_builder/) templates by selecting **Query Template** when creating a report. All templates surface data from the last 60 days. 
+> Access [Query Builder]({{site.baseurl}}/user_guide/data_and_analytics/query_builder/) templates by selecting **Query Template** when creating a report. All templates surface data from up to the last 60 days, but you can directly edit that and other values in the editor.
 
 ## Campaign templates
 
 ### Campaign revenue by country
 
-This report provides revenue per country for a specific campaign. To run this report, you'll need to specify the API identifier for a campaign. You can find a campaign's API identifier at the bottom of that campaign's details page.
+This report provides revenue per country for a specific campaign. To run this report, you must specify the API identifier for a campaign. You can find a campaign's API identifier at the bottom of that campaign's details page.
 
 For each country, you'll see the amount of revenue generated, number of orders, number of returns, net revenue, and gross revenue.
 
@@ -33,7 +33,7 @@ For each country, you'll see the amount of revenue generated, number of orders, 
 
 ### Canvas revenue by country
 
-This report provides revenue per country for a specific Canvas. To run this report, you'll need to specify the API identifier for a Canvas. You can find the Canvas API identifier under **Analyze Variants**.
+This report provides revenue per country for a specific Canvas. To run this report, you must specify the API identifier for a Canvas. You can find the Canvas API identifier under **Analyze Variants**.
 
 For each country, you'll see the amount of revenue generated, number of orders, number of returns, net revenue, and gross revenue.
 
@@ -50,13 +50,13 @@ For each country, you'll see the amount of revenue generated, number of orders, 
 
 ### Email bounces per domain
 
-The number of bounces per email domain.
+The number of bounces per email domain, broken down into total bounces, hard bounces, and soft bounces.
 
 ![]({% image_buster /assets/img_archive/query_builder_q4.png %}){: style="max-width:50%;"}
 
 ### Email delivery metrics by day
 
-This report provides metrics for the messages sent on particular days, such as how many emails were sent, delivered, soft bounced, and hard bounced. 
+This report provides metrics for the messages sent on each day, such as how many emails were sent, delivered, soft bounced, and hard bounced. 
 
 All metrics are unique over the entirety of the reporting period. For example, if a welcome email soft bounced one time on Nov 21, two times on Nov 22, and was never delivered:
 - The *Soft Bounces* metric for Nov 21 increases by one.
@@ -66,7 +66,7 @@ All metrics are unique over the entirety of the reporting period. For example, i
 
 ### Email engagement metrics by segment
 
-This report provides metrics for the messages sent to each specific segment, such as how many emails were sent, delivered, soft bounced, and hard bounced. 
+This report provides metrics for the messages sent to each segment, such as how many emails were sent, delivered, soft bounced, and hard bounced. 
 
 All metrics are unique over the entirety of the reporting period. For example, if a welcome email soft bounced one time on Nov 21, two times on Nov 22, and was never delivered:
 - The *Soft Bounces* metric for Nov 21 increases by one.
@@ -76,7 +76,7 @@ All metrics are unique over the entirety of the reporting period. For example, i
 
 ### Email engagement metrics for variants or steps, by segment
 
-Each row of this report contains metrics about the messages sent for variants or Canvas steps within a specific segment. These metrics include how many emails were sent, delivered, soft bounced, and hard bounced. 
+This report provides metrics for the variants or Canvas steps of the messages sent to each segment. These metrics include how many emails were sent, delivered, soft bounced, and hard bounced. 
 
 All metrics are unique over the entirety of the reporting period. For example, if a welcome email soft bounced one time on Nov 21, two times on Nov 22, and was never delivered:
 - The *Soft Bounces* metric for Nov 21 increases by one.
@@ -94,7 +94,7 @@ For each user, you'll see the metrics that were logged about their subscription 
 
 ### Email subscription group opt-ins and opt-outs
 
-For each week, you'll see the number of unique user opt-ins and opt-outs of any email subscription groups.
+For each week, you'll see the number of unique user opt-ins and opt-outs of any email subscription group.
 
 ![]({% image_buster /assets/img_archive/query_builder_q2.png %}){: style="max-width:70%;"}
 
@@ -112,7 +112,7 @@ For each de-personalized link, you'll see a count of clicks. Your CSV download w
 
 ### Top/bottom messaging for email engagement
 
-This report shows email engagment metrics for the top or bottom campaigns, Canvases, or Canvas steps. Each row is a campaign, Canvas, or Canvas step. You must specify whether to display the top or bottom performers, and the specific metric to run this analysis for (such as *Sent*, *Soft Bounces*, and *Unique Opens*).
+This report shows email engagment metrics for the top or bottom campaigns, Canvases, or Canvas steps. You must specify whether to display the top or bottom performers, and the specific metric to run this analysis for (such as *Sent*, *Soft Bounces*, and *Unique Opens*).
 
 The rows in top performer reports will be ordered from best to worst, while the rows in bottom performer reports will be ordered from worst to best.
 
@@ -177,13 +177,13 @@ For each channel, you'll see all engagement metrics for that channel (such as op
 
 ### Purchases and revenue by segment
 
-Each row of this report contains metrics about the messages sent for a specific segment.
+This report provides metrics for the messages sent for a specific segment.
 
 Purchase metrics are unique over the entirety of the reporting period. One user can generate at most one purchase. Revenue takes into account every purchase from the reporting period.
 
 ### Purchases and revenue for variants or steps, by segment
 
-Each row of this report contains metrics about the messages sent for variants or Canvas steps within a specific segment.
+This report provides metrics for the variants or Canvas steps of the messages sent to each segment.
 
 Purchase metrics are unique over the entirety of the reporting period. One user can generate at most one purchase. Revenue takes into account every purchase from the reporting period.
 
