@@ -76,12 +76,17 @@ AppDelegate.braze = braze;
 
 ### Configuring geofences for background reporting
 
-By default, geofences are monitored only when your app is in the foreground, or in all application states if your user has granted `Always` authorization. If you wish to additionally receive geofence events while your app is in the background and only has `When In Use` authorization, add the `Background Mode -> Location updates` capability to your Xcode project and enable the `allowBackgroundGeofenceUpdates` configuration.
+By default, geofences are only monitored in two instances:
 
-When this setting is enabled, Braze will extend your app's "in use" status by continuously monitoring location updates. This behavior only applies when your app is in the background, not when it has been suspended. When your app re-opens, background tasks will cease in favor of standard foreground processing.
+1. Your app is in the foreground.
+2. All application states _if_ the user has granted you `Always` authorization.
+
+To receive geofence events even if your app is in the background or you have `When In Use` authorization, add the `Background Mode -> Location updates` capability to your Xcode project and enable the `allowBackgroundGeofenceUpdates` configuration.
+
+When this setting is enabled, Braze extends your app's "in use" status by continuously monitoring location updates. This behavior only applies when your app is in the background, not when its suspended. When your app re-opens, background processes will be paused and foreground processes will be prioritized instead.
 
 {% alert important %}
-To prevent battery drain and rate limiting, be sure to also configure the `distanceFilter` to a reasonable value based on your app's use case. Setting this property to a higher value will lower the sensitivity, which will avoid pinging your user's location too frequently.
+To prevent battery drain and rate limiting, be sure to configure `distanceFilter` to a value that meets your app's specific needs. Setting `distanceFilter` to a higher value prevents your app from requesting your user's location too frequently.
 {% endalert %}
 
 ## Step 4: Check for Braze background push
@@ -96,31 +101,47 @@ This description will be shown when the system location prompt requests authoriz
 
 ## Step 6: Request authorization from the user
 
-{% alert note %}
-Calling `requestAlwaysAuthorization()` does not guarantee that you will receive `Always` authorization. By default, this method grants your app `When In Use` authorization and will prompt your user again after some period of time to promote their location permissions to `Always`. Alternatively, your user can manually change this in their device settings.
+When requesting authorization from a user, you can request [`When In Use`](#when-in-use) or [`Always`](#always) authorization.
 
-If you wish to immediately prompt your user for `Always` authorization, first call `requestWhenInUseAuthorization()`. Then, after receiving `When In Use` permissions, subsequently call `requestAlwaysAuthorization()`. The system will only allow you to present this prompt once.
-{% endalert %}
+### When In Use
 
-To request for `Always` or `When In Use` location authorization, use the following code:
+To request `When In Use` authorization, use the `requestWhenInUseAuthorization()` method:
 
 {% tabs %}
 {% tab swift %}
-
 ```swift
 var locationManager = CLLocationManager()
 locationManager.requestWhenInUseAuthorization()
-// or
-locationManager.requestAlwaysAuthorization()
 ```
-
 {% endtab %}
-{% tab OBJECTIVE-C %}
 
+{% tab OBJECTIVE-C %}
 ```objc
 CLLocationManager *locationManager = [[CLLocationManager alloc] init];
 [locationManager requestWhenInUseAuthorization];
-// or
+```
+{% endtab %}
+{% endtabs %}
+
+### Always
+
+By default, `requestAlwaysAuthorization()` only grants your app `When In Use` authorization and will re-prompt your user for `Always` authorization after some time has passed. However, you can choose to immediately prompt your user by first calling `requestWhenInUseAuthorization()`, then calling `requestAlwaysAuthorization()` after receiving your initial `When In Use` authorization.
+
+{% alert important %}
+You can only immediately prompt for `Always` authorization a single time.
+{% endalert %}
+
+{% tabs %}
+{% tab swift %}
+```swift
+var locationManager = CLLocationManager()
+locationManager.requestAlwaysAuthorization()
+```
+{% endtab %}
+
+{% tab OBJECTIVE-C %}
+```objc
+CLLocationManager *locationManager = [[CLLocationManager alloc] init];
 [locationManager requestAlwaysAuthorization];
 ```
 {% endtab %}
