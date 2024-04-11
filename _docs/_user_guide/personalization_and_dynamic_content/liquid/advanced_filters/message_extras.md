@@ -8,19 +8,25 @@ alias: "/message_extras_tag/"
 
 # Message extras Liquid tag
 
-> Using the `message_extras` Liquid tag, you can annotate your send events with dynamic data from Connected Content, Catalogs, custom attributes (such as language, country), Canvas entry properties, or other data sources. 
+> Using the `message_extras` Liquid tag, you can annotate your send events with dynamic data from Connected Content, Catalogs, custom attributes (such as language, country), Canvas entry properties, or other data sources.
 
-The `message_extras` Liquid tag appends key-value pairs to the corresponding send event in Currents and Snowflake Data Sharing. This is supported for all message types with a send event.
+The `message_extras` Liquid tag appends key-value pairs to the corresponding send event in Currents and Snowflake Data Sharing. 
 
-To send dynamic or extra data back to your Currents or Snowflake Data Sharing send event, insert the proper Liquid tag into your message body. The following is an example of the standard Liquid tag format for `message_extras`: 
+To send dynamic or extra data back to your Currents or Snowflake Data Sharing send event, insert the proper Liquid tag into your message body. 
+
+The following is an example of the standard Liquid tag format for `message_extras`:
 
 {% raw %}
-```
+```liquid
 {% message_extras :key test :value 123 %}
 ```
 {% endraw %}
 
-You can add these tags as needed for your key-value pairs in the message body. However, the length of all keys and values should not exceed 1&nbsp;KB. In Currents and Snowflake Data Sharing, you'll see a new event field called `message_extras` for your send events. This will generate a JSON serialized string in one field. 
+You can add these tags as needed for your key-value pairs in the message body. However, the length of all keys and values should not exceed 1&nbsp;KB. In Currents and Snowflake Data Sharing, you'll see a new event field called `message_extras` for your send events. This will generate a JSON serialized string in one field.
+
+## Supported channels
+
+The `message_extras` tag is supported for all message types with a send event, along with in-app message impression events. Using `message_extras` with in-app messages requires certain [minimum SDK versions](#iam-sdk) to be met.
 
 ## How to use
 
@@ -52,9 +58,11 @@ Any other input that doesn't match the aforementioned tag standard may fail to p
 
 A `dispatch_id` is generated and provided in your send events, which can be used as a unique identifier to tie to specific click, open or delivered events. You will be able to utilize and query this field in Currents or Snowflake. Learn more about [`dispatch_id` behavior]({{site.baseurl}}/help/help_articles/data/dispatch_id/).
 
-#### Can I use message_extras with in-app messages?
+#### Can I use message_extras with in-app messages? {#iam-sdk}
 
-Using`message_extras` in the in-app message channel is not supported at this time.
+Yes, you can use `message_extras` in your in-app messages as long as your users' devices are on the following minimum SDK versions:
+
+{% sdk_min_versions web:5.2.0 android:30.4.0 swift:8.4.0 %}
 
 [1]: {% image_buster /assets/img_archive/message_extras1.png %}
 [2]: {% image_buster /assets/img_archive/message_extras2.png %}

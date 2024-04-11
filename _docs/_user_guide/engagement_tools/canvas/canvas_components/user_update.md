@@ -68,6 +68,7 @@ Track when a user has items in their shopping cart, when they add new items or r
 
 1. Create custom array of objects called `shopping_cart`. The following example shows what this attribute may look like. Each item has a unique `product_id` that has more complex data in its own nested array of objects, including `price`.
 
+{% raw %}
 ```javascript
 {
   "attributes": [
@@ -87,6 +88,7 @@ Track when a user has items in their shopping cart, when they add new items or r
   ]
 }
 ```
+{% endraw %}
 
 {:start="2"}
 2. Create a [custom event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) named `add_item_to_cart` that is logged when a user adds an item to the basket. 
@@ -94,6 +96,7 @@ Track when a user has items in their shopping cart, when they add new items or r
 
 The `shopping_cart` attribute carries the total of many custom events: the total cost of all the items, the total number of items in the cart, if the shopping cart contains a gift, and so on. This can look something like the following:
 
+{% raw %}
 ```javascript
 {
   "attributes": [
@@ -113,6 +116,7 @@ The `shopping_cart` attribute carries the total of many custom events: the total
   ]
 }
 ```
+{% endraw %}
 
 ## Setting Canvas entry property as an attribute
 

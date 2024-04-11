@@ -66,6 +66,8 @@ Refer to [Catalogs additional use cases](https://www.braze.com/docs/user_guide/p
 - `variant_image_url`
 - `vendor`
 - `product_type`
+- `product_url`
+- `product_handle`
 - `published_scope`
 - `price`
 - `compare_at_price`

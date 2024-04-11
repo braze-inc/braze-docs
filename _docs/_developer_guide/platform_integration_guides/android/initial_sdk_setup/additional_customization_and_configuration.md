@@ -1,6 +1,6 @@
 ---
 nav_title: Other SDK Customizations
-article_title: Other SDK Customizations for Android and FireOS
+article_title: Other SDK customizations for Android and FireOS
 page_order: 3
 platform: 
   - Android
@@ -9,7 +9,7 @@ description: "This reference article covers additional customization and configu
 
 ---
 
-# Other SDK customizations
+# Other SDK customizations for Android and FireOS
 
 > This reference article covers additional customization and configuration options such as verbose logging, suppressing logging, and how to implement multiple API keys.
 
