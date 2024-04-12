@@ -63,7 +63,7 @@ The minimum value for `sessionTimeout` is 1 second. The default value is 10 seco
 
 ## Testing session tracking
 
-To detect sessions via your user, find your user on the dashboard and navigate to **App Usage** on the user profile. You can confirm that session tracking is working by checking that the "Sessions" metric increases when you expect it to. App-specific details will display after the user has used more than one app.
+To detect sessions via your user, find your user on the dashboard and navigate to **Sessions Overview** on the user profile. You can confirm that session tracking is working by checking that the "Sessions" metric increases when you expect it to. App-specific details will display after the user has used more than one app.
 
 ![The app usage section of a user profile showing the number of sessions, last used date, and first used date.][session_tracking_7]{: style="max-width:40%;"}
 
