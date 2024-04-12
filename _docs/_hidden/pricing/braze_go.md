@@ -18,7 +18,7 @@ Braze Go offers all of the same functionality as Braze, with the focused changes
 
 - You can have up to 30 active campaigns.
 - You can have up to 20 active Canvases.
-- The total REST API default rate limit is 50,000 per hour, per app group.
+- The total REST API default rate limit is 50,000 per hour, per workspace.
     - For non-Braze Go usage, learn more about [REST API limits]({{site.baseurl}}/api/api_limits/#rate-limits-by-request-type).
 - Campaign and Canvas interaction data retention is 2 months with no restoration.
     - For non-Braze Go usage, learn more about [messaging interaction data availability]({{site.baseurl}}/messaging_interaction_data/).
