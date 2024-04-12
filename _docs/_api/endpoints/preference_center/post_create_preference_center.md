@@ -102,7 +102,7 @@ Refer to the following Liquid tags that can be included in your HTML to generate
 ```
 {% endraw %}
 
-### Example HTML with form inputs 
+### HTML with form inputs 
 
 {% raw %}
 ```
