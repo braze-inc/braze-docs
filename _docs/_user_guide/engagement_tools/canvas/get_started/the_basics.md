@@ -18,7 +18,7 @@ Before getting started with the finer details of [Canvas setup]({{site.baseurl}}
 
 {% tabs %}
   {% tab Canvas %}
-  A Canvas is a unified interface where marketers can set up campaigns with multiple messages and steps to form a cohesive journey.
+  Canvas is a unified interface where marketers craft campaigns with multiple messages. It's a bit like a visual programming tool, letting you build a cohesive user journey out of a series of steps.
 
   {% endtab %}
 
@@ -39,7 +39,7 @@ Before getting started with the finer details of [Canvas setup]({{site.baseurl}}
   {% endtab %}
 
   {% tab Steps %}
-  A step in Canvas is a marketing decision point that determines your user journey. You can leverage [Canvas components]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/#about-canvas-components) to build the steps of your user journey.<br>Within a step, you can set triggers or schedule delivery, refine targeting by adding filters or marking [exception events]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/exception_events/) and add channels from email to push to webhooks.<br><br> ![]({% image_buster /assets/img_archive/canvas_flow_step.png %}){: style="max-width:90%;"}
+  A step in Canvas is a marketing decision point: "if this, then that." You can leverage [Canvas components]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/#about-canvas-components) to build the steps of a user journey.<br>Within a step, you can set triggers or schedule delivery, refine targeting by adding filters or marking [exception events]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/exception_events/), and specify different channels, like push notifications or webhook events.<br><br> ![]({% image_buster /assets/img_archive/canvas_flow_step.png %}){: style="max-width:90%;"}
 
   {% endtab %}
 {% endtabs %}
@@ -47,6 +47,8 @@ Before getting started with the finer details of [Canvas setup]({{site.baseurl}}
 ## Building the customer journey
 
 By using the five W's of visualization, you can identify your customer engagement strategies for how to create a personalized message journey for each user. These five W's are: what, when, who, why, and where. 
+
+<!--Find a good sample use case, slap a fakebrandz onto it, put it as an example for each step-->
 
 ### The "what": Name your Canvas
 
