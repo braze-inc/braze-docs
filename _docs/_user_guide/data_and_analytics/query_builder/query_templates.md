@@ -8,7 +8,7 @@ description: "This reference article lists the types of reports you can create u
 tool: Reports
 ---
 
-# Query Builder Templates
+# Query Builder templates
 
 > Access [Query Builder]({{site.baseurl}}/user_guide/data_and_analytics/query_builder/) templates by selecting **Query Template** when creating a report. All templates surface data from up to the last 60 days, but you can directly edit that and other values in the editor.
 
