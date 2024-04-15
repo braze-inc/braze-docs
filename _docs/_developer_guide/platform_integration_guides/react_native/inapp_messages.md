@@ -220,7 +220,7 @@ The Braze React Native SDK allows you to incorporate animated GIFs into your in-
 
 {% tabs %}
 {% tab Android %}
-On the Android SDK, HTML in-app messages support displaying animated GIFs by default. For all other in-app messages, a custom image library is required. For more details, refer to the guide for [GIFs](https://www.braze.com/docs/developer_guide/platform_integration_guides/android/in-app_messaging/customization/gifs/).
+On the Android SDK, HTML in-app messages support displaying animated GIFs by default. For all other in-app messages, a custom image library is required. For more details, refer to the guide for [GIFs]({{site.baseurl}}/developer_guide/platform_integration_guides/android/in-app_messaging/customization/gifs/).
 {% endtab %}
 {% tab iOS %}
 On the Swift SDK, all Braze in-app messages support displaying animated GIFs by default. For more details, refer to the tutorial for [GIF Support](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/c3-gif-support).
