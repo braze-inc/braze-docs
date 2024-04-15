@@ -29,17 +29,18 @@ Before getting started with the finer details of [Canvas setup]({{site.baseurl}}
   {% endtab %}
 
   {% tab Entry Wizard %}
+  <!--This is the only instance, except a mention in the release notes, that names this component the 'Entry Wizard.' Perhaps we just change this to 'Entry'-->
   The Entry Wizard includes the first steps to take when creating your Canvas. This includes basics such as naming your Canvas and adding teams. Essentially, the Entry Wizard is the crucial setup required prior to beginning building your Canvas. Here, you can control the way your users begin and fulfill their customer journey with options to edit the [entry schedule]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#step-2b-set-your-canvas-entry-schedule), [target audience]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#step-2c-set-your-target-entry-audience), and [send settings]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#step-2d-select-your-send-settings).<br><br> ![]({% image_buster /assets/img_archive/canvas_flow_entry_wizard.png %}){: style="max-width:90%;"}
 
   {% endtab %}
 
   {% tab Variants %}
-  A variant is the path each customer follows on their journey. Canvas supports up to eight variants with a control group. You can name each variant and control the distribution of the target audience following each variant.<br><br> ![]({% image_buster /assets/img_archive/canvas_flow_variants.png %}){: style="max-width:90%;"}
+  A variant is the path each customer follows on their journey. Canvas supports up to eight variants with a control group. You control which segment of your audience will follow each variant.<br><br> ![]({% image_buster /assets/img_archive/canvas_flow_variants.png %}){: style="max-width:90%;"}
 
   {% endtab %}
 
   {% tab Steps %}
-  A step in Canvas is a marketing decision point: "if this, then that." You can leverage [Canvas components]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/#about-canvas-components) to build the steps of a user journey.<br>Within a step, you can set triggers or schedule delivery, refine targeting by adding filters or marking [exception events]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/exception_events/), and specify different channels, like push notifications or webhook events.<br><br> ![]({% image_buster /assets/img_archive/canvas_flow_step.png %}){: style="max-width:90%;"}
+  A step in Canvas is a marketing decision point: "if this, then that." Leverage [Canvas components]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/#about-canvas-components) to build the steps of a user journey.<br>Within a step, you set triggers or schedule delivery, refine targeting by adding filters or marking [exception events]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/exception_events/), and specify different channels like push notifications or webhook events.<br><br> ![]({% image_buster /assets/img_archive/canvas_flow_step.png %}){: style="max-width:90%;"}
 
   {% endtab %}
 {% endtabs %}
