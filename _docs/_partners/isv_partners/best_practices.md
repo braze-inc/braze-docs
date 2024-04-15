@@ -20,13 +20,13 @@ Learn more about how Braze collects data:
     - Within the [User identify]({{site.baseurl}}/api/endpoints/user_data/post_user_identify/) endpoint the `merge_behavior` field can be used to specify what data from the user alias profile should persist on the known user profile.
     - Note that for the user alias to be a sendable profile, you must still include email and/or phone as a standard attribute on the profile.
 - `device_id`: An automatically generated, device-specific identifier. A user profile can have a number of `device_ids` associated with it. For example, a user who has logged in to their account on their work computer, home computer, tablet, and iOS app would have 4 `device_ids` associated with their profile.
-- Email Address (in early access):
+- Email Address & Phone Number:
     - Supported as an identifier in Braze’s track user endpoint. 
-    - When using the email address as the identifier within a request, there are three possible outcomes:
-        1. If a user with this email address does not exist within Braze, an email-only user profile will be created, and any data in the request will be added to the profile.
-        2. If a profile with this email address already exists within Braze, it will be updated to include any data sent within the request.
-        3. In a use case with more than one profile with this email address, the most recently updated profile will be prioritized.
-    - Note that if an email-only user profile exists and then an identified profile with the same email address is created (such as another profile with the same email address AND an external ID), Braze will create a second profile. Subsequent updates will go to the profile with the external ID.
+    - When using the email address or phone numbers as the identifier within a request, there are three possible outcomes:
+        1. If a user with this email/phone does not exist within Braze, an email-only/phone-only user profile will be created, and any data in the request will be added to the profile.
+        2. If a profile with this email/phone already exists within Braze, it will be updated to include any data sent within the request.
+        3. In a use case with more than one profile with this email/phone, the most recently updated profile will be prioritized.
+    - Note that if an email-only/phone-only user profile exists and then an identified profile with the same email/phone is created (such as another profile with the same email address AND an external ID), Braze will create a second profile. Subsequent updates will go to the profile with the external ID.
         - The two profiles can be merged using the Braze [/merge/users]({{site.baseurl}}/api/endpoints/user_data/post_users_merge/) endpoint
 
 ## Handling anonymous users
