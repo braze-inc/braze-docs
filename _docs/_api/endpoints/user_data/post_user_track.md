@@ -50,7 +50,7 @@ Authorization: Bearer YOUR_REST_API_KEY
 ### Request parameters
 
 {% alert important %}
-For each request component listed in the following table, one of `external_id`, `user_alias`, `braze_id`, or `email` is required.
+For each request component listed in the following table, one of `external_id`, `user_alias`, `braze_id`, `email`, or `phone` is required.
 {% endalert %}
 
 | Parameter | Required | Data Type | Description |
