@@ -213,7 +213,7 @@ If you are using the [older navigation]({{site.baseurl}}/navigation), these page
 ### What can it be used for?
 
 - List a user's subscription groups
-- Grap a user's subscription group status
+- Grab a user's subscription group status
 - Update a user's subscription group status
 
 {% endtab %}
