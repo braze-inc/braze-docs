@@ -84,7 +84,7 @@ When creating new users via the [/users/track]({{site.baseurl}}/api/endpoints/us
 
 | Parameter | Required | Data Type | Description |
 |---|---|---|---|
-| `subscription_group_id` | Required | String | The `id` of your subscription group. |
+| [`subscription_group_id`]({{site.baseurl}}/api/identifier_types/?tab=subscription%20group%20ids) | Required | String | The `id` of your subscription group. |
 | `subscription_state` | Required | String | Available values are `unsubscribed` (not in subscription group) or `subscribed` (in subscription group). |
 | `external_id` | Required* | Array of strings | The `external_id` of the user or users, may include up to 50 `id`s. |
 | `email` | Required* | String or array of strings | The email address of the user, can be passed as an array of strings. Must include at least one email address (with a maximum of 50). <br><br>If multiple users (`external_id`) in the same workspace share the same email address, then all users that share the email address are updated with the subscription group changes. |
