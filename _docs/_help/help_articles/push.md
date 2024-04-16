@@ -26,5 +26,7 @@ guide_menu_list:
   - name: Resetting Push Permissions
     link: /docs/help/help_articles/push/resetting_push_permissions/
     fa_icon: fas fa-circle-check
-
+  - name: Tracking Push Unsubscribes
+    link: /docs/help/help_articles/push/push_unsubscribes/
+    fa_icon: fas fa-circle-check
 ---

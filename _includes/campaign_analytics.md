@@ -252,6 +252,8 @@ Here is a breakdown of some key metrics you may see while reviewing your message
 | Opens | Instances including both _Direct Opens_ and _Influenced Opens_ in which the Braze SDK has determined, using a proprietary algorithm, that a push notification has caused a user to open the app. |
 {: .reset-td-br-1 .reset-td-br-2}
 
+See [Tracking push unsubscribes]({{site.baseurl}}/help/help_articles/push/push_unsubscribes) for steps on how to manually track the metric.
+
 {% alert tip %}
 Even though _Direct Opens_ and _Influenced Opens_ include the word "opens", they're actually different metrics. _Direct Opens_ refers to the direct opening of a push notification, as stated in the table above. _Influenced Opens_ refers to the opening of an app, without opening a push notification within a specific time frame after receiving it. So, _Influenced Opens_ refers to the app opens, not push notification opens.
 {% endalert %}
