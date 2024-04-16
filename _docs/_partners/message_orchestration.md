@@ -14,6 +14,8 @@ partner_path: "https://www.braze.com/product/alloys/partners/"
 partner_top_header: "Message Orchestration"
 
 valid_partner_list:
+- name: Alpaco
+  url: /docs/partners/message_orchestration/channel_extensions/email_templates/alpaco/
 - name: Antavo
   url: /docs/partners/message_orchestration/channel_extensions/loyalty/antavo/
 - name: Jampp

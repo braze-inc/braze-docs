@@ -92,12 +92,19 @@ The `messages` response will contain information about each message. The followi
 ```json
 {
     "channel": "email",
+    "name": (string) the name of the variant,
+    "extras": (array) the email extras,
     "subject": (string) the subject,
     "body": (string) the HTML body,
     "from": (string) the from address and display name,
     "reply_to": (string) the reply-to for message, if different than "from" address,
     "title": (string) the name of the email,
-    "extras": (hash) any key-value pairs provided
+    "amp_body": (string) the AMP HTML body,
+    "preheader": (string) the preheader,
+    "custom_plain_text": (string) the custom plain text,
+    "should_inline_css": (boolean) whether there should be inline CSS,
+    "should_whitespace_header": (boolean) whether there should be a whitespace header,
+    "email_headers": (array) list of email headers
 }
 ```
 
@@ -185,7 +192,7 @@ The `messages` response will contain information about each message. The followi
 ```json
 {
   "channel": "whats_app",
-  "subscription_group_id": (string) the API ID of the subscription group selected in the WhatsApp message
+  "subscription_group_id": (string) the API ID of the subscription group selected in the WhatsApp message,
   "from": (array) list of strings of the numbers associated with the subscription group,
   "layout": (string) the name of the WhatsApp template being sent (text or media or quick-reply),
   "header_text": (string, optional) the text, if present, of the header of the message being sent,

@@ -14,7 +14,7 @@ description: "This reference article lists and explains the different Android ob
 
 ##  Android push object
 
-You must include an Android Push Object in `messages` if you want users you have targeted to receive a push on their Android devices. The total number of bytes in your `alert` string and `extra` object should not exceed 4000. The Messaging API will return an error if you exceed the message size allowed by Google.
+You must include an Android push object in `messages` if you want users you have targeted to receive a push on their Android devices. The total number of bytes in your `alert` string and `extra` object should not exceed 4,000. The Messaging API will return an error if you exceed the message size allowed by Google.
 
 ```json
 {
@@ -40,20 +40,18 @@ You must include an Android Push Object in `messages` if you want users you have
 }
 ```
 
-
-You can send "Big Picture" notifications by specifying the key `appboy_image_url` in the `extra` object. The value for `appboy_image_url` should be a URL that links to where your image is hosted. Images need to be cropped to a 2:1 aspect ratio and should be at least 600x300. Images used for notifications will only display on devices running Jelly Bean (Android 4.1) or higher.
+You can send "Big Picture" notifications by specifying the key `appboy_image_url` in the `extra` object. The value for `appboy_image_url` should be a URL that links to where your image is hosted. Images need to be cropped to a 2:1 aspect ratio and should be at least 600 x 300 px. Images used for notifications will only display on devices running Jelly Bean (Android 4.1) or higher.
 
 #### Additional parameter details
 
 | Parameter | Details |
 | --------- | ------- |
-| `priority` | This parameter will accept values from `-2` to `2`, where `-2` represents "MIN" priority and `2` represents "MAX". `0` is the "DEFAULT" value. <br> <br> Any values sent that outside of that integer range will default to 0. For more information on which priority level to use, see our section on [Android Notification Priority][29]. |
+| `priority` | This parameter will accept values from `-2` to `2`, where `-2` represents "MIN" priority and `2` represents "MAX". `0` is the "DEFAULT" value. <br> <br> Any values sent that outside of that integer range will default to 0. For more information on which priority level to use, see our section on [Android notification priority][29]. |
 | `collapse_key` | FCM can simultaneously store only up to four collapse keys per device. If you use more than four collapse keys, FCM does not make any guarantees as to which ones will be kept. Braze uses one of these by default for campaigns, so make sure to specify only up to three additional collapse keys for Android messages. |
 | `push_icon_image_url` | The value for the large icon parameter should be a URL that links to where your image is hosted. <br> <br> Images need to be cropped to a 1:1 aspect ratio and should be at least 40x40. |
 | `notification_channel` | If this is not specified, Braze will attempt to send the notification payload with the [dashboard fallback][45] channel ID. For more, see [Notification channels][44] and refer to the steps for [defining notification channels][43] during integration. |
-| `send_to_sync` | For more information on `send_to_sync` messages, see [Silent Android Notifications][28]. |
+| `send_to_sync` | For more information on `send_to_sync` messages, see [silent Android notifications][28]. |
 {: .reset-td-br-1 .reset-td-br-2}
-
 
 ## Android push action button object
 

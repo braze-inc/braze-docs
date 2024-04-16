@@ -2,10 +2,7 @@
 nav_title: Generations
 article_title: In-App Message Generations
 hidden: true
-description: "This reference article covers in-app messaging generation support."
-channel:
-  - in-app messages
-  
+permalink: /iam_generations/ 
 ---
 
 # In-app messages generations

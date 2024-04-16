@@ -23,7 +23,7 @@ When you [remove a user via the Braze REST API][1], the following data is delete
 When you [remove a user via the Braze REST API][1], the following events occur:
 - The user profile is anonymized.
 - The [Lifetime Users][2] count will be updated to account for the newly anonymized users.	
-- The anonymized user will still count towards the aggregated conversion percentage. Custom event counts and purchase counts will not be updated for anonymized users.
+- The anonymized user will still count toward the aggregated conversion percentage. Custom event counts and purchase counts will not be updated for anonymized users.
 
 ## Multiple profiles with a shared email address
 

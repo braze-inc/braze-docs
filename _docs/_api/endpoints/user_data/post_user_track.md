@@ -14,10 +14,10 @@ description: "This article outlines details about the Track user Braze endpoint.
 /users/track
 {% endapimethod %}
 
-> Use this endpoint to record custom events, purchases, and update user profile attributes.
+> Use this endpoint to record custom events and purchases and update user profile attributes.
 
 {% alert note %}
-Braze processes the data passed via API at face value and customers should only pass deltas (changing data) to minimize unnecessary data point consumption. To read more, refer to [Data points]({{site.baseurl}}/user_guide/data_and_analytics/data_points/). 
+Braze processes the data passed via API at face value, and customers should only pass deltas (changing data) to minimize unnecessary data point consumption. To read more, refer to [Data points]({{site.baseurl}}/user_guide/data_and_analytics/data_points/). 
 {% endalert %}
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#4cf57ea9-9b37-4e99-a02e-4373c9a4ee59 {% endapiref %}
@@ -41,16 +41,16 @@ Authorization: Bearer YOUR_REST_API_KEY
 
 ```json
 {
-  "attributes" : (optional, array of attributes object),
-  "events" : (optional, array of event object),
-  "purchases" : (optional, array of purchase object),
+  "attributes": (optional, array of attributes object),
+  "events": (optional, array of event object),
+  "purchases": (optional, array of purchase object),
 }
 ```
 
 ### Request parameters
 
 {% alert important %}
-For each of the request components listed in the following table, one of `external_id`, `user_alias`, `braze_id`, or `email` is required.
+For each request component listed in the following table, one of `external_id`, `user_alias`, `braze_id`, `email`, or `phone` is required.
 {% endalert %}
 
 | Parameter | Required | Data Type | Description |
@@ -62,7 +62,7 @@ For each of the request components listed in the following table, one of `extern
 
 ## Example requests
 
-### Example request for updating a user profile by email address
+### Update a user profile by email address
 
 You can update a user profile by email address using the `/users/track` endpoint. 
 
@@ -135,7 +135,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/track' \
 }'
 ```
 
-### Example request for updating a user profile by phone number
+### Update a user profile by phone number
 
 You can update a user profile by phone number using the `/users/track` endpoint. This endpoint only works if you include a valid phone number.
 
@@ -162,11 +162,11 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/track' \
     ],
 }'
 ```
-### Example request to set subscription groups
+### Set subscription groups
 
-This example shows how you can create a user and set their subscription group within the user attributes object. 
+This example shows how to create a user and set their subscription group within the user attributes object. 
 
-Updating the subscription status with this endpoint will both update the user specified by their `external_id` (such as User1) and update the subscription status of any users with the same email as that user (User1).
+Updating the subscription status with this endpoint will update the user specified by their `external_id` (such as User1) and update the subscription status of any users with the same email as that user (User1).
 
 ```
 curl --location --request POST 'https://rest.iad-01.braze.com/users/track' \
@@ -178,7 +178,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/track' \
     "external_id": "user_identifier",
     "email": "example@email.com",
     "email_subscribe": "subscribed",
-    "subscription_groups" : [{
+    "subscription_groups": [{
       "subscription_group_id": "subscription_group_identifier_1",
       "subscription_state": "unsubscribed"
       },
@@ -230,10 +230,10 @@ Successful messages will be met with the following response:
 
 ```json
 {
-  "message" : "success",
-  "attributes_processed" : (optional, integer), if attributes are included in the request, this will return an integer of the number of external_ids with attributes that were queued to be processed,
-  "events_processed" : (optional, integer), if events are included in the request, this will return an integer of the number of events that were queued to be processed,
-  "purchases_processed" : (optional, integer), if purchases are included in the request, this will return an integer of the number of purchases that were queued to be processed,
+  "message": "success",
+  "attributes_processed": (optional, integer), if attributes are included in the request, this will return an integer of the number of external_ids with attributes that were queued to be processed,
+  "events_processed": (optional, integer), if events are included in the request, this will return an integer of the number of events that were queued to be processed,
+  "purchases_processed": (optional, integer), if purchases are included in the request, this will return an integer of the number of purchases that were queued to be processed,
 }
 ```
 
@@ -243,8 +243,8 @@ If your message is successful but has non-fatal errors, such as one invalid even
 
 ```json
 {
-  "message" : "success",
-  "errors" : [
+  "message": "success",
+  "errors": [
     {
       <minor error message>
     }
@@ -252,7 +252,7 @@ If your message is successful but has non-fatal errors, such as one invalid even
 }
 ```
 
-For success messages, any data that was not affected by an error in the `errors` array will still be processed. 
+For success messages, any data not affected by an error in the `errors` array will still be processed. 
 
 ### Message with fatal errors
 
@@ -260,8 +260,8 @@ If your message has a fatal error, you will receive the following response:
 
 ```json
 {
-  "message" : <fatal error message>,
-  "errors" : [
+  "message": <fatal error message>,
+  "errors": [
     {
       <fatal error message>
     }
@@ -281,12 +281,12 @@ If you receive the error "provided external_id is blacklisted and disallowed", y
 If the `external_id` exists, the most recently updated profile with an external ID will be prioritized for updates. If the `external_id` doesn't exist, the most recently updated profile will be prioritized for updates.
 
 ### What happens if no profile with the email address currently exists?
-A new profile will be created and an email-only user will be created. An alias will not be created. The email field will be set to test@braze.com, as noted in the example request for updating a user profile by email address.
+A new profile will be created, and an email-only user will be created. An alias will not be created. The email field will be set to test@braze.com, as noted in the example request for updating a user profile by email address.
 
 ### How do you use `/users/track` to import legacy user data?
-You may submit data through the Braze API for a user who has not yet used your mobile app in order to generate a user profile. If the user subsequently uses the application all information following their identification via the SDK will be merged with the existing user profile you created via the API call. Any user behavior that is recorded anonymously by the SDK prior to identification will be lost upon merging with the existing API-generated user profile.
+You may submit data through the Braze API for a user who has not yet used your mobile app to generate a user profile. If the user subsequently uses the application all information following their identification via the SDK will be merged with the existing user profile you created via the API call. Any user behavior recorded anonymously by the SDK before identification will be lost upon merging with the existing API-generated user profile.
 
-The segmentation tool will include these users regardless of whether they have engaged with the app. If you want to exclude users uploaded via the User API who have not yet engaged with the app, simply add the filter: `Session Count > 0`.
+The segmentation tool will include these users regardless of whether they have engaged with the app. If you want to exclude users uploaded via the User API who have not yet engaged with the app, add the `Session Count > 0` filter.
 
 ### How does `/users/track` handle duplicate events?
 

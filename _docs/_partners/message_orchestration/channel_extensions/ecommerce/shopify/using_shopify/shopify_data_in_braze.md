@@ -109,6 +109,74 @@ After the app installation is complete, Braze automatically creates your webhook
 **Event**: `shopify_created_order`<br>
 **Type**: [Custom Event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/)
 
+{% raw %}
+```json
+{
+"name": "shopify_created_order",
+    "time": "2024-03-26T11:03:55-04:00",
+    "properties": {
+      "order_id": 5603014377622,
+      "line_items": [
+        {
+          "fulfillment_status": null,
+          "name": "Blue Silk Tuxedo - xs",
+          "price": 78,
+          "product_id": 5847345004694,
+          "properties": [],
+          "quantity": 1,
+          "sku": "",
+          "title": "Blue Silk Tuxedo",
+          "variant_id": 36790647521430,
+          "variant_title": "xs",
+          "vendor": "Liam Fashions"
+        }
+      ],
+      "fulfillments": [],
+      "shipping": [
+        {
+          "title": "First Class Package International",
+          "price": 33.85
+        }
+      ],
+      "shopify_storefront": "example-store.myshopify.com",
+      "total_price": 111.85,
+      "confirmed": true,
+      "total_discounts": 0,
+      "discount_codes": [],
+      "order_number": 1005,
+      "order_status_url": "https://example-store.myshopify.com/50699042966/orders/6e43c91d84b8e7832990502aca637a13/authenticate?key=d8184818cd06f09ac680ea82da78ce3e",
+      "cancelled_at": null,
+      "tags": "",
+      "closed_at": null,
+      "fulfillment_status": null,
+      "referring_site": "",
+      "payment_gateway_names": [
+        "bogus"
+      ],
+      "shipping_address": {
+        "address1": "1111 street",
+        "address2": null,
+        "city": "New York",
+        "country": "United States",
+        "first_name": "John",
+        "last_name": "Doe",
+        "province": "New York",
+        "zip": "11111"
+      },
+      "billing_address": {
+        "address1": "1111 street",
+        "address2": null,
+        "city": "New York",
+        "country": "United States",
+        "first_name": "John",
+        "last_name": "Doe",
+        "province": "New York",
+        "zip": "11111"
+      }
+    }
+  }
+```
+{% endraw %}
 
 {% raw %}
 | Variable | Liquid Templating |
@@ -129,10 +197,30 @@ After the app installation is complete, Braze automatically creates your webhook
 | Item Vendor | `{{event_properties.${line_items}[0].vendor}}` |
 | Item Properties | `{{event_properties.${line_items}[0].properties}}` |
 | Item Price | `{{event_properties.${line_items}[0].price}}` |
-| Shipping Title | `{{event_properties.${shipping}[0].title}}` |
-| Shipping Price | `{{event_properties.${shipping}[0].price}}` |
 | Variant ID | `{{event_properties.${line_items}[0].variant_id}}` |
 | Variant Title | `{{event_properties.${line_items}[0].variant_title}}` |
+| Shipping Title | `{{event_properties.${shipping}[0].title}}` |
+| Shipping Price | `{{event_properties.${shipping}[0].price}}` |
+|Shopify store | `{{event_properties.${shopify_storefront}}}` |
+| Fulfillment status | `{{event_properties.${fulfillment_status}}}` |
+| Referring Site | `{{event_properties.${referring_site}}}` | 
+| Payment Gateway Names | `{{event_properties.${payment_gateway_names}}}` |
+| Shipping Address Line 1 | `{{event_properties.${shipping_address[0].address1}}}` |
+| Shipping Address Line 2 | `{{event_properties.${shipping_address[0].address2}}}` |
+| Shipping Address City | `{{event_properties.${shipping_address[0].city}}}` |
+| Shipping Address Country | `{{event_properties.${shipping_address[0].country}}}` |
+| Shipping Address First Name | `{{event_properties.${shipping_address[0].first_name}}}` |
+| Shipping Address Last Name | `{{event_properties.${shipping_address[0].last_name}}}` | 
+| Shipping Address Province | `{{event_properties.${shipping_address[0].province}}}` |
+| Shipping Address Zip | `{{event_properties.${shipping_address[0].zip}}}` |
+| Billing Address Line 1 | `{{event_properties.${billing_address[0].address1}}}` |
+| Billing Address Line 2 | `{{event_properties.${billing_address[0].address2}}}` |
+| Billing Address City | `{{event_properties.${billing_address[0].city}}}` |
+| Billing Address Country | `{{event_properties.${billing_address[0].country}}}` |
+| Billing Address First Name | `{{event_properties.${billing_address[0].first_name}}}` |
+| Billing Address Last Name | `{{event_properties.${shipping_address[0].last_name}}}` |
+| Billing Address Province | `{{event_properties.${billing_address[0].province}}}` |
+| Billing Address Zip | `{{event_properties.${billing_address[0].zip}}}` |
 {% endraw %}
 
 
@@ -776,10 +864,24 @@ After the app installation is complete, Braze automatically creates your webhook
 {% tab Shopify Custom Attributes %}
 | Attribute Name | Description |
 | --- | --- |
-| `shopify_tags`  | This attribute corresponds to the [customer tags](https://help.shopify.com/en/manual/shopify-admin/productivity-tools/using-tags#tag-types) set by Shopify admins. |
-| `shopify_total_spent` | This attribute tracks the total amount spent on a store and is only supported for users imported through the [Historical Backfill]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/shopify/shopify_backfill/) feature. |
-| `shopify_order_count` | This attribute tracks the total number of orders made in a store and is only supported for users imported through the Historical Backfill feature. |
+| `shopify_tags`  | Tags that the shop owner has attached to the customer, formatted as a string of comma-separated values. A customer can have up to 250 tags. Each tag can have up to 255 characters. |
+| `shopify_total_spent` | The total amount of money that the customer has spent across their order history. |
+| `shopify_order_count` | The number of orders associated with this customer. Test and archived orders aren't counted. |
+| `shopify_last_order_id` | The ID of the customer's last order. |
+| `shopify_last_order_name` | The name of the customer's last order. This is directly related to the `name` field on the order resource. |
+| `shopify_zipcode` | The customer's zipcode from their default address. |
+| `shopify_province` | The customer's province from their default address. |
 {: .reset-td-br-1 .reset-td-br-2}
+
+### Liquid personalization
+
+To add liquid personalization for your Shopify custom attributes, select **+ Personalization**. Then select **Custom Attributes** as your personalization type.
+
+![The "Add Personalization" section with the "Attribute" dropdown extended.]({% image_buster /assets/img/Shopify/add_personalization_2.png %}){: style="max-width:40%;"}
+
+After selecting your custom attribute, input a default value and copy the Liquid snippet into your message.
+
+![Pasting a Liquid snippet into a message.]({% image_buster /assets/img/Shopify/copy_liquid_snippet.png %})
 
 {% endtab %}
 {% tab Example Payload %}
@@ -789,10 +891,13 @@ After the app installation is complete, Braze automatically creates your webhook
 {
   "attributes": [
     {
-      "external_id": "user_id",
       "shopify_tags": "VIP_customer",
       "shopify_total_spent": "60.00",
-      "shopify_order_count": "3"
+      "shopify_order_count": "3",
+      "shopify_last_order_id": "1234567",
+      "shopify_last_order_name": "test_order",
+      "shopify_zipcode": "10001",
+      "shopify_province": "null"
     }
   ]
 }

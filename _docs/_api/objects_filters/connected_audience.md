@@ -9,11 +9,11 @@ description: "This article explains the different components of the connected au
 
 # Connected audience object
 
-A connected audience object is a selector that identifies the audience to send the message to. 
+> A connected audience object is a selector that identifies the audience to send the message to. 
 
-It is composed of either a single Connected Audience Filter or several Connected Audience Filters in a logical expression using either `AND` or `OR` operators.
+This object is composed of either a single connected audience filter or several connected audience filters in a logical expression using either `AND` or `OR` operators.
 
-Multiple filter example:
+**Multiple filter example:**
 
 ```json
 {
@@ -34,7 +34,7 @@ Multiple filter example:
 
 ## Connected audience filters
 
-Combining multiple custom attribute filters will create a Connected Audience Filter, which will create a Connected Audience Filter when combined with `AND` and `OR` operators.
+Combining multiple custom attribute filters will create a connected audience filter, which will create a connected audience filter when combined with `AND` and `OR` operators.
 
 ### Custom attribute filter
 
@@ -68,8 +68,8 @@ The custom attribute's data type determines the comparisons that are valid for a
 
 | Comparison | Additional considerations |
 | --- | --- |
-| `value` | The `value` is not required when using the `exists` or `does_not_exist` comparisons. `value` must be an ISO 8601 datetime string when using the `before` and `after` comparisons.
-|`matches_regex` | When using the `matches_regex` comparison, the value passed must be a string. To read more about using regular expressions with Braze, check out our documentation on [regular expressions]({{site.baseurl}}/user_guide/engagement_tools/segments/regex/#regex-with-braze) and custom attribute [data types]({{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#custom-attribute-data-types). |
+| `value` | The `value` is not required when using the `exists` or `does_not_exist` comparisons. `value` must be an ISO 8601 datetime string when using the `before` and `after` comparisons. |
+|`matches_regex` | When using the `matches_regex` comparison, the value passed must be a string. To read more about using regular expressions with Braze, refer to [Regular expressions]({{site.baseurl}}/user_guide/engagement_tools/segments/regex/#regex-with-braze) and [Custom attribute data types]({{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#custom-attribute-data-types). |
 {: .reset-td-br-1 .reset-td-br-2}
 
 #### Custom attribute example

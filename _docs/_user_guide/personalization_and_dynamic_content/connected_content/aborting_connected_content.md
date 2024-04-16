@@ -28,5 +28,5 @@ You can also specify an abort reason, which will be saved to the [Message Activi
 {% endraw %}
 
 {% alert important %}
-Braze does not count aborted messages towards the send count in your Braze account or in Currents.
+Braze does not count aborted messages toward the send count in your Braze account or in Currents.
 {% endalert %}

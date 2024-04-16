@@ -35,7 +35,7 @@ Users were provided a refund, either partial or complete. This campaign lets the
 {% tab Cancellation %}
 **Shopify cancellation event** - `shopify_cancelled_order`
 
-Users were able to cancel their orders before fulfillment. This campaign lets the user know that their purchase was successfully canceled.
+Users were able to cancel their orders before fulfillment. This campaign lets the user know that their purchase was successfully canceled. 
 
 ![Action-based campaign that enters users who perform the custom event "shopify_cancelled_order".]({% image_buster /assets/img/Shopify/cancellation.png %}){: style="max-width:45%;"}
 
