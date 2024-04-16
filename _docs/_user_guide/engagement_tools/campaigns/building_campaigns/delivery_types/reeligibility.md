@@ -54,7 +54,7 @@ Consider the following example:
 
 This means users who received the campaign on February 15 will not be eligible for the campaign to be sent on March 15.
 
-If the campaign is set to send daily at 8 am with re-eligibility of 1 day and there's a latency in sending the message, users who received the campaign at 8:30 am, for instance, will not be re-eligible yet on the following day at 8 am.
+If the campaign is set to send daily at 8 am with re-eligibility of one day and there's a latency in sending the message, users who received the campaign at 8:30 am, for instance, will not be re-eligible yet on the following day at 8 am.
 
 ## Multivariate testing
 
