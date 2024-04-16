@@ -31,15 +31,15 @@ If you are using the [older navigation]({{site.baseurl}}/navigation), you can cr
 
 In [Friendbuy][1], go to **Developer Center** > **Integrations**, then on the Braze integration card select **Add integration**.
 
-![The Braze integration card in Friendbuy.]()
+![The Braze integration card in Friendbuy.][100]{: style="max-width:75%;"}
 
 In the form, enter your REST endpoint and API Key, then select **Install Integration**.
 
-![The Friendbuy integration form.][101]
+![The Friendbuy integration form.][101]{: style="max-width:55%;"}
 
 Go to back to your [Friendbuy account][1] and refresh the page. If your integration was successful, you'll see a message similar to the following:
 
-![integration installed][102]
+![integration installed][102]{: style="max-width:55%;"}
 
 ### Custom attributes
 
@@ -78,6 +78,7 @@ Friendbuy uses the international standard (E.164) to verify real phone numbers. 
 | Both              | The customer's email address and phone number is sent to Braze. |
 
 [1]: https://retailer.friendbuy.io/
+[100]: {% image_buster /assets/img/friendbuy/choosing_braze.png %}
 [101]: {% image_buster /assets/img/friendbuy/install_form.png %}
 [102]: {% image_buster /assets/img/friendbuy/install_success.png %}
 [103]: {% image_buster /assets/img/friendbuy/referral_widget.png %}
