@@ -10,7 +10,7 @@ tool: Canvas
 
 # Canvas basics
 
-> This reference article covers the basics of Canvas, covering various questions you should ask yourself as you set up your first Canvas.
+> This reference article covers the basics of Canvas, covering various questions you should ask yourself as you set up your first Canvas. We'll also explain the five W's (what, when, who, why, and where) of visualization and how this can shape and define how you can build your Canvas.
 
 ## Understanding Canvas structure
 
@@ -19,6 +19,8 @@ Before getting started with the finer details of [Canvas setup]({{site.baseurl}}
 {% tabs %}
   {% tab Canvas %}
   Canvas is a unified interface where marketers craft campaigns with multiple messages. It's a bit like a visual programming tool, letting you build a cohesive user journey out of a series of steps.
+
+  ![]({% image_buster /assets/img/canvas_intro/canvas_intro.gif %})
 
   {% endtab %}
 
@@ -34,12 +36,12 @@ Before getting started with the finer details of [Canvas setup]({{site.baseurl}}
   {% endtab %}
 
   {% tab Variants %}
-  A variant is the path each customer follows on their journey. Canvas supports up to eight variants with a control group. You control which segment of your audience will follow each variant.<br><br> ![]({% image_buster /assets/img_archive/canvas_flow_variants.png %}){: style="max-width:90%;"}
+  A variant is the path each customer follows on their journey. Canvas supports up to eight variants with a control group. You control which segment of your audience will follow each variant.<br><br> ![]({% image_buster /assets/img/canvas_intro/add_canvas_variant.gif %})
 
   {% endtab %}
 
   {% tab Steps %}
-  A step in Canvas is a marketing decision point: "if this, then that." Leverage [Canvas components]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/#about-canvas-components) to build the steps of a user journey.<br>Within a step, you set triggers or schedule delivery, refine targeting by adding filters or marking [exception events]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/exception_events/), and specify different channels like push notifications or webhook events.<br><br> ![]({% image_buster /assets/img_archive/canvas_flow_step.png %}){: style="max-width:90%;"}
+  A step in Canvas is a marketing decision point: "if this, then that." Leverage [Canvas components]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/#about-canvas-components) to build the steps of a user journey.<br>Within a step, you set triggers or schedule delivery, refine targeting by adding filters or marking [exception events]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/exception_events/), and specify different channels like push notifications or webhook events.<br><br> ![]({% image_buster /assets/img/canvas_intro/add_canvas_step.gif %})
 
   {% endtab %}
 {% endtabs %}
@@ -119,14 +121,14 @@ Answering "how" also determines the cadence for sending a Canvas to your audienc
 
 ## Example: Customer onboarding flow
 
-For example, let's say you're part of a marketing team at MovieCanon, a streaming services company, and in charge of creating an onboarding flow for new users of your app. By referencing the five W's, we could build out the Canvas in the following way.
+For example, let's say you're a marketer for MovieCanon, an online streaming services company, and you're in charge of creating an onboarding flow for new users of your app. By referencing the five W's, we could build out the Canvas in the following way.
 
-* **What**: Onboarding_Flow_MovieCanon
-* **Why**: Our goal is to keep users coming back and engaging with the app.
-* **When**: Action-based trigger (when a user opens the app) 
-* **Who**: We're targeting users who are new 
-* **Where**: 
-* **How**:
+* **What**: Our Canvas name will be "New Onboarding Journey".
+* **Why**: The goal of our Canvas is to welcome our users and have them continue engaging with the app.
+* **When**: After a user opens the app, we want to send them an email to encourage 
+* **Who**: We're targeting new users who are using our app for the first time.
+* **Where**: We can reach the most new users by push notifications, which is how we've done all our past messaging.
+* **How**: We want to set a one day delay as to not overwhelm our new users with notifications. After this delay, we want to encourage them to check out the most popular TV shows and movies on the app.
 
 ## General tips
 

@@ -4,10 +4,10 @@ article_title: Building Canvases
 page_order: 1
 layout: dev_guide
 guide_top_header: "Building Canvases"
-guide_top_text: "The following articles will help you create and launch a multi-dimensional Canvas."
+guide_top_text: "The articles in this section will guide you in creating and launching a multi-dimensional Canvas quickly from ideation to execution to your users. With its intuitive drag-and-drop interface and space for collaboration, you can leverage this visual programming environment to help drive the best results for your customer engagement goals."
 
 page_type: landing
-description: "This landing page is home to resources that will help you create and launch a multi-dimensional Canvas such as how to create a Canvas, exception events, exit criteria, Canvas entry properties, and more."
+description: "This landing page is home to resources that will help you create and launch a multi-dimensional Canvas such as how to create a Canvas, exception events, exit criteria, Canvas entry properties, and more. "
 tool: Canvas
 
 guide_featured_title: "Section articles"
