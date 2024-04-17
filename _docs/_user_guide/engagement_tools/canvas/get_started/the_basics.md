@@ -46,19 +46,15 @@ Before getting started with the finer details of [Canvas setup]({{site.baseurl}}
 
 ## Building the customer journey
 
-By using the five W's of visualization, you can identify your customer engagement strategies for how to create a personalized message journey for each user. These five W's are: what, when, who, why, and where.
-
-### Example
-
-
+Using the five W's (what, when, who, why, and where) of visualization can help identify your customer engagement strategies for how to create a personalized message journey for each of your users.
 
 ### The "what": Name your Canvas
 
 > What are you trying to help the user do or understand?
 
-Never underestimate the power of the name. Braze is built for collaboration, so this is a good time to get grounded in how you'll communicate goals with your team. 
+Never underestimate the power of the name. Braze is built for collaboration, so this is a good time to get grounded in how you'll communicate goals with your team.
 
-You can add tags and name both steps and variants within the Canvas. For more on customer journeys, check out our Braze Learning course on [mapping user lifecycles](https://learning.braze.com/mapping-customer-lifecycles)!
+You can add tags and name the steps and variants in a Canvas. For more on customer journeys, check out our Braze Learning course on [mapping user lifecycles](https://learning.braze.com/mapping-customer-lifecycles).
 
 ### The "why": Identify conversion events
 
@@ -91,14 +87,14 @@ Scheduled delivery allows you to send a Canvas immediately to your target audien
 
 To define your "who", you can use pre-defined segments available in Canvas. You can also add more filters to further focus on connecting to your targeted audience. After building these segments, only the users who match the target audience criteria can enter the Canvas journey, leading to a more personalized experience. See this table for available filters and how they segment your users to fit your use case.
 
-| Filter | Description |
-|---|---|
-| Custom Data | Segment users based on events and attributes you define. Can use features specific to your product. |
-| User Activity | Segment customers based on their actions and purchases. |
-| Retargeting | Segment customers who have been sent, received, or interacted with previous Canvases. |
-| Marketing Activity | Segment customers based on universal behaviors such as the last engagement. |
-| User Attributes | Segment customers by their constant attributes and characteristics. |
-| Install Attribution | Segment customers by their first source, ad group, campaign, or ad. |
+| Filter              | Description                                                                                         |
+|---------------------|-----------------------------------------------------------------------------------------------------|
+| Custom Data         | Segment users based on events and attributes you define. Can use features specific to your product. |
+| User Activity       | Segment customers based on their actions and purchases.                                             |
+| Retargeting         | Segment customers who have been sent, received, or interacted with previous Canvases.               |
+| Marketing Activity  | Segment customers based on universal behaviors such as the last engagement.                         |
+| User Attributes     | Segment customers by their constant attributes and characteristics.                                 |
+| Install Attribution | Segment customers by their first source, ad group, campaign, or ad.                                 |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ### The "where": Find my audience
@@ -119,7 +115,18 @@ This is where we determine which messaging channels make the most sense for your
 
 The "how" collectively summarizes how you'll create your Canvas and how you'll reach your users with your message. For example, in order for a message to be effective, you should optimize the timing of your messaging with regards to the time zones across your different users.
 
-Answering "how" also determines the cadence for sending a Canvas to your audience (such as once a week, biweekly, etc.), and which messaging channels to leverage for each Canvas that you build as described with the "where". 
+Answering "how" also determines the cadence for sending a Canvas to your audience (such as once a week or biweekly), and which messaging channels to leverage for each Canvas that you build as described with the "where."
+
+## Example: Customer onboarding flow
+
+For example, let's say you're part of a marketing team at MovieCanon, a streaming services company, and in charge of creating an onboarding flow for new users of your app. By referencing the five W's, we could build out the Canvas in the following way.
+
+* **What**: Onboarding_Flow_MovieCanon
+* **Why**: Our goal is to keep users coming back and engaging with the app.
+* **When**: Action-based trigger (when a user opens the app) 
+* **Who**: We're targeting users who are new 
+* **Where**: 
+* **How**:
 
 ## General tips
 
