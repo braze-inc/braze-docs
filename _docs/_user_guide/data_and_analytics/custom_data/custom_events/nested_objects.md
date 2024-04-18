@@ -39,12 +39,11 @@ To access the nested data in your custom event, generate a schema for each event
 
 After generating a schema, you can reference the nested data during segmentation and personalization. Refer to the following sections for usage examples:
 
-- API request body
-- Liquid templating
-- Message triggering
-- Segmentation
-- Personalization
-- Event property segmentation
+- [API request body](#api-request-body)
+- [Liquid templating](#liquid-templating)
+- [Message triggering](#message-triggering)
+- [Segmentation](#segmentation)
+- [Personalization](#personalization)
 
 ### API request body
 
