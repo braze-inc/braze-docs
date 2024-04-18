@@ -225,7 +225,7 @@ Image: ![Logo]({% image_buster /assets/img/braze-logo-mark.png %}){: style="max-
 
 #### Linked Image Test
 
-Linked Image: [![Braze]({% image_buster /assets/img/braze-logo-mark.png %}){: style="max-width:30%;"}](https://www.braze.com)
+Linked image: [![Braze]({% image_buster /assets/img/braze-logo-mark.png %}){: style="max-width:30%;"}](https://www.braze.com)
 
 #### Image Styling
 
