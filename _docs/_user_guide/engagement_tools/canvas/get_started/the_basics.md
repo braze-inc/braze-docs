@@ -125,10 +125,10 @@ For example, let's say you're a marketer for MovieCanon, an online streaming ser
 
 * **What**: Our Canvas name will be "New Onboarding Journey".
 * **Why**: The goal of our Canvas is to welcome our users and have them continue engaging with the app.
-* **When**: After a user opens the app, we want to send them an email to encourage 
+* **When**: After a user first opens the app, we want to send them an email to welcome them. 
 * **Who**: We're targeting new users who are using our app for the first time.
-* **Where**: We can reach the most new users by push notifications, which is how we've done all our past messaging.
-* **How**: We want to set a one day delay as to not overwhelm our new users with notifications. After this delay, we want to encourage them to check out the most popular TV shows and movies on the app.
+* **Where**: We are confident we can reach new users through their email, which is how we've done all our past messaging.
+* **How**: We want to set a one day delay as to not overwhelm our new users with notifications. After this delay, we'll send an email with a list of the most popular movies and tv shows to entice them to keep using the app.
 
 ## General tips
 
