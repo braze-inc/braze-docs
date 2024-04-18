@@ -12,18 +12,22 @@ description: "This article outlines details about the Update translation in a ca
 {% api %}
 # Update translation in a campaign or Canvas
 {% apimethod put %}
-/{campaigns or canvas}/translations
+/{campaigns}/translations
+{% endapimethod %}
+
+{% apimethod put %}
+/{canvas}/translations
 {% endapimethod %}
 
 > Use this endpoint to update multiple translations for a campaign or Canvas.
 
 {% alert important %}
-Updating translations for campaign and Canvas messages via API is currently in early access. Contact your Braze account manager if you're interested in participating in the early access.
+Updating a translation for campaign and Canvas messages via API is currently in early access. Contact your Braze account manager if you're interested in participating in the early access.
 {% endalert %}
 
 ## Prerequisites
 
-To use this endpoint, you'll need an [API key]({{site.baseurl}}/api/basics#rest-api-key/) with `campaigns.translations.get` and `canvas.translations.get` permissions for campaigns and Canvases respectively.
+To use this endpoint, you'll need an [API key]({{site.baseurl}}/api/basics#rest-api-key/) with `campaigns.translations.update` and `canvas.translations.update` permissions for campaigns and Canvases respectively.
 
 ## Rate limit
 
@@ -35,6 +39,13 @@ This endpoint has a rate limit of 250,000 requests per hour.
 | --------- | ---------| --------- | ----------- |
 |`campaign`| Required for translating a campaign | String | The ID for your campaign. |
 |`canvas`| Required for translating a Canvas | String | The ID of your Canvas. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+
+## Request parameters
+
+| Parameter | Required | Data Type | Description |
+| --------- | ---------| --------- | ----------- |
+|`locale_name`| Required | String | The name of the locale. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ## Example request
@@ -56,13 +67,28 @@ Authorization: Bearer YOUR-REST-API-KEY
 }
 ```
 
-## Example response
+## Example success response
 
 ```json
 {
 	"message": "success"
 }
 ```
+
+### Example error response
+
+The status code `400` could return the following response body. Refer to [Troubleshooting](#troubleshooting) for more information about errors you may encounter.
+
+```json
+{
+	"errors": [
+		{
+			"message": "Something went wrong. Translation IDs are mismatched or translated text exceeds limits."
+		}
+	]
+}
+```
+
 
 ## Troubleshooting
 

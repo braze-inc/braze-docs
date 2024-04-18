@@ -10,9 +10,13 @@ description: "This article outlines details about the Translate campaign or Canv
 ---
 
 {% api %}
-# Translate messages for campaign or Canvas
+# Translate message for campaign or Canvas
 {% apimethod get %}
-/{campaigns or canvas}/translations
+/{campaign}/translations/?locale_id={locale_uuid}
+{% endapimethod %}
+
+{% apimethod get %}
+/{canvas}/translations/?locale_id={locale_uuid}
 {% endapimethod %}
 
 > Use this endpoint to view a translated messages and see what this message will look like for a user.
@@ -29,15 +33,30 @@ To use this endpoint, you'll need an [API key]({{site.baseurl}}/api/basics#rest-
 
 This endpoint has a rate limit of 250,000 requests per hour.
 
+## Path parameters
+
+| Parameter | Required | Data Type | Description |
+| --------- | ---------| --------- | ----------- |
+|`campaigns`| Required for translating a campaign | String | The ID of your campaign. |
+|`canvas`| Required for translating a Canvas | String | The ID of your Canvas. |
+|`locale_uuid`| Required | String | The ID of the locale. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+
 ## Example request
 
 ```
-curl --location --request GET 'https://rest.iad-03.braze.com/{canvas}/translation' \
+curl --location --request GET 'https://rest.iad-03.braze.com//{canvas}/translations/?locale_id={locale_uuid}' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer YOUR-REST-API-KEY'
 ```
 
-## Example response
+## Response
+
+There are four status code responses for this endpoint: `200`, `400`, `404`, and `429`.
+
+## Example success response
+
+The status code `200` could return the following response header and body.
 
 ```json
 Content-Type: application/json
@@ -55,6 +74,20 @@ Authorization: Bearer YOUR-REST-API-KEY
 				"id_1": "My name is Jacky",
 				"id_2": "Where is the library?"
 			}
+		}
+	]
+}
+```
+
+### Example error response
+
+The status code `400` could return the following response body. Refer to [Troubleshooting](#troubleshooting) for more information about errors you may encounter.
+
+```json
+{
+	"errors": [
+		{
+			"message": "Invalid locale ID"
 		}
 	]
 }

@@ -50,6 +50,12 @@ curl --location --request GET 'https://rest.iad-03.braze.com/{campaigns}/transla
 
 ## Response
 
+There are four status code responses for this endpoint: `200`, `400`, `404`, and `429`.
+
+## Example success response
+
+The status code `200` could return the following response header and body.
+
 ```json
 Content-Type: application/json
 Authorization: Bearer YOUR-REST-API-KEY
@@ -66,6 +72,20 @@ Authorization: Bearer YOUR-REST-API-KEY
 				"id_1": "My name is Jacky",
 				"id_2": "Where is the library?"
 			}
+		}
+	]
+}
+```
+
+## Example error response
+
+The status code `400` could return the following response body. Refer to [Troubleshooting](#troubleshooting) for more information about errors you may encounter.
+
+```json
+{
+	"errors": [
+		{
+			"message": "This message does not support multi-language."
 		}
 	]
 }
