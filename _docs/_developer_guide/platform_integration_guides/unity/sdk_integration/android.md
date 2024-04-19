@@ -145,3 +145,4 @@ To learn about advanced SDK integration options, check out [Advanced Implementat
 [unity-3]: https://developer.android.com/jetpack/androidx
 [unity-4]: {{ site.baseurl }}/developer_guide/platform_integration_guides/android/in-app_messaging/integration/
 [unity-5]: https://docs.unity3d.com/Manual/class-PlayerSettingsAndroid.html#Publishing
+[unity-6]: https://github.com/braze-inc/braze-unity-sdk/blob/master/unity-samples/Assets/Plugins/Android/mainTemplate.gradle
