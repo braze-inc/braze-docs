@@ -98,37 +98,20 @@ In your `AndroidManifest.xml`, all instances of `REPLACE_WITH_YOUR_PACKAGE_NAME`
 
 ## Step 4: Add gradle dependencies {#unity-android-gradle-configuration}
 
+To add gradle dependencies to your Unity project, first enable ["Custom Main Gradle Template"][unity-5] in your Publishing Settings. This will create a template gradle file that your project will use. A gradle file handles setting dependencies and other build-time project settings. You can view the Braze Unity sample app's [mainTemplate.gradle here][unity-6].
+
 The following dependencies are required:
 
 ```groovy
-implementation "org.jetbrains.kotlin:kotlin-stdlib:1.5.21"
-implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.5.2"
-
-// Both are required if using the default Content Cards Activity on Android
-implementation "androidx.swiperefreshlayout:swiperefreshlayout:+"
-implementation "androidx.recyclerview:recyclerview:+"
+implementation 'com.google.firebase:firebase-messaging:22.0.0'
+implementation "androidx.swiperefreshlayout:swiperefreshlayout:1.1.0"
+implementation "androidx.recyclerview:recyclerview:1.2.1"
+implementation "org.jetbrains.kotlin:kotlin-stdlib:1.6.0"
+implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.1"
+implementation 'androidx.core:core:1.6.0'
 ```
 
-The following list examples of how to add these dependencies using Unity tools:
-
-##### [Custom Gradle template](https://docs.unity3d.com/Manual/android-gradle-overview.html)
-
-```groovy
-dependencies {
-  implementation "org.jetbrains.kotlin:kotlin-stdlib:1.5.21"
-  implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.5.2"
-}
-```
-##### [External dependency manager for Unity](https://github.com/googlesamples/unity-jar-resolver)
-
-```xml
-<dependencies>
-  <androidPackages>
-    <androidPackage spec="org.jetbrains.kotlin:kotlin-stdlib:1.5.21" />
-    <androidPackage spec="org.jetbrains.kotlinx:kotlinx-coroutines-android:1.5.2" />
-  </androidPackages>
-</dependencies>
-```
+You may also set these dependencies via the [External dependency manager for Unity](https://github.com/googlesamples/unity-jar-resolver).
 
 ## Step 5: Configure the SDK {#unity-static-configuration}
 
@@ -161,3 +144,4 @@ To learn about advanced SDK integration options, check out [Advanced Implementat
 [unity-2]: https://firebase.google.com/docs/unity/setup
 [unity-3]: https://developer.android.com/jetpack/androidx
 [unity-4]: {{ site.baseurl }}/developer_guide/platform_integration_guides/android/in-app_messaging/integration/
+[unity-5]: https://docs.unity3d.com/Manual/class-PlayerSettingsAndroid.html#Publishing
