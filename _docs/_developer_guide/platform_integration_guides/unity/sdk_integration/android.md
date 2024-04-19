@@ -111,7 +111,7 @@ implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.1"
 implementation 'androidx.core:core:1.6.0'
 ```
 
-You may also set these dependencies via the [External dependency manager for Unity](https://github.com/googlesamples/unity-jar-resolver).
+You may also set these dependencies via the [External Dependency Manager](https://github.com/googlesamples/unity-jar-resolver).
 
 ## Step 5: Configure the SDK {#unity-static-configuration}
 
