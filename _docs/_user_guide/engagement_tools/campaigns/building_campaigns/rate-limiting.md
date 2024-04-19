@@ -65,7 +65,7 @@ For example, let's say you have a game with an in-app message that triggers when
 
 ### Rate limiting and Canvas components
 
-Rate limits apply to sending across a Canvas. as If multiple channels are utilized in a Canvas or Canvas step, the rate limit will be shared across channels. 
+Rate limits apply to all message sending across a Canvas. If multiple channels are utilized in a Canvas or Canvas step, the rate limit will be shared across channels. 
 
 ### Delivery speed rate limiting
 
