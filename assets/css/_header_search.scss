@@ -10,6 +10,29 @@ $search_footer_height: 50px;
 $search_offset: 65px;
 $search_icon: #D4D4D4;
 
+#navbar-search{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-left: auto;
+  .navbar-nav{
+    align-items: center;
+    justify-items: center;
+  }
+  a {
+    color: #D4D4D4;
+    :hover 
+    {
+      color: #FFFFFF;
+      
+    }
+  }
+  i {
+    color: #FFA4FB;
+  }
+}
 #search-form_div {
 
   width: 40px;

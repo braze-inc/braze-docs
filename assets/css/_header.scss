@@ -19,9 +19,7 @@ $header_transition_time: 0.25s;
     flex-direction: row;
     align-items: center;
   }
-  #nav_logo {
-    display: none;
-  }
+
   #header_toggle {
     z-index: 550;
     &:focus {
@@ -111,7 +109,7 @@ $header_transition_time: 0.25s;
   nav {
     min-height: $header-height;
     &.navbar {
-      padding: 0px 15px 0 15px;
+      padding: 0 27px;
       @media (max-width:  $window-mobile-px) {
         padding: 0px 5px 0 15px;
       }
@@ -132,31 +130,31 @@ $header_transition_time: 0.25s;
 
   #nav_logo {
     display: inline-block;
-    // padding-top: .3125rem;
-    // padding-bottom: .3125rem;
-    // padding-left: 1rem;
-    padding: 5px 0 5px 0px;
-
     margin: 0px;
     font-size: 1.25rem;
     line-height: inherit;
     white-space: nowrap;
-    @media (min-width: $window-medium-px) {
+   max-height: 30px;
+   padding-right: 30px;
+    #logo {
+      display: inline-block;
+       @media (max-width: $window-medium-px) {
         display: none;
-        padding: 5px 0 5px 15px;
-
+    }
+    }
+    #icon_logo{
+      display: none;
+       @media (max-width: $window-medium-px) {
+        display: inline-block;
+        padding-right: 15px;
+    }
     }
     a {
-      @media (min-width: $window-medium-px) {
-         margin-right: 5px;
-      }
-
       img {
-        max-width: none;
-        height: 35px;
-        margin: 0;
-
+        max-height: 30px;
       }
+     
+
     }
   }
 
@@ -292,7 +290,6 @@ $header_transition_time: 0.25s;
     border: 1px solid $grey-stardust;
     padding: 5px 6px;
     border-radius: 5px;
-    margin-bottom: 4px;
     label {
       margin-bottom: 0px;
     }
