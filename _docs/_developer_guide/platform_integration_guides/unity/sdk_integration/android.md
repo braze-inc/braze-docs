@@ -98,7 +98,7 @@ In your `AndroidManifest.xml`, all instances of `REPLACE_WITH_YOUR_PACKAGE_NAME`
 
 ## Step 4: Add gradle dependencies {#unity-android-gradle-configuration}
 
-To add gradle dependencies to your Unity project, first enable ["Custom Main Gradle Template"][unity-5] in your Publishing Settings. This will create a template gradle file that your project will use. A gradle file handles setting dependencies and other build-time project settings. You can view the Braze Unity sample app's [mainTemplate.gradle here][unity-6].
+To add gradle dependencies to your Unity project, first enable ["Custom Main Gradle Template"][unity-5] in your Publishing Settings. This will create a template gradle file that your project will use. A gradle file handles setting dependencies and other build-time project settings. For more information, check out the Braze Unity sample app's [mainTemplate.gradle][unity-6].
 
 The following dependencies are required:
 
