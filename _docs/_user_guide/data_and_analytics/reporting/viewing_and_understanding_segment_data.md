@@ -65,10 +65,6 @@ On this page, you can view a number of user-specific attributes, such as gender,
 
 Your results will show the top (or bottom) campaigns, Canvases, or Canvas steps that you selected. For example, if you selected the top 10 campaigns for click rate, your results will show the top 10 campaigns ordered from highest to lowest click rate. Your columns will display all of the email engagement metrics for each row (campaigns, Canvases, or message steps).
 
-{% alert note %}
-The ability to break down performance data by segment in Query Builder report templates is currently in early access. Contact your customer success manager if you're interested in participating in this early access.
-{% endalert %}
-
 ![The Segment breakdown page contains a SQL editor, a side panel with tabs for Variables, Available Data Tables, Query History, and the AI Query Builder, and a results section.]({% image_buster /assets/img_archive/segment_breakdown.png %})
 
 You can use [Query Builder]({{site.baseurl}}/user_guide/data_and_analytics/query_builder/) report templates to break down performance metrics for campaigns, Canvas, variants, and steps by segments. [Analytics tracking]({{site.baseurl}}/user_guide/data_and_analytics/tracking/segment_analytics_tracking#segment-analytics-tracking) must be turned on for the segments you want to access metrics for.
