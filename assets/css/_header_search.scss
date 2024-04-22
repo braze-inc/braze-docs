@@ -17,7 +17,7 @@ $search_icon: $white;
   align-items: center;
   gap: 10px;
   margin-left: auto;
-  .navbar-nav{
+  .navbar-nav {
     align-items: center;
     justify-items: center;
   }
@@ -34,6 +34,8 @@ $search_icon: $white;
     align-items: center;
   }
    @media(max-width: $window-medium-px) {
+    // margin-left: 0;
+    // width: 100%;
     #site-link{
       display: none;
     
@@ -105,7 +107,7 @@ $search_icon: $white;
       background-color: transparent;
       color: $header-nav;
       padding-left: 40px;
-      padding-right: 15px;
+      padding-right: 14px;
       margin-right: 10px;
       margin-left: -40px;
       border-width: 1px;
@@ -120,7 +122,7 @@ $search_icon: $white;
         width: 40px;
       }
       @media (max-width: $window-medium-px) {
-        padding-right: 7px;
+        padding-right: 6px;
       }
       box-shadow: none;
       font-size: $base_font_size;
@@ -479,6 +481,10 @@ $search_icon: $white;
         }
       }
     }
+    #navbar-search {
+      margin-left: 0;
+      width: 100%;
+    }
     .aa-SubmitIcon{
       color: $black;
     }
@@ -511,8 +517,7 @@ $search_icon: $white;
       transition: all ease $search_transition_time;
       -webkit-transition: all ease $search_transition_time;
       -moz-transition: all ease $search_transition_time;
-      //flex: 1 0 auto;
-      width: 400px;
+      width: 100%;
       .aa-Form {
         background-color: white;
       }
@@ -521,7 +526,6 @@ $search_icon: $white;
         -webkit-transition: all ease $search_transition_time;
         -moz-transition: all ease $search_transition_time;
         width: 100%;
-        //padding-left: 1%;
         .aa-InputWrapperSuffix {
           display: flex;
         }
