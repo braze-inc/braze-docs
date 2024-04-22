@@ -52,8 +52,6 @@ As of February 28, 2023, you will no longer be able to create or duplicate Canva
 
 ### Customizing user journeys
 
-![]({% image_buster /assets/img/canvas_intro/canvas_intro.gif %}){: style="float:right;max-width:55%;margin-left:15px;"}
-
 Use [Action Paths][1] to split your user journey based on actions and engagement events such as making a purchase. If you want to filter through and target your audiences, [Audience Paths][2] help simplify your user targeting by sending your users down different Canvas paths based on audience criteria.
 
 [Decision Split][3] components use a simple "yes or no" logic to create two mutually exclusive paths for your user journeys that are based on an action or a user attribute. This can help identify and target your user groups.
