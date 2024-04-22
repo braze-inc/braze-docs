@@ -66,7 +66,7 @@ page_order: page_order
 
 collections:
   home:
-    title: Documentation
+    title: Home
     output: true
     default_nav_url: ''
     page_order: 1

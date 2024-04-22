@@ -158,7 +158,7 @@ $(document).ready(function () {
     container: "#header-search-form",
     panelContainer: "#header-search-panel",
     debug: algolia_debug,
-    placeholder: "Search",
+    placeholder: "Search everything",
     plugins: [algoliaInsightsPluginHeader],
     detachedMediaQuery: 'none',
     onSubmit(e){

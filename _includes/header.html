@@ -80,7 +80,7 @@
 
 
     {%- assign default_url = site.baseurl | append: '/' -%}
-    {%- assign default_title = 'Documentation' -%}
+    {%- assign default_title = 'Home' -%}
 
     {%- if active_title == '' -%}
     {%- assign active_url = default_url -%}
@@ -127,7 +127,7 @@
                {%- endif -%}
              {%- endfor -%}
              <hr />
-                 <a class="dropdown-item" target="_blank" href="https://www.braze.com"><div>Braze.com</div></a>
+                 <a class="dropdown-item" target="_blank" href="https://www.braze.com"><div>Braze.com</div><i class="fa-solid fa-up-right-from-square"></i></a>
            </div>
          </li>
       </ul>
@@ -135,7 +135,7 @@
     </div>
     <div id="navbar-search">
        {% include header_search.html %}
-    <div class="navbar-nav"><a class="nav-link" href="https://braze.com">braze.com</a><i class="fa-solid fa-up-right-from-square"></i></div>
+    <div class="navbar-nav" id="site-link"><a class="nav-link" href="https://braze.com"><div>braze.com</div><i class="fa-solid fa-up-right-from-square"></i></a></div>
     </div>
      
       {% unless hide_nav %}
