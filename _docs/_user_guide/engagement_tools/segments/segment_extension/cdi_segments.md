@@ -33,7 +33,7 @@ After your CDI integration is set up, create your CDI segment by doing the follo
 
 2. Select **CDI Data Tables** as your data source. <br>![]({% image_buster /assets/img/segment/cdi_data_tables.png %}){: style="max-width:50%;"}<br><br>
 
-3. Select **Reference** to view the data tables available for use. As part of your CDI setup, you can select from different connections to use in CDI segments. Each connection has a specific set of data tables. Your team can configure your connections and data tables during CDI setup. <br><br>
+3. Select **Reference** to view the data tables available for use. As part of your CDI setup, you can select from different connections to use in CDI segments. Each connection has a specific set of data tables. Your development team can configure your connections and data tables during CDI setup. <br><br>
 
 4. Select a connection. <br>![]({% image_buster /assets/img/segment/connection_schema.png %}){: style="max-width:70%;"}<br><br>
 
