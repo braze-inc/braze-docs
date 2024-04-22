@@ -25,7 +25,7 @@ Note that you will need to use these settings instead of the native setup instru
 {% tab Android %}
 ### Step 1.1: Register for push
 
-Register for using Google’s Firebase Cloud Messaging (FCM) API. For a full walkthrough, refer to the following steps from the [Native Android push integration guide]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/integration/standard_integration/):
+Register for push using Google’s Firebase Cloud Messaging (FCM) API. For a full walkthrough, refer to the following steps from the [Native Android push integration guide]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/integration/standard_integration/):
 
 1. [Add Firebase to your project]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/integration/standard_integration/#step-1-add-firebase-to-your-project).
 2. [Add Cloud Messaging to your dependencies]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/integration/standard_integration/#step-2-add-cloud-messaging-to-your-dependencies).
@@ -84,10 +84,7 @@ Generate an Apple Push Notification service (APNs) certificate and uploaded it t
 
 ### Step 1.2: Choose an integration method
 
-If you don't plan on requesting push permissions when the app launched, omit the `requestAuthorizationWithOptions:completionHandler:` call in your AppDelegate, then skip to [Step 2](#step-2-request-push-notifications-permission). Otherwise, complete one of the following native integration guides:
-
-- [Swift only](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/b1-standard-push-notifications/)
-- [Swift or Objective-C]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/integration/?tab=objective-c#automatic-push-integration)
+If you don't plan on requesting push permissions when the app launched, omit the `requestAuthorizationWithOptions:completionHandler:` call in your AppDelegate, then skip to [Step 2](#step-2-request-push-notifications-permission). Otherwise, follow the [native iOS integration guide]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/integration/?tab=objective-c#automatic-push-integration).
 
 When you're finished, continue to [Step 1.3](#step-13-migrate-your-push-key).
 

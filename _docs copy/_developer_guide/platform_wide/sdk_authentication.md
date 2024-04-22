@@ -357,7 +357,7 @@ braze.setBrazeSdkAuthenticationErrorCallback((BrazeSdkAuthenticationError error)
 
 ### Adding a public key
 
-You can add up to three public keys for each app: a primary, a seconday, and a tertiary. You can also add the same key to more than one app if needed. To add a public key:
+You can add up to three public keys for each app: a primary, a secondary, and a tertiary. You can also add the same key to more than one app if needed. To add a public key:
 
 1. Go to the Braze dashboard and select **Settings** > **App Settings**.
 2. Choose an app from your list of available apps.
