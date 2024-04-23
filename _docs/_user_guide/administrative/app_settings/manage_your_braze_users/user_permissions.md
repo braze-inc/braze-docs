@@ -112,6 +112,8 @@ Marketers | “Access Campaigns, Canvases, Cards, Feature Flags, Segments, Media
 User Management | “Manage Dashboard Users” <br> “Manage Teams”
 {: .reset-td-br-1 .reset-td-br-2}
 
+### Assigning permission sets
+
 Assign permission sets by selecting an existing user or creating a new one on the **Company Users** page, then choosing the appropriate permission set under **Workspace Level Permissions**.
 
 ### Roles
@@ -128,6 +130,10 @@ Roles allow for more structure by bundling together individual custom permission
 | Marketer - Skincare Brands | {::nomarkdown}[DEV] Skincare Brand, [QA] Skincare Brand, [PROD] Skincare Brand {:/} | “Access Campaigns, Canvases, Cards, Feature Flags, Segments, Media Library, and Preference Centers” <br>“Manage Media Library Assets” |
 | User Management - All Brands | {::nomarkdown}[DEV] Fashion Brand, [QA] Fashion Brand, [PROD] Fashion Brand, [DEV] Skincare Brand, [QA] Skincare Brand, [PROD] Skincare Brand {:/} | “Manage Dashboard Users”<br>“Manage Teams” |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+
+### Assigning roles
+
+Assign roles by selecting an existing user or creating a new one on the **Company Users** page, then choosing the appropriate role under **Workspace Level Permissions**.
 
 ## Exporting user permissions
 
