@@ -31,16 +31,6 @@ When creating a feature flag you specify default properties. When setting up a f
 
 Go to **Messaging** > **Feature Flags** to edit, add, or remove additional properties.
 
-## Viewing the changelog
-
-To view a feature flag's changelog, open a feature flag and select **Changelog**.
-
-![A feature flag's "Edit" page, with the "Changelog" button highlighted.]({% image_buster /assets/img/feature_flags/changelog/open_changelog.png %}){: style="max-width:60%;"}
-
-Here, you can review when a changed happened, who made the change, which category it belongs to, and more.
-
-![The changelog of the selected feature flag.]({% image_buster /assets/img/feature_flags/changelog/changelog.png %}){: style="max-width:90%;"}
-
 ## Canvas and rollout differences
 
 Canvas and a feature flag rollout (dragging the slider) can work independently of each other. An important caveat is entry to a Canvas step will overwrite any default rollout configuration. This means if a user doesn't qualify for a feature flag, a Canvas step can enable the feature for that user.
