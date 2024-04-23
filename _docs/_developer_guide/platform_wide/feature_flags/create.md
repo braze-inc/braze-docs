@@ -745,29 +745,7 @@ Replace the following:
 |-------------|---------------------------------------------------------------------------------------------------------------------------|
 | `PRODUCT`   | The product the feature belongs to.                                                                                       |
 | `FEATURE`    | The name of the feature.                                                                                                  |
-| `BEHAVIOR`  | The behavior of the feature. In your code, the behavior should be disabled by default, so avoid behavu like `disabled` to |
-
-In the following example, `torchie_shop` is the product, `enabled` is the behavior, and `profile_page` is the feature:
-
-```plaintext
-enable_profile_page_torchie_shop
-torchie_shop_new_profile_page_enable
-```
-
-Its best practice to keep feature flags disabled by default, so avoid names like 
-
-Avoid describing the feature flag's status in relation to your code, such as `disabled` to mean the feature flag is disabled 
-
-Keep in mind,
-
-
-Be sure to set your feature flags' status to disabled by default, and 
-
-- Consider following a pattern such as `{product}.{feature}.{action}`. 
-  - For example, in a ride sharing app your feature ID may be `driver.profile.show_animation_v3`
-- This also helps when searching for a specific product area or team's feature flags.
-- Make sure that the default state for a feature flag is disabled in your app.
-  - For example, it is an anti-pattern if you have a flag named `disable_feature_xyz`. There may be exceptions, but try to avoid confusing a feature's "enabled" status with the actual enabled behavior (disabling feature XYZ).
+| `BEHAVIOR`  | The behavior of the feature. In your code, be sure the behavior is disabled by default and avoid using phrases like `disabled` in the feature flag name. |
 
 ### Planning ahead
 
