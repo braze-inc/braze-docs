@@ -97,15 +97,13 @@ Individual users can be granted different degrees of access on an app-by-app bas
 |App Level Settings|Determines the user's level of editing access.|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
-## Permission sets
+## Permission sets and roles
 
-On the **Permission Sets** page found at **Settings** > **Permission Settings**, you can create, edit, and delete custom permission assignments for your Braze dashboard users. 
+You can bundle relevant permissions with permission sets and roles by navigating to **Settings** > **Permission Settings**.
 
-Permission sets can be assigned by selecting an existing user or creating a new one on the **Company Users** page, then choosing the appropriate permission set under **Workspace Level Permissions**.
+### Permission sets
 
-![The Permission Sets tab opens a Manage Permissions Sets page with a table of permission set names and selected permissions.][5]
-
-Each permission set can be defined for a specific group of users, such as in the following example:
+Use permission sets to bundle permissions related to specific subject areas or actions. They can be applied to dashboard users who need the same access across different workspaces, such as in the following example:
 
 Permission Set Name    | Permissions  
 ----------- | ---------------- 
@@ -113,6 +111,29 @@ Developers | “Access Dev Console”
 Marketers | “Access Campaigns, Canvases, Cards, Feature Flags, Segments, Media Library, and Preference Centers” <br> “Manage Media Library Assets”
 User Management | “Manage Dashboard Users” <br> “Manage Teams”
 {: .reset-td-br-1 .reset-td-br-2}
+
+#### Assigning permission sets
+
+Assign permission sets by selecting an existing user or creating a new one on the **Company Users** page, then choosing the appropriate permission set under **Workspace Level Permissions**.
+
+### Roles
+
+{% alert note %}
+Roles are currently in early access. Contact your Braze customer success manager if you are interested in participating in the early access. 
+{% endalert %}
+
+Roles allow for more structure by bundling together individual custom permissions and workspace access controls. This is especially useful if you have many different brands or regional workspaces in one dashboard. With roles, you can add dashboard users to the right workspaces and directly grant them the associated permissions.
+
+| Role Name    | Workspace | Permissions  
+----------- | ----------- | ---------
+| Marketer - Fashion Brands | {::nomarkdown}[DEV] Fashion Brand, [QA] Fashion Brand, [PROD] Fashion Brand {:/} | “Access Campaigns, Canvases, Cards, Feature Flags, Segments, Media Library, and Preference Center"<br>“Manage Media Library Assets” |
+| Marketer - Skincare Brands | {::nomarkdown}[DEV] Skincare Brand, [QA] Skincare Brand, [PROD] Skincare Brand {:/} | “Access Campaigns, Canvases, Cards, Feature Flags, Segments, Media Library, and Preference Centers” <br>“Manage Media Library Assets” |
+| User Management - All Brands | {::nomarkdown}[DEV] Fashion Brand, [QA] Fashion Brand, [PROD] Fashion Brand, [DEV] Skincare Brand, [QA] Skincare Brand, [PROD] Skincare Brand {:/} | “Manage Dashboard Users”<br>“Manage Teams” |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+
+#### Assigning roles
+
+Assign roles by selecting an existing user or creating a new one on the **Company Users** page, then choosing the appropriate role under **Workspace Level Permissions**.
 
 ## Exporting user permissions
 
