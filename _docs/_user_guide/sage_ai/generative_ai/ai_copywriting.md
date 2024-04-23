@@ -18,7 +18,7 @@ To generate copy using the AI copywriting assistant, follow these steps:
 2. Enter a product name or description in the input field.
 3. Select an approximate output length. You can choose a specific channel for an output length based on channel-specific best practices or select between short (1 sentence), medium (2-3 sentences), or long (1 paragraph). 
 4. Choose a message tone from the available options. This will determine the style of the copy generated.
-5. (Optional) Available for push notifications: Select **Reference past campaign data** to use your previous mobile push messages (campaigns and canvas steps) as a stylistic example to use as a reference for generating new copy. The copywriting assistant will mimic the style of your previous messages.
+5. (Optional) Available for push notifications: Select **Reference past campaign data** to use your previous mobile push messages (campaigns and Canvas steps) as a stylistic reference for generating new copy. When selected, the output will mimic the style of your previous messages.
 6. Select the output language. This can be different from your input language.
 7. Click **Generate**.
 
