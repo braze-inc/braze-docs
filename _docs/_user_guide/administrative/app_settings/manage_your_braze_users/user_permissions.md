@@ -99,7 +99,7 @@ Individual users can be granted different degrees of access on an app-by-app bas
 
 ## Permission sets and roles
 
-You can bundle together relevant permissions with permission sets and roles by navigating to **Settings** > **Permission Settings**.
+You can bundle relevant permissions with permission sets and roles by navigating to **Settings** > **Permission Settings**.
 
 ### Permission sets
 
