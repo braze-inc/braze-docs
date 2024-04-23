@@ -27,9 +27,38 @@ page_order: 4.8
 | [User data]({{site.baseurl}}/api/endpoints/user_data/)                     | Identify, track, and manage your users.                                               |
 {: .reset-td-br-1 .reset-td-br-2}
 
-## Updating multiple items in a catalog
+## Deleting multiple items in a catalog
 
+A new year welcomes new product launches at Kitchenerie, a retail brand specializing in kitchenware. In their Braze dashboard, they have a catalog set up for their dishware collection named "Dishware". This new year also means removing the following products from their dishware collection.
 
+* Plain Bisque
+* Pearl Porcelain
+* Pink Shimmer
+
+Removing these products from their catalog can be accomplished via API with the [`/catalogs/{catalog_name}/items` endpoint]({{site.baseurl}}/api/endpoints/catalogs/catalog_items/asynchronous/delete_catalog_items_bulk/) and the item IDs.
+
+Here's the example request:
+
+```
+curl --location --request DELETE 'https://rest.iad-03.braze.com/catalogs/dishware/items' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: Bearer YOUR-REST-API-KEY' \
+--data-raw '{
+  "items": [
+    {"id": "plainbisque"},
+    {"id": "pearlporcelain"},
+    {"id": "pinkshimmer"}
+  ]
+}'
+```
+
+After sending this payload, the following response confirms that the three collections have been successfully removed from Kitchenerie's dishware catalog.
+
+```json
+{
+  "message": "success"
+}
+```
 
 ## Removing emails from the Braze spam list
 
@@ -114,12 +143,50 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/canvas/data_summ
 
 ## Checking upcoming scheduled campaigns and Canvases
 
+The busiest time of year is quickly approaching for Flash & Thread, a retail brand that specializes in selling clothing and beauty products both online and in stores. Their marketing team wants to check their upcoming scheduled campaigns and Canvases from their Braze dashboard before March 31, 2024 at 12 pm. Their goal is to confirm that they're aligned with their marketing plan.
 
+This can be accomplished using the [`/messages/scheduled_broadcasts` endpoint]({{site.baseurl}}/api/endpoints/messaging/schedule_messages/get_messages_scheduled/). Here's the example request:
+
+```
+curl --location --request GET 'https://rest.iad-01.braze.com/messages/scheduled_broadcasts?end_time=2024-03-31T12:00:00' \
+--header 'Authorization: Bearer YOUR-REST-API-KEY'
+```
+
+This endpoint will return the list of a list of their upcoming campaigns and Canvases. From here, the marketing team can confirm their list of messages by referencing the `name` field for the campaigns and Canvases in the response.
 
 ## Viewing an older preference center
 
+PoliterWeekly is a digital magazine whose subscribers are reachable via email. In an effort to better understand their subscribers' user journey, the marketing team wants to review the details for their preference center to check when it was created and last updated.
 
+Using the [`/preference_center/v1/{preferenceCenterExternalID}` endpoint]({{site.baseurl}}/api/endpoints/preference_center/get_view_details_preference_center/), the marketing team only needs to insert their preference center external ID as the path parameter, which would look like this:
 
+```
+curl --location -g --request GET https://rest.iad-01.braze.com/preference_center/v1/politer_weekly_preference_center_api_id \
+--header 'Authorization: Bearer YOUR-REST-API-KEY'
+```
+
+{% details Here’s the response that the PoliterWeekly marketing team would receive. %}
+
+```json
+{
+  "name": "PoliterWeekly Notification Preferences",
+  "preference_center_api_id": "user_engage_pref_123",
+  "created_at": "2021-04-03T12:00:00",
+  "updated_at": "2024-08-15T15:00:00",
+  "preference_center_title": "Manage Your PoliterWeekly Notification Preferences",
+  "preference_center_page_html": "<!DOCTYPE html><html><head><title>Your PoliterWeekly Newsletter Preferences</title><style>body { font-family: Arial, sans-serif; margin: 0; padding: 20px; }.container { max-width: 600px; margin: auto; }h1 { color: #333; }.preference { margin-bottom: 20px; }.preference label { font-size: 16px; }.preference input[type=\"checkbox\"] { margin-right: 10px; }.submit-btn { background-color: #007bff; color: white; padding: 10px 20px; border: none; cursor: pointer; }</style></head><body><div class=\"container\"><h1>Manage your notification preferences</h1><p>Select the types of updates you wish to receive from us:</p><form id=\"preferencesForm\"><div class=\"preference\"><label><input type=\"checkbox\" name=\"newsUpdates\" checked> News Updates</label></div><div class=\"preference\"><label><input type=\"checkbox\" name=\"editorialPicks\"> Editorial Picks</label></div><div class=\"preference\"><label><input type=\"checkbox\" name=\"events\"> Events & Webinars</label></div><div class=\"preference\"><label><input type=\"checkbox\" name=\"specialOffers\"> Special Offers & Promotions</label></div><button type=\"submit\" class=\"submit-btn\">Save Preferences</button></form></div><script>document.getElementById('preferencesForm').addEventListener('submit', function(e) {e.preventDefault();alert('Your preferences have been saved!');});</script></body></html>",
+  "confirmation_page_html": "<!DOCTYPE html><html><head><title>PoliterWeekly Preferences Updated</title></head><body><h1>You're good to go!</h1><p>Your preferences have been updated successfully.</p></body></html>",
+  "redirect_page_html": null,
+  "preference_center_options": {
+    "meta-viewport-content": "width=device-width, initial-scale=1"
+  },
+  "state": "active"
+}
+```
+
+From this response, the marketing team can see the preference center was created 3 years before its most recent update. With this information in mind, the marketing team could create and launch a new preference center.
+
+{% enddetails %}
 
 ## Removing invalid phone numbers
 
