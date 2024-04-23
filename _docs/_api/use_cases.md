@@ -77,16 +77,16 @@ Authorization: Bearer YOUR-REST-API-KEY
 {
   "canvases" : [
   	{
-  		"id": "canvas_identifier",
-  		"last_edited": "2020-07-10 15:00:00.000",
+  		"id": "canvas_identifier_1",
+  		"last_edited": "2020-07-10T23:59:59",
   		"name": "PatientReminder_FluShot_2020",
   		"tags": {
         "flu_shots", "patienthealth", "2020"
       },
   	},
   	{
-  		"id": "canvas_identifier",
-  		"last_edited": "2020-07-17 15:00:00.000",
+  		"id": "canvas_identifier_2",
+  		"last_edited": "2020-07-30T23:59:59",
   		"name": "PatientReminder2_FluShot_2020",
   		"tags": {
         "flu_shots", "patienthealth", "reminder", "2020"
@@ -99,13 +99,26 @@ Authorization: Bearer YOUR-REST-API-KEY
 ```
 {% enddetails %}
 
-Let’s move on to the next task of viewing the analytics summary for the first Canvas from Seige Valley Health’s list of Canvases.
+Let’s move on to the next task of viewing the analytics summary for the first Canvas from Seige Valley Health’s list of Canvases. To do so, we would use [`/canvas/data_summary` endpoint]({{site.baseurl}}/api/endpoints/export/canvas/get_canvas_analytics_summary/) with the following request parameters:
+
+* `canvas_id`: "canvas_identifier_2"
+* `ending_at`: 2023-07-10T23:59:59
+* `starting_at`: 2020-07-10T23:59:59
+
+Here's an example request:
+
+```
+curl --location -g --request GET 'https://rest.iad-01.braze.com/canvas/data_summary?canvas_id={{canvas_identifier_2}}&ending_at=2023-07-10T23:59:59&starting_at=2020-07-10T23:59:59&length=5&include_variant_breakdown=false&include_step_breakdown=false&include_deleted_step_data=false' \
+--header 'Authorization: Bearer YOUR-REST-API-KEY'
+```
 
 ## Checking upcoming scheduled campaigns and Canvases
 
 
 
 ## Viewing an older preference center
+
+
 
 
 ## Removing invalid phone numbers
@@ -135,15 +148,22 @@ After sending this payload, we’ll see this response that confirms the invalid 
 }
 ```
 
-## Viewing a user's subscription groups
+## Seeing a user's subscription group status
 
 Let's say you're a marketer at SandwichEmperor, a quick service restaurant chain in the United States, and you want to check the subscription group statuses for a randomized list of your users for SMS.
 
-Using the `/subscription/status/get` endpoint, you can accomplish this task by doing the following:
+Using the `/subscription/status/get` endpoint, you can accomplish this task for an individual user with the following example request:
 
-This endpoint also lists the subscription group statuses of your users for emails as well.
+{% raw %}
+```
+curl --location -g --request GET 'https://rest.iad-01.braze.com/subscription/status/get?subscription_group_id={{subscription_group_id}}&phone=+11232223333' \
+--header 'Authorization: Bearer YOUR-REST-API-KEY'
+```
+{% endraw %}
 
-## Updating an HTML template for email messaging
+This endpoint also lists the subscription group statuses of a user's for email, and can be used to see the subscription group status for multiple users.
+
+## Checking an HTML template for email messaging
 
 At WorkFriends, a social network for helping build connections between workers from different industries, their marketing team is responsible for sending email campaigns to their users. These campaigns often include reminders for local events, weekly newsletters, and profile activity highlights.
 
@@ -155,17 +175,15 @@ In this scenario, let’s say WorkFriends has historically used a singular HTML 
 Content-Type: application/json
 Authorization: Bearer YOUR_REST_API_KEY
 {
-  "email_template_id": (string) Your email template's API Identifier,
-  "template_name": (string) The name of your email template,
-  "description": (string) The email template description,
-  "subject": (string) The email template subject line,
-  "preheader": (optional, string) The email preheader used to generate previews in some clients),
-  "body": (optional, string) The email template body that may include HTML,
-  "plaintext_body": (optional, string) A plaintext version of the email template body,
-  "should_inline_css": (optional, boolean) Whether there is inline CSS in the body of the template - defaults to the css inlining value for the workspace,
-  "tags": (string) Tag names,
-  "created_at": (string) The time the email was created at in ISO 8601,
-  "updated_at": (string) The time the email was updated in ISO 8601
+  "email_template_id": "WorkFriends_Email_Template_ID",
+  "template_name": "Promo template",
+  "description": "Promo template",
+  "subject": "WorkFriends Weekly Newsletter",
+  "preheader": "Another week, another WorkFriends update",
+  "body": "<!DOCTYPE html><html><head><title>WorkFriends Weekly Newsletter</title><style>body {font-family: Arial, sans-serif; color: #333;}.container {padding: 20px;}.header {background-color: #f2f2f2; padding: 10px; text-align: center;}.content {margin-top: 20px;}.footer {margin-top: 20px; font-size: 12px; text-align: center; color: #777;}</style></head><body><div class=\"container\"><div class=\"header\"><h2>WorkFriends Weekly Newsletter</h2></div><div class=\"content\"><p>Hello WorkFriends,</p><p>Welcome to another edition of our weekly newsletter. We've got some exciting updates and promos for you this week!</p><!-- Add more content here --><p>Don't forget to check out our latest promos and updates. Stay connected, stay informed!</p></div><div class=\"footer\"><p>Thank you for being a part of WorkFriends.</p><p>Unsubscribe | Update Preferences</p></div></div></body></html>",
+  "tags": "promo",
+  "created_at": "2020-07-10 13:00:00.000",
+  "updated_at": "2024-02-04 17:00:00.000"
 }
 ```
 
