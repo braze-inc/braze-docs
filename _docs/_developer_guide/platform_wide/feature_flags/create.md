@@ -31,6 +31,7 @@ To manage feature flags in the dashboard, you'll either need to be an Administra
 |-------------------------------------------------------------------------------|-------------------------------------------|
 | **Manage Feature Flags**                                                      | View, create, and edit feature flags.     |
 | **Access Campaigns, Canvases, Cards, Feature Flags, Segments, Media Library** | View the list of available feature flags. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 ## Creating a feature flag
 
@@ -49,6 +50,7 @@ Under **Details**, enter a name, ID, and description for your feature flag.
 | Name         | A human-readable title for your marketers and administrators.                                                                                                                                                       |
 | ID           | The unique ID you'll use in your code to check if this feature is [enabled for a user](#enabled). This ID cannot be changed later, so review our [ID naming best practices](#naming-conventions) before continuing. |
 | Description  | An optional description that gives some context about your feature flag.                                                                                                                                            |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 ### Step 3: Create custom properties
 
