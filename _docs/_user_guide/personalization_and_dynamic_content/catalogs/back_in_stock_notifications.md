@@ -64,8 +64,8 @@ Now, your customers can be notified when an item is back in stock.
 {% raw %}
 To template in details about the catalog item that's back in stock, you can use the `canvas_entry_properties` Liquid tag to access the `item_id`. 
 
-Using ``{{canvas_entry_properties.${catalog_update}}}`` will return the ID of the item that came back in stock.
-Use this Liquid tag  ``{% catalog_items <name_of_your_catalog> {{canvas_entry_properties.${catalog_update}}} %}`` at the top of your message, then use ``items[0].<field_name>` to access data about that item throughout the message.
+Using ``{{canvas_entry_properties.${catalog_update}.item_id}}`` will return the ID of the item that came back in stock. ``{{canvas_entry_properties.${catalog_update}.previous_value}}`` will return the inventory value of the item prior to the update, and ``{{canvas_entry_properties.${catalog_update}.new_value}}`` will return the new inventory value after the update.
+Use this Liquid tag  ``{% catalog_items <name_of_your_catalog> {{canvas_entry_properties.${catalog_update}.item_id}} %}`` at the top of your message, then use ``items[0].<field_name>` to access data about that item throughout the message.
 {% endraw %}
 
 ## Considerations
