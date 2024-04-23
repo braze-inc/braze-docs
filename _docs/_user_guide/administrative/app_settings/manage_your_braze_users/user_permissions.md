@@ -103,7 +103,7 @@ You can bundle relevant permissions with permission sets and roles by navigating
 
 ### Permission sets
 
-Use permission sets to bundle together permissions that are related to specific subject areas or actions. They can be applied to dashboard users who need the same access across different workspaces, such as in the following example:
+Use permission sets to bundle permissions related to specific subject areas or actions. They can be applied to dashboard users who need the same access across different workspaces, such as in the following example:
 
 Permission Set Name    | Permissions  
 ----------- | ---------------- 
