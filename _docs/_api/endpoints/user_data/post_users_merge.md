@@ -88,7 +88,7 @@ This endpoint will merge any of the following fields if they are not found on th
 - Workflow summaries (Braze will pick the most recent date fields)
 - Message and message engagement history
 
-Session data will only be merged if the app exists on both user profiles. Note that this endpoint does not merge subscription groups or subscriptions.
+Session data will only be merged if the app exists on both user profiles.
 
 #### Custom event date and purchase event date behavior
 Note that these merged fields will update "for X events in Y days" filters. For purchase events, these filters include "number of purchases in Y days" and "money spent in last Y days".
