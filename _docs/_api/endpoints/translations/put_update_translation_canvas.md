@@ -1,33 +1,29 @@
 ---
-nav_title: "PUT: Update Translation in a Campaign or Canvas"
-article_title: "PUT: Update Translation in a Campaign or Canvas"
+nav_title: "PUT: Update Translation in a Canvas"
+article_title: "PUT: Update Translation in a Canvas"
 search_tag: Endpoint
 page_order: 1
 
 layout: api_page
 page_type: reference
-description: "This article outlines details about the Update translation in a campaign or Canvas message endpoint."
+description: "This article outlines details about the Update translation in a Canvas endpoint."
 ---
 
 {% api %}
-# Update translation in a campaign or Canvas
+# Update translation in a Canvas
 {% apimethod put %}
-/{campaigns}/translations
+/{canvas_id}/translations
 {% endapimethod %}
 
-{% apimethod put %}
-/{canvas}/translations
-{% endapimethod %}
-
-> Use this endpoint to update multiple translations for a campaign or Canvas.
+> Use this endpoint to update multiple translations for a Canvas.
 
 {% alert important %}
-Updating a translation for campaign and Canvas messages via API is currently in early access. Contact your Braze account manager if you're interested in participating in the early access.
+Updating a translation for Canvas messages via API is currently in early access. Contact your Braze account manager if you're interested in participating in the early access.
 {% endalert %}
 
 ## Prerequisites
 
-To use this endpoint, you'll need an [API key]({{site.baseurl}}/api/basics#rest-api-key/) with `campaigns.translations.update` and `canvas.translations.update` permissions for campaigns and Canvases respectively.
+To use this endpoint, you'll need an [API key]({{site.baseurl}}/api/basics#rest-api-key/) with the `canvas.translations.update` permission.
 
 ## Rate limit
 
@@ -37,8 +33,7 @@ This endpoint has a rate limit of 250,000 requests per hour.
 
 | Parameter | Required | Data Type | Description |
 | --------- | ---------| --------- | ----------- |
-|`campaign`| Required for translating a campaign | String | The ID for your campaign. |
-|`canvas`| Required for translating a Canvas | String | The ID of your Canvas. |
+|`canvas_id`| Required for translating a Canvas | String | The ID of your Canvas. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ## Request parameters
@@ -54,7 +49,6 @@ This endpoint has a rate limit of 250,000 requests per hour.
 Content-Type: application/json
 Authorization: Bearer YOUR-REST-API-KEY
 {
-	"campaign_id": "e24404b3-3626-4de0-bdec-06935f3aa0ab", // CAMPAIGNS ONLY
 	"step_id": "a74404b3-3626-4de0-bdec-06935f3aa0ac", // CANVAS ONLY
 	"message_id": "f14404b3-3626-4de0-bdec-06935f3aa0ad",
 	"locale_id": "h94404b3-3626-4de0-bdec-06935f3aa0ad",
@@ -88,7 +82,6 @@ The status code `400` could return the following response body. Refer to [Troubl
 	]
 }
 ```
-
 
 ## Troubleshooting
 

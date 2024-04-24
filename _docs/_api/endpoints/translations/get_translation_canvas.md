@@ -1,33 +1,29 @@
 ---
-nav_title: "GET: Translate Campaign or Canvas messages"
-article_title: "GET: Translate Campaign or Canvas messages"
+nav_title: "GET: Translate Canvas"
+article_title: "GET: Translate Canvas"
 search_tag: Endpoint
 page_order: 1
 
 layout: api_page
 page_type: reference
-description: "This article outlines details about the Translate campaign or Canvas messages endpoint."
+description: "This article outlines details about the Translate Canvas endpoint."
 ---
 
 {% api %}
-# Translate message for campaign or Canvas
+# Translate message for Canvas
 {% apimethod get %}
-/{campaign}/translations/?locale_id={locale_uuid}
-{% endapimethod %}
-
-{% apimethod get %}
-/{canvas}/translations/?locale_id={locale_uuid}
+/{canvas_id}/translations/?locale_id={locale_id}
 {% endapimethod %}
 
 > Use this endpoint to view a translated messages and see what this message will look like for a user.
 
 {% alert important %}
-Translating a message for a campaign and Canvas via API is currently in early access. Contact your Braze account manager if you're interested in participating in the early access.
+Translating a message for a Canvas via API is currently in early access. Contact your Braze account manager if you're interested in participating in the early access.
 {% endalert %}
 
 ## Prerequisites
 
-To use this endpoint, you'll need an [API key]({{site.baseurl}}/api/basics#rest-api-key/) with `campaigns.translations.get` and `canvas.translations.get` permissions for campaigns and Canvases respectively.
+To use this endpoint, you'll need an [API key]({{site.baseurl}}/api/basics#rest-api-key/) with the `canvas.translations.get` permission.
 
 ## Rate limit
 
@@ -37,15 +33,14 @@ This endpoint has a rate limit of 250,000 requests per hour.
 
 | Parameter | Required | Data Type | Description |
 | --------- | ---------| --------- | ----------- |
-|`campaigns`| Required for translating a campaign | String | The ID of your campaign. |
-|`canvas`| Required for translating a Canvas | String | The ID of your Canvas. |
-|`locale_uuid`| Required | String | The ID of the locale. |
+|`canvas_id`| Required for translating a campaign | String | The ID of your Canvas. |
+|`locale_id`| Required | String | The ID of the locale. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ## Example request
 
 ```
-curl --location --request GET 'https://rest.iad-03.braze.com//{canvas}/translations/?locale_id={locale_uuid}' \
+curl --location --request GET 'https://rest.iad-03.braze.com//{canvas_id}/translations/?locale_id={locale_id}' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer YOUR-REST-API-KEY'
 ```

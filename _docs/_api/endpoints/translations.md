@@ -13,12 +13,18 @@ guide_top_text: "Use the Braze translation endpoints to manage and update transl
 
 guide_featured_title: ""
 guide_featured_list:
-  - name: "GET: Translate Multiple Campaign or Canvas Messages"
-    link: /docs/api/endpoints/translations/get_translations/
-  - name: "GET: Translate A Campaign or Canvas Message"
-    link: /docs/api/endpoints/translations/get_translation/
-  - name: "PUT: Update Translation in a Campaign or Canvas"
-    link: /docs/api/endpoints/translations/update_translations/
+  - name: "GET: Translate Multiple Campaigns"
+    link: /docs/api/endpoints/translations/get_bulk_translations_campaigns/
+  - name: "GET: Translate Multiple Canvases"
+    link: /docs/api/endpoints/translations/get_bulk_translations_canvases/
+  - name: "GET: Translate A Campaign"
+    link: /docs/api/endpoints/translations/get_translation_campaign/
+  - name: "GET: Translate A Canvas"
+    link: /docs/api/endpoints/translations/get_translation_canvas/
+  - name: "PUT: Update Translation in a Campaign"
+    link: /docs/api/endpoints/translations/update_translation_campaign/
+  - name: "PUT: Update Translation in a Canvas"
+    link: /docs/api/endpoints/translations/update_translations_canvas/
 ---
 
 {% alert important %}
