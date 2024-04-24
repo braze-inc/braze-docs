@@ -48,8 +48,8 @@ Check out [SQL Segment Extensions]({{site.baseurl}}/user_guide/engagement_tools/
 
 ## Considerations
 
-- A segment extension can reference data from only one connection, not multiple.    
-- A segment extension can use one of the following as a data source: CDI data or Braze Snowflake (Currents) data. You cannot mix data sources within a segment extension, but you can create multiple segment extensions to reference together within a segment.
+- A Segment Extension can reference data from only one connection, not multiple.    
+- A Segment Extension can use one of the following as a data source: CDI data or Braze Snowflake (Currents) data. You cannot mix data sources within a segment extension, but you can create multiple segment extensions to reference together within a segment.
 
 ## Troubleshooting
 
