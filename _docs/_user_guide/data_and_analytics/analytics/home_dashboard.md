@@ -63,7 +63,7 @@ The percentage next to the MAU count shows the change in MAU for this period com
 $$\text{Change in MAU} = \frac{\text{MAU of last date in range} - \text{MAU of day before start date}}{\text{MAU of day before start date}}$$
 
 {% alert note %}
-Anonymous users will also count towards your MAU. For mobile devices, anonymous users are device-dependent. For web users, anonymous users are browser cache-dependent.
+Anonymous users will also count toward your MAU. For mobile devices, anonymous users are device-dependent. For web users, anonymous users are browser cache-dependent.
 {% endalert %}
 
 ### Daily active users

@@ -10,7 +10,7 @@ tool: Campaigns
 page_type: landing
 description: "This section provides an introduction to campaigns, and how you can use them to build your message strategy."
 
-guide_featured_title: "Section Articles"
+guide_featured_title: "Section articles"
 guide_featured_list:
   - name: Campaign Basics
     link: /docs/user_guide/engagement_tools/campaigns/getting_started/campaign_basics/

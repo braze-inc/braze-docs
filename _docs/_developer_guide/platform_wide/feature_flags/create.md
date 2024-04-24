@@ -413,7 +413,7 @@ height = featureFlag.getNumberProperty("height")
 {% endtab %}
 {% endtabs %}
 
-You can also get a list of all enabled feature flags:
+### Get a list of all feature flags {#get-list-of-flags}
 
 {% tabs %}
 {% tab JavaScript %}

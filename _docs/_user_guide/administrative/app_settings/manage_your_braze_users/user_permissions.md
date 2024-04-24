@@ -48,10 +48,14 @@ You can manage user permissions by group or on an individual basis when editing 
 
 ![Manage User Permissions][89]
 
+{% alert important %}
+Beginning in early April 2024, users will need the “Access Campaigns, Canvases, Cards, Segments, Media Library” permission to create or update promotion code lists.
+{% endalert %}
+
 |Permission Name|Definition/Parameters|
 |---|---|
 |Admin|Allows users to access all available features. This is the default setting for all new users. Can update company settings (company name and time zone), which limited users cannot do.|
-|Access Campaigns, Canvases, Cards, Segments, Media Library| Allows users to view campaign and Canvas performance metrics, create and duplicate drafts of campaigns and Canvases, edit campaign and Canvas drafts and templates, view drafts of News Feed, segments, templates and media, create templates, upload media, view engagement reports, and be granted global message settings in the dashboard. <br><br>However, users with this permission cannot pause or edit existing live content. |
+|Access Campaigns, Canvases, Cards, Content Blocks, Feature Flags, Segments, Media Library, Locations, Promotion Codes, and Preference Centers| Allows users to view campaign and Canvas performance metrics, create and duplicate drafts of campaigns and Canvases, edit campaign and Canvas drafts and templates, view drafts of News Feed, segments, templates and media, create templates, upload media, create or update promotion code lists, view engagement reports, and be granted global message settings in the dashboard.<br><br>However, users with this permission cannot pause or edit existing live content. |
 |Send Campaigns, Canvases| Allows users to edit, archive, and stop campaigns and Canvases, create campaigns, and launch Canvases. |
 |Publish Cards| This permission is only visible if your account is enabled for News Feed, which is being deprecated. This does not affect Content Cards.<br><br>Allows users to create and edit News Feed cards. You can still view News Feed cards without this permission. If your account is enabled for News Feed and a user should be able to launch existing Content Blocks, they need both "Publish Cards" and "Launch Content Blocks" permissions. |
 |Edit Segments| Allows users to create and edit segments. You can still create campaigns with existing segments and filters without this permission. You need this permission to generate a segment from users in a CSV or retarget the group of users in the CSV.|
@@ -93,15 +97,13 @@ Individual users can be granted different degrees of access on an app-by-app bas
 |App Level Settings|Determines the user's level of editing access.|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
-## Permission sets
+## Permission sets and roles
 
-On the **Permission Sets** page found at **Settings** > **Permission Settings**, you can create, edit, and delete custom permission assignments for your Braze dashboard users. 
+You can bundle relevant permissions with permission sets and roles by navigating to **Settings** > **Permission Settings**.
 
-Permission sets can be assigned by selecting an existing user or creating a new one on the **Company Users** page, then choosing the appropriate permission set under **Workspace Level Permissions**.
+### Permission sets
 
-![The Permission Sets tab opens a Manage Permissions Sets page with a table of permission set names and selected permissions.][5]
-
-Each permission set can be defined for a specific group of users, such as in the following example:
+Use permission sets to bundle permissions related to specific subject areas or actions. They can be applied to dashboard users who need the same access across different workspaces, such as in the following example:
 
 Permission Set Name    | Permissions  
 ----------- | ---------------- 
@@ -109,6 +111,29 @@ Developers | “Access Dev Console”
 Marketers | “Access Campaigns, Canvases, Cards, Feature Flags, Segments, Media Library, and Preference Centers” <br> “Manage Media Library Assets”
 User Management | “Manage Dashboard Users” <br> “Manage Teams”
 {: .reset-td-br-1 .reset-td-br-2}
+
+#### Assigning permission sets
+
+Assign permission sets by selecting an existing user or creating a new one on the **Company Users** page, then choosing the appropriate permission set under **Workspace Level Permissions**.
+
+### Roles
+
+{% alert note %}
+Roles are currently in early access. Contact your Braze customer success manager if you are interested in participating in the early access. 
+{% endalert %}
+
+Roles allow for more structure by bundling together individual custom permissions and workspace access controls. This is especially useful if you have many different brands or regional workspaces in one dashboard. With roles, you can add dashboard users to the right workspaces and directly grant them the associated permissions.
+
+| Role Name    | Workspace | Permissions  
+----------- | ----------- | ---------
+| Marketer - Fashion Brands | {::nomarkdown}[DEV] Fashion Brand, [QA] Fashion Brand, [PROD] Fashion Brand {:/} | “Access Campaigns, Canvases, Cards, Feature Flags, Segments, Media Library, and Preference Center"<br>“Manage Media Library Assets” |
+| Marketer - Skincare Brands | {::nomarkdown}[DEV] Skincare Brand, [QA] Skincare Brand, [PROD] Skincare Brand {:/} | “Access Campaigns, Canvases, Cards, Feature Flags, Segments, Media Library, and Preference Centers” <br>“Manage Media Library Assets” |
+| User Management - All Brands | {::nomarkdown}[DEV] Fashion Brand, [QA] Fashion Brand, [PROD] Fashion Brand, [DEV] Skincare Brand, [QA] Skincare Brand, [PROD] Skincare Brand {:/} | “Manage Dashboard Users”<br>“Manage Teams” |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+
+#### Assigning roles
+
+Assign roles by selecting an existing user or creating a new one on the **Company Users** page, then choosing the appropriate role under **Workspace Level Permissions**.
 
 ## Exporting user permissions
 

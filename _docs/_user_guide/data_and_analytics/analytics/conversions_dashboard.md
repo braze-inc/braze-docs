@@ -22,8 +22,8 @@ To set up your conversions dashboard report:
 3. Select the campaigns or Canvases (or both) that you would like to analyze. 
    - If you would like to filter campaigns and Canvases by tag, select a **Tag**.  
 4. Select the **Channel(s)** you would like to analyze for your messages.
-5. (Optional) If desired, select a **Breakdown** layer. This allows you to view different dimensions of data, such as by variant, Canvas step, country, or language.
-6. (Optional) If you are interested in calculating conversions of an event that was not set up as a conversion event on the campaign or Canvas, turn on [Use custom events](#using-custom-events).
+5. (optional) If desired, select a **Breakdown** layer. This allows you to view different dimensions of data, such as by variant, Canvas step, country, or language.
+6. (optional) If you are interested in calculating conversions of an event that was not set up as a conversion event on the campaign or Canvas, turn on [Use custom events](#using-custom-events).
 7. Select an [Attribution Method](#attribution-methods) through which to analyze the selected messages.
 
 {% alert note %}

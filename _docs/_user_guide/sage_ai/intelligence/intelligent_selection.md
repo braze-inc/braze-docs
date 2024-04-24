@@ -12,7 +12,7 @@ search_rank: 10
 
 A variant that appears to be performing better than others will get sent to more users, while underperforming variants will be targeted at fewer users. Each adjustment is made using a [statistical algorithm][227] that makes sure we are adjusting for real performance differences and not just random chance.
 
-![A/B Testing section of a campaign or Canvas with Intelligent Selection enabled.][3]
+![A/B Testing section of a campaign with Intelligent Selection enabled.][3]
 
 Intelligent Selection will:
 - Repeatedly look at performance data and shift campaign traffic toward Winning Variants gradually.
@@ -32,7 +32,7 @@ When adding variants into your Canvas, click on one of the variant percentages. 
 
 ![A Canvas with two variants, each set to 50% variant distribution, allowing Intelligent Selection to be enabled.][2]
 
-Intelligent Selection will not be available if you haven't yet added conversion events to your Canvas or if your campaign is composed of a solo variant or solo control group.
+Intelligent Selection will not be available if you haven't yet added conversion events to your Canvas or if your campaign is composed of a solo variant.
 
 {% alert note %}
 We do not allow the use of Intelligent Selection with campaigns with re-eligibility enabled in under 24 hours because it would affect the integrity of the control variant. Check out [Intelligence FAQ]({{site.baseurl}}/user_guide/intelligence/faqs/#why-is-re-eligibility-not-available-when-combined-with-intelligent-selection) to learn more.
@@ -40,7 +40,7 @@ We do not allow the use of Intelligent Selection with campaigns with re-eligibil
 
 ## For how long will it run?
 
-For campaigns and Canvases, Intelligent Selection will run until it gathers enough evidence about the "true" conversion rates of the variants. "Enough" is determined by a special metric called "regret." You can think of it as similar to Confidence: Intelligent Selection will turn itself off when there's enough data to know which variant is best. 
+For campaigns and Canvases, Intelligent Selection will run until it gathers enough evidence about the "true" conversion rates of the variants. "Enough" is determined by a special metric called "regret." You can think of it as similar to confidence in that Intelligent Selection will turn itself off when there's enough data to know which variant is best. 
 
 In most cases, Intelligent Selection will choose one of the variants as the Winning Variant. This variant will be given 100% of the audience for future sends.
 

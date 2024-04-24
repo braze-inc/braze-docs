@@ -36,12 +36,10 @@ Table | Description
 [USERS_BEHAVIORS_GEOFENCE_RECORDEVENT_SHARED](#USERS_BEHAVIORS_GEOFENCE_RECORDEVENT_SHARED) | When a user triggers a geofenced area (for example, when they enter or exit a geofence). This event was received through the dedicated geofence endpoint, and is therefore received in real-time as soon as a user's device detects that it has triggered a geofence. <br><br>In addition, due to rate limiting on the geofence endpoint, it is possible that some geofence events are not reflected as a RecordEvent. All geofence events, however, are represented by DataEvent (but potentially with some delay due to batching).
 [USERS_BEHAVIORS_SUBSCRIPTION_GLOBALSTATECHANGE_SHARED](#USERS_BEHAVIORS_SUBSCRIPTION_GLOBALSTATECHANGE_SHARED) | When a user is subscribed or unsubscribed globally from a channel such as email
 [USERS_BEHAVIORS_SUBSCRIPTIONGROUP_STATECHANGE_SHARED](#USERS_BEHAVIORS_SUBSCRIPTIONGROUP_STATECHANGE_SHARED) | When a user is subscribed or unsubscribed to or from a subscription group
-[USERS_CAMPAIGNS_ABORT_SHARED](#USERS_CAMPAIGNS_ABORT_SHARED) | An originally scheduled campaign message was aborted for some reason.
 [USERS_CAMPAIGNS_CONVERSION_SHARED](#USERS_CAMPAIGNS_CONVERSION_SHARED) | When a user converts for a campaign
 [USERS_CAMPAIGNS_ENROLLINCONTROL_SHARED](#USERS_CAMPAIGNS_ENROLLINCONTROL_SHARED) | When a user is enrolled in the control group for a campaign
 [USERS_CAMPAIGNS_FREQUENCYCAP_SHARED](#USERS_CAMPAIGNS_FREQUENCYCAP_SHARED) | When a user gets frequency capped for a campaign
 [USERS_CAMPAIGNS_REVENUE_SHARED](#USERS_CAMPAIGNS_REVENUE_SHARED) | When a user generates revenue with in the primary conversion period
-[USERS_CANVAS_ABORT_SHARED](#USERS_CANVAS_ABORT_SHARED) | An originally scheduled Canvas step message was aborted for some reason
 [USERS_CANVAS_CONVERSION_SHARED](#USERS_CANVAS_CONVERSION_SHARED) | When a user converts for a Canvas conversion event
 [USERS_CANVAS_ENTRY_SHARED](#USERS_CANVAS_ENTRY_SHARED) | When a user enters a Canvas
 [USERS_CANVAS_EXIT_MATCHEDAUDIENCE_SHARED](#USERS_CANVAS_EXIT_MATCHEDAUDIENCE_SHARED) | When a user exits a Canvas because they match audience exit criteria
@@ -74,7 +72,7 @@ Table | Description
 [USERS_MESSAGES_PUSHNOTIFICATION_BOUNCE_SHARED](#USERS_MESSAGES_PUSHNOTIFICATION_BOUNCE_SHARED) | When a push notification bounces
 [USERS_MESSAGES_PUSHNOTIFICATION_INFLUENCEDOPEN_SHARED](#USERS_MESSAGES_PUSHNOTIFICATION_INFLUENCEDOPEN_SHARED) | When a user opens the app after receiving a notification without clicking on the notification
 [USERS_MESSAGES_PUSHNOTIFICATION_IOSFOREGROUND_SHARED](#USERS_MESSAGES_PUSHNOTIFICATION_IOSFOREGROUND_SHARED) | When a user receives a push notification while the app is open
-[USERS_MESSAGES_PUSHNOTIFICATION_OPEN_SHARED](#USERS_MESSAGES_PUSHNOTIFICATION_OPEN_SHARED) | When a user opens a push notification or clicks a push notification button (including a CLOSE button that does NOT open the app)
+[USERS_MESSAGES_PUSHNOTIFICATION_OPEN_SHARED](#USERS_MESSAGES_PUSHNOTIFICATION_OPEN_SHARED) | When a user opens a push notification or clicks a push notification button (including a CLOSE button that does NOT open the app). <br><br> Push button actions have multiple outcomes. No, Decline, and Cancel actions are "clicks", and Accept actions are "opens". Both are represented in this table, but they can be distinguished in the **BUTTON_ACTION_TYPE** column. For example, a query can be used to group by a `BUTTON_ACTION_TYPE` that is not No, Decline, or Cancel.
 [USERS_MESSAGES_PUSHNOTIFICATION_SEND_SHARED](#USERS_MESSAGES_PUSHNOTIFICATION_SEND_SHARED) | When we send a push notification to a user
 [USERS_MESSAGES_SMS_ABORT_SHARED](#USERS_MESSAGES_SMS_ABORT_SHARED) | An originally scheduled SMS message was aborted for some reason.
 [USERS_MESSAGES_SMS_CARRIERSEND_SHARED](#USERS_MESSAGES_SMS_CARRIERSEND_SHARED) | When an SMS message is sent to carrier
@@ -384,30 +382,6 @@ Field | Type | Description
 
 ## Campaigns
 
-### USERS_CAMPAIGNS_ABORT_SHARED {#USERS_CAMPAIGNS_ABORT_SHARED}
-
-Field | Type | Description
-------|------|------------
-`id` | `string` | globally unique ID for this event
-`user_id` | `string` | Braze ID of the user that performed this event
-`external_user_id` | `null,`&nbsp;`string` | [PII] external user ID of the user
-`device_id` | `null,`&nbsp;`string` | `device_id` that is tied to this user if user is anonymous
-`app_group_api_id` | `null,`&nbsp;`string` | API ID of the workspace this user belongs to
-`time` | `int` | Unix timestamp at which the event happened
-`dispatch_id` | `null,`&nbsp;`string` | ID of the dispatch this message belongs to
-`send_id` | `null,`&nbsp;`string` | message send ID this message belongs to
-`campaign_id` | `string` | internal-use Braze ID of the campaign this event belongs to
-`campaign_api_id` | `null,`&nbsp;`string` | API ID of the campaign this event belongs to
-`message_variation_api_id` | `null,`&nbsp;`string` | API ID of the message variation this user received
-`channel` | `null,`&nbsp;`string` | channel this event belongs to
-`gender` | `null,`&nbsp;`string` | [PII] gender of the user
-`country` | `null,`&nbsp;`string` | [PII] country of the user
-`timezone` | `null,`&nbsp;`string` | timezone of the user
-`language` | `null,`&nbsp;`string` | [PII] language of the user
-`abort_type` | `null,`&nbsp;`string` | type of abort, one of: `liquid_abort_message`, `quiet_hours`, `rate_limit`
-`abort_log` | `null,`&nbsp;`string` | [PII] log message describing abort details (maximum of 128 characters)
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
-
 ### USERS_CAMPAIGNS_CONVERSION_SHARED {#USERS_CAMPAIGNS_CONVERSION_SHARED}
 
 Field | Type | Description
@@ -499,32 +473,6 @@ Field | Type | Description
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 ## Canvas
-
-### USERS_CANVAS_ABORT_SHARED {#USERS_CANVAS_ABORT_SHARED}
-
-| Field                                  | Type                     | Description                                                                |
-| -------------------------------------- | ------------------------ | -------------------------------------------------------------------------- |
-| `id`                                   | `string`,&nbsp;`null`    | Globally unique ID for this event                                          |
-| `user_id`                              | `string`,&nbsp;`null`    | Braze ID of the user that performed this event                              |
-| `external_user_id`                     | `string`,&nbsp;`null`    | [PII] External user ID of the user                                         |
-| `device_id`                            | `string`,&nbsp;`null`    | ID of the device that is tied to this user, if the user is anonymous       |
-| `app_group_id`                         | `string`,&nbsp;`null`    | Braze ID of the workspace this user belongs to                              |
-| `app_group_api_id`                     | `string`,&nbsp;`null`    | API ID of the workspace this user belongs to                               |
-| `time`                                 | `int`,&nbsp;`null`       | Unix timestamp at which the event happened                                 |
-| `canvas_id`                            | `string`,&nbsp;`null`    | (For Braze use only) ID of the Canvas this event belongs to                |
-| `canvas_api_id`                        | `string`,&nbsp;`null`    | API ID of the Canvas this event belongs to                                 |
-| `canvas_variation_api_id`              | `string`,&nbsp;`null`    | API ID of the Canvas variation this event belongs to                       |
-| `canvas_step_api_id`                   | `string`,&nbsp;`null`    | API ID of the Canvas step this event belongs to                            |
-| `canvas_step_message_variation_api_id` | `string`,&nbsp;`null`    | API ID of the Canvas step message variation this user received             |
-| `channel`                              | `string`,&nbsp;`null`    | Messaging channel this event belongs to (email, push, etc.)                |
-| `gender`                               | `string`,&nbsp;`null`    | [PII] Gender of the user                                                   |
-| `country`                              | `string`,&nbsp;`null`    | [PII] Country of the user                                                  |
-| `timezone`                             | `string`,&nbsp;`null`    | Timezone of the user                                                       |
-| `language`                             | `string`,&nbsp;`null`    | [PII] Language of the user                                                 |
-| `abort_type`                           | `string`,&nbsp;`null`    | Type of abort, one of: "liquid_abort_message", "quiet_hours", "rate_limit" |
-| `abort_log`                            | `string`,&nbsp;`null`    | [PII] Log message describing abort details, maximum 128 characters         |
-| `sf_created_at`                        | `timestamp`,&nbsp;`null` | When this event was picked up by the Snowpipe                              |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 ### USERS_CANVAS_CONVERSION_SHARED {#USERS_CANVAS_CONVERSION_SHARED}
 
@@ -1824,7 +1772,7 @@ Field | Type | Description
 `canvas_step_message_variation_api_id` | `null,`&nbsp;`string` | API ID of the Canvas step message variation this user received
 `gender` | `null,`&nbsp;`string` | [PII] gender of the user
 `country` | `null,`&nbsp;`string` | [PII] country of the user
-`timezone` | `null,`&nbsp;`string` | timezone of the user
+`timezone` | `null,`&nbsp;`string` | time zone of the user
 `language` | `null,`&nbsp;`string` | [PII] language of the user
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 

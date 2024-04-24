@@ -72,7 +72,7 @@ In your funnel report, you can directly compare the control group alongside the 
 **For campaigns with re-eligibility**: If a user receives the campaign more than once in the report time window, Braze will determine whether the user should be included in the funnel based on the actions this user took after the first time they received the campaign within the time window.
 - Note that there may be a discrepancy between funnel and standard conversion values, as users can convert more than once with re-eligibility, but Funnel Reports will convert a maximum of one time even if a user performs the event more than once. 
 
-**For multivariant campaigns with re-eligibility**: If a user receives multiple variants from the campaign during the report time window, Braze will determine whether they should be included in the variant funnel based on the actions this user took after the first time they received the campaign variant. This means that the same user could count towards multiple different variants if they received multiple variants during the time window for the funnel.
+**For multivariant campaigns with re-eligibility**: If a user receives multiple variants from the campaign during the report time window, Braze will determine whether they should be included in the variant funnel based on the actions this user took after the first time they received the campaign variant. This means that the same user could count toward multiple different variants if they received multiple variants during the time window for the funnel.
 
 [1]:{% image_buster /assets/img/funnel_report/funnel_report1.jpg %}
 [2]:{% image_buster /assets/img/funnel_report/funnel_report2.png %}

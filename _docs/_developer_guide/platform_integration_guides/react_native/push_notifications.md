@@ -3,6 +3,7 @@ nav_title: Push Notifications
 article_title: Push Notifications for React Native
 platform: React Native
 page_order: 2
+toc_headers: h2
 description: "This article covers implementing push notifications on React Native."
 channel: push
 
@@ -12,29 +13,45 @@ channel: push
 
 > This reference article covers how to set push notifications for React Native. Integrating push notifications requires setting up each native platform separately. Follow the respective guides listed to finish the installation.
 
-## Step 1: Complete native setup
-
-### Prerequisites
-
-For any iOS integration method, ensure that you have first generated an APNs certificate and uploaded it to the Braze dashboard. If you do not have an existing push key or certificate from Apple or want to generate a new one, follow [the Swift integration instructions]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/integration/).
+## Step 1: Complete the initial setup
 
 {% tabs %}
 {% tab Expo %}
-
 Set the `enableBrazeIosPush` and `enableFirebaseCloudMessaging` options in your `app.json` file to enable push for iOS and Android, respectively. Refer to the configuration instructions [here]({{site.baseurl}}/developer_guide/platform_integration_guides/react_native/react_sdk_setup/#step-2-complete-native-setup) for more details.
 
 Note that you will need to use these settings instead of the native setup instructions if you are depending on additional push notification libraries like [Expo Notifications](https://docs.expo.dev/versions/latest/sdk/notifications/).
-
 {% endtab %}
+
 {% tab Android %}
+### Step 1.1: Register for push
 
-Follow the [Android integration instructions]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/integration/standard_integration/).
+Register for push using Google’s Firebase Cloud Messaging (FCM) API. For a full walkthrough, refer to the following steps from the [Native Android push integration guide]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/integration/standard_integration/):
 
-### Step 1.1a
-Set the `firebaseCloudMessagingSenderId` config prop in your `app.json`. See the [Android integration instructions]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/integration/standard_integration#step-4-set-your-firebase-credentials) on retrieving your sender ID.
+1. [Add Firebase to your project]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/integration/standard_integration/#step-1-add-firebase-to-your-project).
+2. [Add Cloud Messaging to your dependencies]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/integration/standard_integration/#step-2-add-cloud-messaging-to-your-dependencies).
+3. [Create a service account]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/integration/standard_integration/#step-3-create-a-service-account).
+4. [Generate JSON credentials]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/integration/standard_integration/#step-4-generate-json-credentials).
+5. [Upload your JSON credentials to Braze]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/integration/standard_integration/#step-5-upload-your-json-credentials-to-braze).
 
-### Step 1.2a
-Add your `google-services.json` file path to your `app.json`. This file is required when setting `enableFirebaseCloudMessaging: true` in your configuration.
+### Step 1.2: Add your Google Sender ID
+
+First, go to Firebase Console, open your project, then select <i class="fa-solid fa-gear"></i>&nbsp;**Settings** > **Project settings**.
+
+![The Firebase project with the "Settings" menu open.]({% image_buster /assets/img/android/push_integration/set_up_automatic_token_registration/select-project-settings.png %})
+
+Select **Cloud Messaging**, then under **Firebase Cloud Messaging API (V1)**, copy the **Sender ID** to your clipboard.
+
+![The Firebase project's "Cloud Messaging" page with the "Sender ID" highlighted.]({% image_buster /assets/img/android/push_integration/set_up_automatic_token_registration/copy-sender-id.png %})
+
+Next, open your project's `app.json` file and set your `firebaseCloudMessagingSenderId` property to the Sender ID in your clipboard. For example:
+
+```
+"firebaseCloudMessagingSenderId": "693679403398"
+```
+
+### Step 1.3: Add the path to your Google Services JSON
+
+In your project's `app.json` file, add the path to your `google-services.json` file. This file is required when setting `enableFirebaseCloudMessaging: true` in your configuration.
 
 ```json
 {
@@ -58,15 +75,22 @@ Add your `google-services.json` file path to your `app.json`. This file is requi
   }
 }
 ```
-
 {% endtab %}
+
 {% tab iOS %}
+### Step 1.1: Upload APNs certificates
 
-Follow the [iOS integration instructions](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/b1-standard-push-notifications/) to implement in Swift, or refer to [Push notifications integration]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/integration/?tab=objective-c#automatic-push-integration) for instructions to implement in Swift or Objective-C. If you prefer not to request push permission upon launching the app, you should omit the `requestAuthorizationWithOptions:completionHandler:` call in your AppDelegate and follow the step below.
+Generate an Apple Push Notification service (APNs) certificate and uploaded it to the Braze dashboard. For a full walkthrough, see [Uploading your APNs certificate]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/integration/#step-1-upload-your-apns-certificate).
 
-### Migrating a push key from expo-notifications
+### Step 1.2: Choose an integration method
+
+If you don't plan on requesting push permissions when the app launched, omit the `requestAuthorizationWithOptions:completionHandler:` call in your AppDelegate, then skip to [Step 2](#step-2-request-push-notifications-permission). Otherwise, follow the [native iOS integration guide]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/integration/?tab=objective-c#automatic-push-integration).
+
+When you're finished, continue to [Step 1.3](#step-13-migrate-your-push-key).
+
+### Step 1.3: Migrate your push key
+
 If you were previously using `expo-notifications` to manage your push key, run `expo fetch:ios:certs` from your application's root folder. This will download your push key (a .p8 file), which can then be uploaded to the Braze dashboard.
-
 {% endtab %}
 {% endtabs %}
 
@@ -128,31 +152,23 @@ For a full list of push notification fields, refer to the table below:
 | `android`          | Object    | Represents Android-specific fields. |
 {: .reset-td-br-1 .reset-td-br-2}
 
-
 ## Step 3: Enable deep linking (optional)
 
-To enable Braze to handle deep links inside of React components when a push notification is clicked, follow the additional steps.
+To enable Braze to handle deep links inside React components when a push notification is clicked, follow the additional steps.
 
 {% tabs %}
 {% tab Expo %}
-
 Our [BrazeProject sample app](https://github.com/braze-inc/braze-react-native-sdk/tree/master/BrazeProject) contains a complete example of implemented deep links. To learn more about what deep links are, see our [FAQ article]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/#what-is-deep-linking).
 
 {% endtab %}
 {% tab Android %}
-
-### Step 3.1a: Handle deep links automatically
-
 For Android, setting up deep links is identical to [setting up deep links on native Android apps]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/integration/standard_integration#step-4-add-deep-links). If you want the Braze SDK to handle push deep links automatically, set `androidHandlePushDeepLinksAutomatically: true` in your `app.json`.
 
 {% endtab %}
 {% tab iOS %}
+### Step 3.1: Add deep linking capabilities
 
-### Step 3.1b: Add `populateInitialUrlFromLaunchOptions`
-
-For iOS, add `populateInitialUrlFromLaunchOptions` to your AppDelegate's `didFinishLaunchingWithOptions` method. 
-
-For example:
+For iOS, add `populateInitialUrlFromLaunchOptions` to your AppDelegate's `didFinishLaunchingWithOptions` method. For example:
 
 ```objc
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
@@ -173,13 +189,9 @@ For example:
 }
 ```
 
-### Step 3.2b: Add `getInitialURL()`
+### Step 3.2: Configure deep link handling
 
-Add the `Linking.getInitialURL()` method to handle when a deep link opens your app.
-
-You should also call the `Braze.getInitialURL` method to handle deep links from iOS push notification clicks while your app is not running. Braze provides this workaround since React Native's Linking API does not support this scenario due to a race condition on app startup.
-
-For example:
+Use the `Linking.getInitialURL()` method for deep links that open your app, and the `Braze.getInitialURL` method for deep links inside push notifications that open your app when it isn't running. For example:
 
 ```javascript
 Linking.getInitialURL()
@@ -201,7 +213,9 @@ Braze.getInitialURL(url => {
   }
 });
 ```
-
+{% alert note %}
+Braze provides this workaround since React Native's Linking API does not support this scenario due to a race condition on app startup.
+{% endalert %}
 {% endtab %}
 {% endtabs %}
 
@@ -219,9 +233,9 @@ Starting in macOS 13, on certain devices, you can test iOS push notifications on
 
 ![A Braze push campaign showing you can add your own user ID as a test recipient to test your push notification.][1]
 
-## Optional: Forward Android push to another FirebaseMessagingService
+## Forwarding Android push to additional FMS
 
-If you have another Firebase Messaging Service you would also like to use, you can also specify a fallback Firebase Messaging Service to call if your application receives a push that isn't from Braze.
+If you want to use an additional Firebase Messaging Service (FMS), you can specify a fallback FMS to call if your application receives a push that isn't from Braze. For example:
 
 ```json
 {
@@ -240,4 +254,58 @@ If you have another Firebase Messaging Service you would also like to use, you c
 }
 ```
 
+## Enabling rich push notifications for iOS
+
+{% alert tip %}
+Rich push notifications are available for Android by default.
+{% endalert %}
+
+To enable rich push notifications on iOS using Expo, configure the `enableBrazeIosRichPush` property to `true` in your `expo.plugins` object in `app.json`:
+
+```json
+{
+  "expo": {
+    "plugins": [
+      [
+        "@braze/expo-plugin",
+        {
+          ...
+          "enableBrazeIosRichPush": true
+        }
+      ]
+    ]
+  }
+}
+```
+
+## Enabling push stories for iOS
+
+{% alert tip %}
+Push stories are available for Android by default.
+{% endalert %}
+
+To enable push stories on iOS using Expo, ensure you have an app group defined for your application. For more information, see [Adding an App Group][4].
+
+Next, configure the `enableBrazeIosPushStories` property to `true` and assign your app group ID to `iosPushStoryAppGroup` in your `expo.plugins` object in `app.json`:
+
+```json
+{
+  "expo": {
+    "plugins": [
+      [
+        "@braze/expo-plugin",
+        {
+          ...
+          "enableBrazeIosPushStories": true,
+          "iosPushStoryAppGroup": "group.com.company.myApp.PushStories"
+        }
+      ]
+    ]
+  }
+}
+```
+
 [1]: {% image_buster /assets/img/react-native/push-notification-test.png %} "Push Campaign Test"
+[2]: https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/b2-rich-push-notifications/
+[3]: https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/b3-push-stories/
+[4]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/push_story/#adding-an-app-group

@@ -11,7 +11,7 @@ page_type: landing
 description: "This landing page is home to Canvas component articles that will help you create more advanced Canvases. Some of these components include the message step, delay step, decision split step, and more."
 tool: Canvas
 
-guide_featured_title: "Section Articles"
+guide_featured_title: "Section articles"
 guide_featured_list:
   - name: Message Step
     link: /docs/user_guide/engagement_tools/canvas/canvas_components/message_step/
@@ -51,6 +51,8 @@ As of February 28, 2023, you will no longer be able to create or duplicate Canva
 {% endalert %}
 
 ### Customizing user journeys
+
+![]({% image_buster /assets/img/canvas_intro/canvas_intro.gif %}){: style="float:right;max-width:55%;margin-left:15px;"}
 
 Use [Action Paths][1] to split your user journey based on actions and engagement events such as making a purchase. If you want to filter through and target your audiences, [Audience Paths][2] help simplify your user targeting by sending your users down different Canvas paths based on audience criteria.
 

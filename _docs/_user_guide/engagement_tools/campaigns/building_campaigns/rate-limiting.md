@@ -65,11 +65,7 @@ For example, let's say you have a game with an in-app message that triggers when
 
 ### Rate limiting and Canvas components
 
-If multiple channels are utilized in a Canvas step, the rate limit will apply to each channel. Note that this can cause higher than expected requests for Connected Content. As a workaround, set a lower rate limit at the Canvas level. 
-
-For example, if your multi-channel Canvas step utilizes email and SMS in a Canvas with a rate limit of 10,000 per minute, Braze will send up to 20,000 messages each minute (10,000 email and 10,000 SMS). 
-
-All push destinations in a message step are treated as a single channel for the purposes of rate limiting. If a multi-channel Canvas step utilizes email, iOS push, and Android push in a Canvas with a rate limit of 10,000 per minute, Braze will send up to 20,000 messages each minute (10,000 email and 10,000 combined push).
+Rate limits apply to all message sending across a Canvas. If multiple channels are utilized in a Canvas or Canvas step, the rate limit will be shared across channels. 
 
 ### Delivery speed rate limiting
 
@@ -140,9 +136,9 @@ There may be some campaigns, like transactional messages, that you want to alway
 
 If you want a particular campaign to override frequency capping rules, you can set this up in the Braze dashboard when scheduling that campaign's delivery by toggling **Frequency Capping** to **OFF**. 
 
-After this, you will be asked if you still want this campaign to count towards your frequency cap. Messages that count towards frequency capping are included in calculations for the Intelligent Channel filter. When sending [API campaigns][15], which are often transactional, you'll have the ability to specify that a campaign should ignore frequency capping rules [within the API request][16] by setting `override_messaging_limits` to `true`.
+After this, you will be asked if you still want this campaign to count toward your frequency cap. Messages that count toward frequency capping are included in calculations for the Intelligent Channel filter. When sending [API campaigns][15], which are often transactional, you'll have the ability to specify that a campaign should ignore frequency capping rules [within the API request][16] by setting `override_messaging_limits` to `true`.
 
-By default, new campaigns and Canvases that do not obey frequency caps will also not count towards them. This is configurable for each campaign and Canvas.
+By default, new campaigns and Canvases that do not obey frequency caps will also not count toward them. This is configurable for each campaign and Canvas.
 
 {% alert note %}
 This behavior changes the default behavior when you turn off frequency capping for a campaign or Canvas. The changes are backward compatible and do not impact messages that are currently live.
@@ -150,9 +146,9 @@ This behavior changes the default behavior when you turn off frequency capping f
 
 ![][18]
 
-Different channels within a multichannel campaign will individually count towards the frequency cap. For instance, if you create a multichannel campaign with both push and email and have frequency capping set up for both of those channels, then the push will count toward one push campaign and the email message will count toward one email message campaign. The campaign will also count toward one "campaign of any type." If users are capped to one push and one email campaign per day and a user receives this multichannel campaign, then they will no longer be eligible for push or email campaigns for the rest of the day (unless a campaign ignores frequency capping rules).
+Different channels within a multichannel campaign will individually count  the frequency cap. For instance, if you create a multichannel campaign with both push and email and have frequency capping set up for both of those channels, then the push will count toward one push campaign and the email message will count toward one email message campaign. The campaign will also count toward one "campaign of any type." If users are capped to one push and one email campaign per day and a user receives this multichannel campaign, then they will no longer be eligible for push or email campaigns for the rest of the day (unless a campaign ignores frequency capping rules).
 
-In-app messages and Content Cards are not counted as or towards caps on campaigns or Canvas components of any type.
+In-app messages and Content Cards are not counted as or toward caps on campaigns or Canvas components of any type.
 
 {% alert important %}
 Global frequency capping is scheduled based on the user's time zone, and is calculated by calendar days, not 24-hour periods. For example, if you set up a frequency capping rule of sending no more than one campaign a day, a user may receive a message at 11 pm in their local time zone and they would be eligible to receive another message an hour later.

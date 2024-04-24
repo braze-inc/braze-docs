@@ -29,14 +29,14 @@ Webhooks are real-time notifications sent via an HTTP POST request to a specific
 For example, a survey platform can send a webhook to a destination of your choice whenever a survey response to an online form is received. Or, a customer service platform can send a webhook to a destination of its choice whenever a customer service ticket is created.
 {% enddetails %}
 
-## Limitations
+## Data Transformation tiers
 
-The following table describes the usage limitations of each version of Data Transformation.
+The following table describes the differences between the free and pro version of Data Transformation.
 
-| Limitation Area | Free Version | Data Transformation Pro |
+| Area | Free Version | Data Transformation Pro |
 |----|----|----|
-| **Active transformations** | Up to 5 per company | Up to 55 per company |
-| **Per month** | 300,000 incoming requests per month | 10,300,000 incoming requests per month |
+| Active transformations | Up to 5 per company | Up to 55 per company |
+| Per month | 300,000 incoming requests per month | 10,300,000 incoming requests per month |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 {% alert important %}
