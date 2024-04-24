@@ -20,7 +20,7 @@ page_order: 4.8
 | [Export]({{site.baseurl}}/api/endpoints/export/)                           | Access and export various details of your campaigns, Canvases, KPIs, and more.        |
 | [Messages]({{site.baseurl}}/api/endpoints/messaging/)                      | Schedule, send, and manage your campaigns and Canvases.                               |
 | [Preference center]({{site.baseurl}}/api/endpoints/preference_center/)     | Build your preference center and update the styling of it.                            |
-| [SCIM]({{site.baseurl}}/api/endpoints/scim/)                               | Manage user identifies in cloud-based applications and services.                      |
+| [SCIM]({{site.baseurl}}/api/endpoints/scim/)                               | Manage user identities in cloud-based applications and services.                      |
 | [SMS]({{site.baseurl}}/api/endpoints/sms/)                                 | Manage your users' phone numbers in your subscription groups.                         |
 | [Subscription groups]({{site.baseurl}}/api/endpoints/subscription_groups/) | List and update both SMS and email subscription groups stored in the Braze dashboard. |
 | [Templates]({{site.baseurl}}/api/endpoints/templates/)                     | Create and update templates for email messaging and Content Blocks.                   |
