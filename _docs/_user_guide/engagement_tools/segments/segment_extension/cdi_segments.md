@@ -9,7 +9,7 @@ description: "This how-to article will walk you through how to set up Location t
 
 ---
 
-# CDI Segments
+# CDI segments
 
 > With Braze [Cloud Data Ingestion]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/overview/) (CDI), you can set up a direct connection from your data warehouse or file storage system to Braze to sync relevant user or catalog data on a recurring basis.
 
