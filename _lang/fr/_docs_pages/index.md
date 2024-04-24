@@ -32,7 +32,7 @@ doc_menu_list:
     description: "Nos Technology Partners peuvent vous aider à personnaliser votre expérience Braze et vos relations client."
   - name: Guide de l’API
     bg_color: '#ff9349'
-    image: /assets/img/braze_icons/api.svg
+    image: /assets/img/braze_icons/terminal-square.svg
     link: /docs/api/home/
     description: "Braze fournit une API REST haute performance qui vous permet de suivre vos utilisateurs, d’envoyer des messages, d’exporter des données et plus encore."
 

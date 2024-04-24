@@ -16,7 +16,7 @@ guide_featured_list:
     image: /assets/img/braze_icons/user-circle.svg
   - name: API
     link: /docs/help/help_articles/api/
-    image: /assets/img/braze_icons/api.svg
+    image: /assets/img/braze_icons/terminal-square.svg
   - name: Campaigns and Canvas
     link: /docs/help/help_articles/campaigns_and_canvas/
     image: /assets/img/braze_icons/annotation.svg
