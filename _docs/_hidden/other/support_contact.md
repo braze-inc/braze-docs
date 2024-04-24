@@ -1413,9 +1413,9 @@ $( document ).ready(function() {
 
                       <div class="form-group" >
 
-                          <label for="ticket_issue" id="ticket_issue_label">     Question </label>
+                          <label for="ticket_issue" id="ticket_issue_label">     Question * </label>
 
-                          <textarea name="ticket_issue" class="form-control" id="ticket_issue" data-toggle="popover" data-trigger="focus" data-placement="top"
+                          <textarea name="ticket_issue" class="form-control" id="ticket_issue"  required="required" data-toggle="popover" data-trigger="focus" data-placement="top"
                           data-content="Include information helpful for investigation and troubleshooting, such as your platform, SDK version, REST API endpoints, links to segments or campaigns, relevant user IDs, and steps to reproduce your issue.   "
                           placeholder="Include information helpful for investigation and troubleshooting, such as your:
 - Platform
