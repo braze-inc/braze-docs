@@ -167,7 +167,7 @@ If you reuse the same user and role across integrations, you will **not** need t
 
 ## Using the connected source
 
-Once the source is created, it can be used to create one or more CDI Segments. For more information on creating a CDI Segment, see 
+Once the source is created, it can be used to create one or more CDI Segments. For more information on creating a segment with this source, see the [CDI Segments documentation]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/cdi_segments/)).
 
 {% alert note %}
 If queries are consistently timing out and you have set a maximum runtime of 60 minutes, consider trying to optimize your query execution time or dedicating a larger warehouse to the Braze user.
