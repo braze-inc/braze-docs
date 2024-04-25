@@ -91,9 +91,9 @@
       border: none;
       border-radius: 3px;
       padding: $search_padding/2 10px;
-      color: #23263bcc;
+      color: $black-shark;
       &:hover {
-        background-image:linear-gradient(#3accddcc,#3accddcc);
+        background-image:linear-gradient(#C9C4FF,#C9C4FF);
         text-decoration: none;
       }
     }
@@ -102,7 +102,7 @@
     }
     .ais-Pagination-item--selected {
       .ais-Pagination-link {
-        background-image:linear-gradient(#3accddcc,#3accddcc);
+        background-image:linear-gradient(#C9C4FF,#C9C4FF);
       }
     }
     .ais-Pagination-item--disable {
@@ -149,7 +149,7 @@
     .hit-name {
       font-family: $braze-medium;
       display: inline-block;
-      color: $navy-bay;
+      color: $braze-purple-dark;
     }
     .hit-subname {
       display: inline-block;
