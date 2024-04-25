@@ -743,9 +743,16 @@ Replace the following:
 
 | Placeholder | Description                                                                                                               |
 |-------------|---------------------------------------------------------------------------------------------------------------------------|
+| `BEHAVIOR`  | The behavior of the feature. In your code, be sure the behavior is disabled by default and avoid using phrases like `disabled` in the feature flag name. |
 | `PRODUCT`   | The product the feature belongs to.                                                                                       |
 | `FEATURE`    | The name of the feature.                                                                                                  |
-| `BEHAVIOR`  | The behavior of the feature. In your code, be sure the behavior is disabled by default and avoid using phrases like `disabled` in the feature flag name. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+
+Here's an example feature flag where `show` is the behavior, `animation_profile` is the product, and `driver` is the feature:
+
+```plaintext
+show_animation_profile_driver
+```
 
 ### Planning ahead
 
