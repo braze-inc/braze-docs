@@ -14,7 +14,7 @@
     border-bottom: none;
     margin: 0;
     padding: 0;
-    font-family: $braze-black;
+    font-family: $braze-heavy;
     color: $search_font_color;
   }
   .ais-search-box--input {
@@ -36,7 +36,7 @@
 
     }
     .ais-refinement-list--item__active {
-      font-family: $braze-black;
+      font-family: $braze-medium;
     }
   }
   .ais-search-box {
@@ -162,7 +162,7 @@
       font-family: $braze-regular;
       em {
         color: $search_font_color;
-        font-family: $braze-black;
+        font-family: $braze-medium;
       }
     }
     .hit-content {

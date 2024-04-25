@@ -69,7 +69,9 @@ $help_transition_time : 0.25s;
       .help_item {
 
         width: 100%;
-        height: 60px;
+        height: 80px;
+        margin-top: auto;
+        margin-bottom: auto;
 
         color: $black-shark;
         @media (min-width:  $window-medium-px) {
@@ -84,7 +86,7 @@ $help_transition_time : 0.25s;
 
         vertical-align: top;
         text-align: left;
-        font-size: 15px;
+        font-size: 16px;
         font-family: $braze-regular;
 
         overflow: hidden;
@@ -100,8 +102,7 @@ $help_transition_time : 0.25s;
           img {
             display: block;
             margin: auto;
-            width: 40px;
-            height: 40px;
+            max-width: 40px;
             position: relative;
             top: 50%;
           }

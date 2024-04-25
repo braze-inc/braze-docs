@@ -164,7 +164,7 @@
           }
           &::before {
             content: counter(li) '.' ; // Add a period right after the counter value
-            font-family: $braze-black;
+            font-family: $braze-medium;
             color: $black-shark;
             display: inline-block;
             margin-right: 10px;
@@ -313,7 +313,7 @@
 
   h1 {
     font-size: 2.5rem;
-    font-family: $braze-black;
+    font-family: $braze-medium;
     line-height: 2rem;
     padding-top: 1rem;
     margin-bottom: 2rem;

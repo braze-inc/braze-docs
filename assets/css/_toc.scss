@@ -88,7 +88,7 @@ $toc_color: rgba($braze-purple-dark,0.6);
           -moz-transition:  all ease $toc_transition_time;
 
           &.active {
-            font-family: $braze-black;
+            font-family: $braze-medium;
             color: $black-shark;
             width: fit-content;
             border-bottom-width: 2px;
