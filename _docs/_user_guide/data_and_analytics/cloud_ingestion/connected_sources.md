@@ -28,7 +28,6 @@ Cloud Data Ingestion connected sources require some setup on the Braze side and 
 
 {% tabs %}
 {% tab Snowflake %}
-1. 
 1. Create a new connected source in the Braze dashboard.
 2. Retrieve the public key provided in the Braze dashboard and [append it to the Snowflake user for authentication](https://docs.snowflake.com/en/user-guide/key-pair-auth.html).
 3. Test the integration
@@ -40,7 +39,6 @@ Cloud Data Ingestion connected sources require some setup on the Braze side and 
 
 {% tabs %}
 {% tab Snowflake %}
-
 #### Step 1: Create a role and grant permissions
 
 Create a role for your Connected Source to use. This role will be used to generate the list of tables available in your CDI segments, and to query source tables to create new segments. Once the connected source is created, Braze will discover the names and description of all tables available to the user in the source schema.
@@ -75,7 +73,6 @@ The warehouse will need to have the **auto-resume** flag on. If not, you will ne
 {% endalert %}
 
 #### Step 3: Set up the user
-
 ```json
 CREATE USER BRAZE_INGESTION_USER;
 
@@ -89,7 +86,6 @@ When connecting different workspaces to the same Snowflake account, you must cre
 {% endalert %}
 
 #### Step 4: Allow Braze IPs in Snowflake network policy (optional)
-
 Depending on the configuration of your Snowflake account, you may need to allow the following IP addresses in your Snowflake network policy. For more information on enabling this, see the relevant Snowflake documentation on [modifying a network policy](https://docs.snowflake.com/en/user-guide/network-policies.html#modifying-network-policies).
 
 | For Instances `US-01`, `US-02`, `US-03`, `US-04`, `US-05`, `US-06`, `US-07` | For Instances `EU-01` and `EU-02` |
@@ -107,7 +103,6 @@ Depending on the configuration of your Snowflake account, you may need to allow 
 {% endtabs %}
 
 ### Step 2: Create a new connected source in the Braze dashboard
-
 {% tabs %}
 {% tab Snowflake %}
 
@@ -118,7 +113,6 @@ If you are using the [older navigation]({{site.baseurl}}/navigation), go to **Cl
 {% endalert %}
 
 #### Step 1: Add Snowflake connection information and source table
-
 Input the information for your Snowflake data warehouse and source schema, then proceed to the next step.
 
 ![]({% image_buster /assets/img/cloud_ingestion/connected_source_sf_1.png %})
@@ -156,7 +150,6 @@ You must successfully test a source before it can move from Draft to Active stat
 {% endalert %}
 
 ## Set up additional integrations or users (optional)
-
 {% tabs %}
 {% tab Snowflake %}
 You may set up multiple integrations with Braze, but each integration should be configured to connect a different schema. When creating additional connections, you may reuse existing credentials if connecting to the same Snowflake account.
@@ -166,7 +159,6 @@ If you reuse the same user and role across integrations, you will **not** need t
 {% endtabs %}
 
 ## Using the connected source
-
 Once the source is created, it can be used to create one or more CDI Segments. For more information on creating a segment with this source, see the [CDI Segments documentation]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/cdi_segments/)).
 
 {% alert note %}
