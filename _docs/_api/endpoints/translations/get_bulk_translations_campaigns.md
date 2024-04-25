@@ -93,10 +93,14 @@ The following table lists possible returned errors and their associated troubles
 
 | Error message | Troubleshooting |
 | --- | --- |
-| Translation IDs are mismatched or translated text exceeds limits. | 
-| Invalid locale ID. | Confirm your locale ID exists in your message translation. |
-| Translation IDs are mismatched or translated text exceeds limits. | Translation IDs must match to the message. |
-| This message does not support multi-language. | Only email campaigns or Canvas messages with emails can be translated. |
+|`INVALID_CAMPAIGN_ID`|Confirm the campaign ID matches the campaign you're translating.|
+|`INVALID_LOCALE_ID`|Confirm your locale ID exists in your message translation.|
+|`INVALID_MESSAGE_VARIATION_ID`|Confirm your message ID is correct.|
+|`MESSAGE_NOT_FOUND`|Check that the message to be translated.|
+|`LOCALE_NOT_FOUND`|
+|`MULTI_LANGUAGE_NOT_ENABLED`|Multi-language settings aren't turned on for your workspace.|
+|`MULTI_LANGUAGE_NOT_ENABLED_ON_MESSAGE`|Only email campaigns or Canvas messages with emails can be translated.|
+|`UNSUPPORTED_CHANNEL`| Only messages in email campaigns or Canvas messages with emails can be translated.|
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% endapi %}

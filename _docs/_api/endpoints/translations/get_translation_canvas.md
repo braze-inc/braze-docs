@@ -33,7 +33,8 @@ This endpoint has a rate limit of 250,000 requests per hour.
 
 | Parameter | Required | Data Type | Description |
 | --------- | ---------| --------- | ----------- |
-|`canvas_id`| Required for translating a campaign | String | The ID of your Canvas. |
+|`canvas_id`| Required | String | The ID of your Canvas. |
+|`message_variation_id`| Required | String | The ID for your message variation. |
 |`locale_id`| Required | String | The ID of the locale. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
@@ -92,12 +93,16 @@ The status code `400` could return the following response body. Refer to [Troubl
 
 The following table lists possible returned errors and their associated troubleshooting steps.
 
-| Error message | Troubleshooting |
-| --- | --- |
-| Translation IDs are mismatched or translated text exceeds limits. | 
-| Invalid locale ID. | Confirm your locale ID exists in your message translation. |
-| Translation IDs are mismatched or translated text exceeds limits. | Translation IDs must match to the message. |
-| This message does not support multi-language. | Only email campaigns or Canvas messages with emails can be translated. |
+| Error message                           | Troubleshooting                                                                    |
+|-----------------------------------------|------------------------------------------------------------------------------------|
+| `INVALID_CAMPAIGN_ID`                   | Confirm the campaign ID matches the campaign you're translating.                   |
+| `INVALID_LOCALE_ID`                     | Confirm your locale ID exists in your message translation.                         |
+| `INVALID_MESSAGE_VARIATION_ID`          | Confirm your message ID is correct.                                                |
+| `MESSAGE_NOT_FOUND`                     | Check that the message to be translated.                                           |
+| `LOCALE_NOT_FOUND`                      | Confirm the locale exists in your multi-language settings.                         |
+| `MULTI_LANGUAGE_NOT_ENABLED`            | Multi-language settings aren't turned on for your workspace.                       |
+| `MULTI_LANGUAGE_NOT_ENABLED_ON_MESSAGE` | Only email campaigns or Canvas messages with emails can be translated.             |
+| `UNSUPPORTED_CHANNEL`                   | Only messages in email campaigns or Canvas messages with emails can be translated. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% endapi %}

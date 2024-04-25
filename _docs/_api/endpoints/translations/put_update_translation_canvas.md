@@ -46,15 +46,15 @@ There are no path parameters for this endpoint.
 Content-Type: application/json
 Authorization: Bearer YOUR-REST-API-KEY
 {
-	"step_id": "a74404b3-3626-4de0-bdec-06935f3aa0ac", // CANVAS ONLY
-	"message_id": "f14404b3-3626-4de0-bdec-06935f3aa0ad",
-	"locale_id": "h94404b3-3626-4de0-bdec-06935f3aa0ad",
-	"translation_map": {
-		"id_0": "Hola!",
-		"id_1": "Me llamo Jacky",
-		"id_2": "Donde estas la biblioteca?"
-	}
-
+    "canvas_id": "9a0ba932-11c0-4c33-b529-e79aafc12409",
+    "message_variation_id": "f5896eec-847d-4c0d-a4b6-7695e67520d7",
+    "locale_id": "3fa10d31-83ae-4ff4-9631-f52cea9ec8fa",
+    "translation_map": {
+        "id_4": "¿Dónde está la biblioteca? Me llamo T-Bone, La araña discoteca.",
+        "subject_1": "¿Dónde está la biblioteca? Me llamo T-Bone, La araña discoteca.",
+        "id_1": "¿Dónde está la biblioteca? Me llamo T-Bone, La araña discoteca.",
+        "image": "¿Dónde está la biblioteca? Me llamo T-Bone, La araña discoteca."
+    }
 }
 ```
 
