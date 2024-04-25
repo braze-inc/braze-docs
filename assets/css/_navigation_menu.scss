@@ -230,14 +230,14 @@ $nav_bottom_height: 60px;
         }
         &.active_parent {
           opacity: 1;
-          font-family: $braze-black;
+          font-family: $braze-medium;
           a {
-            font-family: $braze-black;
+            font-family: $braze-medium;
           }
         }
         &.active {
           color: $nav_active_color;
-          font-family: $braze-black;
+          font-family: $braze-medium;
           width: fit-content;
           opacity: 1;
           div.nav_block {
@@ -285,7 +285,7 @@ $nav_bottom_height: 60px;
         color: $black-shark;
         font-weight: 700;
         width: fit-content;
-        font-family: $braze-black;
+        font-family: $braze-medium;
         border-bottom-width: 2px;
         border-color: $braze-link-color;
         text-decoration: none;
@@ -446,7 +446,7 @@ $nav_bottom_height: 60px;
     }
     .color-description {
       padding-top: 0px;
-      font-family: $braze-black;
+      font-family: $braze-medium;
       color: $black-shark;
       opacity: 0.7;
       display: inline-block;
