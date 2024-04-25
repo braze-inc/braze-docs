@@ -10,7 +10,7 @@ noindex: true
 
 > If you're new to docs-as-code or Braze Docs, start with this step-by-step tutorial. If you're an experienced contributor, see [Content Management]({{site.baseurl}}/contributing/content_management/) instead.
 
-When you're finished with this tutorial, you'll be able to:
+When you finish this tutorial, you'll be able to:
 
 - Navigate the Braze Docs GitHub repository
 - Make changes using the GitHub website or your local environment
