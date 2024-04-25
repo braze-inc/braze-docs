@@ -31,10 +31,7 @@ This endpoint has a rate limit of 250,000 requests per hour.
 
 ## Path parameters
 
-| Parameter | Required | Data Type | Description |
-| --------- | ---------| --------- | ----------- |
-|`canvas_id`| Required for translating a Canvas | String | The ID of your Canvas. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+There are no path parameters for this endpoint.
 
 ## Request parameters
 
