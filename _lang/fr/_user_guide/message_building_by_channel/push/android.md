@@ -18,7 +18,7 @@ guide_featured_list:
   image: /assets/img/braze_icons/phone-02.svg
 - name: "ID de notification"
   link: /docs/user_guide/message_building_by_channel/push/android/notification_ids/
-  /assets/img/braze_icons/brush-02.svg
+  image: /assets/img/braze_icons/brush-02.svg
 - name: "Options de notification"
   link: /docs/user_guide/message_building_by_channel/push/android/notification_options/
   image: /assets/img/braze_icons/settings-01.svg

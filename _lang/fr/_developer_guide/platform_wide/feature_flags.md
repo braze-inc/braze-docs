@@ -19,7 +19,7 @@ guide_featured_list:
   image: /assets/img/braze_icons/columns-01.svg
 - name: Exemples de cas d’utilisation
   link: /docs/developer_guide/platform_wide/feature_flags/use_cases/
-  /assets/img/braze_icons/brush-02.svg
+  image: /assets/img/braze_icons/brush-02.svg
 - name: Foire aux questions
   link: /docs/developer_guide/platform_wide/feature_flags/faq/
   image: /assets/img/braze_icons/annotation-question.svg

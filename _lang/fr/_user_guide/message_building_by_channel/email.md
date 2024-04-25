@@ -19,7 +19,7 @@ guide_featured_list:
   image: /assets/img/braze_icons/mail-01.svg
 - name: Éditeur Drag & Drop
   link: /docs/user_guide/message_building_by_channel/email/drag_and_drop/
-  /assets/img/braze_icons/brush-02.svg
+  image: /assets/img/braze_icons/brush-02.svg
 - name: Modèles
   link: /docs/user_guide/message_building_by_channel/email/templates/
   image: /assets/img/braze_icons/table.svg

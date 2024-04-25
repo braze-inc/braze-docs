@@ -16,7 +16,7 @@ guide_featured_list:
   image: /assets/img/braze_icons/user-plus-01.svg
 - name: Suppression d’utilisateurs
   link: /docs/user_guide/administrative/manage_your_braze_users/deleting_users_from_your_account/
-  /assets/img/braze_icons/user-minus-01.svg
+  image: /assets/img/braze_icons/user-minus-01.svg
 - name: Définition des autorisations utilisateur
   link: /docs/user_guide/administrative/manage_your_braze_users/user_permissions/
   image: /assets/img/braze_icons/user-square.svg

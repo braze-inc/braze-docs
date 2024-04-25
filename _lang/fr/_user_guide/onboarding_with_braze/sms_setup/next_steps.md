@@ -40,7 +40,7 @@ guide_menu_title: "MMS"
 guide_menu_list:
 - name: "À propos des MMS"
   link: /docs/user_guide/message_building_by_channel/sms/mms/about_mms/
-  /assets/img/braze_icons/brush-02.svg
+  image: /assets/img/braze_icons/brush-02.svg
 - name: "Codes courts et longs MMS"
   link: /docs/user_guide/message_building_by_channel/sms/mms/mms_short_long_codes/
   image: /assets/img/braze_icons/phone-02.svg

@@ -14,7 +14,7 @@ guide_featured_title: "Section Articles"
 guide_featured_list:
 - name: Aperçu
   link: /docs/dnd/overview/
-  /assets/img/braze_icons/brush-02.svg
+  image: /assets/img/braze_icons/brush-02.svg
 - name: Création d’un modèle d’e-mail
   link: /docs/dnd/email_template/
   image: /assets/img/braze_icons/table.svg
