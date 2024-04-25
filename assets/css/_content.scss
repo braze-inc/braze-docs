@@ -306,17 +306,38 @@
     }
   }
 
+@mixin heading-margin-top($size) {
+  margin-top: $size;
+}
+
   h1, h2, h3, h4, h5, h6 {
     font-family: $braze-regular;
     margin: 40px 0 4px 0;
   }
 
+// h1 is excluded here to avoid adding extra space above page titles
+h2, h3, h4, h5, h6 {
+  @include heading-margin-top(4rem); // Default top spacing
+}
+
+
+// Directly adjacent headings should have reduced top margin
+// Starting from h2 to handle cases where headings follow h1
+h2 + h2, h2 + h3, h2 + h4, h2 + h5, h2 + h6,
+h3 + h2, h3 + h3, h3 + h4, h3 + h5, h3 + h6,
+h4 + h2, h4 + h3, h4 + h4, h4 + h5, h4 + h6,
+h5 + h2, h5 + h3, h5 + h4, h5 + h5, h5 + h6,
+h6 + h2, h6 + h3, h6 + h4, h6 + h5, h6 + h6 {
+  @include heading-margin-top(1.5rem); // Smaller space for back to back headings
+}
+
+
   h1 {
-    font-size: 2.5rem;
+    font-size: 42px;
     font-family: $braze-medium;
     line-height: 2rem;
-    padding-top: 1rem;
-    margin-bottom: 2rem;
+    padding-top: 1rem !important;
+    margin-bottom: 1rem;
     color: $black-shark;
 
   }
@@ -359,7 +380,7 @@
     color: $black-shark;
   }
   p {
-    margin-bottom: 25px;
+    margin-bottom: 1.5rem;
     .highlighter-rouge {
       padding: 2px 4px;
       border-width: 1px !important;
