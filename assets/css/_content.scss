@@ -367,7 +367,7 @@
     }
   }
   .highlighter-rouge {
-    font-size: 16px;
+    font-size: 14px !important;
     font-family: $braze-code;
     font-weight: bold;
     color: $grey-dust;
@@ -717,7 +717,7 @@ blockquote {
 
       font-family: $braze-code;
       font-weight: medium;
-      font-size: 13px;
+      font-size: 14px;
       color: $grey-dust;
       background-color: $white;
 
@@ -733,7 +733,7 @@ blockquote {
       }
     }
     .rouge-code {
-      font-size: 13px;
+      font-size: 14px;
       font-family: $braze-code;
       background-color: $grey-athens;
     }
