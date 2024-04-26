@@ -300,10 +300,6 @@ Braze.getInstance(this).subscribeToSdkAuthenticationFailures({ error: BrazeSdkAu
 {% endtab %}
 {% tab Objective-C %}
 
-{% alert important %}
-Starting in version `5.14.0` of the Braze Swift SDK, the SDK authentication delegate method has been split from the `BrazeDelegate` into a separate `BrazeSDKAuthDelegate`.
-{% endalert %}
-
 ```objc
 Braze *braze = [[Braze alloc] initWithConfiguration:configuration];
 braze.sdkAuthDelegate = delegate;
@@ -320,10 +316,6 @@ AppDelegate.braze = braze;
 ```
 {% endtab %}
 {% tab Swift %}
-
-{% alert important %}
-Starting in version `5.14.0` of the Braze Swift SDK, the SDK authentication delegate method has been separated from the `BrazeDelegate` into the `BrazeSDKAuthDelegate` protocol. If you are on a version prior to this, you should implement the SDK authentication delegate method wherever you conform to `BrazeDelegate`.
-{% endalert %}
 
 ```swift
 let braze = Braze(configuration: configuration)
