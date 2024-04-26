@@ -17,11 +17,37 @@ For general information on what deep links are, refer to our [FAQ article][4].
 
 Integrating deep links into a Flutter app requires native layer deep link set up as a pre-requisite. You can follow our guides for setting up deep links on [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/deep_linking/) and [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/advanced_use_cases/linking/).
 
-Additionally, if you intend to use Flutter's default deep link handling plugin, you will need to [set one key-value pair in your iOS project's `Info.plist` file](https://docs.flutter.dev/cookbook/navigation/set-up-universal-links#2-adjust-ios-build-settings). Using Xcode to edit your `Info.plist` file, add a new key-value pair, set the key to `FlutterDeepLinkingEnabled `, the type to `Boolean`, and the value to `YES`.
+## Step 2: Native project configuration.
 
-If you do not plan on using third-party plugins to handle deep links in Flutter instead of the default handler, skip this step as setting that key-value pair can break those third-party plugins. In the example code provided later in this guide, we will not be using third-party plugins.
+If you intend to use Flutter's default deep link handling, you will need to modify your iOS project's `Info.plist` file as well as your Android project's `AndroidManifest.xml` file. If you do not plan on using third-party plugins to handle deep links in Flutter instead of the default handler, skip this step as it can disrupt those third-party plugins. In the example code provided later in this guide, we will not be using third-party plugins.
 
-## Step 2: Flutter layer deep link handling and native layer deep link forwarding
+{% tabs %}
+{% tab iOS %}
+Using Xcode to edit your `Info.plist` file, add a new key-value pair. Set the key to `FlutterDeepLinkingEnabled `, the type to `Boolean`, and the value to `YES`.
+{% endtab %}
+
+{% tab Android %}
+Add the following `meta-data` and `intent-filter` tags to your `.MainActivity` `activity` tag.
+
+```xml
+<activity android:name=".MainActivity"...>
+  <meta-data android:name="flutter_deeplinking_enabled" android:value="true" />
+  <intent-filter android:autoVerify="true">
+      <action android:name="android.intent.action.VIEW" />
+      <category android:name="android.intent.category.DEFAULT" />
+      <category android:name="android.intent.category.BROWSABLE" />
+      <data android:scheme="http" android:host="example.com" />
+      <data android:scheme="https" />
+  </intent-filter>
+</activity>
+```
+{% endtab %}
+{% endtabs %}
+
+ [set one key-value pair in your iOS project's `Info.plist` file](https://docs.flutter.dev/cookbook/navigation/set-up-universal-links#2-adjust-ios-build-settings). Using Xcode to edit your `Info.plist` file, add a new key-value pair, set the key to `FlutterDeepLinkingEnabled `, the type to `Boolean`, and the value to `YES`.
+
+
+## Step 3: Flutter layer deep link handling and native layer deep link forwarding
 
 The preceeding step is sufficient for enabling your Flutter app to open when a user clicks a deep link. For handling deep links in more intricate ways, such as navigating to a particular part of the app or calling a function, additional Dart code as well as additional native code may be necessary. This is where first-party packages such as `go_router` as well as third-party plugins can be helpful.
 
