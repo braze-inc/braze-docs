@@ -24,6 +24,7 @@ If you intend to use Flutter's default deep link handling, you will need to modi
 {% tabs %}
 {% tab iOS %}
 Using Xcode to edit your `Info.plist` file, add a new key-value pair. Set the key to `FlutterDeepLinkingEnabled `, the type to `Boolean`, and the value to `YES`.
+[1]
 {% endtab %}
 
 {% tab Android %}
@@ -43,9 +44,6 @@ Add the following `meta-data` and `intent-filter` tags to your `.MainActivity` `
 ```
 {% endtab %}
 {% endtabs %}
-
- [set one key-value pair in your iOS project's `Info.plist` file](https://docs.flutter.dev/cookbook/navigation/set-up-universal-links#2-adjust-ios-build-settings). Using Xcode to edit your `Info.plist` file, add a new key-value pair, set the key to `FlutterDeepLinkingEnabled `, the type to `Boolean`, and the value to `YES`.
-
 
 ## Step 3: Flutter layer deep link handling and native layer deep link forwarding
 
@@ -150,3 +148,5 @@ void deepLinkAlert(String link, BuildContext context) {
 
 {% endtab %}
 {% endtabs %}
+
+[1]: {% image_buster /assets/img/flutter/flutter-ios-deep-link-info-plist.png %} "Xcode Project Info.plist File"
