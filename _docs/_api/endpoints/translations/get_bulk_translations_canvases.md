@@ -12,7 +12,7 @@ description: "This article outlines details about the Translate Canvas endpoint.
 {% api %}
 # Translate Canvases
 {% apimethod get %}
-/{canvas_id}/translations
+/canvas/translations
 {% endapimethod %}
 
 > Use this endpoint to view multiple translated Canvas messages and what these messages will look like for a user.
@@ -40,7 +40,7 @@ This endpoint has a rate limit of 250,000 requests per hour.
 ## Example request
 
 ```
-curl --location --request GET 'https://rest.iad-03.braze.com/{canvas_id}/translations' \
+curl --location --request GET 'https://rest.iad-03.braze.com/canvas/translations' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer YOUR-REST-API-KEY'
 ```

@@ -12,7 +12,7 @@ description: "This article outlines details about the Update translation in a Ca
 {% api %}
 # Update translation in a Canvas
 {% apimethod put %}
-/{canvas_id}/translations
+/canvas/translations
 {% endapimethod %}
 
 > Use this endpoint to update multiple translations for a Canvas.
@@ -37,7 +37,7 @@ There are no path parameters for this endpoint.
 
 | Parameter | Required | Data Type | Description |
 | --------- | ---------| --------- | ----------- |
-|`locale_name`| Required | String | The name of the locale. |
+|`locale_id`| Required | String | The ID of the locale. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ## Example request
@@ -86,10 +86,28 @@ The following table lists possible returned errors and their associated troubles
 
 | Error message | Troubleshooting |
 | --- | --- |
-| Translation IDs are mismatched or translated text exceeds limits. | 
-| Invalid locale ID. | Confirm your locale ID exists in your message translation. |
-| Translation IDs are mismatched or translated text exceeds limits. | Translation IDs must match to the message. |
-| This message does not support multi-language. | Only email campaigns or Canvas messages with emails can be translated. |
+|`INVALID_CAMPAIGN_ID`|Confirm the campaign ID matches the campaign you're translating.|
+|`INVALID_LOCALE_ID`|Confirm your locale ID exists in your message translation.|
+|`INVALID_MESSAGE_VARIATION_ID`|Confirm your message ID is correct.|
+|`INVALID_TRANSLATION_OBJECT`|Translation IDs are mismatched or translated text exceeds limits.|
+|`MESSAGE_NOT_FOUND`|Check that the message to be translated.|
+|`LOCALE_NOT_FOUND`|
+|`MISSING_TRANSLATIONS`|Translation IDs must match to the message.|
+|`MULTI_LANGUAGE_NOT_ENABLED`|Multi-language settings aren't turned on for your workspace.|
+|`MULTI_LANGUAGE_NOT_ENABLED_ON_MESSAGE`|Only email campaigns or Canvas messages with emails can be translated.|
+|`UNSUPPORTED_CHANNEL`| Only messages in email campaigns or Canvas messages with emails can be translated.|
 {: .reset-td-br-1 .reset-td-br-2}
+
+
+          INVALID_CAMPAIGN_ID = "Invalid campaign or step ID"
+          INVALID_LOCALE_ID = "Invalid locale ID"
+          INVALID_MESSAGE_VARIATION_ID = "Invalid message ID"
+          INVALID_TRANSLATION_OBJECT = "Invalid translation object"
+          MESSAGE_NOT_FOUND = "Message not found"
+          LOCALE_NOT_FOUND = "Locale not found"
+          MISSING_TRANSLATIONS = "Missing translations from the request body"
+          MULTI_LANGUAGE_NOT_ENABLED = "Multi-language feature is not enabled on this company"
+          MULTI_LANGUAGE_NOT_ENABLED_ON_MESSAGE = "This message does not have multi-language setup"
+          UNSUPPORTED_CHANNEL = "This message type does not support multi-language"
 
 {% endapi %}

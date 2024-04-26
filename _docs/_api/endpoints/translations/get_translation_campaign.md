@@ -12,7 +12,7 @@ description: "This article outlines details about the Translate campaign or Canv
 {% api %}
 # Translate message for campaign
 {% apimethod get %}
-/{campaign_id}/translations/?locale_id={locale_id}
+/campaign/translations/?locale_id={locale_id}
 {% endapimethod %}
 
 > Use this endpoint to view a translated messages and see what this message will look like for a user.
@@ -42,7 +42,7 @@ This endpoint has a rate limit of 250,000 requests per hour.
 ## Example request
 
 ```
-curl --location --request GET 'https://rest.iad-03.braze.com//{campaign_id}/translations/?locale_id={locale_id}' \
+curl --location --request GET 'https://rest.iad-03.braze.com/campaign/translations/?locale_id={locale_id}' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer YOUR-REST-API-KEY'
 ```

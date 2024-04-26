@@ -12,7 +12,7 @@ description: "This article outlines details about the Update translation in a ca
 {% api %}
 # Update translation in a campaign
 {% apimethod put %}
-/{campaign_id}/translations
+/campaigns/translations
 {% endapimethod %}
 
 > Use this endpoint to update multiple translations for a campaign.
@@ -37,7 +37,7 @@ There are no path parameters for this endpoint.
 
 | Parameter | Required | Data Type | Description |
 | --------- | ---------| --------- | ----------- |
-|`locale_name`| Required | String | The name of the locale. |
+|`locale_id`| Required | String | The ID of the locale. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ## Example request

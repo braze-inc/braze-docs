@@ -12,7 +12,7 @@ description: "This article outlines details about the Translate campaigns endpoi
 {% api %}
 # Translate campaigns
 {% apimethod get %}
-/{campaign_id}/translations
+/campaign/translations
 {% endapimethod %}
 
 > Use this endpoint to view multiple translated messages and what these messages will look like for a user.
@@ -39,7 +39,7 @@ This endpoint has a rate limit of 250,000 requests per hour.
 ## Example request
 
 ```
-curl --location --request GET 'https://rest.iad-03.braze.com/{campaign_id}/translations' \
+curl --location --request GET 'https://rest.iad-03.braze.com/campaign/translations' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer YOUR-REST-API-KEY'
 ```
@@ -91,16 +91,16 @@ The status code `400` could return the following response body. Refer to [Troubl
 
 The following table lists possible returned errors and their associated troubleshooting steps.
 
-| Error message | Troubleshooting |
-| --- | --- |
-|`INVALID_CAMPAIGN_ID`|Confirm the campaign ID matches the campaign you're translating.|
-|`INVALID_LOCALE_ID`|Confirm your locale ID exists in your message translation.|
-|`INVALID_MESSAGE_VARIATION_ID`|Confirm your message ID is correct.|
-|`MESSAGE_NOT_FOUND`|Check that the message to be translated.|
-|`LOCALE_NOT_FOUND`|
-|`MULTI_LANGUAGE_NOT_ENABLED`|Multi-language settings aren't turned on for your workspace.|
-|`MULTI_LANGUAGE_NOT_ENABLED_ON_MESSAGE`|Only email campaigns or Canvas messages with emails can be translated.|
-|`UNSUPPORTED_CHANNEL`| Only messages in email campaigns or Canvas messages with emails can be translated.|
+| Error message                           | Troubleshooting                                                                    |
+|-----------------------------------------|------------------------------------------------------------------------------------|
+| `INVALID_CAMPAIGN_ID`                   | Confirm the campaign ID matches the campaign you're translating.                   |
+| `INVALID_LOCALE_ID`                     | Confirm your locale ID exists in your message translation.                         |
+| `INVALID_MESSAGE_VARIATION_ID`          | Confirm your message ID is correct.                                                |
+| `MESSAGE_NOT_FOUND`                     | Check that the message to be translated.                                           |
+| `LOCALE_NOT_FOUND`                      | Confirm the locale exists in your multi-language settings.                         |
+| `MULTI_LANGUAGE_NOT_ENABLED`            | Multi-language settings aren't turned on for your workspace.                       |
+| `MULTI_LANGUAGE_NOT_ENABLED_ON_MESSAGE` | Only email campaigns or Canvas messages with emails can be translated.             |
+| `UNSUPPORTED_CHANNEL`                   | Only messages in email campaigns or Canvas messages with emails can be translated. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% endapi %}
