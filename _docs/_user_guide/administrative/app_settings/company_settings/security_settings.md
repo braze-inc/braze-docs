@@ -132,6 +132,33 @@ The following assumes that all fields are set as PII and the users mentioned are
 When previewing a message, the **View PII** permission is not applied, so users can see the preceding standard attributes if they were referenced in the message via Liquid.
 {% endalert %}
 
+## Data Deletion Preferences 
+
+You can use this setting to set preferences for whether or not certain fields should be deleted during the user delete process for events. These preferences only impact data for users that have been deleted from Braze. 
+
+When a user is deleted, Braze removes all PII from events data but retains the anonymized data for analytics purposes. Some user-defined fields may contain PII if you are sending end user information to Braze.  If these fields contain PII, you can opt in to deleting the data when event data is anonymized for deleted users; if the fields contain no PII they can be retained for analytics.
+
+You are responsible to determine the correct preferences for your workspace.  The best way to determine the appropriate settings is to review with internal teams sending events data to Braze, and to teams using message extras in Braze, to confirm whether the fields may contain PII.  
+
+Relevant fields
+| Event name or type | Field | Notes |
+| -------------------- | ------ | ----- |
+| Custom Event | properties | Notes |
+| Purchase Event | properties | Notes |
+| Message send | message_extras | Several event types contain a message_extras field. The preference applies to all message send event types that support message_extras, including event types added in the future. |
+
+{% alert important %}
+Deletion is permanent! If you opt to remove any fields from Snowflake for deleted users, the setting will apply to all historical data in your workspaces, and any events for users deleted in the future. After Braze has run the process to apply the settings to historical event data for deleted users, the data **cannot be restored**.
+{% endalert %}
+
+### Configure preferences
+
+Set a default preferences by checking boxes for any fields that should be removed if a user is deleted. Select any of the fields that contain PII. This preference will apply to all current and future workspaces unless workspaces are explicitly added to a preference group.
+
+To customize preference by workspace, you may add preference groups with different settings from the default. We apply the default settings to any workspaces not added to an additional preference group, including workspaces created in the future.  
+
+
+![]({% image_buster /assets/img/deletion_preferences_1.png %})
 
 [1]: {% image_buster /assets/img/user_profile_obfuscated1.png %} "user profile obfuscated1"
 [2]: {% image_buster /assets/img/user_profile_obfuscated2.png %} "user profile obfuscated2"
