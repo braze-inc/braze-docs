@@ -140,11 +140,12 @@ When a user is deleted, Braze removes all PII from events data but retains the a
 
 You are responsible to determine the correct preferences for your workspace.  The best way to determine the appropriate settings is to review with internal teams sending events data to Braze, and to teams using message extras in Braze, to confirm whether the fields may contain PII.  
 
-Relevant fields
+Relevant fields  
+
 | Event name or type | Field | Notes |
 | -------------------- | ------ | ----- |
-| Custom Event | properties | Notes |
-| Purchase Event | properties | Notes |
+| Custom event | properties |  |
+| Purchase event | properties |  |
 | Message send | message_extras | Several event types contain a message_extras field. The preference applies to all message send event types that support message_extras, including event types added in the future. |
 
 {% alert important %}
