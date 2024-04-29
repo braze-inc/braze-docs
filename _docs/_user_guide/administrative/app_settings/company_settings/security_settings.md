@@ -158,7 +158,6 @@ Set default preferences by checking boxes for any fields that should be removed 
 
 To customize preference by workspace, you may add preference groups with different settings from the default. We apply the default settings to any workspaces not added to an additional preference group, including workspaces created in the future.  
 
-
 ![]({% image_buster /assets/img/deletion_preferences_1.png %})
 
 
