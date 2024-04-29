@@ -8,34 +8,17 @@ page_order: 4.8
 
 # Use cases
 
-> The Braze REST API provides a wide range of endpoints designed to help manage and optimize your customer engagement strategy. In this article, we’ll explore several use cases for each endpoint collection: catalogs, email lists and addresses, export, messages, preference center, SMS, subscription groups, templates, and user data.<br><br>Each section introduces a scenario with a step-by-step guide, code sample, and expected outcome. By the end of this article, you’ll better understand how to use the Braze REST API to enhance your customer engagement efforts.
-
-## Braze REST API collection
-
-| Collection                                                                 | Purpose                                                                               |
-|----------------------------------------------------------------------------|---------------------------------------------------------------------------------------|
-| [Catalogs]({{site.baseurl}}/api/endpoints/catalogs/)                       | Create and manage catalogs and catalog items to reference in your Braze campaigns.    |
-| [Cloud Data Ingestion]({{site.baseurl}}/api/endpoints/cdi/)                | Manage your data warehouse integrations and syncs.                                    |
-| [Email lists and addresses]({{site.baseurl}}/api/endpoints/email/)         | Set up and manage bi-directional sync between Braze and your email systems.           |
-| [Export]({{site.baseurl}}/api/endpoints/export/)                           | Access and export various details of your campaigns, Canvases, KPIs, and more.        |
-| [Messages]({{site.baseurl}}/api/endpoints/messaging/)                      | Schedule, send, and manage your campaigns and Canvases.                               |
-| [Preference center]({{site.baseurl}}/api/endpoints/preference_center/)     | Build your preference center and update the styling of it.                            |
-| [SCIM]({{site.baseurl}}/api/endpoints/scim/)                               | Manage user identities in cloud-based applications and services.                      |
-| [SMS]({{site.baseurl}}/api/endpoints/sms/)                                 | Manage your users' phone numbers in your subscription groups.                         |
-| [Subscription groups]({{site.baseurl}}/api/endpoints/subscription_groups/) | List and update both SMS and email subscription groups stored in the Braze dashboard. |
-| [Templates]({{site.baseurl}}/api/endpoints/templates/)                     | Create and update templates for email messaging and Content Blocks.                   |
-| [User data]({{site.baseurl}}/api/endpoints/user_data/)                     | Identify, track, and manage your users.                                               |
-{: .reset-td-br-1 .reset-td-br-2}
+> The [Braze REST API]({{site.baseurl}}/api/basics/) provides a wide range of endpoints designed to help manage and optimize your customer engagement strategy. In this article, we’ll explore several use cases for each endpoint collection: catalogs, email lists and addresses, export, messages, preference center, SMS, subscription groups, templates, and user data.<br><br>Each section introduces a scenario with a step-by-step guide, code sample, and expected outcome. By the end of this article, you’ll better understand how to use the Braze REST API to enhance your customer engagement efforts.
 
 ## Deleting multiple items in a catalog
 
-A new year welcomes new product launches at Kitchenerie, a retail brand specializing in kitchenware. In their Braze dashboard, they have a catalog set up for their dishware collection named "Dishware". This new year also means removing the following products from their dishware collection.
+A new year welcomes new product launches at Kitchenerie, a retail brand specializing in kitchenware. In the Braze dashboard, Kitchenerie has a catalog set up for its dishware collection named "Dishware". This new year also means removing the following products from its dishware collection.
 
 * Plain Bisque
 * Pearl Porcelain
 * Pink Shimmer
 
-Removing these products from their catalog can be accomplished via API with the [`/catalogs/{catalog_name}/items` endpoint]({{site.baseurl}}/api/endpoints/catalogs/catalog_items/asynchronous/delete_catalog_items_bulk/) and the item IDs.
+To remove these products from its catalog, Kitchener can use the [`/catalogs/{catalog_name}/items` endpoint]({{site.baseurl}}/api/endpoints/catalogs/catalog_items/asynchronous/delete_catalog_items_bulk/) to pass in the item IDs.
 
 Here's the example request:
 
@@ -62,7 +45,7 @@ After sending this payload, the following response confirms that the three colle
 
 ## Removing emails from the Braze spam list
 
-At MovieCanon, a streaming services company, the developer team is responsible for periodically auditing their email lists to identify and keep users who are subscribed to their email campaigns. As part of this audit, they want to remove this list of emails from their spam list:
+At MovieCanon, a streaming services company, the developer team is responsible for periodically auditing its email lists to identify and keep users who are subscribed to its email campaigns. As part of this audit, MovieCanon wants to remove this list of emails from its spam list:
 
 - august.author.example.com
 - betty.benson@example.com
@@ -70,9 +53,9 @@ At MovieCanon, a streaming services company, the developer team is responsible f
 - delilah.york@example.com
 - evergreen.rebecca@example.com
 
-To accomplish this task, you’ll need an API key with the `email.spam.remove` permission to use the `/email/spam/remove` endpoint. This endpoint removes email addresses from your Braze spam list and the spam list maintained by your email provider.
+To accomplish this task, the developer team will need an API key with the `email.spam.remove` permission to use the `/email/spam/remove` endpoint. This endpoint removes email addresses from the Braze spam list and the spam list maintained by MovieCanon’s email provider.
 
-To send this request, you must have a string email address or an array of up to 50 email addresses to modify. Since MovieCanon’s list of emails is under 50, we can accomplish this task with the following request body:
+To send this request, include either a string email address or an array of up to 50 email addresses to modify. Since the list of emails to remove is under 50, MovieCanon can accomplish this task with the following request body:
 
 ```
 Content-Type: application/json
@@ -85,7 +68,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 }
 ```
 
-After sending this payload successfully, we’ll see this response that confirms the emails have been removed from MovieCanon’s spam list.
+After sending this payload successfully, this response confirms the emails have been removed from MovieCanon’s spam list.
 
 ```json
 {
@@ -93,13 +76,15 @@ After sending this payload successfully, we’ll see this response that confirms
 }
 ```
 
-## Auditing all Canvases
+## Audit all Canvases
 
-Siege Valley Health is a hospital system that includes 10 operating hospitals and research centers with thousands of patients. Their marketing team wants to compare the Canvases sent to their patients to remind them to schedule an appointment for their flu shots from their past 3 years of using Braze. Siege Valley Health’s marketing team also wants a quick and efficient way to see both the list of Canvases and the analytics summary.
+Siege Valley Health is a hospital system that includes 10 operating hospitals and research centers with thousands of patients. Its marketing team wants to compare the Canvases sent to patients to remind them to schedule an appointment for flu shots from the past 3 years of using Braze. Siege Valley Health’s marketing team also wants a quick and efficient way to see both the list of Canvases and the analytics summary.
 
-Let’s dive into how we can accomplish these two tasks using a combination of endpoints rather than filtering through the Braze dashboard.
+Let’s dive into how Siege Valley Health can accomplish these two tasks using a combination of endpoints rather than filtering through the Braze dashboard.
 
-{% details Here’s the response that the Seige Valley Health marketing team would receive. %}
+For the first task of auditing Canvases, use the [`/canvas/list` endpoint]({{site.baseurl}}/api/endpoints/export/canvas/get_canvases/) to export a list of Canvases that includes the name and tags. Here’s an example request:
+
+{% details Here’s the response that the Siege Valley Health marketing team would receive. %}
 ```json
 Content-Type: application/json
 Authorization: Bearer YOUR-REST-API-KEY
@@ -128,7 +113,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 ```
 {% enddetails %}
 
-Let’s move on to the next task of viewing the analytics summary for the first Canvas from Seige Valley Health’s list of Canvases. To do so, we would use [`/canvas/data_summary` endpoint]({{site.baseurl}}/api/endpoints/export/canvas/get_canvas_analytics_summary/) with the following request parameters:
+Let’s move on to the next task of viewing the analytics summary for the first Canvas from Siege Valley Health’s list of Canvases. To do so, we would use the [`/canvas/data_summary` endpoint]({{site.baseurl}}/api/endpoints/export/canvas/get_canvas_analytics_summary/) with the following request parameters:
 
 * `canvas_id`: "canvas_identifier_2"
 * `ending_at`: 2023-07-10T23:59:59
@@ -143,29 +128,29 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/canvas/data_summ
 
 ## Checking upcoming scheduled campaigns and Canvases
 
-The busiest time of year is quickly approaching for Flash & Thread, a retail brand that specializes in selling clothing and beauty products both online and in stores. Their marketing team wants to check their upcoming scheduled campaigns and Canvases from their Braze dashboard before March 31, 2024 at 12 pm. Their goal is to confirm that they're aligned with their marketing plan.
+The busiest time of year is quickly approaching for Flash & Thread, a retail brand that sells clothing and beauty products online and in stores. Its marketing team wants to check the upcoming campaigns and Canvases from the Braze dashboard before March 31, 2024 at 12 pm. This can be accomplished using the [`/messages/scheduled_broadcasts` endpoint]({{site.baseurl}}/api/endpoints/messaging/schedule_messages/get_messages_scheduled/). 
 
-This can be accomplished using the [`/messages/scheduled_broadcasts` endpoint]({{site.baseurl}}/api/endpoints/messaging/schedule_messages/get_messages_scheduled/). Here's the example request:
+Here's the example request:
 
 ```
 curl --location --request GET 'https://rest.iad-01.braze.com/messages/scheduled_broadcasts?end_time=2024-03-31T12:00:00' \
 --header 'Authorization: Bearer YOUR-REST-API-KEY'
 ```
 
-This endpoint will return the list of a list of their upcoming campaigns and Canvases. From here, the marketing team can confirm their list of messages by referencing the `name` field for the campaigns and Canvases in the response.
+This endpoint will return the list of upcoming campaigns and Canvases. From here, the marketing team can confirm its list of messages by referencing the `name` field for the campaigns and Canvases in the response.
 
-## Viewing an older preference center
+## View an older preference center
 
-PoliterWeekly is a digital magazine whose subscribers are reachable via email. In an effort to better understand their subscribers' user journey, the marketing team wants to review the details for their preference center to check when it was created and last updated.
+PoliterWeekly is a digital magazine whose subscribers are reachable through email. In an effort to better understand its subscribers' user journey, the marketing team wants to review the details for PoliterWeekly’s preference center to check when it was created and last updated.
 
-Using the [`/preference_center/v1/{preferenceCenterExternalID}` endpoint]({{site.baseurl}}/api/endpoints/preference_center/get_view_details_preference_center/), the marketing team only needs to insert their preference center external ID as the path parameter, which would look like this:
+Using the [`/preference_center/v1/{preferenceCenterExternalID}` endpoint]({{site.baseurl}}/api/endpoints/preference_center/get_view_details_preference_center/), the marketing team only needs to insert the preference center external ID as the path parameter, which would look like this:
 
 ```
 curl --location -g --request GET https://rest.iad-01.braze.com/preference_center/v1/politer_weekly_preference_center_api_id \
 --header 'Authorization: Bearer YOUR-REST-API-KEY'
 ```
 
-{% details Here’s the response that the PoliterWeekly marketing team would receive. %}
+{% details Here’s the response the PoliterWeekly marketing team would receive. %}
 
 ```json
 {
@@ -188,16 +173,16 @@ From this response, the marketing team can see the preference center was created
 
 {% enddetails %}
 
-## Removing invalid phone numbers
+## Remove invalid phone numbers
 
-At CashBlastr, their primary goal is to streamline how people can send and receive quick payments. As a financial service company, they want to keep their list of phone numbers for their customers up-to-date and accurate. Their developer team has been tasked to remove the following list of phone numbers that have been marked as “invalid” so the marketing team’s SMS messages can reach the appropriate CashBlastr customers.
+At CashBlastr, the primary goal is to streamline how people can send and receive quick payments. As a financial service company, CashBlastr wants to keep its list of phone numbers for its customers up-to-date and accurate. The developer team has been tasked to remove the following list of phone numbers marked as “invalid” so the marketing team’s SMS messages can reach the appropriate CashBlastr customers.
 
 - 12223135467
 - 12183095514
 - 14235662245
 - 14324567892
 
-To send this request, the phone numbers must be in an array of strings in e.164 format, with up to 50 phone numbers per request. Because the list doesn’t exceed 50 phone numbers, here’s an example of the request body CashBlastr’s developer team would send:
+To send a request with the [`/sms/invalid_phone_numbers/remove` endpoint]({{site.baseurl}}/api/endpoints/sms/post_remove_invalid_numbers/), the phone numbers must be in an array of strings in [e.164 format](https://en.wikipedia.org/wiki/E.164), with up to 50 phone numbers per request. Because the list doesn’t exceed 50 phone numbers, here’s an example of the request body CashBlastr’s developer team would send:
 
 ```json
 Content-Type: application/json
@@ -207,7 +192,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 }
 ```
 
-After sending this payload, we’ll see this response that confirms the invalid phone numbers from CashBlastr have been removed from the Braze invalid list.
+After sending this payload, the following response confirms the invalid phone numbers from CashBlastr have been removed from the Braze invalid list.
 
 ```json
 {
@@ -215,11 +200,9 @@ After sending this payload, we’ll see this response that confirms the invalid 
 }
 ```
 
-## Seeing a user's subscription group status
+## View a user's subscription group status
 
-Let's say you're a marketer at SandwichEmperor, a quick service restaurant chain in the United States, and you want to check the subscription group statuses for a randomized list of your users for SMS.
-
-Using the `/subscription/status/get` endpoint, you can accomplish this task for an individual user with the following example request:
+SandwichEmperor is a quick-service restaurant chain in the United States, and its marketing team wants to check the subscription group statuses for a randomized list of its users for SMS. Using the [`/subscription/status/get` endpoint]({{site.baseurl}}/api/endpoints/subscription_groups/get_list_user_subscription_group_status/), SandwichEmperor can accomplish this task for an individual user with the following example request:
 
 {% raw %}
 ```
@@ -228,13 +211,13 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/subscription/sta
 ```
 {% endraw %}
 
-This endpoint also lists the subscription group statuses of a user's for email, and can be used to see the subscription group status for multiple users.
+This endpoint also lists the subscription group statuses of a user for email and can be used to see the subscription group status for multiple users.
 
-## Checking an HTML template for email messaging
+## Check an HTML template for email messaging
 
-At WorkFriends, a social network for helping build connections between workers from different industries, their marketing team is responsible for sending email campaigns to their users. These campaigns often include reminders for local events, weekly newsletters, and profile activity highlights.
+At WorkFriends, a social network for helping build connections between workers from different industries, its marketing team is responsible for sending email campaigns to its users. These campaigns often include reminders for local events, weekly newsletters, and profile activity highlights.
 
-In this scenario, let’s say WorkFriends has historically used a singular HTML template with its legacy branding. In an effort to align their brand identity, they want to see if there’s any helpful information in this HTML template to leverage, before they transition to a new template.
+In this scenario, WorkFriends has historically used a singular HTML template with its legacy branding. In an effort to align its brand identity, WorkFriends wants to verify if there’s any helpful information in this HTML template to leverage before transitioning to a new template.
 
 {% details Here’s the response that the WorkFriends team would receive. %}
 
@@ -256,4 +239,4 @@ Authorization: Bearer YOUR_REST_API_KEY
 
 {% enddetails %}
 
-After reviewing this template information, you can also use the `/templates/email/update` endpoint to update the email template via API. You’ll see the edits reflected in the Braze dashboard.
+After reviewing this template information, WorkFriends can also use the [`/templates/email/update` endpoint]({{site.baseurl}}/api/endpoints/templates/email_templates/post_update_email_template/) to update the email template via API. The email template in the Braze dashboard will reflect these edits.
