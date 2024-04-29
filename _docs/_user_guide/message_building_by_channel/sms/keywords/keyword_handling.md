@@ -54,7 +54,10 @@ You can manage your own responses that are sent to users after they text in a ke
 
 1. In the Braze dashboard, go to **Audience** > **Subscription Groups** and select your SMS subscription group. <br><br>
 2. Under **SMS Global Keywords**, select a keyword category to edit a response for by selecting the pencil icon. ![]({% image_buster /assets/img/sms/sms_keywords.png %})<br><br> 
-3. In the tab that opens, edit and save your response. Be mindful of our [six rules to get compliance right]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_laws_and_regulations/#the-six-rules-to-get-compliance-right) as you create your response, and read the following rules that apply to keywords and keyword responses. ![Responses]({% image_buster /assets/img/sms/keyword_home.png %})
+3. In the tab that opens, edit your response. Be mindful of our [six rules to get compliance right]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_laws_and_regulations/#the-six-rules-to-get-compliance-right) as you create your response, and read the following rules that apply to keywords and keyword responses. ![Responses]({% image_buster /assets/img/sms/keyword_home.png %})<br><br>
+4. To automatically shorten static URLs in your response, select the **Link Shortening** toggle. The character counter will update to show the expected length of the shortened URL. ![A GIF showing the character counter updating when the "Link Shortening" toggle is on.]({% image_buster /assets/img/sms/link_shortening.gif %}){: style="max-width:50%;"}
+
+##### Considerations
 
 | Keywords | Keyword responses |
 | -------- | ----------------- |

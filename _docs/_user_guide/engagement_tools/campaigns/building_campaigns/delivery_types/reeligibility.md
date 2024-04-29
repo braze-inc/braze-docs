@@ -46,6 +46,16 @@ Re-eligibility for both campaigns and Canvases are calculated in seconds, not ca
 
 Similarly, a month counts as exactly 2,592,000 seconds, equal to approximately 30 days.
 
+### Examples
+
+Consider the following example:
+* A campaign is set to send monthly on the 15th with re-eligibility set to 30 days.
+* There are less than 30 days between February 15 and March 15. 
+
+This means users who received the campaign on February 15 will not be eligible for the campaign to be sent on March 15.
+
+If the campaign is set to send daily at 8 am with re-eligibility of one day and there's a latency in sending the message, users who received the campaign at 8:30 am, for instance, will not be re-eligible yet on the following day at 8 am.
+
 ## Multivariate testing
 
 With regards to multivariate testing, Braze determines variant re-eligibility for all campaigns, triggered in-app messages, and Canvases using the following rules:

@@ -9,7 +9,7 @@ tool: Reports
 
 # Query Builder
 
-> With the Query Builder, you can generate reports using Braze data in Snowflake. The Query Builder comes with pre-built SQL [query templates](#query-templates) to get you started, or you can write your own custom SQL queries to unlock even more insights.
+> With the Query Builder, you can generate reports using Braze data in Snowflake. The Query Builder comes with pre-built SQL [query templates]({{site.baseurl}}/user_guide/data_and_analytics/query_builder/query_templates/) to get you started, or you can write your own custom SQL queries to unlock even more insights.
 
 ## Who has access
 
@@ -26,7 +26,7 @@ If you are using the [older navigation]({{site.baseurl}}/navigation), you can fi
 {% endalert %}
 
 {:start="2"}
-2. Click **Create New SQL Report**. If you need inspiration or help in crafting your query, select **Query Template** and choose a template from the list. Otherwise, select **SQL Editor** to head straight to the editor.
+2. Click **Create SQL Query**. If you need inspiration or help in crafting your query, select **Query Template** and choose a template from the list. Otherwise, select **SQL Editor** to head straight to the editor.
 3. Your report is automatically given a name with the current date and time. Hover over the name and click <i class="fas fa-pencil" alt="Edit"></i> to give your SQL query a meaningful name.
 4. Write your SQL query in the editor or [get help from AI](#ai-query-builder) from the **AI Query Builder** tab. If you choose to write your own SQL, see [custom SQL](#custom-sql) for requirements and resources.
 5. Click **Run Query**.
@@ -73,34 +73,7 @@ If a report times out or runs into errors even after retrying, please contact su
 
 All templates surface data from the last 60 days. You can access query templates by selecting **Create SQL Query** > **Query Template** when first creating a report.
 
-<style>
-table th:nth-child(1) {
-    width: 10%;
-}
-table th:nth-child(2) {
-    width: 25%;
-}
-table th:nth-child(3) {
-    width: 20%;
-}
-table th:nth-child(4) {
-    width: 45%;
-}
-table td {
-    word-break: break-word;
-}
-</style>
-
-| Query name | Description | Metrics | Preview |
-| --- | --- | --- | --- |
-| Channel engagement and revenue | For each channel, you'll see all engagement metrics for that channel (opens, clicks, etc), revenue, number of transactions, and average price. | {::nomarkdown} <ul> <li> <b>Number of transactions:</b> number of purchase events </li> <li> <b>Average price:</b> revenue divided by transactions </li> </ul> {:/} | ![]({% image_buster /assets/img_archive/query_builder_q1.png %}) |
-| Email bounces per domain | Number of bounces per email domain | | ![]({% image_buster /assets/img_archive/query_builder_q4.png %}) |
-| Email performance by country | For each country, you'll see the following metrics: sends, indirect open rate, and direct open rate. Country is the country of the user at the time of push send. | | ![]({% image_buster /assets/img_archive/query_builder_q3.png %}) |
-| Email subscription group opt-ins and opt-outs | For each week, you'll see the number of unique user opt-ins and opt-outs of any email subscription groups. | | ![]({% image_buster /assets/img_archive/query_builder_q2.png %}) |
-| Email URLs clicked | This report shows the number of clicks each link in an email had. To run this report, you'll need to specify the API identifier for a campaign or Canvas. You can find a campaign's API identifier at the bottom of that campaign's details page, and you can find the Canvas API identifier under **Analyze Variants**. <br><br>For each de-personalized link, you'll see a count of clicks. Your CSV download will include the user IDs of all users that clicked, the link they clicked on, and a timestamp of when they clicked. | **De-personalized URLs:** URLs that are stripped of any Liquid tags | ![]({% image_buster /assets/img_archive/query_builder_q5.png %}) |
-| Revenue by country | This report provides revenue per country for a specific campaign/Canvas. To run this report, you'll need to specify the API identifier for a campaign or Canvas. You can find a campaign's API identifier at the bottom of that campaign's details page, and you can find the Canvas API identifier under **Analyze Variants**.<br><br>For each country, you'll see the amount of revenue generated, number of orders, number of returns, net revenue, and gross revenue. | {::nomarkdown} <ul> <li> <b>Number of orders:</b> number of purchase events </li> <li> <b>Number of returns:</b> number of purchase events with negative revenue values </li> <li> <b>Net revenue:</b> revenue of all non-returns </li> <li> <b>Gross revenue:</b> revenue that includes the value of returns </li> </ul> {:/} | ![]({% image_buster /assets/img_archive/query_builder_q6.png %}) |
-| Push performance by country | For each country, you'll see the following metrics: deliveries, open rate, and click rate. Country is the country of the user at the time of email send. | | ![]({% image_buster /assets/img_archive/query_builder_q7.png %}) |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+See [Query templates]({{site.baseurl}}/user_guide/data_and_analytics/query_builder/query_templates/) for a list of available templates.
 
 ## Custom SQL
 

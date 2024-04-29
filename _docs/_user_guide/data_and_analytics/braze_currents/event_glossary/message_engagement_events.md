@@ -9,6 +9,8 @@ tool: Currents
 search_rank: 6
 ---
 
+These schemas only apply to the flat file event data we send to Data Warehouse partners (Google Cloud Storage, Amazon S3, and Microsoft Azure Blob Storage). For schemas that apply to the other partners, refer to our list of [available partners]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/available_partners/) and check their respective pages.
+
 Contact your account manager or open a [support ticket]({{site.baseurl}}/braze_support/) if you need access to additional event entitlements. If you can't find what you need in this article, check out our [Customer Behavior Events Library]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/customer_behavior_events/) or our [Currents sample data examples](https://github.com/Appboy/currents-examples/tree/master/sample-data).
 
 {% details Explanation of message engagement event structure and platform values %}
@@ -40,11 +42,25 @@ Certain events return a `platform` value that specifies the platform of the user
 {% enddetails %}
 
 {% alert important %}
-These schemas only apply to the flat file event data we send to Data Warehouse partners (Google Cloud Storage, Amazon S3, and Microsoft Azure Blob Storage). For schemas that apply to the other partners, refer to our list of [available partners]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/available_partners/) and check their respective pages.<br><br>Additionally, note that Currents will drop events with excessively large payloads of greater than 900&nbsp;KB.
+Note that Currents will drop events with excessively large payloads of greater than 900&nbsp;KB.
 {% endalert %}
 
-{% alert update %}
-Human-readable names for objects related to Canvas Flow are coming soon to Currents. In the meantime, the IDs can be used for grouping, and translated to human-readable names via the [Canvas Details endpoint]({{site.baseurl}}/api/endpoints/export/canvas/get_canvas_details/).
+{% alert note %}
+Objects related to Canvas Flow have IDs that can be used for grouping and translated to human-readable names via the [Export Canvas details endpoint]({{site.baseurl}}/api/endpoints/export/canvas/get_canvas_details/).
+{% endalert %}
+
+{% alert note %}
+Certain fields might take longer to display their most recent state after a campaign or Canvas is updated. These fields are:
+<ul>
+  <li>"campaign_name"</li>
+  <li>"canvas_name"</li>
+  <li>"canvas_step_name"</li>
+  <li>"conversion_behavior"</li>
+  <li>"canvas_variation_name"</li>
+  <li>"experiment_split_name"</li>
+  <li>"message_variation_name"</li>
+</ul>
+If complete consistency is required, we recommend waiting an hour from the last update to these fields before sending out your messaging to your users.
 {% endalert %}
 
 {% api %}
@@ -1477,7 +1493,7 @@ This event occurs when a user dismisses a Content Card.
 SMS, Clicks
 {% endapitags %}
 
-This event occurs when a user clicks an SMS short link.
+This event occurs when a user clicks an SMS short link. We only generate and send this event to Currents or Snowflake data sharing when a user clicks an SMS short link sent from a campaign where advanced [link shortening]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/link_shortening/) is enabled.
 
 ```json
 // SMS Send: users.messages.sms.ShortLinkClick

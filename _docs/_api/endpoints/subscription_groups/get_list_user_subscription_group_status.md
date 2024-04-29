@@ -42,7 +42,7 @@ To use this endpoint, you'll need an [API key]({{site.baseurl}}/api/basics#rest-
 
 | Parameter | Required | Data Type | Description |
 |---|---|---|---|
-| `subscription_group_id`  | Required | String | The `id` of your subscription group. |
+| [`subscription_group_id`]({{site.baseurl}}/api/identifier_types/?tab=subscription%20group%20ids)  | Required | String | The `id` of your subscription group. |
 | `external_id`  |  Required* | String | The `external_id` of the user (must include at least one and at most 50 `external_ids`). <br><br>When both an `external_id` and `email`/`phone` are submitted, only the `external_id`(s) provided will be applied to the result query. |
 | `email` | Required* | String | The email address of the user. It can be passed as an array of strings with a maximum of 50.<br><br> Submitting both an email address and phone number (with no `external_id`) will result in an error. |
 | `phone` | Required* | String in [E.164](https://en.wikipedia.org/wiki/E.164) format | The phone number of the user. If email is not included, you must include at least one phone number (with a maximum of 50).<br><br> Submitting both an email address and phone number (with no `external_id`) will result in an error. |

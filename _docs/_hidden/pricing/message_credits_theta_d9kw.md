@@ -821,8 +821,8 @@ Column definitions are as follows:
     <td>SMS / MMS - Global</td>
     <td>10</td>
     <td>Italy</td>
-    <td>0.87</td>
-    <td>8.70</td>
+    <td>0.78</td>
+    <td>7.80</td>
     </tr>
     <tr>
     <td>SMS / MMS - Global</td>

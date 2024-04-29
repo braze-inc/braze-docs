@@ -21,7 +21,12 @@ Review the following Meta documentation for guidance with display names, phone n
 - [Messaging Limits](https://developers.facebook.com/docs/whatsapp/messaging-limits)
 - [Quality Rating](https://www.facebook.com/business/help/896873687365001)
 
-## WhatsApp Product Updates 
+## WhatsApp Product Updates
+
+### April 2024: Template pacing for utility templates
+*Last Updated April 2024*
+
+Last year, WhatsApp introduced template pacing for marketing messages as a new way to help businesses improve the engagement of their templates and create valuable user experiences. Beginning April 30, they're expanding template pacing to utility messages. If a utility template for an account gets paused due to user feedback, they will pace the new utility templates that are created for the next seven days.
 
 ### April 2024: Read rates will affect quality rating for marketing templates 
 *Last Updated March 2024*

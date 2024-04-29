@@ -106,6 +106,9 @@ After completing the integration, we recommend completing the two following Meta
 
 We also recommend reading about [user phone numbers]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/user_phone_numbers/) and adding any users who will need access to create message [templates at your organization](https://www.facebook.com/business/help/2169003770027706?id=2190812977867143).
 
+### WhatsApp Cloud API Local Storage
+
+Braze supports WhatsApp’s [Cloud API Local Storage](https://developers.facebook.com/docs/whatsapp/cloud-api/overview/local-storage?content_id=ka6F9gESPqhQpm5). To have this enabled, contact your Braze customer support manager.
 
 [1]: {% image_buster /assets/img/whatsapp/whatsapp1.png %} 
 [2]: {% image_buster /assets/img/whatsapp/whatsapp10.png %} 

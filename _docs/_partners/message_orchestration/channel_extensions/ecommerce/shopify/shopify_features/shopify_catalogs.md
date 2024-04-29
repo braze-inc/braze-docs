@@ -54,6 +54,10 @@ Refer to [Catalogs additional use cases](https://www.braze.com/docs/user_guide/p
 
 #### Supported Shopify catalog data
 
+{% alert note %}
+To access and use `product_handle` and `product_url`, disconnect and reconnect your Shopify catalog.
+{% endalert %}
+
 - `id`
 - `store_name`
 - `shopify_product_id`

@@ -300,10 +300,6 @@ Braze.getInstance(this).subscribeToSdkAuthenticationFailures({ error: BrazeSdkAu
 {% endtab %}
 {% tab Objective-C %}
 
-{% alert important %}
-Starting in version `5.14.0` of the Braze Swift SDK, the SDK authentication delegate method has been split from the `BrazeDelegate` into a separate `BrazeSDKAuthDelegate`.
-{% endalert %}
-
 ```objc
 Braze *braze = [[Braze alloc] initWithConfiguration:configuration];
 braze.sdkAuthDelegate = delegate;
@@ -320,10 +316,6 @@ AppDelegate.braze = braze;
 ```
 {% endtab %}
 {% tab Swift %}
-
-{% alert important %}
-Starting in version `5.14.0` of the Braze Swift SDK, the SDK authentication delegate method has been separated from the `BrazeDelegate` into the `BrazeSDKAuthDelegate` protocol. If you are on a version prior to this, you should implement the SDK authentication delegate method wherever you conform to `BrazeDelegate`.
-{% endalert %}
 
 ```swift
 let braze = Braze(configuration: configuration)
@@ -353,18 +345,32 @@ braze.setBrazeSdkAuthenticationErrorCallback((BrazeSdkAuthenticationError error)
 {% endtab %}
 {% endtabs %}
 
-## Adding public keys {#key-management}
+## Managing public keys {#key-management}
 
-In the **Manage Settings** page of the dashboard, add your public key to a specific app in the Braze dashboard. Each app supports up to three public keys. Note that the same public and private keys may be used across apps.
+### Adding a public key
 
-To add a public key:
+You can add up to three public keys for each app: a primary, a secondary, and a tertiary. You can also add the same key to more than one app if needed. To add a public key:
 
-1. Choose the app from the list of available apps.
-2. Under **SDK Authentication**, click **Add Public Key**.
-3. Paste in the public key, and add an optional description.
-4. After saving your changes, the key will appear in the list of public keys.
+1. Go to the Braze dashboard and select **Settings** > **App Settings**.
+2. Choose an app from your list of available apps.
+3. Under **SDK Authentication**, select **Add Public Key**.
+4. Enter an optional description, paste in your public key, then select **Add Public Key**.
 
-To delete a key, or to promote a key to the primary key, choose the corresponding action in the overflow menu next to each key.
+### Assign a new primary key
+
+To assign a secondary or tertiary key as your new primary key:
+
+1. Go to the Braze dashboard and select **Settings** > **App Settings**.
+2. Choose an app from your list of available apps.
+3. Under **SDK Authentication**, choose a key and select **Manage** > **Make Primary Key**.
+
+### Deleting a key
+
+To delete a primary key, first [assign a new primary](#assign-a-new-primary-key), then delete your key. To delete a non-primary key:
+
+1. Go to the Braze dashboard and select **Settings** > **App Settings**.
+2. Choose an app from your list of available apps.
+3. Under **SDK Authentication**, choose a non-primary key and select **Manage** > **Delete Public Key**.
 
 ## Enabling in the Braze dashboard {#braze-dashboard}
 

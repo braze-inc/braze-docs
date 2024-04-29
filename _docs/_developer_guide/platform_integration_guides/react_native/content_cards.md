@@ -137,6 +137,19 @@ Classic cards have a title, description, and an optional image on the left of th
 
 For a full reference of the classic (text announcement) Content Card, see the [Android][14] and [iOS][15] documentation. For a full reference of the classic image (short news) card, see the [Android][16] and [iOS][17] documentation.
 
+## GIF Support
+
+The Braze React Native SDK allows you to incorporate animated GIFs into your Content Cards, with distinct implementation methods for Android and iOS platforms.
+
+{% tabs %}
+{% tab Android %}
+The Android SDK requires an external image library to display animated GIFs with Content Cards. For more details, refer to the guide for [GIFs]({{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/GIFs/).
+{% endtab %}
+{% tab iOS %}
+The Swift SDK does not provide animated GIF support by default. Support can be added by wrapping a third party or your own view in an instance of `GIFViewProvider`. For more details on GIF support, refer to the tutorial for [GIF Support](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/c3-gif-support/).
+{% endtab %}
+{% endtabs %}
+
 [1]: https://github.com/braze-inc/braze-react-native-sdk
 [2]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/data_models/
 [3]: https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/c2-contentcardsui
