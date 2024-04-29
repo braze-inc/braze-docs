@@ -15,7 +15,7 @@ For general information on what deep links are, refer to our [FAQ article][1].
 
 ## Step 1: Native deep link handling
 
-Integrating deep links into a Flutter app requires setting up native layer deep links as a pre-requisite. You can follow our guides for setting up deep links on [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/deep_linking/) and [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/advanced_use_cases/linking/).
+Integrating deep links into a Flutter app requires setting up native layer deep links as a pre-requisite. You can follow our guides for setting up deep links on [Android][2] and [iOS][3].
 
 ## Step 2: Native project configuration.
 
@@ -25,7 +25,7 @@ If you intend to use Flutter's default deep link handling, you will need to modi
 {% tab iOS %}
 Using Xcode to edit your `Info.plist` file, add a new key-value pair. Set the key to `FlutterDeepLinkingEnabled`, the type to `Boolean`, and the value to `YES`.
 
-![An example project's `Info.plist` file with the added key-value pair.][2]
+![An example project's `Info.plist` file with the added key-value pair.][4]
 {% endtab %}
 
 {% tab Android %}
@@ -138,8 +138,9 @@ void deepLinkAlert(String link, BuildContext context) {
     },
   );
 }
-
 ```
 
 [1]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/#what-is-deep-linking
-[2]: {% image_buster /assets/img/flutter/flutter-ios-deep-link-info-plist.png %} "Xcode Project Info.plist File"
+[2]: ({{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/deep_linking/)
+[3]: ({{site.baseurl}}/developer_guide/platform_integration_guides/swift/advanced_use_cases/linking/)
+[4]: {% image_buster /assets/img/flutter/flutter-ios-deep-link-info-plist.png %} "Xcode Project Info.plist File"
