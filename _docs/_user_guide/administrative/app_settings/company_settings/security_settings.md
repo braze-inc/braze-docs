@@ -160,6 +160,8 @@ To customize preference by workspace, you may add preference groups with differe
 
 
 ![]({% image_buster /assets/img/deletion_preferences_1.png %})
+
+
 [1]: {% image_buster /assets/img/user_profile_obfuscated1.png %} "user profile obfuscated1"
 [2]: {% image_buster /assets/img/user_profile_obfuscated2.png %} "user profile obfuscated2"
 [3]: {% image_buster /assets/img/user_profile_obfuscated3.png %} "user profile obfuscated3"
