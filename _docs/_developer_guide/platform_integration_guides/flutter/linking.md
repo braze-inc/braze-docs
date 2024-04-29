@@ -25,7 +25,7 @@ If you intend to use Flutter's default deep link handling, you will need to modi
 {% tab iOS %}
 Using Xcode to edit your `Info.plist` file, add a new key-value pair. Set the key to `FlutterDeepLinkingEnabled`, the type to `Boolean`, and the value to `YES`.
 
-
+![An example project's `Info.plist` file with the added key-value pair.][4]
 {% endtab %}
 
 {% tab Android %}
@@ -111,6 +111,9 @@ class MainActivity : FlutterActivity() {
 
 }
 ```
+
+{% endtab %}
+{% endtabs %}
 
 Now, in your Dart code, establish the corresponding channel and set the callback to do whatever URL handling you want. In this example, we'll display an alert containing the text of the URL.
 
