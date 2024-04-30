@@ -9,7 +9,7 @@ alias: /api/api_key/
 
 # API overview
 
-> This reference article covers the API basics including common terminology and an overview of REST API keys, permissions, and how keep them secure.
+> This reference article covers the API basics, including common terminology and an overview of REST API keys, permissions, and how to keep them secure.
 
 ## Braze REST API collection
 
