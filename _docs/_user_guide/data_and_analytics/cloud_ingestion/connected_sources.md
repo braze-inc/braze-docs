@@ -1,6 +1,6 @@
 ---
 nav_title: Connected Sources
-article_title: Connected SOurces
+article_title: Connected Sources
 description: "This reference article covers how to use Braze Cloud Data Ingestion to sync relevant data with your Snowflake, Redshift, BigQuery, and Databricks integration."
 page_order: 2
 page_type: reference
@@ -13,7 +13,7 @@ page_type: reference
 
 Once a connected source is added to your Braze workspace, you can create a CDI segment within Segment Extensions. CDI Segments lets you write SQL that directly queries on your own data warehouse (using data there that’s made available via your CDI Connected Source), and creates and maintains a group of users that can be targeted within Braze. 
 
-{% alert note %}
+{% alert update %}
 Note that this feature is currently in Early Access and available only for Snowflake sources.
 {% endalert %}
 
@@ -22,28 +22,30 @@ Because connected sources run on your data warehouse directly, you will incur al
 {% endalert %}
 
 
-## Product setup
+## Integration
 
-Cloud Data Ingestion connected sources require some setup on the Braze side and in your instance. A connected source may reference one or more tables, so the user created for Braze to use should have permissions for all tables you want to be available in the connected soure. Follow these steps to set up the integration:
+Cloud Data Ingestion connected sources require some setup on the Braze side and in your instance. 
+
+A connected source may reference one or more tables, so the user created for Braze to use should have permissions for all tables you want to be available in the connected source. Follow these steps to set up the integration:
 
 {% tabs %}
 {% tab Snowflake %}
 1. Create a new connected source in the Braze dashboard.
 2. Retrieve the public key provided in the Braze dashboard and [append it to the Snowflake user for authentication](https://docs.snowflake.com/en/user-guide/key-pair-auth.html).
 3. Test the integration
-4. Use the connected source to create one or more CDI Segmetns
+4. Use the connected source to create one or more CDI Segments
 {% endtab %}
 {% endtabs %}
 
-### Step 1: Create a role and grant permissions
+### Create a role and grant permissions
 
 {% tabs %}
 {% tab Snowflake %}
 #### Step 1: Create a role and grant permissions
 
-Create a role for your Connected Source to use. This role will be used to generate the list of tables available in your CDI segments, and to query source tables to create new segments. Once the connected source is created, Braze will discover the names and description of all tables available to the user in the source schema.
+Create a role for your connected source to use. This role will be used to generate the list of tables available in your CDI segments, and to query source tables to create new segments. Once the connected source is created, Braze will discover the names and description of all tables available to the user in the source schema.
 
-You may choose to grant access to all tables in a schema, or grant priviliges only to specific tables. Whichever tables the Braze role has access to will be available to query in the CDI segment.
+You may choose to grant access to all tables in a schema, or grant privileges only to specific tables. Whichever tables the Braze role has access to will be available to query in the CDI segment.
 
 ```json
 CREATE ROLE BRAZE_INGESTION_ROLE;
@@ -102,7 +104,7 @@ Depending on the configuration of your Snowflake account, you may need to allow 
 {% endtab %}
 {% endtabs %}
 
-### Step 2: Create a new connected source in the Braze dashboard
+### Create a new connected source in the Braze dashboard
 {% tabs %}
 {% tab Snowflake %}
 
@@ -137,10 +139,10 @@ At this point, you must go back to Snowflake to complete the setup. Add the publ
 For additional information on how to do this, see the [Snowflake documentation](https://docs.snowflake.com/en/user-guide/key-pair-auth.html). If you want to rotate the keys at any point, we can generate a new key pair and provide you with the new public key.
 
 ```json
-ALTER USER BRAZE_INGESTION_USER SET rsa_public_key='Braze12345...';
+ALTER USER BRAZE_INGESTION_USER SET rsa_public_key='{INSERT_YOUR_KEY}';
 ```
 
-Once you have added the key to the user in Snowflake, click the "Test Connection" button in Braze and then click "Done". Your connected source is now created and ready to use in CDI Segments.
+Once you have added the key to the user in Snowflake, select **Test Connection** in Braze, and then select **Done**. Your connected source is now created and ready to use in CDI Segments.
 
 {% endtab %}
 {% endtabs %}
@@ -154,12 +156,12 @@ You must successfully test a source before it can move from Draft to Active stat
 {% tab Snowflake %}
 You may set up multiple integrations with Braze, but each integration should be configured to connect a different schema. When creating additional connections, you may reuse existing credentials if connecting to the same Snowflake account.
 
-If you reuse the same user and role across integrations, you will **not** need to go through the step of adding the public key again.
+If you reuse the same user and role across integrations, you will not need to add the public key again.
 {% endtab %}
 {% endtabs %}
 
 ## Using the connected source
-Once the source is created, it can be used to create one or more CDI Segments. For more information on creating a segment with this source, see the [CDI Segments documentation]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/cdi_segments/)).
+Once the source is created, it can be used to create one or more CDI Segments. For more information on creating a segment with this source, see the [CDI Segments documentation]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/cdi_segments/).
 
 {% alert note %}
 If queries are consistently timing out and you have set a maximum runtime of 60 minutes, consider trying to optimize your query execution time or dedicating a larger warehouse to the Braze user.
