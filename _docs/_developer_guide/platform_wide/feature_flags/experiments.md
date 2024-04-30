@@ -42,7 +42,7 @@ if (featureFlag?.enabled) {
 
 Next, create variations. For each variant, choose the feature flag you want to turn on or off and review the assigned properties.
 
-To test the impact of your feature, use variants to split traffic into two or more groups. One variant should be considered your control group—this variant should have the feature flag turned off.
+To test the impact of your feature, use variants to split traffic into two or more groups. Name one group "My control group" and turn its feature flags off.
 
 ### Overwriting properties
 

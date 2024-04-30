@@ -9,6 +9,8 @@ tool: Currents
 search_rank: 6
 ---
 
+These schemas only apply to the flat file event data we send to Data Warehouse partners (Google Cloud Storage, Amazon S3, and Microsoft Azure Blob Storage). For schemas that apply to the other partners, refer to our list of [available partners]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/available_partners/) and check their respective pages.
+
 Contact your account manager or open a [support ticket]({{site.baseurl}}/braze_support/) if you need access to additional event entitlements. If you can't find what you need in this article, check out our [Customer Behavior Events Library]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/customer_behavior_events/) or our [Currents sample data examples](https://github.com/Appboy/currents-examples/tree/master/sample-data).
 
 {% details Explanation of message engagement event structure and platform values %}
@@ -40,11 +42,25 @@ Certain events return a `platform` value that specifies the platform of the user
 {% enddetails %}
 
 {% alert important %}
-These schemas only apply to the flat file event data we send to Data Warehouse partners (Google Cloud Storage, Amazon S3, and Microsoft Azure Blob Storage). For schemas that apply to the other partners, refer to our list of [available partners]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/available_partners/) and check their respective pages.<br><br>Additionally, note that Currents will drop events with excessively large payloads of greater than 900&nbsp;KB.
+Note that Currents will drop events with excessively large payloads of greater than 900&nbsp;KB.
 {% endalert %}
 
-{% alert update %}
-Human-readable names for objects related to Canvas Flow are coming soon to Currents. In the meantime, the IDs can be used for grouping, and translated to human-readable names via the [Canvas Details endpoint]({{site.baseurl}}/api/endpoints/export/canvas/get_canvas_details/).
+{% alert note %}
+Objects related to Canvas Flow have IDs that can be used for grouping and translated to human-readable names via the [Export Canvas details endpoint]({{site.baseurl}}/api/endpoints/export/canvas/get_canvas_details/).
+{% endalert %}
+
+{% alert note %}
+Certain fields might take longer to display their most recent state after a campaign or Canvas is updated. These fields are:
+<ul>
+  <li>"campaign_name"</li>
+  <li>"canvas_name"</li>
+  <li>"canvas_step_name"</li>
+  <li>"conversion_behavior"</li>
+  <li>"canvas_variation_name"</li>
+  <li>"experiment_split_name"</li>
+  <li>"message_variation_name"</li>
+</ul>
+If complete consistency is required, we recommend waiting an hour from the last update to these fields before sending out your messaging to your users.
 {% endalert %}
 
 {% api %}
@@ -880,12 +896,16 @@ Email, Opens
 
 This event occurs when a user opens an email. Multiple events may be generated for the same campaign if a user opens the email multiple times.
 
+{% alert important %}
+It's known behavior that the email open event fields `browser`, `device_os`, `device_model`, and `mailbox_provider` are empty. You can ignore these for now.
+{% endalert %}
+
 ```json
 // Email Open: users.messages.email.Open
 {
   "id": (required, string) unique ID of this event,
   "user_id": (required, string) Braze user ID of the user,
-  "dispatch_id": (optional, string) ID of the message dispatch (unique ID for each 'transmission' sent from the Braze platform). Users who are sent a schedule message get the same dispatch_id. Action-based or API-triggered messages get a unique dispatch_id per user.,
+  "dispatch_id": (optional, string) ID of the message dispatch (unique ID for each 'transmission' sent from the Braze platform). Users who are sent a schedule message get the same dispatch_id. Action-based or API-triggered messages get a unique dispatch_id per user,
   "external_user_id": (optional, string) External ID of the user,
   "time": (required, int) 10-digit UTC time of the event in seconds since the epoch,
   "timezone": (optional, string) IANA time zone of the user at the time of the event,
@@ -906,7 +926,12 @@ This event occurs when a user opens an email. Multiple events may be generated f
   "machine_open": (optional, string) Indicator of whether the email was opened by an automated process, such as Apple or Google mail pre-fetching. Currently "true" or null, but additional granularity (for example, "Apple" or "Google" to indicate which process made the fetch) may be added in the future.,
   "esp": (optional, string) ESP related to the event (SparkPost or SendGrid),
   "from_domain": (optional, string) sending domain for the email,
-  "is_amp": (optional, boolean) indicates that this is an AMP event
+  "is_amp": (optional, boolean) indicates that this is an AMP event,
+  "device_class": (optional, string) type of device used, such as 'mobile', 'desktop', 'tablet', 'other',
+  "device_os": (optional, string) the operating system used, such as 'os x', 'android', 'iOS',
+  "browser": (optional, string) browser used, such as 'chrome', 'edge', 'safari',
+  "device_model": (optional, string) model of device used, such as 'iPhone',
+  "mailbox_provider": (optional, string) the mailbox provider
 }
 ```
 
@@ -924,6 +949,10 @@ Email, Clicks
 {% endapitags %}
 
 This event occurs when a user clicks an email. Multiple events may be generated for the same campaign if a user clicks multiple times or clicks different links within the email.
+
+{% alert important %}
+It's known behavior that the email clicks event fields `browser`, `device_os`, `device_model`, and `mailbox_provider` are empty. You can ignore these for now.
+{% endalert %}
 
 ```json
 // Email Click: users.messages.email.Click
@@ -953,7 +982,12 @@ This event occurs when a user clicks an email. Multiple events may be generated 
   "link_alias": (optional, string) alias name set when the message was sent - null unless link aliasing is enabled,
   "esp": (optional, string) ESP related to the event (SparkPost or SendGrid),
   "from_domain": (optional, string) sending domain for the email,
-  "is_amp": (optional, boolean) indicates that this is an AMP event
+  "is_amp": (optional, boolean) indicates that this is an AMP event,
+  "device_class": (optional, string) type of device used, such as 'mobile', 'desktop', 'tablet', 'other',
+  "device_os": (optional, string) the operating system used, such as 'os x', 'android', 'iOS',
+  "browser": (optional, string) browser used, such as 'chrome', 'edge', 'safari',
+  "device_model": (optional, string) model of device used, such as 'iPhone',
+  "mailbox_provider": (optional, string) the mailbox provider
 }
 ```
 
@@ -1175,12 +1209,22 @@ This event occurs when a user views an in-app message.
   "device_id": (optional, string) ID of the device on which the event occurred,
   "ad_id": (optional, string) advertising identifier,
   "ad_id_type": (optional, string) One of 'ios_idfa', 'google_ad_id', OR 'roku_ad_id',
-  "ad_tracking_enabled": (optional, boolean) whether advertising tracking is enabled for the device
+  "ad_tracking_enabled": (optional, boolean) whether advertising tracking is enabled for the device,
+  "message_extras": (optional, string) a JSON string of the tagged key-value pairs during Liquid rendering
 }
 ```
+
+{% alert note %}
+The `message_extras` field is active as of April 4, 2024.
+{% endalert %}
+
 #### Property details
 - For `ad_id`, `ad_id_type` and `ad_tracking_enabled`, you need to explicitly collect the iOS IDFA and Android Google advertising ID through the native SDKs. Learn more about this setup for [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/swift_idfv/) and [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id).
 - If you are using Kafka to ingest [Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/) data, contact your customer success manager to enable sending `ad_id`.
+- `message_extras` allow you to annotate your in-app message impression events with dynamic data from Connected Content, custom attributes (such as language, country), and Canvas entry properties. The following minimum SDK versions are required, refer to [Message extras]({{site.baseurl}}/message_extras_tag/) to learn more:
+
+{% sdk_min_versions web:5.2.0 android:30.4.0 swift:8.4.0 %}
+
 {% endapi %}
 
 {% api %}
@@ -1449,7 +1493,7 @@ This event occurs when a user dismisses a Content Card.
 SMS, Clicks
 {% endapitags %}
 
-This event occurs when a user clicks an SMS short link.
+This event occurs when a user clicks an SMS short link. We only generate and send this event to Currents or Snowflake data sharing when a user clicks an SMS short link sent from a campaign where advanced [link shortening]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/link_shortening/) is enabled.
 
 ```json
 // SMS Send: users.messages.sms.ShortLinkClick
@@ -1515,6 +1559,47 @@ This event occurs when a user sends an SMS.
 #### Property details
 - `message_extras` allow you to annotate your send events with dynamic data from Connected Content, custom attributes (such as language, country), and Canvas entry properties. Refer to [Message extras]({{site.baseurl}}/message_extras_tag/) to learn more.
 
+{% endapi %}
+
+{% api %}
+
+## SMS sends to carrier events
+
+{% apitags %}
+SMS, Delivery
+{% endapitags %}
+
+{% alert important %}
+`CarrierSend` is supported only for users on legacy infrastructure.
+{% endalert %}
+
+This event occurs when an SMS is sent to the carrier.
+
+```json
+// SMS Delivery: users.messages.sms.CarrierSend
+{
+  "id": (required, string) unique ID of this event,
+  "user_id": (required, string) Braze user ID of the user,
+  "dispatch_id": (optional, string) ID of the message dispatch (unique ID for each 'transmission' sent from the Braze platform and users who are sent a schedule message get the same dispatch_id. Action-based or API-triggered messages get a unique dispatch_id per user,
+  "external_user_id": (optional, string) External ID of the user,
+  "time": (required, int) 10-digit UTC time of the event in seconds since the epoch,
+  "timezone": (optional, string) IANA time zone of the user at the time of the event,
+  "campaign_id": (optional, string) ID of the campaign if from a campaign,
+  "campaign_name": (optional, string) name of the campaign,
+  "message_variation_id": (optional, string) ID of the message variation if from a campaign,
+  "message_variation_name": (optional, string) the name of the message variation if from a campaign,
+  "to_phone_number": (optional, string) the number the message was sent to,
+  "subscription_group_id": (optional, string) ID of the subscription group targeted for this SMS message,
+  "from_phone_number": (optional, string) the from phone number of the message (Delivered and Undelivered only),
+  "canvas_id": (optional, string) ID of the Canvas if from a Canvas,
+  "canvas_name": (optional, string) name of the Canvas,
+  "canvas_variation_id": (optional, string) ID of the Canvas variation the user is in if from a Canvas,
+  "canvas_variation_name": (optional, string) name of the Canvas variation the user is in if from a Canvas,
+  "canvas_step_id": (optional, string) ID of the step for this message if from a Canvas,
+  "canvas_step_name": (optional, string) name of the Canvas step this event belongs to,
+  "send_id": (optional, string) message send ID this message belongs to
+}
+```
 {% endapi %}
 
 {% api %}
@@ -1809,7 +1894,7 @@ This event occurs when a user is enrolled in a control variant set on a multi-va
 Subscription
 {% endapitags %}
 
-This event occurs when the subscription state of a user in a subscription group changes.
+This event occurs when Braze receives a request to update the subscription state of the user, even if the request doesn’t alter the current subscription state for the user.
 
 {% alert important %}
 Subscription groups are only available for email, SMS, and WhatsApp channels at this time.
@@ -1872,7 +1957,7 @@ Subscription groups are only available for email, SMS, and WhatsApp channels at 
 Subscription
 {% endapitags %}
 
-This event occurs when the global subscription state of the user changes.
+This event occurs when Braze receives a request to update the global subscription state of the user, even if the request doesn't alter the current subscription state for the user.
 
 ```json
 // Global State Change: users.behaviors.subscription.GlobalStateChange

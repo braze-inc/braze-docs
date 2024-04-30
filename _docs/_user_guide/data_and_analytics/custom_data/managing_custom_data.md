@@ -48,7 +48,7 @@ All user profile data (custom events, custom attributes, custom data) is stored 
 
 You may occasionally identify custom attributes, custom events, or purchase events that either consume too many data points, are no longer useful to your marketing strategy, or were recorded in error. To stop this data from being sent to Braze, you can blocklist a custom data object while your engineering team works to remove it from the backend of your app or website.
 
-Blocklisting prevents a particular custom data object from being recorded by Braze going forward. However, blocklisting doesn't remove data from user profiles or retroactively decrease the amount of data points incurred for that custom data object. 
+Blocklisting prevents a particular custom data object from being recorded by Braze going forward, meaning it won't show up when searching for a specific user. However, blocklisting doesn't remove data from user profiles or retroactively decrease the amount of data points incurred for that custom data object.
 
 For instructions and details about blocklisting custom data, refer to [Managing custom data]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/managing_custom_data/#blocklisting-custom-data).
 

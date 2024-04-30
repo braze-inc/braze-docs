@@ -49,7 +49,7 @@ These messages aren't as intrusive as fullscreen messages, as they still allow u
 {% enddetails %}
 
 {% details Traditional Slideup %}
-These are the least intrusive message type, though they can be more or less attention-grabbing depending on your usage of colors and badge icons. This may be the message format to use when onboarding new users and directing them towards particular in-app features, as they don't pause the app experience and allow for continuous exploration.
+These are the least intrusive message type, though they can be more or less attention-grabbing depending on your usage of colors and badge icons. This may be the message format to use when onboarding new users and directing them toward particular in-app features, as they don't pause the app experience and allow for continuous exploration.
 
 ![Slideup Message]({% image_buster /assets/img_archive/stopwatch_slideup_IAM.gif %}){: style="max-width:50%;"}
 

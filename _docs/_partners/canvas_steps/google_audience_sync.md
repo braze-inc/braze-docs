@@ -9,19 +9,19 @@ page_order: 2
 
 ---
 
-# Audience Sync to Google 
+# Audience Sync to Google
 
 {% alert important %}
-Google is updating their [EU User Consent Policy](https://www.google.com/about/company/user-consent-policy/) in response to changes to the [Digital Markets Act (DMA)](https://ads-developers.googleblog.com/2023/10/updates-to-customer-match-conversion.html), which goes into effect March 6, 2024. This new change requires advertisers to disclose certain information to their EEA and UK end users, as well as obtain necessary consents from them. Review the following documentation to learn more.
+Google is updating their [EU User Consent Policy](https://www.google.com/about/company/user-consent-policy/) in response to changes to the [Digital Markets Act (DMA)](https://ads-developers.googleblog.com/2023/10/updates-to-customer-match-conversion.html), which is in effect as of March 6, 2024. This new change requires advertisers to disclose certain information to their EEA and UK end users, as well as obtain necessary consents from them. Review the following documentation to learn more.
 {% endalert %}
 
 The Braze Audience Sync to Google integration enables brands to extend the reach of their cross-channel customer journeys to Google Search, Google Shopping, Gmail, YouTube, and Google Display. Using your first-party customer data, you can securely deliver ads based on dynamic behavioral triggers, segmentation, and more. Any criteria you'd typically use to trigger a message (for example, push, email, or SMS) as part of a Braze Canvas can be used to trigger an ad to that user via Google's [Customer Match](https://support.google.com/google-ads/answer/6379332?hl=en).
 
 {% alert important %}
-Starting May 1, 2023, Google Ads will no longer generate similar audiences, also known as "lookalike audiences", for targeting and reporting. Refer to [Google Ads documentation](https://support.google.com/google-ads/answer/12463119?) to learn more.
+Starting May 1, 2023, Google Ads will no longer generate similar audiences, also known as "lookalike audiences," for targeting and reporting. Refer to [Google Ads documentation](https://support.google.com/google-ads/answer/12463119?) to learn more.
 {% endalert %}
 
-**Common use cases for syncing Custom Audiences include**:
+**Common use cases for syncing Custom Audiences include:**
 - Targeting high-value users via multiple channels to drive purchases or engagement.
 - Retargeting users who are less responsive to other marketing channels.
 - Creating suppression audiences to prevent users from receiving advertisements when they're already loyal consumers of your brand.
@@ -32,14 +32,14 @@ This feature lets brands control what specific first-party data is shared with G
 
 ## Prerequisites
 
-You must ensure the following items are created and completed before setting up your Google Audience component in Canvas.
+You must ensure the following items are created and completed before setting up your Google Audience step in Canvas.
 
 | Requirement | Origin | Description |
 | ----------- | ------ | ----------- |
-| Google Ads Account | [Google](https://support.google.com/google-ads/answer/6366720?hl=en) | An active Google ads account for your brand.<br><br>If you are looking to share an audience across multiple managed accounts, you can upload your audiences into your [manager account](https://support.google.com/google-ads/answer/6139186). |
+| Google Ads Account | [Google](https://support.google.com/google-ads/answer/6366720?hl=en) | An active Google ads account for your brand.<br><br>If you're looking to share an audience across multiple managed accounts, you can upload your audiences into your [manager account](https://support.google.com/google-ads/answer/6139186). |
 | Google Ads Terms and Google Ads Policies | [Google](https://support.google.com/adspolicy/answer/54818?hl=en) | You must accept and ensure you comply with [Google’s Ad Terms](https://payments.google.com/u/0/paymentsinfofinder?hostOrigin=aHR0cHM6Ly9wYXltZW50cy5nb29nbGUuY29tOjQ0Mw..&sri=-40) and [Google’s Ad Policies](https://support.google.com/adspolicy/answer/6008942?sjid=15557182366992806023-NC), which include the [EU User Consent Policy](https://www.google.com/about/company/user-consent-policy/), as applicable to you, in your use of Braze Audience Sync.<br><br>Consult with your Legal Team on Google’s new EU User Consent Policy to ensure you are collecting appropriate consent in order to use Google Ads’ services for your EEA/UK end users. |
 | Google Customer Match | [Google](https://support.google.com/google-ads/answer/6299717) |  Customer Match is not available for all advertisers.<br><br>**To use Customer Match, your account must have:**<br>• A good history of policy compliance<br>• A good payment history<br>• At least 90 days history in Google Ads<br>• More than USD 50,000 total lifetime spend. For advertisers whose accounts are managed in currencies other than USD, your spend amount will be converted to USD using the average monthly conversion rate for that currency.<br><br>If your account does not meet these criteria, then your account is currently ineligible to use Customer Match.<br><br>Connect with your Google Ads representative for more guidance on Customer Match availability for your account. |
-| Google Consent Signals | [Google](https://support.google.com/google-ads/answer/14310715) |  If you want to serve ads to EEA/UK end users using Google’s Customer Match service, you’ll need to pass Braze the following custom attributes (boolean) as part of Google’s  EU User Consent Policy. More details can be found under [Collecting consent for EEA and UK end users](#collecting-consent-for-eea-and-uk-end-users): <br> - `$google_ad_user_data` <br> - `$google_ad_personalization` |
+| Google Consent Signals | [Google](https://support.google.com/google-ads/answer/14310715) |  If you want to serve ads to EEA end users using Google’s Customer Match service, you’ll need to pass Braze the following custom attributes (boolean) as part of Google’s  EU User Consent Policy. More details can be found under [Collecting consent for EEA and UK end users](#collecting-consent-for-eea-and-uk-end-users): <br> - `$google_ad_user_data` <br> - `$google_ad_personalization` |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 When using Braze SDKs to collect consent signals, ensure you meet the following minimum versions:
@@ -48,29 +48,26 @@ When using Braze SDKs to collect consent signals, ensure you meet the following 
 
 ### Collecting consent for EEA and UK end users
 
-Google’s EU User Consent Policy requires advertisers to disclose the following to their EEA or UK end users, as well as obtain their consent for such: 
+Google’s EU User Consent Policy requires advertisers to disclose the following to their EEA and UK end users, as well as obtain their consent for such:
 
-* the use of cookies or other local storage where legally required; and
-* the collection, sharing, and use of their personal data for personalization of ads.
+* The use of cookies or other local storage where legally required; and
+* The collection, sharing, and use of their personal data for personalization of ads.
 
-According to Google, this applies only to end users located in the European Economic Area (EEA) or the UK and goes into effect, March 6, 2024. This does not affect US end users or any other end users located outside of the EEA or the UK. Consult with your legal team on Google’s new EU User Consent Policy to ensure you are collecting appropriate consent in order to use Google Ads’ services for your EEA and UK end users.
+This does not affect US end users or any other end users located outside of the EEA or the UK. Consult with your legal team on Google’s new EU User Consent Policy to ensure you are collecting appropriate consent in order to use Google Ads’ services for your EEA and UK end users.
 
-As part of this upcoming change, you can collect both consent signals in Braze as the following custom attributes. Braze will sync the data from these custom attributes to the appropriate [consent fields in Google](https://support.google.com/google-ads/answer/14310715#:~:text=These%20consent%20fields%20are%3A).
+Under the Digital Markets Act (DMA) requirements in effect as of March 6, 2024, advertisers must pass consent for EEA end users (excluding UK) when sharing data with Google. As part of this change, you can collect both consent signals in Braze as the following boolean custom attributes:
 
-| Custom Attribute Name | Data Type | Values | Definition |
-| ----- | ----- | ----- | ----- |
-| `$google_ad_user_data` | Boolean | In Braze, this can be set to `true` or `false`. <br><br> - `true` in Braze maps to Google's `GRANTED` consent status (this will be synced to Google) <br> - `false` in Braze maps to Google's `DENIED` consent status <br> - `null` in Braze maps to Google's `UNSPECIFIED` consent status <br> - Any value that is not `true` or `false` will be `UNSPECIFIED` | Sets consent for sending user data to Google for advertising purposes. |
-| `$google_ad_personalization` | Boolean | In Braze, this can be set to `true` or `false`. <br><br> - `true` in Braze maps to Google's `GRANTED` consent status (this will be synced to Google) <br> - `false` in Braze maps to Google's  `DENIED` consent status <br> - `null` in Braze maps to Google's `UNSPECIFIED` consent status <br> - Any value that is not `true` or `false` in Braze is mapped to Google's `UNSPECIFIED` consent status | Sets consent for personalized advertising. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+* `$google_ad_user_data`
+* `$google_ad_personalization`
 
-_Braze will sync unspecified for any user that does not have the consent attributes determined to Google. This consent is for Google to use that data in determining which ads to serve._
+Braze will sync the data from these custom attributes to the appropriate [consent fields in Google](https://support.google.com/google-ads/answer/14310715#:~:text=These%20consent%20fields%20are%3A).
 
 #### Managing revoked consent
 
-To keep your audience lists up-to-date in the event an EEA or UK end user has been added to the audience list, and then has subsequently retracted any of the two consents (`$google_ad_user_data` or `$google_ad_personalization`), you must set up a Canvas to remove users from the existing audience lists using an Audience Sync step.
+To keep your audience lists up-to-date in the event an EEA end user has been added to the audience list, and then has subsequently retracted any of the two consents (`$google_ad_user_data` or `$google_ad_personalization`), you must set up a Canvas to remove users from the existing audience lists using an Audience Sync step.
 
 {% alert note %}
-If an EEA or UK user previously provided consent for both signals, that data will continue to be used for Google’s Customer Match until that list expires, or that consent status is explicitly updated via Google Audience Sync, or both.
+If an EEA previously provided consent for both signals, that data will continue to be used for Google’s Customer Match until that list expires, or that consent status is explicitly updated via Google Audience Sync, or both.
 {% endalert %}
 
 #### Tips
@@ -81,7 +78,7 @@ If an EEA or UK user previously provided consent for both signals, that data wil
 * While you can't explicitly set a user as unspecified, if you send a `null` or `nil` value or any value that isn't `true` or `false`, Braze will pass this user to Google as `UNSPECIFIED`.
 * New users added or updated without specifying either consent attribute will be synced to Google with those consent attributes marked as unspecified.
 
-If you attempt to sync an EEA or UK user without the necessary consent fields and granted status, Google will reject this and not serve ads to this end user. In addition, if an ad is served to an EEA or UK user without their explicit consent, you may be liable and could be at financial risk. For more details regarding the EU User Consent Policy for Customer Match upload partners, see Google’s [FAQs](https://support.google.com/google-ads/answer/14310715). 
+If you attempt to sync an EEA user without the necessary consent fields and granted status, Google will reject this and not serve ads to this end user. In addition, if an ad is served to an EEA user without their explicit consent, you may be liable and could be at financial risk. For more details regarding the EU User Consent Policy for Customer Match upload partners, see Google’s [FAQs](https://support.google.com/google-ads/answer/14310715). 
 
 ## Integration
 
@@ -123,6 +120,7 @@ Select the desired Google ad account. Under the **Choose a New or Existing Audie
 {% tab Create a New Audience %}
 **Create a New Audience**<br>
 Enter a name for the new custom audience, select **Add Users to Audience**, and select which fields you would like to sync with Google. You can select the following fields to match to sync with Google:
+
 - Email 
 - Phone
 - First/Last name
@@ -133,9 +131,11 @@ Enter a name for the new custom audience, select **Add Users to Audience**, and 
 - Mobile Ad IDs
   - You must opt into either [IDFA]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/other_sdk_customizations/#optional-idfa-collection) or [GAID]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection#google-advertising-id-android-only) collection through the Braze SDKs.
 
-Enter a name for the new custom audience, select **Add Users to Audience**, and select the first-party user field data to send to with your audience. You can choose either: 
-- **Customer Contact Info**, which will contain your users' email and/or phone numbers if they exist in Braze
-- **Mobile Advertiser ID**, which you will then need to select either iOS IDFA or Android GAID   
+Enter a name for the new custom audience, select **Add Users to Audience**, and select the first-party user field data to send to with your audience. You can choose either:
+
+- **Customer Contact Info**: Contains your users' email or phone numbers, or both if they exist in Braze
+- **Mobile Advertiser ID**: Select either iOS IDFA or Android GAID
+
 Next, save your audience by clicking the **Create Audience** button at the bottom of the step editor.
 
 ![Expanded view of the Custom Audience Canvas component. Here, the desired Ad account is selected, a new audience is created, and the "customer contact info" checkbox is selected.]({% image_buster /assets/img/audience_sync/g_sync.png %})
@@ -175,17 +175,17 @@ Once a customer is close to reaching the Google Ads API rate limit, Google will 
 
 ## Understanding analytics 
 
-The following table includes metrics and descriptions to help you better understand analytics from your Audience Sync component.
+The following table includes metrics and descriptions to help you better understand analytics from your Audience Sync step.
 
 | Metric | Description |
 | ------ | ----------- |
-| Entered | Number of users who entered this step to be synced to Google. |
-| Proceeded to Next Step | How many users advanced to the next component if there is one. All users will auto-advance. 0 if this is the last step in the Canvas branch. |
-| Users Synced | Number of users who have successfully been synced to Google. |
-| User Not Synced | Number of users that have not been synced due to missing fields to match. |
-| Users Errored | Number of users who were not synced to Google due to an error, after &#126;13 hours of retries. For specific errors, like Google Ads API service disruptions, Canvas will retry the sync for up to &#126;13 hours. If the sync is still not possible at that point, the User Not Synced will be populated. |
-| Users Pending | Number of users currently being processed by Braze to sync to Google. |
-| Exited Canvas | Number of users who have exited the Canvas. This occurs when the last step in a Canvas is a Google step. |
+| *Entered* | Number of users who entered this step to be synced to Google. |
+| *Proceeded to Next Step* | How many users advanced to the next component, if there is one. All users will auto-advance. If this is the last step in the Canvas branch, this metric will be 0. |
+| *Users Synced* | Number of users who have successfully been synced to Google. |
+| *User Not Synced* | Number of users that have not been synced due to missing fields to match or either consent attribute was set to `false`. |
+| *Users Errored* | Number of users who were not synced to Google due to an error, after &#126;13 hours of retries. For specific errors, like Google Ads API service disruptions, Canvas will retry the sync for up to &#126;13 hours. If the sync is still not possible at that point, the *User Not Synced* will be populated. |
+| *Users Pending* | Number of users currently being processed by Braze to sync to Google. |
+| *Exited Canvas* | Number of users who have exited the Canvas. This occurs when the last step in a Canvas is a Google step. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## Troubleshooting

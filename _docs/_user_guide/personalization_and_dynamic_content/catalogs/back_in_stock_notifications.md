@@ -13,13 +13,15 @@ description: "This reference article describes how to create back-in-stock notif
 Back-in-stock notifications for catalogs are currently in early access. Contact your account manager if you're interested in participating in this early access.
 {% endalert %}
 
-## How it works
+When a user triggers a custom event for an item, we'll automatically subscribe them to receive back-in-stock notifications for that item. Once the item's inventory quantity meets your inventory rule (such as an inventory larger than 100), all subscribers will be eligible for notifications through a campaign or Canvas. However, only users who opted into notifications will receive notifications. 
 
-When the selected custom event is performed by a user, it can be used to create a back-in-stock subscription for a combination of that user and catalog item that it occurred for, if the item's inventory field is currently at 0. Once the item is back in stock, users can be notified through a Canvas.
+## How back-in-stock notifications work
 
-Back-in-stock notifications are determined by notification rules. If the user has not opted in to notifications, they will be filtered out and will not receive messaging.
+You'll set up a custom event to use as a subscription event, such as a `product_clicked` event. This event must contain a property of the item ID (catalog item IDs). We suggest you include a catalog name, but this isn't required. You'll also provide the name of an inventory quantity field, which must be a number-data type.
 
-Users are only subscribed for 90 days. If an item isn't back in stock within 90 days, the user is removed from the subscription. Braze will process up to 10 item updates per minute. This means if you update 11 items in one minute, only the first 10 items will trigger the back-in-stock notification.
+When an item has an inventory quantity that meets your inventory rule, we'll look up all your users who are subscribed to that item (users who did the subscription event) and send a Braze custom event that you can use to trigger a campaign or Canvas.
+
+The event properties are sent alongside your user, so you can template in the item details into the campaign or Canvas that sends!
 
 ## Setting up back-in-stock notifications
 
@@ -35,8 +37,10 @@ Follow these steps to set up back-in-stock notifications in a specific catalog.
     - **Fallback Catalog** This is the catalog that will be used for the back-in-stock subscription, if there is no `catalog_name` property present on the custom event. 
 
 4. Click **Save** and continue to the catalog's back-in-stock settings page.
-5. Set your notification rule. There are two options: **Notify all subscribed users** and **Notify a certain number of users per a certain number of minutes**. <br>Selecting **Notify all subscribed users** notifies all customers who are waiting when the item is back in stock. **Notify a certain number of users per a certain number of minutes** notifies a specified number of customers per your configured notification period. Braze will notify the specified numbers of customers in increments until there are no more customers to notify, or until the item goes out of stock. Your notification rate cannot exceed notifying 10,000 users per minute.
-6. Set the **Inventory field in catalog** this is the catalog field that will be used to determine if item is out of stock. It must be a Number type field.
+5. Set your notification rule. There are two options:
+    - **Notify all subscribed users** notifies all customers who are waiting when the item is back in stock. 
+    - **Notify a certain number of users per a certain number of minutes** notifies a specified number of customers per your configured notification period. Braze will notify the specified numbers of customers in increments until there are no more customers to notify or until the item goes out of stock. Your notification rate cannot exceed notifying 10,000 users per minute.
+6. Set the **Inventory field in catalog**. This catalog field will be used to determine if the item is out of stock. The field must be number type.
 7. Click **Save settings**.
 
 ![Catalog settings that show the back-in-stock feature turned on. The notification rules are to notify a thousand users every ten minutes.][1]
@@ -45,7 +49,7 @@ Follow these steps to set up back-in-stock notifications in a specific catalog.
 Notification rules in these settings do not replace Canvas notification settings, such as Quiet Hours.
 {% endalert %}
 
-## Using back-in-stock notifications in Canvas
+## Using back-in-stock notifications in a Canvas or campaign
 
 After setting up the back-in-stock feature in a catalog, follow these steps to use with Canvas.
 
@@ -57,11 +61,17 @@ After setting up the back-in-stock feature in a catalog, follow these steps to u
 Now, your customers can be notified when an item is back in stock.
 
 ### Using Liquid
-{% raw %}
+
 To template in details about the catalog item that's back in stock, you can use the `canvas_entry_properties` Liquid tag to access the `item_id`. 
 
-Using ``{{canvas_entry_properties.${catalog_update}}}`` will return the ID of the item that came back in stock.
-Use this Liquid tag  ``{% catalog_items <name_of_your_catalog> {{canvas_entry_properties.${catalog_update}}} %}`` at the top of your message, then use ``items[0].<field_name>` to access data about that item throughout the message.
-{% endraw %}
+Using {%raw%}``{{canvas_entry_properties.${catalog_update}.item_id}}``{%endraw%} will return the ID of the item that came back in stock. {%raw%}``{{canvas_entry_properties.${catalog_update}.previous_value}}``{%endraw%} will return the inventory value of the item prior to the update, and {%raw%}``{{canvas_entry_properties.${catalog_update}.new_value}}``{%endraw%} will return the new inventory value after the update.
+
+Use this Liquid tag {%raw%}``{% catalog_items <name_of_your_catalog> {{canvas_entry_properties.${catalog_update}.item_id}} %}}``{%endraw%} at the top of your message, then use `items[0].<field_name>` to access data about that item throughout the message.
+
+## Considerations
+
+- Users are only subscribed for 90 days. If the item isn't back in stock in 90 days, the user is unsubscribed.
+- When using the **Notify all subscribed users** notification rule, Braze will notify 100,000 over 10 minutes.
+- Braze will process at most 10 item updates over one minute. If you update 11 items in one minute, only the first 10 can trigger a back-in-stock notification.
 
 [1]: {% image_buster /assets/img/back_in_stock_settings_non_shopify.png %} 

@@ -47,9 +47,9 @@ To keep a campaign active, update the campaign so it does not meet the above cri
 
 | Reason for idle campaign status | Steps to make campaign active |
 | --- | --- |
-| Action-based campaigns with end dates seven days after the end date | Extend the end date |
-| Scheduled campaigns with end dates seven days after the end date | Extend the end date |
-| Scheduled one-time send campaigns with end dates seven days after the end date | Schedule a future send |
+| Action-based campaigns with end dates seven days after the send date | Extend the end date |
+| Scheduled campaigns with end dates seven days after the send date | Extend the end date |
+| Scheduled one-time send campaigns with end dates seven days after the last send date | Schedule a future send |
 | Action-based campaigns (without end dates) that have not sent messages in one year | Send one message or make any edit to the campaign | 
 | Scheduled campaigns (without end dates) that have not sent messages in one year | Send one message or make any edit to the campaign | 
 | API-triggered campaigns that have not sent messages in one year | Send one message or make any edit to the campaign |

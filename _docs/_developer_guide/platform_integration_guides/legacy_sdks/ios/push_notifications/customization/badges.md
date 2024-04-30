@@ -22,6 +22,15 @@ If you do not have a plan for clearing badges as part of normal app operation or
 {% tab OBJECTIVE-C %}
 
 ```objc
+// For iOS 16.0+
+UNUserNotificationCenter *center = [UNUserNotificationCenter currentNotificationCenter];
+[center setBadgeCount:0 withCompletionHandler:^(NSError * _Nullable error) {
+    if (error != nil) {
+        // Handle errors
+    }
+}];
+
+// Prior to iOS 16. Deprecated in iOS 17+.
 [UIApplication sharedApplication].applicationIconBadgeNumber = 0;
 ```
 
@@ -29,6 +38,15 @@ If you do not have a plan for clearing badges as part of normal app operation or
 {% tab swift %}
 
 ```swift
+// For iOS 16.0+
+let center = UNUserNotificationCenter.current()
+do {
+  try await center.setBadgeCount(0)
+} catch {
+  // Handle errors
+}
+
+// Prior to iOS 16. Deprecated in iOS 17+.
 UIApplication.shared.applicationIconBadgeNumber = 0
 ```
 

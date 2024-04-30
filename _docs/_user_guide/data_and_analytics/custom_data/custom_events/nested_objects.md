@@ -31,7 +31,7 @@ To access the nested data in your custom event, generate a schema for each event
 
 1. Go to **Data Settings** > **Custom Events**.
 2. Select **Manage Properties** for the events with nested properties.
-3. Click the icon to generate the schema. To view the schema, click the plus button.
+3. Click the icon to generate the schema. To view the schema, click the <i class="fas fa-plus"></i> plus button.
 
 ![][6]{: style="max-width:80%;"}
 
@@ -39,12 +39,11 @@ To access the nested data in your custom event, generate a schema for each event
 
 After generating a schema, you can reference the nested data during segmentation and personalization. Refer to the following sections for usage examples:
 
-- API request body
-- Liquid templating
-- Message triggering
-- Segmentation
-- Personalization
-- Event property segmentation
+- [API request body](#api-request-body)
+- [Liquid templating](#liquid-templating)
+- [Message triggering](#message-triggering)
+- [Segmentation](#segmentation)
+- [Personalization](#personalization)
 
 ### API request body
 
@@ -125,14 +124,14 @@ Templating in Liquid in a message triggered by the "Ordered" event:
 
 ### Message triggering
 
-To use these properties to trigger a campaign, select your custom event or purchase, and add a **Nested Property** filter. Note that message triggering is not yet supported for in-app messages. However, you can also add nested objects after generating a schema.
+To use these properties to trigger a campaign, select your custom event or purchase, and add a **Nested Property** filter. Note that message triggering is not yet supported for in-app messages, but nested properties in Liquid personalization in the messages will still display.
 
 {% tabs %}
 {% tab Music Example %}
 
 Triggering a campaign with nested properties from the "Created Playlist" event:
 
-![A user choosing a nested property for property filters on a custom event]({% image_buster /assets/img/nested_object2.png %})
+![A user choosing a nested property for property filters on a custom event.]({% image_buster /assets/img/nested_object2.png %})
 
 The trigger condition `songs[].album.yearReleased` "is" "1968" will match an event where any of the songs have an album released in 1968. We use the bracket notation `[]` for traversing through arrays, and match if **any** item in the traversed array matches the event property.<br>
 {% endtab %}
@@ -140,14 +139,16 @@ The trigger condition `songs[].album.yearReleased` "is" "1968" will match an eve
 
 Triggering a campaign with nested properties from the "Ordered" event:
 
-![A user adding the property filter r_details.name is McDonalds for a custom event]({% image_buster /assets/img/nested_object1.png %})
+![A user adding the property filter r_details.name is McDonalds for a custom event.]({% image_buster /assets/img/nested_object1.png %})
 
 `r_details.name`: "Mcdonalds"<br>
 `r_details.location.city`: "Montclair"
 {% endtab %}
 {% endtabs %}
 
-{% alert note %} If your event property contains the `[]` or `.` characters, escape them by wrapping the chunk in double-quotes. For instance, `"songs[].album".yearReleased` will match an event with the literal property `"songs[].album"`.  {% endalert %}
+{% alert note %}
+If your event property contains the `[]` or `.` characters, escape them by wrapping the chunk in double-quotes. For instance, `"songs[].album".yearReleased` will match an event with the literal property `"songs[].album"`.
+{% endalert %}
 
 ### Segmentation
 

@@ -21,7 +21,7 @@ The Braze and Quikly partnership allows you to accelerate conversions on events 
 | Quikly account | A [Quikly][1] brand partner account is required to take advantage of this partnership. |
 | Braze REST API key | A Braze REST API key with `users.track` permissions. <br><br> This can be created in the Braze dashboard from **Settings** > **API Keys**. |
 | Braze REST endpoint | [Your REST endpoint URL][2]. Your endpoint will depend on the Braze URL for your instance. |
-| Quikly API key | (Optional) A Quikly API key provided by your client success manager (webhook only) |
+| Quikly API key (optional) | A Quikly API key provided by your client success manager (webhook only). |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## Use cases

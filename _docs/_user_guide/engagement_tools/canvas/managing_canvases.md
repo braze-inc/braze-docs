@@ -10,7 +10,7 @@ page_type: landing
 description: "This landing page is home to articles on managing your Canvas, including archiving, duplicating, or making changes after launch."
 tool: Canvas
 
-guide_featured_title: "Section Articles"
+guide_featured_title: "Section articles"
 guide_featured_list:
   - name: Sending Test Canvases
     link: /docs/user_guide/engagement_tools/canvas/testing_canvases/sending_test_canvases/

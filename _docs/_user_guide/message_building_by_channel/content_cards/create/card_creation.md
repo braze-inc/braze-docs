@@ -13,10 +13,6 @@ channel:
 
 > You can choose when Braze evaluates audience eligibility and personalization for new Content Card campaigns and Canvas steps by specifying when the card is created.
 
-{% alert important %}
-Control over card creation in Canvas steps is in early access. Contact your Braze account manager if you're interested in participating in the early access.
-{% endalert %}
-
 ## Prerequisites
 
 To take advantage of this feature, you must upgrade to the following minimum SDK versions:

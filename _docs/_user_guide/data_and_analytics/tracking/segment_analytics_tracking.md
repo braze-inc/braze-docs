@@ -43,8 +43,11 @@ If you are using the [older navigation]({{site.baseurl}}/navigation), this is yo
 
 ## Custom events over time
 
-Braze also provides the ability to view data on [Custom events over time for segments][20] from the **Custom Events** page, located under **Data Settings**.
+Braze also provides the ability to view data on [Custom events over time for segments][20] by navigating to **Analytics** > **Custom Events Report**.
 
+## Query Builder
+
+When analytics tracking is turned on, you can use Query Builder report templates to break down performance metrics for campaigns, Canvas, variants, and steps by segments. To learn more, check out [Segment data]({{site.baseurl}}/user_guide/data_and_analytics/reporting/viewing_and_understanding_segment_data/#performance-data-by-segment).
 
 [11]: {{site.baseurl}}/user_guide/data_and_analytics/reporting/viewing_and_understanding_segment_data/#segment-statistics
 [13]: {{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/exporting_app_usage_data/#exporting-app-usage-data
@@ -52,4 +55,4 @@ Braze also provides the ability to view data on [Custom events over time for seg
 [16]: {% image_buster /assets/img_archive/A_Tracking_2.png %}
 [17]: {% image_buster /assets/img_archive/Revenue.png %}
 [18]: {% image_buster /assets/img_archive/events_over_time2.png %}
-[20]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/
+[20]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/#analytics

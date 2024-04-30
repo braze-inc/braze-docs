@@ -4,7 +4,7 @@ article_title: Building Canvases
 page_order: 1
 layout: dev_guide
 guide_top_header: "Building Canvases"
-guide_top_text: "The following articles will help you create and launch a multi-dimensional Canvas."
+guide_top_text: "The articles in this section will guide you in creating and launching a multi-dimensional Canvas quickly from ideation to execution to your users. With its intuitive drag-and-drop interface and space for collaboration, you can leverage this visual programming environment to help drive the best results for your customer engagement goals."
 
 page_type: landing
 description: "This landing page is home to resources that will help you create and launch a multi-dimensional Canvas such as how to create a Canvas, exception events, exit criteria, Canvas entry properties, and more."
@@ -27,6 +27,9 @@ guide_featured_list:
   - name: Exit Criteria
     link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/exit_criteria/
     fa_icon: fas fa-user-slash
+  - name: Preview User Paths
+    link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/preview_user_paths/
+    fa_icon: fas fa-users-viewfinder
   - name: Canvas Entry Properties and Event Properties
     link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties/
     fa_icon: fas fa-user-check

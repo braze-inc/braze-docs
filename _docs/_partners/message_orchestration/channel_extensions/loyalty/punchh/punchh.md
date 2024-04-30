@@ -227,7 +227,7 @@ For example, a $2 off reward is sent to a segment configurable within Punchh wit
 
 **Using Braze segmentation and messaging, and Punchh for gifting:**<br>
 For example, a $2 off reward and messaging sent to a segment with attributes not available in Punchh.<br>
-![A user segment can be configured in Braze, and then a message can be sent from Braze to Braze segment. Next, the users are sent to the Punchh custom segment through a Braze webhook with segment and user ID. After this, the user receives a gift through Punchh mass offer campaign with a custom segment. After this the reward event is triggered.]({% image_buster /assets/img/punchh/usecase5.png %}){: style="max-width:80%;"}
+![A user segment can be configured in Braze, and then a message can be sent from a Braze-to-Braze segment. Next, the users are sent to the Punchh custom segment through a Braze webhook with segment and user ID. After this, the user receives a gift through Punchh mass offer campaign with a custom segment. After this the reward event is triggered.]({% image_buster /assets/img/punchh/usecase5.png %}){: style="max-width:80%;"}
 
 **Using Braze segmentation and Punchh for gifting or messaging, or both:**<br>
 For example, a $2 off reward is sent to a segment with attributes not available in Punchh, but no messaging is required, or the messaging can be sent through Punchh (note that all guests must be present in Punchh).<br>

@@ -40,6 +40,11 @@ doc_menu_list:
     image: /assets/img/new-icons/circle-info-solid.svg
     link: /docs/help/home
     description: "Find articles to help troubleshoot issues you may encounter and learn more about best practices to communicate with your users."
+  - name: Compliance Documentation
+    bg_color: '#ff9349'
+    image: /assets/img/new-icons/file-contract-solid.svg
+    link: /docs/compliance_documentation/
+    description: "Compliance documentation outlines specific terms applicable to your purchased product or service."
 
 popular_topic_list:
   - name: Braze API Dictionary
@@ -62,7 +67,7 @@ popular_topic_list:
 helpful_resources_list:
   - name: Innovation Statement
     link: /docs/innovation_statement/
-  - name: Support & Success Services Handbook
+  - name: Entitlements, Support & Success Services Handbooks
     link: /docs/handbooks/
   - name: Data Retention
     link: /docs/api/data_retention/

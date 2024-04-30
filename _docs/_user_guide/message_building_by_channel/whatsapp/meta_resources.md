@@ -21,7 +21,19 @@ Review the following Meta documentation for guidance with display names, phone n
 - [Messaging Limits](https://developers.facebook.com/docs/whatsapp/messaging-limits)
 - [Quality Rating](https://www.facebook.com/business/help/896873687365001)
 
-## WhatsApp Product Updates 
+## WhatsApp Product Updates
+
+### April 2024: Template pacing for utility templates
+*Last Updated April 2024*
+
+Last year, WhatsApp introduced template pacing for marketing messages as a new way to help businesses improve the engagement of their templates and create valuable user experiences. Beginning April 30, they're expanding template pacing to utility messages. If a utility template for an account gets paused due to user feedback, they will pace the new utility templates that are created for the next seven days.
+
+### April 2024: Read rates will affect quality rating for marketing templates 
+*Last Updated March 2024*
+
+WhatsApp is testing new approaches, starting with consumers in India, to create more valuable experiences and maximize engagement with businesses’ marketing conversations. This may include limiting the number of marketing conversations a person receives from any business in a given period, starting with a small number of conversations that are less likely to be read. Braze will get an error code if a message is not delivered.
+
+WhatsApp will start considering read rates as part of our quality rating for marketing templates, alongside traditional metrics like blocks and reports. WhatsApp may temporarily pause marketing message campaigns with low read rates, giving businesses time to iterate on the templates with the lowest engagement before scaling volume beginning on April 1, 2024. 
 
 ### February 2024: Marketing Conversations Experimentation
 *Last Updated February 2024*

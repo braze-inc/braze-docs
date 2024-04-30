@@ -10,8 +10,6 @@ channel:
 
 ---
 
-# [![Braze Learning course]({% image_buster /assets/img/bl_icon2.png %})](https://learning.braze.com/creating-link-templates){: style="float:right;width:120px;border:0;" class="noimgborder"}Link templates
-
 > Link templates allow you to append parameters or prepend URLs to all links in an email message.
 
 Link templates are most often used in these following use cases:
@@ -53,7 +51,7 @@ A preview section is provided to give you an example of the insertion process.
 
 ### Append: Create a link template that inserts after a URL {#append-link-template}
 
-If you want to add query parameters after a URL in your email message, create a new link template and set the **Template Position** to **After URL**. Next, enter query parameters (`value=something`) to the end of each URL.  
+If you want to add query parameters after a URL in your email message, create a new link template and set the **Template Position** to **After URL**. Next, enter query parameters (`value=something`) to the end of each URL.
 
 You can have multiple parameters appended to the end of a URL.
 
@@ -64,6 +62,11 @@ You can have multiple parameters appended to the end of a URL.
 After your link templates are set up, you can select the template to use in your email.
 
 - **HTML editor:** Go to the **Link Management** tab under the **Content** section. Click **Add a Link Template**, select your link template, and click **Add**.
+
+{% alert important %}
+To access the **Link Management** tab in the updated HTML email editor, you must have link aliasing turned on. To turn on link aliasing, contact your account manager.
+{% endalert %}
+
 - **Drag-and-drop editor:** Select **Content** > **Link Management** tab. Click **Add a Link Template**. To access link templates in the drag-and-drop editor, you must have [link aliasing]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates/link_aliasing/) turned on.
 
 ![Link Management tab in the drag-and-drop editor with an example list of link templates.][1]
