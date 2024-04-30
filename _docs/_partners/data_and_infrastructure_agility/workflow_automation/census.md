@@ -1,7 +1,6 @@
 ---
 nav_title: Census
 article_title: Census
-page_order: 9
 description: "This reference article outlines the partnership between Braze and Census, a data integration platform that allows you to dynamically create targeted user segments with data from your cloud warehouse."
 alias: /partners/census/
 page_type: partner
