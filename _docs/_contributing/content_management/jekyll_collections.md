@@ -10,7 +10,7 @@ page_order: 6
 > Learn how to create a Jekyll collection, so you can add a new primary section on Braze Docs. For more information, see [Jekyll Collections](https://jekyllrb.com/docs/collections/).
 
 {% alert important %}
-It's unlikely you'll need to create a new Jekyll collection for your content. If you're unsure where to store your content, instead, [create a GitHub issue](https://github.com/braze-inc/braze-docs/issues/new?assignees=&labels=issue&projects=&template=report_an_issue.md&title=).
+It's unlikely you'll need to create a new Jekyll collection for your content. If you're unsure where to store your content, [create a GitHub issue](https://github.com/braze-inc/braze-docs/issues/new?assignees=&labels=issue&projects=&template=report_an_issue.md&title=) instead.
 {% endalert %}
 
 {% multi_lang_include contributing/prerequisites.md %}
@@ -19,7 +19,7 @@ It's unlikely you'll need to create a new Jekyll collection for your content. If
 
 ### Step 1: Add a new collection
 
-In `config.yml`, add a new Jekyll collection under the `collections` key:
+In `config.yml`, add a new Jekyll collection under the `collections` key.
 
 ```yaml
 collections:
@@ -50,14 +50,15 @@ collections:
 
 ### Step 2: Set a default layout
 
-In `config.yml`, set the default layout for your collection under the `defaults` key:
+In `config.yml`, set the default layout for your collection under the `defaults` key.
 
 ```yaml
-scope:
-  path: ""
-  type: "COLLECTION_KEY"
-values:
-  nav_level: 1
+-  
+  scope:
+    path: ""
+    type: "COLLECTION_KEY"
+  values:
+    nav_level: 1
 ```
 
 Replace `COLLECTION_KEY` with the key you [set up previously](#step-1-add-a-new-collection). For example:
@@ -80,7 +81,7 @@ In the `_docs` directory, create a new directory and add a new Markdown file nam
 braze-docs
 └── _docs
     └── _COLLECTION_NAME
-        └── home.md 
+        └── home.md
 ```
 
 Replace `_COLLECTION_NAME` with the name of your collection using lowercase letters and replacing spaces with underscores. For example:
@@ -88,7 +89,7 @@ Replace `_COLLECTION_NAME` with the name of your collection using lowercase lett
 ```plaintext
 braze-docs
 └── _docs
-    └── _technology_partners 
+    └── _technology_partners
         └── home.md
 ```
 
@@ -103,9 +104,9 @@ Add additional sections and subsections for your new collection. For a full walk
 ```plaintext
 braze-docs
 └── _docs
-    └── PRIMARY_SECTION 
-        └── SUBSECTION 
-            ├── NEW_DIRECTORY 
+    └── PRIMARY_SECTION
+        └── SUBSECTION
+            ├── NEW_DIRECTORY
             └── NEW_FILE.md
 ```
 
