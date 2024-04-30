@@ -9,7 +9,24 @@ alias: /api/api_key/
 
 # API overview
 
-> This reference article covers the API basics including common terminology and an overview of REST API keys, permissions, and how to keep them secure. 
+> This reference article covers the API basics, including common terminology and an overview of REST API keys, permissions, and how to keep them secure.
+
+## Braze REST API collection
+
+| Collection                                                                 | Purpose                                                                               |
+|----------------------------------------------------------------------------|---------------------------------------------------------------------------------------|
+| [Catalogs]({{site.baseurl}}/api/endpoints/catalogs/)                       | Create and manage catalogs and catalog items to reference in your Braze campaigns.    |
+| [Cloud Data Ingestion]({{site.baseurl}}/api/endpoints/cdi/)                | Manage your data warehouse integrations and syncs.                                    |
+| [Email lists and addresses]({{site.baseurl}}/api/endpoints/email/)         | Set up and manage bi-directional sync between Braze and your email systems.           |
+| [Export]({{site.baseurl}}/api/endpoints/export/)                           | Access and export various details of your campaigns, Canvases, KPIs, and more.        |
+| [Messages]({{site.baseurl}}/api/endpoints/messaging/)                      | Schedule, send, and manage your campaigns and Canvases.                               |
+| [Preference center]({{site.baseurl}}/api/endpoints/preference_center/)     | Build your preference center and update the styling of it.                            |
+| [SCIM]({{site.baseurl}}/api/endpoints/scim/)                               | Manage user identities in cloud-based applications and services.                      |
+| [SMS]({{site.baseurl}}/api/endpoints/sms/)                                 | Manage your users' phone numbers in your subscription groups.                         |
+| [Subscription groups]({{site.baseurl}}/api/endpoints/subscription_groups/) | List and update both SMS and email subscription groups stored in the Braze dashboard. |
+| [Templates]({{site.baseurl}}/api/endpoints/templates/)                     | Create and update templates for email messaging and Content Blocks.                   |
+| [User data]({{site.baseurl}}/api/endpoints/user_data/)                     | Identify, track, and manage your users.                                               |
+{: .reset-td-br-1 .reset-td-br-2}
 
 ## API definitions
 
