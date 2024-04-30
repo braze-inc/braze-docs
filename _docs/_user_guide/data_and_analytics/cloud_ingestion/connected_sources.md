@@ -30,10 +30,11 @@ A connected source may reference one or more tables, so the user created for Bra
 
 {% tabs %}
 {% tab Snowflake %}
-1. Create a new connected source in the Braze dashboard.
-2. Retrieve the public key provided in the Braze dashboard and [append it to the Snowflake user for authentication](https://docs.snowflake.com/en/user-guide/key-pair-auth.html).
-3. Test the integration
-4. Use the connected source to create one or more CDI Segments
+1. Set up the source data and required resources in your Snowflake environment 
+2. Create a new connected source in the Braze dashboard
+3. Retrieve the public key provided in the Braze dashboard and [append it to the Snowflake user for authentication](https://docs.snowflake.com/en/user-guide/key-pair-auth.html)
+4. Test the integration
+5. Use the connected source to create one or more CDI Segments
 {% endtab %}
 {% endtabs %}
 
