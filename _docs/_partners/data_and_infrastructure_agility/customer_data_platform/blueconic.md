@@ -5,7 +5,6 @@ description: "This reference article outlines the partnership between Braze and 
 alias: /partners/blueconic/
 page_type: partner
 search_tag: Partner
-page_order: 3
 
 ---
 

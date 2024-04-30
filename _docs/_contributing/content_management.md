@@ -128,8 +128,9 @@ The primary sections on Braze Docs are:
 - [Braze API Guide]({{site.baseurl}}/api/home)
 - [Technology Partners]({{site.baseurl}}/partners/home)
 - [Braze Help]({{site.baseurl}}/help/home)
+- [Contributing to Braze Docs]({{site.baseurl}}/contributing/home/)
 
-These primary sections can be accessed on the site header from any page on Braze Docs.
+Other than **Contributing to Braze Docs**, these primary sections can be accessed on the site header from any page on Braze Docs.
 
 ![The primary sections as shown on the site header on Braze Docs.]({% image_buster /assets/img/contributing/styling_examples/header.png %})
 
@@ -167,6 +168,9 @@ collections:
     output: true
     default_nav_url: home/
     page_order: 6
+  contributing:
+    output: true
+    default_nav_url: contributing/
   hidden: # Hidden pages not directly linked via navigation
     title: Braze
     output: true
@@ -183,6 +187,7 @@ Each collection listed represents a directory within the `_docs` directory.
 braze-docs
 └── _docs
     ├── _api
+    ├── _contributing
     ├── _developer_guide
     ├── _docs_pages
     ├── _help
