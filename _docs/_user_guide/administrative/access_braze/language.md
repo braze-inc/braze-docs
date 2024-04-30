@@ -30,6 +30,8 @@ You can select from the following supported languages:
 - Japanese (日本語)
 - French (Français)
 - Korean (한국어)
+- Spanish (Espa&ntilde;ol)
+- Portuguese (Brasil)
 
 <!--
 Note: This content is pending development
