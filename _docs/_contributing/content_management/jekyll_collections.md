@@ -10,7 +10,7 @@ page_order: 6
 > Learn how to create a Jekyll collection, so you can add a new primary section on Braze Docs. For more information, see [Jekyll Collections](https://jekyllrb.com/docs/collections/).
 
 {% alert important %}
-It's unlikely you'll need to create a new Jekyll collection for your content. If you're unsure where your content should go instead, [create a GitHub issue](https://github.com/braze-inc/braze-docs/issues/new?assignees=&labels=issue&projects=&template=report_an_issue.md&title=).
+It's unlikely you'll need to create a new Jekyll collection for your content. If you're unsure where to store your content, instead, [create a GitHub issue](https://github.com/braze-inc/braze-docs/issues/new?assignees=&labels=issue&projects=&template=report_an_issue.md&title=).
 {% endalert %}
 
 {% multi_lang_include contributing/prerequisites.md %}
@@ -31,9 +31,11 @@ collections:
 
 Replace the following:
 
-- `COLLECTION_KEY:` A single, unique word that represents your collection's name. Use lowercase letters only.
-- `COLLECTION_TITLE:` The name of your collection in title case.
-- `COLLECTION_URL:` The default URL for your collections landing page.
+| Placeholder              | Description                                       |
+|-------------------|---------------------------------------------------|
+| `COLLECTION_KEY`  | A single, unique word that represents your collection's name. Use lowercase letters only. |
+| `COLLECTION_TITLE`| The name of your collection in title case.        |
+| `COLLECTION_URL`  | The default URL for your collections landing page.|
 
 Your new collection should be similar to the following:
 
@@ -57,7 +59,7 @@ values:
   nav_level: 1
 ```
 
-Replace `COLLECTION_KEY` with the key you [set up previously](#step-1-add-a-new-collection). Your entry should be similar to the following:
+Replace `COLLECTION_KEY` with the key you [set up previously](#step-1-add-a-new-collection). For example:
 
 ```yaml
 defaults:
@@ -80,7 +82,7 @@ braze-docs
         └── home.md 
 ```
 
-Replace `_COLLECTION_NAME` with the name of your collection using lowercase letters and replacing spaces with underscores. Your directory structure should be similar to the following:
+Replace `_COLLECTION_NAME` with the name of your collection using lowercase letters and replacing spaces with underscores. For example:
 
 ```plaintext
 braze-docs
@@ -97,6 +99,15 @@ The directory name for a collection must start with an underscore.
 
 Add additional sections and subsections for your new collection. For a full walkthrough, see [Creating a section]({{site.baseurl}}/contributing/content_management/sections/#creating-a-section).
 
+```plaintext
+braze-docs
+└── _docs
+    └── PRIMARY_SECTION 
+        └── SUBSECTION 
+            ├── NEW_DIRECTORY 
+            └── NEW_FILE.md
+```
+
 ### Step 5: Set up a redirect file
 
 In `braze-docs/_docs/_docs_pages`, create a new Markdown file for your collection.
@@ -105,7 +116,7 @@ In `braze-docs/_docs/_docs_pages`, create a new Markdown file for your collectio
 COLLECTION_KEY.md
 ```
 
-Replace `COLLECTION_KEY` with the key you [set up previously](#step-1-add-a-new-collection). Your directory structure should be similar to the following:
+Replace `COLLECTION_KEY` with the key you [set up previously](#step-1-add-a-new-collection). For example:
 
 ```plaintext
 braze-docs
@@ -126,7 +137,7 @@ permalink: COLLECTION_KEY/
 ---
 ```
 
-Replace `COLLECTION_KEY` with the key you [set up previously](#step-1-add-a-new-collection). Your Markdown file should be similar to the following:
+Replace `COLLECTION_KEY` with the key you [set up previously](#step-1-add-a-new-collection). For example:
 
 ```markdown
 ---
