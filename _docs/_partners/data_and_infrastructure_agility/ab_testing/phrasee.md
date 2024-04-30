@@ -1,7 +1,6 @@
 ---
 nav_title: Phrasee
 noindex: true
-page_order: 2
 layout: dev_guide
 guide_top_header: "Phrasee"
 guide_top_text: "Phrasee is an AI-powered SaaS platform that revolutionizes customer experiences through Brand Language Optimization. Phrasee is rewriting the digital marketing playbook one optimized word at a time, empowering brands all over the world to say it better."

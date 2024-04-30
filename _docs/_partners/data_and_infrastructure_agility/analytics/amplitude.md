@@ -2,7 +2,6 @@
 nav_title: Amplitude
 noindex: true
 alias: /partners/data_and_infrastructure_agility/analytics/amplitude_for_currents/
-page_order: 0
 layout: dev_guide
 guide_top_header: "Amplitude"
 guide_top_text: "Amplitude enables you to drive growth through robust product and behavioral analytics. Gain a thorough understanding of exactly what behaviors and traits are common among user segments to inform powerful targeting."

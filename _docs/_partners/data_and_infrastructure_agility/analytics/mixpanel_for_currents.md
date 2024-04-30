@@ -1,7 +1,6 @@
 ---
 nav_title: Mixpanel
 article_title: Mixpanel
-page_order: 0
 alias: /partners/mixpanel_for_currents/
 description: "This reference article outlines the partnership between Braze and Mixpanel, a business analytics platform, allowing you to import Mixpanel Cohorts into Braze to create Braze segments that can be used to target users in future Braze campaigns or Canvases."
 page_type: partner

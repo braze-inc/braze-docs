@@ -1,7 +1,6 @@
 ---
 nav_title: Antavo
 article_title: Antavo Loyalty Cloud
-page_order: 1
 description: "This reference article outlines the partnership between Braze and Antavo, a next-gen loyalty programs that goes beyond rewarding purchases."
 alias: /partners/antavo/
 page_type: partner
