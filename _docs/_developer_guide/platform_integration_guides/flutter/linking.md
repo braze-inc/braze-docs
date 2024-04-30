@@ -11,7 +11,7 @@ description: "This article covers how to implement deep linking for your Flutter
 
 > Deep linking is a way of providing a link that launches an app, shows specific content, or takes some specific action. Native code can forward deep links to your app's Flutter layer for handling. If you're looking to implement deep links in your iOS and/or Android Flutter app for the first time, follow these steps.
 
-For general information on what deep links are, refer to our [FAQ article][1]. 
+You can see [an example app][5] with all of these steps implemented in our public repository. For general information on what deep links are, refer to our [FAQ article][1].
 
 ## Step 1: Native deep link handling
 
@@ -52,7 +52,7 @@ Add the following `meta-data` and `intent-filter` tags to your `.MainActivity` `
 
 ## Step 3: Dart layer deep link handling and native layer deep link forwarding
 
-The preceding step is sufficient for enabling your Flutter app to open when a user clicks a deep link. For handling deep links in more intricate ways, such as navigating to a particular part of the app or calling a function, additional Dart code as well as additional native code may be necessary. This is where first-party packages such as `go_router` as well as third-party plugins can be helpful.
+The preceding step is sufficient for enabling your Flutter app to open when a user clicks a deep link. For handling deep links in more intricate ways, such as navigating to a particular part of the app or calling a function, additional Dart code as well as additional native code may be necessary. This is where first-party packages such as [`go_router`][6] as well as third-party plugins can be helpful.
 
 To keep this guide dependency-agnostic, we'll show an example that does not use additional dependencies. In this example, we'll handle deep links by presenting an alert modal after the app launches.
 
@@ -151,3 +151,5 @@ void deepLinkAlert(String link, BuildContext context) {
 [2]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/deep_linking/
 [3]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/advanced_use_cases/linking/
 [4]: {% image_buster /assets/img/flutter/flutter-ios-deep-link-info-plist.png %} "Xcode Project Info.plist File"
+[5]: https://github.com/braze-inc/braze-flutter-sdk/tree/master/example
+[6]: https://pub.dev/packages/go_router
