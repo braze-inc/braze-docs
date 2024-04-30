@@ -35,13 +35,15 @@ Cloud Data Ingestion connected sources require some setup on the Braze side and 
 4. Depending on your configuration, you may need to allow Braze IPs in your Snowflake network policy 
 
 **In the Braze dashboard**
-{:start="5"}
+
+{: start="5"} 
 5. Create a new connected source in the Braze dashboard
 6. Configure the sync details for the connected source
 7. Retrieve the public key provided in the Braze dashboard 
 
 **In your data warehouse**
-{:start="8"}
+
+{: start="8"} 
 8. Append the public key from the Braze dashboard to the [Snowflake user for authentication](https://docs.snowflake.com/en/user-guide/key-pair-auth.html)
 
 When complete, you can use the connected source to create one or more CDI Segments. 
