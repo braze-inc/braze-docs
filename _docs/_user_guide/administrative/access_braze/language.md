@@ -18,7 +18,7 @@ The Braze dashboard is available in [multiple languages](#supported-languages). 
 1. In the global header, click <i class="fa-solid fa-globe" aria-label="Select your language"></i>.
 2. Choose your language from the list.
 
-![][1]{: style="max-width:70%"}
+![][1]{: style="max-width:60%"}
 
 It may take a few moments for the dashboard to reload.
 
