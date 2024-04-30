@@ -72,9 +72,9 @@ On the confirmation page, review the details of your multivariate campaign and l
 ## Things to know
 
 {% alert important %}
-Making edits to messages after your experiment begins will result in invalidated test results.<br><br>
+Making edits to messages after your experiment begins will result in invalidated test results.
 
-- If your experiment is in mid-send and you edit the message, all future messages will be cancelled and no test results will be available.<br><br>
+- If your experiment is in mid-send and you edit the message, all future messages will be cancelled and no test results will be available.
 - If your experiment is completed and you edit the message post-send, the test will be considered invalid and the experiment results analytics page on the dashboard will be lost or removed.
 {% endalert %}
 
