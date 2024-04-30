@@ -1,6 +1,5 @@
 ---
 nav_title: Segment
-page_order: 9
 layout: dev_guide
 search_rank: 9
 guide_top_header: "Segment"

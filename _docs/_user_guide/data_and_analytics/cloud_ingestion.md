@@ -15,6 +15,9 @@ guide_featured_list:
   - name: Overview and Best Practices
     link: /docs/user_guide/data_and_analytics/cloud_ingestion/overview/
     image: /assets/img/braze_icons/users-01.svg
+  - name: Connected Sources
+    link: /docs/user_guide/data_and_analytics/cloud_ingestion/connected_sources/
+    fa_icon: fa-solid fa-server
   - name: Data Warehouse Integrations
     link: /docs/user_guide/data_and_analytics/cloud_ingestion/integrations/
     image: /assets/img/braze_icons/cloud-blank-01.svg

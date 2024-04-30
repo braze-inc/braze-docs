@@ -5,13 +5,15 @@ page_order: 8
 page_type: reference
 description: "This reference article covers how feature flags can be used in Canvas."
 tool: Canvas
+local_redirect:
+  create-a-feature-flag: '/docs/user_guide/engagement_tools/canvas/canvas_components/feature_flags/#creating-a-feature-flag'
 ---
 
 # Feature flags
 
 > Feature flags allow you to experiment and confirm your hypotheses around new features. Marketers can use feature flags to segment your audience in [Canvas][1] and track the impact of feature rollout on conversions. Moreover, [Experiment Paths][2] allow you optimize these conversions by testing different messages or paths against each other and determining which is most effective. Use the Winning Path as you progressively rollout your feature to a wider audience.
 
-## Create a feature flag
+## Creating a feature flag
 
 ![][3]{: style="float:right;max-width:40%;margin-left:15px;"}
 
@@ -25,9 +27,9 @@ Properties in a Canvas step can be changed after launch, and even after a user g
 
 When creating a feature flag you specify default properties. When setting up a feature flag Canvas step, you can either keep the default values, or overwrite the values for users who enter this step.
 
-![][4]{: style="max-width:80%"}
+![][4]{: style="max-width:85%"}
 
-Go to the **Messaging** > **Feature Flags** to edit, add, or remove additional properties.
+Go to **Messaging** > **Feature Flags** to edit, add, or remove additional properties.
 
 ## Canvas and rollout differences
 
