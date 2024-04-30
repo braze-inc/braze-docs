@@ -19,129 +19,121 @@ It's unlikely you'll need to create a new Jekyll collection for your content. If
 
 ### Step 1: Add a new collection
 
-In `config.yml`, under `collections`:
-
-```yaml
-contributing:
-    output: true
-    default_nav_url: COLLECTION_NAME/
-```
-
-Replace... Example:
+In `config.yml`, add a new Jekyll collection under the `collections` key:
 
 ```yaml
 collections:
-  home:
-    title: Documentation
+  COLLECTION_KEY:
+    title: COLLECTION_TITLE
     output: true
-    default_nav_url: ''
-    page_order: 1
-  contributing:
+    default_nav_url: COLLECTION_URL/
+```
+
+Replace the following:
+
+- `COLLECTION_KEY:` A single, unique word that represents your collection's name. Use lowercase letters only.
+- `COLLECTION_TITLE:` The name of your collection in title case.
+- `COLLECTION_URL:` The default URL for your collections landing page.
+
+Your new collection should be similar to the following:
+
+```yaml
+collections:
+  partners:
+    title: Technology Partners
     output: true
-    default_nav_url: contributing/
+    default_nav_url: home/
 ```
 
 ### Step 2: Set a default layout
 
-In `config.yml`, under `defaults`:
+In `config.yml`, set the default layout for your collection under the `defaults` key:
 
 ```yaml
 scope:
   path: ""
-  type: "COLLECTION_NAME"
+  type: "COLLECTION_KEY"
 values:
   nav_level: 1
 ```
 
-<!-- Add alert for a link to additional supported values -->
-
-Replace... Example:
+Replace `COLLECTION_KEY` with the key you [set up previously](#step-1-add-a-new-collection). Your entry should be similar to the following:
 
 ```yaml
 defaults:
   -
     scope:
       path: ""
-    values:
-      layout: "documents"
-      default_nav_url: home/
-      search_rank: 0
-      toc_minheaders: 2
-      toc_headers: "h2, h3"
-  -
-    scope:
-      path: ""
-      type: "home"
-    values:
-      nav_level: 1
-  -
-    scope:
-      path: ""
-      type: "contributing"
+      type: "partners"
     values:
       nav_level: 1
 ```
 
 ### Step 3: Create a landing page
 
-In the `_docs` directory, create a new directory.
+In the `_docs` directory, create a new directory and add a new Markdown file named `home.md`.
 
-```bash
-_COLLECTION_NAME
+```plaintext
+braze-docs
+└── _docs
+    └── _COLLECTION_NAME
+        └── home.md 
 ```
 
-Replace... Example:
+Replace `_COLLECTION_NAME` with the name of your collection using lowercase letters and replacing spaces with underscores. Your directory structure should be similar to the following:
 
-```bash
-TREE
+```plaintext
+braze-docs
+└── _docs
+    └── _technology_partners 
+        └── home.md
 ```
 
-Create a new Markdown file for your landing page named `home.md`. Example:
+{% alert important %}
+The directory name for a collection must start with an underscore.
+{% endalert %}
 
-```bash
-TREE
-```
+### Step 4: Add additional content (optional)
 
-### Step 4: Add additional content
-
-Add additional subsections and subsections for your new collection.
-
-<!-- Link / include content from pages / sections -->
+Add additional sections and subsections for your new collection. For a full walkthrough, see [Creating a section]({{site.baseurl}}/contributing/content_management/sections/#creating-a-section).
 
 ### Step 5: Set up a redirect file
 
-Go to `_docs` > `_docs_pages` and create a new Markdown file.
+In `braze-docs/_docs/_docs_pages`, create a new Markdown file for your collection.
 
 ```bash
-COLLECTION_NAME.md
+COLLECTION_KEY.md
 ```
 
-Replace... Example:
+Replace `COLLECTION_KEY` with the key you [set up previously](#step-1-add-a-new-collection). Your directory structure should be similar to the following:
 
-```bash
-contributing.md
+```plaintext
+braze-docs
+└── _docs
+    └── _docs_pages
+        └── partners.md
 ```
 
-In your Markdown file...
+In your Markdown file, add the following YAML front matter:
 
 ```markdown
 ---
 config_only: true
 noindex: true
 layout: redirect
-redirect_to: /docs/COLLECTION_NAME/home
-permalink: COLLECTION_NAME/
+redirect_to: /docs/COLLECTION_KEY/home
+permalink: COLLECTION_KEY/
 ---
 ```
 
-Replace... Example:
+Replace `COLLECTION_KEY` with the key you [set up previously](#step-1-add-a-new-collection). Your Markdown file should be similar to the following:
 
 ```markdown
 ---
 config_only: true
 noindex: true
 layout: redirect
-redirect_to: /docs/contributing/home
-permalink: contributing/
+redirect_to: /docs/partners/home
+permalink: partners/
 ---
 ```
