@@ -23,7 +23,11 @@ If you intend to use Flutter's default deep link handling, you will need to modi
 
 {% tabs %}
 {% tab iOS %}
-Using Xcode to edit your `Info.plist` file, add a new key-value pair. Set the key to `FlutterDeepLinkingEnabled`, the type to `Boolean`, and the value to `YES`.
+Using Xcode to edit your `Info.plist` file:
+1. Add a new key-value pair.
+2. Set the key to `FlutterDeepLinkingEnabled`.
+3. Set the type to `Boolean`.
+4. Set the value to `YES`.
 
 ![An example project's `Info.plist` file with the added key-value pair.]({% image_buster /assets/img/flutter/flutter-ios-deep-link-info-plist.png %} "Xcode Project Info.plist File")
 {% endtab %}
@@ -46,9 +50,9 @@ Add the following `meta-data` and `intent-filter` tags to your `.MainActivity` `
 {% endtab %}
 {% endtabs %}
 
-## Step 3: Flutter layer deep link handling and native layer deep link forwarding
+## Step 3: Dart layer deep link handling and native layer deep link forwarding
 
-The preceeding step is sufficient for enabling your Flutter app to open when a user clicks a deep link. For handling deep links in more intricate ways, such as navigating to a particular part of the app or calling a function, additional Dart code as well as additional native code may be necessary. This is where first-party packages such as `go_router` as well as third-party plugins can be helpful.
+The preceding step is sufficient for enabling your Flutter app to open when a user clicks a deep link. For handling deep links in more intricate ways, such as navigating to a particular part of the app or calling a function, additional Dart code as well as additional native code may be necessary. This is where first-party packages such as `go_router` as well as third-party plugins can be helpful.
 
 To keep this guide dependency-agnostic, we'll show an example that does not use additional dependencies. In this example, we'll handle deep links by presenting an alert modal after the app launches.
 
