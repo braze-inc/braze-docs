@@ -24,21 +24,33 @@ Because connected sources run on your data warehouse directly, you will incur al
 
 ## Integration
 
-Cloud Data Ingestion connected sources require some setup on the Braze side and in your instance. 
-
-A connected source may reference one or more tables, so the user created for Braze to use should have permissions for all tables you want to be available in the connected source. Follow these steps to set up the integration:
+Cloud Data Ingestion connected sources require some setup on the Braze side and in your instance. Follow these steps to set up the integration&#8722;some steps will be done in your data warehouse and some steps will be done in your Braze dashboard.
 
 {% tabs %}
 {% tab Snowflake %}
-1. Set up the source data and required resources in your Snowflake environment 
-2. Create a new connected source in the Braze dashboard
-3. Retrieve the public key provided in the Braze dashboard and [append it to the Snowflake user for authentication](https://docs.snowflake.com/en/user-guide/key-pair-auth.html)
-4. Test the integration
-5. Use the connected source to create one or more CDI Segments
+**In your data warehouse**
+1. Create a role and grant permissions to query and create tables in a schema
+2. Set up your warehouse and give access to that role
+3. Create a user for that role
+4. Depending on your configuration, you may need to allow Braze IPs in your Snowflake network policy 
+
+**In the Braze dashboard**
+{:start="5"}
+5. Create a new connected source in the Braze dashboard
+6. Configure the sync details for the connected source
+7. Retrieve the public key provided in the Braze dashboard 
+
+**In your data warehouse**
+{:start="8"}
+8. Append the public key from the Braze dashboard to the [Snowflake user for authentication](https://docs.snowflake.com/en/user-guide/key-pair-auth.html)
+
+When complete, you can use the connected source to create one or more CDI Segments. 
 {% endtab %}
 {% endtabs %}
 
-### Create a role and grant permissions
+### Setting up your data warehouse
+
+First, set up the source data and required resources in your data warehouse environment.  A connected source may reference one or more tables, so the user created for Braze to use should have permissions for all tables you want to be available in the connected source. 
 
 {% tabs %}
 {% tab Snowflake %}
@@ -48,7 +60,7 @@ Create a role for your connected source to use. This role will be used to genera
 
 You may choose to grant access to all tables in a schema, or grant privileges only to specific tables. Whichever tables the Braze role has access to will be available to query in the CDI segment.
 
-Create table permisison is required because Braze will create a table with your CDI Segment query results before updating the segment in Braze. We will create one table per segment, and the same table will be recreated each time the segment is refreshed. 
+The role must have the permission to create tables. This is because Braze will create a table with your CDI Segment query results before updating the segment in Braze. We will create one table per segment, and the same table will be recreated each time the segment is refreshed. 
 
 ```json
 CREATE ROLE BRAZE_INGESTION_ROLE;
@@ -76,7 +88,7 @@ GRANT USAGE ON WAREHOUSE BRAZE_INGESTION_WAREHOUSE TO ROLE BRAZE_INGESTION_ROLE;
 ```
 
 {% alert note %}
-The warehouse will need to have the **auto-resume** flag on. If not, you will need to grant Braze additional `OPERATE` privileges on the warehouse for us to turn it on when it's time to run the query.
+The warehouse will need to have the **auto-resume** flag on. If not, you will need to grant Braze additional `OPERATE` privileges on the warehouse for Braze to turn it on when it's time to run the query.
 {% endalert %}
 
 #### Step 3: Set up the user
@@ -86,7 +98,7 @@ CREATE USER BRAZE_INGESTION_USER;
 GRANT ROLE BRAZE_INGESTION_ROLE TO USER BRAZE_INGESTION_USER;
 ```
 
-After this step, you will share connection information with Braze and receive a public key to append to the user.
+You will share connection information with Braze and receive a public key to append to the user in a later step.
 
 {% alert note %}
 When connecting different workspaces to the same Snowflake account, you must create a unique user for each Braze workspace where you are creating an integration. Within a workspace, you can reuse the same user across integrations, but integration creation will fail if a user on the same Snowflake account is duplicated across workspaces.
@@ -109,22 +121,24 @@ Depending on the configuration of your Snowflake account, you may need to allow 
 {% endtab %}
 {% endtabs %}
 
-### Create a new connected source in the Braze dashboard
-{% tabs %}
-{% tab Snowflake %}
+### Creating a connected source in the Braze dashboard
 
-Go to **Data Settings** > **Cloud Data Ingestion**. Navigate to the **Connected Sources** tab and click **Create data connection**.
+Next, create a connected source in the Braze dashboard. Go to **Data Settings** > **Cloud Data Ingestion**. Navigate to the **Connected Sources** tab and click **Create data connection**.
 
 {% alert note %}
 If you are using the [older navigation]({{site.baseurl}}/navigation), go to **Cloud Data Ingestion** under **Data**.
 {% endalert %}
 
-#### Step 1: Add Snowflake connection information and source table
+
+{% tabs %}
+{% tab Snowflake %}
+
+#### Step 5: Add Snowflake connection information and source table
 Input the information for your Snowflake data warehouse and source schema, then proceed to the next step.
 
 ![]({% image_buster /assets/img/cloud_ingestion/connected_source_sf_1.png %})
 
-#### Step 2: Configure sync details
+#### Step 6: Configure sync details
 Next, choose a name for connected source. This name will be used in the list of available sources when you create a new CDI Segment. 
 
 Configure a max runtime for this source. Braze will automatically abort any queries that exceed the max runtime when we are creating or refreshing a segment. The maximum runtime allowed is 60 minutes; a lower runtime will reduce costs incurred on your Snowflake account. 
@@ -136,12 +150,25 @@ If queries are consistently timing out and you have set a maximum runtime of 60 
 ![]({% image_buster /assets/img/cloud_ingestion/connected_source_sf_2.png %})
 
 
-#### Step 3: Add a public key to the Braze user
-At this point, you must go back to Snowflake to complete the setup. Add the public key displayed on the dashboard to the user you created for Braze to connect to Snowflake.
+#### Step 7: Note the public key  
+
+In the **Test connection** page, you will see a RSA public key. Note this down. You will need it complete the integration in Snowflake.
 
 ![]({% image_buster /assets/img/cloud_ingestion/connected_source_sf_3.png %})
 
-For additional information on how to do this, see the [Snowflake documentation](https://docs.snowflake.com/en/user-guide/key-pair-auth.html). If you want to rotate the keys at any point, we can generate a new key pair and provide you with the new public key.
+{% endtab %}
+{% endtabs %}
+
+### Finalize configuring the data warehouse
+
+{% tabs %}
+{% tab Snowflake %}
+
+#### Step 8: Add a public key to the Braze user
+
+Add the public key you noted during the last step to your user in Snowflake. This will allow Braze to connect to Snowflake. For details on how to do this, see the [Snowflake documentation](https://docs.snowflake.com/en/user-guide/key-pair-auth.html). 
+
+If you want to rotate the keys at any point, Braze can generate a new key pair and provide you with the new public key.
 
 ```json
 ALTER USER BRAZE_INGESTION_USER SET rsa_public_key='{INSERT_YOUR_KEY}';
@@ -156,7 +183,7 @@ Once you have added the key to the user in Snowflake, select **Test Connection**
 You must successfully test a source before it can move from Draft to Active state. If you need to close out of the creation page, your integration will be saved, and you can revisit the details page to make changes and test.  
 {% endalert %}
 
-## Set up additional integrations or users (optional)
+## Setting up additional integrations or users (optional)
 {% tabs %}
 {% tab Snowflake %}
 You may set up multiple integrations with Braze, but each integration should be configured to connect a different schema. When creating additional connections, you may reuse existing credentials if connecting to the same Snowflake account.
