@@ -13,8 +13,8 @@ page_type: reference
 
 Once a connected source is added to your Braze workspace, you can create a CDI segment within Segment Extensions. CDI Segments lets you write SQL that directly queries on your own data warehouse (using data there that’s made available via your CDI Connected Source), and creates and maintains a group of users that can be targeted within Braze. 
 
-{% alert update %}
-Note that this feature is currently in Early Access and available only for Snowflake sources.
+{% alert note %}
+Connected sources are currently in early access. The early access is only available for Snowflake sources.
 {% endalert %}
 
 {% alert important %}
