@@ -85,7 +85,7 @@ You can customize the look and feel of your message using the drag-and-drop [in-
 
 ## Reporting
 
-After your campaign has launched, you can analyze results in real time to see how many users have engaged with your campaign. To see how many users have opted in to the subscription group, you can [create a segment][5] of users who subscribed to the subscription group by filtering for users who have received the in-app message and submitted the form.
+After your campaign has launched, you can analyze results in real-time to see how many users have engaged with your campaign. To see how many users have opted into the subscription group, you can [create a segment][5] of users who subscribed to the subscription group by filtering for users who have received the in-app message and submitted the form.
 
 ![In-App Message Performance panel showing clicks for each link in the in-app message.][img8]
 
