@@ -1,6 +1,6 @@
 ---
 nav_title: Add-to-Calendar Links
-article_title: Add-to-Calendar links
+article_title: Add-to-Calendar Links
 page_order: 1
 page_type: tutorial
 description: "This article describes how to include an add-to-calendar link in your email campaigns."
