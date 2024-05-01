@@ -316,10 +316,14 @@
   }
 
 // h1 is excluded here to avoid adding extra space above page titles
-h2, h3, h4, h5, h6 {
-  @include heading-margin-top(4rem); // Default top spacing
+h2, h3{
+  @include heading-margin-top(4rem); 
 }
 
+// smaller heading levels have a reduced top margin
+h4, h5, h6{
+  @include heading-margin-top(2.5rem); 
+}
 
 // Directly adjacent headings should have reduced top margin
 // Starting from h2 to handle cases where headings follow h1
