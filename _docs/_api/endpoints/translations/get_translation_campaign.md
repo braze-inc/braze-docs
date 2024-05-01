@@ -1,24 +1,24 @@
 ---
-nav_title: "GET: Translate Campaign"
-article_title: "GET: Translate Campaign"
+nav_title: "GET: View Translation for a Campaign"
+article_title: "GET: View Translation for a Campaign"
 search_tag: Endpoint
 page_order: 1
 
 layout: api_page
 page_type: reference
-description: "This article outlines details about the Translate campaign or Canvas messages endpoint."
+description: "This article outlines details about the View Translation for a campaign endpoint."
 ---
 
 {% api %}
-# Translate message for campaign
+# View translation for a campaign
 {% apimethod get %}
 /campaign/translations/?locale_id={locale_id}
 {% endapimethod %}
 
-> Use this endpoint to view a translated messages and see what this message will look like for a user.
+> Use this endpoint to view a translated campaign message to see what this message looks like for a user.
 
 {% alert important %}
-Translating a message for a campaign via API is currently in early access. Contact your Braze account manager if you're interested in participating in the early access.
+Viewing a translated campaign message via API is currently in early access. Contact your Braze account manager if you're interested in participating in the early access.
 {% endalert %}
 
 ## Prerequisites

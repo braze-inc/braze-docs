@@ -1,24 +1,24 @@
 ---
-nav_title: "GET: Translate Canvas"
-article_title: "GET: Translate Canvas"
+nav_title: "GET: View Translation for a Canvas"
+article_title: "GET: View Translation for a Canvas"
 search_tag: Endpoint
 page_order: 1
 
 layout: api_page
 page_type: reference
-description: "This article outlines details about the Translate Canvas endpoint."
+description: "This article outlines details about the View translation for a Canvas endpoint."
 ---
 
 {% api %}
-# Translate message for Canvas
+# View translation for a Canvas
 {% apimethod get %}
 /canvas/translations/?locale_id={locale_id}
 {% endapimethod %}
 
-> Use this endpoint to view a translated messages and see what this message will look like for a user.
+> Use this endpoint to view a translated message to see what this message looks like for a user.
 
 {% alert important %}
-Translating a message for a Canvas via API is currently in early access. Contact your Braze account manager if you're interested in participating in the early access.
+Veiwing a translated message for a Canvas via API is currently in early access. Contact your Braze account manager if you're interested in participating in the early access.
 {% endalert %}
 
 ## Prerequisites

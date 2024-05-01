@@ -1,16 +1,16 @@
 ---
-nav_title: "GET: View Translations for Campaign"
-article_title: "GET: View Translations for Campaign"
+nav_title: "GET: View Translations for a Campaign"
+article_title: "GET: View Translations for a Campaign"
 search_tag: Endpoint
 page_order: 1
 
 layout: api_page
 page_type: reference
-description: "This article outlines details about the List translations for a campaign endpoint."
+description: "This article outlines details about the View translations for a campaign endpoint."
 ---
 
 {% api %}
-# List translations for a campaign
+# View translations for a campaign
 {% apimethod get %}
 /campaigns/translations
 {% endapimethod %}
