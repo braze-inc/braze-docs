@@ -14,7 +14,7 @@ description: "This how-to article will walk you through how to set up Location t
 > With Braze [Cloud Data Ingestion]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/overview/) (CDI), you can set up a direct connection from your data warehouse or file storage system to Braze to sync relevant user or catalog data on a recurring basis.
 
 {% alert note %}
-CDI segments is currently in early access and is available only for customers with Snowflake CDI integrations.
+CDI segments is in early access and is currently only available for customers with Snowflake CDI integrations.
 {% endalert %}
 
 To use your data warehouse data for segmentation within your Braze workspace, create a CDI segment within your [segment extensions]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/). CDI segments allow you to write SQL that directly queries your own data warehouse by using data made available via your CDI connections, and create a group of users that can be targeted within Braze.
@@ -23,7 +23,7 @@ This feature queries your data warehouse directly, so you will incur all costs a
 
 ## Setting up CDI ingestion
 
-Set up a new Connection Sync with Snowflake by following the steps in [Data warehouse integrations]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/integrations/).
+Set up a new Connection Sync with Snowflake by following the steps in [Connected sources]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/connected_sources/).
 
 ## Creating a CDI segment
 
