@@ -49,7 +49,7 @@ To get started building your sign-up form, select the phone number input compone
 
 ![Preview area when creating a sign-up form with the phone number input component selected.][img3]{: style="max-width:40%"}
 
-From the side menu, specify which subscription group this template will collect phone numbers for. To adhere to compliance best practices, you can only collect consent to one subscription group per phone number sign-up form. However, you can use multiple forms to collect consent for other subscription groups if desired.
+From the side menu, specify which subscription group this template will collect phone numbers for. To adhere to compliance best practices, you can only collect consent to one subscription group per phone number sign-up form. However, if desired, you can use multiple forms to collect consent for other subscription groups.
 
 ![Subscription group dropdown with a subscription group selected.][img4]{: style="max-width:40%"}
 
