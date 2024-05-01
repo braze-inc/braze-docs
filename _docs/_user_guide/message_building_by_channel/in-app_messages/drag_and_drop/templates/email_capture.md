@@ -65,7 +65,7 @@ Once your campaign has launched, you can analyze results in real time to see how
 
 ### Double opt-in verification
 
-To make sure that anyone who signed up for your list really meant to sign up for your list and provided the correct email address, we recommend getting a second confirmation from anyone who signed up via your email sign-up form by sending a [double opt-in](https://www.braze.com/resources/articles/embracing-the-email-double-opt-in) flow.
+To make sure that anyone who signed up for your list meant to sign up for your list and provided the correct email address, we recommend getting a second confirmation from anyone who signed up via your email sign-up form by sending a [double opt-in](https://www.braze.com/resources/articles/embracing-the-email-double-opt-in) flow.
 
 One of the ways you can set this up is through Canvas Flow:
 
