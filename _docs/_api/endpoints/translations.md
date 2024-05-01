@@ -15,16 +15,22 @@ guide_featured_title: ""
 guide_featured_list:
   - name: "GET: Translate Multiple Campaigns"
     link: /docs/api/endpoints/translations/get_bulk_translations_campaigns/
+    fa_icon: fas fa-list-ul
   - name: "GET: Translate Multiple Canvases"
     link: /docs/api/endpoints/translations/get_bulk_translations_canvases/
+    fa_icon: fas fa-list-ul
   - name: "GET: Translate A Campaign"
     link: /docs/api/endpoints/translations/get_translation_campaign/
+    fa_icon: fas fa-list-ul
   - name: "GET: Translate A Canvas"
     link: /docs/api/endpoints/translations/get_translation_canvas/
+    fa_icon: fas fa-list-ul
   - name: "PUT: Update Translation in a Campaign"
     link: /docs/api/endpoints/translations/update_translation_campaign/
+    fa_icon: fas fa-user
   - name: "PUT: Update Translation in a Canvas"
     link: /docs/api/endpoints/translations/update_translations_canvas/
+    fa_icon: fas fa-user
 ---
 
 {% alert important %}

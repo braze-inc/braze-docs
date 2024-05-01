@@ -1,24 +1,24 @@
 ---
-nav_title: "GET: Translate Canvas"
-article_title: "GET: Translate Canvas"
+nav_title: "GET: View Translations for a Canvas"
+article_title: "GET: View Translations for a Canvas"
 search_tag: Endpoint
 page_order: 1
 
 layout: api_page
 page_type: reference
-description: "This article outlines details about the Translate Canvas endpoint."
+description: "This article outlines details about the List translations for a Canvas endpoint."
 ---
 
 {% api %}
-# Translate Canvases
+# List translations for a Canvas
 {% apimethod get %}
-/canvas/translations
+/canvases/translations
 {% endapimethod %}
 
-> Use this endpoint to view multiple translated Canvas messages and what these messages will look like for a user.
+> Use this endpoint to view all the translations for a Canvas.
 
 {% alert important %}
-Translating campaign and Canvas messages via API is currently in early access. Contact your Braze account manager if you're interested in participating in the early access.
+Viewing translations for a Canvas via API is currently in early access. Contact your Braze account manager if you're interested in participating in the early access.
 {% endalert %}
 
 ## Prerequisites
@@ -95,10 +95,8 @@ The following table lists possible returned errors and their associated troubles
 | Error message                           | Troubleshooting                                                                    |
 |-----------------------------------------|------------------------------------------------------------------------------------|
 | `INVALID_CAMPAIGN_ID`                   | Confirm the campaign ID matches the campaign you're translating.                   |
-| `INVALID_LOCALE_ID`                     | Confirm your locale ID exists in your message translation.                         |
 | `INVALID_MESSAGE_VARIATION_ID`          | Confirm your message ID is correct.                                                |
 | `MESSAGE_NOT_FOUND`                     | Check that the message to be translated.                                           |
-| `LOCALE_NOT_FOUND`                      | Confirm the locale exists in your multi-language settings.                         |
 | `MULTI_LANGUAGE_NOT_ENABLED`            | Multi-language settings aren't turned on for your workspace.                       |
 | `MULTI_LANGUAGE_NOT_ENABLED_ON_MESSAGE` | Only email campaigns or Canvas messages with emails can be translated.             |
 | `UNSUPPORTED_CHANNEL`                   | Only messages in email campaigns or Canvas messages with emails can be translated. |
