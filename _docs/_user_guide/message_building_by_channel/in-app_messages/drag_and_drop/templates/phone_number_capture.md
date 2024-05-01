@@ -35,7 +35,7 @@ If you include a link in your in-app message that redirects to a URL and the end
 
 When creating a drag-and-drop in-app message, select **SMS sign-up** or **WhatsApp sign-up** for your template.
 
-![Modal to select SMS sign-up or WhatsApp sign-up as a template when creating an in-app message.][img2]
+![Modal to select SMS sign-up or WhatsApp sign-up as a template when creating an in-app message.][img2]{: style="max-width:70%"}
 
 This template is supported for both mobile apps and web browsers.
 
