@@ -78,11 +78,11 @@ Directly clicking and opening the push message will send you to your app, where 
 
 #### Troubleshooting
 
-* If you find your in-app message campaign is not triggering from a push campaign, check the in-app campaign segmentation to confirm the user meets the target audience **before** receiving the push message.
+* If your in-app message campaign is not triggered by a push campaign, check the in-app campaign segmentation to confirm the user meets the target audience **before** receiving the push message.
 * For test sends on Android and iOS, the in-app messages that use the **Request push permission** on-click behavior may not display on some devices. As a workaround:
-  * **Android:** Devices must be on Android 13, and our Android SDK version 21.0.0. Another reason may be the device the in-app message is displayed on already has a system-level prompt. You may have selected **Do not ask again**, so you may need to reinstall the app to reset the notification permissions before testing again.
+  * **Android:** Devices must be on Android 13 and our Android SDK version 21.0.0. Another reason may be that the device on which the in-app message is displayed already has a system-level prompt. You may have selected **Do not ask again**, so you may need to reinstall the app to reset the notification permissions before testing again.
   * **iOS:** We recommend your developer team review the implementation of push notifications for your app and manually remove any code that would request push permissions. For more information, see [Push primer in-app messages]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/push_primer_messages/)
-* For an action-based in-app message campaign to deliver, custom events need to be logged through the Braze SDK, not REST APIs, so that the user can receive eligible in-app messages directly to their device. This means if a user performs the event during the session, they're able to receive the in-app message.
+* For an action-based in-app message campaign to deliver, custom events must be logged through the Braze SDK, not REST APIs, so the user can receive eligible in-app messages directly to their device. Users can receive the in-app message if they perform the event during the session.
 
 {% endtab %}
 {% tab Content Card %}
