@@ -1,6 +1,6 @@
 ---
-nav_title: Email Sign-up
-article_title: Email Sign-up
+nav_title: Email Sign-up Form
+article_title: Email Sign-up Form
 alias: "/email_capture/"
 description: "This reference page covers how to create an email sign-up form with the in-app message drag-and-drop editor."
 ---
