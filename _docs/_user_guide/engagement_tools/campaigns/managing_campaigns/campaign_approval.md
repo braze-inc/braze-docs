@@ -10,7 +10,7 @@ tool: Campaigns
 
 # Approving campaigns
 
-> Campaign approval adds a review process to your workflow before launching a campaign. This feature adds states that are available in the campaign confirmation workflow step. You can ensure that each confirmation is approved to launch the campaign.
+> Campaign approval adds a review process to your workflow before launching a campaign. This feature adds states that are available in the campaign confirmation workflow step. You can make sure that each confirmation is approved to launch the campaign.
 
 {% alert important %}
 Campaign approval is not supported in the building workflow for API campaigns and Transactional Email campaigns.
