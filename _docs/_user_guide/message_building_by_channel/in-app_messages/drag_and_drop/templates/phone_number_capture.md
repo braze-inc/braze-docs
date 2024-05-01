@@ -1,23 +1,23 @@
 ---
-nav_title: Phone Number Capture
-article_title: Phone Number Capture
+nav_title: Phone Number Sign-up
+article_title: Phone Number Sign-up
 alias: "/phone_number_capture/"
-description: "This reference page covers how to create a phone number capture form with the in-app message drag-and-drop editor."
+description: "This reference page covers how to create a phone number sign-up form with the in-app message drag-and-drop editor."
 ---
 
-# Phone number capture form
+# Phone number sign-up form
 
 > Learn how to create an in-app message to collect users' phone numbers.
 
-The phone number capture form is a template available in the drag-and-drop editor for in-app messages. Use this template to collect users' phone numbers and grow your SMS and WhatsApp subscription groups.
+The phone number sign-up form is a template available in the drag-and-drop editor for in-app messages. Use this template to collect users' phone numbers and grow your SMS and WhatsApp subscription groups.
 
-![Three examples of in-app messages created using the phone capture form template.][img7]
+![Three examples of in-app messages created using the phone sign-up form template.][img7]
 
 ## SDK requirements
 
 ### Minimum SDK versions
 
-Messages created using the drag-and-drop editor can only be sent to users on the following minimum SDK versions. See the [Prerequisites][1] section of Creating an in-app message with drag-and-drop for more details and nuances to be aware of.
+Messages created using the drag-and-drop editor can only be sent to users on the following minimum SDK versions. See the [Prerequisites][1] section of [Creating an in-app message with drag-and-drop]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/create/) for more details and nuances to be aware of.
 
 {% sdk_min_versions swift:5.0.0 android:8.0.0 web:2.5.0 %}
 
@@ -31,11 +31,11 @@ If you want to include text links that do not dismiss the message, users must be
 If you include a link in your in-app message that redirects to a URL and the end user is not on the minimum SDK versions specified, clicking on the link will close the message and the user will not be able to return to the message to submit the form.
 {% endalert %}
 
-## Creating a phone number capture form
+## Creating a phone number sign-up form
 
-When creating a drag-and-drop in-app message, select **Phone number capture form** for your template.
+When creating a drag-and-drop in-app message, select **SMS sign-up** or **WhatsApp sign-up** for your template.
 
-![Modal to select Phone number capture as a template when creating an in-app message.][img2]
+![Modal to select SMS sign-up or WhatsApp sign-up as a template when creating an in-app message.][img2]
 
 This template is supported for both mobile apps and web browsers.
 
@@ -45,13 +45,13 @@ Before you start customizing your template, you can set message-level styles for
 
 ![Workflow of uploading and selecting a custom font.][img6]
 
-### Step 2: Customize your phone number capture component
+### Step 2: Customize your phone number sign-up component
 
-To get started building your phone number capture form, select the phone number input element in the editor.
+To get started building your phone number sign-up form, select the phone number input element in the editor.
 
-![Preview area when creating a phone number capture form with the Phone Number Input element selected.][img3]{: style="max-width:40%"}
+![Preview area when creating a phone number sign-up form with the Phone Number Input element selected.][img3]{: style="max-width:40%"}
 
-From the side menu, specify which subscription group this template will collect phone numbers for. To adhere to compliance best practices, you can only collect consent to one subscription group per phone number capture form. However, you can use multiple forms to collect consent for other subscription groups if desired.
+From the side menu, specify which subscription group this template will collect phone numbers for. To adhere to compliance best practices, you can only collect consent to one subscription group per phone number sign-up form. However, you can use multiple forms to collect consent for other subscription groups if desired.
 
 ![Subscription group dropdown with a subscription group selected.][img4]{: style="max-width:40%"}
 
