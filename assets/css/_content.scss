@@ -326,12 +326,12 @@ h1 ~ h2:first-of-type {
 
 // h1 is excluded here to avoid adding extra space above page titles
 h3{
-  @include heading-margin-top(4rem); 
+  @include heading-margin-top(3rem); 
 }
 
 // smaller heading levels have a reduced top margin
 h4, h5, h6{
-  @include heading-margin-top(2.5rem); 
+  @include heading-margin-top(2.25rem); 
 }
 
 // Directly adjacent headings should have reduced top margin
