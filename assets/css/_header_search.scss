@@ -34,20 +34,16 @@ $search_icon: $white;
 		align-items: center;
 	}
 	@media (max-width: $window-medium-px) {
-		// margin-left: 0;
-		// width: 100%;
 		#site-link {
 			display: none;
 		}
 	}
 }
 #search-form_div {
-	width: 40px;
 	.aa-SubmitIcon {
 		color: $white;
 	}
 	@media (max-width: $window-mobile-px) {
-		//width: 25px;
 		margin-right: 0px;
 	}
 	@media (max-width: $window-small-px) {
@@ -145,9 +141,7 @@ $search_icon: $white;
 					/* Microsoft Edge */
 					color: $grey-ghost;
 				}
-				// background-color: $white;
 				color: $black-shark;
-				// border-color: $black-shark;
 				box-shadow: none;
 			}
 
@@ -478,16 +472,18 @@ $search_icon: $white;
 #header_nav {
 	&.search_focus {
 		#header_wrapper {
-			position: absolute;
 			@media (max-width: $window-small-px) {
-				#nav_logo {
-					visibility: hidden;
-				}
+				display: none;
 			}
 		}
 		#navbar-search {
-			margin-left: 0;
-			width: 100%;
+			margin-right: 0;
+			display: flex;
+			justify-content: right;
+			@media (max-width: $window-small-px) {
+				max-width: 100%;
+				width: 100%;
+			}
 		}
 		.aa-SubmitIcon {
 			color: $black;
@@ -496,9 +492,6 @@ $search_icon: $white;
 			flex: 0 0 auto;
 
 			margin: 0;
-			//visibility: hidden;
-			//width: 1px;
-			//height: 1px;
 			z-index: 550 !important;
 			&.hide_overflow {
 				font-size: 1px;
@@ -524,12 +517,17 @@ $search_icon: $white;
 			width: 100%;
 			.aa-Form {
 				background-color: white;
+				margin-right: 0;
 			}
 			#header-search-form {
 				transition: all ease $search_transition_time;
 				-webkit-transition: all ease $search_transition_time;
 				-moz-transition: all ease $search_transition_time;
-				width: 100%;
+				@media (max-width: $window-small-px) {
+					max-width: 100%;
+					width: 100%;
+				}
+				max-width: 261px;
 				.aa-InputWrapperSuffix {
 					display: flex;
 				}
