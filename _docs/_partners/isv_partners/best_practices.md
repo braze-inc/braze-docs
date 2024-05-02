@@ -91,7 +91,7 @@ Use the email address as the identifier in the user track endpoint.
     ]
 }
 ```
-{% alert note %}
+{% alert important %}
 This functionality is currently in early access.
 {% endalert %}
 

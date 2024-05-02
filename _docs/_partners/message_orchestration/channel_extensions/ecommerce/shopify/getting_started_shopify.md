@@ -98,7 +98,7 @@ The automated email capture script reconciles customer email input with the user
 - The email must be entered through an HTML form submission, not a web service.
 - All email input fields should be used for the customer to enter their own email address, or the wrong email may be assigned to the `device_id`. For example, an email referral for friends and family would be incorrectly treated as the customer’s email and updated on the Braze user profile.
 
-{% alert note %}
+{% alert important %}
 The automated email capture script is currently in early access. Contact your customer success manager if you're interested in participating in this early access. <br><br> If your integration is already installed, it will need to be reinstalled at this point to complete its activation.
 {% endalert %}
 
@@ -230,7 +230,7 @@ The automated email capture script reconciles customer email input with the user
 - The email must be entered through an HTML form submission, not a web service.
 - All email input fields should be used for the customer to enter their own email address, or the wrong email may be assigned to the `device_id`. For example, an email referral for friends and family would be incorrectly treated as the customer’s email and updated on the Braze user profile.
 
-{% alert note %}
+{% alert important %}
 The automated email capture script is currently in early access. Contact your customer success manager if you're interested in participating in this early access. <br><br> If your integration is already installed, it will need to be reinstalled at this point to complete its activation.
 {% endalert %}
 
