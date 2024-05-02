@@ -22,10 +22,7 @@ A privacy manifest is a file in your Xcode project that describes the reason you
 
 ## API tracking-data domains
 
-Starting with iOS 17.2, Apple will block all declared tracking endpoints in your app until the end-user accepts an [Ad Tracking Transparency (ATT) prompt](https://support.apple.com/en-us/HT212025). Braze automatically reroutes this data to a dedicated `-tracking` endpoint, then sends the remaining non-tracking, first-party data to the original endpoint. For example:
-
-- **Original endpoint:** `sdk.iad-01.braze.com`
-- **Tracking endpoint:** `sdk-tracking.iad-01.braze.com`
+Starting with iOS 17.2, Apple will block all declared tracking endpoints in your app until the end-user accepts an [Ad Tracking Transparency (ATT) prompt](https://support.apple.com/en-us/HT212025). Braze supports new tracking endpoints to route this tracking data to, while maintaining original endpoints for non-tracking, first-party data to the original endpoint. 
 
 ## Declaring Braze tracking data
 
@@ -43,9 +40,21 @@ For more information about the Braze SDK's data-collection policies, see [SDK da
 If any of your non-Braze SDKs collect tracking data, you'll need to review those policies separately.
 {% endalert %}
 
-### Step 2: Declare your tracking data
+### Step 2: Add tracking domains to the Privacy Manifest
+
+Open your app’s PrivacyInfo.xcprivacy file. If you don’t already have one, create one in Xcode by following the instructions [here](https://developer.apple.com/documentation/bundleresources/privacy_manifest_files).
+
+Set NSPrivacyTracking to YES.
+
+Under NSPrivacyTrackingDomains, add your Braze API endpoint, prefixed by sdk-tracking in place of sdk.
+
+For instance, if your Braze endpoint is `sdk.iad-01.braze.com`, add `sdk-tracking.iad-01.braze.com` to the array of privacy tracking domains.
+
+### Step 3: Declare your tracking data
 
 In your Xcode project, open `AppDelegate.swift` then list each [tracking property](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/configuration-swift.class/trackingproperty/) you want to declare by creating a static or dynamic tracking list. Keep in mind, Apple will block these properties until the end-user accepts their ATT prompt, so only list the properties you and your legal team consider tracking.
+
+For example:
 
 {% tabs %}
 {% tab static example %}
