@@ -134,6 +134,7 @@ The following table lists possible returned errors and their associated troubles
 | `invalid-sorting`                    | Check if the selection sorting is valid.                   |
 | `invalid-sort-field`                 | Check if the selection sort field is valid.                |
 | `invalid-sort-order`                 | Check if the selection sort order is valid.                |
+| `selection-contains-too-many-arrays`                 | Check if the selection contains more than one field with `array` type. Only one is permitted       |
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% endapi %}
