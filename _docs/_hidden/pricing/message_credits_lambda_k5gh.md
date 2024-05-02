@@ -240,183 +240,183 @@ Column definitions are as follows:
         <td>SMS / MMS - Global</td>
         <td>7.5</td>
         <td>Bangladesh</td>
-        <td>5.81</td>
-        <td>58.10</td>
+        <td>2.76</td>
+        <td>20.70</td>
     </tr>
     <tr>
         <td>SMS / MMS - Global</td>
         <td>7.5</td>
         <td>Barbados</td>
-        <td>3.09</td>
-        <td>30.90</td>
+        <td>1.00</td>
+        <td>7.50</td>
     </tr>
     <tr>
         <td>SMS / MMS - Global</td>
         <td>7.5</td>
         <td>Belarus</td>
-        <td>6.35</td>
-        <td>63.50</td>
-    </tr>
-    <tr>
-        <td>SMS / MMS - Global</td>
-        <td>7.5</td>
-        <td>Belgium</td>
-        <td>2.40</td>
+        <td>3.20</td>
         <td>24.00</td>
     </tr>
     <tr>
         <td>SMS / MMS - Global</td>
         <td>7.5</td>
+        <td>Belgium</td>
+        <td>1.48</td>
+        <td>11.10</td>
+    </tr>
+    <tr>
+        <td>SMS / MMS - Global</td>
+        <td>7.5</td>
         <td>Belize</td>
-        <td>6.90</td>
-        <td>69.00</td>
+        <td>1.66</td>
+        <td>12.45</td>
     </tr>
     <tr>
         <td>SMS / MMS - Global</td>
         <td>7.5</td>
         <td>Benin</td>
-        <td>3.64</td>
-        <td>36.40</td>
+        <td>0.92</td>
+        <td>6.90</td>
     </tr>
     <tr>
         <td>SMS / MMS - Global</td>
         <td>7.5</td>
         <td>Bermuda</td>
-        <td>2.99</td>
-        <td>29.90</td>
+        <td>1.04</td>
+        <td>7.80</td>
     </tr>
     <tr>
         <td>SMS / MMS - Global</td>
         <td>7.5</td>
         <td>Bhutan</td>
-        <td>10.10</td>
-        <td>101.00</td>
+        <td>2.50</td>
+        <td>18.75</td>
     </tr>
     <tr>
         <td>SMS / MMS - Global</td>
         <td>7.5</td>
         <td>Bolivia</td>
-        <td>3.66</td>
-        <td>36.60</td>
+        <td>1.40</td>
+        <td>10.50</td>
     </tr>
     <tr>
         <td>SMS / MMS - Global</td>
         <td>7.5</td>
         <td>Bosnia and Herzegovina</td>
-        <td>2.12</td>
-        <td>21.20</td>
+        <td>1.01</td>
+        <td>7.58</td>
     </tr>
     <tr>
         <td>SMS / MMS - Global</td>
         <td>7.5</td>
         <td>Botswana</td>
-        <td>2.52</td>
-        <td>25.20</td>
+        <td>1.23</td>
+        <td>9.23</td>
     </tr>
     <tr>
         <td>SMS / MMS - Global</td>
         <td>7.5</td>
         <td>Brazil</td>
-        <td>0.25</td>
-        <td>2.50</td>
+        <td>0.21</td>
+        <td>1.58</td>
     </tr>
     <tr>
         <td>SMS / MMS - Global</td>
         <td>7.5</td>
         <td>Brunei</td>
-        <td>0.50</td>
-        <td>5.00</td>
+        <td>0.27</td>
+        <td>2.03</td>
     </tr>
     <tr>
         <td>SMS / MMS - Global</td>
         <td>7.5</td>
         <td>Bulgaria</td>
-        <td>2.70</td>
-        <td>27.00</td>
+        <td>1.94</td>
+        <td>14.55</td>
     </tr>
     <tr>
         <td>SMS / MMS - Global</td>
         <td>7.5</td>
         <td>Burkina Faso</td>
-        <td>3.35</td>
-        <td>33.50</td>
+        <td>1.44</td>
+        <td>10.80</td>
     </tr>
     <tr>
         <td>SMS / MMS - Global</td>
         <td>7.5</td>
         <td>Burundi</td>
-        <td>9.47</td>
-        <td>94.70</td>
+        <td>1.84</td>
+        <td>13.80</td>
     </tr>
     <tr>
         <td>SMS / MMS - Global</td>
         <td>7.5</td>
         <td>Cambodia</td>
-        <td>4.30</td>
-        <td>43.00</td>
+        <td>2.41</td>
+        <td>18.08</td>
     </tr>
     <tr>
         <td>SMS / MMS - Global</td>
         <td>7.5</td>
         <td>Cameroon</td>
-        <td>3.49</td>
-        <td>34.90</td>
+        <td>1.13</td>
+        <td>8.48</td>
     </tr>
     <tr>
         <td>SMS / MMS - Global</td>
         <td>7.5</td>
         <td>Cape Verde</td>
-        <td>3.66</td>
-        <td>36.60</td>
+        <td>1.43</td>
+        <td>10.73</td>
     </tr>
     <tr>
         <td>SMS / MMS - Global</td>
         <td>7.5</td>
         <td>Caribbean Netherlands</td>
         <td>2.17</td>
-        <td>21.70</td>
+        <td>16.28</td>
     </tr>
     <tr>
         <td>SMS / MMS - Global</td>
         <td>7.5</td>
         <td>Cayman Islands</td>
-        <td>3.37</td>
-        <td>33.70</td>
+        <td>0.99</td>
+        <td>7.43</td>
     </tr>
     <tr>
         <td>SMS / MMS - Global</td>
         <td>7.5</td>
         <td>Central African Republic</td>
-        <td>3.07</td>
-        <td>30.70</td>
+        <td>0.31</td>
+        <td>2.33</td>
     </tr>
     <tr>
         <td>SMS / MMS - Global</td>
         <td>7.5</td>
         <td>Chad</td>
-        <td>7.30</td>
-        <td>73.00</td>
+        <td>2.31</td>
+        <td>17.33</td>
     </tr>
     <tr>
         <td>SMS / MMS - Global</td>
         <td>7.5</td>
         <td>Chile</td>
-        <td>1.64</td>
-        <td>16.40</td>
+        <td>0.78</td>
+        <td>5.85</td>
     </tr>
     <tr>
         <td>SMS / MMS - Global</td>
         <td>7.5</td>
         <td>China</td>
-        <td>0.64</td>
-        <td>6.40</td>
+        <td>0.17</td>
+        <td>1.28</td>
     </tr>
     <tr>
         <td>SMS / MMS - Global</td>
         <td>7.5</td>
         <td>Colombia</td>
-        <td>0.02</td>
-        <td>0.20</td>
+        <td>0.03</td>
+        <td>0.23</td>
     </tr>
     <tr>
         <td>SMS / MMS - Global</td>
