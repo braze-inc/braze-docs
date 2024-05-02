@@ -91,7 +91,7 @@ The following table lists possible returned errors and their associated troubles
 |`INVALID_MESSAGE_VARIATION_ID`|Confirm your message ID is correct.|
 |`INVALID_TRANSLATION_OBJECT`|Translation IDs are mismatched or translated text exceeds limits.|
 |`MESSAGE_NOT_FOUND`|Check that the message to be translated.|
-|`LOCALE_NOT_FOUND`|
+|`LOCALE_NOT_FOUND`| Confirm the locale exists in your multi-language settings. |
 |`MISSING_TRANSLATIONS`|Translation IDs must match to the message.|
 |`MULTI_LANGUAGE_NOT_ENABLED`|Multi-language settings aren't turned on for your workspace.|
 |`MULTI_LANGUAGE_NOT_ENABLED_ON_MESSAGE`|Only email campaigns or Canvas messages with emails can be translated.|
