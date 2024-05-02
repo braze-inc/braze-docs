@@ -57,12 +57,12 @@ https://ics.agical.io/?subject=Meet%20Braze&location=114%20Sansome%20Street&dtst
 
 The following parameters are optional and can be used to define additional aspects of an event.
 
-**Organizer name:** `&organizer=name`
-**Attach URL related to event:** `&attach=http://www.example.com/`
-**Duration:** `duration=30M`, as an alternative to the event end time (dtend), specify a duration like 1H or 30M
-**Reminder alarm time, in minutes:** `&reminder=15`
-**All day event:** `&allday=1`
-**UID:** optional parameter to hard-code the unique identifier for the event allowing some calendar apps the ability to update the event over time. The string @ics.agical.io is automatically appended to the value.
+- **Organizer name:** `&organizer=name`
+- **Attach URL related to event:** `&attach=http://www.example.com/`
+- **Duration:** `duration=30M`, as an alternative to the event end time (dtend), specify a duration like 1H or 30M
+- **Reminder alarm time, in minutes:** `&reminder=15`
+- **All day event:** `&allday=1`
+- **UID:** optional parameter to hard-code the unique identifier for the event allowing some calendar apps the ability to update the event over time. The string @ics.agical.io is automatically appended to the value.
 
 You can also add additional parameters for recurring events:
 - **Weekly events:** `&recur=weekly`
@@ -77,7 +77,7 @@ For example, if you open the example "Add to Google Calendar" link and your cale
 
 ### Google Calendar
 
-When clicked, Google Calendar opens in a new tab or window with the event's details pre-populated in the invite and ready for a user to hit save. This happens on both mobile and desktop.
+When clicked, Google Calendar opens in a new tab or window with the event's details pre-populated in the invite and ready for a user to save. This happens on both mobile and desktop.
 
 ![Google Calendar dialog to add an event with the event's details added and ready to save.][2]{: style="max-width:75%"}
 
