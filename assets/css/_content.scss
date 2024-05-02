@@ -315,8 +315,17 @@
     margin: 40px 0 4px 0;
   }
 
+// Target the first h2 after h1, regardless of intervening elements
+h1 ~ h2:not(:first-of-type) {
+    margin-top: 4rem; // Reset to default if there's another h2 that is not the first
+}
+
+h1 ~ h2:first-of-type {
+  margin-top: 2.5rem; // Reduced top margin for the first h2
+}
+
 // h1 is excluded here to avoid adding extra space above page titles
-h2, h3{
+h3{
   @include heading-margin-top(4rem); 
 }
 
