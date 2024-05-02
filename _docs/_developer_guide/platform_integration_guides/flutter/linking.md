@@ -35,7 +35,7 @@ Using Xcode to edit your `Info.plist` file:
 {% tab Android %}
 In your `AndroidManifest.xml` file:
 1. Locate your `.MainActivity` `activity` tag.
-2. Inside of that `activity` tag, add the following metadata tag:
+2. Inside of that `activity` tag, add the following `meta-data` tag:
 
 ```xml
   <meta-data android:name="flutter_deeplinking_enabled" android:value="true" />
