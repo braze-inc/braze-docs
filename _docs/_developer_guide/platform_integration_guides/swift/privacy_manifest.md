@@ -22,7 +22,7 @@ A privacy manifest is a file in your Xcode project that describes the reason you
 
 ## API tracking-data domains
 
-Starting with iOS 17.2, Apple will block all declared tracking endpoints in your app until the end-user accepts an [Ad Tracking Transparency (ATT) prompt](https://support.apple.com/en-us/HT212025). Braze supports new tracking endpoints to route this tracking data to, while maintaining original endpoints for non-tracking, first-party data to the original endpoint. 
+Starting with iOS 17.2, Apple will block all declared tracking endpoints in your app until the end-user accepts an [Ad Tracking Transparency (ATT) prompt](https://support.apple.com/en-us/HT212025). Braze provides tracking endpoints to route your tracking data, while still allowing you to route non-tracking first-party data to the original endpoint. 
 
 ## Declaring Braze tracking data
 
@@ -32,29 +32,37 @@ For a full walkthrough, see the [Privacy Tracking Data tutorial](https://braze-i
 
 ### Step 1: Review your current policies
 
-Review your Braze SDK's current data-collection policies with your legal team to determine whether your app collects tracking data [as defined by Apple](#what-is-tracking-data). If you're not collecting any tracking data, you don't need to customize your privacy manifest for the Braze SDK at this time.
-
-For more information about the Braze SDK's data-collection policies, see [SDK data collection]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/sdk_data_collection/).
+Review your Braze SDK's current data-collection policies with your legal team to determine whether your app collects tracking data [as defined by Apple](#what-is-tracking-data). If you're not collecting any tracking data, you don't need to customize your privacy manifest for the Braze SDK at this time. For more information about the Braze SDK's data-collection policies, see [SDK data collection]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/sdk_data_collection/).
 
 {% alert important %}
 If any of your non-Braze SDKs collect tracking data, you'll need to review those policies separately.
 {% endalert %}
 
-### Step 2: Add tracking domains to the Privacy Manifest
+### Step 2: Create a privacy manifest
 
-Open your app’s PrivacyInfo.xcprivacy file. If you don’t already have one, create one in Xcode by following the instructions [here](https://developer.apple.com/documentation/bundleresources/privacy_manifest_files).
+First, check if you already have a privacy manifest by searching for a `PrivacyInfo.xcprivacy` file in your Xcode project. If you already have this file, you can continue to the next step. Otherwise, see [Apple: Create a privacy manifest](sdk-tracking.iad-01.braze.com).
 
-Set NSPrivacyTracking to YES.
+### Step 3: Add your endpoint to the privacy manifest
 
-Under NSPrivacyTrackingDomains, add your Braze API endpoint, prefixed by sdk-tracking in place of sdk.
+In your Xcode project, open your app's `PrivacyInfo.xcprivacy` file, then right-click the table and check **Raw Keys and Values**.
 
-For instance, if your Braze endpoint is `sdk.iad-01.braze.com`, add `sdk-tracking.iad-01.braze.com` to the array of privacy tracking domains.
+{% alert note %}
 
-### Step 3: Declare your tracking data
+{% endalert %}
 
-In your Xcode project, open `AppDelegate.swift` then list each [tracking property](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/configuration-swift.class/trackingproperty/) you want to declare by creating a static or dynamic tracking list. Keep in mind, Apple will block these properties until the end-user accepts their ATT prompt, so only list the properties you and your legal team consider tracking.
+![An Xcode project with the context menu open and "Raw Keys and Values" highlighted.]({% image_buster /assets/img/apple/privacy_manifest/check_raw_keys_and_values.png %})
 
-For example:
+Under **App Privacy Configuration**, choose **NSPrivacyTracking** and set its value to **YES**.
+
+![The 'PrivacyInfo.xcprivacy' file open with "NSPrivacyTracking" set to "YES".]({% image_buster /assets/img/apple/privacy_manifest/add_nsprivacytracking.png %})
+
+Under **App Privacy Configuration**, choose **NSPrivacyTrackingDomains**. In the domains array, add a new element and set its value to the endpoint you [previously added to your `AppDelegate`]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/initial_sdk_setup/completing_integration/#update-your-app-delegate) prefixed with `sdk-tracking`.
+
+![The 'PrivacyInfo.xcprivacy' file open with a Braze tracking endpoint listed under "NSPrivacyTrackingDomains".]({% image_buster /assets/img/apple/privacy_manifest/add_nsprivacytrackingdomains.png %})
+
+### Step 4: Declare your tracking data
+
+Next, open `AppDelegate.swift` then list each [tracking property](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/configuration-swift.class/trackingproperty/) you want to declare by creating a static or dynamic tracking list. Keep in mind, Apple will block these properties until the end-user accepts their ATT prompt, so only list the properties you and your legal team consider tracking. For example:
 
 {% tabs %}
 {% tab static example %}
@@ -110,7 +118,7 @@ func applicationDidBecomeActive(_ application: UIApplication) {
 {% endtab %}
 {% endtabs %}
 
-### Step 3: Prevent infinite retry loops
+### Step 5: Prevent infinite retry loops
 
 To prevent the SDK from entering an infinite retry loop, use the `set(adTrackingEnabled: enableAdTracking)` method to handle ATT permissions. The `adTrackingEnabled` property in your method should be handled similar to the following:
 
