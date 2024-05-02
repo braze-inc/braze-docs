@@ -339,7 +339,7 @@ h6 + h2, h6 + h3, h6 + h4, h6 + h5, h6 + h6 {
   h1 {
     font-size: 42px;
     font-family: $braze-medium;
-    line-height: 2rem;
+    line-height: 1.3;
     padding-top: 1rem !important;
     margin-bottom: 1rem;
     color: $black-shark;
@@ -384,7 +384,7 @@ h6 + h2, h6 + h3, h6 + h4, h6 + h5, h6 + h6 {
     color: $black-shark;
   }
   p {
-    margin-bottom: 1.5rem;
+    margin-bottom: 25px;
     .highlighter-rouge {
       padding: 2px 4px;
       border-width: 1px !important;
@@ -392,7 +392,7 @@ h6 + h2, h6 + h3, h6 + h4, h6 + h5, h6 + h6 {
     }
   }
   .highlighter-rouge {
-    font-size: 16px;
+    font-size: 14px;
     font-family: $braze-code;
     font-weight: bold;
     color: $grey-dust;
@@ -504,7 +504,7 @@ table {
   margin-bottom: 20px;
   border: 1px solid $grey-ghost !important;
   >thead {
-    font-size: 16px;
+    font-size: 15px;
     text-transform: none;
     color: $black-shark;
     font-family: $braze-medium;
@@ -514,7 +514,7 @@ table {
   }
   td {
     border: 1px solid $grey-ghost !important;
-    font-size: 16px;
+    font-size: 15px;
     word-break: break-all;
     @media (max-width: $window-large-px) {
       word-break: break-word;
@@ -758,7 +758,7 @@ blockquote {
       }
     }
     .rouge-code {
-      font-size: 13px;
+      font-size: 14px;
       font-family: $braze-code;
       background-color: $grey-athens;
     }
