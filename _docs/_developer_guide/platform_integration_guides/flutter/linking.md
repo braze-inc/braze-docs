@@ -33,19 +33,12 @@ Using Xcode to edit your `Info.plist` file:
 {% endtab %}
 
 {% tab Android %}
-Add the following `meta-data` and `intent-filter` tags to your `.MainActivity` `activity` tag.
+In your `AndroidManifest.xml` file:
+1. Locate your `.MainActivity` `activity` tag.
+2. Inside of that `activity` tag, add the following metadata tag:
 
 ```xml
-<activity android:name=".MainActivity"...>
   <meta-data android:name="flutter_deeplinking_enabled" android:value="true" />
-  <intent-filter android:autoVerify="true">
-      <action android:name="android.intent.action.VIEW" />
-      <category android:name="android.intent.category.DEFAULT" />
-      <category android:name="android.intent.category.BROWSABLE" />
-      <data android:scheme="http" android:host="example.com" />
-      <data android:scheme="https" />
-  </intent-filter>
-</activity>
 ```
 {% endtab %}
 {% endtabs %}
