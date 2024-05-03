@@ -26,7 +26,7 @@ Register for push using Google’s Firebase Cloud Messaging (FCM) API. For a ful
 4. [Generate JSON credentials]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/integration/standard_integration/#step-4-generate-json-credentials).
 5. [Upload your JSON credentials to Braze]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/integration/standard_integration/#step-5-upload-your-json-credentials-to-braze).
 
-### Step 1.2: Add your Google Sender ID
+### Step 1.2: Get your Google Sender ID
 
 First, go to Firebase Console, open your project, then select <i class="fa-solid fa-gear"></i>&nbsp;**Settings** > **Project settings**.
 
@@ -36,13 +36,7 @@ Select **Cloud Messaging**, then under **Firebase Cloud Messaging API (V1)**, co
 
 ![The Firebase project's "Cloud Messaging" page with the "Sender ID" highlighted.]({% image_buster /assets/img/android/push_integration/set_up_automatic_token_registration/copy-sender-id.png %})
 
-Next, open your project's `app.json` file and set your `firebaseCloudMessagingSenderId` property to the Sender ID in your clipboard. For example:
-
-```json
-"firebaseCloudMessagingSenderId": "693679403398"
-```
-
-### Step 1.3: Update your sender ID
+### Step 1.3: Update your `braze.xml`
 
 Add the following to your `braze.xml` file. Replace `FIREBASE_SENDER_ID` with the sender ID you copied previously.
 

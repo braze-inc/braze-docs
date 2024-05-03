@@ -4,8 +4,6 @@ alias: /partners/adobe/
 page_type: partner
 search_tag: Partner
 layout: dev_guide
-page_order: 1
-
 guide_top_header: "Adobe"
 guide_top_text: "Built on the Adobe Experience Platform, Adobe's real-time customer data platform helps companies bring together known and anonymous data from multiple enterprise sources to create customer profiles. These profiles can then be used to provide personalized experiences across all channels and devices in real-time."
 

@@ -3,7 +3,6 @@ nav_title: Kognitiv Inspire
 article_title: Kognitiv Inspire
 description: "Kognitiv Inspire is a loyalty technology system that allows you to implement and evaluate your loyalty strategy, offering innovative capabilities and tailored member communications for enhanced program efficacy."
 alias: /partners/kognitiv/
-
 page_type: partner
 search_tag: Partner
 ---

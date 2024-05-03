@@ -1,7 +1,6 @@
 ---
 nav_title: Hightouch
 alias: /partners/hightouch/
-page_order: 0
 layout: dev_guide
 guide_top_header: "Hightouch"
 guide_top_text: "Hightouch sits on top of the data warehouse and enables users to move that data into any end tool they desire."
