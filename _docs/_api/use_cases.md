@@ -76,7 +76,7 @@ After sending this payload successfully, this response confirms the emails have 
 }
 ```
 
-## Audit all Canvases
+## Auditing all Canvases
 
 Siege Valley Health is a hospital system that includes 10 operating hospitals and research centers with thousands of patients. Its marketing team wants to compare the Canvases sent to patients to remind them to schedule an appointment for flu shots from the past 3 years of using Braze. Siege Valley Health’s marketing team also wants a quick and efficient way to see both the list of Canvases and the analytics summary.
 
@@ -128,7 +128,7 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/canvas/data_summ
 
 ## Checking upcoming scheduled campaigns and Canvases
 
-The busiest time of year is quickly approaching for Flash & Thread, a retail brand that sells clothing and beauty products online and in stores. Its marketing team wants to check the upcoming campaigns and Canvases from the Braze dashboard before March 31, 2024 at 12 pm. This can be accomplished using the [`/messages/scheduled_broadcasts` endpoint]({{site.baseurl}}/api/endpoints/messaging/schedule_messages/get_messages_scheduled/). 
+The busiest time of year is quickly approaching for Flash & Thread, a retail brand that sells clothing and beauty products online and in stores. Its marketing team wants to check the upcoming campaigns and Canvases from the Braze dashboard before March 31, 2024, at 12 pm. This can be accomplished using the [`/messages/scheduled_broadcasts` endpoint]({{site.baseurl}}/api/endpoints/messaging/schedule_messages/get_messages_scheduled/). 
 
 Here's the example request:
 
@@ -139,7 +139,7 @@ curl --location --request GET 'https://rest.iad-01.braze.com/messages/scheduled_
 
 This endpoint will return the list of upcoming campaigns and Canvases. From here, the marketing team can confirm its list of messages by referencing the `name` field for the campaigns and Canvases in the response.
 
-## View an older preference center
+## Viewing an older preference center
 
 PoliterWeekly is a digital magazine whose subscribers are reachable through email. In an effort to better understand its subscribers' user journey, the marketing team wants to review the details for PoliterWeekly’s preference center to check when it was created and last updated.
 
@@ -173,7 +173,7 @@ From this response, the marketing team can see the preference center was created
 
 {% enddetails %}
 
-## Remove invalid phone numbers
+## Removing invalid phone numbers
 
 At CashBlastr, the primary goal is to streamline how people can send and receive quick payments. As a financial service company, CashBlastr wants to keep its list of phone numbers for its customers up-to-date and accurate. The developer team has been tasked to remove the following list of phone numbers marked as “invalid” so the marketing team’s SMS messages can reach the appropriate CashBlastr customers.
 
@@ -200,7 +200,7 @@ After sending this payload, the following response confirms the invalid phone nu
 }
 ```
 
-## View a user's subscription group status
+## Viewing a user's subscription group status
 
 SandwichEmperor is a quick-service restaurant chain in the United States, and its marketing team wants to check the subscription group statuses for a randomized list of its users for SMS. Using the [`/subscription/status/get` endpoint]({{site.baseurl}}/api/endpoints/subscription_groups/get_list_user_subscription_group_status/), SandwichEmperor can accomplish this task for an individual user with the following example request:
 
@@ -213,9 +213,9 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/subscription/sta
 
 This endpoint also lists the subscription group statuses of a user for email and can be used to see the subscription group status for multiple users.
 
-## Check an HTML template for email messaging
+## Checking an HTML template for email messaging
 
-At WorkFriends, a social network for helping build connections between workers from different industries, its marketing team is responsible for sending email campaigns to its users. These campaigns often include reminders for local events, weekly newsletters, and profile activity highlights.
+At WorkFriends, a social network that helps build connections between workers from different industries, its marketing team is responsible for sending email campaigns to its users. These campaigns often include reminders for local events, weekly newsletters, and profile activity highlights.
 
 In this scenario, WorkFriends has historically used a singular HTML template with its legacy branding. In an effort to align its brand identity, WorkFriends wants to verify if there’s any helpful information in this HTML template to leverage before transitioning to a new template.
 
