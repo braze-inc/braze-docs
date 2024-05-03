@@ -1,5 +1,5 @@
 ---
-nav_title: Message Credits - Sigma
+nav_title: Message Credits - Lambda
 permalink: "/message_credits_lambda_k5gh/"
 hidden: true
 noindex: true
