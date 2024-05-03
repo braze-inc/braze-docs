@@ -1,7 +1,7 @@
 ---
 nav_title: Email Insights - Engagement by Device
 article_title: Email Insights - Engagement by Device
-permalink: "/email_insights_engagement/"
+permalink: "/engagement_by_device/"
 hidden: true
 description: "This article provides an overview of the Engagement by Device report for the Email Insights dashboard."
 ---
