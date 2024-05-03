@@ -16,4 +16,4 @@ The **Engagement by Device** report provides a breakdown of what devices your us
 
 The "Other" category includes any user string that cannot be identified as desktop, mobile, or tablet. For example, but is not limited to television, car, video game console, OTT, or similar. This may also include null or empty values.
 
-![]({% image_buster /assets/img/engagement_by_device_type.png %})
+![Enagement by Device report that shows the number of clicks for mobile, desktop, tablet, and other. The most number of clicks occurs on mobile devices.]({% image_buster /assets/img/engagement_by_device_type.png %})
