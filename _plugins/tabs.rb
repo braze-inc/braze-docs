@@ -50,7 +50,7 @@ module Tags
           content = content.strip # Strip again to avoid "\n"
           tabslug = @tab.gsub(' ', '-').gsub(/[^\w-]/, '')
 
-          '<div class="ab-tab-pane ' + tabslug + '_tab " data-tab="' + @tab + '">' + content + "</div>"
+          return '<div class="ab-tab-pane ' + tabslug + '_tab " data-tab="' + @tab + '">' + content + "</div>"
       end
     end
 
@@ -106,7 +106,7 @@ module Tags
           content = content.strip # Strip again to avoid "\n"
           tabslug = @tab.gsub(' ', '-').gsub(/[^\w-]/, '')
 
-          '<div class="ab-sub_tab-pane ' + tabslug + '_sub_tab " data-sub_tab="' + @tab + '">' + content + "</div>"
+          return '<div class="ab-sub_tab-pane ' + tabslug + '_sub_tab " data-sub_tab="' + @tab + '">' + content + "</div>"
       end
     end
 end
