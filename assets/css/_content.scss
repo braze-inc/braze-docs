@@ -311,6 +311,10 @@
 		}
 	}
 
+	@mixin heading-margin-top($size) {
+		margin-top: $size;
+	  }
+
 	h1,
 	h2,
 	h3,
@@ -321,12 +325,42 @@
 		margin: 40px 0 4px 0;
 	}
 
+	// Target the first h2 after h1, regardless of intervening elements
+	h1 ~ h2:not(:first-of-type) {
+    	margin-top: 4rem; // Reset to default if there's another h2 that is not the first
+	}
+
+	h1 ~ h2:first-of-type {
+  		margin-top: 2.5rem; // Reduced top margin for the first h2
+	}
+
+	// h1 is excluded here to avoid adding extra space above page titles
+	h3{
+  		@include heading-margin-top(3rem); 
+	}
+
+	// smaller heading levels have a reduced top margin
+	h4, h5, h6{
+  		@include heading-margin-top(2.25rem); 
+	}
+
+	// Directly adjacent headings should have reduced top margin
+	// Starting from h2 to handle cases where headings follow h1
+	h2 + h2, h2 + h3, h2 + h4, h2 + h5, h2 + h6,
+	h3 + h2, h3 + h3, h3 + h4, h3 + h5, h3 + h6,
+	h4 + h2, h4 + h3, h4 + h4, h4 + h5, h4 + h6,
+	h5 + h2, h5 + h3, h5 + h4, h5 + h5, h5 + h6,
+	h6 + h2, h6 + h3, h6 + h4, h6 + h5, h6 + h6 {
+		  @include heading-margin-top(1.5rem); // Smaller space for back to back headings
+	}
+
+
 	h1 {
 		font-size: 2.5rem;
 		font-family: $braze-medium;
-		line-height: 2rem;
-		padding-top: 1rem;
-		margin-bottom: 2rem;
+		line-height: 1.3;
+		padding-top: 1rem !important;
+		margin-bottom: 1rem;
 		color: $black-shark;
 	}
 
@@ -488,7 +522,7 @@ table {
 	margin-bottom: 20px;
 	border: 1px solid $grey-ghost !important;
 	> thead {
-		font-size: 16px;
+		font-size: 15px;
 		text-transform: none;
 		color: $black-shark;
 		font-family: $braze-medium;
@@ -497,7 +531,7 @@ table {
 	}
 	td {
 		border: 1px solid $grey-ghost !important;
-		font-size: 16px;
+		font-size: 15px;
 		word-break: break-all;
 		@media (max-width: $window-large-px) {
 			word-break: break-word;
