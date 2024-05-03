@@ -8,7 +8,7 @@ $toc_toggle_down: 'f0d7'; //"f103"; /* 103 Double Arrow Down */
 
 $toc_transition_time: 0.35s;
 
-$toc_font_size: 14px;
+$toc_font_size: 13px;
 $toc_color: rgba($braze-purple-dark,0.6);
 
 #toc_col {
@@ -35,7 +35,7 @@ $toc_color: rgba($braze-purple-dark,0.6);
     overflow-y: auto;
     overflow-x: hidden;
     font-size: $toc_font_size;
-    line-height: 18px;
+    line-height: 1.6;
     position: -webkit-sticky;
     position: sticky;
     top: $header_height; //$calc_offset_top;
