@@ -528,6 +528,11 @@ To sync purchase events, event name, `product_id`, `currency`, and `price` are r
 {% endtab %}
 {% endtabs %}
 
+### Avoiding timeouts for data warehouse queries
+
+To ensure optimal performance and avoid potential errors, we recommend that queries complete within one hour. If you encounter queries exceeding this timeframe, consider reviewing your data warehouse configuration. Optimizing resource allocated to your warehouse can help improve query execution speed. 
+
+
 ## Product limitations
 
 | Limitations            | Description                                                                                                                                                                        |
