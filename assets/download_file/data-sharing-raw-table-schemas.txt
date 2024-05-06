@@ -382,7 +382,7 @@ USERS_CANVAS_ENTRY_SHARED: when a user enters a Canvas
 	IN_CONTROL_GROUP (BOOLEAN)
 	SF_CREATED_AT (TIMESTAMP_LTZ(9))
 
-USERS_CANVAS_EXIT_PERFORMEDEVENT_SHARED: when a user exited a canvas because of performing an event
+USERS_CANVAS_EXIT_PERFORMEDEVENT_SHARED: when a user exited a Canvas because of performing an event
 	ID (VARCHAR(16777216))
 	USER_ID (VARCHAR(16777216))
 	EXTERNAL_USER_ID (VARCHAR(16777216))
