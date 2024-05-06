@@ -23,7 +23,7 @@ Starting August 7, 2023, this endpoint will merge data for all calls. This means
 
 Calling `/users/identify` combines the alias-only profile with the identified profile and removes the alias-only profile.
 
-Identifying a user requires an `external_id` to be included in the `aliases_to_identify` object. If there is no user with that `external_id`, the `external_id` will simply be added to the aliased user's record, and the user will be considered identified. You can add up to 50 user aliases per request. 
+Identifying a user requires an `external_id` to be included in the `aliases_to_identify` object. If there is no user with that `external_id`, the `external_id` will simply be added to the aliased user's record, and the user will be considered identified. Aliases on an alias-only profile are merged to the identified user profile. You can add up to 50 user aliases per request.
 
 Subsequently, you can associate multiple additional user aliases with a single `external_id`. 
 - When these subsequent associations are made with the `merge_behavior` field set to `none`, only the push tokens and message history associated with the user alias are retained; any attributes, events, or purchases will be "orphaned" and not available on the identified user. One workaround is to export the aliased user's data before identification using the [`/users/export/ids` endpoint]({{site.baseurl}}/api/endpoints/export/user_data/post_users_identifier/), then re-associate the attributes, events, and purchases with the identified user.
