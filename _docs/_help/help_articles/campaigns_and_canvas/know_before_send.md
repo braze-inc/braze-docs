@@ -8,7 +8,7 @@ alias: /know_before_send/
 
 # Know before you send: channels
 
-Launch your campaigns and Canvases with confidence! After visiting our [pre-launch guide](https://labplaybooks.braze.com/canvas-playbooks#/subpage/b2rj8), refer to this final list of checks or "gotchas" for Content Cards, email, in-app messages, push, and SMS.
+Launch your campaigns and Canvases with confidence! Refer to this final list of checks or "gotchas" for Content Cards, email, in-app messages, push, and SMS.
 
 {% alert note %}
 While we provide an extensive list of resources to reference pre-send, each channel has individual nuances that continue to grow as we evolve our products. The checks listed below are helpful suggestions, and we recommend thoroughly testing your campaigns and large sends before sending. 

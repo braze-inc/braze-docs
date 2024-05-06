@@ -44,13 +44,13 @@ guide_featured_title: "Section"
 guide_featured_list:
   - name: Example 1
     link: /docs/home/templates/landing_single/
-    fa_icon: fas fa-th-large
+    image: /assets/img/braze_icons/layout-grid-01.svg
   - name: Example 2
     link: /docs/home/templates/landing_multiple/
-    fa_icon: fas fa-th
+    image: /assets/img/braze_icons/layout-grid-02.svg
   - name: Example 3
     link: /docs/home/templates/landing_images/
-    fa_icon: fas fa-th-large
+    image: /assets/img/braze_icons/layout-grid-01.svg
 
 ---
 

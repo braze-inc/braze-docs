@@ -13,10 +13,10 @@ guide_featured_title: "Section articles"
 guide_featured_list:
 - name: Overview
   link: /docs/user_guide/message_building_by_channel/email/preference_center/overview/
-  fa_icon: fa-solid fa-list-check
+  image: /assets/img/braze_icons/list.svg
 - name: Drag-And-Drop Preference Center
   link: /docs/user_guide/message_building_by_channel/email/preference_center/dnd_preference_center/
-  fa_icon: fa-solid fa-envelope
+  image: /assets/img/braze_icons/mail-01.svg
 
 ---
 <br><br>

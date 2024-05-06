@@ -14,11 +14,11 @@ guide_featured_title: "Section Articles"
 guide_featured_list:
   - name: Fondamentaux de Canvas
     link: /docs/user_guide/engagement_tools/canvas/get_started/the_basics/
-    fa_icon: fas fa-list
+    image: /assets/img/braze_icons/list.svg
   - name: Aperçu Canvas
     link: /docs/user_guide/engagement_tools/canvas/get_started/canvas_outlines/
-    fa_icon: fas fa-code-branch
+    image: /assets/img/braze_icons/git-branch-01.svg
   - name: FAQ Canvas
     link: /docs/user_guide/engagement_tools/canvas/faqs/
-    fa_icon: fas fa-question
+    image: /assets/img/braze_icons/annotation-question.svg
 ---

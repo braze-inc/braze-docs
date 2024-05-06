@@ -13,28 +13,28 @@ guide_featured_title: "Section Articles"
 guide_featured_list:
 - name: Préférences de notification push détaillées
   link: /docs/user_guide/message_building_by_channel/push/best_practices/detailed_push_preferences/
-  fa_icon: fas fa-tasks
+  image: /assets/img/braze_icons/list.svg
 - name: Amorces de notifications push
   link: /docs/user_guide/message_building_by_channel/push/best_practices/push_primer_messages/
-  fa_icon: far fa-dot-circle
+  image: /assets/img/braze_icons/target-05.svg
 - name: Politiques de temporisation 
   link: /docs/user_guide/message_building_by_channel/push/best_practices/sunset_policies/
-  fa_icon: fas fa-sun
+  image: /assets/img/braze_icons/sun-setting-03.svg
 - name: Suivi de conversion
   link: /docs/user_guide/message_building_by_channel/push/best_practices/conversion_tracking/
-  fa_icon: fas fa-chart-line
+  image: /assets/img/braze_icons/line-chart-up-01.svg
 - name: Format de message
   link: /docs/user_guide/message_building_by_channel/push/best_practices/message_format/
-  fa_icon: fas fa-envelope
+  image: /assets/img/braze_icons/mail-01.svg
 - name: Activation et abonnement aux notifications push
   link: /docs/user_guide/message_building_by_channel/push/users_and_subscriptions/
-  fa_icon: fas fa-user-check
+  image: /assets/img/braze_icons/user-check-01.svg
 - name: "Envoyer des messages de test"
   link: /docs/user_guide/engagement_tools/campaigns/testing_and_more/sending_test_messages/
-  fa_icon: fas fa-envelope
+  image: /assets/img/braze_icons/mail-01.svg
 - name: "À savoir avant l’envoi"
   link: /docs/know_before_send/
-  fa_icon: fa-solid fa-paper-plane
+  image: /assets/img/braze_icons/send-01.svg
 
 ---
 

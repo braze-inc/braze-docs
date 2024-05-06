@@ -9,7 +9,7 @@ search_tag: Partenaire
 
 ---
 
-# [![Cours d’apprentissage Braze]({% image_buster /assets/img/bl_icon2.png %})](https://learning.braze.com/snowflake-secure-data-sharing-via-braze/){: style="float:right;width:120px;border:0;" class="noimgborder"}Snowflake
+# [![Cours d’apprentissage Braze]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/snowflake-secure-data-sharing-via-braze/){: style="float:right;width:120px;border:0;" class="noimgborder"}Snowflake
 
 > [Snowflake](https://docs.snowflake.net/manuals/user-guide/intro-key-concepts.html) est un entrepôt de données cloud SQL spécialement conçu et proposé sous forme de oftware-as-a-Service S (SaaS). Snowflake fournit un entrepôt de données plus rapide, plus facile à utiliser et bien plus flexible que les entrepôts de données traditionnels. Grâce à l’architecture unique et brevetée de Snowflake, vous pouvez facilement regrouper toutes vos données, effectuer des analyses rapides et tirer parti des données analysées pour tous vos utilisateurs.
 

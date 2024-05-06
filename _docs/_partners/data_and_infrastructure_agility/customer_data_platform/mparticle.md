@@ -8,10 +8,10 @@ description: "This landing page is home to all things mParticle, including integ
 guide_featured_list:
 - name: mParticle
   link: /docs/partners/data_and_infrastructure_agility/customer_data_platform/mparticle/mparticle
-  fa_icon: fas fa-user-circle
+  image: /assets/img/braze_icons/user-circle.svg
 - name: mParticle for Currents
   link: /docs/partners/data_and_infrastructure_agility/customer_data_platform/mparticle/mparticle_for_currents/
-  fa_icon: fas fa-warehouse
+  image: /assets/img/braze_icons/building-01.svg
 
 ---
 

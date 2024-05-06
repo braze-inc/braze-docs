@@ -16,23 +16,23 @@ guide_featured_title: "Section articles"
 guide_featured_list:
   - name: Sending Test Messages
     link: /docs/user_guide/engagement_tools/campaigns/testing_and_more/sending_test_messages/
-    fa_icon: fas fa-envelope
+    image: /assets/img/braze_icons/mail-01.svg
   - name: API-Triggered and Action-Based Campaigns
     link: /docs/user_guide/engagement_tools/campaigns/testing_and_more/triggered_action_based/
-    fa_icon: fas fa-columns
+    image: /assets/img/braze_icons/columns-01.svg
   - name: Multivariate and A/B testing
     link: /docs/user_guide/engagement_tools/testing/multivariant_testing/
-    fa_icon: fa-solid fa-vials
+    image: /assets/img/braze_icons/beaker-02.svg
 
 guide_menu_title: "Additional articles"
 guide_menu_list:
   - name: Campaign Analytics
     link: /docs/user_guide/data_and_analytics/reporting/campaign_analytics/
-    fa_icon: fas fa-chart-pie
+    image: /assets/img/braze_icons/pie-chart-01.svg
   - name: Retention Reports
     link: /docs/user_guide/data_and_analytics/reporting/retention_reports/
-    fa_icon: fas fa-chart-area
+    image: /assets/img/braze_icons/line-chart-down-01.svg
   - name: Funnel Reports
     link: /docs/user_guide/data_and_analytics/reporting/funnel_reports/
-    fa_icon: fas fa-filter
+    image: /assets/img/braze_icons/flag-02.svg
 ---

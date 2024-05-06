@@ -16,19 +16,19 @@ guide_featured_title: "Section Articles"
 guide_featured_list:
   - name: Bibliothèque multimédia
     link: /docs/user_guide/engagement_tools/templates_and_media/media_library/
-    fa_icon: fas fa-book-open
+    image: /assets/img/braze_icons/book-closed.svg
   - name: Blocs de contenu
     link: /docs/user_guide/engagement_tools/templates_and_media/content_blocks/
-    fa_icon: fas fa-columns
+    image: /assets/img/braze_icons/columns-01.svg
   - name: Dupliquer des modèles
     link: /docs/user_guide/engagement_tools/templates_and_media/duplicate/
-    fa_icon: fas fa-copy
+    image: /assets/img/braze_icons/copy-04.svg
   - name: Archiver des modèles
     link: /docs/user_guide/engagement_tools/templates_and_media/archive/
-    fa_icon: fas fa-archive
+    image: /assets/img/braze_icons/archive.svg
   - name: Foire aux questions
     link: /docs/user_guide/engagement_tools/templates_and_media/faqs/
-    fa_icon: fas fa-question
+    image: /assets/img/braze_icons/annotation-question.svg
 ---
 
 ## À propos des modèles et des médias

@@ -13,16 +13,16 @@ guide_featured_title: "Section Articles"
 guide_featured_list:
 - name: À propos des indicateurs de fonctionnalité
   link: /docs/developer_guide/platform_wide/feature_flags/about/
-  fa_icon: fas fa-check
+  image: /assets/img/braze_icons/check-square-broken.svg
 - name: Créer un indicateur de fonctionnalité
   link: /docs/developer_guide/platform_wide/feature_flags/create/
-  fa_icon: fas fa-columns
+  image: /assets/img/braze_icons/columns-01.svg
 - name: Exemples de cas d’utilisation
   link: /docs/developer_guide/platform_wide/feature_flags/use_cases/
-  fa_icon: fas fa-paint-brush
+  image: /assets/img/braze_icons/brush-02.svg
 - name: Foire aux questions
   link: /docs/developer_guide/platform_wide/feature_flags/faq/
-  fa_icon: fas fa-question
+  image: /assets/img/braze_icons/annotation-question.svg
 ---
 
 <br><br>

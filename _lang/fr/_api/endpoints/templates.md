@@ -15,31 +15,31 @@ guide_featured_title: "Endpoints de modèle d’e-mail"
 guide_featured_list:
   - name: "GET : Répertorier les modèles d’e-mail disponibles"
     link: /docs/api/endpoints/templates/email_templates/get_list_email_templates/
-    fa_icon: fas fa-envelope
+    image: /assets/img/braze_icons/mail-01.svg
   - name: "GET : Voir les informations sur les modèles d’e-mail"
     link: /docs/api/endpoints/templates/email_templates/get_see_email_template_information/
-    fa_icon: fas fa-envelope-square
+    image: /assets/img/braze_icons/copy-04.svg
   - name: "POST : Créer un modèle d’e-mail"
     link: /docs/api/endpoints/templates/email_templates/post_create_email_template/
-    fa_icon: fas fa-envelope
+    image: /assets/img/braze_icons/mail-01.svg
   - name: "POST : Mettre à jour le modèle d’e-mail"
     link: /docs/api/endpoints/templates/email_templates/post_update_email_template/
-    fa_icon: fas fa-envelope-open
+    image: /assets/img/braze_icons/mail-04.svg
 
 guide_menu_title: "Endpoints de modèle de bloc de contenu"
 guide_menu_list:
   - name: "GET : Répertorier les blocs de contenu disponibles"
     link: /docs/api/endpoints/templates/content_blocks_templates/get_list_email_content_blocks/
-    fa_icon: fas fa-envelope
+    image: /assets/img/braze_icons/mail-01.svg
   - name: "GET : Voir les informations disponibles sur le bloc de contenu"
     link: /docs/api/endpoints/templates/content_blocks_templates/get_see_email_content_blocks_information/
-    fa_icon: fas fa-envelope-square
+    image: /assets/img/braze_icons/copy-04.svg
   - name: "POST : Créer des blocs de contenu"
     link: /docs/api/endpoints/templates/content_blocks_templates/post_create_email_content_block/
-    fa_icon: fas fa-th-large
+    image: /assets/img/braze_icons/layout-grid-01.svg
   - name: "POST : Mettre à jour le bloc de contenu"
     link: /docs/api/endpoints/templates/content_blocks_templates/post_update_content_block/
-    fa_icon: fas fa-envelope-open
+    image: /assets/img/braze_icons/mail-04.svg
 ---
 {% comment %}
 rediriger depuis email_templates.md

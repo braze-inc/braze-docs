@@ -15,8 +15,8 @@ guide_featured_title: "Endpoints SMS de Braze"
 guide_featured_list:
   - name: "GET : Requête des numéros de téléphone non valides"
     link: /docs/api/endpoints/sms/get_query_invalid_numbers/
-    fa_icon: fas fa-clipboard-list
+    image: /assets/img/braze_icons/list.svg
   - name: "POST : Supprimer les numéros de téléphone non valides"
     link: /docs/api/endpoints/sms/post_remove_invalid_numbers/
-    fa_icon: fas fa-phone-volume
+    image: /assets/img/braze_icons/phone.svg
 ---

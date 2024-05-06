@@ -12,10 +12,10 @@ guide_featured_title: "Features"
 guide_featured_list:
 - name: Predictive Churn
   link: /docs/user_guide/sage_ai/predictive_suite/predictive_churn/
-  image: /assets/img/icons/user_thinking.svg
+  image: /assets/img/braze_icons/lightbulb-02.svg
 - name: Predictive Events
   link: /docs/user_guide/sage_ai/predictive_suite/predictive_events/
-  image: /assets/img/icons/prediction_crystal_ball.svg
+  image: /assets/img/braze_icons/stars-01.svg
 ---
 
 {% alert tip %}

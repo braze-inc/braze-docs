@@ -17,28 +17,29 @@ guide_featured_title: "Section articles"
 guide_featured_list:
   - name: Setting Delegates
     link: /docs/developer_guide/platform_integration_guides/ios/in-app_messaging/customization/setting_delegates/
-    fa_icon: fa fa-cogs
+    image: /assets/img/braze_icons/settings-01.svg
   - name: Customizing Orientation
     link: /docs/developer_guide/platform_integration_guides/ios/in-app_messaging/customization/customizing_orientation/
-    fa_icon: fa fa-arrows
+    image: /assets/img/braze_icons/arrow-square-right.svg
   - name: Custom Display Handling
     link: /docs/developer_guide/platform_integration_guides/ios/in-app_messaging/customization/handing_in_app_display/
-    fa_icon: fa fa-cog
+    image: /assets/img/braze_icons/settings-01.svg
   - name: Custom On-Click Behavior
     link: /docs/developer_guide/platform_integration_guides/ios/in-app_messaging/customization/behavior_on_click/
-    fa_icon: fa fa-mouse-pointer
+    image: /assets/img/braze_icons/navigation-pointer-01.svg
   - name: Custom View Controller
     link: /docs/developer_guide/platform_integration_guides/ios/in-app_messaging/customization/custom_view_controller/
-    fa_icon: fa fa-eye
+    image: /assets/img/braze_icons/eye.svg
   - name: Custom Triggering
     link: /docs/developer_guide/platform_integration_guides/ios/in-app_messaging/customization/custom_triggering/
-    fa_icon: fa fa-check
+    image: /assets/img/braze_icons/check-square-broken.svg
   - name:  Modal Dismissal
     link: /docs/developer_guide/platform_integration_guides/ios/in-app_messaging/customization/modal_dismissal/
-    fa_icon: fa fa-times
+    image: /assets/img/braze_icons/message-x-circle.svg
   - name: Key-Value Pairs
     link: /docs/developer_guide/platform_integration_guides/ios/in-app_messaging/customization/key_value_pairs/
-    fa_icon: fa fa-code
+    image: /assets/img/braze_icons/code-square-01.svg
+
 
 
 noindex: true
