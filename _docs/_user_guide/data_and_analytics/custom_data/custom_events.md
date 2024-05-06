@@ -206,6 +206,22 @@ For Canvas Flow messaging, `canvas_entry_properties` can be used in Liquid in an
 For example, consider the following request: `\"canvas_entry_properties\" : {\"product_name\" : \"shoes\", \"product_price\" : 79.99}`. You could add the word "shoes" to a message with the Liquid `{{canvas_entry_properties.${product_name}}}`.
 {% endraw %}
 
+#### Example
+
+Let's say you're a department store that wants to remind customers of an ending sale. You could send messages based on the customers' last purchases by referencing {% raw %}`{{canvas_entry_properties.${last_product_name}}}`{% endraw %} in a Message step.
+
+{% raw %}
+```markdown
+{% if {{canvas_entry_properties.${last_product_name}}} == "shoes" %}
+Time is ticking! Our Summer Sale concludes tomorrow, offering you up to 30% off on every pair in stock, from water shoes to athletic sneakers. Don’t miss this chance to step up your shoe game for the season!
+{% elseif {{canvas_entry_properties.${last_product_name}}} == "shirts" %}
+Here's a friendly reminder that our Summer Sale is drawing to a close! Don’t miss out on saving up to 40% on our stylish range of tops, including blouses and blazers. Elevate your wardrobe with these must-have pieces before the sale ends tomorrow.
+{% else %}
+Our Summer Sale wraps up tomorrow! Save up to 40% on everything you need for your perfect beach getaway, from stylish beachwear to durable luggage. Make sure to grab these essentials before they’re gone!
+{% endif %}
+```
+{% endraw %}
+
 {% details Expand for original Canvas editor %}
 
 As of February 28, 2023, you can no longer create or duplicate Canvases using the original editor. This section is available for reference only.
