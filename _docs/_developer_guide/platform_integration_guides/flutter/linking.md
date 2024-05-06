@@ -11,7 +11,7 @@ description: "This article covers how to implement deep linking for your Flutter
 
 > Deep linking is a way of providing a link that launches an app, shows specific content, or takes some specific action. Native code can forward deep links to your app's Flutter layer for handling. If you're looking to implement deep links in your iOS and/or Android Flutter app for the first time, follow these steps.
 
-You can see [an example app][5] with all of these steps implemented in our public repository. For general information on what deep links are, refer to our [FAQ article][1].
+For general information on what deep links are, refer to our [FAQ article][1]. You can see [an example app][5] with all of these steps implemented in our public repository.
 
 ## Step 1: Native deep link handling
 
@@ -23,7 +23,7 @@ If you intend to use Flutter's default deep link handling, you will need to modi
 
 {% tabs %}
 {% tab iOS %}
-Using Xcode to edit your `Info.plist` file:
+Using Xcode, edit your `Info.plist` file:
 1. Add a new key-value pair.
 2. Set the key to `FlutterDeepLinkingEnabled`.
 3. Set the type to `Boolean`.
