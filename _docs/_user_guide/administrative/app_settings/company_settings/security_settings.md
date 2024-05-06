@@ -55,11 +55,11 @@ Use the field shown to allowlist specific IP addresses and subnets from which us
 
 ## Two-factor authentication
 
-Two-factor authentication adds a second level of identity verification to an account log, making it more secure than just a username and password.
+Two-factor authentication is required for all Braze users. It adds a second level of identity verification to an account log, making it more secure than just a username and password. If your dashboard cannot support two-factor authentication, contact your customer success manager. 
 
 When two-factor authentication is turned on, in addition to entering a password, users will need to enter a verification code when logging in to their Braze account. The code can be sent via an authenticator app, email, or SMS.
 
-Two-factor authentication can be optional for admins, and enabled for non-admin users by default. However, when turned on, users who fail to set up their two-factor authentication will be locked out of their Braze account. Braze account users also can set up two-factor authentication on their own in **Account Settings**, even if not required by the administrator.
+Users who fail to set up their two-factor authentication will be locked out of their Braze account. Braze account users also can set up two-factor authentication on their own in **Account Settings**, even if not required by the administrator.
 
 ### Remember me
 
@@ -80,11 +80,6 @@ Users experiencing issues logging in via two-factor authentication can reach out
 3. Select **Reset** under **Two Factor Authentication**.
 
 A reset can solve common authentication issues such as trouble with authenticator apps, email verification not sending, login failure due to SMS outages or user error, and more.
-
-#### Two-factor authentication enforcement
-
-- If two-factor authentication is not enforced at the company level, when reset, the user will log in normally and need to go to **Account Settings** to turn on and set up two-factor authentication.
-- If two-factor authentication is enforced at the company level, the next time the user logs in, they’ll be asked to set up their two-factor authentication.
 
 ## Downloading a security event report
 
