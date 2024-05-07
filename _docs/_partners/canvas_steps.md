@@ -13,31 +13,31 @@ guide_featured_title: ""
 guide_featured_list:
   - name: "Overview"
     link: /docs/partners/canvas_steps/overview
-    fa_icon: fa-solid fa-rotate
+    image: /assets/img/braze_icons/refresh-ccw-02.svg
   - name: "Frequently Asked Questions"
     link: /docs/partners/canvas_steps/faq
-    fa_icon: fa-solid fa-question
+    image: /assets/img/braze_icons/annotation-question.svg
 
 guide_menu_title: "Available sync partners"
 guide_menu_list:
   - name: Facebook Audience Sync
     link: /docs/partners/canvas_steps/facebook_audience_sync
-    fa_icon: fa-brands fa-facebook
+    image: /assets/img/braze_icons/facebook.svg
   - name: Google Audience Sync
     link: /docs/partners/canvas_steps/google_audience_sync
-    fa_icon: fa-brands fa-google
+    image: /assets/img/braze_icons/google.svg
   - name: Criteo Audience Sync
     link: /docs/partners/canvas_steps/criteo_audience_sync
-    fa_icon: fa-brands fa-bolt-lightning
+    image: /assets/img/braze_icons/lightning-01.svg
   - name: Pinterest Audience Sync
     link: /docs/partners/canvas_steps/pinterest_audience_sync
-    fa_icon: fa-brands fa-pinterest
+    image: /assets/img/braze_icons/pinterest.svg
   - name: Snapchat Audience Sync
     link: /docs/partners/canvas_steps/snapchat_audience_sync
-    fa_icon: fa-brands fa-snapchat
+    image: /assets/img/braze_icons/snapchat.svg
   - name: TikTok Audience Sync
     link: /docs/partners/canvas_steps/tiktok_audience_sync
-    fa_icon: fa-brands fa-tiktok
+    image: /assets/img/braze_icons/tiktok.svg
 
 ---
 

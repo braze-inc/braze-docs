@@ -13,15 +13,15 @@ guide_featured_title: "Section Articles"
 guide_featured_list:
   - name: Suivi du pixel d’ouverture et des clics dans les e-mails
     link: /docs/user_guide/data_and_analytics/tracking/email_tracking/
-    fa_icon: fas fa-user
+    image: /assets/img/braze_icons/users-01.svg
   - name: Suivi de désinstallation
     link: /docs/user_guide/data_and_analytics/tracking/uninstall_tracking/
-    fa_icon: fas fa-undo
+    image: /assets/img/braze_icons/refresh-ccw-01.svg
   - name: Ouvertures influencées
     link: /docs/user_guide/data_and_analytics/tracking/influenced_opens/
-    fa_icon: far fa-dot-circle
+    image: /assets/img/braze_icons/target-05.svg
   - name: Suivi analytique des segments
     link: /docs/user_guide/data_and_analytics/tracking/segment_analytics_tracking/
-    fa_icon: fas fa-chart-bar
+    image: /assets/img/braze_icons/bar-chart-01.svg
     
 ---

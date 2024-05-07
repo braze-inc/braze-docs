@@ -14,16 +14,16 @@ guide_featured_title: "Basic integration options"
 guide_featured_list:
 - name: Swift Package Manager (SPM)
   link: /docs/developer_guide/platform_integration_guides/swift/initial_sdk_setup/installation_methods/swift_package_manager/
-  image: /assets/img/swift.png
+  image: /assets/img/braze_icons/swift.svg
 - name: CocoaPods
   link: /docs/developer_guide/platform_integration_guides/swift/initial_sdk_setup/installation_methods/cocoapods/
   image: /assets/img/cocoapods.png
 - name: Manual Integration
   link: /docs/developer_guide/platform_integration_guides/swift/initial_sdk_setup/installation_methods/manual_integration/
-  fa_icon: fas fa-toolbox
+  image: /assets/img/braze_icons/tool-01.svg
 - name: "Completing the Integration"
   link: /docs/developer_guide/platform_integration_guides/swift/initial_sdk_setup/completing_integration/
-  fa_icon: fas fa-flag-checkered
+  image: /assets/img/braze_icons/flag-05.svg
 
 ---
 

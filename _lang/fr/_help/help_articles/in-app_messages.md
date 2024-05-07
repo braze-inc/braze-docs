@@ -13,10 +13,10 @@ guide_menu_title: ""
 guide_menu_list:
   - name: Peu d’impressions des messages in-app
     link: /docs/help/help_articles/in-app_messages/in-app_message_impressions_appear_lower_than_expected/
-    fa_icon: fas fa-low-vision
+    image: /assets/img/braze_icons/eye.svg
   - name: Messages In-App non affichés
     link: /docs/help/help_articles/in-app_messages/in-app_messages_not_displaying/
-    fa_icon: fas fa-comment-slash
+    
 
 
 ---

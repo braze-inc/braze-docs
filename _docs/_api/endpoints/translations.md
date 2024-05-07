@@ -13,24 +13,24 @@ guide_top_text: "Use the Braze translation endpoints to manage and update transl
 
 guide_featured_title: ""
 guide_featured_list:
-  - name: "GET: Translate Multiple Campaigns"
+  - name: "GET: View Translations for a Campaign"
     link: /docs/api/endpoints/translations/get_bulk_translations_campaigns/
-    fa_icon: fas fa-list-ul
-  - name: "GET: Translate Multiple Canvases"
+    image: /assets/img/braze_icons/message-plus-square.svg
+  - name: "GET: View Translations for a Canvas"
     link: /docs/api/endpoints/translations/get_bulk_translations_canvases/
-    fa_icon: fas fa-list-ul
-  - name: "GET: Translate A Campaign"
+    image: /assets/img/braze_icons/message-plus-square.svg
+  - name: "GET: View Translation for a Campaign"
     link: /docs/api/endpoints/translations/get_translation_campaign/
-    fa_icon: fas fa-list-ul
-  - name: "GET: Translate A Canvas"
+    image: /assets/img/braze_icons/message-plus-square.svg
+  - name: "GET: View Translation for a Canvas"
     link: /docs/api/endpoints/translations/get_translation_canvas/
-    fa_icon: fas fa-list-ul
+    image: /assets/img/braze_icons/message-plus-square.svg
   - name: "PUT: Update Translation in a Campaign"
     link: /docs/api/endpoints/translations/update_translation_campaign/
-    fa_icon: fas fa-user
+    image: /assets/img/braze_icons/target-04.svg
   - name: "PUT: Update Translation in a Canvas"
     link: /docs/api/endpoints/translations/update_translations_canvas/
-    fa_icon: fas fa-user
+    image: /assets/img/braze_icons/target-04.svg
 ---
 
 {% alert important %}

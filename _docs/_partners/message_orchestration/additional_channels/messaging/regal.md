@@ -199,7 +199,7 @@ This section describes how to get Regal reporting events like `SMS.sent` and `ca
 
 ### Step 1: Create a Data Transformation in Braze
 
-{% alert note %}
+{% alert important %}
 Data transformation is currently in early access. Contact your Braze customer success manager if you are interested in participating in the early access.
 {% endalert %}
 

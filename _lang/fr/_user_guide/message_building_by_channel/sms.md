@@ -15,57 +15,57 @@ guide_featured_title: "SMS"
 guide_featured_list:
 - name: "À propos des SMS"
   link: /docs/user_guide/message_building_by_channel/sms/about_sms/
-  fa_icon: fas fa-check
+  image: /assets/img/braze_icons/check-square-broken.svg
 - name: "Lois et réglementations SMS"
   link: /docs/user_guide/message_building_by_channel/sms/sms_laws_and_regulations/
-  fa_icon: fas fa-gavel
+  image: /assets/img/braze_icons/briefcase-02.svg
 - name: "Groupe d’abonnement SMS"
   link: /docs/user_guide/message_building_by_channel/sms/sms_subscription_group/
-  fa_icon: fas fa-table
+  image: /assets/img/braze_icons/table.svg
 - name: "Créer un SMS"
   link: /docs/user_guide/message_building_by_channel/sms/create/
-  fa_icon: fas fa-table
+  image: /assets/img/braze_icons/table.svg
 - name: "Raccourcissement de lien"
   link: /docs/user_guide/message_building_by_channel/sms/campaign/link_shortening/
-  fa_icon: fa-solid fa-link
+  image: /assets/img/braze_icons/link-03.svg
 - name: "Reciblage utilisateur"
   link: /docs/user_guide/message_building_by_channel/sms/campaign/retargeting/
-  fa_icon: fa-solid fa-user
+  image: /assets/img/braze_icons/user-01.svg
 - name: "Texte de message et calculatrice de segments"
   link: /docs/user_guide/message_building_by_channel/sms/campaign/segments/
-  fa_icon: fa-solid fa-calculator
+  image: /assets/img/braze_icons/calculator.svg
 - name: "Traitement des mots-clés et cas d’utilisation"
   link: /docs/user_guide/message_building_by_channel/sms/keywords/
-  fa_icon: fas fa-key
+  image: /assets/img/braze_icons/key-01.svg
 - name: "Numéro de téléphone de l’utilisateur"
   link: /docs/user_guide/message_building_by_channel/sms/phone_numbers/user_phone_numbers/
-  fa_icon: fas fa-phone
+  image: /assets/img/braze_icons/phone-02.svg
 - name: "Envoyer des numéros de téléphone"
   link: /docs/user_guide/message_building_by_channel/sms/phone_numbers/sending_phone_numbers/
-  fa_icon: fas fa-phone-square
+  image: /assets/img/braze_icons/phone-02.svg
 - name: "Rapports SMS"
   link: /docs/user_guide/message_building_by_channel/sms/sms_campaign_analytics/
-  fa_icon: fas fa-mobile-alt
+  image: /assets/img/braze_icons/phone-02.svg
 - name: "FAQ SMS"
   link: /docs/user_guide/message_building_by_channel/sms/faqs/
-  fa_icon: fas fa-question
+  image: /assets/img/braze_icons/annotation-question.svg
 
 
 guide_menu_title: "MMS"
 guide_menu_list:
 - name: "À propos des MMS"
   link: /docs/user_guide/message_building_by_channel/sms/mms/about_mms/
-  fa_icon: fas fa-paint-brush
+  image: /assets/img/braze_icons/brush-02.svg
 - name: "Codes courts et longs MMS"
   link: /docs/user_guide/message_building_by_channel/sms/mms/mms_short_long_codes/
-  fa_icon: fas fa-phone-square
+  image: /assets/img/braze_icons/phone-02.svg
 - name: "Créer une campagne par MMS"
   link: /docs/user_guide/message_building_by_channel/sms/mms/create/
-  fa_icon: fas fa-table
+  image: /assets/img/braze_icons/table.svg
 - name: "Cartes de visite"
   link: /docs/user_guide/message_building_by_channel/sms/mms/contact_card/
-  fa_icon: fas fa-user-circle
+  image: /assets/img/braze_icons/user-circle.svg
 - name: "FAQ MMS"
   link: /docs/user_guide/message_building_by_channel/sms/mms/faqs/
-  fa_icon: fas fa-question
+  image: /assets/img/braze_icons/annotation-question.svg
 ---

@@ -9,9 +9,9 @@ description: "This landing page is home to all things Treasure Data including in
 guide_featured_list:
 - name: Treasure Data
   link: /docs/partners/data_and_infrastructure_agility/customer_data_platform/treasure_data/treasure_data/
-  fa_icon: fas fa-user-circle
+  image: /assets/img/braze_icons/user-circle.svg
 - name: Treasure Data for Currents
   link: /docs/partners/data_and_infrastructure_agility/customer_data_platform/treasure_data/treasure_data_for_currents/
-  fa_icon: fas fa-warehouse
+  image: /assets/img/braze_icons/building-01.svg
 ---
 <br>

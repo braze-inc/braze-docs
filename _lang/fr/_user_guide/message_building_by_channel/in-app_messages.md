@@ -14,42 +14,42 @@ guide_featured_title: "Articles courants"
 guide_featured_list:
 - name: "À propos des messages In-App"
   link: /docs/user_guide/message_building_by_channel/in-app_messages/about/
-  fa_icon: fas fa-check
+  image: /assets/img/braze_icons/check-square-broken.svg
 - name: "Créer un message in-app"
   link: /docs/user_guide/message_building_by_channel/in-app_messages/create/
-  fa_icon: fas fa-mobile-alt
+  image: /assets/img/braze_icons/phone-02.svg
 - name: "Éditeur Drag & Drop"
   link: /docs/user_guide/message_building_by_channel/in-app_messages/drag_and_drop
-  fa_icon: fas fa-paint-brush
+  image: /assets/img/braze_icons/brush-02.svg
 - name: "Détails créatifs"
   link: /docs/user_guide/message_building_by_channel/in-app_messages/creative_details/
-  fa_icon: fas fa-paint-brush
+  image: /assets/img/braze_icons/brush-02.svg
 - name: "Personnaliser"
   link: /docs/user_guide/message_building_by_channel/in-app_messages/customize/
-  fa_icon: fas fa-cog
+  image: /assets/img/braze_icons/settings-01.svg
 
 guide_menu_title: "Autres articles"
 guide_menu_list:
 - name: "Test"
   link: /docs/user_guide/message_building_by_channel/in-app_messages/testing/
-  fa_icon: fas fa-vial
+  image: /assets/img/braze_icons/beaker-02.svg
 - name: "Reporting"
   link: /docs/user_guide/message_building_by_channel/in-app_messages/reporting/
-  fa_icon: fas fa-chart-bar
+  image: /assets/img/braze_icons/bar-chart-01.svg
 - name: "Mode sombre"
   link: /docs/user_guide/message_building_by_channel/in-app_messages/dark-mode/
-  fa_icon: fas fa-mobile
+  image: /assets/img/braze_icons/phone-02.svg
 - name: "Invitation à l’évaluation de l’App Store"
   link: /docs/user_guide/message_building_by_channel/in-app_messages/ios_app_rating_prompt/
-  fa_icon: fas fa-star
+  image: /assets/img/braze_icons/star-01.svg
 - name: "Enquête simple"
   link: /docs/user_guide/message_building_by_channel/in-app_messages/templates/simple_survey/
-  fa_icon: fas fa-poll
+  image: /assets/img/braze_icons/bar-chart-07.svg
 - name: "Bonnes pratiques"
   link: /docs/user_guide/message_building_by_channel/in-app_messages/best_practices
-  fa_icon: fas fa-check-square
+  image: /assets/img/braze_icons/check-square-broken.svg
 - name: "FAQ"
   link: /docs/user_guide/message_building_by_channel/in-app_messages/faq/
-  fa_icon: fas fa-question
+  image: /assets/img/braze_icons/annotation-question.svg
 ---
 <br><br>

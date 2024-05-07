@@ -15,31 +15,31 @@ guide_featured_title: "Section articles"
 guide_featured_list:
   - name: Message Step
     link: /docs/user_guide/engagement_tools/canvas/canvas_components/message_step/
-    fa_icon: fas fa-comment-alt
+    image: /assets/img/braze_icons/message-square-02.svg
   - name: Delay Step
     link: /docs/user_guide/engagement_tools/canvas/canvas_components/delay_step/
-    fa_icon: fas fa-stopwatch
+    image: /assets/img/braze_icons/clock-stopwatch.svg
   - name: Decision Split Step
     link: /docs/user_guide/engagement_tools/canvas/canvas_components/decision_split/
-    fa_icon: fas fa-random
+    image: /assets/img/braze_icons/dataflow-04.svg
   - name: Audience Paths Step
     link: /docs/user_guide/engagement_tools/canvas/canvas_components/audience_paths/
-    fa_icon: fa fa-users 
+    image: /assets/img/braze_icons/users-01.svg 
   - name: Action Paths Step  
     link: /docs/user_guide/engagement_tools/canvas/canvas_components/action_paths/
-    fa_icon: fa fa-bolt
+    image: /assets/img/braze_icons/zap.svg
   - name: Experiment Paths Step
     link: /docs/user_guide/engagement_tools/canvas/canvas_components/experiment_step/
-    fa_icon: fas fa-columns
+    image: /assets/img/braze_icons/columns-01.svg
   - name: User Update Step
     link: /docs/user_guide/engagement_tools/canvas/canvas_components/user_update/
-    fa_icon: fas fa-user-check
+    image: /assets/img/braze_icons/user-check-01.svg
   - name: Feature Flags in Canvas
     link: /docs/developer_guide/platform_wide/feature_flags/canvas/
-    fa_icon: fas fa-project-diagram
+    image: /assets/img/braze_icons/dataflow-03.svg
   - name: Canvas Audience Sync
     link: /docs/partners/canvas_steps/
-    fa_icon: fa-solid fa-rotate
+    image: /assets/img/braze_icons/refresh-ccw-02.svg
 ---
 
 ## About Canvas components
@@ -51,8 +51,6 @@ As of February 28, 2023, you will no longer be able to create or duplicate Canva
 {% endalert %}
 
 ### Customizing user journeys
-
-![]({% image_buster /assets/img/canvas_intro/canvas_intro.gif %}){: style="float:right;max-width:55%;margin-left:15px;"}
 
 Use [Action Paths][1] to split your user journey based on actions and engagement events such as making a purchase. If you want to filter through and target your audiences, [Audience Paths][2] help simplify your user targeting by sending your users down different Canvas paths based on audience criteria.
 

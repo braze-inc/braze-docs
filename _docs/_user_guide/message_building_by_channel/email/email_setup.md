@@ -13,28 +13,28 @@ guide_featured_title: "Section articles"
 guide_featured_list:
 - name: "Setting Up IPs and Domains"
   link: /docs/user_guide/message_building_by_channel/email/email_setup/setting_up_ips_and_domains/
-  fa_icon: far fa-dot-circle
+  image: /assets/img/braze_icons/target-05.svg
 - name: "IP Warming"
   link: /docs/user_guide/message_building_by_channel/email/email_setup/ip_warming/
-  fa_icon: fas fa-exclamation
+  image: /assets/img/braze_icons/annotation-alert.svg
 - name: "Email Validation"
   link: /docs/user_guide/message_building_by_channel/email/email_setup/email_validation/
-  fa_icon: fas fa-check-square
+  image: /assets/img/braze_icons/check-square-broken.svg
 - name: "Email Authentication"
   link: /docs/user_guide/message_building_by_channel/email/email_setup/authentication/
-  fa_icon: fas fa-user-shield
+  image: /assets/img/braze_icons/user-square.svg
 - name: "Importing Your Email List"
   link: /docs/user_guide/message_building_by_channel/email/email_setup/import_your_email_list/
-  fa_icon: fas fa-list
+  image: /assets/img/braze_icons/list.svg
 - name: "SSL Overview"
   link: /docs/user_guide/message_building_by_channel/email/email_setup/ssl/
-  fa_icon: fas fa-mouse-pointer
+  image: /assets/img/braze_icons/navigation-pointer-01.svg
 - name: "Consent and Address Collection"
   link: /docs/user_guide/message_building_by_channel/email/email_setup/consent_and_address_collection/
-  fa_icon: fas fa-address-book
+  image: /assets/img/braze_icons/book-closed.svg
 - name: "Deliverability Pitfalls and Spam Traps"
   link: /docs/user_guide/message_building_by_channel/email/email_setup/deliverability_pitfalls_and_spam_traps/
-  fa_icon: fas fa-exclamation-triangle
+  image: /assets/img/braze_icons/alert-triangle.svg
 ---
 
 ## Requirements
