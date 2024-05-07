@@ -35,7 +35,7 @@ There may be a slight lag between when Braze's email with the export gets sent, 
 
 ### Apostrophes added to fields
 
-Braze will automatically prepend an appostrophe to a field in the CSV output if the field begins with any of the following characters:
+Braze will automatically prepend an appostrophe to a field in the CSV export if the field begins with any of the following characters:
 
 - -
 - =
