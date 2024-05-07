@@ -42,7 +42,7 @@ Customization of your Braze messaging campaigns based on the churn risk of the r
 
 ### Step 1: Share the event stream of your app
 
-To start running churn prediction on your app audience, Adikteev will need you to turn on event postbacks from your mobile measurement platform. Follow the guidelines on ![Adikteev support website](https://help.adikteev.com/hc/en-us/sections/8185123408914-Data-stream-activation) to set this up.
+To start running churn prediction on your app audience, Adikteev will need you to turn on event postbacks from your mobile measurement platform. Follow the guidelines on [Adikteev support website](https://help.adikteev.com/hc/en-us/sections/8185123408914-Data-stream-activation) to set this up.
 
 ### Step 2: Create your Braze REST API Key
 
