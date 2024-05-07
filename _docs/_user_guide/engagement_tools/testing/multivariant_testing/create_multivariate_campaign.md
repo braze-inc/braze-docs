@@ -31,7 +31,7 @@ For some ideas on how to get started differentiating your variants, refer to [Ti
 
 Scheduling your multivariate campaign works the same as scheduling any other Braze campaign. All standard [delivery types][4] are available.
 
-Once a multivariate test begins, you can't make changes to the campaign. If you change the paramaters, such as the subject line or HTML body, Braze will consider the experiment compromised and will immediately disable the experiment.
+Once a multivariate test begins, you can't make changes to the campaign. If you change the parameters, such as the subject line or HTML body, Braze will consider the experiment compromised and will immediately disable the experiment.
 
 {% alert important %}
 If you want to use an [optimization]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/optimizations/) (available for select channels), schedule your campaign to deliver once. Optimizations aren't available for campaigns that repeat or have re-eligibility turned on.
