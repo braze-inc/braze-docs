@@ -102,6 +102,10 @@ If the user receives two messages through two channels, only one code will be sh
 If there are no remaining promotion codes available when sending test or live messages from a campaign that pulls in promo codes, the message will not send.
 {% endalert %}
 
+#### Sending test messages with promotion codes
+
+Test sends and seed group email sends will use up promo codes unless requested otherwise. Contact your Braze account manager to update this feature behavior so promo codes aren't used during test sends and seed group email sends.
+
 ## Determining how many codes have been used
 
 You can find the remaining code count in the **Remaining** column of the promotion code list, located on the **Promotion Codes** page.
