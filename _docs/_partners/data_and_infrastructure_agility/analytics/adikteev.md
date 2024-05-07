@@ -10,16 +10,16 @@ search_tag: Partner
 
 # Adikteev Churn Prediction
 
-> [Adikteev](https://www.adikteev.com/churn-prediction), is a user retention engine combining churn prediction with full service app retargeting. 
+> [Adikteev](https://www.adikteev.com/churn-prediction) is a user-retention engine that combines churn prediction with full-service app retargeting.
 
-The Braze and Adikteev integration allows you to boost user retention, by leveraging Adikteev's churn prediction technology within Braze CRM campaigns to target high-risk user segments in priority.
+The Braze and Adikteev integration allows you to boost user retention by leveraging Adikteev's churn prediction technology within Braze CRM campaigns to target high-risk user segments in priority.
 
 ## Prerequisites
 
 | Requirement | Description |
 | --- | --- |
 | Adikteev account | An Adikteev account is required to take advantage of this partnership. |
-| Braze REST API key | A Braze REST API key with the permission **users.track**.<br><br> This can be created in the Braze dashboard from **Settings** > **APIs and Identifiers**. |
+| Braze REST API key | A Braze REST API key with the permission `users.track`. <br><br> This can be created in the Braze dashboard from **Settings** > **APIs and Identifiers**. |
 | Braze REST endpoint | [Your REST endpoint URL]({{site.baseurl}}/developer_guide/rest_api/basics/#endpoints). Your endpoint will depend on the Braze URL for your instance. |
 {: .reset-td-br-1 .reset-td-br-2}
 
@@ -52,8 +52,8 @@ In Braze, navigate to **Settings** > **APIs and Identifiers**. Select **Create N
 
 ### Step 3: Provide information to the Adikteev team
 
-To complete the integration, you must provide your REST API key and REST endpoint URL to your Adikteev account manager. Adikteev will then establish the connection and reach out to you after the setup is complete in order to validate the integration.
+To complete the integration, you must provide your REST API key and REST endpoint URL to your Adikteev account manager. Adikteev will establish the connection and contact you after the setup is complete to validate the integration.
 
 ## Support and troubleshooting
 
-Reach out to your Adikteev account manager for any question related to the integration or any need of support regarding the use cases.
+Contact your Adikteev account manager for any questions related to the integration or for any support with your use cases.
