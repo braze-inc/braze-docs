@@ -42,4 +42,4 @@ Braze will automatically prepend an apostrophe to a field in the CSV export if t
 - +
 - @
 
-For example, the field "-1943" will be exported as "'-1943". This does not apply to JSON exports, such as those returned by the [`/users/export/segment`]({{site.baseurl}}/api/endpoints/export/user_data/post_users_segment/) endpoint.
+For example, the field "-1943" will be exported as "'-1943". This does not apply to JSON exports, such as those returned by the [`/users/export/segment` endpoint]({{site.baseurl}}/api/endpoints/export/user_data/post_users_segment/).
