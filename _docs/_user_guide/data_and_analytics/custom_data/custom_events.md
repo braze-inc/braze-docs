@@ -202,23 +202,22 @@ For in-app message channels specifically, `canvas_entry_properties` can only be 
 
 For Canvas Flow messaging, `canvas_entry_properties` can be used in Liquid in any Message step. Use this Liquid when referencing these properties: ``{% raw %} canvas_entry_properties.${property_name} {% endraw %}``. Note that the events must be custom events or purchase events to be used this way. 
 
+#### Use case
+
 {% raw %}
-For example, consider the following request: `\"canvas_entry_properties\" : {\"product_name\" : \"shoes\", \"product_price\" : 79.99}`. You could add the word "shoes" to a message with the Liquid `{{canvas_entry_properties.${product_name}}}`.
+Consider the following request for RetailApp, a retail store: `\"canvas_entry_properties\" : {\"product_name\" : \"shoes\", \"product_price\" : 79.99}`. They can add the word "shoes" to a message with the Liquid `{{canvas_entry_properties.${product_name}}}`.
 {% endraw %}
 
-#### Example
-
-Let's say you're a department store that wants to remind customers of an ending sale. You could send messages based on the customers' last purchases by referencing {% raw %}`{{canvas_entry_properties.${last_product_name}}}`{% endraw %} in a Message step.
+RetailApp can also trigger specific messages to send for different `product_name` properties in a Canvas that targets users after they've made a purchase. For example, they can send different messages to users who purchased shoes and users who purchased something else by adding the following Liquid into a Message step.
 
 {% raw %}
 ```markdown
-{% if {{canvas_entry_properties.${last_product_name}}} == "shoes" %}
-Time is ticking! Our Summer Sale concludes tomorrow, offering you up to 30% off on every pair in stock, from water shoes to athletic sneakers. Don’t miss this chance to step up your shoe game for the season!
-{% elseif {{canvas_entry_properties.${last_product_name}}} == "shirts" %}
-Here's a friendly reminder that our Summer Sale is drawing to a close! Don’t miss out on saving up to 40% on our stylish range of tops, including blouses and blazers. Elevate your wardrobe with these must-have pieces before the sale ends tomorrow.
+{% if  {{canvas_entry_properties.${product_name}}} == "shoes" %}
+  Your order is set to ship soon. While you're waiting, why not step up your shoe care routine with a little upgrade? Check out our selection of shoelaces and premium shoe polish.
 {% else %}
-Our Summer Sale wraps up tomorrow! Save up to 40% on everything you need for your perfect beach getaway, from stylish beachwear to durable luggage. Make sure to grab these essentials before they’re gone!
+  Your order will be on its way shortly. If you missed something, you have until the end of the week to add any additional items to your cart and enjoy storewide discounts. 
 {% endif %}
+
 ```
 {% endraw %}
 
