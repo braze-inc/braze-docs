@@ -1927,7 +1927,7 @@ Field | Type | Description
 `user_phone_number` | `string` | [PII] the user’s phone number from which the message was received
 `user_id` | `string` | Braze ID of the user that performed this event
 `external_user_id` | `null,`&nbsp;`string` | [PII] external user ID of the user
-`inbound_phone_number` |
+`inbound_phone_number` | `string` | The inbound number that the message was sent to
 `device_id` | `null,`&nbsp;`string` | `device_id` that is tied to this user if user is anonymous
 `timezone` | `null,`&nbsp;`string` | Timezone of the user
 `app_group_id` | `null,`&nbsp;`string` | ID of the workspace this user belongs to
