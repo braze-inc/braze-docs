@@ -12,14 +12,14 @@ search_tag: Partner
 
 > [Adikteev](https://www.adikteev.com/churn-prediction), is a user retention engine combining churn prediction with full service app retargeting. 
 
-The Braze and Adikteev integration allows you to boost user retention, by leveraging Adikteev's churn prediction technoogy within Braze CRM campaigns to target high-risk user segments in priority.
+The Braze and Adikteev integration allows you to boost user retention, by leveraging Adikteev's churn prediction technology within Braze CRM campaigns to target high-risk user segments in priority.
 
 ## Prerequisites
 
 | Requirement | Description |
 | --- | --- |
 | Adikteev account | An Adikteev account is required to take advantage of this partnership. |
-| Braze REST API key | A Braze REST API key with the permissions **users.track**.<br><br> This can be created in the Braze dashboard from **Settings** > **APIs and Identifiers**. |
+| Braze REST API key | A Braze REST API key with the permission **users.track**.<br><br> This can be created in the Braze dashboard from **Settings** > **APIs and Identifiers**. |
 | Braze REST endpoint | [Your REST endpoint URL]({{site.baseurl}}/developer_guide/rest_api/basics/#endpoints). Your endpoint will depend on the Braze URL for your instance. |
 {: .reset-td-br-1 .reset-td-br-2}
 
