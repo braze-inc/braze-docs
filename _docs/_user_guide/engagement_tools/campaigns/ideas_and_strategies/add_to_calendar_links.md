@@ -93,6 +93,10 @@ On mobile, users need to press and hold the link, which prompts them to add it t
 
 ![iOS pop-up when you press and hold on a calendar link, which includes a button to "Add to Calendar".][5]{: style="max-width:50%"}
 
+For more information, refer to:
+* [Create events for Google Calendar](https://developers.google.com/calendar/api/guides/create-events)
+* [Create an Add to calendar link in an email message](https://support.microsoft.com/en-us/office/create-an-add-to-calendar-link-in-an-email-message-34f8ea28-322a-4867-b423-2998f9634e59)
+
 
 [1]: {% image_buster /assets/img_archive/calendar_1.png %}
 [2]: {% image_buster /assets/img_archive/calendar_2.png %}
