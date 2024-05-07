@@ -532,7 +532,6 @@ To sync purchase events, event name, `product_id`, `currency`, and `price` are r
 
 We recommend that queries be completed within one hour for optimal performance and to avoid potential errors. If queries exceed this timeframe, consider reviewing your data warehouse configuration. Optimizing resources allocated to your warehouse can help improve query execution speed. 
 
-
 ## Product limitations
 
 | Limitations            | Description                                                                                                                                                                        |
