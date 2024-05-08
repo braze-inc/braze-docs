@@ -24,6 +24,8 @@ As a note, most email inbox providers do not process JavaScript, so this measure
 
 If Braze detects JavaScript that is a security risk, before you go to the **Preview and Test** tab to view the email message Braze will ask you to confirm that Braze can remove the JavaScript from your message before proceeding.
 
+![]({% image_buster /assets/img/email_sanitization.png %})
+
 ## When are sanitizations persisted?
 
 In both the drag-and-drop editor and the HTML editor, we sanitize, but do not persist the sanitized results for the following scenarios:
@@ -36,7 +38,6 @@ In both the drag-and-drop editor and the HTML editor, we sanitize, but do not pe
 For the drag-and-drop editor, we sanitize and also persist the sanitization in the message when the
 editor is closed and the campaign is saved.
 
-For the HTML editor, we sanitize and also persist the sanitization in the message when the
-User switches between editor types and the campaign is saved.
+For the HTML editor, we sanitize and also persist the sanitization in the message when a user switches between editor types and the campaign is saved.
 
-In all of these instances, a message is shown on the screen if the sanitization modified the HTML and the user must accept this before sanitization is completed. 
+In all of these instances, a message displays if the sanitization modified the HTML. The user must accept this before sanitization is completed.
