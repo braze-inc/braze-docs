@@ -138,7 +138,7 @@ When Braze receives a list-unsubscribe request from a user via any of the above 
 
 ### One-click unsubscribe
 
-Using one-click unsubscribe for the list-unsubscribe header ([RFC 8058](https://datatracker.ietf.org/doc/html/rfc8058)) focuses on providing an easy way for recipients to opt-out from emails. 
+Using one-click unsubscribe for the list-unsubscribe header ([RFC 8058](https://datatracker.ietf.org/doc/html/rfc8058)) focuses on providing an easy way for recipients to opt-out from emails.
 
 #### Requirements
 
