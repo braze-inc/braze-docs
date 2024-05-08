@@ -50,3 +50,5 @@ No, we currently do not have plans to add this for email templates as these temp
 #### Does this feature check that the one-click unsubscribe URL added to the custom option is valid?
 
 No, we do not check or validate any links in the Braze dashboard.  
+
+No. This feature doesn't confirm if your custom one-click unsubscribe URL is working properly. Be sure to properly test your URL before launch.
