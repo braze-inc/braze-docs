@@ -10,6 +10,10 @@ description: "This article provides an overview of the one-click list-unsubscrib
 
 > Using one-click unsubscribe for the list-unsubscribe header ([RFC 8058](https://datatracker.ietf.org/doc/html/rfc8058)) focuses on providing an easy way for recipients to opt-out from emails. You can adjust this header setting to be applied at a message level in your emails.
 
+{% alert important %}
+The message-level one-click list-unsubscribe setting is currently in early access. Contact your account manager if you're interested in participating in this early access.
+{% endalert %}
+
 In your email editor, go to **Sending Settings** > **Sending Info**. Select from the following options:
 
 * **Use workspace default**: Uses the **Email Unsubscribe Header** settings set in **Email Preferences**. Any changes made to this setting will apply to all messages.
