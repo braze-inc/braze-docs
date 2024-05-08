@@ -8,7 +8,7 @@ description: "This article provides an overview of the one-click list-unsubscrib
 
 # Message-level one-click list-unsubscribe settings
 
-> Using one-click unsubscribe for the list-unsubscribe header ([RFC 8058](https://datatracker.ietf.org/doc/html/rfc8058)) focuses on providing an easy way for recipients to opt-out from emails. You can adjust this header setting to be applied at a message level in your emails.
+> The one-click unsubscribe for the list-unsubscribe header ([RFC 8058](https://datatracker.ietf.org/doc/html/rfc8058)) provides an easy way for recipients to opt-out from emails. You can adjust this header setting to be applied at a message level in your emails.
 
 {% alert important %}
 The message-level one-click list-unsubscribe setting is currently in early access. Contact your account manager if you're interested in participating in this early access.
@@ -17,19 +17,19 @@ The message-level one-click list-unsubscribe setting is currently in early acces
 In your email editor, go to **Sending Settings** > **Sending Info**. Select from the following options:
 
 * **Use workspace default**: Uses the **Email Unsubscribe Header** settings set in **Email Preferences**. Any changes made to this setting will apply to all messages.
-* **Unsubscribe globally from all emails**: Uses the Braze default one-click unsubscribe header. Users who click the unsubscribe button will have their global email subscription state set to "Unsubscribed."
-* **Unsubscribe from specific subscription group**: Uses the specified subscription group. Users who click the unsubscribe button will be unsubscribed from the selected subscription group
+* **Unsubscribe globally from all emails**: Uses the Braze default one-click unsubscribe header. Users who click the unsubscribe button will have their global email subscription state set to "Unsubscribed".
+* **Unsubscribe from specific subscription group**: Uses the specified subscription group. Users who click the unsubscribe button will be unsubscribed from the selected subscription group.
 * **Exclude unsubscribe**
 
 Adjusting this setting will override the default behavior for one-click list unsubscribe in this email.
 
-![]({% image_buster /assets/img/email_settings/one_click_list_unsubscribe_message_level.png %})
+![]({% image_buster /assets/img/email_settings/one_click_list_unsubscribe_message_level.png %}){: style="max-width:70%;"}
 
 ### Frequently asked questions
 
 #### If I add the email headers for one-click manually and I have email unsubscribe header turned on, what is the expected behavior?
 
-Select **Exclude unsubscribe** as the **One-click list-unsubscribe setting**. The email headers added for one-click list-unsubscribe will be applied to all future sends of this campaign.
+The email headers added for one-click list-unsubscribe will be applied to all future sends of this campaign.
 
 #### Why do subscription groups have to match across message variants in order to launch?
 
@@ -49,6 +49,5 @@ No, we currently do not have plans to add this for email templates as these temp
 
 #### Does this feature check that the one-click unsubscribe URL added to the custom option is valid?
 
-No, we do not check or validate any links in the Braze dashboard.  
 
-No. This feature doesn't confirm if your custom one-click unsubscribe URL is working properly. Be sure to properly test your URL before launch.
+No, we don't check or validate any links in the Braze dashboard. Be sure to properly test your URL before launch.
