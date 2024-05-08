@@ -36,8 +36,6 @@ In both the drag-and-drop editor and the HTML editor, we sanitize, but do not pe
 * The email is sent in a test send
 
 For the drag-and-drop editor, we sanitize and also persist the sanitization in the message when the
-editor is closed and the campaign is saved.
-
-For the HTML editor, we sanitize and also persist the sanitization in the message when a user switches between editor types and the campaign is saved.
+editor is closed and the campaign is saved. For the HTML editor, we sanitize and also persist the sanitization in the message when a user switches between editor types and the campaign is saved.
 
 In all of these instances, a message displays if the sanitization modified the HTML. The user must accept this before sanitization is completed.
