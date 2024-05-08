@@ -186,6 +186,8 @@ If you have multiple custom unsubscribe flows for managing many brands or lists 
 * For **List-Unsubscribe-Post**, enter `List-Unsubscribe=One-Click`.
 * For **List-Unsubscribe**, enter your one-click unsubscribe link.
 
+![]({% image_buster /assets/img/email_settings/one-click_unsubscribe_to_email_header.png %})
+
 #### Frequently asked questions
 
 {% details Can the one-click unsubscribe URL (via list-unsubscribe header) link to a preference center? %}

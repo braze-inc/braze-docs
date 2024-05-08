@@ -23,7 +23,7 @@ In your email editor, go to **Sending Settings** > **Sending Info**. Select from
 
 Adjusting this setting will override the default behavior for one-click list unsubscribe in this email.
 
-![]({% image_buster /assets/img/email_settings/one-click_unsubscribe_to_email_header.png %})
+![]({% image_buster /assets/img/email_settings/one_click_list_unsubscribe_message_level.png %})
 
 ### Frequently asked questions
 
@@ -50,5 +50,3 @@ No, we currently do not have plans to add this for email templates as these temp
 #### Does this feature check that the one-click unsubscribe URL added to the custom option is valid?
 
 No, we do not check or validate any links in the Braze dashboard.  
-
-![]({% image_buster /assets/img/email_settings/one_click_list_unsubscribe_message_level.png %})
