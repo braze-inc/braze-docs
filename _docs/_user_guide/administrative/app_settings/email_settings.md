@@ -186,21 +186,6 @@ If you have multiple custom unsubscribe flows for managing many brands or lists 
 * For **List-Unsubscribe-Post**, enter `List-Unsubscribe=One-Click`.
 * For **List-Unsubscribe**, enter your one-click unsubscribe link.
 
-![]({% image_buster /assets/img/email_settings/one-click_unsubscribe_to_email_header.png %})
-
-#### Add one-click list-unsubscribe at a message-level
-
-One-click list-unsubscribe settings can be edited at a message-level. In your email editor, go to **Sending Settings** > **Sending Info**. Select from the following options:
-
-* **Use workspace default**: Uses the **Email Unsubscribe Header** settings set in **Email Preferences**. Any changes made to this setting will apply to all messages.
-* **Unsubscribe globally from all emails**: Uses the Braze default one-click unsubscribe header. Users who click the unsubscribe button will have their global email subscription state set to "Unsubscribed."
-* **Unsubscribe from specific subscription group**: Uses the specified subscription group. Users who click the unsubscribe button will be unsubscribed from the selected subscription group
-* **Exclude unsubscribe**
-
-Adjusting this setting will override the default behavior for one-click list unsubscribe in this email.
-
-![]({% image_buster /assets/img/email_settings/one_click_list_unsubscribe_message_level.png %})
-
 #### Frequently asked questions
 
 {% details Can the one-click unsubscribe URL (via list-unsubscribe header) link to a preference center? %}
