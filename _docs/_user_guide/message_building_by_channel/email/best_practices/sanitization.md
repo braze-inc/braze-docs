@@ -28,11 +28,10 @@ If Braze detects JavaScript that is a security risk, before you go to the **Prev
 
 In both the drag-and-drop editor and the HTML editor, we sanitize, but do not persist the sanitized results for the following scenarios:
 
-* The email is rendered in the following pages:
-    * Inbox Vision and Spam Testing
-    * Preview and Test
-    * The heatmap preview on the **Analytics** section
-* Email is sent in a test send
+* The email is rendered in the following areas:
+    * **Inbox Vision** section and **Spam Testing** tab
+    * **Preview & Heatmap** section under **Email Performance** panel
+* The email is sent in a test send
 
 For the drag-and-drop editor, we sanitize and also persist the sanitization in the message when the
 editor is closed and the campaign is saved.
