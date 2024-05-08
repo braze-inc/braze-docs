@@ -9,51 +9,50 @@ description: "This article covers how to implement deep linking for your Flutter
 
 # Deep linking
 
-> Deep linking is a way of providing a link that launches an app, shows specific content, or takes some specific action. Native code can forward deep links to your app's Flutter layer for handling. If you're looking to implement deep links in your iOS and/or Android Flutter app for the first time, follow these steps.
+> Learn how to implement deep links into your iOS or Android app using Flutter. If you'd like to check out a sample app, see [GitHub: Braze Flutter SDK Example](https://github.com/braze-inc/braze-flutter-sdk/tree/master/example). For general information about deep linking, see our [Deep Linking FAQ][1].
 
-For general information on what deep links are, refer to our [FAQ article][1]. You can see [an example app][5] with all of these steps implemented in our public repository.
+## Prerequisites
 
-## Step 1: Native deep link handling
+Before you can implement deep linking into your Flutter app, you'll need to set up deep linking in the native [Android][2] or [iOS][3] layer.
 
-Integrating deep links into a Flutter app requires setting up native layer deep links as a pre-requisite. You can follow our guides for setting up deep links on [Android][2] and [iOS][3].
+## Implementing simple handling
 
-## Step 2: Native project configuration.
-
-If you intend to use Flutter's default deep link handling, you will need to modify your iOS project's `Info.plist` file as well as your Android project's `AndroidManifest.xml` file. If you plan on using third-party plugins to handle deep links in Flutter instead of the default handler, skip this step as it can disrupt those third-party plugins. In the example code provided later in this guide, we will not be using third-party plugins.
+You can use Flutter's built-in link handling for simple use cases, such as launching your app and opening the home screen when a user opens your link. For more advanced use cases, see [Implementing complex handling](#implement-complex-handling).
 
 {% tabs %}
 {% tab iOS %}
-Using Xcode, edit your `Info.plist` file:
-1. Add a new key-value pair.
-2. Set the key to `FlutterDeepLinkingEnabled`.
-3. Set the type to `Boolean`.
-4. Set the value to `YES`.
-
-![An example project's `Info.plist` file with the added key-value pair.]({% image_buster /assets/img/flutter/flutter-ios-deep-link-info-plist.png %} "Xcode Project Info.plist File")
+1. In your Xcode project, open your `Info.plist` file.
+2. Add a new key-value pair.
+3. Set the key to `FlutterDeepLinkingEnabled`.
+4. Set the type to `Boolean`.
+5. Set the value to `YES`.
+    ![An example project's `Info.plist` file with the added key-value pair.]({% image_buster /assets/img/flutter/flutter-ios-deep-link-info-plist.png %} "Xcode Project Info.plist File")
 {% endtab %}
 
 {% tab Android %}
-In your `AndroidManifest.xml` file:
-1. Locate your `.MainActivity` `activity` tag.
-2. Inside of that `activity` tag, add the following `meta-data` tag:
-
-```xml
-  <meta-data android:name="flutter_deeplinking_enabled" android:value="true" />
-```
+1. In your Android Studio project, open your `AndroidManifest.xml` file.
+2. Locate `.MainActivity` in your `activity` tags.
+3. Within the `activity` tag, add the following `meta-data` tag:
+    ```xml
+    <meta-data android:name="flutter_deeplinking_enabled" android:value="true" />
+    ```
 {% endtab %}
 {% endtabs %}
 
-## Step 3: Dart layer deep link handling and native layer deep link forwarding
+## Implement complex handling
 
-The preceding step is sufficient for enabling your Flutter app to open when a user clicks a deep link. For handling deep links in more intricate ways, such as navigating to a particular part of the app or calling a function, additional Dart code as well as additional native code may be necessary. This is where first-party packages such as [`go_router`][6] as well as third-party plugins can be helpful.
+You can use native, first-party, or third-party link handling for complex use cases, such as sending a user to a specific location in your app, or calling a specific function.
 
-To keep this guide dependency-agnostic, we'll show an example that does not use additional dependencies. In this example, we'll handle deep links by presenting an alert modal after the app launches.
+{% alert important %}
+Before you implement complex link handling, be sure to remove Flutter's built-in handling as it may interfere with third-party plugins.
+{% endalert %}
 
-We will utilize a method channel to forward the string data of the deep link URL from the native layer to the Dart layer. Start by creating and invoking the method channel in the deep link delegate methods of your native code.
+### Example: Deep linking to an alert dialog
+
+First, a method channel is used in the native layer to forward the deep link's URL string data to the Dart layer.
 
 {% tabs %}
 {% tab iOS %}
-
 ```swift
 extension AppDelegate {
   
@@ -81,7 +80,6 @@ extension AppDelegate {
 
 }
 ```
-
 {% endtab %}
 
 {% tab Android %}
@@ -108,11 +106,10 @@ class MainActivity : FlutterActivity() {
 
 }
 ```
-
 {% endtab %}
 {% endtabs %}
 
-Now, in your Dart code, establish the corresponding channel and set the callback to do whatever URL handling you want. In this example, we'll display an alert containing the text of the URL.
+Next, a callback function is used in the Dart layer to display an alert dialogue using the URL string data sent previously.
 
 ```dart
 MethodChannel('deepLinkChannel').setMethodCallHandler((call) async {
