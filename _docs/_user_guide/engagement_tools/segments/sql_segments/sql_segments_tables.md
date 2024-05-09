@@ -1844,7 +1844,7 @@ Field | Type | Description
 `user_id` | `string` | Braze ID of the user that performed this event
 `external_user_id` | `null,`&nbsp;`string` | [PII] External user ID of the user
 `device_id` | `null,`&nbsp;`string` | `device_id` that is tied to this user if user is anonymous
-`timezone` | `null,`&nbsp;`string` | Timezone of the user
+`timezone` | `null,`&nbsp;`string` | Time zone of the user
 `app_group_id` | `null,`&nbsp;`string` | ID of the workspace this user belongs to
 `app_group_api_id` | `null,`&nbsp;`string` | API ID of the workspace this user belongs to
 `subscription_group_api_id` | `string` | Subscription group API ID
