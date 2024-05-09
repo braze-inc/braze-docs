@@ -14,7 +14,7 @@ channel:
 
 ## Why do we perform sanitization?
 
-The main purpose of sanitization is to prevent bad actors from accessing other Braze dashboard users’ session data. Without sanitization, a bad actor with basic read only access can create an email using the CKEditor with JavaScript that "send current browser session" to anywhere the bad actor wants using a network request.
+The main purpose of sanitization is to prevent bad actors from accessing other Braze dashboard users’ session data. Without sanitization, a bad actor with basic read-only access can create an email using the CKEditor with JavaScript that "sends current browser session" to anywhere the bad actor wants using a network request.
 
 When another dashboard user opens that email template, the JavaScript will execute and send the current user’s session data to the bad actor.
 
