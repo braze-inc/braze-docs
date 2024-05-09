@@ -31,6 +31,8 @@ For some ideas on how to get started differentiating your variants, refer to [Ti
 
 Scheduling your multivariate campaign works the same as scheduling any other Braze campaign. All standard [delivery types][4] are available.
 
+Once a multivariate test begins, you can't make changes to the campaign. If you change the parameters, such as the subject line or HTML body, Braze will consider the experiment compromised and will immediately disable the experiment.
+
 {% alert important %}
 If you want to use an [optimization]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/optimizations/) (available for select channels), schedule your campaign to deliver once. Optimizations aren't available for campaigns that repeat or have re-eligibility turned on.
 {% endalert %}
@@ -70,7 +72,10 @@ On the confirmation page, review the details of your multivariate campaign and l
 ## Things to know
 
 {% alert important %}
-Making edits to your messages after your experiment is finished will result in invalidated test results. 
+Making edits to messages after your experiment begins will invalidate your test results.
+
+- If your experiment is in mid-send and you edit the message, the experiment will be rendered useless and any experiment results will be removed.
+- If your experiment is completed and you edit the message post-send, the experiment results will remain available on the dashboard analytics page. If you relaunch the campaign, the experiment results will be removed.
 {% endalert %}
 
 ### Tips for different channels {#tips-different-channels}

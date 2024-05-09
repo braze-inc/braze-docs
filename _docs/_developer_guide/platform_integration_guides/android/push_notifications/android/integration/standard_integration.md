@@ -36,7 +36,7 @@ First, add Firebase to your Android project. For step-by-step instructions, see 
 Next, add the Cloud Messaging library to your project dependencies. In your Android project, open `build.gradle`, then add the following line to your `dependencies` block.
 
 ```gradle
-implementation "com.braze:android-sdk-ui:+"
+implementation "google.firebase:firebase-messaging:+"
 ```
 
 Your dependencies should look similar to the following:
@@ -44,7 +44,7 @@ Your dependencies should look similar to the following:
 ```gradle
 dependencies {
   implementation project(':android-sdk-ui')
-  implementation "com.braze:android-sdk-ui:+"
+  implementation "com.google.firebase:firebase-messaging:+"
 }
 ```
 

@@ -300,11 +300,6 @@ hide_toc: true
   		z-index: 10;
       color: #D45F24;
   	}
-    @media (min-width: 768px) {
-      #braze_internal {
-        margin-top: 70px;
-      }
-    }
   	#braze_internal a {
   	  color: #27368F;
   	  text-decoration: none;
