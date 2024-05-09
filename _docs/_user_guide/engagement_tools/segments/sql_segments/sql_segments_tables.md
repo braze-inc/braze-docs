@@ -103,23 +103,23 @@ Table | Description
 
 Field | Type | Description
 ------|------|------------
-`id` | `string` | globally unique ID for this event
+`id` | `string` | Globally unique ID for this event
 `user_id` | `string` | Braze ID of the user that performed the event
-`external_user_id` | `null,`&nbsp;`string` | [PII] external user ID of the user
+`external_user_id` | `null,`&nbsp;`string` | [PII] External user ID of the user
 `app_group_api_id` | `null,`&nbsp;`string` | API ID of the workspace this user belongs to
 `app_api_id` | `null,`&nbsp;`string` | API ID of the app on which this action occurred
 `time` | `int` | Unix timestamp at which the user performed the event
-`gender` | `null,`&nbsp;`string` | [PII] gender of the user
-`country` | `null,`&nbsp;`string` | [PII] country of the user
-`timezone` | `null,`&nbsp;`string` | timezone of the user
-`language` | `null,`&nbsp;`string` | [PII] language of the user
+`gender` | `null,`&nbsp;`string` | [PII] Gender of the user
+`country` | `null,`&nbsp;`string` | [PII] Country of the user
+`timezone` | `null,`&nbsp;`string` | Time zone of the user
+`language` | `null,`&nbsp;`string` | [PII] Language of the user
 `device_id` | `null,`&nbsp;`string` | ID of the device on which the custom event occurred
-`sdk_version` | `null,`&nbsp;`string` | version of the Braze SDK in use during the event
-`platform` | `null,`&nbsp;`string` | platform of the device
-`os_version` | `null,`&nbsp;`string` | version of the operating system of the device
-`device_model` | `null,`&nbsp;`string` | model of the device
-`name` | `string` | name of the custom event
-`properties` | `string` | custom properties of the event stored as a JSON encoded string
+`sdk_version` | `null,`&nbsp;`string` | Version of the Braze SDK in use during the event
+`platform` | `null,`&nbsp;`string` | Platform of the device
+`os_version` | `null,`&nbsp;`string` | Version of the operating system of the device
+`device_model` | `null,`&nbsp;`string` | Model of the device
+`name` | `string` | Name of the custom event
+`properties` | `string` | Custom properties of the event stored as a JSON encoded string
 `ad_id` | `null,`&nbsp;`string` | [PII] Advertising identifier
 `ad_id_type` | `null,`&nbsp;`string` | One of `ios_idfa`, `google_ad_id`, `windows_ad_id`, OR `roku_ad_id`
 `ad_tracking_enabled` | `null, boolean` | Whether advertising tracking is enabled for the device
@@ -129,9 +129,9 @@ Field | Type | Description
 
 Field | Type | Description
 ------|------|------------
-`id` | `string` | globally unique ID for this event
+`id` | `string` | Globally unique ID for this event
 `user_id` | `string` | Braze ID of the user that installed
-`external_user_id` | `null,`&nbsp;`string` | [PII] external user ID of the user
+`external_user_id` | `null,`&nbsp;`string` | [PII] External user ID of the user
 `device_id` | `null,`&nbsp;`string` | `device_id` that is tied to this user if user is anonymous
 `app_group_api_id` | `null,`&nbsp;`string` | API ID of the workspace this user belongs to
 `time` | `int` | Unix timestamp at which the user installed
@@ -142,22 +142,22 @@ Field | Type | Description
 
 Field | Type | Description
 ------|------|------------
-`id` | `string` | globally unique ID for this event
+`id` | `string` | Globally unique ID for this event
 `user_id` | `string` | Braze ID of the user that records the location
-`external_user_id` | `null,`&nbsp;`string` | [PII] external user ID of the user
+`external_user_id` | `null,`&nbsp;`string` | [PII] External user ID of the user
 `app_group_api_id` | `null,`&nbsp;`string` | API ID of the workspace this user belongs to
 `app_api_id` | `null,`&nbsp;`string` | API ID of the app on which this location was recorded
 `time` | `int` | Unix timestamp at which the location was recorded
-`latitude` | `float` | [PII] latitude of recorded location
-`longitude` | `float` | [PII] longitude of recorded location
+`latitude` | `float` | [PII] Latitude of recorded location
+`longitude` | `float` | [PII] Longitude of recorded location
 `altitude` | `null, float` | [PII] altitude of recorded location
 `ll_accuracy` | `null, float` | latitude and longitude accuracy of recorded location
 `alt_accuracy` | `null, float` | altitude accuracy of recorded location
 `device_id` | `null,`&nbsp;`string` | ID of the device on which the location was recorded
-`sdk_version` | `null,`&nbsp;`string` | version of the Braze SDK in use when the location was recorded
-`platform` | `null,`&nbsp;`string` | platform of the device
-`os_version` | `null,`&nbsp;`string` | version of the operating system of the device
-`device_model` | `null,`&nbsp;`string` | model of the device
+`sdk_version` | `null,`&nbsp;`string` | Version of the Braze SDK in use when the location was recorded
+`platform` | `null,`&nbsp;`string` | Platform of the device
+`os_version` | `null,`&nbsp;`string` | Version of the operating system of the device
+`device_model` | `null,`&nbsp;`string` | Model of the device
 `ad_id` | `null,`&nbsp;`string` | [PII] Advertising identifier
 `ad_id_type` | `null,`&nbsp;`string` | One of `ios_idfa`, `google_ad_id`, `windows_ad_id`, OR `roku_ad_id`
 `ad_tracking_enabled` | `null, boolean` | Whether advertising tracking is enabled for the device
@@ -167,21 +167,21 @@ Field | Type | Description
 
 Field | Type | Description
 ------|------|------------
-`id` | `string` | globally unique ID for this event
+`id` | `string` | Globally unique ID for this event
 `user_id` | `string` | Braze ID of the user that made a purchase
-`external_user_id` | `null,`&nbsp;`string` | [PII] external user ID of the user
+`external_user_id` | `null,`&nbsp;`string` | [PII] External user ID of the user
 `app_group_api_id` | `null,`&nbsp;`string` | API ID of the workspace this user belongs to
 `app_api_id` | `null,`&nbsp;`string` | API ID of the app on which the purchase occurred
 `time` | `int` | Unix timestamp at which the user made the purchase
 `device_id` | `null,`&nbsp;`string` | ID of the device on which the purchase occurred
-`sdk_version` | `null,`&nbsp;`string` | version of the Braze SDK in use during the purchase
-`platform` | `null,`&nbsp;`string` | platform of the device
-`os_version` | `null,`&nbsp;`string` | version of the operating system of the device
-`device_model` | `null,`&nbsp;`string` | model of the device
+`sdk_version` | `null,`&nbsp;`string` | Version of the Braze SDK in use during the purchase
+`platform` | `null,`&nbsp;`string` | Platform of the device
+`os_version` | `null,`&nbsp;`string` | Version of the operating system of the device
+`device_model` | `null,`&nbsp;`string` | Model of the device
 `product_id` | `string` | ID of the product purchased
-`price` | `float` | price of the purchase
-`currency` | `string` | currency of the purchase
-`properties` | `string` | custom properties of the purchase stored as a JSON encoded string
+`price` | `float` | Price of the purchase
+`currency` | `string` | Currency of the purchase
+`properties` | `string` | Custom properties of the purchase stored as a JSON encoded string
 `ad_id` | `null,`&nbsp;`string` | [PII] Advertising identifier
 `ad_id_type` | `null,`&nbsp;`string` | One of `ios_idfa`, `google_ad_id`, `windows_ad_id`, OR `roku_ad_id`
 `ad_tracking_enabled` | `null, boolean` | Whether advertising tracking is enabled for the device
@@ -191,9 +191,9 @@ Field | Type | Description
 
 Field | Type | Description
 ------|------|------------
-`id` | `string` | globally unique ID for this event
+`id` | `string` | Globally unique ID for this event
 `user_id` | `string` | Braze ID of the user that uninstalled
-`external_user_id` | `null,`&nbsp;`string` | [PII] external user ID of the user
+`external_user_id` | `null,`&nbsp;`string` | [PII] External user ID of the user
 `device_id` | `null,`&nbsp;`string` | `device_id` that is tied to this user if user is anonymous
 `app_group_api_id` | `null,`&nbsp;`string` | API ID of the workspace this user belongs to
 `app_api_id` | `null,`&nbsp;`string` | API ID of the app that was uninstalled
@@ -204,112 +204,112 @@ Field | Type | Description
 
 Field | Type | Description
 ------|------|------------
-`id` | `string` | globally unique ID for this event
+`id` | `string` | Globally unique ID for this event
 `user_id` | `string` | Braze ID of the user that upgraded the app
-`external_user_id` | `null,`&nbsp;`string` | [PII] external user ID of the user
+`external_user_id` | `null,`&nbsp;`string` | [PII] External user ID of the user
 `app_group_api_id` | `null,`&nbsp;`string` | API ID of the workspace this user belongs to
 `app_api_id` | `null,`&nbsp;`string` | API ID of the app the user upgraded
 `time` | `int` | Unix timestamp at which the user upgraded the app
 `device_id` | `null,`&nbsp;`string` | ID of the device on which the user upgraded the app
-`sdk_version` | `null,`&nbsp;`string` | version of the Braze SDK in use
-`platform` | `null,`&nbsp;`string` | platform of the device
-`os_version` | `null,`&nbsp;`string` | version of the operating system of the device
-`device_model` | `null,`&nbsp;`string` | model of the device
-`old_app_version` | `null,`&nbsp;`string` | old version of the app
-`new_app_version` | `null,`&nbsp;`string` | new version of the app
+`sdk_version` | `null,`&nbsp;`string` | Version of the Braze SDK in use
+`platform` | `null,`&nbsp;`string` | Platform of the device
+`os_version` | `null,`&nbsp;`string` | Version of the operating system of the device
+`device_model` | `null,`&nbsp;`string` | Model of the device
+`old_app_version` | `null,`&nbsp;`string` | Old version of the app
+`new_app_version` | `null,`&nbsp;`string` | New version of the app
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 ### USERS_BEHAVIORS_APP_FIRSTSESSION_SHARED {#USERS_BEHAVIORS_APP_FIRSTSESSION_SHARED}
 
 Field | Type | Description
 ------|------|------------
-`id` | `string` | globally unique ID for this event
+`id` | `string` | Globally unique ID for this event
 `user_id` | `string` | Braze ID of the user that performs this action
-`external_user_id` | `null,`&nbsp;`string` | [PII] external user ID of the user
+`external_user_id` | `null,`&nbsp;`string` | [PII] External user ID of the user
 `app_group_api_id` | `null,`&nbsp;`string` | API ID of the workspace this user belongs to
 `app_api_id` | `null,`&nbsp;`string` | API ID of the app on which this session occurred
 `time` | `int` | Unix timestamp at which the session started
 `session_id` | `string` | UUID of the session
-`gender` | `null,`&nbsp;`string` | [PII] gender of the user
-`country` | `null,`&nbsp;`string` | [PII] country of the user
-`timezone` | `null,`&nbsp;`string` | timezone of the user
-`language` | `null,`&nbsp;`string` | [PII] language of the user
+`gender` | `null,`&nbsp;`string` | [PII] Gender of the user
+`country` | `null,`&nbsp;`string` | [PII] Country of the user
+`timezone` | `null,`&nbsp;`string` | Time zone of the user
+`language` | `null,`&nbsp;`string` | [PII] Language of the user
 `device_id` | `null,`&nbsp;`string` | ID of the device on which the session occurred
-`sdk_version` | `null,`&nbsp;`string` | version of the Braze SDK in use during the session
-`platform` | `null,`&nbsp;`string` | platform of the device
-`os_version` | `null,`&nbsp;`string` | version of the operating system of the device
-`device_model` | `null,`&nbsp;`string` | model of the device
+`sdk_version` | `null,`&nbsp;`string` | Version of the Braze SDK in use during the session
+`platform` | `null,`&nbsp;`string` | Platform of the device
+`os_version` | `null,`&nbsp;`string` | Version of the operating system of the device
+`device_model` | `null,`&nbsp;`string` | Model of the device
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 ### USERS_BEHAVIORS_APP_NEWSFEEDIMPRESSION_SHARED {#USERS_BEHAVIORS_APP_NEWSFEEDIMPRESSION_SHARED}
 
 Field | Type | Description
 ------|------|------------
-`id` | `string` | globally unique ID for this event
+`id` | `string` | Globally unique ID for this event
 `user_id` | `string` | Braze ID of the user that viewed the News Feed
-`external_user_id` | `null,`&nbsp;`string` | [PII] external user ID of the user
+`external_user_id` | `null,`&nbsp;`string` | [PII] External user ID of the user
 `app_group_api_id` | `null,`&nbsp;`string` | API ID of the workspace this user belongs to
 `app_api_id` | `null,`&nbsp;`string` | API ID of the app on which the user viewed the News Feed
 `time` | `int` | Unix timestamp at which the user viewed the News Feed
 `device_id` | `null,`&nbsp;`string` | ID of the device on which the impression occurred
-`sdk_version` | `null,`&nbsp;`string` | version of the Braze SDK in use during the impression
-`platform` | `null,`&nbsp;`string` | platform of the device
-`os_version` | `null,`&nbsp;`string` | version of the operating system of the device
-`device_model` | `null,`&nbsp;`string` | model of the device
+`sdk_version` | `null,`&nbsp;`string` | Version of the Braze SDK in use during the impression
+`platform` | `null,`&nbsp;`string` | Platform of the device
+`os_version` | `null,`&nbsp;`string` | Version of the operating system of the device
+`device_model` | `null,`&nbsp;`string` | Model of the device
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 ### USERS_BEHAVIORS_APP_SESSIONEND_SHARED {#USERS_BEHAVIORS_APP_SESSIONEND_SHARED}
 
 Field | Type | Description
 ------|------|------------
-`id` | `string` | globally unique ID for this event
+`id` | `string` | Globally unique ID for this event
 `user_id` | `string` | Braze ID of the user that performs this action
-`external_user_id` | `null,`&nbsp;`string` | [PII] external user ID of the user
+`external_user_id` | `null,`&nbsp;`string` | [PII] External user ID of the user
 `app_group_api_id` | `null,`&nbsp;`string` | API ID of the workspace this user belongs to
 `app_api_id` | `null,`&nbsp;`string` | API ID of the app on which this session occurred
 `time` | `int` | Unix timestamp at which the session ended
-`duration` | `null, float` | duration of the session
+`duration` | `null, float` | Duration of the session
 `session_id` | `string` | UUID of the session
 `device_id` | `null,`&nbsp;`string` | ID of the device on which the session occurred
-`sdk_version` | `null,`&nbsp;`string` | version of the Braze SDK in use during the session
-`platform` | `null,`&nbsp;`string` | platform of the device
-`os_version` | `null,`&nbsp;`string` | version of the operating system of the device
-`device_model` | `null,`&nbsp;`string` | model of the device
+`sdk_version` | `null,`&nbsp;`string` | Version of the Braze SDK in use during the session
+`platform` | `null,`&nbsp;`string` | Platform of the device
+`os_version` | `null,`&nbsp;`string` | Version of the operating system of the device
+`device_model` | `null,`&nbsp;`string` | Model of the device
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 ### USERS_BEHAVIORS_APP_SESSIONSTART_SHARED {#USERS_BEHAVIORS_APP_SESSIONSTART_SHARED}
 
 Field | Type | Description
 ------|------|------------
-`id` | `string` | globally unique ID for this event
+`id` | `string` | Globally unique ID for this event
 `user_id` | `string` | Braze ID of the user that performs this action
-`external_user_id` | `null,`&nbsp;`string` | [PII] external user ID of the user
+`external_user_id` | `null,`&nbsp;`string` | [PII] External user ID of the user
 `app_api_id` | `null,`&nbsp;`string` | API ID of the app on which this session occurred
 `app_group_api_id` | `null,`&nbsp;`string` | API ID of the workspace this user belongs to
 `time` | `int` | Unix timestamp at which the session started
 `session_id` | `string` | UUID of the session
 `device_id` | `null,`&nbsp;`string` | ID of the device on which the session occurred
-`sdk_version` | `null,`&nbsp;`string` | version of the Braze SDK in use during the session
-`platform` | `null,`&nbsp;`string` | platform of the device
-`os_version` | `null,`&nbsp;`string` | version of the operating system of the device
-`device_model` | `null,`&nbsp;`string` | model of the device
+`sdk_version` | `null,`&nbsp;`string` | Version of the Braze SDK in use during the session
+`platform` | `null,`&nbsp;`string` | Platform of the device
+`os_version` | `null,`&nbsp;`string` | Version of the operating system of the device
+`device_model` | `null,`&nbsp;`string` | Model of the device
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 ### USERS_BEHAVIORS_GEOFENCE_DATAEVENT_SHARED {#USERS_BEHAVIORS_GEOFENCE_DATAEVENT_SHARED}
 
 Field | Type | Description
 ------|------|------------
-`id` | `string` | globally unique ID for this event
+`id` | `string` | Globally unique ID for this event
 `user_id` | `string` | Braze ID of the user that performed the event
-`external_user_id` | `null,`&nbsp;`string` | [PII] external user ID of the user
+`external_user_id` | `null,`&nbsp;`string` | [PII] External user ID of the user
 `app_group_api_id` | `null,`&nbsp;`string` | API ID of the workspace this user belongs to
 `app_api_id` | `null,`&nbsp;`string` | API ID of the app on which this action occurred
 `time` | `int` | Unix timestamp at which the user performed the event
 `device_id` | `null,`&nbsp;`string` | ID of the device on which the custom event occurred
-`sdk_version` | `null,`&nbsp;`string` | version of the Braze SDK in use during the event
-`platform` | `null,`&nbsp;`string` | platform of the device
-`os_version` | `null,`&nbsp;`string` | version of the operating system of the device
-`device_model` | `null,`&nbsp;`string` | model of the device
+`sdk_version` | `null,`&nbsp;`string` | Version of the Braze SDK in use during the event
+`platform` | `null,`&nbsp;`string` | Platform of the device
+`os_version` | `null,`&nbsp;`string` | Version of the operating system of the device
+`device_model` | `null,`&nbsp;`string` | Model of the device
 `event_type` | `string` | What kind of geofence event was triggered. (for example, 'enter' or 'exit')
 `location_set_id` | `string` | The ID of the location set of the geofence that was triggered
 `geofence_id` | `string` | The ID of the geofence that was triggered
@@ -319,17 +319,17 @@ Field | Type | Description
 
 Field | Type | Description
 ------|------|------------
-`id` | `string` | globally unique ID for this event
+`id` | `string` | Globally unique ID for this event
 `user_id` | `string` | Braze ID of the user that performed the event
-`external_user_id` | `null,`&nbsp;`string` | [PII] external user ID of the user
+`external_user_id` | `null,`&nbsp;`string` | [PII] External user ID of the user
 `app_group_api_id` | `null,`&nbsp;`string` | API ID of the workspace this user belongs to
 `app_api_id` | `null,`&nbsp;`string` | API ID of the app on which this action occurred
 `time` | `int` | Unix timestamp at which the user performed the event
 `device_id` | `null,`&nbsp;`string` | ID of the device on which the custom event occurred
-`sdk_version` | `null,`&nbsp;`string` | version of the Braze SDK in use during the event
-`platform` | `null,`&nbsp;`string` | platform of the device
-`os_version` | `null,`&nbsp;`string` | version of the operating system of the device
-`device_model` | `null,`&nbsp;`string` | model of the device
+`sdk_version` | `null,`&nbsp;`string` | Version of the Braze SDK in use during the event
+`platform` | `null,`&nbsp;`string` | Platform of the device
+`os_version` | `null,`&nbsp;`string` | Version of the operating system of the device
+`device_model` | `null,`&nbsp;`string` | Model of the device
 `event_type` | `string` | What kind of geofence event was triggered. (for example, 'enter' or 'exit')
 `location_set_id` | `string` | The ID of the location set of the geofence that was triggered
 `geofence_id` | `string` | The ID of the geofence that was triggered
@@ -339,53 +339,53 @@ Field | Type | Description
 
 Field | Type | Description
 ------|------|------------
-`id` | `string` | globally unique ID for this event
+`id` | `string` | Globally unique ID for this event
 `user_id` | `string` | Braze ID of the user affected
-`external_user_id` | `null,`&nbsp;`string` | [PII] external user ID of the user
+`external_user_id` | `null,`&nbsp;`string` | [PII] External user ID of the user
 `email_address` | `null,`&nbsp;`string` | [PII] email address of the user
 `state_change_source` | `null,`&nbsp;`string` | source of the state change (REST, SDK, Dashboard, etc)
-`subscription_status` | `string` | subscription status: 'Subscribed' or 'Unsubscribed'
-`channel` | `null,`&nbsp;`string` | channel of the global subscription state such as email
+`subscription_status` | `string` | Subscription status: 'Subscribed' or 'Unsubscribed'
+`channel` | `null,`&nbsp;`string` | Channel of the global subscription state such as email
 `time` | `int` | Unix timestamp at which the subscription state changed
-`timezone` | `null,`&nbsp;`string` | timezone of the user
+`timezone` | `null,`&nbsp;`string` | Time zone of the user
 `app_group_api_id` | `null,`&nbsp;`string` | API ID of the workspace this user belongs to
 `app_api_id` | `null,`&nbsp;`string` | API ID of the app the event belongs to
-`campaign_id` | `null,`&nbsp;`string` | internal-use Braze ID of the campaign this event belongs to
+`campaign_id` | `null,`&nbsp;`string` | Internal-use Braze ID of the campaign this event belongs to
 `campaign_api_id` | `null,`&nbsp;`string` | API ID of the campaign this event belongs to
 `message_variation_api_id` | `null,`&nbsp;`string` | API ID of the message variation this event belongs to
-`canvas_id` | `null,`&nbsp;`string` | internal-use Braze ID of the Canvas this event belongs to
+`canvas_id` | `null,`&nbsp;`string` | Internal-use Braze ID of the Canvas this event belongs to
 `canvas_api_id` | `null,`&nbsp;`string` | API ID of the Canvas this event belongs to
 `canvas_variation_api_id` | `null,`&nbsp;`string` | API ID of the Canvas variation this event belongs to
 `canvas_step_api_id` | `null,`&nbsp;`string` | API ID of the Canvas step this event belongs to
-`send_id` | `null,`&nbsp;`string` | message send ID this subscription state change action originated from
+`send_id` | `null,`&nbsp;`string` | Message send ID this subscription state change action originated from
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 ### USERS_BEHAVIORS_SUBSCRIPTIONGROUP_STATECHANGE_SHARED {#USERS_BEHAVIORS_SUBSCRIPTIONGROUP_STATECHANGE_SHARED}
 
 Field | Type | Description
 ------|------|------------
-`id` | `string` | globally unique ID for this event
+`id` | `string` | Globally unique ID for this event
 `user_id` | `string` | Braze ID of the user affected
-`external_user_id` | `null,`&nbsp;`string` | [PII] external user ID of the user
+`external_user_id` | `null,`&nbsp;`string` | [PII] External user ID of the user
 `device_id` | `null,`&nbsp;`string` | `device_id` that is tied to this user if user is anonymous
 `app_group_api_id` | `null,`&nbsp;`string` | API ID of the workspace this user belongs to
 `email_address` | `null,`&nbsp;`string` | [PII] email address of the user
 `phone_number` | `null,`&nbsp;`string` | [PII] phone number of the user in e164 format
 `app_api_id` | `null,`&nbsp;`string` | API ID of the app the event belongs to
-`campaign_id` | `null,`&nbsp;`string` | internal-use Braze ID of the campaign this event belongs to
+`campaign_id` | `null,`&nbsp;`string` | Internal-use Braze ID of the campaign this event belongs to
 `campaign_api_id` | `null,`&nbsp;`string` | API ID of the campaign this event belongs to
 `message_variation_api_id` | `null,`&nbsp;`string` | API ID of the message variation this event belongs to
-`canvas_id` | `null,`&nbsp;`string` | internal-use Braze ID of the Canvas this event belongs to
+`canvas_id` | `null,`&nbsp;`string` | Internal-use Braze ID of the Canvas this event belongs to
 `canvas_api_id` | `null,`&nbsp;`string` | API ID of the Canvas this event belongs to
 `canvas_variation_api_id` | `null,`&nbsp;`string` | API ID of the Canvas variation this event belongs to
 `canvas_step_api_id` | `null,`&nbsp;`string` | API ID of the Canvas step this event belongs to
-`subscription_group_api_id` | `string` | subscription group API id
-`channel` | `null,`&nbsp;`string` | channel: 'email' or 'sms', depending on the channel type of the subscription group
-`subscription_status` | `string` | subscription status: 'Subscribed' or 'Unsubscribed'
+`subscription_group_api_id` | `string` | Subscription group API ID
+`channel` | `null,`&nbsp;`string` | Channel: 'email' or 'sms', depending on the channel type of the subscription group
+`subscription_status` | `string` | Subscription status: 'Subscribed' or 'Unsubscribed'
 `time` | `int` | Unix timestamp at which the subscription state changed
-`timezone` | `null,`&nbsp;`string` | timezone of the user
-`send_id` | `null,`&nbsp;`string` | message send ID this subscription state change action originated from
-`state_change_source` | `null,`&nbsp;`string` | source of the state change (REST, SDK, Dashboard, etc)
+`timezone` | `null,`&nbsp;`string` | Time zone of the user
+`send_id` | `null,`&nbsp;`string` | Message send ID this subscription state change action originated from
+`state_change_source` | `null,`&nbsp;`string` | Source of the state change (REST, SDK, Dashboard, etc)
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 ## Campaigns
@@ -394,114 +394,114 @@ Field | Type | Description
 
 Field | Type | Description
 ------|------|------------
-`id` | `string` | globally unique ID for this event
+`id` | `string` | Globally unique ID for this event
 `user_id` | `string` | Braze ID of the user that performed this event
-`external_user_id` | `null,`&nbsp;`string` | [PII] external user ID of the user
+`external_user_id` | `null,`&nbsp;`string` | [PII] External user ID of the user
 `device_id` | `null,`&nbsp;`string` | `device_id` that is tied to this user if user is anonymous
 `app_group_api_id` | `null,`&nbsp;`string` | API ID of the workspace this user belongs to
 `time` | `int` | Unix timestamp at which the event happened
 `dispatch_id` | `null,`&nbsp;`string` | ID of the dispatch this message belongs to
-`send_id` | `null,`&nbsp;`string` | message send ID this message belongs to
-`campaign_id` | `string` | internal-use Braze ID of the campaign this event belongs to
+`send_id` | `null,`&nbsp;`string` | Message send ID this message belongs to
+`campaign_id` | `string` | Internal-use Braze ID of the campaign this event belongs to
 `campaign_api_id` | `null,`&nbsp;`string` | API ID of the campaign this event belongs to
 `message_variation_api_id` | `null,`&nbsp;`string` | API ID of the message variation this user received
-`channel` | `null,`&nbsp;`string` | channel this event belongs to
-`gender` | `null,`&nbsp;`string` | [PII] gender of the user
-`country` | `null,`&nbsp;`string` | [PII] country of the user
-`timezone` | `null,`&nbsp;`string` | timezone of the user
-`language` | `null,`&nbsp;`string` | [PII] language of the user
-`abort_type` | `null,`&nbsp;`string` | type of abort, one of: `liquid_abort_message`, `quiet_hours`, `rate_limit`
-`abort_log` | `null,`&nbsp;`string` | [PII] log message describing abort details (maximum of 128 characters)
+`channel` | `null,`&nbsp;`string` | Channel this event belongs to
+`gender` | `null,`&nbsp;`string` | [PII] Gender of the user
+`country` | `null,`&nbsp;`string` | [PII] Country of the user
+`timezone` | `null,`&nbsp;`string` | Time zone of the user
+`language` | `null,`&nbsp;`string` | [PII] Language of the user
+`abort_type` | `null,`&nbsp;`string` | Type of abort, one of: `liquid_abort_message`, `quiet_hours`, `rate_limit`
+`abort_log` | `null,`&nbsp;`string` | [PII] Log message describing abort details (maximum of 128 characters)
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 ### USERS_CAMPAIGNS_CONVERSION_SHARED {#USERS_CAMPAIGNS_CONVERSION_SHARED}
 
 Field | Type | Description
 ------|------|------------
-`id` | `string` | globally unique ID for this event
+`id` | `string` | Globally unique ID for this event
 `user_id` | `string` | Braze ID of the user that performed this event
-`external_user_id` | `null,`&nbsp;`string` | [PII] external user ID of the user
+`external_user_id` | `null,`&nbsp;`string` | [PII] External user ID of the user
 `device_id` | `null,`&nbsp;`string` | `device_id` that is tied to this user if user is anonymous
 `app_group_api_id` | `null,`&nbsp;`string` | API ID of the workspace this user belongs to
 `time` | `int` | Unix timestamp at which the event happened
 `app_api_id` | `null,`&nbsp;`string` | API ID of the app on which this event occurred
 `dispatch_id` | `null,`&nbsp;`string` | ID of the dispatch this message belongs to
-`send_id` | `null,`&nbsp;`string` | message send ID this message belongs to
-`campaign_id` | `string` | internal-use Braze ID of the campaign this event belongs to
+`send_id` | `null,`&nbsp;`string` | Message send ID this message belongs to
+`campaign_id` | `string` | Internal-use Braze ID of the campaign this event belongs to
 `campaign_api_id` | `null,`&nbsp;`string` | API ID of the campaign this event belongs to
 `message_variation_api_id` | `null,`&nbsp;`string` | API ID of the message variation this user received
-`conversion_behavior_index` | `null, int` | index of the conversion behavior
-`gender` | `null,`&nbsp;`string` | [PII] gender of the user
-`country` | `null,`&nbsp;`string` | [PII] country of the user
-`timezone` | `null,`&nbsp;`string` | timezone of the user
-`language` | `null,`&nbsp;`string` | [PII] language of the user
+`conversion_behavior_index` | `null, int` | Index of the conversion behavior
+`gender` | `null,`&nbsp;`string` | [PII] Gender of the user
+`country` | `null,`&nbsp;`string` | [PII] Country of the user
+`timezone` | `null,`&nbsp;`string` | Time zone of the user
+`language` | `null,`&nbsp;`string` | [PII] Language of the user
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 ### USERS_CAMPAIGNS_ENROLLINCONTROL_SHARED {#USERS_CAMPAIGNS_ENROLLINCONTROL_SHARED}
 
 Field | Type | Description
 ------|------|------------
-`id` | `string` | globally unique ID for this event
+`id` | `string` | Globally unique ID for this event
 `user_id` | `string` | Braze ID of the user that performed this event
-`external_user_id` | `null,`&nbsp;`string` | [PII] external user ID of the user
+`external_user_id` | `null,`&nbsp;`string` | [PII] External user ID of the user
 `device_id` | `null,`&nbsp;`string` | `device_id` that is tied to this user if user is anonymous
 `app_group_api_id` | `null,`&nbsp;`string` | API ID of the workspace this user belongs to
 `time` | `int` | Unix timestamp at which the event happened
 `app_api_id` | `null,`&nbsp;`string` | API ID of the app on which this event occurred
 `dispatch_id` | `null,`&nbsp;`string` | ID of the dispatch this message belongs to
-`send_id` | `null,`&nbsp;`string` | message send ID this message belongs to
-`campaign_id` | `string` | internal-use Braze ID of the campaign this event belongs to
+`send_id` | `null,`&nbsp;`string` | Message send ID this message belongs to
+`campaign_id` | `string` | Internal-use Braze ID of the campaign this event belongs to
 `campaign_api_id` | `null,`&nbsp;`string` | API ID of the campaign this event belongs to
 `message_variation_api_id` | `null,`&nbsp;`string` | API ID of the message variation this user received
-`gender` | `null,`&nbsp;`string` | [PII] gender of the user
-`country` | `null,`&nbsp;`string` | [PII] country of the user
-`timezone` | `null,`&nbsp;`string` | timezone of the user
-`language` | `null,`&nbsp;`string` | [PII] language of the user
+`gender` | `null,`&nbsp;`string` | [PII] Gender of the user
+`country` | `null,`&nbsp;`string` | [PII] Country of the user
+`timezone` | `null,`&nbsp;`string` | Time zone of the user
+`language` | `null,`&nbsp;`string` | [PII] Language of the user
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 ### USERS_CAMPAIGNS_FREQUENCYCAP_SHARED {#USERS_CAMPAIGNS_FREQUENCYCAP_SHARED}
 
 Field | Type | Description
 ------|------|------------
-`id` | `string` | globally unique ID for this event
+`id` | `string` | Globally unique ID for this event
 `user_id` | `string` | Braze ID of the user that performed this event
-`external_user_id` | `null,`&nbsp;`string` | [PII] external user ID of the user
+`external_user_id` | `null,`&nbsp;`string` | [PII] External user ID of the user
 `device_id` | `null,`&nbsp;`string` | `device_id` that is tied to this user if user is anonymous
 `app_group_api_id` | `null,`&nbsp;`string` | API ID of the workspace this user belongs to
 `time` | `int` | Unix timestamp at which the event happened
 `dispatch_id` | `null,`&nbsp;`string` | ID of the dispatch this message belongs to
-`send_id` | `null,`&nbsp;`string` | message send ID this message belongs to
-`campaign_id` | `string` | internal-use Braze ID of the campaign this event belongs to
+`send_id` | `null,`&nbsp;`string` | Message send ID this message belongs to
+`campaign_id` | `string` | Internal-use Braze ID of the campaign this event belongs to
 `campaign_api_id` | `null,`&nbsp;`string` | API ID of the campaign this event belongs to
 `message_variation_api_id` | `null,`&nbsp;`string` | API ID of the message variation this user received
-`channel` | `null,`&nbsp;`string` | channel this event belongs to
-`gender` | `null,`&nbsp;`string` | [PII] gender of the user
-`country` | `null,`&nbsp;`string` | [PII] country of the user
-`timezone` | `null,`&nbsp;`string` | timezone of the user
-`language` | `null,`&nbsp;`string` | [PII] language of the user
+`channel` | `null,`&nbsp;`string` | Channel this event belongs to
+`gender` | `null,`&nbsp;`string` | [PII] Gender of the user
+`country` | `null,`&nbsp;`string` | [PII] Country of the user
+`timezone` | `null,`&nbsp;`string` | Time zone of the user
+`language` | `null,`&nbsp;`string` | [PII] Language of the user
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 ### USERS_CAMPAIGNS_REVENUE_SHARED {#USERS_CAMPAIGNS_REVENUE_SHARED}
 
 Field | Type | Description
 ------|------|------------
-`id` | `string` | globally unique ID for this event
+`id` | `string` | Globally unique ID for this event
 `user_id` | `string` | Braze ID of the user that performed this event
-`external_user_id` | `null,`&nbsp;`string` | [PII] external user ID of the user
+`external_user_id` | `null,`&nbsp;`string` | [PII] External user ID of the user
 `device_id` | `null,`&nbsp;`string` | `device_id` that is tied to this user if user is anonymous
 `app_group_api_id` | `null,`&nbsp;`string` | API ID of the workspace this user belongs to
 `time` | `int` | Unix timestamp at which the event happened
 `app_api_id` | `null,`&nbsp;`string` | API ID of the app on which this event occurred
 `dispatch_id` | `null,`&nbsp;`string` | ID of the dispatch this message belongs to
-`send_id` | `null,`&nbsp;`string` | message send ID this message belongs to
-`campaign_id` | `string` | internal-use Braze ID of the campaign this event belongs to
+`send_id` | `null,`&nbsp;`string` | Message send ID this message belongs to
+`campaign_id` | `string` | Internal-use Braze ID of the campaign this event belongs to
 `campaign_api_id` | `null,`&nbsp;`string` | API ID of the campaign this event belongs to
 `message_variation_api_id` | `null,`&nbsp;`string` | API ID of the message variation this user received
-`gender` | `null,`&nbsp;`string` | [PII] gender of the user
-`country` | `null,`&nbsp;`string` | [PII] country of the user
-`timezone` | `null,`&nbsp;`string` | timezone of the user
-`language` | `null,`&nbsp;`string` | [PII] language of the user
-`revenue` | `long` | the amount of USD revenue in cents generated
+`gender` | `null,`&nbsp;`string` | [PII] Gender of the user
+`country` | `null,`&nbsp;`string` | [PII] Country of the user
+`timezone` | `null,`&nbsp;`string` | Time zone of the user
+`language` | `null,`&nbsp;`string` | [PII] Language of the user
+`revenue` | `long` | The amount of USD revenue in cents generated
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 ## Canvas
@@ -522,10 +522,10 @@ Field | Type | Description
 | `canvas_variation_api_id`              | `string`,&nbsp;`null`    | API ID of the Canvas variation this event belongs to                       |
 | `canvas_step_api_id`                   | `string`,&nbsp;`null`    | API ID of the Canvas step this event belongs to                            |
 | `canvas_step_message_variation_api_id` | `string`,&nbsp;`null`    | API ID of the Canvas step message variation this user received             |
-| `channel`                              | `string`,&nbsp;`null`    | Messaging channel this event belongs to (email, push, etc.)                |
+| `channel`                              | `string`,&nbsp;`null`    | Messaging Channel this event belongs to (email, push, etc.)                |
 | `gender`                               | `string`,&nbsp;`null`    | [PII] Gender of the user                                                   |
 | `country`                              | `string`,&nbsp;`null`    | [PII] Country of the user                                                  |
-| `timezone`                             | `string`,&nbsp;`null`    | Timezone of the user                                                       |
+| `timezone`                             | `string`,&nbsp;`null`    | Time zone of the user                                                       |
 | `language`                             | `string`,&nbsp;`null`    | [PII] Language of the user                                                 |
 | `abort_type`                           | `string`,&nbsp;`null`    | Type of abort, one of: "liquid_abort_message", "quiet_hours", "rate_limit" |
 | `abort_log`                            | `string`,&nbsp;`null`    | [PII] Log message describing abort details, maximum 128 characters         |
@@ -552,7 +552,7 @@ Field | Type | Description
 | `conversion_behavior_index`            | `int`,&nbsp;`null`       | Type of conversion event the user performed where "0" is a primary conversion and "1" is a secondary conversion |
 | `gender`                               | `string`,&nbsp;`null`    | [PII] Gender of the user                                                                                        |
 | `country`                              | `string`,&nbsp;`null`    | [PII] Country of the user                                                                                       |
-| `timezone`                             | `string`,&nbsp;`null`    | Timezone of the user                                                                                            |
+| `timezone`                             | `string`,&nbsp;`null`    | Time zone of the user                                                                                            |
 | `language`                             | `string`,&nbsp;`null`    | [PII] Language of the user                                                                                      |
 | `sf_created_at`                        | `timestamp`,&nbsp;`null` | When this event was picked up by the Snowpipe                                                                   |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
@@ -574,7 +574,7 @@ Field | Type | Description
 | `canvas_step_api_id`      | `string`,&nbsp;`null`    | [Deprecated] API ID of the Canvas step this event belongs to         |
 | `gender`                  | `string`,&nbsp;`null`    | [PII] Gender of the user                                             |
 | `country`                 | `string`,&nbsp;`null`    | [PII] Country of the user                                            |
-| `timezone`                | `string`,&nbsp;`null`    | Timezone of the user                                                 |
+| `timezone`                | `string`,&nbsp;`null`    | Time zone of the user                                                 |
 | `language`                | `string`,&nbsp;`null`    | [PII] Language of the user                                           |
 | `in_control_group`        | `boolean`,&nbsp;`null`   | True if the user was enrolled in the control group                   |
 | `sf_created_at`           | `timestamp`,&nbsp;`null` | When this event was picked up by the Snowpipe                        |
@@ -673,10 +673,10 @@ Field | Type | Description
 | `canvas_variation_api_id`              | `string`,&nbsp;`null`    | API ID of the Canvas variation this event belongs to                 |
 | `canvas_step_api_id`                   | `string`,&nbsp;`null`    | API ID of the Canvas step this event belongs to                      |
 | `canvas_step_message_variation_api_id` | `string`,&nbsp;`null`    | API ID of the Canvas step message variation this user received       |
-| `channel`                              | `string`,&nbsp;`null`    | Messaging channel this event belongs to (email, push, etc.)          |
+| `channel`                              | `string`,&nbsp;`null`    | Messaging Channel this event belongs to (email, push, etc.)          |
 | `gender`                               | `string`,&nbsp;`null`    | [PII] Gender of the user                                             |
 | `country`                              | `string`,&nbsp;`null`    | [PII] Country of the user                                            |
-| `timezone`                             | `string`,&nbsp;`null`    | Timezone of the user                                                 |
+| `timezone`                             | `string`,&nbsp;`null`    | Time zone of the user                                                 |
 | `language`                             | `string`,&nbsp;`null`    | [PII] Language of the user                                           |
 | `sf_created_at`                        | `timestamp`,&nbsp;`null` | When this event was picked up by the Snowpipe                        |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
@@ -699,7 +699,7 @@ Field | Type | Description
 | `canvas_step_message_variation_api_id` | `string`,&nbsp;`null`    | API ID of the Canvas step message variation this user received       |
 | `gender`                               | `string`,&nbsp;`null`    | [PII] Gender of the user                                             |
 | `country`                              | `string`,&nbsp;`null`    | [PII] Country of the user                                            |
-| `timezone`                             | `string`,&nbsp;`null`    | Timezone of the user                                                 |
+| `timezone`                             | `string`,&nbsp;`null`    | Time zone of the user                                                 |
 | `language`                             | `string`,&nbsp;`null`    | [PII] Language of the user                                           |
 | `revenue`                              | `int`,&nbsp;`null`       | Amount of revenue generated in USD, displayed as cents               |
 | `sf_created_at`                        | `timestamp`,&nbsp;`null` | When this event was picked up by the Snowpipe                        |
@@ -713,7 +713,7 @@ Field | Type | Description
 ------|------|------------
 `id` | `string` | Globally unique ID for this event
 `user_id` | `string` | Braze ID of the user that performed this event
-`external_user_id` | `null,`&nbsp;`string` | [PII] external user ID of the user
+`external_user_id` | `null,`&nbsp;`string` | [PII] External user ID of the user
 `device_id` | `null,`&nbsp;`string` | `device_id` that is tied to this user if user is anonymous
 `app_group_api_id` | `null,`&nbsp;`string` | API ID of the workspace this user belongs to
 `time` | `int` | Unix timestamp at which the event happened
@@ -727,12 +727,12 @@ Field | Type | Description
 `canvas_variation_api_id` | `null,`&nbsp;`string` | API ID of the Canvas variation this event belongs to
 `canvas_step_api_id` | `null,`&nbsp;`string` | API ID of the Canvas step this event belongs to
 `canvas_step_message_variation_api_id` | `null,`&nbsp;`string` | API ID of the Canvas step message variation this user received
-`gender` | `null,`&nbsp;`string` | [PII] gender of the user
-`country` | `null,`&nbsp;`string` | [PII] country of the user
+`gender` | `null,`&nbsp;`string` | [PII] Gender of the user
+`country` | `null,`&nbsp;`string` | [PII] Country of the user
 `timezone` | `null,`&nbsp;`string` | Time zone of the user
-`language` | `null,`&nbsp;`string` | [PII] language of the user
+`language` | `null,`&nbsp;`string` | [PII] Language of the user
 `abort_type` | `null,`&nbsp;`string` | Type of abort, one of: `liquid_abort_message`, `quiet_hours`, `rate_limit`
-`abort_log` | `null,`&nbsp;`string` | [PII] log message describing abort details (maximum of 128 characters)
+`abort_log` | `null,`&nbsp;`string` | [PII] Log message describing abort details (maximum of 128 characters)
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 ### USERS_MESSAGES_CONTENTCARD_CLICK_SHARED {#USERS_MESSAGES_CONTENTCARD_CLICK_SHARED}
@@ -742,7 +742,7 @@ Field | Type | Description
 `id` | `string` | Globally unique ID for this event
 `user_id` | `string` | Braze ID of the user that performed this event
 `content_card_id` | `string` | ID of the card that generated this event
-`external_user_id` | `null,`&nbsp;`string` | [PII] external user ID of the user
+`external_user_id` | `null,`&nbsp;`string` | [PII] External user ID of the user
 `app_group_api_id` | `null,`&nbsp;`string` | API ID of the workspace this user belongs to
 `time` | `int` | Unix timestamp at which the event happened
 `app_api_id` | `null,`&nbsp;`string` | API ID of the app on which this event occurred
@@ -756,8 +756,8 @@ Field | Type | Description
 `canvas_variation_api_id` | `null,`&nbsp;`string` | API ID of the Canvas variation this event belongs to
 `canvas_step_api_id` | `null,`&nbsp;`string` | API ID of the Canvas step this event belongs to
 `canvas_step_message_variation_api_id` | `null,`&nbsp;`string` | API ID of the Canvas step message variation this user received
-`gender` | `null,`&nbsp;`string` | [PII] gender of the user
-`country` | `null,`&nbsp;`string` | [PII] country of the user
+`gender` | `null,`&nbsp;`string` | [PII] Gender of the user
+`country` | `null,`&nbsp;`string` | [PII] Country of the user
 `timezone` | `null,`&nbsp;`string` | Time zone of the user
 `language` | `null,`&nbsp;`string` | [PII] Language of the user
 `device_id` | `null,`&nbsp;`string` | ID of the device on which the event occurred
@@ -780,7 +780,7 @@ Field | Type | Description
 `id` | `string` | Globally unique ID for this event
 `user_id` | `string` | Braze ID of the user that performed this event
 `content_card_id` | `string` | ID of the card that generated this event
-`external_user_id` | `null,`&nbsp;`string` | [PII] external user ID of the user
+`external_user_id` | `null,`&nbsp;`string` | [PII] External user ID of the user
 `app_group_api_id` | `null,`&nbsp;`string` | API ID of the workspace this user belongs to
 `time` | `int` | Unix timestamp at which the event happened
 `app_api_id` | `null,`&nbsp;`string` | API ID of the app on which this event occurred
@@ -794,10 +794,10 @@ Field | Type | Description
 `canvas_variation_api_id` | `null,`&nbsp;`string` | API ID of the Canvas variation this event belongs to
 `canvas_step_api_id` | `null,`&nbsp;`string` | API ID of the Canvas step this event belongs to
 `canvas_step_message_variation_api_id` | `null,`&nbsp;`string` | API ID of the Canvas step message variation this user received
-`gender` | `null,`&nbsp;`string` | [PII] gender of the user
-`country` | `null,`&nbsp;`string` | [PII] country of the user
+`gender` | `null,`&nbsp;`string` | [PII] Gender of the user
+`country` | `null,`&nbsp;`string` | [PII] Country of the user
 `timezone` | `null,`&nbsp;`string` | Time zone of the user
-`language` | `null,`&nbsp;`string` | [PII] language of the user
+`language` | `null,`&nbsp;`string` | [PII] Language of the user
 `device_id` | `null,`&nbsp;`string` | ID of the device on which the event occurred
 `sdk_version` | `null,`&nbsp;`string` | Version of the Braze SDK in use during the event
 `platform` | `null,`&nbsp;`string` | Platform of the device
@@ -818,7 +818,7 @@ Field | Type | Description
 `id` | `string` | Globally unique ID for this event
 `user_id` | `string` | Braze ID of the user that performed this event
 `content_card_id` | `string` | ID of the card that generated this event
-`external_user_id` | `null,`&nbsp;`string` | [PII] external user ID of the user
+`external_user_id` | `null,`&nbsp;`string` | [PII] External user ID of the user
 `app_group_api_id` | `null,`&nbsp;`string` | API ID of the workspace this user belongs to
 `time` | `int` | Unix timestamp at which the event happened
 `app_api_id` | `null,`&nbsp;`string` | API ID of the app on which this event occurred
@@ -832,10 +832,10 @@ Field | Type | Description
 `canvas_variation_api_id` | `null,`&nbsp;`string` | API ID of the Canvas variation this event belongs to
 `canvas_step_api_id` | `null,`&nbsp;`string` | API ID of the Canvas step this event belongs to
 `canvas_step_message_variation_api_id` | `null,`&nbsp;`string` | API ID of the Canvas step message variation this user received
-`gender` | `null,`&nbsp;`string` | [PII] gender of the user
-`country` | `null,`&nbsp;`string` | [PII] country of the user
+`gender` | `null,`&nbsp;`string` | [PII] Gender of the user
+`country` | `null,`&nbsp;`string` | [PII] Country of the user
 `timezone` | `null,`&nbsp;`string` | Time zone of the user
-`language` | `null,`&nbsp;`string` | [PII] language of the user
+`language` | `null,`&nbsp;`string` | [PII] Language of the user
 `device_id` | `null,`&nbsp;`string` | ID of the device on which the event occurred
 `sdk_version` | `null,`&nbsp;`string` | Version of the Braze SDK in use during the event
 `platform` | `null,`&nbsp;`string` | Platform of the device
@@ -855,7 +855,7 @@ Field | Type | Description
 ------|------|------------
 `id` | `string` | Globally unique ID for this event
 `user_id` | `string` | Braze ID of the user that performed this event
-`external_user_id` | `null,`&nbsp;`string` | [PII] external user ID of the user
+`external_user_id` | `null,`&nbsp;`string` | [PII] External user ID of the user
 `device_id` | `null,`&nbsp;`string` | `device_id` that is tied to this user if user is anonymous
 `app_group_api_id` | `null,`&nbsp;`string` | API ID of the workspace this user belongs to
 `time` | `int` | Unix timestamp at which the event happened
@@ -869,10 +869,10 @@ Field | Type | Description
 `canvas_variation_api_id` | `null,`&nbsp;`string` | API ID of the Canvas variation this event belongs to
 `canvas_step_api_id` | `null,`&nbsp;`string` | API ID of the Canvas step this event belongs to
 `canvas_step_message_variation_api_id` | `null,`&nbsp;`string` | API ID of the Canvas step message variation this user received
-`gender` | `null,`&nbsp;`string` | [PII] gender of the user
-`country` | `null,`&nbsp;`string` | [PII] country of the user
+`gender` | `null,`&nbsp;`string` | [PII] Gender of the user
+`country` | `null,`&nbsp;`string` | [PII] Country of the user
 `timezone` | `null,`&nbsp;`string` | Time zone of the user
-`language` | `null,`&nbsp;`string` | [PII] language of the user
+`language` | `null,`&nbsp;`string` | [PII] Language of the user
 `content_card_id` | `string` | ID of the card that generated this event
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
@@ -882,7 +882,7 @@ Field | Type | Description
 ------|------|------------
 `id` | `string` | Globally unique ID for this event
 `user_id` | `string` | Braze ID of the user that performed this event
-`external_user_id` | `null,`&nbsp;`string` | [PII] external user ID of the user
+`external_user_id` | `null,`&nbsp;`string` | [PII] External user ID of the user
 `device_id` | `null,`&nbsp;`string` | `device_id` that is tied to this user if user is anonymous
 `app_group_api_id` | `null,`&nbsp;`string` | API ID of the workspace this user belongs to
 `time` | `int` | Unix timestamp at which the event happened
@@ -896,14 +896,14 @@ Field | Type | Description
 `canvas_variation_api_id` | `null,`&nbsp;`string` | API ID of the Canvas variation this event belongs to
 `canvas_step_api_id` | `null,`&nbsp;`string` | API ID of the Canvas step this event belongs to
 `canvas_step_message_variation_api_id` | `null,`&nbsp;`string` | API ID of the Canvas step message variation this user received
-`gender` | `null,`&nbsp;`string` | [PII] gender of the user
-`country` | `null,`&nbsp;`string` | [PII] country of the user
+`gender` | `null,`&nbsp;`string` | [PII] Gender of the user
+`country` | `null,`&nbsp;`string` | [PII] Country of the user
 `timezone` | `null,`&nbsp;`string` | Time zone of the user
-`language` | `null,`&nbsp;`string` | [PII] language of the user
+`language` | `null,`&nbsp;`string` | [PII] Language of the user
 `email_address` | `string` | [PII] email address of the user
 `ip_pool` | `null,`&nbsp;`string` | IP Pool from which the email send was made
 `abort_type` | `null,`&nbsp;`string` | Type of abort, one of: `liquid_abort_message`, `quiet_hours`, `rate_limit`
-`abort_log` | `null,`&nbsp;`string` | [PII] log message describing abort details (maximum of 128 characters)
+`abort_log` | `null,`&nbsp;`string` | [PII] Log message describing abort details (maximum of 128 characters)
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 ### USERS_MESSAGES_EMAIL_BOUNCE_SHARED {#USERS_MESSAGES_EMAIL_BOUNCE_SHARED}
@@ -912,7 +912,7 @@ Field | Type | Description
 ------|------|------------
 `id` | `string` | Globally unique ID for this event
 `user_id` | `string` | Braze ID of the user that performed this event
-`external_user_id` | `null,`&nbsp;`string` | [PII] external user ID of the user
+`external_user_id` | `null,`&nbsp;`string` | [PII] External user ID of the user
 `device_id` | `null,`&nbsp;`string` | `device_id` that is tied to this user if user is anonymous
 `app_group_api_id` | `null,`&nbsp;`string` | API ID of the workspace this user belongs to
 `time` | `int` | Unix timestamp at which the event happened
@@ -926,10 +926,10 @@ Field | Type | Description
 `canvas_variation_api_id` | `null,`&nbsp;`string` | API ID of the Canvas variation this event belongs to
 `canvas_step_api_id` | `null,`&nbsp;`string` | API ID of the Canvas step this event belongs to
 `canvas_step_message_variation_api_id` | `null,`&nbsp;`string` | API ID of the Canvas step message variation this user received
-`gender` | `null,`&nbsp;`string` | [PII] gender of the user
-`country` | `null,`&nbsp;`string` | [PII] country of the user
-`timezone` | `null,`&nbsp;`string` | Timezone of the user
-`language` | `null,`&nbsp;`string` | [PII] language of the user
+`gender` | `null,`&nbsp;`string` | [PII] Gender of the user
+`country` | `null,`&nbsp;`string` | [PII] Country of the user
+`timezone` | `null,`&nbsp;`string` | Time zone of the user
+`language` | `null,`&nbsp;`string` | [PII] Language of the user
 `email_address` | `string` | [PII] email address of the user
 `sending_ip` | `null,`&nbsp;`string` | IP address from which the email send was made
 `ip_pool` | `null,`&nbsp;`string` | IP Pool from which the email send was made
@@ -945,7 +945,7 @@ Field | Type | Description
 ------|------|------------
 `id` | `string` | Globally unique ID for this event
 `user_id` | `string` | Braze ID of the user that performed this event
-`external_user_id` | `null,`&nbsp;`string` | [PII] external user ID of the user
+`external_user_id` | `null,`&nbsp;`string` | [PII] External user ID of the user
 `device_id` | `null,`&nbsp;`string` | `device_id` that is tied to this user if user is anonymous
 `app_group_api_id` | `null,`&nbsp;`string` | API ID of the workspace this user belongs to
 `time` | `int` | Unix timestamp at which the event happened
@@ -959,10 +959,10 @@ Field | Type | Description
 `canvas_variation_api_id` | `null,`&nbsp;`string` | API ID of the Canvas variation this event belongs to
 `canvas_step_api_id` | `null,`&nbsp;`string` | API ID of the Canvas step this event belongs to
 `canvas_step_message_variation_api_id` | `null,`&nbsp;`string` | API ID of the Canvas step message variation this user received
-`gender` | `null,`&nbsp;`string` | [PII] gender of the user
-`country` | `null,`&nbsp;`string` | [PII] country of the user
-`timezone` | `null,`&nbsp;`string` | Timezone of the user
-`language` | `null,`&nbsp;`string` | [PII] language of the user
+`gender` | `null,`&nbsp;`string` | [PII] Gender of the user
+`country` | `null,`&nbsp;`string` | [PII] Country of the user
+`timezone` | `null,`&nbsp;`string` | Time zone of the user
+`language` | `null,`&nbsp;`string` | [PII] Language of the user
 `email_address` | `string` | [PII] email address of the user
 `url` | `null,`&nbsp;`string` | URL that the user clicked on
 `user_agent` | `null,`&nbsp;`string` | User agent on which the click occurred
@@ -980,7 +980,7 @@ Field | Type | Description
 ------|------|------------
 `id` | `string` | Globally unique ID for this event
 `user_id` | `string` | Braze ID of the user that performed this event
-`external_user_id` | `null,`&nbsp;`string` | [PII] external user ID of the user
+`external_user_id` | `null,`&nbsp;`string` | [PII] External user ID of the user
 `device_id` | `null,`&nbsp;`string` | `device_id` that is tied to this user if user is anonymous
 `app_group_api_id` | `null,`&nbsp;`string` | API ID of the workspace this user belongs to
 `time` | `int` | Unix timestamp at which the event happened
@@ -994,10 +994,10 @@ Field | Type | Description
 `canvas_variation_api_id` | `null,`&nbsp;`string` | API ID of the Canvas variation this event belongs to
 `canvas_step_api_id` | `null,`&nbsp;`string` | API ID of the Canvas step this event belongs to
 `canvas_step_message_variation_api_id` | `null,`&nbsp;`string` | API ID of the Canvas step message variation this user received
-`gender` | `null,`&nbsp;`string` | [PII] gender of the user
-`country` | `null,`&nbsp;`string` | [PII] country of the user
-`timezone` | `null,`&nbsp;`string` | Timezone of the user
-`language` | `null,`&nbsp;`string` | [PII] language of the user
+`gender` | `null,`&nbsp;`string` | [PII] Gender of the user
+`country` | `null,`&nbsp;`string` | [PII] Country of the user
+`timezone` | `null,`&nbsp;`string` | Time zone of the user
+`language` | `null,`&nbsp;`string` | [PII] Language of the user
 `email_address` | `string` | [PII] email address of the user
 `sending_ip` | `null,`&nbsp;`string` | IP address from which the email was sent
 `ip_pool` | `null,`&nbsp;`string` | IP Pool from which the email send was made
@@ -1011,7 +1011,7 @@ Field | Type | Description
 ------|------|------------
 `id` | `string` | Globally unique ID for this event
 `user_id` | `string` | Braze ID of the user that performed this event
-`external_user_id` | `null,`&nbsp;`string` | [PII] external user ID of the user
+`external_user_id` | `null,`&nbsp;`string` | [PII] External user ID of the user
 `device_id` | `null,`&nbsp;`string` | `device_id` that is tied to this user if user is anonymous
 `app_group_api_id` | `null,`&nbsp;`string` | API ID of the workspace this user belongs to
 `time` | `int` | Unix timestamp at which the event happened
@@ -1025,10 +1025,10 @@ Field | Type | Description
 `canvas_variation_api_id` | `null,`&nbsp;`string` | API ID of the Canvas variation this event belongs to
 `canvas_step_api_id` | `null,`&nbsp;`string` | API ID of the Canvas step this event belongs to
 `canvas_step_message_variation_api_id` | `null,`&nbsp;`string` | API ID of the Canvas step message variation this user received
-`gender` | `null,`&nbsp;`string` | [PII] gender of the user
-`country` | `null,`&nbsp;`string` | [PII] country of the user
-`timezone` | `null,`&nbsp;`string` | Timezone of the user
-`language` | `null,`&nbsp;`string` | [PII] language of the user
+`gender` | `null,`&nbsp;`string` | [PII] Gender of the user
+`country` | `null,`&nbsp;`string` | [PII] Country of the user
+`timezone` | `null,`&nbsp;`string` | Time zone of the user
+`language` | `null,`&nbsp;`string` | [PII] Language of the user
 `email_address` | `string` | [PII] email address of the user
 `user_agent` | `null,`&nbsp;`string` | User agent on which the spam report occurred
 `ip_pool` | `null,`&nbsp;`string` | IP Pool from which the email send was made
@@ -1042,7 +1042,7 @@ Field | Type | Description
 ------|------|------------
 `id` | `string` | Globally unique ID for this event
 `user_id` | `string` | Braze ID of the user that performed this event
-`external_user_id` | `null,`&nbsp;`string` | [PII] external user ID of the user
+`external_user_id` | `null,`&nbsp;`string` | [PII] External user ID of the user
 `device_id` | `null,`&nbsp;`string` | `device_id` that is tied to this user if user is anonymous
 `app_group_api_id` | `null,`&nbsp;`string` | API ID of the workspace this user belongs to
 `time` | `int` | Unix timestamp at which the event happened
@@ -1056,10 +1056,10 @@ Field | Type | Description
 `canvas_variation_api_id` | `null,`&nbsp;`string` | API ID of the Canvas variation this event belongs to
 `canvas_step_api_id` | `null,`&nbsp;`string` | API ID of the Canvas step this event belongs to
 `canvas_step_message_variation_api_id` | `null,`&nbsp;`string` | API ID of the Canvas step message variation this user received
-`gender` | `null,`&nbsp;`string` | [PII] gender of the user
-`country` | `null,`&nbsp;`string` | [PII] country of the user
-`timezone` | `null,`&nbsp;`string` | Timezone of the user
-`language` | `null,`&nbsp;`string` | [PII] language of the user
+`gender` | `null,`&nbsp;`string` | [PII] Gender of the user
+`country` | `null,`&nbsp;`string` | [PII] Country of the user
+`timezone` | `null,`&nbsp;`string` | Time zone of the user
+`language` | `null,`&nbsp;`string` | [PII] Language of the user
 `email_address` | `string` | [PII] email address of the user
 `user_agent` | `null,`&nbsp;`string` | User agent on which the open occurred
 `ip_pool` | `null,`&nbsp;`string` | IP Pool from which the email send was made
@@ -1075,7 +1075,7 @@ Field | Type | Description
 ------|------|------------
 `id` | `string` | Globally unique ID for this event
 `user_id` | `string` | Braze ID of the user that performed this event
-`external_user_id` | `null,`&nbsp;`string` | [PII] external user ID of the user
+`external_user_id` | `null,`&nbsp;`string` | [PII] External user ID of the user
 `device_id` | `null,`&nbsp;`string` | `device_id` that is tied to this user if user is anonymous
 `app_group_api_id` | `null,`&nbsp;`string` | API ID of the workspace this user belongs to
 `time` | `int` | Unix timestamp at which the event happened
@@ -1089,10 +1089,10 @@ Field | Type | Description
 `canvas_variation_api_id` | `null,`&nbsp;`string` | API ID of the Canvas variation this event belongs to
 `canvas_step_api_id` | `null,`&nbsp;`string` | API ID of the Canvas step this event belongs to
 `canvas_step_message_variation_api_id` | `null,`&nbsp;`string` | API ID of the Canvas step message variation this user received
-`gender` | `null,`&nbsp;`string` | [PII] gender of the user
-`country` | `null,`&nbsp;`string` | [PII] country of the user
-`timezone` | `null,`&nbsp;`string` | Timezone of the user
-`language` | `null,`&nbsp;`string` | [PII] language of the user
+`gender` | `null,`&nbsp;`string` | [PII] Gender of the user
+`country` | `null,`&nbsp;`string` | [PII] Country of the user
+`timezone` | `null,`&nbsp;`string` | Time zone of the user
+`language` | `null,`&nbsp;`string` | [PII] Language of the user
 `email_address` | `string` | [PII] email address of the user
 `ip_pool` | `null,`&nbsp;`string` | IP Pool from which the email send was made
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
@@ -1103,7 +1103,7 @@ Field | Type | Description
 ------|------|------------
 `id` | `string` | Globally unique ID for this event
 `user_id` | `string` | Braze ID of the user that performed this event
-`external_user_id` | `null,`&nbsp;`string` | [PII] external user ID of the user
+`external_user_id` | `null,`&nbsp;`string` | [PII] External user ID of the user
 `device_id` | `null,`&nbsp;`string` | `device_id` that is tied to this user if user is anonymous
 `app_group_api_id` | `null,`&nbsp;`string` | API ID of the workspace this user belongs to
 `time` | `int` | Unix timestamp at which the event happened
@@ -1117,10 +1117,10 @@ Field | Type | Description
 `canvas_variation_api_id` | `null,`&nbsp;`string` | API ID of the Canvas variation this event belongs to
 `canvas_step_api_id` | `null,`&nbsp;`string` | API ID of the Canvas step this event belongs to
 `canvas_step_message_variation_api_id` | `null,`&nbsp;`string` | API ID of the Canvas step message variation this user received
-`gender` | `null,`&nbsp;`string` | [PII] gender of the user
-`country` | `null,`&nbsp;`string` | [PII] country of the user
+`gender` | `null,`&nbsp;`string` | [PII] Gender of the user
+`country` | `null,`&nbsp;`string` | [PII] Country of the user
 `timezone` | `null,`&nbsp;`string` | Time zone of the user
-`language` | `null,`&nbsp;`string` | [PII] language of the user
+`language` | `null,`&nbsp;`string` | [PII] Language of the user
 `email_address` | `string` | [PII] email address of the user
 `sending_ip` | `null,`&nbsp;`string` | IP address from which the email send was made
 `ip_pool` | `null,`&nbsp;`string` | IP Pool from which the email send was made
@@ -1135,7 +1135,7 @@ Field | Type | Description
 ------|------|------------
 `id` | `string` | Globally unique ID for this event
 `user_id` | `string` | Braze ID of the user that performed this event
-`external_user_id` | `null,`&nbsp;`string` | [PII] external user ID of the user
+`external_user_id` | `null,`&nbsp;`string` | [PII] External user ID of the user
 `device_id` | `null,`&nbsp;`string` | `device_id` that is tied to this user if user is anonymous
 `app_group_api_id` | `null,`&nbsp;`string` | API ID of the workspace this user belongs to
 `time` | `int` | Unix timestamp at which the event happened
@@ -1149,10 +1149,10 @@ Field | Type | Description
 `canvas_variation_api_id` | `null,`&nbsp;`string` | API ID of the Canvas variation this event belongs to
 `canvas_step_api_id` | `null,`&nbsp;`string` | API ID of the Canvas step this event belongs to
 `canvas_step_message_variation_api_id` | `null,`&nbsp;`string` | API ID of the Canvas step message variation this user received
-`gender` | `null,`&nbsp;`string` | [PII] gender of the user
-`country` | `null,`&nbsp;`string` | [PII] country of the user
-`timezone` | `null,`&nbsp;`string` | Timezone of the user
-`language` | `null,`&nbsp;`string` | [PII] language of the user
+`gender` | `null,`&nbsp;`string` | [PII] Gender of the user
+`country` | `null,`&nbsp;`string` | [PII] Country of the user
+`timezone` | `null,`&nbsp;`string` | Time zone of the user
+`language` | `null,`&nbsp;`string` | [PII] Language of the user
 `email_address` | `string` | [PII] email address of the user
 `ip_pool` | `null,`&nbsp;`string` | IP Pool from which the email send was made
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
@@ -1163,7 +1163,7 @@ Field | Type | Description
 ------|------|------------
 `id` | `string` | Globally unique ID for this event
 `user_id` | `string` | Braze ID of the user that performed this event
-`external_user_id` | `null,`&nbsp;`string` | [PII] external user ID of the user
+`external_user_id` | `null,`&nbsp;`string` | [PII] External user ID of the user
 `app_group_api_id` | `null,`&nbsp;`string` | API ID of the workspace this user belongs to
 `time` | `int` | Unix timestamp at which the event happened
 `app_api_id` | `null,`&nbsp;`string` | API ID of the app on which this event occurred
@@ -1178,12 +1178,12 @@ Field | Type | Description
 `canvas_variation_api_id` | `null,`&nbsp;`string` | API ID of the Canvas variation this event belongs to
 `canvas_step_api_id` | `null,`&nbsp;`string` | API ID of the Canvas step this event belongs to
 `canvas_step_message_variation_api_id` | `null,`&nbsp;`string` | API ID of the Canvas step message variation this user received
-`gender` | `null,`&nbsp;`string` | [PII] gender of the user
-`country` | `null,`&nbsp;`string` | [PII] country of the user
-`timezone` | `null,`&nbsp;`string` | Timezone of the user
-`language` | `null,`&nbsp;`string` | [PII] language of the user
+`gender` | `null,`&nbsp;`string` | [PII] Gender of the user
+`country` | `null,`&nbsp;`string` | [PII] Country of the user
+`timezone` | `null,`&nbsp;`string` | Time zone of the user
+`language` | `null,`&nbsp;`string` | [PII] Language of the user
 `device_id` | `null,`&nbsp;`string` | ID of the device on which the event occurred
-`sdk_version` | `null,`&nbsp;`string` | version of the Braze SDK in use during the event
+`sdk_version` | `null,`&nbsp;`string` | Version of the Braze SDK in use during the event
 `platform` | `null,`&nbsp;`string` | Platform of the device
 `os_version` | `null,`&nbsp;`string` | Version of the operating system of the device
 `device_model` | `null,`&nbsp;`string` | Model of the device
@@ -1195,39 +1195,39 @@ Field | Type | Description
 `ad_id_type` | `null,`&nbsp;`string` | One of `ios_idfa`, `google_ad_id`, `windows_ad_id`, OR `roku_ad_id`
 `ad_tracking_enabled` | `null, boolean` | Whether advertising tracking is enabled for the device
 `abort_type` | `null,`&nbsp;`string` | Type of abort, one of: `liquid_abort_message`, `quiet_hours`, `rate_limit`
-`abort_log` | `null,`&nbsp;`string` | [PII] log message describing abort details (maximum of 128 characters)
+`abort_log` | `null,`&nbsp;`string` | [PII] Log message describing abort details (maximum of 128 characters)
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 ### USERS_MESSAGES_INAPPMESSAGE_CLICK_SHARED {#USERS_MESSAGES_INAPPMESSAGE_CLICK_SHARED}
 
 Field | Type | Description
 ------|------|------------
-`id` | `string` | globally unique ID for this event
+`id` | `string` | Globally unique ID for this event
 `user_id` | `string` | Braze ID of the user that performed this event
-`external_user_id` | `null,`&nbsp;`string` | [PII] external user ID of the user
+`external_user_id` | `null,`&nbsp;`string` | [PII] External user ID of the user
 `app_group_api_id` | `null,`&nbsp;`string` | API ID of the workspace this user belongs to
 `time` | `int` | Unix timestamp at which the event happened
 `app_api_id` | `null,`&nbsp;`string` | API ID of the app on which this event occurred
 `card_api_id` | `null,`&nbsp;`string` | API ID of the card
 `dispatch_id` | `null,`&nbsp;`string` | ID of the dispatch this message belongs to
-`send_id` | `null,`&nbsp;`string` | message send ID this message belongs to
-`campaign_id` | `null,`&nbsp;`string` | internal-use Braze ID of the campaign this event belongs to
+`send_id` | `null,`&nbsp;`string` | Message send ID this message belongs to
+`campaign_id` | `null,`&nbsp;`string` | Internal-use Braze ID of the campaign this event belongs to
 `campaign_api_id` | `null,`&nbsp;`string` | API ID of the campaign this event belongs to
 `message_variation_api_id` | `null,`&nbsp;`string` | API ID of the message variation this user received
-`canvas_id` | `null,`&nbsp;`string` | internal-use Braze ID of the Canvas this event belongs to
+`canvas_id` | `null,`&nbsp;`string` | Internal-use Braze ID of the Canvas this event belongs to
 `canvas_api_id` | `null,`&nbsp;`string` | API ID of the Canvas this event belongs to
 `canvas_variation_api_id` | `null,`&nbsp;`string` | API ID of the Canvas variation this event belongs to
 `canvas_step_api_id` | `null,`&nbsp;`string` | API ID of the Canvas step this event belongs to
 `canvas_step_message_variation_api_id` | `null,`&nbsp;`string` | API ID of the Canvas step message variation this user received
-`gender` | `null,`&nbsp;`string` | [PII] gender of the user
-`country` | `null,`&nbsp;`string` | [PII] country of the user
-`timezone` | `null,`&nbsp;`string` | timezone of the user
-`language` | `null,`&nbsp;`string` | [PII] language of the user
+`gender` | `null,`&nbsp;`string` | [PII] Gender of the user
+`country` | `null,`&nbsp;`string` | [PII] Country of the user
+`timezone` | `null,`&nbsp;`string` | Time zone of the user
+`language` | `null,`&nbsp;`string` | [PII] Language of the user
 `device_id` | `null,`&nbsp;`string` | ID of the device on which the event occurred
-`sdk_version` | `null,`&nbsp;`string` | version of the Braze SDK in use during the event
-`platform` | `null,`&nbsp;`string` | platform of the device
-`os_version` | `null,`&nbsp;`string` | version of the operating system of the device
-`device_model` | `null,`&nbsp;`string` | model of the device
+`sdk_version` | `null,`&nbsp;`string` | Version of the Braze SDK in use during the event
+`platform` | `null,`&nbsp;`string` | Platform of the device
+`os_version` | `null,`&nbsp;`string` | Version of the operating system of the device
+`device_model` | `null,`&nbsp;`string` | Model of the device
 `resolution` | `null,`&nbsp;`string` | resolution of the device
 `carrier` | `null,`&nbsp;`string` | carrier of the device
 `browser` | `null,`&nbsp;`string` | browser of the device
@@ -1242,32 +1242,32 @@ Field | Type | Description
 
 Field | Type | Description
 ------|------|------------
-`id` | `string` | globally unique ID for this event
+`id` | `string` | Globally unique ID for this event
 `user_id` | `string` | Braze ID of the user that performed this event
-`external_user_id` | `null,`&nbsp;`string` | [PII] external user ID of the user
+`external_user_id` | `null,`&nbsp;`string` | [PII] External user ID of the user
 `app_group_api_id` | `null,`&nbsp;`string` | API ID of the workspace this user belongs to
 `time` | `int` | Unix timestamp at which the event happened
 `app_api_id` | `null,`&nbsp;`string` | API ID of the app on which this event occurred
 `card_api_id` | `null,`&nbsp;`string` | API ID of the card
 `dispatch_id` | `null,`&nbsp;`string` | ID of the dispatch this message belongs to
-`send_id` | `null,`&nbsp;`string` | message send ID this message belongs to
-`campaign_id` | `null,`&nbsp;`string` | internal-use Braze ID of the campaign this event belongs to
+`send_id` | `null,`&nbsp;`string` | Message send ID this message belongs to
+`campaign_id` | `null,`&nbsp;`string` | Internal-use Braze ID of the campaign this event belongs to
 `campaign_api_id` | `null,`&nbsp;`string` | API ID of the campaign this event belongs to
 `message_variation_api_id` | `null,`&nbsp;`string` | API ID of the message variation this user received
-`canvas_id` | `null,`&nbsp;`string` | internal-use Braze ID of the Canvas this event belongs to
+`canvas_id` | `null,`&nbsp;`string` | Internal-use Braze ID of the Canvas this event belongs to
 `canvas_api_id` | `null,`&nbsp;`string` | API ID of the Canvas this event belongs to
 `canvas_variation_api_id` | `null,`&nbsp;`string` | API ID of the Canvas variation this event belongs to
 `canvas_step_api_id` | `null,`&nbsp;`string` | API ID of the Canvas step this event belongs to
 `canvas_step_message_variation_api_id` | `null,`&nbsp;`string` | API ID of the Canvas step message variation this user received
-`gender` | `null,`&nbsp;`string` | [PII] gender of the user
-`country` | `null,`&nbsp;`string` | [PII] country of the user
-`timezone` | `null,`&nbsp;`string` | timezone of the user
-`language` | `null,`&nbsp;`string` | [PII] language of the user
+`gender` | `null,`&nbsp;`string` | [PII] Gender of the user
+`country` | `null,`&nbsp;`string` | [PII] Country of the user
+`timezone` | `null,`&nbsp;`string` | Time zone of the user
+`language` | `null,`&nbsp;`string` | [PII] Language of the user
 `device_id` | `null,`&nbsp;`string` | ID of the device on which the event occurred
-`sdk_version` | `null,`&nbsp;`string` | version of the Braze SDK in use during the event
-`platform` | `null,`&nbsp;`string` | platform of the device
-`os_version` | `null,`&nbsp;`string` | version of the operating system of the device
-`device_model` | `null,`&nbsp;`string` | model of the device
+`sdk_version` | `null,`&nbsp;`string` | Version of the Braze SDK in use during the event
+`platform` | `null,`&nbsp;`string` | Platform of the device
+`os_version` | `null,`&nbsp;`string` | Version of the operating system of the device
+`device_model` | `null,`&nbsp;`string` | Model of the device
 `resolution` | `null,`&nbsp;`string` | resolution of the device
 `carrier` | `null,`&nbsp;`string` | carrier of the device
 `browser` | `null,`&nbsp;`string` | browser of the device
@@ -1281,49 +1281,49 @@ Field | Type | Description
 
 Field | Type | Description
 ------|------|------------
-`id` | `string` | globally unique ID for this event
+`id` | `string` | Globally unique ID for this event
 `user_id` | `string` | Braze ID of the user that performed this event
-`external_user_id` | `null,`&nbsp;`string` | [PII] external user ID of the user
+`external_user_id` | `null,`&nbsp;`string` | [PII] External user ID of the user
 `app_group_api_id` | `null,`&nbsp;`string` | API ID of the workspace this user belongs to
 `time` | `int` | Unix timestamp at which the event happened
 `app_api_id` | `null,`&nbsp;`string` | API ID of the app on which this event occurred
 `card_api_id` | `null,`&nbsp;`string` | API ID of the card
-`gender` | `null,`&nbsp;`string` | [PII] gender of the user
-`country` | `null,`&nbsp;`string` | [PII] country of the user
-`timezone` | `null,`&nbsp;`string` | timezone of the user
-`language` | `null,`&nbsp;`string` | [PII] language of the user
+`gender` | `null,`&nbsp;`string` | [PII] Gender of the user
+`country` | `null,`&nbsp;`string` | [PII] Country of the user
+`timezone` | `null,`&nbsp;`string` | Time zone of the user
+`language` | `null,`&nbsp;`string` | [PII] Language of the user
 `device_id` | `null,`&nbsp;`string` | ID of the device on which the event occurred
-`sdk_version` | `null,`&nbsp;`string` | version of the Braze SDK in use during the event
-`platform` | `null,`&nbsp;`string` | platform of the device
-`os_version` | `null,`&nbsp;`string` | version of the operating system of the device
-`device_model` | `null,`&nbsp;`string` | model of the device
+`sdk_version` | `null,`&nbsp;`string` | Version of the Braze SDK in use during the event
+`platform` | `null,`&nbsp;`string` | Platform of the device
+`os_version` | `null,`&nbsp;`string` | Version of the operating system of the device
+`device_model` | `null,`&nbsp;`string` | Model of the device
 `resolution` | `null,`&nbsp;`string` | resolution of the device
 `carrier` | `null,`&nbsp;`string` | carrier of the device
 `browser` | `null,`&nbsp;`string` | browser of the device
-`abort_type` | `null,`&nbsp;`string` | type of abort, one of: `liquid_abort_message`, `quiet_hours`, `rate_limit`
-`abort_log` | `null,`&nbsp;`string` | [PII] log message describing abort details (maximum of 128 characters)
+`abort_type` | `null,`&nbsp;`string` | Type of abort, one of: `liquid_abort_message`, `quiet_hours`, `rate_limit`
+`abort_log` | `null,`&nbsp;`string` | [PII] Log message describing abort details (maximum of 128 characters)
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 ### USERS_MESSAGES_NEWSFEEDCARD_CLICK_SHARED {#USERS_MESSAGES_NEWSFEEDCARD_CLICK_SHARED}
 
 Field | Type | Description
 ------|------|------------
-`id` | `string` | globally unique ID for this event
+`id` | `string` | Globally unique ID for this event
 `user_id` | `string` | Braze ID of the user that performed this event
-`external_user_id` | `null,`&nbsp;`string` | [PII] external user ID of the user
+`external_user_id` | `null,`&nbsp;`string` | [PII] External user ID of the user
 `app_group_api_id` | `null,`&nbsp;`string` | API ID of the workspace this user belongs to
 `time` | `int` | Unix timestamp at which the event happened
 `app_api_id` | `null,`&nbsp;`string` | API ID of the app on which this event occurred
 `card_api_id` | `null,`&nbsp;`string` | API ID of the card
-`gender` | `null,`&nbsp;`string` | [PII] gender of the user
-`country` | `null,`&nbsp;`string` | [PII] country of the user
-`timezone` | `null,`&nbsp;`string` | timezone of the user
-`language` | `null,`&nbsp;`string` | [PII] language of the user
+`gender` | `null,`&nbsp;`string` | [PII] Gender of the user
+`country` | `null,`&nbsp;`string` | [PII] Country of the user
+`timezone` | `null,`&nbsp;`string` | Time zone of the user
+`language` | `null,`&nbsp;`string` | [PII] Language of the user
 `device_id` | `null,`&nbsp;`string` | ID of the device on which the event occurred
-`sdk_version` | `null,`&nbsp;`string` | version of the Braze SDK in use during the event
-`platform` | `null,`&nbsp;`string` | platform of the device
-`os_version` | `null,`&nbsp;`string` | version of the operating system of the device
-`device_model` | `null,`&nbsp;`string` | model of the device
+`sdk_version` | `null,`&nbsp;`string` | Version of the Braze SDK in use during the event
+`platform` | `null,`&nbsp;`string` | Platform of the device
+`os_version` | `null,`&nbsp;`string` | Version of the operating system of the device
+`device_model` | `null,`&nbsp;`string` | Model of the device
 `resolution` | `null,`&nbsp;`string` | resolution of the device
 `carrier` | `null,`&nbsp;`string` | carrier of the device
 `browser` | `null,`&nbsp;`string` | browser of the device
@@ -1333,22 +1333,22 @@ Field | Type | Description
 
 Field | Type | Description
 ------|------|------------
-`id` | `string` | globally unique ID for this event
+`id` | `string` | Globally unique ID for this event
 `user_id` | `string` | Braze ID of the user that performed this event
-`external_user_id` | `null,`&nbsp;`string` | [PII] external user ID of the user
+`external_user_id` | `null,`&nbsp;`string` | [PII] External user ID of the user
 `app_group_api_id` | `null,`&nbsp;`string` | API ID of the workspace this user belongs to
 `time` | `int` | Unix timestamp at which the event happened
 `app_api_id` | `null,`&nbsp;`string` | API ID of the app on which this event occurred
 `card_api_id` | `null,`&nbsp;`string` | API ID of the card
-`gender` | `null,`&nbsp;`string` | [PII] gender of the user
-`country` | `null,`&nbsp;`string` | [PII] country of the user
-`timezone` | `null,`&nbsp;`string` | timezone of the user
-`language` | `null,`&nbsp;`string` | [PII] language of the user
+`gender` | `null,`&nbsp;`string` | [PII] Gender of the user
+`country` | `null,`&nbsp;`string` | [PII] Country of the user
+`timezone` | `null,`&nbsp;`string` | Time zone of the user
+`language` | `null,`&nbsp;`string` | [PII] Language of the user
 `device_id` | `null,`&nbsp;`string` | ID of the device on which the event occurred
-`sdk_version` | `null,`&nbsp;`string` | version of the Braze SDK in use during the event
-`platform` | `null,`&nbsp;`string` | platform of the device
-`os_version` | `null,`&nbsp;`string` | version of the operating system of the device
-`device_model` | `null,`&nbsp;`string` | model of the device
+`sdk_version` | `null,`&nbsp;`string` | Version of the Braze SDK in use during the event
+`platform` | `null,`&nbsp;`string` | Platform of the device
+`os_version` | `null,`&nbsp;`string` | Version of the operating system of the device
+`device_model` | `null,`&nbsp;`string` | Model of the device
 `resolution` | `null,`&nbsp;`string` | resolution of the device
 `carrier` | `null,`&nbsp;`string` | carrier of the device
 `browser` | `null,`&nbsp;`string` | browser of the device
@@ -1360,7 +1360,7 @@ Field | Type | Description
 ------|------|------------
 `id` | `string` | Globally unique ID for this event
 `user_id` | `string` | Braze ID of the user that performed this event
-`external_user_id` | `null,`&nbsp;`string` | [PII] external user ID of the user
+`external_user_id` | `null,`&nbsp;`string` | [PII] External user ID of the user
 `device_id` | `null,`&nbsp;`string` | `device_id` that we made a delivery attempt to
 `app_group_api_id` | `null,`&nbsp;`string` | API ID of the workspace this user belongs to
 `time` | `int` | Unix timestamp at which the event happened
@@ -1375,13 +1375,13 @@ Field | Type | Description
 `canvas_variation_api_id` | `null,`&nbsp;`string` | API ID of the Canvas variation this event belongs to
 `canvas_step_api_id` | `null,`&nbsp;`string` | API ID of the Canvas step this event belongs to
 `canvas_step_message_variation_api_id` | `null,`&nbsp;`string` | API ID of the Canvas step message variation this user received
-`gender` | `null,`&nbsp;`string` | [PII] gender of the user
-`country` | `null,`&nbsp;`string` | [PII] country of the user
-`timezone` | `null,`&nbsp;`string` | Timezone of the user
-`language` | `null,`&nbsp;`string` | [PII] language of the user
+`gender` | `null,`&nbsp;`string` | [PII] Gender of the user
+`country` | `null,`&nbsp;`string` | [PII] Country of the user
+`timezone` | `null,`&nbsp;`string` | Time zone of the user
+`language` | `null,`&nbsp;`string` | [PII] Language of the user
 `platform` | `string` | Platform of the device
 `abort_type` | `null,`&nbsp;`string` | Type of abort, one of: `liquid_abort_message`, `quiet_hours`, `rate_limit`
-`abort_log` | `null,`&nbsp;`string` | [PII] log message describing abort details (maximum of 128 characters)
+`abort_log` | `null,`&nbsp;`string` | [PII] Log message describing abort details (maximum of 128 characters)
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 ### USERS_MESSAGES_PUSHNOTIFICATION_BOUNCE_SHARED {#USERS_MESSAGES_PUSHNOTIFICATION_BOUNCE_SHARED}
@@ -1390,7 +1390,7 @@ Field | Type | Description
 ------|------|------------
 `id` | `string` | Globally unique ID for this event
 `user_id` | `string` | Braze ID of the user that performed this event
-`external_user_id` | `null,`&nbsp;`string` | [PII] external user ID of the user
+`external_user_id` | `null,`&nbsp;`string` | [PII] External user ID of the user
 `push_token` | `null,`&nbsp;`string` | Push token that bounced
 `device_id` | `null,`&nbsp;`string` | `device_id` that we made a delivery attempt to that bounced
 `app_group_api_id` | `null,`&nbsp;`string` | API ID of the workspace this user belongs to
@@ -1406,10 +1406,10 @@ Field | Type | Description
 `canvas_variation_api_id` | `null,`&nbsp;`string` | API ID of the Canvas variation this event belongs to
 `canvas_step_api_id` | `null,`&nbsp;`string` | API ID of the Canvas step this event belongs to
 `canvas_step_message_variation_api_id` | `null,`&nbsp;`string` | API ID of the Canvas step message variation this user received
-`gender` | `null,`&nbsp;`string` | [PII] gender of the user
-`country` | `null,`&nbsp;`string` | [PII] country of the user
-`timezone` | `null,`&nbsp;`string` | Timezone of the user
-`language` | `null,`&nbsp;`string` | [PII] language of the user
+`gender` | `null,`&nbsp;`string` | [PII] Gender of the user
+`country` | `null,`&nbsp;`string` | [PII] Country of the user
+`timezone` | `null,`&nbsp;`string` | Time zone of the user
+`language` | `null,`&nbsp;`string` | [PII] Language of the user
 `platform` | `null,`&nbsp;`string` | Platform of the device
 `ad_id` | `null,`&nbsp;`string` | [PII] advertising ID of the device that we made a delivery attempt to
 `ad_id_type` | `null,`&nbsp;`string` | Type of the advertising id
@@ -1422,7 +1422,7 @@ Field | Type | Description
 ------|------|------------
 `id` | `string` | Globally unique ID for this event
 `user_id` | `string` | Braze ID of the user that performed this event
-`external_user_id` | `null,`&nbsp;`string` | [PII] external user ID of the user
+`external_user_id` | `null,`&nbsp;`string` | [PII] External user ID of the user
 `app_group_api_id` | `null,`&nbsp;`string` | API ID of the workspace this user belongs to
 `time` | `int` | Unix timestamp at which the event happened
 `app_api_id` | `null,`&nbsp;`string` | API ID of the app on which this event occurred
@@ -1436,10 +1436,10 @@ Field | Type | Description
 `canvas_variation_api_id` | `null,`&nbsp;`string` | API ID of the Canvas variation this event belongs to
 `canvas_step_api_id` | `null,`&nbsp;`string` | API ID of the Canvas step this event belongs to
 `canvas_step_message_variation_api_id` | `null,`&nbsp;`string` | API ID of the Canvas step message variation this user received
-`gender` | `null,`&nbsp;`string` | [PII] gender of the user
-`country` | `null,`&nbsp;`string` | [PII] country of the user
-`timezone` | `null,`&nbsp;`string` | Timezone of the user
-`language` | `null,`&nbsp;`string` | [PII] language of the user
+`gender` | `null,`&nbsp;`string` | [PII] Gender of the user
+`country` | `null,`&nbsp;`string` | [PII] Country of the user
+`timezone` | `null,`&nbsp;`string` | Time zone of the user
+`language` | `null,`&nbsp;`string` | [PII] Language of the user
 `device_id` | `null,`&nbsp;`string` | ID of the device on which the event occurred
 `sdk_version` | `null,`&nbsp;`string` | Version of the Braze SDK in use during the event
 `platform` | `null,`&nbsp;`string` | Platform of the device
@@ -1456,7 +1456,7 @@ Field | Type | Description
 ------|------|------------
 `id` | `string` | Globally unique ID for this event
 `user_id` | `string` | Braze ID of the user that performed this event
-`external_user_id` | `null,`&nbsp;`string` | [PII] external user ID of the user
+`external_user_id` | `null,`&nbsp;`string` | [PII] External user ID of the user
 `app_group_api_id` | `null,`&nbsp;`string` | API ID of the workspace this user belongs to
 `time` | `int` | Unix timestamp at which the event happened
 `app_api_id` | `null,`&nbsp;`string` | API ID of the app on which this event occurred
@@ -1470,10 +1470,10 @@ Field | Type | Description
 `canvas_variation_api_id` | `null,`&nbsp;`string` | API ID of the Canvas variation this event belongs to
 `canvas_step_api_id` | `null,`&nbsp;`string` | API ID of the Canvas step this event belongs to
 `canvas_step_message_variation_api_id` | `null,`&nbsp;`string` | API ID of the Canvas step message variation this user received
-`gender` | `null,`&nbsp;`string` | [PII] gender of the user
-`country` | `null,`&nbsp;`string` | [PII] country of the user
-`timezone` | `null,`&nbsp;`string` | Timezone of the user
-`language` | `null,`&nbsp;`string` | [PII] language of the user
+`gender` | `null,`&nbsp;`string` | [PII] Gender of the user
+`country` | `null,`&nbsp;`string` | [PII] Country of the user
+`timezone` | `null,`&nbsp;`string` | Time zone of the user
+`language` | `null,`&nbsp;`string` | [PII] Language of the user
 `device_id` | `null,`&nbsp;`string` | ID of the device on which the event occurred
 `sdk_version` | `null,`&nbsp;`string` | Version of the Braze SDK in use during the event
 `platform` | `null,`&nbsp;`string` | Platform of the device
@@ -1493,7 +1493,7 @@ Field | Type | Description
 ------|------|------------
 `id` | `string` | Globally unique ID for this event
 `user_id` | `string` | Braze ID of the user that performed this event
-`external_user_id` | `null,`&nbsp;`string` | [PII] external user ID of the user
+`external_user_id` | `null,`&nbsp;`string` | [PII] External user ID of the user
 `app_group_api_id` | `null,`&nbsp;`string` | API ID of the workspace this user belongs to
 `time` | `int` | Unix timestamp at which the event happened
 `app_api_id` | `null,`&nbsp;`string` | API ID of the app on which this event occurred
@@ -1507,10 +1507,10 @@ Field | Type | Description
 `canvas_variation_api_id` | `null,`&nbsp;`string` | API ID of the Canvas variation this event belongs to
 `canvas_step_api_id` | `null,`&nbsp;`string` | API ID of the Canvas step this event belongs to
 `canvas_step_message_variation_api_id` | `null,`&nbsp;`string` | API ID of the Canvas step message variation this user received
-`gender` | `null,`&nbsp;`string` | [PII] gender of the user
-`country` | `null,`&nbsp;`string` | [PII] country of the user
-`timezone` | `null,`&nbsp;`string` | Timezone of the user
-`language` | `null,`&nbsp;`string` | [PII] language of the user
+`gender` | `null,`&nbsp;`string` | [PII] Gender of the user
+`country` | `null,`&nbsp;`string` | [PII] Country of the user
+`timezone` | `null,`&nbsp;`string` | Time zone of the user
+`language` | `null,`&nbsp;`string` | [PII] Language of the user
 `device_id` | `null,`&nbsp;`string` | ID of the device on which the event occurred
 `sdk_version` | `null,`&nbsp;`string` | Version of the Braze SDK in use during the event
 `platform` | `null,`&nbsp;`string` | Platform of the device
@@ -1534,7 +1534,7 @@ Field | Type | Description
 ------|------|------------
 `id` | `string` | Globally unique ID for this event
 `user_id` | `string` | Braze ID of the user that performed this event
-`external_user_id` | `null,`&nbsp;`string` | [PII] external user ID of the user
+`external_user_id` | `null,`&nbsp;`string` | [PII] External user ID of the user
 `push_token` | `null,`&nbsp;`string` | Push token that we made a delivery attempt to
 `device_id` | `null,`&nbsp;`string` | `device_id` that we made a delivery attempt to
 `app_group_api_id` | `null,`&nbsp;`string` | API ID of the workspace this user belongs to
@@ -1550,10 +1550,10 @@ Field | Type | Description
 `canvas_variation_api_id` | `null,`&nbsp;`string` | API ID of the Canvas variation this event belongs to
 `canvas_step_api_id` | `null,`&nbsp;`string` | API ID of the Canvas step this event belongs to
 `canvas_step_message_variation_api_id` | `null,`&nbsp;`string` | API ID of the Canvas step message variation this user received
-`gender` | `null,`&nbsp;`string` | [PII] gender of the user
-`country` | `null,`&nbsp;`string` | [PII] country of the user
-`timezone` | `null,`&nbsp;`string` | timezone of the user
-`language` | `null,`&nbsp;`string` | [PII] language of the user
+`gender` | `null,`&nbsp;`string` | [PII] Gender of the user
+`country` | `null,`&nbsp;`string` | [PII] Country of the user
+`timezone` | `null,`&nbsp;`string` | Time zone of the user
+`language` | `null,`&nbsp;`string` | [PII] Language of the user
 `platform` | `string` | Platform of the device
 `ad_id` | `null,`&nbsp;`string` | [PII] advertising ID of the device that we made a delivery attempt to
 `ad_id_type` | `null,`&nbsp;`string` | Type of the advertising id
@@ -1566,7 +1566,7 @@ Field | Type | Description
 ------|------|------------
 `id` | `string` | Globally unique ID for this event
 `user_id` | `string` | Braze ID of the user that performed this event
-`external_user_id` | `null,`&nbsp;`string` | [PII] external user ID of the user
+`external_user_id` | `null,`&nbsp;`string` | [PII] External user ID of the user
 `app_group_api_id` | `null,`&nbsp;`string` | API ID of the workspace this user belongs to
 `time` | `int` | Unix timestamp at which the event happened
 `campaign_id` | `null,`&nbsp;`string` | Internal-use Braze ID of the campaign this event belongs to
@@ -1579,7 +1579,7 @@ Field | Type | Description
 `canvas_step_message_variation_api_id` | `null,`&nbsp;`string` | API ID of the Canvas step message variation this user received
 `subscription_group_api_id` | `null,`&nbsp;`string` | External ID of the subscription group
 `abort_type` | `null,`&nbsp;`string` | Type of abort, one of: `liquid_abort_message`, `quiet_hours`, `rate_limit`
-`abort_log` | `null,`&nbsp;`string` | [PII] log message describing abort details (maximum of 128 characters)
+`abort_log` | `null,`&nbsp;`string` | [PII] Log message describing abort details (maximum of 128 characters)
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 ### USERS_MESSAGES_SMS_CARRIERSEND_SHARED {#USERS_MESSAGES_SMS_CARRIERSEND_SHARED}
@@ -1588,7 +1588,7 @@ Field | Type | Description
 ------|------|------------
 `id` | `string` | Globally unique ID for this event
 `user_id` | `string` | Braze ID of the user that performed this event
-`external_user_id` | `null,`&nbsp;`string` | [PII] external user ID of the user
+`external_user_id` | `null,`&nbsp;`string` | [PII] External user ID of the user
 `device_id` | `null,`&nbsp;`string` | `device_id` that is tied to this user if user is anonymous
 `app_group_api_id` | `null,`&nbsp;`string` | API ID of the workspace this user belongs to
 `time` | `int` | Unix timestamp at which the event happened
@@ -1602,10 +1602,10 @@ Field | Type | Description
 `canvas_variation_api_id` | `null,`&nbsp;`string` | API ID of the Canvas variation this event belongs to
 `canvas_step_api_id` | `null,`&nbsp;`string` | API ID of the Canvas step this event belongs to
 `canvas_step_message_variation_api_id` | `null,`&nbsp;`string` | API ID of the Canvas step message variation this user received
-`gender` | `null,`&nbsp;`string` | [PII] gender of the user
-`country` | `null,`&nbsp;`string` | [PII] country of the user
-`timezone` | `null,`&nbsp;`string` | timezone of the user
-`language` | `null,`&nbsp;`string` | [PII] language of the user
+`gender` | `null,`&nbsp;`string` | [PII] Gender of the user
+`country` | `null,`&nbsp;`string` | [PII] Country of the user
+`timezone` | `null,`&nbsp;`string` | Time zone of the user
+`language` | `null,`&nbsp;`string` | [PII] Language of the user
 `to_phone_number` | `null,`&nbsp;`string` | [PII] phone number of the recipient
 `from_phone_number` | `null,`&nbsp;`string` | phone number from which the SMS message was sent
 `subscription_group_api_id` | `null,`&nbsp;`string` | external ID of the subscription group
@@ -1617,7 +1617,7 @@ Field | Type | Description
 ------|------|------------
 `id` | `string` | Globally unique ID for this event
 `user_id` | `string` | Braze ID of the user that performed this event
-`external_user_id` | `null,`&nbsp;`string` | [PII] external user ID of the user
+`external_user_id` | `null,`&nbsp;`string` | [PII] External user ID of the user
 `device_id` | `null,`&nbsp;`string` | `device_id` that is tied to this user if user is anonymous
 `app_group_api_id` | `null,`&nbsp;`string` | API ID of the workspace this user belongs to
 `time` | `int` | Unix timestamp at which the event happened
@@ -1631,10 +1631,10 @@ Field | Type | Description
 `canvas_variation_api_id` | `null,`&nbsp;`string` | API ID of the Canvas variation this event belongs to
 `canvas_step_api_id` | `null,`&nbsp;`string` | API ID of the Canvas step this event belongs to
 `canvas_step_message_variation_api_id` | `null,`&nbsp;`string` | API ID of the Canvas step message variation this user received
-`gender` | `null,`&nbsp;`string` | [PII] gender of the user
-`country` | `null,`&nbsp;`string` | [PII] country of the user
-`timezone` | `null,`&nbsp;`string` | timezone of the user
-`language` | `null,`&nbsp;`string` | [PII] language of the user
+`gender` | `null,`&nbsp;`string` | [PII] Gender of the user
+`country` | `null,`&nbsp;`string` | [PII] Country of the user
+`timezone` | `null,`&nbsp;`string` | Time zone of the user
+`language` | `null,`&nbsp;`string` | [PII] Language of the user
 `to_phone_number` | `null,`&nbsp;`string` | [PII] phone number of the recipient
 `from_phone_number` | `null,`&nbsp;`string` | Phone number from which the SMS message was sent
 `subscription_group_api_id` | `null,`&nbsp;`string` | External ID of the subscription group
@@ -1644,26 +1644,26 @@ Field | Type | Description
 
 Field | Type | Description
 ------|------|------------
-`id` | `string` | globally unique ID for this event
+`id` | `string` | Globally unique ID for this event
 `user_id` | `string` | Braze ID of the user that performed this event
-`external_user_id` | `null,`&nbsp;`string` | [PII] external user ID of the user
+`external_user_id` | `null,`&nbsp;`string` | [PII] External user ID of the user
 `device_id` | `null,`&nbsp;`string` | `device_id` that is tied to this user if user is anonymous
 `app_group_api_id` | `null,`&nbsp;`string` | API ID of the workspace this user belongs to
 `time` | `int` | Unix timestamp at which the event happened
 `dispatch_id` | `null,`&nbsp;`string` | ID of the dispatch this message belongs to
-`send_id` | `null,`&nbsp;`string` | message send ID this message belongs to
-`campaign_id` | `null,`&nbsp;`string` | internal-use Braze ID of the campaign this event belongs to
+`send_id` | `null,`&nbsp;`string` | Message send ID this message belongs to
+`campaign_id` | `null,`&nbsp;`string` | Internal-use Braze ID of the campaign this event belongs to
 `campaign_api_id` | `null,`&nbsp;`string` | API ID of the campaign this event belongs to
 `message_variation_api_id` | `null,`&nbsp;`string` | API ID of the message variation this user received
-`canvas_id` | `null,`&nbsp;`string` | internal-use Braze ID of the Canvas this event belongs to
+`canvas_id` | `null,`&nbsp;`string` | Internal-use Braze ID of the Canvas this event belongs to
 `canvas_api_id` | `null,`&nbsp;`string` | API ID of the Canvas this event belongs to
 `canvas_variation_api_id` | `null,`&nbsp;`string` | API ID of the Canvas variation this event belongs to
 `canvas_step_api_id` | `null,`&nbsp;`string` | API ID of the Canvas step this event belongs to
 `canvas_step_message_variation_api_id` | `null,`&nbsp;`string` | API ID of the Canvas step message variation this user received
-`gender` | `null,`&nbsp;`string` | [PII] gender of the user
-`country` | `null,`&nbsp;`string` | [PII] country of the user
-`timezone` | `null,`&nbsp;`string` | timezone of the user
-`language` | `null,`&nbsp;`string` | [PII] language of the user
+`gender` | `null,`&nbsp;`string` | [PII] Gender of the user
+`country` | `null,`&nbsp;`string` | [PII] Country of the user
+`timezone` | `null,`&nbsp;`string` | Time zone of the user
+`language` | `null,`&nbsp;`string` | [PII] Language of the user
 `to_phone_number` | `null,`&nbsp;`string` | [PII] phone number of the recipient
 `subscription_group_api_id` | `null,`&nbsp;`string` | external ID of the subscription group
 `error` | `null,`&nbsp;`string` | error name
@@ -1676,7 +1676,7 @@ Field | Type | Description
 ------|------|------------
 `id` | `string` | Globally unique ID for this event
 `user_id` | `null,`&nbsp;`string` | Braze ID of the user that performed this event
-`external_user_id` | `null,`&nbsp;`string` | [PII] external user ID of the user
+`external_user_id` | `null,`&nbsp;`string` | [PII] External user ID of the user
 `app_group_api_id` | `null,`&nbsp;`string` | API ID of the workspace associated with the inbound phone number
 `time` | `int` | Unix timestamp at which the event happened
 `user_phone_number` | `string` | [PII] the user's phone number from which the message was received
@@ -1700,26 +1700,26 @@ Field | Type | Description
 
 Field | Type | Description
 ------|------|------------
-`id` | `string` | globally unique ID for this event
+`id` | `string` | Globally unique ID for this event
 `user_id` | `string` | Braze ID of the user that performed this event
-`external_user_id` | `null,`&nbsp;`string` | [PII] external user ID of the user
+`external_user_id` | `null,`&nbsp;`string` | [PII] External user ID of the user
 `device_id` | `null,`&nbsp;`string` | `device_id` that is tied to this user if user is anonymous
 `app_group_api_id` | `null,`&nbsp;`string` | API ID of the workspace this user belongs to
 `time` | `int` | Unix timestamp at which the event happened
 `dispatch_id` | `null,`&nbsp;`string` | ID of the dispatch this message belongs to
-`send_id` | `null,`&nbsp;`string` | message send ID this message belongs to
-`campaign_id` | `null,`&nbsp;`string` | internal-use Braze ID of the campaign this event belongs to
+`send_id` | `null,`&nbsp;`string` | Message send ID this message belongs to
+`campaign_id` | `null,`&nbsp;`string` | Internal-use Braze ID of the campaign this event belongs to
 `campaign_api_id` | `null,`&nbsp;`string` | API ID of the campaign this event belongs to
 `message_variation_api_id` | `null,`&nbsp;`string` | API ID of the message variation this user received
-`canvas_id` | `null,`&nbsp;`string` | internal-use Braze ID of the Canvas this event belongs to
+`canvas_id` | `null,`&nbsp;`string` | Internal-use Braze ID of the Canvas this event belongs to
 `canvas_api_id` | `null,`&nbsp;`string` | API ID of the Canvas this event belongs to
 `canvas_variation_api_id` | `null,`&nbsp;`string` | API ID of the Canvas variation this event belongs to
 `canvas_step_api_id` | `null,`&nbsp;`string` | API ID of the Canvas step this event belongs to
 `canvas_step_message_variation_api_id` | `null,`&nbsp;`string` | API ID of the Canvas step message variation this user received
-`gender` | `null,`&nbsp;`string` | [PII] gender of the user
-`country` | `null,`&nbsp;`string` | [PII] country of the user
-`timezone` | `null,`&nbsp;`string` | timezone of the user
-`language` | `null,`&nbsp;`string` | [PII] language of the user
+`gender` | `null,`&nbsp;`string` | [PII] Gender of the user
+`country` | `null,`&nbsp;`string` | [PII] Country of the user
+`timezone` | `null,`&nbsp;`string` | Time zone of the user
+`language` | `null,`&nbsp;`string` | [PII] Language of the user
 `to_phone_number` | `null,`&nbsp;`string` | [PII] phone number of the recipient
 `from_phone_number` | `null,`&nbsp;`string` | phone number from which the SMS message was sent
 `subscription_group_api_id` | `null,`&nbsp;`string` | external ID of the subscription group
@@ -1731,26 +1731,26 @@ Field | Type | Description
 
 Field | Type | Description
 ------|------|------------
-`id` | `string` | globally unique ID for this event
+`id` | `string` | Globally unique ID for this event
 `user_id` | `string` | Braze ID of the user that performed this event
-`external_user_id` | `null,`&nbsp;`string` | [PII] external user ID of the user
+`external_user_id` | `null,`&nbsp;`string` | [PII] External user ID of the user
 `device_id` | `null,`&nbsp;`string` | `device_id` that is tied to this user if user is anonymous
 `app_group_api_id` | `null,`&nbsp;`string` | API ID of the workspace this user belongs to
 `time` | `int` | Unix timestamp at which the event happened
 `dispatch_id` | `null,`&nbsp;`string` | ID of the dispatch this message belongs to
-`send_id` | `null,`&nbsp;`string` | message send ID this message belongs to
-`campaign_id` | `null,`&nbsp;`string` | internal-use Braze ID of the campaign this event belongs to
+`send_id` | `null,`&nbsp;`string` | Message send ID this message belongs to
+`campaign_id` | `null,`&nbsp;`string` | Internal-use Braze ID of the campaign this event belongs to
 `campaign_api_id` | `null,`&nbsp;`string` | API ID of the campaign this event belongs to
 `message_variation_api_id` | `null,`&nbsp;`string` | API ID of the message variation this user received
-`canvas_id` | `null,`&nbsp;`string` | internal-use Braze ID of the Canvas this event belongs to
+`canvas_id` | `null,`&nbsp;`string` | Internal-use Braze ID of the Canvas this event belongs to
 `canvas_api_id` | `null,`&nbsp;`string` | API ID of the Canvas this event belongs to
 `canvas_variation_api_id` | `null,`&nbsp;`string` | API ID of the Canvas variation this event belongs to
 `canvas_step_api_id` | `null,`&nbsp;`string` | API ID of the Canvas step this event belongs to
 `canvas_step_message_variation_api_id` | `null,`&nbsp;`string` | API ID of the Canvas step message variation this user received
-`gender` | `null,`&nbsp;`string` | [PII] gender of the user
-`country` | `null,`&nbsp;`string` | [PII] country of the user
-`timezone` | `null,`&nbsp;`string` | timezone of the user
-`language` | `null,`&nbsp;`string` | [PII] language of the user
+`gender` | `null,`&nbsp;`string` | [PII] Gender of the user
+`country` | `null,`&nbsp;`string` | [PII] Country of the user
+`timezone` | `null,`&nbsp;`string` | Time zone of the user
+`language` | `null,`&nbsp;`string` | [PII] Language of the user
 `to_phone_number` | `null,`&nbsp;`string` | [PII] phone number of the recipient
 `subscription_group_api_id` | `null,`&nbsp;`string` | external ID of the subscription group
 `category` | `null,`&nbsp;`string` | Keyword Category Name, only populated for auto-reply messages: 'Opt-in', 'Opt-out', 'Help', or custom value
@@ -1760,12 +1760,12 @@ Field | Type | Description
 
 Field | Type | Description
 ------|------|------------
-`id` | `string` | globally unique ID for this event
+`id` | `string` | Globally unique ID for this event
 `user_id` | `null,`&nbsp;`string` | Braze ID of the user targeted by short_url, null if short_url did not use user click tracking
-`external_user_id` | `null,`&nbsp;`string` | [PII] external ID of the user targeted by short_url if one exists, null if short_url did not use user click tracking
+`external_user_id` | `null,`&nbsp;`string` | [PII] External ID of the user targeted by short_url if one exists, null if short_url did not use user click tracking
 `app_group_api_id` | `null,`&nbsp;`string` | API ID of the workspace used to generate short_url
 `time` | `int` | Unix timestamp at which short_url was clicked
-`timezone` | `null,`&nbsp;`string` | timezone of the user
+`timezone` | `null,`&nbsp;`string` | Time zone of the user
 `campaign_id` | `null,`&nbsp;`string` | Braze ID of the campaign short_url was generated for, null if not from a campaign
 `campaign_api_id` | `null,`&nbsp;`string` | API ID of the campaign short_url was generated for, null if not from a campaign
 `message_variation_api_id` | `null,`&nbsp;`string` | API ID of the message variation short_url was generated for, null if not from a campaign
@@ -1784,37 +1784,9 @@ Field | Type | Description
 
 Field | Type | Description
 ------|------|------------
-`id` | `string` | globally unique ID for this event
-`user_id` | `string` | Braze ID of the user that performed this event
-`external_user_id` | `null,`&nbsp;`string` | [PII] external user ID of the user
-`device_id` | `null,`&nbsp;`string` | `device_id` that is tied to this user if user is anonymous
-`app_group_api_id` | `null,`&nbsp;`string` | API ID of the workspace this user belongs to
-`time` | `int` | Unix timestamp at which the event happened
-`dispatch_id` | `null,`&nbsp;`string` | ID of the dispatch this message belongs to
-`send_id` | `null,`&nbsp;`string` | message send ID this message belongs to
-`campaign_id` | `null,`&nbsp;`string` | internal-use Braze ID of the campaign this event belongs to
-`campaign_api_id` | `null,`&nbsp;`string` | API ID of the campaign this event belongs to
-`message_variation_api_id` | `null,`&nbsp;`string` | API ID of the message variation this user received
-`canvas_id` | `null,`&nbsp;`string` | internal-use Braze ID of the Canvas this event belongs to
-`canvas_api_id` | `null,`&nbsp;`string` | API ID of the Canvas this event belongs to
-`canvas_variation_api_id` | `null,`&nbsp;`string` | API ID of the Canvas variation this event belongs to
-`canvas_step_api_id` | `null,`&nbsp;`string` | API ID of the Canvas step this event belongs to
-`canvas_step_message_variation_api_id` | `null,`&nbsp;`string` | API ID of the Canvas step message variation this user received
-`gender` | `null,`&nbsp;`string` | [PII] gender of the user
-`country` | `null,`&nbsp;`string` | [PII] country of the user
-`timezone` | `null,`&nbsp;`string` | timezone of the user
-`language` | `null,`&nbsp;`string` | [PII] language of the user
-`abort_type` | `null,`&nbsp;`string` | type of abort, one of: `liquid_abort_message`, `quiet_hours`, `rate_limit`
-`abort_log` | `null,`&nbsp;`string` | [PII] log message describing abort details (maximum of 128 characters)
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
-
-### USERS_MESSAGES_WEBHOOK_SEND_SHARED {#USERS_MESSAGES_WEBHOOK_SEND_SHARED}
-
-Field | Type | Description
-------|------|------------
 `id` | `string` | Globally unique ID for this event
 `user_id` | `string` | Braze ID of the user that performed this event
-`external_user_id` | `null,`&nbsp;`string` | [PII] external user ID of the user
+`external_user_id` | `null,`&nbsp;`string` | [PII] External user ID of the user
 `device_id` | `null,`&nbsp;`string` | `device_id` that is tied to this user if user is anonymous
 `app_group_api_id` | `null,`&nbsp;`string` | API ID of the workspace this user belongs to
 `time` | `int` | Unix timestamp at which the event happened
@@ -1828,10 +1800,38 @@ Field | Type | Description
 `canvas_variation_api_id` | `null,`&nbsp;`string` | API ID of the Canvas variation this event belongs to
 `canvas_step_api_id` | `null,`&nbsp;`string` | API ID of the Canvas step this event belongs to
 `canvas_step_message_variation_api_id` | `null,`&nbsp;`string` | API ID of the Canvas step message variation this user received
-`gender` | `null,`&nbsp;`string` | [PII] gender of the user
-`country` | `null,`&nbsp;`string` | [PII] country of the user
-`timezone` | `null,`&nbsp;`string` | Timezone of the user
-`language` | `null,`&nbsp;`string` | [PII] language of the user
+`gender` | `null,`&nbsp;`string` | [PII] Gender of the user
+`country` | `null,`&nbsp;`string` | [PII] Country of the user
+`timezone` | `null,`&nbsp;`string` | Time zone of the user
+`language` | `null,`&nbsp;`string` | [PII] Language of the user
+`abort_type` | `null,`&nbsp;`string` | Type of abort, one of: `liquid_abort_message`, `quiet_hours`, `rate_limit`
+`abort_log` | `null,`&nbsp;`string` | [PII] Log message describing abort details (maximum of 128 characters)
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+
+### USERS_MESSAGES_WEBHOOK_SEND_SHARED {#USERS_MESSAGES_WEBHOOK_SEND_SHARED}
+
+Field | Type | Description
+------|------|------------
+`id` | `string` | Globally unique ID for this event
+`user_id` | `string` | Braze ID of the user that performed this event
+`external_user_id` | `null,`&nbsp;`string` | [PII] External user ID of the user
+`device_id` | `null,`&nbsp;`string` | `device_id` that is tied to this user if user is anonymous
+`app_group_api_id` | `null,`&nbsp;`string` | API ID of the workspace this user belongs to
+`time` | `int` | Unix timestamp at which the event happened
+`dispatch_id` | `null,`&nbsp;`string` | ID of the dispatch this message belongs to
+`send_id` | `null,`&nbsp;`string` | Message send ID this message belongs to
+`campaign_id` | `null,`&nbsp;`string` | Internal-use Braze ID of the campaign this event belongs to
+`campaign_api_id` | `null,`&nbsp;`string` | API ID of the campaign this event belongs to
+`message_variation_api_id` | `null,`&nbsp;`string` | API ID of the message variation this user received
+`canvas_id` | `null,`&nbsp;`string` | Internal-use Braze ID of the Canvas this event belongs to
+`canvas_api_id` | `null,`&nbsp;`string` | API ID of the Canvas this event belongs to
+`canvas_variation_api_id` | `null,`&nbsp;`string` | API ID of the Canvas variation this event belongs to
+`canvas_step_api_id` | `null,`&nbsp;`string` | API ID of the Canvas step this event belongs to
+`canvas_step_message_variation_api_id` | `null,`&nbsp;`string` | API ID of the Canvas step message variation this user received
+`gender` | `null,`&nbsp;`string` | [PII] Gender of the user
+`country` | `null,`&nbsp;`string` | [PII] Country of the user
+`timezone` | `null,`&nbsp;`string` | Time zone of the user
+`language` | `null,`&nbsp;`string` | [PII] Language of the user
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 ### USERS_MESSAGES_WHATSAPP_ABORT_SHARED {#USERS_MESSAGES_WHATSAPP_ABORT_SHARED}
@@ -1858,7 +1858,7 @@ Field | Type | Description
 `canvas_step_message_variation_api_id` | `null,`&nbsp;`string` | API ID of the Canvas step message variation this user received
 `dispatch_id` | `null,`&nbsp;`string` | ID of the dispatch this message belongs to
 `abort_type` | `null,`&nbsp;`string` | Type of abort, one of: `liquid_abort_message`, `quiet_hours`, `rate_limit`
-`abort_log` | `null,`&nbsp;`string` | [PII] log message describing abort details (maximum of 128 characters)
+`abort_log` | `null,`&nbsp;`string` | [PII] Log message describing abort details (maximum of 128 characters)
 `sf_created_at` | `timestamp`,&nbsp;`null` | When this event was picked up by the Snowpipe      
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
@@ -1870,7 +1870,7 @@ Field | Type | Description
 `time` | `int` | Unix timestamp at which the event happened
 `to_phone_number` | `null,`&nbsp;`string` | [PII] phone number of the recipient
 `user_id` | `string` | Braze ID of the user that performed this event
-`external_user_id` | `null,`&nbsp;`string` | [PII] external user ID of the user
+`external_user_id` | `null,`&nbsp;`string` | [PII] External user ID of the user
 `device_id` | `null,`&nbsp;`string` | `device_id` that is tied to this user if user is anonymous
 `timezone` | `null,`&nbsp;`string` | Time zone of the user
 `from_phone_number` | `null,`&nbsp;`string` | Phone number from which the WhatsApp message was sent
@@ -1897,7 +1897,7 @@ Field | Type | Description
 `time` | `int` | Unix timestamp at which the event happened
 `to_phone_number` | `null,`&nbsp;`string` | [PII] phone number of the recipient
 `user_id` | `string` | Braze ID of the user that performed this event
-`external_user_id` | `null,`&nbsp;`string` | [PII] external user ID of the user
+`external_user_id` | `null,`&nbsp;`string` | [PII] External user ID of the user
 `device_id` | `null,`&nbsp;`string` | `device_id` that is tied to this user if user is anonymous
 `timezone` | `null,`&nbsp;`string` | Time zone of the user
 `from_phone_number` | `null,`&nbsp;`string` | Phone number from which the WhatsApp message was sent
@@ -1926,7 +1926,7 @@ Field | Type | Description
 `time` | `int` | Unix timestamp at which the event happened
 `user_phone_number` | `string` | [PII] the user’s phone number from which the message was received
 `user_id` | `string` | Braze ID of the user that performed this event
-`external_user_id` | `null,`&nbsp;`string` | [PII] external user ID of the user
+`external_user_id` | `null,`&nbsp;`string` | [PII] External user ID of the user
 `inbound_phone_number` | `string` | The inbound number that the message was sent to
 `device_id` | `null,`&nbsp;`string` | `device_id` that is tied to this user if user is anonymous
 `timezone` | `null,`&nbsp;`string` | Time zone of the user
@@ -1956,7 +1956,7 @@ Field | Type | Description
 `time` | `int` | Unix timestamp at which the event happened
 `to_phone_number` | `null,`&nbsp;`string` | [PII] phone number of the recipient
 `user_id` | `string` | Braze ID of the user that performed this event
-`external_user_id` | `null,`&nbsp;`string` | [PII] external user ID of the user
+`external_user_id` | `null,`&nbsp;`string` | [PII] External user ID of the user
 `device_id` | `null,`&nbsp;`string` | `device_id` that is tied to this user if user is anonymous
 `timezone` | `null,`&nbsp;`string` | Time zone of the user
 `from_phone_number` | `null,`&nbsp;`string` | Phone number from which the WhatsApp message was sent
@@ -1983,7 +1983,7 @@ Field | Type | Description
 `time` | `int` | Unix timestamp at which the event happened
 `to_phone_number` | `null,`&nbsp;`string`	| [PII] phone number of the recipient
 `user_id` | `string` | Braze ID of the user that performed this event
-`external_user_id` | `null,`&nbsp;`string` | [PII] external user ID of the user
+`external_user_id` | `null,`&nbsp;`string` | [PII] External user ID of the user
 `device_id` | `null,`&nbsp;`string` | `device_id` that is tied to this user if user is anonymous
 `timezone` | `null,`&nbsp;`string` | Time zone of the user
 `from_phone_number` | `null,`&nbsp;`string` | phone number from which the WhatsApp message was sent
