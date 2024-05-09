@@ -24,6 +24,9 @@ guide_featured_list:
   - name: "Managing Email Subscriptions"
     link: /docs/user_guide/message_building_by_channel/email/best_practices/managing_email_subscriptions/
     image: /assets/img/braze_icons/list.svg
+  - name: "About Sanitization"
+    link: /docs/user_guide/message_building_by_channel/email/sanitization/
+    image: /assets/img/braze_icons/brush-01.svg
   - name: "Email Services"
     link: /docs/user_guide/message_building_by_channel/email/best_practices/email_services/
     image: /assets/img/braze_icons/email.svg
