@@ -54,6 +54,10 @@ In this case, these users cannot be messaged and are not engaging with your bran
 
 Users in the Global Control Group will never be archived, even if they meet the definition of inactive or dormant users.
 
+## Test users
+
+Test Users will never be archived, even if they meet the definition of inactive or dormant users.
+
 ## Spam blocking
 
 Braze blocks individual users with over 5 million sessions ("dummy users"), and no longer ingests their SDK events, because they are usually the result of an incorrect integration. If you find that this has happened for a legitimate user, file a ticket with Braze [support]({{site.baseurl}}/braze_support/).
