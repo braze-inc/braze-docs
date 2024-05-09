@@ -18,7 +18,7 @@ As of February 28, 2023, you can no longer create or duplicate Canvases using th
 
 ## Step 1: Create a new Canvas 
 
-Go to **Messaging** > **Canvas**, then click **Create Canvas**.
+Go to **Messaging** > **Canvas** and select **Create Canvas**.
 
 {% alert note %}
 If you are using the [older navigation]({{site.baseurl}}/navigation), you can find **Canvas** under **Engagement**.
@@ -26,7 +26,7 @@ If you are using the [older navigation]({{site.baseurl}}/navigation), you can fi
 
 ## Step 2: Set up your Canvas
 
-The Canvas builder will guide you step-by-step through setting up your Canvas—everything from naming it to setting conversion events and bringing the right users into your customer journey. Click on each of the following tabs to see what settings you can adjust in each of the builder steps.
+The Canvas builder will guide you step-by-step through setting up your Canvas—everything from naming it to setting conversion events and bringing the right users into your customer journey. Select the following tabs to see what settings you can adjust for each builder step.
 
 {% tabs local %}
   {% tab Basics %}
@@ -138,7 +138,9 @@ If a user re-enters the Canvas, reaches the same component as their previous ent
 
 You can set the target audience for your Canvas on the **Target Audience** step. Only the users who match your defined criteria can enter the journey, meaning Braze evaluates the target audience for eligibility first before users enter the Canvas journey. 
 
-Under **Entry Controls**, you can limit the number of users every time the Canvas is scheduled to run. For API trigger-based Canvases, this limit occurs at every UTC hour. For example, if you want to target new users, you can limit a particular journey to users who first used your app less than 3 weeks ago. You can also control settings such as whether messages should be sent to users who are subscribed or opted-in to your notifications.
+Under **Entry Controls**, you can limit the number of users every time the Canvas is scheduled to run. For API trigger-based Canvases, this limit occurs at every UTC hour. 
+
+For example, if you want to target new users, you can limit a particular journey to users who first used your app less than 3 weeks ago. You can also control settings such as whether messages should be sent to users who are subscribed or opted-in to your notifications.
 
 {% alert warning %}
 Avoid configuring an action-based campaign or Canvas with the same trigger as the audience filter (such as a changed attribute or performed a custom event). A race condition may occur in which the user is not in the audience at the time they perform the trigger event, which means they won't receive the campaign or enter the Canvas.  
@@ -152,7 +154,7 @@ After adding segments and filters to your target audience, you can test if your 
 
 #### Adjust entry controls
 
-Entry controls determine if users are allowed to re-enter a Canvas. You can also limit the number of people who would potentially enter this Canvas. For example, if you set the **Maximum users to potentially enter this Canvas** field to 1,000 users, and select the **Limit everytime the Canvas is scheduled** checkbox, then the Canvas will sent to 1,000 users per day.
+Entry controls determine if users are allowed to re-enter a Canvas. You can also limit the number of people who would potentially enter this Canvas. For example, if you set the **Maximum users to potentially enter this Canvas** field to 1,000 users, and select the **Limit every time the Canvas is scheduled** checkbox, then the Canvas will sent to 1,000 users per day.
 
 ![]({% image_buster /assets/img_archive/entry_controls.png %}){: style="max-width:50%;"}
 
@@ -162,7 +164,7 @@ Setting the [exit criteria]({{site.baseurl}}/user_guide/engagement_tools/canvas/
 
 ### Step 2d: Select your send settings
 
-Click **Send Settings** to select your subscription settings, turn on rate limiting, and to enable Quiet Hours. By turning on [rate limiting][6b] or [frequency capping][6c], you can ease the marketing pressure placed on your users and ensure you aren't over messaging them.
+Select **Send Settings** to select your subscription settings, turn on rate limiting, and to enable Quiet Hours. By turning on [rate limiting][6b] or [frequency capping][6c], you can ease the marketing pressure placed on your users and ensure you aren't over messaging them.
 
 For Canvases targeting email and push channels, you may want to limit your Canvas so that only the users who are explicitly opted in will receive the message (excluding subscribed or unsubscribed users). For example, say you have three users of different opt-in status:
 
@@ -188,14 +190,14 @@ If desired, specify Quiet Hours (the time during which your messages will not be
 
 ![][11]{: style="float:right;max-width:35%;margin-left:15px;"}
 
-Click **Add Variant** and select the option to add a new variant to your Canvas. Variants represent a journey that your users will take and can contain multiple steps and branches.
+Select **Add Variant** to add a new variant to your Canvas. Variants represent a journey that your users will take and can contain multiple steps and branches.
 
-You can add additional variants by clicking the <i class="fas fa-plus-circle"></i> plus button. When you add new variants, you'll be able to adjust how your users will be distributed between them so that you can cross-compare and analyze the efficacy of different engagement strategies.
+You can add additional variants by selecting the <i class="fas fa-plus-circle"></i> plus button. When you add new variants, you'll be able to adjust how your users will be distributed between them so that you can cross-compare and analyze the efficacy of different engagement strategies.
 
 ![][12]
 
 {% alert tip %}
-By default, the Canvas variant assignment is locked in when users enter the Canvas, meaning that if a user first enters a variant, that will be their variant every time they re-enter the Canvas. However, there are ways to circumvent this behavior. <br><br>To do so, you can create a random number generator using Liquid, run it at the beginning of each user's Canvas entry, store the value as a custom attribute, and then use that attribute to randomly divide users.
+By default, the Canvas variant assignment is locked in when users enter the Canvas, meaning that if a user first enters a variant, that will be their variant every time they re-enter the Canvas. However, there are ways to circumvent this behavior. <br><br>To do so, create a random number generator using Liquid, run it at the beginning of each user's Canvas entry, store the value as a custom attribute, then use that attribute to randomly divide users.
 
 {% details Expand for steps %}
 
