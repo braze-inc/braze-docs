@@ -56,7 +56,7 @@ Users in the Global Control Group will never be archived, even if they meet the 
 
 ## Test users
 
-Test Users will never be archived, even if they meet the definition of inactive or dormant users.
+Test users will never be archived, even if they meet the definition of inactive or dormant users.
 
 ## Spam blocking
 
