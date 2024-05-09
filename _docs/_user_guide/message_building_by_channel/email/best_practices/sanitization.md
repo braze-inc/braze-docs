@@ -22,7 +22,7 @@ As a note, most email inbox providers do not process JavaScript, so this measure
 
 ## How does Braze sanitize messages?
 
-If Braze detects JavaScript that is a security risk, before you go to the **Preview and Test** tab to view the email message Braze will ask you to confirm that Braze can remove the JavaScript from your message before proceeding.
+If Braze detects JavaScript that is a security risk, before you go to the **Preview and Test** tab or the HTML editor to view the email message, we'll ask you to confirm that Braze can remove the JavaScript from your message before proceeding.
 
 ![]({% image_buster /assets/img/email_sanitization.png %})
 
