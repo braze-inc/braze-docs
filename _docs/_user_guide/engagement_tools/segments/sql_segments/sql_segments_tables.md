@@ -1962,7 +1962,7 @@ Field | Type | Description
 `from_phone_number` | `null,`&nbsp;`string` | Phone number from which the WhatsApp message was sent
 `app_group_id` | `null,`&nbsp;`string` | ID of the workspace this user belongs to
 `app_group_api_id` | `null,`&nbsp;`string` | API ID of the workspace this user belongs to
-`subscription_group_api_id` | `string` | Subscription group API id
+`subscription_group_api_id` | `string` | Subscription group API ID
 `campaign_id` | `null,`&nbsp;`string` | Internal-use Braze ID of the campaign this event belongs to
 `campaign_api_id` | `null,`&nbsp;`string` | API ID of the campaign this event belongs to
 `message_variation_api_id` | `null,`&nbsp;`string` | API ID of the message variation this user received
