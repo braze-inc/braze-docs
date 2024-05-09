@@ -759,7 +759,7 @@ Field | Type | Description
 `gender` | `null,`&nbsp;`string` | [PII] gender of the user
 `country` | `null,`&nbsp;`string` | [PII] country of the user
 `timezone` | `null,`&nbsp;`string` | Time zone of the user
-`language` | `null,`&nbsp;`string` | [PII] language of the user
+`language` | `null,`&nbsp;`string` | [PII] Language of the user
 `device_id` | `null,`&nbsp;`string` | ID of the device on which the event occurred
 `sdk_version` | `null,`&nbsp;`string` | Version of the Braze SDK in use during the event
 `platform` | `null,`&nbsp;`string` | Platform of the device
