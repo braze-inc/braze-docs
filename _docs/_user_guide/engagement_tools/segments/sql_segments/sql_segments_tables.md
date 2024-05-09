@@ -1999,7 +1999,7 @@ Field | Type | Description
 `canvas_step_api_id` | `null,`&nbsp;`string` | API ID of the Canvas step this event belongs to
 `canvas_step_message_variation_api_id` | `null,`&nbsp;`string` | API ID of the Canvas step message variation this user received
 `dispatch_id` | `null,`&nbsp;`string` | ID of the dispatch this message belongs to
-`message_extras` | `string` | The Liquid tags added to this send event 
+`message_extras` | `null,`&nbsp;`string` | [PII] A JSON string of the tagged key-value pairs during Liquid rendering
 `sf_created_at` | `timestamp`,&nbsp;`null` | When this event was picked up by the Snowpipe      
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
