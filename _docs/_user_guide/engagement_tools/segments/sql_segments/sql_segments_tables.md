@@ -796,7 +796,7 @@ Field | Type | Description
 `canvas_step_message_variation_api_id` | `null,`&nbsp;`string` | API ID of the Canvas step message variation this user received
 `gender` | `null,`&nbsp;`string` | [PII] gender of the user
 `country` | `null,`&nbsp;`string` | [PII] country of the user
-`timezone` | `null,`&nbsp;`string` | Timezone of the user
+`timezone` | `null,`&nbsp;`string` | Time zone of the user
 `language` | `null,`&nbsp;`string` | [PII] language of the user
 `device_id` | `null,`&nbsp;`string` | ID of the device on which the event occurred
 `sdk_version` | `null,`&nbsp;`string` | Version of the Braze SDK in use during the event
