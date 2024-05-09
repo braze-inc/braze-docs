@@ -1942,7 +1942,7 @@ Field | Type | Description
 `canvas_step_api_id` | `null,`&nbsp;`string` | API ID of the Canvas step this event belongs to
 `canvas_step_message_variation_api_id` | `null,`&nbsp;`string` | API ID of the Canvas step message variation this user received
 `message_body` | `string` | Response from the user
-`quick_reply_text` | |
+`quick_reply_text` | `string` | Text of button pressed by the user
 `media_urls` | `null, {"type"=>"array", "items"=>["null", "string"]}` | Media URLs from the user
 `action` | `string` | Action taken in response to this message. For example, `Subscribed`, `Unsubscribed`, or `None`.
 `sf_created_at` | `timestamp`,&nbsp;`null` | When this event was picked up by the Snowpipe      
@@ -1999,7 +1999,7 @@ Field | Type | Description
 `canvas_step_api_id` | `null,`&nbsp;`string` | API ID of the Canvas step this event belongs to
 `canvas_step_message_variation_api_id` | `null,`&nbsp;`string` | API ID of the Canvas step message variation this user received
 `dispatch_id` | `null,`&nbsp;`string` | ID of the dispatch this message belongs to
-`message_extras` | |
+`message_extras` | `string` | The Liquid tags added to this send event 
 `sf_created_at` | `timestamp`,&nbsp;`null` | When this event was picked up by the Snowpipe      
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
