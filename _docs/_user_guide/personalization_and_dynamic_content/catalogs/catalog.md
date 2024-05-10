@@ -329,7 +329,7 @@ You can upload a CSV of new catalog items to add or catalog items to update. To 
 You can also manually piece together catalogs Liquid logic. However, note that if you type in an ID that doesn't exist, Braze will still return an items array without objects. We recommend that you include error handling, such as checking the size of the array and using an `if` statement to account for an empty array case.
 
 {% alert note %}
-Catalogs does not currently support Liquid inside the Catalog, nor referencing Content Blocks inside your Catalog. If you have Liquid personalisation listed in a cell in your Catalog this won't render with the dynamic value. Instead it will just print the actual Liquid as Catalogs does not currently support Liquid.
+Liquid can't be used inside catalogs. If you have Liquid personalization listed in a cell in your catalog, it won't render with the dynamic value; it will just display the actual Liquid.
 {% endalert %}
 
 ## Managing catalogs
