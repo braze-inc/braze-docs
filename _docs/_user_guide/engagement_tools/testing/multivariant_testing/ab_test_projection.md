@@ -27,7 +27,9 @@ A modal will open with the subject lines of any message variants you have alread
 
 The subject line our AI predicts to be best will be highlighted with a **Projected Winner** label.
 
-Note when creating a push notification campaign, A/B testing isn't supported if you select a single platform.
+{% alert note %}
+For [quick push campaigns]({{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/quick_push/), A/B testing is supported when you select multiple platforms.
+{% endalert %}
 
 ### How accurate are the projections?
 
