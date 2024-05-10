@@ -239,7 +239,7 @@ glossaries:
     tags:
       - Retargeting
   - name: In Canvas Control Group
-    description: Segments your users by whether or not they were in the control group for a specific Canvas.
+    description: Segments your users by whether or not they were in the control group for a specific Canvas. This filter only evaluates users who have entered the Canvas.<br><br>For example, if you filter for users who are not in the control group for a Canvas, you will receieve all users who entered the Canvas but are not in the control group.
     tags:
       - Retargeting
   - name: Last Enrolled in Any Control Group
@@ -247,7 +247,7 @@ glossaries:
     tags:
       - Retargeting
   - name: Entered Canvas Variation
-    description: Segments your users by whether or not they have entered a variation path of a specific Canvas.
+    description: Segments your users by whether or not they have entered a variation path of a specific Canvas. This filter evalutes all users.<br><br>For example, if you filter for users who have not entered a Canvas variation control group, you will receive all users who are not in the control group regardless if they entered the Canvas.
     tags:
       - Retargeting
   - name: Last Received Any Message
