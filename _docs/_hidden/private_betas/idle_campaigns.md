@@ -63,28 +63,28 @@ To keep a campaign or Canvas active, update the campaign or Canvas so it does no
 
 ##### Idle campaigns
 
-| Reason for idle status | Steps to make campaign active |
-| --- | --- |
-| Action-based campaigns with end dates seven days after the send date | Extend the end date |
-| Scheduled campaigns with end dates seven days after the send date | Extend the end date |
-| Scheduled one-time send campaigns with end dates seven days after the last send date | Schedule a future send |
-| Action-based campaigns (without end dates) that have not sent messages in one year | Send one message or make any edit to the campaign | 
-| Scheduled campaigns (without end dates) that have not sent messages in one year | Send one message or make any edit to the campaign | 
-| API-triggered campaigns that have not sent messages in one year | Send one message or make any edit to the campaign |
-| Campaigns will be stopped at the later of the idle status criteria and 1 day after their last-occurring conversion deadline | Update the criteria above or extend the conversion deadline, depending on which occurs later |
-| Sends as the result of a Winning or Personalized Variant are treated as scheduled sends and disabled seven days after the Winning or Personalized Variant is sent | Update when the variant will send to a later date |
+| Reason for idle status                                                                                                                                            | Steps to make campaign active                                                                |
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------|
+| Action-based campaigns with end dates seven days after the send date                                                                                              | Extend the end date                                                                          |
+| Scheduled campaigns with end dates seven days after the send date                                                                                                 | Extend the end date                                                                          |
+| Scheduled one-time send campaigns with end dates seven days after the last send date                                                                              | Schedule a future send                                                                       |
+| Action-based campaigns (without end dates) that have not sent messages in one year                                                                                | Send one message or make any edit to the campaign                                            |
+| Scheduled campaigns (without end dates) that have not sent messages in one year                                                                                   | Send one message or make any edit to the campaign                                            |
+| API-triggered campaigns that have not sent messages in one year                                                                                                   | Send one message or make any edit to the campaign                                            |
+| Campaigns will be stopped at the later of the idle status criteria and 1 day after their last-occurring conversion deadline                                       | Update the criteria above or extend the conversion deadline, depending on which occurs later |
+| Sends as the result of a Winning or Personalized Variant are treated as scheduled sends and disabled seven days after the Winning or Personalized Variant is sent | Update when the variant will send to a later date                                            |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ##### Idle Canvases
 
-| Reason for idle status | Steps to make Canvas active |
-| --- | --- |
-| Action-based Canvases with end dates seven days and maximum duration after the end date | Extend the end date |
-| Scheduled Canvases with end dates seven days and maximum duration after the end date | Extend the end date |
-| Scheduled one-time send Canvases with end dates seven days and maximum duration after the end date | Schedule a future send |
-| Action-based Canvases without end dates that have not entered users in one year and maximum duration | Enter one user or make any edit to the Canvas | 
-| Scheduled Canvases (without end dates) that have not entered users in one year and maximum duration | Enter one user or make any edit to the Canvas | 
-| API-triggered Canvases that have not sent entered users in one year | Enter one user or make any edit to the Canvas |
+| Reason for idle status                                                                               | Steps to make Canvas active                   |
+|------------------------------------------------------------------------------------------------------|-----------------------------------------------|
+| Action-based Canvases with end dates seven days and maximum duration after the end date              | Extend the end date                           |
+| Scheduled Canvases with end dates seven days and maximum duration after the end date                 | Extend the end date                           |
+| Scheduled one-time send Canvases with end dates seven days and maximum duration after the end date   | Schedule a future send                        |
+| Action-based Canvases without end dates that have not entered users in one year and maximum duration | Enter one user or make any edit to the Canvas |
+| Scheduled Canvases (without end dates) that have not entered users in one year and maximum duration  | Enter one user or make any edit to the Canvas |
+| API-triggered Canvases that have not sent entered users in one year                                  | Enter one user or make any edit to the Canvas |
 {: .reset-td-br-1 .reset-td-br-2}
 
 #### How can I keep an idle Canvas active?
