@@ -13,16 +13,6 @@ These schemas only apply to the flat file event data we send to Data Warehouse p
 
 Contact your account manager or open a [support ticket]({{site.baseurl}}/braze_support/) if you need access to additional event entitlements. If you can't find what you need in this article, check out our [Customer Behavior Events Library]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/customer_behavior_events/) or our [Currents sample data examples](https://github.com/Appboy/currents-examples/tree/master/sample-data).
 
-### User ID schema
-
-Note the naming conventions for user IDs.
-
-| Braze schema | Currents schema | Description | 
-| ----------- | ----------- | ----------- |
-| `braze_id` | `"USER_ID"` | The unique identifier that is automatically assigned by Braze. |
-| `external_id` | `"EXTERNAL_USER_ID"` | The unique identifier of a user's profile that is set by the customer. |
-{: .reset-td-br-1 .reset-td-br-2}
-
 {% details Explanation of message engagement event structure and platform values %}
 
 ### Event structure
@@ -32,6 +22,16 @@ This event breakdown shows what type of information is generally included in a m
 ![Breakdown of a message engagement event showing an email unsubscribe event with the listed properties grouped by user-specific properties, campaign or Canvas tracking properties, and event-specific properties]({% image_buster /assets/img/message_engagement_event.png %})
 
 Message engagement events are comprised of **user-specific** properties, **campaign/canvas tracking** properties, and **event-specific** properties.
+
+### User ID schema
+
+Note the naming conventions for user IDs.
+
+| Braze schema | Currents schema | Description | 
+| ----------- | ----------- | ----------- |
+| `braze_id` | `"USER_ID"` | The unique identifier that is automatically assigned by Braze. |
+| `external_id` | `"EXTERNAL_USER_ID"` | The unique identifier of a user's profile that is set by the customer. |
+{: .reset-td-br-1 .reset-td-br-2}
 
 ### Platform values
 
