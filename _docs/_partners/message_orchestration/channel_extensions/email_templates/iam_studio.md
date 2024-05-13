@@ -24,9 +24,9 @@ With the Braze and IAM Studio integration, you can easily insert customizable in
 ## Use cases
 
 - Encouraging the purchase of goods
-- user information collection
-- membership registration inducement
-- coupon issuance information
+- User information collection
+- Membership registration inducement
+- Coupon issuance information
 
 ## Integration
 
