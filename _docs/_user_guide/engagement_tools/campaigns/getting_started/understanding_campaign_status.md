@@ -31,5 +31,5 @@ To [archive a campaign]({{site.baseurl}}/user_guide/engagement_tools/campaigns/s
 
 ## Idle
 
-When a campaign is no longer sending messages, Braze will assign an idle status to these campaigns to help sort and manage your list of campaigns. With this filter, you can view which campaigns will be automatically stopped and the associated stop date.
+When a campaign is no longer sending messages, Braze will assign an [idle status]({{site.baseurl}}/idle_campaigns_canvases/) to these campaigns to help sort and manage your list of campaigns. With this filter, you can view which campaigns will be automatically stopped and the associated stop date.
 

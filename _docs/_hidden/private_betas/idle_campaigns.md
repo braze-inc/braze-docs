@@ -65,7 +65,9 @@ We will stop these campaign and Canvases seven days after the end date.
 
 To keep a campaign active, update the campaign so it does not meet the above criteria for having an idle status. Reference this table for steps to make idle campaigns active, depending on your use case.
 
-| Reason for idle campaign status | Steps to make campaign active |
+##### Idle campaigns
+
+| Reason for idle status | Steps to make campaign active |
 | --- | --- |
 | Action-based campaigns with end dates seven days after the send date | Extend the end date |
 | Scheduled campaigns with end dates seven days after the send date | Extend the end date |
@@ -77,17 +79,21 @@ To keep a campaign active, update the campaign so it does not meet the above cri
 | Sends as the result of a Winning or Personalized Variant are treated as scheduled sends and disabled seven days after the Winning or Personalized Variant is sent | Update when the variant will send to a later date |
 {: .reset-td-br-1 .reset-td-br-2}
 
+##### Idle Canvases
+
+| Reason for idle status | Steps to make Canvas active |
+| --- | --- |
+| Action-based Canvases with end dates seven days and maximum duration after the end date | Extend the end date |
+| Scheduled Canvases with end dates seven days and maximum duration after the end date | Extend the end date |
+| Scheduled one-time send Canvases with end dates seven days and maximum duration after the end date | Schedule a future send |
+| Action-based Canvases without end dates that have not entered users in one year and maximum duration | Enter one user or make any edit to the Canvas | 
+| Scheduled Canvases (without end dates) that have not entered users in one year and maximum duration | Enter one user or make any edit to the Canvas | 
+| API-triggered Canvases that have not sent entered users in one year | Enter one user or make any edit to the Canvas |
+{: .reset-td-br-1 .reset-td-br-2}
+
 #### How can I keep an idle Canvas active?
 
 To keep a Canvas active, update the Canvas so it does not meet the above criteria for having an idle status. Reference this table for steps to make idle campaigns active, depending on your use case.
-
-#### What happens if I want to continue running a campaign that hasn't sent a message or been edited in over 12 months?
-
-To continue running an idle campaign, resume the campaign. In this case, the 12-month countdown will reset. 
-
-#### What happens if I want to continue running a campaign past its end date?
-
-To resume a campaign past its end date, update the campaign's end date to the desired date. 
 
 #### Who will receive email notifications about stopped campaigns?
 
@@ -95,10 +101,8 @@ By default, all users with administrator permissions are opted into email notifi
 
 #### How does stopping Content Cards work?
 
-Content Cards will not be stopped until their expiration deadline and the appropriate buffer period. They will be stopped at the later of the buffer period (corresponding to whether the campaign is a one-time send, has an end date, or does not have an end date) and the expiration deadline. 
+Content Cards in campaigns will not be stopped until their expiration deadline and the appropriate buffer period. They will be stopped at the later of the buffer period (corresponding to whether the campaign is a one-time send, has an end date, or does not have an end date) and the expiration deadline. 
 
 For example, if a Content Card expires on April 1, is a one-time send, and has a conversion deadline of 10 days, it will be stopped on April 12 (10 days after the conversion deadline, plus one day). If a Content Card expires on April 1, is API-triggered, and has not sent messages since March 15, it will expire on March 15 of next year.
 
-#### Is there any action required?
-
-No additional action is required. Please reach out to your Braze customer success manager if you have any questions.
+Canvases are only stopped after the Content Cards are stopped, meaning their maximum duration has passed.

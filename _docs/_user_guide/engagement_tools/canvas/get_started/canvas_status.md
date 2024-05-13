@@ -32,4 +32,4 @@ To archive a Canvas, select the <i class="fas fa-cog"></i> gear icon for a given
 
 ## Idle
 
-When a Canvas is no longer sending messages, Braze will assign an idle status to these Canvases to help sort and manage your list of Canvases. With this filter, you can view which Canvases will be automatically stopped and the associated stop date.
+When a Canvas is no longer sending messages, Braze will assign an [idle status]({{site.baseurl}}/idle_campaigns_canvases/) to these Canvases to help sort and manage your list of Canvases. With this filter, you can view which Canvases will be automatically stopped and the associated stop date.
