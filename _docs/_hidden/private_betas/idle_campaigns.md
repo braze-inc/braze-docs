@@ -31,17 +31,13 @@ Content Cards will not be stopped until their expiration deadline, and will also
 
 ## Idle Canvases
 
-On an ongoing basis, idle Canvases will be stopped.
+On an ongoing basis, idle Canvases that meet the following criteria will be stopped:
 
-- Idle Canvases with end dates will be stopped seven days after the end date, plus the maximum duration of the Canvas
-    - Action-based and scheduled Canvases with end dates
-    - Scheduled one-time Canvases
-- Idle Canvases without end dates will be stopped seven days after the end date, plus the maximum duration of the Canvas 
-    - Action-based Canvases without end dates
-    - API-triggered Canvases without end dates
-    - Scheduled Canvases without end dates
+- Scheduled Canvases that are one-time sends will be stopped seven days after the send date, plus the maximum duration of the Canvas
+- Action-based and API-triggered Canvases with end dates will be stopped seven days after the end date, plus the maximum duration of the Canvas
+- Scheduled, action-based, or API-triggered Canvases without end dates will be stopped seven days after the end date, plus the maximum duration of the Canvas
 
-The maximum duration of the Canvas is a duration that includes Content Card and in-app message expiries.
+The [maximum duration]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/) of a Canvas is the longest possible time a user can take to complete a given Canvas. This duration includes Content Card and in-app message expiries.
 
 ## Frequently asked questions
 
