@@ -19,14 +19,14 @@ With the Braze and IAM Studio integration, you can easily insert customizable in
 | Requirement | Description |
 | ----------- | ----------- |
 | IAM Studio account | A [IAM Studio account](https://www.inappmessage.com/register) is required to take advantage of this partnership. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 ## Use cases
 
-- Customized onboarding experiences
-- In-app experiences for personalized events and promotions
-- Gathering customer feedback and ratings based on app behavior
-- Quickly testing potential app product ideas
+- Encouraging the purchase of goods
+- User information collection
+- Membership registration inducement
+- Coupon issuance information
 
 ## Integration
 
