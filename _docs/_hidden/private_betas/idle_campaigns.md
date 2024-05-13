@@ -57,9 +57,9 @@ If a campaign that hasn’t sent a message or a Canvas that hasn’t entered use
 
 We will stop these campaign and Canvases seven days after the end date.
 
-#### How can I keep an idle campaign active?
+#### How can I keep an idle campaign or Canvas active?
 
-To keep a campaign active, update the campaign so it does not meet the above criteria for having an idle status. Reference this table for steps to make idle campaigns active, depending on your use case.
+To keep a campaign or Canvas active, update the campaign or Canvas so it does not meet the above criteria for having an idle status. Reference this table for steps to make idle campaigns or Canvases active, depending on your use case.
 
 ##### Idle campaigns
 
@@ -91,9 +91,9 @@ To keep a campaign active, update the campaign so it does not meet the above cri
 
 To keep a Canvas active, update the Canvas so it does not meet the above criteria for having an idle status. Reference this table for steps to make idle campaigns active, depending on your use case.
 
-#### Who will receive email notifications about stopped campaigns?
+#### Who will receive email notifications about stopped campaigns and Canvases?
 
-By default, all users with administrator permissions are opted into email notifications about auto-stopping campaigns. The creator of the campaign will always be notified when it is stopped. Users can manage email notification preferences by going to **Company Settings > Notification Preferences**, then adding or removing recipients from the notification **Campaign Automatically Stopped**.
+By default, all users with administrator permissions are opted into email notifications about auto-stopping campaigns and Canvases. The creator of the campaign or Canvas will always be notified when it is stopped. Users can manage email notification preferences by going to **Company Settings** > **Notification Preferences**, then adding or removing recipients from the notification **Campaign Automatically Stopped** and the notification **Canvas Automatically Stopped**.
 
 #### How does stopping Content Cards work?
 
