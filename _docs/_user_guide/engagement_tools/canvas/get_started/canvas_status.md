@@ -1,9 +1,9 @@
 ---
-nav_title: Canvas Basics
-article_title: Canvas Basics
-page_order: 1
+nav_title: Understanding Canvas Status
+article_title: Understanding Canvas Status
+page_order: 2
 page_type: reference
-description: "This reference article covers the basics of Canvas, covering various questions you should ask yourself as you set up your first Canvas."
+description: "This reference article gives an overview of the various statuses a Canvas can have and what they mean."
 tool: Canvas
 
 ---
