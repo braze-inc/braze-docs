@@ -27,7 +27,7 @@ Dashboard Builder is currently in early access. Contact your customer success ma
 
 #### Revenue - Last Touch Attribution
 
-The **Revenue - Last Touch Attribution** template provides a review of revenue across campaigns, Canvases, and channels. It evaluates data from the last-touched message during the conversion window.
+The **Revenue - Last Touch Attribution** template provides a review of revenue across campaigns, Canvases, and channels. All revenue data is attributed to the last-touched message during the conversion window.
 
 Touches include `Email Click`, `Content Card Click`, `In-App Message Click`, `SMS Delivery`, `WhatsApp Read`, and `Webhook Send`.
 
