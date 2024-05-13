@@ -1,18 +1,14 @@
 ---
 nav_title: Multi-Language Settings
 article_title: Multi-Language Settings
-permalink: "/multi_language_support/"
-hidden: true
+alias: "/multi_language_support/"
+page_order: 5.5
 description: "This article provides an overview of multi-language settings in the Braze dashboard and how to use locales in your messaging."
 ---
 
 # Multi-language settings
 
 > By adjusting multi-language settings, you can target users in different languages and locations with different messages all within a single email message.
-
-{% alert important %}
-Multi-language settings are currently in early access. Contact your account manager if you're interested in participating in this early access.
-{% endalert %}
 
 ## Prerequisites
 

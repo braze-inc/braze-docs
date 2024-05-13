@@ -38,6 +38,9 @@ guide_menu_list:
   - name: Push TTL Settings
     link: /docs/user_guide/administrative/app_settings/push_ttl_settings/
     image: /assets/img/braze_icons/settings-01.svg
+  - name: Multi-Language Settings
+    link: /docs/multi_language_support/
+    image: /assets/img/braze_icons/list.svg
 
 guide_menu_title2: "Company settings"
 guide_menu_list2:
