@@ -15,6 +15,9 @@ guide_featured_list:
   - name: Canvas Basics
     link: /docs/user_guide/engagement_tools/canvas/get_started/the_basics/
     image: /assets/img/braze_icons/list.svg
+  - name: Understanding Canvas Status
+    link: /docs/user_guide/engagement_tools/canvas/getting_started/canvas_status/
+    image: /assets/img/braze_icons/mail-01.svg
   - name: Canvas Outlines
     link: /docs/user_guide/engagement_tools/canvas/get_started/canvas_outlines/
     image: /assets/img/braze_icons/git-branch-01.svg
