@@ -23,10 +23,10 @@ With the Braze and IAM Studio integration, you can easily insert customizable in
 
 ## Use cases
 
-- Customized onboarding experiences
-- In-app experiences for personalized events and promotions
-- Gathering customer feedback and ratings based on app behavior
-- Quickly testing potential app product ideas
+- Encouraging the purchase of goods
+- user information collection
+- membership registration inducement
+- coupon issuance information
 
 ## Integration
 
