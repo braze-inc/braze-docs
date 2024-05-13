@@ -23,6 +23,16 @@ This event breakdown shows what type of information is generally included in a m
 
 Message engagement events are comprised of **user-specific** properties, **campaign/canvas tracking** properties, and **event-specific** properties.
 
+### User ID schema
+
+Note the naming conventions for user IDs.
+
+| Braze schema | Currents schema | Description | 
+| ----------- | ----------- | ----------- |
+| `braze_id` | `"USER_ID"` | The unique identifier that is automatically assigned by Braze. |
+| `external_id` | `"EXTERNAL_USER_ID"` | The unique identifier of a user's profile that is set by the customer. |
+{: .reset-td-br-1 .reset-td-br-2}
+
 ### Platform values
 
 Certain events return a `platform` value that specifies the platform of the user's device. 
