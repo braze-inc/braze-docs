@@ -14,7 +14,7 @@ tool: Canvas
 
 ## Draft
 
-Canvases marked as drafts are saved but not launched campaigns. Clicking on them allows you to continue editing and begin sending.
+Canvases marked as drafts are saved but not launched Canvases. To continue editing and begin sending the Canvas, select the draft.
 
 ## Active
 
@@ -22,12 +22,14 @@ Active Canvases are in the process of sending.
 
 ## Stopped
 
-Stopped Canvases have been paused, but are still editable. You can resume an stopped Canvas by selecting the gear icon by the name of the Canvas and selecting **Resume**.
+Stopped Canvases have been paused, but are still editable. To resume a stopped Canvas, select the <i class="fas fa-cog"></i> gear icon for a given Canvas then **Resume**.
 
 ## Archived
 
-Archived campaigns are no longer sent and are cleared from the All Active tab on the Braze dashboard. These campaigns are also removed from the detailed statistics graphs on the **Overview** and **Revenue** pages.
+Archived Canvases are no longer sent and are cleared from the **All Active** tab on the Braze dashboard. These Canvases are also removed from the detailed statistics graphs on the **Overview** and **Revenue** pages.
 
-To archive a campaign, select the gear icon for a given campaign, or simply check it off and select **Archive Selected**.
+To archive a Canvas, select the <i class="fas fa-cog"></i> gear icon for a given Canvas then **Archive Selected**.
 
 ## Idle
+
+When a Canvas is no longer sending messages, Braze will assign an idle status to these Canvases to help sort and manage your list of Canvases. With this filter, you can view which Canvases will be automatically stopped and the associated stop date.
