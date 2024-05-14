@@ -52,10 +52,10 @@ First, customize the image, text, and button for your content. Be sure to connec
 {% endtab %}
 {% endtabs %}
 
-Next, create your personalized in-app message using Liquid and custom fonts. To enable logging and tracking, select **Log data and track user behavior**.
+Next, create your personalized in-app message by adding custom fonts and using Liquid. To enable logging and tracking, select **Log data and track user behavior**.
 
 {% tabs local %}
-{% tab Font %}
+{% tab Fonts %}
 ![The IAM Studio UI showing the options to add Liquid. These options include making personalized setence.]({% image_buster /assets/img/iam_studio/iam_custom_font.png %})
 {% endtab %}
 {% tab Liquid %}
