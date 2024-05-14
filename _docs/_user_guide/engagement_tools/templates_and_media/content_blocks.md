@@ -85,7 +85,7 @@ After adding a Content Block in an active campaign or Canvas, you can preview th
 
 This preview includes information about the Content Block such as who created it, tags, creation date, last edited date, description, editor type, inclusion count with details, and an actual preview of the Content Block.
 
-![][7]
+![][7]{: style="max-width:60%;"} 
 
 ### Nesting Content Blocks
 
