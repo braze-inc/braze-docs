@@ -38,32 +38,30 @@ Choose an in-app message template you want to use from the in-app message templa
 
 ### Step 2: Customize the template
 
-#### Customize contents
-Add the images and edit text, button with your desired content. Connect **Deeplink** on the image and button
+First, customize the image, text, and button for your content. Be sure to connect **Deeplink** for the image and button.
 
 {% tabs local %}
-{% tab Customize Image %}
+{% tab Image %}
 ![The IAM Studio UI showing the options to customize the image. These options include the image, image radius, and image dimmed.]({% image_buster /assets/img/iam_studio/iam_customize_image.png %})
 {% endtab %}
-{% tab Customize Text %}
+{% tab Text %}
 ![The IAM Studio UI showing the options to customize the title and subtitle of your message. These options include text, formatting, and font.]({% image_buster /assets/img/iam_studio/iam_customize_text.png %})
 {% endtab %}
-{% tab Customize Button %}
+{% tab Button %}
 ![The IAM Studio UI showing the options to customize the main, left and right button. These options include color, deep link, text, and formatting.]({% image_buster /assets/img/iam_studio/iam_customize_button.png %})
 {% endtab %}
 {% endtabs %}
 
-#### Improve in-app message
-Strengthen your brand identity through **Custom font** and create personalized in-app message through **Liquid**. Set button and custom attribute•event to **log data and track user behavior**
+Next, create your personalized in-app message using Liquid and custom fonts. To enable logging and tracking, select **Log data and track user behavior**.
 
 {% tabs local %}
-{% tab Custom Font %}
+{% tab Font %}
 ![The IAM Studio UI showing the options to add Liquid. These options include making personalized setence.]({% image_buster /assets/img/iam_studio/iam_custom_font.png %})
 {% endtab %}
 {% tab Liquid %}
 ![The IAM Studio UI showing the options to customize event/attribute logging. These options include that user behavior log.]({% image_buster /assets/img/iam_studio/iam_liquid.png %})
 {% endtab %}
-{% tab TRACKING/LOGGING %}
+{% tab Logging and Tracking %}
 ![The IAM Studio UI showing the options to customize font. These options include that user can customize font style.]({% image_buster /assets/img/iam_studio/iam_tracking_logging.png  %})
 {% endtab %}
 {% endtabs %}
