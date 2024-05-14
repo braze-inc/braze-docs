@@ -1,11 +1,13 @@
 ---
-nav_title: Locales in Messaging
-article_title: Locales in Messaging
+nav_title: Locales in Messages
+article_title: Locales in Messages
 page_order: 6.3
-description: "This article provides an overview of multi-language settings in the Braze dashboard and how to use locales in your messaging."
+description: "This article provides steps on how to use locales in your messaging."
 ---
 
 # Locales in messaging
+
+> After adding locales to your workspace, you can target users in different languages all within a single email message.
 
 ## Prerequisites
 
@@ -37,6 +39,10 @@ To use locales in your messaging, compose an email campaign or Canvas. Select ei
 {% endtabs %}
 
 To update the translations, update the CSV and re-upload the file. This means any changes to the IDs or locales in the CSV will not automatically update in your message.
+
+{% alert tip %}
+Check out our [Translation API]({{site.baseurl}}/api/endpoints/translations) to manage and update translations in your campaigns and Canvases.
+{% endalert %}
 
 ## Preview your locales
 
