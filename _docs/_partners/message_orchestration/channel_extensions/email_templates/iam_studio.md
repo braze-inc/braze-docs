@@ -58,7 +58,7 @@ Strengthen your brand identity through **Custom font** and create personalized i
 
 {% tabs local %}
 {% tab Custom Font %}
-![The IAM Studio UI showing the options to add Liquid. These options include making personalized setence.]({% image_buster /assets/img/iam_studio/iam_customize_font.png %})
+![The IAM Studio UI showing the options to add Liquid. These options include making personalized setence.]({% image_buster /assets/img/iam_studio/iam_custom_font.png %})
 {% endtab %}
 {% tab Liquid %}
 ![The IAM Studio UI showing the options to customize event/attribute logging. These options include that user behavior log.]({% image_buster /assets/img/iam_studio/iam_liquid.png %})
