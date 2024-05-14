@@ -9,7 +9,7 @@ description: "This article provides an overview of multi-language settings in th
 
 ## Prerequisites
 
-In order to edit and manage multi-language support, you must have the "Manage Multi-Language Settings" user permission. To add the locale to a message, you'll need permissions for editing campaigns.
+To edit and manage [multi-language support]({{site.baseurl}}/multi_language_support/), you must have the "Manage Multi-Language Settings" user permission. To add the locale to a message, you'll need permissions for editing campaigns.
 
 ## Using locales
 
