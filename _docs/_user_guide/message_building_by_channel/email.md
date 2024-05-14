@@ -38,6 +38,9 @@ guide_menu_list:
 - name: Email Setup
   link: /docs/user_guide/message_building_by_channel/email/email_setup/
   image: /assets/img/braze_icons/mail-01.svg
+- name: Locales in Messages
+  link: /docs/user_guide/message_building_by_channel/email/using_locales/
+  image: /assets/img/braze_icons/users-01.svg
 - name: Preference Center
   link: /docs/user_guide/message_building_by_channel/email/preference_center/
   image: /assets/img/braze_icons/list.svg
