@@ -238,7 +238,7 @@ Straight quotes are different from curly quotes in Liquid. Be careful when copyi
 | :--------------- | ------------- | --------- |
 | [append][6.1]     | Appends characters to a string.           | ✅  Yes   |
 | [camelcase][6.2]     | Converts a string into CamelCase.             | ⛔  No    |
-| [capitalize][6.3]     | Capitalizes the first word in a string.         | ✅  Yes   |
+| [capitalize][6.3]     | Capitalizes the first word in a string and downcases the remaining characters.         | ✅  Yes   |
 | [downcase][6.4]      | Converts a string into lowercase.         | ✅  Yes   |
 | [escape][6.5]    | Escapes a string.             | ✅  Yes   |
 | [handle/handleize][6.6]        | Formats a string into a handle.        | ⛔  No    |

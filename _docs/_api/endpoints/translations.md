@@ -26,10 +26,10 @@ guide_featured_list:
     link: /docs/api/endpoints/translations/get_translation_canvas/
     image: /assets/img/braze_icons/message-plus-square.svg
   - name: "PUT: Update Translation in a Campaign"
-    link: /docs/api/endpoints/translations/update_translation_campaign/
+    link: /docs/api/endpoints/translations/put_update_translation_campaign/
     image: /assets/img/braze_icons/target-04.svg
   - name: "PUT: Update Translation in a Canvas"
-    link: /docs/api/endpoints/translations/update_translations_canvas/
+    link: /docs/api/endpoints/translations/put_update_translation_canvas/
     image: /assets/img/braze_icons/target-04.svg
 ---
 

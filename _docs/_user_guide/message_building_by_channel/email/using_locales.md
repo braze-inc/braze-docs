@@ -1,35 +1,19 @@
 ---
-nav_title: Multi-Language Settings
-article_title: Multi-Language Settings
-permalink: "/multi_language_support/"
-hidden: true
-description: "This article provides an overview of multi-language settings in the Braze dashboard and how to use locales in your messaging."
+nav_title: Locales in Messages
+article_title: Locales in Messages
+page_order: 6.3
+description: "This article provides steps on how to use locales in your messaging."
 ---
 
-# Multi-language settings
+# Locales in messaging
 
-> By adjusting multi-language settings, you can target users in different languages and locations with different messages all within a single email message.
-
-{% alert important %}
-Multi-language settings are currently in early access. Contact your account manager if you're interested in participating in this early access.
-{% endalert %}
+> After adding locales to your workspace, you can target users in different languages all within a single email message.
 
 ## Prerequisites
 
-In order to edit and manage multi-language support, you must have the "Manage Multi-Language Settings" user permission. To add the locale to a message, you'll need permissions for editing campaigns.
+To edit and manage [multi-language support]({{site.baseurl}}/multi_language_support/), you must have the "Manage Multi-Language Settings" user permission. To add the locale to a message, you'll need permissions for editing campaigns.
 
-## Add a locale
-
-1. Go to **Settings** > **Multi-Language Support** under **Workspace Settings**.
-2. Select **Add locale**.
-3. Enter a name for the locale.
-4. For the **User attributes**, select the language to be added using the **Language** dropdown.
-5. (optional) Select the country to be associated with the language.
-6. Select **Add locale**. 
-
-![An example of French added as a locale for users whose country is Canada.][2]{: style="max-width:80%;"}
-
-## Use locales in messaging
+## Using locales
 
 To use locales in your messaging, compose an email campaign or Canvas. Select either the HTML editor or drag-and-drop editor, then follow the steps based on your editor.
 
@@ -56,27 +40,15 @@ To use locales in your messaging, compose an email campaign or Canvas. Select ei
 
 To update the translations, update the CSV and re-upload the file. This means any changes to the IDs or locales in the CSV will not automatically update in your message.
 
+{% alert tip %}
+Check out our [Translation API]({{site.baseurl}}/api/endpoints/translations) to manage and update translations in your campaigns and Canvases.
+{% endalert %}
+
 ## Preview your locales
 
 In the **Preview & Test** section, select **Multi-language User** to preview the message to check if your message translates as expected.
 
 ## Frequently asked questions
-
-### Settings
-
-#### How many locales can I add?
-You can add up to 200 locales.
-
-#### Where are the translation files stored in Braze?
-Translation files are stored at a campaign level, meaning each message variant will need to have uploaded translations.
-
-#### Does the locale name have to follow a specific pattern or format?
-No. You can use your preferred naming convention. The locale name is used when selecting the locale in the editor and will be in the headings of the file you download with translation IDs.
-
-#### Can I use custom attributes to define a locale?
-Not currently. Contact your account manager or leave [product feedback]({{site.baseurl}}/user_guide/administrative/access_braze/portal/) with more details on how you would define locales.
-
-### Composition
 
 #### I want to make a change to the translated copy in one of my locales. How can I do that?
 Make the edit in the CSV, then upload the file again to make a change to the translated copy.
@@ -98,6 +70,3 @@ Yes. However, be sure to check that the HTML styling is not translated with the 
 | The translation file includes text blocks that don't exist in the current message (such as the current draft at the time the translations are uploaded). | The text blocks that don't exist in your current message will not be saved from the translation file to Braze. |
 | Removing a locale from the message after that locale has already been uploaded to the message as part of the translation file.                           | Removing the locale will remove any translations associated with the locale in your message.                   |
 {: .reset-td-br-1 .reset-td-br-2}
-
-
-[2]: {% image_buster /assets/img/multi-language_support/add_locale.png %}

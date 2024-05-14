@@ -1125,4 +1125,6 @@ validurls['/docs/user_guide/message_building_by_channel/email/reporting'] = '/do
 validurls['/docs/user_guide/data_and_analytics/your_reports/retention_reports'] = '/docs/user_guide/data_and_analytics/reporting/retention_reports/';
 validurls['/docs/user_guide/data_and_analytics/your_reports/funnel_reports'] = '/docs/user_guide/data_and_analytics/reporting/funnel_reports';
 
+validurls['/docs/idle_campaigns/'] = '/docs/idle_campaigns_canvases/';
+
 // validurls['OLD'] = 'NEW';
