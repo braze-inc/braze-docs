@@ -25,20 +25,21 @@ With the Braze and IAM Studio integration, you can easily insert customizable in
 
 - Encouraging the purchase of goods
 - User information collection
-- Membership registration inducement
+- Increasing membership registration
 - Coupon issuance information
 
 ## Integration
 
 ### Step 1: Choose a template
 
-Login to IAM Studio and choose an in-app message template you want to use from the in-app message template gallery.
+Choose an in-app message template you want to use from the in-app message template gallery
 
-![The IAM Studio template gallery shows different templates such as "modal slick contents", "full survey", "modal full image", and more.][1]
+![The IAM Studio template gallery shows different templates such as "carousel slide modal", "simple icon modal", "modal full image", and more.][1]
 
 ### Step 2: Customize the template
 
-Next, replace the images, text, and buttons with your desired content.
+#### Customize contents
+Add the images and edit text, button with your desired content. Connect **Deeplink** on the image and button
 
 {% tabs local %}
 {% tab Customize Image %}
@@ -49,6 +50,21 @@ Next, replace the images, text, and buttons with your desired content.
 {% endtab %}
 {% tab Customize Button %}
 ![The IAM Studio UI showing the options to customize the main, left and right button. These options include color, deep link, text, and formatting.]({% image_buster /assets/img/iam_studio/iam_customize_button.png %})
+{% endtab %}
+{% endtabs %}
+
+#### Improve in-app message
+Strengthen your brand identity through **Custom font** and create personalized in-app message through **Liquid**. Set button and custom attribute•event to **log data and track user behavior**
+
+{% tabs local %}
+{% tab Custom Font %}
+![The IAM Studio UI showing the options to add Liquid. These options include making personalized setence.]({% image_buster /assets/img/iam_studio/iam_customize_font.png %})
+{% endtab %}
+{% tab Liquid %}
+![The IAM Studio UI showing the options to customize event/attribute logging. These options include that user behavior log.]({% image_buster /assets/img/iam_studio/iam_liquid.png %})
+{% endtab %}
+{% tab TRACKING/LOGGING %}
+![The IAM Studio UI showing the options to customize font. These options include that user can customize font style.]({% image_buster /assets/img/iam_studio/iam_tracking_logging.png  %})
 {% endtab %}
 {% endtabs %}
 
