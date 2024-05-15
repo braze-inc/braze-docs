@@ -46,7 +46,7 @@ You can use native, first-party, or third-party link handling for complex use ca
 #### Example: Deep linking to an alert dialog
 
 {% alert note %}
-While the following example does not rely on additional packages, you can use a similar approach to implement any native, first-party, or third-party packages, such as [`go_router`](https://pub.dev/packages/go_router). Additional Dart code may be required.
+While the following example does not rely on additional packages, you can use a similar approach to implement native, first-party, or third-party packages, such as [`go_router`](https://pub.dev/packages/go_router). Additional Dart code may be required.
 {% endalert %}
 
 First, a method channel is used in the native layer to forward the deep link's URL string data to the Dart layer.
