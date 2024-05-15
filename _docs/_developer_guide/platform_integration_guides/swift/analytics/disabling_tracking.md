@@ -9,12 +9,12 @@ description: "This article shows how to disable data collection for the Swift SD
 
 # Disabling iOS SDK tracking
 
-> To comply with data privacy regulations, data tracking activity on the iOS SDK can be stopped entirely by setting the [`enabled`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/enabled) property on the Braze instance to `false`. 
+> To comply with data privacy regulations, data tracking activity on the iOS SDK can be stopped entirely by setting the [`enabled`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/enabled) property to `false` on your Braze instance. 
 
-When set to `false`, the Braze SDK ignores any call to the public API. The SDK also cancels all in-flight actions (network requests, event processing, etc.). If you wish to resume data collection, you can set the [`enabled`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/enabled/) property to `true`.
+When `enabled` is set to `false`, the Braze SDK ignores any calls to the public API. The SDK also cancels all in-flight actions, such as network requests, event processing, etc. To resume data collection, set [`enabled`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/enabled/) to `true`.
 
-Additionally, you can use the method [`wipeData()`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/wipedata()) to fully clear locally stored SDK data on the device.
+You can also use the [`wipeData()`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/wipedata()) method to fully clear locally-stored SDK data on a user's device.
 
-Prior to Swift SDK v5.7.0, IDFV was used as the default device ID. On these older SDK versions, or when setting `useUUIDAsDeviceId` to `false`, additional steps may be required to delete device information. In these cases, unless a user uninstalls all apps from a vendor on a given device, the next time the Braze SDK runs after calling `wipeData()` will result in our server re-identifying that user via their device identifier. In order to fully remove all user data, you should combine a call to `wipeData()` with a request to delete data on the server via the Braze [REST API]({{site.baseurl}}/api/endpoints/user_data/post_user_delete/).
+Keep in mind, if you're using Swift SDK version 5.7.0 and earlier, or `useUUIDAsDeviceId` is set to `false`, your Identifier for Vendors (IDFV) will be used as the device ID instead, meaning additonal steps are required to fully clear locally-stored SDK data. In both cases, after calling `wipeData()`, Braze will continue to re-identify that user using your IDFV. To completely clear their user data from Braze, simultaneously call `wipeData()` while making a post request to [`/users/delete`]({{site.baseurl}}/api/endpoints/user_data/post_user_delete/).
 
-Swift SDK versions 7.0.0 and above default to using a randomly generated UUID as the device ID, and calling `wipeData()` will result in a new device ID to be randomly generated.
+Starting with version 7.0.0, the Braze Swift SDK randomly generates a UUID for device IDs instead. Similarly, calling `wipeData()` also randomly generates a new device ID.
