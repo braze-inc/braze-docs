@@ -17,10 +17,7 @@ Before you can implement deep linking into your Flutter app, you'll need to set 
 
 ## Implementing deep linking
 
-<!-- TODO: Consider renaming heading. -->
 ### Step 1: Set up Flutter's built-in handling
-
-<!-- TODO: Add intro text. -->
 
 {% tabs %}
 {% tab iOS %}
@@ -47,6 +44,10 @@ Before you can implement deep linking into your Flutter app, you'll need to set 
 You can use native, first-party, or third-party link handling for complex use cases, such as sending a user to a specific location in your app, or calling a specific function.
 
 #### Example: Deep linking to an alert dialog
+
+{% alert note %}
+While the following example does not rely on additional packages, you can use a similar approach to implement any native, first-party, or third-party packages, such as [`go_router`](https://pub.dev/packages/go_router). Additional Dart code may be required.
+{% endalert %}
 
 First, a method channel is used in the native layer to forward the deep link's URL string data to the Dart layer.
 
@@ -141,4 +142,3 @@ void deepLinkAlert(String link, BuildContext context) {
 [3]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/advanced_use_cases/linking/
 [4]: {% image_buster /assets/img/flutter/flutter-ios-deep-link-info-plist.png %} "Xcode Project Info.plist File"
 [5]: https://github.com/braze-inc/braze-flutter-sdk/tree/master/example
-[6]: https://pub.dev/packages/go_router
