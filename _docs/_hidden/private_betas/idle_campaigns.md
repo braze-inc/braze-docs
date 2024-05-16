@@ -35,7 +35,7 @@ On an ongoing basis, idle Canvases that meet the following criteria will be stop
 
 - Scheduled Canvases that are one-time sends will be stopped seven days after the send date, plus the maximum duration of the Canvas
 - Action-based and API-triggered Canvases with end dates will be stopped seven days after the end date, plus the maximum duration of the Canvas
-- Scheduled, action-based, or API-triggered Canvases without end dates will be stopped seven days after the end date, plus the maximum duration of the Canvas
+- Scheduled, action-based, or API-triggered Canvases without end dates will be stopped one year after the last entry to the Canvas, plus the maximum duration of the Canvas
 
 The [maximum duration]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/) of a Canvas is the longest possible time a user can take to complete a given Canvas. This duration includes Content Card and in-app message expiries.
 
