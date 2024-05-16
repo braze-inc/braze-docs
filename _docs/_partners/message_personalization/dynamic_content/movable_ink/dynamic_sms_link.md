@@ -1,20 +1,20 @@
 ---
 nav_title: Dynamic SMS Link Preview
 article_title: Dynamic SMS Link Preview
-description: "This reference article outlines how to turn on and use Moveable Ink's SMS link preview feature."
+description: "This reference article outlines how to turn on and use Movable Ink's SMS link preview feature."
 page_type: partner
 search_tag: Partner
 ---
 
 # Dynamic SMS link preview
 
-> With Moveable Ink’s dynamic SMS link preview, you can leverage the immersiveness of MMS at the same cost of SMS. This allows you to use Braze and Moveable Ink to deliver cost-effective, personalized rich messaging experiences.
+> With Movable Ink’s dynamic SMS link preview, you can leverage the immersiveness of MMS at the same cost of SMS. This allows you to use Braze and Movable Ink to deliver cost-effective, personalized rich messaging experiences.
 
 ## Prerequisites
 
 | Requirement | Description |
 | --- | --- |
-| Moveable Ink account | A Movable Ink account is required to take advantage of this partnership. |
+| Movable Ink account | A Movable Ink account is required to take advantage of this partnership. |
 | Data source | You need to connect a data source to Movable Ink. This can be done through CSV, website import, or API. |
 | MMS sending capabilities | Confirm that you're set up for MMS through Braze.
 | [Link shortening]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/link_shortening/) | Confirm that link shortening is turned on. | 
@@ -33,18 +33,18 @@ To allow link preview images for iOS, users must add your brand (the sender) as 
 
 #### Step 1: Create a Contact Card campaign
 
-After users use your Braze [content card]({{site.baseurl}}/user_guide/message_building_by_channel/sms/mms/contact_card/) to save your brand as a contact, they will be able to view **Tap to Load Preview** prompts and Moveable Ink links.
+After users use your Braze [content card]({{site.baseurl}}/user_guide/message_building_by_channel/sms/mms/contact_card/) to save your brand as a contact, they will be able to view **Tap to Load Preview** prompts and Movable Ink links.
 
 ![1]{: style="max-width:30%;"}
 
-#### Step 2: Send Moveable Ink links
+#### Step 2: Send Movable Ink links
 
-1. Create an SMS campaign in Moveable Ink and generate your click-through URL.
+1. Create an SMS campaign in Movable Ink and generate your click-through URL.
 2. In the Braze dashboard, go to **Campaigns** and set up a new SMS/MMS campaign from the **Create Campaign** dropdown.
 3. In the SMS campaign composer:
     - Set your subscription group.
     - Enter your message.
-    - Add your Moveable Ink link **last**, after all other text in the message body. <br><br>![2]{: style="max-width:50%;"}
+    - Add your Movable Ink link **last**, after all other text in the message body. <br><br>![2]{: style="max-width:50%;"}
 
 {% alert tip %}
 Check out [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/using_liquid/) for a refresher on Liquid personalization.  
