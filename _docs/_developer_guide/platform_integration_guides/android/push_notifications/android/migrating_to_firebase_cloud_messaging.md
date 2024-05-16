@@ -21,7 +21,9 @@ If this is your first time setting up the push integration for Android, see [Sta
 
 Firebase Cloud Messaging (FCM) API has a default rate limit of 600,000 requests per minute. If you reach this limit, Braze will automatically try again in a few minutes. To request an increase, contact [Firebase Support](https://firebase.google.com/support).
 
-## Step 1: Verify your Project ID
+## Migrating to FCM
+
+### Step 1: Verify your Project ID
 
 First, open Google Cloud. On your project's home page, check the number in the **Project ID** field—you’ll compare this to the one in your Firebase project next.
 
@@ -35,7 +37,7 @@ In the **General** tab, verify the **Project ID** matches the one listed in your
 
 ![The Firebase project's "Settings" page with the "Project ID" highlighted.]({% image_buster /assets/img/android/push_integration/migration/verify-project-id/project-id-gfb.png %})
 
-## Step 2: Verify your Sender ID
+### Step 2: Verify your Sender ID
 
 First, open Braze, then select <i class="fa-solid fa-gear"></i>&nbsp;**Settings** > **App Settings**.
 
@@ -53,13 +55,13 @@ Select **Cloud Messaging**. Under **Cloud Messaging API (Legacy)**, verify the *
 
 ![The Firebase project's "Cloud Messaging" page with the "Sender ID" highlighted.]({% image_buster /assets/img/android/push_integration/migration/verify-sender-id/verify-sender-id-firebase.png %})
 
-## Step 3: Enable the Firebase Cloud Messaging API
+### Step 3: Enable the Firebase Cloud Messaging API
 
 In Google Cloud, select the project your Android app is using, then enable the [Firebase Cloud Messaging API](https://console.cloud.google.com/apis/library/fcm.googleapis.com).
 
 ![Enabled Firebase Cloud Messaging API]({% image_buster /assets/img/android/push_integration/create_a_service_account/firebase-cloud-messaging-api-enabled.png %}){: style="max-width:80%;"}
 
-## Step 4: Create a Service Account
+### Step 4: Create a Service Account
 
 Next, create a new service account, so Braze can make authorized API calls when registering FCM tokens. In Google Cloud, go to **Service Accounts**, then choose your project. On the **Service Accounts** page, select **Create Service Account**.
 
@@ -77,7 +79,7 @@ Be sure to select _Firebase Cloud Messaging **API** Admin_, not _Firebase Cloud 
 
 ![The form for "Grant this service account access to project" with "Firebase Cloud Messaging API Admin" selected as the role.]({% image_buster /assets/img/android/push_integration/create_a_service_account/add-fcm-api-admin.png %})
 
-## Step 5: Verify permissions (optional)
+### Step 5: Verify permissions (optional)
 
 To verify which permissions your service account has, open Google Cloud, then go to your project and select **IAM**. Under **View By Principals**, select **Excess Permissions**.
 
@@ -87,7 +89,7 @@ Now you can review the current permissions assigned to your selected role.
 
 ![The list of current permissions assigned to the selected role.]({% image_buster /assets/img/android/push_integration/create_a_service_account/review-permissions.png %}){: style="max-width:75%;"}
 
-## Step 6: Generate JSON credentials
+### Step 6: Generate JSON credentials
 
 Next, generate JSON credentials for your FCM service account. On Google Cloud IAM & Admin, go to **Service Accounts**, then choose your project. Locate the FCM service account [you created earlier](#step-4-create-a-service-account), then select <i class="fa-solid fa-ellipsis-vertical"></i>&nbsp;**Actions** > **Manage Keys**.
 
@@ -109,7 +111,7 @@ Choose **JSON**, then select **Create**.
 Private keys could pose a security risk if compromised. Store your JSON credentials in a secure location for now&#8212;you'll delete your key after you upload it to Braze.
 {% endalert %}
 
-## Step 7: Upload your JSON credentials to Braze
+### Step 7: Upload your JSON credentials to Braze
 
 In Braze, select <i class="fa-solid fa-gear"></i>&nbsp;**Settings** > **App Settings**.
 
@@ -117,56 +119,48 @@ In Braze, select <i class="fa-solid fa-gear"></i>&nbsp;**Settings** > **App Sett
 
 Under **Push Notification Settings**, select **Upload JSON File**, then choose the file [you generated earlier](#step-6-generate-json-credentials). When you're finished, select **Save**.
 
-## Step 8: Test your Push integration
-
-Once your new credential is uploaded, try sending a test push notification to confirm your integration is set up correctly.
-
-If your integration is not working, you can use the Revert Credentials button to delete the new JSON credentials and fall back to the deprecated Sender ID and Server Key credentials.
-
-{% alert tip %}
-To make sure your push messages send, confirm the following:
-
-- Your credentials exist in the correct Google Cloud Platform project ID (correct sender ID).
-- Your credentials have the correct permission scope.
-- You uploaded the correct credentials to the correct Braze workspace (correct sender ID).
-{% endalert %}
-
 ![The form for "Push Notification Settings" with the private key updated in the "Firebase Cloud Messaging Server Key" field.]({% image_buster /assets/img/android/push_integration/migration/upload_json_credentials/upload-json-file.png %})
 
 {% alert warning %}
 Private keys could pose a security risk if compromised. Now that your key is uploaded to Braze, delete the file [you generated previously](#step-6-generate-json-credentials) from your computer.
 {% endalert %}
 
-## Frequently Asked Questions {#faq}
+### Step 8: Test your new credentials (optional)
 
-#### How do I know if my new credentials are working?
+As soon as you upload your new credentials to Braze, you can start sending push notifications using your new credentials. To test your new credentials, send a real or test push notification to your app using FCM or Braze. If the push notification goes through, everything is working. If it doesn't:
 
-If you are able to send Android push to this app (via Test Send, or an actual campaign/canvas send) then your credentials are working.
+- [Verify your sender ID](#step-2-verify-your-sender-id)
+- [Verify your permissions](#step-5-verify-permissions-optional)
+- Review push notification errors in your [message activity log](https://www.braze.com/docs/user_guide/administrative/app_settings/message_activity_log_tab/)
 
-#### Android Push isn't sending for my app after uploading these new credentials
+If you're still having trouble, see [Reverting your credentials](#reverting-your-credentials).
 
-Clicking the "Revert Credentials" button will delete your newly uploaded credentials and revert to your legacy credentials. This button will only be visible if you had legacy credentials prior to uploading the new service account credentials.
+## Reverting your credentials
 
-#### Are any App or SDK updates required?
+You can delete your new credentials and restore your legacy credentials at any time. Once restored, you can send push notifications using your legacy credentials right away.
 
-No. The only required change is to upload the new form of credentials to the App Settings page.
+In Braze, select <i class="fa-solid fa-gear"></i>&nbsp;**Settings** > **App Settings**. Under **Push Notification Settings**, select **Revert Credentials**.
 
-#### Why am I seeing a warning banner even after I uploaded new credentials?
+{% alert warning %}
+If you delete your new credentials, you cannot restore them later. Instead, you'll need to [generate](#step-6-generate-json-credentials) and [upload](#step-7-upload-your-json-credentials-to-braze) new credentials to Braze.
+{% endalert %}
 
-A warning banner will be shown if you have at least 1 app that still needs migrating. Please check your other android apps, or click the link in the banner to view your list of android apps.
+![The form for "Push Notification Settings" with the "Revert Credentials" button highlighted.]({% image_buster /assets/img/android/push_integration/revert-credentials.png %})
 
-#### How long will it take for new credentials to start to be used once uploaded?
+## Frequently Asked Questions (FAQ) {#faq}
 
-Immediately. New credentials will be used immediatley once they are uploaded without delay.
+#### Before migrating, do I need to update my app or SDK?
 
-#### Do I need to delete my old legacy credentials from App Settings?
+No. You only need to upload your new credentials to Braze.
 
-No, your old credentials can remain there, and will be used as a fallback should you delete your new credentials using the "Revert Credentials" button.
+#### Do I need to delete my legacy credentials first?
 
-#### Which credentials are used if I have both Legacy and new Service Account credentials?
+No. If you ever need to delete your new credentials, [your legacy credentials can be used instead](#reverting-your-credentials).
 
-Once new Service Account credentials are uploaded, those will be used immediately. Legacy credentials will only be used if you delete the new credentials using the "Revert Credentials" button.
+#### After migrating, why is there still a warning message in Braze?
 
-#### How can I see more details on error messages or failures?
+You'll continue to see this warning message if there's at least one Android app in your workspace you still need migrate. Be sure to migrate all of your Android apps over to Google's fully-supported FCM API.
 
-Errors will be logged in the [Message Activity Log](https://www.braze.com/docs/user_guide/administrative/app_settings/message_activity_log_tab/) with details on any push failure.
+#### After migrating, how long until I send push notifications again?
+
+After migrating, you can start sending push notifications using your new credentials right away.
