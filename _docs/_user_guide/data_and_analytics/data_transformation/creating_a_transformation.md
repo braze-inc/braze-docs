@@ -49,7 +49,7 @@ Braze Data Transformation may not yet support external platforms that require sp
 
 ## Step 4: Write transformation code
 
-If you have little to no experience with JavaScript code or prefer more detailed instructions, follow the **Beginner - POST: Track users** or **Beginner - PUT: Update catalog item** tab for writing your transformation code.
+If you have little to no experience with JavaScript code or prefer more detailed instructions, follow the **Beginner - POST: Track users** or **Beginner - PUT: Update multiple catalog items** tab for writing your transformation code.
 
 If you're a developer or have significant experience with JavaScript code, follow the **Advanced - POST: Track users** tab for high-level instructions on writing your transformation code.
 
@@ -120,7 +120,7 @@ Here, you will write transformation code to define how you’d like to map vario
 Your webhook integration is now complete!
 
 {% endtab %}
-{% tab Beginner - PUT: Update catalog item %}
+{% tab Beginner - PUT: Update multiple catalog items %}
 
 Here, you will write transformation code to define how you’d like to map various webhook values to Braze catalog item updates.
 
@@ -130,19 +130,42 @@ Here, you will write transformation code to define how you’d like to map vario
     // Feel free to delete this entirely to start from scratch, or to edit specific components
 
 
-    // First, this code defines a variable, "brazecall", to build a PUT /catalogs/{catlalog_name}/items/{item_id} request
+    // First, this code defines a variable, "brazecall", to build a PUT /catalogs/{catalog_name}/items request
     // Everything from the incoming webhook is accessible via the special variable "payload"
     // As such, you can template in desired values in your request with JS dot notation, such as payload.x.y.z
 
 
     let brazecall = {
-    // For Braze Data Transformations to update Catalog items, the special variables "catalog_name" and "item_id" are required
-    // These variables are used to specify the catalog name and item ID which would otherwise go in the request URL
+    // For Braze Data Transformation to update Catalog items, the special variable "catalog_name" is required
+    // This variable is used to specify the catalog name which would otherwise go in the request URL
     "catalog_name": "catalog_name",
-    "item_id": payload.item_id,
-    // After the special variables, construct the Catalogs update request as usual below
+    // After defining "catalog name", construct the Update Multiple Catalog Items request as usual below
+    // Documentation for the destination endpoint: https://www.braze.com/docs/api/endpoints/catalogs/catalog_items/asynchronous/put_update_catalog_items/
     "items": [
       {
+        "id": payload.item_id_1,
+        "catalog_column1": "string",
+        "catalog_column2": 1,
+        "catalog_column3": true,
+        "catalog_column4": "2021-09-03T09:03:19.967+00:00",
+        "catalog_column5": {
+          "Latitude": 33.6112,
+          "Longitude": -117.8711
+        }
+      },
+      {
+        "id": payload.item_id_2,
+        "catalog_column1": "string",
+        "catalog_column2": 1,
+        "catalog_column3": true,
+        "catalog_column4": "2021-09-03T09:03:19.967+00:00",
+        "catalog_column5": {
+          "Latitude": 33.6112,
+          "Longitude": -117.8711
+        }
+      },
+      {
+        "id": payload.item_id_3,
         "catalog_column1": "string",
         "catalog_column2": 1,
         "catalog_column3": true,
@@ -159,9 +182,9 @@ Here, you will write transformation code to define how you’d like to map vario
     return brazecall;
     ```
 
-2. Transformations for `/catalogs` destinations require a `catalog_name` and `item_id` to define the specific catalog and item that you’d like to update. You can hard code these values, or template in the value with a webhook value via a payload line. Use dot notation to access payload object properties.<br><br>
-3. Define how to update the `item_id` (from Step 2 of this section) by modifying the items array. Again, you can hard code these values or template in a webhook value via a payload line. <br><br> If you're looking at the Braze catalog as a table, the `item_id` is a row in your catalog, and item objects (starting with “catalog_column1”) are column values for that row. Note that “catalog_column1” is a placeholder, so your catalog may not have this field. The item objects should only contain fields that exist in the catalog.<br><br>
-4. Click Validate to return a preview of your code’s output and to check if it is an acceptable request for the Update catalog item endpoint.<br><br>
+2. Transformations for `/catalogs` destinations require a `catalog_name` to define the specific catalog that you’d like to update. You can hard code this field, or template the field with a webhook field via a payload line. Use dot notation to access payload object properties.<br><br>
+3. Define which items you’d like to update in the catalog with the `id` field(s) in the items array. You can hard code these fields, or template in a webhook field via a payload line. <br><br> Keep in mind, “catalog_column” is a placeholder value. Be sure item objects only contain fields that exist in the catalog.<br><br>
+4. Click Validate to return a preview of your code’s output and to check if it is an acceptable request for the Update multiple catalog items endpoint.<br><br>
 5. Activate your transformation. For additional help with your code before activating it, contact your Braze account manager.<br><br>
 6. Make sure to check if your source platform has a setting to start sending webhooks. Your transformation code will run for each incoming webhook, and the catalog items will begin updating.
 
