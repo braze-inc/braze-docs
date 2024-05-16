@@ -33,7 +33,7 @@ To allow link preview images for iOS, users must add your brand (the sender) as 
 
 #### Step 1: Create a Contact Card campaign
 
-After users use your Braze [content card]({{site.baseurl}}/user_guide/message_building_by_channel/sms/mms/contact_card/) to save your brand as a contact, they will be able to view **Tap to Load Preview** prompts and Movable Ink links.
+After users save your brand as a contact, either through a Braze [content card]({{site.baseurl}}/user_guide/message_building_by_channel/sms/mms/contact_card/) or another method, they will be able to view **Tap to Load Preview** prompts and Movable Ink links.
 
 ![1]{: style="max-width:30%;"}
 
