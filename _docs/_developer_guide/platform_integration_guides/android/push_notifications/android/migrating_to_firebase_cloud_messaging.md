@@ -137,12 +137,12 @@ If you're still having trouble, see [Reverting your credentials](#reverting-your
 
 ## Reverting your credentials
 
-You can delete your new credentials and restore your legacy credentials at any time. As soon as your credentials are restored, can start sending push notifications using your legacy credentials instead.
+You can delete your new credentials and restore your legacy credentials at any time. As soon as your credentials are restored, you can start sending push notifications using your legacy credentials instead.
 
 In Braze, select <i class="fa-solid fa-gear"></i>&nbsp;**Settings** > **App Settings**. Under **Push Notification Settings**, select **Revert Credentials**.
 
 {% alert warning %}
-If you delete your new credentials, you cannot restore them later. Instead, you'll need to [generate](#step-6-generate-json-credentials) and [upload](#step-7-upload-your-json-credentials-to-braze) new credentials to Braze.
+If you delete your new credentials, you cannot restore them later. You'll need to [generate new credentials](#step-6-generate-json-credentials) and [upload them to Braze](#step-7-upload-your-json-credentials-to-braze) again.
 {% endalert %}
 
 ![The form for "Push Notification Settings" with the "Revert Credentials" button highlighted.]({% image_buster /assets/img/android/push_integration/revert-credentials.png %})
