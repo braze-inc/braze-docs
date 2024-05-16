@@ -167,3 +167,6 @@ No, your old credentials can remain there, and will be used as a fallback should
 
 Once new Service Account credentials are uploaded, those will be used immediately. Legacy credentials will only be used if you delete the new credentials using the "Revert Credentials" button.
 
+#### How can I see more details on error messages or failures?
+
+Errors will be logged in the [Message Activity Log](https://www.braze.com/docs/user_guide/administrative/app_settings/message_activity_log_tab/) with details on any push failure.
