@@ -8,7 +8,7 @@ search_tag: Partner
 
 # Dynamic SMS link preview
 
-> With Moveable Ink’s dynamic SMS link preview, you can leverage the immersiveness of MMS at the cost of SMS. This allows you to use Braze and Moveable Ink to deliver cost-effective, personalized rich messaging experiences.
+> With Moveable Ink’s dynamic SMS link preview, you can leverage the immersiveness of MMS at the same cost of SMS. This allows you to use Braze and Moveable Ink to deliver cost-effective, personalized rich messaging experiences.
 
 ## Prerequisites
 
@@ -16,7 +16,8 @@ search_tag: Partner
 | --- | --- |
 | Moveable Ink account | A Movable Ink account is required to take advantage of this partnership. |
 | Data source | You need to connect a data source to Movable Ink. This can be done through CSV, website import, or API. |
-| MMS sending capabilities | Confirm that you're set up for MMS through Braze. 
+| MMS sending capabilities | Confirm that you're set up for MMS through Braze.
+| [Link shortening]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/link_shortening/) | Confirm that link shortening is turned on. | 
 | Contact Card | Your brand (the sender) must be saved as a contact on the user's phone for link preview to work with iOS. |
 {: .reset-td-br-1 .reset-td-br-2}
 
@@ -50,7 +51,7 @@ Check out [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_conte
 {% endalert %}
 
 {: start="4"}
-4. Confirm that [link shortening]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/link_shortening/) is turned on, and then you’re all set to test and launch your dynamic SMS link preview campaign.
+4. You’re all set to test and launch your dynamic SMS link preview campaign.
 
 ![3]{: style="max-width:70%;"}
 
