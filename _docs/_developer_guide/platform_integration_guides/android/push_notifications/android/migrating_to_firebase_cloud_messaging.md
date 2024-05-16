@@ -136,3 +136,34 @@ To make sure your push messages send, confirm the following:
 {% alert warning %}
 Private keys could pose a security risk if compromised. Now that your key is uploaded to Braze, delete the file [you generated previously](#step-6-generate-json-credentials) from your computer.
 {% endalert %}
+
+## Frequently Asked Questions {#faq}
+
+#### How do I know if my new credentials are working?
+
+If you are able to send Android push to this app (via Test Send, or an actual campaign/canvas send) then your credentials are working.
+
+#### Android Push isn't sending for my app after uploading these new credentials
+
+Clicking the "Revert Credentials" button will delete your newly uploaded credentials and revert to your legacy credentials. This button will only be visible if you had legacy credentials prior to uploading the new service account credentials.
+
+#### Are any App or SDK updates required?
+
+No. The only required change is to upload the new form of credentials to the App Settings page.
+
+#### Why am I seeing a warning banner even after I uploaded new credentials?
+
+A warning banner will be shown if you have at least 1 app that still needs migrating. Please check your other android apps, or click the link in the banner to view your list of android apps.
+
+#### How long will it take for new credentials to start to be used once uploaded?
+
+Immediately. New credentials will be used immediatley once they are uploaded without delay.
+
+#### Do I need to delete my old legacy credentials from App Settings?
+
+No, your old credentials can remain there, and will be used as a fallback should you delete your new credentials using the "Revert Credentials" button.
+
+#### Which credentials are used if I have both Legacy and new Service Account credentials?
+
+Once new Service Account credentials are uploaded, those will be used immediately. Legacy credentials will only be used if you delete the new credentials using the "Revert Credentials" button.
+
