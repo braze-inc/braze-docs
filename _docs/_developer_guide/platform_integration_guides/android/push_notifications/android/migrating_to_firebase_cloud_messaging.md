@@ -127,7 +127,7 @@ Private keys could pose a security risk if compromised. Now that your key is upl
 
 ### Step 8: Test your new credentials (optional)
 
-As soon as you upload your new credentials to Braze, you can start sending push notifications using your new credentials. To test your new credentials, send a real or test push notification to your app using FCM or Braze. If the push notification goes through, everything is working. If it doesn't:
+As soon as you upload your credentials to Braze, you can start sending push notifications using your new credentials. To test your new credentials, send a real or test push notification to your app using FCM or Braze. If the push notification goes through, everything is working. If it doesn't:
 
 - [Verify your sender ID](#step-2-verify-your-sender-id)
 - [Verify your permissions](#step-5-verify-permissions-optional)
@@ -137,7 +137,7 @@ If you're still having trouble, see [Reverting your credentials](#reverting-your
 
 ## Reverting your credentials
 
-You can delete your new credentials and restore your legacy credentials at any time. Once restored, you can send push notifications using your legacy credentials right away.
+You can delete your new credentials and restore your legacy credentials at any time. As soon as your credentials are restored, can start sending push notifications using your legacy credentials instead.
 
 In Braze, select <i class="fa-solid fa-gear"></i>&nbsp;**Settings** > **App Settings**. Under **Push Notification Settings**, select **Revert Credentials**.
 
