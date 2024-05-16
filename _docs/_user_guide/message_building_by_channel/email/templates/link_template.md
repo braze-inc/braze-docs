@@ -10,6 +10,8 @@ channel:
 
 ---
 
+# Link templates
+
 > Link templates allow you to append parameters or prepend URLs to all links in an email message.
 
 Link templates are most often used in these following use cases:
