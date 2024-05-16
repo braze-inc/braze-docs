@@ -28,7 +28,7 @@ Follow the respective steps below to send dynamic SMS links for iOS and Android 
 ### iOS
 
 {% alert important %}
-To allow link preview images for iOS, you must add your brand (the sender) as a contact.
+To allow link preview images for iOS, users must add your brand (the sender) as a contact.
 {% endalert %}
 
 #### Step 1: Create a Contact Card campaign
