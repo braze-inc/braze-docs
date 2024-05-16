@@ -18,7 +18,7 @@ search_tag: Partner
 | Data source | You need to connect a data source to Movable Ink. This can be done through CSV, website import, or API. |
 | MMS sending capabilities | Confirm that you're set up for MMS through Braze.
 | [Link shortening]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/link_shortening/) | Confirm that link shortening is turned on. | 
-| Contact Card | Your brand (the sender) must be saved as a contact on the user's phone for link preview to work with iOS. |
+| Contact Card | Your brand (the sender) must be saved as a contact on the user's phone for link preview to work with iOS. This can be done with a contact card or another method. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## Integration
@@ -61,16 +61,16 @@ After users load the link preview, a personalized image will render with the abi
 
 ### Android (Google & Samsung devices)
 
-Andriod users aren't required to save your brand as a contact to receive dynamic SMS link previews. However, doing so allows users to view the preview link image without manually loading the image.
+Andriod users aren't required to save your brand as a contact to receive dynamic SMS link previews. However, users who have done so and have turned on automatic previews for their device can automatically view images for preview links.
 
 ![5]{: style="max-width:30%;"}
 
-Users who haven't saved your brand as a contact will have to select **Tap to load preview** to load the image. <br>![6]{: style="max-width:30%;"}
+Users who haven't saved your brand as a contact and have turned on automatic previews will have to select **Tap to load preview** to load the image. <br>![6]{: style="max-width:30%;"}
 
 ## Considerations
 
 - Only include one preview link in your message. Content will not be generated with multiple links in your SMS body. 
-- Don't include any characters after your preview link to avoid breaking the experience.
+- Don't include any characters after your preview link or the experience might break.
 
 
 [1]: {% image_buster /assets/img/movable_ink/ios_link.png %}
