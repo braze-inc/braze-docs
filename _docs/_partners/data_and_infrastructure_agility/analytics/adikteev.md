@@ -54,21 +54,23 @@ In Braze, navigate to **Settings** > **APIs and Identifiers**. Select **Create N
 
 To complete the integration, you must provide your REST API key and REST endpoint URL to your Adikteev account manager. Adikteev will establish the connection and contact you after the setup is complete to validate the integration.
 
-## Batching & rate limits
+## Batching and rate limits
 
-Each call to the user.track endpoint can contain 75 attribute updates. Braze rate limits this service to 50,000 requests per minute per customer. In case the rate limit is hit, we must wait a little bit and then retry the API calls that have failed.
+The `user.track` endpoint is used to update details about your users. See the [`user.track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) documentation for full details about the endpoint's rate limits, batching requests, and request details.
 
-Diffs: API calls should only be done for users where the churn segment has changed, in order to reduce the number of API calls overall.
+{% alert tip %}
+Remember, API calls should only be done to update data that has changed in order to reduce the number of API calls overall. In other words, only update users where the churn segment has changed.
+{% endalert %}
 
 ## User and device identifiers
 
-User profiles in Braze can be associated with any type of user or device identifiers, the list of options available depends on how each customer has integrated data collection with Braze. In our use case, we will need to find a common identifier between the customer’s MMP and their user profiles in Braze in order to send the churn segment information properly.
+User profiles in Braze can be associated with any type of user or device identifiers; the list of options available depends on how you have integrated data collection with Braze. For Adikteev, you will need to find a common identifier between the your MMP and your user profiles in Braze in order to send the churn segment information properly.
 
-## Data retention & deletion
+## Data retention and deletion
 
-If no update is made, the attribute and its value are kept forever in Braze user profiles.
+If no update is made, the attribute and its value are kept indefinitely in Braze user profiles.
 
-To remove a profile attribute, set it to `null`
+To remove a profile attribute, set it to `null`.
 
 ## Request Payloads
 
