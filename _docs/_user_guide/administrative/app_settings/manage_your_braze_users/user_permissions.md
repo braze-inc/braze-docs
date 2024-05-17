@@ -49,7 +49,7 @@ You can manage user permissions by group or on an individual basis when editing 
 ![Manage User Permissions][89]
 
 {% alert important %}
-Beginning in early April 2024, users will need the “Access Campaigns, Canvases, Cards, Segments, Media Library” permission to create or update promotion code lists.
+As of April 2024, to create or update promotion code lists, Braze users need the “Access Campaigns, Canvases, Cards, Segments, Media Library” permission.
 {% endalert %}
 
 |Permission Name|Definition/Parameters|
