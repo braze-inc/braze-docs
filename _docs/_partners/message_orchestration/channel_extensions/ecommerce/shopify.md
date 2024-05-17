@@ -29,9 +29,6 @@ guide_featured_list:
 - name: Shopify Product Syncs
   link: /docs/shopify_catalogs/
   image: /assets/img/braze_icons/list.svg
-- name: Back-In-Stock Notifications
-  link: /docs/back_in_stock/
-  image: /assets/img/braze_icons/shopping-cart-03.svg
 - name: Use Cases
   link: /docs/shopify_use_cases/
   image: /assets/img/braze_icons/users-01.svg

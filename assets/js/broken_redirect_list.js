@@ -1129,4 +1129,6 @@ validurls['/docs/idle_campaigns/'] = '/docs/idle_campaigns_canvases/';
 
 validurls['/docs/one-click_unsubscribe/'] = '/docs/user_guide/administrative/app_settings/email_settings/';
 
+validurls['/docs/back_in_stock/'] = '/docs/user_guide/personalization_and_dynamic_content/catalogs/back_in_stock_notifications/';
+
 // validurls['OLD'] = 'NEW';

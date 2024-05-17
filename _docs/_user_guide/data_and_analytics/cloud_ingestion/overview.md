@@ -526,6 +526,26 @@ To sync purchase events, event name, `product_id`, `currency`, and `price` are r
 ```
 
 {% endtab %}
+{% tab Subscription Groups %}
+```json
+{
+    "subscription_groups" : [
+        {
+            "subscription_group_id": "subscription_group_identifier_1",
+            "subscription_state": "unsubscribed"
+        },
+        {
+            "subscription_group_id": "subscription_group_identifier_2",
+            "subscription_state": "subscribed"
+        },
+        {
+            "subscription_group_id": "subscription_group_identifier_3",
+            "subscription_state": "subscribed"
+        }
+      ]
+}
+```
+{% endtab %}
 {% endtabs %}
 
 ### Avoiding timeouts for data warehouse queries

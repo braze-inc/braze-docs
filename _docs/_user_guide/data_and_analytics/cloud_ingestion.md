@@ -30,6 +30,9 @@ guide_featured_list:
   - name: Delete Users with CDI
     link: /docs/user_guide/data_and_analytics/cloud_ingestion/delete_users/
     image: /assets/img/braze_icons/trash-01.svg
+  - name: Frequently Asked Questions
+    link: /docs/user_guide/data_and_analytics/cloud_ingestion/faqs/
+    image: /assets/img/braze_icons/annotation-question.svg
 ---
 
 [1]: {% image_buster /assets/img/cloud_ingestion/ingestion_1.png %}
