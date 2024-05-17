@@ -14,8 +14,8 @@ Here are the common types of emails you might receive regarding errors in CDI sy
 - **Error in CDI Sync [NAME]**  
 This type of email usually includes an error message that CDI encountered during the sync process. Often, it is due to a setup error. Some common issues are as follows:
   - CDI cannot access the data warehouse/table with the credentials set up in the integration. This could mean the credentials in CDI are incorrect, or they are misconfigured on the data warehouse. Check out [Data Warehouse Integrations]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/integrations/) for more details.
-  - SQL error due to the database/table being renamed or removed.
-  - Catalog not found, meaning the catalog setup in the integration does not exist in Braze catalog.
+  - SQL error due to the table not found. Update the integration with a correct database config or create the database / table on the data warehouse.
+  - Catalog not found, meaning the catalog setup in the integration does not exist in Braze catalog. A catalog can be removed after the integration was setup. To resolve the issue, either update the integration to use a different catalog or create a new catalog that match the catalog name in the integration.
 
 
 - **Row Errors in your CDI Sync**  
