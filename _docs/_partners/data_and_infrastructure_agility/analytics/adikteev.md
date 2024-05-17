@@ -56,7 +56,7 @@ To complete the integration, you must provide your REST API key and REST endpoin
 
 ## Batching and rate limits
 
-The `user.track` endpoint is used to update details about your users. See the [`user.track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) documentation for full details about the endpoint's rate limits, batching requests, and request details.
+The `user.track` endpoint is used to update details about your users. See the [API documentation]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) for full details about the endpoint's rate limits, batching requests, and request details.
 
 {% alert tip %}
 Remember, API calls should only be done to update data that has changed in order to reduce the number of API calls overall. In other words, only update users where the churn segment has changed.
