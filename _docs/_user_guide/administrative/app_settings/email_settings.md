@@ -107,13 +107,63 @@ When a recipient clicks **Unsubscribe**, the mailbox provider sends the unsubscr
 
 Enabling list-unsubscribe is a deliverability best practice and a requirement at some of the premier mailbox providers. It encourages end users to safely remove themselves from unwanted messages versus hitting the spam button in an email client, the latter of which is detrimental to sending reputation and email deliverability.
 
-### How it works
+### Email unsubscribe header in workspaces
 
-![]({% image_buster /assets/img/email_settings/target_audiences_example.png %}){: style="float:right;max-width:60%;margin-left:15px;"}
+When the Email Unsubscribe Header feature is turned on, this setting is applied to the entire workspace, not the company-level. It’s added to campaigns and Canvases that are set up to send to users who are subscribed or opted-in, or opted-in users only in the Target Audiences step of the campaign and Canvas builders.
 
-When turned on, this feature is applied to the entire workspace, not the company-level. It's added to campaigns and Canvases that are set up to send to users who are subscribed or opted-in, or opted-in users only in the **Target Audiences** step of the campaign and Canvas builders.
+Braze doesn’t add the header for what is considered transactional, so if a message is set to send to all users including unsubscribed users, the list-unsubscribe header will not be attached to the message, unless specified otherwise in the message-level one-click list-unsubscribe setting. Additionally, the header is not added for messages delivered via test send because the list-unsubscribe header is only generated and added for targeting user profiles in Braze.
 
-Braze doesn't add the header for what is considered transactional, so if a message is set to send to all users including unsubscribed users, the list-unsubscribe header will not be attached to the message. Additionally, the header is not added for messages delivered via test send because the list-unsubscribe header is only generated and added for targeting user profiles in Braze.
+### Message-level one-click list-unsubscribe
+
+The message-level one-click list-unsubscribe setting will override the email unsubscribe header feature set for workspaces. Apply the one-click unsubscribe behavior per campaign or Canvas step for the following uses:
+
+- Add a Braze one-click unsubscribe for a specific subscription group to support multiple brands/lists within one workspace
+- Toggle between the default Braze unsubscribe or custom URL
+- Add your custom one-click unsubscribe URL
+- Omit one-click unsubscribe on this message
+
+In your email editor, go to **Sending Settings** > **Sending Info**. Select from the following options:
+
+- **Use workspace default**: Uses the **Email Unsubscribe Header** settings set in **Email Preferences**. Any changes made to this setting will apply to all messages.
+- **Unsubscribe globally from all emails**: Uses the Braze default one-click unsubscribe header. Users who click the unsubscribe button will have their global email subscription state set to "Unsubscribed".
+- **Unsubscribe from specific subscription group**: Uses the specified subscription group. Users who click the unsubscribe button will be unsubscribed from the selected subscription group. 
+    - When selecting a subscription group, add the Subscription Group filter in **Target Audience** to  only target users who are subscribed to this specific group. This is important that the subscription group selected for one-click unsubscribe must match the subscription group you’re targeting. If there is a mismatch, then you may risk 
+- **Exclude unsubscribe**
+- **Custom:** Adds your custom one-click unsubscribe URL for you to process unsubscribes directly.
+
+Adjusting this setting will override the default behavior for one-click list unsubscribe in this email.
+
+![]({% image_buster /assets/img/email_settings/one_click_list_unsubscribe_message_level.png %}){: style="max-width:70%;"}
+
+{% alert important %}
+Excluding one-click unsubscribe or any unsubscribe mechanism should only be done for transactional messaging, such as password resets, receipts, and confirmation emails.
+{% endalert %}
+
+### Frequently asked questions
+
+{% details If I add the email headers for one-click manually and I have email unsubscribe header turned on, what is the expected behavior? %}
+The email headers added for one-click list-unsubscribe will be applied to all future sends of this campaign.
+{% enddetails %}
+
+{% details Why do subscription groups have to match across message variants in order to launch? %}
+For a campaign with A/B testing, Braze will randomly send a user one of the variants. If you have two different subscription groups set on the same campaign (Variant A is set to Subscription Group A, and Variant B is set to Subscription Group B), we cannot guarantee that users who are only subscribed to Subscription Group B will get Variant B. There can be a scenario where users are unsubscribing from a subscription group they're already opted out of.
+{% enddetails %}
+
+{% details The email unsubscribe header setting is turned off in Email Preferences, but in my campaign's sending info, the one-click list-unsubscribe setting is set to "Use workspace default". Is this a bug? %}
+No. If the workspace setting is turned off and the message setting is set to **Use workspace default**, then Braze will follow what's configured in **Email Preferences**. This means, we will not add the one-click unsubscribe header for the campaign.
+{% enddetails %}
+
+{% details What happens if a subscription group is archived? Will this break the one-click unsubscribe on emails sent? %}
+If a subscription group referenced in **Sending Info** for one-click is archived, Braze will still process unsubscribes from one-click. The subscription group will no longer be displayed on the dashboard (segment filter, user profile, and similar areas).
+{% enddetails %}
+
+{% details Is the one-click unsubscribe setting be available for email templates? %}
+No, we currently do not have plans to add this for email templates as these templates aren't assigned to a sending domain. If you're interested in this feature for email templates, submit [product feedback]({{site.baseurl}}/user_guide/administrative/access_braze/portal/).
+{% enddetails %}
+
+{% details Does this feature check that the one-click unsubscribe URL added to the custom option is valid? %}
+No, we don't check or validate any links in the Braze dashboard. Be sure to properly test your URL before launch.
+{% enddetails %}
 
 ### Default list-unsubscribe header
 
@@ -146,9 +196,8 @@ If you're sending emails using your own custom unsubscribe functionality, you mu
 
 * The URL must be able to handle unsubscribe POST requests.
 * The URL must start with `https://`.
-* The URL must be wrapped between `<` and `>`
-* The URL must not return an HTTPS redirect. One-click unsubscribe links that go to a landing or other type of web page don't comply with RFC 8058.
-* The message must have a valid DKIM signature.
+* The URL must not return an HTTPS redirect or a body. One-click unsubscribe links that go to a landing or other type of web page don’t comply with RFC 8058.
+* POST requests must not set cookies.
 
 Select **Custom list-unsubscribe header** to add your own configured one-click unsubscribe endpoint, and an optional "mailto:". Braze requires an input for URL to support a custom list-unsubscribe header because the one-click unsubscribe HTTP is a requirement from Yahoo and Gmail for bulk senders.
 
@@ -176,18 +225,6 @@ Displaying the header is ultimately determined by the mailbox provider. To check
 
 If the header is in the raw version of the email but is not displayed, the mailbox provider has determined to not show the unsubscribe option, meaning we don't have further insight as to why the mailbox provider isn't displaying the header. Seeing the list-unsubscribe header is ultimately reputation-based. In most cases, the better your sender reputation with the inbox, the less likely the list-unsubscribe header will appear.
 
-#### Add one-click unsubscribe to email headers
-
-If you have multiple custom unsubscribe flows for managing many brands or lists in a single workspace, you can manually add a custom one-click unsubscribe header to your email headers.
-
-1. Go to **Sending Settings** in your email campaign.
-2. Select **Advanced**.
-3. Click **+ Add New Header** and add the following:
-* For **List-Unsubscribe-Post**, enter `List-Unsubscribe=One-Click`.
-* For **List-Unsubscribe**, enter your one-click unsubscribe link.
-
-![]({% image_buster /assets/img/email_settings/one-click_unsubscribe_to_email_header.png %})
-
 #### Frequently asked questions
 
 {% details Can the one-click unsubscribe URL (via list-unsubscribe header) link to a preference center? %}
@@ -206,10 +243,9 @@ Gmail and Yahoo ultimately decide whether or not to display the list-unsubscribe
 Yes, Liquid and conditional logic are supported to allow for dynamic one-click unsubscribe URLs for the header.
 {% enddetails %}
 
-#### Tips
-
-* If the URL isn’t wrapped between `<` and `>` and doesn't start with `https://`, you’ll receive the following message: “Failed to save settings. Please fix any errors before saving.”
-* If you're adding conditional logic, avoid having output values that add whitespaces to your URL as Braze does not remove these whitespaces.
+{% alert tip %}
+If you're adding conditional logic, avoid having output values that add whitespaces to your URL as Braze does not remove these whitespaces.
+{% endalert %}
 
 ## Append email subject lines
 
