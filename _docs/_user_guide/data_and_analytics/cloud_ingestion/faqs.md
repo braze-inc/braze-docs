@@ -18,7 +18,7 @@ This type of email usually includes an error message that CDI encountered during
   - Catalog not found. The catalog set up in the integration does not exist in the Braze catalog. A catalog can be removed after the integration was set up. To resolve the issue, either update the integration to use a different catalog or create a new catalog that matches the catalog name in the integration.
 
 - **Row Errors in your CDI Sync**  
-This indicates that some data cannot be processed in the sync. To find out what is causing the errors, navigate to the CDI page in Braze. Open the Sync Log tab to check the error details for the sync job, which should show you what kind of errors are there in the job run.
+This indicates that some data cannot be processed in the sync. To find out what is causing the errors, navigate to the CDI page in Braze. Open the **Sync Log** tab to check the error details for the sync job.
 
 ### How can I update my email alert preferences for CDI integrations?
 Each integration has its own notification preference. In the CDI UI, click on the integration name you want to update. Scroll to the "Notification Preferences" section, and you can update how you want to receive alerts regarding the selected integration.
