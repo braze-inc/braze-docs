@@ -10,7 +10,7 @@ page_order: 6
 > Learn how to create a Jekyll collection, so you can add a new primary section on Braze Docs. For more information, see [Jekyll Collections](https://jekyllrb.com/docs/collections/).
 
 {% alert important %}
-It's unlikely you'll need to create a new Jekyll collection for your content. If you're unsure where to store your content, [create a GitHub issue](https://github.com/braze-inc/braze-docs/issues/new?assignees=&labels=issue&projects=&template=report_an_issue.md&title=) instead.
+It's unlikely you'll need to create a new Jekyll collection for your content. If you're unsure where you should store your content, [create a GitHub issue](https://github.com/braze-inc/braze-docs/issues/new?assignees=&labels=issue&projects=&template=report_an_issue.md&title=).
 {% endalert %}
 
 {% multi_lang_include contributing/prerequisites.md %}

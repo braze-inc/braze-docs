@@ -8,7 +8,7 @@ noindex: true
 
 # Your first contribution
 
-> If you're new to docs-as-code or Braze Docs, start with this step-by-step tutorial. If you're an experienced contributor, see [Content Management]({{site.baseurl}}/contributing/content_management/) instead.
+> If you're new to docs-as-code or Braze Docs, start with this step-by-step tutorial. If you're an experienced contributor, see [About content management]({{site.baseurl}}/contributing/content_management/) instead.
 
 When you're finished with this tutorial, you'll be able to:
 
