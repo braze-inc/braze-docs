@@ -33,7 +33,7 @@ Admins can also create custom attributes and mark them as PII from this page. Th
 
 ### Adding description
 
-You can add a description to a custom attribute after it's created. Edit the custom attribute and input whatever you like, such as a note for your team.
+You can add a description to a custom attribute after it's created if you have the `Manage Events, Attributes, Purchases` [user permission]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/). Edit the custom attribute and input whatever you like, such as a note for your team.
 
 ### Removing custom attributes
 

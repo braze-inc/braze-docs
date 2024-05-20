@@ -42,7 +42,7 @@ Custom events can be blocklisted individually via the actions menu, or up to 10 
 
 #### Adding descriptions
 
-You can add a description to a custom event after it's created. Select **Edit description** for the custom event and input whatever you like, such as a note for your team.
+You can add a description to a custom event after it's created if you have the `Manage Events, Attributes, Purchases` [user permission]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/). Select **Edit description** for the custom event and input whatever you like, such as a note for your team.
 
 #### Viewing usage reports
 
