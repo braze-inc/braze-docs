@@ -10,7 +10,7 @@ tool: Canvas
 
 # Exit criteria
 
-> In the **Target Audience** step of the Canvas Flow builder, you can set up exit criteria to identify which users you want to exit your Canvas. 
+> In the **Target Audience** step of the Canvas builder, you can set up exit criteria to identify which users you want to exit your Canvas. 
 
 To add exit criteria, click the dropdown to select your exception event, then click **Add Trigger**. 
 
@@ -23,7 +23,7 @@ To target users who haven't made any purchases yet, click the dropdown to select
 If the first step in a Canvas is a Delay step with a five-day delay, then the exit criteria will apply at the end of this step. So, if a user meets the exit criteria, they will exit at the end of the five days.
 
 {% alert note %}
-Array attributes aren't currently supported as exit criteria.
+Array attributes aren’t currently supported as exit criteria on exception events.
 {% endalert %}
 
 Additional exception events include:
