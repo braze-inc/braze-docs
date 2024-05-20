@@ -149,6 +149,10 @@ The message-level one-click list-unsubscribe setting will override the email uns
 - Add your custom one-click unsubscribe URL
 - Omit one-click unsubscribe on this message
 
+{% alert note %}
+The message-level one-click list-unsubscribe setting is only available when using the updated HTML editor. If you're using the previous HTML editor, switch to the updated HTML editor to use this feature.
+{% endalert %}
+
 In your email editor, go to **Sending Settings** > **Sending Info**. Select from the following options:
 
 - **Use workspace default**: Uses the **Email Unsubscribe Header** settings set in **Email Preferences**. Any changes made to this setting will apply to all messages.
