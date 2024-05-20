@@ -21,7 +21,7 @@ Braze provides predefined methods for setting the following user attributes with
 
 - First Name
 - Last Name
-- Biographical Strings
+- Language
 - Country
 - Date of Birth
 - Email
