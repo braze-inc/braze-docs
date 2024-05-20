@@ -34,9 +34,21 @@ To create and manage custom events in the dashboard, go to **Data Settings** > *
 If you are using the [older navigation]({{site.baseurl}}/navigation), you can find **Custom Events** under **Manage Settings**.
 {% endalert %}
 
-You can view, manage, create, or blocklist existing custom events on this page.
+You can view, manage, create, or blocklist existing custom events on this page. Select the menu next to a custom event for the following actions:
+
+#### Blocklisting
 
 Custom events can be blocklisted individually via the actions menu, or up to 10 events can be selected and blocklisted in bulk. If you block a custom event, no data will be collected regarding that event, existing data will be unavailable unless reactivated, and blocklisted events will not show up in filters or graphs. In addition, if the event is currently referenced by filters or triggers in other areas of the Braze dashboard, a warning modal will appear explaining that all instances of the filters or triggers that reference it will be removed and archived.
+
+#### Adding descriptions
+
+You can add a description to a custom event after it's created. Select **Edit description** for the custom event and input whatever you like, such as a note for your team.
+
+#### Viewing usage reports
+
+The usage report lists all the Canvases, campaigns, and segments using a specific custom event. This list does not include uses of Liquid. 
+
+You can view up to 10 usage reports at a time by selecting the checkboxes next to the respective custom events and then selecting **View usage report**.
 
 ### Logging custom events
 
