@@ -117,6 +117,137 @@ Within the WhatsApp message template creator, you can include the "marketing opt
 3. Follow the steps in the preceding example but with the trigger text "STOP PROMOTIONS".<br><br>
 4. Update the user's subscription status by using one of the methods described in [Subscription groups]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/user_subscription/#update-subscription-status).
 
+## Set up opt-in and opt-out workflows
+
+You can configure "START" and "STOP" keyword response workflows for WhatsApp with these three methods:
+
+- [User Update step](#user-update-step)
+- [Webhook step](#webhook-step)
+- [Webhook campaign to trigger a second WhatsApp campaign](#webhook-campaign-to-trigger-a-second-whatsapp-campaign)
+
+### User Update step
+
+The [User Update step]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/user_update/) can add the user's phone number to the WhatsApp subscription group when the user sends a keyword to the subscription group's phone number.
+
+The User Update step avoids race conditions because the user won't progress to the next step in the Canvas before their phone number is added to the subscription group. It also has fewer steps to set up than the other methods, so Braze generally recommends this method.
+
+1. Create a Canvas with the action-based step **Send a WhatsApp Inbound Message**. Select **Where the message body** and enter "START" for **Is**.
+
+{% alert important %}
+For "STOP" messages, invert the message step confirming the opt-out and the User Update step. If you don't, the user will be opted out of the subscription group first, and then will not be eligible to receive the confirmation message.
+{% endalert %}
+
+![][13]{: style="max-width:70%;"}
+
+{: start="2"}
+2. In the Canvas, create a **Set Up User Update** step and for **Action** select **Advanced JSON Editor**. <br><br>![][14]<br><br>
+3. Populate the **User Update object** with the following JSON payload, replacing `XXXXXXXXXXX` with your subscription group ID:
+
+{% raw %}
+```json
+{
+    "attributes": [
+        {
+            "subscription_groups": [
+                {
+                    "subscription_group_id": "XXXXXXXXXXX",
+                    "subscription_state": "subscribed"
+                }
+            ]
+        }
+    ]
+}
+```
+{% endraw %}
+
+{: start="4"}
+4. Add a subsequent WhatsApp message step. <br><br>![][15]{: style="max-width:30%;"}
+
+#### Considerations
+
+The update might complete at variable speeds because Braze batches the [User Update step]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/user_update/) requests.
+
+### Webhook step
+
+A webhook step can use the [`users.Track`]() endpoint to add the user's phone number to the WhatsApp subscription group when the user sends a keyword to the subscription group's phone number.
+
+1. Create a campaign or Canvas with an action-based step **Send a WhatsApp Inbound Message**. Select **Where the message body** and enter "START" for **Is**. <br><br>![][13]{: style="max-width:70%;"}
+2. In the campaign or Canvas, create a Webhook Message step, and change the **Request Body** to **Raw Text**. <br><br>![][16]<br><br>
+3. Enter the customer's [endpoint URL]({{site.baseurl}}/api/basics/) in the **Webhook URL**, followed by the endpoint link `users/track`. For example, `https://dashboard-02.braze.eu/users/track`.<br><br>![][17]{: style="max-width:70%;"}<br><br>
+4. In the User Update object, enter the following JSON payload and replacing `XXXXXXXXXXX` with your subscription group ID:
+
+{% raw %}
+```json
+{
+    "attributes": [
+        {
+            "external_id": "{{${user_id}}}",
+            "subscription_groups": [
+                {
+                    "subscription_group_id": "XXXXXXXXXXX",
+                    "subscription_state": "subscribed"
+                }
+            ]
+        }
+    ]
+}
+```
+{% endraw %}
+
+{: start="5"}
+5. Add two request headers:
+  - A key of `Content-Type` with the value "application/json".
+  - A key of `Authorization` that has the `users.Track` permission after "Bearer".<br><br>![][]{: style="max-width:30%;"}
+
+#### Considerations
+
+- The update speed will align with the `users.Track` endpoint.
+- If you add a Message step after the Webhook step, you risk the race condition of a user progressing to the Message step before being added to the WhatsApp subscription group. You could add a Delay step, but this might counter the benefits of using a Webhook rather than a User Update step.
+
+### Webhook campaign to trigger a second WhatsApp campaign
+
+A Webhook campaign can trigger entry into a second campaign after adding the user's phone number to the WhatsApp subscription group when the user sends a keyword to the subscription group's phone number.
+
+{% alert important %}
+You don't need to use this method for STOP messages. The confirmation message will be sent before the user is removed from the subscription group, so you can use one of the other two steps.
+{% endalert %}
+
+1. Create a campaign or Canvas with an action-based step **Send a WhatsApp Inbound Message**. Select **Where the message body** and enter "START" for **Is**.
+
+2. {#step2} In the campaign or Canvas, create a Webhook Message step, and change the **Request Body** to **Raw Text** with an **HTTP Method** of **POST**.
+
+3. Enter the customer's [endpoint URL]({{site.baseurl}}/api/basics/) in the **Webhook URL**, followed by the endpoint link `campaigns/trigger/send`. For example, `https://dashboard-02.braze.eu/campaigns/trigger/send`.
+
+4. In the raw text, enter the following JSON payload and replace `XXXXXXXXXXX` with your subscription group ID. You will need to replace the `campaign_id` after creating your second campaign.
+
+{% raw %}
+```json
+{
+    "campaign_id": "XXXXXXXXXXX",
+    "recipients": [
+        {
+            "external_user_id": "{{${user_id}}}",
+            "attributes": {
+                "subscription_groups": [
+                    {
+                        "subscription_group_id": "XXXXXXXXXXX",
+                        "subscription_state": "subscribed"
+                    }
+                ]
+            }
+        }
+    ]
+}
+```
+{% endraw %}
+
+{: start="5"}
+5. Create a WhatsApp campaign (your second campaign) and set the trigger to API. Make sure you copy this `campaign_id` into the JSON payload of your first campaign.
+
+#### Considerations
+
+- Attribute updates from within the Canvas API Trigger JSON payload is not yet supported, so you can only trigger a WhatsApp campaign for the WhatsApp response message (as in [step #2](#step2)).
+- A WhatsApp template must be approved to send it as a response message. This is because a quick response requires the inbound message trigger to be inside the same campaign or Canvas. If you use a [User Update step](#user-update-step), you can send a quick response message without Meta approval.
 
 
 [1]: {% image_buster /assets/img/whatsapp/whatsapp111.png %} 
@@ -131,3 +262,9 @@ Within the WhatsApp message template creator, you can include the "marketing opt
 [10]: {% image_buster /assets/img/whatsapp/whatsapp120.png %} 
 [11]: {% image_buster /assets/img/whatsapp/whatsapp121.png %} 
 [12]: {% image_buster /assets/img/whatsapp/whatsapp122.png %} 
+[13]: {% image_buster /assets/img/whatsapp/whatsapp_inbound_message.png %} 
+[14]: {% image_buster /assets/img/whatsapp/user_update.png %} 
+[15]: {% image_buster /assets/img/whatsapp/message_step.png %} 
+[16]: {% image_buster /assets/img/whatsapp/webhook_step.png %} 
+[17]: {% image_buster /assets/img/whatsapp/webhook_url.png %} 
+[18]: {% image_buster /assets/img/whatsapp/request_parameters.png %} 
