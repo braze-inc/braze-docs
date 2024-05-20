@@ -15,28 +15,29 @@ guide_featured_title: "Outils et fonctionnalités"
 guide_featured_list:
 - name: Timing Intelligent
   link: /docs/user_guide/intelligence/intelligent_timing/
-  fa_icon: fas fa-clock
+  image: /assets/img/braze_icons/clock.svg
 - name: Canal intelligent
   link: /docs/user_guide/intelligence/intelligent_channel/
-  fa_icon: fas fa-envelope
+  image: /assets/img/braze_icons/mail-01.svg
 - name: Sélection intelligente
   link: /docs/user_guide/intelligence/intelligent_selection/
-  fa_icon: fas fa-chart-bar
+  image: /assets/img/braze_icons/bar-chart-01.svg
 
 guide_menu_title: "Ressources supplémentaires"
 guide_menu_list:
 - name: FAQ Intelligence
   link: /docs/user_guide/intelligence/faqs/
-  fa_icon: fas fa-question
+  image: /assets/img/braze_icons/annotation-question.svg
 - name: Test A/B et multivarié
   link: /docs/user_guide/intelligence/multivariate_testing/
-  fa_icon: fas fa-vial
+  image: /assets/img/braze_icons/beaker-02.svg
 - name: Assistant de rédaction IA
   link: /docs/user_guide/intelligence/ai_copywriting/
-  fa_icon: fas fa-edit
+  image: /assets/img/braze_icons/edit-05.svg
 - name: Générateur d’images IA
   link: /docs/user_guide/engagement_tools/templates_and_media/media_library/#generate-ai
-  fa_icon: fas fa-wand-magic-sparkles
+  image: /assets/img/braze_icons/image-03.svg
+
 
 ---
 

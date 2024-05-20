@@ -98,7 +98,7 @@ The automated email capture script reconciles customer email input with the user
 - The email must be entered through an HTML form submission, not a web service.
 - All email input fields should be used for the customer to enter their own email address, or the wrong email may be assigned to the `device_id`. For example, an email referral for friends and family would be incorrectly treated as the customer’s email and updated on the Braze user profile.
 
-{% alert note %}
+{% alert important %}
 The automated email capture script is currently in early access. Contact your customer success manager if you're interested in participating in this early access. <br><br> If your integration is already installed, it will need to be reinstalled at this point to complete its activation.
 {% endalert %}
 
@@ -182,7 +182,7 @@ The current version of the Braze Web SDK via Shopify ScriptTag integration is v4
 
 **Monthly Active Users (MAU)**
 
-The Web SDK tracks sessions of your Shopify customers and guests. As a result, this will accrue as MAU within your Braze dashboard reporting and towards your MAU allotments. It is important to note that anonymous users will also count toward your MAU. For mobile devices, anonymous users are device-dependent. For web users, anonymous users are browser cache-dependent.
+The Web SDK tracks sessions of your Shopify customers and guests. As a result, this will accrue as MAU within your Braze dashboard reporting and toward your MAU allotments. It is important to note that anonymous users will also count toward your MAU. For mobile devices, anonymous users are device-dependent. For web users, anonymous users are browser cache-dependent.
 
 {% endtab %}
 
@@ -230,7 +230,7 @@ The automated email capture script reconciles customer email input with the user
 - The email must be entered through an HTML form submission, not a web service.
 - All email input fields should be used for the customer to enter their own email address, or the wrong email may be assigned to the `device_id`. For example, an email referral for friends and family would be incorrectly treated as the customer’s email and updated on the Braze user profile.
 
-{% alert note %}
+{% alert important %}
 The automated email capture script is currently in early access. Contact your customer success manager if you're interested in participating in this early access. <br><br> If your integration is already installed, it will need to be reinstalled at this point to complete its activation.
 {% endalert %}
 
@@ -314,7 +314,7 @@ The current version of the Braze Web SDK should be v4.0+.
 
 **Monthly Active Users (MAU)**
 
-The Web SDK tracks the sessions of your Shopify customers and guests. As a result, this will accrue as MAU within your Braze dashboard reporting and towards your MAU allotments. It is important to note that anonymous users will also count toward your MAU. For mobile devices, anonymous users are device-dependent. For web users, anonymous users are browser cache-dependent.
+The Web SDK tracks the sessions of your Shopify customers and guests. As a result, this will accrue as MAU within your Braze dashboard reporting and toward your MAU allotments. It is important to note that anonymous users will also count toward your MAU. For mobile devices, anonymous users are device-dependent. For web users, anonymous users are browser cache-dependent.
 
 {% endtab %}
 {% tab Headless Shopify site %}

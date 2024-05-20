@@ -38,7 +38,7 @@ When importing your customer data, you'll need to specify each customer's unique
 
 When you provide an `external_id` in your import, Braze will update any existing user with the same `external_id` or create a newly identified user with that `external_id` set if one is not found.
 
-<i class="fas fa-file-download"></i> Download: [CSV Import Template][template]
+**Download:** [CSV Import Template][template]
 
 ### Importing with user alias
 
@@ -61,7 +61,7 @@ When you provide both a `user_alias_name` and `user_alias_label` in your import,
 You can't use a CSV import to update an existing user with a `user_alias_name` if they already have an `external_id`. Instead, this will create a new user profile with the associated `user_alias_name`. To associate an alias-only user with an `external_id`, use the [Identify users endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_identify/).
 {% endalert %}
 
-<i class="fas fa-file-download"></i> Download: [CSV Alias Import Template][template_alias]
+**Download:** [CSV Alias Import Template][template_alias]
 
 ### Importing with Braze ID
 
@@ -97,7 +97,7 @@ Each piece of customer data imported via CSV will overwrite the existing value o
 - External IDs uploaded via CSV will not consume data points. If you are uploading a CSV to segment existing Braze users by uploading only external IDs, this can be done without consuming data points. If you were to add additional data like user email or phone number in your import, that would overwrite existing user data, consuming your data points.
   - CSV imports for segmentation purposes (imports made with external_id, braze_id, or user_alias_name as the only field) will not consume data points.
 - Blank values will not overwrite existing values on the user profile, and you do not need to include all existing user attributes in your CSV file.
-- Updating `email_subscribe`, `push_subscribe`, `subscription_group_id`, or `subscription_state` will not count towards data point consumption.
+- Updating `email_subscribe`, `push_subscribe`, `subscription_group_id`, or `subscription_state` will not count toward data point consumption.
 
 {% alert important %}
 Setting `language` or `country` on a user via CSV import or API will prevent Braze from automatically capturing this information via the SDK.

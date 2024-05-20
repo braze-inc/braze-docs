@@ -8,9 +8,9 @@ Click **Create Transformation** to name your transformation, then choose a desti
 
 {% details More on destinations %}
 * **POST: Track users:** Transforms webhooks from a source platform into user profile updates, such as attributes, events, or purchases.
-* **Update catalog item:** Transforms webhooks from a source platform into catalog item updates.
-* **DELETE: Delete catalog item:** Transforms webhooks from a source platform into catalog item deletions.
-* **EDIT: Edit catalog item:** Transforms webhooks from a source platform into catalog item edits.
+* **PUT: Update multiple catalog items:** Transforms webhooks from a source platform into catalog item updates.
+* **DELETE: Delete multiple catalog items:** Transforms webhooks from a source platform into catalog item deletions.
+* **PATCH: Edit multiple catalog items:** Transforms webhooks from a source platform into catalog item edits.
 {% enddetails %}
 
 {% alert note %}

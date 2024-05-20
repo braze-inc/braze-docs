@@ -2,13 +2,13 @@
 nav_title: Redirecting URLs
 article: Redirecting URLs
 description: "Learn how to redirect URLs for pages and page headings on Braze Docs."
-page_order: 6
+page_order: 5
 noindex: true
 ---
 
 # Redirecting URLs
 
-> Learn how to redirect URLs for pages and page headings on Braze Docs.
+> Learn how to redirect URLs for pages and page headings on Braze Docs. For general information about URLs, see [About content management]({{site.baseurl}}/contributing/content_management/#urls).
 
 Page URLs always match the directory structure of the Braze Docs repository. When a Markdown file is renamed or moved to a different directory, the original URL will result in a 404 error if a redirect isn't set up.
 

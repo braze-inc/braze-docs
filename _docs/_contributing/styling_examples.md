@@ -140,33 +140,33 @@ Lorem ipsum dolor ``sit amet, consectetur adipiscing elit``. Sed nec tortor at l
 
 {% tabs %}
 {% tab Styling %}
-Instance    | Dashboard URL   | REST Endpoint
------------ |---------------- | --------------------
-US-01 | `https://dashboard.braze.com` or<br> `https://dashboard-01.braze.com` | `https://rest.iad-01.braze.com`
-US-02 | `https://dashboard-02.braze.com` | `https://rest.iad-02.braze.com`
-US-03 | `https://dashboard-03.braze.com` | `https://rest.iad-03.braze.com`
-US-04 | `https://dashboard-04.braze.com` | `https://rest.iad-04.braze.com`
-US-05 | `https://dashboard-05.braze.com` | `https://rest.iad-05.braze.com`
-US-06 | `https://dashboard-06.braze.com` | `https://rest.iad-06.braze.com`
-US-07 | `https://dashboard-07.braze.com` | `https://rest.iad-07.braze.com`
-US-08 | `https://dashboard-08.braze.com` | `https://rest.iad-08.braze.com`
-EU-01 | `https://dashboard.braze.eu` or<br> `https://dashboard-01.braze.eu` | `https://rest.fra-01.braze.eu`
+| Instance | Dashboard URL                                                         | REST Endpoint                   |
+| -------- | --------------------------------------------------------------------- | ------------------------------- |
+| US-01    | `https://dashboard.braze.com` or<br> `https://dashboard-01.braze.com` | `https://rest.iad-01.braze.com` |
+| US-02    | `https://dashboard-02.braze.com`                                      | `https://rest.iad-02.braze.com` |
+| US-03    | `https://dashboard-03.braze.com`                                      | `https://rest.iad-03.braze.com` |
+| US-04    | `https://dashboard-04.braze.com`                                      | `https://rest.iad-04.braze.com` |
+| US-05    | `https://dashboard-05.braze.com`                                      | `https://rest.iad-05.braze.com` |
+| US-06    | `https://dashboard-06.braze.com`                                      | `https://rest.iad-06.braze.com` |
+| US-07    | `https://dashboard-07.braze.com`                                      | `https://rest.iad-07.braze.com` |
+| US-08    | `https://dashboard-08.braze.com`                                      | `https://rest.iad-08.braze.com` |
+| EU-01    | `https://dashboard.braze.eu` or<br> `https://dashboard-01.braze.eu`   | `https://rest.fra-01.braze.eu`  |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 {% endtab %}
 {% tab Markdown %}
 ```
-Instance    | Dashboard URL   | REST Endpoint
------------ |---------------- | --------------------
-US-01 | `https://dashboard.braze.com` or<br> `https://dashboard-01.braze.com` | `https://rest.iad-01.braze.com`
-US-02 | `https://dashboard-02.braze.com` | `https://rest.iad-02.braze.com`
-US-03 | `https://dashboard-03.braze.com` | `https://rest.iad-03.braze.com`
-US-04 | `https://dashboard-04.braze.com` | `https://rest.iad-04.braze.com`
-US-05 | `https://dashboard-05.braze.com` | `https://rest.iad-05.braze.com`
-US-06 | `https://dashboard-06.braze.com` | `https://rest.iad-06.braze.com`
-US-07 | `https://dashboard-07.braze.com` | `https://rest.iad-07.braze.com`
-US-08 | `https://dashboard-08.braze.com` | `https://rest.iad-08.braze.com`
-EU-01 | `https://dashboard.braze.eu` or<br> `https://dashboard-01.braze.eu` | `https://rest.fra-01.braze.eu`
-EU-02 | `https://dashboard-02.braze.eu` | `https://rest.fra-02.braze.eu`
+| Instance | Dashboard URL                                                         | REST Endpoint                   |
+| -------- | --------------------------------------------------------------------- | ------------------------------- |
+| US-01    | `https://dashboard.braze.com` or<br> `https://dashboard-01.braze.com` | `https://rest.iad-01.braze.com` |
+| US-02    | `https://dashboard-02.braze.com`                                      | `https://rest.iad-02.braze.com` |
+| US-03    | `https://dashboard-03.braze.com`                                      | `https://rest.iad-03.braze.com` |
+| US-04    | `https://dashboard-04.braze.com`                                      | `https://rest.iad-04.braze.com` |
+| US-05    | `https://dashboard-05.braze.com`                                      | `https://rest.iad-05.braze.com` |
+| US-06    | `https://dashboard-06.braze.com`                                      | `https://rest.iad-06.braze.com` |
+| US-07    | `https://dashboard-07.braze.com`                                      | `https://rest.iad-07.braze.com` |
+| US-08    | `https://dashboard-08.braze.com`                                      | `https://rest.iad-08.braze.com` |
+| EU-01    | `https://dashboard.braze.eu` or<br> `https://dashboard-01.braze.eu`   | `https://rest.fra-01.braze.eu`  |
+| EU-02    | `https://dashboard-02.braze.eu`                                       | `https://rest.fra-02.braze.eu`  |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 ```
 {% endtab %}
@@ -177,11 +177,11 @@ For tables columns which word-break should be reset to the default style, use Ma
 
 #### Usage
 ```
-| Event Name                           | Feed Type              | Description                                                                               | Custom Attributes
-| ------------------------------------ | ---------------------- | ----------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
-| UNBROKENWORDTHATISVERYLONGUNBROKENWORDTHATISVERYLONG | Unbound Feed           | An email was successfully delivered to a User's mail server.                              | `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id`                      |
-| `UNBROKENHIGHLIGHTTHATISVERYLONGUNBROKENHIGHLIGHTTHATISVERYLONG`                       | Unbound Feed           | User opened an email.                                                                     | `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id`                      |
-| In-App Message Impression            | Platform-specific Feed | User viewed an In-App Message.                                                            | `app_id`, `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id`             |
+| Event Name                                                       | Feed Type              | Description                                                  | Custom Attributes                                                             |
+| ---------------------------------------------------------------- | ---------------------- | ------------------------------------------------------------ | ----------------------------------------------------------------------------- |
+| UNBROKENWORDTHATISVERYLONGUNBROKENWORDTHATISVERYLONG             | Unbound Feed           | An email was successfully delivered to a User's mail server. | `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id`           |
+| `UNBROKENHIGHLIGHTTHATISVERYLONGUNBROKENHIGHLIGHTTHATISVERYLONG` | Unbound Feed           | User opened an email.                                        | `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id`           |
+| In-App Message Impression                                        | Platform-specific Feed | User viewed an In-App Message.                               | `app_id`, `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id` |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ```
@@ -189,7 +189,7 @@ For tables columns which word-break should be reset to the default style, use Ma
 {% tab Before %}
 
 | Event Name                                                       | Feed Type              | Description                                                  | Custom Attributes                                                             |
-|------------------------------------------------------------------|------------------------|--------------------------------------------------------------|-------------------------------------------------------------------------------|
+| ---------------------------------------------------------------- | ---------------------- | ------------------------------------------------------------ | ----------------------------------------------------------------------------- |
 | UNBROKENWORDTHATISVERYLONGUNBROKENWORDTHATISVERYLONG             | Unbound Feed           | An email was successfully delivered to a User's mail server. | `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id`           |
 | `UNBROKENHIGHLIGHTTHATISVERYLONGUNBROKENHIGHLIGHTTHATISVERYLONG` | Unbound Feed           | User opened an email.                                        | `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id`           |
 | In-App-Message-Impression                                        | Platform-specific Feed | User viewed an In-App Message.                               | `app_id`, `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id` |
@@ -198,7 +198,7 @@ For tables columns which word-break should be reset to the default style, use Ma
 {% tab After %}
 
 | Event Name                                                       | Feed Type              | Description                                                  | Custom Attributes                                                             |
-|------------------------------------------------------------------|------------------------|--------------------------------------------------------------|-------------------------------------------------------------------------------|
+| ---------------------------------------------------------------- | ---------------------- | ------------------------------------------------------------ | ----------------------------------------------------------------------------- |
 | UNBROKENWORDTHATISVERYLONGUNBROKENWORDTHATISVERYLONG             | Unbound Feed           | An email was successfully delivered to a User's mail server. | `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id`           |
 | `UNBROKENHIGHLIGHTTHATISVERYLONGUNBROKENHIGHLIGHTTHATISVERYLONG` | Unbound Feed           | User opened an email.                                        | `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id`           |
 | In-App-Message-Impression                                        | Platform-specific Feed | User viewed an In-App Message.                               | `app_id`, `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id` |
@@ -225,7 +225,7 @@ Image: ![Logo]({% image_buster /assets/img/braze-logo-mark.png %}){: style="max-
 
 #### Linked Image Test
 
-Linked Image: [![Braze]({% image_buster /assets/img/braze-logo-mark.png %}){: style="max-width:30%;"}](https://www.braze.com)
+Linked image: [![Braze]({% image_buster /assets/img/braze-logo-mark.png %}){: style="max-width:30%;"}](https://www.braze.com)
 
 #### Image Styling
 
@@ -408,15 +408,15 @@ This is a update
 {% tab Styling %}
 #### Embedded Video/YouTube
 Defaults to YouTube embedded.
-{% multi_lang_include video.html id="XY5vFY" source="youtube" %}
+{% multi_lang_include video.html id="9SrKbY4BV2E" source="youtube" %}
 
 #### Embedded Video Right Align
-{% multi_lang_include video.html id="XYuXoKIvFY" align="right" source="youtube" %}
+{% multi_lang_include video.html id="9SrKbY4BV2E" align="right" source="youtube" %}
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec tortor at lectus tempus tempor. Suspendisse tellus diam, finibus eu dictum non, varius et ipsum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec tortor at lectus tempus tempor. Suspendisse tellus diam, finibus eu dictum non, varius et ipsum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec tortor at lectus tempus tempor. Suspendisse tellus diam, finibus eu dictum non, varius et ipsum.
 
 #### Embedded Video Left Align
-{% multi_lang_include video.html id="XY5uXvFY" align="left" source="youtube" %}
+{% multi_lang_include video.html id="9SrKbY4BV2E" align="left" source="youtube" %}
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec tortor at lectus tempus tempor. Suspendisse tellus diam, finibus eu dictum non, varius et ipsum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec tortor at lectus tempus tempor. Suspendisse tellus diam, finibus eu dictum non, varius et ipsum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec tortor at lectus tempus tempor. Suspendisse tellus diam, finibus eu dictum non, varius et ipsum.
 <br /><br />
@@ -428,18 +428,20 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec tortor at lectu
 {% endtab %}
 {% tab Markdown %}
 
+You'll need the YouTube ID to embed a YouTube video. It appears after `v=` in the URL. For example, `https://www.youtube.com/watch?v=VR1qn1OBP7k` has an ID of `VR1qn1OBP7k`.
+
 {% raw %}
 ```html
-{% multi_lang_include video.html id="[youte_id]" source="youtube" %}
+{% multi_lang_include video.html id="[youtube_id]" source="youtube" %}
 ```
 {% endraw %}
 
 To align right or left, and limit max width to 50% use the `align` parameter = `left` or `right`:
 {% raw %}
 ```html
-{% multi_lang_include video.html id="[ytube_id]" align="left" source="youtube" %}
+{% multi_lang_include video.html id="[youtube_id]" align="left" source="youtube" %}
 
-{% multi_lang_include video.html id="[youe_id]" align="right" source="youtube" %}
+{% multi_lang_include video.html id="[youtube_id]" align="right" source="youtube" %}
 ```
 {% endraw %}
 

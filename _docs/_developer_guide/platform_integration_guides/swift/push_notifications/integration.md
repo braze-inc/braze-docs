@@ -19,9 +19,9 @@ Push notifications are great for sporadic but immediately important content, whe
 
 Push notifications are rate-limited, so don't be afraid of sending as many as your application needs. iOS and the Apple Push Notification service (APNs) servers will control how often they are delivered, and you won't get into trouble for sending too many. If your push notifications are throttled, they might be delayed until the next time the device sends a keep-alive packet or receives another notification.
 
-## Prerequisites
+## Initial setup
 
-### Push Notification Certificate
+### Step 1: Upload your APNs certificate
 
 Before you can send an iOS push notification using Braze, you must provide your `.p8`  push notification file provided by Apple. As described on the Apple [developer documentation](https://developer.apple.com/documentation/usernotifications):
 
@@ -37,7 +37,7 @@ Before you can send an iOS push notification using Braze, you must provide your 
 If you are using the [older navigation]({{site.baseurl}}/navigation), you can upload your `.p8` file from **Manage Settings** > **Settings**.
 {% endalert %}
 
-### Enable push capabilities
+### Step 2: Enable push capabilities
 
 In Xcode, add the Push Notifications capability using the **Signing & Capabilities** pane to the main app target.
 

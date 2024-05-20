@@ -9,7 +9,7 @@ channel:
 search_rank: 2
 ---
 
-# [![Cours d’apprentissage Braze]({% image_buster /assets/img/bl_icon2.png %})](https://learning.braze.com/messaging-channels-sms){: style="float:right;width:120px;border:0;" class="noimgborder"}À propos des SMS
+# [![Cours d’apprentissage Braze]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/messaging-channels-sms){: style="float:right;width:120px;border:0;" class="noimgborder"}À propos des SMS
 
 > Le présent article partage certains cas d’utilisation courants à titre de références, des exigences et des conditions à connaître pour favoriser l’intégration de SMS et vous permettre de communiquer de manière efficace et stratégique avec vos clients.![Message SMS avec le texte « Bienvenue dans Braze ! Nous sommes ravis de vous accueillir à bord. » Consultez notre documentation pour commencer. https://www.braze.com/docs/ Envoyez AIDE par SMS pour obtenir de l’aide et ARRÊTER pour arrêter. »][image]{: style="float:right;max-width:30%;margin-left:15px;margin-top:10px;border: 0;"}
 
@@ -42,7 +42,7 @@ Avant d’envoyer des SMS, vous avez besoin de certaines données. Consultez le 
 - **Codes longs :** Code à 10 chiffres utilisé pour traiter les SMS. La plupart des numéros de téléphone standard sont considérés des codes longs (par ex. 123-456-7891). Ces codes sont utilisés pour traiter et envoyer les SMS.<br><br>
 - **Groupe d’abonnement :** Un groupe d’abonnement est une collection de numéros de téléphone expéditeurs (c.-à-d. codes courts, codes longs et/ou identifiants alphanumériques d’expéditeurs) qui sont utilisés pour envoyer un type spécifique de message. Par exemple, si une marque prévoit d’envoyer des messages SMS transactionnels et promotionnels, deux groupes d’abonnement avec des pools distincts de numéros de téléphone émetteurs devront être configurés dans votre tableau de bord de Braze.<br><br>
 - **Limites de segments et de caractères de message :** Un segment de message désigne le nombre de segments dans lequel votre message SMS initial sera divisé. Chaque message a une limite de caractères qui, si elle est dépassée, entraîne la division du message en segments. Selon les normes d’encodage employées (UTF-2 ou GSM-7), les limites de caractères varient. Consultez nos [limites de texte][2] pour en savoir plus sur la segmentation des messages et les limites de caractères de message.<br><br>
-- **Indicateurs standards de campagne par SMS :** <br>`Sent`, `Sent to Carrier`, `Delivery Failures`, `Confirmed Delivery`, `Rejections`, `Opt-Out` et `Help`. <br>Pour plus d’informations sur ces métriques, reportez-vous à [Rapports sur les SMS][1].
+- **Indicateurs standards de campagne par SMS :** <br>`Sent`, `Sends to Carrier`, `Delivery Failures`, `Confirmed Delivery`, `Rejections`, `Opt-Out` et `Help`. <br>Pour plus d’informations sur ces métriques, reportez-vous à [Rapports sur les SMS][1].
 
 
 [picture]: {% image_buster /assets/img/sms/sms_about.png %}

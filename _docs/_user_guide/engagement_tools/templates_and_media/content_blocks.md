@@ -81,9 +81,11 @@ You can also [duplicate]({{site.baseurl}}/user_guide/engagement_tools/templates_
 
 ### Previewing Content Blocks
 
-After adding a Content Block in an active campaign or Canvas, you can preview this Content Block from the Content Blocks Library by hovering over the Content Block and selecting the <i class="fa fa-eye preview-icon"></i> **Preview** icon.
+After adding a Content Block in an active campaign or Canvas, you can preview this Content Block from the Content Blocks Library by hovering over the Content Block and selecting the <i class="fa fa-eye preview-icon"></i> **Preview** icon. 
 
-![][7]
+This preview includes information about the Content Block such as who created it, tags, creation date, last edited date, description, editor type, inclusion count with details, and an actual preview of the Content Block.
+
+![][7]{: style="max-width:60%;"} 
 
 ### Nesting Content Blocks
 
@@ -99,19 +101,14 @@ Additionally, Content Blocks cannot be used within an email footer, though email
 
 ![Expanded Settings dropdown menu that shows three options: Archive, Duplicate, and Copy to workspace.][3]{: style="max-width:20%;float:right;margin-left:15px;" }
 
-Once you have finished using a Content Block, you can archive it from the [Templates & Media]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/archive/) page. Archived Content Blocks are read-only, so unarchive the Content Block before editing.
+Once you have finished using a Content Block, you can archive it from the [Templates & Media]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/archive/) page. Archived Content Blocks are read-only, so unarchive the Content Block before editing. Content Blocks cannot be archived if they're used in any messages.
 
-Messages using the archived Content Block will still perform as though it was there. However, we recommend several best practices to ensure that outdated information is not accidentally included in your emails.
+#### Best practices
 
-1. When your block is only used in a few emails, we recommend archiving the outdated block and updating your live messages with a newer block that has not been archived.
-2. When your block only has a typo or needs a minor change, we do not recommend archiving the block. Just update and get sending!
-3. When your block is used in more messages than you can reasonably manage with the first suggestion in this list, we recommend removing **all** content from the block and then archiving it. This will ensure no outdated information is included in any newly sent emails.
-
-{% alert tip %}
-You can save a Content Block without content in it.
-{% endalert %}
-
-If you accidentally archive a Content Block, you can unarchive it.
+- When your block is only used in a few emails, we recommend archiving the outdated block and updating your live messages with a newer block that has not been archived.
+- When your block only has a typo or needs a minor change, we do not recommend archiving the block. Just update and get sending!
+- When your block is used in more messages than you can reasonably manage with the first suggestion in this list, we recommend removing all content from the block and then archiving it. This will ensure no outdated information is included in any newly sent emails.
+- If you accidentally archive a Content Block, you can unarchive it.
 
 ![Saved Content Blocks panel where the settings dropdown menu for "Test_32" is expanded to show three options: Unarchive, Duplicate, and Copy to workspace][4]
 

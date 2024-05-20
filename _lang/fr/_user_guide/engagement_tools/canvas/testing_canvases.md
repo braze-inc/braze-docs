@@ -16,14 +16,14 @@ guide_featured_title: "Section Articles"
 guide_featured_list:
   - name: Envoyer des Canvas de test
     link: /docs/user_guide/engagement_tools/canvas/testing_canvases/sending_test_canvases/
-    fa_icon: fas fa-user-check
+    image: /assets/img/braze_icons/user-check-01.svg
   - name: Analytique Canvas
     link: /docs/user_guide/engagement_tools/canvas/testing_canvases/measuring_and_testing_with_canvas_analytics/
-    fa_icon: fas fa-chart-pie
+    image: /assets/img/braze_icons/pie-chart-01.svg
   - name: Rapports de rétention
     link: /docs/user_guide/data_and_analytics/reporting/retention_reports/
-    fa_icon: fas fa-chart-area
+    image: /assets/img/braze_icons/line-chart-down-01.svg
   - name: Rapports d'entonnoir
     link: /docs/user_guide/data_and_analytics/reporting/funnel_reports/
-    fa_icon: fas fa-filter
+    image: /assets/img/braze_icons/flag-02.svg
 ---

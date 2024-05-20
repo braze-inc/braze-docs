@@ -12,31 +12,24 @@ description: "This reference article gives an overview of the various statuses a
 > On your Braze dashboard, your campaigns are grouped by their status. Check out the different campaign statuses and descriptions for what they mean.
 
 ## Draft
-Campaigns marked as drafts are saved but not launched campaigns. Clicking on them allows you to continue editing and begin sending.
+
+Campaigns marked as drafts are saved but not launched campaigns. To continue editing and begin sending the campaign, select the draft.
 
 ## Active
-Active campaigns are in the process of sending. They can fall under one of the following behaviors:
-- Scheduled to send once and has not yet begun sending
-- Scheduled to send once and is currently sending (local time zone and Intelligent Timing campaigns send over the course of 24 hours)
-- Scheduled to send on a recurring schedule and has at least one occurrence that hasn't finished sending
+
+Active campaigns are in the process of sending.
+
+## Stopped
+
+Stopped campaigns have been paused but are still editable. To resume a stopped campaign, select the <i class="fas fa-cog"></i> gear icon then **Resume**.
 
 ## Archived
+
 Archived campaigns are no longer sent and are cleared from the **All Active** tab on the Braze dashboard. These campaigns are also removed from the detailed statistics graphs on the **Overview** and **Revenue** pages.
 
-To [archive a campaign][2], click on the gear icon for a given campaign, or simply check it off and select **Archive Selected**.
+To [archive a campaign]({{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/archiving_campaigns/#archiving-campaigns), select the <i class="fas fa-cog"></i> gear icon for a given campaign then **Archive Selected**.
 
-## Inactive
-Inactive campaigns have been paused but are still editable. You can resume an inactive campaign by clicking the gear icon by the campaign's name and selecting **Resume**.
+## Idle
 
-## Multivariate Testing in Progress
-This status marks campaigns with [multivariate tests][1] still running. If they reach a point where a variant outperforms others with better than 95% confidence, then the variant will be marked as the "winner."
+When a campaign is no longer sending messages, Braze will assign an [idle status]({{site.baseurl}}/idle_campaigns_canvases/) to these campaigns to help sort and manage your list of campaigns. With this filter, you can view which campaigns will be automatically stopped and the associated stop date.
 
-## Inactive Multivariate Test - Winner Selection Needed
-This status indicates campaigns with multivariate tests that have finished running and require a Braze dashboard user to [declare a winner][3] to select which variant the remaining users will receive.
-
-## Completed
-Completed campaigns have finished sending and are not scheduled to send again in the future.
-
-[1]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/multivariate_testing/#multivariate-testing
-[2]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/archiving_campaigns/#archiving-campaigns
-[3]: {{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/#step-5-pick-the-action-that-determines-the-winner

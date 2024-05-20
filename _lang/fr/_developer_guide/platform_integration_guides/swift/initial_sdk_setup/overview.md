@@ -17,19 +17,19 @@ guide_featured_list:
   image: /assets/img/cocoapods.png
 - name: Gestionnaire de paquets Swift (SPM)
   link: /docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/installation_methods/swift_package_manager/
-  image: /assets/img/swift.png
+  image: /assets/img/braze_icons/swift.svg
 - name: Carthage
   link: /docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/installation_methods/carthage_integration/
-  image: /assets/img/carthage.jpeg
+  image: /assets/img/carthage.png
 - name: Manual (Manuel)
   link: /docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/installation_methods/manual_integration_options/
-  fa_icon: fas fa-toolbox
+  image: /assets/img/braze_icons/tool-02.svg
 - name: "Terminer l’intégration"
   link: /docs/developer_guide/platform_integration_guides/swift/initial_sdk_setup/completing_integration/
-  fa_icon: fas fa-flag-checkered
+  image: /assets/img/braze_icons/check-done-01.svg
 - name: "Autres personnalisations SDK facultatives"
   link: /docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/other_sdk_customizations/
-  fa_icon: fas fa-id-card-alt
+  image: /assets/img/braze_icons/user-square.svg
 
 ---
 

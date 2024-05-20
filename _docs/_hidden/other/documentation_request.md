@@ -300,11 +300,6 @@ hide_toc: true
   		z-index: 10;
       color: #D45F24;
   	}
-    @media (min-width: 768px) {
-      #braze_internal {
-        margin-top: 70px;
-      }
-    }
   	#braze_internal a {
   	  color: #27368F;
   	  text-decoration: none;
@@ -443,6 +438,13 @@ hide_toc: true
                 <span></span> I'm a product manager
               </label>
               </div>
+              </div>
+              <div class="form-group">
+                <label for="doc_due_date" id="doc_due_date_label">Due date (optional)</label>
+                <div class="sublabel">If this request is time-sensitive or related to a feature release, please enter a due date.</div>
+                <div class="input-group">
+                  <input type="date" class="form-control" id="doc_due_date" maxlength="80" name="Due_Date" value="" />
+                  </div>
               </div>
               <div class="form-group">
 

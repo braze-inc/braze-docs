@@ -11,20 +11,20 @@ guide_featured_title: "Section articles"
 guide_featured_list:
   - name: Getting Started
     link: /docs/developer_guide/platform_wide/getting_started/
-    fa_icon: fas fa-table
+    image: /assets/img/braze_icons/tablet-01.svg
   - name: Analytics Overview
     link: /docs/developer_guide/platform_wide/analytics_overview/
-    fa_icon: fas fa-chart-line
+    image: /assets/img/braze_icons/line-chart-up-01.svg
   - name: Sending Test Messages
     link: /docs/developer_guide/platform_wide/sending_test_messages/
-    fa_icon: fas fa-comments
+    image: /assets/img/braze_icons/annotation.svg
   - name: SDK Authentication
     link: /docs/developer_guide/platform_wide/tv_and_ott
-    fa_icon: ffas fa-user-shield fas 
+    image: /assets/img/braze_icons/user-square.svg 
   - name: Workspace Configuration
     link: /docs/developer_guide/platform_wide/app_group_configuration/
-    fa_icon: fas fa-mobile
+    image: /assets/img/braze_icons/phone-02.svg
   - name: Feature Flags
     link: /docs/developer_guide/platform_wide/feature_flags/
-    fa_icon: fas fa-columns
+    image: /assets/img/braze_icons/columns-01.svg
 ---

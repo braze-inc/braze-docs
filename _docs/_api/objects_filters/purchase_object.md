@@ -40,17 +40,17 @@ A purchase object is an object that gets passed through the API when a purchase 
 }
 ```
 
-- [External User ID]({{site.baseurl}}/api/basics/#user-ids)
+- [External user ID]({{site.baseurl}}/api/basics/#user-ids)
 - [App identifier]({{site.baseurl}}/api/identifier_types/)
 - [ISO 4217 Currency Code Wiki][20]
 - [ISO 8601 Time Code Wiki][22]
 
 ## Purchase product_id
 
-Within the purchase object, The `product_id` is an identifier for the purchase (e.g, `Product Name` or `Product Category`):
+Within the purchase object, the `product_id` is an identifier for the purchase (such as `Product Name` or `Product Category`):
 
-- Braze allows you to store a maximum of 5,000 `product_id`s in the dashboard.
-- `product_id` maximum is 255 characters
+- Braze allows you to store up to 5,000 `product_id`s in the dashboard.
+- The `product_id` can be up to 255 characters.
 
 ### Product ID naming conventions
 
@@ -60,9 +60,10 @@ This helps make products easy to identify for segmentation and triggering.
 
 ### Log purchases at the order level
 
-If you want to log purchases at the order level instead of the product level, you can use order name or order category as the `product_id` (for example, Online Order or Completed Order).
+If you want to log purchases at the order level instead of the product level, you can use order name or order category as the `product_id` (such as `Online Order` or `Completed Order`).
 
-For example, to log purchases at the order level in the Web SDK: 
+For example, to log purchases at the order level in the Web SDK:
+
 ```html
 POST https://YOUR_REST_API_URL/users/track
 Content-Type: application/json
@@ -110,9 +111,9 @@ Event property objects that contain array or object values can have an event pro
 
 ### Purchase property naming conventions
 
-It is important to note that this feature is enabled **per product**, not per purchase. For example, if a customer has a high volume of distinct products, but each has the same properties, segmenting becomes rather meaningless, 
+It is important to note that this feature is enabled **per product**, not per purchase. For example, if a customer has a high volume of distinct products, but each has the same properties, segmenting becomes rather meaningless.
 
-In this instance, this is why when setting the data structures, we recommend using product names at a "group-level" instead of something granular. For example, a train ticket company should have products for "single trip", "return trip", "multi-city", and not specific transactions such as "transaction 123", "transaction 046", etc. Or for example, with the purchase event 'food', properties would be best set as "cake" and "sandwich".
+In this instance, this is why when setting the data structures, we recommend using product names at a "group-level" instead of something granular. For example, a train ticket company should have products for "single trip", "return trip", "multi-city", and not specific transactions such as "transaction 123" or "transaction 046". Or for example, with the purchase event "food", properties would be best set as "cake" and "sandwich".
 
 ### Example purchase object
 ```html

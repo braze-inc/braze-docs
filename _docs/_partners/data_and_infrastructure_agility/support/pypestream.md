@@ -1,7 +1,6 @@
 ---
 nav_title: Pypestream
 article_title: Pypestream
-page_order: 5
 description: "This reference article outlines the partnership between Braze and Pypestream, a full-stack conversational AI platform that allows you to enhance digital engagement with your brand."
 alias: /partners/pypestream/
 page_type: partner

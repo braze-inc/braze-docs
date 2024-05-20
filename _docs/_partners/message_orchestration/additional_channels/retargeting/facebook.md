@@ -5,7 +5,6 @@ alias: /partners/facebook/
 description: "This reference article outlines the partnership between Braze and Facebook, a leading social platform for brands to reach and engage with their customers."
 page_type: partner
 search_tag: Partner
-page_order: 1
 
 ---
 

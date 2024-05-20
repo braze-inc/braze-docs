@@ -10,7 +10,7 @@ channel:
 
 ---
 
-# [![Braze Learning course]({% image_buster /assets/img/bl_icon2.png %})](https://learning.braze.com/creating-link-templates){: style="float:right;width:120px;border:0;" class="noimgborder"}Link templates
+# Link templates
 
 > Link templates allow you to append parameters or prepend URLs to all links in an email message.
 

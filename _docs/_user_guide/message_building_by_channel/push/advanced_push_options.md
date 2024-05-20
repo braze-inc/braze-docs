@@ -16,9 +16,9 @@ guide_featured_title: "Section articles"
 guide_featured_list:
 - name: "Push Action Buttons"
   link: /docs/user_guide/message_building_by_channel/push/advanced_push_options/push_action_buttons/
-  fa_icon: far fa-dot-circle
+  image: /assets/img/braze_icons/target-05.svg
 - name: "Push Stories"
   link: /docs/user_guide/message_building_by_channel/push/advanced_push_options/push_stories/
-  fa_icon: fas fa-book-open
+  image: /assets/img/braze_icons/book-closed.svg
 ---
 <br><br>

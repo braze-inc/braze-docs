@@ -13,10 +13,10 @@ guide_featured_title: "Section Articles"
 guide_featured_list:
 - name: Aperçu
   link: /docs/user_guide/message_building_by_channel/email/preference_center/preference_center/
-  fa_icon: fa-solid fa-list-check
+  image: /assets/img/braze_icons/list.svg
 - name: Centre de préférences via API
   link: /docs/user_guide/message_building_by_channel/email/preference_center/preference_center_via_api/
-  fa_icon: fa-solid fa-laptop-code
+  image: /assets/img/braze_icons/laptop-02.svg
 
 ---
 <br><br>

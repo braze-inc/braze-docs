@@ -6,7 +6,7 @@ description: "This article cover the The Intelligent Channel filter, a filter th
 search_rank: 11
 ---
 
-# [![Braze Learning course]({% image_buster /assets/img/bl_icon2.png %})](https://learning.braze.com/most-engaged-channel){: style="float:right;width:120px;border:0;" class="noimgborder"}Intelligent Channel filter
+# [![Braze Learning course]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/most-engaged-channel){: style="float:right;width:120px;border:0;" class="noimgborder"}Intelligent Channel filter
 
 > The Intelligent or `Most Engaged` Channel filter selects the portion of your audience for whom the selected messaging channel is their "best" channel. 
 
@@ -43,6 +43,10 @@ Campaigns and Canvas Steps that ignore [frequency capping]({{site.baseurl}}/user
 Mobile push incorporates Android, iOS, Kindle, and other mobile device channels available on Braze. When calculating the Intelligent Channel, Braze looks at each kind of mobile device separately and then chooses the highest engagement rate among them to represent the "Mobile Push" category when comparing against email and Web push. 
 
 For example, if a user has several mobile devices, their mobile engagement rate would be represented by the highest rate exhibited across the devices. This would not, however, force the user to receive push notifications exclusively on that device. This rate is only used when comparing rates against email and web push.
+
+## Individual channels
+
+Rather than let Braze choose the single best channel for a user, you may also want to simply filter users based on whether or not they're likely to open a message on a specific channel you choose. For that you can use the Message Open Likelihood filter in [Segmentation filters]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters).
 
 ## Best practices and effective use strategy
 

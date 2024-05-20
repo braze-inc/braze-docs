@@ -12,34 +12,34 @@ guide_featured_title: "Section articles"
 guide_featured_list:
 - name: Using Liquid
   link: /docs/user_guide/personalization_and_dynamic_content/liquid/using_liquid/
-  fa_icon: fas fa-flask
+  image: /assets/img/braze_icons/beaker-02.svg
 - name: Supported Personalization Tags
   link: /docs/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/
-  fa_icon: fas fa-tag
+  image: /assets/img/braze_icons/tag-01.svg
 - name: Operators
   link: /docs/user_guide/personalization_and_dynamic_content/liquid/operators/
-  fa_icon: fas fa-code
+  image: /assets/img/braze_icons/code-02.svg
 - name: Filters
   link: /docs/user_guide/personalization_and_dynamic_content/liquid/filters/
-  fa_icon: fas fa-filter
+  image: /assets/img/braze_icons/flag-02.svg
 - name: Advanced Filters
   link: /docs/user_guide/personalization_and_dynamic_content/liquid/advanced_filters/
-  fa_icon: fas fa-cog
+  image: /assets/img/braze_icons/settings-01.svg
 - name: Setting Default Values
   link: /docs/user_guide/personalization_and_dynamic_content/liquid/setting_default_values/
-  fa_icon: fas fa-table
+  image: /assets/img/braze_icons/table.svg
 - name: Conditional Messaging Logic
   link: /docs/user_guide/personalization_and_dynamic_content/liquid/conditional_logic/
-  fa_icon: fas fa-columns
+  image: /assets/img/braze_icons/columns-01.svg
 - name: Aborting Messages
   link: /docs/user_guide/personalization_and_dynamic_content/liquid/aborting_messages/
-  fa_icon: fas fa-undo
+  image: /assets/img/braze_icons/refresh-ccw-01.svg
 - name: Liquid Use Cases
   link: /docs/user_guide/personalization_and_dynamic_content/liquid/liquid_use_cases/
-  fa_icon: fas fa-list-ul
+  image: /assets/img/braze_icons/list.svg
 - name: Frequently Asked Questions
   link: /docs/user_guide/personalization_and_dynamic_content/liquid/faq/
-  fa_icon: fas fa-question
+  image: /assets/img/braze_icons/annotation-question.svg
   
 ---
 
@@ -84,7 +84,7 @@ These terms are reinterpreted from [**Shopify's documentation**](https://shopify
 | Term | Definition | Example |  
 |---|---|---|
 | Liquid | An commonly-used, customer-facing template language created by Shopify and written in Ruby; used to load/pull dynamic content. | `{{${first_name}}}` will insert a user's first name into a message. |
-| Object | A denotation of a variable and location of the intended variable name that tells Liquid where to show content in the message. | `{{${city}}` will insert a user's city into a message. |
+| Object | A denotation of a variable and location of the intended variable name that tells Liquid where to show content in the message. | `{{${city}}}` will insert a user's city into a message. |
 | Conditional logic tag | Tags create logic and control the flow of message content. In Braze, conditional logic tags are used to create exceptions and variations in messages based on certain, predefined criteria. | ```{% if ${language} == 'en' %}``` will trigger your message in a designated way in the event that a user has designated "English" as their language. |
 | Filters | Used to change, narrow, or reformat the output of the Liquid object. It is often used to create mathematical operations. | ```{{"Big Sale" | upcase}}``` will cause the words "Big Sale" to appear as "BIG SALE" in the message. |
 | Operators | Used in messages to create dependencies or criteria that can affect which message your user receives. | If a user meets the defined criteria in a message tagged with `{% custom_attribute.${Total_Revenue} > 0%}`, they will receive the message. If not, they will receive another designated message (or not), depending on what you set. |

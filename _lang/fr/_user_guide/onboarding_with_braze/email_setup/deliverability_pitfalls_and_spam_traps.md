@@ -8,7 +8,7 @@ channel: email
 
 ---
 
-# [![Cours d’apprentissage Braze]({% image_buster /assets/img/bl_icon2.png %})](https://learning.braze.com/email-onboarding-for-pro-and-enterprise-achieving-high-deliverability){: style="float:right;width:120px;border:0;" class="noimgborder"}Écueils de délivrabilité et pièges à spam
+# [![Cours d’apprentissage Braze]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/email-onboarding-for-pro-and-enterprise-achieving-high-deliverability){: style="float:right;width:120px;border:0;" class="noimgborder"}Écueils de délivrabilité et pièges à spam
 
 Votre délivrabilité par e-mail peut être affectée par l’un des pièges indésirables suivants :
 

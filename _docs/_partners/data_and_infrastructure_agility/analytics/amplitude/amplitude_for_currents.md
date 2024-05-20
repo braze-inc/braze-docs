@@ -9,7 +9,7 @@ search_tag: Partner
 
 ---
 
-# [![Braze Learning course]({% image_buster /assets/img/bl_icon2.png %})](https://learning.braze.com/amplitude-integration-with-braze){: style="float:right;width:120px;border:0;" class="noimgborder"}Amplitude for Currents
+# [![Braze Learning course]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/amplitude-integration-with-braze){: style="float:right;width:120px;border:0;" class="noimgborder"}Amplitude for Currents
 
 > [Amplitude](https://amplitude.com/) is a product analytics and business intelligence platform.
 
@@ -55,7 +55,7 @@ Keep your Amplitude API Key up to date. If your connector's credentials expire, 
 In Braze, navigate to **Currents > + Create Current > Create Amplitude Export**. Provide an integration name, contact email, Amplitude export API key, and Amplitude region in the listed fields. Next, select the events you want to track; a list of available events is provided. Lastly, click **Launch Current**
 
 {% alert note %}
-Events sent from Braze Currents to Amplitude will count towards your Amplitude event volume quota.
+Events sent from Braze Currents to Amplitude will count toward your Amplitude event volume quota.
 {% endalert %}
 
 ![The Braze Amplitude Currents page. This page includes fields for integration name, contact email, API key, and US region. The lower half of the Currents page lists available Currents events you can send.]({% image_buster /assets/img/amplitude4.png %})

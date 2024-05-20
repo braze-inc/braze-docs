@@ -1,7 +1,7 @@
 ---
 nav_title: Segment Engage
 article_title: Segment Engage
-page_order: 1.3
+page_order: 3
 alias: /partners/segment_personas/
 alias: /partners/segment_engage/
 alias: /partners/data_and_infrastructure_agility/customer_data_platform/segment/segment_personas/
@@ -29,10 +29,6 @@ The Braze and Segment integration allows you to use [Engage](https://segment.com
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## Cohorts Destination integration
-
-{% alert note %}
-The Cohorts Destination is currently in early access. To get access to this feature, reach out to your Braze customer team.
-{% endalert %}
 
 ### Step 1: Create an Engage audience
 1. In Segment, navigate to the **Audiences** tab in Engage, and click **New**.

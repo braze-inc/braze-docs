@@ -6,7 +6,7 @@ description: "This reference article covers how to make a Connected Content API 
 search_rank: 2
 ---
 
-# [![Braze Learning course]({% image_buster /assets/img/bl_icon2.png %})](https://learning.braze.com/connected-content){: style="float:right;width:120px;border:0;" class="noimgborder"}Making an API call
+# [![Braze Learning course]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/connected-content){: style="float:right;width:120px;border:0;" class="noimgborder"}Making an API call
 
 > Use Connected Content to insert any information accessible via API directly into messages you send to users. You can pull content either directly from your web server or from publicly accessible APIs.
 
@@ -55,7 +55,7 @@ Braze systems may make the same Connected Content API call more than once per re
 
 ## Things to know
 
-* Braze does not charge for API calls and will not count towards your given data point allotment.
+* Braze does not charge for API calls and will not count toward your given data point allotment.
 * There is a limit of 1 MB for Connected Content responses.
 * Connected Content calls will happen when the message is sent, except for in-app messages, which will make this call when the message is viewed.
 * Connected Content calls do not follow redirects.

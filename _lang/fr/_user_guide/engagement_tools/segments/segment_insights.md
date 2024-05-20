@@ -9,7 +9,7 @@ tool:
 description: "Cet article vous propose de découvrir comment utiliser, interpréter et partager des Segment Insights."
 ---
 
-# [![Cours d’apprentissage Braze]({% image_buster /assets/img/bl_icon2.png %})](https://learning.braze.com/segmentation-course){: style="float:right;width:120px;border:0;" class="noimgborder"}Segment Insights
+# [![Cours d’apprentissage Braze]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/segmentation-course){: style="float:right;width:120px;border:0;" class="noimgborder"}Segment Insights
 
 > Segment Insights vous permet d’évaluer rapidement et facilement la performance d’un segment par rapport à un autre dans un ensemble d’indicateurs clés de performance présélectionnés. 
 

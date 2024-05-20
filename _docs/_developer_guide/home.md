@@ -9,15 +9,15 @@ description: "This landing page is where developers can find all the integration
 guide_featured_title: "Featured integrations"
 guide_featured_list:
 - name: Android and FireOS
-  image: /assets/img/android.png
+  image: /assets/img/braze_icons/android.svg
   link: /docs/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/
   nav_link: android
 - name: Swift
   link: /docs/developer_guide/platform_integration_guides/swift/initial_sdk_setup/overview/
-  fa_icon: fa-brands fa-swift
+  image: /assets/img/braze_icons/swift.svg
 - name: Web
   link: /docs/developer_guide/platform_integration_guides/web/initial_sdk_setup/
-  fa_icon: fas fa-globe
+  image: /assets/img/braze_icons/globe-02.svg
   nav_link: web
 
 guide_menu_title: "All integrations"

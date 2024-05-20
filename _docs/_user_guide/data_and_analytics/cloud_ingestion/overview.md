@@ -1,6 +1,6 @@
 ---
 nav_title: Overview
-article_title: Cloud Data Ingestion Overview and Best Practices
+article_title: Cloud Data Ingestion Overview 
 page_order: 0
 page_type: reference
 description: "This reference article provides an overview of Cloud Data Ingestion, best practices, and product limitations."
@@ -9,13 +9,26 @@ description: "This reference article provides an overview of Cloud Data Ingestio
 
 # Braze Cloud Data Ingestion overview
 
-> Braze Cloud Data Ingestion allows you to set up a direct connection from your data warehouse to Braze to sync relevant user attributes, events, and purchases. When synced to Braze, this data can be leveraged for use cases such as personalization or segmentation. Cloud Data Ingestion connects your data in Snowflake, Redshift, BigQuery, or Databricks to Braze.
+> Braze Cloud Data Ingestion allows you to set up a direct connection from your data warehouse or file storage system to Braze to sync relevant user or catalog data. When synced to Braze, this data can be leveraged for use cases such as personalization, triggering, or segmentation. 
 
 ## How it works
 
-With Braze Cloud Data Ingestion, you set up an integration between your data warehouse instance and Braze workspace to sync data on a recurring basis. This sync runs on a schedule you set, and each integration can have a different schedule. Syncs can run as frequently as every 15 minutes or as infrequently as once per month. For customers who need syncs to occur more frequently than 15 minutes, please speak with your customer success manager, or consider using REST API calls for real-time data ingestion.
+With Braze Cloud Data Ingestion (CDI), you set up an integration between your data warehouse instance and Braze workspace to sync data on a recurring basis. This sync runs on a schedule you set, and each integration can have a different schedule. Syncs can run as frequently as every 15 minutes or as infrequently as once per month. For customers who need syncs to occur more frequently than 15 minutes, please speak with your customer success manager, or consider using REST API calls for real-time data ingestion.
 
 When a sync runs, Braze will directly connect to your data warehouse instance, retrieve all new data from the specified table, and update the corresponding data on your Braze dashboard. Each time the sync runs, any updated data will be reflected in Braze.
+
+## Supported data sources
+
+Cloud Data Ingestion can sync data from the following sources to Braze:
+
+- Data warehouse sources 
+   - Amazon Redshift
+   - Databricks 
+   - Google BigQuery
+   - Snowflake
+
+- File storage sources 
+   - Amazon S3
 
 ## Supported data types 
 
@@ -325,10 +338,10 @@ UPDATED_AT	EXTERNAL_ID	PAYLOAD
 
 ## Data point usage
 
-Each attribute sent for a user will consume one data point. It's up to you to only send the required data. Data point tracking for Cloud Data Ingestion is equivalent to tracking through the [`/users/track` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track#user-track). Refer to [Data points]({{site.baseurl}}/user_guide/onboarding_with_braze/data_points/) for more information.
+Data point billing for Cloud Data Ingestion is equivalent to billing for updates through the [`/users/track` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track#user-track). Refer to [Data points]({{site.baseurl}}/user_guide/data_and_analytics/data_points/) for more information. 
 
 {% alert important %}
-Braze Cloud Data Ingestion counts towards the available rate limit, so if you're sending data using another method, the rate limit is combined between the Braze API and Cloud Data Ingestion.
+Braze Cloud Data Ingestion counts toward the available rate limit, so if you're sending data using another method, the rate limit is combined between the Braze API and Cloud Data Ingestion.
 {% endalert %}
 
 ## Data setup recommendations
@@ -345,7 +358,7 @@ The `UPDATED_AT` column should be in UTC to prevent issues with daylight savings
 
 ### Separate EXTERNAL_ID from PAYLOAD column
 
-The PAYLOAD object should not include an external id or other id type. 
+The PAYLOAD object should not include an external ID or other ID type. 
 
 ### Remove an attribute
 
@@ -513,7 +526,31 @@ To sync purchase events, event name, `product_id`, `currency`, and `price` are r
 ```
 
 {% endtab %}
+{% tab Subscription Groups %}
+```json
+{
+    "subscription_groups" : [
+        {
+            "subscription_group_id": "subscription_group_identifier_1",
+            "subscription_state": "unsubscribed"
+        },
+        {
+            "subscription_group_id": "subscription_group_identifier_2",
+            "subscription_state": "subscribed"
+        },
+        {
+            "subscription_group_id": "subscription_group_identifier_3",
+            "subscription_state": "subscribed"
+        }
+      ]
+}
+```
+{% endtab %}
 {% endtabs %}
+
+### Avoiding timeouts for data warehouse queries
+
+We recommend that queries be completed within one hour for optimal performance and to avoid potential errors. If queries exceed this timeframe, consider reviewing your data warehouse configuration. Optimizing resources allocated to your warehouse can help improve query execution speed. 
 
 ## Product limitations
 

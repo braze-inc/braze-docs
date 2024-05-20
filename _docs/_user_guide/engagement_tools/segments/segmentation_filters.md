@@ -239,7 +239,7 @@ glossaries:
     tags:
       - Retargeting
   - name: In Canvas Control Group
-    description: Segments your users by whether or not they were in the control group for a specific Canvas.
+    description: Segments your users by whether or not they were in the control group for a specific Canvas. This filter only evaluates users who have entered the Canvas.<br><br>For example, if you filter for users who are not in the control group for a Canvas, you will receive all users who entered the Canvas but are not in the control group.
     tags:
       - Retargeting
   - name: Last Enrolled in Any Control Group
@@ -247,7 +247,7 @@ glossaries:
     tags:
       - Retargeting
   - name: Entered Canvas Variation
-    description: Segments your users by whether or not they have entered a variation path of a specific Canvas.
+    description: Segments your users by whether or not they have entered a variation path of a specific Canvas. This filter evaluates all users.<br><br>For example, if you filter for users who have not entered a Canvas variation control group, you will receive all users who are not in the control group regardless if they entered the Canvas.
     tags:
       - Retargeting
   - name: Last Received Any Message
@@ -291,7 +291,7 @@ glossaries:
     tags:
       - Channel subscription behavior
   - name: Push Enabled For App
-    description: Segments by whether or not your user has push enabled for your app on their device. This count includes both foreground and background push.
+    description: Segments by whether users have push enabled for your app on their device. These users are reachable via push but might not be opted in. This count includes users who have provisionally authorized foreground and background push tokens.
     tags:
       - Channel subscription behavior
   - name: Background Push Enabled
@@ -338,8 +338,12 @@ glossaries:
     description: Segments your users by the earliest time that a user made a purchase from your app.
     tags:
       - Purchase behavior
+  - name: Last Made Purchase
+    description: Filter users by the last time they made a purchase.
+    tags: 
+      - Purchase behavior
   - name: Last Purchased Product
-    description: Filter users by when they first purchased a specific product.
+    description: Filter users by when they last purchased a specific product.
     tags:
       - Purchase behavior
   - name: Money Spent
@@ -532,6 +536,10 @@ glossaries:
       - Intelligence and predictive
   - name: Intelligent Channel
     description: Segment your users by their most active channel in the last three months.
+    tags:
+      - Intelligence and predictive
+  - name: Message Open Likelihood
+    description: Filters your users based on their likelihood to open a message on a specified channel on a scale of 0-100%. Users without sufficient data to measure a likelihood for a channel can be selected using "is blank."
     tags:
       - Intelligence and predictive
   - name: Number of Facebook Friends Using App

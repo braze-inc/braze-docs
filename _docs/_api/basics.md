@@ -9,11 +9,28 @@ alias: /api/api_key/
 
 # API overview
 
-> This reference article covers the API basics including common terminology and an overview of REST API keys, permissions, and how keep them secure. 
+> This reference article covers the API basics, including common terminology and an overview of REST API keys, permissions, and how to keep them secure.
+
+## Braze REST API collection
+
+| Collection                                                                 | Purpose                                                                               |
+|----------------------------------------------------------------------------|---------------------------------------------------------------------------------------|
+| [Catalogs]({{site.baseurl}}/api/endpoints/catalogs/)                       | Create and manage catalogs and catalog items to reference in your Braze campaigns.    |
+| [Cloud Data Ingestion]({{site.baseurl}}/api/endpoints/cdi/)                | Manage your data warehouse integrations and syncs.                                    |
+| [Email lists and addresses]({{site.baseurl}}/api/endpoints/email/)         | Set up and manage bi-directional sync between Braze and your email systems.           |
+| [Export]({{site.baseurl}}/api/endpoints/export/)                           | Access and export various details of your campaigns, Canvases, KPIs, and more.        |
+| [Messages]({{site.baseurl}}/api/endpoints/messaging/)                      | Schedule, send, and manage your campaigns and Canvases.                               |
+| [Preference center]({{site.baseurl}}/api/endpoints/preference_center/)     | Build your preference center and update the styling of it.                            |
+| [SCIM]({{site.baseurl}}/api/endpoints/scim/)                               | Manage user identities in cloud-based applications and services.                      |
+| [SMS]({{site.baseurl}}/api/endpoints/sms/)                                 | Manage your users' phone numbers in your subscription groups.                         |
+| [Subscription groups]({{site.baseurl}}/api/endpoints/subscription_groups/) | List and update both SMS and email subscription groups stored in the Braze dashboard. |
+| [Templates]({{site.baseurl}}/api/endpoints/templates/)                     | Create and update templates for email messaging and Content Blocks.                   |
+| [User data]({{site.baseurl}}/api/endpoints/user_data/)                     | Identify, track, and manage your users.                                               |
+{: .reset-td-br-1 .reset-td-br-2}
 
 ## API definitions
 
-The following lists an overview of terms you may see in the Braze REST API documentation.
+The following is an overview of terms you may see in the Braze REST API documentation.
 
 ### Endpoints
 
@@ -48,7 +65,7 @@ For most APIs, Braze has a default rate limit of 250,000 requests per hour. Howe
 - **External user ID**: The `external_id` serves as a unique user identifier for whom you are submitting data. This identifier should be the same as the one you set in the Braze SDK in order to avoid creating multiple profiles for the same user.
 - **Braze user ID**: `braze_id` serves as a unique user identifier that is set by Braze. This identifier can be used to delete users through the REST API in addition to external_ids.
 
-For more information, refer to the following article based on your platform: [iOS][9], [Android][10], and [Web][13].
+For more information, refer to the following articles based on your platform: [iOS][9], [Android][10], and [Web][13].
 
 ## REST API key
 
@@ -313,7 +330,7 @@ Keep in mind that after you create a new API key, you cannot edit the scope of p
 
 ## Managing REST API keys
 
-REST API keys cannot be edited after they are created, however, you can view details for or delete existing REST API keys from the **API Keys** page. The **Rest API Keys** list shows the following information at a glance for each key:
+REST API keys cannot be edited after they are created. However, you can view details for or delete existing REST API keys from the **API Keys** page. The **Rest API Keys** list shows the following information at a glance for each key:
 
 | Field        | Description                                                                                                         |
 | ------------ | :------------------------------------------------------------------------------------------------------------------ |
@@ -328,7 +345,7 @@ To view the details for a specific key, select a key from the list. You can then
 
 ![][30]
 
-To delete a key, click <i class="fas fa-gear" alt="Settings"></i> and selecting the corresponding option.
+To delete a key, click <i class="fas fa-gear" alt="Settings"></i> and select the corresponding option.
 
 ![][29]
 

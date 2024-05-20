@@ -16,21 +16,21 @@ guide_featured_title: "Section articles"
 guide_featured_list:
 - name: "Push Primer Campaign"
   link: /docs/user_guide/message_building_by_channel/push/ios/create_push_primer/
-  fa_icon: fas fa-comment-alt
+  image: /assets/img/braze_icons/message-square-02.svg
 - name: "Customizable App Icons"
   link: /docs/user_guide/message_building_by_channel/push/ios/customizable_app_icons/
-  fa_icon: fas fa-mobile-alt
+  image: /assets/img/braze_icons/phone-02.svg
 - name: "Notification Options"
   link: /docs/user_guide/message_building_by_channel/push/ios/notification_options/
-  fa_icon: fas fa-cog
+  image: /assets/img/braze_icons/settings-01.svg
 - name: "Rich Notifications"
   link: /docs/user_guide/message_building_by_channel/push/ios/rich_notifications/
-  fa_icon: fas fa-vial
+  image: /assets/img/braze_icons/beaker-02.svg
 - name: "Advanced Campaign Settings"
   link: /docs/user_guide/message_building_by_channel/push/ios/advanced_campaign_settings/
-  fa_icon: fas fa-chart-bar
+  image: /assets/img/braze_icons/bar-chart-01.svg
 - name: "Utilizing Badge Count"
   link: /docs/user_guide/message_building_by_channel/push/ios/utilizing_badge_count/
-  fa_icon: fas fa-bell
+  image: /assets/img/braze_icons/bell-03.svg
 ---
 <br><br>

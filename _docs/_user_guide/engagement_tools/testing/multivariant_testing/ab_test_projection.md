@@ -11,7 +11,7 @@ description: "This article explains how A/B test projection works, how to run a 
 
 > A/B test projection uses neural networks to predict which subject lines perform best. Our model extracts linguistic features from winning A/B tests performed on Braze and uses those statistical language patterns to teach our AI what makes better subject lines.
 
-{% alert note %} 
+{% alert important %} 
 This feature is currently in early access. Contact your Braze customer success or account manager if you're interested in participating in the early access.
 {% endalert %}
 
@@ -26,6 +26,10 @@ A modal will open with the subject lines of any message variants you have alread
 <img width="722" alt="image" src="https://github.com/braze-inc/braze-docs/assets/17167198/f9ad45a3-6565-467b-a7f6-35277bef7699">
 
 The subject line our AI predicts to be best will be highlighted with a **Projected Winner** label.
+
+{% alert note %}
+For [quick push campaigns]({{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/quick_push/), A/B testing is supported when you select multiple platforms.
+{% endalert %}
 
 ### How accurate are the projections?
 

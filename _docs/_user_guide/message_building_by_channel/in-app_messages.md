@@ -14,39 +14,39 @@ guide_featured_title: "Popular articles"
 guide_featured_list:
 - name: "About In-App Messages"
   link: /docs/user_guide/message_building_by_channel/in-app_messages/about/
-  fa_icon: fas fa-check
+  image: /assets/img/braze_icons/check-square-broken.svg
 - name: "Drag-And-Drop Editor"
   link: /docs/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/
-  fa_icon: fas fa-mobile-alt
+  image: /assets/img/braze_icons/phone-02.svg
 - name: "Traditional Editor"
   link: /docs/user_guide/message_building_by_channel/in-app_messages/traditional/
-  fa_icon: fas fa-mobile-alt
+  image: /assets/img/braze_icons/phone-02.svg
 - name: "Creative Details"
   link: /docs/user_guide/message_building_by_channel/in-app_messages/creative_details/
-  fa_icon: fas fa-paint-brush
+  image: /assets/img/braze_icons/brush-02.svg
 
 guide_menu_title: "More articles"
 guide_menu_list:
 - name: "Testing"
   link: /docs/user_guide/message_building_by_channel/in-app_messages/testing/
-  fa_icon: fas fa-vial
+  image: /assets/img/braze_icons/beaker-02.svg
 - name: "Reporting"
   link: /docs/user_guide/message_building_by_channel/in-app_messages/reporting/
-  fa_icon: fas fa-chart-bar
+  image: /assets/img/braze_icons/bar-chart-01.svg
 - name: "Dark Mode"
   link: /docs/user_guide/message_building_by_channel/in-app_messages/traditional/dark-mode/
-  fa_icon: fas fa-mobile
+  image: /assets/img/braze_icons/phone-02.svg
 - name: "App Store Rating Prompt"
   link: /docs/user_guide/message_building_by_channel/in-app_messages/ios_app_rating_prompt/
-  fa_icon: fas fa-star
+  image: /assets/img/braze_icons/star-01.svg
 - name: "Simple Survey"
   link: /docs/user_guide/message_building_by_channel/in-app_messages/traditional/templates/simple_survey/
-  fa_icon: fas fa-poll
+  image: /assets/img/braze_icons/bar-chart-07.svg
 - name: "Best Practices"
   link: /docs/user_guide/message_building_by_channel/in-app_messages/best_practices
-  fa_icon: fas fa-check-square
+  image: /assets/img/braze_icons/check-square-broken.svg
 - name: "FAQ"
   link: /docs/user_guide/message_building_by_channel/in-app_messages/faq/
-  fa_icon: fas fa-question
+  image: /assets/img/braze_icons/annotation-question.svg
 ---
 <br><br>

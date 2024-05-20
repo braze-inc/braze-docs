@@ -12,31 +12,31 @@ guide_featured_title: "Section Articles"
 guide_featured_list:
 - name: Utilisation de Liquid
   link: /docs/user_guide/personalization_and_dynamic_content/liquid/using_liquid/
-  fa_icon: fas fa-flask
+  image: /assets/img/braze_icons/beaker-02.svg
 - name: Balises de personnalisation prises en charge
   link: /docs/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/
-  fa_icon: fas fa-tag
+  image: /assets/img/braze_icons/tag-01.svg
 - name: Opérateurs
   link: /docs/user_guide/personalization_and_dynamic_content/liquid/operators/
-  fa_icon: fas fa-code
+  image: /assets/img/braze_icons/code-02.svg
 - name: Filtres
   link: /docs/user_guide/personalization_and_dynamic_content/liquid/filters/
-  fa_icon: fas fa-filter
+  image: /assets/img/braze_icons/flag-02.svg
 - name: Filtres avancés
   link: /docs/user_guide/personalization_and_dynamic_content/liquid/advanced_filters/
-  fa_icon: fas fa-cog
+  image: /assets/img/braze_icons/settings-01.svg
 - name: Paramétrage des valeurs par défaut
   link: /docs/user_guide/personalization_and_dynamic_content/liquid/setting_default_values/
-  fa_icon: fas fa-table
+  image: /assets/img/braze_icons/table.svg
 - name: Logique de messagerie conditionnelle
   link: /docs/user_guide/personalization_and_dynamic_content/liquid/conditional_logic/
-  fa_icon: fas fa-columns
+  image: /assets/img/braze_icons/columns-01.svg
 - name: Abandon des messages
   link: /docs/user_guide/personalization_and_dynamic_content/liquid/aborting_messages/
-  fa_icon: fas fa-undo
+  image: /assets/img/braze_icons/refresh-ccw-01.svg
 - name: Scénarios d’utilisation de Liquid
   link: /docs/user_guide/personalization_and_dynamic_content/liquid/liquid_use_cases/
-  fa_icon: fas fa-list-ul
+  image: /assets/img/braze_icons/list.svg
 ---
 
 ## À propos de Liquid
@@ -80,7 +80,7 @@ Ces termes sont réinterprétés à partir de la [**Documentation de Shopify**](
 | Terme | Définition | Exemple |  
 |---|---|---|
 | Liquid | Un langage modèle en open source et orienté client créé par Shopify et écrit dans Ruby ; utilisé pour charger/tirer du contenu dynamique. | `{{${first_name}}}` insérera le prénom d’un utilisateur dans un message. |
-| Objet | Dénotation d’une variable et d’un emplacement du nom de variable prévu qui indique à Liquid où afficher le contenu dans le message. | `{{${city}}` insérera la ville d’un utilisateur dans un message. |
+| Objet | Dénotation d’une variable et d’un emplacement du nom de variable prévu qui indique à Liquid où afficher le contenu dans le message. | `{{${city}}}` insérera la ville d’un utilisateur dans un message. |
 | Logique conditionnelle (balise) | Les balises créent une logique et contrôlent le flux du contenu du message. Dans les cas d’utilisation de Braze, les balises de logique conditionnelle sont utilisées pour créer des exceptions et des variations dans des messages reposant sur certains critères prédéfinis. | ```{% if ${language} == 'en' %}``` déclenchera votre message d’une manière désignée dans le cas où un utilisateur a sélectionné « Anglais » comme langue. |
 | Filtres | Permet de modifier, affiner ou reformater la sortie de l’Objet Liquid. Il est souvent utilisé pour créer des opérations mathématiques. | ```{{"Big Sale" | upcase}}``` affiche les mots « Soldes importantes » en majuscules (c.-à-d. « SOLDES IMPORTANTES ») dans le message. |
 | Opérateurs | Utilisé dans les messages pour créer des dépendances ou des critères qui peuvent affecter le message reçu par votre utilisateur. | Si un utilisateur répond aux critères définis dans un message marqué avec `{% custom_attribute.${Total_Revenue} > 0%}`, il recevra le message. Sinon, il recevra un autre message désigné (ou non), selon ce que vous avez défini. |

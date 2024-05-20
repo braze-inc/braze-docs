@@ -1,7 +1,6 @@
 ---
 nav_title: Census
 article_title: Census
-page_order: 9
 description: "This reference article outlines the partnership between Braze and Census, a data integration platform that allows you to dynamically create targeted user segments with data from your cloud warehouse."
 alias: /partners/census/
 page_type: partner
@@ -47,7 +46,7 @@ To sync customers to Braze, you must build a sync. Here, you will define where t
 6. Lastly, map the Census data fields to the equivalent Braze fields.<br>![Census mapping][11]{: style="max-width:80%;"}<br><br>
 7. Confirm details and create the sync. 
 
-Once the sync runs, you will find the user data in Braze. You can now create and add a Braze segment to future Braze campaigns and Canvases to target these end-users. 
+After the sync runs, you will find the user data in Braze. You can now create and add a Braze segment to future Braze campaigns and Canvases to target these users. 
 
 {% alert note %}
 When using the Census and Braze integration, Census will only send the deltas (changing data) on each sync to Braze. 

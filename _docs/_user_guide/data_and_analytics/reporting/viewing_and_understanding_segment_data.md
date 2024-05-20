@@ -65,10 +65,6 @@ On this page, you can view a number of user-specific attributes, such as gender,
 
 Your results will show the top (or bottom) campaigns, Canvases, or Canvas steps that you selected. For example, if you selected the top 10 campaigns for click rate, your results will show the top 10 campaigns ordered from highest to lowest click rate. Your columns will display all of the email engagement metrics for each row (campaigns, Canvases, or message steps).
 
-{% alert note %}
-The ability to break down performance data by segment in Query Builder report templates is currently in early access. Contact your customer success manager if you're interested in participating in this early access.
-{% endalert %}
-
 ![The Segment breakdown page contains a SQL editor, a side panel with tabs for Variables, Available Data Tables, Query History, and the AI Query Builder, and a results section.]({% image_buster /assets/img_archive/segment_breakdown.png %})
 
 You can use [Query Builder]({{site.baseurl}}/user_guide/data_and_analytics/query_builder/) report templates to break down performance metrics for campaigns, Canvas, variants, and steps by segments. [Analytics tracking]({{site.baseurl}}/user_guide/data_and_analytics/tracking/segment_analytics_tracking#segment-analytics-tracking) must be turned on for the segments you want to access metrics for.
@@ -138,7 +134,7 @@ Your results will show email engagement metrics by segment for your selected var
 To view purchase and revenue metrics broken down by segment for a specific campaign or Canvas, use the [Variables](#variables) tab to specify the following:
 
 - Conversion window (the number of days after email receipt or click that Braze should attribute purchases or revenue to)
-- (Optional) Specific product
+- Specific product (optional) 
 
 In addition, use the **Variables** tab to specify whether to run the report for one or more campaigns or Canvases, or one or more tags. If no campaigns, Canvases, or tags are chosen, then the report will run for all emails from campaigns or Canvases during your chosen time frame.
 
@@ -179,9 +175,9 @@ To view purchase and revenue metrics broken down by segment for a specific campa
 
 - Specific campaign or Canvas
 - Variants 
-- (Optional) Canvas step
+- Canvas step (optional) 
 - Time range
-- (Optional) Specific product
+- Specific product (optional) 
 
 #### Results
 
@@ -273,7 +269,7 @@ To create a report from a [Query Builder]({{site.baseurl}}/user_guide/data_and_a
 2. Filter templates for those that have metrics that include “segment breakdowns”.
 3. Select the template you want to use.
 4. Fill the variables in your SQL template in the [Variables](#variables) tab.
-5. (Optional) Directly edit the SQL in the template.
+5. (optional) Directly edit the SQL in the template.
 6. Click **Run Query**. Your results will display in a table.
 
 ## Variables {#variables}

@@ -41,7 +41,7 @@ If you are using the [older navigation]({{site.baseurl}}/navigation), you can fi
 
 Then perform the following steps:
 
-1. Click <i class="fa fa-edit"></i> **Edit**.
+1. Click **Edit**.
 2. Set their User Role to **Limited**.
 3. Add them to the appropriate workspace. 
 4. Select the **Team** you'd like to add this user to, and assign specific permissions from the **Team** permissions column.

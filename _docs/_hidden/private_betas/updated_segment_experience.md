@@ -7,7 +7,7 @@ hidden: true
 ---
 
 
-# [![Braze Learning course]({% image_buster /assets/img/bl_icon2.png %})](https://learning.braze.com/segmentation-course){: style="float:right;width:120px;border:0;" class="noimgborder"}Creating a segment
+# [![Braze Learning course]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/segmentation-course){: style="float:right;width:120px;border:0;" class="noimgborder"}Creating a segment
 
 > Segmentation allows you to target users based upon their demographic, behavioral, or technical characteristics and actions. Creative and intelligent use of segmentation and messaging automation enables you to seamlessly move your users from first touch to long-term customer. Segments update in real-time as data changes, and you can create as many segments as needed for your targeting and messaging purposes.
 
@@ -80,7 +80,7 @@ When building a segment, you can apply one or multiple exclusion groups. Exclusi
 
 If a user falls into your exclusion group criteria, they will not be part of your segment, even if they meet the criteria within your filter groups.
 
-Create an exclusion group by adding filters like you would for filter groups. The estimated excluded users statistic is the number of users normally targeted by this segment but are excluded because of exclusion group criteria.
+Create an exclusion group by adding filters like you would for filter groups. The _Estimated Reachable Users_ statistic in an exclusion group shows the estimated number of users remaining in your segment after the exclusion criteria is applied.
 
 Excluded users will not be counted as part of your segment’s _Total reachable users_ statistic.
 

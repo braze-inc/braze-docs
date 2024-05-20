@@ -1,7 +1,6 @@
 ---
 nav_title: mParticle
 article_title: mParticle
-page_order: 0
 alias: /partners/mparticle/
 description: "This reference article outlines the partnership between Braze and mParticle, a customer data platform that collects and routes information between sources in your marketing stack."
 page_type: partner
@@ -34,7 +33,7 @@ The Braze and mParticle integration allows you to seamlessly control the flow of
 
 ### Audiences
 
-Use Braze and mParticle's partnership to configure your integration and import mParticle audiences directly into Braze for retargeting, creating a full loop of data from one system to another. Any integration you set up will count towards your account's data point volume.
+Use Braze and mParticle's partnership to configure your integration and import mParticle audiences directly into Braze for retargeting, creating a full loop of data from one system to another. Any integration you set up will count toward your account's data point volume.
 
 #### Forwarding Audiences
 
