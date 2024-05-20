@@ -2,12 +2,12 @@
 nav_title: Compliance Documentation for Webhooks
 article: Compliance Documentation for Webhooks
 permalink: /compliance_documentation_webhooks/
-description: "Compliance documentation relating to webhooks."
+description: "Compliance documentation relating to webhooks channel."
 page_order: 3
 noindex: true
 ---
 
-# Compliance Documentation Webhooks
+# Compliance Documentation for Webhooks
 
 _Revision Date: 13 May 2024_
 
