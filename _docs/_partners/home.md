@@ -290,7 +290,7 @@ valid_partner_list:
 - name: Scuba
   url: /docs/partners/data_and_infrastructure_agility/analytics/scuba/
 - name: Celebrus
-  url: /docs/partners/data_and_infrastructure_agility/analytics/celebrus/
+  url: /docs/partners/isv_partners/celebrus/
 - name: Friendbuy
   url: /docs/partners/message_orchestration/channel_extensions/loyalty/friendbuy/
 - name: Alpaco
