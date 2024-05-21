@@ -18,11 +18,11 @@ Braze では、当社のプラットフォーム上で利用する予定の顧�
 - [Liquid の条件付きロジック]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid)でメッセージを**テンプレート化**し、パーソナライズするため
 - [コンバージョントラッキング]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events?redirected=true#conversion-events)でキャンペーンの効果を**トラッキング**するため
 
-これにより、Braze に送信されるデータを最適化して、チームにとって長期的に有用であると思われないトラッキングデータポイントを避けながら、ユーザーにメッセージを送る機能を合理化することができます。 
+これにより、Braze に送信されるデータを最適化して、チームにとって長期的に有用であると思われないトラッキングデータポイントを避けながら、ユーザーにメッセージを送る機能を合理化することができます。
 
 ## ユーザーのターゲット設定
 
-キャンペーンを徐々に積み上げていくうちに、オーディエンスの減少に気づくことがあります。これは、セグメンテーションを利用して[離脱ユーザー]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/capturing_lapsing_users/)を特別なキャンペーンでターゲティングできる重要な機会となります。 
+キャンペーンを徐々に積み上げていくうちに、オーディエンスの減少に気づくことがあります。これは、セグメンテーションを利用して[離脱ユーザー]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/capturing_lapsing_users/)を特別なキャンペーンでターゲティングできる重要な機会となります。
 
 ### オーディエンスを特定する
 
@@ -36,13 +36,13 @@ Braze では、当社のプラットフォーム上で利用する予定の顧�
 
 アプリの新しい機能やバージョンにユーザーを引き付けることが目的の場合は、アプリ内チャネルに焦点を当てたマルチチャネル戦略を使用します。[アプリ内メッセージ][5] と [コンテンツカード][7] は、ユーザーがすぐに更新を希望しない場合でも、一般に反感を買うことはありません。適切なアプリストアへの[ディープリンク]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/)を必ず含めます。
 
-アプリを更新したり、アプリの使い方を変えてもらうようにユーザーを説得するのは難しいので、新しいバージョンや新機能のすべての利点と、それによってアプリの使用感がどのように向上するかを伝えましょう。 
+アプリを更新したり、アプリの使い方を変えてもらうようにユーザーを説得するのは難しいので、新しいバージョンや新機能のすべての利点と、それによってアプリの使用感がどのように向上するかを伝えましょう。
 
 ### 送信のタイミング
 
 タイミングはとても重要です。ユーザーを説得してアプリを更新してもらうのが目的なら、アプリ内でポジティブな体験が得られるまで待ってからユーザーに尋ねましょう。オーディエンスを引きつけるには、邪魔に感じられるメッセージングの繰り返しは避けます。
 
-時間が経つにつれ、ユーザーは特定の機能を忘れたり、新しい機能に気づかなくなったりすることがあります。新しい機能が追加されたら、[アプリ内メッセージ]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/about/)でユーザーに知らせましょう。ユーザーがアプリ内で主要な機能を使っていない場合は、ユーザーがアプリを使い、この新機能がいつ役に立つのかを知らせるのが最善かもしれません。[データのオプトイン][7] の記事には、ユーザーのワークフローの期待にあなたのリクエストを確実に一致させるための詳細が掲載されています。 
+時間が経つにつれ、ユーザーは特定の機能を忘れたり、新しい機能に気づかなくなったりすることがあります。新しい機能が追加されたら、[アプリ内メッセージ]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/about/)でユーザーに知らせましょう。ユーザーがアプリ内で主要な機能を使っていない場合は、ユーザーがアプリを使い、この新機能がいつ役に立つのかを知らせるのが最善かもしれません。[データのオプトイン][7] の記事には、ユーザーのワークフローの期待にあなたのリクエストを確実に一致させるための詳細が掲載されています。
 
 ## 高評価
 
@@ -66,5 +66,5 @@ Braze では、当社のプラットフォーム上で利用する予定の顧�
 
 
 [6]: {% image_buster /assets/img_archive/ratings_power_users.png %}
-[5]: {{site.baseurl}/user_guide/message_building_by_channel/in-app_messages/about/
-[7]: {{site.baseurl}/user_guide/message_building_by_channel/content_cards/about/
+[5]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/about/
+[7]: {{site.baseurl}}/user_guide/message_building_by_channel/content_cards/about/
