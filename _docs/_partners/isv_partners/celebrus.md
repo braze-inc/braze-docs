@@ -26,7 +26,7 @@ description: "Integrating Braze and Celebrus."
 When your Celebrus implementation is installed and running, use the Celebrus connectors for Braze to integrate Celebrus data into Braze. There are two elements to the Celebrus integration for Braze, "Braze SDK" and "Braze Custom Attributes". You can deploy either or both depending on how you use Braze today and the use cases you need.
 
 
-If you do not already have the Braze SDK implemented in your web channel, you can use Celebrus to deploy the Braze SDK. Celebrus will add the Braxe SDK to web pages, and set up the Braze identity for the web visitor using the Celebrus identity graph. Customer attributes can be sync'ed with Braze via a Cloud Data Ingestion (CDI). This requires a data warehouse supported by Braze CDI, and the configuration of the CDI in Braze.
+If you do not already have the Braze SDK implemented in your web channel, you can use Celebrus to deploy the Braze SDK. Celebrus will add the Braze SDK to web pages, and set up the Braze identity for the web visitor using the Celebrus identity graph. Customer attributes can be synced with Braze via a Cloud Data Ingestion (CDI). This requires a data warehouse supported by Braze CDI, and the configuration of the CDI in Braze.
 
 ### Celebrus connector for Braze SDK
 
