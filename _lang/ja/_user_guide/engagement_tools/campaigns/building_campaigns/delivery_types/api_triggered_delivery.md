@@ -43,6 +43,6 @@ API を利用したキャンペーンは、[API キャンペーン]({{site.baseu
 
 [37]: {% image_buster /assets/img_archive/api_triggered_campaign_delivery.png %}
 [38]: {% image_buster /assets/img_archive/api_triggered_photo_social_example_1.png %}
-[39]: {{site.baseurl}/developer_guide/rest_api/messaging/#sending-messages-via-api-triggered-delivery
-[42]: {{site.baseurl}/developer_guide/rest_api/messaging/#sending-messages-via-api-triggered-delivery
+[39]: {{site.baseurl}}/developer_guide/rest_api/messaging/#sending-messages-via-api-triggered-delivery
+[42]: {{site.baseurl}}/developer_guide/rest_api/messaging/#sending-messages-via-api-triggered-delivery
 [43]: {% image_buster /assets/img_archive/api_triggered_reeligible.png %}
