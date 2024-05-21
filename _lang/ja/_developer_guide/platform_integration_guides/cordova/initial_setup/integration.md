@@ -24,7 +24,7 @@ cordova plugin add https://github.com/braze-inc/braze-cordova-sdk#master
 {% endtab %}
 
 {% tab geofence enabled %}
-ロケーションコレクションとジオフェンスを使用する予定がある場合は、GitHub の {% tab geofence enabled %} を使用してください。
+位置情報の収集とジオフェンスの使用を計画している場合は、GitHub の を使用します `geofence-branch` 。
 
 ```bash
 cordova plugin add https://github.com/braze-inc/braze-cordova-sdk#geofence-branch
@@ -38,7 +38,7 @@ cordova plugin add https://github.com/braze-inc/braze-cordova-sdk#geofence-branc
 
 ### ステップ 2:プロジェクトを構成する
 
-次に、プロジェクトの `config.xml` ファイル内の `platform` 要素に次の環境設定を追加します。
+次に、プロジェクトの`config.xml`ファイル内の要素に`platform`次の設定を追加します。
 
 {% tabs %}
 {% tab ios %}
