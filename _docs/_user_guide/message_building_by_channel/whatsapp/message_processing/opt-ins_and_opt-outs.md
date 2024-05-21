@@ -212,8 +212,7 @@ A Webhook campaign can trigger entry into a second campaign after adding the use
 You don't need to use this method for STOP messages. The confirmation message will be sent before the user is removed from the subscription group, so you can use one of the other two steps.
 {% endalert %}
 
-1. Create a campaign or Canvas with an action-based step **Send a WhatsApp Inbound Message**. Select **Where the message body** and enter "START" for **Is**.
-
+1. Create a campaign or Canvas with an action-based step **Send a WhatsApp Inbound Message**. Select **Where the message body** and enter "START" for **Is**.<br><br>![][13]{: style="max-width:70%;"}
 2. {#step2} In the campaign or Canvas, create a Webhook Message step, and change the **Request Body** to **Raw Text** with an **HTTP Method** of **POST**.
 
 3. Enter the customer's [endpoint URL]({{site.baseurl}}/api/basics/) in the **Webhook URL**, followed by the endpoint link `campaigns/trigger/send`. For example, `https://dashboard-02.braze.eu/campaigns/trigger/send`.
