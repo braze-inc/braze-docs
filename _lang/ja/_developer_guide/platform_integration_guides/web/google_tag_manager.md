@@ -248,9 +248,9 @@ Google タグ マネージャーの統合で、Braze 初期化タグに移動し
 [gtm アップデートが利用可能]: {% image_buster /assets/img/web-gtm/gtm-update-available.png %}
 [gtm-accept-update]: {% image_buster /assets/img/web-gtm/gtm-accept-update.png %}
 [gtmバージョン番号]: {% image_buster /assets/img/web-gtm/gtm-version-number.png %}
-[変更履歴]: https://github.com/braze-inc/braze-web-sdk/blob/master/CHANGELOG.md
-[gtm デバッグ ツール]: https://support.google.com/tagmanager/answer/6107056?hl=en
-[eコマース]: https://developers.google.com/analytics/devguides/collection/ga4/ecommerce?client_type=gtm
-[ログ購入]: https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#logpurchase
+[changelog]: https://github.com/braze-inc/braze-web-sdk/blob/master/CHANGELOG.md
+[gtm-debugging-tool]: https://support.google.com/tagmanager/answer/6107056?hl=en
+[ecommerce]: https://developers.google.com/analytics/devguides/collection/ga4/ecommerce?client_type=gtm
+[log-purchase]: https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#logpurchase
 [gtm-詳細ログ]: {% image_buster /assets/img/web-gtm/gtm_verbose_logging.png %}
 [gtm コンテンツ カード]: {% image_buster /assets/img/web-gtm/gtm_content_cards.png %}
