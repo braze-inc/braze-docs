@@ -95,7 +95,7 @@ iOSおよびiPadOSのSafari 16.4+は、[ホーム画面に追加] [ホーム画�
 
 サイトが次のセキュアオリジンパターンのいずれかに一致する場合、そのサイトは安全とみなされます。
 
-- https:
+- (https, , \*)
 - (wss、\*、*)
 - (、ローカルホスト、)
 - (,. ローカルホスト, \*)
@@ -132,7 +132,7 @@ Braze Web push の基盤となっているオープンスタンダード仕様�
 [8]: {{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/
 [27]: {{site.baseurl}}/assets/img_archive/web_push2.png
 [7]:{{site.baseurl}}/developer_guide/platform_integration_guides/web/push_notifications/alternate_push_domain
-[プッシュプライマー]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/push_notifications/soft_push_prompt/
-[ホーム画面に追加]: https://support.apple.com/guide/iphone/bookmark-favorite-webpages-iph42ab2f3a7/ios#iph4f9a47bbc
-[マニフェストファイル]: https://developer.mozilla.org/en-US/docs/Web/Manifest
-[サファリ・モバイル・プッシュガイド]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/push_notifications/safari_mobile_push/
+[push-primer]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/push_notifications/soft_push_prompt/
+[add-to-homescreen]: https://support.apple.com/guide/iphone/bookmark-favorite-webpages-iph42ab2f3a7/ios#iph4f9a47bbc
+[manifest-file]: https://developer.mozilla.org/en-US/docs/Web/Manifest
+[safari-mobile-push-guide]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/push_notifications/safari_mobile_push/
