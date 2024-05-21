@@ -103,3 +103,11 @@ end
 task :ja do
   Rake::Task["lang"].invoke('ja')
 end
+
+task :fr_build do
+  Rake::Task["lang:build"].invoke('fr')
+end
+
+task :ja_build do
+  Rake::Task["lang:build"].invoke('ja')
+end
