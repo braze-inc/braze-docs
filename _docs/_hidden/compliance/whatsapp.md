@@ -3,7 +3,7 @@ nav_title: Compliance Documentation for WhatsApp Services
 article: Compliance Documentation for WhatsApp Services
 permalink: /compliance_documentation_whatsapp/
 description: "Compliance documentation relating to the WhatsApp channel."
-page_order: 3
+page_order: 4
 noindex: true
 ---
 
