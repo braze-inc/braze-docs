@@ -161,7 +161,7 @@ For "STOP" messages, invert the message step confirming the opt-out and the User
 {% endraw %}
 
 {: start="4"}
-4. Add a subsequent WhatsApp message step. <br><br>![][15]{: style="max-width:30%;"}
+4. Add a subsequent WhatsApp message step. <br><br>![][15]{: style="max-width:20%;"}
 
 #### Considerations
 
@@ -197,7 +197,7 @@ A webhook step can use the [`users.Track`]() endpoint to add the user's phone nu
 {: start="5"}
 5. Add two request headers:
   - A key of `Content-Type` with the value "application/json".
-  - A key of `Authorization` that has the `users.Track` permission after "Bearer".<br><br>![][]{: style="max-width:30%;"}
+  - A key of `Authorization` that has the `users.Track` permission after "Bearer".<br><br>![][18]{: style="max-width:70%;"}
 
 #### Considerations
 
@@ -212,11 +212,9 @@ A Webhook campaign can trigger entry into a second campaign after adding the use
 You don't need to use this method for STOP messages. The confirmation message will be sent before the user is removed from the subscription group, so you can use one of the other two steps.
 {% endalert %}
 
-1. Create a campaign or Canvas with an action-based step **Send a WhatsApp Inbound Message**. Select **Where the message body** and enter "START" for **Is**.<br><br>![][13]{: style="max-width:70%;"}
-2. {#step2} In the campaign or Canvas, create a Webhook Message step, and change the **Request Body** to **Raw Text** with an **HTTP Method** of **POST**.
-
-3. Enter the customer's [endpoint URL]({{site.baseurl}}/api/basics/) in the **Webhook URL**, followed by the endpoint link `campaigns/trigger/send`. For example, `https://dashboard-02.braze.eu/campaigns/trigger/send`.
-
+1. Create a campaign or Canvas with an action-based step **Send a WhatsApp Inbound Message**. Select **Where the message body** and enter "START" for **Is**.<br><br>![][13]{: style="max-width:70%;"}<br><br>
+2. In the campaign or Canvas, create a Webhook Message step, and change the **Request Body** to **Raw Text**.<br><br>![][16]<br><br>
+3. Enter the customer's [endpoint URL]({{site.baseurl}}/api/basics/) in the **Webhook URL**, followed by the endpoint link `campaigns/trigger/send`. For example, `https://dashboard-02.braze.eu/campaigns/trigger/send`.<br><br>![19]{: style="max-width:70%;"}<br><br>
 4. In the raw text, enter the following JSON payload and replace `XXXXXXXXXXX` with your subscription group ID. You will need to replace the `campaign_id` after creating your second campaign.
 
 {% raw %}
@@ -245,7 +243,7 @@ You don't need to use this method for STOP messages. The confirmation message wi
 
 #### Considerations
 
-- Attribute updates from within the Canvas API Trigger JSON payload is not yet supported, so you can only trigger a WhatsApp campaign for the WhatsApp response message (as in [step #2](#step2)).
+- Attribute updates from within the Canvas API Trigger JSON payload is not yet supported, so you can only trigger a WhatsApp campaign for the WhatsApp response message (as in step #2).
 - A WhatsApp template must be approved to send it as a response message. This is because a quick response requires the inbound message trigger to be inside the same campaign or Canvas. If you use a [User Update step](#user-update-step), you can send a quick response message without Meta approval.
 
 
@@ -267,3 +265,4 @@ You don't need to use this method for STOP messages. The confirmation message wi
 [16]: {% image_buster /assets/img/whatsapp/webhook_step.png %} 
 [17]: {% image_buster /assets/img/whatsapp/webhook_url.png %} 
 [18]: {% image_buster /assets/img/whatsapp/request_parameters.png %} 
+[19]: {% image_buster /assets/img/whatsapp/campaigns_webhook_url.png %} 
