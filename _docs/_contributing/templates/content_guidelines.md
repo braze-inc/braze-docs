@@ -2,6 +2,7 @@
 nav_title: Content Guidelines
 article: Content Guidelines
 page_order: 0
+toc_headers: h2
 ---
 
 # Content guidelines for templates
@@ -17,16 +18,18 @@ Braze documentation should follow the Diátaxis framework, which organizes docum
 
 ## How-to guides
 
-How-to guides are goal-oriented directions. They focus on what the user does to achieve a specific result.
+How-to guides are action-based and chronological steps. They focus on telling a user how to achieve a specific and successful result.
 
 Examples include:
-- Creating personalized email campaigns
-- Setting up SMS link shortening
-- Connecting your Shopify store to your Braze account
+- [Creating a Content Card]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/create/)
+- [WhatsApp setup]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/overview/)
+- [Connected sources integration]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/connected_sources/)
 
 ### Content guidelines
 
-Cover only what the user needs to know to take action. Only include references that are vital to completing the how-to guide, such as listing options to select from during a step. Link out to references that are longer than reasonable to include in the same article, such as [Segmentation filters]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters).
+Cover only what the user needs to know to take action. Only include [references](#references) (technical, non-action based information) that are vital to reaching their goal, such as a list of the options a user can select from during a step. Link out to references that are longer than reasonable to include in the same article, such as [Segmentation filters]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters).
+
+The how-to guide should cover the "happy path" to the goal, which assumes the best case scenario while completing the task. Avoid providing troubleshooting information, which you can include in a separate reference section or article.
 
 #### Headers
 
@@ -50,7 +53,7 @@ Replace `PAGE_TITLE` with the title of your page, which should follow the Braze 
 
 [H3] Step 2: Add a template
 
-Copy and paste one of the following templates into your Markdown file. For more information, see [Templates].
+Copy and paste one of the following templates into your Markdown file. For more information, see [Templates]({{site.baseurl}}/contributing/templates/).
 
 [H4] Basic template
 ```
@@ -95,17 +98,18 @@ If the steps can’t be summarized in concise numbered bullets, consider using n
 Tutorials are learning-oriented practical lessons. They focus on what the user learns, such as becoming familiar with terminology, how things interact, commands, and similar.
 
 Examples include:
-- Your first WhatsApp campaign
-- Optimizing your Canvas flow
-- Improving consumer engagement with Braze
+- [Rules-based recommendations]({{site.baseurl}}/user_guide/sage_ai/recommendations/rules_based_recommendations/)
+- [Assigning Liquid variables]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/using_liquid/)
 
 ### Content guidelines
 
 Create a guided step-by-step activity that leads to a successful conclusion. In other words, a scenario for the user to follow or roleplay. Assume that the user has little to no familiarity with the platforms, tools, or workflows used during the activity.
 
+#### Headers and bullet points
+
 Follow the same header and bullet point format as [how-to guides](#content-guidelines).
 
-#### Tips
+### Tips
 
 Provide ready-made assets for the user to input that aren't the key focus of your tutorial. For example, you could provide photos, messaging, and Liquid coding for a tutorial that teaches users how to use a variety of features when creating a campaign.
 
@@ -113,9 +117,16 @@ Provide ready-made assets for the user to input that aren't the key focus of you
 
 References are information-oriented content. They focus on providing the user with objective, authoritative, and technical knowledge.
 
+Examples include:
+- [Message engagement events]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events/) (events glossary)
+- [Query invalid phone numbers]({{site.baseurl}}/api/endpoints/sms/get_query_invalid_numbers/) (API endpoint information)
+- [Liquid terms to know]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/) (definition glossary)
+
 ### Content guidelines
 
-Place troubleshooting guides into a dedicated section article
+Create technical descriptions or information that are necessary to complete a task. Try to organize the information alphabetically, categorically, or hierarchically.
+
+Put references in their respective articles unless they're longer than seems appropriate for a single article or will be referenced by multiple articles. If they're only referenced by a single how-to guide and long enough to disrupt the flow of the steps, you can [make them collapsible]({{site.baseurl}}/contributing/styling_examples/#collapsible-content).
 
 #### Use cases 
 
@@ -127,6 +138,13 @@ Use dashboard-06 to access FakeBrandz workspaces. Make sure to use practical rea
 
 Explanations are understanding-oriented content. They focus on improving the user’s conceptual understanding.
 
+Examples include:
+- [Getting started: Braze overview]({{site.baseurl}}/user_guide/getting_started/overview/)
+- [Integration overview]({{site.baseurl}}/developer_guide/platform_wide/getting_started/integration_overview/)
+- [Braze data retention information]({{site.baseurl}}/api/data_retention/)
+
 ### Content guidelines
 
-Describe concepts, such as how data travels between features, third-party partners, tools, and similar. You can also cover how features and techniques can benefit users.
+Create textual or visual descriptions of concepts, such as how data travels between features, third-party partners, tools, and similar. You can also discuss how features and techniques can benefit users.
+
+You can broadly describe steps to acheive a general goal (such as using A/B testing to improve your messaging), but don't go into the same detail you would for a [how-to guide](#how-to-guides) or [tutorial](#tutorials).
