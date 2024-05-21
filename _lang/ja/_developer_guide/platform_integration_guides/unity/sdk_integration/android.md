@@ -160,4 +160,4 @@ Braze は Unity Android との統合を自動化するためのネイティブ U
 [unity-1]: https://github.com/SDWebImage/SDWebImage
 [unity-2]: https://firebase.google.com/docs/unity/setup
 [unity-3]: https://developer.android.com/jetpack/androidx
-[ユニティ 4]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/in-app_messaging/integration/
+[unity-4]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/in-app_messaging/integration/
