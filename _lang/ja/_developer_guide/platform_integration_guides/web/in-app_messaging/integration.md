@@ -86,5 +86,5 @@ Web SDK を使用して HTML アプリ内メッセージを有効にするには
 [13]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/in_app_messaging/#slideup-in-app-messages
 [17]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/in_app_messaging/#modal-in-app-messages
 [41]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/in_app_messaging/#full-in-app-messages
-[42]: {{site.baseurl}/developer_guide/platform_integration_guides/web/in_app_messaging/#html-in-app-messages
+[42]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/in_app_messaging/#html-in-app-messages
 [53]: https://www.braze.com/customers
