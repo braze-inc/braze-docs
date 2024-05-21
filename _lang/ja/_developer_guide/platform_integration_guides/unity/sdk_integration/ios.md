@@ -71,4 +71,4 @@ Braze は Unity iOS 統合を自動化するためのネイティブ Unity ソ�
 [unity-1]: https://github.com/SDWebImage/SDWebImage
 [unity-2]: https://firebase.google.com/docs/unity/setup
 [unity-3]: https://developer.android.com/jetpack/androidx
-[ユニティ 4]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/in-app_messaging/overview/
+[[unity-4]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/in-app_messaging/overview/
