@@ -9,8 +9,6 @@ description: "Integrating Braze and Celebrus."
 
 <!-- The description starts with a '>' character and contains an overview of what will be covered. Optionally, in a following paragraph, you can contextualize the topic at a high-level. -->
 > Celebrus seamlessly integrates with Braze SDK across web and mobile app channels, facilitating the population of Braze with channel activity data. This includes comprehensive insights into visitor traffic across digital assets over specified periods. In addition, Celebrus captures rich profile data for each individual customer, which can be seamlessly synced with Braze. This empowers you to devise highly effective Braze analytics and communication strategies based on comprehensive, accurate, and detailed first-party data. This capability is further bolstered by Celebrus' Machine Learning-driven Signals, ensuring hassle-free data capture without the need for extensive tagging. With a robust first-party identity graph in place, all data becomes instantly accessible for immediate use.
->
->
 ## Prerequisites
 
 | Requirement | Description |
