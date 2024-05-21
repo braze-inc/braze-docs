@@ -62,7 +62,7 @@ AMP Web Push コンポーネントは、プッシュ サブスクリプション
 id="amp-web-push"
 helper-iframe-url="FILE\_PATH\_TO\_YOUR\_HELPER\_IFRAME"
 permission-dialog-url="許可ダイアログへのファイルパス"
-サービスワーカー URL = "サービスワーカーへのファイルパス?apiKey = {API キー} &baseUrl = {ベース URL}"
+service-worker-url="FILE\_PATH\_TO\_YOUR\_SERVICE\_WORKER?apiKey={YOUR\_API\_KEY}&baseUrl={YOUR\_BASE\_URL}"
 >
 \`\`\`
 
