@@ -107,6 +107,28 @@ When a recipient clicks **Unsubscribe**, the mailbox provider sends the unsubscr
 
 Enabling list-unsubscribe is a deliverability best practice and a requirement at some of the premier mailbox providers. It encourages end users to safely remove themselves from unwanted messages versus hitting the spam button in an email client, the latter of which is detrimental to sending reputation and email deliverability.
 
+### Mailbox provider support
+
+The following table summarizes mailbox provider support for “mailto:” header, list-unsubscribe URL, and one-click unsubscribe ([RFC 8058](https://datatracker.ietf.org/doc/html/rfc8058)).
+
+| List-unsubscribe header | Mailto: header | List-unsubscribe URL | One-click unsubscribe (RFC 8058) | 
+| ----- | --- | --- | --- |
+| Gmail | Supported* | Supported | Supported |
+| Gmail Mobile | Not supported | Not supported | Not supported |
+| Apple Mail | Supported | Not supported | Not supported |
+| Outlook.com | Supported | Not supported | Not supported |
+| Yahoo! Mail | Supported* | Not supported | Supported |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+
+_*Yahoo and Gmail will eventually deprecate the "mailto:" header and will only support one-click._
+
+Displaying the header is ultimately determined by the mailbox provider. To check if the list-unsubscribe header is included in the raw (text) email for the recipient in Gmail, do the following:
+
+1. Select **Show Original** in the email. This opens a new tab with the raw version of the email and its headers.
+2. Search for "List-Unsubscribe".
+
+If the header is in the raw version of the email but is not displayed, the mailbox provider has determined to not show the unsubscribe option, meaning we don't have further insight as to why the mailbox provider isn't displaying the header. Seeing the list-unsubscribe header is ultimately reputation-based. In most cases, the better your sender reputation with the inbox, the less likely the list-unsubscribe header will appear.
+
 ### Email unsubscribe header in workspaces
 
 ![]({% image_buster /assets/img/email_settings/email_unsub_header_workspaces.png %}){: style="float:right;max-width:60%;margin-left:15px;"}
@@ -237,29 +259,31 @@ Learn more about best practices for email list management in [Managing email sub
 {% endtab %}
 {% endtabs %}
 
-## Mailbox provider support
-
-The following table summarizes mailbox provider support for “mailto:” header, list-unsubscribe URL, and one-click unsubscribe ([RFC 8058](https://datatracker.ietf.org/doc/html/rfc8058)).
-
-| List-unsubscribe header | Mailto: header | List-unsubscribe URL | One-click unsubscribe (RFC 8058) | 
-| ----- | --- | --- | --- |
-| Gmail | Supported* | Supported | Supported |
-| Gmail Mobile | Not supported | Not supported | Not supported |
-| Apple Mail | Supported | Not supported | Not supported |
-| Outlook.com | Supported | Not supported | Not supported |
-| Yahoo! Mail | Supported* | Not supported | Supported |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
-
-_*Yahoo and Gmail will eventually deprecate the "mailto:" header and will only support one-click._
-
-Displaying the header is ultimately determined by the mailbox provider. To check if the list-unsubscribe header is included in the raw (text) email for the recipient in Gmail, do the following:
-
-1. Select **Show Original** in the email. This opens a new tab with the raw version of the email and its headers.
-2. Search for "List-Unsubscribe".
-
-If the header is in the raw version of the email but is not displayed, the mailbox provider has determined to not show the unsubscribe option, meaning we don't have further insight as to why the mailbox provider isn't displaying the header. Seeing the list-unsubscribe header is ultimately reputation-based. In most cases, the better your sender reputation with the inbox, the less likely the list-unsubscribe header will appear.
-
 ## Frequently asked questions
+
+### One-click unsubscribe
+
+{% details Can the one-click unsubscribe URL (via list-unsubscribe header) link to a preference center? %}
+No, that doesn't adhere to RFC 8058, meaning you won't be compliant with Yahoo and Gmail's one-click unsubscribe requirement.
+{% enddetails %}
+
+{% details Will I need to edit past email campaigns and Canvases to apply the one-click unsubscribe setting after enabling it? %}
+If you don't have any of the use cases for message-level one-click list-unsubscribe setting, there's no required action as long as the setting is turned on under **Email Preferences**. Braze will automatically add the one-click unsubscribe headers to all outgoing marketing and promotional messages. However, if you do need to configure one-click unsubscribe behavior on a per message-level, you'll need to update prior campaigns and Canvas steps with email accordingly.
+{% enddetails %}
+
+{% details I can see the list-unsubscribe and one-click unsubscribe header in the original message or raw data, but why don't I see the Unsubscribe button in Gmail or Yahoo? %}
+Gmail and Yahoo ultimately decide whether or not to display the list-unsubscribe or one-click unsubscribe header. For new senders or senders with low sender reputation, this can occasionally cause the unsubscribe button to not display. 
+{% enddetails %}
+
+{% details Does the custom one-click unsubscribe header support Liquid? %}
+Yes, Liquid and conditional logic are supported to allow for dynamic one-click unsubscribe URLs for the header.
+{% enddetails %}
+
+{% alert tip %}
+If you're adding conditional logic, avoid having output values that add whitespaces to your URL as Braze does not remove these whitespaces.
+{% endalert %}
+
+### Message-level one-click list-unsubscribe
 
 {% details If I add the email headers for one-click manually and I have email unsubscribe header turned on, what is the expected behavior? %}
 The email headers added for one-click list-unsubscribe will be applied to all future sends of this campaign.
@@ -284,26 +308,6 @@ No, we currently do not have plans to add this for email templates as these temp
 {% details Does this feature check that the one-click unsubscribe URL added to the custom option is valid? %}
 No, we don't check or validate any links in the Braze dashboard. Be sure to properly test your URL before launch.
 {% enddetails %}
-
-{% details Can the one-click unsubscribe URL (via list-unsubscribe header) link to a preference center? %}
-No, that doesn't adhere to RFC 8058, meaning you won't be compliant with Yahoo and Gmail's one-click unsubscribe requirement.
-{% enddetails %}
-
-{% details Will I need to edit past email campaigns and Canvases to apply the one-click unsubscribe setting after enabling it? %}
-If you don't have any of the use cases for message-level one-click list-unsubscribe setting, there's no required action as long as the setting is turned on under **Email Preferences**. Braze will automatically add the one-click unsubscribe headers to all outgoing marketing and promotional messages. However, if you do need to configure one-click unsubscribe behavior on a per message-level, you'll need to update prior campaigns and Canvas steps with email accordingly.
-{% enddetails %}
-
-{% details I can see the list-unsubscribe and one-click unsubscribe header in the original message or raw data, but why don't I see the Unsubscribe button in Gmail or Yahoo? %}
-Gmail and Yahoo ultimately decide whether or not to display the list-unsubscribe or one-click unsubscribe header. For new senders or senders with low sender reputation, this can occasionally cause the unsubscribe button to not display. 
-{% enddetails %}
-
-{% details Does the custom one-click unsubscribe header support Liquid? %}
-Yes, Liquid and conditional logic are supported to allow for dynamic one-click unsubscribe URLs for the header.
-{% enddetails %}
-
-{% alert tip %}
-If you're adding conditional logic, avoid having output values that add whitespaces to your URL as Braze does not remove these whitespaces.
-{% endalert %}
 
 
 [0]: {% image_buster /assets/img_archive/list_unsub_img1.png %}
