@@ -179,4 +179,4 @@ Errors will be logged in the [Message Activity Log]({{site.baseurl}}/user_guide/
 
 ### Which credentials are used if I have both Legacy and new Service Account credentials?
 
-Once new Service Account credentials are uploaded, those will be used immediately. Legacy credentials will only be used if you delete the new credentials using the "Revert Credentials" button.
+Once new Service Account credentials are uploaded, those will be used immediately. Legacy credentials will only be used if you delete the new credentials using the **Revert Credentials** button.
