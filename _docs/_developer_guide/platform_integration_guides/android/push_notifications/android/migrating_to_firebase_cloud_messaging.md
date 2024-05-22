@@ -149,38 +149,34 @@ If you delete your new credentials, you cannot restore them later. You'll need t
 
 ## Frequently Asked Questions (FAQ) {#faq}
 
-#### How do I know if my new credentials are working?
+### How do I know if my new credentials are working?
 
-If you are able to send Android push to this app (via Test Send, or an actual campaign/canvas send) then your credentials are working.
+If you are able to send an Android push to this app (via Test Send, or an actual campaign/Canvas send) then your credentials are working.
 
-#### Android Push isn't sending for my app after uploading these new credentials
+### Android Push isn't sending for my app after uploading these new credentials
 
-Clicking the "Revert Credentials" button will delete your newly uploaded credentials and revert to your legacy credentials. This button will only be visible if you had legacy credentials prior to uploading the new service account credentials.
+Use the **Revert Credentials** button to delete your newly uploaded credentials and revert to your legacy credentials. This button will only be visible if you had legacy credentials prior to uploading the new service account credentials.
 
-#### Before migrating, do I need to update my app or SDK?
+### Before migrating, do I need to update my app or SDK?
 
 No. You only need to upload your new credentials to Braze.
 
-#### Do I need to delete my legacy credentials first?
+### Do I need to delete my old legacy credentials first?
 
 No. If you ever need to delete your new credentials, [your legacy credentials can be used instead](#reverting-your-credentials).
 
-#### After migrating, why is there still a warning message in Braze?
+### After migrating, why is there still a warning message in Braze?
 
 You'll continue to see this warning message if there's at least one Android app in your workspace you still need migrate. Be sure to migrate all of your Android apps over to Google's fully-supported FCM API.
 
-#### After migrating, how long until I send push notifications again?
+### After migrating, how long until I send push notifications again?
 
 After migrating, you can start sending push notifications using your new credentials right away.
 
-#### How can I see more details on error messages or failures?
+### How can I see more details on error messages or failures?
 
-Errors will be logged in the [Message Activity Log](https://www.braze.com/docs/user_guide/administrative/app_settings/message_activity_log_tab/) with details on any push failure.
+Errors will be logged in the [Message Activity Log]({{site.baseurl}}/user_guide/administrative/app_settings/message_activity_log_tab/) with details on any push failure.
 
-#### Do I need to delete my old legacy credentials from App Settings?
-
-No, your old credentials can remain there, and will be used as a fallback should you delete your new credentials using the "Revert Credentials" button.
-
-#### Which credentials are used if I have both Legacy and new Service Account credentials?
+### Which credentials are used if I have both Legacy and new Service Account credentials?
 
 Once new Service Account credentials are uploaded, those will be used immediately. Legacy credentials will only be used if you delete the new credentials using the "Revert Credentials" button.
