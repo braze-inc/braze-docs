@@ -61,11 +61,11 @@ After users load the link preview, a personalized image will render with the abi
 
 ### Android (Google & Samsung devices)
 
-Andriod users aren't required to save your brand as a contact to receive dynamic SMS link previews. However, users who have done so and have turned on automatic previews for their device can automatically view images for preview links.
+Android users aren't required to save your brand as a contact in order to receive dynamic SMS link previews. However, it is still recommended so that the device can automatically load the link previews.
 
 ![5]{: style="max-width:30%;"}
 
-Users who haven't saved your brand as a contact and have turned on automatic previews will have to select **Tap to load preview** to load the image. <br>![6]{: style="max-width:30%;"}
+Users who haven't saved your brand as a contact and have turned on automatic previews will have to select **Tap to load preview** to load the preiew image. <br>![6]{: style="max-width:30%;"}
 
 ## Considerations
 
