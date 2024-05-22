@@ -155,7 +155,7 @@ Your new credentials start working as soon as you add them to Braze. To test you
 
 ### Where can I check error messages?
 
-You can review push notification errors in your [message activity log](https://www.braze.com/docs/user_guide/administrative/app_settings/message_activity_log_tab/).
+You can review push notification errors in your [message activity log]({{site.baseurl}}/user_guide/administrative/app_settings/message_activity_log_tab/).
 
 ### Before migrating, do I need to update my app or SDK?
 
