@@ -195,19 +195,7 @@ Braze.configure(this, brazeConfig)
 If you'd like manually register FCM tokens instead, you can call [`Braze.setRegisteredPushToken()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze/registered-push-token.html) inside your app's [`onCreate()`](https://developer.android.com/reference/android/app/Application.html#onCreate()) method.
 {% endalert %}
 
-### Step 8: Remove unnecessary permissions
-
-With your new push integration set up, the following permissions are no longer needed by Braze in your project's `braze.xml` file:
-
-  ```xml
-  <uses-permission android:name="android.permission.GET_ACCOUNTS" />
-  <uses-permission android:name="android.permission.WAKE_LOCK" />
-  <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
-  <permission android:name="YOUR-APPLICATION-PACKAGE-NAME.permission.C2D_MESSAGE" android:protectionLevel="signature"/>
-  <uses-permission android:name="YOUR-APPLICATION-PACKAGE-NAME.permission.C2D_MESSAGE" />
-  ```
-
-### Step 9: Remove automatic requests in your application class
+### Step 8: Remove automatic requests in your application class
 
 To prevent Braze from triggering unnecessary network requests everytime you send silent push notifications, remove any automatic network requests configured in your `Application` class's `onCreate()` method. For more information see, [Android Developer Reference: Application](https://developer.android.com/reference/android/app/Application).
 
