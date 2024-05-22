@@ -472,6 +472,16 @@ We have a public [GitHub repository](https://github.com/braze-inc/braze-examples
 
 Any operations that are possible through the Braze `/users/track` endpoint are supported through Cloud Data Ingestion, including updating nested custom attributes, adding subscription status, and syncing custom events or purchases. 
 
+Feilds within the payload should follow the same format as the corresponding /users/track endpoint. For detailed formatting requirements, please refer to the following:
+
+| Data Type | Formatting Specifications |
+| --------- | ---------| --------- | ----------- |
+| `attributes` | See [user attributes object]({{site.baseurl}}/api/objects_filters/user_attributes_object/) |
+| `events` | See [events object]({{site.baseurl}}/api/objects_filters/event_object/) |
+| `purchases` | See [purchases object]({{site.baseurl}}/api/objects_filters/purchase_object/) |
+
+Note the special requirement for [capturing dates]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/nested_custom_attribute_support/#capturing-dates-as-object-properties) in nested attributes. 
+
 {% tabs local %}
 {% tab Nested Custom Attributes %}
 You may include nested custom attributes in the payload column for a custom attributes sync. 
