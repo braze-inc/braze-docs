@@ -472,7 +472,7 @@ We have a public [GitHub repository](https://github.com/braze-inc/braze-examples
 
 Any operations that are possible through the Braze `/users/track` endpoint are supported through Cloud Data Ingestion, including updating nested custom attributes, adding subscription status, and syncing custom events or purchases. 
 
-Feilds within the payload should follow the same format as the corresponding /users/track endpoint. For detailed formatting requirements, please refer to the following:
+Fields within the payload should follow the same format as the corresponding /users/track endpoint. For detailed formatting requirements, please refer to the following:
 
 | Data Type | Formatting Specifications |
 | --------- | ---------| --------- | ----------- |
