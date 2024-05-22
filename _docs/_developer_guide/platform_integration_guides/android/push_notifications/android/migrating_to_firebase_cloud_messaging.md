@@ -149,13 +149,13 @@ If you delete your new credentials, you cannot restore them later. You'll need t
 
 ## Frequently Asked Questions (FAQ) {#faq}
 
-### How do I know if my new credentials are working?
+### How do I know my new credentials are working?
 
-If you are able to send an Android push to this app (via Test Send, or an actual campaign/Canvas send) then your credentials are working.
+You're new credentials start working as soon as you add them to Braze. To test your new credentials, send a real or test push notification to your app using FCM or Braze. If the push notification goes through, everything is working. If it doesn't, see [Test your new credentials](#step-a-test-your-new-credentials).
 
-### Android Push isn't sending for my app after uploading these new credentials
+### Where can I check error messages?
 
-Use the **Revert Credentials** button to delete your newly uploaded credentials and revert to your legacy credentials. This button will only be visible if you had legacy credentials prior to uploading the new service account credentials.
+You can review push notification errors in your [message activity log](https://www.braze.com/docs/user_guide/administrative/app_settings/message_activity_log_tab/).
 
 ### Before migrating, do I need to update my app or SDK?
 
@@ -172,11 +172,3 @@ You'll continue to see this warning message if there's at least one Android app 
 ### After migrating, how long until I send push notifications again?
 
 After migrating, you can start sending push notifications using your new credentials right away.
-
-### How can I see more details on error messages or failures?
-
-Errors will be logged in the [Message Activity Log]({{site.baseurl}}/user_guide/administrative/app_settings/message_activity_log_tab/) with details on any push failure.
-
-### Which credentials are used if I have both Legacy and new Service Account credentials?
-
-Once new Service Account credentials are uploaded, those will be used immediately. Legacy credentials will only be used if you delete the new credentials using the **Revert Credentials** button.
