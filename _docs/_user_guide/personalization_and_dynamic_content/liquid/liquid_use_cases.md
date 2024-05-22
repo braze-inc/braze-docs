@@ -576,7 +576,6 @@ This use case captures two monetary custom attributes, then calculates and displ
 {% assign current_raised =  {{custom_attribute.${last_selected_event_personal_amount_raised}}} %}
 {% assign difference =  event_goal | minus: current_raised %}
 You only have ${{ difference | round: 0 | number_with_delimiter }} left to raise!
-{% endif %}
 ```
 {% endraw %}
 

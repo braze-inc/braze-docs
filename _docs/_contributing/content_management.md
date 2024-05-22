@@ -1,6 +1,6 @@
 ---
-nav_title: Content Management
-article: Content Management
+nav_title: Managing Content
+article: Managing Content
 description: "This is an overview of how content is managed on Braze Docs."
 page_order: 2 
 noindex: true
@@ -278,6 +278,36 @@ page_order: 0
 
 {% alert note %}
 While a subsection with `config_only:` set to `true` is not rendered as a page, the subsection's directory name is still used in the URLs for pages in that subsection. For more information, see [URLs](#urls).
+{% endalert %}
+
+## Cross-references
+
+A cross-reference is when one page on Braze Docs links to another page on Braze Docs. Due to certain site requirements, Braze Docs doesn't support [standard Markdown syntax](https://www.markdownguide.org/basic-syntax/) for cross-reference links, so we created one using Liquid.
+
+{% raw %}
+```markdown
+[LINK_TEXT]({{site.baseurl}}/SHORT_URL)
+```
+{% endraw %}
+
+Replace the following:
+
+| Placeholder | Description                                        |
+|-------------|----------------------------------------------------|
+| `LINK_TEXT` | The page title or related action.                  |
+| `SHORT_URL` | The page URL with `https://www.braze.com` removed. |
+{: .reset-td-br-1 .reset-td-br-2}
+
+Your cross-reference link should be similar to the following:
+
+{% raw %}
+```markdown
+Before continuing, [create your SSH token]({{site.baseurl}}/docs/developer_guide/platform_wide/sdk_authentication).
+```
+{% endraw %}
+
+{% alert tip %}
+For a full walkthrough, see [Cross-referencing]({{site.baseurl}}/contributing/content_management/cross_referencing/).
 {% endalert %}
 
 ## Content reuse
