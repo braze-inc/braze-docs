@@ -119,7 +119,7 @@ Property values can be any of the following data types:
 | Data Type | Description |
 | --- | --- |
 | Numbers | As either [integers](https://en.wikipedia.org/wiki/Integer) or [floats](https://en.wikipedia.org/wiki/Floating-point_arithmetic) |
-| Booleans |  |
+| Booleans | |
 | Datetimes | Formatted as strings in [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) or `yyyy-MM-dd'T'HH:mm:ss:SSSZ` format. Not supported within arrays. |
 | Strings | 255 characters or fewer. |
 | Arrays | Arrays cannot include datetimes. |
@@ -208,7 +208,7 @@ For Canvas Flow messaging, `canvas_entry_properties` can be used in Liquid in an
 Consider the following request for RetailApp, a retail store: `\"canvas_entry_properties\" : {\"product_name\" : \"shoes\", \"product_price\" : 79.99}`. They can add the word "shoes" to a message with the Liquid `{{canvas_entry_properties.${product_name}}}`.
 {% endraw %}
 
-RetailApp can also trigger specific messages to send for different `product_name` properties in a Canvas that targets users after they've made a purchase. For example, they can send different messages to users who purchased shoes and users who purchased something else by adding the following Liquid into a Message step.
+RetailApp can also trigger specific messages to send for different `product_name` properties in a Canvas that targets users after they've triggered a purchase event. For example, they can send different messages to users who purchased shoes and users who purchased something else by adding the following Liquid into a Message step.
 
 {% raw %}
 ```markdown
