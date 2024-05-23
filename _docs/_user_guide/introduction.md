@@ -12,7 +12,7 @@ user_menu_list:
   - name: Manage Your Account
     image: /assets/img/braze_icons/settings-01-braze-purple-dark.svg
     bg_color: '#C9C4FF'
-    link: /docs/user_guide/administrative/manage_your_braze_users/company-wide_settings_management/
+    link: /docs/user_guide/administrative/app_settings/company_settings/
     description: Manage your company settings, users, and more.
   - name: Logging Into Braze
     image: /assets/img/braze_icons/log-in-04-braze-pink-dark.svg
