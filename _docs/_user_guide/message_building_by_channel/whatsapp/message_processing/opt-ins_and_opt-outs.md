@@ -171,7 +171,7 @@ The update might complete at variable speeds because Braze batches the [User Upd
 A Webhook campaign can trigger entry into a second campaign after adding the user's phone number to the WhatsApp subscription group when the user sends a keyword to the subscription group's phone number.
 
 {% alert important %}
-You don't need to use this method for STOP messages. The confirmation message will be sent before the user is removed from the subscription group, so you can use one of the other two steps.
+You do not need to use this method for STOP messages. The confirmation message will be sent before the user is removed from the subscription group, so you can use one of the other two steps.
 {% endalert %}
 
 1. Create a campaign or Canvas with an action-based step **Send a WhatsApp Inbound Message**. Select **Where the message body** and enter "START" for **Is**.<br><br>![][13]{: style="max-width:70%;"}<br><br>
