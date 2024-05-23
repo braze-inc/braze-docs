@@ -75,7 +75,7 @@ Refer to our [Filters]({{site.baseurl}}/user_guide/personalization_and_dynamic_c
 
 ## Liquid highlights
 
-Refer to the following table for the Liquid element and corresponding color scheme when you enter Liquid inputs.
+As you build personalized messages using Liquid, refer to this table for the Liquid element and corresponding color scheme.
 
 | Liquid element   | Color  |
 |------------------|--------|
