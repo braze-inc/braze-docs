@@ -151,7 +151,7 @@ If you delete your new credentials, you cannot restore them later. You'll need t
 
 ### How do I know my new credentials are working?
 
-Your new credentials start working as soon as you add them to Braze. To test your credentials, send a real or test push notification to your app using FCM or Braze. If the push notification goes through, everything is working. If it doesn't, see [Test your new credentials](#step-a-test-your-new-credentials).
+Your new credentials will be used as soon as you upload them to Braze. To test your credentials, click the "Test Credentials" button for quick feedback. If you get an error you can always [revert to your legacy credentials temporarily](#reverting-your-credentials). 
 
 ### Where can I check error messages?
 
