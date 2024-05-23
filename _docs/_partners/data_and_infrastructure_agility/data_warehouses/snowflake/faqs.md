@@ -1,29 +1,30 @@
 ---
-nav_title: FAQ
-article_title: Snowflake Data Sharing FAQ
+nav_title: FAQs
+article_title: Snowflake Data Sharing FAQs
 page_order: 3
 page_type: FAQ
-description: "This article covers some frequently asked questions for Snowflake Data Sharing"
+description: "This article answers frequently asked questions about Snowflake data sharing."
 
 ---
 
-# Frequently Asked Questions
+# Frequently asked questions
 
-### Is it possible to obfuscate PII data via snowflake data sharing?
-It is not supported as of now.
+### Is it possible to obfuscate PII data via Snowflake data sharing?
+No, as of now that is not supported.
 
-### Do I need same region data share or cross region share?
-You would use same region data sharing under the following scenario:
-- Your Snowflake account is in US-EAST-1 (AWS) and your braze dashboard region is in US.
-- Or your Snowflake region is in EU-CENTRAL-1 and your braze dashboard region is in EU.
-Otherwise cross region data sharing should be purchased. 
+### Do I need data share for the same region or cross region?
+Use data sharing for the same region in the following scenarios:
+- Your Snowflake account is in US-EAST-1 (AWS) and your Braze dashboard region is in the US.
+- Your Snowflake region is in EU-CENTRAL-1 and your Braze dashboard region is in the EU.
 
-### What to do with my data share when I'm switching to a new snowflake account?
-You can simply delete the old data share associated with your old Snowflake account, and create a new share for the new account. All historical data should be available in the recreated share. 
+Otherwise, use data sharing for cross region. 
 
-### I'm not seeing data in my data share.
-One common issue is having the wrong Snowflake account ID when creating the data share. The Account ID on the data sharing dashboard must match the output of CURRENT_ACCOUNT() from your Snowflake account.
+### What should I do with my data share when I switch to a new Snowflake account?
+You can delete the old data share associated with your old Snowflake account and then create a new share for the new account. All historical data will be available in the new share. 
 
-If it’s a cross region data share, data might not be immediately available. Depending on the your data volume it could take a few hours for data to get synced to your region.
+### Why don't I see data in my data share?
+You might have used the wrong Snowflake account ID when creating your data share. The account ID on the data sharing dashboard must match the output of `CURRENT_ACCOUNT()` from your Snowflake account.
+
+If your share is cross region, the data might not be immediately available. Depending on your data volume, it could take a few hours for data to sync to your region.
 
 
