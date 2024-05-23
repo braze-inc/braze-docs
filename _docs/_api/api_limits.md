@@ -80,6 +80,30 @@ A single request to the [Messaging endpoints][1] can reach any one of the follow
 - A segment of any size created in the Braze dashboard, specified by its `segment_id`
 - Users who match additional audience filters of any size, defined in the request as a [connected audience][2] object
 
+### Example batch request
+
+The following example uses `external_id` to make one API call for email and SMS.
+
+```
+curl --location --request POST 'https://rest.iad-01.braze.com/v2/subscription/status/set' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: Bearer YOUR-REST-API-KEY' \
+--data-raw '{
+  "subscription_groups":[
+    {
+      "subscription_group_id":"subscription_group_identifier",
+      "subscription_state":"subscribed",
+      "external_ids":["example-user","example1@email.com"]
+    },
+    {
+      "subscription_group_id":"subscription_group_identifier",
+      "subscription_state":"subscribed",
+      "external_ids":["example-user","example1@email.com"]
+    }
+  ]
+}
+```
+
 ## Monitoring your rate limits
 
 Every single API request sent to Braze returns the following information in the response headers:
