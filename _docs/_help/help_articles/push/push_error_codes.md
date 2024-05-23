@@ -18,7 +18,7 @@ Check out these common error messages for push messaging:
 {% tabs %}
 {% tab Android %} 
 ### Push bounced: MismatchSenderId
-`MismatchSenderId` indicates an authentication failure.  Google Cloud Messaging (GCM) authenticates with a couple key pieces of data: senderID and FCM API key.  These should both be validated for accuracy. For more information see the [Android documentation](https://firebase.google.com/docs/cloud-messaging/http-server-ref#error-codes) about this issue.
+`MismatchSenderId` indicates an authentication failure. Firebase Cloud Messaging (FCM) authenticates with a couple key pieces of data: senderID and FCM API key.  These should both be validated for accuracy. For more information see the [Android documentation](https://firebase.google.com/docs/cloud-messaging/http-server-ref#error-codes) about this issue.
 
 Common failures may include:
 - Bad [senderID]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/integration/standard_integration/#step-1-enable-firebase)
