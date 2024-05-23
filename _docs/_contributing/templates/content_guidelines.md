@@ -105,9 +105,29 @@ Examples include:
 
 Create a guided step-by-step activity that leads to a successful conclusion. In other words, a scenario for the user to follow or roleplay. Assume that the user has little to no familiarity with the platforms, tools, or workflows used during the activity.
 
+Introduce the tutorial with the following format:
+
+```markdown
+When you’re finished with this tutorial, you’ll be able to:
+
+- LEARNING_OBJECTIVE
+- LEARNING_OBJECTIVE
+- LEARNING_OBJECTIVE
+```
+
+Replace each `LEARNING_OBJECTIVE` with something the user will broadly learn how to do during the tutorial. For example, a tutorial that walks a user through creating their first contribution to the Braze Docs site might have the following objectives:
+
+```markdown
+- Navigate the Braze Docs GitHub repository
+- Make changes using the GitHub website or your local environment
+- Create pull requests (PRs)
+- Preview your changes in a test site
+- Request a review from the Braze Docs team
+```
+
 #### Headers and bullet points
 
-Follow the same header and bullet point format as [how-to guides](#content-guidelines).
+Follow the same header and bullet point format as [how-to guides](#content-guidelines), but add "Tutorial:" to the beginning of the H2 header. For example, "Tutorial: Your first contribution". 
 
 ### Tips
 
@@ -119,7 +139,7 @@ References are information-oriented content. They focus on providing the user wi
 
 Examples include:
 - [Message engagement events]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events/) (events glossary)
-- [Query invalid phone numbers]({{site.baseurl}}/api/endpoints/sms/get_query_invalid_numbers/) (API endpoint information)
+- [App-by-app user permissions]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/#app-by-app-user-permissions)
 - [Liquid terms to know]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/) (definition glossary)
 
 ### Content guidelines
@@ -128,11 +148,32 @@ Create technical descriptions or information that are necessary to complete a ta
 
 Put references in their respective articles unless they're longer than seems appropriate for a single article or will be referenced by multiple articles. If they're only referenced by a single how-to guide and long enough to disrupt the flow of the steps, you can [make them collapsible]({{site.baseurl}}/contributing/styling_examples/#collapsible-content).
 
+#### Headers
+
+Use Heading 2 and nouns for reference names. For example, [Editor blocks]({{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/dnd_editor_blocks/) has the following names for its references:
+
+```markdown
+- Types
+- Properties
+    - Title
+    - Paragraph
+    - List
+    - Button
+    - Divider
+    - Spacer
+    - Image
+    - Video
+    - Social
+    - Icons
+    - HTML
+    - Menu
+```
+
 #### Use cases 
 
 To demonstrate how a specific industry can use a feature, create a use case. It uses fictional companies to demonstrate how a feature can be used in a specific situation. For example, a use case can cover how a FakeBrandz company could use Canvas boards to retarget users who abandoned carts containing more than three items.
 
-Use dashboard-06 to access FakeBrandz workspaces. Make sure to use practical real-world examples that align with how different industries use features.
+Use dashboard-06 to access FakeBrandz workspaces. Make sure to use practical real-world examples that align with how different industries use features. Use the header format "Use case" for singular use cases. If including multiple use cases, nest them beneath "Use case" and give each use case a descriptive header.
 
 ## Explanations
 
@@ -147,4 +188,8 @@ Examples include:
 
 Create textual or visual descriptions of concepts, such as how data travels between features, third-party partners, tools, and similar. You can also discuss how features and techniques can benefit users.
 
-You can broadly describe steps to acheive a general goal (such as using A/B testing to improve your messaging), but don't go into the same detail you would for a [how-to guide](#how-to-guides) or [tutorial](#tutorials).
+Explanations should reside in the most relevent article. For example, a basic feature article might have an explanation called "How it works" that describes that feature's workflow. If an explanation is too broad to fit into only one article, it might fit best in a landing page for a general topic, such as [Campaigns]({{site.baseurl}}/user_guide/engagement_tools/campaigns) or [Personalized messaging]({{site.baseurl}}/user_guide/personalization_and_dynamic_content).
+
+### Tips
+
+Even though explanations aren't telling users what to do to achieve a specific outcome, you can broadly describe chronological steps to acheive a general goal (such as using A/B testing to improve your messaging). Don't go into the same detail you would for a [how-to guide](#how-to-guides) or [tutorial](#tutorials).
