@@ -205,7 +205,7 @@ You do not need to use this method for STOP messages. The confirmation message w
 
 #### Considerations
 
-- Attribute updates from within the Canvas API Trigger JSON payload is not yet supported, so you can only trigger a WhatsApp campaign for the WhatsApp response message (as in step #2).
+- Attribute updates from within the Canvas API trigger JSON payload is not yet supported, so you can only trigger a WhatsApp campaign for the WhatsApp response message (as in step 2).
 - A WhatsApp template must be approved to send it as a response message. This is because a quick response requires the inbound message trigger to be inside the same campaign or Canvas. If you use a [User Update step](#user-update-step), you can send a quick response message without Meta approval.
 
 
