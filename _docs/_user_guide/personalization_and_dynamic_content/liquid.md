@@ -77,9 +77,9 @@ Refer to our [Filters]({{site.baseurl}}/user_guide/personalization_and_dynamic_c
 
 Refer to the following table for the Liquid element and corresponding color scheme when you enter Liquid inputs.
 
-| Liquid element | Color |
-| --- | --- |
-| Attribute name | Green |
+| Liquid element   | Color  |
+|------------------|--------|
+| Attribute name   | Green  |
 | Custom attribute | Purple |
 {: .reset-td-br-1 .reset-td-br-2}
 
