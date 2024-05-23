@@ -149,18 +149,26 @@ If you delete your new credentials, you cannot restore them later. You'll need t
 
 ## Frequently Asked Questions (FAQ) {#faq}
 
-#### Before migrating, do I need to update my app or SDK?
+### How do I know my new credentials are working?
+
+Your new credentials start working as soon as you add them to Braze. To test your credentials, send a real or test push notification to your app using FCM or Braze. If the push notification goes through, everything is working. If it doesn't, see [Test your new credentials](#step-a-test-your-new-credentials).
+
+### Where can I check error messages?
+
+You can review push notification errors in your [message activity log]({{site.baseurl}}/user_guide/administrative/app_settings/message_activity_log_tab/).
+
+### Before migrating, do I need to update my app or SDK?
 
 No. You only need to upload your new credentials to Braze.
 
-#### Do I need to delete my legacy credentials first?
+### Do I need to delete my old legacy credentials first?
 
 No. If you ever need to delete your new credentials, [your legacy credentials can be used instead](#reverting-your-credentials).
 
-#### After migrating, why is there still a warning message in Braze?
+### After migrating, why is there still a warning message in Braze?
 
 You'll continue to see this warning message if there's at least one Android app in your workspace you still need migrate. Be sure to migrate all of your Android apps over to Google's fully-supported FCM API.
 
-#### After migrating, how long until I send push notifications again?
+### After migrating, how long until I send push notifications again?
 
 After migrating, you can start sending push notifications using your new credentials right away.
