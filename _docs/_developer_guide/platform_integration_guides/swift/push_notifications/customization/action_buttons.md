@@ -137,9 +137,13 @@ UNNotificationCategory *likeCategory = [UNNotificationCategory categoryWithIdent
 {% endtab %}
 {% endtabs %}
 
-Once you register categories in your application, use the Braze dashboard to send notifications of that type to your users. Define your custom notification category in **Compose** step of the push composer. 
+Once you register categories in your application, use the Braze dashboard to send notifications of that type to your users. Define your custom notification category in the **Compose** step of the push composer.
 
-1. Make sure **Action Buttons** are turned on. 
+{% alert note %}
+Defining custom notification categories on the Braze dashboard is only required for action buttons that have special actions, like deeplinking into the application or opening a web URL. If you are creating an action button that simply dismisses a notification, you only need to define that action in your iOS application code and may skip this step for such buttons.
+{% endalert %}
+
+1. Make sure **Action Buttons** are turned on.
 2. For **iOS Notification Category**, select **Enter pre-registered custom iOS Category**.
 3. Enter the category you previously defined (for example `LIKE_CATEGORY`).
 
