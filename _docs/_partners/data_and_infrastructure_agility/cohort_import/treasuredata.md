@@ -42,7 +42,9 @@ Search for the Braze Integration in the **Catalog**, then hover over the icon an
 ### Step 3: Define your Query
 
 {% alert note %}
-Query columns must be specified with the exact column names and data type. The query columns must present at least one of the columns: `user_ids`, `device_ids`, or braze alias column match with configuration on the UI.
+Query columns must be specified with the exact column names and data type. The query columns must include at least one of the columns: `user_ids`, `device_ids`, or braze alias column match with configuration on the UI.
+
+Only user profiles that exist within Braze will be added to a cohort. Cohort Import will not create new user profiles.
 {% endalert %}
 
 1. Navigate to **Data Workbench** > **Queries**.
@@ -51,9 +53,70 @@ Query columns must be specified with the exact column names and data type. The q
 
 ![Treasure Data Integrations Hub Catalog]({% image_buster /assets/img/treasure_data/cohort/cohort3.png %}) 
 
+#### Syncing Cohorts by Identifier
+
+Example Table in Treasure Data
+
+
+| external_id |	email	| device_ids |
+| ----------- | ----------- | ----------- |
+| TDCohort1	| TDCohort1@gmail.com	| 1a2b3c |
+| TDCohort2	| TDCohort2@gmail.com	| 4d5f6g |
+| TDCohort3	| TDCohort3@gmail.com	| 7h8j9k |
+| TDCohort4	| TDCohort4@gmail.com	| 1ab2cd |
+
+
+{% tabs local %} {% tab Syncing External IDs %}
+The column name **must** be `user_ids` or the sync will fail 
+
+```sql
+SELECT
+  external_id as user_ids
+FROM
+  example_cohort_table
+```
+
+The above query would add users **`TDCohort1` , `TDCohort2`, `TDCohort3`,** and **`TDCohort4`** to the cohort in Braze.
+{% endtab %} {% tab Syncing User Aliases %}
+ - `alias_name`: the values of the column  input into the **Aliases (Optional)** field in the Export Results
+ - `alias_label`: the name of the column input into the **Aliases (Optional)** field in the Export Results
+
+```sql
+SELECT
+  email
+FROM
+  example_cohort_table
+```
+The above query would add the following user aliases to the cohort in Braze.
+
+ - "alias_label":"email", "alias_name":"TDCohort1@gmail.com"
+ - "alias_label":"email", "alias_name":"TDCohort2@gmail.com"
+ - "alias_label":"email", "alias_name":"TDCohort3@gmail.com"
+ - "alias_label":"email", "alias_name":"TDCohort4@gmail.com"
+
+{% endtab %} {% tab Syncing Device IDs %}
+The column name **must** be `device_ids` or the sync will fail
+
+```sql
+SELECT
+  device_ids
+FROM
+  example_cohort_table
+```
+
+The above query would add the following device_ids to the cohort in Braze `1a2b3c` , `4d5f6g`, `7h8j9k`, `1ab2cd`
+{% endtab %}{% endtabs %}
+
 ### Step 4: Specify the Result Export Target
+{% alert note %}
+If you are syncing user aliases
+ - `alias_name`: will be the values of the column  input into the **Aliases (Optional)** field in the Export Results
+ - `alias_label`: will be the name of the column input into the **Aliases (Optional)** field in the Export Results
+{% endalert %}
 
 Once the query has been built, select **Export Results**. You can select an existing authentication, such as the one created in the last steps, or create a new authentication to be used for output. 
+
+![Treasure Data Integrations Hub Catalog]({% image_buster /assets/img/treasure_data/cohort/cohort5.png %}) 
 
 Follow [Treasure Data's steps](https://docs.treasuredata.com/articles/#!int/braze-cohort-export-integration/a/ExportIntegrationTemplate-SpecifytheResultExportTarget) for configuring your export to meet your use case.
 
