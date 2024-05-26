@@ -14,7 +14,7 @@ description: "この記事には、2021 年 11 月のリリースノートが含
 
 メールの [キャンバス] ページと [キャンペーン分析] ページに、新しいメール指標「[マシンオープン数]({{site.baseurl}}/user_guide/message_building_by_channel/email/reporting_and_analytics/analytics_glossary/#machine-opens)」が追加されました。この指標は、開封総数のサブセットとして表示される、人間以外の開封数（Appleのサーバーで開封されたものなど）を識別します。
 
-## ランダムバケット数液体変数
+## random\_bucket\_number Liquid variable
 `random_bucket_number`[メッセージをパーソナライズするためのサポートされている Liquid 変数のリストに]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/#supported-personalization-tags)、変数が追加されました。 
 
 ## iOS 15 リッチプッシュ通知ガイドライン
