@@ -200,16 +200,16 @@ Braze でのプッシュの使用を最適化する方法の詳細なガイダ�
 [2]: {% image_buster /assets/img/push_changelog.png %}
 [3]: {% image_buster /assets/img/push_example.png %}
 [4]: {% image_buster /assets/img/push_token_changelog.png %}
-[プッシュトークン]: {{site.baseurl}}/user_guide/message_building_by_channel/push/push_registration/
-[識別子]: {{site.baseurl}}/api/endpoints/export/user_data/post_users_identifier/
-[セグメント]: {{site.baseurl}}/api/endpoints/export/user_data/post_users_segment/
+[push-tokens]: {{site.baseurl}}/user_guide/message_building_by_channel/push/push_registration/
+[identifier]: {{site.baseurl}}/api/endpoints/export/user_data/post_users_identifier/
+[segment]: {{site.baseurl}}/api/endpoints/export/user_data/post_users_segment/
 [5]: {{site.baseurl}}/user_guide/engagement_tools/segments/using_user_search/
-[iosプッシュプロンプト]: {% image_buster /assets/img/push_implementation_guide/ios-push-prompt.png %}
-[Android プッシュプロンプト]: {% image_buster /assets/img/push_implementation_guide/android-push-prompt.png %}
-[ウェブプッシュプロンプト]: {% image_buster /assets/img/push_implementation_guide/web-push-prompt.png %}
-[ios暫定プッシュ]: {% image_buster /assets/img/push_implementation_guide/ios-provisional-push.png %}
-[プッシュプライマー]: {{site.baseurl}}/user_guide/message_building_by_channel/push/push_primer_messages/
+[ios-push-prompt]: {% image_buster /assets/img/push_implementation_guide/ios-push-prompt.png %}
+[android-push-prompt]: {% image_buster /assets/img/push_implementation_guide/android-push-prompt.png %}
+[web-push-prompt]: {% image_buster /assets/img/push_implementation_guide/web-push-prompt.png %}
+[ios-provisional-push]: {% image_buster /assets/img/push_implementation_guide/ios-provisional-push.png %}
+[push-primers]: {{site.baseurl}}/user_guide/message_building_by_channel/push/push_primer_messages/
 [android-13]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/android_13/
 [仮ブログ]: https://www.braze.com/resources/articles/mastering-provisional-push
-[ユーザー属性オブジェクト]: {{site.baseurl}}/api/objects_filters/user_attributes_object
-[ユーザー トラック]: {{site.baseurl}}/api/endpoints/user_data/post_user_track/
+[user\_attributes\_object]: {{site.baseurl}}/api/objects_filters/user_attributes_object
+[users-track]: {{site.baseurl}}/api/endpoints/user_data/post_user_track/
