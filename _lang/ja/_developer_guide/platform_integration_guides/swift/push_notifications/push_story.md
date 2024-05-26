@@ -124,15 +124,15 @@ class NotificationViewController: BrazePushStory.NotificationViewController {}
 ユーザー通知をインポートする
 ユーザー通知のインポート UI
 
-class NotificationViewController:BrazePush Story.通知ビューコントローラ {
-  オーバーライド関数 didReceive (\_) 通知:UNNotification) {
-    スーパー受信しました (通知)
+class NotificationViewController:BrazePushStory.NotificationViewController {
+  override func didReceive(_ notification:UNNotification) {
+    super.didReceive(notification)
     
     // Custom handling logic
   ()
   
-  オーバーライド関数 didReceive (\_) レスポンス:UNNotificationResponse, completionHandler completion: @escaping (UNNotificationContentExtensionResponseOption) -> Void) 
-    Super.didReceive (レスポンス、コンプリートハンドラ:完了)
+  override func didReceive(_ response:UNNotificationResponse, completionHandler completion: @escaping (UNNotificationContentExtensionResponseOption) -> Void) 
+    super.didReceive(response, completionHandler: completion)
     
     // Custom handling logic
   ()
