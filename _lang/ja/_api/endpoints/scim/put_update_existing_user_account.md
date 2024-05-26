@@ -155,7 +155,7 @@ curl --location --request PUT 'https://rest.iad-01.braze.com/scim/v2/Users/dfa24
 ### エラー状態
 この ID のユーザーが Braze に存在しない場合、エンドポイントは次のように応答します。
 
-JSON
+\`\`\`json
 HTTP/1.1 404 Not Found
 Content-Type: text/html; charset=UTF-8
 
@@ -164,7 +164,7 @@ Content-Type: text/html; charset=UTF-8
 "detail": "User not found",
 "status": 404
 }
-    
+    \`\`\`
 
 {% endapi %}
 
