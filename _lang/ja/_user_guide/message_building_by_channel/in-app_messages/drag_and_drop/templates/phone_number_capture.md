@@ -97,11 +97,11 @@ SMS コンプライアンスの詳細については、「 [SMS の法律と規�
 [4]: {{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_laws_and_regulations/
 [5]: {{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/
 
-[画像1]: {% image_buster /assets/img_archive/dnd_iam_phone_capture_example.png %}
+[img1]: {% image_buster /assets/img_archive/dnd_iam_phone_capture_example.png %}
 [img2]: {% image_buster /assets/img_archive/dnd_iam_phone_capture_template.png %}
 [img3]: {% image_buster /assets/img_archive/dnd_iam_phone_capture_select.png %}
-[画像4]: {% image_buster /assets/img_archive/dnd_iam_phone_capture_subscription.png %}
+[img4]: {% image_buster /assets/img_archive/dnd_iam_phone_capture_subscription.png %}
 [img5]: {% image_buster /assets/img_archive/dnd_iam_phone_capture_countries.png %}
-[画像6]: {% image_buster /assets/img_archive/dnd_iam_phone_capture_custom_font.gif %}
-[画像7]: {% image_buster /assets/img_archive/dnd_iam_phone_capture_example2.png %}
-[画像8]: {% image_buster /assets/img_archive/dnd_iam_phone_capture_analytics.png %}
+[img6]: {% image_buster /assets/img_archive/dnd_iam_phone_capture_custom_font.gif %}
+[img7]: {% image_buster /assets/img_archive/dnd_iam_phone_capture_example2.png %}
+[img8]: {% image_buster /assets/img_archive/dnd_iam_phone_capture_analytics.png %}
