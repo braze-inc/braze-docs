@@ -161,7 +161,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/scim/v2/Users' \
 
 このメールアドレスを持つユーザーがBrazeにすでに存在する場合、エンドポイントは次のように応答します。
 
-JSON
+\`\`\`json
 HTTPの/1.1 409 Conflict
 Date: Tue, 10 Sep 2019 02:22:30 GMT
 Content-Type: text/json;charset=UTF-8
@@ -171,7 +171,7 @@ Content-Type: text/json;charset=UTF-8
 "detail": "User already exists in the database.",
 "status": 409
 }
-  
+  \`\`\`
 
 {% endapi %}
 
