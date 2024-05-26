@@ -42,15 +42,15 @@ description: "この参考記事では、Android プッシュ通知用のカス�
 {% tabs %}
 {% tab JAVA %}
 
-\`\`\`ジャワ
-パブリッククラスのカスタムブロードキャストレシーバはブロードキャストレシーバを拡張します {
-  プライベート・スタティック・ファイナル・ストリング・タグ = customBroadcastReceiver.class.getName ();
+\`\`\`java
+public class CustomBroadcastReceiver extends BroadcastReceiver {
+  private static final String TAG = CustomBroadcastReceiver.class.getName();
 
   @Override
-  パブリックボイドonReceive（コンテキストコンテキスト、インテントインテント）{
-    String PushReceivedAction = Constants.Braze\_push\_intent\_notification\_Received;
-    String notificationOpenedAction = Constants.Braze\_push\_intent\_notification\_open;
-    String notificationDeletedAction = Constants.Braze\_push\_intent\_notification\_Deleted;
+  public void onReceive(Context context, Intent intent) {
+    String pushReceivedAction = Constants.BRAZE\_PUSH\_INTENT\_NOTIFICATION\_RECEIVED;
+    String notificationOpenedAction = Constants.BRAZE\_PUSH\_INTENT\_NOTIFICATION\_OPENED;
+    String notificationDeletedAction = Constants.BRAZE\_PUSH\_INTENT\_NOTIFICATION\_DELETED;
 
     String action = intent.getAction();
     Log.d(TAG, String.format("Received intent with action %s", action));
@@ -71,12 +71,12 @@ description: "この参考記事では、Android プッシュ通知用のカス�
 {% endtab %}
 {% tab KOTLIN %}
 
-\`\`コトリン
-クラスカスタム放送受信機：ブロードキャストレシーバー () {
-  onReceive でオーバーライドする (コンテキスト:コンテキスト、意図:意図) {
-    val Push\_ReceivedAction = Constant.Braze\_Push\_Intent\_Notification\_Received
-    val NotificationOpenedAction = Constants.Braze\_push\_intent\_notification\_open
-    val notificationDeletedAction = Constants.Braze\_push\_intent\_notification\_Deleted
+\`\`\`kotlin
+クラスカスタム放送受信機：BroadcastReceiver() {
+  override fun onReceive(context:コンテキスト、意図:Intent) {
+    val pushReceivedAction = Constants.BRAZE\_PUSH\_INTENT\_NOTIFICATION\_RECEIVED
+    val notificationOpenedAction = Constants.BRAZE\_PUSH\_INTENT\_NOTIFICATION\_OPENED
+    val notificationDeletedAction = Constants.BRAZE\_PUSH\_INTENT\_NOTIFICATION\_DELETED
 
     val action = intent.action
     Log.d(TAG, String.format("Received intent with action %s", action))
@@ -117,30 +117,30 @@ private val TAG = CustomBroadcastReceiver::class.java.name
 {% tabs %}
 {% tab JAVA %}
 
-\`\`\`ジャワ
+\`\`\`java
 //インテントは、カスタムブロードキャストレシーバーが受信する Braze プッシュインテントです。
-String DeepLink = intent.getStringExtra (Constants.Braze\_push\_deep\_link\_key);
+String deepLink = intent.getStringExtra(Constants.BRAZE\_PUSH\_DEEP\_LINK\_KEY);
 
 //インテントから抽出されたエクストラバンドルには、カスタムのキーと値のペアがすべて含まれています。
-バンドルエクストラ = intent.getBundleExtra (Constants.Braze\_push\_Extras\_key);
+Bundle extras = intent.getBundleExtra(Constants.BRAZE\_PUSH\_EXTRAS\_KEY);
 
 //Extras バンドルから特定のキーと値のペアを取得する例。
-String MyExtra = Extras.GetString (「my\_key」);
-\`\`
+String myExtra = extras.getString("my\_key");
+\`\`\`
 
 {% endtab %}
 {% tab KOTLIN %}
 
-\`\`コトリン
+\`\`\`kotlin
 //インテントは、カスタムブロードキャストレシーバーが受信する Braze プッシュインテントです。
-val DeepLink = intent.GetStringExtra (Constants.Braze\_push\_deep\_link\_key)
+val deepLink = intent.getStringExtra(Constants.BRAZE\_PUSH\_DEEP\_LINK\_KEY)
 
 //インテントから抽出されたエクストラバンドルには、カスタムのキーと値のペアがすべて含まれています。
-val extras = intent.getBundleExtra (Constants.Braze\_push\_Extras\_key)
+val extras = intent.getBundleExtra(Constants.BRAZE\_PUSH\_EXTRAS\_KEY)
 
 //Extras バンドルから特定のキーと値のペアを取得する例。
-val MyExtra = Extras.GetString (「my\_key」)
-\`\`
+val myExtra = extras.getString("my\_key")
+\`\`\`
 
 {% endtab %}
 {% endtabs %}
