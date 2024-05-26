@@ -342,7 +342,7 @@ user\_daily\_average AS (
 SELECT
   AVG(daily\_average)
 FROM user\_daily\_average;
-:
+\`\`\`
 
 {% alert tip %}
 SMS メッセージの場合は、クエリの `USERS_MESSAGES_EMAIL_SEND_SHARED` を `USERS_MESSAGES_SMS_SEND_SHARED` に置き換えます。プッシュ通知の場合は、クエリの `USERS_MESSAGES_EMAIL_SEND_SHARED` を`USERS_MESSAGES_SMS_SEND_SHARED` に置き換えます
@@ -381,7 +381,7 @@ user\_weekly\_average AS (
 SELECT
   AVG(weekly\_average) AS average\_weekly\_emails
 FROM user\_weekly\_average;
-:
+\`\`\`
 {% alert tip %}
 SMS メッセージの場合は、クエリの `USERS_MESSAGES_EMAIL_SEND_SHARED` を `USERS_MESSAGES_SMS_SEND_SHARED` に置き換えます。プッシュ通知の場合は、クエリの `USERS_MESSAGES_EMAIL_SEND_SHARED` を`USERS_MESSAGES_SMS_SEND_SHARED` に置き換えます
 {% endalert %}
