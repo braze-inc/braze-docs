@@ -313,7 +313,7 @@ AppDelegate.braze = braze;
 - (void)braze:(Braze *)braze sdkAuthenticationFailedWithError:(BRZSDKAuthenticationError *)error {
 // TODO: Optionally log to your error-reporting service
 藤堂:within`error`が現在ログインしているユーザーと一致するかどうかを確認します`user_id`
-  NSLog(@"無効な SDK 認証署名です。");
+  NSLog(@"Invalid SDK Authentication signature.");
   NSString \*newSignature = getNewSignatureSomehow(error);
   [AppDelegate.braze setSDKAuthenticationSignature:newSignature];
   ()
@@ -334,21 +334,21 @@ AppDelegate.braze = braze
 func braze(_ braze: Braze, sdkAuthenticationFailedWithError error: Braze.SDKAuthenticationError) {
 // TODO: Optionally log to your error-reporting service
 藤堂:within`error`が現在ログインしているユーザーと一致するかどうかを確認します`user_id`
-  print("無効な SDK 認証署名です。")
+  print("Invalid SDK Authentication signature.")
   let newSignature = getNewSignatureSomehow(error)
-  AppDelegate.braze?です。set(sdkAuthenticationSignature: newSignature) を使用します。
+  AppDelegate.braze?.set(sdkAuthenticationSignature: newSignature)
   ()
   ```
 {% endtab %}
 {% tab Dart %}
 ```dart
-braze.setBrazeSdkAuthenticationErrorCallback((BrazeSdkAuthenticationErrorエラー)非同期{
+braze.setBrazeSdkAuthenticationErrorCallback((BrazeSdkAuthenticationError error) async {
 // TODO: Optionally log to your error-reporting service
 // TODO: Check if the `user_id` within は `error` 、現在ログインしているユーザーと一致します
-print("無効な SDK 認証署名です。")
+print("Invalid SDK Authentication signature.")
   let newSignature = getNewSignatureSomehow(error)
   braze.setSdkAuthenticationSignature(newSignature);
-  ()
+  });
   \`\`\`
   {% endtab %}
 {% endtabs %}
@@ -461,6 +461,6 @@ BrazeダッシュボードでアプリのSDK認証設定が **[必須** ]に設�
 [6]: #enforcement-options
 [7]: #sdk-callback
 [8]: {% image_buster /assets/img/sdk-auth-settings.png %}
-[9]: #error コード
+[9]: #error-codes
 [10]: {% image_buster /assets/img/sdk-auth-analytics.png %}
 [11]: https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#changeuser
