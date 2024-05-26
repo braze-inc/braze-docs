@@ -228,4 +228,4 @@ AMP メールを Gmail アカウントに配信するには、メールが次の
 {% enddetails %}
 
 [1]: {% image_buster /assets/img/dynamic-content.png %}
-[サポート]: {{site.baseurl}}/support_contact/
+[support]: {{site.baseurl}}/support_contact/
