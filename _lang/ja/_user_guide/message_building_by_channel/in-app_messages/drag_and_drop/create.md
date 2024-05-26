@@ -67,7 +67,7 @@ local_redirect: #set-message-level-styles, #add-a-custom-font, #drag-and-drop-in
 
 **Build message**をクリックして、ドラッグアンドドロップエディタでアプリ内メッセージのデザインを開始します。
 
-(+{% image_buster /assets/img_archive/dnd_iam_select_template.png %})
+![\]({% image_buster /assets/img_archive/dnd_iam_select_template.png %}){: style="max-width:75%"}
 
 ダッシュボードの**Templates** セクションからすべてのテンプレートにアクセスすることもできます。
 
@@ -79,7 +79,7 @@ local_redirect: #set-message-level-styles, #add-a-custom-font, #drag-and-drop-in
 アプリ内メッセージにページを追加する機能は、初期アクセスです。マルチページ・イン・アプリ・メッセージの早期アクセスに関心がある場合は、Braze アカウント・マネージャにお問い合わせください。
 {% endalert %}
 
-(+{% image_buster /assets/img_archive/dnd_iam_mockup.png %})
+![\]({% image_buster /assets/img_archive/dnd_iam_mockup.png %})
 
 {% tabs %}
 {% tab Adding pages %}
@@ -123,7 +123,7 @@ local_redirect: #set-message-level-styles, #add-a-custom-font, #drag-and-drop-in
 4. 最初のページからリンク先のページを選択します。
 5. すべてのページがリンクされるまで続けます。
 
-(+{% image_buster/assets/img_archive/dnd_iam_multipage.gif %})
+![\]({% image_buster/assets/img_archive/dnd_iam_multipage.gif %})
 
 ページが他のページにリンクされていない場合、メッセージは起動できません。
 
