@@ -31,7 +31,7 @@ Braze は、iOS、Android、およびWeb プラットフォームの機能フラ
 関与する作業のほとんどは、導入予定の新機能を構築するエンジニアリングチームに関連しています。ただし、機能フラグの追加に関しては、アプリまたはウェブサイトのコード内の`IF`/`ELSE` ステートメントと同じくらい単純です。
 
 \`\`\`javascript
-インポート { getFeatureFlag } from "@braze/web-sdk";
+import { getFeatureFlag } from "@braze/web-sdk";
 
 if (getFeatureFlag("new\_shopping\_cart").enabled) {
     // Show the new homepage your team has built

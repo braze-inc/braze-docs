@@ -59,7 +59,7 @@ braze-docs
 {% tab with landing page %}
 新しいMarkdown ファイルを開き、以下のテンプレートを追加します。テンプレートの詳細については、[テンプレート]({{site.baseurl}}/contributing/templates/)を参照してください。
 
-\`\`\`マークダウン
+\`\`\`markdown
 ---
 nav_title: NAV\_TITLE
 article_title: LANDING\_PAGE\_TITLE
@@ -94,7 +94,7 @@ CONTENT
 {% tab without landing page %}
 サブセクションのMarkdown ファイルを開き、以下のメタデータを追加してページのナビゲーションタイトルを設定し、ランディングページを無効にします。
 
-\`\`\`マークダウン
+\`\`\`markdown
 ---
 nav_title: NAV\_TITLE
 config_only: true
@@ -107,7 +107,7 @@ config_only: true
 
 `NAV_TITLE` は、左側のナビゲーションバーに表示されるページのタイトルに置き換えます。ページは次のようになります。
 
-\`\`\`マークダウン
+\`\`\`markdown
 ---
 nav_title: はじめに
 page_order: 2
@@ -143,7 +143,7 @@ braze-docs
 
 セクションを注文するには、そのセクションのいずれかのMarkdown ファイルを開き、YAML の前面にある[`page_order`]({{site.baseurl}}/contributing/yaml_front_matter/metadata/#page-order) キーを検索します。
 
-\`\`\`マークダウン
+\`\`\`markdown
 ---
 page_order:
 ---
@@ -153,7 +153,7 @@ page_order:
 
 カレントディレクトリ内の各Markdown ファイルの`page_order` キーを任意の負でない番号に設定します。次の例では、`page_order` が`2` に設定されています。  
 
-\`\`\`マークダウン
+\`\`\`markdown
 ---
 nav_title: B項
 page_order: 2 

@@ -50,9 +50,9 @@ SDKの設定中、複数のアプリ識別子の最も一般的な使用例は�
 \`\`\`xml
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-<string name="com_braze_api_key">{あなたのビルドバリアント_API_キー}</string>
+<string name="com_braze_api_key">{YOUR_BUILD_VARIANT_API_KEY}</string>
 </resources>
-
+```
 ビルドバリアントがコンパイルされると、新しい識別子が使用されます。
 
 {% endtab %}

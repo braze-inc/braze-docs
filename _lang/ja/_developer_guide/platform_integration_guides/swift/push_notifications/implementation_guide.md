@@ -704,7 +704,7 @@ return [[self defaults] objectForKey:[self rawValueForKey:key]];
 [[self defaults] removeObjectForKey:[self rawValueForKey:RemoteStorageKeyPendingUserAttributes]];
 }
  
-- (NSUserDefaults \*) デフォルト {
+- (NSUserDefaults \*)defaults {
 if (!self.defaults) {
 switch (self.storageType) {
 case StorageTypeStandard:
@@ -749,7 +749,7 @@ case email
 }
    
   func encode(to encoder:Encoder) throws {
-    var 値= encoder.container(keyedBy:CodingKeys.self)
+    var values = encoder.container(keyedBy:CodingKeys.self)
      
     switch self {
     case .email(let email):

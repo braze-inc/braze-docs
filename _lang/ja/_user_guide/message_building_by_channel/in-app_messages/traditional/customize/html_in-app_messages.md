@@ -259,7 +259,7 @@ HTML エディターで <kbd><kbd>Ctrl+F</kbd></kbd> (Windows) または <kbd>Co
    <code><a href="#" onclick="brazeBridge.logClick();brazeBridge.closeMessage()">| <code><a href= "ブレイズ:</code>| 閉じるボタン | //close">Close Button</a></a></code>
    <code><a href="#" onclick="brazeBridge.logClick('0');brazeBridge.closeMessage()">| <code><a href= "ブレイズ:</code>| 閉じるボタン | //close?abButtonId=0">Close Button</a></a></code>
    <code>| <code><a href= "アプリ:| <a href=" アプリ://deeplink?abButtonId=0">Track button 1</a></code>| //deeplink" onclick="brazeBridge.logClick('0')">Track button 1</a></code>
-   | <code> <script><br>location.href =「ブレイズ://クローズ?AbButtonID=1"<br></script></code>| <code> <script><br>window.addEventListener (「ab.BridgeReady」)、function () {<br>  Brazebridge.logClick (「1");<br>  ブレイズブリッジ. クローズメッセージ ();<br>});<br></script></code>|
+   | <code> <script><br>location.href =「ブレイズ://クローズ?AbButtonID=1"<br></script></code>| <code> <script><br>window.addEventListener("ab.BridgeReady", function(){<br>  Brazebridge.logClick (「1");<br>  ブレイズブリッジ. クローズメッセージ ();<br>});<br></script></code>|
 
 [1]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/creative_details/
 [2]: https://github.com/braze-inc/in-app-message-templates

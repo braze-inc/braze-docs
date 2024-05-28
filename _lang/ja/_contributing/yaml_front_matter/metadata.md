@@ -12,7 +12,7 @@ noindex: true
 
 Markdown ファイルにメタデータを追加するには、Jekyll のフロントマター構文をファイルの先頭に追加する必要があります。
 
-\`\`\`マークダウン
+\`\`\`markdown
 ---
 METADATA\_KEY:METADATA\_VALUE
 ---
@@ -38,7 +38,7 @@ Braze Docs またはdocs-as-code を初めて使用する場合は、チュー�
 
 {% tabs local %}
 {% tab usage example %}
-\`\`\`マークダウン
+\`\`\`markdown
 ---
 article_title: Brazeドークスの使用開始
 ---
@@ -52,7 +52,7 @@ article_title: Brazeドークスの使用開始
 
 {% tabs local %}
 {% tab usage example %}
-\`\`\`マークダウン
+\`\`\`markdown
 ---
 description: "Braze Docs を初めて使用する場合は、このステップバイステップのチュートリアルから始めてください。"
 ---
@@ -66,7 +66,7 @@ description: "Braze Docs を初めて使用する場合は、このステップ�
 
 {% tabs local %}
 {% tab usage example %}
-\`\`\`マークダウン
+\`\`\`markdown
 ---
 nav_title: はじめに
 ---
@@ -93,7 +93,7 @@ nav_title: はじめに
 
 {% tabs local %}
 {% tab usage example %}
-\`\`\`マークダウン
+\`\`\`markdown
 ---
 tool:
   \- 電流
@@ -109,7 +109,7 @@ tool:
 
 {% tabs local %}
 {% tab usage example %}
-\`\`\`マークダウン
+\`\`\`markdown
 ---
 hidden: 真
 ---
@@ -123,7 +123,7 @@ hidden: 真
 
 {% tabs local %}
 {% tab usage example %}
-\`\`\`マークダウン
+\`\`\`markdown
 ---
 noindex: true
 ---
@@ -137,7 +137,7 @@ noindex: true
 
 {% tabs local %}
 {% tab usage example %}
-\`\`\`マークダウン
+\`\`\`markdown
 ---
 hide_toc: 真
 ---
@@ -158,7 +158,7 @@ hide_toc: 真
 
 {% tabs local %}
 {% tab usage example %}
-\`\`\`マークダウン
+\`\`\`markdown
 ---
 toc\_headers: h2
 ---
@@ -180,7 +180,7 @@ toc\_headers: h2
 
 {% tabs local %}
 {% tab usage example %}
-\`\`\`マークダウン
+\`\`\`markdown
 ---
 チャネル:
   メール
@@ -196,7 +196,7 @@ toc\_headers: h2
 
 {% tabs local %}
 {% tab usage example %}
-\`\`\`マークダウン
+\`\`\`markdown
 ---
 config_only: true
 ---
@@ -215,7 +215,7 @@ config_only: true
 
 {% tabs local %}
 {% tab usage example %}
-\`\`\`マークダウン
+\`\`\`markdown
 ---
 hidden: 真
 permalink: /support_contact/docs_team/
@@ -240,7 +240,7 @@ permalink: /support_contact/docs_team/
 
 {% tabs local %}
 {% tab usage example %}
-\`\`\`マークダウン
+\`\`\`markdown
 ---
 page_layout: glossary\_page
 ---
@@ -254,7 +254,7 @@ page_layout: glossary\_page
 
 {% tabs local %}
 {% tab usage example %}
-\`\`\`マークダウン
+\`\`\`markdown
 ---
 page_order: 35.6
 ---
@@ -278,7 +278,7 @@ page_order: 35.6
 
 {% tabs local %}
 {% tab usage example %}
-\`\`\`マークダウン
+\`\`\`markdown
 ---
 page_type: チュートリアル
 ---
@@ -292,7 +292,7 @@ page_type: チュートリアル
 
 {% tabs local %}
 {% tab usage example %}
-\`\`\`マークダウン
+\`\`\`markdown
 ---
 プラットフォーム: 
   iOS

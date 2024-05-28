@@ -47,7 +47,7 @@ Liquid `{% if X %}` {% endraw %} ステートメントを使用して、曜日�
 {% raw %}
 ユーザーの場所にはデフォルト属性があります:`{{${most_recent_location}}}`.
 
-### {{キャンペーンの違いは何ですか。$ {name}}} と {{キャンペーン。$ {メッセージ名}}}?
+### What's the difference between {{campaign.${name}}} and {{campaign.${message\_name}}}?
 
 `{{campaign.${name}}}``{{campaign.${message_name}}}`との両方が Liquid パーソナライゼーションタグに対応しています。どちらのタグもキャンペーン属性を参照しています。`{{campaign.${name}}}`キャンペーンの名前を表し、`{{campaign.${message_name}}}`はメッセージバリアントの名前です。
 {% endraw %}

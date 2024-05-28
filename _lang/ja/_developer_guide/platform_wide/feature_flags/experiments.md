@@ -23,8 +23,8 @@ platform:
 
 \`\`\`javascript
 const featureFlag = braze.getFeatureFlag("my-new-feature");
-braze.logFeatureFlagImpression("私の新機能");
-if (featureFlag?.有効) {
+braze.logFeatureFlagImpression("my-new-feature");
+if (featureFlag?.enabled) {
    return <NewFeature />
 } else {
    return <ExistingFeature />

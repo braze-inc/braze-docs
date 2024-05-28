@@ -75,26 +75,26 @@ Unity エディターで Braze **> Braze 設定に移動して Braze** 設定を
 ![この実装例の図は、前のセクションで説明した Braze 設定オプションと C# コードスニペットを示しています。] [32]
 
 \`\`\`csharp
-パブリッククラスのメインメニュー:モノビヘイビア {
-  void Push 通知受信コールバック (文字列メッセージ) {
+パブリッククラスのメインメニュー:MonoBehaviour {
+  void PushNotificationReceivedCallback(string message) {
 \#if ユニティ\_アンドロイド
-    Debug.Log (「プッシュ通知受信コールバックメッセージ:" + メッセージ);
-    プッシュ通知プッシュ通知 = 新しいプッシュ通知 (メッセージ);
-    Debug.Log (「プッシュ通知を受信しました:" + プッシュ通知);   
+    Debug.Log("PushNotificationReceivedCallback message: " + message);
+    PushNotification pushNotification = new PushNotification(message);
+    Debug.Log("Push Notification received: " + pushNotification);   
 \#elif UNITY\_IOS
-    アップルプッシュ通知プッシュ通知 = 新しい ApplePush 通知 (メッセージ);
-    Debug.Log (「プッシュ受信通知イベント:" + プッシュ通知);   
+    ApplePushNotification pushNotification = new ApplePushNotification(message);
+    Debug.Log("Push received Notification event: " + pushNotification);   
 \`endif\`  
   ()
 
-  void プッシュ通知オープンコールバック (文字列メッセージ) {
+  void PushNotificationOpenedCallback(string message) {
 \#if ユニティ\_アンドロイド
-    Debug.Log (「プッシュ通知オープンコールバックメッセージ:" + メッセージ);
-    プッシュ通知プッシュ通知 = 新しいプッシュ通知 (メッセージ);
-    Debug.Log (「プッシュ通知が開きました:" + プッシュ通知);  
+    Debug.Log("PushNotificationOpenedCallback message: " + message);
+    PushNotification pushNotification = new PushNotification(message);
+    Debug.Log("Push Notification opened: " + pushNotification);  
 \#elif UNITY\_IOS
-    アップルプッシュ通知プッシュ通知 = 新しい ApplePush 通知 (メッセージ);
-    Debug.Log (「プッシュオープン通知イベント:" + プッシュ通知);   
+    ApplePushNotification pushNotification = new ApplePushNotification(message);
+    Debug.Log("Push opened Notification event: " + pushNotification);   
 \`endif\`  
   ()
 }

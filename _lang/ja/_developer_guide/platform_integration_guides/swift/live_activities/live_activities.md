@@ -58,7 +58,7 @@ Liveアクティビティに関するAppleの[前提条件や制限は][2]、Bra
   インポート ActivityKit
 \`endif\`
 
-@available(iOS 15, \*)
+@available(iOS 16.1, \*)
 struct SportsActivityAttributes：アクティビティ属性 {
 public struct ContentState: Codable, Hashable {
 var teamOneScore: Int
@@ -100,7 +100,7 @@ import BrazeKit
   インポート ActivityKit
 \`endif\`
 
-@available(iOS 15, \*)
+@available(iOS 16.1, \*)
 struct SportsActivityAttributes：アクティビティ属性, BrazeLiveActivityAttributes {
 public struct ContentState: Codable, Hashable {
 var teamOneScore: Int
@@ -132,16 +132,16 @@ import BrazeKit
   インポート ActivityKit
 \`endif\`
 
-クラス LiveActivityManager
+class LiveActivityManager {
 
-  @available(iOS 15, \*)
-  func registerActivityType() { { { { {
+  @available(iOS 17.2, \*)
+  func registerActivityType() {
     // This method returns a Swift background task.
 // You may keep a reference to this task if you need to cancel it wherever appropriate, or ignore the return value if you wish.
     pushToStartObserver：Task = Self.braze?.liveActivities.registerPushToStart()
     forType：活動<SportsActivityAttributes>.self、
       name: "スポーツアクティビティ属性"
-      ()
+      )
     ()
 
 }
@@ -173,7 +173,7 @@ import BrazeKit
   インポート ActivityKit
 \`endif\`
 
-クラス LiveActivityManager
+class LiveActivityManager {
   
   @available(iOS 15, \*)
   func createActivity() {

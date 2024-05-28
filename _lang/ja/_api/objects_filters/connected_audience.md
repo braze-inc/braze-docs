@@ -74,7 +74,7 @@ description: "この記事では、コネクテッドオーディエンスオブ
 
 #### カスタム属性の例
 
-JSON
+\`\`\`json
 {
 "custom_attribute":
 {
@@ -82,7 +82,7 @@ JSON
 "comparison": "equals",
 "value": "blue"
 }
-  
+  }
 
 {
 "custom_attribute":
@@ -91,7 +91,7 @@ JSON
 "comparison": "includes_value",
 "value": "pizza"
 }
-  
+  }
 
 {
 "custom_attribute":
@@ -100,8 +100,8 @@ JSON
 "comparison": "less_than_x_days_ago",
 "value": 2
 }
-  
-  
+  }
+  \`\`\`
 ### プッシュ購読フィルター
 
 このフィルターを使用すると、ユーザーのプッシュ購読状況に基づいてセグメント化することができます。

@@ -138,7 +138,7 @@ description: "この用語集では、Braze が現在サポートしているユ
 | キガ語 | cgg |
 | チェロキー語 | chr |
 | ザルマ語 | dje |
-| ジョラ＝フォニィ語 | dyo |
+| JOLA\_FONYI | dyo |
 | エンブ語 | ebu |
 | エウェ語 | ee |
 | エウォンド語 | ewo |

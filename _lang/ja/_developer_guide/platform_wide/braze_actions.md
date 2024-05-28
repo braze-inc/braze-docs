@@ -45,14 +45,14 @@ Braze ActionsのURIスキームは`brazeActions://v1/{base64encodedJsonString}` 
 次のJavaScriptは、JSON文字列のエンコードとデコードの方法を示している：
 
 \`\`\`javascript
-関数 decode(encoded) {
+function decode(encoded) {
     const binary = window.atob(encoded.replace()/-/g, '+').replace(/_/g, '/'));
-    let bits8 = new Uint8Array(binary.length)；
-    for (let i = 0; i < binary.length; i++) {.
-      bits8[i] = binary.charCodeAt(i)；
+    let bits8 = new Uint8Array(binary.length);
+    for (let i = 0; i < binary.length; i++) {
+      bits8[i] = binary.charCodeAt(i);
     ()
-    const bits16 = new Uint16Array(bits8.buffer)；
-    String.fromCharCode(...bits16)を返す；
+    const bits16 = new Uint16Array(bits8.buffer);
+    return String.fromCharCode(...bits16);
 ()
 
 /**
@@ -60,7 +60,7 @@ Braze ActionsのURIスキームは`brazeActions://v1/{base64encodedJsonString}` 
 * Unicode inputs are accepted.
 * Converts a UTF-16 string to UTF-8 to comply with base64 encoding limitations.
 */
- 関数encode(input) {
+ function encode(input) {
  // Split the original 16-bit char code into two 8-bit char codes then
 // reconstitute a new string (of double length) using those 8-bit codes
  // into a UTF-8 string.

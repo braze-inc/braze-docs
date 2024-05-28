@@ -69,7 +69,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/track' \
 
 例えば：
 
-'''json
+\`\`\`json
 curl --location --request POST 'https://rest.iad-01.braze.com/users/track' \
 --header 'Content-Type: application/json' \
 --header '承認:ベアラー YOUR-API-KEY-HERE' \
@@ -99,7 +99,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/track' \
     }
   ]
 }'
-'''
+\`\`\`
 
 インポート後、匿名ユーザーがBraze対応バージョンのアプリを起動すると、BrazeはインポートしたプッシュトークンをBrazeユーザープロファイルに自動的に移動し、一時プロファイルをクリーンアップします。
 

@@ -71,13 +71,13 @@ braze.getUser().setCustomUserAttribute(
 
 #### カスタム属性に整数値を設定する
 \`\`\`javascript
-braze.getUser().setCustomUserAttribute()
+braze.getUser().setCustomUserAttribute(
   YOUR\_ATTRIBUTE\_KEY\_STRING、
   YOUR\_INT\_VALUE
 );
 
 // 整数属性は、以下のようなコードを使ってインクリメントすることもできる。
-braze.getUser().incrementCustomUserAttribute()
+braze.getUser().incrementCustomUserAttribute(
   YOUR\_ATTRIBUTE\_KEY\_STRING、
   その属性を増やしたい整数値を指定します。
 );
@@ -85,19 +85,19 @@ braze.getUser().incrementCustomUserAttribute()
 
 #### カスタム属性に日付値を設定する
 \`\`\`javascript
-braze.getUser().setCustomUserAttribute()
+braze.getUser().setCustomUserAttribute(
   YOUR\_ATTRIBUTE\_KEY\_STRING、
   あなたの日付の値
 );
 
 // このメソッドは、メソッドが呼び出された時点で、現在の時刻をカスタム属性に割り当てます。
-braze.getUser().setCustomUserAttribute()
+braze.getUser().setCustomUserAttribute(
   YOUR\_ATTRIBUTE\_KEY\_STRING、
-  新しい日付()
+  new Date()
 );
 
 // このメソッドは、secondsFromEpoch で指定された日付をカスタム属性に割り当てます。
-braze.getUser().setCustomUserAttribute()
+braze.getUser().setCustomUserAttribute(
   YOUR\_ATTRIBUTE\_KEY\_STRING、
   new Date(secondsFromEpoch * 1000)
 );
@@ -109,13 +109,13 @@ braze.getUser().setCustomUserAttribute()
 カスタム属性配列内の要素の最大数は、25にデフォルト設定されています。個々の配列の最大値は、Braze ダッシュボードの [**データ設定**] > [**カスタム属性**] で100まで増やすことができます。この最大数を増やす必要がある場合は、カスタマーサービスマネージャーに連絡してください。要素の最大数を超える配列は、含まれる要素が最大数になるよう切り捨てられます。
 
 \`\`\`javascript
-braze.getUser().setCustomUserAttribute(YOUR\_ATTRIBUTE\_KEY\_STRING, YOUR\_ARRAY\_OF\_STRINGS)；
+braze.getUser().setCustomUserAttribute(YOUR\_ATTRIBUTE\_KEY\_STRING, YOUR\_ARRAY\_OF\_STRINGS);
 
 // 配列値を持つカスタム属性に新しい要素を追加する
-braze.getUser().addToCustomAttributeArray(YOUR\_ATTRIBUTE\_KEY\_STRING, "new string")；
+braze.getUser().addToCustomAttributeArray(YOUR\_ATTRIBUTE\_KEY\_STRING, "new string");
 
 // 配列値を持つカスタム属性から要素を削除する
-braze.getUser().removeFromCustomAttributeArray("custom\_attribute\_array\_test", "削除する値")；
+braze.getUser().removeFromCustomAttributeArray("custom\_attribute\_array\_test", "value to be removed");
 \`\`\`
 
 ### カスタム属性の設定解除

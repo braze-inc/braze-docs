@@ -14,7 +14,7 @@ noindex: true
 
 ページレイアウトを使用するには、[`page_layout`]({{site.baseurl}}/contributing/yaml_front_matter/metadata/#page-layout) キーをYAML の前面に追加する必要があります。
 
-\`\`\`マークダウン
+\`\`\`markdown
 ---
 開始
 article_title: Brazeドークスの使用開始
