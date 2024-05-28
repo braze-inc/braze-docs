@@ -51,7 +51,7 @@ Query columns must be specified with the exact column names and data type. The q
 
 ![Treasure Data Integrations Hub Catalog]({% image_buster /assets/img/treasure_data/cohort/cohort3.png %}) 
 
-#### Example: Syncing Cohorts by Identifier
+#### Example: Syncing cohorts by identifier
 
 {% tabs local %}
 {% tab Syncing External IDs %}
@@ -144,7 +144,7 @@ After running the query, the following device IDs will be added to the cohort in
 {% endtab %}
 {% endtabs %}
 
-### Step 4: Specify the Result Export Target
+### Step 4: Specify the result export target
 
 Once the query has been built, select **Export Results**. You can select an existing authentication, such as the one created in the last steps, or create a new authentication to be used for output. 
 
