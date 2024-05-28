@@ -59,7 +59,7 @@ asset_pipeline:
 
 # Algolia Search index
 algolia:
-  index_name: "DocSearch_Japan"
+  index_name: "DocSearch_Japanese"
   files_to_exclude:
     - _lang/ja/_hidden/*
     - _lang/ja/_hidden/*/* #exclude hidden subdirectories from indexing
