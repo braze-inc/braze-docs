@@ -56,11 +56,11 @@ guide_featured_list:
 
 ## May 28, 2024 release
 
-#### Visual updates to documentation site
+### Visual updates to documentation site
 
 You may have noticed our documentation website has a snazzy new look! We've revamped it to reflect the new vibrant Braze brand identity. For a behind-the-scenes look at our new brand, read more at [Unveiling Our New Brand: A Conversation with Braze Executive Creative Director Greg Erdelyi](https://www.braze.com/resources/articles/unveiling-our-new-brand-a-conversation-with-braze-executive-creative-director-greg-erdelyi).
 
-#### Support for Portuguese and Spanish
+### Support for Portuguese and Spanish
 
 {% multi_lang_include release_type.md release="General availability" %}
 
