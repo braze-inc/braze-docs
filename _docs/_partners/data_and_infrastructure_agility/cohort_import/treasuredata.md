@@ -68,7 +68,7 @@ Here's an example table in Treasure Data:
 The column name must be `user_ids` or the sync will fail.
 {% endalert %}
 
-To sync cohorts using the external IDs, run the following query:
+To sync cohorts using the external ID, run the following query:
 
 ```sql
 SELECT
@@ -77,7 +77,7 @@ FROM
   example_cohort_table
 ```
 
-After running the query, the following user aliases will be added to the cohort in Braze:
+After running the query, these user aliases will be added to the cohort in Braze:
 
  - `TDCohort1`
  - `TDCohort2`
@@ -95,7 +95,7 @@ Here's an example table in Treasure Data:
 | `TDCohort3`	| `TDCohort3@gmail.com`	| `7h8j9k` |
 | `TDCohort4`	| `TDCohort4@gmail.com`	| `1ab2cd` |
 
-To sync cohorts using the user aliases, run the following query:
+To sync cohorts using the user alias, run the following query:
 
 ```sql
 SELECT
@@ -104,7 +104,7 @@ FROM
   example_cohort_table
 ```
 
-After running the query, the following user aliases will be added to the cohort in Braze:
+After running the query, these user aliases will be added to the cohort in Braze:
 
  - `"alias_label":"email", "alias_name":"TDCohort1@gmail.com"`
  - `"alias_label":"email", "alias_name":"TDCohort2@gmail.com"`
@@ -126,7 +126,7 @@ Here's an example table in Treasure Data:
 The column name must be `device_ids` or the sync will fail.
 {% endalert %}
 
-To sync cohorts using the device IDs, run the following query:
+To sync cohorts using the device ID, run the following query:
 
 ```sql
 SELECT
@@ -135,7 +135,7 @@ FROM
   example_cohort_table
 ```
 
-After running the query, the following device IDs will be added to the cohort in Braze:
+After running the query, these device IDs will be added to the cohort in Braze:
 
 - `1a2b3c`
 - `4d5f6g`
@@ -152,7 +152,7 @@ Once the query has been built, select **Export Results**. You can select an exis
 
 Follow [Treasure Data's steps](https://docs.treasuredata.com/articles/#!int/braze-cohort-export-integration/a/ExportIntegrationTemplate-SpecifytheResultExportTarget) for configuring your export to meet your use case.
 
-### Step 5: Execute the Query
+### Step 5: Execute the query
 
 Save the query with a name and run, or just run the query. Upon successful completion of the query, the query result is automatically exported to Braze.
 
