@@ -11,7 +11,7 @@ channel:
 
 # SMS/MMS best practices
 
-> Learn more about best practices for SMS/MMS with Braze.
+> Learn more about best practices for SMS/MMS with Braze, including our recommendations for opt-out monitoring and traffic pumping.
 
 ## Opt-out monitoring recommendations
 
