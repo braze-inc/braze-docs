@@ -15,7 +15,7 @@ destination: _site/docs/ja
 # Source dir
 source: '.'
 
-lab_index_name: "DocSearch_Japan"
+lab_index_name: "DocSearch_Japanese"
 
 # Allows the DocSearch element to be inspected. Set to true locally, but don't
 # check in in that state, or it will cause undesirable behavior in prod.
