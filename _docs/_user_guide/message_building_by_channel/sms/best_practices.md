@@ -12,7 +12,7 @@ channel: SMS
 
 guide_featured_title: "Section articles"
 guide_featured_list:
-- name: "SMS/MMS Best Practices"
+- name: "Best Practices"
   link: /docs/user_guide/message_building_by_channel/sms/best_practices/
   image: /assets/img/braze_icons/check-square-broken.svg
 - name: "Know Before You Send"
