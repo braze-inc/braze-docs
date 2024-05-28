@@ -11,9 +11,11 @@ channel:
 
 # SMS/MMS best practices
 
+> Learn more about best practices for SMS/MMS with Braze.
+
 ## Opt-out monitoring recommendations
 
-Complying with recipient requests to opt-out of communications is required by law. Failing to comply with requests by SMS recipients to opt-out of the channel can incur penalties, including fines, and can lead to lawsuits.  Braze has features in place to enable robust SMS/MMS opt-in and out management, plus mechanisms to assist in making sure requests are correctly processed. 
+Complying with recipient requests to opt-out of communications is required by law. Failing to comply with requests by SMS recipients to opt-out of the channel can incur penalties, including fines, and can lead to lawsuits. Braze has features in place to enable robust SMS/MMS opt-in and out management, plus mechanisms to assist in making sure requests are correctly processed.
 
 Under their subscription agreements with us, our customers are solely responsible  for their compliance with applicable law in their use of our services. Accordingly, we strongly recommend that customers pay close attention to correctly configuring their SMS set-up, and that they test those set-ups thoroughly, take measures to monitor opt-out compliance, and act promptly should they identify instances of non-compliance with opt-out requests.
 
@@ -31,7 +33,7 @@ Where SMS/MMS has been set up across multiple instances, and due to misconfigura
 * Braze has monitoring in place to identify such instances. If this behavior is flagged, Braze will repoint opt-outs to the correct instance and backfill any opt-outs that occurred during the period.
 * We strongly recommend customers test opt-outs for each subscription group they have in Braze. Identifying this issue before launching a message is better than mitigating once an issue has been identified.
 
- Braze manages SMS/MMS subscriptions at both the user profile (`user_id`) level and the phone number (`channel_id`) level. When a phone number is opted-in or out, the update applies to all profiles which share that number. In the case where an end user opted-in with a certain phone number, but then changes phone number, the new phone number will inherit the subscription group status of the user. Accordingly, if an end user has opted-out, but then re-enters the app or website with a new phone number, they will not receive unwanted messages.
+Braze manages SMS/MMS subscriptions at both the user profile (`user_id`) level and the phone number (`channel_id`) level. When a phone number is opted-in or out, the update applies to all profiles which share that number. In the case where an end user opted-in with a certain phone number, but then changes phone number, the new phone number will inherit the subscription group status of the user. Accordingly, if an end user has opted-out, but then re-enters the app or website with a new phone number, they will not receive unwanted messages.
 
 ## Traffic pumping recommendations
 
