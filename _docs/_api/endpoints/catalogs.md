@@ -23,7 +23,7 @@ guide_featured_list:
     link: /docs/api/endpoints/catalogs/catalog_management/synchronous/post_create_catalog/
     image: /assets/img/braze_icons/check-square-broken.svg
 
-guide_menu_title2: "<h3>Synchronous catalog items endpoints</h3>"
+guide_menu_title2: "<h3>Asynchronous catalog items endpoints</h3>"
 guide_menu_list2:
   - name: "DELETE: Delete Multiple Catalog Items Endpoints"
     link: /docs/api/endpoints/catalogs/catalog_items/asynchronous/delete_catalog_items_bulk/
