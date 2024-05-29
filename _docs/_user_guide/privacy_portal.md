@@ -20,6 +20,12 @@ guide_featured_list:
   image: /assets/img/braze_icons/settings-01.svg
 - name: Email Open Pixel and Click Tracking
   link: /docs/user_guide/data_and_analytics/tracking/email_tracking#open-pixel-and-click-tracking-overview
+- name: SMS Subscription Groups
+  link: /docs/user_guide/message_building_by_channel/sms/sms_subscription_group/
+  image: /assets/img/braze_icons/users-01.svg
+- name: SMS Laws and Regulations
+  link: /docs/user_guide/message_building_by_channel/sms/sms_laws_and_regulations/
+  image: /assets/img/braze_icons/briefcase-02.svg
   image: /assets/img/braze_icons/mail-01.svg
 - name: Default and Minimum SDK Data Collection
   link: /docs/user_guide/data_and_analytics/user_data_collection/sdk_data_collection/
