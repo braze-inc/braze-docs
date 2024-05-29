@@ -65,19 +65,19 @@ guide_menu_title_2_1: "<h3>Asynchronous</h3>"
 guide_menu_list_2_1:
   - name: "POST: Create Catalog Fields"
     link: /docs/api/endpoints/catalogs/catalog_fields/asynchronous/post_create_catalog_fields/
-    fa_icon: fas fa-check
+    image: /assets/img/braze_icons/check-square-broken.svg
   - name: "DELETE: Delete Catalog Field"
     link: /docs/api/endpoints/catalogs/catalog_fields/asynchronous/delete_catalog_field/
-    fa_icon: fas fa-pen-square
+    image: /assets/img/braze_icons/edit-05.svg
 
 optional_guide_menu_title_3: "Catalog selections endpoints"
 guide_menu_title_3_1: "<h3>Asynchronous</h3>"
 guide_menu_list_3_1:
   - name: "POST: Create Catalog Selection"
     link: /docs/api/endpoints/catalogs/catalog_selections/asynchronous/post_create_catalog_selection/
-    fa_icon: fas fa-check
+    image: /assets/img/braze_icons/check-square-broken.svg
   - name: "DELETE: Delete Catalog Selection"
     link: /docs/api/endpoints/catalogs/catalog_selections/asynchronous/delete_catalog_selection/
-    fa_icon: fas fa-pen-square
+    image: /assets/img/braze_icons/edit-05.svg
 
 ---
