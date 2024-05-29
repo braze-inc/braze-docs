@@ -26,7 +26,7 @@ Review the following Meta documentation for guidance with display names, phone n
 ### May 2024: Cloud API going live in Türkiye
 *Last Updated May 2024*
 
-Meta is excited to now provide Cloud API businesses access to Türkiye for business messaging. Previously, WhatsApp Cloud API was available for businesses in Turkey to use, but WhatsApp users with Turkish numbers were not able to send or receive messages sent via Cloud API. 
+Meta now provides Cloud API businesses access to Türkiye for business messaging. Previously, WhatsApp Cloud API was available for businesses in Turkey to use, but WhatsApp users with Turkish numbers were not able to send or receive messages sent via Cloud API. 
 
 Meta always makes it clear to users when they are chatting with a business hosted by Meta, and all users are required to accept the relevant WhatsApp Terms of Service and Privacy Policy to proceed with business messaging. The 2021 Terms of Service and Privacy Policy update in Turkey had been paused, but is now rolling out. It does not change Meta’s commitment to privacy–personal conversations continue to be protected by end-to-end encryption meaning only you and the intended recipient can see them. The update enables Turkish users to access optional business features if they choose to do so and provides more transparency about how WhatsApp works.  
  
