@@ -8,8 +8,6 @@ page_order: 3
 noindex: true
 ---
 
-{% multi_lang_include archive/objective-c-deprecation-notice.md %}
-
 # In-app message and Content Card integration
 
 > This article covers how to set up in-app messages and Content Cards for tvOS. Note that in-app message and Content Card support on tvOS is only available using our Swift SDK.
