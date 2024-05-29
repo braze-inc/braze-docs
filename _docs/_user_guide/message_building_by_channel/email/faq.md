@@ -11,6 +11,10 @@ channel: email
 
 > This article provides answers to some frequently asked questions about emails.
 
+### Why do I receive the error message "Your email body does not include an unsubscribe link" when composing my emails?
+
+You can create unsubscribe click-through links in an email within Braze via directly inserting a URL, or by using Liquid. When using Liquid, Braze cannot validate a Liquid value and so will present this error warning message to make sure all our customers have complied with international law in letting customers unsubscribe from email communications.
+
 ### What happens when an email is sent out and multiple profiles have the same email address?
 
 If multiple users with matching emails are all in a segment to receive a campaign, a random user profile with that email address is chosen at the time of send. This way the email is only sent once and is deduplicated, ensuring that the email doesn't hit the same email address multiple times.
