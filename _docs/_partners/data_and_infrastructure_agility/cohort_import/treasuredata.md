@@ -8,9 +8,10 @@ search_tag: Partner
 ---
 # Treasure Data cohort import
 
-> This article describes how to import user cohorts from Treasure Data to Braze so you can send targeted campaigns based on data that may only exist in your warehouse. 
-{% alert note %}
-This feature is a BETA release. For more information, contact your Treasure Data and Braze Customer Success Representatives. 
+> This article describes how to import user cohorts from Treasure Data to Braze so you can send targeted campaigns based on data that may only exist in your warehouse.
+
+{% alert important %}
+This feature is currently in Beta. For more information, contact your Treasure Data and Braze representatives.
 {% endalert %}
 
 ## Prerequisites
