@@ -2,7 +2,7 @@
 nav_title: "POST: Create Catalog Fields"
 article_title: "POST: Create Catalog Fields"
 search_tag: Endpoint
-page_order: 1
+page_order: 2
 
 layout: api_page
 page_type: reference

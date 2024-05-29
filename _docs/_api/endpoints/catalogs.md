@@ -11,8 +11,8 @@ page_type: landing
 guide_top_header: "Catalogs Endpoints"
 guide_top_text: "Use the Braze Catalogs Endpoints to add, edit, and manage your catalogs and catalog item details. For bulk changes to your catalog, use the asynchronous catalog endpoints. <br><br> Looking for guidance on creating a catalog? Check out our article for <a href='/docs/user_guide/personalization_and_dynamic_content/catalog/'>creating and using catalogs</a>."
 
-guide_featured_title: "Catalog management endpoints<br><br>"
-guide_featured_list:
+optional_guide_menu_title: "Catalog management endpoints"
+guide_menu_list:
   - name: "DELETE: Delete Catalog"
     link: /docs/api/endpoints/catalogs/catalog_management/synchronous/delete_catalog/
     image: /assets/img/braze_icons/edit-05.svg
@@ -71,8 +71,8 @@ guide_menu_list:
     image: /assets/img/braze_icons/edit-05.svg
 
 optional_guide_menu_title: "Catalog selections endpoints"
-guide_menu_title3: "<h3>Asynchronous</h3>"
-guide_menu_list3:
+guide_menu_title: "<h3>Asynchronous</h3>"
+guide_menu_list:
   - name: "POST: Create Catalog Fields"
     link: /docs/api/endpoints/catalogs/catalog_fields/asynchronous/post_create_catalog_fields/
     image: /assets/img/braze_icons/check-square-broken.svg
@@ -81,3 +81,8 @@ guide_menu_list3:
     image: /assets/img/braze_icons/edit-05.svg
 
 ---
+
+<!--
+guide_featured_title: "Catalog management endpoints<br><br>"
+guide_featured_list:
+-->
