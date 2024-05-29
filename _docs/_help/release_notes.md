@@ -82,7 +82,7 @@ The one-click unsubscribe for the list-unsubscribe header ([RFC 8058](https://da
 
 #### About email sanitization
 
-[Sanitization]({{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices/sanitization) is a process that occurs when Braze detects a specific type of JavaScript in your email message. Its main purpose is to prevent bad actors from accessing other Braze dashboard users' session data.
+Visit our new [sanitization]({{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices/sanitization) article to learn more about the process that occurs when Braze detects a specific type of JavaScript in your email message. Its main purpose is to prevent bad actors from accessing other Braze dashboard users' session data.
 
 #### Inclusion count for Content Blocks
 
