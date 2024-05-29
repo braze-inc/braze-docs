@@ -24,6 +24,7 @@ Review the following Meta documentation for guidance with display names, phone n
 ## WhatsApp Product Updates
 
 ### May 2024: Cloud API going live in Türkiye
+*Last Updated May 2024*
 
 Meta is excited to now provide Cloud API businesses access to Türkiye for business messaging. Previously, WhatsApp Cloud API was available for businesses in Turkey to use, but WhatsApp users with Turkish numbers were not able to send or receive messages sent via Cloud API. 
 
@@ -37,7 +38,8 @@ Users that receive or try to send a message to a Cloud API business will be show
 
 When a user accepts the update they will see the existing Cloud API system message notice when they chat with a Cloud API Business.
 
-May 2024: Per-User Marketing Template Message Limits
+### May 2024: Per-user marketing template message limits
+*Last Updated May 2024*
 
 Meta is rolling out new approaches to maintain high-quality user experiences and maximize marketing template message engagement on the WhatsApp platform. Beginning May 23, 2024, they will be limiting the number of marketing template messages that each individual user can receive from all businesses they interact with during a given time period, starting with a small number of conversations that are less likely to be read. Note that the limit is determined based on the number of marketing template messages that person has already received from any business, and is not related to your brand specifically. However, this may affect the deliverability of your marketing template messages.
 
