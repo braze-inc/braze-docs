@@ -90,7 +90,7 @@ Just because your emails have successfully sent doesn't mean that they have nece
 
 ### Get permission
 
-A double opt-in process consists of sending a follow up email with a confirmation link after an initial opt-in. Using this provides validation that recipients want to receive your content. You can also take this even one step further by asking users to add you to their address book. Also be sure to grow your email lists organically: purchased lists often tend to be stale!
+A double opt-in process consists of sending a follow up email with a confirmation link after an initial opt-in. Using this provides validation that recipients want to receive your content. You can also take this even one step further by asking users to add you to their address book. Also, be sure to grow your email lists organically&#8212;purchased lists tend to be stale!
 
 
 ### Build your reputation
