@@ -89,7 +89,7 @@ Link: </cdi/integrations/00000000-0000-0000-0000-000000000000/job_sync_status?cu
 }
 ```
 
-| 説明｜job\_status｜ジョブステータス
+｜job\_status｜ジョブステータス
 | --- | --- |
 |`running` | ジョブは現在実行中です。|
 |`success` ｜すべての行が正常に同期されました。|

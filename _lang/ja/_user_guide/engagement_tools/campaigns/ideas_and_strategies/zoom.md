@@ -67,7 +67,7 @@ URL のパラメーターを使用してユーザーデータを渡し、ペー�
 		"last\_name": "{{${last\_name}}}",
 		"city": "{{${city}}}",
 		"country": "{{${country}}}",
-		"phone": "{{${phone\_number}}"
+		"phone": "{{${phone\_number}}}"
 		}
 	\`\`\`
 	{% endraw %}
@@ -103,7 +103,7 @@ URL のパラメーターを使用してユーザーデータを渡し、ペー�
 		"last\_name": "{{${last\_name}}}",
 		"city": "{{${city}}}",
 		"country": "{{${country}}}",
-		"phone": "{{${phone\_number}}"
+		"phone": "{{${phone\_number}}}"
 		}
 	\`\`\`
 	{% endraw %}

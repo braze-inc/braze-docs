@@ -84,7 +84,7 @@ Amazon は、末尾の改行などの空白文字が `api_key.txt` に含まれ�
 `mainTemplate.gradle` ファイルに以下を追加する：
 
 \`\`\`gradle
-タスク copyAmazon(type：コピー
+task copyAmazon(type:Copy) {
     def unityProjectPath = $/file:/// DIR\_UNITYPROJECT/$.replace("\", "/")
     from unityProjectPath + '/Assets/api_key.txt'
     into new File(projectDir, 'src/main/assets')

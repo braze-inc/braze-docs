@@ -118,8 +118,8 @@ Switched to a new branch 'fixing-typo-in-metadata'
 
 終了したら、変更を保存し、ターミナルを選択して Git のステータスを確認します。出力は以下のようになります。
 
-\`\`\`バッシュ
-$ git ステータス
+\`\`\`bash
+$ git status
 ブランチでのメタデータのタイプミスの修正について
 コミット用にステージングされていない変更:
   (「git add<file>...」を使用してください。「」でコミットされる内容を更新する)
@@ -179,7 +179,7 @@ branch 'fixing-typo-in-recommended-software' set up to track 'origin/fixing-typo
 
 PRの説明には、次のようなMarkdownのコメントが表示されます。
 
-\`\`\`マークダウン
+\`\`\`markdown
 <!-- This is a Markdown comment. -->
 ```
 

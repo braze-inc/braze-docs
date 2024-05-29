@@ -10,7 +10,7 @@ page_order: 4
 
 次のような HTML コメントを読んで、テンプレートの各セクションの詳細を確認してください。
 
-'''マークダウン
+\`\`\`markdown
 <!-- Here's an HTML comment! -->
 ```
 

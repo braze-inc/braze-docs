@@ -70,10 +70,10 @@ Brazeの**アプリ設定**ページの「**設定の管理**」でAndroidアプ
 この実装例の図は、前のセクションで述べたBrazeの設定オプションと、C#のコードスニペットを示しています][63]。
 
 \`\`\`csharp
-public class MainMenu ：モノビヘイビア
-  void PushNotificationReceivedCallback(文字列メッセージ) { {.
+public class MainMenu ：MonoBehaviour {
+  void PushNotificationReceivedCallback(string message) {
 \#if UNITY\_ANDROID
-    Debug.Log("PushNotificationReceivedCallback メッセージ: " + メッセージ)；
+    Debug.Log("PushNotificationReceivedCallback message: " + message);
     PushNotification pushNotification = new PushNotification(message)；
     Debug.Log("Push Notification received: " + pushNotification)；   
 \#elif UNITY\_IOS
@@ -82,7 +82,7 @@ public class MainMenu ：モノビヘイビア
 \`endif\`  
   ()
 
-  void PushNotificationOpenedCallback(文字列メッセージ) { {.
+  void PushNotificationOpenedCallback(string message) {
 \#if UNITY\_ANDROID
     Debug.Log("PushNotificationOpenedCallback message: " + message)；
     PushNotification pushNotification = new PushNotification(message)；
@@ -93,9 +93,9 @@ public class MainMenu ：モノビヘイビア
 \`endif\`  
   ()
 
-  void PushNotificationDeletedCallback(文字列メッセージ) { {.
+  void PushNotificationDeletedCallback(string message) {
 \#if UNITY\_ANDROID
-    Debug.Log("PushNotificationDeletedCallback メッセージ: " + メッセージ)；
+    Debug.Log("PushNotificationDeletedCallback message: " + message);
     PushNotification pushNotification = new PushNotification(message)；
     Debug.Log("Push Notification dismissed: " + pushNotification)；  
 \`endif\`

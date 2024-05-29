@@ -84,11 +84,11 @@ The following are references of the JSON payload delivered to your cloud storage
   "headers": HashOfHeaders,
   "sent_at": UnixTimestamp,
   "dispatch_id": DispatchIdFromBraze,
-  "campaign_id": CampaignApiKey, // may not be available
-  "canvas_id": CanvasApiKey, // may not be available
-  "canvas_step_id": CanvasStepID, // may not be available
-  "canvas_variation_id" : CanvasVariationId, // may not be available
-  "message_variation_id": MessageVariationId, // may not be available,
+  "campaign_id": CampaignApiId, // may not be available
+  "canvas_id": CanvasApiId, // may not be available
+  "canvas_step_id": CanvasStepApiId, // may not be available
+  "canvas_variation_id" : CanvasVariationApiId, // may not be available
+  "message_variation_id": MessageVariationApiId, // may not be available,
   "attachments": Array of JSON Objects containing 'bytes' and 'file_name', // may not be available
   "user_id": String,
   "campaign_name": String, // will only be available if the message is from a campaign
@@ -115,11 +115,11 @@ The `extras` field referred to in this payload is from the key-value pairs added
   "media_urls": ArrayOfString,
   "sent_at": UnixTimestamp,
   "dispatch_id": DispatchIdFromBraze,
-  "campaign_id": CampaignApiKey, // may not be available
-  "canvas_id": CanvasApiKey, // may not be available
-  "canvas_step_id": CanvasStepID, // may not be available
-  "canvas_variation_id" : CanvasVariationId, // may not be available
-  "message_variation_id": MessagVariationId, // may not be available
+  "campaign_id": CampaignApiId, // may not be available
+  "canvas_id": CanvasApiId, // may not be available
+  "canvas_step_id": CanvasStepApiId, // may not be available
+  "canvas_variation_id" : CanvasVariationApiId, // may not be available
+  "message_variation_id": MessagVariationApiId, // may not be available
   "user_id": String,
   "campaign_name": String, // will only be available if the message is from a campaign
   "canvas_name": String, // will only be available if the message is a from Canvas
@@ -140,11 +140,11 @@ The `extras` field referred to in this payload is from the key-value pairs added
   "app_id": ApiKeyOfApp,
   "sent_at": UnixTimestamp,
   "dispatch_id": DispatchIdFromBraze,
-  "campaign_id": CampaignApiKey, // may not be available
-  "canvas_id": CanvasApiKey, // may not be available
-  "canvas_step_id": CanvasStepID, // may not be available
-  "canvas_variation_id" : CanvasVariationId, // may not be available
-  "message_variation_id": MessagVariationId, // may not be available
+  "campaign_id": CampaignApiId, // may not be available
+  "canvas_id": CanvasApiApiId, // may not be available
+  "canvas_step_id": CanvasStepApiId, // may not be available
+  "canvas_variation_id" : CanvasVariationApiId, // may not be available
+  "message_variation_id": MessagVariationApiId, // may not be available
   "user_id": String,
   "campaign_name": String, // will only be available if the message is from a campaign
   "canvas_name": String, // will only be available if the message is a from Canvas

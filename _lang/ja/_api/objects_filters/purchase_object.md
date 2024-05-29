@@ -45,7 +45,7 @@ description: "このリファレンス記事では、購入オブジェクトの
 - [ISO 4217通貨コードWiki][20]
 - [ISO 8601タイムコードWiki][22]
 
-## 製品IDを購入する
+## Purchase product\_id
 
 購入オブジェクト内では、`product_id` は購入の識別子です(`Product Name` や`Product Category` など)。
 

@@ -174,7 +174,7 @@ Braze はダッシュボードのタイムスタンプに基づいて時間値�
 \`\`\`liquid
 {% catalog_items Games 1234 %}
  
-{{商品 [0] .price}} だけで {{商品 [0] .title}} を手に入れましょう！
+Get {{ items[0].title }} for just {{ items[0].price }}!
 \`\`\`
 {% endraw %}
 
@@ -271,7 +271,7 @@ Message if the venue name's size is less than 10 characters.
 \`\`\`liquid
 {% catalog_items Games 1234 %}
 
-{{アイテム [0] .イメージリンク}}
+{{ items[0].image\_link }}
 \`\`\`
 {% endraw %}
 
@@ -306,10 +306,10 @@ Liquidテンプレートを使用すると、ウィッシュリストIDを動的
 
 {% raw %}
 \`\`\`liquid
-{% ウィッシュリストを割り当てる = {{カスタム属性。$ {ウィッシュリスト}}}%}
-{% catalog\_items ゲーム {{ほしい物リスト [0]}}}%}
+{% assign wishlist = {{custom\_attribute.${wishlist}}}%}
+{% catalog\_items Games {{ wishlist[0] }} %}
 
-{{items [0] .price}} だけで、今すぐ {{items [0] .title}} を手に入れましょう！
+Get {{ items[0].title }} now, for just {{ items[0].price }}!
 \`\`\`
 {% endraw %}
 

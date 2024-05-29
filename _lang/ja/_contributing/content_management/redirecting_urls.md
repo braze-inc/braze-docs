@@ -26,7 +26,7 @@ URL リダイレクトを設定することで、ユーザーのブックマー�
 {% tab home page %}
 関連する Markdown ファイルを開き、次のキーと値のペアを YAML フロントマターに追加します。既に `layout` キーがある場合は、既存のキーを新しいキーに置き換えます。
 
-'''マークダウン
+\`\`\`markdown
 ---
 layout: blank\_config
 ---
@@ -34,7 +34,7 @@ layout: blank\_config
 
 YAML のフロントマターは、次のようになります。
 
-'''マークダウン
+\`\`\`markdown
 ---
 nav_title: カスタマイズガイド
 config_only: true
@@ -99,7 +99,7 @@ local_redirect:
 
 リダイレクトは次のようになります。
 
-'''yaml
+\`\`\`yaml
 ---
 開始
 article_title: Braze SDKを使い始める

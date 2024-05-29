@@ -168,7 +168,7 @@ Zomato Restaurants データベースからレストランの推奨を引き出�
 {% raw %}
 \`\`\`liquid
 {% assign city\_id = {{custom\_attribute.${city\_id} | default:‘306’}} %}
-{% assign food\_type = {{custom\_attribute.${food\_type} | デフォルト:‘471’}} %}
+{% assign food\_type = {{custom\_attribute.${food\_type} | default:‘471’}} %}
 
 {%- connected_content https://developers.zomato.com/api/v2.1/search?entity_id={{city_id}}&entity\_type=city&count=20&cuisines={{food\_type}}&sort=rating:headers{“user-key”:“USER_KEY”} :save restaurants %}
 
@@ -183,7 +183,7 @@ Zomato Restaurants データベースからレストランの推奨を引き出�
 {% raw %}
 \`\`\`liquid
 {% assign city\_id = {{custom\_attribute.${city\_id} | default:‘306’}} %}
-{% assign food\_type = {{custom\_attribute.${food\_type} | デフォルト:‘471’}} %}
+{% assign food\_type = {{custom\_attribute.${food\_type} | default:‘471’}} %}
 
 {%- connected_content https://developers.zomato.com/api/v2.1/search?entity_id={{city_id}}&entity\_type=city&count=20&cuisines={{food\_type}}&sort=rating:headers{“user-key”:”USER_KEY”} :save restaurants %}
 {% assign restaurants = city_food.restaurants %}
@@ -207,14 +207,14 @@ Zomato Restaurants データベースからレストランの推奨を引き出�
 {% raw %}
 \`\`\`liquid
 {% assign city\_id = {{custom\_attribute.${city\_id} | default:‘306’}} %}
-{% assign food\_type = {{custom\_attribute.${food\_type} | デフォルト:‘471’}} %}
+{% assign food\_type = {{custom\_attribute.${food\_type} | default:‘471’}} %}
 {%- connected_content https://developers.zomato.com/api/v2.1/search?entity_id={{city_id}}&entity\_type=city&count=20&cuisines={{food\_type}}&sort=rating:headers{“user-key”:”USER_KEY”} :save restaurants %}
 {% assign restaurants = city_food.restaurants %}
 {% assign excellent_restaurants = “” %}
 {% assign very_good_resturants = “” %}
 {% assign good_restaurants = “” %}
 {% for list in restaurants %}
-{{{list.restaurant.user\_rating.rating\_text}}=`Excellent`%}の場合
+{% if {{list.restaurant.user\_rating.rating\_text}} == `Excellent` %}
 {% assign excellent\_restaurants = excellent\_restaurants | append: list.restaurant.name | append: `*` %}
 {% elseif {{list.restaurant.user\_rating.rating\_text}} == `Very Good` %}
 {% assign very\_good\_restaurants = very\_good\_restaurants | append: list.restaurant.name | append: `*` %}

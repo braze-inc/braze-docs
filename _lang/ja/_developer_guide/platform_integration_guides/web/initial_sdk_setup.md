@@ -83,17 +83,17 @@ baseUrl: "YOUR-SDK-ENDPOINT-HERE"
 }
 
 //オプションで、カスタム処理なしですべてのアプリ内メッセージを表示します
-Braze. アプリメッセージに自動的に表示 ();
+braze.automaticallyShowInAppMessages();
 
 // if you use Content Cards
 braze.subscribeToContentCardsUpdates(function(cards){
 // cards have been updated
-()
+});
 
 // optionally set the current user's external ID before starting a new session
 // you can also call `changeUser` セッションの後半で、ユーザーがログインした後
-if (がログイン中) {
-Braze.changeUser (ユーザー識別子);
+if (isLoggedIn){
+braze.changeUser(userIdentifier);
     ()
 
 //最後に、`openSession``changeUser`そしての後に呼び出す必要があります `automaticallyShowInAppMessages`
@@ -106,7 +106,7 @@ braze.openSession();
 モバイルデバイスまたは Web デバイスの匿名ユーザーが [MAU]({{site.baseurl}}/user_guide/data_and_analytics/reporting/understanding_your_app_usage_data/#monthly-active-users) にカウントされる場合があります。そのため、条件付きで SDK をロードまたは初期化して、これらのユーザーを MAU カウントから除外したい場合があります。
 {% endalert %}
 
-## ステップ 3: Web プッシュ (オプション)
+## ステップ 3: Web push (optional)
 
 Web プッシュ通知を使用するには、追加の設定が必要です。手順については、「[プッシュ通知][16]」を参照してください。
 
@@ -126,7 +126,7 @@ enableLogging: true
 
 //または、初期化後:
 
- Braze . トグルロギング ()
+braze.toggleLogging()
 \`\`\`
 
 [サーバーサイドのレンダリングフレームワークを使用している場合は、[Viteまたはその他のSSRフレームワークを統合するための追加の統合手順をご覧ください](#vite)。](#ssr)詳細ロギングを行っても、追加のユーザー情報や新しいユーザー情報が Braze に送信されることはありません。
@@ -164,13 +164,13 @@ export { initialize, openSession } from "@braze/web-sdk";
 // import the functions you need from the braze exports file
 useEffect(() => {
 import("./braze-exports.js").then(({ initialize, openSession }) => {
-初期化 (「あなたのAPIキーはこちら」,); {
+initialize("YOUR-API-KEY-HERE", {
 baseUrl: "YOUR-SDK-ENDPOINT",
 enableLogging: true,
-}
-    オープンセッション ();
-        ()
-            ()
+});
+    openSession();
+        });
+            }, []);
             \`\`\`
 
 また、webpack を使用してアプリをバンドルしている場合は、そのマジックコメントを利用して、SDK の必要な部分だけを動的にインポートすることもできます。

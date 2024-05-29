@@ -41,20 +41,20 @@ Braze SDK インテグレーションで、読み込みスニペット内の `au
 \`\`\`javascript
 「@braze」から* をブレイズとしてインポートする/web-sdk";
 // Be sure to remove any calls to braze.automaticallyShowInAppMessages()
-Braze.subscribetoAppMessage (機能) (アプリメッセージ内) {
+braze.subscribeToInAppMessage(function(inAppMessage) {
 // check if message is not a control variant
 if (inAppMessage instanceof braze.inAppMessage) {
 // access the key-value pairs, defined as `extras`
-  const キーバリューペア = アプリ内メッセージ。エクストラ || {};
+  const keyValuePairs = inAppMessage.extras || {};
   //Braze `msg-id` ダッシュボードで定義されたキーの値を確認します
-    if (キーバリューペア ["msg-id"] ===「プッシュプライマー」) {
+    if (keyValuePairs["msg-id"] === "push-primer") {
     // We don't want to display the soft push prompt to users on browsers
 // that don't support push, or if the user has already granted/blocked permission
-    \`if\`
-    Braze.isPush はサポートされています () === false ||
-      Braze.はプッシュ権限が付与されているか () ||
-      Braze. はプッシュブロックされています ()
-      ()
+    if (
+    braze.isPushSupported() === false ||
+      braze.isPushPermissionGranted() ||
+      braze.isPushBlocked()
+      ) {
         //電話しないでください `showInAppMessage`
         return
         ()
@@ -78,8 +78,8 @@ if (inAppMessage instanceof braze.inAppMessage) {
   ()
 
   //アプリ内メッセージを今すぐ表示
-  Braze.アプリメッセージを表示 (アプリメッセージ内);
-()
+  braze.showInAppMessage(inAppMessage);
+});
 \`\`\`
 
 

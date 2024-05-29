@@ -55,7 +55,7 @@ Braze-to-Braze Webhook を作成するための一般的な手順に従い、Web
 Brazeでは、認証のためにAPIキーを含むHTTPヘッダーと `content-type`、.
 
 - **要求ヘッダー:**
-  - **認可：**ベアラー {YOUR\_API\_KEY}
+  - **認可：**Bearer {YOUR\_API\_KEY}
   - **コンテンツタイプ:** application/json
 - **HTTP メソッド:**ポスト:
 

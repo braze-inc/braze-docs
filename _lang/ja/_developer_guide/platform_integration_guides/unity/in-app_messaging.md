@@ -97,7 +97,7 @@ Braze によって直接表示されないアプリ内メッセージのクリ�
 ユーザーがアプリ内メッセージをどのように操作するかをより細かく制御する必要がある場合は、 `BrazeInAppMessageListener` そしてそれを割り当てる `Appboy.AppboyBinding.inAppMessageListener`。使用したくないデリゲートについては、そのままにしておくことができます。 `null`。
 
 \`\`\`csharp
-BrazeInAppMessageListener リスナー = 新しい BrazeInAppMessageListener() {
+BrazeInAppMessageListener listener = new BrazeInAppMessageListener() {
   BeforeInAppMessageDisplayed = BeforeInAppMessageDisplayed、
   OnInAppMessageButtonClicked = OnInAppMessageButtonClicked、
   OnInAppMessageClicked = OnInAppMessageClicked、
@@ -106,23 +106,23 @@ BrazeInAppMessageListener リスナー = 新しい BrazeInAppMessageListener() {
 ()
 Appboy.AppboyBinding.inAppMessageListener = リスナー;
 
-パブリック void BeforeInAppMessageDisplayed(IInAppMessage inAppMessage) {
+public void BeforeInAppMessageDisplayed(IInAppMessage inAppMessage) {
   // アプリ内メッセージが表示される前に実行されます。
 ()
 
-パブリック void OnInAppMessageButtonClicked(IInAppMessage inAppMessage、InAppMessageButton inAppMessageButton) {
+public void OnInAppMessageButtonClicked(IInAppMessage inAppMessage, InAppMessageButton inAppMessageButton) {
   // アプリ内メッセージボタンがクリックされるたびに実行されます。
 ()
 
-パブリック void OnInAppMessageClicked(IInAppMessage inAppMessage) {
+public void OnInAppMessageClicked(IInAppMessage inAppMessage) {
   // アプリ内メッセージがクリックされるたびに実行されます。
 ()
 
-パブリック void OnInAppMessageHTMLClicked(IInAppMessage inAppMessage, Uri uri) {
+public void OnInAppMessageHTMLClicked(IInAppMessage inAppMessage, Uri uri) {
   // HTML アプリ内メッセージがクリックされるたびに実行されます。
 ()
 
-パブリック void OnInAppMessageDismissed(IInAppMessage inAppMessage) {
+public void OnInAppMessageDismissed(IInAppMessage inAppMessage) {
   // アプリ内メッセージがクリックされずに閉じられるたびに実行されます。
 ()
 \`\`\`

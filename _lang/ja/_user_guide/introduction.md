@@ -1,7 +1,7 @@
 ---
 page_order: 0
 nav_title: ホーム
-article_title:  Braze ユーザーガイド
+article_title: Braze ユーザーガイド
 layout: user_guide
 
 user_top_header: "Braze User Guide"
