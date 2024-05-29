@@ -60,5 +60,24 @@ guide_menu_list2:
     link: /docs/api/endpoints/catalogs/catalog_items/synchronous/put_update_catalog_item/
     image: /assets/img/braze_icons/user-circle.svg
 
+optional_guide_menu_title: "Catalog fields endpoints"
+guide_menu_title: "<h3>Asynchronous</h3>"
+guide_menu_list:
+  - name: "POST: Create Catalog Fields"
+    link: /docs/api/endpoints/catalogs/catalog_fields/asynchronous/post_create_catalog_fields/
+    image: /assets/img/braze_icons/check-square-broken.svg
+  - name: "DELETE: Delete Catalog Field"
+    link: /docs/api/endpoints/catalogs/catalog_fields/asynchronous/delete_catalog_field/
+    image: /assets/img/braze_icons/edit-05.svg
+
+optional_guide_menu_title: "Catalog selections endpoints"
+guide_menu_title3: "<h3>Asynchronous</h3>"
+guide_menu_list3:
+  - name: "POST: Create Catalog Fields"
+    link: /docs/api/endpoints/catalogs/catalog_fields/asynchronous/post_create_catalog_fields/
+    image: /assets/img/braze_icons/check-square-broken.svg
+  - name: "DELETE: Delete Catalog Field"
+    link: /docs/api/endpoints/catalogs/catalog_fields/asynchronous/delete_catalog_field/
+    image: /assets/img/braze_icons/edit-05.svg
 
 ---
