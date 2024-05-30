@@ -204,18 +204,12 @@ $(document).ready(function() {
           hash = window.location.pathname + '/' + hash;
         }
       }
-      // else {
-      //   if (typeof (appboy) !== 'undefined') {
-      //     appboy.logCustomEvent("Documentations Page Scrolling", {"URL": window.location.pathname,"Anchor": hash});
-      //   }
-      // }
+
       window.history.replaceState(null, null, hash);
-        var tcol = $('#toc_col'); //.scrollTop('#toc_' + hash, 200);
-        // scroll left nav also
-        tcol.scrollTop($('#toc_' + active_toc.substring(1)).offset().top - $('#toc').offset().top - 10);
+      var tcol = $('#toc_col'); //.scrollTop('#toc_' + hash, 200);
+      // scroll left nav also
+      tcol.scrollTop($('#toc_' + active_toc.substring(1)).offset().top - $('#toc').offset().top - 10);
     });
-
-
 
     // Add smooth scrolling on all links inside the navbar
     $("#toc a").on('click', function(event) {
@@ -244,53 +238,10 @@ $(document).ready(function() {
     //$('#toc_col').addClass('notoc');
 
   }
-  var y_last = 0;
   //var nav_bottom_height = $('#nav_bottom').height();
   var scrollHandler = function() {
     var query_str = window.location.search;
     var y_cord = $(this).scrollTop();
-    var bzheader_height = $('#braze_header').height();
-    // var scroll_dir = 'down';
-    // if (y_last > y_cord) {
-    //   scroll_dir = 'up'
-    // }
-
-    // Scrolled pass banner, adjust status monitor status
-    if (y_cord > (bzheader_height * 1/3)) {
-      $('#braze_banner').hide();
-      $('#header_nav').addClass('scrollnav');
-      $('#nav_bar' ).addClass('scrollnav');
-      $('#contentcards' ).addClass('scrollnav');
-      $('#main_content' ).addClass('scrollnav');
-      $('#toc_col' ).addClass('scrollnav');
-      if (y_cord > (bzheader_height * 5/6)) {
-        $('#toc_col' ).addClass('scrollbottom');
-      }
-      else {
-        $('#braze_banner').show();
-        $('#toc_col' ).removeClass('scrollbottom');
-      }
-      //$('#nav_bottom').height(nav_bottom_height);
-    } else {
-      $('#header_nav').removeClass('scrollnav');
-      $('#nav_bar' ).removeClass('scrollnav');
-      $('#contentcards' ).removeClass('scrollnav');
-      $('#main_content' ).removeClass('scrollnav');
-      $('#toc_col' ).removeClass('scrollnav');
-      $('#toc_col' ).removeClass('scrollbottom');
-
-      //$('#nav_bottom').height($('#nav_bottom').height() + delta_scroll);
-
-      if ($('#toc nav').length) {
-        if (window.location.pathname.substr(-1) != '/')  {
-          window.history.replaceState(null, null, window.location.pathname + '/' + query_str);
-        }
-        else {
-          window.history.replaceState(null, null, window.location.pathname + query_str);
-        }
-      }
-    }
-    y_last = y_cord;
   };
   scrollHandler();
   $(window).scroll(scrollHandler);
