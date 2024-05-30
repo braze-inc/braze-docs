@@ -19,7 +19,7 @@ cd ~/braze-docs
 ruby --version
 ```
 
-If `3.3.0` is not installed, use a [supported version manager](https://www.ruby-lang.org/en/documentation/installation/#managers) to install it. For example, using [rbenv](https://github.com/rbenv/rbenv):
+If this version isn't installed, use a [supported version manager](https://www.ruby-lang.org/en/documentation/installation/#managers) to install it. For example, using [rbenv](https://github.com/rbenv/rbenv):
 
 ```bash
 rbenv install 3.3.0
