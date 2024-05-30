@@ -107,8 +107,8 @@ Choose **JSON**, then select **Create**.
 
 ![The form for creating a private key with "JSON" selected.]({% image_buster /assets/img/android/push_integration/generate_json_credentials/select-create.png %}){: style="max-width:65%;"}
 
-{% alert warning %}
-Private keys could pose a security risk if compromised. Store your JSON credentials in a secure location for now&#8212;you'll delete your key after you upload it to Braze.
+{% alert info %}
+If your service account was created within a different GCP project ID than the Firebase Cloud Messaging project, you will need to modify the JSON file's `project_id` field.
 {% endalert %}
 
 ### Step 7: Upload your JSON credentials to Braze
@@ -153,6 +153,10 @@ If you delete your new credentials, you cannot restore them later. You'll need t
 
 Your new credentials start working as soon as you upload them to Braze. To test them, select **Test Credentials**. If you get an error, you can always [revert your credentials](#reverting-your-credentials).
 
+### Do I need to also migrate development or unused apps?
+
+Unused or development apps will also show a warning banner. You can either upload new credentials to these apps, or delete the app if they are unused. Be careful not to delete apps that are still in use by your other team members.
+
 ### Where can I check error messages?
 
 You can review push notification errors in your [message activity log]({{site.baseurl}}/user_guide/administrative/app_settings/message_activity_log_tab/).
@@ -172,3 +176,7 @@ You'll continue to see this warning message if there's at least one Android app 
 ### After migrating, how long until I send push notifications again?
 
 After migrating, you can start sending push notifications using your new credentials right away.
+
+### What if my Service Account was created in a different project than my Firebase Messaging Project?
+
+If your service account's project ID is different than your Firebase Cloud Messaging project or Sender ID, you will need to modify your service account JSON file and change the `project_id` field accordingly.
