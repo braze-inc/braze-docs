@@ -345,7 +345,7 @@ To view the details for a specific key, select a key from the list. You can then
 
 ![][30]
 
-To delete a key, click <i class="fas fa-gear" alt="Settings"></i> and select the corresponding option.
+Note when [deleting a user]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/adding_users_to_your_dashboard/), the associated API keys a user created will not be deleted. To delete a key, click <i class="fas fa-gear" alt="Settings"></i> and select the corresponding option.
 
 ![][29]
 
