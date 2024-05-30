@@ -163,7 +163,7 @@ This endpoint has a shared rate limit of 50 requests per minute between all sync
 
 {% if include.endpoint == "asynchronous catalog fields" or include.endpoint == "asynchronous catalog selections" %}
 
-This endpoint has a shared rate limit of 50 requests per minute between all asynchronous catalog fields / selections endpoints, as documented in [API rate limits]({{site.baseurl}}/api/api_limits/).
+This endpoint has a shared rate limit of 50 requests per minute between all asynchronous catalog fields and selections endpoints, as documented in [API rate limits]({{site.baseurl}}/api/api_limits/).
 
 {% endif %}
 
