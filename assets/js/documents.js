@@ -514,8 +514,12 @@ $(document).ready(function() {
     let lang = this.value;
     let path = window.location.pathname;
     let query_str = window.location.search;
-
-    let lang_re = new RegExp(`\/docs\/${page_language}\/?`);
+    let path_lang = (path.split('/') || [])[2];
+    let lang_re = new RegExp(`\/docs\/?`);
+    // if url has a 2 char language identifier, replace the identifier
+    if (path_lang == page_language){
+      lang_re = new RegExp(`\/docs\/${page_language}\/?`);
+    }
     window.location.href = path.replace(lang_re,`\/docs\/${lang}\/`);
   });
 
