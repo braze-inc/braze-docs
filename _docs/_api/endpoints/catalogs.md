@@ -71,10 +71,10 @@ guide_menu_list4:
 guide_menu_title5: "Asynchronous catalog selections endpoints"
 guide_menu_list5:
   - name: "POST: Create Catalog Fields"
-    link: /docs/api/endpoints/catalogs/catalog_fields/asynchronous/post_create_catalog_fields/
+    link: /docs/api/endpoints/catalogs/catalog_fields/asynchronous/post_create_catalog_selections/
     image: /assets/img/braze_icons/check-square-broken.svg
   - name: "DELETE: Delete Catalog Field"
-    link: /docs/api/endpoints/catalogs/catalog_fields/asynchronous/delete_catalog_field/
+    link: /docs/api/endpoints/catalogs/catalog_fields/asynchronous/delete_catalog_selection/
     image: /assets/img/braze_icons/edit-05.svg
 
 ---
