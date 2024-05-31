@@ -1,0 +1,51 @@
+#!/bin/bash
+
+# DESCRIPTION.
+
+set -e
+
+# The project's root directory. Only accessible through git.
+export PROJECT_ROOT
+PROJECT_ROOT="$(dirname "$(realpath "$0")")"
+
+# Displays usage for bdocs
+display_help() {
+    cat << EOF
+bdocs - todo add description.
+
+Usage: ./bdocs [option] [start_date] [end_date]
+
+Options:
+  deploy       Create deploy text
+  release      Create release text
+  help         Display this help message and exit
+
+EOF
+}
+
+# Check if no arguments were provided
+if [[ $# -eq 0 ]]; then
+    display_help
+    exit 1
+fi
+
+# Argument parsing
+case $1 in
+    deploy)
+        if [[ $# -eq 3 ]]; then
+            "$PROJECT_ROOT/scripts/deploy_text.sh" "$2" "$3"
+        else
+            "$PROJECT_ROOT/scripts/deploy_text.sh"
+        fi
+        ;;
+    release)
+        "$PROJECT_ROOT/scripts/release_text.sh"
+        ;;
+    help)
+        display_help
+        ;;
+    *)
+        echo "Invalid option: $1. To see all options, run: ./bdocs help"
+        exit 1
+        ;;
+esac
