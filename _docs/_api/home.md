@@ -418,7 +418,7 @@ glossaries:
     description: Delete a field from a catalog.
     tags:
       - Catalogs
-  - name: <a href='/docs/api/endpoints/catalogs/catalog_selections/asynchronous/post_create_catalog_selection/'>/catalogs/{catalog_name}/selections</a>
+  - name: <a href='/docs/api/endpoints/catalogs/catalog_selections/asynchronous/post_create_catalog_selections/'>/catalogs/{catalog_name}/selections</a>
     description: Create a selection in a catalog.
     tags:
       - Catalogs
