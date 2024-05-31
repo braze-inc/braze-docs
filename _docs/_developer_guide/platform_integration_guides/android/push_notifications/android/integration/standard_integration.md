@@ -82,12 +82,14 @@ Select **Add Key** > **Create new key**.
 
 ![The selected service account with the "Add Key" menu open.]({% image_buster /assets/img/android/push_integration/generate_json_credentials/select-create-new-key.png %})
 
-Choose **JSON**, then select **Create**. Be sure to remember where you downloaded the key&#8212;you'll need it in the next step.
+Choose **JSON**, then select **Create**. If you created your service account using a different Google Cloud project ID than your FCM project ID, you'll need to manually update the value assigned to the `project_id` in your JSON file.
+
+Be sure to remember where you downloaded the key&#8212;you'll need it in the next step.
 
 ![The form for creating a private key with "JSON" selected.]({% image_buster /assets/img/android/push_integration/generate_json_credentials/select-create.png %}){: style="max-width:65%;"}
 
-{% alert info %}
-If your service account was created within a different GCP project ID than the Firebase Cloud Messaging project, you will need to modify the JSON file's `project_id` field.
+{% alert warning %}
+Private keys could pose a security risk if compromised. Store your JSON credentials in a secure location for now&#8212;you'll delete your key after you upload it to Braze.
 {% endalert %}
 
 ### Step 6: Upload your JSON credentials to Braze
