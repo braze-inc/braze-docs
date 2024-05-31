@@ -91,7 +91,7 @@ You cannot reference Liquid to insert <code>customAttributes</code> into JavaScr
 
 In addition to custom JavaScript, Braze SDKs can also send analytics data with these convenient URL shortcuts. Note that these query parameters and URL schemes are all case sensitive.
 
-### Button click tracking (DEPRECATED)
+### Button click tracking (deprecated)
 
 {% alert warning %}
 The use of `abButtonID` is not supported in [HTML with Preview]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/customize/html_in-app_messages/#html-upload-with-preview/) message types. For more information, see our [upgrade guide]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/preview/#backward-incompatible-changes).
