@@ -65,7 +65,7 @@ Braze will generate your preview and send it to your email address as a CSV file
 
 ![An email from Braze with a link to the generated CSV file.]({% image_buster /assets/img/audience_management/duplicate_users/bulk_merging/example_email.png %}){: style="max-width:60%;"}
 
-In the following example, Braze uses the user's external ID to flag duplicate profiles and identify which one to keep. If these profiles are bulk merged, Braze will use the profile with an external ID as the user's new primary profile. Now if that user logs in using a merged profile, Braze will update their new primary profile instead.
+In the following example, Braze uses the user's external ID to flag duplicate profiles and identify which one to keep. If these profiles are bulk merged, Braze will use the profile with an external ID as the user's new primary profile.
 
 {% tabs local %}
 {% tab example csv file %}

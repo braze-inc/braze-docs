@@ -70,13 +70,13 @@ iOS プッシュアクションボタンを使用するには、Apple Push `cate
 
 | カテゴリ識別子 | ボタンテキスト | ボタンアクション識別子 | 許可されるアクション |
 |-----------------------|-------------|--------------------------|-------------------------|
-| `ab_cat_accept_decline` | 同意する | `ab_pb_accept` | アプリ、URI、またはディープリンクを開く |
+| `ab_cat_accept_decline` | 同意する | `ab_pb_accept` |  OPEN\_APP, URI, or DEEP\_LINK |
 | `ab_cat_accept_decline` | 拒否 | `ab_pb_decline` | 閉じる |
-| `ab_cat_yes_no` | はい | `ab_pb_yes` | アプリ、URI、またはディープリンクを開く |
+| `ab_cat_yes_no` | はい | `ab_pb_yes` | OPEN\_APP, URI, or DEEP\_LINK |
 | `ab_cat_yes_no` | いいえ | `ab_pb_no` | 閉じる |
-| `ab_cat_confirm_cancel` | 確認 | `ab_pb_confirm` | アプリ、URI、またはディープリンクを開く |
+| `ab_cat_confirm_cancel` | 確認 | `ab_pb_confirm` | OPEN\_APP, URI, or DEEP\_LINK |
 | `ab_cat_confirm_cancel` | キャンセル | `ab_pb_cancel` | 閉じる |
-| `ab_cat_more` | 詳細 | `ab_pb_more` | アプリを開く、URI、またはディープリンク |
+| `ab_cat_more` | 詳細 | `ab_pb_more` | OPEN\_APP, URI, or DEEP\_LINK |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ```json

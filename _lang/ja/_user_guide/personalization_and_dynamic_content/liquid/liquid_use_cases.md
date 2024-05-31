@@ -31,9 +31,9 @@ description: "このランディングページには、記念日、アプリの
 \`\`\`liquid
 {% assign this_month = 'now' | date: "%B" %}
 {% assign this_day = 'now' | date: "%d" %}
-{% 代入 anniversary\_month = custom\_attribute.${registration\_date}}}|日付: "%B" %}
-{% 代入 anniversary\_day = custom\_attribute.${registration\_date}}}|日付: "%d" %}
-{% 代入 anniversary\_year = custom\_attribute.${registration\_date}}}|日付: "%Y" %}
+{% assign anniversary\_month = custom\_attribute.${registration\_date}}} | date: "%B" %}
+{% assign anniversary\_day = custom\_attribute.${registration\_date}}} | date: "%d" %}
+{% assign anniversary\_year = custom\_attribute.${registration\_date}}} | date: "%Y" %}
 
 {% if this_month == anniversary_month %}
 {% if this_day == anniversary_day %}
@@ -684,7 +684,7 @@ Did you forget something in your shopping cart?
 {% connected_content YOUR_BRAZE_ENDPOINT/users/export/ids
 :method post
 :headers { "Authorization": "Bearer YOUR_API_KEY" }
- :ボディ {{body}}
+ :body {{body}}
   :content\_type application/json
   :save 応答
  :retry %}
@@ -702,7 +702,7 @@ Did you forget something in your shopping cart?
 {% assign prev\_month\_count = {{custom\_attribute.${projects\_exported\_prev\_month}}} %}
 {% assign latest_count = current_count | minus: prev_month_count %}
 {% assign now = "now" | date: "%s" %}
-{% assign yesterday = {{now}} | マイナス:86400 %}
+{% assign yesterday = {{now}} | minus:86400 %}
 {% assign previous\_month = {{yesterday}} | date: "%B" %}
 {% assign previous\_year = {{yesterday}} | date: "%y" %}
 {% assign formatted_month = previous_month | downcase %}
@@ -745,29 +745,29 @@ Did you forget something in your shopping cart?
 {% assign month =  'now' | date: "%B" %}
 
 {% if {{month}} == '1月' %}
-{{日}}1月{{年}}
+{{day}}1月{{year}}
 {% elsif {{month)) == 'February' %}
-{{日}}2月{{年}}
+{{day}}2月{{year}}
 {% elsif {{month)) == 'March' %}
-{{日}}火星 {{year}}
+{{day}}火星 {{year}}
 {% elsif {{month)) == 'April' %}
-{{日}}4月 {{year}}
+{{day}}4月 {{year}}
 {% elsif {{month)) == 'May' %}
-{{日}}少佐 {{年}}
+{{day}}5月 {{year}}
 {% elsif {{month)) == 'June' %}
-{{日}}ジュニ{{年}}
+{{day}}六月{{year}}
 {% elsif {{month)) == 'July' %}
-{{日}}ジュリ {{年}}
+{{day}}7月 {{year}}
 {% elsif {{month)) == 'August' %}
-{{日}}アウグスティ {{year}}
+{{day}}8月 {{year}}
 {% elsif {{month)) == 'September' %}
-{{日}}9月{{年}}
+{{day}}9月{{year}}
 {% elsif {{month)) == 'October' %}
-{{日}}オクトーバー {{year}}
+{{day}}10月 {{year}}
 {% elsif {{month)) == 'November' %}
-{{日}}11月 {{year}}
+{{day}}11月 {{year}}
 {% elsif {{month)) == 'December' %}
-{{日}}12月{{年}}
+{{day}}12月{{year}}
 {% endif %}
 \`\`\`
 {% endraw %}
@@ -920,7 +920,7 @@ This is an exclusive message for subscribed users!
 \`\`\`liquid
 {% assign favorite_stores = 'Target,Walmart,Costco' | split: ',' %}
 {% for store in favorite_stores %}
-{{custom\_attribute.${favorited\_stores}}} に {{store}} %} が含まれている場合は {%
+{% if {{custom\_attribute.${favorited\_stores}}} contains {{store}} %}
 本日のお知らせは{{store}}さんから
 
 {% break %}
@@ -978,7 +978,7 @@ reminder\_captureプロパティがBrazeに渡される方法に応じて、/wit
 ],
 "trigger\_properties" : {
 "enquiry_id" : "{{event_properties.${reminder_id}}}",
-"reminder\_date" : "{{event\_properties.${reminder\_date} | 日付: '%Y-%m-%dT%H:%M:%S+0000'}}",
+"reminder\_date" : "{{event\_properties.${reminder\_date} | date: '%Y-%m-%dT%H:%M:%S+0000'}}",
 "message\_personalisation\_X" : "{{event\_properties.${property\_x}}}",
 "message\_personalisation\_Y" : "{{event\_properties.${property\_y}}}",
 "message\_personalisation\_Z" : "{{event\_properties.${property\_z}}}"
@@ -1006,7 +1006,7 @@ reminder\_captureプロパティがBrazeに渡される方法に応じて、/wit
 ],
 "trigger\_properties" : {
 "enquiry_id" : "{{event_properties.${reminder_id}}}",
-"reminder\_date" : "{{event\_properties.${reminder\_date} | 日付: '%Y-%m-%dT%H:%M:%S+0000'}}",
+"reminder\_date" : "{{event\_properties.${reminder\_date} | date: '%Y-%m-%dT%H:%M:%S+0000'}}",
 "message\_personalisation\_X" : "{{event\_properties.${property\_x}}}",
 "message\_personalisation\_Y" : "{{event\_properties.${property\_y}}}",
 "message\_personalisation\_Z" : "{{event\_properties.${property\_z}}}"
@@ -1034,7 +1034,7 @@ reminder\_captureプロパティがBrazeに渡される方法に応じて、/wit
 ],
 "trigger\_properties" : {
 "enquiry_id" : "{{event_properties.${reminder_id}}}",
-"reminder\_date" : "{{event\_properties.${reminder\_date} | 日付: '%Y-%m-%dT%H:%M:%S+0000'}}",
+"reminder\_date" : "{{event\_properties.${reminder\_date} | date: '%Y-%m-%dT%H:%M:%S+0000'}}",
 "message\_personalisation\_X" : "{{event\_properties.${property\_x}}}",
 "message\_personalisation\_Y" : "{{event\_properties.${property\_y}}}",
 "message\_personalisation\_Z" : "{{event\_properties.${property\_z}}}"
@@ -1062,7 +1062,7 @@ reminder\_captureプロパティがBrazeに渡される方法に応じて、/wit
 ],
 "trigger\_properties" : {
 "enquiry_id" : "{{event_properties.${reminder_id}}}",
-"reminder\_date" : "{{event\_properties.${reminder\_date} | 日付: '%Y-%m-%dT%H:%M:%S+0000'}}",
+"reminder\_date" : "{{event\_properties.${reminder\_date} | date: '%Y-%m-%dT%H:%M:%S+0000'}}",
 "message\_personalisation\_X" : "{{event\_properties.${property\_x}}}",
 "message\_personalisation\_Y" : "{{event\_properties.${property\_y}}}",
 "message\_personalisation\_Z" : "{{event\_properties.${property\_z}}}"
@@ -1167,11 +1167,11 @@ Link your Hertz account to use Hertz Fast Lane.
 \`\`\`liquid
 {% assign expired_shows = 'Modern Family,The Rookie,Body of Proof,Felicity' | split: ',' %}
 {% for show in expired_shows %}
-{{custom\_attribute.${Favorite Shows}}}} に {{show}} %} が含まれている場合は {%
+{% if {{custom\_attribute.${Favorite Shows}}} contains {{show}} %}
 {% assign new_shows = new_shows | append: {{show}} |追加: '*' %}
 {% endif %}
 {% endfor %}
-{% 代入 new\_shows\_clean = new\_shows | split: '*' %}
+{% assign new\_shows\_clean = new\_shows | split: '*' %}
 {% if new_shows_clean.size != 0 %}
 
 } の全 {{new_shows_clean | join: ', ' }エピソードは 9/8 で期限切れになります - なくなる前に今すぐ見てください!
@@ -1259,7 +1259,7 @@ Androidユーザーへのメッセージです!
 
 {% raw %}
 \`\`\`liquid
-{% if {{targeted\_device.${os}}} == "10.0" または {{targeted\_device.${os}}} == "10.0.1" または {{targeted\_device.${os}}} == "10.0.2" または {{targeted\_device.${os}}} == "10.0.3" または {{targeted\_device.${os}}} == "10.1" または {{targeted\_device.${os}}} == "10.2" または {{targeted\_device.${os}}} == "10.2.1" または {{targeted\_device.${os}}} == "10.3" または {{targeted\_device.${os}}} == "10.3.1" または {{targeted\_device.${os}}} =="10.3.2" または {{targeted\_device.${os}}} == "10.3.3" または {{targeted\_device.${os}}} == "10.3.4" または {{targeted\_device.${os}}} == "9.3.1" または {{targeted\_device.${os}}} == "9.3.2" または {{targeted\_device.${os}}} == "9.3.3" または {{targeted\_device.${os}}} == "9.3.4" または {{targeted\_device.${os}}} == "9.3.5" %}
+{% if {{targeted\_device.${os}}} == "10.0" or {{targeted\_device.${os}}} == "10.0.1" or {{targeted\_device.${os}}} == "10.0.2" or {{targeted\_device.${os}}} == "10.0.3" or {{targeted\_device.${os}}} == "10.1" or {{targeted\_device.${os}}} == "10.2" or {{targeted\_device.${os}}} == "10.2.1" or {{targeted\_device.${os}}} == "10.3" or {{targeted\_device.${os}}} == "10.3.1" or {{targeted\_device.${os}}} == "10.3.2" or {{targeted\_device.${os}}} == "10.3.3" or {{targeted\_device.${os}}} == "10.3.4" or {{targeted\_device.${os}}} == "9.3.1" or {{targeted\_device.${os}}} == "9.3.2" or {{targeted\_device.${os}}} == "9.3.3" or {{targeted\_device.${os}}} == "9.3.4" or {{targeted\_device.${os}}} == "9.3.5" %}
 
 デバイスのオペレーティング システムのサポートを段階的に廃止しています。最高のアプリエクスペリエンスを得るには、必ず最新のソフトウェアに更新してください。
 
@@ -1275,7 +1275,7 @@ Androidユーザーへのメッセージです!
 
 {% raw %}
 \`\`\`liquid
-{% if {{targeted\_device.${os}}} == 'Mac' または {{targeted\_device.${os}}} == 'Windows' %}
+{% if {{targeted\_device.${os}}} == 'Mac' or {{targeted\_device.${os}}} == 'Windows' %}
 
 このメッセージは、デスクトップのWebブラウザに表示されます。
 
@@ -1311,7 +1311,7 @@ Android向けのコンテンツ。
 
 {% raw %}
 \`\`\`liquid
-{targeted\_device.${carrier}} に "verizon" が含まれる場合、または {targeted\_device.${carrier}} に "Verizon" が含まれる場合は %}
+{% if {targeted\_device.${carrier}} contains "verizon" or {targeted\_device.${carrier}} contains "Verizon" %}
 
 これはVerizonユーザーへのメッセージです!
 
@@ -1427,7 +1427,7 @@ Message for time zone yy.
 
 {% raw %}
 \`\`\`liquid
-{% assign today = 'now' | time_zone: ${time_zone} |日付: "%A" %}
+{% assign today = 'now' | time_zone: ${time_zone} | date: "%A" %}
 {% if {{today}} == 'Saturday' or {{today}} == 'Sunday' %}
 {{today}}ですが、取引のためにアプリを開いてみませんか?
 
@@ -1480,7 +1480,7 @@ Message for time zone yy.
 {% raw %}
 \`\`\`liquid
 {% assign today = 'now' | date: "%m" %}
-{% assign last\_month = {{today}} | マイナス:1 %}
+{% assign last\_month = {{today}} | minus:1 %}
 {% if last_month == 1 %}
 {% assign month = "January" %}
 {% elsif last_month == 2 %}

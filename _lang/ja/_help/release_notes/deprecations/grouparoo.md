@@ -52,7 +52,7 @@ Grouparooで、ナビゲーションバーからモデルを選択します。�
 
 次に、GrouparooプロパティフィールドをBrazeプロパティフィールドにマップする必要があります。 
 
-![プロパティマッピングフィールドの例。Grouparoo userID は、external\_id にマップするように設定されています。email、firstName、lastName は、同等の"email"、"first\_name"、および"last\_name"grouparoo fields.][{: style="max-width:80%;"}
+![プロパティマッピングフィールドの例。Grouparoo userID is set to map to external\_id. email, firstName, and lastName are set as equivalent "email", "first\_name", and "last\_name" grouparoo fields.][3]{: style="max-width:80%;"}
 
 Braze `external_id` フィールドがソーステーブルのプライマリキーにマッピングされていることを確認します。ユースケースに応じて、残りのフィールドを必要に応じてマップします。
 
@@ -64,7 +64,7 @@ Braze `external_id` フィールドがソーステーブルのプライマリキ
 
 マッピングに加えて、GrouparooグループをBrazeサブスクリプショングループに追加することもできます。 
 
-! [" Braze Subscription Groups" Grouparoo 宛先設定ウィンドウで、" 最近の自動車購入&quot で高い値; Grouparoo グループが&quot に追加されます; 最近の自動車購入&quot で高い値; Braze サブスクリプショングループ] [4]{: style="max-width:80%;"}
+![Under "Braze Subscription Groups" in the Grouparoo destination configuration window, the "High value with recent automotive purchase" Grouparoo group will be added to the "High value with recent automotive purchase" Braze subscription group.][4]{: style="max-width:80%;"}
 
 {% alert important %}
 この統合に関する詳細および更新は、[Grouparooのドキュメント](https://www.grouparoo.com/docs/integrations/grouparoo-braze)にあります。

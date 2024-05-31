@@ -100,8 +100,8 @@ Braze は月に1 回チェックし、プッシュトークンを持たない`pu
 
 | ユーザプロファイルフィールド| データ型の指定|
 | ---| --- |
-| alias\_name | (文字列) |
-| alias\_label | (文字列) |
+| alias\_name | (string) |
+| alias\_label | (string) |
 | braze\_id | (string、オプション) SDK 経由でユーザープロファイルが認識されると、関連付けられた`braze_id` を持つ匿名ユーザープロファイルが作成されます。`braze_id` は、Braze によって自動的に割り当てられ、編集できず、デバイス固有です。|
 | country | (string) [ISO-3166-1 alpha-2 standard][17] で国コードをBraze に渡す必要があります。我々のAPIは、異なるフォーマットで受け取った国をマッピングするために最善の努力をします。たとえば、"Australia"は"AU"にマップできます。ただし、入力が指定された[ISO-3166-1 alpha-2 standard][17] と一致しない場合、国の値は`NULL` に設定されます。<br><br>CSV インポートまたはAPI を介してユーザに`country` を設定すると、Braze はSDK を介してこの情報を自動的にキャプチャしません。|
 | current\_location | (object) {"longitude": -73.991443, "latitude": 40.753824} | の形式
@@ -110,8 +110,8 @@ Braze は月に1 回チェックし、プッシュトークンを持たない`pu
 | dob | (生年月日) &quot 形式の文字列;YYY-MM-DD" 例: 1980-12-21 |
 | 電子メール| (文字列) |
 | email\_subscribe | (string) 使用可能な値は、"opted\_in" (メールメッセージを受信するために明示的に登録されている)、"unsubscribed" (メールメッセージから明示的にオプトアウトされている)、"subscribed" (オプトインまたはオプトアウトされていない) |
-| email\_open\_tracking\_disabled |(boolean) true またはfalse accepted. true に設定すると、開いているトラッキングピクセルが、このユーザーに送信される将来のすべてのメールに追加されなくなります。|
-| email\_click\_tracking\_disabled |(boolean) true またはfalse accepted. true に設定すると、このユーザに送信される今後のメール内のすべてのリンクのクリック追跡が無効になります。|
+| email\_open\_tracking\_disabled |(boolean) true or false accepted. true に設定すると、開いているトラッキングピクセルが、このユーザーに送信される将来のすべてのメールに追加されなくなります。|
+| email\_click\_tracking\_disabled |(boolean) true or false accepted. true に設定すると、このユーザに送信される今後のメール内のすべてのリンクのクリック追跡が無効になります。|
 | external\_id | (string)ユーザープロファイルの一意の識別子。`external_id` が割り当てられた後、ユーザーのデバイス全体でユーザープロファイルが識別されます。external\_id を不明なユーザープロファイルに割り当てる最初のインスタンスでは、既存のすべてのユーザープロファイルデータが新しいユーザープロファイルに移行されます。|
 | facebook | hash containing `id` (string), `likes` (文字列の配列), `num_friends` (integer).|
 | first\_name | (文字列) |
@@ -134,7 +134,7 @@ Braze は月に1 回チェックし、プッシュトークンを持たない`pu
 
 この例には、API 呼び出しごとに許可された75 リクエストの2 つのユーザー属性オブジェクトが含まれています。
 
-JSON
+\`\`\`json
 POST https://YOUR_REST_API_URL/users/track
 Content-Type: application/json
 許可:貴社-REST-API-KEY
@@ -146,7 +146,7 @@ Content-Type: application/json
 "has_profile_picture" : true,
 "dob": "1988-02-14",
 "music_videos_favorited" : { "add" : [ "calvinharris-summer" ], "remove" : ["nickiminaj-anaconda"] }
-  
+  },
     {
 "external_id" : "user2",
 "first_name" : "Jill",
@@ -164,8 +164,8 @@ Content-Type: application/json
       "subscription_groups" : [{"subscription_group_id" : "subscription_group_identifier", "subscription_state" : "subscribed"}]
     }
   
-
-
+}
+\`\`\`
 
 [2]: {{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/language_codes/
 [3]: {{site.baseurl}}/help/help_articles/push/push_token_migration/

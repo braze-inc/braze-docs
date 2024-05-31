@@ -51,5 +51,5 @@ Brazeを使ってSMSキャンペーンを作成する前に、ユーザーデー
 [5]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/setting_user_ids/#aliasing-users
 [6]: {{site.baseurl}}/api/endpoints/subscription_groups/post_update_user_subscription_group_status/
 [写真]： {% image_buster /assets/img/sms/e164.jpg %}
-[カスタムキーワード]：{{site.baseurl}}/user_guide/message_building_by_channel/sms/keywords/custom_keyword_handling/
-[購読状態]：{{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_subscription_group/#sms-subscription-states
+[customkeyword]: {{site.baseurl}}/user_guide/message_building_by_channel/sms/keywords/custom_keyword_handling/
+[subscriptionstate]: {{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_subscription_group/#sms-subscription-states

@@ -118,7 +118,7 @@ page_order: 2
 {% tabs local %}
 {% tab User recommendations %}
 **ユーザーの推奨**
-
+![\]({% image_buster /assets/img/Shopify/product_view.png %}){: style="max-width:30%;border:0;float:right;"}
 
 ユーザーが商品をクリックまたは閲覧したが、購入しなかった。このキャンペーンでは、同じ商品または類似の商品（コネクテッドコンテンツがおすすめする商品）をフォローアップメッセージとしてユーザーに送り、いずれかの商品の購入を促します。
 

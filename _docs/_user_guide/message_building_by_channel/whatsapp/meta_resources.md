@@ -23,6 +23,34 @@ Review the following Meta documentation for guidance with display names, phone n
 
 ## WhatsApp Product Updates
 
+### May 2024: Cloud API going live in Türkiye
+*Last Updated May 2024*
+
+Meta now provides Cloud API businesses access to Türkiye for business messaging. Previously, WhatsApp Cloud API was available for businesses in Turkey to use, but WhatsApp users with Turkish numbers were not able to send or receive messages sent via Cloud API. 
+
+Meta always makes it clear to users when they are chatting with a business hosted by Meta, and all users are required to accept the relevant WhatsApp Terms of Service and Privacy Policy to proceed with business messaging. The 2021 Terms of Service and Privacy Policy update in Turkey had been paused, but is now rolling out. It does not change Meta’s commitment to privacy–personal conversations continue to be protected by end-to-end encryption meaning only you and the intended recipient can see them. The update enables Turkish users to access optional business features if they choose to do so and provides more transparency about how WhatsApp works.  
+ 
+Cloud API businesses can now initiate conversations with WhatsApp users with Turkish numbers, which will now return a webhook as a “sent” conversation, instead of today’s error code 131026.
+
+For a business message to be “delivered” or “read” requires the user accepting the WhatsApp terms. A business will not be charged unless the message is delivered.
+
+Users that receive or try to send a message to a Cloud API business will be shown an in-app notification about the terms update which makes clear they cannot message a Cloud API business until they’ve accepted the WhatsApp update. In addition, users that register or re-register the app on their phone, will be prompted to accept the WhatsApp update.
+
+When a user accepts the update they will see the existing Cloud API system message notice when they chat with a Cloud API Business.
+
+### May 2024: Per-user marketing template message limits
+*Last Updated May 2024*
+
+Meta is rolling out new approaches to maintain high-quality user experiences and maximize marketing template message engagement on the WhatsApp platform. Beginning May 23, 2024, they will be limiting the number of marketing template messages that each individual user can receive from all businesses they interact with during a given time period, starting with a small number of conversations that are less likely to be read. Note that the limit is determined based on the number of marketing template messages that person has already received from any business, and is not related to your brand specifically. However, this may affect the deliverability of your marketing template messages.
+
+The limit only applies to marketing template messages that would normally open a new marketing conversation. If a marketing conversation is already open between your brand and a WhatsApp user, marketing template messages sent to the user will not be affected.
+
+If a marketing template message is not delivered to a given user due to the limit, Cloud API will return error code 131026. Note, however, that these error codes cover a wide range of issues that can result in non-delivery of a message, and for privacy reasons, Meta will not disclose if in fact the message was not delivered due to the limit. Refer to Cloud API's [Troubleshooting document](https://developers.facebook.com/docs/whatsapp/cloud-api/support#troubleshooting) for descriptions of non-delivery reasons and what you can do to determine their underlying cause.
+
+If you do receive one of these error codes and suspect it is due to the limit, avoid immediately resending the template message, as it will only result in another error response. 
+
+For more information on this deliverability update, including details on monitoring your deliverability and other best practices for marketing messaging on WhatsApp, refer to our recent [blog post](https://www.braze.com/resources/articles/meta-introduces-deliverability-updates-for-whatsapp?utm_campaign=fy25-q2-global-customer-customer-meta-deliverability-updates-for-whatsapp&utm_medium=email-cdb&utm_source=braze&utm_content=blog-meta-deliverability-updates-for-wa-blog).
+
 ### April 2024: Template pacing for utility templates
 *Last Updated April 2024*
 

@@ -499,6 +499,7 @@ This event occurs if a webhook message was aborted based on Liquid aborts, Quiet
   "message_variation_id": (optional, string) ID of the message variation this user received,
   "message_variation_name": (optional, string) name of the message variation the user is in if from a Canvas,
   "send_id": (optional, string) message send ID this message belongs to,
+  "dispatch_id": (optional, string) ID of the message dispatch (unique ID for each 'transmission' sent from the Braze platform),
   "time": (required, int) unix timestamp at which the event happened,
   "timezone": (optional, string) IANA time zone of the user at the time of the event,
   "user_id": (required, string) Braze ID of the user that performed this event
@@ -1312,7 +1313,8 @@ This event occurs when a webhook was processed and sent to the third party speci
   "canvas_variation_name": (optional, string) name of the Canvas variation the user is in if from a Canvas,
   "canvas_step_id": (optional, string) ID of the step for this message if from a Canvas,
   "canvas_step_name": (optional, string) name of the Canvas step this event belongs to,
-  "send_id": (optional, string) ID of the message if specified for the campaign (See Send Identifier under API Identifier Types)
+  "send_id": (optional, string) ID of the message if specified for the campaign (See Send Identifier under API Identifier Types),
+  "dispatch_id": (optional, string) ID of the message dispatch (unique ID for each 'transmission' sent from the Braze platform),
   "message_extras": (optional, string) key-value pairs sent with this event
 }
 ```
@@ -1340,6 +1342,7 @@ This event occurs when a Content Card gets sent to a user.
   "content_card_id": (required, string) ID of the content card that was sent,
   "time": (required, int) 10-digit UTC time of the event in seconds since the epoch,
   "send_id": (optional, string) ID of the message if specified for the campaign (See Send Identifier under API Identifier Types),
+  "dispatch_id": (optional, string) ID of the dispatch this message belongs to,
   "campaign_id": (optional, string) ID of the campaign if from a campaign,
   "campaign_name": (optional, string) name of the campaign,
   "message_variation_id": (optional, string) ID of the message variation if from a campaign,
@@ -1379,6 +1382,7 @@ This event occurs when a user views a Content Card.
   "time": (required, int) 10-digit UTC time of the event in seconds since the epoch,
   "app_id": (required, string) ID for the app on which the user action occurred,
   "send_id": (optional, string) ID of the message if specified for the campaign (See Send Identifier under API Identifier Types),
+  "dispatch_id": (optional, string) ID of the dispatch this message belongs to,
   "campaign_id": (optional, string) ID of the campaign if from a campaign,
   "campaign_name": (optional, string) name of the campaign,
   "message_variation_id": (optional, string) ID of the message variation if from a campaign,
@@ -1424,6 +1428,7 @@ This event occurs when a user clicks a Content Card.
   "time": (required, int) 10-digit UTC time of the event in seconds since the epoch,
   "app_id": (required, string) ID for the app on which the user action occurred,
   "send_id": (optional, string) ID of the message if specified for the campaign (See Send Identifier under API Identifier Types),
+  "dispatch_id": (optional, string) ID of the dispatch this message belongs to,
   "campaign_id": (optional, string) ID of the campaign if from a campaign,
   "campaign_name": (optional, string) name of the campaign,
   "message_variation_id": (optional, string) ID of the message variation if from a campaign,
@@ -1469,6 +1474,7 @@ This event occurs when a user dismisses a Content Card.
   "time": (required, int) 10-digit UTC time of the event in seconds since the epoch,
   "app_id": (required, string) ID for the app on which the user action occurred,
   "send_id": (optional, string) ID of the message if specified for the campaign (See Send Identifier under API Identifier Types),
+  "dispatch_id": (optional, string) ID of the dispatch this message belongs to,
   "campaign_id": (optional, string) ID of the campaign if from a campaign,
   "campaign_name": (optional, string) name of the campaign,  
   "message_variation_id": (optional, string) ID of the message variation if from a campaign,

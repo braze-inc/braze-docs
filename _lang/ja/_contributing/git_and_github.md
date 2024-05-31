@@ -91,7 +91,7 @@ branch 'fixing-typo-in-recommended-software' set up to track 'origin/fixing-typo
 
 PRの説明には、次のようなMarkdownのコメントが表示されます。これらのコメントを PR の記入に役立ててください。
 
-\`\`\`マークダウン
+\`\`\`markdown
 <!-- This is a Markdown comment. -->
 ```
 

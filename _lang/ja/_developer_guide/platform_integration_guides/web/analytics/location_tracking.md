@@ -17,9 +17,9 @@ tool: Location
 
 \`\`\`javascript
 import * as braze from "@braze/web-sdk";
-関数成功(位置) {
+function success(position) {
   var 座標 = position.座標;
-  braze.getUser().setLastKnownLocation() 関数は、
+  braze.getUser().setLastKnownLocation(
     座標、緯度、
     座標.経度、
     座標精度、
@@ -28,7 +28,7 @@ import * as braze from "@braze/web-sdk";
   );
 ()
 
-navigator.geolocation.getCurrentPosition(成功);
+navigator.geolocation.getCurrentPosition(success);
 \`\`\`
 
 通話 `navigator.geolocation.getCurrentPosition()` ユーザーがすでに許可または拒否していない限り、直ちにユーザーに許可を要求します。ユーザーの最後の既知の場所を設定する方法については、[JSDocs を][1] 参照してください。
@@ -42,9 +42,9 @@ Web SDK が Braze サーバーにデータを送信すると、アプリケー�
 ページ読み込み中にユーザーの位置を継続的に追跡したい場合は、 [`watchPosition()`](https://developer.mozilla.org/en-US/docs/Web/API/Geolocation/watchPosition)Geolocation API のメソッド。このメソッドは、ユーザーの位置が更新されるたびに成功コールバックを呼び出します。
 
 \`\`\`javascript
-関数成功(位置) {
+function success(position) {
   var 座標 = position.座標;
-  braze.getUser().setLastKnownLocation() 関数は、
+  braze.getUser().setLastKnownLocation(
     座標、緯度、
     座標.経度、
     座標精度、
@@ -53,7 +53,7 @@ Web SDK が Braze サーバーにデータを送信すると、アプリケー�
   );
 ()
 
-navigator.geolocation.watchPosition(成功);
+navigator.geolocation.watchPosition(success);
 \`\`\`
 
 通話 `navigator.geolocation.watchPosition()` ユーザーがすでに許可または拒否していない限り、直ちにユーザーに許可を要求します。位置追跡の設定と停止については [、Mozilla 開発者ドキュメント][2] を参照してください。
