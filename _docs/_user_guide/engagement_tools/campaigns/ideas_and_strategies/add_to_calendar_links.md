@@ -93,6 +93,18 @@ On mobile, users need to press and hold the link, which prompts them to add it t
 
 ![iOS pop-up when you press and hold on a calendar link, which includes a button to "Add to Calendar".][5]{: style="max-width:50%"}
 
+### Using [Cal.et](https://Cal.et) for Add-to-Calendar Links
+
+In addition to using manual URL formats, you can simplify the process with Cal.et, an “Add to Calendar” link generator. Cal.et supports multiple calendar platforms including Google, Apple, Outlook, Yahoo, and Office365.
+
+Steps to Create a Calendar Link with Cal.et
+
+1.	Visit [Cal.et](https://Cal.et)
+2.	Enter Event Details: Fill in the event title, date, time, location, and description.
+3.	Generate Link: Cal.et will provide a shareable link and an “Add to Calendar” button.
+4.	Embed Link: Use the generated HTML code or QR code to embed the link in your emails or websites
+
+
 For more information, refer to:
 * [Create events for Google Calendar](https://developers.google.com/calendar/api/guides/create-events)
 * [Create an Add to calendar link in an email message](https://support.microsoft.com/en-us/office/create-an-add-to-calendar-link-in-an-email-message-34f8ea28-322a-4867-b423-2998f9634e59)
