@@ -238,9 +238,11 @@ completionHandler()
 To display push notifications while the app is in the foreground and to enable Braze to recognize when they are received, implement `userNotificationCenter:willPresentNotification:withCompletionHandler:`.
 
 ```swift
-func userNotificationCenter(_ center: UNUserNotificationCenter,
-                            willPresent notification: UNNotification,
-                            withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+func userNotificationCenter(
+  _ center: UNUserNotificationCenter,
+  willPresent notification: UNNotification,
+  withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions
+) -> Void) {
   AppDelegate.braze?.notifications.handleForegroundNotification(notification: notification)
 
   if #available(iOS 14.0, *) {
