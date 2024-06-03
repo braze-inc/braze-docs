@@ -71,7 +71,7 @@ If you can't find your selection, make sure it's set up in your catalog first.
 
 ### Step 3: Select the interaction to drive recommendations
 
-Next, select the event you want this recommendation to optimize for. This event is usually a purchase, but it can also be any kind of interaction with an item.
+Next, select the event you want this recommendation to optimize for. This event is usually a purchase, but it can also be any interaction with an item.
 
 You can optimize for:
 
@@ -85,7 +85,7 @@ If you choose **Custom Event**, select your event from the list.
 
 ### Step 4: Choose the corresponding property name {#property-name}
 
-To create a recommendation, you need to tell Braze which field of your interaction event (purchase object or custom event) has the unique indentifier that matches the `id` field of an item in the catalog. Not sure? See [requirements](#requirements).
+To create a recommendation, you need to tell Braze which field of your interaction event (purchase object or custom event) has the unique identifier that matches an item's `id` field in the catalog. Not sure? [View requirements](#requirements).
 
 Select this field for the **Property Name**.
 
