@@ -311,7 +311,7 @@ Deep linking from a push into the app is automatically handled via our standard 
 
 ## Subscribing to push notifications updates
 
-To access the push notification payloads processed by Braze, use the [`Braze.Notifications.subscribeToUpdates(_:)`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/notifications-swift.class/subscribetoupdates(_:)/) method.
+To access the push notification payloads processed by Braze, use the [`Braze.Notifications.subscribeToUpdates(_:)`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/notifications-swift.class/subscribetoupdates(_:)/) method. When calling the function, you can specify whether you'd like to subscribe to notifications involved in push open events, foreground push received events, or both.
 
 {% tabs %}
 {% tab swift %}
@@ -320,7 +320,7 @@ To access the push notification payloads processed by Braze, use the [`Braze.Not
 // This subscription is maintained through a Braze cancellable, which will observe for changes until the subscription is cancelled.
 // You must keep a strong reference to the cancellable to keep the subscription active.
 // The subscription is canceled either when the cancellable is deinitialized or when you call its `.cancel()` method.
-let cancellable = AppDelegate.braze?.notifications.subscribeToUpdates { payload in
+let cancellable = AppDelegate.braze?.notifications.subscribeToUpdates(payloadTypes: [.open, .received]) { payload in
   print("Braze processed notification with title '\(payload.title)' and body '\(payload.body)'")
 }
 ```
