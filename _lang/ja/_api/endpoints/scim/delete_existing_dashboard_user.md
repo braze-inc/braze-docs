@@ -62,7 +62,7 @@ Content-Type: text/html; charset=UTF-8
 ```
 
 この ID を持つ開発者が Braze に存在しない場合、エンドポイントは次のように応答します。
-JSON
+\`\`\`json
 ウェブ/1.1 404 Not Found
 Content-Type: text/html; charset=UTF-8
 
@@ -71,5 +71,5 @@ Content-Type: text/html; charset=UTF-8
 "detail": "User not found",
 "status": 404
 }
-    「」
+    \`\`\`
     {% endapi %}

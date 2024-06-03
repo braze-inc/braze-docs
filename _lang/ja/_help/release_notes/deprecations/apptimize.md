@@ -79,25 +79,25 @@ AppDelegate の実装にヘッダーを追加し、以下を追加します
 [ApptimizeAppboy setupExperimentTracking];
 ```
 
-#### appboy-apptimize.h:
+#### Appboy-Apptimize.h:
 
-\`\`\`オブジェクト
-//アプリティマイズ-AppBoy.h
+\`\`\`objc
+//  Apptimize-Appboy.h
 
 \#ifndef Apptimize\_Appboy\_h
 \#define Apptimize\_Appboy\_h
 
 @interface apptimizeAppBoy:NSObject
-\+ (void) セットアップ実験トラッキング;
+\+ (void)setupExperimentTracking;
 @end
 
 \#endif /* Apptimize_Appboy_h */
-\`\`
+\`\`\`
 
-#### AppBoy-apptimize.m:
+#### Appboy-Apptimize.m:
 
-\`\`\`オブジェクト
-//アプリティマイズ-アプリボーイ.m
+\`\`\`objc
+//  Apptimize-Appboy.m
 
 \#import <Foundation/Foundation.h>
 
@@ -114,7 +114,7 @@ nsString \*const appTimizeAppBoy TestEnrollmentStorageKey = @「AppTimizeAppBoy 
 
 @implementation apptimizeAppBoy
 
-+ (void) 実験追跡のセットアップ
++ (void)setupExperimentTracking
 {
 // Track for enrollment changes
 [[NSNotificationCenter defaultCenter] addObserver:self
@@ -128,20 +128,20 @@ name:ApptimizeTestRunNotification
 object:nil];
 }
 
-+ (無効) AppTimize テストが処理されました:(NS 通知\*) 通知
++ (void)apptimizeTestsProcessed:(NSNotification\*)notification
 {
-    NSLog (@ "Appboy-Apptimize インテグレーション処理中の新しいオプティマイズテスト」);
-    [新しいテストのセルフアップデート];
+    NSLog(@"Appboy-Apptimize integration processing new Apptimize tests");
+    [self updateForNewTests];
 }
 
-+ (無効) 新しいテストの更新
++ (void)updateForNewTests
 {
-    nsDictionary * SavedEnrollmentDictionary = [[NS ユーザーデフォルト標準ユーザーデフォルト] オブジェクトフォーキー:apptimizeAppBoy TestEnrollmentStorageKey];
-    NS Dictionary * 現在の登録辞書 = [TestInfo から登録辞書を自分で取得];
+    NSDictionary \*savedEnrollmentDictionary = [[NSUserDefaults standardUserDefaults] objectForKey:ApptimizeAppboyTestEnrollmentStorageKey];
+    NSDictionary \*currentEnrollmentDictionary = [self getEnrollmentDictionaryFromTestInfo];
 
     BOOL 登録が変更されました = いいえ;
 
-    for (現在の登録辞書の ID キー) {
+    for (id key in currentEnrollmentDictionary) {
 if (![savedEnrollmentDictionary[key] isEqualToString:currentEnrollmentDictionary[key]]) {
 enrollmentChanged = YES;
 NSString *testAttributeKey = [@"apptimize_test_" stringByAppendingString:key];
@@ -149,12 +149,12 @@ NSString *testAttributeKey = [@"apptimize_test_" stringByAppendingString:key];
 }
         }
 
-    if (現在の登録辞書。カウント!= 登録辞書を保存しました。カウント) {
+    if (currentEnrollmentDictionary.count != savedEnrollmentDictionary.count) {
         登録変更 = はい;
     }
 
-    if (登録が変更されました) {
-        [[Appboy SharedInstance] .user setCustomAttributeArray (キー付き): @ "active\_apptimize\_tests」配列:現在の登録ディクショナリ。すべてのキー];
+    if (enrollmentChanged) {
+        [[Appboy sharedInstance].user setCustomAttributeArrayWithKey:@"active\_apptimize\_tests" array:currentEnrollmentDictionary.allKeys];
 
         for (id key in currentEnrollmentDictionary.allKeys) {
             [[Appboy sharedInstance].user addToCustomAttributeArrayWithKey:@"all_apptimize_tests" value:key];
@@ -166,9 +166,9 @@ NSString *testAttributeKey = [@"apptimize_test_" stringByAppendingString:key];
 }
 
 //テスト ID をキーにしたバリアント ID を持つディクショナリ。両方とも NSString
-\+ (NSミュータブル辞書\*) テスト情報から登録辞書を取得
+\+ (NSMutableDictionary \*)getEnrollmentDictionaryFromTestInfo
 {
-    NSミュータブルディクショナリ\*登録ディクショナリ= [NSミュータブルディクショナリディクショナリ];
+    NSMutableDictionary \*enrollmentDictionary = [NSMutableDictionary dictionary];
 
     for(id key in [Apptimize testInfo]) {
         NSLog(@"key=%@ value=%@", key, [[Apptimize testInfo] objectForKey:key]);
@@ -179,17 +179,17 @@ NSString *testAttributeKey = [@"apptimize_test_" stringByAppendingString:key];
     return enrollmentDictionary;
 }
 
-+ (無効) 実験ディジェットが表示されました:(NS 通知\*) 通知
++ (void)experimentDidGetViewed:(NSNotification\*)notification
 {
-    もし (![notification.userinfo [AppTimizeTestFirstRunUserInfoKey] BoolValue]) {
+    if (![notification.userInfo[ApptimizeTestFirstRunUserInfoKey] boolValue]) {
         返品;
     }
 
     //Apptimize は ID で通知しないので、すべての実験を繰り返して一致するものを見つけます。
-    nsString \*name = notification.userInfo [apptimizeTestNameUserInfoKey];
-    NSString \*variant = notification.userInfo [apptimizeVariantNameUserInfoKey];
+    NSString \*name = notification.userInfo[ApptimizeTestNameUserInfoKey];
+    NSString \*variant = notification.userInfo[ApptimizeVariantNameUserInfoKey];
 
-    [テスト情報を最適化する] ブロックを使用してキーとオブジェクトを列挙する:^ (id キー、id 実験、BOOL \*停止) <ApptimizeTestInfo> {
+    [[Apptimize testInfo] enumerateKeysAndObjectsUsingBlock:^(id key, id<ApptimizeTestInfo> experiment, BOOL \*stop) {
 BOOL match = [experiment.testName isEqualToString:name] && [experiment.enrolledVariantName isEqualToString:variant];
 if (!match) {
 return;
@@ -211,7 +211,7 @@ return;
 }
 
 @end
-\`\`
+\`\`\`
 
 ### Android
 
@@ -231,7 +231,7 @@ appboyApptimizeIntegration.configureExperimentTracking(this);
 
 #### ApptimizeAppboy.java:
 
-\`\`\`ジャワ
+\`\`\`java
 パッケージ com.apptimize.appboykit;
 
 java.io ファイルをインポートします。
@@ -256,7 +256,7 @@ com.appboy.models.outgoing.AppBoyProperties; をインポートする;
 
 パブリッククラスアプリイマイズアプリボーイ
         AppTimize.onExperimize.onExperimentRunListener を実装しています。
-                    apptimize.onExperimentsProcsedListener {
+                    Apptimize.OnExperimentsProcessedListener {
 
     public void configureExperimentTracking(Context context) {
         appboyInstance = Braze.getInstance(context);
@@ -401,4 +401,4 @@ com.appboy.models.outgoing.AppBoyProperties; をインポートする;
     private static String ApptimizeAppboyStorageDirectory;
     private static String ApptimizeAppboyTestEnrollmentStorage = "ApptimizeAppboyTestEnrollmentStorage";
 }
-\`\`
+\`\`\`

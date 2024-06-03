@@ -21,7 +21,7 @@ import * as braze from "@braze/web-sdk";
 braze.subscribeToInAppMessage(function(inAppMessage) {
   // control group messages should always be "shown"
 // this will log an impression and not show a visible message
-  if (inAppMessage インスタンス braze.ControlMessage) {
+  if (inAppMessage instanceof braze.ControlMessage) {
   braze.showInAppMessage(inAppMessage) を返します。
     ()
 
@@ -35,5 +35,5 @@ console.log("key: " + key + ", value: " + extras[key]);
     ()
     ()
       braze.showInAppMessage(inAppMessage);
-        ()
+        });
       \`\`\`

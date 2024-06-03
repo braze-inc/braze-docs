@@ -191,9 +191,9 @@ Brazeは、3つのターゲティング状態をサポートしています。
 [28]: {{site.baseurl}}/api/endpoints/preference_center/
 [29]: {% image_buster /assets/img/user-sub-state-export.png %}
 [30]: {% image_buster /assets/img/campaign_analytics_sub_groups.png %}
-[ユーザー追跡]: {{site.baseurl}}/api/endpoints/user_data/post_user_track/
+[users-track]: {{site.baseurl}}/api/endpoints/user_data/post_user_track/
 [user\_attributes\_object]: {{site.baseurl}}/api/objects_filters/user_attributes_object
 [3]: {% image_buster /assets/img/push_example.png %}
 [5]: {{site.baseurl}}/user_guide/engagement_tools/segments/using_user_search/
-[識別子]: {{site.baseurl}}/api/endpoints/export/user_data/post_users_identifier/
-[セグメント]: {{site.baseurl}}/api/endpoints/export/user_data/post_users_segment/
+[identifier]: {{site.baseurl}}/api/endpoints/export/user_data/post_users_identifier/
+[segment]: {{site.baseurl}}/api/endpoints/export/user_data/post_users_segment/

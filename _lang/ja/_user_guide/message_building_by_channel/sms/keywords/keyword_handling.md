@@ -134,8 +134,8 @@ SMS with Brazeでは、キーワードトリガーの作成、カスタムレス
 [oblink]: {{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_subscription_group/#setup-process
 [1]: {% image_buster /assets/img/sms/keyword_edit2.png %}
 [2]: {% image_buster /assets/img/sms/keyword_home.png %}
-[不明]: {{site.baseurl}}/user_guide/message_building_by_channel/sms/keywords/unknown_phone_numbers/
-[エンドポイント]: {{site.baseurl}}/api/endpoints/user_data/post_user_alias/
+[unknown]: {{site.baseurl}}/user_guide/message_building_by_channel/sms/keywords/unknown_phone_numbers/
+[endpoint]: {{site.baseurl}}/api/endpoints/user_data/post_user_alias/
 [画像2]: {% image_buster /assets/img/sms/sms_message_body.png %}
 [5]: {% image_buster /assets/img/sms/multi-language2.png %}
 [12]: {% image_buster /assets/img/sms/sms_custom_keyword.png %}

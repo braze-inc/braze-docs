@@ -125,7 +125,7 @@ Braze でユーザーのプッシュサブスクリプションの状態を確�
 [プッシュプロセス]: {% image_buster /assets/img/push_process.png %}
 [5]: {{site.baseurl}}/user_guide/engagement_tools/segments/using_user_search/
 [2]: {% image_buster /assets/img/push_changelog.png %}
-[プッシュトークン]: {{site.baseurl}}/user_guide/message_building_by_channel/push/push_registration/
+[push-tokens]: {{site.baseurl}}/user_guide/message_building_by_channel/push/push_registration/
 [3]: {% image_buster /assets/img/push_example.png %}
 [4]: {% image_buster /assets/img/push_token_changelog.png %}
 

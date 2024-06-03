@@ -73,12 +73,12 @@ Chrome やFirefox などの主要なブラウザとは異なり、Web サイト�
 \`\`\`typescript
 import { requestPushPermission } from "@braze/web-sdk";
 
-onclick.onclick = 関数(){
+button.onclick = function(){
     requestPushPermission(() => {
         console.log(`User accepted push prompt`);
-    }, (テンポラリ) => {
+    }, (temporary) => {
         console.log(`User ${temporary ? "temporarily dismissed" : "permanently denied"} push prompt`);
-    ()
+    });
 ()
 \`\`\`
 
