@@ -23,14 +23,14 @@ If you are using the [older navigation]({{site.baseurl}}/navigation), you can fi
 
 ### Step 2: Name your segment
 
-Click <i class="fas fa-plus"></i> **Create Segment** to begin building your segment. Name your segment by describing the type of user you intend to filter for. This will ensure that this segment can accurately be the target of multiple campaigns or Canvases to come. Vague segment titles can cause confusion down the line.
+Select **Create Segment** to begin building your segment. Name your segment by describing the type of user you intend to filter for. This will help you identify the segment when you want to target it for multiple campaigns or Canvases. Vague segment titles can be confusing.
 
 Optionally, you can do the following:
 - Add a description to the segment to provide more details about the intention of this audience and leave notes for other team members to refer back to.
 - Add a [team]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams/) to your segment.
-- Add [tags]({{site.baseurl}}/user_guide/administrative/app_settings/tags/) to your segment for  further organization.
+- Add [tags]({{site.baseurl}}/user_guide/administrative/app_settings/tags/) to your segment for further organization.
 
-![Create Segment modal where the segment is named "Lapsed Users" with the Segment Description as "This is our main Lapsed User segment to target non-actives within the past fourteen days." with two buttons: Cancel and Create Segment.][2]{: style="max-width:70%;"}
+![Create Segment modal where the segment is named "Lapsed Users" with the Segment Description as "This is our main Lapsed User segment to target non-actives within the past fourteen days." with buttons to "Cancel" or "Create Segment". ][2]{: style="max-width:70%;"}
 
 ### Step 3: Choose your app or platform
 
@@ -46,9 +46,9 @@ Add at least one filter to your segment to narrow down your audience.
 
 #### Filter groups
 
-Filters are organized into filter groups. Every filter must be part of a filter group that has a minimum of one filter. A segment can have multiple filter groups. To add one, click **Add filter group**.
+Filters are organized into filter groups. Every filter must be part of a filter group that has a minimum of one filter. A segment can have multiple filter groups. To add one, select **Add filter group**.
 
-Click the icons next to each filter to duplicate or remove it. After duplicating a filter, you can adjust its values within each dropdown.
+Select the icons next to each filter to duplicate or remove it. After duplicating a filter, you can adjust its values within each dropdown.
 
 You can also use the icon within each filter group to duplicate that filter group and the filters within it, or delete that filter group from your segment.
 
@@ -68,10 +68,10 @@ Depending on the specific filter you select, you will have different operators f
 Braze doesn't generate profiles for users until they've used the app for the first time, so you can't target users who haven't opened your app yet.
 {% endalert %}
 
-![Segmenter filter groups with the AND operator.][9]
+![Segmenter filter groups with the AND operator.][9]{: style="max-width:70%;"}
 
 {% alert important %}
-Segments already using the Segment Membership Filter cannot be further included or nested into other segments.
+Segments already using the **Segment Membership** filter cannot be further included or nested into other segments.
 {% endalert %}
 
 #### Exclusion groups (optional)
@@ -84,38 +84,38 @@ Create an exclusion group by adding filters like you would for filter groups. Th
 
 Excluded users will not be counted as part of your segment’s _Total reachable users_ statistic.
 
-![An exclusion group with two filters.][12]
+![An exclusion group with two filters.][12]{: style="max-width:70%;"}
 
 #### Testing segments
 
-After adding apps and filters to your segment, you can test if your segment is set up as expected by looking up a user to confirm if they match the segment criteria. To do so, click **Lookup User** and search for a user’s `external_id` or `braze_id`.
+After adding apps and filters to your segment, you can test if your segment is set up as expected by looking up a user to confirm if they match the segment criteria. To do so, search for a user’s `external_id` or `braze_id` in the **User Lookup** section.
 
-![User Lookup section with a "Lookup User" button.][6]{: style="max-width:50%;"}
+![User Lookup section with a search field.][6]{: style="max-width:80%;"}
 
 User lookup is available when:
 - Creating a segment
 - Setting up a campaign or Canvas audience
 - Setting up an Audience Paths step
 
-When a user matches the segment, filter, and app criteria, you see the following:
+When a user matches the segment, filter, and app criteria, an alert will state so.
 
-![A user lookup of "user007" triggers an alert stating, "user007 matches all of the segments, filters, and apps.][7]{: style=" max-width:60%;"}
+![A user lookup of "user007" triggers an alert stating, "user007 matches all of the segments, filters, and apps.][7]{: style=" max-width:80%;"}
 
 When a user doesn’t match part or all of the segment, filter, or app criteria, the missing criteria is listed for troubleshooting purposes.
 
-![A user lookup of "user1234" triggers an alert stating, "user1234 does not match the following targeting criteria:" and displays two missing criteria: a tenure greater than one year and today being an anniversary.][8]{: style=" max-width:60%;"}
+![A user lookup of "user1234" triggers an alert stating, "user1234 does not match the following targeting criteria:" and displays two missing criteria: a tenure greater than one year and today being an anniversary.][8]{: style=" max-width:80%;"}
 
 #### Single-user segments
 
 You can create single user segments (or segments of a handful of users) using unique attributes that identify users, like a user name or a user ID.
 
-However, the segmentation stats or preview may not show this individual user because segment stats are calculated based on a random sample with a 95% confidence interval that the result is within +/- 1%. The larger your user base is, the more likely it is that the size of your segment is a rough estimate. To ensure that your segment contains the single user you are targeting, click **Calculate Exact Statistics** on the **Segment Details** page. This will calculate the exact number of users in your segment with greater than 99.999% accuracy.
+However, the segmentation stats or preview may not show this individual user because segment stats are calculated based on a random sample with a 95% confidence interval that the result is within +/- 1%. The larger your user base is, the more likely it is that the size of your segment is a rough estimate. To make sure that your segment contains the single user you are targeting, select **Calculate exact statistics**. This will calculate the exact number of users in your segment with greater than 99.999% accuracy.
 
 Braze has testing filters to target specific users by user ID or email address.
 
 ### Step 5: Save your segment
 
-Once you've clicked **Save**, you're ready to start sending messages to your users!
+Select **Save**. Now you're ready to start sending messages to your users!
 
 ## Segment membership calculation {#segment-membership-calculation}
 
@@ -125,10 +125,10 @@ Braze updates the user’s segment membership as data is sent back to our server
 
 Each segment displays the total number of users that are members of that segment. When filtering for **Users from all apps**, it also displays all of the different channels available to communicate with those users, such as web push or email. It is possible that the number of total users is different than the number of users reachable by each channel.
 
-![A table displaying 2,414 total reachable users broken down by users reachable by email, iOS push, Android push, web push, Kindle push, and Android China push.][10]
+![A table displaying total reachable users broken down by users reachable by email, iOS push, Android push, web push, Kindle push, and Android China push.][10]
 
 For a user to be listed as reachable through a certain channel, the user must have both:
-* A valid email address/push token associated with their profile; and
+* A valid email address or push token associated with their profile; and
 * Opted in or subscribed to your app.
 
 A single user may belong to different reachable user groups. For example, a user might have both a valid email address and valid Android push token and be opted in to both, but have no associated iOS push token. The gap between the total reachable users and the sum of the different channels are the number of users who qualified for the segment but they are not reachable via those communication channels.
@@ -139,13 +139,13 @@ Braze provides the following statistics on segment size. All estimated statistic
 
 #### Filter statistics
 
-For each filter group, you can view estimated reachable users. Click **Expand extra funnel statistics** to see a breakdown across channels.
+For each filter group, you can view estimated reachable users. Select **Expand extra funnel statistics** to see a breakdown across channels.
 
-![A filter group with a filter for a First Name that isn't blank and using an app more than 1 time.][4]
+![A filter group with a filter for a gender that isn't unknown.][4]{: style="max-width:80%;"}
 
 #### Segment statistics
 
-For an entire segment, you can view estimated reachable users, as well as estimated user counts for each channel, at the bottom of the page. You can also view an exact count of reachable users (for both the segment overall and a per channel basis) by clicking **Calculate exact statistics**.
+For an entire segment, you can view estimated reachable users, as well as estimated user counts for each channel, at the bottom of the page. You can also view an exact count of reachable users (for both the segment overall and a per channel basis) by selecting **Calculate exact statistics**.
 
 Note that:
 - Calculating exact statistics can take a few minutes to run. This function only calculates the exact statistics at the segment level, not at the filter or filter group level.
@@ -153,7 +153,7 @@ Note that:
 
 ## Archiving segments
 
-If you no longer need or wish to retire a specific segment, you can archive it by going to the **Segments** page, clicking on the gear, then selecting **Archive** from the dropdown.
+If you no longer need or wish to retire a specific segment, you can archive it by going to the **Segments** page and selecting **Archive** from the menu in that segment's row.
 
 {% alert warning %}
 When you archive a segment, any campaigns or Canvases using it (even if the segment is only used in a single Canvas component) will also be archived. This also includes nested segments where both segments and any campaigns or Canvases using them will also be archived.
