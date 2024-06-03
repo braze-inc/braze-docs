@@ -17,19 +17,15 @@ channel: push
 
 {% multi_lang_include cordova/prerequisites.md %}
 
-## Basic push functionality
+## Basic push features
 
-Basic push notification features are enabled by default in the Braze Cordova plugin. You may disable this default behavior by customizing your XML configurations. Refer to our [Customization options]({{site.baseurl}}/developer_guide/platform_integration_guides/cordova/initial_setup/customizations/#customization-options) for more details.
-
-For a more in-depth native integration for either platform, see the [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/integration/) or [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/integration/standard_integration/) push notification integration guides.
+By default, all basic push notification features are enabled in the Braze Cordova plugin. You disable these features by [customizing your XML configurations]({{site.baseurl}}/developer_guide/platform_integration_guides/cordova/initial_setup/customizations/#customization-options). For more in-depth native features, see the [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/integration/) and [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/integration/standard_integration/) push notification guides.
 
 ## Extended push features
 
 {% alert important %}
 Anytime you add, remove, or update your Cordova plugins, Cordova will overwrite the Podfile in your Xcode project. This means you'll need to repeat this process anytime you modify your Cordova plugins.
 {% endalert %}
-
-This section describes additional push notification integrations on iOS. Rich push notifications and push stories are already available for Android by default.
 
 ### Rich push notifications
 
