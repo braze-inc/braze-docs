@@ -322,7 +322,7 @@ Content-Type: application/json
 }
 ```
 
-## Data transformation use cases
+## Data Transformation use cases
 
 The following are example templates built using our [example Typeform webhook payload](#example-typeform-webhook-payload). These templates can be used as a starting point. You can start from scratch or delete specific components as you see fit.
 
