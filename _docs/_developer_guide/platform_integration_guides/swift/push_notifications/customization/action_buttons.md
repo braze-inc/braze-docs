@@ -143,7 +143,7 @@ When you create a `UNNotificationAction`, you can specify a list of action optio
 After you register a category, use the Braze dashboard to send notifications of that type to users.
 
 {% alert tip %}
-You only need to define custom notification categories for action buttons with _special actions_, such as deep linking into your app or opening a URL.
+You only need to define custom notification categories for action buttons with _special actions_, such as deep linking into your app or opening a URL. You do not need to define them for action buttons that only dismiss a notification.
 {% endalert %}
 
 1. In the Braze dashboard, select **Messaging** > **Push Notifications**, then choose your iOS [push campaign]({{site.baseurl}}/docs/user_guide/message_building_by_channel/push/creating_a_push_message).
