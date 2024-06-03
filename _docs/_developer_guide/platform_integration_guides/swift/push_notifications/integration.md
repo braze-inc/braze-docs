@@ -235,12 +235,14 @@ completionHandler()
 
 **Foreground push handling**
 
-To display a push notification while the app is in the foreground, implement `userNotificationCenter(_:willPresent:withCompletionHandler:)`:
+To display push notifications while the app is in the foreground and to enable Braze to recognize when they are received, implement `userNotificationCenter:willPresentNotification:withCompletionHandler:`.
 
 ```swift
 func userNotificationCenter(_ center: UNUserNotificationCenter,
                             willPresent notification: UNNotification,
                             withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+  AppDelegate.braze?.notifications.handleForegroundNotification(notification: notification)
+
   if #available(iOS 14.0, *) {
     completionHandler([.list, .banner])
   } else {
@@ -280,12 +282,16 @@ completionHandler();
 
 **Foreground push handling**
 
-To display a push notification while the app is in the foreground, implement `userNotificationCenter:willPresentNotification:withCompletionHandler:`:
+To display push notifications while the app is in the foreground and to enable Braze to recognize when they are received, implement `userNotificationCenter:willPresentNotification:withCompletionHandler:`.
 
 ```objc
 - (void)userNotificationCenter:(UNUserNotificationCenter *)center
        willPresentNotification:(UNNotification *)notification
          withCompletionHandler:(void (^)(UNNotificationPresentationOptions options))completionHandler {
+  if (AppDelegate.braze != nil) {
+    [AppDelegate.braze.notifications handleForegroundNotificationWithNotification:notification];
+  }
+
   if (@available(iOS 14.0, *)) {
     completionHandler(UNNotificationPresentationOptionList | UNNotificationPresentationOptionBanner);
   } else {
