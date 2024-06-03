@@ -331,7 +331,16 @@ let cancellable = AppDelegate.braze?.notifications.subscribeToUpdates(payloadTyp
 {% tab OBJECTIVE-C %}
 
 ```objc
-BRZCancellable *cancellable = [notifications subscribeToUpdatesWithInternalNotifications:NO update:^(BRZNotificationsPayload * _Nonnull payload) {
+BRZCancellable *cancellable = [notifications subscribeToUpdates:^(BRZNotificationsPayload * _Nonnull payload) {
+  NSLog(@"Braze processed notification with title '%@' and body '%@'", payload.title, payload.body);
+}];
+```
+
+Or, to specify the type of push events you'd like to subscribe to:
+```objc
+NSInteger filtersValue = BRZNotificationsPayloadTypeFilter.opened.rawValue | BRZNotificationsPayloadTypeFilter.received.rawValue;
+BRZNotificationsPayloadTypeFilter *filters = [[BRZNotificationsPayloadTypeFilter alloc] initWithRawValue: filtersValue];
+BRZCancellable *cancellable = [notifications subscribeToUpdatesWithPayloadTypes:filters:^(BRZNotificationsPayload * _Nonnull payload) {
   NSLog(@"Braze processed notification with title '%@' and body '%@'", payload.title, payload.body);
 }];
 ```
