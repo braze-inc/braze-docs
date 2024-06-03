@@ -39,7 +39,7 @@ For in-app message channels, `canvas_entry_properties` can only be referenced in
 
 When an Action Path step contains a "Sent an SMS Inbound Message" or "Sent a WhatsApp Inbound Message" trigger, the subsequent Canvas steps can include an SMS or WhatsApp Liquid property. This mirrors how event properties work in Canvas Flow. This way you can leverage your messages to save and reference first-party data on user profiles and conversational messaging.
 
-## Example
+## Use case
 
 ![][7]{: style="float:right;max-width:30%;margin-left:15px;"}
 

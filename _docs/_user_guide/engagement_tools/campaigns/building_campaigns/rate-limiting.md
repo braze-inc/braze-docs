@@ -154,19 +154,19 @@ In-app messages and Content Cards are not counted as or toward caps on campaigns
 Global frequency capping is scheduled based on the user's time zone, and is calculated by calendar days, not 24-hour periods. For example, if you set up a frequency capping rule of sending no more than one campaign a day, a user may receive a message at 11 pm in their local time zone and they would be eligible to receive another message an hour later.
 {% endalert %}
 
-#### Examples
+#### Use cases
 
 {% tabs %}
-{% tab Example 1 %}
+{% tab Use case #1 %}
 
 Let's say that you set a frequency capping rule which asks that your user receive no more than three push notification campaigns or Canvas components per week from all campaign or Canvas components.
 
 If your user is slated to receive three push notifications, two in-app messages, and one Content Card this week, they will receive all of those messages.
 
 {% endtab %}
-{% tab Example 2 %}
+{% tab Use case #2 %}
 
-This following example uses the following frequency capping rules:
+This scenario uses the following frequency capping rules:
 
 **When following scenario occurs:**
 
@@ -217,7 +217,7 @@ In this example, your user will not receive more than one push notification camp
 
 Frequency capping by tag rules compute at the time a message sends. This means that frequency capping by tag only counts tags that are currently on the campaigns or Canvases that a user received in the past. It does not count the tags that were on the campaigns or Canvases during the time they were sent but have since been removed. It will count if a tag is later added to a message that a user received in the past, but before the newest tagged message is sent.
 
-##### Example
+##### Use case
 
 Consider the following campaigns and frequency capping by tag rule:
 

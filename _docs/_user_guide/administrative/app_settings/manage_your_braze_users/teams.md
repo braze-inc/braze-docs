@@ -72,7 +72,7 @@ You can assign a team to Canvases, campaigns, cards, segments, email templates, 
 - Based on the *definitions* applied when the team was created, when a team filter is assigned, that engagement tool's audience is restricted to user profiles that match the definition.
 - Based on assigned *permissions*, team members will only be allowed to access dashboard engagement tools that have their team filter set. If they have limited or no workspace permissions, they must add a team filter to certain objects before they can save or launch them. Team members are also able to filter Canvases, campaigns, cards, and segments by team to identify content relevant to them.
 
-### Example
+### Use cases
 
 Consider the following two scenarios for a marketer in Braze named Michelle. Michelle is a member of a team called "Development". She has access to all of the team-level permissions for the Development team.
 

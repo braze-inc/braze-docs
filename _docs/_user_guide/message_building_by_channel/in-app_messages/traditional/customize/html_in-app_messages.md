@@ -101,7 +101,7 @@ To log button clicks for in-app message analytics, you can add `abButtonId` as a
 
 As with other URL parameters, the first parameter should begin with a question mark `?`, while subsequent parameters should be separated by an ampersand `&`.
 
-#### Examples
+#### Example URLs
 
 - `https://example.com/?abButtonId=0` - Button 1 click
 - `https://example.com/?abButtonId=1` - Button 2 click

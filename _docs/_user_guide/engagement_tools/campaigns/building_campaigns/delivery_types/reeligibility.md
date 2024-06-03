@@ -46,9 +46,9 @@ Re-eligibility for both campaigns and Canvases are calculated in seconds, not ca
 
 Similarly, a month counts as exactly 2,592,000 seconds, equal to approximately 30 days.
 
-### Examples
+### Use case
 
-Consider the following example:
+Consider the following scenario:
 * A campaign is set to send monthly on the 15th with re-eligibility set to 30 days.
 * There are less than 30 days between February 15 and March 15. 
 
