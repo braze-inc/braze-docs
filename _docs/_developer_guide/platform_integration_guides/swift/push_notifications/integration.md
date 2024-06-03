@@ -313,7 +313,7 @@ Deep linking from a push into the app is automatically handled via our standard 
 
 ## Subscribing to push notifications updates
 
-To access the push notification payloads processed by Braze, use the [`Braze.Notifications.subscribeToUpdates(_:)`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/notifications-swift.class/subscribetoupdates(_:)/) method. When calling the function, you can specify whether you'd like to subscribe to notifications involved in push open events, foreground push received events, or both.
+To access the push notification payloads processed by Braze, use the [`Braze.Notifications.subscribeToUpdates(_:)`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/notifications-swift.class/subscribetoupdates(_:)/) method. You can use the `payloadTypes` parameter to specify whether you'd like to subscribe to notifications involving push open events, foreground push received events, or both. 
 
 {% tabs %}
 {% tab swift %}
@@ -336,7 +336,7 @@ BRZCancellable *cancellable = [notifications subscribeToUpdates:^(BRZNotificatio
 }];
 ```
 
-Or, to specify the type of push events you'd like to subscribe to:
+Or, to specify the types of push events you'd like to subscribe to:
 ```objc
 NSInteger filtersValue = BRZNotificationsPayloadTypeFilter.opened.rawValue | BRZNotificationsPayloadTypeFilter.received.rawValue;
 BRZNotificationsPayloadTypeFilter *filters = [[BRZNotificationsPayloadTypeFilter alloc] initWithRawValue: filtersValue];
