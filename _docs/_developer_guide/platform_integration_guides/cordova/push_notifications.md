@@ -15,13 +15,13 @@ channel: push
 
 > Learn how to integrate push notifications for the Cordova Braze SDK.
 
+{% multi_lang_include cordova/prerequisites.md %}
+
 ## Basic push functionality
 
 Basic push notification features are enabled by default in the Braze Cordova plugin. You may disable this default behavior by customizing your XML configurations. Refer to our [Customization options]({{site.baseurl}}/developer_guide/platform_integration_guides/cordova/initial_setup/customizations/#customization-options) for more details.
 
 For a more in-depth native integration for either platform, see the [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/integration/) or [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/integration/standard_integration/) push notification integration guides.
-
-{% multi_lang_include cordova/prerequisites.md %}
 
 ## Extended push features
 
