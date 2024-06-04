@@ -167,6 +167,12 @@ You can review push notification errors in your [message activity log]({{site.ba
 
 No. You only need to upload your new credentials to Braze.
 
+### Do I need to migrate older, unused, or development apps?
+
+You will see a warning for any app that has legacy Firebase credentials (Sender ID and Server Key).
+
+If you no longer use an app, or don't intend to send push to these apps, you can still upload new JSON credentials, ignore the warning, or delete the unused app (but use caution to double-check no one uses this app anymore).
+
 ### Do I need to delete my old legacy credentials first?
 
 No. If you ever need to delete your new credentials, [your legacy credentials can be used instead](#reverting-your-credentials).
