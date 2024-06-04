@@ -2,7 +2,7 @@
 nav_title: Integration
 article_title: Content Card Integration for iOS
 platform: Swift
-page_order: 1
+page_order: 0
 description: "This article covers the integration steps, data models, and card-specific properties available in the Swift SDK."
 channel:
   - content cards

@@ -1131,4 +1131,9 @@ validurls['/docs/one-click_unsubscribe/'] = '/docs/user_guide/administrative/app
 
 validurls['/docs/back_in_stock/'] = '/docs/user_guide/personalization_and_dynamic_content/catalogs/back_in_stock_notifications/';
 
+validurls['/docs/developer_guide/platform_integration_guides/legacy_sdks/tvos/in-app_messaging/'] = '/docs/developer_guide/platform_integration_guides/swift/in-app_messaging/customization/tvos/';
+validurls['/docs/developer_guide/platform_integration_guides/legacy_sdks/tvos/content_cards/'] = '/docs/developer_guide/platform_integration_guides/swift/content_cards/tvos/';
+validurls['/docs/developer_guide/platform_integration_guides/tvos/in-app_messaging/'] = '/docs/developer_guide/platform_integration_guides/swift/in-app_messaging/customization/tvos/';
+validurls['/docs/developer_guide/platform_integration_guides/tvos/content_cards/'] = '/docs/developer_guide/platform_integration_guides/swift/content_cards/tvos/';
+
 // validurls['OLD'] = 'NEW';
