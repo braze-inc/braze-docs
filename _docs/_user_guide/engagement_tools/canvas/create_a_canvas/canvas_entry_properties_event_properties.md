@@ -9,7 +9,7 @@ tool: Canvas
 
 # Canvas entry properties and event properties
 
-> This reference article covers information about `canvas_entry_properties` and `event_properties`, including when to use each property and the differences in behavior.
+> This reference article covers information about `canvas_entry_properties` and `event_properties`, including when to use each property and the differences in behavior. <br><br> For information about custom event properties in general, check out [Custom events properties]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/#custom-event-properties).
 
 {% alert important %}
 As of February 28, 2023, you can no longer create or duplicate Canvases using the original editor. This article is available for reference when using `canvas_entry_properties` and `event_properties`for the original Canvas workflow.
