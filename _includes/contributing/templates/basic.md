@@ -1,4 +1,4 @@
-You can use this template to create any page or section for Braze Docs. For an example, see [Generating a preview]({{site.baseurl}}/contributing/generating_a_preview/). For guidelines on the documentation types used within the article, see [Content guidelines for templates]({{site.baseurl}}/contributing/templates/content_guidelines/).
+You can use this template to create any page or section for Braze Docs. For an example, see [Generating a preview]({{site.baseurl}}/contributing/generating_a_preview/). For guidelines on the documentation types used within the article, see [Page types]({{site.baseurl}}/contributing/page_types/).
 
 {% details Show template %}
 {% raw %}

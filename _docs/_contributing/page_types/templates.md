@@ -1,7 +1,7 @@
 ---
 nav_title: Templates
 article: Templates
-page_order: 4
+page_order: 0
 ---
 
 # Templates

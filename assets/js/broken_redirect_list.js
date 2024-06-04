@@ -1103,6 +1103,7 @@ validurls['/docs/help/help_articles/docs/contribution'] = '/docs/contributing/ho
 validurls['/docs/hidden/wip_partnerships/wip_guidelines'] = '/docs/contributing/home/';
 validurls['/docs/hidden/wip_partnerships/partnership_template'] = '/docs/contributing/templates/#technology-partner';
 validurls['/docs/help/help_articles/docs/contribution/'] = '/docs/contributing/home/';
+validurls['/docs/contributing/templates/'] = '/docs/contributing/page_types/';
 
 validurls['/docs/user_guide/administrative/app_settings/manage_your_braze_users/deleting_users_from_your_account/#deleting-braze-account-users'] = '/docs/user_guide/administrative/app_settings/manage_your_braze_users/adding_users_to_your_dashboard/#deleting-braze-users';
 

@@ -1,11 +1,11 @@
 ---
-nav_title: Content Guidelines
-article: Content Guidelines
-page_order: 0
+nav_title: Page Types
+article: Page Types
+page_order: 4
 toc_headers: h2
 ---
 
-# Content guidelines for templates
+# Page types
 
 Braze documentation should follow the Diátaxis framework, which organizes documentation into four categories, or types, that each corresponds with a distinct need or learning preference. Each Braze article can contain multiple documentation types, though each type should reside in its own section.
 
@@ -27,7 +27,7 @@ Examples include:
 
 ### Content guidelines
 
-Cover only what the user needs to know to take action. Only include [references](#references) (technical, non-action based information) that are vital to reaching their goal, such as a list of the options a user can select from during a step. Link out to references that are longer than reasonable to include in the same article, such as [Segmentation filters]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters).
+Cover only what the user needs to know to take action. Only include [references](#references) (technical, non-action based information) that are vital to reaching their goal, such as a list of the options a user can select from during a step. Link out to references that are longer than reasonable to include in the same article, such as [Segmentation filters]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/).
 
 The how-to guide should cover the "happy path" to the goal, which assumes the best case scenario while completing the task. Avoid providing troubleshooting information, which you can include in a separate reference section or article.
 
@@ -129,9 +129,9 @@ Replace each `LEARNING_OBJECTIVE` with something the user will broadly learn how
 
 Follow the same header and bullet point format as [how-to guides](#content-guidelines), but add "Tutorial:" to the beginning of the H2 header. For example, "Tutorial: Your first contribution". 
 
-### Tips
-
+{% alert tip %}
 Provide ready-made assets for the user to input that aren't the key focus of your tutorial. For example, you could provide photos, messaging, and Liquid coding for a tutorial that teaches users how to use a variety of features when creating a campaign.
+{% endalert %}
 
 ## References
 
@@ -190,6 +190,6 @@ Create textual or visual descriptions of concepts, such as how data travels betw
 
 Explanations should reside in the most relevent article. For example, a basic feature article might have an explanation called "How it works" that describes that feature's workflow. If an explanation is too broad to fit into only one article, it might fit best in a landing page for a general topic, such as [Campaigns]({{site.baseurl}}/user_guide/engagement_tools/campaigns) or [Personalized messaging]({{site.baseurl}}/user_guide/personalization_and_dynamic_content).
 
-### Tips
-
+{% alert tip %}
 Even though explanations aren't telling users what to do to achieve a specific outcome, you can broadly describe chronological steps to acheive a general goal (such as using A/B testing to improve your messaging). Don't go into the same detail you would for a [how-to guide](#how-to-guides) or [tutorial](#tutorials).
+{% endalert %}
