@@ -103,7 +103,9 @@ Creating a new key will not remove your legacy ones. If you accidentally delete 
 
 ![The selected service account with the "Add Key" menu open.]({% image_buster /assets/img/android/push_integration/generate_json_credentials/select-create-new-key.png %})
 
-Choose **JSON**, then select **Create**.
+Choose **JSON**, then select **Create**. If you created your service account using a different Google Cloud project ID than your FCM project ID, you'll need to manually update the value assigned to the `project_id` in your JSON file.
+
+Be sure to remember where you downloaded the key&#8212;you'll need it in the next step.
 
 ![The form for creating a private key with "JSON" selected.]({% image_buster /assets/img/android/push_integration/generate_json_credentials/select-create.png %}){: style="max-width:65%;"}
 
@@ -153,6 +155,10 @@ If you delete your new credentials, you cannot restore them later. You'll need t
 
 Your new credentials start working as soon as you upload them to Braze. To test them, select **Test Credentials**. If you get an error, you can always [revert your credentials](#reverting-your-credentials).
 
+### Do I need to migrate to FCM for my unused apps or development apps?
+
+No. However, your unused apps and development apps will continue to show a warning message asking you to migrate. To remove this message, you can either upload new credentials, or delete these apps from your workspace. If you choose to delete these apps, be sure to check with your team first in case someone is using them.
+
 ### Where can I check error messages?
 
 You can review push notification errors in your [message activity log]({{site.baseurl}}/user_guide/administrative/app_settings/message_activity_log_tab/).
@@ -172,3 +178,7 @@ You'll continue to see this warning message if there's at least one Android app 
 ### After migrating, how long until I send push notifications again?
 
 After migrating, you can start sending push notifications using your new credentials right away.
+
+### What if I created my service account using a different project than my FCM project?
+
+If you created your service account using a different Google Cloud project ID than your FCM project ID, you'll need to manually update the value assigned to the `project_id` in your JSON file after you [create a new one](#step-6-generate-json-credentials).

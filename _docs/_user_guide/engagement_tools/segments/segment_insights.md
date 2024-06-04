@@ -47,7 +47,7 @@ Segment Insights have also been built right into the **Segment Details** view. W
 
 ![][3]
 
-## Sample use cases {#insights-use-cases}
+## Use cases {#insights-use-cases}
 
 ### Comparing demographic usage and purchasing patterns
 

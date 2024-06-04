@@ -132,9 +132,9 @@ Your Connected Content script should be as follows:
 {% endtab %}
 {% endtabs %}
 
-## Examples
+## Use cases
 
-Keep in mind that all examples below use Voucherify publication source id and Braze cache and retry parameters to limit API calls invoked by a Braze campaign. You must be aware of the following consequences:
+Keep in mind that all the use cases below use Voucherify publication source ID and Braze cache and retry parameters to limit API calls invoked by a Braze campaign. You must be aware of the following consequences:
 
 - It isn't possible to publish and send different codes to the same customer in a single Braze campaign.
 - If your Voucherify campaign uses the _join only once feature_, you need to remove `source_id` from the Connected Content body as described in the join-once tab above.
@@ -143,7 +143,7 @@ Visit the Voucherify [GitHub repository](https://github.com/voucherifyio/braze-c
 
 ### Publish and send unique coupon code
 
-In this example, the Connected Content script calls Voucherify API to publish a unique coupon code and send it in the Braze message. Each Braze user receives only one unique code.
+In this use case, the Connected Content script calls Voucherify API to publish a unique coupon code and send it in the Braze message. Each Braze user receives only one unique code.
 
 {% raw %}
 
@@ -203,7 +203,7 @@ If you want a customer to join a referral program, you need to assign a referral
 
 ### Fetch loyalty card balance
 
-Here is an example of a Connected Content script that pulls the current loyalty balance based on the loyalty card code that was sent beforehand to Braze as a custom attribute. Note that you need to store the loyalty card code as a custom attribute in Braze user's profile before using this script.
+Here is a use case of a Connected Content script that pulls the current loyalty balance based on the loyalty card code that was sent beforehand to Braze as a custom attribute. Note that you need to store the loyalty card code as a custom attribute in Braze user's profile before using this script.
 
 {% raw %}
 
@@ -234,7 +234,7 @@ Here is an example of a Connected Content script that pulls the current loyalty 
 
 Connected Content is a powerful tool allowing the introduction of creative scenarios. You can create a custom coupon code based on the customer's profile information.
 
-Here is an example of a code snippet that will take into account the customer's phone number for generating a unique code. In this example, the Connected Content script calls the Voucherify API to publish a custom coupon code.
+Here is a code snippet that will take into account the customer's phone number for generating a unique code. In this use case, the Connected Content script calls the Voucherify API to publish a custom coupon code.
 
 1.  First, define all variables needed. Then, create a coupon code starting with the prefix "SummerTime-" and the rest of the code will be the customer's phone number. You can decide on the custom attribute you would like to base your coupon codes on.  
     
@@ -416,7 +416,7 @@ Responses from the Voucherify API are stored by Connected Content under the valu
 ```
 {% endraw %}
 
-This enables you to retrieve and display data from a Voucherify response in Braze messages.
+This allows you to retrieve and display data from a Voucherify response in Braze messages.
 
 You can create snippets that display the published code, loyalty card balance, expiration date, and other parameters included in JSON format response from the Voucherify API.
 
