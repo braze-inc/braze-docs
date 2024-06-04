@@ -100,7 +100,7 @@ Filters let you adjust the recommendation output by excluding items based on the
 With the created model and recommendations campaign, you are ready to run a Braze campaign for your users using Content Cards and Connected Content.
 Before running a Braze campaign, you must create a service that can serve these recommendations through an API. You can follow [step 3 in the workshop article][1] to deploy the service using AWS services. You can also deploy your own independent backend service that provides the recommendations.
 
-### Example Content Card campaign
+### Content Card campaign use case
 
 Let's run a Content Card campaign with the first recommended item from the list.<br><br>
 In the following examples, we are going to query

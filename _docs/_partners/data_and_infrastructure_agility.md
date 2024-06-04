@@ -131,4 +131,6 @@ valid_partner_list:
   url: /docs/partners/data_and_infrastructure_agility/analytics/scuba/
 - name: MetaRouter
   url: /docs/partners/data_and_infrastructure_agility/workflow_automation/metarouter/
+- name: Treasure Data
+  url: /docs/partners/data_and_infrastructure_agility/cohort_import/treasuredata/
 ---

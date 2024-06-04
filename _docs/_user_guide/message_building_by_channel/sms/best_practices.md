@@ -12,6 +12,9 @@ channel: SMS
 
 guide_featured_title: "Section articles"
 guide_featured_list:
+- name: "Best Practices"
+  link: /docs/user_guide/message_building_by_channel/sms/best_practices/best_practices/
+  image: /assets/img/braze_icons/check-square-broken.svg
 - name: "Know Before You Send"
   link: /docs/know_before_send/
   image: /assets/img/braze_icons/send-01.svg

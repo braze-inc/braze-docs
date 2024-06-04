@@ -1128,6 +1128,10 @@ validurls['/docs/user_guide/data_and_analytics/your_reports/funnel_reports'] = '
 
 validurls['/docs/idle_campaigns/'] = '/docs/idle_campaigns_canvases/';
 
+validurls['/docs/one-click_unsubscribe/'] = '/docs/user_guide/administrative/app_settings/email_settings/';
+
 validurls['/docs/back_in_stock/'] = '/docs/user_guide/personalization_and_dynamic_content/catalogs/back_in_stock_notifications/';
+
+validurls['/docs/engagement_by_device/'] = '/docs/user_guide/data_and_analytics/analytics/email_performance_dashboard/#engagement-by-device/';
 
 // validurls['OLD'] = 'NEW';

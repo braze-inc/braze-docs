@@ -25,6 +25,9 @@ guide_menu_list:
 - name: SMS Channel
   link: /docs/compliance_documentation_sms/
   image: /assets/img/braze_icons/channel-sms.svg
+- name: Webhooks Channel
+  link: /docs/compliance_documentation_webhooks/
+  image: /assets/img/braze_icons/brackets.svg
 - name: WhatsApp Channel
   link: /docs/compliance_documentation_whatsapp/
   image: /assets/img/braze_icons/channel-whatsapp.svg

@@ -58,7 +58,7 @@ The API keys you use need to be given the correct permissions to access the diff
 
 ### Does the `messages/send` endpoint share rate limits with the `messages/live_activity/update` endpoint? 
 
-The `messages/live_activity/update` endpoint has a separate rate limit from any other Braze endpoint. By default, the rate limit for the `messages/live_activity/update` endpoint is 250,000 requests per hour per workspace. See the [rate limit article][5] for more information.
+By default, the rate limit for the `messages/live_activity/update` endpoint is 250,000 requests per hour, per workspace, and across multiple endpoints. See the [API rate limits][5] for more information.
 
 ### Why aren't my push-to-start tokens being generated?
 

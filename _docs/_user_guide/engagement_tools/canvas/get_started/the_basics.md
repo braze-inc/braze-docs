@@ -118,7 +118,7 @@ The "how" collectively summarizes how you'll create your Canvas and how you'll r
 
 Answering "how" also determines the cadence for sending a Canvas to your audience (such as once a week or biweekly), and which messaging channels to leverage for each Canvas that you build as described with the "where."
 
-## Example: Customer onboarding flow
+## Use case: Customer onboarding flow
 
 For example, let's say you're a marketer for MovieCanon, an online streaming services company, and you're in charge of creating an onboarding flow for new users of your app. By referencing the five W's, we could build out the Canvas in the following way.
 
