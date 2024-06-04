@@ -279,6 +279,10 @@ Gmail and Yahoo ultimately decide whether or not to display the list-unsubscribe
 Yes, Liquid and conditional logic are supported to allow for dynamic one-click unsubscribe URLs for the header.
 {% enddetails %}
 
+{% details Why do I receive the error message "Your email body does not include an unsubscribe link" when composing my emails? %}
+You can create unsubscribe click-through links in an email within Braze via directly inserting a URL, or by using Liquid. When using Liquid, Braze cannot validate a Liquid value. Your email recipients must have the option to unsubscribe from any commercial emails to remain CAN-SPAM compliant.
+{% enddetails %}
+
 {% alert tip %}
 If you're adding conditional logic, avoid having output values that add whitespaces to your URL as Braze does not remove these whitespaces.
 {% endalert %}
