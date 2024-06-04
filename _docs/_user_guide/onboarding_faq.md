@@ -472,7 +472,7 @@ Conversions are assigned to the most recent message received by the user for tha
 
 {% details Use cases %}
 
-#### Use case #1
+#### Use case 1
 
 There is a Canvas path with 10 push notifications and the conversion event is "session start" ("Opens App"):
 
@@ -486,7 +486,7 @@ The summary will show two conversion while the individual steps will show a conv
 If Quiet Hours is active when the conversion event happens, the same rules apply.
 {% endalert %}
 
-#### Use case #2
+#### Use case 2
 
 There is a one-step Canvas with Quiet Hours:
 
