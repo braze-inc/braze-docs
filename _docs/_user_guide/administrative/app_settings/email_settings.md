@@ -267,6 +267,11 @@ Learn more about best practices for email list management in [Managing email sub
 No, that doesn't adhere to RFC 8058, meaning you won't be compliant with Yahoo and Gmail's one-click unsubscribe requirement.
 {% enddetails %}
 
+{% details Why do I receive the error message "Your email body does not include an unsubscribe link" when composing my preference center? %}
+A preference center is not considered an unsubscribe link. Your email recipients must have the option to unsubscribe from any commercial emails to remain CAN-SPAM compliant.
+{% enddetails %}
+
+
 {% details Will I need to edit past email campaigns and Canvases to apply the one-click unsubscribe setting after enabling it? %}
 If you don't have any of the use cases for message-level one-click list-unsubscribe setting, there's no required action as long as the setting is turned on under **Email Preferences**. Braze will automatically add the one-click unsubscribe headers to all outgoing marketing and promotional messages. However, if you do need to configure one-click unsubscribe behavior on a per message-level, you'll need to update prior campaigns and Canvas steps with email accordingly.
 {% enddetails %}
@@ -277,10 +282,6 @@ Gmail and Yahoo ultimately decide whether or not to display the list-unsubscribe
 
 {% details Does the custom one-click unsubscribe header support Liquid? %}
 Yes, Liquid and conditional logic are supported to allow for dynamic one-click unsubscribe URLs for the header.
-{% enddetails %}
-
-{% details Why do I receive the error message "Your email body does not include an unsubscribe link" when composing my emails? %}
-You can create unsubscribe click-through links in an email within Braze via directly inserting a URL, or by using Liquid. When using Liquid, Braze cannot validate a Liquid value. Your email recipients must have the option to unsubscribe from any commercial emails to remain CAN-SPAM compliant.
 {% enddetails %}
 
 {% alert tip %}
