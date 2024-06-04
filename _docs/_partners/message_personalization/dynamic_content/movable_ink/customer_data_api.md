@@ -151,7 +151,7 @@ If you want to forward Braze events from anonymous users (users before an `exter
 
 For more, refer to the example webhooks under [sample payloads](#sample-payloads).
 
-## Sample payloads
+## Example payloads
 
 ### Product view event
 
