@@ -35,4 +35,4 @@ Use your app's API key to integrate the [Braze Swift SDK](https://github.com/bra
 
 ## Customizing your in-app messages
 
-Since Braze doesn't provide a default UI for in-app messages on tvOS, you'll need to customize it yourself. For a full walkthrough, see our step-by-step tutorial: [Customizing in-app messages for tvOS](https://braze-inc.github.io/braze-swift-sdk/documentation/braze/in-app-message-customization). For a sample project, see [Braze Swift SDK samples](https://github.com/braze-inc/braze-swift-sdk/tree/main/Examples).
+Because Braze doesn't provide a default UI for in-app messages on tvOS, you'll need to customize it yourself. For a full walkthrough, see our step-by-step tutorial: [Customizing in-app messages for tvOS](https://braze-inc.github.io/braze-swift-sdk/documentation/braze/in-app-message-customization). For a sample project, see [Braze Swift SDK samples](https://github.com/braze-inc/braze-swift-sdk/tree/main/Examples).
