@@ -20,7 +20,7 @@ If your control group is large compared to your variant group (and this is not y
 
 When creating a Canvas with a control group, ensure that all users in the Entry Audience are able to receive messages within the Canvas (such as the Canvas contains push and email messages).
 
-## Example
+## Use case
 
 Let's imagine the following scenario:
 - A Canvas has a single variant and a control group.

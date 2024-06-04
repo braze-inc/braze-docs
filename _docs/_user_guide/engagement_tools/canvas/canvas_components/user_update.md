@@ -44,7 +44,7 @@ To remove a custom attribute, select an attribute name using the dropdown. You c
 
 The user update step can increase or decrease an attribute value. Select the attribute, select **Increment By** or **Decrement By**, and enter a number. 
 
-#### Example: Track weekly progress
+#### Track weekly progress
 
 By incrementing a custom attribute that tracks an event, you can track the number of classes that a user has taken in a week. Using this component, the class count can reset at the start of the week and begin tracking again. 
 
@@ -56,13 +56,13 @@ An [array of objects]({{site.baseurl}}/user_guide/data_and_analytics/custom_data
 
 The User Update step can add or remove attributes to this array of objects. To update an array, select the array attribute name from your list of attributes and enter the key value.
 
-#### Example: Updating a user's wishlist
+#### Use case: Updating a user's wishlist
 
 Adding or removing an item to an array updates the user's wishlist.
 
 ![][9]{: style="max-width:90%;"}
 
-#### Example: Calculating the shopping cart total
+#### Use case: Calculating the shopping cart total
 
 Track when a user has items in their shopping cart, when they add new items or remove items, and what the total shopping cart value is. 
 

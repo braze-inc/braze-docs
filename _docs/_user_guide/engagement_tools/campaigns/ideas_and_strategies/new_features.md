@@ -53,7 +53,7 @@ For iOS, this version number is based on the [Short Version String][8] for the a
 This filter will populate values after users upgrade their apps to the supported Braze SDK Versions. Until then, the filter won't show any versions when selected.
 {% endalert %}
 
-#### Example scenarios
+#### Use case
 
 In the following scenario, let's assume that you first upgraded to the Braze SDKs which supports this filter in version `2.0.0` of your app.
 
