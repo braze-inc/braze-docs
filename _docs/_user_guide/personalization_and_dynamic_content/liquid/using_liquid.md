@@ -106,9 +106,9 @@ For example, let's say you want to add two custom data integers together. You ca
 
 This Liquid doesn't work because you can't reference multiple attributes in one line; you would need to assign a variable to at least one of these values before the math functions take place. Adding two custom attributes would require two lines of Liquid: one to assign the custom attribute to a variable, and one to perform the addition.
 
-#### Example
+#### Tutorial: Using variables to calculate a balance
 
-For example, let's calculate a user's current balance by adding their gift card balance and rewards balance:
+Let's calculate a user's current balance by adding their gift card balance and rewards balance:
 
 First, use the `assign` tag to substitute the custom attribute of `current_rewards_balance` with the term "balance". This means that you now have a variable named `balance`, which you can manipulate.
 
@@ -116,7 +116,7 @@ First, use the `assign` tag to substitute the custom attribute of `current_rewar
 {% assign balance = {{custom_attribute.${current_rewards_balance}}} %}
 ```
 
-Next, we're using the `plus` filter combine each user's gift card balance with their rewards balance, signified by `{{balance}}`.
+Next, we'll use the `plus` filter to combine each user's gift card balance with their rewards balance, signified by `{{balance}}`.
 
 ```liquid
 {% assign balance = {{custom_attribute.${current_rewards_balance}}} %}

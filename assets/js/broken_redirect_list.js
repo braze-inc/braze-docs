@@ -1136,4 +1136,6 @@ validurls['/docs/developer_guide/platform_integration_guides/legacy_sdks/tvos/co
 validurls['/docs/developer_guide/platform_integration_guides/tvos/in-app_messaging/'] = '/docs/developer_guide/platform_integration_guides/swift/in-app_messaging/customization/tvos/';
 validurls['/docs/developer_guide/platform_integration_guides/tvos/content_cards/'] = '/docs/developer_guide/platform_integration_guides/swift/content_cards/tvos/';
 
+validurls['/docs/engagement_by_device/'] = '/docs/user_guide/data_and_analytics/analytics/email_performance_dashboard/#engagement-by-device/';
+
 // validurls['OLD'] = 'NEW';
