@@ -9,7 +9,7 @@ hidden: true
 
 ### What is SMS traffic pumping fraud? 
 
-SMS traffic pumping is a rising threat in the SMS space. It occurs when fraudsters find a way to trigger SMS message sends to phone numbers that are not associated with real customers in order to collect revenue tied to fraudulent message sending. Most often, they trigger high volume SMS sends using online forms, e.g. for SMS opt-ins or one-time passwords for password resets or account login.  
+SMS traffic pumping is a rising threat in the SMS space. It occurs when fraudsters find a way to trigger SMS message sends to phone numbers that are not associated with real customers in order to collect revenue tied to fraudulent message sending. Most often, they trigger high-volume SMS sends using online forms, such as forms for SMS opt-ins or one-time passwords for password resets or account login.  
 
 For example, if a brand has an SMS sign-up form on their website for customers to opt-in to receive text messages, a fraudster will enter fraudulent phone numbers into the form to trigger SMS messages. The fraudster uses premium rate phone numbers for these messages and claims a revenue share from the local mobile carrier, who is responsible for the delivery of the messages to end-users. This scheme generates fraudulent charges to the brand. 
 
