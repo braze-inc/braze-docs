@@ -42,7 +42,7 @@ There are three ways you can update a user's push subscription state:
 
 #### Automatic opt-in (default)
 
-By default, Braze sets a user's push subscription state to `Opted-In` when they first authorize push notifications for your app. Braze also does this when a user re-authorizes your permissions after previously revoking them.
+By default, Braze sets a user's push subscription state to `Opted-In` when they first authorize push notifications for your app. Braze also does this when a user re-enables push permissions in their system settings after previously disabling them.
 
 To disable this default behavior, add the following property to your Xcode project's braze.xml file:
 
