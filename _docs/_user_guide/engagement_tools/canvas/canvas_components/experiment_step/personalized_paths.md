@@ -77,7 +77,7 @@ When the first user has entered the experiment, you can check the Canvas to see 
 
 When the experiment window passes and the experiment is complete, all subsequent users to enter the Canvas will be sent down the path most likely to result in conversion for them.
 
-![]({% image_buster /assets/img/experiment_step/experiment_personalized_recurring_analytics.png %})
+![]({% image_buster /assets/img/experiment_step/experiment_personalized_recurring_analytics.png %}){: style="max-width:75%;" }
 
 {% endtab %}
 {% endtabs %}
