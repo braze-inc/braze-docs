@@ -7,7 +7,7 @@ permalink: /sms_country_blocklist/
 
 # SMS country blocklist
 
-In an effort to protect our customers against SMS traffic pumping, Braze currently maintains a blocklist of countries for both US Embargoed countries, as well as for countries known to be high risk for traffic pumping. By default, Braze will not send SMS to these countries: 
+In an effort to protect our customers against SMS traffic pumping, Braze currently maintains a blocklist of countries for both US-embargoed countries, as well as for countries known to be high risk for traffic pumping. By default, Braze will not send SMS to these countries: 
 
 - “AF” # Afghanistan
 - “AO” # Angola
