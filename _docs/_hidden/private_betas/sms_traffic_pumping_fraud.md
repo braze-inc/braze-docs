@@ -1,7 +1,7 @@
 ---
-nav_title: SMS Traffic Fraud Pumping FAQs
-permalink: "/sms_traffic_fraud_pumping/"
-description: "This reference article covers frequently asked questions for SMS traffic fraud pumping."
+nav_title: SMS Traffic Pumping Fraud FAQs
+permalink: "/sms_traffic_pumping_fraud/"
+description: "This reference article covers frequently asked questions for SMS traffic pumping fraud."
 hidden: true
 ---
 
