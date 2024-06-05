@@ -15,7 +15,7 @@ tool: Canvas
 When Personalized Paths is turned on in an Experiment Path step, the behavior is slightly different depending on if your Canvas is set to send once or to recur:
 
 - **Single-send Canvas:** A group of users is held back in a delay group. The remaining users pass into an initial test to train a look-alike model for a duration you configure—at least 24 hours for best results. After the test, a model is created to learn which user behaviors were associated with a greater likelihood of converting on a given path. Finally, each user in the delay group is sent down the path most likely to result in conversion for them based on the behaviors they exhibit and what the look-alike model learned during the initial test.
-- **Recurring Canvas (early access):** An initial experiment is performed on all users who enter the Experiment Path during a specified window. After the experiment window, each user is sent down the path most likely to result in conversion for them.
+- **Recurring Canvas (early access):** An initial experiment is performed on all users who enter the Experiment Path during a specified window. To maintain the integrity of the experiment, if a user receives multiple messages before the window ends, they'll be assigned to the same variant each time. After the experiment window, each user is sent down the path most likely to result in conversion for them.
 
 ### Prerequisites
 
