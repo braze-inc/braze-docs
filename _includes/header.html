@@ -26,7 +26,6 @@
             <a id="icon_logo" href="{{site.baseurl}}/"><img src="{{site.baseurl}}/assets/img/logos/braze-logo-monogram-purple.svg" alt="Braze"></a>
 
       </div>
-   
     <div class="navbarCollapse d-none d-md-block" id="header_navbar" >
       <ul class="navbar-nav" id="header_menu">
         {%- assign collect = site.collections | sort: site.page_order -%}
@@ -70,6 +69,7 @@
 								<option value="en">EN</option>
 								<option value="fr">FR</option>
 								<option value="ja">JP</option>
+								<option value="ja">JA</option>
 							</select>
 							</div>
 						</li>
@@ -94,7 +94,7 @@
         <select class="lang-select" id="lang_select_responsive">
           <option value="en">EN</option>
 					<option value="fr">FR</option>
-          <option value="ja">JP</option>
+          <option value="ja">JA</option>
         </select>
       </div>
       <ul class="navbar-nav " id="dropdown_menu">
@@ -140,7 +140,7 @@
        {% include header_search.html %}
     <div class="navbar-nav" id="site-link"><a class="nav-link" href="https://braze.com"><div>braze.com</div><i class="fa-solid fa-up-right-from-square"></i></a></div>
     </div>
-     
+
       {% unless hide_nav %}
        {%- if active_title != "Home" -%}
       <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#nav_bar" aria-controls="nav_bar" aria-expanded="false" aria-label="Toggle navigation" id="header_toggle">
