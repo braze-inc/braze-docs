@@ -46,7 +46,7 @@ Adding an email address in this section allows you to select it as a reply-to ad
 {% endtab %}
 {% tab BCC Address %}
 
-This section allows you to add and manage BCC addresses that can be appended to outbound email messages sent from Braze. Appending a BCC address to an email message will send an identical copy of the message your user receives to your BCC inbox. This is a useful tool to retain copies of messages you sent your users for compliance requirements or customer support issues.
+This section allows you to add and manage BCC addresses that can be appended to outbound email messages sent from Braze. Appending a BCC address to an email message will send an identical copy of the message your user receives to your BCC inbox. This is a useful tool to retain copies of messages you sent your users for compliance requirements or customer support issues. BCC emails are not included in email reporting and analytics.
 
 {% alert important %} 
 Appending a BBC address to your campaign or Canvas will result in doubling your billable emails for the campaign or Canvas component since Braze will send one message to your user and one to your BCC address.
@@ -266,6 +266,11 @@ Learn more about best practices for email list management in [Managing email sub
 {% details Can the one-click unsubscribe URL (via list-unsubscribe header) link to a preference center? %}
 No, that doesn't adhere to RFC 8058, meaning you won't be compliant with Yahoo and Gmail's one-click unsubscribe requirement.
 {% enddetails %}
+
+{% details Why do I receive the error message "Your email body does not include an unsubscribe link" when composing my preference center? %}
+A preference center is not considered an unsubscribe link. Your email recipients must have the option to unsubscribe from any commercial emails to remain CAN-SPAM compliant.
+{% enddetails %}
+
 
 {% details Will I need to edit past email campaigns and Canvases to apply the one-click unsubscribe setting after enabling it? %}
 If you don't have any of the use cases for message-level one-click list-unsubscribe setting, there's no required action as long as the setting is turned on under **Email Preferences**. Braze will automatically add the one-click unsubscribe headers to all outgoing marketing and promotional messages. However, if you do need to configure one-click unsubscribe behavior on a per message-level, you'll need to update prior campaigns and Canvas steps with email accordingly.

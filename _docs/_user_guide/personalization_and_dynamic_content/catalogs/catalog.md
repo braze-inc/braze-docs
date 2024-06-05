@@ -100,7 +100,7 @@ You can also upload a CSV file after selecting to create a catalog in the browse
 Braze processes time values based on the dashboard timestamp. For example, if a column has a value of "03/13/2024" and your time zone is the Pacific Time Zone, this time would be imported to Braze as "Mar 12, 2024, 5:00 PM".
 {% endalert %}
 
-#### Example catalog
+#### Tutorial: Creating a catalog from a CSV file
 
 For this tutorial, we're using a catalog that lists two games, their cost, and an image link.
 
@@ -134,7 +134,7 @@ For this tutorial, we're using a catalog that lists two games, their cost, and a
 </tbody>
 </table>
 
-In this example, we'll create the catalog by uploading a CSV file. The data types for `id`, `title`, `price`, and `image_link` are string, string, number, and string, respectively. 
+We'll create the catalog by uploading a CSV file. The data types for `id`, `title`, `price`, and `image_link` are string, string, number, and string, respectively. 
 
 {% alert note %}
 This data type cannot be edited after you set up your catalog.
@@ -246,9 +246,9 @@ Do that
 
 Note that you must declare the catalog list before using `if` statements. In the example above, `Test-list` is the catalog list.
 
-#### Example Liquid `if` snippet
+#### Use case: Liquid `if` snippet
 
-In this example, different messages will display if the custom attribute `venue_name` has more then 10 characters or less then 10 characters. If `venue_name` is `blank`, nothing will display.
+In this scenario, different messages will display if the custom attribute `venue_name` has more then 10 characters or less then 10 characters. If `venue_name` is `blank`, nothing will display.
 
 {% raw %}
 ```liquid

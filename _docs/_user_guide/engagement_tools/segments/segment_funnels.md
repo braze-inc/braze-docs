@@ -5,7 +5,7 @@ page_order: 3
 
 page_type: reference
 tool: Segments
-description: "This reference article explains how to use Braze Segment Funnels, their best practices, and example use cases."
+description: "This reference article explains how to use Braze Segment Funnels, their best practices, and use cases."
 search_rank: 1
 ---
 
@@ -32,7 +32,7 @@ Segment funnels allow you to see how each added filter impacts your segment stat
 
 - Analyze how LTV changes as you add filters. For active users, do those who connect to Facebook or those who connect to X (formerly Twitter) have a higher LTV? Or is LTV significantly higher for those who have connected to both? If you find, for instance, that connecting to X (formerly Twitter) has very little impact on LTV but connecting to Facebook has a large impact, you may want your marketing campaigns to focus on incentivizing Facebook connections.
 
-## Sample use cases
+## Use cases
 
 ### Impact of a specific user action on conversions {#push-email}
 
