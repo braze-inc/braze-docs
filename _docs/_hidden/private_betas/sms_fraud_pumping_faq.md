@@ -16,7 +16,7 @@ For example, if a brand has an SMS sign-up form on their website for customers t
 
 ### What does Braze do to mitigate SMS pumping fraud?
 
-Braze currently maintains an SMS blocklist for both US-embargoed countries, as well as for countries known to be high risk for traffic pumping, which can be referenced in our documentation. All attempted sends to phone numbers with these country codes are blocked.
+Braze currently maintains an SMS blocklist for both US-embargoed countries, as well as for countries known to be high risk for traffic pumping, which can be referenced in [our documentation]({{site.baseurl}}/sms_country_blocklist). All attempted sends to phone numbers with these country codes are blocked.
 
 Additionally, Braze is introducing an SMS Geographic Permission Allow List, which will further protect against fraudulent behavior by enforcing controls on what countries you are able to send to.
 
