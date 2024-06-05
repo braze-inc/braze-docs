@@ -31,7 +31,7 @@ In your app settings, select your new tvOS app then take note of your app's API 
 
 ### Step 3: Integrate BrazeKit from the Braze Swift SDK
 
-Use your app's API key to integrate the [Braze Swift SDK](https://github.com/braze-inc/braze-swift-sdk) into your tvOS project in Xcode. When you're finished, 
+Use your app's API key to integrate the [Braze Swift SDK](https://github.com/braze-inc/braze-swift-sdk) into your tvOS project in Xcode. You only need to integrate BrazeKit from the Braze Swift SDK.
 
 ### Step 4: Leverage Custom UIs for logging analytics and displaying in-app messages
 
