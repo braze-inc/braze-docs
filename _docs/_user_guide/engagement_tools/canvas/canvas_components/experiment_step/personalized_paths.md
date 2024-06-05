@@ -75,11 +75,9 @@ You can test up to four paths in a single Experiment Path. Add your paths and fi
 
 When the first user has entered the experiment, you can check the Canvas to see analytics as they come in and [track your experiment's performance]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step/#tracking-performance).
 
-> img needed 
-
 When the experiment window passes and the experiment is complete, all subsequent users to enter the Canvas will be sent down the path most likely to result in conversion for them.
 
-> img needed
+![]({% image_buster /assets/img/experiment_step/experiment_personalized_recurring_analytics.png %})
 
 {% endtab %}
 {% endtabs %}
