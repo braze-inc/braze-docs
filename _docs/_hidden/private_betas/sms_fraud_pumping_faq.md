@@ -31,7 +31,7 @@ There are several ways you can protect yourself, including:
     - We recommend that when building online forms, customers set rules to ensure forms are fully complete. As a best practice, ensure you validate the form input both client-side and server-side for maximum protection.
     - Use tools such as CAPTCHA to ensure the form is submitted by a human and not an automated process. A CAPTCHA requirement on SMS sign-up forms can help reduce the number of fraudulent sign-ups.
 - **Set up your form to only collect phone numbers with country codes that align to your target customers**
-    - For example, if you only do business in the US and UK, set up the form to only collect numbers with a +1 and +44 country code (technical details can be found in our [documentation]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/templates/phone_number_capture/#step-2-customize-your-phone-number-input-component)). 
+    - For example, if you only do business in the US and UK, set up the form to only collect numbers with a +1 and +44 country code (technical details can be found in [our documentation]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/templates/phone_number_capture/#step-2-customize-your-phone-number-input-component)). 
 
 ### I do business in the US and the US is on my SMS Geographic Permission Allow List. Will my customers still receive my SMS messaging when they travel outside of the US? 
 
