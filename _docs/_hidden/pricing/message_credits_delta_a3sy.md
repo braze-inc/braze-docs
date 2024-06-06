@@ -11,7 +11,7 @@ hide_toc: true
 > Message Credits is Braze’s cross-channel packaging structure for our native SMS, MMS, and WhatsApp offerings. We use Message Credits to provide a flexible and transparent experience when taking advantage of Braze messaging channels. You may use the allotment of credits purchased across any of the channels presented in the table on this page.
 
 {% alert note %}
-Different channels will have different units of measure in reporting.<br><br>
+Different channels will have different units of measure for what defines a credit consumed.<br><br>
 <b>WhatsApp:</b> Conversations<br>
 <b>SMS:</b> Segments<br>
 <b>MMS:</b> Segments<br><br>
