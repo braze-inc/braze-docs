@@ -17,3 +17,7 @@ hidden: true
 {% alert info %}
 WWDC is June 9-14, 2024. Check back soon for updates and news on this year's announced iOS 18 changes.
 {% endalert %}
+
+## Frequenty Asked Questions {#faq}
+
+Stay tuned!
