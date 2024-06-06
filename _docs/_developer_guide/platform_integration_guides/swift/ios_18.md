@@ -5,7 +5,6 @@ page_order: 7
 platform: 
   - iOS
 description: "This article covers insights into the iOS 18 release to help you upgrade your SDK seamlessly."
-hidden: true
 ---
 
 # iOS 18 upgrade guide
@@ -14,6 +13,6 @@ hidden: true
 
 ## Changes in iOS 18
 
-{% alert info %}
-WWDC is June 9-14, 2024. Check back soon for updates and news on this year's announced iOS 18 changes.
+{% alert note %}
+Apple's [WWDC](https://developer.apple.com/wwdc24/) is happening June 9th - 11th 2024. Check back soon for news on this year's iOS 18 updates.
 {% endalert %}

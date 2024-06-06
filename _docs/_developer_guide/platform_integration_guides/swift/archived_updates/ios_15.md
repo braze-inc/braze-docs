@@ -5,7 +5,8 @@ page_order: 7
 hidden: true
 platform: iOS
 description: "This reference article covers the new iOS 15 OS updates, required SDK updates, and new features."
-
+hidden: true
+noindex: true
 ---
 
 # iOS 15 SDK upgrade guide
