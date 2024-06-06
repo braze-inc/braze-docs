@@ -36,7 +36,7 @@ Use feature flags to:
 - [Remotely control app variables](#remotely-control-app-variables)
 - [Synchronize feature rollout and messaging](#message-coordination)
 - [Experiment with new features](#feature-experimentation)
-- [Segment users by feature flags]()
+- [Segment users by feature flags](#segmentation)
 
 ### Gradual rollouts
 
