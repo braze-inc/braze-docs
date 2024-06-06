@@ -10,10 +10,10 @@ description: "Cette page d’accueil contient tout ce qui concerne Hightouch, y 
 guide_featured_list:
 - name: Hightouch
   link: /docs/partners/data_and_infrastructure_agility/workflow_automation/hightouch/hightouch/
-  fa_icon: fas fa-user-circle
+  image: /assets/img/braze_icons/user-circle.svg
 - name: API de personnalisation Hightouch
   link: /docs/partners/data_and_infrastructure_agility/workflow_automation/hightouch/hightouch_personalization_api/
-  fa_icon: fas fa-warehouse
+  image: /assets/img/braze_icons/building-01.svg
 ---
 
 <br> 

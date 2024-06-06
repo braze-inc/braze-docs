@@ -17,22 +17,22 @@ braze_learning: Termes et concepts techniques expliqués avec un mélange de vid
 doc_menu_list:
   - name: Guide de l'utilisateur
     bg_color: '#3accdd'
-    image: /assets/img/new-icons/users.svg
+    image: /assets/img/braze_icons/user-circle.svg
     link: /docs/user_guide/introduction/
     description: "Découvrez comment utiliser la plateforme Braze pour développer une expérience client encore plus influente."
   - name: Guide du développeur
     bg_color: '#f7918e'
-    image: /assets/img/new-icons/html-file.svg
+    image: /assets/img/braze_icons/html-file.svg
     link: /docs/developer_guide/home/
     description: "Intégrez et activez votre appli ou site avec le SDK Braze."
   - name: Technology Partners
     bg_color: '#ff9349'
-    image: /assets/img/new-icons/gears.svg
+    image: /assets/img/braze_icons/settings-01.svg
     link: /docs/partners/home/
     description: "Nos Technology Partners peuvent vous aider à personnaliser votre expérience Braze et vos relations client."
   - name: Guide de l’API
     bg_color: '#ff9349'
-    image: /assets/img/new-icons/api.svg
+    image: /assets/img/braze_icons/terminal-square.svg
     link: /docs/api/home/
     description: "Braze fournit une API REST haute performance qui vous permet de suivre vos utilisateurs, d’envoyer des messages, d’exporter des données et plus encore."
 

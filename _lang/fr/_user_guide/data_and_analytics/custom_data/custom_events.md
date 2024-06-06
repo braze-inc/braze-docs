@@ -7,7 +7,7 @@ description: "Cet article de référence décrit les propriétés et les événe
 search_rank: 2
 ---
 
-# [![Cours d’apprentissage Braze]({% image_buster /assets/img/bl_icon2.png %})](https://learning.braze.com/custom-events-and-attributes){: style="float:right;width:120px;border:0;" class="noimgborder"}Événements personnalisés
+# [![Cours d’apprentissage Braze]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/custom-events-and-attributes){: style="float:right;width:120px;border:0;" class="noimgborder"}Événements personnalisés
 
 > Les événements personnalisés sont des actions effectuées par vos utilisateurs, ou des mises à jour de vos utilisateurs. Ils sont mieux adaptés pour le suivi des interactions utilisateur à forte valeur ajoutée dans votre application. La journalisation d’un événement personnalisé peut déclencher un nombre et un type de campagnes de suivi, et permet aux filtres de segmentation répertoriés de filtrer la fréquence et dernière occurrence de cet événement.
 

@@ -13,16 +13,16 @@ guide_featured_title: "Articles"
 guide_featured_list:
 - name: Data Protection Technical Assistance
   link: /docs/dp-technical-assistance
-  fa_icon: fas fa-database
+  image: /assets/img/braze_icons/database-01.svg
 - name: Spam Regulations
   link: /docs/user_guide/administrative/privacy/spam_regulations
-  fa_icon: fas fa-envelope-circle-check
+  image: /assets/img/braze_icons/message-check-circle.svg
 - name: SMS Laws and Regulations
   link: /docs/user_guide/message_building_by_channel/sms/sms_laws_and_regulations
-  fa_icon: fas fa-sms
+  image: /assets/img/braze_icons/channel-sms
 - name: Managing Consent
   link: /docs/user_guide/administrative/privacy/managing_consent
-  fa_icon: fas fa-user-shield
+  image: /assets/img/braze_icons/user-square.svg
 ---
 
 ## Legal Disclaimer

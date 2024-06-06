@@ -13,21 +13,21 @@ guide_featured_title: "Section Articles"
 guide_featured_list:
   - name: Démarrage
     link: /docs/user_guide/engagement_tools/campaigns/getting_started/
-    fa_icon: fas fa-book-open
+    image: /assets/img/braze_icons/book-closed.svg
   - name: Construire des campagnes
     link: /docs/user_guide/engagement_tools/campaigns/building_campaigns/
-    fa_icon: fas fa-list-alt
+    image: /assets/img/braze_icons/list.svg
   - name: Gérer les campagnes
     link: /docs/user_guide/engagement_tools/campaigns/managing_campaigns/
-    fa_icon: fas fa-pen-square
+    image: /assets/img/braze_icons/edit-05.svg
   - name: Tester les campagnes
     link: /docs/user_guide/engagement_tools/campaigns/testing_and_more/
-    fa_icon: fas fa-vials
+    image: /assets/img/braze_icons/beaker-02.svg
   - name: Idées et stratégies
     link: /docs/user_guide/engagement_tools/campaigns/ideas_and_strategies/
-    fa_icon: fas fa-lightbulb
+    image: /assets/img/braze_icons/lightbulb-02.svg
   - name: Foire aux questions
     link: /docs/user_guide/engagement_tools/campaigns/faq/
-    fa_icon: fas fa-question
+    image: /assets/img/braze_icons/annotation-question.svg
 
 ---

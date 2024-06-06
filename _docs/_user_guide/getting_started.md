@@ -13,22 +13,22 @@ guide_featured_title: "Learning path"
 guide_featured_list:
   - name: Braze Overview
     link: /docs/user_guide/getting_started/overview/
-    image: /assets/img/icons/icon-news.png
+    image: /assets/img/braze_icons/announcement-01.svg
   - name: Users and Segments
     link: /docs/user_guide/getting_started/users_segments/
-    image: /assets/img/icons/segments.svg
+    image: /assets/img/braze_icons/check-done-02.svg
   - name: Campaigns and Canvases
     link: /docs/user_guide/getting_started/campaigns_canvases/
-    image: /assets/img/icons/campaign.svg
+    image: /assets/img/braze_icons/message-smile-circle.svg
   - name: Workspaces
     link: /docs/user_guide/getting_started/workspaces/
-    image: /assets/img/icons/workspace.svg
+    image: /assets/img/braze_icons/monitor-01.svg
   - name: Integration
     link: /docs/user_guide/getting_started/integration/
-    image: /assets/img/icons/strategy_playbook.svg
+    image: /assets/img/braze_icons/chevron-up-double.svg
   - name: Terms to Know
     link: /docs/user_guide/getting_started/terms_to_know/
-    image: /assets/img/icons/lightbulb.svg
+    image: /assets/img/braze_icons/lightbulb-01.svg
 
 
 ---

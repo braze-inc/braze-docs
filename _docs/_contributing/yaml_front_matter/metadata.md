@@ -8,7 +8,7 @@ noindex: true
 
 #  Metadata
 
-> These are the metadata keys that can be added to a page's YAML front matter. For more general information, see [Content Management]({{site.baseurl}}/contributing/content_management/#pages).
+> These are the metadata keys that can be added to a page's YAML front matter. For more general information, see [About content management]({{site.baseurl}}/contributing/content_management/#pages).
 
 To add metadata to a Markdown file, you'll need to add Jekyll's front matter syntax to the beginning of your file.
 

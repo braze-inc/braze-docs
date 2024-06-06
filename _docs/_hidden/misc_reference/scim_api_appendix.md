@@ -43,7 +43,7 @@ A valid app group permission object is a JSON object with the following key-valu
 | --- | --- | --- | --- |
 | `appGroupName`| Optional | String | Name of the workspace. Used to specify which workspace the permissions contained within this object are for. | 
 | `appGroupId` | Required if `appGroupName` is missing | String | ID of the workspace, serving as an alternative method of specifying the workspace. |
-| `appGroupPermissionsSets` | Optional | Array | Array with a single [workspace permissions set object](#workspace-permissions-set-object). |
+| `appGroupPermissionSets` | Optional | Array | Array with a single [workspace permissions set object](#workspace-permissions-set-object). |
 | `appGroupPermissions` | Required | Array | Array of workspace-level permission strings from the [workspace permission strings](#workspace-strings) table, in which the presence of the string corresponds to the user having the corresponding permission for the specified workspace. |
 | `team` | Optional | Array | Array of [Team permission objects](#team-permissions-object). |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}

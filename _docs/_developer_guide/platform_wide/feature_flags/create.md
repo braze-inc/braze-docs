@@ -54,7 +54,7 @@ Under **Details**, enter a name, ID, and description for your feature flag.
 
 ### Step 3: Create custom properties
 
-Under **Properties**, create custom properties your app can access through the Braze SDK when your feature is enabled. You can assign a string, boolean value, or a number to each variable, as well as set a default value.
+Under **Properties**, create custom properties your app can access through the Braze SDK when your feature is enabled. You can assign a string, boolean, image, timestamp, JSON or a number value to each variable, as well as set a default value.
 
 {% tabs local %}
 {% tab example %}
@@ -66,6 +66,9 @@ In the following example, the feature flag shows an out-of-stock banner for an e
 |`banner_color`|`string`|`blue`|
 |`banner_text`|`string`|`Widgets are out of stock until July 1.`|
 |`dismissible`|`boolean`|`false`|
+|`homepage_icon`|`image`|`http://s3.amazonaws.com/[bucket_name]/`|
+|`account_start`|`timestamp`|`2011-01-01T12:00:00Z`|
+|`footer_settings`|`JSON`|`{ "colors": [ "red", "blue", "green" ], "placement": 123 }`|
 
 {% alert tip %}
 There is no limit to the number of properties you can add. However, a feature flag's properties are limited to a total of 10kB. Both property values and keys are limited to 255 characters in length.
@@ -288,6 +291,12 @@ const stringProperty = featureFlag.getStringProperty("color");
 const booleanProperty = featureFlag.getBooleanProperty("expanded");
 // Number properties
 const numberProperty = featureFlag.getNumberProperty("height");
+// returns the property as a number in milliseconds
+const timestampProperty = featureFlag.getTimestampProperty("account_start");
+// returns the property as a string of the image URL
+const imageProperty = featureFlag.getImageProperty("homepage_icon");
+// returns the JSON property as as JSON object 
+const jsonProperty = featureFlag.getJsonProperty("footer_settings");
 ```
 
 {% endtab %}
@@ -302,6 +311,12 @@ let stringProperty: String? = featureFlag.stringProperty(key: "color")
 let booleanProperty: Bool? = featureFlag.boolProperty(key: "expanded")
 // Number properties
 let numberProperty: Double? = featureFlag.numberProperty(key: "height")
+// returns the property as a TimeInterval in milliseconds
+let timestampProperty : Int? = featureFlag.timestampProperty(key: "account_start")
+// returns the property as a string of the image URL 
+let imageProperty : String? = featureFlag.imageProperty(key: "homepage_icon")
+// returns the property as a [String: Any] dictionary
+let jsonObjectProperty : [String: Any]? = featureFlag.jsonObjectProperty(key: "footer_settings")
 ```
 
 {% endtab %}
@@ -316,6 +331,12 @@ String stringProperty = featureFlag.getStringProperty("color");
 Boolean booleanProperty = featureFlag.getBooleanProperty("expanded");
 // Number properties
 Number numberProperty = featureFlag.getNumberProperty("height");
+// returns the property as a nullable long in milliseconds
+Long timestampProperty = featureFlag.getTimestampProperty("account_start");
+// returns the property as a string of the image URL 
+String imageProperty = featureFlag.getImageProperty("homepage_icon");
+// returns the property as a JSON Object
+JSONObject jsonObjectProperty = featureFlag.getJSONProperty("footer_settings");
 ```
 
 {% endtab %}
@@ -325,11 +346,17 @@ Number numberProperty = featureFlag.getNumberProperty("height");
 // feature flag instance
 val featureFlag = braze.getFeatureFlag("expanded_user_profile")
 // string properties
-val stringProperty = featureFlag.getStringProperty("color")
+val stringProperty: String? = featureFlag.getStringProperty("color")
 // boolean properties
-val booleanProperty = featureFlag.getBooleanProperty("expanded")
+val booleanProperty: Boolean? = featureFlag.getBooleanProperty("expanded")
 // number properties
-val numberProperty = featureFlag.getNumberProperty("height")
+val numberProperty: Number? = featureFlag.getNumberProperty("height")
+// returns the property as a nullable long in milliseconds
+val timestampProperty: Long? = featureFlag.getTimestampProperty("account_start")
+// returns the property as a string of the image URL 
+val String imageProperty: String?  = featureFlag.getImageProperty("homepage_icon")
+// returns the property as a JSON Object
+val jsonObjectProperty: JSONObject? = featureFlag.getJSONProperty("footer_settings")
 ```
 
 {% endtab %}

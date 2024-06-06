@@ -16,19 +16,16 @@ guide_featured_title: "Section articles"
 guide_featured_list:
   - name: Media Library
     link: /docs/user_guide/engagement_tools/templates_and_media/media_library/
-    fa_icon: fas fa-book-open
+    image: /assets/img/braze_icons/book-closed.svg
   - name: Content Blocks
     link: /docs/user_guide/engagement_tools/templates_and_media/content_blocks/
-    fa_icon: fas fa-columns
+    image: /assets/img/braze_icons/columns-01.svg
   - name: Managing Templates
     link: /docs/user_guide/engagement_tools/templates_and_media/managing_templates/
-    fa_icon: fas fa-archive
-  - name: Image Specifications
-    link: /docs/user_guide/engagement_tools/templates_and_media/image_specs/
-    fa_icon: fas fa-image    
+    image: /assets/img/braze_icons/archive.svg
   - name: Frequently Asked Questions
     link: /docs/user_guide/engagement_tools/templates_and_media/faqs/
-    fa_icon: fas fa-question
+    image: /assets/img/braze_icons/annotation-question.svg
 ---
 
 ## About templates and media

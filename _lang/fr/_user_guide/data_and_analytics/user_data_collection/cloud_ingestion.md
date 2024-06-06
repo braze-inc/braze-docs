@@ -14,13 +14,13 @@ guide_featured_title: "Section Articles"
 guide_featured_list:
   - name: Aperçu et bonnes pratiques
     link: /docs/user_guide/data_and_analytics/user_data_collection/cloud_ingestion/overview/
-    fa_icon: fa-solid fa-users-between-lines
+    image: /assets/img/braze_icons/cloud-blank-01.svg
   - name: Intégration Snowflake
     link: /docs/user_guide/data_and_analytics/user_data_collection/cloud_ingestion/snowflake/
-    fa_icon: fa-solid fa-snowflake
+    image: /assets/img/braze_icons/snowflake-01.svg
   - name: Intégration Redshift
     link: /docs/user_guide/data_and_analytics/user_data_collection/cloud_ingestion/redshift/
-    fa_icon: fa-solid fa-gears
+    image: /assets/img/braze_icons/settings-01.svg
 
 ---
 
@@ -31,7 +31,7 @@ L’ingestion de données cloud Braze est actuellement en accès anticipé. Cont
 
   - name: Redshift 
     link: /docs/user_guide/data_and_analytics/user_data_collection/cloud_ingestion/redshift/
-    fa_icon: fa-solid fa-gear
+    image: /assets/img/braze_icons/settings-01.svg
 
 ## What is Braze Cloud Data Ingestion?
 

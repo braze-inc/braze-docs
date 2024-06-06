@@ -14,22 +14,22 @@ guide_featured_title: "Articles obsolètes"
 guide_featured_list:
   - name: Partenariat Apptimize
     link: /docs/help/release_notes/deprecations/apptimize/
-    fa_icon: fas fa-vials
+    image: /assets/img/braze_icons/beaker-02.svg
   - name: Récepteur de diffusion personnalisée de notifications push pour Android
     link: /docs/help/release_notes/deprecations/custom_broadcast_receiver/
-    fa_icon: fa-solid fa-mobile
+    image: /assets/img/braze_icons/phone-01.svg
   - name: Configuration du SDK Eclipse
     link: /docs/help/release_notes/deprecations/eclipse_setup_deprecated/
-    fa_icon: fas fa-circle
+    image: /assets/img/braze_icons/x.svg
   - name: "Désactivation de TLS 1.0 et 1.1"
     link: /docs/help/release_notes/deprecations/tls_deprecation/
-    fa_icon: fas fa-lock
+    image: /assets/img/braze_icons/lock-01.svg
   - name: Intégration du Webhook Twilio
     link: /docs/help/release_notes/deprecations/twilio/
-    fa_icon: fa fa-commenting
+    image: /assets/img/braze_icons/annotation.svg
   - name: Partenariat avec Grouparoo
     link: /docs/help/release_notes/deprecations/grouparoo
-    fa_icon: fa-solid fa-user-group
+    image: /assets/img/braze_icons/users-01.svg
     
 ---
 

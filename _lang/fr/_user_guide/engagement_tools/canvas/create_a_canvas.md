@@ -14,35 +14,35 @@ guide_featured_title: "Section Articles"
 guide_featured_list:
   - name: Création d’un Canvas
     link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/
-    fa_icon: fas fa-palette
+    image: /assets/img/braze_icons/palette.svg
   - name: Fonctionnalités basées sur le temps
     link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/time_based_canvas/
-    fa_icon: fas fa-clock
+    image: /assets/img/braze_icons/clock.svg
   - name: Création de branches
     link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/branching/
-    fa_icon: fas fa-code-branch
+    image: /assets/img/braze_icons/git-branch-01.svg
   - name: Comportements d’avancement
     link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/advancement/
-    fa_icon: fas fa-user
+    image: /assets/img/braze_icons/users-01.svg
   - name: Événements d'exception
     link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/exception_events/
-    fa_icon: fas fa-exchange-alt
+    image: /assets/img/braze_icons/switch-horizontal-01.svg
   - name: Propriétés d’entrée et propriétés de l’événement Canvas
     link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties/
-    fa_icon: fas fa-user-check
+    image: /assets/img/braze_icons/user-check-01.svg
   - name: Propriétés d’entrées persistantes
     link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/canvas_persistent_entry_properties/
-    fa_icon: fas fa-project-diagram
+    image: /assets/img/braze_icons/dataflow-03.svg
   - name: Messages in-app de Canvas
     link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/in-app_messages_in_canvas/
-    fa_icon: fas fa-mobile
+    image: /assets/img/braze_icons/phone-02.svg
   - name: Cartes de contenu dans Canvas
     link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/content-cards_in_canvas/
-    fa_icon: fas fa-columns
+    image: /assets/img/braze_icons/columns-01.svg
  
 guide_menu_title: "Ressources supplémentaires"
 guide_menu_list:
   - name: Assistant de rédaction IA
     link: /docs/user_guide/intelligence/ai_copywriting/
-    fa_icon: fas fa-edit
+    image: /assets/img/braze_icons/edit-05.svg
 ---

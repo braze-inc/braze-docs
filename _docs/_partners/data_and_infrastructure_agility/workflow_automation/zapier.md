@@ -52,7 +52,7 @@ When setting up your webhook, use the following settings and provide your Braze 
 - **Data Pass-Though**: False
 - **Unflatten**: No
 - **Request Header**:
-  - **Content-Type**: JSON
+  - **Content-Type**: application/json
   - **Authorization**: Bearer YOUR-API-KEY
 - **Data**: 
 

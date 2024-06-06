@@ -13,16 +13,16 @@ guide_featured_title: "Topics"
 guide_featured_list:
 - name: Creating A Churn Prediction
   link: /docs/user_guide/sage_ai/predictive_suite/predictive_churn/creating_a_churn_prediction/
-  fa_icon: fas fa-cogs
+  image: /assets/img/braze_icons/settings-01.svg
 - name: Prediction Analytics
   link: /docs/user_guide/sage_ai/predictive_suite/predictive_churn/prediction_analytics/
-  fa_icon: fas fa-chart-bar
+  image: /assets/img/braze_icons/bar-chart-01.svg
 - name: Messaging Users
   link: /docs/user_guide/sage_ai/predictive_suite/predictive_churn/messaging_users/
-  fa_icon: fas fa-arrow-right
+  image: /assets/img/braze_icons/arrow-narrow-right.svg
 - name: Troubleshooting
   link: /docs/user_guide/sage_ai/predictive_suite/predictive_churn/prediction_faq/
-  fa_icon: fas fa-question
+  image: /assets/img/braze_icons/annotation-question.svg
 
 ---
 

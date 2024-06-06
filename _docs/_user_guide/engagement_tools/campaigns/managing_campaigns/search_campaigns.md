@@ -25,7 +25,7 @@ Expand the search dropdown to filter by last editor, target segment, messaging c
 
 ## Search syntax
 
-Selecting a campaign filter will automatically add the appropriate syntax to the search field. However, you can manually enter these filters as well. When using manual search, the syntax is the filter name, followed by a semicolon, followed by your input. For example, to search for push campaigns, enter `channel:push`.
+Selecting a campaign filter will automatically add the appropriate syntax to the search field. However, you can manually enter these filters as well. When using manual search, the syntax is the filter name, followed by a colon, followed by your input. For example, to search for push campaigns, enter `channel:push`.
 
 Here's a list of supported search filters:
 

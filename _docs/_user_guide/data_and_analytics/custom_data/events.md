@@ -129,7 +129,7 @@ You might prefer to use custom events to track purchases if you need to capture 
 - **Additional properties:** You can log additional properties to custom events that provide more context about the event. For example, you could log a custom event when a user makes a purchase and include properties such as the product category or the payment method. This is not possible with standard purchase events, which have a fixed schema that only tracks the product name, currency, price, and quantity.
 - **Event frequency:** Custom events allow you to track the frequency of specific actions. With purchase events, you can only track the occurrence of purchases, not other types of actions.
 
-#### Example 1
+#### Use case 1
 
 Let's say you have an ecommerce app, and you want to track the purchase itself and the product category. The standard purchase event in Braze does not capture this level of detail, so you could use a custom event instead.
 
@@ -142,7 +142,7 @@ Appboy.sharedInstance()?.logCustomEvent("Purchase", withProperties: properties)
 
 In this example, "Purchase" is the name of the custom event, and the properties dictionary contains additional information about the event. In this case, the product category is "Electronics". Now you can segment your users based on the product categories they purchase from.
 
-#### Example 2
+#### Use case 2
 
 Consider a fitness app where users can purchase personal training sessions or premium workout plans. In this case, you might want to track these purchases as custom events to capture additional details about the purchase.
 

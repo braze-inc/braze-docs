@@ -12,16 +12,16 @@ guide_featured_title: "Section articles"
 guide_featured_list:
   - name: Platform Overview
     link: /docs/developer_guide/platform_wide/getting_started/platform_overview/
-    image: /assets/img/icons/icon-news.png
+    image: /assets/img/braze_icons/announcement-01.svg
   - name: Integration Overview
     link: /docs/developer_guide/platform_wide/getting_started/integration_overview/
-    image: /assets/img/icons/strategy_playbook.svg
+    image: /assets/img/braze_icons/chevron-up-double.svg
   - name: Architecture Overview
     link: /docs/developer_guide/platform_wide/getting_started/architecture_overview/
-    fa_icon: fas fa-table-columns
+    image: /assets/img/braze_icons/columns-01.svg
   - name: Analytics Overview
     link: /docs/developer_guide/platform_wide/getting_started/analytics_overview/
-    image: /assets/img/icons/segments.svg
+    image: /assets/img/braze_icons/check-done-02.svg
 
 search_rank: 4
 ---

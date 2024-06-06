@@ -10,12 +10,12 @@ description: "Cette page d’accueil contient tout ce qui concerne Tealium, y co
 guide_featured_list:
 - name: Tealium
   link: /docs/partners/data_and_infrastructure_agility/customer_data_platform/tealium/tealium/
-  fa_icon: fas fa-user-circle
+  image: /assets/img/braze_icons/user-circle.svg
 - name: Tealium AudienceStream
   link: /docs/partners/data_and_infrastructure_agility/customer_data_platform/tealium/tealium_audience_stream/
-  fa_icon: fas fa-users
+  image: /assets/img/braze_icons/users-01.svg
 - name: Tealium pour Currents
   link: /docs/partners/data_and_infrastructure_agility/customer_data_platform/tealium/tealium_for_currents/
-  fa_icon: fas fa-warehouse
+  image: /assets/img/braze_icons/building-01.svg
 ---
 <br>

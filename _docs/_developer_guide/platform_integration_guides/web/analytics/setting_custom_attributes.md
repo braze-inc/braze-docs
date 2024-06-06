@@ -21,7 +21,7 @@ Braze provides predefined methods for setting the following user attributes with
 
 - First Name
 - Last Name
-- Biographical Strings
+- Language
 - Country
 - Date of Birth
 - Email
@@ -145,7 +145,7 @@ When a user is registered for push, the browser forces them to choose to allow o
 
 Visit [Managing user subscriptions][10] for more information on implementing subscriptions and explicit opt-ins.
 
-### Sample code
+### Example code
 
 #### Unsubscribing a user from email:
 ```javascript

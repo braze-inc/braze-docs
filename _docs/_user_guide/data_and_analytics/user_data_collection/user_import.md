@@ -38,7 +38,7 @@ When importing your customer data, you'll need to specify each customer's unique
 
 When you provide an `external_id` in your import, Braze will update any existing user with the same `external_id` or create a newly identified user with that `external_id` set if one is not found.
 
-<i class="fas fa-file-download"></i> Download: [CSV Import Template][template]
+**Download:** [CSV Import Template][template]
 
 ### Importing with user alias
 
@@ -61,7 +61,7 @@ When you provide both a `user_alias_name` and `user_alias_label` in your import,
 You can't use a CSV import to update an existing user with a `user_alias_name` if they already have an `external_id`. Instead, this will create a new user profile with the associated `user_alias_name`. To associate an alias-only user with an `external_id`, use the [Identify users endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_identify/).
 {% endalert %}
 
-<i class="fas fa-file-download"></i> Download: [CSV Alias Import Template][template_alias]
+**Download:** [CSV Alias Import Template][template_alias]
 
 ### Importing with Braze ID
 

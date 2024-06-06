@@ -17,22 +17,22 @@ guide_featured_title: "Section Articles"
 guide_featured_list:
   - name: Style personnalisé
     link: /docs/developer_guide/platform_integration_guides/ios/content_cards/customization/custom_styling/
-    fa_icon: fa fa-paint-brush
+    image: /assets/img/braze_icons/brush-02.svg
   - name: Personnaliser le flux
     link: /docs/developer_guide/platform_integration_guides/ios/content_cards/customization/customizing_feed/
-    fa_icon: fa fa-cog
+    image: /assets/img/braze_icons/settings-01.svg
   - name: Gestion manuelle des clics
     link: /docs/developer_guide/platform_integration_guides/ios/content_cards/customization/handling_clicks_manually/
-    fa_icon: fa fa-mouse-pointer
+    image: /assets/img/braze_icons/navigation-pointer-01.svg
   - name: Indicateurs de messages non lus et lus
     link: /docs/developer_guide/platform_integration_guides/ios/content_cards/customization/read_unread_indicators/
-    fa_icon: fa fa-book
+    image: /assets/img/braze_icons/book-closed.svg
   - name: Badges
     link: /docs/developer_guide/platform_integration_guides/ios/content_cards/customization/badges/
-    fa_icon: fa fa-id-badge
+    image: /assets/img/braze_icons/key-01.svg
   - name: Cas d’utilisation de la vue carrousel
     link: /docs/developer_guide/platform_integration_guides/ios/content_cards/customization/use_cases/carousel_view/
-    fa_icon: fa fa-arrows-h
+    image: /assets/img/braze_icons/switch-horizontal-01.svg
 
 
 ---

@@ -1,5 +1,4 @@
 var validurls = (typeof validurls === "undefined")  ? {} : validurls;
-validurls['/docs'] = '/docs/user_guide/introduction/';
 validurls['/docs/best_practices/#android-push-category'] = '/docs/help/best_practices/push/additional_android_best_practices/#android-push-category';
 validurls['/docs/best_practices/#android-push-priority'] = '/docs/help/best_practices/push/additional_android_best_practices/#android-push-priority';
 validurls['/docs/best_practices/#android-push-visibility'] = '/docs/help/best_practices/push/additional_android_best_practices/#android-push-visibility';
@@ -1125,5 +1124,18 @@ validurls['/docs/api/endpoints/scim/post_update_existing_user_account'] = '/docs
 validurls['/docs/user_guide/message_building_by_channel/email/reporting'] = '/docs/user_guide/message_building_by_channel/email/reporting_and_analytics/email_reporting/';
 validurls['/docs/user_guide/data_and_analytics/your_reports/retention_reports'] = '/docs/user_guide/data_and_analytics/reporting/retention_reports/';
 validurls['/docs/user_guide/data_and_analytics/your_reports/funnel_reports'] = '/docs/user_guide/data_and_analytics/reporting/funnel_reports';
+
+validurls['/docs/idle_campaigns/'] = '/docs/idle_campaigns_canvases/';
+
+validurls['/docs/one-click_unsubscribe/'] = '/docs/user_guide/administrative/app_settings/email_settings/';
+
+validurls['/docs/back_in_stock/'] = '/docs/user_guide/personalization_and_dynamic_content/catalogs/back_in_stock_notifications/';
+
+validurls['/docs/developer_guide/platform_integration_guides/legacy_sdks/tvos/in-app_messaging/'] = '/docs/developer_guide/platform_integration_guides/swift/in-app_messaging/customization/tvos/';
+validurls['/docs/developer_guide/platform_integration_guides/legacy_sdks/tvos/content_cards/'] = '/docs/developer_guide/platform_integration_guides/swift/content_cards/tvos/';
+validurls['/docs/developer_guide/platform_integration_guides/tvos/in-app_messaging/'] = '/docs/developer_guide/platform_integration_guides/swift/in-app_messaging/customization/tvos/';
+validurls['/docs/developer_guide/platform_integration_guides/tvos/content_cards/'] = '/docs/developer_guide/platform_integration_guides/swift/content_cards/tvos/';
+
+validurls['/docs/engagement_by_device/'] = '/docs/user_guide/data_and_analytics/analytics/email_performance_dashboard/#engagement-by-device/';
 
 // validurls['OLD'] = 'NEW';

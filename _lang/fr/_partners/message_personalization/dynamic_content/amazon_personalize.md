@@ -10,10 +10,10 @@ page_order: 0
 guide_featured_list:
 - name: Amazon Personalize
   link: /docs/partners/message_personalization/dynamic_content/amazon_personalize/amazon_personalize/
-  fa_icon: fab fa-amazon
+  image: /assets/img/braze_icons/amazon.svg
 - name: Atelier Amazon Personalize
   link: /docs/partners/message_personalization/dynamic_content/amazon_personalize/workshop/
-  fa_icon: fas fa-wrench
+  image: /assets/img/braze_icons/tool-01.svg
 ---
 
 <br> 

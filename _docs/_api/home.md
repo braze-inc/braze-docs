@@ -14,23 +14,23 @@ glossary_filter_text: "Select endpoint type to narrow the glossary:"
 glossary_mid_text: "Endpoint Search"
 guide_featured_list:
   - name: API Overview
-    fa_icon: fa-solid fa-info
+    image: /assets/img/braze_icons/annotation-info.svg
     link: /docs/api/basics/
   - name: API Identifier Types
     link: /docs/api/identifier_types/
-    fa_icon: fa-solid fa-clipboard-list
+    image: /assets/img/braze_icons/clipboard-check.svg
   - name: Objects & Filters
     link: /docs/api/objects_filters/
-    fa_icon: fa-solid fa-gear
+    image: /assets/img/braze_icons/settings-01.svg
   - name: Errors & Responses
     link: /docs/api/errors/
-    fa_icon: fa-solid fa-list-check
+    image: /assets/img/braze_icons/list.svg
   - name: Data Retention
     link: /docs/api/data_retention/
-    fa_icon: fa-solid fa-laptop-code
+    image: /assets/img/braze_icons/laptop-02.svg
   - name: Rate Limits
     link: /docs/api/api_limits/
-    fa_icon: fa-solid fa-hand
+    image: /assets/img/braze_icons/hand.svg
 
 # channel to icon/fa or image mapping
 glossary_tags:
@@ -408,6 +408,22 @@ glossaries:
       - Catalogs
   - name: <a href='/docs/api/endpoints/catalogs/catalog_items/asynchronous/put_update_catalog_items/'>/catalogs/{catalog_name}/items/</a>
     description: Update multiple items in a catalog.
+    tags:
+      - Catalogs
+  - name: <a href='/docs/api/endpoints/catalogs/catalog_fields/asynchronous/post_create_catalog_fields/'>/catalogs/{catalog_name}/fields/</a>
+    description: Create multiple fields in a catalog.
+    tags:
+      - Catalogs
+  - name: <a href='/docs/api/endpoints/catalogs/catalog_fields/asynchronous/delete_catalog_field/'>/catalogs/{catalog_name}/fields/{field_name}</a>
+    description: Delete a field from a catalog.
+    tags:
+      - Catalogs
+  - name: <a href='/docs/api/endpoints/catalogs/catalog_selections/asynchronous/post_create_catalog_selections/'>/catalogs/{catalog_name}/selections</a>
+    description: Create a selection in a catalog.
+    tags:
+      - Catalogs
+  - name: <a href='/docs/api/endpoints/catalogs/catalog_selections/asynchronous/delete_catalog_selection/'>/catalogs/{catalog_name}/selections/{selection_name}</a>
+    description: Delete a catalog selection.
     tags:
       - Catalogs
   - name: <a href='/docs/post_create_user_account/'>/scim/v2/Users</a>

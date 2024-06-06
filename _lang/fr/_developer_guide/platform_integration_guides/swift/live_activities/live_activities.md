@@ -199,6 +199,6 @@ Voir la documentation de l’endpoint [`/messages/live_activity/update`][1] pour
 [4]: https://developer.apple.com/documentation/activitykit/activityattributes
 [5]: https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/liveactivities-swift.class
 [6]: https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/liveactivities-swift.class/resumeactivities(oftype:)
-[7]: {% image_buster /assets/img/LiveActivities3.png %}
-[8]: {% image_buster /assets/img/LiveActivities1.png %}
-[9]: {% image_buster /assets/img/LiveActivities2.png %}
+[7]: {% image_buster /assets/img/swift/live_activities/example_2.png %} 
+[8]: {% image_buster /assets/img/swift/live_activities/example_1_1.png %}
+[9]: {% image_buster /assets/img/swift/live_activities/example_1_2.png %}

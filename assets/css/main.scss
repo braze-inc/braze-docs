@@ -1,23 +1,61 @@
-//Font Variables
-$braze-light: 'Sailec W00 Light', 'Sailec', 'Sailic W00 Regular', Arial, Helvetica, sans-serif;
-$braze-light-oblique: 'Sailec W00 Light Italic','Sailec', 'Sailic W00 Regular', Arial, Helvetica, sans-serif;
-$braze-thin: 'Sailec W00 Thin', 'Sailec', 'Sailic W00 Regular', Arial, Helvetica, sans-serif;
-$braze-regular: 'Sailec W00 Regular', 'Sailec', 'Sailic W00 Regular', Arial, Helvetica, sans-serif;
-$braze-regular-oblique: 'Sailec W00 Italic', 'Sailec', 'Sailic W00 Regular', Arial, Helvetica, sans-serif;
-$braze-heavy: 'Sailec W00 Demi', 'Sailec', 'Sailic W00 Regular', Arial, Helvetica, sans-serif;
-$braze-heavy-oblique:'Sailec W00 Demi Italic', 'Sailec', 'Sailic W00 Regular', Arial, Helvetica, sans-serif;
-$braze-medium: 'Sailec W00 Medium', 'Sailec', 'Sailic W00 Regular', Arial, Helvetica, sans-serif;
-$braze-medium-oblique: 'Sailec W00 Medium Italic', 'Sailec', 'Sailic W00 Regular', Arial, Helvetica, sans-serif;
-$braze-black: 'Sailec W00 Bold', 'Sailec', 'Sailic W00 Regular', Arial, Helvetica, sans-serif;
-$braze-black-oblique: 'Sailec W00 Bold Italic', 'Sailec', 'Sailic W00 Regular', Arial, Helvetica, sans-serif;
+// References for hosting fonts
+@font-face {
+  font-family: "Aribau Grotesk Light";
+  src: url("../assets/fonts/AribauGrotesk-Light.woff");
+  font-weight: lighter;
+  font-style: normal;
+}
 
+@font-face {
+  font-family: "Aribau Grotesk Regular";
+  src: url("../assets/fonts/AribauGrotesk-Regular.woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Aribau Grotesk Regular Italic";
+  src: url("../assets/fonts/AribauGrotesk-RegularItalic.woff");
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Aribau Grotesk Bold";
+  src: url("../assets/fonts/AribauGrotesk-Bold.woff");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Aribau Grotesk Black";
+  src: url("../assets/fonts/AribauGrotesk-Black.woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+// Font variables for the default font, Aribau Grotesk, as well as fallback font styles and weights.
+// Some font variables share the same style or weight to prevent legacy variables from breaking.
+$braze-light: 'Aribau Grotesk Light', 'Aribau Grotesk', 'Aribau Grotesk Regular', Arial, Helvetica, sans-serif;
+$braze-light-oblique: 'Aribau Grotesk Light Italic','Aribau Grotesk', 'Aribau Grotesk Regular', Arial, Helvetica, sans-serif;
+$braze-thin: 'Aribau Grotesk Thin', 'Aribau Grotesk', 'Aribau Grotesk Regular', Arial, Helvetica, sans-serif;
+$braze-regular: 'Aribau Grotesk Regular', 'Aribau Grotesk', 'Aribau Grotesk Regular', Arial, Helvetica, sans-serif;
+$braze-regular-oblique: 'Aribau Grotesk Regular Italic', 'Aribau Grotesk', 'Aribau Grotesk Regular', Arial, Helvetica, sans-serif;
+$braze-heavy: 'Aribau Grotesk Bold', 'Aribau Grotesk', 'Aribau Grotesk Regular', Arial, Helvetica, sans-serif;
+$braze-heavy-oblique:'Aribau Grotesk Bold Italic', 'Aribau Grotesk', 'Aribau Grotesk Regular', Arial, Helvetica, sans-serif;
+$braze-medium: 'Aribau Grotesk Bold', 'Aribau Grotesk', 'Aribau Grotesk Regular', Arial, Helvetica, sans-serif;
+$braze-medium-oblique: 'Aribau Grotesk Bold Italic', 'Aribau Grotesk', 'Aribau Grotesk Regular', Arial, Helvetica, sans-serif;
+$braze-black: 'Aribau Grotesk Black', 'Aribau Grotesk', Arial, Helvetica, sans-serif;
+$braze-black-oblique: 'Aribau Grotesk Bold Italic', 'Aribau Grotesk', 'Aribau Grotesk Regular', Arial, Helvetica, sans-serif;
+
+// Monospace font for code
 $braze-code: 'Roboto Mono', monospace;
 
-
+// Base URL variable for link prefixes
 $base_url: '/docs';
 
-
-$base_font_size: 16px;
+// Basic layout measurements
+$base_font_size: 16.5px;
 $banner_height: 80px;
 $header_height: 60px;
 $footer_height: 60px;
@@ -25,7 +63,7 @@ $base_off_set: $base_font_size * 1.5;
 $calc_offset_top: $header_height + $base_off_set;
 $calc_offset_view: $header_height  + $base_off_set;
 
-// Body Variables
+// Body variables—Responsive breakpoints and layout dimensions
 $spacing-unit: 30px;
 $window-mobile-px: 400px;
 $window-small-px: 576px;
@@ -36,20 +74,33 @@ $window-xxlarge-px: 1400px;
 $nav_width: 280px;
 $nav_width_collapsed: 40px;
 $toc_width: 220px;
-$main_max_width: 940px;
+$main_max_width: 900px;
 
 // Core palate (colors)
 $white: #ffffff;
 $black: #000000;
 $black-shark: #212123;
-$header-nav: #D4D4D4;
+$header-nav: #ffffff;
 $left-nav: #212123;
+$braze-purple: #801ED7;
+$braze-pink: #FFA4FB;
+$braze-orange: #FFA524;
+
+// Other versions of core palette
+$braze-purple-light: #C9C4FF;
+$braze-purple-dark: #300266;
+$braze-pink-light: #F8D3E8;
+$braze-pink-dark: #91186E;
+$braze-orange-light: #FFD4BC;
+$braze-orange-dark: #E9371F;
+
+// OLD
 $navy-bay: #27368f;
 // Lighter versions of navy-bay
 $navy-cove: #7c86bc;
 $blue-scooter: #3accdd;
 
-$braze-link-color: $blue-scooter;
+$braze-link-color: $braze-purple;
 // Lighter versions of blue-scooter
 $blue-blizzard: #a6e8f0;
 $blue-ice: #def6f9;
@@ -79,8 +130,10 @@ $green-grass: #169B72;
 $green-pea: #96D9C4;
 $green-mint: #EEF9F5;
 
+// Gradient for main theme
 $gradient-main: linear-gradient(30deg, $blue-scooter, $pink-oyster 64%, $orange-coral 90%);
 
+// Grey scale color palette
 $grey-metal: #333335;
 $grey-dust: #5b5b5e;
 $grey-boulder: #6d6d70;
@@ -90,15 +143,17 @@ $grey-french: #c6c6cc;
 $grey-ghost: #dddde2;
 $grey-athens: #f4f4f7;
 
-$text-color: #58585A;
+// Default text and header colors
+$text-color: #475467;
 $header-color: $black-shark;
 
+// Z-index layering variables
 $z-index-normal: 1;
 $z-index-header: 2;
 $z-index-overlay: 1000;
 
 
-
+// Global HTML and body styling, including font, color, and layout
 html {
   max-width: 100%;
 }
@@ -106,11 +161,11 @@ body {
   max-width: 100%;
   font-family: $braze-regular;
   font-size: $base_font_size;
-  line-height: 25px;
+  line-height: 30px;
   color: $text-color;
   position: relative;
   strong {
-    font-family: $braze-regular;
+    font-family: $braze-medium;
   }
 
   i {
@@ -125,6 +180,7 @@ body {
   max-width: 100%;
 }
 
+// Mixins for hover and active link styling
 %hover-styling {
   color: $navy-bay;
 }
@@ -136,6 +192,7 @@ body {
   }
 }
 
+// Reset margins and paddings for common elements to ensure consistent styling
 body, h1, h2, h3, h4, h5, h6,
 p, blockquote, pre, hr,
 dl, dd, ol, ul, figure {
@@ -157,6 +214,7 @@ ul, ol, dl, figure {
 // Links
 a {
 
+  font-family: $braze-regular;
   color: $header-color;
   text-decoration: none;
 
@@ -217,7 +275,7 @@ details {
     summary {
       color: $black-shark;
       outline: none;
-      font-size: 14px;
+      font-size: 16px;
       &::-webkit-details-marker {
           color: $black-shark;
       }
@@ -248,7 +306,7 @@ details {
   }
   p, ol, ul {
     padding: 5px 0 0 0px;
-    font-size: 14px;
+    font-size: 16px;
     color: $text-color;
   }
 }

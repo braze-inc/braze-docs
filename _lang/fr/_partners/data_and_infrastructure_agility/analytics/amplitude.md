@@ -11,13 +11,13 @@ description: "Cette page d’accueil contient tout ce qui concerne Amplitude, y 
 guide_featured_list:
 - name: Amplitude pour Currents
   link: /docs/partners/data_and_infrastructure_agility/analytics/amplitude/amplitude_for_currents/
-  fa_icon: fas fa-warehouse
+  image: /assets/img/braze_icons/building-01.svg
 - name: Recommandé par Amplitude
   link: /docs/partners/data_and_infrastructure_agility/analytics/amplitude/amplitude_audiences/
-  fa_icon: fa-solid fa-lightbulb
+  image: /assets/img/braze_icons/lightbulb-05.svg
 - name: Amplitude et Contenu connecté
   link: /docs/partners/data_and_infrastructure_agility/analytics/amplitude/amplitude_user_profile_api/
-  fa_icon: fas fa-user-circle
+  image: /assets/img/braze_icons/user-circle.svg
 ---
 
 <br> 

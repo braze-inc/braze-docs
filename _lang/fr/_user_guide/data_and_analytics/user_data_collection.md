@@ -13,28 +13,28 @@ guide_featured_title: "Section Articles"
 guide_featured_list:
   - name: Définitions des archives utilisateur
     link: /docs/user_guide/data_and_analytics/user_data_collection/user_archival/
-    fa_icon: fas fa-users
+    image: /assets/img/braze_icons/users-01.svg
   - name: Données collectées par défaut
     link: /docs/user_guide/data_and_analytics/user_data_collection/data_collected_by_default/
-    fa_icon: fas fa-chart-bar
+    image: /assets/img/braze_icons/bar-chart-01.svg
   - name: Cycle de vie du profil de l'utilisateur
     link: /docs/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/
-    fa_icon: fas fa-sync
+    image: /assets/img/braze_icons/refresh-ccw-05.svg
   - name: Exemple de cas d’utilisation de collecte de données
     link: /docs/user_guide/data_and_analytics/user_data_collection/collection_use_case/
-    fa_icon: fas fa-taxi
+    image: /assets/img/braze_icons/data.svg
   - name: Bonnes pratiques de collecte de données
     link: /docs/user_guide/data_and_analytics/user_data_collection/best_practices/
-    fa_icon: fa fa-thumbs-up
+    image: /assets/img/braze_icons/thumbs-up.svg
   - name: User Import
     link: /docs/user_guide/data_and_analytics/user_data_collection/user_import/
-    fa_icon: fas fa-user
+    image: /assets/img/braze_icons/users-01.svg
   - name: Ingestion de données Cloud
     link: /docs/user_guide/data_and_analytics/user_data_collection/cloud_ingestion/
-    fa_icon: fa-solid fa-cloud
+    image: /assets/img/braze_icons/upload-cloud-01.svg
   - name: Codes de langue utilisateur
     link: /docs/user_guide/data_and_analytics/user_data_collection/language_codes/
-    fa_icon: fas fa-language
+    image: /assets/img/braze_icons/globe-04.svg
 ---
 
 <br>

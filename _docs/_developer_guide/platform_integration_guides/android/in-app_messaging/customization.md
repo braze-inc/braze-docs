@@ -19,28 +19,29 @@ guide_featured_title: "Section articles"
 guide_featured_list:
   - name: Custom Styling
     link: /docs/developer_guide/platform_integration_guides/android/in-app_messaging/customization/custom_styling/
-    fa_icon: fa fa-paint-brush
+    image: /assets/img/braze_icons/brush-02.svg
   - name: Custom Listeners
     link: /docs/developer_guide/platform_integration_guides/android/in-app_messaging/customization/custom_listeners/
-    fa_icon: fa fa-cog
+    image: /assets/img/braze_icons/settings-01.svg
   - name: Handling Clicks Manually
     link: /docs/developer_guide/platform_integration_guides/android/in-app_messaging/customization/custom_listeners/
-    fa_icon: fa fa-mouse-pointer
+    image: /assets/img/braze_icons/navigation-pointer-01.svg
   - name: Message Dismissal
     link: /docs/developer_guide/platform_integration_guides/android/in-app_messaging/customization/message_dismissal/
-    fa_icon: fa fa-times
+    image: /assets/img/braze_icons/message-x-circle.svg
   - name: Key-Value Pairs
     link: /docs/developer_guide/platform_integration_guides/android/in-app_messaging/customization/key_value_pairs/
-    fa_icon: fa fa-code
+    image: /assets/img/braze_icons/code-square-01.svg
+
   - name: GIFs
     link: /docs/developer_guide/platform_integration_guides/android/in-app_messaging/customization/gifs/
-    fa_icon: fa-solid fa-file-image
+    image: /assets/img/braze_icons/image-01.svg
   - name: YouTube in HTML
     link: /docs/developer_guide/platform_integration_guides/android/in-app_messaging/customization/youtube_in_html/
-    fa_icon: fa-brands fa-youtube
+    image: /assets/img/braze_icons/youtube.svg
   - name: Google Review Prompt
     link: /docs/developer_guide/platform_integration_guides/android/in-app_messaging/customization/google_review_prompt/
-    fa_icon: fa-brands fa-google
+    image: /assets/img/braze_icons/google.svg
 
 
 ---
