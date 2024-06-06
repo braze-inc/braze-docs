@@ -52,7 +52,7 @@ Query columns must be specified with the exact column names and data type. The q
 
 ![Treasure Data Integrations Hub Catalog]({% image_buster /assets/img/treasure_data/cohort/cohort3.png %}) 
 
-#### Example: Syncing cohorts by identifier
+#### Use case: Syncing cohorts by identifier
 
 {% tabs local %}
 {% tab Syncing External IDs %}

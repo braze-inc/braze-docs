@@ -13,7 +13,7 @@ search_rank: 2
 
 # WhatsApp setup
 
-> [WhatsApp](https://www.whatsapp.com/) Business messaging is a popular peer-to-peer messaging platform used across the world offering conversation based messaging for businesses.	
+> [WhatsApp](https://www.whatsapp.com/) Business messaging is a popular peer-to-peer messaging platform used across the world offering conversation-based messaging for businesses.	
 
 ## Prerequisites
 
@@ -31,7 +31,7 @@ Acknowledge the following before proceeding with integration:
 | ---| --- |
 | Meta Business Manager account | A Meta Business account is required to leverage this messaging channel. |
 | WhatsApp Business account | A WhatsApp Business account is required to leverage this messaging channel. |
-| WhatsApp phone number | You must acquire a phone number that meets [WhatsApp's requirements](https://developers.facebook.com/docs/whatsapp/phone-numbers/) for use of the messaging channel.  | 
+| WhatsApp phone number | You must acquire a phone number that meets WhatsApp's requirements for [Cloud API](https://developers.facebook.com/docs/whatsapp/cloud-api/phone-numbers) or [On-Premises API](https://developers.facebook.com/docs/whatsapp/on-premises/phone-numbers) for use of the messaging channel.  | 
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## Integration
@@ -48,7 +48,7 @@ On the WhatsApp partner page, select **Login with Facebook** to start the integr
 
 ![][1]{: style="max-width:70%;"}
 
-It is likely that you already have at least one existing Meta Business account at your company. If that is the case, select the one that you would like your WhatsApp Business account to live within. User permissions and business verification for WhatsApp will be controlled centrally in your Meta Business account.
+It is likely that you already have at least one existing Meta Business account at your company. If that is the case, select the one you would like your WhatsApp Business account to live within. User permissions and business verification for WhatsApp will be controlled centrally in your Meta Business account.
 
 ### Step 2: WhatsApp setup
 Next, you will be prompted by the Braze setup workflow. Within this flow, you will:
@@ -86,7 +86,7 @@ Next, you will be prompted to create your message template. <br><br>Here, you ca
 You can check the approval status of your message template in either the **Message Template** page in the Meta Business Manager, or when creating a campaign or Canvas in Braze. Additionally, you can be notified by email by the WhatsApp team depending on your notification permissions. 
 
 {% alert note %}
-Approved templates can be used in as many campaigns and Canvases as you like. They can also be sent to as many opt-ed in users as you like. This is true unless the quality of the template decreases. 
+Approved templates can be used in as many campaigns and Canvases as you like. They can also be sent to as many opt-in users as you like. This is true unless the quality of the template decreases. 
 {% endalert %}
 
 ### Step 4: Create a WhatsApp campaign
