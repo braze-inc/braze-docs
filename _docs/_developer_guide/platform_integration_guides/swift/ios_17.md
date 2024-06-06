@@ -5,6 +5,7 @@ page_order: 7
 platform: 
   - iOS
 description: "This article covers insights into the iOS 17 release to help you upgrade your SDK seamlessly."
+hidden: true
 ---
 
 # iOS 17 upgrade guide
