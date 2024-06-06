@@ -36,4 +36,6 @@ There are several ways you can protect yourself, including:
 
 Yes, as long as your customers have a phone number with a US area code, they will still receive your messages while traveling. 
 
-If you have additional questions about SMS fraud pumping and how these product changes may affect your SMS sending, please reach out to your customer success manager. 
+{% alert important %}
+If you have additional questions about SMS traffic pumping and how these product changes may affect your SMS sending, please reach out to your customer success manager.
+{% endalert %}
