@@ -23,7 +23,7 @@ Additionally, Braze is introducing an SMS Geographic Permission Allowlist, which
 
 There are several ways you can protect yourself, including: 
 - **Monitor your daily SMS sending volumes for spikes and abnormalities:**
-    - We recommend customers set [campaign limits and alerts]({{site.baseurl}}/user_guide/engagement_tools/campaigns/managing_campaigns/campaign_alerts/) to cap and notify if an unusually high number of messages are sent.
+    - We recommend setting [campaign limits and alerts]({{site.baseurl}}/user_guide/engagement_tools/campaigns/managing_campaigns/campaign_alerts/) to cap and notify if an unusually high number of messages are sent.
     - Unusual spikes in sending of messages might indicate traffic pumping.
     - Unusually high number of opt-ins in a short time frame (outside of intentional strategies to drive opt-ins) might indicate traffic pumping.
 - **Improve security for online phone number capture forms:**
@@ -36,4 +36,6 @@ There are several ways you can protect yourself, including:
 
 Yes, as long as your customers have a phone number with a US area code, they will still receive your messages while traveling. 
 
-If you have additional questions about SMS fraud pumping and how these product changes may affect your SMS sending, please reach out to your customer success manager. 
+{% alert important %}
+If you have additional questions about SMS traffic pumping and how these product changes may affect your SMS sending, please reach out to your customer success manager.
+{% endalert %}

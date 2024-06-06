@@ -5,14 +5,13 @@ page_order: 7
 platform: 
   - iOS
 description: "This reference article covers iOS 16, how to upgrade, SDK updates, and more."
+hidden: true
 noindex: true
 ---
 
-{% multi_lang_include archive/objective-c-deprecation-notice.md %}
-
 # iOS 16 SDK upgrade guide
 
-This guide describes relevant changes introduced in iOS 16 (2022) and the impact on your Braze iOS SDK integration. Refer to the [iOS 16 release notes][2] for a full migration guide.
+> This guide describes relevant changes introduced in iOS 16 (2022) and the impact on your Braze iOS SDK integration. Refer to the [iOS 16 release notes][2] for a full migration guide.
 
 ## Changes in iOS 16
 

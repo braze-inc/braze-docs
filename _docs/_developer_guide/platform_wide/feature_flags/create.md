@@ -746,7 +746,9 @@ Here, you can review when a changed happened, who made the change, which categor
 Feature Flag membership filter is being gradually rolled out and may not be on your dashboard just yet.
 {% endalert %}
 
-Braze automatically keeps track of which users are currently eligible for or participating in a feature flag. You can create a segment or target messaging using the [**Feature Flag** filter][6]. For more information about filtering on segments, see [Creating a segment][7].
+Braze automatically keeps track of which users are currently eligible for or participating in a feature flag. You can create a segment or target messaging using the [**Feature Flag** filter]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/#feature-flags). For more information about filtering on segments, see [Creating a segment][7].
+
+![The "Filters" section with "Feature Flag" typed into the filter search bar.][10]
 
 {% alert note %}
 To prevent recursive segments, it is not possible to create a segment that references other feature flags.
@@ -805,7 +807,7 @@ To help keep your code (and Braze dashboard) clean, remove permanent feature fla
 [3]: {% image_buster /assets/img/feature_flags/feature-flags-targeting.png %}
 [4]: {% image_buster /assets/img/feature_flags/feature-flags-rollout.png %}
 [5]: {{site.baseurl}}/developer_guide/platform_wide/feature_flags/about/
-[6]: {{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters#feature-flag
 [7]: {{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/
 [8]: {% image_buster /assets/img/feature_flags/feature-flags-manage-permission.png %}
 [9]: {{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/
+[10]: {% image_buster /assets/img/feature_flags/feature-flags-filter-name.png %}

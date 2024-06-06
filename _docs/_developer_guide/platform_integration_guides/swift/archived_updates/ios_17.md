@@ -5,6 +5,8 @@ page_order: 7
 platform: 
   - iOS
 description: "This article covers insights into the iOS 17 release to help you upgrade your SDK seamlessly."
+hidden: true
+noindex: true
 ---
 
 # iOS 17 upgrade guide
@@ -12,6 +14,7 @@ description: "This article covers insights into the iOS 17 release to help you u
 > Curious about how Braze is preparing for the upcoming iOS release? This article summarizes our insights into the iOS 17 release to help you create a seamless experience for you and your users.
 
 ## iOS 17 and Xcode 15 compatibility
+
 The Braze Swift SDK and Objective-C SDK are both backward compatible with Xcode 14 and Xcode 15, and compatible with iOS 17 devices.
 
 ## Changes in iOS 17
