@@ -1131,4 +1131,9 @@ validurls['/docs/one-click_unsubscribe/'] = '/docs/user_guide/administrative/app
 
 validurls['/docs/back_in_stock/'] = '/docs/user_guide/personalization_and_dynamic_content/catalogs/back_in_stock_notifications/';
 
+validurls['/docs/hidden/archive_docs/ios_14/'] = '/docs/developer_guide/platform_integration_guides/swift/archived_updates/ios_14/';
+validurls['/docs/hidden/archive_docs/ios_15/'] = '/docs/developer_guide/platform_integration_guides/swift/archived_updates/ios_15/';
+validurls['/docs/developer_guide/platform_integration_guides/legacy_sdks/ios/ios_16/'] = '/docs/developer_guide/platform_integration_guides/swift/archived_updates/ios_16/';
+validurls['/docs/developer_guide/platform_integration_guides/swift/ios_17/'] = '/docs/developer_guide/platform_integration_guides/swift/archived_updates/ios_17/';
+
 // validurls['OLD'] = 'NEW';

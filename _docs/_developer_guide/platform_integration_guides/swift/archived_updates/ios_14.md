@@ -5,16 +5,12 @@ page_order: 7
 platform: iOS
 description: "This reference article covers the iOS 14 SDK update, highlighting changes such as geofences, location targeting, IDFA, and more."
 hidden: true
-permalink: "/ios_14/"
-hidden: true
 noindex: true
 ---
 
 # iOS 14 SDK upgrade guide
 
-This guide describes Braze-related changes introduced in iOS 14 and the required upgrade steps for your Braze iOS SDK integration.
-
-For a complete list of new iOS 14 updates, see Apple's [iOS 14 Page](https://www.apple.com/ios/ios-14/).
+> This guide describes Braze-related changes introduced in iOS 14 and the required upgrade steps for your Braze iOS SDK integration. For a complete list of new iOS 14 updates, see Apple's [iOS 14 Page](https://www.apple.com/ios/ios-14/).
 
 {% alert tip %}
 As of iOS 14.5, **IDFA** collection and [certain data sharing](https://developer.apple.com/app-store/user-privacy-and-data-use/#permission-to-track) will require the new [AppTrackingTransparency](https://developer.apple.com/documentation/apptrackingtransparency) Framework permission prompt ([Learn More](#idfa)).

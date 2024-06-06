@@ -2,7 +2,6 @@
 nav_title: iOS 15 Upgrade Guide
 article_title: iOS 15 SDK Upgrade Guide
 page_order: 7
-hidden: true
 platform: iOS
 description: "This reference article covers the new iOS 15 OS updates, required SDK updates, and new features."
 hidden: true
@@ -11,9 +10,7 @@ noindex: true
 
 # iOS 15 SDK upgrade guide
 
-This guide outlines changes introduced in iOS 15 (WWDC21) and the required upgrade steps for your Braze iOS SDK integration.
-
-> For a complete list of new iOS 15 updates, see Apple's [iOS 15 release notes](https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-15-release-notes).
+> This guide outlines changes introduced in iOS 15 (WWDC21) and the required upgrade steps for your Braze iOS SDK integration. For a complete list of new iOS 15 updates, see Apple's [iOS 15 release notes](https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-15-release-notes).
 
 
 ## Transparency changes to UI navigations
