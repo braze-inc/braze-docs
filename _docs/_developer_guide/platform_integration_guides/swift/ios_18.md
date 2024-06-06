@@ -5,7 +5,6 @@ page_order: 7
 platform: 
   - iOS
 description: "This article covers insights into the iOS 18 release to help you upgrade your SDK seamlessly."
-hidden: true
 ---
 
 # iOS 18 upgrade guide
