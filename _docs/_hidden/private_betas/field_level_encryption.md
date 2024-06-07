@@ -35,6 +35,8 @@ Next, select Email address to encrypt the field.
 
 When encryption is enabled for a field, it can’t be reverted to a decrypted field. This means encryption is a permanent setting. When setting up encryption for email address, please ensure that no users have email addresses in the workspace. This ensures that no plaintext email addresses are stored in Braze when enabling the feature for the workspace.
 
+![]({% image_buster /assets/img/field_level_encryption.png %})
+
 ## Step 3: Import and update users
 
 When field-level encryption is enabled, you must hash and encrypt the email address before adding to Braze. Please ensure you downcase the email address before hashing it.
