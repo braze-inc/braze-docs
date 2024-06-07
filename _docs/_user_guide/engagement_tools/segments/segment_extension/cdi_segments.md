@@ -14,16 +14,16 @@ description: "This how-to article will walk you through how to set up Location t
 > With Braze [Cloud Data Ingestion]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/overview/) (CDI), you can set up a direct connection from your data warehouse or file storage system to Braze to sync relevant user or catalog data on a recurring basis.
 
 {% alert note %}
-CDI segments is currently in early access and is available only for customers with Snowflake CDI integrations.
+CDI segments is currently in early access and is available for BigQuery, Databricks, Redshift, and Snowflake.
 {% endalert %}
 
-To use your data warehouse data for segmentation within your Braze workspace, create a CDI segment within your [segment extensions]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/). CDI segments allow you to write SQL that directly queries your own data warehouse by using data made available via your CDI connections, and create a group of users that can be targeted within Braze.
+To use your data warehouse data for segmentation within your Braze workspace, first create a [Connected Source]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/connected_sources/), and then create a CDI segment within your [segment extensions]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/). CDI segments allow you to write SQL that directly queries your own data warehouse by using data made available via your CDI connections, and create a group of users that can be targeted within Braze.
 
 This feature queries your data warehouse directly, so you will incur all costs associated with running these queries in your data warehouse. It won't consume [SQL segment credits]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/#monitoring-your-sql-segments-usage) or data points.
 
-## Setting up CDI ingestion
+## Setting up CDI source
 
-Set up a new Connection Sync with Snowflake by following the steps in [Data warehouse integrations]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/integrations/).
+Before creating your first CDI Segment, set up a new Connected Source with your data warehouse by following the steps in [Connected Sources]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/connected_sources/).
 
 ## Creating a CDI segment
 
@@ -54,4 +54,4 @@ Check out [SQL Segment Extensions]({{site.baseurl}}/user_guide/engagement_tools/
 ## Troubleshooting
 
 - Your query might timeout when it reaches your maximum runtime, which is set up for each connection sync on the **Cloud Data Ingestion** page. The maximum runtime allowed is 60 minutes.
-- Make sure your SQL is written using [Snowflake syntax](https://docs.snowflake.com/en/sql-reference/).
+- Make sure your SQL is written using appropriate syntax for your data warehouse. 
