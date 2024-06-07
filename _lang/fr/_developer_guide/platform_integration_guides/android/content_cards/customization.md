@@ -19,31 +19,32 @@ guide_featured_title: "Section Articles"
 guide_featured_list:
   - name: Style personnalisé
     link: /docs/developer_guide/platform_integration_guides/android/content_cards/customization/custom_styling/
-    fa_icon: fa fa-paint-brush
+    image: /assets/img/braze_icons/brush-02.svg
   - name: Personnaliser le flux
     link: /docs/developer_guide/platform_integration_guides/android/content_cards/customization/default_feed/
-    fa_icon: fa fa-cog
+    image: /assets/img/braze_icons/settings-01.svg
   - name: Gestion manuelle des clics
     link: /docs/developer_guide/platform_integration_guides/android/content_cards/customization/handling_clicks_manually/
-    fa_icon: fa fa-mouse-pointer
+    image: /assets/img/braze_icons/navigation-pointer-01.svg
   - name: Paires clé-valeur
     link: /docs/developer_guide/platform_integration_guides/android/content_cards/customization/key_value_pairs/
-    fa_icon: fa fa-code
+    image: /assets/img/braze_icons/code-square-01.svg
+
   - name: Indicateurs de messages non lus et lus
     link: /docs/developer_guide/platform_integration_guides/android/content_cards/customization/read_and_unread/
-    fa_icon: fa fa-book
+    image: /assets/img/braze_icons/book-closed.svg
   - name: Badges
     link: /docs/developer_guide/platform_integration_guides/android/content_cards/customization/badges/
-    fa_icon: fa fa-id-badge
+    image: /assets/img/braze_icons/key-01.svg
   - name: Fermeture de carte de contenu
     link: /docs/developer_guide/platform_integration_guides/android/content_cards/customization/swipe_to_dismiss/
-    fa_icon: fa fa-times
+    image: /assets/img/braze_icons/message-x-circle.svg
   - name: GIF
     link: /docs/developer_guide/platform_integration_guides/android/content_cards/customization/GIFs/
-    fa_icon: fa-solid fa-file-image
+    image: /assets/img/braze_icons/image-01.svg
   - name: Cas d’utilisation de la vue carrousel
     link: /docs/developer_guide/platform_integration_guides/android/content_cards/customization/use_cases/carousel_view/
-    fa_icon: fa fa-arrows-h
+    image: /assets/img/braze_icons/switch-horizontal-01.svg
 
 ---
 <br><br>

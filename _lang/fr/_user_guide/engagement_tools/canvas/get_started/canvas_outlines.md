@@ -10,7 +10,7 @@ tool: Canvas
 
 # Grandes lignes du Canvas
 
-[![Cours d’apprentissage Braze]({% image_buster /assets/img/bl_icon2.png %})](https://learning.braze.com/page/courses){: style="float:right;width:120px;border:0;" class="noimgborder"}
+[![Cours d’apprentissage Braze]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/page/courses){: style="float:right;width:120px;border:0;" class="noimgborder"}
 
 > L’article suivant répertorie plusieurs exemples démontrant comment vous pouvez utiliser Canvas pour effectuer un envoi de messages ciblé et personnalisé en utilisant une combinaison d’étapes de [délai]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/delay_step/) et de [message]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/).
 

@@ -9,11 +9,11 @@ tool: Canvas
 
 # Canvas approval and permissions
 
-> Canvas approval adds a review process to your workflow before launch. Now, you can check that each confirmation is approved in order to launch the Canvas.
+> Canvas approval adds a review process to your workflow before launch. This way, you can check that each confirmation is approved in order to launch the Canvas.
 
 ## Turning on Canvas approval
 
-To turn on the approval workflow for Canvas, go to **Settings** > **Approval Workflow** under **Workplace Settings**. By default, this feature is turned off. 
+To turn on the approval workflow for Canvas, go to **Settings** > **Approval Workflow** under **Workplace Settings**. By default, this feature is turned off.
 
 ![The Approval Workflow settings where the option to use the approval workflow for campaigns and Canvases are enabled.][1]
 

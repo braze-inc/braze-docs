@@ -55,21 +55,21 @@ namespace :docs_en do
   end
 end
 
-namespace :docs_fr do
-  config_file = './_config.yml,./_lang/_config_fr.yml'
-  task :index do
+namespace :lang do
+  task :index, [:lang] do |t, args|
+    config_file = "./_config.yml,./_lang/_config_#{args[:lang]}.yml"
     if ENV["SITE_URL"] == 'https://www.braze.com' && ENV["RACK_ENV"] == 'production'
       puts `bundle exec jekyll algolia --config #{config_file}`
     end
   end
-  task build: [:index] do
-    jekyll_build(config_file, 'fr')
+  task :build, [:lang] => [:index] do |t, args|
+    jekyll_build("./_config.yml,./_lang/_config_#{args[:lang]}.yml", args[:lang])
   end
-  task :serve do
-    jekyll_serve(config_file)
+  task :serve, [:lang] do |t, args|
+    jekyll_serve("./_config.yml,./_lang/_config_#{args[:lang]}.yml")
   end
-  task :proxy_serve do
-    pipe 'bundle exec ruby proxy.rb fr'
+  task :proxy_serve, [:lang] do |t, args|
+    pipe "bundle exec ruby proxy.rb #{args[:lang]}"
   end
 end
 
@@ -79,14 +79,35 @@ namespace :assets do
   end
 end
 
-multitask fr: [
-  'docs_fr:serve', 'docs_fr:proxy_serve'
+
+# Usage: rake "lang[:lang]" ie
+# rake "lang[:fr]"
+# rake "lang[:ja]"
+multitask :lang, [:lang] => [
+  'lang:serve',
+  'lang:proxy_serve'
+]
+
+multitask serve: [
+  'docs_en:serve', 'docs_en:proxy_serve'
 ]
 
 multitask en: [
   'docs_en:serve', 'docs_en:proxy_serve'
 ]
 
-multitask serve: [
-  'docs_en:serve', 'docs_en:proxy_serve'
-]
+task :fr do
+  Rake::Task["lang"].invoke('fr')
+end
+
+task :ja do
+  Rake::Task["lang"].invoke('ja')
+end
+
+task :fr_build do
+  Rake::Task["lang:build"].invoke('fr')
+end
+
+task :ja_build do
+  Rake::Task["lang:build"].invoke('ja')
+end

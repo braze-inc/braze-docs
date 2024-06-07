@@ -23,7 +23,7 @@ If you must change the data type of a custom attribute or event (for example, ch
 - User data will not be retroactively updated. If the changed attribute was on a user profile prior to the data type change, then that value will still be the old data type. This can cause users to fall out of the segments that contain the changed attribute. The filter will actively look for the new data type, but if a profile still has the previous data type, that user will now be excluded from the segment. These users must be updated to fall back into the proper segments. You can do this with the [`users/track` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track/).
 - New data will not be accepted if it's not the new data type. For example, an API call to the `users/track` endpoint that contains the previous data type for a changed attribute will not be accepted. You must call the new data type.
 
-{% alert note %}
+{% alert important %}
 The ability to prevent automatic detection from updating the custom attribute data type is currently in early access. Contact your customer success manager if you’re interested in participating in this early access.
 {% endalert %}
 

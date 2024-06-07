@@ -2,13 +2,13 @@
 nav_title: Cross-Referencing
 article: Cross-referencing
 description: "Learn how to cross-reference other pages on Braze Docs."
-page_order: 4
+page_order: 3
 noindex: true
 ---
 
 # Cross-referencing
 
-> Learn how to cross-reference other pages on Braze Docs. To cross-reference pages outside Braze Docs, use [standard Markdown syntax](https://www.markdownguide.org/basic-syntax/#links).
+> Learn how to cross-reference other pages on Braze Docs. To cross-reference pages outside Braze Docs, use [standard Markdown syntax](https://www.markdownguide.org/basic-syntax/#links). For general information about cross-references, see [About content management]({{site.baseurl}}/contributing/content_management/#cross-references).
 
 {% multi_lang_include contributing/prerequisites.md %}
 

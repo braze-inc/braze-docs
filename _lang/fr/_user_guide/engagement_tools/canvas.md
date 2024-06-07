@@ -14,25 +14,25 @@ guide_featured_title: "Sections"
 guide_featured_list:
   - name: Démarrage
     link: /docs/user_guide/engagement_tools/canvas/get_started/
-    fa_icon: fas fa-book-open
+    image: /assets/img/braze_icons/book-closed.svg
   - name: Développement de Canvas
     link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/
-    fa_icon: fas fa-paint-brush
+    image: /assets/img/braze_icons/brush-02.svg
   - name: Composants Canvas
     link: /docs/user_guide/engagement_tools/canvas/canvas_components/
-    fa_icon: fas fa-project-diagram 
+    image: /assets/img/braze_icons/dataflow-03.svg 
   - name: Gestion des Canvas
     link: /docs/user_guide/engagement_tools/canvas/managing_canvases/
-    fa_icon: fas fa-pen-square
+    image: /assets/img/braze_icons/edit-05.svg
   - name: Test de Canvas
     link: /docs/user_guide/engagement_tools/canvas/testing_canvases/
-    fa_icon: fas fa-vials
+    image: /assets/img/braze_icons/beaker-02.svg
   - name: Idées et stratégies
     link: /docs/user_guide/engagement_tools/canvas/ideas_and_strategies/
-    fa_icon: fas fa-bullseye
+    image: /assets/img/braze_icons/target-04.svg
   - name: Foire aux questions
     link: /docs/user_guide/engagement_tools/canvas/faqs/
-    fa_icon: fas fa-question
+    image: /assets/img/braze_icons/annotation-question.svg
 ---
 
 {% alert important %}

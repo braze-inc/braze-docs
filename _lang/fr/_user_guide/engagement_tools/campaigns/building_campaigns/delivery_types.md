@@ -14,22 +14,22 @@ guide_featured_title: "Types de livraison"
 guide_featured_list:
   - name: Livraison planifiée
     link: /docs/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/scheduled_delivery/
-    fa_icon: fas fa-chart-line
+    image: /assets/img/braze_icons/line-chart-up-01.svg
   - name: Livraison par événement
     link: /docs/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/
-    fa_icon: fas fa-table
+    image: /assets/img/braze_icons/table.svg
   - name: Livraison déclenchée par API
     link: /docs/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/api_triggered_delivery/
-    fa_icon: fas fa-exclamation
+    image: /assets/img/braze_icons/alert-circle.svg
 
 guide_menu_title: "Autres articles"
 guide_menu_list:
   - name: Rééligibilité pour les campagnes
     link: /docs/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/reeligibility/
-    fa_icon: fas fa-user-clock
+    image: /assets/img/braze_icons/clock.svg
   - name: Campaign Calendar
     link: /docs/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/campaign_calendar/
-    fa_icon: fas fa-calendar-alt
+    image: /assets/img/braze_icons/calendar-check-02.svg
 ---
 
 

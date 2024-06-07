@@ -469,6 +469,12 @@ Return to the Braze dashboard and click **Test connection**. If successful, you'
 
 ![]({% image_buster /assets/img/cloud_ingestion/ingestion_8.png %})
 {% endtab %}
+{% tab Redshift Private Network %}
+
+Return to the Braze dashboard and click **Test connection**. If successful, you'll see a preview of the data. If, for some reason, we can't connect, we'll display an error message to help you troubleshoot the issue.
+
+![]({% image_buster /assets/img/cloud_ingestion/ingestion_19.png %})
+{% endtab %}
 {% tab BigQuery %}
 
 Once all configuration details for your sync are entered, click **Test connection**. If successful, you'll see a preview of the data. If, for some reason, we can't connect, we'll display an error message to help you troubleshoot the issue.

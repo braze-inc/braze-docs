@@ -1,7 +1,7 @@
 ---
 nav_title: Tealium for Currents
 article_title: Tealium for Currents
-page_order: 2.3
+page_order: 3
 alias: /partners/tealium_for_currents/
 description: "This reference article outlines the partnership between Braze Currents and Tealium, a customer data platform that collects and routes information between sources in your marketing stack."
 page_type: partner

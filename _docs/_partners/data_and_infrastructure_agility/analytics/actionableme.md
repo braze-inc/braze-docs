@@ -1,7 +1,6 @@
 ---
 nav_title: actionable.me
 article_title: actionable.me
-page_order: 1
 description: "This reference article outlines the partnership between Braze and actionable.me, a proprietary software and processes, that allow you to get the most out of your Braze investment right away."
 alias: /partners/actionableme/
 page_type: partner

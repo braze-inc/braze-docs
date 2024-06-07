@@ -1,7 +1,6 @@
 ---
 nav_title: Digioh
 article_title: Digioh
-page_order: 1
 description: "This reference article outlines the partnership between Braze and Digioh, a survey platform that lets you easily create pop-ups, forms, surveys, and communication preference centers that drive real engagement through your Braze campaigns."
 alias: /partners/digioh/
 page_type: partner

@@ -17,32 +17,32 @@ braze_learning: Technical terms and concepts explained through a mix of videos, 
 doc_menu_list:
   - name: User Guide
     bg_color: '#3accdd'
-    image: /assets/img/new-icons/users.svg
+    image: /assets/img/braze_icons/users-01.svg
     link: /docs/user_guide/introduction/
     description: "Learn how to use the Braze platform to foster a more impactful customer experience."
   - name: Developer Guide
     bg_color: '#f7918e'
-    image: /assets/img/new-icons/html-file.svg
+    image: /assets/img/braze_icons/file-code-01.svg
     link: /docs/developer_guide/home/
     description: "Integrate and activate your app or site with the Braze SDK."
   - name: Technology Partners
     bg_color: '#ff9349'
-    image: /assets/img/new-icons/gears.svg
+    image: /assets/img/braze_icons/settings-02.svg
     link: /docs/partners/home/
     description: "Our Technology Partners can help you customize your Braze experience and customer relationships."
   - name: API Guide
     bg_color: '#ff9349'
-    image: /assets/img/new-icons/api.svg
+    image: /assets/img/braze_icons/code-browser.svg
     link: /docs/api/home/
     description: "Braze provides a high-performance REST API to allow you to track users, send messages, export data, and more."
   - name: Help
     bg_color: '#ff9349'
-    image: /assets/img/new-icons/circle-info-solid.svg
+    image: /assets/img/braze_icons/info-circle.svg
     link: /docs/help/home
     description: "Find articles to help troubleshoot issues you may encounter and learn more about best practices to communicate with your users."
   - name: Compliance Documentation
     bg_color: '#ff9349'
-    image: /assets/img/new-icons/file-contract-solid.svg
+    image: /assets/img/braze_icons/certificate-01.svg
     link: /docs/compliance_documentation/
     description: "Compliance documentation outlines specific terms applicable to your purchased product or service."
 

@@ -5,7 +5,6 @@ description: "This reference article covers the Braze and Lytics integration. Ly
 alias: /partners/lytics/
 page_type: partner
 search_tag: Partner
-page_order: 5.5
 ---
 
 # Lytics

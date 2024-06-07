@@ -17,7 +17,6 @@ We recommend the following payload sizes:
 | --- | --- |
 | iOS (pre-iOS 8) | 0.256 KB |
 | iOS (post-iOS 8) | 2 KB |
-| Android (GCM) | 2 KB |
 | Android (FCM) | 4 KB |
 {: .reset-td-br-1 .reset-td-br-2}
 

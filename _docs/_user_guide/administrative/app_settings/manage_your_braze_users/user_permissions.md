@@ -49,7 +49,7 @@ You can manage user permissions by group or on an individual basis when editing 
 ![Manage User Permissions][89]
 
 {% alert important %}
-Beginning in early April 2024, users will need the “Access Campaigns, Canvases, Cards, Segments, Media Library” permission to create or update promotion code lists.
+As of April 2024, to create or update promotion code lists, Braze users need the “Access Campaigns, Canvases, Cards, Segments, Media Library” permission.
 {% endalert %}
 
 |Permission Name|Definition/Parameters|
@@ -71,7 +71,7 @@ Beginning in early April 2024, users will need the “Access Campaigns, Canvases
 |Manage External Integrations| Allows access to all tabs under **Technology Partners** and the ability to sync Braze with other platforms.|
 |Manage Apps| Allows users to edit **App Settings**.|
 |Manage Teams|Allows users to manage **Internal Teams**. The ability to select this permission depends on your contract with Braze.|
-|Manage Events, Attributes, Purchases|Allows users to edit custom attributes (users without this capability can still view custom attributes), edit and view properties of custom events, and edit and view properties of products under **Data Settings**. If you turn this on for a non-admin Braze user, "Access Campaigns, Canvases, Cards, Segments, Media Library" permission must also be granted. |
+|Manage Events, Attributes, Purchases|Allows users to edit custom attributes (users without this capability can still view custom attributes), edit and view properties of custom events, and edit and view properties of products under **Data Settings**. |
 |Manage Tags|Allows users to edit or delete tags (under **Tag Management**). You do not need this permission to add tags to campaigns or segments.|
 |Manage Email Settings|Allows users to save email configuration changes (**Settings** > **Email Preferences**).|
 |Manage Subscription Groups| Allows users to create and manage subscription groups. |

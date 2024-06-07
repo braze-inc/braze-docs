@@ -11,19 +11,19 @@ guide_featured_title: "Section articles"
 guide_featured_list:
 - name: Creating an In-App Message
   link: /docs/user_guide/message_building_by_channel/in-app_messages/traditional/create/
-  fa_icon: fas fa-mobile-alt
+  image: /assets/img/braze_icons/phone-02.svg
 - name: Customize
   link: /docs/user_guide/message_building_by_channel/in-app_messages/traditional/customize/
-  fa_icon: fas fa-paintbrush
+  image: /assets/img/braze_icons/brush-02.svg
 - name: Dark Mode
   link: /docs/user_guide/message_building_by_channel/in-app_messages/traditional/dark-mode/
-  fa_icon: fas fa-circle-half-stroke
+  image: /assets/img/braze_icons/circle-cut.svg
 
 guide_menu_title: Templates
 guide_menu_list:
 - name: Simple Survey
   link: /docs/user_guide/message_building_by_channel/in-app_messages/traditional/templates/simple_survey/
-  fa_icon: fas fa-clipboard
+  image: /assets/img/braze_icons/clipboard.svg
 ---
 
 <br><br>

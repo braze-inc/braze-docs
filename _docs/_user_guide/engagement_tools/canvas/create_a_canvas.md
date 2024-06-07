@@ -14,41 +14,41 @@ guide_featured_title: "Section articles"
 guide_featured_list:
   - name: Creating a Canvas
     link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/
-    fa_icon: fas fa-palette
+    image: /assets/img/braze_icons/palette.svg
   - name: Commenting in Canvas
     link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/canvas_comments/
-    fa_icon: fa-solid fa-comment
+    image: /assets/img/braze_icons/message-circle-01.svg
   - name: Time-Based Functionalities
     link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/time_based_canvas/
-    fa_icon: fas fa-clock
+    image: /assets/img/braze_icons/clock.svg
   - name: Exception Events
     link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/exception_events/
-    fa_icon: fas fa-exchange-alt
+    image: /assets/img/braze_icons/switch-horizontal-01.svg
   - name: Exit Criteria
     link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/exit_criteria/
-    fa_icon: fas fa-user-slash
+    image: /assets/img/braze_icons/users-right.svg
   - name: Preview User Paths
     link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/preview_user_paths/
-    fa_icon: fas fa-users-viewfinder
+    image: /assets/img/braze_icons/dataflow-03.svg
   - name: Canvas Entry Properties and Event Properties
     link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties/
-    fa_icon: fas fa-user-check
+    image: /assets/img/braze_icons/user-check-01.svg
   - name: Persistent Entry Properties
     link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties/canvas_persistent_entry_properties/
-    fa_icon: fas fa-project-diagram
+    image: /assets/img/braze_icons/dataflow-03.svg
   - name: Content Cards in Canvas
     link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/canvas_by_channel/content-cards_in_canvas/
-    fa_icon: fas fa-columns
+    image: /assets/img/braze_icons/columns-01.svg
   - name: In-App Messages in Canvas
     link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/canvas_by_channel/in-app_messages_in_canvas/
-    fa_icon: fas fa-mobile
+    image: /assets/img/braze_icons/phone-02.svg
   - name: Advancement Behaviors
     link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/advancement/
-    fa_icon: fas fa-user
+    image: /assets/img/braze_icons/users-01.svg
  
 guide_menu_title: "Additional resources"
 guide_menu_list:
   - name: AI Copywriting Assistant
     link: /docs/user_guide/intelligence/ai_copywriting/
-    fa_icon: fas fa-edit
+    image: /assets/img/braze_icons/edit-05.svg
 ---

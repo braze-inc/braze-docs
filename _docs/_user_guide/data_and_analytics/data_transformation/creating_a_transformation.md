@@ -128,11 +128,13 @@ Here, you will write transformation code to define how you’d like to map vario
     ```
     // This is a default template that you can use as a starting point
     // Feel free to delete this entirely to start from scratch, or to edit specific components
-    
+
+
     // First, this code defines a variable, "brazecall", to build a PUT /catalogs/{catalog_name}/items request
     // Everything from the incoming webhook is accessible via the special variable "payload"
     // As such, you can template in desired values in your request with JS dot notation, such as payload.x.y.z
-    
+
+
     let brazecall = {
     // For Braze Data Transformation to update Catalog items, the special variable "catalog_name" is required
     // This variable is used to specify the catalog name which would otherwise go in the request URL
@@ -175,7 +177,7 @@ Here, you will write transformation code to define how you’d like to map vario
       }
     ]
     };
-    
+
     // After the request body is assigned to brazecall, you will want to explicitly return brazecall to create an output
     return brazecall;
     ```

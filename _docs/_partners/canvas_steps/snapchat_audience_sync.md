@@ -1,5 +1,5 @@
 ---
-nav_title: Audience Sync to Snapchat
+nav_title: Snapchat
 article_title: Canvas Audience Sync to Snapchat
 description: "This reference article will cover how to use Braze Audience Sync to Snapchat, to deliver advertisements based upon behavioral triggers, segmentation, and more."
 page_order: 4

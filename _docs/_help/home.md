@@ -12,22 +12,22 @@ description: "This landing page is home to the Best self-help section. Here, you
 resources_list:
   - name: Help Articles
     link: /docs/help/help_articles/overview/
-    fa_icon: fa-solid fa-circle-info
+    image: /assets/img/braze_icons/info-circle.svg
   - name: Best Practices and FAQ
     link: /docs/help/faqs/
-    fa_icon: fa-brands fa-readme
+    image: /assets/img/braze_icons/book-open-01.svg
   - name: Release Notes
     link: /docs/help/release_notes/most_recent/
-    fa_icon: fa-solid fa-note-sticky
+    image: /assets/img/braze_icons/sticker-square.svg
   - name: Braze Learning Login
     link: https://learning.braze.com/
-    fa_icon: fa-solid fa-chalkboard-user
+    image: /assets/img/braze_icons/user-square.svg
   - name: Media Resources
     link: https://www.youtube.com/channel/UCEXVTEWeAHx1OlddOMRTaOg
-    fa_icon: fa-brands fa-youtube
+    image: /assets/img/braze_icons/youtube.svg
   - name: Braze Support
     link: /docs/braze_support/
-    fa_icon: fa-solid fa-envelope
+    image: /assets/img/braze_icons/mail-01.svg
 
 popular_topic_list:
   - name: Know Before You Send

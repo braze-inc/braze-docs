@@ -13,27 +13,27 @@ guide_featured_title: "Select a Campaign Type"
 guide_featured_list:
 - name: Content Card Campaign
   link: /docs/user_guide/message_building_by_channel/content_cards/create/
-  image: /assets/img/cc_icon.png
+  image: /assets/img/braze_icons/channel-content-cards.svg
 - name: Email Campaign
   link: /docs/user_guide/message_building_by_channel/email/html_editor/creating_an_email_campaign/
-  image: /assets/img/email_icon.png
+  image: /assets/img/braze_icons/channel-email.svg
 - name: In-App Message Campaign
   link: /docs/user_guide/message_building_by_channel/in-app_messages/create/
-  image: /assets/img/in-app_message_icon.png
+  image: /assets/img/braze_icons/channel-in-app-messages.svg
 - name: Push Campaign
   link: /docs/user_guide/message_building_by_channel/push/creating_a_push_message/
-  image: /assets/img/push_icon.png
+  image: /assets/img/braze_icons/channel-mobile-push.svg
 - name: SMS Campaign
   link: /docs/user_guide/message_building_by_channel/sms/campaign/create/
-  image: /assets/img/sms_icon.png
+  image: /assets/img/braze_icons/channel-sms.svg
 - name: MMS Campaign
   link: /docs/user_guide/message_building_by_channel/sms/mms/create/
-  image: /assets/img/sms_icon.png
+  image: /assets/img/braze_icons/channel-sms.svg
 - name: Webhook Campaign
   link: /docs/user_guide/message_building_by_channel/webhooks/creating_a_webhook/
-  image: /assets/img/webhook_icon.png
+  image: /assets/img/braze_icons/channel-webhook.svg
 - name: Multichannel Campaign
   link: /docs/user_guide/engagement_tools/campaigns/faq/#how-do-you-create-a-multichannel-campaign
-  fa_icon: fas fa-plus
+  image: /assets/img/braze_icons/plus.svg
 
 ---

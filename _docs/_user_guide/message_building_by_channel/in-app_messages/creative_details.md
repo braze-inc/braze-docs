@@ -17,13 +17,13 @@ guide_featured_title: "Specifications by message type"
 guide_featured_list:
 - name: Modal
   link: /docs/user_guide/message_building_by_channel/in-app_messages/creative_details/modal/
-  image: /assets/img/icon_modal.png
+  image: /assets/img/braze_icons/layout-alt-01.svg
 - name: Slideup
   link: /docs/user_guide/message_building_by_channel/in-app_messages/creative_details/slideup/
-  image: /assets/img/icon_slideup.png
+  image: /assets/img/braze_icons/arrow-circle-broken-up.svg
 - name: "Fullscreen"
   link: /docs/user_guide/message_building_by_channel/in-app_messages/creative_details/fullscreen/
-  image: /assets/img/icon_full_screen.png
+  image: /assets/img/braze_icons/expand-05.svg
 
 ---
 

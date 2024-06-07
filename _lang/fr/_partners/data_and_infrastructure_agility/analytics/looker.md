@@ -8,7 +8,7 @@ search_tag: Partenaire
 
 ---
 
-# [![Cours d’apprentissage Braze]({% image_buster /assets/img/bl_icon2.png %})](https://learning.braze.com/looker-integration-with-braze/){: style="float:right;width:120px;border:0;" class="noimgborder"}Looker
+# [![Cours d’apprentissage Braze]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/looker-integration-with-braze/){: style="float:right;width:120px;border:0;" class="noimgborder"}Looker
 
 > [Looker](https://looker.com/) est une plateforme d’aide à la décision et d’analyses du Big Data qui vous permet d’explorer, d’analyser et de partager de manière harmonieuse des analyses commerciales en temps réel.
 

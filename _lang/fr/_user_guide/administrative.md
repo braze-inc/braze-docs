@@ -12,16 +12,16 @@ guide_featured_title: "Sujets"
 guide_featured_list:
 - name: Accès à Braze
   link: /docs/user_guide/administrative/access_braze/
-  fa_icon: fa-solid fa-arrow-right-to-bracket
+  image: /assets/img/braze_icons/log-in-01.svg
 - name: Paramètres de l’entreprise
   link: /docs/user_guide/administrative/company_settings/
-  fa_icon: fa-regular fa-building
+  image: /assets/img/braze_icons/building-02.svg
 - name: Gérer vos utilisateurs Braze
   link: /docs/user_guide/administrative/manage_your_braze_users/
-  fa_icon: fa-solid fa-users
+  image: /assets/img/braze_icons/users-01.svg
 - name: Paramètres
   link: /docs/user_guide/administrative/app_settings/
-  fa_icon: fa-solid fa-gears
+  image: /assets/img/braze_icons/settings-01.svg
 ---
 
 <br> 

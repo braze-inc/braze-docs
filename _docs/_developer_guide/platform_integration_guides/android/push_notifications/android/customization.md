@@ -17,16 +17,16 @@ guide_featured_title: "Section articles"
 guide_featured_list:
   - name: Android Inline Image Push
     link: /docs/developer_guide/platform_integration_guides/android/push_notifications/android/customization/inline_image_push/
-    fa_icon: fa-regular fa-image
+    image: /assets/img/braze_icons/message-plus-square.svg
   - name: HTML Push Notifications
     link: /docs/developer_guide/platform_integration_guides/android/push_notifications/android/customization/html_rendered_push/
-    fa_icon: fa fa-pencil
+    image: /assets/img/braze_icons/pencil-01.svg
   - name: Advanced Settings
     link: /docs/developer_guide/platform_integration_guides/android/push_notifications/android/customization/advanced_settings/
-    fa_icon: fa fa-cog
+    image: /assets/img/braze_icons/settings-01.svg
   - name: Push Event Callback
     link: /docs/developer_guide/platform_integration_guides/android/push_notifications/android/customization/custom_event_callback/
-    fa_icon: fa fa-cog
+    image: /assets/img/braze_icons/settings-01.svg
 
 
 ---

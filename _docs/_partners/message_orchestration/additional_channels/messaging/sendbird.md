@@ -1,10 +1,8 @@
 ---
 nav_title: Sendbird
 article_title: Sendbird
-
 description: "This reference article outlines the partnership between Braze and Sendbird, a leading in-app messaging solution that allows users to receive in-app notifications on the Sendbird platform."
 alias: /partners/sendbird/
-
 page_type: partner
 search_tag: Partner
 

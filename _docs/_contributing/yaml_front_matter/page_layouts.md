@@ -8,7 +8,7 @@ noindex: true
 
 #  Page layouts
 
-> These are the page layouts that can be assigned to the [`page_layout`]({{site.baseurl}}/contributing/yaml_front_matter/metadata/#page-layout) key in a page's YAML front matter. For more general information, see [Content Management]({{site.baseurl}}/contributing/content_management/#layouts).
+> These are the page layouts that can be assigned to the [`page_layout`]({{site.baseurl}}/contributing/yaml_front_matter/metadata/#page-layout) key in a page's YAML front matter. For more general information, see [About content management]({{site.baseurl}}/contributing/content_management/#layouts).
 
 ## Prerequisites
 

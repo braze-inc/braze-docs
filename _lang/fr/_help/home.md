@@ -12,22 +12,22 @@ description: "Cette page d’accueil contient la section Meilleure auto-assistan
 resources_list:
   - name: Articles d’aide
     link: /docs/help/help_articles/overview/
-    fa_icon: fa-solid fa-circle-info
+    image: /assets/img/braze_icons/info-circle.svg
   - name: Bonnes pratiques et FAQ
     link: /docs/help/faqs/
-    fa_icon: fa-brands fa-readme
+    image: /assets/img/braze_icons/book-open-01.svg
   - name: Notes de version
     link: /docs/help/release_notes/most_recent/
-    fa_icon: fa-solid fa-note-sticky
+    image: /assets/img/braze_icons/calendar.svg
   - name: Connection à Braze Learning
     link: https://learning.braze.com/
-    fa_icon: fa-solid fa-chalkboard-user
+    image: /assets/img/braze_icons/user-square.svg
   - name: Ressources Médias
     link: https://www.youtube.com/channel/UCEXVTEWeAHx1OlddOMRTaOg
-    fa_icon: fa-brands fa-youtube
+    image: /assets/img/braze_icons/youtube.svg
   - name: Assistance Braze
     link: /docs/braze_support/
-    fa_icon: fa-solid fa-envelope
+    image: /assets/img/braze_icons/message-question-circle.svg
 
 popular_topic_list:
   - name: Comportement du Dispatch ID

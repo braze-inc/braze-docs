@@ -15,28 +15,28 @@ guide_featured_title: "WhatsApp"
 guide_featured_list:
 - name: "Aperçu WhatsApp"
   link: /docs/user_guide/message_building_by_channel/whatsapp/overview
-  fa_icon: fa-brands fa-whatsapp
+  image: /assets/img/braze_icons/whatsapp.svg
 - name: "Groupe d’abonnement WhatsApp"
   link: /docs/user_guide/message_building_by_channel/whatsapp/user_subscription/
-  fa_icon: fas fa-table
+  image: /assets/img/braze_icons/table.svg
 - name: "Numéro de téléphone de l’utilisateur"
   link: /docs/user_guide/message_building_by_channel/whatsapp/user_phone_numbers/p
-  fa_icon: fa-solid fa-phone
+  image: /assets/img/braze_icons/phone-01.svg
 - name: "Créer une campagne WhatsApp"
   link: /docs/user_guide/message_building_by_channel/whatsapp/create/
-  fa_icon: fas fa-mobile-alt
+  image: /assets/img/braze_icons/phone-02.svg
 - name: "Abonnements et désabonnements"
   link: /docs/user_guide/message_building_by_channel/whatsapp/opt-ins_and_opt-outs/
-  fa_icon: fas fa-commenting
+  
 - name: "Réponses rapides"
   link: /docs/user_guide/message_building_by_channel/whatsapp/quick_replies/
-  fa_icon: fa-solid fa-comments
+  image: /assets/img/braze_icons/annotation-dots.svg
 - name: "Rapports WhatsApp"
   link: /docs/user_guide/message_building_by_channel/whatsapp/whatsapp_campaign_analytics/
-  fa_icon: fas fa-file-alt
+  image: /assets/img/braze_icons/file-06.svg
 - name: "FAQ WhatsApp"
   link: /docs/user_guide/message_building_by_channel/whatsapp/faqs/
-  fa_icon: fas fa-question
+  image: /assets/img/braze_icons/annotation-question.svg
 
 ---
 <br><br>

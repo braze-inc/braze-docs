@@ -5,7 +5,6 @@ description: "This reference article covers the Braze and Ketch integration. Ket
 alias: /partners/ketch
 page_type: partner
 search_tag: Ketch
-page_order: 4.3
 ---
 
 # Ketch

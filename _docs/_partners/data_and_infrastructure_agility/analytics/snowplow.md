@@ -1,7 +1,6 @@
 ---
 nav_title: Snowplow
 article_title: Snowplow
-page_order: 1
 description: "This reference article outlines the partnership between Braze and Snowplow, an open-source data collection platform, that allow you to forward Snowplow events to Braze through Google Tag Manager server-side tagging."
 alias: /partners/snowplow/
 page_type: partner

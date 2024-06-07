@@ -7,7 +7,7 @@ description: "Cet article de référence couvre comment utiliser les équipes Br
 
 ---
 
-# [![Cours d’apprentissage Braze]({% image_buster /assets/img/bl_icon2.png %})](https://learning.braze.com/dive-into-braze-teams/869939){: style="float:right;width:120px;border:0;" class="noimgborder"}Teams
+# [![Cours d’apprentissage Braze]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/dive-into-braze-teams/869939){: style="float:right;width:120px;border:0;" class="noimgborder"}Teams
 
 > Les administrateurs de Braze peuvent regrouper leurs utilisateurs de tableau de bord en équipes avec des rôles et autorisations différents. Les équipes peuvent être configurées en fonction de la localisation de la base de clients, de la langue et d’attributs personnalisés afin que les membres et les non-membres aient un accès différent aux fonctionnalités d’envoi de messages et aux données client. Des filtres et des balises d’équipes peuvent être attribués à différents outils d’engagement. 
 

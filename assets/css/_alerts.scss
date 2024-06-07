@@ -1,7 +1,7 @@
 div.alert {
   min-height: 70px;
-  font-size: 14px;
-  font-family: $braze-medium;
+  font-size: 15px;
+  font-family: $braze-regular;
   border-radius: 0px;
   -webkit-border-radius: 0;
   padding: 0px;
@@ -14,7 +14,7 @@ div.alert {
   background-color: $white ;
   color: $black-shark;
   b {
-    font-family: $braze-black;
+    font-family: $braze-medium;
     text-transform: capitalize;
   }
   p:first-of-type  {
@@ -22,7 +22,7 @@ div.alert {
   }
   p{
     margin-bottom: 0px !important;
-    line-height: 1.5 !important;
+    line-height: 18px !important;
     padding-left: 0px !important;
   }
   div {

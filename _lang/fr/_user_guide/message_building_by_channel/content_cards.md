@@ -13,30 +13,30 @@ guide_featured_title: "Section Articles"
 guide_featured_list:
 - name: À propos des cartes de contenu
   link: /docs/user_guide/message_building_by_channel/content_cards/about/
-  fa_icon: fas fa-check
+  image: /assets/img/braze_icons/check-square-broken.svg
 - name: Créer une carte de contenu
   link: /docs/user_guide/message_building_by_channel/content_cards/create/
-  fa_icon: fas fa-columns
+  image: /assets/img/braze_icons/columns-01.svg
 - name: Création de carte
   link: /docs/user_guide/message_building_by_channel/content_cards/create/card_creation
-  fa_icon: fas fa-envelope-circle-check
+  image: /assets/img/braze_icons/message-check-circle.svg
 - name: Détails créatifs
   link: /docs/user_guide/message_building_by_channel/content_cards/creative_details/
-  fa_icon: fas fa-paint-brush
+  image: /assets/img/braze_icons/brush-02.svg
 - name: Personnaliser
   link: /docs/user_guide/message_building_by_channel/content_cards/customize/
-  fa_icon: fas fa-cog
+  image: /assets/img/braze_icons/settings-01.svg
 - name: Test
   link: /docs/user_guide/message_building_by_channel/content_cards/testing/
-  fa_icon: fas fa-vial
+  image: /assets/img/braze_icons/beaker-02.svg
 - name: Reporting
   link: /docs/user_guide/message_building_by_channel/content_cards/reporting/
-  fa_icon: fas fa-chart-pie
+  image: /assets/img/braze_icons/pie-chart-01.svg
 - name: Migration du fil d'actualité
   link: /docs/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/
-  fa_icon: fas fa-suitcase
+  image: /assets/img/braze_icons/briefcase-01.svg
 - name: Bonnes pratiques
   link: /docs/user_guide/message_building_by_channel/content_cards/best_practices
-  fa_icon: fas fa-check-square
+  image: /assets/img/braze_icons/check-square-broken.svg
 ---
 <br><br>

@@ -300,11 +300,6 @@ hide_toc: true
   		z-index: 10;
       color: #D45F24;
   	}
-    @media (min-width: 768px) {
-      #braze_internal {
-        margin-top: 70px;
-      }
-    }
   	#braze_internal a {
   	  color: #27368F;
   	  text-decoration: none;
@@ -418,7 +413,7 @@ hide_toc: true
     });
   </script>
 
-<div id="braze_internal" ><i class="fa-solid fa-lock"></i> Interne uniquement. Ne pas partager avec les clients.</div>
+<div id="braze_internal" ><i class="/assets/img/braze_icons/lock-01.svg"></i> Interne uniquement. Ne pas partager avec les clients.</div>
 <div class="container-fluid" id="main-container">
 
       <div id="doc_div">

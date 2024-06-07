@@ -1,7 +1,7 @@
 ---
 nav_title: Dynamic Code Generation
 article_title: Punchh Dynamic Code Generation
-page_order: 5
+page_order: 2
 description: "This reference article outlines how to use Punchh dynamic code generation in Braze."
 page_type: partner
 search_tag: Partner

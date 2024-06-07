@@ -82,8 +82,8 @@ $(document).ready(function () {
     }
     var search_msg = description || content;
 
-    if (search_msg.length > 200) {
-      search_msg = search_msg.substring(0, 200);
+    if (search_msg.length > 110) {
+      search_msg = search_msg.substring(0, 110);
       search_msg += "...";
     }
     var url = item.url;
@@ -158,7 +158,7 @@ $(document).ready(function () {
     container: "#header-search-form",
     panelContainer: "#header-search-panel",
     debug: algolia_debug,
-    placeholder: "Search",
+    placeholder: "Search everything",
     plugins: [algoliaInsightsPluginHeader],
     detachedMediaQuery: 'none',
     onSubmit(e){

@@ -17,7 +17,7 @@ guide_featured_title: "Section articles"
 guide_featured_list:
   - name: Advanced Settings
     link: /docs/developer_guide/platform_integration_guides/android/push_notifications/fireos/customization/advanced_settings/
-    fa_icon: fa fa-cog
+    image: /assets/img/braze_icons/settings-01.svg
 
 
 ---

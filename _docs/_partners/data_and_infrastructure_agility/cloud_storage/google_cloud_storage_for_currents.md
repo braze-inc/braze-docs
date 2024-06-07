@@ -1,7 +1,6 @@
 ---
 nav_title: Google Cloud Storage
 article_title: Google Cloud Storage
-page_order: 2
 alias: /partners/google_cloud_storage_for_currents/
 description: "This reference article outlines the partnership between Braze and Google Cloud Storage, a massively scalable object storage for unstructured data."
 page_type: partner
@@ -32,11 +31,11 @@ This can be done using the following instructions, which will walk you through c
 
 ### Step 1: Create role
 
-Create a new role in your Google Cloud Platform Console by navigating to **IAM & admin > Roles > + Create Role**.
+Create a new role in your Google Cloud Platform Console by navigating to **IAM & admin** > **Roles** > **+ Create Role**.
 
 ![][2]
 
-Next, give the role a name, click **+Add Permissions** and add `storage.buckets.get` and `storage.objects.create`, and click **Create**.
+Next, give the role a name, select **+Add Permissions** and add the following: `storage.buckets.get`, `storage.objects.create`, and `storage.objects.get`. Then, select **Create**.
 
 Optionally, add `storage.objects.delete` permissions to allow Braze to clean up incomplete files. In rare circumstances, Google Cloud may terminate connections early, resulting in Braze writing incomplete files to Google Cloud Storage. Under normal circumstances, Braze will retry and create a new file with the correct data, leaving the old file in Google Cloud Storage.
 
@@ -44,7 +43,7 @@ Optionally, add `storage.objects.delete` permissions to allow Braze to clean up 
 
 ### Step 2: Create a service account
 
-Create a new service account in your Google Cloud Platform Console by navigating to **IAM & admin > Service Accounts** and selecting **Create Service Account**.
+Create a new service account in your Google Cloud Platform Console by navigating to **IAM & admin** > **Service Accounts** and selecting **Create Service Account**.
 
 ![][4]
 
@@ -60,7 +59,7 @@ At the bottom of the page, use the **Create Key** button to create a **JSON** pr
 
 ### Step 3: Set up Currents in Braze
 
-In Braze, navigate to **Currents > + Create Current > Google Cloud Storage Data Export** and provide your integration name and contact email.
+In Braze, navigate to **Currents** > **+ Create Current** > **Google Cloud Storage Data Export** and provide your integration name and contact email.
 
 Next, upload your JSON private key under **GCS JSON Credentials** and provide your CGS bucket name and GCS prefix (optional). 
 

@@ -10,7 +10,7 @@ channel:
 
 ---
 
-# [![Cours d’apprentissage Braze]({% image_buster /assets/img/bl_icon2.png %})](https://learning.braze.com/creating-link-templates){: style="float:right;width:120px;border:0;" class="noimgborder"}Modèles de lien
+# [![Cours d’apprentissage Braze]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/creating-link-templates){: style="float:right;width:120px;border:0;" class="noimgborder"}Modèles de lien
 
 > Les modèles de liens vous permettent d’ajouter des paramètres ou des URL à tous les liens dans un courrier électronique. Ceci est le plus souvent utilisé dans les cas suivants :
 

@@ -13,8 +13,8 @@ guide_menu_title: ""
 guide_menu_list:
   - name: E-mails renvoyés
     link: /docs/help/help_articles/email/email_bounces
-    fa_icon: fas fa-envelope-open
+    image: /assets/img/braze_icons/mail-04.svg
   - name: Dépannage du rendu HTML dans les e-mails de test 
     link: /docs/help/help_articles/email/html_looks_strange/
-    fa_icon: fas fa-code
+    image: /assets/img/braze_icons/code-02.svg
 ---

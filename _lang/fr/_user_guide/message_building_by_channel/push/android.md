@@ -15,18 +15,18 @@ guide_featured_title: "Section Articles"
 guide_featured_list:
 - name: "Canaux de notification"
   link: /docs/user_guide/message_building_by_channel/push/android/notification_channels/
-  fa_icon: fas fa-mobile-alt
+  image: /assets/img/braze_icons/phone-02.svg
 - name: "ID de notification"
   link: /docs/user_guide/message_building_by_channel/push/android/notification_ids/
-  fa_icon: fas fa-paint-brush
+  image: /assets/img/braze_icons/brush-02.svg
 - name: "Options de notification"
   link: /docs/user_guide/message_building_by_channel/push/android/notification_options/
-  fa_icon: fas fa-cog
+  image: /assets/img/braze_icons/settings-01.svg
 - name: "Notifications enrichies"
   link: /docs/user_guide/message_building_by_channel/push/android/rich_notifications/
-  fa_icon: fas fa-vial
+  image: /assets/img/braze_icons/beaker-02.svg
 - name: "Paramètres de campagne avancés"
   link: /docs/user_guide/message_building_by_channel/push/android/advanced_campaign_settings/
-  fa_icon: fas fa-chart-bar
+  image: /assets/img/braze_icons/bar-chart-01.svg
 ---
 <br><br>
