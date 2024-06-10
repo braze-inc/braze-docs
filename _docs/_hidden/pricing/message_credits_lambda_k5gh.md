@@ -423,7 +423,7 @@ Column definitions are as follows:
         <td>10</td>
         <td>Comoros</td>
         <td>0.60</td>
-        <td>6.60</td>
+        <td>6.00</td>
     </tr>
     <tr>
         <td>SMS / MMS - Global</td>
