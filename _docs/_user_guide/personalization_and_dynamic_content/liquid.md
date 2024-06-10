@@ -73,15 +73,9 @@ The following new array and math filters are available for use in your Liquid as
 
 Refer to our [Filters]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/filters/) article for definitions.
 
-## Liquid highlights
+### Liquid highlights
 
-As you build personalized messages using Liquid, refer to this table for the Liquid element and corresponding color scheme.
-
-| Liquid element   | Color  |
-|------------------|--------|
-| Attribute name   | Green  |
-| Custom attribute | Purple |
-{: .reset-td-br-1 .reset-td-br-2}
+As you build personalized messages, each Liquid element corresponds to a color, allowing you to differentiate your Liquid at-a-glance.
 
 ![]({% image_buster /assets/img/liquid_color_code.png %})
 
