@@ -75,7 +75,7 @@ Refer to our [Filters]({{site.baseurl}}/user_guide/personalization_and_dynamic_c
 
 ### Liquid highlights
 
-As you build personalized messages, each Liquid element corresponds to a color, allowing you to differentiate your Liquid at-a-glance.
+Each Liquid element corresponds to a color, allowing you to differentiate your Liquid at-a-glance as your build your personalized messages. This appears in any Liquid editor.
 
 ![]({% image_buster /assets/img/liquid_color_code.png %})
 
