@@ -8,7 +8,7 @@ description: "This article provides an overview of how to copy campaigns to diff
 tool: Campaigns
 ---
 
-# Copying across workspaces
+# Copying campaigns across workspaces
 
 > Copying campaigns across a workspace allows you to get a jumpstart on your message composition by starting with a copy of a campaign in a different workspace. This copy will remain as a draft until you edit and launch, helping you keep and build off your successful messaging strategies.
 
