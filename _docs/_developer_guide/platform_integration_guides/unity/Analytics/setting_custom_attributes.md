@@ -152,7 +152,7 @@ To set up a subscription for your users (either email or push), call the functio
 
 >  These types fall under `Appboy.Models.AppboyNotificationSubscriptionType`.
 
-## Sample code
+## Example code
 
 ### Email subscription:
 

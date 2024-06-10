@@ -30,7 +30,7 @@ braze-docs
 ページにコンテンツを追加し、必ず [Braze Docs スタイルガイドに従ってください]({{site.baseurl}}/contributing/style_guide/)。すでに YAML フロントマターがあるページにインクルードを追加する予定がある場合は、インクルードにフロントマターを追加しないでください。コンテンツは次のようになっているはずです。
 
 {% raw %}
-\`\`\`マークダウン
+\`\`\`markdown
 ## サイトジェネレーター 
 
 Braze Docsは、人気の静的サイトジェネレーター（SSG）であるJekyllを使用して構築されています。これにより、コンテンツファイルとデザインファイルをコンテンツファイル用とデザインファイル用に別々のディレクトリに保存できます。`_docs` `assets`サイトを構築すると、Jekyllは各ファイルをインテリジェントにマージし、XMLおよびHTMLデータとしてディレクトリに保存します。`_site`詳細については、「[Jekyll ディレクトリ構造](https://jekyllrb.com/docs/structure/)」を参照してください。
@@ -78,7 +78,7 @@ braze-docs
 {% tabs local %}
 {% tab example input %}
 {% raw %}
-\`\`\`マークダウン
+\`\`\`markdown
 # ページ
 
 > Braze Docs でページを作成、変更、削除する方法をご覧ください。

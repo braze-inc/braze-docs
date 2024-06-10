@@ -9,7 +9,7 @@ page_order: 3
 
 > ドラッグアンドドロップによる編集操作は、次の 2 つのセクションに分かれています。**ビルド**、**プレビュー、テスト**。この記事では、エディターの [**ビルド**] タブで作業するために知っておくべきことを説明し、[アプリ内メッセージをすでに作成していることを前提としています]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/create/)。
 
-(+{% image_buster /assets/img_archive/dnd_iam_message_styles.png %})
+![\]({% image_buster /assets/img_archive/dnd_iam_message_styles.png %}){: style="float:right;max-width:25%;margin-left:15px;max-width:30%"}
 
 ## メッセージレベルのスタイル
 

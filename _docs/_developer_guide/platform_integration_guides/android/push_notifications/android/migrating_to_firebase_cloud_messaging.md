@@ -103,7 +103,9 @@ Creating a new key will not remove your legacy ones. If you accidentally delete 
 
 ![The selected service account with the "Add Key" menu open.]({% image_buster /assets/img/android/push_integration/generate_json_credentials/select-create-new-key.png %})
 
-Choose **JSON**, then select **Create**.
+Choose **JSON**, then select **Create**. If you created your service account using a different Google Cloud project ID than your FCM project ID, you'll need to manually update the value assigned to the `project_id` in your JSON file.
+
+Be sure to remember where you downloaded the key&#8212;you'll need it in the next step.
 
 ![The form for creating a private key with "JSON" selected.]({% image_buster /assets/img/android/push_integration/generate_json_credentials/select-create.png %}){: style="max-width:65%;"}
 
@@ -149,13 +151,17 @@ If you delete your new credentials, you cannot restore them later. You'll need t
 
 ## Frequently Asked Questions (FAQ) {#faq}
 
-### How do I know if my new credentials are working?
+### How do I know my new credentials are working?
 
-If you are able to send an Android push to this app (via Test Send, or an actual campaign/Canvas send) then your credentials are working.
+Your new credentials start working as soon as you upload them to Braze. To test them, select **Test Credentials**. If you get an error, you can always [revert your credentials](#reverting-your-credentials).
 
-### Android Push isn't sending for my app after uploading these new credentials
+### Do I need to migrate to FCM for my unused apps or development apps?
 
-Use the **Revert Credentials** button to delete your newly uploaded credentials and revert to your legacy credentials. This button will only be visible if you had legacy credentials prior to uploading the new service account credentials.
+No. However, your unused apps and development apps will continue to show a warning message asking you to migrate. To remove this message, you can either upload new credentials, or delete these apps from your workspace. If you choose to delete these apps, be sure to check with your team first in case someone is using them.
+
+### Where can I check error messages?
+
+You can review push notification errors in your [message activity log]({{site.baseurl}}/user_guide/administrative/app_settings/message_activity_log_tab/).
 
 ### Before migrating, do I need to update my app or SDK?
 
@@ -173,10 +179,6 @@ You'll continue to see this warning message if there's at least one Android app 
 
 After migrating, you can start sending push notifications using your new credentials right away.
 
-### How can I see more details on error messages or failures?
+### What if I created my service account using a different project than my FCM project?
 
-Errors will be logged in the [Message Activity Log]({{site.baseurl}}/user_guide/administrative/app_settings/message_activity_log_tab/) with details on any push failure.
-
-### Which credentials are used if I have both Legacy and new Service Account credentials?
-
-Once new Service Account credentials are uploaded, those will be used immediately. Legacy credentials will only be used if you delete the new credentials using the **Revert Credentials** button.
+If you created your service account using a different Google Cloud project ID than your FCM project ID, you'll need to manually update the value assigned to the `project_id` in your JSON file after you [create a new one](#step-6-generate-json-credentials).

@@ -40,8 +40,8 @@ Content Cardsゲームオブジェクトのコールバックで受信した`str
 ##### コンテンツカードのコールバック例
 
 \`\`\`csharp
-void ExampleCallback(文字列メッセージ) { { {.
-  を試す。
+void ExampleCallback(string message) {
+  try {
     JSONClass json = (JSONClass)JSON.Parse(message)；
 
     // Content Card data is contained in the `mContentCards` field of the top level object.
@@ -64,7 +64,7 @@ void ExampleCallback(文字列メッセージ) { { {.
         }
       }
     }
-  をキャッチする。
+  } catch {
     throw new ArgumentException("Could not parse content card JSON message.")；
   ()
 }

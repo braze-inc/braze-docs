@@ -27,7 +27,7 @@ channel:
 
 すべての国際番号は、 で `+`始まり、その後に国番号、電話番号が続く必要があります。(例 `+442071838750`)
 
-![][写真]{: style="max-width:50%;border: 0;"}
+![][picture]{: style="max-width:50%;border: 0;"}
 
 ただし、国番号や市外局番が異なる複数の地域に送信する場合の正確性を確保するために、米国を拠点とする電話番号であっても、この `E.164` 形式を使用することをお勧めします。
 
@@ -48,7 +48,7 @@ channel:
 
 電話番号が無効と判断された場合、Brazeはユーザーの電話番号を無効としてマークし、その電話番号にそれ以上の通信を送信しようとしません。無効な電話番号は、ユーザー プロファイルの **[エンゲージメント] タブ** にマークされます。
 
-![][写真2]{: style="max-width:50%;border: 0;"}
+![][picture2]{: style="max-width:50%;border: 0;"}
 
 電話番号は、次の理由で無効と見なされます。
 - **プロバイダーエラー**:SMSプロバイダーから永続的なエラーを受信しました。これは、指定された電話番号の形式が正しくないか、SMSメッセージを永続的に受信できないことを示しています。
@@ -68,5 +68,5 @@ Brazeは、無効な番号を取得するためにサードパーティのツー
 
 [1]: {{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_subscription_group/
 [2]: {{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/#step-4-add-filters-to-your-segment
-[写真]: {% image_buster /assets/img/sms/e164.png %}
-[写真2]: {% image_buster /assets/img/sms/invalid_banner.png %}
+[picture]: {% image_buster /assets/img/sms/e164.png %}
+[picture2]: {% image_buster /assets/img/sms/invalid_banner.png %}

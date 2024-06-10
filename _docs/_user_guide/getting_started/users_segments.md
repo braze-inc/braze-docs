@@ -122,7 +122,7 @@ Tips for working with segments:
 - You’re not limited to using one filter at a time. Create finely tuned, granular segments by layering multiple filters on top of each other.
 - You can use the actions or inactions of your users to understand how to reach your users where they want to engage with you. These actions might be custom events, engagement with an existing campaign or Canvas, or even a specific message within a Canvas.
 
-### Example
+### Use case
 
 Suppose you run an online clothing store, and you've set up a messaging flow to send a series of emails to users who have added an item to their cart but have not completed the purchase. This abandoned cart flow might include an initial reminder email, a follow-up email offering a discount, and a final reminder email.
 

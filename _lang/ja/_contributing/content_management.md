@@ -39,7 +39,7 @@ Braze Docsは、コンテンツファイルとデザインファイルを別々�
 
 Braze Docsの各ページはマークダウン構文で記述され、ファイル拡張子を使用してマークダウンファイルとして保存されます。`.md`各Markdownファイルの上部では、YAMLフロントマターを使用して各ページに非表示のメタデータを追加します。
 
-\`\`\`マークダウン
+\`\`\`markdown
 ---
 METADATA\_KEY:METADATA\_VALUE
 ---
@@ -58,7 +58,7 @@ METADATA\_KEY:METADATA\_VALUE
 
 {% tabs local %}
 {% tab example input %}
-\`\`\`マークダウン
+\`\`\`markdown
 ---
 nav_title: Braze ドキュメントへの貢献
 記事:Braze ドキュメントへの貢献
@@ -196,7 +196,7 @@ braze-docs
 
 {% tabs local %}
 {% tab example input %}
-\`\`\`マークダウン
+\`\`\`markdown
 ---
 page_order: 0
 nav_title: ホーム
@@ -240,7 +240,7 @@ braze-docs
 
 {% tabs local %}
 {% tab example input %}
-\`\`\`マークダウン
+\`\`\`markdown
 ---
 nav_title: サブセクション A
 page_order: 0
@@ -258,7 +258,7 @@ config_only: true
 
 {% tabs local %}
 {% tab example input %}
-\`\`\`マークダウン
+\`\`\`markdown
 ---
 nav_title: サブセクション B
 page_order: 0
@@ -294,7 +294,7 @@ Jekyllには、タグを使用して書かれたコンテンツをドキュメ�
 {% tabs local %}
 {% tab example input %}
 {% raw %}
-\`\`\`マークダウン
+\`\`\`markdown
 # ページ
 
 > Braze Docs でページを作成、変更、削除する方法をご覧ください。
@@ -317,7 +317,7 @@ Jekyllには、タグを使用して書かれたコンテンツをドキュメ�
 
 デフォルトでは、`default.html` `_layouts` Jekyllはディレクトリ内のレイアウトを使用してBraze Docsの各ページを作成します。ただし、YAML `layout:` フロントマターのキーにレイアウトを割り当てることで、さまざまなレイアウトを使用できます。
 
-\`\`\`マークダウン
+\`\`\`markdown
 ---
 layout: レイアウト値
 ---
@@ -337,7 +337,7 @@ braze-docs
 
 **ページ内メタデータ**
 
-\`\`\`マークダウン
+\`\`\`markdown
 ---
 layout: page
 ---
@@ -386,7 +386,7 @@ braze-docs
 
 **ランディングページの例**
 
-\`\`\`マークダウン
+\`\`\`markdown
 ---
 nav_title: サブセクション A
 page_order: 1
@@ -407,7 +407,7 @@ Page B URL: https://www.braze.com/docs/primary_section/subsection_a/page_b
 {% tab subsection b %}
 **ランディングページの例**
 
-\`\`\`マークダウン
+\`\`\`markdown
 ---
 nav_title: サブセクション B
 page_order: 2 

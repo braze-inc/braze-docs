@@ -669,12 +669,12 @@ BrazePlugin.subscribeToFeatureFlagUpdates((featureFlags) => {
 // ストリームサブスクリプションを作成
 ストリームサブスクリプション機能はストリームサブスクリプションにフラグを付けます。
 
-機能フラグストリーム購読 = Braze.SubscribetoFeature Flags ((機能フラグ) {
-  print (「機能フラグが更新されました」);
-()
+featureFlagsStreamSubscription = braze.subscribeToFeatureFlags((featureFlags) {
+  print("Feature flags were updated");
+});
 
 // ストリームのサブスクリプションをキャンセル
-機能フラグストリームサブスクリプション。cancel ();
+featureFlagsStreamSubscription.cancel();
 \`\`\`
 
 次に、iOS ネイティブレイヤーでもこれらの変更を行います。Android レイヤーでは追加の手順は必要ないことに注意してください。
@@ -695,27 +695,27 @@ m.BrazeTask.ObserveField("BrazeFeatureFlags", "onFeatureFlagChanges")
 
 {% tab React Hook %}
 \`\`\`typescript
-「リアクト」から {useEffect, useState} をインポートします。
-インポート
+import { useEffect, useState } from "react";
+import {
   フィーチャーフラグ、
   機能フラグを取得、
   購読を削除、
   機能フラグの更新を購読し、
 }」@braze /web-sdk「から;
 
-エクスポート定数使用機能フラグ = (id: 文字列):機能フラグ => {
-  const [機能フラグ、機能フラグを設定] = 使用状態 (<FeatureFlag>
-    機能フラグ (ID) を取得
+export const useFeatureFlag = (id: string):FeatureFlag => {
+  const [featureFlag, setFeatureFlag] = useState<FeatureFlag>(
+    getFeatureFlag(id)
   );
 
   useEffect(() => {
-    const リスナー = 機能フラグの更新を購読する (() => {
-      機能フラグの設定 (機能フラグ (ID) を取得);
+    const listener = subscribeToFeatureFlagsUpdates(() => {
+      setFeatureFlag(getFeatureFlag(id));
+    });
+    return () => {
+      removeSubscription(listener);
     ()
-    return
-      購読を削除 (リスナー);
-    ()
-  - id:
+  }, [id]);
 
   リターン機能フラグ;
 ()

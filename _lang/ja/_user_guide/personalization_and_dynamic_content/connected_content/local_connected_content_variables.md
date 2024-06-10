@@ -70,7 +70,7 @@ URLの後に`:save your_variable_name`を指定して、データを別のもの
 {% connected_content https://www.metaweather.com/api/location/search/?query={{custom_attribute.${customCity}}} :save locationjson %}
 {% connected_content https://www.metaweather.com/api/location/{{locationjson[0].woeid}}/ :save localweather %}
 
-{{{localweather.consolidated\_weather[0].weather\_state\_name}} = 'Rain' %} の場合は%%
+{% if {{localweather.consolidated\_weather[0].weather\_state\_name}} == 'Rain' %}
 雨が降っています！傘を握ろう！
 {% elsif {{localweather.consolidated\_weather[0].weather\_state\_name}} == 'Clouds' %}
 日焼け止め不要:)
@@ -142,7 +142,7 @@ https://example.com/api/endpoint
 :headers {
 "Content-Type": "application/json"
 }
-    : 本文{{postbody}}
+    :body {{postbody}}
     結果保存
     %}
       \`\`\`

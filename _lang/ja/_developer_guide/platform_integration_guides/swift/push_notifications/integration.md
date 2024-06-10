@@ -257,25 +257,25 @@ func userNotificationCenter(_ center: UNUserNotificationCenter,
 アプリケーションの `application:didReceiveRemoteNotification:fetchCompletionHandler:` メソッドに次のコードを追加します。
 
 \`\`\`objc
-BOOL 処理済みBraze = AppDelegate.braze != nil && [AppDelegate.braze.notifications handleBackgroundNotificationWithUserInfo:userInfo
+BOOL processedByBraze = AppDelegate.braze != nil && [AppDelegate.braze.notifications handleBackgroundNotificationWithUserInfo:userInfo
                                                                                                        fetchCompletionHandler:completionHandler];
-  if (処理済みByBraze) {
+  if (processedByBraze) {
 return
 ()
 
-完了ハンドラー(UIBackgroundFetchResultNoData);
+completionHandler(UIBackgroundFetchResultNoData);
 \`\`\`
 
 次に、アプリの `(void)userNotificationCenter:didReceiveNotificationResponse:withCompletionHandler:` メソッドに次のコードを追加します。
 
 \`\`\`objc
-BOOL 処理済みBraze = AppDelegate.braze != nil && [AppDelegate.braze.notifications handleUserNotificationWithResponse:response
+BOOL processedByBraze = AppDelegate.braze != nil && [AppDelegate.braze.notifications handleUserNotificationWithResponse:response
                                                                                                   withCompletionHandler:completionHandler];
-  if (処理済みByBraze) {
+  if (processedByBraze) {
 return
 ()
 
-完了ハンドラ();
+completionHandler();
 \`\`\`
 
 **フォアグラウンドでのプッシュ通知処理**

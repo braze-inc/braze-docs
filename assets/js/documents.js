@@ -204,18 +204,12 @@ $(document).ready(function() {
           hash = window.location.pathname + '/' + hash;
         }
       }
-      // else {
-      //   if (typeof (appboy) !== 'undefined') {
-      //     appboy.logCustomEvent("Documentations Page Scrolling", {"URL": window.location.pathname,"Anchor": hash});
-      //   }
-      // }
+
       window.history.replaceState(null, null, hash);
-        var tcol = $('#toc_col'); //.scrollTop('#toc_' + hash, 200);
-        // scroll left nav also
-        tcol.scrollTop($('#toc_' + active_toc.substring(1)).offset().top - $('#toc').offset().top - 10);
+      var tcol = $('#toc_col'); //.scrollTop('#toc_' + hash, 200);
+      // scroll left nav also
+      tcol.scrollTop($('#toc_' + active_toc.substring(1)).offset().top - $('#toc').offset().top - 10);
     });
-
-
 
     // Add smooth scrolling on all links inside the navbar
     $("#toc a").on('click', function(event) {
@@ -244,53 +238,10 @@ $(document).ready(function() {
     //$('#toc_col').addClass('notoc');
 
   }
-  var y_last = 0;
   //var nav_bottom_height = $('#nav_bottom').height();
   var scrollHandler = function() {
     var query_str = window.location.search;
     var y_cord = $(this).scrollTop();
-    var bzheader_height = $('#braze_header').height();
-    // var scroll_dir = 'down';
-    // if (y_last > y_cord) {
-    //   scroll_dir = 'up'
-    // }
-
-    // Scrolled pass banner, adjust status monitor status
-    if (y_cord > (bzheader_height * 1/3)) {
-      $('#braze_banner').hide();
-      $('#header_nav').addClass('scrollnav');
-      $('#nav_bar' ).addClass('scrollnav');
-      $('#contentcards' ).addClass('scrollnav');
-      $('#main_content' ).addClass('scrollnav');
-      $('#toc_col' ).addClass('scrollnav');
-      if (y_cord > (bzheader_height * 5/6)) {
-        $('#toc_col' ).addClass('scrollbottom');
-      }
-      else {
-        $('#braze_banner').show();
-        $('#toc_col' ).removeClass('scrollbottom');
-      }
-      //$('#nav_bottom').height(nav_bottom_height);
-    } else {
-      $('#header_nav').removeClass('scrollnav');
-      $('#nav_bar' ).removeClass('scrollnav');
-      $('#contentcards' ).removeClass('scrollnav');
-      $('#main_content' ).removeClass('scrollnav');
-      $('#toc_col' ).removeClass('scrollnav');
-      $('#toc_col' ).removeClass('scrollbottom');
-
-      //$('#nav_bottom').height($('#nav_bottom').height() + delta_scroll);
-
-      if ($('#toc nav').length) {
-        if (window.location.pathname.substr(-1) != '/')  {
-          window.history.replaceState(null, null, window.location.pathname + '/' + query_str);
-        }
-        else {
-          window.history.replaceState(null, null, window.location.pathname + query_str);
-        }
-      }
-    }
-    y_last = y_cord;
   };
   scrollHandler();
   $(window).scroll(scrollHandler);
@@ -563,71 +514,16 @@ $(document).ready(function() {
     let lang = this.value;
     let path = window.location.pathname;
     let query_str = window.location.search;
-
-    switch (page_language) {
-      // if current page is english, process jp on the same page, or redirect to different language
-      case 'en':
-        switch(lang) {
-          case 'ja':
-          case 'en':
-            let wovn_lang = WOVN.io.getCurrentLang();
-            let wovn_lang_code = wovn_lang['code'] || 'en';
-            $('.lang-select').each(function(ind) {
-              $(this).val(lang).prop('selected', true);
-            });
-            if (wovn_lang != wovn_lang_code) {
-              WOVN.io.changeLang(lang);
-            }
-          break;
-          default:
-            window.location.href = path.replace(/\/docs\/?/,`\/docs\/${lang}\/`) + replaceParams(query_str,{'wovn': ''});
-          break;
-        }
-        break;
-      // if curent page is not english, then check if it needs to be sent to japanese site otherwise just english
-      default:
-        let lang_re = new RegExp(`\/docs\/${page_language}\/?`);
-        switch(lang) {
-          case 'ja':
-            window.location.href = path.replace(lang_re,`\/docs\/`) + replaceParams(query_str + '&wovn=ja' ,{'wovn': 'ja'});
-          break;
-          case 'en':
-            window.location.href = path.replace(lang_re,`\/docs\/`) + replaceParams(query_str,{'wovn': ''});
-          break;
-          default:
-            window.location.href = path.replace(lang_re,`\/docs\/${lang}\/`) + replaceParams(query_str,{'wovn': ''});
-          break;
-        }
-
-      break;
+    let path_lang = (path.split('/') || [])[2];
+    let lang_re = new RegExp(`\/docs\/?`);
+    // if url has a 2 char language identifier, replace the identifier
+    if (path_lang == page_language){
+      lang_re = new RegExp(`\/docs\/${page_language}\/?`);
     }
-
+    window.location.href = path.replace(lang_re,`\/docs\/${lang}\/`);
   });
 
-  window.addEventListener('wovnApiReady', function(evt){
-    // only run wovn if current language is english
-    if (page_language == 'en') {
-      let wovn_lang = WOVN.io.getCurrentLang();
-      let wovn_lang_code = wovn_lang['code'] || 'en';
-      $('.lang-select').each(function(ind) {
-        let $this = $(this);
-        let current_lang = $this.val();
-        if ((current_lang != wovn_lang_code) && (wovn_lang_code == 'ja')) {
-          $this.val(wovn_lang_code).prop('selected', true);
-        }
-      });
-    }
+  $('.lang-select').each(function(ind) {
+    $(this).val(page_language).prop('selected', true);
   });
-
-  // For non us/jp language update language dropdown
-  switch (page_language) {
-    case 'en':
-    case 'ja':
-      break;
-    default:
-      $('.lang-select').each(function(ind) {
-        $(this).val(page_language).prop('selected', true);
-      });
-    break;
-  }
 });

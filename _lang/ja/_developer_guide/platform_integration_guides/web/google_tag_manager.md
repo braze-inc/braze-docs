@@ -232,25 +232,25 @@ Google タグ マネージャーの統合で、Braze 初期化タグに移動し
 ![Web SDK ログ記録を有効にするオプションがオンになっている Braze 初期化タグの概要ページ。][gtm-verbose-logging]
 
 [2]: https://support.google.com/tagmanager/answer/6103696
-[gtm コミュニティ ギャラリー検索]: {% image_buster /assets/img/web-gtm/gtm-community-gallery-search.png %}
-[gtm初期化タグ]: {% image_buster /assets/img/web-gtm/gtm-initialization-tag.png %}
-[gtmアクションタグ]: {% image_buster /assets/img/web-gtm/gtm-actions-tag.png %}
+[gtm-community-gallery-search]: {% image_buster /assets/img/web-gtm/gtm-community-gallery-search.png %}
+[gtm-initialization-tag]: {% image_buster /assets/img/web-gtm/gtm-initialization-tag.png %}
+[gtm-actions-tag]: {% image_buster /assets/img/web-gtm/gtm-actions-tag.png %}
 [6]: {{ site.baseurl }}/user_guide/administrative/app_settings/manage_app_group/app_group_management/#app-group-management
 [7]: {{ site.baseurl }}/developer_guide/platform_integration_guides/web/initial_sdk_setup/#step-2-initialize-braze
-[gtm-ユーザー変更]: {% image_buster /assets/img/web-gtm/gtm-change-user.png %}
-[gtm-カスタムイベント]: {% image_buster /assets/img/web-gtm/gtm-custom-event.png %}
-[gtm-購入]: {% image_buster /assets/img/web-gtm/gtm-purchase.png %}
-[gtm タグのデバッグ]: {% image_buster /assets/img/web-gtm/gtm-tag-debugging.png %}
-[gtmタグデバッグモード]: {% image_buster /assets/img/web-gtm/gtm-debug-mode.png %}
+[gtm-change-user]: {% image_buster /assets/img/web-gtm/gtm-change-user.png %}
+[gtm-custom-event]: {% image_buster /assets/img/web-gtm/gtm-custom-event.png %}
+[gtm-purchase]: {% image_buster /assets/img/web-gtm/gtm-purchase.png %}
+[gtm-tag-debugging]: {% image_buster /assets/img/web-gtm/gtm-tag-debugging.png %}
+[gtm-tag-debug-mode]: {% image_buster /assets/img/web-gtm/gtm-debug-mode.png %}
 [14]: https://support.google.com/tagmanager/answer/6107056
 [15]: https://tagmanager.google.com/gallery/#/?filter=braze
 [16]: https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.user.html
-[gtm アップデートが利用可能]: {% image_buster /assets/img/web-gtm/gtm-update-available.png %}
+[gtm-update-available]: {% image_buster /assets/img/web-gtm/gtm-update-available.png %}
 [gtm-accept-update]: {% image_buster /assets/img/web-gtm/gtm-accept-update.png %}
-[gtmバージョン番号]: {% image_buster /assets/img/web-gtm/gtm-version-number.png %}
+[gtm-version-number]: {% image_buster /assets/img/web-gtm/gtm-version-number.png %}
 [changelog]: https://github.com/braze-inc/braze-web-sdk/blob/master/CHANGELOG.md
 [gtm-debugging-tool]: https://support.google.com/tagmanager/answer/6107056?hl=en
 [ecommerce]: https://developers.google.com/analytics/devguides/collection/ga4/ecommerce?client_type=gtm
 [log-purchase]: https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#logpurchase
-[gtm-詳細ログ]: {% image_buster /assets/img/web-gtm/gtm_verbose_logging.png %}
-[gtm コンテンツ カード]: {% image_buster /assets/img/web-gtm/gtm_content_cards.png %}
+[gtm-verbose-logging]: {% image_buster /assets/img/web-gtm/gtm_verbose_logging.png %}
+[gtm-content-cards]: {% image_buster /assets/img/web-gtm/gtm_content_cards.png %}

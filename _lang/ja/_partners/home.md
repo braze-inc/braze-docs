@@ -8,9 +8,9 @@ search_tag: Partner
 partner_api: "https://www.braze.com/api/v1/partners"
 partner_path: "https://www.braze.com/product/alloys/partners/"
 
-partner_top_header: "Technology Partners"
-partner_top_text: "Welcome to our list of Alloys (our allies - our best buds - our partners)! Use it to explore the technical documentation that will help implement Technology Partners into your Braze SDK. <br> <br>  If you're looking for information on joining our Firebrands, a community of movers and shakers using Braze to modernize their customer experience and marketing, check out our information page <a href='https://brazefirebrands.splashthat.com/'>here</a>."
-description: "このランディング ページには、すべての Braze パートナーが含まれます。これを使用して、テクノロジー パートナーを Braze SDK に実装するのに役立つ技術ドキュメントを調べます。"
+partner_top_header: "テクノロジーパートナー"
+partner_top_text: "Alloys（盟友、親友、パートナー）のリストへようこそ！テクノロジーパートナーの Braze SDK への実装に役立つ技術ドキュメントを検索するのにご利用ください。<br> <br> Braze を使用して顧客体験とマーケティングを近代化する有力者のコミュニティである Firebrands への参加に関する情報をお探しの場合は、情報ページ<a href='https://brazefirebrands.splashthat.com/'>こちら</a> をご覧ください。"
+description: "このランディングページには、すべての Braze パートナーが含まれています。テクノロジーパートナーを Braze SDK に実装するのに役立つ技術文書を検索するのにご利用ください。"
 
 valid_partner_list:
 - name: Jampp
@@ -99,7 +99,7 @@ valid_partner_list:
   url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/mParticle/mparticle_for_currents/
 - name: Tealium
   url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/tealium/
-- name: RudderStack
+- name: Rudderstack
   url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/rudderstack/
 - name: Census
   url: /docs/partners/data_and_infrastructure_agility/workflow_automation/census/
@@ -113,13 +113,13 @@ valid_partner_list:
   url: /docs/partners/message_personalization/dynamic_content/playable/
 - name: Movable Ink
   url: /docs/partners/message_personalization/dynamic_content/movable_ink/
-- name: Liftigniter
+- name: LiftIgniter
   url: /docs/partners/message_personalization/dynamic_content/liftigniter/
 - name: Transifex
   url: /docs/partners/message_personalization/localization/transifex/
 - name: Crowdin
   url: /docs/partners/message_personalization/localization/crowdin/
-- name: Accuweather
+- name: AccuWeather
   url: /docs/partners/message_personalization/location/accuweather/
 - name: Foursquare
   url: /docs/partners/message_personalization/location/foursquare/
@@ -289,6 +289,8 @@ valid_partner_list:
   url: /docs/partners/message_orchestration/channel_extensions/surveys/typeform/
 - name: Scuba
   url: /docs/partners/data_and_infrastructure_agility/analytics/scuba/
+- name: Celebrus
+  url: /docs/partners/data_and_infrastructure_agility/analytics/celebrus/
 - name: Friendbuy
   url: /docs/partners/message_orchestration/channel_extensions/loyalty/friendbuy/
 - name: Alpaco
@@ -297,4 +299,6 @@ valid_partner_list:
   url: /docs/partners/message_personalization/dynamic_content/niftyimages
 - name: MetaRouter
   url: /docs/partners/data_and_infrastructure_agility/workflow_automation/metarouter/
+- name: トレジャーデータ
+  url: /docs/partners/data_and_infrastructure_agility/cohort_import/treasuredata/
 ---

@@ -63,7 +63,7 @@ platform:
 アプリコードでは、 Braze 機能フラグが有効になっている場合、**Start Live Chat** ボタンのみが表示されます。
 
 \`\`\`javascript
-"react"から{useState} をインポートします。
+import {useState} from "react";
 import * as braze from "@braze/web-sdk";
 
 // Braze SDK から初期値を取得する
@@ -74,13 +74,13 @@ const [liveChatEnabled, setLiveChatEnabled] = useState(featureFlag.enabled);
 braze.subscribeToFeatureFlagsUpdates(() => {
     const newValue = braze.getFeatureFlag("enable\_live\_chat").enabled;
     setLiveChatEnabled(newValue);
-()
+});
 
 // Braze SDK が有効になっていると判断した場合のみ、Live Chat を表示します
-return
+return (<>
   お困りの場合<button>私たちのチームにメールを送る</button>
-  {liveChatEnabled && <button>Live Chat を開始</button>}
-()
+  {liveChatEnabled && <button>Start Live Chat</button>}
+</>)
 
 \`\`\`
 
@@ -100,7 +100,7 @@ return
 
 \`\`\`javascript
 import * as braze from "@braze/web-sdk";
-"react"から{useState} をインポートします。
+import {useState} from "react";
 
 const featureFlag = braze.getFeatureFlag("navigation\_promo\_link");
 // Check if the feature flag is enabled
@@ -110,14 +110,14 @@ const [promoLink, setPromoLink] = useState(featureFlag.getStringProperty("link")
 // "text"プロパティを読む
 const [promoText, setPromoText] = useState(featureFlag.getStringProperty("text"));
 
-return
+return (<>
   <div>
     <a href="/">ホーム</a>
     { promoEnabled && <a href={promoLink}>{promoText}</a> }
     <a href="/products">products</a>
     <a href="/categories">分類
   </div>
-()
+&lt;/>)
 ```
 
 さて、感謝祭の前日、私たちはBrazeダッシュボードでこれらのプロパティ値を変更しなければなりません。

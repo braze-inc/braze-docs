@@ -505,7 +505,7 @@ Shopify ストア
 },
  "ディスカウントコード"：「30\_DOLLARS\_OFF」、
  "合計金額"："398.00",
- 「行項目」: [
+ "line\_items": [
         {
    "price": "199.00",
    "properties": {},      
@@ -564,7 +564,7 @@ Shopify ストア
    "order\_status\_url": "https://apple.myshopify.com/690933842/orders/123456abcd/authenticate?key=abcdefg",
      "注文番号"：2.3.
        「キャンセル日時」:「2020-09-10T18:53:45-04:00」、
-       "配送"： [
+       "shipping": [
             {
        "title": "Standard",
        "price": "10.00"
@@ -647,7 +647,7 @@ Shopify ストア
 "fulfillment_status": "fulfilled"
 }
        
-       "配送"： [
+       "shipping": [
             {
        "title": "Standard",
        "price": "0.00"
@@ -656,14 +656,14 @@ Shopify ストア
      "合計金額"：2.3.
    「確認済み」：true、
    「合計割引」:2.3.
-   "割引コード"： []、
+   "discount\_codes": [],
    "注文番号"：2.3.
    "order\_status\_url": "https://test-store.myshopify.com/",
    "cancelled\_at": null、
    タグ:
    "closed\_at": null、
  "fulfillment\_status": "一部",
-「フルフィルメント」: [
+"fulfillments": [
 {
 "shipment_status": null,
 "status": "success",
@@ -701,13 +701,13 @@ Shopify ストア
 {% endsubtab %}
 {% subtab Fulfilled Order %}
 ```json
- 
+ {
    "名前": "shopify\_fulfilled\_order",
    時刻「2022-05-23T14:44:34-04:00」、
-   プロパティ:
+   "properties": {
    「注文ID」:4444668657855、
-   「行項目」: [
-   
+   "line\_items": [
+   {
  数量1,
 PRODUCT\_ID6143032066239、
 "SKU": null、
@@ -723,7 +723,7 @@ PRODUCT\_ID6143032066239、
        "fulfillment_status": "fulfilled"
      }
    
-   "配送"： [
+   "shipping": [
         {
        "title": "Standard",
        "price": "0.00"
@@ -732,14 +732,14 @@ PRODUCT\_ID6143032066239、
    "合計金額"：2.3.
    「確認済み」：true、
    「合計割引」:2.3.
-   "割引コード"： []、
+   "discount\_codes": [],
    "注文番号"：2.3.
    "order\_status\_url": "https://test-store.myshopify.com/",
    "cancelled\_at": null、
    タグ:
    「閉店時間」:「2022-05-23T14:44:34-04:00」、
      "fulfillment\_status": "履行済み",
-       「フルフィルメント」: [
+       "fulfillments": [
        {
 "shipment_status": null,
 "status": "success",
@@ -796,7 +796,7 @@ PRODUCT\_ID6143032066239、
 "fulfillment_status": null
 }
  
- "配送"： [
+ "shipping": [
      {
        "title": "Standard",
        "price": "0.00"
@@ -805,14 +805,14 @@ PRODUCT\_ID6143032066239、
 "合計金額"：2.3.
  「確認済み」：true、
  「合計割引」:2.3.
- "割引コード"： []、
+ "discount\_codes": [],
    "注文番号"：2.3.
    "order\_status\_url": "https://test-store.myshopify.com/",
      「キャンセル日時」:「2022-05-23T14:40:52-04:00」、
        タグ:
        「閉店時間」:「2022-05-23T14:40:51-04:00」、
        「履行ステータス」: null、
-       「フルフィルメント」: []
+       "fulfillments": []
        
        "braze\_id":「123abc123abc」
        

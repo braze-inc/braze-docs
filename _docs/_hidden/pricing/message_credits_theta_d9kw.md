@@ -11,7 +11,7 @@ hide_toc: true
 > Message Credits is Braze’s cross-channel packaging structure for our native SMS, MMS, and WhatsApp offerings. We use Message Credits to provide a flexible and transparent experience when taking advantage of Braze messaging channels. You may use the allotment of credits purchased across any of the channels presented in the table on this page.
 
 {% alert note %}
-Different channels will have different units of measure for what defines a credit consumed.<br><br>
+Different channels will have different units of measure in reporting.<br><br>
 <b>WhatsApp:</b> Conversations<br>
 <b>SMS:</b> Segments<br>
 <b>MMS:</b> Segments<br><br>
@@ -28,7 +28,7 @@ Column definitions are as follows:
 | **Channel Credit Ratio** | Baseline credit amount for each channel |
 | **Destination** | Specific final region, country, or type of message being sent through the Braze platform |
 | **Multiplier** | Scaler to the Channel Credit Ratio, depending on pricing of the specific destination |
-| **Credits Consumed with One Message** | Exact number of Message Credits used to send one message<br> (credits consumed with one message = channel credit ratio x destination multiplier)  |
+| **Credits per Message** | Exact number of Message Credits used to send one message<br> (credits per message = channel credit ratio x destination multiplier) |
 {: .reset-td-br-1 .reset-td-br-2}
 
 
@@ -45,7 +45,7 @@ Column definitions are as follows:
         <th><b>Channel Credit Ratio</b></th>
         <th><b>Destination</b></th>
         <th><b>Multiplier</b></th>
-        <th class="credits-column"><b>Credits Consumed with One Message</b></th>
+        <th class="credits-column"><b>Credits per Message</b></th>
     </tr>
     <tbody><tr>
     <td>SMS - US / CA</td>

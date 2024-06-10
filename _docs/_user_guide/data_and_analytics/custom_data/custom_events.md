@@ -131,7 +131,7 @@ Property values can be any of the following data types:
 | Data Type | Description |
 | --- | --- |
 | Numbers | As either [integers](https://en.wikipedia.org/wiki/Integer) or [floats](https://en.wikipedia.org/wiki/Floating-point_arithmetic) |
-| Booleans |  |
+| Booleans | |
 | Datetimes | Formatted as strings in [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) or `yyyy-MM-dd'T'HH:mm:ss:SSSZ` format. Not supported within arrays. |
 | Strings | 255 characters or fewer. |
 | Arrays | Arrays cannot include datetimes. |
@@ -214,8 +214,23 @@ For in-app message channels specifically, `canvas_entry_properties` can only be 
 
 For Canvas Flow messaging, `canvas_entry_properties` can be used in Liquid in any Message step. Use this Liquid when referencing these properties: ``{% raw %} canvas_entry_properties.${property_name} {% endraw %}``. Note that the events must be custom events or purchase events to be used this way. 
 
+#### Use case
+
 {% raw %}
-For example, consider the following request: `\"canvas_entry_properties\" : {\"product_name\" : \"shoes\", \"product_price\" : 79.99}`. You could add the word "shoes" to a message with the Liquid `{{canvas_entry_properties.${product_name}}}`.
+Consider the following request for RetailApp, a retail store: `\"canvas_entry_properties\" : {\"product_name\" : \"shoes\", \"product_price\" : 79.99}`. They can add the word "shoes" to a message with the Liquid `{{canvas_entry_properties.${product_name}}}`.
+{% endraw %}
+
+RetailApp can also trigger specific messages to send for different `product_name` properties in a Canvas that targets users after they've triggered a purchase event. For example, they can send different messages to users who purchased shoes and users who purchased something else by adding the following Liquid into a Message step.
+
+{% raw %}
+```markdown
+{% if  {{canvas_entry_properties.${product_name}}} == "shoes" %}
+  Your order is set to ship soon. While you're waiting, why not step up your shoe care routine with a little upgrade? Check out our selection of shoelaces and premium shoe polish.
+{% else %}
+  Your order will be on its way shortly. If you missed something, you have until the end of the week to add any additional items to your cart and enjoy storewide discounts. 
+{% endif %}
+
+```
 {% endraw %}
 
 {% details Expand for original Canvas editor %}

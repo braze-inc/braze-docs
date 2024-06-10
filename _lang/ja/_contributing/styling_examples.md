@@ -436,7 +436,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit.Sed nec tortor at lectus
 
 右または左に揃え、最大幅を50% に制限するには、`align` パラメータ= `left` または`right` を使用します。
 {% raw %}
-HTML
+\`\`\`html
 {% multi_lang_include video.html id="[ytube_id]" align="left" source="youtube" %}
 
 {% multi_lang_include video.html id="[youe_id]" align="right" source="youtube" %}

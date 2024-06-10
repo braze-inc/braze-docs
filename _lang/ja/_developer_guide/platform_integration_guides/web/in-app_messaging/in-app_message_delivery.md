@@ -41,18 +41,18 @@ braze.initialize('YOUR-API-KEY', { minimumIntervalBetweenTriggerActionsInSeconds
 まず、`braze.automaticallyShowInAppMessages()`ロード中のスニペットの中からへの呼び出しを見つけて削除します。次に、トリガーされたアプリ内メッセージをカスタム処理する独自のロジックを作成し、メッセージを表示または非表示にします。 
 
 \`\`\`javascript
-Braze.subscribetoAppMessage (機能) (アプリメッセージ内) {
+braze.subscribeToInAppMessage(function(inAppMessage) {
   // control group messages should always be "shown"
 // this will log an impression and not show a visible message
   
-  if (inAppMessage.isControl) {//v4.5.0+、それ以外の場合は以下を使用してください  `inAppMessage instanceof braze.ControlMessage`
+  if (inAppMessage.isControl) { // v4.5.0+, otherwise use  `inAppMessage instanceof braze.ControlMessage`
      Braze.showinアプリメッセージを返す (アプリメッセージ内);
   ()
   
   // Display the in-app message. You could defer display here by pushing this message to code within your own application.
 // If you don't want to use Braze's built-in display capabilities, you could alternatively pass the in-app message to your own display code here.
   
-  if (カスタムロジックに従ってメッセージを表示する必要があります) {
+  if ( should\_show\_the\_message\_according\_to\_your\_custom\_logic ) {
       Braze.アプリメッセージを表示 (アプリメッセージ内);
   } else {
       何もしない
