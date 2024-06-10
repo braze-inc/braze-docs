@@ -41,7 +41,7 @@ Note the following Liquid references with dependencies when copying campaigns ac
 - Subscription state tags
 - Voucher and promotion tags
 
-When you copy a campaign across a workspace, Content Blocks won't be copied. However, a Content Block can be referenced in the destination workspace if a block with the same name exists. Alternatively, you can create the Content Block (or these Liquid references) in the destination workspace to avoid errors when launching a campaign.
+When you copy a campaign across workspaces, Content Blocks won't be copied. However, a Content Block can be referenced in the destination workspace if a block with the same name exists. Alternatively, you can create the Content Block (or these Liquid references) in the destination workspace to avoid errors when launching a campaign.
 
 ### What's copied across workspaces
 
