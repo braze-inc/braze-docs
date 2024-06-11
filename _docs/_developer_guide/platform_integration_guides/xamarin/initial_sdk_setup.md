@@ -59,7 +59,7 @@ If you are using the [older navigation]({{site.baseurl}}/navigation), you can fi
 ```
 If you are including the binding source manually, remove `<item>NUGET</item>` from your code.
 
-For an example of your `Braze.xml`, see the [Android MAUI][8] sample app.
+For an example of your `Braze.xml`, see the [Android MAUI][8] sample application.
 
 ### Step 3: Add required permissions to Android manifest
 
@@ -68,7 +68,7 @@ Now that you've added your API key, you need to add the following permissions to
 ```xml
 <uses-permission android:name="android.permission.INTERNET" />
 ```
-For an example of your `AndroidManifest.xml`, see the [Android MAUI][9] sample app.
+For an example of your `AndroidManifest.xml`, see the [Android MAUI][9] sample application.
 
 ### Step 4: Tracking user sessions and registering for in-app messages
 To enable user session tracking and register your app for in-app messages, add the following call to the `OnCreate()` lifecycle method of the `Application` class in your app:
@@ -120,7 +120,7 @@ If you are using the [older navigation]({{site.baseurl}}/navigation), you can fi
 ```
 If you are including the binding source manually, remove `ABKSdkMetadata.ABKSdkMetadataNuGet` from your code.
 
-See the `AppDelegate.cs` file in the [iOS MAUI][13] sample app.
+See the `AppDelegate.cs` file in the [iOS MAUI][13] sample application.
 
 ### SDK integration complete
 

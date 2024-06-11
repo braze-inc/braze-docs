@@ -16,13 +16,13 @@ channel: push
 
 ## Android
 
-See the [Android integration instructions][1] for information on how to integrate push into your Xamarin Android app. Furthermore, you can look at the [Android MAUI][2] sample app to see how the namespaces change from Java to C#.
+See the [Android integration instructions][1] for information on how to integrate push into your Xamarin Android app. Furthermore, you can look at the [Android MAUI][2] sample application to see how the namespaces change from Java to C#.
 
 ## iOS
 
 ### Step 1: Complete the initial setup
 
-See the [Swift integration instructions][3] for information about setting up your application with push and storing your credentials on our server. Refer to the [iOS MAUI][4] sample app for more details.
+See the [Swift integration instructions][3] for information about setting up your application with push and storing your credentials on our server. Refer to the [iOS MAUI][4] sample application for more details.
 
 ### Step 2: Request push notifications permission
 

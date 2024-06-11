@@ -111,7 +111,7 @@ Braze provides methods for assigning attributes to users. You’ll be able to fi
 To assign user attributes automatically collected by Braze, you can use setter methods that come with the SDK. For example, you can set the user's first name:
 
 {% tabs %}
-{% tab %}
+{% tab Android %}
 ```csharp
 Braze.GetInstance(this).CurrentUser.SetFirstName("first_name");
 ```
@@ -142,7 +142,7 @@ The following attributes are supported:
 In addition to our predefined user attribute methods, Braze also provides custom attributes to track data from your applications.
 
 {% tabs %}
-{% tab %}
+{% tab Android %}
 ```csharp
 Braze.GetInstance(this).CurrentUser.SetCustomUserAttribute("custom_attribute_key", true);
 ```
