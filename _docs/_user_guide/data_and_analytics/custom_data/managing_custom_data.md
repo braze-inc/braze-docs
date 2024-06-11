@@ -48,9 +48,7 @@ All user profile data (custom events, custom attributes, custom data) is stored 
 
 You may occasionally identify custom attributes, custom events, or purchase events that either consume too many data points, are no longer useful to your marketing strategy, or were recorded in error. To stop this data from being sent to Braze, you can blocklist a custom data object while your engineering team works to remove it from the backend of your app or website.
 
-Blocklisting prevents a particular custom data object from being recorded by Braze going forward, meaning it won't show up when searching for a specific user. However, blocklisting doesn't remove data from user profiles or retroactively decrease the amount of data points incurred for that custom data object.
-
-For instructions and details about blocklisting custom data, refer to [Managing custom data]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/managing_custom_data/#blocklisting-custom-data).
+Blocklisting prevents a particular custom data object from being recorded by Braze going forward, meaning it won't show up when searching for a specific user. Blocklisted data will not be sent by the SDK, and the Braze dashboard won't process blocklisted data from other sources (for example, the API). However, blocklisting doesn't remove data from user profiles or retroactively decrease the amount of data points incurred for that custom data object.
 
 ### Blocklisting custom attributes, custom events, and products
 
@@ -70,7 +68,7 @@ You can blocklist up to 300 custom attributes and 300 custom events. To prevent 
 
 When a custom event or attribute is blocklisted, the following applies:
 
-- No data will be collected regarding that event or attribute
+- No data sent to Braze will be processed, and blocklisted events and attributes will no longer count as data points
 - Existing data will be unavailable, unless reactivated
 - Blocklisted events and attributes will not show up in filters or graphs
 - References to blocklisted data within drafts of active Canvases will load as invalid values, which may cause errors
