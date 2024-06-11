@@ -11,7 +11,7 @@ page_type: reference
 > Using field-level encryption, you can seamlessly encrypt email addresses with AWS Key Management Solution (KMS) and comply with industry regulations to minimize PII shared in Braze. Encryption replaces sensitive data with ciphertext, which is unreadable encrypted information.
 
 {% alert important %}
-Field-level encryption is is currently available as a beta feature. Contact your Braze account manager if you're interested in participating in this beta.
+Field-level encryption is currently available as a beta feature. Contact your Braze account manager if you're interested in participating in this beta.
 {% endalert %}
 
 ## How it works
@@ -20,7 +20,14 @@ Email addresses must be hashed and encrypted before they’re added to Braze. Wh
 
 ## Prerequisites
 
-To use field-level encryption, you must have access to AWS KMS to encrypt and hash email addresses before sending them to Braze.
+To use field-level encryption, you must have access to AWS KMS to encrypt and hash email addresses **before** sending them to Braze. 
+
+Follow these steps to set up your AWS secret key authentication method.
+
+1. To retrieve your access key ID and secret access key, create an IAM user and administrators group in AWS.
+2. Select **Show User Security Credentials** to reveal your access key ID and secret access key. Next, note these credentials somewhere or select the **Download Credentials** button as you'll need to input these when connecting your AWS KMS keys.
+3. 
+4. 
 
 ## Step 1: Connect your AWS KMS keys
 
@@ -31,6 +38,7 @@ For your AWS KMS settings, enter the following:
 - HMAC key ID (this cannot be updated after saving)
 
 ## Step 2: Select your encryption fields
+
 Next, select Email address to encrypt the field. 
 
 When encryption is enabled for a field, it can’t be reverted to a decrypted field. This means encryption is a permanent setting. When setting up encryption for email address, please ensure that no users have email addresses in the workspace. This ensures that no plaintext email addresses are stored in Braze when enabling the feature for the workspace.
@@ -39,9 +47,9 @@ When encryption is enabled for a field, it can’t be reverted to a decrypted fi
 
 ## Step 3: Import and update users
 
-When field-level encryption is enabled, you must hash and encrypt the email address before adding to Braze. Please ensure you downcase the email address before hashing it.
+When field-level encryption is enabled, you must hash and encrypt the email address before adding to Braze. Be sure to downcase the email address before hashing it. See [user attributes object](#user-attributes-object) for more details.
 
-When updating email address in Braze, you should use the hashed email value wherever ‘email’ is included. This includes:
+When updating email address in Braze, you should use the hashed email value wherever `email` is included. This includes:
 
 - REST endpoints:
     - `/users/track`
@@ -51,7 +59,7 @@ When updating email address in Braze, you should use the hashed email value wher
 - Adding or updating users via CSV
 
 {% alert note %}
-When creating a new user, you must add `encrypted_email` with the user'3s encrypted email value. Otherwise, the user will not be created.
+When creating a new user, you must add `encrypted_email` with the user's encrypted email value. Otherwise, the user will not be created.
 {% endalert %}
 
 ## Considerations
