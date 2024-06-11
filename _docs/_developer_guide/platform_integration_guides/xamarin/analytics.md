@@ -16,7 +16,7 @@ description: "This article covers iOS, Android, and FireOS analytics for the Xam
 
 ## Session tracking
 
-The Braze SDK reports session data used by the Braze dashboard to calculate user engagement and other analytics integral to understanding your users. based on the following session semantics, our SDK generates “start session” and “close session” data points that account for session length and session counts viewable within the Braze dashboard.
+The Braze SDK reports session data used by the Braze dashboard to calculate user engagement and other analytics integral to understanding your users. Based on the following session semantics, our SDK generates “start session” and “close session” data points that account for session length and session counts viewable within the Braze dashboard.
 
 To set a user ID or start a session, use the `ChangeUser` method, which takes a user ID parameter.
 
@@ -41,7 +41,7 @@ See the [iOS integration instructions]({{site.baseurl}}/developer_guide/platform
 
 ## Logging custom events
 
-You can record custom events in Braze to learn more about your app’s usage patterns and to segment your users by their actions in the dashboard.
+You can record custom events in Braze using `LogCustomEvent` to learn more about your app’s usage patterns and to segment your users by their actions in the dashboard.
 
 {% tabs %}
 {% tab Android %}
@@ -64,7 +64,7 @@ See the [iOS integration instructions]({{site.baseurl}}/developer_guide/platform
 
 ## Logging purchases
 
-Record in-app purchases so that you can track your revenue over time and across revenue sources, as well as segment your users by their lifetime value.
+Record in-app purchases using `LogPurchase` so that you can track your revenue over time and across revenue sources, as well as segment your users by their lifetime value.
 
 Braze supports purchases in multiple currencies. Purchases that you report in a currency other than USD will be shown in the dashboard in USD based on the exchange rate at the date they were reported.
 
@@ -139,7 +139,7 @@ The following attributes are supported:
 
 ### Custom user attributes
 
-In addition to our predefined user attribute methods, Braze also provides custom attributes to track data from your applications.
+In addition to our predefined user attribute methods, Braze also provides custom attributes using `SetCustomUserAttribute` to track data from your applications.
 
 {% tabs %}
 {% tab Android %}
