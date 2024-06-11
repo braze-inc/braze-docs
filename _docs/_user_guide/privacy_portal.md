@@ -26,10 +26,10 @@ guide_featured_list:
   image: /assets/img/braze_icons/mail-01.svg
 - name: Managing Email Subscriptions
   link: /docs/user_guide/message_building_by_channel/email/best_practices/managing_email_subscriptions#unsubscribed-email-addresses
-  image: /assets/img/braze_icons/mail-01.svg
+  image: /assets/img/braze_icons/users-01.svg
 - name: Email Preference Center
   link: /docs/user_guide/message_building_by_channel/email/preference_center
-  image: /assets/img/braze_icons/mail-01.svg
+  image: /assets/img/braze_icons/list.svg
 - name: SMS Subscription Groups
   link: /docs/user_guide/message_building_by_channel/sms/sms_subscription_group/
   image: /assets/img/braze_icons/users-01.svg
