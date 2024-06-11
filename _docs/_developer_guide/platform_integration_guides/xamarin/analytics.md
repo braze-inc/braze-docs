@@ -31,7 +31,6 @@ See the [Android integration instructions]({{site.baseurl}}/developer_guide/plat
 {% endtab %}
 {% tab iOS %}
 ```csharp
-// C#
 Appboy.SharedInstance.ChangeUser("user_id");
 ```
 
@@ -55,7 +54,6 @@ See the [Android integration instructions]({{site.baseurl}}/developer_guide/plat
 {% endtab %}
 {% tab iOS %}
 ```csharp
-// C#
 Appboy.SharedInstance.LogCustomEvent("event_name");
 ```
 
@@ -81,7 +79,6 @@ See the [Android integration instructions]({{site.baseurl}}/developer_guide/plat
 {% endtab %}
 {% tab iOS %}
 ```csharp
-// C#
 Appboy.SharedInstance.LogPurchase("product_id", "USD", new NSDecimalNumber("10"));
 ```
 
@@ -123,7 +120,6 @@ Braze.GetInstance(this).CurrentUser.SetFirstName("first_name");
 {% tab iOS %}
 
 ```csharp
-// C#
 Appboy.SharedInstance.User.FirstName = "first_name";
 ```
 
@@ -157,7 +153,6 @@ See the [Android integration instructions]({{site.baseurl}}/developer_guide/plat
 {% tab iOS %}
 
 ```csharp
-// C#
 Appboy.SharedInstance.User.SetCustomAttributeWithKey("custom_attribute_key", true);
 ```
 

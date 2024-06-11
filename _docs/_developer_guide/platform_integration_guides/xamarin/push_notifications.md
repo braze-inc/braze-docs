@@ -29,7 +29,6 @@ See the [Swift integration instructions][3] for information about setting up you
 Set up push permissions by adding the following code to the ```FinishedLaunching``` section of your ```AppDelegate.cs```:
 
 ```csharp
-// C#
 application.RegisterForRemoteNotifications();
 
 center.RequestAuthorization(UNAuthorizationOptions.Alert | UNAuthorizationOptions.Sound | UNAuthorizationOptions.Badge, (granted, error) => {
@@ -46,7 +45,6 @@ For more details, see the Xamarin documentation for [Enhanced User Notifications
 Register for your push tokens by adding the following code in the ```RegisteredForRemoteNotifications``` method of your ```AppDelegate.cs```:
 
 ```csharp
-// C#
 public void RegisteredForRemoteNotifications(UIApplication application, NSData deviceToken)
 {
     Appboy.SharedInstance.RegisterDeviceToken(deviceToken);
@@ -58,7 +56,6 @@ public void RegisteredForRemoteNotifications(UIApplication application, NSData d
 Enable open tracking on push notifications by adding the following code to the `DidReceiveRemoteNotification` method of your `AppDelegate.cs`:
 
 ```csharp
-// C#
 public virtual void DidReceiveRemoteNotification(UIApplication application, NSDictionary userInfo, Action<UIBackgroundFetchResult> completionHandler)
 {
     Appboy.SharedInstance.RegisterApplicationWithFetchCompletionHandler(application, userInfo, completionHandler);
@@ -70,7 +67,6 @@ public virtual void DidReceiveRemoteNotification(UIApplication application, NSDi
 If [badge counts are enabled][6], Braze will display a badge when a customer has unread notifications. By default, this number is 1. Braze will only clear the badge count when the app is opened directly from a Braze push notification. To clear the badge count, use the following code:
 
 ```csharp
-// C#
 var content = new UNMutableNotificationContent ();
 content.Badge = 0;
 ```
