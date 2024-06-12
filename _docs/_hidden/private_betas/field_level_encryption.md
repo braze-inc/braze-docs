@@ -96,11 +96,13 @@ Plaintext email addresses are supported in test sending. To see how an email loo
 1. Select **Preview message as a user**.
 2. In **Test Send**, select **Override recipients attributes with current preview user’s attributes**.
 
-### What happens if I add this email address Liquid {{${email_address}}} in Braze?
+{%raw%}
+### What happens if I add this email address Liquid `{{${email_address}}}` in Braze?
 
 Braze will render the plaintext email address when sending the email. In previews, we’d display the encrypted version of the email. We recommend using the user's external ID if you’re referencing a user in a custom one-click URL.
 
-{%raw%}`{{${email_address}}}`{%endraw%} is not currently supported in the preference center and unsubscribe pages.
+`{{${email_address}}}` is not currently supported in the preference center and unsubscribe pages.
+{%endraw%}
 
 ### What email address should I expect to see in Currents?
 
