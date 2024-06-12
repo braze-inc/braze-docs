@@ -2,7 +2,7 @@
 nav_title: Pick Up Where You Left Off
 article_title: Pick Up Where You Left Off
 permalink: "/pick_up_where_you_left_off/"
-description: "This reference article covers how to use Dashboard Builder to create dashboards and visualizations using reports created in Query Builder."
+description: "Learn how to pick up where you left off in Braze."
 page_type: reference
 hidden: true
 ---
@@ -23,7 +23,7 @@ You can resume your activities for the following items:
 
 ### Access most recently opened content
 
-
+You can revisit recently accessed campaigns, Canvases, and segments. This way, you can pick up where you left off whenever you return to the Braze dashboard.
 
 ### Content type and status tags
 
