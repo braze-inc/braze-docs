@@ -15,17 +15,15 @@ Once a connected source is added to your Braze workspace, you can create a CDI s
 
 For more information on creating a segment with this source, see the [CDI Segments documentation]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/cdi_segments/).
 
-
-{% alert update %}
-Note that this feature is currently in Early Access for BigQuery, Databricks, Redshift, and Snowflake
-{% endalert %}
-
-{% alert important %}
+{% alert warning %}
 Because connected sources run on your data warehouse directly, you will incur all costs associated with running these queries in your data warehouse. Connected sources do not consume data points, and CDI segments do not consume SQL Segment credits.
 {% endalert %}
 
-
 ## Integrating connected sources
+
+{% alert important %}
+Connected sources is currently in early access for BigQuery, Databricks, Redshift, and Snowflake.
+{% endalert %}
 
 ### Step 1: Connect your resources
 
@@ -83,18 +81,17 @@ There may be two to five minutes of warm-up time when Braze connects to Classic 
 
 ### Step 2: Set up your data warehouse
 
-First, set up the source data and required resources in your data warehouse environment.  A connected source may reference one or more tables, so the user created for Braze to use should have permissions for all tables you want to be available in the connected source. 
+First, set up the source data and required resources in your data warehouse environment. The connected source may reference one or more tables, so ensure your Braze user has permissions for all tables you want available in the connected source.
 
 {% tabs %}
 {% tab Snowflake %}
 #### Step 2.1: Create a role and grant permissions
 
-Create a role for your connected source to use. This role will be used to generate the list of tables available in your CDI segments, and to query source tables to create new segments. Once the connected source is created, Braze will discover the names and description of all tables available to the user in the source schema.
+Create a role for your connected source to use. This role will be used to generate the list of tables available in your CDI segments, and to query source tables to create new segments. After the connected source is created, Braze will discover the names and description of all tables available to the user in the source schema.
 
 You may choose to grant access to all tables in a schema, or grant privileges only to specific tables. Whichever tables the Braze role has access to will be available to query in the CDI segment.
 
-Create table permisison is required because Braze will create a table with your CDI Segment query results before updating the segment in Braze. We will create a temporary table per segment, and the table will only persist while Braze is updating the segment. 
-
+The `create table` permission is required so Braze can create a table with your CDI Segment query results before updating the segment in Braze. Braze will create a temporary table per segment, and the table will only persist while Braze is updating the segment.
 
 ```json
 CREATE ROLE BRAZE_INGESTION_ROLE;
@@ -141,17 +138,32 @@ When connecting different workspaces to the same Snowflake account, you must cre
 
 Depending on the configuration of your Snowflake account, you may need to allow the following IP addresses in your Snowflake network policy. For more information on enabling this, see the relevant Snowflake documentation on [modifying a network policy](https://docs.snowflake.com/en/user-guide/network-policies.html#modifying-network-policies).
 
-| For Instances `US-01`, `US-02`, `US-03`, `US-04`, `US-05`, `US-06`, `US-07` | For Instances `EU-01` and `EU-02` |
-|---|---|
-| `23.21.118.191`| `52.58.142.242`
-| `34.206.23.173`| `52.29.193.121`
-| `50.16.249.9`| `35.158.29.228`
-| `52.4.160.214`| `18.157.135.97`
-| `54.87.8.34`| `3.123.166.46`
-| `54.156.35.251`| `3.64.27.36`
-| `52.54.89.238`| `3.65.88.25`
-| `18.205.178.15`| `3.68.144.188`
-|   | `3.70.107.88`
+{% subtabs %}
+{% subtab United States (US) %}
+For instances `US-01`, `US-02`, `US-03`, `US-04`, `US-05`, `US-06`, `US-07`, these are the relevant IP addresses:
+- `23.21.118.191`
+- `34.206.23.173`
+- `50.16.249.9`
+- `52.4.160.214`
+- `54.87.8.34`
+- `54.156.35.251`
+- `52.54.89.238`
+- `18.205.178.15`
+{% endsubtab %}
+
+{% subtab European Union (EU) %}
+For instances `EU-01` and `EU-02`, these are the relevant IP addresses:
+- `52.58.142.242`
+- `52.29.193.121`
+- `35.158.29.228`
+- `18.157.135.97`
+- `3.123.166.46`
+- `3.64.27.36`
+- `3.65.88.25`
+- `3.68.144.188`
+- `3.70.107.88`
+{% endsubtab %}
+{% endsubtabs %}
 {% endtab %}
 
 {% tab Redshift %}
@@ -168,30 +180,43 @@ Create a user for your connected source to use. This user will be used to genera
 
 You may choose to grant access to all tables in a schema, or grant privileges only to specific tables. Whichever tables the Braze role has access to will be available to query in the CDI segment. Be sure to grant access to any new tables to the user when they're created, or set default permissions for the user. 
 
-Create table permisison is required because Braze will create a table with your CDI Segment query results before updating the segment in Braze. We will create a temporary table per segment, and the table will only persist while Braze is updating the segment. 
+ The `create table` permission is required so Braze can create a table with your CDI Segment query results before updating the segment in Braze. Braze will create a temporary table per segment, and the table will only persist while Braze is updating the segment.
 
 
 #### Step 2.2: Allow access to Braze IPs    
 
 If you have a firewall or other network policies, you must give Braze network access to your Redshift instance. Allow access from the below IPs corresponding to your Braze dashboard's region. 
 
-{% alert important %}
-You may also need to change your security groups to allow Braze to access your data in Redshift. Make sure to explicitly allow inbound traffic on the IPs below and on the port used to query your Redshift cluster (default is 5439). You should explicitly allow Redshift TCP connectivity on this port even if the inbound rules are set to "allow all". In addition, it is important that the endpoint for the Redshift cluster be publicly accessible in order for Braze to connect to your cluster.
+You may also need to change your security groups to allow Braze access to your data in Redshift. Make sure to explicitly allow inbound traffic on the IPs below and on the port used to query your Redshift cluster (default is 5439). You should explicitly allow Redshift TCP connectivity on this port even if the inbound rules are set to "allow all". In addition, it is important that the endpoint for the Redshift cluster be publicly accessible in order for Braze to connect to your cluster.
 
-If you won't want your Redshift cluster to be publicly accessible, you can set up a VPC and EC2 instance to use an ssh tunnel to access the Redshift data. [Check out this AWS Knowledge Center post for more information.](https://repost.aws/knowledge-center/private-redshift-cluster-local-machine)
-{% endalert %}
+If you do not want your Redshift cluster to be publicly accessible, you can set up a VPC and EC2 instance to use an ssh tunnel to access the Redshift data. For more information, see [AWS: How do I access a private Aamazon Redshift cluster from my local machine?](https://repost.aws/knowledge-center/private-redshift-cluster-local-machine)
 
-| For Instances `US-01`, `US-02`, `US-03`, `US-04`, `US-05`, `US-06`, `US-07` | For Instances `EU-01` and `EU-02` |
-|---|---|
-| `23.21.118.191`| `52.58.142.242`
-| `34.206.23.173`| `52.29.193.121`
-| `50.16.249.9`| `35.158.29.228`
-| `52.4.160.214`| `18.157.135.97`
-| `54.87.8.34`| `3.123.166.46`
-| `54.156.35.251`| `3.64.27.36`
-| `52.54.89.238`| `3.65.88.25`
-| `18.205.178.15`| `3.68.144.188`
-|   | `3.70.107.88`
+{% subtabs %}
+{% subtab United States (US) %}
+For instances `US-01`, `US-02`, `US-03`, `US-04`, `US-05`, `US-06`, `US-07`, these are the relevant IP addresses:
+- `23.21.118.191`
+- `34.206.23.173`
+- `50.16.249.9`
+- `52.4.160.214`
+- `54.87.8.34`
+- `54.156.35.251`
+- `52.54.89.238`
+- `18.205.178.15`
+{% endsubtab %}
+
+{% subtab European Union (EU) %}
+For instances `EU-01` and `EU-02`, these are the relevant IP addresses:
+- `52.58.142.242`
+- `52.29.193.121`
+- `35.158.29.228`
+- `18.157.135.97`
+- `3.123.166.46`
+- `3.64.27.36`
+- `3.65.88.25`
+- `3.68.144.188`
+- `3.70.107.88`
+{% endsubtab %}
+{% endsubtabs %}
 {% endtab %}
 
 {% tab BigQuery %}
@@ -209,25 +234,40 @@ Create a service account for your connected source to use. This user will be use
 
 You may choose to grant access to all tables in a dataset, or grant privileges only to specific tables. Whichever tables the Braze role has access to will be available to query in the CDI segment. 
 
-Create table permission is required because Braze will create a table with your CDI Segment query results before updating the segment in Braze. We will create a temporary table per segment, and the table will only persist while Braze is updating the segment. 
+The `create table` permission is required so Braze can create a table with your CDI Segment query results before updating the segment in Braze. Braze will create a temporary table per segment, and the table will only persist while Braze is updating the segment. 
 
-After creating the service account and granting permissions, generate a JSON key. See more information on how to do this [here](https://cloud.google.com/iam/docs/keys-create-delete). You will update this to the Braze dashboard later. 
+After creating the service account and granting permissions, generate a JSON key. For more information, see [Google Cloud: Create and delete service account keys](https://cloud.google.com/iam/docs/keys-create-delete). You'll upload this to the Braze dashboard later.
 
 #### Step 2.2: Allow access to Braze IPs    
 
 If you have network policies in place, you must give Braze network access to your Big Query instance. Allow access from the below IPs corresponding to your Braze dashboard's region.  
 
-| For Instances `US-01`, `US-02`, `US-03`, `US-04`, `US-05`, `US-06`, `US-07` | For Instances `EU-01` and `EU-02` |
-|---|---|
-| `23.21.118.191`| `52.58.142.242`
-| `34.206.23.173`| `52.29.193.121`
-| `50.16.249.9`| `35.158.29.228`
-| `52.4.160.214`| `18.157.135.97`
-| `54.87.8.34`| `3.123.166.46`
-| `54.156.35.251`| `3.64.27.36`
-| `52.54.89.238`| `3.65.88.25`
-| `18.205.178.15`| `3.68.144.188`
-|   | `3.70.107.88`
+{% subtabs %}
+{% subtab United States (US) %}
+For instances `US-01`, `US-02`, `US-03`, `US-04`, `US-05`, `US-06`, `US-07`, these are the relevant IP addresses:
+- `23.21.118.191`
+- `34.206.23.173`
+- `50.16.249.9`
+- `52.4.160.214`
+- `54.87.8.34`
+- `54.156.35.251`
+- `52.54.89.238`
+- `18.205.178.15`
+{% endsubtab %}
+
+{% subtab European Union (EU) %}
+For instances `EU-01` and `EU-02`, these are the relevant IP addresses:
+- `52.58.142.242`
+- `52.29.193.121`
+- `35.158.29.228`
+- `18.157.135.97`
+- `3.123.166.46`
+- `3.64.27.36`
+- `3.65.88.25`
+- `3.68.144.188`
+- `3.70.107.88`
+{% endsubtab %}
+{% endsubtabs %}
 {% endtab %}
 
 {% tab Databricks %}
@@ -244,9 +284,9 @@ In order for Braze to access Databricks, a personal access token needs to be cre
 
 This token will be used to generate the list of tables available in your CDI segments, and to query source tables to create new segments. Once the connected source is created, Braze will discover the names and description of all tables available to the user in the source schema. 
 
-You may choose to grant access to all tables in a schema, or grant privileges only to specific tables. Whichever tables the Braze role has access to will be available to query in the CDI segment. 
+You may choose to grant access to all tables in a schema, or grant privileges only to specific tables. Whichever tables the Braze role has access to will be available to query in the CDI segment.
 
-Create table permisison is required because Braze will create a table with your CDI Segment query results before updating the segment in Braze. We will create a temporary table per segment, and the table will only persist while Braze is updating the segment. 
+ The `create table` permission is required so Braze can create a table with your CDI Segment query results before updating the segment in Braze. Braze will create a temporary table per segment, and the table will only persist while Braze is updating the segment. 
 
 Keep the token in a safe place until you need to enter it on the Braze dashboard during the credential creation step.
 
@@ -254,31 +294,42 @@ Keep the token in a safe place until you need to enter it on the Braze dashboard
 
 If you have network policies in place, you must give Braze network access to your Databricks instance. Allow access from the below IPs corresponding to your Braze dashboard's region.  
 
-| For Instances `US-01`, `US-02`, `US-03`, `US-04`, `US-05`, `US-06`, `US-07` | For Instances `EU-01` and `EU-02` |
-|---|---|
-| `23.21.118.191`| `52.58.142.242`
-| `34.206.23.173`| `52.29.193.121`
-| `50.16.249.9`| `35.158.29.228`
-| `52.4.160.214`| `18.157.135.97`
-| `54.87.8.34`| `3.123.166.46`
-| `54.156.35.251`| `3.64.27.36`
-| `52.54.89.238`| `3.65.88.25`
-| `18.205.178.15`| `3.68.144.188`
-|   | `3.70.107.88`
+{% subtabs %}
+{% subtab United States (US) %}
+For instances `US-01`, `US-02`, `US-03`, `US-04`, `US-05`, `US-06`, `US-07`, these are the relevant IP addresses:
+- `23.21.118.191`
+- `34.206.23.173`
+- `50.16.249.9`
+- `52.4.160.214`
+- `54.87.8.34`
+- `54.156.35.251`
+- `52.54.89.238`
+- `18.205.178.15`
+{% endsubtab %}
+
+{% subtab European Union (EU) %}
+For instances `EU-01` and `EU-02`, these are the relevant IP addresses:
+- `52.58.142.242`
+- `52.29.193.121`
+- `35.158.29.228`
+- `18.157.135.97`
+- `3.123.166.46`
+- `3.64.27.36`
+- `3.65.88.25`
+- `3.68.144.188`
+- `3.70.107.88`
+{% endsubtab %}
+{% endsubtabs %}
 {% endtab %}
 {% endtabs %}
 
 ### Step 3: Create a connected source in the Braze dashboard
 
-Next, create a connected source in the Braze dashboard. Go to **Data Settings** > **Cloud Data Ingestion**. Navigate to the **Connected Sources** tab and click **Create data connection**.
-
-{% alert note %}
-If you are using the [older navigation]({{site.baseurl}}/navigation), go to **Cloud Data Ingestion** under **Data**.
-{% endalert %}
-
 {% tabs local %}
 {% tab Snowflake %}
 #### Step 3.1: Add Snowflake connection information and source table
+
+Next, create a connected source in the Braze dashboard. Go to **Data Settings** > **Cloud Data Ingestion**. Navigate to the **Connected Sources** tab and click **Create data connection**.
 
 Input the information for your Snowflake data warehouse and source schema, then proceed to the next step.
 
@@ -288,14 +339,13 @@ Input the information for your Snowflake data warehouse and source schema, then 
 
 Next, choose a name for connected source. This name will be used in the list of available sources when you create a new CDI Segment. 
 
-Configure a max runtime for this source. Braze will automatically abort any queries that exceed the max runtime when we are creating or refreshing a segment. The maximum runtime allowed is 60 minutes; a lower runtime will reduce costs incurred on your Snowflake account. 
+Configure a max runtime for this source. Braze will automatically abort any queries that exceed the max runtime when it's creating or refreshing a segment. The maximum runtime allowed is 60 minutes; a lower runtime will reduce costs incurred on your Snowflake account. 
 
 {% alert note %}
 If queries are consistently timing out and you have set a maximum runtime of 60 minutes, consider trying to optimize your query execution time or dedicating a larger warehouse to the Braze user.
 {% endalert %}
 
 ![]({% image_buster /assets/img/cloud_ingestion/connected_source_sf_2.png %})
-
 
 #### Step 3.3: Note the public key  
 
@@ -338,7 +388,7 @@ Input the information for your Redshift account and source schema, then proceed 
 
 Next, choose a name for connected source. This name will be used in the list of available sources when you create a new CDI Segment. 
 
-Configure a max runtime for this source. Braze will automatically abort any queries that exceed the max runtime when we are creating or refreshing a segment. The maximum runtime allowed is 60 minutes; a lower runtime will reduce costs incurred on your Snowflake account. 
+Configure a max runtime for this source. Braze will automatically abort any queries that exceed the max runtime when it's creating or refreshing a segment. The maximum runtime allowed is 60 minutes; a lower runtime will reduce costs incurred on your Snowflake account. 
 
 {% alert note %}
 If queries are consistently timing out and you have set a maximum runtime of 60 minutes, consider trying to optimize your query execution time. 
@@ -362,9 +412,9 @@ Upload the JSON key and provide a name for the service account, then input the d
 
 #### Step 4.2: Configure sync details
 
-Next, choose a name for connected source. This name will be used in the list of available sources when you create a new CDI Segment. 
+Next, choose a name for connected source. This name will be used in the list of available sources when you create a new CDI Segment.
 
-Configure a max runtime for this source. Braze will automatically abort any queries that exceed the max runtime when we are creating or refreshing a segment. The maximum runtime allowed is 60 minutes; a lower runtime will reduce costs incurred on your Snowflake account. 
+Configure a max runtime for this source. Braze will automatically abort any queries that exceed the max runtime when it's creating or refreshing a segment. The maximum runtime allowed is 60 minutes; a lower runtime will reduce costs incurred on your Snowflake account. 
 
 {% alert note %}
 If queries are consistently timing out and you have set a maximum runtime of 60 minutes, consider trying to optimize your query execution time. 
@@ -388,9 +438,9 @@ Input the information for your Databricks data warehouse and source data, then p
 
 #### Step 4.2: Configure sync details
 
-Next, choose a name for connected source. This name will be used in the list of available sources when you create a new CDI Segment. 
+Next, choose a name for connected source. This name will be used in the list of available sources when you create a new CDI Segment.
 
-Configure a max runtime for this source. Braze will automatically abort any queries that exceed the max runtime when we are creating or refreshing a segment. The maximum runtime allowed is 60 minutes; a lower runtime will reduce costs incurred on your Snowflake account. 
+Configure a max runtime for this source. Braze will automatically abort any queries that exceed the max runtime when it's creating or refreshing a segment. The maximum runtime allowed is 60 minutes; a lower runtime will reduce costs incurred on your Snowflake account.
 
 {% alert note %}
 If queries are consistently timing out and you have set a maximum runtime of 60 minutes, consider trying to optimize your query execution time. 
