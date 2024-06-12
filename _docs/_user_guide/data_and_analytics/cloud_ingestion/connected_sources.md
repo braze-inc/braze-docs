@@ -359,7 +359,7 @@ If queries are consistently timing out and you have set a maximum runtime of 60 
 #### Step 3: Test Connection
 Select **Test Connection** in Braze to  verify that the list of tables visible to the user is what you expect, select **Done**. Your connected source is now created and ready to use in CDI Segments.
 
-![]({% image_buster /assets/img/cloud_ingestion/connected_source3.png %})
+![]({% image_buster /assets/img/cloud_ingestion/connected_source_3.png %})
 
 
 {% endtab %}
