@@ -11,7 +11,7 @@ hidden: true
 
 You can pick up where you left off in the Braze dashboard with easy access to files you've recently edited or created. This section appears at the top of the **Home** page of the Braze dashboard.
 
-{% alert note %}
+{% alert important %}
 Pick up where you left off is currently in early access. Contact your Braze account manager if you're interested in participating in this early access.
 {% endalert %}
 
