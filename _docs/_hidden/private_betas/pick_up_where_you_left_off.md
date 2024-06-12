@@ -21,12 +21,12 @@ You can resume your activities for the following items:
 
 ## Key features
 
-### Access most recently opened content
+### Access most recently edited content
 
-You can revisit recently accessed campaigns, Canvases, and segments. This way, you can pick up where you left off whenever you return to the Braze dashboard.
+You can revisit recently edited or created campaigns, Canvases, and segments. This way, you can pick up where you left off whenever you return to the Braze dashboard.
 
 ### Content type and status tags
 
-Each tile is paired with tags that indicate the content type (campaign, Canvas, segment) and status (active, draft, archived, stopped).
+Each card is paired with tags that indicate the content type (campaign, Canvas, segment) and status (active, draft, archived, stopped).
 
 [1]: {% image_buster /assets/img/pick_up_where_you_left_off.png %}
