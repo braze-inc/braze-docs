@@ -108,6 +108,6 @@ Braze will render the plaintext email address when sending the email. In preview
 
 The hashed email address is included in email delivery and engagement events.
 
-### What email address should I expect to see in Message Archiving?
+### What email address should I expect to see in message archiving?
 
-The plaintext email address is included in Messaging Archiving. These are sent directly to the customer’s cloud storage provider and there may be other personal data included in the email bodies.
+The plaintext email address is included in messaging archiving. These are sent directly to the customer’s cloud storage provider and there may be other personal data included in the email bodies.
