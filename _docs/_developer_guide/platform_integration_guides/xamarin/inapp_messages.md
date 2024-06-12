@@ -26,8 +26,7 @@ See the [Android integration instructions][11] for information on how to integra
 
 To use Braze's default in-app message UI, first create a new `BrazeInAppMessageUI`:
 ```csharp
-public static BrazeInAppMessageUI? inAppMessageUI = null;
-inAppMessageUI = new BrazeInAppMessageUI();
+public static BrazeInAppMessageUI? inAppMessageUI = new BrazeInAppMessageUI();
 ```
 
 Then, register the `BrazeInAppMessageUI` as the in-app message presenter when setting up your Braze instance:
@@ -60,7 +59,7 @@ BRZInAppMessageRaw slideup = new BRZInAppMessageRaw();
 slideup.Type = BRZInAppMessageRawType.Slideup;
 slideup.Message = "This is the message";
 slideup.ClickAction = BRZInAppMessageRawClickAction.Url;
-slideup.Url = new NSUrl("http://braze.com");
+slideup.Url = new NSUrl("https://braze.com");
 ```
 
 ### Step 3: Display in-app messages

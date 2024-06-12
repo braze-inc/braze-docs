@@ -64,7 +64,7 @@ See the [iOS integration instructions]({{site.baseurl}}/developer_guide/platform
 
 ## Logging purchases
 
-Record in-app purchases using `LogPurchase` so that you can track your revenue over time and across revenue sources, as well as segment your users by their lifetime value.
+Record in-app purchases using `LogPurchase` to track your revenue over time and across revenue sources, as well as segment your users by their lifetime value.
 
 Braze supports purchases in multiple currencies. Purchases that you report in a currency other than USD will be shown in the dashboard in USD based on the exchange rate at the date they were reported.
 
