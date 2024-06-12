@@ -2,13 +2,13 @@
 nav_title: Field-Level Encryption
 article_title: Field-Level Encryption
 permalink: "/field_level_encryption/"
-description: "This reference article covers how to encrypt email addresses to minimize PII shared in Braze."
+description: "This reference article covers how to encrypt email addresses to minimize personally identifiable information (PII) shared in Braze."
 page_type: reference
 ---
 
 # Field-level encryption
 
-> Using field-level encryption, you can seamlessly encrypt email addresses with AWS Key Management Service (KMS) and comply with industry regulations to minimize PII shared in Braze. Encryption replaces sensitive data with ciphertext, which is unreadable encrypted information.
+> Using field-level encryption, you can seamlessly encrypt email addresses with AWS Key Management Service (KMS) and comply with industry regulations to minimize personally identifiable information (PII) shared in Braze. Encryption replaces sensitive data with ciphertext, which is unreadable encrypted information.
 
 {% alert important %}
 Field-level encryption is currently available as a beta feature. Contact your Braze account manager if you're interested in participating in this beta.
