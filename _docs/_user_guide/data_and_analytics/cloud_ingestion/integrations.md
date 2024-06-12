@@ -224,9 +224,9 @@ Create one or more tables to use for your CDI integration with the following fie
 CREATE TABLE `BRAZE-CLOUD-PRODUCTION.INGESTION.USERS_ATTRIBUTES_SYNC`
 (
   updated_at TIMESTAMP DEFAULT current_timestamp,
-  --at least one of external_id, alias_name and alias_label, or braze_id is required  
+  --At least one of external_id, alias_name and alias_label, or braze_id is required  
   external_id STRING,
-  --if using user alias, both alias_name and alias_label are required
+  --If using user alias, both alias_name and alias_label are required
   alias_name STRING,
   alias_label STRING,
   --braze_id can only be used to update existing users created through the Braze SDK
@@ -307,9 +307,9 @@ Create one or more tables to use for your CDI integration with the following fie
 CREATE TABLE `BRAZE-CLOUD-PRODUCTION.INGESTION.USERS_ATTRIBUTES_SYNC`
 (
   updated_at TIMESTAMP DEFAULT current_timestamp(),
-  --at least one of external_id, alias_name and alias_label, or braze_id is required  
+  --At least one of external_id, alias_name and alias_label, or braze_id is required  
   external_id STRING,
-  --if using user alias, both alias_name and alias_label are required
+  --If using user alias, both alias_name and alias_label are required
   alias_name STRING,
   alias_label STRING,
   --braze_id can only be used to update existing users created through the Braze SDK
