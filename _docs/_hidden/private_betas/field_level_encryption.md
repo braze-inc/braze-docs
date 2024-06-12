@@ -16,7 +16,7 @@ Field-level encryption is currently available as a beta feature. Contact your Br
 
 ## How it works
 
-Email addresses must be hashed and encrypted before they’re added to Braze. When a message is sent, a call will be made to AWS KMS for the decrypted email address. Next, the hashed email address will be inserted into the metadata for delivery and engagement events to be linked to the original user. This is how Braze can track email analytics, and any plaintext email addresses are redacted if they’re included. Braze does not store the plaintext email address for the user.
+Email addresses must be hashed and encrypted before they’re added to Braze. When a message is sent, a call will be made to AWS KMS for the decrypted email address. Next, the hashed email address will be inserted into the metadata for delivery and engagement events to be linked to the original user. This is how Braze can track email analytics. Braze will redact any plaintext email addresses that are included and won't store the plaintext email address for the user.
 
 ## Prerequisites
 
@@ -29,7 +29,7 @@ Follow these steps to set up your AWS secret key authentication method.
 3. We recommend setting up KMS in the following AWS regions:
     - **Braze US clusters:** `us-east-1`
     - **Braze EU clusters:** `eu-central-1`
-4. In AWS Key Management Service, create two keys and ensure that the IAM user is added in key usage permissions:
+4. In AWS Key Management Service, create two keys and make sure that the IAM user is added in key usage permissions:
     - **Encrypt/decrypt:** Select **Symmetric** key type and **Encrypt and Decrypt** key usage.
     - **Hash:** Select **Symmetric** key type and **Generate and Verify MAC** key usage. The key spec should be **HMAC_256**. After creating the key, note the HMAC key ID somewhere as you’ll need to input this in Braze.
 
@@ -45,9 +45,9 @@ For your AWS KMS settings, enter the following:
 
 ## Step 2: Select your encryption fields
 
-Next, select Email address to encrypt the field. 
+Next, select **Email address** to encrypt the field. 
 
-When encryption is enabled for a field, it can’t be reverted to a decrypted field. This means encryption is a permanent setting. When setting up encryption for email address, please ensure that no users have email addresses in the workspace. This ensures that no plaintext email addresses are stored in Braze when enabling the feature for the workspace.
+When encryption is enabled for a field, it can’t be reverted to a decrypted field. This means encryption is a permanent setting. When setting up encryption for email address, confirm that no users have email addresses in the workspace. This makes sure that no plaintext email addresses are stored in Braze when enabling the feature for the workspace.
 
 ![]({% image_buster /assets/img/field_level_encryption.png %})
 
@@ -99,7 +99,7 @@ Plaintext email addresses are supported in test sending. To see how an email loo
 {%raw%}
 ### What happens if I add this email address Liquid `{{${email_address}}}` in Braze?
 
-Braze will render the plaintext email address when sending the email. In previews, we’d display the encrypted version of the email. We recommend using the user's external ID if you’re referencing a user in a custom one-click URL.
+Braze will render the plaintext email address when sending the email. In previews, we’ll display the encrypted version of the email. We recommend using the user's external ID if you’re referencing a user in a custom one-click URL.
 
 `{{${email_address}}}` is not currently supported in the preference center and unsubscribe pages.
 {%endraw%}
