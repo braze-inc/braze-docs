@@ -24,10 +24,16 @@ To use field-level encryption, you must have access to AWS KMS to encrypt and ha
 
 Follow these steps to set up your AWS secret key authentication method.
 
-1. To retrieve your access key ID and secret access key, create an IAM user and administrators group in AWS.
-2. Select **Show User Security Credentials** to reveal your access key ID and secret access key. Next, note these credentials somewhere or select the **Download Credentials** button as you'll need to input these when connecting your AWS KMS keys.
-3. 
-4. 
+1. To retrieve your access key ID and secret access key, create an IAM user and administrators group in AWS with a permissions policy for AWS Key Management Service.
+2. Select **Show User Security Credentials** to reveal your access key ID and secret access key. Note these credentials somewhere or select the **Download Credentials** button as you'll need to input these when connecting your AWS KMS keys.
+3. We recommend setting up KMS in the following AWS regions:
+    - **Braze US clusters:** `us-east-1`
+    - **Braze EU clusters:** `eu-central-1`
+4. In AWS Key Management Service, create two keys and ensure that the IAM user is added in key usage permissions:
+    - **Encrypt/decrypt:** Select **Symmetric** key type and **Encrypt and Decrypt** key usage.
+    - **Hash:** Select **Symmetric** key type and Generate and Verify MAC key usage. The key spec should be **HMAC_256**. After creating the key, note the HMAC key ID somewhere as you’ll need to input this in Braze.
+
+![]({% image_buster /assets/img/field_level_encryption_aws_prereq.png %})
 
 ## Step 1: Connect your AWS KMS keys
 
