@@ -114,9 +114,9 @@ If you are using the [older navigation]({{site.baseurl}}/navigation), you can fi
 {% endalert %}
 
 ```csharp
- Appboy.StartWithApiKey ("YOUR_API_KEY", application, launchOptions, options);
- Appboy.SharedInstance.SdkFlavor = ABKSDKFlavor.Xamarin;
- Appboy.SharedInstance.AddSdkMetadata(new[] { ABKSdkMetadata.ABKSdkMetadataXamarin });
+ Braze.StartWithApiKey ("YOUR_API_KEY", application, launchOptions, options);
+ Braze.SharedInstance.SdkFlavor = ABKSDKFlavor.Xamarin;
+ Braze.SharedInstance.AddSdkMetadata(new[] { ABKSdkMetadata.ABKSdkMetadataXamarin });
 ```
 If you are including the binding source manually, remove `ABKSdkMetadata.ABKSdkMetadataNuGet` from your code.
 

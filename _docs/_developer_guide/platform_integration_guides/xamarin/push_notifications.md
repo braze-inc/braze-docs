@@ -33,7 +33,7 @@ application.RegisterForRemoteNotifications();
 
 center.RequestAuthorization(UNAuthorizationOptions.Alert | UNAuthorizationOptions.Sound | UNAuthorizationOptions.Badge, (granted, error) => {
     Console.WriteLine($"Notification authorization, granted: {granted}, error: {error?.ToString() ?? "None"}");
-    Appboy.SharedInstance.PushAuthorizationFromUserNotificationCenter(granted);
+    Braze.SharedInstance.PushAuthorizationFromUserNotificationCenter(granted);
 });
 ```
 For more details, see the Xamarin documentation for [Enhanced User Notifications in Xamarin.iOS][5].
@@ -47,7 +47,7 @@ Register for your push tokens by adding the following code in the ```RegisteredF
 ```csharp
 public void RegisteredForRemoteNotifications(UIApplication application, NSData deviceToken)
 {
-    Appboy.SharedInstance.RegisterDeviceToken(deviceToken);
+    Braze.SharedInstance.RegisterDeviceToken(deviceToken);
 }
 ```
 
@@ -58,7 +58,7 @@ Enable open tracking on push notifications by adding the following code to the `
 ```csharp
 public virtual void DidReceiveRemoteNotification(UIApplication application, NSDictionary userInfo, Action<UIBackgroundFetchResult> completionHandler)
 {
-    Appboy.SharedInstance.RegisterApplicationWithFetchCompletionHandler(application, userInfo, completionHandler);
+    Braze.SharedInstance.RegisterApplicationWithFetchCompletionHandler(application, userInfo, completionHandler);
 }
 ```
 
