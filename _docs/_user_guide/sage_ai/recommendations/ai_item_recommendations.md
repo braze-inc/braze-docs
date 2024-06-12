@@ -100,7 +100,7 @@ There are some requirements for selecting your property:
 - Must map to the `id` field of your selected catalog.
 - **If you selected Purchase Object:** Must be the `product_id` or a field of your interaction event's `properties`.
 - **If you selected Custom Event:** Must be a field of your custom event's `properties`.
-- The field can be nested
+- The field can't be nested.
 - The field can be in an array (of multiple catalog items within a single event). It will automatically be flattened.
 
 #### Example mappings
