@@ -31,7 +31,7 @@ See the [Android integration instructions]({{site.baseurl}}/developer_guide/plat
 {% endtab %}
 {% tab iOS %}
 ```csharp
-Appboy.SharedInstance.ChangeUser("user_id");
+Braze.SharedInstance.ChangeUser("user_id");
 ```
 
 See the [iOS integration instructions]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/setting_user_ids/) for an in-depth discussion of when and how to set and change a user ID.
@@ -54,7 +54,7 @@ See the [Android integration instructions]({{site.baseurl}}/developer_guide/plat
 {% endtab %}
 {% tab iOS %}
 ```csharp
-Appboy.SharedInstance.LogCustomEvent("event_name");
+Braze.SharedInstance.LogCustomEvent("event_name");
 ```
 
 See the [iOS integration instructions]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/tracking_custom_events/) for an in-depth discussion of event tracking best practices and interfaces.
@@ -64,7 +64,7 @@ See the [iOS integration instructions]({{site.baseurl}}/developer_guide/platform
 
 ## Logging purchases
 
-Record in-app purchases using `LogPurchase` so that you can track your revenue over time and across revenue sources, as well as segment your users by their lifetime value.
+Record in-app purchases using `LogPurchase` to track your revenue over time and across revenue sources, as well as segment your users by their lifetime value.
 
 Braze supports purchases in multiple currencies. Purchases that you report in a currency other than USD will be shown in the dashboard in USD based on the exchange rate at the date they were reported.
 
@@ -79,7 +79,7 @@ See the [Android integration instructions]({{site.baseurl}}/developer_guide/plat
 {% endtab %}
 {% tab iOS %}
 ```csharp
-Appboy.SharedInstance.LogPurchase("product_id", "USD", new NSDecimalNumber("10"));
+Braze.SharedInstance.LogPurchase("product_id", "USD", new NSDecimalNumber("10"));
 ```
 
 See the [iOS integration instructions]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/logging_purchases/) for an in-depth discussion of revenue tracking best practices and interfaces.
@@ -120,7 +120,7 @@ Braze.GetInstance(this).CurrentUser.SetFirstName("first_name");
 {% tab iOS %}
 
 ```csharp
-Appboy.SharedInstance.User.FirstName = "first_name";
+Braze.SharedInstance.User.FirstName = "first_name";
 ```
 
 {% endtab %}
@@ -153,7 +153,7 @@ See the [Android integration instructions]({{site.baseurl}}/developer_guide/plat
 {% tab iOS %}
 
 ```csharp
-Appboy.SharedInstance.User.SetCustomAttributeWithKey("custom_attribute_key", true);
+Braze.SharedInstance.User.SetCustomAttributeWithKey("custom_attribute_key", true);
 ```
 
 See the [iOS integration instructions]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/setting_custom_attributes/) for an in-depth discussion of attribute tracking best practices and interfaces.
