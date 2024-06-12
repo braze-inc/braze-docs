@@ -132,6 +132,7 @@
 		ul {
 			list-style: square;
 			margin-left: 20px;
+      margin-top: -20px;
 			> li {
 				p {
 					display: inline-block;
@@ -158,6 +159,7 @@
 			list-style: none;
 			counter-reset: li;
 			margin-left: 20px;
+      margin-top: -20px;
 			> li {
 				counter-increment: li;
 				p {
@@ -323,6 +325,10 @@
 	h6 {
 		font-family: $braze-regular;
 		margin: 40px 0 4px 0;
+
+    code {
+      font-size: inherit !important;
+    }
 	}
 
 	// Target the first h2 after h1, regardless of intervening elements
@@ -336,12 +342,12 @@
 
 	// h1 is excluded here to avoid adding extra space above page titles
 	h3{
-  		@include heading-margin-top(3rem); 
+  		@include heading-margin-top(3rem);
 	}
 
 	// smaller heading levels have a reduced top margin
 	h4, h5, h6{
-  		@include heading-margin-top(2.25rem); 
+  		@include heading-margin-top(2.25rem);
 	}
 
 	// Directly adjacent headings should have reduced top margin
@@ -409,7 +415,7 @@
 		}
 	}
 	.highlighter-rouge {
-		font-size: 14px !important;
+		font-size: 14px;
 		font-family: $braze-code;
 		font-weight: bold;
 		color: $grey-dust;

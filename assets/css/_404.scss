@@ -82,7 +82,7 @@ $broken_transition_time : 0.25s;
       margin-bottom: auto;
       color: $black-shark;
       font-family: $braze-regular;
-      font-size: 16px;
+      font-size: 15px;
       line-height: 1.8;
       display: inline-block;
     }
@@ -132,8 +132,7 @@ $broken_transition_time : 0.25s;
 
         border: 1px solid $grey-ghost;
         box-shadow: 0 0 6px 0 rgba(32,32,36,0.12);
-        border-radius: 2px;
-
+        border-radius: 8px;
 
       }
 
@@ -170,7 +169,7 @@ $broken_transition_time : 0.25s;
       #broken_help {
         border: 1px solid $grey-ghost;
         box-shadow: 0 0 6px 0 rgba(32,32,36,0.12);
-        border-radius: 2px;
+        border-radius: 8px;
         padding: 17px 25px 30px 25px;
 
         #help-search-form {
