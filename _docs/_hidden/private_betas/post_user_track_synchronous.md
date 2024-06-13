@@ -14,7 +14,7 @@ description: "This article outlines details about the synchronous Track user Bra
 /users/track/sync
 {% endapimethod %}
 
-> Use this endpoint to record custom events and purchases and update user profile attributes synchronously. This endpoint functions similarly to the [/users/track endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track), which updates user profiles asynchronously.
+> Use this endpoint to record custom events and purchases and update user profile attributes synchronously. This endpoint functions similarly to the [`/users/track` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track), which updates user profiles asynchronously.
 
 {% alert important %}
 This endpoint is currently in beta. Contact your Braze account manager if you’re interested in participating in this beta. 
