@@ -1,6 +1,6 @@
 ---
-nav_title: "POST: Track Users"
-article_title: "POST: Track Users"
+nav_title: "POST: Track Users (Synchronous)"
+article_title: "POST: Track Users (Synchronous)"
 hidden: true
 permalink: /post_user_track_synchronous/
 layout: api_page
