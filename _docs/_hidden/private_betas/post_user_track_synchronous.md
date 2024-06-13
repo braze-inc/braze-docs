@@ -17,20 +17,18 @@ description: "This article outlines details about the synchronous Track user Bra
 > Use this endpoint to record custom events and purchases and update user profile attributes synchronously. This endpoint functions similarly to the [/users/track endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track), which updates user profiles asynchronously.
 
 {% alert important %}
-This endpoint is currently in beta. Contact your Braze account manager for 
+This endpoint is currently in beta. Contact your Braze account manager if you’re interested in participating in this beta. 
 {% endalert %}
 
 ## Synchronous and asynchronous API calls
 
-In an asynchronous call, the API will return a 201 status code indicating that your request was successfully received, understood, and accepted. However, this does not mean that your request has been fully completed.
+In an asynchronous call, the API will return the status code `201`, indicating that your request was successfully received, understood, and accepted. However, this does not mean that your request has been fully completed.
 
-In a synchronous call, the API will return a 201 status code indicating that your request was successfully received, understood, accepted, and completed. The call response will show you select user profile fields as a result of that operation.
+In a synchronous call, the API will return a status code `201`, indicating that your request was successfully received, understood, accepted, and completed. The call response will show select user profile fields as a result of the operation.
 
-This endpoint has a lower rate limit than the POST: Track Users endpoint (see rate limits below). Each /users/sync/track request can contain only 1 event object, 1 attribute object, OR 1 purchase object. 
+This endpoint has a lower rate limit than the `/users/track` endpoint (see [rate limit](#rate-limit) below). Each `/users/track/sync` request can contain only  one event object, one attribute object, **or** one purchase object. This endpoint should be reserved for user profile updates where a synchronous call is needed. For a healthy implementation, we recommend using `/users/track/sync` and `/users/track` together.
 
-As such, this endpoint should be reserved for user profile updates where a synchronous call is needed. For a healthy implementation, we recommend using both /users/track/sync and /users/track together.
-
-For example, if you're sending consecutive requests for the same user over a short period of time, race conditions are possible with the asynchronous /users/track endpoint, but with the /users/track/sync endpoint you can send those requests in sequence, each after receiving a `2XX` response.
+For example, if you're sending consecutive requests for the same user over a short period of time, race conditions are possible with the asynchronous `/users/track` endpoint, but with the `/users/track/sync` endpoint you can send those requests in sequence, each after receiving a `2XX` response.
 
 ## Prerequisites
 
@@ -40,10 +38,11 @@ Customers using the API for server-to-server calls may need to allowlist `rest.i
 
 ## Rate limit
 
-We apply a base speed limit of 500 requests per minute to this endpoint for all customers. Each `/users/sync/track/` request can contain up to 1 event object, 1 attribute object, or 1 purchase object. Each object (event, attribute, and purchase arrays) can update one user each.
+We apply a base speed limit of 500 requests per minute to this endpoint for all customers. Each `/users/sync/track/` request can contain up to one event object, one attribute object, or one purchase object. Each object (event, attribute, and purchase arrays) can update one user each.
 
+{% alert note %}
 Reach out to your customer success manager if you need your limit increased.
-
+{% endalert %}
 
 ## Request body
 
@@ -81,7 +80,7 @@ When using any of the aforementioned API requests, you should receive one of the
 
 Successful messages will be met with the following response, which includes information about the user profile data that was updated.
 
-```javascript
+```json
 {
     "users": (optional, object), the identifier of the user in the request. May be empty if no users are found and _update_existing_only key is set to true,
         "custom_attributes": (optional, object), the custom attributes as a result of the request. Only custom attributes from the request will be listed,
@@ -89,24 +88,37 @@ Successful messages will be met with the following response, which includes info
         "purchase_events": (optional, object), the purchase events as a result of the request. Only purchase events from the request will be listed,
     },
     "message": "success"
+```
+
+### Message with fatal errors
+
+If your message has a fatal error, you'll receive the following response:
+
+```json
+{
+  "message": <fatal error message>,
+  "errors": [
+    {
+      <fatal error message>
+    }
+  ]
 }
 ```
 
+## Example requests and responses
 
-## Example requests
+### Update a custom attribute by external ID
 
-### Update a user profile by email address
-
-You can update a user profile by email address using the `/users/track` endpoint. 
+#### Request
 
 ```
-curl --location --request POST 'https://rest.iad-01.braze.com/users/track' \
+curl --location --request POST 'https://rest.iad-01.braze.com/users/track/sync' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer YOUR_REST_API_KEY' \
 --data-raw '{
     "attributes": [
         {
-            "email": "test@braze.com",
+            "external_id": "xyz123",
             "string_attribute": "fruit",
             "boolean_attribute_1": true,
             "integer_attribute": 25,
@@ -115,7 +127,41 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/track' \
                 "apple"
             ]
         }
+    ]
+}'
+```
+
+#### Response
+
+```
+{
+    "users": [
+        {
+            "external_id": "xyz123",
+            "custom_attributes": {
+                "string_attribute": "fruit",
+                "boolean_attribute_1": true,
+                "integer_attribute": 25,
+                "array_attribute": [
+                    "banana",
+                    "apple",
+                ]
+            }
+        }
     ],
+    "message": "success"
+} 
+```
+
+### Update a custom event by email
+
+#### Request
+
+```
+curl --location --request POST 'https://rest.iad-01.braze.com/users/track/sync' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: Bearer YOUR_REST_API_KEY' \
+--data-raw '{
     "events": [
         {
             "email": "test@braze.com",
@@ -136,191 +182,114 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/track' \
                     }
                 ]
             }
-        },
-        {
-            "user_alias": {
-                "alias_name": "device123",
-                "alias_label": "my_device_identifier"
-            },
-            "app_id": "your_app_identifier",
-            "name": "rented_movie",
-            "time": "2013-07-16T19:20:50+01:00"
-        }
-    ],
-    "purchases": [
-        {
-            "email": "test@braze.com",
-            "app_id": "your_app_identifier",
-            "product_id": "product_name",
-            "currency": "USD",
-            "price": 12.12,
-            "quantity": 6,
-            "time": "2017-05-12T18:47:12Z",
-            "properties": {
-                "color": "red",
-                "monogram": "ABC",
-                "checkout_duration": 180,
-                "size": "Large",
-                "brand": "Backpack Locker"
-            }
         }
     ]
 }'
 ```
 
-### Update a user profile by phone number
-
-You can update a user profile by phone number using the `/users/track` endpoint. This endpoint only works if you include a valid phone number.
-
-{% alert important %}
-If you include a request with both email and phone, Braze will use the email as the identifier.
-{% endalert %}
+#### Response
 
 ```
-curl --location --request POST 'https://rest.iad-01.braze.com/users/track' \
---header 'Content-Type: application/json' \
---header 'Authorization: Bearer YOUR_REST_API_KEY' \
---data-raw '{
-    "attributes": [
+{
+    "users": [
         {
-            "phone": "+15043277269",
-            "string_attribute": "fruit",
-            "boolean_attribute_1": true,
-            "integer_attribute": 25,
-            "array_attribute": [
-                "banana",
-                "apple"
+            "email": "test@braze.com",
+            "custom_events": [
+                {
+                "name": "rented_movie",
+                "first": "2022-01-001T00:00:00.000Z",
+                "last": "2022-12-06T18:20:45.000Z",
+                "count": 10
+                }
             ]
         }
     ],
-}'
+    "message": "success"
+} 
 ```
-### Set subscription groups
 
-This example shows how to create a user and set their subscription group within the user attributes object. 
+### Update a purchase event by user alias
 
-Updating the subscription status with this endpoint will update the user specified by their `external_id` (such as User1) and update the subscription status of any users with the same email as that user (User1).
+#### Request
 
 ```
-curl --location --request POST 'https://rest.iad-01.braze.com/users/track' \
+curl --location --request POST 'https://rest.iad-01.braze.com/users/track/sync' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer YOUR_REST_API_KEY' \
 --data-raw '{
-  "attributes": [
-  {
-    "external_id": "user_identifier",
-    "email": "example@email.com",
-    "email_subscribe": "subscribed",
-    "subscription_groups": [{
-      "subscription_group_id": "subscription_group_identifier_1",
-      "subscription_state": "unsubscribed"
-      },
-      {
-        "subscription_group_id": "subscription_group_identifier_2",
-        "subscription_state": "subscribed"
-        },
-        {
-          "subscription_group_id": "subscription_group_identifier_3",
-          "subscription_state": "subscribed"
-        }
-      ]
-    }
+  "purchases" : [
+    {
+      "user_alias" : { 
+          "alias_name" : "device123", 
+          "alias_label" : "my_device_identifier"
+      }
+      "app_id" : "11ae5b4b-2445-4440-a04f-bf537764c9ad",
+      "product_id" : "Completed Order",
+      "currency" : "USD",
+      "price" : 219.98,
+      "time" : "2022-12-06T19:20:45+01:00",
+      "properties" : {
+          "products" : [ 
+            {
+              "name": "Monitor",
+              "category": "Gaming",
+              "product_amount": 19.99
+            },
+            { 
+              "name": "Gaming Keyboard",
+              "category": "Gaming ",
+              "product_amount": 199.99
+            }
+          ]
+      }
+   }
   ]
 }'
 ```
 
-### Example request to create an alias-only user
-
-You can use the `/users/track` endpoint to create a new alias-only user by setting the `_update_existing_only` key with a value of `false` in the body of the request. If this value is omitted, the alias-only user profile will not be created. Using an alias-only user guarantees that one profile with that alias will exist. This is especially helpful when building a new integration as it prevents the creation of duplicate user profiles.
+#### Response
 
 ```
-curl --location --request POST 'https://rest.iad-01.braze.com/users/track' \
---header 'Content-Type: application/json' \
---header 'Authorization: Bearer YOUR_REST_API_KEY' \
---data-raw '{
 {
-    "attributes": [
+    "users": [
         {
-            "_update_existing_only": false,
-            "user_alias": {
-                "alias_name": "example_name",
-                "alias_label": "example_label"
-            },
-            "email": "email@example.com"
+          "user_alias" : { 
+            "alias_name" : "device123", 
+            "alias_label" : "my_device_identifier"
+          },
+          "purchase_events": [
+                {
+                "product_id": "Completed Order",
+                "first": "2013-07-16T19:20:30+01:00",
+                "last": "2022-12-06T18:20:45.000Z",
+                "count": 3
+                }
+            ]
         }
     ],
-}'
-```
-
-
-## Responses
-
-When using any of the aforementioned API requests, you should receive one of the following three general responses: a [successful message](#successful-message), a [successful message with non-fatal errors](#successful-message-with-non-fatal-errors), or a [message with fatal errors](#message-with-fatal-errors).
-
-### Successful message
-
-Successful messages will be met with the following response:
-
-```json
-{
-  "message": "success",
-  "attributes_processed": (optional, integer), if attributes are included in the request, this will return an integer of the number of external_ids with attributes that were queued to be processed,
-  "events_processed": (optional, integer), if events are included in the request, this will return an integer of the number of events that were queued to be processed,
-  "purchases_processed": (optional, integer), if purchases are included in the request, this will return an integer of the number of purchases that were queued to be processed,
-}
-```
-
-### Successful message with non-fatal errors
-
-If your message is successful but has non-fatal errors, such as one invalid event object out of a long list of events, then you will receive the following response:
-
-```json
-{
-  "message": "success",
-  "errors": [
-    {
-      <minor error message>
-    }
-  ]
-}
-```
-
-For success messages, any data not affected by an error in the `errors` array will still be processed. 
-
-### Message with fatal errors
-
-If your message has a fatal error, you will receive the following response:
-
-```json
-{
-  "message": <fatal error message>,
-  "errors": [
-    {
-      <fatal error message>
-    }
-  ]
-}
+    "message": "success"
+} 
 ```
 
 ## Frequently asked questions
 
 ### In what instances should I use the asynchronous or synchronous endpoint?
 
-For most profile updates, `/users/track` endpoint will work best because of its higher rate limit and flexibility to let you batch requests. However, the `/users/track/sync` endpoint is useful if you are experiencing race conditions due to rapid, consecutive requests for the same user.
+For most profile updates, the `/users/track` endpoint will work best because of its higher rate limit and flexibility to let you batch requests. However, the `/users/track/sync` endpoint is useful if you're experiencing race conditions due to rapid, consecutive requests for the same user.
 
 ### Does response time differ compared to the `/users/track` endpoint?
 
-With a synchronous call, the API waits until the request is completed to return a response. As a result, synchronous requests will take longer on average than asynchronous requests to /users/track. For the majority of requests, expect a response in seconds.
+With a synchronous call, the API waits until the request is completed to return a response. As a result, synchronous requests will take longer on average than asynchronous requests to `/users/track`. For the majority of requests, you can expect a response within seconds.
 
 ### Can you send multiple requests to this endpoint at the same time?
 
 Yes, as long as the requests are for different users, or each request updates different attributes, events, purchases for one user.
 
-If you are sending multiple requests for 1 user, for the same attribute, event, or purchase, it is recommended that you wait for a successful response between each request. This will prevent race conditions from occurring.
+If you're sending multiple requests for a user, for the same attribute, event, or purchase, Braze recommends waiting for a successful response between each request to prevent race conditions from occurring.
 
 ### Why does my response list a different custom attribute value than my original request?
 
-It’s possible that although your request is completed, it still did not update. This can happen when your custom attribute update exceeds the max number of characters, exceeds array limits, or if the user does not exist in Braze and you have _update_existing_only = true.
+It’s possible that although your request is completed, it still did not update. This can happen when your custom attribute update exceeds the max number of characters, exceeds array limits, or if the user does not exist in Braze and you have `_update_existing_only = true`.
 
 In these cases, treat the response as an indication that your request, while completed, your desired update has not been made. Troubleshoot with the reasons why this may happen from above.
 
