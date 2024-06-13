@@ -111,21 +111,15 @@ $doc_transition_time: 0.25s;
 			border-radius: 8px;
 
 			.doc_img {
-				height: 145px;
 				width: 75px;
 				display: block;
-				margin: auto;
-				img {
+        padding-top: 30px;
+
+        img {
 					display: block;
 					margin: auto;
 					width: 30px;
 					height: 30px;
-					position: relative;
-					top: 30%;
-					transform: translateY(-50%);
-          @media (min-width: $window-medium-px) {
-            top: 20%;
-          }
 				}
 			}
 			.arrow {
