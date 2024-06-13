@@ -20,6 +20,55 @@ This type of email usually includes an error message that CDI encountered during
 - **Row errors in your CDI sync**  
 This indicates that some data cannot be processed in the sync. To find out what is causing the errors, navigate to the CDI page in Braze. Open the **Sync Log** tab to check the error details for the sync job.
 
+### Fixes to common errors seen in test connection and Support emails**
+{% tabs %}
+{% tab Snowflake %}
+- **Error connecting to Snowflake instance: Incoming request with IP is not allowed to access Snowflake**
+  - Update Whitelisted IPs addresses to include Braze IPs. See [Data Warehouse Integrations]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/integrations/)
+- **Error executing SQL due to customer config: 002003 (42S02): SQL compilation error: does not exist or not authorized.**
+  - If the table does not exist, create the table. If the table does exist, verify that the user and role have permissions to read from the table
+- **Could not use schema**
+  - Grant access to Schema for the user or the role
+- **Could not use role**
+  - Grant user the ability to use the role
+- **User access disabled**
+  - Allow the user access to your snowflake account 
+- **Error connecting to Snowflake instance with current and old key**
+  - Make sure the user is using the current public key as seen in your braze dashboard
+{% endtab %}
+{% tab Redshift %}
+- **Permission denied for relation {table_name}**
+  - Grant usage permission on schema for the user 
+  - Grant select permission on the table for the user
+- **Create Connection Error**
+  - Verify the Redshift endpoint and port are correct
+- **Create SSH Tunnel Error**
+  - Verify public key on your braze dashboard is on ec2 host used for SSH tunneling
+  - Verify username is correct 
+  - Verify the SSH Tunnel is correct
+{% endtab %}
+{% tab BigQuery %}
+- **User does not have permission to query table**
+  - Add User permissions to query the table
+- **Your usage exceeded the custom quota**
+  - Quota needs to be updated to continue syncing at your current rate
+- **Table was not found in location {region} Location**
+  - Verify table is in the specified project and dataset
+- **Invalid JWT Signature**
+  - Make sure that the BigQuery API service is enabled on your account
+{% endtab %}
+{% tab Databricks %}
+- **Command failed because warehouse was stopped**
+  - Ensure Databricks warehouse is running
+- **Service: Amazon S3; Status Code: 403; Error Code: 403 Forbidden**
+  - [Follow instructions in the Databricks knowledge base](https://kb.databricks.com/security/forbidden-access-to-s3-data)
+{% endtab %}
+{% endtabs %}
+
+- **Test Connection runs slow**
+  - Test Connection is running on your data warehouse. Increasing warehouse capcity could help speed it up.  For Databricks, there may be two to five minutes of warm-up time when Braze connects to Classic and Pro SQL instances, which will lead to delays during connection setup and testing, as well as at the beginning of scheduled syncs. Using a serverless SQL instance will minimize warmup time and improve query throughput, but may result in slightly higher integration costs.
+
+
 ### How can I update my email alert preferences for CDI integrations?
 Each integration has its own notification preference. Go to the CDI page and select the integration name you want to update. In the **Notification preferences** section you can update how you receive alerts regarding the selected integration.
 
