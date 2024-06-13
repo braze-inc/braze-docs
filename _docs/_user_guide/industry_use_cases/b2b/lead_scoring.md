@@ -1,15 +1,20 @@
 ---
 nav_title: Lead Scoring
-article_title: Creating a Lead-scoring Canvas
+article_title: Creating a Lead-scoring Workflow
 description: "Learn how to use Braze to do simple lead scoring, external lead scoring, and lead handoffs."
 ---
 
-# Creating a lead-scoring Canvas
+# Creating a lead-scoring workflow
 
-> This use case demonstrates how you can use Braze to update user lead scores in real-time through Canvases, external lead-scoring partners, or your own internal data models. It also shows how you can use webhook campaigns to automatically handoff leads to your Sales teams.
+> This use case demonstrates how you can use Braze to update user lead scores in real-time and automatically handoff leads to your Sales teams.
 
+There are two key steps to creating a lead-scoring workflow in Braze:
+
+1. Create a lead-scoring Canvas in Braze or integrate an external lead-scoring tool:
 - [Simple lead scoring](#simple-lead-scoring)
 - [External lead scoring](#external-lead-scoring)
+
+2. Create a webhook campaign to send qualified leads to your Sales team:
 - [Lead handoff: Marketing Qualified Lead (MQL) to Sales](#lead-handoff)
 
 ## Simple lead scoring
@@ -18,7 +23,7 @@ description: "Learn how to use Braze to do simple lead scoring, external lead sc
 
 1. Go to **Messaging** > **Canvas** and select **Create Canvas**, and then fill in your Canvas basics.
 
-2. Give your Canvas a relevant name such as “Lead Scoring Canvas” and, for better findability, tag it with something like “Lead Management”.<br><br>![Step 1 of creating a Canvas with the name “Lead Scoring Canvas” and tag “Lead Management”.][]
+2. Give your Canvas a relevant name such as “Lead Scoring Canvas” and, for better findability, tag it with something like “Lead Management”.<br><br>![Step 1 of creating a Canvas with the name “Lead Scoring Canvas” and tag “Lead Management”.][1]{: style="max-width:80%;"}
 
 ### Step 2: Set up your entry criteria
 
@@ -27,7 +32,7 @@ description: "Learn how to use Braze to do simple lead scoring, external lead sc
 2. In **Action-Based Options**, add these two actions:
     - **Change Custom Attribute Value** with the name of your lead scoring attribute (such as “lead score”). If you haven’t created a lead scoring attribute yet, follow the steps in [Custom attributes]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/). This will enter users into the Canvas whenever their lead score changes.
 
-![Step 2 of creating a Canvas with the entry schedule of “Action-Based” and action-based options of changing a custom attribute “lead score” and adding an email address.][]
+![Step 2 of creating a Canvas with the entry schedule of “Action-Based” and action-based options of changing a custom attribute “lead score” and adding an email address.][2]{: style="max-width:80%;"}
 
 ### Step 3: Identify your target audience
 
@@ -35,7 +40,7 @@ description: "Learn how to use Braze to do simple lead scoring, external lead sc
 
 All users are eligible for lead scoring, so you can add company-specific rules about who to score by selecting which user [segments]({{site.baseurl}}/user_guide/engagement_tools/segments/) to target and applying additional [filters]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/). For example, you can exclude employees, users who are already customers, and similar. 
 
-![Step 3 of creating a Canvas with options for selecting segments and filters to narrow down the entry audience.][]
+![Step 3 of creating a Canvas with options for selecting segments and filters to narrow down the entry audience.][3]{: style="max-width:80%;"}
 
 #### Step 3b: Set Canvas re-eligibilty
 
@@ -46,7 +51,7 @@ In **Entry Controls**, do the following:
 - Select **Specified Window**.
 - Set the re-eligibility to “0” **seconds**.
 
-![“Entry Controls” section that has selections for “Allow users to re-enter this Canvas” in a “Specified Window” of 0 seconds.][] 
+![“Entry Controls” section that has selections for “Allow users to re-enter this Canvas” in a “Specified Window” of 0 seconds.][4]{: style="max-width:80%;"}
 
 #### Step 3c: Update send settings
 
@@ -54,7 +59,7 @@ Given the operational nature of this Canvas, and the fact that no messages will 
 
 Under **Subscription Settings**, for **Send to these users:** select **all users including unsubscribed users**. 
 
-![Step 4 of creating a Canvas for setting message sending options.][]
+![Step 4 of creating a Canvas for setting message sending options.][5]{: style="max-width:80%;"}
 
 ### Step 4: Build your Canvas
 
@@ -62,7 +67,7 @@ Under **Subscription Settings**, for **Send to these users:** select **all users
 
 Under your variant, select the plus icon and then select **Action Paths**.
 
-![Canvas with “Action Paths” displaying in the menu opened by the plus icon.][]
+![Canvas with “Action Paths” displaying in the menu opened by the plus icon.][6]{: style="max-width:60%;"}
 
 #### Step 4b: Create Action Groups
 
@@ -74,19 +79,19 @@ Add the following groups to your Action Path:
 - **Group 3:** All events that count for a 1 point decrement.
 - **Everyone Else:** Action Paths allow you to define the window to wait and see if a user takes an action, before dropping them into an “everyone else” group. For lead scoring, this is an opportunity to decrement the score for “inactivity”.
 
-![Action Path containing Action Groups for adding one point, five poins, and ten points; subtracting one point and ten points; and “Everyone Else”.][]
+![Action Path containing Action Groups for adding one point, five poins, and ten points; subtracting one point and ten points; and “Everyone Else”.][7]
 
 #### Step 4c: Configure each group to include the relevant events
 
 In each Action Group, select **Select trigger** and choose the event that will add the number of points for that particular action group. Add more triggers to include all the events that will increment the lead score by one. For example, a user could increment their score by one when they start a session in any app or perform a custom event (such as registering or joining a webinar). 
 
-![Action Group for adding a point with the triggers of “Starting Session in Any App” and “Performing Custom Event”.][]
+![Action Group for adding a point with the triggers of “Starting Session in Any App” and “Performing Custom Event”.][8]{: style="max-width:80%;"}
 
 #### Step 4d: Add User Update steps
 
 Add a User Update step to each Canvas path created below your Action Path. 
 
-![Canvas displaying the Action Path with branched User Update paths for each Action Group.][]
+![Canvas displaying the Action Path with branched User Update paths for each Action Group.][9]{: style="max-width:80%;"}
 
 {: start=”2”}
 In each User Update step’s **Compose** tab, do the following for the respective fields:
@@ -150,7 +155,7 @@ To update the lead record in Salesforce with the lead status from Braze, we reco
 
 1. Give your webhook campaign a name, such as “Salesforce > Update lead to MQL”.
 
-2. Enter your webhook URL in the format of `https://YOUR_SALESFORCE_INSTANCE.my.salesforce.com/services/data/v60.0/sobjects/Lead/{{${user_id}}}`. The Braze user ID of {% raw %}`{{$user_id}}}`{% endraw %} should match your Salesforce contact ID. If not, use an alias instead of {% raw %}`{{$user_id}}}`{% endraw %}.
+2. Enter your webhook URL in the format of {% raw %}`https://YOUR_SALESFORCE_INSTANCE.my.salesforce.com/services/data/v60.0/sobjects/Lead/{{${user_id}}}`{% endraw %}. The Braze user ID of {% raw %}`{{$user_id}}}`{% endraw %} should match your Salesforce contact ID. If not, use an alias instead of {% raw %}`{{$user_id}}}`{% endraw %}.
 
 3. Update the **HTTP Method** to **PATCH**.
 
@@ -173,15 +178,15 @@ To update the lead record in Salesforce with the lead status from Braze, we reco
 
 | Header | Content |
 | --- | --- |
-| Authorization | {% raw %}`Bearer {{result.access_token}}`{% endraw %}. To retrieve a token, [configure a connected app for the OAuth 2.0 client credentials flow](https://help.salesforce.com/s/articleView?id=sf.connected_app_client_credentials_setup.htm&type=5) and then use Connected Content to retrieve the bearer from Salesforce: <br><br>{% raw %}{% connected_content https://[instance].my.salesforce.com/services/oauth2/token <br>:method post <br> :body client_id=[client_id]&client_secret=[client_secret]&grant_type=client_credentials <br>:save result %}{% endraw %} <br> Bearer {% raw %}{{result.access_token}}{% endraw %} |
+| Authorization | {% raw %}`Bearer {{result.access_token}}`{% endraw %}. To retrieve a token, [configure a connected app for the OAuth 2.0 client credentials flow](https://help.salesforce.com/s/articleView?id=sf.connected_app_client_credentials_setup.htm&type=5) and then use Connected Content to retrieve the bearer from Salesforce: <br><br>{% raw %}<code>{% connected_content https://[instance].my.salesforce.com/services/oauth2/token <br>:method post <br> :body client_id=[client_id]&client_secret=[client_secret]&grant_type=client_credentials <br>:save result %}{% endraw %} <br> Bearer {% raw %}{{result.access_token}}</code>{% endraw %} |
 | Content_Type | application/json |
 {: .reset-td-br-1 reset-td-br-2}
 
-![Webhook being composed with a Salesforce webhook URL, PATCH HTTP method, raw text request body, and request headers.][]
+![Webhook being composed with a Salesforce webhook URL, PATCH HTTP method, raw text request body, and request headers.][10]{: style="max-width:80%;"}
 
 #### Step 2b: Schedule webhook sends
 
-You’ll want the campaign to trigger anytime the user’s lead score changes. You set the threshold in the message body, so while this will trigger for any user whose score changes, only users who aren’t currently MQL and have crossed the threshold []
+You’ll want the campaign to trigger anytime the user’s lead score changes. This campaign will trigger for any user whose score changes, but it will only affect users who aren't currently an MQL and have crossed the threshold you set in the previous step.
 
 In the **Schedule Delivery** step, select the following:
 - An **Action-Based** delivery type
@@ -191,8 +196,20 @@ In the **Schedule Delivery** step, select the following:
 
 In the **Target Audiences** step, add an additional filter that doesn’t include users in the MQL stage or further.
 
-![Webhook targeting options with the filter of “lead_status” does not equal “MQL”.][]
+![Webhook targeting options with the filter of “lead_status” does not equal “MQL”.][11]{: style="max-width:80%;"}
 
 ### Step 3: Launch campaign
 
 Select **Launch** and watch your lead status change in Salesforce as your customers cross the MQL lead score threshold.
+
+[1]: {% image_buster /assets/img/b2b/step_1_simple.png %}
+[2]: {% image_buster /assets/img/b2b/step_2_simple.png %}
+[3]: {% image_buster /assets/img/b2b/step_3_simple.png %}
+[4]: {% image_buster /assets/img/b2b/entry_controls_simple.png %}
+[5]: {% image_buster /assets/img/b2b/step_4_simple.png %}
+[6]: {% image_buster /assets/img/b2b/action_paths_simple.png %}
+[7]: {% image_buster /assets/img/b2b/action_paths_selected_simple.png %}
+[8]: {% image_buster /assets/img/b2b/action_groups_simple.png %}
+[9]: {% image_buster /assets/img/b2b/user_update_paths_simple.png %}
+[10]: {% image_buster /assets/img/b2b/webhook.png %}
+[11]: {% image_buster /assets/img/b2b/step_3_webhook.png %}
