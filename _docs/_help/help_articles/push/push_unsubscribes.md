@@ -8,14 +8,16 @@ channel: push
 
 # Tracking push unsubscribes
 
-Push unsubscribes are dependent on when there's an update to a user's push status from, for example, Apple or Google. This means push unsubscribes are not included as a metric in push campaign analytics.
+Push unsubscribes depend on updates to a user’s push status from providers like Apple or Google. These updates can be infrequent and unpredictable. As a result, push unsubscribes are not included as a metric in push campaign analytics. 
+
+However, manually tracking push unsubscribes can still provide valuable insights into user responses to your notification frequency and content relevance. Here's are two options for tracking push unsubscribes.
 
 ## Option 1: Use segment filters
 
 As a workaround, you can create a segment to identify users who aren't push enabled, meaning they're not subscribed or opted-in and don't have a [foreground push token]({{site.baseurl}}/user_guide/message_building_by_channel/push/push_registration/#push-tokens). For example, to see the number of unsubscribes in your Android app, you would use the combination of the following segments: 
 
-- Background or Foreground Push Enabled for App is false
-- Has uninstalled
+- `Background or Foreground Push Enabled for App "TEST (Android)" is false`
+- `Has Uninstalled`
 
 ![The Segment Builder section with the filter "Background or Foreground Push Enabled for App" for the TEST (Android) app is false, and the filter "Has Uninstalled" are selected to show 2,393 reachable users.]({% image_buster /assets/img/push_unsub_segment_example.png %})
 
