@@ -524,7 +524,7 @@ video_source: youtube
 {% endtab %}
 {% endtabs %}
 
-## Collapsible Content Test {#collapsible-content}
+## Collapsible Content Test
 {% tabs %}
 {% tab Styling %}
 {% details Click me to Expand %}

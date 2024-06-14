@@ -1103,7 +1103,6 @@ validurls['/docs/help/help_articles/docs/contribution'] = '/docs/contributing/ho
 validurls['/docs/hidden/wip_partnerships/wip_guidelines'] = '/docs/contributing/home/';
 validurls['/docs/hidden/wip_partnerships/partnership_template'] = '/docs/contributing/templates/#technology-partner';
 validurls['/docs/help/help_articles/docs/contribution/'] = '/docs/contributing/home/';
-validurls['/docs/contributing/templates/'] = '/docs/contributing/page_types/';
 
 validurls['/docs/user_guide/administrative/app_settings/manage_your_braze_users/deleting_users_from_your_account/#deleting-braze-account-users'] = '/docs/user_guide/administrative/app_settings/manage_your_braze_users/adding_users_to_your_dashboard/#deleting-braze-users';
 
@@ -1131,6 +1130,16 @@ validurls['/docs/idle_campaigns/'] = '/docs/idle_campaigns_canvases/';
 validurls['/docs/one-click_unsubscribe/'] = '/docs/user_guide/administrative/app_settings/email_settings/';
 
 validurls['/docs/back_in_stock/'] = '/docs/user_guide/personalization_and_dynamic_content/catalogs/back_in_stock_notifications/';
+
+validurls['/docs/hidden/archive_docs/ios_14/'] = '/docs/developer_guide/platform_integration_guides/swift/archived_updates/ios_14/';
+validurls['/docs/hidden/archive_docs/ios_15/'] = '/docs/developer_guide/platform_integration_guides/swift/archived_updates/ios_15/';
+validurls['/docs/developer_guide/platform_integration_guides/legacy_sdks/ios/ios_16/'] = '/docs/developer_guide/platform_integration_guides/swift/archived_updates/ios_16/';
+validurls['/docs/developer_guide/platform_integration_guides/swift/ios_17/'] = '/docs/developer_guide/platform_integration_guides/swift/archived_updates/ios_17/';
+
+validurls['/docs/developer_guide/platform_integration_guides/legacy_sdks/tvos/in-app_messaging/'] = '/docs/developer_guide/platform_integration_guides/swift/in-app_messaging/customization/tvos/';
+validurls['/docs/developer_guide/platform_integration_guides/legacy_sdks/tvos/content_cards/'] = '/docs/developer_guide/platform_integration_guides/swift/content_cards/tvos/';
+validurls['/docs/developer_guide/platform_integration_guides/tvos/in-app_messaging/'] = '/docs/developer_guide/platform_integration_guides/swift/in-app_messaging/customization/tvos/';
+validurls['/docs/developer_guide/platform_integration_guides/tvos/content_cards/'] = '/docs/developer_guide/platform_integration_guides/swift/content_cards/tvos/';
 
 validurls['/docs/engagement_by_device/'] = '/docs/user_guide/data_and_analytics/analytics/email_performance_dashboard/#engagement-by-device/';
 
