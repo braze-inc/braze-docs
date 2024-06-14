@@ -22,12 +22,6 @@ You can customize your revenue report by selecting a date range, the apps to rep
 
 ![The "Revenue Report" page showing the "Performance Over Time" graph with "Revenue" set as the parameter.][1]
 
-### Understanding the revenue graphs
-
-'Lifetime revenue' is calculated by the total PurchaseEvents 'price' value (in $USD) received since inception. 'Lifetime value per user' is the 'Lifetime revenue' divided by your total 'Users' located in the top left of your Home Dashboard page.
-
-Once you have defined your Revenue Report date range, you can review the 'Average Daily revenue' (de-duplicated from Campaigns and Canvases), 'Average Daily purchases' (calculated by total unique PurchaseEvents received each day), and 'Daily revenue per Daily Active User'.
-
 ### Filtering by date and apps
 
 Select the date range for your revenue report and, if you like, a specific app or selection of apps.
@@ -46,6 +40,14 @@ You can view the following data in the **Performance Over Time Graph**:
 - Revenue per Hour
     - (Optional) Revenue per Hour By Segment
 - Revenue per User
+
+## Understanding revenue calculations
+
+- *Lifetime revenue* is the total `PurchaseEvents` `price` value (in USD) received since inception. 
+- *Lifetime value per user* is the *Lifetime revenue* divided by your total *Users* (located on your **Home** page).
+- Average *Daily revenue* is de-duplicated from campaigns and Canvases.
+- Average *Daily Purchases* is the total unique `PurchaseEvents` received each day.
+- *Daily revenue per user* is the average daily revenue per daily active user.
 
 ## Viewing the product breakdown
 
