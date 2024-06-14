@@ -79,9 +79,9 @@ To keep a campaign or Canvas active, update the campaign or Canvas so it does no
 
 | Reason for idle status                                                                               | Steps to make Canvas active                   |
 |------------------------------------------------------------------------------------------------------|-----------------------------------------------|
-| Action-based Canvases with end dates seven days and maximum duration after the end date              | Extend the end date                           |
-| Scheduled Canvases with end dates seven days and maximum duration after the end date                 | Extend the end date                           |
-| Scheduled one-time send Canvases with end dates seven days and maximum duration after the end date   | Schedule a future send                        |
+| Action-based Canvases that are set to end seven days after the initial end date and maximum duration after initial end date              | Extend the end date                           |
+| Scheduled Canvases that are set to end seven days after the initial end date and maximum duration after initial end date                 | Extend the end date                           |
+| Scheduled one-time send Canvases that are set to end seven days after the initial end date and maximum duration after initial end date   | Schedule a future send                        |
 | Action-based Canvases without end dates that have not entered users in one year and maximum duration | Enter one user or make any edit to the Canvas |
 | Scheduled Canvases (without end dates) that have not entered users in one year and maximum duration  | Enter one user or make any edit to the Canvas |
 | API-triggered Canvases that have not sent entered users in one year                                  | Enter one user or make any edit to the Canvas |
