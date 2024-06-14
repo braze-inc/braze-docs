@@ -38,11 +38,7 @@ Customers using the API for server-to-server calls may need to allowlist `rest.i
 
 ## Rate limit
 
-We apply a base speed limit of 500 requests per minute to this endpoint for all customers. Each `/users/sync/track/` request can contain up to one event object, one attribute object, or one purchase object. Each object (event, attribute, and purchase arrays) can update one user each.
-
-{% alert note %}
-Reach out to your customer success manager if you need your limit increased.
-{% endalert %}
+We apply a base speed limit of 500 requests per minute to this endpoint for all customers. Each `/users/track/sync` request can contain up to one event object, one attribute object, or one purchase object. Each object (event, attribute, and purchase arrays) can update one user each.
 
 ## Request body
 
