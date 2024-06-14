@@ -73,11 +73,16 @@ The following new array and math filters are available for use in your Liquid as
 
 Refer to our [Filters]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/filters/) article for definitions.
 
-### Liquid highlights
+### Liquid updates
 
-Each Liquid element corresponds to a color, allowing you to differentiate your Liquid at-a-glance as your build your personalized messages. This appears in any Liquid editor.
+Each Liquid element corresponds to a color, allowing you to differentiate your Liquid at-a-glance in your Liquid editor.
 
 ![]({% image_buster /assets/img/liquid_color_code.png %})
+
+You can also leverage predicative Liquid for custom attributes, attribute names, and more as you build your personalized messages.
+
+![]({% image_buster /assets/img/liquid_auto_complete.gif %})
+
 
 ## Terms to know
 
