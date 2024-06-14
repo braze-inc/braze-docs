@@ -497,10 +497,29 @@ $(document).ready(function() {
     else if ($(this).has('div').length >0 ) {
       tofilter = false;
     }
-    return tofilter
-  }).wrap('<span class="external-inline">');
-  $('span.external-inline').each(function( ind, val) {
-    $(this).append(' <i class="fas fa-external-link-alt"></i>');
+
+    if (tofilter){
+      var punctuations = ['.','!','?'];
+      var has_punchtuation = false;
+      var punctuation = null;
+      if ($(this)[0]) {
+        if ($(this)[0].nextSibling){
+          punctuation = $(this)[0].nextSibling.nodeValue.substr(0,1);
+          if (punctuations.includes(punctuation)) {
+            $(this)[0].nextSibling.remove();
+            has_punchtuation = true;
+          }
+        }
+      }
+
+      $(this).wrap('<span class="external-inline">');
+
+      if (has_punchtuation){
+        $(this).after(punctuation);
+      }
+      $(this).after(' <i class="fas fa-external-link-alt"></i>');
+    }
+
   });
   $('.highlight .highlight .rouge-code pre').each(function(k) {
     $this = $(this);
