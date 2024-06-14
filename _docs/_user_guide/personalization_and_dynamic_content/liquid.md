@@ -81,7 +81,7 @@ Each Liquid element corresponds to a color, allowing you to differentiate your L
 
 You can also leverage predicative Liquid for custom attributes, attribute names, and more as you build your personalized messages.
 
-![]({% image_buster /assets/img/liquid_auto_complete.gif %}){: style="max-width=70%;"}
+![]({% image_buster /assets/img/liquid_auto_complete.gif %}){: style="max-width:70%;"}
 
 
 ## Terms to know
