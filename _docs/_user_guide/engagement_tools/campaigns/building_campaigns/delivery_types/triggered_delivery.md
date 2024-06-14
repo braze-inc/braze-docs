@@ -149,7 +149,7 @@ In addition, when creating welcome campaigns, you can trigger messages to send a
 Any of these things will prevent a user who has completed the trigger event from receiving the campaign:
 
 - The user completed the exception event before the time delay had fully elapsed.
-- [`abort_message logic`]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/aborting_messages) was used and the message was aborted based on the `abort_message` logic or rules.
+- Liquid [`abort_message` logic]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/aborting_messages)  was used and the message was aborted based on the `abort_message` logic or rules.
 - The time delay caused the user to become qualified to receive the campaign after the duration has ended.
 - The time delay caused the user to become qualified to receive the campaign outside of the specified portion of the day.
 - The user has already received the campaign, and users do not become re-eligible.
