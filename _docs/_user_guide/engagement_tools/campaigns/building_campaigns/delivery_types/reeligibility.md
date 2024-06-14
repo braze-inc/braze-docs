@@ -12,7 +12,7 @@ tool:
 
 # Re-eligibility with campaigns and Canvas
 
-> Whenever you schedule a recurring or triggered campaign or Canvas, you have the option of allowing users to become re-eligible for it. By default, Braze sends a message to a user only once, even if they re-qualify. 
+> Whenever you schedule a recurring or triggered Campaign or Canvas, you have the option of allowing users to become re-eligible for it (so that they can fall into the Campaign or Canvas multiple times based on the trigger). By default, Braze sends a message to a user only once, even if they re-qualify multiple times - as re-eligibility isn't toggled on by default. 
 
 If you enable re-eligibility, you are overriding this default behavior and allowing qualified members to receive messages again after they've received the first instance of the campaign or Canvas. You can state the timeline on which users would ultimately become re-eligible.
 
@@ -34,7 +34,7 @@ To enable re-eligibility for a campaign, select the **Allow users to become re-e
 
 ![][1]
 
-In the case of triggered campaigns with re-eligibility turned on, users who [did not actually receive the campaign]({{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/triggered_delivery/#why-did-a-user-not-receive-my-triggered-campaign) (despite completing the trigger event) will automatically qualify for the message the next time they complete the trigger event, even if you did not make users re-eligible. By making users re-eligible for a triggered campaign, you are enabling them to actually receive (and not simply trigger) the message more than once.
+In the case of triggered campaigns with re-eligibility turned on, users who [did not actually receive the campaign message]({{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/triggered_delivery/#why-did-a-user-not-receive-my-triggered-campaign) (despite completing the trigger event) will automatically qualify for the message the next time they complete the trigger event, even if you did not make users re-eligible. This is because re-elibility is based on message receipt and not Campaign entry. By making users re-eligible for a triggered campaign, you are enabling them to actually receive (and not simply trigger) the message more than once.
 
 Additionally, if you are trying to send a message immediately with a re-eligibility of zero minutes, we will always attempt to schedule it right away regardless of how a user has received previous versions of the campaign or Canvas.
 
