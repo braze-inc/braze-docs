@@ -484,21 +484,24 @@ $(document).ready(function() {
   };
 
   var external_ignore = ['braze.statuspage.io','www.braze.com']
-  var links = $('#main_content a').filter(function() {
-     var tofilter = this.hostname && this.hostname !== location.hostname && this.text && external_ignore.indexOf(this.hostname) < 0 ;
-     if ($(this).hasClass('extignore')) {
+  $('#main_content a').filter(function() {
+    var tofilter = this.hostname && this.hostname !== location.hostname && this.text && external_ignore.indexOf(this.hostname) < 0 ;
+    if ($(this).hasClass('extignore')) {
+      tofilter = false;
+    }
+    else if ($(this).has('img').length > 0) {
+      if ($(this).has('img')[0].childNodes.length > 0) {
        tofilter = false;
-     }
-     else if ($(this).has('img').length > 0) {
-       if ($(this).has('img')[0].childNodes.length > 0) {
-         tofilter = false;
-       }
-     }
-     else if ($(this).has('div').length >0 ) {
-        tofilter = false;
-     }
-     return tofilter
-  }).after(' <i class="fas fa-external-link-alt"></i>')
+      }
+    }
+    else if ($(this).has('div').length >0 ) {
+      tofilter = false;
+    }
+    return tofilter
+  }).wrap('<span class="external-inline">');
+  $('span.external-inline').each(function( ind, val) {
+    $(this).append(' <i class="fas fa-external-link-alt"></i>');
+  });
   $('.highlight .highlight .rouge-code pre').each(function(k) {
     $this = $(this);
     if ($this.html().length > 120) {
