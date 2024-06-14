@@ -485,41 +485,42 @@ $(document).ready(function() {
 
   var external_ignore = ['braze.statuspage.io','www.braze.com']
   $('#main_content a').filter(function() {
-    var tofilter = this.hostname && this.hostname !== location.hostname && this.text && external_ignore.indexOf(this.hostname) < 0 ;
+    var is_external = this.hostname && this.hostname !== location.hostname && this.text && external_ignore.indexOf(this.hostname) < 0 ;
     if ($(this).hasClass('extignore')) {
-      tofilter = false;
+      is_external = false;
     }
     else if ($(this).has('img').length > 0) {
       if ($(this).has('img')[0].childNodes.length > 0) {
-       tofilter = false;
+       is_external = false;
       }
     }
     else if ($(this).has('div').length >0 ) {
-      tofilter = false;
+      is_external = false;
     }
 
-    if (tofilter){
-      var punctuations = ['.','!','?'];
-      var has_punchtuation = false;
-      var punctuation = null;
-      if ($(this)[0]) {
-        if ($(this)[0].nextSibling){
-          punctuation = $(this)[0].nextSibling.nodeValue.substr(0,1);
-          if (punctuations.includes(punctuation)) {
-            $(this)[0].nextSibling.remove();
-            has_punchtuation = true;
-          }
+    var punctuations = ['.','!','?'];
+    var has_punchtuation = false;
+    var punctuation = null;
+    if ($(this)[0]) {
+      if ($(this)[0].nextSibling){
+        punctuation = $(this)[0].nextSibling.nodeValue.substr(0,1);
+        if (punctuations.includes(punctuation)) {
+          $(this)[0].nextSibling.remove();
+          has_punchtuation = true;
         }
       }
-
-      $(this).wrap('<span class="external-inline">');
-
-      if (has_punchtuation){
-        $(this).after(punctuation);
-      }
-      $(this).after(' <i class="fas fa-external-link-alt"></i>');
     }
 
+    if (is_external || has_punchtuation){
+      $(this).wrap('<span class="inline-link">');
+    }
+
+    if (has_punchtuation){
+      $(this).after(punctuation);
+    }
+    if (is_external){
+      $(this).after(' <i class="fas fa-external-link-alt"></i>');
+    }
   });
   $('.highlight .highlight .rouge-code pre').each(function(k) {
     $this = $(this);
