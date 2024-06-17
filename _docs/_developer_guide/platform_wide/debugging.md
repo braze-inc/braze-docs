@@ -49,7 +49,9 @@ When you're ready to start your debugging session for the selected user, select 
 
 Open your app, then follow the reproduction steps for your error.
 
-When reproducing your errors during a debugging session, ensure that you are taking all possible steps possible to capture relevant log data. For example, if an IAM is failing to display after attempting to trigger “custom_event_a” but it is being triggered properly after logging “custom_event_b”, you should attempt to log both events when reproducing the error. This will give our support team a more complete picture of your integration as a whole.
+{% alert tip %}
+When you are reproducing the error, be sure to follow the reproduction steps as closely as possible so your [debug logs](#step-6-export-your-session-logs-optional) are as helpful as possible.
+{% endalert %}
 
 ![Image of modal of debug in progress.]()
 
@@ -61,15 +63,15 @@ When you're finished with your reproduction steps, select **TODO**.
 
 ### Step 6: Export your session logs (optional)
 
-After your session, you can export your session logs.
+After your session, you can export your session logs as a CSV file.
 
 ![Image of where to download S3 file in table view.]()
 
 {% alert note %}
-Sometimes logs may take more than a minute to download due to size of the logs (from replication of the issue) or network connectivity. Once logs are available, you will be able to download them as a CSV file to review and/or send to our support team.
+It may take a few minutes to generate your logs depending on your session length and network connectivity.
 {% endalert %}
 
-### Step 6: Share your session ID (optional)
+### Step 7: Share your session ID (optional)
 
 After your session, you can copy and share your session ID to others so they can export the session logs.
 
