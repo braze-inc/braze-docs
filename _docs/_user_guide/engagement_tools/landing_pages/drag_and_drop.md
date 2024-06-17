@@ -4,6 +4,7 @@ article_title: Creating Drag-and-Drop Landing Pages
 description: "This article covers how to create and customize Braze landing pages with the drag-and-drop editor."
 page_order: 31
 hidden: true
+alias: /landing_pages/drag_and_drop/
 ---
 
 # Drag-and-drop landing pages
@@ -34,13 +35,13 @@ Set up metatags to customize how your page appears on the browser tab and optimi
 
 We suggest following these best practices:
 
-| Detail | Best practice |
+| Detail | Description | Recommendations |
 | --- | --- |
-| Site title | Use a maximum of 60 characters. |
-| Site description | Stay between 140-160 characters.|
-| Favicon | Use an aspect ratio of 1:1, and the supported file types of PNG, JPEG, or ICO. |
-| URL handle | This is the link users will click to navigate to your landing page. It must be unique. |
-{: .reset-td-br-1 .reset-td-br-2}
+| Site title | The title that displays on the brower tab. | Use a maximum of 60 characters. |
+| Site description | A text snippet that displays in search results. | Use between 140-160 characters.|
+| Favicon | The icon that appears next to the site title on the browser tab. | Use an aspect ratio of 1:1, and a supported file type of PNG, JPEG, or ICO. |
+| URL handle | This is the link users will click to navigate to your landing page. | This must be unique. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 {% alert note %}
 Custom subdomain support is not available during the beta.
@@ -51,6 +52,8 @@ Custom subdomain support is not available during the beta.
 ### Step 3: Customize your landing page
 
 Select **Launch Editor** to start designing your landing page in the drag-and-drop editor. The editor will preload with a default template that you can customize to fit your use case.
+
+![Landing page template with a form for customer sign-up.][8]{: style="max-width:70%;"}
 
 #### Drag-and-drop blocks
 
@@ -92,9 +95,11 @@ If you include a [form](#form-block) on your landing page, don't forget to creat
 
 In beta, you can include a link to the landing page in any channel by copying and pasting the link into a Braze message or social media campaign.
 
-## Handling user errors
+## Handling form submission errors
 
 If an error occurs when a user submits a form on a landing page, they'll be presented with a default error message that can't be customized or styled in the editor.
+
+## Merging users created from your landing page
 
 ## Considerations
 
@@ -104,7 +109,11 @@ If an error occurs when a user submits a form on a landing page, they'll be pres
 
 ### What happens when a user submits their information on the landing page?
 
-When a user submits their information, 
+When a user submits a form, a new Braze user profile is created with the submitted user data.
+
+{% alert note %}
+During the beta, Braze will create a new user with each form submission regardless of where the user clicks on the landing page from.
+{% endalert %}
 
 ### Are there any technical requirements to publish a landing page?
 
@@ -125,3 +134,4 @@ No, this isn't currently available.
 [5]: {% image_buster /assets/img/landing_pages/form.png %}
 [6]: {% image_buster /assets/img/landing_pages/page_container.png %}
 [7]: {% image_buster /assets/img/landing_pages/url_handle.png %}
+[8]: {% image_buster /assets/img/landing_pages/template.png %}
