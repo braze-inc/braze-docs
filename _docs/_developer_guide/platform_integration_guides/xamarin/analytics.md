@@ -31,7 +31,7 @@ See the [Android integration instructions]({{site.baseurl}}/developer_guide/plat
 {% endtab %}
 {% tab iOS %}
 ```csharp
-Braze.SharedInstance.ChangeUser("user_id");
+App.braze?.ChangeUser("user_id");
 ```
 
 See the [iOS integration instructions]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/setting_user_ids/) for an in-depth discussion of when and how to set and change a user ID.
@@ -54,7 +54,7 @@ See the [Android integration instructions]({{site.baseurl}}/developer_guide/plat
 {% endtab %}
 {% tab iOS %}
 ```csharp
-Braze.SharedInstance.LogCustomEvent("event_name");
+App.braze?.LogCustomEvent("event_name");
 ```
 
 See the [iOS integration instructions]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/tracking_custom_events/) for an in-depth discussion of event tracking best practices and interfaces.
@@ -79,7 +79,7 @@ See the [Android integration instructions]({{site.baseurl}}/developer_guide/plat
 {% endtab %}
 {% tab iOS %}
 ```csharp
-Braze.SharedInstance.LogPurchase("product_id", "USD", new NSDecimalNumber("10"));
+App.braze?.LogPurchase("product_id", "USD", new NSDecimalNumber("3.50"));
 ```
 
 See the [iOS integration instructions]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/logging_purchases/) for an in-depth discussion of revenue tracking best practices and interfaces.
@@ -120,7 +120,7 @@ Braze.GetInstance(this).CurrentUser.SetFirstName("first_name");
 {% tab iOS %}
 
 ```csharp
-Braze.SharedInstance.User.FirstName = "first_name";
+App.braze?.User.SetFirstName("first_name");
 ```
 
 {% endtab %}
@@ -153,7 +153,7 @@ See the [Android integration instructions]({{site.baseurl}}/developer_guide/plat
 {% tab iOS %}
 
 ```csharp
-Braze.SharedInstance.User.SetCustomAttributeWithKey("custom_attribute_key", true);
+App.braze?.User.SetCustomAttributeWithKey("custom_attribute_key", true);
 ```
 
 See the [iOS integration instructions]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/setting_custom_attributes/) for an in-depth discussion of attribute tracking best practices and interfaces.
@@ -172,4 +172,4 @@ For a full example of logging and tracking analytics, refer to our [Android MAUI
 [2]: http://developer.xamarin.com/guides/cross-platform/application_fundamentals/backgrounding/part_4_ios_backgrounding_walkthroughs/location_walkthrough/
 [3]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/advanced_use_cases/locations_and_geofences/
 [4]: https://github.com/braze-inc/braze-xamarin-sdk/blob/master/appboy-component/samples/android-net-maui/BrazeAndroidMauiSampleApp/BrazeAndroidMauiSampleApp/MainActivity.cs
-[5]: https://github.com/braze-inc/braze-xamarin-sdk/blob/master/appboy-component/samples/ios-net-maui/BrazeiOSMauiCompatSampleApp/BrazeiOSMauiCompatSampleApp/MainPage.xaml.cs
+[5]: https://github.com/braze-inc/braze-xamarin-sdk/blob/master/appboy-component/samples/ios-net-maui/BrazeiOSMauiSampleApp/BrazeiOSMauiSampleApp/MainPage.xaml.cs

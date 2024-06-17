@@ -17,7 +17,7 @@ description: "This reference article covers Content Card implementation guidelin
 
 The Braze SDKs include a default card feed to get you started with Content Cards. The default card feed included with the Braze SDK will handle all analytics tracking, dismissals, and rendering for a user’s Content Cards.
 
-For information on how to integrate the Content Cards into your Xamarin Android app, see our [Android integration guide][1] and [iOS integration guide][2].
+For information on how to integrate the Content Cards into your Xamarin app, see our [Android integration guide][1] and [iOS integration guide][2].
 
 ## Content Card methods
 

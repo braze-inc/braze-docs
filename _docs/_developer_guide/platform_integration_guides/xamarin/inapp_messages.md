@@ -34,21 +34,6 @@ Then, register the `BrazeInAppMessageUI` as the in-app message presenter when se
 braze.InAppMessagePresenter = inAppMessageUI;
 ```
 
-#### Using a custom UI
-
-If you want to customize your in-app message UI instead of using Braze's default in-app message UI, implement the `ABKInAppMessageControllerDelegate` method:
-
-```csharp
-interface ABKInAppMessageControllerDelegate
-```
-
-Then, return your custom view controller:
-```csharp
-ABKInAppMessageViewController InAppMessageViewControllerWithInAppMessage(ABKInAppMessage inAppMessage);
-```
-
-That will make sure Braze passes you the in-app message object rather than displaying it for you. You will then have the option of displaying the in-app message object's content manually.
-
 ### Step 2: Create a new in-app message
 
 There are 4 in-app message types supported on the Xamarin SDK: `slideup`, `modal`, `full`, and `HTML`.
@@ -72,6 +57,6 @@ App.inAppMessageUI?.PresentMessage(slideup);
 See the [iOS integration instructions][1] for information on in-app best practices. Furthermore, you can look at the [iOS MAUI][2] sample application for implementation samples.
 
 [1]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/in-app_messaging/overview/
-[2]: https://github.com/braze-inc/braze-xamarin-sdk/tree/694e81dec05537f9ba82b8914d23c5c2381717fc/appboy-component/samples/ios-net-maui/BrazeiOSMauiCompatSampleApp
+[2]: https://github.com/braze-inc/braze-xamarin-sdk/tree/master/appboy-component/samples/ios-net-maui/BrazeiOSMauiSampleApp/BrazeiOSMauiSampleApp
 [11]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/in-app_messaging/overview/
-[12]: https://github.com/braze-inc/braze-xamarin-sdk/tree/master/appboy-component/samples
+[12]: https://github.com/braze-inc/braze-xamarin-sdk/tree/master/appboy-component/samples/android-net-maui/BrazeAndroidMauiSampleApp
