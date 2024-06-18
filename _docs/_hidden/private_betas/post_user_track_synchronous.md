@@ -283,9 +283,9 @@ Yes, as long as the requests are for different users, or each request updates di
 
 If you're sending multiple requests for a user, for the same attribute, event, or purchase, Braze recommends waiting for a successful response between each request to prevent race conditions from occurring.
 
-### Why does my response list a different custom attribute value than my original request?
+### Why doesn't the response value match the one in my original request?
 
-It’s possible that although your request is completed, it still did not update. This can happen when your custom attribute update exceeds the max number of characters, exceeds array limits, or if the user does not exist in Braze and you have `_update_existing_only = true`.
+Although your request is completed, it's possible your custom attribute value didn't update. This can happen when your custom attribute update exceeds the max number of characters, exceeds array limits, or if the user does not exist in Braze and you have `_update_existing_only = true`.
 
 In these cases, treat the response as an indication that your request, while completed, your desired update has not been made. Troubleshoot with the reasons why this may happen from above.
 
