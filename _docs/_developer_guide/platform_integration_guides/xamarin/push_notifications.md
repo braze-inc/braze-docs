@@ -34,8 +34,6 @@ configuration.Push.Automation.RequestAuthorizationAtLaunch = false;
 ```
 Refer to the [iOS MAUI][4] sample application for more details. For more details, see the Xamarin documentation for [Enhanced User Notifications in Xamarin.iOS][5].
 
->  If you've implemented a custom push opt-in prompt, make sure that you're calling the preceding code EVERY time the app runs after they grant push permissions to your app. Apps need to re-register with APNs as device tokens can change arbitrarily.
-
 [1]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/integration/standard_integration/
 [2]: https://github.com/braze-inc/braze-xamarin-sdk/tree/master/appboy-component/samples/android-net-maui/BrazeAndroidMauiSampleApp/BrazeAndroidMauiSampleApp
 [3]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/integration
