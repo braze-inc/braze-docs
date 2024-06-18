@@ -273,11 +273,11 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/track/sync' 
 
 For most profile updates, the `/users/track` endpoint will work best because of its higher rate limit and flexibility to let you batch requests. However, the `/users/track/sync` endpoint is useful if you're experiencing race conditions due to rapid, consecutive requests for the same user.
 
-### Does response time differ from the `/users/track` endpoint?
+### Does the response time differ from the `/users/track` endpoint?
 
 With a synchronous call, the API waits until the request is completed to return a response. As a result, synchronous requests will take longer on average than asynchronous requests to `/users/track`. For the majority of requests, you can expect a response within seconds.
 
-### Can I send multiple requests to this endpoint at the same time?
+### Can I send multiple requests at the same time?
 
 Yes, as long as the requests are for different users, or each request updates different attributes, events, purchases for one user.
 
