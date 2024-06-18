@@ -14,7 +14,7 @@ tool:
 
 > Whenever you schedule a recurring or triggered campaign or Canvas, you have the option of allowing users to become re-eligible for it (so that users can enter the campaign or Canvas multiple times based on the trigger). By default, Braze sends a message to a user only once, even if they re-qualify multiple times—as re-eligibility needs to be turned on separately. 
 
-If you turn on re-eligibility, you are overriding this default behavior and allowing qualified members to receive messages again after they've received the first instance of the campaign or Canvas. You can state the timeline on which users would ultimately become re-eligible.
+If you turn on re-eligibility, you override this default behavior and allow qualified members to receive messages again after they've received the first instance of the campaign or Canvas. You can state the timeline on which users would ultimately become re-eligible.
 
 ## Canvas
 
