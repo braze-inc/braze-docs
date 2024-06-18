@@ -70,11 +70,11 @@ For each request component listed in the following table, one of `external_id`, 
 
 ## Responses
 
-When using any of the aforementioned API requests, you should receive one of the following two general responses: a successful message or a message with fatal errors.
+When using this endpoint's [request parameters](#request-parameters), you should receive one of the following responses: a successful message or a message with fatal errors.
 
 ### Successful message
 
-Successful messages will be met with the following response, which includes information about the user profile data that was updated.
+Successful messages will return the following response, which includes information about the user profile data that was updated.
 
 ```json
 {
@@ -269,15 +269,15 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/track/sync' 
 
 ## Frequently asked questions
 
-### In what instances should I use the asynchronous or synchronous endpoint?
+### Should I use the asynchronous or synchronous endpoint?
 
 For most profile updates, the `/users/track` endpoint will work best because of its higher rate limit and flexibility to let you batch requests. However, the `/users/track/sync` endpoint is useful if you're experiencing race conditions due to rapid, consecutive requests for the same user.
 
-### Does response time differ compared to the `/users/track` endpoint?
+### Does response time differ from the `/users/track` endpoint?
 
 With a synchronous call, the API waits until the request is completed to return a response. As a result, synchronous requests will take longer on average than asynchronous requests to `/users/track`. For the majority of requests, you can expect a response within seconds.
 
-### Can you send multiple requests to this endpoint at the same time?
+### Can I send multiple requests to this endpoint at the same time?
 
 Yes, as long as the requests are for different users, or each request updates different attributes, events, purchases for one user.
 
