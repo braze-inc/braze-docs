@@ -29,50 +29,34 @@ Before you start your session, close the app that's currently experiencing issue
 
 In Braze, go to **Settings**, then under **Setup and Testing**, select **SDK Debugger**.
 
-![ALT_TEXT]()
+![The "Setup and Testing" section with "SDK Debugger" highlighted.]({% image_buster /assets/img/sdk_debugger/select_sdk_debugger.png %})
 
 Select **Create debugging session**.
 
-![ALT_TEXT]()
- 
-Search for a user using their email address, `external_id`, user alias, or push token. When you're ready, select the user.
+![The "SDK Debugger" page.]({% image_buster /assets/img/sdk_debugger/select_create_debugging_session.png %})
 
-![Image of user search and selection.]()
+### Step 3: Select a user
 
-### Step 3: Start your session
+Search for a user using their email address, `external_id`, user alias, or push token. When you're ready to start your session, select **Select User**.
 
-When you're ready to start your debugging session for the selected user, select **Start Session**.
-
-![Image of modal of selected user to debug.]()
+![The debugging page for the selected user.]({% image_buster /assets/img/sdk_debugger/search_and_select_user.png %}){: style="max-width:85%;"}
 
 ### Step 4: Complete the reproduction steps
 
-Open your app, then follow the reproduction steps for your error.
-
-{% alert tip %}
-When you are reproducing the error, be sure to follow the reproduction steps as closely as possible so your [debug logs](#step-6-export-your-session-logs-optional) are as helpful as possible.
-{% endalert %}
-
-![Image of modal of debug in progress.]()
+Open your app, then follow the reproduction steps for your error. When you're reproducing the error, be sure to follow the reproduction steps as closely as possible, so you can create quality [debug logs](#step-6-export-your-session-logs-optional).
 
 ### Step 5: End your session
 
-When you're finished with your reproduction steps, select **TODO**.
+When you're finished with your reproduction steps, select **End Session** > **Close**.
 
-![Image of End Session button.]()
-
-### Step 6: Export your session logs (optional)
-
-After your session, you can export your session logs as a CSV file.
-
-![Image of where to download S3 file in table view.]()
+![The debugging session showing the "End Session" button.]({% image_buster /assets/img/sdk_debugger/close_debugging_session.png %}){: style="max-width:85%;"}
 
 {% alert note %}
 It may take a few minutes to generate your logs depending on your session length and network connectivity.
 {% endalert %}
 
-### Step 7: Share your session ID (optional)
+### Step 6: Share or export your session (optional)
 
-After your session, you can copy and share your session ID to others so they can export the session logs.
+After your session, you can export your session logs as a CSV file. Additionally, others can use your **Session ID** to search for your debug session, so you don't need to send them your logs directly.
 
-![Image of modal of Session ID for copy.]()
+![The debugging page with "Export Logs" and "Copy Session ID" shown after the session.]({% image_buster /assets/img/sdk_debugger/copy_id_and_export_logs.png %})
