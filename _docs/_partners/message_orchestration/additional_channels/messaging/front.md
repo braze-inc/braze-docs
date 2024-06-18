@@ -82,7 +82,7 @@ You can modify this template to meet your specific needs. For example, you can c
 
 ### Step 2: Create an outbound SMS campaign
 
-Next, you'll create an SMS campaign that will listen for webhooks from Front and template in the Front Agent’s response into an outbound SMS to the customer.
+Next, you'll create an SMS campaign that will listen for webhooks from Front and an custom SMS response to your customers.
 
 #### Step 2.1: Compose your message
 
