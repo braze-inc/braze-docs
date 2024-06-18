@@ -79,7 +79,7 @@ See the [Android integration instructions]({{site.baseurl}}/developer_guide/plat
 {% endtab %}
 {% tab iOS %}
 ```csharp
-App.braze?.LogPurchase("product_id", "USD", new NSDecimalNumber("3.50"));
+App.braze?.LogPurchase("product_id", "USD", 3.50);
 ```
 
 See the [iOS integration instructions]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/logging_purchases/) for an in-depth discussion of revenue tracking best practices and interfaces.
