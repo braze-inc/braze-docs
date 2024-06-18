@@ -48,7 +48,7 @@ braze-docs
 
 When linking to your new image, you can either use in-line or reference-style syntax. In-line syntax prioritizes clarity, while reference-style syntax prioritizes readability.
 
-{% tabs local %}
+{% tabs %}
 {% tab in-line %}
 In your Markdown file, link to your new image using the in-line syntax.
 
@@ -121,6 +121,36 @@ Your links should be similar to the following:
 {% raw %}
 ```markdown
 [10]: {% image_buster /assets/img/contributing/getting_started/github_pull_request.png %}
+```
+{% endraw %}
+{% endtab %}
+{% endtabs %}
+
+### Step 3: Set the image's max width (optional)
+
+You can set the image's max width by appending the following liquid code to your image link:
+
+{% raw %}
+```markdown
+{: style="max-width:NUMBER%;"}
+```
+{% endraw %}
+
+Replace `NUMBER` with the maximum width you'd like to set as a percentage. Your image link should be similar to the following:
+
+{% tabs %}
+{% tab in-line %}
+{% raw %}
+```markdown
+![The form for creating a new pull request on GitHub.]({% image_buster /assets/img/contributing/getting_started/github_pull_request.png %}){: style="max-width:65%;"}
+```
+{% endraw %}
+{% endtab %}
+
+{% tab reference-style %}
+{% raw %}
+```markdown
+![The form for creating a new pull request on GitHub.][10]{: style="max-width:65%;"}
 ```
 {% endraw %}
 {% endtab %}

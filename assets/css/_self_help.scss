@@ -92,7 +92,7 @@ $help_transition_time : 0.25s;
         overflow: hidden;
         border: 1px solid $grey-ghost;
         box-shadow: 0 0 6px 0 rgba(32,32,36,0.12);
-        border-radius: 2px;
+        border-radius: 8px;
 
         .help_img {
 
@@ -129,7 +129,7 @@ $help_transition_time : 0.25s;
     #help_status {
       border: 1px solid $grey-ghost;
       box-shadow: 0 0 6px 0 rgba(32,32,36,0.12);
-      border-radius: 2px;
+      border-radius: 8px;
       padding: 15px 25px;
       &:hover {
         border-color: $braze-link-color;

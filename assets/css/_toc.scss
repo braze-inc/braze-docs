@@ -70,6 +70,9 @@ $toc_color: rgba($braze-purple-dark,0.6);
           display: block;
           height: 6px;
         }
+        div {
+          padding-bottom: 5px;
+        }
         a.nav-link {
           padding: 0 0 0 0;
           width: fit-content;

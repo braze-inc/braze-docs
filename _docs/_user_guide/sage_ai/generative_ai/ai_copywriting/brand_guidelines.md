@@ -14,15 +14,19 @@ description: "This reference article covers the brand guidelines for AI copywrit
 To create new brand guidelines for use in the AI Copywriting Assistant, follow these steps:
 
 1. Open the AI copywriting assistant.
-2. Select **Apply brand guideline** and click **Create a brand guideline**.
+2. Select **Apply brand guideline** and then select **Create a brand guideline**.
 2. Enter a name for this guideline. It will serve as the label you see in the previous selection.
 3. For **When will you use these brand guidelines?**, describe the context or type of marketing in which you will use this guideline.
 4. For **Brand personality**, describe the personality of your brand, such as any traits, values, voice, and archetype.
-5. (Optional) Add any language or style that should be avoided.
+5. (Optional) For **Exclusions**, add any language or style that should be avoided in generated content. For example, you can exclude "sarcasm", "negative attitudes", "condescending", and other personality traits that you don't want.
 6. Fine-tune your guidelines by testing them. To generate example copy with these guidelines, expand **Test your guidelines** and enter a prompt.
-7. When you're satisfied, click **Save brand guideline**.
+7. When you're satisfied, select **Save brand guideline**.
 
 You can now return to the copywriting view. Your new guidelines will be saved to your workspace for future use.
+
+{% alert important %}
+You can change the output language regardless of what language your copy is in, but neither Braze nor OpenAI guarantee the quality of translation. You should test and verify translations before using them.
+{% endalert %}
 
 ![Brand guideline creation view"][1]
 
@@ -32,7 +36,7 @@ To edit existing brand guidelines:
 
 1. Open the AI copywriting assistant.
 2. Apply the brand guidelines you want to edit. A button will appear near the field.
-3. Click **Edit guideline**.
+3. Select **Edit guideline**.
 
 ## How is my data used and sent to OpenAI?
 

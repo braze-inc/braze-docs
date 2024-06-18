@@ -2,7 +2,7 @@
 nav_title: "OfferFit"
 article_title: OfferFit
 alias: /partners/offerfit/
-description: "OfferFit’s Automated Experimentation Platform is a fast and scalable way to accelerate testing and learning. Automatically discover the right message, creative, incentive, channel, and timing for every customer to unlock the full value of your customer data."
+description: "OfferFit replaces manual A/B testing with AI testing. Lifecycle marketers use OfferFit’s AI testing to make the best 1:1 decision for each customer, test all variables simultaneously, and detect and adapt to market changes."
 page_type: partner
 search_tag: OfferFit
 
@@ -11,7 +11,7 @@ search_tag: OfferFit
 
 # OfferFit
 
-> [OfferFit](https://www.offerfit.ai/) is a self-learning platform that automates the experimentation process that is traditionally done through A/B testing. 
+> [OfferFit](https://www.offerfit.ai/) replaces manual A/B testing with AI testing. Lifecycle marketers use OfferFit’s AI testing to make the best 1:1 decision for each customer, test all variables simultaneously, and detect and adapt to market changes.
 
 The OfferFit and Braze integration allows you to automatically discover the right message, channel, and timing for every customer based on your customer data. You can optimize your campaigns to existing identified customers, with business goals such as cross-sell, upsell, repurchase, retention, renewal, referral, and winback.
 
@@ -34,24 +34,25 @@ Your OfferFit license and use case will determine the Braze REST API endpoints y
 
 | Braze REST API endpoint | OfferFit usage |
 |--------------|----------------|
-| [POST /users/export/ids](https://www.braze.com/docs/api/endpoints/export/user_data/post_users_identifier/) | Retrieve the list of customers to be targeted by a campaign or canvas. As OfferFit doesn't accept any PII data, the `fields_to_export` attribute is used to only retrieve the data attributes agreed together with the platform user. |
-| [POST /users/export/segment](https://www.braze.com/docs/api/endpoints/export/user_data/post_users_segment/) | Retrieve all the users that are part of a specific segment. As OfferFit doesn't accept any PII data, the `fields_to_export` attribute is used to only retrieve the non-PII fields agreed together with the platform user. |
-| [POST /messages/send](https://www.braze.com/docs/api/endpoints/messaging/send_messages/post_send_messages/) | Trigger an API Campaign in Braze. |
-| [POST /campaigns/trigger/send](https://www.braze.com/docs/api/endpoints/messaging/send_messages/post_send_triggered_campaigns/) | Trigger a send for a campaign that is configured for API-triggered delivery. |
-| [GET /campaigns/list](https://www.braze.com/docs/api/endpoints/export/campaigns/get_campaigns/) | Retrieve the list of all the campaigns configured in Braze and their associated metadata. |
-| [GET /campaigns/data_series](https://www.braze.com/docs/api/endpoints/export/campaigns/get_campaign_analytics/) | Retrieve the analytics data of a specific Braze campaign. |
-| [GET /campaigns/details](https://www.braze.com/docs/api/endpoints/export/campaigns/get_campaign_details/) | Retrieve the details of a specific Braze campaign. |
-| [POST /canvas/trigger/sed](https://www.braze.com/docs/api/endpoints/messaging/send_messages/post_send_triggered_canvases/) | Trigger a send for a Canvas that is configured for API-triggered delivery. |
-| [GET /canvas/list](https://www.braze.com/docs/api/endpoints/export/canvas/get_canvases/) | Retrieve the list of all the Canvases configured in Braze and their associated metadata. |
-| [GET /canvas/data_series](https://www.braze.com/docs/api/endpoints/export/canvas/get_canvas_analytics/) | Retrieve the analytics data of a specific Canvas. |
-| [GET /canvas/details](https://www.braze.com/docs/api/endpoints/export/canvas/get_canvas_details/) | Retrieve the details of a specific Canvas. |
-| [GET /segments/list](https://www.braze.com/docs/api/endpoints/export/segments/get_segments/) | Retrieve the list of all the segments configured in Braze and their associated metadata. |
-| [GET /segments/data_series](https://www.braze.com/docs/api/endpoints/export/segments/get_segment_analytics/) | Retrieve the size of the Braze segment. |
-| [GET /segments/details](https://www.braze.com/docs/api/endpoints/export/segments/get_segment_details/) | Retrieve the details of a specific Braze segment. |
-| [POST /templates/email/create](https://www.braze.com/docs/api/endpoints/templates/email_templates/post_create_email_template/) | Create a new Braze HTML email template. |
-| [POST /templates/email/update](https://www.braze.com/docs/api/endpoints/templates/email_templates/post_update_email_template/) | Update an existing Braze HTML email template. |
-| [GET /templates/email/info](https://www.braze.com/docs/api/endpoints/templates/email_templates/get_see_email_template_information/) | Retrieve the details of a specific Braze HTML email template. |
-| [GET /templates/email/list](https://www.braze.com/docs/api/endpoints/templates/email_templates/get_list_email_templates/) | Retrieve the list of all the Braze HTML email templates configured in Braze and their `subject line` and `HTML content`. |
+| [POST /users/export/ids]({{site.baseurl}}/api/endpoints/export/user_data/post_users_identifier/)                          | Retrieve the list of customers to be targeted by a campaign or Canvas. As OfferFit doesn't accept any PII data, the `fields_to_export` attribute is used to only retrieve the data attributes agreed together with the platform user. |
+| [POST /users/export/segment]({{site.baseurl}}/api/endpoints/export/user_data/post_users_segment/)                         | Retrieve all the users that are part of a specific segment. As OfferFit doesn't accept any PII data, the `fields_to_export` attribute is used to only retrieve the non-PII fields agreed together with the platform user. |
+| [POST /users/track]({{site.baseurl}}/api/endpoints/user_data/post_user_track/)                                            | OfferFit can use this endpoint to update user profiles with custom data attributes that can be used to personalize messaging.                                                                                                                                            |
+| [POST /messages/send]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_messages/)                         | Trigger an API Campaign in Braze. |
+| [POST /campaigns/trigger/send]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_campaigns/)     | Trigger a send for a campaign that is configured for API-triggered delivery. |
+| [GET /campaigns/list]({{site.baseurl}}/api/endpoints/export/campaigns/get_campaigns/)                                     | Retrieve the list of all the campaigns configured in Braze and their associated metadata. |
+| [GET /campaigns/data_series]({{site.baseurl}}/api/endpoints/export/campaigns/get_campaign_analytics/)                     | Retrieve the analytics data of a specific Braze campaign. |
+| [GET /campaigns/details]({{site.baseurl}}/api/endpoints/export/campaigns/get_campaign_details/)                           | Retrieve the details of a specific Braze campaign. |
+| [POST /canvas/trigger/send]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_canvases/)         | Trigger a send for a Canvas that is configured for API-triggered delivery. |
+| [GET /canvas/list]({{site.baseurl}}/api/endpoints/export/canvas/get_canvases/)                                            | Retrieve the list of all the Canvases configured in Braze and their associated metadata. |
+| [GET /canvas/data_series]({{site.baseurl}}/api/endpoints/export/canvas/get_canvas_analytics/)                             | Retrieve the analytics data of a specific Canvas. |
+| [GET /canvas/details]({{site.baseurl}}/api/endpoints/export/canvas/get_canvas_details/)                                   | Retrieve the details of a specific Canvas. |
+| [GET /segments/list]({{site.baseurl}}/api/endpoints/export/segments/get_segment/)                                        | Retrieve the list of all the segments configured in Braze and their associated metadata. |
+| [GET /segments/data_series]({{site.baseurl}}/api/endpoints/export/segments/get_segment_analytics/)                        | Retrieve the size of the Braze segment. |
+| [GET /segments/details]({{site.baseurl}}/api/endpoints/export/segments/get_segment_details/)                              | Retrieve the details of a specific Braze segment. |
+| [POST /templates/email/create]({{site.baseurl}}/api/endpoints/templates/email_templates/post_create_email_template/)      | Create a new Braze HTML email template. |
+| [POST /templates/email/update]({{site.baseurl}}/api/endpoints/templates/email_templates/post_update_email_template/)      | Update an existing Braze HTML email template. |
+| [GET /templates/email/info]({{site.baseurl}}/api/endpoints/templates/email_templates/get_see_email_template_information/) | Retrieve the details of a specific Braze HTML email template. |
+| [GET /templates/email/list]({{site.baseurl}}/api/endpoints/templates/email_templates/get_list_email_templates/)           | Retrieve the list of all the Braze HTML email templates configured in Braze and their `subject line` and `HTML content`. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## Use cases
