@@ -24,17 +24,17 @@ See [Microsoft's policy](https://dotnet.microsoft.com/en-us/platform/support/pol
 
 ### Step 1: Get the Xamarin binding
 
-A Xamarin binding is a way to use native libraries in Xamarin apps. The implementation of a binding consists of building a C# interface to the library, and then using that interface in your application.  See the [Xamarin documentation][2].
+A Xamarin binding is a way to use native libraries in Xamarin apps. The implementation of a binding consists of building a C# interface to the library, and then using that interface in your application.  See the [Xamarin documentation][1].
 
 There are two ways to include the Braze SDK binding:
 
 #### Option 1: NuGet
 
-The simplest integration method involves getting the Braze SDK from the [NuGet.org][3] central repository. In the Visual Studio sidebar, right click `Packages` folder and click `Add Packages...`.  Search for 'Braze' and install the [`BrazePlatform.BrazeAndroidBinding`][4] package into your project.
+The simplest integration method involves getting the Braze SDK from the [NuGet.org][2] central repository. In the Visual Studio sidebar, right click `Packages` folder and click `Add Packages...`.  Search for 'Braze' and install the [`BrazePlatform.BrazeAndroidBinding`][3] package into your project.
 
 #### Option 2: Source
 
-The second integration method is to include the [binding source][5]. Under [`appboy-component/src/androidnet6`][6] you will find our binding source code; adding a project reference to the ```BrazeAndroidBinding.csproj``` in your Xamarin application will cause the binding to be built with your project and provide you access to the Braze Android SDK.
+The second integration method is to include the [binding source][4]. Under [`appboy-component/src/androidnet6`][5] you will find our binding source code; adding a project reference to the ```BrazeAndroidBinding.csproj``` in your Xamarin application will cause the binding to be built with your project and provide you access to the Braze Android SDK.
 
 ### Step 2: Configure the Braze SDK in Braze.xml
 
@@ -59,7 +59,7 @@ If you are using the [older navigation]({{site.baseurl}}/navigation), you can fi
 ```
 If you are including the binding source manually, remove `<item>NUGET</item>` from your code.
 
-For an example of your `Braze.xml`, see the [Android MAUI][8] sample application.
+For an example of your `Braze.xml`, see the [Android MAUI][6] sample application.
 
 ### Step 3: Add required permissions to Android manifest
 
@@ -68,7 +68,7 @@ Now that you've added your API key, you need to add the following permissions to
 ```xml
 <uses-permission android:name="android.permission.INTERNET" />
 ```
-For an example of your `AndroidManifest.xml`, see the [Android MAUI][9] sample application.
+For an example of your `AndroidManifest.xml`, see the [Android MAUI][7] sample application.
 
 ### Step 4: Tracking user sessions and registering for in-app messages
 To enable user session tracking and register your app for in-app messages, add the following call to the `OnCreate()` lifecycle method of the `Application` class in your app:
@@ -81,7 +81,7 @@ RegisterActivityLifecycleCallbacks(new BrazeActivityLifecycleCallbackListener())
 
 You should now be able to launch your application and see sessions being logged to the Braze dashboard (along with device information and other analytics).  
 
-For a more in-depth discussion of best practices for the basic SDK integration, consult the [Android integration instructions][10].
+For a more in-depth discussion of best practices for the basic SDK integration, consult the [Android integration instructions][8].
 
 ## iOS
 
@@ -97,13 +97,13 @@ There are two ways to include the Braze SDK binding:
 
 #### Option 1: NuGet
 
-The simplest integration method involves getting the Braze SDK from the [NuGet.org][3] central repository. In the Visual Studio sidebar, right-click `Packages` folder and click `Add Packages...`.  Search for 'Braze' and install the latest Xamarin iOS NuGet packages: [Braze.iOS.BrazeKit][17], [Braze.iOS.BrazeUI][18], and [Braze.iOS.BrazeLocation][19] into your project.
+The simplest integration method involves getting the Braze SDK from the [NuGet.org][2] central repository. In the Visual Studio sidebar, right-click `Packages` folder and click `Add Packages...`.  Search for 'Braze' and install the latest Xamarin iOS NuGet packages: [Braze.iOS.BrazeKit][9], [Braze.iOS.BrazeUI][10], and [Braze.iOS.BrazeLocation][11] into your project.
 
-We also provide the compatibility libraries packages: [Braze.iOS.BrazeKitCompat][20] and [Braze.iOS.BrazeUICompat][21], to help make your migration to .NET MAUI easier.
+We also provide the compatibility libraries packages: [Braze.iOS.BrazeKitCompat][12] and [Braze.iOS.BrazeUICompat][13], to help make your migration to .NET MAUI easier.
 
 #### Option 2: Source
 
-The second integration method is to include the [binding source][5]. Under [`appboy-component/src/iosnet6`][12] you will find our binding source code; adding a project reference to the ```BrazeiOSBinding.csproj``` in your Xamarin application will cause the binding to be built with your project and provide you access to the Braze iOS SDK. Make sure `BrazeiOSBinding.csproj` is showing in your project's "Reference" folder.
+The second integration method is to include the [binding source][4]. Under [`appboy-component/src/iosnet6`][14] you will find our binding source code; adding a project reference to the ```BrazeiOSBinding.csproj``` in your Xamarin application will cause the binding to be built with your project and provide you access to the Braze iOS SDK. Make sure `BrazeiOSBinding.csproj` is showing in your project's "Reference" folder.
 
 ### Step 2: Configure your Braze instance
 
@@ -121,31 +121,29 @@ configuration.Api.AddSDKMetadata(new[] { BRZSDKMetadata.Xamarin });
 braze = new Braze(configuration);
 ```
 
-See the `App.xaml.cs` file in the [iOS MAUI][13] sample application.
+See the `App.xaml.cs` file in the [iOS MAUI][15] sample application.
 
 ### SDK integration complete
 
-Braze should now be collecting data from your application and your basic integration should be complete. See the following articles in order to enable [logging analytics][14], [push notifications][15], and the complete suite of Braze features. For a more in-depth discussion of best practices for the basic SDK integration, consult the [iOS integration instructions][16].
+Braze should now be collecting data from your application and your basic integration should be complete. See the following articles in order to enable [logging analytics][16], [push notifications][17], and the complete suite of Braze features. For a more in-depth discussion of best practices for the basic SDK integration, consult the [iOS integration instructions][18].
 
 >  Our current public Xamarin binding for the iOS SDK does not connect to the iOS Facebook SDK (linking social data) and does not include sending the IDFA to Braze.
 
-[1]: https://dotnet.microsoft.com/en-us/platform/support/policy/xamarin
-[2]: http://developer.xamarin.com/guides/android/advanced_topics/java_integration_overview/binding_a_java_library_%28.jar%29/
-[3]: https://www.nuget.org/
-[4]: https://www.nuget.org/packages/BrazePlatform.BrazeAndroidBinding/
-[5]: https://github.com/braze-inc/braze-xamarin-sdk
-[6]: https://github.com/braze-inc/braze-xamarin-sdk/tree/master/appboy-component/src/androidnet6/BrazeAndroidNet6Binding
-[7]: https://www.nuget.org/packages/Xamarin.Android.Support.v4/
-[8]: https://github.com/braze-inc/braze-xamarin-sdk/blob/master/appboy-component/samples/android-net-maui/BrazeAndroidMauiSampleApp/BrazeAndroidMauiSampleApp/Resources/values/Braze.xml
-[9]: https://github.com/braze-inc/braze-xamarin-sdk/blob/master/appboy-component/samples/android-net-maui/BrazeAndroidMauiSampleApp/BrazeAndroidMauiSampleApp/AndroidManifest.xml
-[10]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/
-[12]: https://github.com/braze-inc/braze-xamarin-sdk/tree/master/appboy-component/src/iosnet6/BrazeiOSNet6Binding
-[13]: https://github.com/braze-inc/braze-xamarin-sdk/tree/master/appboy-component/samples/ios-net-maui/BrazeiOSMauiSampleApp/BrazeiOSMauiSampleApp
-[14]: {{site.baseurl}}/developer_guide/platform_integration_guides/xamarin/analytics/#tracking-custom-events
-[15]: {{site.baseurl}}/developer_guide/platform_integration_guides/xamarin/push_notifications/
-[16]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/initial_sdk_setup/overview/
-[17]: https://www.nuget.org/packages/Braze.iOS.BrazeKit
-[18]: https://www.nuget.org/packages/Braze.iOS.BrazeUI
-[19]: https://www.nuget.org/packages/Braze.iOS.BrazeLocation
-[20]: https://www.nuget.org/packages/Braze.iOS.BrazeKitCompat
-[21]: https://www.nuget.org/packages/Braze.iOS.BrazeUICompat
+[1]: http://developer.xamarin.com/guides/android/advanced_topics/java_integration_overview/binding_a_java_library_%28.jar%29/
+[2]: https://www.nuget.org/
+[3]: https://www.nuget.org/packages/BrazePlatform.BrazeAndroidBinding/
+[4]: https://github.com/braze-inc/braze-xamarin-sdk
+[5]: https://github.com/braze-inc/braze-xamarin-sdk/tree/master/appboy-component/src/androidnet6/BrazeAndroidNet6Binding
+[6]: https://github.com/braze-inc/braze-xamarin-sdk/blob/master/appboy-component/samples/android-net-maui/BrazeAndroidMauiSampleApp/BrazeAndroidMauiSampleApp/Resources/values/Braze.xml
+[7]: https://github.com/braze-inc/braze-xamarin-sdk/blob/master/appboy-component/samples/android-net-maui/BrazeAndroidMauiSampleApp/BrazeAndroidMauiSampleApp/AndroidManifest.xml
+[8]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/
+[9]: https://www.nuget.org/packages/Braze.iOS.BrazeKit
+[10]: https://www.nuget.org/packages/Braze.iOS.BrazeUI
+[11]: https://www.nuget.org/packages/Braze.iOS.BrazeLocation
+[12]: https://www.nuget.org/packages/Braze.iOS.BrazeKitCompat
+[13]: https://www.nuget.org/packages/Braze.iOS.BrazeUICompat
+[14]: https://github.com/braze-inc/braze-xamarin-sdk/tree/master/appboy-component/src/iosnet6/BrazeiOSNet6Binding
+[15]: https://github.com/braze-inc/braze-xamarin-sdk/blob/master/appboy-component/samples/ios-net-maui/BrazeiOSMauiSampleApp/BrazeiOSMauiSampleApp/App.xaml.cs
+[16]: {{site.baseurl}}/developer_guide/platform_integration_guides/xamarin/analytics/
+[17]: {{site.baseurl}}/developer_guide/platform_integration_guides/xamarin/push_notifications/
+[18]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/initial_sdk_setup/overview/
