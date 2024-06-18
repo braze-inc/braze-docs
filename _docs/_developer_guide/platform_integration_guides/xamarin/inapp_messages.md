@@ -16,13 +16,10 @@ channel: in-app messages
 > This article covers how to set up a iOS, Android, and FireOS in-app messages for the Xamarin platform.
 
 ## Android
+
 See the [Android integration instructions][11] for information on how to integrate in-app messages into your Xamarin Android app.  Furthermore, you can look at the [sample application][12] for implementation samples.
 
 ## iOS
-
-### Step 1: Set up the in-app message presenter
-
-#### Using the default UI
 
 To use Braze's default in-app message UI, first create a new `BrazeInAppMessageUI`:
 ```csharp
@@ -34,25 +31,7 @@ Then, register the `BrazeInAppMessageUI` as the in-app message presenter when se
 braze.InAppMessagePresenter = inAppMessageUI;
 ```
 
-### Step 2: Create a new in-app message
-
-There are 4 in-app message types supported on the Xamarin SDK: `slideup`, `modal`, `full`, and `HTML`.
-
-To create a new in-app message, use the `BRZInAppMessageRaw` class and properties:
-```csharp
-BRZInAppMessageRaw slideup = new BRZInAppMessageRaw();
-slideup.Type = BRZInAppMessageRawType.Slideup;
-slideup.Message = "This is the message";
-slideup.ClickAction = BRZInAppMessageRawClickAction.Url;
-slideup.Url = new NSUrl("https://braze.com");
-```
-
-### Step 3: Display in-app messages
-
-To display new in-app messages, use the method `PresentMessage(message)`:
-```csharp
-App.inAppMessageUI?.PresentMessage(slideup);
-```
+You will now be able to present new in-app messages using Braze's default in-app message UI.
 
 See the [iOS integration instructions][1] for information on in-app best practices. Furthermore, you can look at the [iOS MAUI][2] sample application for implementation samples.
 
