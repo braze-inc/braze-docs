@@ -93,7 +93,7 @@ Once saved, Braze will send special instructions to the ESP in order to place th
 SSL enablement will wrap the URL of the tracking pixel with HTTPS instead of HTTP-if your SSL is misconfigured, it may affect the efficacy of the tracking pixel. 
 {% endalert %}
 
-## List-unsubscribe header
+## List-unsubscribe header {#list-unsubscribe}
 
 {% alert note %}
 Beginning on February 15, 2024, new companies will have the list-unsubscribe header (with one-click unsubscribe) enabled by default.
