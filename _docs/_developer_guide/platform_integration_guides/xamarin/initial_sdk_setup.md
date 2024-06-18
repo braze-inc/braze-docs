@@ -97,7 +97,9 @@ There are two ways to include the Braze SDK binding:
 
 #### Option 1: NuGet
 
-The simplest integration method involves getting the Braze SDK from the [NuGet.org][3] central repository. In the Visual Studio sidebar, right-click `Packages` folder and click `Add Packages...`.  Search for 'Braze' and install the [`BrazePlatform.BrazeiOSBinding`][11] package into your project.
+The simplest integration method involves getting the Braze SDK from the [NuGet.org][3] central repository. In the Visual Studio sidebar, right-click `Packages` folder and click `Add Packages...`.  Search for 'Braze' and install the latest Xamarin iOS NuGet packages: [Braze.iOS.BrazeKit][17], [Braze.iOS.BrazeUI][18], and [Braze.iOS.BrazeLocation][19] into your project.
+
+We also provide the compatibility libraries packages: [Braze.iOS.BrazeKitCompat][20] and [Braze.iOS.BrazeUICompat][21], to help make your migration to .NET MAUI easier.
 
 #### Option 2: Source
 
@@ -137,9 +139,13 @@ Braze should now be collecting data from your application and your basic integra
 [8]: https://github.com/braze-inc/braze-xamarin-sdk/blob/master/appboy-component/samples/android-net-maui/BrazeAndroidMauiSampleApp/BrazeAndroidMauiSampleApp/Resources/values/Braze.xml
 [9]: https://github.com/braze-inc/braze-xamarin-sdk/blob/master/appboy-component/samples/android-net-maui/BrazeAndroidMauiSampleApp/BrazeAndroidMauiSampleApp/AndroidManifest.xml
 [10]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/
-[11]: https://www.nuget.org/packages/BrazePlatform.BrazeiOSBinding/
 [12]: https://github.com/braze-inc/braze-xamarin-sdk/tree/master/appboy-component/src/iosnet6/BrazeiOSNet6Binding
 [13]: https://github.com/braze-inc/braze-xamarin-sdk/tree/master/appboy-component/samples/ios-net-maui/BrazeiOSMauiSampleApp/BrazeiOSMauiSampleApp
 [14]: {{site.baseurl}}/developer_guide/platform_integration_guides/xamarin/analytics/#tracking-custom-events
 [15]: {{site.baseurl}}/developer_guide/platform_integration_guides/xamarin/push_notifications/
 [16]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/initial_sdk_setup/overview/
+[17]: https://www.nuget.org/packages/Braze.iOS.BrazeKit
+[18]: https://www.nuget.org/packages/Braze.iOS.BrazeUI
+[19]: https://www.nuget.org/packages/Braze.iOS.BrazeLocation
+[20]: https://www.nuget.org/packages/Braze.iOS.BrazeKitCompat
+[21]: https://www.nuget.org/packages/Braze.iOS.BrazeUICompat
