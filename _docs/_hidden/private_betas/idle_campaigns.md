@@ -65,9 +65,9 @@ To keep a campaign or Canvas active, update the campaign or Canvas so it does no
 
 | Reason for idle status                                                                                                                                            | Steps to make campaign active                                                                |
 |-------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------|
-| Action-based campaigns that are set to end seven days after the initial send date                                                                                              | Extend the end date                                                                          |
-| Scheduled campaigns that are set to end seven days after the initial send date                                                                                                 | Extend the end date                                                                          |
-| Scheduled one-time send campaigns that are set to end seven days after the last send date                                                                              | Schedule a future send                                                                       |
+| Action-based campaigns that end seven days after the initial send date                                                                                              | Extend the end date                                                                          |
+| Scheduled campaigns that end seven days after the initial send date                                                                                                 | Extend the end date                                                                          |
+| Scheduled one-time send campaigns that end seven days after the last send date                                                                              | Schedule a future send                                                                       |
 | Action-based campaigns (without end dates) that have not sent messages in one year                                                                                | Send one message or make any edit to the campaign                                            |
 | Scheduled campaigns (without end dates) that have not sent messages in one year                                                                                   | Send one message or make any edit to the campaign                                            |
 | API-triggered campaigns that have not sent messages in one year                                                                                                   | Send one message or make any edit to the campaign                                            |
@@ -79,9 +79,9 @@ To keep a campaign or Canvas active, update the campaign or Canvas so it does no
 
 | Reason for idle status                                                                               | Steps to make Canvas active                   |
 |------------------------------------------------------------------------------------------------------|-----------------------------------------------|
-| Action-based Canvases that are set to end seven days after the initial end date and maximum duration after initial end date              | Extend the end date                           |
-| Scheduled Canvases that are set to end seven days after the initial end date and maximum duration after initial end date                 | Extend the end date                           |
-| Scheduled one-time send Canvases that are set to end seven days after the initial end date and maximum duration after initial end date   | Schedule a future send                        |
+| Action-based Canvases that end seven days after the initial end date and maximum duration after initial end date              | Extend the end date                           |
+| Scheduled Canvases that end seven days after the initial end date and maximum duration after initial end date                 | Extend the end date                           |
+| Scheduled one-time send Canvases that end seven days after the initial end date and maximum duration after initial end date   | Schedule a future send                        |
 | Action-based Canvases without end dates that have not entered users in one year and maximum duration | Enter one user or make any edit to the Canvas |
 | Scheduled Canvases (without end dates) that have not entered users in one year and maximum duration  | Enter one user or make any edit to the Canvas |
 | API-triggered Canvases that have not sent entered users in one year                                  | Enter one user or make any edit to the Canvas |
