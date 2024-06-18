@@ -8,7 +8,7 @@ tool:
 description: "This reference article covers troubleshooting steps and considerations to keep in mind while using segments."
 ---
 
-# Troubleshooting
+# Troubleshooting segments
 
 ## User behavior
 
