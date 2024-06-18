@@ -22,7 +22,7 @@ Users can have multiple apps, so selecting a specific app in the **Apps Used** s
 
 ## Analytics and reporting
 
-### *Message Sent* or *Unique Recipients* in Campaign Analytics don't match number of users in segment filter "HAS received message from campaign xxx"
+### *Message Sent* or *Unique Recipients* in Campaign Analytics doesn't match segment count 
 
 If your campaign analytics count for *Message Sent* or *Unique Recipients* doesn't match the number of users in the segment filter `Has received message from campaign X`, there could be two possible reasons why:
 
