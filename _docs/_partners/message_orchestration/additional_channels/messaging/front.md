@@ -80,29 +80,80 @@ First, you'll create a new data transformation in Braze. The following steps are
 You can modify this template to meet your specific needs. For example, you can customize the pre-set custom event name. For more information, see [Data transformation overview]({{site.baseurl}}/docs/user_guide/data_and_analytics/data_transformation/overview/). 
 {% endalert %}
 
-### Step 2: Create a new custom channel in the Front dashboard
+### Step 2: Create an outbound SMS campaign
+
+Next, you'll create an SMS campaign that will listen for webhooks from Front and template in the Front Agent’s response into an outbound SMS to the customer.
+
+#### Step 2.1: Compose your message
+
+In the **Message** textbox, add the following liquid code, along with any opt-out language or other static content.
+
+{% raw %}
+```liquid
+{{event_properties.${message_body}}}
+```
+{% endraw %}
+
+Your message should be similar to the following:
+
+![alt text]({% image_buster /assets/img/front/sms_to_braze.png %}){: style="max-width:80%;"}
+
+#### 2.2 Schedule the delivery
+
+For the delivery type, select **Action-Based delivery**; then under **Outbound SMS Sent**, add a custom event trigger.
+
+![alt text]({% image_buster /assets/img/front/braze_delivery.png %})
+
+{% alert note %}
+This custom event is the Data Transformation that writes to the user’s profile. Agent messages will be saved as an event property on this event.
+{% endalert %}
+
+Finally, under **Delivery Controls**, enable re-eligibility.
+
+![alt text]({% image_buster /assets/img/front/braze_reeligibility.png %})
+
+### Step 3: Create a custom channel
 
 In the Front dashboard, go to **Settings** > **Channels** > **Add Channels**, then select **Custom Channel** and enter a name for your new Braze channel.
 
 ![alt text]({% image_buster /assets/img/front/front_custom_channel.png %})
 
-### Step 3: Configure the settings for your new custom Braze Channel
+### Step 4: Configure the settings
 
 In the outbound API endpoint field, enter the Data Transformation Webhook URL [you created earlier](#step-1-set-up-a-data-transformation-in-braze). All outbound messages from live agents on your new Braze channel will be sent here. This channel also provides an endpoint URL for Braze to forward SMS messages to in the **Incoming URL** Field.
 
 Be sure to make a note of this URL&#8212;you'll need it later.
 
-![alt text]({% image_buster /assets/img/front/front_custom_channel2.png %})
+![alt text]({% image_buster /assets/img/front/front_custom_channel2.png %}){: style="max-width:65%;"}
 
-### Step 4: Forward inbound SMS from customers to the Front inbox 
+### Step 5: Set up inbound-SMS forwarding
 
-Next, you'll create a new webhook campaign in Braze to forward inbound SMS from customers to the Front inbox.
+Next, you’ll create two new webhook campaigns in Braze so you can forward inbound SMS from customers to the Front inbox.
 
-#### Step 4.1: Create a webhook campaign 
+|Number|Purpose|
+|---|---|
+|Webhook campaign 1|Signals to Front that a live chat conversation is being requested.|
+|Webhook campaign 2|Forwards all conversational SMS responses sent inbound from the customer to the Front inbox.|
+{: .reset-td-br-1 .reset-td-br-2 }
 
-In the Braze dashboard, create a new webhook campaign using the URL [you created previously](#step-3-configure-the-settings-for-your-new-custom-braze-channel).
+#### Step 5.1: Create an SMS keyword category
 
-![alt text]({% image_buster /assets/img/front/sms_to_front.png %})
+In the Braze dashboard, go to **Audience**, choose your **SMS subscription group**, then select **Add Custom Keyword**. To create an exclusive SMS keyword category for Front, fill out the following fields.
+
+|Field|Description|
+|---|---|
+|Keyword Category|The name of your keyword category, such as `FrontSMS1`.|
+|Keywords|Your custom keywords, such as `TIMETOMOW`. Avoid common words to prevent accidental triggers. Keep in mind, keywords are case insensitive, so `lawn` would match `LAWN`.|
+|Reply Message|The message that will be sent when a keyword is detected, such as "A landscaper will reach out to you shortly."|
+{: .reset-td-br-1 .reset-td-br-2 }
+
+![alt text]({% image_buster /assets/img/front/front_keyword.png %}){: style="max-width:65%;"}
+
+#### Step 5.2: Create your first webhook campaign
+
+In the Braze dashboard, create your first webhook campaign using the URL [you created previously](#step-3-configure-the-settings-for-your-new-custom-braze-channel).
+
+![alt text]({% image_buster /assets/img/front/sms_to_front.png %}){: style="max-width:65%;"}
 
 Add the following to your request body:
 
@@ -129,58 +180,46 @@ In the Settings tab, configure the following request headers:
 
 | Header         | Definition                  |
 |----------------|-----------------------------|
-| `Authorization`  | ENTER DEFINITION HERE.      |
-| `content-type`   | ENTER DEFINITION HERE.      |
-| `accept`         | ENTER DEFINITION HERE.      |
+| `Authorization`  | ENTER DEFINITION HERE.   |
+| `content-type`   | ENTER DEFINITION HERE.   |
+| `accept`         | ENTER DEFINITION HERE.   |
 {: .reset-td-br-1 .reset-td-br-2 }
 
-![alt text]({% image_buster /assets/img/front/webhook_settings.png %})
+![alt text]({% image_buster /assets/img/front/webhook_settings.png %}){: style="max-width:65%;"}
 
-#### Step 4.2: Schedule the delivery
+#### Step 5.3: Schedule the first delivery
 
-For **Schedule Delivery**, select **Action-Based Delivery**, then choose **Send an SMS Inbound Message** for your trigger type. Also add an SMS subscription group and keyword category.
+For **Schedule Delivery**, select **Action-Based Delivery**, then choose **Send an SMS Inbound Message** for your trigger type. Also add the SMS subscription group and keyword category you [set up previously](#step-51-create-an-sms-keyword-category).
+
+![alt text]({% image_buster /assets/img/front/front_actionbased_keyword.png %})
 
 Under **Delivery Controls**, enable re-eligibility.
 
 ![alt text]({% image_buster /assets/img/front/braze_reeligibility.png %})
 
-##### Example
+#### Step 5.4: Create your second webhook campaign
 
-In the following example **Other** is selected for the keyword category and will catch and forward any inbound SMS response from a customer&#8212;whether it matches a keyword or not. To create stricter definitions for which inbound messages should be forwarded to Front, you can either use the keyword groups _or_ the option: **where the message body**.
+Since your second webhook campaign will match the first, you can [duplicate the first one and rename it]({{site.baseurl}}/user_guide/engagement_tools/campaigns/managing_campaigns/duplicating_segments_and_campaigns/#duplicating-segments-or-campaigns). You can do so now.
 
-![alt text]({% image_buster /assets/img/front/braze_delivery.png %})
+#### Step 5.5: Schedule the second delivery
 
-### Step 5: Create outbound SMS from Front to customer 
+For **Schedule Delivery**, set the **action-based trigger** and the **SMS subscription group** to the same as [your the first delivery](#step-53-schedule-the-first-delivery). However, for **keyword category**, choose **Other**.
 
-Next, you'll create an SMS campaign that will listen for webhooks from Front and template in the Front Agent’s response into an outbound SMS to the customer.
+![alt text]({% image_buster /assets/img/front/front_actionbased_other_keyword.png %})
 
-#### Step 5.1: Compose your message
+#### Step 5.6: Add an audience filter
 
-In the **Message** textbox, add the following liquid code, along with any opt-out language or other static content.
+Your webhook campaign can now forward inbound SMS responses from your customers. To filter SMS responses so only forward messages intended for live chats, add the **Last Received Message From Specific Campaign** segmentation filter to the **Target Audiences Step**.
 
-{% raw %}
-```liquid
-{{event_properties.${message_body}}}
-```
-{% endraw %}
+![alt text]({% image_buster /assets/img/front/front_segment_last_received_message.png %}){: style="max-width:65%;"}
 
-Your message should be similar to the following:
+Then configure your filter:
 
-![alt text]({% image_buster /assets/img/front/sms_to_braze.png %})
+1. For **Campaign**, select the SMS campaign [you previously created](#step-2-create-an-outbound-sms-campaign).
+2. For **Operator**, select **Less Than**.
+3. For **Time Window**, choose the length of time a chat should stay open without a response from the customer.
 
-#### 5.2 Schedule the delivery
-
-For the delivery type, select **Action-Based delivery**; then under **Outbound SMS Sent**, add a custom event trigger.
-
-![alt text]({% image_buster /assets/img/front/braze_delivery.png %})
-
-{% alert note %}
-This is the custom event that the Data Transformation we set up earlier writes to the user’s profile. The Front Agent’s message was saved as an event property on that custom event.
-{% endalert %}
-
-Finally, under **Delivery Controls**, enable re-eligibility.
-
-![alt text]({% image_buster /assets/img/front/braze_reeligibility.png %})
+![alt text]({% image_buster /assets/img/front/front_target_audience.png %})
 
 ## Considerations
 
