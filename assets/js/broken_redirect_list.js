@@ -1143,4 +1143,10 @@ validurls['/docs/developer_guide/platform_integration_guides/tvos/content_cards/
 
 validurls['/docs/engagement_by_device/'] = '/docs/user_guide/data_and_analytics/analytics/email_performance_dashboard/#engagement-by-device/';
 
+validurls['/docs/partners/message_orchestration/additional_channels/messaging/'] = '/docs/partners/message_orchestration/additional_channels/instant_chat/';
+validurls['/docs/partners/message_orchestration/additional_channels/messaging/line/'] = '/docs/partners/message_orchestration/additional_channels/instant_chat/line/';
+validurls['/docs/partners/message_orchestration/additional_channels/messaging/messenger/'] = '/docs/partners/message_orchestration/additional_channels/instant_chat/messenger/';
+validurls['/docs/partners/message_orchestration/additional_channels/messaging/regal/'] = '/docs/partners/message_orchestration/additional_channels/instant_chat/regal/';
+validurls['/docs/partners/message_orchestration/additional_channels/messaging/sendbird/'] = '/docs/partners/message_orchestration/additional_channels/instant_chat/sendbird/';
+
 // validurls['OLD'] = 'NEW';
