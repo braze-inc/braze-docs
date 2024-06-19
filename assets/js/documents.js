@@ -484,21 +484,44 @@ $(document).ready(function() {
   };
 
   var external_ignore = ['braze.statuspage.io','www.braze.com']
-  var links = $('#main_content a').filter(function() {
-     var tofilter = this.hostname && this.hostname !== location.hostname && this.text && external_ignore.indexOf(this.hostname) < 0 ;
-     if ($(this).hasClass('extignore')) {
-       tofilter = false;
-     }
-     else if ($(this).has('img').length > 0) {
-       if ($(this).has('img')[0].childNodes.length > 0) {
-         tofilter = false;
-       }
-     }
-     else if ($(this).has('div').length >0 ) {
-        tofilter = false;
-     }
-     return tofilter
-  }).after(' <i class="fas fa-external-link-alt"></i>')
+  $('#main_content a').filter(function() {
+    var is_external = this.hostname && this.hostname !== location.hostname && this.text && external_ignore.indexOf(this.hostname) < 0 ;
+    if ($(this).hasClass('extignore')) {
+      is_external = false;
+    }
+    else if ($(this).has('img').length > 0) {
+      if ($(this).has('img')[0].childNodes.length > 0) {
+       is_external = false;
+      }
+    }
+    else if ($(this).has('div').length >0 ) {
+      is_external = false;
+    }
+
+    var punctuations = ['.','!','?'];
+    var has_punchtuation = false;
+    var punctuation = null;
+    if ($(this)[0]) {
+      if ($(this)[0].nextSibling){
+        punctuation = $(this)[0].nextSibling.nodeValue.substr(0,1);
+        if (punctuations.includes(punctuation)) {
+          $(this)[0].nextSibling.remove();
+          has_punchtuation = true;
+        }
+      }
+    }
+
+    if (is_external || has_punchtuation){
+      $(this).wrap('<span class="inline-link">');
+    }
+
+    if (has_punchtuation){
+      $(this).after(punctuation);
+    }
+    if (is_external){
+      $(this).after(' <i class="fas fa-external-link-alt"></i>');
+    }
+  });
   $('.highlight .highlight .rouge-code pre').each(function(k) {
     $this = $(this);
     if ($this.html().length > 120) {

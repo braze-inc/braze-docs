@@ -59,11 +59,9 @@ Liquid templating language supports the use of objects, tags, and filters.
 Braze does not currently support 100% of Shopify's Liquid, only certain portions which we have attempted to outline in our documentation. We highly recommend testing all messages using Liquid before sending them to reduce the risk of errors or using unsupported Liquid.
 {% endalert %}
 
-### What's new with Liquid 5
+### Liquid 5
 
-Braze has updated support to Liquid up to and including **Liquid 5 from Shopify**. 
-
-Liquid implementation supports syntax personalization tag types and whitespace control. For more information on specific tags, refer to [syntax tags]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/#syntax-tags).
+Braze supports Liquid up to and including **Liquid 5 from Shopify**. Liquid implementation supports syntax personalization tag types and whitespace control. For more information on specific tags, refer to [syntax tags]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/#syntax-tags).
 
 The following new array and math filters are available for use in your Liquid as you build your messaging.
 - `at_least`
@@ -74,6 +72,17 @@ The following new array and math filters are available for use in your Liquid as
 - `where`
 
 Refer to our [Filters]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/filters/) article for definitions.
+
+### Liquid updates
+
+Each Liquid element corresponds to a color, allowing you to differentiate your Liquid at-a-glance in your Liquid editor.
+
+![]({% image_buster /assets/img/liquid_color_code.png %})
+
+You can also leverage predicative Liquid for custom attributes, attribute names, and more as you build your personalized messages.
+
+![]({% image_buster /assets/img/liquid_auto_complete.gif %}){: style="max-width:70%;"}
+
 
 ## Terms to know
 

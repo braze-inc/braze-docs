@@ -198,7 +198,7 @@ This example will cache for 900 seconds (or 15 minutes).
 
 #### Cache busting
 
-To prevent Connected Content from caching the value it returns from a GET request, you can use the `:no_cache` configuration.
+To prevent Connected Content from caching the value it returns from a GET request, you can use the `:no_cache` configuration. However, responses from hosts internal to Braze will still be cached.
 
 {% raw %}
 ```js

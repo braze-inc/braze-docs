@@ -214,7 +214,29 @@ If you won't want your Redshift cluster to be publicly accessible, you can set u
 
 Optionally, set up a new project or dataset to hold your source table.
 
+```json
+CREATE SCHEMA BRAZE-CLOUD-PRODUCTION.INGESTION;
+```
+
 Create one or more tables to use for your CDI integration with the following fields:
+
+```json
+CREATE TABLE `BRAZE-CLOUD-PRODUCTION.INGESTION.USERS_ATTRIBUTES_SYNC`
+(
+  updated_at TIMESTAMP DEFAULT current_timestamp,
+  --At least one of external_id, alias_name and alias_label, or braze_id is required  
+  external_id STRING,
+  --If using user alias, both alias_name and alias_label are required
+  alias_name STRING,
+  alias_label STRING,
+  --braze_id can only be used to update existing users created through the Braze SDK
+  braze_id STRING,
+  --If you include both email and phone, we will use the email as the primary identifier
+  email STRING,
+  phone STRING,
+  payload JSON
+);
+```
 
 | Field Name | Type | Mode |
 |---|---|---|
@@ -272,9 +294,33 @@ If you have network policies in place, you must give Braze network access to you
 
 #### Step 1: Set up the table 
 
-Optionally, set up a new Project or Dataset to hold your source table.
+Optionally, set up a new Catalog or Schema to hold your source table.
+
+```json
+CREATE SCHEMA BRAZE-CLOUD-PRODUCTION.INGESTION;
+```
 
 Create one or more tables to use for your CDI integration with the following fields:
+
+
+```json
+CREATE TABLE `BRAZE-CLOUD-PRODUCTION.INGESTION.USERS_ATTRIBUTES_SYNC`
+(
+  updated_at TIMESTAMP DEFAULT current_timestamp(),
+  --At least one of external_id, alias_name and alias_label, or braze_id is required  
+  external_id STRING,
+  --If using user alias, both alias_name and alias_label are required
+  alias_name STRING,
+  alias_label STRING,
+  --braze_id can only be used to update existing users created through the Braze SDK
+  braze_id STRING,
+  --If you include both email and phone, we will use the email as the primary identifier
+  email STRING,
+  phone STRING,
+  payload STRING
+);
+```
+
 
 | Field Name | Type | Mode |
 |---|---|---|

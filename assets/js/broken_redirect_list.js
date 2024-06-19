@@ -1131,11 +1131,22 @@ validurls['/docs/one-click_unsubscribe/'] = '/docs/user_guide/administrative/app
 
 validurls['/docs/back_in_stock/'] = '/docs/user_guide/personalization_and_dynamic_content/catalogs/back_in_stock_notifications/';
 
+validurls['/docs/hidden/archive_docs/ios_14/'] = '/docs/developer_guide/platform_integration_guides/swift/archived_updates/ios_14/';
+validurls['/docs/hidden/archive_docs/ios_15/'] = '/docs/developer_guide/platform_integration_guides/swift/archived_updates/ios_15/';
+validurls['/docs/developer_guide/platform_integration_guides/legacy_sdks/ios/ios_16/'] = '/docs/developer_guide/platform_integration_guides/swift/archived_updates/ios_16/';
+validurls['/docs/developer_guide/platform_integration_guides/swift/ios_17/'] = '/docs/developer_guide/platform_integration_guides/swift/archived_updates/ios_17/';
+
 validurls['/docs/developer_guide/platform_integration_guides/legacy_sdks/tvos/in-app_messaging/'] = '/docs/developer_guide/platform_integration_guides/swift/in-app_messaging/customization/tvos/';
 validurls['/docs/developer_guide/platform_integration_guides/legacy_sdks/tvos/content_cards/'] = '/docs/developer_guide/platform_integration_guides/swift/content_cards/tvos/';
 validurls['/docs/developer_guide/platform_integration_guides/tvos/in-app_messaging/'] = '/docs/developer_guide/platform_integration_guides/swift/in-app_messaging/customization/tvos/';
 validurls['/docs/developer_guide/platform_integration_guides/tvos/content_cards/'] = '/docs/developer_guide/platform_integration_guides/swift/content_cards/tvos/';
 
 validurls['/docs/engagement_by_device/'] = '/docs/user_guide/data_and_analytics/analytics/email_performance_dashboard/#engagement-by-device/';
+
+validurls['/docs/partners/message_orchestration/additional_channels/messaging/'] = '/docs/partners/message_orchestration/additional_channels/instant_chat/';
+validurls['/docs/partners/message_orchestration/additional_channels/messaging/line/'] = '/docs/partners/message_orchestration/additional_channels/instant_chat/line/';
+validurls['/docs/partners/message_orchestration/additional_channels/messaging/messenger/'] = '/docs/partners/message_orchestration/additional_channels/instant_chat/messenger/';
+validurls['/docs/partners/message_orchestration/additional_channels/messaging/regal/'] = '/docs/partners/message_orchestration/additional_channels/instant_chat/regal/';
+validurls['/docs/partners/message_orchestration/additional_channels/messaging/sendbird/'] = '/docs/partners/message_orchestration/additional_channels/instant_chat/sendbird/';
 
 // validurls['OLD'] = 'NEW';
