@@ -52,6 +52,12 @@ If you allow sending in thse countries, you'll be asked to acknowledge the risk 
 We recommend limiting the countries on your allowlist to those required to support your business needs. This will minimize your potential for fradulent traffic. For more guidance on preventing SMS traffic pumping, view [SMS traffic pumping fraud FAQs]({{site.baseurl}}/sms_traffic_pumping_fraud/).
 {% endalert %}
 
+## Visibility of blocked sends
+
+Attempted sends to countries that aren't on your allowlist will be aborted. Aborted messages will be logged to the [Message Activity Log]({{site.baseurl}}/user_guide/administrative/app_settings/message_activity_log_tab) and within the [SMS abort message engagement event]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events). 
+
+Aborted messages caused by blocked sends will show as `Abort_Type = "blocked_recipient_country"` with the abort log detailing the blocked country.
+
 [1]: {% image_buster /assets/img/sms/sms_geographic_permissions.png %}
 [2]: {% image_buster /assets/img/sms/allowlist_dropdown.png %}
 [3]: {% image_buster /assets/img/sms/delete_allowlist_warning.png %}
