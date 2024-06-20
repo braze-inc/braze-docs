@@ -107,7 +107,7 @@ The **Drill to Workspaces** lets you view granular data point data for each of y
 
 ##### Workspace level data point usage by category
 
-Select the menu next to an app group name and then **Billable Data Points For APP_GROUP_NAME** to view the **Workspace Level Data Point Usage by Category** table. This table shows you data point counts for each category of data points. For example, you can see the number of data points driven by sessions and custom events. You can use this table to identify the categories of data points that are driving data point consumption for the workspace.
+Select the menu next to a workspace name and then **Billable Data Points For WORKSPACE_NAME** to view the **Workspace Level Data Point Usage by Category** table. This table shows you data point counts for each category of data points. For example, you can see the number of data points driven by sessions and custom events. You can use this table to identify the categories of data points that are driving data point consumption for the workspace.
 
 ![Workspace Level Data Point Usage by Category][10]{: style="max-width:90%;"}
 
