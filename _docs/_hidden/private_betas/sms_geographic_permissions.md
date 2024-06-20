@@ -58,7 +58,10 @@ Attempted sends to countries that aren't on your allowlist will be aborted. Abor
 
 Aborted messages caused by blocked sends will show as `Abort_Type = "blocked_recipient_country"` with the abort log detailing the blocked country.
 
+![Abort log showing the abort_type of blocked_recipient_country and the country initials of the blocked phone number.][5]{: style="max-width:80%;"}
+
 [1]: {% image_buster /assets/img/sms/sms_geographic_permissions.png %}
 [2]: {% image_buster /assets/img/sms/allowlist_dropdown.png %}
 [3]: {% image_buster /assets/img/sms/delete_allowlist_warning.png %}
 [4]: {% image_buster /assets/img/sms/sms_geographic_permissions.png %}
+[5]: {% image_buster /assets/img/sms/abort_log.png %}
