@@ -311,9 +311,13 @@ Next, configure the `enableBrazeIosPushStories` property to `true` and assign yo
 
 Lastly, add the bundle identifier for this app extension to your project's credentials configuration: `<your-app-bundle-id>.BrazeExpoPushStories`. For further details on this process, refer to [Declaring bundle identifiers for app extensions](#declaring-bundle-identifiers-for-app-extensions).
 
-### Declaring bundle identifiers for app extensions
+{% alert warning %}
+If you are using push stories with Expo Application Services, be sure to use the `EXPO_NO_CAPABILITY_SYNC=1` flag when running `eas build`. There is a known issue with EAS in the command line, which modifies the app groups capability from your extension's provisioning profile.
+{% endalert %}
 
-If you are using Expo Application Services (EAS) and have enabled `enableBrazeIosRichPush` and/or `enableBrazeIosPushStories`, declare the corresponding bundle identifiers for each app extension in your project. There are several ways you can approach this step, depending on how your project is configured to manage code signing with EAS.
+### Using app extensions with Expo Application Services
+
+If you are using Expo Application Services (EAS) and have enabled `enableBrazeIosRichPush` and/or `enableBrazeIosPushStories`, you will need to declare the corresponding bundle identifiers for each app extension in your project. There are multiple ways you can approach this step, depending on how your project is configured to manage code signing with EAS.
 
 One approach is to use the `appExtensions` configuration in your `app.json` file by following Expo's [app extensions documentation](https://docs.expo.dev/build-reference/app-extensions/). Alternatively, you can set up the `multitarget` setting in your `credentials.json` file by following Expo's [local credentials documentation](https://docs.expo.dev/app-signing/local-credentials/#multi-target-project).
 
