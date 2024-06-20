@@ -113,16 +113,15 @@ Select the menu next to an app group name and then **Billable Data Points For AP
 
 ##### Workspace level data point usage over time
 
-The **Workspace Level Data Point Usage over Time** table enables you to see how that workspace's data point usage has changed throughout your billing cycle.
+The **Workspace Level Data Point Usage over Time** table shows you how that workspace's data point usage has changed throughout your billing cycle.
 
 ![Workspace Level Data Point Usage over Time][11]{: style="max-width:90%;"}
 
 ##### Appl level total data point usage
 
-The **App Level Total Data Point Usage** table enables you to see data point usage for each of the apps in your workspace. You can use this table to identify which apps are driving data point consumption for the workspace.
+The **App Level Total Data Point Usage** table shows you data point usage for each of the apps in your workspace. You can use this table to identify which apps are driving data point consumption for the workspace.
 
 ![App Level Total Data Point Usage table for multiple apps][12]{: style="max-width:90%;"}
-
 
 
 [2]: {% image_buster /assets/img/subscription_and_billing2.png %}
