@@ -14,7 +14,7 @@ permalink: "/sms_geographic_permissions/"
 
 > The SMS geographic permissions allowlist enhances security and protects against fraudulent SMS traffic by enforcing controls on the countries to which you can send SMS messages. 
 
-You can specify an allowlist of countries where SMS messages are permitted, making sure that messages are only sent to approved regions. You'll need the X permission to make changes to the allowlist.
+You can specify an allowlist of countries where SMS messages are permitted, making sure that messages are only sent to approved regions. Only admins can make changes to the allowlist.
 
 ## Configuring your SMS geographic permissions allowlist
 
