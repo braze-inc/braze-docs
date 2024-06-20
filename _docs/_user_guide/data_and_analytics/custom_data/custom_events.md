@@ -50,6 +50,10 @@ The usage report lists all the Canvases, campaigns, and segments using a specifi
 
 You can view up to 10 usage reports at a time by selecting the checkboxes next to the respective custom events and then selecting **View usage report**.
 
+### Exporting data ###
+
+To export the list of custom events as a CSV file, click the "Export all" button at the top of the page. The CSV file will be generated and a download link will be emailed to you. (This feature is currently available in early access. Contact your customer success manager if you're interested in participating in this early access.)
+
 ### Logging custom events
 
 Custom events require additional setup. The following lists the methods across various platforms that are used to log custom events. Within these pages, you will also be able to find documentation on how to add properties and quantities to your custom events.

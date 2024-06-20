@@ -45,6 +45,10 @@ The usage report lists all the Canvases, campaigns, and segments using a specifi
 
 You can view up to 10 usage reports at a time by selecting the checkboxes next to the respective custom attributes and then selecting **View usage report**.
 
+### Exporting data ###
+
+To export the list of custom attributes as a CSV file, click the "Export all" button at the top of the page. The CSV file will be generated and a download link will be emailed to you. (This feature is currently available in early access. Contact your customer success manager if you're interested in participating in this early access.)
+
 ## Setting custom attributes
 
 The following lists methods across various platforms that are used to set custom attributes.
