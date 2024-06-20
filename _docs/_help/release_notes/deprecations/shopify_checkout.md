@@ -29,9 +29,13 @@ This is the deadline to upgrade your information, shipping, and payment pages.
 
 The default Braze and Shopify integration doesn't use the information, shipping, and payment pages within the checkout experience. As a result, the default integration will not be impacted. 
 
-Any custom SDK code snippets modifying `checkout.liquid` for the information, shipping, and payment pages will become inactive after this date. For example, custom code that logs events from these pages will no longer work. 
+#### Shopify Plus
 
-If you have custom SDK code, view our [developer guidance](#developer-guidance) for migration. 
+For Shopify Plus customers, any custom SDK code snippets that modify `checkout.liquid` for the information, shipping, or payment pages will become inactive after this date. For example, custom code that logs events from these pages will no longer work. If you have custom SDK code, view our [developer guidance](#developer-guidance) for migration.
+
+#### Non-Shopify Plus
+
+For non-Shopify Plus customers, if you need to customize the information, payment, and shipping pages you [need to upgrade to Shopify Plus](https://help.shopify.com/en/manual/checkout-settings/customize-checkout-configurations/checkout-extensibility#eligibility) and then follow the guidance here. 
 
 ### Phase two: August 28, 2025
 
