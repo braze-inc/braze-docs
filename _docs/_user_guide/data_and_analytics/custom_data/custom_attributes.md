@@ -31,9 +31,13 @@ Custom attributes can be blocklisted individually via the actions menu, or up to
 
 Admins can also create custom attributes and mark them as PII from this page. These attributes will only be visible to admins and dashboard users with the “View Custom Attributes Marked as PII” permission.
 
-### Adding description
+### Adding descriptions
 
 You can add a description to a custom attribute after it's created if you have the `Manage Events, Attributes, Purchases` [user permission]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/). Edit the custom attribute and input whatever you like, such as a note for your team.
+
+### Adding tags
+
+You can add tags to a custom attribute after it's created if you have the `Manage Events, Attributes, Purchases` [user permission]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/). The tags can then be used to filter the list of attributes. (This feature is currently in early access. Contact your customer success manager if you're interested in participating in this early access.)
 
 ### Removing custom attributes
 
