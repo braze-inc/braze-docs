@@ -70,7 +70,7 @@ When creating a new user, you must add `email_encrypted` with the user's encrypt
 
 ## Considerations
 
-These features are not supported with field-level encryption
+These features are not supported with field-level encryption:
 
 - Identifying and capturing email address via SDK
 - In-app message email capture forms
