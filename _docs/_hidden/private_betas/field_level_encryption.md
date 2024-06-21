@@ -84,7 +84,7 @@ These features are not supported with field-level encryption
 When using field-level encryption with the `/users/track` endpoint, note these field details for the [user attributes object]({{site.baseurl}}/api/objects_filters/user_attributes_object):
 
 - The `email` field must be the hashed value of the email.
-- The `encrypted_email` field must be the encrypted value for the email.
+- The `email_encrypted` field must be the encrypted value for the email.
 
 ## Frequently asked questions
 
