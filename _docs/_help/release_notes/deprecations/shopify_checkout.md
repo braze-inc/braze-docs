@@ -35,7 +35,7 @@ For Shopify Plus customers, any custom SDK code snippets that modify `checkout.l
 
 #### Non-Shopify Plus
 
-For non-Shopify Plus customers, if you need to customize the information, payment, and shipping pages you [need to upgrade to Shopify Plus](https://help.shopify.com/en/manual/checkout-settings/customize-checkout-configurations/checkout-extensibility#eligibility) and then follow the guidance here. 
+For non-Shopify Plus customers, if you need to customize the information, payment, and shipping pages you [need to upgrade to Shopify Plus](https://help.shopify.com/en/manual/checkout-settings/customize-checkout-configurations/checkout-extensibility#eligibility) and then follow the [developer guidance](#developer-guidance).
 
 ### Phase two: August 28, 2025
 
@@ -73,8 +73,8 @@ Shopify.analytics.publish("custom_event", event_data);
 
 5. Subscribe to `custom_event` and save the Braze `deviceID` as a cookie.
 
-6. Send request to the Braze SDK or REST API depending on your use case.
-- Send requests to a proxy URL that will call server-side code to call either the Braze REST API
+6. Send a request to the Braze SDK or REST API depending on your use case.
+- Send requests to a proxy URL that will call server-side code to call the Braze REST API.
 - Fetch the `shopify/email_user_reconcile` endpoint and supply the URL parameter with the `deviceId` and `email`.
 
 ```java
@@ -140,7 +140,7 @@ document.cookie = "device_id={{ braze.getDeviceId() }}; domain={{ SHOP_DOMAIN }}
 6. Subscribe to checkout events and retireve the Braze `deviceID` from the first-party cookie.
 
 7. Send a request to the Braze SDK or REST API depending on your use case:
-- Send requests to a proxy URL that will call server-side code to call either the Braze REST API
+- Send requests to a proxy URL that will call server-side code to call the Braze REST API.
 - Fetch the `shopify/email_user_reconcile` endpoint and supply the URL parameter with the `deviceId` and `email`.
 
 ```java
