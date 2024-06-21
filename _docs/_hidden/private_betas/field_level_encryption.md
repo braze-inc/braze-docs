@@ -20,13 +20,13 @@ Email addresses must be hashed and encrypted before they’re added to Braze. Wh
 
 ## Prerequisites
 
-To use field-level encryption, you must have access to AWS KMS to encrypt and hash email addresses **before** sending them to Braze. 
+To use field-level encryption, you must have access to AWS KMS to [encrypt](https://docs.aws.amazon.com/kms/latest/APIReference/API_Encrypt.html) and [hash](https://docs.aws.amazon.com/kms/latest/APIReference/API_GenerateMac.html) email addresses **before** sending them to Braze. 
 
 Follow these steps to set up your AWS secret key authentication method.
 
-1. To retrieve your access key ID and secret access key, [create an IAM user and administrators group in AWS with a permissions policy for AWS Key Management Service](https://docs.aws.amazon.com/IAM/latest/UserGuide/getting-set-up.html#create-an-admin).
+1. To retrieve your access key ID and secret access key, [create an IAM user and administrators group in AWS with a permissions policy for AWS Key Management Service](https://docs.aws.amazon.com/IAM/latest/UserGuide/getting-set-up.html#create-an-admin). The [kms:Decrypt and kms:GenerateMac KMS permissions](https://docs.aws.amazon.com/kms/latest/developerguide/kms-api-permissions-reference.html).
 2. Select **Show User Security Credentials** to reveal your access key ID and secret access key. Note these credentials somewhere or select the **Download Credentials** button as you'll need to input these when connecting your AWS KMS keys.
-3. We recommend setting up KMS in the following AWS regions:
+3. We require setting up KMS in the following AWS regions:
     - **Braze US clusters:** `us-east-1`
     - **Braze EU clusters:** `eu-central-1`
 4. In AWS Key Management Service, create two keys and make sure that the IAM user is added in key usage permissions:
@@ -72,10 +72,12 @@ When creating a new user, you must add `email_encrypted` with the user's encrypt
 
 These features are not supported with field-level encryption
 
-- SDK
-- Audience sync
+- Identifying and capturing email address via SDK
 - In-app message email capture forms
+- Reporting on recipient domain, including Email Insights mailbox provider charts
 - Email address filter by regular expression
+- Audience sync
+- Shopify integration
 
 ### User attributes object
 
