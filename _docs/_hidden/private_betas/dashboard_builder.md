@@ -40,8 +40,11 @@ Touches include `Email Click`, `Content Card Click`, `In-App Message Click`, `SM
 | Unique Purchasers | Count of the unique users with a qualified revenue event. |
 | Revenue by Country | Sum of all campaign and Canvas revenue events with a last-touch event, grouped by country. |
 | Revenue by Campaign | Sum of all campaign and Canvas revenue events with a qualifying last-touch event, grouped by campaign. |
+| Revenue by Campaign Variant | Sum of all campaign and Canvas revenue events with a qualifying last-touch event, grouped by campaign variant. |
 | Revenue by Canvas | Sum of all campaign and Canvas revenue events with a qualifying last-touch event, grouped by Canvas. |
-| Revenue by Channel | Sum of all campaign and Canvas revenue events with a qualifying last-touch event, grouped by Canvas. | 
+| Revenue by Canvas Variant | Sum of all campaign and Canvas revenue events with a qualifying last-touch event, grouped by Canvas variant. |
+| Purchases per Product | A count of all purchases grouped by product. |
+| Revenue by Channel | Sum of all campaign and Canvas revenue events with a qualifying last-touch event, grouped by channel. | 
 | Revenue Time Series | Sum of all campaign and Canvas revenue events with a qualifying last-touch event, grouped by day in UTC. |
 {: .reset-td-br-1 .reset-td-br-2}
 
