@@ -100,9 +100,9 @@ Your message should be similar to the following:
 
 #### 2.2 Schedule the delivery
 
-For the delivery type, select **Action-Based delivery**; then under **Outbound SMS Sent**, add a custom event trigger.
+For the delivery type, select **Action-Based delivery**; then add the custom event trigger **Outbound SMS Sent**.
 
-![The "Schedule Delivery" page.]({% image_buster /assets/img/front/braze_delivery.png %})
+![The "Schedule Delivery" page.]({% image_buster assets/img/front/custom_event_trigger.png %})
 
 {% alert note %}
 This custom event is the Data Transformation that writes to the user’s profile. Agent messages will be saved as an event property on this event.
