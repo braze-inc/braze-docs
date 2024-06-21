@@ -110,6 +110,25 @@ We also recommend reading about [user phone numbers]({{site.baseurl}}/user_guide
 
 Braze supports WhatsApp’s [Cloud API Local Storage](https://developers.facebook.com/docs/whatsapp/cloud-api/overview/local-storage?content_id=ka6F9gESPqhQpm5). To have this enabled, contact your Braze customer support manager.
 
+### WhatsApp phone number migration
+
+Your phone number must meet Meta's requirements to be eligible for migration:
+
+- Your Meta Business Account is verified.
+- Your existing WhatsApp Business Account is approved.
+- Your existing WhatsApp Business Account has a valid payment method in **Payment Settings**.
+- Your business phone number has two-step verification turned off. If you own your WhatsApp Business Account, you can turn off two-step verification on their number in the WhatsApp Manager. Otherwise, you must ask your Solution Provider to turn it off for you.
+
+For information on migrating your phone number, see Meta's documentation for [Migrating phone numbers between WhatsApp Business Accounts via embedded signup](https://developers.facebook.com/docs/whatsapp/business-management-api/guides/migrate-phone-to-different-waba/).
+
+#### Migrating your WhatsApp phone number
+
+Follow Meta's phone number [migration steps](https://developers.facebook.com/docs/whatsapp/business-management-api/guides/migrate-phone-to-different-waba/#migration-steps).
+
+{% alert note %}
+If you’re migrating a phone number to a different WhatsApp Business Group and Meta’s Embedded Signup (Step 2) requires the display name to match, take note of the existing display name on your WhatsApp Business Manager's **Phone Numbers** page. Enter that name during the Embedded Signup step.<br><br>![The WhatsApp Business Manager's Phone Numbers page with a display name of "Braze" listed next to a phone number.]({% image_buster /assets/img/whatsapp/phone_numbers.png %})
+{% endalert %}
+
 [1]: {% image_buster /assets/img/whatsapp/whatsapp1.png %} 
 [2]: {% image_buster /assets/img/whatsapp/whatsapp10.png %} 
 [3]: {% image_buster /assets/img/whatsapp/whatsapp2.png %} 
