@@ -29,9 +29,30 @@ To use this endpoint, you'll need an [API key]({{site.baseurl}}/api/basics#rest-
 
 {% multi_lang_include rate_limits.md endpoint='events' %}
 
-## Example request
+## Query parameters
+
+Note that each call to this endpoint will return 50 events. For more than 50 events, use the `Link` header to retrieve the data on the next page as shown in the following example response.
+
+| Parameter | Required | Data Type | Description |
+|---|---|---|---|
+| `cursor` | Optional | String | Determines the pagination of the custom events. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+
+## Example requests
+
+### Without cursor
+
 ```
 curl --location --request GET 'https://rest.iad-01.braze.com/events' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: Bearer YOUR-REST-API-KEY'
+```
+
+### With cursor
+
+```
+curl --location --request GET 'https://rest.iad-03.braze.com/events?cursor=c2tpcDow' \
+--header 'Content-Type: application/json' \
 --header 'Authorization: Bearer YOUR-REST-API-KEY'
 ```
 
