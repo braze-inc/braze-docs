@@ -27,8 +27,6 @@ For the upcoming changes on August 13, 2024, check the details below to see if y
 
 The default Braze and Shopify integration doesn't use the information, shipping, and payment pages within the checkout experience. As a result, the default integration will not be impacted. 
 
-In response, we are planning to launch a new version of the integration before the 2025 deadline to support all customers before `checkout.liquid` is fully deprecated.
-
 #### Shopify Plus
 
 For Shopify Plus customers, any custom SDK code snippets that modify `checkout.liquid` for the information, shipping, or payment pages will become inactive after this date. For example, custom code that logs events from these pages will no longer work. If you have custom SDK code, view our [developer guidance](#developer-guidance) for migration.
@@ -38,8 +36,6 @@ For Shopify Plus customers, any custom SDK code snippets that modify `checkout.l
 For non-Shopify Plus customers, if you need to customize the information, payment, and shipping pages you [need to upgrade to Shopify Plus](https://help.shopify.com/en/manual/checkout-settings/customize-checkout-configurations/checkout-extensibility#eligibility) and then follow the [developer guidance](#developer-guidance).
 
 ### Phase two: August 28, 2025
-
-This is the deadline to upgrade your thank you and order status pages, including your apps using ScriptTags and additional scripts.
 
 Shopify will deprecate support for [ScriptTags](https://shopify.dev/docs/apps/build/online-store/script-tag-legacy) on `checkout.liquid` pages, which are used in the integration. In response, we are actively building a new version of the Shopify integration which we plan to release well in advance of the August 2025 deadline. Stay tuned for more information from the Braze product team. 
 
