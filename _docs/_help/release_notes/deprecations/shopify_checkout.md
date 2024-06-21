@@ -8,7 +8,7 @@ page_type: update
 
 # Shopify checkout.liquid deprecation
 
-Shopify has informed all merchants about the deprecation of `checkout.liquid`, and the migration to [Checkout Extensibility](https://www.shopify.com/enterprise/blog/checkout-extensibility-winter-editions), a new checkout foundation that is more secure, performant, upgrade-safe, and is customized using apps. 
+Shopify has informed all merchants about the deprecation of `checkout.liquid`, and the migration to [Checkout Extensibility](https://www.shopify.com/enterprise/blog/checkout-extensibility-winter-editions), a new foundation for building customized checkout experiences. 
 
 Shopify will deprecate `checkout.liquid` in two phases:
 
@@ -137,8 +137,8 @@ document.cookie = "device_id={{ braze.getDeviceId() }}; domain={{ SHOP_DOMAIN }}
 6. Subscribe to checkout events and retireve the Braze `deviceID` from the first-party cookie.
 
 7. Send a request to the Braze SDK or REST API depending on your use case:
-- Fetch the `shopify/email_user_reconcile` endpoint and supply the URL parameter with the `deviceID` and `email`.
-- YOu can also send requests to a proxy URL that will call server-side code to call either the Braze REST API
+- Send requests to a proxy URL that will call server-side code to call either the Braze REST API
+- Fetch the `shopify/email_user_reconcile` endpoint and supply the URL parameter with the `deviceId` and `email`.
 
 ```java
 register(({analytics, browser, settings, init}) => {
