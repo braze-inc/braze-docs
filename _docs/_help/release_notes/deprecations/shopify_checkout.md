@@ -58,7 +58,7 @@ When migrating to Checkout Extensibility, follow these steps to maintain usage o
 
 2. Retrieve the `deviceID` from the Braze web SDK.
 
-3. Publish custom eents from the theme app extension with the Braze `deviceID` in the payload.
+3. Publish custom events from the theme app extension with the Braze `deviceID` in the payload.
 
 ```java
 // After initializing the Braze WebSDK
@@ -72,7 +72,10 @@ Shopify.analytics.publish("custom_event", event_data);
 4. Create a [web pixel](https://shopify.dev/docs/apps/build/marketing-analytics/build-web-pixels) and load it in checkout.
 
 5. Subscribe to `custom_event` and save the Braze `deviceID` as a cookie.
-- To reconcile a user by email, subscribe to `checkout_contact_info_submitted` and call the `email_user_reconcile` endpoint.
+
+6. Send request to the Braze SDK or REST API depending on your use case.
+- Send requests to a proxy URL that will call server-side code to call either the Braze REST API
+- Fetch the `shopify/email_user_reconcile` endpoint and supply the URL parameter with the `deviceId` and `email`.
 
 ```java
 register(({analytics, browser, settings, init}) => {
