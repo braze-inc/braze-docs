@@ -71,7 +71,7 @@ To keep a campaign or Canvas active, update the campaign or Canvas so it does no
 | Campaigns that are action-based, have end dates, and it’s seven days past the end date    | Send one message or make any edit to the campaign       |
 | Campaigns that are action-based, don’t have end dates, and haven't sent messages in one year  | Send one message or make any edit to the campaign   |
 | Campaigns that are API-triggered and haven’t sent messages in one year | Send one message or make any edit to the campaign    |
-| Campaigns that have conversion deadlines (these campaigns are stopped at the later of the idle status criteria and one day after their last-occurring conversion deadline) | Update the criteria above or extend the conversion deadline, depending on which occurs later |
+| Campaigns that have conversion deadlines (these campaigns are stopped during the later of these dates: the idle status criteria or one day after their last-occurring conversion deadline) | Update the criteria above or extend the conversion deadline, depending on which occurs later |
 | Sends as the result of a Winning or Personalized Variant are treated as scheduled sends | Update when the variant will send to a later date                                            |
 {: .reset-td-br-1 .reset-td-br-2}
 
