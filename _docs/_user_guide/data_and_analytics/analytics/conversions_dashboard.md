@@ -109,4 +109,4 @@ To download the time series data, click <i class="fas fa-bars"></i> and select y
 
 | Term | Definition |
 | --- | --- |
-| Touch | A physical interaction or touchpoint with a message.<br><br>Touches can include:<br>{::nomarkdown}<ul><li>Email Open and Email Click</li><li>Push Open</li><li>Content Card Click</li><li>In-App Message Click</li><li>SMS Delivery</li></ul>{:/} |
+| Touch | A physical interaction or touchpoint with a message.<br><br>Touches can include:<br>{::nomarkdown}<ul><li>Email Click</li><li>Push Open</li><li>Content Card Click</li><li>In-App Message Click</li><li>SMS Delivery</li></ul>{:/} |
