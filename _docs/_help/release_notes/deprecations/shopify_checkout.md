@@ -41,11 +41,11 @@ For non-Shopify Plus customers, if you need to customize the information, paymen
 
 This is the deadline to upgrade your thank you and order status pages, including your apps using ScriptTags and additional scripts.
 
-On this date, Shopify will fully deprecate support for [ScriptTags](https://shopify.dev/docs/apps/build/online-store/script-tag-legacy) on `checkout.liquid` pages. In response, Braze is developing a new version of the Braze and Shopify integration that will be released before August 2025. We will provide migration details to impacted customers as we release the new integration. Stay tuned for updates from the Braze product team.
+Shopify will deprecate support for [ScriptTags](https://shopify.dev/docs/apps/build/online-store/script-tag-legacy) on `checkout.liquid` pages, which are used in the integration. In response, we are actively building a new version of the Shopify integration which we plan to release well in advance of the August 2025 deadline. Stay tuned for more information from the Braze product team. 
 
 ## Developer guidance
 
-This guidance applies only if you've added custom SDK code snippets to the information, shipping, or payment pages in `checkout.liquid`. If you haven't made these customizations, you can disregard this guidance.
+This guidance applies to Shopify Plus customers who have added custom SDK code snippets to the information, shipping, or payment pages in `checkout.liquid`. If you haven't made these customizations, you can disregard this guidance.
 
 ### Guidance for Shopify 2.0 theme stores (such as Liquid)
 
@@ -77,24 +77,22 @@ Shopify.analytics.publish("custom_event", event_data);
 ```java
 register(({analytics, browser, settings, init}) => {
 
-  const SDK_URL = "SDK_URL"; // braze sdk url 
-  const API_KEY = "API_KEY"; // braze sdk app api key
-  const SHOP_DOMAIN = "SHOP_DOMAIN"; // shopify shop domain
-
   // subscribe to the custom events
   analytics.subscribe("custom_event", (event) => {
-       // save braze deviceId in cookie
-       browser.cookie.set('device_id', event.device_id);
-   });
+    // save braze deviceId in cookie
+    browser.cookie.set('device_id', event.device_id);
+  });
 
   // reconcile user by email after user enters contact info
   analytics.subscribe('checkout_contact_info_submitted', (event) => {
-       // retrieve email from checkout
-       const checkout = event.data.checkout;
-       const email = checkout.email;
-       const deviceId = browser.cookie.get('device_id')
+    // retrieve email from checkout
+    const checkout = event.data.checkout;
+    const email = checkout.email;
 
-fetch(
+    // retrieve deviceId from cookies
+    const deviceId = browser.cookie.get('device_id')
+
+    fetch(
    'https://'
        + SDK_URL
        + `/api/v3/shopify/email_user_reconcile`
@@ -108,7 +106,7 @@ fetch(
 }).catch(error => {
    console.error('There was a problem with the operation:', error);
 });
-   });
+  });
 });
 ```
 
@@ -137,23 +135,24 @@ document.cookie = "device_id={{ braze.getDeviceId() }}; domain={{ SHOP_DOMAIN }}
 5. Create a [web pixel](https://shopify.dev/docs/apps/marketing/pixels/getting-started) and load it in checkout.
 
 6. Subscribe to checkout events and retireve the Braze `deviceID` from the first-party cookie.
-- To reconcile a user by email, subscribe to `checkout_contact_info_submitted` and call the `email_user_reconcile` endpoint.
+
+7. Send a request to the Braze SDK or REST API depending on your use case:
+- Fetch the `shopify/email_user_reconcile` endpoint and supply the URL parameter with the `deviceID` and `email`.
+- YOu can also send requests to a proxy URL that will call server-side code to call either the Braze REST API
 
 ```java
 register(({analytics, browser, settings, init}) => {
 
-  const SDK_URL = "SDK_URL"; // braze sdk url 
-  const API_KEY = "API_KEY"; // braze sdk app api key
-  const SHOP_DOMAIN = "SHOP_DOMAIN"; // shopify shop domain
-
   // reconcile user by email after user enters contact info
   analytics.subscribe('checkout_contact_info_submitted', (event) => {
-       // retrieve email from checkout
-       const checkout = event.data.checkout;
-       const email = checkout.email;
-       const deviceId = browser.cookie.get('device_id')
+    // retrieve email from checkout
+    const checkout = event.data.checkout;
+    const email = checkout.email;
 
-fetch(
+    // retrieve deviceId from cookies
+    const deviceId = browser.cookie.get('device_id')
+
+    fetch(
    'https://'
        + SDK_URL
        + `/api/v3/shopify/email_user_reconcile`
@@ -167,6 +166,6 @@ fetch(
 }).catch(error => {
    console.error('There was a problem with the operation:', error);
 });
-   });
+  });
 });
 ```
