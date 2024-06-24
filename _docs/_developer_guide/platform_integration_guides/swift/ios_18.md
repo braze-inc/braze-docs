@@ -14,5 +14,5 @@ description: "This article covers insights into the iOS 18 release to help you u
 ## Changes in iOS 18
 
 {% alert note %}
-Apple's [WWDC](https://developer.apple.com/wwdc24/) is happening June 9th - 11th 2024. Check back soon for news on this year's iOS 18 updates.
+Apple's [WWDC](https://developer.apple.com/wwdc24/) took place June 9th - 11th 2024. Check back soon so you can learn how to leverage iOS 18 with Braze.
 {% endalert %}
