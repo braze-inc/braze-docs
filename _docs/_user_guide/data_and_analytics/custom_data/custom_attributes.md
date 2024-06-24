@@ -51,7 +51,11 @@ You can view up to 10 usage reports at a time by selecting the checkboxes next t
 
 ### Exporting data
 
-To export the list of custom attributes as a CSV file, click the "Export all" button at the top of the page. The CSV file will be generated and a download link will be emailed to you. (This feature is currently available in early access. Contact your customer success manager if you're interested in participating in this early access.)
+To export the list of custom attributes as a CSV file, select **Export all** at the top of the page. The CSV file will be generated, and a download link will be emailed to you. 
+
+{% alert important %}
+This feature is currently available in early access. Contact your customer success manager if you're interested in participating in this early access.
+{% endalert %}
 
 ## Setting custom attributes
 
