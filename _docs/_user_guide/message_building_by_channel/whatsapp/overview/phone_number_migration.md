@@ -21,7 +21,7 @@ Your phone number must meet Meta's requirements to be eligible for migration:
 - Your existing WhatsApp Business Account has a valid payment method in **Payment Settings**.
 - Your business phone number has two-step verification turned off. If you own your WhatsApp Business Account, you can turn off two-step verification on their number in the WhatsApp Manager. Otherwise, you must ask your Solution Provider to turn it off for you.
 
-For information on migrating your WhatsApp phone number, see Meta's documentation for [Migrating phone numbers between WhatsApp Business Accounts via embedded signup](https://developers.facebook.com/docs/whatsapp/business-management-api/guides/migrate-phone-to-different-waba/).
+For information on migrating your WhatsApp phone number, see Meta's documentation for [Migrating phone numbers between WhatsApp Business Accounts via Embedded Signup](https://developers.facebook.com/docs/whatsapp/business-management-api/guides/migrate-phone-to-different-waba/).
 
 ## Migrating your WhatsApp phone number
 
