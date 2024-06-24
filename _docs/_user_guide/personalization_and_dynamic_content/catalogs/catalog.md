@@ -320,16 +320,16 @@ Which will display as the following:
 
 With templating, you can render a different catalog item for each user based on their individual custom attributes, event properties, or any other templatable field.
 
-#### Templating catalog items that contain liquid
+#### Templating catalog items that contain Liquid
 
-Similar to connected content, the `:rerender` flag must be included in the liquid tag in order to render its liquid content. Note that the `:rerender` flag is only one level deep, meaning that it will not apply to any nested liquid tag calls.
+Similar to connected content, the `:rerender` flag must be included in the Liquid tag in order to render its Liquid content. Note that the `:rerender` flag is only one level deep, meaning that it will not apply to any nested Liquid tag calls.
 
-> If a catalog item contains user profile fields (within a Liquid personalization tag), these values must be defined earlier in the message via Liquid, before the templating in order to render the Liquid properly. If `:rerender` flag is not provided, it will render the raw liquid content.
+> If a catalog item contains user profile fields (within a Liquid personalization tag), these values must be defined earlier in the message via Liquid, before the templating in order to render the Liquid properly. If `:rerender` flag is not provided, it will render the raw Liquid content.
 
-For example, if a catalog named `Messages` has an item content contains liquid:<br>
+For example, if a catalog named `Messages` has an item content contains Liquid:<br>
 ![][15]{: style="max-width:80%;"}<br>
 
-To render the liquid content:
+To render the Liquid content:
 {% raw %}
 ```liquid
 Hi ${first_name}
