@@ -320,6 +320,34 @@ Which will display as the following:
 
 With templating, you can render a different catalog item for each user based on their individual custom attributes, event properties, or any other templatable field.
 
+#### Templating catalog items that contain liquid
+
+Similar to connected content, the `:rerender` flag must be included in the liquid tag in order to render its liquid content. Note that the `:rerender` flag is only one level deep, meaning that it will not apply to any nested liquid tag calls.
+
+> If a catalog item contains user profile fields (within a Liquid personalization tag), these values must be defined earlier in the message via Liquid, before the templating in order to render the Liquid properly. If `:rerender` flag is not provided, it will render the raw liquid content.
+
+For example, if a catalog named `Messages` has an item content contains liquid:<br>
+![][15]{: style="max-width:80%;"}<br>
+
+To render the liquid content:
+{% raw %}
+```liquid
+Hi ${first_name}
+
+{% catalog_items Messages greet_msg :rerender %}
+{{ items[0].Welcome_Message }}
+```
+{% endraw %}
+
+Which will display as the following:
+{% raw %}
+```
+Hi Peter,
+
+Welcome to our store, Peter!
+```
+{% endraw %}
+
 ### Uploading a CSV
 
 You can upload a CSV of new catalog items to add or catalog items to update. To delete a list of items, you can upload a CSV of item IDs to delete them.
@@ -340,12 +368,12 @@ As you create more catalogs, you can leverage the [Catalogs Endpoints]({{site.ba
 
 The following table describes the differences between the free and pro version of catalogs:
 
-| Area | Free version | Catalogs Pro |
-|---|---|---|
-| CSV file size | Up to 100&nbsp;MB for all CSV files combined across your company | Up to 2&nbsp;GB for a single CSV file |
-| Characters limit for item value | Up to 5,000 characters in one value. For example, if you had a field labeled `description`, the maximum number of characters within the field is 5,000. | Up to 5,000 characters in one value. For example, if you had a field labeled `description`, the maximum number of characters within the field is 5,000. |
-| Characters limit for item column name | Up to 250 characters | Up to 250 characters |
-| Selections | Up to 30 selections per catalog | Up to 30 selections per catalog |
+| Area                                  | Free version                                                                                                                                            | Catalogs Pro                                                                                                                                            |
+| ------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| CSV file size                         | Up to 100&nbsp;MB for all CSV files combined across your company                                                                                        | Up to 2&nbsp;GB for a single CSV file                                                                                                                   |
+| Characters limit for item value       | Up to 5,000 characters in one value. For example, if you had a field labeled `description`, the maximum number of characters within the field is 5,000. | Up to 5,000 characters in one value. For example, if you had a field labeled `description`, the maximum number of characters within the field is 5,000. |
+| Characters limit for item column name | Up to 250 characters                                                                                                                                    | Up to 250 characters                                                                                                                                    |
+| Selections                            | Up to 30 selections per catalog                                                                                                                         | Up to 30 selections per catalog                                                                                                                         |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 ### Catalog storage
@@ -374,4 +402,5 @@ At a company level, the maximum storage for Catalogs Pro will be based on the si
 [12]: {% image_buster /assets/img_archive/add_catalog_fields.png %}
 [13]: {% image_buster /assets/img_archive/add_catalog_items.png %}
 [14]: {% image_buster /assets/img_archive/in_browser_catalog.png %}
+[15]: {% image_buster /assets/img_archive/catalog_liquid_templating.png %}
 [10]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/using_liquid/#assigning-variables
