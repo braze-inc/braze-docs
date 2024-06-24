@@ -72,15 +72,25 @@ For customers who onboarded with Braze on or after September 16, 2021, we apply 
 {% elsif include.endpoint == "users merge" %}
 For customers who onboarded with Braze on or after September 16, 2021, we apply a shared rate limit of 20,000 requests per minute to this endpoint. This rate limit is shared with the `/users/delete`, `/users/alias/new`, `/users/identify`, and `/users/alias/update` endpoints, as documented in [API rate limits]({{site.baseurl}}/api/api_limits/).
 
+<!---/custom_attributes-->
+
+{% elsif include.endpoint == "custom_attributes" %}
+For customers who onboarded with Braze on or after September 16, 2021, we apply a shared rate limit of 1,000 requests per hour to this endpoint. This rate limit is shared with the `/events`, `/events/list`, and `/purchases/product_list` endpoints, as documented in [API rate limits]({{site.baseurl}}/api/api_limits/).
+
+<!---/events-->
+
+{% elsif include.endpoint == "events" %}
+For customers who onboarded with Braze on or after September 16, 2021, we apply a shared rate limit of 1,000 requests per hour to this endpoint. This rate limit is shared with the `/custom_attributes`, `/events/list`, and `/purchases/product_list` endpoints, as documented in [API rate limits]({{site.baseurl}}/api/api_limits/).
+
 <!---/events/list-->
 
 {% elsif include.endpoint == "events list" %}
-For customers who onboarded with Braze on or after September 16, 2021, we apply a shared rate limit of 1,000 requests per hour to this endpoint. This rate limit is shared with the `/purchases/product_list` endpoint, as documented in [API rate limits]({{site.baseurl}}/api/api_limits/).
+For customers who onboarded with Braze on or after September 16, 2021, we apply a shared rate limit of 1,000 requests per hour to this endpoint. This rate limit is shared with the `/custom_attributes`, `/events`, and `/purchases/product_list` endpoints, as documented in [API rate limits]({{site.baseurl}}/api/api_limits/).
 
 <!---/purchases/product_list-->
 
 {% elsif include.endpoint == "purchases product list" %}
-For customers who onboarded with Braze on or after September 16, 2021, we apply a shared rate limit of 1,000 requests per hour to this endpoint. This rate limit is shared with the `/events/list` endpoint, as documented in [API rate limits]({{site.baseurl}}/api/api_limits/).
+For customers who onboarded with Braze on or after September 16, 2021, we apply a shared rate limit of 1,000 requests per hour to this endpoint. This rate limit is shared with the `/custom_attributes`, `/events`, and `/events/list` endpoints, as documented in [API rate limits]({{site.baseurl}}/api/api_limits/).
 
 <!---/messages/send-->
 <!---/campaigns/trigger/send-->

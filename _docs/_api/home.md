@@ -266,12 +266,20 @@ glossaries:
     description: Retrieve a series of the number of sessions for your app over a designated time period.
     tags:
       - Sessions
+  - name: <a href='/docs/api/endpoints/export/custom_attributes/get_custom_attributes/'>/custom_attributes</a>
+    description: Export a list of custom attributes including the name, description, data type, array length (if applicable), status, and associated tags.
+    tags:
+      - Custom Attributes
   - name: <a href='/docs/api/endpoints/export/custom_events/get_custom_events_analytics/'>/events/data_series</a>
     description: Retrieve a series of the number of occurrences of a custom event in your app over a designated time period.
     tags:
       - Custom Events
+  - name: <a href='/docs/api/endpoints/export/custom_events/get_custom_events_data/'>/events</a>
+    description: Export a list of custom events including the name, description, status, associated tags, and analytics report inclusion.
+    tags:
+      - Custom Events
   - name: <a href='/docs/api/endpoints/export/custom_events/get_custom_events/'>/events/list</a>
-    description: Export a list of custom events that have been recorded for your app.
+    description: Export a list of names of custom events that have been recorded for your app.
     tags:
       - Custom Events
   - name: <a href='/docs/api/endpoints/templates/content_blocks_templates/post_create_email_content_block/'>/content_blocks/create</a>
