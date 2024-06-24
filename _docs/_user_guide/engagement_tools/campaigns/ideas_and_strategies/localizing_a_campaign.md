@@ -58,15 +58,6 @@ The "one template per country" approach separates templating into different send
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% endtab %}
-{% tab Multi-language messaging %}
-
-Add and use [locales in your messaging]({{site.baseurl}}/user_guide/message_building_by_channel/email/using_locales) to target users in different languages all within a single email campaign or Canvas. 
-
-{% alert important %}
-This feature is currently in early access. Contact your Braze account manager if you're interested in participating in the early access.
-{% endalert %}
-
-{% endtab %}
 {% endtabs %}
 
 ### Canvas
@@ -98,15 +89,6 @@ Once sent, the dashboard provides dynamic analytics per country and within user-
 | --- | --- |
 | - Reporting on revenue per country within Braze (such as per Canvas, variant, or step)<br>- Flexibility if there is drastically different content per country<br>- Can add other channels as part of the journey in the future | - Requires strategic structuring<br>- More build effort required (such as separate message steps for each country)<br>- Canvas can become large and difficult to read if you have custom, complex journeys for each country in a single Canvas. |
 {: .reset-td-br-1 .reset-td-br-2}
-
-{% endtab %}
-{% tab Multi-language messaging %}
-
-Add and use [locales in your messaging]({{site.baseurl}}/user_guide/message_building_by_channel/email/using_locales) to target users in different languages all within a single email campaign or Canvas. 
-
-{% alert important %}
-This feature is currently in early access. Contact your Braze account manager if you're interested in participating in the early access.
-{% endalert %}
 
 {% endtab %}
 {% endtabs %}
@@ -145,7 +127,7 @@ We always recommend including a {% raw %}`{% else %}`{% endraw %} statement in y
 
 ### Option 2: Content Blocks
 
-Braze [Content Blocks]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/content_blocks/#content-blocks) are reusable blocks of content. When a block is changed, everywhere that references that block changes. For example, an email header or footer used in all emails or to house translations. These blocks can also be [created]({{site.baseurl}}/api/endpoints/templates/content_blocks_templates/post_create_email_content_block/#create-content-block) and [updated]({{site.baseurl}}/api/endpoints/templates/content_blocks_templates/post_update_content_block/) using the REST API, and users can programmatically upload translations. 
+Braze [Content Blocks]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/content_blocks/#content-blocks) are reusable blocks of content. When a block is changed, all references to that block changes. For example, updates to an email header or footer will be reflected in all emails or to house translations. These blocks can also be [created]({{site.baseurl}}/api/endpoints/templates/content_blocks_templates/post_create_email_content_block/#create-content-block) and [updated]({{site.baseurl}}/api/endpoints/templates/content_blocks_templates/post_update_content_block/) using the REST API, and users can programmatically upload translations. 
 
 When building a campaign in the dashboard, Content Blocks can be referenced using tag {% raw %}`{{content_blocks.${name_of_content_block}}}`{% endraw %}. These blocks could contain all translations housed within conditional logic for each language, as shown in option 1, or a separate block for each language can be utilized.
 
@@ -262,7 +244,16 @@ These catalog items can them be referenced using [personalization]({{site.baseur
 ```
 {% endraw %}
 
-### Option 4: Localization partners
+### Option 4: Add a locale
+
+Add and use [locales in your messaging]({{site.baseurl}}/user_guide/message_building_by_channel/email/using_locales) to target users in different languages all within a single email campaign or Canvas. 
+
+{% alert important %}
+This feature is currently in early access. Contact your Braze account manager if you're interested in participating in the early access.
+{% endalert %}
+
+
+### Option 5: Localization partners
 
 Many Braze partners offer localization solutions, including [Transifex]({{site.baseurl}}/partners/message_personalization/localization/transifex/#about-transifex) and [Crowdin](https://crowdin.com/). Typically users use the platform alongside an internal team and translation agency. These translations are then uploaded there and are then accessible via REST API. These services also often leverage [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/), allowing users to fetch the translations via API.
 
@@ -287,7 +278,7 @@ For example, the following Connected Content calls call Transifex and Crowdin to
 {% endtab %}
 {% endtabs %}
 
-### Option 5: Translations in a public Google Sheet 
+### Option 6: Translations in a public Google Sheet 
 
 Another translation option includes housing translations in Google Sheets; often, this may be handled in partnership with a translation agency. Translations housed here can be queried using Connected Content. Relevant translation for a user based on their language will then be pulled into the campaign body at the time of sending. 
 
@@ -295,7 +286,7 @@ Another translation option includes housing translations in Google Sheets; often
 The Google Sheets API has a limit of 500 requests per 100 seconds per project. Connected Content calls can be cached, but this solution is not scalable for a high-traffic campaign.
 {% endalert %}
 
-### Option 6: Google spreadsheet into a JSON API via SheetDB  
+### Option 7: Google spreadsheet into a JSON API via SheetDB  
 
 This option provides an alternative method of transforming Google Sheets into JSON objects queried via Connected Content. By turning a spreadsheet into a JSON API via SheetDB, you can choose from [multiple subscription tiers](https://sheetdb.io/pricing) depending on the cadence of the API calls.
 
@@ -315,7 +306,7 @@ First, build out the Google sheet so that the languages are different objects:
 
 #### Step 2: Use the language Liquid tag in a Connected Content call
 
-Next, implement the {% raw %}{{${language}}}{% endraw %} Liquid tag within a Connected Content call. Note that SheetDB will auto-generate the `sheet_id` upon creating the spreadsheet.
+Next, implement the {% raw %}`{{${language}}}`{% endraw %} Liquid tag within a Connected Content call. Note that SheetDB will auto-generate the `sheet_id` upon creating the spreadsheet.
 
 {% raw %}
 ```liquid
@@ -340,4 +331,3 @@ Lastly, use Liquid for templating your messages:
 - Data modeling within Google Sheets has to follow a different language-driven vertical as opposed to having message objects.
 - SheetDB offers a limited free account and multiple paying options that should be considered based on your campaign strategy. 
 - Connected Content calls can be cached. We recommend measuring the projected cadence of the API calls and investigating an alternative approach of calling the main SheetDB endpoint instead of using the search method.
-
