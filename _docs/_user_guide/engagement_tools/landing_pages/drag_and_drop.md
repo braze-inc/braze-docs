@@ -1,5 +1,5 @@
 ---
-nav_title: Drag-and-drop Landing Pages
+nav_title: Drag-and-Drop Landing Pages
 article_title: Creating Drag-and-Drop Landing Pages
 description: "This article covers how to create and customize Braze landing pages with the drag-and-drop editor."
 page_order: 31
@@ -17,7 +17,6 @@ Landing pages are currently in beta. Contact your Braze account manager if you'r
 
 ![GIF demonstrating how components can be dragged and dropped into an editor to create a landing page.][1]{: style="max-width:70%;"}
 
-Check out our [Customer Ed Quick Tips]() video to get a jumpstart on creating Braze landing pages.
 
 ## Creating a landing page (drag-and-drop)
 
@@ -41,7 +40,7 @@ We suggest following these best practices:
 
 | Detail | Description | Recommendations |
 | --- | --- |
-| Site title | The title that displays on the brower tab. | Use a maximum of 60 characters. |
+| Site title | The title that displays on the browser tab. | Use up to 60 characters. |
 | Site description | A text snippet that displays in search results. | Use between 140-160 characters.|
 | Favicon | The icon that appears next to the site title on the browser tab. | Use an aspect ratio of 1:1, and a supported file type of PNG, JPEG, or ICO. |
 | URL handle | This is the link users will click to navigate to your landing page. | This must be unique. |
@@ -81,7 +80,7 @@ We recommend setting up page container-level styles before you customize styles 
 
 ### Step 4: Preview your landing page
 
-You can preview your landing page in the editor's **Preview** tab, but testing functionality is disabled for the beta. After you save your landing page as a draft, you can visit the URL under **URL handle** to preview the page on your browser. You can also share the URL with collaborators.
+You can preview your landing page in the editor's **Preview** tab, but testing functionality is disabled for the beta. After saving your landing page as a draft, you can visit the URL under **URL handle** to preview the page on your browser. You can also share the URL with collaborators.
 
 ![The "URL handle" section has the full URL to preview the landing page.][7]{: style="max-width:70%;"}
 
@@ -109,7 +108,7 @@ During the beta, each form submission on a landing page will create a new anonym
 
 ## Considerations
 
-- The landing page body size can be a maximum of 1 MB.
+- The landing page body size can be up to 1 MB.
 
 ## Frequently asked questions
 
@@ -118,7 +117,7 @@ During the beta, each form submission on a landing page will create a new anonym
 When a user submits a form, a new Braze user profile is created with the submitted user data.
 
 {% alert note %}
-During the beta, Braze will create a new user with each form submission regardless of where the user clicks on the landing page from.
+During the beta, Braze will create a new user with each form submission regardless of where the user clicks on the landing page.
 {% endalert %}
 
 ### Are there any technical requirements to publish a landing page?
