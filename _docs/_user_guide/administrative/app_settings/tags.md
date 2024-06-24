@@ -38,7 +38,11 @@ You can add up to 175 tags to a campaign, Canvas, or segment.
 
 ## Custom data tags
 
-Tags may also be added to custom data when managing [custom attributes]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#managing-custom-attributes) and [custom events]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/#managing-custom-events). (This feature is currently in early access. Contact your customer success manager if you're interested in participating in this early access.)
+Tags may also be added to custom data when managing [custom attributes]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#managing-custom-attributes) and [custom events]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/#managing-custom-events). 
+
+{% alert important %}
+This feature is currently in early access. Contact your customer success manager if you're interested in participating in this early access.
+{% endalert %}
 
 ## Best practices {#tags-best-practices}
 
