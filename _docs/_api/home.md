@@ -266,7 +266,7 @@ glossaries:
     description: Retrieve a series of the number of sessions for your app over a designated time period.
     tags:
       - Sessions
-  - name: <a href='/docs/api/endpoints/export/custom_events/get_custom_attributes/'>/custom_attributes</a>
+  - name: <a href='/docs/api/endpoints/export/custom_attributes/get_custom_attributes/'>/custom_attributes</a>
     description: Export a list of custom attributes including the name, description, data type, array length (if applicable), status, and associated tags.
     tags:
       - Custom Attributes
