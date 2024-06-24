@@ -48,9 +48,9 @@ This guidance applies to Shopify Plus customers who have added custom SDK code s
 When migrating to Checkout Extensibility, follow these steps to maintain usage of Braze during checkout.
 
 1. Set up the Braze web SDK on the storefront pages.
-- Create a [theme app extension](https://shopify.dev/docs/apps/build/online-store/theme-app-extensions) to turn on in the storefront.
-- Create an [app embed block](https://shopify.dev/docs/apps/build/online-store/theme-app-extensions/configuration#app-embed-blocks).
-- Load and initailize the Braze SDK with [Google Tag Manager]({{site.baseurl}}/developer_guide/platform_integration_guides/web/initial_sdk_setup/?tab=google%20tag%20manager) or [Braze CDN]({{site.baseurl}}/developer_guide/platform_integration_guides/web/initial_sdk_setup/?tab=braze%20cdn).
+  - Create a [theme app extension](https://shopify.dev/docs/apps/build/online-store/theme-app-extensions) to turn on in the storefront.
+  - Create an [app embed block](https://shopify.dev/docs/apps/build/online-store/theme-app-extensions/configuration#app-embed-blocks).
+  - Load and initailize the Braze SDK with [Google Tag Manager]({{site.baseurl}}/developer_guide/platform_integration_guides/web/initial_sdk_setup/?tab=google%20tag%20manager) or [Braze CDN]({{site.baseurl}}/developer_guide/platform_integration_guides/web/initial_sdk_setup/?tab=braze%20cdn).
 
 2. Retrieve the `deviceID` from the Braze web SDK.
 
@@ -70,8 +70,8 @@ Shopify.analytics.publish("custom_event", event_data);
 5. Subscribe to `custom_event` and save the Braze `deviceID` as a cookie.
 
 6. Send a request to the Braze SDK or REST API depending on your use case.
-- Send requests to a proxy URL that will call server-side code to call the Braze REST API.
-- Fetch the `shopify/email_user_reconcile` endpoint and supply the URL parameter with the `deviceId` and `email`.
+  - Send requests to a proxy URL that will call server-side code to call the Braze REST API.
+  - Fetch the `shopify/email_user_reconcile` endpoint and supply the URL parameter with the `deviceId` and `email`.
 
 ```java
 register(({analytics, browser, settings, init}) => {
@@ -92,19 +92,19 @@ register(({analytics, browser, settings, init}) => {
     const deviceId = browser.cookie.get('device_id')
 
     fetch(
-   'https://'
-       + SDK_URL
-       + `/api/v3/shopify/email_user_reconcile`
-       + `?email=${encodeURIComponent(email)}`
-       + `&device_id=${deviceId}`
-       + `&api_key=${API_KEY}`
-       + `&shop=${SHOP_DOMAIN}`,
-   {method: 'POST'}
-).then(response => {
-   console.log(`Successfully reconciled email ${email} with device ID ${deviceId}`);
-}).catch(error => {
-   console.error('There was a problem with the operation:', error);
-});
+      'https://'
+        + SDK_URL
+        + `/api/v3/shopify/email_user_reconcile`
+        + `?email=${encodeURIComponent(email)}`
+        + `&device_id=${deviceId}`
+        + `&api_key=${API_KEY}`
+        + `&shop=${SHOP_DOMAIN}`,
+      {method: 'POST'}
+    ).then(response => {
+      console.log(`Successfully reconciled email ${email} with device ID ${deviceId}`);
+    }).catch(error => {
+      console.error('There was a problem with the operation:', error);
+    });
   });
 });
 ```
@@ -114,10 +114,10 @@ register(({analytics, browser, settings, init}) => {
 When migrating to Checkout Extensibility, follow these steps to maintain usage of Braze during checkout.
 
 1. Set the checkout page as a subdomain of the main storefront.
-- For example, if your hydrogen store is hosted at `myshop.com`, the checkout must be on `checkout.myshop.com` or similar.
+  - For example, if your hydrogen store is hosted at `myshop.com`, the checkout must be on `checkout.myshop.com` or similar.
 
 2. Set up the Braze web SDK on the storefront pages.
-- Load and initialize the Braze SDK via [NPM]({{site.baseurl}}/developer_guide/platform_integration_guides/web/initial_sdk_setup/#step-1-install-the-braze-library).
+  - Load and initialize the Braze SDK via [NPM]({{site.baseurl}}/developer_guide/platform_integration_guides/web/initial_sdk_setup/#step-1-install-the-braze-library).
 
 3. Retrieve the `deviceID` from the Braze web SDK.
 
@@ -136,8 +136,8 @@ document.cookie = "device_id={{ braze.getDeviceId() }}; domain={{ SHOP_DOMAIN }}
 6. Subscribe to checkout events and retireve the Braze `deviceID` from the first-party cookie.
 
 7. Send a request to the Braze SDK or REST API depending on your use case:
-- Send requests to a proxy URL that will call server-side code to call the Braze REST API.
-- Fetch the `shopify/email_user_reconcile` endpoint and supply the URL parameter with the `deviceId` and `email`.
+  - Send requests to a proxy URL that will call server-side code to call the Braze REST API.
+  - Fetch the `shopify/email_user_reconcile` endpoint and supply the URL parameter with the `deviceId` and `email`.
 
 ```java
 register(({analytics, browser, settings, init}) => {
@@ -152,19 +152,19 @@ register(({analytics, browser, settings, init}) => {
     const deviceId = browser.cookie.get('device_id')
 
     fetch(
-   'https://'
-       + SDK_URL
-       + `/api/v3/shopify/email_user_reconcile`
-       + `?email=${encodeURIComponent(email)}`
-       + `&device_id=${deviceId}`
-       + `&api_key=${API_KEY}`
-       + `&shop=${SHOP_DOMAIN}`,
-   {method: 'POST'}
-).then(response => {
-   console.log(`Successfully reconciled email ${email} with device ID ${deviceId}`);
-}).catch(error => {
-   console.error('There was a problem with the operation:', error);
-});
+      'https://'
+        + SDK_URL
+        + `/api/v3/shopify/email_user_reconcile`
+        + `?email=${encodeURIComponent(email)}`
+        + `&device_id=${deviceId}`
+        + `&api_key=${API_KEY}`
+        + `&shop=${SHOP_DOMAIN}`,
+      {method: 'POST'}
+    ).then(response => {
+      console.log(`Successfully reconciled email ${email} with device ID ${deviceId}`);
+    }).catch(error => {
+      console.error('There was a problem with the operation:', error);
+    });
   });
 });
 ```
