@@ -11,6 +11,10 @@ alias: /landing_pages/drag_and_drop/
 
 > Using the drag-and-drop editor, you can create and customize a landing page to grow your audience and collect preferences directly in Braze.
 
+{% alert important %}
+Landing pages are currently in beta. Contact your Braze account manager if you're interested in participating in this beta.
+{% endalert %}
+
 ![GIF demonstrating how components can be dragged and dropped into an editor to create a landing page.][1]{: style="max-width:70%;"}
 
 Check out our [Customer Ed Quick Tips]() video to get a jumpstart on creating Braze landing pages.
@@ -97,9 +101,11 @@ In beta, you can include a link to the landing page in any channel by copying an
 
 ## Handling form submission errors
 
-If an error occurs when a user submits a form on a landing page, they'll be presented with a default error message that can't be customized or styled in the editor.
+If a user inputs an invalid form value (such as unaccepted special characters), they will see a generic error indicator that isn't customizable and won't be able to submit the form. You can view the error behavior in the **Preview** tab and the preview landing page.
 
 ## Merging users created from your landing page
+
+During the beta, each form submission on a landing page will create a new anonymous user profile in Braze. If a user with the same email address already exists, you can merge the new user profile into the existing profile using the [`/users/merge`]({{site.baseurl}}/api/endpoints/user_data/post_users_merge#merging-unidentified-user) endpoint. To learn about the different ways to deduplicate users in Braze, see [Duplicate users]({{site.baseurl}}/user_guide/engagement_tools/segments/user_profiles/duplicate_users).
 
 ## Considerations
 
