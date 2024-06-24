@@ -14,12 +14,12 @@ description: "This article outlines details about the Export custom attributes B
 /custom_attributes
 {% endapimethod %}
 
-> Use this endpoint to export a list of custom attributes that have been recorded for your app. The attributes are returned in groups of 50, sorted alphabetically.
+> Use this endpoint to export a list of custom attributes recorded for your app. The attributes are returned in groups of 50, sorted alphabetically.
+
 {% alert important %}
 This endpoint is currently in early access. Contact your customer success manager if you're interested in participating in this early access.
 {% endalert %}
 
-{% apiref postman %}https://documenter.getpostman.com/view/FIXME {% endapiref %}
 
 ## Prerequisites
 
@@ -79,7 +79,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ### Fatal error response codes {#fatal-export}
 
-For status codes and associated error messages that will be returned if your request encounters a fatal error, reference [Fatal errors & responses]({{site.baseurl}}/api/errors/#fatal-errors).
+For status codes and associated error messages that will be returned if your request encounters a fatal error, reference [Fatal errors]({{site.baseurl}}/api/errors/#fatal-errors).
 
 {% alert tip %}
 For help with CSV and API exports, visit [Export troubleshooting]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/).
