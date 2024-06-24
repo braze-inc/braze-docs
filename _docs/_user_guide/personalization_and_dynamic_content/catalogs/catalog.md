@@ -320,34 +320,6 @@ Which will display as the following:
 
 With templating, you can render a different catalog item for each user based on their individual custom attributes, event properties, or any other templatable field.
 
-#### Templating catalog items that contain Liquid
-
-Similar to connected content, the `:rerender` flag must be included in the Liquid tag in order to render its Liquid content. Note that the `:rerender` flag is only one level deep, meaning that it will not apply to any nested Liquid tag calls.
-
-> If a catalog item contains user profile fields (within a Liquid personalization tag), these values must be defined earlier in the message via Liquid, before the templating in order to render the Liquid properly. If `:rerender` flag is not provided, it will render the raw Liquid content.
-
-For example, if a catalog named `Messages` has an item content contains Liquid:<br>
-![][15]{: style="max-width:80%;"}<br>
-
-To render the Liquid content:
-{% raw %}
-```liquid
-Hi ${first_name}
-
-{% catalog_items Messages greet_msg :rerender %}
-{{ items[0].Welcome_Message }}
-```
-{% endraw %}
-
-Which will display as the following:
-{% raw %}
-```
-Hi Peter,
-
-Welcome to our store, Peter!
-```
-{% endraw %}
-
 ### Uploading a CSV
 
 You can upload a CSV of new catalog items to add or catalog items to update. To delete a list of items, you can upload a CSV of item IDs to delete them.
@@ -402,5 +374,4 @@ At a company level, the maximum storage for Catalogs Pro will be based on the si
 [12]: {% image_buster /assets/img_archive/add_catalog_fields.png %}
 [13]: {% image_buster /assets/img_archive/add_catalog_items.png %}
 [14]: {% image_buster /assets/img_archive/in_browser_catalog.png %}
-[15]: {% image_buster /assets/img_archive/catalog_liquid_templating.png %}
 [10]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/using_liquid/#assigning-variables
