@@ -50,7 +50,7 @@ Only users who already exist within Braze will be added or removed from a cohort
 
 {% tabs local %}
 {% tab Data Workbench %}
-### Step 3: Define your query
+#### Step 3.1: Define your query
 
 {% alert note %}
 Query columns must be specified with the exact column names and data type. The query columns must include at least one of the columns: `user_ids`, `device_ids`, or braze alias column match with configuration on the UI. Only user profiles that exist within Braze will be added to a cohort. Cohort Import will not create new user profiles.
@@ -60,12 +60,12 @@ Query columns must be specified with the exact column names and data type. The q
 2. Select **New Query**.
 3. Run the query to validate the result set.
 
-![Treasure Data Integrations Hub Catalog]({% image_buster /assets/img/treasure_data/cohort/cohort3.png %}) 
+![Treasure Data Integrations Hub Catalog]({% image_buster /assets/img/treasure_data/cohort/cohort3.png %})
 
-#### Use case: Syncing cohorts by identifier
+##### Use case: Syncing cohorts by identifier
 
-{% tabs local %}
-{% tab Syncing External IDs %}
+{% subtabs local %}
+{% subtab Syncing External IDs %}
 Here's an example table in Treasure Data:
 
 | external_id |	email	| device_ids |
@@ -94,9 +94,9 @@ After running the query, these user aliases will be added to the cohort in Braze
  - `TDCohort2`
  - `TDCohort3`
  - `TDCohort4`
-{% endtab %}
+{% endsubtab %}
 
-{% tab Syncing User Aliases %}
+{% subtab Syncing User Aliases %}
 Here's an example table in Treasure Data:
 
 | external_id |	email	| device_ids |
@@ -121,9 +121,9 @@ After running the query, these user aliases will be added to the cohort in Braze
  - `"alias_label":"email", "alias_name":"TDCohort2@gmail.com"`
  - `"alias_label":"email", "alias_name":"TDCohort3@gmail.com"`
  - `"alias_label":"email", "alias_name":"TDCohort4@gmail.com"`
-{% endtab %}
+{% endsubtab %}
 
-{% tab Syncing Device IDs %}
+{% subtab Syncing Device IDs %}
 Here's an example table in Treasure Data:
 
 | external_id |	email	| device_ids |
@@ -152,10 +152,10 @@ After running the query, these device IDs will be added to the cohort in Braze:
 - `4d5f6g`
 - `7h8j9k`
 - `1ab2cd`
-{% endtab %}
-{% endtabs %}
+{% endsubtab %}
+{% endsubtabs %}
 
-### Step 4: Specify the result export target
+#### Step 3.2: Specify the result export target
 
 Once the query has been built, select **Export Results**. You can select an existing authentication, such as the one created in the last steps, or create a new authentication to be used for output. 
 
@@ -172,17 +172,17 @@ Once the query has been built, select **Export Results**. You can select an exis
 
 Follow [Treasure Data's steps](https://docs.treasuredata.com/articles/#!int/braze-cohort-export-integration/a/ExportIntegrationTemplate-SpecifytheResultExportTarget) for configuring your export to meet your use case.
 
-### Step 5: Execute the query
+#### Step 3.3: Execute the query
 
 Save the query with a name and run, or just run the query. Upon successful completion of the query, the query result is automatically exported to Braze.
 
 {% endtab %}
 {% tab Audience Studio %}
-### Step 3: Create an activation
+#### Step 3.1: Create an activation
 
 Create a new Segment or choose an existing Segment to sync to Braze as a cohort. Within the Segment, choose **Create activation**.
 
-#### Activation Details
+#### Step 3.2: Fill out your activation details
 
 ![Treasure Data Integrations Activation Details]({% image_buster /assets/img/treasure_data/cohort/cohort7.png %}) 
 
@@ -197,8 +197,7 @@ Create a new Segment or choose an existing Segment to sync to Braze as a cohort.
 | Aliases (Optional) | When defined, the name of the corresponding column within your query will be sent as the `alias_label`, and the values of each row in the column will be sent as the `alias_name`.	| 
 | Thread Count | Number of concurrent API calls. |
 
-
-#### Activation Output Mapping
+#### Step 3.3: Set up output mapping
 
 ![Treasure Data Integrations Activation Output Mapping]({% image_buster /assets/img/treasure_data/cohort/cohort6.png %}) 
 
@@ -215,16 +214,15 @@ Create a new Segment or choose an existing Segment to sync to Braze as a cohort.
 
 All non-relevant or misnamed column names will be ignored. You may choose to use more than one identifier in your syncs.
 
-#### Activation Schedule
+#### Step 3.4: Define your activation schedule
 
 Define your desired sync schedule and save your activation.
 
 ![Treasure Data Integrations Activation Schedule]({% image_buster /assets/img/treasure_data/cohort/cohort8.png %}) 
-
 {% endtab %}
 {% endtabs %}
 
-### Step 6: Create a Braze segment from the Treasure Data Export
+### Step 4: Create a Braze segment from the Treasure Data Export
 
 In Braze, navigate to **Segments**, create a new segment, and select **Treasure Data Cohorts** as your filter. From here, you can choose which Treasure Data cohort you wish to include. After your Treasure Data cohort segment is created, you can select it as an audience filter when creating a campaign or Canvas.
 
