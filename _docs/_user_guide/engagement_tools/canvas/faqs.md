@@ -32,7 +32,8 @@ When you stop a Canvas, the following applies:
 - No further messages will be sent out, despite where a user is in the flow.
 - **Exception:** Canvases with emails will not immediately stop. After the send requests go to SendGrid, there is nothing we can do to stop them from being delivered to the user.
 
-#### In-app messages in Canvas 
+#### In-app messages in Canvas
+
 In-app messages send upon the next session start. This means if the user enters the Canvas step before the Canvas is stopped, they will still receive the in-app message upon their next session start, as long as the in-app message hasn't expired yet.
 
 {% alert note %}
@@ -109,6 +110,10 @@ It's common for a Canvas variant's conversion total to be greater than the sum o
 ### How are Canvas audiences evaluated? 
 
 By default, filters and segments for full steps in the Canvas are checked at send time. For Canvas Flow, the Decision Split component performs an evaluation right after receiving a previous step (or before a delay).
+
+{% alert tip %}
+For further assistance with Canvas troubleshooting, be sure to contact Braze Support within 30 days of your issue's occurrence as we only have the last 30 days of diagnostic logs.
+{% endalert %}
 
 ## Canvas Flow
 
