@@ -27,6 +27,10 @@ While we provide an extensive list of resources to reference pre-send, each chan
   - Frequency capping rules will be applied to push, email, SMS, and webhooks, but not to in-app messages and Content Cards.
   - Global frequency capping is scheduled based on the user's time zone and is calculated by calendar days, not 24-hour periods. For example, if you set up a frequency capping rule of sending no more than one campaign a day, a user may receive a message at 11 pm in their local time zone, and they would be eligible to receive another message an hour later.
 
+{% alert tip %}
+For further assistance with Canvas and campaign troubleshooting, be sure to contact Braze Support within 30 days of your issue's occurrence as we only have the last 30 days of diagnostic logs.
+{% endalert %}
+
 ## Email
 
 #### Things to check
