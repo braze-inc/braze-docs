@@ -1,12 +1,12 @@
 ---
-nav_title: Shopify checkout.liquid
+nav_title: Shopify checkout&#46;liquid
 page_order: 7
-description: "This article explains the deprecation of Shopify checkout.liquid, including the impact to your Shopify integration and guidance for developers."
+description: "This article explains the deprecation of Shopify checkout&#46;liquid, including the impact to your Shopify integration and guidance for developers."
 page_type: update
 
 ---
 
-# Shopify checkout.liquid deprecation
+# Shopify checkout&#46;liquid deprecation
 
 Shopify has informed all merchants about the deprecation of `checkout.liquid`, and the migration to [Checkout Extensibility](https://www.shopify.com/enterprise/blog/checkout-extensibility-winter-editions), a new foundation for building customized checkout experiences. 
 
@@ -56,6 +56,7 @@ When migrating to Checkout Extensibility, follow these steps to maintain usage o
 
 3. Publish custom events from the theme app extension with the Braze `deviceID` in the payload.
 
+{% raw %}
 ```java
 // After initializing the Braze WebSDK
 let event_data = {
@@ -63,6 +64,7 @@ let event_data = {
 }
 Shopify.analytics.publish("custom_event", event_data);
 ```
+{% endraw %}
 
 {: start="4"}
 4. Create a [web pixel](https://shopify.dev/docs/apps/build/marketing-analytics/build-web-pixels) and load it in checkout.
@@ -73,6 +75,7 @@ Shopify.analytics.publish("custom_event", event_data);
   - Send requests to a proxy URL that will call server-side code to call the Braze REST API.
   - Fetch the `shopify/email_user_reconcile` endpoint and supply the URL parameter with the `deviceId` and `email`.
 
+{% raw %}
 ```java
 register(({analytics, browser, settings, init}) => {
 
@@ -108,6 +111,7 @@ register(({analytics, browser, settings, init}) => {
   });
 });
 ```
+{% endraw %}
 
 ### Guidance for Shopify hydrogen (headless) 
 
@@ -123,12 +127,14 @@ When migrating to Checkout Extensibility, follow these steps to maintain usage o
 
 4. Create a first-party cookie and set the value as the Braze `deviceID`.
 
+{% raw %}
 ```java
 const SHOP_DOMAIN = "SHOP_DOMAIN"; // shopify shop domain
 
 // Set first party cookie to hold Braze deviceId on shop domain
 document.cookie = "device_id={{ braze.getDeviceId() }}; domain={{ SHOP_DOMAIN }}; path=/";
 ```
+{% endraw %}
 
 {: start="5"}
 5. Create a [web pixel](https://shopify.dev/docs/apps/marketing/pixels/getting-started) and load it in checkout.
@@ -139,6 +145,7 @@ document.cookie = "device_id={{ braze.getDeviceId() }}; domain={{ SHOP_DOMAIN }}
   - Send requests to a proxy URL that will call server-side code to call the Braze REST API.
   - Fetch the `shopify/email_user_reconcile` endpoint and supply the URL parameter with the `deviceId` and `email`.
 
+{% raw %}
 ```java
 register(({analytics, browser, settings, init}) => {
 
@@ -168,3 +175,4 @@ register(({analytics, browser, settings, init}) => {
   });
 });
 ```
+{% endraw %}
