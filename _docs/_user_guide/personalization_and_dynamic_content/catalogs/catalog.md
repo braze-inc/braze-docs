@@ -328,10 +328,6 @@ You can upload a CSV of new catalog items to add or catalog items to update. To 
 
 You can also manually piece together catalogs Liquid logic. However, note that if you type in an ID that doesn't exist, Braze will still return an items array without objects. We recommend that you include error handling, such as checking the size of the array and using an `if` statement to account for an empty array case.
 
-{% alert note %}
-Liquid currently can't be used inside catalogs. If Liquid personalization is listed inside a cell in your catalog, the dynamic value won't render and only the actual Liquid will display.
-{% endalert %}
-
 ## Managing catalogs
 
 As you create more catalogs, you can leverage the [Catalogs Endpoints]({{site.baseurl}}/api/endpoints/catalogs/) to manage the growing data and information. This includes the ability to create, edit, and delete catalog items, and to list catalog item details.
@@ -340,12 +336,12 @@ As you create more catalogs, you can leverage the [Catalogs Endpoints]({{site.ba
 
 The following table describes the differences between the free and pro version of catalogs:
 
-| Area | Free version | Catalogs Pro |
-|---|---|---|
-| CSV file size | Up to 100&nbsp;MB for all CSV files combined across your company | Up to 2&nbsp;GB for a single CSV file |
-| Characters limit for item value | Up to 5,000 characters in one value. For example, if you had a field labeled `description`, the maximum number of characters within the field is 5,000. | Up to 5,000 characters in one value. For example, if you had a field labeled `description`, the maximum number of characters within the field is 5,000. |
-| Characters limit for item column name | Up to 250 characters | Up to 250 characters |
-| Selections | Up to 30 selections per catalog | Up to 30 selections per catalog |
+| Area                                  | Free version                                                                                                                                            | Catalogs Pro                                                                                                                                            |
+| ------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| CSV file size                         | Up to 100&nbsp;MB for all CSV files combined across your company                                                                                        | Up to 2&nbsp;GB for a single CSV file                                                                                                                   |
+| Characters limit for item value       | Up to 5,000 characters in one value. For example, if you had a field labeled `description`, the maximum number of characters within the field is 5,000. | Up to 5,000 characters in one value. For example, if you had a field labeled `description`, the maximum number of characters within the field is 5,000. |
+| Characters limit for item column name | Up to 250 characters                                                                                                                                    | Up to 250 characters                                                                                                                                    |
+| Selections                            | Up to 30 selections per catalog                                                                                                                         | Up to 30 selections per catalog                                                                                                                         |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 ### Catalog storage
