@@ -1,14 +1,12 @@
 ---
 nav_title: LINE Setup
 article_title: LINE Setup
-alias: /line_setup/
 description: "This article covers how to set up the Braze LINE channel, including prerequisites and suggested next steps."
 page_type: partner
 search_tag: Partner
 page_order: 0
 channel:
   - LINE
-search_rank: 2
 ---
 
 # LINE setup
