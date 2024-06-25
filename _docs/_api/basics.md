@@ -312,7 +312,7 @@ News Feed is being deprecated. Braze recommends that customers who use our News 
 
 To create a new REST API key:
 
-1. Go to **Settings** > **APIs and Identifiers**. This page displays your existing API keys.
+1. Go to **Settings** > **APIs and Identifiers**.
 
 {% alert note %}
 If you are using the [older navigation]({{site.baseurl}}/navigation), you can create an API key from **Developer Console** > **API Settings**.
