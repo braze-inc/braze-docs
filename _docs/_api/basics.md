@@ -312,17 +312,17 @@ News Feed is being deprecated. Braze recommends that customers who use our News 
 
 To create a new REST API key:
 
-1. Go to **Settings** > **API Keys**. This page displays your existing API keys.
+1. Go to **Settings** > **APIs and Identifiers**.
 
 {% alert note %}
 If you are using the [older navigation]({{site.baseurl}}/navigation), you can create an API key from **Developer Console** > **API Settings**.
 {% endalert %}
 
 {:start="2"}
-2. Click **+ Create New API Key**.
+2. Select **Create API Key**.
 3. Give your new key a name for identification at a glance.
-4. Select which [permissions](#rest-api-key-permissions) you want to be associated with your new key.
-5. Specify [allowlisted IP addresses](#api-ip-allowlisting) and subnets for the new key.
+4. Specify [allowlisted IP addresses](#api-ip-allowlisting) and subnets for the new key.
+5. Select which [permissions](#rest-api-key-permissions) you want to be associated with your new key.
 
 {% alert important %}
 Keep in mind that after you create a new API key, you cannot edit the scope of permissions or the allowlisted IPs. This limitation is in place for security reasons. If you need to change the scope of a key, create a new key with the updated permissions and implement that key in place of the old one. After you've completed your implementation, go ahead and delete the old key.
