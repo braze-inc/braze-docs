@@ -193,3 +193,19 @@ Explanations should reside in the most relevent article. For example, a basic fe
 {% alert tip %}
 Even though explanations aren't telling users what to do to achieve a specific outcome, you can broadly describe chronological steps to acheive a general goal (such as using A/B testing to improve your messaging). Don't go into the same detail you would for a [how-to guide](#how-to-guides) or [tutorial](#tutorials).
 {% endalert %}
+
+#### Headers
+
+Explanation articles use the heading convention "About TOPIC_NAME."
+
+Examples include:
+- [About sanitiation]({{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices/sanitization#about-sanitization)
+- [About content management]({{site.baseurl}}/contributing/content_management)
+
+Explanation sections within articles that contain multiple documentation types (such as an article that contains a how-to guide and references) have more leeway with header conventions. We suggest using verbiage that implies an explanation rather than instructions, similar to these:
+
+- About TOPIC_NAME
+- TOPIC_NAME overview
+- How TOPIC works
+- How TOPIC is handled
+- What does Braze check?
