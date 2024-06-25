@@ -503,7 +503,7 @@ $(document).ready(function() {
     var punctuation = null;
     if ($(this)[0]) {
       if ($(this)[0].nextSibling){
-        punctuation = $(this)[0].nextSibling.nodeValue.substr(0,1);
+        punctuation = ($(this)[0].nextSibling.nodeValue || '').substr(0,1);
         if (punctuations.includes(punctuation)) {
           $(this)[0].nextSibling.remove();
           has_punchtuation = true;
