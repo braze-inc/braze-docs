@@ -7,7 +7,7 @@ guide_top_header: "LINE"
 guide_top_text: "LINE ."
 description: "This landing page is home to the LINE channel. Here, you can find articles on setting up LINE, LINE subscription groups, LINE campaigns, LINE reporting, and more."
 channel:
-  - line
+  - LINE
 
 guide_featured_title: "Popular articles"
 guide_featured_list:
