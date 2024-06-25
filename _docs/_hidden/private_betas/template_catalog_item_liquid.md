@@ -9,15 +9,19 @@ hidden: true
 
 # Templating catalog items including Liquid
 
- Similar to Connected Content, the `:rerender` flag must be included in the Liquid tag in order to render its Liquid content. Note that the `:rerender` flag is only one level deep, meaning that it will not apply to any nested Liquid tag calls.
+ Similar to [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content), the `:rerender` flag must be included in the Liquid tag in order to render its Liquid content. Note that the `:rerender` flag is only one level deep, meaning that it won't apply to any nested Liquid tag calls.
 
-If a catalog item contains user profile fields (within a Liquid personalization tag), these values must be defined earlier in the message via Liquid, before the templating in order to render the Liquid properly. If `:rerender` flag is not provided, it will render the raw Liquid content.
+ {% alert important %}
+ Templating catalog items that include Liquid is in early access. Contact your Braze account manager if you're interested in participating in the early access.
+ {% endalert %}
 
-For example, if a catalog named "Messages" has an item content with this Liquid:
+If a catalog item contains user profile fields (within a Liquid personalization tag), these values must be defined earlier in the message via Liquid before the templating in order to render the Liquid properly. If `:rerender` flag is not provided, it will render the raw Liquid content.
+
+For example, if a catalog named "Messages" has an item with this Liquid:
 
 ![][15]{: style="max-width:80%;"}<br>
 
-To render the Liquid content:
+To render the following Liquid content:
 
 {% raw %}
 ```liquid
@@ -28,7 +32,7 @@ Hi ${first_name}
 ```
 {% endraw %}
 
-This  will display as the following:
+This will display as the following:
 
 {% raw %}
 ```
