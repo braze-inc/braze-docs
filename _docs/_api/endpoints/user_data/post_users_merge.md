@@ -91,7 +91,13 @@ This endpoint will merge any of the following fields if they are not found on th
 Session data will only be merged if the app exists on both user profiles.
 
 #### Custom event date and purchase event date behavior
-Note that these merged fields will update "for X events in Y days" filters. For purchase events, these filters include "number of purchases in Y days" and "money spent in last Y days".
+
+These merged fields will update "for X events in Y days" filters. For purchase events, these filters include "number of purchases in Y days" and "money spent in last Y days".
+
+#### Considerations
+
+* If a device OS is not merged, the retargeting filter will not work. 
+* Using the `/users/merge` endpoint to merge users functions differently than the the [Braze `changeUser()` method](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#changeuser).
 
 ### Merging users by email
 
@@ -106,6 +112,7 @@ Only one of the following options may exist in the prioritization array at a tim
 ## Example requests
 
 ### Basic request
+
 This is a basic request body to show the pattern of the request.
 
 ```json
