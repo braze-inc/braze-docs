@@ -96,7 +96,7 @@ Need help creating awesome copy? Try using the [AI copywriting assistant]({{site
 
 ### Step 3a: Add your sending information
 
-Once you've finished designing and building your email message, it's time to add your sending information in the **Sending Settings** section.
+After you've finished designing and building your email message, it's time to add your sending information in the **Sending Settings** section.
 
 1. Under **Sending Info**, select an email as the **From Display Name + Address**. You can also customize this by selecting **Customize From Display Name + Address**.
 2. Select an email as the **Reply-To Address**. You can also customize this by selecting **Customize Reply-To Address**.
