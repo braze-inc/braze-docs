@@ -214,7 +214,7 @@ For more information, visit the [Roku integration guide][3].
 
 ### Apple TV OS {#tvos}
 
-Use the Braze Swift SDK to integrate on tvOS.
+Use the Braze Swift SDK to integrate with tvOS.
 
 Features include:
 
@@ -234,7 +234,7 @@ To avoid showing mobile in-app messages to your TV users, be sure to set up eith
 
 ### Apple Vision Pro {#vision-pro}
 
-Use the Braze Swift SDK to integrate on visionOS. Most features available on iOS are also available on visionOS, including:
+Use the Braze Swift SDK to integrate with visionOS. Most features available on iOS are also available on visionOS, including:
 
 - Analytics (sessions, custom events, purchases, etc.)
 - In-App Messaging (data models and UI)
@@ -242,6 +242,8 @@ Use the Braze Swift SDK to integrate on visionOS. Most features available on iOS
 - Push Notifications (user-visible with action buttons and silent notifications)
 - Feature Flags
 - Location Analytics
+
+For more information, visit the [iOS Swift SDK integration guide][4].
 
 {% alert important %}
 Some iOS features are partially-supported or unsupported. For the full list, see [visionOS support](https://www.braze.com/docs/developer_guide/platform_integration_guides/swift/visionos).
