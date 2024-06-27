@@ -10,7 +10,6 @@ platform:
   - Web
   - Android
   - FireOS
-  
 ---
 
 # TV and OTT integrations
@@ -166,10 +165,9 @@ Features include:
 - In-app messages 
   - To show HTML messages on non-touch environments like TVs, set `com.braze.configuration.BrazeConfig.Builder.setIsTouchModeRequiredForHtmlInAppMessages` to `false` (available from [Android SDK v23.1.0][android-tv-html])
 - &#42; Push Notifications (Manual Integration Required)
+  - Push notifications are not supported natively on Android TV. To learn why, see Google's [Design Guidelines][5]. You may however, **do a manual integration of Push notification UI to achieve this**. See our [documentation][6] on how to set this up.
 
 For more information, visit the [Android SDK integration guide][2].
-
-Push notifications are not supported natively on Android TV. For more information why, see Google's [Design Guidelines][5]. You may however, **do a manual integration of Push notification UI to achieve this**. See our [documentation][6] on how to set this up.
 
 {% alert note %}
 Make sure to create a new Android app in the dashboard for your Android OTT integration.
@@ -203,7 +201,7 @@ For more information, visit the [Web Smart TV integration guide][8].
 
 ### Roku {#roku}
 
-Use the Braze Roku SDK to integrate with [Roku TVs](https://developer.roku.com/docs/developer-program/getting-started/roku-dev-prog.md)
+Use the Braze Roku SDK to integrate with [Roku TVs](https://developer.roku.com/docs/developer-program/getting-started/roku-dev-prog.md).
 
 Features include:
 
@@ -216,9 +214,7 @@ For more information, visit the [Roku integration guide][3].
 
 ### Apple TV OS {#tvos}
 
-Use the Braze Swift SDK to integrate on tvOS
-
-For more information, visit the [iOS Swift SDK integration guide][4].
+Use the Braze Swift SDK to integrate on tvOS.
 
 Features include:
 
@@ -230,11 +226,26 @@ Features include:
   - See our [sample app][9] to learn more about how to use a Headless UI for customized messaging on tvOS.
 - Silent push notifications and update badging
 
-**Note**: To avoid showing mobile in-app messages to your TV users, be sure to set up either [App Targeting](#app-targeting) or use key-value pairs to filter out messages. For example, only displaying tvOS messages if they contain a special `tv = true` key-value pair.
+For more information, visit the [iOS Swift SDK integration guide][4].
+
+{% alert note %}
+To avoid showing mobile in-app messages to your TV users, be sure to set up either [App Targeting](#app-targeting) or use key-value pairs to filter out messages. For example, only displaying tvOS messages if they contain a special `tv = true` key-value pair.
+{% endalert %}
 
 ### Apple Vision Pro {#vision-pro}
 
-To learn more, see [visionOS support](https://www.braze.com/docs/developer_guide/platform_integration_guides/swift/visionos).
+Use the Braze Swift SDK to integrate on visionOS. Most features available on iOS are also available on visionOS, including:
+
+- Analytics (sessions, custom events, purchases, etc.)
+- In-App Messaging (data models and UI)
+- Content Cards (data models and UI)
+- Push Notifications (user-visible with action buttons and silent notifications)
+- Feature Flags
+- Location Analytics
+
+{% alert important %}
+Some iOS features are partially-supported or unsupported. For the full list, see [visionOS support](https://www.braze.com/docs/developer_guide/platform_integration_guides/swift/visionos).
+{% endalert %}
 
 ## App targeting {#app-targeting}
 
@@ -262,7 +273,6 @@ Read more about custom handling messaging:
 **Web SDK**
 - [In-App Message Customization](https://www.braze.com/docs/developer_guide/platform_integration_guides/web/in-app_messaging/customization/key_value_pairs)
 - [Content Cards Customization](https://www.braze.com/docs/developer_guide/platform_integration_guides/web/content_cards/customization/custom_ui/)
- 
 
 [1]: {% image_buster /assets/img/android_ott.png %}
 [2]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/
