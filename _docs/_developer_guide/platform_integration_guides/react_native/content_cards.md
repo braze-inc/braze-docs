@@ -137,6 +137,13 @@ Classic cards have a title, description, and an optional image on the left of th
 
 For a full reference of the classic (text announcement) Content Card, see the [Android][14] and [iOS][15] documentation. For a full reference of the classic image (short news) card, see the [Android][16] and [iOS][17] documentation.
 
+### Control Content Card model properties
+
+Control cards include all of the 'base' properties, with a few _important_ differences. Most importantly:
+
+- The `isControl` property is _guaranteed_ to be `true`.
+- The `extras` property is _guaranteed_ to be empty.
+
 ## GIF Support
 
 The Braze React Native SDK allows you to incorporate animated GIFs into your Content Cards, with distinct implementation methods for Android and iOS platforms.
