@@ -126,7 +126,7 @@ validurls['/docs/partner_integrations/'] = '/docs/partners/home/';
 validurls['/docs/apptimize_integration/'] = '/docs/partners/channel_extensions/ab_testing/apptimize/';
 validurls['/docs/okta/'] = '/docs/user_guide/administrative/access_braze/single_sign_on/okta/';
 validurls['/docs/email_spam_testing/'] = '/docs/user_guide/message_building_by_channel/email/inbox_vision/#spam-testing';
-validurls['/docs/link_templates/'] = '/docs/user_guide/message_building_by_channel/email/templates/link_templates/';
+validurls['/docs/link_templates/'] = '/docs/user_guide/message_building_by_channel/email/templates/link_template/';
 validurls['/docs/user_guide/message_building_by_channel/email/link_templates/'] = '/docs/user_guide/message_building_by_channel/email/templates/link_template/';
 
 validurls['/docs/app_settings/'] = '/docs/user_guide/administrative/app_settings/developer_console/api_settings_tab/#api-settings-tab';
@@ -955,7 +955,8 @@ validurls['/docs/partners/message_orchestration/channel_extensions/ecommerce/sho
 validurls['/docs/partners/message_orchestration/channel_extensions/ecommerce/shopify/shopify/'] = '/docs/partners/message_orchestration/channel_extensions/ecommerce/shopify/shopify_overview/';
 validurls['/docs/partners/message_orchestration/channel_extensions/ecommerce/shopify/shopify_catalogs/'] = '/docs/partners/message_orchestration/channel_extensions/ecommerce/shopify/shopify_features/shopify_catalogs/';
 validurls['/docs/partners/message_orchestration/channel_extensions/ecommerce/shopify/shopify_catalogs/#troubleshooting/'] = '/docs/partners/message_orchestration/channel_extensions/ecommerce/shopify/shopify_features/shopify_catalogs/#troubleshooting/';
-validurls['/docs/partners/message_orchestration/channel_extensions/ecommerce/shopify/shopify_catalogs/back_in_stock/'] = '/docs/partners/message_orchestration/channel_extensions/ecommerce/shopify/shopify_features/shopify_catalogs/back_in_stock/';
+validurls['/docs/partners/message_orchestration/channel_extensions/ecommerce/shopify/shopify_catalogs/back_in_stock/'] = '/docs/partners/message_orchestration/channel_extensions/ecommerce/shopify/shopify_features/shopify_catalogs/'
+validurls['/docs/partners/message_orchestration/channel_extensions/ecommerce/shopify/shopify_features/shopify_catalogs/back_in_stock/'] = '/docs/partners/message_orchestration/channel_extensions/ecommerce/shopify/shopify_features/shopify_catalogs/'
 validurls['/docs/partners/message_orchestration/channel_extensions/ecommerce/shopify/shopify_data_in_braze/'] = '/docs/partners/message_orchestration/channel_extensions/ecommerce/shopify/using_shopify/shopify_data_in_braze/';
 validurls['/docs/partners/message_orchestration/channel_extensions/ecommerce/shopify/use_cases/'] = '/docs/partners/message_orchestration/channel_extensions/ecommerce/shopify/using_shopify/use_cases/';
 validurls['/docs/partners/message_orchestration/channel_extensions/ecommerce/shopify/scripttag_web_sdk_integration/'] = '/docs/partners/message_orchestration/channel_extensions/ecommerce/shopify/getting_started_shopify/';
@@ -1149,4 +1150,8 @@ validurls['/docs/partners/message_orchestration/additional_channels/messaging/me
 validurls['/docs/partners/message_orchestration/additional_channels/messaging/regal/'] = '/docs/partners/message_orchestration/additional_channels/instant_chat/regal/';
 validurls['/docs/partners/message_orchestration/additional_channels/messaging/sendbird/'] = '/docs/partners/message_orchestration/additional_channels/instant_chat/sendbird/';
 
+validurls['/docs/developer_guide/platform_integration_guides/android/content_cards/customization/'] = '/docs/developer_guide/platform_integration_guides/android/content_cards/implementation_guide/';
+validurls['/docs/canvas_data_retention/'] = '/docs/api/data_retention/';
+validurls['/docs/user_guide/message_building_by_channel/content_cards/integration'] = '/docs/user_guide/message_building_by_channel/content_cards/create/';
+validurls['/docs/user_guide/data_and_analytics/your_reports/'] = '/docs/user_guide/data_and_analytics/reporting/'
 // validurls['OLD'] = 'NEW';
