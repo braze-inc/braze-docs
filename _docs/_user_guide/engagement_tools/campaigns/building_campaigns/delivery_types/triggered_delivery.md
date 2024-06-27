@@ -166,7 +166,7 @@ Additionally, if a campaign is action-based and has a delay, you can check the o
 If your campaign is triggered by a specific custom event and you select a segment as the audience, users must perform the same custom event to be included in the segment. This means users need to be part of the audience before an action-based campaign can be triggered. The general workflow for a triggered campaign is as follows:
 
 1. **Join the audience:** When a user performs the custom event, they're added to the campaign's target audience.
-2. **Trigger the email:** A user must perform the custom event again to trigger the email as they need to be part of the audience first before the email can be sent.
+2. **Trigger the email:** A user must perform the custom event again to trigger the email, as they need to be part of the audience before the email can be sent.
 
 We recommend either changing the target audience to include all users, or checking that the users expected to perform the event are already part of the campaign's audience for the message to be triggered.
 
