@@ -70,4 +70,4 @@ Looking for inspiration? Check out the prompts below and give them a try (or tai
 - Can you give me some examples of how Liquid is used in marketing campaigns to increase engagement and conversion rates?
 - What are some common use cases for Liquid in text messages for summer sales, such as abandoned cart reminders or personalized promotions?
 
-Let us know if you had any interesting prompts or experiences by booking a [feedback session]() with us.
+Let us know if you had any interesting prompts or experiences by booking a [feedback session](https://research.rallyuxr.com/braze/schedule/clxxhw8em0d071ak4b279553s?channel=share) with us.
