@@ -12,7 +12,7 @@ description: "This article covers iOS, Android, and FireOS analytics for the Xam
  
 # Xamarin Analytics
 
-> This article covers how to handle analytics for Xamarin.
+> Learn how to generate and review analytics for the Xamarin platform.
 
 ## Session tracking
 
@@ -163,13 +163,17 @@ See the [iOS integration instructions]({{site.baseurl}}/developer_guide/platform
 
 ## Location tracking
 
-- Android: See the [Android integration instructions][1] for information on how to support location tracking.
-- iOS: See the Xamarin [using background location walkthrough][2] and the [iOS integration instructions][3] for information on how to support location tracking.
+For an example of logging and tracking analytics, refer to our [Android MAUI][4] and [iOS MAUI][5] sample applications.
 
-For a full example of logging and tracking analytics, refer to our [Android MAUI][4] and [iOS MAUI][5] sample applications.
+{% tabs %}
+{% tab android %}
+For more information, see the [Android integration instructions]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/location_tracking/).
+{% endtab %}
 
-[1]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/location_tracking/
-[2]: http://developer.xamarin.com/guides/cross-platform/application_fundamentals/backgrounding/part_4_ios_backgrounding_walkthroughs/location_walkthrough/
-[3]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/advanced_use_cases/locations_and_geofences/
+{% tab ios %}
+To support local tracking, see [iOS: Using background location](http://developer.xamarin.com/guides/cross-platform/application_fundamentals/backgrounding/part_4_ios_backgrounding_walkthroughs/location_walkthrough/) and the [iOS integration instructions]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/advanced_use_cases/locations_and_geofences/).
+{% endtab %}
+{% endtabs %}
+
 [4]: https://github.com/braze-inc/braze-xamarin-sdk/blob/master/appboy-component/samples/android-net-maui/BrazeAndroidMauiSampleApp/BrazeAndroidMauiSampleApp/MainActivity.cs
 [5]: https://github.com/braze-inc/braze-xamarin-sdk/blob/master/appboy-component/samples/ios-net-maui/BrazeiOSMauiSampleApp/BrazeiOSMauiSampleApp/MainPage.xaml.cs
