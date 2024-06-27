@@ -69,7 +69,11 @@ A sample implementation of this can be found in BrazeProject within the [React N
 
 The Content Cards data model is available in the React Native SDK. For a full reference of the Content Card data model, see the [Android][6] and [iOS][7] documentation.
 
-The Braze React Native SDK has three unique Content Cards card types that share a base model: **image only**, **captioned image**, and **classic**. Each type inherits common properties from a base model and has the following additional properties.
+The Braze React Native SDK has three unique Content Cards card types that share a base model: **image only**, **captioned image**, and **classic**.
+
+There is also a special **control** card type, which is returned to users that are in the control group for a given card.
+
+Each type inherits common properties from a base model and has the following additional properties.
 
 ### Base Content Card model properties
 
