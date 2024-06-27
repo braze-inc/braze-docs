@@ -9745,6 +9745,7 @@ Subscription groups are only available for email, SMS, and WhatsApp channels at 
 | Migration | When a user is updated by internal migrations or maintenance scripts |
 | User Merge | When a user is updated by the user merge process |
 | Canvas User Update Step | When a user is updated by the Canvas user update step |
+| List-Unsubscribe | When a user unsubscribes via Braze mailto or one-click list-unsubscribe header |
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% endapi %}

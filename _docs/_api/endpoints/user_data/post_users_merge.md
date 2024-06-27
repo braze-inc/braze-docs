@@ -68,6 +68,7 @@ This endpoint will merge any of the following fields if they are not found on th
 - Home city
 - Country
 - Language
+- Device information
 - Session count (the sum of sessions from both profiles)
 - Date of first session (Braze will pick the earlier date of the two dates)
 - Date of last session (Braze will pick the later date of the two dates)
@@ -90,8 +91,13 @@ This endpoint will merge any of the following fields if they are not found on th
 
 Session data will only be merged if the app exists on both user profiles.
 
+{% alert note %}
+When merging users, using the `/users/merge` endpoint works the same way as using the [`changeUser()` method](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#changeuser).
+{% endalert %}
+
 #### Custom event date and purchase event date behavior
-Note that these merged fields will update "for X events in Y days" filters. For purchase events, these filters include "number of purchases in Y days" and "money spent in last Y days".
+
+These merged fields will update "for X events in Y days" filters. For purchase events, these filters include "number of purchases in Y days" and "money spent in last Y days".
 
 ### Merging users by email
 
@@ -106,6 +112,7 @@ Only one of the following options may exist in the prioritization array at a tim
 ## Example requests
 
 ### Basic request
+
 This is a basic request body to show the pattern of the request.
 
 ```json
