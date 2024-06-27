@@ -144,6 +144,8 @@ Control cards include all of the 'base' properties, with a few _important_ diffe
 - The `isControl` property is _guaranteed_ to be `true`.
 - The `extras` property is _guaranteed_ to be empty.
 
+For a full reference of the control card, see the [Android][18] and [iOS][19] documentation.
+
 ## GIF Support
 
 The Braze React Native SDK allows you to incorporate animated GIFs into your Content Cards, with distinct implementation methods for Android and iOS platforms.
@@ -174,3 +176,5 @@ The Swift SDK does not provide animated GIF support by default. Support can be a
 [15]: https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcard/classic-swift.struct
 [16]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-short-news-card/index.html
 [17]: https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcard/classicimage-swift.struct
+[18]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-control-card/index.html
+[19]: https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcard/control-swift.struct
