@@ -18,5 +18,8 @@ guide_featured_list:
 - name: Create a LINE Message
   link: /docs/user_guide/message_building_by_channel/line/create/
   image: /assets/img/braze_icons/table.svg
+- name: LINE Subscription Groups
+  link: /docs/user_guide/message_building_by_channel/line/subscription_groups/
+  image: /assets/img/braze_icons/table.svg
 ---
 <br><br>
