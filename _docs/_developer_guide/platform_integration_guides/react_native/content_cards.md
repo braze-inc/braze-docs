@@ -143,7 +143,7 @@ For a full reference of the classic (text announcement) Content Card, see the [A
 
 ### Control Content Card model properties
 
-Control cards include all of the 'base' properties, with a few _important_ differences. Most importantly:
+Control cards include all of the base properties, with a few _important_ differences. Most importantly:
 
 - The `isControl` property is _guaranteed_ to be `true`.
 - The `extras` property is _guaranteed_ to be empty.
