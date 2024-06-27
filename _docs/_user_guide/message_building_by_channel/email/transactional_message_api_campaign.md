@@ -60,6 +60,10 @@ To configure your transactional email campaign, follow these steps:
 3. Take note of your `campaign_id`. After you save your API campaign, you must include the generated `campaign_id` fields with your API request where noted in the [Transactional Email endpoint]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_transactional_message) article.
 4. Click **Save Campaign**, and you're set to begin your API campaign!
 
+{% alert note %}
+The one-click list-unsubscribe setting for transactional email campaigns defaults to **Use workspace default**, similar to other email campaigns. Since this is intended for transactional messaging, Braze doesn't add one-click unsubscribe. To add a one-click unsubscribe to this campaign type, [edit this setting]({{site.baseurl}}/user_guide/administrative/app_settings/email_settings/#message-level-one-click-list-unsubscribe) under **Sending Info**.
+{% endalert %}
+
 ### Disallowed tags in transactional emails
 
 The `Connected Content` and `Promotion Code` Liquid tags are unavailable within transactional email campaigns.
