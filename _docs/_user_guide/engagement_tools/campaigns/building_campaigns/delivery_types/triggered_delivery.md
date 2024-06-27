@@ -163,7 +163,7 @@ As a best practice, ensure that the attribute on which the campaign is segmented
 
 Additionally, if a campaign is action-based and has a delay, you can check the option to **Re-evaluate segment membership at send-time** to ensure users are still part of the target audience when the message is sent.
 
-If your campaign is triggered by a specific custom event and you select a segment as the audience, this requires users to perform the same custom event to be included in the segment. This means before an action-based campaign can be triggered, users must be part of the audience first. The general triggered campaign workflow is as follows:
+If your campaign is triggered by a specific custom event and you select a segment as the audience, users must perform the same custom event to be included in the segment. This means users need to be part of the audience before an action-based campaign can be triggered. The general workflow for a triggered campaign is as follows:
 
 1. **Join the audience:** When a user performs the custom event, they're added to the campaign's target audience.
 2. **Trigger the email:** A user must perform the custom event again to trigger the email as they need to be part of the audience first before the email can be sent.
