@@ -61,7 +61,7 @@ To configure your transactional email campaign, follow these steps:
 4. Click **Save Campaign**, and you're set to begin your API campaign!
 
 {% alert note %}
-Transactional Email Campaigns do not include the one-click list-unsubscribe header by default since this is intended for transactional messaging. By default, the one-click list-unsubscribe setting is set to **Exclude unsubscribe**. To include the one-click list-unsubscribe header, you can [update the setting]({{site.baseurl}}/user_guide/administrative/app_settings/email_settings#message-level-one-click-list-unsubscribe) under **Sending Info**.
+Transactional email campaigns do not include the one-click list-unsubscribe header by default since this is intended for transactional messaging. By default, the one-click list-unsubscribe setting is set to **Exclude unsubscribe**. To include the one-click list-unsubscribe header, you can [update the setting]({{site.baseurl}}/user_guide/administrative/app_settings/email_settings#message-level-one-click-list-unsubscribe) under **Sending Info**.
 {% endalert %}
 
 ### Disallowed tags in transactional emails
