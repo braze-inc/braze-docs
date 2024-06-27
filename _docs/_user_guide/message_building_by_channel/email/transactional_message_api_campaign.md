@@ -60,6 +60,10 @@ To configure your transactional email campaign, follow these steps:
 3. Take note of your `campaign_id`. After you save your API campaign, you must include the generated `campaign_id` fields with your API request where noted in the [Transactional Email endpoint]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_transactional_message) article.
 4. Click **Save Campaign**, and you're set to begin your API campaign!
 
+{% alert note %}
+Transactional Email Campaigns do not include the one-click list-unsubscribe header by default since this is intended for transactional messaging. By default, the one-click list-unsubscribe setting is set to **Exclude unsubscribe**. To include the one-click list-unsubscribe header, you can [update the setting]({{site.baseurl}}/user_guide/administrative/app_settings/email_settings#message-level-one-click-list-unsubscribe) under **Sending Info**.
+{% endalert %}
+
 ### Disallowed tags in transactional emails
 
 The `Connected Content` and `Promotion Code` Liquid tags are unavailable within transactional email campaigns.
