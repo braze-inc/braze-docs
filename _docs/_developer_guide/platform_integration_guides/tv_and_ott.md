@@ -234,7 +234,7 @@ Features include:
 
 ### Apple Vision Pro {#vision-pro}
 
-To learn more about our Apple Vision Pro support, [click here](https://www.braze.com/docs/developer_guide/platform_integration_guides/swift/visionos)
+To learn more, see [visionOS support](https://www.braze.com/docs/developer_guide/platform_integration_guides/swift/visionos).
 
 ## App targeting {#app-targeting}
 
