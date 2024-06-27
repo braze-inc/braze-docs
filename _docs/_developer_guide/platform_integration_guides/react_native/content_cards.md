@@ -34,7 +34,7 @@ Braze.requestContentCardsRefresh();
 ```
 
 {% alert important %}
-If you choose to build your own UI to display cards, you must call `logContentCardImpression` in order to receive analytics for those cards. This _includes_ control cards, which must be tracked even though they are not displayed to the user.
+If you choose to build your own UI to display cards, you must call `logContentCardImpression` in order to receive analytics for those cards. This includes `control` cards, which must be tracked even though they are not displayed to the user.
 {% endalert %}
 
 You can use these additional methods to build a custom Content Cards Feed within your app:
