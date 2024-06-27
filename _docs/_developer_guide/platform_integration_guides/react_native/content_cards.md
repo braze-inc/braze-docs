@@ -143,10 +143,10 @@ For a full reference of the classic (text announcement) Content Card, see the [A
 
 ### Control Content Card model properties
 
-Control cards include all of the base properties, with a few _important_ differences. Most importantly:
+Control cards include all of the base properties, with a few important differences. Most importantly:
 
-- The `isControl` property is _guaranteed_ to be `true`.
-- The `extras` property is _guaranteed_ to be empty.
+- The `isControl` property is guaranteed to be `true`.
+- The `extras` property is guaranteed to be empty.
 
 For a full reference of the control card, see the [Android][18] and [iOS][19] documentation.
 
