@@ -42,8 +42,8 @@ You can use these additional methods to build a custom Content Cards Feed within
 | Method                                   | Description                                                                                            |
 | ---------------------------------------- | ------------------------------------------------------------------------------------------------------ |
 | `launchContentCards()`                   | Launches the Content Cards UI element.                                                                 |
-| `requestContentCardsRefresh()`           | Requests the latest Content Cards from the Braze SDK server.                                           |
-| `getContentCards()`                      | Retrieves Content Cards from the Braze SDK. This will return the latest list of cards from the server. |
+| `requestContentCardsRefresh()`           | Requests the latest Content Cards from the Braze SDK server. The resulting list of cards is passed to each of the previously registered [content card event listeners](#customization). |
+| `getContentCards()`                      | Retrieves Content Cards from the Braze SDK. This returns a promise that resolves with the latest list of cards from the server. |
 | `getCachedContentCards()`                | Returns the most recent Content Cards array from the cache.                                            |
 | `logContentCardClicked(cardId)`          | Logs a click for the given Content Card ID. This method is used only for analytics. To execute the click action, call `processContentCardClickAction(cardId)` in addition.                                                        |
 | `logContentCardImpression(cardId)`       | Logs an impression for the given Content Card ID.                                                      |
