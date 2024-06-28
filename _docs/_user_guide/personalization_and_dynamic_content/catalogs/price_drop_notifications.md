@@ -1,8 +1,8 @@
 ---
 nav_title: Price Drop Notifications
 article_title: Price Drop Notifications
-permalink: "/price_drop_notifications/"
-hidden: true
+page_order: 3
+alias: "/price_drop_notifications/"
 description: "This reference article describes how to create price drop notifications in Braze catalogs."
 ---
 
