@@ -100,7 +100,7 @@ You can use rules to control how duplicate profiles are resolved when running a 
 
 3. In the **Resolving ties** section, select the criteria that will determine how to solve ties between profiles with matching criteria from **Profile to keep**. You can select the following:
 - **Resolve ties using**: Created date, Updated date, Last session
-- **Prioritzation**: Newest, Oldest
+- **Prioritization**: Newest, Oldest
 
 ![The "Edit rules" panel with sections to select options for "Profile to keep" and "Resolving ties".]({% image_buster /assets/img/audience_management/duplicate_users/edit_rules.png %})
 
