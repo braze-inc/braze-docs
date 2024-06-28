@@ -30,7 +30,8 @@ There are two key steps to creating a lead-scoring workflow in Braze:
 1. Proceed to the **Entry Schedule** step and select an **Action-Based** entry schedule. This will enter users into the Canvas when they perform specific actions.
 
 2. In **Action-Based Options**, add these two actions:
-    - **Change Custom Attribute Value** with the name of your lead scoring attribute (such as “lead score”). If you haven’t created a lead scoring attribute yet, follow the steps in [Custom attributes]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/). This will enter users into the Canvas whenever their lead score changes.
+    - **Change Custom Attribute Value** with the name of your lead scoring attribute (such as `lead score`). If you haven’t created a lead scoring attribute yet, follow the steps in [Custom attributes]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/). This will enter users into the Canvas whenever their lead score changes.
+    - **Add an Email Address**
 
 ![Step 2 of creating a Canvas with the entry schedule of “Action-Based” and action-based options of changing a custom attribute “lead score” and adding an email address.][2]{: style="max-width:80%;"}
 
@@ -71,9 +72,10 @@ Under your variant, select the plus icon and then select **Action Paths**.
 
 #### Step 4b: Create Action Groups
 
-Action groups are groupings of events that will count towards the same point increment or decrement.
+Each Action Group will represent all the actions that lead to the same point increment or decrement. You can set up to eight Action Groups. In this scenario, we'll setting up four groups.
 
 Add the following groups to your Action Path:
+
 - **Group 1:** All events that count for a 1 point increment.
 - **Group 2:** All events that count for a 5 point increment.
 - **Group 3:** All events that count for a 1 point decrement.
@@ -83,7 +85,7 @@ Add the following groups to your Action Path:
 
 #### Step 4c: Configure each group to include the relevant events
 
-In each Action Group, select **Select trigger** and choose the event that will add the number of points for that particular action group. Add more triggers to include all the events that will increment the lead score by one. For example, a user could increment their score by one when they start a session in any app or perform a custom event (such as registering or joining a webinar). 
+In each Action Group, select **Select trigger** and choose the event that will add the number of points for that particular Action Group. Add more triggers to include all the events that will increment the lead score by one. For example, a user could increment their score by one when they start a session in any app or perform a custom event (such as registering or joining a webinar). 
 
 ![Action Group for adding a point with the triggers of “Starting Session in Any App” and “Performing Custom Event”.][8]{: style="max-width:80%;"}
 
@@ -98,7 +100,7 @@ In each User Update step’s **Compose** tab, do the following for the respectiv
 
 | Field | Action |
 | --- | --- |
-| **Attribute Name** | Select the lead score attribute you selected in step 2 (“lead score”).|
+| **Attribute Name** | Select the lead score attribute you selected in step 2 (`lead score`).|
 | **Action** | Change the action to **Increment By** if the path increases the score or **Decrement By** if the path decreases the score |
 | **Increment By** or **Decrement By** | Enter the number of points that will be increased or decreased from the lead score.|
 {: .reset-td-br-1 .reset-td-br-2}
@@ -166,7 +168,7 @@ To update the lead record in Salesforce with the lead status from Braze, we reco
 {% assign threshold = 100%}
 {% if custom_attribute.${lead score} > threshold %}
 {
-"status": "MQL"
+"lead_status": "MQL"
 }
 {% else %}{% abort_message('not at threshold')%}
 {% endif %}
@@ -194,9 +196,9 @@ In the **Schedule Delivery** step, select the following:
 
 #### Step 2c: Identify target audience
 
-In the **Target Audiences** step, add an additional filter that doesn’t include users in the MQL stage or further.
+In the **Target Audiences** step, include a filter that excludes users whose lead statuses are already at MQL or beyond, such as "`lead_status` is none of `MQL`".
 
-![Webhook targeting options with the filter of “lead_status” does not equal “MQL”.][11]{: style="max-width:80%;"}
+![Webhook targeting options with the filter of “lead_status” is none of “MQL”.][11]{: style="max-width:80%;"}
 
 ### Step 3: Launch campaign
 
