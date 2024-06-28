@@ -9760,6 +9760,10 @@ Subscription
 
 This event occurs when Braze receives a request to update the global subscription state of the user, even if the request doesn't alter the current subscription state for the user.
 
+{% alert important %}
+When users unsubscribe with one-click list-unsubscribe, Braze now sends a dedicated value called `List-Unsubscribe`. Previously, Braze sent the value `Other`.
+{% endalert %}
+
 {% tabs %}
 {% tab Braze Standard REST %}
 ```json
