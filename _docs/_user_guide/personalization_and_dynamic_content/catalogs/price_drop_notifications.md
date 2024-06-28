@@ -10,10 +10,6 @@ description: "This reference article describes how to create price drop notifica
 
 > Using a combination of price drop notifications through Braze catalogs and a Canvas, you can notify customers when an item's price has decreased. Any time a customer performs a selected custom event, they can be automatically subscribed to be notified when the item's price is reduced.
 
-{% alert important %}
-Price drop notifications for catalogs are currently in early access and are not supported for customers using Shopify. Contact your account manager if you're interested in participating in this early access.
-{% endalert %}
-
 ## How it works
 
 When a selected custom event is performed by a user and has a `type` property that includes `price_drop`, it can be used to create a price drop subscription for a user and a catalog item it occurred for. When the item's price drops by the specified amount, users can be notified through a Canvas.
