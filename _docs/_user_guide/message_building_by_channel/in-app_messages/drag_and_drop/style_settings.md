@@ -88,7 +88,7 @@ You can add an image to the background of your message from the **Message styles
 
 1. In the canvas area, select the background container. This is the scrollable section of your message.
 2. In the **Message styles** tab, turn on **Background image**.
-3. Add an image from your media library or enter the URL where your image is hosted.
+3. Add an image from your media library, or enter the URL where your image is hosted.
 
 {% alert tip %}
 If you're having trouble selecting a certain block, you can use the up arrow in the block's inline toolbar to move focus up to each parent block.
