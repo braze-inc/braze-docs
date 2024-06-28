@@ -1,6 +1,6 @@
 ---
 nav_title: Duplicate Users
-article_title: Duplicate users
+article_title: Duplicate Users
 description: "Learn how to find and merge duplicate users in your Braze dashboard."
 page_order: 0
 ---
@@ -95,10 +95,8 @@ You can use rules to control how duplicate profiles are resolved when running a 
 ### Step 1: Define your rules
 
 1. Go to **Audience** > **Manage Audience** > **Edit rules**.
-
 2. In the **Profile to keep** section of the **Edit rules** panel, select the **Identifier** for the profiles that will be kept when merging duplicates. This can be the email address or phone number.
-
-3. In the **Resolving ties** section, select the criteria that will determine how to solve ties between profiles with matching criteria from **Profile to keep**. You can select the following:
+3. In the **Resolving ties** section, select the criteria that will determine how to solve ties between profiles with matching criteria from **Profile to keep**. You can select the following:<br>
 - **Resolve ties using**: Created date, Updated date, Last session
 - **Prioritization**: Newest, Oldest
 
