@@ -92,21 +92,53 @@ The full list of CDN domains is as listed below:
 Below are libraries that are known to conflict with Braze's asset caching, along with example code to work around the issue. If your project uses a library that causes an unavailable resource error and is not listed below, consult the documentation of that library for similar usage APIs.
 
 ##### Netfox
+
+{% tabs %}
+{% tab Swift %}
 ```swift
-NFX.sharedInstance().ignoreURL("https://cdn.braze.com")
+NFX.sharedInstance().ignoreURLs(["https://cdn.braze.com"])
 ```
+{% endtab %}
+{% tab Objective-C %}
+```objc
+[NFX.sharedInstance ignoreURLs:@[@"https://cdn.braze.com"]];
+```
+{% endtab %}
+{% endtabs %}
 
 ##### NetGuard
+
+{% tabs %}
+{% tab Swift %}
 ```swift
 NetGuard.blackListHosts.append(contentsOf: ["cdn.braze.com"])
 ```
+{% endtab %}
+{% tab Objective-C %}
+```objc
+NSMutableArray<NSString *> *blackListHosts = [NetGuard.blackListHosts mutableCopy];
+[blackListHosts addObject:@"cdn.braze.com"];
+NetGuard.blackListHosts = blackListHosts;
+```
+{% endtab %}
+{% endtabs %}
 
 ##### XNLogger
+
+{% tabs %}
+{% tab Swift %}
 ```swift
 let brazeAssetsHostFilter = XNHostFilter(host: "https://cdn.braze.com")
 XNLogger.shared.addFilters([brazeAssetsHostFilter])
-XNLogger.shared.startLogging()
 ```
+{% endtab %}
+{% tab Objective-C %}
+```objc
+XNHostFilter *brazeAssetsHostFilter = [[XNHostFilter alloc] initWithHost: @"https://cdn.braze.com"];
+[XNLogger.shared addFilters:@[brazeAssetsHostFilter]];
+```
+{% endtab %}
+{% endtabs %}
 
 [iam_1]: {{ site.baseurl }}/user_guide/administrative/app_settings/developer_console/internal_groups_tab/#adding-test-users
 [iam_2]: {{ site.baseurl }}/user_guide/administrative/app_settings/developer_console/event_user_log_tab/#event-user-log-tab
