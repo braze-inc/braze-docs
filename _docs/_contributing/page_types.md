@@ -7,7 +7,9 @@ toc_headers: h2
 
 # Page types
 
-Braze documentation should follow the Diátaxis framework, which organizes documentation into four categories, or types, that each corresponds with a distinct need or learning preference. Each Braze article can contain multiple documentation types, though each type should reside in its own section.
+> Braze Docs follows the [Diátaxis framework](https://diataxis.fr/), which organizes pages into one of four content types, each one meeting a different learning objective. While a single page on Braze Docs may contain multiple content types, each type should get a dedicated section on the page.
+
+These are the four content types you'll find on Braze Docs:
 
 | Documentation type | Purpose |
 | --- | --- |
@@ -18,14 +20,14 @@ Braze documentation should follow the Diátaxis framework, which organizes docum
 
 ## How-to guides
 
-How-to guides are action-based and chronological steps. They focus on telling a user how to achieve a specific and successful result.
+How-to guides are action-based, chronological steps that show users how to complete a specific task.
 
 Examples include:
 - [Creating a Content Card]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/create/)
 - [WhatsApp setup]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/overview/)
 - [Connected sources integration]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/connected_sources/)
 
-### Content guidelines
+### Guidelines
 
 Cover only what the user needs to know to take action. Only include [references](#references) (technical, non-action based information) that are vital to reaching their goal, such as a list of the options a user can select from during a step. Link out to references that are longer than reasonable to include in the same article, such as [Segmentation filters]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/).
 
@@ -33,9 +35,15 @@ The how-to guide should cover the "happy path" to the goal, which assumes the be
 
 #### Headers
 
-Use Heading 2 and action-oriented language for the primary how-to name, such as "Creating a page".
+H2 headings (`##`) should be action-oriented and reflect the general goal for this step.
 
-For how-tos with long or complicated steps, use nested headers to group related steps like so:
+```
+## Creating a page
+
+Open the relevant directory, then create a new Markdown file for your page.
+```
+
+For how-tos with long or complicated steps, use nested headers to group related steps as shown in the following Markdown sample. For short steps, see [Ordered lists](#ordered-lists) instead.
 
 {% raw %}
 ```markdown
@@ -67,9 +75,9 @@ Step 4: Add additional content (optional)
 ```
 {% endraw %}
 
-#### Bullet points
+#### Ordered lists
 
-For how-tos with short and straightfoward steps, use numbered bullets below headers like so:
+For how-tos with short and straightforward steps, use an ordered list in Markdown format.
 
 {% raw %}
 ```markdown
