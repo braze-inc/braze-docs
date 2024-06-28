@@ -110,7 +110,7 @@ For example, you could keep the profile that has a phone number. If multiple use
 
 After saving your rules, you can preview how they'll work by selecting **Generate a list of duplicates**. Braze will generate your preview and send it to your email address as a CSV file that shows which users would be kept and merged if your rules were applied. 
 
-### Step 3: Merge duplices
+### Step 3: Merge duplicates
 
 If you're satisfied with the results of your preview, return to the **Manage Audience** page and select **Merge all duplicates**.
 
