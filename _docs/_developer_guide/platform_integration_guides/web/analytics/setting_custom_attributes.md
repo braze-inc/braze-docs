@@ -115,7 +115,7 @@ braze.getUser().setCustomUserAttribute(YOUR_ATTRIBUTE_KEY_STRING, YOUR_ARRAY_OF_
 braze.getUser().addToCustomAttributeArray(YOUR_ATTRIBUTE_KEY_STRING, "new string");
 
 // Removing an element from a custom attribute with an array value
-braze.getUser().removeFromCustomAttributeArray("custom_attribute_array_test", "value to be removed");
+braze.getUser().removeFromCustomAttributeArray(YOUR_ATTRIBUTE_KEY_STRING, "value to be removed");
 ```
 
 ### Unsetting a custom attribute
