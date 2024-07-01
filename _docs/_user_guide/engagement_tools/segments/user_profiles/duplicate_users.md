@@ -102,7 +102,7 @@ You can use rules to control how duplicate profiles are resolved when running a 
 
 ![The "Edit rules" panel with sections to select options for "Profile to keep" and "Resolving ties".]({% image_buster /assets/img/audience_management/duplicate_users/edit_rules.png %})
 
-For example, you could keep the profile that has a phone number. If multiple users have the same phone number, you could resolve ties using the **Updated date** field and prioritze the newest user.
+For example, you could keep the profile that has a phone number. If multiple users have the same phone number, you could resolve ties using the **Updated date** field and prioritize the most recently updated user.
 
 ### Step 2: Preview the results (optional)
 
