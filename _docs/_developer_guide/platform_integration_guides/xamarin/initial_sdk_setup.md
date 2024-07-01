@@ -13,7 +13,7 @@ search_rank: 1
 
 # Initial SDK setup
 
-> This reference article covers how to install the Braze SDK for Xamarin. Installing the Braze SDK will provide you with basic analytics functionality as well as working in-app messages with which you can engage your users. 
+> Learn how to install the Braze SDK for Xamarin. Installing the Braze SDK will provide you with basic analytics functionality as well as working in-app messages with which you can engage your users. 
 
 {% alert important %}
 Starting in `version 3.0.0`, this SDK requires using .NET 6+ and removes support for projects using the Xamarin framework.

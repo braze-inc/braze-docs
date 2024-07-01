@@ -19,6 +19,10 @@ The Braze SDK includes a default card feed to get you started with Content Cards
 
 For information on how to integrate the Content Cards into your Xamarin app, see our [Android integration guide][1] and [iOS integration guide][2].
 
+## Prerequisites
+
+To use this feature, you'll need to [integrate Braze SDK for the Xamarin platform]({{site.baseurl}}/developer_guide/platform_integration_guides/xamarin/initial_sdk_setup/).
+
 ## Content Card methods
 
 You can use these additional methods to build a custom Content Cards Feed within your app:
