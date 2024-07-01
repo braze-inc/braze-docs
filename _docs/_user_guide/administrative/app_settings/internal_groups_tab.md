@@ -76,7 +76,7 @@ Only groups tagged as Content Test Groups will be available in the preview secti
 
 Seed Groups are only meant for the email channel and allow you to send a copy of each email variant message to members of that group. Seed Groups are not available for API campaigns, although you can include Seed Groups via an API-triggered entry in the campaign. This feature is typically used with partners such as Return Path or 250OK to measure deliverability metrics. It can be used to keep a record of the email content for historical and archival purposes. 
 
-Once you have created an Internal Group and tagged it to be used as a Seed Group, you can select it from the **Target Users** step of the campaign composer or on the **Send Settings** step in a Canvas. Seed emails will have the identifier `[SEED]` appended to the start of the email subject line. Note that Seed emails sent don't increment sends in dashboard analytics, and they don't update a user profile's **Campaign Received** list.
+After creating an Internal Group and tagging it to be used as a Seed Group, you can select it from the **Target Users** step of the campaign composer or on the **Send Settings** step in a Canvas. Seed emails will have the identifier `[SEED]` appended to the start of the email subject line. Note that Seed emails sent don't increment sends in dashboard analytics and will not impact email analytics or retargeting. They also don't update a user profile's **Campaign Received** list.
 
 {% alert tip %}
 If your Seed Group members report not seeing the message in their inbox, ensure they are listed in the Internal Group, verify that your subject lines are different and that Gmail has not bundled the emails together, or have them check their SPAM folders.
