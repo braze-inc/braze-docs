@@ -94,7 +94,7 @@ After syncing your products from Shopify, you can [create back-in-stock notifica
 
 You can configure the `shopify_product_clicked` event or another custom event to subscribe users to back-in-stock notifications. To unsubscribe users from back-in-stock notifications, select the `shopify_created_order` event or another custom event to the unsubscribe users from these notifications. 
 
-![][2]
+![][2]{: style="max-width:60%;"}
 
 ## Deactivating your product sync {#deactivate}
 
