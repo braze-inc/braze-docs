@@ -883,6 +883,24 @@ After selecting your custom attribute, input a default value and copy the Liquid
 
 ![Pasting a Liquid snippet into a message.]({% image_buster /assets/img/Shopify/copy_liquid_snippet.png %})
 
+#### Example payload
+
+```json
+{
+  "attributes": [
+    {
+      "shopify_tags": "VIP_customer",
+      "shopify_total_spent": "60.00",
+      "shopify_order_count": "3",
+      "shopify_last_order_id": "1234567",
+      "shopify_last_order_name": "test_order",
+      "shopify_zipcode": "10001",
+      "shopify_province": "null"
+    }
+  ]
+}
+```
+
 {% endtab %}
 {% tab Example Payload %}
 {% subtabs %}
