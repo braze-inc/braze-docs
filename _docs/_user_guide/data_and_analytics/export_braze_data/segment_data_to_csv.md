@@ -18,7 +18,7 @@ You can also request a CSV export from the main **Segments** page by selecting t
 ![][2]
 
 {% alert tip %}
-To export data from all your users, create a segment with no filters, and then request a CSV export.
+To export data from all your user profiles, create a segment with no filters, and then request a CSV export.
 {% endalert %}
 
 The CSV output contains the data from each user profile captured in the segment at the time of export. You can export any segment by selecting the gear icon and CSV export. Braze will generate the report in the background and email it to the user who is currently logged in.
