@@ -111,11 +111,11 @@ That’s it! Your lead scoring Canvas is ready to launch.
 
 ## External lead scoring
 
-Whether using one of our [technology partners]({{site.baseurl}}/partners/home/), your own internal lead scoring model, machine learning, or another lead scoring tool, we have multiple options for you!
+Whether using one of our [technology partners]({{site.baseurl}}/partners/home/), your own internal lead scoring model, machine learning, or another lead scoring tool, we have multiple options for you.
 
 ### External partners
 
-Check out [Technology partners]({{site.baseurl}}/partners/home) to learn about our B2B partners that offer lead-scoring capabilities. Don’t see your partner there? You can integrate by calling our [`users/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track#track-users) API endpoint. 
+Check out [Technology partners]({{site.baseurl}}/partners/home) to learn about our B2B partners that offer lead-scoring capabilities. Don’t see your tool there? You can integrate by calling our [`users/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track#track-users) API endpoint. 
 
 ### Internal lead scoring data models
 
@@ -124,7 +124,7 @@ You can integrate Braze with your internal data models, including lead scoring m
 #### Integrated cloud data warehouse
 
 {% tabs %}
-{% tab Braze as a lead-scoring data source %}
+{% tab Braze as a data source %}
 
 As your marketing tool, Braze contains extremely relevant data that could supplement your team’s internal lead score model. 
 
@@ -134,7 +134,7 @@ For example, messaging engagement data (such as email opens and clicks, landing 
 - [Snowflake Secure Data Sharing]({{site.baseurl}}/partners/data_and_infrastructure_agility/data_warehouses/snowflake/)
 
 {% endtab %}
-{% tab Braze as a lead scores destination %}
+{% tab Braze as a destination %}
 
 After your internal teams have created and run your lead scoring model, you’ll want to get that data back into Braze so you can better segment and target leads for relevant messaging. You can do this with [Braze Cloud Data Ingestion]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/overview/). 
 
@@ -180,7 +180,7 @@ To update the lead record in Salesforce with the lead status from Braze, we reco
 
 | Header | Content |
 | --- | --- |
-| Authorization | {% raw %}`Bearer {{result.access_token}}`{% endraw %}. To retrieve a token, [configure a connected app for the OAuth 2.0 client credentials flow](https://help.salesforce.com/s/articleView?id=sf.connected_app_client_credentials_setup.htm&type=5) and then use Connected Content to retrieve the bearer from Salesforce: <br><br>{% raw %}<code>{% connected_content https://[instance].my.salesforce.com/services/oauth2/token <br>:method post <br> :body client_id=[client_id]&client_secret=[client_secret]&grant_type=client_credentials <br>:save result %}{% endraw %} <br> Bearer {% raw %}{{result.access_token}}</code>{% endraw %} |
+| Authorization | {% raw %}`Bearer {{result.access_token}}`{% endraw %}<br><br>To retrieve a token, [configure a connected app](https://help.salesforce.com/s/articleView?id=sf.connected_app_client_credentials_setup.htm&type=5) for the OAuth 2.0 client credentials flow and then use Connected Content to retrieve the bearer from Salesforce: <br><br>{% raw %}<code>{% connected_content https://[instance].my.salesforce.com/services/oauth2/token <br>:method post <br> :body client_id=[client_id]&client_secret=[client_secret]&grant_type=client_credentials <br>:save result %}{% endraw %} <br> Bearer {% raw %}{{result.access_token}}</code>{% endraw %} |
 | Content_Type | application/json |
 {: .reset-td-br-1 reset-td-br-2}
 
@@ -188,7 +188,7 @@ To update the lead record in Salesforce with the lead status from Braze, we reco
 
 #### Step 2b: Schedule webhook sends
 
-You’ll want the campaign to trigger anytime the user’s lead score changes. This campaign will trigger for any user whose score changes, but it will only affect users who aren't currently an MQL and have crossed the threshold you set in the previous step.
+The campaign should trigger anytime the user’s lead score changes. This campaign will trigger for any user whose score changes, but it will only affect users who aren't currently an MQL and have crossed the threshold you set in the previous step.
 
 In the **Schedule Delivery** step, select the following:
 - An **Action-Based** delivery type
@@ -196,7 +196,7 @@ In the **Schedule Delivery** step, select the following:
 
 #### Step 2c: Identify target audience
 
-In the **Target Audiences** step, include a filter that excludes users whose lead statuses are already at MQL or beyond, such as "`lead_status` is none of `MQL`".
+In the **Target Audiences** step, include a filter that excludes users whose lead statuses are already at MQL or beyond, such as "`lead_status` `is none of` `MQL`".
 
 ![Webhook targeting options with the filter of “lead_status” is none of “MQL”.][11]{: style="max-width:80%;"}
 
