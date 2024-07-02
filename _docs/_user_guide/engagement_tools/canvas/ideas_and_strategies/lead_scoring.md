@@ -1,12 +1,12 @@
 ---
 nav_title: Lead Scoring
-article_title: Creating a Lead-scoring Workflow
+article_title: Creating a Lead-Scoring Workflow
 description: "Learn how to use Braze to do simple lead scoring, external lead scoring, and lead handoffs."
 ---
 
 # Creating a lead-scoring workflow
 
-> This use case demonstrates how you can use Braze to update user lead scores in real-time and automatically handoff leads to your Sales teams.
+> This use case demonstrates how you can use Braze to update user lead scores in real time and automatically hand off leads to your Sales teams.
 
 There are two key steps to creating a lead-scoring workflow in Braze:
 
@@ -56,7 +56,7 @@ In **Entry Controls**, do the following:
 
 #### Step 3c: Update send settings
 
-Given the operational nature of this Canvas, and the fact that no messages will be sent to these users, you don’t need to adhere to subscription statuses.
+Given the operational nature of this Canvas and the fact that no messages will be sent to these users, you don’t need to adhere to subscription statuses.
 
 Under **Subscription Settings**, for **Send to these users:** select **all users including unsubscribed users**. 
 
@@ -72,13 +72,13 @@ Under your variant, select the plus icon and then select **Action Paths**.
 
 #### Step 4b: Create Action Groups
 
-Each Action Group will represent all the actions that lead to the same point increment or decrement. You can set up to eight Action Groups. In this scenario, we'll setting up four groups.
+Each Action Group will represent all the actions that lead to the same point increment or decrement. You can set up to eight Action Groups. In this scenario, we'll be setting up four groups.
 
 Add the following groups to your Action Path:
 
-- **Group 1:** All events that count for a 1 point increment.
-- **Group 2:** All events that count for a 5 point increment.
-- **Group 3:** All events that count for a 1 point decrement.
+- **Group 1:** All events that count for a 1-point increment.
+- **Group 2:** All events that count for a 5-point increment.
+- **Group 3:** All events that count for a 1-point decrement.
 - **Everyone Else:** Action Paths allow you to define the window to wait and see if a user takes an action, before dropping them into an “everyone else” group. For lead scoring, this is an opportunity to decrement the score for “inactivity”.
 
 ![Action Path containing Action Groups for adding one point, five poins, and ten points; subtracting one point and ten points; and “Everyone Else”.][7]
@@ -145,7 +145,7 @@ With Cloud Data Ingestion, your internal teams will create a new table or view w
 
 ## Lead handoff: Marketing Qualified Lead (MQL) to Sales {#lead-handoff}
 
-Our recommended approach to lead handoffs is to have a corresponding lead or contact attached to each user in Braze. These leads would enter your sales teams’ queue when their lead statuses change to an MQL stage, at which point Salesforce would kick off a lead routing or assignment workflow. 
+Our recommended approach to lead handoffs is to have a corresponding lead or contact attached to each user in Braze. These leads would enter your Sales teams’ queue when their lead statuses change to an MQL stage, at which point Salesforce would kick off a lead routing or assignment workflow. 
 
 To update the lead record in Salesforce with the lead status from Braze, we recommend using a triggered webhook template.
 
