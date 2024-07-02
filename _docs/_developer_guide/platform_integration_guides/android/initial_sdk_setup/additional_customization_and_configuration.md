@@ -53,7 +53,9 @@ To enable verbose logging in the `braze.xml`:
 <integer name="com_braze_logger_initial_log_level">2</integer>
 ```
 
-Note that Braze log level integer constants correspond to Android log level integer constants as defined in [`android.util.log`][71]. Braze log messages equal or above the set log level will be forwarded to analogous `Log` method. Log messages below the set log level will be dropped.
+Note that Braze log level integer constants correspond to Android log level integer constants as defined in [`android.util.log`][71]. 
+
+Braze log messages equal or above the set log level will be forwarded to analogous `Log` method. Log messages below the set log level will be dropped.
 
 If you would like to set the log level to a different level, see the following list of available log levels:
 
