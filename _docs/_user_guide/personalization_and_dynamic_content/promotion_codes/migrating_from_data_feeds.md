@@ -23,5 +23,5 @@ There are two main differences between the promotion codes and Data Feeds:
 To replace a Data Feed with a promotion code list, do the following: 
 
 1. Go to **Data Settings** and select **Create Promotion Code List**.
-2. [Set up your promotion code]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/promotion_codes).
+2. [Set up your promotion code list]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/promotion_codes).
 3. Navigate to your messages that previously referenced the Data Feed and update it to use the promotion code list.
