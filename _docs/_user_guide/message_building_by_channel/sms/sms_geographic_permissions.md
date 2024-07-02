@@ -18,7 +18,7 @@ alias: "/sms_geographic_permissions/"
 
 ## Configuring your SMS country allowlist
 
-The country allowlist is configured at the [subscription group]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_subscription_group/) level. You can access it by going to **Audience** > **Subscriptions** and selecting an SMS subscription group. The allowlist is under **SMS Geographic Permissions**. If you're an admin, you can configure the countries that are on the allowlist.
+If you're an admin, you can configure the countries that are on the allowlist. The country allowlist is configured at the [subscription group]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_subscription_group/) level. You can access it by going to **Audience** > **Subscriptions** and selecting an SMS subscription group. The allowlist is under **SMS Geographic Permissions**.
 
 ![The editable SMS Geographic Permissions section for an admin with Australia, Canada, and the United States selected in the "Country allowlist".][1]{: style="max-width:80%;"}
 
