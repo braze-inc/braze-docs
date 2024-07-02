@@ -11,7 +11,7 @@ description: "This reference article provides guidance on migrating from Data Fe
 Data Feeds is being deprecated. Braze recommends that customers who use Data Feeds move over to promotion code lists.
 {% endalert %}
 
-> Migrating from Data Feeds to promotion codes takes time, but it's a straightforward process! This involves manually creating promotion code lists with the information from your Data Feeds and updating your message references accordingly.
+> Migrating from Data Feeds to promotion codes is a straightforward process. This involves manually creating promotion code lists with the information from your Data Feeds and updating your message references accordingly.
 
 There are two main differences between the promotion codes and Data Feeds:
 
