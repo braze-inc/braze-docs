@@ -2,14 +2,13 @@
 nav_title: Content Types
 article: Content Types
 page_order: 4
-toc_headers: h2
 ---
 
 # Content types
 
 > Braze Docs follows the [Diátaxis framework](https://diataxis.fr/), which organizes pages into one of four content types, each one meeting a different learning objective. While a single page on Braze Docs may contain multiple content types, each type should get a dedicated section on the page.
 
-These are the four content types you'll find on Braze Docs:
+These are the content types you'll find on Braze Docs:
 
 | Documentation type | Purpose |
 | --- | --- |
@@ -17,24 +16,46 @@ These are the four content types you'll find on Braze Docs:
 | [Tutorials](#tutorials) | Help the user **acquire knowledge**. |
 | [References](#references) | Provide the user with **technical knowledge**. |
 | [Explanations](#explanations) | Broaden the user’s **contextual knowledge**. |
+| [Release notes](#release-notes) | $TODO: Add a description here. |
 
-Check out [Page templates](#page-templates) for how to structure multiple content types on the following page types:
-- [Basic articles](#basic)
-- [Technology partner documentation](#technology-partner)
-- [Release notes](#release-notes)
+## Using templates
 
-## How-to guides
+Each content type has a dedicated template you can use to create [pages]({{site.baseurl}}/contributing/content_management/pages/) or [sections]({{site.baseurl}}/contributing/content_management/sections/) on Braze Docs.
 
-How-to guides are action-based, chronological steps that show users how to complete a specific task.
+Read HTML comments like the following to learn more about each section in a template:
 
-Examples include:
-- [Creating a Content Card]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/create/)
-- [WhatsApp setup]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/overview/)
-- [Connected sources integration]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/connected_sources/)
-
-{% details Template %}
-{% raw %}
 ```markdown
+<!-- Here's an HTML comment! -->
+```
+
+{% alert important %}
+You can keep these comments in your file while writing, but you'll need to remove them before publishing.
+{% endalert %}
+
+## Content types
+
+### How-to guides
+
+How-to guides are action-based, chronological steps that show users how to complete a specific task. For an example, see [Creating a Content Card]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/create/):
+
+![Screenshot of the "Creating a Content Card" page.]()
+
+{% details Show template %}
+{% raw %}
+`````markdown
+---
+nav_title: NAV_TITLE
+article_title: ARTICLE_TITLE
+description: "SHORT_DESCRIPTION."
+alias: /OPTIONAL_SHORT_ARTICLE_TITLE/
+page_type: reference
+layout: OPTIONAL_LAYOUT_FILE
+—--
+<!-- The overview starts with a '>' character and discusses what will be covered. In an optional following paragraph, contextualize the topic at a high-level in an introduction. -->
+> DESCRIPTION.
+
+INTRODUCTION.
+
 <!-- The prerequisites for this task. If no prerequisites are required, you can remove this section. -->
 ## Prerequisites
 
@@ -47,10 +68,6 @@ Before you start, you'll need to complete the following:
 <!-- An optional, brief explanation of how the feature workflow looks. -->
 ## How it works
 
-CONTENT.
-
-<!-- Walk a user through integrating and turning on the feature. -->
- ## Integration
 CONTENT.
 
 <!-- A how-to guide with nested steps. -->
@@ -80,79 +97,62 @@ CONTENT.
 <!-- An optional section for what is supported. Add nested headers to be more specific. -->
 ## Supported data types / Supported attributes / Supported events / Supported ETC.
 CONTENT.
-```
+``````
 {% endraw %}
 {% enddetails %}
 
-### Guidelines
-
-The how-to guide should cover the "happy path" to the goal, which assumes the best case scenario while completing the task. Avoid providing troubleshooting information, which you can include in a separate reference section or article.
-
-To keep the guide concise and relevant to the user's needs, follow these additional guidelines: 
+#### Guidelines
 
 - Cover only what the user needs to know to take action. 
-- Only include [references](#references) (technical, non-action based information) that are vital to reaching their goal, such as a list of the options a user can select from during a step. 
+- Only cover the best or recommended way to complete the task. Do not give document alternative methods.
+- Only include [reference material](#references) that's vital to the end-user's goal, such as a list of options a user can select during a step.
 - Link out to references that are longer than reasonable to include in the same article, such as [Segmentation filters]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/).
+- Avoid providing troubleshooting steps. Instead, you can include this information in a another section on this page or a separate article.
 
-#### Headers
+#### Header syntax
 
-H2 headings (`##`) should be action-oriented and reflect the general goal for this step.
+H2 headers (`##` in Markdown) should be action-oriented and reflect the general goal for this step. If there's any optional steps, prepend `(Optional)` to  For example:
 
-```
-## Creating a page
-
-Open the relevant directory, then create a new Markdown file for your page.
-```
-
-For how-tos with long or complicated steps, use nested headers to group related steps as shown in the following Markdown sample. For short steps, see [Ordered lists](#ordered-lists) instead.
-
-{% details Example %}
 {% raw %}
-```markdown
+```
 ## Creating a page
+
+1. Open the relevant directory in `braze-docs`.
+2. Create a new Markdown file for your page.
+3. Ensure your filename follows our [naming guidelines](#naming-guidelines).
+4. (Optional) You can generate a preview by running `rake` in your terminal.
+```
+{% endraw %}
+
+For long or complicated steps, use nested headers to group related steps. If there's any optional steps, append `(optional)` to the header. For example:
+
+{% raw %}
+``````markdown
+## Creating a page
+
 ### Step 1: Create a new file
 
 Open the relevant directory, then create a new Markdown file for your page.
 
+```plaintext
 PAGE_TITLE.md
-
-Replace `PAGE_TITLE` with the title of your page, which should follow the Braze Docs Style Guide. Use all lowercase characters, remove special characters, and replace spaces with underscores (`_`). Your filename should be similar to the following:
-
-- **Page title:** Setting up your development environment for C++
-- **File name:** `setting_up_your_development_environment_for_cpp.md`
+```
 
 ### Step 2: Add a template
 
 Copy and paste one of the following templates into your Markdown file. For more information, see [Templates]({{site.baseurl}}/contributing/templates/).
 
-#### Basic template
-```
-{% endraw %}
-{% enddetails %}
+### Step 3: Generate a preview (optional)
 
-For optional steps, put “(optional)” at the end of a header, such as:
+To generate a preview, open your terminal and run the following command:
 
-{% raw %}
-```markdown
-Step 4: Add additional content (optional)
+```bash
+rake
 ```
+``````
 {% endraw %}
 
-#### Ordered lists
-
-For how-tos with short and straightforward steps, use an ordered list in Markdown format.
-
-For optional steps, put “(Optional)” at the start of the bulleted number, such as: 
-
-{% raw %}
-```markdown
-5. (optional) Deselect any files you do not wish to import
-```
-{% endraw %}
-
-If the steps can’t be summarized in concise numbered bullets, consider using nested headers (see “Headers”) to create a more visually-friendly format for users
-
-## Tutorials
+### Tutorials
 
 Tutorials are learning-oriented practical lessons. They focus on what the user learns, such as becoming familiar with terminology, how things interact, how to use commands, and similar.
 
@@ -160,7 +160,7 @@ Examples include:
 - [Rules-based recommendations]({{site.baseurl}}/user_guide/sage_ai/recommendations/rules_based_recommendations/)
 - [Assigning Liquid variables]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/using_liquid/)
 
-### Guidelines
+#### Guidelines
 
 Create a guided step-by-step activity that leads to a successful conclusion. In other words, a scenario for the user to follow or roleplay. Assume that the user has little to no familiarity with the platforms, tools, or workflows used during the activity.
 
@@ -184,7 +184,7 @@ Replace each `LEARNING_OBJECTIVE` with something the user will broadly learn how
 - Request a review from the Braze Docs team
 ```
 
-#### Headers and bullet points
+##### Headers and bullet points
 
 Follow the same header and bullet point format as [how-to guides](#content-guidelines), but add "Tutorial:" to the beginning of the H2 header. For example, "Tutorial: Your first contribution". 
 
@@ -192,7 +192,7 @@ Follow the same header and bullet point format as [how-to guides](#content-guide
 Provide ready-made assets for the user to input that aren't the key focus of your tutorial. For example, you could provide photos, messaging, and Liquid coding for a tutorial that teaches users how to use a variety of features when creating a campaign.
 {% endalert %}
 
-## References
+### References
 
 References are information-oriented content. They focus on providing the user with objective, authoritative, and technical knowledge.
 
@@ -201,13 +201,13 @@ Examples include:
 - [App-by-app user permissions]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/#app-by-app-user-permissions)
 - [Liquid terms to know]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/) (definition glossary)
 
-### Guidelines
+#### Guidelines
 
 Create technical descriptions or information that are necessary to complete a task. Try to organize the information alphabetically, categorically, or hierarchically.
 
 Put references in their respective articles unless they're longer than seems appropriate for a single article or will be referenced by multiple articles. If they're only referenced by a single how-to guide and long enough to disrupt the flow of the steps, you can [make them collapsible]({{site.baseurl}}/contributing/styling_examples/#collapsible-content).
 
-#### Headers
+##### Headers
 
 Use Heading 2 (`##`) and nouns for reference names. For example, [Editor blocks]({{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/dnd_editor_blocks/) has the following names for its references:
 
@@ -228,13 +228,7 @@ Use Heading 2 (`##`) and nouns for reference names. For example, [Editor blocks]
     - Menu
 ```
 
-#### Use cases 
-
-To demonstrate how a specific industry can use a feature, create a use case. It uses fictional companies to demonstrate how a feature can be used in a specific situation. For example, a use case can cover how a FakeBrandz company could use Canvas boards to retarget users who abandoned carts containing more than three items.
-
-Use dashboard-06 to access FakeBrandz workspaces. Make sure to use practical real-world examples that align with how different industries use features. Use the header format "Use case" for singular use cases. If including multiple use cases, nest them beneath "Use case" and give each use case a descriptive header.
-
-## Explanations
+### Explanations
 
 Explanations are understanding-oriented content. They focus on improving the user’s conceptual understanding.
 
@@ -243,7 +237,7 @@ Examples include:
 - [Integration overview]({{site.baseurl}}/developer_guide/platform_wide/getting_started/integration_overview/)
 - [Braze data retention information]({{site.baseurl}}/api/data_retention/)
 
-### Guidelines
+#### Guidelines
 
 Create textual or visual descriptions of concepts, such as how data travels between features, third-party partners, tools, and similar. You can also discuss how features and techniques can benefit users.
 
@@ -253,7 +247,7 @@ Explanations should reside in the most relevent article. For example, a basic fe
 Even though explanations aren't telling users what to do to achieve a specific outcome, you can broadly describe chronological steps to acheive a general goal (such as using A/B testing to improve your messaging). Don't go into the same detail you would for a [how-to guide](#how-to-guides) or [tutorial](#tutorials).
 {% endalert %}
 
-#### Headers
+##### Headers
 
 Explanation articles use the heading convention "About TOPIC_NAME."
 
@@ -269,36 +263,8 @@ Explanation sections within articles that contain multiple documentation types (
 - How TOPIC is handled
 - What does Braze check?
 
-## Page templates
-
-You can use these templates to create [pages]({{site.baseurl}}/contributing/content_management/pages/) or [sections]({{site.baseurl}}/contributing/content_management/sections/) on Braze Docs.
-
-Read HTML comments like the following to learn more about each section in a template:
-
-```markdown
-<!-- Here's an HTML comment! -->
-```
-
-{% alert important %}
-You can keep these comments in your file while writing, but you'll need to remove them before publishing.
-{% endalert %}
-
-### Basic
-
-{% multi_lang_include contributing/templates/basic.md %}
-
-### Technology partner
-
-{% multi_lang_include contributing/templates/technology_partner.md %}
-
 ### Release notes
 
+$TODO: Add a description here.
+
 {% multi_lang_include contributing/templates/release_notes.md %}
-
-### Modifying a template
-
-You can modify a template by following the steps outlined in these pages:
-
-- [Content management]({{site.baseurl}}/contributing/content_management/)
-- [Metadata]({{site.baseurl}}/contributing/yaml_front_matter/metadata/)
-- [Page layouts]({{site.baseurl}}/contributing/yaml_front_matter/page_layouts/)
