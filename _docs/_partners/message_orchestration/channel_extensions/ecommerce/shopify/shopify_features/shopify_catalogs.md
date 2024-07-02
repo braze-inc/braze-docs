@@ -88,6 +88,7 @@ Modifying the Shopify catalog in any way may unintentionally interfere with real
 
 To change the product identifier for your Shopify catalog, you will need to deactivate the sync. Confirm you have stopped any sends using this Shopify catalog data first. Re-run the Shopify catalog initial sync and select your desired product identifier by following the [product sync](#setting-up) steps.
 
+<!--
 ## Shopify back-in-stock
 
 After syncing your products from Shopify, you can [create back-in-stock notifications]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/back_in_stock_notifications).
@@ -95,6 +96,7 @@ After syncing your products from Shopify, you can [create back-in-stock notifica
 You can configure the `shopify_product_clicked` event or another custom event to subscribe users to back-in-stock notifications. To unsubscribe users from back-in-stock notifications, select the `shopify_created_order` event or another custom event to the unsubscribe users from these notifications. 
 
 ![Catalog Settings with ID set as the property on the custom event used to determine the catalog item ID for a subscription. "shopify_product_clicked" is the custom event for subscriptions, and "shopify_created order" is the custom event for unsubscribing. The fallback catalog is "shopify_catalog".][2]{: style="max-width:60%;"}
+-->
 
 ## Deactivating your product sync {#deactivate}
 
