@@ -88,7 +88,7 @@ This event occurs when an WhatsApp message sent made it successfully to the end-
     "canvas_step_name" : "(optional, string) Name of the Canvas step",
     "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
     "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
-    "card_id" : "(optional, string) ID of the card this in app message comes from",
+    "card_id" : "(optional, string) ID of the card this in-app message comes from",
     "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
     "from_phone_number" : "(required, string) Phone number used to send in e.164 format (for example +14155552671)",
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
@@ -96,7 +96,7 @@ This event occurs when an WhatsApp message sent made it successfully to the end-
     "subscription_group_id" : "(optional, string) Subscription group API ID",
     "to_phone_number" : "(optional, string) Phone number of the user receiving the message in e.164 format (for example +14155552671)"
   },
-  "time" : "(required, long) Unix timestamp at which the event happened",
+  "time" : "(required, long) UNIX timestamp at which the event happened",
   "user" : {
     "device_id" : "(optional, string) ID of the device on which the event occurred",
     "external_user_id" : "(required, string) External ID of the user",
@@ -132,7 +132,7 @@ This event occurs when an WhatsApp message sent made it successfully to the end-
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
     "subscription_group_id" : "(optional, string) Subscription group API ID",
-    "time" : "(required, long) Unix timestamp at which the event happened",
+    "time" : "(required, long) UNIX timestamp at which the event happened",
     "to_phone_number" : "(optional, string) Phone number of the user receiving the message in e.164 format (for example +14155552671)",
     "token" : "(required, string) The Mixpanel API token"
   }
@@ -163,7 +163,7 @@ This event occurs when an WhatsApp message sent made it successfully to the end-
   "message_variation_id" : "(optional, string) API ID of the message variation this user received",
   "message_variation_name" : "(optional, string) Name of the message variation",
   "subscription_group_id" : "(optional, string) Subscription group API ID",
-  "time" : "(required, long) Unix timestamp at which the event happened",
+  "time" : "(required, long) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
   "to_phone_number" : "(optional, string) Phone number of the user receiving the message in e.164 format (for example +14155552671)",
   "user_id" : "(required, string) BSON ID of the user who performed this event"
@@ -203,7 +203,7 @@ This event occurs when an WhatsApp message sent made it successfully to the end-
         "custom_event_type" : "(required, string) The mParticle custom event type if the event_type is 'custom_event' (always 'other')",
         "event_name" : "(required, string) The event type name, as it is exported to mParticle",
         "source_message_id" : "(required, string) Globally unique ID for this event",
-        "timestamp_unixtime_ms" : "(required, long) Unix timestamp at which the event happened"
+        "timestamp_unixtime_ms" : "(required, long) UNIX timestamp at which the event happened"
       },
       "event_type" : "(required, string) mParticle event type (either 'uninstall' or 'custom_event')"
     }
@@ -252,7 +252,7 @@ This event occurs when an WhatsApp message sent made it successfully to the end-
   "event_type" : "(required, string) The event type name, as it is exported to Amplitude",
   "insert_id" : "(required, string) Globally unique ID for this event",
   "library" : "Braze",
-  "time" : "(required, long) Unix timestamp at which the event happened",
+  "time" : "(required, long) UNIX timestamp at which the event happened",
   "user_id" : "(optional, string) External ID of the user"
 }
 ```
@@ -288,7 +288,7 @@ This event occurs when an WhatsApp message sent made it successfully to the end-
     "message_variation_name" : "(optional, string) Name of the message variation",
     "subscription_group_id" : "(optional, string) Subscription group API ID"
   },
-  "timestamp" : "(required, long) Unix timestamp at which the event happened",
+  "timestamp" : "(required, long) UNIX timestamp at which the event happened",
   "type" : "track",
   "userId" : "(required, string) External ID of the user"
 }
@@ -326,7 +326,7 @@ This event occurs when WhatsApp cannot deliver the message to the user. A hard b
     "canvas_step_name" : "(optional, string) Name of the Canvas step",
     "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
     "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
-    "card_id" : "(optional, string) ID of the card this in app message comes from",
+    "card_id" : "(optional, string) ID of the card this in-app message comes from",
     "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
     "from_phone_number" : "(required, string) Phone number used to send in e.164 format (for example +14155552671)",
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
@@ -336,7 +336,7 @@ This event occurs when WhatsApp cannot deliver the message to the user. A hard b
     "subscription_group_id" : "(optional, string) Subscription group API ID",
     "to_phone_number" : "(optional, string) Phone number of the user receiving the message in e.164 format (for example +14155552671)"
   },
-  "time" : "(required, long) Unix timestamp at which the event happened",
+  "time" : "(required, long) UNIX timestamp at which the event happened",
   "user" : {
     "device_id" : "(optional, string) ID of the device on which the event occurred",
     "external_user_id" : "(required, string) External ID of the user",
@@ -374,7 +374,7 @@ This event occurs when WhatsApp cannot deliver the message to the user. A hard b
     "provider_error_code" : "(required, string) Error code from WhatsApp",
     "provider_error_title" : "(required, string) Description of error from WhatsApp",
     "subscription_group_id" : "(optional, string) Subscription group API ID",
-    "time" : "(required, long) Unix timestamp at which the event happened",
+    "time" : "(required, long) UNIX timestamp at which the event happened",
     "to_phone_number" : "(optional, string) Phone number of the user receiving the message in e.164 format (for example +14155552671)",
     "token" : "(required, string) The Mixpanel API token"
   }
@@ -407,7 +407,7 @@ This event occurs when WhatsApp cannot deliver the message to the user. A hard b
   "provider_error_code" : "(required, string) Error code from WhatsApp",
   "provider_error_title" : "(required, string) Description of error from WhatsApp",
   "subscription_group_id" : "(optional, string) Subscription group API ID",
-  "time" : "(required, long) Unix timestamp at which the event happened",
+  "time" : "(required, long) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
   "to_phone_number" : "(optional, string) Phone number of the user receiving the message in e.164 format (for example +14155552671)",
   "user_id" : "(required, string) BSON ID of the user who performed this event"
@@ -449,7 +449,7 @@ This event occurs when WhatsApp cannot deliver the message to the user. A hard b
         "custom_event_type" : "(required, string) The mParticle custom event type if the event_type is 'custom_event' (always 'other')",
         "event_name" : "(required, string) The event type name, as it is exported to mParticle",
         "source_message_id" : "(required, string) Globally unique ID for this event",
-        "timestamp_unixtime_ms" : "(required, long) Unix timestamp at which the event happened"
+        "timestamp_unixtime_ms" : "(required, long) UNIX timestamp at which the event happened"
       },
       "event_type" : "(required, string) mParticle event type (either 'uninstall' or 'custom_event')"
     }
@@ -500,7 +500,7 @@ This event occurs when WhatsApp cannot deliver the message to the user. A hard b
   "event_type" : "(required, string) The event type name, as it is exported to Amplitude",
   "insert_id" : "(required, string) Globally unique ID for this event",
   "library" : "Braze",
-  "time" : "(required, long) Unix timestamp at which the event happened",
+  "time" : "(required, long) UNIX timestamp at which the event happened",
   "user_id" : "(optional, string) External ID of the user"
 }
 ```
@@ -538,7 +538,7 @@ This event occurs when WhatsApp cannot deliver the message to the user. A hard b
     "provider_error_title" : "(required, string) Description of error from WhatsApp",
     "subscription_group_id" : "(optional, string) Subscription group API ID"
   },
-  "timestamp" : "(required, long) Unix timestamp at which the event happened",
+  "timestamp" : "(required, long) UNIX timestamp at which the event happened",
   "type" : "track",
   "userId" : "(required, string) External ID of the user"
 }
@@ -576,7 +576,7 @@ This event occurs when a send request was successfully communicated between Braz
     "canvas_step_name" : "(optional, string) Name of the Canvas step",
     "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
     "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
-    "card_id" : "(optional, string) ID of the card this in app message comes from",
+    "card_id" : "(optional, string) ID of the card this in-app message comes from",
     "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
     "from_phone_number" : "(required, string) Phone number used to send in e.164 format (for example +14155552671)",
     "message_extras" : "(optional, string) A JSON string of the tagged key-value pairs during liquid rendering",
@@ -585,7 +585,7 @@ This event occurs when a send request was successfully communicated between Braz
     "subscription_group_id" : "(optional, string) Subscription group API ID",
     "to_phone_number" : "(optional, string) Phone number of the user receiving the message in e.164 format (for example +14155552671)"
   },
-  "time" : "(required, long) Unix timestamp at which the event happened",
+  "time" : "(required, long) UNIX timestamp at which the event happened",
   "user" : {
     "device_id" : "(optional, string) ID of the device on which the event occurred",
     "external_user_id" : "(required, string) External ID of the user",
@@ -622,7 +622,7 @@ This event occurs when a send request was successfully communicated between Braz
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
     "subscription_group_id" : "(optional, string) Subscription group API ID",
-    "time" : "(required, long) Unix timestamp at which the event happened",
+    "time" : "(required, long) UNIX timestamp at which the event happened",
     "to_phone_number" : "(optional, string) Phone number of the user receiving the message in e.164 format (for example +14155552671)",
     "token" : "(required, string) The Mixpanel API token"
   }
@@ -653,7 +653,7 @@ This event occurs when a send request was successfully communicated between Braz
   "message_variation_id" : "(optional, string) API ID of the message variation this user received",
   "message_variation_name" : "(optional, string) Name of the message variation",
   "subscription_group_id" : "(optional, string) Subscription group API ID",
-  "time" : "(required, long) Unix timestamp at which the event happened",
+  "time" : "(required, long) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
   "to_phone_number" : "(optional, string) Phone number of the user receiving the message in e.164 format (for example +14155552671)",
   "user_id" : "(required, string) BSON ID of the user who performed this event"
@@ -694,7 +694,7 @@ This event occurs when a send request was successfully communicated between Braz
         "custom_event_type" : "(required, string) The mParticle custom event type if the event_type is 'custom_event' (always 'other')",
         "event_name" : "(required, string) The event type name, as it is exported to mParticle",
         "source_message_id" : "(required, string) Globally unique ID for this event",
-        "timestamp_unixtime_ms" : "(required, long) Unix timestamp at which the event happened"
+        "timestamp_unixtime_ms" : "(required, long) UNIX timestamp at which the event happened"
       },
       "event_type" : "(required, string) mParticle event type (either 'uninstall' or 'custom_event')"
     }
@@ -744,7 +744,7 @@ This event occurs when a send request was successfully communicated between Braz
   "event_type" : "(required, string) The event type name, as it is exported to Amplitude",
   "insert_id" : "(required, string) Globally unique ID for this event",
   "library" : "Braze",
-  "time" : "(required, long) Unix timestamp at which the event happened",
+  "time" : "(required, long) UNIX timestamp at which the event happened",
   "user_id" : "(optional, string) External ID of the user"
 }
 ```
@@ -781,7 +781,7 @@ This event occurs when a send request was successfully communicated between Braz
     "message_variation_name" : "(optional, string) Name of the message variation",
     "subscription_group_id" : "(optional, string) Subscription group API ID"
   },
-  "timestamp" : "(required, long) Unix timestamp at which the event happened",
+  "timestamp" : "(required, long) UNIX timestamp at which the event happened",
   "type" : "track",
   "userId" : "(required, string) External ID of the user"
 }
@@ -821,14 +821,14 @@ This event occurs if a WhatsApp message was aborted based on Liquid aborts, Quie
     "canvas_step_name" : "(optional, string) Name of the Canvas step",
     "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
     "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
-    "card_id" : "(optional, string) ID of the card this in app message comes from",
+    "card_id" : "(optional, string) ID of the card this in-app message comes from",
     "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
     "subscription_group_id" : "(optional, string) Subscription group API ID",
     "to_phone_number" : "(optional, string) Phone number of the user receiving the message in e.164 format (for example +14155552671)"
   },
-  "time" : "(required, long) Unix timestamp at which the event happened",
+  "time" : "(required, long) UNIX timestamp at which the event happened",
   "user" : {
     "device_id" : "(optional, string) ID of the device on which the event occurred",
     "external_user_id" : "(required, string) External ID of the user",
@@ -865,7 +865,7 @@ This event occurs if a WhatsApp message was aborted based on Liquid aborts, Quie
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
     "subscription_group_id" : "(optional, string) Subscription group API ID",
-    "time" : "(required, long) Unix timestamp at which the event happened",
+    "time" : "(required, long) UNIX timestamp at which the event happened",
     "to_phone_number" : "(optional, string) Phone number of the user receiving the message in e.164 format (for example +14155552671)",
     "token" : "(required, string) The Mixpanel API token"
   }
@@ -897,7 +897,7 @@ This event occurs if a WhatsApp message was aborted based on Liquid aborts, Quie
   "message_variation_id" : "(optional, string) API ID of the message variation this user received",
   "message_variation_name" : "(optional, string) Name of the message variation",
   "subscription_group_id" : "(optional, string) Subscription group API ID",
-  "time" : "(required, long) Unix timestamp at which the event happened",
+  "time" : "(required, long) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
   "to_phone_number" : "(optional, string) Phone number of the user receiving the message in e.164 format (for example +14155552671)",
   "user_id" : "(required, string) BSON ID of the user who performed this event"
@@ -938,7 +938,7 @@ This event occurs if a WhatsApp message was aborted based on Liquid aborts, Quie
         "custom_event_type" : "(required, string) The mParticle custom event type if the event_type is 'custom_event' (always 'other')",
         "event_name" : "(required, string) The event type name, as it is exported to mParticle",
         "source_message_id" : "(required, string) Globally unique ID for this event",
-        "timestamp_unixtime_ms" : "(required, long) Unix timestamp at which the event happened"
+        "timestamp_unixtime_ms" : "(required, long) UNIX timestamp at which the event happened"
       },
       "event_type" : "(required, string) mParticle event type (either 'uninstall' or 'custom_event')"
     }
@@ -988,7 +988,7 @@ This event occurs if a WhatsApp message was aborted based on Liquid aborts, Quie
   "event_type" : "(required, string) The event type name, as it is exported to Amplitude",
   "insert_id" : "(required, string) Globally unique ID for this event",
   "library" : "Braze",
-  "time" : "(required, long) Unix timestamp at which the event happened",
+  "time" : "(required, long) UNIX timestamp at which the event happened",
   "user_id" : "(optional, string) External ID of the user"
 }
 ```
@@ -1025,7 +1025,7 @@ This event occurs if a WhatsApp message was aborted based on Liquid aborts, Quie
     "message_variation_name" : "(optional, string) Name of the message variation",
     "subscription_group_id" : "(optional, string) Subscription group API ID"
   },
-  "timestamp" : "(required, long) Unix timestamp at which the event happened",
+  "timestamp" : "(required, long) UNIX timestamp at which the event happened",
   "type" : "track",
   "userId" : "(required, string) External ID of the user"
 }
@@ -1063,7 +1063,7 @@ This event occurs when one of your users sends a WhatsApp message to a phone num
     "canvas_step_name" : "(optional, string) Name of the Canvas step",
     "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
     "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
-    "card_id" : "(optional, string) ID of the card this in app message comes from",
+    "card_id" : "(optional, string) ID of the card this in-app message comes from",
     "inbound_phone_number" : "(required, string) The inbound number that the message was sent to",
     "media_urls" : "(optional, array of string) Media URLs from the user",
     "message_body" : "(optional, string) Typed response from the user",
@@ -1073,7 +1073,7 @@ This event occurs when one of your users sends a WhatsApp message to a phone num
     "subscription_group_id" : "(optional, string) Subscription group API ID",
     "user_phone_number" : "(required, string) The user's phone number from which the message was received"
   },
-  "time" : "(required, long) Unix timestamp at which the event happened",
+  "time" : "(required, long) UNIX timestamp at which the event happened",
   "user" : {
     "device_id" : "(optional, string) ID of the device on which the event occurred",
     "external_user_id" : "(required, string) External ID of the user",
@@ -1112,7 +1112,7 @@ This event occurs when one of your users sends a WhatsApp message to a phone num
     "message_variation_name" : "(optional, string) Name of the message variation",
     "quick_reply_text" : "(optional, string) Text of button pressed by the user",
     "subscription_group_id" : "(optional, string) Subscription group API ID",
-    "time" : "(required, long) Unix timestamp at which the event happened",
+    "time" : "(required, long) UNIX timestamp at which the event happened",
     "token" : "(required, string) The Mixpanel API token",
     "user_phone_number" : "(required, string) The user's phone number from which the message was received"
   }
@@ -1146,7 +1146,7 @@ This event occurs when one of your users sends a WhatsApp message to a phone num
   "message_variation_name" : "(optional, string) Name of the message variation",
   "quick_reply_text" : "(optional, string) Text of button pressed by the user",
   "subscription_group_id" : "(optional, string) Subscription group API ID",
-  "time" : "(required, long) Unix timestamp at which the event happened",
+  "time" : "(required, long) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
   "user_id" : "(optional, string) BSON ID of the user who performed this event",
   "user_phone_number" : "(required, string) The user's phone number from which the message was received"
@@ -1188,7 +1188,7 @@ This event occurs when one of your users sends a WhatsApp message to a phone num
         "custom_event_type" : "(required, string) The mParticle custom event type if the event_type is 'custom_event' (always 'other')",
         "event_name" : "(required, string) The event type name, as it is exported to mParticle",
         "source_message_id" : "(required, string) Globally unique ID for this event",
-        "timestamp_unixtime_ms" : "(required, long) Unix timestamp at which the event happened"
+        "timestamp_unixtime_ms" : "(required, long) UNIX timestamp at which the event happened"
       },
       "event_type" : "(required, string) mParticle event type (either 'uninstall' or 'custom_event')"
     }
@@ -1240,7 +1240,7 @@ This event occurs when one of your users sends a WhatsApp message to a phone num
   "event_type" : "(required, string) The event type name, as it is exported to Amplitude",
   "insert_id" : "(required, string) Globally unique ID for this event",
   "library" : "Braze",
-  "time" : "(required, long) Unix timestamp at which the event happened",
+  "time" : "(required, long) UNIX timestamp at which the event happened",
   "user_id" : "(optional, string) External ID of the user"
 }
 ```
@@ -1279,7 +1279,7 @@ This event occurs when one of your users sends a WhatsApp message to a phone num
     "quick_reply_text" : "(optional, string) Text of button pressed by the user",
     "subscription_group_id" : "(optional, string) Subscription group API ID"
   },
-  "timestamp" : "(required, long) Unix timestamp at which the event happened",
+  "timestamp" : "(required, long) UNIX timestamp at which the event happened",
   "type" : "track",
   "userId" : "(required, string) External ID of the user"
 }
@@ -1319,13 +1319,13 @@ This event occurs if a Content Card message was aborted based on Liquid aborts, 
     "canvas_step_name" : "(optional, string) Name of the Canvas step",
     "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
     "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
-    "card_id" : "(optional, string) ID of the card this in app message comes from",
+    "card_id" : "(optional, string) ID of the card this in-app message comes from",
     "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
     "send_id" : "(optional, string) Message send ID this message belongs to"
   },
-  "time" : "(required, int) Unix timestamp at which the event happened",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
   "user" : {
     "device_id" : "(optional, string) ID of the device on which the event occurred",
     "external_user_id" : "(required, string) External ID of the user",
@@ -1362,7 +1362,7 @@ This event occurs if a Content Card message was aborted based on Liquid aborts, 
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
     "send_id" : "(optional, string) Message send ID this message belongs to",
-    "time" : "(required, int) Unix timestamp at which the event happened",
+    "time" : "(required, int) UNIX timestamp at which the event happened",
     "token" : "(required, string) The Mixpanel API token"
   }
 }
@@ -1393,7 +1393,7 @@ This event occurs if a Content Card message was aborted based on Liquid aborts, 
   "message_variation_id" : "(optional, string) API ID of the message variation this user received",
   "message_variation_name" : "(optional, string) Name of the message variation",
   "send_id" : "(optional, string) Message send ID this message belongs to",
-  "time" : "(required, int) Unix timestamp at which the event happened",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
   "user_id" : "(required, string) BSON ID of the user who performed this event"
 }
@@ -1433,7 +1433,7 @@ This event occurs if a Content Card message was aborted based on Liquid aborts, 
         "custom_event_type" : "(required, string) The mParticle custom event type if the event_type is 'custom_event' (always 'other')",
         "event_name" : "(required, string) The event type name, as it is exported to mParticle",
         "source_message_id" : "(required, string) Globally unique ID for this event",
-        "timestamp_unixtime_ms" : "(required, int) Unix timestamp at which the event happened"
+        "timestamp_unixtime_ms" : "(required, int) UNIX timestamp at which the event happened"
       },
       "event_type" : "(required, string) mParticle event type (either 'uninstall' or 'custom_event')"
     }
@@ -1480,7 +1480,7 @@ This event occurs if a Content Card message was aborted based on Liquid aborts, 
   "event_type" : "(required, string) The event type name, as it is exported to Amplitude",
   "insert_id" : "(required, string) Globally unique ID for this event",
   "library" : "Braze",
-  "time" : "(required, int) Unix timestamp at which the event happened",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
   "user_id" : "(optional, string) External ID of the user"
 }
 ```
@@ -1515,7 +1515,7 @@ This event occurs if a Content Card message was aborted based on Liquid aborts, 
     "message_variation_name" : "(optional, string) Name of the message variation",
     "send_id" : "(optional, string) Message send ID this message belongs to"
   },
-  "timestamp" : "(required, int) Unix timestamp at which the event happened",
+  "timestamp" : "(required, int) UNIX timestamp at which the event happened",
   "type" : "track",
   "userId" : "(required, string) External ID of the user"
 }
@@ -1555,7 +1555,7 @@ This event occurs if an email message was aborted based on Liquid aborts, Quiet 
     "canvas_step_name" : "(optional, string) Name of the Canvas step",
     "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
     "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
-    "card_id" : "(optional, string) ID of the card this in app message comes from",
+    "card_id" : "(optional, string) ID of the card this in-app message comes from",
     "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
     "email_address" : "(required, string) Email address of the user",
     "ip_pool" : "(optional, string) IP pool from which the email send was made",
@@ -1563,7 +1563,7 @@ This event occurs if an email message was aborted based on Liquid aborts, Quiet 
     "message_variation_name" : "(optional, string) Name of the message variation",
     "send_id" : "(optional, string) Message send ID this message belongs to"
   },
-  "time" : "(required, int) Unix timestamp at which the event happened",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
   "user" : {
     "device_id" : "(optional, string) ID of the device on which the event occurred",
     "external_user_id" : "(required, string) External ID of the user",
@@ -1602,7 +1602,7 @@ This event occurs if an email message was aborted based on Liquid aborts, Quiet 
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
     "send_id" : "(optional, string) Message send ID this message belongs to",
-    "time" : "(required, int) Unix timestamp at which the event happened",
+    "time" : "(required, int) UNIX timestamp at which the event happened",
     "token" : "(required, string) The Mixpanel API token"
   }
 }
@@ -1635,7 +1635,7 @@ This event occurs if an email message was aborted based on Liquid aborts, Quiet 
   "message_variation_id" : "(optional, string) API ID of the message variation this user received",
   "message_variation_name" : "(optional, string) Name of the message variation",
   "send_id" : "(optional, string) Message send ID this message belongs to",
-  "time" : "(required, int) Unix timestamp at which the event happened",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
   "user_id" : "(required, string) BSON ID of the user who performed this event"
 }
@@ -1676,7 +1676,7 @@ This event occurs if an email message was aborted based on Liquid aborts, Quiet 
         "custom_event_type" : "(required, string) The mParticle custom event type if the event_type is 'custom_event' (always 'other')",
         "event_name" : "(required, string) The event type name, as it is exported to mParticle",
         "source_message_id" : "(required, string) Globally unique ID for this event",
-        "timestamp_unixtime_ms" : "(required, int) Unix timestamp at which the event happened"
+        "timestamp_unixtime_ms" : "(required, int) UNIX timestamp at which the event happened"
       },
       "event_type" : "(required, string) mParticle event type (either 'uninstall' or 'custom_event')"
     }
@@ -1726,7 +1726,7 @@ This event occurs if an email message was aborted based on Liquid aborts, Quiet 
   "event_type" : "(required, string) The event type name, as it is exported to Amplitude",
   "insert_id" : "(required, string) Globally unique ID for this event",
   "library" : "Braze",
-  "time" : "(required, int) Unix timestamp at which the event happened",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
   "user_id" : "(optional, string) External ID of the user"
 }
 ```
@@ -1764,7 +1764,7 @@ This event occurs if an email message was aborted based on Liquid aborts, Quiet 
     "message_variation_name" : "(optional, string) Name of the message variation",
     "send_id" : "(optional, string) Message send ID this message belongs to"
   },
-  "timestamp" : "(required, int) Unix timestamp at which the event happened",
+  "timestamp" : "(required, int) UNIX timestamp at which the event happened",
   "type" : "track",
   "userId" : "(required, string) External ID of the user"
 }
@@ -1805,14 +1805,14 @@ This event occurs if a push notification message was aborted based on Liquid abo
     "canvas_step_name" : "(optional, string) Name of the Canvas step",
     "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
     "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
-    "card_id" : "(optional, string) ID of the card this in app message comes from",
+    "card_id" : "(optional, string) ID of the card this in-app message comes from",
     "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
     "platform" : "(optional, string) Platform of the device",
     "send_id" : "(optional, string) Message send ID this message belongs to"
   },
-  "time" : "(required, int) Unix timestamp at which the event happened",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
   "user" : {
     "device_id" : "(optional, string) ID of the device on which the event occurred",
     "external_user_id" : "(required, string) External ID of the user",
@@ -1851,7 +1851,7 @@ This event occurs if a push notification message was aborted based on Liquid abo
     "message_variation_name" : "(optional, string) Name of the message variation",
     "platform" : "(optional, string) Platform of the device",
     "send_id" : "(optional, string) Message send ID this message belongs to",
-    "time" : "(required, int) Unix timestamp at which the event happened",
+    "time" : "(required, int) UNIX timestamp at which the event happened",
     "token" : "(required, string) The Mixpanel API token"
   }
 }
@@ -1884,7 +1884,7 @@ This event occurs if a push notification message was aborted based on Liquid abo
   "message_variation_name" : "(optional, string) Name of the message variation",
   "platform" : "(required, string) Platform of the device",
   "send_id" : "(optional, string) Message send ID this message belongs to",
-  "time" : "(required, int) Unix timestamp at which the event happened",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
   "user_id" : "(required, string) BSON ID of the user who performed this event"
 }
@@ -1926,7 +1926,7 @@ This event occurs if a push notification message was aborted based on Liquid abo
         "custom_event_type" : "(required, string) The mParticle custom event type if the event_type is 'custom_event' (always 'other')",
         "event_name" : "(required, string) The event type name, as it is exported to mParticle",
         "source_message_id" : "(required, string) Globally unique ID for this event",
-        "timestamp_unixtime_ms" : "(required, int) Unix timestamp at which the event happened"
+        "timestamp_unixtime_ms" : "(required, int) UNIX timestamp at which the event happened"
       },
       "event_type" : "(required, string) mParticle event type (either 'uninstall' or 'custom_event')"
     }
@@ -1975,7 +1975,7 @@ This event occurs if a push notification message was aborted based on Liquid abo
   "event_type" : "(required, string) The event type name, as it is exported to Amplitude",
   "insert_id" : "(required, string) Globally unique ID for this event",
   "library" : "Braze",
-  "time" : "(required, int) Unix timestamp at which the event happened",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
   "user_id" : "(optional, string) External ID of the user"
 }
 ```
@@ -2014,7 +2014,7 @@ This event occurs if a push notification message was aborted based on Liquid abo
     "platform" : "(required, string) Platform of the device",
     "send_id" : "(optional, string) Message send ID this message belongs to"
   },
-  "timestamp" : "(required, int) Unix timestamp at which the event happened",
+  "timestamp" : "(required, int) UNIX timestamp at which the event happened",
   "type" : "track",
   "userId" : "(required, string) External ID of the user"
 }
@@ -2054,12 +2054,12 @@ This event occurs if an SMS message was aborted based on Liquid aborts, Quiet Ho
     "canvas_step_name" : "(optional, string) Name of the Canvas step",
     "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
     "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
-    "card_id" : "(optional, string) ID of the card this in app message comes from",
+    "card_id" : "(optional, string) ID of the card this in-app message comes from",
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
     "subscription_group_id" : "(optional, string) Subscription group API ID"
   },
-  "time" : "(required, int) Unix timestamp at which the event happened",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
   "user" : {
     "external_user_id" : "(required, string) External ID of the user",
     "user_id" : "(required, string) BSON ID of the user who performed this event"
@@ -2092,7 +2092,7 @@ This event occurs if an SMS message was aborted based on Liquid aborts, Quiet Ho
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
     "subscription_group_id" : "(optional, string) Subscription group API ID",
-    "time" : "(required, int) Unix timestamp at which the event happened",
+    "time" : "(required, int) UNIX timestamp at which the event happened",
     "token" : "(required, string) The Mixpanel API token"
   }
 }
@@ -2121,7 +2121,7 @@ This event occurs if an SMS message was aborted based on Liquid aborts, Quiet Ho
   "message_variation_id" : "(optional, string) API ID of the message variation this user received",
   "message_variation_name" : "(optional, string) Name of the message variation",
   "subscription_group_id" : "(optional, string) Subscription group API ID",
-  "time" : "(required, int) Unix timestamp at which the event happened",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
   "user_id" : "(required, string) BSON ID of the user who performed this event"
 }
 ```
@@ -2156,7 +2156,7 @@ This event occurs if an SMS message was aborted based on Liquid aborts, Quiet Ho
         "custom_event_type" : "(required, string) The mParticle custom event type if the event_type is 'custom_event' (always 'other')",
         "event_name" : "(required, string) The event type name, as it is exported to mParticle",
         "source_message_id" : "(required, string) Globally unique ID for this event",
-        "timestamp_unixtime_ms" : "(required, int) Unix timestamp at which the event happened"
+        "timestamp_unixtime_ms" : "(required, int) UNIX timestamp at which the event happened"
       },
       "event_type" : "(required, string) mParticle event type (either 'uninstall' or 'custom_event')"
     }
@@ -2201,7 +2201,7 @@ This event occurs if an SMS message was aborted based on Liquid aborts, Quiet Ho
   "event_type" : "(required, string) The event type name, as it is exported to Amplitude",
   "insert_id" : "(required, string) Globally unique ID for this event",
   "library" : "Braze",
-  "time" : "(required, int) Unix timestamp at which the event happened",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
   "user_id" : "(optional, string) External ID of the user"
 }
 ```
@@ -2234,7 +2234,7 @@ This event occurs if an SMS message was aborted based on Liquid aborts, Quiet Ho
     "message_variation_name" : "(optional, string) Name of the message variation",
     "subscription_group_id" : "(optional, string) Subscription group API ID"
   },
-  "timestamp" : "(required, int) Unix timestamp at which the event happened",
+  "timestamp" : "(required, int) UNIX timestamp at which the event happened",
   "type" : "track",
   "userId" : "(required, string) External ID of the user"
 }
@@ -2274,13 +2274,13 @@ This event occurs if a webhook message was aborted based on Liquid aborts or Qui
     "canvas_step_name" : "(optional, string) Name of the Canvas step",
     "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
     "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
-    "card_id" : "(optional, string) ID of the card this in app message comes from",
+    "card_id" : "(optional, string) ID of the card this in-app message comes from",
     "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
     "send_id" : "(optional, string) Message send ID this message belongs to"
   },
-  "time" : "(required, int) Unix timestamp at which the event happened",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
   "user" : {
     "device_id" : "(optional, string) ID of the device on which the event occurred",
     "external_user_id" : "(required, string) External ID of the user",
@@ -2317,7 +2317,7 @@ This event occurs if a webhook message was aborted based on Liquid aborts or Qui
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
     "send_id" : "(optional, string) Message send ID this message belongs to",
-    "time" : "(required, int) Unix timestamp at which the event happened",
+    "time" : "(required, int) UNIX timestamp at which the event happened",
     "token" : "(required, string) The Mixpanel API token"
   }
 }
@@ -2348,7 +2348,7 @@ This event occurs if a webhook message was aborted based on Liquid aborts or Qui
   "message_variation_id" : "(optional, string) API ID of the message variation this user received",
   "message_variation_name" : "(optional, string) Name of the message variation",
   "send_id" : "(optional, string) Message send ID this message belongs to",
-  "time" : "(required, int) Unix timestamp at which the event happened",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
   "user_id" : "(required, string) BSON ID of the user who performed this event"
 }
@@ -2388,7 +2388,7 @@ This event occurs if a webhook message was aborted based on Liquid aborts or Qui
         "custom_event_type" : "(required, string) The mParticle custom event type if the event_type is 'custom_event' (always 'other')",
         "event_name" : "(required, string) The event type name, as it is exported to mParticle",
         "source_message_id" : "(required, string) Globally unique ID for this event",
-        "timestamp_unixtime_ms" : "(required, int) Unix timestamp at which the event happened"
+        "timestamp_unixtime_ms" : "(required, int) UNIX timestamp at which the event happened"
       },
       "event_type" : "(required, string) mParticle event type (either 'uninstall' or 'custom_event')"
     }
@@ -2435,7 +2435,7 @@ This event occurs if a webhook message was aborted based on Liquid aborts or Qui
   "event_type" : "(required, string) The event type name, as it is exported to Amplitude",
   "insert_id" : "(required, string) Globally unique ID for this event",
   "library" : "Braze",
-  "time" : "(required, int) Unix timestamp at which the event happened",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
   "user_id" : "(optional, string) External ID of the user"
 }
 ```
@@ -2470,7 +2470,7 @@ This event occurs if a webhook message was aborted based on Liquid aborts or Qui
     "message_variation_name" : "(optional, string) Name of the message variation",
     "send_id" : "(optional, string) Message send ID this message belongs to"
   },
-  "timestamp" : "(required, int) Unix timestamp at which the event happened",
+  "timestamp" : "(required, int) UNIX timestamp at which the event happened",
   "type" : "track",
   "userId" : "(required, string) External ID of the user"
 }
@@ -2506,9 +2506,9 @@ This event occurs when a user has exited a Canvas by performing an event.
     "canvas_step_name" : "(optional, string) Name of the Canvas step",
     "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
     "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
-    "card_id" : "(optional, string) ID of the card this in app message comes from"
+    "card_id" : "(optional, string) ID of the card this in-app message comes from"
   },
-  "time" : "(required, int) Unix timestamp at which the event happened",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
   "user" : {
     "external_user_id" : "(required, string) External ID of the user",
     "user_id" : "(required, string) BSON ID of the user who performed this event"
@@ -2534,7 +2534,7 @@ This event occurs when a user has exited a Canvas by performing an event.
     "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
     "distinct_id" : "(required, string) External ID of the user",
     "$insert_id" : "(required, string) Globally unique ID for this event",
-    "time" : "(required, int) Unix timestamp at which the event happened",
+    "time" : "(required, int) UNIX timestamp at which the event happened",
     "token" : "(required, string) The Mixpanel API token"
   }
 }
@@ -2559,7 +2559,7 @@ This event occurs when a user has exited a Canvas by performing an event.
   "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
   "external_user_id" : "(optional, string) External ID of the user",
   "id" : "(required, string) Globally unique ID for this event",
-  "time" : "(required, int) Unix timestamp at which the event happened",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
   "user_id" : "(required, string) BSON ID of the user who performed this event"
 }
 ```
@@ -2587,7 +2587,7 @@ This event occurs when a user has exited a Canvas by performing an event.
         "custom_event_type" : "(required, string) The mParticle custom event type if the event_type is 'custom_event' (always 'other')",
         "event_name" : "(required, string) The event type name, as it is exported to mParticle",
         "source_message_id" : "(required, string) Globally unique ID for this event",
-        "timestamp_unixtime_ms" : "(required, int) Unix timestamp at which the event happened"
+        "timestamp_unixtime_ms" : "(required, int) UNIX timestamp at which the event happened"
       },
       "event_type" : "(required, string) mParticle event type (either 'uninstall' or 'custom_event')"
     }
@@ -2625,7 +2625,7 @@ This event occurs when a user has exited a Canvas by performing an event.
   "event_type" : "(required, string) The event type name, as it is exported to Amplitude",
   "insert_id" : "(required, string) Globally unique ID for this event",
   "library" : "Braze",
-  "time" : "(required, int) Unix timestamp at which the event happened",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
   "user_id" : "(optional, string) External ID of the user"
 }
 ```
@@ -2651,7 +2651,7 @@ This event occurs when a user has exited a Canvas by performing an event.
     "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
     "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received"
   },
-  "timestamp" : "(required, int) Unix timestamp at which the event happened",
+  "timestamp" : "(required, int) UNIX timestamp at which the event happened",
   "type" : "track",
   "userId" : "(required, string) External ID of the user"
 }
@@ -2687,9 +2687,9 @@ This event occurs when a user has exited a Canvas by matching an audience.
     "canvas_step_name" : "(optional, string) Name of the Canvas step",
     "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
     "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
-    "card_id" : "(optional, string) ID of the card this in app message comes from"
+    "card_id" : "(optional, string) ID of the card this in-app message comes from"
   },
-  "time" : "(required, int) Unix timestamp at which the event happened",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
   "user" : {
     "external_user_id" : "(required, string) External ID of the user",
     "user_id" : "(required, string) BSON ID of the user who performed this event"
@@ -2715,7 +2715,7 @@ This event occurs when a user has exited a Canvas by matching an audience.
     "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
     "distinct_id" : "(required, string) External ID of the user",
     "$insert_id" : "(required, string) Globally unique ID for this event",
-    "time" : "(required, int) Unix timestamp at which the event happened",
+    "time" : "(required, int) UNIX timestamp at which the event happened",
     "token" : "(required, string) The Mixpanel API token"
   }
 }
@@ -2740,7 +2740,7 @@ This event occurs when a user has exited a Canvas by matching an audience.
   "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
   "external_user_id" : "(optional, string) External ID of the user",
   "id" : "(required, string) Globally unique ID for this event",
-  "time" : "(required, int) Unix timestamp at which the event happened",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
   "user_id" : "(required, string) BSON ID of the user who performed this event"
 }
 ```
@@ -2768,7 +2768,7 @@ This event occurs when a user has exited a Canvas by matching an audience.
         "custom_event_type" : "(required, string) The mParticle custom event type if the event_type is 'custom_event' (always 'other')",
         "event_name" : "(required, string) The event type name, as it is exported to mParticle",
         "source_message_id" : "(required, string) Globally unique ID for this event",
-        "timestamp_unixtime_ms" : "(required, int) Unix timestamp at which the event happened"
+        "timestamp_unixtime_ms" : "(required, int) UNIX timestamp at which the event happened"
       },
       "event_type" : "(required, string) mParticle event type (either 'uninstall' or 'custom_event')"
     }
@@ -2806,7 +2806,7 @@ This event occurs when a user has exited a Canvas by matching an audience.
   "event_type" : "(required, string) The event type name, as it is exported to Amplitude",
   "insert_id" : "(required, string) Globally unique ID for this event",
   "library" : "Braze",
-  "time" : "(required, int) Unix timestamp at which the event happened",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
   "user_id" : "(optional, string) External ID of the user"
 }
 ```
@@ -2832,7 +2832,7 @@ This event occurs when a user has exited a Canvas by matching an audience.
     "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
     "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received"
   },
-  "timestamp" : "(required, int) Unix timestamp at which the event happened",
+  "timestamp" : "(required, int) UNIX timestamp at which the event happened",
   "type" : "track",
   "userId" : "(required, string) External ID of the user"
 }
@@ -2866,13 +2866,13 @@ This event occurs when a user enters a Canvas experiment step path.
     "canvas_step_name" : "(optional, string) Name of the Canvas step",
     "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
     "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
-    "card_id" : "(optional, string) ID of the card this in app message comes from",
+    "card_id" : "(optional, string) ID of the card this in-app message comes from",
     "experiment_split_id" : "(optional, string) API ID of the experiment split the user enrolled in",
     "experiment_split_name" : "(optional, string) Name of the experiment split",
     "experiment_step_id" : "(optional, string) API ID of the experiment step this event belongs to",
     "in_control_group" : "(required, boolean) Whether the user was enrolled in the control group"
   },
-  "time" : "(required, int) Unix timestamp at which the event happened",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
   "user" : {
     "external_user_id" : "(required, string) External ID of the user",
     "user_id" : "(required, string) BSON ID of the user who performed this event"
@@ -2901,7 +2901,7 @@ This event occurs when a user enters a Canvas experiment step path.
     "distinct_id" : "(required, string) External ID of the user",
     "$insert_id" : "(required, string) Globally unique ID for this event",
     "in_control_group" : "(required, boolean) Whether the user was enrolled in the control group",
-    "time" : "(required, int) Unix timestamp at which the event happened",
+    "time" : "(required, int) UNIX timestamp at which the event happened",
     "token" : "(required, string) The Mixpanel API token"
   }
 }
@@ -2925,7 +2925,7 @@ This event occurs when a user enters a Canvas experiment step path.
   "external_user_id" : "(optional, string) External ID of the user",
   "id" : "(required, string) Globally unique ID for this event",
   "in_control_group" : "(required, boolean) Whether the user was enrolled in the control group",
-  "time" : "(required, int) Unix timestamp at which the event happened",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
   "user_id" : "(required, string) BSON ID of the user who performed this event"
 }
 ```
@@ -2956,7 +2956,7 @@ This event occurs when a user enters a Canvas experiment step path.
         "custom_event_type" : "(required, string) The mParticle custom event type if the event_type is 'custom_event' (always 'other')",
         "event_name" : "(required, string) The event type name, as it is exported to mParticle",
         "source_message_id" : "(required, string) Globally unique ID for this event",
-        "timestamp_unixtime_ms" : "(required, int) Unix timestamp at which the event happened"
+        "timestamp_unixtime_ms" : "(required, int) UNIX timestamp at which the event happened"
       },
       "event_type" : "(required, string) mParticle event type (either 'uninstall' or 'custom_event')"
     }
@@ -2997,7 +2997,7 @@ This event occurs when a user enters a Canvas experiment step path.
   "event_type" : "(required, string) The event type name, as it is exported to Amplitude",
   "insert_id" : "(required, string) Globally unique ID for this event",
   "library" : "Braze",
-  "time" : "(required, int) Unix timestamp at which the event happened",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
   "user_id" : "(optional, string) External ID of the user"
 }
 ```
@@ -3026,7 +3026,7 @@ This event occurs when a user enters a Canvas experiment step path.
     "experiment_step_id" : "(optional, string) API ID of the experiment step this event belongs to",
     "in_control_group" : "(required, boolean) Whether the user was enrolled in the control group"
   },
-  "timestamp" : "(required, int) Unix timestamp at which the event happened",
+  "timestamp" : "(required, int) UNIX timestamp at which the event happened",
   "type" : "track",
   "userId" : "(required, string) External ID of the user"
 }
@@ -3062,14 +3062,14 @@ This event occurs when a user convert for a Canvas experiment step.
     "canvas_step_name" : "(optional, string) Name of the Canvas step",
     "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
     "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
-    "card_id" : "(optional, string) ID of the card this in app message comes from",
+    "card_id" : "(optional, string) ID of the card this in-app message comes from",
     "conversion_behavior" : "(optional, string) JSON-encoded string describing the conversion behavior",
     "conversion_behavior_index" : "(optional, int) Index of the conversion behavior",
     "experiment_split_id" : "(optional, string) API ID of the experiment split the user enrolled in",
     "experiment_split_name" : "(optional, string) Name of the experiment split",
     "experiment_step_id" : "(optional, string) API ID of the experiment step this event belongs to"
   },
-  "time" : "(required, int) Unix timestamp at which the event happened",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
   "user" : {
     "external_user_id" : "(required, string) External ID of the user",
     "user_id" : "(required, string) BSON ID of the user who performed this event"
@@ -3100,7 +3100,7 @@ This event occurs when a user convert for a Canvas experiment step.
     "experiment_step_id" : "(optional, string) API ID of the experiment step this event belongs to",
     "distinct_id" : "(required, string) External ID of the user",
     "$insert_id" : "(required, string) Globally unique ID for this event",
-    "time" : "(required, int) Unix timestamp at which the event happened",
+    "time" : "(required, int) UNIX timestamp at which the event happened",
     "token" : "(required, string) The Mixpanel API token"
   }
 }
@@ -3126,7 +3126,7 @@ This event occurs when a user convert for a Canvas experiment step.
   "experiment_step_id" : "(optional, string) API ID of the experiment step this event belongs to",
   "external_user_id" : "(optional, string) External ID of the user",
   "id" : "(required, string) Globally unique ID for this event",
-  "time" : "(required, int) Unix timestamp at which the event happened",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
   "user_id" : "(required, string) BSON ID of the user who performed this event"
 }
 ```
@@ -3158,7 +3158,7 @@ This event occurs when a user convert for a Canvas experiment step.
         "custom_event_type" : "(required, string) The mParticle custom event type if the event_type is 'custom_event' (always 'other')",
         "event_name" : "(required, string) The event type name, as it is exported to mParticle",
         "source_message_id" : "(required, string) Globally unique ID for this event",
-        "timestamp_unixtime_ms" : "(required, int) Unix timestamp at which the event happened"
+        "timestamp_unixtime_ms" : "(required, int) UNIX timestamp at which the event happened"
       },
       "event_type" : "(required, string) mParticle event type (either 'uninstall' or 'custom_event')"
     }
@@ -3201,7 +3201,7 @@ This event occurs when a user convert for a Canvas experiment step.
   "event_type" : "(required, string) The event type name, as it is exported to Amplitude",
   "insert_id" : "(required, string) Globally unique ID for this event",
   "library" : "Braze",
-  "time" : "(required, int) Unix timestamp at which the event happened",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
   "user_id" : "(optional, string) External ID of the user"
 }
 ```
@@ -3232,7 +3232,7 @@ This event occurs when a user convert for a Canvas experiment step.
     "experiment_split_name" : "(optional, string) Name of the experiment split",
     "experiment_step_id" : "(optional, string) API ID of the experiment step this event belongs to"
   },
-  "timestamp" : "(required, int) Unix timestamp at which the event happened",
+  "timestamp" : "(required, int) UNIX timestamp at which the event happened",
   "type" : "track",
   "userId" : "(required, string) External ID of the user"
 }
@@ -3274,7 +3274,7 @@ This event occurs when Braze processes a push message for a user, communicating 
     "canvas_step_name" : "(optional, string) Name of the Canvas step",
     "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
     "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
-    "card_id" : "(optional, string) ID of the card this in app message comes from",
+    "card_id" : "(optional, string) ID of the card this in-app message comes from",
     "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
     "message_extras" : "(optional, string) A JSON string of the tagged key-value pairs during liquid rendering",
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
@@ -3282,7 +3282,7 @@ This event occurs when Braze processes a push message for a user, communicating 
     "platform" : "(optional, string) Platform of the device",
     "send_id" : "(optional, string) Message send ID this message belongs to"
   },
-  "time" : "(required, int) Unix timestamp at which the event happened",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
   "user" : {
     "device_id" : "(optional, string) ID of the device on which the event occurred",
     "external_user_id" : "(required, string) External ID of the user",
@@ -3323,7 +3323,7 @@ This event occurs when Braze processes a push message for a user, communicating 
     "message_variation_name" : "(optional, string) Name of the message variation",
     "platform" : "(optional, string) Platform of the device",
     "send_id" : "(optional, string) Message send ID this message belongs to",
-    "time" : "(required, int) Unix timestamp at which the event happened",
+    "time" : "(required, int) UNIX timestamp at which the event happened",
     "token" : "(required, string) The Mixpanel API token"
   }
 }
@@ -3356,7 +3356,7 @@ This event occurs when Braze processes a push message for a user, communicating 
   "message_variation_name" : "(optional, string) Name of the message variation",
   "platform" : "(required, string) Platform of the device",
   "send_id" : "(optional, string) Message send ID this message belongs to",
-  "time" : "(required, int) Unix timestamp at which the event happened",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
   "user_id" : "(required, string) BSON ID of the user who performed this event"
 }
@@ -3402,7 +3402,7 @@ This event occurs when Braze processes a push message for a user, communicating 
         "custom_event_type" : "(required, string) The mParticle custom event type if the event_type is 'custom_event' (always 'other')",
         "event_name" : "(required, string) The event type name, as it is exported to mParticle",
         "source_message_id" : "(required, string) Globally unique ID for this event",
-        "timestamp_unixtime_ms" : "(required, int) Unix timestamp at which the event happened"
+        "timestamp_unixtime_ms" : "(required, int) UNIX timestamp at which the event happened"
       },
       "event_type" : "(required, string) mParticle event type (either 'uninstall' or 'custom_event')"
     }
@@ -3455,7 +3455,7 @@ This event occurs when Braze processes a push message for a user, communicating 
   "idfa" : "(optional, string) Advertising identifier",
   "insert_id" : "(required, string) Globally unique ID for this event",
   "library" : "Braze",
-  "time" : "(required, int) Unix timestamp at which the event happened",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
   "user_id" : "(optional, string) External ID of the user"
 }
 ```
@@ -3496,7 +3496,7 @@ This event occurs when Braze processes a push message for a user, communicating 
     "platform" : "(required, string) Platform of the device",
     "send_id" : "(optional, string) Message send ID this message belongs to"
   },
-  "timestamp" : "(required, int) Unix timestamp at which the event happened",
+  "timestamp" : "(required, int) UNIX timestamp at which the event happened",
   "type" : "track",
   "userId" : "(required, string) External ID of the user"
 }
@@ -3543,7 +3543,7 @@ This event occurs when a user directly clicks on the Push notification to open t
     "canvas_step_name" : "(optional, string) Name of the Canvas step",
     "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
     "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
-    "card_id" : "(optional, string) ID of the card this in app message comes from",
+    "card_id" : "(optional, string) ID of the card this in-app message comes from",
     "device_model" : "(optional, string) Model of the device",
     "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
@@ -3552,7 +3552,7 @@ This event occurs when a user directly clicks on the Push notification to open t
     "platform" : "(optional, string) Platform of the device",
     "send_id" : "(optional, string) Message send ID this message belongs to"
   },
-  "time" : "(required, int) Unix timestamp at which the event happened",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
   "user" : {
     "device_id" : "(optional, string) ID of the device on which the event occurred",
     "external_user_id" : "(required, string) External ID of the user",
@@ -3594,7 +3594,7 @@ This event occurs when a user directly clicks on the Push notification to open t
     "$os" : "(optional, string) Version of the operating system of the device",
     "platform" : "(optional, string) Platform of the device",
     "send_id" : "(optional, string) Message send ID this message belongs to",
-    "time" : "(required, int) Unix timestamp at which the event happened",
+    "time" : "(required, int) UNIX timestamp at which the event happened",
     "token" : "(required, string) The Mixpanel API token"
   }
 }
@@ -3631,7 +3631,7 @@ This event occurs when a user directly clicks on the Push notification to open t
   "os_version" : "(optional, string) Version of the operating system of the device",
   "platform" : "(optional, string) Platform of the device",
   "send_id" : "(optional, string) Message send ID this message belongs to",
-  "time" : "(required, int) Unix timestamp at which the event happened",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
   "user_id" : "(required, string) BSON ID of the user who performed this event"
 }
@@ -3677,7 +3677,7 @@ This event occurs when a user directly clicks on the Push notification to open t
         "custom_event_type" : "(required, string) The mParticle custom event type if the event_type is 'custom_event' (always 'other')",
         "event_name" : "(required, string) The event type name, as it is exported to mParticle",
         "source_message_id" : "(required, string) Globally unique ID for this event",
-        "timestamp_unixtime_ms" : "(required, int) Unix timestamp at which the event happened"
+        "timestamp_unixtime_ms" : "(required, int) UNIX timestamp at which the event happened"
       },
       "event_type" : "(required, string) mParticle event type (either 'uninstall' or 'custom_event')"
     }
@@ -3731,7 +3731,7 @@ This event occurs when a user directly clicks on the Push notification to open t
   "idfa" : "(optional, string) Advertising identifier",
   "insert_id" : "(required, string) Globally unique ID for this event",
   "library" : "Braze",
-  "time" : "(required, int) Unix timestamp at which the event happened",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
   "user_id" : "(optional, string) External ID of the user"
 }
 ```
@@ -3772,7 +3772,7 @@ This event occurs when a user directly clicks on the Push notification to open t
     "platform" : "(optional, string) Platform of the device",
     "send_id" : "(optional, string) Message send ID this message belongs to"
   },
-  "timestamp" : "(required, int) Unix timestamp at which the event happened",
+  "timestamp" : "(required, int) UNIX timestamp at which the event happened",
   "type" : "track",
   "userId" : "(required, string) External ID of the user"
 }
@@ -3816,7 +3816,7 @@ This event is not supported by our [Swift SDK](https://github.com/braze-inc/braz
     "canvas_step_name" : "(optional, string) Name of the Canvas step",
     "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
     "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
-    "card_id" : "(optional, string) ID of the card this in app message comes from",
+    "card_id" : "(optional, string) ID of the card this in-app message comes from",
     "device_model" : "(optional, string) Model of the device",
     "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
@@ -3825,7 +3825,7 @@ This event is not supported by our [Swift SDK](https://github.com/braze-inc/braz
     "platform" : "(optional, string) Platform of the device",
     "send_id" : "(optional, string) Message send ID this message belongs to"
   },
-  "time" : "(required, int) Unix timestamp at which the event happened",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
   "user" : {
     "device_id" : "(optional, string) ID of the device on which the event occurred",
     "external_user_id" : "(required, string) External ID of the user",
@@ -3867,7 +3867,7 @@ This event is not supported by our [Swift SDK](https://github.com/braze-inc/braz
     "$os" : "(optional, string) Version of the operating system of the device",
     "platform" : "(optional, string) Platform of the device",
     "send_id" : "(optional, string) Message send ID this message belongs to",
-    "time" : "(required, int) Unix timestamp at which the event happened",
+    "time" : "(required, int) UNIX timestamp at which the event happened",
     "token" : "(required, string) The Mixpanel API token"
   }
 }
@@ -3899,7 +3899,7 @@ This event is not supported by our [Swift SDK](https://github.com/braze-inc/braz
   "message_variation_name" : "(optional, string) Name of the message variation",
   "platform" : "(required, string) Platform of the device",
   "send_id" : "(optional, string) Message send ID this message belongs to",
-  "time" : "(required, int) Unix timestamp at which the event happened",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
   "user_id" : "(required, string) BSON ID of the user who performed this event"
 }
@@ -3939,7 +3939,7 @@ This event is not supported by our [Swift SDK](https://github.com/braze-inc/braz
   "idfa" : "(optional, string) Advertising identifier",
   "insert_id" : "(required, string) Globally unique ID for this event",
   "library" : "Braze",
-  "time" : "(required, int) Unix timestamp at which the event happened",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
   "user_id" : "(optional, string) External ID of the user"
 }
 ```
@@ -3980,7 +3980,7 @@ This event is not supported by our [Swift SDK](https://github.com/braze-inc/braz
     "platform" : "(optional, string) Platform of the device",
     "send_id" : "(optional, string) Message send ID this message belongs to"
   },
-  "timestamp" : "(required, int) Unix timestamp at which the event happened",
+  "timestamp" : "(required, int) UNIX timestamp at which the event happened",
   "type" : "track",
   "userId" : "(required, string) External ID of the user"
 }
@@ -4024,14 +4024,14 @@ This event occurs when an error is received from either Apple Push Notification 
     "canvas_step_name" : "(optional, string) Name of the Canvas step",
     "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
     "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
-    "card_id" : "(optional, string) ID of the card this in app message comes from",
+    "card_id" : "(optional, string) ID of the card this in-app message comes from",
     "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
     "platform" : "(optional, string) Platform of the device",
     "send_id" : "(optional, string) Message send ID this message belongs to"
   },
-  "time" : "(required, int) Unix timestamp at which the event happened",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
   "user" : {
     "device_id" : "(optional, string) ID of the device on which the event occurred",
     "external_user_id" : "(required, string) External ID of the user",
@@ -4071,7 +4071,7 @@ This event occurs when an error is received from either Apple Push Notification 
     "message_variation_name" : "(optional, string) Name of the message variation",
     "platform" : "(optional, string) Platform of the device",
     "send_id" : "(optional, string) Message send ID this message belongs to",
-    "time" : "(required, int) Unix timestamp at which the event happened",
+    "time" : "(required, int) UNIX timestamp at which the event happened",
     "token" : "(required, string) The Mixpanel API token"
   }
 }
@@ -4103,7 +4103,7 @@ This event occurs when an error is received from either Apple Push Notification 
   "message_variation_name" : "(optional, string) Name of the message variation",
   "platform" : "(optional, string) Platform of the device",
   "send_id" : "(optional, string) Message send ID this message belongs to",
-  "time" : "(required, int) Unix timestamp at which the event happened",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
   "user_id" : "(required, string) BSON ID of the user who performed this event"
 }
@@ -4148,7 +4148,7 @@ This event occurs when an error is received from either Apple Push Notification 
         "custom_event_type" : "(required, string) The mParticle custom event type if the event_type is 'custom_event' (always 'other')",
         "event_name" : "(required, string) The event type name, as it is exported to mParticle",
         "source_message_id" : "(required, string) Globally unique ID for this event",
-        "timestamp_unixtime_ms" : "(required, int) Unix timestamp at which the event happened"
+        "timestamp_unixtime_ms" : "(required, int) UNIX timestamp at which the event happened"
       },
       "event_type" : "(required, string) mParticle event type (either 'uninstall' or 'custom_event')"
     }
@@ -4200,7 +4200,7 @@ This event occurs when an error is received from either Apple Push Notification 
   "idfa" : "(optional, string) Advertising identifier",
   "insert_id" : "(required, string) Globally unique ID for this event",
   "library" : "Braze",
-  "time" : "(required, int) Unix timestamp at which the event happened",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
   "user_id" : "(optional, string) External ID of the user"
 }
 ```
@@ -4240,7 +4240,7 @@ This event occurs when an error is received from either Apple Push Notification 
     "platform" : "(optional, string) Platform of the device",
     "send_id" : "(optional, string) Message send ID this message belongs to"
   },
-  "timestamp" : "(required, int) Unix timestamp at which the event happened",
+  "timestamp" : "(required, int) UNIX timestamp at which the event happened",
   "type" : "track",
   "userId" : "(required, string) External ID of the user"
 }
@@ -4279,7 +4279,7 @@ This event occurs when an email send request was successfully communicated betwe
     "canvas_step_name" : "(optional, string) Name of the Canvas step",
     "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
     "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
-    "card_id" : "(optional, string) ID of the card this in app message comes from",
+    "card_id" : "(optional, string) ID of the card this in-app message comes from",
     "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
     "email_address" : "(required, string) Email address of the user",
     "ip_pool" : "(optional, string) IP pool from which the email send was made",
@@ -4288,7 +4288,7 @@ This event occurs when an email send request was successfully communicated betwe
     "message_variation_name" : "(optional, string) Name of the message variation",
     "send_id" : "(optional, string) Message send ID this message belongs to"
   },
-  "time" : "(required, int) Unix timestamp at which the event happened",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
   "user" : {
     "device_id" : "(optional, string) ID of the device on which the event occurred",
     "external_user_id" : "(required, string) External ID of the user",
@@ -4326,7 +4326,7 @@ This event occurs when an email send request was successfully communicated betwe
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
     "send_id" : "(optional, string) Message send ID this message belongs to",
-    "time" : "(required, int) Unix timestamp at which the event happened",
+    "time" : "(required, int) UNIX timestamp at which the event happened",
     "token" : "(required, string) The Mixpanel API token"
   }
 }
@@ -4355,7 +4355,7 @@ This event occurs when an email send request was successfully communicated betwe
   "message_variation_id" : "(optional, string) API ID of the message variation this user received",
   "message_variation_name" : "(optional, string) Name of the message variation",
   "send_id" : "(optional, string) Message send ID this message belongs to",
-  "time" : "(required, int) Unix timestamp at which the event happened",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
   "user_id" : "(required, string) BSON ID of the user who performed this event"
 }
@@ -4397,7 +4397,7 @@ This event occurs when an email send request was successfully communicated betwe
         "custom_event_type" : "(required, string) The mParticle custom event type if the event_type is 'custom_event' (always 'other')",
         "event_name" : "(required, string) The event type name, as it is exported to mParticle",
         "source_message_id" : "(required, string) Globally unique ID for this event",
-        "timestamp_unixtime_ms" : "(required, int) Unix timestamp at which the event happened"
+        "timestamp_unixtime_ms" : "(required, int) UNIX timestamp at which the event happened"
       },
       "event_type" : "(required, string) mParticle event type (either 'uninstall' or 'custom_event')"
     }
@@ -4446,7 +4446,7 @@ This event occurs when an email send request was successfully communicated betwe
   "event_type" : "(required, string) The event type name, as it is exported to Amplitude",
   "insert_id" : "(required, string) Globally unique ID for this event",
   "library" : "Braze",
-  "time" : "(required, int) Unix timestamp at which the event happened",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
   "user_id" : "(optional, string) External ID of the user"
 }
 ```
@@ -4485,7 +4485,7 @@ This event occurs when an email send request was successfully communicated betwe
     "message_variation_name" : "(optional, string) Name of the message variation",
     "send_id" : "(optional, string) Message send ID this message belongs to"
   },
-  "timestamp" : "(required, int) Unix timestamp at which the event happened",
+  "timestamp" : "(required, int) UNIX timestamp at which the event happened",
   "type" : "track",
   "userId" : "(required, string) External ID of the user"
 }
@@ -4528,7 +4528,7 @@ This event occurs when an email sent made it successfully to the end-users inbox
     "canvas_step_name" : "(optional, string) Name of the Canvas step",
     "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
     "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
-    "card_id" : "(optional, string) ID of the card this in app message comes from",
+    "card_id" : "(optional, string) ID of the card this in-app message comes from",
     "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
     "email_address" : "(required, string) Email address of the user",
     "esp" : "(optional, string) ESP related to the event (Sparkpost or Sendgrid)",
@@ -4539,7 +4539,7 @@ This event occurs when an email sent made it successfully to the end-users inbox
     "send_id" : "(optional, string) Message send ID this message belongs to",
     "sending_ip" : "(optional, string) IP address from which the email send was made"
   },
-  "time" : "(required, int) Unix timestamp at which the event happened",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
   "user" : {
     "device_id" : "(optional, string) ID of the device on which the event occurred",
     "external_user_id" : "(required, string) External ID of the user",
@@ -4578,7 +4578,7 @@ This event occurs when an email sent made it successfully to the end-users inbox
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
     "send_id" : "(optional, string) Message send ID this message belongs to",
-    "time" : "(required, int) Unix timestamp at which the event happened",
+    "time" : "(required, int) UNIX timestamp at which the event happened",
     "token" : "(required, string) The Mixpanel API token"
   }
 }
@@ -4609,7 +4609,7 @@ This event occurs when an email sent made it successfully to the end-users inbox
   "message_variation_name" : "(optional, string) Name of the message variation",
   "send_id" : "(optional, string) Message send ID this message belongs to",
   "sending_ip" : "(optional, string) IP address from which the email send was made",
-  "time" : "(required, int) Unix timestamp at which the event happened",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
   "user_id" : "(required, string) BSON ID of the user who performed this event"
 }
@@ -4650,7 +4650,7 @@ This event occurs when an email sent made it successfully to the end-users inbox
         "custom_event_type" : "(required, string) The mParticle custom event type if the event_type is 'custom_event' (always 'other')",
         "event_name" : "(required, string) The event type name, as it is exported to mParticle",
         "source_message_id" : "(required, string) Globally unique ID for this event",
-        "timestamp_unixtime_ms" : "(required, int) Unix timestamp at which the event happened"
+        "timestamp_unixtime_ms" : "(required, int) UNIX timestamp at which the event happened"
       },
       "event_type" : "(required, string) mParticle event type (either 'uninstall' or 'custom_event')"
     }
@@ -4700,7 +4700,7 @@ This event occurs when an email sent made it successfully to the end-users inbox
   "event_type" : "(required, string) The event type name, as it is exported to Amplitude",
   "insert_id" : "(required, string) Globally unique ID for this event",
   "library" : "Braze",
-  "time" : "(required, int) Unix timestamp at which the event happened",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
   "user_id" : "(optional, string) External ID of the user"
 }
 ```
@@ -4738,7 +4738,7 @@ This event occurs when an email sent made it successfully to the end-users inbox
     "message_variation_name" : "(optional, string) Name of the message variation",
     "send_id" : "(optional, string) Message send ID this message belongs to"
   },
-  "timestamp" : "(required, int) Unix timestamp at which the event happened",
+  "timestamp" : "(required, int) UNIX timestamp at which the event happened",
   "type" : "track",
   "userId" : "(required, string) External ID of the user"
 }
@@ -4780,7 +4780,7 @@ This event occurs when a user opens an email. Multiple events may be generated f
     "canvas_step_name" : "(optional, string) Name of the Canvas step",
     "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
     "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
-    "card_id" : "(optional, string) ID of the card this in app message comes from",
+    "card_id" : "(optional, string) ID of the card this in-app message comes from",
     "device_class" : "(optional, string) Device class extracted from user_agent (mobile, desktop, tablet, etc...)",
     "device_model" : "(optional, string) Model of the device",
     "device_os" : "(optional, string) Device operating system extracted from user_agent",
@@ -4797,7 +4797,7 @@ This event occurs when a user opens an email. Multiple events may be generated f
     "send_id" : "(optional, string) Message send ID this message belongs to",
     "user_agent" : "(optional, string) User agent on which the spam report occurred"
   },
-  "time" : "(required, int) Unix timestamp at which the event happened",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
   "user" : {
     "device_id" : "(optional, string) ID of the device on which the event occurred",
     "external_user_id" : "(required, string) External ID of the user",
@@ -4843,7 +4843,7 @@ This event occurs when a user opens an email. Multiple events may be generated f
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
     "send_id" : "(optional, string) Message send ID this message belongs to",
-    "time" : "(required, int) Unix timestamp at which the event happened",
+    "time" : "(required, int) UNIX timestamp at which the event happened",
     "token" : "(required, string) The Mixpanel API token",
     "user_agent" : "(optional, string) User agent on which the spam report occurred"
   }
@@ -4881,7 +4881,7 @@ This event occurs when a user opens an email. Multiple events may be generated f
   "message_variation_id" : "(optional, string) API ID of the message variation this user received",
   "message_variation_name" : "(optional, string) Name of the message variation",
   "send_id" : "(optional, string) Message send ID this message belongs to",
-  "time" : "(required, int) Unix timestamp at which the event happened",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
   "user_agent" : "(optional, string) User agent on which the spam report occurred",
   "user_id" : "(required, string) BSON ID of the user who performed this event"
@@ -4931,7 +4931,7 @@ This event occurs when a user opens an email. Multiple events may be generated f
         "custom_event_type" : "(required, string) The mParticle custom event type if the event_type is 'custom_event' (always 'other')",
         "event_name" : "(required, string) The event type name, as it is exported to mParticle",
         "source_message_id" : "(required, string) Globally unique ID for this event",
-        "timestamp_unixtime_ms" : "(required, int) Unix timestamp at which the event happened"
+        "timestamp_unixtime_ms" : "(required, int) UNIX timestamp at which the event happened"
       },
       "event_type" : "(required, string) mParticle event type (either 'uninstall' or 'custom_event')"
     }
@@ -4989,7 +4989,7 @@ This event occurs when a user opens an email. Multiple events may be generated f
   "event_type" : "(required, string) The event type name, as it is exported to Amplitude",
   "insert_id" : "(required, string) Globally unique ID for this event",
   "library" : "Braze",
-  "time" : "(required, int) Unix timestamp at which the event happened",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
   "user_id" : "(optional, string) External ID of the user"
 }
 ```
@@ -5036,7 +5036,7 @@ This event occurs when a user opens an email. Multiple events may be generated f
     "send_id" : "(optional, string) Message send ID this message belongs to",
     "user_agent" : "(optional, string) User agent on which the spam report occurred"
   },
-  "timestamp" : "(required, int) Unix timestamp at which the event happened",
+  "timestamp" : "(required, int) UNIX timestamp at which the event happened",
   "type" : "track",
   "userId" : "(required, string) External ID of the user"
 }
@@ -5078,7 +5078,7 @@ This event occurs when a user clicks an email. Multiple events may be generated 
     "canvas_step_name" : "(optional, string) Name of the Canvas step",
     "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
     "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
-    "card_id" : "(optional, string) ID of the card this in app message comes from",
+    "card_id" : "(optional, string) ID of the card this in-app message comes from",
     "device_class" : "(optional, string) Device class extracted from user_agent (mobile, desktop, tablet, etc...)",
     "device_model" : "(optional, string) Model of the device",
     "device_os" : "(optional, string) Device operating system extracted from user_agent",
@@ -5097,7 +5097,7 @@ This event occurs when a user clicks an email. Multiple events may be generated 
     "url" : "(optional, string) URL that the user clicked on",
     "user_agent" : "(optional, string) User agent on which the spam report occurred"
   },
-  "time" : "(required, int) Unix timestamp at which the event happened",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
   "user" : {
     "device_id" : "(optional, string) ID of the device on which the event occurred",
     "external_user_id" : "(required, string) External ID of the user",
@@ -5144,7 +5144,7 @@ This event occurs when a user clicks an email. Multiple events may be generated 
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
     "send_id" : "(optional, string) Message send ID this message belongs to",
-    "time" : "(required, int) Unix timestamp at which the event happened",
+    "time" : "(required, int) UNIX timestamp at which the event happened",
     "token" : "(required, string) The Mixpanel API token",
     "url" : "(optional, string) URL that the user clicked on",
     "user_agent" : "(optional, string) User agent on which the spam report occurred"
@@ -5184,7 +5184,7 @@ This event occurs when a user clicks an email. Multiple events may be generated 
   "message_variation_id" : "(optional, string) API ID of the message variation this user received",
   "message_variation_name" : "(optional, string) Name of the message variation",
   "send_id" : "(optional, string) Message send ID this message belongs to",
-  "time" : "(required, int) Unix timestamp at which the event happened",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
   "url" : "(optional, string) URL that the user clicked on",
   "user_agent" : "(optional, string) User agent on which the spam report occurred",
@@ -5237,7 +5237,7 @@ This event occurs when a user clicks an email. Multiple events may be generated 
         "custom_event_type" : "(required, string) The mParticle custom event type if the event_type is 'custom_event' (always 'other')",
         "event_name" : "(required, string) The event type name, as it is exported to mParticle",
         "source_message_id" : "(required, string) Globally unique ID for this event",
-        "timestamp_unixtime_ms" : "(required, int) Unix timestamp at which the event happened"
+        "timestamp_unixtime_ms" : "(required, int) UNIX timestamp at which the event happened"
       },
       "event_type" : "(required, string) mParticle event type (either 'uninstall' or 'custom_event')"
     }
@@ -5297,7 +5297,7 @@ This event occurs when a user clicks an email. Multiple events may be generated 
   "event_type" : "(required, string) The event type name, as it is exported to Amplitude",
   "insert_id" : "(required, string) Globally unique ID for this event",
   "library" : "Braze",
-  "time" : "(required, int) Unix timestamp at which the event happened",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
   "user_id" : "(optional, string) External ID of the user"
 }
 ```
@@ -5347,7 +5347,7 @@ This event occurs when a user clicks an email. Multiple events may be generated 
     "link_url" : "(optional, string) URL that the user clicked on",
     "user_agent" : "(optional, string) User agent on which the spam report occurred"
   },
-  "timestamp" : "(required, int) Unix timestamp at which the event happened",
+  "timestamp" : "(required, int) UNIX timestamp at which the event happened",
   "type" : "track",
   "userId" : "(required, string) External ID of the user"
 }
@@ -5389,7 +5389,7 @@ This event occurs when an Internet Service Provider returns a hard bounce. A har
     "canvas_step_name" : "(optional, string) Name of the Canvas step",
     "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
     "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
-    "card_id" : "(optional, string) ID of the card this in app message comes from",
+    "card_id" : "(optional, string) ID of the card this in-app message comes from",
     "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
     "email_address" : "(required, string) Email address of the user",
     "esp" : "(optional, string) ESP related to the event (Sparkpost or Sendgrid)",
@@ -5401,7 +5401,7 @@ This event occurs when an Internet Service Provider returns a hard bounce. A har
     "send_id" : "(optional, string) Message send ID this message belongs to",
     "sending_ip" : "(optional, string) IP address from which the email send was made"
   },
-  "time" : "(required, int) Unix timestamp at which the event happened",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
   "user" : {
     "device_id" : "(optional, string) ID of the device on which the event occurred",
     "external_user_id" : "(required, string) External ID of the user",
@@ -5442,7 +5442,7 @@ This event occurs when an Internet Service Provider returns a hard bounce. A har
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
     "send_id" : "(optional, string) Message send ID this message belongs to",
-    "time" : "(required, int) Unix timestamp at which the event happened",
+    "time" : "(required, int) UNIX timestamp at which the event happened",
     "token" : "(required, string) The Mixpanel API token"
   }
 }
@@ -5475,7 +5475,7 @@ This event occurs when an Internet Service Provider returns a hard bounce. A har
   "message_variation_name" : "(optional, string) Name of the message variation",
   "send_id" : "(optional, string) Message send ID this message belongs to",
   "sending_ip" : "(optional, string) IP address from which the email send was made",
-  "time" : "(required, int) Unix timestamp at which the event happened",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
   "user_id" : "(required, string) BSON ID of the user who performed this event"
 }
@@ -5518,7 +5518,7 @@ This event occurs when an Internet Service Provider returns a hard bounce. A har
         "custom_event_type" : "(required, string) The mParticle custom event type if the event_type is 'custom_event' (always 'other')",
         "event_name" : "(required, string) The event type name, as it is exported to mParticle",
         "source_message_id" : "(required, string) Globally unique ID for this event",
-        "timestamp_unixtime_ms" : "(required, int) Unix timestamp at which the event happened"
+        "timestamp_unixtime_ms" : "(required, int) UNIX timestamp at which the event happened"
       },
       "event_type" : "(required, string) mParticle event type (either 'uninstall' or 'custom_event')"
     }
@@ -5570,7 +5570,7 @@ This event occurs when an Internet Service Provider returns a hard bounce. A har
   "event_type" : "(required, string) The event type name, as it is exported to Amplitude",
   "insert_id" : "(required, string) Globally unique ID for this event",
   "library" : "Braze",
-  "time" : "(required, int) Unix timestamp at which the event happened",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
   "user_id" : "(optional, string) External ID of the user"
 }
 ```
@@ -5610,7 +5610,7 @@ This event occurs when an Internet Service Provider returns a hard bounce. A har
     "message_variation_name" : "(optional, string) Name of the message variation",
     "send_id" : "(optional, string) Message send ID this message belongs to"
   },
-  "timestamp" : "(required, int) Unix timestamp at which the event happened",
+  "timestamp" : "(required, int) UNIX timestamp at which the event happened",
   "type" : "track",
   "userId" : "(required, string) External ID of the user"
 }
@@ -5652,7 +5652,7 @@ This event occurs when an Internet Service Provider returns a soft bounce. A sof
     "canvas_step_name" : "(optional, string) Name of the Canvas step",
     "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
     "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
-    "card_id" : "(optional, string) ID of the card this in app message comes from",
+    "card_id" : "(optional, string) ID of the card this in-app message comes from",
     "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
     "email_address" : "(required, string) Email address of the user",
     "esp" : "(optional, string) ESP related to the event (Sparkpost or Sendgrid)",
@@ -5663,7 +5663,7 @@ This event occurs when an Internet Service Provider returns a soft bounce. A sof
     "send_id" : "(optional, string) Message send ID this message belongs to",
     "sending_ip" : "(optional, string) IP address from which the email send was made"
   },
-  "time" : "(required, int) Unix timestamp at which the event happened",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
   "user" : {
     "device_id" : "(optional, string) ID of the device on which the event occurred",
     "external_user_id" : "(required, string) External ID of the user",
@@ -5703,7 +5703,7 @@ This event occurs when an Internet Service Provider returns a soft bounce. A sof
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
     "send_id" : "(optional, string) Message send ID this message belongs to",
-    "time" : "(required, int) Unix timestamp at which the event happened",
+    "time" : "(required, int) UNIX timestamp at which the event happened",
     "token" : "(required, string) The Mixpanel API token"
   }
 }
@@ -5735,7 +5735,7 @@ This event occurs when an Internet Service Provider returns a soft bounce. A sof
   "message_variation_name" : "(optional, string) Name of the message variation",
   "send_id" : "(optional, string) Message send ID this message belongs to",
   "sending_ip" : "(optional, string) IP address from which the email send was made",
-  "time" : "(required, int) Unix timestamp at which the event happened",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
   "user_id" : "(required, string) BSON ID of the user who performed this event"
 }
@@ -5777,7 +5777,7 @@ This event occurs when an Internet Service Provider returns a soft bounce. A sof
         "custom_event_type" : "(required, string) The mParticle custom event type if the event_type is 'custom_event' (always 'other')",
         "event_name" : "(required, string) The event type name, as it is exported to mParticle",
         "source_message_id" : "(required, string) Globally unique ID for this event",
-        "timestamp_unixtime_ms" : "(required, int) Unix timestamp at which the event happened"
+        "timestamp_unixtime_ms" : "(required, int) UNIX timestamp at which the event happened"
       },
       "event_type" : "(required, string) mParticle event type (either 'uninstall' or 'custom_event')"
     }
@@ -5828,7 +5828,7 @@ This event occurs when an Internet Service Provider returns a soft bounce. A sof
   "event_type" : "(required, string) The event type name, as it is exported to Amplitude",
   "insert_id" : "(required, string) Globally unique ID for this event",
   "library" : "Braze",
-  "time" : "(required, int) Unix timestamp at which the event happened",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
   "user_id" : "(optional, string) External ID of the user"
 }
 ```
@@ -5867,7 +5867,7 @@ This event occurs when an Internet Service Provider returns a soft bounce. A sof
     "message_variation_name" : "(optional, string) Name of the message variation",
     "send_id" : "(optional, string) Message send ID this message belongs to"
   },
-  "timestamp" : "(required, int) Unix timestamp at which the event happened",
+  "timestamp" : "(required, int) UNIX timestamp at which the event happened",
   "type" : "track",
   "userId" : "(required, string) External ID of the user"
 }
@@ -5908,7 +5908,7 @@ This event occurs when the end-user hits the "spam" button on the email. Note th
     "canvas_step_name" : "(optional, string) Name of the Canvas step",
     "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
     "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
-    "card_id" : "(optional, string) ID of the card this in app message comes from",
+    "card_id" : "(optional, string) ID of the card this in-app message comes from",
     "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
     "email_address" : "(required, string) Email address of the user",
     "esp" : "(optional, string) ESP related to the event (Sparkpost or Sendgrid)",
@@ -5919,7 +5919,7 @@ This event occurs when the end-user hits the "spam" button on the email. Note th
     "send_id" : "(optional, string) Message send ID this message belongs to",
     "user_agent" : "(optional, string) User agent on which the spam report occurred"
   },
-  "time" : "(required, int) Unix timestamp at which the event happened",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
   "user" : {
     "device_id" : "(optional, string) ID of the device on which the event occurred",
     "external_user_id" : "(required, string) External ID of the user",
@@ -5958,7 +5958,7 @@ This event occurs when the end-user hits the "spam" button on the email. Note th
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
     "send_id" : "(optional, string) Message send ID this message belongs to",
-    "time" : "(required, int) Unix timestamp at which the event happened",
+    "time" : "(required, int) UNIX timestamp at which the event happened",
     "token" : "(required, string) The Mixpanel API token",
     "user_agent" : "(optional, string) User agent on which the spam report occurred"
   }
@@ -5989,7 +5989,7 @@ This event occurs when the end-user hits the "spam" button on the email. Note th
   "message_variation_id" : "(optional, string) API ID of the message variation this user received",
   "message_variation_name" : "(optional, string) Name of the message variation",
   "send_id" : "(optional, string) Message send ID this message belongs to",
-  "time" : "(required, int) Unix timestamp at which the event happened",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
   "user_agent" : "(optional, string) User agent on which the spam report occurred",
   "user_id" : "(required, string) BSON ID of the user who performed this event"
@@ -6032,7 +6032,7 @@ This event occurs when the end-user hits the "spam" button on the email. Note th
         "custom_event_type" : "(required, string) The mParticle custom event type if the event_type is 'custom_event' (always 'other')",
         "event_name" : "(required, string) The event type name, as it is exported to mParticle",
         "source_message_id" : "(required, string) Globally unique ID for this event",
-        "timestamp_unixtime_ms" : "(required, int) Unix timestamp at which the event happened"
+        "timestamp_unixtime_ms" : "(required, int) UNIX timestamp at which the event happened"
       },
       "event_type" : "(required, string) mParticle event type (either 'uninstall' or 'custom_event')"
     }
@@ -6083,7 +6083,7 @@ This event occurs when the end-user hits the "spam" button on the email. Note th
   "event_type" : "(required, string) The event type name, as it is exported to Amplitude",
   "insert_id" : "(required, string) Globally unique ID for this event",
   "library" : "Braze",
-  "time" : "(required, int) Unix timestamp at which the event happened",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
   "user_id" : "(optional, string) External ID of the user"
 }
 ```
@@ -6122,7 +6122,7 @@ This event occurs when the end-user hits the "spam" button on the email. Note th
     "send_id" : "(optional, string) Message send ID this message belongs to",
     "user_agent" : "(optional, string) User agent on which the spam report occurred"
   },
-  "timestamp" : "(required, int) Unix timestamp at which the event happened",
+  "timestamp" : "(required, int) UNIX timestamp at which the event happened",
   "type" : "track",
   "userId" : "(required, string) External ID of the user"
 }
@@ -6168,7 +6168,7 @@ The `Unsubscribe` event is actually a specialized click event that is fired when
     "canvas_step_name" : "(optional, string) Name of the Canvas step",
     "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
     "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
-    "card_id" : "(optional, string) ID of the card this in app message comes from",
+    "card_id" : "(optional, string) ID of the card this in-app message comes from",
     "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
     "email_address" : "(required, string) Email address of the user",
     "ip_pool" : "(optional, string) IP pool from which the email send was made",
@@ -6176,7 +6176,7 @@ The `Unsubscribe` event is actually a specialized click event that is fired when
     "message_variation_name" : "(optional, string) Name of the message variation",
     "send_id" : "(optional, string) Message send ID this message belongs to"
   },
-  "time" : "(required, int) Unix timestamp at which the event happened",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
   "user" : {
     "device_id" : "(optional, string) ID of the device on which the event occurred",
     "external_user_id" : "(required, string) External ID of the user",
@@ -6213,7 +6213,7 @@ The `Unsubscribe` event is actually a specialized click event that is fired when
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
     "send_id" : "(optional, string) Message send ID this message belongs to",
-    "time" : "(required, int) Unix timestamp at which the event happened",
+    "time" : "(required, int) UNIX timestamp at which the event happened",
     "token" : "(required, string) The Mixpanel API token"
   }
 }
@@ -6241,7 +6241,7 @@ The `Unsubscribe` event is actually a specialized click event that is fired when
   "message_variation_id" : "(optional, string) API ID of the message variation this user received",
   "message_variation_name" : "(optional, string) Name of the message variation",
   "send_id" : "(optional, string) Message send ID this message belongs to",
-  "time" : "(required, int) Unix timestamp at which the event happened",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
   "user_id" : "(required, string) BSON ID of the user who performed this event"
 }
@@ -6280,7 +6280,7 @@ The `Unsubscribe` event is actually a specialized click event that is fired when
         "custom_event_type" : "(required, string) The mParticle custom event type if the event_type is 'custom_event' (always 'other')",
         "event_name" : "(required, string) The event type name, as it is exported to mParticle",
         "source_message_id" : "(required, string) Globally unique ID for this event",
-        "timestamp_unixtime_ms" : "(required, int) Unix timestamp at which the event happened"
+        "timestamp_unixtime_ms" : "(required, int) UNIX timestamp at which the event happened"
       },
       "event_type" : "(required, string) mParticle event type (either 'uninstall' or 'custom_event')"
     }
@@ -6328,7 +6328,7 @@ The `Unsubscribe` event is actually a specialized click event that is fired when
   "event_type" : "(required, string) The event type name, as it is exported to Amplitude",
   "insert_id" : "(required, string) Globally unique ID for this event",
   "library" : "Braze",
-  "time" : "(required, int) Unix timestamp at which the event happened",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
   "user_id" : "(optional, string) External ID of the user"
 }
 ```
@@ -6364,7 +6364,7 @@ The `Unsubscribe` event is actually a specialized click event that is fired when
     "message_variation_name" : "(optional, string) Name of the message variation",
     "send_id" : "(optional, string) Message send ID this message belongs to"
   },
-  "timestamp" : "(required, int) Unix timestamp at which the event happened",
+  "timestamp" : "(required, int) UNIX timestamp at which the event happened",
   "type" : "track",
   "userId" : "(required, string) External ID of the user"
 }
@@ -6409,7 +6409,7 @@ This event occurs when a user views an in-app message.
     "canvas_step_name" : "(optional, string) Name of the Canvas step",
     "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
     "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
-    "card_id" : "(optional, string) ID of the card this in app message comes from",
+    "card_id" : "(optional, string) ID of the card this in-app message comes from",
     "device_model" : "(optional, string) Model of the device",
     "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
     "message_extras" : "(optional, string) A JSON string of the tagged key-value pairs during liquid rendering",
@@ -6419,7 +6419,7 @@ This event occurs when a user views an in-app message.
     "platform" : "(optional, string) Platform of the device",
     "send_id" : "(optional, string) Message send ID this message belongs to"
   },
-  "time" : "(required, int) Unix timestamp at which the event happened",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
   "user" : {
     "device_id" : "(optional, string) ID of the device on which the event occurred",
     "external_user_id" : "(required, string) External ID of the user",
@@ -6463,7 +6463,7 @@ This event occurs when a user views an in-app message.
     "$os" : "(optional, string) Version of the operating system of the device",
     "platform" : "(optional, string) Platform of the device",
     "send_id" : "(optional, string) Message send ID this message belongs to",
-    "time" : "(required, int) Unix timestamp at which the event happened",
+    "time" : "(required, int) UNIX timestamp at which the event happened",
     "token" : "(required, string) The Mixpanel API token"
   }
 }
@@ -6498,7 +6498,7 @@ This event occurs when a user views an in-app message.
   "os_version" : "(optional, string) Version of the operating system of the device",
   "platform" : "(optional, string) Platform of the device",
   "send_id" : "(optional, string) Message send ID this message belongs to",
-  "time" : "(required, int) Unix timestamp at which the event happened",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
   "user_id" : "(required, string) BSON ID of the user who performed this event"
 }
@@ -6546,7 +6546,7 @@ This event occurs when a user views an in-app message.
         "custom_event_type" : "(required, string) The mParticle custom event type if the event_type is 'custom_event' (always 'other')",
         "event_name" : "(required, string) The event type name, as it is exported to mParticle",
         "source_message_id" : "(required, string) Globally unique ID for this event",
-        "timestamp_unixtime_ms" : "(required, int) Unix timestamp at which the event happened"
+        "timestamp_unixtime_ms" : "(required, int) UNIX timestamp at which the event happened"
       },
       "event_type" : "(required, string) mParticle event type (either 'uninstall' or 'custom_event')"
     }
@@ -6602,7 +6602,7 @@ This event occurs when a user views an in-app message.
   "idfa" : "(optional, string) Advertising identifier",
   "insert_id" : "(required, string) Globally unique ID for this event",
   "library" : "Braze",
-  "time" : "(required, int) Unix timestamp at which the event happened",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
   "user_id" : "(optional, string) External ID of the user"
 }
 ```
@@ -6645,7 +6645,7 @@ This event occurs when a user views an in-app message.
     "platform" : "(optional, string) Platform of the device",
     "send_id" : "(optional, string) Message send ID this message belongs to"
   },
-  "timestamp" : "(required, int) Unix timestamp at which the event happened",
+  "timestamp" : "(required, int) UNIX timestamp at which the event happened",
   "type" : "track",
   "userId" : "(required, string) External ID of the user"
 }
@@ -6695,7 +6695,7 @@ This event occurs when a user clicks on an in-app message.
     "canvas_step_name" : "(optional, string) Name of the Canvas step",
     "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
     "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
-    "card_id" : "(optional, string) ID of the card this in app message comes from",
+    "card_id" : "(optional, string) ID of the card this in-app message comes from",
     "device_model" : "(optional, string) Model of the device",
     "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
@@ -6704,7 +6704,7 @@ This event occurs when a user clicks on an in-app message.
     "platform" : "(optional, string) Platform of the device",
     "send_id" : "(optional, string) Message send ID this message belongs to"
   },
-  "time" : "(required, int) Unix timestamp at which the event happened",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
   "user" : {
     "device_id" : "(optional, string) ID of the device on which the event occurred",
     "external_user_id" : "(required, string) External ID of the user",
@@ -6748,7 +6748,7 @@ This event occurs when a user clicks on an in-app message.
     "$os" : "(optional, string) Version of the operating system of the device",
     "platform" : "(optional, string) Platform of the device",
     "send_id" : "(optional, string) Message send ID this message belongs to",
-    "time" : "(required, int) Unix timestamp at which the event happened",
+    "time" : "(required, int) UNIX timestamp at which the event happened",
     "token" : "(required, string) The Mixpanel API token"
   }
 }
@@ -6783,7 +6783,7 @@ This event occurs when a user clicks on an in-app message.
   "os_version" : "(optional, string) Version of the operating system of the device",
   "platform" : "(optional, string) Platform of the device",
   "send_id" : "(optional, string) Message send ID this message belongs to",
-  "time" : "(required, int) Unix timestamp at which the event happened",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
   "user_id" : "(required, string) BSON ID of the user who performed this event"
 }
@@ -6831,7 +6831,7 @@ This event occurs when a user clicks on an in-app message.
         "custom_event_type" : "(required, string) The mParticle custom event type if the event_type is 'custom_event' (always 'other')",
         "event_name" : "(required, string) The event type name, as it is exported to mParticle",
         "source_message_id" : "(required, string) Globally unique ID for this event",
-        "timestamp_unixtime_ms" : "(required, int) Unix timestamp at which the event happened"
+        "timestamp_unixtime_ms" : "(required, int) UNIX timestamp at which the event happened"
       },
       "event_type" : "(required, string) mParticle event type (either 'uninstall' or 'custom_event')"
     }
@@ -6887,7 +6887,7 @@ This event occurs when a user clicks on an in-app message.
   "idfa" : "(optional, string) Advertising identifier",
   "insert_id" : "(required, string) Globally unique ID for this event",
   "library" : "Braze",
-  "time" : "(required, int) Unix timestamp at which the event happened",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
   "user_id" : "(optional, string) External ID of the user"
 }
 ```
@@ -6930,7 +6930,7 @@ This event occurs when a user clicks on an in-app message.
     "platform" : "(optional, string) Platform of the device",
     "send_id" : "(optional, string) Message send ID this message belongs to"
   },
-  "timestamp" : "(required, int) Unix timestamp at which the event happened",
+  "timestamp" : "(required, int) UNIX timestamp at which the event happened",
   "type" : "track",
   "userId" : "(required, string) External ID of the user"
 }
@@ -6972,14 +6972,14 @@ This event occurs when a webhook was processed and sent to the third party speci
     "canvas_step_name" : "(optional, string) Name of the Canvas step",
     "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
     "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
-    "card_id" : "(optional, string) ID of the card this in app message comes from",
+    "card_id" : "(optional, string) ID of the card this in-app message comes from",
     "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
     "message_extras" : "(optional, string) A JSON string of the tagged key-value pairs during liquid rendering",
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
     "send_id" : "(optional, string) Message send ID this message belongs to"
   },
-  "time" : "(required, int) Unix timestamp at which the event happened",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
   "user" : {
     "device_id" : "(optional, string) ID of the device on which the event occurred",
     "external_user_id" : "(required, string) External ID of the user",
@@ -7015,7 +7015,7 @@ This event occurs when a webhook was processed and sent to the third party speci
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
     "send_id" : "(optional, string) Message send ID this message belongs to",
-    "time" : "(required, int) Unix timestamp at which the event happened",
+    "time" : "(required, int) UNIX timestamp at which the event happened",
     "token" : "(required, string) The Mixpanel API token"
   }
 }
@@ -7041,7 +7041,7 @@ This event occurs when a webhook was processed and sent to the third party speci
   "message_variation_id" : "(optional, string) API ID of the message variation this user received",
   "message_variation_name" : "(optional, string) Name of the message variation",
   "send_id" : "(optional, string) Message send ID this message belongs to",
-  "time" : "(required, int) Unix timestamp at which the event happened",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
   "user_id" : "(required, string) BSON ID of the user who performed this event"
 }
@@ -7080,7 +7080,7 @@ This event occurs when a webhook was processed and sent to the third party speci
         "custom_event_type" : "(required, string) The mParticle custom event type if the event_type is 'custom_event' (always 'other')",
         "event_name" : "(required, string) The event type name, as it is exported to mParticle",
         "source_message_id" : "(required, string) Globally unique ID for this event",
-        "timestamp_unixtime_ms" : "(required, int) Unix timestamp at which the event happened"
+        "timestamp_unixtime_ms" : "(required, int) UNIX timestamp at which the event happened"
       },
       "event_type" : "(required, string) mParticle event type (either 'uninstall' or 'custom_event')"
     }
@@ -7126,7 +7126,7 @@ This event occurs when a webhook was processed and sent to the third party speci
   "event_type" : "(required, string) The event type name, as it is exported to Amplitude",
   "insert_id" : "(required, string) Globally unique ID for this event",
   "library" : "Braze",
-  "time" : "(required, int) Unix timestamp at which the event happened",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
   "user_id" : "(optional, string) External ID of the user"
 }
 ```
@@ -7160,7 +7160,7 @@ This event occurs when a webhook was processed and sent to the third party speci
     "message_variation_name" : "(optional, string) Name of the message variation",
     "send_id" : "(optional, string) Message send ID this message belongs to"
   },
-  "timestamp" : "(required, int) Unix timestamp at which the event happened",
+  "timestamp" : "(required, int) UNIX timestamp at which the event happened",
   "type" : "track",
   "userId" : "(required, string) External ID of the user"
 }
@@ -7201,7 +7201,7 @@ This event occurs when a Content Card gets sent to a user.
     "canvas_step_name" : "(optional, string) Name of the Canvas step",
     "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
     "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
-    "card_id" : "(optional, string) ID of the card this in app message comes from",
+    "card_id" : "(optional, string) ID of the card this in-app message comes from",
     "content_card_id" : "(required, string) ID of the card that generated this event",
     "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
     "message_extras" : "(optional, string) A JSON string of the tagged key-value pairs during liquid rendering",
@@ -7209,7 +7209,7 @@ This event occurs when a Content Card gets sent to a user.
     "message_variation_name" : "(optional, string) Name of the message variation",
     "send_id" : "(optional, string) Message send ID this message belongs to"
   },
-  "time" : "(required, int) Unix timestamp at which the event happened",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
   "user" : {
     "device_id" : "(optional, string) ID of the device on which the event occurred",
     "external_user_id" : "(required, string) External ID of the user",
@@ -7246,7 +7246,7 @@ This event occurs when a Content Card gets sent to a user.
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
     "send_id" : "(optional, string) Message send ID this message belongs to",
-    "time" : "(required, int) Unix timestamp at which the event happened",
+    "time" : "(required, int) UNIX timestamp at which the event happened",
     "token" : "(required, string) The Mixpanel API token"
   }
 }
@@ -7274,7 +7274,7 @@ This event occurs when a Content Card gets sent to a user.
   "message_variation_id" : "(optional, string) API ID of the message variation this user received",
   "message_variation_name" : "(optional, string) Name of the message variation",
   "send_id" : "(optional, string) Message send ID this message belongs to",
-  "time" : "(required, int) Unix timestamp at which the event happened",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
   "user_id" : "(required, string) BSON ID of the user who performed this event"
 }
@@ -7314,7 +7314,7 @@ This event occurs when a Content Card gets sent to a user.
         "custom_event_type" : "(required, string) The mParticle custom event type if the event_type is 'custom_event' (always 'other')",
         "event_name" : "(required, string) The event type name, as it is exported to mParticle",
         "source_message_id" : "(required, string) Globally unique ID for this event",
-        "timestamp_unixtime_ms" : "(required, int) Unix timestamp at which the event happened"
+        "timestamp_unixtime_ms" : "(required, int) UNIX timestamp at which the event happened"
       },
       "event_type" : "(required, string) mParticle event type (either 'uninstall' or 'custom_event')"
     }
@@ -7361,7 +7361,7 @@ This event occurs when a Content Card gets sent to a user.
   "event_type" : "(required, string) The event type name, as it is exported to Amplitude",
   "insert_id" : "(required, string) Globally unique ID for this event",
   "library" : "Braze",
-  "time" : "(required, int) Unix timestamp at which the event happened",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
   "user_id" : "(optional, string) External ID of the user"
 }
 ```
@@ -7396,7 +7396,7 @@ This event occurs when a Content Card gets sent to a user.
     "message_variation_name" : "(optional, string) Name of the message variation",
     "send_id" : "(optional, string) Message send ID this message belongs to"
   },
-  "timestamp" : "(required, int) Unix timestamp at which the event happened",
+  "timestamp" : "(required, int) UNIX timestamp at which the event happened",
   "type" : "track",
   "userId" : "(required, string) External ID of the user"
 }
@@ -7440,7 +7440,7 @@ This event occurs when a user views a Content Card.
     "canvas_step_name" : "(optional, string) Name of the Canvas step",
     "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
     "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
-    "card_id" : "(optional, string) ID of the card this in app message comes from",
+    "card_id" : "(optional, string) ID of the card this in-app message comes from",
     "content_card_id" : "(required, string) ID of the card that generated this event",
     "device_model" : "(optional, string) Model of the device",
     "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
@@ -7450,7 +7450,7 @@ This event occurs when a user views a Content Card.
     "platform" : "(optional, string) Platform of the device",
     "send_id" : "(optional, string) Message send ID this message belongs to"
   },
-  "time" : "(required, int) Unix timestamp at which the event happened",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
   "user" : {
     "device_id" : "(optional, string) ID of the device on which the event occurred",
     "external_user_id" : "(required, string) External ID of the user",
@@ -7493,7 +7493,7 @@ This event occurs when a user views a Content Card.
     "$os" : "(optional, string) Version of the operating system of the device",
     "platform" : "(optional, string) Platform of the device",
     "send_id" : "(optional, string) Message send ID this message belongs to",
-    "time" : "(required, int) Unix timestamp at which the event happened",
+    "time" : "(required, int) UNIX timestamp at which the event happened",
     "token" : "(required, string) The Mixpanel API token"
   }
 }
@@ -7527,7 +7527,7 @@ This event occurs when a user views a Content Card.
   "os_version" : "(optional, string) Version of the operating system of the device",
   "platform" : "(optional, string) Platform of the device",
   "send_id" : "(optional, string) Message send ID this message belongs to",
-  "time" : "(required, int) Unix timestamp at which the event happened",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
   "user_id" : "(required, string) BSON ID of the user who performed this event"
 }
@@ -7574,7 +7574,7 @@ This event occurs when a user views a Content Card.
         "custom_event_type" : "(required, string) The mParticle custom event type if the event_type is 'custom_event' (always 'other')",
         "event_name" : "(required, string) The event type name, as it is exported to mParticle",
         "source_message_id" : "(required, string) Globally unique ID for this event",
-        "timestamp_unixtime_ms" : "(required, int) Unix timestamp at which the event happened"
+        "timestamp_unixtime_ms" : "(required, int) UNIX timestamp at which the event happened"
       },
       "event_type" : "(required, string) mParticle event type (either 'uninstall' or 'custom_event')"
     }
@@ -7629,7 +7629,7 @@ This event occurs when a user views a Content Card.
   "idfa" : "(optional, string) Advertising identifier",
   "insert_id" : "(required, string) Globally unique ID for this event",
   "library" : "Braze",
-  "time" : "(required, int) Unix timestamp at which the event happened",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
   "user_id" : "(optional, string) External ID of the user"
 }
 ```
@@ -7671,7 +7671,7 @@ This event occurs when a user views a Content Card.
     "platform" : "(optional, string) Platform of the device",
     "send_id" : "(optional, string) Message send ID this message belongs to"
   },
-  "timestamp" : "(required, int) Unix timestamp at which the event happened",
+  "timestamp" : "(required, int) UNIX timestamp at which the event happened",
   "type" : "track",
   "userId" : "(required, string) External ID of the user"
 }
@@ -7715,7 +7715,7 @@ This event occurs when a user clicks a Content Card.
     "canvas_step_name" : "(optional, string) Name of the Canvas step",
     "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
     "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
-    "card_id" : "(optional, string) ID of the card this in app message comes from",
+    "card_id" : "(optional, string) ID of the card this in-app message comes from",
     "content_card_id" : "(required, string) ID of the card that generated this event",
     "device_model" : "(optional, string) Model of the device",
     "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
@@ -7725,7 +7725,7 @@ This event occurs when a user clicks a Content Card.
     "platform" : "(optional, string) Platform of the device",
     "send_id" : "(optional, string) Message send ID this message belongs to"
   },
-  "time" : "(required, int) Unix timestamp at which the event happened",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
   "user" : {
     "device_id" : "(optional, string) ID of the device on which the event occurred",
     "external_user_id" : "(required, string) External ID of the user",
@@ -7768,7 +7768,7 @@ This event occurs when a user clicks a Content Card.
     "$os" : "(optional, string) Version of the operating system of the device",
     "platform" : "(optional, string) Platform of the device",
     "send_id" : "(optional, string) Message send ID this message belongs to",
-    "time" : "(required, int) Unix timestamp at which the event happened",
+    "time" : "(required, int) UNIX timestamp at which the event happened",
     "token" : "(required, string) The Mixpanel API token"
   }
 }
@@ -7802,7 +7802,7 @@ This event occurs when a user clicks a Content Card.
   "os_version" : "(optional, string) Version of the operating system of the device",
   "platform" : "(optional, string) Platform of the device",
   "send_id" : "(optional, string) Message send ID this message belongs to",
-  "time" : "(required, int) Unix timestamp at which the event happened",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
   "user_id" : "(required, string) BSON ID of the user who performed this event"
 }
@@ -7849,7 +7849,7 @@ This event occurs when a user clicks a Content Card.
         "custom_event_type" : "(required, string) The mParticle custom event type if the event_type is 'custom_event' (always 'other')",
         "event_name" : "(required, string) The event type name, as it is exported to mParticle",
         "source_message_id" : "(required, string) Globally unique ID for this event",
-        "timestamp_unixtime_ms" : "(required, int) Unix timestamp at which the event happened"
+        "timestamp_unixtime_ms" : "(required, int) UNIX timestamp at which the event happened"
       },
       "event_type" : "(required, string) mParticle event type (either 'uninstall' or 'custom_event')"
     }
@@ -7904,7 +7904,7 @@ This event occurs when a user clicks a Content Card.
   "idfa" : "(optional, string) Advertising identifier",
   "insert_id" : "(required, string) Globally unique ID for this event",
   "library" : "Braze",
-  "time" : "(required, int) Unix timestamp at which the event happened",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
   "user_id" : "(optional, string) External ID of the user"
 }
 ```
@@ -7946,7 +7946,7 @@ This event occurs when a user clicks a Content Card.
     "platform" : "(optional, string) Platform of the device",
     "send_id" : "(optional, string) Message send ID this message belongs to"
   },
-  "timestamp" : "(required, int) Unix timestamp at which the event happened",
+  "timestamp" : "(required, int) UNIX timestamp at which the event happened",
   "type" : "track",
   "userId" : "(required, string) External ID of the user"
 }
@@ -7991,7 +7991,7 @@ This event occurs when a user dismisses a Content Card.
     "canvas_step_name" : "(optional, string) Name of the Canvas step",
     "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
     "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
-    "card_id" : "(optional, string) ID of the card this in app message comes from",
+    "card_id" : "(optional, string) ID of the card this in-app message comes from",
     "content_card_id" : "(required, string) ID of the card that generated this event",
     "device_model" : "(optional, string) Model of the device",
     "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
@@ -8001,7 +8001,7 @@ This event occurs when a user dismisses a Content Card.
     "platform" : "(optional, string) Platform of the device",
     "send_id" : "(optional, string) Message send ID this message belongs to"
   },
-  "time" : "(required, int) Unix timestamp at which the event happened",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
   "user" : {
     "device_id" : "(optional, string) ID of the device on which the event occurred",
     "external_user_id" : "(required, string) External ID of the user",
@@ -8044,7 +8044,7 @@ This event occurs when a user dismisses a Content Card.
     "$os" : "(optional, string) Version of the operating system of the device",
     "platform" : "(optional, string) Platform of the device",
     "send_id" : "(optional, string) Message send ID this message belongs to",
-    "time" : "(required, int) Unix timestamp at which the event happened",
+    "time" : "(required, int) UNIX timestamp at which the event happened",
     "token" : "(required, string) The Mixpanel API token"
   }
 }
@@ -8078,7 +8078,7 @@ This event occurs when a user dismisses a Content Card.
   "os_version" : "(optional, string) Version of the operating system of the device",
   "platform" : "(optional, string) Platform of the device",
   "send_id" : "(optional, string) Message send ID this message belongs to",
-  "time" : "(required, int) Unix timestamp at which the event happened",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
   "user_id" : "(required, string) BSON ID of the user who performed this event"
 }
@@ -8125,7 +8125,7 @@ This event occurs when a user dismisses a Content Card.
         "custom_event_type" : "(required, string) The mParticle custom event type if the event_type is 'custom_event' (always 'other')",
         "event_name" : "(required, string) The event type name, as it is exported to mParticle",
         "source_message_id" : "(required, string) Globally unique ID for this event",
-        "timestamp_unixtime_ms" : "(required, int) Unix timestamp at which the event happened"
+        "timestamp_unixtime_ms" : "(required, int) UNIX timestamp at which the event happened"
       },
       "event_type" : "(required, string) mParticle event type (either 'uninstall' or 'custom_event')"
     }
@@ -8180,7 +8180,7 @@ This event occurs when a user dismisses a Content Card.
   "idfa" : "(optional, string) Advertising identifier",
   "insert_id" : "(required, string) Globally unique ID for this event",
   "library" : "Braze",
-  "time" : "(required, int) Unix timestamp at which the event happened",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
   "user_id" : "(optional, string) External ID of the user"
 }
 ```
@@ -8222,7 +8222,7 @@ This event occurs when a user dismisses a Content Card.
     "platform" : "(optional, string) Platform of the device",
     "send_id" : "(optional, string) Message send ID this message belongs to"
   },
-  "timestamp" : "(required, int) Unix timestamp at which the event happened",
+  "timestamp" : "(required, int) UNIX timestamp at which the event happened",
   "type" : "track",
   "userId" : "(required, string) External ID of the user"
 }
@@ -8264,7 +8264,7 @@ This event occurs when a user clicks an SMS short link.
     "canvas_step_name" : "(optional, string) Name of the Canvas step",
     "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
     "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
-    "card_id" : "(optional, string) ID of the card this in app message comes from",
+    "card_id" : "(optional, string) ID of the card this in-app message comes from",
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
     "short_url" : "(required, string) Shortened url that was clicked",
@@ -8272,7 +8272,7 @@ This event occurs when a user clicks an SMS short link.
     "user_agent" : "(optional, string) User agent on which the spam report occurred",
     "user_phone_number" : "(optional, string) The user's phone number from which the message was received"
   },
-  "time" : "(required, int) Unix timestamp at which the event happened",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
   "user" : {
     "device_id" : "(optional, string) ID of the device on which the event occurred",
     "external_user_id" : "(required, string) External ID of the user",
@@ -8306,7 +8306,7 @@ This event occurs when a user clicks an SMS short link.
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
     "short_url" : "(required, string) Shortened url that was clicked",
-    "time" : "(required, int) Unix timestamp at which the event happened",
+    "time" : "(required, int) UNIX timestamp at which the event happened",
     "token" : "(required, string) The Mixpanel API token",
     "url" : "(optional, string) URL that the user clicked on",
     "user_agent" : "(optional, string) User agent on which the spam report occurred",
@@ -8335,7 +8335,7 @@ This event occurs when a user clicks an SMS short link.
   "message_variation_id" : "(optional, string) API ID of the message variation this user received",
   "message_variation_name" : "(optional, string) Name of the message variation",
   "short_url" : "(required, string) Shortened url that was clicked",
-  "time" : "(required, int) Unix timestamp at which the event happened",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
   "url" : "(required, string) URL that the user clicked on",
   "user_agent" : "(optional, string) User agent on which the spam report occurred",
@@ -8377,7 +8377,7 @@ This event occurs when a user clicks an SMS short link.
         "custom_event_type" : "(required, string) The mParticle custom event type if the event_type is 'custom_event' (always 'other')",
         "event_name" : "(required, string) The event type name, as it is exported to mParticle",
         "source_message_id" : "(required, string) Globally unique ID for this event",
-        "timestamp_unixtime_ms" : "(required, int) Unix timestamp at which the event happened"
+        "timestamp_unixtime_ms" : "(required, int) UNIX timestamp at which the event happened"
       },
       "event_type" : "(required, string) mParticle event type (either 'uninstall' or 'custom_event')"
     }
@@ -8426,7 +8426,7 @@ This event occurs when a user clicks an SMS short link.
   "event_type" : "(required, string) The event type name, as it is exported to Amplitude",
   "insert_id" : "(required, string) Globally unique ID for this event",
   "library" : "Braze",
-  "time" : "(required, int) Unix timestamp at which the event happened",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
   "user_id" : "(optional, string) External ID of the user"
 }
 ```
@@ -8463,7 +8463,7 @@ This event occurs when a user clicks an SMS short link.
     "link_url" : "(optional, string) URL that the user clicked on",
     "user_agent" : "(optional, string) User agent on which the spam report occurred"
   },
-  "timestamp" : "(required, int) Unix timestamp at which the event happened",
+  "timestamp" : "(required, int) UNIX timestamp at which the event happened",
   "type" : "track",
   "userId" : "(required, string) External ID of the user"
 }
@@ -8499,7 +8499,7 @@ This event occurs when a user sends an SMS.
     "canvas_step_name" : "(optional, string) Name of the Canvas step",
     "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
     "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
-    "card_id" : "(optional, string) ID of the card this in app message comes from",
+    "card_id" : "(optional, string) ID of the card this in-app message comes from",
     "category" : "(optional, string) Keyword category name, only populated for auto-reply messages: 'opt-in', 'opt-out', 'help', or custom value",
     "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
     "message_extras" : "(optional, string) A JSON string of the tagged key-value pairs during liquid rendering",
@@ -8509,7 +8509,7 @@ This event occurs when a user sends an SMS.
     "subscription_group_id" : "(optional, string) Subscription group API ID",
     "to_phone_number" : "(optional, string) Phone number of the user receiving the message in e.164 format (for example +14155552671)"
   },
-  "time" : "(required, int) Unix timestamp at which the event happened",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
   "user" : {
     "device_id" : "(optional, string) ID of the device on which the event occurred",
     "external_user_id" : "(required, string) External ID of the user",
@@ -8547,7 +8547,7 @@ This event occurs when a user sends an SMS.
     "message_variation_name" : "(optional, string) Name of the message variation",
     "send_id" : "(optional, string) Message send ID this message belongs to",
     "subscription_group_id" : "(optional, string) Subscription group API ID",
-    "time" : "(required, int) Unix timestamp at which the event happened",
+    "time" : "(required, int) UNIX timestamp at which the event happened",
     "to_phone_number" : "(optional, string) Phone number of the user receiving the message in e.164 format (for example +14155552671)",
     "token" : "(required, string) The Mixpanel API token"
   }
@@ -8577,7 +8577,7 @@ This event occurs when a user sends an SMS.
   "message_variation_name" : "(optional, string) Name of the message variation",
   "send_id" : "(optional, string) Message send ID this message belongs to",
   "subscription_group_id" : "(optional, string) Subscription group API ID",
-  "time" : "(required, int) Unix timestamp at which the event happened",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
   "to_phone_number" : "(optional, string) Phone number of the user receiving the message in e.164 format (for example +14155552671)",
   "user_id" : "(required, string) BSON ID of the user who performed this event"
@@ -8619,7 +8619,7 @@ This event occurs when a user sends an SMS.
         "custom_event_type" : "(required, string) The mParticle custom event type if the event_type is 'custom_event' (always 'other')",
         "event_name" : "(required, string) The event type name, as it is exported to mParticle",
         "source_message_id" : "(required, string) Globally unique ID for this event",
-        "timestamp_unixtime_ms" : "(required, int) Unix timestamp at which the event happened"
+        "timestamp_unixtime_ms" : "(required, int) UNIX timestamp at which the event happened"
       },
       "event_type" : "(required, string) mParticle event type (either 'uninstall' or 'custom_event')"
     }
@@ -8670,7 +8670,7 @@ This event occurs when a user sends an SMS.
   "event_type" : "(required, string) The event type name, as it is exported to Amplitude",
   "insert_id" : "(required, string) Globally unique ID for this event",
   "library" : "Braze",
-  "time" : "(required, int) Unix timestamp at which the event happened",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
   "user_id" : "(optional, string) External ID of the user"
 }
 ```
@@ -8708,7 +8708,7 @@ This event occurs when a user sends an SMS.
     "send_id" : "(optional, string) Message send ID this message belongs to",
     "subscription_group_id" : "(optional, string) Subscription group API ID"
   },
-  "timestamp" : "(required, int) Unix timestamp at which the event happened",
+  "timestamp" : "(required, int) UNIX timestamp at which the event happened",
   "type" : "track",
   "userId" : "(required, string) External ID of the user"
 }
@@ -8753,7 +8753,7 @@ This event occurs when an SMS is sent to the carrier.
     "canvas_step_name" : "(optional, string) Name of the Canvas step",
     "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
     "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
-    "card_id" : "(optional, string) ID of the card this in app message comes from",
+    "card_id" : "(optional, string) ID of the card this in-app message comes from",
     "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
     "from_phone_number" : "(optional, string) Phone number used to send in e.164 format (for example +14155552671)",
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
@@ -8762,7 +8762,7 @@ This event occurs when an SMS is sent to the carrier.
     "subscription_group_id" : "(optional, string) Subscription group API ID",
     "to_phone_number" : "(optional, string) Phone number of the user receiving the message in e.164 format (for example +14155552671)"
   },
-  "time" : "(required, int) Unix timestamp at which the event happened",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
   "user" : {
     "device_id" : "(optional, string) ID of the device on which the event occurred",
     "external_user_id" : "(required, string) External ID of the user",
@@ -8799,7 +8799,7 @@ This event occurs when an SMS is sent to the carrier.
     "message_variation_name" : "(optional, string) Name of the message variation",
     "send_id" : "(optional, string) Message send ID this message belongs to",
     "subscription_group_id" : "(optional, string) Subscription group API ID",
-    "time" : "(required, int) Unix timestamp at which the event happened",
+    "time" : "(required, int) UNIX timestamp at which the event happened",
     "to_phone_number" : "(optional, string) Phone number of the user receiving the message in e.164 format (for example +14155552671)",
     "token" : "(required, string) The Mixpanel API token"
   }
@@ -8828,7 +8828,7 @@ This event occurs when an SMS is sent to the carrier.
   "message_variation_name" : "(optional, string) Name of the message variation",
   "send_id" : "(optional, string) Message send ID this message belongs to",
   "subscription_group_id" : "(optional, string) Subscription group API ID",
-  "time" : "(required, int) Unix timestamp at which the event happened",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
   "to_phone_number" : "(optional, string) Phone number of the user receiving the message in e.164 format (for example +14155552671)",
   "user_id" : "(required, string) BSON ID of the user who performed this event"
@@ -8869,7 +8869,7 @@ This event occurs when an SMS is sent to the carrier.
         "custom_event_type" : "(required, string) The mParticle custom event type if the event_type is 'custom_event' (always 'other')",
         "event_name" : "(required, string) The event type name, as it is exported to mParticle",
         "source_message_id" : "(required, string) Globally unique ID for this event",
-        "timestamp_unixtime_ms" : "(required, int) Unix timestamp at which the event happened"
+        "timestamp_unixtime_ms" : "(required, int) UNIX timestamp at which the event happened"
       },
       "event_type" : "(required, string) mParticle event type (either 'uninstall' or 'custom_event')"
     }
@@ -8919,7 +8919,7 @@ This event occurs when an SMS is sent to the carrier.
   "event_type" : "(required, string) The event type name, as it is exported to Amplitude",
   "insert_id" : "(required, string) Globally unique ID for this event",
   "library" : "Braze",
-  "time" : "(required, int) Unix timestamp at which the event happened",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
   "user_id" : "(optional, string) External ID of the user"
 }
 ```
@@ -8956,7 +8956,7 @@ This event occurs when an SMS is sent to the carrier.
     "send_id" : "(optional, string) Message send ID this message belongs to",
     "subscription_group_id" : "(optional, string) Subscription group API ID"
   },
-  "timestamp" : "(required, int) Unix timestamp at which the event happened",
+  "timestamp" : "(required, int) UNIX timestamp at which the event happened",
   "type" : "track",
   "userId" : "(required, string) External ID of the user"
 }
@@ -8994,7 +8994,7 @@ This event occurs when an SMS was successfully delivered to the users mobile pho
     "canvas_step_name" : "(optional, string) Name of the Canvas step",
     "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
     "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
-    "card_id" : "(optional, string) ID of the card this in app message comes from",
+    "card_id" : "(optional, string) ID of the card this in-app message comes from",
     "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
     "from_phone_number" : "(optional, string) Phone number used to send in e.164 format (for example +14155552671)",
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
@@ -9003,7 +9003,7 @@ This event occurs when an SMS was successfully delivered to the users mobile pho
     "subscription_group_id" : "(optional, string) Subscription group API ID",
     "to_phone_number" : "(optional, string) Phone number of the user receiving the message in e.164 format (for example +14155552671)"
   },
-  "time" : "(required, int) Unix timestamp at which the event happened",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
   "user" : {
     "device_id" : "(optional, string) ID of the device on which the event occurred",
     "external_user_id" : "(required, string) External ID of the user",
@@ -9040,7 +9040,7 @@ This event occurs when an SMS was successfully delivered to the users mobile pho
     "message_variation_name" : "(optional, string) Name of the message variation",
     "send_id" : "(optional, string) Message send ID this message belongs to",
     "subscription_group_id" : "(optional, string) Subscription group API ID",
-    "time" : "(required, int) Unix timestamp at which the event happened",
+    "time" : "(required, int) UNIX timestamp at which the event happened",
     "to_phone_number" : "(optional, string) Phone number of the user receiving the message in e.164 format (for example +14155552671)",
     "token" : "(required, string) The Mixpanel API token"
   }
@@ -9069,7 +9069,7 @@ This event occurs when an SMS was successfully delivered to the users mobile pho
   "message_variation_name" : "(optional, string) Name of the message variation",
   "send_id" : "(optional, string) Message send ID this message belongs to",
   "subscription_group_id" : "(optional, string) Subscription group API ID",
-  "time" : "(required, int) Unix timestamp at which the event happened",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
   "to_phone_number" : "(optional, string) Phone number of the user receiving the message in e.164 format (for example +14155552671)",
   "user_id" : "(required, string) BSON ID of the user who performed this event"
@@ -9110,7 +9110,7 @@ This event occurs when an SMS was successfully delivered to the users mobile pho
         "custom_event_type" : "(required, string) The mParticle custom event type if the event_type is 'custom_event' (always 'other')",
         "event_name" : "(required, string) The event type name, as it is exported to mParticle",
         "source_message_id" : "(required, string) Globally unique ID for this event",
-        "timestamp_unixtime_ms" : "(required, int) Unix timestamp at which the event happened"
+        "timestamp_unixtime_ms" : "(required, int) UNIX timestamp at which the event happened"
       },
       "event_type" : "(required, string) mParticle event type (either 'uninstall' or 'custom_event')"
     }
@@ -9160,7 +9160,7 @@ This event occurs when an SMS was successfully delivered to the users mobile pho
   "event_type" : "(required, string) The event type name, as it is exported to Amplitude",
   "insert_id" : "(required, string) Globally unique ID for this event",
   "library" : "Braze",
-  "time" : "(required, int) Unix timestamp at which the event happened",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
   "user_id" : "(optional, string) External ID of the user"
 }
 ```
@@ -9197,7 +9197,7 @@ This event occurs when an SMS was successfully delivered to the users mobile pho
     "send_id" : "(optional, string) Message send ID this message belongs to",
     "subscription_group_id" : "(optional, string) Subscription group API ID"
   },
-  "timestamp" : "(required, int) Unix timestamp at which the event happened",
+  "timestamp" : "(required, int) UNIX timestamp at which the event happened",
   "type" : "track",
   "userId" : "(required, string) External ID of the user"
 }
@@ -9235,7 +9235,7 @@ This event occurs when an SMS send gets rejected by the carrier, this can happen
     "canvas_step_name" : "(optional, string) Name of the Canvas step",
     "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
     "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
-    "card_id" : "(optional, string) ID of the card this in app message comes from",
+    "card_id" : "(optional, string) ID of the card this in-app message comes from",
     "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
     "error" : "(optional, string) Error name",
     "from_phone_number" : "(optional, string) Phone number used to send in e.164 format (for example +14155552671)",
@@ -9246,7 +9246,7 @@ This event occurs when an SMS send gets rejected by the carrier, this can happen
     "subscription_group_id" : "(optional, string) Subscription group API ID",
     "to_phone_number" : "(optional, string) Phone number of the user receiving the message in e.164 format (for example +14155552671)"
   },
-  "time" : "(required, int) Unix timestamp at which the event happened",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
   "user" : {
     "device_id" : "(optional, string) ID of the device on which the event occurred",
     "external_user_id" : "(required, string) External ID of the user",
@@ -9285,7 +9285,7 @@ This event occurs when an SMS send gets rejected by the carrier, this can happen
     "provider_error_code" : "(optional, string) Error code from WhatsApp",
     "send_id" : "(optional, string) Message send ID this message belongs to",
     "subscription_group_id" : "(optional, string) Subscription group API ID",
-    "time" : "(required, int) Unix timestamp at which the event happened",
+    "time" : "(required, int) UNIX timestamp at which the event happened",
     "to_phone_number" : "(optional, string) Phone number of the user receiving the message in e.164 format (for example +14155552671)",
     "token" : "(required, string) The Mixpanel API token"
   }
@@ -9316,7 +9316,7 @@ This event occurs when an SMS send gets rejected by the carrier, this can happen
   "provider_error_code" : "(optional, string) Error code from WhatsApp",
   "send_id" : "(optional, string) Message send ID this message belongs to",
   "subscription_group_id" : "(optional, string) Subscription group API ID",
-  "time" : "(required, int) Unix timestamp at which the event happened",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
   "to_phone_number" : "(optional, string) Phone number of the user receiving the message in e.164 format (for example +14155552671)",
   "user_id" : "(required, string) BSON ID of the user who performed this event"
@@ -9359,7 +9359,7 @@ This event occurs when an SMS send gets rejected by the carrier, this can happen
         "custom_event_type" : "(required, string) The mParticle custom event type if the event_type is 'custom_event' (always 'other')",
         "event_name" : "(required, string) The event type name, as it is exported to mParticle",
         "source_message_id" : "(required, string) Globally unique ID for this event",
-        "timestamp_unixtime_ms" : "(required, int) Unix timestamp at which the event happened"
+        "timestamp_unixtime_ms" : "(required, int) UNIX timestamp at which the event happened"
       },
       "event_type" : "(required, string) mParticle event type (either 'uninstall' or 'custom_event')"
     }
@@ -9411,7 +9411,7 @@ This event occurs when an SMS send gets rejected by the carrier, this can happen
   "event_type" : "(required, string) The event type name, as it is exported to Amplitude",
   "insert_id" : "(required, string) Globally unique ID for this event",
   "library" : "Braze",
-  "time" : "(required, int) Unix timestamp at which the event happened",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
   "user_id" : "(optional, string) External ID of the user"
 }
 ```
@@ -9450,7 +9450,7 @@ This event occurs when an SMS send gets rejected by the carrier, this can happen
     "send_id" : "(optional, string) Message send ID this message belongs to",
     "subscription_group_id" : "(optional, string) Subscription group API ID"
   },
-  "timestamp" : "(required, int) Unix timestamp at which the event happened",
+  "timestamp" : "(required, int) UNIX timestamp at which the event happened",
   "type" : "track",
   "userId" : "(required, string) External ID of the user"
 }
@@ -9489,7 +9489,7 @@ This event occurs when an SMS experiences delivery failure. Use this event and t
     "canvas_step_name" : "(optional, string) Name of the Canvas step",
     "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
     "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
-    "card_id" : "(optional, string) ID of the card this in app message comes from",
+    "card_id" : "(optional, string) ID of the card this in-app message comes from",
     "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
     "error" : "(optional, string) Error name",
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
@@ -9499,7 +9499,7 @@ This event occurs when an SMS experiences delivery failure. Use this event and t
     "subscription_group_id" : "(optional, string) Subscription group API ID",
     "to_phone_number" : "(optional, string) Phone number of the user receiving the message in e.164 format (for example +14155552671)"
   },
-  "time" : "(required, int) Unix timestamp at which the event happened",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
   "user" : {
     "device_id" : "(optional, string) ID of the device on which the event occurred",
     "external_user_id" : "(required, string) External ID of the user",
@@ -9537,7 +9537,7 @@ This event occurs when an SMS experiences delivery failure. Use this event and t
     "provider_error_code" : "(optional, string) Error code from WhatsApp",
     "send_id" : "(optional, string) Message send ID this message belongs to",
     "subscription_group_id" : "(optional, string) Subscription group API ID",
-    "time" : "(required, int) Unix timestamp at which the event happened",
+    "time" : "(required, int) UNIX timestamp at which the event happened",
     "to_phone_number" : "(optional, string) Phone number of the user receiving the message in e.164 format (for example +14155552671)",
     "token" : "(required, string) The Mixpanel API token"
   }
@@ -9567,7 +9567,7 @@ This event occurs when an SMS experiences delivery failure. Use this event and t
   "provider_error_code" : "(optional, string) Error code from WhatsApp",
   "send_id" : "(optional, string) Message send ID this message belongs to",
   "subscription_group_id" : "(optional, string) Subscription group API ID",
-  "time" : "(required, int) Unix timestamp at which the event happened",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
   "to_phone_number" : "(optional, string) Phone number of the user receiving the message in e.164 format (for example +14155552671)",
   "user_id" : "(required, string) BSON ID of the user who performed this event"
@@ -9609,7 +9609,7 @@ This event occurs when an SMS experiences delivery failure. Use this event and t
         "custom_event_type" : "(required, string) The mParticle custom event type if the event_type is 'custom_event' (always 'other')",
         "event_name" : "(required, string) The event type name, as it is exported to mParticle",
         "source_message_id" : "(required, string) Globally unique ID for this event",
-        "timestamp_unixtime_ms" : "(required, int) Unix timestamp at which the event happened"
+        "timestamp_unixtime_ms" : "(required, int) UNIX timestamp at which the event happened"
       },
       "event_type" : "(required, string) mParticle event type (either 'uninstall' or 'custom_event')"
     }
@@ -9660,7 +9660,7 @@ This event occurs when an SMS experiences delivery failure. Use this event and t
   "event_type" : "(required, string) The event type name, as it is exported to Amplitude",
   "insert_id" : "(required, string) Globally unique ID for this event",
   "library" : "Braze",
-  "time" : "(required, int) Unix timestamp at which the event happened",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
   "user_id" : "(optional, string) External ID of the user"
 }
 ```
@@ -9698,7 +9698,7 @@ This event occurs when an SMS experiences delivery failure. Use this event and t
     "send_id" : "(optional, string) Message send ID this message belongs to",
     "subscription_group_id" : "(optional, string) Subscription group API ID"
   },
-  "timestamp" : "(required, int) Unix timestamp at which the event happened",
+  "timestamp" : "(required, int) UNIX timestamp at which the event happened",
   "type" : "track",
   "userId" : "(required, string) External ID of the user"
 }
@@ -9740,7 +9740,7 @@ If we detect that this inbound message is a reply to an outbound campaign or Can
     "canvas_step_name" : "(optional, string) Name of the Canvas step",
     "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
     "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
-    "card_id" : "(optional, string) ID of the card this in app message comes from",
+    "card_id" : "(optional, string) ID of the card this in-app message comes from",
     "inbound_phone_number" : "(required, string) The inbound number that the message was sent to",
     "media_urls" : "(optional, array of string) Media URLs from the user",
     "message_body" : "(optional, string) Typed response from the user",
@@ -9749,7 +9749,7 @@ If we detect that this inbound message is a reply to an outbound campaign or Can
     "subscription_group_id" : "(optional, string) Subscription group API ID",
     "user_phone_number" : "(required, string) The user's phone number from which the message was received"
   },
-  "time" : "(required, int) Unix timestamp at which the event happened",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
   "user" : {
     "external_user_id" : "(required, string) External ID of the user",
     "user_id" : "(required, string) BSON ID of the user who performed this event"
@@ -9784,7 +9784,7 @@ If we detect that this inbound message is a reply to an outbound campaign or Can
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
     "subscription_group_id" : "(optional, string) Subscription group API ID",
-    "time" : "(required, int) Unix timestamp at which the event happened",
+    "time" : "(required, int) UNIX timestamp at which the event happened",
     "token" : "(required, string) The Mixpanel API token",
     "user_phone_number" : "(required, string) The user's phone number from which the message was received"
   }
@@ -9815,7 +9815,7 @@ If we detect that this inbound message is a reply to an outbound campaign or Can
   "message_variation_id" : "(optional, string) API ID of the message variation this user received",
   "message_variation_name" : "(optional, string) Name of the message variation",
   "subscription_group_id" : "(optional, string) BSON ID of subscription group",
-  "time" : "(required, int) Unix timestamp at which the event happened",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
   "user_id" : "(optional, string) BSON ID of the user who performed this event",
   "user_phone_number" : "(required, string) The user's phone number from which the message was received"
 }
@@ -9852,7 +9852,7 @@ If we detect that this inbound message is a reply to an outbound campaign or Can
         "custom_event_type" : "(required, string) The mParticle custom event type if the event_type is 'custom_event' (always 'other')",
         "event_name" : "(required, string) The event type name, as it is exported to mParticle",
         "source_message_id" : "(required, string) Globally unique ID for this event",
-        "timestamp_unixtime_ms" : "(required, int) Unix timestamp at which the event happened"
+        "timestamp_unixtime_ms" : "(required, int) UNIX timestamp at which the event happened"
       },
       "event_type" : "(required, string) mParticle event type (either 'uninstall' or 'custom_event')"
     }
@@ -9902,7 +9902,7 @@ If we detect that this inbound message is a reply to an outbound campaign or Can
   "event_type" : "(required, string) The event type name, as it is exported to Amplitude",
   "insert_id" : "(required, string) Globally unique ID for this event",
   "library" : "Braze",
-  "time" : "(required, int) Unix timestamp at which the event happened",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
   "user_id" : "(optional, string) External ID of the user"
 }
 ```
@@ -9939,7 +9939,7 @@ If we detect that this inbound message is a reply to an outbound campaign or Can
     "message_variation_name" : "(optional, string) Name of the message variation",
     "subscription_group_id" : "(optional, string) Subscription group API ID"
   },
-  "timestamp" : "(required, int) Unix timestamp at which the event happened",
+  "timestamp" : "(required, int) UNIX timestamp at which the event happened",
   "type" : "track",
   "userId" : "(required, string) External ID of the user"
 }
@@ -9977,7 +9977,7 @@ Note that the conversion event is encoded in the `conversion_behavior` field, wh
     "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
     "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
     "campaign_name" : "(optional, string) Name of the campaign",
-    "card_id" : "(optional, string) ID of the card this in app message comes from",
+    "card_id" : "(optional, string) ID of the card this in-app message comes from",
     "conversion_behavior" : "(optional, string) JSON-encoded string describing the conversion behavior",
     "conversion_behavior_index" : "(optional, int) Index of the conversion behavior",
     "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
@@ -9985,7 +9985,7 @@ Note that the conversion event is encoded in the `conversion_behavior` field, wh
     "message_variation_name" : "(optional, string) Name of the message variation",
     "send_id" : "(optional, string) Message send ID this message belongs to"
   },
-  "time" : "(required, int) Unix timestamp at which the event happened",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
   "user" : {
     "device_id" : "(optional, string) ID of the device on which the event occurred",
     "external_user_id" : "(required, string) External ID of the user",
@@ -10017,7 +10017,7 @@ Note that the conversion event is encoded in the `conversion_behavior` field, wh
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
     "send_id" : "(optional, string) Message send ID this message belongs to",
-    "time" : "(required, int) Unix timestamp at which the event happened",
+    "time" : "(required, int) UNIX timestamp at which the event happened",
     "token" : "(required, string) The Mixpanel API token"
   }
 }
@@ -10039,7 +10039,7 @@ Note that the conversion event is encoded in the `conversion_behavior` field, wh
   "message_variation_id" : "(optional, string) API ID of the message variation this user received",
   "message_variation_name" : "(optional, string) Name of the message variation",
   "send_id" : "(optional, string) Message send ID this message belongs to",
-  "time" : "(required, int) Unix timestamp at which the event happened",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
   "user_id" : "(required, string) BSON ID of the user who performed this event"
 }
@@ -10073,7 +10073,7 @@ Note that the conversion event is encoded in the `conversion_behavior` field, wh
         "custom_event_type" : "(required, string) The mParticle custom event type if the event_type is 'custom_event' (always 'other')",
         "event_name" : "(required, string) The event type name, as it is exported to mParticle",
         "source_message_id" : "(required, string) Globally unique ID for this event",
-        "timestamp_unixtime_ms" : "(required, int) Unix timestamp at which the event happened"
+        "timestamp_unixtime_ms" : "(required, int) UNIX timestamp at which the event happened"
       },
       "event_type" : "(required, string) mParticle event type (either 'uninstall' or 'custom_event')"
     }
@@ -10115,7 +10115,7 @@ Note that the conversion event is encoded in the `conversion_behavior` field, wh
   "event_type" : "(required, string) The event type name, as it is exported to Amplitude",
   "insert_id" : "(required, string) Globally unique ID for this event",
   "library" : "Braze",
-  "time" : "(required, int) Unix timestamp at which the event happened",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
   "user_id" : "(optional, string) External ID of the user"
 }
 ```
@@ -10145,7 +10145,7 @@ Note that the conversion event is encoded in the `conversion_behavior` field, wh
     "message_variation_name" : "(optional, string) Name of the message variation",
     "send_id" : "(optional, string) Message send ID this message belongs to"
   },
-  "timestamp" : "(required, int) Unix timestamp at which the event happened",
+  "timestamp" : "(required, int) UNIX timestamp at which the event happened",
   "type" : "track",
   "userId" : "(required, string) External ID of the user"
 }
@@ -10187,11 +10187,11 @@ Note that the conversion event is encoded in the `conversion_behavior` field, wh
     "canvas_step_name" : "(optional, string) Name of the Canvas step",
     "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
     "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
-    "card_id" : "(optional, string) ID of the card this in app message comes from",
+    "card_id" : "(optional, string) ID of the card this in-app message comes from",
     "conversion_behavior" : "(optional, string) JSON-encoded string describing the conversion behavior",
     "conversion_behavior_index" : "(optional, int) Index of the conversion behavior"
   },
-  "time" : "(required, int) Unix timestamp at which the event happened",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
   "user" : {
     "device_id" : "(optional, string) ID of the device on which the event occurred",
     "external_user_id" : "(required, string) External ID of the user",
@@ -10223,7 +10223,7 @@ Note that the conversion event is encoded in the `conversion_behavior` field, wh
     "device_id" : "(optional, string) ID of the device on which the event occurred",
     "distinct_id" : "(required, string) External ID of the user",
     "$insert_id" : "(required, string) Globally unique ID for this event",
-    "time" : "(required, int) Unix timestamp at which the event happened",
+    "time" : "(required, int) UNIX timestamp at which the event happened",
     "token" : "(required, string) The Mixpanel API token"
   }
 }
@@ -10246,7 +10246,7 @@ Note that the conversion event is encoded in the `conversion_behavior` field, wh
   "conversion_behavior_index" : "(optional, int) Index of the conversion behavior",
   "external_user_id" : "(optional, string) External ID of the user",
   "id" : "(required, string) Globally unique ID for this event",
-  "time" : "(required, int) Unix timestamp at which the event happened",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
   "user_id" : "(required, string) BSON ID of the user who performed this event"
 }
@@ -10280,7 +10280,7 @@ Note that the conversion event is encoded in the `conversion_behavior` field, wh
         "custom_event_type" : "(required, string) The mParticle custom event type if the event_type is 'custom_event' (always 'other')",
         "event_name" : "(required, string) The event type name, as it is exported to mParticle",
         "source_message_id" : "(required, string) Globally unique ID for this event",
-        "timestamp_unixtime_ms" : "(required, int) Unix timestamp at which the event happened"
+        "timestamp_unixtime_ms" : "(required, int) UNIX timestamp at which the event happened"
       },
       "event_type" : "(required, string) mParticle event type (either 'uninstall' or 'custom_event')"
     }
@@ -10322,7 +10322,7 @@ Note that the conversion event is encoded in the `conversion_behavior` field, wh
   "event_type" : "(required, string) The event type name, as it is exported to Amplitude",
   "insert_id" : "(required, string) Globally unique ID for this event",
   "library" : "Braze",
-  "time" : "(required, int) Unix timestamp at which the event happened",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
   "user_id" : "(optional, string) External ID of the user"
 }
 ```
@@ -10352,7 +10352,7 @@ Note that the conversion event is encoded in the `conversion_behavior` field, wh
     "conversion_behavior_index" : "(optional, int) Index of the conversion behavior",
     "device_id" : "(optional, string) ID of the device on which the event occurred"
   },
-  "timestamp" : "(required, int) Unix timestamp at which the event happened",
+  "timestamp" : "(required, int) UNIX timestamp at which the event happened",
   "type" : "track",
   "userId" : "(required, string) External ID of the user"
 }
@@ -10389,10 +10389,10 @@ This event occurs when a user enters into the Canvas. This event tells you which
     "canvas_step_name" : "(optional, string) Name of the Canvas step",
     "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
     "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
-    "card_id" : "(optional, string) ID of the card this in app message comes from",
+    "card_id" : "(optional, string) ID of the card this in-app message comes from",
     "in_control_group" : "(required, boolean) Whether the user was enrolled in the control group"
   },
-  "time" : "(required, int) Unix timestamp at which the event happened",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
   "user" : {
     "device_id" : "(optional, string) ID of the device on which the event occurred",
     "external_user_id" : "(required, string) External ID of the user",
@@ -10422,7 +10422,7 @@ This event occurs when a user enters into the Canvas. This event tells you which
     "distinct_id" : "(required, string) External ID of the user",
     "$insert_id" : "(required, string) Globally unique ID for this event",
     "in_control_group" : "(required, boolean) Whether the user was enrolled in the control group",
-    "time" : "(required, int) Unix timestamp at which the event happened",
+    "time" : "(required, int) UNIX timestamp at which the event happened",
     "token" : "(required, string) The Mixpanel API token"
   }
 }
@@ -10443,7 +10443,7 @@ This event occurs when a user enters into the Canvas. This event tells you which
   "external_user_id" : "(optional, string) External ID of the user",
   "id" : "(required, string) Globally unique ID for this event",
   "in_control_group" : "(required, boolean) Whether the user was enrolled in the control group",
-  "time" : "(required, int) Unix timestamp at which the event happened",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
   "user_id" : "(required, string) BSON ID of the user who performed this event"
 }
@@ -10476,7 +10476,7 @@ This event occurs when a user enters into the Canvas. This event tells you which
         "custom_event_type" : "(required, string) The mParticle custom event type if the event_type is 'custom_event' (always 'other')",
         "event_name" : "(required, string) The event type name, as it is exported to mParticle",
         "source_message_id" : "(required, string) Globally unique ID for this event",
-        "timestamp_unixtime_ms" : "(required, int) Unix timestamp at which the event happened"
+        "timestamp_unixtime_ms" : "(required, int) UNIX timestamp at which the event happened"
       },
       "event_type" : "(required, string) mParticle event type (either 'uninstall' or 'custom_event')"
     }
@@ -10516,7 +10516,7 @@ This event occurs when a user enters into the Canvas. This event tells you which
   "event_type" : "(required, string) The event type name, as it is exported to Amplitude",
   "insert_id" : "(required, string) Globally unique ID for this event",
   "library" : "Braze",
-  "time" : "(required, int) Unix timestamp at which the event happened",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
   "user_id" : "(optional, string) External ID of the user"
 }
 ```
@@ -10544,7 +10544,7 @@ This event occurs when a user enters into the Canvas. This event tells you which
     "device_id" : "(optional, string) ID of the device on which the event occurred",
     "in_control_group" : "(required, boolean) Whether the user was enrolled in the control group"
   },
-  "timestamp" : "(required, int) Unix timestamp at which the event happened",
+  "timestamp" : "(required, int) UNIX timestamp at which the event happened",
   "type" : "track",
   "userId" : "(required, string) External ID of the user"
 }
@@ -10576,13 +10576,13 @@ This event occurs when a user is enrolled in a control variant set on a multi-va
     "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
     "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
     "campaign_name" : "(optional, string) Name of the campaign",
-    "card_id" : "(optional, string) ID of the card this in app message comes from",
+    "card_id" : "(optional, string) ID of the card this in-app message comes from",
     "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
     "send_id" : "(optional, string) Message send ID this message belongs to"
   },
-  "time" : "(required, int) Unix timestamp at which the event happened",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
   "user" : {
     "device_id" : "(optional, string) ID of the device on which the event occurred",
     "external_user_id" : "(required, string) External ID of the user",
@@ -10612,7 +10612,7 @@ This event occurs when a user is enrolled in a control variant set on a multi-va
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
     "send_id" : "(optional, string) Message send ID this message belongs to",
-    "time" : "(required, int) Unix timestamp at which the event happened",
+    "time" : "(required, int) UNIX timestamp at which the event happened",
     "token" : "(required, string) The Mixpanel API token"
   }
 }
@@ -10632,7 +10632,7 @@ This event occurs when a user is enrolled in a control variant set on a multi-va
   "message_variation_id" : "(optional, string) API ID of the message variation this user received",
   "message_variation_name" : "(optional, string) Name of the message variation",
   "send_id" : "(optional, string) Message send ID this message belongs to",
-  "time" : "(required, int) Unix timestamp at which the event happened",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
   "user_id" : "(required, string) BSON ID of the user who performed this event"
 }
@@ -10664,7 +10664,7 @@ This event occurs when a user is enrolled in a control variant set on a multi-va
         "custom_event_type" : "(required, string) The mParticle custom event type if the event_type is 'custom_event' (always 'other')",
         "event_name" : "(required, string) The event type name, as it is exported to mParticle",
         "source_message_id" : "(required, string) Globally unique ID for this event",
-        "timestamp_unixtime_ms" : "(required, int) Unix timestamp at which the event happened"
+        "timestamp_unixtime_ms" : "(required, int) UNIX timestamp at which the event happened"
       },
       "event_type" : "(required, string) mParticle event type (either 'uninstall' or 'custom_event')"
     }
@@ -10704,7 +10704,7 @@ This event occurs when a user is enrolled in a control variant set on a multi-va
   "event_type" : "(required, string) The event type name, as it is exported to Amplitude",
   "insert_id" : "(required, string) Globally unique ID for this event",
   "library" : "Braze",
-  "time" : "(required, int) Unix timestamp at which the event happened",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
   "user_id" : "(optional, string) External ID of the user"
 }
 ```
@@ -10732,7 +10732,7 @@ This event occurs when a user is enrolled in a control variant set on a multi-va
     "message_variation_name" : "(optional, string) Name of the message variation",
     "send_id" : "(optional, string) Message send ID this message belongs to"
   },
-  "timestamp" : "(required, int) Unix timestamp at which the event happened",
+  "timestamp" : "(required, int) UNIX timestamp at which the event happened",
   "type" : "track",
   "userId" : "(required, string) External ID of the user"
 }
@@ -10775,7 +10775,7 @@ Subscription groups are only available for email, SMS, and WhatsApp channels at 
     "canvas_step_name" : "(optional, string) Name of the Canvas step",
     "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
     "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
-    "card_id" : "(optional, string) ID of the card this in app message comes from",
+    "card_id" : "(optional, string) ID of the card this in-app message comes from",
     "channel" : "(optional, string) Channel this event belongs to",
     "email_address" : "(optional, string) Email address of the user",
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
@@ -10786,7 +10786,7 @@ Subscription groups are only available for email, SMS, and WhatsApp channels at 
     "subscription_group_id" : "(required, string) Subscription group API ID",
     "subscription_status" : "(required, string) Subscription status: 'Subscribed' or 'Unsubscribed'"
   },
-  "time" : "(required, int) Unix timestamp at which the event happened",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
   "user" : {
     "device_id" : "(optional, string) ID of the device on which the event occurred",
     "external_user_id" : "(required, string) External ID of the user",
@@ -10825,7 +10825,7 @@ Subscription groups are only available for email, SMS, and WhatsApp channels at 
     "state_change_source" : "(optional, string) Source of the state change, e.g: REST API, SDK, Dashboard, etc.",
     "subscription_group_id" : "(required, string) Subscription group API ID",
     "subscription_status" : "(required, string) Subscription status: 'Subscribed' or 'Unsubscribed'",
-    "time" : "(required, int) Unix timestamp at which the event happened",
+    "time" : "(required, int) UNIX timestamp at which the event happened",
     "token" : "(required, string) The Mixpanel API token"
   }
 }
@@ -10857,7 +10857,7 @@ Subscription groups are only available for email, SMS, and WhatsApp channels at 
   "state_change_source" : "(optional, string) Source of the state change, e.g: REST API, SDK, Dashboard, etc.",
   "subscription_group_id" : "(required, string) Subscription group API ID",
   "subscription_status" : "(required, string) Subscription status: 'Subscribed' or 'Unsubscribed'",
-  "time" : "(required, int) Unix timestamp at which the event happened",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
   "user_id" : "(required, string) BSON ID of the user who performed this event"
 }
@@ -10898,7 +10898,7 @@ Subscription groups are only available for email, SMS, and WhatsApp channels at 
         "custom_event_type" : "(required, string) The mParticle custom event type if the event_type is 'custom_event' (always 'other')",
         "event_name" : "(required, string) The event type name, as it is exported to mParticle",
         "source_message_id" : "(required, string) Globally unique ID for this event",
-        "timestamp_unixtime_ms" : "(required, int) Unix timestamp at which the event happened"
+        "timestamp_unixtime_ms" : "(required, int) UNIX timestamp at which the event happened"
       },
       "event_type" : "(required, string) mParticle event type (either 'uninstall' or 'custom_event')"
     }
@@ -10949,7 +10949,7 @@ Subscription groups are only available for email, SMS, and WhatsApp channels at 
   "event_type" : "(required, string) The event type name, as it is exported to Amplitude",
   "insert_id" : "(required, string) Globally unique ID for this event",
   "library" : "Braze",
-  "time" : "(required, int) Unix timestamp at which the event happened",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
   "user_id" : "(optional, string) External ID of the user"
 }
 ```
@@ -10987,7 +10987,7 @@ Subscription groups are only available for email, SMS, and WhatsApp channels at 
     "subscription_group_id" : "(required, string) Subscription group API ID",
     "subscription_status" : "(required, string) Subscription status: 'Subscribed' or 'Unsubscribed'"
   },
-  "timestamp" : "(required, int) Unix timestamp at which the event happened",
+  "timestamp" : "(required, int) UNIX timestamp at which the event happened",
   "type" : "track",
   "userId" : "(required, string) External ID of the user"
 }
@@ -11044,7 +11044,7 @@ This event occurs when Braze receives a request to update the global subscriptio
     "canvas_step_name" : "(optional, string) Name of the Canvas step",
     "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
     "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
-    "card_id" : "(optional, string) ID of the card this in app message comes from",
+    "card_id" : "(optional, string) ID of the card this in-app message comes from",
     "channel" : "(optional, string) Channel this event belongs to",
     "email_address" : "(optional, string) Email address of the user",
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
@@ -11053,7 +11053,7 @@ This event occurs when Braze receives a request to update the global subscriptio
     "state_change_source" : "(optional, string) Source of the state change, e.g: REST API, SDK, Dashboard, etc.",
     "subscription_status" : "(required, string) Subscription status: 'Subscribed' or 'Unsubscribed'"
   },
-  "time" : "(required, int) Unix timestamp at which the event happened",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
   "user" : {
     "external_user_id" : "(required, string) External ID of the user",
     "timezone" : "(optional, string) Time zone of the user",
@@ -11089,7 +11089,7 @@ This event occurs when Braze receives a request to update the global subscriptio
     "send_id" : "(optional, string) Message send ID this message belongs to",
     "state_change_source" : "(optional, string) Source of the state change, e.g: REST API, SDK, Dashboard, etc.",
     "subscription_status" : "(required, string) Subscription status: 'Subscribed' or 'Unsubscribed'",
-    "time" : "(required, int) Unix timestamp at which the event happened",
+    "time" : "(required, int) UNIX timestamp at which the event happened",
     "token" : "(required, string) The Mixpanel API token"
   }
 }
@@ -11119,7 +11119,7 @@ This event occurs when Braze receives a request to update the global subscriptio
   "send_id" : "(optional, string) Message send ID this message belongs to",
   "state_change_source" : "(optional, string) Source of the state change, e.g: REST API, SDK, Dashboard, etc.",
   "subscription_status" : "(required, string) Subscription status: 'Subscribed' or 'Unsubscribed'",
-  "time" : "(required, int) Unix timestamp at which the event happened",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
   "user_id" : "(required, string) BSON ID of the user who performed this event"
 }
@@ -11156,7 +11156,7 @@ This event occurs when Braze receives a request to update the global subscriptio
         "custom_event_type" : "(required, string) The mParticle custom event type if the event_type is 'custom_event' (always 'other')",
         "event_name" : "(required, string) The event type name, as it is exported to mParticle",
         "source_message_id" : "(required, string) Globally unique ID for this event",
-        "timestamp_unixtime_ms" : "(required, int) Unix timestamp at which the event happened"
+        "timestamp_unixtime_ms" : "(required, int) UNIX timestamp at which the event happened"
       },
       "event_type" : "(required, string) mParticle event type (either 'uninstall' or 'custom_event')"
     }
@@ -11205,7 +11205,7 @@ This event occurs when Braze receives a request to update the global subscriptio
   "event_type" : "(required, string) The event type name, as it is exported to Amplitude",
   "insert_id" : "(required, string) Globally unique ID for this event",
   "library" : "Braze",
-  "time" : "(required, int) Unix timestamp at which the event happened",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
   "user_id" : "(optional, string) External ID of the user"
 }
 ```
@@ -11241,7 +11241,7 @@ This event occurs when Braze receives a request to update the global subscriptio
     "state_change_source" : "(optional, string) Source of the state change, e.g: REST API, SDK, Dashboard, etc.",
     "subscription_status" : "(required, string) Subscription status: 'Subscribed' or 'Unsubscribed'"
   },
-  "timestamp" : "(required, int) Unix timestamp at which the event happened",
+  "timestamp" : "(required, int) UNIX timestamp at which the event happened",
   "type" : "track",
   "userId" : "(required, string) External ID of the user"
 }
@@ -11292,9 +11292,9 @@ This event is not fired when the user actually uninstalls the app, as that's imp
   "properties" : {
     "app_id" : "(optional, string) API ID of the app on which this event occurred",
     "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
-    "card_id" : "(optional, string) ID of the card this in app message comes from"
+    "card_id" : "(optional, string) ID of the card this in-app message comes from"
   },
-  "time" : "(required, int) Unix timestamp at which the event happened",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
   "user" : {
     "device_id" : "(optional, string) ID of the device on which the event occurred",
     "external_user_id" : "(required, string) External ID of the user",
@@ -11317,7 +11317,7 @@ This event is not fired when the user actually uninstalls the app, as that's imp
     "device_id" : "(optional, string) ID of the device on which the event occurred",
     "distinct_id" : "(required, string) External ID of the user",
     "$insert_id" : "(required, string) Globally unique ID for this event",
-    "time" : "(required, int) Unix timestamp at which the event happened",
+    "time" : "(required, int) UNIX timestamp at which the event happened",
     "token" : "(required, string) The Mixpanel API token"
   }
 }
@@ -11333,7 +11333,7 @@ This event is not fired when the user actually uninstalls the app, as that's imp
   "device_id" : "(optional, string) ID of the device on which the event occurred",
   "external_user_id" : "(optional, string) External ID of the user",
   "id" : "(required, string) Globally unique ID for this event",
-  "time" : "(required, int) Unix timestamp at which the event happened",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
   "user_id" : "(required, string) BSON ID of the user who performed this event"
 }
 ```
@@ -11357,7 +11357,7 @@ This event is not fired when the user actually uninstalls the app, as that's imp
           "device_id" : "(optional, string) ID of the device on which the event occurred"
         },
         "source_message_id" : "(required, string) Globally unique ID for this event",
-        "timestamp_unixtime_ms" : "(required, int) Unix timestamp at which the event happened"
+        "timestamp_unixtime_ms" : "(required, int) UNIX timestamp at which the event happened"
       },
       "event_type" : "(required, string) mParticle event type (either 'uninstall' or 'custom_event')"
     }
@@ -11391,7 +11391,7 @@ This event is not fired when the user actually uninstalls the app, as that's imp
   "event_type" : "(required, string) The event type name, as it is exported to Amplitude",
   "insert_id" : "(required, string) Globally unique ID for this event",
   "library" : "Braze",
-  "time" : "(required, int) Unix timestamp at which the event happened",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
   "user_id" : "(optional, string) External ID of the user"
 }
 ```
@@ -11413,7 +11413,7 @@ This event is not fired when the user actually uninstalls the app, as that's imp
     "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
     "device_id" : "(optional, string) ID of the device on which the event occurred"
   },
-  "timestamp" : "(required, int) Unix timestamp at which the event happened",
+  "timestamp" : "(required, int) UNIX timestamp at which the event happened",
   "type" : "track",
   "userId" : "(required, string) External ID of the user"
 }
