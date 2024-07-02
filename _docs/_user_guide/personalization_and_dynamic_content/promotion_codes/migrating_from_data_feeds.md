@@ -13,10 +13,16 @@ Data Feeds is being deprecated. Braze recommends that customers who use Data Fee
 
 > Migrating from Data Feeds to promotion codes is a straightforward process. This involves manually creating promotion code lists with the information from your Data Feeds and updating your message references accordingly.
 
-There are two main differences between the promotion codes and Data Feeds:
+## Features and functionality
 
-- You can use descriptions and expiration dates with promotion codes, not with Data Feeds.
-- You create promotion codes by uploading a CSV, whereas you create Data Feeds by pasting text.
+There are a few differences between promotion code lists and Data Feeds.
+
+| Feature          | Promotion codes | Data Feeds   |
+|------------------|-----------------|--------------|
+| Descriptions     | Yes             | No           |
+| Expiration Dates | Yes             | No           |
+| Creation Method  | Uploading a CSV | Pasting text |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 ## How to migrate
 
