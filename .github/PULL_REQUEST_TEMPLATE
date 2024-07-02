@@ -1,5 +1,5 @@
 <!--
-Thank you for contributing to Braze Docs! Read comments like this one to fill out your Pull Request (PR). For more information about contributing to Braze Docs, see:
+Thank you for contributing to Braze Docs! Read comments like this one to fill out your pull request (PR). For more information about contributing to Braze Docs, see:
 
 braze.com/docs/contributing/.
 -->
@@ -20,7 +20,7 @@ For Jira tickets, add the ticket number and a link to the ticket, like: [BD-NUMB
 - N/A
 
 ### Contributor checklist
-<!-- Once you've filled out the previous sections, select "Create Draft Pull Request", then review your PR before filling out the following checklist. -->
+<!-- After you've filled out the previous sections, select "Create Draft Pull Request", then review your PR before filling out the following checklist. -->
 - [ ] I confirm that my PR meets the following:
     - I signed the [Contribution License Agreement (CLA)](https://www.braze.com/docs/cla).
     - My style and voice follows the [Braze Style Guide](https://docs.google.com/document/u/2/d/e/2PACX-1vTluyDFO3ZEV7V6VvhXE4As_hSFwmnFFdU9g6_TrAYTgH1QmbRoEDDdn5GzKAB9vdBbIdyiFdoaJcNk/pub).
