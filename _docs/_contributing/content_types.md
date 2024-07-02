@@ -16,7 +16,7 @@ These are the content types you'll find on Braze Docs:
 | [Tutorials](#tutorials) | Help the user **acquire knowledge**. |
 | [References](#references) | Provide the user with **technical knowledge**. |
 | [Explanations](#explanations) | Broaden the user’s **contextual knowledge**. |
-| [Release notes](#release-notes) | $TODO: Add a description here. |
+| [Release notes](#release-notes) | Inform the user about product updates. |
 
 ## Using templates
 
