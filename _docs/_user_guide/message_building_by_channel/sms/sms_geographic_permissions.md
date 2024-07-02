@@ -1,26 +1,26 @@
 ---
 nav_title: "SMS Geographic Permissions"
 article_title: SMS Geographic Permissions
-description: "This article covers the country allowlist for SMS geographic permissions, which allows you to choose which countries SMS can be delivered to."
+description: "This article covers the country allowlist for SMS Geographic Permissions, which allows you to choose which countries SMS can be delivered to."
+page_order: 4.5
 page_type: reference
 channel:
   - SMS
-hidden: true
-permalink: "/sms_geographic_permissions/"
+alias: "/sms_geographic_permissions/"
   
 ---
 
-# SMS geographic permissions
+# SMS Geographic Permissions
 
-> SMS geographic permissions enhance security and protect against fraudulent SMS traffic by enforcing controls on the countries to which you can send SMS messages. 
+> SMS Geographic Permissions enhance security and protect against fraudulent SMS traffic by enforcing controls on the countries to which you can send SMS messages. You can specify an allowlist of countries to make sure that SMS messages are only sent to approved regions. Only admins can make changes to the country allowlist. Non-admin users have access to a read-only version of the allowlist that indicates which countries a subscription group is able to send to.
 
-You can specify an allowlist of countries to make sure that SMS messages are only sent to approved regions. Only admins can make changes to the country allowlist.
+![The read-only SMS Geographic Permissions section for a non-admin user with the United States and United Kingdom selected in the "Country allowlist".][6]{: style="max-width:80%;"}
 
 ## Configuring your SMS country allowlist
 
-The country allowlist is configured at the [Subscription Group]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_subscription_group/) level. You can access it by going to **Audience** > **Subscriptions** and selecting an SMS subscription group. The allowlist is under **SMS Geographic Permissions**.
+If you're an admin, you can configure the countries that are on the allowlist. The country allowlist is configured at the [subscription group]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_subscription_group/) level. You can access it by going to **Audience** > **Subscriptions** and selecting an SMS subscription group. The allowlist is under **SMS Geographic Permissions**.
 
-![The SMS Geographic Permissions section with Australia, Canada, and the United States selected in the "Country allowlist".][1]{: style="max-width:80%;"}
+![The editable SMS Geographic Permissions section for an admin with Australia, Canada, and the United States selected in the "Country allowlist".][1]{: style="max-width:80%;"}
 
 ### Selecting countries
 
@@ -35,7 +35,6 @@ Remove previously selected countries by clearing the respective boxes next to th
 Changes will take effect after you select **Save**. Removing countries from your allowlist will prevent all SMS and MMS messages from sending to numbers in those countries.
 
 ![Warning modal confirming the countries that will be deleted from the allowlist.][3]{: style="max-width:70%;"}
-
 
 ## High-risk countries
 
@@ -62,3 +61,4 @@ Aborted messages caused by blocked sends will show as `Abort_Type = "blocked_rec
 [3]: {% image_buster /assets/img/sms/delete_allowlist_warning.png %}
 [4]: {% image_buster /assets/img/sms/high_risk.png %}
 [5]: {% image_buster /assets/img/sms/abort_log.png %}
+[6]: {% image_buster /assets/img/sms/sms_geographic_permissions_read_only.png %}
