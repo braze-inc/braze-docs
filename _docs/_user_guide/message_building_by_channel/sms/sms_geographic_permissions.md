@@ -12,7 +12,7 @@ alias: "/sms_geographic_permissions/"
 
 # SMS Geographic Permissions
 
-> SMS Geographic Permissions enhance security and protect against fraudulent SMS traffic by enforcing controls on the countries to which you can send SMS messages. You can specify an allowlist of countries to make sure that SMS messages are only sent to approved regions. Only admins can make changes to the country allowlist. If you're a non-admin user, you'll have access to a read-only version of the allowlist that indicates which countries this subscription group is able to send to.
+> SMS Geographic Permissions enhance security and protect against fraudulent SMS traffic by enforcing controls on the countries to which you can send SMS messages. You can specify an allowlist of countries to make sure that SMS messages are only sent to approved regions. Only admins can make changes to the country allowlist. Non-admin users have access to a read-only version of the allowlist that indicates which countries a subscription group is able to send to.
 
 ![The read-only SMS Geographic Permissions section for a non-admin user with the United States and United Kingdom selected in the "Country allowlist".][6]{: style="max-width:80%;"}
 
