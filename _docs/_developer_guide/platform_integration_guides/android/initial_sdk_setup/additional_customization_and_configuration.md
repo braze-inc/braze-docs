@@ -53,6 +53,18 @@ To enable verbose logging in the `braze.xml`:
 <integer name="com_braze_logger_initial_log_level">2</integer>
 ```
 
+See the following list of available log levels:
+
+| Constants   | Value          | Description                                                              |
+|-------------|----------------|--------------------------------------------------------------------------|
+| `VERBOSE`   | 2              | Log the most detailed messages for debugging and development.            |
+| `DEBUG`     | 3              | Log descriptive messages for debugging and development.                  |
+| `INFO`      | 4              | Log informational messages for general highlights.                       |
+| `WARN`      | 5              | Log warning messages for identifying potentially harmful situations.     |
+| `ERROR`     | 6              | Log error messages for indicating application failure or serious issues. |
+| `ASSERT`    | 7              | Log assertion messages when conditions are false during development.     |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+
 Note that Braze log level integer constants correspond to Android log level integer constants as defined in [`android.util.log`][71].
 
 {% alert important %}
