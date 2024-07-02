@@ -101,7 +101,7 @@ This event occurs when an WhatsApp message sent made it successfully to the end-
     "device_id" : "(optional, string) ID of the device on which the event occurred",
     "external_user_id" : "(required, string) External ID of the user",
     "timezone" : "(optional, string) Time zone of the user",
-    "user_id": (required, string) Braze user ID of the user who performed this event"
+    "user_id" : "(required, string) Braze user ID of the user who performed this event"
   }
 }
 ```
@@ -166,7 +166,7 @@ This event occurs when an WhatsApp message sent made it successfully to the end-
   "time" : "(required, long) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
   "to_phone_number" : "(optional, string) Phone number of the user receiving the message in e.164 format (for example +14155552671)",
-  "user_id": (required, string) Braze user ID of the user who performed this event"
+  "user_id" : "(required, string) Braze user ID of the user who performed this event"
 }
 ```
 {% endtab %}
@@ -341,7 +341,7 @@ This event occurs when WhatsApp cannot deliver the message to the user. A hard b
     "device_id" : "(optional, string) ID of the device on which the event occurred",
     "external_user_id" : "(required, string) External ID of the user",
     "timezone" : "(optional, string) Time zone of the user",
-    "user_id": (required, string) Braze user ID of the user who performed this event"
+    "user_id" : "(required, string) Braze user ID of the user who performed this event"
   }
 }
 ```
@@ -410,7 +410,7 @@ This event occurs when WhatsApp cannot deliver the message to the user. A hard b
   "time" : "(required, long) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
   "to_phone_number" : "(optional, string) Phone number of the user receiving the message in e.164 format (for example +14155552671)",
-  "user_id": (required, string) Braze user ID of the user who performed this event"
+  "user_id" : "(required, string) Braze user ID of the user who performed this event"
 }
 ```
 {% endtab %}
@@ -590,7 +590,7 @@ This event occurs when a send request was successfully communicated between Braz
     "device_id" : "(optional, string) ID of the device on which the event occurred",
     "external_user_id" : "(required, string) External ID of the user",
     "timezone" : "(optional, string) Time zone of the user",
-    "user_id": (required, string) Braze user ID of the user who performed this event"
+    "user_id" : "(required, string) Braze user ID of the user who performed this event"
   }
 }
 ```
@@ -656,7 +656,7 @@ This event occurs when a send request was successfully communicated between Braz
   "time" : "(required, long) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
   "to_phone_number" : "(optional, string) Phone number of the user receiving the message in e.164 format (for example +14155552671)",
-  "user_id": (required, string) Braze user ID of the user who performed this event"
+  "user_id" : "(required, string) Braze user ID of the user who performed this event"
 }
 ```
 {% endtab %}
@@ -833,7 +833,7 @@ This event occurs if a WhatsApp message was aborted based on Liquid aborts, Quie
     "device_id" : "(optional, string) ID of the device on which the event occurred",
     "external_user_id" : "(required, string) External ID of the user",
     "timezone" : "(optional, string) Time zone of the user",
-    "user_id": (required, string) Braze user ID of the user who performed this event"
+    "user_id" : "(required, string) Braze user ID of the user who performed this event"
   }
 }
 ```
@@ -900,7 +900,7 @@ This event occurs if a WhatsApp message was aborted based on Liquid aborts, Quie
   "time" : "(required, long) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
   "to_phone_number" : "(optional, string) Phone number of the user receiving the message in e.164 format (for example +14155552671)",
-  "user_id": (required, string) Braze user ID of the user who performed this event"
+  "user_id" : "(required, string) Braze user ID of the user who performed this event"
 }
 ```
 {% endtab %}
@@ -1078,7 +1078,7 @@ This event occurs when one of your users sends a WhatsApp message to a phone num
     "device_id" : "(optional, string) ID of the device on which the event occurred",
     "external_user_id" : "(required, string) External ID of the user",
     "timezone" : "(optional, string) Time zone of the user",
-    "user_id": (required, string) Braze user ID of the user who performed this event"
+    "user_id" : "(required, string) Braze user ID of the user who performed this event"
   }
 }
 ```
@@ -1148,7 +1148,7 @@ This event occurs when one of your users sends a WhatsApp message to a phone num
   "subscription_group_id" : "(optional, string) Subscription group API ID",
   "time" : "(required, long) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
-  "user_id" : "(optional, string) BSON ID of the user who performed this event",
+  "user_id" : "(optional, string) Braze user ID of the user who performed this event",
   "user_phone_number" : "(required, string) The user's phone number from which the message was received"
 }
 ```
@@ -1330,7 +1330,7 @@ This event occurs if a Content Card message was aborted based on Liquid aborts, 
     "device_id" : "(optional, string) ID of the device on which the event occurred",
     "external_user_id" : "(required, string) External ID of the user",
     "timezone" : "(optional, string) Time zone of the user",
-    "user_id": (required, string) Braze user ID of the user who performed this event"
+    "user_id" : "(required, string) Braze user ID of the user who performed this event"
   }
 }
 ```
@@ -1395,7 +1395,7 @@ This event occurs if a Content Card message was aborted based on Liquid aborts, 
   "send_id" : "(optional, string) Message send ID this message belongs to",
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
-  "user_id": (required, string) Braze user ID of the user who performed this event"
+  "user_id" : "(required, string) Braze user ID of the user who performed this event"
 }
 ```
 {% endtab %}
@@ -1568,7 +1568,7 @@ This event occurs if an email message was aborted based on Liquid aborts, Quiet 
     "device_id" : "(optional, string) ID of the device on which the event occurred",
     "external_user_id" : "(required, string) External ID of the user",
     "timezone" : "(optional, string) Time zone of the user",
-    "user_id": (required, string) Braze user ID of the user who performed this event"
+    "user_id" : "(required, string) Braze user ID of the user who performed this event"
   }
 }
 ```
@@ -1637,7 +1637,7 @@ This event occurs if an email message was aborted based on Liquid aborts, Quiet 
   "send_id" : "(optional, string) Message send ID this message belongs to",
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
-  "user_id": (required, string) Braze user ID of the user who performed this event"
+  "user_id" : "(required, string) Braze user ID of the user who performed this event"
 }
 ```
 {% endtab %}
@@ -1817,7 +1817,7 @@ This event occurs if a push notification message was aborted based on Liquid abo
     "device_id" : "(optional, string) ID of the device on which the event occurred",
     "external_user_id" : "(required, string) External ID of the user",
     "timezone" : "(optional, string) Time zone of the user",
-    "user_id": (required, string) Braze user ID of the user who performed this event"
+    "user_id" : "(required, string) Braze user ID of the user who performed this event"
   }
 }
 ```
@@ -1886,7 +1886,7 @@ This event occurs if a push notification message was aborted based on Liquid abo
   "send_id" : "(optional, string) Message send ID this message belongs to",
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
-  "user_id": (required, string) Braze user ID of the user who performed this event"
+  "user_id" : "(required, string) Braze user ID of the user who performed this event"
 }
 ```
 {% endtab %}
@@ -2062,7 +2062,7 @@ This event occurs if an SMS message was aborted based on Liquid aborts, Quiet Ho
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "user" : {
     "external_user_id" : "(required, string) External ID of the user",
-    "user_id": (required, string) Braze user ID of the user who performed this event"
+    "user_id" : "(required, string) Braze user ID of the user who performed this event"
   }
 }
 ```
@@ -2122,7 +2122,7 @@ This event occurs if an SMS message was aborted based on Liquid aborts, Quiet Ho
   "message_variation_name" : "(optional, string) Name of the message variation",
   "subscription_group_id" : "(optional, string) Subscription group API ID",
   "time" : "(required, int) UNIX timestamp at which the event happened",
-  "user_id": (required, string) Braze user ID of the user who performed this event"
+  "user_id" : "(required, string) Braze user ID of the user who performed this event"
 }
 ```
 {% endtab %}
@@ -2285,7 +2285,7 @@ This event occurs if a webhook message was aborted based on Liquid aborts or Qui
     "device_id" : "(optional, string) ID of the device on which the event occurred",
     "external_user_id" : "(required, string) External ID of the user",
     "timezone" : "(optional, string) Time zone of the user",
-    "user_id": (required, string) Braze user ID of the user who performed this event"
+    "user_id" : "(required, string) Braze user ID of the user who performed this event"
   }
 }
 ```
@@ -2350,7 +2350,7 @@ This event occurs if a webhook message was aborted based on Liquid aborts or Qui
   "send_id" : "(optional, string) Message send ID this message belongs to",
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
-  "user_id": (required, string) Braze user ID of the user who performed this event"
+  "user_id" : "(required, string) Braze user ID of the user who performed this event"
 }
 ```
 {% endtab %}
@@ -2511,7 +2511,7 @@ This event occurs when a user has exited a Canvas by performing an event.
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "user" : {
     "external_user_id" : "(required, string) External ID of the user",
-    "user_id": (required, string) Braze user ID of the user who performed this event"
+    "user_id" : "(required, string) Braze user ID of the user who performed this event"
   }
 }
 ```
@@ -2560,7 +2560,7 @@ This event occurs when a user has exited a Canvas by performing an event.
   "external_user_id" : "(optional, string) External ID of the user",
   "id" : "(required, string) Globally unique ID for this event",
   "time" : "(required, int) UNIX timestamp at which the event happened",
-  "user_id": (required, string) Braze user ID of the user who performed this event"
+  "user_id" : "(required, string) Braze user ID of the user who performed this event"
 }
 ```
 {% endtab %}
@@ -2692,7 +2692,7 @@ This event occurs when a user has exited a Canvas by matching an audience.
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "user" : {
     "external_user_id" : "(required, string) External ID of the user",
-    "user_id": (required, string) Braze user ID of the user who performed this event"
+    "user_id" : "(required, string) Braze user ID of the user who performed this event"
   }
 }
 ```
@@ -2741,7 +2741,7 @@ This event occurs when a user has exited a Canvas by matching an audience.
   "external_user_id" : "(optional, string) External ID of the user",
   "id" : "(required, string) Globally unique ID for this event",
   "time" : "(required, int) UNIX timestamp at which the event happened",
-  "user_id": (required, string) Braze user ID of the user who performed this event"
+  "user_id" : "(required, string) Braze user ID of the user who performed this event"
 }
 ```
 {% endtab %}
@@ -2875,7 +2875,7 @@ This event occurs when a user enters a Canvas experiment step path.
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "user" : {
     "external_user_id" : "(required, string) External ID of the user",
-    "user_id": (required, string) Braze user ID of the user who performed this event"
+    "user_id" : "(required, string) Braze user ID of the user who performed this event"
   }
 }
 ```
@@ -2926,7 +2926,7 @@ This event occurs when a user enters a Canvas experiment step path.
   "id" : "(required, string) Globally unique ID for this event",
   "in_control_group" : "(required, boolean) Whether the user was enrolled in the control group",
   "time" : "(required, int) UNIX timestamp at which the event happened",
-  "user_id": (required, string) Braze user ID of the user who performed this event"
+  "user_id" : "(required, string) Braze user ID of the user who performed this event"
 }
 ```
 {% endtab %}
@@ -3072,7 +3072,7 @@ This event occurs when a user convert for a Canvas experiment step.
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "user" : {
     "external_user_id" : "(required, string) External ID of the user",
-    "user_id": (required, string) Braze user ID of the user who performed this event"
+    "user_id" : "(required, string) Braze user ID of the user who performed this event"
   }
 }
 ```
@@ -3127,7 +3127,7 @@ This event occurs when a user convert for a Canvas experiment step.
   "external_user_id" : "(optional, string) External ID of the user",
   "id" : "(required, string) Globally unique ID for this event",
   "time" : "(required, int) UNIX timestamp at which the event happened",
-  "user_id": (required, string) Braze user ID of the user who performed this event"
+  "user_id" : "(required, string) Braze user ID of the user who performed this event"
 }
 ```
 {% endtab %}
@@ -3287,7 +3287,7 @@ This event occurs when Braze processes a push message for a user, communicating 
     "device_id" : "(optional, string) ID of the device on which the event occurred",
     "external_user_id" : "(required, string) External ID of the user",
     "timezone" : "(optional, string) Time zone of the user",
-    "user_id": (required, string) Braze user ID of the user who performed this event"
+    "user_id" : "(required, string) Braze user ID of the user who performed this event"
   }
 }
 ```
@@ -3358,7 +3358,7 @@ This event occurs when Braze processes a push message for a user, communicating 
   "send_id" : "(optional, string) Message send ID this message belongs to",
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
-  "user_id": (required, string) Braze user ID of the user who performed this event"
+  "user_id" : "(required, string) Braze user ID of the user who performed this event"
 }
 ```
 {% endtab %}
@@ -3557,7 +3557,7 @@ This event occurs when a user directly clicks on the Push notification to open t
     "device_id" : "(optional, string) ID of the device on which the event occurred",
     "external_user_id" : "(required, string) External ID of the user",
     "timezone" : "(optional, string) Time zone of the user",
-    "user_id": (required, string) Braze user ID of the user who performed this event"
+    "user_id" : "(required, string) Braze user ID of the user who performed this event"
   }
 }
 ```
@@ -3633,7 +3633,7 @@ This event occurs when a user directly clicks on the Push notification to open t
   "send_id" : "(optional, string) Message send ID this message belongs to",
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
-  "user_id": (required, string) Braze user ID of the user who performed this event"
+  "user_id" : "(required, string) Braze user ID of the user who performed this event"
 }
 ```
 {% endtab %}
@@ -3830,7 +3830,7 @@ This event is not supported by our [Swift SDK](https://github.com/braze-inc/braz
     "device_id" : "(optional, string) ID of the device on which the event occurred",
     "external_user_id" : "(required, string) External ID of the user",
     "timezone" : "(optional, string) Time zone of the user",
-    "user_id": (required, string) Braze user ID of the user who performed this event"
+    "user_id" : "(required, string) Braze user ID of the user who performed this event"
   }
 }
 ```
@@ -3901,7 +3901,7 @@ This event is not supported by our [Swift SDK](https://github.com/braze-inc/braz
   "send_id" : "(optional, string) Message send ID this message belongs to",
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
-  "user_id": (required, string) Braze user ID of the user who performed this event"
+  "user_id" : "(required, string) Braze user ID of the user who performed this event"
 }
 ```
 {% endtab %}
@@ -4036,7 +4036,7 @@ This event occurs when an error is received from either Apple Push Notification 
     "device_id" : "(optional, string) ID of the device on which the event occurred",
     "external_user_id" : "(required, string) External ID of the user",
     "timezone" : "(optional, string) Time zone of the user",
-    "user_id": (required, string) Braze user ID of the user who performed this event"
+    "user_id" : "(required, string) Braze user ID of the user who performed this event"
   }
 }
 ```
@@ -4105,7 +4105,7 @@ This event occurs when an error is received from either Apple Push Notification 
   "send_id" : "(optional, string) Message send ID this message belongs to",
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
-  "user_id": (required, string) Braze user ID of the user who performed this event"
+  "user_id" : "(required, string) Braze user ID of the user who performed this event"
 }
 ```
 {% endtab %}
@@ -4293,7 +4293,7 @@ This event occurs when an email send request was successfully communicated betwe
     "device_id" : "(optional, string) ID of the device on which the event occurred",
     "external_user_id" : "(required, string) External ID of the user",
     "timezone" : "(optional, string) Time zone of the user",
-    "user_id": (required, string) Braze user ID of the user who performed this event"
+    "user_id" : "(required, string) Braze user ID of the user who performed this event"
   }
 }
 ```
@@ -4357,7 +4357,7 @@ This event occurs when an email send request was successfully communicated betwe
   "send_id" : "(optional, string) Message send ID this message belongs to",
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
-  "user_id": (required, string) Braze user ID of the user who performed this event"
+  "user_id" : "(required, string) Braze user ID of the user who performed this event"
 }
 ```
 {% endtab %}
@@ -4544,7 +4544,7 @@ This event occurs when an email sent made it successfully to the end-users inbox
     "device_id" : "(optional, string) ID of the device on which the event occurred",
     "external_user_id" : "(required, string) External ID of the user",
     "timezone" : "(optional, string) Time zone of the user",
-    "user_id": (required, string) Braze user ID of the user who performed this event"
+    "user_id" : "(required, string) Braze user ID of the user who performed this event"
   }
 }
 ```
@@ -4611,7 +4611,7 @@ This event occurs when an email sent made it successfully to the end-users inbox
   "sending_ip" : "(optional, string) IP address from which the email send was made",
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
-  "user_id": (required, string) Braze user ID of the user who performed this event"
+  "user_id" : "(required, string) Braze user ID of the user who performed this event"
 }
 ```
 {% endtab %}
@@ -4802,7 +4802,7 @@ This event occurs when a user opens an email. Multiple events may be generated f
     "device_id" : "(optional, string) ID of the device on which the event occurred",
     "external_user_id" : "(required, string) External ID of the user",
     "timezone" : "(optional, string) Time zone of the user",
-    "user_id": (required, string) Braze user ID of the user who performed this event"
+    "user_id" : "(required, string) Braze user ID of the user who performed this event"
   }
 }
 ```
@@ -4884,7 +4884,7 @@ This event occurs when a user opens an email. Multiple events may be generated f
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
   "user_agent" : "(optional, string) User agent on which the spam report occurred",
-  "user_id": (required, string) Braze user ID of the user who performed this event"
+  "user_id" : "(required, string) Braze user ID of the user who performed this event"
 }
 ```
 {% endtab %}
@@ -5102,7 +5102,7 @@ This event occurs when a user clicks an email. Multiple events may be generated 
     "device_id" : "(optional, string) ID of the device on which the event occurred",
     "external_user_id" : "(required, string) External ID of the user",
     "timezone" : "(optional, string) Time zone of the user",
-    "user_id": (required, string) Braze user ID of the user who performed this event"
+    "user_id" : "(required, string) Braze user ID of the user who performed this event"
   }
 }
 ```
@@ -5188,7 +5188,7 @@ This event occurs when a user clicks an email. Multiple events may be generated 
   "timezone" : "(optional, string) Time zone of the user",
   "url" : "(optional, string) URL that the user clicked on",
   "user_agent" : "(optional, string) User agent on which the spam report occurred",
-  "user_id": (required, string) Braze user ID of the user who performed this event"
+  "user_id" : "(required, string) Braze user ID of the user who performed this event"
 }
 ```
 {% endtab %}
@@ -5406,7 +5406,7 @@ This event occurs when an Internet Service Provider returns a hard bounce. A har
     "device_id" : "(optional, string) ID of the device on which the event occurred",
     "external_user_id" : "(required, string) External ID of the user",
     "timezone" : "(optional, string) Time zone of the user",
-    "user_id": (required, string) Braze user ID of the user who performed this event"
+    "user_id" : "(required, string) Braze user ID of the user who performed this event"
   }
 }
 ```
@@ -5477,7 +5477,7 @@ This event occurs when an Internet Service Provider returns a hard bounce. A har
   "sending_ip" : "(optional, string) IP address from which the email send was made",
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
-  "user_id": (required, string) Braze user ID of the user who performed this event"
+  "user_id" : "(required, string) Braze user ID of the user who performed this event"
 }
 ```
 {% endtab %}
@@ -5668,7 +5668,7 @@ This event occurs when an Internet Service Provider returns a soft bounce. A sof
     "device_id" : "(optional, string) ID of the device on which the event occurred",
     "external_user_id" : "(required, string) External ID of the user",
     "timezone" : "(optional, string) Time zone of the user",
-    "user_id": (required, string) Braze user ID of the user who performed this event"
+    "user_id" : "(required, string) Braze user ID of the user who performed this event"
   }
 }
 ```
@@ -5737,7 +5737,7 @@ This event occurs when an Internet Service Provider returns a soft bounce. A sof
   "sending_ip" : "(optional, string) IP address from which the email send was made",
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
-  "user_id": (required, string) Braze user ID of the user who performed this event"
+  "user_id" : "(required, string) Braze user ID of the user who performed this event"
 }
 ```
 {% endtab %}
@@ -5924,7 +5924,7 @@ This event occurs when the end-user hits the "spam" button on the email. Note th
     "device_id" : "(optional, string) ID of the device on which the event occurred",
     "external_user_id" : "(required, string) External ID of the user",
     "timezone" : "(optional, string) Time zone of the user",
-    "user_id": (required, string) Braze user ID of the user who performed this event"
+    "user_id" : "(required, string) Braze user ID of the user who performed this event"
   }
 }
 ```
@@ -5992,7 +5992,7 @@ This event occurs when the end-user hits the "spam" button on the email. Note th
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
   "user_agent" : "(optional, string) User agent on which the spam report occurred",
-  "user_id": (required, string) Braze user ID of the user who performed this event"
+  "user_id" : "(required, string) Braze user ID of the user who performed this event"
 }
 ```
 {% endtab %}
@@ -6181,7 +6181,7 @@ The `Unsubscribe` event is actually a specialized click event that is fired when
     "device_id" : "(optional, string) ID of the device on which the event occurred",
     "external_user_id" : "(required, string) External ID of the user",
     "timezone" : "(optional, string) Time zone of the user",
-    "user_id": (required, string) Braze user ID of the user who performed this event"
+    "user_id" : "(required, string) Braze user ID of the user who performed this event"
   }
 }
 ```
@@ -6243,7 +6243,7 @@ The `Unsubscribe` event is actually a specialized click event that is fired when
   "send_id" : "(optional, string) Message send ID this message belongs to",
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
-  "user_id": (required, string) Braze user ID of the user who performed this event"
+  "user_id" : "(required, string) Braze user ID of the user who performed this event"
 }
 ```
 {% endtab %}
@@ -6424,7 +6424,7 @@ This event occurs when a user views an in-app message.
     "device_id" : "(optional, string) ID of the device on which the event occurred",
     "external_user_id" : "(required, string) External ID of the user",
     "timezone" : "(optional, string) Time zone of the user",
-    "user_id": (required, string) Braze user ID of the user who performed this event"
+    "user_id" : "(required, string) Braze user ID of the user who performed this event"
   }
 }
 ```
@@ -6500,7 +6500,7 @@ This event occurs when a user views an in-app message.
   "send_id" : "(optional, string) Message send ID this message belongs to",
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
-  "user_id": (required, string) Braze user ID of the user who performed this event"
+  "user_id" : "(required, string) Braze user ID of the user who performed this event"
 }
 ```
 {% endtab %}
@@ -6709,7 +6709,7 @@ This event occurs when a user clicks on an in-app message.
     "device_id" : "(optional, string) ID of the device on which the event occurred",
     "external_user_id" : "(required, string) External ID of the user",
     "timezone" : "(optional, string) Time zone of the user",
-    "user_id": (required, string) Braze user ID of the user who performed this event"
+    "user_id" : "(required, string) Braze user ID of the user who performed this event"
   }
 }
 ```
@@ -6785,7 +6785,7 @@ This event occurs when a user clicks on an in-app message.
   "send_id" : "(optional, string) Message send ID this message belongs to",
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
-  "user_id": (required, string) Braze user ID of the user who performed this event"
+  "user_id" : "(required, string) Braze user ID of the user who performed this event"
 }
 ```
 {% endtab %}
@@ -6984,7 +6984,7 @@ This event occurs when a webhook was processed and sent to the third party speci
     "device_id" : "(optional, string) ID of the device on which the event occurred",
     "external_user_id" : "(required, string) External ID of the user",
     "timezone" : "(optional, string) Time zone of the user",
-    "user_id": (required, string) Braze user ID of the user who performed this event"
+    "user_id" : "(required, string) Braze user ID of the user who performed this event"
   }
 }
 ```
@@ -7043,7 +7043,7 @@ This event occurs when a webhook was processed and sent to the third party speci
   "send_id" : "(optional, string) Message send ID this message belongs to",
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
-  "user_id": (required, string) Braze user ID of the user who performed this event"
+  "user_id" : "(required, string) Braze user ID of the user who performed this event"
 }
 ```
 {% endtab %}
@@ -7214,7 +7214,7 @@ This event occurs when a Content Card gets sent to a user.
     "device_id" : "(optional, string) ID of the device on which the event occurred",
     "external_user_id" : "(required, string) External ID of the user",
     "timezone" : "(optional, string) Time zone of the user",
-    "user_id": (required, string) Braze user ID of the user who performed this event"
+    "user_id" : "(required, string) Braze user ID of the user who performed this event"
   }
 }
 ```
@@ -7276,7 +7276,7 @@ This event occurs when a Content Card gets sent to a user.
   "send_id" : "(optional, string) Message send ID this message belongs to",
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
-  "user_id": (required, string) Braze user ID of the user who performed this event"
+  "user_id" : "(required, string) Braze user ID of the user who performed this event"
 }
 ```
 {% endtab %}
@@ -7455,7 +7455,7 @@ This event occurs when a user views a Content Card.
     "device_id" : "(optional, string) ID of the device on which the event occurred",
     "external_user_id" : "(required, string) External ID of the user",
     "timezone" : "(optional, string) Time zone of the user",
-    "user_id": (required, string) Braze user ID of the user who performed this event"
+    "user_id" : "(required, string) Braze user ID of the user who performed this event"
   }
 }
 ```
@@ -7529,7 +7529,7 @@ This event occurs when a user views a Content Card.
   "send_id" : "(optional, string) Message send ID this message belongs to",
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
-  "user_id": (required, string) Braze user ID of the user who performed this event"
+  "user_id" : "(required, string) Braze user ID of the user who performed this event"
 }
 ```
 {% endtab %}
@@ -7730,7 +7730,7 @@ This event occurs when a user clicks a Content Card.
     "device_id" : "(optional, string) ID of the device on which the event occurred",
     "external_user_id" : "(required, string) External ID of the user",
     "timezone" : "(optional, string) Time zone of the user",
-    "user_id": (required, string) Braze user ID of the user who performed this event"
+    "user_id" : "(required, string) Braze user ID of the user who performed this event"
   }
 }
 ```
@@ -7804,7 +7804,7 @@ This event occurs when a user clicks a Content Card.
   "send_id" : "(optional, string) Message send ID this message belongs to",
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
-  "user_id": (required, string) Braze user ID of the user who performed this event"
+  "user_id" : "(required, string) Braze user ID of the user who performed this event"
 }
 ```
 {% endtab %}
@@ -8006,7 +8006,7 @@ This event occurs when a user dismisses a Content Card.
     "device_id" : "(optional, string) ID of the device on which the event occurred",
     "external_user_id" : "(required, string) External ID of the user",
     "timezone" : "(optional, string) Time zone of the user",
-    "user_id": (required, string) Braze user ID of the user who performed this event"
+    "user_id" : "(required, string) Braze user ID of the user who performed this event"
   }
 }
 ```
@@ -8080,7 +8080,7 @@ This event occurs when a user dismisses a Content Card.
   "send_id" : "(optional, string) Message send ID this message belongs to",
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
-  "user_id": (required, string) Braze user ID of the user who performed this event"
+  "user_id" : "(required, string) Braze user ID of the user who performed this event"
 }
 ```
 {% endtab %}
@@ -8277,7 +8277,7 @@ This event occurs when a user clicks an SMS short link.
     "device_id" : "(optional, string) ID of the device on which the event occurred",
     "external_user_id" : "(required, string) External ID of the user",
     "timezone" : "(optional, string) Time zone of the user",
-    "user_id": (required, string) Braze user ID of the user who performed this event"
+    "user_id" : "(required, string) Braze user ID of the user who performed this event"
   }
 }
 ```
@@ -8339,7 +8339,7 @@ This event occurs when a user clicks an SMS short link.
   "timezone" : "(optional, string) Time zone of the user",
   "url" : "(required, string) URL that the user clicked on",
   "user_agent" : "(optional, string) User agent on which the spam report occurred",
-  "user_id": (required, string) Braze user ID of the user who performed this event",
+  "user_id" : "(required, string) Braze user ID of the user who performed this event",
   "user_phone_number" : "(optional, string) The user's phone number from which the message was received"
 }
 ```
@@ -8514,7 +8514,7 @@ This event occurs when a user sends an SMS.
     "device_id" : "(optional, string) ID of the device on which the event occurred",
     "external_user_id" : "(required, string) External ID of the user",
     "timezone" : "(optional, string) Time zone of the user",
-    "user_id": (required, string) Braze user ID of the user who performed this event"
+    "user_id" : "(required, string) Braze user ID of the user who performed this event"
   }
 }
 ```
@@ -8580,7 +8580,7 @@ This event occurs when a user sends an SMS.
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
   "to_phone_number" : "(optional, string) Phone number of the user receiving the message in e.164 format (for example +14155552671)",
-  "user_id": (required, string) Braze user ID of the user who performed this event"
+  "user_id" : "(required, string) Braze user ID of the user who performed this event"
 }
 ```
 {% endtab %}
@@ -8767,7 +8767,7 @@ This event occurs when an SMS is sent to the carrier.
     "device_id" : "(optional, string) ID of the device on which the event occurred",
     "external_user_id" : "(required, string) External ID of the user",
     "timezone" : "(optional, string) Time zone of the user",
-    "user_id": (required, string) Braze user ID of the user who performed this event"
+    "user_id" : "(required, string) Braze user ID of the user who performed this event"
   }
 }
 ```
@@ -8831,7 +8831,7 @@ This event occurs when an SMS is sent to the carrier.
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
   "to_phone_number" : "(optional, string) Phone number of the user receiving the message in e.164 format (for example +14155552671)",
-  "user_id": (required, string) Braze user ID of the user who performed this event"
+  "user_id" : "(required, string) Braze user ID of the user who performed this event"
 }
 ```
 {% endtab %}
@@ -9008,7 +9008,7 @@ This event occurs when an SMS was successfully delivered to the users mobile pho
     "device_id" : "(optional, string) ID of the device on which the event occurred",
     "external_user_id" : "(required, string) External ID of the user",
     "timezone" : "(optional, string) Time zone of the user",
-    "user_id": (required, string) Braze user ID of the user who performed this event"
+    "user_id" : "(required, string) Braze user ID of the user who performed this event"
   }
 }
 ```
@@ -9072,7 +9072,7 @@ This event occurs when an SMS was successfully delivered to the users mobile pho
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
   "to_phone_number" : "(optional, string) Phone number of the user receiving the message in e.164 format (for example +14155552671)",
-  "user_id": (required, string) Braze user ID of the user who performed this event"
+  "user_id" : "(required, string) Braze user ID of the user who performed this event"
 }
 ```
 {% endtab %}
@@ -9251,7 +9251,7 @@ This event occurs when an SMS send gets rejected by the carrier, this can happen
     "device_id" : "(optional, string) ID of the device on which the event occurred",
     "external_user_id" : "(required, string) External ID of the user",
     "timezone" : "(optional, string) Time zone of the user",
-    "user_id": (required, string) Braze user ID of the user who performed this event"
+    "user_id" : "(required, string) Braze user ID of the user who performed this event"
   }
 }
 ```
@@ -9319,7 +9319,7 @@ This event occurs when an SMS send gets rejected by the carrier, this can happen
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
   "to_phone_number" : "(optional, string) Phone number of the user receiving the message in e.164 format (for example +14155552671)",
-  "user_id": (required, string) Braze user ID of the user who performed this event"
+  "user_id" : "(required, string) Braze user ID of the user who performed this event"
 }
 ```
 {% endtab %}
@@ -9504,7 +9504,7 @@ This event occurs when an SMS experiences delivery failure. Use this event and t
     "device_id" : "(optional, string) ID of the device on which the event occurred",
     "external_user_id" : "(required, string) External ID of the user",
     "timezone" : "(optional, string) Time zone of the user",
-    "user_id": (required, string) Braze user ID of the user who performed this event"
+    "user_id" : "(required, string) Braze user ID of the user who performed this event"
   }
 }
 ```
@@ -9570,7 +9570,7 @@ This event occurs when an SMS experiences delivery failure. Use this event and t
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
   "to_phone_number" : "(optional, string) Phone number of the user receiving the message in e.164 format (for example +14155552671)",
-  "user_id": (required, string) Braze user ID of the user who performed this event"
+  "user_id" : "(required, string) Braze user ID of the user who performed this event"
 }
 ```
 {% endtab %}
@@ -9752,7 +9752,7 @@ If we detect that this inbound message is a reply to an outbound campaign or Can
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "user" : {
     "external_user_id" : "(required, string) External ID of the user",
-    "user_id": (required, string) Braze user ID of the user who performed this event"
+    "user_id" : "(required, string) Braze user ID of the user who performed this event"
   }
 }
 ```
@@ -9816,7 +9816,7 @@ If we detect that this inbound message is a reply to an outbound campaign or Can
   "message_variation_name" : "(optional, string) Name of the message variation",
   "subscription_group_id" : "(optional, string) BSON ID of subscription group",
   "time" : "(required, int) UNIX timestamp at which the event happened",
-  "user_id" : "(optional, string) BSON ID of the user who performed this event",
+  "user_id" : "(optional, string) Braze user ID of the user who performed this event",
   "user_phone_number" : "(required, string) The user's phone number from which the message was received"
 }
 ```
@@ -9990,7 +9990,7 @@ Note that the conversion event is encoded in the `conversion_behavior` field, wh
     "device_id" : "(optional, string) ID of the device on which the event occurred",
     "external_user_id" : "(required, string) External ID of the user",
     "timezone" : "(optional, string) Time zone of the user",
-    "user_id": (required, string) Braze user ID of the user who performed this event"
+    "user_id" : "(required, string) Braze user ID of the user who performed this event"
   }
 }
 ```
@@ -10041,7 +10041,7 @@ Note that the conversion event is encoded in the `conversion_behavior` field, wh
   "send_id" : "(optional, string) Message send ID this message belongs to",
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
-  "user_id": (required, string) Braze user ID of the user who performed this event"
+  "user_id" : "(required, string) Braze user ID of the user who performed this event"
 }
 ```
 {% endtab %}
@@ -10196,7 +10196,7 @@ Note that the conversion event is encoded in the `conversion_behavior` field, wh
     "device_id" : "(optional, string) ID of the device on which the event occurred",
     "external_user_id" : "(required, string) External ID of the user",
     "timezone" : "(optional, string) Time zone of the user",
-    "user_id": (required, string) Braze user ID of the user who performed this event"
+    "user_id" : "(required, string) Braze user ID of the user who performed this event"
   }
 }
 ```
@@ -10248,7 +10248,7 @@ Note that the conversion event is encoded in the `conversion_behavior` field, wh
   "id" : "(required, string) Globally unique ID for this event",
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
-  "user_id": (required, string) Braze user ID of the user who performed this event"
+  "user_id" : "(required, string) Braze user ID of the user who performed this event"
 }
 ```
 {% endtab %}
@@ -10397,7 +10397,7 @@ This event occurs when a user enters into the Canvas. This event tells you which
     "device_id" : "(optional, string) ID of the device on which the event occurred",
     "external_user_id" : "(required, string) External ID of the user",
     "timezone" : "(optional, string) Time zone of the user",
-    "user_id": (required, string) Braze user ID of the user who performed this event"
+    "user_id" : "(required, string) Braze user ID of the user who performed this event"
   }
 }
 ```
@@ -10445,7 +10445,7 @@ This event occurs when a user enters into the Canvas. This event tells you which
   "in_control_group" : "(required, boolean) Whether the user was enrolled in the control group",
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
-  "user_id": (required, string) Braze user ID of the user who performed this event"
+  "user_id" : "(required, string) Braze user ID of the user who performed this event"
 }
 ```
 {% endtab %}
@@ -10587,7 +10587,7 @@ This event occurs when a user is enrolled in a control variant set on a multi-va
     "device_id" : "(optional, string) ID of the device on which the event occurred",
     "external_user_id" : "(required, string) External ID of the user",
     "timezone" : "(optional, string) Time zone of the user",
-    "user_id": (required, string) Braze user ID of the user who performed this event"
+    "user_id" : "(required, string) Braze user ID of the user who performed this event"
   }
 }
 ```
@@ -10634,7 +10634,7 @@ This event occurs when a user is enrolled in a control variant set on a multi-va
   "send_id" : "(optional, string) Message send ID this message belongs to",
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
-  "user_id": (required, string) Braze user ID of the user who performed this event"
+  "user_id" : "(required, string) Braze user ID of the user who performed this event"
 }
 ```
 {% endtab %}
@@ -10791,7 +10791,7 @@ Subscription groups are only available for email, SMS, and WhatsApp channels at 
     "device_id" : "(optional, string) ID of the device on which the event occurred",
     "external_user_id" : "(required, string) External ID of the user",
     "timezone" : "(optional, string) Time zone of the user",
-    "user_id": (required, string) Braze user ID of the user who performed this event"
+    "user_id" : "(required, string) Braze user ID of the user who performed this event"
   }
 }
 ```
@@ -10859,7 +10859,7 @@ Subscription groups are only available for email, SMS, and WhatsApp channels at 
   "subscription_status" : "(required, string) Subscription status: 'Subscribed' or 'Unsubscribed'",
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
-  "user_id": (required, string) Braze user ID of the user who performed this event"
+  "user_id" : "(required, string) Braze user ID of the user who performed this event"
 }
 ```
 {% endtab %}
@@ -11057,7 +11057,7 @@ This event occurs when Braze receives a request to update the global subscriptio
   "user" : {
     "external_user_id" : "(required, string) External ID of the user",
     "timezone" : "(optional, string) Time zone of the user",
-    "user_id": (required, string) Braze user ID of the user who performed this event"
+    "user_id" : "(required, string) Braze user ID of the user who performed this event"
   }
 }
 ```
@@ -11121,7 +11121,7 @@ This event occurs when Braze receives a request to update the global subscriptio
   "subscription_status" : "(required, string) Subscription status: 'Subscribed' or 'Unsubscribed'",
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
-  "user_id": (required, string) Braze user ID of the user who performed this event"
+  "user_id" : "(required, string) Braze user ID of the user who performed this event"
 }
 ```
 {% endtab %}
@@ -11298,7 +11298,7 @@ This event is not fired when the user actually uninstalls the app, as that's imp
   "user" : {
     "device_id" : "(optional, string) ID of the device on which the event occurred",
     "external_user_id" : "(required, string) External ID of the user",
-    "user_id": (required, string) Braze user ID of the user who performed this event"
+    "user_id" : "(required, string) Braze user ID of the user who performed this event"
   }
 }
 ```
@@ -11334,7 +11334,7 @@ This event is not fired when the user actually uninstalls the app, as that's imp
   "external_user_id" : "(optional, string) External ID of the user",
   "id" : "(required, string) Globally unique ID for this event",
   "time" : "(required, int) UNIX timestamp at which the event happened",
-  "user_id": (required, string) Braze user ID of the user who performed this event"
+  "user_id" : "(required, string) Braze user ID of the user who performed this event"
 }
 ```
 {% endtab %}
