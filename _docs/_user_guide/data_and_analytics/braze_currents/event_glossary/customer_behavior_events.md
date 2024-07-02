@@ -66,13 +66,13 @@ This event occurs when a specific custom event is triggered. Use this to track w
     "ad_tracking_enabled" : "(optional, boolean) Whether advertising tracking is enabled for the device",
     "app_id" : "(optional, string) API ID of the app on which this event occurred",
     "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
-    "card_id" : "(optional, string) ID of the card this in app message comes from",
+    "card_id" : "(optional, string) ID of the card this in-app message comes from",
     "device_model" : "(optional, string) Model of the device",
     "name" : "(required, string) Name of the custom event",
     "os_version" : "(optional, string) Version of the operating system of the device",
     "platform" : "(optional, string) Platform of the device"
   },
-  "time" : "(required, int) Unix timestamp at which the event happened",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
   "user" : {
     "device_id" : "(optional, string) ID of the device on which the event occurred",
     "external_user_id" : "(required, string) External ID of the user",
@@ -102,7 +102,7 @@ This event occurs when a specific custom event is triggered. Use this to track w
     "$insert_id" : "(required, string) Globally unique ID for this event",
     "$os" : "(optional, string) Version of the operating system of the device",
     "platform" : "(optional, string) Platform of the device",
-    "time" : "(required, int) Unix timestamp at which the event happened",
+    "time" : "(required, int) UNIX timestamp at which the event happened",
     "token" : "(required, string) The Mixpanel API token"
   }
 }
@@ -126,7 +126,7 @@ This event occurs when a specific custom event is triggered. Use this to track w
   "os_version" : "(optional, string) Version of the operating system of the device",
   "platform" : "(optional, string) Platform of the device",
   "properties" : "(required, string) Custom properties stored as a JSON encoded string",
-  "time" : "(required, int) Unix timestamp at which the event happened",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
   "user_id" : "(required, string) BSON ID of the user who performed this event"
 }
@@ -154,7 +154,7 @@ This event occurs when a specific custom event is triggered. Use this to track w
   "idfa" : "(optional, string) Advertising identifier",
   "insert_id" : "(required, string) Globally unique ID for this event",
   "library" : "Braze",
-  "time" : "(required, int) Unix timestamp at which the event happened",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
   "user_id" : "(optional, string) External ID of the user"
 }
 ```
@@ -194,7 +194,7 @@ Purchases are special custom events and come with a JSON encoded string of custo
     "ad_tracking_enabled" : "(optional, boolean) Whether advertising tracking is enabled for the device",
     "app_id" : "(optional, string) API ID of the app on which this event occurred",
     "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
-    "card_id" : "(optional, string) ID of the card this in app message comes from",
+    "card_id" : "(optional, string) ID of the card this in-app message comes from",
     "currency" : "(required, string) Currency of the purchase",
     "device_model" : "(optional, string) Model of the device",
     "os_version" : "(optional, string) Version of the operating system of the device",
@@ -202,7 +202,7 @@ Purchases are special custom events and come with a JSON encoded string of custo
     "price" : "(required, float) Price of the purchase",
     "product_id" : "(required, string) ID of the product purchased"
   },
-  "time" : "(required, int) Unix timestamp at which the event happened",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
   "user" : {
     "device_id" : "(optional, string) ID of the device on which the event occurred",
     "external_user_id" : "(required, string) External ID of the user",
@@ -234,7 +234,7 @@ Purchases are special custom events and come with a JSON encoded string of custo
     "platform" : "(optional, string) Platform of the device",
     "price" : "(required, float) Price of the purchase",
     "product_id" : "(required, string) ID of the product purchased",
-    "time" : "(required, int) Unix timestamp at which the event happened",
+    "time" : "(required, int) UNIX timestamp at which the event happened",
     "token" : "(required, string) The Mixpanel API token"
   }
 }
@@ -260,7 +260,7 @@ Purchases are special custom events and come with a JSON encoded string of custo
   "price" : "(required, float) Price of the purchase",
   "product_id" : "(required, string) ID of the product purchased",
   "properties" : "(required, string) Custom properties stored as a JSON encoded string",
-  "time" : "(required, int) Unix timestamp at which the event happened",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
   "user_id" : "(required, string) BSON ID of the user who performed this event"
 }
 ```
@@ -290,7 +290,7 @@ Purchases are special custom events and come with a JSON encoded string of custo
   "library" : "Braze",
   "price" : "(required, float) Price of the purchase",
   "productId" : "(required, string) ID of the product purchased",
-  "time" : "(required, int) Unix timestamp at which the event happened",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
   "user_id" : "(optional, string) External ID of the user"
 }
 ```
@@ -328,13 +328,13 @@ When a user starts their first session, both a `FirstSession` and a `SessionStar
   "properties" : {
     "app_id" : "(optional, string) API ID of the app on which this event occurred",
     "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
-    "card_id" : "(optional, string) ID of the card this in app message comes from",
+    "card_id" : "(optional, string) ID of the card this in-app message comes from",
     "device_model" : "(optional, string) Model of the device",
     "os_version" : "(optional, string) Version of the operating system of the device",
     "platform" : "(optional, string) Platform of the device",
     "session_id" : "(optional, string) UUID of the session"
   },
-  "time" : "(required, int) Unix timestamp at which the event happened",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
   "user" : {
     "device_id" : "(optional, string) ID of the device on which the event occurred",
     "external_user_id" : "(required, string) External ID of the user",
@@ -362,7 +362,7 @@ When a user starts their first session, both a `FirstSession` and a `SessionStar
     "$os" : "(optional, string) Version of the operating system of the device",
     "platform" : "(optional, string) Platform of the device",
     "session_id" : "(optional, string) UUID of the session",
-    "time" : "(required, int) Unix timestamp at which the event happened",
+    "time" : "(required, int) UNIX timestamp at which the event happened",
     "token" : "(required, string) The Mixpanel API token"
   }
 }
@@ -386,7 +386,7 @@ When a user starts their first session, both a `FirstSession` and a `SessionStar
   "platform" : "(optional, string) Platform of the device",
   "sdk_version" : "(optional, string) Version of the Braze SDK in use during the event",
   "session_id" : "(required, string) UUID of the session",
-  "time" : "(required, int) Unix timestamp at which the event happened",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
   "user_id" : "(required, string) BSON ID of the user who performed this event"
 }
@@ -410,7 +410,7 @@ When a user starts their first session, both a `FirstSession` and a `SessionStar
   "event_type" : "(required, string) The event type name, as it is exported to Amplitude",
   "insert_id" : "(required, string) Globally unique ID for this event",
   "library" : "Braze",
-  "time" : "(required, int) Unix timestamp at which the event happened",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
   "user_id" : "(optional, string) External ID of the user"
 }
 ```
@@ -444,13 +444,13 @@ When a user starts their first session, both a `FirstSession` and a `SessionStar
   "properties" : {
     "app_id" : "(optional, string) API ID of the app on which this event occurred",
     "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
-    "card_id" : "(optional, string) ID of the card this in app message comes from",
+    "card_id" : "(optional, string) ID of the card this in-app message comes from",
     "device_model" : "(optional, string) Model of the device",
     "os_version" : "(optional, string) Version of the operating system of the device",
     "platform" : "(optional, string) Platform of the device",
     "session_id" : "(optional, string) UUID of the session"
   },
-  "time" : "(required, int) Unix timestamp at which the event happened",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
   "user" : {
     "device_id" : "(optional, string) ID of the device on which the event occurred",
     "external_user_id" : "(required, string) External ID of the user",
@@ -477,7 +477,7 @@ When a user starts their first session, both a `FirstSession` and a `SessionStar
     "$os" : "(optional, string) Version of the operating system of the device",
     "platform" : "(optional, string) Platform of the device",
     "session_id" : "(optional, string) UUID of the session",
-    "time" : "(required, int) Unix timestamp at which the event happened",
+    "time" : "(required, int) UNIX timestamp at which the event happened",
     "token" : "(required, string) The Mixpanel API token"
   }
 }
@@ -497,7 +497,7 @@ When a user starts their first session, both a `FirstSession` and a `SessionStar
   "os_version" : "(optional, string) Version of the operating system of the device",
   "platform" : "(optional, string) Platform of the device",
   "session_id" : "(required, string) UUID of the session",
-  "time" : "(required, int) Unix timestamp at which the event happened",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
   "user_id" : "(required, string) BSON ID of the user who performed this event"
 }
 ```
@@ -520,7 +520,7 @@ When a user starts their first session, both a `FirstSession` and a `SessionStar
   "event_type" : "(required, string) The event type name, as it is exported to Amplitude",
   "insert_id" : "(required, string) Globally unique ID for this event",
   "library" : "Braze",
-  "time" : "(required, int) Unix timestamp at which the event happened",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
   "user_id" : "(optional, string) External ID of the user"
 }
 ```
@@ -554,14 +554,14 @@ When a user starts their first session, both a `FirstSession` and a `SessionStar
   "properties" : {
     "app_id" : "(optional, string) API ID of the app on which this event occurred",
     "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
-    "card_id" : "(optional, string) ID of the card this in app message comes from",
+    "card_id" : "(optional, string) ID of the card this in-app message comes from",
     "device_model" : "(optional, string) Model of the device",
     "duration" : "(optional, float) Duration of the session in seconds",
     "os_version" : "(optional, string) Version of the operating system of the device",
     "platform" : "(optional, string) Platform of the device",
     "session_id" : "(optional, string) UUID of the session"
   },
-  "time" : "(required, int) Unix timestamp at which the event happened",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
   "user" : {
     "device_id" : "(optional, string) ID of the device on which the event occurred",
     "external_user_id" : "(required, string) External ID of the user",
@@ -589,7 +589,7 @@ When a user starts their first session, both a `FirstSession` and a `SessionStar
     "$os" : "(optional, string) Version of the operating system of the device",
     "platform" : "(optional, string) Platform of the device",
     "session_id" : "(optional, string) UUID of the session",
-    "time" : "(required, int) Unix timestamp at which the event happened",
+    "time" : "(required, int) UNIX timestamp at which the event happened",
     "token" : "(required, string) The Mixpanel API token"
   }
 }
@@ -610,7 +610,7 @@ When a user starts their first session, both a `FirstSession` and a `SessionStar
   "os_version" : "(optional, string) Version of the operating system of the device",
   "platform" : "(optional, string) Platform of the device",
   "session_id" : "(required, string) UUID of the session",
-  "time" : "(required, int) Unix timestamp at which the event happened",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
   "user_id" : "(required, string) BSON ID of the user who performed this event"
 }
 ```
@@ -634,7 +634,7 @@ When a user starts their first session, both a `FirstSession` and a `SessionStar
   "event_type" : "(required, string) The event type name, as it is exported to Amplitude",
   "insert_id" : "(required, string) Globally unique ID for this event",
   "library" : "Braze",
-  "time" : "(required, int) Unix timestamp at which the event happened",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
   "user_id" : "(optional, string) External ID of the user"
 }
 ```
@@ -669,7 +669,7 @@ This event is triggered when a user visits a specified location. Use this to tra
     "altitude" : "(optional, float) Altitude of recorded location",
     "app_id" : "(optional, string) API ID of the app on which this event occurred",
     "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
-    "card_id" : "(optional, string) ID of the card this in app message comes from",
+    "card_id" : "(optional, string) ID of the card this in-app message comes from",
     "device_model" : "(optional, string) Model of the device",
     "latitude" : "(required, float) Latitude of recorded location",
     "ll_accuracy" : "(optional, float) Accuracy of the latitude and longitude of recorded location",
@@ -677,7 +677,7 @@ This event is triggered when a user visits a specified location. Use this to tra
     "os_version" : "(optional, string) Version of the operating system of the device",
     "platform" : "(optional, string) Platform of the device"
   },
-  "time" : "(required, int) Unix timestamp at which the event happened",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
   "user" : {
     "device_id" : "(optional, string) ID of the device on which the event occurred",
     "external_user_id" : "(required, string) External ID of the user",
@@ -711,7 +711,7 @@ This event is triggered when a user visits a specified location. Use this to tra
     "longitude" : "(required, float) Longitude of recorded location",
     "$os" : "(optional, string) Version of the operating system of the device",
     "platform" : "(optional, string) Platform of the device",
-    "time" : "(required, int) Unix timestamp at which the event happened",
+    "time" : "(required, int) UNIX timestamp at which the event happened",
     "token" : "(required, string) The Mixpanel API token"
   }
 }
@@ -738,7 +738,7 @@ This event is triggered when a user visits a specified location. Use this to tra
   "longitude" : "(required, float) Longitude of recorded location",
   "os_version" : "(optional, string) Version of the operating system of the device",
   "platform" : "(optional, string) Platform of the device",
-  "time" : "(required, int) Unix timestamp at which the event happened",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
   "user_id" : "(required, string) BSON ID of the user who performed this event"
 }
 ```
@@ -770,7 +770,7 @@ This event is triggered when a user visits a specified location. Use this to tra
   "idfa" : "(optional, string) Advertising identifier",
   "insert_id" : "(required, string) Globally unique ID for this event",
   "library" : "Braze",
-  "time" : "(required, int) Unix timestamp at which the event happened",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
   "user_id" : "(optional, string) External ID of the user"
 }
 ```
@@ -802,10 +802,10 @@ This event occurs when an app installation is attributed to a source. Use this t
   "id" : "(required, string) Globally unique ID for this event",
   "properties" : {
     "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
-    "card_id" : "(optional, string) ID of the card this in app message comes from",
+    "card_id" : "(optional, string) ID of the card this in-app message comes from",
     "source" : "(optional, string) The source of the attribution"
   },
-  "time" : "(required, int) Unix timestamp at which the event happened",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
   "user" : {
     "device_id" : "(optional, string) ID of the device on which the event occurred",
     "external_user_id" : "(required, string) External ID of the user",
@@ -828,7 +828,7 @@ This event occurs when an app installation is attributed to a source. Use this t
     "distinct_id" : "(required, string) External ID of the user",
     "$insert_id" : "(required, string) Globally unique ID for this event",
     "source" : "(optional, string) The source of the attribution",
-    "time" : "(required, int) Unix timestamp at which the event happened",
+    "time" : "(required, int) UNIX timestamp at which the event happened",
     "token" : "(required, string) The Mixpanel API token"
   }
 }
@@ -843,7 +843,7 @@ This event occurs when an app installation is attributed to a source. Use this t
   "external_user_id" : "(optional, string) External ID of the user",
   "id" : "(required, string) Globally unique ID for this event",
   "source" : "(required, string) The source of the attribution",
-  "time" : "(required, int) Unix timestamp at which the event happened",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
   "user_id" : "(required, string) BSON ID of the user who performed this event"
 }
 ```
@@ -862,7 +862,7 @@ This event occurs when an app installation is attributed to a source. Use this t
   "event_type" : "(required, string) The event type name, as it is exported to Amplitude",
   "insert_id" : "(required, string) Globally unique ID for this event",
   "library" : "Braze",
-  "time" : "(required, int) Unix timestamp at which the event happened",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
   "user_id" : "(optional, string) External ID of the user"
 }
 ```
@@ -892,7 +892,7 @@ This user event occurs every time a new user is created within their workspace. 
   "id" : "(required, string) Globally unique ID for this event",
   "prev_random_bucket_number" : "(optional, int) Previous random bucket number",
   "random_bucket_number" : "(required, int) New random bucket number",
-  "time" : "(required, int) Unix timestamp at which the event happened",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
   "user_id" : "(required, string) BSON ID of the user who performed this event"
 }
 ```
