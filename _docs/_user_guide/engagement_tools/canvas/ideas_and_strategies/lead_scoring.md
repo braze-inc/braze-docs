@@ -45,7 +45,7 @@ All users are eligible for lead scoring, so you can add company-specific rules a
 
 #### Step 3b: Set Canvas re-eligibilty
 
-A user will go through this Canvas many times throughout their lifecycle with you, so you want to make sure they can re-enter as quickly as they exited the previous time. This can be accomplished through re-eligibility settings. 
+A user will go through this Canvas many times throughout their lifecycle with you, so make sure they can re-enter as quickly as they exited the previous time. This can be accomplished through re-eligibility settings. 
 
 In **Entry Controls**, do the following:
 - Select **Allow users to re-enter this Canvas**.
@@ -136,7 +136,7 @@ For example, messaging engagement data (such as email opens and clicks, landing 
 {% endtab %}
 {% tab Braze as a destination %}
 
-After your internal teams have created and run your lead scoring model, you’ll want to get that data back into Braze so you can better segment and target leads for relevant messaging. You can do this with [Braze Cloud Data Ingestion]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/overview/). 
+After your internal teams have created and run your lead scoring model, you can pull that data back into Braze so you can better segment and target leads for relevant messaging. You can do this with [Braze Cloud Data Ingestion]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/overview/). 
 
 With Cloud Data Ingestion, your internal teams will create a new table or view with your user identifiers, the latest lead scores, and the timestamps when the scores were updated. Braze will pick up the table or view and add the lead scores to the user profiles.
 
