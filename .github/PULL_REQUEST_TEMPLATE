@@ -35,5 +35,6 @@ For Jira tickets, add the ticket number and a link to the ticket, like: [BD-NUMB
 If your PR meets the above requirements, select **Ready for review**, then add a reviewer:
 - **Non-Braze contributors:** Add `braze-inc/docs-team` as the reviewer.
 - **Braze employees:** Add the [tech writer assigned to your specific vertical](https://confluence.braze.com/pages/viewpage.action?pageId=75039896).
+    - Tech writers should be the last reviewers after other SMEs. If you are waiting for other reviewers, just @braze-inc/docs-team when you're ready to tag them in for their review.
 
 Thanks for contributing! We look forward to reading your work.
