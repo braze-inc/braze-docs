@@ -126,7 +126,7 @@ Contact your Braze account manager if you're interested in getting started with 
 
 #### Delegating your custom domain
 
-When you delegate your domain to Braze, we automatically handle the certificate renewal in order to prevent a lapse in service. 
+When you delegate your domain to Braze, we automatically handle the certificate renewal to prevent a lapse in service. 
 
 To delegate your domain to Braze, do the following: 
 
