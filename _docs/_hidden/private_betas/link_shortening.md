@@ -131,8 +131,8 @@ When you delegate your domain to Braze, we automatically handle the certificate 
 To delegate your domain to Braze, do the following: 
 
 1. Bring a domain that meets the above requirements to your customer success manager. Braze will then check the existing DNS configuration for the domain and confirm that:
-  - No CAA records exist OR
-  - CAA records *do* exist but have a record for {% raw %}`<any number> issue "letsencrypt.org"`{% endraw %} or {% raw %}`<anynumber> issuewild "letsencrypt.org"`{% endraw %}
+- No CAA records exist OR
+- CAA records *do* exist but have a record for {% raw %}`<any number> issue "letsencrypt.org"`{% endraw %} or {% raw %}`<anynumber> issuewild "letsencrypt.org"`{% endraw %}
 2. Create four new A records, one for each IP, and confirm that they are the only A records that exist for the domain link host:
 - 151.101.130.133
 - 151.101.194.133
