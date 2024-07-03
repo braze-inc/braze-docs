@@ -25,7 +25,6 @@ Before creating a LINE message, do the following:
 
 ## Step 1: Choose where to build your message
 
-
 Not sure whether your message should be sent using a campaign or a Canvas? Campaigns are better for single, simple messaging campaigns, while Canvases are better for multi-step user journeys.
 
 {% tabs %}
@@ -126,5 +125,5 @@ After you’ve finished building the last of your campaign or Canvas, review its
 Next, check out [LINE reporting]() to learn how you can access the results of your LINE campaigns.
 
 
-[1]: {% image_buster assets/img/line/line_composer.png %}
-[2]: {% image_buster assets/img/line/test_preview.png %}
+[1]: {% image_buster /assets/img/line/line_composer.png %}
+[2]: {% image_buster /assets/img/line/test_preview.png %}

@@ -1,7 +1,7 @@
 ---
 nav_title: Reporting
 article_title: LINE Reporting
-page_order: 3
+page_order: 4
 description: "This reference article covers LINE metrics used at Braze, as well as how to view them in your LINE campaigns."
 page_type: reference
 channel:
@@ -68,6 +68,10 @@ The **Conversion Event Details** panel shows you the performance of your convers
 ### Conversion correlation
 
 The **Conversion Correlation** panel gives you insight into what user attributes and behaviors help or hurt the outcomes you set for campaigns. For more information, refer to [Conversion correlation]({{site.baseurl}}/user_guide/engagement_tools/testing/conversion_correlation).
+
+## LINE user IDs 
+
+LINE user IDs are specific to each user per provider. Users are unlikely to know their LINE ID (unlike their email or phone number), as their LINE ID changes for each brand they follow.
 
 
 [1]: {% image_buster /assets/img/line/line_performance.png %}
