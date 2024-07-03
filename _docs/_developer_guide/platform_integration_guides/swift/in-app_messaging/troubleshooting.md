@@ -74,7 +74,7 @@ If your app is successfully requesting and receiving in-app messages but they ar
 - Failed image downloads will prevent in-app messages with images from displaying. Check your device logs to ensure that image downloads are not failing.
 - If the device orientation did not match the orientation specified by the in-app message, the in-app message will not display. Make sure that your device is in the correct orientation.
 
-### Troubleshooting asset loading
+### Troubleshooting asset loading (`NSURLError` code `-1008`)
 
 When integrating Braze alongside third-party network logging libraries, developers can commonly run into an `NSURLError` with the domain code `-1008`. This error indicates that assets like images and fonts could not be retrieved or failed to cache. To work around such cases, you will need to register Braze's CDN URLs to the list of domains that should be ignored by these libraries.
 
