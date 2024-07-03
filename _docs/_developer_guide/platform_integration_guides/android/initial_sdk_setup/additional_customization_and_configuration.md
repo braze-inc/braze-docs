@@ -23,82 +23,125 @@ Client apps that obfuscate Braze code must store release mapping files for Braze
 -keep class com.braze.** { *; }
 ```
 
-## Enabling verbose logging {#android-verbose-logging}
+## Logging
 
-Verbose logs from the Braze SDK are essential to a fast turnaround on support issues. These logs should not be modified for clarity; long log files are preferred. Verbose logging is only intended for development environments and should not be enabled in a released application. Verbose logging won't send any extra or new user information to Braze.
+By default, the the Braze Android SDK log level is set to `INFO`. You can [suppress these logs](#suppressing-logs) or [set a different log level](#enabling-logs-enabling-logs), such as `VERBOSE`, `DEBUG`, or `WARN`.
 
-Logs sent to our support team should begin as soon as the application is launched and end well after the observed issue occurs.
+### Enabling logs {#enabling-logs}
 
-To enable verbose logging on the Braze Android SDK:
+To help troubleshoot issues in your app, or ensure fast turnaround times with Braze Support, you'll want to enable verbose logs for the SDK. When you send verbose logs to Braze Support, ensure they begin as soon as you launch your application and end far after your issue occurs.
 
-{% tabs %}
-{% tab JAVA %}
+Keep in mind, verbose logs are only intended for your development environment, so you'll want to disable them before releasing your app.
 
+{% alert important %}
+Enable verbose logs before any other calls in `Application.onCreate()` to ensure your logs are as complete as possible.
+{% endalert %}
+
+{% tabs local %}
+{% tab Braze SDK %}
+To enable logs in the Braze Android SDK, add the following to your `TODO` file:
+
+{% subtabs %}
+{% subtab JAVA %}
+```java
+BrazeLogger.setLogLevel(Log.LOG_LEVEL_CONSTANT);
+```
+{% endsubtab %}
+
+{% subtab KOTLIN %}
+```kotlin
+BrazeLogger.logLevel = Log.LOG_LEVEL_CONSTANT
+```
+{% endsubtab %}
+{% endsubtabs %}
+
+Replace `LOG_LEVEL_CONSTANT` with the constant of the log level you'd like to enable.
+
+| Constant    | Value          | Description                                                               |
+|-------------|----------------|---------------------------------------------------------------------------|
+| `VERBOSE`   | 2              | Logs the most detailed messages for debugging and development.            |
+| `DEBUG`     | 3              | Logs descriptive messages for debugging and development.                  |
+| `INFO`      | 4              | Logs informational messages for general highlights.                       |
+| `WARN`      | 5              | Logs warning messages for identifying potentially harmful situations.     |
+| `ERROR`     | 6              | Logs error messages for indicating application failure or serious issues. |
+| `ASSERT`    | 7              | Logs assertion messages when conditions are false during development.     |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+
+{% alert note %}
+Each log level constant corresponds to one of the Android log level constants defined in [`android.util.log`](https://developer.android.com/reference/android/util/Log).
+{% endalert %}
+
+Your code should be similar to the following:
+
+{% subtabs %}
+{% subtab JAVA %}
 ```java
 BrazeLogger.setLogLevel(Log.VERBOSE);
 ```
+{% endsubtab %}
 
-{% endtab %}
-{% tab KOTLIN %}
-
+{% subtab KOTLIN %}
 ```kotlin
 BrazeLogger.logLevel = Log.VERBOSE
 ```
-
+{% endsubtab %}
+{% endsubtabs %}
 {% endtab %}
-{% endtabs %}
 
-To enable verbose logging in the `braze.xml`:
+{% tab braze.xml %}
+To enable logs in the `braze.xml`, add the following to your file:
+
+```xml
+<integer name="com_braze_logger_initial_log_level">LOG_LEVEL_VALUE</integer>
+```
+
+Replace `LOG_LEVEL_VALUE` with the value of the log level you'd like to enable.
+
+| Constant    | Value          | Description                                                               |
+|-------------|----------------|---------------------------------------------------------------------------|
+| `VERBOSE`   | 2              | Logs the most detailed messages for debugging and development.            |
+| `DEBUG`     | 3              | Logs descriptive messages for debugging and development.                  |
+| `INFO`      | 4              | Logs informational messages for general highlights.                       |
+| `WARN`      | 5              | Logs warning messages for identifying potentially harmful situations.     |
+| `ERROR`     | 6              | Logs error messages for indicating application failure or serious issues. |
+| `ASSERT`    | 7              | Logs assertion messages when conditions are false during development.     |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+
+{% alert note %}
+If you set `LOG_LEVEL_VALUE` to a number `>=` these values, the logs will be forwarded to Android's default [`Log`](https://developer.android.com/reference/android/util/Log) method. If the number is `<` any of these values, the logs will be discarded.
+{% endalert %}
+
+Your code should be similar to the following:
+
 ```xml
 <integer name="com_braze_logger_initial_log_level">2</integer>
 ```
+{% endtab %}
+{% endtabs %}
 
-Note that Braze log level integer constants correspond to Android log level integer constants as defined in [`android.util.log`][71]. 
+### Verifying verbose logs
 
-Braze log messages equal or above the set log level will be forwarded to analogous [`Log`][71] method. Log messages below the set log level will be dropped.
+To verify that your logs are set to `VERBOSE`, check if `V/Braze` occurs somewhere in your logs. If it does, then verbose logs have been successfully enabled. For example:
 
-If you would like to set the log level to a different level, see the following list of available log levels:
+```
+2077-11-19 16:22:49.591 ? V/Braze v9.0.01 .bo.app.d3: Request started
+```
 
-| Constants   | Value          | Description                                                              |
-|-------------|----------------|--------------------------------------------------------------------------|
-| `VERBOSE`   | 2              | Log the most detailed messages for debugging and development.            |
-| `DEBUG`     | 3              | Log descriptive messages for debugging and development.                  |
-| `INFO`      | 4              | Log informational messages for general highlights.                       |
-| `WARN`      | 5              | Log warning messages for identifying potentially harmful situations.     |
-| `ERROR`     | 6              | Log error messages for indicating application failure or serious issues. |
-| `ASSERT`    | 7              | Log assertion messages when conditions are false during development.     |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+### Suppressing logs
 
-{% alert important %}
-Verbose logs should be enabled as early as possible in your `Application.onCreate()`, before any other calls to the SDK to guarantee as much logging as possible.
-{% endalert %}
-
-To know if your obtained logs are verbose, look for `V/Braze` somewhere in your logs. For example:
-
-`2077-11-19 16:22:49.591 ? V/Braze v9.0.01 .bo.app.d3: Request started`
-
-### Suppressing Braze SDK logging
-
-The default log level for the Braze Android SDK is `INFO`.
-
-To change the Braze log level, call [`BrazeLogger.setLogLevel()`][70] with one of the [`android.util.Log`][54] constants or `BrazeLogger.SUPPRESS`. For example:
+The default log level for the Braze Android SDK is `INFO`. To suppress all logs for the Braze Android SDK, call `BrazeLogger.SUPPRESS` in your `TODO` file.
 
 {% tabs %}
 {% tab JAVA %}
-
 ```java
-// Suppress all logs
 BrazeLogger.setLogLevel(BrazeLogger.SUPPRESS);
 ```
-
 {% endtab %}
-{% tab KOTLIN %}
 
+{% tab KOTLIN %}
 ```kotlin
-// Suppress all logs
 BrazeLogger.setLogLevel(BrazeLogger.SUPPRESS)
 ```
-
 {% endtab %}
 {% endtabs %}
 
@@ -127,4 +170,3 @@ See the [runtime configuration][69] documentation for setting an API key in code
 [54]: https://developer.android.com/reference/android/util/Log.html
 [69]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/runtime_configuration/
 [70]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.support/-braze-logger/log-level.html
-[71]: https://developer.android.com/reference/android/util/Log
