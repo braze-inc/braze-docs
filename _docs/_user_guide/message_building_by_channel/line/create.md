@@ -8,6 +8,8 @@ tool:
  - Campaigns
 channel:
  - LINE
+hidden: true
+permalink: /line/create/
 ---
 
 # Creating a LINE message

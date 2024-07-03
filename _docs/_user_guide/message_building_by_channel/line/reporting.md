@@ -6,6 +6,8 @@ description: "This reference article covers LINE metrics used at Braze, as well 
 page_type: reference
 channel:
  - LINE
+hidden: true
+permalink: /line/reporting/
 ---
 
 # LINE reporting

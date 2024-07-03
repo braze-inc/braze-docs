@@ -6,6 +6,8 @@ description: "This reference article covers how chat with users by using templat
 page_type: reference
 channel:
  - LINE
+hidden: true
+permalink: /line/messaging_users/
 ---
 
 # Messaging LINE users

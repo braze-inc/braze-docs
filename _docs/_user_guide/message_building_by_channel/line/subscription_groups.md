@@ -6,6 +6,7 @@ description: "This article covers LINE message subscription groups."
 page_type: reference
 channel:
  - LINE
+hidden: true
 ---
 
 # LINE subscription groups
