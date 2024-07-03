@@ -11,10 +11,11 @@ description: "This reference article addresses the data that is collected by the
 
 > When you integrate the Braze SDK with your app or site, Braze automatically collects certain types of data. Some of this data is essential for our processes and some of this data can be toggled on or off based on your needs. Integrators can also configure Braze to collect additional types of data to further power your segmentation and messaging.
 
-Braze is designed to allow for flexible data collection. The Braze SDK can be integrated in three ways:
+Braze is designed to allow for flexible data collection. The Braze SDK can be integrated in four ways:
 
-- **Minimum integration:** Braze automatically collects data that is necessary to enable communication with the Braze services. 
-- **Optional data collected by default:** Braze automatically captures some data that is broadly useful for most of our customers' use cases. Integrators can opt to disable this automatically collected data if it is non-essential to the minimum integration. 
+- **Minimum integration:** Braze automatically collects data that is necessary to enable communication with the Braze services.
+- **Optional data collected by default:** Braze automatically captures some data that is broadly useful for most of our customers' use cases. Integrators can opt to disable this automatically collected data if it is non-essential to the minimum integration.
+- **Optional data not collected by default:** Braze provides the ability to capture some data that is useful for certain customers' use cases but does not automatically enable the collection for broad compliance reasons. Integrators can opt in to collect this data where it suits their use cases.
 - **Personalized integration:** Integrators have the flexibility to collect data in addition to the default optional data.
 
 ## Minimum integration
@@ -69,12 +70,10 @@ In addition to the minimum integration data, the following attributes are automa
 | Attribute        | Platform           | Description                                            | Why it's Collected                                  |
 | ---------------- | ------------------ | ------------------------------------------------------ | --------------------------------------------------- |
 | Browser name     | Web                | Name of the browser                                   | This attribute is used to ensure messages are only sent to compatible browsers. It can also be used for browser-based segmentation. |
-| Device Ad Tracking Enabled | iOS      | `adTrackingEnabled` attribute for iOS                 | This attribute tracks whether or not this app has Ad Tracking enabled. |
-| Device IDFA      | iOS                | Device identifier for advertisers                     | Optionally used to track data. |
 | Device locale    | Android, iOS       | The default locale of the device                      | This attribute is used to translate messages to a user's preferred language. |
 | Device model     | Android, iOS       | The specific hardware of the device                   | This attribute is used to ensure messages are only sent to compatible devices. It can also be used within segmentation. |
 | Device brand     | Android       | The brand of device (for example, Samsung)                   | This attribute is used to ensure messages are only sent to compatible devices. |
-| Device wireless carrier | Android, iOS | The mobile carrier                                     | This attribute is optionally used for message targeting.              |
+| Device wireless carrier | Android, iOS | The mobile carrier                                     | This attribute is optionally used for message targeting. (Note: This field has been deprecated as of iOS 16 and will default to `--` in a future iOS version.)              |
 | Language         | Android, iOS, Web  | Device/browser language                               | This attribute is used to translate messages to a user's preferred language. |
 | Notification settings | Android, iOS, Web  | Whether this app has push notifications enabled. | This attribute is used to enable push notifications. |
 | Resolution       | Android, iOS, Web  | Device/browser resolution                             | Optionally used for device-based message targeting. The format of this value is "`<width>`x`<height>`". |
@@ -83,6 +82,17 @@ In addition to the minimum integration data, the following attributes are automa
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 To learn more about tracking device-level properties such as device wireless carrier, time zone, resolution, etc.), see the platform specific documentation: [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/storage/ "Android allowlist documentation"), [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/storage/ "iOS allowlist documentation"), [Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/cookies_and_storage/#device-properties "Web allowlist documentation").
+
+## Optional data not collected by default
+
+The following attributes are not collected by default and require explicit integration steps.
+
+| Attribute        | Platform           | Description                                            | Why it's Not Collected                                  |
+| ---------------- | ------------------ | ------------------------------------------------------ | --------------------------------------------------- |
+| Device Ad Tracking Enabled | Android, iOS      | [set(adTrackingEnabled:)](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/set(adtrackingenabled:)) for iOS; on Android, this is collected via []`Braze.setGoogleAdvertisingId()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-i-braze/set-google-advertising-id.html)            | This property require additional app-level permissions, which must be granted by the integrator. |
+| Device IDFA      | iOS                | Device identifier for advertisers                     | This requires the Ad Tracking Transparency framework, which will trigger additional privacy review from the App Store. For more details, see [set(identifierForAdvertiser:)](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/set(identifierForAdvertiser:)) |
+| Google Advertising ID | Android       | Identifier for advertising within Google Play apps    | This requires declaring explicit permissions in the app-level manifest file. For more details, refer to [Optional Google Advertising ID]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection)
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ## Personalized integration
 
