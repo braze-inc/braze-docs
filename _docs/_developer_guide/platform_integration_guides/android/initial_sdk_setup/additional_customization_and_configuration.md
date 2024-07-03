@@ -37,7 +37,7 @@ Keep in mind, verbose logs are only intended for your development environment, s
 Enable verbose logs before any other calls in `Application.onCreate()` to ensure your logs are as complete as possible.
 {% endalert %}
 
-{% tabs local %}
+{% tabs %}
 {% tab Braze SDK %}
 To enable logs in the Braze Android SDK, add the following to your `TODO` file:
 
@@ -131,7 +131,7 @@ To verify that your logs are set to `VERBOSE`, check if `V/Braze` occurs somewhe
 
 The default log level for the Braze Android SDK is `INFO`. To suppress all logs for the Braze Android SDK, call `BrazeLogger.SUPPRESS` in your `TODO` file.
 
-{% tabs %}
+{% tabs local %}
 {% tab JAVA %}
 ```java
 BrazeLogger.setLogLevel(BrazeLogger.SUPPRESS);
