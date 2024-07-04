@@ -11,7 +11,7 @@ description: "This reference article addresses the data that is collected by the
 
 > When you integrate the Braze SDK with your app or site, Braze automatically collects certain types of data. Some of this data is essential for our processes and some of this data can be toggled on or off based on your needs. Integrators can also configure Braze to collect additional types of data to further power your segmentation and messaging.
 
-Braze is designed to allow for flexible data collection. The Braze SDK can be integrated in four ways:
+Braze is designed to allow for flexible data collection. The Braze SDK can be integrated in the following ways:
 
 - **Minimum integration:** Braze automatically collects data that is necessary to enable communication with the Braze services.
 - **Optional data collected by default:** Braze automatically captures some data that is broadly useful for most of our customers' use cases. Integrators can opt to disable this automatically collected data if it is non-essential to the minimum integration.
