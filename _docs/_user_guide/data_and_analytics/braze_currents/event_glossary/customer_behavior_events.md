@@ -77,7 +77,7 @@ This event occurs when a specific custom event is triggered. Use this to track w
     "device_id" : "(optional, string) ID of the device on which the event occurred",
     "external_user_id" : "(required, string) External ID of the user",
     "timezone" : "(optional, string) Time zone of the user",
-    "user_id": (required, string) Braze user ID of the user who performed this event"
+    "user_id" : "(required, string) Braze user ID of the user who performed this event"
   }
 }
 ```
@@ -128,7 +128,7 @@ This event occurs when a specific custom event is triggered. Use this to track w
   "properties" : "(required, string) Custom properties stored as a JSON encoded string",
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
-  "user_id": (required, string) Braze user ID of the user who performed this event"
+  "user_id" : "(required, string) Braze user ID of the user who performed this event"
 }
 ```
 {% endtab %}
@@ -206,7 +206,7 @@ Purchases are special custom events and come with a JSON encoded string of custo
   "user" : {
     "device_id" : "(optional, string) ID of the device on which the event occurred",
     "external_user_id" : "(required, string) External ID of the user",
-    "user_id": (required, string) Braze user ID of the user who performed this event"
+    "user_id" : "(required, string) Braze user ID of the user who performed this event"
   }
 }
 ```
@@ -261,7 +261,7 @@ Purchases are special custom events and come with a JSON encoded string of custo
   "product_id" : "(required, string) ID of the product purchased",
   "properties" : "(required, string) Custom properties stored as a JSON encoded string",
   "time" : "(required, int) UNIX timestamp at which the event happened",
-  "user_id": (required, string) Braze user ID of the user who performed this event"
+  "user_id" : "(required, string) Braze user ID of the user who performed this event"
 }
 ```
 {% endtab %}
@@ -339,7 +339,7 @@ When a user starts their first session, both a `FirstSession` and a `SessionStar
     "device_id" : "(optional, string) ID of the device on which the event occurred",
     "external_user_id" : "(required, string) External ID of the user",
     "timezone" : "(optional, string) Time zone of the user",
-    "user_id": (required, string) Braze user ID of the user who performed this event"
+    "user_id" : "(required, string) Braze user ID of the user who performed this event"
   }
 }
 ```
@@ -388,7 +388,7 @@ When a user starts their first session, both a `FirstSession` and a `SessionStar
   "session_id" : "(required, string) UUID of the session",
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
-  "user_id": (required, string) Braze user ID of the user who performed this event"
+  "user_id" : "(required, string) Braze user ID of the user who performed this event"
 }
 ```
 {% endtab %}
@@ -454,7 +454,7 @@ When a user starts their first session, both a `FirstSession` and a `SessionStar
   "user" : {
     "device_id" : "(optional, string) ID of the device on which the event occurred",
     "external_user_id" : "(required, string) External ID of the user",
-    "user_id": (required, string) Braze user ID of the user who performed this event"
+    "user_id" : "(required, string) Braze user ID of the user who performed this event"
   }
 }
 ```
@@ -498,7 +498,7 @@ When a user starts their first session, both a `FirstSession` and a `SessionStar
   "platform" : "(optional, string) Platform of the device",
   "session_id" : "(required, string) UUID of the session",
   "time" : "(required, int) UNIX timestamp at which the event happened",
-  "user_id": (required, string) Braze user ID of the user who performed this event"
+  "user_id" : "(required, string) Braze user ID of the user who performed this event"
 }
 ```
 {% endtab %}
@@ -565,7 +565,7 @@ When a user starts their first session, both a `FirstSession` and a `SessionStar
   "user" : {
     "device_id" : "(optional, string) ID of the device on which the event occurred",
     "external_user_id" : "(required, string) External ID of the user",
-    "user_id": (required, string) Braze user ID of the user who performed this event"
+    "user_id" : "(required, string) Braze user ID of the user who performed this event"
   }
 }
 ```
@@ -611,7 +611,7 @@ When a user starts their first session, both a `FirstSession` and a `SessionStar
   "platform" : "(optional, string) Platform of the device",
   "session_id" : "(required, string) UUID of the session",
   "time" : "(required, int) UNIX timestamp at which the event happened",
-  "user_id": (required, string) Braze user ID of the user who performed this event"
+  "user_id" : "(required, string) Braze user ID of the user who performed this event"
 }
 ```
 {% endtab %}
@@ -681,7 +681,7 @@ This event is triggered when a user visits a specified location. Use this to tra
   "user" : {
     "device_id" : "(optional, string) ID of the device on which the event occurred",
     "external_user_id" : "(required, string) External ID of the user",
-    "user_id": (required, string) Braze user ID of the user who performed this event"
+    "user_id" : "(required, string) Braze user ID of the user who performed this event"
   }
 }
 ```
@@ -739,7 +739,7 @@ This event is triggered when a user visits a specified location. Use this to tra
   "os_version" : "(optional, string) Version of the operating system of the device",
   "platform" : "(optional, string) Platform of the device",
   "time" : "(required, int) UNIX timestamp at which the event happened",
-  "user_id": (required, string) Braze user ID of the user who performed this event"
+  "user_id" : "(required, string) Braze user ID of the user who performed this event"
 }
 ```
 {% endtab %}
@@ -809,7 +809,7 @@ This event occurs when an app installation is attributed to a source. Use this t
   "user" : {
     "device_id" : "(optional, string) ID of the device on which the event occurred",
     "external_user_id" : "(required, string) External ID of the user",
-    "user_id": (required, string) Braze user ID of the user who performed this event"
+    "user_id" : "(required, string) Braze user ID of the user who performed this event"
   }
 }
 ```
@@ -844,7 +844,7 @@ This event occurs when an app installation is attributed to a source. Use this t
   "id" : "(required, string) Globally unique ID for this event",
   "source" : "(required, string) The source of the attribution",
   "time" : "(required, int) UNIX timestamp at which the event happened",
-  "user_id": (required, string) Braze user ID of the user who performed this event"
+  "user_id" : "(required, string) Braze user ID of the user who performed this event"
 }
 ```
 {% endtab %}
@@ -893,7 +893,7 @@ This user event occurs every time a new user is created within their workspace. 
   "prev_random_bucket_number" : "(optional, int) Previous random bucket number",
   "random_bucket_number" : "(required, int) New random bucket number",
   "time" : "(required, int) UNIX timestamp at which the event happened",
-  "user_id": (required, string) Braze user ID of the user who performed this event"
+  "user_id" : "(required, string) Braze user ID of the user who performed this event"
 }
 ```
 {% endtab %}

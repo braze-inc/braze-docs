@@ -74,6 +74,72 @@ If your app is successfully requesting and receiving in-app messages but they ar
 - Failed image downloads will prevent in-app messages with images from displaying. Check your device logs to ensure that image downloads are not failing.
 - If the device orientation did not match the orientation specified by the in-app message, the in-app message will not display. Make sure that your device is in the correct orientation.
 
+### Troubleshooting asset loading (`NSURLError` code `-1008`)
+
+When integrating Braze alongside third-party network logging libraries, developers can commonly run into an `NSURLError` with the domain code `-1008`. This error indicates that assets like images and fonts could not be retrieved or failed to cache. To work around such cases, you will need to register Braze's CDN URLs to the list of domains that should be ignored by these libraries.
+
+#### Domains
+
+The full list of CDN domains is as listed below:
+
+* `"appboy-images.com"`
+* `"braze-images.com"`
+* `"cdn.braze.eu"`
+* `"cdn.braze.com"`
+
+#### Examples
+
+Below are libraries that are known to conflict with Braze's asset caching, along with example code to work around the issue. If your project uses a library that causes an unavailable resource error and is not listed below, consult the documentation of that library for similar usage APIs.
+
+##### Netfox
+
+{% tabs %}
+{% tab Swift %}
+```swift
+NFX.sharedInstance().ignoreURLs(["https://cdn.braze.com"])
+```
+{% endtab %}
+{% tab Objective-C %}
+```objc
+[NFX.sharedInstance ignoreURLs:@[@"https://cdn.braze.com"]];
+```
+{% endtab %}
+{% endtabs %}
+
+##### NetGuard
+
+{% tabs %}
+{% tab Swift %}
+```swift
+NetGuard.blackListHosts.append(contentsOf: ["cdn.braze.com"])
+```
+{% endtab %}
+{% tab Objective-C %}
+```objc
+NSMutableArray<NSString *> *blackListHosts = [NetGuard.blackListHosts mutableCopy];
+[blackListHosts addObject:@"cdn.braze.com"];
+NetGuard.blackListHosts = blackListHosts;
+```
+{% endtab %}
+{% endtabs %}
+
+##### XNLogger
+
+{% tabs %}
+{% tab Swift %}
+```swift
+let brazeAssetsHostFilter = XNHostFilter(host: "https://cdn.braze.com")
+XNLogger.shared.addFilters([brazeAssetsHostFilter])
+```
+{% endtab %}
+{% tab Objective-C %}
+```objc
+XNHostFilter *brazeAssetsHostFilter = [[XNHostFilter alloc] initWithHost: @"https://cdn.braze.com"];
+[XNLogger.shared addFilters:@[brazeAssetsHostFilter]];
+```
+{% endtab %}
+{% endtabs %}
+
 [iam_1]: {{ site.baseurl }}/user_guide/administrative/app_settings/developer_console/internal_groups_tab/#adding-test-users
 [iam_2]: {{ site.baseurl }}/user_guide/administrative/app_settings/developer_console/event_user_log_tab/#event-user-log-tab
 [iam_3]: {{ site.baseurl }}/user_guide/administrative/app_settings/developer_console/event_user_log_tab/#event-user-log-tab
