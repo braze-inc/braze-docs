@@ -6,7 +6,7 @@ layout: dev_guide
 channel:
   - LINE
 guide_top_header: "LINE"
-guide_top_text: "LINE is a messaging platform that also offers an “all-in-one” platform for social media, gaming, shopping, and payments. You can integrate your LINE accounts with Braze to send compelling LINE messages to the right customers based on their preferences, behaviors, and cross-channel interactions. <br><br>LINE access is only available in select Braze packages. Contact your customer success manager or account manager to get started."
+guide_top_text: "LINE is the most popular messaging app in Japan, with over 95 million monthly active users. In addition to messaging, LINE also offers its users an “all-in-one” platform for social media, gaming, shopping, and payments.<br><br>You can integrate your LINE accounts with Braze to leverage your zero- and first-party customer data in order to send compelling LINE messages to the right customers based on their preferences, behaviors, and cross-channel interactions.<br><br>LINE access is in beta and only available in select Braze packages. Reach out to your account manager or customer success manager to get started."
 description: "This landing page is home to the LINE channel. Here, you can find articles on setting up LINE, LINE subscription groups, LINE campaigns, LINE reporting, and more."
 hidden: true
 permalink: /line/

@@ -16,6 +16,10 @@ permalink: /line/messaging_users/
 
 There are various methods to converse with users through LINE, such as using LINE trigger words. You can also use calls-to-action (CTAs) to encourage user engagement with your LINE messaging.
 
+{% alert important %}
+LINE access is in beta and only available in select Braze packages. Reach out to your account manager or customer success manager to get started.
+{% endalert %}
+
 ## Action-based triggers
 
 You can create campaigns and Canvases that start, branch, and have mid-journey changes when you receive an inbound LINE message (a message sent from a user) that contains a trigger word. Make sure you choose trigger words that match what you expect users to send.

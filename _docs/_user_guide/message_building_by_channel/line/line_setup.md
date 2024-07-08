@@ -16,7 +16,9 @@ permalink: /line/line_setup/
 
 > This article covers how to set up the LINE channel in Braze and is part of the LINE beta collection. [Return to the main page](https://www.braze.com/docs/line/).
 
-LINE access is only available in select Braze packages. Contact your customer success manager or account manager to get started.
+{% alert important %}
+LINE access is in beta and only available in select Braze packages. Reach out to your account manager or customer success manager to get started.
+{% endalert %}
 
 ## Prerequisites
 
