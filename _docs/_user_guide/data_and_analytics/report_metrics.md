@@ -539,7 +539,7 @@ The total revenue in dollars from campaign recipients within the set primary con
 ### Unique Clicks
 
 {% apitags %}
-Email, Content Cardsm LINE
+Email, Content Cards, LINE
 {% endapitags %}
 
 Distinct number of recipients who have clicked within a message at least once. This is tracked over a 7-day period for Email. Note that clicks on Braze-provided unsubscribe links are counted as unique clicks.
