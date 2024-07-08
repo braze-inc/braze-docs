@@ -45,7 +45,9 @@ This feature is currently in early access. Contact your customer success manager
 
 ### Removing custom attributes
 
-To remove custom attributes from user profiles, set the value to "null" in your API request to the [`/users/track` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track#user-track).
+There are two ways you can remove custom attributes from user profiles:
+* Select the custom attribute name to be removed in a [User Update step]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/user_update/#updating-custom-attributes).
+* Set the value to `null` in your API request to the [`/users/track` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track#user-track).
 
 ### Viewing usage reports
 
