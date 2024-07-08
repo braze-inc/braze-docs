@@ -15,6 +15,21 @@ Teams can be set up across customer base location, language, and custom attribut
 
 Teams are not available on all Braze contracts. If you'd like to access this feature, reach out to your Braze account manager or [contact us](mailto:success@braze.com) for a consultation.
 
+## How do teams differ from permission sets and user roles? 
+
+You can use team, permission sets, and user roles to manage dashboard user access and responsibilities within Braze. Each feature encompasses a different collection of content and permissions.
+
+### Key differences
+
+| Feature | What you can do |
+| - | - |
+| Permission sets | Bundle permissions related to specific subject areas or actions (such as for “Developers” and “Marketers”), then apply them to dashboard users who need the same access across different workspaces. |
+| User roles | Bundle individual custom permissions and workspace-access controls (such as for “Marketer - Fashion Brands” and “Marketer - Skincare Brands”), then add dashboard users to workspaces and directly grant them the associated permissions. |
+| Teams | Limit dashboard user access to resources based on the audience (such as customer base location, language, and custom attributes). |
+{: .reset-td-br-1 .reset-td-br-2 }
+
+In other words, permission sets and user roles control what dashboard users can do across all workspaces or specific workspaces, while teams control the audiences that users can message.
+
 ## Creating teams
 
 Go to **Settings** > **Internal Teams** and select <i class="fas fa-plus"></i> **Add Team**.
