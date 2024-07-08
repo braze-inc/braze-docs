@@ -95,20 +95,6 @@ Verified accounts are only available for accounts based in Japan, Taiwan, Thaila
 
 If you want to sync users who followed a specific channel before that channel was synced with Braze, ask your customer success manager or account manager to [submit a request](https://servicedesk.braze.com/plugins/servlet/desk/portal/12) to the WhatsApp team.
 
-## LINE user ID reconciliation
-
-LINE IDs are automatically received by Braze when users follow your channel or when you use the one-time "sync followers" workflow. LINE IDs are also specific to the channel that users follow, so it's unlikely that users can provide their LINE IDs.
-
-To combine a LINE ID with an existing Braze user profile, we recommend one of two methods:
-
-### LINE login method
-
-This method uses social media logins for reconciliation. When a user logs into a brand's service or app, they're provided the option to use the LINE login to create a user account or log in.
-
-### "Add as friends" method
-
-This method
-
 ## Create LINE test users in Braze
 
 You can test your LINE channel before setting up user reconciliation in two ways:
