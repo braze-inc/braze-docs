@@ -12,7 +12,7 @@ permalink: /line/reporting/
 
 # LINE reporting
 
-> After launching your campaign or Canvas, you can view key metrics on the campaign details page or Canvas analytics.<br><br>This article is part of the LINE beta collection. [Return to main page](https://www.braze.com/docs/line/).
+> After launching your campaign or Canvas, you can view key metrics on the campaign details page or Canvas analytics.<br><br>This article is part of the LINE beta collection. [Return to the main page](https://www.braze.com/docs/line/).
 
 {% alert tip %}
 Looking for definitions for the terms and metrics in your report? Refer to [Report metrics glossary]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics/).
@@ -20,7 +20,7 @@ Looking for definitions for the terms and metrics in your report? Refer to [Repo
 
 ## Campaign analytics
 
-In the **Campaign Analytics** tab, you can view your reports in a series of panels. You might see more or less than those listed in the sections below, but each has its own purpose.
+In the **Campaign Analytics** tab, you can view your reports in a series of panels. You might see more or less than those listed in the sections below, but each has its purpose.
 
 {% alert note %}
 Open and click-related statistics for LINE are only calculated if more than 20 users perform the event on a given day.
@@ -50,10 +50,10 @@ Here are some key LINE metrics you may see in your analytics. To see the definit
 
 | Term | Definition |
 | Sends | The total number of sends successfully communicated between Braze and LINE. This does not mean the message was received by the user. |
-| Unique Opens | The total number of LINE messages sent that were opened by users, after a minimum threshold of 20 messages per day has been reached. |
-| Total Opens | The total number of times that the LINE messages sent were opened by users, after a minimum threshold of 20 messages per day has been reached. |
+| Unique Opens | The total number of LINE messages sent that were opened by users after a minimum threshold of 20 messages per day has been reached. |
+| Total Opens | The total number of times that the LINE messages sent were opened by users after a minimum threshold of 20 messages per day has been reached. |
 | Unique Clicks | The total number of LINE messages sent that were clicked by users, after a minimum threshold of 20 messages per day has been reached. |
-| Total Clicks | The total number of times that the LINE messages sent were clicked by users, after a minimum threshold of 20 messages per day has been reached. |
+| Total Clicks | The total number of times that the LINE messages sent were clicked by users after a minimum threshold of 20 messages per day has been reached. |
 {: .reset-td-br-1 .reset-td-br-2 }
 
 ### Historical performance

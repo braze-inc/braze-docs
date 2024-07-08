@@ -14,7 +14,7 @@ permalink: /line/line_setup/
 
 # LINE setup
 
-> This article covers how to set up the LINE channel in Braze and is part of the LINE beta collection. [Return to main page](https://www.braze.com/docs/line/).
+> This article covers how to set up the LINE channel in Braze and is part of the LINE beta collection. [Return to the main page](https://www.braze.com/docs/line/).
 
 LINE access is only available in select Braze packages. Contact your customer success manager or account manager to get started.
 
@@ -74,8 +74,8 @@ You'll need the following to integrate LINE with Braze:
 | Account type | Description |
 | --- | --- |
 | Unverified account | An unreviewed account that can be obtained by anyone (individual or corporate). This account is represented with a gray badge and won't appear in search results within the LINE app. |
-| Verified account | An account that has passed the LINE Yahoo! screening. This account is represented with a blue badge and will appear in search results within the LINE app.<br><br>This account is only available for accounts based in Japan, Taiwan, Thailand, and Indonesia.  |
-| Premium account | An account that has passed the LINE Yahoo! screening. This account is represented with a green badge and will appear in search results within the LINE app. This account type is automatically granted during the screening at LINE's discretion. |
+| Verified account | An account that has passed the LINE Yahoo screening. This account is represented with a blue badge and will appear in search results within the LINE app.<br><br>This account is only available for accounts based in Japan, Taiwan, Thailand, and Indonesia.  |
+| Premium account | An account that has passed the LINE Yahoo screening. This account is represented with a green badge and will appear in search results within the LINE app. This account type is automatically granted during the screening at LINE's discretion. |
 {: .reset-td-br-1 .resest-td-br-2}
 
 ## Sync existing followers into Braze
@@ -85,12 +85,12 @@ To sync followers into Braze, your LINE account needs to be verified or premium.
 ### Applying for a verified LINE account
 
 {% alert important %}
-Verified accounts are only available for accounts based in Japan, Taiwan, Thailand and Indonesia. 
+Verified accounts are only available for accounts based in Japan, Taiwan, Thailand, and Indonesia. 
 {% endalert %}
 
 1. On the LINE **Official Account** page, select **Settings**.
 2. Under **Information Disclosure Verification Status**, select **Request Account Verification**.
-3. Enter the rerquired information.
+3. Enter the required information.
 4. Wait for a notification with the review results.
 
 If you want to sync users who followed a specific channel before that channel was synced with Braze, ask your customer success manager or account manager to [submit a request](https://servicedesk.braze.com/plugins/servlet/desk/portal/12) to the WhatsApp team.

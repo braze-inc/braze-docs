@@ -14,15 +14,15 @@ permalink: /line/create/
 
 # Creating a LINE message
 
-> LINE campaigns can directly reach and programmatically chat with your customers. You can use Liquid and other dynamic content to create a personal experience with your users, and create an environment that fosters and enhances an unobtrusive user experience with your brand.<br><br>This article is part of the LINE beta collection. [Return to main page](https://www.braze.com/docs/line/).
+> LINE campaigns can directly reach and programmatically chat with your customers. You can use Liquid and other dynamic content to create a personal experience with your users and create an environment that fosters and enhances an unobtrusive user experience with your brand.<br><br>This article is part of the LINE beta collection. [Return to the main page](https://www.braze.com/docs/line/).
 
 ## Prerequisites
 
 Before creating a LINE message, do the following:
 
-1. Read the LINE overview
-2. Acknolwedge policies, limits, and content rules
-3. [Set up your LINE connection]({{site.basesurl}}/user_guide/message_building_by_channel/line/line_setup/)
+1. Read the LINE overview.
+2. Acknolwedge policies, limits, and content rules.
+3. [Set up your LINE connection]({{site.basesurl}}/user_guide/message_building_by_channel/line/line_setup/).
 
 
 ## Step 1: Choose where to build your message
@@ -34,7 +34,7 @@ Not sure whether your message should be sent using a campaign or a Canvas? Campa
 
 **Steps:**
 
-1. Go to **Messaging** > **Campaigns** and click **Create Campaign**.
+1. Go to **Messaging** > **Campaigns** and select **Create Campaign**.
 {% alert note %}
 If you are using the [older navigation]({{site.baseurl}}/navigation), you can find **Campaigns** under **Engagement**.
 {% endalert %}
@@ -68,7 +68,7 @@ If all of the messages in your campaign are going to be similar or have the same
 
 ## Step 2: Compose your LINE message
 
-Write your message using langauges and personalization (such as Liquid or Connected Content) as needed. LINE allows up to five message bubbles in each message, which can be text or image messages.
+Write your message using languages and personalization (such as Liquid or Connected Content) as needed. LINE allows up to five message bubbles in each message, which can be text or image messages.
 
 ![LINE composer with a message displayed in the preview.][1]{: style="max-width:70%;"}
 

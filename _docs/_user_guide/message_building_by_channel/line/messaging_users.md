@@ -12,13 +12,13 @@ permalink: /line/messaging_users/
 
 # Messaging LINE users
 
-> LINE is a two-way communication channel. You can go beyond sending users messages and engage in conversations with users by using templated campaigns and Canvases.<br><br>This article is part of the LINE beta collection. [Return to main page](https://www.braze.com/docs/line/).
+> LINE is a two-way communication channel. You can go beyond sending users messages and engage in conversations with users by using templated campaigns and Canvases.<br><br>This article is part of the LINE beta collection. [Return to the main page](https://www.braze.com/docs/line/).
 
-There are various methods to converse with users through LINE, such as using LINE trigger words. YOu can also use calls-to-action (CTAs) to encourage user engagement with your LINE messaging.
+There are various methods to converse with users through LINE, such as using LINE trigger words. You can also use calls-to-action (CTAs) to encourage user engagement with your LINE messaging.
 
 ## Action-based triggers
 
-You can create campaigns and Canvases that start, branch, and have mid-journey changes when you recieve an inbound LINE message (a message sent from a user) that contains a trigger word. Make sure you choose trigger words that match what you expect users to send.
+You can create campaigns and Canvases that start, branch, and have mid-journey changes when you receive an inbound LINE message (a message sent from a user) that contains a trigger word. Make sure you choose trigger words that match what you expect users to send.
 
 ### Campaign
 
@@ -44,7 +44,7 @@ You should include a trigger option for unrecognized responses on interactive Ca
 
 ### Creating a trigger for unrecognized responses
 
-After creating action groups for the custom filter phrases, add an additional action group to the action path for **Send LINE message**, and don't check **Where the message body**. This will catch all unrecognized user responses, similar to an “else” clause.
+After creating action groups for the custom filter phrases, add another action group to the action path for **Send LINE message**, and don't check **Where the message body**. This will catch all unrecognized user responses, similar to an “else” clause.
 
 For this message, you should send a LINE message informing the user that this channel is not monitored by a human and, if needed, guide them to a support channel.
 
