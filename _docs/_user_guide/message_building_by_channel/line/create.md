@@ -14,7 +14,7 @@ permalink: /line/create/
 
 # Creating a LINE message
 
-> LINE campaigns can directly reach and programmatically chat with your customers. You can use Liquid and other dynamic content to create a personal experience with your users, and create an environment that fosters and enhances an unobtrusive user experience with your brand.
+> LINE campaigns can directly reach and programmatically chat with your customers. You can use Liquid and other dynamic content to create a personal experience with your users, and create an environment that fosters and enhances an unobtrusive user experience with your brand.<br><br>This article is part of the LINE beta collection. [Return to main page](https://www.braze.com/docs/line/).
 
 ## Prerequisites
 

@@ -12,7 +12,7 @@ permalink: /line/reporting/
 
 # LINE reporting
 
-> After launching your campaign or Canvas, you can view key metrics on the campaign details page or Canvas analytics.
+> After launching your campaign or Canvas, you can view key metrics on the campaign details page or Canvas analytics.<br><br>This article is part of the LINE beta collection. [Return to main page](https://www.braze.com/docs/line/).
 
 {% alert tip %}
 Looking for definitions for the terms and metrics in your report? Refer to [Report metrics glossary]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics/).
@@ -23,7 +23,7 @@ Looking for definitions for the terms and metrics in your report? Refer to [Repo
 In the **Campaign Analytics** tab, you can view your reports in a series of panels. You might see more or less than those listed in the sections below, but each has its own purpose.
 
 {% alert note %}
-Open and click-related statistics for LINE aren't calculated if more than 20 users perform the event on a given day.
+Open and click-related statistics for LINE are only calculated if more than 20 users perform the event on a given day.
 {% endalert %}
 
 ### Campaign details
@@ -54,7 +54,6 @@ Here are some key LINE metrics you may see in your analytics. To see the definit
 | Total Opens | The total number of times that the LINE messages sent were opened by users, after a minimum threshold of 20 messages per day has been reached. |
 | Unique Clicks | The total number of LINE messages sent that were clicked by users, after a minimum threshold of 20 messages per day has been reached. |
 | Total Clicks | The total number of times that the LINE messages sent were clicked by users, after a minimum threshold of 20 messages per day has been reached. |
-| Failures | The total number of sends that were not successful because WhatsApp could not deliver the message to the end user. Failures are included in the *Sends* count but are not included in the *Deliveries* count. |
 {: .reset-td-br-1 .reset-td-br-2 }
 
 ### Historical performance

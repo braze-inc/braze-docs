@@ -14,7 +14,7 @@ permalink: /line/line_setup/
 
 # LINE setup
 
-> This article covers how to set up the LINE channel in Braze.
+> This article covers how to set up the LINE channel in Braze and is part of the LINE beta collection. [Return to main page](https://www.braze.com/docs/line/).
 
 LINE access is only available in select Braze packages. Contact your customer success manager or account manager to get started.
 
@@ -65,7 +65,7 @@ You'll need the following to integrate LINE with Braze:
 ![LINE messaging integration page with LINE integration section.][3]{: style="max-width:80%;"}
 
 {: start="2"}
-2. After connecting, Braze will automatically generate a Braze subscription group for each LINE integration that's successfully added to your workspace. <br><br> Any changes to your followers list (such as new followers or unfollowers) will be automatically pushed into Braze. Learn more about LINE follows in [Line Follows]().
+2. After connecting, Braze will automatically generate a Braze subscription group for each LINE integration that's successfully added to your workspace. <br><br> Any changes to your followers list (such as new followers or unfollowers) will be automatically pushed into Braze.
 
 ![LINE subscription groups section displaying one subscription group for the "LINE" channel.][4]{: style="max-width:80%;"}
 

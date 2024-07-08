@@ -12,7 +12,7 @@ permalink: /line/messaging_users/
 
 # Messaging LINE users
 
-> LINE is a two-way communication channel. You can go beyond sending users messages and engage in conversations with users by using templated campaigns and Canvases.
+> LINE is a two-way communication channel. You can go beyond sending users messages and engage in conversations with users by using templated campaigns and Canvases.<br><br>This article is part of the LINE beta collection. [Return to main page](https://www.braze.com/docs/line/).
 
 There are various methods to converse with users through LINE, such as using LINE trigger words. YOu can also use calls-to-action (CTAs) to encourage user engagement with your LINE messaging.
 
