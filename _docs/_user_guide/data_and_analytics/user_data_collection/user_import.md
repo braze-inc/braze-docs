@@ -14,6 +14,8 @@ description: "This reference article covers how to import users into your Braze 
 Braze does not sanitize HTML data during ingestion time. This means that script tags must be stripped for all import data meant for web personalization. Skip to the [HTML data stripping](#html-data-stripping) section to read more.
 {% endalert %}
 
+{% multi_lang_include email-via-sms-warning.md %}
+
 ## REST API
 
 You can use the [`/users/track` endpoint][12] to record custom events, user attributes, and purchases for users.
