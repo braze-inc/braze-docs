@@ -28,7 +28,7 @@ Because deduplication occurs when targeted users are included in the same dispat
 
 ## Examples
 
-For example, if user A and user B share the email `johndoe@example.com` but their profile is in different time zone, when the campaign trigger event includes sending in a user's time zone, the email `johndoe@example.com` will receive two emails.
+For example, if user A and user B share the email `johndoe@example.com` but their profile is in a different time zone, when the campaign trigger event includes sending in a user's time zone, the email `johndoe@example.com` will receive two emails.
 
 If you set or update the email address for User A to another email address that's shared by an existing User B, User A will inherit the subscription state that already exists from User B unless the **Resubscribe users when they update their email** setting is turned on.
 
