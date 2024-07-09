@@ -40,23 +40,23 @@ Enable verbose logs before any other calls in `Application.onCreate()` to ensure
 
 {% tabs %}
 {% tab Application %}
-To enable logs directly in your app, add the following to your application's `onCreate()` method _before_ any other methods.
+To enable logs directly in your app, add the following to your application's `onCreate()` method before any other methods.
 
 {% subtabs %}
 {% subtab JAVA %}
 ```java
-BrazeLogger.setLogLevel(Log.LOG_LEVEL_CONSTANT);
+BrazeLogger.setLogLevel(Log.MIN_LOG_LEVEL);
 ```
 {% endsubtab %}
 
 {% subtab KOTLIN %}
 ```kotlin
-BrazeLogger.logLevel = Log.LOG_LEVEL_CONSTANT
+BrazeLogger.logLevel = Log.MIN_LOG_LEVEL
 ```
 {% endsubtab %}
 {% endsubtabs %}
 
-Replace `LOG_LEVEL_CONSTANT` with the constant or value of the log level you'd like to enable.
+Replace `MIN_LOG_LEVEL` with the **Constant** of the log level you'd like to set as your minimum log level. Any logs at a level `>=` to your set `MIN_LOG_LEVEL` will be forwarded to Android's default [`Log`](https://developer.android.com/reference/android/util/Log) method. Any logs `<` your set `MIN_LOG_LEVEL` will be discarded.
 
 | Constant    | Value          | Description                                                               |
 |-------------|----------------|---------------------------------------------------------------------------|
@@ -68,13 +68,7 @@ Replace `LOG_LEVEL_CONSTANT` with the constant or value of the log level you'd l
 | `ASSERT`    | 7              | Logs assertion messages when conditions are false during development.     |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
-{% alert note %}
-Any logs at a level `>=` to your set `LOG_LEVEL_VALUE` will be forwarded to Android's default [`Log`](https://developer.android.com/reference/android/util/Log) method. Any logs `<` your set `LOG_LEVEL_VALUE` will be discarded.
-<br><br>
-For example, if `LOG_LEVEL_VALUE` is set to `2`,  logs at levels `2`, `3`, `4`, `5`, `6`, and `7` will be forwarded to the `Log` method.
-{% endalert %}
-
-Your code should be similar to the following:
+For example, the following code will forward log levels `2`, `3`, `4`, `5`, `6`, and `7` to the `Log` method.
 
 {% subtabs %}
 {% subtab JAVA %}
@@ -95,10 +89,10 @@ BrazeLogger.logLevel = Log.VERBOSE
 To enable logs in the `braze.xml`, add the following to your file:
 
 ```xml
-<integer name="com_braze_logger_initial_log_level">LOG_LEVEL_VALUE</integer>
+<integer name="com_braze_logger_initial_log_level">MIN_LOG_LEVEL</integer>
 ```
 
-Replace `LOG_LEVEL_VALUE` with the constant or value of the log level you'd like to enable.
+Replace `MIN_LOG_LEVEL` with the **Value** of the log level you'd like to set as your minimum log level. Any logs at a level `>=` to your set `MIN_LOG_LEVEL` will be forwarded to Android's default [`Log`](https://developer.android.com/reference/android/util/Log) method. Any logs `<` your set `MIN_LOG_LEVEL` will be discarded.
 
 | Constant    | Value          | Description                                                               |
 |-------------|----------------|---------------------------------------------------------------------------|
@@ -110,13 +104,7 @@ Replace `LOG_LEVEL_VALUE` with the constant or value of the log level you'd like
 | `ASSERT`    | 7              | Logs assertion messages when conditions are false during development.     |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
-{% alert note %}
-Any logs at a level `>=` to your set `LOG_LEVEL_VALUE` will be forwarded to Android's default [`Log`](https://developer.android.com/reference/android/util/Log) method. Any logs `<` your set `LOG_LEVEL_VALUE` will be discarded.
-<br><br>
-For example, if `LOG_LEVEL_VALUE` is set to `2`,  logs at levels `2`, `3`, `4`, `5`, `6`, and `7` will be forwarded to the `Log` method.
-{% endalert %}
-
-Your code should be similar to the following:
+For example, the following code will forward log levels `2`, `3`, `4`, `5`, `6`, and `7` to the `Log` method.
 
 ```xml
 <integer name="com_braze_logger_initial_log_level">2</integer>
