@@ -25,4 +25,4 @@ Vous devriez continuer à tester votre intégration en naviguant dans votre appl
 Si le suivi de la session agit de manière inattendue, activez la [journalisation verbeuse][56] et observez votre application pendant que vous reproduisez les étapes de déclenchement de session. Observez les relevés de Braze dans le logcat pour détecter où vous avez pu omettre de journaliser les appels `openSession` et `closeSession` dans vos activités.
 
 [55]: {% image_buster /assets/img_archive/android_sessions.png %}
-[56]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/additional_customization_and_configuration/#enabling-logs
+[56]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/additional_customization_and_configuration/#android-verbose-logging

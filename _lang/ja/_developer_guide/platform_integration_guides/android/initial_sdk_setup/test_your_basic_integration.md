@@ -25,4 +25,4 @@ description: "このリファレンス記事では、Android または FireOS �
 セッショントラッキングが予期せぬ動作をしている場合は、[詳細なログ記録][56]をオンにして、セッションをトリガーする手順を再現しながらアプリを観察してください。llogcat 内の Braze ステートメントを観察して、アクティビティ内の `openSession` および `closeSession` 呼び出しのログ記録を見逃している可能性がある場所を検出します。
 
 [55]: {% image_buster /assets/img_archive/android_sessions.png %}
-[56]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/additional_customization_and_configuration/#enabling-logs
+[56]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/additional_customization_and_configuration/#android-verbose-logging
