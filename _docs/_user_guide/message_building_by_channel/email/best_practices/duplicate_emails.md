@@ -14,7 +14,7 @@ channel: email
 
 ## Email subscription updates
 
-Braze automatically checks for and removes duplicate email addresses when an email campaign is sent. This way an email is only sent once and is "deduped" which checks that it doesn't hit the same email multiple times even if multiple user profiles share a common address.
+Braze automatically checks for and removes duplicate email addresses when an email campaign is sent. This way an email is only sent once and is "deduped," which checks that it doesn't hit the same email multiple times even if multiple user profiles share a common address.
 
 {% alert tip %}
 Make sure you're familiar with the tools that Braze provides for [managing user email subscriptions]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#managing-user-subscriptions) and targeting campaigns at users with particular subscription states. These tools are critical for compliance with [anti-spam laws]({{site.baseurl}}/help/best_practices/spam_regulations/#spam-regulations).
