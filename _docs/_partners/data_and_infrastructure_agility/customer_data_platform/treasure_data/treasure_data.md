@@ -14,7 +14,7 @@ search_tag: Partner
 
 The Braze and Treasure Data integration allows you to write job results from Treasure Data directly to Braze, letting you:
 * **Map external IDs**: Map IDs to the Braze user account from your CRM system. 
-* **Manage opt-out**: When an end-user updates their consent choosing not to participate.
+* **Manage opt-out**: When a user updates their consent choosing not to participate.
 * **Upload your tracking of events, purchases, or custom profile attributes**. This information can help you build precise customer segments that enhance the user experience for your campaigns.
 
 ## Prerequisites

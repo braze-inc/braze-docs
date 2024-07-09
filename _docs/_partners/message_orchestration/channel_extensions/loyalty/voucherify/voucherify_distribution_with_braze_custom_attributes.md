@@ -45,7 +45,7 @@ You can distribute codes to Braze using two modes:
 - **Manual mode**
 - Define an **automated workflow** that triggers code delivery in response to an action taken by your users.
 
-In both manual and automatic modes, Voucherify sends unique codes with their attributes and assigns them to Braze Custom Attributes in users' profiles.
+In both manual and automatic modes, Voucherify sends unique codes with their attributes and assigns them to Braze custom attributes in users' profiles.
 
 ![Map fields to custom attributes]({% image_buster /assets/img/voucherify/voucherify_custom_attributes_fields_mapping.png %})
 

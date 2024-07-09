@@ -15,7 +15,7 @@ channel:
 
 ## Two-way messaging (custom keyword responses)
 
-Two-way messaging allows you to send messages and process the responses to those messages. It requires end-users to send a keyword to Braze, to which that user will receive an automatic reply. Applied correctly, two-way messaging can be a simple, immediate, and dynamic solution to customer marketing, saving time and resources along the way.
+Two-way messaging allows you to send messages and process the responses to those messages. It requires your users to send a keyword to Braze, to which that user will receive an automatic reply. Applied correctly, two-way messaging can be a simple, immediate, and dynamic solution to customer marketing, saving time and resources along the way.
 
 ## Managing keywords and auto responses
 

@@ -12,7 +12,7 @@ search_tag: Partner
 
 > Transcend is a data privacy infrastructure company that makes it simple for companies to give their users control over their data, automatically fulfilling data subject requests inside companies across all of their data systems and vendors. 
 
-The Braze and Transcend partnership helps users automate privacy requests by orchestrating data across dozens of data systems, helping teams comply with regulations like GDPR and CCPA. Transcend provides end-users with a control panel, or privacy center, hosted at `privacy.\<company\>.com` where users can manage their privacy preferences, export their data, or delete it. 
+The Braze and Transcend partnership helps users automate privacy requests by orchestrating data across dozens of data systems, helping teams comply with regulations like GDPR and CCPA. Transcend provides end users with a control panel, or privacy center, hosted at `privacy.\<company\>.com` where users can manage their privacy preferences, export their data, or delete it. 
 
 ## Prerequisites
 
@@ -39,7 +39,7 @@ If identifiers are not enabled correctly, Transcend may not process requests for
 {% endalert %}
 
 ### Step 2: Test requests
-Transcend recommends testing requests across your Data Map before you start processing requests from end-users.
+Transcend recommends testing requests across your Data Map before you start processing requests from your users.
 1. Go to **Privacy Center** in Transcend and click **View your Privacy Center**.<br><br>
 2. From your **Privacy Center**, click **Take Control**, then **Download my data**. Enter your email or log in to authenticate yourself before submitting the request.<br><br>
 3. Check your email for a message from Transcend. You'll be asked to click on a verification link to verify the request.<br><br>

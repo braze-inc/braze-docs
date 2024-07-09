@@ -19,7 +19,7 @@ The following additional terms apply in relation to Customer’s use of the SMS 
 
 **"Aggregators"** shall mean third-party intermediaries that transmit SMS/MMS Messages between SMS/MMS Providers and Carriers.
 
-**"Carriers"** shall mean third-party wireless service providers (e.g., T-Mobile, AT&T, etc.).
+**"Carriers"** shall mean third-party wireless service providers (such as T-Mobile, AT&T, and similar).
 
 **"SMS/MMS Providers"** shall mean Braze Sub-processors used in the transmission of SMS/MMS Messages, as identified at [www.braze.com/subprocessors](http://www.braze.com/subprocessors).
 

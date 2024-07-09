@@ -37,7 +37,7 @@ Vous pouvez utiliser les méthodes de l’utilitaire dans `ABKPushUtils` pour v�
   NSDictionary *pushDictionary = launchOptions[UIApplicationLaunchOptionsRemoteNotificationKey];
   BOOL launchedFromAppboyInternalPush = pushDictionary && [ABKPushUtils isAppboyInternalRemoteNotification:pushDictionary];
   if (!launchedFromAppboyInternalPush) {
-    // ... Gated logic here (e.g., pinging your server to download content) ...
+    // ... Gated logic here (such as pinging your server to download content) ...
   }
 }
 ```
@@ -45,7 +45,7 @@ Vous pouvez utiliser les méthodes de l’utilitaire dans `ABKPushUtils` pour v�
 ```objc
 - (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult result))completionHandler {
   if (![ABKPushUtils isAppboyInternalRemoteNotification:userInfo]) {
-    // ... Gated logic here (e.g., pinging server for content) ...
+    // ... Gated logic here (such as pinging server for content) ...
   }
 }
 ```
@@ -58,7 +58,7 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
   let pushDictionary = launchOptions?[UIApplicationLaunchOptionsKey.remoteNotification] as? NSDictionary as? [AnyHashable : Any] ?? [:]
   let launchedFromAppboyInternalPush = ABKPushUtils.isAppboyInternalRemoteNotification(pushDictionary)
   if (!launchedFromAppboyInternalPush) {
-    // ... Gated logic here (e.g., pinging your server to download content) ...
+    // ... Gated logic here (such as pinging your server to download content) ...
   }
 }
 ```
@@ -68,7 +68,7 @@ func application(_ application: UIApplication,
                  didReceiveRemoteNotification userInfo: [AnyHashable : Any],
                  fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
   if (!ABKPushUtils.isAppboyInternalRemoteNotification(userInfo)) {
-    // ... Gated logic here (e.g., pinging server for content) ...
+    // ... Gated logic here (such as pinging server for content) ...
   }
 }
 ```
