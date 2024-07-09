@@ -14,6 +14,7 @@ description: "This reference article covers additional customization and configu
 > This reference article covers additional customization and configuration options such as verbose logging, suppressing logging, and how to implement multiple API keys.
 
 ## Using R8/ProGuard with Braze
+
 [Code shrinking][50] configuration is automatically included with your Braze integration.
 
 Client apps that obfuscate Braze code must store release mapping files for Braze to interpret stack traces. If you want to continue to keep all Braze code, add the following to your ProGuard file:
