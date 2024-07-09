@@ -56,7 +56,7 @@ BrazeLogger.logLevel = Log.LOG_LEVEL_CONSTANT
 {% endsubtab %}
 {% endsubtabs %}
 
-Replace `LOG_LEVEL_CONSTANT` with the constant of the log level you'd like to enable.
+Replace `LOG_LEVEL_CONSTANT` with the constant or value of the log level you'd like to enable.
 
 | Constant    | Value          | Description                                                               |
 |-------------|----------------|---------------------------------------------------------------------------|
@@ -69,7 +69,9 @@ Replace `LOG_LEVEL_CONSTANT` with the constant of the log level you'd like to en
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 {% alert note %}
-Each log level constant corresponds to one of the Android log level constants defined in [`android.util.log`](https://developer.android.com/reference/android/util/Log).
+Any logs at a level `>=` to your set `LOG_LEVEL_VALUE` will be forwarded to Android's default [`Log`](https://developer.android.com/reference/android/util/Log) method. Any logs `<` your set `LOG_LEVEL_VALUE` will be discarded.
+<br><br>
+For example, if `LOG_LEVEL_VALUE` is set to `2`,  logs at levels `2`, `3`, `4`, `5`, `6`, and `7` will be forwarded to the `Log` method.
 {% endalert %}
 
 Your code should be similar to the following:
@@ -96,7 +98,7 @@ To enable logs in the `braze.xml`, add the following to your file:
 <integer name="com_braze_logger_initial_log_level">LOG_LEVEL_VALUE</integer>
 ```
 
-Replace `LOG_LEVEL_VALUE` with the value of the log level you'd like to enable.
+Replace `LOG_LEVEL_VALUE` with the constant or value of the log level you'd like to enable.
 
 | Constant    | Value          | Description                                                               |
 |-------------|----------------|---------------------------------------------------------------------------|
@@ -111,7 +113,7 @@ Replace `LOG_LEVEL_VALUE` with the value of the log level you'd like to enable.
 {% alert note %}
 Any logs at a level `>=` to your set `LOG_LEVEL_VALUE` will be forwarded to Android's default [`Log`](https://developer.android.com/reference/android/util/Log) method. Any logs `<` your set `LOG_LEVEL_VALUE` will be discarded.
 <br><br>
-For example, if `LOG_LEVEL_VALUE` is set to `2`,  logs at levels `2`, `3`, `4`, `5`, `6`, and `7` will be forwarded to the 'Log' method.
+For example, if `LOG_LEVEL_VALUE` is set to `2`,  logs at levels `2`, `3`, `4`, `5`, `6`, and `7` will be forwarded to the `Log` method.
 {% endalert %}
 
 Your code should be similar to the following:
