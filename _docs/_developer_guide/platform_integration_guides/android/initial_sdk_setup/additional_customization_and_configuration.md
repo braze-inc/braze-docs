@@ -109,7 +109,9 @@ Replace `LOG_LEVEL_VALUE` with the value of the log level you'd like to enable.
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 {% alert note %}
-If you set `LOG_LEVEL_VALUE` to a number `>=` these values, the logs will be forwarded to Android's default [`Log`](https://developer.android.com/reference/android/util/Log) method. If the number is `<` any of these values, the logs will be discarded.
+Any logs at a level `>=` to your set `LOG_LEVEL_VALUE` will be forwarded to Android's default [`Log`](https://developer.android.com/reference/android/util/Log) method. Any logs `<` your set `LOG_LEVEL_VALUE` will be discarded.
+<br><br>
+For example, if `LOG_LEVEL_VALUE` is set to `2`,  logs at levels `2`, `3`, `4`, `5`, `6`, and `7` will be forwarded to the 'Log' method.
 {% endalert %}
 
 Your code should be similar to the following:
