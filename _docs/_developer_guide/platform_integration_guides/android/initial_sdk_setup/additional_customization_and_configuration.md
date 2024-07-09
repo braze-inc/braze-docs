@@ -15,7 +15,7 @@ description: "This reference article covers additional customization and configu
 
 ## Using R8/ProGuard with Braze
 
-[Code shrinking][50] configuration is automatically included with your Braze integration.
+[Code shrinking](https://developer.android.com/studio/build/shrink-code) configuration is automatically included with your Braze integration.
 
 Client apps that obfuscate Braze code must store release mapping files for Braze to interpret stack traces. If you want to continue to keep all Braze code, add the following to your ProGuard file:
 
@@ -154,7 +154,7 @@ BrazeLogger.setLogLevel(BrazeLogger.SUPPRESS)
 
 The most common use case for multiple API keys is separating API keys for debug and release build variants.
 
-To easily switch between multiple API keys in your builds, we recommend creating a separate `braze.xml` file for each relevant [build variant][3]. A build variant is a combination of build type and product flavor. Note that by default, [a new Android project is configured with `debug` and `release` build types][8] and no product flavors.
+To easily switch between multiple API keys in your builds, we recommend creating a separate `braze.xml` file for each relevant [build variant](https://developer.android.com/studio/build/build-variants.html). A build variant is a combination of build type and product flavor. Note that by default, [a new Android project is configured with `debug` and `release` build types](http://tools.android.com/tech-docs/new-build-system/user-guide#TOC-Build-Types) and no product flavors.
 
 For each relevant build variant, create a new `braze.xml` for it in `src/<build variant name>/res/values/`:
 
@@ -167,11 +167,4 @@ For each relevant build variant, create a new `braze.xml` for it in `src/<build 
 
 When the build variant is compiled, it will use the new API key.
 
-See the [runtime configuration][69] documentation for setting an API key in code.
-
-[3]: https://developer.android.com/studio/build/build-variants.html
-[8]: http://tools.android.com/tech-docs/new-build-system/user-guide#TOC-Build-Types
-[50]: https://developer.android.com/studio/build/shrink-code
-[54]: https://developer.android.com/reference/android/util/Log.html
-[69]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/runtime_configuration/
-[70]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.support/-braze-logger/log-level.html
+See the [runtime configuration]({{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/runtime_configuration/) documentation for setting an API key in code.
