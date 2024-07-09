@@ -427,7 +427,7 @@ return [[Appboy sharedInstance] user];
 ### ログ分析
 
 {% tabs local %}
-{% tab Step 1: Custom events %}
+{% tab Step 1: Custom Events %}
 
 ##### カスタムイベント記録メソッドの作成
 

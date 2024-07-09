@@ -228,7 +228,7 @@ func didReceive(_ response: UNNotificationResponse, completionHandler completion
 以下のコードスニペットは、カスタムイベント、カスタム属性、およびユーザー属性を保存および送信する方法についての役立つ参考情報です。このガイドでは UserDefaults の観点から説明しますが、コード表現はヘルパーファイル `RemoteStorage` の形式になります。また、追加のヘルパーファイル `UserAttributes` と`EventName Dictionary` もあり、ユーザー属性の送信と保存に使用されます。ヘルパーファイルはすべて、このガイドの末尾にあります。
 
 {% tabs local %}
-{% tab Custom events %}
+{% tab Custom Events %}
 
 ##### カスタムイベントの保存
 

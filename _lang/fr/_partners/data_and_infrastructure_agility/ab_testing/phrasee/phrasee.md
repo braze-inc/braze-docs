@@ -30,7 +30,7 @@ Pour inclure les informations de suivi des clics de vos utilisateurs abonnés, u
 Cette intégration vous permet d’intégrer des campagnes de notifications push ou par e-mail dans Phrasee. Ces deux types de campagnes sont abordés dans les étapes suivantes.
 
 {% tabs %}
-{% tab Email campaign %}
+{% tab Email Campaign %}
 
 ### Campagne par e-mail
 
@@ -81,7 +81,7 @@ Assurez-vous que la date et l’heure planifiées correspondent au calendrier co
 {% endalert %}
 
 {% endtab %}
-{% tab Push campaign %}
+{% tab Push Campaign %}
 
 ### Campagne de notification push
 
