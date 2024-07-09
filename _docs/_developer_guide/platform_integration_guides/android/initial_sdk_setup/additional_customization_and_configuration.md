@@ -25,7 +25,7 @@ Client apps that obfuscate Braze code must store release mapping files for Braze
 
 ## Logging
 
-By default, the the Braze Android SDK log level is set to `INFO`. You can [suppress these logs](#suppressing-logs) or [set a different log level](#enabling-logs-enabling-logs), such as `VERBOSE`, `DEBUG`, or `WARN`.
+By default, the Braze Android SDK log level is set to `INFO`. You can [suppress these logs](#suppressing-logs) or [set a different log level](#enabling-logs), such as `VERBOSE`, `DEBUG`, or `WARN`.
 
 ### Enabling logs {#enabling-logs}
 
@@ -38,8 +38,8 @@ Enable verbose logs before any other calls in `Application.onCreate()` to ensure
 {% endalert %}
 
 {% tabs %}
-{% tab Braze SDK %}
-To enable logs in the Braze Android SDK, add the following to your `TODO` file:
+{% tab Application %}
+To enable logs directly in your app, add the following to your application's `onCreate()` method _before_ any other methods.
 
 {% subtabs %}
 {% subtab JAVA %}
@@ -129,7 +129,7 @@ To verify that your logs are set to `VERBOSE`, check if `V/Braze` occurs somewhe
 
 ### Suppressing logs
 
-The default log level for the Braze Android SDK is `INFO`. To suppress all logs for the Braze Android SDK, call `BrazeLogger.SUPPRESS` in your `TODO` file.
+The default log level for the Braze Android SDK is `INFO`. To suppress all logs for the Braze Android SDK, call `BrazeLogger.SUPPRESS` in your application's `onCreate()` method _before_ any other methods.
 
 {% tabs local %}
 {% tab JAVA %}
