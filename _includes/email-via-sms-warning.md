@@ -1,5 +1,3 @@
 {% alert important %}
 Some of our email providers do not allow the sending of emails utilizing a phone number and a provider’s gateway domain, known as an MM3, which results in the email being received as an SMS (text) message. For example, to send an email to a T-mobile phone number, 9999999999@tmomail.net would send an SMS to whoever owns that phone number on the T-mobile network. See [here](https://www.fcc.gov/consumer-governmental-affairs/about-bureau/consumer-policy-division/can-spam/domain-name-downloads) for the full list of gateway domain names that may not be supported. Please note any emails sent to these SMS gateways may not be delivered, although the sending of that email will still count towards your email billing. We urge customers to not send legally required transactional emails to SMS gateways as there is a strong likelihood that those emails will not be delivered.
 {% endalert %}
-
-{% multi_lang_include email-via-sms-warning.md %}
