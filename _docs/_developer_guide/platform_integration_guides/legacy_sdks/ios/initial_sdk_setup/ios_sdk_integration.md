@@ -427,7 +427,7 @@ Proceed to compile your code and run your application.<br><br>Try identifying us
 ### Log analytics
 
 {% tabs local %}
-{% tab Step 1: Custom Events %}
+{% tab Step 1: Custom events %}
 
 ##### Create log custom event method
 

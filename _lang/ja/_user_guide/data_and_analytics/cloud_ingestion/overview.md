@@ -473,7 +473,7 @@ Braze に正常に同期されたデータの追跡には、`UPDATED_AT` タイ�
 階層化カスタム属性の更新、サブスクリプションステータスの追加、カスタムイベントまたは購入の同期など、Braze の `/users/track` エンドポイントを通じて可能な操作はすべて、クラウドデータ取り込みでサポートされます。 
 
 {% tabs local %}
-{% tab Nested Custom Attributes %}
+{% tab Nested custom attributes %}
 カスタム属性を同期するために、階層化カスタム属性をペイロード列に含めることができます。 
 
 ```json

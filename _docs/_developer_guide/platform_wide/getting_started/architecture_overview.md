@@ -98,7 +98,7 @@ The [Braze SDK][5] powers additional messaging channels: push, in-app messages, 
 ![][13]
 
 ## Exporting data
-Critically, all end-user interactions with Braze are tracked so you can measure your engagement and outreach. And once Braze has aggregated your data from all these sources, it can be exported back to your tech stack using a variety of tools, closing the loop.
+Critically, all your users' interactions with Braze are tracked so you can measure your engagement and outreach. And after Braze has aggregated your data from all these sources, it can be exported back to your tech stack using a variety of tools, closing the loop.
 
 ### Currents
 [Currents][14] is an optional Braze add-on that provides a granular streaming export that continuously feeds other destinations of your stack. Currents is a per user per event raw data feed that exports data every five minutes, or every 15,000 events, whichever comes first. Examples of some downstream destinations for Currents would be Segment, S3, Redshift and Mixpanel, among others. 

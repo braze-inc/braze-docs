@@ -84,7 +84,7 @@ La [méthode `identify`](https://rudderstack.com/docs/destinations/marketing/bra
 La [méthode `track`](https://rudderstack.com/docs/destinations/marketing/braze/#track) de RudderStack collecte toutes les activités de l’utilisateur, ainsi que les propriétés associées à ces activités.
 
 **Commande terminée**<br>
-En utilisant l’[API eCommerce de RudderStack][20] pour désigner la méthode de suivi d’un événement avec le nom `Order Completed`, RudderStack envoie les produits répertoriés dans cet événement à Braze [`purchases`][21].
+En utilisant l’[API ecommerce de RudderStack][20] pour désigner la méthode de suivi d’un événement avec le nom `Order Completed`, RudderStack envoie les produits répertoriés dans cet événement à Braze [`purchases`][21].
 
 ### Page
 

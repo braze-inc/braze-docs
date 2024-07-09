@@ -405,7 +405,7 @@ Contact emails will only receive notifications of global or sync-level errors su
 
 ![]({% image_buster /assets/img/cloud_ingestion/ingestion_2.png %})
 
-You will also choose the data type and sync frequency. Frequency can be anywhere from every 15 minutes to once per month. We'll use the time zone configured in your Braze dashboard to schedule the recurring sync. Supported data types are Custom Attributes, Custom Events, and Purchase Events, and the data type for a sync cannot be changed after creation. 
+You will also choose the data type and sync frequency. Frequency can be anywhere from every 15 minutes to once per month. We'll use the time zone configured in your Braze dashboard to schedule the recurring sync. Supported data types are custom attributes, custom events, and purchase events, and the data type for a sync cannot be changed after creation. 
 
 #### Add a public key to the Braze user
 At this point, you must go back to Snowflake to complete the setup. Add the public key displayed on the dashboard to the user you created for Braze to connect to Snowflake.

@@ -21,7 +21,7 @@ If you use SendGrid as an email provider, you can send emails to Apple without m
 
 ![Option to allowlist individual email addresses on the Apple Certificate page.]({% image_buster /assets/img/email-relay-whitelabel-address.png %})
 
-The address should be formatted as: `bounces+<YOUR_UID>@<YOUR_WHITELABELED_SUBDOMAIN_AND_DOMAIN>`(e.g., `bounces+1234567@braze.online.docs.com`). After the address is added to your Apple Certificate page, emails from this domain will be delivered via the Apple Private Relay system.
+The address should be formatted as: `bounces+<YOUR_UID>@<YOUR_WHITELABELED_SUBDOMAIN_AND_DOMAIN>`(such as `bounces+1234567@braze.online.docs.com`). After the address is added to your Apple Certificate page, emails from this domain will be delivered via the Apple Private Relay system.
 
 {% alert important %}
 If your desired "From" address is an `abmail` address, include that in your subdomain. For example, use `abmail.docs.braze.com` instead of `docs.braze.com`. This might not be the case for your address. Check your DNS records in SendGrid. 

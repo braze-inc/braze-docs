@@ -215,7 +215,7 @@ WhatsApp、中止
 
 {
 "abort_log": (optional, string) log message describing abort details (MAX: 128 CHARS),
-"abort_type": (optional, string) type of abort, e.g.: "liquid_abort_message", "quiet_hours", etc.,
+"abort_type": (optional, string) type of abort, such as: "liquid_abort_message", "quiet_hours", etc.,
 "action": (optional, string) action taken in response to this message (for example, Subscribed, Unsubscribed, or None),
 "app_group_id": (required, string) Braze ID of the workspace this user belongs to,
 "campaign_id": (optional, string) internal-use Braze ID of the campaign this event belongs to,
@@ -294,7 +294,7 @@ Abort, Content Cards
 
 {
 "abort_log": (optional, string) log message describing abort details (MAX: 128 CHARS),
-"abort_type": (optional, string) type of abort, e.g.: "liquid_abort_message", "quiet_hours", etc.,
+"abort_type": (optional, string) type of abort, such as: "liquid_abort_message", "quiet_hours", etc.,
 "app_group_id": (required, string) Braze ID of the workspace this user belongs to,
 "campaign_id": (optional, string) internal-use Braze ID of the campaign this event belongs to,
 "campaign_name": (optional, string) name of the campaign,
@@ -334,7 +334,7 @@ Abort, Email
 
 {
 "abort_log": (optional, string) log message describing abort details (MAX: 128 CHARS),
-"abort_type": (optional, string) type of abort, e.g.: "liquid_abort_message", "quiet_hours", etc.,
+"abort_type": (optional, string) type of abort, such as: "liquid_abort_message", "quiet_hours", etc.,
 "app_group_id": (optional, string) Braze ID of the workspace this user belongs to,
 "campaign_id": (optional, string) internal-use Braze ID of the campaign this event belongs to,
 "campaign_name": (optional, string) name of the campaign,
@@ -376,7 +376,7 @@ Abort, Push
 
 {
 "abort_log": (optional, string) log message describing abort details (MAX: 128 CHARS),
-"abort_type": (optional, string) type of abort, e.g.: "liquid_abort_message", "quiet_hours", etc.,
+"abort_type": (optional, string) type of abort, such as: "liquid_abort_message", "quiet_hours", etc.,
 "app_group_id": (required, string) Braze ID of the workspace this user belongs to,
 "app_id": (required, string) Braze ID of the app this user belongs to,
 "campaign_id": (optional, string) internal-use Braze ID of the campaign this event belongs to,
@@ -418,7 +418,7 @@ Abort, Push
 
 {
 "abort_log": (optional, string) log message describing abort details (MAX: 128 CHARS),
-"abort_type": (optional, string) type of abort, e.g.: "liquid_abort_message", "quiet_hours", etc.,
+"abort_type": (optional, string) type of abort, such as: "liquid_abort_message", "quiet_hours", etc.,
 "app_group_id": (required, string) Braze ID of the workspace this user belongs to,
 "campaign_id": (optional, string) internal-use Braze ID of the campaign this event belongs to,
 "campaign_name": (optional, string) name of the campaign,
@@ -455,7 +455,7 @@ Abort,  Webhooks
 
 {
 "abort_log": (optional, string) log message describing abort details (MAX: 128 CHARS),
-"abort_type": (optional, string) type of abort, e.g.: "liquid_abort_message", "quiet_hours", etc.,
+"abort_type": (optional, string) type of abort, such as: "liquid_abort_message", "quiet_hours", etc.,
 "app_group_id": (required, string) Braze ID of the workspace this user belongs to,
 "campaign_id": (optional, string) internal-use Braze ID of the campaign this event belongs to,
 "campaign_name": (optional, string) name of the campaign,

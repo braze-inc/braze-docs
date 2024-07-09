@@ -2697,15 +2697,15 @@ For MMS, the message limit is 5 MB (this includes the multimedia asset and the m
 
 ## WhatsApp channel details
 
-WhatsApp is a channel focused on two-way messaging and thus anchors on Conversations (instead of number of individual messages). A Conversation is a 24-hour thread between a business and an end-user.
+WhatsApp is a channel focused on two-way messaging and thus anchors on Conversations (instead of number of individual messages). A Conversation is a 24-hour thread between a business and a user.
 
 ### Conversation type definitions
 
 **Marketing Conversations:** Business-initiated conversations that enable you to achieve a wide range of goals, from generating awareness to driving sales and retargeting customers. Examples include new product, service, or feature announcements, targeted promotions/offers, and cart abandonment reminders.
 
-**Utility Conversations:** Business-initiated conversations that enable you to follow-up on user actions or requests. Examples include opt-in confirmation, order/delivery management (e.g., delivery update), account updates or alerts (e.g., payment reminder), or feedback surveys.
+**Utility Conversations:** Business-initiated conversations that enable you to follow-up on user actions or requests. Examples include opt-in confirmation, order/delivery management (such as delivery update), account updates or alerts (such as payment reminder), or feedback surveys.
 
-**Authentication Conversations:** Enable you to authenticate users with one-time passcodes, potentially at multiple steps in the login process (e.g., account verification, account recovery, integrity challenges).
+**Authentication Conversations:** Enable you to authenticate users with one-time passcodes, potentially at multiple steps in the login process (such as account verification, account recovery, integrity challenges).
 
 {% alert note %}
 Authentication conversations will only be supported on a case-by-case basis and Braze cannot guarantee specific SLAs. Additionally, Braze does not support PIN generation.

@@ -35,7 +35,7 @@ description: "この参考記事では、Braze で使用されるさまざまな
    "push_icon_image_url": (optional, string) an image URL for the large icon,
    "accent_color": (optional, integer) accent color to be applied by the standard Style templates when presenting this notification, an RGB integer value,
    "send_to_most_recent_device_only": (optional, boolean) defaults to false, if set to true, Braze will only send this push to a user's most recently used Android device, rather than all eligible Android devices,
-   "buttons" : (optional, array of Android Push Action Button Objects) push action buttons to display
+   "buttons" : (optional, array of Android Push action button objects) push action buttons to display
    "conversation_data" : (optional, Android Conversation Push Object) the data to be displayed via Conversation Push.
 }
 ```

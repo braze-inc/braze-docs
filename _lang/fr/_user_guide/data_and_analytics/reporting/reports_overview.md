@@ -215,7 +215,7 @@ Autres questions auxquelles ce rapport répond : 
 - Quelle est la différence entre la longueur du cycle de vie des utilisateurs qui se sont abonnés aux notifications push et celle des utilisateurs qui se sont abonnés aux e-mails ? Et celle de ceux qui sont abonnés aux deux ?
 
 {% endtab %}
-{% tab Custom Events %}
+{% tab Custom events %}
 **Custom Events (Événements personnalisés)**
 
 Utilisez la page [Événements personnalisés]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/#custom-event-analytics) pour surveiller la fréquence à laquelle un événement personnalisé a lieu, ainsi que la dernière fois que chaque utilisateur l’a exécuté (pour la segmentation).

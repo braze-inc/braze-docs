@@ -459,7 +459,7 @@ func logCustomEvent(_ eventName: String, withProperties properties: [AnyHashable
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
-{% tab Step 2: Custom Attributes %}
+{% tab Step 2: Custom attributes %}
 
 ##### Créer une méthode d’attributs personnalisés de journal 
 
@@ -673,7 +673,7 @@ Procédez à la compilation de votre code et exécutez votre application. <br><b
 ### Cartes de contenu
 
 {% tabs local %}
-{% tab Create Content Card Variables and Methods %}
+{% tab Create Content Card variables and methods %}
 
 {% alert important %}
 La section suivante de carte de contenu n’est pas requise pour l’intégration si vous ne prévoyez pas d’utiliser ce canal dans votre application.

@@ -42,7 +42,7 @@ glossaries:
       - iOS
       - Android
   - name: "Push with Action Buttons"
-    description: "Les Push with Action Buttons (Notification push avec boutons d’action) sont des messages qui vous permettent de fournir des options à vos utilisateurs et de proposer plusieurs appels à l’action."
+    description: "Les Push with action buttons (Notification push avec boutons d’action) sont des messages qui vous permettent de fournir des options à vos utilisateurs et de proposer plusieurs appels à l’action."
     tags:
       - iOS
       - Android

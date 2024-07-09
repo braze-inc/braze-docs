@@ -225,7 +225,7 @@ Ajoutez une capacité de `Groupes d'apps`. Si vous n’avez pas de groupe d’ap
 Les extraits de code suivants sont une référence utile sur la façon d’enregistrer et d’envoyer des événements personnalisés, des attributs personnalisés et des attributs utilisateur. Ce guide sera en cours de conversation par défaut d’utilisateur, mais la représentation du code sera sous la forme d’un fichier d’aide `RemoteStorage`. Il existe également des fichiers auxiliaires supplémentaires, `UserAttributes` et `Dictionnaire EventName`, utilisés lors de l’envoi et de l’enregistrement des attributs utilisateur. Tous les fichiers d’aide sont disponibles à la fin de ce guide.
 
 {% tabs local %}
-{% tab Custom Events %}
+{% tab Custom events %}
 
 ##### Enregistrement des événements personnalisés
 
@@ -366,7 +366,7 @@ func logPendingCustomEventsIfNecessary() {
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
-{% tab Custom Attributes %}
+{% tab Custom attributes %}
 
 ##### Enregistrer des attributs personnalisés
 

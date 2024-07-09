@@ -861,7 +861,7 @@ After the app installation is complete, Braze automatically creates your webhook
 
 ## Supported Shopify custom attributes
 {% tabs local %}
-{% tab Shopify Custom Attributes %}
+{% tab Shopify custom attributes %}
 | Attribute Name | Description |
 | --- | --- |
 | `shopify_tags`  | Tags that the shop owner has attached to the customer, formatted as a string of comma-separated values. A customer can have up to 250 tags. Each tag can have up to 255 characters. |
@@ -902,7 +902,7 @@ After selecting your custom attribute, input a default value and copy the Liquid
 ```
 
 {% endtab %}
-{% tab Example Payload %}
+{% tab Example payload %}
 {% subtabs %}
 {% subtab Shopify Tags %}
 ```json

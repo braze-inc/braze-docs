@@ -82,7 +82,7 @@ Nom d’en-tête             | Description
 `X-RateLimit-Reset`     | Heure à laquelle la fenêtre de limite de débit actuelle se réinitialise en secondes d’époque UTC.
 {: .reset-td-br-1 .reset-td-br-2}
 
-Ces informations sont intentionnellement incluses dans l’en-tête de la réponse à la demande API plutôt que sur le tableau de bord de Braze. Cela permet à votre système de mieux réagir en temps réel lorsque vous interagissez avec notre API. Par exemple, si la valeur `X-RateLimit-Remaining` chute en dessous d’un certain seuil, vous voudrez peut-être ralentir l’envoi pour vous assurer que tous les e-mails transactionnels partent. Ou, si elle atteint zéro, vous voudrez peut-être suspendre tous les envois jusqu’à ce que le temps spécifié dans `X-RateLimit-Reset` s’écoule.
+Ces informations sont intentionnellement incluses dans l’en-tête de la réponse à la demande API plutôt que sur le tableau de bord de Braze. Cela permet à votre système de mieux réagir en temps réel lorsque vous interagissez avec notre API. Par exemple, si la valeur `X-RateLimit-Remaining` chute en dessous d’un certain seuil, vous voudrez peut-être ralentir l’envoi pour vous assurer que tous lesemails transactionnels partent. Ou, si elle atteint zéro, vous voudrez peut-être suspendre tous les envois jusqu’à ce que le temps spécifié dans `X-RateLimit-Reset` s’écoule.
 
 Si vous avez des questions sur les limites d’API, contactez votre gestionnaire du succès des clients ou ouvrez un [ticket d’assistance][support].
 

@@ -72,7 +72,7 @@ For more information, refer to [In-app message creative details]({{site.baseurl}
 
 The media library acts as your dashboard's centralized location for assets, as all images are uploaded directly to it. This lets you re-use images across different messages.
 
-![Two common ways of accessing the media library depending on the message composer. One shows the email Drag and Drop Editor with the title "Images and GIFs" and a button to "Add from Media Library". The other shows the standard editors, such as push and in-app messages, with the title "Media" and a button to "Add Image".][1.5]{: style="border:none"}
+![Two common ways of accessing the media library depending on the message composer. One shows the email Drag-and-Drop Editor with the title "Images and GIFs" and a button to "Add from Media Library". The other shows the standard editors, such as push and in-app messages, with the title "Media" and a button to "Add Image".][1.5]{: style="border:none"}
 
 ## Generate an image using AI {#generate-ai}
 
