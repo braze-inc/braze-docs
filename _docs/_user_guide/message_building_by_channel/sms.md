@@ -25,6 +25,9 @@ guide_featured_list:
 - name: "SMS Subscription Group"
   link: /docs/user_guide/message_building_by_channel/sms/sms_subscription_group/
   image: /assets/img/braze_icons/table.svg
+- name: "SMS Geographic Permissions"
+  link: /docs/user_guide/message_building_by_channel/sms/sms_geographic_permissions/
+  image: /assets/img/braze_icons/globe-04.svg
 - name: "Create an SMS Message"
   link: /docs/user_guide/message_building_by_channel/sms/create/
   image: /assets/img/braze_icons/table.svg

@@ -78,13 +78,17 @@ As you build your in-app message, you can select a mobile, tablet, or desktop vi
 
 ### Fullscreen on larger screens {#fullscreen}
 
-On a tablet or desktop browser, a fullscreen in-app message will sit in the center of the app screen. Any edits to the max width of the fullscreen message will only apply to tablet and desktop devices.
+On a tablet or desktop browser, a fullscreen in-app message will sit in the center of the app screen. Any edits to the max width of the fullscreen message will only apply to tablet and desktop devices. 
 
 ![]({% image_buster /assets/img_archive/dnd_iam_fullscreen_example.png %}){: style="border:none"}
 
-### Customize background image
+### Adding a background image
 
-You can add an image to the background of your message from the **Message styles** tab. The scrollable section of your message must be selected to add a background for the entire message.
+You can add an image to the background of your message from the **Message styles** tab. 
+
+1. In the canvas area, select the background container. This is the scrollable section of your message.
+2. In the **Message styles** tab, turn on **Background image**.
+3. Add an image from your media library, or enter the URL where your image is hosted.
 
 {% alert tip %}
 If you're having trouble selecting a certain block, you can use the up arrow in the block's inline toolbar to move focus up to each parent block.

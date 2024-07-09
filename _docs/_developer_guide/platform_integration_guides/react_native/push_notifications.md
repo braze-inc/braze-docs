@@ -254,7 +254,9 @@ If you want to use an additional Firebase Messaging Service (FMS), you can speci
 }
 ```
 
-## Enabling rich push notifications for iOS
+## Configuring app extensions with Expo
+
+### Enabling rich push notifications for iOS
 
 {% alert tip %}
 Rich push notifications are available for Android by default.
@@ -278,7 +280,9 @@ To enable rich push notifications on iOS using Expo, configure the `enableBrazeI
 }
 ```
 
-## Enabling push stories for iOS
+Lastly, add the bundle identifier for this app extension to your project's credentials configuration: `<your-app-bundle-id>.BrazeExpoRichPush`. For further details on this process, refer to [Using app extensions with Expo Application Services](#app-extensions).
+
+### Enabling push stories for iOS
 
 {% alert tip %}
 Push stories are available for Android by default.
@@ -304,6 +308,18 @@ Next, configure the `enableBrazeIosPushStories` property to `true` and assign yo
   }
 }
 ```
+
+Lastly, add the bundle identifier for this app extension to your project's credentials configuration: `<your-app-bundle-id>.BrazeExpoPushStories`. For further details on this process, refer to [Using app extensions with Expo Application Services](#app-extensions).
+
+{% alert warning %}
+If you are using Push Stories with Expo Application Services, be sure to use the `EXPO_NO_CAPABILITY_SYNC=1` flag when running `eas build`. There is a known issue in the command line which removes the App Groups capability from your extension's provisioning profile.
+{% endalert %}
+
+### Using app extensions with Expo Application Services {#app-extensions}
+
+If you are using Expo Application Services (EAS) and have enabled `enableBrazeIosRichPush` or `enableBrazeIosPushStories`, you will need to declare the corresponding bundle identifiers for each app extension in your project. There are multiple ways you can approach this step, depending on how your project is configured to manage code signing with EAS.
+
+One approach is to use the `appExtensions` configuration in your `app.json` file by following Expo's [app extensions documentation](https://docs.expo.dev/build-reference/app-extensions/). Alternatively, you can set up the `multitarget` setting in your `credentials.json` file by following Expo's [local credentials documentation](https://docs.expo.dev/app-signing/local-credentials/#multi-target-project).
 
 [1]: {% image_buster /assets/img/react-native/push-notification-test.png %} "Push Campaign Test"
 [2]: https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/b2-rich-push-notifications/

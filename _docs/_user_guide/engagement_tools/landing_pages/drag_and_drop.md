@@ -15,16 +15,13 @@ alias: /landing_pages/drag_and_drop/
 Landing pages are currently in beta. Contact your Braze account manager if you're interested in participating in this beta.
 {% endalert %}
 
-![GIF demonstrating how components can be dragged and dropped into an editor to create a landing page.][1]{: style="max-width:70%;"}
-
-
 ## Creating a landing page (drag-and-drop)
 
 ### Step 1: Create a landing page
 
 Go to **Messaging** > **Landing Pages** and select **Create landing page**, or select the name of an existing one to duplicate it or make changes to it.
 
-![The "Landing Pages" page showing a list of existing landing pages and a button to "Create landing page".][2]{: style="max-width:70%;"}
+![The "Landing Pages" homepage.][2]{: style="max-width:90%;"}
 
 ### Step 2: Set up your landing page details
 
@@ -50,13 +47,11 @@ We suggest following these best practices:
 Custom subdomain support is not available during the beta.
 {% endalert %}
 
-![Tab to provide a landing page's site details.][3]{: style="max-width:70%;"}
-
 ### Step 3: Customize your landing page
 
 Select **Launch Editor** to start designing your landing page in the drag-and-drop editor. The editor will preload with a default template that you can customize to fit your use case.
 
-![Landing page template with a form for customer sign-up.][8]{: style="max-width:70%;"}
+![Landing page template with a form for customer sign-up.][8]{: style="max-width:90%;"}
 
 #### Drag-and-drop blocks
 
@@ -80,9 +75,9 @@ We recommend setting up page container-level styles before you customize styles 
 
 ### Step 4: Preview your landing page
 
-You can preview your landing page in the editor's **Preview** tab, but testing functionality is disabled for the beta. After saving your landing page as a draft, you can visit the URL under **URL handle** to preview the page on your browser. You can also share the URL with collaborators.
+You can preview your landing page in the editor's **Preview** tab, but testing functionality is disabled for the beta. After saving your landing page as a draft, you can visit the URL by going to **Landing Pages** and selecting **Copy URL** next to your landing page. You can also share the URL with collaborators.
 
-![The "URL handle" section has the full URL to preview the landing page.][7]{: style="max-width:70%;"}
+![A landing page with the menu open to show the "Copy URL" option.][7]{: style="max-width:90%;"}
 
 After you're satisfied with the landing page, select **Publish Landing Page**.
 
@@ -100,7 +95,7 @@ In beta, you can include a link to the landing page in any channel by copying an
 
 ## Handling form submission errors
 
-If a user inputs an invalid form value (such as unaccepted special characters), they will see a generic error indicator that isn't customizable and won't be able to submit the form. You can view the error behavior in the **Preview** tab and the preview landing page.
+If a user inputs an invalid form value (such as unaccepted special characters), they will see a generic error indicator that isn't customizable and won't be able to submit the form. You can view the error behavior on the preview landing page.
 
 ## Merging users created from your landing page
 
@@ -131,6 +126,10 @@ No, this isn't currently available.
 ### Is reporting available for landing pages?
 
 No, this isn't currently available.
+
+### Is there an HTML editor for landing pages?
+
+No, this isn’t currently available. You can use the Custom Code block in the editor.
 
 [1]: {% image_buster /assets/img/landing_pages/homepage.gif %}
 [2]: {% image_buster /assets/img/landing_pages/create.png %}

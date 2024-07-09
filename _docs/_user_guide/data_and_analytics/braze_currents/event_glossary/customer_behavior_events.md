@@ -61,23 +61,23 @@ This event occurs when a specific custom event is triggered. Use this to track w
   "event_type" : "(required, string) The name of the event type",
   "id" : "(required, string) Globally unique ID for this event",
   "properties" : {
-    "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
-    "app_id" : "(optional, string) API ID of the app on which this event occurred",
-    "platform" : "(optional, string) Platform of the device",
-    "os_version" : "(optional, string) Version of the operating system of the device",
-    "device_model" : "(optional, string) Model of the device",
-    "name" : "(required, string) Name of the custom event",
     "ad_id" : "(optional, string) Advertising identifier",
     "ad_id_type" : "(optional, string) One of ['ios_idfa', 'google_ad_id', 'windows_ad_id', 'roku_ad_id']",
     "ad_tracking_enabled" : "(optional, boolean) Whether advertising tracking is enabled for the device",
-    "card_id" : "(optional, string) ID of the card this in app message comes from"
+    "app_id" : "(optional, string) API ID of the app on which this event occurred",
+    "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
+    "card_id" : "(optional, string) ID of the card this in-app message comes from",
+    "device_model" : "(optional, string) Model of the device",
+    "name" : "(required, string) Name of the custom event",
+    "os_version" : "(optional, string) Version of the operating system of the device",
+    "platform" : "(optional, string) Platform of the device"
   },
-  "time" : "(required, int) Unix timestamp at which the event happened",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
   "user" : {
-    "user_id" : "(required, string) BSON ID of the user who performed this event",
+    "device_id" : "(optional, string) ID of the device on which the event occurred",
     "external_user_id" : "(required, string) External ID of the user",
     "timezone" : "(optional, string) Time zone of the user",
-    "device_id" : "(optional, string) ID of the device on which the event occurred"
+    "user_id" : "(required, string) Braze user ID of the user who performed this event"
   }
 }
 ```
@@ -90,19 +90,19 @@ This event occurs when a specific custom event is triggered. Use this to track w
 {
   "event" : "(required, string) The event type name, as it is exported to Mixpanel",
   "properties" : {
-    "\\$partner_id" : "braze",
-    "$insert_id" : "(required, string) Globally unique ID for this event",
-    "distinct_id" : "(required, string) External ID of the user",
-    "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
-    "app_id" : "(optional, string) API ID of the app on which this event occurred",
-    "time" : "(required, int) Unix timestamp at which the event happened",
-    "device_id" : "(optional, string) ID of the device on which the event occurred",
-    "platform" : "(optional, string) Platform of the device",
-    "$os" : "(optional, string) Version of the operating system of the device",
-    "$device" : "(optional, string) Model of the device",
+    "$partner_id" : "braze",
     "ad_id" : "(optional, string) Advertising identifier",
     "ad_id_type" : "(optional, string) One of ['ios_idfa', 'google_ad_id', 'windows_ad_id', 'roku_ad_id']",
     "ad_tracking_enabled" : "(optional, boolean) Whether advertising tracking is enabled for the device",
+    "app_id" : "(optional, string) API ID of the app on which this event occurred",
+    "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
+    "device_id" : "(optional, string) ID of the device on which the event occurred",
+    "$device" : "(optional, string) Model of the device",
+    "distinct_id" : "(required, string) External ID of the user",
+    "$insert_id" : "(required, string) Globally unique ID for this event",
+    "$os" : "(optional, string) Version of the operating system of the device",
+    "platform" : "(optional, string) Platform of the device",
+    "time" : "(required, int) UNIX timestamp at which the event happened",
     "token" : "(required, string) The Mixpanel API token"
   }
 }
@@ -126,9 +126,9 @@ This event occurs when a specific custom event is triggered. Use this to track w
   "os_version" : "(optional, string) Version of the operating system of the device",
   "platform" : "(optional, string) Platform of the device",
   "properties" : "(required, string) Custom properties stored as a JSON encoded string",
-  "time" : "(required, int) Unix timestamp at which the event happened",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
-  "user_id" : "(required, string) BSON ID of the user who performed this event"
+  "user_id" : "(required, string) Braze user ID of the user who performed this event"
 }
 ```
 {% endtab %}
@@ -141,20 +141,20 @@ This event occurs when a specific custom event is triggered. Use this to track w
   "adid" : "(optional, string) Advertising identifier",
   "device_id" : "(optional, string) ID of the device on which the event occurred",
   "event_properties" : {
-    "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
-    "app_id" : "(optional, string) API ID of the app on which this event occurred",
-    "platform" : "(optional, string) Platform of the device",
-    "os_version" : "(optional, string) Version of the operating system of the device",
-    "device_model" : "(optional, string) Model of the device",
     "ad_id" : "(optional, string) Advertising identifier",
     "ad_id_type" : "(optional, string) One of ['ios_idfa', 'google_ad_id', 'windows_ad_id', 'roku_ad_id']",
-    "ad_tracking_enabled" : "(optional, boolean) Whether advertising tracking is enabled for the device"
+    "ad_tracking_enabled" : "(optional, boolean) Whether advertising tracking is enabled for the device",
+    "app_id" : "(optional, string) API ID of the app on which this event occurred",
+    "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
+    "device_model" : "(optional, string) Model of the device",
+    "os_version" : "(optional, string) Version of the operating system of the device",
+    "platform" : "(optional, string) Platform of the device"
   },
   "event_type" : "(required, string) The event type name, as it is exported to Amplitude",
   "idfa" : "(optional, string) Advertising identifier",
   "insert_id" : "(required, string) Globally unique ID for this event",
   "library" : "Braze",
-  "time" : "(required, int) Unix timestamp at which the event happened",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
   "user_id" : "(optional, string) External ID of the user"
 }
 ```
@@ -189,24 +189,24 @@ Purchases are special custom events and come with a JSON encoded string of custo
   "event_type" : "(required, string) The name of the event type",
   "id" : "(required, string) Globally unique ID for this event",
   "properties" : {
-    "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
-    "app_id" : "(optional, string) API ID of the app on which this event occurred",
-    "platform" : "(optional, string) Platform of the device",
-    "os_version" : "(optional, string) Version of the operating system of the device",
-    "device_model" : "(optional, string) Model of the device",
-    "product_id" : "(required, string) ID of the product purchased",
-    "price" : "(required, float) Price of the purchase",
-    "currency" : "(required, string) Currency of the purchase",
     "ad_id" : "(optional, string) Advertising identifier",
     "ad_id_type" : "(optional, string) One of ['ios_idfa', 'google_ad_id', 'windows_ad_id', 'roku_ad_id']",
     "ad_tracking_enabled" : "(optional, boolean) Whether advertising tracking is enabled for the device",
-    "card_id" : "(optional, string) ID of the card this in app message comes from"
+    "app_id" : "(optional, string) API ID of the app on which this event occurred",
+    "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
+    "card_id" : "(optional, string) ID of the card this in-app message comes from",
+    "currency" : "(required, string) Currency of the purchase",
+    "device_model" : "(optional, string) Model of the device",
+    "os_version" : "(optional, string) Version of the operating system of the device",
+    "platform" : "(optional, string) Platform of the device",
+    "price" : "(required, float) Price of the purchase",
+    "product_id" : "(required, string) ID of the product purchased"
   },
-  "time" : "(required, int) Unix timestamp at which the event happened",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
   "user" : {
-    "user_id" : "(required, string) BSON ID of the user who performed this event",
+    "device_id" : "(optional, string) ID of the device on which the event occurred",
     "external_user_id" : "(required, string) External ID of the user",
-    "device_id" : "(optional, string) ID of the device on which the event occurred"
+    "user_id" : "(required, string) Braze user ID of the user who performed this event"
   }
 }
 ```
@@ -219,22 +219,22 @@ Purchases are special custom events and come with a JSON encoded string of custo
 {
   "event" : "(required, string) The event type name, as it is exported to Mixpanel",
   "properties" : {
-    "\\$partner_id" : "braze",
-    "$insert_id" : "(required, string) Globally unique ID for this event",
-    "distinct_id" : "(required, string) External ID of the user",
-    "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
-    "app_id" : "(optional, string) API ID of the app on which this event occurred",
-    "time" : "(required, int) Unix timestamp at which the event happened",
-    "device_id" : "(optional, string) ID of the device on which the event occurred",
-    "platform" : "(optional, string) Platform of the device",
-    "$os" : "(optional, string) Version of the operating system of the device",
-    "$device" : "(optional, string) Model of the device",
-    "product_id" : "(required, string) ID of the product purchased",
-    "price" : "(required, float) Price of the purchase",
-    "currency" : "(required, string) Currency of the purchase",
+    "$partner_id" : "braze",
     "ad_id" : "(optional, string) Advertising identifier",
     "ad_id_type" : "(optional, string) One of ['ios_idfa', 'google_ad_id', 'windows_ad_id', 'roku_ad_id']",
     "ad_tracking_enabled" : "(optional, boolean) Whether advertising tracking is enabled for the device",
+    "app_id" : "(optional, string) API ID of the app on which this event occurred",
+    "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
+    "currency" : "(required, string) Currency of the purchase",
+    "device_id" : "(optional, string) ID of the device on which the event occurred",
+    "$device" : "(optional, string) Model of the device",
+    "distinct_id" : "(required, string) External ID of the user",
+    "$insert_id" : "(required, string) Globally unique ID for this event",
+    "$os" : "(optional, string) Version of the operating system of the device",
+    "platform" : "(optional, string) Platform of the device",
+    "price" : "(required, float) Price of the purchase",
+    "product_id" : "(required, string) ID of the product purchased",
+    "time" : "(required, int) UNIX timestamp at which the event happened",
     "token" : "(required, string) The Mixpanel API token"
   }
 }
@@ -260,8 +260,8 @@ Purchases are special custom events and come with a JSON encoded string of custo
   "price" : "(required, float) Price of the purchase",
   "product_id" : "(required, string) ID of the product purchased",
   "properties" : "(required, string) Custom properties stored as a JSON encoded string",
-  "time" : "(required, int) Unix timestamp at which the event happened",
-  "user_id" : "(required, string) BSON ID of the user who performed this event"
+  "time" : "(required, int) UNIX timestamp at which the event happened",
+  "user_id" : "(required, string) Braze user ID of the user who performed this event"
 }
 ```
 {% endtab %}
@@ -274,15 +274,15 @@ Purchases are special custom events and come with a JSON encoded string of custo
   "adid" : "(optional, string) Advertising identifier",
   "device_id" : "(optional, string) ID of the device on which the event occurred",
   "event_properties" : {
-    "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
-    "app_id" : "(optional, string) API ID of the app on which this event occurred",
-    "platform" : "(optional, string) Platform of the device",
-    "os_version" : "(optional, string) Version of the operating system of the device",
-    "device_model" : "(optional, string) Model of the device",
-    "currency" : "(required, string) Currency of the purchase",
     "ad_id" : "(optional, string) Advertising identifier",
     "ad_id_type" : "(optional, string) One of ['ios_idfa', 'google_ad_id', 'windows_ad_id', 'roku_ad_id']",
-    "ad_tracking_enabled" : "(optional, boolean) Whether advertising tracking is enabled for the device"
+    "ad_tracking_enabled" : "(optional, boolean) Whether advertising tracking is enabled for the device",
+    "app_id" : "(optional, string) API ID of the app on which this event occurred",
+    "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
+    "currency" : "(required, string) Currency of the purchase",
+    "device_model" : "(optional, string) Model of the device",
+    "os_version" : "(optional, string) Version of the operating system of the device",
+    "platform" : "(optional, string) Platform of the device"
   },
   "event_type" : "(required, string) The event type name, as it is exported to Amplitude",
   "idfa" : "(optional, string) Advertising identifier",
@@ -290,7 +290,7 @@ Purchases are special custom events and come with a JSON encoded string of custo
   "library" : "Braze",
   "price" : "(required, float) Price of the purchase",
   "productId" : "(required, string) ID of the product purchased",
-  "time" : "(required, int) Unix timestamp at which the event happened",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
   "user_id" : "(optional, string) External ID of the user"
 }
 ```
@@ -326,20 +326,20 @@ When a user starts their first session, both a `FirstSession` and a `SessionStar
   "event_type" : "(required, string) The name of the event type",
   "id" : "(required, string) Globally unique ID for this event",
   "properties" : {
-    "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
     "app_id" : "(optional, string) API ID of the app on which this event occurred",
-    "session_id" : "(optional, string) UUID of the session",
-    "platform" : "(optional, string) Platform of the device",
-    "os_version" : "(optional, string) Version of the operating system of the device",
+    "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
+    "card_id" : "(optional, string) ID of the card this in-app message comes from",
     "device_model" : "(optional, string) Model of the device",
-    "card_id" : "(optional, string) ID of the card this in app message comes from"
+    "os_version" : "(optional, string) Version of the operating system of the device",
+    "platform" : "(optional, string) Platform of the device",
+    "session_id" : "(optional, string) UUID of the session"
   },
-  "time" : "(required, int) Unix timestamp at which the event happened",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
   "user" : {
-    "user_id" : "(required, string) BSON ID of the user who performed this event",
+    "device_id" : "(optional, string) ID of the device on which the event occurred",
     "external_user_id" : "(required, string) External ID of the user",
     "timezone" : "(optional, string) Time zone of the user",
-    "device_id" : "(optional, string) ID of the device on which the event occurred"
+    "user_id" : "(required, string) Braze user ID of the user who performed this event"
   }
 }
 ```
@@ -352,17 +352,17 @@ When a user starts their first session, both a `FirstSession` and a `SessionStar
 {
   "event" : "(required, string) The event type name, as it is exported to Mixpanel",
   "properties" : {
-    "\\$partner_id" : "braze",
-    "$insert_id" : "(required, string) Globally unique ID for this event",
-    "distinct_id" : "(required, string) External ID of the user",
-    "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
+    "$partner_id" : "braze",
     "app_id" : "(optional, string) API ID of the app on which this event occurred",
-    "time" : "(required, int) Unix timestamp at which the event happened",
-    "session_id" : "(optional, string) UUID of the session",
+    "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
     "device_id" : "(optional, string) ID of the device on which the event occurred",
-    "platform" : "(optional, string) Platform of the device",
-    "$os" : "(optional, string) Version of the operating system of the device",
     "$device" : "(optional, string) Model of the device",
+    "distinct_id" : "(required, string) External ID of the user",
+    "$insert_id" : "(required, string) Globally unique ID for this event",
+    "$os" : "(optional, string) Version of the operating system of the device",
+    "platform" : "(optional, string) Platform of the device",
+    "session_id" : "(optional, string) UUID of the session",
+    "time" : "(required, int) UNIX timestamp at which the event happened",
     "token" : "(required, string) The Mixpanel API token"
   }
 }
@@ -386,9 +386,9 @@ When a user starts their first session, both a `FirstSession` and a `SessionStar
   "platform" : "(optional, string) Platform of the device",
   "sdk_version" : "(optional, string) Version of the Braze SDK in use during the event",
   "session_id" : "(required, string) UUID of the session",
-  "time" : "(required, int) Unix timestamp at which the event happened",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
-  "user_id" : "(required, string) BSON ID of the user who performed this event"
+  "user_id" : "(required, string) Braze user ID of the user who performed this event"
 }
 ```
 {% endtab %}
@@ -400,17 +400,17 @@ When a user starts their first session, both a `FirstSession` and a `SessionStar
 {
   "device_id" : "(optional, string) ID of the device on which the event occurred",
   "event_properties" : {
-    "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
     "app_id" : "(optional, string) API ID of the app on which this event occurred",
-    "session_id" : "(optional, string) UUID of the session",
-    "platform" : "(optional, string) Platform of the device",
+    "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
+    "device_model" : "(optional, string) Model of the device",
     "os_version" : "(optional, string) Version of the operating system of the device",
-    "device_model" : "(optional, string) Model of the device"
+    "platform" : "(optional, string) Platform of the device",
+    "session_id" : "(optional, string) UUID of the session"
   },
   "event_type" : "(required, string) The event type name, as it is exported to Amplitude",
   "insert_id" : "(required, string) Globally unique ID for this event",
   "library" : "Braze",
-  "time" : "(required, int) Unix timestamp at which the event happened",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
   "user_id" : "(optional, string) External ID of the user"
 }
 ```
@@ -444,17 +444,17 @@ When a user starts their first session, both a `FirstSession` and a `SessionStar
   "properties" : {
     "app_id" : "(optional, string) API ID of the app on which this event occurred",
     "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
-    "session_id" : "(optional, string) UUID of the session",
-    "platform" : "(optional, string) Platform of the device",
-    "os_version" : "(optional, string) Version of the operating system of the device",
+    "card_id" : "(optional, string) ID of the card this in-app message comes from",
     "device_model" : "(optional, string) Model of the device",
-    "card_id" : "(optional, string) ID of the card this in app message comes from"
+    "os_version" : "(optional, string) Version of the operating system of the device",
+    "platform" : "(optional, string) Platform of the device",
+    "session_id" : "(optional, string) UUID of the session"
   },
-  "time" : "(required, int) Unix timestamp at which the event happened",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
   "user" : {
-    "user_id" : "(required, string) BSON ID of the user who performed this event",
+    "device_id" : "(optional, string) ID of the device on which the event occurred",
     "external_user_id" : "(required, string) External ID of the user",
-    "device_id" : "(optional, string) ID of the device on which the event occurred"
+    "user_id" : "(required, string) Braze user ID of the user who performed this event"
   }
 }
 ```
@@ -467,17 +467,17 @@ When a user starts their first session, both a `FirstSession` and a `SessionStar
 {
   "event" : "(required, string) The event type name, as it is exported to Mixpanel",
   "properties" : {
-    "\\$partner_id" : "braze",
-    "$insert_id" : "(required, string) Globally unique ID for this event",
-    "distinct_id" : "(required, string) External ID of the user",
+    "$partner_id" : "braze",
     "app_id" : "(optional, string) API ID of the app on which this event occurred",
     "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
-    "time" : "(required, int) Unix timestamp at which the event happened",
-    "session_id" : "(optional, string) UUID of the session",
     "device_id" : "(optional, string) ID of the device on which the event occurred",
-    "platform" : "(optional, string) Platform of the device",
-    "$os" : "(optional, string) Version of the operating system of the device",
     "$device" : "(optional, string) Model of the device",
+    "distinct_id" : "(required, string) External ID of the user",
+    "$insert_id" : "(required, string) Globally unique ID for this event",
+    "$os" : "(optional, string) Version of the operating system of the device",
+    "platform" : "(optional, string) Platform of the device",
+    "session_id" : "(optional, string) UUID of the session",
+    "time" : "(required, int) UNIX timestamp at which the event happened",
     "token" : "(required, string) The Mixpanel API token"
   }
 }
@@ -497,8 +497,8 @@ When a user starts their first session, both a `FirstSession` and a `SessionStar
   "os_version" : "(optional, string) Version of the operating system of the device",
   "platform" : "(optional, string) Platform of the device",
   "session_id" : "(required, string) UUID of the session",
-  "time" : "(required, int) Unix timestamp at which the event happened",
-  "user_id" : "(required, string) BSON ID of the user who performed this event"
+  "time" : "(required, int) UNIX timestamp at which the event happened",
+  "user_id" : "(required, string) Braze user ID of the user who performed this event"
 }
 ```
 {% endtab %}
@@ -512,15 +512,15 @@ When a user starts their first session, both a `FirstSession` and a `SessionStar
   "event_properties" : {
     "app_id" : "(optional, string) API ID of the app on which this event occurred",
     "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
-    "session_id" : "(optional, string) UUID of the session",
-    "platform" : "(optional, string) Platform of the device",
+    "device_model" : "(optional, string) Model of the device",
     "os_version" : "(optional, string) Version of the operating system of the device",
-    "device_model" : "(optional, string) Model of the device"
+    "platform" : "(optional, string) Platform of the device",
+    "session_id" : "(optional, string) UUID of the session"
   },
   "event_type" : "(required, string) The event type name, as it is exported to Amplitude",
   "insert_id" : "(required, string) Globally unique ID for this event",
   "library" : "Braze",
-  "time" : "(required, int) Unix timestamp at which the event happened",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
   "user_id" : "(optional, string) External ID of the user"
 }
 ```
@@ -552,20 +552,20 @@ When a user starts their first session, both a `FirstSession` and a `SessionStar
   "event_type" : "(required, string) The name of the event type",
   "id" : "(required, string) Globally unique ID for this event",
   "properties" : {
-    "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
     "app_id" : "(optional, string) API ID of the app on which this event occurred",
-    "duration" : "(optional, float) Duration of the session in seconds",
-    "session_id" : "(optional, string) UUID of the session",
-    "platform" : "(optional, string) Platform of the device",
-    "os_version" : "(optional, string) Version of the operating system of the device",
+    "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
+    "card_id" : "(optional, string) ID of the card this in-app message comes from",
     "device_model" : "(optional, string) Model of the device",
-    "card_id" : "(optional, string) ID of the card this in app message comes from"
+    "duration" : "(optional, float) Duration of the session in seconds",
+    "os_version" : "(optional, string) Version of the operating system of the device",
+    "platform" : "(optional, string) Platform of the device",
+    "session_id" : "(optional, string) UUID of the session"
   },
-  "time" : "(required, int) Unix timestamp at which the event happened",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
   "user" : {
-    "user_id" : "(required, string) BSON ID of the user who performed this event",
+    "device_id" : "(optional, string) ID of the device on which the event occurred",
     "external_user_id" : "(required, string) External ID of the user",
-    "device_id" : "(optional, string) ID of the device on which the event occurred"
+    "user_id" : "(required, string) Braze user ID of the user who performed this event"
   }
 }
 ```
@@ -578,18 +578,18 @@ When a user starts their first session, both a `FirstSession` and a `SessionStar
 {
   "event" : "(required, string) The event type name, as it is exported to Mixpanel",
   "properties" : {
-    "\\$partner_id" : "braze",
-    "$insert_id" : "(required, string) Globally unique ID for this event",
-    "distinct_id" : "(required, string) External ID of the user",
-    "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
+    "$partner_id" : "braze",
     "app_id" : "(optional, string) API ID of the app on which this event occurred",
-    "time" : "(required, int) Unix timestamp at which the event happened",
-    "duration" : "(optional, float) Duration of the session in seconds",
-    "session_id" : "(optional, string) UUID of the session",
+    "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
     "device_id" : "(optional, string) ID of the device on which the event occurred",
-    "platform" : "(optional, string) Platform of the device",
-    "$os" : "(optional, string) Version of the operating system of the device",
     "$device" : "(optional, string) Model of the device",
+    "duration" : "(optional, float) Duration of the session in seconds",
+    "distinct_id" : "(required, string) External ID of the user",
+    "$insert_id" : "(required, string) Globally unique ID for this event",
+    "$os" : "(optional, string) Version of the operating system of the device",
+    "platform" : "(optional, string) Platform of the device",
+    "session_id" : "(optional, string) UUID of the session",
+    "time" : "(required, int) UNIX timestamp at which the event happened",
     "token" : "(required, string) The Mixpanel API token"
   }
 }
@@ -610,8 +610,8 @@ When a user starts their first session, both a `FirstSession` and a `SessionStar
   "os_version" : "(optional, string) Version of the operating system of the device",
   "platform" : "(optional, string) Platform of the device",
   "session_id" : "(required, string) UUID of the session",
-  "time" : "(required, int) Unix timestamp at which the event happened",
-  "user_id" : "(required, string) BSON ID of the user who performed this event"
+  "time" : "(required, int) UNIX timestamp at which the event happened",
+  "user_id" : "(required, string) Braze user ID of the user who performed this event"
 }
 ```
 {% endtab %}
@@ -623,18 +623,18 @@ When a user starts their first session, both a `FirstSession` and a `SessionStar
 {
   "device_id" : "(optional, string) ID of the device on which the event occurred",
   "event_properties" : {
-    "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
     "app_id" : "(optional, string) API ID of the app on which this event occurred",
+    "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
+    "device_model" : "(optional, string) Model of the device",
     "duration" : "(optional, float) Duration of the session in seconds",
-    "session_id" : "(optional, string) UUID of the session",
-    "platform" : "(optional, string) Platform of the device",
     "os_version" : "(optional, string) Version of the operating system of the device",
-    "device_model" : "(optional, string) Model of the device"
+    "platform" : "(optional, string) Platform of the device",
+    "session_id" : "(optional, string) UUID of the session"
   },
   "event_type" : "(required, string) The event type name, as it is exported to Amplitude",
   "insert_id" : "(required, string) Globally unique ID for this event",
   "library" : "Braze",
-  "time" : "(required, int) Unix timestamp at which the event happened",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
   "user_id" : "(optional, string) External ID of the user"
 }
 ```
@@ -662,26 +662,26 @@ This event is triggered when a user visits a specified location. Use this to tra
   "event_type" : "(required, string) The name of the event type",
   "id" : "(required, string) Globally unique ID for this event",
   "properties" : {
-    "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
-    "app_id" : "(optional, string) API ID of the app on which this event occurred",
-    "latitude" : "(required, float) Latitude of recorded location",
-    "longitude" : "(required, float) Longitude of recorded location",
-    "altitude" : "(optional, float) Altitude of recorded location",
-    "ll_accuracy" : "(optional, float) Accuracy of the latitude and longitude of recorded location",
-    "alt_accuracy" : "(optional, float) Altitude accuracy of recorded location",
-    "platform" : "(optional, string) Platform of the device",
-    "os_version" : "(optional, string) Version of the operating system of the device",
-    "device_model" : "(optional, string) Model of the device",
     "ad_id" : "(optional, string) Advertising identifier",
     "ad_id_type" : "(optional, string) One of ['ios_idfa', 'google_ad_id', 'windows_ad_id', 'roku_ad_id']",
     "ad_tracking_enabled" : "(optional, boolean) Whether advertising tracking is enabled for the device",
-    "card_id" : "(optional, string) ID of the card this in app message comes from"
+    "alt_accuracy" : "(optional, float) Altitude accuracy of recorded location",
+    "altitude" : "(optional, float) Altitude of recorded location",
+    "app_id" : "(optional, string) API ID of the app on which this event occurred",
+    "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
+    "card_id" : "(optional, string) ID of the card this in-app message comes from",
+    "device_model" : "(optional, string) Model of the device",
+    "latitude" : "(required, float) Latitude of recorded location",
+    "ll_accuracy" : "(optional, float) Accuracy of the latitude and longitude of recorded location",
+    "longitude" : "(required, float) Longitude of recorded location",
+    "os_version" : "(optional, string) Version of the operating system of the device",
+    "platform" : "(optional, string) Platform of the device"
   },
-  "time" : "(required, int) Unix timestamp at which the event happened",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
   "user" : {
-    "user_id" : "(required, string) BSON ID of the user who performed this event",
+    "device_id" : "(optional, string) ID of the device on which the event occurred",
     "external_user_id" : "(required, string) External ID of the user",
-    "device_id" : "(optional, string) ID of the device on which the event occurred"
+    "user_id" : "(required, string) Braze user ID of the user who performed this event"
   }
 }
 ```
@@ -694,24 +694,24 @@ This event is triggered when a user visits a specified location. Use this to tra
 {
   "event" : "(required, string) The event type name, as it is exported to Mixpanel",
   "properties" : {
-    "\\$partner_id" : "braze",
-    "$insert_id" : "(required, string) Globally unique ID for this event",
-    "distinct_id" : "(required, string) External ID of the user",
-    "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
-    "app_id" : "(optional, string) API ID of the app on which this event occurred",
-    "time" : "(required, int) Unix timestamp at which the event happened",
-    "latitude" : "(required, float) Latitude of recorded location",
-    "longitude" : "(required, float) Longitude of recorded location",
-    "altitude" : "(optional, float) Altitude of recorded location",
-    "ll_accuracy" : "(optional, float) Accuracy of the latitude and longitude of recorded location",
-    "alt_accuracy" : "(optional, float) Altitude accuracy of recorded location",
-    "device_id" : "(optional, string) ID of the device on which the event occurred",
-    "platform" : "(optional, string) Platform of the device",
-    "$os" : "(optional, string) Version of the operating system of the device",
-    "$device" : "(optional, string) Model of the device",
+    "$partner_id" : "braze",
     "ad_id" : "(optional, string) Advertising identifier",
     "ad_id_type" : "(optional, string) One of ['ios_idfa', 'google_ad_id', 'windows_ad_id', 'roku_ad_id']",
     "ad_tracking_enabled" : "(optional, boolean) Whether advertising tracking is enabled for the device",
+    "alt_accuracy" : "(optional, float) Altitude accuracy of recorded location",
+    "altitude" : "(optional, float) Altitude of recorded location",
+    "app_id" : "(optional, string) API ID of the app on which this event occurred",
+    "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
+    "device_id" : "(optional, string) ID of the device on which the event occurred",
+    "$device" : "(optional, string) Model of the device",
+    "distinct_id" : "(required, string) External ID of the user",
+    "$insert_id" : "(required, string) Globally unique ID for this event",
+    "latitude" : "(required, float) Latitude of recorded location",
+    "ll_accuracy" : "(optional, float) Accuracy of the latitude and longitude of recorded location",
+    "longitude" : "(required, float) Longitude of recorded location",
+    "$os" : "(optional, string) Version of the operating system of the device",
+    "platform" : "(optional, string) Platform of the device",
+    "time" : "(required, int) UNIX timestamp at which the event happened",
     "token" : "(required, string) The Mixpanel API token"
   }
 }
@@ -738,8 +738,8 @@ This event is triggered when a user visits a specified location. Use this to tra
   "longitude" : "(required, float) Longitude of recorded location",
   "os_version" : "(optional, string) Version of the operating system of the device",
   "platform" : "(optional, string) Platform of the device",
-  "time" : "(required, int) Unix timestamp at which the event happened",
-  "user_id" : "(required, string) BSON ID of the user who performed this event"
+  "time" : "(required, int) UNIX timestamp at which the event happened",
+  "user_id" : "(required, string) Braze user ID of the user who performed this event"
 }
 ```
 {% endtab %}
@@ -752,25 +752,25 @@ This event is triggered when a user visits a specified location. Use this to tra
   "adid" : "(optional, string) Advertising identifier",
   "device_id" : "(optional, string) ID of the device on which the event occurred",
   "event_properties" : {
-    "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
-    "app_id" : "(optional, string) API ID of the app on which this event occurred",
-    "latitude" : "(required, float) Latitude of recorded location",
-    "longitude" : "(required, float) Longitude of recorded location",
-    "altitude" : "(optional, float) Altitude of recorded location",
-    "ll_accuracy" : "(optional, float) Accuracy of the latitude and longitude of recorded location",
-    "alt_accuracy" : "(optional, float) Altitude accuracy of recorded location",
-    "platform" : "(optional, string) Platform of the device",
-    "os_version" : "(optional, string) Version of the operating system of the device",
-    "device_model" : "(optional, string) Model of the device",
     "ad_id" : "(optional, string) Advertising identifier",
     "ad_id_type" : "(optional, string) One of ['ios_idfa', 'google_ad_id', 'windows_ad_id', 'roku_ad_id']",
-    "ad_tracking_enabled" : "(optional, boolean) Whether advertising tracking is enabled for the device"
+    "ad_tracking_enabled" : "(optional, boolean) Whether advertising tracking is enabled for the device",
+    "alt_accuracy" : "(optional, float) Altitude accuracy of recorded location",
+    "altitude" : "(optional, float) Altitude of recorded location",
+    "app_id" : "(optional, string) API ID of the app on which this event occurred",
+    "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
+    "device_model" : "(optional, string) Model of the device",
+    "latitude" : "(required, float) Latitude of recorded location",
+    "ll_accuracy" : "(optional, float) Accuracy of the latitude and longitude of recorded location",
+    "longitude" : "(required, float) Longitude of recorded location",
+    "os_version" : "(optional, string) Version of the operating system of the device",
+    "platform" : "(optional, string) Platform of the device"
   },
   "event_type" : "(required, string) The event type name, as it is exported to Amplitude",
   "idfa" : "(optional, string) Advertising identifier",
   "insert_id" : "(required, string) Globally unique ID for this event",
   "library" : "Braze",
-  "time" : "(required, int) Unix timestamp at which the event happened",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
   "user_id" : "(optional, string) External ID of the user"
 }
 ```
@@ -802,14 +802,14 @@ This event occurs when an app installation is attributed to a source. Use this t
   "id" : "(required, string) Globally unique ID for this event",
   "properties" : {
     "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
-    "source" : "(optional, string) The source of the attribution",
-    "card_id" : "(optional, string) ID of the card this in app message comes from"
+    "card_id" : "(optional, string) ID of the card this in-app message comes from",
+    "source" : "(optional, string) The source of the attribution"
   },
-  "time" : "(required, int) Unix timestamp at which the event happened",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
   "user" : {
-    "user_id" : "(required, string) BSON ID of the user who performed this event",
+    "device_id" : "(optional, string) ID of the device on which the event occurred",
     "external_user_id" : "(required, string) External ID of the user",
-    "device_id" : "(optional, string) ID of the device on which the event occurred"
+    "user_id" : "(required, string) Braze user ID of the user who performed this event"
   }
 }
 ```
@@ -822,13 +822,13 @@ This event occurs when an app installation is attributed to a source. Use this t
 {
   "event" : "(required, string) The event type name, as it is exported to Mixpanel",
   "properties" : {
-    "\\$partner_id" : "braze",
-    "$insert_id" : "(required, string) Globally unique ID for this event",
-    "distinct_id" : "(required, string) External ID of the user",
-    "device_id" : "(optional, string) ID of the device on which the event occurred",
+    "$partner_id" : "braze",
     "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
-    "time" : "(required, int) Unix timestamp at which the event happened",
+    "device_id" : "(optional, string) ID of the device on which the event occurred",
+    "distinct_id" : "(required, string) External ID of the user",
+    "$insert_id" : "(required, string) Globally unique ID for this event",
     "source" : "(optional, string) The source of the attribution",
+    "time" : "(required, int) UNIX timestamp at which the event happened",
     "token" : "(required, string) The Mixpanel API token"
   }
 }
@@ -843,8 +843,8 @@ This event occurs when an app installation is attributed to a source. Use this t
   "external_user_id" : "(optional, string) External ID of the user",
   "id" : "(required, string) Globally unique ID for this event",
   "source" : "(required, string) The source of the attribution",
-  "time" : "(required, int) Unix timestamp at which the event happened",
-  "user_id" : "(required, string) BSON ID of the user who performed this event"
+  "time" : "(required, int) UNIX timestamp at which the event happened",
+  "user_id" : "(required, string) Braze user ID of the user who performed this event"
 }
 ```
 {% endtab %}
@@ -862,7 +862,7 @@ This event occurs when an app installation is attributed to a source. Use this t
   "event_type" : "(required, string) The event type name, as it is exported to Amplitude",
   "insert_id" : "(required, string) Globally unique ID for this event",
   "library" : "Braze",
-  "time" : "(required, int) Unix timestamp at which the event happened",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
   "user_id" : "(optional, string) External ID of the user"
 }
 ```
@@ -892,8 +892,8 @@ This user event occurs every time a new user is created within their workspace. 
   "id" : "(required, string) Globally unique ID for this event",
   "prev_random_bucket_number" : "(optional, int) Previous random bucket number",
   "random_bucket_number" : "(required, int) New random bucket number",
-  "time" : "(required, int) Unix timestamp at which the event happened",
-  "user_id" : "(required, string) BSON ID of the user who performed this event"
+  "time" : "(required, int) UNIX timestamp at which the event happened",
+  "user_id" : "(required, string) Braze user ID of the user who performed this event"
 }
 ```
 {% endtab %}

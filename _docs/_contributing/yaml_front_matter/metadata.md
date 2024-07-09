@@ -147,14 +147,14 @@ hide_toc: true
 
 ### Hide heading from table of contents
 
-The `toc_headers` key is used to hide all headings of the same level from the in-page table of contents (TOC) on the right side of the page. This key accepts the following string values.
+By default, the table of contents (TOC) displays all heading levels. To show only specific heading levels, use the `toc_headers` key to explicitly list the desired levels. Any heading levels not listed will be hidden from the TOC.
+
+This key accepts the following string values:
 
 - `h1`
 - `h2`
 - `h3`
 - `h4`
-
-`toc_headers` will hide all headings matching its assigned value; it cannot be used to hide specific headings from the TOC.
 
 {% tabs local %}
 {% tab usage example %}

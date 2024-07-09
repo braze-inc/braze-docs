@@ -1154,4 +1154,7 @@ validurls['/docs/developer_guide/platform_integration_guides/android/content_car
 validurls['/docs/canvas_data_retention/'] = '/docs/api/data_retention/';
 validurls['/docs/user_guide/message_building_by_channel/content_cards/integration'] = '/docs/user_guide/message_building_by_channel/content_cards/create/';
 validurls['/docs/user_guide/data_and_analytics/your_reports/'] = '/docs/user_guide/data_and_analytics/reporting/'
+
+validurls['/docs/user_guide/message_building_by_channel/email/best_practices/managing_email_subscriptions/'] = '/docs/user_guide/message_building_by_channel/email/best_practices/duplicate_emails/';
+
 // validurls['OLD'] = 'NEW';
