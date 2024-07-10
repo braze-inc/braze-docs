@@ -38,7 +38,7 @@ You can keep these comments in your file while writing, but you'll need to remov
 
 How-to guides are action-based, chronological steps that show users how to complete a specific task. For an example, see [Creating a Content Card]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/create/):
 
-![Screenshot of the "Creating a Content Card" page.]({% image_buster /assets/img/contributing/content_types/how_to_guide_example.png %})
+![Screenshot of the "Creating a Content Card" page.]({% image_buster /assets/img/contributing/content_types/how_to_guide_example.png %}){: style="max-width:70%;"}
 
 {% details Show template %}
 {% raw %}
@@ -159,7 +159,7 @@ rake
 
 Tutorials are learning-oriented practical lessons. They focus on what the user learns, such as becoming familiar with terminology, how things interact, how to use commands, and similar. For an example, see [Rules-based recommendations]({{site.baseurl}}/user_guide/sage_ai/recommendations/rules_based_recommendations/):
 
-![Screenshot of the "Rules-based recommendations page.]({% image_buster /assets/img/contributing/content_types/tutorial_example.png %})
+![Screenshot of the "Rules-based recommendations page.]({% image_buster /assets/img/contributing/content_types/tutorial_example.png %}){: style="max-width:70%;"}
 
 {% details Show template %}
 {% raw %}
@@ -215,7 +215,7 @@ The title header should be prepended with `Tutorial:` and generally describe wha
 
 References are information-oriented content. They focus on providing the user with objective, authoritative, and technical knowledge. For an example, see [Message engagement events]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events/) (events glossary).
 
-![Screenshot of the "Message engagement events" page.]({% image_buster /assets/img/contributing/content_types/reference_example.png %})
+![Screenshot of the "Message engagement events" page.]({% image_buster /assets/img/contributing/content_types/reference_example.png %}){: style="max-width:70%;"}
 
 {% details Show template %}
 {% raw %}
@@ -260,28 +260,13 @@ CONTENT.
 
 Topmost should be nouns. For example, [Editor blocks]({{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/dnd_editor_blocks/) has the following names for its references:
 
-```markdown
-- Types
-- Properties
-    - Title
-    - Paragraph
-    - List
-    - Button
-    - Divider
-    - Spacer
-    - Image
-    - Video
-    - Social
-    - Icons
-    - HTML
-    - Menu
-```
+![Screenshot of the in-page table of contents for the "Editor Blocks" page. Headings include: Types (H2), Properties (H2), Title (H3), Paragraph (H3), List (H3), Button (H3), Divider (H3), Spacer (H3), Image (H3), Video (H3), Social (H3), Icons (H3), HTML (H3), Menu (H3).]({% image_buster /assets/img/contributing/content_types/explanation_header_syntax_example.png %}){: style="max-width:25%;"}
 
 ### Explanations
 
 Explanations are understanding-oriented content. They focus on improving the user’s conceptual understanding. For an example, see [Getting started: Braze overview]({{site.baseurl}}/user_guide/getting_started/overview/).
 
-![Screenshot of the "Getting started: Braze overview" page.]({% image_buster /assets/img/contributing/content_types/explanation_example.png %})
+![Screenshot of the "Getting started: Braze overview" page.]({% image_buster /assets/img/contributing/content_types/explanation_example.png %}){: style="max-width:70%;"}
 
 {% details Show template %}
 {% raw %}
@@ -319,34 +304,35 @@ CONTENT.
 
 - Create textual or visual descriptions of concepts, such as how data travels between features, third-party partners, tools, and similar.
 - Discuss how features and techniques can benefit users.
-- Place explanations in the most relevent article. For example, a basic feature article might have an explanation called "How it works" that describes that feature's workflow. 
+- Place explanations in the most relevant article. For example, a basic feature article might have an explanation called "How it works" that describes that feature's workflow. 
 - Consider placing explanations that are too broad to fit into only one article onto a landing page for a general topic, such as [Campaigns]({{site.baseurl}}/user_guide/engagement_tools/campaigns).
 
 {% alert tip %}
 Even though explanations aren't telling users what to do to achieve a specific outcome, you can broadly describe chronological steps to acheive a general goal (such as using A/B testing to improve your messaging). Don't go into the same detail you would for a [how-to guide](#how-to-guides) or [tutorial](#tutorials).
 {% endalert %}
 
-##### Headers
+##### Header syntax
 
-Topmost headers are formatted as "About TOPIC_NAME." For examples see, [About sanitiation]({{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices/sanitization#about-sanitization) and [About content management]({{site.baseurl}}/contributing/content_management).
+H1 headers (`#` in Markdown) are formatted as `About TOPIC_NAME`. If the explanation is a subsection on a page of a different content type, you can tweak the syntax as long as it implies **Explanation** rather than **How-to**. Here are some examples:
 
-Explanation sections within articles that contain multiple documentation types (such as an article that contains a how-to guide and references) have more leeway with header conventions. We suggest using verbiage that implies an explanation rather than instructions, similar to these:
-
-- About TOPIC_NAME
-- TOPIC_NAME overview
-- How TOPIC works
-- How TOPIC is handled
-- What does Braze check?
+- `About TOPIC_NAME`
+- `TOPIC_NAME overview`
+- `How TOPIC works`
+- `How TOPIC is handled`
+- `What does Braze check?`
 
 ### Release notes
 
-Release notes are a monthly compilation of product updates in Braze. Each update is placed under one of the below categories:
+Release notes are a monthly compilation of product updates in Braze. Each update is placed under one of the following categories:
 
-- Data flexibility
-- Unlocking creativity
-- Robust channels
-- AI and ML automation
-- New Braze partnerships
-- SDK updates
+| Category                     | Description |
+|------------------------------|-------------|
+| Data flexibility             | TODO        |
+| Unlocking creativity         | TODO        |
+| Robust channels              | TODO        |
+| AI and ML automation         | TODO        |
+| New Braze partnerships       | TODO        |
+| SDK updates                  | TODO        |
+{: .reset-td-br-1 .reset-td-br-2}
 
 {% multi_lang_include contributing/templates/release_notes.md %}
