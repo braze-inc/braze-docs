@@ -12,10 +12,6 @@ channel:
 
 > You can add multiple WhatsApp Business accounts and subscription groups (and phone numbers) to each workspace. <br><br>Each subscription group is connected to one unique phone number, so you can't connect the same phone number to multiple subscription groups or connect multiple phone numbers to a subscription group.
 
-{% alert important %}
-Adding multiple WhatsApp Business accounts and phone numbers is currently in early access. Contact your Braze account manager if you're interested in participating in the early access.
-{% endalert %}
-
 ## Multiple WhatsApp Business accounts 
 
 Having multiple WhatsApp Business accounts is useful if you want to send WhatsApp messages to users in a Braze workspace that has multiple brands. This is because each business account operates separately within WhatsApp and has its own phone number, message template, and quality rating.
