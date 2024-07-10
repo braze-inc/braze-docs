@@ -128,7 +128,7 @@ For multichannel campaigns and Canvases, all promotion codes referenced in a mes
 
 If a user has two promotion code lists referenced in one message that are split by a Liquid conditional logic tag, all promotion codes will still be deducted, regardless of which conditional flow the user follows.
 
-### Example
+### Use case
 
 For the following example, both promotion code lists `vip-deal` and `regular-deal` will be deducted. Here's the Liquid:
 
