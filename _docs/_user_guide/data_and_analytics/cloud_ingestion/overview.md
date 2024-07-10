@@ -483,7 +483,7 @@ Fields within the payload should follow the same format as the corresponding `/u
 Note the special requirement for [capturing dates]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/nested_custom_attribute_support/#capturing-dates-as-object-properties) in nested attributes. 
 
 {% tabs local %}
-{% tab Nested custom attributes %}
+{% tab Nested Custom Attributes %}
 You may include nested custom attributes in the payload column for a custom attributes sync. 
 
 ```json

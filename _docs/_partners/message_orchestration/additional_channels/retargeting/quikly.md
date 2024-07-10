@@ -119,7 +119,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 {% enddetails %}
 
 {% endtab %}
-{% tab Custom attributes %}
+{% tab Custom Attributes %}
 ### Custom attributes
 
 Depending on your Braze implementation, you may want events within Quikly activation to cascade through Braze for further processing. For example, you may wish to apply a custom user attribute based on what level or incentive was achieved in Quikly activation, allowing you to display the relevant Content Card when they open your app or log in to your website. Quikly will work with you directly to implement these integrations.

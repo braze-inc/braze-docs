@@ -58,7 +58,7 @@ Next, you must create and define this segment within Braze:
 
 ![In the Braze segment builder, you can find the imported segments set as custom attributes.][3]
 
-You can now add this newly created segment to future Braze campaigns and Canvases to target your users. 
+You can now add this newly created segment to future Braze campaigns and Canvases to target these end-users. 
 
 [1]: {% image_buster /assets/img/zeotap/zeotap1.png %}
 [2]: {% image_buster /assets/img/zeotap/zeotap2.png %}

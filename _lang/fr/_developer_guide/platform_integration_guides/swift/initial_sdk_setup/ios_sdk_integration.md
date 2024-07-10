@@ -424,7 +424,7 @@ Procédez à la compilation de votre code et exécutez votre application.<br><br
 ### Enregistrer les analyses
 
 {% tabs local %}
-{% tab Step 1: Custom events %}
+{% tab Step 1: Custom Events %}
 
 ##### Créer une méthode d’événement personnalisée de journal
 

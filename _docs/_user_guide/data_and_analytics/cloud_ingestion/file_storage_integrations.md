@@ -215,7 +215,7 @@ Files added to the S3 source bucket should not exceed 512MB. Files larger than 5
 Every line in your source file must contain valid JSON, or the file will be skipped. 
 {% endalert %}
 {% endtab %}
-{% tab JSON custom events %}
+{% tab JSON Custom Events %}
 ``` json  
 {"external_id":"s3-qa-0","payload":"{\"app_id\": \"YOUR_APP_ID\", \"name\": \"view-206\", \"time\": \"2024-04-02T14:34:08\", \"properties\": {\"bool_value\": false, \"preceding_event\": \"unsubscribe\", \"important_number\": 206}}"}
 {"external_id":"s3-qa-1","payload":"{\"app_id\": \"YOUR_APP_ID\", \"name\": \"view-206\", \"time\": \"2024-04-02T14:34:08\", \"properties\": {\"bool_value\": false, \"preceding_event\": \"unsubscribe\", \"important_number\": 206}}"}
@@ -224,7 +224,7 @@ Every line in your source file must contain valid JSON, or the file will be skip
 Every line in your source file must contain valid JSON, or the file will be skipped. 
 {% endalert %}
 {% endtab %}
-{% tab JSON purchase events %}
+{% tab JSON Purchase Events %}
 ``` json  
 {"external_id":"s3-qa-0","payload":"{\"app_id\": \"YOUR_APP_ID\", \"product_id\": \"product-11\", \"currency\": \"BSD\", \"price\": 8.511527858335066, \"time\": \"2024-04-02T14:34:08\", \"quantity\": 19, \"properties\": {\"is_a_boolean\": true, \"important_number\": 40, \"preceding_event\": \"click\"}}"}
 {"external_id":"s3-qa-1","payload":"{\"app_id\": \"YOUR_APP_ID\", \"product_id\": \"product-11\", \"currency\": \"BSD\", \"price\": 8.511527858335066, \"time\": \"2024-04-02T14:34:08\", \"quantity\": 19, \"properties\": {\"is_a_boolean\": true, \"important_number\": 40, \"preceding_event\": \"click\"}}"}
@@ -234,7 +234,7 @@ Every line in your source file must contain valid JSON, or the file will be skip
 {% endalert %}
 
 {% endtab %}
-{% tab CSV attributes %}
+{% tab CSV Attributes %}
 ``` csv  
 external_id,payload
 s3-qa-load-0-d0daa196-cdf5-4a69-84ae-4797303aee75,"{""name"": ""SNXIM"", ""age"": 54, ""subscriber"": true, ""retention"": {""previous_purchases"": 19, ""vip"": true}, ""last_visit"": ""2023-08-08T16:03:26.598806""}"

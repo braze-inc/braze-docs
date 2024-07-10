@@ -27,7 +27,7 @@ If you are using the [older navigation]({{site.baseurl}}/navigation), **Internal
 
 Enter the **Team Name**. If desired, use the **Define Team** field to select a custom attribute, location, or language to further define what user data that team has access to. For example, a possible use case is to perform [testing with teams](#testing-with-teams) by creating a development team that only has access to test users, identified by a custom attribute.
 
-If a team is defined by a custom attribute, language, or country, you can then use the team to filter your users for features like campaigns, Canvases, Content Cards, segments, and more. For more, see [Assigning team tags](#tags-and-filters).
+If a team is defined by a custom attribute, language, or country, you can then use the team to filter end-users for features like campaigns, Canvases, Content Cards, segments, and more. For more, see [Assigning team tags](#tags-and-filters).
 
 ## Assigning users to teams
 

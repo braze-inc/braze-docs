@@ -165,7 +165,7 @@ As seen in the example, you may also include an image in your push notification.
 
 Each action button is uniquely identified. The code checks if your response identifier is equal to the `actionIndentifier`, and if so, knows that the user clicked the action button.
 
-**Handling Push Notification action button responses**<br>
+**Handling Push Notification Action Button Responses**<br>
 
 {% tabs %}
 {% tab Swift %}
@@ -228,7 +228,7 @@ In Xcode, add the `App Groups` capability. If you haven’t had any workspaces i
 The following code snippets are a helpful reference on how to save and send custom events, custom attributes, and user attributes. This guide will be speaking in terms of `UserDefaults`, but the code representation will be in the form of the helper file `RemoteStorage`. There are additional helper files, `UserAttributes` and `EventName Dictionary`, that are used when sending and saving user attributes.
 
 {% tabs local %}
-{% tab Custom events %}
+{% tab Custom Events %}
 
 ##### Saving custom events
 
@@ -369,7 +369,7 @@ func logPendingCustomEventsIfNecessary() {
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
-{% tab Custom attributes %}
+{% tab Custom Attributes %}
 
 ##### Saving custom attributes
 
@@ -486,7 +486,7 @@ func setCustomAttributesWith(keysAndValues: [String: Any]) {
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
-{% tab User attributes %}
+{% tab User Attributes %}
 
 ##### Saving user attributes
 
@@ -798,7 +798,7 @@ extension UserAttribute: Codable {
 {% endsubtab %}
 {% endsubtabs %}
 {% enddetails %}
-{% details EventName dictionary helper file %}
+{% details EventName Dictionary Helper File %}
 {% subtabs global %}
 {% subtab Swift %}
 ```swift

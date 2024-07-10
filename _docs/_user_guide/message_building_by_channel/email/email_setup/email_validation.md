@@ -13,7 +13,7 @@ channel: email
 
 > This reference article covers local and host part validation rules for email addresses.
 
-Validation is used for dashboard email addresses, your users' email addresses, and from and reply-to addresses done of an email message. Email validation is performed when a user's email address has been updated or is being imported into Braze via API, CSV upload, or SDK, or modified in the dashboard. Note that your email addresses cannot include whitespaces. If you're using the API, whitespaces will result in a `400` error.
+Validation is used for dashboard email addresses, end-user email addresses (your customers), and from and reply-to addresses done of an email message. Email validation is performed when a user's email address has been updated or is being imported into Braze via API, CSV upload, or SDK, or modified in the dashboard. Note that your email addresses cannot include whitespaces. If you're using the API, whitespaces will result in a `400` error.
 
 Braze does not accept certain characters and recognizes them as invalid. If an email is bounced, Braze marks the email as invalid and the subscription status is not changed.  
 
