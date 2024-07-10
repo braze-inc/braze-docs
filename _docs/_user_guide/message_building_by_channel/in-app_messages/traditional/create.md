@@ -395,7 +395,7 @@ Next, check out [In-app message reporting]({{site.baseurl}}/user_guide/message_b
 
 Braze values reliability and speed. Just like we suggest you send only the data you need to Braze, we also recommend turning off any campaigns that are no longer adding any value to your brand.
 
-Processing action-based in-app message campaigns that are still in an active state but no longer sending messages or are no longer needed slows down the overall performance of the Braze services for you and other customers. This extra time needed to process these large numbers of idle campaigns means that any in-app messages will take longer to appear on your user's devices, which impacts your user's experience.
+Processing action-based in-app message campaigns that are still in an active state but no longer sending messages or are no longer needed slows down the overall performance of the Braze services for you and other customers. This extra time needed to process these large numbers of idle campaigns means that any in-app messages will take longer to appear on the end-user's devices, which impacts the end user's experience.
 
 {% alert important %}
 There is a limit of 200 active, action-based in-app message campaigns per workspace to optimize the speed of message delivery and to prevent timeouts. This does not apply to Canvases.

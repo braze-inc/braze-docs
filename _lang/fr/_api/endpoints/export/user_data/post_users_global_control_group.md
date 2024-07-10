@@ -66,7 +66,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 ```json
 {
   "callback_endpoint" : (optional, string) endpoint to post a download URL to when the export is available,
-  "fields_to_export" : (required, array of string) name of user data fields to export, such as ['first_name', 'email', 'purchases'],
+  "fields_to_export" : (required, array of string) name of user data fields to export, e.g., ['first_name', 'email', 'purchases'],
   "output_format" : (optional, string) When using your own S3 bucket, allows to specify file format as 'zip' or 'gzip'. Defaults to zip file format
 }
 ```
@@ -138,7 +138,7 @@ Content-Type: application/json
 Authorization: Bearer YOUR-REST-API-KEY
 {
     "message": (required, string) the status of the export, returns 'success' when completed without errors,
-    "object_prefix": (required, string) the filename prefix that will be used for the JSON file produced by this export, such as'bb8e2a91-c4aa-478b-b3f2-a4ee91731ad1-1464728599',
+    "object_prefix": (required, string) the filename prefix that will be used for the JSON file produced by this export, e.g.,'bb8e2a91-c4aa-478b-b3f2-a4ee91731ad1-1464728599',
     "url" : (optional, string) the URL where the segment export data can be downloaded if you do not have your own S3 credentials
 }
 ```

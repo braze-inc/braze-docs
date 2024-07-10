@@ -34,7 +34,7 @@ Replace the following:
 
 ### Article title
 
-The `article_title` key is used to set the page title for online search results and the user's browser tab. This key accepts any `string` value. For naming conventions, see the [Braze Docs Style Guide]({{site.baseurl}}/contributing/style_guide/).
+The `article_title` key is used to set the page title for online search results and the end-user's browser tab. This key accepts any `string` value. For naming conventions, see the [Braze Docs Style Guide]({{site.baseurl}}/contributing/style_guide/).
 
 {% tabs local %}
 {% tab usage example %}

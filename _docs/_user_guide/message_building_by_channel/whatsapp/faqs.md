@@ -48,25 +48,25 @@ Refer to Meta's requirements for [phone numbers](https://developers.facebook.com
 No. A phone number cannot be shared across multiple WABAs. 
 
 #### Do I need a specific type of phone number to send messages to specific countries? 
-No. WhatsApp allows you to send messages to your users from any supported phone number in any country. Refer to Meta's requirements for [phone numbers](https://developers.facebook.com/docs/whatsapp/phone-numbers) for more information. 
+No. WhatsApp allows you to send messages to end-users from any supported phone number in any country. Refer to Meta's requirements for [phone numbers](https://developers.facebook.com/docs/whatsapp/phone-numbers) for more information. 
 
 #### Do I need to use a country-specific phone number to send to certain countries?
-No. With WhatsApp, any supported phone number can send to your users in any supported country.
+No. With WhatsApp, any supported phone number can send to end-users in any supported country.
 
 ### Opt-in and subscription management 
 
-#### Do I need to collect opt-in to send marketing messages to my users on WhatsApp? 
-Yes, WhatsApp requires businesses to [collect opt-in consent](https://developers.facebook.com/docs/whatsapp/overview/getting-opt-in/) to send marketing messages to your users.
+#### Do I need to collect opt-in to send marketing messages to end-users on WhatsApp? 
+Yes, WhatsApp requires businesses to [collect opt-in consent](https://developers.facebook.com/docs/whatsapp/overview/getting-opt-in/) to send marketing messages to end-users.
 
-#### Can I proactively message my users on WhatsApp to collect opt-in consent? 
-If you choose to proactively message your users, your first business-initiated message should ask the user if the user wants to receive marketing messages from your business and should comply with Meta's requirements for [getting opt-in](https://developers.facebook.com/docs/whatsapp/overview/getting-opt-in/). Keep in mind that WhatsApp will monitor your business reputation on the channel, so the recommended best practice is to be explicit with your users and only send messages they have indicated they want to receive.
+#### Can I proactively message end-users on WhatsApp to collect opt-in consent? 
+If you choose to proactively message end-users, your first business-initiated message should ask the user if the user wants to receive marketing messages from your business and should comply with Meta's requirements for [getting opt-in](https://developers.facebook.com/docs/whatsapp/overview/getting-opt-in/). Keep in mind that WhatsApp will monitor your business reputation on the channel, so the recommended best practice is to be explicit with end-users and only send messages they have indicated they want to receive.
  
-#### Do I need to collect my user's phone number when I collect opt-in? 
-You need to have your users' phone number on the Braze profile to message them. 
+#### Do I need to collect the end user's phone number when I collect opt-in? 
+You need to have the end-users phone number on the Braze profile to message them. 
 - If you already have their number, you do not need to collect it during opt-in. 
-- If you do not have their number, your opt-in method should include phone number capture. 
+- If you do not have the end-users number, your opt-in method should include phone number capture. 
 
-#### How do I update the subscription status of my users who opt-in? 
+#### How do I update the subscription status of end-users who opt-in? 
 Subscription management of the WhatsApp Channel functions similarly to how it functions in other Braze channels. Refer to [Managing user subscriptions]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/user_subscription/) for more information.  
 
 #### If I already have a list of users who have opted-in to receive marketing messages on WhatsApp, how do I update their subscription status in Braze? 
@@ -142,13 +142,13 @@ There are various reasons a message would fail to be delivered, including networ
 #### If a message is not delivered, will I be billed? 
 No. If a message is not delivered, you will not be billed. 
 
-#### What happens if a user blocks my business? 
-If a user blocks your business, subsequent messages you attempt to send will not be delivered, and you will not be billed. 
+#### What happens if an end-user blocks my business? 
+If an end-user blocks your business, subsequent messages you attempt to send will not be delivered, and you will not be billed. 
 
-#### What happens if a user reports a message? 
-If a user reports a message, you can still send subsequent messages to this user. However, reporting may affect your quality rating on the channel. 
+#### What happens if an end-user reports a message? 
+If an end-user reports a message, you can still send subsequent messages to this user. However, reporting may affect your quality rating on the channel. 
 
-#### If a user blocks or reports my business, will their subscription status be updated in Braze? 
+#### If an end-user blocks or reports my business, will their subscription status be updated in Braze? 
 No. Their Braze subscription status will not be updated. 
 
 ### Miscellaneous
@@ -176,21 +176,21 @@ You can add images, calls to action (URL or phone number), and quick reply butto
 Yes. You can [import user phone numbers]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/user_phone_numbers/). 
 
 #### What is business verification? 
-Business verification is a WhatsApp concept used to ensure that the brand is a legitimate business. It can be completed in the WhatsApp Manager. Business verification is also required to scale messaging. Without business verification, customers can only send up to 250 unique users in a rolling 24-hour period. 
+Business verification is a WhatsApp concept used to ensure that the brand is a legitimate business. It can be completed in the WhatsApp Manager. Business verification is also required to scale messaging. Without business verification, customers can only send up to 250 unique end-users in a rolling 24-hour period. 
 
 #### What is an official business account? 
 OBA gives you the green check mark next to your display name and is optional. You can apply for an official business account after completing business verification. Note that business verification and an official business account are different WhatsApp concepts. 
 
 #### What metrics are available in the Braze dashboard? 
-You can see unique recipients, sends, deliveries, reads, and failures in the Braze dashboard. Note that your users' read receipts must be "On" for Braze to track reads. You can also set up conversion events to monitor campaign performance, similar to other channels. 
+You can see unique recipients, sends, deliveries, reads, and failures in the Braze dashboard. Note that the end-users read receipts must be "On" for Braze to track reads. You can also set up conversion events to monitor campaign performance, similar to other channels. 
 
 #### What is a WhatsApp conversation? 
-WhatsApp is a channel focused on 2-way messaging and thus anchors on conversations (instead of the number of individual messages). A conversation is a 24-hour thread between a business and an user.
+WhatsApp is a channel focused on 2-way messaging and thus anchors on conversations (instead of the number of individual messages). A conversation is a 24-hour thread between a business and an end-user.
 
 - **Business-initiated conversation**: A conversation where the business starts by sending an approved template message to the end user. As soon as the business sends a message, it begins the 24-hour window.
-- **User-initiated conversation**: A conversation where the user sends a message to the business. When the business sends a message in response, this begins the 24-hour window.
+- **User-initiated conversation**: A conversation where the end-user sends a message to the business. When the business sends a message in response, this begins the 24-hour window.
 
 #### What factors affect phone number quality rating, and what happens when my quality rating drops too low? 
-Factors that affect phone number quality rating include a user blocking a business (and the reasons they provide when they block a business) and a user reporting a business. 
+Factors that affect phone number quality rating include an end-user blocking a business (and the reasons they provide when they block a business) and an end-user reporting a business. 
 
 When a quality rating is low, the phone number status changes from **Connected** to **Flagged**. If the quality doesn't improve over seven days, the status returns to **Connected**. However, the messaging limit will decrease to the next level. For example, a phone number that used to have a 100,000 messaging limit now has a 10,000 messaging limit.

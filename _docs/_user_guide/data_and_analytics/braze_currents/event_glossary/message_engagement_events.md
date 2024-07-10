@@ -68,7 +68,7 @@ This event occurs when an WhatsApp message is read by the end user.
 WhatsApp, Delivery
 {% endapitags %}
 
-This event occurs when an WhatsApp message sent made it successfully to the user's device.
+This event occurs when an WhatsApp message sent made it successfully to the end-users device.
 
 {% tabs %}
 {% tab Braze Standard REST %}
@@ -4508,7 +4508,7 @@ This event occurs when an email send request was successfully communicated betwe
 Email, Delivery
 {% endapitags %}
 
-This event occurs when an email sent made it successfully to the user's inbox.
+This event occurs when an email sent made it successfully to the end-users inbox.
 
 {% tabs %}
 {% tab Braze Standard REST %}
@@ -5888,7 +5888,7 @@ This event occurs when an Internet Service Provider returns a soft bounce. A sof
 Email, Spam
 {% endapitags %}
 
-This event occurs when the user selects the "spam" button on the email. Note that this does not represent the fact the email went into the spam folder as Braze does not track this.
+This event occurs when the end-user hits the "spam" button on the email. Note that this does not represent the fact the email went into the spam folder as Braze does not track this.
 
 {% tabs %}
 {% tab Braze Standard REST %}
@@ -6144,7 +6144,7 @@ The behavior for `dispatch_id` differs between Canvas and campaigns because Braz
 Email, Subscription
 {% endapitags %}
 
-This event occurs when the user has clicked "unsubscribe" from the email.
+This event occurs when the end-user has clicked "unsubscribe" from the email.
 
 {% alert important %}
 The `Unsubscribe` event is actually a specialized click event that is fired when your user clicks on the unsubscribe link in the email (either a normal unsubscribe link within the email body or footer, or using the [list-unsubscribe header]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/email_settings#include-a-list-unsubscribe-header)), not when the user changes state to unsubscribed. If subscription state change is sent through the API, it will not trigger an event on Currents.
@@ -11007,7 +11007,7 @@ Subscription groups are only available for email, SMS, and WhatsApp channels at 
 | REST API | REST API endpoints |
 | CSV import | CSV user import |
 | Preference Center | When a user is updated from the preference center |
-| Inbound Message | When a user is updated by inbound messages they send through channels such as SMS |
+| Inbound Message | When a user is updated by inbound messages from end-users through channels such as SMS |
 | Migration | When a user is updated by internal migrations or maintenance scripts |
 | User Merge | When a user is updated by the user merge process |
 | Canvas User Update Step | When a user is updated by the Canvas user update step |
@@ -11261,7 +11261,7 @@ This event occurs when Braze receives a request to update the global subscriptio
 | REST API | REST API endpoints |
 | CSV import | CSV user import |
 | Preference Center | When a user is updated from the preference center |
-| Inbound Message | When a user is updated by inbound messages they send through channels, such as SMS |
+| Inbound Message | When a user is updated by inbound messages from end-users through channels, such as SMS |
 | Migration | When a user is updated by internal migrations or maintenance scripts |
 | User Merge | When a user is updated by the merging users process |
 | Canvas User Update Step | When a user is updated by the Canvas User Update step |

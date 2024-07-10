@@ -131,7 +131,7 @@ When previewing a message, the **View PII** permission is not applied, so users 
 
 You can use this setting to set preferences for whether or not certain fields should be deleted during the user delete process for events. These preferences only impact data for users that have been deleted from Braze. 
 
-When a user is deleted, Braze removes all PII from events data but retains the anonymized data for analytics purposes. Some user-defined fields may contain PII if you send your user information to Braze.  If these fields contain PII, you can opt to delete the data when event data is anonymized for deleted users; if the fields contain no PII, they can be retained for analytics.
+When a user is deleted, Braze removes all PII from events data but retains the anonymized data for analytics purposes. Some user-defined fields may contain PII if you send end-user information to Braze.  If these fields contain PII, you can opt to delete the data when event data is anonymized for deleted users; if the fields contain no PII, they can be retained for analytics.
 
 You are responsible for determining the correct preferences for your workspace.  The best way to determine the appropriate settings is to review with internal teams sending events data to Braze and to teams using message extras in Braze to confirm whether the fields may contain PII.  
 

@@ -12,7 +12,7 @@ channel:
 
 > Email capture messages allow you to easily prompt users of your site to submit their email address, after which it will be available within their user profile for use in all your messaging campaigns.
 
-When a user enters their email address to this form, the email address will get added to their user profile.
+When an end-user enters their email address to this form, the email address will get added to their user profile.
 
 - For [anonymous users]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/#anonymous-user-profiles) who don't yet have an account, the email address will live on the anonymous user profile that is tied to the user's device.
 - If an email address already exists on the user profile, then the existing email address will be overwritten by the newly entered email address.
