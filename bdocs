@@ -18,7 +18,8 @@ Usage: ./bdocs [option]
 Options:
   deploy       Create deploy text
   release      Create release text
-  rlinks       Convert all reference links to in-line links
+  clinks       Convert all reference links to in-line links
+  rlinks       Remove all unused reference links
   help         Display this help message and exit
 
 EOF
@@ -42,11 +43,15 @@ case $1 in
     release)
         "$PROJECT_ROOT/scripts/release_text.sh"
         ;;
-    rlinks)
+    clinks)
         python3 "$PROJECT_ROOT/scripts/convert_reference_links.py"
         ;;
-    ulinks)
-        ruby "$PROJECT_ROOT/scripts/remove_unused_reference_links.rb"
+    rlinks)
+        if [[ -z "$2" ]]; then
+            echo "Error: Path is required."
+            exit 1
+        fi
+        ruby "$PROJECT_ROOT/scripts/remove_unused_reference_links.rb" "$2"
         ;;
     help)
         display_help
