@@ -121,7 +121,7 @@ This code count can also be found when revisited a pre-existing promotion code l
 
 ## Multichannel and single-channel sends
 
-For multichannel campaigns and Canvases, all promotion codes referenced in a message’s Liquid are deducted to be used **before** the message is sent to make sure the following occurs:
+For multichannel and single-send campaigns and Canvases, all promotion codes referenced in a message’s Liquid are deducted to be used **before** the message is sent to make sure the following occurs:
 
 - The same promotion codes are used across channels in a multichannel message.
 - No extra promotion codes are used up if a message fails or aborts.
