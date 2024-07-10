@@ -742,10 +742,6 @@ Here, you can review when a changed happened, who made the change, which categor
 
 ## Segmenting with feature flags {#segmentation}
 
-{% alert note %}
-Feature Flag membership filter is being gradually rolled out and may not be on your dashboard just yet.
-{% endalert %}
-
 Braze automatically keeps track of which users are currently eligible for or participating in a feature flag. You can create a segment or target messaging using the [**Feature Flag** filter]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/#feature-flags). For more information about filtering on segments, see [Creating a segment][7].
 
 ![The "Filters" section with "Feature Flag" typed into the filter search bar.][10]
