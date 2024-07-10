@@ -153,7 +153,7 @@ You can simply disconnect and reconnect your Criteo account on the Criteo partne
 {% enddetails %}
 
 {% details Why is my Canvas not allowed to launch? %}
-Please ensure that your Criteo ad account has successfully connected to Braze on the Criteo partner page.
+Make sure that your Criteo ad account has successfully connected to Braze on the Criteo partner page.
 
 Make sure you have selected an ad account, entered a name for the new audience, and selected fields to match
 {% enddetails %}

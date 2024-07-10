@@ -62,7 +62,7 @@ Replace the following:
 
 | Placeholder | Description                                                                                                             |
 |-------------|-------------------------------------------------------------------------------------------------------------------------|
-| `ALT_TEXT`  | The alt text for the image. This is required to ensure Braze Docs is equally accessible for those using screen readers. |
+| `ALT_TEXT`  | The alt text for the image. This is required to make Braze Docs equally accessible for those using screen readers. |
 | `IMAGE`     | The relative path to your image starting from the `img` directory.                                                      |
 {: .reset-td-br-1 .reset-td-br-2}
 
@@ -88,7 +88,7 @@ Replace the following:
 
 | Placeholder        | Description                                                                                                             |
 |--------------------|-------------------------------------------------------------------------------------------------------------------------|
-| `ALT_TEXT`         | The alt text for the image. This is required to ensure Braze Docs is equally accessible for those using screen readers. |
+| `ALT_TEXT`         | The alt text for the image. This is required to make Braze Docs equally accessible for those using screen readers. |
 | `REFERENCE_NUMBER` | Assign any positive integer that's not already assigned to another reference-style link on this page.                   |
 {: .reset-td-br-1 .reset-td-br-2}
 
