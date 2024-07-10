@@ -122,13 +122,13 @@ For this tutorial, we're using a catalog that lists two games, their cost, and a
   <tr>
     <td class="tg-0pky">1234</td>
     <td class="tg-0pky">Tales</td>
-    <td class="tg-0pky">7.49 USD</td>
+    <td class="tg-0pky">7.49</td>
     <td class="tg-0pky">https://picsum.photos/200</td>
   </tr>
   <tr>
     <td class="tg-0pky">1235</td>
     <td class="tg-0pky">Regeneration</td>
-    <td class="tg-0pky">22.49 USD</td>
+    <td class="tg-0pky">22.49</td>
     <td class="tg-0pky">https://picsum.photos/200</td>
   </tr>
 </tbody>
@@ -182,7 +182,7 @@ Get {{ items[0].title }} for just {{ items[0].price }}!
 
 This renders as the following:
 
-> Get Tales for just 7.49 USD!
+> Get Tales for just 7.49!
 
 ## Catalogs via API
 
@@ -316,7 +316,7 @@ Get {{ items[0].title }} now, for just {{ items[0].price }}!
 {% endraw %}
 
 Which will display as the following:
-> Get Tales now, for just 7.49 USD!
+> Get Tales now, for just 7.49!
 
 With templating, you can render a different catalog item for each user based on their individual custom attributes, event properties, or any other templatable field.
 
