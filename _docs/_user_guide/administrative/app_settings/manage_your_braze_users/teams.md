@@ -25,7 +25,7 @@ If you are using the [older navigation]({{site.baseurl}}/navigation), **Internal
 
 ![Adding a new team][68]
 
-Enter the **Team Name**. If desired, use the **Define Team** field to select a custom attribute, location, or language to further define what user data that team has access to. For example, a possible use case is to perform [testing with teams](#testing-with-teams) by creating a development team that only has access to test users, identified by a custom attribute. Another use case is to restrict communication with users based on product.
+Enter the **Team Name**. If desired, use the **Define Team** field to select a custom attribute, location, or language to further define what user data the team has access to. For example, a possible use case is to perform [testing with teams](#testing-with-teams) by creating a development team that only has access to test users, identified by a custom attribute. Another use case is to restrict communication with users based on product.
 
 If a team is defined by a custom attribute, language, or country, you can then use the team to filter end-users for features like campaigns, Canvases, Content Cards, segments, and more. For more, see [Assigning team tags](#tags-and-filters).
 
@@ -129,7 +129,7 @@ Select one or many teams to archive. If the team is not associated with any obje
 
 ![Archiving a Team that is associated with an object in Braze][86]{: style="max-width:70%;"}
 
-Braze admins can unarchive a Team by selecting the archived Team and selecting **Unarchive**.
+Braze admins can unarchive a team by selecting the archived team and selecting **Unarchive**.
 
 ## How do teams differ from permission sets and roles? 
 
