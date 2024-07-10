@@ -33,7 +33,7 @@ There can be some latency for in-app messages that display immediately on delive
 
 ## Minimum time interval between triggers
 
-By default, we rate limit in-app messages to once every 30 seconds to ensure a quality user experience.
+By default, we rate limit in-app messages to once every 30 seconds to support a quality user experience.
 
 To override this value, set `com_braze_trigger_action_minimum_time_interval_seconds` in your `braze.xml` via:
 
