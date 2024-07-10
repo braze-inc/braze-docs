@@ -453,7 +453,7 @@ Total clicks on the submit button of a [simple survey]({{site.baseurl}}/user_gui
 ### Total Clicks
 
 {% apitags %}
-Email, Content Cards, LINE
+Email, Content Cards, SMS, LINE
 {% endapitags %}
 
 The total number (and percentage) of users who clicked within the delivered email, card, or message. For LINE, this is tracked after a minimum threshold of 20 messages per day has been reached.
@@ -464,6 +464,7 @@ The total number (and percentage) of users who clicked within the delivered emai
     <ul>
         <li><b>Email:</b> (Total Clicks) / (Deliveries)</li>
         <li><b>Content Cards:</b> (Total Clicks) / (Total Impressions)</li>
+        <li><b>SMS:</b> (Click Opens) / (Deliveries)</li>
     </ul>
 </span>
 {:/}
