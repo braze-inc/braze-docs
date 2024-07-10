@@ -65,7 +65,7 @@ When link shortening is enabled, the SMS and MMS performance table include a col
 
 ![][4]
 
-The Historical Performance and SMS Overview chart also includes an option for  **Total Clicks** and shows a daily time series of click events. Clicks are incremented on redirect (such as when a user visits the same link multiple times), and may be incremented more than once per user.
+The Historical Performance and SMS Overview chart also includes an option for  **Total Clicks** and shows a daily time series of click events.
 
 ## Retargeting users
 
