@@ -40,69 +40,7 @@ How-to guides are action-based, chronological steps that show users how to compl
 
 ![Screenshot of the "Creating a Content Card" page.]({% image_buster /assets/img/contributing/content_types/how_to_guide_example.png %}){: style="max-width:70%;"}
 
-{% details Show template %}
-{% raw %}
-`````markdown
----
-nav_title: NAV_TITLE
-article_title: ARTICLE_TITLE
-description: "SHORT_DESCRIPTION."
-alias: /OPTIONAL_SHORT_ARTICLE_TITLE/
-page_type: reference
-layout: OPTIONAL_LAYOUT_FILE
-—--
-
-# ARTICLE_TITLE
-
-<!-- The overview starts with a '>' character and discusses what will be covered. In an optional following paragraph, contextualize the topic at a high-level in an introduction. -->
-> DESCRIPTION.
-
-INTRODUCTION.
-
-<!-- The prerequisites for this task. If no prerequisites are required, you can remove this section. -->
-## Prerequisites
-
-Before you start, you'll need to complete the following:
-
-- ACTION_TO_COMPLETE
-- ACTION_TO_COMPLETE
-- ACTION_TO_COMPLETE
-
-<!-- An optional, brief explanation of how the feature workflow looks. -->
-## How it works
-
-CONTENT.
-
-<!-- A how-to guide with nested steps. -->
-## TASK_TO_COMPLETE
-
-<!-- Optional overview of the task. -->
-CONTENT.
-
-<!-- Action-oriented header that describes the step’s goal. -->
-### Step 1: ACTION_TO_COMPLETE
-
-<!-- Use number bullets or paragraphs to describe how to complete this action -->
-CONTENT.
-
-### Step 2: ACTION_TO_COMPLETE
-
-CONTENT.
-<!-- Optional references, such as supported data types, fields, definitions, and similar. -->
-### REFERENCE_TO_ASSIST_WITH_ACTION
-
-CONTENT.
-
-<!-- For optional steps, add “(optional)” to the end of the header. -->
-### Step 3: OPTIONAL_ACTION_TO_COMPLETE (optional)
-
-CONTENT.
-<!-- An optional section for what is supported. Add nested headers to be more specific. -->
-## Supported data types / Supported attributes / Supported events / Supported ETC.
-CONTENT.
-``````
-{% endraw %}
-{% enddetails %}
+{% multi_lang_include contributing/templates/how_to_guide.md %}
 
 #### Guidelines
 
@@ -161,42 +99,7 @@ Tutorials are learning-oriented practical lessons. They focus on what the user l
 
 ![Screenshot of the "Rules-based recommendations page.]({% image_buster /assets/img/contributing/content_types/tutorial_example.png %}){: style="max-width:70%;"}
 
-{% details Show template %}
-{% raw %}
-```markdown
----
-nav_title: NAV_TITLE
-article_title: Tutorial: WHAT_THE_USER_WILL_DO
-description: "SHORT_DESCRIPTION."
-alias: /OPTIONAL_SHORT_ARTICLE_TITLE/
-page_type: tutorial
-layout: OPTIONAL_LAYOUT_FILE
-—--
-
-# Tutorial: WHAT_THE_USER_WILL_DO
-
-<!-- The overview starts with a '>' character and discusses what will be covered. In an optional following paragraph, contextualize the topic at a high-level in an introduction. -->
-> DESCRIPTION.
-
-INTRODUCTION.
-
-<!-- Introduce the tutorial with the following format:-->
-When you’re finished with this tutorial, you’ll be able to:
-
-- LEARNING_OBJECTIVE
-- LEARNING_OBJECTIVE
-- LEARNING_OBJECTIVE
-
-<!-- Replace each `LEARNING_OBJECTIVE` with something the user will broadly learn how to do during the tutorial. For example, a tutorial that walks a user through creating their first contribution to the Braze Docs site might have the following objectives:-->
-
-- Navigate the Braze Docs GitHub repository
-- Make changes using the GitHub website or your local environment
-- Create pull requests (PRs)
-- Preview your changes in a test site
-- Request a review from the Braze Docs team
-```
-{% endraw %}
-{% enddetails %}
+{% multi_lang_include contributing/templates/tutorial.md %}
 
 #### Guidelines
 
@@ -217,37 +120,7 @@ References are information-oriented content. They focus on providing the user wi
 
 ![Screenshot of the "Message engagement events" page.]({% image_buster /assets/img/contributing/content_types/reference_example.png %}){: style="max-width:70%;"}
 
-{% details Show template %}
-{% raw %}
-```markdown
----
-nav_title: NAV_TITLE
-article_title: ARTICLE_TITLE
-description: "SHORT_DESCRIPTION."
-alias: /OPTIONAL_SHORT_ARTICLE_TITLE/
-page_type: reference
-layout: OPTIONAL_LAYOUT_FILE
-—--
-
-# ARTICLE_TITLE
-
-<!-- The overview starts with a '>' character and discusses what will be covered. In an optional following paragraph, contextualize the topic at a high-level in an introduction. -->
-> DESCRIPTION.
-
-INTRODUCTION.
-
-<!-- An optional section for organizing the page. -->
-## SECTION_NAME
-
-CONTENT.
-
-<!-- An optional section for organizing the page. -->
-## SECTION_NAME
-
-CONTENT.
-```
-{% endraw %}
-{% enddetails %}
+{% multi_lang_include contributing/templates/reference.md %}
 
 #### Guidelines
 
@@ -268,37 +141,7 @@ Explanations are understanding-oriented content. They focus on improving the use
 
 ![Screenshot of the "Getting started: Braze overview" page.]({% image_buster /assets/img/contributing/content_types/explanation_example.png %}){: style="max-width:70%;"}
 
-{% details Show template %}
-{% raw %}
-```markdown
----
-nav_title: NAV_TITLE
-article_title: ARTICLE_TITLE
-description: "SHORT_DESCRIPTION."
-alias: /OPTIONAL_SHORT_ARTICLE_TITLE/
-page_type: reference
-layout: OPTIONAL_LAYOUT_FILE
-—--
-
-# ARTICLE_TITLE
-
-<!-- The overview starts with a '>' character and discusses what will be covered. In an optional following paragraph, contextualize the topic at a high-level in an introduction. -->
-> DESCRIPTION.
-
-INTRODUCTION.
-
-<!-- An optional section for organizing the page. -->
-## SECTION_NAME
-
-CONTENT.
-
-<!-- An optional section for organizing the page. -->
-## SECTION_NAME
-
-CONTENT.
-```
-{% endraw %}
-{% enddetails %}
+{% multi_lang_include contributing/templates/explanation.md %}
 
 #### Guidelines
 
@@ -325,14 +168,16 @@ H1 headers (`#` in Markdown) are formatted as `About TOPIC_NAME`. If the explana
 
 Release notes are a monthly compilation of product updates in Braze. Each update is placed under one of the following categories:
 
-| Category                     | Description |
-|------------------------------|-------------|
-| Data flexibility             | TODO        |
-| Unlocking creativity         | TODO        |
-| Robust channels              | TODO        |
-| AI and ML automation         | TODO        |
-| New Braze partnerships       | TODO        |
-| SDK updates                  | TODO        |
+| Category               | Description                                                             |
+|------------------------|-------------------------------------------------------------------------|
+| Data flexibility       | Updates on improving data structuring, storage, and access.             |
+| Unlocking creativity   | Features that enhance user creativity within the platform.              |
+| Robust channels        | Updates on the reliability and scalability of communication channels.   |
+| AI and ML automation   | Updates on AI and ML capabilities within the platform.                  |
+| New Braze partnerships | Introduces new integrations with other platforms and services.          |
+| SDK updates            | Lists new SDKs or updates, including breaking changes and new features. |
 {: .reset-td-br-1 .reset-td-br-2}
+
+You can use this template to create release notes for Braze Docs. For an example, see [January 9, 2024 release]({{site.baseurl}}/help/release_notes/2024/1_9_24/).
 
 {% multi_lang_include contributing/templates/release_notes.md %}
