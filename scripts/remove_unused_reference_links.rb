@@ -1,7 +1,7 @@
-# This script deletes unused shortlinks from the bottom of a file, such as:
+# This script removes unused reference-style links from the bottom of a file, such as:
 #   [1]: {{site.baseurl}}/contributing/your_first_contribution/
 # 
-# Usage: ruby unused_link_cleaner.rb [option]
+# Usage: ruby remove_unused_reference_links.rb [option]
 #
 # Options:
 #   PATH/TO/FILE              Delete unused shortlinks in a single file.
@@ -12,7 +12,7 @@ require "readline"
 
 INPUT_FILE = ARGV[0]
 
-unless !INPUT_FILE.nil? && File.exists?(INPUT_FILE)
+unless !INPUT_FILE.nil? && File.exist?(INPUT_FILE)
   puts "Expected input file #{INPUT_FILE} to exist. Exiting."
   exit()
 end
