@@ -161,7 +161,7 @@ The same promotion code will be templated for all instances of the Liquid snippe
 
 ### What happens when a promotion code list is expired or empty?
 
-The message will be aborted. However, because promotion codes are "preloaded," the promotion code will still be used up, even if the message is not sent.
+The message will be canceled. However, because promotion codes are "preloaded," the promotion code will still be used up, even if the message is not sent.
 
 [1]:{% image_buster /assets/img/promocodes/promocode1.png %}
 [2]:{% image_buster /assets/img/promocodes/promocode2.png %}
