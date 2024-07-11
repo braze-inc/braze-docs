@@ -13,9 +13,13 @@ noindex: true
 
 > Prompting is the process of giving the AI Liquid Assistant clear instructions on what you want it to do.
 
-The AI Liquid Assistant is designed to function as a best-in-class marketer that's an expert at using Braze and Liquid to create impactful marketing messages, but it still requires guidance on your particular use cases or questions.
+{% alert important %}
+The AI Liquid Assistant is currently in beta for a limited number of customers who actively use the push and SMS channels. If you're interested in being considered for the beta, reach out to your customer success manager or indicate your interest on this [portal card](https://braze.productboard.com/entity-detail/features/27273918).
+{% endalert %}
 
-There is no single correct way to prompt the assistant, and you can always add further deatils to your prompts during your conversation. This means you don't need to spend a lot of time crafting the "perfect" initial prompt. However, you can get the most out of the assistant by following some best practices.
+The AI Liquid Assistant is designed to function as a best-in-class marketer who's an expert at using Braze and Liquid to create impactful marketing messages, but it still requires guidance on your particular use cases or questions.
+
+There is no single correct way to prompt the assistant, and you can always add further details to your prompts during your conversation. This means you don't need to spend a lot of time crafting the "perfect" initial prompt. However, you can get the most out of the assistant by following some best practices.
 
 ## Best practices for effective prompting
 
