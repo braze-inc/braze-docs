@@ -44,7 +44,11 @@ case $1 in
         "$PROJECT_ROOT/scripts/release_text.sh"
         ;;
     clinks)
-        python3 "$PROJECT_ROOT/scripts/convert_reference_links.py"
+        if [[ -z "$2" ]]; then
+            echo "Error: Path is required."
+            exit 1
+        fi
+        python3 "$PROJECT_ROOT/scripts/convert_reference_links.py" "$2"
         ;;
     rlinks)
         if [[ -z "$2" ]]; then

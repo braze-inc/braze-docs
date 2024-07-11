@@ -1,13 +1,16 @@
-# This script converts Markdown reference links to in-line links.
-# Created because reference links cannot be placed inside Liquid a {% tab %}.
-#
-# For more information, see:
-# https://www.braze.com/docs/contributing/content_management/cross_referencing/
+# THIS IS THE OLD VERSION.
+# This script can only run against a single file (defined in 'file_path').
+# It can not take arguments, nor run recursively.
 # 
 # Usage: ./convert_reference_links [directory|file]
 
 import os
-import sys
+
+# Retrieve the environment variable
+project_root = os.getenv('PROJECT_ROOT')
+
+# Verify the environment variable is passed correctly
+print("PROJECT_ROOT:", project_root)
 
 def create_link_dictionary(file_path):
     link_dict = {}
@@ -48,32 +51,11 @@ def replace_links(file_path, link_dict):
     with open(file_path, 'w') as file:
         file.writelines(updated_lines)
 
-def process_file(file_path):
-    link_dict = create_link_dictionary(file_path)
-    replace_links(file_path, link_dict)
+# Always run against PROJECT_ROOT/_docs/_api/api_limits.md
+file_path = os.path.join(project_root, '_docs', '_api', 'basics.md')
 
-def process_directory(directory_path):
-    for root, _, files in os.walk(directory_path):
-        for file in files:
-            if file.endswith('.md'):
-                file_path = os.path.join(root, file)
-                process_file(file_path)
+# Create the link dictionary
+link_dict = create_link_dictionary(file_path)
 
-if __name__ == "__main__":
-    if len(sys.argv) != 2:
-        print("Usage: python3 convert_reference_links.py [path/to/file/or/directory]")
-        sys.exit(1)
-
-    path = sys.argv[1]
-
-    if not os.path.exists(path):
-        print(f"Error: Path '{path}' does not exist.")
-        sys.exit(1)
-
-    if os.path.isfile(path):
-        process_file(path)
-    elif os.path.isdir(path):
-        process_directory(path)
-    else:
-        print(f"Error: Path '{path}' is neither a file nor a directory.")
-        sys.exit(1)
+# Replace the links in the markdown file
+replace_links(file_path, link_dict)
