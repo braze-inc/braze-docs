@@ -83,6 +83,10 @@ curl --location --request POST 'https://rest.iad-03.braze.com/catalogs' \
           "type": "object"
         },
         {
+          "name": "Top_Dishes",
+          "type": "array"
+        },
+        {
           "name": "Created_At",
           "type": "time"
         }
@@ -133,6 +137,10 @@ The status code `201` could return the following response body.
         {
           "name": "Location",
           "type": "object"
+        },
+        {
+          "name": "Top_Dishes",
+          "type": "array"
         },
         {
           "name": "Created_At",

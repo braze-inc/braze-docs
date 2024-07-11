@@ -59,6 +59,10 @@ curl --location --request PUT 'https://rest.iad-03.braze.com/catalogs/restaurant
         "Latitude": 33.6112,
         "Longitude": -117.8711
       },
+      "Top_Dishes": [
+        "Hamburger",
+        "Deluxe Cheeseburger"
+      ],
       "Open_Time": "2021-09-03T09:03:19.967+00:00"
     }
   ]
