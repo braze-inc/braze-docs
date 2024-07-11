@@ -84,7 +84,9 @@ curl --location --request PATCH 'https://rest.iad-03.braze.com/catalogs/restaura
 }'
 ```
 
+{% alert note %}
 The `$add` and `$remove` operators are only applicable to array type fields, and are only supported by PATCH endpoints.
+{% endalert %}
 
 ## Response
 
