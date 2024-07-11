@@ -1,3 +1,5 @@
+# TODO: Make sure it also converts reference-style links for image tags as well. It currently does not.
+
 import os
 
 # Retrieve the environment variable
