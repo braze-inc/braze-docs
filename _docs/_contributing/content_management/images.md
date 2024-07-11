@@ -126,9 +126,9 @@ Your links should be similar to the following:
 {% endtab %}
 {% endtabs %}
 
-### Step 3: Set the image's max width (optional)
+### Step 3: Set the image's maximum width (optional)
 
-You can set the image's max width by appending the following liquid code to your image link:
+You can set the image's maximum width by appending the following Liquid code to your image link:
 
 {% raw %}
 ```markdown

@@ -354,7 +354,7 @@ Email, Content Cards, In-App Message, Web Push, iOS Push, Android Push, SMS, Wha
 - Content Cards: Received when users view the card in the app.
 - Push: Received when messages are sent from the Braze server to the push provider.
 - Email: Received when messages are sent from the Braze server to the email service provider.
-- SMS/MMS: "Delivered" once the SMS provider receives confirmation from the upstream carrier and destination device.
+- SMS/MMS: "Delivered" after the SMS provider receives confirmation from the upstream carrier and destination device.
 - In-App Message: Received at the time of display based on the trigger action defined.
 - WhatsApp: Received at the time of display based on the trigger action defined.
 

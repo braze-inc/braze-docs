@@ -231,7 +231,7 @@ This is considered a best practice for several reasons:
 - **Training:** New team members can familiarize themselves with the workspace in a safe environment where mistakes won't have real-world consequences.
 
 {% alert tip %}
-The order in which you set up a testing workspace and a production workspace can depend on your specific needs and circumstances. However, it's generally a good idea to set up a testing workspace first. This allows you to test features, configurations, and updates before they're implemented in the production workspace. Once you're satisfied with the testing and results, you can then establish your production workspace.
+The order in which you set up a testing workspace and a production workspace can depend on your specific needs and circumstances. However, it's generally a good idea to set up a testing workspace first. This allows you to test features, configurations, and updates before they're implemented in the production workspace. After you're satisfied with the testing and results, you can then establish your production workspace.
 {% endalert %}
 
 ### Add administrators

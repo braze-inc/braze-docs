@@ -62,7 +62,7 @@ Changes are made available after your app refreshes feature flags, or when a new
 
 ## Step 4: Distribute variants
 
-Choose the percentage distribution for your experiment. As a best practice, you should not change the distribution once your experiment has been launched.
+Choose the percentage distribution for your experiment. As a best practice, you should not change the distribution after your experiment has been launched.
 
 ## Step 5: Assign conversions
 

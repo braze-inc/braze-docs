@@ -436,7 +436,7 @@ You'll need the YouTube ID to embed a YouTube video. It appears after `v=` in th
 ```
 {% endraw %}
 
-To align right or left, and limit max width to 50% use the `align` parameter = `left` or `right`:
+To align right or left, and limit the maximum width to 50% use the `align` parameter = `left` or `right`:
 {% raw %}
 ```html
 {% multi_lang_include video.html id="[youtube_id]" align="left" source="youtube" %}

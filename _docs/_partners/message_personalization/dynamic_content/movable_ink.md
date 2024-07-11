@@ -99,7 +99,7 @@ To include Movable Ink content into Braze messages, you must locate the source U
 
 To obtain the source URL, you must have set up the content in the Movable Ink dashboard, and then from there, finish and export your content. On the **Finish** page, copy the source URL(`img src`) from the creative tag.
 
-![The page that appears once you have completed your Movable Ink campaign, here you find your content URL.]({% image_buster /assets/img/movable_ink/obtain_url.png %}){: style="max-width:80%;"}
+![The page that appears after you have completed your Movable Ink campaign, here you find your content URL.]({% image_buster /assets/img/movable_ink/obtain_url.png %}){: style="max-width:80%;"}
 
 Next, in the Braze Platform, paste the URL in the appropriate field. Appropriate fields for your messaging channel can be found in step 4. Lastly, replace any merge tags (such as {% raw %}```&mi_u=%%email%%```{% endraw %}) with the corresponding Liquid variable (such as {% raw %}```&mi_u={{${email_address}}}```{% endraw %}).
 

@@ -31,7 +31,7 @@ When setting up SMS/MMS in Braze to manage opt-ins and opt-outs, refer to the fo
 Where SMS/MMS has been set up across multiple instances, and due to misconfiguration, a campaign or Canvas opt-outs are sent to the wrong workspace.
 
 * Braze has monitoring in place to identify such instances. If this behavior is flagged, Braze will repoint opt-outs to the correct instance and backfill any opt-outs that occurred during the period.
-* We strongly recommend customers test opt-outs for each subscription group they have in Braze. Identifying this issue before launching a message is better than mitigating once an issue has been identified.
+* We strongly recommend customers test opt-outs for each subscription group they have in Braze. Identifying this issue before launching a message is better than mitigating after an issue has been identified.
 
 Braze manages SMS/MMS subscriptions at both the user profile (`user_id`) level and the phone number (`channel_id`) level. When a phone number is opted-in or out, the update applies to all profiles which share that number. In the case where an end user opted-in with a certain phone number, but then changes phone number, the new phone number will inherit the subscription group status of the user. Accordingly, if an end user has opted-out, but then re-enters the app or website with a new phone number, they will not receive unwanted messages.
 
