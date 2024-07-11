@@ -62,6 +62,10 @@ curl --location --request POST 'https://rest.iad-03.braze.com/catalogs/restauran
         "Latitude": 33.6112,
         "Longitude": -117.8711
       },
+      "Top_Dishes": [
+        "Hamburger",
+        "Deluxe Cheeseburger"
+      ],
       "Created_At": "2022-11-01T09:03:19.967+00:00"
     },
     {
@@ -75,6 +79,10 @@ curl --location --request POST 'https://rest.iad-03.braze.com/catalogs/restauran
         "Latitude": 40.7413,
         "Longitude": -73.9764
       },
+      "Top_Dishes": [
+        "Hot Dog",
+        "French Fries"
+      ],
       "Created_At": "2022-11-02T09:03:19.967+00:00"
     },
     {
@@ -88,6 +96,10 @@ curl --location --request POST 'https://rest.iad-03.braze.com/catalogs/restauran
         "Latitude": 40.7489,
         "Longitude": -73.9972
       },
+      "Top_Dishes": [
+        "Buffalo Wings",
+        "Philly Cheesesteak"
+      ],
       "Created_At": "2022-11-03T09:03:19.967+00:00"
     }
   ]

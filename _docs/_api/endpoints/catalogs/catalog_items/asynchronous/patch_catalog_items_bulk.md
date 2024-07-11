@@ -60,16 +60,33 @@ curl --location --request PATCH 'https://rest.iad-03.braze.com/catalogs/restaura
         "Latitude": 33.6112,
         "Longitude": -117.8711
       },
+      "Top_Dishes": {
+        "$add": [
+          "Biscuits",
+          "Coleslaw"
+        ],
+        "$remove": [
+          "French Fries"
+        ]
+      },
       "Open_Time": "2021-09-03T09:03:19.967+00:00"
     },
     {
       "id": "restaurant3",
       "City": "San Francisco",
-      "Rating": 2
+      "Rating": 2,
+      "Top_Dishes": [
+        "Buffalo Wings",
+        "Philly Cheesesteak"
+      ]
     }
   ]
 }'
 ```
+
+{% alert note %}
+The `$add` and `$remove` operators are only applicable to array type fields, and are only supported by PATCH endpoints.
+{% endalert %}
 
 ## Response
 
