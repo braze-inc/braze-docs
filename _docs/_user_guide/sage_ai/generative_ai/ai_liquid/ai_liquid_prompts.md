@@ -28,8 +28,8 @@ The AI Liquid Assistant is trained to understand natural language. Chat with it 
 Providing context helps the AI Liquid Assistant understand the bigger picture surrounding your project. It's helpful to include context such as:
 
 - Your company name and industry
-- A compaign you're working on, such as Black Friday or holiday sales
-- Your goal, ushc as increasing your click-through rate
+- A campaign you're working on, such as Black Friday or holiday sales
+- Your goal, such as increasing your click-through rate
 - Specific custom attributes you want to include in your message
 
 Including context in your prompt helps the assistant tailor its responses to better suit your needs. You can also include details from your campaign, message brief, or brainstorming document to bring the assistant up to speed.
@@ -40,7 +40,7 @@ The AI Liquid Assistant can ask follow-up questions, but providing details upfro
 
 - Any known preferences or requirements for the message
 - Instructions on how to handle situations, such as a lack of responses from the message recipient or fallback message options
-- When asking for Liquid that uses Connected Content, documentation for the API endpoint or a sample API response or both
+- When asking for Liquid that uses Connected Content, documentation for the API endpoint, a sample API response, or both
 
 ### Get creative
 
@@ -61,7 +61,7 @@ Looking for inspiration? Check out the prompts below and give them a try (or tai
 - Write a dynamic message that includes a user’s favorite product and their last purchase date. If there’s no last purchase, abort the message.
 - Write me Liquid to encourage someone to click my message that includes a countdown with how much time is left. If the offer has expired, abort the message.
 - Help me write a message to encourage users to come back and check out if they have items remaining in their cart.
-- Write Liquid to personalize a message based on a customer’s country. I want to fill in the message with the country’s name. If we don’t have either of that, suggest they click on a link to update their profile.
+- Write Liquid to personalize a message based on a customer’s country. I want to fill in the message with the country’s name. If we don’t have either of them, suggest they click on a link to update their profile.
 - How can I personalize a welcome message with a user’s first name and write different copy based on the user’s gender?
 - Write Liquid to display different messages based on a custom attribute, “CUSTOM_ATTRIBUTE_NAME“ and its value. There are six different options I could send. If there’s no value for the custom attribute, I want to send a placeholder message.
 
