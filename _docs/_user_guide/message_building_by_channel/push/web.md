@@ -67,7 +67,7 @@ For more information on the push protocol standards and browser support, you can
 - [Safari (desktop)](https://developer.apple.com/notifications/safari-push-notifications/)
 - [Safari (mobile)]({{site.baseurl}}/developer_guide/platform_integration_guides/web/push_notifications/safari_mobile_push/)
 - [Mozilla Firefox](https://developer.mozilla.org/en-us/docs/web/api/push_api#browser_compatibility)
-- [Microsoft Edge](https://developer.microsoft.com/en-us/microsoft-edge/status/pushapi/)
+- [Microsoft Edge](https://learn.microsoft.com/en-us/microsoft-edge/progressive-web-apps-chromium/how-to/push)
 
 
 [11]: {{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/#creating-a-push-message
