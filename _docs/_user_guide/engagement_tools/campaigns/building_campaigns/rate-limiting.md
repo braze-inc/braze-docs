@@ -69,7 +69,7 @@ Rate limits apply to all message sending across a Canvas. If multiple channels a
 
 ### Delivery speed rate limiting
 
-If you anticipate large campaigns driving a spike in user activity and overloading your servers, you may specify a per-minute rate limit for sending messages - this means Braze will send no more than your select rate-limited setting within a 1 minute time period. While targeting users during campaign creation, you can navigate to Advanced Options to select a rate limit (in various increments from as low as 50 to as high as 500,000 messages per minute). Note that non-rate-limited campaigns may exceed these delivery limits. Be aware, however, that messages will be aborted if they are delayed 72 hours or more due to a low rate limit. The user who created the campaign will receive alerts in the dashboard and via email if the rate limit is too low.
+If you anticipate large campaigns driving a spike in user activity and overloading your servers, you can specify a per-minute rate limit for sending messages—this means Braze will send no more than your rate-limited setting within a minute. When targeting users during campaign creation, you can navigate to **Advanced Options** to select a rate limit (in various increments from as low as 50 to as high as 500,000 messages per minute). Note that non-rate-limited campaigns may exceed these delivery limits. Be aware, however, that messages will be aborted if they're delayed 72 hours or more due to a low rate limit. The user who created the campaign will receive alerts in the dashboard and via email if the rate limit is too low.
 
 ![][3]
 
