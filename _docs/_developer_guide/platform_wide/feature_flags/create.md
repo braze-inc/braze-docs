@@ -209,7 +209,7 @@ end if
 
 ### Logging a feature flag impression {#impressions}
 
-Track a feature flag impression whenever a user has had an opportunity to interact with your new feature, or when they __could__ have interacted if the feature is disabled (in the case of a control group in an A/B test).
+Track a feature flag impression whenever a user has had an opportunity to interact with your new feature, or when they __could__ have interacted if the feature is disabled (in the case of a control group in an A/B test). Feature flag impressions are only logged once per session. 
 
 Usually, you can put this line of code directly underneath where you reference your feature flag in your app:
 
