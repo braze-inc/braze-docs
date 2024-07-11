@@ -23,17 +23,17 @@ As you build your testing plan, consider the following questions:
 	- If segments are used, there may be prerequisites for a user to fall into the Canvas before they're eligible for a user journey.
 - Do the messages in the test Canvas have any Liquid in the message titles that pull into the user ID or email address to ensure they are easy to identify both the message and user for testing purposes?
 
-## Step 2: Identify test users
+## Step 2: Identify your test users
 
-Next, identify a set of test users that will go through the Canvas steps without actually sending messages to your intended users. Test users can be either existing email addresses that aren't used for actual services on your Braze dashboard, or new email addresses that are used exclusively for testing purposes. 
+Identify a set of test users that will go through the Canvas steps without actually sending messages to your intended users. Test users can be either existing email addresses that aren't used for actual services on your Braze dashboard, or new email addresses that are used exclusively for testing purposes. 
 
 ## Step 3: Set up your Canvas
 
-Next, it's time to test your Canvas! To keep your original Canvas and test Canvas information organized, create a duplicate of your Canvas for testing purposes. 
+Next, it's time to test your Canvas. To keep your original Canvas and test Canvas information organized, create a duplicate of your Canvas for testing purposes.
 
 ![][1]
 
-In this duplicated Canvas, edit the **Entry Audience** portion of the Canvas builder so that only test users are eligible for the Canvas. You can also enter your own email address as a test user by adding the **Email Address** testing filter. 
+In this duplicated Canvas, edit the **Entry Audience** portion of the Canvas builder so that only test users are eligible for the Canvas. You can also enter your own email address as a test user by adding the **Email Address** testing filter.
 
 In the example below, we've limited the Canvas to two test users that have first used the app less than three days ago.
 
@@ -41,11 +41,11 @@ In the example below, we've limited the Canvas to two test users that have first
 
 ## Step 4: Launch your test
 
-Launch your test Canvas to allow users to start entering. Next, complete the user behaviors on your application that would send users through the respective Canvas journey. 
+Launch your test Canvas to allow users to start entering. Then, complete the user behaviors on your application that would send users through the respective Canvas journey. 
 
 Verify that your test users are receiving the intended messages from your Canvas steps. Note that your test users may not receive a message due to reasons not limited to:
 
-- Not eligible for the global control group
+- Not eligible for the Global Control Group
 - Frequency capping limitations
 - Mismatched segment membership
 - Aborted messages
@@ -75,7 +75,7 @@ If any content is going to be repeated in your testing framework (for example, c
 
 You can run tests with Postman and the [Braze Postman Collection]({{site.baseurl}}/api/postman_collection/). Use the [`/users/track` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) to record and track custom events and purchases for your various test users.
 
-Note that sending data to the user track API can only be done with an external ID. So, test users may need to be added as test users within an internal group in the Braze dashboard so specific errors can be further investigated. 
+Sending data to the user track API can only be done with an external ID. So, test users may need to be added as test users within an internal group in the Braze dashboard so specific errors can be further investigated. 
 
 #### Testing for multiple branches
 
