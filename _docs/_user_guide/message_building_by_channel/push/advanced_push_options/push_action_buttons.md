@@ -63,7 +63,7 @@ Unlike iOS buttons, which are stacked, Android buttons are displayed side-by-sid
 
 The following table outlines how many characters you can add before your button copy is truncated, depending on how many buttons you have:
 
-| Number of Buttons | Max characters per button |
+| Number of Buttons | Maximum characters per button |
 | --- | --- |
 | 1 | 46 characters |
 | 2 | 20 characters |

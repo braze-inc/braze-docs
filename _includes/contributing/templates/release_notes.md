@@ -1,5 +1,3 @@
-You can use this template to create release notes for Braze Docs. For an example, see [January 9, 2024 release]({{site.baseurl}}/help/release_notes/2024/1_9_24/).
-
 {% details Show template %}
 {% raw %}
 `````markdown

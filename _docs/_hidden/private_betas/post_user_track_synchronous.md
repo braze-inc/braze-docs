@@ -285,7 +285,7 @@ If you're sending multiple requests for a user, for the same attribute, event, o
 
 ### Why doesn't the response value match the one in my original request?
 
-Although your request is completed, it's possible your custom attribute value didn't update. This can happen when your custom attribute update exceeds the max number of characters, exceeds array limits, or if the user does not exist in Braze and you have `_update_existing_only = true`.
+Although your request is completed, it's possible your custom attribute value didn't update. This can happen when your custom attribute update exceeds the maximum number of characters, exceeds array limits, or if the user does not exist in Braze and you have `_update_existing_only = true`.
 
 In these cases, treat the response as an indication that your request, while completed, your desired update has not been made. Troubleshoot with the reasons why this may happen from above.
 

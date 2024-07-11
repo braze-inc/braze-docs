@@ -25,8 +25,8 @@ For information on migrating your WhatsApp phone number, see Meta's documentatio
 
 ## Migrating your WhatsApp phone number
 
-Follow the [migration steps](https://developers.facebook.com/docs/whatsapp/business-management-api/guides/migrate-phone-to-different-waba/#migration-steps) provided by Meta's Embedded Signup.
+1. In the WhatsApp Manager, select the WhatsApp Business Account (WABA) associated with your phone number, then go to **Account tools** > **Phone numbers**.
+2. Select **Turn off two-step verification** and complete the steps that follow.<br><br>![WhatsApp Business Manager opened to the "Phone numbers" page.][1]{: style="max-width:80%;"} <br><br> If you’re migrating a phone number to a different WhatsApp Business Group and Meta’s embedded signup requires the display name to match, take note of the existing display name on the **Phone Numbers** page. You'll enter that name during the next step.<br><br>![The WhatsApp Business Manager's Phone Numbers page with a display name of "Braze" listed next to a phone number.]({% image_buster /assets/img/whatsapp/phone_numbers.png %}){: style="max-width:80%;"}<br><br>
+3. Continue Meta’s embedded signup workflow to completion. 
 
-{% alert note %}
-If you’re migrating a phone number to a different WhatsApp Business Group and Meta’s Embedded Signup (Step 2) requires the display name to match, take note of the existing display name on your WhatsApp Business Manager's **Phone Numbers** page. Enter that name during the Embedded Signup step.<br><br>![The WhatsApp Business Manager's Phone Numbers page with a display name of "Braze" listed next to a phone number.]({% image_buster /assets/img/whatsapp/phone_numbers.png %})
-{% endalert %}
+[1]: {% image_buster /assets/img/whatsapp/waba_manager.png %}

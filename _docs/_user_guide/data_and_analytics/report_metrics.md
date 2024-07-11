@@ -354,7 +354,7 @@ Email, Content Cards, In-App Message, Web Push, iOS Push, Android Push, SMS, Wha
 - Content Cards: Received when users view the card in the app.
 - Push: Received when messages are sent from the Braze server to the push provider.
 - Email: Received when messages are sent from the Braze server to the email service provider.
-- SMS/MMS: "Delivered" once the SMS provider receives confirmation from the upstream carrier and destination device.
+- SMS/MMS: "Delivered" after the SMS provider receives confirmation from the upstream carrier and destination device.
 - In-App Message: Received at the time of display based on the trigger action defined.
 - WhatsApp: Received at the time of display based on the trigger action defined.
 
@@ -453,7 +453,7 @@ Total clicks on the submit button of a [simple survey]({{site.baseurl}}/user_gui
 ### Total Clicks
 
 {% apitags %}
-Email, Content Cards, LINE
+Email, Content Cards, SMS, LINE
 {% endapitags %}
 
 The total number (and percentage) of users who clicked within the delivered email, card, or message. For LINE, this is tracked after a minimum threshold of 20 messages per day has been reached.
@@ -464,6 +464,7 @@ The total number (and percentage) of users who clicked within the delivered emai
     <ul>
         <li><b>Email:</b> (Total Clicks) / (Deliveries)</li>
         <li><b>Content Cards:</b> (Total Clicks) / (Total Impressions)</li>
+        <li><b>SMS:</b> (Click Opens) / (Deliveries)</li>
     </ul>
 </span>
 {:/}

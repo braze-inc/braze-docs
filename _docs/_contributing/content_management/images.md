@@ -62,7 +62,7 @@ Replace the following:
 
 | Placeholder | Description                                                                                                             |
 |-------------|-------------------------------------------------------------------------------------------------------------------------|
-| `ALT_TEXT`  | The alt text for the image. This is required to ensure Braze Docs is equally accessible for those using screen readers. |
+| `ALT_TEXT`  | The alt text for the image. This is required to make Braze Docs equally accessible for those using screen readers. |
 | `IMAGE`     | The relative path to your image starting from the `img` directory.                                                      |
 {: .reset-td-br-1 .reset-td-br-2}
 
@@ -88,7 +88,7 @@ Replace the following:
 
 | Placeholder        | Description                                                                                                             |
 |--------------------|-------------------------------------------------------------------------------------------------------------------------|
-| `ALT_TEXT`         | The alt text for the image. This is required to ensure Braze Docs is equally accessible for those using screen readers. |
+| `ALT_TEXT`         | The alt text for the image. This is required to make Braze Docs equally accessible for those using screen readers. |
 | `REFERENCE_NUMBER` | Assign any positive integer that's not already assigned to another reference-style link on this page.                   |
 {: .reset-td-br-1 .reset-td-br-2}
 
@@ -126,9 +126,9 @@ Your links should be similar to the following:
 {% endtab %}
 {% endtabs %}
 
-### Step 3: Set the image's max width (optional)
+### Step 3: Set the image's maximum width (optional)
 
-You can set the image's max width by appending the following liquid code to your image link:
+You can set the image's maximum width by appending the following Liquid code to your image link:
 
 {% raw %}
 ```markdown

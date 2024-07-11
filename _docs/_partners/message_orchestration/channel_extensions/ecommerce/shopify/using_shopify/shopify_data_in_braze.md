@@ -875,7 +875,7 @@ After the app installation is complete, Braze automatically creates your webhook
 
 ### Liquid personalization
 
-To add liquid personalization for your Shopify custom attributes, select **+ Personalization**. Then select **Custom Attributes** as your personalization type.
+To add Liquid personalization for your Shopify custom attributes, select **+ Personalization**. Then select **Custom Attributes** as your personalization type.
 
 ![The "Add Personalization" section with the "Attribute" dropdown extended.]({% image_buster /assets/img/Shopify/add_personalization_2.png %}){: style="max-width:40%;"}
 

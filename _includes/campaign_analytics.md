@@ -299,6 +299,7 @@ Here is a breakdown of some key metrics you may see while reviewing your message
 | Rejections | The SMS has been rejected by the carrier. This can happen for several reasons, including carrier content filtering, availability of the destination device or the phone number is no longer in service. As a Braze customer, rejections are charged toward your SMS allotment. |
 | Opt-Out | A user replied to your message with an [opt-out keyword]({{site.baseurl}}/user_guide/message_building_by_channel/sms/keywords/keyword_handling/#default-opt-in-opt-out-keywords) and was unsubscribed from your SMS program. A user reply is measured anytime a user sends an inbound message within four hours of receiving your message. |
 | Help | A user replied to your message with a [HELP keyword]({{site.baseurl}}/user_guide/message_building_by_channel/sms/keywords/keyword_handling/#default-opt-in-opt-out-keywords) and was dispatched a HELP auto-response. A user reply is measured anytime a user sends an inbound message within four hours of receiving your message. |
+| Total Clicks | The total number (and percentage) of users who clicked within the delivered message. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% elsif include.channel == "webhook" %}
