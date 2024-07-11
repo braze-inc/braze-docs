@@ -1,5 +1,3 @@
-You can use this template to create any page or section for Braze Docs. For an example, see [Generating a preview]({{site.baseurl}}/contributing/generating_a_preview/). For guidelines on the documentation types used within the article, see [Page types]({{site.baseurl}}/contributing/page_types/).
-
 {% details Show template %}
 {% raw %}
 `````markdown
@@ -10,9 +8,8 @@ description: "SHORT_DESCRIPTION."
 alias: /OPTIONAL_SHORT_ARTICLE_TITLE/
 page_type: reference
 layout: OPTIONAL_LAYOUT_FILE
-—
+—--
 
-<!-- The title of your page, used to render the in-page title. -->
 # ARTICLE_TITLE
 
 <!-- The overview starts with a '>' character and discusses what will be covered. In an optional following paragraph, contextualize the topic at a high-level in an introduction. -->
@@ -32,10 +29,6 @@ Before you start, you'll need to complete the following:
 <!-- An optional, brief explanation of how the feature workflow looks. -->
 ## How it works
 
-CONTENT.
-
-<!-- Walk a user through integrating and turning on the feature. -->
- ## Integration
 CONTENT.
 
 <!-- A how-to guide with nested steps. -->
@@ -65,17 +58,6 @@ CONTENT.
 <!-- An optional section for what is supported. Add nested headers to be more specific. -->
 ## Supported data types / Supported attributes / Supported events / Supported ETC.
 CONTENT.
-<!-- An optional section with important considerations for users to review before using the feature. -->
-## Considerations
-
-CONTENT.
-
-<!-- An optional section guiding users through troubleshooting common issues. -->
-## Troubleshooting
-
-### ISSUE_TO_TROUBLESHOOT
-CONTENT.
-
-`````
+``````
 {% endraw %}
 {% enddetails %}
