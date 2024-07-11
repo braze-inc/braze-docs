@@ -173,7 +173,7 @@ Release notes are a monthly compilation of product updates in Braze. Each update
 | Data flexibility       | Updates on improving data structuring, storage, and access.             |
 | Unlocking creativity   | Features that enhance user creativity within the platform.              |
 | Robust channels        | Updates on the reliability and scalability of communication channels.   |
-| AI and ML automation   | Updates on AI and ML capabilities within the platform.                  |
+| AI and ML automation   | Updates on AI and machine learning capabilities within the platform.                  |
 | New Braze partnerships | Introduces new integrations with other platforms and services.          |
 | SDK updates            | Lists new SDKs or updates, including breaking changes and new features. |
 {: .reset-td-br-1 .reset-td-br-2}
