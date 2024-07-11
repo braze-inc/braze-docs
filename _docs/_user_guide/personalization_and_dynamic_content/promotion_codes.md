@@ -138,7 +138,7 @@ For the following example, both promotion code lists `vip-deal` and `regular-dea
 Braze recommends to uploading more promotion codes than what you estimate will be used. If a promotion code list expires or runs out of promotion codes, the subsequent messages will be aborted.
 
 {% alert tip %}
-**Here's an analogy for how promotion codes are used up in Braze.** <br><br>Imagine that sending your message is like sending a letter at the post office. You give the letter to a clerk, and they see that your letter should include a coupon. The clerk pulls the first coupon from the stack and adds it to the envelope. The clerk sends the letter, but for some reason the letter gets lost in the mail (and the coupon is also now lost). <br><br>In this scenario, Braze is the postal clerk and your promotion code is the coupon. We can't get it back once it's been pulled from the stack of promotion codes, regardless of the webhook result.
+**Here's an analogy for how promotion codes are used up in Braze.** <br><br>Imagine that sending your message is like sending a letter at the post office. You give the letter to a clerk, and they see that your letter should include a coupon. The clerk pulls the first coupon from the stack and adds it to the envelope. The clerk sends the letter, but for some reason the letter gets lost in the mail (and the coupon is also now lost). <br><br>In this scenario, Braze is the postal clerk and your promotion code is the coupon. We can't get it back after it's been pulled from the stack of promotion codes, regardless of the webhook result.
 {% endalert %}
 
 ## Frequently asked questions
