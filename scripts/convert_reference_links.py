@@ -7,7 +7,8 @@
 # Usage: ./convert_reference_links [directory|file]
 
 
-# TODO: Make sure it also converts reference-style links for image tags as well. It currently does not.
+# TODO: Script can run recursively against explicitly hard-coded directory. 
+#       Update the script to take arguments so you can specify a single file or directory.
 
 import os
 
