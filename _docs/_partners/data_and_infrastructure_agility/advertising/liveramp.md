@@ -1,7 +1,7 @@
 ---
 nav_title: LiveRamp
 article_title: LiveRamp
-description: "SHORT_DESCRIPTION."
+description: "Learn how to connect LiveRamp, Snowflake, and Braze, so you can create highly personalized and relevant marketing campaigns."
 alias: /partners/liveramp/
 page_type: partner
 search_tag: Partner
@@ -9,34 +9,37 @@ search_tag: Partner
 
 # Connecting LiveRamp, Snowflake, and Braze
 
-> Unlocking the full potential of your customer engagement and campaign data has never been easier with the seamless integration of Braze, Snowflake, and LiveRamp. This integration empowers you to create highly personalized and relevant marketing campaigns by reducing the time to insights, breaking down data silos, and optimizing customer engagement.
+> Learn how to connect LiveRamp, Snowflake, and Braze, so you can create highly personalized and relevant marketing campaigns by reducing the time to insights, breaking down data silos, and optimizing customer engagement. This integration enhances data-driven marketing by providing actionable person-based insights and consolidating consumer touchpoints for better audience segmentation and timely campaigns. It also leverages benchmarks powered by Snowflake to help refine your marketing strategies against industry standards.
 
-## Why This Integration Matters:
+## About data sharing
 
-This integration is a game-changer for data-driven marketing. Here's why it matters:
+Snowflake's [Secure Data Shares](https://www.google.com/url?q=https://docs.snowflake.com/en/user-guide/data-sharing-intro&sa=D&source=editors&ust=1719246601733507&usg=AOvVaw2oeRaDOv2PuOu_DH41hQqM) does not transfer data between LiveRamp, Snowflake, and Braze. Data is only shared through Snowflake's services and metadata store, meaning no data is copied and no additional storage charges occur. Access to shared data is controlled and governed using the access controls of your Snowflake account.
 
-- **Actionable Person & Household Based Insights:** Consolidation of consumer touchpoints to a person-based view enables a more accurate understanding of consumer preferences for better audience segmentation, testing, and model building across LiveRamp & Braze. Providing you a holistic and actionable view across both your marketing and advertising engagements in a single cloud environment.
-- **Reduce Time to Insights:** Access customer engagement and campaign data in real-time, eliminating the need for time-consuming ETL processes. This means you can base your customer experiences on the most up-to-date information, enhancing the timeliness and relevance of your campaigns.
-- **Break Down Data Silos & Interoperability:** Create a comprehensive view of your customers across various channels and platforms. Data becomes more valuable when you can effectively connect it to an ecosystem, and LiveRamp Identity solutions combined with Braze can be flexibly applied to sophisticated customer use cases and are integrated as an identity layer across the ecosystem.
-- **Optimize Customer Engagement:** Leverage [Braze Benchmarks](https://www.google.com/url?q=https://www.braze.com/docs/partners/data_and_infrastructure_agility/data_warehouses/snowflake/%23braze-benchmarks&sa=D&source=editors&ust=1719246601732592&usg=AOvVaw0zjg0fsIH0dk618YMiPrGC), powered by Snowflake, to compare your brand's engagement data to LiveRamp ROAS and benchmarks across channels, industries, and platforms. This valuable insight helps fine-tune your marketing strategies.
+## Use cases
 
-Let's dive into the technical details of how to complete the integration from Braze to LiveRamp and set up the app in LiveRamp.
+With your data now pseudonymized to your dedicated encoding of RampID, you have the ability to share the RampID-based tables to LiveRamp’s Managed Activation Application for streamlined fulfillment to your key advertising platform partners. With this application customers see several benefits:
 
-## Prerequisites:
+- **Data Minimization:** LiveRamp’s Activation app uses Snowflake’s Secure Data Share feature to effectively read the tables directly from your instance. No data is moved from Snowflake until the point of delivery to the downstream partner.
+- **Secure 1st Party Activation:** By using the above Identity Resolution application, LiveRamp’s Activation application will only utilize the RampID-based tables in your Snowflake instance, and thus PII will never have to leave your walls.
+- **Expedite Time to Live:** By resolving data to RampID directly in your environment, delivery to an end destination can occur within a matter of hours, as compared to several days when using LiveRamp’s more traditional file-based approach. This greatly increases the ability to optimize campaign performance in a timely manner.
+- **Operational Savings:** Similar to the above, through the use of Snowflake’s Secure Data Share feature customers save time and money when compared to coordinating egress of files to LiveRamp or directly to any end destination.
 
-- **Snowflake Account:** You need a Snowflake account with admin-level permissions.
-- **Braze Account:** Reach out to your Braze Account or customer success manager to consult Braze data strategy services on Secure Data Sharing with Snowflake and to purchase their Snowflake Data Share Connector.
-- **LiveRamp Account:** Reach out to your LiveRamp account team or [snowflake@liveramp.com](mailto:snowflake@liveramp.com) to discuss the required LiveRamp applications within Snowflake.
+The Activation Application includes a business-user friendly interface for additional segmentation and selection/configuration of downstream destination partners. For more details on the application please reach out to your LiveRamp account team or [snowflake@liveramp.com](mailto:snowflake@liveramp.com).
 
-## About Snowflake Secure Data Shares:
+## Prerequisites
 
-The integration with [Secure Data Shares](https://www.google.com/url?q=https://docs.snowflake.com/en/user-guide/data-sharing-intro&sa=D&source=editors&ust=1719246601733507&usg=AOvVaw2oeRaDOv2PuOu_DH41hQqM) does not involve the actual transfer of data between accounts. Data sharing is facilitated through Snowflake's services layer and metadata store, which means no data is copied, and there are no additional storage charges for consumers. Access to shared data is controlled and governed using the access controls of your Snowflake account.
+| Prerequisite       | Description                                                                                                                                                                                     |
+|-------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Snowflake Account | You need a Snowflake account with admin-level permissions.                                                                                                                                      |
+| Braze Account     | Reach out to your Braze Account or customer success manager to consult Braze data strategy services on Secure Data Sharing with Snowflake and to purchase their Snowflake Data Share Connector. |
+| LiveRamp Account  | Reach out to your LiveRamp account team or [snowflake@liveramp.com](mailto:snowflake@liveramp.com) to discuss the required LiveRamp applications within Snowflake.                              |
+{: .reset-td-br-1 .reset-td-br-2 }
 
-## Setting up a Braze Secure Data Sharing Connection
+## Setting up your secure data sharing connection
 
+{% alert tip %}
 You can find the full guide on Braze’s Snowflake Data Share within [Braze’s docs](https://www.google.com/url?q=https://www.braze.com/docs/partners/data_and_infrastructure_agility/data_warehouses/snowflake/&sa=D&source=editors&ust=1719246601733880&usg=AOvVaw0uRXwEAQ36JDK6yqOPtREd).
-
-## Integrating Liveramp
+{% endalert %}
 
 {% alert tip %}
 You can view a comprehensive step-by-step process for integration and activation of the LiveRamp Snowflake Native App [here](https://www.google.com/url?q=https://docs.liveramp.com/identity/en/set-up-the-liveramp-native-app-in-snowflake.html&sa=D&source=editors&ust=1719246601734560&usg=AOvVaw1jGdc7oaM1mUYvJxjnMbJL).
@@ -48,7 +51,7 @@ Once the share is visible in your instance (you need to be `ACCOUNTADMIN` role t
 
 ### Step 2: Accept the Snowflake Consumer Terms of Service
 
-An organizational administrator (ORGADMIN) or a role with greater permissions must accept the Snowflake Consumer Terms of Service. Follow Snowflake's instructions for this crucial step.
+An organizational administrator (`ORGADMIN`) or a role with greater permissions must accept the Snowflake Consumer Terms of Service. Follow Snowflake's instructions for this crucial step.
 
 ### Step 3: Install the LiveRamp Identity Resolution and Transcoding Native App
 
@@ -130,18 +133,7 @@ $output_table_name
 The full process is outlined [here](https://www.google.com/url?q=https://docs.liveramp.com/identity/en/perform-identity-resolution-in-snowflake.html&sa=D&source=editors&ust=1719246601740211&usg=AOvVaw2yTdhM5puVwdAGS0R0g56s) within LiveRamp’s documentation.
 {% endalert %}
 
-## Use cases
-
-With your data now pseudonymized to your dedicated encoding of RampID, you have the ability to share the RampID-based tables to LiveRamp’s Managed Activation Application for streamlined fulfillment to your key advertising platform partners. With this application customers see several benefits:
-
-- **Data Minimization:** LiveRamp’s Activation app uses Snowflake’s Secure Data Share feature to effectively read the tables directly from your instance. No data is moved from Snowflake until the point of delivery to the downstream partner.
-- **Secure 1st Party Activation:** By using the above Identity Resolution application, LiveRamp’s Activation application will only utilize the RampID-based tables in your Snowflake instance, and thus PII will never have to leave your walls.
-- **Expedite Time to Live:** By resolving data to RampID directly in your environment, delivery to an end destination can occur within a matter of hours, as compared to several days when using LiveRamp’s more traditional file-based approach. This greatly increases the ability to optimize campaign performance in a timely manner.
-- **Operational Savings:** Similar to the above, through the use of Snowflake’s Secure Data Share feature customers save time and money when compared to coordinating egress of files to LiveRamp or directly to any end destination.
-
-The Activation Application includes a business-user friendly interface for additional segmentation and selection/configuration of downstream destination partners. For more details on the application please reach out to your LiveRamp account team or [snowflake@liveramp.com](mailto:snowflake@liveramp.com).
-
-## Transcoding and Collaboration
+## Transcoding and collaboration
 
 LiveRamp also offers a native application to transcode data from one partner’s RampID encoding to your own encoding, or vice-versa. This allows for secure collaboration with your key partners directly in Snowflake, while alleviating the need to deliver directly identifiable customer data. [See here](https://www.google.com/url?q=https://docs.liveramp.com/identity/en/perform-rampid-transcoding-in-snowflake.html%23perform-rampid-transcoding-in-snowflake&sa=D&source=editors&ust=1719246601741396&usg=AOvVaw1BBj3bm81yIeAb_CRLZ9jd) for more details or reach out to your LiveRamp account team or [snowflake@liveramp.com](mailto:snowflake@liveramp.com).
 
