@@ -10,7 +10,7 @@ description: "This reference article lists and explains the different Android ob
 ---
 # Android object
 
-> The `android_push` object allows you to define or request information related to Android Push and Android Push Alert content via our [messaging endpoints]({{site.baseurl}}/api/endpoints/messaging).
+> The `android_push` object allows you to define or request information related to Android Push and Android Push Alert content through our [messaging endpoints]({{site.baseurl}}/api/endpoints/messaging).
 
 ## Android push object
 
@@ -36,7 +36,7 @@ You must include an Android push object in `messages` if you want users you have
    "accent_color": (optional, integer) accent color to be applied by the standard Style templates when presenting this notification, an RGB integer value,
    "send_to_most_recent_device_only": (optional, boolean) defaults to false, if set to true, Braze will only send this push to a user's most recently used Android device, rather than all eligible Android devices,
    "buttons" : (optional, array of Android push action button objects) push action buttons to display
-   "conversation_data" : (optional, Android Conversation Push Object) the data to be displayed via Conversation Push.
+   "conversation_data" : (optional, Android Conversation Push Object) the data to be displayed through Conversation Push.
 }
 ```
 

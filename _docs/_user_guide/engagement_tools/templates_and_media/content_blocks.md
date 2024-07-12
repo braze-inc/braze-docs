@@ -50,7 +50,7 @@ There are two types of editors used to create a Content Block—classic and drag
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% alert tip %}
-When creating Content Blocks, it sometimes helps to visualize HTML and Liquid by adding line breaks. If these line breaks are left in during sending, you risk having extraneous spaces that can affect how the block will render. To avoid this, utilize the **Capture** tag on your block along with the **&#124; strip** filter. 
+When creating Content Blocks, it sometimes helps to visualize HTML and Liquid by adding line breaks. If these line breaks are left in during sending, you risk having extraneous spaces that can affect how the block will render. To avoid this, use the **Capture** tag on your block along with the **&#124; strip** filter. 
 {% raw %}
 ```
 {% capture your_variable %}

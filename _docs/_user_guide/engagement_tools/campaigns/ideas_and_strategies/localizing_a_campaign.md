@@ -129,7 +129,7 @@ We always recommend including a {% raw %}`{% else %}`{% endraw %} statement in y
 
 Braze [Content Blocks]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/content_blocks/#content-blocks) are reusable blocks of content. When a block is changed, all references to that block changes. For example, updates to an email header or footer will be reflected in all emails or to house translations. These blocks can also be [created]({{site.baseurl}}/api/endpoints/templates/content_blocks_templates/post_create_email_content_block/#create-content-block) and [updated]({{site.baseurl}}/api/endpoints/templates/content_blocks_templates/post_update_content_block/) using the REST API, and users can programmatically upload translations. 
 
-When building a campaign in the dashboard, Content Blocks can be referenced using tag {% raw %}`{{content_blocks.${name_of_content_block}}}`{% endraw %}. These blocks could contain all translations housed within conditional logic for each language, as shown in option 1, or a separate block for each language can be utilized.
+When building a campaign in the dashboard, Content Blocks can be referenced using tag {% raw %}`{{content_blocks.${name_of_content_block}}}`{% endraw %}. These blocks could contain all translations housed within conditional logic for each language, as shown in option 1, or a separate block for each language can be used.
 
 Content Blocks can also be utilized as a translation management process where content that requires translation is housed within a Content Block, fetched, translated, and then updated:
 1. Manually create a Content Block in the dashboard with the tag "Needs Translation".

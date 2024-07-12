@@ -139,7 +139,7 @@ A vanity short code is a 5-6 digit phone number that is specifically selected by
 
 ![picture]({% image_buster /assets/img/sms/alphanumericsenderid.jpg %}){: style="float:right;max-width:30%;margin-left:15px;border: 0"}
 
-Sender IDs are the short or long codes that appear at the top of an SMS message that denotes who the message was sent from. If a user is unfamiliar with a Sender ID, they may opt to ignore these messages altogether. Through the use of Alphanumeric sender IDs, users are able to quickly identify who they are receiving messages from, increasing open rates. 
+Sender IDs are the short or long codes that appear at the top of an SMS message that denotes who the message was sent from. If a user is unfamiliar with a Sender ID, they may opt to ignore these messages altogether. Through the use of alphanumeric sender IDs, users are able to quickly identify who they are receiving messages from, increasing open rates. 
 
 Alphanumeric Sender IDs allow you to set your company name or brand as the Sender ID when sending one-way messages to mobile users. They may be up to 11 characters and accepts upper (A-Z) and lower (a-z) case letters, spaces, and digits (0-9). There **may not** be only numbers. 
 

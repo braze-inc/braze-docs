@@ -10,7 +10,7 @@ description: "This reference article explains the different components of the Br
 
 # Email object
 
-> The `email` object allows you to modify or create emails via our [messaging endpoints]({{site.baseurl}}/api/endpoints/messaging).
+> The `email` object allows you to modify or create emails through our [messaging endpoints]({{site.baseurl}}/api/endpoints/messaging).
 
 ## Email object
 

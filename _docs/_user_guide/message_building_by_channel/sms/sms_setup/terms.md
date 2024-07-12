@@ -24,7 +24,7 @@ glossaries:
   - name: UCS-2 Encoding (Universal Coded Character Set)
     description: UCS-2 encoding is a fallback encoding standard, especially when a message cannot be encoded using GSM-7 or when a language needs more than 128 characters to be rendered. USC-2 is better measured by <a href='https://en.wikipedia.org/wiki/Code_point'>code points</a>, as opposed to "characters". Regardless, you could estimate that the character limit per segment for this type of encoding is 67 characters.
   - name: Subscription Groups for SMS
-    description: Subscription Groups are a Braze tool that allows you to target specific subscription levels of users or customers. Subscription Groups for SMS are constructed internally based on your message service and cannot be shared across workspaces.
+    description: Subscription groups are a Braze tool that allows you to target specific subscription levels of users or customers. subscription groups for SMS are constructed internally based on your message service and cannot be shared across workspaces.
   - name: Message Segments
     description: A message segment is a grouping of up to a defined number of characters (160 for GSM-7 encoding; 67 for UCS-2 encoding) that will be sent in a single SMS dispatch. If you dispatch an SMS with 161 characters using GSM-7 encoding, you will see that there are two (2) message segments that were sent. Sending multiple message segments may result in additional charges.
   - name: Message Service

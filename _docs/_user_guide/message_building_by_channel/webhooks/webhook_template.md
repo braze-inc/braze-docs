@@ -26,11 +26,11 @@ If you are using the [older navigation]({{site.baseurl}}/navigation), you can fi
 
 ## Step 2: Create a new template
 
-You can now create a new template, edit an existing template, or utilize one of the predesigned webhook templates that are offered.
+You can now create a new template, edit an existing template, or use one of the predesigned webhook templates that are offered.
 
 ## Step 3: Customize your template
 
-Webhook templates can be used for many different use cases.  You can start by entering a unique template name to be utilized.  You can also fill in the webhook URL, the Request Body, Request Headers, and select the HTTP Method to be used.
+Webhook templates can be used for many different use cases.  You can start by entering a unique template name to be used.  You can also fill in the webhook URL, the Request Body, Request Headers, and select the HTTP Method to be used.
 
 ![Compose tab when creating a webhook template. Available fields are language, webhook URL, and request body.][2]{: style="max-width:80%"}
 

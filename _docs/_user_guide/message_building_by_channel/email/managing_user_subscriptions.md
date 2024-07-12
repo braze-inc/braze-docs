@@ -36,7 +36,7 @@ Braze will automatically unsubscribe any user who manually unsubscribes from you
 If a user has marked one or more of your emails as spam, Braze will only send transactional emails to this user. In this case, transactional emails refers to the selected **Send to all users including unsubscribed users** option in the **Target Audience** step.
 
 {% alert tip %}
-Refer to our [IP warming]({{site.baseurl}}/user_guide/onboarding_with_braze/email_setup/ip_warming/) best practices for guidance on how to reengage your users effectively.
+Refer to our [IP warming]({{site.baseurl}}/user_guide/onboarding_with_braze/email_setup/ip_warming/) best practices for guidance on how to re-engage your users effectively.
 {% endalert %}
 
 ### Bounces and invalid emails

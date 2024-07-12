@@ -11,7 +11,7 @@ description: "This article covers how to configure uninstall tracking for your A
 
 # Uninstall tracking
 
-> Uninstall tracking utilizes a silent push from Firebase Cloud Messaging to detect uninstalled devices. Braze will intelligently drop the uninstall tracking notification and not wake up any custom push callbacks in your app with the regular silent push intent. This article covers how to configure uninstall tracking for your Android or FireOS application.
+> Uninstall tracking uses a silent push from Firebase Cloud Messaging to detect uninstalled devices. Braze will intelligently drop the uninstall tracking notification and not wake up any custom push callbacks in your app with the regular silent push intent. This article covers how to configure uninstall tracking for your Android or FireOS application.
 
 If you wish to detect if the push notification is uninstall-tracking yourself, use [`isUninstallTrackingPush()`][3].
 

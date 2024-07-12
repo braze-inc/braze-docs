@@ -9,7 +9,7 @@ page_type: reference
 
 # Postman and sample requests
 
-> Braze allows you to generate sample API requests for all of our endpoints via our Postman Collection. This reference article covers the Braze Postman Collection, what it is, how to set up and use the collection, as well as how to edit and send requests.
+> Braze allows you to generate sample API requests for all of our endpoints through our Postman Collection. This reference article covers the Braze Postman Collection, what it is, how to set up and use the collection, as well as how to edit and send requests.
 
 ## What is Postman?
 

@@ -2,7 +2,7 @@
 nav_title: "SMS Subscription Groups"
 article_title: SMS Subscription Groups
 page_order: 4
-description: "This reference article covers SMS Subscription Groups, subscription states, and the subscription group setup process."
+description: "This reference article covers SMS subscription groups, subscription states, and the subscription group setup process."
 page_type: reference
 channel:
   - SMS
@@ -15,7 +15,7 @@ channel:
 
 ## SMS subscription states
 
-There are two subscription states for SMS users: `subscribed` and `unsubscribed`. A user's subscription state is not shared across Subscription Groups, meaning a user can be `subscribed` to a transactional subscription group but `unsubscribed` to a promotional one. For brands, this separation of states ensures that they can continue to send relevant SMS messages to their users.
+There are two subscription states for SMS users: `subscribed` and `unsubscribed`. A user's subscription state is not shared across subscription groups, meaning a user can be `subscribed` to a transactional subscription group but `unsubscribed` to a promotional one. For brands, this separation of states ensures that they can continue to send relevant SMS messages to their users.
 
 | State | Definition |
 | --------- | ---------- |

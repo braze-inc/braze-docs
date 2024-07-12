@@ -103,7 +103,7 @@ A single user may belong to different reachable user groups. For example, a user
 
 #### Calculating exact statistics
 
-The larger your user base is, the more likely the **Reachable Users** amount is a rough estimate. This allows us to quickly provide you estimates in real-time as you add filters, rather than searching your entire user base every time.
+The larger your user base is, the more likely the **Reachable Users** amount is a rough estimate. This allows us to provide you estimates in real-time as you add filters, rather than taking longer to search your entire user base every time.
 
 To calculate the exact amount of reachable users, click **Calculate Exact Statistics**. For large segments, it is normal to see slight variation even when calculating exact statistics. The accuracy of this feature is expected to be 99.999% or greater.
 

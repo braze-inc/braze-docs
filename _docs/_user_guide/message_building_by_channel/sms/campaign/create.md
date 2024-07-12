@@ -95,7 +95,7 @@ If you'd like to test how many segments your SMS may be split into, test your co
 {% tabs %}
 {% tab Campaign %}
 
-Next, build the remainder of your campaign. See the following sections for further details on how to best utilize our tools to build SMS messages.
+Next, build the remainder of your campaign. See the following sections for further details on how to best use our tools to build SMS messages.
 
 #### Choose delivery schedule or trigger
 

@@ -34,7 +34,7 @@ table td {
 
 ![Sample finance app showing Captioned Image and Image Only Content Cards]({% image_buster/assets/img_archive/cc_pyrite_crawl.png %}){: style="max-width:35%;float:right;margin-left:15px;border:none;"}
 
-The Crawl approach puts the power of customization directly in the hands of marketers. While some light development work is necessary upfront to integrate Braze messaging channels with your app or site, this approach allows you to get up and running quickly. 
+The Crawl approach puts the power of customization directly in the hands of marketers. While some light development work is necessary upfront to integrate Braze messaging channels with your app or site, this approach allows you to get up and running sooner. 
 
 Marketers determine the the content, audience, and timing of messages through the dashboard. Styling options are limited, however. This approach is best suited for teams with limited developer resources or who want to quickly share simple content. 
 

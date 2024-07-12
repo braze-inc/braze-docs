@@ -84,8 +84,8 @@ In your `app.json`, add the Braze Expo Plugin. You can provide the following con
 | `androidNotificationSmallIcon`                | string  | Android only. Sets the Android notification small icon.                                                                                                  |
 | `iosRequestPushPermissionsAutomatically`      | boolean | iOS only. Whether the user should automatically be prompted for push permissions on app launch.                                                          |
 | `enableBrazeIosRichPush`                      | boolean | iOS only. Whether to enable rich push features for iOS.                                                                                                  |
-| `enableBrazeIosPushStories`                   | boolean | iOS only. Whether to enable Braze push stories for iOS.                                                                                                  |
-| `iosPushStoryAppGroup`                        | string  | iOS only. The app group used for iOS push stories.                                                                                                       |
+| `enableBrazeIosPushStories`                   | boolean | iOS only. Whether to enable Braze Push Stories for iOS.                                                                                                  |
+| `iosPushStoryAppGroup`                        | string  | iOS only. The app group used for iOS Push Stories.                                                                                                       |
 
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 

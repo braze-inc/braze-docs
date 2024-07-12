@@ -145,7 +145,7 @@ After sending the test webhook, a dialog will appear with the response message. 
 {% tabs %}
 {% tab Campaign %}
 
-Next, build the remainder of your campaign. See the following sections for further details on how to best utilize our tools to build webhooks.
+Next, build the remainder of your campaign. See the following sections for further details on how to best use our tools to build webhooks.
 
 #### Choose delivery schedule or trigger
 
@@ -262,7 +262,7 @@ If you're making a Braze-to-Braze webhook and using allowlisting, you should all
 
 ### Using webhooks with Braze partners {#utilizing-webhooks}
 
-There are many ways to utilize webhooks, and with our technology partners (Alloys), you can use webhooks to level up your communication directly with your customers and users.
+There are many ways to use webhooks, and with our technology partners (Alloys), you can use webhooks to level up your communication directly with your customers and users.
 
 Check out:
 * [Messenger]({{site.baseurl}}/partners/additional_channels/instant_chat/messenger/)

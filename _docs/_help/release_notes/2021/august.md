@@ -18,7 +18,7 @@ This optional [iOS integration SDK guide]({{site.baseurl}}/developer_guide/platf
 
 ## Predictive Purchases
 
-Predictive Purchases give marketers a powerful tool for identifying and messaging users based on their likelihood to make a purchase. When you create a Purchase Prediction, Braze trains a machine learning model using [gradient boosted decision trees](https://en.wikipedia.org/wiki/Gradient_boosting) to learn from previous purchase activity and predict future purchase activity. Visit our [Predictive Purchases]({{site.baseurl}}/user_guide/predictive_suite/predictive_purchases/) doc to learn more. 
+Predictive Purchases give marketers a powerful tool for identifying and messaging users based on their likelihood to make a purchase. When you create a purchase prediction, Braze trains a machine learning model using [gradient boosted decision trees](https://en.wikipedia.org/wiki/Gradient_boosting) to learn from previous purchase activity and predict future purchase activity. Visit our [Predictive Purchases]({{site.baseurl}}/user_guide/predictive_suite/predictive_purchases/) doc to learn more. 
 
 ## Drag-and-drop editor
 

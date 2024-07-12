@@ -72,7 +72,7 @@ We’ll also add pre-defined scripts if you have selected product viewed, produc
 
 To automatically enable the Braze Web SDK scripts as part of your integration, select the supported Shopify ScriptTag events or enable in-app messaging as a channel during your [Shopify integration setup]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/shopify/setting_up_shopify/). 
 
-From the Shopify setup wizard, the events denoted with an asterisk (*) are supported by the Web SDK. If you select these events or include in-browser messaging, Braze will add the Web SDK implementation via Shopify ScriptTag to your Shopify store as part of your setup.
+From the Shopify setup composer, the events denoted with an asterisk (*) are supported by the Web SDK. If you select these events or include in-browser messaging, Braze will add the Web SDK implementation via Shopify ScriptTag to your Shopify store as part of your setup.
 
 #### Shopify email capture forms and user reconciliation 
 

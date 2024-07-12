@@ -367,7 +367,7 @@ When a click on an App Link occurs, your app is opened and the SDK is initiated.
 {% endtab %}
 {% endtabs %}
 
-Once you've completed the integration steps, you can perform QA and troubleshooting by sending a deep link using OneLink. See the [AppsFlyer documentation](https://support.appsflyer.com/hc/en-us/articles/360001437497-Integrating-AppsFlyer-and-Braze#step-3-sending-your-first-email::2ffdb79a) for details on using OneLink.
+Once you've completed the integration steps, you can perform quality assurance and troubleshooting by sending a deep link using OneLink. See the [AppsFlyer documentation](https://support.appsflyer.com/hc/en-us/articles/360001437497-Integrating-AppsFlyer-and-Braze#step-3-sending-your-first-email::2ffdb79a) for details on using OneLink.
 
 ### AppsFlyer click tracking URLs in Braze (optional)
 
