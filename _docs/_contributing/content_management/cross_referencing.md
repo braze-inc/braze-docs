@@ -18,10 +18,10 @@ noindex: true
 Since Liquid's {% raw %}`{% tab %}`{% endraw %} tag does not support reference-style links, only in-line links are documented below. Existing reference links will continue to work, but are no longer recommended.
 {% endalert %}
 
-Open the relevant Markdown file, then create your in-line link.
-
 {% tabs %}
 {% tab Markdown %}
+Open the relevant Markdown file, then create your in-line link.
+
 {% raw %}
 ```markdown
 [LINK_TEXT]({{site.baseurl}}/SHORT_URL)
@@ -46,6 +46,7 @@ Before continuing, [create your SSH token]({{site.baseurl}}/docs/developer_guide
 {% endtab %}
 
 {% tab HTML %}
+Open the relevant Markdown file, then create your in-line link.
 
 {% raw %}
 ```markdown
