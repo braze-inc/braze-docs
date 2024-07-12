@@ -274,7 +274,7 @@ braze.subscribeToSdkAuthenticationFailures((error) => {
   // TODO: Optionally log to your error-reporting service
   // TODO: Check if the `user_id` within the `error` matches the currently logged-in user
   const updated_jwt = await getNewTokenSomehow(error);
-  appboy.setSdkAuthenticationSignature(updated_jwt);
+  braze.setSdkAuthenticationSignature(updated_jwt);
 });
 ```
 {% endtab %}
