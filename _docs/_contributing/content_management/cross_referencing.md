@@ -15,7 +15,7 @@ noindex: true
 ## Create a cross-reference
 
 {% alert important %}
-Since Liquid's {% raw %}`{% tab %}`{% endraw %} tag does not support reference-style links, only in-line links are documented below. Existing reference links will continue to work, but are no longer recommended.
+Because Liquid's {% raw %}`{% tab %}`{% endraw %} tag does not support reference-style links, only in-line links are documented below. Existing reference links will continue to work, but are no longer recommended.
 {% endalert %}
 
 {% tabs %}
