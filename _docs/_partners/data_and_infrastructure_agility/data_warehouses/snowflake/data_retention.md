@@ -257,7 +257,7 @@ LIST @MY_EXPORT_STAGE;
 ```
 {% endraw %}
 {% endtab %}
-{% tab Filter %}
+{% tab Filtered %}
 
 Specify a filter in the procedure to unload only specified tables.
 
