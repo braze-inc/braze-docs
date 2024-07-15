@@ -26,7 +26,7 @@ If you are using the older navigation, you can find this page under **Engagement
 
 Select **Create template** to begin setting up your Canvas details. Give your Canvas template a name.
 
-![An example Canvas template named "Annual sale Canvas template" with the description "Use for annual spring promotion".][1]{: style="max-width:80%" }
+![An example Canvas template named "Annual sale Canvas template" with the description "Use for annual spring promotion".][1]
 
 ## Step 3: Customize your template
 
