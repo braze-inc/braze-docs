@@ -52,7 +52,11 @@ In this case, these users cannot be messaged and are not engaging with your bran
 
 ## Global Control Group users
 
-Users in the Global Control Group will never be archived, even if they meet the definition of inactive or dormant users.
+Users in the Global Control Group will never be archived, even if they meet the definition of inactive or dormant users. 
+
+### Treatment sample group
+
+Treatment sample group users are excluded from archiving within a Global Control Group report.
 
 ## Test users
 
