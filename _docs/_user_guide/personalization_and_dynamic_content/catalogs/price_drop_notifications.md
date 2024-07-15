@@ -53,7 +53,7 @@ Follow these steps to set up price drop notifications in a specific catalog.
         ]
     }
     ```
-    <br><br>
+    <br>
 4. Select **Save** and continue to the catalog's **Settings** page.<br>
 5. Set your notification rule. There are two options:
     - **Notify all subscribed users** notifies all customers who are waiting when the item's price drops.
