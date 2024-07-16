@@ -1,17 +1,17 @@
 ---
-nav_title: メッセージパーソナライゼーション
-article_title: メッセージパーソナライゼーションパートナー
-page_order: 1
+nav_title: メッセージのパーソナライズ
+article_title:メッセージパーソナライゼーションパートナー
+page_order:1
 
 page_type: landing
-description: "このランディング ページには、Braze キャンペーンとキャンバスにさらにパーソナライズを追加できる Braze パートナー (Alloys) がリストされています。"
+description:このランディングページには、BrazeキャンペーンやCanvasに追加のパーソナライズを追加できるBrazeパートナー（Alloys）が一覧表示されています。
 layout: partner_page
-search_tag: Partner
+search_tag:Partner
 
-partner_api: "https://www.braze.com/api/v1/partners"
+partner_api:「https://www.braze.com/api/v1/partners」
 partner_path: "https://www.braze.com/product/alloys/partners/"
 
-partner_top_header: "Message Personalization"
+partner_top_header:「メッセージのパーソナライズ」
 
 valid_partner_list:
 - name: AWS Personalize
@@ -75,5 +75,6 @@ valid_partner_list:
 - name: Stylitics
   url: /docs/partners/message_personalization/dynamic_content/stylitics/
 - name: NiftyImages
-  url: /docs/partners/message_personalization/dynamic_content/niftyimages 
+  url: /docs/partners/message_personalization/dynamic_content/niftyimages/
+  
 ---
