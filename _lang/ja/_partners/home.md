@@ -1,16 +1,16 @@
 ---
 page_order: 0
-article_title: テクノロジーパートナー
+article_title:テクノロジーパートナー
 alias: /partners/Partners/
 layout: partner_page
-search_tag: Partner
+search_tag:Partner
 
-partner_api: "https://www.braze.com/api/v1/partners"
-partner_path: "https://www.braze.com/product/alloys/partners/"
+partner_api: 「https://www.braze.com/api/v1/partners」
+partner_path: 「https://www.braze.com/product/alloys/partners/」
 
-partner_top_header: "テクノロジーパートナー"
-partner_top_text: "Alloys（盟友、親友、パートナー）のリストへようこそ！テクノロジーパートナーの Braze SDK への実装に役立つ技術ドキュメントを検索するのにご利用ください。<br> <br> Braze を使用して顧客体験とマーケティングを近代化する有力者のコミュニティである Firebrands への参加に関する情報をお探しの場合は、情報ページ<a href='https://brazefirebrands.splashthat.com/'>こちら</a> をご覧ください。"
-description: "このランディングページには、すべての Braze パートナーが含まれています。テクノロジーパートナーを Braze SDK に実装するのに役立つ技術文書を検索するのにご利用ください。"
+partner_top_header: 「テクノロジーパートナー」
+partner_top_text:「私たちの合金リストへようこそ（私たちの同盟国-私たちの最高の仲間-私たちのパートナー）！Braze SDK へのテクノロジーパートナーの実装に役立つ技術ドキュメント。<br> <br>  <a href='https://brazefirebrands.splashthat.com/'>カスタマーエクスペリエンススとマーケティングを最新化するために Braze を利用しているムーバーやシェイカーのコミュニティである Firebrandsへの参加に関する情報をお探しの場合は、こちらの情報ページをご覧ください。</a>「
+description:「このランディングページには、すべての Braze パートナーが含まれています。Braze SDK へのテクノロジーパートナーの実装に役立つ技術ドキュメント。「
 
 valid_partner_list:
 - name: Jampp
@@ -34,10 +34,10 @@ valid_partner_list:
 - name: AppsFlyer
   url: /docs/partners/message_orchestration/attribution/appsflyer/
 - name: Branch
-  title: Deeplinking
+  title:ディープリンク
   url: /docs/partners/message_orchestration/attribution/branch/branch_for_deeplinking/
   alt:
-    - title: Attribution
+    - title: アトリビューション
       url: /docs/partners/message_orchestration/attribution/branch/branch_for_attribution/
 - name: Facebook Zapier
   url: /docs/partners/data_and_infrastructure_agility/leads_capture/facebook_via_zapier/
@@ -99,7 +99,7 @@ valid_partner_list:
   url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/mParticle/mparticle_for_currents/
 - name: Tealium
   url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/tealium/
-- name: Rudderstack
+- name: RudderStack
   url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/rudderstack/
 - name: Census
   url: /docs/partners/data_and_infrastructure_agility/workflow_automation/census/
@@ -113,13 +113,13 @@ valid_partner_list:
   url: /docs/partners/message_personalization/dynamic_content/playable/
 - name: Movable Ink
   url: /docs/partners/message_personalization/dynamic_content/movable_ink/
-- name: LiftIgniter
+- name: Liftigniter
   url: /docs/partners/message_personalization/dynamic_content/liftigniter/
 - name: Transifex
   url: /docs/partners/message_personalization/localization/transifex/
 - name: Crowdin
   url: /docs/partners/message_personalization/localization/crowdin/
-- name: AccuWeather
+- name: Accuweather
   url: /docs/partners/message_personalization/location/accuweather/
 - name: Foursquare
   url: /docs/partners/message_personalization/location/foursquare/
@@ -299,6 +299,6 @@ valid_partner_list:
   url: /docs/partners/message_personalization/dynamic_content/niftyimages
 - name: MetaRouter
   url: /docs/partners/data_and_infrastructure_agility/workflow_automation/metarouter/
-- name: トレジャーデータ
+- name: Treasure Data
   url: /docs/partners/data_and_infrastructure_agility/cohort_import/treasuredata/
 ---
