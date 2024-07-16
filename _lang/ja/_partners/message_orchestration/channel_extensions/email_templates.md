@@ -1,17 +1,17 @@
 ---
 nav_title: メッセージテンプレート
-article_title: メッセージテンプレートパートナー
-page_order: 2
+article_title:メッセージテンプレートパートナー
+page_order:2
 
 page_type: landing
-description: "このランディングページには、統合によりメッセージテンプレートにアクセスできるBrazeパートナー（Alloys）が一覧表示されます。"
+description:"このランディングページには、メッセージテンプレートへのアクセスが可能なBrazeパートナー（Alloys）の連携がリストアップされている。"
 
 layout: partner_page
-search_tag: Partner
+search_tag:Partner
 partner_api: "https://www.braze.com/api/v1/partners"
 partner_path: "https://www.braze.com/product/alloys/partners/"
 
-partner_top_header: "Message Templates"
+partner_top_header: "メッセージテンプレート"
 
 valid_partner_list:
 - name: Alpaco
@@ -28,7 +28,7 @@ valid_partner_list:
   url: /docs/partners/message_orchestration/channel_extensions/email_templates/knak/
 - name: IAM Studio (NNT)
   url: /docs/partners/message_orchestration/channel_extensions/email_templates/iam_studio/
-- name: B.Layer 
+- name: B.Layer
   url: /docs/partners/message_orchestration/channel_extensions/email_templates/blayer/
 - name: Sageflo
   url: /docs/partners/message_orchestration/channel_extensions/email_templates/sageflo/
