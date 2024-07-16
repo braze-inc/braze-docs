@@ -1,16 +1,16 @@
 ---
-nav_title: "データとインフラのアジリティ"
-article_title: データ＆インフラ・アジリティ・パートナー
-page_order: 5
+nav_title:「データとインフラのアジリティ」
+article_title:データ＆インフラストラクチャーアジリティパートナーズ
+page_order:5
 
 page_type: landing
-description: "このページでは、異なるツールやプロバイダー間でデータの送信、保存、その他の調整を可能にするBrazeパートナー（Alloys）をリストアップしています。"
+description:このページには、さまざまなツールやプロバイダー間でデータを送信、保存、および調整することを可能にするBrazeパートナー（Alloys）が一覧表示されています。
 layout: partner_page
-search_tag: Partner
+search_tag:Partner
 
 partner_api: "https://www.braze.com/api/v1/partners"
 partner_path: "https://www.braze.com/product/alloys/partners/"
-partner_top_header: "Data & Infrastructure Agility"
+partner_top_header:データとインフラストラクチャのアジリティ
 
 valid_partner_list:
 - name: Fivetran
@@ -131,4 +131,6 @@ valid_partner_list:
   url: /docs/partners/data_and_infrastructure_agility/analytics/scuba/
 - name: MetaRouter
   url: /docs/partners/data_and_infrastructure_agility/workflow_automation/metarouter/
+- name: Treasure Data
+  url: /docs/partners/data_and_infrastructure_agility/cohort_import/treasuredata/
 ---
