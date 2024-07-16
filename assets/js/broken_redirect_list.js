@@ -1158,5 +1158,6 @@ validurls['/docs/user_guide/message_building_by_channel/content_cards/integratio
 validurls['/docs/user_guide/data_and_analytics/your_reports/'] = '/docs/user_guide/data_and_analytics/reporting/'
 
 validurls['/docs/user_guide/message_building_by_channel/email/best_practices/managing_email_subscriptions/'] = '/docs/user_guide/message_building_by_channel/email/best_practices/duplicate_emails/';
+validurls['/docs/help/best_practices/email/managing_email_subscriptions/'] = '/docs/user_guide/message_building_by_channel/email/managing_user_subscriptions';
 
 // validurls['OLD'] = 'NEW';
