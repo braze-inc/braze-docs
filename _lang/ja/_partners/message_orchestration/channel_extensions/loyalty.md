@@ -1,13 +1,13 @@
 ---
 nav_title: ロイヤルティ
-article_title: ロイヤリティパートナー
-page_order: 3
+article_title:ロイヤルティパートナー
+page_order:3
 
 page_type: landing
-description: "このランディングページには、メッセージングキャンペーンでロイヤルティデータと方法を活用できるBrazeパートナー(Alloys)がリストされています。"
+description:"このランディングページには、メッセージングキャンペーンにロイヤルティデータと方法を利用できるBrazeパートナー（Alloys）が掲載されている。"
 
 layout: partner_page
-search_tag: Partner
+search_tag:Partner
 partner_api: "https://www.braze.com/api/v1/partners"
 partner_path: "https://www.braze.com/product/alloys/partners/"
 
