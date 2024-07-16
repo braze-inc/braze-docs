@@ -66,7 +66,7 @@ Follow these steps to set up back-in-stock notifications in a specific catalog.
 Notification rules in these settings do not replace Canvas notification settings, such as Quiet Hours.
 {% endalert %}
 
-## Using back-in-stock notifications in a Canvas or campaign
+## Using back-in-stock notifications in a Canvas
 
 After setting up the back-in-stock feature in a catalog, follow these steps to use with Canvas.
 
