@@ -1,17 +1,17 @@
 ---
-nav_title: ワークフロー自動化
-article_title: ワークフロー自動化パートナー
-page_order: 10
+nav_title: ワークフローのオートメーション
+article_title:ワークフローオートメーションパートナー
+page_order:10
 
 page_type: landing
-description: "このランディングページには、サービスとアプリケーション間のワークフローを自動化できるBrazeパートナー（Alloy）が一覧表示されます。"
+description:"このランディングページには、サービスとアプリケーション間のワークフローを自動化できるBrazeパートナー（Alloys）がリストアップされている。"
 
 layout: partner_page
-search_tag: Partner
+search_tag:Partner
 partner_api: "https://www.braze.com/api/v1/partners"
 partner_path: "https://www.braze.com/product/alloys/partners/"
 
-partner_top_header: "Workflow Automation"
+partner_top_header: "ワークフローのオートメーション"
 
 valid_partner_list:
 - name: Fivetran
