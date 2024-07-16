@@ -1,17 +1,17 @@
 ---
-nav_title: メッセージオーケストレーション
-article_title: メッセージオーケストレーションパートナー
-page_order: 2
+nav_title: メッセージ・オーケストレーション
+article_title:メッセージ・オーケストレーション・パートナー
+page_order:2
 
 page_type: landing
-description: "このランディング ページには、リターゲティング、電子メール テンプレート、プロモーション、アトリビューションなどを使用してメッセージを調整できる Braze パートナー (Alloys) がリストされています。"
+description:"このランディングページには、リターゲティング、メールテンプレート、プロモーション、アトリビューションなどでメッセージのオーケストレーションを可能にするBrazeパートナー（Alloys）がリストアップされている。"
 layout: partner_page
-search_tag: Partner
+search_tag:Partner
 
 partner_api: "https://www.braze.com/api/v1/partners"
 partner_path: "https://www.braze.com/product/alloys/partners/"
 
-partner_top_header: "Message Orchestration"
+partner_top_header: "メッセージ・オーケストレーション"
 
 valid_partner_list:
 - name: Alpaco
@@ -92,7 +92,7 @@ valid_partner_list:
   url: /docs/partners/message_orchestration/channel_extensions/email_templates/iam_studio/
 - name: Ada
   url: /docs/partners/message_orchestration/channel_extensions/surveys/ada/
-- name: B.Layer 
+- name: B.Layer
   url: /docs/partners/message_orchestration/channel_extensions/email_templates/blayer/
 - name: Sageflo
   url: /docs/partners/message_orchestration/channel_extensions/email_templates/sageflo/
