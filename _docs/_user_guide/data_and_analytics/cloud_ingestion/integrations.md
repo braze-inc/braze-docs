@@ -523,14 +523,14 @@ Return to the Braze dashboard and click **Test connection**. If successful, you'
 {% endtab %}
 {% tab BigQuery %}
 
-After all configuration details for your sync are entered, click **Test connection**. If successful, you'll see a preview of the data. If, for some reason, we can't connect, we'll display an error message to help you troubleshoot the issue.
+After all configuration details for your sync are entered, select **Test connection**. If successful, you'll see a preview of the data. If, for some reason, we can't connect, we'll display an error message to help you troubleshoot the issue.
 
 ![]({% image_buster /assets/img/cloud_ingestion/ingestion_13.png %})
 
 {% endtab %}
 {% tab Databricks %}
 
-After all configuration details for your sync are entered, click **Test connection**. If successful, you'll see a preview of the data. If, for some reason, we can't connect, we'll display an error message to help you troubleshoot the issue.
+After all configuration details for your sync are entered, select **Test connection**. If successful, you'll see a preview of the data. If, for some reason, we can't connect, we'll display an error message to help you troubleshoot the issue.
 
 ![]({% image_buster /assets/img/cloud_ingestion/ingestion_13.png %})
 
@@ -582,27 +582,27 @@ If you reuse the same user across integrations, you cannot delete the user in th
 
 {% tabs %}
 {% tab Snowflake %}
-When activated, your sync will run on the schedule configured during setup. If you want to run the sync outside the normal testing schedule or to fetch the most recent data, click **Sync Now**. This run will not impact regularly scheduled future syncs.
+When activated, your sync will run on the schedule configured during setup. If you want to run the sync outside the normal testing schedule or to fetch the most recent data, select **Sync Now**. This run will not impact regularly scheduled future syncs.
 
 ![]({% image_buster /assets/img/cloud_ingestion/ingestion_5.png %})
 
 {% endtab %}
 {% tab Redshift %}
-When activated, your sync will run on the schedule configured during setup. If you want to run the sync outside the normal testing schedule or to fetch the most recent data, click **Sync Now**. This run will not impact regularly scheduled future syncs.
+When activated, your sync will run on the schedule configured during setup. If you want to run the sync outside the normal testing schedule or to fetch the most recent data, select **Sync Now**. This run will not impact regularly scheduled future syncs.
 
 ![]({% image_buster /assets/img/cloud_ingestion/ingestion_10.png %})
 
 {% endtab %}
 {% tab BigQuery %}
 
-When activated, your sync will run on the schedule configured during setup. If you want to run the sync outside the normal testing schedule or to fetch the most recent data, click **Sync Now**. This run will not impact regularly scheduled future syncs.
+When activated, your sync will run on the schedule configured during setup. If you want to run the sync outside the normal testing schedule or to fetch the most recent data, select **Sync Now**. This run will not impact regularly scheduled future syncs.
 
 ![]({% image_buster /assets/img/cloud_ingestion/ingestion_15.png %})
 
 {% endtab %}
 {% tab Databricks %}
 
-When activated, your sync will run on the schedule configured during setup. If you want to run the sync outside the normal testing schedule or to fetch the most recent data, click **Sync Now**. This run will not impact regularly scheduled future syncs.
+When activated, your sync will run on the schedule configured during setup. If you want to run the sync outside the normal testing schedule or to fetch the most recent data, select **Sync Now**. This run will not impact regularly scheduled future syncs.
 
 ![]({% image_buster /assets/img/cloud_ingestion/ingestion_18.png %})
 
