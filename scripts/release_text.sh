@@ -1,19 +1,16 @@
 #!/bin/bash
-#
+
 # This script lists the commit bodies, commit hash, and full date/time of all parent commits since the last release version tag,
 # and runs deploy_text.sh for each commit.
 #
 # Usage: ~/braze-docs/scripts/release_text.sh
 
-# TODO: everything is working, but the dates being used for both release + deploy scripts are based off of creation date (or some other date)
-# instead of using the merge date. So Deploy - May 28, 2024 only returns the following:
-# - [#7411](https://github.com/braze-inc/braze-docs/pull/7411) - May 28, 2024 release notes
-# 
-# rather than the full list found here:
-# https://github.com/braze-inc/braze-docs/pull/7419
+# TODO: everything is working, but we need to skip the first list since PREV_COMMIT_DATE and LAST_RELEASE_TIMESTAMP are the same.
+# TODO: This list will always be apart of the last release. Once we can figure out how to skip this, the script is done.
+# TODO: Finally you'll need to edit the script so that it displays the proper format.
 
 main() {
-    # Ensure the script is executed from the root of the git repository
+    # Run script from the root of the git repository
     cd "$PROJECT_ROOT"
 
     # Get the last release version tag
@@ -25,6 +22,7 @@ main() {
     echo "Last release timestamp: $LAST_RELEASE_TIMESTAMP"
 
     # Convert Git logs to JSON and sort by date
+    # TEST: git log --merges --first-parent --since="2024-06-25T10:33:13-07:00" origin/master --pretty=format:'{%n  "commit": "%H",%n  "date": "%cI",%n  "title": "%s",%n  "body": "%b"%n},'
     COMMIT_LOGS=$(git log --merges --first-parent --since="$LAST_RELEASE_TIMESTAMP" origin/master --pretty=format:'{%n  "commit": "%H",%n  "date": "%cI",%n  "title": "%s",%n  "body": "%b"%n},' | perl -pe 'BEGIN{print "["}; END{print "]\n"}' | perl -pe 's/},]/}]/' | jq -c '. | sort_by(.date)')
 
     if [ -z "$COMMIT_LOGS" ]; then
@@ -33,10 +31,12 @@ main() {
     fi
 
     echo "Commit bodies since the last release timestamp on origin/master:"
+    echo "----------------------------------------------------------------"
+    echo ""
 
     # Initialize the previous commit date with the release timestamp
     PREV_COMMIT_DATE="$LAST_RELEASE_TIMESTAMP"
-
+    
     # Iterate over the commit logs and run deploy_text.sh for each commit
     echo "$COMMIT_LOGS" | jq -c '.[]' | while read commit; do
         COMMIT_HASH=$(echo "$commit" | jq -r '.commit')
@@ -48,6 +48,12 @@ main() {
         echo "Title: $COMMIT_TITLE"
         echo "Body: $COMMIT_BODY"
         echo "Processing commits from $PREV_COMMIT_DATE to $COMMIT_DATE"
+        
+        # Ensure date comparison and format consistency
+        if [[ "$PREV_COMMIT_DATE" > "$COMMIT_DATE" ]]; then
+            echo "Error: Previous commit date $PREV_COMMIT_DATE is later than current commit date $COMMIT_DATE. Skipping."
+            continue
+        fi
 
         ./scripts/deploy_text.sh "$PREV_COMMIT_DATE" "$COMMIT_DATE"
         echo ""
