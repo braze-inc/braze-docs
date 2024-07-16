@@ -155,7 +155,7 @@ CALL COPY_BRAZE_SHARE('SOURCE_DB', 'SOURCE_SCHEMA', 'DEST_DB', 'DEST_SCHEMA', DA
 {% endtabs %}
 
 {% alert note %}
-Repeatedly running the procedure won't create duplicate records since this procedure checks the most recent `SF_CREATED_AT` and only backs up data newer than that. 
+Repeatedly running the procedure won't create duplicate records because this procedure checks the most recent `SF_CREATED_AT` and only backs up data newer than that. 
 {% endalert %}
 
 ## Unload data to stage
