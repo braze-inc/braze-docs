@@ -49,6 +49,7 @@ case $1 in
             exit 1
         fi
         python3 "$PROJECT_ROOT/scripts/convert_reference_links.py" "$2"
+        ruby "$PROJECT_ROOT/scripts/remove_unused_reference_links.rb" "$2"
         ;;
     rlinks)
         if [[ -z "$2" ]]; then

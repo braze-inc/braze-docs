@@ -6,17 +6,9 @@
 # 
 # Usage: ./convert_reference_links [directory|file]
 
-
-# TODO: Script can run recursively against explicitly hard-coded directory. 
-#       Update the script to take arguments so you can specify a single file or directory.
-
 import os
-
-# Retrieve the environment variable
-project_root = os.getenv('PROJECT_ROOT')
-
-# Verify the environment variable is passed correctly
-print("PROJECT_ROOT:", project_root)
+import sys
+import re
 
 def create_link_dictionary(file_path):
     link_dict = {}
@@ -27,15 +19,15 @@ def create_link_dictionary(file_path):
     # Reverse the lines to start from the last line
     lines.reverse()
 
+    pattern = re.compile(r'\[(.*?)\]:\s*(.*)')
+
     for line in lines:
         line = line.strip()
         
-        if line.startswith('[') and (line.find(']') != -1) and (('{{site.baseurl}}' in line) or ('http' in line) or ('www' in line) or ('{% image_buster' in line)):
-            start_index = line.find('[') + 1
-            end_index = line.find(']')
-            key = line[start_index:end_index]
-
-            value = line[end_index + 2:].strip()
+        match = pattern.match(line)
+        if match:
+            key = match.group(1)
+            value = match.group(2).strip()
             link_dict[key] = value
         elif line and not line.startswith('['):
             break
@@ -66,8 +58,15 @@ def process_directory(directory):
                 link_dict = create_link_dictionary(file_path)
                 replace_links(file_path, link_dict)
 
-# Define the directory to process
-directory_path = os.path.join(project_root, '_docs', '_api')
+def main(path):
+    if os.path.isdir(path):
+        process_directory(path)
+    elif os.path.isfile(path) and path.endswith('.md'):
+        link_dict = create_link_dictionary(path)
+        replace_links(path, link_dict)
+    else:
+        print(f"Invalid path: {path}. Please provide a valid directory or a markdown file.")
 
-# Process all files in the directory
-process_directory(directory_path)
+if __name__ == "__main__":
+    path = sys.argv[1]
+    main(path)

@@ -26,14 +26,14 @@ def grep_with_index(string_lines, query)
 end
 
 def get_shortlink_lines(file_lines)
-  return grep_with_index(file_lines, /\[.*\]: [{#\w].*/)
+  return grep_with_index(file_lines, /\[.*\]:\s+[{#\w].*/)
 end
 
 def remove_unused_shortlink_lines(original_file_lines)
   shortlink_lines = get_shortlink_lines(original_file_lines)
   lines_to_remove = []
 
-  ref_query = /\[(.*)\]: .*/
+  ref_query = /\[(.*)\]:\s+.*/
   shortlink_lines.each do |current_line, current_line_index|
     # Get the reference from the link itself to search for
     # "[1]: https://google.com" has a ref of "1"
@@ -55,7 +55,7 @@ def remove_unused_shortlink_lines(original_file_lines)
     original_file_lines.delete_at(line_to_remove - lines_deleted)
     lines_deleted += 1
   end
-  puts "deleted #{lines_deleted} lines"
+# puts "deleted #{lines_deleted} lines"
   return lines_deleted
 end
 
@@ -86,24 +86,24 @@ def walk_directory(directory)
     elsif File.directory?(path)
       walk_directory(path)
     elsif is_md_file(path)
-      puts "cleaning file #{file} with path #{path}"
+#      puts "cleaning file #{file} with path #{path}"
       clean_single_file(path)
     end
   end
 end
 
 if File.directory?(INPUT_FILE)
-  puts "Input directory #{INPUT_FILE}. Will recurse!"
-  prompt_response = Readline.readline("Continue? [y/n] ") 
-
-  if (prompt_response != "y")
-    puts "Not continuing!"
-    exit(0)
-  end
+#  puts "Input directory #{INPUT_FILE}. Will recurse!"
+#  prompt_response = Readline.readline("Continue? [y/n] ") 
+#
+#  if (prompt_response != "y")
+#    puts "Not continuing!"
+#    exit(0)
+#  end
 
   walk_directory(INPUT_FILE)
 else
-  puts "Input file #{INPUT_FILE}"
+#  puts "Input file #{INPUT_FILE}"
   if is_md_file(INPUT_FILE)
     clean_single_file(INPUT_FILE)
   end
