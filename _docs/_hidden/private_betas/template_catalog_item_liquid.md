@@ -9,10 +9,10 @@ hidden: true
 
 # Templating catalog items including Liquid
 
- Similar to [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content), the `:rerender` flag must be included in the Liquid tag in order to render its Liquid content. Note that the `:rerender` flag is only one level deep, meaning that it won't apply to any nested Liquid tag calls.
+ Similar to [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content), the `:rerender` flag must be included in the Liquid tag to render its Liquid content. Note that the `:rerender` flag is only one level deep, meaning it won't apply to any nested Liquid tag calls.
 
  {% alert important %}
- Templating catalog items that include Liquid is in early access. Contact your Braze account manager if you're interested in participating in the early access.
+ Templating catalog items that include Liquid is in early access. Reach out to your Braze account manager if you're interested in participating in the early access.
  {% endalert %}
 
 If a catalog item contains user profile fields (within a Liquid personalization tag), these values must be defined earlier in the message via Liquid before the templating in order to render the Liquid properly. If `:rerender` flag is not provided, it will render the raw Liquid content.
