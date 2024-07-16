@@ -1,10 +1,12 @@
 #!/bin/bash
 
-# DESCRIPTION.
+# This is a bash script for interacting with the various files in './scripts/'.
+# 
+# Usage: ./bdocs [option]
 
 set -e
 
-# The project's root directory. Only accessible through git.
+# The project's root directory.
 export PROJECT_ROOT
 PROJECT_ROOT="$(dirname "$(realpath "$0")")"
 
@@ -18,8 +20,8 @@ Usage: ./bdocs [option]
 Options:
   deploy       Create deploy text
   release      Create release text
-  clinks       Convert all reference links to in-line links
   rlinks       Remove all unused reference links
+  clinks       Convert all reference links to in-line links, then remove them
   help         Display this help message and exit
 
 EOF
@@ -43,19 +45,19 @@ case $1 in
     release)
         "$PROJECT_ROOT/scripts/release_text.sh"
         ;;
+    rlinks)
+        if [[ -z "$2" ]]; then
+            echo "Error: Path to file or directory is required."
+            exit 1
+        fi
+        ruby "$PROJECT_ROOT/scripts/remove_unused_reference_links.rb" "$2"
+        ;;
     clinks)
         if [[ -z "$2" ]]; then
-            echo "Error: Path is required."
+            echo "Error: Path to file or directory is required."
             exit 1
         fi
         python3 "$PROJECT_ROOT/scripts/convert_reference_links.py" "$2"
-        ruby "$PROJECT_ROOT/scripts/remove_unused_reference_links.rb" "$2"
-        ;;
-    rlinks)
-        if [[ -z "$2" ]]; then
-            echo "Error: Path is required."
-            exit 1
-        fi
         ruby "$PROJECT_ROOT/scripts/remove_unused_reference_links.rb" "$2"
         ;;
     help)
