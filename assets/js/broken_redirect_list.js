@@ -4,8 +4,8 @@ validurls['/docs/best_practices/#android-push-priority'] = '/docs/help/best_prac
 validurls['/docs/best_practices/#android-push-visibility'] = '/docs/help/best_practices/push/additional_android_best_practices/#android-push-visibility';
 validurls['/docs/best_practices/#body-styling'] = '/docs/help/best_practices/email/email_styling_tips/#body-styling';
 validurls['/docs/best_practices/#email'] = '/docs/help/best_practices/email/overview/';
-validurls['/docs/best_practices/email#managing-email-subscriptions'] = '/docs/help/best_practices/email/managing_email_subscriptions/';
-validurls['/docs/best_practices/email'] = '/docs/help/best_practices/email/managing_email_subscriptions/';
+validurls['/docs/best_practices/email#managing-email-subscriptions'] = '/docs/user_guide/message_building_by_channel/email/managing_user_subscriptions';
+validurls['/docs/best_practices/email'] = '/docs/user_guide/message_building_by_channel/email/managing_user_subscriptions';
 validurls['/docs/best_practices/'] = '/docs/help/home/';
 
 validurls['/docs/whatsapp_response_messaging/'] = '/docs/user_guide/message_building_by_channel/whatsapp/whatsapp_campaign/create/#response-messages';
@@ -421,7 +421,7 @@ validurls['/docs/help/best_practices/email/email_styling_tips/'] = '/docs/user_g
 validurls['/docs/help/best_practices/email/content-specific/'] = '/docs/user_guide/message_building_by_channel/email/best_practices/guidelines_and_tips/#content-specific-tips--tricks';
 validurls['/docs/help/best_practices/email/email_services/'] = '/docs/user_guide/message_building_by_channel/email/best_practices/email_services/';
 validurls['/docs/help/best_practices/email/sunset_policies/'] = '/docs/user_guide/message_building_by_channel/email/best_practices/sunset_policies/';
-validurls['/docs/help/best_practices/email/managing_email_subscriptions/'] = '/docs/user_guide/message_building_by_channel/email/best_practices/managing_email_subscriptions/';
+validurls['/docs/help/best_practices/email/managing_email_subscriptions/'] = '/docs/user_guide/message_building_by_channel/email/managing_user_subscriptions';
 validurls['/docs/help/best_practices/in-app_messages/prep_guide/'] = '/docs/user_guide/message_building_by_channel/in-app_messages/best_practices/prep_guide/';
 validurls['/docs/help/best_practices/in-app_messages/previous_in-app_message_generations/'] = '/docs/user_guide/message_building_by_channel/in-app_messages/best_practices/previous_in-app_message_generations/';
 validurls['/docs/user_guide/message_building_by_channel/in-app_messages/best_practices/previous_in-app_message_generations/'] = '/docs/developer_guide/platform_integration_guides/sdk_changelogs';
@@ -1158,6 +1158,5 @@ validurls['/docs/user_guide/message_building_by_channel/content_cards/integratio
 validurls['/docs/user_guide/data_and_analytics/your_reports/'] = '/docs/user_guide/data_and_analytics/reporting/'
 
 validurls['/docs/user_guide/message_building_by_channel/email/best_practices/managing_email_subscriptions/'] = '/docs/user_guide/message_building_by_channel/email/best_practices/duplicate_emails/';
-validurls['/docs/help/best_practices/email/managing_email_subscriptions/'] = '/docs/user_guide/message_building_by_channel/email/managing_user_subscriptions';
 
 // validurls['OLD'] = 'NEW';
