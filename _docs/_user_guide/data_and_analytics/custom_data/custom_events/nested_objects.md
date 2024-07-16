@@ -31,7 +31,7 @@ To access the nested data in your custom event, generate a schema for each event
 
 1. Go to **Data Settings** > **Custom Events**.
 2. Select **Manage Properties** for the events with nested properties.
-3. Click the <i class="fas fa-arrows-rotate"></i> button to generate the schema. To view the schema, click the <i class="fas fa-plus"></i> button.
+3. Select the <i class="fas fa-arrows-rotate"></i> button to generate the schema. To view the schema, select the <i class="fas fa-plus"></i> plus button.
 
 ![][6]{: style="max-width:80%;"}
 
