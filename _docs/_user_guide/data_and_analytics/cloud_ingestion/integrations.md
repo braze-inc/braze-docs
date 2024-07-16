@@ -348,11 +348,11 @@ You can name the schema and table as you'd like, but the column names should mat
 
 In order for Braze to access Databricks, a personal access token needs to be created.
 
-1. In your Databricks workspace, click your Databricks username in the top bar, and then select **User Settings** from the drop-down.
-2. On the Access tokens tab, click **Generate new token**.
+1. In your Databricks workspace, select your Databricks username in the top bar, and then select **User Settings** from the drop-down.
+2. On the Access tokens tab, select **Generate new token**.
 3. Enter a comment that helps you to identify this token, such as "Braze CDI", and change the token’s lifetime to no lifetime by leaving the Lifetime (days) box empty (blank).
-4. Click **Generate**.
-5. Copy the displayed token, and then click **Done**.
+4. Select **Generate**.
+5. Copy the displayed token, and then select **Done**.
 
 Keep the token in a safe place until you need to enter it on the Braze dashboard during the credential creation step.
 
@@ -381,7 +381,7 @@ If you have network policies in place, you must give Braze network access to you
 {% tabs %}
 {% tab Snowflake %}
 
-Go to **Partner Integrations** > **Technology Partners**. Find the Snowflake page and click **Create new import sync**.
+Go to **Partner Integrations** > **Technology Partners**. Find the Snowflake page and select **Create new import sync**.
 
 {% alert note %}
 If you are using the [older navigation]({{site.baseurl}}/navigation), go to **Technology Partners**.
@@ -418,7 +418,7 @@ ALTER USER BRAZE_INGESTION_USER SET rsa_public_key='Braze12345...';
 {% endtab %}
 {% tab Redshift %}
 
-Go to **Partner Integrations** > **Technology Partners**. Find the Redshift page and click **Create new import sync**.
+Go to **Partner Integrations** > **Technology Partners**. Find the Redshift page and select **Create new import sync**.
 
 {% alert note %}
 If you are using the [older navigation]({{site.baseurl}}/navigation), go to **Technology Partners**.
@@ -445,7 +445,7 @@ You will also choose the data type and sync frequency. Frequency can be anywhere
 {% endtab %}
 {% tab BigQuery %}
 
-Go to **Partner Integrations** > **Technology Partners**. Find the BigQuery page and click **Create new import sync**.
+Go to **Partner Integrations** > **Technology Partners**. Find the BigQuery page and select **Create new import sync**.
 
 {% alert note %}
 If you are using the [older navigation]({{site.baseurl}}/navigation), go to **Technology Partners**.
@@ -473,7 +473,7 @@ You will also choose the data type and sync frequency. Frequency can be anywhere
 {% endtab %}
 {% tab Databricks %}
 
-Go to **Partner Integrations** > **Technology Partners**. Find the Databricks page and click **Create new import sync**.
+Go to **Partner Integrations** > **Technology Partners**. Find the Databricks page and select **Create new import sync**.
 
 {% alert note %}
 If you are using the [older navigation]({{site.baseurl}}/navigation), go to **Technology Partners**.
@@ -506,18 +506,18 @@ You will also choose the data type and sync frequency. Frequency can be anywhere
 {% tabs %}
 {% tab Snowflake %}
 
-Return to the Braze dashboard and click **Test connection**. If successful, you'll see a preview of the data. If, for some reason, we can't connect, we'll display an error message to help you troubleshoot the issue.
+Return to the Braze dashboard and select **Test connection**. If successful, you'll see a preview of the data. If, for some reason, we can't connect, we'll display an error message to help you troubleshoot the issue.
 
 ![]({% image_buster /assets/img/cloud_ingestion/ingestion_3.png %})
 {% endtab %}
 {% tab Redshift %}
-Return to the Braze dashboard and click **Test connection**. If successful, you'll see a preview of the data. If, for some reason, we can't connect, we'll display an error message to help you troubleshoot the issue.
+Return to the Braze dashboard and select **Test connection**. If successful, you'll see a preview of the data. If, for some reason, we can't connect, we'll display an error message to help you troubleshoot the issue.
 
 ![]({% image_buster /assets/img/cloud_ingestion/ingestion_8.png %})
 {% endtab %}
 {% tab Redshift Private Network %}
 
-Return to the Braze dashboard and click **Test connection**. If successful, you'll see a preview of the data. If, for some reason, we can't connect, we'll display an error message to help you troubleshoot the issue.
+Return to the Braze dashboard and select **Test connection**. If successful, you'll see a preview of the data. If, for some reason, we can't connect, we'll display an error message to help you troubleshoot the issue.
 
 ![]({% image_buster /assets/img/cloud_ingestion/ingestion_19.png %})
 {% endtab %}
