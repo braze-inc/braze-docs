@@ -15,9 +15,10 @@ When you’re finished with these tutorials, you’ll be able to:
 - Write Liquid code for common use cases
 - String together Liquid conditional logic to personalize messages based on user data
 
-| Tutorial | Learning objective |
+| Tutorial | Learning objectives |
 | --- | --- |
 | [Personalize messages for user segments](#segments) | default values, conditional logic |
+| [Abandoned cart reminders](#reminders) | operators, conditional logic |
 {: .reset-br-td-1 .reset-br-td-2}
 
 ## Personalize messages for user segments {#segments}
@@ -78,4 +79,70 @@ Thanks for traveling with us! Enjoy your unique discount code: SUMMRTRVLS240.
 {% endraw %}
 {% enddetails %}
 
-## 
+## Abandoned cart reminders {#reminders}
+
+Let’s send personalized messages to remind users of items left in their cart. We’ll customize them to send based on how many items are in their cart.
+
+1. Let’s check if their cart is empty by opening a Liquid conditional logic with the operator `!=`, which means “does not equal”. In this case, we’ll set the condition to the custom attribute `cart_items` not equaling a blank value.
+
+{% raw %}
+```liquid
+{% if {{custom_attribute.${cart_items}}} != blank %}
+```
+{% endraw %}
+
+{: start="2"}
+2. Let’s check if the cart has more than three items by using the operator `>’, which means “greater than”.
+
+{% raw %}
+```liquid
+{% if {{custom_attribute.${cart_items}}} | size > 3 %}
+```
+{% endraw %}
+
+{: start="3"}
+3. Write a message that greets the user by their first name, or if that’s not available, use “there” as a replacement for their name. Include what should be stated if there are more than three items in the cart. Because we don’t want to overwhelm the user with a complete list, let’s list the first three `cart_items`.
+
+{% raw %}
+```liquid
+Hi {{${first_name} | default: 'there'}}, don't forget to complete your purchase! Your items {{custom_attribute.${cart_items[0]}}}, {{custom_attribute.${cart_items[1]}}}, {{custom_attribute.${cart_items[2]}}}, and others are waiting for you.
+```
+{% endraw %}
+
+{: start="4"}
+4. Use `else` to specify what should happen in all other cases (if `cart_items` is fewer than three), and then provide the message to send. Because three items don’t take up a lot of space, we can list them all. We’ll use the Liquid operator `join` and `,` to specify that the items should be listed with a comma separating them. Close the logic with `endif`.
+
+{% raw %}
+```liquid
+{% else %}
+Hi {{${first_name} | default: 'there'}}, don't forget to complete your purchase! Your items: {{{custom_attribute.${cart_items}}} | join: ', '}  are waiting for you. 
+{% endif %}
+```
+{% endraw %}
+
+{: start="5"}
+5. Use `else` and then an `abort_message` to tell the Liquid code to not send a message if the cart doesn’t meet any of the previous conditions. In other words, if the cart doesn’t have fewer or more than three items (and is empty). Close the logic with `endif`.
+
+{% raw %}
+```liquid
+{% else %}
+{% abort_message('No items in cart') %}
+{% endif %}
+```
+{% endraw %}
+
+{% details Full Liquid code %}
+{% raw %}
+```liquid
+{% if {{custom_attribute.${cart_items}}} != blank %}
+{% if {{custom_attribute.${cart_items}}} | size > 3 %}
+Hi {{${first_name} | default: 'there'}}, don't forget to complete your purchase! Your items {{custom_attribute.${cart_items[0]}}}, {{custom_attribute.${cart_items[1]}}}, {{custom_attribute.${cart_items[2]}}}, and others are waiting for you.
+{% else %}
+Hi {{${first_name} | default: 'there'}}, don't forget to complete your purchase! Your items: {{{custom_attribute.${cart_items}}} | join: ', '}  are waiting for you.
+{% endif %}
+{% else %}
+{% abort_message('No items in cart') %}
+{% endif %}
+```
+{% endraw %}
+{% enddetails %}
