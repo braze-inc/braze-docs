@@ -23,10 +23,6 @@ To use your data warehouse data for segmentation within your Braze workspace, yo
 
 ## Creating a CDI segment
 
-{% alert important %}
-CDI segments are currently in early access for BigQuery, Databricks, Redshift, and Snowflake.
-{% endalert %}
-
 ### Step 1: Set up your source
 
 Before creating your first CDI Segment, set up a new Connected Source with your data warehouse by following the steps in [Connected Sources]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/connected_sources/).
