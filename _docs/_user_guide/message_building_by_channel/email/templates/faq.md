@@ -75,4 +75,4 @@ No, Braze link aliasing won't recognize the HTML properly.
 
 When logic like this is used in tandem with features that need to parse the HTML (such as a preheader or link templating), the library used to scan the HTML can modify the anchor tag in a way that will prevent the proper `href` from being templated. The library will then determine that the HTML is invalid because it's agnostic to the Liquid code. 
 
-Instead, use Liquid logic that contains a complete anchor tag at each stage. This won't interfere with HTML parsing because the logic contains multiple instances of valid HTML. YOu can also also simplify your logic by assigning and then templating a variable into the appropriate anchor tag.
+Instead, use Liquid logic that contains a complete anchor tag at each stage. This won't interfere with HTML parsing because the logic includes multiple instances of valid HTML. You can also simplify your logic by assigning and then templating a variable into the appropriate anchor tag.
