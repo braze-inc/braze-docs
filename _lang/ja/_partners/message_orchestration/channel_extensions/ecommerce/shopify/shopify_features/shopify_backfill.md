@@ -1,98 +1,98 @@
 ---
-nav_title: "Shopify 履歴バックフィル"
-article_title: "Shopify 履歴バックフィル"
-alias: "/shopify_historical_backfill/"
-description: "このリファレンス記事では、リスクやサポートされているデータを含め、Shopifyの履歴バックフィルを設定する方法について説明します。"
+nav_title: 「Shopify ヒストリカルバックフィル」
+article_title:「Shopify ヒストリカルバックフィル」
+alias: 「/shopify_historical_backfill/"
+description:「この参考記事では、リスクやサポート対象データを含め、Shopifyの履歴バックフィルの設定方法を概説しています。「
 page_type: partner
-search_tag: Partner
-page_order: 1
+search_tag:Partner
+page_order:1
 ---
 
-# Shopify 履歴バックフィル 
+# Shopify ヒストリカルバックフィル 
 
-> 「Shopify Historical Backfill」機能を使用すると、ブランドは顧客と同期し、自動化されたシームレスな方法でデータを購入できるため、最も価値のあるセグメントの1つ(購入者)とすぐに関わり始めることができます。 
+> Shopify Historical Backfill機能を使用すると、ブランドは顧客と購入データを自動的かつシームレスに同期できるため、最も価値のあるセグメントの1つである購入者とのエンゲージメントをすぐに開始できます。 
 
-このバックフィルの一部として、Braze は、Shopify 統合接続の直前90 日間のすべての顧客、注文、および購入イベントをインポートします。この機能は、次のセクションで説明する内容を考慮すると、アクティブなメッセージが実行されていない新しい顧客に適しています。この機能は、データポイントの使用状況にもカウントされます。
+このバックフィルの一環として、BrazeはShopify統合接続前の過去90日間のすべての顧客、注文、購入イベントをインポートします。この機能は、次のセクションで説明する内容を考慮すると、アクティブなメッセージがまったく実行されていない新規のお客様に最適であることに注意してください。この機能は、データポイント使用量にもカウントされます。
 
 ## リスク
 
-この機能は、影響を受けたキャンペーンやキャンバスに対して、ユーザが無関係で時間外のメッセージを受信するなど、予期しない結果を招く可能性のある履歴データやイベントをインポートします。次のトリガーイベントを使用するキャンペーンとキャンバスは、この機能が同期しているShopifyデータのいずれかを使用している場合、影響を受ける可能性があります。
-カスタム属性値を変更
-コンバージョンイベントを実行
-キャンペーンの例外イベントを実行
-サブスクリプションのステータスを更新
-サブスクリプショングループのステータスを更新
-メールアドレスを追加します
-購入:
-カスタムイベントを実行:
+この機能は、影響を受けたキャンペーンやキャンバスについて、ユーザーが無関係でタイミングの悪いメッセージを受け取るなど、意図しない結果をもたらす可能性のある履歴データやイベントをインポートします。以下のトリガーイベントを使用するキャンペーンとキャンバスは、この機能が同期しているShopifyデータのいずれかを使用している場合に影響を受ける可能性があります。
+- カスタム属性値の変更
+- コンバージョンイベントを実行
+- キャンペーンの例外イベントを実行
+- 購読状況の更新
+- サブスクリプショングループステータスの更新
+- Eメールアドレスを追加
+- 購入する*
+- カスタムイベントを実行*
 
 {% alert important %}
-Shopify Historical Backfillのデータを使用して、上記のイベントをトリガーする可能性のあるメッセージについて、現在アクティブなキャンペーンとキャンバスを監査することをお勧めします。 
+Shopify Historical Backfillのデータを使用して、現在アクティブなキャンペーンとキャンバスを監査して、上記のイベントトリガー可能性のあるメッセージがないか確認することをおすすめします。 
 
-- "Make Purchase"および"Perform Custom Event"では、[開始時間]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/?redirected=true#step-4-assign-duration)を、ShopifyストアがBrazeに接続された後の任意の日時に更新できます。この新しい開始時間より前の過去のイベントは、メッセージをトリガーしません。 
-- 上記の他のすべてのイベントについては、メッセージが送信されないことを保証するために、バックフィルを有効にする前に[一時的に停止]({{site.baseurl}}/user_guide/engagement_tools/campaigns/managing_campaigns/change_your_campaign_after_launch/#stopping-your-campaign)することができます。
+- 「購入」と「カスタムイベントを実行」では、[開始時間を]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/?redirected=true#step-4-assign-duration)、ShopifyストアがBrazeに接続された後の任意の日時に更新できます。この新しい開始時刻より前の過去のイベントでは、メッセージはトリガーされません。 
+- 上記の他のすべてのイベントについては、[バックフィルを有効にする前に一時的に停止して]({{site.baseurl}}/user_guide/engagement_tools/campaigns/managing_campaigns/change_your_campaign_after_launch/#stopping-your-campaign)、メッセージが送信されないようにすることができます。
 {% endalert %}
 
-## Shopifyヒストリカル・バックフィルのセットアップ
+## Shopify ヒストリカルバックフィルのセットアップ
 
 ### 前提条件
 
-次のイベントは、バックフィルをオンにする前に有効にする必要があります。有効にしないと、データはインポートされません。
+バックフィルを有効にする前に次のイベントを有効にする必要があります。有効にしないと、そのデータはインポートされません。
 
 - `shopify_created_order`
 - Braze 購入イベント 
 
-上記のイベントは、[イベント選択]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/shopify/setting_up_shopify/#event-selection)時にShopifyを設定する際に有効にすることができます。
+[上記のイベントは、イベント選択時にShopify設定する際に有効にできます。]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/shopify/setting_up_shopify/#event-selection)
 
 {% alert important %}
-バックフィル機能は、統合で一度だけ有効にできます。
+バックフィル機能は、インテグレーションで一度だけ有効にできます。
 {% endalert %}
 
-### ステップ1:Shopify バックフィルプロセスの開始
+### ステップ1:Shopifyのバックフィルプロセスを開始する
 
-Shopifyパートナーページで、**Start Data Backfill**を選択します。既存のShopify 顧客の場合、データのバックフィルを開始する前に、Braze が過去のすべての注文イベントを収集するためのアクセスを再認証する必要があります。
+Shopify パートナーページで、\[**データバックフィルを開始**] を選択します。Shopifyの既存のお客様の場合、データのバックフィルを開始する前に、Brazeが過去の注文イベントをすべて収集できるようにアクセスを再認証する必要があります。
 
 ![][3]{: style="max-width:75%;"}
 
-### ステップ2:Shopifyデータのバックフィルを切り替える
+### ステップ2:Shopifyデータのバックフィルをオンに切り替える
 
-次に、セットアップ・コンポーザーがポップアップ表示され、オプションで、履歴Shopifyデータのバックフィルを有効にすることができます。このバックフィルの一部として、Braze は、デフォルトでShopify 統合の直前90 日間、以下のShopify データのみを同期します。
-注文作成イベント
-Braze 購入イベント
-顧客データ
+次に、セットアップコンポーザーがポップアップし、オプションで過去のShopifyデータのバックフィルを有効にできます。このバックフィルの一環として、Brazeはデフォルト Shopify統合前の過去90日間の以下のShopifyデータのみを同期します。
+- 注文作成イベント
+- Braze 購入イベント
+- 顧客データ
 
-どの特定の顧客データがバックフィルされているかを確認するには、[Supported Shopify customer data](#supported-shopify-customer-data) セクションを参照してください。
+どの特定の顧客データがバックフィルされているかを確認するには、[サポート対象のShopifyの顧客データセクションをご覧ください](#supported-shopify-customer-data)。
 
 {% alert note %}
-この機能は、バックフィル中に作成された新規ユーザの電子メールとSMS サブスクリプションの状態のみを同期します。これは、ユーザの現在のステータスをオーバーライドしないように、Braze で既存のユーザのサブスクリプションステートを同期しません。<br><br>現在の動作に関するフィードバックがある場合は、製品ポータルから送信してください。**Dashboard**の**Resources**に**Product Roadmap**と記載されています(弊社の[updated navigation]({{site.baseurl}}/navigation)を使用している場合は、**Community**> **Product
+この機能は、バックフィル中に作成された新規ユーザーのメールとSMSのサブスクリプション状態のみを同期します。これにより、ユーザーの現在のステータスが上書きされないように、Braze の既存のユーザーのサブスクリプションステータスは同期されません。<br><br>現在の行動に関するフィードバックがある場合は、**ダッシュボードの** \[**Resources** as **Product Roadmap**] に一覧表示されている製品ポータルから送信してください ([更新されたナビゲーションを使用している場合は]({{site.baseurl}}/navigation)、\[**コミュニティ**] > \[**製品ロードマップ**] を選択します)。
 {% endalert %}
 
-**Next** を押すと、バックフィルがアクティブになり、過去のデータに対して同期が開始されます。Historical Backfill は**once** のみ完了することができるため、データの同期が完了した後にこのインポートを再度実行することはできません。
+\[**次へ] をクリックすると**、バックフィルが有効になり、過去のデータの同期が開始されます。**ヒストリカル・バックフィルは一度しか完了できないため**、データの同期が完了した後にこのインポートを再度実行することはできないことに注意してください。
 
 ![][1]{: style="max-width:75%;"}
 
 ### ステップ3:バックフィル中
 
-ダッシュボード通知を受け取り、ステータスが"In Progress"として表示され、バックフィルが開始されたことを示します。バックフィルが完了するまでにかかる時間は、顧客の数によって異なり、Braze がShopify から同期する必要がある注文の数によって異なります。この間、このページを離れ、ダッシュボードの通知または電子メールがバックフィルが完了したことを通知するまで待機できます。
+ダッシュボードに通知が届き、バックフィルが開始されたことを示すステータスが「進行中」と表示されます。バックフィルが完了するまでにかかる時間は、BrazeがShopifyから同期する必要があるお客様と注文の数によって異なりますのでご注意ください。この間は、このページを離れ、バックフィルの完了を知らせるダッシュボード通知またはメールくのを待つことができます。
 
 ![][2]{: style="max-width:75%;"}
 
-### ステップ4:バックフィル完了
-Shopify のバックフィルが完了すると、ダッシュボード通知とメールが送信されます。Shopifyパートナーページは、Historical Backfillのステータスを"Complete"に更新します。
+### ステップ 4:バックフィルが完了しました
+Shopifyのバックフィルが完了すると、ダッシュボード通知とメールが届きます。Shopify パートナーページでも、履歴バックフィルのステータスが「完了」更新されます。
 
 ## サポートされているShopifyの顧客データ
 
-### Shopifyのカスタム属性
+### Shopify カスタム属性
 
-| 属性名| 説明|
+| 属性名 | 説明 |
 | --- | --- |
-| `shopify_order_count` | このカスタム属性は、この顧客がShopifyで完了した注文の合計に対応します。これは、このプロセスの一部としてバックフィルされたユーザーに対してのみ使用できます。|
-| `shopify_total_spent` | このカスタム属性は、この顧客がShopifyで費やした合計金額に対応します。これは、このプロセスの一部としてバックフィルされたユーザーに対してのみ使用できます。|
-| `shopify_tags` | この属性は、Shopify admins によって設定された[カスタマータグ](https://help.shopify.com/en/manual/shopify-admin/productivity-tools/using-tags#tag-types) に対応します。|
+| `shopify_order_count` | このカスタム属性は、この顧客 Shopifyで完了した注文の合計に対応します。これは、このプロセスの一環としてバックフィルされたユーザーのみが使用できます。 |
+| `shopify_total_spent` | このカスタム属性は、この顧客 Shopifyで費やした合計金額に対応します。これは、このプロセスの一環としてバックフィルされたユーザーのみが使用できます。 |
+| `shopify_tags` | この属性は、[Shopify管理者が設定した顧客ータグに対応しています](https://help.shopify.com/en/manual/shopify-admin/productivity-tools/using-tags#tag-types)。 |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 }
 
-### Shopify標準属性
-- メールアドレス
+### Shopifyの標準属性
+- メール
 - 名
 - 姓
 - 電話
