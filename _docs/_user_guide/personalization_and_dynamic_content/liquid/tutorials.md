@@ -10,12 +10,17 @@ page_type: tutorial
 
 > New to Liquid? These tutorials will help you get started with writing Liquid code for common use cases.
 
-When you’re finished with this tutorial, you’ll be able to:
+When you’re finished with these tutorials, you’ll be able to:
 
 - Write Liquid code for common use cases
 - String together Liquid conditional logic to personalize messages based on user data
 
-## Personalize messages for user segments
+| Tutorial | Learning objective |
+| --- | --- |
+| [Personalize messages for user segments](#segments) | default values, conditional logic |
+{: .reset-br-td-1 .reset-br-td-2}
+
+## Personalize messages for user segments {#segments}
 
 Let’s customize messages for different user segments, like VIP customers and new subscribers.
 
@@ -73,3 +78,4 @@ Thanks for traveling with us! Enjoy your unique discount code: SUMMRTRVLS240.
 {% endraw %}
 {% enddetails %}
 
+## 
