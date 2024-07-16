@@ -1,13 +1,13 @@
 ---
-nav_title: チャンネル拡張
-article_title: チャネル拡張パートナー
-page_order: 2
+nav_title: チャネル拡張
+article_title:チャネルエクステンションパートナー
+page_order:2
 
 page_type: landing
-description: "このランディングページには、メッセージングストラテジを拡張し、カスタムチャネル間で接続またはターゲットを設定できるBraze パートナー(Alloys) が一覧表示されます。"
+description:"このランディングページには、メッセージング戦略を拡大し、カスタムチャネルに接続したり、ターゲットを絞ったりできるBrazeパートナー（Alloys）がリストアップされている。"
 
 layout: partner_page
-search_tag: Partner
+search_tag:Partner
 partner_api: "https://www.braze.com/api/v1/partners"
 partner_path: "https://www.braze.com/product/alloys/partners/"
 
@@ -54,7 +54,7 @@ valid_partner_list:
   url: /docs/partners/message_orchestration/channel_extensions/email_templates/iam_studio/
 - name: Ada
   url: /docs/partners/message_orchestration/channel_extensions/surveys/ada/
-- name: B.Layer 
+- name: B.Layer
   url: /docs/partners/message_orchestration/channel_extensions/email_templates/blayer/
 - name: Sageflo
   url: /docs/partners/message_orchestration/channel_extensions/email_templates/sageflo/
