@@ -14,7 +14,7 @@ description: "This how-to article will walk you through how to set up Location t
 > With Braze [Cloud Data Ingestion]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/overview/) (CDI), you can set up a direct connection from your data warehouse or file storage system to Braze to sync relevant user or catalog data on a recurring basis.
 
 {% alert warning %}
-This feature queries your data warehouse directly, so you will incur all costs associated with running these queries in your data warehouse. It won't consume [SQL segment credits]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/#monitoring-your-sql-segments-usage) or data points.
+This feature queries your data warehouse directly, so you will incur all costs associated with running these queries in your data warehouse. CDI Segments won't consume [SQL segment credits]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/#monitoring-your-sql-segments-usage), don't count towards your Segment Extension limit, and do not consume data points.
 {% endalert %}
 
 ## Prerequisites
