@@ -81,11 +81,11 @@ Search for channels to see quick create options among your top 10 results. For e
 
 --->
 
-### Filter for archived content
+### Filter for active and draft content
 
-You can include archived content in your search results by selecting **Show Archived Content**. By default, the toggle is off, and archived content isn't included.
+You can include active and draft content in your search results by selecting **Show active and draft only**. By default, the toggle is on, and all content, including archived, is shown.
 
-![The "Show Archived Content" toggle.][4]
+![The "Show active and draft only" toggle.][4]
 
 ### Search for emojis
 
