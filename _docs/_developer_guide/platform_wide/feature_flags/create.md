@@ -449,13 +449,13 @@ const booleanProperty = await BrazePlugin.getFeatureFlagBooleanProperty("expande
 const numberProperty = await BrazePlugin.getFeatureFlagNumberProperty("expanded_user_profile", "height");
 
 // Returns the property as a number in milliseconds
-const timestampProperty = await Braze.getFeatureFlagTimestampProperty("expanded_user_profile", "account_start");
+const timestampProperty = await BrazePlugin.getFeatureFlagTimestampProperty("expanded_user_profile", "account_start");
 
 // Returns the property as a String of the image URL
-const imageProperty = await Braze.getFeatureFlagImageProperty("expanded_user_profile", "homepage_icon");
+const imageProperty = await BrazePlugin.getFeatureFlagImageProperty("expanded_user_profile", "homepage_icon");
 
 // Returns the property as an object
-const jsonObjectProperty = await Braze.getFeatureFlagJSONProperty("expanded_user_profile", "footer_settings");
+const jsonObjectProperty = await BrazePlugin.getFeatureFlagJSONProperty("expanded_user_profile", "footer_settings");
 ```
 
 {% endtab %}
