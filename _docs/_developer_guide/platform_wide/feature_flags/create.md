@@ -429,7 +429,7 @@ var doubleProperty = featureFlag.getDoubleProperty("height");
 var timestampProperty = featureFlag.getTimestampProperty("account_start");
 
 // Returns the image property as a String of the image URL
-var imageProperty = featureFlag.imageProperty("homepage_icon");
+var imageProperty = featureFlag.getImageProperty("homepage_icon");
 
 // Returns the JSON object property as a JSONObject
 var jsonObjectProperty = featureFlag.getJSONProperty("footer_settings");
