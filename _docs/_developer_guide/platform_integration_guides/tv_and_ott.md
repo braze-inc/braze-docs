@@ -10,7 +10,6 @@ platform:
   - Web
   - Android
   - FireOS
-  
 ---
 
 # TV and OTT integrations
@@ -38,6 +37,7 @@ The following lists features and messaging channels supported today.
             <th>Content Cards</th>
             <th>Push notifications</th>
             <th>Canvas</th>
+            <th>[Feature Flags](https://www.braze.com/docs/developer_guide/platform_wide/feature_flags/about)</th>
         </tr>
     </thead>
     <tbody>
@@ -48,6 +48,7 @@ The following lists features and messaging channels supported today.
             <td for="content-cards"><i class="fas fa-check text-success"></i></td>
             <td for="push"><i class="fas fa-check text-success"></i></td>
             <td for="canvas"><i class="fas fa-check text-success"></i></td>
+            <td for="feature-flags"><i class="fas fa-check text-success"></i></td>
         </tr>
         <tr>
             <td>Kindle Fire</td>
@@ -56,6 +57,7 @@ The following lists features and messaging channels supported today.
             <td for="content-cards"><i class="fas fa-check text-success"></i></td>
             <td for="push"><i class="fas fa-check text-success"></i></td>
             <td for="canvas"><i class="fas fa-check text-success"></i></td>
+            <td for="feature-flags"><i class="fas fa-check text-success"></i></td>
         </tr>
         <tr>
             <td>Android TV</td>
@@ -64,6 +66,7 @@ The following lists features and messaging channels supported today.
             <td for="content-cards"><i class="fas fa-check text-success"></i></td>
             <td for="push"><i class="fas fa-check text-success"></i></td>
             <td for="canvas"><i class="fas fa-check text-success"></i></td>
+            <td for="feature-flags"><i class="fas fa-check text-success"></i></td>
         </tr>
         <tr>
             <td>LG TV (webOS)</td>
@@ -72,6 +75,7 @@ The following lists features and messaging channels supported today.
             <td for="content-cards"><i class="fas fa-check text-success"></i></td>
             <td for="push">N/A</td>
             <td for="canvas"><i class="fas fa-check text-success"></i></td>
+            <td for="feature-flags"><i class="fas fa-check text-success"></i></td>
         </tr>
         <tr>
             <td>Samsung Tizen TV</td>
@@ -80,6 +84,7 @@ The following lists features and messaging channels supported today.
             <td for="content-cards"><i class="fas fa-check text-success"></i></td>
             <td for="push">N/A</td>
             <td for="canvas"><i class="fas fa-check text-success"></i></td>
+            <td for="feature-flags"><i class="fas fa-check text-success"></i></td>
         </tr>
         <tr>
             <td>Roku</td>
@@ -88,15 +93,26 @@ The following lists features and messaging channels supported today.
             <td for="content-cards"><i class="fas fa-times text-warning"></i></td>
             <td for="push">N/A</td>
             <td for="canvas"><i class="fas fa-check text-success"></i></td>
+            <td for="feature-flags"><i class="fas fa-check text-success"></i></td>
         </tr>
         <tr>
             <td>Apple TV OS</td>
             <td for="data-analytics"><i class="fas fa-check text-success"></i></td>
-            <td for="iam"><i class="fas fa-check text-success"></i></td>
+             <td for="iam"><i class="fas fa-check text-success"></i></td>
             <td for="content-cards"><i class="fas fa-check text-success"></i></td>
             <td for="push"><i class="fa-solid fa-minus"></i></td>  
             <td for="canvas"><i class="fas fa-check text-success"></i></td>
+            <td for="feature-flags"><i class="fas fa-check text-success"></i></td>
         </tr>
+       <tr>
+          <td>Apple Vision Pro</td>
+          <td for="data-analytics"><i class="fas fa-check text-success"></i></td>
+           <td for="iam"><i class="fas fa-check text-success"></i></td>
+          <td for="content-cards"><i class="fas fa-check text-success"></i></td>
+          <td for="push"><i class="fa-solid fa-minus"></i></td>  
+          <td for="canvas"><i class="fas fa-check text-success"></i></td>
+          <td for="feature-flags"><i class="fas fa-check text-success"></i></td>
+      </tr>
     </tbody>
 </table>
 
@@ -104,12 +120,6 @@ The following lists features and messaging channels supported today.
 - <i class="fa-solid fa-minus"></i> = Partial support
 - <i class="fas fa-times text-warning"></i> = Not supported by Braze
 - N/A = Not supported by OTT platform
-
-{% alert note %}
-The following are not currently supported on OTT:
-- Out-of-the-box slide-up in-app messages 
-- Custom HTML
-{% endalert %}
 
 ## Integration guides
 
@@ -123,6 +133,7 @@ Features include:
 - Push Notifications (known as ["Heads Up Notifications"][7])
   - The priority must be set to "HIGH" for these to appear. All notifications appear in the Fire TV settings menu.
 - Content Cards
+- Feature Flags
 - In-app messages
   - To show HTML messages on non-touch environments like TVs, set `com.braze.configuration.BrazeConfig.Builder.setIsTouchModeRequiredForHtmlInAppMessages` to `false` (available from [Android SDK v23.1.0][android-tv-html])
 
@@ -137,6 +148,7 @@ Features include:
 - Data and Analytics collection for cross-channel engagement
 - Push Notifications
 - Content Cards
+- Feature Flags
 - In-app messages
 
 For more information, visit the [Fire OS integration guide][2].
@@ -149,13 +161,13 @@ Features include:
 
 - Data and Analytics collection for cross-channel engagement
 - Content Cards
+- Feature Flags
 - In-app messages 
   - To show HTML messages on non-touch environments like TVs, set `com.braze.configuration.BrazeConfig.Builder.setIsTouchModeRequiredForHtmlInAppMessages` to `false` (available from [Android SDK v23.1.0][android-tv-html])
 - &#42; Push Notifications (Manual Integration Required)
+  - Push notifications are not supported natively on Android TV. To learn why, see Google's [Design Guidelines][5]. You may however, **do a manual integration of Push notification UI to achieve this**. See our [documentation][6] on how to set this up.
 
 For more information, visit the [Android SDK integration guide][2].
-
-Push notifications are not supported natively on Android TV. For more information why, see Google's [Design Guidelines][5]. You may however, **do a manual integration of Push notification UI to achieve this**. See our [documentation][6] on how to set this up.
 
 {% alert note %}
 Make sure to create a new Android app in the dashboard for your Android OTT integration.
@@ -169,6 +181,7 @@ Features include:
 
 - Data and analytics collection for cross-channel engagement
 - Content Cards (via [Headless UI](#custom-ui))
+- Feature Flags
 - In-app messages (via [Headless UI](#custom-ui))
 
 For more information, visit the [Web Smart TV integration guide][8].
@@ -181,38 +194,60 @@ Features include:
 
 - Data and analytics collection for cross-channel engagement
 - Content Cards (via [Headless UI](#custom-ui))
+- Feature Flags
 - In-app messages (via [Headless UI](#custom-ui))
 
 For more information, visit the [Web Smart TV integration guide][8].
 
 ### Roku {#roku}
 
-Use the Braze Roku SDK to integrate with [Roku TVs](https://developer.roku.com/docs/developer-program/getting-started/roku-dev-prog.md)
+Use the Braze Roku SDK to integrate with [Roku TVs](https://developer.roku.com/docs/developer-program/getting-started/roku-dev-prog.md).
 
 Features include:
 
 - Data and analytics collection for cross-channel engagement
 - In-app messages (via [Headless UI](#custom-ui))
   - Webviews are not supported by the Roku platform, so HTML in-app messages are therefore not supported.
+- Feature Flags
 
 For more information, visit the [Roku integration guide][3].
 
 ### Apple TV OS {#tvos}
 
-Use the Braze Swift SDK to integrate on tvOS
-
-For more information, visit the [iOS Swift SDK integration guide][4].
+Use the Braze Swift SDK to integrate with tvOS.
 
 Features include:
 
 - Data and analytics collection for cross-channel engagement
 - Content Cards (via [Headless UI](#custom-ui))
+- Feature Flags
 - In-app messages (via [Headless UI](#custom-ui))
   - Webviews are not supported by the tvOS platform, so HTML in-app messages are therefore not supported.
   - See our [sample app][9] to learn more about how to use a Headless UI for customized messaging on tvOS.
 - Silent push notifications and update badging
 
-**Note**: To avoid showing mobile in-app messages to your TV users, be sure to set up either [App Targeting](#app-targeting) or use key-value pairs to filter out messages. For example, only displaying tvOS messages if they contain a special `tv = true` key-value pair.
+For more information, visit the [iOS Swift SDK integration guide][4].
+
+{% alert note %}
+To avoid showing mobile in-app messages to your TV users, be sure to set up either [App Targeting](#app-targeting) or use key-value pairs to filter out messages. For example, only displaying tvOS messages if they contain a special `tv = true` key-value pair.
+{% endalert %}
+
+### Apple Vision Pro {#vision-pro}
+
+Use the Braze Swift SDK to integrate with visionOS. Most features available on iOS are also available on visionOS, including:
+
+- Analytics (sessions, custom events, purchases, etc.)
+- In-App Messaging (data models and UI)
+- Content Cards (data models and UI)
+- Push Notifications (user-visible with action buttons and silent notifications)
+- Feature Flags
+- Location Analytics
+
+For more information, visit the [iOS Swift SDK integration guide][4].
+
+{% alert important %}
+Some iOS features are partially-supported or unsupported. For the full list, see [visionOS support](https://www.braze.com/docs/developer_guide/platform_integration_guides/swift/visionos).
+{% endalert %}
 
 ## App targeting {#app-targeting}
 
@@ -240,7 +275,6 @@ Read more about custom handling messaging:
 **Web SDK**
 - [In-App Message Customization](https://www.braze.com/docs/developer_guide/platform_integration_guides/web/in-app_messaging/customization/key_value_pairs)
 - [Content Cards Customization](https://www.braze.com/docs/developer_guide/platform_integration_guides/web/content_cards/customization/custom_ui/)
- 
 
 [1]: {% image_buster /assets/img/android_ott.png %}
 [2]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/

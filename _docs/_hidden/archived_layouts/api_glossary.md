@@ -68,7 +68,7 @@ The response from this endpoint includes a field for `email_template_id`, which 
 
 ```
 
-#### SAMPLE RESPONSE
+#### EXAMPLE RESPONSE
 ```
 {
   "template_name": "email_template_name",
@@ -120,7 +120,7 @@ GET https://YOUR_REST_API_URL/templates/email/list
 
 ```
 
-#### SAMPLE RESPONSE
+#### EXAMPLE RESPONSE
 ```
 GET https://YOUR_REST_API_URL/templates/email/list
 
@@ -179,7 +179,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ```
 
-#### SAMPLE RESPONSE
+#### EXAMPLE RESPONSE
 ```
 POST https://YOUR_REST_API_URL/canvas/trigger/send
 Content-Type: application/json
@@ -235,7 +235,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ```
 
-#### SAMPLE RESPONSE
+#### EXAMPLE RESPONSE
 ```
 {
   // One of "external_id" or "user_alias" or "braze_id" is required

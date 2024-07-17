@@ -36,6 +36,7 @@ Use feature flags to:
 - [Remotely control app variables](#remotely-control-app-variables)
 - [Synchronize feature rollout and messaging](#message-coordination)
 - [Experiment with new features](#feature-experimentation)
+- [Segment users by feature flags](#segmentation)
 
 ### Gradual rollouts
 
@@ -174,6 +175,18 @@ Now, 50% of users will see the old experience, while the other 50% will see the 
 
 Once we determine our winner, we can stop this campaign and increase the rollout percentage on the feature flag to 100% for all users while our engineering team hard-codes this into our next app release.
 
+### Segmentation
+
+Use the **Feature Flag** filter to create a segment or target messaging at users based on whether they're using a feature flag. For example, let's say we have a feature flag that controls premium content in our app. We could create a segment that filters for users who don't have the feature flag enabled, and then send that segment a message urging them to upgrade their account to view premium content.
+
+![][14]
+
+For more information about filtering on segments, see [Creating a segment]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/).
+
+{% alert note %}
+To prevent recursive segments, it is not possible to create a segment that references other feature flags.
+{% endalert %}
+
 ## Limitations
 
 The following table describes the limitations that apply at a feature flag level. To purchase the paid version of feature flags, contact your Braze account manager, or request an upgrade in the Braze dashboard.
@@ -207,3 +220,4 @@ Even if the same feature flag matches multiple criteria, such as if it's used in
 [10]: {% image_buster /assets/img/feature_flags/feature-flags-use-case-navigation-link-2.png %}
 [11]: {% image_buster /assets/img/feature_flags/feature-flags-use-case-loyalty.png %}
 [12]: {{site.baseurl}}/developer_guide/platform_wide/feature_flags/experiments/
+[14]: {% image_buster /assets/img/feature_flags/feature_flag_segmentation_filter.png %}

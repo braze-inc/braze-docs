@@ -93,7 +93,7 @@ Once saved, Braze will send special instructions to the ESP in order to place th
 SSL enablement will wrap the URL of the tracking pixel with HTTPS instead of HTTP-if your SSL is misconfigured, it may affect the efficacy of the tracking pixel. 
 {% endalert %}
 
-## List-unsubscribe header
+## List-unsubscribe header {#list-unsubscribe}
 
 {% alert note %}
 Beginning on February 15, 2024, new companies will have the list-unsubscribe header (with one-click unsubscribe) enabled by default.
@@ -266,6 +266,11 @@ Learn more about best practices for email list management in [Managing email sub
 {% details Can the one-click unsubscribe URL (via list-unsubscribe header) link to a preference center? %}
 No, that doesn't adhere to RFC 8058, meaning you won't be compliant with Yahoo and Gmail's one-click unsubscribe requirement.
 {% enddetails %}
+
+{% details Why do I receive the error message "Your email body does not include an unsubscribe link" when composing my preference center? %}
+A preference center is not considered an unsubscribe link. Your email recipients must have the option to unsubscribe from any commercial emails to remain CAN-SPAM compliant.
+{% enddetails %}
+
 
 {% details Will I need to edit past email campaigns and Canvases to apply the one-click unsubscribe setting after enabling it? %}
 If you don't have any of the use cases for message-level one-click list-unsubscribe setting, there's no required action as long as the setting is turned on under **Email Preferences**. Braze will automatically add the one-click unsubscribe headers to all outgoing marketing and promotional messages. However, if you do need to configure one-click unsubscribe behavior on a per message-level, you'll need to update prior campaigns and Canvas steps with email accordingly.

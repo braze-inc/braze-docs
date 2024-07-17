@@ -72,9 +72,9 @@ extension AppboyManager: ABKInAppMessageUIDelegate {
 {% endtab %}
 {% endtabs %}
 
-## Sample use cases
+## Use cases
 
-There are three sample customer use cases provided. Each use case offers a detailed explanation, relevant code snippets, and a look into how in-app messages may look and be used in the Braze dashboard:
+We've provided three use cases below. Each use case offers a detailed explanation, relevant code snippets, and a look into how in-app messages may look and be used in the Braze dashboard:
 - [Custom slide-up in-app message](#custom-slide-up-in-app-message)
 - [Custom modal in-app message](#custom-modal-in-app-message)
 - [Custom full in-app message](#custom-full-in-app-message)

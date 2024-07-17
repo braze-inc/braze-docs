@@ -59,7 +59,7 @@ You also have the option to set up optional and customized threshold alerts. If 
 
 ### Step 4: Promotion code upload
 
-Braze does not manage code creation or redemption. As a result, you'll have to generate your promo codes to a CSV file and upload them to Braze. You can use our built-in integration with [Voucherify]({{site.baseurl}}/partners/channel_extensions/loyalty/voucherify/) or [Talon.One]({{site.baseurl}}/partners/channel_extensions/loyalty/talonone/) to create and export promo codes. Make sure that there is only one code on each row.
+Braze does not manage code creation or redemption. As a result, you'll have to generate your promotion codes to a CSV file and upload them to Braze. You can use our built-in integration with [Voucherify]({{site.baseurl}}/partners/channel_extensions/loyalty/voucherify/) or [Talon.One]({{site.baseurl}}/partners/channel_extensions/loyalty/talonone/) to create and export promotion codes. Make sure that there is only one code on each row.
 
 {% alert note %}
 Maximum file size is 100&nbsp;MB and the maximum list size is 20MM of unused codes. If you find the wrong file was uploaded, simply upload a new file and the previous file will be replaced.
@@ -97,17 +97,17 @@ From there, you can paste this code into a message within the dashboard.
 
 Using [Liquid][11], you can insert one of the unique promotion codes from the uploaded CSV file into a message. That code will be marked as sent on the Braze backend to ensure no other message sends that same code. 
 
-When a code snippet is used in a multichannel campaign or Canvas step, each user always receives a unique code. For different steps in a Canvas, each user receives several promotion codes. If a particular user is eligible to receive a code through more than one channel, this user will receive the same code through each channel. 
+When a code snippet is used in a multichannel campaign or Canvas step, each user always receives a unique code. For different steps in a Canvas, each user receives several promotion codes. 
 
-If the user receives two messages through two channels, only one code will be shown and used in both messages. The same applies for reporting purposes: one code will be sent, and the user will receive this code through the two channels. For example, for a multichannel Canvas step, only one code would be used by the user.
+If a particular user is eligible to receive a code through more than one channel, this user will receive the same code through each channel. For example, if a user receives two messages through two channels, they will receive only one code. The same applies for reporting purposes: one code will be sent, and the user will receive this code through the two channels. For example, for a multichannel Canvas step, only one code would be used by the user.
 
 {% alert important %}
-If there are no remaining promotion codes available when sending test or live messages from a campaign that pulls in promo codes, the message will not send.
+If there are no remaining promotion codes available when sending test or live messages from a campaign that pulls in promotion codes, the message will not send.
 {% endalert %}
 
 #### Sending test messages with promotion codes
 
-Test sends and seed group email sends will use up promo codes unless requested otherwise. Contact your Braze account manager to update this feature behavior so promo codes aren't used during test sends and seed group email sends.
+Test sends and seed group email sends will use up promotion codes unless requested otherwise. Contact your Braze account manager to update this feature behavior so promotion codes aren't used during test sends and seed group email sends.
 
 ## Determining how many codes have been used
 
@@ -118,6 +118,50 @@ You can find the remaining code count in the **Remaining** column of the promoti
 This code count can also be found when revisited a pre-existing promotion code list page. 
 
 ![][13]{: style="max-width:50%"}
+
+## Multichannel and single-channel sends
+
+For multichannel and single-send campaigns and Canvases, all promotion codes referenced in a message’s Liquid are deducted to be used **before** the message is sent to make sure the following occurs:
+
+- The same promotion codes are used across channels in a multichannel message.
+- No extra promotion codes are used up if a message fails or aborts.
+
+If a user has two promotion code lists referenced in one message that are split by a Liquid conditional logic tag, all promotion codes will still be deducted, regardless of which conditional flow the user follows.
+
+### Use case
+
+For the following example, both promotion code lists `vip-deal` and `regular-deal` will be deducted. Here's the Liquid:
+
+{% raw %}```{% if user.is_vip%}
+{% promotion(‘vip-deal)%} {% else %} {% promotion(‘regular-deal’)%} {% endif %}```{% endraw %}
+
+Braze recommends to uploading more promotion codes than what you estimate will be used. If a promotion code list expires or runs out of promotion codes, the subsequent messages will be aborted.
+
+{% alert tip %}
+**Here's an analogy for how promotion codes are used up in Braze.** <br><br>Imagine that sending your message is like sending a letter at the post office. You give the letter to a clerk, and they see that your letter should include a coupon. The clerk pulls the first coupon from the stack and adds it to the envelope. The clerk sends the letter, but for some reason the letter gets lost in the mail (and the coupon is also now lost). <br><br>In this scenario, Braze is the postal clerk and your promotion code is the coupon. We can't get it back after it's been pulled from the stack of promotion codes, regardless of the webhook result.
+{% endalert %}
+
+## Frequently asked questions
+
+### Which messaging channels can I use with promotion codes?
+
+Promotion codes are currently supported for: email, mobile push, web push, Content Cards, webhook, SMS, and WhatsApp. Braze Transactional Email campaigns and in-app messages do not currently support promotion codes.
+
+### Will test sends and seed sends use up my promotion codes?
+
+By default, test sends and seed group email sends will use promotion codes per user, per test send. However, you can reach out to your Braze account manager to update this behavior to not use promotion codes during testing.
+
+### How do promotion codes work in a multichannel campaign or Canvas step?
+
+Promotion codes are deducted prior to message send. If the messaging channels in the campaign or Canvas send, this may cause the promotion code to be used for reasons including: Quiet Hours, rate limits, frequency capping, exit criteria, and more. However, if any of the message channels send, one promotion code will be used.
+
+### What happens if I have multiple Liquid snippets that reference the same promotion code list in my message?
+
+The same promotion code will be templated for all instances of the Liquid snippet in your message.
+
+### What happens when a promotion code list is expired or empty?
+
+The message will be canceled. However, because promotion codes are "preloaded," the promotion code will still be used up, even if the message is not sent.
 
 [1]:{% image_buster /assets/img/promocodes/promocode1.png %}
 [2]:{% image_buster /assets/img/promocodes/promocode2.png %}

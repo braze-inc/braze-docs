@@ -85,7 +85,7 @@ Braze allows you to remotely enable or disable functionality for a selection of 
 ## Personalization {#personalization}
 The personalization layer represents the ability to deliver dynamic content in your messages. By using Liquid, a widely-used personalization language, your team can dynamically pull in existing data to display the message tailored to each recipient. Additionally, you can insert any information accessible on your webserver or via API directly into the messages you're sending, such as push notifications or emails, by using [Connected Content][11]. Connected Content builds on top of Liquid and uses familiar syntax.
 
-And because this dynamic content is programmable, marketers can include computed values, responses from other calls, or product catalog items. Once you've set these systems up during implementation, your marketing team can do this with little to no support from technical teams. 
+And because this dynamic content is programmable, marketers can include computed values, responses from other calls, or product catalog items. After you've set these systems up during implementation, your marketing team can do this with little to no support from technical teams. 
 
 ## Action {#action}
 The action layer enables your actual messaging to your users. The purpose of the action layer is to send the right message to the right user at the right time, based on the data available through all of the layers previously discussed. Messaging is done inside your app or site (such as sending in-app messages or through graphic elements like Content Card carousels and banners) or outside your app experience (such as sending push notifications or emails).
@@ -98,7 +98,7 @@ The [Braze SDK][5] powers additional messaging channels: push, in-app messages, 
 ![][13]
 
 ## Exporting data
-Critically, all end-user interactions with Braze are tracked so you can measure your engagement and outreach. And once Braze has aggregated your data from all these sources, it can be exported back to your tech stack using a variety of tools, closing the loop.
+Critically, all end-user interactions with Braze are tracked so you can measure your engagement and outreach. And after Braze has aggregated your data from all these sources, it can be exported back to your tech stack using a variety of tools, closing the loop.
 
 ### Currents
 [Currents][14] is an optional Braze add-on that provides a granular streaming export that continuously feeds other destinations of your stack. Currents is a per user per event raw data feed that exports data every five minutes, or every 15,000 events, whichever comes first. Examples of some downstream destinations for Currents would be Segment, S3, Redshift and Mixpanel, among others. 

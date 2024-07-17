@@ -11,7 +11,7 @@ description: "This reference article shows an example of a product request."
  
 Here is an example of a good product request submitted by a customer. It clearly defines the request and details their use case for the feature. 
  
-## Sample request from skyscanner
+## Example request from skyscanner
  
 ### What problem are you trying to solve? 
 Skyscanner would like to be able to indicate the priority of certain tags over others, in the context of frequency capping.

@@ -91,7 +91,23 @@ The setup for a catalog sync closely follows the process for [user-data CDI inte
 {% endtab %}
 {% tab BigQuery %}
 
-1. Optionally, set up a new project or dataset to hold your source table. Create one or more tables to use for your CDI integration with the following fields:
+1. Optionally, set up a new project or dataset to hold your source table. 
+
+```json
+CREATE SCHEMA BRAZE-CLOUD-PRODUCTION.INGESTION;
+```
+
+Create one or more tables to use for your CDI integration with the following fields:
+
+```json
+CREATE TABLE `BRAZE-CLOUD-PRODUCTION.INGESTION.CATALOGS_SYNC`
+(
+  updated_at TIMESTAMP DEFAULT current_timestamp,
+  id STRING,
+  payload JSON,
+  deleted BOOLEAN
+);
+```
 
 | FIELD NAME | TYPE | MODE |
 | --- | --- | --- |
@@ -115,7 +131,21 @@ The service account should have the below permissions:
 {% endtab %}
 {% tab Databricks %}
 
-1. Set up a source table in Databricks. You can use the names in the following example or choose your own database, schema, and table names. You may also use a view or a materialized view instead of a table.
+1. Set up a source table in Databricks. You can use the names in the following example or choose your own catalog, schema, and table names. You may also use a view or a materialized view instead of a table.
+
+```json
+CREATE SCHEMA BRAZE-CLOUD-PRODUCTION.INGESTION;
+```
+
+```json
+CREATE TABLE `BRAZE-CLOUD-PRODUCTION.INGESTION.CATALOGS_SYNC`
+(
+  updated_at TIMESTAMP DEFAULT current_timestamp(),
+  id STRING,
+  deleted BOOLEAN,
+  payload STRING
+);
+```
 
 | FIELD NAME | TYPE | MODE |
 | --- | --- | --- |

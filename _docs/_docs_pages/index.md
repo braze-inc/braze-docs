@@ -22,7 +22,7 @@ doc_menu_list:
     description: "Learn how to use the Braze platform to foster a more impactful customer experience."
   - name: Developer Guide
     bg_color: '#f7918e'
-    image: //assets/img/braze_icons/file-code-01.svg
+    image: /assets/img/braze_icons/file-code-01.svg
     link: /docs/developer_guide/home/
     description: "Integrate and activate your app or site with the Braze SDK."
   - name: Technology Partners

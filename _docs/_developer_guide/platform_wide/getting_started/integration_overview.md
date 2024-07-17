@@ -63,7 +63,7 @@ Integration cannot begin until the campaign planning step is complete. This step
 ### Creating data requirements
 Then, your CRM team should define what data is required to launch the campaigns they have planned, creating data requirements. 
 
-Many common types of user attributes, such as name, email, date of birth, country, and similar are automatically tracked once the Braze SDK is integrated. Other types of data will need to be defined as custom data.
+Many common types of user attributes, such as name, email, date of birth, country, and similar are automatically tracked after the Braze SDK is integrated. Other types of data will need to be defined as custom data.
 
 As a developer, you'll work with your team to define what additional, custom data makes sense to track. Your custom data will impact how your user base will be classified and segmented. You will set up an event taxonomy across your growth stack, structuring your data so that it is compatible with your systems as it moves in and out of Braze.
 

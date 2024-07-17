@@ -19,12 +19,6 @@
     },
     settings = $.extend(defaults, options);
 
-    function fixedEncodeURIComponent (str) {
-      return encodeURIComponent(str).replace(/[!'()*]/g, function(c) {
-        return '%' + c.charCodeAt(0).toString(16);
-      });
-    }
-
     var headers = $(settings.headers).filter(function() {
       // get all headers with an ID
       var previousSiblingName = $(this).prev().attr( "name" );
@@ -77,18 +71,18 @@
       }
       // extra div tags at html += before <a> to prevent highlighting of parent
       if (this_level === level) // same level as before; same indenting
-        html += "<div><a class='" + settings.toc_link_class + "' href='#" + fixedEncodeURIComponent(header.id) + "'  id='" + settings.listPrefix + fixedEncodeURIComponent(header.id) + "' >" + header.innerHTML + "</a></div> ";
+        html += "<div><a class='" + settings.toc_link_class + "' href='#" + header.id + "'  id='" + settings.listPrefix + header.id + "' >" + header.innerHTML + "</a></div> ";
       else if (this_level <= level){ // higher level than before; end parent ol
         for(i = this_level; i < level; i++) {
           html += "</"+settings.listType+">"
         }
-        html += "<div><a class='" + settings.toc_link_class + "' href='#" + fixedEncodeURIComponent(header.id) + "'  id='" + settings.listPrefix + fixedEncodeURIComponent(header.id) + "' >" + header.innerHTML + "</a></div> ";
+        html += "<div><a class='" + settings.toc_link_class + "' href='#" + header.id + "'  id='" + settings.listPrefix + header.id + "' >" + header.innerHTML + "</a></div> ";
       }
       else if (this_level > level) { // lower level than before; expand the previous to contain a ol
         for(i = this_level; i > level; i--) {
           html += "<"+ settings.listType + settings.bootstrapStyling +">"
         }
-        html += "<div><a class='" + settings.toc_link_class + "' href='#" + fixedEncodeURIComponent(header.id) + "'  id='" + settings.listPrefix + fixedEncodeURIComponent(header.id) + "' >" + header.innerHTML + "</a></div> ";
+        html += "<div><a class='" + settings.toc_link_class + "' href='#" + header.id + "'  id='" + settings.listPrefix + header.id + "' >" + header.innerHTML + "</a></div> ";
       }
       level = this_level; // update for the next one
     });

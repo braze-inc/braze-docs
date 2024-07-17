@@ -82,7 +82,7 @@ To correctly send your audience data from the Adobe Experience Platform to Braze
 6. You should now see your field mapping in the list.<br>![][11]<br><br>
 7. To add more mappings, repeat steps 1 through 6, as necessary. 
 
-## Example
+## Use case
 
 Let's say your XDM profile schema and your Braze instance contains the following attributes and identities:
 

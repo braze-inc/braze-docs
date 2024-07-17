@@ -95,7 +95,7 @@ During the next scheduled sync, all rows with a `UPDATED_AT` timestamp later tha
 }
 ```
 
-### Example: First time sync and subsequent updates
+### Use case: First time sync and subsequent updates
 
 This example shows the general process for syncing data for the first time, then only updating changing data (deltas) in the subsequent updates. Let's say we have a table `EXAMPLE_DATA` with some user data. On day 1, it has the following values:
 
@@ -251,7 +251,7 @@ Now you need to add only the changed values into the CDI source table. These row
 
 CDI will only sync the new rows, so the next sync that runs will only sync the last five rows.
 
-### Example: Update a field in an existing array of objects
+### Use case: Update a field in an existing array of objects
 
 This example shows how to update a field in an existing array of objects. Let's say we have a source table with the following definition:
 
@@ -464,11 +464,11 @@ We use the `UPDATED_AT` timestamp to track what data has been synced successfull
 - If you have very long-running pipelines or queries writing data to your source table, avoid running these concurrently with a sync, or avoid using the same timestamp for every row inserted.
 - Use a transaction to write all rows that have the same timestamp.
 
-### Example table configuration
+### Table configuration
 
-We have a public [GitHub repository](https://github.com/braze-inc/braze-examples/tree/main/data-ingestion) for customers to share best practices or code snippets. To contribute your own snippets, create a pull request!
+We have a public [GitHub repository](https://github.com/braze-inc/braze-examples/tree/main/cloud-data-ingestion) for customers to share best practices or code snippets. To contribute your own snippets, create a pull request!
 
-### Sample data formatting
+### Data formatting
 
 Any operations that are possible through the Braze `/users/track` endpoint are supported through Cloud Data Ingestion, including updating nested custom attributes, adding subscription status, and syncing custom events or purchases. 
 

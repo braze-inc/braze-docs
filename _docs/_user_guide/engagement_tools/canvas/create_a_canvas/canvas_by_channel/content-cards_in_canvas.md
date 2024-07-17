@@ -21,7 +21,7 @@ Two options that will change how the Content Card step will interact with Canvas
 
 ## Content Card expiration {#content-card-expiration}
 
-When composing a new Content Card you can choose when it should expire from the user’s feed based on its send time. A card can exist in a user's feed for up to 30 days. The countdown for a Content Card's expiration starts as soon as a user reaches the Message step in the Canvas where the card is sent. The card will be active in the user's feed from this point until it expires.
+When composing a new Content Card you can choose when it should expire from the user’s feed based on its send time. The countdown for a Content Card's expiration starts when the user reaches the Message step in the Canvas where the card is sent. The card will be active in the user's feed from this point until it expires. A card can exist in a user's feed for up to 30 days. 
 
 ### Relative versus absolute expiration dates
 
@@ -41,9 +41,9 @@ Use caution when setting an expiration date further in advance than 30 days from
 
 ### Expiration behavior
 
-The Content Card remains available in the user's feed until it reaches its expiration date, even if the user progresses to subsequent steps in the Canvas journey. If you don't want the Content Card to be live when the next steps in the Canvas are delivered, ensure that the expiration is shorter than the delay on subsequent steps.
+The Content Card remains available in the user's feed until it reaches its expiration date, even if the user progresses to subsequent steps in the Canvas journey. If you don't want the Content Card to be live when the next steps in the Canvas are delivered, make sure that the expiration is shorter than the delay on subsequent steps.
 
-Once a Content Card expires, it will automatically be removed from the user's feed during the next refresh, even if they haven't viewed it yet.
+After a Content Card expires, it will automatically be removed from the user's feed during the next refresh, even if they haven't viewed it yet.
 
 ## Advancement Behavior options {#advancement-behavior-options}
 

@@ -9,7 +9,7 @@ description: "This reference article covers how to use Braze teams in the dashbo
 
 # Teams
 
-> Braze admins can group their dashboard users into teams with varying user roles and permissions.
+> As a Braze admin, you can group your dashboard users into teams with varying user roles and permissions. This allows you to have multiple, unrelated groups of dashboard users working together in one workspace by separating the types of content that can be edited.
 
 Teams can be set up across customer base location, language, and custom attributes so that team members and non-team members have different access to messaging features and customer data. Team filters and tags can be assigned across various engagement tools.
 
@@ -17,7 +17,7 @@ Teams are not available on all Braze contracts. If you'd like to access this fea
 
 ## Creating teams
 
-Go to **Settings** > **Internal Teams** and click <i class="fas fa-plus"></i> **Add Team**.
+Go to **Settings** > **Internal Teams** and select <i class="fas fa-plus"></i> **Add Team**.
 
 {% alert note %}
 If you are using the [older navigation]({{site.baseurl}}/navigation), **Internal Teams** is located under **Manage Settings** > **Manage Teams**.
@@ -25,7 +25,7 @@ If you are using the [older navigation]({{site.baseurl}}/navigation), **Internal
 
 ![Adding a new team][68]
 
-Enter the **Team Name**. If desired, use the **Define Team** field to select a custom attribute, location, or language to further define what user data that team has access to. For example, a possible use case is to perform [testing with teams](#testing-with-teams) by creating a development team that only has access to test users, identified by a custom attribute.
+Enter the **Team Name**. If desired, use the **Define Team** field to select a custom attribute, location, or language to further define what user data the team has access to. For example, a possible use case is to perform [testing with teams](#testing-with-teams) by creating a development team that only has access to test users, identified by a custom attribute. Another use case is to restrict communication with users based on product.
 
 If a team is defined by a custom attribute, language, or country, you can then use the team to filter end-users for features like campaigns, Canvases, Content Cards, segments, and more. For more, see [Assigning team tags](#tags-and-filters).
 
@@ -36,12 +36,12 @@ Braze administrators and limited users with the company-level permission "Can Ma
 To assign a user to a team, navigate to **Settings** > **Company Users** and select a user you'd like to add to your team.
 
 {% alert note %}
-If you are using the [older navigation]({{site.baseurl}}/navigation), you can find this page by selecting your account icon and clicking **Manage Users**..
+If you are using the [older navigation]({{site.baseurl}}/navigation), you can find this page by selecting your account icon and selecting **Manage Users**.
 {% endalert %}
 
 Then perform the following steps:
 
-1. Click **Edit**.
+1. Select **Edit**.
 2. Set their User Role to **Limited**.
 3. Add them to the appropriate workspace. 
 4. Select the **Team** you'd like to add this user to, and assign specific permissions from the **Team** permissions column.
@@ -72,7 +72,7 @@ You can assign a team to Canvases, campaigns, cards, segments, email templates, 
 - Based on the *definitions* applied when the team was created, when a team filter is assigned, that engagement tool's audience is restricted to user profiles that match the definition.
 - Based on assigned *permissions*, team members will only be allowed to access dashboard engagement tools that have their team filter set. If they have limited or no workspace permissions, they must add a team filter to certain objects before they can save or launch them. Team members are also able to filter Canvases, campaigns, cards, and segments by team to identify content relevant to them.
 
-### Example
+### Use cases
 
 Consider the following two scenarios for a marketer in Braze named Michelle. Michelle is a member of a team called "Development". She has access to all of the team-level permissions for the Development team.
 
@@ -129,7 +129,25 @@ Select one or many teams to archive. If the team is not associated with any obje
 
 ![Archiving a Team that is associated with an object in Braze][86]{: style="max-width:70%;"}
 
-Braze admins can unarchive a Team by selecting the archived Team and clicking **Unarchive**.
+Braze admins can unarchive a team by selecting the archived team and selecting **Unarchive**.
+
+## How do teams differ from permission sets and roles? 
+
+You can use team, permission sets, and user roles to manage dashboard user access and responsibilities within Braze. Each feature encompasses a different collection of permissions and access-controls.
+
+### Key differences
+
+At a high level, each feature has a different scope:
+- Permission sets control what dashboard users can do across all workspaces.
+- Roles control what dashboard users can do in specific workspaces.
+- Teams control the audiences that dashboard users can message.
+
+| Feature | What you can do |
+| - | - |
+| [Permission sets]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/#permission-sets/) | Bundle permissions related to specific subject areas or actions (such as for “Developers” and “Marketers”), then apply them to dashboard users who need the same permissions across different workspaces. |
+| [Roles]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/#roles/) | Bundle individual custom permissions and workspace-access controls into predefined roles (such as “Marketer - Fashion Brands” and “Marketer - Skincare Brands”), then assign a role to dashboard users to directly grant them the associated workspace access and permissions. |
+| Teams | Limit dashboard user access to resources based on the audience (such as customer base location, language, and custom attributes). |
+{: .reset-td-br-1 .reset-td-br-2 }
 
 [2]: {% image_buster /assets/img/teams.png %}
 [3]: {% image_buster /assets/img/teams1.png %}

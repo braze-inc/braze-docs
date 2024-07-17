@@ -52,6 +52,9 @@ guide_menu_list:
   - name: Regular Expressions
     link: /docs/user_guide/engagement_tools/segments/regex/
     image: /assets/img/braze_icons/search-sm.svg
+  - name: Troubleshooting
+    link: /docs/user_guide/engagement_tools/segments/troubleshooting/
+    image: /assets/img/braze_icons/annotation-question.svg
 
 guide_menu_title2: "Other"
 guide_menu_list2:

@@ -28,7 +28,7 @@ If you have any historical information about your user's [subscription states][s
 
 ## Example migration steps
 
-Before you begin composing SMS campaigns through Braze, you'll need to update your user data to ensure that all of this works.
+Before you begin composing SMS campaigns through Braze, you'll need to update your user data to make sure that all of this works.
 
 **Here's a quick summary of the user data you'll need to update in Braze:**
 

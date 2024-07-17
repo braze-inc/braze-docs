@@ -3,12 +3,12 @@ nav_title: AI Item Recommendations
 article_title: AI Item Recommendations
 page_order: 15
 alias: "/ai_item_recommendations/"
-description: "This reference article covers how to create an AI Item Recommendation for items in a catalog."
+description: "This reference article covers how to create an AI item recommendation for items in a catalog."
 ---
 
 # AI item recommendations
 
-> Learn how to create an AI Item Recommendation for items in a catalog.
+> Learn how to create an AI item recommendation for items in a catalog.
 
 You can use AI item recommendations to calculate the most popular products or create personalized AI recommendations for a specific [catalog]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/). After you create your recommendation, you can use personalization to insert those products into your messages.
 
@@ -18,7 +18,7 @@ You can use AI item recommendations to calculate the most popular products or cr
 - You must have purchase or event data on Braze (custom events or the purchase object) that includes a reference to unique product IDs stored in a catalog.
 - AI Personalized recommendations work best with hundreds or thousands of items and typically at least 30,000 users with purchase or interaction data. This is only a rough guide and can vary. The other recommendation types can work with less data.
 
-## Creating an AI Item Recommendation
+## Creating an AI item recommendation
 
 To create an item recommendation:
 
@@ -51,9 +51,9 @@ To avoid suggesting items that a user has already purchased or interacted with, 
 
 ![][2-3]
 
-This setting makes sure that items a user has already bought or interacted with are not surfaced in messages again, provided the recommendation has been updated recently. Items purchased or interacted with between recommendation updates may still appear. For the free version of Item Recommendations, updates happen weekly. For AI Item Recommendations Pro, updates happen every 24 hours.
+This setting makes sure that items a user has already bought or interacted with are not surfaced in messages again, provided the recommendation has been updated recently. Items purchased or interacted with between recommendation updates may still appear. For the free version of item recommendations, updates happen weekly. For the pro version of AI item recommendations, updates happen every 24 hours.
 
-For example, when using AI Item Recommendations Pro, if a user purchases something and then receives a marketing email within 30 minutes, the item they just purchased might not be excluded from the email in time. However, any messages sent after 24 hours won't include that item.
+For example, when using the pro version of AI item recommendations, if a user purchases something and then receives a marketing email within 30 minutes, the item they just purchased might not be excluded from the email in time. However, any messages sent after 24 hours won't include that item.
 
 #### Step 2b: Select a catalog
 
@@ -71,7 +71,7 @@ If you can't find your selection, make sure it's set up in your catalog first.
 
 ### Step 3: Select the interaction to drive recommendations
 
-Next, select the event you want this recommendation to optimize for. This event is usually a purchase, but it can also be any kind of interaction with an item.
+Next, select the event you want this recommendation to optimize for. This event is usually a purchase, but it can also be any interaction with an item.
 
 You can optimize for:
 
@@ -85,7 +85,7 @@ If you choose **Custom Event**, select your event from the list.
 
 ### Step 4: Choose the corresponding property name {#property-name}
 
-To create a recommendation, you need to tell Braze which field of your interaction event (purchase object or custom event) has the unique indentifier that matches the `id` field of an item in the catalog. Not sure? See [requirements](#requirements).
+To create a recommendation, you need to tell Braze which field of your interaction event (purchase object or custom event) has the unique identifier that matches an item's `id` field in the catalog. Not sure? [View requirements](#requirements).
 
 Select this field for the **Property Name**.
 
@@ -100,7 +100,7 @@ There are some requirements for selecting your property:
 - Must map to the `id` field of your selected catalog.
 - **If you selected Purchase Object:** Must be the `product_id` or a field of your interaction event's `properties`.
 - **If you selected Custom Event:** Must be a field of your custom event's `properties`.
-- The field can be nested
+- Nested fields must be typed into the **Property Name** dropdown in dot notation with the format of `event_property.nested_property`. For example, if selecting the nested property `district_name` within the event property `location`, you would enter `location.district_name`.
 - The field can be in an array (of multiple catalog items within a single event). It will automatically be flattened.
 
 #### Example mappings
@@ -284,11 +284,11 @@ After your recommendation finishes training, you can personalize your messages w
 5. For **Information to Display**, select which fields from the catalog should be included for each item. The values for these fields for each item will be drawn from the catalog associated with this recommendation.
 6. Click the **Copy** icon and paste the Liquid wherever it needs to go in your message.
 
-## AI Item Recommendations tiers
+## AI item recommendations tiers
 
-The following table describes the differences between the free and pro version of AI Item Recommendations:
+The following table describes the differences between the free and pro version of AI item recommendations:
 
-| Area                   | Free version                          | AI Item Recommendations Pro              |
+| Area                   | Free version                          | Pro version            |
 | :---------------------- | ------------------------------------- | :--------------------------------------- |
 | Item update frequency   | Weekly                                | Daily                                    |
 | Model retraining frequency  | Monthly                               | Monthly                                   |

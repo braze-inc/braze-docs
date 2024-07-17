@@ -68,7 +68,7 @@ Before customer data can be sent to Braze, customers must opt-in through the ref
 Friendbuy uses the international standard (E.164) to verify real phone numbers. Invalid numbers, such as `555-555-5555`, will not be sent to Braze.
 {% endalert %}
 
-### Examples
+### Checkbox behavior
 
 | Checkbox selected | Behavior                                                        |
 |-------------------|-----------------------------------------------------------------|

@@ -18,5 +18,8 @@ guide_featured_list:
 - name: AI Content QA
   link: /docs/user_guide/sage_ai/generative_ai/ai_content_qa/
   image: /assets/img/braze_icons/clipboard-check.svg
+- name: AI Liquid Assistant
+  link: /docs/user_guide/sage_ai/generative_ai/ai_liquid/
+  image: /assets/img/braze_icons/beaker-02.svg
 
 ---

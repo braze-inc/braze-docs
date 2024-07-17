@@ -9,57 +9,57 @@ custom_collection: home
 nav_title: "ドキュメント"
 description: "これは Braze ドキュメントサイトのランディングページです。ここには、ユーザーガイド、開発者ガイド、API ガイド、テクノロジーパートナーのドキュメント、ヘルプ記事へのリンクがあります。役立つリンクや人気の記事へのクイックリンクも見つけることができます。"
 
-doc_top_header: "Braze Documentation"
+doc_top_header: "Braze ドキュメント"
 doc_top_text: ""
 
-braze_learning: Technical terms and concepts explained through a mix of videos, lessons, and interactive exercises.
+braze_learning: 動画、レッスン、インタラクティブな演習を織り交ぜて、専門用語やコンセプトを解説。
 
 doc_menu_list:
-  - name: User Guide
+  - name: ユーザーガイド
     bg_color: '#3accdd'
-    image: /assets/img/new-icons/users.svg
+    image: /assets/img/braze_icons/users-01.svg
     link: /docs/user_guide/introduction/
-    description: "Learn how to use the Braze platform to foster a more impactful customer experience."
-  - name: Developer Guide
+    description: "Braze プラットフォームを使って、よりインパクトのある顧客体験を育む方法をご紹介します。"
+  - name: 開発者ガイド
     bg_color: '#f7918e'
-    image: /assets/img/new-icons/html-file.svg
+    image: /assets/img/braze_icons/file-code-01.svg
     link: /docs/developer_guide/home/
-    description: "Integrate and activate your app or site with the Braze SDK."
-  - name: Technology Partners
+    description: "Braze の SDK を使用してアプリやサイトを統合し、有効化します。"
+  - name: テクノロジーパートナー
     bg_color: '#ff9349'
-    image: /assets/img/new-icons/gears.svg
+    image: /assets/img/braze_icons/settings-02.svg
     link: /docs/partners/home/
-    description: "Our Technology Partners can help you customize your Braze experience and customer relationships."
-  - name: API Guide
+    description: "Braze のテクノロジーパートナーは、お客様の Braze 体験と顧客関係のカスタマイズをお手伝いします。"
+  - name: API ガイド
     bg_color: '#ff9349'
-    image: /assets/img/new-icons/api.svg
+    image: /assets/img/braze_icons/code-browser.svg
     link: /docs/api/home/
-    description: "Braze provides a high-performance REST API to allow you to track users, send messages, export data, and more."
-  - name: Help
+    description: "Braze は、ユーザーの追跡、メッセージの送信、データのエクスポートなどを可能にする高性能の REST API を提供します。"
+  - name: ヘルプ
     bg_color: '#ff9349'
-    image: /assets/img/new-icons/circle-info-solid.svg
+    image: /assets/img/braze_icons/info-circle.svg
     link: /docs/help/home
-    description: "Find articles to help troubleshoot issues you may encounter and learn more about best practices to communicate with your users."
-  - name: Compliance Documentation
+    description: "遭遇する可能性のある問題のトラブルシューティングに役立つ記事や、ユーザーとのコミュニケーションのベストプラクティスについて詳しくご紹介しています。"
+  - name: コンプライアンスドキュメント
     bg_color: '#ff9349'
-    image: /assets/img/new-icons/file-contract-solid.svg
+    image: /assets/img/braze_icons/certificate-01.svg
     link: /docs/compliance_documentation/
-    description: "Compliance documentation outlines specific terms applicable to your purchased product or service."
+    description: "コンプライアンスドキュメントには、購入された製品またはサービスに適用される特定の条項の概要が記載されています。"
 
 popular_topic_list:
-  - name: Braze API Dictionary
+  - name: Braze API 辞書
     link: /docs/api/home/
-  - name: API Overview
+  - name: API の概要
     link: /docs/api/basics/
-  - name: POST&#58; Track Users Endpoint
+  - name: POST&#58; ユーザー追跡エンドポイント
     link: /docs/api/endpoints/user_data/post_user_track/
-  - name: User Import
+  - name: ユーザーをインポート
     link: /docs/user_guide/data_and_analytics/user_data_collection/user_import/
-  - name: Web SDK Setup
+  - name: Web SDK の設定
     link: /docs/developer_guide/platform_integration_guides/web/initial_sdk_setup/
-  - name: Custom Events
+  - name: カスタムイベント
     link: /docs/user_guide/data_and_analytics/custom_data/custom_events/
-  - name: Custom Attributes
+  - name: カスタム属性
     link: /docs/user_guide/data_and_analytics/custom_data/custom_attributes/
   - name: Braze Currents
     link: /docs/user_guide/data_and_analytics/braze_currents
@@ -67,14 +67,14 @@ popular_topic_list:
 helpful_resources_list:
   - name: Innovation Statement
     link: /docs/innovation_statement/
-  - name: Entitlements, Support & Success Services Handbooks
+  - name: 資格、サポート＆サクセス サービスハンドブック
     link: /docs/handbooks/
-  - name: Data Retention
+  - name: データ保持
     link: /docs/api/data_retention/
-  - name: Data Protection Technical Assistance
+  - name: データ保護技術支援
     link: /docs/dp-technical-assistance/
-  - name: Release Notes
+  - name: リリースノート
     link: /docs/help/release_notes/
-  - name: Contributing to Braze Docs
+  - name: Braze ドキュメントへの貢献
     link: /docs/contributing/home/
 ---

@@ -30,6 +30,10 @@ Use the `Update Subscription Status` trigger to target users when their subscrip
 
 For example, you can target users when their email or push subscription status changes to opted in, and thank them for opting in. You can also send a webhook to your systems whenever a user unsubscribes from email so that your internal systems are up to date with the latest subscription status information.
 
+{% alert important %}
+This trigger only works if a user is updating their global subscription state from `unsubscribed` or `opted-in` to `subscribed`.
+{% endalert %}
+
 ### Update subscription group status
 
 Use the `Update Subscription Group Status` trigger to target users when their subscription group status for Email, SMS or WhatsApp is updated. 

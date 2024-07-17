@@ -100,7 +100,7 @@ You can also upload a CSV file after selecting to create a catalog in the browse
 Braze processes time values based on the dashboard timestamp. For example, if a column has a value of "03/13/2024" and your time zone is the Pacific Time Zone, this time would be imported to Braze as "Mar 12, 2024, 5:00 PM".
 {% endalert %}
 
-#### Example catalog
+#### Tutorial: Creating a catalog from a CSV file
 
 For this tutorial, we're using a catalog that lists two games, their cost, and an image link.
 
@@ -122,19 +122,19 @@ For this tutorial, we're using a catalog that lists two games, their cost, and a
   <tr>
     <td class="tg-0pky">1234</td>
     <td class="tg-0pky">Tales</td>
-    <td class="tg-0pky">7.49 USD</td>
+    <td class="tg-0pky">7.49</td>
     <td class="tg-0pky">https://picsum.photos/200</td>
   </tr>
   <tr>
     <td class="tg-0pky">1235</td>
     <td class="tg-0pky">Regeneration</td>
-    <td class="tg-0pky">22.49 USD</td>
+    <td class="tg-0pky">22.49</td>
     <td class="tg-0pky">https://picsum.photos/200</td>
   </tr>
 </tbody>
 </table>
 
-In this example, we'll create the catalog by uploading a CSV file. The data types for `id`, `title`, `price`, and `image_link` are string, string, number, and string, respectively. 
+We'll create the catalog by uploading a CSV file. The data types for `id`, `title`, `price`, and `image_link` are string, string, number, and string, respectively. 
 
 {% alert note %}
 This data type cannot be edited after you set up your catalog.
@@ -182,7 +182,7 @@ Get {{ items[0].title }} for just {{ items[0].price }}!
 
 This renders as the following:
 
-> Get Tales for just 7.49 USD!
+> Get Tales for just 7.49!
 
 ## Catalogs via API
 
@@ -246,9 +246,9 @@ Do that
 
 Note that you must declare the catalog list before using `if` statements. In the example above, `Test-list` is the catalog list.
 
-#### Example Liquid `if` snippet
+#### Use case: Liquid `if` snippet
 
-In this example, different messages will display if the custom attribute `venue_name` has more then 10 characters or less then 10 characters. If `venue_name` is `blank`, nothing will display.
+In this scenario, different messages will display if the custom attribute `venue_name` has more then 10 characters or less then 10 characters. If `venue_name` is `blank`, nothing will display.
 
 {% raw %}
 ```liquid
@@ -316,7 +316,7 @@ Get {{ items[0].title }} now, for just {{ items[0].price }}!
 {% endraw %}
 
 Which will display as the following:
-> Get Tales now, for just 7.49 USD!
+> Get Tales now, for just 7.49!
 
 With templating, you can render a different catalog item for each user based on their individual custom attributes, event properties, or any other templatable field.
 
@@ -340,12 +340,12 @@ As you create more catalogs, you can leverage the [Catalogs Endpoints]({{site.ba
 
 The following table describes the differences between the free and pro version of catalogs:
 
-| Area | Free version | Catalogs Pro |
-|---|---|---|
-| CSV file size | Up to 100&nbsp;MB for all CSV files combined across your company | Up to 2&nbsp;GB for a single CSV file |
-| Characters limit for item value | Up to 5,000 characters in one value. For example, if you had a field labeled `description`, the maximum number of characters within the field is 5,000. | Up to 5,000 characters in one value. For example, if you had a field labeled `description`, the maximum number of characters within the field is 5,000. |
-| Characters limit for item column name | Up to 250 characters | Up to 250 characters |
-| Selections | Up to 30 selections per catalog | Up to 30 selections per catalog |
+| Area                                  | Free version                                                                                                                                            | Catalogs Pro                                                                                                                                            |
+| ------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| CSV file size                         | Up to 100&nbsp;MB for all CSV files combined across your company                                                                                        | Up to 2&nbsp;GB for a single CSV file                                                                                                                   |
+| Characters limit for item value       | Up to 5,000 characters in one value. For example, if you had a field labeled `description`, the maximum number of characters within the field is 5,000. | Up to 5,000 characters in one value. For example, if you had a field labeled `description`, the maximum number of characters within the field is 5,000. |
+| Characters limit for item column name | Up to 250 characters                                                                                                                                    | Up to 250 characters                                                                                                                                    |
+| Selections                            | Up to 30 selections per catalog                                                                                                                         | Up to 30 selections per catalog                                                                                                                         |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 ### Catalog storage

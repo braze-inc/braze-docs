@@ -33,7 +33,7 @@ Campaign and Canvas attributes are tied to [message engagement events]({{site.ba
 | Campaign name | {% raw %}`{{campaign.${name}}}`{% endraw %} | `name` | `campaign_name` |
 | Campaign ID | {% raw %}`{{campaign.${api_id}}}`{% endraw %} | N/A (used as an input for the API call itself) | campaign_id |
 | Variant name | {% raw %}`{{campaign.${message_name}}}`{% endraw %} | `messages.message_variation_id.name` | N/A (map variant name to variant ID using the Export campaign details endpoint) |
-| Variant ID | {% raw %}`{{campaign.${message_api_id}}}`{% endraw %} | `messages.message_variation_id` | `message_variation_id` |
+| Variant ID | {% raw %}`{{campaign.${message_api_id}}}`{% endraw %} | `messages.message_variation_id` | `message_variation_api_id` |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
 ## Canvas attributes
@@ -47,5 +47,5 @@ Campaign and Canvas attributes are tied to [message engagement events]({{site.ba
 | Step name | {% raw %}`{{campaign.${name}}}`{% endraw %} | `steps.name` | `canvas_step_name` |
 | Step ID | {% raw %}`{{campaign.${api_id}}}`{% endraw %} | `steps.id` | `canvas_step_id` |
 | Message channel | N/A | `steps.messages.message_variation_id.channel` | N/A (inherent from event type, such as push send or email open) |
-| Message ID | {% raw %}`{{campaign.${message_api_id}}}`{% endraw %} | `steps.message.message_variation_id` | `message_variation_id` |
+| Message ID | {% raw %}`{{campaign.${message_api_id}}}`{% endraw %} | `steps.message.message_variation_id` | `canvas_step_message_variation_api_id` |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}

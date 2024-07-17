@@ -17,6 +17,9 @@ guide_featured_list:
 - name: Back-In-Stock Notifications
   link: /docs/user_guide/personalization_and_dynamic_content/catalogs/back_in_stock_notifications/
   image: /assets/img/braze_icons/shopping-cart-03.svg
+- name: Price Drop Notifications
+  link: /docs/price_drop_notifications/
+  image: /assets/img/braze_icons/shopping-cart-03.svg
 - name: Selections
   link: /docs/user_guide/personalization_and_dynamic_content/catalogs/selections/
   image: /assets/img/braze_icons/list.svg

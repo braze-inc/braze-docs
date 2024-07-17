@@ -59,7 +59,7 @@ Then, register a callback function to [subscribe for data updates][6] when cards
 
 ### Step 3: Implement analytics
 
-Content Card impressions, clicks, and dismissals are not automatically logged in your custom view. You must [implement each respective method][3] to ensure all metrics get properly logged back to Braze dashboard analytics.
+Content Card impressions, clicks, and dismissals are not automatically logged in your custom view. You must [implement each respective method][3] to properly log all metrics back to Braze dashboard analytics.
 
 ## Content Card placements
 

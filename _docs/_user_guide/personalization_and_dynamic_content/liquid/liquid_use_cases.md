@@ -773,7 +773,7 @@ This use case will display the current date, month, and year, with the month in 
 
 ### Display an image based on a user's language {#language-image-display}
 
-This use case will display an image based on a user's language. Note that this use case has only been tested with images uploaded to the Braze Media Library.
+This use case will display an image based on a user's language. Note that this use case has only been tested with images uploaded to the Braze media library.
 
 {% raw %}
 ```liquid
@@ -1502,9 +1502,19 @@ This use case will take the current month and display the previous month to be u
 {% assign month = "October" %}
 {% elsif last_month == 11 %}
 {% assign month = "November" %}
-{% elsif last_month == 12 %}
+{% elsif last_month == 0 %}
 {% assign month = "December" %}
 {% endif %}
+
+Here's an overview of what your spending looked like in {{month}}.
+```
+{% endraw %}
+
+You can alternatively use the following to get the same result.
+
+{% raw %}
+```liquid
+{% assign last_month_name = 'now' | date: "%Y-%m-01" | date: '%s' | minus: 1 | date: "%B" %}
 
 Here's an overview of what your spending looked like in {{month}}.
 ```

@@ -13,7 +13,7 @@ tool: Reports
 
 ## Who has access
 
-Because this feature allows direct access to some customer data, you can only access the Query Builder if you have "View PII" [permission]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/user_permissions/).
+Because this feature allows direct access to some customer data, you can only access the Query Builder if you have the "View PII" [permission]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/user_permissions/).
 
 ## Running reports in the Query Builder
 
@@ -26,14 +26,14 @@ If you are using the [older navigation]({{site.baseurl}}/navigation), you can fi
 {% endalert %}
 
 {:start="2"}
-2. Click **Create SQL Query**. If you need inspiration or help in crafting your query, select **Query Template** and choose a template from the list. Otherwise, select **SQL Editor** to head straight to the editor.
+2. Select **Create SQL Query**. If you need inspiration or help in crafting your query, select **Query Template** and choose a template from the list. Otherwise, select **SQL Editor** to head straight to the editor.
 3. Your report is automatically given a name with the current date and time. Hover over the name and click <i class="fas fa-pencil" alt="Edit"></i> to give your SQL query a meaningful name.
 4. Write your SQL query in the editor or [get help from AI](#ai-query-builder) from the **AI Query Builder** tab. If you choose to write your own SQL, see [custom SQL](#custom-sql) for requirements and resources.
 5. Click **Run Query**.
 6. Save your query.
-7. To download a CSV of your report, click **Export**.
+7. To download a CSV of your report, select **Export**.
 
-![Query Builder showing the results for the templated query "Channel engagement and revenue for the last 60 days".]({% image_buster /assets/img_archive/query_builder.png %})
+![Query Builder showing the results for the templated query "Channel engagement and revenue for the last 30 days".]({% image_buster /assets/img_archive/query_builder.png %})
 
 Results from each report can be generated once a day. If you run the same report more than once in one calendar day, you'll see the same results in both reports.
 
@@ -50,8 +50,8 @@ The AI Query Builder is currently available as a beta feature. Contact your cust
 To use the AI Query Builder, do the following:
 
 1. After creating a report in the Query Builder, select the **AI Query Builder** tab.
-2. Type in your prompt or select a sample prompt and click **Generate** to translate your prompt into SQL.
-3. Review the generated SQL to make sure it looks correct, and then click **Insert into Editor**.
+2. Type in your prompt or select a sample prompt and select **Generate** to translate your prompt into SQL.
+3. Review the generated SQL to make sure it looks correct, and then select **Insert into Editor**.
 
 ### Tips
 
@@ -65,9 +65,9 @@ In order to generate your SQL, Braze will send your prompts to OpenAI’s API Pl
 
 ## Report timeout
 
-Reports that take longer than 6 minutes to run will time out. If this is the first query you're running in some time, it may take longer to process and therefore has a higher likelihood of timing out. If this happens, try running the report again.
+Reports that take longer than six minutes to run will time out. If this is the first query you're running in some time, it may take longer to process and therefore has a higher likelihood of timing out. If this happens, try running the report again.
 
-If a report times out or runs into errors even after retrying, please contact support.
+If a report times out or runs into errors even after retrying, please contact [support]({{site.baseurl}}/help/support#braze-support).
 
 ## Query templates
 

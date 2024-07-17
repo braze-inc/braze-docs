@@ -25,7 +25,7 @@ By default, the Content Card feed will refresh automatically in the following in
 You can configure the SDK to refresh manually at specific times as well.
 
 {% alert tip %}
-To dynamically show up-to-date Content Cards without manually refreshing, select **At first impression** during card creation. These cards will be refreshed once they are available.
+To dynamically show up-to-date Content Cards without manually refreshing, select **At first impression** during card creation. These cards will be refreshed when they are available.
 {% endalert %}
 
 {% tabs local %}

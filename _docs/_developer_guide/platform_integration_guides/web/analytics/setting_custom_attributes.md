@@ -115,7 +115,7 @@ braze.getUser().setCustomUserAttribute(YOUR_ATTRIBUTE_KEY_STRING, YOUR_ARRAY_OF_
 braze.getUser().addToCustomAttributeArray(YOUR_ATTRIBUTE_KEY_STRING, "new string");
 
 // Removing an element from a custom attribute with an array value
-braze.getUser().removeFromCustomAttributeArray("custom_attribute_array_test", "value to be removed");
+braze.getUser().removeFromCustomAttributeArray(YOUR_ATTRIBUTE_KEY_STRING, "value to be removed");
 ```
 
 ### Unsetting a custom attribute
@@ -145,7 +145,7 @@ When a user is registered for push, the browser forces them to choose to allow o
 
 Visit [Managing user subscriptions][10] for more information on implementing subscriptions and explicit opt-ins.
 
-### Sample code
+### Example code
 
 #### Unsubscribing a user from email:
 ```javascript
@@ -159,6 +159,6 @@ braze.getUser().setPushNotificationSubscriptionType(braze.User.NotificationSubsc
 
 [1]: https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.user.html
 [4]: {{site.baseurl}}/developer_guide/rest_api/user_data/#user-data
-[6]: {{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#arrays
-[7]: {{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#user-data-collection
+[6]: {{site.baseurl}}/developer_guide/platform_wide/getting_started/analytics_overview/#arrays
+[7]: {{site.baseurl}}/developer_guide/platform_wide/getting_started/analytics_overview/#best-practices
 [10]: {{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#managing-user-subscriptions
