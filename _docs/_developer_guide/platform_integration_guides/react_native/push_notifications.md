@@ -282,13 +282,13 @@ To enable rich push notifications on iOS using Expo, configure the `enableBrazeI
 
 Lastly, add the bundle identifier for this app extension to your project's credentials configuration: `<your-app-bundle-id>.BrazeExpoRichPush`. For further details on this process, refer to [Using app extensions with Expo Application Services](#app-extensions).
 
-### Enabling push stories for iOS
+### Enabling Push Stories for iOS
 
 {% alert tip %}
 Push stories are available for Android by default.
 {% endalert %}
 
-To enable push stories on iOS using Expo, ensure you have an app group defined for your application. For more information, see [Adding an App Group][4].
+To enable Push Stories on iOS using Expo, ensure you have an app group defined for your application. For more information, see [Adding an App Group][4].
 
 Next, configure the `enableBrazeIosPushStories` property to `true` and assign your app group ID to `iosPushStoryAppGroup` in your `expo.plugins` object in `app.json`:
 

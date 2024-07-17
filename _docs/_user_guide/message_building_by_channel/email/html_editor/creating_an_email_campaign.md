@@ -76,7 +76,7 @@ We recommend selecting one editing experience per email campaign. For example, c
 
 ## Step 3: Compose your email
 
-After you've selected your template, you'll see an overview of your email where you can quickly jump to the fullscreen editor to draft your email, change your sending information, and view warnings about deliverability or law compliance. 
+After you've selected your template, you'll see an overview of your email where you can directly jump to the fullscreen editor to draft your email, change your sending information, and view warnings about deliverability or law compliance. 
 
 {% alert tip %}
 To add motion in an email with an accurate preview, use GIFs instead of elements that require JavaScript, as most inboxes don't support JavaScript.
@@ -219,7 +219,7 @@ The editor will call out any problems it catches with your message before you se
 
 {% tabs %}
 {% tab Campaign %}
-Next, build the remainder of your campaign! See the following sections for further details on how to best utilize our tools to build your email campaign.
+Next, build the remainder of your campaign! See the following sections for further details on how to best use our tools to build your email campaign.
 
 #### Choose delivery schedule or trigger
 

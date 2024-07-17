@@ -18,7 +18,7 @@ The AI Liquid Assistant is currently in beta for a limited number of customers w
 
 ## How it works
 
-The AI Liquid Assistant is designed to help you write effective Liquid code tailored to your marketing needs. Trained on both Liquid syntax and how marketers utilize Liquid in their messages, our AI understands the nuances of crafting personalized content. Additionally, by providing the AI Liquid Assistant with your custom attribute names (such as `favourite_color`) and data types (such as boolean and string), our AI Assistant ensures your messages are precisely targeted and aligned with your goals.
+The AI Liquid Assistant is designed to help you write effective Liquid code tailored to your marketing needs. Trained on both Liquid syntax and how marketers use Liquid in their messages, our AI understands the nuances of crafting personalized content. Additionally, by providing the AI Liquid Assistant with your custom attribute names (such as `favourite_color`) and data types (such as boolean and string), our AI Assistant ensures your messages are precisely targeted and aligned with your goals.
 
 ## Generating Liquid code
 

@@ -133,7 +133,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 }
 ```
 
-For an example of the data that is accessible via this endpoint see the following example.
+For an example of the data that is accessible through this endpoint see the following example.
 
 ### Example user export file output
 
