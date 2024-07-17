@@ -28,7 +28,7 @@ Before connecting to the Deliverability Center, you'll need to set up a Google P
 6. After the TXT record is added to the DNS, return to the Google Postmaster Tools dashboard and select **Verify**. This step confirms you own the domain, so you'll be able to access Gmail deliverability metrics in your Postmaster account. <br> ![][10]
 
 {% alert tip %}
-Be sure the TXT record is placed at the parent level, not the subdomain you're using through Braze.
+Be sure the TXT record is tied at the parent domain, not the subdomain you're using through Braze.
 {% endalert %}
 
 {% alert note %}
