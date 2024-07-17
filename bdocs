@@ -21,8 +21,8 @@ USUAGE:
 OPTIONS:
   deploy       Create the deploy body text for weekly deployments
   release      Create the release body text for monthly releases
-  crl          Convert reference links to inline links on a page
-  rrl          Remove reference links that are not being used on a page
+  transform    Transform reference links to inline links on a page
+  clean        Remove reference links that are not being used on a page
   help         Display this help message and exit
 
 EOF
@@ -46,14 +46,14 @@ case $1 in
     release)
         "$PROJECT_ROOT/scripts/release_text.sh"
         ;;
-    crl)
+    transform)
         if [[ -z "$2" ]]; then
             echo "Error: The path to file or directory is required."
             exit 1
         fi
         python3 "$PROJECT_ROOT/scripts/convert_reference_links.py" "$2"
         ;;
-    rrl)
+    clean)
         if [[ -z "$2" ]]; then
             echo "Error: The path to file or directory is required."
             exit 1
