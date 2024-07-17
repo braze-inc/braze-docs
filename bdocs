@@ -13,15 +13,16 @@ PROJECT_ROOT="$(dirname "$(realpath "$0")")"
 # Displays usage for bdocs
 display_help() {
     cat << EOF
-bdocs - a [b]raze [docs] utility that lets you execute or learn about tools in the ./scripts directory.
+bdocs is a CLI tool for executing Braze Docs scripts.
 
-Usage: ./bdocs [option]
+USUAGE:
+  ./bdocs [option]
 
-Options:
+OPTIONS:
   deploy       Create the deploy body text for weekly deployments
   release      Create the release body text for monthly releases
-  rrl          Remove unused reference links in one or more Markdownfile files
-  crl          Convert and remove reference links from one or more Markdownfile files
+  crl          Convert reference links to inline links on a page
+  rrl          Remove reference links that are not being used on a page
   help         Display this help message and exit
 
 EOF
@@ -45,19 +46,18 @@ case $1 in
     release)
         "$PROJECT_ROOT/scripts/release_text.sh"
         ;;
-    rrl)
-        if [[ -z "$2" ]]; then
-            echo "Error: Path to file or directory is required."
-            exit 1
-        fi
-        ruby "$PROJECT_ROOT/scripts/remove_unused_reference_links.rb" "$2"
-        ;;
     crl)
         if [[ -z "$2" ]]; then
-            echo "Error: Path to file or directory is required."
+            echo "Error: The path to file or directory is required."
             exit 1
         fi
         python3 "$PROJECT_ROOT/scripts/convert_reference_links.py" "$2"
+        ;;
+    rrl)
+        if [[ -z "$2" ]]; then
+            echo "Error: The path to file or directory is required."
+            exit 1
+        fi
         ruby "$PROJECT_ROOT/scripts/remove_unused_reference_links.rb" "$2"
         ;;
     help)
