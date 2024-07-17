@@ -32,7 +32,7 @@ Lastly, as with several other reports on our platform, this report displays a [c
 
 ### Group sizes
 
-Before May 2024, the Global Control Group was excluded from user archival, but the treatment sample group was not. Starting May 2024, both groups were excluded from user archival. This could result in your treatment sample group and Global Control Group having significantly different sizes. The next time you reset your Global Control Group, this discrepancy will go away and you'll see similar group sizes.
+Before May 2024, the Global Control Group was excluded from user archival, but the treatment sample group was not. Starting May 2024, both groups are excluded from user archival. This could result in your treatment sample group and Global Control Group having significantly different sizes. The next time you reset your Global Control Group, this discrepancy will resolve and you'll see similar group sizes.
 
 ## Report metrics
 
