@@ -13,15 +13,15 @@ PROJECT_ROOT="$(dirname "$(realpath "$0")")"
 # Displays usage for bdocs
 display_help() {
     cat << EOF
-bdocs - todo add description.
+bdocs - a [b]raze [docs] utility that lets you execute or learn about tools in the ./scripts directory.
 
 Usage: ./bdocs [option]
 
 Options:
-  deploy       Create deploy text
-  release      Create release text
-  rlinks       Remove all unused reference links
-  clinks       Convert all reference links to in-line links, then remove them
+  deploy       Create the deploy body text for weekly deployments
+  release      Create the release body text for monthly releases
+  rrl          Remove unused reference links in one or more Markdownfile files
+  crl          Convert and remove reference links from one or more Markdownfile files
   help         Display this help message and exit
 
 EOF
@@ -45,14 +45,14 @@ case $1 in
     release)
         "$PROJECT_ROOT/scripts/release_text.sh"
         ;;
-    rlinks)
+    rrl)
         if [[ -z "$2" ]]; then
             echo "Error: Path to file or directory is required."
             exit 1
         fi
         ruby "$PROJECT_ROOT/scripts/remove_unused_reference_links.rb" "$2"
         ;;
-    clinks)
+    crl)
         if [[ -z "$2" ]]; then
             echo "Error: Path to file or directory is required."
             exit 1
