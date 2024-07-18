@@ -84,7 +84,7 @@ After the app installation is complete, Braze automatically creates your webhook
 | Variable | Liquid Templating |
 | --- | --- |
 | Checkout ID | `{{event_properties.${checkout_id}}}` |
-| Abandoned Card URL | `{{event_properties.${abandoned_checkout_url}}}` |
+| Abandoned Cart URL | `{{event_properties.${abandoned_checkout_url}}}` |
 | Discount Code | `{{event_properties.${discount_code}}}` |
 | Total Price | `{{event_properties.${total_price}}}` |
 | Discount Amount | `{{event_properties.${applied_discount}[0].amount}}` |
