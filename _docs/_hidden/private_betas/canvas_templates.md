@@ -18,19 +18,15 @@ Canvas templates are currently in early access. Contact your customer success ma
 
 ### Step 1: Select your existing Canvas
 
-In the Braze dashboard, go to **Messaging** > **Canvas** and select an existing Canvas.
+In the Braze dashboard, go to **Messaging** > **Canvas** and select an existing Canvas you want to use as a template.
 
-### Step 2: Create a new template
+### Step 2: Create the template
 
-In the Canvas editor, select **Save as template** to start building your Canvas template.
+In the Canvas editor, select **Edit Canvas** or **Edit draft**, depending on if your Canvas is active or in a draft. Expand the **Save as draft** dropdown in the footer and select **Save as template**.
 
 ### Step 3: Customize your template
 
-Next, customize your template by [setting up your Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#step-2-set-up-your-canvas). You can make adjustments to your existing Canvas to create a template to be used for future sending.
-
-### Step 4: Save your template
-
-Select the **Save template** button.
+Next, give your template a name and add any relevant tags. Then, select **Save**. Your template is now ready to use for building a Canvas, giving you a head start with your basic settings and steps already in place.
 
 ## Method 2: Create via Canvas template editor
 
@@ -67,7 +63,5 @@ There are two ways to use your template when composing a Canvas:
 Canvas templates can be duplicated and archived, similar to an actual Canvas. To edit a Canvas template, select the template then **<i class="fas fa-pencil-alt"></i>Edit**.
 
 At a workspace level, you can update user permissions to allow or limit the access to create, edit, view, or archive Canvas templates. These permissions are not yet available for [teams]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams).
-
-You can also save a template from an existing Canvas by expanding the **Save as draft** dropdown in the footer and selecting **Save as template**. 
 
 [1]: {% image_buster /assets/img/canvas_template_example.png %}
