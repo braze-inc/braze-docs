@@ -20,7 +20,7 @@ Canvas templates are currently in early access. Contact your customer success ma
 
 In the Braze dashboard, go to **Messaging** > **Canvas** and select an existing Canvas you want to use as a template.
 
-### Step 2: Create the template
+### Step 2: Create your template
 
 In the Canvas editor, select **Edit Canvas** or **Edit draft**, depending on if your Canvas is active or in a draft. Expand the **Save as draft** dropdown in the footer and select **Save as template**.
 
