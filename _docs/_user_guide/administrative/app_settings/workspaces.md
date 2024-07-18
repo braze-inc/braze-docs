@@ -15,17 +15,23 @@ description: "This article covers how to create, set up, and manage your workspa
 
 Workspaces are a shared environment for you to track and manage engagement for related mobile apps or websites. Workspaces group the same or very similar apps together: for example, the Android and iOS versions of your mobile app. Everything you do in Braze happens within a workspace.
 
+<!--"Everything you do in Braze happens within a workspace." I like that a lot! Very empowering. I almost feel like leading this paragraph with the sentence would be a "human" introduction :) Maybe we can have an image here to show a list of workspaces"-->
+
 ## Creating a workspace
+
+<!--"Step X"" = clear hierarchy = great!-->
 
 ### Step 1: Have a plan
 
 Before you begin, make sure you've worked with your team and your Braze onboarding manager to determine the best workspace configuration for your use case. To learn more about planning your workspaces in Braze, check out our [Getting Started: Workspaces][link] guide.
 
+<!--I like the overall tone of this paragraph. I could also see this being its own paragraph (i.e. removing the "Step 1: Have a plan") since it reads more like introductory/prereq material to the actual steps (add your workspace).-->
+
 ### Step 2: Add your workspace
 
 You can create new workspaces or switch between existing workspaces from the workspace dropdown in the global header.
 
-1. Select the workspace dropdown and click <i class="fa-solid fa-square-plus" style="color: #0b8294;"></i> **Create workspace**.
+1. Select the workspace dropdown then <i class="fa-solid fa-square-plus" style="color: #0b8294;"></i> **Create workspace**.
 
 ![][1]
 
@@ -36,8 +42,10 @@ You can create new workspaces or switch between existing workspaces from the wor
 You might want to adopt a naming convention so that others in your company can easily find your workspace. For example: "Upon Voyage US – Production" and "Upon Voyage US – Staging".
 {% endalert %}
 
+<!--Love that the tip is followed by an example. A very relevant example!-->
+
 {:start="3"}
-3. Click **Create**. It may take a few seconds for Braze to create your workspace.
+3. Select **Create**. It may take a few seconds for Braze to create your workspace.
 
 ![][2]
 
@@ -49,13 +57,15 @@ You will be taken to the **App Settings** page to begin adding your app instance
 
 We refer to the different sites and apps that are collected within a workspace as "app instances".
 
-1. From the **App Settings** page, click **+ Add app**.
+<!--Straightforward and helpful definition to clarify the jargon!-->
+
+1. From the **App Settings** page, select **+ Add app**.
 2. Give your app instance a name and select what platform or platforms this app instance is on. If you select multiple platforms, Braze will create one app instance for each platform.
 
 ![][4]{: style="max-width:60%" }
 
 {:start="3"}
-3. Click **Add app** to confirm.
+3. Select **Add app** to confirm.
 
 #### App API keys
 
@@ -69,7 +79,7 @@ You must create separate app instances for each version of your app on each plat
 
 #### Live SDK version
 
-The Live SDK Version displayed on the App Settings page for a specific app is the highest app version with at least 5% of your total daily sessions and has at least 500 sessions in the past day.
+The live SDK version displayed on the **App Settings** page for a specific app is the highest app version with at least 5% of your total daily sessions and has at least 500 sessions in the past day.
 
 This field appears after you have integrated the Braze SDK with your app or website. If a newer version of the Braze SDK is available for your platform, it will be noted here with the tag "Newer Version Available."
 
@@ -83,20 +93,24 @@ Repeat steps 2 and 3 to set up as many workspaces as your plan requires. As a be
 
 You can perform app testing by completely sandboxing certain users from your production instance. Create a new workspace, and when you publish your application, be sure to change the API key that Braze is using to match that of your production workspace rather than your testing workspace.
 
+<!--Curious as to why you went with a header "Tip:" as opposed to a tip alert?-->
+
 ## Managing workspaces
 
 ### Adding favorites
 
 You can add favorite workspaces to access the workspaces you use the most even faster.
 
+<!--Empowering! I like how you give a reason for users to add favorites (aka they can access workspaces faster, then work faster)-->
+
 ![][7]
 
 To add favorite workspaces:
 
-1. Select your profile dropdown and click **Manage your account**.
+1. Select your profile dropdown, then select **Manage your account**.
 2. In the **Account Profile** section, locate the **Favorite workspaces** field.
 3. Select your workspaces from the list.
-4. Click **Save changes**.
+4. Select **Save changes**.
 
 There's no limit to the number of workspaces you can favorite, but we recommend keeping this list short for convenience.
 
@@ -105,18 +119,17 @@ There's no limit to the number of workspaces you can favorite, but we recommend 
 To rename your workspace:
 
 1. Go to **Settings** > **App Settings**.
-2. Hover over your workspace’s name and click <i class="image: /assets/img/braze_icons/pencil-01.svg" style="color: #0b8294;"></i>.
-3. Give your workspace a new name, then click <i class="fa-solid fa-square-check" style="color: #0b8294;"></i> **Save**.
+2. Hover over your workspace’s name and select <i class="image: /assets/img/braze_icons/pencil-01.svg" style="color: #0b8294;"></i>.
+3. Give your workspace a new name, then select <i class="fa-solid fa-square-check" style="color: #0b8294;"></i> **Save**.
 
 ![][8]
 
 ### Deleting workspaces
 
-
 To delete your workspace:
 
 1. Go to **Settings** > **App Settings**.
-2. Click **Delete workspace**.
+2. Select **Delete workspace**.
 
 {% alert warning %}
 Be careful when deleting workspaces! After a workspace is deleted, it can’t be restored.
@@ -137,6 +150,8 @@ Additionally, your users would exist in two places: the old workspace and the ne
 #### What should I do instead?
 
 To separate old and new apps, create a new app instance within the same workspace. This way, you can effectively target users on the new version when you select that app during segmentation. If you want to message users who are on the old version, you can use filters to [target the previous app version]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/new_features#filtering-by-most-recent-app-versions).
+
+<!--Really like the "What should I do instead" followup. It gives an alternative and also reframes their original question and provides a response that leverages an existing feature (app instance). Keeps things simple!-->
 
 ### I have multiple app instances in one workspace—how can I make sure to only target a single app with my message? {#singular-app}
 
