@@ -8,19 +8,19 @@ page_type: reference
 
 # Field-level encryption
 
-> Using field-level encryption, you can seamlessly encrypt email addresses with AWS Key Management Service (KMS) to minimize personally identifiable information (PII) shared in Braze. Encryption replaces sensitive data with ciphertext, which is unreadable encrypted information.
+> Using field-level encryption, you can seamlessly encrypt email addresses with AWS Key Management Service (KMS) to minimize personally identifiable information (PII) shared in Braze. <!-- Is "field-level" encryption referring to where the email addresses reside? --> Encryption replaces sensitive data with ciphertext, which is unreadable encrypted information.
 
 {% alert important %}
 Field-level encryption is currently available as a beta feature. Contact your Braze account manager if you're interested in participating in this beta.
 {% endalert %}
 
 ## How it works
-
+<!-- I think we could remove "decrypted" to be more straightforward: "...call will be made to AWS KMS to retrieve the email address." It's kind of unclear what a "hashed email address" is and how it relates to the decrypted email address. I assume it's the email address "rewritten" with ciphertext, based on the article introduction, but I think some detail could help. -->
 Email addresses must be hashed and encrypted before they’re added to Braze. When a message is sent, a call will be made to AWS KMS for the decrypted email address. Next, the hashed email address will be inserted into the metadata for delivery and engagement events to be linked to the original user. This is how Braze can track email analytics. Braze will redact any plaintext email addresses that are included and won't store the plaintext email address for the user.
 
 ## Prerequisites
 
-To use field-level encryption, you must have access to AWS KMS to [encrypt](https://docs.aws.amazon.com/kms/latest/APIReference/API_Encrypt.html) and [hash](https://docs.aws.amazon.com/kms/latest/APIReference/API_GenerateMac.html) email addresses **before** sending them to Braze. 
+To use field-level encryption, you must have access to AWS KMS to [encrypt](https://docs.aws.amazon.com/kms/latest/APIReference/API_Encrypt.html) and [hash](https://docs.aws.amazon.com/kms/latest/APIReference/API_GenerateMac.html) email addresses **before** sending them to Braze. <!-- I'm curious about how familiar users are with the terminology. "Encryption" is defined in the intro, but "hashing" isn't. We could add a definition in "How it works", where "hashed" appears. -->
 
 Follow these steps to set up your AWS secret key authentication method.
 
