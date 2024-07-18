@@ -27,7 +27,7 @@ The workflow from here is the same for both use cases.
 
 1. On the Meta (Facebook) login window, select **Login as** or **Continue**. <br><br>![Meta login window.][1]{: style="max-width:60%;"}<br><br>
 2. Read the permissions that you'll share with Braze, then select **Get Started**. <br><br>![List of permissions that you'll share with Braze for the integration.][2]{: style="max-width:50%;"}<br><br>
-3. In the **Business portfolio** dropdown, select your business portfolio and then select **Next**. <br><br>![A window with fields to enter your business information, including your business portfolio name.][3]{: style="max-width:50%;"}<br><br>
+3. In the **Business portfolio** dropdown, select your business portfolio and then select **Next**. This connects to your WhatsApp Business account, so if you don't see your expected business portfolio, check your permissions.<br><br>![A window with fields to enter your business information, including your business portfolio name.][3]{: style="max-width:50%;"}<br><br>
 4. Select the following for the dropdown fields, then select **Next**.
 - **Choose a WhatsApp Business account**: Create a WhatsApp business account
 - **Create or select a WhatsApp Business profile**: Create a new WhatsApp business profile <br><br>![Fields to specify if you're choosing or creating a WhatsApp Business account and profile.][4]{: style="max-width:50%;"}<br><br>
