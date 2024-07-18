@@ -43,13 +43,13 @@ Roles allow for more structure by bundling together individual custom permission
 
 ## Editing a user's permissions
 
-To edit a user's current [admin](#admin-level), [company](#company-level), or [workspace](#workspace-level) permissions, go to **Settings** > **Company Users**, then select their name.
+To edit a user's current [admin](#admin), [company](#company), or [workspace](#workspace) permissions, go to **Settings** > **Company Users**, then select their name.
 
 ![ALT_TEXT]()
 
 ### Admin
 
-Admins have access to all features and the ability to modify any company setting. To grant or remove admin privileges, select **This user is an admin**. Keep in mind, if you remove admin privileges from a user, they can't access Braze until you assign them at least one [compnay-level]() or [workspace-level permission]().
+Admins have access to all features and the ability to modify any company setting. To grant or remove admin privileges, select **This user is an admin**. Keep in mind, if you remove admin privileges from a user, they can't access Braze until you assign them at least one [compnay-level](#company) or [workspace-level](#workspace) permission.
 
 ![ALT_TEXT. Screenshot of checkbox.]()
 
