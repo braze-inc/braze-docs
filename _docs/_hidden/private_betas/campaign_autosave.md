@@ -12,7 +12,7 @@ page_type: reference
 > As you build your campaigns in Braze, your changes are now automatically saved. This way, you can focus on fine-tuning your campaign details with confidence, knowing that your progress is preserved.
 
 {% alert important %}
-Autosave is is currently in beta and only available for campaigns. Contact your customer success manager if you're interested in participating in this beta.
+Autosave is currently in beta and only available for campaigns. Contact your customer success manager if you're interested in participating in this beta.
 {% endalert %}
 
 ## How it works
