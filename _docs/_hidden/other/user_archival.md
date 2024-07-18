@@ -28,7 +28,9 @@ Braze defines an "active user" for a given period of time as any user who has re
 
 If you set user IDs to identify users when a new user logs in they will be counted as a separate active user. Users who are updated via the API will also be counted as an active user in the time period that they are updated.
 
-{% alert important %} Both inactive users and dormant users will be archived unless the user is excluded from archiving for the reasons listed below. {% endalert %}
+{% alert important %} 
+Both inactive users and dormant users will be archived unless the user is excluded from archiving for the reasons listed below. 
+{% endalert %}
 
 ### Inactive users
 
