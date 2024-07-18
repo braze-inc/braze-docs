@@ -79,10 +79,10 @@ Additionally, Amazon Personalize offers automatic hyperparameter tuning by runni
 
 Once a solution finishes training, you are ready to evaluate it and compare different versions. Each solution version displays computed metrics. Some of the available metrics include:
 
-- `Normalize discounted cumulative gain`: compares recommended order of items to the actual list of items and gives each item a weight corresponding to its position in the list
-- `Precision @k`: the amount of properly recommended items divided by the amount of all recommended items, where `k` is the number of items
-- `Mean reciprocal rank`: focuses on the first, highest ranked recommendation and calculates how many recommended items are seen before the first matched recommendation appears
-- `Coverage`: the proportion of unique recommended items to the total number of unique items in the dataset
+- **Normalize discounted cumulative gain**: compares recommended order of items to the actual list of items and gives each item a weight corresponding to its position in the list
+- **Precision @k**: the amount of properly recommended items divided by the amount of all recommended items, where `k` is the number of items
+- **Mean reciprocal rank**: focuses on the first, highest ranked recommendation and calculates how many recommended items are seen before the first matched recommendation appears
+- **Coverage**: the proportion of unique recommended items to the total number of unique items in the dataset
 
 ## Getting Recommendations
 
