@@ -12,16 +12,6 @@ tool: Dashboard
 
 > The user permissions feature allows you to choose who can access your apps on the Braze dashboard by assigning different users with either admin or limited permissions. The creator of the workspace will automatically be granted administrator access.
 
-{% alert note %}
-If you're using the [older navigation]({{site.baseurl}}/navigation), **Company Users** is called **Manage Users** and is located under your account icon.
-{% endalert %}
-
-|Level of Access|Permissions|
-|---|---|
-|Administrator|Administrators have access to all available features.|
-|Limited|Limited users are completely customized at several levels, outlined in the following sections. When you switch a user's permissions from **Administrator** to **Limited**, that user no longer has access to any portion of the Braze dashboard until you deem it so using the checkboxes that appear under the **Edit User** section.|
-{: .reset-td-br-1 .reset-td-br-2}
-
 ## Editing a user's permissions
 
 To edit a user's [admin](), [company-level](), or [workspace-level]() permissions, go to **Settings** > **Company Users**, then select their name.
@@ -116,11 +106,7 @@ Individual users can be granted different degrees of access on an app-by-app bas
 |App Level Settings|Determines the user's level of editing access.|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
-## Permission sets and roles
-
-You can bundle relevant permissions with permission sets and roles by navigating to **Settings** > **Permission Settings**.
-
-### Permission sets
+## Permission sets
 
 Use permission sets to bundle permissions related to specific subject areas or actions. They can be applied to dashboard users who need the same access across different workspaces, such as in the following example:
 
@@ -131,9 +117,9 @@ Marketers | “Access Campaigns, Canvases, Cards, Feature Flags, Segments, Media
 User Management | “Manage Dashboard Users” <br> “Manage Teams”
 {: .reset-td-br-1 .reset-td-br-2}
 
-#### Assigning permission sets
+### Creating a permission set
 
-Assign permission sets by selecting an existing user or creating a new one on the **Company Users** page, then choosing the appropriate permission set under **Workspace Level Permissions**.
+You can bundle relevant permissions with permission sets and roles by navigating to **Settings** > **Permission Settings**.
 
 ### Roles
 
@@ -149,10 +135,6 @@ Roles allow for more structure by bundling together individual custom permission
 | Marketer - Skincare Brands | {::nomarkdown}[DEV] Skincare Brand, [QA] Skincare Brand, [PROD] Skincare Brand {:/} | “Access Campaigns, Canvases, Cards, Feature Flags, Segments, Media Library, and Preference Centers” <br>“Manage Media Library Assets” |
 | User Management - All Brands | {::nomarkdown}[DEV] Fashion Brand, [QA] Fashion Brand, [PROD] Fashion Brand, [DEV] Skincare Brand, [QA] Skincare Brand, [PROD] Skincare Brand {:/} | “Manage Dashboard Users”<br>“Manage Teams” |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
-
-#### Assigning roles
-
-Assign roles by selecting an existing user or creating a new one on the **Company Users** page, then choosing the appropriate role under **Workspace Level Permissions**.
 
 ## Exporting user permissions
 
