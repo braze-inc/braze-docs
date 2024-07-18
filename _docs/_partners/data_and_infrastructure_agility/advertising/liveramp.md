@@ -52,14 +52,14 @@ To set necessary variables, run **Application Setup SQL**. When you're finished,
 
 ### Step 4: Format your table's identifiers
 
-Refer to the following categories to determine which of your identifiers are eligible for resolution, then format the input table to the corresponding format detailed [here](https://docs.liveramp.com/identity/en/perform-identity-resolution-in-snowflake.html).
+Refer to the following categories to determine which of your identifiers are eligible for resolution, then format the input table to the [required format](https://docs.liveramp.com/identity/en/perform-identity-resolution-in-snowflake.html).
 
 | Identifier Type | Description  |
 |-----------------|--------------|
-| Full PII        | - Name<br>- Postal Address<br>- Email<br>- Phone Number <br>*Not all are required for every record* |
-| Email Only      | Emails             |
-| Device          | - 3rd party cookies<br>- MAIDs (mobile device IDs)<br>- CTV IDs (Connected TV IDs)<br>- RampIDs (resolved to a Household RampID) |
-| CIDs            | Custom Identifiers from a platform partner or an identity sync with LiveRamp, such as your internal Customer ID. |
+| Full PII        | PII (Personally Identifiable Information) includes the user's name, postal address, email, and phone number. **Note:** Not all are identifiers are required for every record. |
+| Email Only      | The user's email addresses, such as `alex-lee@email.com`. |
+| Device          | Includes 3rd-party cookies, Mobile Advertising IDs (MAIDs), Connected TV IDs (CTV IDs), and RampIDs (resolved to a Household RampID). |
+| CIDs            | Identifiers from a platform partner or an identity sync with LiveRamp, such as your internal Customer ID. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% alert important %}
@@ -68,7 +68,7 @@ Before preparing any PII-based tables, consider using [LiveRamp’s privacy filt
 
 #### Braze identifiers
 
-Braze’s Event Logs provide identifiers usable within LiveRamp’s Application. You can download the full list [Braze Event Schemas](https://www.braze.com/docs/assets/download_file/data-sharing-raw-table-schemas.txt).
+Braze’s Event Logs provide identifiers usable within LiveRamp’s Application. For the full list, download the [Braze Event Schemas](https://www.braze.com/docs/assets/download_file/data-sharing-raw-table-schemas.txt).
 
 | Identifier Type | Description  |
 |-----------------|--------------|
