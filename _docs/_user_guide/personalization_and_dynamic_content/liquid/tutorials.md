@@ -19,6 +19,7 @@ When you’re finished with these tutorials, you’ll be able to:
 | --- | --- |
 | [Personalize messages for user segments](#segments) | default values, conditional logic |
 | [Abandoned cart reminders](#reminders) | operators, conditional logic |
+| [Event countdown](#countdown) | variables, date filters |
 {: .reset-br-td-1 .reset-br-td-2}
 
 ## Personalize messages for user segments {#segments}
@@ -143,6 +144,66 @@ Hi {{${first_name} | default: 'there'}}, don't forget to complete your purchase!
 {% else %}
 {% abort_message('No items in cart') %}
 {% endif %}
+```
+{% endraw %}
+{% enddetails %}
+
+## Event countdown {#countdown}
+
+Let’s send users a message that states how many days are left until an anniversary sale.
+
+1. First, let’s assign a variable, `sale_date`, to the custom attribute `anniversary_date` and apply the `date` filter of `%s`. This assigns the variable `event_date` the value of the `last_selected_event_date`’s seconds, which allows us to manipulate the value in later Liquid code lines.
+
+{% raw %}
+```liquid
+{% assign event_date = {{custom_attribute.${anniversary_date}}} | date: "%s" %}
+```
+{% endraw %}
+
+{: start="2"}
+2. We also need to assign a variable to today to define what today’s value should be. Let’s assign the variable `today` the value of `now`, and use the `date` filter of `%s` to specify that we’re using seconds.
+
+{% raw %}
+```liquid
+{% assign today =  'now' | date: "%s"  %}
+```
+{% endraw %}
+
+{: start="3"}
+3. We’ll assign the variable of `difference` to equal the value of `event_date` minus `today`.
+
+{% raw %}
+```liquid
+{% assign difference =  event_date | minus: today %}
+```
+{% endraw %}
+
+{: start="4"}
+4. Now we can assign the variable we’ll reference in our message. Let’s assign `difference_days` to the `event_date` divided by `86400`. This will give us the number of days until the Anniversary Sale.
+
+{% raw %}
+```liquid
+{% assign difference_days = difference | divided_by: 86400 %}
+```
+{% endraw %}
+
+{: start="5"}
+5. Finally, let’s create the message to send.
+
+{% raw %}
+```liquid
+Get ready! Our Anniversary Sale is in {{ difference_days }} days!
+```
+{% endraw %}
+
+{% details Full Liquid code %}
+{% raw %}
+```liquid
+{% assign event_date = {{custom_attribute.${anniversary_date}}} | date: "%s" %}
+{% assign today =  'now' | date: "%s"  %}
+{% assign difference =  event_date | minus: today %}
+{% assign difference_days = difference | divided_by: 86400 %}
+Get ready! Our Anniversary Sale is in {{ difference_days }} days!
 ```
 {% endraw %}
 {% enddetails %}
