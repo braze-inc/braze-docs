@@ -16,11 +16,6 @@ description: "This article outlines details about the Export custom events Braze
 
 > Use this endpoint to export a list of custom events recorded for your app. The events are returned in groups of 50, sorted alphabetically.
 
-{% alert important %}
-This endpoint is currently in early access. Contact your customer success manager if you're interested in participating in this early access.
-{% endalert %}
-
-
 ## Prerequisites
 
 To use this endpoint, you'll need an [API key]({{site.baseurl}}/api/basics#rest-api-key/) with the `events.get` permission.
