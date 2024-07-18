@@ -32,7 +32,7 @@ The Braze and Treasure Data integration allows you to seamlessly control the flo
 ## Integration
 
 
-The recommended approach to connecting with Treasure Data is through Postback API. This method doesn't require an out-of-the-box connector and data can be received through a push approach. All events sent in one data batch are inside of one field of one row in a JSON array, which needs to be parsed to get the required data.
+The recommended approach to connecting with Treasure Data is through Postback API. This method doesn't require a default connector and data can be received through a push approach. All events sent in one data batch are inside of one field of one row in a JSON array, which needs to be parsed to get the required data.
 
 
 {% alert important %}

@@ -25,7 +25,7 @@ The following is an example custom font family definition using the [font family
              xmlns:app="http://schemas.android.com/apk/res-auto">
 
   <!--Note: You must declare both sets of attributes
-      to ensure your fonts load on devices running Android 8.0 (API level 26) or lower.
+      so that your fonts load on devices running Android 8.0 (API level 26) or lower.
       See https://developer.android.com/guide/topics/ui/look-and-feel/fonts-in-xml.html -->
 
   <font android:fontStyle="normal"

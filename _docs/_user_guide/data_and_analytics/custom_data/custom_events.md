@@ -44,11 +44,19 @@ Custom events can be blocklisted individually via the actions menu, or up to 10 
 
 You can add a description to a custom event after it's created if you have the `Manage Events, Attributes, Purchases` [user permission]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/). Select **Edit description** for the custom event and input whatever you like, such as a note for your team.
 
+### Adding tags
+
+You can add tags to a custom event after it's created if you have the `Manage Events, Attributes, Purchases` [user permission]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/). The tags can then be used to filter the list of events. (This feature is currently in early access. Contact your customer success manager if you're interested in participating in this early access.)
+
 #### Viewing usage reports
 
 The usage report lists all the Canvases, campaigns, and segments using a specific custom event. This list does not include uses of Liquid. 
 
 You can view up to 10 usage reports at a time by selecting the checkboxes next to the respective custom events and then selecting **View usage report**.
+
+### Exporting data ###
+
+To export the list of custom events as a CSV file, click the "Export all" button at the top of the page. The CSV file will be generated and a download link will be emailed to you. (This feature is currently available in early access. Contact your customer success manager if you're interested in participating in this early access.)
 
 ### Logging custom events
 

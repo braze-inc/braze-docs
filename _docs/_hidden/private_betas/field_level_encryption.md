@@ -8,7 +8,7 @@ page_type: reference
 
 # Field-level encryption
 
-> Using field-level encryption, you can seamlessly encrypt email addresses with AWS Key Management Service (KMS) and comply with industry regulations to minimize personally identifiable information (PII) shared in Braze. Encryption replaces sensitive data with ciphertext, which is unreadable encrypted information.
+> Using field-level encryption, you can seamlessly encrypt email addresses with AWS Key Management Service (KMS) to minimize personally identifiable information (PII) shared in Braze. Encryption replaces sensitive data with ciphertext, which is unreadable encrypted information.
 
 {% alert important %}
 Field-level encryption is currently available as a beta feature. Contact your Braze account manager if you're interested in participating in this beta.
@@ -65,7 +65,7 @@ When updating email address in Braze, you should use the hashed email value wher
 - Adding or updating users via CSV
 
 {% alert note %}
-When creating a new user, you must add `email_encrypted` with the user's encrypted email value. Otherwise, the user will not be created.
+When creating a new user, you must add `email_encrypted` with the user's encrypted email value. Otherwise, the user will not be created. Similarly, if you're adding an email address to an existing user who doesn't have an email, you must add `email_encrypted`. Otherwise, the user will not be updated.
 {% endalert %}
 
 ## Considerations

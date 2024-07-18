@@ -14,7 +14,7 @@ Open rates can be an insightful metric to track for your email campaigns. Howeve
 
 Additionally, use of security scanning tools can inflate open rates. Some of these tools protect their users by scanning incoming emails for malicious content by clicking links to verify their legitimacy. These clicks are often referred to as "bot clicks" or "non-human interaction" (NHI). 
 
-Ultimately, once email has left our servers, we have limited visibility into what happens next, but here are our recommendations for managing NHI affecting your results:
+Ultimately, after an email has left our servers, we have limited visibility into what happens next, but here are our recommendations for managing NHI affecting your results:
 
 1. Be aware that this can happen to any sender and nearly any recipient. Clicks, like opens, are not entirely reliable indicators of human interaction with your messages, meaning NHI is not preventable.
 2. Because higher positive engagement tends to correlate with lower NHI, it's important to follow email messaging [best practices]({{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices). This includes getting explicit permission from your users to send email and sunsetting unengaged subscribers on a regular cadence. 

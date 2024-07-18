@@ -27,5 +27,8 @@ guide_featured_list:
   - name: Sending Test Canvases
     link: /docs/user_guide/engagement_tools/canvas/testing_canvases/sending_test_canvases/
     image: /assets/img/braze_icons/user-check-01.svg
+  - name: Lead Scoring
+    link: /docs/user_guide/engagement_tools/canvas/ideas_and_strategies/lead_scoring/
+    image: /assets/img/braze_icons/dataflow-02.svg
 
 ---

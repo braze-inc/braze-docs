@@ -86,7 +86,7 @@ Next, you'll create an SMS campaign that will listen for webhooks from Front and
 
 #### Step 2.1: Compose your message
 
-In the **Message** textbox, add the following liquid code, along with any opt-out language or other static content.
+In the **Message** textbox, add the following Liquid code, along with any opt-out language or other static content.
 
 {% raw %}
 ```liquid
@@ -96,7 +96,7 @@ In the **Message** textbox, add the following liquid code, along with any opt-ou
 
 Your message should be similar to the following:
 
-![An example message using liquid code.]({% image_buster /assets/img/front/sms_to_braze.png %}){: style="max-width:80%;"}
+![An example message using Liquid code.]({% image_buster /assets/img/front/sms_to_braze.png %}){: style="max-width:80%;"}
 
 #### 2.2 Schedule the delivery
 

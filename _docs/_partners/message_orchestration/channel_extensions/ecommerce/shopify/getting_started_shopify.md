@@ -22,7 +22,7 @@ page_order: 1
 
 The [Braze Web SDK]({{site.baseurl}}/user_guide/onboarding_with_braze/web_sdk/) is a powerful tool used to track the behavior of your Shopify store customers. With the Web SDK, you can collect session data, identify users, and record user behavior data from a web or mobile browser. You can also unlock native messaging channels like in-browser messages.
 
-Although the Shopify integration offers a robust set of features out-of-the-box, keep in mind that if you have use cases to add onsite tracking for [events not supported by the Shopify integration]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/shopify/shopify_data_in_braze/) or want to add channels like [Content Cards]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards), you need to implement the Web SDK directly onto your Shopify site.
+Although the Shopify integration offers a robust set of default features, keep in mind that if you have use cases to add onsite tracking for [events not supported by the Shopify integration]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/shopify/shopify_data_in_braze/) or want to add channels like [Content Cards]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards), you need to implement the Web SDK directly onto your Shopify site.
 
 Before you begin onboarding the integration, please review the following with your team on which path you want to take to implement the Web SDK.
 
@@ -36,7 +36,7 @@ Before you begin onboarding the integration, please review the following with yo
 
 | Features | Web SDK via Shopify ScriptTag | Direct web SDK integration via theme.liquid | Direct web SDK integration via Shopify Hydrogen
 |-------------|-------------|-------------|------------
-| Out-of-the-box on-site tracking      | <i class="fas fa-check" title="Supported"></i> | <i class="fas fa-times" title="Not supported"></i> | <i class="fas fa-times" title="Not supported"></i>          
+| Default on-site tracking      | <i class="fas fa-check" title="Supported"></i> | <i class="fas fa-times" title="Not supported"></i> | <i class="fas fa-times" title="Not supported"></i>          
 | Capture form user reconciliation (Low engineering lift required)   | <i class="fas fa-check" title="Supported"></i> | <i class="fas fa-check" title="Supported"></i> | <i class="fas fa-times" title="Not supported"></i> 
 | Checkout user reconciliation     | <i class="fas fa-check" title="Supported"></i>  | <i class="fas fa-check" title="Supported"></i>   | <i class="fas fa-times" title="Not supported"></i>                                        
 | Product viewed<br> Product clicked<br> Abandoned cart   | <i class="fas fa-check" title="Supported"></i> |<i class="fas fa-check" title="Supported"></i> | <i class="fas fa-times" title="Not supported"></i> 
@@ -44,9 +44,9 @@ Before you begin onboarding the integration, please review the following with yo
 | Historical backfill | <i class="fas fa-check" title="Supported"></i>  | <i class="fas fa-check" title="Supported"></i>  | <i class="fas fa-check" title="Supported"></i>  
 | Catalog sync  |<i class="fas fa-check" title="Supported"></i> |<i class="fas fa-check" title="Supported"></i>  |<i class="fas fa-check" title="Supported"></i>
 | Email and SMS subscriber collection    | <i class="fas fa-check" title="Supported"></i>| <i class="fas fa-check" title="Supported"></i>  | <i class="fas fa-check" title="Supported"></i>     
-| Out-of-the-box in-app message support   | <i class="fas fa-check" title="Supported"></i>  | <i class="fas fa-check" title="Supported"></i>  | <i class="fas fa-times" title="Not supported"></i>     
-| Out-of-the-box content cards support   | <i class="fas fa-times" title="Not supported"></i> | <i class="fas fa-times" title="Not supported"></i> | <i class="fas fa-times" title="Not supported"></i>   
-| Out-of-the-box web push support     | <i class="fas fa-times" title="Not supported"></i> | <i class="fas fa-times" title="Not supported"></i> | <i class="fas fa-times" title="Not supported"></i>
+| Default in-app message support   | <i class="fas fa-check" title="Supported"></i>  | <i class="fas fa-check" title="Supported"></i>  | <i class="fas fa-times" title="Not supported"></i>     
+| Default content cards support   | <i class="fas fa-times" title="Not supported"></i> | <i class="fas fa-times" title="Not supported"></i> | <i class="fas fa-times" title="Not supported"></i>   
+| Default web push support     | <i class="fas fa-times" title="Not supported"></i> | <i class="fas fa-times" title="Not supported"></i> | <i class="fas fa-times" title="Not supported"></i>
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}    
 
 {% tabs %}
@@ -72,7 +72,7 @@ We’ll also add pre-defined scripts if you have selected product viewed, produc
 
 To automatically enable the Braze Web SDK scripts as part of your integration, select the supported Shopify ScriptTag events or enable in-app messaging as a channel during your [Shopify integration setup]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/shopify/setting_up_shopify/). 
 
-From the Shopify setup wizard, the events denoted with an asterisk (*) are supported by the Web SDK. If you select these events or include in-browser messaging, Braze will add the Web SDK implementation via Shopify ScriptTag to your Shopify store as part of your setup.
+From the Shopify setup composer, the events denoted with an asterisk (*) are supported by the Web SDK. If you select these events or include in-browser messaging, Braze will add the Web SDK implementation via Shopify ScriptTag to your Shopify store as part of your setup.
 
 #### Shopify email capture forms and user reconciliation 
 
@@ -321,7 +321,7 @@ The Web SDK tracks the sessions of your Shopify customers and guests. As a resul
 
 ### Implementing the Web SDK directly onto your headless Shopify site {#headless-site}
 
-The Braze Shopify ScriptTag integration is incompatible with headless Shopify sites. As a result, you will not be able to get out-of-the-box support for product viewed, product clicked, or abandoned cart events, or enable in-app messaging through our pre-defined scripts. 
+The Braze Shopify ScriptTag integration is incompatible with headless Shopify sites. As a result, you will not be able to get default support for product viewed, product clicked, or abandoned cart events, or enable in-app messaging through our pre-defined scripts. 
 
 #### How to enable
 

@@ -76,7 +76,7 @@ We recommend selecting one editing experience per email campaign. For example, c
 
 ## Step 3: Compose your email
 
-After you've selected your template, you'll see an overview of your email where you can quickly jump to the fullscreen editor to draft your email, change your sending info, and view warnings about deliverability or law compliance. 
+After you've selected your template, you'll see an overview of your email where you can directly jump to the fullscreen editor to draft your email, change your sending information, and view warnings about deliverability or law compliance. 
 
 {% alert tip %}
 To add motion in an email with an accurate preview, use GIFs instead of elements that require JavaScript, as most inboxes don't support JavaScript.
@@ -94,13 +94,24 @@ Need help creating awesome copy? Try using the [AI copywriting assistant]({{site
 ![Launch AI Copywriter button, located in the Body tab of the email composer.]({% image_buster /assets/img/ai_copywriter/ai_copywriter_email.png %}){: style="max-width:80%"}
 {% endalert %}
 
-### Step 3a: Add email headers and extras
+### Step 3a: Add your sending information
 
-To add email headers, click **Edit Sending Info** and select **Add New Header**.
+After you've finished designing and building your email message, it's time to add your sending information in the **Sending Settings** section.
 
-Email headers contain information about the email being sent. These [key-value pairs]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/key_value_pairs/) typically have information about the sender, recipient, authentication protocols, and email routing information. Braze automatically adds the necessary header information required by the RFC for emails to be delivered to your inbox provider properly.
+1. Under **Sending Info**, select an email as the **From Display Name + Address**. You can also customize this by selecting **Customize From Display Name + Address**.
+2. Select an email as the **Reply-To Address**. You can also customize this by selecting **Customize Reply-To Address**.
+3. Next, select an email as the **BCC Address** to make your email visible to this address.
+4. Add a subject line to your email. Optionally, you can also add a preheader and a whitespace after the preheader.
 
-You can also select the **Add whitespace after preheader** checkbox to hide the text or HTML of the email body in the email preheader. 
+A preview in the right-hand panel will populate with the sending information you've added. This information can also be updated by navigating to **Settings** > **Email Preferences** > **Sending Configuration**.
+
+#### Advanced
+
+Under **Sending Settings** > **Advanced**, you can turn on inline CSS and add personalization for email headers and email extras, which allows you to send additional data back to other email service providers.
+
+##### Email headers
+
+To add email headers, select **Add New Header**. Email headers contain information about the email being sent. These [key-value pairs]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/key_value_pairs/) typically have information about the sender, recipient, authentication protocols, and email routing information. Braze automatically adds the necessary header information required by the RFC for emails to be delivered to your inbox provider properly.
 
 Braze allows you the flexibility to add additional email headers as needed for advanced use cases. There are a few reserved fields that the Braze platform will overwrite during sending. 
 
@@ -150,7 +161,7 @@ Avoid using the following keys:
 </tbody>
 </table>
 
-#### Adding email extras
+##### Adding email extras
 
 Email extras allows you to send additional data back to other email service providers. This is only applicable for advanced use cases, so you should only use email extras if your company already has this set up.
 
@@ -208,7 +219,7 @@ The editor will call out any problems it catches with your message before you se
 
 {% tabs %}
 {% tab Campaign %}
-Next, build the remainder of your campaign! See the following sections for further details on how to best utilize our tools to build your email campaign.
+Next, build the remainder of your campaign! See the following sections for further details on how to best use our tools to build your email campaign.
 
 #### Choose delivery schedule or trigger
 

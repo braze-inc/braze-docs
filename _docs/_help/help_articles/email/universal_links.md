@@ -258,7 +258,7 @@ This custom path allows you to selectively treat URLs with that value as a unive
 For example:
 
 ```html
-<a href=”https://www.example.com” data-msys-sublink="open_in_app">
+<a href=”https://www.example.com” data-msys-sublink="open-in-app">
 ```
 
 Then, make sure your app is set up to handle the custom path properly. Refer to SparkPost's article on [Using SparkPost click tracking on deep links](https://support.sparkpost.com/docs/tech-resources/deep-links-self-serve#preferred-solution-using-sparkpost-click-tracking-on-deep-links). This article contains example code for [iOS](https://support.sparkpost.com/docs/tech-resources/deep-links-self-serve#ios-swift-forwarding-clicks-to-sparkpost) and [Android](https://support.sparkpost.com/docs/tech-resources/deep-links-self-serve#forwarding-clicks-from-android-to-sparkpost).

@@ -64,7 +64,7 @@ As of April 2024, to create or update promotion code lists, Braze users need the
 |View User Profiles PII Compliant| Allows users to view user profiles but redacts fields your company has defined as personally identifiable information (PII). |
 |Manage Dashboard Users| Allows users to view, edit, and manage the **Company Users** page. Users with this permission can modify the permissions of any user, including themselves. As such, this permission should be viewed as an administrative access level. This permission doesn't allow users to delete users because only administrators can delete users. |
 |Manage Media Library Assets| Allows users to add, edit, and delete media library assets.|
-|View Usage Data| Allows users to view app usage.|
+|View Usage Data| Allows users to view app usage, including the channel performance dashboards.|
 |Import and Update User Data| Allows users to import CSV and update files of app users as well as view the User Import page. This also allows you to edit the subscription status of a user and their subscription group opt-in/opt-out rules. |
 |View Billing Details| Allows users to view subscriptions and billing. |
 |Access Dev Console| Allows full access to the following settings and logs:<br> {::nomarkdown}<ul><li><a href='/docs/user_guide/administrative/app_settings/api_settings_tab/'>API Keys</a></li><li><a href='/docs/user_guide/administrative/app_settings/internal_groups_tab/'>Internal Groups</a></li><li><a href='/docs/user_guide/administrative/app_settings/message_activity_log_tab/'>Message Activity Log</a></li><li><a href='/docs/user_guide/administrative/app_settings/event_user_log_tab/'>Event User Log</a></li></ul>{:/}|

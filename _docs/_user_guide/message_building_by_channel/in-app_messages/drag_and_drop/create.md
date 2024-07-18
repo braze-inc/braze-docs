@@ -75,10 +75,6 @@ You can also access all templates from the **Templates** section of the dashboar
 
 Adding pages to your in-app message lets you guide users through a sequential flow, like an onboarding flow or welcome journey. You can manage pages from the **Pages** section of the **Build** tab.
 
-{% alert note %}
-The ability to add pages to your in-app message is in early access. Contact your Braze account manager if you’re interested in participating in the early access for multi-page in-app messages.
-{% endalert %}
-
 ![]({% image_buster /assets/img_archive/dnd_iam_mockup.png %})
 
 {% tabs %}

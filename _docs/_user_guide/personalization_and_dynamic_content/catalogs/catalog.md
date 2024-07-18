@@ -122,13 +122,13 @@ For this tutorial, we're using a catalog that lists two games, their cost, and a
   <tr>
     <td class="tg-0pky">1234</td>
     <td class="tg-0pky">Tales</td>
-    <td class="tg-0pky">7.49 USD</td>
+    <td class="tg-0pky">7.49</td>
     <td class="tg-0pky">https://picsum.photos/200</td>
   </tr>
   <tr>
     <td class="tg-0pky">1235</td>
     <td class="tg-0pky">Regeneration</td>
-    <td class="tg-0pky">22.49 USD</td>
+    <td class="tg-0pky">22.49</td>
     <td class="tg-0pky">https://picsum.photos/200</td>
   </tr>
 </tbody>
@@ -182,7 +182,7 @@ Get {{ items[0].title }} for just {{ items[0].price }}!
 
 This renders as the following:
 
-> Get Tales for just 7.49 USD!
+> Get Tales for just 7.49!
 
 ## Catalogs via API
 
@@ -316,7 +316,7 @@ Get {{ items[0].title }} now, for just {{ items[0].price }}!
 {% endraw %}
 
 Which will display as the following:
-> Get Tales now, for just 7.49 USD!
+> Get Tales now, for just 7.49!
 
 With templating, you can render a different catalog item for each user based on their individual custom attributes, event properties, or any other templatable field.
 
@@ -340,12 +340,12 @@ As you create more catalogs, you can leverage the [Catalogs Endpoints]({{site.ba
 
 The following table describes the differences between the free and pro version of catalogs:
 
-| Area | Free version | Catalogs Pro |
-|---|---|---|
-| CSV file size | Up to 100&nbsp;MB for all CSV files combined across your company | Up to 2&nbsp;GB for a single CSV file |
-| Characters limit for item value | Up to 5,000 characters in one value. For example, if you had a field labeled `description`, the maximum number of characters within the field is 5,000. | Up to 5,000 characters in one value. For example, if you had a field labeled `description`, the maximum number of characters within the field is 5,000. |
-| Characters limit for item column name | Up to 250 characters | Up to 250 characters |
-| Selections | Up to 30 selections per catalog | Up to 30 selections per catalog |
+| Area                                  | Free version                                                                                                                                            | Catalogs Pro                                                                                                                                            |
+| ------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| CSV file size                         | Up to 100&nbsp;MB for all CSV files combined across your company                                                                                        | Up to 2&nbsp;GB for a single CSV file                                                                                                                   |
+| Characters limit for item value       | Up to 5,000 characters in one value. For example, if you had a field labeled `description`, the maximum number of characters within the field is 5,000. | Up to 5,000 characters in one value. For example, if you had a field labeled `description`, the maximum number of characters within the field is 5,000. |
+| Characters limit for item column name | Up to 250 characters                                                                                                                                    | Up to 250 characters                                                                                                                                    |
+| Selections                            | Up to 30 selections per catalog                                                                                                                         | Up to 30 selections per catalog                                                                                                                         |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 ### Catalog storage

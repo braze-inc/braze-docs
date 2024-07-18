@@ -63,7 +63,7 @@ Integration cannot begin until the campaign planning step is complete. This step
 ### Creating data requirements
 Then, your CRM team should define what data is required to launch the campaigns they have planned, creating data requirements. 
 
-Many common types of user attributes, such as name, email, date of birth, country, and similar are automatically tracked once the Braze SDK is integrated. Other types of data will need to be defined as custom data.
+Many common types of user attributes, such as name, email, date of birth, country, and similar are automatically tracked after the Braze SDK is integrated. Other types of data will need to be defined as custom data.
 
 As a developer, you'll work with your team to define what additional, custom data makes sense to track. Your custom data will impact how your user base will be classified and segmented. You will set up an event taxonomy across your growth stack, structuring your data so that it is compatible with your systems as it moves in and out of Braze.
 
@@ -170,7 +170,7 @@ Make sure your production and testing environments are set up before beginning Q
 
 | **QA data ingestion**  | **QA messaging**                                              |
 |---------------------------|---------------------------------------------------------------|
-| You'll QA the way data is ingested, stored, and exported. | You'll make sure that your messages are being sent correctly to your users and everything looks excellent. |
+| You'll perform quality assurance on the way data is ingested, stored, and exported. | You'll make sure that your messages are being sent correctly to your users and everything looks excellent. |
 | Run tests to confirm data is stored properly. | Create segments of users. |
 | Confirm session data is correctly attributed to the intended workspace within Braze. | Launch campaigns and Canvases successfully. |
 | Confirm session starts and ends are being recorded. | Confirm the correct campaigns are being shown to the correct user segments. |
@@ -196,7 +196,7 @@ Have you ever inherited a codebase and had no clue what the initial developer wa
 
 When onboarding Braze, the collective decisions you make concerning data, user profiles, what integrations were and were not in scope, how customizations are supposed to work, and more, will feel fresh in your mind and therefore obvious. When your team wants to expand Braze or when other technical resources are assigned to your Braze project, this information will be obscure.
 
-Create a resource to cement the information you learned during your technical overview sessions. This resource will help quickly onboard new developers who join your team (or serve as a reminder to yourself when you need to expand your current Braze implementation). 
+Create a resource to cement the information you learned during your technical overview sessions. This resource will help reduce the time to onboard new developers who join your team (or serve as a reminder to yourself when you need to expand your current Braze implementation). 
 
 ## Maintenance {#maintenance}
 After handoff to your marketers, you will continue to serve as a resource for maintenance. You will pay attention to iOS and Android updates that might impact the Braze SDK and make sure that your third-party vendors are up to date. 

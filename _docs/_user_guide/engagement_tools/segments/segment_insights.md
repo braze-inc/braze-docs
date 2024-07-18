@@ -13,7 +13,7 @@ description: "This how-to article will walk you through how to use, interpret, a
 
 > Learn how to how to use, interpret, and share Segment Insights. 
 
-Segment Insights allows you to quickly see how one segment is performing compared to another across a set of pre-selected KPIs.
+Segment Insights shows you how one segment is performing compared to another across a set of pre-selected KPIs.
 
 ## Viewing Segment Insights
 

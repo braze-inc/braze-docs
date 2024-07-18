@@ -98,6 +98,7 @@ A valid team permission object is a JSON object with the following key-value pai
 | Import and Update User Data | `import_update_user_data` |
 | View Billing Details | `view_billing_details` |
 | Access Dev Console | `dev_console` |
+| Launch Content Blocks | `launch_content_blocks` |
 | Manage External Integrations | `manage_external_integrations` |
 | Manage Apps | `manage_apps` |
 | Manage Teams | `manage_teams` |

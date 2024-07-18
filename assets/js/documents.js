@@ -15,6 +15,29 @@ function generateUUID() { // Public Domain/MIT
         return (c === 'x' ? r : (r & 0x3 | 0x8)).toString(16);
     });
 }
+
+function unEncodeURIComponent(str) {
+  let decodedStr = decodeURIComponent(str);
+  decodedStr = decodedStr.replace(/%21|%27|%28|%29|%2A/g, function(match) {
+    switch (match) {
+      case '%21':
+        return '!';
+      case '%27':
+        return "'";
+      case '%28':
+        return '(';
+      case '%29':
+        return ')';
+      case '%2A':
+        return '*';
+      default:
+        return match;
+    }
+  });
+
+  return decodedStr;
+}
+
 function string_to_slug(str) {
   if (str) {
     str = str.toLowerCase().replace(/\s/g, '-').replace(/[^\w-]/g, '');
@@ -219,7 +242,7 @@ $(document).ready(function() {
         // Prevent default anchor click behavior
         event.preventDefault();
         // Store hash
-        var hash = this.hash;
+        var hash = unEncodeURIComponent(this.hash);
         // Using jQuery's animate() method to add smooth page scroll
         // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
         $('html, body').animate({
@@ -503,9 +526,9 @@ $(document).ready(function() {
     var punctuation = null;
     if ($(this)[0]) {
       if ($(this)[0].nextSibling){
-        punctuation = $(this)[0].nextSibling.nodeValue.substr(0,1);
+        punctuation = ($(this)[0].nextSibling.nodeValue || '').substr(0,1);
         if (punctuations.includes(punctuation)) {
-          $(this)[0].nextSibling.remove();
+          $(this)[0].nextSibling = $(this)[0].nextSibling.substring(1);
           has_punchtuation = true;
         }
       }

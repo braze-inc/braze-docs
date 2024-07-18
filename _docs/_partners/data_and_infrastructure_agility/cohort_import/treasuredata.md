@@ -11,7 +11,7 @@ search_tag: Partner
 > This article describes how to import user cohorts from Treasure Data to Braze so you can send targeted campaigns based on data that may only exist in your warehouse.
 
 {% alert important %}
-This feature is currently in Beta. For more information, contact your Treasure Data and Braze representatives.
+This feature is currently in beta. For more information, contact your Treasure Data and Braze representatives.
 {% endalert %}
 
 ## Prerequisites
@@ -165,7 +165,7 @@ Once the query has been built, select **Export Results**. You can select an exis
 | Export Result Mapping |	Description	| 
 | ----------- | ----------- |
 | Cohort ID	| This is the backend cohort identifier that will be sent to Braze. 	|
-| Cohort Name (Optional)	| This is the name that will appear within the Cohort Filter in the Braze Segmentation tool. If this is not set, the `Cohort ID` will be used as the `Cohort Name`.	|
+| Cohort Name (Optional)	| This is the name that will appear within the Cohort Filter in the Braze segmentation tool. If this is not set, the `Cohort ID` will be used as the `Cohort Name`.	|
 | Operation	| Used to determine whether the query should add or remove profiles from the cohort in Braze.	| 
 | Aliases (Optional) | When defined, the name of the corresponding column within your query will be sent as the `alias_label`, and the values of each row in the column will be sent as the `alias_name`.	| 
 | Thread Count | Number of concurrent API calls. |
@@ -180,7 +180,7 @@ Save the query with a name and run, or just run the query. Upon successful compl
 {% tab Audience Studio %}
 #### Step 3.1: Create an activation
 
-Create a new Segment or choose an existing Segment to sync to Braze as a cohort. Within the Segment, choose **Create activation**.
+Create a new segment or choose an existing segment to sync to Braze as a cohort. Within the segment, choose **Create activation**.
 
 #### Step 3.2: Fill out your activation details
 
@@ -192,7 +192,7 @@ Create a new Segment or choose an existing Segment to sync to Braze as a cohort.
 | Activation Description| A brief description of the activation.	|
 | Authentication	| Choose the Braze cohort authentication created in step 2.	| 
 | Cohort ID	| This is the backend cohort identifier that will be sent to Braze. 	|
-| Cohort Name (Optional)	| This is the name that will appear within the Cohort Filter in the Braze Segmentation tool. If this is not set, the `Cohort ID` will be used as the `Cohort Name`.	|
+| Cohort Name (Optional)	| This is the name that will appear within the Cohort Filter in the Braze segmentation tool. If this is not set, the `Cohort ID` will be used as the `Cohort Name`.	|
 | Operation	| Used to determine whether the query should add or remove profiles from the cohort in Braze.	| 
 | Aliases (Optional) | When defined, the name of the corresponding column within your query will be sent as the `alias_label`, and the values of each row in the column will be sent as the `alias_name`.	| 
 | Thread Count | Number of concurrent API calls. |
@@ -203,7 +203,7 @@ Create a new Segment or choose an existing Segment to sync to Braze as a cohort.
 
 | Activation Output Mapping |	Description	| 
 | ----------- | ----------- |
-| Attribute Columns	| Determine the columns from your Segment database that will be mapped as identifiers when syncing profiles to a Braze cohort.	|
+| Attribute Columns	| Determine the columns from your segment database that will be mapped as identifiers when syncing profiles to a Braze cohort.	|
 | String Builder| The string builder is not necessary for the Braze integration.	|
 
 {% alert important %}

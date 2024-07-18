@@ -59,7 +59,7 @@ Then, register a callback function to [subscribe for data updates][6] when cards
 
 ### Step 3: Implement analytics
 
-Content Card impressions, clicks, and dismissals are not automatically logged in your custom view. You must [implement each respective method][3] to ensure all metrics get properly logged back to Braze dashboard analytics.
+Content Card impressions, clicks, and dismissals are not automatically logged in your custom view. You must [implement each respective method][3] to properly log all metrics back to Braze dashboard analytics.
 
 ## Content Card placements
 
@@ -227,7 +227,7 @@ To create a Content Card carousel, implement logic that observes for [changes in
 
 With that said, you could order and apply additional display logic in a variety of ways. For example, you could select the first five Content Card objects from the array or introduce key-value pairs to build conditional logic around.
 
-If you're implementing a carousel as a secondary Content Cards feed, refer to [Customizing the default Content Card feed]({{site.baseurl}}/developer_guide/customization_guides/content_cards/customizing_feed/#multiple-feeds) to ensure you sort cards into the correct feed based on key-value pairs.
+If you're implementing a carousel as a secondary Content Cards feed, refer to [Customizing the default Content Card feed]({{site.baseurl}}/developer_guide/customization_guides/content_cards/customizing_feed/#multiple-feeds) to learn how to sort cards into the correct feed based on key-value pairs.
 
 ### Banner
 

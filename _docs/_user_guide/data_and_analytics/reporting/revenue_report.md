@@ -45,7 +45,7 @@ You can view the following data in the **Performance Over Time Graph**:
 
 - *Lifetime revenue* is the total `PurchaseEvents` `price` value (in USD) received since inception. 
 - *Lifetime value per user* is the *Lifetime revenue* divided by your total *Users* (located on your **Home** page).
-- Average *Daily revenue* is the sum of the campaign and Canvas revenue for a given day.
+- Average *Daily revenue* is the average of the sum of the campaign and Canvas revenue for a given day.
 - *Daily Purchases* is the average of the total unique `PurchaseEvents` over the time period.
 - *Daily revenue per user* is the average daily revenue per daily active user.
 

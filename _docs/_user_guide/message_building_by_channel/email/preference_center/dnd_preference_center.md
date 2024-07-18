@@ -61,7 +61,7 @@ You can set certain styles to be applied across all relevant blocks in your pref
 To return to the common styles, select the "X" button on individual block properties. Next, select the message container, message "X" button, or editor background.
 {% endalert %}
 
-## Drag and drop preference center components
+## Drag-and-drop preference center components
 
 The drag-and-drop editor uses two key components to make preference center composition quick and easy: rows and blocks. All blocks must be placed in a row.
 

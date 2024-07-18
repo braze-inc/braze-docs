@@ -45,6 +45,10 @@ When communicating with support, you may find you need to access your developer 
 
 The more insights you can offer, the better. Include specifics like the workspace, the URL to the campaign or segment, and any relevant external IDs. This can help us troubleshoot your issue more efficiently.
 
+### Provide a sample of users
+
+Share a sampling of users rather than the entire affected segment. Providing a smaller amount of users helps us narrow our scope and speed up our investigations.
+
 ### Clarify expected versus actual behavior
 
 Let us know what you were expecting and what actually happened. This can help us narrow down the possible causes of the issue.
