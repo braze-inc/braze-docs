@@ -52,7 +52,7 @@ To set necessary variables, run **Application Setup SQL**. When you're finished,
 
 ### Step 4: Format your table's identifiers
 
-Prepare your data tables from Braze’s Snowflake Data Share Connection process to be called against the applications. Determine which identifiers within your tables are eligible for resolution, categorized into four buckets. Format the input table to the corresponding format detailed [here](https://docs.liveramp.com/identity/en/perform-identity-resolution-in-snowflake.html).
+Refer to the following categories to determine which of your identifiers are eligible for resolution, then format the input table to the corresponding format detailed [here](https://docs.liveramp.com/identity/en/perform-identity-resolution-in-snowflake.html).
 
 | Identifier Type | Description  |
 |-----------------|--------------|
@@ -63,8 +63,10 @@ Prepare your data tables from Braze’s Snowflake Data Share Connection process 
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% alert important %}
-When preparing PII-based tables, consider LiveRamp’s [privacy filter](https://docs.liveramp.com/identity/en/perform-identity-resolution-in-snowflake.html) process. These checks ensure that the attribute columns in your input tables do not contain values that are too unique, maintaining consumer privacy and avoiding reidentification.
+Before preparing any PII-based tables, consider using [LiveRamp’s privacy filter](https://docs.liveramp.com/identity/en/perform-identity-resolution-in-snowflake.html). This will ensure that the attribute columns in your input tables do not contain values that are too unique, so you can maintain consumer privacy and avoid re-identification.
 {% endalert %}
+
+#### Braze identifiers
 
 Braze’s Event Logs provide identifiers usable within LiveRamp’s Application. You can download the full list [Braze Event Schemas](https://www.braze.com/docs/assets/download_file/data-sharing-raw-table-schemas.txt).
 
