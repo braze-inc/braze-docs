@@ -450,7 +450,7 @@ To set the user facing name of the default Braze notification channel, use [`Bra
 
 To set the user facing description of the default Braze notification channel, use [`BrazeConfig.setDefaultNotificationChannelDescription()`][73].
 
-You should ensure that any API campaigns with the [Android push object][63] parameter are updated to include the `notification_channel` field. If this field is not specified, Braze will send the notification payload with the [dashboard fallback][64] channel ID.
+Update any API campaigns with the [Android push object][63] parameter to include the `notification_channel` field. If this field is not specified, Braze will send the notification payload with the [dashboard fallback][64] channel ID.
 
 Other than the default notification channel, Braze will not create any channels. All other channels must be programmatically defined by the host app and then entered into the Braze dashboard.
 

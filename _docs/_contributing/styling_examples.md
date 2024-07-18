@@ -457,7 +457,7 @@ Loom Example:
 
 #### Featured Video Layout with Status Placement for Higher Resolution
 
-To use the featured video layout which places a static video on the left side for higher resolution display, add a `video_id` and a `video_type` (such as `youtube`) to the yaml header for the page. By default, `video_source` is set to `youtube`.
+To use the featured video layout which places a static video on the left side for higher resolution display, add a `video_id` and a `video_type` (such as `youtube`) to the YAML header for the page. By default, `video_source` is set to `youtube`.
 
 {% raw %}
 ```yaml

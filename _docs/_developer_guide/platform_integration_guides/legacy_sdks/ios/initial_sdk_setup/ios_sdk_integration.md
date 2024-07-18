@@ -21,7 +21,7 @@ This guide assumes you have already [added the SDK]({{site.baseurl}}/developer_g
 
 ## Integration overview
 
-The following steps help you build a `BrazeManager` helper file that your production code calls into. This helper file will deal with all Braze-related dependencies by adding various extensions for the following integration topics listed. Each topic will include horizontal tab steps and code snippets in both Swift and Objective-C. Note that the Content Card and in-app message steps are not required for integration if you do not plan to utilize these channels in your application.
+The following steps help you build a `BrazeManager` helper file that your production code calls into. This helper file will deal with all Braze-related dependencies by adding various extensions for the following integration topics listed. Each topic will include horizontal tab steps and code snippets in both Swift and Objective-C. Note that the Content Card and in-app message steps are not required for integration if you do not plan to use these channels in your application.
 
 - [Create BrazeManager.swift](#create-brazemanagerswift)
 - [Initialize the SDK](#initialize-the-sdk)
@@ -42,7 +42,7 @@ To build out your `BrazeManager.swift` file, create a new Swift file named _Braz
 
 {% alert note %}
 - `BrazeManager` is an `NSObject` class and not a struct, so it can conform to ABK delegates such as the `ABKInAppMessageUIDelegate`.
-- The `BrazeManager` is a singleton class by design to ensure that only one instance of this class will be used. This is done to provide a unified point of access to the object.
+- The `BrazeManager` is a singleton class by design so that only one instance of this class will be used. This is done to provide a unified point of access to the object.
 {% endalert %} 
 
 1. Add a static variable named _shared_ that initializes the `BrazeManager` class. This is guaranteed to be lazily initiated only once.
@@ -573,7 +573,7 @@ Proceed to compile your code and run your application. <br><br>Try logging custo
 {% tab Step 1: Conform to Delegate %}
 
 {% alert important %}
-The following in-app message section is not required for integration if you do not plan to utilize this channel in your application.
+The following in-app message section is not required for integration if you do not plan to use this channel in your application.
 {% endalert %}
 
 ##### Conform to ABKInAppMessageUIDelegate
@@ -677,7 +677,7 @@ Proceed to compile your code and run your application. <br><br>Try sending yours
 {% tab Create Content Card Variables and Methods %}
 
 {% alert important %}
-The following Content Card section is not required for integration if you do not plan to utilize this channel in your application.
+The following Content Card section is not required for integration if you do not plan to use this channel in your application.
 {% endalert %}
 
 ##### Create Content Card variables and methods

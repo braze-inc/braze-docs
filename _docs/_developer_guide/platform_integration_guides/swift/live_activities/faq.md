@@ -32,7 +32,7 @@ No, this is not currently supported.
 
 ### What happens if a push notification is sent while a Live Activity is active? 
 
-![A phone screen with a Bulls vs Bears sports game live activity toward the middle of the screen and push notification lorem ipsum text at the bottom of the screen.][4]{: style="max-width:30%;float:right;margin-left:15px;"}
+![A phone screen with a Bulls versus Bears sports game live activity toward the middle of the screen and push notification lorem ipsum text at the bottom of the screen.][4]{: style="max-width:30%;float:right;margin-left:15px;"}
 
 Live Activities and push notifications occupy different screen real estate and won't conflict on a user's screen.
 

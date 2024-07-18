@@ -60,7 +60,7 @@ H2 headers (`##` in Markdown) should be action-oriented and reflect the general 
 
 1. Open the relevant directory in `braze-docs`.
 2. Create a new Markdown file for your page.
-3. Ensure your filename follows our [naming guidelines](#naming-guidelines).
+3. Use a filename that follows our [naming guidelines](#naming-guidelines).
 4. (Optional) You can generate a preview by running `rake` in your terminal.
 ```
 {% endraw %}

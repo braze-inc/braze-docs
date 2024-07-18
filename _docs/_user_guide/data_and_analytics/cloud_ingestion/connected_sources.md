@@ -21,10 +21,6 @@ Because connected sources run on your data warehouse directly, you will incur al
 
 ## Integrating connected sources
 
-{% alert important %}
-Connected sources is currently in early access for BigQuery, Databricks, Redshift, and Snowflake.
-{% endalert %}
-
 ### Step 1: Connect your resources
 
 Cloud Data Ingestion connected sources require some setup on the Braze side and in your instance. Follow these steps to set up the integration&#8722;some steps will be done in your data warehouse and some steps will be done in your Braze dashboard.

@@ -103,7 +103,7 @@ Braze calculates the delay as `day of the week` + `calendar days`, then adds the
 
 ![][9]
 
-### Quiet hours
+### Quiet Hours
 
 | Definition | Time Zone |
 | ---------- | --------- |

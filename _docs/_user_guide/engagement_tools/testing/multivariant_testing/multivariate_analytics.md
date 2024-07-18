@@ -24,7 +24,7 @@ If you selected **No optimization** when setting up your campaign, your analytic
 
 For more details, refer to the [Campaign Analytics]({{site.baseurl}}/user_guide/data_and_analytics/reporting/campaign_analytics/) article for your messaging channel.
 
-### Winning variant
+### Winning Variant
 
 If you selected **Winning Variant** for your optimization when setting up your campaign, you have access to an additional tab of your campaign analytics called **A/B Test Result**. After the Winning Variant is sent to the remaining users in your test, this tab shows the results of that send.
 
@@ -61,7 +61,7 @@ The **Winning Variant** tab shows the results of the second send, where each rem
 
 If you want to see the performance of the Winning Variant throughout the campaign, including the A/B test sends, check the **Campaign Analytics** page.
 
-### Personalized variant {#personalized-variant}
+### Personalized Variant {#personalized-variant}
 
 If you selected **Personalized Variant** for your optimization when setting up your campaign, the **A/B Test Result** is divided into two tabs: **Initial Test** and **Personalized Variant**.
 
