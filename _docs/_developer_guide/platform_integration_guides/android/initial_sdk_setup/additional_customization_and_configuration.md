@@ -28,11 +28,17 @@ Client apps that obfuscate Braze code must store release mapping files for Braze
 
 By default, the Braze Android SDK log level is set to `INFO`. You can [suppress these logs](#suppressing-logs) or [set a different log level](#enabling-logs), such as `VERBOSE`, `DEBUG`, or `WARN`.
 
+<!--"Use visuals to help clarify complex subjects." This is a complex subjects, but SDK logs is not something that lends itself well to visuals because there are no parts of a front end to take screenshots of. I observe th at the table is a visual device that really enhances the understandability of this concept.  -->
+
 ### Enabling logs {#enabling-logs}
 
 To help troubleshoot issues in your app, or reduce turnaround times with Braze Support, you'll want to enable verbose logs for the SDK. When you send verbose logs to Braze Support, ensure they begin as soon as you launch your application and end far after your issue occurs.
 
+<!--"You'll want to enable" feels like a passive construction. You can recast this to explain why the user would want to take this action in a more authoritative way. Potential rewrite: "To help troubleshoot issues in your app....enable verbose logs for the SDK." -->
+
 Keep in mind, verbose logs are only intended for your development environment, so you'll want to disable them before releasing your app.
+
+<!--"You'll want to" is another area where this construction feels too passive. I recommend using a more imperative tone to empower users to take the recommended actions. -->
 
 {% alert important %}
 Enable verbose logs before any other calls in `Application.onCreate()` to ensure your logs are as complete as possible.
@@ -56,7 +62,10 @@ BrazeLogger.logLevel = Log.MIN_LOG_LEVEL
 {% endsubtab %}
 {% endsubtabs %}
 
-Replace `MIN_LOG_LEVEL` with the **Constant** of the log level you'd like to set as your minimum log level. Any logs at a level `>=` to your set `MIN_LOG_LEVEL` will be forwarded to Android's default [`Log`](https://developer.android.com/reference/android/util/Log) method. Any logs `<` your set `MIN_LOG_LEVEL` will be discarded.
+<!--"Create a clear information hierarchy" - I know that this concept applies more to the flow of information throughout the article, but the table is a great way to display the log level severity.-->
+
+Replace `MIN_LOG_LEVEL` with the **Constant** of the log level you'd like to set as your minimum log level. Any logs at a level `>=` to your set `MIN_LOG_LEVEL` will be forwarded to Android's default [`Log`](https://developer.android.com/reference/android/util/Log) method. Any logs `<` your set `MIN_LOG_LEVEL` will be discarded. 
+<!--"Will be discarded" does not center the human in the experience. The point here is that the logs won't be displayed to the user, right? Can you recast to say that explicitly? -->
 
 | Constant    | Value          | Description                                                               |
 |-------------|----------------|---------------------------------------------------------------------------|
@@ -119,8 +128,10 @@ To verify that your logs are set to `VERBOSE`, check if `V/Braze` occurs somewhe
 ```
 2077-11-19 16:22:49.591 ? V/Braze v9.0.01 .bo.app.d3: Request started
 ```
-
+<!--This is a great example of providing examples, use cases, and templates! -->
 ### Suppressing logs
+
+<!--What does "suppressing logs" mean? That is, turn off all logging? Is there a less jargony/more human way to say this? Or is this language the developer user persona would expect?-->
 
 The default log level for the Braze Android SDK is `INFO`. To suppress all logs for the Braze Android SDK, call `BrazeLogger.SUPPRESS` in your application's `onCreate()` method _before_ any other methods.
 
@@ -137,6 +148,8 @@ BrazeLogger.setLogLevel(BrazeLogger.SUPPRESS)
 ```
 {% endtab %}
 {% endtabs %}
+
+<!--To better support the user throughout the journey, consider adding a section to help the user troubleshoot if they do not see the logging level they expect. -->
 
 ## Multiple API keys
 
