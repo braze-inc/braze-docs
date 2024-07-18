@@ -1,5 +1,5 @@
 ---
-nav_title: Setting User Permissions
+nav_title: User Permissions
 article_title: Braze Account User Permissions
 page_order: 2
 page_type: reference
@@ -8,17 +8,9 @@ tool: Dashboard
 
 ---
 
-# Setting user permissions
-
-<style>
-.fa-crown {
-  color: gold;
-}
-</style>
+# User permissions
 
 > The user permissions feature allows you to choose who can access your apps on the Braze dashboard by assigning different users with either admin or limited permissions. The creator of the workspace will automatically be granted administrator access.
-
-These settings can be found at **Settings** > **Company Users**.
 
 {% alert note %}
 If you're using the [older navigation]({{site.baseurl}}/navigation), **Company Users** is called **Manage Users** and is located under your account icon.
@@ -30,27 +22,54 @@ If you're using the [older navigation]({{site.baseurl}}/navigation), **Company U
 |Limited|Limited users are completely customized at several levels, outlined in the following sections. When you switch a user's permissions from **Administrator** to **Limited**, that user no longer has access to any portion of the Braze dashboard until you deem it so using the checkboxes that appear under the **Edit User** section.|
 {: .reset-td-br-1 .reset-td-br-2}
 
-## Editing user permissions
+## Editing a user's permissions
 
-To edit a specific user's permissions, either by assigning permissions to the default **Limited** role or changing the user to an **Administrator** role, do the following:
+To edit a user's [admin](), [company-level](), or [workspace-level]() permissions, go to **Settings** > **Company Users**, then select their name.
 
-1. Go to the **Company Users** page. 
-2. Click the edit icon in the user's row.
-3. To make a user an admin, select **This user is an admin**. To demote an admin to a limited role, clear the checkbox.
+![ALT_TEXT]()
+
+### Admin permissions
+
+Admins can access all features and update any company setting.
+
+To grant or remove admin privileges, select **This user is an admin**. Keep in mind, if you remove admin privileges from a user, they can't access Braze until you assign them at least one [compnay-level]() or [workspace-level permission]().
 
 ![Selecting Administrator or Limited when editing a user][29]{: style="border:none"}
 
-When you switch a user's permissions from **Administrator** to **Limited**, that user no longer has access to any portion of Braze until you set those specific permissions using the checkboxes that appear under the **Workspace-level permissions** section.
+### Company-level permissions
 
-## Managing limited and team role permissions
+To manage a user's company-level permissions, check or uncheck the box next to a permission.
 
-You can manage user permissions by group or on an individual basis when editing or adding a user from the **Company Users** page.
+- **Manage company settings:** DESCRIPTION.
+- **Create and delete workspaces:** DESCRIPTION.
+
+![ALT_TEXT]()
+
+### Workspace-level permissions
+
+To manage the user's workspace-level permissions, first select **Select workspaces and permissions**.
 
 ![Manage User Permissions][89]
+
+You can either choose their permissions manually or assign a permission set.
+
+{% tabs local %}
+{% tab select manually %}
+TODO.
+{% endtab %}
+
+{% tab assign permission set %}
+TODO.
+{% endtab %}
+{% endtabs %}
+
+#### List of workspace-level permissions
 
 {% alert important %}
 As of April 2024, to create or update promotion code lists, Braze users need the “Access Campaigns, Canvases, Cards, Segments, Media Library” permission.
 {% endalert %}
+
+TODO: Add currents permissions here:
 
 |Permission Name|Definition/Parameters|
 |---|---|
