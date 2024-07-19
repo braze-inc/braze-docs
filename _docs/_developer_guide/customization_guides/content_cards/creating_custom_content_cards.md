@@ -14,23 +14,11 @@ platform:
 
 # Creating custom Content Cards
 
-<!-- 
-[Straightforward: Create clear information hierarchy] I wonder if we are missing some context-setting here for the user. What are we expecting them to already know before they approach this content? Where can they go to get the basic info on Content Cards? Who is this document targeted toward, and when would they be referencing this? 
--->
-
-> This article discusses the basic approach you'll use when implementing custom Content Cards, as well as three common use cases: banner images, a message inbox, and a carousel of images.
+> This article discusses the basic approach you'll use when implementing custom Content Cards, as well as three common use cases: banner images, a message inbox, and a carousel of images. It assumes you've already read the other articles in the Content Card customization guide to understand what can be done by default and what requires custom code. It is especially to understand how to [log analytics]({{site.baseurl}}/developer_guide/customization_guides/content_cards/logging_analytics) for your custom Content Cards. 
 
 Braze provides different [Content Card types][1]: `imageOnly`, `captionedImage`, `classic`, `classicImage`, and `control`. These can be used as a starting place for your implementations, tweaking their look and feel. 
 
 You can also display Content Cards in a completely custom manner by creating your own presentation UI populated with data from the Braze models. Parse the Content Card objects and extract their payload data. Then, use the resulting model data to populate your custom UI&mdash;the "run" phase of the [crawl, walk, run approach][2].
-
-<!--
-[Straightforward: Ruthlessly cut jargon] The "run" phase––do we think it's okay to provide this markety jargon out of context like this? I'm not sure. Perhaps we should speak about this more obliquely and rely on the supporting doc to provide this context. For example: 
-
-> You can also display Content Cards in a completely custom manner by creating your own presentation UI populated with data from the Braze models. This is a [developer-led approach][2] to implementing Content Cards. Parse the Content Card objects and extract their payload data. Then, use the resulting model data to populate your custom UI.
-
-We should also update the link for this part to have the active tab be "Run", like: https://www.braze.com/docs/developer_guide/customization_guides/customization_overview/?tab=run
--->
 
 {% alert note %}
 Each default Content Card type is a subclass which inherits different properties from the generic Content Card model class. Understanding these inherited properties will be useful during customization. Refer to the Card class documentation for full details ([Android](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/index.html), [iOS](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcard), [Web](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.card.html)). 
@@ -38,10 +26,6 @@ Each default Content Card type is a subclass which inherits different properties
 
 
 ## Customization overview
-
-<!--
-I'm not sure this applies to voice and tone, but just a note that the steps here don't match the step headings.
--->
 
 Depending on your use case, the exact implementation of your custom Content Card will vary a bit, but you will want to follow this basic formula:
 
