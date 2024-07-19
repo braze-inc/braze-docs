@@ -1,7 +1,7 @@
 ---
 nav_title: Tutorials
 article_title: "Tutorials: Writing Liquid code"
-page_order: 12
+page_order: 11
 description: "This reference page contains beginner-friendly tutorials to help you get started with Liquid code."
 page_type: tutorial
 ---
@@ -20,6 +20,7 @@ When you’re finished with these tutorials, you’ll be able to:
 | [Personalize messages for user segments](#segments) | default values, conditional logic |
 | [Abandoned cart reminders](#reminders) | operators, conditional logic |
 | [Event countdown](#countdown) | variables, date filters |
+| [Promote a favorite product](#favorite-product) | variables, date filters, equations, operators |
 {: .reset-br-td-1 .reset-br-td-2}
 
 ## Personalize messages for user segments {#segments}
@@ -204,6 +205,126 @@ Get ready! Our Anniversary Sale is in {{ difference_days }} days!
 {% assign difference =  event_date | minus: today %}
 {% assign difference_days = difference | divided_by: 86400 %}
 Get ready! Our Anniversary Sale is in {{ difference_days }} days!
+```
+{% endraw %}
+{% enddetails %}
+
+## Promote a favorite product {#favorite-product}
+
+Let’s promote a user’s favorite product if their last purchase date was over six months ago.
+
+1. Use conditional logic to check if we have the user’s favorite product and last purchase date.
+
+{% raw %}
+```liquid
+{% if {{custom_attribute.${favorite_product}}} == blank or {{custom_attribute.${last_purchase_date}}} == blank %}
+```
+{% endraw %}
+
+{: start="2"}
+2. State that if we don’t have the user’s favorite product or last purchase date, not to send a message.
+
+{% raw %}
+```liquid
+{% abort_message('Favorite product or last purchase date is not set') %}
+```
+{% endraw %}
+
+{: start="3"}
+3. Use `else` to specify what should happen if we have the user’s favorite product and last purchase date.
+
+{% raw %}
+```liquid
+{% else %}
+```
+{% endraw %}
+
+{: start="4"}
+4. Capture the current date in seconds by assigning the variable `today` to `now` and using the `date` filter of `%s`.
+
+{% raw %}
+```liquid
+{% assign today = 'now' | date: '%s' | plus: 0 %}
+```
+{% endraw %}
+
+{: start="5"}
+5. Capture the last purchase date in seconds by assigning the variable `last_purchase_date` to the custom attribute `last_purchase_date` and using the `date` filter of `%s`.
+
+{% raw %}
+```liquid
+{% assign last_purchase_date = {{custom_attribute.${last_purchase_date}}} | date: '%s' | plus: 0 %}
+```
+{% endraw %}
+
+{: start="6"}
+6. Calculate six months in seconds (approximately 6 months * 30.44 days * 24 hours * 60 minutes * 60 seconds) by assigning the variable `six_months` to the calculation. Use `times` to specify multiplication of time units.
+
+{% raw %}
+```liquid
+{% assign six_months = 6 | times: 30.44 | times: 24 | times: 60 | times: 60 %}
+```
+{% endraw %}
+
+{: start="7"}
+7. Check if the last purchase date was at least six months ago by comparing `now` to whether `last_purchase_date` is `>=` (equal to or greater than) `six_months`.
+
+{% raw %}
+```liquid
+{% if now | minus: last_purchase_date >= six_months %}
+```
+{% endraw %}
+
+{: start="8"}
+8. Create the message to send if the purchase was at least six months ago.
+
+{% raw %}
+```liquid
+We noticed it’s been a while since you last purchased {{custom_attribute.${favorite_product}}}. Have you checked out our latest offerings?
+```
+{% endraw %}
+
+{: start="9"}
+9. Use the `else` tag to specify what should happen if the purchase wasn’t at least six months ago.
+
+{% raw %}
+```liquid
+{% else %}
+```
+{% endraw %}
+
+{: start="10"}
+10. Use `abort_message` to cancel the message.
+
+{% raw %}
+```liquid
+{% abort_message('Last purchase was less than six months ago') %}
+```
+{% endraw %}
+
+{: start="11"}
+11. Add two `endif` tags. The first `endif` closes the conditional check for the favorite product or last purchase date, and the second `endif` closes the conditional check for the last purchase date being at least six months ago.
+
+{% raw %}
+```liquid
+{% endif %}
+{% endif %}
+```
+{% endraw %}
+
+{% details Full Liquid code %}
+{% raw %}
+```liquid
+{% if {{custom_attribute.${favorite_product}}} == blank or {{custom_attribute.${last_purchase_date}}} == blank %}
+{% abort_message('Favorite product or last purchase date is not set') %}
+{% else %}
+{% assign today = 'now' | date: '%s' | plus: 0 %}
+{% assign last_purchase_date = {{custom_attribute.${last_purchase_date}}} | date: '%s' | plus: 0 %}
+We noticed it’s been a while since you last purchased {{custom_attribute.${favorite_product}}}. Have you checked out our latest offerings?
+{% else %}
+{% abort_message('Last purchase was less than six months ago') %}
+{% endif %}
+{% endif %}
 ```
 {% endraw %}
 {% enddetails %}
