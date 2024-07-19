@@ -20,10 +20,11 @@ When you’re finished with these tutorials, you’ll be able to:
 | [Personalize messages for user segments](#segments) | default values, conditional logic |
 | [Abandoned cart reminders](#reminders) | operators, conditional logic |
 | [Event countdown](#countdown) | variables, date filters |
+| [Monthly birthday message](#birthday) | variables, date filters, operators |
 | [Promote a favorite product](#favorite-product) | variables, date filters, equations, operators |
 {: .reset-br-td-1 .reset-br-td-2}
 
-## Personalize messages for user segments {#segments}
+## Personalized messages for user segments {#segments}
 
 Let’s customize messages for different user segments, like VIP customers and new subscribers.
 
@@ -209,7 +210,79 @@ Get ready! Our Anniversary Sale is in {{ difference_days }} days!
 {% endraw %}
 {% enddetails %}
 
-## Promote a favorite product {#favorite-product}
+## Monthly birthday message {#birthday}
+
+Let’s send a special promotion to all users whose birthday falls within today’s month. 
+
+1. Pull the month from today’s date. We’ll assign the variable `this_month` to `now`, then use the `date` filter `%B` to pull the month from the timestamp.
+
+{% raw %}
+```liquid
+{% assign this_month = 'now' | date: "%B" %}
+```
+{% endraw %}
+
+{: start="2"}
+2. Pull the birth month from the user’s `date_of_birth`. We’ll assign the variable `birth_month` to `date_of_birth`, then use the same `date` filter of `%B`.
+
+{% raw %}
+```liquid
+{% assign birth_month = {{${date_of_birth}}} | date: "%B" %}
+```
+{% endraw %}
+
+{: start="3"}
+3. Begin a conditional logic that defines a condition of the variable `date_of_birth` equaling the user’s `birth_month`.
+
+{% raw %}
+```liquid
+{% if {{this_month}} == {{birth_month}} %}
+```
+{% endraw %}
+
+{: start="4"}
+4. Write the message to send if `this_month` is the user’s `birth_month`.
+
+{% raw %}
+```liquid
+We heard {{this_month}} is a special month! Enjoy a 50% discount on your purchase with code BIRTHDAY50 until the end of {{this_month}}.
+```
+{% endraw %}
+
+{: start="5"}
+5. Use the `else` tag to specify what happens if this month isn’t the user’s birth month.
+
+{% raw %}
+```liquid
+{% else %} 
+```
+{% endraw %}
+
+{: start="6"}
+6. Use `abort_message` to cancel the message, then close the conditional logic with `endif`.
+
+{% raw %}
+```liquid
+{% abort_message("Not their birthday month") %}
+{% endif %}
+```
+{% endraw %}
+
+{% details Full Liquid code %}
+{% raw %}
+```liquid
+{% assign this_month = 'now' | date: "%B" %}
+{% assign birth_month = {{${date_of_birth}}} | date: "%B" %}
+{% if {{this_month}} == {{birth_month}} %}
+We heard {{this_month}} is a special month! Enjoy a 50% discount on your purchase with code BIRTHDAY50 until the end of {{this_month}}.
+{% else %} 
+{% abort_message("Not their birthday month") %}
+{% endif %}
+```
+{% endraw %}
+{% enddetails %}
+
+## Favorite product promotion {#favorite-product}
 
 Let’s promote a user’s favorite product if their last purchase date was over six months ago.
 
