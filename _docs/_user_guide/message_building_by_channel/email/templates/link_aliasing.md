@@ -104,7 +104,7 @@ Check out this link aliasing example for the recommended formatting of the ancho
 ```
 {% endraw %}
 
-If the link has parameters within it that contain a `?`, you can replace the `?` in the anchor tag with an ampersand (`&`), such as in this example:
+If the link has parameters within it that contain a question mark (`?`), you can replace it in the anchor tag with an ampersand (`&`), such as in this example:
 
 {% raw %}
 ```liquid
