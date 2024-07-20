@@ -239,4 +239,4 @@ Authorization: Bearer YOUR_REST_API_KEY
 
 {% enddetails %}
 
-After reviewing this template information, WorkFriends can also use the [`/templates/email/update` endpoint]({{site.baseurl}}/api/endpoints/templates/email_templates/post_update_email_template/) to update the email template via API. The email template in the Braze dashboard will reflect these edits.
+After reviewing this template information, WorkFriends can also use the [`/templates/email/update` endpoint]({{site.baseurl}}/api/endpoints/templates/email_templates/post_update_email_template/) to update the email template through the API. The email template in the Braze dashboard will reflect these edits.

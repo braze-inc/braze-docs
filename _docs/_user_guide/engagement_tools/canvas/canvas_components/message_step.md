@@ -30,7 +30,7 @@ All users who enter the Message step will advance to the next step when any one 
 ![Set up Messages settings for a Message step that includes the option to select your message channel and customize delivery settings.][2]{: style="max-width:75%;"}
 
 {% raw %}
-If an action-based Canvas is triggered by an inbound SMS message, you can reference SMS properties in the first Message step of the Canvas. For example, in the Message step, you could use `{{sms.${inbound_message_body}}}` or `{{sms.${inbound_media_urls}}}`.
+If an action-based Canvas is triggered by an inbound SMS message, you can reference SMS properties in the first step (Message step) or a Message step that is nested under an Action Path step. For example, in the Message step, you could use `{{sms.${inbound_message_body}}}` or `{{sms.${inbound_media_urls}}}`.
 {% endraw %}
 
 ### Edit delivery settings
