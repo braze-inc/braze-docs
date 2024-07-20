@@ -39,11 +39,3 @@ If you anticipate creating more than 50 places, we recommend creating a generic 
 5. Log properties for these events (Place Name, Dwell Time).
 6. Use these properties and events for triggering campaigns and Canvases in Braze. 
 
-[1]: https://manager.gimbal.com/login/users/sign_in
-[2]: https://manager.gimbal.com/sdk_downloads
-[3]: https://docs.gimbal.com/
-[4]: https://docs.gimbal.com/rest.html
-[5]: https://manager.gimbal.com/apps
-[6]: {{site.baseurl}}/user_guide/data_and_analytics/Custom_Data/custom_events/
-[7]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/beacon_integration/#gimbal-beacons
-[8]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/advanced_use_cases/beacon_integration/#gimbal-beacons

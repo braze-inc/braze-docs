@@ -121,16 +121,5 @@ Want to receive a specific deal? Just text us the category you're interested in.
 
 {% endraw %}
 
-[1]: {% image_buster /assets/img/sms/filter1.png %}
-[2]: {% image_buster /assets/img/sms/filter2.png %}
-[3]: {% image_buster /assets/img/sms/trigger.png %} 
-[6]: {% image_buster /assets/img/sms/retargeting1.png %}
-[7]: {% image_buster /assets/img/sms/retargeting2.png %}
-[8]: {% image_buster /assets/img/sms/retargeting3.png %}
 [16]: {% image_buster /assets/img/keyword_example1.jpg %}
-[17]: {% image_buster /assets/img/keyword_example2.jpg %}
-[11]: {% image_buster /assets/img/sms/clicked_opened_step.png %}
-[12]: {% image_buster /assets/img/sms/clicked_opened_campaign.png %}
-[13]: {% image_buster /assets/img/sms/clicked_opened_campaign_canvas_tag.png %} 
-[15]: {% image_buster /assets/img/sms/retargeting5.png %} 
 [16]: {% image_buster /assets/img/sms/retargeting4.png %}

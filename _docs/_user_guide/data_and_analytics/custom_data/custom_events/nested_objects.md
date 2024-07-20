@@ -174,6 +174,3 @@ There is no change in how we charge data points as a result of adding this capab
 
 If one or more of the event's properties contains nested data, the maximum payload for all combined properties on an event is 50 KB. Any request over that size limit will be rejected.
 
-[4]: {% image_buster /assets/img_archive/nested_event_properties_segmentation.png %}
-[5]: {% image_buster /assets/img_archive/nested_event_properties_personalization.png %}
-[6]: {% image_buster /assets/img_archive/schema_generation_example.png %}

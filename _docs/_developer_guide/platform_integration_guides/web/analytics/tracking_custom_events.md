@@ -41,6 +41,3 @@ braze.logCustomEvent("YOUR-EVENT-NAME", {
 
 See the [`logCustomEvent()` documentation](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#logcustomevent) for more information.
 
-[0]: {{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#user-data-collection
-[1]: https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#logcustomevent
-[2]: http://www.w3schools.com/jsref/jsref_obj_date.asp

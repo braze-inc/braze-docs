@@ -51,5 +51,4 @@ For a customer to receive an WhatsApp message, they must have a valid phone numb
 
 If multiple users have the same phone number within a segment of a single campaign or Canvas step, Braze will deduplicate the sending and send only one message to that one phone number. 
 
-[picture]: {% image_buster /assets/img/sms/e164.png %}
 

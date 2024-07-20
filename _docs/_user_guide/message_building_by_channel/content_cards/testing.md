@@ -80,5 +80,3 @@ If you are using the [older navigation]({{site.baseurl}}/navigation), you can fi
 
 From there, you can review your message settings and content to drill down and determine why a user can't see a particular Content Card.
 
-[1]: {% image_buster /assets/img_archive/cc_debug.png %}
-[3]: {% image_buster /assets/img/cc-user-preview.png %}

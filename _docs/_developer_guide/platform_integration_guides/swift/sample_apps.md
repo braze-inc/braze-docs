@@ -32,5 +32,3 @@ Follow these instructions to build and run our test applications.
 2. Based on your integration method (Swift Package Manager, CocoaPods, Manual), select the appropriate `xcodeproj` file to open.
 3. Place your API key and your endpoint within the appropriate field in the `Credentials` file.
 
-[1]: https://github.com/braze-inc/braze-swift-sdk/tree/main/Examples
-[2]: {{site.baseurl}}/developer_guide/platform_wide/app_group_configuration/#creating-your-app-group-in-my-apps

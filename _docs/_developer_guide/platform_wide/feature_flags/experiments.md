@@ -73,11 +73,4 @@ Braze lets you to track how often users perform specific actions, [conversion ev
 After you’ve finished building the last of your experiment, review its details, then click **Launch Experiment**.
 
 
-[1]: {{site.baseurl}}/user_guide/administrative/manage_your_braze_users/teams/
-[2]: {{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/tags/
-[3]: {{site.baseurl}}/user_guide/data_and_analytics/reporting/report_builder/
-[4]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/targeting_users/
-[5]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/
-[6]: {{site.baseurl}}/developer_guide/platform_wide/feature_flags/create/#impressions
 
-[image1]: {% image_buster /assets/img/feature_flags/feature_flag_experiment_override.png %} 

@@ -75,4 +75,3 @@ The **Conversion Correlation** panel gives you insight into what user attributes
 LINE user IDs are specific to each user per provider. Users are unlikely to know their LINE ID (unlike their email or phone number), as their LINE ID changes for each brand they follow.
 
 
-[1]: {% image_buster /assets/img/line/line_performance.png %}

@@ -124,11 +124,3 @@ for await event in braze.sessionUpdatesStream {
 }
 ```
 
-[1]: https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/subscribetosessionupdates(_:)
-[2]: https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/sessionupdatesstream
-[session_tracking_1]: https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/configuration-swift.class
-[session_tracking_3]: https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/configuration-swift.class
-[session_tracking_5]: https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#initialize
-[session_tracking_6]: http://msdn.microsoft.com/en-us/library/windows/apps/hh464925.aspx
-[session_tracking_7]: {% image_buster /assets/img_archive/test_session.png %}
-[session_tracking_8]: {{ site.baseurl }}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/#step-4-tracking-user-sessions-in-android

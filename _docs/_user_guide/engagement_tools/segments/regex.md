@@ -207,5 +207,3 @@ For example, let's say you wanted to filter users by phone number for a specific
 ![]({% image_buster /assets/img/regex/regeximg3.png %})
 
 
-[regex]: https://regex101.com/
-[dummydata]: {% image_buster /assets/download_file/regex-dummy-data.rtf %}

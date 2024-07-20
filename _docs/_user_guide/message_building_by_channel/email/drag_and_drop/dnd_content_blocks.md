@@ -66,4 +66,3 @@ To update an existing Content Block, you can either edit the original Content Bl
 
 To archive a Content Block, go to **Templates** > **Content Blocks**, select the <i class="fas fa-ellipsis-vertical"></i> vertical ellipsis icon for the Content Block, and click **Archive**. When you archive a Content Block, your messages will still include the content in the archived block. However, archived Content Blocks are read-only, so unarchive the Content Block before editing. 
 
-[2]: {% image_buster /assets/img_archive/dnd_content_block_personalization.png %}

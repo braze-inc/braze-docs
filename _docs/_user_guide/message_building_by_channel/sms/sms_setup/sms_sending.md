@@ -60,5 +60,3 @@ Plan on doing some high-volume sending? We have some best practices for you to e
 - Adjust the delivery speed rate limiting for your campaign/canvases as needed, based on target audience size. This will ensure that you reach the send volume that you need and that Braze sends the messages at the rate that Twilio is expecting and can handle.
 - Ensure you stick to the 160 character limit, and be aware of special characters double-counting (for example, forward-slashes `\`, carets `^`, and tildes `~`). 
 
-[2]: {% image_buster /assets/img/sms/multi_country_subgroups.png %}
-[5]: {{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_subscription_group/#setup-process

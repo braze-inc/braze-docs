@@ -56,5 +56,3 @@ Refer to the **Product Breakdown** table for a list of the products purchased du
 ![The "Product Breakdown" table showing the columns "Product Name", "Purchased", and "Revenue".]({% image_buster /assets/img/revenue_report_product_breakdown.png %})
 
 
-[1]: {% image_buster /assets/img/revenue_report.png %}
-[2]: {% image_buster /assets/img/revenue_report_product_breakdown.png %}

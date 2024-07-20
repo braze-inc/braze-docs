@@ -99,8 +99,3 @@ There is a limit of 10 requests per minute (RPM) per company. This means that fo
 
 In order to analyze and create your message content, Braze will send your prompts to OpenAI’s API Platform. All queries sent to OpenAI from Braze are anonymized, meaning that OpenAI will not be able to identify from whom the query was sent unless you include uniquely identifiable information in the message content you provide. As detailed in [OpenAI’s API Platform Commitments](https://openai.com/policies/api-data-usage-policies), data sent to OpenAI’s API via Braze is not used to train or improve their models and will be deleted after 30 days. Please ensure that you adhere to OpenAI’s policies relevant to you, including the [Usage Policy](https://openai.com/policies/usage-policies). Braze makes no warranty of any kind with respect to any AI-generated content. 
 
-[1]: {% image_buster /assets/img/ai_step1.png %} 
-[2]: {% image_buster /assets/img/ai_step2.png %} 
-[3]: {% image_buster /assets/img/ai_step3.png %} 
-[4]: {% image_buster /assets/img/ai_step4.png %} 
-[5]: {% image_buster /assets/img/ai_step5.png %} 

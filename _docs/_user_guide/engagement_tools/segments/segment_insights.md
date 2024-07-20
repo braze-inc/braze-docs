@@ -74,12 +74,3 @@ Getting users to convert to purchasers can be difficult, and trying to push new,
 
 In this case, relatively few users are currently signed up for the newsletter, but these users are generally more active. To keep new users engaged, it would be a good idea to include an invitation to order the newsletter in onboarding campaigns. To re-engage lapsed users, a good plan would be to send out a typical [lapsed user campaign]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/capturing_lapsing_users/#capturing-lapsing-users) and target [users who converted]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/retargeting_campaigns/#converted-from-campaign-filter) with a subsequent campaign to sign up for the newsletter.
 
-[1]: {% image_buster /assets/img_archive/segment_insights.png %}
-[2]: {% image_buster /assets/img_archive/Segment_Insights_Info.png %}
-[3]: {% image_buster /assets/img_archive/Segment_Segment_Insights.png %}
-[5]: {% image_buster /assets/img_archive/Segment_Language_Insights.png %}
-[7]: {% image_buster /assets/img_archive/Segment_Insights_Events1.png %}
-[9]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/capturing_lapsing_users/#capturing-lapsing-users
-[10]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/campaigns_in_multiple_languages/#campaigns-in-multiple-languages
-[11]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/multivariate_testing/#creating-tests
-[12]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/retargeting_campaigns/#converted-from-campaign-filter

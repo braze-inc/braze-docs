@@ -82,12 +82,3 @@ Enter the full sound resource URI (for example, `android.resource://com.mycompan
 
 To message your full userbase with a specific sound, we recommend that you indirectly specify the sound through [notification channel configuration](https://developer.android.com/training/notify-user/channels) (to target O+ devices) *and* send the individual sound from the dashboard (to target &#60;O devices).
 
-[1]: {% image_buster /assets/img_archive/android_advanced_settings.png %}
-[2]: http://developer.android.com/design/patterns/notifications.html
-[9]: {% image_buster /assets/img_archive/summary_text.png %}
-[11]: {% image_buster /assets/img_archive/sound_android.png %}
-[12]: {% image_buster /assets/img_archive/deep_link.png %}
-[13]: {{site.baseurl}}/api/endpoints/messaging/
-[15]: {% image_buster /assets/img_archive/messagesummary.gif %}
-[17]: https://developer.android.com/training/notify-user/channels#importance
-[16]: https://developer.android.com/training/notify-user/channels

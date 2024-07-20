@@ -43,4 +43,3 @@ When creating an email message within Braze, you can now personalize the From Ad
 
 ![Personalized From Address]({% image_buster /assets/img/personalized-from-name.png %}){: style="max-width:80%"}
 
-[0]: {% image_buster /assets/img/personalized-from-name.png %}

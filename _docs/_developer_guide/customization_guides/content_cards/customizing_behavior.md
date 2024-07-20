@@ -161,12 +161,3 @@ You can then use this information to display a badge signifying how many unread 
 {% endtabs %}
 
 
-[1]: {% image_buster /assets/img/cc_implementation/supplementary.png %}
-[2]: {% image_buster /assets/img/cc_implementation/supplementary_content.png %}
-[3]: {{site.baseurl}}/developer_guide/customization_guides/content_cards/customizing_feed/#multiple-feeds
-[4]: {% image_buster /assets/img/cc_implementation/discount2.png %}
-[5]: {% image_buster /assets/img/cc_implementation/discount.png %}
-[6]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/key_value_pairs/#content-cards
-[7]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/api_triggered_delivery/
-[8]: {% image_buster /assets/img/cc_implementation/ios-unread-badge.png %}
-[9]: {{site.baseurl}}/user_guide/message_building_by_channel/content_cards/create#step-4-configure-additional-settings-optional

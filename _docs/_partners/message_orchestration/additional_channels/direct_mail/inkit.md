@@ -94,9 +94,3 @@ Preview your request in the **Preview** panel or navigate to the **Test** tab, w
 Remember to save your template before leaving the page! <br>Updated webhook templates can be found in the **Saved Webhook Templates** list when creating a new [webhook campaign]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/). 
 {% endalert %}
 
-[1]: https://www.inkit.com
-[2]: https://help.inkit.com/hc/en-us/articles/360036546873-Braze-Inkit-Integration
-[3]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#custom-attributes
-[5]: {% image_buster /assets/img/inkit-integration.png %}
-[6]: {{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/
-[7]: {% image_buster /assets/img/inkit-webhook-template.png %}

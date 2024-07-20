@@ -629,4 +629,3 @@ For more information, see the [SDK method documentation](https://js.appboycdn.co
 {% endtabs %}
 
 
-[1]: {% image_buster/assets/img/content_cards/content-card-customization-empty.png %}

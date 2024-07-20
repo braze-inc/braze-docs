@@ -102,4 +102,3 @@ If your Shopify product sync runs into an error, it could be a result of the fol
 | Catalog Limit Exceeded | This occurs if you exceed your catalog limit. Braze will be unable to finish the sync or keep the syncing active due to no more storage availability. | There are two solutions to this issue:<br><br>1. Reach out to your account manager to upgrade your tier to increase your catalog limit. <br><br>2. Free up storage space by deleting any of the following:<br>- Catalog items from other catalogs<br>- Other catalogs<br>- Selections created<br><br> After using either of the solutions, the sync must be deactivated and then re-synced. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
-[1]: {% image_buster /assets/img/Shopify/sync_products_step1.png %}

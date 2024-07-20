@@ -77,5 +77,3 @@ On a tablet or desktop browser, a fullscreen in-app message will sit in the cent
 {% endtab %}
 {% endtabs %}
 
-[3b]: {% image_buster /assets/img/full-screen-large-viewport.png %}
-[3c]: {% image_buster /assets/img/image-safe-zone-full-screen-in-app-message.png %}

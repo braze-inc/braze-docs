@@ -531,10 +531,3 @@ return brazecall;
 {% endtab %}
 {% endtabs %}
 
-[2]: {% image_buster /assets/img/regal/webhook_rawtext.png %}
-[3]: {% image_buster /assets/img/regal/request_header.png %}
-[4]: {% image_buster /assets/img/regal/copy_webhook_url.png %}
-[5]: {% image_buster /assets/img/regal/edit_webhook.png %}
-[6]: https://regal.io
-[7]: https://developer.regal.io/docs/reporting-webhooks#events
-[8]: {{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/#user-aliases

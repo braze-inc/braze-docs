@@ -101,12 +101,4 @@ Your fallback channel is the channel that Braze will attempt to send your Androi
 
 ![]({% image_buster /assets/img_archive/No_Select.png %})
 
-[1]: https://www.braze.com/blog/android-o-push-notifications-channels/
-[2]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/integration/standard_integration/#step-5-define-notification-channels
 [3]: https://developer.android.com/preview/features/notification-channels.html#DeletingChannels
-[4]: https://developer.android.com/preview/features/notification-channels.html
-[6]: {% image_buster /assets/img_archive/Click_Here.png %}
-[8]: {% image_buster /assets/img_archive/Enter_Channel.png %}
-[9]: {% image_buster /assets/img_archive/Change_Fallback.png %}
-[10]: {% image_buster /assets/img_archive/No_Select.png %}
-[11]: {% image_buster /assets/img_archive/Select_Channel.png %}

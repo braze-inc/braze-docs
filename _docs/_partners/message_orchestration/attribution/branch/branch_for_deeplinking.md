@@ -41,11 +41,3 @@ Depending on your ESP, additional customization may be required to support click
 - [SendGrid](https://help.branch.io/using-branch/page/braze-sendgrid)
 - [SparkPost](https://help.branch.io/using-branch/page/braze-sparkpost)
 
-[1]: https://branch.io/
-[2]: {{site.baseurl}}/partners/branch_for_attribution/
-[3]: https://docs.branch.io/pages/deep-linking/universal-links/#search
-[4]: https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/brazedelegate
-[5]: https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/brazedelegate/braze(_:shouldopenurl:)-6xxc5
-[6]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/advanced_use_cases/linking/#linking-handling-customization
-[7]: https://help.branch.io/using-branch/page/braze-sendgrid
-[9]: https://help.branch.io/using-branch/page/braze-sparkpost

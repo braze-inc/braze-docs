@@ -149,4 +149,3 @@ Ensure **Google Cloud Storage** is selected as the **Cloud Storage** choice.
 
 Lastly, click **Save & Test**, and Fivetran will do the rest by syncing with the data from your Braze account!
 
-[1]: {{site.baseurl}}/api/basics/#api-definitions

@@ -89,17 +89,4 @@ After your campaign has launched, you can analyze results in real-time to see ho
 
 ![In-App Message Performance panel showing clicks for each link in the in-app message.]({% image_buster /assets/img_archive/dnd_iam_phone_capture_analytics.png %})
 
-[1]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/create/#prerequisites
-[2]: {{site.baseurl}}/user_guide/message_building_by_channel/sms/phone_numbers/user_phone_numbers/#importing-phone-numbers
-[3]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/create/#drag-and-drop-in-app-message-components
-[4]: {{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_laws_and_regulations/
-[5]: {{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/
 
-[img1]: {% image_buster /assets/img_archive/dnd_iam_phone_capture_example.png %}
-[img2]: {% image_buster /assets/img_archive/dnd_iam_phone_capture_template.png %}
-[img3]: {% image_buster /assets/img_archive/dnd_iam_phone_capture_select.png %}
-[img4]: {% image_buster /assets/img_archive/dnd_iam_phone_capture_subscription.png %}
-[img5]: {% image_buster /assets/img_archive/dnd_iam_phone_capture_countries.png %}
-[img6]: {% image_buster /assets/img_archive/dnd_iam_phone_capture_custom_font.gif %}
-[img7]: {% image_buster /assets/img_archive/dnd_iam_phone_capture_example2.png %}
-[img8]: {% image_buster /assets/img_archive/dnd_iam_phone_capture_analytics.png %}

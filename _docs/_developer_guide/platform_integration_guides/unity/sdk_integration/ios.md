@@ -59,16 +59,3 @@ Braze should now be collecting data from your application, and your basic integr
 
 To learn about advanced SDK integration options, check out [Advanced Implementation]({{site.baseurl}}/developer_guide/platform_integration_guides/unity/sdk_integration/advanced_use_cases/#ios-sdk-advanced).
 
-[5]: #transitioning-from-manual-to-automated-integration-ios
-[34]: {{site.baseurl}}/developer_guide/platform_integration_guides/unity/in-app_messaging/
-[35]: {{site.baseurl}}/developer_guide/platform_integration_guides/unity/news_feed/
-[40]: {{site.baseurl}}/developer_guide/platform_integration_guides/unity/content_cards/
-[41]: https://docs.unity3d.com/Manual/AssetPackages.html
-[42]: https://github.com/Appboy/appboy-unity-sdk/releases
-[50]: {{site.baseurl}}/developer_guide/platform_integration_guides/unity/push_notifications/ios/
-[53]: {{site.baseurl}}/developer_guide/platform_integration_guides/unity/push_notifications/android/
-[54]: {{site.baseurl}}/developer_guide/platform_integration_guides/unity/sdk_integration/advanced_use_cases/#ios-sdk-advanced
-[unity-1]: https://github.com/SDWebImage/SDWebImage
-[unity-2]: https://firebase.google.com/docs/unity/setup
-[unity-3]: https://developer.android.com/jetpack/androidx
-[unity-4]: {{ site.baseurl }}/developer_guide/platform_integration_guides/swift/in-app_messaging/overview/

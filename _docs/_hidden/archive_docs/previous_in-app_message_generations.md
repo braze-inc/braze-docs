@@ -164,8 +164,5 @@ The following strategies are helpful for keeping file sizes down:
 ![iPhone 6 Specs]({% image_buster /assets/img_archive/In-AppMsg_Mockups+Specs_06.png %})
 
 
-[18]: {% image_buster /assets/img_archive/In-AppMsg_Mockups+Specs_05.png %}
 
-[19]: {% image_buster /assets/img_archive/In-AppMsg_Mockups+Specs_06.png %}
 
-[25]: https://imageoptim.com/

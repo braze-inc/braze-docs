@@ -21,4 +21,3 @@ There are a few reasons why you would prefer this method over exporting a CSV di
 For help with CSV and API exports, visit our [export troubleshooting]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/) article.
 {% endalert %}
 
-[24]: {{site.baseurl}}/api/endpoints/export/

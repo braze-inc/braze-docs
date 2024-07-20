@@ -22,4 +22,3 @@ Your approach should depend on the strictness required by your legal team based 
 Consult your legal team to determine the appropriate approach for your organization's compliance with consent management requirements.
 {% endalert %}
 
-[1]: {{site.baseurl}}/user_guide/administrative/manage_your_braze_users/teams/

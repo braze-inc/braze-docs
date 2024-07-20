@@ -107,6 +107,3 @@ To control this, [listen for updates]({{site.baseurl}}/developer_guide/platform_
 
 Have questions or feedback? Email our team: [feature-flags-feedback@braze.com](mailto:feature-flags-feedback@braze.com).
 
-[properties]: {{site.baseurl}}/developer_guide/platform_wide/feature_flags/create/#properties
-[refreshing]: {{site.baseurl}}/developer_guide/platform_wide/feature_flags/create/#refreshing
-[listen-for-updates]: {{site.baseurl}}/developer_guide/platform_wide/feature_flags/create/#updates

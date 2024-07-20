@@ -104,4 +104,3 @@ The Most Engaged Channel filter selects the portion of your audience for whom th
 
 Check this new filter out in our [Segmentation Filters library]({{site.baseurl }}/user_guide/engagement_tools/segments/segmentation_filters/).
 
-[1]: {% image_buster /assets/img/iam_platforms.gif %}

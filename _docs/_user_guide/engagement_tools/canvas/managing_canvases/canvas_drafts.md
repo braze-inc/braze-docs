@@ -28,4 +28,3 @@ For drafts of an active Canvas, the in-app message priority within the Canvas bu
 
 However, step-level in-app message priority changes are saved as a draft and applied when the Canvas is updated. For example, in a Message step, the priority sorter will be updated when a user launches the draft since step settings apply at a step level.
 
-[1]: {% image_buster /assets/img_archive/canvas_draft1.png %}

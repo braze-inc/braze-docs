@@ -80,6 +80,3 @@ Need help with your migration? Our [certified Braze partners](https://www.braze.
 
 For more, check out: [Getting Started: Integration overview]({{site.baseurl}}/user_guide/getting_started/integration/).
 
-[1]: {% image_buster /assets/img/getting_started/user_profile.png %}
-[2]: {% image_buster /assets/img/getting_started/segment.png %}
-[3]: {% image_buster /assets/img/getting_started/timetovalue.png %}

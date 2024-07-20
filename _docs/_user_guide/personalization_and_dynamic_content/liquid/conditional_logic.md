@@ -229,14 +229,3 @@ A time stamp of when an event took place. [Time]({{site.baseurl}}/user_guide/dat
 
 
 [36]:{% image_buster /assets/img/value_null.png %}
-[1]: http://docs.shopify.com/themes/liquid-documentation/basics
-[2]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#managing-custom-attributes
-[5]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/filters/#math-filters
-[7]: https://docs.shopify.com/themes/liquid-documentation/tags
-[8]: http://docs.shopify.com/themes/liquid-documentation/tags/control-flow-tags "Control Flow Tags"
-[9]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#booleans
-[10]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#numbers
-[11]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#strings
-[12]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#arrays
-[13]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#time
-[20]: {% image_buster /assets/img_archive/custom_attribute_data_type.png %}

@@ -32,6 +32,3 @@ Still need help? Open a [support ticket]({{site.baseurl}}/braze_support/).
 
 _Last updated on May 2, 2024_
 
-[1]: {{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions
-[2]: {{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices
-[3]: {{site.baseurl}}/user_guide/administrative/app_settings/message_activity_log_tab/

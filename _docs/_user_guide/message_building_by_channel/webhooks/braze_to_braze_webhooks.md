@@ -148,12 +148,3 @@ Add your `canvas/trigger/send` request in the text field. For more details, refe
 - You can check the [Message Activity Log]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/message_activity_log_tab/) to view and troubleshoot webhook failures.
 
 
-[1]: {% image_buster /assets/img_archive/webhook_settings.png %}
-[2]: {{site.baseurl}}/api/basics/
-[3]: {{site.baseurl}}/api/api_key/
-[4]: {{site.baseurl}}/user_guide/message_building_by_channel/webhooks/understanding_webhooks/
-[5]: {{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/
-[6]: {{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_persistent_entry_properties/
-[7]: {{site.baseurl}}/user_guide/administrative/access_braze/braze_instances
-[8]: {{site.baseurl}}/api/endpoints/user_data/post_user_track/
-[9]: {{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_canvases/

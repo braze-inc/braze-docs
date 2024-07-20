@@ -609,9 +609,3 @@ When activated, your sync will run on the schedule configured during setup. If y
 {% endtab %}
 {% endtabs %}
 
-[1]: {% image_buster /assets/img/cloud_ingestion/ingestion_6.png %}
-[2]: {% image_buster /assets/img/cloud_ingestion/ingestion_7.png %}
-[3]: {% image_buster /assets/img/cloud_ingestion/ingestion_8.png %}
-[4]: {% image_buster /assets/img/cloud_ingestion/ingestion_9.png %}
-[5]: {% image_buster /assets/img/cloud_ingestion/ingestion_10.png %}
-[6]: {% image_buster /assets/img/cloud_ingestion/ingestion_5.png %}

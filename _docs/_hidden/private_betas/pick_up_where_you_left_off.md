@@ -33,4 +33,3 @@ You can revisit recently edited or created campaigns, Canvases, and segments. Th
 
 Each card is paired with tags that indicate the content type (campaign, Canvas, segment) and status (active, draft, archived, stopped).
 
-[1]: {% image_buster /assets/img/pick_up_where_you_left_off.png %}

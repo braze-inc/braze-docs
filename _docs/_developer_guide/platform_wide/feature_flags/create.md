@@ -798,12 +798,3 @@ We're all guilty of leaving features on at 100% rollout for longer than necessar
 
 To help keep your code (and Braze dashboard) clean, remove permanent feature flags from your code base after all users have upgraded and you no longer need the option to disable the feature. This helps reduce the complexity of your development environment, but also keeps your list of feature flags tidy.
 
-[1]: {% image_buster /assets/img/feature_flags/feature-flags-list.png %} 
-[2]: {% image_buster /assets/img/feature_flags/feature-flags-create.png %}
-[3]: {% image_buster /assets/img/feature_flags/feature-flags-targeting.png %}
-[4]: {% image_buster /assets/img/feature_flags/feature-flags-rollout.png %}
-[5]: {{site.baseurl}}/developer_guide/platform_wide/feature_flags/about/
-[7]: {{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/
-[8]: {% image_buster /assets/img/feature_flags/feature-flags-manage-permission.png %}
-[9]: {{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/
-[10]: {% image_buster /assets/img/feature_flags/feature-flags-filter-name.png %}

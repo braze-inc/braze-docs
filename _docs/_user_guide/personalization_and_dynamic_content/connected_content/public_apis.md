@@ -87,30 +87,4 @@ Public APIs can be subject to usage restrictions and rate limiting.  Be sure to 
 | [Sunrise and Sunset](https://sunrise-sunset.org/api) | Provides Sunset and sunrise times for a given latitude and longitude. |
 {: .reset-td-br-1 .reset-td-br-2}
 
-[7]: http://openweathermap.org/api
-[8]: https://developer.nytimes.com/docs/articlesearch-product/1/overview
-[9]: http://open-platform.theguardian.com/documentation/
-[11]: http://platform.seatgeek.com/
-[12]: http://developer.tmsapi.com/docs/read/data_v1_1/movies/movie_showtimes
-[13]: http://www.bandsintown.com/api/overview
-[14]: http://www.last.fm/api
-[15]: http://developer.ebay.com/devzone/shopping/docs/concepts/shoppingapiguide.html
 [16]: [success@braze.com](mailto:success@braze.com)
-[18]: http://numbersapi.com/
-[19]: http://developer.eventbrite.com/
-[20]: http://api.eventful.com/
-[21]: http://www.discogs.com/developers/
-[22]: http://www.songkick.com/developer
-[24]: https://affiliate.itunes.apple.com/resources/documentation/itunes-store-web-service-search-api/
-[27]: http://blog.clearbit.com/logo
-[28]: http://api.tfl.gov.uk/#Line
-[29]: https://new.mta.info/developers
-[36]: https://www.barchartondemand.com/free
-[37]: https://www.coindesk.com/api/
-[38]: http://developer.ticketmaster.com/products-and-docs/apis/getting-started/
-[39]: https://sunrise-sunset.org/api
-[40]: http://www.brewerydb.com/
-[42]: https://airvisual.com/api
-[43]: https://developer.nutritionix.com/
-[44]: https://open.fda.gov/api/
-[45]: https://fdc.nal.usda.gov/api-guide.html

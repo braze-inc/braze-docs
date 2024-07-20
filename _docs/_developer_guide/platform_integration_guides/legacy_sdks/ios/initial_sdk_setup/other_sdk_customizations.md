@@ -191,6 +191,3 @@ Braze measures the size of our iOS SDK by observing the SDK's effect on `.ipa` s
 If you are integrating via CocoaPods with `use_frameworks!`, set `Enable Bitcode = NO` in target's Build Settings for accurate sizing.
 {% endalert %}
 
-[21]: {{site.baseurl}}/partners/advertising_technologies/attribution/adjust/
-[29]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/include/ABKIDFADelegate.h
-[31]: https://developer.apple.com/library/content/qa/qa1795/_index.html

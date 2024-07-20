@@ -85,11 +85,3 @@ At this point, your campaign should be ready to test and send. Check the Lob das
 Remember to save your template before leaving the page! <br>Updated webhook templates can be found in the **Saved Webhook Templates** list when creating a new [webhook campaign]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/). 
 {% endalert %}
 
-[33]: {% image_buster /assets/img_archive/lob_api_key.png %}
-[34]: {% image_buster /assets/img_archive/lob_success_response.png %}
-[35]: {% image_buster /assets/img_archive/lob_full_request.png %}
-[36]: {% image_buster /assets/img_archive/error_log.png %}
-[37]: {% image_buster /assets/img_archive/lob_api_endpoint.png %}
-[38]: https://lob.com
-[39]: https://lob.com/docs#intro
-[40]: https://lob.com/docs#auth

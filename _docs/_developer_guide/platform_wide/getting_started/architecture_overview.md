@@ -129,22 +129,3 @@ When Mel opens the announcement, she adds your new product to her wishlist. Braz
 
 
 
-[1]: {% image_buster /assets/img/getting-started/braze_listen_understand_act.png %}
-[3]: {% image_buster /assets/img/getting-started/import-export.png %}
-[4]: {{site.baseurl}}/api/endpoints/user_data
-[5]: {{site.baseurl}}/user_guide/getting_started/web_sdk/
-[6]: {{site.baseurl}}/partners/home
-[7]: {{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion
-[8]: {{site.baseurl}}/user_guide/engagement_tools/segments
-[9]: {{site.baseurl}}/developer_guide/platform_wide/analytics_overview/
-[10]: {{site.baseurl}}/api/api_campaigns#api-campaigns
-[11]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content
-[12]: {{site.baseurl}}/developer_guide/platform_wide/feature_flags/about/
-[13]: {% image_buster /assets/img/getting_started/channels.png %}
-[14]: {{site.baseurl}}/user_guide/data_and_analytics/braze_currents
-[15]: {{site.baseurl}}/partners/data_and_infrastructure_agility/data_warehouses/snowflake/
-[16]: {{site.baseurl}}/api/endpoints/export
-[17]: {{site.baseurl}}/user_guide/data_and_analytics/export_braze_data
-[18]: {% image_buster /assets/img/getting-started/putting-it-all-together.png %}
-[19]: {{site.baseurl}}/developer_guide/platform_wide/getting_started/integration_overview/
-[20]: {{site.baseurl}}/developer_guide/platform_integration_guides/sdk_changelogs

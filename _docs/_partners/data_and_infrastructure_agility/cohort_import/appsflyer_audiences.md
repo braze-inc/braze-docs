@@ -67,10 +67,3 @@ Once an AppsFlyer audience has been uploaded to Braze, you can use it as a filte
 
 ![User attributes filter "AppsFlyer Cohorts" selected.]({% image_buster /assets/img/appsflyer_audiences/appsflyer_cohorts_as_filter.png %})
 
-[1]: https://www.appsflyer.com/
-[2]: https://www.appsflyer.com/product/audiences/
-[3]: {{site.baseurl}}/partners/message_orchestration/attribution/appsflyer/appsflyer/
-[4]: https://support.appsflyer.com/hc/en-us/articles/115002689186-Audiences-guide#managing-connections
-[5]: {% image_buster /assets/img/appsflyer_audiences/appsflyer_data_import_key.png %}
-[6]: {% image_buster /assets/img/appsflyer_audiences/appsflyer_braze_connection.png %}
-[7]: {% image_buster /assets/img/appsflyer_audiences/appsflyer_cohorts_as_filter.png %}

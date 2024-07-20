@@ -64,6 +64,3 @@ With regards to multivariate testing, Braze determines variant re-eligibility fo
 - If the variant percentages change, users may be redistributed to other variants.
 - Control groups will remain consistent if the variant percentage is unchanged, and no users who previously received messages will ever enter the control group on a later send, nor will any user in the control group ever receive a message.
 
-[1]: {% image_buster /assets/img_archive/reeligibility_controls_campaign.png %}
-[2]: {% image_buster /assets/img_archive/reeligibility_controls_canvas.png %}
-[24]: {% image_buster /assets/img_archive/ReEligible.png %}

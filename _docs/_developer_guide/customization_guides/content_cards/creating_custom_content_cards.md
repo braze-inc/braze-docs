@@ -236,10 +236,3 @@ Content Cards don't have to look like "cards." For example, Content Cards can ap
 To achieve this, your marketers will create a campaign or Canvas step with a **Image Only** type of Content Card. Then, set key-value pairs that are appropriate for using [Content Cards as supplemental content]({{site.baseurl}}/developer_guide/customization_guides/content_cards/customizing_behavior/#content-cards-as-supplemental-content).
 
 
-[1]: {{site.baseurl}}/user_guide/message_building_by_channel/content_cards/creative_details
-[2]: {{site.baseurl}}/developer_guide/customization_guides/customization_overview
-[3]: {{site.baseurl}}/developer_guide/customization_guides/content_cards/logging_analytics/#logging-events
-[4]: {{site.baseurl}}/developer_guide/customization_guides/content_cards/customizing_behavior/#content-cards-as-supplemental-content
-[5]: {{site.baseurl}}/developer_guide/customization_guides/content_cards/customizing_behavior/#key-value-pairs
-[6]: {{site.baseurl}}/developer_guide/customization_guides/content_cards/logging_analytics/#listening-for-card-updates
-[7]: {{site.baseurl}}/developer_guide/customization_guides/content_cards/customizing_behavior/#key-value-pairs

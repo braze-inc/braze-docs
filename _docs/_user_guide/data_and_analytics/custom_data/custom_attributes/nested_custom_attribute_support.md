@@ -466,18 +466,4 @@ Any key that is updated consumes a data point. For example, this object initiali
 Updating a custom attribute object to `null` also consumes a data point.
 {% endalert %}
 
-[1]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#custom-attribute-data-types
-[4]: https://calendly.com/d/w9y6-qq9c/feedback-on-nested-custom-attributes?month=2021-07
-[5]: {% image_buster /assets/img_archive/nca_liquid_2.png %} 
-[6]: {% image_buster /assets/img_archive/nca_segmentation_2.png %}
-[7]: {% image_buster /assets/img_archive/nca_comparator.png %}
-[8]: {% image_buster /assets/img_archive/nca_generate_schema.png %}
 [9]:{% image_buster /assets/img_archive/nca_personalization.png %}
-[10]: {% image_buster /assets/img_archive/nca_schema.png %}
-[11]: {% image_buster /assets/img_archive/nca_segment_schema.png %}
-[12]: {% image_buster /assets/img_archive/nca_segment_schema2.png %}
-[13]: {% image_buster /assets/img_archive/nca_segment_schema_3.png %}
-[14]: {% image_buster /assets/img_archive/nca_multi_criteria.png %}
-[15]: {% image_buster /assets/img_archive/nca_triggered_changes.png %}
-[16]: {% image_buster /assets/img_archive/nca_triggered_changes2.png %}
-[17]: {% image_buster /assets/img_archive/nested_custom_attributes.png %}

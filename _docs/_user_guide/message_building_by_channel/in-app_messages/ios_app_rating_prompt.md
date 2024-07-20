@@ -44,5 +44,3 @@ As an alternative to soft priming, you could also display the iOS app rating pro
 Do not create custom HTML in-app messages that mimic a native iOS app rating prompt, as this violates Apple's guidelines.
 {% endalert %}
 
-[1]: {% image_buster /assets/img_archive/app_store_app_review.png %}
-[2]: {% image_buster /assets/img_archive/prime_app_review.png %}

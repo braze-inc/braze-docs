@@ -211,9 +211,4 @@ Use [Webhook.site](https://webhook.site/) to troubleshoot your Connected Content
 
 Using this tool, you can diagnose issues with the request headers, request body, and other information that is being sent in the call.
 
-[1]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/aborting_connected_content/
-[2]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/using_liquid/#liquid-usage-use-cases--overview
 [16]: [success@braze.com](mailto:success@braze.com)
-[34]: {% image_buster /assets/img_archive/basic_auth_mgmt.png %}
-[35]: {% image_buster /assets/img_archive/basic_auth_token.png %}
-[36]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/local_connected_content_variables/#configurable-caching

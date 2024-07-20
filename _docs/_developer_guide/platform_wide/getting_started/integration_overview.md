@@ -206,32 +206,3 @@ You will track updates to the Braze platform via the Braze [GitHub](https://gith
 
 
 
-[1]: {{site.baseurl}}/user_guide/message_building_by_channel
-[2]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types
-[3]: {{site.baseurl}}/user_guide/engagement_tools/segments
-[4]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events
-[5]: {{site.baseurl}}/developer_guide/platform_wide/analytics_overview/
-[6]: {{site.baseurl}}/developer_guide/customization_guides/customization_overview
-[7]: {{site.baseurl}}/api/basics/#rest-api-key
-[8]: {{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform
-[9]: {{site.baseurl}}/api/basics
-[10]: {{site.baseurl}}/user_guide/data_and_analytics/data_points
-[11]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-i-braze/change-user.html
-[12]: https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/changeuser(userid:sdkauthsignature:fileid:line:)/
-[13]: https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#changeuser
-[14]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-i-braze/request-immediate-data-flush.html?query=abstract%20fun%20requestImmediateDataFlush()
-[15]: https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/requestimmediatedataflush()
-[16]: https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#requestimmediatedataflush
-[17]: {{site.baseurl}}/api/endpoints/user_data/post_user_track/
-[18]: {{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import#importing-a-csv
-[19]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/tracking_sessions/
-[20]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/tracking_sessions/
-[21]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/tracking_sessions/
-[22]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/
-[23]: https://github.com/braze-inc/
-[24]: {{site.baseurl}}/user_guide/engagement_tools/locations_and_geofences#about-locations-and-geofences/
-[25]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid#about-liquid
-[26]: {{site.baseurl}}/user_guide/message_building_by_channel/email/email_setup/ip_warming/
-[27]: {% image_buster /assets/img/getting-started/getting-started-integrate-flower.png %}
-[28]: {% image_buster /assets/img/getting-started/data-graphic-2.png %} 
-[29]: {% image_buster /assets/img/getting-started/data-graphic.png %}  

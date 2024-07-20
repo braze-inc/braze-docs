@@ -128,8 +128,3 @@ To set up a subscription for your users (either email or push), you can set foll
 
 >  These types fall under `AppboyPlatform.PCL.Models.NotificationSubscriptionType`. Visit [Managing user subscriptions]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#managing-user-subscriptions) for more details.
 
-[1]: {{site.baseurl}}/developer_guide/platform_integration_guides/windows_universal/analytics/setting_user_ids/#user-id-integration-best-practices--notes
-[2]: http://en.wikipedia.org/wiki/ISO_8601
-[4]: {{site.baseurl}}/developer_guide/rest_api/user_data/#user-data
-[7]: {{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#user-data-collection
-[10]: {{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#managing-user-subscriptions

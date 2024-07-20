@@ -155,21 +155,3 @@ As a technical resource, you'll be involved in a lot of the nuts and bolts of Br
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 
-[1]: {{site.baseurl}}/user_guide/administrative/access_braze
-[2]: {{site.baseurl}}/api/home
-[3]: {% image_buster /assets/img/getting-started/getting-started-segment.png %}
-[4]: {{site.baseurl}}/developer_guide/customization_guides/content_cards
-[5]: {{site.baseurl}}/user_guide/message_building_by_channel/push
-[6]: {{site.baseurl}}/user_guide/message_building_by_channel/email
-[7]: {{site.baseurl}}/user_guide/message_building_by_channel/sms
-[8]: {% image_buster /assets/img_archive/UOiOSPush.png %} "Example Push dashboard"
-[9]: {% image_buster /assets/img_archive/In-App_Modal.png %} "Slideup Example"
-[10]: {% image_buster /assets/img_archive/EmailTemplateEditor.png %} "Email Template Editor"
-[11]: {{site.baseurl}}/user_guide/message_building_by_channel/whatsapp
-[12]: {{site.baseurl}}/user_guide/message_building_by_channel/webhooks
-[13]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/
-[14]: {% image_buster /assets/img_archive/Webhook_Body_Edit.png %}
-[15]: {% image_buster /assets/img/whatsapp/whatsapp8.png %}
-[16]: {{site.baseurl}}/developer_guide/home
-[17]: {% image_buster /assets/img/getting-started/getting-started-vertically-integrated-stack.png %}
-[18]: {% image_buster /assets/img/getting-started/messaging-channels.png %}

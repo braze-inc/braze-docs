@@ -332,4 +332,3 @@ Promote items that users have recently interacted with, including views, clicks,
 
 {% enddetails %}
 
-[1]: {{site.baseurl}}/ai_item_recommendations

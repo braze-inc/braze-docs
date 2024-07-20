@@ -110,17 +110,3 @@ You can re-order your cards within the News Feed page.
   - Impressions are only counted if the card is viewable in the feed (that is, if a user does not scroll down to read a card, an impression is not counted).
 - Cards are then ordered by the date and time of creation, where more recent items are first.
 
-[1]: {% image_buster /assets/img_archive/newsfeed1_new.png %}
-[2]: {% image_buster /assets/img_archive/classiccard.png %}
-[3]: {% image_buster /assets/img_archive/captionedimage.png %}
-[4]: {% image_buster /assets/img_archive/newsfeedbanner.png %}
-[6]: {% image_buster /assets/img_archive/news-feed-title-summary_new.png %}
-[7]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/advanced_use_cases/linking/
-[8]: {% image_buster /assets/img_archive/newsfeed2_new.png %}
-[10]: {{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/#creating-a-segment
-[11]: {% image_buster /assets/img_archive/targetsegment_new.png %}
-[12]: {% image_buster /assets/img_archive/newsfeedpreview_new.png %}
-[13]: https://www.braze.com/customers
-[14]: {% image_buster /assets/img_archive/linked-in-app_new.png %}
-[15]: {{site.baseurl}}/user_guide/engagement_tools/news_feed/news_feed_use_cases/
-[16]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/reporting/

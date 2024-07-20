@@ -349,13 +349,3 @@ The following keys are reserved and cannot be used as custom event properties:
 
 If only a single generic name field exists for a user (for example, 'JohnDoe'), you can assign this entire title to your user's First Name attribute. Additionally, you can attempt to parse out both the first and last name of the user using spaces, but this latter method carries the potential risk of misnaming some of your users.
 
-[4]: {{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#purchase-events--revenue-tracking
-[8]: {% image_buster /assets/img_archive/custom_event_analytics_example.png %} "custom_event_analytics_example.png"
-[9]: {{site.baseurl}}/api/endpoints/user_data/
-[10]: {{site.baseurl}}/api/endpoints/messaging/
-[11]: http://www.regextester.com/pregsyntax.html
-[12]: #integers
-[16]: #example-case
-[17]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/
-[18]: {% image_buster /assets/img_archive/customEventProperties.png %} "customEventProperties.png"
-[19]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/

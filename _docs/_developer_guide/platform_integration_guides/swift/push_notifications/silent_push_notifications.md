@@ -57,12 +57,3 @@ The iOS operating system may gate notifications for some features. Note that if 
 
 Refer to Apple's [instance method](https://developer.apple.com/documentation/uikit/uiapplicationdelegate/1623013-application) and [unreceived notifications](https://developer.apple.com/library/content/technotes/tn2265/_index.html#//apple_ref/doc/uid/DTS40010376-CH1-TNTAG23) documentation for more details.
 
-[1]: {{site.baseurl}}/api/endpoints/messaging/
-[2]: {% image_buster /assets/img_archive/remote_notification.png %} "content available"
-[3]: {% image_buster /assets/img_archive/background_mode.png %} "background mode enabled"
-[4]: https://developer.apple.com/documentation/usernotifications/setting_up_a_remote_notification_server/pushing_background_updates_to_your_app
-[5]: https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIApplicationDelegate_Protocol/index.html#//apple_ref/occ/intfm/UIApplicationDelegate/application:didReceiveRemoteNotification:fetchCompletionHandler:
-[6]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/uninstall_tracking/
-[7]: https://developer.apple.com/documentation/uikit/uiapplicationdelegate/1623013-application
-[8]: https://developer.apple.com/library/content/technotes/tn2265/_index.html#//apple_ref/doc/uid/DTS40010376-CH1-TNTAG23
-[9]: {{site.baseurl}}/user_guide/engagement_tools/locations_and_geofences

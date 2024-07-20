@@ -69,14 +69,3 @@ myapp://products/20-gift-card?utm_source=my_app&utm_medium=iam&utm_campaign=spri
 
 ![]({% image_buster /assets/img_archive/iam_utm_tags.png %})
 
-[1]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/integration/
-[2]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/advanced_use_cases/linking/
-[3]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/deep_linking/#Android_Deep_Advance
-[4]: https://support.google.com/analytics/answer/1033863?hl=en
-[5]: https://developers.google.com/analytics/devguides/collection/
-[6]: https://support.google.com/analytics/answer/1033867
-[7]: https://developers.google.com/analytics/solutions/mobile-campaign-deep-link
-[8]: {% image_buster /assets/img_archive/push_utm_tags.png %}
-[9]: {% image_buster /assets/img_archive/news_feed_utm_tags.png %}
-[10]: {% image_buster /assets/img_archive/iam_utm_tags.png %}
-[11]: {{site.baseurl}}/user_guide/engagement_tools/news_feed/creating_a_news_feed_item/

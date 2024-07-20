@@ -92,16 +92,3 @@ Here is a specific definition of settings fields.
 
 Deduplication is a major challenge when reconciling data from multiple sources, especially online and offline. Through Octolis's advanced no-code module, you can use multiple keys for [deduplication](https://help.octolis.com/resources/faq/what-is-deduplication-and-how-does-it-work). This module is available for each master table, meaning you can adapt the logic to each entity.
 
-[0]: http://octolis.com
-[1]: {{site.baseurl}}/api/endpoints/user_data/post_user_track/
-[2]: {{site.baseurl}}/developer_guide/rest_api/basics/#endpoints
-[3]: https://help.octolis.com/resources/faq/what-is-deduplication-and-how-does-it-work
-[4]: https://help.octolis.com/
-[5]: https://help.octolis.com/audiences/create-a-no-code-audience
-[6]: {{site.baseurl}}/api/api_limits/
-[7]: {% image_buster /assets/img/Octolis/Braze_scheme.png %}
-[8]: {% image_buster /assets/img/Octolis/Braze_screen1.png %}
-[9]: {% image_buster /assets/img/Octolis/Braze_screen2.png %}
-[10]: {% image_buster /assets/img/Octolis/Braze_screen3.png %}
-[11]: {% image_buster /assets/img/Octolis/Braze_screen4.png %}
-[12]: {% image_buster /assets/img/Octolis/Braze_screen5.png %}

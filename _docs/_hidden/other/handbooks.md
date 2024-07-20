@@ -12,8 +12,3 @@ permalink: /handbooks/
 - [Support & Success Services Handbook FY'22 PDF]({{site.baseurl}}/assets/download_file/Braze_Success_and_Support_Services_Handbook_22.pdf) (Valid for order forms that specifically referred to this handbook)
 - [Support & Success Services Handbook FY'21 PDF]({{site.baseurl}}/assets/download_file/Braze_Success_and_Support_Services_Handbook_21.pdf) (Valid for order forms that specifically referred to this handbook)
 
-[5]: {{site.baseurl}}/assets/download_file/Braze_Entitlements_Handbook_24.pdf
-[4]: {{site.baseurl}}/assets/download_file/Braze_Success_and_Support_Services_Handbook_24_2.pdf
-[3]: {{site.baseurl}}/assets/download_file/Braze_Success_and_Support_Services_Handbook_23v17.pdf
-[2]: {{site.baseurl}}/assets/download_file/Braze_Success_and_Support_Services_Handbook_22.pdf
-[1]: {{site.baseurl}}/assets/download_file/Braze_Success_and_Support_Services_Handbook_21.pdf

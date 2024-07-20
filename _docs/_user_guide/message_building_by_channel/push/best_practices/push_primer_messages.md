@@ -116,8 +116,3 @@ Beyond that, you can decide what additional segments you feel are most appropria
 
 Braze suggests default settings for conversions, but you may want to set up [conversion events]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/) surrounding push primers.
 
-[1]: {% image_buster /assets/img_archive/push_primer_iam.png %}
-[2]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/create/
-[3]: {{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/creating_custom_opt-in_prompts/
-[4]: {% image_buster /assets/img_archive/push_primer_button_behavior.png %}
-[5]: {% image_buster /assets/img_archive/push_primer_trigger.png %}

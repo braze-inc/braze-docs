@@ -40,7 +40,6 @@ Hi Valued User, thanks for using the App!
 
 {% endraw %}
 
-[3]: http://docs.shopify.com/themes/liquid-documentation/filters
 [31]:https://docs.shopify.com/themes/liquid/tags/variable-tags
 [32]:https://docs.shopify.com/themes/liquid/tags/iteration-tags
 [34]:{% image_buster /assets/img_archive/personalized_iflogic_.png %}

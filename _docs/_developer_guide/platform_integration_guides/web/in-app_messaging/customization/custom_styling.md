@@ -40,6 +40,3 @@ braze.initialize("YOUR-API-KEY", {
 This option was introduced in Web SDK v3.3.0. Older SDKs must be upgraded to use this option.
 {% endalert %}
 
-[2]: https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.inappmessage.html
-[15]: https://fontawesome.com/?from=io
-[41]: https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#initializationoptions

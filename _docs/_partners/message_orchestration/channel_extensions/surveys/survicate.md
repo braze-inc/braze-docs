@@ -55,7 +55,3 @@ Go to the **Share** tab, and choose a preferred option of a survey placement. Yo
 
 In Braze, add your survey's link or HTML code into the content of your email campaign. Start surveying your customers and analyze the results in Survicate!
 
-[1]: https://survicate.com/
-[2]:  {% image_buster /assets/img/survicate/survicate_asset_1.png %}
-[3]:  {% image_buster /assets/img/survicate/survicate_asset_2.png %}
-[4]:  {% image_buster /assets/img/survicate/survicate_asset_3.png %}

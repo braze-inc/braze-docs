@@ -37,8 +37,3 @@ If you don't have your `ANDROID_HOME` variable properly set or don't have a `loc
 
 For more information on the Android SDK build system, see the [GitHub Repository README](https://github.com/braze-inc/braze-android-sdk/blob/master/README.md).
 
-[25]: {{site.baseurl}}/developer_guide/platform_wide/app_group_configuration/#app-group-configuration
-[26]: https://github.com/braze-inc/braze-android-sdk/blob/master/README.md
-[27]: https://github.com/JakeWharton/sdk-manager-plugin
-[3]: https://github.com/braze-inc/braze-android-sdk "Braze Android GitHub Repository"
-[34]: {% image_buster /assets/img_archive/hello_appboy.png %}

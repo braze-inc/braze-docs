@@ -125,5 +125,3 @@ Once you integrate Braze with Kognitiv Inspire, Kognitiv empowers you to access 
 
 For more information on configuring access tokens and SFTP endpoints, contact Kognitiv for a demonstration.
 
-[1]: http://kognitiv.com
-[2]: https://info.kognitivloyalty.com

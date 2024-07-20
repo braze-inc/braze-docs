@@ -112,4 +112,3 @@ A high percentage of emails are read on mobile devices. Using [deep linking]({{s
 
 However, emails don't provide the clarity of knowing whether recipients have the app installed. So, avoiding deep linking helps prevent error messages for these email recipients who do not have the app.
 
-[61]: {% image_buster /assets/img_archive/preheader_example.png %}

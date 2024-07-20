@@ -28,5 +28,3 @@ Customers can now fetch uninstall tracking data from our export APIs directly. C
 
 We've improved your ability to sort by error type in the [Message Error Log]({% image_buster /assets/img_archive/improved_error_log.png %})!
 
-[4]: {{site.baseurl}}/developer_guide/rest_api/export/#kpi-export
-[5]: {% image_buster /assets/img_archive/improved_error_log.png %}

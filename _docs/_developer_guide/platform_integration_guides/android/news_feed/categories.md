@@ -39,4 +39,3 @@ newsFeed.setCategories:EnumSet.of(CardCategory.ANNOUNCEMENTS, CardCategory.NEWS)
 ```
 
 
-[14]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/reporting/

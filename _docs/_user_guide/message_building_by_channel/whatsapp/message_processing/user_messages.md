@@ -94,16 +94,4 @@ You will most likely want a reply message for each response. We recommend having
 
 Note that you can use any subsequent actions that the Braze Canvas offers, such as messages in response, user profile updates, or Braze-to-Braze webhooks. 
 
-[1]: {% image_buster /assets/img/whatsapp/whatsapp24.png %} 
-[2]: {% image_buster /assets/img/whatsapp/whatsapp25.png %} 
-[3]: {% image_buster /assets/img/whatsapp/whatsapp26.png %} 
-[4]: {% image_buster /assets/img/whatsapp/whatsapp27.png %} 
 
-[11]: {% image_buster /assets/img/whatsapp/whatsapp11.png %} 
-[12]: {% image_buster /assets/img/whatsapp/whatsapp12.png %} 
-[13]: {% image_buster /assets/img/whatsapp/whatsapp13.png %} 
-[14]: {% image_buster /assets/img/whatsapp/whatsapp14.png %} 
-[15]: {% image_buster /assets/img/whatsapp/whatsapp15.png %} 
-[16]: {% image_buster /assets/img/whatsapp/whatsapp16.png %} 
-[17]: {% image_buster /assets/img/whatsapp/whatsapp17.png %} 
-[18]: {% image_buster /assets/img/whatsapp/whatsapp18.png %}

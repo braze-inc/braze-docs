@@ -276,13 +276,3 @@ Read more about custom handling messaging:
 - [In-App Message Customization](https://www.braze.com/docs/developer_guide/platform_integration_guides/web/in-app_messaging/customization/key_value_pairs)
 - [Content Cards Customization](https://www.braze.com/docs/developer_guide/platform_integration_guides/web/content_cards/customization/custom_ui/)
 
-[1]: {% image_buster /assets/img/android_ott.png %}
-[2]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/
-[3]: {{site.baseurl}}/developer_guide/platform_integration_guides/roku/in-app_messaging/overview/
-[4]: https://github.com/braze-inc/braze-swift-sdk
-[5]: https://designguidelines.withgoogle.com/android-tv/patterns/notifications.html
-[6]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/android_tv_push/
-[7]: https://developer.amazon.com/docs/fire-tv/notifications.html#headsup
-[8]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/smart_tvs/
-[android-tv-html]: https://github.com/braze-inc/braze-android-sdk/blob/master/CHANGELOG.md#2310
-[9]: https://github.com/braze-inc/braze-swift-sdk/tree/main/Examples#inappmessages-custom-ui

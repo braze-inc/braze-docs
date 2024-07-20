@@ -103,14 +103,3 @@ Lastly, you must add the Client Secret and Client ID you obtained in [Step 1](#s
 
 ![]({% image_buster /assets/img_archive/fire_os_dashboard.png %})
 
-[2]: #step-1-enable-adm
-[8]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/fireos/troubleshooting/
-[10]: https://developer.amazon.com/public
-[11]: https://developer.amazon.com/public/apis/engage/device-messaging/tech-docs/02-obtaining-adm-credentials
-[12]: https://developer.amazon.com/public/apis/engage/device-messaging/tech-docs/03-setting-up-adm
-[14]: https://developer.amazon.com/public/apis/engage/device-messaging
-[29]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/deep_linking/
-[32]: https://developer.amazon.com/appsandservices/apis/engage/device-messaging/tech-docs/04-integrating-your-app-with-adm
-[34]: {% image_buster /assets/img_archive/fire_os_dashboard.png %}
-[53]: https://docs.unity3d.com/Manual/AndroidJARPlugins.html
-[54]: https://docs.unity3d.com/Manual/AndroidAARPlugins.html

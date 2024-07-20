@@ -71,7 +71,3 @@ After reviewing these results and making any adjustments to your email campaign,
 
 All of our tests are run through actual email clients. Braze works hard to check that all renderings are as accurate as possible. If you consistently see an issue with an email client, open a [support ticket]({{site.baseurl}}/braze_support/).
 
-[1]: {% image_buster /assets/img_archive/inboxvision1.png %}
-[2]: {% image_buster /assets/img_archive/inboxvision2.png %}
-[3]: {% image_buster /assets/img_archive/inboxvision4.png %}
-[4]: {% image_buster /assets/img_archive/email_spam_testing.png %}

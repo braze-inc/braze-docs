@@ -194,8 +194,3 @@ The data collected by Braze is determined by your specific integration and the u
 
 To learn more about other device data that Braze collects which may fall outside the scope of Google Play's data safety guidelines, see our [Android storage overview]({{site.baseurl}}/developer_guide/platform_integration_guides/android/storage) and our [SDK data collection options]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/sdk_data_collection/#minimum-integration).
 
-[1]: {{site.baseurl}}/api/data_retention/
-[2]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/storage
-[3]: https://support.google.com/googleplay/android-developer/answer/10787469?hl=en#zippy=%2Cwhat-kinds-of-activities-can-service-providers-perform
-[4]: https://support.google.com/googleplay/android-developer/answer/10787469
-[5]: {{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/sdk_data_collection/#minimum-integration

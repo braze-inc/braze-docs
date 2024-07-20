@@ -87,8 +87,3 @@ To use the Braze block, drag it from the block drawer into the appropriate Answe
 {% endtab %}
 {% endtabs %}
 
-[1]: {{site.baseurl}}/developer_guide/rest_api/basics/#endpoints
-[2]: {% image_buster /assets/img/ada/ada-braze-1.png %}
-[3]: {% image_buster /assets/img/ada/ada-braze-2.png %}
-[4]: {% image_buster /assets/img/ada/ada-braze-3.png %}
-[5]: {% image_buster /assets/img/ada/ada-braze-4.png %}

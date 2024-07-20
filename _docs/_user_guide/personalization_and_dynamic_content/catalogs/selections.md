@@ -74,10 +74,3 @@ Using the same personalization, you can also send three meal recommendations for
 ![A Content Card with an image of beef stroganoff, and a list of two meal recommendations that include beef based on the user's most recently viewed category.]({% image_buster /assets/img_archive/catalog_selections5.png %}){: style="max-width:90%;"}
 
 
-[1]: {% image_buster /assets/img_archive/catalog_selections1.png %}
-[2]: {% image_buster /assets/img_archive/catalog_selections2.png %}
-[3]: {% image_buster /assets/img_archive/catalog_selections3.png %}
-[4]: {% image_buster /assets/img_archive/catalog_selections4.png %}
-[5]: {% image_buster /assets/img_archive/catalog_selections5.png %}
-[6]: {% image_buster /assets/img_archive/catalog_selections6.png %}
-[7]: {% image_buster /assets/img_archive/catalog_selections7.png %}

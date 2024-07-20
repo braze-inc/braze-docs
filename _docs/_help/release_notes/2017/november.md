@@ -21,7 +21,4 @@ You can now upload multiple assets and folders of assets to the [media library](
 You can now create branches on the first step of a variant. This feature will allow you to send multiple messages as the first step of a variant, opening up opportunities to further target your audience.
 
 
-[77]: {{site.baseurl}}/user_guide/onboarding/platform_administrative_features/#notification-preferences
-[78]: {{site.baseurl}}/user_guide/onboarding/platform_administrative_features/#slack-incoming-webhook-integration
-[79]: {{site.baseurl}}/user_guide/engagement_tools/templates_and_media/media_library/#media-library
 [98]:{{site.baseurl}}/user_guide/onboarding/platform_administrative_features/#authentication-rules

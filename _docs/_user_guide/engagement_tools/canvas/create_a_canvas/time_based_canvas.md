@@ -82,9 +82,3 @@ If you have the proper [user permissions]({{site.baseurl}}/user_guide/administra
 {% endalert %}
 
 
-[1]: {% image_buster /assets/img_archive/schedule_delay_immediately.png %}
-[2]: {% image_buster /assets/img_archive/schedule_delay_after.png %}
-[3]: {% image_buster /assets/img_archive/schedule_delay_next.png %}
-[4]: {% image_buster /assets/img_archive/schedule_delay_in.png %}
-[5]: {% image_buster /assets/img_archive/schedule_delay_intelligent.png %}
-[6]: {% image_buster /assets/img_archive/schedule_frequency_capping.png %}

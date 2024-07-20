@@ -373,11 +373,3 @@ In the key-value pairs, provide an `attribute_key`; this key, along with the use
 ![An Apple device displaying rows of settings and toggles. The custom view handles the buttons, and any touches outside of the button controls are handled by the in-app message and will dismiss it.]({% image_buster /assets/img/iam_implementation_guide.png %}){: style="float:right;max-width:30%;margin-left:10px;border:0"}
 Intercepting in-app message touches is crucial in making the custom full in-app message buttons function correctly. By default, the `ABKInAppMessageImmersive` adds a tap gesture recognizer onto the message, so users can dismiss messages without buttons. By adding a `UISwitch` or button to the `UITableViewCell` view hierarchy, the touches now get handled by our custom view. As of iOS 6, buttons and other controls have precedence when working with gesture recognizers, making our custom full in-app message work as it should. 
 
-[1]: {% image_buster /assets/img/iam_implementation_guide.png %}
-[2]: {% image_buster /assets/img/iam_implementation/slideup.png %}
-[3]: {% image_buster /assets/img/iam_implementation/modal.png %}
-[4]: {% image_buster /assets/img/iam_implementation/dashboard1.png %}
-[5]: {% image_buster /assets/img/iam_implementation/dashboard2.png %}
-[6]: {% image_buster /assets/img/iam_implementation/fullscreen.png %}
-[7]: {% image_buster /assets/img/iam_implementation/dashboard3.png %}
-[8]: {% image_buster /assets/img/iam_implementation/dashboard4.png %}

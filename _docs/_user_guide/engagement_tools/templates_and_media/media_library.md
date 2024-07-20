@@ -90,10 +90,3 @@ Between you and Braze, any images generated using DALL·E 2 are your intellectua
 In order to generate images, Braze will send your query to OpenAI's API Platform. All queries sent to OpenAI from Braze are anonymized, meaning that OpenAI will not be able to identify from whom the query was sent unless you include uniquely identifiable information in the input you provide. As detailed in [OpenAI’s API Platform Commitments](https://openai.com/policies/api-data-usage-policies), data sent to OpenAI’s API via Braze is not used to train or improve their models and will be deleted after 30 days. Please ensure that you adhere to OpenAI’s policies relevant to you, which may include its [Usage Policy](https://openai.com/policies/usage-policies) and its [Sharing & Publication Policy](https://openai.com/policies/sharing-publication-policy). Braze makes no warranty of any kind with respect to any AI-generated content. 
 
 
-[1]: {% image_buster /assets/img_archive/media_library_main.png %}
-[1.5]: {% image_buster /assets/img_archive/media_library_composers.png %}
-[2]: {% image_buster /assets/img_archive/media_library_crop1.png %}
-[3]: {% image_buster /assets/img_archive/media_library_crop2.png %}
-[4]: {{site.baseurl}}/user_guide/engagement_tools/templates_and_media/
-[5]: https://imageoptim.com/mac
-[6]: {% image_buster /assets/img_archive/media_library_dalle.png %}

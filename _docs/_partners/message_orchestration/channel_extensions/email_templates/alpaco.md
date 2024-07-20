@@ -59,4 +59,3 @@ If you want to make changes to your email template, make those changes in Alpaco
 
 Find your uploaded Alpaco email by navigating to **Templates & Media > Email Templates** in the Braze dashboard. You can now use this template to send on-brand and data-driven emails to your users.
 
-[1]: {{site.baseurl}}/user_guide/message_building_by_channel/email/creating_an_email_template/

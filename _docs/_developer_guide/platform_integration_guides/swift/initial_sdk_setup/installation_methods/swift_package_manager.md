@@ -58,8 +58,3 @@ The Braze Swift SDK separates features into standalone libraries to provide deve
 
 Follow the instructions for [completing the integration]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/initial_sdk_setup/completing_integration/).
 
-[1]: https://swift.org/package-manager/
-[2]: https://github.com/braze-inc/braze-swift-sdk#version-information
-[3]: {% image_buster /assets/img/swiftpackages.png %}
-[4]: {% image_buster /assets/img/importsdk_example.png %}
-[5]: {% image_buster /assets/img/add_package.png %}

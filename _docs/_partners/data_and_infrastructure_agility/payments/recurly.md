@@ -86,7 +86,3 @@ Recurly batches certain subscription lifecycle events as single API calls to Bra
 
 Batches are sent to Braze in groups of up to 75 events at a time. For example, if 100 subscriptions were created at once, Recurly would make two API requests to Braze. See [batching User Track requests]({{site.baseurl}}/api/api_limits/#batch-user-track) for details.
 
-[1]: {{site.baseurl}}/developer_guide/rest_api/basics/#endpoints
-[2]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/
-[3]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/#analytics
-[4]: {{site.baseurl}}/api/api_limits/#batch-user-track

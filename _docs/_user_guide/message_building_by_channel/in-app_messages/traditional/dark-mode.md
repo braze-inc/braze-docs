@@ -73,4 +73,3 @@ For example:
 }
 ```
 
-[2]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/#color-profile

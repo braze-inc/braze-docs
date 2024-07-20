@@ -66,8 +66,3 @@ See the following articles on how to [log attributes]({{site.baseurl}}/developer
 To learn more about in-app messaging on Roku, see our [in-app message integration guide]({{site.baseurl}}/developer_guide/platform_integration_guides/roku/in-app_messaging/overview/).
 
 
-[1]: https://github.com/braze-inc/braze-roku-sdk
-[2]: {{site.baseurl}}/developer_guide/platform_integration_guides/roku/analytics/setting_custom_attributes/
-[3]: {{site.baseurl}}/developer_guide/platform_integration_guides/roku/analytics/logging_custom_events/
-[4]: {{site.baseurl}}/developer_guide/platform_integration_guides/roku/analytics/logging_purchases/
-[5]: {{site.baseurl}}/developer_guide/platform_integration_guides/roku/in-app_messaging/overview/

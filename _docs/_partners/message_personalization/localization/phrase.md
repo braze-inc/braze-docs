@@ -81,4 +81,3 @@ In Phrase, navigate to **Settings > Integrations > Connectors > New**.
 
 The [Connector API](https://cloud.memsource.com/web/docs/api#) can automate steps otherwise performed manually through the UI. [Webhooks](https://support.phrase.com/hc/en-us/articles/5709693398812) can be used to have Phrase TMS notify 3rd party systems about certain events (for example, a job status change).
 
-[1]: {{site.baseurl}}/developer_guide/rest_api/basics/#endpoints

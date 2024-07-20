@@ -148,6 +148,3 @@ Your output will be similar to the following:
 | `already_used_by_other_guest` | This promo code has already been used by some other guest. | Another user has already used the code. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
-[1]: {% image_buster /assets/img/punchh/punchh7.png %}
-[2]: {% image_buster /assets/img/punchh/punchh8.png %}
-[3]: {% image_buster /assets/img/punchh/punchh9.png %}

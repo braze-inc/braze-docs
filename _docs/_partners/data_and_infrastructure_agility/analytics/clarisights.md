@@ -63,14 +63,3 @@ The data from Braze will start flowing from the time of the next scheduled data 
 
 Visit Clarisights for more information on available [metrics and dimensions](https://help.clarisights.com/en/articles/5670864-braze-metrics-and-dimensions) or [report creation](https://help.clarisights.com/en/articles/1421478-creating-a-report-using-clarisights).
 
-[1]: {{site.baseurl}}/developer_guide/rest_api/basics/#endpoints
-[2]: https://clarisights.com
-[3]: {{site.baseurl}}/assets/img/clarisights/overall_view.png
-[4]: {{site.baseurl}}/assets/img/clarisights/unified_dashboard.png
-[5]: {{site.baseurl}}/assets/img/clarisights/granular_reporting.png
-[6]: {{site.baseurl}}/assets/img/clarisights/integrations.png
-[7]: {{site.baseurl}}/assets/img/clarisights/braze_flow.png
-[8]: {{site.baseurl}}/assets/img/clarisights/braze_report.png
-[9]: {{site.baseurl}}/assets/img/clarisights/connected.png
-[10]: https://help.clarisights.com/en/articles/5670864-braze-metrics-and-dimensions
-[11]: https://help.clarisights.com/en/articles/1421478-creating-a-report-using-clarisights

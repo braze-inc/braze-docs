@@ -69,7 +69,3 @@ For more examples and advice on integrating with Sheetlabs, refer to [Sheetlabs 
 {% endalert %}
 
 
-[1]: https://sheetlabs.com/
-[2]: https://www.braze.com/docs/user_guide/personalization_and_dynamic_content/connected_content/about_connected_content/
-[3]: https://app.sheetlabs.com/docs/producers/braze/
-[4]: https://sheetlabs.com/ACME/email1_translations?country=en

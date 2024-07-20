@@ -58,11 +58,3 @@ If a user's profile does not have enough data to calculate an optimal time, you 
 
 Intelligent Timing campaigns work best for one-off and recurring messages where there is some flexibility regarding delivery time such as when they aren't well suited for breaking news or timed announcements.
 
-[3]: {% image_buster /assets/img_archive/time_based.png %}
-[8]: {{site.baseurl}}/user_guide/sage_ai/intelligence/intelligent_timing/
-[9]: {% image_buster /assets/img_archive/schedule_designated.png %}
-[10]: {% image_buster /assets/img_archive/schedule_immediately.png %}
-[14]: {% image_buster /assets/img_archive/schedule_intelligent.png %}
-[24]: {% image_buster /assets/img_archive/ReEligible.png %}
-[25]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/faq/#how-do-i-schedule-a-local-time-zone-campaign/
-[34]: {% image_buster /assets/img_archive/customEventProperties.png %}

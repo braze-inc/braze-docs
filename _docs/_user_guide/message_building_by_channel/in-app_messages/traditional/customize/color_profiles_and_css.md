@@ -97,6 +97,3 @@ If you choose to use a web-only Web Modal with CSS message, you can apply your o
 If you choose to apply your own template, click **Apply Template** and choose from the in-app message template gallery. If you don't have any options, you can upload a [CSS Template]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/customize/color_profiles_and_css/#in-app-message-templates) using the CSS Template builder.
 
 
-[6]: {{site.baseurl}}/user_guide/engagement_tools/templates_and_media/duplicate/
-[7]: {{site.baseurl}}/user_guide/engagement_tools/templates_and_media/archive/
-[8]: {{site.baseurl}}/user_guide/engagement_tools/templates_and_media/

@@ -60,7 +60,3 @@ Next, you must create and define this segment within Braze:
 
 You can now add this newly created segment to future Braze campaigns and Canvases to target these end-users. 
 
-[1]: {% image_buster /assets/img/zeotap/zeotap1.png %}
-[2]: {% image_buster /assets/img/zeotap/zeotap2.png %}
-[3]: {% image_buster /assets/img/zeotap/zeotap3.png %}
-[4]: {% image_buster /assets/img/zeotap/zeotap4.png %}

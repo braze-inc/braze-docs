@@ -213,5 +213,3 @@ Be certain the provided Connected Content endpoint can handle large bursts of tr
 With a `POST` you don't need to cache bust, as Braze never caches the results from `POST` requests.
 
 [16]: [success@braze.com](mailto:success@braze.com)
-[17]: {% image_buster /assets/img_archive/connected_weather_push2.png %} "Connected Content Push Usage Example"
-[46]: http://www.json.org

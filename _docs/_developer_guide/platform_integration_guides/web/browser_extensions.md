@@ -112,11 +112,3 @@ For more information on our supported initialization options, visit the [Web SDK
 
 Extension popup dialogs don't allow for push prompts (they don't have the URL bar in the navigation). So to register and request push permission within an extension's Popup dialog, you'll have to make use of an alternate domain workaround, as described in [Alternate push domain]({{ site.baseurl }}/developer_guide/platform_integration_guides/web/push_notifications/alternate_push_domain).
 
-[1]: https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups
-[2]: https://developer.chrome.com/extensions/background_pages
-[3]: https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Options_pages
-[6]: https://developer.chrome.com/extensions/contentSecurityPolicy
-[7]: https://js.appboycdn.com/web-sdk/latest/braze.min.js
-[8]: {{ site.baseurl }}/developer_guide/platform_integration_guides/web/google_tag_manager/
-[10]: https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#initialize
-[11]: {{ site.baseurl }}/developer_guide/platform_integration_guides/web/push_notifications/alternate_push_domain

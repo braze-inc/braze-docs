@@ -66,11 +66,3 @@ For other data warehouses, users can leverage an existing activation solution or
 
 For questions about this integration, contact Sisu at partners@sisudata.com.
 
-[1]: {{site.baseurl}}/developer_guide/rest_api/basics/#endpoints
-[2]: https://sisudata.com/
-[3]: https://sisudata.com/
-[4]: {{site.baseurl}}/user_guide/data_and_analytics/braze_currents/setting_up_currents/
-[5]: {{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/cloud_ingestion/overview/
-[6]: {% image_buster /assets/img/sisudata/metric_creation.png %}
-[9]: {% image_buster /assets/img/sisudata/segment.png %}
-[10]: https://docs.sisudata.com/docs/api/#tag/AnalysesService/operation/AnalysesService_AnalysisRunResults

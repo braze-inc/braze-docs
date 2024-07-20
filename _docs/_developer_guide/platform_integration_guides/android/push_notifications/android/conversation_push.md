@@ -26,5 +26,3 @@ No additional integration or SDK changes are required to use this feature. Devic
 
 This feature is only available over the Braze REST API. See the [Android push object]({{site.baseurl}}/api/objects_filters/messaging/android_object#android-conversation-push-object) for more information.
 
-[1]: {{site.baseurl}}/api/objects_filters/messaging/android_object#android-conversation-push-object
-[2]: https://developer.android.com/guide/topics/ui/conversations

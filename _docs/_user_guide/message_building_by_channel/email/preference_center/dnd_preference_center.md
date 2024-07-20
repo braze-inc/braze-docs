@@ -122,14 +122,3 @@ If an error occurs when a user selects **Save** on a preference center, they wil
 
 ![An error noting "There was a problem saving your preferences. Please try again."]({% image_buster /assets/img/preference_center/preference_center11.png %}){: style="max-width:55%;"}
 
-[1]: {% image_buster /assets/img/preference_center/preference_center1.png %} 
-[2]: {% image_buster /assets/img/preference_center/preference_center2.png %} 
-[3]: {% image_buster /assets/img/preference_center/preference_center3.png %} 
-[4]: {% image_buster /assets/img/preference_center/preference_center4.png %} 
-[5]: {% image_buster /assets/img/preference_center/preference_center5.png %} 
-[6]: {% image_buster /assets/img/preference_center/preference_center6.png %} 
-[7]: {% image_buster /assets/img/preference_center/preference_center7.png %} 
-[8]: {% image_buster /assets/img/preference_center/preference_center8.png %} 
-[9]: {% image_buster /assets/img/preference_center/preference_center9.png %} 
-[10]: {% image_buster /assets/img/preference_center/preference_center10.png %} 
-[11]: {% image_buster /assets/img/preference_center/preference_center11.png %} 

@@ -90,5 +90,3 @@ Yes. In the same way SQL Segment Extensions count toward your Segment Extension 
 
 Reach out to your customer support manager or [Braze Support]({{site.baseurl}}/help/support/) for additional guidance.
 
-[1]: {% image_buster /assets/img/catalog-segments-template.png %}
-[2]: {% image_buster /assets/img/catalog-segments-editor.png %}

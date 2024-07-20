@@ -91,5 +91,3 @@ Use this Liquid tag {%raw%}``{% catalog_items <name_of_your_catalog> {{canvas_en
 - When using the **Notify all subscribed users** notification rule, Braze will notify 100,000 over 10 minutes.
 - Braze will process at most 10 item updates over one minute. If you update 11 items in one minute, only the first 10 can trigger a back-in-stock notification.
 
-[1]: {% image_buster /assets/img/back_in_stock_settings.png %}
-[2]: {% image_buster /assets/img/catalog_settings_drawer.png %}

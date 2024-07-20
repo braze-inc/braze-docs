@@ -96,8 +96,3 @@ Preview the message to ensure the request is rendering properly for different us
 Remember to save your template before leaving the page! <br>Updated webhook templates can be found in the **Saved Webhook Templates** list when creating a new [webhook campaign]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/). 
 {% endalert %}
 
-[1]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/using_liquid/#using-liquid
-[2]: {% image_buster /assets/img/jampp_webhook.png %}
-[3]: {% image_buster /assets/img/jampp_method.png %}
-[4]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/swift_idfv/
-[5]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#custom-attribute-data-types

@@ -93,8 +93,3 @@ Follow these steps to test a sample Content Card.
 For more details on each platform, follow the [Android integration]({{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/data_models/) or [iOS integration](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/c2-contentcardsui) guides.
 
 
-[3]: {{site.baseurl}}/user_guide/message_building_by_channel/content_cards/create
-[4]: {% image_buster /assets/img/react-native/content-card-test.png %} "Content Card Campaign Test"
-[5]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/data_models/
-[6]: https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/c2-contentcardsui
-[7]: https://github.com/braze-inc/braze-flutter-sdk/blob/master/lib/braze_plugin.dart

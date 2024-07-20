@@ -46,4 +46,3 @@ Braze.configure(this, brazeConfigBuilder.build());
 {% endtabs %}
 
 
-[1]: https://developer.android.com/guide/topics/ui/accessibility

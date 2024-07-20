@@ -122,7 +122,3 @@ You will receive an email with links to your reports at your chosen time or sche
 The report contains all statistics selected in the [Add Stats](#add-statistics-to-your-reports) section of the setup process.
 
 
-[2]: {% image_buster /assets/img_archive/engagement_report_add_messages.png %}
-[3]: {% image_buster /assets/img_archive/engagement_report_add_stats.png %}
-[4]: {% image_buster /assets/img_archive/engagement_report_datacoverage.png %}
-[5]: {% image_buster /assets/img_archive/engagement_report_reportschedule.png %}

@@ -48,5 +48,3 @@ The following is a sample payload for the body of a campaign alert webhook. This
 "campaign_api_id":"fe787bc5-d13f-4123-b22f-3bd48f9fc407","upper_threshold":0,"lower_threshold":500,"value":4}}
 ```
 
-[1]: {{site.baseurl}}/user_guide/administrative/manage_your_braze_users/company-wide_settings_management/#slack-incoming-webhook-integration
-[2]: {% image_buster /assets/img_archive/campaign_alerts.png %}

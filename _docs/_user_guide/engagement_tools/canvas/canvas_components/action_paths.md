@@ -67,7 +67,3 @@ If users enter into an action path multiple times and have multiple entries in t
 Note that the rankings aren't [editable after launch]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/change_your_canvas_after_launch/).
 
 
-[1]: {% image_buster /assets/img/canvas_actionpath.png %} 
-[2]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events
-[3]: {% image_buster /assets/img/actionpath_group.png %} 
-[4]: {% image_buster /assets/img/actionpath_settings.png %} 

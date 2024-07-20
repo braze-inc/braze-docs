@@ -78,6 +78,3 @@ Navigate to Braze, and in your in-app message, paste the custom code in the **HT
 
 ![]({% image_buster /assets/img/iam_studio/braze_campaign_editor.png %}){: style="max-width:85%;"}
 
-[1]: {% image_buster /assets/img/iam_studio/iam_template_gallery.png %}
-[2]: {% image_buster /assets/img/iam_studio/export_iam_code.png %}
-[3]: {% image_buster /assets/img/iam_studio/braze_campaign_editor.png %}

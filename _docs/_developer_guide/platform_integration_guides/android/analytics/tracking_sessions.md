@@ -69,7 +69,3 @@ Braze.getInstance(this).subscribeToSessionUpdates { message ->
 {% endtab %}
 {% endtabs %}
 
-[1]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-i-braze/subscribe-to-session-updates.html
-[session_tracking_3]: {{ site.baseurl }}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/#step-2-configure-the-braze-sdk-in-brazexml
-[session_tracking_7]: {% image_buster /assets/img_archive/test_session.png %}
-[session_tracking_8]: {{ site.baseurl }}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/#step-4-tracking-user-sessions-in-android

@@ -151,5 +151,3 @@ If you call `startWithApiKey:` in your `didFinishLaunchingWithOptions:` delegate
 
 Full [iOS class documentation](http://appboy.github.io/appboy-ios-sdk/docs/annotated.html "full iOS class documentation") is available to provide additional guidance on any SDK methods.
 
-[1]: https://github.com/braze-inc/braze-ios-sdk/blob/master/AppboyKit/include/Appboy.h
-[2]: http://appboy.github.io/appboy-ios-sdk/docs/annotated.html "full iOS class documentation"

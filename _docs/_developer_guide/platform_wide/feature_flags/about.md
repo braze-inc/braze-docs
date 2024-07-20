@@ -208,16 +208,3 @@ A feature flag is considered active and will count toward your limit if any of t
 
 Even if the same feature flag matches multiple criteria, such as if it's used in a Canvas and the rollout is 50%, it will only count as 1 active feature flag toward your limit.
 
-[1]: {% image_buster /assets/img/feature_flags/feature-flags-rollout.gif %} 
-[2]: {{site.baseurl}}/developer_guide/platform_wide/feature_flags/use_cases/
-[3]: {{site.baseurl}}/developer_guide/platform_wide/feature_flags/create/
-[4]: {% image_buster /assets/img/feature_flags/feature-flags-use-case-canvas-flow.png %}
-[5]: {{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step
-[6]: {% image_buster /assets/img/feature_flags/feature-flag-use-case-campaign-experiment.png %}
-[7]: {% image_buster /assets/img/feature_flags/feature-flags-use-case-livechat-1.png %}
-[8]: {{site.baseurl}}/developer_guide/platform_wide/feature_flags/create/
-[9]: {% image_buster /assets/img/feature_flags/feature-flags-use-case-navigation-link-1.png %}
-[10]: {% image_buster /assets/img/feature_flags/feature-flags-use-case-navigation-link-2.png %}
-[11]: {% image_buster /assets/img/feature_flags/feature-flags-use-case-loyalty.png %}
-[12]: {{site.baseurl}}/developer_guide/platform_wide/feature_flags/experiments/
-[14]: {% image_buster /assets/img/feature_flags/feature_flag_segmentation_filter.png %}

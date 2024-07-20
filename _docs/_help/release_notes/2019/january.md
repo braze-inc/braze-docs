@@ -23,4 +23,3 @@ We have added the option for any Canvas step to be sent immediately.
 
 ![Canvas Delay]({% image_buster /assets/img/canvas_delay_immediate.png %})
 
-[1]: {% image_buster /assets/img/canvas_delay_immediate.png %}

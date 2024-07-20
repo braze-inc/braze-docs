@@ -49,4 +49,3 @@ In order to generate copy, Braze will send your query to OpenAI. All queries sen
 
 You can also [generate an image using AI]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/media_library/#generate-ai) from the media library. This leverages DALL·E 2, an AI system from OpenAI that can create realistic images and art from a description in natural language.
 
-[1]: {% image_buster /assets/img/ai_copywriter/gpt3.png %} "GPT3"

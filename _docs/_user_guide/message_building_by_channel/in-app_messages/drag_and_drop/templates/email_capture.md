@@ -75,6 +75,3 @@ One of the ways you can set this up is through Canvas Flow:
 4. For the first path, trigger an email when a user changes their email subscription status to `opted_in`. This email should inform users that their email has been confirmed.
 5. Set up the other path to exit the Canvas after the window expires.
 
-[1]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/create/#prerequisites
-[3]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/create/#drag-and-drop-in-app-message-components
-[5]: {{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/

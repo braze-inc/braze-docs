@@ -33,9 +33,3 @@ In Braze, navigate to **Segments**, create a new segment, and select **Hightouch
 ### Using this integration
 To use your Hightouch segment, create a Braze campaign or Canvas and select the segment as your target audience.<br><br>![]({% image_buster /assets/img/hightouch/cohort4.png %}){: style="max-width:90%;"}
 
-[1]: https://hightouch.io
-[6]: {% image_buster /assets/img/hightouch/data_import_key.png %} 
-[7]: {% image_buster /assets/img/hightouch/cohort1.png %} 
-[8]: {% image_buster /assets/img/hightouch/cohort2.png %}  
-[9]: {% image_buster /assets/img/hightouch/cohort3.png %}  
-[10]: {% image_buster /assets/img/hightouch/cohort4.png %}  

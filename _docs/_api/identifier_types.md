@@ -215,5 +215,3 @@ Go to **Audience** > **Subscriptions** and copy the ID next to the respective su
 {% endtab %}
 {% endtabs %}
 
-[1]: https://en.wikipedia.org/wiki/UTF-8
-[3]: https://developer.android.com/studio/build/build-variants.html

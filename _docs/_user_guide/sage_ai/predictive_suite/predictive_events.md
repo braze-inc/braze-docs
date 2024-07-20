@@ -47,5 +47,4 @@ With the Preview, you can also edit and rebuild this one prediction or archive i
 
 <br><br>
 
-[1]: {% image_buster /assets/img/how_predictive_events_works.png %}
 

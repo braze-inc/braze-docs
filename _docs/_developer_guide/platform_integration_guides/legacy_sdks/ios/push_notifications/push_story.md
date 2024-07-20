@@ -242,13 +242,4 @@ Alternatively, to configure the Push Story workspace from your `Info.plist` file
 
 Next refer to the steps for integrating [action buttons]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/customization/action_buttons/), which is required for buttons to show on a Push Story message.
 
-[1]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/
-[2]: {% image_buster /assets/img/ios/push_story/add_content_extension.png %}
-[3]: {% image_buster /assets/img/ios/push_story/enable_background_mode.png %}
-[4]: {% image_buster /assets/img/ios/push_story/add_app_groups.png %}
-[5]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/installation_methods/swift_package_manager/
-[10]: {% image_buster /assets/img/ios/push_story/abkstoriesview_class.png %}
-[11]: {% image_buster /assets/img/ios/push_story/abkstoriesview_size.png %}
-[12]: {% image_buster /assets/img/ios/push_story/notificationcontentextension_plist.png %}
-[13]: {% image_buster /assets/img/ios/push_story/abkstoriesview_outlet.png %}
 

@@ -62,11 +62,3 @@ Your push messages must fall within the guidelines of the Apple App Store and Go
 |[Unauthorized Use or Imitation of System Functionality](https://developers.google.com/android/play-protect/mobile-unwanted-software#muws-categories) We don't allow apps or ads that mimic or interfere with system functionality, such as notifications or warnings. System-level notifications may only be used for an app's integral features, such as an airline app that notifies users of special deals, or a game that notifies users of in-game promotions.|
 {: .reset-td-br-1}
 
-[1]: {% image_buster /assets/img/red-dress.gif %}
-[2]: {% image_buster /assets/img/ios_push.png %}
-[3]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/#deep-linking-to-in-app-content
-[8]: https://www.braze.com/customers
-[7]: https://developer.apple.com/app-store/review/guidelines/#apple-sites-and-services
-[9]: https://developer.apple.com/app-store/review/guidelines/#unacceptable
-[10]: https://developers.google.com/android/play-protect/mobile-unwanted-software#muws-categories
-[23]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/capturing_lapsing_users/#capturing-lapsing-users

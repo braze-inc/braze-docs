@@ -83,6 +83,3 @@ Starting in iOS SDK version 3.19.0, the following JavaScript methods are no-ops 
 {% endtab %}
 {% endtabs %}
 
-[29]: {% image_buster /assets/img_archive/ABKInAppMessage-models.png %}
-[30]: {{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/
-[31]: https://www.braze.com/customers

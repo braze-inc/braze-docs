@@ -56,6 +56,3 @@ If you are looking for a complete list of supported languages you may attribute 
 
 For more information, refer to our [Apple localization](https://developer.apple.com/library/ios/documentation/CoreFoundation/Reference/CFLocaleRef/) article as well as the [LOC standard language list](http://www.loc.gov/standards/iso639-2/php/English_list.php).
 
-[1]: {{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/language_codes/
-[3]: https://developer.apple.com/library/ios/documentation/CoreFoundation/Reference/CFLocaleRef/
-[4]: http://www.loc.gov/standards/iso639-2/php/English_list.php

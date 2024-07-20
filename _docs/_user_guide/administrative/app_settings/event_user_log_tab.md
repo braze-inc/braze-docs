@@ -71,4 +71,3 @@ In relation to user sessions, you can use Braze to monitor data like:
 
 These behaviors are not impacted by the session end event being flushed on the next session.
 
-[10]: {% image_buster /assets/img_archive/rawlogs.png %}

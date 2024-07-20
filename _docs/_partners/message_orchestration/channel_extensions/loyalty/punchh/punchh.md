@@ -314,17 +314,3 @@ Considerations:
 {% endtabs %}
 
 
-[1]: {% image_buster /assets/img/punchh/punchh1.png %}
-[2]: {% image_buster /assets/img/punchh/punchh2.png %}
-[3]: {% image_buster /assets/img/punchh/punchh3.png %}
-[4]: {% image_buster /assets/img/punchh/punchh4.png %}
-[5]: {% image_buster /assets/img/punchh/punchh5.png %}
-[7]: {% image_buster /assets/img/punchh/punchh6.png %}
-[6]: {{site.baseurl}}/api/basics?redirected=true#endpoints
-[8]: {% image_buster /assets/img/punchh/update1.png %}
-[9]: {% image_buster /assets/img/punchh/update2.png %}
-[10]: {% image_buster /assets/img/punchh/update3.png %}
-[11]: {% image_buster /assets/img/punchh/update4.png %}
-[12]: {% image_buster /assets/img/punchh/update5.png %}
-[13]: {% image_buster /assets/img/punchh/update6.png %}
-[14]: {% image_buster /assets/img/punchh/update7.png %}

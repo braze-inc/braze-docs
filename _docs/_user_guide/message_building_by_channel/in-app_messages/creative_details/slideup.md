@@ -56,4 +56,3 @@ On a tablet, a slideup in-app message appears on the bottom of the screen. Simil
 {% endtab %}
 {% endtabs %}
 
-[2a]: {% image_buster /assets/img/slideup-spec.png %}

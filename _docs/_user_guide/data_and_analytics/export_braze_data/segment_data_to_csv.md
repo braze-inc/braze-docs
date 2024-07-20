@@ -93,6 +93,3 @@ The following is included in your export depending on your selection.
 For help with CSV and API exports, visit our [troubleshooting]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/) article.
 {% endalert %} 
 
-[1]: {% image_buster /assets/img_archive/csvexport.png %}
-[2]: {% image_buster /assets/img_archive/csvexport2.png %}
-[26]: {{site.baseurl}}/partners/data_and_infrastructure_agility/data_warehouses/amazon_s3/#amazon-s3-integration

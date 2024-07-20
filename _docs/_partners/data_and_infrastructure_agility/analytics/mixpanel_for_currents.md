@@ -124,8 +124,3 @@ Braze supports exporting the following data listed in the Currents [user behavio
   - `users.messages.whatsapp.Read`
   - `users.messages.whatsapp.Send`
   
-[support]: {{site.baseurl}}/braze_support/
-[1]: {% image_buster /assets/img_archive/mixpanel1.png %}
-[2]: {% image_buster /assets/img_archive/mixpanel2.png %}
-[3]: {% image_buster /assets/img_archive/mixpanel3.png %}
-[4]: {% image_buster /assets/img_archive/mixpanel4.png %}

@@ -60,5 +60,3 @@ Braze *braze = [[Braze alloc] initWithConfiguration:configuration];
 
 For full usage of the Braze Logger, refer to the [Logger class documentation](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/configuration-swift.class/logger-swift.class).
 
-[1]: https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/configuration-swift.class
-[2]: https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/configuration-swift.class/logger-swift.class

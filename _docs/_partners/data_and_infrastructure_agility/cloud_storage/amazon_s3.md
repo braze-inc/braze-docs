@@ -322,6 +322,3 @@ If you intend to create more than one Currents connector to send to your S3 buck
 If you plan on using the same S3 bucket for both Currents and data exports, you will need to create two separate policies as each integration requires different permissions.
 
 
-[11]: {% image_buster /assets/img_archive/S3_Credentials.png %}
-[12]: {% image_buster /assets/img_archive/S3_CreatePolicy.png %}
-[13]: {% image_buster /assets/img_archive/S3_AttachPolicy.png %}

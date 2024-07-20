@@ -166,8 +166,3 @@ AppboyBinding.SetUserEmailNotificationSubscriptionType(AppboyNotificationSubscri
 AppboyBinding.SetUserPushNotificationSubscriptionType(AppboyNotificationSubscriptionType.OPTED_IN);
 ```
 
-[1]: {{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#user-data-collection
-[2]: http://en.wikipedia.org/wiki/ISO_8601
-[3]: {{site.baseurl}}/developer_guide/rest_api/user_data/#user-data
-[8]: {{site.baseurl}}/user_guide/administrative/manage_your_users/managing_user_subscriptions/#changing-subscriptions
-[10]: {{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#managing-user-subscriptions

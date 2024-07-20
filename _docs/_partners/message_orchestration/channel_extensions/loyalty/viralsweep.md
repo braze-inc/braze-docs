@@ -72,5 +72,3 @@ The email address entered into the promotion may already be in your Braze accoun
 - **Email already entered into ViralSweep**<br>
 The email address entered into the promotion has already been entered previously, so it is not passed to Braze again. This can happen if you set up your Braze integration after you have already entered the promotion.
 
-[1]: {% image_buster /assets/img/viralsweep/connect.gif %}
-[2]: {% image_buster /assets/img/viralsweep/connect2.png %}

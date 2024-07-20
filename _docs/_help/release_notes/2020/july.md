@@ -27,8 +27,3 @@ Updated [storage connect documentation]({{site.baseurl}}/user_guide/data_and_ana
 
 The [BCC Address setting]({{site.baseurl}}/user_guide/administrative/app_settings/email_settings/) allows you to add and manage BCC address that can be appended to outbound email messages sent from Braze.	
 
-[1]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/promotion_codes/#promotion-codes
-[2]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/retention_reports/
-[3]: {{site.baseurl}}/user_guide/engagement_tools/canvas/retention_reports/
-[4]: {{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events/#content-card-click-events
-[5]: {{site.baseurl}}/user_guide/administrative/app_settings/email_settings/

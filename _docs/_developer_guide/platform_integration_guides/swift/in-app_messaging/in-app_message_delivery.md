@@ -191,5 +191,3 @@ if ([message.extras[@"custom-display"] isKindOfClass:[NSString class]]) {
 
 For a full implementation, you may refer to the in-app message customization samples in our [Example app](https://github.com/braze-inc/braze-swift-sdk/tree/main/Examples).
 
-[1]: https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazeinappmessageui
-[45]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/tracking_sessions/#session-lifecycle

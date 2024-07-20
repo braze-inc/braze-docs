@@ -70,5 +70,3 @@ Braze.configure(this, brazeConfig)
 {% endtab %}
 {% endtabs %}
 
-[1]: {% image_buster /assets/img/multicolor_android_push.png %}
-[2]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/runtime_configuration/#runtime-configuration

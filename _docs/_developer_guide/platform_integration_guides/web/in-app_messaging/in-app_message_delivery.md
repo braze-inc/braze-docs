@@ -92,10 +92,3 @@ To send these messages, first add an exit intent library, such as this [open-sou
 ```
 
 
-[2]: https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.inappmessage.html
-[8]: https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.controlmessage.html
-[9]: https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#initialize
-[10]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/tracking_sessions/#session-lifecycle
-[17]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/in_app_messaging/#modal-in-app-messages
-[41]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/in_app_messaging/#full-in-app-messages
-[50]: https://github.com/carlsednaoui/ouibounce

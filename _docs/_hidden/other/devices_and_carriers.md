@@ -17,4 +17,3 @@ To export this data, click the <i class="fas fa-bars"></i> hamburger menu and se
 
 ![]({% image_buster /assets/img/device_and_carriers.png %})
 
-[1]: {% image_buster /assets/img/device_and_carriers.png %}

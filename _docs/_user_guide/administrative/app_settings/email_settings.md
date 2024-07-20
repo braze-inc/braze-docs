@@ -315,11 +315,3 @@ No, we don't check or validate any links in the Braze dashboard. Be sure to prop
 {% enddetails %}
 
 
-[0]: {% image_buster /assets/img_archive/list_unsub_img1.png %}
-[1]: {% image_buster /assets/img/email_settings/outbound_email.png %}
-[2]: {% image_buster /assets/img/email_settings/switch.gif %}
-[6]: https://learning.braze.com/email-open-tracking-pixel
-[7]: {{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices/managing_email_subscriptions/#unsubscribed-email-addresses
-[8]: {{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices/
-[10]: {{site.baseurl}}/user_guide/message_building_by_channel/email/css_inline/
-[13]: {% image_buster /assets/img/open_pixel.png %}

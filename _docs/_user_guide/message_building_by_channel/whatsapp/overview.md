@@ -110,9 +110,3 @@ We also recommend reading about [user phone numbers]({{site.baseurl}}/user_guide
 
 Braze supports WhatsApp’s [Cloud API Local Storage](https://developers.facebook.com/docs/whatsapp/cloud-api/overview/local-storage?content_id=ka6F9gESPqhQpm5). To have this enabled, contact your Braze customer support manager.
 
-[1]: {% image_buster /assets/img/whatsapp/whatsapp1.png %} 
-[2]: {% image_buster /assets/img/whatsapp/whatsapp10.png %} 
-[3]: {% image_buster /assets/img/whatsapp/whatsapp2.png %} 
-[4]: {% image_buster /assets/img/whatsapp/whatsapp3.png %} 
-[5]: {% image_buster /assets/img/whatsapp/whatsapp4.png %} 
-[6]: {% image_buster /assets/img/whatsapp/whatsapp5.png %} 

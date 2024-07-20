@@ -164,9 +164,3 @@ BrazeInAppMessageManager.getInstance().addInAppMessage(inAppMessage)
 {% endtab %}
 {% endtabs %}
 
-[73]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/silent_push_notifications/
-[75]: {% image_buster /assets/img_archive/serverSentPush.png %}
-[76]: {% image_buster /assets/img_archive/kvpConfiguration.png %}
-[77]: {% image_buster /assets/img_archive/iam_event_trigger.png %}
-[78]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/integration/standard_integration/#android-push-listener-callback
-[84]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/tracking_sessions/#session-lifecycle

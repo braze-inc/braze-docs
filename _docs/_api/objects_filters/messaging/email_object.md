@@ -94,5 +94,3 @@ Authentication for email file attachments in this endpoint is currently in early
 }
 ```
 
-[31]: {% image_buster /assets/img_archive/email_template_id.png %}
-[46]: {{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices/guidelines_and_tips/#body-styling

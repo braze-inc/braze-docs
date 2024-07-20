@@ -93,12 +93,3 @@ Next to your actor property name, choose an operator and a value (if applicable)
 
 ![Choosing an operating and value for the selected ]({% image_buster /assets/img/scuba/analytics/operator_end.png %})
 
-[1]: https://scuba.io
-[3]: https://docs.scuba.io/glossary/dataset-table
-[4]: https://docs.scuba.io/glossary/actor-property
-[5]: https://docs.scuba.io/glossary/actor
-[6]: https://docs.scuba.io/guides/bql-syntax-and-usage
-[501]: {% image_buster /assets/img/scuba/analytics/segment_name.png %}
-[502]: {% image_buster /assets/img/scuba/analytics/filter_attribute.png %}
-[503]: {% image_buster /assets/img/scuba/analytics/select_property.png %}
-[504]: {% image_buster /assets/img/scuba/analytics/operator_end.png %}

@@ -428,13 +428,3 @@ In this example, a hashed email address is used as the `anonymous_id` for users 
 
 
 
-[1]: {{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/
-[2]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types
-[3]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/
-[4]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/targeting_users/
-[5]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/#custom-event-properties
-[img1]: {% image_buster /assets/img/movable_ink/cd_api_webhook_url.png %}
-[img2]: {% image_buster /assets/img/movable_ink/cd_api_webhook_settings.png %}
-[img3]: {% image_buster /assets/img/movable_ink/cd_api_webhook_kvp.png %}
-[img4]: {% image_buster /assets/img/movable_ink/cd_api_webhook_response.png %}
-[img5]: {% image_buster /assets/img/movable_ink/cd_api_webhook_ab.png %}

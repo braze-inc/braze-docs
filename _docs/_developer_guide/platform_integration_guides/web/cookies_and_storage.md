@@ -77,9 +77,3 @@ By default, all fields are enabled. Note that without some properties, not all f
 To read more about the automatically collected device properties, visit [SDK data collection options]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/sdk_data_collection/). 
 
 
-[1]: https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html
-[2]: https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.deviceproperties.html
-[3]: https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#disableSDK
-[4]: https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#wipedata
-[5]: https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#initialize
-[6]: https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#initializationoptions

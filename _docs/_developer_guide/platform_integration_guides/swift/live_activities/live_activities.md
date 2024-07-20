@@ -267,9 +267,3 @@ See our [`/messages/live_activity/update` endpoint]({{site.baseurl}}/api/endpoin
 
 For further troubleshooting details or frequently asked questions, refer to our [FAQ]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/live_activities/faq/).
 
-[1]: {{site.baseurl}}/api/endpoints/messaging/live_activity/update
-[2]: https://developer.apple.com/documentation/activitykit/displaying-live-data-with-live-activities#Understand-constraints
-[3]: https://developer.apple.com/documentation/activitykit/displaying-live-data-with-live-activities
-[4]: https://developer.apple.com/documentation/activitykit/activityattributes
-[6]: https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/liveactivities-swift.class/resumeactivities(oftype:)
-[11]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/live_activities/faq/

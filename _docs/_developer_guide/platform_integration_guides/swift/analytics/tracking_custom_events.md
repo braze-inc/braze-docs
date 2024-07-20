@@ -86,5 +86,3 @@ The following keys are reserved and cannot be used as custom event properties:
 
 - Refer to the [`logCustomEvent`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/logcustomevent(name:properties:fileid:line:) "logcustomevent documentation") documentation for more information.
 
-[0]: {{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#user-data-collection
-[1]: https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/logcustomevent(name:properties:fileid:line:) "logcustomevent documentation"

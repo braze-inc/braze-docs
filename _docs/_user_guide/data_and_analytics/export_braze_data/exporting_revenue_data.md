@@ -68,12 +68,6 @@ These metrics are based on last-click attribution, which means that in order for
 
 {% endcomment %}
 
-[1]: {{site.baseurl}}/user_guide/data_and_analytics/reporting/report_builder/
-[2]: {{site.baseurl}}/user_guide/data_and_analytics/report_metrics/#total-direct-revenue
-[3]: {{site.baseurl}}/user_guide/data_and_analytics/report_metrics/#total-direct-purchases
-[4]: {{site.baseurl}}/user_guide/data_and_analytics/report_metrics/#unique-direct-purchases
-[5]: {{site.baseurl}}/user_guide/data_and_analytics/report_metrics/#revenue-per-recipient
 
 
 
-[9]: {% image_buster /assets/img_archive/Export_revenue_graph.png %}

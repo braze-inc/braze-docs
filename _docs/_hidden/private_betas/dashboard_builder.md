@@ -77,6 +77,3 @@ Touches include `Email Click`, `Content Card Click`, `In-App Message Click`, `SM
 
 Feel free to share your feedback with us by contacting your customer success manager or by replying to the enablement email you received.
 
-[1]: {% image_buster /assets/img/chart_type.png %}
-[2]: {% image_buster /assets/img/sample_tile.png %}
-[3]: {% image_buster /assets/img/drag_tile.png %}

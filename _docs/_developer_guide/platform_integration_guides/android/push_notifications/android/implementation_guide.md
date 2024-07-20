@@ -53,6 +53,3 @@ Logging analytics can only be done in real-time with the help of the customer's 
 Logging manually can be achieved by logging whatever elements you wish from either within your `FirebaseMessagingService.onMessageReceived` implementation or from within your startup activity, based on the extras present in the payload. However, an important caveat to remember is that your `FirebaseMessagingService` subclass _must_ finish execution within 10 seconds of invocation to avoid being [flagged or terminated](https://firebase.google.com/docs/cloud-messaging/android/receive) by the Android system. 
 
 
-[1]: {% image_buster /assets/img/push_implementation_guide/android_push_custom_layout.png %}
-[2]: {% image_buster /assets/img/push_implementation_guide/push5.png %}
-[3]: {% image_buster /assets/img/push_implementation_guide/android_braze_id_configuration.png %}

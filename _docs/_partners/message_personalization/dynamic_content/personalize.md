@@ -71,5 +71,3 @@ For example, here is a set of customer attributes as they relate to an example c
 {: .reset-td-br-1 .reset-td-br-2}
 
 
-[1]: {{site.baseurl}}/developer_guide/rest_api/basics/#endpoints
-[2]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/public_apis/

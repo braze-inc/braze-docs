@@ -121,6 +121,3 @@ To use geofence data to personalize a message, you can use the following Liquid 
 Visit [Geofence FAQ]({{site.baseurl}}/user_guide/engagement_tools/locations_and_geofences/faqs/#geofences) for answers to frequently asked questions about geofences.
 
 
-[1]: {% image_buster /assets/img_archive/locations_main_screen.png %}
-[2]: {% image_buster /assets/img_archive/action_based_geofence_trigger.png %}
-[3]: {{site.baseurl}}/user_guide/engagement_tools/locations_and_geofences/faqs/#geofences

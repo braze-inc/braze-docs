@@ -321,7 +321,3 @@ If you are using Expo Application Services (EAS) and have enabled `enableBrazeIo
 
 One approach is to use the `appExtensions` configuration in your `app.json` file by following Expo's [app extensions documentation](https://docs.expo.dev/build-reference/app-extensions/). Alternatively, you can set up the `multitarget` setting in your `credentials.json` file by following Expo's [local credentials documentation](https://docs.expo.dev/app-signing/local-credentials/#multi-target-project).
 
-[1]: {% image_buster /assets/img/react-native/push-notification-test.png %} "Push Campaign Test"
-[2]: https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/b2-rich-push-notifications/
-[3]: https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/b3-push-stories/
-[4]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/push_story/#adding-an-app-group

@@ -93,5 +93,3 @@ Use this Liquid tag {%raw%}``{% catalog_items <name_of_your_catalog> {{canvas_en
 - When using the **Notify all subscribed users** notification rule, Braze will notify 100,000 users over 10 minutes.
 - Braze will process up to 10 item updates per minute. This means if you update 11 items in one minute, only the first 10 items can trigger a price drop notification.
 
-[1]: {% image_buster /assets/img/price_drop_notifications.png %}
-[2]: {% image_buster /assets/img/catalog_settings_drawer.png %}

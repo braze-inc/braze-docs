@@ -243,12 +243,3 @@ You can also update subscription groups using this Canvas step. The following ex
 ```
 {% endraw %}
 
-[1]: {% image_buster /assets/img_archive/canvas_user_update_step.png %} 
-[2]: {% image_buster /assets/img_archive/canvas_user_update_composer.png %} 
-[3]: {% image_buster /assets/img_archive/canvas_user_update_example.png %} 
-[4]: {% image_buster /assets/img_archive/canvas_user_update_update.png %} 
-[5]: {% image_buster /assets/img_archive/canvas_user_update_remove.png %} 
-[6]: {% image_buster /assets/img_archive/canvas_user_update_test_preview.png %} 
-[7]: {% image_buster /assets/img_archive/canvas_user_update_increment.png %} 
-[8]: {% image_buster /assets/img_archive/canvas_user_update_cep.png %} 
-[9]: {% image_buster /assets/img_archive/canvas_user_update_wishlist.png %} 

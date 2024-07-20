@@ -61,11 +61,3 @@ With the integration, you can apply location conditions by sending geofence info
 
 ![]({% image_buster /assets/img/loplat/loplat_action_based_delivery.png %})
 
-[1]: https://www.loplat.com/
-[2]: https://www.loplat.com/loplat-x#usecase
-[3]: mailto:support@loplat.com
-[4]: https://developers.loplat.com/braze/
-[5]: https://loplatx-user-guide.notion.site/Campaign-integration-b92f8120cbe74d19a3a5f593657b4e8e#2ed232c885014f19b1870b9fca4230fb
-[6]: https://loplatx-user-guide.notion.site/Campaign-integration-b92f8120cbe74d19a3a5f593657b4e8e#f898aa55ef74440aba76dd9a0e3e7598
-[7]: {% image_buster /assets/img/loplat/loplat_api_triggered_delivery.png %}
-[8]: {% image_buster /assets/img/loplat/loplat_action_based_delivery.png %}

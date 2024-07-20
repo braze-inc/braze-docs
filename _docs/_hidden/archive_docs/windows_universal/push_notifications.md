@@ -72,9 +72,3 @@ Specify the string to be appended to the launch string in the "Additional Launch
 
 Braze also allows sending deep links through the REST API. [Windows Universal push objects]({{site.baseurl}}/api/objects_filters/messaging/windows_objects/) accept an optional `extra_launch_string` parameter.
 
-[4]: http://msdn.microsoft.com/en-us/library/windows/apps/hh465407.aspx
-[6]: {% image_buster /assets/img_archive/windows_sid.png %} "Windows SID dashboard"
-[9]: {{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/
-[10]: {% image_buster /assets/img_archive/windows_uni_push_sample.png %}
-[13]: {{site.baseurl}}/api/objects_filters/messaging/windows_objects/
-[15]: {% image_buster /assets/img_archive/windows_deep_link_click_action.png %} "Deep Link Click Action"

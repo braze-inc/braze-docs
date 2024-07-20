@@ -71,4 +71,3 @@ The following table outlines how many characters you can add before your button 
 {: .reset-td-br-1 .reset-td-br-2}
 
 
-[1]: {% image_buster /assets/img_archive/push_action_example.png %}

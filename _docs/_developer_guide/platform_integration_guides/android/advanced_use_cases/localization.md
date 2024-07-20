@@ -205,5 +205,3 @@ If you are looking for a complete list of supported languages you may attribute 
 
 For more information refer to our [Android localization](http://developer.android.com/guide/topics/resources/localization.html) article.
 
-[3]: http://developer.android.com/guide/topics/resources/localization.html
-[1]: {{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/language_codes/

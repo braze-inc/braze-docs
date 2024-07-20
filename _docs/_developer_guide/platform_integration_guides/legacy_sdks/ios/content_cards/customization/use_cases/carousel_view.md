@@ -61,4 +61,3 @@ For iOS-specific developer documentation on the Content Cards class, methods, an
 - The logic and implementation of the carousel view is not a default type of Content Card in Braze, and therefore the logic for achieving the use case must be supplied and supported by your development team.
 - You will need to implement client-side logic to display a specific number of cards in the carousel at any one time.
 
-[1]: {{site.baseurl}}/user_guide/message_building_by_channel/content_cards/customize/#customization-approaches

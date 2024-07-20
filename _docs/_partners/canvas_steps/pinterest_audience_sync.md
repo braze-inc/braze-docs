@@ -152,19 +152,3 @@ Pinterest does not provide this information for its own data privacy policies.
 The audience size will update within 24-48 hours on the Audiences page in Pinterest's Ads Manager.
 {% enddetails %}
 
-[1]: {% image_buster /assets/img/pinterest/pinterest1.png %}
-[2]: {% image_buster /assets/img/pinterest/pinterest2.png %}
-[3]: {% image_buster /assets/img/pinterest/pinterest3.png %}
-[4]: {% image_buster /assets/img/pinterest/pinterest4.png %}
-[5]: {% image_buster /assets/img/pinterest/pinterest5.png %}
-[6]: {% image_buster /assets/img/pinterest/pinterest6.png %}
-[7]: {% image_buster /assets/img/pinterest/pinterest7.png %}
-[8]: {% image_buster /assets/img/pinterest/pinterest8.png %}
-[13]: {% image_buster /assets/img/tiktok/tiktok13.png %}
-[16]: {% image_buster /assets/img/tiktok/tiktok16.png %}
-[9]: {% image_buster /assets/img/pinterest/pinterest9.png %}
-[10]: {% image_buster /assets/img/pinterest/pinterest10.png %}
-[11]: {% image_buster /assets/img/pinterest/pinterest11.png %}
-[18]: {% image_buster /assets/img/audience_sync/audience_sync3.png %}
-[19]: {% image_buster /assets/img/audience_sync/audience_sync4.png %}
-[20]: {% image_buster /assets/img/audience_sync/audience_sync5.png %}

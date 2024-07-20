@@ -78,5 +78,3 @@ configuration.api.requestPolicy = BRZRequestPolicyAutomatic;
 {% endtabs %}
 
 
-[2]: https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/configuration-swift.class/api-swift.class/requestpolicy-swift.enum/manual
-[3]: https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/configuration-swift.class/api-swift.class/requestpolicy-swift.enum)

@@ -44,4 +44,3 @@ Once connected, Sageflo will:
 * Map templates from Braze for use with Radiate campaigns
 * Schedule and conduct user training
 
-[1]: {{site.baseurl}}/developer_guide/rest_api/basics/#endpoints

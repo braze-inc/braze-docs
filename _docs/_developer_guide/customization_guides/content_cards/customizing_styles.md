@@ -530,6 +530,3 @@ Hide the unread indicator bar by adding the following style to your `css`:
 {% endtab %}
 {% endtabs %}
 
-[1]: {% image_buster/assets/img/content_cards/content-card-customization-attributes.png %}
-[2]: {% image_buster /assets/img/cc_pin_to_top.png %}
-[3]: {% image_buster /assets/img/braze-content-cards-seen-unseen-behavior.png %}

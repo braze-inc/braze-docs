@@ -73,5 +73,3 @@ Using the `Connected Content` tag requires Braze to make an outbound API request
 As a result, we do not support including `Connected Content` or `Promotion Code` tags within any field of your transactional email campaign.
 
 
-[1]: {% image_buster /assets/img/transactional_email_campaign.png %} 
-[2]: {% image_buster /assets/img/transactional_campaign_compose.png %}

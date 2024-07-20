@@ -116,6 +116,3 @@ Braze supports exporting the following data listed in the Currents [user behavio
 
 To read more about the mParticle integration, visit their documentation [here](http://docs.mparticle.com/integrations/braze/feed).
 
-[1]: {% image_buster /assets/img/braze-feed-inputs.png %}
-[2]: {% image_buster /assets/img/braze-feed-act1.png %}
-[3]: {% image_buster /assets/img/braze-feed-act2.png %}

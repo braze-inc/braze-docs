@@ -115,12 +115,3 @@ Authorization: Bearer YOUR-REST-API-KEY
 Using the example provided, we can see that someone watched a trailer recently, and then rented a movie. While we cannot go into a campaign and segment the users based on these properties, we can use these properties strategically by using them in the form of a receipt, to send a custom message through a channel using Liquid. For example, "Hello **Beth**, Thanks for renting **The Sad Egg** by **Dan Alexander**, here are some recommended movies based on your rental..."
 
 
-[1]: {{site.baseurl}}/developer_guide/home/
-[2]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/tracking_custom_events/
-[3]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/tracking_custom_events/
-[4]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/tracking_custom_events/
-[5]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/
-[19]: http://en.wikipedia.org/wiki/ISO_8601 "ISO 8601 Time Code Wiki"
-[21]: {{site.baseurl}}/api/api_key/#the-app-identifier-api-key
-[22]: https://en.wikipedia.org/wiki/ISO_8601 "ISO 8601 Time Code"
-[23]: {{site.baseurl}}/api/basics/#external-user-id-explanation

@@ -256,16 +256,3 @@ rudderanalytics.track("Product Viewed", {
 For the update and remove operations, `identifier` is a required key. If add, update, or remove operations are not present in the nested array, RudderStack uses the create operation to create the properties by default. Refer to [Array of objects]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/array_of_objects/) for more information on sending nested custom attributes.
 {% endalert %}
 
-[0]: {% image_buster /assets/img/RudderStack/braze_settings.png %}
-[1]: https://rudderstack.com/
-[3]: https://www.rudderstack.com/docs/dashboard-guides/sources/
-[15]: {{site.baseurl}}/api/basics/#endpoints
-[20]: https://www.rudderstack.com/docs/event-spec/ecommerce-events-spec/
-[21]: {{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/exporting_revenue_data/#revenue-data
-[22]: https://www.rudderstack.com/docs/destinations/streaming-destinations/braze/#getting-started
-[android]: https://github.com/rudderlabs/rudder-integration-braze-android
-[ios]: https://github.com/rudderlabs/rudder-integration-braze-ios/tree/master
-[swift]: https://github.com/rudderlabs/rudder-integration-braze-swift
-[web]: https://github.com/rudderlabs/rudder-sdk-js/tree/production/src/integrations/Braze
-[react]: https://github.com/rudderlabs/rudder-sdk-react-native/tree/develop/libs/rudder-integration-braze-react-native
-[flutter]: https://github.com/rudderlabs/rudder-sdk-flutter/tree/develop/packages/integrations/rudder_integration_braze_flutter

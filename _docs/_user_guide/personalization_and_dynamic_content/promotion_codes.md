@@ -180,6 +180,3 @@ The message will be canceled. However, because promotion codes are "preloaded," 
 [8]:{% image_buster /assets/img/promocodes/promocode8.png %}
 [9]:{% image_buster /assets/img/promocodes/promocode9.png %}
 [10]:{% image_buster /assets/img/promocodes/promocode10.png %}
-[11]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/
-[12]: {% image_buster /assets/img/promocodes/promocode11.png %}
-[13]: {% image_buster /assets/img/promocodes/promocode12.png %}

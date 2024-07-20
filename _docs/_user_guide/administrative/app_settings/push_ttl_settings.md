@@ -26,4 +26,3 @@ This feature will not remove a notification if it has already been received by t
 Remember to click **Save** before you leave the page!
 {% endalert %}
 
-[1]: {% image_buster /assets/img/push_ttl.png %}

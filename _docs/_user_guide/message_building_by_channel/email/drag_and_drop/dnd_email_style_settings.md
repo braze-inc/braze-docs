@@ -129,16 +129,3 @@ You can also set the Content Block width in the email drag-and-drop editor. We r
 ![]({% image_buster /assets/img_archive/dnd_content_block_width.png %})
 
 
-[1]: {% image_buster /assets/img_archive/dnd_global_style_settings.png %}
-[2]: {% image_buster /assets/img_archive/dnd_basic_styling.png %}
-[3]: {% image_buster /assets/img_archive/dnd_custom_font.png %}
-[5]: {% image_buster /assets/img_archive/dnd_button_styling.png %}
-[6]: {% image_buster /assets/img_archive/dnd_heading_styling.png %}
-[7]: {% image_buster /assets/img_archive/dnd_paragraph_styling.png %}
-[9]: {% image_buster /assets/img_archive/dnd_title_styling.png %}
-[10]: {% image_buster /assets/img_archive/dnd_list_styling.png %}
-[11]: {% image_buster /assets/img_archive/dnd_fallbacks.png %}
-[12]: {% image_buster /assets/img_archive/dnd_button_styling.png %}
-[13]: {% image_buster /assets/img_archive/dnd_email_template_width.png %}
-[14]: {% image_buster /assets/img_archive/dnd_content_block_width.png %}
-[8]: {{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/dnd_editor_blocks

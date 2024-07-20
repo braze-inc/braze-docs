@@ -156,10 +156,3 @@ This means Braze hasn't recorded any data for that metric during the time period
 
 --->
 
-[1]: {% image_buster /assets/img_archive/email_performance_dashboard_1.png %}
-[2]: {% image_buster /assets/img_archive/email_performance_dashboard_2.png %}
-[3]: {% image_buster /assets/img_archive/dashboard_filters.png %}
-[4]: {% image_buster /assets/img_archive/email_performance_dashboard_3.png %}
-[5]: {% image_buster /assets/img_archive/mailbox_provider_time_engagement.png %}
-[6]: {% image_buster /assets/img_archive/time_engagement.png %}
-[7]: {% image_buster /assets/img_archive/time_engagement_day.png %}

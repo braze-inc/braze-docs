@@ -120,13 +120,3 @@ To see a full list of supported actions:
 
 ![]({% image_buster /assets/img/onetrust/onetrust7.png %})
 
-[1]: {% image_buster /assets/img/onetrust/onetrust.png %}
-[2]: {% image_buster /assets/img/onetrust/onetrust2.png %}
-[3]: {% image_buster /assets/img/onetrust/onetrust3.png %}
-[4]: {% image_buster /assets/img/onetrust/onetrust4.png %}
-[5]: {% image_buster /assets/img/onetrust/onetrust5.png %}
-[6]: {% image_buster /assets/img/onetrust/onetrust6.png %}
-[7]: {% image_buster /assets/img/onetrust/onetrust7.png %}
-[8]: {% image_buster /assets/img/onetrust/onetrust8.png %}
-[9]: {% image_buster /assets/img/onetrust/onetrust9.png %}
-[10]: {% image_buster /assets/img/onetrust/onetrust10.png %}

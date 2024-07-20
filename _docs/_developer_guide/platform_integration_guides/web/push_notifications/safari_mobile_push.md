@@ -87,15 +87,3 @@ button.onclick = function(){
 
 Next, send yourself a [test message]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/sending_test_messages/) to validate the integration. After your integration is complete, you can use our [no-code push primer messages]({{site.baseurl}}/user_guide/message_building_by_channel/push/push_primer_messages/) to optimize your push opt-in rates.
 
-[webkit-release-notes]: https://webkit.org/blog/13878/web-push-for-web-apps-on-ios-and-ipados/
-[safari-release-notes]: https://developer.apple.com/documentation/safari-release-notes/safari-16_4-release-notes
-[manifest-file]: https://developer.mozilla.org/en-US/docs/Web/Manifest
-[app-switcher]: https://support.apple.com/en-us/HT202070
-[add-to-homescreen]: https://support.apple.com/guide/iphone/bookmark-favorite-webpages-iph42ab2f3a7/ios#iph4f9a47bbc
-[web-push-integration]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/push_notifications/integration/
-[service-worker]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/push_notifications/integration/#step-1-configure-your-sites-service-worker
-[test-message]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/sending_test_messages/
-[push-primer]: {{site.baseurl}}/user_guide/message_building_by_channel/push/push_primer_messages/
-[requestPushPermission]: https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#requestpushpermission
-[1]: {% image_buster /assets/img/push_implementation_guide/add-to-homescreen.png %}
-[2]: {% image_buster /assets/img/push_implementation_guide/safari-mobile-push-prompt.png %}

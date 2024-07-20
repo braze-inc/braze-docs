@@ -44,4 +44,3 @@ There are a couple of paths you can test out for low-likelihood users. Think you
 
 Drop these users into a more passive campaign or Canvas as a resource-light way to keep your brand top-of-my mind. This could be a persona-specific weekly newsletter, a series of relevant customer case studies, or a monthly round-up of new tips and tricks.
 
-[5]: {% image_buster /assets/img_archive/predictive_event_filters.png %}

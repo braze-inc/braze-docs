@@ -45,5 +45,4 @@ After you save your API campaign include the following in your API request:
 - The generated `campaign_id` fields with your API request where noted in the [Send Messages Endpoints]({{site.baseurl}}/api/endpoints/messaging/#send-endpoints).
 - A [message object]({{site.baseurl}}/api/objects_filters/#messaging-objects) for each platform included in the campaign. In the message object, provide the message variation ID. This will specify that statistics should be collected and displayed under that variant. The following message objects are supported: Android, Content Cards, email, iOS, Kindle, SMS/MMS, web push, and webhook.
 
-[2]: {{site.baseurl}}/api/endpoints/messaging/#send-endpoints
 

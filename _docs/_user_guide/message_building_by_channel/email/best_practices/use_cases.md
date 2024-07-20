@@ -67,9 +67,3 @@ If your feature requires an explanation or demo, include a link in the message. 
 ![Update-focused email example from Allrecipes that notifies their users of a new feature. The top of the email reads "Too. Many. Passwords. Tired of passwords? So are we." The email body directs users to sign in with Facebook or Google plus, with a call to action of "See How".]({% image_buster /assets/img_archive/Allrecipes_email.png %}){: style="max-width:70%;"}
 
 
-[26]: {% image_buster /assets/img_archive/Livingsocial_email.png %}
-[27]: {% image_buster /assets/img_archive/Ideeli_email.png %}
-[28]: {% image_buster /assets/img_archive/Restaurant_email.png %}
-[29]: {% image_buster /assets/img_archive/Ruelala_email.png %}
-[30]: {% image_buster /assets/img_archive/Hailo_social_email.png %}
-[31]: {% image_buster /assets/img_archive/Allrecipes_email.png %}

@@ -92,7 +92,3 @@ You can include archived content in your search results by selecting **Show Arch
 Do you use emojis when naming your work in Braze? Search for them! You can use emojis as search queries. 😎
 
 
-[1]: {% image_buster /assets/img/global_search/global_search.png %}
-[2]: {% image_buster /assets/img/global_search/search_create_campaign.png %}
-[3]: {% image_buster /assets/img/global_search/global_search2.png %}
-[4]: {% image_buster /assets/img/global_search/archived_content.png %}

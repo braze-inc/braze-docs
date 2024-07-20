@@ -169,24 +169,3 @@ To add a key-value pair to a Content Card, go to the **Settings** tab in the Bra
 ![Add key-value pair to Content Card]({% image_buster /assets/img_archive/kvp_content_cards.png %}){: style="max-width:70%;"}
 
 
-[1]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/customization/advanced_settings/#extracting-data-from-push-key-value-pairs
-[2]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/silent_push_notifications/
-[4]: {{site.baseurl}}/user_guide/data_and_analytics/tracking/uninstall_tracking/
-[7]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/customization/advanced_settings/
-[8]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/customization/advanced_settings/#notification-priority
-[9]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/advanced_settings/#delivery-options
-[10]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/customization/advanced_settings/#sounds
-[11]: https://docs.sendgrid.com/for-developers/sending-email/unique-arguments
-[12]: https://sendgrid.com/docs/for-developers/tracking-events/event/
-[13]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/silent_push_notifications/
-[14]: {{site.baseurl}}/developer_guide/rest_api/messaging/#external-user-id
-[15]: {{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/
-[16]: {% image_buster /assets/img_archive/keyvalue_automatickeys.png %}
-[17]: {% image_buster /assets/img_archive/keyvalue_enterpairs.png %}
-[18]: {% image_buster /assets/img_archive/keyvalue_androidkeys.png %}
-[19]: {% image_buster /assets/img_archive/keyvalue_android.png %}
-[20]: {% image_buster /assets/img_archive/keyvalue_web.png %}
-[21]: {% image_buster /assets/img_archive/keyvalue_iam.png %}
-[22]: {% image_buster /assets/img_archive/keyvalue_email.png %}
-[23]: {% image_buster /assets/img_archive/keyvalue_newsfeed.png %}
-[24]: {% image_buster /assets/img_archive/kvp_content_cards.png %}

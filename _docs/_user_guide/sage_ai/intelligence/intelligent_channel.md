@@ -63,5 +63,3 @@ When the user has sufficient data for a ranking to be determined but becomes unr
 Intelligent Channel allows you to selectively target in advance the fraction of users who have a much higher likelihood of engaging with a message than the rest of your audience. This is not likely to represent a majority of users in a typical audience. Rather, you can expect this filter to find the 5-20% from your usual audience who have an established record of engaging on a particular channel.
 
 
-[1]: {% image_buster /assets/img/intelligent_channel_filter.png %} "Intelligent Channel Filter"
-[2]: {% image_buster /assets/img/intelligent_example.png %}

@@ -25,4 +25,3 @@ Changes are saved as a draft for both draft and active campaigns. For stopped ca
 
 If you and another user make changes to a campaign, the first set of changes will be saved. If you're the second person to save changes, you'll need to refresh the page to see the latest updates to the campaign.
 
-[1]: {% image_buster /assets/img/campaign_autosave.png %}

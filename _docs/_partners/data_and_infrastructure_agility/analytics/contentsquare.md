@@ -50,4 +50,3 @@ If you are using the [older navigation]({{site.baseurl}}/navigation), you can fi
 
 ![Contentsquare Live Signals data in Braze Custom Events tab]({% image_buster /assets/img/contentsquare_custom_events.png %})
 
-[1]: {% image_buster /assets/img/contentsquare_custom_events.png %} 

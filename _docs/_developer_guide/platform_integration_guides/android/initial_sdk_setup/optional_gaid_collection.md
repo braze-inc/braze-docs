@@ -57,5 +57,3 @@ Thread(Runnable {
 {% endtabs %}
 
 
-[1]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-i-braze/set-google-advertising-id.html
-[2]: https://support.google.com/googleplay/android-developer/answer/6048248/advertising-id?hl=en

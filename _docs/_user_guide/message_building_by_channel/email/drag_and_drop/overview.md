@@ -228,16 +228,3 @@ To set up universal links, refer to [Universal links and App Links]({{site.baseu
 
 Alternatively, you can integrate with one of our attribution partners, such as [Branch]({{site.baseurl}}/partners/message_orchestration/attribution/branch/branch_for_deeplinking/) or [AppsFlyer]({{site.baseurl}}/partners/message_orchestration/attribution/appsflyer/appsflyer/#email-deep-linking-and-click-tracking), to manage universal links.
 
-[1]: {% image_buster /assets/img/dnd/dnd_template1.png %}
-[2]: {% image_buster /assets/img/dnd/dnd1.png %}
-[3]: {% image_buster /assets/img/dnd/dnd2.png %}
-[4]: {% image_buster /assets/img/dnd/dnd3.png %}
-[5]: {% image_buster /assets/img/dnd/dnd4.png %}
-[6]: {% image_buster /assets/img/dnd_custom_attributes.png %}
-[7]: {{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/dnd_editor_blocks/
-[8]: {% image_buster /assets/img/dnd/dnd_emailvariant.png %}
-[9]: {% image_buster /assets/img/dnd/dnd_content.png %}
-[10]: {% image_buster /assets/img/dnd/dnd_rows.png %}
-[11]: {% image_buster /assets/img/dnd/dnd_contentsettings.png %}
-[12]: {{site.baseurl}}/user_guide/message_building_by_channel/email/html_editor/creating_an_email_campaign/#step-4-build-the-remainder-of-your-campaign-or-canvas
-[13]: {{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/dnd_email_style_settings/

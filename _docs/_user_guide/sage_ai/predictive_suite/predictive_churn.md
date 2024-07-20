@@ -50,4 +50,3 @@ With the preview, you can also edit and rebuild your one prediction or archive i
 
 <br><br>
 
-[1]: {% image_buster /assets/img/churn/churn_overview.png %}

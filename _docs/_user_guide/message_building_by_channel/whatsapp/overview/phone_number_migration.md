@@ -29,4 +29,3 @@ For information on migrating your WhatsApp phone number, see Meta's documentatio
 2. Select **Turn off two-step verification** and complete the steps that follow.<br><br>![WhatsApp Business Manager opened to the "Phone numbers" page.]({% image_buster /assets/img/whatsapp/waba_manager.png %}){: style="max-width:80%;"} <br><br> If you’re migrating a phone number to a different WhatsApp Business Group and Meta’s embedded signup requires the display name to match, take note of the existing display name on the **Phone Numbers** page. You'll enter that name during the next step.<br><br>![The WhatsApp Business Manager's Phone Numbers page with a display name of "Braze" listed next to a phone number.]({% image_buster /assets/img/whatsapp/phone_numbers.png %}){: style="max-width:80%;"}<br><br>
 3. Continue Meta’s embedded signup workflow to completion. 
 
-[1]: {% image_buster /assets/img/whatsapp/waba_manager.png %}

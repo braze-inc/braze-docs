@@ -34,4 +34,3 @@ In the **Review Summary** step of the campaign building workflow, use the approv
 
 Once each section is approved, the **Launch** button will be enabled, and you can launch your campaign! 
 
-[1]: {% image_buster /assets/img_archive/campaign_approval_example.png %} 

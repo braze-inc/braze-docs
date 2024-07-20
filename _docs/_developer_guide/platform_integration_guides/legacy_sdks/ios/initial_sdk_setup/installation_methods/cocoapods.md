@@ -77,9 +77,3 @@ To update a CocoaPod, simply run the following command within your project direc
 pod update
 ```
 
-[apple_initial_setup_1]: http://cocoapods.org/
-[apple_initial_setup_2]: https://www.ruby-lang.org/en/installation/
-[apple_initial_setup_3]: http://guides.cocoapods.org/using/getting-started.html "CocoaPods Installation Directions"
-[apple_initial_setup_5]: https://github.com/braze-inc/braze-ios-sdk/blob/master/AppboyKit/include/Appboy.h
-[apple_initial_setup_15]: {% image_buster /assets/img_archive/podsworkspace.png %}
-[apple_initial_setup_25]: http://guides.cocoapods.org/using/troubleshooting.html "CocoaPods Troubleshooting Guide"

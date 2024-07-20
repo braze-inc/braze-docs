@@ -165,9 +165,3 @@ configuration.push.appGroup = "REPLACE_WITH_APPGROUP"
 let braze = Braze(configuration: configuration)
 ```
 
-[1]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/integration/
-[2]: {% image_buster /assets/img/swift/push_story/add_content_extension.png %}
-[3]: {% image_buster /assets/img/swift/push_story/enable_background_mode.png %}
-[4]: {% image_buster /assets/img/swift/push_story/add_app_groups.png %}
-[5]: {{site.baseurl}}/user_guide/message_building_by_channel/push/advanced_push_options/push_stories/
-[12]: {% image_buster /assets/img/swift/push_story/notificationcontentextension_plist.png %}

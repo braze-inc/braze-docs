@@ -53,4 +53,3 @@ These events and tags can be monitored on the Datadog **Metrics Explorer** page.
 
 ![]({% image_buster /assets/img/datadog.png %})
 
-[1]: {% image_buster /assets/img/datadog.png %}

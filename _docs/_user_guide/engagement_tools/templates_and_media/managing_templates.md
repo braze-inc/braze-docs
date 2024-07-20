@@ -62,7 +62,3 @@ To archive multiple templates, select the checkbox next to each template that yo
 Archiving is not currently available for [Link Templates]({{site.baseurl}}/user_guide/message_building_by_channel/email/link_templates/#link-templates).
 {% endalert %}
 
-[10]: {% image_buster /assets/img/template_archive_cog.png %}
-[11]: {% image_buster /assets/img/archive_multiple_template.png %}
-[8]: {% image_buster /assets/img/template_duplicate_cog.png %}
-[9]: {% image_buster /assets/img/duplicate_multiple_template.gif %}

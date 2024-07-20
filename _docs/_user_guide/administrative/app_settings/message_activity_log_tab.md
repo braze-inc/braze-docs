@@ -71,6 +71,3 @@ For example, some potential "Block" messages, in addition to the one listed in t
 - The message was blocked by the receiver as spam.
 - Service unavailable, Client host [_IP_ADDRESS_] blocked using Spamhaus.
 
-[1]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/aborting_messages/#aborting-messages
-[2]: {% image_buster /assets/img_archive/message_activity_log.png %}
-[8]: {{site.baseurl}}/user_guide/onboarding_with_braze/email_setup/ip_warming/

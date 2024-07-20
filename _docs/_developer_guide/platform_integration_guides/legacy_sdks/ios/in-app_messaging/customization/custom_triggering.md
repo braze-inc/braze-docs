@@ -74,7 +74,3 @@ In the following example, the specific in-app message to be triggered has been c
 
 Due to a push message being used to record an SDK logged custom event, Braze will need to store a push token for each user to enable this solution. For both iOS and Android, Braze will only store a token from the point that a user has been served the OS's push prompt. Before this, the user will not be reachable using push, and the preceding solution will not be possible.
 
-[39]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/silent_push_notifications/
-[40]: {% image_buster /assets/img_archive/iosServerSentPush.png %}
-[41]: {% image_buster /assets/img_archive/iOSServerPush.png %}
-[42]: {% image_buster /assets/img_archive/iosIAMeventTrigger.png %}

@@ -49,5 +49,3 @@ Depending on how many segments you want and the distribution of users within eac
 For each of your random bucket number segments, including the control group, turn on [Analytics Tracking]({{site.baseurl}}/user_guide/data_and_analytics/tracking/segment_analytics_tracking). When evaluating the success of variants relative to the control group, you can go to your [Custom Events]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_custom_event_data) page and view how often each segment has completed certain custom events.
 
 
-[1]: {% image_buster /assets/img_archive/random_buckets_filter.png %}
-[2]: {% image_buster /assets/img_archive/random_buckets_filterexample.png %}

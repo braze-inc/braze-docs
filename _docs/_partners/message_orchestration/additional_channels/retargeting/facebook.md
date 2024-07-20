@@ -107,16 +107,3 @@ When building Facebook audiences, you may wish to include or exclude certain use
 
 Once you've successfully exported a segment as a Facebook Audience, you can create additional groups using Facebook [Lookalike Audiences](https://www.facebook.com/business/help/164749007013531?id=401668390442328). This feature looks at your chosen audience's demographics, interests, and other attributes and creates a new audience of people with similar attributes.
 
-[1]: https://www.facebook.com/business/help/113163272211510?id=180505742745347
-[2]: https://www.facebook.com/business/help/910137316041095?id=420299598837059
-[3]: https://www.facebook.com/ads/manage/customaudiences/tos.php
-[4]: https://www.facebook.com/business/help/164749007013531?id=401668390442328
-[6]: {% image_buster /assets/img/fb/afb_1.png %}
-[7]: {% image_buster /assets/img/fb/afb_2.png %}
-[8]: {% image_buster /assets/img/fb/afb_3.png %}
-[9]: {% image_buster /assets/img/fb/afb_4.png %}
-[10]: {% image_buster /assets/img/fb/afb_5.png %}
-[11]: {% image_buster /assets/img/fb/afb_6.png %}
-[13]: https://www.facebook.com/ads/manager/audiences/manage/
-[15]: {% image_buster /assets/img/tiktok/tiktok13.png %}
-[16]: {% image_buster /assets/img/tiktok/tiktok16.png %}

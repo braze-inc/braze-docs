@@ -119,9 +119,3 @@ In iOS, your users have always been asked to opt-in to push notifications. The i
 
 In Android, your users can assume to be opted-in by the implied opt-in that is stated in your privacy policy or end user license agreement. You may want to implement an expressed opt-in process perhaps in an initial screen just as the user starts the app for the first time. Visit the [Push best practices]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/) article for more details. You can also orient the user as to what types of push notifications they will receive, thereby increasing the opt-in rate.
 
-[1]: #can-spam
-[2]: #casl
-[3]: http://laws-lois.justice.gc.ca/eng/annualstatutes/2010_23/FullText.html
-[4]: https://en.wikipedia.org/wiki/Email_spam_legislation_by_country "Wikipedia: Email spam legislation by country"
-[5]: http://www.business.ftc.gov/documents/bus61-can-spam-act-compliance-guide-business "CAN-SPAM Act: A Compliance Guide for Business"
-[6]: {{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/

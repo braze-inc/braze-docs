@@ -105,13 +105,3 @@ After your template is saved, users can see icons over unaddressed comments. Sel
 
 For answers to frequently asked questions about email templates, check out our [Templates FAQ]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates/faq/).
 
-[1]: {% image_buster /assets/img/dnd_compose_error.png %}
-[2]: {% image_buster /assets/img/email_templates/template2.png %}
-[3]: {% image_buster /assets/img/email_templates/template3.png %}
-[4]: {% image_buster /assets/img/email_templates/template4.png %}
-[5]: {% image_buster /assets/img/email_templates/template5.png %}
-[6]: {% image_buster /assets/img_archive/newEmailTest.png %}
-[7]: {{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices/
-[8]: {{site.baseurl}}/help/release_notes/2018/may/#mobile-responsive-email-templates
-[9]: {{site.baseurl}}/user_guide/message_building_by_channel/email/templates/faq/
-[10]: {% image_buster /assets/img/email_templates/template_comment.png %}

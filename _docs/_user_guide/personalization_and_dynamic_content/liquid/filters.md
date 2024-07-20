@@ -368,74 +368,10 @@ You can also use the reserved variable `now` to access the current date and time
 {% endtabs %}
 
 
-[1.1]: https://shopify.dev/api/liquid/filters/array-filters#join
-[1.2]: https://shopify.dev/api/liquid/filters/array-filters#first
-[1.3]: https://shopify.dev/api/liquid/filters/array-filters#last
-[1.4]: https://shopify.dev/api/liquid/filters#compact
-[1.5]: https://shopify.dev/api/liquid/filters/array-filters#concat
-[1.6]: https://shopify.dev/api/liquid/filters/array-filters#index
-[1.7]: https://shopify.dev/api/liquid/filters/array-filters#map
-[1.8]: https://shopify.dev/api/liquid/filters/array-filters#reverse
-[1.9]: https://shopify.dev/api/liquid/filters/array-filters#size
-[1.10]: https://shopify.dev/api/liquid/filters/array-filters#sort
-[1.11]: https://shopify.dev/api/liquid/filters#sort_natural
-[1.12]: https://shopify.dev/api/liquid/filters/array-filters#uniq
-[1.13]: https://shopify.dev/api/liquid/filters#where
-
-[2.1]: https://shopify.dev/api/liquid/filters/color-filters
-[3.1]: https://shopify.dev/api/liquid/filters/font-filters
-
-[4.1]: https://shopify.dev/api/liquid/filters/math-filters#abs
-[4.2]: https://shopify.dev/api/liquid/filters/math-filters#at_most
-[4.3]: https://shopify.dev/api/liquid/filters/math-filters#at_least
-[4.4]: https://shopify.dev/api/liquid/filters/math-filters#ceil
-[4.5]: https://shopify.dev/api/liquid/filters/math-filters#divided_by
-[4.6]: https://shopify.dev/api/liquid/filters/math-filters#floor
-[4.7]: https://shopify.dev/api/liquid/filters/math-filters#minus
-[4.8]: https://shopify.dev/api/liquid/filters/math-filters#plus
-[4.9]: https://shopify.dev/api/liquid/filters/math-filters#round
-[4.10]: https://shopify.dev/api/liquid/filters/math-filters#times
-[4.11]: https://shopify.dev/api/liquid/filters/math-filters#modulo
-
-[5.1]: https://shopify.dev/api/liquid/filters/money-filters#money
-[5.2]: https://shopify.dev/api/liquid/filters/money-filters#money_with_currency
-[5.3]: https://shopify.dev/api/liquid/filters/money-filters#money_without_trailing_zeros
-[5.4]: https://shopify.dev/api/liquid/filters/money-filters#money_without_currency
-
-[6.1]: https://shopify.dev/api/liquid/filters/string-filters#append
-[6.2]: https://shopify.dev/api/liquid/filters/string-filters#camelcase
-[6.3]: https://shopify.dev/api/liquid/filters/string-filters#capitalize
-[6.4]: https://shopify.dev/api/liquid/filters/string-filters#downcase
-[6.5]: https://shopify.dev/api/liquid/filters/string-filters#escape
-[6.6]: https://shopify.dev/api/liquid/filters/string-filters#handle-handleize
-[6.7]: https://shopify.dev/api/liquid/filters/string-filters#md5
-[6.8]: https://shopify.dev/api/liquid/filters/string-filters#sha1
-[6.10]: https://shopify.dev/api/liquid/filters/string-filters#hmac_sha1
-[6.11]: https://shopify.dev/api/liquid/filters/string-filters#hmac_sha256
-[6.12]: https://shopify.dev/api/liquid/filters/string-filters#newline_to_br
-[6.13]: https://shopify.dev/api/liquid/filters/string-filters#pluralize
-[6.14]: https://shopify.dev/api/liquid/filters/string-filters#prepend
-[6.15]: https://shopify.dev/api/liquid/filters/string-filters#remove
-[6.16]: https://shopify.dev/api/liquid/filters/string-filters#remove_first
-[6.17]: https://shopify.dev/api/liquid/filters/string-filters#replace
-[6.18]: https://shopify.dev/api/liquid/filters/string-filters#replace_first
-[6.19]: https://shopify.dev/api/liquid/filters/string-filters#slice
-[6.20]: https://shopify.dev/api/liquid/filters/string-filters#split
-[6.21]: https://shopify.dev/api/liquid/filters/string-filters#strip
-[6.22]: https://shopify.dev/api/liquid/filters/string-filters#lstrip
-[6.23]: https://shopify.dev/api/liquid/filters/string-filters#rstrip
-[6.24]: https://shopify.dev/api/liquid/filters/string-filters#strip_html
-[6.25]: https://shopify.dev/api/liquid/filters/string-filters#strip_newlines
-[6.26]: https://shopify.dev/api/liquid/filters/string-filters#truncate
-[6.27]: https://shopify.dev/api/liquid/filters/string-filters#truncatewords
-[6.28]: https://shopify.dev/api/liquid/filters/string-filters#upcase
-
-[7.1]: https://shopify.dev/api/liquid/filters/additional-filters#date
-[7.2]: https://shopify.dev/api/liquid/filters/additional-filters#default
-[7.3]: https://shopify.dev/api/liquid/filters/additional-filters#format_address
-[7.4]: https://shopify.dev/api/liquid/filters/additional-filters#highlight
 
 
-[1]: {% image_buster /assets/img/with_money_filter.png %}
-[2]: {% image_buster /assets/img/without_money_filter.png %}
-[3]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/advanced_filters/#encoding-filters
+
+
+
+
+

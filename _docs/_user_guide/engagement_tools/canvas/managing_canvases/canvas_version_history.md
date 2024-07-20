@@ -44,5 +44,3 @@ If you discard a version, the Canvas setup will be lost immediately, but the ana
 
 Within version history, you can view Canvas-level and steps-level analytics. In the Canvas version view, the data will populate for the entire date range, not just the date range of that version. However, at the step level, analytics will only be shown for steps that existed while that version was active. These analytics will populate using calendar days that correspond to your company's time zone, so the analytics will not be specific to the exact time of day when the version was created.
 
-[1]: {% image_buster /assets/img_archive/canvas_version_history.png %} 
-[2]: {% image_buster /assets/img_archive/canvas_version_history_changelog.png %}

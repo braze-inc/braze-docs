@@ -219,9 +219,3 @@ Your query may fail for any of the following reasons:
 - SQL does not adhere to the [SQL rules](#writing-sql)
 - Processing timeout (after 20 minutes)
 
-[1]: {% image_buster /assets/img_archive/sql_segments_create.png %}
-[2]: {% image_buster /assets/img_archive/sql_segments_editor.png %}
-[3]: {% image_buster /assets/img_archive/sql_segments_usage.png %}
-[4]: {{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension#step-5-use-your-extension-in-a-segment
-[5]: {% image_buster /assets/img_archive/sql_segments_credits.png %}
-[6]: {% image_buster /assets/img/ai_sql_generator.png %}

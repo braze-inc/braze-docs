@@ -41,8 +41,3 @@ If you wish to resume the campaign and begin sending messages, click the gear ic
 When you archive a Segment, any campaigns using it will also be archived.
 {% endalert %}
 
-[1]: {% image_buster /assets/img_archive/Archiving.png %}
-[2]: {% image_buster /assets/img_archive/Include_archived.png %}
-[3]: {% image_buster /assets/img_archive/Archive_pause_selected.png %}
-[4]: {% image_buster /assets/img_archive/unarchive_selected.png %}
-[5]: {% image_buster /assets/img_archive/resume_unarchived.png %}

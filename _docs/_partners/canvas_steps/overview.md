@@ -83,17 +83,3 @@ If you are collecting `opt-ins`, `opt-outs`, `Do Not Sell Or Share`, or any othe
 
 To learn more on how to comply with these Data Protection laws within the Braze platform, see [Data Protection Technical Assistance]({{site.baseurl}}/dp-technical-assistance/).
 
-[1]: {% image_buster /assets/img/audience_sync/audience_sync.png %}
-[2]: {% image_buster /assets/img/audience_sync/audience_sync2.png %}
-[3]: {% image_buster /assets/img/audience_sync/facebook_partner.png %}
-[4]: {% image_buster /assets/img/audience_sync/google_ads_partner.png %}
-[5]: {% image_buster /assets/img/audience_sync/audience_sync_pro1.png %}
-[6]: {% image_buster /assets/img/audience_sync/audience_sync_pro2.png %}
-[7]: {% image_buster /assets/img/audience_sync/audience_sync_pro3a.png %}
-[8]: {% image_buster /assets/img/audience_sync/audience_sync_pro3b.png %}
-[9]: {% image_buster /assets/img/audience_sync/audience_sync_pro4.png %}
-[18]: {% image_buster /assets/img/audience_sync/audience_sync3.png %}
-[19]: {% image_buster /assets/img/audience_sync/audience_sync4.png %}
-[20]: {% image_buster /assets/img/audience_sync/audience_sync5.png %}
-[21]: {% image_buster /assets/img/audience_sync/audience_sync6.png %}
-[22]: {% image_buster /assets/img/audience_sync/audience_sync7.png %}

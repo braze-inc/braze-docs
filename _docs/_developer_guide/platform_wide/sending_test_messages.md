@@ -151,14 +151,3 @@ There are a few situations where test messages don't have complete feature parit
 - The list-unsubscribe header is not included in emails sent by the test message functionality
 - For in-app messages and Content Cards, the target user must have a push token for the target device
 
-[1]: {% image_buster /assets/img_archive/testmessages1.png %}
-[2]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/setting_user_ids/#setting-user-ids
-[3]: {% image_buster /assets/img_archive/testmessages2.png %}
-[4]: {% image_buster /assets/img_archive/testmessages3.png %}
-[5]: {% image_buster /assets/img_archive/testmessages45.png %}
-[9]: {{site.baseurl}}/developer_guide/platform_wide/platform_features/#user-segmentation
-[11]: {% image_buster /assets/img_archive/test_segment.png %}
-[13]: {{site.baseurl}}/api/endpoints/messaging/
-[66]: {{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_messages/
-[16]: {{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#subscription-groups
-[14]: {{site.baseurl}}/user_guide/administrative/app_settings/email_settings/#append-email-subject-lines

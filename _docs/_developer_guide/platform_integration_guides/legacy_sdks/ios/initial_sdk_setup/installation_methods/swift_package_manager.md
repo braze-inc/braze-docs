@@ -83,10 +83,3 @@ bash "$BUILT_PRODUCTS_DIR/Appboy_iOS_SDK_AppboyKit.bundle/Contents/Resources/App
 
 Follow the instructions for [completing the integration]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/completing_integration/).
 
-[1]: https://swift.org/package-manager/
-[2]: {% image_buster /assets/img/ios/spm/swiftpackages.png %}
-[3]: {% image_buster /assets/img/ios/spm/importsdk_example.png %}
-[4]: {% image_buster /assets/img/ios/spm/select_version.png %}
-[5]: {% image_buster /assets/img/ios/spm/add_package.png %}
-[6]: {% image_buster /assets/img/ios/spm/buildsettings.png %}
-[7]: {% image_buster /assets/img/ios/spm/swiftmanager_buildmenu.png %}

@@ -291,15 +291,3 @@ If you would like to segment on the values of event properties, you have two opt
 Contact your Braze customer success manager for recommendations on the best approach depending on your specific needs.
 
 
-[1]: {% image_buster /assets/img/nested_object1.png %}
-[2]: {% image_buster /assets/img/nested_object2.png %}
-[3]: {% image_buster /assets/img/nested_object3.png %}
-[4]: {% image_buster /assets/img_archive/nested_event_properties_segmentation.png %}
-[5]: {% image_buster /assets/img_archive/nested_event_properties_personalization.png %}
-[6]: {% image_buster /assets/img_archive/schema_generation_example.png %}
-[8]: {% image_buster /assets/img_archive/custom_event_analytics_example.png %} "custom_event_analytics_example.png"
-[9]: {% image_buster /assets/img/custom_events_report_filters.png %}
-[16]: {% image_buster /assets/img_archive/customEventProperties.png %} "customEventProperties.png"
-[18]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/conditional_logic/
-[19]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/triggered_delivery/
-[20]: {% image_buster /assets/img_archive/customEventPropertiesNested.png %} "customEventPropertiesNested.png"

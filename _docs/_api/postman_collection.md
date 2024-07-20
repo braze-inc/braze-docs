@@ -64,10 +64,3 @@ After your API request is ready, click **Send**. The request sends and the respo
 
 ![Example body response data from a POST request with a status of 201 Created and response time of 269 milliseconds.]({% image_buster /assets/img_archive/postman_response.png %})
 
-[1]: https://www.getpostman.com
-[3]: {% image_buster /assets/img_archive/postman_variable.png %}
-[4]: {% image_buster /assets/img_archive/postman_post.png %}
-[5]: {% image_buster /assets/img_archive/postman_get.png %}
-[6]: {% image_buster /assets/img_archive/postman_response.png %}
-[7]: {{site.baseurl}}/developer_guide/rest_api/basics/#endpoints
-[8]: {{site.baseurl}}/api/api_key/

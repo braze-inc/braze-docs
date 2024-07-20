@@ -51,7 +51,3 @@ If the specified sound file doesn't exist or the keyword "default" is entered, B
 
 See the Apple Developer Documentation regarding [preparing custom alert sounds](https://developer.apple.com/library/content/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/SupportingNotificationsinYourApp.html) for additional information.
 
-[1]: {{site.baseurl}}/api/objects_filters/messaging/apple_object#apple-push-object
-[2]: {{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/#step-3-select-notification-type-ios-and-android
-[8]: {% image_buster /assets/img_archive/sound_push_ios.png %}
-[9]: https://developer.apple.com/library/content/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/SupportingNotificationsinYourApp.html

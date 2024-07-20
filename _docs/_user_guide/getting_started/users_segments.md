@@ -136,5 +136,3 @@ This segment could be targeted with a more aggressive campaign to try and conver
 
 This is just one example of how you can use user actions and inactions, custom events, and engagement data to create segments and tailor your marketing strategies in Braze.
 
-[1]: {% image_buster /assets/img/getting_started/segment_example.png %}
-[2]: {% image_buster /assets/img/getting_started/segment_example_breakdown.png %}

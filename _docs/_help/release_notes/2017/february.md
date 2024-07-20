@@ -28,9 +28,4 @@ It's now easier for you to see what is happening in your SDK integration with ou
 
 There are now two News Feed card fields,{% raw %} {{card.${name}}} {% endraw %} and {% raw %}  {{card.${api_id}}}{% endraw %}. These cards can be added to Liquid templating. Learn more about [personalized messaging and templates]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/personalized_messaging/#personalized-messaging).
 
-[19]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/personalized_messaging/#personalized-messaging
-[20]: {{site.baseurl}}/user_guide/administrative/app_settings/developer_console/event_user_log_tab/#event-user-log-tab
-[21]: {{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/
-[22]: {{site.baseurl}}/user_guide/data_and_analytics/reporting/engagement_reports/#engagement-reports
-[23]: {{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#creating-a-canvas
 [98]:{{site.baseurl}}/user_guide/onboarding/platform_administrative_features/#authentication-rules

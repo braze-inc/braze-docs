@@ -131,11 +131,3 @@ No, this isn't currently available.
 
 No, this isn’t currently available. You can use the Custom Code block in the editor.
 
-[1]: {% image_buster /assets/img/landing_pages/homepage.gif %}
-[2]: {% image_buster /assets/img/landing_pages/create.png %}
-[3]: {% image_buster /assets/img/landing_pages/details.png %}
-[4]: {% image_buster /assets/img/landing_pages/dnd.png %}
-[5]: {% image_buster /assets/img/landing_pages/form.png %}
-[6]: {% image_buster /assets/img/landing_pages/page_container.png %}
-[7]: {% image_buster /assets/img/landing_pages/url_handle.png %}
-[8]: {% image_buster /assets/img/landing_pages/template.png %}

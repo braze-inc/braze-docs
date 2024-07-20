@@ -58,6 +58,3 @@ navigator.geolocation.watchPosition(success);
 
 Calling `navigator.geolocation.watchPosition()` will immediately request permission from the user unless they have already granted or denied permission. See the [Mozilla developer docs](https://developer.mozilla.org/en-US/docs/Web/API/Geolocation/watchPosition) for information on configuring and stopping the location tracking.
 
-[0]: https://developer.mozilla.org/en-US/docs/Web/API/Geolocation/getCurrentPosition
-[1]: https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.user.html#setlastknownlocation
-[2]: https://developer.mozilla.org/en-US/docs/Web/API/Geolocation/watchPosition

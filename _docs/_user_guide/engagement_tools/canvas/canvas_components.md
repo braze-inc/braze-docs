@@ -66,10 +66,3 @@ When creating your user journeys, you may want to also test for the most effecti
 ### Integration 
 Want to sync up with your brand's first-party user data? Leverage the available audience sync options for [Facebook]({{site.baseurl}}/partners/canvas_steps/facebook_audience_sync) and [Google]({{site.baseurl}}/partners/canvas_steps/google_audience_sync). <br><br>
 
-[1]: {{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/action_paths
-[2]: {{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/audience_paths
-[3]: {{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/decision_split
-[4]: {{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/delay_step
-[5]: {{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step
-[6]: {{site.baseurl}}/partners/canvas_steps/facebook_audience_sync
-[7]: {{site.baseurl}}/partners/canvas_steps/google_audience_sync

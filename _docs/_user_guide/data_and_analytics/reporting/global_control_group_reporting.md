@@ -47,4 +47,3 @@ Before May 2024, the Global Control Group was excluded from user archival, but t
 | Events Per User | The estimated average number of times users in each group completed your conversion events during the selected time period. | Total events ÷ estimated group size. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
-[6]: {% image_buster /assets/img/control_group/control_group6.png %}

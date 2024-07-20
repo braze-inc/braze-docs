@@ -49,7 +49,3 @@ After integrating with Braze, Nift will automatically push events to the existin
 - Time: The time the customer selected/used the gift
 
 
-[1]: {{site.baseurl}}/developer_guide/rest_api/basics/#endpoints
-[2]: https://www.gonift.com/users/sign_in
-[5]: {% image_buster /assets/img/nift/link_your_braze_account.png %}
-[6]: {% image_buster /assets/img/nift/braze_account_linked.png %}

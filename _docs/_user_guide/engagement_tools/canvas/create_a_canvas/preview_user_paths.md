@@ -95,5 +95,3 @@ Because our test user meets the Canvas entry criteria, they can enter the Canvas
 
 ![]({% image_buster /assets/img/preview_user_path_results_example.png %})
 
-[1]: {% image_buster /assets/img/preview_user_path_example.png %}
-[2]: {% image_buster /assets/img/preview_user_path_results_example.png %}

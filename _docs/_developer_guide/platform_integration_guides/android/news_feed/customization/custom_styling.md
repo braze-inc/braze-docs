@@ -91,4 +91,3 @@ Here is a truncated example with a custom font family, `my_custom_font_family`, 
 </style>
 ```
 
-[40]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/font_customization/#font-customization

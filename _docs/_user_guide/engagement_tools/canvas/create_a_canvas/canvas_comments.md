@@ -59,5 +59,3 @@ To turn off comments notifications for a Canvas, select **None**. By default, th
 Note the **Comments within Canvases** toggle under these notification preferences controls whether you're opted-in or opted-out of notifications across all Canvases. So, if you turn off this setting, you won't receive any email notifications about any comment actions.
 
 
-[1]: {% image_buster /assets/img_archive/canvas_comments.png %}
-[2]: {% image_buster /assets/img_archive/canvas_notifications.png %}

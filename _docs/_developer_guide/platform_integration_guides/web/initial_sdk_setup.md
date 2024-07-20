@@ -270,4 +270,3 @@ When using Jest, you may see an error similar to `SyntaxError: Unexpected token 
 }
 ```
 
-[9]: https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html "JSDocs"

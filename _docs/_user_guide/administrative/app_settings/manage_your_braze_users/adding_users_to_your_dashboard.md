@@ -63,11 +63,4 @@ After a user is deleted, Braze does not keep any of the following data:
 - Language
 - Other similar data
 
-[1]: {% image_buster /assets/img/add_new_user_1.png %}
-[2]: {% image_buster /assets/img/add_new_user_2.png %}
-[3]: {% image_buster /assets/img/add_new_user_3.png %}
-[4]: {% image_buster /assets/img_archive/suspend_user.png %}
-[5]: {% image_buster /assets/img_archive/suspend_user2.png %}
 
-[27]: {% image_buster /assets/img/add-user.gif %} "Add a New User Process"
-[34]: {% image_buster /assets/img_archive/delete_user_new.png %}

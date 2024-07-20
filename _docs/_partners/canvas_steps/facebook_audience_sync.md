@@ -196,26 +196,3 @@ Braze will then be able to sync users as soon as they reach the Facebook audienc
 {% enddetails %}
 
 
-[0]: https://www.braze.com/privacy
-[1]: https://www.facebook.com/business/help/113163272211510
-[2]: https://www.facebook.com/business/help/910137316041095
-[3]: https://www.facebook.com/ads/manage/customaudiences/tos.php
-[4]: {% image_buster /assets/img/fb/afb_1.png %}
-[5]: {% image_buster /assets/img/fb/afb_2.png %}
-[6]: {% image_buster /assets/img/fb/afb_3.png %}
-[7]: {% image_buster /assets/img/fb/afb_4.png %}
-[8]: {% image_buster /assets/img/fb/afb_5.png %}
-[9]: {% image_buster /assets/img/fb_audience_sync/audience_history.png %}
-[10]: {% image_buster /assets/img/fb_audience_sync/analytics_example.jpg %}
-[11]: {% image_buster /assets/img/fb_audience_sync/add_step.png %}
-[12]: {% image_buster /assets/img/fb_audience_sync/add_audience.png %}
-[13]: {% image_buster /assets/img/fb_audience_sync/create_audience.png %}
-[14]: {% image_buster /assets/img/fb_audience_sync/new_audience.png %}
-[15]: {% image_buster /assets/img/tiktok/tiktok13.png %}
-[16]: {% image_buster /assets/img/tiktok/tiktok16.png %}
-[18]: {% image_buster /assets/img/audience_sync/audience_sync3.png %}
-[19]: {% image_buster /assets/img/audience_sync/audience_sync4.png %}
-[20]: {% image_buster /assets/img/audience_sync/audience_sync5.png %}
-[21]: {% image_buster /assets/img/audience_sync/fb_sync.png %}
-[22]: {% image_buster /assets/img/audience_sync/fb_sync2.png %}
-[23]: {% image_buster /assets/img/audience_sync/fb_sync3.png %}

@@ -171,8 +171,3 @@ Yes! To discover other data points and customization options available, refer to
 Yotpo does not support custom requirements beyond what is described in this guide.
 {% endalert %}
 
-[1]: {% image_buster /assets/img/yotpo/image1.png %}
-[2]: {% image_buster /assets/img/yotpo/image2.png %}
-[3]: {% image_buster /assets/img/yotpo/image3.png %}
-[4]: {% image_buster /assets/img/yotpo/image4.png %}
-[5]: {% image_buster /assets/img/yotpo/image5.png %}

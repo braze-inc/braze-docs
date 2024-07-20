@@ -47,6 +47,3 @@ Once approval statuses are set on the **Summary** step, any subsequent changes m
 
 Once each section is approved, the **Launch** button will be available, and you can launch your Canvas.
 
-[1]: {% image_buster /assets/img_archive/canvas_approval.png %}
-[2]: {% image_buster /assets/img_archive/canvas_approval_summary.png %}
-[3]: {% image_buster /assets/img_archive/canvas_approval_user_permissions.png %}

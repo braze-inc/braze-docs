@@ -211,17 +211,3 @@ If you are syncing audiences to Google, this error will trigger if you have sele
 To resolve this issue, ensure you have added the appropriate mobile app IDs for iOS and Android to the Google partner page. 
 {% enddetails %}
 
-[1]: {% image_buster /assets/img/google_sync/google_sync1.png %}
-[2]: {% image_buster /assets/img/google_sync/google_sync2.png %}
-[3]: {% image_buster /assets/img/google_sync/google_sync3.png %}
-[4]: {% image_buster /assets/img/google_sync/google_sync4.png %}
-[6]: {% image_buster /assets/img/google_sync/google_sync6.png %}
-[8]: {% image_buster /assets/img/google_sync/google_sync8.png %}
-[13]: {% image_buster /assets/img/tiktok/tiktok13.png %}
-[16]: {% image_buster /assets/img/tiktok/tiktok16.png %}
-[18]: {% image_buster /assets/img/audience_sync/audience_sync3.png %}
-[19]: {% image_buster /assets/img/audience_sync/audience_sync4.png %}
-[20]: {% image_buster /assets/img/audience_sync/audience_sync5.png %}
-[21]: {% image_buster /assets/img/audience_sync/g_sync.png %}
-[22]: {% image_buster /assets/img/audience_sync/g_sync2.png %}
-[23]: {% image_buster /assets/img/audience_sync/g_sync3.png %}

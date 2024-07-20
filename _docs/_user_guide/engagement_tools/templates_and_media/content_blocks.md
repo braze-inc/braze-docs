@@ -112,9 +112,3 @@ Once you have finished using a Content Block, you can archive it from the [Templ
 
 ![Saved Content Blocks panel where the settings dropdown menu for "Test_32" is expanded to show three options: Unarchive, Duplicate, and Copy to workspace]({% image_buster /assets/img/unarchive-content-block.png %})
 
-[2]: {% image_buster /assets/img/copy-content-block.png %}
-[3]: {% image_buster /assets/img/template_archive_cog.png %}
-[4]: {% image_buster /assets/img/unarchive-content-block.png %}
-[5]: {{site.baseurl}}/api/endpoints/templates/
-[6]: {{site.baseurl}}/user_guide/engagement_tools/templates_and_media/
-[7]: {% image_buster /assets/img/preview_tab_content_block.png %}

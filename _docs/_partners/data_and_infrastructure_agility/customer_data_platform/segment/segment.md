@@ -485,26 +485,3 @@ When passing user attribute data, check that you only pass values for attributes
 {% enddetails %}
 
 
-[5]: https://segment.com
-[13]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/#custom-events
-[14]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/
-[18]: {{site.baseurl}}/developer_guide/rest_api/user_data/#user-attributes-object-specification
-[19]: {{site.baseurl}}/developer_guide/rest_api/user_data/#user-data
-[22]: {{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_custom_event_data/#custom-event-data
-[23]: {{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/#creating-a-segment
-[24]: {{site.baseurl}}/user_guide/data_and_analytics/creating_a_formula/#creating-a-formula
-[25]: {{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/#user-data-collection
-[26]: {{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/#creating-a-segment
-[27]: {{site.baseurl}}/user_guide/data_and_analytics/analytics/understanding_your_app_usage_data/
-[28]: {{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/exporting_revenue_data/#revenue-data
-[34]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/initial_sdk_setup/
-[35]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/
-[36]: https://segment.com/docs/sources/#server
-[38]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/initial_sdk_setup/
-[39]: {{site.baseurl}}/developer_guide/rest_api/basics/#app-group-rest-api-keys
-[40]: {{site.baseurl}}/developer_guide/rest_api/basics/#endpoints
-[41]: https://segment.com/docs/spec/identify/#user-id
-[42]: {% image_buster /assets/img/segment/setup.png %}
-[43]: {% image_buster /assets/img/segment/website.png %}
-[44]: {% image_buster /assets/img/segment/ios.png %}
-[45]: {% image_buster /assets/img/segment/android.png %}

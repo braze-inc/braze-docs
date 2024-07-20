@@ -52,5 +52,3 @@ After creating action groups for the custom filter phrases, add another action g
 
 For this message, you should send a LINE message informing the user that this channel is not monitored by a human and, if needed, guide them to a support channel.
 
-[1]: {% image_buster /assets/img/line/trigger_word_campaign.png %}
-[2]: {% image_buster /assets/img/line/trigger_word_canvas.png %}

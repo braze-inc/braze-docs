@@ -76,9 +76,3 @@ In addition to these out-of-the box message templates, you can also further cust
 Before you get started with creating your own in-app message campaigns—or using in-app messages in a multi-channel campaign—we highly recommend that you check out our [In-app message prep guide]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/best_practices/prep_guide/). This guide covers targeting, content, and conversion questions you should consider when building in-app messages.
 
 
-[1]: https://www.braze.com/customers
-[2]: {{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/creating_custom_opt-in_prompts/
-[3]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/
-[4]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/
-[5]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/best_practices/prep_guide/
-[6]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/promotion_codes/

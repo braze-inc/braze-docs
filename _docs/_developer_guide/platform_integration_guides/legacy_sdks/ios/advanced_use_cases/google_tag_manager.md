@@ -223,9 +223,3 @@ static NSString *const ChangeUserExternalUserId = @"externalUserId";
 {% endtab %}
 {% endtabs %}
 
-[1]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/
-[2]: https://developers.google.com/tag-manager/ios/v5/
-[3]: {% image_buster /assets/img/android_google_tag_manager/gtm_android_trigger.png %}
-[4]: {% image_buster /assets/img/android_google_tag_manager/gtm_android_function_call_tag.png %}
-[5]: https://tagmanager.google.com/
-[6]: {% image_buster /assets/img/android_google_tag_manager/gtm_android_eventname_variable.png %}

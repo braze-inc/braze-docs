@@ -28,4 +28,3 @@ To reference the active campaign, select **View Active Campaign** in the footer 
 
 In-app message priority will update immediately (before the draft launches) when you select **Set Exact Priority** and specify the priority in relation to other campaigns or Canvases.
 
-[1]: {% image_buster /assets/img/campaign_draft.png %}

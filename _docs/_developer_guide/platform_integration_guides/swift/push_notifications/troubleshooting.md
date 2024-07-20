@@ -157,18 +157,3 @@ Most of the code that handles deep links also handles push opens. First, ensure 
 
 If opens are being logged, check whether it is an issue with the deep link in general or with the deep linking push click handling. To do this, test to see if a deep link from an in-app message click works.
 
-[1]: {% image_buster /assets/img_archive/push_changelog.gif %}
-[2]: https://developer.apple.com/library/content/documentation/IDEs/Conceptual/AppDistributionGuide/MaintainingProfiles/MaintainingProfiles.html
-[3]: {{site.baseurl}}/user_guide/administrative/app_settings/message_activity_log_tab/
-[14]: https://developer.apple.com/documentation/usernotifications/setting_up_a_remote_notification_server/sending_notification_requests_to_apns#2947607
-[20]: https://developer.apple.com/library/content/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/APNSOverview.html#//apple_ref/doc/uid/TP40008194-CH8-SW1
-[21]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/integration/
-[25]: {% image_buster /assets/img_archive/registration_problem.png %}
-[26]: {% image_buster /assets/img_archive/message_activity_log.png %}
-[29]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/integration/#step-2-enable-push-capabilities
-[30]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/integration/#step-5-enable-push-handling
-[34]: #push-clicks-not-logged
-[35]: #received-unregistered-sending
-[37]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/integration/#step-4-register-push-tokens-with-braze
-[38]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/advanced_use_cases/linking/#app-transport-security-ats
-[40]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/advanced_use_cases/fine_network_traffic_control/#automatic-request-processing

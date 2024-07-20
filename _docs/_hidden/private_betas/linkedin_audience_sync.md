@@ -186,13 +186,3 @@ Currently, there is no limit on the number of audiences in your LinkedIn ad acco
 A segment is considered unused and set to ARCHIVED after it is not continuously used for 30 days in a draft or active campaign. Because of this, a segment may appear "stuck" in BUILDING when updates are streamed to an ARCHIVED segment, thus pushing it into the BUILDING state, and right before it is archived again, new updates are streamed to the unused segment.
 {% enddetails %}
 
-[1]: {% image_buster /assets/img/linkedin/linkedin1.png %}
-[2]: {% image_buster /assets/img/linkedin/linkedin2.png %}
-[3]: {% image_buster /assets/img/linkedin/linkedin3.png %}
-[4]: {% image_buster /assets/img/linkedin/linkedin4.png %}
-[5]: {% image_buster /assets/img/linkedin/linkedin5.png %}
-[6]: {% image_buster /assets/img/linkedin/linkedin6.png %}
-[7]: {% image_buster /assets/img/linkedin/linkedin7.png %}
-[8]: {% image_buster /assets/img/linkedin/linkedin8.png %}
-[9]: {% image_buster /assets/img/linkedin/linkedin.png %}
-[11]: {% image_buster /assets/img/linkedin/linkedin20.png %}

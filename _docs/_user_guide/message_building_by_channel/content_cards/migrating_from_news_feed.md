@@ -51,8 +51,3 @@ The following table further outlines the difference in supported features betwee
 - Content Cards does not currently support categories. Categories can be achieved via [customization and key-value pairs]({{site.baseurl}}/developer_guide/platform_integration_guides/web/content_cards/multiple_feeds/).
 
 
-[1]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/content_cards/multiple_feeds/
-[2]: {{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/content-cards_in_canvas/
-[3]: {{site.baseurl}}/user_guide/message_building_by_channel/content_cards/reporting/
-[4]: {{site.baseurl}}/user_guide/message_building_by_channel/content_cards/create/#step-2-compose-a-content-card
-[5]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/

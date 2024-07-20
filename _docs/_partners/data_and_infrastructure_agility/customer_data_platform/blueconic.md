@@ -76,8 +76,3 @@ Once the authentication is complete, you must create at least one import or expo
 
 Use the toggle next to the Braze connection title to toggle the connection on and off. A connection must be on to run during scheduled times. 
 
-[1]: https://www.blueconic.com/
-[2]: https://portal.aws.amazon.com/billing/signup#/start
-[3]: https://console.aws.amazon.com/iam/home?#security_credential
-[4]: https://support.blueconic.com/hc/en-us/articles/202607121-BlueConic-Roles
-[5]: https://support.blueconic.com/hc/en-us/articles/205957522#h_01F4VR7SG7NKB3FMQXCB2Q8JNZ

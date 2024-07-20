@@ -60,6 +60,3 @@ Unknown macro: { "external_id" }
 }
 ```
 
-[1]: {% image_buster /assets/img/sms/opt-in1.png %}
-[2]: {% image_buster /assets/img/sms/opt-in2.png %}
-[3]: {% image_buster /assets/img_archive/dnd_iam_phone_capture_select.png %}

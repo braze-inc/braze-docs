@@ -48,5 +48,3 @@ A suggested best practice is to provide instructions about how to out-out in the
  
 ![WhatsApp message with a footer stating to respond STOP to unsubscribe from the channel]({% image_buster /assets/img/whatsapp/whatsapp_unsubscribe.png %}){: style="max-width:35%;"}
 
-[1]: {% image_buster /assets/img/whatsapp/whatsapp_block_report.png %}
-[2]: {% image_buster /assets/img/whatsapp/whatsapp_unsubscribe.png %}

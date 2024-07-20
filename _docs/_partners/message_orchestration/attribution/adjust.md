@@ -140,5 +140,3 @@ idfv={{most_recently_used_device.${id}}}
 If you currently do not use any device identifiers - such as the IDFV or GAID - in your click tracking links, or do not plan to in the future, Adjust will still be able to attribute these clicks through their probabilistic modeling.
 {% endalert %}
 
-[1]: {% image_buster /assets/img/attribution/adjust.png %}
-[2]: {% image_buster /assets/img/attribution/adjust2.png %}

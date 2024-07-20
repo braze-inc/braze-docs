@@ -36,6 +36,3 @@ Still need help? Open a [support ticket]({{site.baseurl}}/braze_support/).
 
 _Last updated on January 5, 2021_
 
-[1]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/#custom-event-analytics
-[28]: {% image_buster /assets/img_archive/trouble8.png %}
-[29]: {% image_buster /assets/img_archive/trouble9.png %}

@@ -103,4 +103,3 @@ In general, choose either Intelligent Timing or Quiet Hours for your Canvas, not
 
 When the volume of sends between two or more paths (either Audience Paths or Action Paths) isn't what you expect, this can be an opportunity to check your segments, filters, or trigger actions. Also, be sure to identify and remove any overlapping filters.
 
-[1]: {% image_buster /assets/img_archive/canvas_checklist1.png %}

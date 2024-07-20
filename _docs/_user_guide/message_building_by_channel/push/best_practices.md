@@ -82,16 +82,4 @@ Didn't find what you were looking for? Check out these additional best practices
 - [Deliverability for Chinese Android devices]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/chinese_push_deliverability/)
 - [Know before you send: channels]({{site.baseurl}}/help/help_articles/campaigns_and_canvas/know_before_send/)
 
-[1]: {{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/message_format/
-[2]: {{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/push_primer_messages/
-[3]: {{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/chinese_push_deliverability/
-[4]: {{site.baseurl}}/help/help_articles/campaigns_and_canvas/know_before_send/
 
-[6]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/setting_custom_attributes/
-[7]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/setting_custom_attributes/#setting-custom-attributes
-[8]: {{site.baseurl}}/developer_guide/rest_api/user_data/#user-attributes-object-specification
-[9]: {{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices/sunset_policies
-[10]: {{site.baseurl}}/user_guide/message_building_by_channel/push/users_and_subscriptions#update-push-subscription-state
-[11]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/
-[12]: {{site.baseurl}}/user_guide/data_and_analytics/tracking/influenced_opens
-[13]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/about/

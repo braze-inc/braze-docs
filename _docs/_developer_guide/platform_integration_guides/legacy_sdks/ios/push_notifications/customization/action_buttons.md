@@ -125,11 +125,3 @@ These categories can then be assigned to push notifications via our dashboard to
 ![A push message displaying two push action buttons "unlike" and "like".]({% image_buster /assets/img_archive/push_example_category.png %})
 
 
-[13]: {% image_buster /assets/img_archive/iOS8Action.gif %}
-[14]: https://developer.apple.com/reference/usernotifications/unnotificationcategory "Categories Docs"
-[17]: {% image_buster /assets/img_archive/push_example_category.png %}
-[36]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/#step-4-register-push-tokens-with-braze
-[37]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/customization/action_buttons/#push-category-customization
-[39]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/#step-5-enable-push-handling
-[31]: https://developer.apple.com/documentation/usernotifications/unnotificationcategory
-[2]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/customization/action_buttons/

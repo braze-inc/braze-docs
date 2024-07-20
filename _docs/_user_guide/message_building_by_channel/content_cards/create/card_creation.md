@@ -123,6 +123,3 @@ When cards are created at first impression, it may take 1–2 seconds for the ca
 
 If a user's app is running a previous version of the SDK, they will still receive Content Cards sent with a specified card creation. However, cards will take longer to appear to these users, and may not appear until the next Content Card sync.
 
-[1]: {% image_buster /assets/img_archive/card_creation.png %}
-[2]: {{site.baseurl}}/user_guide/message_building_by_channel/content_cards/create/
-[3]: https://www.braze.com/resources/articles/whats-an-app-session-anyway

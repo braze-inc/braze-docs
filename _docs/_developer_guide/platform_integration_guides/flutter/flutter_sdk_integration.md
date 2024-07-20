@@ -157,10 +157,3 @@ Then, search for the user with `{some-user-id}` in the dashboard under **Audienc
 If you are using the [older navigation]({{site.baseurl}}/navigation), you can search for users from **Users** > **User Search**.
 {% endalert %}
 
-[1]: https://pub.dev/packages/braze_plugin
-[2]: https://flutter.dev/
-[3]: {{site.baseurl}}/api/api_key/#the-app-identifier-api-key
-[4]: {{site.baseurl}}/api/basics/#endpoints
-[5]: https://docs.flutter.dev/get-started/install
-[6]: https://github.com/braze-inc/braze-flutter-sdk/blob/master/example/lib/main.dart
-[7]: https://github.com/braze-inc/braze-flutter-sdk#readme

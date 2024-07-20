@@ -367,12 +367,3 @@ The preceding example is for customers on the `US-01` instance. If you are not o
 
 Push primer campaigns encourage your users to enable push notifications on their device for your app. This can be done without SDK customization using our [no code push primer]({{site.baseurl}}/user_guide/message_building_by_channel/push/push_primer_messages/).
 
-[1]:  {{site.baseurl}}/user_guide/message_building_by_channel/push/about/
-[2]:  {{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/silent_push_notifications/
-[10]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/advanced_use_cases/linking/#linking-implementation
-[24]: {% image_buster /assets/img_archive/Enable_push_capabilities.png %}
-[29]: {{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_messages/
-[32]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/setting_user_ids/#assigning-a-user-id
-[34]: {% image_buster /assets/img_archive/xcode8_auto_signing.png %}
-[35]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/customization/action_buttons/
-[66]: {{site.baseurl}}/api/basics/

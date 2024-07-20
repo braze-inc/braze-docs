@@ -46,5 +46,3 @@ When a user sends an inbound message that contains a media item, Braze will expo
 Braze accepts JPEG, GIF, PNG, and VCF files and allows you to attach a single multimedia asset to your MMS message.
 
 
-[picture]: {% image_buster /assets/img/sms/MMS.png %}
-[1]: {{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_subscription_group/#subscription-group-mms-enablement

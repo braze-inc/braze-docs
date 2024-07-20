@@ -270,15 +270,3 @@ Check out:
 * [Lob.com]({{site.baseurl}}/partners/additional_channels/direct_mail/lob/)
 * And many more of our [technology partners]({{site.baseurl}}/partners/home/)!
 
-[14]: https://sendgrid.com/blog/whats-webhook
-[15]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/
-[16]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/campaigns_in_multiple_languages/#campaigns-in-multiple-languages
-[17]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/setting_user_ids/#additional-notes-and-best-practices
-[18]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/
-[19]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/setting_user_ids/
-[21]: {% image_buster /assets/img/webhook_json_1.png %}
-[22]: {% image_buster /assets/img_archive/webhook_rawtext.png %}
-[23]: {% image_buster /assets/img_archive/webhook_rawtext_URL-encoded.png %}
-[26]: {% image_buster /assets/img_archive/webhook_request_header.png %}
-[42]: {{site.baseurl}}/user_guide/administrative/app_settings/developer_console/message_activity_log_tab/
-[43]: {% image_buster /assets/img_archive/webhook-error.png %}

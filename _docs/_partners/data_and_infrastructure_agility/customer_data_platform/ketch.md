@@ -58,4 +58,3 @@ A user can only see the marketing preference center when Ketch can confirm that 
 3. After you have the identity space configured, test to see if the preference center appears by opening the preference center on the website where the Ketch tag has been deployed.
 
 
-[1]: {% image_buster /assets/img/ketch/ketch1.png %}

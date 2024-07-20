@@ -303,14 +303,4 @@ If your company turned on this feature on October 2, and turned on analytics tra
 
 
 
-[1]: {% image_buster /assets/img_archive/segments.png %}
-[2]: {% image_buster /assets/img_archive/A_Tracking.png %}
-[3]: {{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/#creating-a-segment
-[4]: {% image_buster /assets/img_archive/historical_membership1.png %}
-[5]: {{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#segmenting-by-user-subscriptions
-[6]: {{site.baseurl}}/help/best_practices/spam_regulations/#spam-regulations
-[7]: {% image_buster /assets/img_archive/preview_users.png %}
-[8]: {% image_buster /assets/img_archive/user_preview.png %}
-[9]: {{site.baseurl}}/user_guide/data_and_analytics/tracking/segment_analytics_tracking/
-[10]: {% image_buster /assets/img_archive/historical_membership2.png %}
 [11]:{% image_buster /assets/img_archive/variables_panel.png %}

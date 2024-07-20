@@ -141,5 +141,3 @@ Follow these steps to test a sample in-app message.
 
 ![A Braze in-app message campaign showing you can add your own user ID as a test recipient to test your in-app message.]({% image_buster /assets/img/react-native/iam-test.png %} "In-App Messaging Test")
 
-[1]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/create/
-[2]: {% image_buster /assets/img/react-native/iam-test.png %} "In-App Messaging Test"

@@ -125,9 +125,3 @@ If you choose not to create a specific segment for Messenger subscribers, make s
 
 You may also use other segmentation to target your LINE campaigns and the rest of the campaign creation process, as is with any other campaign.
 
-[1]: {% image_buster /assets/img_archive/line_channel_access_token.png %}
-[2]: {% image_buster /assets/img_archive/line_content_block_token.png %}
-[3]: {% image_buster /assets/img_archive/line_preview.png %}
-[61]: {{site.baseurl}}/user_guide/data_and_analytics/reporting/viewing_and_understanding_segment_data/
-[62]: {{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/#creating-a-segment
-[63]: {% image_buster /assets/img_archive/line_segment.png %}

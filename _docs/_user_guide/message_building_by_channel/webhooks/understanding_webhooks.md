@@ -94,5 +94,3 @@ Refer to [Creating a webhook]({{site.baseurl}}/user_guide/message_building_by_ch
 {% endtabs %}
 
 
-[1]: {{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/
-[2]: {% image_buster /assets/img_archive/webhook_anatomy.png %}

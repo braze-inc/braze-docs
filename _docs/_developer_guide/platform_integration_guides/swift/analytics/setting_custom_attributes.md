@@ -292,10 +292,3 @@ AppDelegate.braze?.user.set(pushNotificationSubscriptionState: Braze.User.Subscr
 
 Refer to [Managing user subscriptions]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/) for more details.
 
-[1]: {{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#user-data-collection
-[2]: http://en.wikipedia.org/wiki/ISO_8601
-[3]: {{site.baseurl}}/developer_guide/rest_api/user_data/#user-data
-[6]: https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/user-swift.class
-[8]: {{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#arrays
-[10]: {{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#managing-user-subscriptions
-[12]: {{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#managing-user-subscriptions

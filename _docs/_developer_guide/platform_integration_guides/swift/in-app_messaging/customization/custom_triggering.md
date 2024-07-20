@@ -77,7 +77,3 @@ In the following example, the specific in-app message to be triggered has been c
 Note that these in-app messages will only trigger if the silent push is received while the application is in the foreground.
 {% endalert %}
 
-[1]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/silent_push_notifications/
-[40]: {% image_buster /assets/img_archive/iosServerSentPush.png %}
-[41]: {% image_buster /assets/img_archive/iOSServerPush.png %}
-[42]: {% image_buster /assets/img_archive/iosIAMeventTrigger.png %}

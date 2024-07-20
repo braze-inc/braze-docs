@@ -229,11 +229,3 @@ For more detailed monitoring and troubleshooting, refer to the **Logs** page for
 - If deliveries are less than the number of incoming requests, this indicates that at least some webhooks are delivered successfully. Refer to transformation logs for example errors, and look to see if the transformation output is expected. It’s possible that your transformation code is not accounting for every variation of webhooks received.
 
 
-[4]: {% image_buster /assets/img/data_transformation/data_transformation3.png %}
-[5]: {% image_buster /assets/img/data_transformation/data_transformation4.png %}
-[6]: {% image_buster /assets/img/data_transformation/data_transformation5.png %}
-[7]: {% image_buster /assets/img/data_transformation/data_transformation6.jpg %}
-[8]: {% image_buster /assets/img/data_transformation/data_transformation7.png %}
-[9]: {% image_buster /assets/img/data_transformation/data_transformation8.png %}
-[10]: {% image_buster /assets/img/data_transformation/data_transformation9.png %}
-[12]: {% image_buster /assets/img/data_transformation/data_transformation11.png %}

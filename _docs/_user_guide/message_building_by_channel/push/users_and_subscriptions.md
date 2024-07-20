@@ -225,20 +225,3 @@ Web platforms do not allow background or silent push.
 
 Refer to our dedicated article on [Push best practices]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices) for detailed guidance on how to optimize your usage of push at Braze.
 
-[1]: {% image_buster /assets/img/push_enablement.png %}
-[2]: {% image_buster /assets/img/push_changelog.png %}
-[3]: {% image_buster /assets/img/push_example.png %}
-[4]: {% image_buster /assets/img/push_token_changelog.png %}
-[push-tokens]: {{site.baseurl}}/user_guide/message_building_by_channel/push/push_registration/
-[identifier]: {{site.baseurl}}/api/endpoints/export/user_data/post_users_identifier/
-[segment]: {{site.baseurl}}/api/endpoints/export/user_data/post_users_segment/
-[5]: {{site.baseurl}}/user_guide/engagement_tools/segments/using_user_search/
-[ios-push-prompt]: {% image_buster /assets/img/push_implementation_guide/ios-push-prompt.png %}
-[android-push-prompt]: {% image_buster /assets/img/push_implementation_guide/android-push-prompt.png %}
-[web-push-prompt]: {% image_buster /assets/img/push_implementation_guide/web-push-prompt.png %}
-[ios-provisional-push]: {% image_buster /assets/img/push_implementation_guide/ios-provisional-push.png %}
-[push-primers]: {{site.baseurl}}/user_guide/message_building_by_channel/push/push_primer_messages/
-[android-13]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/android_13/
-[provisional-blog]: https://www.braze.com/resources/articles/mastering-provisional-push
-[user_attributes_object]: {{site.baseurl}}/api/objects_filters/user_attributes_object
-[users-track]: {{site.baseurl}}/api/endpoints/user_data/post_user_track/

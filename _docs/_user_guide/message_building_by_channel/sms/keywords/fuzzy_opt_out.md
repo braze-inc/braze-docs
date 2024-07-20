@@ -41,6 +41,4 @@ If you are using the [older navigation]({{site.baseurl}}/navigation), you can fi
 
 ![]({% image_buster /assets/img/sms/fuzzy2.png %}){: style="max-width:70%;"}
 
-[1]: {% image_buster /assets/img/sms/fuzzy1.jpg %}
-[2]: {% image_buster /assets/img/sms/fuzzy2.png %}
 

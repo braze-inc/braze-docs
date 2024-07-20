@@ -324,18 +324,10 @@ Need to make edits to your Canvas after launch? Well, you can! Check out [Editin
 
 
 [1]:{% image_buster /assets/img_archive/canvas_dropdown.png %}
-[3]: {% image_buster /assets/img_archive/choose_canvas_experience.png %}
-[6b]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/#rate-limiting-and-canvas-components
-[6c]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting#frequency-capping
 [11]:{% image_buster /assets/img_archive/canvas_add_variant.gif %}
 [12]:{% image_buster /assets/img_archive/Canvas_Multiple_Variants.png %}
 [13]:{% image_buster /assets/img_archive/Canvas_One_Day.png %}
 [14]:{% image_buster /assets/img_archive/Canvas_Exception_Events.png %}
 [15]:{% image_buster /assets/img_archive/Canvas_Additional_Engagement.png %}
 [17]:{% image_buster /assets/img_archive/Canvas_More_Step.png %}
-[18a]: {{site.baseurl}}/user_guide/sage_ai/intelligence/intelligent_selection/
-[18b]: {% image_buster /assets/img_archive/canvas_intelligent_selection.png %}
 [19]:{% image_buster /assets/img_archive/Canvas_Analytics.png %}
-[50]: {% image_buster /assets/img/quiet_hours.png %}
-[52]: {% image_buster /assets/img/add_canvas_conversions.png %}
-[53]: {% image_buster /assets/img/canvas_details.png %}

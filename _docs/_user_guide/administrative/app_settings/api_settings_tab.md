@@ -49,9 +49,3 @@ To integrate with our API, you can search for the identifiers related to any seg
 
 For more information, refer to [API identifier types]({{site.baseurl}}/api/identifier_types/).
 
-[3]: {{site.baseurl}}/api/endpoints/user_data/
-[4]: {{site.baseurl}}/api/endpoints/messaging/
-[5]: {{site.baseurl}}/api/endpoints/email/
-[6]: {{site.baseurl}}/api/endpoints/export/
-[12]: https://en.wikipedia.org/wiki/UTF-8 "Wikipedia: UTF-8"
-[26]: {% image_buster /assets/img_archive/api-key-ip-whitelisting.png %}

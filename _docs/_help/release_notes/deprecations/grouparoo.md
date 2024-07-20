@@ -70,7 +70,3 @@ In addition to mapping, you may also choose to add Grouparoo groups to Braze sub
 Further details and updates on this integration can be found in [Grouparoo's documentation](https://www.grouparoo.com/docs/integrations/grouparoo-braze).
 {% endalert %}
 
-[1]: https://www.grouparoo.com/
-[2]: {% image_buster /assets/img/grouparoo/add-app.png %}
-[3]: {% image_buster /assets/img/grouparoo/mapping.png %}
-[4]: {% image_buster /assets/img/grouparoo/lists.png %}

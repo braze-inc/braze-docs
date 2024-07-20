@@ -227,14 +227,3 @@ On the Swift SDK, all Braze in-app messages support displaying animated GIFs by 
 {% endtab %}
 {% endtabs %}
 
-[1]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/in-app_messaging/customization/custom_listeners/#custom-manager-listener
-[2]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/in-app_messaging/customization/custom_listeners/#step-1-implement-an-in-app-message-manager-listener
-[5]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/create/
-[6]: {% image_buster /assets/img/react-native/iam-test.png %} "In-App Messaging Test"
-[7]: https://github.com/braze-inc/braze-react-native-sdk
-[8]: https://github.com/braze-inc/braze-android-sdk
-[9]: https://github.com/braze-inc/braze-swift-sdk
-[10]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/index.html
-[11]: https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/inappmessage
-[12]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/-message-button/index.html
-[13]: https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/inappmessage/button

@@ -46,4 +46,3 @@ Welcome to our store, Peter!
 Catalog Liquid tags can't be used recursively inside catalogs.
 {% endalert %}
 
-[15]: {% image_buster /assets/img_archive/catalog_liquid_templating.png %}

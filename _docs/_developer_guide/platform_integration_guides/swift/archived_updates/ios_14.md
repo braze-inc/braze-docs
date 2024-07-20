@@ -140,7 +140,3 @@ Note that this is not an exhaustive list. If you manually collect other informat
 
 To learn more about this feature, see [Apple's Privacy and Data Use](https://developer.apple.com/app-store/user-privacy-and-data-use/).
 
-[1]: https://github.com/Appboy/appboy-ios-sdk/releases/tag/3.27.0
-[2]: https://github.com/Appboy/appboy-ios-sdk/issues
-[4]: https://developer.apple.com/documentation/corelocation/cllocationmanager/3600215-accuracyauthorization
-[5]: https://developer.apple.com/app-store/user-privacy-and-data-use/#permission-to-track

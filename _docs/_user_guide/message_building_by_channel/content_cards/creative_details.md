@@ -88,10 +88,3 @@ Keep Content Cards relevant by setting them to dismiss when a user takes relevan
 
 <br><br>
 
-[1]: {% image_buster /assets/img/content_card_classic.png %}
-[2]: {% image_buster /assets/img/content_card_captioned.png %}
-[3]: {% image_buster /assets/img/content_card_banner.png %}
-[4]: {{site.baseurl}}/developer_guide/customization_guides/content_cards
-[5]: {% image_buster /assets/img/dismissal-cc.png %}
-[6]: {% image_buster /assets/img/empty-cc.png %}
-[7]: {{site.baseurl}}/developer_guide/customization_guides/customization_overview

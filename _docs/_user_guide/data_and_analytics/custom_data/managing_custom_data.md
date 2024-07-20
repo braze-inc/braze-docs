@@ -123,12 +123,3 @@ Data sent to Braze is immutable and cannot be deleted or modified after we've re
 {% endalert %}
 
 
-[1]: {% image_buster/assets/img_archive/blocklist_warning.png %}
-[20]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#custom-attribute-data-types
-[21]: {% image_buster /assets/img_archive/prepopulate_page.png %}
-[22]: {% image_buster /assets/img_archive/prepopulate_add.png %}
-[43]: {{site.baseurl}}/user_guide/data_and_analytics/configuring_reporting/#configuring-reporting
-[44]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#custom-attribute-data-types
-[73]: {% image_buster /assets/img_archive/manageproperties1.png %}
-[75]: {% image_buster /assets/img_archive/custom_events_view_data_type_dropdown.png %}
-[88]: {{site.baseurl}}/developer_guide/platform_integration_guides/sdk_primer/#blocking-data-collection

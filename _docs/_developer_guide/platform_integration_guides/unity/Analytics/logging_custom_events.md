@@ -30,5 +30,3 @@ AppboyBinding.LogCustomEvent("event name", properties(Dictionary<string, object>
 
 You can also use our REST API to record events. Refer to the [users API]({{site.baseurl}}/developer_guide/rest_api/user_data/#user-data) documentation for details.
 
-[4]: {{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#best-practices
-[5]: {{site.baseurl}}/developer_guide/rest_api/user_data/#user-data

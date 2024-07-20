@@ -84,4 +84,3 @@ If you want to learn more about things that were discussed in the article, check
 
 If this article didn't help, leave feedback or open a [support ticket]({{site.baseurl}}/braze_support/)!
 
-[support]: {{site.baseurl}}/braze_support/

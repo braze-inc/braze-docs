@@ -45,13 +45,4 @@ We now have an alert to let you know when you've reached your quota depending on
 Canvas and campaign data can now be exported together in Engagement Report, streamlining your data analysis. Learn more about [Engagement Reports]({{site.baseurl}}/user_guide/data_and_analytics/reporting/engagement_reports/#engagement-reports).
 
 
-[35]: {{site.baseurl}}/user_guide/data_and_analytics/reporting/engagement_reports/#engagement-reports
-[36]: {{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices/
-[37]: {{site.baseurl}}/user_guide/data_and_analytics/configuring_reporting/
-[38]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/personalized_messaging/#adding-personalizable-attributes-objects
-[39]: {{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/
-[40]: {{site.baseurl}}/user_guide/engagement_tools/templates_and_media/
-[41]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/create/#creating-an-in-app-message
-[42]: {{site.baseurl}}/user_guide/administrative/app_settings/tags/#campaign-segment-and-news-feed-card-tags
-[43]: {{site.baseurl}}/user_guide/administrative/app_settings/developer_console/#content-test-groups
 [98]:{{site.baseurl}}/user_guide/onboarding/platform_administrative_features/#authentication-rules

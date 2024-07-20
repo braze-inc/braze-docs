@@ -57,11 +57,3 @@ This will allow you to optimize your [push opt-in rates](https://www.braze.com/r
 
 To start using our new ["no-code" push primer feature]({{site.baseurl}}/user_guide/message_building_by_channel/push/push_primer_messages/), upgrade your Android SDK to the [latest version (v23.0.0+)](https://github.com/braze-inc/braze-android-sdk/blob/master/CHANGELOG.md#2300).
 
-[1]: https://github.com/braze-inc/braze-android-sdk/blob/master/CHANGELOG.md#2300
-[2]: https://developer.android.com/about/versions/13
-[3]: https://developer.android.com/about/versions/13/changes/notification-permission
-[4]: https://developer.android.com/about/versions/13/changes/notification-permission#eligibility
-[5]: https://developer.android.com/about/versions/13/overview#platform_stability
-[6]: https://www.braze.com/resources/articles/android-13-developer-preview-push-opt-ins-arrive-for-android-apps
-[7]: {{site.baseurl}}/user_guide/message_building_by_channel/push/push_primer_messages/
-[8]: https://developer.android.com/about/versions/13/changes/notification-permission#existing-apps

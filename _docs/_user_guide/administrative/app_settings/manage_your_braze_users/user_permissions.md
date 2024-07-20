@@ -139,8 +139,3 @@ Assign roles by selecting an existing user or creating a new one on the **Compan
 
 You can download a CSV of your dashboard users and their associated permissions by clicking **Export Users** on the **Company Users** page. A CSV will be sent to the email address associated with your Braze account.
 
-[29]: {% image_buster /assets/img_archive/editing_user_permission_new.png %} "Edit User Permission"
-[30]: {% image_buster /assets/img_archive/two_factor_authentication_manage_users_new.png %}
-[76]: {{site.baseurl}}/user_guide/administrative/manage_your_braze_users/user_permissions/
-[89]: {% image_buster /assets/img/user_permissions_selection.png %}
-[5]: {% image_buster /assets/img/permission_sets_manage.png %}

@@ -102,14 +102,3 @@ To verify if data has been exported successfully to Braze, check your Braze acco
 ## Data usage and governance
 All Adobe Experience Platform destinations are compliant with data usage policies when handling your data. See [Data governance in real-time CDP](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/privacy/data-governance-overview.html?lang=en) for detailed information on how the Adobe Experience Platform enforces data governance. 
 
-[1]: {% image_buster /assets/img/adobe/braze-destination-configure.png %} 
-[3]: {% image_buster /assets/img/adobe/braze-destination-account.png %}
-[4]: {% image_buster /assets/img/adobe/braze-destination-authentication.png %}
-[5]: {% image_buster /assets/img/adobe/braze-destination-mapping.png %} 
-[6]: {% image_buster /assets/img/adobe/braze-destination-mapping-source.png %} 
-[7]: {% image_buster /assets/img/adobe/braze-destination-mapping-attributes.png %} 
-[8]: {% image_buster /assets/img/adobe/braze-destination-mapping-namespaces.png %} 
-[9]: {% image_buster /assets/img/adobe/braze-destination-mapping-target.png %} 
-[10]: {% image_buster /assets/img/adobe/braze-destination-mapping-target-fields.png %} 
-[11]: {% image_buster /assets/img/adobe/braze-destination-mapping-complete.png %} 
-[12]: {% image_buster /assets/img/adobe/braze-destination-mapping-example.png %} 

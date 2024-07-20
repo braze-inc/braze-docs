@@ -99,6 +99,3 @@ You will receive a dashboard notification and an email after the Shopify backfil
 - City
 - Country
 
-[1]: {% image_buster /assets/img/Shopify/backfill1.jpg %} 
-[2]: {% image_buster /assets/img/Shopify/backfill2.png %} 
-[3]: {% image_buster /assets/img/Shopify/backfill3.png %} 

@@ -99,4 +99,3 @@ Contact your Stylitics account manager to coordinate the next steps and timeline
 - Align on analytics 
 - Align on the launch timeline 
 
-[0]: {% image_buster /assets/img/stylitics.png %}

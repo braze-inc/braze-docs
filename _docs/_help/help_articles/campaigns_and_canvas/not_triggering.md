@@ -30,5 +30,3 @@ For further assistance with campaign troubleshooting, be sure to contact Braze S
 
 _Last updated on June 25, 2024_
 
-[1]: {{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/customer_behavior_events/#session-start-event/
-[2]: {{site.baseurl}}/user_guide/engagement_tools/testing/race_conditions/#race-conditions/

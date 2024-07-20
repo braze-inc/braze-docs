@@ -159,7 +159,3 @@ You should decide how long to run your experiment before beginning it, and then 
 
 Consider any baseline behaviors for the metrics you're most interested in. Are you interested in purchase rates for subscription plans that are renewed only on an annual basis? Or do customers have a weekly habit for the event you'd like to measure? Think about how long it takes users to potentially alter their behaviors due to your messaging. After you decide how long your experiment should run, be sure to not end your experiment or record final results early, or your findings may be biased.
 
-[2]: {% image_buster /assets/img/control_group/control_group2.png %}
-[4]: {% image_buster /assets/img/control_group/control_group4.png %}
-[5]: {% image_buster /assets/img/control_group/control_group5.png %}
-[6]: {% image_buster /assets/img/control_group/control_group6.png %}

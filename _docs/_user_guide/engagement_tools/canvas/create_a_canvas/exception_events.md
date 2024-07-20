@@ -30,4 +30,3 @@ For example, if you have an exception event for "Abandoned Cart" on the third st
 
 
 [1]:{% image_buster /assets/img_archive/Canvas_Exception_Events.png %}
-[2]: {{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/advancement/

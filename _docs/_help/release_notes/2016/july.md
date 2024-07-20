@@ -32,5 +32,3 @@ Once an in-app message has received a certain number of impressions, Braze will 
 
 ![IAM impression cap]({% image_buster /assets/img_archive/approx_limit_for_IAM.png %})
 
-[6]: {% image_buster /assets/img_archive/uninstall_tracking_checkbox.png %}
-[11]: {% image_buster /assets/img_archive/approx_limit_for_IAM.png %}

@@ -227,5 +227,3 @@ We advocate not segmenting to send to all different types of users. This is beca
 Check in with your engineering team to build out the AMP elements. After these elements are set up, we encourage you to include design resources and elements you have to add an extra layer of polish.
 {% enddetails %}
 
-[1]: {% image_buster /assets/img/dynamic-content.png %}
-[support]: {{site.baseurl}}/support_contact/

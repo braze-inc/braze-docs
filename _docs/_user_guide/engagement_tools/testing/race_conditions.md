@@ -58,7 +58,3 @@ Another common race condition may occur if you configure an action-based campaig
 
 One way to avoid this race condition can be to add a delay of more than one minute to allow users enough time to enter the Canvas.
 
-[1]: {{site.baseurl}}/api/objects_filters/user_attributes_object/
-[2]: {{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_canvases/
-[3]: {{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_campaigns/
-[4]: {{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_messages/

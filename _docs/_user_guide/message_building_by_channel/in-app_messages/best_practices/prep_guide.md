@@ -47,5 +47,3 @@ channel: in-app messages
     ```
 
 
-[1]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/#deep-linking-to-in-app-content
-[21]: {{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/

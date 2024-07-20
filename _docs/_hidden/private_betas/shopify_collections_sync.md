@@ -60,8 +60,3 @@ Be aware of the following behavior in the beta: <br><br>If you update the Shopif
 
 Using any results in catalogs, such as custom attributes and custom events, can cause different results to return for each user in your selection.
 
-[1]: {% image_buster /assets/img/Shopify/sync_products.png %}
-[2]: {% image_buster /assets/img/Shopify/view_catalog.png %}
-[3]: {% image_buster /assets/img/Shopify/selections_tab.png %}
-[4]: {% image_buster /assets/img/Shopify/edit_selection.png %}
-[5]: {% image_buster /assets/img/Shopify/add_personalization.png %}

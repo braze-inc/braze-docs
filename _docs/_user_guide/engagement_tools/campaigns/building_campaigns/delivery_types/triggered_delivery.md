@@ -172,25 +172,3 @@ We recommend either changing the target audience to include all users, or checki
 
 ![]({% image_buster /assets/img_archive/reevaluate_segment_membership.png %})
 
-[5]: #local-time-zone-campaigns
-[8]: {{site.baseurl}}/user_guide/sage_ai/intelligence/intelligent_timing/
-[17]: {% image_buster /assets/img_archive/schedule_triggered1.png %}
-[18]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/conversion_events/#conversion-events
-[19]: {% image_buster /assets/img_archive/schedule_triggered22.png %}
-[20]: {% image_buster /assets/img_archive/schedule_triggered32.png %}
-[21]: {% image_buster /assets/img_archive/schedule_triggered43.png %}
-[22]: #use-cases-2
-[24]: {% image_buster /assets/img_archive/ReEligible.png %}
-[27]: {% image_buster /assets/img_archive/schedule_triggered5.png %}
-[28]: {% image_buster /assets/img_archive/schedule_triggered6.png %}
-[29]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/best_practices/in-app_message_behavior/#in-app-message-delivery-rules
-[31]: {% image_buster /assets/img_archive/schedule_triggered_next_available.png %}
-[32]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/
-[33]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/campaign_connector/#campaign-connector
-[34]: {% image_buster /assets/img_archive/customEventProperties.png %}
-[41]: {% image_buster /assets/img_archive/schedule_triggered7.png %}
-[47]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/triggered_delivery/#why-did-a-user-not-receive-my-triggered-campaign
-[48]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/#custom-event-properties
-[49]: {{site.baseurl}}/help/help_articles/campaigns_and_canvas/not_triggering/
-[50]: {% image_buster /assets/img_archive/schedule_triggered8.png %}
-[51]: {% image_buster /assets/img_archive/reevaluate_segment_membership.png %}

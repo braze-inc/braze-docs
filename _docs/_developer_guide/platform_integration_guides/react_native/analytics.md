@@ -135,5 +135,3 @@ The following keys are **reserved** and **cannot** be used as purchase propertie
 - `price`
 - `currency`
 
-[0]: {{site.baseurl}}/developer_guide/platform_wide/analytics_overview/
-[1]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/event_naming_conventions/

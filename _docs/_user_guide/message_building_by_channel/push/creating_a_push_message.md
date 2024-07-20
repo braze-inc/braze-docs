@@ -228,16 +228,3 @@ After you've finished building the last of your campaign or Canvas, review its d
 
 Next, check out [Push reporting]({{site.baseurl}}/user_guide/message_building_by_channel/push/push_reporting/) to learn how you can access the results of your push campaign. For push notifications, you'll be able to view statistics for the number of messages sent, delivered, bounced, opened, and directly opened.
 
-[1]: {% image_buster /assets/img_archive/new_campaign_push.png %}
-[2]: {% image_buster /assets/img_archive/push_1.png %}
-[3]: {% image_buster /assets/img_archive/push_2.png %}
-[4]: {% image_buster /assets/img_archive/schedule.png %}
-[5]: {% image_buster /assets/img_archive/confirmation_page.png %}
-[6]: {% image_buster /assets/img_archive/push-results-statistics.png %}
-[7]: {% image_buster /assets/img_archive/push_3.png %}
-[8]: https://www.braze.com/customers
-[9]: {% image_buster /assets/img_archive/push_recent_device.png %}
-[15]: {% image_buster /assets/img_archive/conversion_event_selection.png %}
-[18]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/localization/#languages-supported
-[24]: {% image_buster /assets/img_archive/multi_channel_footer.png %}
-[25]: {% image_buster /assets/img_archive/target_segmenter.png %} 

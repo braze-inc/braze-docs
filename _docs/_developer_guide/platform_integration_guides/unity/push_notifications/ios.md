@@ -110,18 +110,3 @@ To receive a copy of Braze device tokens from the OS, set a delegate using `Appb
 
 To implement advanced features such as deep links, badge counts, and custom sounds, visit our [native iOS push instructions]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/integration/).
 
-[1]: #manual-push-integration
-[2]: {{site.baseurl}}/developer_guide/platform_integration_guides/unity/sdk_integration/ios/#transitioning-from-manual-to-automated-integration-ios
-[8]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/integration/
-[9]: https://developer.apple.com/ios/manage/overview/index.action "iOS Provisioning Portal"
-[10]: {% image_buster /assets/img_archive/ios_provisioning.png %} "pushNotification2.png"
-[11]: {% image_buster /assets/img_archive/AppleProvisioningOptions.png %} "AppleProvisioningOptions.png"
-[12]: {% image_buster /assets/img_archive/push_cert_gen.png %} "pushNotification3.png"
-[15]: https://github.com/Appboy/appboy-unity-sdk/blob/master/unity-samples/iOS/Roll-A-Ball-Ios/Classes/UnityAppController.mm "sample AppController.mm"
-[24]: {% image_buster /assets/img_archive/Enable_push_capabilities.png %}
-[27]: {% image_buster /assets/img/unity/ios/unity_ios_api_key.png %}
-[28]: {% image_buster /assets/img/unity/ios/unity_ios_disable_auto_push.png %}
-[29]: {% image_buster /assets/img/unity/ios/unity_ios_enable_background.png %}
-[30]: {% image_buster /assets/img/unity/ios/unity_ios_push_received.png %}
-[31]: {% image_buster /assets/img/unity/ios/unity_ios_push_opened.png %}
-[32]: {% image_buster /assets/img/unity/ios/unity_ios_appboy_callback.png %}

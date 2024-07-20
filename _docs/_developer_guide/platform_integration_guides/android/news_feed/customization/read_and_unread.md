@@ -33,4 +33,3 @@ To enable this functionality add the following line to your `braze.xml` file:
 
 These indicators can be customized by altering the `icon_read` and `icon_unread` drawables.
 
-[25]: {% image_buster /assets/img_archive/UnreadvsReadNewsFeedCard.png %}

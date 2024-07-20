@@ -78,5 +78,3 @@ Braze should now be collecting data from your application. See the following art
 
 >  If you are using the Braze Unity project in the same app, you may have to fully qualify calls to Braze as "AppboyPlatform.Universal.Appboy"
 
-[14]: http://www.nuget.org/
-[18]: {% image_buster /assets/img_archive/internet_client.png %}

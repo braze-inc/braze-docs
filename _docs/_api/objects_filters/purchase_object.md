@@ -170,8 +170,3 @@ Using the example provided, we can see that someone bought a backpack with the p
 
 If you do want to save, store and track properties to segment with, you need to set them up as custom attributes. This can be done using [Segment Extensions]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/), which allow you to target users based on custom event or purchase behavior stored for the lifetime of that user profile.
 
-[2]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/purchase_events/#purchase-properties
-[20]: http://en.wikipedia.org/wiki/ISO_4217 "ISO 4217 Currency Code"
-[21]: {{site.baseurl}}/api/api_key/#the-app-identifier-api-key
-[22]: https://en.wikipedia.org/wiki/ISO_8601 "ISO 8601 Time Code"
-[23]: {{site.baseurl}}/api/basics/#external-user-id-explanation

@@ -191,23 +191,3 @@ For example, this can be useful if you want to target users who have neither opt
 
 ![Email Subscription Status used as a segment filter.]({% image_buster /assets/img_archive/not_optin.png %})
 
-[10]: {% image_buster /assets/img_archive/subscription_group_graph.png %}
-[11]: {% image_buster /assets/img/custom_unsubscribe.png %}
-[12]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/setting_custom_attributes/#setting-up-user-subscriptions
-[13]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/setting_custom_attributes/#setting-up-user-subscriptions
-[16]: {% image_buster /assets/img_archive/user-profile-subscription-ui.png %}
-[17]: {% image_buster /assets/img_archive/campaign-targeting-subscription-ui.png %}
-[18]: {% image_buster /assets/img_archive/not_optin.png %}
-[19]: {% image_buster /assets/img_archive/email_settings.png %}
-[25]: {{site.baseurl}}/api/endpoints/subscription_groups
-[26]: {% image_buster /assets/img/sub_group_create.png %}
-[27]: {% image_buster /assets/img/sub_group_use.gif %}
-[28]: {{site.baseurl}}/api/endpoints/preference_center/
-[29]: {% image_buster /assets/img/user-sub-state-export.png %}
-[30]: {% image_buster /assets/img/campaign_analytics_sub_groups.png %}
-[users-track]: {{site.baseurl}}/api/endpoints/user_data/post_user_track/
-[user_attributes_object]: {{site.baseurl}}/api/objects_filters/user_attributes_object
-[3]: {% image_buster /assets/img/push_example.png %}
-[5]: {{site.baseurl}}/user_guide/engagement_tools/segments/using_user_search/
-[identifier]: {{site.baseurl}}/api/endpoints/export/user_data/post_users_identifier/
-[segment]: {{site.baseurl}}/api/endpoints/export/user_data/post_users_segment/

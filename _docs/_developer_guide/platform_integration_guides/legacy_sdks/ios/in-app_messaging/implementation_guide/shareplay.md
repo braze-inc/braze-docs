@@ -218,9 +218,3 @@ override func viewDidLoad() {
 {% endtab %}
 {% endtabs %}
 
-[1]: {% image_buster /assets/img/shareplay/shareplay.png %}
-[2]: {% image_buster /assets/img/shareplay/shareplay2.png %}
-[3]: {% image_buster /assets/img/shareplay/shareplay3.png %}
-[4]: {% image_buster /assets/img/shareplay/shareplay4.png %}
-[5]: {% image_buster /assets/img/shareplay/shareplay7.png %}
-[6]: {% image_buster /assets/img/shareplay/shareplay6.png %}

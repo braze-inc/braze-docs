@@ -116,4 +116,3 @@ The final label of the domain must be a valid top-level domain (TLD) which is de
 Unicode is accepted only for the local part of the email address. Unicode is not accepted for the domain part, but it may be Punycode-encoded. 
 {% endalert %}
 
-[2]: https://data.iana.org/TLD/tlds-alpha-by-domain.txt

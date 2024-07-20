@@ -163,15 +163,3 @@ You will get a warning listing which campaigns and Canvases are about to be arch
 
 You can unarchive the segment by navigating to it within the **Segments** page, then selecting **Unarchive**.
 
-[1]: {% image_buster /assets/img_archive/Segment1.png %}
-[2]: {% image_buster /assets/img_archive/Segment2.png %}
-[3]: {% image_buster /assets/img_archive/segment_step4.png %}
-[4]: {% image_buster /assets/img_archive/segment_filter_stats.png %}
-[5]: {% image_buster /assets/img_archive/segment_app_selection.png %}
-[6]: {% image_buster /assets/img_archive/user_lookup.png %}
-[7]: {% image_buster /assets/img_archive/user_lookup_match.png %}
-[8]: {% image_buster /assets/img_archive/user_lookup_nomatch.png %}
-[9]: {% image_buster /assets/img_archive/segmenter_filter_groups.png %}
-[10]: {% image_buster /assets/img_archive/segmenter_reachable_users.png %}
-[11]: {% image_buster /assets/img_archive/segmenter_and_or.png %}
-[12]: {% image_buster /assets/img_archive/segmenter_exclusion_groups.png %}

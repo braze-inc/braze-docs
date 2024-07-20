@@ -34,6 +34,3 @@ To duplicate a Canvas, click <i class="fas fa-ellipsis-vertical"></i> **More act
 ![Duplicate Canvas]({% image_buster /assets/img_archive/duplicate_canvas.png %})
 
 
-[3]: {% image_buster /assets/img_archive/duplicate_segment.png %}
-[4]: {% image_buster /assets/img_archive/duplicate_campaign.png %}
-[5]: {% image_buster /assets/img_archive/duplicate_canvas.png %}

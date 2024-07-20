@@ -22,6 +22,3 @@ Several test applications are available within the [iOS SDK GitHub repository](h
 
 Push notifications for the iOS test application require additional configuration. Refer to our [iOS Push integration]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/) for details.
 
-[1]: https://github.com/appboy/appboy-ios-sdk "Appboy iOS GitHub Repository"
-[25]: {{site.baseurl}}/developer_guide/platform_wide/app_group_configuration/#creating-your-app-group-in-my-apps
-[7]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/

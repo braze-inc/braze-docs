@@ -46,7 +46,3 @@ For polygonal regions, you can more specifically designate which areas you wish 
 Interested in taking advantage of location targeting with the help of a Braze partner? Check out our available Braze [contextual location partners]({{site.baseurl}}/partners/message_personalization/location/).
 {% endalert %}
 
-[1]: {% image_buster /assets/img_archive/createsegment2.png %}
-[2]: {% image_buster /assets/img_archive/filter_recent_location.png %}
-[3]: {% image_buster /assets/img_archive/location_circle.png %}
-[4]: {% image_buster /assets/img_archive/create_polygon.png %}

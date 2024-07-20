@@ -38,4 +38,3 @@ New documentation has been added describing the expected behavior of [exception 
 
 Braze has made improvements to its APIs to enable customers to delete at the same time, without additional customer actions, not only the End User Profiles of data subjects requesting deletion of their data but also any subscription state associated with the data subject's phone number or email address. Updated documentation can be found [here]({{site.baseurl}}/help/dp-technical-assistance/#braze-recommendation-2)
 
-[5]: {% image_buster /assets/img/campaign_comparison/campaign_main.png %} 

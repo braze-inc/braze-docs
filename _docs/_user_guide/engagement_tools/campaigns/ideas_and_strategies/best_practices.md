@@ -65,6 +65,3 @@ To ensure higher ratings, ask your power users to review your app in the app sto
 Visiting the app store takes time on the part of your users. To maximize the likelihood that they will go through the extra effort, request a rating or review after they just had a positive experience with your app. For instance, ask them after they beat a game level or made a purchase using a discount code. Our article on [data opt-in]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#subscription-states) has more information on ways to ensure your request agrees with users' workflow expectations.
 
 
-[6]: {% image_buster /assets/img_archive/ratings_power_users.png %}
-[5]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/about/
-[7]: {{site.baseurl}}/user_guide/message_building_by_channel/content_cards/about/

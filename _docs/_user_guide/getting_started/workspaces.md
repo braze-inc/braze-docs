@@ -242,8 +242,3 @@ You should have more than one Braze user with admin permissions for a single wor
 
 After you've determined your workspace plan, it's time to create your workspace and add app instances. For steps, check out [Creating and managing workspaces]({{site.baseurl}}/user_guide/administrative/app_settings/workspaces/).
 
-[1]: {{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams/
-[2]: {{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/
-[3]: {{site.baseurl}}/user_guide/data_and_analytics/braze_currents
-[4]: {{site.baseurl}}/user_guide/engagement_tools/segments/user_profiles/
-[5]: {{site.baseurl}}/user_guide/administrative/app_settings/workspaces/

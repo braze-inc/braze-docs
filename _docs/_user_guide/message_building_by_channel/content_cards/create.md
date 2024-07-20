@@ -255,8 +255,3 @@ This option is recommended for unique messages in a notification center or messa
 
 If desired, you could keep an active Content Card campaign in users' feeds and not remove them. When edits are made to the live campaign, it means the previous unedited version of the campaign card would still be live, and only users that meet the criteria after the edits will see the new version. However, users already exposed to the campaign may see two versions of the card.
 
-[18]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/localization/#languages-supported
-[19]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/key_value_pairs/
-[24]: {% image_buster /assets/img/content_card_compose.png %}
-[25]: {% image_buster /assets/img/cc_remove.png %}
-[1]: {% image_buster /assets/img/cc_pin_to_top.png %}

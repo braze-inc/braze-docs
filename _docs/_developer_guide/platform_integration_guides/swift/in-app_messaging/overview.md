@@ -100,5 +100,3 @@ The standard SDK integration includes steps that activate in-app messages, inclu
 {% endalert %}
 
 
-[30]: {{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/
-[31]: https://www.braze.com/customers

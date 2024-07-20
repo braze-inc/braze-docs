@@ -213,6 +213,3 @@ When editing a draft of an active Canvas, changes to the in-app message priority
 Due to action-based delivery being unavailable for Canvas steps with in-app messages, you similarly cannot use custom event properties for these steps. If you'd like to template event properties in Canvas, we recommend storing your event properties as custom attributes in your first Canvas step, and then personalizing your in-app message with the custom attributes in the second step. 
 
 
-[1]: {% image_buster /assets/img/expires-after.png %} "IAM Live"
-[2]: {% image_buster /assets/img/iam-advancement-behavior.png %} "IAM Live"
-[3]: {% image_buster /assets/img/push-advancement-behavior.png %} "IAM Live"

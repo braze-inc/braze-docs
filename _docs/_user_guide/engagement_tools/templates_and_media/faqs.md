@@ -48,6 +48,3 @@ Additionally, if your image was built in Photoshop (or a similar software) and h
 
 This is because most composers have restrictions on the image ratio size that is allowed.
 
-[2]: {% image_buster /assets/img_archive/media_library_crop1.png %}
-[3]: {% image_buster /assets/img_archive/media_library_crop2.png %}
-[5]: https://imageoptim.com/mac

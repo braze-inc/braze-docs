@@ -53,4 +53,3 @@ The more information and context the better! Include links to campaigns, Canvase
 
 For an example of a well-written product request, see this [Product Request Example]({{site.baseurl}}/product_request/). 
 
-[1]: {% image_buster /assets/img/portal.png %}

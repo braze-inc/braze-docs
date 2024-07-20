@@ -113,16 +113,3 @@ Although Braze can handle standard deep links (such as website URLs, Android URI
 
 For setup guidance, visit [Deep Linking to In-App Resources](https://developer.android.com/training/app-links/deep-linking).
 
-[8]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/troubleshooting/
-[9]: https://firebase.google.com/docs/cloud-messaging/
-[11]: https://firebase.google.com/docs/unity/setup
-[12]: https://firebase.google.com/docs/android/setup
-[13]: https://github.com/Appboy/appboy-unity-sdk/tree/master/unity-samples
-[15]: {% image_buster /assets/img_archive/fcm_api_insert.png %} "FCMKey"
-[26]: https://developer.android.com/training/app-links/deep-linking
-[58]: https://console.firebase.google.com/
-[59]: {% image_buster /assets/img_archive/finding_firebase_server_key.png %} "FirebaseServerKey"
-[61]: {{site.baseurl}}/developer_guide/platform_integration_guides/unity/advanced_use_cases
-[62]: {% image_buster /assets/img/unity/android/unity_android_push_settings_config.png %} "Android Push Settings"
-[63]: {% image_buster /assets/img/unity/android/unity_android_full_push_listener.png %} "Android Full Listener Example"
-[64]: {{site.baseurl}}/developer_guide/platform_integration_guides/unity/push_notifications/adm_push_notifications/

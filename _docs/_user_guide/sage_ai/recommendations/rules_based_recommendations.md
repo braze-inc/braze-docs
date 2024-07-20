@@ -276,8 +276,3 @@ When deciding which recommendation engine suits your available resources and use
 | No hosting, managing, troubleshooting recommendations data | Supported | Supported | Supported | Not supported |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
-[1]: {% image_buster /assets/img/recs/catalog_items.png %}
-[2]: {% image_buster /assets/img/recs/content_card_preview.png %}
-[3]: {% image_buster /assets/img/recs/on_click_behavior.png %}
-[4]: {% image_buster /assets/img/recs/custom_attributes_test.png %}
-[5]: {% image_buster /assets/img/recs/sample_response.png %}

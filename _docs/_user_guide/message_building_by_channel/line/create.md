@@ -131,5 +131,3 @@ After you’ve finished building the last of your campaign or Canvas, review its
 Next, check out [LINE reporting](https://www.braze.com/docs/line/reporting/) to learn how you can access the results of your LINE campaigns.
 
 
-[1]: {% image_buster /assets/img/line/line_composer.png %}
-[2]: {% image_buster /assets/img/line/test_preview.png %}

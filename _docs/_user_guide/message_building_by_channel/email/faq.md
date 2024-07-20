@@ -85,6 +85,3 @@ No, Braze does not offer this functionality. This is because an increasing major
 
 **Workaround:** To achieve this same result, you can host the content of your email on an external landing page (such as your website), which can then be linked to from the email campaign you are building using the **Link** tool when editing the email body.
 
-[8]: {{site.baseurl}}/api/endpoints/subscription_groups/get_list_user_subscription_group_status/
-[9]: {{site.baseurl}}/api/endpoints/subscription_groups/get_list_user_subscription_groups/
-[1]: {{site.baseurl}}/api/api_campaigns/transactional_api_campaign

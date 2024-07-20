@@ -77,7 +77,3 @@ Add the contents of the HelloSwift sample app's [`AppboyPushUnitTests.m`](https:
 
 Run your app's unit tests. This can be a one-time verification step, or you can include this indefinitely in your test suite to help catch any regressions.
 
-[1]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/
-[2]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/overview/
-[3]: https://ocmock.org/
-[4]: https://github.com/Appboy/appboy-ios-sdk/blob/master/HelloSwift/HelloSwiftTests/AppboyPushUnitTests.m

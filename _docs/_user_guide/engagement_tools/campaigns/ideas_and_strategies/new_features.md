@@ -84,11 +84,3 @@ Looking to retarget a specific portion of your audience? Check out [Retargeting 
 {% endalert %}
 
 
-[1]: {% image_buster /assets/img_archive/new_app_version.png %}
-[3]: {{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/#custom-data
-[4]: {{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/#custom-data
-[5]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/create/#creating-an-in-app-message
-[6]: {{site.baseurl}}/user_guide/message_building_by_channel/content_cards/
-[7]: https://developer.android.com/reference/android/content/pm/PackageInfo#versionName
-[8]: https://developer.apple.com/documentation/bundleresources/information_property_list/cfbundleshortversionstring
-[9]: https://developer.android.com/reference/android/content/pm/PackageInfo.html#getLongVersionCode()

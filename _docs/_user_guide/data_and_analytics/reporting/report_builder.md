@@ -171,16 +171,4 @@ If your chart contains only one metric, then it will display up to 30 campaigns 
 Charts are currently not saved when you save your report.
 
 
-[3]: {% image_buster /assets/img/campaign_comparison/compare_note.png %}
-[4]: {% image_buster /assets/img/campaign_comparison/metric.png %}
-[5]: {% image_buster /assets/img/campaign_comparison/campaign_main.png %}
-[6]: {% image_buster /assets/img/campaign_comparison/create_report.png %}
-[7]: {% image_buster /assets/img/campaign_comparison/comparison_name.png %}
-[8]: {% image_buster /assets/img/campaign_comparison/download.png %}
-[12]: {% image_buster /assets/img/campaign_comparison/campaign_comparison1.png %}
-[13]: {% image_buster /assets/img/campaign_comparison/campaign_comparison2.png %}
-[14]: {% image_buster /assets/img/campaign_comparison/campaign_comparison3.png %}
-[15]: {% image_buster /assets/img/campaign_comparison/campaign_comparison_columns.png %}
-[17]: {% image_buster /assets/img/campaign_comparison/report_builder_charts.png %}
 
-[16]: {{site.baseurl}}/user_guide/data_and_analytics/report_metrics/

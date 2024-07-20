@@ -20,5 +20,3 @@ News Feed is being deprecated. Braze recommends that customers who use our News 
 
 Marking a News Feed as being from a specific category is not visible to the end user. By default, the Braze News Feed will display cards of all categories, unless a feed is specifically configured in the app code to display specific categories. For more information on the app code configuration, see [Defining a News Feed Category]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/news_feed/defining_a_news_feed_category/).
 
-[1]: {% image_buster /assets/img_archive/Newsfeed_category.png %}
-[2]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/news_feed/defining_a_news_feed_category/

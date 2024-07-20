@@ -235,8 +235,3 @@ If you have multiple EventStreams that target the same event feed, **all actions
 Users integrating with Tealium using the Braze Web SDK tag may see a dramatic increase in their MAU. **If Braze is initialized on page load, Braze will create an anonymous profile every time a web user navigates to the website for the first time.** Some may want to only track user behavior when users have completed some action, such as "Signed In" or "Watched Video", to lower their MAU count. <br><br>
 **Solution**: <br>Set up [load rules](https://docs.tealium.com/iq-tag-management/load-rules/about/) to determine exactly when and where a tag loads on your site.
 
-[1]: https://docs.tealium.com/server-side/attributes/about/
-[15]: {% image_buster /assets/img/tealium/create_configuration.png %}
-[6]: {{site.baseurl}}/api/basics?redirected=true#endpoints
-[21]: https://docs.tealium.com/server-side/connectors/trace/about/
-[17]: {% image_buster /assets/img/tealium/save_publish.png %}

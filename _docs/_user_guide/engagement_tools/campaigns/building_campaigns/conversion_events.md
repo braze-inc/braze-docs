@@ -68,7 +68,3 @@ Conversion events allow you to attribute user action back to a point of engageme
 - If a user performs one conversion event within the conversion deadlines of two separate campaigns or Canvases that they received, then the conversion will register on both.
 - A user will count as converted if they performed the specific conversion event in the window even if they did not open or click the message.
 
-[2]: {% image_buster /assets/img_archive/conversion_event_selection.png %}
-[3]: {% image_buster /assets/img_archive/conversion_event_details.png %}
-[4]: {{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/#multivariate-and-ab-testing
-[5]: {{site.baseurl}}/user_guide/sage_ai/intelligence/intelligent_selection/

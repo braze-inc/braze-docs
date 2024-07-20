@@ -32,4 +32,3 @@ Now that you've identified and selected the group of users at risk of churn that
 
 Keep in mind that you can message different levels of at-risk users differently! So the highest-risk customers could get higher discounts than the medium-risk customers, while the lowest-risk customers simply get new kinds of messaging or content but no larger incentive. You can also layer other filters into these segments to further qualify who gets what offers or messages.
 
-[5]: {% image_buster /assets/img_archive/predictive_churn_filters.png %}

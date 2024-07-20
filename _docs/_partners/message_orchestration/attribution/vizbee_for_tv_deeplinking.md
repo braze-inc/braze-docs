@@ -32,5 +32,3 @@ Follow Vizbee's [SDK integration guide](https://console.vizbee.tv/app/vzb1765003
 
 Vizbee and Braze also enable you to view the holistic performance of your campaigns across mobile and CTV devices. The Vizbee SDK sends custom events to the Braze SDK that can be viewed in your campaign reports from the Braze dashboard.
 
-[1]: https://vizbee.tv/
-[2]: https://console.vizbee.tv/app/vzb1765003429/develop/guides/ios-continuity

@@ -123,16 +123,3 @@ Our service worker file will automatically call `skipWaiting` upon install. If y
 - Not all browsers can receive push messages. Ensure that `braze.isPushSupported()` returns `true` in the browser.
 - If a user has denied a site push access, they won't be prompted for permission again unless they remove the denied status from their browser preferences.
 
-[1]: http://www.w3.org/TR/push-api/
-[3]: https://developer.apple.com/library/mac/documentation/NetworkingInternet/Conceptual/NotificationProgrammingGuideForWebsites/PushNotifications/PushNotifications.html#//apple_ref/doc/uid/TP40013225-CH3-SW33
-[4]: http://appboyj.com/modal-test.html
-[5]: https://developer.apple.com/notifications/safari-push-notifications/ "Safari Push Notifications"
-[6]: https://developer.mozilla.org/en-us/docs/web/api/push_api#browser_compatibility "Mozilla Push API browser compatibility"
-[7]: https://developer.microsoft.com/en-us/microsoft-edge/status/pushapi/ "Microsoft Push API"
-[8]: {{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/
-[27]: {{site.baseurl}}/assets/img_archive/web_push2.png
-[28]: {{ site.baseurl }}/developer_guide/platform_integration_guides/web/push_notifications/alternate_push_domain
-[push-primer]: {{ site.baseurl }}/developer_guide/platform_integration_guides/web/push_notifications/soft_push_prompt/
-[add-to-homescreen]: https://support.apple.com/guide/iphone/bookmark-favorite-webpages-iph42ab2f3a7/ios#iph4f9a47bbc
-[manifest-file]: https://developer.mozilla.org/en-US/docs/Web/Manifest
-[safari-mobile-push-guide]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/push_notifications/safari_mobile_push/

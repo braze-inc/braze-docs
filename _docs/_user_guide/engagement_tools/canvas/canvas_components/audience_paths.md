@@ -78,8 +78,3 @@ A [random bucket number]({{site.baseurl}}/user_guide/engagement_tools/campaigns/
 
 In this scenario, try using [Experiment Paths]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step/) instead.
 
-[0]: {% image_buster /assets/img/audience_path/audience_path.png %}
-[1]: {% image_buster /assets/img/audience_path/audience_path1.png %}
-[2]: {% image_buster /assets/img/audience_path/audience_path2.png %}
-[3]: {% image_buster /assets/img/audience_path/audience_path3.png %}
-[4]: {% image_buster /assets/img/audience_path/audience_path4.png %}

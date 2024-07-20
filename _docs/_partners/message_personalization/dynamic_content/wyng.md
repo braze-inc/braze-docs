@@ -73,20 +73,3 @@ The **View Error** section will show the error code and some additional informat
 
 If you have any additional questions, reach out to Wyng support ([support@wyng.com](mailto:contact@wyng.com)) for assistance.
 
-[0]: https://wyng.com/
-[1]: https://wyng.com/dashboard/integrations/
-[2]: {% image_buster /assets/img/wyng/2.png %}
-[3]: {% image_buster /assets/img/wyng/3.png %}
-[4]: {% image_buster /assets/img/wyng/4.png %}
-[5]: {% image_buster /assets/img/wyng/5.png %}
-[6]: {% image_buster /assets/img/wyng/6.png %}
-[7]: {{site.baseurl}}/api/basics/
-[8]: {% image_buster /assets/img/wyng/8.png %}
-[9]: {% image_buster /assets/img/wyng/9.png %}
-[10]: {% image_buster /assets/img/wyng/10.png %}
-[11]: {% image_buster /assets/img/wyng/11.png %}
-[12]: {% image_buster /assets/img/wyng/12.png %}
-[13]: mailto:contact@wyng.com
-[14]: {% image_buster /assets/img/wyng/14.png %}
-[15]: {% image_buster /assets/img/wyng/15.jpg %}
-[16]: {% image_buster /assets/img/wyng/16.jpg %}

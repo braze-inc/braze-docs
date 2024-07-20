@@ -130,15 +130,3 @@ After examining those stats, we can make a segment of users who clicked the card
 
 We can retarget this segment with additional messaging around the promotion or another in-app purchase. Retargeting can be done with another News Feed card or through a messaging campaign. A multichannel approach allows you to reach users where they're most likely to respond, thus increasing the effectiveness of your campaigns.
 
-[1]: {% image_buster /assets/img_archive/retarget.png %}
-[2]: {% image_buster /assets/img_archive/clickedcard.png %}
-[3]: {% image_buster /assets/img_archive/clickedopened.png %}
-[4]: {% image_buster /assets/img_archive/receivedcamp.png %}
-[12]: {% image_buster /assets/img_archive/converted_from_campaign.png %}
-[13]: {% image_buster /assets/img_archive/campaign_control_group.png %}
-[14]: {% image_buster /assets/img_archive/last_received_specific_campaign.png %}
-[15]: {% image_buster /assets/img_archive/received_campaign_with_tag.png %}
-[16]: {% image_buster /assets/img_archive/retarget_tag_filter.png %}
-[17]: {% image_buster /assets/img_archive/last_received_campaign_with_tag.png %}
-[18]: {% image_buster /assets/img_archive/converted_from_canvas.png %}
-[19]: {% image_buster /assets/img_archive/canvas_control_group.png %}

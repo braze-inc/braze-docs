@@ -69,4 +69,3 @@ newsFeed.categories = ABKCardCategory([.announcements, .advertising])
 {% endtab %}
 {% endtabs %}
 
-[40]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/reporting/

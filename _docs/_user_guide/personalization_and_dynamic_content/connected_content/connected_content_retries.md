@@ -27,6 +27,4 @@ Connected Content `:retry` is not available for in-app messages.
 {% endalert %}
 
 
-[1]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/aborting_connected_content/
 [16]: [success@braze.com](mailto:success@braze.com)
-[47]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/rate-limiting/#delivery-speed-rate-limiting

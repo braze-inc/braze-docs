@@ -58,4 +58,3 @@ If you have limited permissions, your notification language is set to the defaul
 
 -->
 
-[1]: {% image_buster /assets/img_archive/language_dashboard.png %}

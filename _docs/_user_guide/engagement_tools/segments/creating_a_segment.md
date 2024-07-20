@@ -138,12 +138,3 @@ You can specify that only one push notification is sent to each user. When [comp
     - A user may be targeted on their current device based on attributes associated with a different device. If you didn't expect a user to receive a message, check their user profile for multiple devices.
     - A user may have been in your target segment at send time, but due to behaviors associated with any of their devices, may not be part of that segment afterward. This may result in a user receiving a campaign or Canvas even though they currently don’t match the filter criteria. <br><br>For example, a user could receive a message targeting users with a most recent app version of OS 10.0 even though they currently have OS 13.0. In this case, the user had OS 10.0 when the message was sent and then upgraded to OS 13.0 afterward.<br><br> Similarly, if a user later uses a device with a different app version, their user profile will update with a new most recent app version. This might make it seem that the user shouldn't have qualified for the message, even though they qualified when it was sent.
 
-[1]: {% image_buster /assets/img_archive/Segment1.png %}
-[2]: {% image_buster /assets/img_archive/Segment2.png %}
-[3]: {% image_buster /assets/img_archive/segment_step4.png %}
-[4]: {% image_buster /assets/img_archive/reachable_users.png %}
-[5]: {% image_buster /assets/img_archive/segment_app_selection.png %}
-[6]: {% image_buster /assets/img_archive/user_lookup.png %}
-[7]: {% image_buster /assets/img_archive/user_lookup_match.png %}
-[8]: {% image_buster /assets/img_archive/user_lookup_nomatch.png %}
-[9]: {% image_buster /assets/img_archive/send_to_last_device.png %}

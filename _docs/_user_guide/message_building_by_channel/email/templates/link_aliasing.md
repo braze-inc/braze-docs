@@ -225,11 +225,3 @@ _Update noted in August 2019._
 {% endalert %}
 
 
-[1]: {% image_buster /assets/img/link_aliasing_click_table.png %}
-[2]: {% image_buster /assets/img/link_aliasing_composer.png %}
-[3]: {{site.baseurl}}/get_campaign_link_alias/ 
-[4]: {{site.baseurl}}/get_canvas_link_alias/
-[5]: {% image_buster /assets/img/link_aliasing_segmentation_filters.png %}
-[6]: {% image_buster /assets/img/link_aliasing_action_based_filters.png %}
-[7]: {{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events#email-clicks-events/
-[8]: {% image_buster /assets/img/tracked_aliases.png %}

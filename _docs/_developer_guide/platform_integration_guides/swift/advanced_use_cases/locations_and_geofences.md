@@ -237,9 +237,3 @@ AppDelegate.braze?.requestGeofences(latitude: latitude, longitude: longitude)
 {% endtab %}
 {% endtabs %}
 
-[1]: https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/d1-brazelocation/
-[2]: https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/configuration-swift.class/location-swift.class
-[4]: https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/init(configuration:)
-[6]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/silent_push_notifications/
-[7]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/customization/ignoring_internal_push/
-[support]: {{site.baseurl}}/braze_support/

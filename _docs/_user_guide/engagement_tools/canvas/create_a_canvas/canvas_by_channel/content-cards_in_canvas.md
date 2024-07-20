@@ -106,9 +106,3 @@ Using Canvas, you can add a component that sends both a Content Card and push no
 You can separate your Content Cards into multiple feeds based on categories such as different topics users can browse, or transactional and marketing feeds. For more information on creating multiple feeds using key-value pairs, check out our guide for [Customizing Content Card feeds]({{site.baseurl}}/developer_guide/customization_guides/content_cards/customizing_feed/#multiple-feeds).
 
 
-[1]: {% image_buster /assets/img_archive/content-cards-in-canvas.png %}
-[2]: {% image_buster /assets/img_archive/content-cards-in-canvas-single-channel.png %}
-[3]: {% image_buster /assets/img_archive/content-cards-in-canvas-multiple-channels.png %}
-[4]: {% image_buster /assets/img_archive/content-cards-in-canvas-analytics.png %}
-[6]: {{site.baseurl}}/user_guide/data_and_analytics/report_metrics/
-[7]: {{site.baseurl}}/developer_guide/customization_guides/content_cards/customizing_feed/#multiple-feeds

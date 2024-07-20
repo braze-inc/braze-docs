@@ -140,12 +140,3 @@ After configuring Braze settings in RevenueCat, events will automatically begin 
 
 If you only provide one Braze REST API key to RevenueCat, only production events will be sent. If you also want to send sandbox testing events, [create another Braze REST API key]({{site.baseurl}}/api/basics/#app-group-rest-api-keys) and add it to your Braze settings in RevenueCat.
 
-[2]: {{site.baseurl}}/api/objects_filters/user_alias_object/
-[3]: {% image_buster /assets/img/revenuecat/braze_settings_in_revenuecat.png %}
-[4]: https://docs.revenuecat.com/docs/subscriber-attributes
-[5]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/initial_sdk_setup/overview
-[6]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/
-[7]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/initial_sdk_setup/
-[8]: https://docs.revenuecat.com/docs/configuring-sdk
-[9]: https://app.revenuecat.com/login
-[11]: {{site.baseurl}}/api/basics/#app-group-rest-api-keys

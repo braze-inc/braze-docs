@@ -34,5 +34,3 @@ Note that Push Stories, rich push, and geofences are not supported on macOS.
 [3]:{{site.baseurl}}/developer_guide/platform_integration_guides/swift/initial_sdk_setup/installation_methods/swift_package_manager/
 [4]:{{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/integration/
 [5]:{{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/location_tracking/
-[6]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/in-app_messaging/overview/
-[7]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/content_cards/integration/#content-cards-data-model

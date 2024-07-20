@@ -304,18 +304,3 @@ UNREDEEMED
 {% endtab %}
 {% endtabs %}
 
-[1]: {% image_buster /assets/img/passkit/passkit1.png %}
-[2]: {% image_buster /assets/img/passkit/passkit2.png %}
-[3]: https://dev.bitly.com/v4/#operation/createFullBitlink
-[4]: {% image_buster /assets/img/passkit/passkit4.png %}
-[5]: {% image_buster /assets/img/passkit/passkit5.png %}
-[6]: {{site.baseurl}}/api/basics?redirected=true#endpoints
-[7]: {{site.baseurl}}/api/endpoints/user_data/#user-track-endpoint
-[8]: https://help.passkit.com/en/articles/3742778-hashed-smartpass-links
-[9]: {{site.baseurl}}/user_guide/engagement_tools/templates_and_media/content_blocks/#content-blocks
-[10]: https://github.com/PassKit/smart-pass-link-from-csv-generator
-[12]: https://docs.passkit.io/protocols/member/
-[13]: https://docs.passkit.io/protocols/coupon/
-[14]: https://docs.passkit.io/protocols/boarding/
-[15]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/making_an_api_call/
-[16]: https://en.wikipedia.org/wiki/HMAC

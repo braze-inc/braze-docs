@@ -70,8 +70,3 @@ Starting with iOS 17.2 and later, Apple has limited their `pushToStartToken` and
 - Check that your push provisioning profile matches the environment you’re testing. Universal certificates may be configured in the Braze dashboard to send to either the development or production Apple Push Notification service (APNs) environment. Using a development certificate for a production app or a production certificate for a development app will not work.
 
 
-[1]: {{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/push_primer_messages/
-[2]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/live_activities/live_activities/#prerequisites
-[3]: {{site.baseurl}}/api/basics/#rest-api-key-security
-[4]: {% image_buster /assets/img/push-vs-live-activities.png %}
-[5]: {{site.baseurl}}/api/api_limits/

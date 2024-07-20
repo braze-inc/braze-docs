@@ -123,14 +123,4 @@ Our example below will use a trigger to invoke the webhook when a support case s
 7. Click **Create**.<br><br>
 8. Return to your webhook and click **Finish setup**.
 
-[1]: {{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/
-[2]: https://support.zendesk.com/hc/en-us/articles/226022787-Generating-a-new-API-token-\
-[3]: {% image_buster /assets/img_archive/zendesk_step1.gif %}
-[4]: https://developer.zendesk.com/rest_api/docs/support/introduction
-[5]: {% image_buster /assets/img_archive/zendesk_step2.png %}
-[6]: https://developer.zendesk.com/rest_api/docs/support/tickets#create-ticket
-[7]: {% image_buster /assets/img_archive/zdfinal.gif %}
 
-[8]: {% image_buster /assets/img_archive/zendesk1.png %}
-[9]: {% image_buster /assets/img_archive/zendesk2.png %}
-[10]: {% image_buster /assets/img_archive/zendesk3.png %}

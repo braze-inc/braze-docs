@@ -229,5 +229,4 @@ Check out the following lists for HTML tags and attributes that aren't allowed i
 {% enddetails %}
 
 
-[24]: http://tools.ietf.org/html/rfc2822
 

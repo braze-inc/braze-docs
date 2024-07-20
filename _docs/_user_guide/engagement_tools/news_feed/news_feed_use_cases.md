@@ -32,4 +32,3 @@ Braze recommends that customers who use our News Feed tool move over to our Cont
 {% endalert %}
 
 
-[1]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/#deep-linking-to-in-app-content

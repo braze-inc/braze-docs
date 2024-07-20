@@ -62,8 +62,3 @@ To complete the integration, you must provide your REST API key and [REST endpoi
 
 Contact the actionable.me or Massive Rocket team for additional support: [info@massiverocket.com](mailto:info@massiverocket.com)
 
-[1]: {{site.baseurl}}/developer_guide/rest_api/basics/#endpoints
-[2]: https://actionable.me
-[3]: mailto:info@massiverocket.com
-[4]: {% image_buster /assets/img/actionableme/image1.png %}
-[5]: {% image_buster /assets/img/actionableme/image2.png %}

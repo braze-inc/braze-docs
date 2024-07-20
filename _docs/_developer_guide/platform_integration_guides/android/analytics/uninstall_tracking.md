@@ -23,7 +23,3 @@ If you have a custom [`Application`](https://developer.android.com/reference/and
 
 See [Uninstall Tracking]({{site.baseurl}}/user_guide/data_and_analytics/tracking/uninstall_tracking/#uninstall-tracking) in our User Guide for more information.
 
-[1]: https://developer.android.com/reference/android/app/Application
-[2]: https://developer.android.com/reference/android/app/Application#onCreate()
-[3]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.push/-braze-notification-utils/is-uninstall-tracking-push.html
-[4]: {{site.baseurl}}/user_guide/data_and_analytics/tracking/uninstall_tracking/#uninstall-tracking

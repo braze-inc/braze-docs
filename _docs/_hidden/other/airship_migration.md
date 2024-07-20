@@ -524,4 +524,3 @@ extension AppboyManager {
 {% endtab %}
 {% endtabs %}
 
-[1]: {% image_buster /assets/img/csv_filter.png %}

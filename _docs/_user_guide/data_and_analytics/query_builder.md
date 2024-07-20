@@ -434,10 +434,3 @@ Credits are not used when writing, editing, or saving reports within the Braze S
 
 When you reach the credit cap, you cannot run queries, but you can create, edit, and save SQL reports. If you want to purchase more Query Builder credits, please get in touch with your account manager.
 
-[1]: {% image_buster /assets/img_archive/query_builder_credits.png %}
-[2]: {% image_buster /assets/img_archive/query_builder_ai_tab.png %}
-[3]: {% image_buster /assets/img_archive/sql_variables_panel.png %}
-[4]: {% image_buster /assets/img_archive/query_builder_time_range.png %}
-[5]: {% image_buster /assets/img_archive/sql_variables_canvases.png %}
-[6]: {% image_buster /assets/img_archive/sql_variables_campaigns.png %}
-[7]: {% image_buster /assets/img_archive/sql_variables_productname.png %}

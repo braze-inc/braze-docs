@@ -167,16 +167,5 @@ For this use case, use multiple-choice selection with each choice being an app f
 
 ![]({% image_buster /assets/img_archive/simple_survey_use_case_4.png %})
 
-[1]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/create/
-[2]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#custom-attribute-data-types
-[3]: {{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/
-[4]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/reporting/
-[5]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/managing_custom_data
-[6]: {{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events/#api_fzzdoylmrtwe
 
-[7]: {% image_buster /assets/img_archive/simple_survey_use_case_1.png %}
-[8]: {% image_buster /assets/img_archive/simple_survey_use_case_2.png %}
-[9]: {% image_buster /assets/img_archive/simple_survey_use_case_3.png %}
-[10]: {% image_buster /assets/img_archive/simple_survey_use_case_4.png %}
 
-[11]: {{site.baseurl}}/user_guide/data_and_analytics/report_metrics/

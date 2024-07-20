@@ -52,8 +52,3 @@ Retarget users who have, or have not, read a WhatsApp campaign or Canvas step.
 Filter for users who have opened/read to a specific WhatsApp campaign or Canvas component or tag.
 ![]({% image_buster /assets/img/whatsapp/whatsapp19.png %})
 
-[1]: {% image_buster /assets/img/whatsapp/whatsapp19.png %} 
-[2]: {% image_buster /assets/img/whatsapp/whatsapp20.png %} 
-[3]: {% image_buster /assets/img/whatsapp/whatsapp21.png %} 
-[4]: {% image_buster /assets/img/whatsapp/whatsapp22.png %} 
-[5]: {% image_buster /assets/img/whatsapp/whatsapp23.png %} 

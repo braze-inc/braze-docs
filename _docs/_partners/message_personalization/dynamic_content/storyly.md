@@ -55,4 +55,3 @@ Next, you can use Braze segments to create a Storyly audience. This can be creat
 
 Here, there will be two syncing options. Select **One-time sync** for specific campaign stories, or **Daily Sync** for long-term stories.
 
-[1]: {{site.baseurl}}/developer_guide/rest_api/basics/#endpoints

@@ -38,7 +38,3 @@ Still need help? Open a [support ticket]({{site.baseurl}}/braze_support/).
 
 _Last updated on December 21, 2021_
 
-[37]: {{site.baseurl}}/developer_guide/platform_wide/sending_test_messages/#sending-a-test-push-notification-or-in-app-messages-a-classmargin-fix-namepush-inapp-testa
-[38]: https://chrome.google.com/webstore/detail/grammarly-for-chrome/kbfnbcaeplbcioakkpcpgfkobkghlhen?hl=en
-[39]: https://www.emailonacid.com/
-[40]: https://litmus.com/

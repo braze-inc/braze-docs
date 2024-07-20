@@ -301,16 +301,4 @@ Values encapsulated in single ('') or double ("") quotation marks will be read a
 
 If you are seeing a piece of default user data (for example, `email` or `first_name`) imported as a custom attribute, check the case and spacing of your CSV file. For example, `First_name` would be imported as a custom attribute, while `first_name` would be correctly imported into the "first name" field on a user's profile.
 
-[1]: {{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/language_codes/
-[2]: {{site.baseurl}}/user_guide/message_building_by_channel/sms/phone_numbers/user_phone_numbers/
-[3]: {% image_buster /assets/img/importcsv.png %}
-[4]: {% image_buster /assets/img/importcsv2.png %}
-[7]: {% image_buster /assets/img/segment-imported-users.png %}
-[8]: {% image_buster /assets/img_archive/user_alias_import_1.png %}
-[9]: {% image_buster /assets/img/subscription_group_import.png %}
-[12]: {{site.baseurl}}/api/endpoints/user_data/post_user_track/
-[13]: {{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/
-[14]: {{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/
 [errors]:#common-errors
-[template]: {% image_buster /assets/download_file/braze-user-import-template-csv.xlsx %}
-[template_alias]: {% image_buster /assets/download_file/braze-user-import-alias-template-csv.xlsx %}

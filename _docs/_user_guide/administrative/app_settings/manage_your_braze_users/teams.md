@@ -149,7 +149,3 @@ At a high level, each feature has a different scope:
 | Teams | Limit dashboard user access to resources based on the audience (such as customer base location, language, and custom attributes). |
 {: .reset-td-br-1 .reset-td-br-2 }
 
-[2]: {% image_buster /assets/img/teams.png %}
-[3]: {% image_buster /assets/img/teams1.png %}
-[68]: {% image_buster /assets/img_archive/adding_a_team.png %}
-[86]: {% image_buster /assets/img_archive/archive_a_team.png %}

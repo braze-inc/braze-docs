@@ -61,8 +61,6 @@ You can also have the abort message log something to your Message Activity Log b
 
 ![Message error log in the Developer Console with an abort message of "language was nil".]({% image_buster /assets/img_archive/developer_console.png %})
 
-[15]: {% image_buster /assets/img_archive/liquid_abort.png %}
-[26]: {% image_buster /assets/img_archive/developer_console.png %}
 [31]:https://docs.shopify.com/themes/liquid/tags/variable-tags
 [32]:https://docs.shopify.com/themes/liquid/tags/iteration-tags
 [34]:{% image_buster /assets/img_archive/personalized_iflogic_.png %}

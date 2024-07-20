@@ -20,6 +20,3 @@ Silent notifications are also available within the dashboard. To send a silent n
 
 ![]({% image_buster /assets/img_archive/SilentPushExample.png %} "Silent Push Notification Example -- Android")
 
-[2]: {{site.baseurl}}/api/endpoints/messaging/
-[3]: {{site.baseurl}}/api/objects_filters/messaging/android_object/
-[6]: {% image_buster /assets/img_archive/SilentPushExample.png %} "Silent Push Notification Example -- Android"

@@ -170,14 +170,3 @@ In the original Canvas workflow, add your segment to the Canvas component level 
 {% enddetails %}
 
 
-[1]: {% image_buster /assets/img/workspaces/workspace_create.png %}
-[2]: {% image_buster /assets/img/workspaces/workspace_name.png %}
-[3]: {% image_buster /assets/img/workspaces/workspace_empty_state.png %}
-[4]: {% image_buster /assets/img/workspaces/workspace_add_app.png %}
-[5]: {% image_buster /assets/img/workspaces/app_api_key.png %}
-[6]: {% image_buster /assets/img/workspaces/app_live_sdk_version.png %}
-[7]: {% image_buster /assets/img/workspaces/workspace_favorites.png %}
-[8]: {% image_buster /assets/img/workspaces/workspace_rename.gif %}
-[9]: {% image_buster /assets/img/workspaces/workspace_delete.png %}
-[10]: {% image_buster /assets/img/workspaces/users_from_specific_apps_filter.png %}
-[link]: {{site.baseurl}}/user_guide/getting_started/workspaces/

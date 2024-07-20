@@ -75,12 +75,3 @@ Uninstall statistics for campaigns are located on the Campaign Details page. For
 
 If you see a spike in app uninstalls, it may be due to Firebase Cloud Messaging (FCM) and Apple Push Notification Service (APNS) revoking old tokens at a different frequency. 
 
-[1]: {% image_buster /assets/img_archive/Uninstall_Tracking2.png %} "Uninstall Tracking Checkbox"
-[2]: {% image_buster /assets/img_archive/Uninstall_Tracking_App2.png %} "Uninstall Graph Selection"
-[3]: {% image_buster /assets/img_archive/Uninstall_232.png %} "Uninstall Graph"
-[4]: {% image_buster /assets/img_archive/User_Profile.png %} "Uninstall Attribute"
-[5]: {% image_buster /assets/img_archive/Uninstall_Segment.png %} "Uninstall Segment"
-[6]: {% image_buster /assets/img_archive/campaign_level_uninstall_tracking.png %}
-[7]: https://www.braze.com/blog/uninstall-tracking-an-industry-look-at-its-strengths-and-limitations/
-[iOS docs]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/uninstall_tracking/
-[8]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.push/-braze-notification-utils/is-uninstall-tracking-push.html

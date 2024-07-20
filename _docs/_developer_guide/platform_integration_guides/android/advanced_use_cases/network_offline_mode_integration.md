@@ -34,4 +34,3 @@ Braze.setOutboundNetworkRequestsOffline(true)
 {% endtab %}
 {% endtabs %}
 
-[1]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze/-companion/outbound-network-requests-offline.html?query=var%20outboundNetworkRequestsOffline:%20Boolean

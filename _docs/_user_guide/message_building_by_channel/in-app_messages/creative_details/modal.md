@@ -26,7 +26,5 @@ On a tablet or desktop browser, a modal in-app message will still sit in the cen
 
 ![Modal in-app message as it would appear on a large screen. Similarly to phone screens, the message sits in the center of the screen.]({% image_buster /assets/img/modal-large-viewport.png %}){: style="max-width: 800px; border: none;"}
 
-[1a]: {% image_buster /assets/img/modal-spec.png %}
-[1b]: {% image_buster /assets/img/modal-large-viewport.png %}
 
 

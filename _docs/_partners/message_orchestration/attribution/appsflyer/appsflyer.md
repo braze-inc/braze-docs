@@ -402,9 +402,3 @@ idfv={{most_recently_used_device.${id}}}
 
 
 
-[1]: {% image_buster /assets/img/braze_integration.png %}
-[2]: {% image_buster /assets/img/braze_attribution.png %}
-[3]: https://support.appsflyer.com/hc/en-us/articles/360001294118
-[16]: https://support.appsflyer.com/hc/en-us/articles/115001603343-AppsFlyer-Appboy-Integration "AppsFlyer Push API"
-[31]: https://support.appsflyer.com/hc/en-us/articles/115001603343-AppsFlyer-Braze-Formerly-Appboy-Integration
-[4]: {% image_buster /assets/img/attribution/appsflyer.png %}

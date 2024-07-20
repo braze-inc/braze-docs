@@ -389,18 +389,3 @@ The Ruby client library supports the [User Endpoints]({{site.baseurl}}/api/endpo
 This client library is currently in beta. Want to help us make this library better? Send us feedback at [smb-product@braze.com](mailto:smb-product@braze.com).
 {% endalert %}
 
-[1]: https://en.wikipedia.org/wiki/UTF-8
-[7]: {{site.baseurl}}/api/objects_filters/connected_audience/
-[9]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/setting_user_ids/
-[10]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/setting_user_ids/
-[13]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/setting_user_ids/
-[2]: {{site.baseurl}}/api/identifier_types/
-[5]: {{site.baseurl}}/api/basics/
-[6]: https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#intro
-[25]: {% image_buster /assets/img_archive/api-key-permissions.png %}
-[26]: {% image_buster /assets/img_archive/api-key-ip-whitelisting.png %}
-[support]: {{site.baseurl}}/braze_support/
-[28]: {% image_buster /assets/img_archive/create-new-key.png %}
-[29]: {% image_buster /assets/img_archive/api-key-options.png %}
-[27]: {% image_buster /assets/img_archive/rest-api-key.png %}
-[30]: {% image_buster /assets/img_archive/view-api-key.png %}

@@ -34,4 +34,3 @@ After configuring your integration's credentials, check all message engagement, 
 
 ![]({% image_buster /assets/img/heap/heap4.png %}){: style="max-width:90%;"}
 
-[5]: {% image_buster /assets/img/heap/heap4.png %} 

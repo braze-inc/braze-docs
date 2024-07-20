@@ -84,5 +84,3 @@ When you're testing a Canvas with multiple branches that target users based on d
 1. For each branch, identify the attributes and events that the user must have to be included in the Canvas journey.
 2. Build those into JSON payload to be posted using the `/users/track` endpoint.
 
-[1]: {% image_buster /assets/img_archive/canvas_test1.png %}
-[2]: {% image_buster /assets/img_archive/canvas_test2.png %}

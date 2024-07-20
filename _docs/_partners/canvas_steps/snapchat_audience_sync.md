@@ -156,17 +156,3 @@ If you breach this limit, Braze will notify you that we cannot create new audien
 You will need to go into your Snapchat ads account and remove audiences you are no longer using. 
 {% enddetails %}
 
-[1]: {% image_buster /assets/img/snapchat/snapchat1.png %}
-[2]: {% image_buster /assets/img/snapchat/snapchat2.png %}
-[3]: {% image_buster /assets/img/snapchat/snapchat3.png %}
-[6]: {% image_buster /assets/img/snapchat/snapchat4.png %}
-[7]: {% image_buster /assets/img/snapchat/snapchat5.png %}
-[8]: {% image_buster /assets/img/snapchat/snapchat6.png %}
-[9]: {% image_buster /assets/img/snapchat/snapchat7.png %}
-[4]: {% image_buster /assets/img/pinterest/pinterest4.png %}
-[5]: {% image_buster /assets/img/pinterest/pinterest5.png %}
-[13]: {% image_buster /assets/img/tiktok/tiktok13.png %}
-[16]: {% image_buster /assets/img/tiktok/tiktok16.png %}
-[18]: {% image_buster /assets/img/audience_sync/audience_sync3.png %}
-[19]: {% image_buster /assets/img/audience_sync/audience_sync4.png %}
-[20]: {% image_buster /assets/img/audience_sync/audience_sync5.png %}

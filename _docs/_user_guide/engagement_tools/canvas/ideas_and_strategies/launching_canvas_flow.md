@@ -91,4 +91,3 @@ After reviewing the finer details of your Canvas, check out [Sending test Canvas
 - If Quiet Hours are enabled, this can impact your message send time, meaning that your message may send a the next available time (when the Quiet Hours end) or cancel the message entirely.
 {% enddetails %}
 
-[1]: {% image_buster /assets/img_archive/launch_with_canvas_flow_example.png %}

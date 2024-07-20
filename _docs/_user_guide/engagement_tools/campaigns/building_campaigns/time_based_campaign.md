@@ -141,12 +141,3 @@ Frequency capping is based on calendar days, not a 24-hour period. This means th
 
 
 
-[2]: {% image_buster /assets/img_archive/time_designated.png %}
-[3]: {% image_buster /assets/img_archive/time_intelligent_timing.png %}
-[4]: {% image_buster /assets/img_archive/time_local.png %}
-[5]: {% image_buster /assets/img_archive/time_reeligibility.png %}
-[6]: {% image_buster /assets/img_archive/time_delay_immediately.png %}
-[7]: {% image_buster /assets/img_archive/time_delay_after.png %}
-[8]: {% image_buster /assets/img_archive/time_delay_on_the_next.png %}
-[9]: {% image_buster /assets/img_archive/time_delay_in.png %}
-[10]: {% image_buster /assets/img_archive/time_quiet_hours.png %}

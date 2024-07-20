@@ -98,8 +98,3 @@ The concepts in this message correspond to those in the [Android People and Conv
 }
 ```
 
-[28]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/silent_push_notifications/#silent-push-notifications
-[44]: {{site.baseurl}}/user_guide/message_building_by_channel/push/notification_channels/
-[43]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/integration/standard_integration/#step-5-define-notification-channels
-[45]: {{site.baseurl}}/user_guide/message_building_by_channel/push/android/notification_channels/#dashboard-fallback-channel
-[46]: https://developer.android.com/guide/topics/ui/conversations

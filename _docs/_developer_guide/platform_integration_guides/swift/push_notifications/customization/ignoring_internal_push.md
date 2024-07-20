@@ -57,6 +57,3 @@ func application(_ application: UIApplication,
 {% endtab %}
 {% endtabs %}
 
-[1]: https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/notifications-swift.class/isinternalnotification(_:)
-[2]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/silent_push_notifications/
-[4]: https://developer.apple.com/documentation/uikit/app_and_environment/managing_your_app_s_life_cycle

@@ -52,4 +52,3 @@ We check for statistical significance by using the [Wilson confidence interval](
 
 Then, for each of the variables, we also compute the rate at which users with that particular attribute or behavior of interest converted at 95% confidence. By dividing that by the base rate, we're able to measure the ratio. If it's much larger than 1, users with the attribute or behavior are more likely to convert. If it's much less, they're less likely. We display the value of the ratio itself in the table. The value is only displayed if it's far enough from 1 to be significant at the 95% confidence level.
 
-[1]: {% image_buster /assets/img/convcorr.png %}

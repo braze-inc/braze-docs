@@ -87,5 +87,3 @@ This table is updated only when the prediction retrains and not when user likeli
 Correlation data for preview predictions will be partially hidden. A purchase is required to reveal this information. Contact your account manager for more information.
 {% endalert %}
 
-[6]: {% image_buster /assets/img/purchasePrediction/purchaseEstimatedResults.png %}
-[4]: {% image_buster /assets/img/purchasePrediction/purchaseTargeting.png %}

@@ -41,4 +41,3 @@ No. You can use your preferred naming convention. The locale name is used when s
 #### Can I use custom attributes to define a locale?
 Not currently. Contact your account manager or leave [product feedback]({{site.baseurl}}/user_guide/administrative/access_braze/portal/) with more details on how you would define locales.
 
-[2]: {% image_buster /assets/img/multi-language_support/add_locale.png %}

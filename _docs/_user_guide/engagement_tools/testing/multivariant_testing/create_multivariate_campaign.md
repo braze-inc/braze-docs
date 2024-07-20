@@ -129,10 +129,3 @@ For example, if you send a push message to a wide audience with a control, the t
 If you use random bucket numbers for control groups manually, reference this list of [things to watch out for]({{site.baseurl}}/user_guide/engagement_tools/testing/global_control_group/#things-to-watch-for) in your control groups.
 {% endalert %}
 
-[1]: {{site.baseurl}}/user_guide/sage_ai/intelligence/intelligent_selection/
-[2]: {% image_buster /assets/img/ab_create_1.png %}
-[3]: {% image_buster /assets/img/ab_create_2.png %}
-[4]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/
-[5]: {% image_buster /assets/img/ab_create_4.png %}
-[6]: {{site.baseurl}}/user_guide/sage_ai/intelligence/intelligent_selection/
-[7]: {{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/message_format/

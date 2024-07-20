@@ -124,4 +124,3 @@ Previously, message interaction data was deleted when a campaign or Canvas:
 
 Campaigns and Canvases with previously deleted messaging interaction data cannot be used in retargeting filters for campaigns, Canvases, and segments.
 
-[1]: {% image_buster /assets/img/restore_interaction_data.png %}

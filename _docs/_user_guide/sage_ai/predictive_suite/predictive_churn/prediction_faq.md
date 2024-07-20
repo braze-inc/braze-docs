@@ -54,5 +54,3 @@ The following are questions to ask yourself as you set up Predictive Churn. Mach
 - Are you thinking in windows of time within which you'll define churn? You can define churn as something that happens in up to 60 days.
 - Have you considered times of the year that lead to atypical user behaviors such as holidays? Rapid shifts in consumer behavior will impact your predictions. 
 
-[1]: {% image_buster /assets/img/churn/churn3.png %}
-[3]: {% image_buster /assets/img/churn/audience_size_error.png %}

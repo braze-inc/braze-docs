@@ -102,5 +102,3 @@ You can use the dashboard to see the SDK version of a particular app by visiting
 If you have an iOS app, you can confirm that you are using the [Swift SDK]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/initial_sdk_setup/overview) instead of the legacy [Objective-C iOS SDK]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/overview) if your **Live SDK Version** is equal to or higher than 5.0.0, which was the first released version of the Swift SDK.
 {% endalert %}
 
-[1]: {{site.baseurl}}/user_guide/onboarding_with_braze/web_sdk/
-[2]: {% image_buster /assets/img/live-sdk-version.png %}

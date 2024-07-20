@@ -308,14 +308,4 @@ This happens under a few specific conditions:
 - Relevant items are no longer available or in stock.
 - Items don’t meet the current selection criteria, perhaps due to a change in stock or user preferences.
 
-[1]: {% image_buster /assets/img/item_recs_1.png %}
-[2-1]: {% image_buster /assets/img/item_recs_2-1.png %}
-[2-2]: {% image_buster /assets/img/item_recs_2-2.png %}
-[2-3]: {% image_buster /assets/img/item_recs_2-3.png %}
-[3]: {% image_buster /assets/img/item_recs_3.png %}
-[4]: {% image_buster /assets/img/item_recs_4.png %}
-[5]: {% image_buster /assets/img/item_recs_analytics_1.png %}
-[6]: {% image_buster /assets/img/item_recs_analytics_2.png %}
-[7]: {% image_buster /assets/img/item_recs_analytics_3.png %}
-[10]: {% image_buster /assets/img/add_personalization.png %}
 [catalog]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/

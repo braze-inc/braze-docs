@@ -79,5 +79,3 @@ You can [duplicate]({{site.baseurl}}/user_guide/engagement_tools/templates_and_m
 For answers to frequently asked questions about email templates, check out our [email and link templates FAQ]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates/faq/) page.
 
 
-[4]: {% image_buster /assets/img_archive/email_template_id.png %}
-[10]: {{site.baseurl}}/user_guide/message_building_by_channel/email/templates/faq/

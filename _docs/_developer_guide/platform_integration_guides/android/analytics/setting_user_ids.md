@@ -56,6 +56,3 @@ Refer to the [`changeUser`](https://braze-inc.github.io/braze-android-sdk/kdoc/b
 
 {% multi_lang_include archive/setting_user_ids/aliasing.md platform="Android" %}
 
-[1]: {{site.baseurl}}/api/endpoints/user_data
-[2]: {{site.baseurl}}/api/endpoints/messaging/
-[4]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-i-braze/change-user.html

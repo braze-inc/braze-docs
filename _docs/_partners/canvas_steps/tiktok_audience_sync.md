@@ -158,20 +158,3 @@ The audience size will update within 24-48 hours on the Audiences page in TikTok
 400
 {% enddetails %}
 
-[1]: {% image_buster /assets/img/tiktok/tiktok1.png %}
-[2]: {% image_buster /assets/img/tiktok/tiktok2.png %}
-[3]: {% image_buster /assets/img/tiktok/tiktok3.png %}
-[4]: {% image_buster /assets/img/tiktok/tiktok4.png %}
-[5]: {% image_buster /assets/img/tiktok/tiktok5.png %}
-[6]: {% image_buster /assets/img/tiktok/tiktok6.png %}
-[7]: {% image_buster /assets/img/tiktok/tiktok7.png %}
-[8]: {% image_buster /assets/img/tiktok/tiktok8.png %}
-[11]: {% image_buster /assets/img/tiktok/tiktok11.png %}
-[12]: {% image_buster /assets/img/tiktok/tiktok12.png %}
-[13]: {% image_buster /assets/img/tiktok/tiktok13.png %}
-[14]: {% image_buster /assets/img/tiktok/tiktok14.png %}
-[15]: {% image_buster /assets/img/tiktok/tiktok15.png %}
-[16]: {% image_buster /assets/img/tiktok/tiktok16.png %}
-[18]: {% image_buster /assets/img/audience_sync/audience_sync3.png %}
-[19]: {% image_buster /assets/img/audience_sync/audience_sync4.png %}
-[20]: {% image_buster /assets/img/audience_sync/audience_sync5.png %}

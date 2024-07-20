@@ -41,6 +41,3 @@ If you want to log purchases at the order level instead of the product level, yo
 
 You can also use our REST API to record purchases. Refer to the [users API]({{site.baseurl}}/developer_guide/rest_api/user_data/#user-data) documentation for details.
 
-[1]: {{site.baseurl}}/developer_guide/rest_api/user_data/#user-data
-[3]: {{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#user-data-collection
-[8]: https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#logpurchase

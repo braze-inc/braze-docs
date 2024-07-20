@@ -29,4 +29,3 @@ The following is an example of an embedded YouTube video in an HTML snippet:
 </body>
 ```
 
-[84]: https://developer.android.com/guide/topics/graphics/hardware-accel.html#controlling

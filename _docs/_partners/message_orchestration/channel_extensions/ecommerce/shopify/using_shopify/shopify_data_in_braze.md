@@ -968,8 +968,3 @@ With Nested Object Support for Custom Event Properties, customers can now trigge
 
 ![Action-based campaign that sends to users who perform the custom event "shopify_created_order" where the nested property "product_id" equals a specific number.]({% image_buster /assets/img/Shopify/shopify_integration17.png %})
 
-[5]: {% image_buster /assets/img/Shopify/shopify_integration11.png %}
-[12]: {% image_buster /assets/img/Shopify/shopify_segmentation2.png %}
-[13]: {% image_buster /assets/img/Shopify/shopify_segmentation3.png %}
-[14]: {% image_buster /assets/img/Shopify/shopify_segmentation4.png %}
-[26]: {% image_buster /assets/img/Shopify/shopify_integration17.png %}

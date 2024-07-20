@@ -17,6 +17,3 @@ The [`users/track` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_
 
 Braze is imposing this default on our most heavily used customer-facing endpoint as a step toward our stability and reliability goals for our API and infrastructure. The limit imposed is very liberal, and will affect very few dashboard companies and their regular operations. In the event that you need an increase to this limit, reach out to your customer success manager or our support team to request an increase.
 
-[1]: {{site.baseurl}}/user_guide/engagement_tools/canvas/retention_reports/
-[2]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/retention_reports/
-[3]: {{site.baseurl}}/api/endpoints/user_data/post_user_track/

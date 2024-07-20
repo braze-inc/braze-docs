@@ -23,4 +23,3 @@ While you can still switch to the old HTML editor by clicking **Switch to old HT
 Check out our dedicated [HTML editor for email]({{site.baseurl}}/user_guide/message_building_by_channel/email/html_editor) section for additional resources.
 
 
-[1]: {% image_buster /assets/img_archive/email_html_editor_updated.png %}

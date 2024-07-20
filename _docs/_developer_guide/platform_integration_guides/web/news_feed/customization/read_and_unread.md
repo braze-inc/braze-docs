@@ -30,4 +30,3 @@ In order to disable this functionality add the following style to your CSS:
 .ab-read-indicator { display: none; }
 ```
 
-[25]: {% image_buster /assets/img_archive/UnreadvsReadNewsFeedCard.png %}

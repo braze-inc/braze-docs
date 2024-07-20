@@ -681,4 +681,3 @@ Subtab 2a content
 ```
 {% endraw %}
 
-[1]: {% image_buster /assets/img_archive/code_snippet.png %}

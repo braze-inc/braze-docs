@@ -298,19 +298,3 @@ func braze(_ braze: Braze, shouldOpenURL context: Braze.URLContext) -> Bool {
 For more information, see [`BrazeDelegate`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/brazedelegate).
 
 
-[2]: https://developer.apple.com/library/ios/DOCUMENTATION/Cocoa/Reference/Foundation/Classes/NSURL_Class/Reference/Reference.html#//apple_ref/doc/c_ref/NSURL
-[4]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/#what-is-deep-linking
-[6]: https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/webviewcontroller
-[8]: https://developer.apple.com/documentation/swift/stringprotocol/removingpercentencoding
-[11]: https://developer.apple.com/documentation/xcode/supporting-universal-links-in-your-app
-[12]: https://developer.apple.com/library/content/documentation/General/Reference/InfoPlistKeyReference/Articles/LaunchServicesKeys.html#//apple_ref/doc/uid/TP40009250-SW14
-[13]: https://developer.apple.com/reference/uikit/uiapplicationdelegate/1623112-application?language=objc
-[14]: https://developer.apple.com/library/ios/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW35
-[15]: https://developer.apple.com/documentation/uikit/uiapplicationdelegate/1623072-application
-[16]: https://developer.apple.com/library/prerelease/ios/releasenotes/General/WhatsNewIniOS/Articles/iOS9.html#//apple_ref/doc/uid/TP40016198-SW14
-[19]: https://developer.apple.com/library/ios/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW33
-[22]: https://appboy.github.io/appboy-ios-sdk/docs/interface_appboy.html#aa9f1bd9e4a5c082133dd9cc344108b24
-[23]: https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/brazedelegate
-[25]: ##step-1-registering-a-scheme
-[26]: #linking-customization
-[27]: #universal-links

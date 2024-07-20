@@ -217,11 +217,3 @@ Video | video/mp4, video/3gp<br><br>Only H.264 video codec and AAC audio codec a
 
 
 
-[1]: {% image_buster /assets/img/whatsapp/whatsapp6.png %} 
-[2]: {% image_buster /assets/img/whatsapp/whatsapp7.png %} 
-[3]: {% image_buster /assets/img/whatsapp/whatsapp8.png %} 
-[4]: {% image_buster /assets/img/whatsapp/whatsapp_plain_text.png %}
-[5]: {% image_buster /assets/img/whatsapp/whatsapp_message_variants.png %}
-[6]: {% image_buster /assets/img/whatsapp/whatsapp_response_messages.png %}
-[7]: {% image_buster /assets/img/whatsapp/whatsapp_test_phone_number.png %}
-[8]: {% image_buster /assets/img/whatsapp/whatsapp_templates.png %}

@@ -69,10 +69,3 @@ Slack has an [incoming webhook app](https://my.slack.com/services/new/incoming-w
 That's it! You should start receiving notifications about your company to this Slack channel. You can also check out Slack's help article on this topic: [Sending messages using Incoming Webhooks](https://api.slack.com/incoming-webhooks).
 
 
-[22]: {% image_buster /assets/img_archive/company_analytics_report_new.png %}
-[63]: {% image_buster /assets/img_archive/slack_f.png %}
-[64]: {% image_buster /assets/img_archive/copy_url.png %}
-[65]: {% image_buster /assets/img_archive/click_edit_f.png %}
-[67]: https://my.slack.com/services/new/incoming-webhook/
-[61]: {% image_buster /assets/img_archive/notification_preferences.png %}
-[62]: https://api.slack.com/incoming-webhooks

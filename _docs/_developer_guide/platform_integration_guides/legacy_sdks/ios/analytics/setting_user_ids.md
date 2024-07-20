@@ -55,7 +55,3 @@ Additionally, we recommend against changing the user ID when a user logs out, as
 
 {% multi_lang_include archive/setting_user_ids/aliasing.md platform="iOS" %}
 
-[1]: {{site.baseurl}}/developer_guide/rest_api/user_data/#user-data
-[2]: {{site.baseurl}}/api/endpoints/messaging/
-[4]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/include/Appboy.h
-[5]: http://appboy.github.io/appboy-ios-sdk/docs/interface_appboy.html#ac8b369b40e15860b0ec18c0f4b46ac69 "changeuser"

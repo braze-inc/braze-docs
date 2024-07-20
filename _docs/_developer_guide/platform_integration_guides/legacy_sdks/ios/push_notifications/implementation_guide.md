@@ -840,17 +840,3 @@ extension Dictionary where Key == String, Value == Any {
 {% endtab %}
 {% endtabs %}
 
-[1]: {% image_buster /assets/img/push_implementation_guide/push1.png %}
-[3]: {% image_buster /assets/img/push_implementation_guide/push3.png %}
-[5]: {% image_buster /assets/img/push_implementation_guide/push5.png %}
-[6]: {% image_buster /assets/img/push_implementation_guide/push6.png %}
-[8]: {% image_buster /assets/img/push_implementation_guide/push8.png %}
-[9]: {% image_buster /assets/img/push_implementation_guide/push9.png %}
-[12]: {% image_buster /assets/img/push_implementation_guide/push12.png %}
-[13]: {% image_buster /assets/img/push_implementation_guide/push13.png %}
-[14]: {% image_buster /assets/img/push_implementation_guide/push14.png %}
-[15]: {% image_buster /assets/img/push_implementation_guide/push15.png %}
-[16]: {% image_buster /assets/img/push_implementation_guide/push16.png %}
-[17]: {% image_buster /assets/img/push_implementation_guide/push17.png %}
-[18]: {% image_buster /assets/img/push_implementation_guide/push18.png %}
-[19]: {% image_buster /assets/img/ios/push_story/add_app_groups.png %}

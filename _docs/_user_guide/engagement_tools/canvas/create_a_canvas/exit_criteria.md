@@ -39,4 +39,3 @@ Additional exception events include:
 * Segment membership
 * Adding filters
 
-[1]: {% image_buster /assets/img_archive/exit_criteria_example.png %} 

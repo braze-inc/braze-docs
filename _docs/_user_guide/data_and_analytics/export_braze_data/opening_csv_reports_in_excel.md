@@ -22,7 +22,3 @@ To convert a CSV to XLSX or XLS, or get rid of the comma between data values, re
 You may sometimes find that leading zeroes are stripped from user IDs in your CSV export. This happens because Excel treats the numbers in a CSV as data instead of text. To resolve this, run the [Excel Text Import Wizard](https://www.ablebits.com/office-addins-blog/converting-csv-excel-issues/#leading-zeros).
 
 
-[19]: https://www.ablebits.com/office-addins-blog/convert-csv-excel/#import-csv-wizard
-[20]: https://support.microsoft.com/en-us/windows/change-which-programs-windows-7-uses-by-default-62fd162f-8c82-0436-806f-c60d69dcf495
-[21]: https://support.apple.com/guide/mac-help/choose-an-app-to-open-a-file-on-mac-mh35597/mac
-[22]: https://www.ablebits.com/office-addins-blog/converting-csv-excel-issues/#leading-zeros

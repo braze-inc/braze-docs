@@ -110,9 +110,3 @@ Braze recommends against using [Intelligent Timing]({{site.baseurl}}/user_guide/
 It is normal for mail to be sent to the spam folder during IP warming because your domain and IP have not yet established a positive reputation. If mail lands in your spam folder, your mail administrator may need to add your Braze sending domain and IP to your company's allowlist.
 {% endalert %}
 
-[18]: {% image_buster /assets/img_archive/email_ip_warming_sends_limit_new.png %}
-[40]: {{site.baseurl}}/user_guide/onboarding_with_braze/spam_regulations/
-[43]: https://www.braze.com/blog/email-list-hygiene/
-[44]: https://senderscore.org/
-[45]: http://www.senderbase.org/
-[46]: {{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices/sunset_policies/

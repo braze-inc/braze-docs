@@ -58,7 +58,3 @@ Refer to the following table for descriptions of analytics for this step:
 | No | The number of entries that did not meet the specified criteria and proceeded down the "no" path. |
 {: .reset-td-br-1 .reset-td-br-2}
 
-[1]: {% image_buster /assets/img/decision-split-1.png %}
-[2]: {% image_buster /assets/img/define-split-2.png %}
-[3]: {% image_buster /assets/img/use-split-onboarding-3.png %}
-[5]: {{site.baseurl}}/user_guide/engagement_tools/segments/

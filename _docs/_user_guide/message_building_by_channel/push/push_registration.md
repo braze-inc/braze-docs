@@ -119,14 +119,5 @@ Unfortunately, APNs and FCM don't really define this. Push tokens can expire whe
 
 To account for that ambiguity, our SDK push integrations always register and flush tokens on session start to ensure we have the most up-to-date token.
 
-[errors]: {{site.baseurl}}/help/help_articles/push/push_error_codes/#push-bounced-mismatchsenderid
-[identifier]: {{site.baseurl}}/api/endpoints/export/user_data/post_users_identifier/
-[segment]: {{site.baseurl}}/api/endpoints/export/user_data/post_users_segment/
-[push-process]: {% image_buster /assets/img/push_process.png %}
-[5]: {{site.baseurl}}/user_guide/engagement_tools/segments/using_user_search/
-[2]: {% image_buster /assets/img/push_changelog.png %}
-[push-tokens]: {{site.baseurl}}/user_guide/message_building_by_channel/push/push_registration/
-[3]: {% image_buster /assets/img/push_example.png %}
-[4]: {% image_buster /assets/img/push_token_changelog.png %}
 
 

@@ -62,8 +62,3 @@ With B.Layer, you can log button interactions or text input as a Braze attribute
 
 B.Layer uses Braze button tracking added to the links you enter (for example, `?button=0`). This way, you can see the button clicks in the analytics part of your campaign.
 
-[2]: {% image_buster /assets/img/blayer/blayer2.png %}
-[3]: {% image_buster /assets/img/blayer/blayer3.png %}
-[4]: {% image_buster /assets/img/blayer/blayer4.png %}
-[5]: {% image_buster /assets/img/blayer/blayer5.png %}
-[6]: {% image_buster /assets/img/blayer/blayer6.png %}

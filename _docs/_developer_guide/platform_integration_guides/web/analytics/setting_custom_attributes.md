@@ -157,8 +157,3 @@ braze.getUser().setEmailNotificationSubscriptionType(braze.User.NotificationSubs
 braze.getUser().setPushNotificationSubscriptionType(braze.User.NotificationSubscriptionTypes.UNSUBSCRIBED);
 ```
 
-[1]: https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.user.html
-[4]: {{site.baseurl}}/developer_guide/rest_api/user_data/#user-data
-[6]: {{site.baseurl}}/developer_guide/platform_wide/getting_started/analytics_overview/#arrays
-[7]: {{site.baseurl}}/developer_guide/platform_wide/getting_started/analytics_overview/#best-practices
-[10]: {{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#managing-user-subscriptions

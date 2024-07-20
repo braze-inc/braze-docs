@@ -132,6 +132,3 @@ Braze supports exporting the following data listed in the Currents [user behavio
   - `users.messages.whatsapp.Read`
   - `users.messages.whatsapp.Send`
 
-[1]: {% image_buster /assets/img/segment/segment_currents1.png %}
-[2]: {% image_buster /assets/img/segment/segment_currents.png %}
-[3]: {% image_buster /assets/img/segment/segment.png %}

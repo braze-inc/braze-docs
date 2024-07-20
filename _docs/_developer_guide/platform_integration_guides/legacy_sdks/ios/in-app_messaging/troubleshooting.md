@@ -71,14 +71,4 @@ If your app is successfully requesting and receiving in-app messages but they ar
 - Failed image downloads will prevent in-app messages with images from displaying. Image downloads will always fail if the `SDWebImage` framework is not integrated properly. Check your device logs to ensure that image downloads are not failing.
 - If the device orientation did not match the orientation specified by the in-app message, the in-app message will not display. Make sure that your device is in the correct orientation.
 
-[iam_1]: {{ site.baseurl }}/user_guide/administrative/app_settings/developer_console/internal_groups_tab/#adding-test-users
-[iam_2]: {{ site.baseurl }}/user_guide/administrative/app_settings/developer_console/event_user_log_tab/#event-user-log-tab
-[iam_3]: {{ site.baseurl }}/user_guide/administrative/app_settings/developer_console/event_user_log_tab/#event-user-log-tab
-[iam_5]:  {% image_buster /assets/img_archive/event_user_log_iams.png %}
-[iam_6]: {{ site.baseurl }}/user_guide/engagement_tools/segments/using_user_search/#engagement-tab
-[iam_7]: {{ site.baseurl }}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/reeligibility/
-[iam_8]: {{ site.baseurl }}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/#frequency-capping
-[iam_10]: {% image_buster /assets/img_archive/event_user_log_session_start.png %}
-[iam_11]: #troubleshooting-in-app-message-delivery
-[iam_12]: #troubleshooting-in-app-message-display
 

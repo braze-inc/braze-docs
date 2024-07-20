@@ -14,5 +14,3 @@ Connected Audiences allows you to target messages with subsets of your user base
 
 Refer to [Connected Audience Object]({{site.baseurl}}/api/objects_filters/connected_audience/) or check out our blog on [Connected Audiences](https://www.braze.com/blog/connected-audiences/).
 
-[12]: {{site.baseurl}}/api/objects_filters/connected_audience/
-[13]: https://www.braze.com/blog/connected-audiences/

@@ -72,8 +72,4 @@ Further instructions on object and event syncing can be found in [Hightouch docu
     <iframe width="560" height="315" src="https://drive.google.com/file/d/1KQdCwZzV88hXMx7AMWgh8izqkldtNv5p/preview" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
-[1]: https://hightouch.io
-[2]: {{site.baseurl}}/developer_guide/rest_api/basics/#endpoints
-[3]: {% image_buster /assets/img/hightouch/hightouch_braze_setup.png %}
-[4]: https://hightouch.io/docs/destinations/braze/
 

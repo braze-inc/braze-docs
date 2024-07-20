@@ -140,5 +140,3 @@ user_data_idfv={{most_recently_used_device.${id}}}
 If you currently do not use any device identifiers - such as the IDFV or GAID - in your click tracking links, or do not plan to in the future, Branch will still be able to attribute these clicks through their probabilistic modeling.
 {% endalert %}
 
-[22]: https://docs.branch.io/pages/exports/ua-webhooks/ "Branch Webhooks"
-[4]: {% image_buster /assets/img/attribution/branch.png %}

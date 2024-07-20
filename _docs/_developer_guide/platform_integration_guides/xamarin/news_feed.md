@@ -20,5 +20,3 @@ News Feed is being deprecated. Braze recommends that customers who use our News 
 
 For information on how to integrate the News Feed into your Xamarin app, see the [Android integration instructions]({{site.baseurl}}/developer_guide/platform_integration_guides/android/news_feed/integration/) and [iOS integration instructions]({{site.baseurl}}/developer_guide/platform_integration_guides/legacy_sdks/ios/news_feed/integration).
 
-[1]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/news_feed/integration/
-[2]: {{site.baseurl}}/developer_guide/platform_integration_guides/legacy_sdks/ios/news_feed/integration

@@ -43,6 +43,3 @@ Here's a list of supported search filters:
 | Campaigns you created | `created_by_me` | `true` |
 
 
-[1]: {% image_buster /assets/img_archive/campaign_search.png %}
-[2]: {% image_buster /assets/img_archive/campaign_search2.png %}
-[3]: {% image_buster /assets/img_archive/campaign_search3.png %}

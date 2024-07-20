@@ -72,10 +72,3 @@ To create your segment, navigate to **Segment > + Create Segment** and select **
 
 You can now add this newly created segment to future Braze campaigns and Canvases to target these end-users.
 
-[1]: {% image_buster /assets/img/lexer/braze_integrate_screen.png %}
-[2]: {{site.baseurl}}/api/basics/#company-secret-explanation
-[3]: https://aws.amazon.com/premiumsupport/knowledge-center/create-access-key/
-[4]: https://docs.aws.amazon.com/AmazonS3/latest/userguide/UsingBucket.html
-[5]: {{site.baseurl}}/partners/data_and_infrastructure_agility/cloud_storage/amazon_s3/
-[6]: https://lexer.io/
-[7]: {% image_buster /assets/img/lexer/lexer.png %}

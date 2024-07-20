@@ -85,8 +85,6 @@ If the user’s Shopify customer ID, email address, or phone number exists alrea
 Braze will update the user profile with Shopify customer data from the store with the most recent activity. This means that any attributes, such as email, phone number, sending phone, city, etc., can be overwritten with the most recent store activity. For example, if a user has a different phone number in two different stores, Braze will update the user profile with the phone number from the store with the most recent activity.
 {% endalert %}
 
-[1]: {% image_buster /assets/img/multiple_stores.png %}
-[2]: {% image_buster /assets/img/multiple_stores2.png %}
 [3]: {% image_buster /assets/img/shopify_nested_attributes.png %}
 [4]: {% image_buster /assets/img/shopify_tags.png %}
 [5]: {% image_buster /assets/img/shopify_add_trigger.png %}

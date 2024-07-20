@@ -25,7 +25,3 @@ You can now save webhook messages as templates for easy reuse or start with a pr
 You now have the option, when using delayed action-based triggers, to send at a specific time after a delay. This functionality is available for Canvas and campaigns. Learn more about sending [action-based delivery campaigns]({{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/triggered_delivery/).
 
 
-[24]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/triggered_delivery/
-[25]: {{site.baseurl}}/user_guide/data_and_analytics/reporting/engagement_reports/#engagement-reports
-[26]: {{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/#creating-a-webhook
-[27]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/retargeting_campaigns/#retargeting-campaigns

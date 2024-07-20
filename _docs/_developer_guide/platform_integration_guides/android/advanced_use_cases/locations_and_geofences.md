@@ -309,8 +309,3 @@ Note that Braze syncs geofences to devices using background push. In most cases,
 
 However, note that if your application is stopped, receiving a background push will launch it in the background and its `Application.onCreate()` method will be called. If you have a custom `Application.onCreate()` implementation, you should defer automatic server calls and any other actions you would not want to be triggered by background push.
 
-[3]: https://developers.google.com/android/reference/com/google/android/gms/location/package-summary
-[4]: https://github.com/braze-inc/braze-android-sdk/blob/master/droidboy/src/main/java/com/appboy/sample/util/RuntimePermissionUtils.kt
-[10]: https://developers.google.com/android/guides/setup
-[11]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-i-braze/request-geofences.html
-[support]: {{site.baseurl}}/braze_support/

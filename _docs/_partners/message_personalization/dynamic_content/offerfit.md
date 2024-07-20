@@ -113,6 +113,4 @@ In addition to the analytics data available in Braze, OfferFit provides a compre
 
 
 
-[1]: {{site.baseurl}}/developer_guide/rest_api/basics/#endpoints
-[2]: {% image_buster /assets/img/offerfit/of_use_case_example.png %}
 

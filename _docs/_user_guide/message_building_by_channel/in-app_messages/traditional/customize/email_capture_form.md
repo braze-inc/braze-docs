@@ -85,8 +85,3 @@ Set the filter to `Has clicked in-app message button 1` for campaign `<CAMPAIGN_
 
 ![Filter for has clicked in-app message button 1 for your web email capture form campaign]({% image_buster /assets/img_archive/web_email_filter_3.png %})
 
-[4]: {% image_buster /assets/img/email_capture_config.png %}
-[5]: {% image_buster /assets/img/email_capture.png %}
-[10]: {% image_buster /assets/img_archive/web_email_filter_1.png %}
-[11]: {% image_buster /assets/img_archive/web_email_filter_2.png %}
-[12]: {% image_buster /assets/img_archive/web_email_filter_3.png %}

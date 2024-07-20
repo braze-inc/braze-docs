@@ -204,14 +204,3 @@ In the **Target Audiences** step, include a filter that excludes users whose lea
 
 Select **Launch** and watch your lead status change in Salesforce as your customers cross the MQL lead score threshold.
 
-[1]: {% image_buster /assets/img/b2b/step_1_simple.png %}
-[2]: {% image_buster /assets/img/b2b/step_2_simple.png %}
-[3]: {% image_buster /assets/img/b2b/step_3_simple.png %}
-[4]: {% image_buster /assets/img/b2b/entry_controls_simple.png %}
-[5]: {% image_buster /assets/img/b2b/step_4_simple.png %}
-[6]: {% image_buster /assets/img/b2b/action_paths_simple.png %}
-[7]: {% image_buster /assets/img/b2b/action_paths_selected_simple.png %}
-[8]: {% image_buster /assets/img/b2b/action_groups_simple.png %}
-[9]: {% image_buster /assets/img/b2b/user_update_paths_simple.png %}
-[10]: {% image_buster /assets/img/b2b/webhook.png %}
-[11]: {% image_buster /assets/img/b2b/step_3_webhook.png %}

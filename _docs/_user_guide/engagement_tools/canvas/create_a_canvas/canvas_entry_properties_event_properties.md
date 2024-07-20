@@ -53,8 +53,3 @@ The first Message step in a user journey will have access to the custom `event_p
 
 Note that you'll only have access to `event_properties` if your Message step can be traced back to a non-Everyone Else path in an Action Paths step. If the Message step is connected to an Everyone Else path but can be traced back to an Action Paths step in the user journey, then you will also still have access to `event_properties`. For more information on these behaviors, check out [Message step]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/).
 
-[1]: {{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/
-[2]: {{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/
-[3]: {{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/action_paths/
-[7]: {% image_buster /assets/img_archive/canvas_entry_properties1.png %}
-[8]: {{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/

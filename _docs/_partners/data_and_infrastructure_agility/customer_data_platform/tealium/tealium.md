@@ -267,20 +267,3 @@ If you have multiple EventStreams that target the same event feed, **all actions
 Users integrating with Tealium using the Braze Web SDK tag may see a dramatic increase in their MAU. **If Braze is initialized on page load, Braze will create an anonymous profile every time a web user navigates to the website for the first time.** Some may want to only track user behavior when users have completed some action, such as "Signed In" or "Watched Video", to lower their MAU count. <br><br>
 **Solution**: <br>Set up [load rules](https://docs.tealium.com/iq-tag-management/load-rules/about/) to determine exactly when and where a tag loads on your site. 
 
-[1]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/initial_sdk_setup/
-[2]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/
-[5]: {% image_buster /assets/img/tealium/braze_connector_marketplace.png %}
-[6]: {% image_buster /assets/img/tealium/data_source.png %}
-[7]: {% image_buster /assets/img/tealium/event_specs.png %}
-[8]: {% image_buster /assets/img/tealium/get_code.png %}
-[9]: {% image_buster /assets/img/tealium/summary.png %}
-[10]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/initial_sdk_setup/
-[13]: {% image_buster /assets/img/tealium/summary_list.png %}
-[15]: {% image_buster /assets/img/tealium/create_configuration.png %}
-[16]: {% image_buster /assets/img/tealium/connector_summary.png %}
-[17]: {% image_buster /assets/img/tealium/save_publish.png %}
-[18]: {% image_buster /assets/img/tealium/braze_connection.png %}
-[19]: https://docs.tealium.com/iq-tag-management/events/about/
-[21]: https://docs.tealium.com/server-side/connectors/trace/about/
-[22]: {% image_buster /assets/img/tealium/tealium_overview.png %}
-[23]: {% image_buster /assets/img/tealium/remote_mappings.png %}

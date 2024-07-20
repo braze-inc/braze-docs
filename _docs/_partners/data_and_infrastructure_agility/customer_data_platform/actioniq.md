@@ -59,5 +59,3 @@ The events integration sends the following information to Braze:
 - Event properties, which are populated by any additional attributes in the export setting
 
 
-[1]: {{site.baseurl}}/developer_guide/rest_api/basics/#endpoints
-[2]: https://www.actioniq.com/

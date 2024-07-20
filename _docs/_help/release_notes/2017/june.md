@@ -33,10 +33,4 @@ We've added the ability to include [templating attributes]({{site.baseurl}}/user
 You can now select hours as a time unit when you are filtering for date and time, enabling you to target your messages with more precision. Learn more about [filters]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/#step-4-add-filters-to-your-segment).
 
 
-[44]: {{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/#step-4-add-filters-to-your-segment
-[45]: {{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/
-[46]: {{site.baseurl}}/user_guide/onboarding/platform_administrative_features/#security-settings
-[47]: {{site.baseurl}}/user_guide/message_building_by_channel/push/web
-[49]: {{site.baseurl}}/api/endpoints/messaging/
-[50]: {{site.baseurl}}/user_guide/administrative/manage_your_users/user_import/#user-import
 [98]:{{site.baseurl}}/user_guide/onboarding/platform_administrative_features/#authentication-rules

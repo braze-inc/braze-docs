@@ -145,10 +145,4 @@ Email open tracking is error prone in any tool, including Braze. With a variety 
 While email open statistics can be useful in aggregate, for example to compare the effectiveness of different subject lines, you should not assume an individual open event for an individual user is meaningful.
 
 
-[1]: {% image_buster /assets/img_archive/User_Search_Nonunique.png %}
-[2]: {% image_buster /assets/img_archive/user_profile2.png %}
-[3]: {% image_buster /assets/img_archive/profiles_engagement_tab.png %}
-[5]: {% image_buster /assets/img_archive/profiles_messaging_history_tab.png %}
 
-[12]: {{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/
-[13]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/campaigns_in_multiple_languages/#campaigns-in-multiple-languages

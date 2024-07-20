@@ -78,11 +78,3 @@ Visit [Treasure Data](https://docs.treasuredata.com/display/public/INT/Braze+Exp
 
 Treasure Data users can ingest data through the public REST API. You can use Treasure Data to create custom webhooks into your data. To learn more, visit [Treasure Data](https://docs.treasuredata.com/display/public/PD/Postback+API)
 
-[6]: https://docs.treasuredata.com/display/public/PD/Postback+API
-[1]: {{site.baseurl}}/developer_guide/rest_api/basics/#endpoints)
-[2]: {% image_buster /assets/img/treasure_data/braze_authentication.png %}
-[3]: {% image_buster /assets/img/treasure_data/braze_export_configuration.png %}
-[4]: https://www.treasuredata.com/
-[5]: https://docs.treasuredata.com/display/public/INT/Braze+Export+Integration
-[10]: {% image_buster /assets/img/treasure_data/query_1.png %}
-[11]: {% image_buster /assets/img/treasure_data/query_2.png %}

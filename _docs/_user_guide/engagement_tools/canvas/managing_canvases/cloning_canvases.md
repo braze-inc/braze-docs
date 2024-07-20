@@ -53,7 +53,3 @@ For API-triggered Canvases, coordinate with your engineering team to ensure that
 For more information about the differences between the original Canvas editor and Canvas Flow experience, check out [Canvas FAQ]({{site.baseurl}}/user_guide/engagement_tools/canvas/faqs/#what-are-the-main-differences-between-canvas-flow-and-the-original-canvas-editor).
 
 
-[1]: {% image_buster /assets/img_archive/clone_to_v2_workflow.png %}
-[2]: {% image_buster /assets/img_archive/clone_to_v2_modal.png %}
-[3]: {% image_buster /assets/img_archive/clone_to_v2_dashboard.png %}
-[4]: {% image_buster /assets/img_archive/clone_to_flow_variant.png %}

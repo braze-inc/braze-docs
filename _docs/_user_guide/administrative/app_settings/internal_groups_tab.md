@@ -103,7 +103,3 @@ Seed groups in Canvas work similarly to that of any triggered campaign. Braze au
 If an email step was updated after the Seed Group was mailed, the option to only send to updated steps, all steps, or turn off seeds will be presented.
 
 
-[7]: {% image_buster /assets/img_archive/internal_group.png %}
-[8]: {% image_buster /assets/img_archive/UserLogs1.png %}
-[9]: {% image_buster /assets/img_archive/content_test_preview.png %}
-[11]: {% image_buster /assets/img_archive/seed_group_campaign.png %}

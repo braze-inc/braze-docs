@@ -108,15 +108,3 @@ This custom event will be triggered twice for each notification, when a message 
 - When a message is sent, a custom event is triggered with `SENT` status.
 - When a message is read, a custom event is triggered with `READ` status.
 
-[1]: {{site.baseurl}}/developer_guide/rest_api/basics/#endpoints
-[2]: https://sendbird.com/docs/notifications/v1/uikit/ios/install-uikit
-[3]: https://sendbird.com/docs/notifications/v1/uikit/android/install-uikit
-[4]: https://sendbird.com/
-[5]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/
-[6]: https://chrome.google.com/webstore/detail/apbhgfffamdcdogeijjcnjbmghahoaji
-[7]: https://sendbird.com/docs/notifications/v1/templates
-[8]: {{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/#csv
-[10]: {% image_buster /assets/img/sendbird/sendbird-dashboard-template.png %}
-[11]: {% image_buster /assets/img/sendbird/sendbird-dashboard-integrations.png %}
-[12]: {% image_buster /assets/img/sendbird/sendbird-notification-builder.png %}
-[13]: {% image_buster /assets/img/sendbird/use-cases.png %}

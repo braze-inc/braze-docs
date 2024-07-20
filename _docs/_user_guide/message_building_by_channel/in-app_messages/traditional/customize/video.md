@@ -37,4 +37,3 @@ To support iOS devices, you must include the `playsinline` attribute since full 
 - iOS does not support auto-play by default. To update this default option, you can modify the [`ABKInAppMessageHTMLViewController`](https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyUI/ABKInAppMessage/ViewControllers/ABKInAppMessageHTMLViewController.m)
 - Full screen videos will not render correctly on iOS and are not supported at this time. You must include the `playsinline` attribute to show the video within the HTML message instead.
 
-[9]: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video

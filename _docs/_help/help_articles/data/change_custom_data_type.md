@@ -29,4 +29,3 @@ The ability to prevent automatic detection from updating the custom attribute da
 
 _Last updated on February 8, 2024_
 
-[1]: {% image_buster /assets/img/change_custom_attribute.png %}

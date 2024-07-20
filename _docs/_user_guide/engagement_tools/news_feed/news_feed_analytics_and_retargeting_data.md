@@ -60,6 +60,3 @@ You can create segments based on how users have interacted with specific cards i
 ![Segment filter example that shows targets users who have not clicked the card "Cheers! The Dos and Don'ts of Giving a Toast".]({% image_buster /assets/img_archive/braze_newsfeedsegment.png %})
 
 
-[19]: {% image_buster /assets/img_archive/braze_newsfeedanalytics.png %}
-[20]: {% image_buster /assets/img_archive/braze_newsfeedanalytics2.png %}
-[14]: {% image_buster /assets/img_archive/braze_newsfeedsegment.png %}

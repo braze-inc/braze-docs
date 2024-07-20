@@ -44,7 +44,3 @@ After the sync, you can create and add a Braze segment with a Census cohort filt
 When using the Census and Braze integration, Census will only send the deltas (changing data) on each sync to Braze. 
 {% endalert %}
 
-[1]: https://www.getcensus.com/
-[8]: {% image_buster /assets/img/census/add_service.png %}
-[10]: {% image_buster /assets/img/census/census_2.png %}
-[11]: {% image_buster /assets/img/census/census_3.png %}

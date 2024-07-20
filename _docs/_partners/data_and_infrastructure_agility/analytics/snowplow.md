@@ -115,10 +115,3 @@ The entity can be specified in two different formats:
 | Include unmapped entities in event | When remapping or moving some entities to user attributes with the preceding customization, this option enables you to ensure that all unmapped entities (such as any entities not found in the [event property rules](#event-property-rules)) will be included in the properties object of the Braze event. |
 {: .reset-td-br-1 .reset-td-br-2}
 
-[1]: https://snowplowanalytics.com
-[2]: https://docs.snowplowanalytics.com/docs/forwarding-events-to-destinations/forwarding-events/google-tag-manager-server-side/snowplow-client-for-gtm-ss/
-[3]: {{site.baseurl}}/developer_guide/rest_api/basics/#endpoints
-[4]: {{site.baseurl}}/developer_guide/rest_api/basics/#app-group-rest-api-keys
-[5]: {{site.baseurl}}/developer_guide/rest_api/basics/#external-user-id-explanation
-[6]: https://developers.google.com/tag-platform/tag-manager/server-side/common-event-data
-[7]: https://github.com/snowplow/snowplow-gtm-server-side-braze-tag/blob/main/template.tpl

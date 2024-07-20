@@ -82,6 +82,3 @@ To take advantage of the automated iOS integration offered in the Braze Unity SD
 2. Remove Braze iOS libraries from your Unity or Xcode project (such as `Appboy_iOS_SDK.framework` and `SDWebImage.framework`) and [import the Braze Unity package](#step-1-importing-the-braze-unity-package) into your Unity project.
 3. Follow the integration instructions on [setting your API key through Unity](#step-2-setting-your-api-key).
 
-[1]: https://github.com/appboy/appboy-unity-sdk
-[10]: https://developer.amazon.com/public/apis/engage/device-messaging
-[11]: {{site.baseurl}}/developer_guide/platform_integration_guides/unity/push_notifications/adm_push_notifications/

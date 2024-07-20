@@ -69,9 +69,3 @@ Additionally, Census supports sending [structured data](https://docs.getcensus.c
 - User push tokens: To send push tokens, your data should be structured as an array of objects with 2-3 values: `app_id`, `token`, and an optional `device_id`.
 - Nested custom attributes: Both objects and arrays are supported. As of April 2022, this feature is still in early access. You may need to contact your Braze account manager for access.
 
-[1]: https://www.getcensus.com/
-[2]: {{site.baseurl}}/developer_guide/rest_api/basics/#endpoints
-[8]: {% image_buster /assets/img/census/add_service.png %}
-[9]: {% image_buster /assets/img/census/census_1.png %}
-[10]: {% image_buster /assets/img/census/census_2.png %}
-[11]: {% image_buster /assets/img/census/census_3.png %}

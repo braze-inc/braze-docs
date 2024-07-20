@@ -36,10 +36,3 @@ Here are some great use cases to get you inspired!
 {: .reset-td-br-1 .reset-td-br-2}
 
 
-[1]: {{site.baseurl}}/user_guide/message_building_by_channel/email/html_editor/creating_an_email_campaign/
-[2]: {{site.baseurl}}/user_guide/message_building_by_channel/email/templates/email_template/
-[3]: {{site.baseurl}}/user_guide/message_building_by_channel/email/transactional_message_api_campaign/
-[4]: {{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/dnd_editor_blocks/
-[5]: {{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/
-[6]: https://www.braze.com/customers/
-[7]: {{site.baseurl}}/user_guide/message_building_by_channel/email/templates/html_email_template/

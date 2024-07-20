@@ -29,4 +29,3 @@ Braze has 16 new mobile responsive [email templates]({{site.baseurl}}/user_guide
 You'll notice that the icons representing each template will show you their layout.
 
 
-[97]: {{site.baseurl}}/user_guide/message_building_by_channel/email/creating_an_email_template/#step-2-create-or-choose-a-template

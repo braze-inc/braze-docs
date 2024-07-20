@@ -117,4 +117,3 @@ This feature connects to the Braze [`/users/track` endpoint]({{site.baseurl}}/ap
 
 This will not work for a side-by-side Braze integration. No server data will go through if you haven't input the correct Braze REST API information.
 
-[1]: {% image_buster /assets/img/segment/segment3.png %}

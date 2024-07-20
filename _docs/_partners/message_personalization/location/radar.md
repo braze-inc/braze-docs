@@ -179,4 +179,3 @@ near you!
 Visit [Radar documentation](https://radar.io/documentation/api) for all the Radar APIs that can be leveraged in Connected Content.
 {% endalert %}
 
-[1]: {% image_buster /assets/img/radar_example.png %}

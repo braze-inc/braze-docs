@@ -101,8 +101,3 @@ The following keys are reserved and cannot be used as purchase properties:
 
 You can also use our REST API to record purchases. Refer to the [User API documentation]({{site.baseurl}}/developer_guide/rest_api/user_data/#user-data) for details.
 
-[1]: {{site.baseurl}}/developer_guide/rest_api/user_data/#user-data
-[3]: {{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#user-data-collection
-[4]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.outgoing/-braze-properties/index.html
-[5]: http://developer.android.com/reference/java/util/Date.html
-[6]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-i-braze/log-purchase.html

@@ -40,4 +40,3 @@ myWebView.addJavascriptInterface(javascriptInterface, "brazeInternalBridge")
 {% endtab %}
 {% endtabs %}
 
-[1]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/#custom-html-messages

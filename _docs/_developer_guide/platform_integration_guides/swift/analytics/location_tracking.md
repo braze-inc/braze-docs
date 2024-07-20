@@ -152,4 +152,3 @@ AppDelegate.braze?.user.setLastKnownLocation(latitude:latitude,
 
 Refer to [`Braze.User.swift`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/user-swift.class/) for more information.
 
-[5]: https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/user-swift.class/

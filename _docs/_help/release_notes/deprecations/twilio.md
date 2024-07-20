@@ -55,9 +55,3 @@ Use the webhook composer to preview the request for a random user, or for a user
 
 ![Webhook Preview]({% image_buster /assets/img_archive/Webhook_Preview.png %})
 
-[20]: https://www.twilio.com/docs/api/rest/sending-messages
-[28]: {% image_buster /assets/img_archive/Twilio_Console.png %}
-[29]: {% image_buster /assets/img_archive/Webhook_Body.png %}
-[30]: {% image_buster /assets/img_archive/Webhook_Method.png %}
-[31]: {% image_buster /assets/img_archive/Webhook_Preview.png %}
-[32]: https://en.wikipedia.org/wiki/Basic_access_authentication#Client_side

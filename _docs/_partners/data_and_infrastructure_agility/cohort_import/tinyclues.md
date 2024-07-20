@@ -68,9 +68,3 @@ Are you having trouble finding the right cohort within the list? In Tinyclues, v
 
 Still having trouble retrieving your audience? Contact the [Tinyclues team](mailto:support@tinyclues.com) for additional support.
 
-[1]: {% image_buster /assets/img/tinyclues/tinyclues_1.png %} 
-[2]: {% image_buster /assets/img/tinyclues/tinyclues_2.png %} 
-[3]: {% image_buster /assets/img/tinyclues/tinyclues_3.png %} 
-[4]: {% image_buster /assets/img/tinyclues/tinyclues_4.png %}
-[5]: {% image_buster /assets/img/tinyclues/tinyclues_5.png %}  
-[6]: {% image_buster /assets/img/tinyclues/tinyclues_6.png %}  

@@ -41,7 +41,3 @@ This doesn't happen very often, but we take account suspension and deletions ver
 
 _Last updated on October 19, 2019_
 
-[support]: {{site.baseurl}}/support_contact/	
-[1]: {{site.baseurl}}/user_guide/administrative/access_braze/braze_instances/#braze-instances
-[2]: {{site.baseurl}}/user_guide/administrative/access_braze/accessing_your_account/#resetting-your-password
-[3]: {{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/set_up/

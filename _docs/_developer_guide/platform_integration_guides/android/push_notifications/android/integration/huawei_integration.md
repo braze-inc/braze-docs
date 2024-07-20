@@ -130,17 +130,3 @@ Of course, if you want to send the same push to all Android push providers, you 
 
 Once your campaign has been launched, you will see analytics for your campaign or Canvas aggregated for Android push. See our [push user guide]({{site.baseurl}}/user_guide/message_building_by_channel/push/push_reporting/) for more information on Android push analytics and settings.
 
-[1]: https://huaweimobileservices.com/
-[2]: https://developer.huawei.com/consumer/en/console
-[3]: {% image_buster /assets/img/huawei/huawei-credentials.png %}
-[4]: {% image_buster /assets/img/huawei/huawei-create-app.png %}
-[5]: {% image_buster /assets/img/huawei/huawei-test-push-platforms.png %}
-[6]: {% image_buster /assets/img/huawei/huawei-test-push-composer.png %}
-[7]: {% image_buster /assets/img/huawei/huawei-test-send.png %}
-[8]: {% image_buster /assets/img/huawei/huawei-segmentation.png %}
-[9]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/setting_user_ids/#assigning-a-user-id
-[10]: {{site.baseurl}}/user_guide/message_building_by_channel/push/push_reporting/
-[12]: {% image_buster /assets/img/huawei/huawei-dashboard-credentials.png %}
-[13]: https://developer.huawei.com/consumer/en/codelab/HMSPushKit/index.html
-[14]: https://developer.huawei.com/consumer/en/doc/development/HMS-References/push-HmsMessageService-cls
-[15]: {{ site.baseurl }}/user_guide/engagement_tools/segments/creating_a_segment/#step-3-choose-your-app-or-platform

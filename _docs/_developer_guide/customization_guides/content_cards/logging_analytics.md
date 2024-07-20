@@ -310,6 +310,3 @@ braze.logContentCardClick(card);
 {% endtab %}
 {% endtabs %}
 
-[1]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/integration/
-[2]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/content_cards/integration/
-[3]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/content_cards/integration/

@@ -140,4 +140,3 @@ Braze supports exporting the following data listed in the Currents [user behavio
   - `users.messages.whatsapp.Read`
   - `users.messages.whatsapp.Send`
   
-[support]: {{site.baseurl}}/braze_support/

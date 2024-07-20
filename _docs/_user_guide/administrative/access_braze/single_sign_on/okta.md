@@ -73,9 +73,3 @@ If you want your Braze account users to only sign in with SAML SSO, you can [res
 
 You should now be able to log in to Braze using Okta!
 
-[1]: {% image_buster/assets/img/Okta/okta1.png %}
-[2]: {% image_buster /assets/img/Okta/okta2.png %}
-[4]: {% image_buster /assets/img/Okta/okta4.png %}
-[7]: {% image_buster /assets/img/Okta/okta5.png %}
-[5]: {% image_buster /assets/img/sso2.png %}
-[6]: {% image_buster /assets/img/samlsso.gif %}

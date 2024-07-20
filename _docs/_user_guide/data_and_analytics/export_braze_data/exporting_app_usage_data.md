@@ -66,5 +66,3 @@ You can export CSVs with the following data:
 For help with CSV and API exports, visit our [export troubleshooting]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/) article.
 {% endalert %}
 
-[1]: {% image_buster /assets/img_archive/home_dashboard_select_date.png %}
-[2]: {% image_buster /assets/img_archive/home_dashboard_export.png %}

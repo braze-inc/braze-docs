@@ -70,12 +70,3 @@ Add final pieces.
 
   - For SDK version 1.7.0 or higher, you will need to copy "assets/fontawesome-webfont.ttf" from our library project to your application. Eclipse does not automatically include the assets folder from libraries.
 
-[03]: https://github.com/braze-inc/braze-android-sdk "Appboy Android GitHub Repository"
-[04]: {{site.baseurl}}/assets/img_archive/file_import.png
-[05]: {{site.baseurl}}/assets/img_archive/android_import.png
-[06]: {{site.baseurl}}/assets/img_archive/click_browse.png
-[07]: {{site.baseurl}}/assets/img_archive/select_project_android.png
-[08]: {{site.baseurl}}/assets/img_archive/click_properties.png
-[09]: {{site.baseurl}}/assets/img_archive/add_appboy_ui.png
-[10]: {{site.baseurl}}/assets/img_archive/build_target.png
-[11]: {{site.baseurl}}/assets/img_archive/android_support_v4.png

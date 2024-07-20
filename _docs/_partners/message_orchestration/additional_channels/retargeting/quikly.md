@@ -177,7 +177,3 @@ Remember to save your template before leaving the page! <br>Updated webhook temp
 ## Support
 Reach out to your client success manager at Quikly with any questions.
 
-[1]: https://www.quikly.com
-[2]: {{site.baseurl}}/developer_guide/rest_api/basics/#endpoints
-[3]: https://www.quikly.com/urgency-marketing/platform/product-overview/hype
-[4]: https://www.quikly.com/urgency-marketing/platform/product-overview/swap

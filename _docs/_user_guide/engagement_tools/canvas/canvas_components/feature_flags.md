@@ -39,7 +39,3 @@ Canvas and a feature flag rollout (dragging the slider) can work independently o
 
 Similarly, if a user qualifies for a feature flag rollout with certain properties, if they also enter into the Canvas step, they will receive any overwritten values from that Canvas step.
 
-[1]: {{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/
-[2]: {{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step#experiment-paths
-[3]: {% image_buster /assets/img/feature_flags/feature_flag_canvas_step.png %} 
-[4]: {% image_buster /assets/img/feature_flags/feature_flags_canvas_details.png %} 

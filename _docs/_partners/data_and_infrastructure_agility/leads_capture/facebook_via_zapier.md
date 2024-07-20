@@ -170,12 +170,3 @@ For more troubleshooting tips, refer to Zapier’s <a href="https://help.zapier.
 {% endalert %}
 
 
-[1]: {{site.baseurl}}/api/basics/#api-definitions
-[2]: {% image_buster /assets/img/fb_lead_ads_zapier/integration1.png %}
-[3]: {% image_buster /assets/img/fb_lead_ads_zapier/integration2.png %}
-[4]: {% image_buster /assets/img/fb_lead_ads_zapier/create_zap1.png %}
-[5]: {% image_buster /assets/img/fb_lead_ads_zapier/create_zap2.png %}
-[6]: {% image_buster /assets/img/fb_lead_ads_zapier/create_zap3.png %}
-[7]: {% image_buster /assets/img/fb_lead_ads_zapier/create_zap4.png %}
-[8]: {% image_buster /assets/img/fb_lead_ads_zapier/create_zap5.png %}
-[9]: {% image_buster /assets/img/fb_lead_ads_zapier/configuration_example.png %}

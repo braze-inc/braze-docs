@@ -109,7 +109,3 @@ Refer to the following table for definitions of Message component metrics:
 ![]({% image_buster /assets/img/canvas_components/message_step3.png %}){: style="max-width:20%;"}
 
 
-[1]: {% image_buster /assets/img/canvas_components/message_step1.png %}
-[2]: {% image_buster /assets/img/canvas_components/message_step2.png %}
-[3]: {% image_buster /assets/img/canvas_components/message_step3.png %}
-[4]: {% image_buster /assets/img/canvas_components/message_step4.png %}

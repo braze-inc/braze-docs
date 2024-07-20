@@ -27,6 +27,3 @@ You can also choose to unarchive a Canvas. You can either search for the Canvas,
 
 ![]({% image_buster /assets/img_archive/unarchive_canvas.png %})
 
-[1]: {% image_buster /assets/img_archive/archive_canvas1.png %}
-[2]: {% image_buster /assets/img_archive/archived_canvas.png %}
-[3]: {% image_buster /assets/img_archive/unarchive_canvas.png %}

@@ -112,11 +112,3 @@ Set up an Engagement Report to keep an eye on the volume of all campaigns with a
 
 
 
-[1]: {% image_buster /assets/img_archive/tag_nested.png %}
-[2]: {% image_buster /assets/img_archive/tags_add_tag.png %}
-[3]: {% image_buster /assets/img_archive/tag_details_page.png %}
-[4]: {% image_buster /assets/img_archive/tags_grid.png %}
-[5]: {% image_buster /assets/img_archive/tags_apply_multiple.png %}
-[6]: {% image_buster /assets/img_archive/tags_filtering.png %}
-[7]: {% image_buster /assets/img_archive/Tags-Potential_Tags.png %}
-[8]: {% image_buster /assets/img_archive/tags_view.png %}

@@ -96,10 +96,3 @@ Users that have integrated a cloud data storage solution, and are trying to expo
 - All API exports will not return a download URL in the response body and must be retrieved through data storage.
 - All dashboard reports and CSV reports will be sent to the users email for download (no storage permissions required) and backed up on Data Storage. 
 
-[2]: {% image_buster /assets/img/gcs1.png %}
-[3]: {% image_buster /assets/img/gcs2.png %}
-[4]: {% image_buster /assets/img/gcs3.png %}
-[5]: {% image_buster /assets/img/gcs4.png %}
-[6]: {% image_buster /assets/img/gcs5.png %}
-[7]: {% image_buster /assets/img/gcs6.png %}
-[8]: {% image_buster /assets/img/gcs7.png %}

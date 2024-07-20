@@ -137,8 +137,3 @@ void deepLinkAlert(String link, BuildContext context) {
 }
 ```
 
-[1]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/#what-is-deep-linking
-[2]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/deep_linking/
-[3]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/advanced_use_cases/linking/
-[4]: {% image_buster /assets/img/flutter/flutter-ios-deep-link-info-plist.png %} "Xcode Project Info.plist File"
-[5]: https://github.com/braze-inc/braze-flutter-sdk/tree/master/example

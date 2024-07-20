@@ -155,5 +155,4 @@ Note the following is not a comprehensive list of what is copied across workspac
 {% endtab %}
 {% endtabs %}
 
-[1]: {% image_buster /assets/img_archive/clone_campaign.png %}
 

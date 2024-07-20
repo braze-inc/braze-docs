@@ -209,22 +209,4 @@ You do not need to use this method for STOP messages. The confirmation message w
 - A WhatsApp template must be approved to send it as a response message. This is because a quick response requires the inbound message trigger to be inside the same campaign or Canvas. If you use a [User Update step](#user-update-step), you can send a quick response message without Meta approval.
 
 
-[1]: {% image_buster /assets/img/whatsapp/whatsapp111.png %} 
-[2]: {% image_buster /assets/img/whatsapp/whatsapp112.png %} 
-[3]: {% image_buster /assets/img/whatsapp/whatsapp113.png %} 
-[4]: {% image_buster /assets/img/whatsapp/whatsapp114.png %} 
-[5]: {% image_buster /assets/img/whatsapp/whatsapp115.png %} 
-[6]: {% image_buster /assets/img/whatsapp/whatsapp116.png %} 
-[7]: {% image_buster /assets/img/whatsapp/whatsapp117.png %} 
-[8]: {% image_buster /assets/img/whatsapp/whatsapp118.png %} 
-[9]: {% image_buster /assets/img/whatsapp/whatsapp119.png %} 
-[10]: {% image_buster /assets/img/whatsapp/whatsapp120.png %} 
-[11]: {% image_buster /assets/img/whatsapp/whatsapp121.png %} 
-[12]: {% image_buster /assets/img/whatsapp/whatsapp122.png %} 
-[13]: {% image_buster /assets/img/whatsapp/whatsapp_inbound_message.png %} 
-[14]: {% image_buster /assets/img/whatsapp/user_update.png %} 
-[15]: {% image_buster /assets/img/whatsapp/message_step.png %} 
-[16]: {% image_buster /assets/img/whatsapp/webhook_step.png %} 
-[17]: {% image_buster /assets/img/whatsapp/webhook_url.png %} 
-[18]: {% image_buster /assets/img/whatsapp/request_parameters.png %} 
 [19]: {% image_buster /assets/img/whatsapp/campaigns_webhook_url.png %} 

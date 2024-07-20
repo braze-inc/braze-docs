@@ -87,4 +87,3 @@ Clicks and impressions must be manually logged for Content Cards not displayed d
 
 Use `LogClick()` and `LogImpression()` on [ContentCard](https://github.com/braze-inc/braze-unity-sdk/blob/master/Assets/Plugins/Appboy/Models/Cards/ContentCard.cs) to log clicks and impressions for specific cards.
 
-[17]: https://github.com/braze-inc/braze-unity-sdk/blob/master/Assets/Plugins/Appboy/Models/Cards/ContentCard.cs

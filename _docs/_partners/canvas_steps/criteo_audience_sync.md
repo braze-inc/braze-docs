@@ -170,16 +170,3 @@ If you breach this limit, Braze will notify you that we are unable to create new
 You will need to go into your Criteo ads account and remove audiences that you are no longer using.
 {% enddetails %} 
 
-[0]: {% image_buster /assets/img/criteo/criteo.png %}
-[1]: {% image_buster /assets/img/criteo/criteo1.png %}
-[2]: {% image_buster /assets/img/criteo/criteo2.png %}
-[3]: {% image_buster /assets/img/criteo/criteo3.png %}
-[4]: {% image_buster /assets/img/criteo/criteo4.png %}
-[5]: {% image_buster /assets/img/criteo/criteo5.png %}
-[6]: {% image_buster /assets/img/criteo/criteo6.png %}
-[7]: {% image_buster /assets/img/criteo/criteo7.png %}
-[8]: {% image_buster /assets/img/criteo/criteo8.png %}
-[9]: {% image_buster /assets/img/criteo/criteo9.png %}
-[10]: {% image_buster /assets/img/criteo/criteo10.png %}
-[11]: {% image_buster /assets/img/criteo/criteo11.png %}
-[12]: {% image_buster /assets/img/criteo/criteo12.png %}

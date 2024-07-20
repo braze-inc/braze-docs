@@ -140,11 +140,3 @@ Braze will now be able to collect [specified data from your application]({{site.
 
 Visit the following articles in order to enable [custom event tracking]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/tracking_custom_events/), [push messaging]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/integration/standard_integration/), [Content Cards]({{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/integration/) and the complete suite of Braze features.
 
-[1]: {{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints
-[2]: {{site.baseurl}}/user_guide/introduction/
-[32]: {% image_buster /assets/img_archive/androidstudio2.png %}
-[38]: {% image_buster /assets/img_archive/androidstudio3.png %}
-[46]: https://developer.android.com/training/permissions/index.html
-[60]: https://github.com/braze-inc/braze-android-sdk/blob/master/CHANGELOG.md
-[63]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze-activity-lifecycle-callback-listener/index.html
-[64]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage/-braze-in-app-message-manager/ensure-subscribed-to-in-app-message-events.html

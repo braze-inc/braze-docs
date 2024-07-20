@@ -43,7 +43,3 @@ Your sound must be hosted locally within the app. You must specify a protocol UR
 
 If the specified sound file doesn't exist or the keyword "default" is entered, Braze will use the default device alert sound. Aside from our dashboard, sound can also be configured via our [messaging API]({{site.baseurl}}/api/endpoints/messaging/). See the Apple Developer Documentation regarding [preparing custom alert sounds](https://developer.apple.com/library/content/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/SupportingNotificationsinYourApp.html) for additional information.
 
-[8]: {% image_buster /assets/img_archive/sound_push_ios.png %}
-[9]: https://developer.apple.com/library/content/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/SupportingNotificationsinYourApp.html
-[12]: {{site.baseurl}}/api/endpoints/messaging/
-[25]: {{site.baseurl}}/api/endpoints/messaging/

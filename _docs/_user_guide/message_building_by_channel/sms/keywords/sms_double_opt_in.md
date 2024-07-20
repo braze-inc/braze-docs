@@ -79,7 +79,3 @@ For inbound messages, SMS double opt-in is supported for all languages defined i
 
 Users who enter the SMS double opt-in workflow through subscription updates that occur outside of inbound messages (for example, SDK, REST API, Shopify) will only be sent the English keywords.
 
-[1]: {% image_buster /assets/img/double_opt_in_inbound.png %}
-[2]: {% image_buster /assets/img/double_opt_in_outbound.png %}
-[3]: {% image_buster /assets/img/double_opt_in_method.png %}
-[4]: {% image_buster /assets/img/double_opt_in_fields.png %}

@@ -56,7 +56,3 @@ Apple devices will not be affected by Braze's planned deprecation because Apple 
 Finally, because of the known weaknesses in TLS 1.0 and the TLS 1.1 cipher suite, it's possible that attacks could arise in the future which would require Braze to speed up our deprecation plan, in order to safeguard the security of all our customers. Braze will monitor the state of security and any relevant attacks associated with TLS 1.0 and 1.1 protocols, and will keep you in the loop if we learn of any attacks that will alter the timeline laid out in the preceding sections. But because of this potential impact, we highly recommend that you work with your engineering team to ensure that your API calls to Braze are secured with TLS 1.2, and that you plan to upgrade to the latest Android SDK in the coming months.
 
 
-[1]: https://www.us-cert.gov/ncas/alerts/TA14-290A
-[2]: https://en.wikipedia.org/wiki/Heartbleed
-[3]: https://en.wikipedia.org/wiki/Logjam_(computer_security)
-[4]: https://en.wikipedia.org/wiki/Payment_Card_Industry_Data_Security_Standard

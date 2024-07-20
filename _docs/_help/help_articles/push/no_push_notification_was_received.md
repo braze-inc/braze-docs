@@ -67,16 +67,3 @@ Still need help? Open a [support ticket]({{site.baseurl}}/braze_support/).
 
 _Last updated on January 21, 2021_
 
-[1]: {{site.baseurl}}/user_guide/engagement_tools/segments/using_user_search/#engagement-tab
-[2]: {% image_buster /assets/img_archive/trouble1.png %}
-[3]: {% image_buster /assets/img_archive/trouble2.png %}
-[4]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/rate-limiting/#freq-cap-feat-over
-[5]: {% image_buster /assets/img_archive/trouble3.png %}
-[6]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/multivariate_testing/#step-5-distribute-users-among-your-variants
-[7]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/retargeting_campaigns/#in-campaign-control-group-filter
-[8]: {{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/segment_data_to_csv/#exporting-to-csv
-[9]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/rate-limiting/#rate-limiting
-[10]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/troubleshooting/
-[11]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/troubleshooting
-[12]: {{site.baseurl}}/api/endpoints/export/user_data/post_users_identifier
-[13]: {{site.baseurl}}/api/endpoints/export/user_data/post_users_segment

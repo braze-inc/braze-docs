@@ -127,7 +127,3 @@ Various attributes come under different sections of the user dashboard within Br
 
 Users can create campaigns within Braze and activate users in real-time or based on the scheduled time. Campaigns can be triggered based on the actions performed by the user (custom event, purchase) or user attributes.
 
-[1]: {% image_buster /assets/img/zeotap/zeotap5.png %}
-[2]: {% image_buster /assets/img/zeotap/zeotap6.jpg %}
-[3]: {% image_buster /assets/img/zeotap/zeotap7.png %}
-[4]: {% image_buster /assets/img/zeotap/zeotap8.png %}

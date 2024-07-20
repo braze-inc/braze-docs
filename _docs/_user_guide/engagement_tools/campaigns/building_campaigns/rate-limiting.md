@@ -254,14 +254,3 @@ For example, you might set up the following rule:
 
 This rule will ensure that no users receive more than 100 emails per week because, at most, users will receive three emails per week from campaigns or Canvas components with frequency capping turned on.
 
-[11]: {% image_buster /assets/img/global_rules.png %} "global rules"
-[12]: {% image_buster /assets/img/tag_rule_fnfn.png %} "rules"
-[13]: {% image_buster /assets/img/standard_rules_fnfn.png %} "rules standard"
-[1]: {% image_buster /assets/img_archive/rate_limit_daily.png %}
-[2]: {% image_buster /assets/img_archive/total_limit.png %}
-[3]: {% image_buster /assets/img_archive/per_minute_rate_limit.png %}
-[14]: {% image_buster /assets/img_archive/rate_limiting_overview_2.png %}
-[15]: {{site.baseurl}}/developer_guide/rest_api/messaging/#messaging
-[16]: {{site.baseurl}}/developer_guide/rest_api/api_campaigns/#api-campaigns
-[18]: {% image_buster /assets/img_archive/frequencycappingupdate.png %}
-[19]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/connected_content_retries/

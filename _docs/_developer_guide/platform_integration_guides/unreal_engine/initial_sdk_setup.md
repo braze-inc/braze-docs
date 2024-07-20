@@ -24,5 +24,3 @@ To learn more about the Braze Unreal Engine plugin, visit our [GitHub repository
 
 ![The Braze Unreal SDK plugin viewed in the Unreal Engine UI.]({% image_buster /assets/img/unreal_engine/EnablePlugin.png %})
 
-[1]: https://github.com/braze-inc/braze-unreal-sdk
-[2]: {% image_buster /assets/img/unreal_engine/EnablePlugin.png %}

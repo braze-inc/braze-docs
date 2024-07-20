@@ -103,4 +103,3 @@ These terms are reinterpreted from [**Shopify's documentation**](https://shopify
 
 <br>
 
-[1]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/

@@ -459,14 +459,3 @@ When a request is rejected because of an authentication error, the SDK will invo
 
 Requests will retry periodically using an exponential backoff approach. After 50 consecutive failed attempts, retries will be paused until the next session start. Each SDK also has a method to manually request a data flush.
 
-[1]: #server-side-integration
-[2]: #sdk-integration
-[3]: #key-management
-[4]: #braze-dashboard
-[5]: #create-jwt
-[6]: #enforcement-options
-[7]: #sdk-callback
-[8]: {% image_buster /assets/img/sdk-auth-settings.png %}
-[9]: #error-codes
-[10]: {% image_buster /assets/img/sdk-auth-analytics.png %}
-[11]: https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#changeuser

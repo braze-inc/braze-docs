@@ -158,13 +158,3 @@ If you're looking for records related to one of your verified domains in Braze, 
 {% endalert %}
 
 
-[1]: https://www.gmail.com/postmaster/
-[2]: https://developers.google.com/gmail/markup/registering-with-google
-[3]: {% image_buster /assets/img_archive/deliverability_center1.png %}
-[4]: https://support.google.com/mail/answer/9981691?hl=en
-[5]: {% image_buster /assets/img_archive/deliverability_center2.png %}
-[6]: {{site.baseurl}}/user_guide/onboarding_with_braze/email_setup/deliverability_pitfalls_and_spam_traps/#deliverability-pitfalls-and-spam-traps
-[7]: {{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices/
-[8]: {% image_buster /assets/img_archive/deliverability_center_msnds.png %}
-[9]: {% image_buster /assets/img_archive/domain_authentication.png %}
-[10]: {% image_buster /assets/img_archive/domain_verification.png %}

@@ -100,8 +100,3 @@ The MAU value is calculated nightly and will not update until the next day.
 
 *Daily Sessions per MAU* is the ratio of Daily Sessions to MAU on a given day. This statistic tells you how many sessions per day you can expect to have logged per MAU. On aggregate, this can give you an idea of the relative frequency of when your users use your app or site. That is, if your *Daily Sessions per MAU* were on average 0.5, then you could expect each MAU to record a session about every 2 days.  
 
-[1]: {% image_buster /assets/img_archive/home_dashboard.png %}
-[2]: {% image_buster /assets/img_archive/home_dashboard_breakdown.png %}
-[3]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/capturing_lapsing_users/#capturing-lapsing-users
-[4]: {% image_buster /assets/img_archive/home_dashboard_metric_tile.png %}
-[5]: {% image_buster /assets/img_archive/home_dashboard_select_date.png %}

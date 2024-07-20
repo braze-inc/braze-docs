@@ -79,4 +79,3 @@ Delays have three statistics available in the analytics view of an active or pre
 
 Time series for these analytics are available in the expanded component view.
 
-[1]: {% image_buster /assets/img/canvas_delay.png %}

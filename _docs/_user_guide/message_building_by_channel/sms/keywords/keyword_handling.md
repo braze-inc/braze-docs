@@ -134,15 +134,3 @@ This can be done by creating an SMS campaign with a message like "Sorry! We didn
 Interested in seeing how these keywords and keyword categories can be used in your campaigns and Canvases to retarget and trigger messages? Visit our [SMS retargeting]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/retargeting/) article for more information.
 {% endalert %}
 
-[oblink]: {{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_subscription_group/#setup-process
-[1]: {% image_buster /assets/img/sms/keyword_edit2.png %}
-[2]: {% image_buster /assets/img/sms/keyword_home.png %}
-[unknown]: {{site.baseurl}}/user_guide/message_building_by_channel/sms/keywords/unknown_phone_numbers/
-[endpoint]: {{site.baseurl}}/api/endpoints/user_data/post_user_alias/
-[IMAGE2]: {% image_buster /assets/img/sms/sms_message_body.png %}
-[5]: {% image_buster /assets/img/sms/multi-language2.png %}
-[12]: {% image_buster /assets/img/sms/sms_custom_keyword.png %}
-[13]: {% image_buster /assets/img/sms/sms_custom_step.png %}
-[14]: {% image_buster /assets/img/sms/canvas_trigger.png %}
-[15]: {% image_buster /assets/img/sms/campaign_trigger.png %}
-[16]: {% image_buster /assets/img/sms/multi-language.png %}

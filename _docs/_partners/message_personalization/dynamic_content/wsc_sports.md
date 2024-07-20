@@ -55,5 +55,3 @@ The resulting body of the message is as follows:
 
 At this point, your campaign should be ready to test and send. Check the Braze error message logs if you run into errors. 
 
-[1]: https://wsc-sports.com/
-[2]: {% image_buster /assets/img/wsc_sports/braze_integration.jpg %} "braze_integration.jpg"

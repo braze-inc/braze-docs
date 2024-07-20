@@ -203,16 +203,3 @@ If the API call responds with `{{local_weather[0].WeatherText}}` returning `Rain
 {% endtabs %}
 
 [16]: [success@braze.com](mailto:success@braze.com)
-[17]: {% image_buster /assets/img_archive/connected_weather_push2.png %} "Connected Content Push Usage Example"
-[48]: https://apidev.accuweather.com/developers/locationsAPIguide
-[49]: https://apidev.accuweather.com/developers/forecastsAPIguide
-[50]: https://apidev.accuweather.com/developers/currentConditionsAPIGuide
-[51]: https://apidev.accuweather.com/developers/indicesApiGuide
-[52]: https://apidev.accuweather.com/developers/weatheralarmsAPIguide
-[53]: https://apidev.accuweather.com/developers/alertsApiGuide
-[54]: https://apidev.accuweather.com/developers/imageryAPIguide
-[55]: https://apidev.accuweather.com/developers/tropicalAPIGuide
-[56]: https://apidev.accuweather.com/developers/translationsApiGuide
-[57]: https://apidev.accuweather.com/developers/
-[58]: https://apidev.accuweather.com/developers/weatheralarms
-[60]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/about_connected_content/

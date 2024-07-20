@@ -192,16 +192,6 @@ Next, select the job type. To import Braze CSV files into Lytics, select **Impor
 
 Finally, input a label and optional description for the job and configure any other required details. Click **Complete** to initiate and save the job.
 
-[1]: https://www.lytics.com/
-[2]: {% image_buster /assets/img/lytics/braze_authorization.png %}
-[3]: {% image_buster /assets/img/lytics/braze_jobtype.png %}
-[4]: {% image_buster /assets/img/lytics/braze_jobauth.png %}
-[5]: {% image_buster /assets/img/lytics/braze_job.png %}
-[6]: {% image_buster /assets/img/lytics/braze_backfill.png %}
-[7]: {% image_buster /assets/img/lytics/create_token.png %}
-[8]: {% image_buster /assets/img/lytics/data_manager.png %}
-[9]: {% image_buster /assets/img/lytics/authorization_method.png %}
-[10]: {% image_buster /assets/img/lytics/configure_job.png %}
 
 
 

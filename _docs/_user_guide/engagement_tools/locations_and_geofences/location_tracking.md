@@ -59,13 +59,3 @@ You can also leverage location tracking with some of our partners:
 
 Check out our [Locations FAQ]({{site.baseurl}}/user_guide/engagement_tools/locations_and_geofences/faqs/#locations) for answers to frequently asked questions about locations.
 
-[1]: {{site.baseurl}}/user_guide/engagement_tools/segments/location_targeting/
-[2]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/location_tracking/
-[3]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/location_tracking/
-[4]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/location_tracking/
-[6]: {{site.baseurl}}/partners/data_augmentation/contextual_location/radar/
-[7]: {{site.baseurl}}/partners/data_augmentation/contextual_location/foursquare/
-[8]: {{site.baseurl}}/api/endpoints/user_data/post_user_track/
-[9]: {{site.baseurl}}/api/objects_filters/user_attributes_object/
-[10]: {{site.baseurl}}/partners/data_augmentation/contextual_location/gimbal/
-[11]: {{site.baseurl}}/user_guide/engagement_tools/locations_and_geofences/faqs/#locations

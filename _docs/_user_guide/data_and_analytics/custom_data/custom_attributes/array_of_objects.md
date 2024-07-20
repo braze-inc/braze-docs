@@ -629,6 +629,3 @@ Removing an object from an array consumes one data point for each removal criter
 {% endtab %}
 {% endtabs %}
 
-[1]: {% image_buster /assets/img_archive/array_of_objects_segmenting_1.gif %}
-[2]: {% image_buster /assets/img_archive/array_of_objects_segmenting_2.png %}
-[3]: {% image_buster /assets/img_archive/array_of_objects_segmenting_3.png %}

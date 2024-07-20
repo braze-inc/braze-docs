@@ -33,6 +33,3 @@ Users may be attracted to your app by a promotional offer or giveaway. Using ins
 
 Install attribution data can be valuable in assessing the effectiveness of different marketing campaigns. Looking through to see which ads and campaigns are leading to the most installs and which are falling behind can be used to focus your resources in the most compelling ads.
 
-[2]: {{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/#install-attribution
-[3]: {% image_buster /assets/img_archive/install_onboarding.png %}
-[5]: {{site.baseurl}}/developer_guide/rest_api/messaging/#canvas

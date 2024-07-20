@@ -60,7 +60,3 @@ By default, all fields are enabled. Note that without some properties, not all f
 
 To read more about the automatically collected device properties, visit our [SDK data collection]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/sdk_data_collection/).
 
-[1]: https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/configuration-swift.class/deviceproperty
-[2]: https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/configuration-swift.class/deviceproperty/carrier
-[3]: https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/configuration-swift.class/devicepropertyallowlist
-[4]: {{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/sdk_data_collection/

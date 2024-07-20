@@ -110,8 +110,3 @@ class NotificationService: UNNotificationServiceExtension {
 
 Your Marketing team can also create rich notifications from the dashboard. Create a push notification through the push composer and simply attach an image or GIF, or provide a URL that hosts an image, GIF, or video. Note that assets are downloaded on the receipt of push notifications, so you should plan for large, synchronous spikes in requests if you are hosting your content.
 
-[1]: https://github.com/braze-inc/braze-swift-sdk/blob/main/Examples/Swift/Sources/PushNotificationsServiceExtension/NotificationService.swift
-[23]: https://developer.apple.com/reference/usernotifications/unnotificationserviceextension
-[26]: {% image_buster /assets/img_archive/ios10_se_at.png %}
-[27]: https://developer.apple.com
-[28]: https://developer.apple.com/reference/usernotifications/unnotificationattachment

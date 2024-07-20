@@ -67,5 +67,3 @@ No, Braze doesn't store geofence data on user profiles. Geofences are monitored 
 
 As a best practice, avoid setting up geofences inside each other as this may cause issues with triggering notifications.
 
-[3]: https://developers.google.com/android/reference/com/google/android/gms/location/package-summary
-[4]: https://developer.apple.com/library/content/documentation/UserExperience/Conceptual/LocationAwarenessPG/RegionMonitoring/RegionMonitoring.html

@@ -257,7 +257,3 @@ If a webhook call results in an HTTP response status code of `429 - Too Many Req
 Webhooks may therefore be received multiple times by a subscriber. It is up to the subscriber to ignore duplicates by checking the `X-Olo-Message-Id` header.
 
 
-[1]: https://www.olo.com/
-[2]: https://olosupport.zendesk.com/hc/en-us/articles/360061153692-Self-Service-Webhooks
-[3]: https://developer.olo.com/docs/load/webhooks#operation/test
-[4]: https://olosupport.zendesk.com/hc/en-us/articles/115001427843-Dashboard-Permissions

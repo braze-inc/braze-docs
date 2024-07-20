@@ -85,9 +85,3 @@ To create a rich notification in your Braze dashboard, create an iOS push, attac
 
 Refer to [`unnotificationattachment`](https://developer.apple.com/reference/usernotifications/unnotificationattachment) for a list of supported file types and sizes.
 
-[1]: https://github.com/Appboy/appboy-ios-sdk/blob/master/Example/StopwatchNotificationService/NotificationService.m
-[2]: https://github.com/Appboy/appboy-ios-sdk/blob/master/HelloSwift/HelloSwiftNotificationExtension/NotificationService.swift
-[23]: https://developer.apple.com/reference/usernotifications/unnotificationserviceextension
-[26]: {% image_buster /assets/img_archive/ios10_se_at.png %}
-[27]: https://developer.apple.com
-[28]: https://developer.apple.com/reference/usernotifications/unnotificationattachment

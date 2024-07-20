@@ -96,6 +96,3 @@ function getPushStatus(event){
 
 <script src="https://braze-inc.github.io/embed-like-gist/embed.js?target=https%3A%2F%2Fgithub.com%2Fbraze-inc%2Fbraze-web-sdk%2Fblob%2Fmaster%2Fsnippets%2Falternate-push-domain-status.html&style=github&showBorder=on&showLineNumbers=on&showFileMeta=on&showCopy=on"></script>
 
-[1]: https://www.w3.org/TR/service-workers/#security-considerations
-[2]: https://w3c.github.io/webappsec-secure-contexts/
-[3]: https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage

@@ -140,14 +140,4 @@ XNHostFilter *brazeAssetsHostFilter = [[XNHostFilter alloc] initWithHost: @"http
 {% endtab %}
 {% endtabs %}
 
-[iam_1]: {{ site.baseurl }}/user_guide/administrative/app_settings/developer_console/internal_groups_tab/#adding-test-users
-[iam_2]: {{ site.baseurl }}/user_guide/administrative/app_settings/developer_console/event_user_log_tab/#event-user-log-tab
-[iam_3]: {{ site.baseurl }}/user_guide/administrative/app_settings/developer_console/event_user_log_tab/#event-user-log-tab
-[iam_5]:  {% image_buster /assets/img_archive/event_user_log_iams.png %}
-[iam_6]: {{ site.baseurl }}/user_guide/engagement_tools/segments/user_profiles/#engagement-tab
-[iam_7]: {{ site.baseurl }}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/reeligibility/
-[iam_8]: {{ site.baseurl }}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/#frequency-capping
-[iam_10]: {% image_buster /assets/img_archive/event_user_log_session_start.png %}
-[iam_11]: #troubleshooting-in-app-message-delivery
-[iam_12]: #troubleshooting-in-app-message-display
 

@@ -48,8 +48,4 @@ In most cases, Intelligent Selection will choose one of the variants as the Winn
 It's possible for Intelligent Selection to stop optimizing without picking a single clear winner. Intelligent Selection stops optimizing when it has a 95% confidence that continuing the experiment won't improve the conversion rate by more than 1% of its present rate.
 {% endalert %}
 
-[1]: {{site.baseurl}}/user_guide/intelligence/multivariate_testing/
-[2]: {% image_buster /assets/img/intelligent_selection.png %}
-[3]: {% image_buster /assets/img/intelligent_selection1.png %}
-[227]: https://en.wikipedia.org/wiki/Multi-armed_bandit
 

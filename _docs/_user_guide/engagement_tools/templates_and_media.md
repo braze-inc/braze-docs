@@ -40,9 +40,3 @@ You can use and manage templates and creative content in the **Templates** secti
 - **[Manage assets in the media library]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/media_library/#media-library)**
 <br><br><br>
 
-[2]: {{site.baseurl}}/user_guide/message_building_by_channel/email/creating_an_email_template/#creating-an-email-template
-[3]: {{site.baseurl}}/user_guide/message_building_by_channel/webhooks/webhook_template/#creating-a-webhook-template
-[4]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/#color-profile
-[5]: {{site.baseurl}}/user_guide/engagement_tools/templates_and_media/media_library/#media-library
-[6]: {{site.baseurl}}/user_guide/message_building_by_channel/email/link_templates/#link-templates
-[7]: {{site.baseurl}}/user_guide/engagement_tools/templates_and_media/content_blocks/

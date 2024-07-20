@@ -72,15 +72,3 @@ If your app is successfully requesting and receiving in-app messages, but they a
 - Failed image downloads will prevent in-app messages with images from displaying. Image downloads will always fail if the `BrazeInAppMessageManager` is not registered properly. Check your device logs to ensure that image downloads are not failing.
 - If the device orientation does not match the orientation specified by the in-app message, the in-app message will not display. Make sure that your device is in the correct orientation.
 
-[troubleshooting_iams_1]: {{ site.baseurl }}/user_guide/administrative/app_settings/developer_console/internal_groups_tab/#adding-test-users
-[troubleshooting_iams_2]: {{ site.baseurl }}/user_guide/administrative/app_settings/developer_console/event_user_log_tab/#event-user-log-tab
-[troubleshooting_iams_3]: {{ site.baseurl }}/user_guide/administrative/app_settings/developer_console/event_user_log_tab/#event-user-log-tab
-[troubleshooting_iams_4]: #session-tracking
-[troubleshooting_iams_5]:  {% image_buster /assets/img_archive/event_user_log_iams.png %}
-[troubleshooting_iams_6]: {{ site.baseurl }}/user_guide/engagement_tools/segments/using_user_search/#engagement-tab
-[troubleshooting_iams_7]: {{ site.baseurl }}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/reeligibility/
-[troubleshooting_iams_8]: {{ site.baseurl }}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/#frequency-capping
-[troubleshooting_iams_9]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/in-app_messaging/in-app_message_delivery/#minimum-time-interval-between-triggers
-[troubleshooting_iams_10]: {% image_buster /assets/img_archive/event_user_log_session_start.png %}
-[troubleshooting_iams_11]: #troubleshooting-in-app-message-delivery
-[troubleshooting_iams_12]: #troubleshooting-in-app-message-display

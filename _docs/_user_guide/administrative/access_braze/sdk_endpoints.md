@@ -36,5 +36,3 @@ When integrating your SDK, use the SDK endpoint. When making calls to our REST A
 For details about accessing the API, see the [API overview article]({{site.baseurl}}/api/basics/). 
 
 
-[1]: https://learning.braze.com/braze-101
-[2]: {{site.baseurl}}/api/basics/

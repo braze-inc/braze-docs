@@ -35,7 +35,3 @@ Note that you must update to the latest version of Android (version 2.2.0+) and 
 You can now [preview your emails]({{site.baseurl}}/user_guide/message_building_by_channel/email/inbox_vision/#inbox-vision) based on your customer's platform, either via an overview page of thumbnails or a list view that includes a large screenshot and more specific analysis of any issues that may exist with the HTML rendering for each client. Contact your customer success manager or account manager for more information.
 
 
-[92]: {{site.baseurl}}/user_guide/onboarding/platform_administrative_features/#custom-event-and-attribute-management
-[94]: {{site.baseurl}}/user_guide/data_and_analytics/uninstall_tracking/#uninstall-tracking-for-campaigns
-[95]: {{site.baseurl}}/user_guide/message_building_by_channel/push/push_stories/#push-stories
-[96]: {{site.baseurl}}/user_guide/message_building_by_channel/email/inbox_vision/#inbox-vision

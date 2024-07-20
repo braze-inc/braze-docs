@@ -57,8 +57,3 @@ The ordering of SMS/MMS assets cannot be customized. The ordering is dependent o
 ![]({% image_buster /assets/img/sms/mms_preview.png %})
 
 
-[1]: {{ site.baseurl }}/user_guide/message_building_by_channel/sms/create/
-[2]: {% image_buster /assets/img/sms/mms_composer.png %}
-[3]: {% image_buster /assets/img/sms/mms_preview.png %}
-[4]: {% image_buster /assets/img/sms/contact_card1.png %}
-[5]: {% image_buster /assets/img/sms/contact_card2.png %}

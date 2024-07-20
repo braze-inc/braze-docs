@@ -267,14 +267,3 @@ There are a few considerations to be aware of when turning off **Include Enriche
 ### Sending unnecessary or duplicate data to Braze
 Braze counts a data point each time an attribute is passed to Braze, even if the value is unchanged. For this reason, Braze recommends only forwarding data needed to action on within Braze and ensuring that only deltas of attributes are being passed.
 
-[1]: https://dashboard.braze.com/app_settings/developer_console
-[2]: {% image_buster /assets/img_archive/dashboard_keys_locations.png %}
-[3]: {% image_buster /assets/img_archive/mParticle_event_config.png %}
-[4]: {% image_buster /assets/img_archive/mParticle_connections.png %}
-[6]: {% image_buster /assets/img_archive/mparticle1.png %}
-[7]: {% image_buster /assets/img_archive/mparticle2.png %}
-[8]: {% image_buster /assets/img_archive/mparticle3.png %}
-[9]: {% image_buster /assets/img_archive/mparticle4.png %}
-[10]: {% image_buster /assets/img_archive/configure_settings.png %}
-[11]: {% image_buster /assets/img_archive/mparticle5.png %}
-[5]: #embedded-kit-integration

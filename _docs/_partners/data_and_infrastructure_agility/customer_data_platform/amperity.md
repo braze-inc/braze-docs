@@ -191,10 +191,3 @@ To send Braze Currents data into Amperity:
 2. Configure Amperity to [read Apache Avro files from that Amazon S3 bucket](https://docs.amperity.com/datagrid/source_amazon_s3.html).
 3. Configure feeds and automate data loads using standard workflows.
 
-[1]: {% image_buster /assets/img/amperity/custom_attributes_filters.png %}
-[2]: {% image_buster /assets/img/amperity/search_custom_attributes_filters.png %}
-[3]: {% image_buster /assets/img/amperity/destination_name.png %}
-[4]: {% image_buster /assets/img/amperity/braze_settings.png %}
-[5]: {% image_buster /assets/img/amperity/data_template_name.png %}
-[6]: {% image_buster /assets/img/amperity/select_segments.png %}
-[7]: {% image_buster /assets/img/amperity/edit_campaign_attributes.png %}

@@ -25,6 +25,3 @@ You can now click a button to minimize the Canvas header for smaller screens and
 
 
 
-[16]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/
-[17]: {{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/
-[18]: {{site.baseurl}}/user_guide/message_building_by_channel/email/faq/

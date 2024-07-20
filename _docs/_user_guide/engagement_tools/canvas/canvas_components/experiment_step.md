@@ -89,11 +89,4 @@ For more information on analytics when **Winning Path** or **Personalized Paths*
 Experiment Paths will record users who enter each step and convert while in the assigned path. This will track all conversion events specified in the Canvas setup. On the **Additional Settings** tab, enter how many days (between 1 and 30) you'd like this experiment to track conversions. The time window you specify here will determine how long conversion events (chosen in Canvas setup) will be tracked for the experiment. The per-event conversion windows specified in Canvas setup will not apply to this step's tracking and will be replaced by this Conversion Window.
 
 
-[0]: {% image_buster /assets/img/experiment_step/experiment_step.png %}
-[1]: {% image_buster /assets/img/experiment_step/exp_settings.png %}
-[3]: {% image_buster /assets/img/experiment_step/experiment_downstream_paths.gif %}
 
-[WP]: {{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step/winning_path
-[WP_analytics]: {{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step/winning_path/#analytics
-[PP]: {{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step/personalized_paths
-[PP_analytics]: {{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step/personalized_paths/#analytics

@@ -41,12 +41,4 @@ We added the [Segment Membership filter]({{site.baseurl}}/user_guide/engagement_
 We updated the [Android preview]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/create/#step-5-preview-message) to reflect more recent versions of Android since Android N.
 
 
-[51]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/create/#step-5-preview-message
-[52]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/new_features/#targeting-filters
-[53]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/campaigns_in_multiple_languages/#step-6-preview-message
-[54]: {{site.baseurl}}/user_guide/message_building_by_channel/email/creating_an_email_template/#creating-an-email-template
-[55]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/personalized_messaging/#personalized-messaging
-[56]: {{site.baseurl}}/developer_guide/rest_api/basics/#what-is-a-rest-api
-[57]: {{site.baseurl}}/help/troubleshooting_guide/troubleshooting_guide/#email
-[58]: {{site.baseurl}}/user_guide/message_building_by_channel/push/web
 [98]:{{site.baseurl}}/user_guide/onboarding/platform_administrative_features/#authentication-rules

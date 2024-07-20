@@ -85,4 +85,3 @@ func inAppMessage(
 
 This method returns a boolean value to indicate if Braze should continue to execute the click action.
 
-[34]: https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazeinappmessageuidelegate

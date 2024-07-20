@@ -69,7 +69,3 @@ All terms and strings entered in this field will be searched for. For example, s
 
 ![The search results for entering "all users" into the search field include "All Users (Test)", "All Users", "All Users 15".]({% image_buster /assets/img/segment/segments_search.png %})
 
-[1]: {% image_buster /assets/img/segment/segments_page.png %}
-[2]: {% image_buster /assets/img/segment/segments_page_edit_menu.png %}
-[3]: {% image_buster /assets/img/segment/segments_bulk_action.png %}
-[4]: {% image_buster /assets/img/segment/segments_search.png %}

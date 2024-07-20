@@ -176,6 +176,3 @@ The following Liquid references would return this example data:
 
 If you have questions, contact [Hightouch support](mailto:friends@hightouch.com) for assistance.
 
-[1]: {% image_buster /assets/img/hightouch/cohort5.png %} 
-[2]: {% image_buster /assets/img/hightouch/cohort6.png %}  
-[3]: {% image_buster /assets/img/hightouch/cohort7.png %}  

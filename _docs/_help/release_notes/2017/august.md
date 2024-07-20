@@ -66,16 +66,4 @@ Now, you can receive consolidated data for every campaign and every Canvas in tw
 > As noted in our [September 2017 release notes]({{site.baseurl}}/help/release_notes/2017/september/), you can now aggregate data from a specific period of time as well as schedule exports to run on a recurring basis.
 
 
-[59]: {{site.baseurl}}/user_guide/data_and_analytics/reporting/engagement_reports/
-[60]: {{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/
-[61]: {{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/
-[62]: {{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/#segmentation-filters
-[63]: {{site.baseurl}}/help/troubleshooting_guide/troubleshooting_guide/#email
-[64]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/locations_and_geofences/
-[65]: {{site.baseurl}}/developer_guide/rest_api/basics/#what-is-a-rest-api
-[66]: {{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/
-[67]: {{site.baseurl}}/help/troubleshooting_guide/troubleshooting_guide/#email
-[68]: {{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/
-[69]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/personalized_messaging/#personalized-messaging
-[70]: {{site.baseurl}}/user_guide/message_building_by_channel/push/push_action_buttons/#how-to-use-action-buttons
 [98]:{{site.baseurl}}/user_guide/onboarding/platform_administrative_features/#authentication-rules

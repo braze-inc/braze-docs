@@ -162,20 +162,3 @@ You can view the Redpoint associated properties on the user profile.
 
 ![]({% image_buster /assets/img/redpoint/rpi_to_braze_record_example.png %}){: style="max-width:80%;"}
 
-[1]: {{site.baseurl}}/developer_guide/rest_api/basics/#endpoints
-[2]: https://www.redpointglobal.com
-[3]: https://support.redpointglobal.com/hc/en-us/restricted?return_to=https%3A%2F%2Fsupport.redpointglobal.com%2Fhc%2Fen-us
-[4]: {% image_buster /assets/img/redpoint/rpi_to_braze_custom_attributes.png %}
-[5]: {% image_buster /assets/img/redpoint/rpi_to_braze_auto_variables.png %}
-[6]: {% image_buster /assets/img/redpoint/rpi_to_braze_doc_injector_mappings.png %}
-[7]: {% image_buster /assets/img/redpoint/rpi_to_braze_upsert_export_format.png %}
-[8]: {% image_buster /assets/img/redpoint/rpi_to_braze_append_export_format.png %}
-[9]: {% image_buster /assets/img/redpoint/rpi_to_braze_channel_config_general.png %}
-[10]: {% image_buster /assets/img/redpoint/rpi_to_braze_channel_config_specific.png %}
-[11]: {% image_buster /assets/img/redpoint/rpi_to_braze_export_directory_setup.png %}
-[12]: {% image_buster /assets/img/redpoint/rpi_to_braze_build_braze_segment.png %}
-[13]: {% image_buster /assets/img/redpoint/rpi_to_braze_rpi_canvas.png %}
-[14]: {% image_buster /assets/img/redpoint/rpi_to_braze_channel_config_post_execution.png %}
-[15]: {% image_buster /assets/img/redpoint/rpi_to_braze_record_example.png %}
-[16]: {% image_buster /assets/img/redpoint/rpi_to_braze_export_format_config.png %}
-[17]: {{site.baseurl}}/api/objects_filters/user_attributes_object#braze-user-profile-fields

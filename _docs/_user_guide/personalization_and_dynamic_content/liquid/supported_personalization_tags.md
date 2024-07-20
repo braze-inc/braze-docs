@@ -279,19 +279,6 @@ It is between 2:00:00 pm and 2:59:59 pm PT!
 
 {% endraw %}
 
-[30]: https://shopify.dev/api/liquid/tags#syntax-tags
 [31]:https://docs.shopify.com/themes/liquid/tags/variable-tags
 [32]:https://docs.shopify.com/themes/liquid/tags/iteration-tags
-[33]: https://shopify.dev/api/liquid/tags#syntax-tags
-[38]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/about_connected_content/
-[4]: {% image_buster /assets/img_archive/personalized_firstname_.png %}
-[17]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/conditional_logic/
-[18]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/aborting_messages/
 [34]:{% image_buster /assets/img_archive/personalized_iflogic_.png %}
-[40]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/optional_idfa_collection/
-[43]: {{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#managing-user-subscriptions
-[46]: {{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/message_processing/user_messages/
-[47]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/setting_default_values/
-[48]: {{site.baseurl}}/user_guide/message_building_by_channel/sms/keywords/keyword_handling/#trigger-messages-by-keyword
-[49]: https://shopify.github.io/liquid/basics/whitespace/
-[50]: {{site.baseurl}}/help/help_articles/data/dispatch_id/

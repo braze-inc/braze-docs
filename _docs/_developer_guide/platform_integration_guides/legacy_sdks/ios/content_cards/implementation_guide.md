@@ -646,10 +646,3 @@ static NSString *const ContentCardKeyExtras = @"extras";
 {% endtabs %}
 {% enddetails %}
 
-[1]: {% image_buster /assets/img/cc_implementation/supplementary.png %}
-[2]: {% image_buster /assets/img/cc_implementation/supplementary_content.png %}
-[3]: {% image_buster /assets/img/cc_implementation/message_center.png %}
-[4]: {% image_buster /assets/img/cc_implementation/full_page.png %}
-[5]: {% image_buster /assets/img/cc_implementation/html_webview.png %}
-[6]: {% image_buster /assets/img/cc_implementation/discount2.png %}
-[7]: {% image_buster /assets/img/cc_implementation/discount.png %}

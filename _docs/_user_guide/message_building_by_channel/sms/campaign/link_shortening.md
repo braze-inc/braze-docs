@@ -192,14 +192,4 @@ Yes, a single domain can be used with multiple subscription groups. To do so, se
 
 Yes, domains can be associated with subscription groups in multiple workspaces, assuming the workspaces are contained within the same company.
 
-[1]: {% image_buster /assets/img/link_shortening/shortening1.png %} 
-[2]: {% image_buster /assets/img/link_shortening/shortening2.png %} 
-[3]: {% image_buster /assets/img/link_shortening/shortening3.png %} 
-[4]: {% image_buster /assets/img/link_shortening/shortening4.png %}
-[5]: {% image_buster /assets/img/sms/retargeting5.png %} 
-[6]: {% image_buster /assets/img/sms/retargeting4.png %}
-[7]: {% image_buster /assets/img/custom_domain.png %} 
-[8]: {% image_buster /assets/img/custom_domain2.png %} 
-[11]: {% image_buster /assets/img/sms/link_shortening10.png %} 
-[13]: {% image_buster /assets/img/link_shortening/shortening3.png %}   
 

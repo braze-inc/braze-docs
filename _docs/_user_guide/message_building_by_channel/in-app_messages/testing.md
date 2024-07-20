@@ -49,6 +49,3 @@ You can also preview messages from the **Test** tab, as though you were a user. 
 - Is your copy clear, concise, and correct?
 - Do your buttons direct the user where they should go?
 
-[1]: {%image_buster /assets/img/in-app-message-preview.png %}
-[2]: {% image_buster /assets/img/iam-generations.gif %}
-[3]: {% image_buster /assets/img/iam-user-preview.png %}

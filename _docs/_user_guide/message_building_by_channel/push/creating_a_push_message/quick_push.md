@@ -70,11 +70,4 @@ For more information on device-specific settings, refer to the following article
 - [Android options]({{site.baseurl}}/user_guide/message_building_by_channel/push/android)
 
 
-[1]: {% image_buster /assets/img_archive/quick_push_1.png %}
-[2]: {% image_buster /assets/img_archive/quick_push_2.png %}
-[4]: {% image_buster /assets/img_archive/quick_push_3.png %}
 
-[3]: {{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/message_format/
-[5]: {{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/
-[6]: {{site.baseurl}}/user_guide/message_building_by_channel/push/ios
-[7]: {{site.baseurl}}/user_guide/message_building_by_channel/push/android

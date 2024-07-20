@@ -86,5 +86,4 @@ The prediction will be automatically rebuilt ("retrained") every **two weeks** t
 
 Archived predictions will stop updating user scores. Any archived prediction that is unarchived will continue updating user scores on its predetermined schedule. Archived predictions are never deleted and remain in the list.
 
-[1]: {% image_buster /assets/img/purchasePrediction/purchases_step1.png %}
 

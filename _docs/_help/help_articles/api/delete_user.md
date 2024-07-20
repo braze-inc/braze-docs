@@ -38,5 +38,3 @@ To merge these user profiles:
 
 _Last updated on September 13, 2023_
 
-[1]: {{site.baseurl}}/api/endpoints/user_data/#user-delete-endpoint/
-[2]: {{site.baseurl}}/user_guide/data_and_analytics/analytics/understanding_your_app_usage_data/#lifetime-users

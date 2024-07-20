@@ -73,11 +73,3 @@ For segments, the larger your user base is, the more likely the **Reachable User
 
 In order to see what percentage of your user base is being targeted or the Lifetime Value (LTV) for this segment, click **Show Additional Stats** located after the statistics footer.
 
-[1]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/creating_campaign/
-[2]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/
-[3]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/rate-limiting/
-[4]: {{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/
-[24]: {% image_buster /assets/img_archive/multi_channel_footer.png %}
-[25]: {% image_buster /assets/img_archive/target_segmenter.png %}
-[26]: {% image_buster /assets/img_archive/additional_filters.png %}
-[27]: {% image_buster /assets/img_archive/audience_summary.png %}

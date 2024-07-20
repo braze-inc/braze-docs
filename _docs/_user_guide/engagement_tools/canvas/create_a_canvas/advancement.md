@@ -77,4 +77,3 @@ Braze customers who did participate in the first round of the Canvas in-app mess
 
 {% enddetails %}
 
-[1]: {% image_buster /assets/img/push-advancement-behavior.png %} "Advancement Behavior"

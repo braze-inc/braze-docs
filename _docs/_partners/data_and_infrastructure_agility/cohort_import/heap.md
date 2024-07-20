@@ -61,7 +61,3 @@ To use your Heap segment, create a Braze campaign or Canvas and select the segme
 
 The payload structure for exported data is the same as the payload structure for custom HTTP connectors, which can be viewed in the [examples repository for custom HTTP connectors](https://github.com/Appboy/currents-examples/tree/master/sample-data/Custom%20HTTP/users/behaviors).
 
-[1]: {{site.baseurl}}/developer_guide/rest_api/basics/#endpoints
-[2]: {% image_buster /assets/img/heap/heap1.png %} 
-[3]: {% image_buster /assets/img/heap/heap2.png %} 
-[4]: {% image_buster /assets/img/heap/heap3.png %} 
