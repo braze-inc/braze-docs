@@ -24,7 +24,7 @@ In the Braze dashboard, go to **Messaging** > **Canvas** and select an existing 
 
 In the Canvas editor, select **Edit Canvas** or **Edit draft**, depending on if your Canvas is active or in a draft. Expand the **Save as draft** dropdown in the footer and select **Save as template**.
 
-![][2]
+![]({% image_buster /assets/img/save_canvas_as_template.png %})
 
 ### Step 3: Save your template
 
@@ -44,7 +44,7 @@ If you are using the older navigation, you can find this page under **Engagement
 
 Select **Create template** and begin setting up your Canvas details. You can start by giving your Canvas template a name.
 
-![An example Canvas template named "Annual sale Canvas template" with the description "Use for annual spring promotion".][1]
+![An example Canvas template named "Annual sale Canvas template" with the description "Use for annual spring promotion".]({% image_buster /assets/img/canvas_template_example.png %})
 
 ### Step 3: Customize your template
 
@@ -66,5 +66,3 @@ Canvas templates can be duplicated and archived, similar to an actual Canvas. To
 
 At a workspace level, you can update user permissions to allow or limit the access to create, edit, view, or archive Canvas templates. These permissions are not yet available for [teams]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams).
 
-[1]: {% image_buster /assets/img/canvas_template_example.png %}
-[2]: {% image_buster /assets/img/save_canvas_as_template.png %}

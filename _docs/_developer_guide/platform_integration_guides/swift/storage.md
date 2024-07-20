@@ -13,9 +13,9 @@ description: "This reference article describes the device-level properties captu
 
 ## Device properties
 
-By default, Braze will collect the following [device-level properties][1] to allow device, language, and time zone-based message personalization:
+By default, Braze will collect the following [device-level properties](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/configuration-swift.class/deviceproperty) to allow device, language, and time zone-based message personalization:
 
-* Device Carrier (see note on the [`CTCarrier` deprecation][2])
+* Device Carrier (see note on the [`CTCarrier` deprecation](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/configuration-swift.class/deviceproperty/carrier))
 * Device Locale
 * Device Model
 * Device OS Version
@@ -32,7 +32,7 @@ The Braze SDK does not collect IDFA automatically. Apps may optionally pass IDFA
 2. To set the identifier for advertiser (IDFA), use [`set(identifierForAdvertiser:)`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/set(identifierforadvertiser:)/).
 {% endalert %}
 
-Configurable device fields are defined in the [`Braze.Configuration.DeviceProperty`][1] enum. To disable or specify the device field you'd like to allowlist, add the fields to the [`devicePropertyAllowList`][3] property of the `configuration` object.
+Configurable device fields are defined in the [`Braze.Configuration.DeviceProperty`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/configuration-swift.class/deviceproperty) enum. To disable or specify the device field you'd like to allowlist, add the fields to the [`devicePropertyAllowList`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/configuration-swift.class/devicepropertyallowlist) property of the `configuration` object.
 
 For example, to specify time zone and locale collection to be allowlisted, set:
 
@@ -58,9 +58,5 @@ configuration.devicePropertyAllowList = @[
 
 By default, all fields are enabled. Note that without some properties, not all features will function properly. For instance, local time zone delivery will not function without the time zone.
 
-To read more about the automatically collected device properties, visit our [SDK data collection][4].
+To read more about the automatically collected device properties, visit our [SDK data collection]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/sdk_data_collection/).
 
-[1]: https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/configuration-swift.class/deviceproperty
-[2]: https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/configuration-swift.class/deviceproperty/carrier
-[3]: https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/configuration-swift.class/devicepropertyallowlist
-[4]: {{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/sdk_data_collection/

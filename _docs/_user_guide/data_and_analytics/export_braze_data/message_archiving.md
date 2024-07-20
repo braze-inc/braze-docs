@@ -57,7 +57,7 @@ To select channels:
 2. Select your channels.
 3. Click **Save changes**.
 
-![The Message Archiving page has three channels to select: Email, Push, and SMS.][1]
+![The Message Archiving page has three channels to select: Email, Push, and SMS.]({% image_buster /assets/img/message_archiving_settings.png %})
 
 {% alert note %}
 If you don't see **Message Archiving** in **Settings**, confirm that your company has purchased and turned on message archiving.
@@ -182,4 +182,3 @@ If your cloud storage credentials become invalid at any point, Braze will not be
 
 The rendered copy is uploaded immediately before sending the message to the end user. Because of cloud storage upload times, there may be a delay of a few seconds between the "sent_at" timestamp in the rendered copy versus the actual time the send occurs.
 
-[1]: {% image_buster /assets/img/message_archiving_settings.png %}

@@ -15,7 +15,7 @@ You can pick up where you left off in the Braze dashboard with easy access to fi
 Pick up where you left off is currently in early access. Contact your Braze account manager if you're interested in participating in this early access.
 {% endalert %}
 
-![][1]
+![]({% image_buster /assets/img/pick_up_where_you_left_off.png %})
 
 You can resume your activities for the following items:
 
@@ -33,4 +33,3 @@ You can revisit recently edited or created campaigns, Canvases, and segments. Th
 
 Each card is paired with tags that indicate the content type (campaign, Canvas, segment) and status (active, draft, archived, stopped).
 
-[1]: {% image_buster /assets/img/pick_up_where_you_left_off.png %}

@@ -23,11 +23,11 @@ Triggered in-app messages only work with custom events logged through the Braze 
 
 ## Delivery semantics
 
-All in-app messages that a user is eligible for are automatically downloaded to the user's device, or browser upon a session start event and triggered according to the message's delivery rules. Visit our [session lifecycle documentation][10] for more information about the SDK's session start semantics.
+All in-app messages that a user is eligible for are automatically downloaded to the user's device, or browser upon a session start event and triggered according to the message's delivery rules. Visit our [session lifecycle documentation]({{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/tracking_sessions/#session-lifecycle) for more information about the SDK's session start semantics.
 
 ## Minimum time interval between triggers
 
-By default, we rate limit in-app messages to once every 30 seconds to ensure a quality user experience. To override this value, you can pass the `minimumIntervalBetweenTriggerActionsInSeconds` configuration option to your [`initialize`][9] function:
+By default, we rate limit in-app messages to once every 30 seconds to ensure a quality user experience. To override this value, you can pass the `minimumIntervalBetweenTriggerActionsInSeconds` configuration option to your [`initialize`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#initialize) function:
 
 ```javascript
 // Sets the minimum time interval between triggered in-app messages to 5 seconds instead of the default 30
@@ -64,9 +64,9 @@ braze.subscribeToInAppMessage(function(inAppMessage) {
 If you don't remove `braze.automaticallyShowInAppMessages()` from your website when also calling `braze.showInAppMessage`, the message may be displayed twice.
 {% endalert %}
 
-The `inAppMessage` parameter will be an [`braze.InAppMessage`][2] subclass or an [`braze.ControlMessage`][8] object, each of which has various lifecycle event subscription methods. See the [JSDocs][2] for full documentation.
+The `inAppMessage` parameter will be an [`braze.InAppMessage`](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.inappmessage.html) subclass or an [`braze.ControlMessage`](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.controlmessage.html) object, each of which has various lifecycle event subscription methods. See the [JSDocs](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.inappmessage.html) for full documentation.
 
-Only one [`Modal`][17] or [`Full`][41] in-app message can be displayed at a given time. If you attempt to show a second modal or full message while one is already showing, `braze.showInAppMessage` will return false, and the second message will not display.
+Only one [`Modal`]({{site.baseurl}}/developer_guide/platform_integration_guides/web/in_app_messaging/#modal-in-app-messages) or [`Full`]({{site.baseurl}}/developer_guide/platform_integration_guides/web/in_app_messaging/#full-in-app-messages) in-app message can be displayed at a given time. If you attempt to show a second modal or full message while one is already showing, `braze.showInAppMessage` will return false, and the second message will not display.
 
 ## Local in-app messages
 
@@ -83,7 +83,7 @@ In-app messages can also be created within your site and displayed locally in re
 
 Exit-intent in-app messages appear when visitors are about to navigate away from your site. They provide another opportunity to communicate important information to users while not interrupting their experience on your site. 
 
-To send these messages, first add an exit intent library, such as this [open-source library][50] to your website. Then, use the following code snippet to log 'exit intent' as a custom event. In-app message campaigns can then be created in the dashboard using 'exit intent' as the trigger custom event.
+To send these messages, first add an exit intent library, such as this [open-source library](https://github.com/carlsednaoui/ouibounce) to your website. Then, use the following code snippet to log 'exit intent' as a custom event. In-app message campaigns can then be created in the dashboard using 'exit intent' as the trigger custom event.
 
 ```javascript
   var _ouibounce = ouibounce(false, {
@@ -92,10 +92,3 @@ To send these messages, first add an exit intent library, such as this [open-sou
 ```
 
 
-[2]: https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.inappmessage.html
-[8]: https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.controlmessage.html
-[9]: https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#initialize
-[10]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/tracking_sessions/#session-lifecycle
-[17]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/in_app_messaging/#modal-in-app-messages
-[41]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/in_app_messaging/#full-in-app-messages
-[50]: https://github.com/carlsednaoui/ouibounce

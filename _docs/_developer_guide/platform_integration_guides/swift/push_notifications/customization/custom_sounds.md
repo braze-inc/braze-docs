@@ -42,16 +42,12 @@ You can inspect a sound to determine its data format by opening it in QuickTime 
 
 You must specify a protocol URL that directs to the location of the sound file in your app. There are two methods for doing this:
 
-* Use the `sound` parameter of the [Apple push object][1] to pass the URL to Braze.
-* Specify the URL in the dashboard. In the [push composer][2], select **Settings** and enter the protocol URL in the **Sound** field. 
+* Use the `sound` parameter of the [Apple push object]({{site.baseurl}}/api/objects_filters/messaging/apple_object#apple-push-object) to pass the URL to Braze.
+* Specify the URL in the dashboard. In the [push composer]({{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/#step-3-select-notification-type-ios-and-android), select **Settings** and enter the protocol URL in the **Sound** field. 
 
-![The push composer in the Braze dashboard][8]
+![The push composer in the Braze dashboard]({% image_buster /assets/img_archive/sound_push_ios.png %})
 
 If the specified sound file doesn't exist or the keyword "default" is entered, Braze will use the default device alert sound. Aside from our dashboard, sound can also be configured via our [messaging API][12].
 
-See the Apple Developer Documentation regarding [preparing custom alert sounds][9] for additional information.
+See the Apple Developer Documentation regarding [preparing custom alert sounds](https://developer.apple.com/library/content/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/SupportingNotificationsinYourApp.html) for additional information.
 
-[1]: {{site.baseurl}}/api/objects_filters/messaging/apple_object#apple-push-object
-[2]: {{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/#step-3-select-notification-type-ios-and-android
-[8]: {% image_buster /assets/img_archive/sound_push_ios.png %}
-[9]: https://developer.apple.com/library/content/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/SupportingNotificationsinYourApp.html

@@ -37,13 +37,9 @@ Custom sounds must be under 30 seconds when played. If a custom sound is over th
 
 ## Step 2: Providing the dashboard with a protocol URL for the sound
 
-Your sound must be hosted locally within the app. You must specify a protocol URL that directs to the location of the sound file in the app within the **Sound** field in the push composer. Specifying "default" in this field will play the default notification sound on the device. This can be specified via our [messaging API][25] or our dashboard under **Settings** in the push composer, as pictured in the following screenshot:
+Your sound must be hosted locally within the app. You must specify a protocol URL that directs to the location of the sound file in the app within the **Sound** field in the push composer. Specifying "default" in this field will play the default notification sound on the device. This can be specified via our [messaging API]({{site.baseurl}}/api/endpoints/messaging/) or our dashboard under **Settings** in the push composer, as pictured in the following screenshot:
 
-![][8]
+![]({% image_buster /assets/img_archive/sound_push_ios.png %})
 
-If the specified sound file doesn't exist or the keyword "default" is entered, Braze will use the default device alert sound. Aside from our dashboard, sound can also be configured via our [messaging API][12]. See the Apple Developer Documentation regarding [preparing custom alert sounds][9] for additional information.
+If the specified sound file doesn't exist or the keyword "default" is entered, Braze will use the default device alert sound. Aside from our dashboard, sound can also be configured via our [messaging API]({{site.baseurl}}/api/endpoints/messaging/). See the Apple Developer Documentation regarding [preparing custom alert sounds](https://developer.apple.com/library/content/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/SupportingNotificationsinYourApp.html) for additional information.
 
-[8]: {% image_buster /assets/img_archive/sound_push_ios.png %}
-[9]: https://developer.apple.com/library/content/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/SupportingNotificationsinYourApp.html
-[12]: {{site.baseurl}}/api/endpoints/messaging/
-[25]: {{site.baseurl}}/api/endpoints/messaging/

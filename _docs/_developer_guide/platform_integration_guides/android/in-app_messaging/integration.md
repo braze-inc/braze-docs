@@ -17,30 +17,30 @@ search_rank: 2
 
 [In-app messages]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/) help you get content to your users without interrupting their day with a push notification. Customized and tailored in-app messages enhance the user experience and help your audience get the most value from your app. With various layouts and customization tools to choose from, in-app messages engage your users more than ever before.
 
-To see examples of in-app messages, check out our [case studies][83].
+To see examples of in-app messages, check out our [case studies](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze-activity-lifecycle-callback-listener/index.html).
 
 ## In-app message types
 
-Braze offers several default in-app message types, each customizable with messages, images, [Font Awesome][15] icons, click actions, analytics, editable styling, and color schemes. The currently available types are:
+Braze offers several default in-app message types, each customizable with messages, images, [Font Awesome](https://fontawesome.com/icons?d=gallery&p=2) icons, click actions, analytics, editable styling, and color schemes. The currently available types are:
 
-- [`Slideup`][91]
-- [`Modal`][90]
-- [`Full`][93]
-- [`HTML`][92]
+- [`Slideup`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/-in-app-message-slideup/index.html)
+- [`Modal`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/-in-app-message-modal/index.html)
+- [`Full`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/-in-app-message-full/index.html)
+- [`HTML`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/-in-app-message-html/index.html)
 
-It is also possible to define your own [custom in-app message view][12].
+It is also possible to define your own [custom in-app message view]({{site.baseurl}}/developer_guide/platform_integration_guides/android/in-app_messaging/customization/custom_listeners/#custom-view-factory).
 
-All in-app messages implement the [`IInAppMessage`][3] interface, which defines all in-app messages' basic behavior and traits. [`InAppMessageBase`][27] is an abstract class that implements `IInAppMessage` and provides the foundational in-app message implementation. All in-app message classes are subclasses of `InAppMessageBase`.
+All in-app messages implement the [`IInAppMessage`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/-i-in-app-message/index.html) interface, which defines all in-app messages' basic behavior and traits. [`InAppMessageBase`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/-in-app-message-base/index.html) is an abstract class that implements `IInAppMessage` and provides the foundational in-app message implementation. All in-app message classes are subclasses of `InAppMessageBase`.
 
-In addition, there is a subinterface of `IInAppMessage` called [`IInAppMessageImmersive`][8], which adds click action and analytics enabled [buttons][50], as well as header text and a close button.
+In addition, there is a subinterface of `IInAppMessage` called [`IInAppMessageImmersive`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/-i-in-app-message-immersive/index.html), which adds click action and analytics enabled [buttons](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/-message-button/index.html), as well as header text and a close button.
 
 {% alert important %}
 For in-app messages containing buttons, the message `clickAction` will also be included in the final payload if the click action is added prior to adding the button text.
 {% endalert %}
 
-[`InAppMessageImmersiveBase`][28] is an abstract class that implements `IInAppMessageImmersive` and provides the foundational `immersive` in-app message implementation. `Modal` in-app messages are a subclass of `InAppMessageImmersiveBase`.
+[`InAppMessageImmersiveBase`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/-in-app-message-immersive-base/index.html) is an abstract class that implements `IInAppMessageImmersive` and provides the foundational `immersive` in-app message implementation. `Modal` in-app messages are a subclass of `InAppMessageImmersiveBase`.
 
-HTML in-app messages are [`InAppMessageHtml`][92] instances, which implement [`IInAppMessageHtml`][52], another subclass of `IInAppMessage`.
+HTML in-app messages are [`InAppMessageHtml`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/-in-app-message-html/index.html) instances, which implement [`IInAppMessageHtml`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/-i-in-app-message-html/index.html), another subclass of `IInAppMessage`.
 
 ### Expected behaviors by message type
 
@@ -79,18 +79,18 @@ We currently do not support the display of custom HTML in-app messages in an iFr
 
 #### Defining custom in-app message types
 
-The `slideup` in-app message object extends [`InAppMessageBase`][27]. 
-The `full` and `modal` type messages extends [`InAppMessageImmersiveBase`][28]. Extending one of these classes gives you the option of adding custom functionality to your locally generated in-app messages.
+The `slideup` in-app message object extends [`InAppMessageBase`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/-in-app-message-base/index.html). 
+The `full` and `modal` type messages extends [`InAppMessageImmersiveBase`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/-in-app-message-immersive-base/index.html). Extending one of these classes gives you the option of adding custom functionality to your locally generated in-app messages.
 
 ## Integration {#in-app-messaging-integration}
 
 ### Step 1: Braze in-app message manager registration
 
-In-app message display is managed by the [`BrazeInAppMessageManager`][34] class. Every activity in your app must be registered with the `BrazeInAppMessageManager` to allow it to add in-app message views to the view hierarchy. There are two ways to accomplish this:
+In-app message display is managed by the [`BrazeInAppMessageManager`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage/-braze-in-app-message-manager/index.html) class. Every activity in your app must be registered with the `BrazeInAppMessageManager` to allow it to add in-app message views to the view hierarchy. There are two ways to accomplish this:
 
 #### Activity lifecycle callback integration (recommended)
 
-The [activity lifecycle callback integration][59] handles in-app message registration automatically; no extra integration is required. This is the recommended integration for handling in-app message registration.
+The [activity lifecycle callback integration]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/#step-4-tracking-user-sessions-in-android) handles in-app message registration automatically; no extra integration is required. This is the recommended integration for handling in-app message registration.
 
 #### Manual in-app message registration
 
@@ -98,7 +98,7 @@ The [activity lifecycle callback integration][59] handles in-app message registr
 If you did the activity lifecycle integration, you should *not* do a manual in-app message integration.
 {% endalert %}
 
-First, in your [`Application.onCreate()`][82], call [`ensureSubscribedToInAppMessageEvents()`][69]:
+First, in your [`Application.onCreate()`](https://developer.android.com/reference/android/app/Application.html#onCreate()), call [`ensureSubscribedToInAppMessageEvents()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage/-braze-in-app-message-manager/ensure-subscribed-to-in-app-message-events.html):
 
 {% tabs %}
 {% tab JAVA %}
@@ -117,7 +117,7 @@ BrazeInAppMessageManager.getInstance().ensureSubscribedToInAppMessageEvents(cont
 {% endtab %}
 {% endtabs %}
 
-Next, in every activity where in-app messages can be shown, [`registerInAppMessageManager()`][80] should be called in that activity's `onResume()`:
+Next, in every activity where in-app messages can be shown, [`registerInAppMessageManager()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage/-braze-in-app-message-manager/register-in-app-message-manager.html) should be called in that activity's `onResume()`:
 
 {% tabs %}
 {% tab JAVA %}
@@ -147,7 +147,7 @@ public override fun onResume() {
 {% endtab %}
 {% endtabs %}
 
-Lastly, in every activity where [`registerInAppMessageManager()`][80] was called, [`unregisterInAppMessageManager()`][81] should be called in that activity's `onPause()`:
+Lastly, in every activity where [`registerInAppMessageManager()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage/-braze-in-app-message-manager/register-in-app-message-manager.html) was called, [`unregisterInAppMessageManager()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage/-braze-in-app-message-manager/unregister-in-app-message-manager.html) should be called in that activity's `onPause()`:
 
 {% tabs %}
 {% tab JAVA %}
@@ -177,7 +177,7 @@ public override fun onPause() {
 
 ### Step 2: In-app message manager blocklist (optional)
 
-In your integration, you may require that certain activities in your app should not show in-app messages. The [activity lifecycle callback integration][59] provides an easy way to accomplish this.
+In your integration, you may require that certain activities in your app should not show in-app messages. The [activity lifecycle callback integration]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/#step-4-tracking-user-sessions-in-android) provides an easy way to accomplish this.
 
 The following sample code adds two activities to the in-app message registration blocklist, `SplashActivity` and `SettingsActivity`:
 
@@ -216,24 +216,3 @@ class MyApplication : Application() {
 {% endtabs %}
 
 
-[34]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage/-braze-in-app-message-manager/index.html
-[69]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage/-braze-in-app-message-manager/ensure-subscribed-to-in-app-message-events.html
-[80]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage/-braze-in-app-message-manager/register-in-app-message-manager.html
-[81]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage/-braze-in-app-message-manager/unregister-in-app-message-manager.html
-[82]: https://developer.android.com/reference/android/app/Application.html#onCreate()
-[83]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze-activity-lifecycle-callback-listener/index.html
-[59]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/#step-4-tracking-user-sessions-in-android
-[3]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/-i-in-app-message/index.html
-[8]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/-i-in-app-message-immersive/index.html
-[12]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/in-app_messaging/customization/custom_listeners/#custom-view-factory
-[15]: https://fontawesome.com/icons?d=gallery&p=2
-[27]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/-in-app-message-base/index.html
-[28]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/-in-app-message-immersive-base/index.html
-[50]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/-message-button/index.html
-[51]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/-in-app-message-html-full/index.html
-[52]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/-i-in-app-message-html/index.html
-[84]: {{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/
-[90]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/-in-app-message-modal/index.html
-[91]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/-in-app-message-slideup/index.html
-[92]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/-in-app-message-html/index.html
-[93]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/-in-app-message-full/index.html

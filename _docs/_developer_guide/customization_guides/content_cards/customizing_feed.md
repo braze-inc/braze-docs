@@ -331,7 +331,7 @@ braze.showContentCards(null, (cards) => {
 
 When a user does not qualify for any Content Cards, the SDK displays an "empty feed" error message stating: "We have no updates. Please check again later." You can customize this "empty feed" error message similar to the following:
 
-![An empty feed error message that reads "This is a custom empty state message."][1]
+![An empty feed error message that reads "This is a custom empty state message."]({% image_buster/assets/img/content_cards/content-card-customization-empty.png %})
 
 {% tabs %}
 {% tab Android View System %}
@@ -629,4 +629,3 @@ For more information, see the [SDK method documentation](https://js.appboycdn.co
 {% endtabs %}
 
 
-[1]: {% image_buster/assets/img/content_cards/content-card-customization-empty.png %}

@@ -32,13 +32,13 @@ When a push campaign is launched, Braze will make requests to FCM to deliver you
 ### Step 4: Removing invalid tokens
 If FCM informs us that any of the push tokens we were attempting to send a message to are invalid, we remove those tokens from the user profiles they were associated with. If users have no other push tokens, they will no longer show up as "Push Registered" under the **Segments** page.
 
-For more details about FCM, visit [Cloud messaging][6].
+For more details about FCM, visit [Cloud messaging](https://firebase.google.com/docs/cloud-messaging/).
 
 ## Utilizing the push error logs
 
 Braze provides push notification errors within the message activity log. This error log provides a variety of warnings which can be very helpful for identifying why your campaigns aren't working as expected. Clicking on an error message will redirect you to relevant documentation to help you troubleshoot a particular incident.
 
-![][11]
+![]({% image_buster /assets/img_archive/message_activity_log.png %})
 
 ## Troubleshooting scenarios
 
@@ -65,7 +65,7 @@ Since FCM registration is handled outside of Braze, failure to register can only
 1. During registration with FCM
 2. When passing the FCM-generated push token to Braze
 
-We recommend setting a breakpoint or logging to confirm that the FCM-generated push token is being sent to Braze. If a token is not generated correctly or at all, we recommend consulting the [FCM documentation][1].
+We recommend setting a breakpoint or logging to confirm that the FCM-generated push token is being sent to Braze. If a token is not generated correctly or at all, we recommend consulting the [FCM documentation](https://firebase.google.com/docs/cloud-messaging/android/client).
 
 #### Google Play Services not present
 
@@ -85,7 +85,7 @@ If `com_braze_handle_push_deep_links_automatically` is set to its default of `fa
 
 ### Push notifications bounced
 
-If a push notification isn't delivered, make sure it didn't bounce by looking in the [developer console][2]. The following are descriptions of common errors that may be logged in the developer console:
+If a push notification isn't delivered, make sure it didn't bounce by looking in the [developer console]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/troubleshooting/#utilizing-the-push-error-logs). The following are descriptions of common errors that may be logged in the developer console:
 
 #### Error: MismatchSenderID
 
@@ -95,7 +95,7 @@ If a push notification isn't delivered, make sure it didn't bounce by looking in
 
 `InvalidRegistration` can be caused by a malformed push token.
 
-1. Make sure to pass a valid push token to Braze from [Firebase Cloud Messaging][21].
+1. Make sure to pass a valid push token to Braze from [Firebase Cloud Messaging](https://firebase.google.com/docs/cloud-messaging/android/client#retrieve-the-current-registration-token).
 
 #### Error: NotRegistered
 
@@ -130,7 +130,7 @@ If you are testing push over Wi-Fi, your firewall may be blocking ports necessar
 
 #### Custom notification factory returning null
 
-If you have implemented a [custom notification factory][16], ensure that it is not returning `null`. This will cause notifications not to be displayed.
+If you have implemented a [custom notification factory]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/integration/standard_integration/#custom-displaying-notifications), ensure that it is not returning `null`. This will cause notifications not to be displayed.
 
 ### "Push registered" users no longer enabled after sending messages
 
@@ -144,7 +144,7 @@ Users have uninstalled the application. This will invalidate their FCM push toke
 
 The Firebase Cloud Messaging server key provided in the Braze dashboard is invalid. The sender ID provided should match the one referenced in your app's `braze.xml` file. The server key and sender ID are found here in your Firebase Console:
 
-![The Firebase platform under "Settings" and then "Cloud Messaging" will display your server ID and server key.][20]
+![The Firebase platform under "Settings" and then "Cloud Messaging" will display your server ID and server key.]({% image_buster /assets/img_archive/finding_firebase_server_key.png %} "FirebaseServerKey")
 
 ### Push clicks not logged
 
@@ -156,7 +156,7 @@ If push clicks are not being logged, it is possible that push click data has not
 
 #### Verify deep link configuration
 
-Deep links can be [tested with ADB][17]. We recommend testing your deep link with the following command:
+Deep links can be [tested with ADB](https://developer.android.com/training/app-indexing/deep-linking.html#testing-filters). We recommend testing your deep link with the following command:
 
 `adb shell am start -W -a android.intent.action.VIEW -d "THE_DEEP_LINK" THE_PACKAGE_NAME`
 
@@ -164,24 +164,13 @@ If the deep link fails to work, the deep link may be misconfigured. A misconfigu
 
 #### Verify custom handling logic
 
-If the deep link [works correctly with ADB][17] but fails to work from Braze push, check whether any [custom push open handling][18] has been implemented. If so, verify that the custom handling code properly handles the incoming deep link.
+If the deep link [works correctly with ADB](https://developer.android.com/training/app-indexing/deep-linking.html#testing-filters) but fails to work from Braze push, check whether any [custom push open handling]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/integration/standard_integration/#android-push-listener-callback) has been implemented. If so, verify that the custom handling code properly handles the incoming deep link.
 
 #### Disable back stack behavior
 
-If the deep link [works correctly with ADB][17] but fails to work from Braze push, try disabling [back stack][22]. To do so, update your **braze.xml** file to include:
+If the deep link [works correctly with ADB](https://developer.android.com/training/app-indexing/deep-linking.html#testing-filters) but fails to work from Braze push, try disabling [back stack](https://developer.android.com/guide/components/activities/tasks-and-back-stack). To do so, update your **braze.xml** file to include:
 
 ```xml
 <bool name="com_braze_push_deep_link_back_stack_activity_enabled">false</bool>
 ```
 
-[1]: https://firebase.google.com/docs/cloud-messaging/android/client
-[2]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/troubleshooting/#utilizing-the-push-error-logs
-[4]: https://firebase.google.com/docs/reference/android/com/google/firebase/iid/FirebaseInstanceId
-[6]: https://firebase.google.com/docs/cloud-messaging/
-[11]: {% image_buster /assets/img_archive/message_activity_log.png %}
-[16]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/integration/standard_integration/#custom-displaying-notifications
-[17]: https://developer.android.com/training/app-indexing/deep-linking.html#testing-filters
-[18]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/integration/standard_integration/#android-push-listener-callback
-[20]: {% image_buster /assets/img_archive/finding_firebase_server_key.png %} "FirebaseServerKey"
-[21]: https://firebase.google.com/docs/cloud-messaging/android/client#retrieve-the-current-registration-token
-[22]: https://developer.android.com/guide/components/activities/tasks-and-back-stack

@@ -16,7 +16,7 @@ Referencing your Canvas version history can be especially helpful to maintain a 
 
 ## Managing versions
 
-![][1]{: style="float:right;max-width:35%;margin-left:15px;"}
+![]({% image_buster /assets/img_archive/canvas_version_history.png %}){: style="float:right;max-width:35%;margin-left:15px;"}
 
 To create a new version, click **Update Canvas**. This allows you to make changes without overwriting the Canvas's previous setup. When a new Canvas version is created, the users already in the Canvas will progress through the workflow of the new version. Users entering the Canvas will also enter the new version. 
 
@@ -32,7 +32,7 @@ Note that if you didn't make any edits between launching a Canvas and creating a
 
 As your version history count increases, you can also rename each version in the sidebar to stay organized. By default, version names are generated as a number based on how many versions have been previously created. If you rename a version while it is no longer active, this will appear in the Canvas changelog, but not the version's changelog within the version history view.
 
-![Canvas changelog example showing that two new Canvas versions have been created.][2]{: style="max-width:85%" }
+![Canvas changelog example showing that two new Canvas versions have been created.]({% image_buster /assets/img_archive/canvas_version_history_changelog.png %}){: style="max-width:85%" }
 
 ### Discarding versions
 
@@ -44,5 +44,3 @@ If you discard a version, the Canvas setup will be lost immediately, but the ana
 
 Within version history, you can view Canvas-level and steps-level analytics. In the Canvas version view, the data will populate for the entire date range, not just the date range of that version. However, at the step level, analytics will only be shown for steps that existed while that version was active. These analytics will populate using calendar days that correspond to your company's time zone, so the analytics will not be specific to the exact time of day when the version was created.
 
-[1]: {% image_buster /assets/img_archive/canvas_version_history.png %} 
-[2]: {% image_buster /assets/img_archive/canvas_version_history_changelog.png %}

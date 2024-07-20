@@ -76,5 +76,3 @@ In most cases, yes. Braze Data Transformation eventually creates a `/users/track
 Contact your Braze account manager for additional assistance.
 
 
-[1]: {% image_buster /assets/img_archive/data_transformation1.png %}
-[2]: {% image_buster /assets/img/data_transformation/data_transformation1.jpg %}

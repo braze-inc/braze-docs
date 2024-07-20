@@ -31,4 +31,3 @@ Any edits made within the **Admin Settings** section will apply to every Braze u
 
 <br>
 
-[1]: {{site.baseurl}}/user_guide/administrative/

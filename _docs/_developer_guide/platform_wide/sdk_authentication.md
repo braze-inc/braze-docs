@@ -27,10 +27,10 @@ Now you can prevent unauthenticated logged-in users from using your app's SDK AP
 
 There are four high-level steps to get started:
 
-1. [Server-Side Integration][1] - Generate a public and private key-pair, and use your private key to create a JWT for the current logged-in user.<br><br>
-2. [SDK Integration][2] - Enable this feature in the Braze SDK and request the JWT generated from your server.<br><br>
-3. [Adding Public Keys][3] - Add your _public key_ to the Braze dashboard in the **Manage Settings** page.<br><br>
-4. [Toggle Enforcement within the Braze dashboard][4] - Toggle this feature's enforcement within the Braze dashboard on an app-by-app basis.
+1. [Server-Side Integration](#server-side-integration) - Generate a public and private key-pair, and use your private key to create a JWT for the current logged-in user.<br><br>
+2. [SDK Integration](#sdk-integration) - Enable this feature in the Braze SDK and request the JWT generated from your server.<br><br>
+3. [Adding Public Keys](#key-management) - Add your _public key_ to the Braze dashboard in the **Manage Settings** page.<br><br>
+4. [Toggle Enforcement within the Braze dashboard](#braze-dashboard) - Toggle this feature's enforcement within the Braze dashboard on an app-by-app basis.
 
 ## Server-side integration {#server-side-integration}
 
@@ -155,7 +155,7 @@ Currently, SDK Authentication must be enabled as part of initializing the SDK in
 
 ### Set the current user's JWT token
 
-Whenever your app calls the Braze `changeUser` method, also supply the JWT token that was [generated server-side][4].
+Whenever your app calls the Braze `changeUser` method, also supply the JWT token that was [generated server-side](#braze-dashboard).
 
 You can also configure the token to refresh mid-session for the current user.
 
@@ -258,7 +258,7 @@ When this feature is set as [Required](#enforcement-options), the following scen
 - JWT was empty or missing
 - JWT failed to verify for the public keys you uploaded to the Braze dashboard
 
-You can use `subscribeToSdkAuthenticationFailures` to subscribe to be notified when the SDK requests fail for one of these reasons. A callback function contains an object with the relevant [`errorCode`][9], `reason` for the error, the `userId` of the request (if the user is not anonymous), and the authentication `signature` that caused the error. 
+You can use `subscribeToSdkAuthenticationFailures` to subscribe to be notified when the SDK requests fail for one of these reasons. A callback function contains an object with the relevant [`errorCode`](#error-codes), `reason` for the error, the `userId` of the request (if the user is not anonymous), and the authentication `signature` that caused the error. 
 
 Failed requests will periodically be retried until your app supplies a new valid JWT. If that user is still logged in, you can use this callback as an opportunity to request a new JWT from your server and supply the Braze SDK with this new valid token.
 
@@ -374,7 +374,7 @@ To delete a primary key, first [assign a new primary](#assign-a-new-primary-key)
 
 ## Enabling in the Braze dashboard {#braze-dashboard}
 
-Once your [Server-side Integration][1] and [SDK Integration][2] are complete, you can begin to enable this feature for those specific apps.
+Once your [Server-side Integration](#server-side-integration) and [SDK Integration](#sdk-integration) are complete, you can begin to enable this feature for those specific apps.
 
 Keep in mind that SDK requests will continue to flow as usual without authentication unless the app's SDK Authentication setting is set to **Required** in the Braze dashboard.
 
@@ -391,7 +391,7 @@ In the dashboard **Manage Settings** page, each app has three SDK Authentication
 | **Required** | Braze will verify requests for logged-in users and will reject invalid JWTs.|
 {: .reset-td-br-1 .reset-td-br-2}
 
-![][8]
+![]({% image_buster /assets/img/sdk-auth-settings.png %})
 
 The **Optional** setting is a useful way to monitor the potential impact this feature will have on your app's SDK traffic.
 
@@ -403,7 +403,7 @@ Each app will show a breakdown of SDK Authentication errors collected while this
 
 Data is available in real-time, and you can hover over points in the chart to see a breakdown of errors for a given date.
 
-![A chart showing the number of instances of authentication errors. Also shown are the total number of errors, error type, and adjustable date range.][10]{: style="max-width:80%"}
+![A chart showing the number of instances of authentication errors. Also shown are the total number of errors, error type, and adjustable date range.]({% image_buster /assets/img/sdk-auth-analytics.png %}){: style="max-width:80%"}
 
 ## Error codes {#error-codes}
 
@@ -431,7 +431,7 @@ No, this feature can be enabled for specific apps and doesn't need to be used on
 
 When you begin to enforce this feature, requests made by older app versions will be rejected by Braze and retried by the SDK. After users upgrade their app to a supported version, those enqueued requests will begin to be accepted again.
 
-If possible, you should push users to upgrade as you would for any other mandatory upgrade. Alternatively, you can keep the feature [Optional][6] until you see that an acceptable percentage of users have upgraded.
+If possible, you should push users to upgrade as you would for any other mandatory upgrade. Alternatively, you can keep the feature [Optional](#enforcement-options) until you see that an acceptable percentage of users have upgraded.
 
 #### What expiration should I use when generating JWT tokens? {#faq-expiration}
 
@@ -439,7 +439,7 @@ We recommend using the higher value of average session duration, session cookie/
 
 #### What happens if a JWT expires in the middle of a user's session? {#faq-jwt-expiration}
 
-Should a user's token expire mid-session, the SDK has a [callback function][7] it will invoke to let your app know that a new JWT token is needed to continue sending data to Braze.
+Should a user's token expire mid-session, the SDK has a [callback function](#sdk-callback) it will invoke to let your app know that a new JWT token is needed to continue sending data to Braze.
 
 #### What happens if my server-side integration breaks and I can no longer create a JWT? {#faq-server-downtime}
 
@@ -459,14 +459,3 @@ When a request is rejected because of an authentication error, the SDK will invo
 
 Requests will retry periodically using an exponential backoff approach. After 50 consecutive failed attempts, retries will be paused until the next session start. Each SDK also has a method to manually request a data flush.
 
-[1]: #server-side-integration
-[2]: #sdk-integration
-[3]: #key-management
-[4]: #braze-dashboard
-[5]: #create-jwt
-[6]: #enforcement-options
-[7]: #sdk-callback
-[8]: {% image_buster /assets/img/sdk-auth-settings.png %}
-[9]: #error-codes
-[10]: {% image_buster /assets/img/sdk-auth-analytics.png %}
-[11]: https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#changeuser

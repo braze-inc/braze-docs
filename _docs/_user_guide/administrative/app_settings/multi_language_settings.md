@@ -23,7 +23,7 @@ To edit and manage multi-language support, you must have the "Manage Multi-Langu
 5. (optional) Select the country to be associated with the language.
 6. Select **Add locale**. 
 
-![An example of French added as a locale for users whose country is Canada.][2]{: style="max-width:80%;"}
+![An example of French added as a locale for users whose country is Canada.]({% image_buster /assets/img/multi-language_support/add_locale.png %}){: style="max-width:80%;"}
 
 For steps to use these locales in your email campaigns and Canvas, refer to [Using locales]({{site.baseurl}}/user_guide/message_building_by_channel/email/using_locales/)
 
@@ -41,4 +41,3 @@ No. You can use your preferred naming convention. The locale name is used when s
 #### Can I use custom attributes to define a locale?
 Not currently. Contact your account manager or leave [product feedback]({{site.baseurl}}/user_guide/administrative/access_braze/portal/) with more details on how you would define locales.
 
-[2]: {% image_buster /assets/img/multi-language_support/add_locale.png %}

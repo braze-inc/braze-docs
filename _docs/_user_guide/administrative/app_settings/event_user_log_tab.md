@@ -38,7 +38,7 @@ Each log is broken up into multiple sections, which can include:
 
 Click the **Raw Data** button to show the raw JSON data for that specific log.
 
-![Raw logs for events][10]
+![Raw logs for events]({% image_buster /assets/img_archive/rawlogs.png %})
 
 Event User Logs will remain in the dashboard for 30 days after they are logged.
 
@@ -71,4 +71,3 @@ In relation to user sessions, you can use Braze to monitor data like:
 
 These behaviors are not impacted by the session end event being flushed on the next session.
 
-[10]: {% image_buster /assets/img_archive/rawlogs.png %}

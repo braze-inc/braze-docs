@@ -11,15 +11,15 @@ description: "This article covers how to configure uninstall tracking for the Sw
 
 > This article covers how to configure uninstall tracking for your iOS application, and how to test to ensure that your app does not take any unwanted automatic actions upon receiving a Braze uninstall tracking push.
 
-Uninstall tracking utilizes background push notifications with a Braze flag in the payload. For general information, see [uninstall tracking][6] in our user guide.
+Uninstall tracking utilizes background push notifications with a Braze flag in the payload. For general information, see [uninstall tracking]({{site.baseurl}}/user_guide/data_and_analytics/tracking/uninstall_tracking/#uninstall-tracking) in our user guide.
 
 ## Step 1: Enabling background push
 
-Make sure that you have enabled the **Remote notifications** option from the **Background Modes** section of your Xcode project's **Capabilities** tab. Refer to our [silent push notification][5] documentation for additional details.
+Make sure that you have enabled the **Remote notifications** option from the **Background Modes** section of your Xcode project's **Capabilities** tab. Refer to our [silent push notification]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/silent_push_notifications/) documentation for additional details.
 
 ## Step 2: Checking for Braze background push
 
-Braze uses background push notifications to collect uninstall tracking analytics. Ensure that your application [does not take any unwanted actions][4] upon receiving our uninstall tracking notifications.
+Braze uses background push notifications to collect uninstall tracking analytics. Ensure that your application [does not take any unwanted actions]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/customization/ignoring_internal_push/) upon receiving our uninstall tracking notifications.
 
 ## Step 3: Test from the dashboard
 
@@ -36,10 +36,5 @@ These testing steps are a proxy for sending an uninstall tracking push from Braz
 
 ## Step 4: Enable uninstall tracking
 
-Follow the instructions for [enabling uninstall tracking][6].
+Follow the instructions for [enabling uninstall tracking]({{site.baseurl}}/user_guide/data_and_analytics/tracking/uninstall_tracking/#uninstall-tracking).
 
-[4]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/customization/ignoring_internal_push/
-[5]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/silent_push_notifications/
-[6]: {{site.baseurl}}/user_guide/data_and_analytics/tracking/uninstall_tracking/#uninstall-tracking
-[9]: {% image_buster /assets/img_archive/ios-uninstall-tracking-2.png %}
-[10]: {% image_buster /assets/img_archive/ios-uninstall-tracking-3.png %}

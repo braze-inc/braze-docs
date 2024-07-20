@@ -390,9 +390,6 @@ const App = () => {
   )
 ```
 
-You can then search for the user with `some-user-id` in the dashboard under [User Search][user-search]. There, you can verify that session and device data have been logged.
+You can then search for the user with `some-user-id` in the dashboard under [User Search]({{site.baseurl}}/user_guide/engagement_tools/segments/using_user_search#using-user-search). There, you can verify that session and device data have been logged.
 
 
-[1]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/ "Android SDK Install"
-[2]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/initial_sdk_setup/overview/ "iOS SDK Install"
-[user-search]: {{site.baseurl}}/user_guide/engagement_tools/segments/using_user_search#using-user-search

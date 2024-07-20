@@ -49,11 +49,11 @@ braze.subscribeToFeedUpdates(function(feed) {
 braze.requestFeedRefresh();
 ```
 
-See the [JSDocs][2] for full documentation on `showFeed`, `destroyFeed`, and `toggleFeed`.
+See the [JSDocs](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#showfeed) for full documentation on `showFeed`, `destroyFeed`, and `toggleFeed`.
 
 ## Card types
 
-The Braze Web SDK supports 3 unique News Feed card types, [ClassicCard][3], [Banner][4], [CaptionedImage][5] which share a base model, [Card][1].
+The Braze Web SDK supports 3 unique News Feed card types, [ClassicCard](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.classiccard.html), [Banner](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.imageonly.html), [CaptionedImage](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.captionedimage.html) which share a base model, [Card](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.card.html).
 
 ### Requesting unread card count
 
@@ -63,7 +63,7 @@ You can request the number of unread cards at any time by calling:
 braze.getCachedFeed().getUnreadCardCount();
 ```
 
-This is often used to power badges signifying how many unread News Feed cards there are. See the [JS Reference Docs][17] for more information. Note that Braze will not refresh News Feed cards on new page loads (and so this function will return 0) until you show the feed or call `braze.requestFeedRefresh();`
+This is often used to power badges signifying how many unread News Feed cards there are. See the [JS Reference Docs](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.feed.html) for more information. Note that Braze will not refresh News Feed cards on new page loads (and so this function will return 0) until you show the feed or call `braze.requestFeedRefresh();`
 
 ### Key-value pairs
 
@@ -101,7 +101,7 @@ braze.toggleFeed(undefined, undefined, [braze.Card.Category.ANNOUNCEMENTS, braze
 
 Braze provides an unread and read indicator on News Feed cards as pictured below:
 
-![A News Feed card showing an image of a watch along with some text. In the upper right corner of the text is a blue or gray triangle that indicates if a card has been read or not. A blue triangle signifies that a card has been read.][25]
+![A News Feed card showing an image of a watch along with some text. In the upper right corner of the text is a blue or gray triangle that indicates if a card has been read or not. A blue triangle signifies that a card has been read.]({% image_buster /assets/img_archive/UnreadvsReadNewsFeedCard.png %})
 
 ### Disabling the indicators
 
@@ -112,11 +112,3 @@ In order to disable this functionality add the following style to your CSS:
 .ab-read-indicator { display: none; }
 ```
 
-[1]: https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.card.html
-[2]: https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#showfeed
-[3]: https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.classiccard.html
-[4]: https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.imageonly.html
-[5]: https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.captionedimage.html
-[14]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/reporting/
-[17]: https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.feed.html
-[25]: {% image_buster /assets/img_archive/UnreadvsReadNewsFeedCard.png %}

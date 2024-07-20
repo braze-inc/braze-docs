@@ -13,7 +13,7 @@ channel:
 
 > This reference article covers how to use a callback for Android push events
 
-Braze provides a [`subscribeToPushNotificationEvents()`][1] callback for when push notifications are received, opened, or dismissed. It is recommended to place this callback in your `Application.onCreate()` in order to not miss any events occurring while your application is not running.
+Braze provides a [`subscribeToPushNotificationEvents()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-i-braze/subscribe-to-push-notification-events.html) callback for when push notifications are received, opened, or dismissed. It is recommended to place this callback in your `Application.onCreate()` in order to not miss any events occurring while your application is not running.
 
 {% alert note %}
 If previously using a Custom Broadcast Receiver for this functionality in your application, you can safely remove it in favor of this integration option.
@@ -86,4 +86,3 @@ Braze.getInstance(context).subscribeToPushNotificationEvents { event ->
 With notification action buttons, `BRAZE_PUSH_INTENT_NOTIFICATION_OPENED` intents fire when buttons with `opens app` or `deep link` actions are clicked. Deep link and extras handling remains the same. Buttons with `close` actions don't fire `BRAZE_PUSH_INTENT_NOTIFICATION_OPENED` intents and dismiss the notification automatically.
 {% endalert %}
 
-[1]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-i-braze/subscribe-to-push-notification-events.html

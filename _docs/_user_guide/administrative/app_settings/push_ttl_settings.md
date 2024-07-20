@@ -20,10 +20,9 @@ If you are using the [older navigation]({{site.baseurl}}/navigation), you can fi
 
 This feature will not remove a notification if it has already been received by the user's device—it will only control how long the push provider will attempt to deliver a notification.
 
-![Push Time to Live Settings tab under Manage Settings][1]
+![Push Time to Live Settings tab under Manage Settings]({% image_buster /assets/img/push_ttl.png %})
 
 {% alert tip %}
 Remember to click **Save** before you leave the page!
 {% endalert %}
 
-[1]: {% image_buster /assets/img/push_ttl.png %}

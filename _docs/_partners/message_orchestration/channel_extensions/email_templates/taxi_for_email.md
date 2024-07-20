@@ -41,4 +41,3 @@ Your connector field will change colors after details with correct permissions a
 
 Find your uploaded Taxi template in your Braze account's **Templates & Media > Email Templates** section. You can now use this email template to start sending engaging email messages to your customers!
 
-[1]: {{site.baseurl}}/user_guide/message_building_by_channel/email/creating_an_email_template/

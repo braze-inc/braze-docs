@@ -18,7 +18,7 @@ Preview and demo predictions will not allow users to be targeted for messaging, 
 
 From the individual **Predictions** page, after you've decided what range of likelihood score or category you want to target, you can use the **Create Segment** or **Create Campaign** buttons to create a new segment or campaign. This segment or campaign will filter for users with the likelihood score or category selected with the slider.
 
-![Filters available when defining an audience include Likelihood Category and Likelihood Score.][5]
+![Filters available when defining an audience include Likelihood Category and Likelihood Score.]({% image_buster /assets/img_archive/predictive_event_filters.png %})
 
 You can also use filters in campaigns, Canvas, or segments to target user according to their likelihood score or category, just like you use any other filter in Braze.
 
@@ -44,4 +44,3 @@ There are a couple of paths you can test out for low-likelihood users. Think you
 
 Drop these users into a more passive campaign or Canvas as a resource-light way to keep your brand top-of-my mind. This could be a persona-specific weekly newsletter, a series of relevant customer case studies, or a monthly round-up of new tips and tricks.
 
-[5]: {% image_buster /assets/img_archive/predictive_event_filters.png %}

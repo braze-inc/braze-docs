@@ -53,4 +53,3 @@ To remove the Braze data silo from your Transcend Data Map:
 2. At the bottom of the screen, expand **Remove Braze** and click **Remove Silo**. You'll be prompted to confirm that you'd like to remove the silo. Click **Ok**. <br><br>
 3. Confirm the silo has been removed by navigating back to your Data Map.
 
-[1]: {{site.baseurl}}/developer_guide/rest_api/basics/#endpoints

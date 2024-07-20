@@ -26,7 +26,7 @@ braze.changeUser(YOUR_USER_ID_STRING);
 
 We recommend against changing the user ID when a user logs out, as it makes you unable to target the previously logged-in user with re-engagement campaigns. If you anticipate multiple users on the same device, but only want to target one of them when your app is in a logged-out state, we recommend separately keeping track of the user ID you want to target while logged out and switching back to that user ID as part of your app's logout process.
 
-Refer to the [`changeUser()` documentation][4] for more information.
+Refer to the [`changeUser()` documentation](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#changeuser "Javadocs") for more information.
 
 ## Suggested user ID naming convention
 
@@ -40,7 +40,3 @@ Refer to the [`changeUser()` documentation][4] for more information.
 
 {% multi_lang_include archive/setting_user_ids/aliasing.md platform="Web" %}
 
-[1]: {{site.baseurl}}/developer_guide/rest_api/user_data/#user-data
-[2]: {{site.baseurl}}/api/endpoints/messaging/
-[4]: https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#changeuser "Javadocs"
-[5]: {{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/#user-aliases

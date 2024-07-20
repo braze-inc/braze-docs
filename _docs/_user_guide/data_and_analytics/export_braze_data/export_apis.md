@@ -10,7 +10,7 @@ platform: API
 
 # Export APIs
 
-> Braze Export APIs allow you to programmatically export a JSON file of dashboard data. Refer to our [Export endpoints][24] for a list of data that you can access, as well as instructions and sample code for the export.
+> Braze Export APIs allow you to programmatically export a JSON file of dashboard data. Refer to our [Export endpoints]({{site.baseurl}}/api/endpoints/export/) for a list of data that you can access, as well as instructions and sample code for the export.
 
 There are a few reasons why you would prefer this method over exporting a CSV directly from the dashboard:
 
@@ -21,4 +21,3 @@ There are a few reasons why you would prefer this method over exporting a CSV di
 For help with CSV and API exports, visit our [export troubleshooting]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/) article.
 {% endalert %}
 
-[24]: {{site.baseurl}}/api/endpoints/export/

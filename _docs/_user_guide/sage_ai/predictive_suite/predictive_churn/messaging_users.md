@@ -16,7 +16,7 @@ Preview and demo predictions will not allow users to be targeted for messaging, 
 
 Once you've decided what range of _Churn Risk Score_ or category you want to target, you can use the **Create Segment** or **Create Campaign** buttons to create a new segment or campaign that filters for users with the _Churn Risk Score_ or category selected with the slider.
 
-![Churn filters available when defining an audience include Purchase Likelihood Category and Purchase Likelihood Score.][5]
+![Churn filters available when defining an audience include Purchase Likelihood Category and Purchase Likelihood Score.]({% image_buster /assets/img_archive/predictive_churn_filters.png %})
 
 You can also use filters in campaigns or segments to target the users according to that threshold. You can filter for users by "Churn Score" or "Churn Category" in campaigns, Canvas, and segments, just like you use any other filter in Braze.
 
@@ -32,4 +32,3 @@ Now that you've identified and selected the group of users at risk of churn that
 
 Keep in mind that you can message different levels of at-risk users differently! So the highest-risk customers could get higher discounts than the medium-risk customers, while the lowest-risk customers simply get new kinds of messaging or content but no larger incentive. You can also layer other filters into these segments to further qualify who gets what offers or messages.
 
-[5]: {% image_buster /assets/img_archive/predictive_churn_filters.png %}

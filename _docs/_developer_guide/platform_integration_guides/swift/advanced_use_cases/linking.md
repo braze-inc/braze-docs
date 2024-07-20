@@ -11,7 +11,7 @@ description: "This article covers how to implement the universal deep linking de
 
 > Deep linking is a way of providing a link that launches a native app, shows specific content, or takes some specific action. If you're looking to implement deep links in your iOS app for the first time, follow these steps.
 
-For general information on what deep links are, refer to our [FAQ article][4]. 
+For general information on what deep links are, refer to our [FAQ article]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/#what-is-deep-linking). 
 
 ## Step 1: Registering a scheme
 
@@ -61,11 +61,11 @@ Your example allowlist might look something like:
 </array>
 ```
 
-For more information, refer to [Apple's documentation][12] on the `LSApplicationQueriesSchemes` key.
+For more information, refer to [Apple's documentation](https://developer.apple.com/library/content/documentation/General/Reference/InfoPlistKeyReference/Articles/LaunchServicesKeys.html#//apple_ref/doc/uid/TP40009250-SW14) on the `LSApplicationQueriesSchemes` key.
 
 ## Step 3: Implement a handler
 
-After activating your app, iOS will call the method [`application:openURL:options:`][13]. The important argument is the [NSURL][2] object.
+After activating your app, iOS will call the method [`application:openURL:options:`](https://developer.apple.com/reference/uikit/uiapplicationdelegate/1623112-application?language=objc). The important argument is the [NSURL](https://developer.apple.com/library/ios/DOCUMENTATION/Cocoa/Reference/Foundation/Classes/NSURL_Class/Reference/Reference.html#//apple_ref/doc/c_ref/NSURL) object.
 
 {% tabs %}
 {% tab swift %}
@@ -97,9 +97,9 @@ func application(_ app: UIApplication, open url: URL, options: [UIApplication.Op
 ## App transport security (ATS)
 
 ### ATS requirements
-From [Apple's documentation][16]: "App Transport Security is a feature that improves the security of connections between an app and web services. The feature consists of default connection requirements that conform to best practices for secure connections. Apps can override this default behavior and turn off transport security."
+From [Apple's documentation](https://developer.apple.com/library/prerelease/ios/releasenotes/General/WhatsNewIniOS/Articles/iOS9.html#//apple_ref/doc/uid/TP40016198-SW14): "App Transport Security is a feature that improves the security of connections between an app and web services. The feature consists of default connection requirements that conform to best practices for secure connections. Apps can override this default behavior and turn off transport security."
 
-ATS is applied by default. It requires that all connections use HTTPS and are encrypted using TLS 1.2 with forward secrecy. Refer to [Requirements for Connecting Using ATS][14] for more information. All images served by Braze to end devices are handled by a content delivery network ("CDN") that supports TLS 1.2 and is compatible with ATS.
+ATS is applied by default. It requires that all connections use HTTPS and are encrypted using TLS 1.2 with forward secrecy. Refer to [Requirements for Connecting Using ATS](https://developer.apple.com/library/ios/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW35) for more information. All images served by Braze to end devices are handled by a content delivery network ("CDN") that supports TLS 1.2 and is compatible with ATS.
 
 Unless they are specified as exceptions in your application's `Info.plist`, connections that do not follow these requirements will fail with errors that look something like this:
 
@@ -144,7 +144,7 @@ To add a domain as an exception of the ATS, add following to your app's `Info.pl
 </dict>
 ```
 
-Refer to Apple's article on [app transport security keys][19] for more information.
+Refer to Apple's article on [app transport security keys](https://developer.apple.com/library/ios/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW33) for more information.
 
 #### Disable ATS entirely
 
@@ -162,7 +162,7 @@ You can turn off ATS entirely. Note that this is not recommended practice, due t
 
 The SDK percent-encodes links to create valid `URL`s. All link characters that are not allowed in a properly formed URL, such as Unicode characters, will be percent escaped.
 
-To decode an encoded link, use the `String` property [`removingPercentEncoding`][8]. You must also return `true` in the `BrazeDelegate.braze(_:shouldOpenURL:)`. A call to action is required to trigger the handling of the URL by your app. 
+To decode an encoded link, use the `String` property [`removingPercentEncoding`](https://developer.apple.com/documentation/swift/stringprotocol/removingpercentencoding). You must also return `true` in the `BrazeDelegate.braze(_:shouldOpenURL:)`. A call to action is required to trigger the handling of the URL by your app. 
 
 For example:
 
@@ -197,7 +197,7 @@ For example:
 You can take advantage of `UIApplicationOpenSettingsURLString` to deep link users to your app's settings from Braze push notifications, in-app messages, and the News Feed.
 
 To take users from your app into the iOS settings:
-1. First, make sure your application is set up for either [scheme-based deep links][25] or [universal links][27].
+1. First, make sure your application is set up for either [scheme-based deep links](##step-1-registering-a-scheme) or [universal links](#universal-links).
 2. Decide on a URI for deep linking to the **Settings** page (for example, `myapp://settings` or `https://www.braze.com/settings`).
 3. If you are using custom scheme-based deep links, add the following code to your `application:openURL:options:` method:
 
@@ -249,9 +249,9 @@ The `BrazeDelegate` protocol can be used to customize the handling of URLs such 
 
 Braze supports universal links in push notifications, in-app messages, and Content Cards. To enable universal link support, [`configuration.forwardUniversalLinks`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/configuration-swift.class/forwarduniversallinks) must be set to `true`.
 
-When enabled, Braze will forward universal links to your app's `AppDelegate` via the [`application:continueUserActivity:restorationHandler:`][15] method. 
+When enabled, Braze will forward universal links to your app's `AppDelegate` via the [`application:continueUserActivity:restorationHandler:`](https://developer.apple.com/documentation/uikit/uiapplicationdelegate/1623072-application) method. 
 
-Your application also needs to be set up to handle universal links. Refer to [Apple's documentation][11] to ensure your application is configured correctly for universal links.
+Your application also needs to be set up to handle universal links. Refer to [Apple's documentation](https://developer.apple.com/documentation/xcode/supporting-universal-links-in-your-app) to ensure your application is configured correctly for universal links.
 
 {% alert warning %}
 Universal link forwarding requires access to the application entitlements. When running the application in a simulator, these entitlements are not directly available and universal links are not forwarded to the system handlers.
@@ -295,22 +295,6 @@ func braze(_ braze: Braze, shouldOpenURL context: Braze.URLContext) -> Bool {
 {% endtab %}
 {% endtabs %}
 
-For more information, see [`BrazeDelegate`][23].
+For more information, see [`BrazeDelegate`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/brazedelegate).
 
 
-[2]: https://developer.apple.com/library/ios/DOCUMENTATION/Cocoa/Reference/Foundation/Classes/NSURL_Class/Reference/Reference.html#//apple_ref/doc/c_ref/NSURL
-[4]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/#what-is-deep-linking
-[6]: https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/webviewcontroller
-[8]: https://developer.apple.com/documentation/swift/stringprotocol/removingpercentencoding
-[11]: https://developer.apple.com/documentation/xcode/supporting-universal-links-in-your-app
-[12]: https://developer.apple.com/library/content/documentation/General/Reference/InfoPlistKeyReference/Articles/LaunchServicesKeys.html#//apple_ref/doc/uid/TP40009250-SW14
-[13]: https://developer.apple.com/reference/uikit/uiapplicationdelegate/1623112-application?language=objc
-[14]: https://developer.apple.com/library/ios/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW35
-[15]: https://developer.apple.com/documentation/uikit/uiapplicationdelegate/1623072-application
-[16]: https://developer.apple.com/library/prerelease/ios/releasenotes/General/WhatsNewIniOS/Articles/iOS9.html#//apple_ref/doc/uid/TP40016198-SW14
-[19]: https://developer.apple.com/library/ios/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW33
-[22]: https://appboy.github.io/appboy-ios-sdk/docs/interface_appboy.html#aa9f1bd9e4a5c082133dd9cc344108b24
-[23]: https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/brazedelegate
-[25]: ##step-1-registering-a-scheme
-[26]: #linking-customization
-[27]: #universal-links

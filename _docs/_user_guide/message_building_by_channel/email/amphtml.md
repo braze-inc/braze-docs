@@ -42,7 +42,7 @@ For a full list of supported platforms, refer to [AMP documentation](https://amp
 
 Go to your Gmail settings, and select **Enable Dynamic Email** under **General**.
 
-![An example of Gmail settings with the "Enable dynamic email" checkbox selected.][1]
+![An example of Gmail settings with the "Enable dynamic email" checkbox selected.]({% image_buster /assets/img/dynamic-content.png %})
 
 ## API usage
 
@@ -215,7 +215,7 @@ For your AMP email to be delivered to any Gmail account, the email must meet the
 - The email should include the AMP MIME part before the HTML MIME part.
 - The AMP MIME part must be smaller than 100&nbsp;KB.
 
-If none of these conditions are causing the error, reach out to [Support][support].
+If none of these conditions are causing the error, reach out to [Support]({{site.baseurl}}/support_contact/).
 
 ### Frequently asked questions
 
@@ -227,5 +227,3 @@ We advocate not segmenting to send to all different types of users. This is beca
 Check in with your engineering team to build out the AMP elements. After these elements are set up, we encourage you to include design resources and elements you have to add an extra layer of polish.
 {% enddetails %}
 
-[1]: {% image_buster /assets/img/dynamic-content.png %}
-[support]: {{site.baseurl}}/support_contact/

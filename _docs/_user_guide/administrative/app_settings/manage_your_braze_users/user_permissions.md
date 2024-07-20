@@ -38,7 +38,7 @@ To edit a specific user's permissions, either by assigning permissions to the de
 2. Click the edit icon in the user's row.
 3. To make a user an admin, select **This user is an admin**. To demote an admin to a limited role, clear the checkbox.
 
-![Selecting Administrator or Limited when editing a user][29]{: style="border:none"}
+![Selecting Administrator or Limited when editing a user]({% image_buster /assets/img_archive/editing_user_permission_new.png %} "Edit User Permission"){: style="border:none"}
 
 When you switch a user's permissions from **Administrator** to **Limited**, that user no longer has access to any portion of Braze until you set those specific permissions using the checkboxes that appear under the **Workspace-level permissions** section.
 
@@ -46,7 +46,7 @@ When you switch a user's permissions from **Administrator** to **Limited**, that
 
 You can manage user permissions by group or on an individual basis when editing or adding a user from the **Company Users** page.
 
-![Manage User Permissions][89]
+![Manage User Permissions]({% image_buster /assets/img/user_permissions_selection.png %})
 
 {% alert important %}
 As of April 2024, to create or update promotion code lists, Braze users need the “Access Campaigns, Canvases, Cards, Segments, Media Library” permission.
@@ -139,8 +139,3 @@ Assign roles by selecting an existing user or creating a new one on the **Compan
 
 You can download a CSV of your dashboard users and their associated permissions by clicking **Export Users** on the **Company Users** page. A CSV will be sent to the email address associated with your Braze account.
 
-[29]: {% image_buster /assets/img_archive/editing_user_permission_new.png %} "Edit User Permission"
-[30]: {% image_buster /assets/img_archive/two_factor_authentication_manage_users_new.png %}
-[76]: {{site.baseurl}}/user_guide/administrative/manage_your_braze_users/user_permissions/
-[89]: {% image_buster /assets/img/user_permissions_selection.png %}
-[5]: {% image_buster /assets/img/permission_sets_manage.png %}

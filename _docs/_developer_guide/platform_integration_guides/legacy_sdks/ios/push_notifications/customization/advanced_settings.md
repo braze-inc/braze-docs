@@ -16,7 +16,7 @@ noindex: true
 
 When creating a push campaign, on the compose step, select **Settings** to view the advanced settings available.
 
-![][1]
+![]({% image_buster /assets/img_archive/ios_advanced_settings.png %})
 
 ## Extracting data from push key-value pairs
 
@@ -28,11 +28,11 @@ Check the **Alert Options** checkbox to see a dropdown of key-values available t
 
 ## Adding content-available flag
 
-Check the **Add Content-Available Flag** checkbox to instruct devices to download new content in the background. Most commonly, this can be checked if you are interested in sending [silent notifications][2].
+Check the **Add Content-Available Flag** checkbox to instruct devices to download new content in the background. Most commonly, this can be checked if you are interested in sending [silent notifications]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/silent_push_notifications/).
 
 ## Adding mutable-content flag
 
-Check the **Add Mutable-Content Flag** checkbox to enable advanced receiver customization in iOS 10+ devices. This flag will automatically be sent when composing a [rich notification][3], regardless of the value of this checkbox.
+Check the **Add Mutable-Content Flag** checkbox to enable advanced receiver customization in iOS 10+ devices. This flag will automatically be sent when composing a [rich notification]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/customization/rich_notifications/), regardless of the value of this checkbox.
 
 ## Update app badge count
 
@@ -44,13 +44,9 @@ Here you can enter a path to a sound file in your app bundle to specify a sound 
 
 ## Collapse ID
 
-Specify a collapse ID to coalesce similar notifications. If you send multiple notifications with the same collapse ID, the device will only show the most recently received notification. Refer to Apple's documentation on [coalesced notifications][4].
+Specify a collapse ID to coalesce similar notifications. If you send multiple notifications with the same collapse ID, the device will only show the most recently received notification. Refer to Apple's documentation on [coalesced notifications](https://developer.apple.com/library/content/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/APNSOverview.html#//apple_ref/doc/uid/TP40008194-CH8-SW1).
 
 ## Expiry
 
 Checking the **Expiry** checkbox will allow setting an expiration time for your message. Should a user's device lose connectivity, Braze will continue to try and send the message until the specified time. If this is not set, the platform will default to an expiration of 30 days. Note that push notifications that expire before delivery are not considered failed and will not be recorded as a bounce.
 
-[1]: {% image_buster /assets/img_archive/ios_advanced_settings.png %}
-[2]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/silent_push_notifications/
-[3]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/customization/rich_notifications/
-[4]: https://developer.apple.com/library/content/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/APNSOverview.html#//apple_ref/doc/uid/TP40008194-CH8-SW1

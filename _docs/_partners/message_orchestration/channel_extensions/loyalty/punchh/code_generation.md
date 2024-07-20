@@ -25,7 +25,7 @@ Using the Punchh coupon framework and Braze, you can achieve the following scena
     - Dynamic coupon generation token: This is a system-generated security token for encryption.
     - Dynamic coupon generation URL: This URL will be embedded in the email as a link or image, as required by the business.
 
-![The form for creating a coupon campagin in Punchh.][2]{: style="max-width:60%;"}
+![The form for creating a coupon campagin in Punchh.]({% image_buster /assets/img/punchh/punchh8.png %}){: style="max-width:60%;"}
 
 ### Step 2: Generate signature and construct URL
 
@@ -86,7 +86,7 @@ Replace the following:
 
 When a user clicks the coupon URL, they'll be redirected to a Punchh-hosted web page, where their generated coupon will be displayed.
 
-![Example confirmation message after a user successfully generates a coupon code.][1]
+![Example confirmation message after a user successfully generates a coupon code.]({% image_buster /assets/img/punchh/punchh7.png %})
 
 #### Extract code via JSON as plain text
 
@@ -133,7 +133,7 @@ Replace the following:
 
 Your output will be similar to the following:
 
-![Rendered output of the coupon code image tag.][3]
+![Rendered output of the coupon code image tag.]({% image_buster /assets/img/punchh/punchh9.png %})
 
 ## Associated error messages
 
@@ -148,6 +148,3 @@ Your output will be similar to the following:
 | `already_used_by_other_guest` | This promo code has already been used by some other guest. | Another user has already used the code. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
-[1]: {% image_buster /assets/img/punchh/punchh7.png %}
-[2]: {% image_buster /assets/img/punchh/punchh8.png %}
-[3]: {% image_buster /assets/img/punchh/punchh9.png %}

@@ -20,7 +20,7 @@ The Braze and Ada integration allows you to augment user profiles with data coll
 | ----------- | ----------- |
 | Ada account | An [Ada](https://ada.cx) account with the Braze and Answer Utilities applications enabled is required to take advantage of this partnership. |
 | Braze REST API key | A Braze REST API key with `users.track` permissions. <br><br> This can be created in the Braze dashboard from **Settings** > **API Keys**. |
-| Braze REST endpoint | [Your REST endpoint URL][1]. Your endpoint will depend on the Braze URL for your instance. |
+| Braze REST endpoint | [Your REST endpoint URL]({{site.baseurl}}/developer_guide/rest_api/basics/#endpoints). Your endpoint will depend on the Braze URL for your instance. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## Use cases
@@ -87,8 +87,3 @@ To use the Braze block, drag it from the block drawer into the appropriate Answe
 {% endtab %}
 {% endtabs %}
 
-[1]: {{site.baseurl}}/developer_guide/rest_api/basics/#endpoints
-[2]: {% image_buster /assets/img/ada/ada-braze-1.png %}
-[3]: {% image_buster /assets/img/ada/ada-braze-2.png %}
-[4]: {% image_buster /assets/img/ada/ada-braze-3.png %}
-[5]: {% image_buster /assets/img/ada/ada-braze-4.png %}

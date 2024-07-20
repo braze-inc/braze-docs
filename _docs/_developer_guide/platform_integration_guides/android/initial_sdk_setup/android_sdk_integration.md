@@ -42,15 +42,15 @@ dependencies {
 }
 ```
 
-The following example shows where to place the dependency line in your `build.gradle`. Note that the version used in the example uses an old version. Visit [Braze Android SDK releases][60] for the most up-to-date version of the Braze Android SDK.
+The following example shows where to place the dependency line in your `build.gradle`. Note that the version used in the example uses an old version. Visit [Braze Android SDK releases](https://github.com/braze-inc/braze-android-sdk/blob/master/CHANGELOG.md) for the most up-to-date version of the Braze Android SDK.
 
-![Android studio displaying the "build.gradle". In this screenshot, the dependency code is added to the bottom of the file.][32]
+![Android studio displaying the "build.gradle". In this screenshot, the dependency code is added to the bottom of the file.]({% image_buster /assets/img_archive/androidstudio2.png %})
 
 #### Perform Gradle sync
 
 Be sure to perform a Gradle sync to build your project and incorporate the [dependency additions](#add-braze-dependency).
 
-![Android studio displaying a banner and button at the top of the application that says, "Gradle files have changed since last project sync. A project sync may be necessary for the IDE to work properly. Sync Now."][38]
+![Android studio displaying a banner and button at the top of the application that says, "Gradle files have changed since last project sync. A project sync may be necessary for the IDE to work properly. Sync Now."]({% image_buster /assets/img_archive/androidstudio3.png %})
 
 ## Step 2: Configure the Braze SDK in braze.xml
 
@@ -60,7 +60,7 @@ As of December 2019, custom endpoints are no longer given out, if you have a pre
 
 Now that the libraries have been integrated, you must create a `braze.xml` file in your project's `res/values` folder. If you are on a specific data cluster or have a pre-existing custom endpoint, you need to specify the endpoint in your `braze.xml` file as well. 
 
-The contents of that file should resemble the following code snippet. Make sure to substitute `YOUR_APP_IDENTIFIER_API_KEY` with the identifier found in the **Manage Settings** page of the Braze dashboard. Log in at [dashboard.braze.com](https://dashboard.braze.com) to find your [cluster address][1]. 
+The contents of that file should resemble the following code snippet. Make sure to substitute `YOUR_APP_IDENTIFIER_API_KEY` with the identifier found in the **Manage Settings** page of the Braze dashboard. Log in at [dashboard.braze.com](https://dashboard.braze.com) to find your [cluster address]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints). 
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -79,14 +79,14 @@ Now that you've added your API key, you need to add the following permissions to
 ```
 
 {% alert note %}
-With the release of Android M, Android switched from an install-time to a runtime permissions model. However, both of these permissions are normal permissions and are granted automatically if listed in the app manifest. For more information, visit Android's [permission documentation][46].
+With the release of Android M, Android switched from an install-time to a runtime permissions model. However, both of these permissions are normal permissions and are granted automatically if listed in the app manifest. For more information, visit Android's [permission documentation](https://developer.android.com/training/permissions/index.html).
 {% endalert %}
 
 ## Step 4: Tracking user sessions in Android
 
 ### Activity lifecycle callback integration
 
-Calls to `openSession()`, `closeSession()`,[`ensureSubscribedToInAppMessageEvents()`][64], and `InAppMessageManager` registration are optionally handled automatically.
+Calls to `openSession()`, `closeSession()`,[`ensureSubscribedToInAppMessageEvents()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage/-braze-in-app-message-manager/ensure-subscribed-to-in-app-message-events.html), and `InAppMessageManager` registration are optionally handled automatically.
 
 #### Register activity lifecycle callbacks
 
@@ -120,7 +120,7 @@ class MyApplication : Application() {
 {% endtab %}
 {% endtabs %}
 
-See our SDK reference documentation for more information on the parameters available for [`BrazeActivityLifecycleCallbackListener`][63].
+See our SDK reference documentation for more information on the parameters available for [`BrazeActivityLifecycleCallbackListener`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze-activity-lifecycle-callback-listener/index.html).
 
 ## Step 5: Enable location tracking
 
@@ -140,11 +140,3 @@ Braze will now be able to collect [specified data from your application]({{site.
 
 Visit the following articles in order to enable [custom event tracking]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/tracking_custom_events/), [push messaging]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/integration/standard_integration/), [Content Cards]({{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/integration/) and the complete suite of Braze features.
 
-[1]: {{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints
-[2]: {{site.baseurl}}/user_guide/introduction/
-[32]: {% image_buster /assets/img_archive/androidstudio2.png %}
-[38]: {% image_buster /assets/img_archive/androidstudio3.png %}
-[46]: https://developer.android.com/training/permissions/index.html
-[60]: https://github.com/braze-inc/braze-android-sdk/blob/master/CHANGELOG.md
-[63]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze-activity-lifecycle-callback-listener/index.html
-[64]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage/-braze-in-app-message-manager/ensure-subscribed-to-in-app-message-events.html

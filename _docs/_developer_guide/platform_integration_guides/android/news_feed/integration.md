@@ -19,7 +19,7 @@ channel:
 News Feed is being deprecated. Braze recommends that customers who use our News Feed tool move over to our Content Cards messaging channel—it's more flexible, customizable, and reliable. Check out the [migration guide]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) for more.
 {% endalert %}
 
-In Android, the News Feed is implemented as a [fragment][2] available in the Braze Android UI project. Refer to [Google's documentation on fragments][3] for information on adding a fragment to an activity.
+In Android, the News Feed is implemented as a [fragment](http://developer.android.com/guide/components/fragments.html) available in the Braze Android UI project. Refer to [Google's documentation on fragments](https://developer.android.com/guide/fragments#Adding "Android Documentation: Fragments") for information on adding a fragment to an activity.
 
 The `BrazeFeedFragment` class will automatically refresh and display the contents of the News Feed and log usage analytics. The cards that can appear in a user's News Feed are set on the Braze dashboard.
 
@@ -29,7 +29,7 @@ Braze has five unique card types: banner image, captioned image, text announceme
 
 ### Base card model properties
 
-The [base card][29] model provides foundational behavior for all cards.  
+The [base card](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/index.html) model provides foundational behavior for all cards.  
 
 |Property|Description|
 |---|---|
@@ -45,7 +45,7 @@ The [base card][29] model provides foundational behavior for all cards.
 
 ### Banner image card properties
 
-[Banner image cards][30] are clickable full-sized images.
+[Banner image cards](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-banner-image-card/index.html) are clickable full-sized images.
 
 |Property|Description|
 |---|---|
@@ -56,7 +56,7 @@ The [base card][29] model provides foundational behavior for all cards.
 
 ### Captioned image card properties
 
-[Captioned image cards][31] are clickable full-sized images with accompanying descriptive text.
+[Captioned image cards](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-captioned-image-card/index.html) are clickable full-sized images with accompanying descriptive text.
 
 |Property|Description|
 |---|---|
@@ -69,7 +69,7 @@ The [base card][29] model provides foundational behavior for all cards.
 
 ### Text announcement card (captioned image without image) properties
 
-[Text announcement cards][32] are clickable cards containing descriptive text.
+[Text announcement cards](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-text-announcement-card/index.html) are clickable cards containing descriptive text.
 
 |Property|Description|
 |---|---|
@@ -81,7 +81,7 @@ The [base card][29] model provides foundational behavior for all cards.
 
 ### Short news card properties
 
-[Short news cards][33] are clickable cards with images and accompanying descriptive text.
+[Short news cards](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-short-news-card/index.html) are clickable cards with images and accompanying descriptive text.
 
 |Property|Description|
 |---|---|
@@ -94,7 +94,7 @@ The [base card][29] model provides foundational behavior for all cards.
 
 ## Session analytics
 
-The Android UI fragments do not automatically track session analytics. To ensure that sessions are [tracked correctly][4], call `IBraze.openSession()` when your app is opened.
+The Android UI fragments do not automatically track session analytics. To ensure that sessions are [tracked correctly]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/tracking_sessions/), call `IBraze.openSession()` when your app is opened.
 
 ## Linking
 
@@ -142,19 +142,7 @@ Braze.getInstance(context).removeSingleSubscription(mFeedUpdatedSubscriber, Feed
 
 When using custom views, you will need to log analytics manually since analytics are only handled automatically when using Braze views.
 
-To log a display of the feed, call [`Braze.logFeedDisplayed()`][6].
+To log a display of the feed, call [`Braze.logFeedDisplayed()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-i-braze/log-feed-displayed.html).
 
-To log an impression or click on a Card, call [`Card.logClick()`][7] and [`Card.logImpression()`][8] respectively.
+To log an impression or click on a Card, call [`Card.logClick()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/log-click.html) and [`Card.logImpression()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/log-impression.html) respectively.
 
-[2]: http://developer.android.com/guide/components/fragments.html
-[3]: https://developer.android.com/guide/fragments#Adding "Android Documentation: Fragments"
-[4]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/tracking_sessions/
-[6]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-i-braze/log-feed-displayed.html
-[7]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/log-click.html
-[8]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/log-impression.html
-[9]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/news_feed/card_types/#card-types
-[29]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/index.html
-[30]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-banner-image-card/index.html
-[31]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-captioned-image-card/index.html
-[32]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-text-announcement-card/index.html
-[33]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-short-news-card/index.html

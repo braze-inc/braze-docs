@@ -24,7 +24,7 @@ If you need to force a new session, you can do so by changing users.
 
 ## Customizing session timeout
 
-You can set the `sessionTimeout` to the desired integer value in your `configuration` object passed to [`init(configuration)`][session_tracking_1].
+You can set the `sessionTimeout` to the desired integer value in your `configuration` object passed to [`init(configuration)`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/configuration-swift.class).
 
 {% tabs %}
 {% tab swift %}
@@ -65,13 +65,13 @@ The minimum value for `sessionTimeout` is 1 second. The default value is 10 seco
 
 To detect sessions via your user, find your user on the dashboard and navigate to **Sessions Overview** on the user profile. You can confirm that session tracking is working by checking that the "Sessions" metric increases when you expect it to. App-specific details will display after the user has used more than one app.
 
-![The sessions overview section of a user profile showing the number of sessions, last used date, and first used date.][session_tracking_7]{: style="max-width:40%;"}
+![The sessions overview section of a user profile showing the number of sessions, last used date, and first used date.]({% image_buster /assets/img_archive/test_session.png %}){: style="max-width:40%;"}
 
 App-specific details will display only if the user has used more than one app.
 
 ## Subscribing to session updates
 
-To listen to session updates, use the [`subscribeToSessionUpdates(_:)`][1] method. Session start and end events will only be logged when the app is running in the foreground. If you register a callback to session end events and the app is backgrounded, the callback will fire when the app is foregrounded again. Session duration, however, is still measured as the time from app open or foregrounding until app closing or backgrounding.
+To listen to session updates, use the [`subscribeToSessionUpdates(_:)`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/subscribetosessionupdates(_:)) method. Session start and end events will only be logged when the app is running in the foreground. If you register a callback to session end events and the app is backgrounded, the callback will fire when the app is foregrounded again. Session duration, however, is still measured as the time from app open or foregrounding until app closing or backgrounding.
 
 {% tabs %}
 {% tab swift %}
@@ -111,7 +111,7 @@ BRZCancellable *cancellable = [AppDelegate.braze subscribeToSessionUpdates:^(BRZ
 {% endtab %}
 {% endtabs %}
 
-Alternatively, in Swift, you can use the [`sessionUpdatesStream`][2] `AsyncStream` to observe asynchronous changes:
+Alternatively, in Swift, you can use the [`sessionUpdatesStream`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/sessionupdatesstream) `AsyncStream` to observe asynchronous changes:
 
 ```swift
 for await event in braze.sessionUpdatesStream {
@@ -124,11 +124,3 @@ for await event in braze.sessionUpdatesStream {
 }
 ```
 
-[1]: https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/subscribetosessionupdates(_:)
-[2]: https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/sessionupdatesstream
-[session_tracking_1]: https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/configuration-swift.class
-[session_tracking_3]: https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/configuration-swift.class
-[session_tracking_5]: https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#initialize
-[session_tracking_6]: http://msdn.microsoft.com/en-us/library/windows/apps/hh464925.aspx
-[session_tracking_7]: {% image_buster /assets/img_archive/test_session.png %}
-[session_tracking_8]: {{ site.baseurl }}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/#step-4-tracking-user-sessions-in-android

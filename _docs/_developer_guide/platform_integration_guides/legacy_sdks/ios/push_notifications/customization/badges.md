@@ -14,7 +14,7 @@ noindex: true
 
 # Badges
 
-You can specify the desired badge count when you compose a push notification through the Braze dashboard. You may also update your badge count manually through your application's [`applicationIconBadgeNumber`][20] property or the [remote notification payload][21]. Braze will also clear the badge count when a Braze notification is received while the app is foregrounded. 
+You can specify the desired badge count when you compose a push notification through the Braze dashboard. You may also update your badge count manually through your application's [`applicationIconBadgeNumber`](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIApplication_Class/index.html#//apple_ref/occ/instp/UIApplication/applicationIconBadgeNumber) property or the [remote notification payload](https://developer.apple.com/library/content/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/CreatingtheNotificationPayload.html#//apple_ref/doc/uid/TP40008194-CH10-SW1). Braze will also clear the badge count when a Braze notification is received while the app is foregrounded. 
 
 If you do not have a plan for clearing badges as part of normal app operation or by sending pushes that clear the badge, you should clear the badge when the app becomes active by adding the following code to your app's `applicationDidBecomeActive:` delegate method:
 
@@ -55,5 +55,3 @@ UIApplication.shared.applicationIconBadgeNumber = 0
 
 Note that setting the badge number to 0 will also clear up notifications in the notification center. So even if you don't set badge number in push payloads, you can still set the badge number to 0 to remove the push notification(s) in the notification center after users click on the push.
 
-[20]: https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIApplication_Class/index.html#//apple_ref/occ/instp/UIApplication/applicationIconBadgeNumber
-[21]: https://developer.apple.com/library/content/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/CreatingtheNotificationPayload.html#//apple_ref/doc/uid/TP40008194-CH10-SW1

@@ -25,7 +25,7 @@ Triggered in-app messages only work with custom events logged through the Braze 
 
 ## Delivery semantics
 
-All in-app messages that a user is eligible for are delivered to the user's device on the [session start][84]. Upon delivery, the SDK will prefetch assets to be available immediately at trigger time, minimizing display latency.
+All in-app messages that a user is eligible for are delivered to the user's device on the [session start]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/tracking_sessions/#session-lifecycle). Upon delivery, the SDK will prefetch assets to be available immediately at trigger time, minimizing display latency.
 
 When a trigger event has more than one eligible in-app message associated with it, only the in-app message with the highest priority will be delivered.
 
@@ -49,7 +49,7 @@ To enable this feature, a silent push is sent to the device, which allows a cust
 
 ### Step 1: Create a push callback to receive the silent push
 
-Register your custom push callback to listen for a specific silent push notification. For more information, refer to [Standard Android push integration][78].
+Register your custom push callback to listen for a specific silent push notification. For more information, refer to [Standard Android push integration]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/integration/standard_integration/#android-push-listener-callback).
 
 Two events will be logged for the in-app message to be delivered, one by the server and one from within your custom push callback. To make sure the same event is not duplicated, the event logged from within your push callback should follow a generic naming convention, for example, "in-app message trigger event," and not the same name as the server sent event. If this is not done, segmentation and user data may be affected by duplicate events being logged for a single user action.
 
@@ -92,13 +92,13 @@ Braze.getInstance(applicationContext).subscribeToPushNotificationEvents { event 
 
 ### Step 2: Create a push campaign
 
-Create a [silent push campaign][73] triggered via the server sent event.
+Create a [silent push campaign]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/silent_push_notifications/) triggered via the server sent event.
 
-![][75]
+![]({% image_buster /assets/img_archive/serverSentPush.png %})
 
 The push campaign must include key-value pair extras that indicate that this push campaign is sent to log an SDK custom event. This event will be used to trigger the in-app message.
 
-![Two sets of key-value pairs: IS_SERVER_EVENT set to "true", and CAMPAIGN_NAME set to "example campaign name".][76]{: style="max-width:70%;" }
+![Two sets of key-value pairs: IS_SERVER_EVENT set to "true", and CAMPAIGN_NAME set to "example campaign name".]({% image_buster /assets/img_archive/kvpConfiguration.png %}){: style="max-width:70%;" }
 
 The earlier push callback sample code recognizes the key-value pairs and logs the appropriate SDK custom event.
 
@@ -110,7 +110,7 @@ Create your user-visible in-app message campaign in the Braze dashboard. This ca
 
 In the following example, the specific in-app message to be triggered has been configured by sending the event property as part of the initial silent push.
 
-![An action-based delivery campaign where an in-app message will trigger when "campaign_name" equals "IAM campaign name example."][77]
+![An action-based delivery campaign where an in-app message will trigger when "campaign_name" equals "IAM campaign name example."]({% image_buster /assets/img_archive/iam_event_trigger.png %})
 
 If a server-sent event is logged while the app is not in the foreground, the event will log, but the in-app message will not be displayed. Should you want the event to be delayed until the application is in the foreground, a check must be included in your custom push receiver to dismiss or delay the event until the app has entered the foreground.
 
@@ -164,9 +164,3 @@ BrazeInAppMessageManager.getInstance().addInAppMessage(inAppMessage)
 {% endtab %}
 {% endtabs %}
 
-[73]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/silent_push_notifications/
-[75]: {% image_buster /assets/img_archive/serverSentPush.png %}
-[76]: {% image_buster /assets/img_archive/kvpConfiguration.png %}
-[77]: {% image_buster /assets/img_archive/iam_event_trigger.png %}
-[78]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/integration/standard_integration/#android-push-listener-callback
-[84]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/tracking_sessions/#session-lifecycle

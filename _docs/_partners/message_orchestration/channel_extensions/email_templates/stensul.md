@@ -50,4 +50,3 @@ Next, enter the **template name**, **subject**, and **preheader** for your email
 
 Find your uploaded Stensul template in your Braze account's **Templates & Media > Email Templates** section. You can now use this email template to start sending engaging email messages to your customers!
 
-[1]: {{site.baseurl}}/user_guide/message_building_by_channel/email/creating_an_email_template/

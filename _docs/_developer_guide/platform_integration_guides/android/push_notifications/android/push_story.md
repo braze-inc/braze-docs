@@ -13,6 +13,5 @@ channel:
 
 No extra integration for Android Push Stories is required. It's built into Braze already! 
 
-Read our [Push Stories][1] article in the user guide to learn more.
+Read our [Push Stories]({{site.baseurl}}/user_guide/message_building_by_channel/push/advanced_push_options/push_stories/) article in the user guide to learn more.
 
-[1]: {{site.baseurl}}/user_guide/message_building_by_channel/push/advanced_push_options/push_stories/

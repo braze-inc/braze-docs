@@ -25,7 +25,7 @@ To generate copy using the AI copywriting assistant, follow these steps:
 
 We use the information you provide to prompt GPT to write copy for you. The response will be fetched from OpenAI and provided to you. 
 
-![AI copywriting assistant modal showing various features available"][1]{: style="max-width:70%;"}
+![AI copywriting assistant modal showing various features available"]({% image_buster /assets/img/ai_copywriter/gpt3.png %} "GPT3"){: style="max-width:70%;"}
 
 {% alert important %}
 We filter out responses for offensive content that violates OpenAI's [content policy](https://beta.openai.com/docs/usage-guidelines/content-policy).
@@ -49,4 +49,3 @@ In order to generate copy, Braze will send your query to OpenAI. All queries sen
 
 You can also [generate an image using AI]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/media_library/#generate-ai) from the media library. This leverages DALL·E 2, an AI system from OpenAI that can create realistic images and art from a description in natural language.
 
-[1]: {% image_buster /assets/img/ai_copywriter/gpt3.png %} "GPT3"

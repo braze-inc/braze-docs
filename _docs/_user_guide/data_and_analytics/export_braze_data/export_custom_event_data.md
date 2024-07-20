@@ -18,7 +18,7 @@ You can find the **Custom Events Report** under **Analytics**.
 If you are using the [older navigation]({{site.baseurl}}/navigation), you can find **Custom Events** report page under **Data**.
 {% endalert %}
 
-![Custom events][14]
+![Custom events]({% image_buster /assets/img_archive/Export_events.png %})
 
 You can export the following CSVs:
 
@@ -35,4 +35,3 @@ You can export the following CSVs:
 For help with CSV and API exports, visit our [export troubleshooting]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/) article.
 {% endalert %}
 
-[14]: {% image_buster /assets/img_archive/Export_events.png %}
