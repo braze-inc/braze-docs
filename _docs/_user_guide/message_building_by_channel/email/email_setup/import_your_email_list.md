@@ -26,7 +26,7 @@ Email list cleaning services can do this for you by determining if the email add
 
 In order to identify your most engaged users, first remove deeply lapsed users. It's a best practice to not email users who have not engaged with an email in over six months as this can damage your email sender reputation. When importing your email list, make sure to only include users who have opened an email from you within the last six months.
 
-In the long term, you should also consider implementing a [sunset policy][60].
+In the long term, you should also consider implementing a [sunset policy]({{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices/sunset_policies/).
 
 ### Avoid suppression lists
 

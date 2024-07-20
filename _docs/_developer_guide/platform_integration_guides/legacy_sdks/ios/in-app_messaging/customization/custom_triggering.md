@@ -52,13 +52,13 @@ When the silent push is received, an SDK recorded event "in-app message trigger"
 
 ## Step 2: Create a push campaign
 
-Create a silent push campaign that is triggered via the server sent event. For details on creating a silent push campaign, refer to [silent push notifications][39].
+Create a silent push campaign that is triggered via the server sent event. For details on creating a silent push campaign, refer to [silent push notifications]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/silent_push_notifications/).
 
-![An action-based delivery in-app message campaign that will be delivered to users who perform the custom event "server_event".][40]
+![An action-based delivery in-app message campaign that will be delivered to users who perform the custom event "server_event".]({% image_buster /assets/img_archive/iosServerSentPush.png %})
 
 The push campaign must include key-value pair extras, which indicate that this push campaign is sent to log an SDK custom event. This event will be used to trigger the in-app message:
 
-![n action-based delivery in-app message campaign that has two key-value pairs. "CAMPAIGN_NAME" set as "In-app message name example", and "IS_SERVER_EVENT" set to "true".][41]
+![n action-based delivery in-app message campaign that has two key-value pairs. "CAMPAIGN_NAME" set as "In-app message name example", and "IS_SERVER_EVENT" set to "true".]({% image_buster /assets/img_archive/iOSServerPush.png %})
 
 The code within the `application(_:didReceiveRemoteNotification:fetchCompletionHandler:)` method checks for key `IS_SERVER_EVENT` and will log an SDK custom event if this is present.
 
@@ -70,7 +70,7 @@ Create your user-visible in-app message campaign from within the Braze dashboard
 
 In the following example, the specific in-app message to be triggered has been configured by sending the event property as part of the initial silent push.
 
-![An action-based delivery in-app message campaign that will be delivered to users who perform the custom event "In-app message trigger" where "campaign_name" equals "In-app message name example".][42]
+![An action-based delivery in-app message campaign that will be delivered to users who perform the custom event "In-app message trigger" where "campaign_name" equals "In-app message name example".]({% image_buster /assets/img_archive/iosIAMeventTrigger.png %})
 
 Due to a push message being used to record an SDK logged custom event, Braze will need to store a push token for each user to enable this solution. For both iOS and Android, Braze will only store a token from the point that a user has been served the OS's push prompt. Before this, the user will not be reachable using push, and the preceding solution will not be possible.
 

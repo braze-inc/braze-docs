@@ -16,19 +16,19 @@ News Feed is being deprecated. Braze recommends that customers who use our News 
 
 > News Feed items allow you to insert permanent content directly into your app from our web dashboard. Better yet, the News Feed also is targetable to individual segments just like all of our other message types. This means what you see in the feed might be completely different from another individual. The possibilities for the news-feed are nearly limitless.
 
-Check out our [case studies][13], [use cases][15], and [best practices][16] to see examples and helpful tips for News Feeds.
+Check out our [case studies](https://www.braze.com/customers), [use cases]({{site.baseurl}}/user_guide/engagement_tools/news_feed/news_feed_use_cases/), and [best practices]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/reporting/) to see examples and helpful tips for News Feeds.
 
 ## Step 1: Click create card
 
 First, you must choose the type of News Feed item you want to send down to your users. From the dropdown menu, you can select any of our four News Feed card types.
 
-![The Create Card button on the Braze dashboard. The expanded dropdown options to create a card: Classic, Captioned Image, and Banner.][1]
+![The Create Card button on the Braze dashboard. The expanded dropdown options to create a card: Classic, Captioned Image, and Banner.]({% image_buster /assets/img_archive/newsfeed1_new.png %})
 
 ### News Feed card specifications
 
 #### News Feed cards
 
-<br>![A Classic Card Preview with the Facebook icon, a header that reads "Like us on Facebook!" with two lines of text: "Click Here!" and "www.facebook.com".][2]{: style="max-width:40%;"}
+<br>![A Classic Card Preview with the Facebook icon, a header that reads "Like us on Facebook!" with two lines of text: "Click Here!" and "www.facebook.com".]({% image_buster /assets/img_archive/classiccard.png %}){: style="max-width:40%;"}
 
 Standard News Feed cards consist of:
 
@@ -39,7 +39,7 @@ Standard News Feed cards consist of:
 
 #### Captioned image cards
 
-<br>![A Captioned Image Card Preview with an image of an apple pie and apples. There is a header under the picture that reads "Holiday Sale! Save Almost 50 Dollars Off!" with the following text: "For a limited time only, get four premium apple pies for the price of 3. Hurry! This deal won't last. Click here to redeem. www.example.com".][3]{: style="max-width:40%;"}
+<br>![A Captioned Image Card Preview with an image of an apple pie and apples. There is a header under the picture that reads "Holiday Sale! Save Almost 50 Dollars Off!" with the following text: "For a limited time only, get four premium apple pies for the price of 3. Hurry! This deal won't last. Click here to redeem. www.example.com".]({% image_buster /assets/img_archive/captionedimage.png %}){: style="max-width:40%;"}
 
 Captioned Image cards consist of:
 
@@ -50,7 +50,7 @@ Captioned Image cards consist of:
 
 #### Banner cards
 
-<br>![A Banner Card Preview with an image that reads "This is a banner".][4]{: style="max-width:40%;"}
+<br>![A Banner Card Preview with an image that reads "This is a banner".]({% image_buster /assets/img_archive/newsfeedbanner.png %}){: style="max-width:40%;"}
 
 Banner cards consist of:
 
@@ -72,27 +72,27 @@ Banner cards consist of:
 
 ## Step 2: Add a title, summary, image, and links
 
-Time to compose your News Feed card! Create a title and summary for your card and upload an image to go alongside it. You can also set link behavior on this page. This link can be a standard link or a [deep link][7] to in-app content.
+Time to compose your News Feed card! Create a title and summary for your card and upload an image to go alongside it. You can also set link behavior on this page. This link can be a standard link or a [deep link]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/advanced_use_cases/linking/) to in-app content.
 
-![News Feed item editor that shows the Card Name, card preview, and customization details for language.][6]
+![News Feed item editor that shows the Card Name, card preview, and customization details for language.]({% image_buster /assets/img_archive/news-feed-title-summary_new.png %})
 
 ## Step 3: Select a schedule
 
 Under the News Feed Card editor, you will find options for when to publish this item. You can choose to publish it immediately after creation or set a time in the future to publish it. You can also choose to deliver the News Feed card at a particular time in your users' local time by selecting the **Publish to Users in their Local Time Zone** checkbox.
 
-![][8]
+![]({% image_buster /assets/img_archive/newsfeed2_new.png %})
 
 ## Step 4: Select a segment
 
-You can configure your News Feed Card to target any [segment][10] you've defined within the dashboard at any schedule you desire. Select your target segment by clicking on the dropdown menu. Here, you can see high-level statistics, including email availability and lifetime value per user.
+You can configure your News Feed Card to target any [segment]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/#creating-a-segment) you've defined within the dashboard at any schedule you desire. Select your target segment by clicking on the dropdown menu. Here, you can see high-level statistics, including email availability and lifetime value per user.
 
-![][11]
+![]({% image_buster /assets/img_archive/targetsegment_new.png %})
 
 ## Step 5: Review details and publish
 
 Next, you will be taken to a page that displays all of the details about your card (and companion in-app message, if applicable). You can review any of the details about these items and edit them if you need to by clicking the pencil icon in any of the headers.
 
-![][12]
+![]({% image_buster /assets/img_archive/newsfeedpreview_new.png %})
 
 That's it! You're done! You've published your first news-feed card!
 

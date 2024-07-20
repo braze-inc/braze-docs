@@ -29,9 +29,9 @@ You will need to confirm that you have the following items created and completed
 
 | Requirement | Origin | Description |
 | ----------- | ------ | ----------- |
-| Facebook Business Manager | [Facebook][1] | A centralized tool to manage your brand's Facebook assets (for example, ad accounts, pages, apps). |
-| Facebook Ad Account | [Facebook][2] | An active Facebook ad account tied to your brand's business manager.<br><br>Ensure that your Facebook business manager admin has granted you either "Manage Campaigns" or "Manage ad accounts" permissions to the Facebook ad accounts you plan to use with Braze. Also ensure that you have accepted your ad account terms and conditions. |
-| Facebook Custom Audiences Terms | [Facebook][3] | Accept Facebook's Custom Audiences Terms for your Facebook ad accounts you plan to use with Braze. |
+| Facebook Business Manager | [Facebook](https://www.facebook.com/business/help/113163272211510) | A centralized tool to manage your brand's Facebook assets (for example, ad accounts, pages, apps). |
+| Facebook Ad Account | [Facebook](https://www.facebook.com/business/help/910137316041095) | An active Facebook ad account tied to your brand's business manager.<br><br>Ensure that your Facebook business manager admin has granted you either "Manage Campaigns" or "Manage ad accounts" permissions to the Facebook ad accounts you plan to use with Braze. Also ensure that you have accepted your ad account terms and conditions. |
+| Facebook Custom Audiences Terms | [Facebook](https://www.facebook.com/ads/manage/customaudiences/tos.php) | Accept Facebook's Custom Audiences Terms for your Facebook ad accounts you plan to use with Braze. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 ## Integration
@@ -44,19 +44,19 @@ In the Braze dashboard, go to **Partner Integrations** > **Technology Partners**
 If you are using the [older navigation]({{site.baseurl}}/navigation), you can find **Technology Partners** under **Integrations**.
 {% endalert %}
 
-![Facebook technology page in Braze that includes an Overview module and Facebook Audience Export module with the Connected Facebook button.][4]{: style="max-width:70%;"}
+![Facebook technology page in Braze that includes an Overview module and Facebook Audience Export module with the Connected Facebook button.]({% image_buster /assets/img/fb/afb_1.png %}){: style="max-width:70%;"}
 
 A Facebook oAuth dialog window will appear to authorize Braze to create Custom Audiences into your Facebook ad accounts.
 
-![The first facebook dialogue box prompting to "Connect as X", where X is your Facebook username.][6]{: style="max-width:30%;"}  ![The second Facebook dialogue box prompting for permission to manage ads for your ad accounts.][5]{: style="max-width:40%;"}
+![The first facebook dialogue box prompting to "Connect as X", where X is your Facebook username.]({% image_buster /assets/img/fb/afb_3.png %}){: style="max-width:30%;"}  ![The second Facebook dialogue box prompting for permission to manage ads for your ad accounts.]({% image_buster /assets/img/fb/afb_2.png %}){: style="max-width:40%;"}
 
 Once you have linked Braze to your Facebook account, you will then be able to select which ad accounts you would like to sync within your Braze workspace. 
 
-![A list of available ad accounts you can connect to Facebook.][7]{: style="max-width:70%;"}
+![A list of available ad accounts you can connect to Facebook.]({% image_buster /assets/img/fb/afb_4.png %}){: style="max-width:70%;"}
 
 Once you have successfully connected, you will be taken back to the partner page, where you can view which accounts are connected and disconnect existing accounts.
 
-![An updated version of the Facebook technology partners page showing the ad accounts successfully connected.][8]{: style="max-width:70%;"}
+![An updated version of the Facebook technology partners page showing the ad accounts successfully connected.]({% image_buster /assets/img/fb/afb_5.png %}){: style="max-width:70%;"}
 
 Your Facebook connection will be applied at the Braze workspace level. If your Facebook admin removes you from your Facebook Business Manager or access to the connected Facebook accounts, Braze will detect an invalid token. As a result, your active Canvases using Facebook Audience components will show errors, and Braze will not be able to sync users. 
 
@@ -75,7 +75,7 @@ Before building out your Canvas, you must first accept the Facebook custom audie
 
 Add a component in your Canvas and select **Facebook Audience**.
 
-![][18]{: style="max-width:35%;"} ![][20]{: style="max-width:28%;"}
+![]({% image_buster /assets/img/audience_sync/audience_sync3.png %}){: style="max-width:35%;"} ![]({% image_buster /assets/img/audience_sync/audience_sync5.png %}){: style="max-width:28%;"}
 
 ### Step 4: Sync setup
 
@@ -83,7 +83,7 @@ Click on the **Custom Audience** button to open the component editor.
 
 Select **Facebook** as the desired Audience Sync partner.
 
-![][19]{: style="max-width:80%;"}
+![]({% image_buster /assets/img/audience_sync/audience_sync4.png %}){: style="max-width:80%;"}
 
 Select the desired Facebook ad account. Under the **Choose a New or Existing Audience** dropdown, type in the name of a new or existing audience. 
 
@@ -118,7 +118,7 @@ Once you have configured your Facebook Audience component, simply launch the Can
 
 The **History** tab of the custom audience in the Facebook Audience Manager will reflect the number of users sent to the audience from Braze. If a user re-enters the step, they will be sent to Facebook again.
 
-![Audience details and the History tab for a given Facebook audience that includes an Audience History table with columns for the activity, activity details, items changed, and the date and time.][9]{: style="max-width:80%;"}
+![Audience details and the History tab for a given Facebook audience that includes an Audience History table with columns for the activity, activity details, items changed, and the date and time.]({% image_buster /assets/img/fb_audience_sync/audience_history.png %}){: style="max-width:80%;"}
 
 ## Migrating to Meta work accounts
 

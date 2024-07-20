@@ -21,12 +21,12 @@ The Braze and PassKit integration allows you to increase and measure the engagem
 | PassKit account | You will need to have a PassKit account and a PassKit account manager. |
 | `userDefinedID` | To appropriately update custom events and custom attributes to your users between PassKit and Braze, you will need to set the Braze external ID as the `userDefinedID`. This `userDefinedID` will be used when making API calls to the PassKit endpoints. |
 | Braze REST API key | A Braze REST API key with `users.track` permissions. <br><br> This can be created in the Braze dashboard from **Settings** > **API Keys**. |
-| Braze REST endpoint  | Your REST endpoint URL. Your endpoint will depend on the [Braze URL for your instance][6]. |
+| Braze REST endpoint  | Your REST endpoint URL. Your endpoint will depend on the [Braze URL for your instance]({{site.baseurl}}/api/basics?redirected=true#endpoints). |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 ## Integration
 
-To further enrich your customers' mobile wallet experiences, from within your PassKit dashboard, you can opt to pass data into Braze through Braze's [`/users/track` endpoint][7]. 
+To further enrich your customers' mobile wallet experiences, from within your PassKit dashboard, you can opt to pass data into Braze through Braze's [`/users/track` endpoint]({{site.baseurl}}/api/endpoints/user_data/#user-track-endpoint). 
 
 Examples of data to share from PassKit includes:
 - **Pass created**: when a customer clicks on a pass link and is first shown a pass.
@@ -40,19 +40,19 @@ Once the data is passed into Braze, you can build audiences, personalize content
 
 To pass data from PassKit, ensure that you have set your Braze external ID as PassKit's `externalId`.
 
-1. Within **Settings**, under **Integrations** in your PassKit pass project or program click **Connect** under the **Braze** Tab.<br>![The Braze integration tile in the PassKit platform.][5]{: style="max-width:80%"}<br><br>
+1. Within **Settings**, under **Integrations** in your PassKit pass project or program click **Connect** under the **Braze** Tab.<br>![The Braze integration tile in the PassKit platform.]({% image_buster /assets/img/passkit/passkit5.png %}){: style="max-width:80%"}<br><br>
 2. Fill out your Braze API key, endpoint URL, and provide a name for your connector.<br><br>
-3. Toggle **Enable Integration** and whichever events you want in Braze to trigger or personalize your messages with.<br>![The PassKit Braze integration tile expanded to accept the API key, endpoint URL, integration name, enablement settings, membership settings, and pass settings.][4]{: style="max-width:70%"}
+3. Toggle **Enable Integration** and whichever events you want in Braze to trigger or personalize your messages with.<br>![The PassKit Braze integration tile expanded to accept the API key, endpoint URL, integration name, enablement settings, membership settings, and pass settings.]({% image_buster /assets/img/passkit/passkit4.png %}){: style="max-width:70%"}
 
 ## Create pass using a SmartPass link
 
-Within Braze, you can set up a SmartPass link to generate a unique URL for your customers to install their pass on either Android or iOS. To do this, you must define an encrypted SmartPass data payload that can be called from a Braze Content Block. This [Content Block][9] can then be reused for future passes and coupons. The following will be used during your integration:
+Within Braze, you can set up a SmartPass link to generate a unique URL for your customers to install their pass on either Android or iOS. To do this, you must define an encrypted SmartPass data payload that can be called from a Braze Content Block. This [Content Block]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/content_blocks/#content-blocks) can then be reused for future passes and coupons. The following will be used during your integration:
 
 - **PassKit URL**: Your PassKit URL is a unique URL for your PassKit program.<br>Each program has a unique URL, and you can find it under the **Distribution** tab of your PassKit program or project. (for example, https://pub1.pskt.io/c/ww0jir)<br><br>
 - **PassKit secret**: Along with the URL, you will need to have the PassKit Key for this program handy.<br>This can be found on the same page as your PassKit URL.<br><br>
 - **Program (or project) ID**: Your PassKit Program ID will be required to create the SmartPass URL. <br>You can find it under the **Settings** tab of your project or program.
 
-For more information on creating encrypted SmartPass links, check out this [PassKit article][8].
+For more information on creating encrypted SmartPass links, check out this [PassKit article](https://help.passkit.com/en/articles/3742778-hashed-smartpass-links).
 
 ### Step 1: Define your pass data payload {#passkit-integrations}
 
@@ -66,7 +66,7 @@ There are many different components you can include in your payload, but here as
 | `members.member.externalId` | Optional | String | Set as the Braze external ID, you may use your external ID to update the membership pass. Setting this field enforces the user as unique within the membership program.|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
-For a full list of available fields, their types, and helpful descriptions, have a look at the [PassKit GitHub documentation][10].
+For a full list of available fields, their types, and helpful descriptions, have a look at the [PassKit GitHub documentation](https://github.com/PassKit/smart-pass-link-from-csv-generator).
 
 #### Example payload
 {% raw %}
@@ -103,7 +103,7 @@ Within this Content Block, we will not directly include the payload, but referen
 
 ### Step 3: Create your encryption signature using a SHA1 HMAC hash
 
-Next, you will be creating your encryption signature using a [SHA1 HMAC][16] hash of the project URL and the payload. 
+Next, you will be creating your encryption signature using a [SHA1 HMAC](https://en.wikipedia.org/wiki/HMAC) hash of the project URL and the payload. 
 
 The second code snippet you must add to your Content Block captures the URL to be used for hashing.
 {% raw %}
@@ -196,19 +196,19 @@ Capture your minified JSON payload from [step 1](#passkit-integrations):
 {% endraw %}
 
 Your message body should look something like this:
-![An image of the Content Block message composer with the captured JSON and Content Block reference shown.][1]{: style="max-width:70%"}
+![An image of the Content Block message composer with the captured JSON and Content Block reference shown.]({% image_buster /assets/img/passkit/passkit1.png %}){: style="max-width:70%"}
 
 The output URL for the sample is:
-![The output URL that includes a long, randomly generated string of letters and numbers.][2]{: style="max-width:70%"}
+![The output URL that includes a long, randomly generated string of letters and numbers.]({% image_buster /assets/img/passkit/passkit2.png %}){: style="max-width:70%"}
 
-The output URL will be long. The reason for this is that it contains all the pass data and incorporates best-in-class security to ensure data integrity and no tempering via URL modification. If using SMS to distribute this URL, you may want to run it through a link shortening process such as [bit.ly][3]. This can be done through a Connected Content call to a bit.ly endpoint.
+The output URL will be long. The reason for this is that it contains all the pass data and incorporates best-in-class security to ensure data integrity and no tempering via URL modification. If using SMS to distribute this URL, you may want to run it through a link shortening process such as [bit.ly](https://dev.bitly.com/v4/#operation/createFullBitlink). This can be done through a Connected Content call to a bit.ly endpoint.
 
 ## Update pass using the PassKit webhook
 
 Within Braze, you can set up a webhook campaign or a webhook within a Canvas to update an existing pass based on your user's behavior. Check out the following links for information on useful PassKit endpoints. 
-- [Member projects][12]
-- [Coupon projects][13]
-- [Flights projects][14]
+- [Member projects](https://docs.passkit.io/protocols/member/)
+- [Coupon projects](https://docs.passkit.io/protocols/coupon/)
+- [Flights projects](https://docs.passkit.io/protocols/boarding/)
 
 ### Payload parameters
 
@@ -265,7 +265,7 @@ Remember to save your template before leaving the page! <br>Updated webhook temp
 
 ## Retrieve pass details via Connected Content
 
-In addition to creating and updating passes, you can also retrieve your users' pass metadata via Braze's [Connected Content][15] to incorporate personalized pass details within your messaging campaigns.
+In addition to creating and updating passes, you can also retrieve your users' pass metadata via Braze's [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/making_an_api_call/) to incorporate personalized pass details within your messaging campaigns.
 
 **PassKit Connected Content call**
 

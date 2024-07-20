@@ -32,7 +32,7 @@ To access the content checker, follow these steps:
 2. Locate the **Content QA with AI** section.
 3. Click **Test Content**.
 
-![Content QA with AI section of the Test tab.][1]{: style="max-width:60%"}
+![Content QA with AI section of the Test tab.]({% image_buster /assets/img/content_qa_ai.png %}){: style="max-width:60%"}
 
 ### Language support
 

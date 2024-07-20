@@ -13,7 +13,7 @@ tool: Location
 
 > This article covers how to enable location tracking for Web.
 
-To set a user's current location, use the [`getCurrentPosition()`][0] method of the geolocation API and log the location data to Braze:
+To set a user's current location, use the [`getCurrentPosition()`](https://developer.mozilla.org/en-US/docs/Web/API/Geolocation/getCurrentPosition) method of the geolocation API and log the location data to Braze:
 
 ```javascript
 import * as braze from "@braze/web-sdk";
@@ -31,7 +31,7 @@ function success(position) {
 navigator.geolocation.getCurrentPosition(success);
 ```
 
-Calling `navigator.geolocation.getCurrentPosition()` will immediately request permission from the user unless they have already granted or denied permission. See the [JSDocs][1] for information on setting the user's last known location.
+Calling `navigator.geolocation.getCurrentPosition()` will immediately request permission from the user unless they have already granted or denied permission. See the [JSDocs](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.user.html#setlastknownlocation) for information on setting the user's last known location.
 
 ## Logging a single location
 
@@ -56,7 +56,7 @@ function success(position) {
 navigator.geolocation.watchPosition(success);
 ```
 
-Calling `navigator.geolocation.watchPosition()` will immediately request permission from the user unless they have already granted or denied permission. See the [Mozilla developer docs][2] for information on configuring and stopping the location tracking.
+Calling `navigator.geolocation.watchPosition()` will immediately request permission from the user unless they have already granted or denied permission. See the [Mozilla developer docs](https://developer.mozilla.org/en-US/docs/Web/API/Geolocation/watchPosition) for information on configuring and stopping the location tracking.
 
 [0]: https://developer.mozilla.org/en-US/docs/Web/API/Geolocation/getCurrentPosition
 [1]: https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.user.html#setlastknownlocation

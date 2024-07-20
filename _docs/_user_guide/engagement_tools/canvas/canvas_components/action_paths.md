@@ -10,7 +10,7 @@ tool: Canvas
 
 # Action Paths 
 
-![][1]{: style="float:right;max-width:40%;margin-left:15px;"}
+![]({% image_buster /assets/img/canvas_actionpath.png %}){: style="float:right;max-width:40%;margin-left:15px;"}
 
 > Action Paths in Canvas allow you to sort your users based on their actions. 
 
@@ -28,7 +28,7 @@ In the **Action Settings** module, you can choose how long you'd like to hold us
 
 Within the **Action Settings**, you can also turn on the ranked order for your components by switching on the **Advance users based on ranked order** toggle.
 
-![][4]
+![]({% image_buster /assets/img/actionpath_settings.png %})
 
 By default, **Ranking** is off. When a user enters the action path and performs the trigger event attached to any action group, they will immediately advance through the relevant action group. If a user doesn't perform a trigger event, then they will advance through the default **Everyone Else** group at the end of the evaluation period.
 
@@ -48,9 +48,9 @@ Note that Canvas entry properties differ from event properties. Canvas entry pro
 
 ### Action groups
 
-Add a trigger or multiple triggers to define your action groups. Here, you can select a range of trigger events such as [custom events][2], engagement events like interactions with your app, and more.
+Add a trigger or multiple triggers to define your action groups. Here, you can select a range of trigger events such as [custom events]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events), engagement events like interactions with your app, and more.
 
-![][3]
+![]({% image_buster /assets/img/actionpath_group.png %})
 
 Within each action group settings, you also have the option to select the checkbox **I want this group to exit the Canvas**, meaning that the users within this group will exit the Canvas at the end of the evaluation period.
 

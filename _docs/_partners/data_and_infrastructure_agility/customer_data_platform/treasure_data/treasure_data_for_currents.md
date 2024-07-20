@@ -13,7 +13,7 @@ search_tag: Partner
 # Treasure Data for Currents
 
 
-> [Treasure Data][1] is a customer data platform (CDP) that collects and routes information from multiple sources to a variety of other locations in your marketing stack.
+> [Treasure Data](https://www.treasuredata.com/) is a customer data platform (CDP) that collects and routes information from multiple sources to a variety of other locations in your marketing stack.
 
 The Braze and Treasure Data integration allows you to seamlessly control the flow of information between the two systems. With Currents, you can also connect data to Treasure Data to make it actionable across the entire growth stack.
 
@@ -23,8 +23,8 @@ The Braze and Treasure Data integration allows you to seamlessly control the flo
 
 | Requirement | Description |
 | ----------- | ----------- |
-| Treasure Data | A [Treasure Data account][0] is required to take advantage of this partnership. |
-| Currents | To export data back into Treasure Data, you need to have [Braze Currents][2] set up for your account. |
+| Treasure Data | A [Treasure Data account](https://console.treasuredata.com/users/sign_in) is required to take advantage of this partnership. |
+| Currents | To export data back into Treasure Data, you need to have [Braze Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/#access-currents) set up for your account. |
 | Treasure Data URL | This can be obtained by navigating to your Treasure Data dashboard and copying the ingestion URL.|
 {: .reset-td-br-1 .reset-td-br-2}
 
@@ -43,7 +43,7 @@ Ingestion into Treasure Data through event-collector currently doesn't happen in
 ### Step 1: Setup Treasure Data Postback API with Braze
 
 
-Instructions for creating a Postback API can be found on the [Treasure Data][3] website. Braze will directly send the updated events to Treasure Data in real-time, with the exception of ingestion through event-collector. When completed, Treasure Data will provide a data source URL to copy for use in the next step.
+Instructions for creating a Postback API can be found on the [Treasure Data](https://docs.treasuredata.com/display/public/PD/Postback+API) website. Braze will directly send the updated events to Treasure Data in real-time, with the exception of ingestion through event-collector. When completed, Treasure Data will provide a data source URL to copy for use in the next step.
 
 
 ### Step 2: Create Current

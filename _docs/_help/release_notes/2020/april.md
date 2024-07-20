@@ -41,6 +41,6 @@ The [template/email/list]({{site.baseurl}}/api/endpoints/templates/email_templat
 
 When creating an email message within Braze, you can now personalize the From Address of the message in the **Sending Info** section of email composition. You can use any of our supported [personalization tags]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/)
 
-![Personalized From Address][0]{: style="max-width:80%"}
+![Personalized From Address]({% image_buster /assets/img/personalized-from-name.png %}){: style="max-width:80%"}
 
 [0]: {% image_buster /assets/img/personalized-from-name.png %}

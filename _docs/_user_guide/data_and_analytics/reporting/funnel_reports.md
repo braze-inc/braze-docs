@@ -9,15 +9,15 @@ tool: Reports
 
 # Funnel reports
 
-> Funnel reporting offers a visual report that allows you to analyze the journeys your customers take after receiving a campaign or Canvas. ![Funnel Report 2][2]{: style="float:right;max-width:15%;margin-bottom:15px; border: 0"}
+> Funnel reporting offers a visual report that allows you to analyze the journeys your customers take after receiving a campaign or Canvas. ![Funnel Report 2]({% image_buster /assets/img/funnel_report/funnel_report2.png %}){: style="float:right;max-width:15%;margin-bottom:15px; border: 0"}
 
 If your campaign or Canvas uses a control group or multiple variants, you can understand how the different variants have impacted the conversion funnel at a more granular level and optimize based on this data.
 
-![Funnel Report 1][1]{: style="max-width:80%;"}
+![Funnel Report 1]({% image_buster /assets/img/funnel_report/funnel_report1.jpg %}){: style="max-width:80%;"}
 
 ## Funnel report setup
 
-![Funnel Report 5][5]{: style="float:right;max-width:40%;border:0;margin-left:15px;"}
+![Funnel Report 5]({% image_buster /assets/img/funnel_report/canvas_campaign.png %}){: style="float:right;max-width:40%;border:0;margin-left:15px;"}
 
 You can run funnel reports for existing active campaigns and Canvases. These reports show a series of events that a campaign recipient progresses through over 1-30 days from the date they enter the Canvas or campaign. A user is considered converted through a step in the funnel if they perform the event in the specified order.
 
@@ -38,13 +38,13 @@ You can select a time frame for your report (within the past 6 months), and refi
 If you set the window to complete the funnel to 1 day, then the funnel event must occur within 24 hours of message receipt. However, if you select multiple days, the timing window is counted as calendar days in the company time zone.
 {% endalert %}
 
-![Funnel Report 5][6]{: style="max-width:90%;"}
+![Funnel Report 5]({% image_buster /assets/img/funnel_report/funnel_report5.png %}){: style="max-width:90%;"}
 
 ### Step 2: Select events for funnel steps
 
 For every funnel report, the first event is when the user receives your message. From there, the subsequent events you choose funnel the number of users who performed those events, as well as the previous events. Funnel report events for both campaign and Canvases funnels allow for start session, make a purchase, and custom events, while only campaign funnels include message engagement events.
 
-![Funnel Report 3][3]{: style="max-width:80%;"}
+![Funnel Report 3]({% image_buster /assets/img/funnel_report/funnel_report3.png %}){: style="max-width:80%;"}
 
 Funnel reports allow you to compare the success of your messages beyond just the conversion events or message engagement events you initially set up. So if there's a conversion event you didn't add initially, you can still track conversions for that event using a funnel.
 
@@ -65,7 +65,7 @@ In your funnel report, you can directly compare the control group alongside the 
 - **Regenerate Option**: Allows you to regenerate your report and indicates when the current report was last generated. 
 - **Variants**: Denoted by colored columns, funnel reporting allows up to 8 variants and a control group. By default, the **chart** will only show three variants. To see more, you can manually select the rest of the variants.
 
-![Funnel Report 4][4]
+![Funnel Report 4]({% image_buster /assets/img/funnel_report/funnel_report4.jpg %})
 
 **For campaigns with multiple variants**: Braze will show a table with metrics for each event and variant and the percentage change from control. The conversion rate is the number of users who performed the event (and subsequent ones) per message recipient.
 

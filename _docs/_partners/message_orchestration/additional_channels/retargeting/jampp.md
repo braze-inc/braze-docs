@@ -29,7 +29,7 @@ This integration supports iOS and Android apps.
 | Android app ID | Your unique Braze application identifier for Android (such as "com.example"). |
 | iOS app ID | Your unique Braze application identifier for iOS (such as "012345678"). |
 | Enable IDFA collection in Braze SDK | IDFA collection is optional within the Braze SDK and disabled by default. | 
-| Collection of Google advertising ID via custom attribute | Google advertising ID collection is optional for customers and can be collected as a [custom attribute][5].
+| Collection of Google advertising ID via custom attribute | Google advertising ID collection is optional for customers and can be collected as a [custom attribute]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#custom-attribute-data-types).
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 ## Integration
@@ -66,9 +66,9 @@ http://tracking.jampp.com/event?kind={{event_name}}&rnd={{rnd}}&app={% if {{most
 In the webhook URL, you must:
 - Set the event name. This name will appear in your Jampp dashboard.
 - Pass your app's unique application identifier for Android (such as "com.example") and iOS (such as "012345678").
-- Insert [Liquid][1] for the appropriate custom attribute you're tracking as the Google advertising ID. Note that the Google advertising ID is listed as `aaid` in this example, but you will need to replace it with the custom attribute name your developers set.
+- Insert [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/using_liquid/#using-liquid) for the appropriate custom attribute you're tracking as the Google advertising ID. Note that the Google advertising ID is listed as `aaid` in this example, but you will need to replace it with the custom attribute name your developers set.
 
-![The webhook URL and message preview shown in the Braze webhook builder.][2]
+![The webhook URL and message preview shown in the Braze webhook builder.]({% image_buster /assets/img/jampp_webhook.png %})
 
 {% alert important %}
 Braze does not automatically collect the device IDFA/AAID, so you must store these values yourself. Be aware that you may require user consent to collect this data.
@@ -82,7 +82,7 @@ The Jampp webhook requires an HTTP method and request header.
 - **Request Headers**:
   - **Content-Type**: application/json
 
-![The request headers, HTTP method, and message preview shown in the Braze webhook builder.][3]
+![The request headers, HTTP method, and message preview shown in the Braze webhook builder.]({% image_buster /assets/img/jampp_method.png %})
 
 #### Request body
 

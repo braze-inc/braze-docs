@@ -30,6 +30,6 @@ You can either log in from the [Braze.com](https://www.braze.com) home site, or 
 
 To reset your password, click the **Forgot your password?** link on the dashboard login page. You will then be prompted to input your email to receive a link to reset your password.
 
-![Reset Password Button][45]
+![Reset Password Button]({% image_buster /assets/img_archive/enable_reset.png %})
 
 [45]: {% image_buster /assets/img_archive/enable_reset.png %}

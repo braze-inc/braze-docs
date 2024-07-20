@@ -10,7 +10,7 @@ search_tag: Partner
 
 # Dyspatch
 
-> [Dyspatch][1] offers an intuitive drag-and-drop email builder used to create beautiful, responsive, and engaging emails without needing to write code. Collaborate with your team to create and approve emails within Dyspatch and then export them to Braze, all in a few steps! 
+> [Dyspatch](https://www.dyspatch.io) offers an intuitive drag-and-drop email builder used to create beautiful, responsive, and engaging emails without needing to write code. Collaborate with your team to create and approve emails within Dyspatch and then export them to Braze, all in a few steps! 
 
 The Dyspatch and Braze integration allow you to simplify your email creation lifecycle by exporting Dyspatch email templates directly to Braze.
 
@@ -18,7 +18,7 @@ The Dyspatch and Braze integration allow you to simplify your email creation lif
 
 | Requirement | Description |
 | ----------- | ----------- |
-| Dyspatch account | A [Dyspatch account][3] with an [owner or admin role][4] is required to take advantage of this partnership. |
+| Dyspatch account | A [Dyspatch account](https://www.dyspatch.io/login/) with an [owner or admin role](https://docs.dyspatch.io/administration/dyspatch_roles/) is required to take advantage of this partnership. |
 | Braze REST API key | A Braze REST API key with full **Templates** permissions. <br><br> This can be created in the Braze dashboard from **Settings** > **API Keys**. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
@@ -30,7 +30,7 @@ The Braze and Dyspatch integration lets you export Dyspatch email templates dire
 
 In the Dyspatch administration portal, open your username drop-down menu and select **Integrations**. Create a new integration, select **Braze**, and enter your Braze API key.
 
-In the **Localize Exports By** field, you can choose how you would like to manage localization. This field allows you to [localize your email templates][6] and export them to Braze to easily send emails personalized by language or locale. 
+In the **Localize Exports By** field, you can choose how you would like to manage localization. This field allows you to [localize your email templates](https://docs.dyspatch.io/localization/localizing_a_template/) and export them to Braze to easily send emails personalized by language or locale. 
 
 ![Dyspatch Export Template]({% image_buster /assets/img/dyspatch/dyspatch_integration_create.png %}){: style="max-width:50%;"}
 

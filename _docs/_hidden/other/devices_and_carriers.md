@@ -15,6 +15,6 @@ The **Device & Carriers** page, located under **Data**, shows a breakdown of use
 
 To export this data, click the <i class="fas fa-bars"></i> hamburger menu and select **Download CSV** to receive a CSV export of the report.
 
-![][1]
+![]({% image_buster /assets/img/device_and_carriers.png %})
 
 [1]: {% image_buster /assets/img/device_and_carriers.png %}

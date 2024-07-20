@@ -31,7 +31,7 @@ As of February 28, 2023, you can no longer create or duplicate Canvases using th
 
 To duplicate a Canvas, click <i class="fas fa-ellipsis-vertical"></i> **More actions** next to a Canvas and select **Duplicate**. Your new Canvas will automatically be titled "Copy of [Original Name]" and you'll be brought to its editing page. Duplicates of Canvases will remain drafts until you edit and launch them.
 
-![Duplicate Canvas][5]
+![Duplicate Canvas]({% image_buster /assets/img_archive/duplicate_canvas.png %})
 
 
 [3]: {% image_buster /assets/img_archive/duplicate_segment.png %}

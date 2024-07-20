@@ -11,7 +11,7 @@ channel:
 
 # SMS subscription groups
 
-> Subscription groups are the foundation for sending SMS and MMS through Braze. A subscription group is a collection of [sending phone numbers][2] (such as short codes, long codes, and/or alphanumeric sender IDs) that are used for a specific type of messaging purpose. For example, if a brand has plans to send both transactional and promotional SMS messaging, two subscription groups with separate pools of sending phone numbers will need to be set up within your Braze dashboard.
+> Subscription groups are the foundation for sending SMS and MMS through Braze. A subscription group is a collection of [sending phone numbers]({{site.baseurl}}/user_guide/message_building_by_channel/sms/phone_numbers/sending_phone_numbers/) (such as short codes, long codes, and/or alphanumeric sender IDs) that are used for a specific type of messaging purpose. For example, if a brand has plans to send both transactional and promotional SMS messaging, two subscription groups with separate pools of sending phone numbers will need to be set up within your Braze dashboard.
 
 ## SMS subscription states
 
@@ -20,14 +20,14 @@ There are two subscription states for SMS users: `subscribed` and `unsubscribed`
 | State | Definition |
 | --------- | ---------- |
 | Subscribed | User has explicitly confirmed that they want to receive SMS from a specific subscription group. A user can be subscribed either by having their subscription state updated through the Braze subscription API or by texting an opt-in keyword response. A user must be subscribed to an SMS subscription group in order to receive an SMS. |
-| Unsubscribed | User has explicitly opt-ed out of messaging from your SMS subscription group and the sending-phone numbers inside the subscription group. They can unsubscribe by texting an opt-out keyword response or a brand can unsubscribed users through the [Braze subscription API][4]. Users unsubscribed from an SMS subscription Group will no longer receive any SMS from sending phone numbers that belong to the subscription group.|
+| Unsubscribed | User has explicitly opt-ed out of messaging from your SMS subscription group and the sending-phone numbers inside the subscription group. They can unsubscribe by texting an opt-out keyword response or a brand can unsubscribed users through the [Braze subscription API]({{ site.baseurl}}/api/endpoints/subscription_groups/post_update_user_subscription_group_status/). Users unsubscribed from an SMS subscription Group will no longer receive any SMS from sending phone numbers that belong to the subscription group.|
 {: .reset-td-br-1 .reset-td-br-2}
 
 ### How users' SMS subscription groups get set 
 
-- **Rest API:** User profiles can be programmatically set by the [`/subscription/status/set` endpoint][4] by using the Braze REST API.
-- **SDK Integration** Users can be added to an email or SMS subscription group using the `addToSubscriptionGroup` method for [Android](https://braze-inc.github.io/braze-android-sdk/javadocs/com/braze/BrazeUser.html#addToSubscriptionGroup-java.lang.String-), [iOS](https://appboy.github.io/appboy-ios-sdk/docs/interface_a_b_k_user.html#a74092a50fcda364bb159013d0222e287), or [Web][11].
-- **Automatically handled upon user opt-in/opt-out:** By users texting a default opt-in or opt-out [keyword][7], Braze automatically sets and updates users' subscription state.
+- **Rest API:** User profiles can be programmatically set by the [`/subscription/status/set` endpoint]({{ site.baseurl}}/api/endpoints/subscription_groups/post_update_user_subscription_group_status/) by using the Braze REST API.
+- **SDK Integration** Users can be added to an email or SMS subscription group using the `addToSubscriptionGroup` method for [Android](https://braze-inc.github.io/braze-android-sdk/javadocs/com/braze/BrazeUser.html#addToSubscriptionGroup-java.lang.String-), [iOS](https://appboy.github.io/appboy-ios-sdk/docs/interface_a_b_k_user.html#a74092a50fcda364bb159013d0222e287), or [Web](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.user.html#addtosubscriptiongroup).
+- **Automatically handled upon user opt-in/opt-out:** By users texting a default opt-in or opt-out [keyword]({{site.baseurl}}/user_guide/message_building_by_channel/sms/keywords/optin_optout/), Braze automatically sets and updates users' subscription state.
 - **User import**: Users can be added into email or SMS subscription groups via **Import Users**. When updating subscription group status, you must have these two columns in your CSV: `subscription_group_id` and `subscription_state`. Refer to [User import]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/#updating-subscription-group-status) for more information.
 
 {% alert note %}
@@ -41,13 +41,13 @@ For example, if User A has a phone number that is subscribed to several subscrip
 ### How to check a user's SMS subscription group
 
 - **User Profile:** Individual user profiles can be accessed through the Braze dashboard by selecting User Search from the sidebar. Here, you can look up user profiles by email address, phone number, or external user ID. When inside a user profile, under the Engagement tab, you can view a user's SMS subscription groups. 
-- **Rest API:** Individual user profiles subscription group can be viewed by the [List user’s subscription groups endpoint][9] or [List user’s subscription group status endpoint][8] by using the Braze REST API. 
+- **Rest API:** Individual user profiles subscription group can be viewed by the [List user’s subscription groups endpoint]({{site.baseurl}}/api/endpoints/subscription_groups/get_list_user_subscription_groups/) or [List user’s subscription group status endpoint]({{site.baseurl}}/api/endpoints/subscription_groups/get_list_user_subscription_group_status/) by using the Braze REST API. 
 
 ## Sending with a subscription group
 
-To launch an SMS campaign through Braze, a subscription group must be selected in the dropdown, as shown in the following image. After it's selected, an audience filter will be added to your campaign or Canvas automatically, ensuring that only users `subscribed` to the selected subscription group are in the target audience. To adhere to international [telecommunication compliance and guidelines][3], Braze will never send SMS to users that have not subscribed to the selected subscription group.  
+To launch an SMS campaign through Braze, a subscription group must be selected in the dropdown, as shown in the following image. After it's selected, an audience filter will be added to your campaign or Canvas automatically, ensuring that only users `subscribed` to the selected subscription group are in the target audience. To adhere to international [telecommunication compliance and guidelines]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_laws_and_regulations/), Braze will never send SMS to users that have not subscribed to the selected subscription group.  
 
-![SMS composer with the subscription group dropdown open and "Messaging Service A for SMS" highlighted by the user.][6]
+![SMS composer with the subscription group dropdown open and "Messaging Service A for SMS" highlighted by the user.]({% image_buster /assets/img/sms/sms_subgroup_select.png %})
 
 ## Setup process
 
@@ -57,7 +57,7 @@ During your SMS onboarding process, a Braze onboarding manager will set up subsc
 
 In order to send an MMS message, at least one number within your subscription group has to be enabled to send MMS. This is indicated by a tag located next to the subscription group. 
 
-![Subscription Group dropdown with "Messaging Service A for SMS" highlighted. The entry is prefixed with the tag "MMS".][10]{: style="max-width:40%"}
+![Subscription Group dropdown with "Messaging Service A for SMS" highlighted. The entry is prefixed with the tag "MMS".]({% image_buster /assets/img/sms/mms_sub_group_tag.png %}){: style="max-width:40%"}
 
 
 [1]: {% image_buster /assets/img/sms/multi_country_subgroups.png %}

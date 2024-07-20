@@ -25,8 +25,8 @@ There are two subscription states for WhatsApp users: `subscribed` and `unsubscr
 
 ### Setting users' WhatsApp subscription groups
 
-- **Rest API:** User profiles can be programmatically set by the [`/subscription/status/set` endpoint][4] using the Braze REST API.
-- **Web SDK:** Users can be added to an email, SMS, or WhatsApp subscription group using the `addToSubscriptionGroup` method for [Android](https://braze-inc.github.io/braze-android-sdk/javadocs/com/braze/BrazeUser.html#addToSubscriptionGroup-java.lang.String-), [iOS](https://appboy.github.io/appboy-ios-sdk/docs/interface_a_b_k_user.html#a74092a50fcda364bb159013d0222e287), or [Web][11].
+- **Rest API:** User profiles can be programmatically set by the [`/subscription/status/set` endpoint]({{site.baseurl}}/api/endpoints/subscription_groups/post_update_user_subscription_group_status/) using the Braze REST API.
+- **Web SDK:** Users can be added to an email, SMS, or WhatsApp subscription group using the `addToSubscriptionGroup` method for [Android](https://braze-inc.github.io/braze-android-sdk/javadocs/com/braze/BrazeUser.html#addToSubscriptionGroup-java.lang.String-), [iOS](https://appboy.github.io/appboy-ios-sdk/docs/interface_a_b_k_user.html#a74092a50fcda364bb159013d0222e287), or [Web](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.user.html#addtosubscriptiongroup).
 - **User import**: Users can be added to email or SMS subscription groups via **Import Users**. When updating the subscription group status, you must have these two columns in your CSV: `subscription_group_id` and `subscription_state`. Refer to [User import]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/#updating-subscription-group-status) for more information.
 
 ### Checking a user's WhatsApp subscription group
@@ -37,7 +37,7 @@ There are two subscription states for WhatsApp users: `subscribed` and `unsubscr
 If you are using the [older navigation]({{site.baseurl}}/navigation), you can find this page at **Users** > **User Search**.
 {% endalert %}
 
-- **Rest API:** Individual user profiles subscription group can be viewed by the [List user’s subscription groups endpoint][9] or [List user’s subscription group status endpoint][8] by using Braze's REST API. 
+- **Rest API:** Individual user profiles subscription group can be viewed by the [List user’s subscription groups endpoint]({{site.baseurl}}/api/endpoints/subscription_groups/get_list_user_subscription_groups/) or [List user’s subscription group status endpoint]({{site.baseurl}}/api/endpoints/subscription_groups/get_list_user_subscription_group_status/) by using Braze's REST API. 
 
 ## WhatsApp opt-in process
 
@@ -51,7 +51,7 @@ Regardless of the opt-in and opt-out methods you use, you can update the subscri
 
 - Create a [Braze-to-Braze webhook]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/braze_to_braze_webhooks/#things-to-know) that updates the subscription status via REST API, such as in the following example:
 
-![][1]{: style="max-width:90%;"}
+![]({% image_buster /assets/img/whatsapp/whatsapp118.png %}){: style="max-width:90%;"}
 
 To avoid race conditions, any follow-up messaging after the webhook should be contained in a second Canvas that is triggered by outcomes from the first Canvas (such as a user has entered a Canvas variation and is in a WhatsApp subscription group).
 
@@ -79,7 +79,7 @@ To avoid race conditions, any follow-up messaging after the webhook should be co
 	}
 	```
 
-![][2]{: style="max-width:90%;"}
+![]({% image_buster /assets/img/whatsapp/whatsapp_json_editor.png %}){: style="max-width:90%;"}
 
 {% alert note %}
 Updates to a user's subscription status may take up to 60 seconds.

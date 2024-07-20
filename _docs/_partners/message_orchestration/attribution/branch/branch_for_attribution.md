@@ -85,7 +85,7 @@ In Braze, navigate to **Partner Integrations** > **Technology Partners** and sel
 If you are using the [older navigation]({{site.baseurl}}/navigation), you can find **Technology Partners** under **Integrations**.
 {% endalert %}
 
-Here, you will find the REST endpoint and generate your Braze data import key. After the key is generated, you can create a new key or invalidate an existing one. The data import key and the REST endpoint are used in the next step when setting up a postback in Branch's dashboard.<br><br>![This image shows the "Data Import for Install Attribution" box found in the Branch technology page. In this box, you are shown the data import key and the REST endpoint.][4]{: style="max-width:90%;"}
+Here, you will find the REST endpoint and generate your Braze data import key. After the key is generated, you can create a new key or invalidate an existing one. The data import key and the REST endpoint are used in the next step when setting up a postback in Branch's dashboard.<br><br>![This image shows the "Data Import for Install Attribution" box found in the Branch technology page. In this box, you are shown the data import key and the REST endpoint.]({% image_buster /assets/img/attribution/branch.png %}){: style="max-width:90%;"}
 
 ### Step 3: Set up data feeds
 

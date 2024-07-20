@@ -44,7 +44,7 @@ Misalignment in the drag-and-drop editor can occur when multiple Content Blocks 
 
 ### Using Liquid to add a Content Block
 
-![][2]{: style="float:right;max-width:50%;margin-left:15px;margin-top:15px;"}
+![]({% image_buster /assets/img_archive/dnd_content_block_personalization.png %}){: style="float:right;max-width:50%;margin-left:15px;margin-top:15px;"}
 
 To add a Content Block by using Liquid, do the following:
 

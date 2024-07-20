@@ -18,9 +18,9 @@ The AI step is currently available as a beta feature. Contact your customer succ
 
 ## Creating an AI step {#create-ai-step}
  
-1. Add a new step to your Canvas and select the **AI Step**. <br><br>![AI step in the Canvas builder][1]{: style="max-width: 30%;"}<br><br>
-2. Create a prompt that tells the AI how to respond to various user actions. Responses can include updating a custom attribute or sending a message. This prompt can use Liquid to assign different response outputs based on different user attributes or inputs. <br><br>To assign outputs that can then be used to personalize future messages within the same Canvas, create a prompt that saves variables with specific names (for example, “message” and “sentiment score”). <br><br> ![Sample AI prompt used in the AI step settings to send a personalized message based on a generated sentiment score. This example is stated under the "Customer sentiment responses" section.][2] <br><br>
-3. Use the **Preview** tab to test what the AI might output for specific users.<br><br> ![The Preview tab of the AI step settings showing an AI-generated personalized message for three parameters: a first name of Cameron, a product name of shoes, and the text "comfy but my shoe lace already broke"][3]
+1. Add a new step to your Canvas and select the **AI Step**. <br><br>![AI step in the Canvas builder]({% image_buster /assets/img/ai_step1.png %}){: style="max-width: 30%;"}<br><br>
+2. Create a prompt that tells the AI how to respond to various user actions. Responses can include updating a custom attribute or sending a message. This prompt can use Liquid to assign different response outputs based on different user attributes or inputs. <br><br>To assign outputs that can then be used to personalize future messages within the same Canvas, create a prompt that saves variables with specific names (for example, “message” and “sentiment score”). <br><br> ![Sample AI prompt used in the AI step settings to send a personalized message based on a generated sentiment score. This example is stated under the "Customer sentiment responses" section.]({% image_buster /assets/img/ai_step2.png %}) <br><br>
+3. Use the **Preview** tab to test what the AI might output for specific users.<br><br> ![The Preview tab of the AI step settings showing an AI-generated personalized message for three parameters: a first name of Cameron, a product name of shoes, and the text "comfy but my shoe lace already broke"]({% image_buster /assets/img/ai_step3.png %})
 
 ## Referencing AI output using Liquid
 Reference the AI output in later steps by inserting the Liquid logic `{% raw %}{{ai_step_output.${key_name}}}{% endraw %}`. You can set the `key_name` within the prompt in the AI step.
@@ -70,7 +70,7 @@ For example, if a makeup retailer has a survey asking, “What products would yo
 
 Identify the user's favorite brand using their response. Then create a message that thanks users for filling out the survey and mentions how Beauty Experts also love their favorite brand. This should return two variables, "message" and "favorite brand."
 
-![Preview tab of the AI step settings showing an AI-generated personalized message for the survey response parameter of "I love Estee Lauder face creams" that thanks the user for filling out the survey and then recommends a face cream.][4]
+![Preview tab of the AI step settings showing an AI-generated personalized message for the survey response parameter of "I love Estee Lauder face creams" that thanks the user for filling out the survey and then recommends a face cream.]({% image_buster /assets/img/ai_step4.png %})
 
 ### Behavior-driven recommendations
 
@@ -82,7 +82,7 @@ For example, you can create a prompt to analyze users’ 50 most recent purchase
 
 A customer has purchased the following products: "`{% raw %}{{custom_attribute.${Products Purchased}}}{% endraw %}`". Identify the user's most purchased product category. This should return a new variable for "most purchased category."
 
-![Preview tab of the AI step settings showing the AI-generated variable of "book" for the parameter of most purchased category.][5]
+![Preview tab of the AI step settings showing the AI-generated variable of "book" for the parameter of most purchased category.]({% image_buster /assets/img/ai_step5.png %})
 
 ## Rate limits
 

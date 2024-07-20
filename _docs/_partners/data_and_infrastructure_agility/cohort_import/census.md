@@ -9,7 +9,7 @@ search_tag: Partner
 
 # Census cohort import
 
-> This article describes how to import user cohorts from [Census][1] to Braze. For more information on integrating Census, see the main [Census article]({{site.baseurl}}/partners/data_and_infrastructure_agility/workflow_automation/census/).
+> This article describes how to import user cohorts from [Census](https://www.getcensus.com/) to Braze. For more information on integrating Census, see the main [Census article]({{site.baseurl}}/partners/data_and_infrastructure_agility/workflow_automation/census/).
 
 ## Cohort import integration
 
@@ -19,7 +19,7 @@ To integrate Census in the Census platform, navigate to the **Connections** tab 
 
 In the prompt that appears, name this connection, and provide your Braze endpoint URL, Braze REST API key, and data import key. The data import key is required to sync cohorts and can be found in Braze by going to **Partner Integrations** > **Technology Partners** > **Census**.
 
-![][8]{: style="max-width:60%;"}
+![]({% image_buster /assets/img/census/add_service.png %}){: style="max-width:60%;"}
 
 ### Step 2: Create a Census sync
 
@@ -27,11 +27,11 @@ To sync customers to Braze, you must build a sync. Here, you will define where t
 
 1. Navigate to the **Syncs** tab and select **New Sync**.<br><br> 
 2. In the composer, select the source data model from your data warehouse.<br><br>
-3. Configure where the model will be synced to. Select **Braze** as the destination and **User & Cohort** as the object to sync.<br>![In the "Select a Destination" prompt, "Braze" is selected as the connection, and various objects are listed.][10]{: style="max-width:80%;"}<br><br>
+3. Configure where the model will be synced to. Select **Braze** as the destination and **User & Cohort** as the object to sync.<br>![In the "Select a Destination" prompt, "Braze" is selected as the connection, and various objects are listed.]({% image_buster /assets/img/census/census_2.png %}){: style="max-width:80%;"}<br><br>
 4. Select the **Source Column** that identifies the users to add to a cohort, and select **External User ID** as the **Identifier Type**.<br><br>
 5. In the **Cohort Name** dropdown, select a cohort, create a cohort, or select a Source Column to populate the cohort name.<br><br>
 6. Use the **When a record is removed from source data** dropdown to select what happens to users when they're removed from the source dataset, such as **Do nothing** or **Remove matching record from cohort**.<br><br>
-7. Lastly, map the Census data fields to the equivalent Braze fields.<br>![Census mapping][11]{: style="max-width:80%;"}<br><br>
+7. Lastly, map the Census data fields to the equivalent Braze fields.<br>![Census mapping]({% image_buster /assets/img/census/census_3.png %}){: style="max-width:80%;"}<br><br>
 8. Confirm details and create the sync. 
 
 Now you can run your sync!

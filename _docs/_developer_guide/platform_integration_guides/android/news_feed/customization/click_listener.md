@@ -23,7 +23,7 @@ You can handle News Feed clicks manually by setting a custom News Feed click lis
 
 ## Step 1: Implement a News Feed click listener
 
-Create a class that implements [`IFeedClickActionListener`][37]. Implement the `onFeedCardClicked()` method, which will be called when the user clicks a News Feed card.
+Create a class that implements [`IFeedClickActionListener`](https://github.com/braze-inc/braze-android-sdk/blob/master/android-sdk-ui/src/main/java/com/braze/ui/feed/listeners/IFeedClickActionListener.java). Implement the `onFeedCardClicked()` method, which will be called when the user clicks a News Feed card.
 
 ## Step 2: Instruct Braze to use your News Feed click listener
 

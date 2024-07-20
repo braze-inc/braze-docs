@@ -59,7 +59,7 @@ The following segmentation filters are available when targeting users:
 
 For details on each filter, refer to the [Segmentation filters]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters) glossary and filter by "Purchase behavior".
 
-![Filtering for users who made exactly three purchases][1]{: style="max-width:80%;"}
+![Filtering for users who made exactly three purchases]({% image_buster /assets/img/purchase_filter_example.gif %}){: style="max-width:80%;"}
 
 {% alert tip %} 
 If you would like to segment on the number of times a specific purchase has occurred, you should record that purchase individually as an [incrementing custom attribute]({{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#custom-attribute-storage).
@@ -142,7 +142,7 @@ For example, if an ecommerce application wanted to send a message to a user afte
 
 **Example of triggering based on purchase event properties:**
 
-![Action-based delivery settings to send a campaign to users who purchase headphones with a brand name equal to HeadphoneMart][2]{: style="max-width:80%;margin-left:15px;"}
+![Action-based delivery settings to send a campaign to users who purchase headphones with a brand name equal to HeadphoneMart]({% image_buster /assets/img/purchase2.png %}){: style="max-width:80%;margin-left:15px;"}
 
 Refer to [purchase properties object]({{site.baseurl}}/api/objects_filters/purchase_object/#purchase-properties-object) for more.
 
@@ -150,7 +150,7 @@ Refer to [purchase properties object]({{site.baseurl}}/api/objects_filters/purch
 
 Event property segmentation allows you to target users based not just on custom events taken but also on the properties associated with those events. This feature adds additional filtering options when segmenting purchase and custom events.
 
-![][6]{: style="max-width:80%;margin-left:15px;"}
+![]({% image_buster /assets/img/nested_object3.png %}){: style="max-width:80%;margin-left:15px;"}
 
 These segmentation filters include:
 - Has done the custom event with property Y with value V X times in the last Y days.

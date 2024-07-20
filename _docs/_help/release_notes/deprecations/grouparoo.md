@@ -12,7 +12,7 @@ page_type: update
 Support for Grouparoo has been discontinued as of April 2022.
 {% endalert %}
 
-> [Grouparoo][1] is an open-source reverse ETL tool that makes it easy to power your marketing, sales, and support tools using the data in your warehouse. Configuration is done in a model-centric UI, making it possible for non-technical team members to configure and schedule data syncs in support of operations.
+> [Grouparoo](https://www.grouparoo.com/) is an open-source reverse ETL tool that makes it easy to power your marketing, sales, and support tools using the data in your warehouse. Configuration is done in a model-centric UI, making it possible for non-technical team members to configure and schedule data syncs in support of operations.
 
 The Braze and Grouparoo integration makes it easy to operationalize data stored in a warehouse by sending it to Braze. When you set up automatic sync schedules, you can consistently enhance customer communications with up-to-date information.
 
@@ -22,7 +22,7 @@ The Braze and Grouparoo integration makes it easy to operationalize data stored 
 | ----------- | ----------- |
 | Grouparoo account and project | A Grouparoo account and project are required to take advantage of this partnership.<br><br>This integration is possible to use with the free community edition and enterprise solutions provided by Grouparoo. Setup will take place in the Grouparoo configuration user interface. |
 | Braze REST API key | A Braze REST API key with users and track permissions. <br><br> This can be created in the Braze dashboard from **Settings** > **API Keys**. |
-| Braze REST endpoint | [Your REST endpoint URL][1]. Your endpoint will depend on the Braze URL for your instance. |
+| Braze REST endpoint | [Your REST endpoint URL](https://www.grouparoo.com/). Your endpoint will depend on the Braze URL for your instance. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## Integration
@@ -31,7 +31,7 @@ The Braze and Grouparoo integration makes it easy to operationalize data stored 
 
 In Grouparoo, navigate to **Apps** and select **Braze** to create a new Braze app. In the modal that appears, provide your Braze API key and REST endpoint.
 
-![][2]
+![]({% image_buster /assets/img/grouparoo/add-app.png %})
 
 ### Step 2: Set up a model and data source
 
@@ -52,7 +52,7 @@ Next, select the **Braze** app you made, name the destination, and select your d
 
 Next, you must map Grouparoo property fields to Braze property fields. 
 
-![Example property mapping fields. Grouparoo userID is set to map to external_id. email, firstName, and lastName are set as equivalent "email", "first_name", and "last_name" grouparoo fields.][3]{: style="max-width:80%;"}
+![Example property mapping fields. Grouparoo userID is set to map to external_id. email, firstName, and lastName are set as equivalent "email", "first_name", and "last_name" grouparoo fields.]({% image_buster /assets/img/grouparoo/mapping.png %}){: style="max-width:80%;"}
 
 Make sure the Braze `external_id` field is mapped to the primary key in your source table. Map the rest of the fields as necessary for your use case.
 
@@ -64,7 +64,7 @@ Make sure the Braze `external_id` field is mapped to the primary key in your sou
 
 In addition to mapping, you may also choose to add Grouparoo groups to Braze subscription groups. 
 
-![Under "Braze Subscription Groups" in the Grouparoo destination configuration window, the "High value with recent automotive purchase" Grouparoo group will be added to the "High value with recent automotive purchase" Braze subscription group.][4]{: style="max-width:80%;"}
+![Under "Braze Subscription Groups" in the Grouparoo destination configuration window, the "High value with recent automotive purchase" Grouparoo group will be added to the "High value with recent automotive purchase" Braze subscription group.]({% image_buster /assets/img/grouparoo/lists.png %}){: style="max-width:80%;"}
 
 {% alert important %}
 Further details and updates on this integration can be found in [Grouparoo's documentation](https://www.grouparoo.com/docs/integrations/grouparoo-braze).

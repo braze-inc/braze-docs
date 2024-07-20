@@ -16,7 +16,7 @@ Preview and demo predictions will not allow users to be targeted for messaging, 
 
 Once you've decided what range of _Churn Risk Score_ or category you want to target, you can use the **Create Segment** or **Create Campaign** buttons to create a new segment or campaign that filters for users with the _Churn Risk Score_ or category selected with the slider.
 
-![Churn filters available when defining an audience include Purchase Likelihood Category and Purchase Likelihood Score.][5]
+![Churn filters available when defining an audience include Purchase Likelihood Category and Purchase Likelihood Score.]({% image_buster /assets/img_archive/predictive_churn_filters.png %})
 
 You can also use filters in campaigns or segments to target the users according to that threshold. You can filter for users by "Churn Score" or "Churn Category" in campaigns, Canvas, and segments, just like you use any other filter in Braze.
 

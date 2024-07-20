@@ -130,14 +130,14 @@ Use the Braze Fire OS SDK to integrate with Amazon Fire TV devices.
 Features include:
 
 - Data and Analytics collection for cross-channel engagement
-- Push Notifications (known as ["Heads Up Notifications"][7])
+- Push Notifications (known as ["Heads Up Notifications"](https://developer.amazon.com/docs/fire-tv/notifications.html#headsup))
   - The priority must be set to "HIGH" for these to appear. All notifications appear in the Fire TV settings menu.
 - Content Cards
 - Feature Flags
 - In-app messages
-  - To show HTML messages on non-touch environments like TVs, set `com.braze.configuration.BrazeConfig.Builder.setIsTouchModeRequiredForHtmlInAppMessages` to `false` (available from [Android SDK v23.1.0][android-tv-html])
+  - To show HTML messages on non-touch environments like TVs, set `com.braze.configuration.BrazeConfig.Builder.setIsTouchModeRequiredForHtmlInAppMessages` to `false` (available from [Android SDK v23.1.0](https://github.com/braze-inc/braze-android-sdk/blob/master/CHANGELOG.md#2310))
 
-For more information, visit the [Fire OS integration guide][2].
+For more information, visit the [Fire OS integration guide]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/).
 
 ### Kindle Fire {#kindle-fire}
 
@@ -151,7 +151,7 @@ Features include:
 - Feature Flags
 - In-app messages
 
-For more information, visit the [Fire OS integration guide][2].
+For more information, visit the [Fire OS integration guide]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/).
 
 ### Android TV {#android-tv}
 
@@ -163,11 +163,11 @@ Features include:
 - Content Cards
 - Feature Flags
 - In-app messages 
-  - To show HTML messages on non-touch environments like TVs, set `com.braze.configuration.BrazeConfig.Builder.setIsTouchModeRequiredForHtmlInAppMessages` to `false` (available from [Android SDK v23.1.0][android-tv-html])
+  - To show HTML messages on non-touch environments like TVs, set `com.braze.configuration.BrazeConfig.Builder.setIsTouchModeRequiredForHtmlInAppMessages` to `false` (available from [Android SDK v23.1.0](https://github.com/braze-inc/braze-android-sdk/blob/master/CHANGELOG.md#2310))
 - &#42; Push Notifications (Manual Integration Required)
-  - Push notifications are not supported natively on Android TV. To learn why, see Google's [Design Guidelines][5]. You may however, **do a manual integration of Push notification UI to achieve this**. See our [documentation][6] on how to set this up.
+  - Push notifications are not supported natively on Android TV. To learn why, see Google's [Design Guidelines](https://designguidelines.withgoogle.com/android-tv/patterns/notifications.html). You may however, **do a manual integration of Push notification UI to achieve this**. See our [documentation]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/android_tv_push/) on how to set this up.
 
-For more information, visit the [Android SDK integration guide][2].
+For more information, visit the [Android SDK integration guide]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/).
 
 {% alert note %}
 Make sure to create a new Android app in the dashboard for your Android OTT integration.
@@ -184,7 +184,7 @@ Features include:
 - Feature Flags
 - In-app messages (via [Headless UI](#custom-ui))
 
-For more information, visit the [Web Smart TV integration guide][8].
+For more information, visit the [Web Smart TV integration guide]({{site.baseurl}}/developer_guide/platform_integration_guides/web/smart_tvs/).
 
 ### Samsung Tizen {#tizen}
 
@@ -197,7 +197,7 @@ Features include:
 - Feature Flags
 - In-app messages (via [Headless UI](#custom-ui))
 
-For more information, visit the [Web Smart TV integration guide][8].
+For more information, visit the [Web Smart TV integration guide]({{site.baseurl}}/developer_guide/platform_integration_guides/web/smart_tvs/).
 
 ### Roku {#roku}
 
@@ -210,7 +210,7 @@ Features include:
   - Webviews are not supported by the Roku platform, so HTML in-app messages are therefore not supported.
 - Feature Flags
 
-For more information, visit the [Roku integration guide][3].
+For more information, visit the [Roku integration guide]({{site.baseurl}}/developer_guide/platform_integration_guides/roku/in-app_messaging/overview/).
 
 ### Apple TV OS {#tvos}
 
@@ -223,10 +223,10 @@ Features include:
 - Feature Flags
 - In-app messages (via [Headless UI](#custom-ui))
   - Webviews are not supported by the tvOS platform, so HTML in-app messages are therefore not supported.
-  - See our [sample app][9] to learn more about how to use a Headless UI for customized messaging on tvOS.
+  - See our [sample app](https://github.com/braze-inc/braze-swift-sdk/tree/main/Examples#inappmessages-custom-ui) to learn more about how to use a Headless UI for customized messaging on tvOS.
 - Silent push notifications and update badging
 
-For more information, visit the [iOS Swift SDK integration guide][4].
+For more information, visit the [iOS Swift SDK integration guide](https://github.com/braze-inc/braze-swift-sdk).
 
 {% alert note %}
 To avoid showing mobile in-app messages to your TV users, be sure to set up either [App Targeting](#app-targeting) or use key-value pairs to filter out messages. For example, only displaying tvOS messages if they contain a special `tv = true` key-value pair.
@@ -243,7 +243,7 @@ Use the Braze Swift SDK to integrate with visionOS. Most features available on i
 - Feature Flags
 - Location Analytics
 
-For more information, visit the [iOS Swift SDK integration guide][4].
+For more information, visit the [iOS Swift SDK integration guide](https://github.com/braze-inc/braze-swift-sdk).
 
 {% alert important %}
 Some iOS features are partially-supported or unsupported. For the full list, see [visionOS support](https://www.braze.com/docs/developer_guide/platform_integration_guides/swift/visionos).
@@ -253,7 +253,7 @@ Some iOS features are partially-supported or unsupported. For the full list, see
 
 To target OTT apps for messaging, we recommend creating a segment specific to your OTT app.
 
-![A segment created using the Android OTT app.][1]
+![A segment created using the Android OTT app.]({% image_buster /assets/img/android_ott.png %})
 
 ## Headless UI {#custom-ui}
 
@@ -269,7 +269,7 @@ Read more about custom handling messaging:
 
 **Swift SDK**
 - [In-App Message Customization](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/brazeinappmessagepresenter/)
-- [Headless UI Sample App][9]
+- [Headless UI Sample App](https://github.com/braze-inc/braze-swift-sdk/tree/main/Examples#inappmessages-custom-ui)
 - [Content Cards Customization](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcards-swift.class/)
 
 **Web SDK**

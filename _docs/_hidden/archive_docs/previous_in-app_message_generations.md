@@ -153,15 +153,15 @@ The following strategies are helpful for keeping file sizes down:
 
 - Reference fonts embedded in your application or website to customize your HTML in-app messages rather than including the font files in your HTML asset ZIP folder.
 - Ensure no extraneous or duplicative CSS or JavaScript are included in your HTML asset ZIPs.
-- Use [ImageOptim][25] on all images to compress images to their minimum possible size with no reduction in quality.
+- Use [ImageOptim](https://imageoptim.com/) on all images to compress images to their minimum possible size with no reduction in quality.
 
 ### iPhone 5 specs
 
-![iPhone 5 Specs][18]
+![iPhone 5 Specs]({% image_buster /assets/img_archive/In-AppMsg_Mockups+Specs_05.png %})
 
 ### iPhone 6 specs
 
-![iPhone 6 Specs][19]
+![iPhone 6 Specs]({% image_buster /assets/img_archive/In-AppMsg_Mockups+Specs_06.png %})
 
 
 [18]: {% image_buster /assets/img_archive/In-AppMsg_Mockups+Specs_05.png %}

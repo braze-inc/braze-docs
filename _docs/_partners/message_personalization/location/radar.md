@@ -68,7 +68,7 @@ For example, target any users who have visited your store within the past 7 days
 
 The following example shows how to run a promotion to drive nearby users in-store with a digital offer. 
 
-![An Android image of a Connected Content push message that displays "New In Store Deals, Walmart and target near you".][1]{: style="float:right;max-width:30%;border:0;"}
+![An Android image of a Connected Content push message that displays "New In Store Deals, Walmart and target near you".]({% image_buster /assets/img/radar_example.png %}){: style="float:right;max-width:30%;border:0;"}
 
 To get started, you'll need to have your Radar publishable API key on hand to use within your request URLs.
 

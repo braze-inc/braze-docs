@@ -15,7 +15,7 @@ channel:
 
 | Android Example (Expanded) | IOS Example (Expanded) |
 | :-----: | :----------: |
-| ![][1] | ![][2] |
+| ![]({% image_buster /assets/img_archive/pushstories_android_preview.png %}) | ![]({% image_buster /assets/img_archive/pushstories_ios_preview.png %}) |
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% alert note %}
@@ -31,7 +31,7 @@ The following SDK versions are required to receive Push Stories:
 
 ## How to use Push Stories
 
-![][6]{: style="float:right;max-width:50%;margin-left:15px;margin-bottom:15px;"}
+![]({% image_buster /assets/img_archive/pushstories_composer_dropdown2.png %}){: style="float:right;max-width:50%;margin-left:15px;margin-bottom:15px;"}
 
 To use Push Stories, create a [push campaign]({{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/) and select **Push Stories** as your **Notification Type**.
 
@@ -40,13 +40,13 @@ To use Push Stories, create a [push campaign]({{site.baseurl}}/user_guide/messag
 To create a page, perform the following steps:
 
 1. Click **Manage Pages** from the main composer.
-    <br><br>![][4]{: style="max-width:70%"}<br><br>
+    <br><br>![]({% image_buster /assets/img_archive/pushstories_add_pages.png %}){: style="max-width:70%"}<br><br>
 2. Insert an image for each page, along with the click behavior for that image.
 3. If desired, add a **Title** and **Description** for each page. If you use a title and description for one page, they must be inserted for all pages.
 
 The previews will be reflected and are interactive.
 
-![][3]{: style="max-width:60%"}
+![]({% image_buster /assets/img_archive/pushstories_composer.png %}){: style="max-width:60%"}
 
 {% alert important %}
 If you are pulling in images with [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/about_connected_content/#about-connected-content), ensure that your image URL begins with `https://`. Using `http://` will crash your app.
@@ -85,7 +85,7 @@ When you create a campaign or Canvas, you can filter which users you want to tar
 
 The analytics will look very similar to the current analytics section for push notifications. For Push Stories analytics, you can open the **Direct Opens** metric to view the clicks per page.
 
-![iOS Push Performance table with sample analytics and expanded details for the Direct Opens metric.][5]
+![iOS Push Performance table with sample analytics and expanded details for the Direct Opens metric.]({% image_buster /assets/img_archive/pushstories_analytics.png %})
 
 ## Troubleshooting
 

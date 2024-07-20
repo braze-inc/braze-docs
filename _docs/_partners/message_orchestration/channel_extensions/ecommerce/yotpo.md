@@ -31,7 +31,7 @@ To find your Yotpo product ID, perform the following steps:
 3. Right-click and select **Inspect**.
 4. Press <kbd>Control</kbd> + <kbd>F</kbd> and search for `yotpo-main` in the code. The `data-product ID` variable and its value appear in the Yotpo div.
 
-![Inspect and search for yotpo-main to find the data-product ID variable][1]
+![Inspect and search for yotpo-main to find the data-product ID variable]({% image_buster /assets/img/yotpo/image1.png %})
 
 ## Integration
 
@@ -67,7 +67,7 @@ The average rating for this product is:
 
 Replace `<YOTPO-API-KEY>` with your Yotpo reviews API key. The `product_id` will be pulled dynamically from Braze. For the integration to work, the `product_id` in Braze must match the product ID in Yotpo (typically the ecommerce parent product ID).
 
-![Replace YOTPO-API-KEY with your Yotpo Reviews API key][2]
+![Replace YOTPO-API-KEY with your Yotpo Reviews API key]({% image_buster /assets/img/yotpo/image2.png %})
 
 ### Display a recent 5-star review for a product {#five-star-review}
 
@@ -92,7 +92,7 @@ Replace `<YOTPO-API-KEY>` with your Yotpo reviews API key. The `product_id` will
 
 Here's what the snippet in your email editor will look like:
 
-![Example of email editor showing snippet for recent 5-star reviews][3]
+![Example of email editor showing snippet for recent 5-star reviews]({% image_buster /assets/img/yotpo/image3.png %})
 
 ### Display visual UGC by product {#visual-ugc}
 
@@ -121,7 +121,7 @@ Replace `<YOTPO-API-KEY>` with your Yotpo reviews API key. The `product_id` will
 
 The snippet will look something like this:
 
-![Example of email editor showing a snippet of images published in Yotpo][4]
+![Example of email editor showing a snippet of images published in Yotpo]({% image_buster /assets/img/yotpo/image4.png %})
 
 ### Display a customer's loyalty balance in an email {#loyalty-balance}
 
@@ -151,7 +151,7 @@ Replace `<YOTPO-LOYALTY-GUID>` and `<YOTPO-LOYALTY-API-KEY>` with your Yotpo loy
 
 The snippet will look something like this:
 
-![Example of email editor showing a snippet of customer loyalty balance][5]
+![Example of email editor showing a snippet of customer loyalty balance]({% image_buster /assets/img/yotpo/image5.png %})
 
 ## Frequently asked questions {#faq}
 

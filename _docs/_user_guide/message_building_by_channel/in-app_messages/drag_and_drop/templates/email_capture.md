@@ -13,7 +13,7 @@ description: "This reference page covers how to create an email sign-up form wit
 
 ### Minimum SDK versions
 
-Messages created using the drag-and-drop editor can only be sent to users on the following minimum SDK versions. See the [Prerequisites][1] section of the [Creating an in-app message with drag-and-drop]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/create/) article for more details and nuances to be aware of.
+Messages created using the drag-and-drop editor can only be sent to users on the following minimum SDK versions. See the [Prerequisites]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/create/#prerequisites) section of the [Creating an in-app message with drag-and-drop]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/create/) article for more details and nuances to be aware of.
 
 {% sdk_min_versions swift:5.0.0 android:8.0.0 web:2.5.0 %}
 
@@ -55,11 +55,11 @@ Deliverability best practices often exceed legal requirements, and our recommend
 
 ### Step 4: Style your message
 
-You can customize the look and feel of your message using the drag-and-drop [in-app message components][3].
+You can customize the look and feel of your message using the drag-and-drop [in-app message components]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/create/#drag-and-drop-in-app-message-components).
 
 ## Reporting
 
-Once your campaign has launched, you can analyze results in real time to see how many users have engaged with your campaign. To see how many users have opted in to the subscription group, you can [create a segment][5] of users who subscribed to the subscription group by filtering for users who have received the in-app message and submitted the form.
+Once your campaign has launched, you can analyze results in real time to see how many users have engaged with your campaign. To see how many users have opted in to the subscription group, you can [create a segment]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/) of users who subscribed to the subscription group by filtering for users who have received the in-app message and submitted the form.
 
 ## Best practices
 

@@ -36,10 +36,10 @@ The following table further outlines the difference in supported features betwee
 | Scheduled, action-based, and API-based delivery | <i class="fas fa-times" title="Not supported"></i> | <i class="fas fa-check" title="Supported"></i> |
 | API-created messages | <i class="fas fa-times" title="Not supported"></i> | <i class="fas fa-check" title="Supported"></i> |
 | A/B testing | <i class="fas fa-times" title="Not supported"></i> | <i class="fas fa-check" title="Supported"></i> |
-| [Dismissing and pinning cards][4] | <i class="fas fa-times" title="Not supported"></i> | <i class="fas fa-check" title="Supported"></i> |
-| [Rich analytics][3] (for example, conversion tracking) | <i class="fas fa-times" title="Not supported"></i> | <i class="fas fa-check" title="Supported"></i> |
-| [Available in Canvas][2] | <i class="fas fa-times" title="Not supported"></i> | <i class="fas fa-check" title="Supported"></i> |
-| [Connected Content][5] | <i class="fas fa-times" title="Not supported"></i> | <i class="fas fa-check" title="Supported"></i> |
+| [Dismissing and pinning cards]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/create/#step-2-compose-a-content-card) | <i class="fas fa-times" title="Not supported"></i> | <i class="fas fa-check" title="Supported"></i> |
+| [Rich analytics]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/reporting/) (for example, conversion tracking) | <i class="fas fa-times" title="Not supported"></i> | <i class="fas fa-check" title="Supported"></i> |
+| [Available in Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/content-cards_in_canvas/) | <i class="fas fa-times" title="Not supported"></i> | <i class="fas fa-check" title="Supported"></i> |
+| [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/) | <i class="fas fa-times" title="Not supported"></i> | <i class="fas fa-check" title="Supported"></i> |
 | Personalization and segmentation | Templated at impression | Templated at send or first impression |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
@@ -48,7 +48,7 @@ The following table further outlines the difference in supported features betwee
 - Content Cards and the News Feed are separate products, so a simple integration for your app or website is necessary in order to use Content Cards.
 - If desired, existing News Feed Cards will need to be manually migrated to Content Card campaigns when you switch.
 - Content Cards is not intended to be used at the same time as the News Feed, as it is a replacement for the News Feed.
-- Content Cards does not currently support categories. Categories can be achieved via [customization and key-value pairs][1].
+- Content Cards does not currently support categories. Categories can be achieved via [customization and key-value pairs]({{site.baseurl}}/developer_guide/platform_integration_guides/web/content_cards/multiple_feeds/).
 
 
 [1]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/content_cards/multiple_feeds/

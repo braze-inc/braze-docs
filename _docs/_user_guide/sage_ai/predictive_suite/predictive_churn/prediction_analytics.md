@@ -22,7 +22,7 @@ As soon as the prediction is done training and this page is populated, you can j
 
 The distribution of the scores for the entire prediction audience is displayed at the top of the page in a chart that you can view, by category or by score. Users in bins further to the right have higher scores and are more likely to churn. Users in bins further to the left are less likely to churn. The slider beneath the chart will allow you to select a swath of users and estimate what the results would be of targeting users in the selected range of _Churn Risk Score_ or category.
 
-![][4]{: style="max-width:90%"}
+![]({% image_buster /assets/img/churn/churnTargeting.gif %}){: style="max-width:90%"}
 
 As you move the slider, the bar in the left half of the lower panel will inform you how many users out of the entire prediction audience would be targeted.
 
@@ -54,7 +54,7 @@ The prediction will be trained again every two weeks and updated alongside the p
 
 ## Estimated results {#estimated_results}
 
-![][6]{: style="float:right;max-width:30%;margin-left:15px;"}
+![]({% image_buster /assets/img/churn/churnEstimatedResults.png %}){: style="float:right;max-width:30%;margin-left:15px;"}
 
 In the right half of the panel beneath the chart, we show estimates of the expected accuracy of targeting this swath of the prediction audience. Based on data about users in the prediction audience in the past, and the apparent accuracy for the model for discriminating between churning and non-churning users on that past data, these progress bars estimate for a future potential message using the audience highlighted with the slider:
 

@@ -101,7 +101,7 @@ Beginning in Swift SDK v5.7.0, the IDFV field can optionally be disabled, and in
 
 ## Optional IDFA collection
 
-IDFA Collection is optional within the Braze SDK and disabled by default. IDFA Collection is only required within Braze if you intend to use our [install attribution integrations][21]. If you opt to store your IDFA, we will store it free of charge, so you may take advantage of these options immediately upon release without additional development work.
+IDFA Collection is optional within the Braze SDK and disabled by default. IDFA Collection is only required within Braze if you intend to use our [install attribution integrations]({{site.baseurl}}/partners/advertising_technologies/attribution/adjust/). If you opt to store your IDFA, we will store it free of charge, so you may take advantage of these options immediately upon release without additional development work.
 
 As a result, we recommend continuing to collect the IDFA if you meet any of the following criteria:
 
@@ -127,7 +127,7 @@ Follow these steps to implement IDFA Collection:
 
 ##### Step 1: Implement ABKIDFADelegate
 
-Create a class that conforms to the [`ABKIDFADelegate`][29] protocol:
+Create a class that conforms to the [`ABKIDFADelegate`](https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/include/ABKIDFADelegate.h) protocol:
 
 {% tabs %}
 {% tab OBJECTIVE-C %}
@@ -185,7 +185,7 @@ In the `appboyOptions` dictionary passed to `startWithApiKey:inApplication:withA
 
 The approximate iOS SDK framework file size is 30&nbsp;MB, and the approximate .ipa (addition to app file) size is between 1&nbsp;MB and 2&nbsp;MB.
 
-Braze measures the size of our iOS SDK by observing the SDK's effect on `.ipa` size, per Apple's [recommendations on app sizing][31]. If you are calculating the iOS SDK's size addition to your application, we recommend following [Getting an app size report][31] to compare the size difference in your `.ipa` before and after integrating the Braze iOS SDK. When comparing sizes from the app thinning size report, we also recommend looking at app sizes for thinned `.ipa` files, as universal `.ipa` files will be larger than the binaries downloaded from the App Store and installed onto user devices.
+Braze measures the size of our iOS SDK by observing the SDK's effect on `.ipa` size, per Apple's [recommendations on app sizing](https://developer.apple.com/library/content/qa/qa1795/_index.html). If you are calculating the iOS SDK's size addition to your application, we recommend following [Getting an app size report](https://developer.apple.com/library/content/qa/qa1795/_index.html) to compare the size difference in your `.ipa` before and after integrating the Braze iOS SDK. When comparing sizes from the app thinning size report, we also recommend looking at app sizes for thinned `.ipa` files, as universal `.ipa` files will be larger than the binaries downloaded from the App Store and installed onto user devices.
 
 {% alert note %}
 If you are integrating via CocoaPods with `use_frameworks!`, set `Enable Bitcode = NO` in target's Build Settings for accurate sizing.

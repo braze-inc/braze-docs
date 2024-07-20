@@ -20,36 +20,36 @@ Naming conventions for events that flow for one partner from Braze may not match
 [![Braze Learning course]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/introduction-to-data-warehouses){: style="float:right;width:120px;border:0;" class="noimgborder"}
 These partners can either act as warehouses (for flat file storage) or gateways to other data manipulation tools. This is best if you need your data to be flexible, but also do backflips, and maybe a cartwheel.
 
-* [Amazon S3][1]
+* [Amazon S3]({{site.baseurl}}/partners/data_and_infrastructure_agility/data_warehouses/amazon_s3/)
 
-* [Google Cloud Storage][2]
+* [Google Cloud Storage]({{site.baseurl}}/partners/data_and_infrastructure_agility/data_warehouses/google_cloud_storage_for_currents/)
 
-* [Microsoft Azure Blob Storage][3]
+* [Microsoft Azure Blob Storage]({{site.baseurl}}/partners/data_and_infrastructure_agility/data_warehouses/microsoft_azure_blob_storage_for_currents/)
 
 ## Customer data
 
 These customer data platforms collect and route information from multiple sources to a variety of other locations to empower you to utilize Braze data in the best ways possible.
 
-* [mParticle][6]
+* [mParticle]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/mParticle/mparticle_for_currents/)
 
-* [Segment][7]
+* [Segment]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/segment/segment_for_currents/)
 
-* [Tealium][8]
+* [Tealium]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/tealium/tealium_for_currents#tealium-for-currents)
 
-* [Treasure Data][10]
+* [Treasure Data]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/treasure_data/treasure_data_for_currents/)
 
-* [RudderStack][9]
+* [RudderStack]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/rudderstack/rudderstack_for_currents/)
 
 
 ## Behavioral analytics
 
 These partners specialize in product analytics and business intelligence and can help you interact with your users based on their actions.
 
-* [Amplitude][4]
+* [Amplitude]({{site.baseurl}}/partners/data_and_infrastructure_agility/analytics/amplitude/amplitude_for_currents/)
 
-* [Mixpanel][5]
+* [Mixpanel]({{site.baseurl}}/partners/insights/behavioral_analytics/mixpanel_for_currents/)
 
-* [Heap][11]
+* [Heap]({{site.baseurl}}/partners/data_and_infrastructure_agility/cohort_import/heap/)
 
 
 

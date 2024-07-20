@@ -20,7 +20,7 @@ If you are using the [older navigation]({{site.baseurl}}/navigation), go to **Us
 
 Here, a list of custom preference centers will be displayed. Select **Create New** to create a new preference center, or select the name of an existing one to make changes.
 
-![][1]
+![]({% image_buster /assets/img/preference_center/preference_center1.png %})
 
 ## Step 2: Name the email preference center
 
@@ -28,7 +28,7 @@ Preference center names can only contain alphanumeric characters, dashes, or und
 
 This Liquid tag can be included in any outbound email campaigns or Canvas steps and will direct users to the preference center.
 
-![][2]
+![]({% image_buster /assets/img/preference_center/preference_center2.png %})
 
 ## Step 3: Add subscription groups to the preference center
 
@@ -45,7 +45,7 @@ You can further configure the selected subscription groups by selecting the smar
 - Add or remove a **Subscribe to all** checkbox which will subscribe the user to all subscription groups shown in this block
 - Add or remove an **Unsubscribe from all** checkbox which will unsubscribe the user from all subscription groups shown in this block
 
-![][3]{: style="max-width:38%;"} ![][4]{: style="max-width:45%;"}
+![]({% image_buster /assets/img/preference_center/preference_center3.png %}){: style="max-width:38%;"} ![]({% image_buster /assets/img/preference_center/preference_center4.png %}){: style="max-width:45%;"}
 
 The **Unsubscribe from all** button at the bottom of the template is non-removable and will [globally unsubscribe]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#subscription-states) the user from receiving any email messages.
 
@@ -55,7 +55,7 @@ The **Unsubscribe from all** button at the bottom of the template is non-removab
 
 You can set certain styles to be applied across all relevant blocks in your preference center from the **Common Styles** tab. The styles set in this section are used everywhere in your message except where you override them for a specific block. For an easier design experience, we recommend setting up page-level styles before you customize styles at the block level.
 
-![][5]{: style="max-width:45%;"}
+![]({% image_buster /assets/img/preference_center/preference_center5.png %}){: style="max-width:45%;"}
 
 {% alert tip %}
 To return to the common styles, select the "X" button on individual block properties. Next, select the message container, message "X" button, or editor background.
@@ -98,7 +98,7 @@ If you're using the Custom Code block in your preference center, inline frames m
 
 Don’t forget to customize the confirmation page! You can edit this page by selecting **Confirmation Page** at the top of the drag-and-drop editor window. This page will be displayed to users after updating their preferences using the preference center. The same styling capabilities above apply to this page as well.
 
-![][9]{: style="max-width:65%;"}
+![]({% image_buster /assets/img/preference_center/preference_center9.png %}){: style="max-width:65%;"}
 
 ## Step 6: Preview and launch your preference center
 
@@ -112,7 +112,7 @@ When launching the preference center, you will be prompted to confirm the name, 
 
 To place a link to the preference center in your emails, copy the Liquid tag of the desired preference center by selecting the **Copy Liquid** icon.
 
-![][10]{: style="max-width:75%;"}
+![]({% image_buster /assets/img/preference_center/preference_center10.png %}){: style="max-width:75%;"}
 
 Add the Liquid tag to the desired place in your email, similar to how [unsubscribe URLs]({{site.baseurl}}/user_guide/message_building_by_channel/email/preference_center/preference_center/#custom-footer) are inserted.
 
@@ -120,7 +120,7 @@ Add the Liquid tag to the desired place in your email, similar to how [unsubscri
 
 If an error occurs when a user selects **Save** on a preference center, they will be presented with the following default error message, which cannot be customized or styled in the editor. However, localization of the error messages is still supported on these pages. 
 
-![An error noting "There was a problem saving your preferences. Please try again."][11]{: style="max-width:55%;"}
+![An error noting "There was a problem saving your preferences. Please try again."]({% image_buster /assets/img/preference_center/preference_center11.png %}){: style="max-width:55%;"}
 
 [1]: {% image_buster /assets/img/preference_center/preference_center1.png %} 
 [2]: {% image_buster /assets/img/preference_center/preference_center2.png %} 

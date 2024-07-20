@@ -9,16 +9,16 @@ search_tag: Partner
 ---
 # Zapier integration
 
-> [Zapier][1] is an automation web tool that allows you to share data between web apps and then use that information to automate actions. 
+> [Zapier](https://zapier.com/) is an automation web tool that allows you to share data between web apps and then use that information to automate actions. 
 
-The Braze and Zapier partnership leverages the Braze API and Braze [webhooks][3] to connect with third-party applications—such as Google Workplace, Slack, Salesforce, WordPress, etc. to automate various actions.
+The Braze and Zapier partnership leverages the Braze API and Braze [webhooks]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/#creating-a-webhook) to connect with third-party applications—such as Google Workplace, Slack, Salesforce, WordPress, etc. to automate various actions.
 
 ## Prerequisites
 
 | Requirements | Description |
 |---|---|
 | Zapier account | A Zapier account is required to take advantage of this partnership. |
-| Braze REST endpoint | Your REST endpoint URL. Your endpoint will depend on the [Braze URL for your instance][0]. |
+| Braze REST endpoint | Your REST endpoint URL. Your endpoint will depend on the [Braze URL for your instance]({{site.baseurl}}/api/basics/#api-definitions). |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## Integration
@@ -41,7 +41,7 @@ Next, define the zap action. When your zap is enabled, and your trigger is detec
 
 Continuing our example, we want to send a POST request as a JSON to a Braze endpoint. This can be done by selecting the **Webhooks** option under **Apps**.
 
-![][7]
+![]({% image_buster /assets/img_archive/zapier3.png %})
 
 ### Step 3: Set up Braze POST
 
@@ -71,7 +71,7 @@ When setting up your webhook, use the following settings and provide your Braze 
 }
 ```
 
-![][4]{: style="max-width:70%;"}
+![]({% image_buster /assets/img/zapier.png %}){: style="max-width:70%;"}
 
 ### Step 4: Create a Braze campaign
 

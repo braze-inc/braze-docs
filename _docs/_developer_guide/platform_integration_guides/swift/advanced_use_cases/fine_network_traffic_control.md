@@ -32,7 +32,7 @@ To minimize server load, Braze performs periodic flushes of new user data every 
 
 This protocol is the same as automatic request processing except:
 - Custom attributes and custom event data are not automatically flushed to the server throughout the user session.
-- Braze will still perform automatic network requests for internal features, such as requesting in-app messages, Liquid templating in in-app messages, geofences, and location tracking. For more details, see the `Braze.Configuration.Api.RequestPolicy.manual` [documentation][2]. When these internal requests are made, locally stored custom attributes and custom event data may be flushed to the Braze server, depending on the request type.
+- Braze will still perform automatic network requests for internal features, such as requesting in-app messages, Liquid templating in in-app messages, geofences, and location tracking. For more details, see the `Braze.Configuration.Api.RequestPolicy.manual` [documentation](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/configuration-swift.class/api-swift.class/requestpolicy-swift.enum/manual). When these internal requests are made, locally stored custom attributes and custom event data may be flushed to the Braze server, depending on the request type.
 
 ### Manually flushing user data
 
@@ -58,7 +58,7 @@ AppDelegate.braze?.requestImmediateDataFlush()
 
 ### Set request policy on startup
 
-These policies can be set at app startup time when you initialize the Braze configuration. In the `configuration` object, set the [`Braze.Configuration.Api.RequestPolicy`][3] as shown in the following code snippet:
+These policies can be set at app startup time when you initialize the Braze configuration. In the `configuration` object, set the [`Braze.Configuration.Api.RequestPolicy`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/configuration-swift.class/api-swift.class/requestpolicy-swift.enum)) as shown in the following code snippet:
 
 {% tabs %}
 {% tab swift %}

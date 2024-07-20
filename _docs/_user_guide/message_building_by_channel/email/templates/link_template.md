@@ -25,7 +25,7 @@ Link templates are an optional feature. If **Email Link Templates** is missing f
 
 ## Creating a link template
 
-![][11]{: style="float:right;max-width:20%;"}
+![]({% image_buster /assets/img_archive/create_link_template.png %}){: style="float:right;max-width:20%;"}
 
 You can create an unlimited number of link templates to support your various needs. To create a link template:
 
@@ -71,7 +71,7 @@ To access the **Link Management** tab in the updated HTML email editor, you must
 
 - **Drag-and-drop editor:** Select **Content** > **Link Management** tab. Click **Add a Link Template**. To access link templates in the drag-and-drop editor, you must have [link aliasing]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates/link_aliasing/) turned on.
 
-![Link Management tab in the drag-and-drop editor with an example list of link templates.][1]
+![Link Management tab in the drag-and-drop editor with an example list of link templates.]({% image_buster /assets/img_archive/link_template_messagecomposer2.png %})
 
 As you add link templates in the **Link Management** tab, scroll to the right to view the templates you've added.
 
@@ -85,7 +85,7 @@ Archiving templates is not currently available for link templates.
 
 ## Frequently asked questions
 
-For answers to frequently asked questions about link templates, check out our [Templates FAQ][10] page.
+For answers to frequently asked questions about link templates, check out our [Templates FAQ]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates/faq/) page.
 
 [1]:{% image_buster /assets/img_archive/link_template_messagecomposer2.png %}
 [2]:{% image_buster /assets/img_archive/link_template_postappend.png %}

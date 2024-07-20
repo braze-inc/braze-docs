@@ -33,7 +33,7 @@ The **Subscriptions and Usage** tab includes usage graphs and your contract deta
 
 Here, you will find usage graphs that apply to your workspaces. You may find your own dashboard shows different usage metrics based on the products you have purchased.
 
-![Usage graphs showing Monthly Active Users, Monthly Unique Visitors, and email sends][3]{: style="max-width:90%;"}
+![Usage graphs showing Monthly Active Users, Monthly Unique Visitors, and email sends]({% image_buster /assets/img/subscription_and_billing3.png %}){: style="max-width:90%;"}
 
 Usage graphs like these are particularly helpful when trying to budget usage and gain a deeper understanding of what workspaces contribute to overall usage.
 
@@ -47,13 +47,13 @@ The **Most Used Events and Attributes By App** tab is a useful tool to understan
 
 Data breakdowns like these can help you understand what specific data points are taking up large percentages of your allotment. We recommend that you monitor this information from time to time to make sure you aren't spending data points in accidental and unnecessary ways. Your customer success manager can provide guidance to get the most out of your current plan or provide options for greater flexibility. 
 
-![Most Used Events and Attributes By App][4]
+![Most Used Events and Attributes By App]({% image_buster /assets/img/most_used_events_attributes_time.png %})
 
 ## Total data points dashboard
 
 The **Total Data Points Usage** tab provides an in-depth look at your data point consumption. You can view all data in this section aggregated by either weeks or months. Click **Update** to apply any changes.
 
-![Filtering Data Point Usage by weeks][2]
+![Filtering Data Point Usage by weeks]({% image_buster /assets/img/subscription_and_billing2.png %})
 
 ### Contract details
 
@@ -66,7 +66,7 @@ The fields in this section are defined as follows:
 - **Allotted Data Points:** The amount of data points allotted in the contract per billing term.
 - **Contract Data Point Usage:** A cumulative total of all data points consumed over the contract's lifetime, and does not reset in the next billing term.
 
-![Contract Details section of Total Data Point Usage tab][5]
+![Contract Details section of Total Data Point Usage tab]({% image_buster /assets/img/contract_details.png %})
 
 ### Current billing cycle
 
@@ -77,7 +77,7 @@ This section of the dashboard displays the data point usage for the current bill
 - Allotted number of data points 
 - Total data point usage 
 
-![Current Billing Cycle section of Total Data Points Usage tab][6]{: style="max-width:90%;"}
+![Current Billing Cycle section of Total Data Points Usage tab]({% image_buster /assets/img/current_billing_cycle.png %}){: style="max-width:90%;"}
 
 ### Company billing data
 
@@ -85,13 +85,13 @@ This section of the dashboard displays the data point usage for the current bill
 
 This graph allows you to assess the total data point usage of a company by workspace. This graph gives you the ability to assess how each workspace is contributing to the company's data point usage.
 
-![Workspace Data Point Usage graph for two workspaces][7]{: style="max-width:90%;"}
+![Workspace Data Point Usage graph for two workspaces]({% image_buster /assets/img/appgroup_datapoint_usage.png %}){: style="max-width:90%;"}
 
 #### Data point usage over time
 
 This graph gives you the ability to quickly see your total data point usage versus your allotted amount of data points. 
 
-![Data Point Usage over time contrasting current billing cycle allotted data points with running total][8]{: style="max-width:90%;"}
+![Data Point Usage over time contrasting current billing cycle allotted data points with running total]({% image_buster /assets/img/company_data_point_usage_time.png %}){: style="max-width:90%;"}
 
 ### Workspace billing data
 
@@ -103,25 +103,25 @@ The workspace billing data and workspace charts only display for dates after Oct
 
 The **Drill to Workspaces** lets you view granular data point data for each of your workspaces. Click a workspace to see its data point details.
 
-![Drill to workspaces for billable data points][9]{: style="max-width:90%;"}
+![Drill to workspaces for billable data points]({% image_buster /assets/img/appgroup_drilldown.png %}){: style="max-width:90%;"}
 
 ##### Workspace level data point usage by category
 
 Select the menu next to a workspace name and then **Billable Data Points For WORKSPACE_NAME** to view the **Workspace Level Data Point Usage by Category** table. This table shows you data point counts for each category of data points. For example, you can see the number of data points driven by sessions and custom events. You can use this table to identify the categories of data points that are driving data point consumption for the workspace.
 
-![Workspace Level Data Point Usage by Category][10]{: style="max-width:90%;"}
+![Workspace Level Data Point Usage by Category]({% image_buster /assets/img/appgroup_level_datapoint_usage_bycategory.png %}){: style="max-width:90%;"}
 
 ##### Workspace level data point usage over time
 
 The **Workspace Level Data Point Usage over Time** table shows you how that workspace's data point usage has changed throughout your billing cycle.
 
-![Workspace Level Data Point Usage over Time][11]{: style="max-width:90%;"}
+![Workspace Level Data Point Usage over Time]({% image_buster /assets/img/appgroup_level_usage_time.png %}){: style="max-width:90%;"}
 
 ##### Appl level total data point usage
 
 The **App Level Total Data Point Usage** table shows you data point usage for each of the apps in your workspace. You can use this table to identify which apps are driving data point consumption for the workspace.
 
-![App Level Total Data Point Usage table for multiple apps][12]{: style="max-width:90%;"}
+![App Level Total Data Point Usage table for multiple apps]({% image_buster /assets/img/app_level_stats.png %}){: style="max-width:90%;"}
 
 
 [2]: {% image_buster /assets/img/subscription_and_billing2.png %}

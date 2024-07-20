@@ -20,7 +20,7 @@ If you turn on re-eligibility, you override this default behavior and allow qual
 
 To turn on re-eligibility for a Canvas, check **Allow users to re-enter this Canvas** in the **Entry Controls** section. You can choose between allowing users to re-enter after the maximum duration of the Canvas, or after a specified window.
 
-![Entry Controls][2]
+![Entry Controls]({% image_buster /assets/img_archive/reeligibility_controls_canvas.png %})
 
 Re-eligibility for Canvas variants is tied to Canvas entry rather than message receipt. Users who enter a Canvas and don't receive any messages will not be able to re-enter the Canvas unless re-eligibility is turned on. 
 
@@ -32,13 +32,13 @@ If re-eligibility for a Canvas is set to shorter than the duration of the Canvas
 
 To turn on re-eligibility for a campaign, select the **Allow users to become re-eligible to receive campaign** checkbox in the **Delivery Controls** section. The maximum time for re-eligibility for a campaign is 720 days.
 
-![][1]
+![]({% image_buster /assets/img_archive/reeligibility_controls_campaign.png %})
 
 In the case of triggered campaigns with re-eligibility turned on, users who [did not actually receive the campaign message]({{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/triggered_delivery/#why-did-a-user-not-receive-my-triggered-campaign) (despite completing the trigger event) will automatically qualify for the message the next time they complete the trigger event, even if you did not make users re-eligible. This is because re-eligibility is based on message receipt and not campaign entry. By making users re-eligible for a triggered campaign, you are allowing them to actually receive (and not simply trigger) the message more than once.
 
 Additionally, if you are trying to send a message immediately with a re-eligibility of zero minutes, we will always attempt to schedule it right away regardless of how a user has received previous versions of the campaign or Canvas.
 
-![][24]
+![]({% image_buster /assets/img_archive/ReEligible.png %})
 
 ## Re-eligibility delay calculations
 

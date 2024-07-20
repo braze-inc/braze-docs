@@ -16,13 +16,13 @@ If you include the following text in your message: `{{${first_name}}}`, the user
 
 The following values can be substituted into a message, depending on their availability:
 
-- [Basic user information][1] (for example, `first_name`, `last_name`, `email_address`)
-- [Custom attributes][2]
-- [Custom event properties][11]
-- [Most recently used device information][39]
-- [Target device information][40]
+- [Basic user information]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/) (for example, `first_name`, `last_name`, `email_address`)
+- [Custom attributes]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/)
+- [Custom event properties]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/)
+- [Most recently used device information]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/#most-recently-used-device-information)
+- [Target device information]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/#targeted-device-information)
 
-You can also pull content directly from a web server via Braze [Connected Content][9].
+You can also pull content directly from a web server via Braze [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/about_connected_content/).
 {% endraw %}
 
 {% alert important %}
@@ -33,7 +33,7 @@ Braze currently supports Liquid up to and including **Liquid 5 from Shopify**.
 
 {% raw %}
 
-Once you know the [Liquid tags available][1], using Liquid can elevate the personalization in your messages to impressive heights. Liquid tags act as placeholders in your messages that can pull in consented information from your user's account and enable personalization and relevant messaging practices.
+Once you know the [Liquid tags available]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/), using Liquid can elevate the personalization in your messages to impressive heights. Liquid tags act as placeholders in your messages that can pull in consented information from your user's account and enable personalization and relevant messaging practices.
 
 In the following block, you can see that a dual usage of a Liquid tag to call the user's first name, as well as a default tag in the event that a user would not have their first name registered.
 
@@ -85,11 +85,11 @@ If you choose to use Liquid in your email messages, be sure to:
 
 You can insert pre-formatted variables with defaults through the "Insert Personalization Attribute" modal located on the top-right of any templated text field.
 
-![Plus buttons to insert personalization attributes on text fields that support Liquid in Braze][44]{: style="max-width:70%;"}
+![Plus buttons to insert personalization attributes on text fields that support Liquid in Braze]({% image_buster /assets/img_archive/insert_liquid_var_arrow.png %}){: style="max-width:70%;"}
 
 The modal will insert Liquid with your specified default value at the point that your cursor was. The insertion point is also specified via the preview box, which has the before and after text. If a block of text is highlighted, the highlighted text will be replaced.
 
-![Add Personalization modal that appears after clicking insert personalization. The modal has fields for personalization type, attribute, optional default value, and displays a preview of the Liquid syntax.][45]
+![Add Personalization modal that appears after clicking insert personalization. The modal has fields for personalization type, attribute, optional default value, and displays a preview of the Liquid syntax.]({% image_buster /assets/img_archive/insert_var_shot.png %})
 
 {% endraw %}
 

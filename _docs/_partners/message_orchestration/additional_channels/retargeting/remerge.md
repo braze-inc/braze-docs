@@ -58,11 +58,11 @@ https://remerge.events/event?partner=braze&app_id=\{% if most_recently_used_devi
 
 In the webhook URL, you must:
 - Use the `https://remerge.events/event` API to send your webhook events.
-- Set the event name. This name will appear in your [remerge.io][65] dashboard.
+- Set the event name. This name will appear in your [remerge.io](https://www.remerge.io/) dashboard.
 - Pass your app's unique application identifier for Android (such as "com.example") and iOS (such as "012345678") to remerge.
 - Define a key; Remerge will provide this.
 
-![The webhook URL and message preview shown in the Braze webhook builder.][67]
+![The webhook URL and message preview shown in the Braze webhook builder.]({% image_buster /assets/img_archive/webhook_remerge_preview.png %})
 
 {% alert important %}
 Braze does not automatically collect the device IDFA/AAID, so you must store these values yourself. Be aware that you may require user consent to collect this data.
@@ -76,7 +76,7 @@ The Remerge webhook requires an HTTP method and request header.
 - **Request Headers**:
   - **Content-Type**: application/json
 
-![The request headers, HTTP method, and message preview shown in the Braze webhook builder.][68]
+![The request headers, HTTP method, and message preview shown in the Braze webhook builder.]({% image_buster /assets/img_archive/httpmethod_remerge.png %})
 
 #### Request body
 

@@ -59,7 +59,7 @@ You can also have the abort message log something to your Message Activity Log b
 ```
 {% endraw %}
 
-![Message error log in the Developer Console with an abort message of "language was nil".][26]
+![Message error log in the Developer Console with an abort message of "language was nil".]({% image_buster /assets/img_archive/developer_console.png %})
 
 [15]: {% image_buster /assets/img_archive/liquid_abort.png %}
 [26]: {% image_buster /assets/img_archive/developer_console.png %}

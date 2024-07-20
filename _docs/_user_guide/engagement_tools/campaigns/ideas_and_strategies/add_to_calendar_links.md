@@ -14,7 +14,7 @@ channel: email
 
 To do so, draft your email and determine where you want your links to be. Then add two options: one for Google Calendar and one for other calendars (such as iCal or Outlook). For example, "Add to Google Calendar" and "Add to iCal or Outlook".
 
-![Link dialog when adding a link in the dashboard. The "Link Info" tab is selected and the text is set to "Add to Google Calendar".][1]{: style="max-width:50%"}
+![Link dialog when adding a link in the dashboard. The "Link Info" tab is selected and the text is set to "Add to Google Calendar".]({% image_buster /assets/img_archive/calendar_1.png %}){: style="max-width:50%"}
 
 ## URL format
 
@@ -79,19 +79,19 @@ For example, if you open the example "Add to Google Calendar" link and your cale
 
 When clicked, Google Calendar opens in a new tab or window with the event's details pre-populated in the invite and ready for a user to save. This happens on both mobile and desktop.
 
-![Google Calendar dialog to add an event with the event's details added and ready to save.][2]{: style="max-width:75%"}
+![Google Calendar dialog to add an event with the event's details added and ready to save.]({% image_buster /assets/img_archive/calendar_2.png %}){: style="max-width:75%"}
 
 ### iCal or Outlook
 
 When clicked on desktop, an ICS file is downloaded. The user then needs to open the ICS file, which will open iCal or Outlook and prompt the user to add the event to their calendar.
 
-![iCal calendar with a dialog for adding a new event, which prompts the user to select a calendar and confirm.][3]{: style="max-width:75%"}
+![iCal calendar with a dialog for adding a new event, which prompts the user to select a calendar and confirm.]({% image_buster /assets/img_archive/calendar_3.png %}){: style="max-width:75%"}
 
-![iCal calendar with the event added.][4]{: style="max-width:81%"}
+![iCal calendar with the event added.]({% image_buster /assets/img_archive/calendar_4.png %}){: style="max-width:81%"}
 
 On mobile, users need to press and hold the link, which prompts them to add it to their calendar.
 
-![iOS pop-up when you press and hold on a calendar link, which includes a button to "Add to Calendar".][5]{: style="max-width:50%"}
+![iOS pop-up when you press and hold on a calendar link, which includes a button to "Add to Calendar".]({% image_buster /assets/img_archive/calendar_5.png %}){: style="max-width:50%"}
 
 For more information, refer to:
 * [Create events for Google Calendar](https://developers.google.com/calendar/api/guides/create-events)

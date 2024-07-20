@@ -21,7 +21,7 @@ The Braze and Zendesk server-to-server integration allows you to utilize:
 | Requirement | Description |
 |---|---|
 | Zendesk account | A [Zendesk admin account](https://`<your-zendesk-instance>`.zendesk.com/agent/admin) is required to take advantage of this partnership. |
-| Zendesk API token | A Zendesk [API token][2] is required to send requests from Braze to the Zendesk ticket endpoint. |
+| Zendesk API token | A Zendesk [API token](https://support.zendesk.com/hc/en-us/articles/226022787-Generating-a-new-API-token-\) is required to send requests from Braze to the Zendesk ticket endpoint. |
 | Common identifier (recommended) | A [common identifier](#common-identifier) between Braze and Zendesk is recommended. |
 | Braze API key | A Braze API key is required to send requests from Zendesk to a Braze endpoint. Ensure that the API key you use has the correct permissions for the Braze endpoint your Zendesk webhook is using. |
 {: .reset-td-br-1 .reset-td-br-2}
@@ -39,7 +39,7 @@ In your Webhook, fill out the following fields:
 - **Webhook URL**: `<your-zendesk-instance>.zendesk.com/api/v2/tickets.json`
 - **Request Body**: Raw Text
 
-Further use cases can be handled through [Zendesk support APIs][4], which would change the `/api/v2/` endpoint accordingly at the end of the Webhook URL.
+Further use cases can be handled through [Zendesk support APIs](https://developer.zendesk.com/rest_api/docs/support/introduction), which would change the `/api/v2/` endpoint accordingly at the end of the Webhook URL.
 
 #### Request header and method
 
@@ -50,11 +50,11 @@ Zendesk requires an HTTP Header for authorization and an HTTP method. In the **S
   - **Authorization**: Basic {% raw %} `{{ '<email_address>/token:<api_token>' | base64_encode }}` {% endraw %}
   - **Content-Type**: application/json
 
-![][3]{: style="max-width:70%;"}
+![]({% image_buster /assets/img_archive/zendesk_step1.gif %}){: style="max-width:70%;"}
 
 #### Request body
 
-Define the ticket details like type, subject, and status in your webhook payload. Ticket details are extensible and customized based on the [Zendesk ticket API][6]. Use the following example to help structure your payload and enter your desired fields.
+Define the ticket details like type, subject, and status in your webhook payload. Ticket details are extensible and customized based on the [Zendesk ticket API](https://developer.zendesk.com/rest_api/docs/support/tickets#create-ticket). Use the following example to help structure your payload and enter your desired fields.
 
 {% raw %}
 ```json
@@ -98,7 +98,7 @@ If you have a common identifier between Braze and Zendesk, it is recommended to 
 
 1. In the [Admin Center](https://support.zendesk.com/hc/en-us/articles/4581766374554#topic_hfg_dyz_1hb), click **Apps and integrations** in the sidebar, then select **Webhooks > Webhooks**.<br><br>
 2. Click **Create webhook**.<br><br>
-3. Select **Trigger** or **Automation** and click **Next**.<br>![][9]{: style="max-width:70%;"}<br><br>
+3. Select **Trigger** or **Automation** and click **Next**.<br>![]({% image_buster /assets/img_archive/zendesk2.png %}){: style="max-width:70%;"}<br><br>
 4. Provide the following information in your webhook:
 - Enter a name and description for the webhook.
 - Enter the Braze endpoint URL your webhook will use. {% raw %}Our example will use `https://{{instance_url}}/users/track`.{% endraw %}
@@ -117,9 +117,9 @@ Our example below will use a trigger to invoke the webhook when a support case s
 1. In the **Admin Center**, click **Objects and rules** in the sidebar, then select **Business rules > Triggers**.<br><br>
 2. Click **Add trigger**.<br><br>
 3. Name your trigger and select a category.<br><br>
-4. Click **Add condition** to set up which conditions should trigger the webhook. For example, "Status category changed to closed" or "Status category changed to solved".![][8]{: style="max-width:70%;"}<br><br>
+4. Click **Add condition** to set up which conditions should trigger the webhook. For example, "Status category changed to closed" or "Status category changed to solved".![]({% image_buster /assets/img_archive/zendesk1.png %}){: style="max-width:70%;"}<br><br>
 5. Click **Add action**, choose **Notify active webhook**, and select from the dropdown the webhook created in the previous step.<br><br>
-6. Define the JSON body to conform to your Braze endpoint, using Zendesk variable placeholders to dynamically populate the relevant fields.<br>![][10]{: style="max-width:70%;"}<br><br>
+6. Define the JSON body to conform to your Braze endpoint, using Zendesk variable placeholders to dynamically populate the relevant fields.<br>![]({% image_buster /assets/img_archive/zendesk3.png %}){: style="max-width:70%;"}<br><br>
 7. Click **Create**.<br><br>
 8. Return to your webhook and click **Finish setup**.
 

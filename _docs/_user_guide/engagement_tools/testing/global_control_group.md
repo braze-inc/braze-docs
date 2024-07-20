@@ -47,7 +47,7 @@ Input a percentage for your control group and click **Save**. When entered, Braz
 
 The number of users in your Global Control Group is automatically updated after its initial setup to remain proportionate to this audience percentage when more users are added to your workspace. For instance, if the number of users in your workspace grows, then the number of users in your Global Control Group will also grow so that your Control Group remains a constant percentage of your workspace audience. For percentage guidelines, refer to the following [best practices section](#percentage-guidelines).
 
-![The Global Control Group Settings with the Audience Settings set to "Assign five percent of all users to the Global Control Group".][4]
+![The Global Control Group Settings with the Audience Settings set to "Assign five percent of all users to the Global Control Group".]({% image_buster /assets/img/control_group/control_group4.png %})
 
 ### Step 3: Assign exclusion settings
 
@@ -57,7 +57,7 @@ Use tags to add exclusion settings to your Global Control Group. Any campaigns o
 You may want to add exclusion settings if you have transactional messages that should send to every user.
 {% endalert %}
 
-![The option to add exclusion settings to your Global Control Group.][5]
+![The option to add exclusion settings to your Global Control Group.]({% image_buster /assets/img/control_group/control_group5.png %})
 
 ### Step 4: Save your control group
 
@@ -71,7 +71,7 @@ Before disabling your Control Group, we recommend [exporting](#export-group-memb
 
 After disabling your Control Group, you can save a new one. When you enter a percentage and save it, Braze generates a new randomly selected group of users. If you enter the same percentage as before, Braze still generates a new group of users for your control and treatment groups.
 
-![A dialog box titled "You are making changes to Global Messaging Settings" with the following text: "Once your Global Control Group is disabled, it will no longer be excluded from any new or currently active campaigns or Canvases. User in this group will immediately become eligible to receive messages. Are you sure you want to proceed?" with two buttons: Cancel and Proceed.][2]{: style="max-width:50%" }
+![A dialog box titled "You are making changes to Global Messaging Settings" with the following text: "Once your Global Control Group is disabled, it will no longer be excluded from any new or currently active campaigns or Canvases. User in this group will immediately become eligible to receive messages. Are you sure you want to proceed?" with two buttons: Cancel and Proceed.]({% image_buster /assets/img/control_group/control_group2.png %}){: style="max-width:50%" }
 
 ## Export your control group members {#export-group-members}
 

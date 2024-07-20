@@ -18,7 +18,7 @@ Because this example prompt overrides default behavior of Braze, we cannot autom
 > Creating a campaign to ask users for an App Store review is a popular usage of in-app messages. This example walks you through creating a custom in-app message that prompts users to review your app.
 
 ## Step 1: Set the in-app message delegate
-First, set the [`BrazeInAppMessageUIDelegate`][1] in your app. 
+First, set the [`BrazeInAppMessageUIDelegate`]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/in-app_messaging/customization/setting_delegates/) in your app. 
 
 ## Step 2: Disable the default App Store review message
 Next, implement the `inAppMessage(_:displayChoiceForMessage:)` [delegate method](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazeinappmessageuidelegate/inappmessage(_:displaychoiceformessage:)-9w1nb) to disable the default App Store review message.

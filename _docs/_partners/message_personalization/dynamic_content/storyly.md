@@ -23,7 +23,7 @@ The Braze and Storyly integration allows you to use your segments in Braze as an
 | Storyly account | A Storyly account is required to take advantage of this partnership. |
 | Storyly SDK | You must install the [Storyly SDK](https://integration.storyly.io/). |
 | Braze REST API key | A Braze REST API key with the following permissions <br><br> `users.export.ids`<br> `users.export.segments`<br> `segments.list`<br> `segments.details` <br><br> This can be created in the Braze dashboard from **Settings** > **API Keys**. |
-| Braze REST endpoint | [Your REST endpoint URL][1]. Your endpoint will depend on the Braze URL for your instance. |
+| Braze REST endpoint | [Your REST endpoint URL]({{site.baseurl}}/developer_guide/rest_api/basics/#endpoints). Your endpoint will depend on the Braze URL for your instance. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## Use cases

@@ -942,7 +942,7 @@ Braze will only update supported Shopify custom attributes and Braze standard at
 
 You can filter Shopify's events with all of the [existing custom filters]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) in Segmentation. 
 
-![Segment Details page for a Shopify_Test segment with the filter for the custom event "shopify_checkouts_abandon" highlighted.][12]{: style="max-width:80%;"}
+![Segment Details page for a Shopify_Test segment with the filter for the custom event "shopify_checkouts_abandon" highlighted.]({% image_buster /assets/img/Shopify/shopify_segmentation2.png %}){: style="max-width:80%;"}
 
 In addition, you can also use Braze's breadth of purchase filter to create segments of users based on:
 - First/last purchase
@@ -950,9 +950,9 @@ In addition, you can also use Braze's breadth of purchase filter to create segme
 - Products they have previously purchased within the last 30 days
 - The number of purchases they made
 
-![Segmentation filter for users that first made a purchase after October 17, 2020.][13]
+![Segmentation filter for users that first made a purchase after October 17, 2020.]({% image_buster /assets/img/Shopify/shopify_segmentation3.png %})
 
-![Searching for a specific product ID as a segmentation filter.][14]
+![Searching for a specific product ID as a segmentation filter.]({% image_buster /assets/img/Shopify/shopify_segmentation4.png %})
 
 {% alert note %}
 If you are looking to segment by custom event properties, make sure that you work with your customer success manager or Braze [support]({{site.baseurl}}/braze_support/) to enable filtering for all relevant event properties that you'd like to use within segmentation and Liquid.
@@ -962,11 +962,11 @@ If you are looking to segment by custom event properties, make sure that you wor
 
 With Shopify custom events in Braze, you can trigger Canvases or campaigns like you normally would with any other [custom event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/#custom-event-storage). For example, you may create an Action-Based Canvas that triggers off of the Shopify `shopify_checkouts_abandon` event within the Canvas entry criteria. 
 
-![Action-based Canvas that enters users who perform the custom event "shopify_checkouts_abandon".][5]
+![Action-based Canvas that enters users who perform the custom event "shopify_checkouts_abandon".]({% image_buster /assets/img/Shopify/shopify_integration11.png %})
 
 With Nested Object Support for Custom Event Properties, customers can now trigger campaigns and Canvases using a nested event property. The following is an example of triggering a campaign using a specific product from the `shopify_created_order` custom event. Make sure to use `list_items[].product_id` to index your item list and access the product ID.
 
-![Action-based campaign that sends to users who perform the custom event "shopify_created_order" where the nested property "product_id" equals a specific number.][26]
+![Action-based campaign that sends to users who perform the custom event "shopify_created_order" where the nested property "product_id" equals a specific number.]({% image_buster /assets/img/Shopify/shopify_integration17.png %})
 
 [5]: {% image_buster /assets/img/Shopify/shopify_integration11.png %}
 [12]: {% image_buster /assets/img/Shopify/shopify_segmentation2.png %}

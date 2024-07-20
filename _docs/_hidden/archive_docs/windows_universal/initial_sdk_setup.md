@@ -17,7 +17,7 @@ The Braze SDK will provide you with an API to report information to be used in a
 
 ## Step 1: Install the SDK via the NuGet package manager
 
-The Windows Universal SDK is installed via the [NuGet Package Manager][14]. To install the Braze Windows SDK via NuGet:
+The Windows Universal SDK is installed via the [NuGet Package Manager](http://www.nuget.org/). To install the Braze Windows SDK via NuGet:
 
 1. Right-click on the project file
 2. Click on "Manage NuGet Packages"
@@ -48,7 +48,7 @@ Once you've added that snippet, be sure to modify the following file properties 
 ## Step 3: Configuring package.appxmanifest
 
 Within the "Capabilities tab, ensure `Internet (Client)` is checked.
-![][18]
+![]({% image_buster /assets/img_archive/internet_client.png %})
 
 ## Step 4: Editing your app class
 

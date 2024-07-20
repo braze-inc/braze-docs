@@ -10,7 +10,7 @@ search_tag: Partner
 
 # Phrasee
 
-> [Phrasee][1] brings together artificial intelligence, computational linguistics, and a spirit of customer-centricity to help deploy brand language, at scale, across channels that are customized to your brand voice.
+> [Phrasee](https://phrasee.co/) brings together artificial intelligence, computational linguistics, and a spirit of customer-centricity to help deploy brand language, at scale, across channels that are customized to your brand voice.
 
 The Braze and Phrasee partnership allows you to enhance customer experiences by optimizing language used across the full customer journey. Phrasee's deep learning engine handles testing, monitoring, and generating new copy based on what it learns. 
 
@@ -20,9 +20,9 @@ To include click tracking information for your subscribers, using Braze Currents
 
 | Requirement | Description |
 |---|---|
-| Phrasee account | A [Phrasee account][3] is required to take advantage of this partnership. |
+| Phrasee account | A [Phrasee account](mailto:awesome@phrasee.co) is required to take advantage of this partnership. |
 | Braze REST API key | A Braze REST API key with `campaigns` permissions. <br><br> This can be created in the Braze dashboard from **Settings** > **API Keys**. |
-| Braze REST endpoint  | Your REST endpoint URL. Your endpoint will depend on the [Braze URL for your instance][2]. |
+| Braze REST endpoint  | Your REST endpoint URL. Your endpoint will depend on the [Braze URL for your instance]({{site.baseurl}}/developer_guide/rest_api/basics/#endpoints). |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 ## Integration

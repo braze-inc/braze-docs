@@ -17,7 +17,7 @@ Autosave is currently in beta and only available for campaigns. Contact your cus
 
 ## How it works
 
-![][1]{: style="float:right;max-width:40%;margin-left:15px;"}
+![]({% image_buster /assets/img/campaign_autosave.png %}){: style="float:right;max-width:40%;margin-left:15px;"}
 
 Your campaigns will automatically and periodically save as you edit and switch between tabs in the campaign editor.
 

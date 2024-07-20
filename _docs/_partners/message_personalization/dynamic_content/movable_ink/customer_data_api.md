@@ -34,7 +34,7 @@ For more information on Stories, the Movable Ink Customer Data API, and how Mova
 
 #### Step 1a: Create a new campaign
 
-1. In Braze, [create a webhook campaign][1].
+1. In Braze, [create a webhook campaign]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/).
 2. Give your campaign a name and optional description.
 3. Select **Blank Template** as your template.
 
@@ -42,7 +42,7 @@ For more information on Stories, the Movable Ink Customer Data API, and how Mova
 
 1. In the **Webhook URL** field, enter the Movable Ink endpoint URL.
 
-![Compose tab of the webhook composer in Braze with the Movable Ink endpoint URL and Request Body set to JSON Key/Value Pairs.][img1]{: style="max-width:75%" }
+![Compose tab of the webhook composer in Braze with the Movable Ink endpoint URL and Request Body set to JSON Key/Value Pairs.]({% image_buster /assets/img/movable_ink/cd_api_webhook_url.png %}){: style="max-width:75%" }
 
 {:start="2"}
 2. Select the **Settings** tab.
@@ -54,14 +54,14 @@ For more information on Stories, the Movable Ink Customer Data API, and how Mova
 | Authorization | Enter the Basic Authentication you received from Movable Ink. |
 {: .reset-td-br-1 .reset-td-br-2}
 
-![Settings tab of the webhook composer in Braze with key-value pairs for Content-Type and Authorization.][img2]{: style="max-width:75%" }
+![Settings tab of the webhook composer in Braze with key-value pairs for Content-Type and Authorization.]({% image_buster /assets/img/movable_ink/cd_api_webhook_settings.png %}){: style="max-width:75%" }
 
 #### Step 1c: Configure your payload
 
 1. Return to the **Compose** tab.
 2. For your **Request Body**, either create your own request body with JSON key-value pairs or enter your event payload as raw text. Refer to the [sample payloads](#sample-payloads) for examples of standard ecommerce events.
 
-![Compose tab of the webhook composer in Braze with JSON key-value pairs for ID, timestamp, user ID, and event type.][img3]{: style="max-width:75%" }
+![Compose tab of the webhook composer in Braze with JSON key-value pairs for ID, timestamp, user ID, and event type.]({% image_buster /assets/img/movable_ink/cd_api_webhook_kvp.png %}){: style="max-width:75%" }
 
 #### Step 1d: Test your webhook {#step-1d}
 
@@ -77,15 +77,15 @@ To test your webhook, do the following:
 2. Preview the message as a user to view a sample event payload for that user. You can choose between previewing as a random user, specific user, or custom user.
 3. If everything looks good, click **Send test** to send a test request.
 
-![Webhook response message in Braze showing a 200 OK response.][img4]{: style="max-width:75%" }
+![Webhook response message in Braze showing a 200 OK response.]({% image_buster /assets/img/movable_ink/cd_api_webhook_response.png %}){: style="max-width:75%" }
 
 ### Step 2: Finalize your campaign setup
 
 #### Step 2a: Schedule your campaign
 
-When you're done composing and testing the webhook, [schedule your campaign][2]. 
+When you're done composing and testing the webhook, [schedule your campaign]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types). 
 
-Braze supports scheduled, action-based, and API-triggered deliveries. [Action-based delivery][3] is usually the best fit for most behavioral event use cases. For questions about what makes sense for your use case, connect with your Braze and Movable Ink customer success managers.
+Braze supports scheduled, action-based, and API-triggered deliveries. [Action-based delivery]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/) is usually the best fit for most behavioral event use cases. For questions about what makes sense for your use case, connect with your Braze and Movable Ink customer success managers.
 
 For action-based delivery:
 
@@ -99,11 +99,11 @@ To make sure data is streamed to Movable Ink in real time, don't select **Send c
 
 #### Step 2b: Specify your audience
 
-Next, determine which users you want to target for this campaign. For details, refer to [Targeting users][4].
+Next, determine which users you want to target for this campaign. For details, refer to [Targeting users]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/targeting_users/).
 
 Make sure not to use A/B testing in your campaign by clearing the **Control Group** checkbox. If a control group is included, a percentage of users will not have data sent to Movable Ink. All of your audience should go to the variant rather than the control group.
 
-![A/B Testing panel in a Braze campaign with 100% variant distrubtion assigned to Variant 1, and no control group.][img5]
+![A/B Testing panel in a Braze campaign with 100% variant distrubtion assigned to Variant 1, and no control group.]({% image_buster /assets/img/movable_ink/cd_api_webhook_ab.png %})
 
 #### Step 2c: Choose conversion events (optional)
 
@@ -135,7 +135,7 @@ You can generate an event payload within Braze using any event properties. Gener
 
 Share this sample payload with your Movable Ink Client Experience team. Make sure that there is no sensitive personally identifiable information in the sample payload (such as email address, phone number, or full birth dates). 
 
-To learn more about custom event properties and the expected format of data contained within properties, refer to [Custom event properties][5].
+To learn more about custom event properties and the expected format of data contained within properties, refer to [Custom event properties]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/#custom-event-properties).
 
 ### Known versus anonymous users
 

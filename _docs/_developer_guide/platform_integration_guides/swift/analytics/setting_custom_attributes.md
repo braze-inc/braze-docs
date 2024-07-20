@@ -11,7 +11,7 @@ description: "This reference article shows how to set custom attributes for the 
 
 > Braze provides methods for assigning attributes to users. You'll be able to filter and segment your users according to these attributes on the dashboard.
 
-Before implementation, be sure to review examples of the segmentation options afforded by custom events, custom attributes, and purchase events in our [best practices][1], as well as our notes on [event naming conventions]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/event_naming_conventions/).
+Before implementation, be sure to review examples of the segmentation options afforded by custom events, custom attributes, and purchase events in our [best practices]({{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#user-data-collection), as well as our notes on [event naming conventions]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/event_naming_conventions/).
 
 ## Assigning default user attributes
 
@@ -151,7 +151,7 @@ AppDelegate.braze?.user.setCustomAttribute("your_attribute_key", dateValue:yourD
 
 ### Custom attribute with an array value
 
-The maximum number of elements in [custom attribute arrays][8] defaults to 25. Arrays exceeding the maximum number of elements will be truncated to contain the maximum number of elements. The maximum for individual arrays can be increased to up to 100. If you would like this maximum increased, reach out to your customer service manager. 
+The maximum number of elements in [custom attribute arrays]({{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#arrays) defaults to 25. Arrays exceeding the maximum number of elements will be truncated to contain the maximum number of elements. The maximum for individual arrays can be increased to up to 100. If you would like this maximum increased, reach out to your customer service manager. 
 
 
 {% tabs %}
@@ -227,7 +227,7 @@ AppDelegate.braze?.user.incrementCustomUserAttribute(key: "your_attribute_key", 
 
 ### Setting a custom attribute via the REST API
 
-You can also use our REST API to set user attributes. Refer to the [User API documentation][3] for details.
+You can also use our REST API to set user attributes. Refer to the [User API documentation]({{site.baseurl}}/developer_guide/rest_api/user_data/#user-data) for details.
 
 ### Custom attribute value limits
 
@@ -235,7 +235,7 @@ Custom attribute values have a maximum length of 255 characters; longer values w
 
 #### Additional information
 
-- Refer to the [`Braze.User` documentation][6] for more information.
+- Refer to the [`Braze.User` documentation](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/user-swift.class) for more information.
 
 ## Setting up user subscriptions
 

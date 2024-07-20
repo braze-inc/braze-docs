@@ -10,7 +10,7 @@ description: "This reference article covers the basics of webhooks, including co
 
 # [![Braze Learning course]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/understanding-webhooks){: style="float:right;width:120px;border:0;" class="noimgborder"}About Webhooks
 
-> This reference article covers the basics of webhooks to give you the building blocks you need to create your own. Looking for steps on how to create a webhook in Braze? Refer to [Creating a webhook][1].
+> This reference article covers the basics of webhooks to give you the building blocks you need to create your own. Looking for steps on how to create a webhook in Braze? Refer to [Creating a webhook]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/).
 
 Webhooks are a common way for applications to communicate—to share data in real time. In this day and age, we rarely have one standalone application that can do everything. Most of the time, you're working in many different apps or systems that are specialized to perform certain tasks, and these apps all need to be able to communicate with one another. That's where webhooks come in.
 
@@ -39,7 +39,7 @@ Some more specific use cases include the following:
 
 A webhook consists of the following three parts:
 
-![Example webhook broken out into HTTP method, HTTP URL, and request body. See the following table for details.][2]
+![Example webhook broken out into HTTP method, HTTP URL, and request body. See the following table for details.]({% image_buster /assets/img_archive/webhook_anatomy.png %})
 
 | Part of Webhook | Description |
 | --- | --- |

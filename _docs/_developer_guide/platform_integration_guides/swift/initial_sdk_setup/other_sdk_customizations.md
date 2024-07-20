@@ -11,7 +11,7 @@ page_order: 3
 
 > The Braze Swift SDK can be configured by modifying the member properties of the `Braze.Configuration` object attached to your Braze instance. Note that configuration can only be done prior to initializing the Braze instance with `Braze(configuration:)`.
 
-For a full list of available configurations, refer to the [Braze.Configuration class documentation][1].
+For a full list of available configurations, refer to the [Braze.Configuration class documentation](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/configuration-swift.class).
 
 ## Braze log level
 
@@ -58,7 +58,7 @@ Braze *braze = [[Braze alloc] initWithConfiguration:configuration];
 {% endtab %}
 {% endtabs %}
 
-For full usage of the Braze Logger, refer to the [Logger class documentation][2].
+For full usage of the Braze Logger, refer to the [Logger class documentation](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/configuration-swift.class/logger-swift.class).
 
 [1]: https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/configuration-swift.class
 [2]: https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/configuration-swift.class/logger-swift.class

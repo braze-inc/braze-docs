@@ -14,7 +14,7 @@ description: "This reference article covers how to set and unset custom attribut
 
 > Braze provides methods for assigning attributes to users. You'll be able to filter and segment your users according to these attributes on the dashboard.
 
-Before implementation, be sure to review examples of the segmentation options afforded by custom events, custom attributes, and purchase events in our [Best practices][1].
+Before implementation, be sure to review examples of the segmentation options afforded by custom events, custom attributes, and purchase events in our [Best practices]({{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#user-data-collection).
 
 ## Assigning default user attributes
 
@@ -55,7 +55,7 @@ To assign user attributes, you need to call the appropriate method on the BrazeB
 ## Assigning custom user attributes
 
 Beyond the default user attributes, Braze also allows you to define custom attributes using a number of different data types:
-For more information regarding the segmentation options each of these attributes will afford you see our ["Best Practices" documentation][1] within this section.
+For more information regarding the segmentation options each of these attributes will afford you see our ["Best Practices" documentation]({{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#user-data-collection) within this section.
 
 ### Setting custom attribute values
 
@@ -101,7 +101,7 @@ AppboyBinding.SetCustomUserAttributeToNow("custom date attribute key");
 AppboyBinding.SetCustomUserAttributeToSecondsFromEpoch("custom date attribute key", 'integer value');
 ```
 
->  Dates passed to Braze must either be in the [ISO 8601][2] format, e.g `2013-07-16T19:20:30+01:00` or in the `yyyy-MM-dd'T'HH:mm:ss:SSSZ` format e.g `2016-12-14T13:32:31.601-0800`
+>  Dates passed to Braze must either be in the [ISO 8601](http://en.wikipedia.org/wiki/ISO_8601) format, e.g `2013-07-16T19:20:30+01:00` or in the `yyyy-MM-dd'T'HH:mm:ss:SSSZ` format e.g `2016-12-14T13:32:31.601-0800`
 
 {% endtab %}
 {% tab Array %}
@@ -126,7 +126,7 @@ AppboyBinding.UnsetCustomUserAttribute("custom attribute key");
 ```
 
 ## Setting a custom attribute via the REST API
-You can also use our REST API to set user attributes. To do so refer to the [user API documentation][3].
+You can also use our REST API to set user attributes. To do so refer to the [user API documentation]({{site.baseurl}}/developer_guide/rest_api/user_data/#user-data).
 
 ## Custom attribute value limits
 Custom attribute values have a maximum length of 255 characters; longer values will be truncated.
@@ -143,12 +143,12 @@ To set up a subscription for your users (either email or push), call the functio
 | `UNSUBSCRIBED` | Unsubscribed and/or explicitly opted out |
 {: .reset-td-br-1 .reset-td-br-2}
 
->  No explicit opt-in is required by Windows to send users push notifications. When a user is registered for push, they are set to `SUBSCRIBED` rather than `OPTED_IN` by default. To learn more, check out our documentation on [implementing subscriptions and explicit opt-ins][10].
+>  No explicit opt-in is required by Windows to send users push notifications. When a user is registered for push, they are set to `SUBSCRIBED` rather than `OPTED_IN` by default. To learn more, check out our documentation on [implementing subscriptions and explicit opt-ins]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#managing-user-subscriptions).
 
 - `EmailNotificationSubscriptionType`
-  - Users will be set to `SUBSCRIBED` automatically upon receipt of a valid email address. However, we suggest that you establish an explicit opt-in process and set this value to `OPTED_IN` upon receipt of explicit consent from your user. Visit our [Changing User Subscriptions][8] doc for more details.
+  - Users will be set to `SUBSCRIBED` automatically upon receipt of a valid email address. However, we suggest that you establish an explicit opt-in process and set this value to `OPTED_IN` upon receipt of explicit consent from your user. Visit our [Changing User Subscriptions]({{site.baseurl}}/user_guide/administrative/manage_your_users/managing_user_subscriptions/#changing-subscriptions) doc for more details.
 - `PushNotificationSubscriptionType`
-  - Users will be set to `SUBSCRIBED` automatically upon valid push registration. However, we suggest that you establish an explicit opt-in process and set this value to `OPTED_IN` upon receipt of explicit consent from your user. Visit our [Changing User Subscriptions][8] doc for more details.
+  - Users will be set to `SUBSCRIBED` automatically upon valid push registration. However, we suggest that you establish an explicit opt-in process and set this value to `OPTED_IN` upon receipt of explicit consent from your user. Visit our [Changing User Subscriptions]({{site.baseurl}}/user_guide/administrative/manage_your_users/managing_user_subscriptions/#changing-subscriptions) doc for more details.
 
 >  These types fall under `Appboy.Models.AppboyNotificationSubscriptionType`.
 

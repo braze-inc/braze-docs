@@ -430,7 +430,7 @@ class DefaultContentCardsViewBindingHandler : IContentCardsViewBindingHandler {
 {% endsubtab %}
 {% endsubtabs %}
 
-This code can also be found here [`DefaultContentCardsViewBindingHandler`][56].
+This code can also be found here [`DefaultContentCardsViewBindingHandler`](https://github.com/braze-inc/braze-android-sdk/blob/v11.0.0/android-sdk-ui/src/main/java/com/appboy/ui/contentcards/handlers/DefaultContentCardsViewBindingHandler.java).
 
 And here's how to use this class:
 
@@ -502,7 +502,7 @@ ContentCardsList(
 
 ## Card dismissal
 
-Disabling swipe-to-dismiss functionality is done on a per-card basis via the [`card.isDismissibleByUser()`][9] method. Cards can be intercepted before display using the [`ContentCardsFragment.setContentCardUpdateHandler()`][8] method.
+Disabling swipe-to-dismiss functionality is done on a per-card basis via the [`card.isDismissibleByUser()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/is-dismissible-by-user.html) method. Cards can be intercepted before display using the [`ContentCardsFragment.setContentCardUpdateHandler()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards/-content-cards-fragment/set-content-card-update-handler.html) method.
 
 ## Dark theme customization
 

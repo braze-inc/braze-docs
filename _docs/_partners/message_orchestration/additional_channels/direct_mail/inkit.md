@@ -10,7 +10,7 @@ search_tag: Partner
 
 # Inkit
 
-> [Inkit][1] and Braze empower organizations to securely generate and distribute documents - both digitally as well as via direct mail.
+> [Inkit](https://www.inkit.com) and Braze empower organizations to securely generate and distribute documents - both digitally as well as via direct mail.
 
 The Braze and Inkit integration allows you to generate documents and mail them directly to Braze users with Braze webhooks.
 
@@ -40,7 +40,7 @@ If you are using the [older navigation]({{site.baseurl}}/navigation), go to **En
 
 If you would like to create a one-off Inkit webhook campaign or use an existing template, select **Webhook** in Braze when creating a new campaign.
 
-![A selection of available predesigned webhook templates in the Webhook Templates tab of the Templates & Media section.][7]
+![A selection of available predesigned webhook templates in the Webhook Templates tab of the Templates & Media section.]({% image_buster /assets/img/inkit-webhook-template.png %})
 
 Once you have selected the Inkit webhook template, you should see the following:
 - **Webhook URL**: Blank
@@ -48,7 +48,7 @@ Once you have selected the Inkit webhook template, you should see the following:
 
 In the Webhook URL field, you will need to [create](https://docs.inkit.com/docs/set-up-a-webhook-to-an-event) and input a Inkit webhook URL.
 
-![Request body code and webhook URL shown in the Braze webhook builder compose tab.][5]
+![Request body code and webhook URL shown in the Braze webhook builder compose tab.]({% image_buster /assets/img/inkit-integration.png %})
 
 #### Request headers and method
 
@@ -86,7 +86,7 @@ Ensure that your Liquid matches the proper custom attributes associated with the
 
 ### Step 3: Preview your request
 
-Your raw text will automatically highlight if it is an applicable Braze tag. `street`, `unit`, `state`, and `zip` must be set up as [custom attributes][3] to send this Webhook.
+Your raw text will automatically highlight if it is an applicable Braze tag. `street`, `unit`, `state`, and `zip` must be set up as [custom attributes]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#custom-attributes) to send this Webhook.
 
 Preview your request in the **Preview** panel or navigate to the **Test** tab, where you can select a random user, an existing user, or customize your own to test your webhook.
 

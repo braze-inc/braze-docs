@@ -13,7 +13,7 @@ tool: Canvas
 
 > Delay components allow you to add a stand-alone delay to a Canvas. You can add a delay to your Canvas without needing to add an associated message. 
 
-Delays can make your Canvas look cleaner. Where you've previously needed to create two full steps, you can create one delay step and a single, full step. <br> ![][1]{: style="float:right;max-width:35%;margin-left:15px;"}
+Delays can make your Canvas look cleaner. Where you've previously needed to create two full steps, you can create one delay step and a single, full step. <br> ![]({% image_buster /assets/img/canvas_delay.png %}){: style="float:right;max-width:35%;margin-left:15px;"}
 
 You can also use this component to delay a different step until an exact date, until a specific day, or until a specific day of the week.
 

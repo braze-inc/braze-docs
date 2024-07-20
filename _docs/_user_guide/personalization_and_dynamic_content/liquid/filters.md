@@ -67,28 +67,28 @@ Array filters are used to change the output of arrays.
 
 | Filter               | Definition                                                                                                         | Supported |
 | :------------------- | :----------------------------------------------------------------------------------------------------------------- | :-------- |
-| [join][1.1]          | Joins the elements of an array with the character passed as the parameter. The result is a single string.          | ✅  Yes   |
-| [first][1.2]         | Returns the first element of an array. In a custom attribute array, this is the oldest added value.                | ✅  Yes   |
-| [last][1.3]          | Returns the last element of an array. In a custom attribute array, this is the most recently added value.          | ✅  Yes   |
-| [compact][1.4]       | Removes any `nil` items from an array.                                                                             | ✅  Yes   |
-| [concat][1.5]        | Combines an array with another array.                                                                              | ✅  Yes   |
-| [index][1.6]         | Returns the item at the specified index location in an array. The first item in an array is referenced with `[0]`. | ✅  Yes   |
-| [map][1.7]           | Accepts an array element's attribute as a parameter and creates an array out of each array element's value.        | ✅  Yes   |
-| [reverse][1.8]       | Reverses the order of the items in an array.                                                                       | ✅  Yes   |
-| [size][1.9]          | Returns the size of a string (the number of characters) or an array (the number of elements).                      | ✅  Yes   |
-| [sort][1.10]         | Sorts the elements of an array by a given attribute of an element in the array.                                    | ✅  Yes   |
-| [sort_natural][1.11] | Sorts the items in an array in case-insensitive alphabetical order.                                                | ✅  Yes   |
-| [uniq][1.12]         | Removes any duplicate instances of elements in an array.                                                           | ✅  Yes   |
-| [where][1.13]        | Filters an array to only include items with a specific property value.                                             | ✅  Yes   |
+| [join](https://shopify.dev/api/liquid/filters/array-filters#join)          | Joins the elements of an array with the character passed as the parameter. The result is a single string.          | ✅  Yes   |
+| [first](https://shopify.dev/api/liquid/filters/array-filters#first)         | Returns the first element of an array. In a custom attribute array, this is the oldest added value.                | ✅  Yes   |
+| [last](https://shopify.dev/api/liquid/filters/array-filters#last)          | Returns the last element of an array. In a custom attribute array, this is the most recently added value.          | ✅  Yes   |
+| [compact](https://shopify.dev/api/liquid/filters#compact)       | Removes any `nil` items from an array.                                                                             | ✅  Yes   |
+| [concat](https://shopify.dev/api/liquid/filters/array-filters#concat)        | Combines an array with another array.                                                                              | ✅  Yes   |
+| [index](https://shopify.dev/api/liquid/filters/array-filters#index)         | Returns the item at the specified index location in an array. The first item in an array is referenced with `[0]`. | ✅  Yes   |
+| [map](https://shopify.dev/api/liquid/filters/array-filters#map)           | Accepts an array element's attribute as a parameter and creates an array out of each array element's value.        | ✅  Yes   |
+| [reverse](https://shopify.dev/api/liquid/filters/array-filters#reverse)       | Reverses the order of the items in an array.                                                                       | ✅  Yes   |
+| [size](https://shopify.dev/api/liquid/filters/array-filters#size)          | Returns the size of a string (the number of characters) or an array (the number of elements).                      | ✅  Yes   |
+| [sort](https://shopify.dev/api/liquid/filters/array-filters#sort)         | Sorts the elements of an array by a given attribute of an element in the array.                                    | ✅  Yes   |
+| [sort_natural](https://shopify.dev/api/liquid/filters#sort_natural) | Sorts the items in an array in case-insensitive alphabetical order.                                                | ✅  Yes   |
+| [uniq](https://shopify.dev/api/liquid/filters/array-filters#uniq)         | Removes any duplicate instances of elements in an array.                                                           | ✅  Yes   |
+| [where](https://shopify.dev/api/liquid/filters#where)        | Filters an array to only include items with a specific property value.                                             | ✅  Yes   |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 ## Color filters
 
-[Color filters][2.1] are not supported in Braze.
+[Color filters](https://shopify.dev/api/liquid/filters/color-filters) are not supported in Braze.
 
 ## Font filters
 
-[Font filters][3.1] are not supported in Braze.
+[Font filters](https://shopify.dev/api/liquid/filters/font-filters) are not supported in Braze.
 
 ## Math filters
 
@@ -96,17 +96,17 @@ Math filters allow you to perform mathematical operations. Remember—if you use
 
 | Filter  | Definition      | Supported |
 | :------ |:----------------| :-------- |
-| [abs][4.1]        | Returns the absolute value of a number.     | ✅  Yes   |
-| [at_most][4.2]    | Limits a number to a maximum value.   | ✅  Yes   |
-| [at_least][4.3]   | Limits a number to a minimum value.   | ✅  Yes   |
-| [ceil][4.4]       | Rounds an output up to the nearest integer.  | ✅  Yes   |
-| [divided_by][4.5] | Divides an output by a number. The output is rounded down to the nearest integer. Check out the following tip to prevent rounding. | ✅  Yes   |
-| [floor][4.6]      | Rounds an output down to the nearest integer.        | ✅  Yes   |
-| [minus][4.7]      | Subtracts a number from an output.          | ✅  Yes   |
-| [plus][4.8]       | Adds a number to an output.     | ✅  Yes   |
-| [round][4.9]      | Rounds the output to the nearest integer or specified number of decimals.  | ✅  Yes   |
-| [times][4.10]     | Multiplies an output by a number.       | ✅  Yes   |
-| [modulo][4.11]    | Divides an output by a number and returns the remainder.   | ✅  Yes   |
+| [abs](https://shopify.dev/api/liquid/filters/math-filters#abs)        | Returns the absolute value of a number.     | ✅  Yes   |
+| [at_most](https://shopify.dev/api/liquid/filters/math-filters#at_most)    | Limits a number to a maximum value.   | ✅  Yes   |
+| [at_least](https://shopify.dev/api/liquid/filters/math-filters#at_least)   | Limits a number to a minimum value.   | ✅  Yes   |
+| [ceil](https://shopify.dev/api/liquid/filters/math-filters#ceil)       | Rounds an output up to the nearest integer.  | ✅  Yes   |
+| [divided_by](https://shopify.dev/api/liquid/filters/math-filters#divided_by) | Divides an output by a number. The output is rounded down to the nearest integer. Check out the following tip to prevent rounding. | ✅  Yes   |
+| [floor](https://shopify.dev/api/liquid/filters/math-filters#floor)      | Rounds an output down to the nearest integer.        | ✅  Yes   |
+| [minus](https://shopify.dev/api/liquid/filters/math-filters#minus)      | Subtracts a number from an output.          | ✅  Yes   |
+| [plus](https://shopify.dev/api/liquid/filters/math-filters#plus)       | Adds a number to an output.     | ✅  Yes   |
+| [round](https://shopify.dev/api/liquid/filters/math-filters#round)      | Rounds the output to the nearest integer or specified number of decimals.  | ✅  Yes   |
+| [times](https://shopify.dev/api/liquid/filters/math-filters#times)     | Multiplies an output by a number.       | ✅  Yes   |
+| [modulo](https://shopify.dev/api/liquid/filters/math-filters#modulo)    | Divides an output by a number and returns the remainder.   | ✅  Yes   |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 {% alert tip %}
@@ -163,9 +163,9 @@ If you're updating a user on their purchase, an account balance, or anything reg
 
 | Filter         | Definition          | Supported |
 | :--------------- | :--------------- | :-------- |
-| [money][5.1]      | Formats numbers to ensure that decimals are in the proper place, and zeros are not dropped off the end of any numbers.         | ✅  Yes   |
-| [money_with_currency][5.2]    | Formats numbers with the currency symbol.     | ⛔  No    |
-| [money_without_currency][5.4]     | Formats numbers without the currency symbol.      | ⛔  No    |
+| [money](https://shopify.dev/api/liquid/filters/money-filters#money)      | Formats numbers to ensure that decimals are in the proper place, and zeros are not dropped off the end of any numbers.         | ✅  Yes   |
+| [money_with_currency](https://shopify.dev/api/liquid/filters/money-filters#money_with_currency)    | Formats numbers with the currency symbol.     | ⛔  No    |
+| [money_without_currency](https://shopify.dev/api/liquid/filters/money-filters#money_without_currency)     | Formats numbers without the currency symbol.      | ⛔  No    |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 ### Shopify money filter versus Braze money filter
@@ -184,7 +184,7 @@ ${{custom_attribute.${account_balance} | money}}
 
 | WITH THE MONEY FILTER                       | WITHOUT THE MONEY FILTER                    |
 | :------------------------------------------ | :------------------------------------------ |
-| ![With money filter][1]                     | ![Without money filter][2]                  |
+| ![With money filter]({% image_buster /assets/img/with_money_filter.png %})                     | ![Without money filter]({% image_buster /assets/img/without_money_filter.png %})                  |
 | Where `account_balance` is input at `17.8`. | Where `account_balance` is input at `17.8`. |
 {: .reset-td-br-1 .reset-td-br-2}
 
@@ -207,7 +207,7 @@ $145.00
 {% endtab %}
 {% endtabs %}
 
-According to Shopify's [money][5.1] filter, this should have an output of `$1.45`, however in Braze, this will have an output of `$145.00`. As a workaround, we can use the `divided_by` filter to manipulate the number into a decimal, before applying the money filter:
+According to Shopify's [money](https://shopify.dev/api/liquid/filters/money-filters#money) filter, this should have an output of `$1.45`, however in Braze, this will have an output of `$145.00`. As a workaround, we can use the `divided_by` filter to manipulate the number into a decimal, before applying the money filter:
 
 {% tabs local %}
 {% tab Input %}
@@ -236,34 +236,34 @@ Straight quotes are different from curly quotes in Liquid. Be careful when copyi
 
 | Filter          | Description     | Supported |
 | :--------------- | ------------- | --------- |
-| [append][6.1]     | Appends characters to a string.           | ✅  Yes   |
-| [camelcase][6.2]     | Converts a string into CamelCase.             | ⛔  No    |
-| [capitalize][6.3]     | Capitalizes the first word in a string and downcases the remaining characters.         | ✅  Yes   |
-| [downcase][6.4]      | Converts a string into lowercase.         | ✅  Yes   |
-| [escape][6.5]    | Escapes a string.             | ✅  Yes   |
-| [handle/handleize][6.6]        | Formats a string into a handle.        | ⛔  No    |
-| [md5][6.7]    | Converts a string into an MD5 hash. Refer to [Encoding Filters][3] for more.   | ✅  Yes   |
-| [sha1][6.8]    | Converts a string into a SHA-1 hash. Refer to [Encoding Filters][3] for more.  | ✅  Yes   |
-| hmac_sha1_hex<br>(previously [hmac_sha_1][6.10]) | Converts a string into a SHA-1 hash using a hash message authentication code (HMAC). Pass the secret key for the message as a parameter to the filter. Refer to [Encoding Filters][3] for more. | ✅  Yes   |
-| [hmac_sha256][6.11]    | Converts a string into a SHA-256 hash using a hash message authentication code (HMAC). Pass the secret key for the message as a parameter to the filter.       | ✅  Yes   |
+| [append](https://shopify.dev/api/liquid/filters/string-filters#append)     | Appends characters to a string.           | ✅  Yes   |
+| [camelcase](https://shopify.dev/api/liquid/filters/string-filters#camelcase)     | Converts a string into CamelCase.             | ⛔  No    |
+| [capitalize](https://shopify.dev/api/liquid/filters/string-filters#capitalize)     | Capitalizes the first word in a string and downcases the remaining characters.         | ✅  Yes   |
+| [downcase](https://shopify.dev/api/liquid/filters/string-filters#downcase)      | Converts a string into lowercase.         | ✅  Yes   |
+| [escape](https://shopify.dev/api/liquid/filters/string-filters#escape)    | Escapes a string.             | ✅  Yes   |
+| [handle/handleize](https://shopify.dev/api/liquid/filters/string-filters#handle-handleize)        | Formats a string into a handle.        | ⛔  No    |
+| [md5](https://shopify.dev/api/liquid/filters/string-filters#md5)    | Converts a string into an MD5 hash. Refer to [Encoding Filters]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/advanced_filters/#encoding-filters) for more.   | ✅  Yes   |
+| [sha1](https://shopify.dev/api/liquid/filters/string-filters#sha1)    | Converts a string into a SHA-1 hash. Refer to [Encoding Filters]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/advanced_filters/#encoding-filters) for more.  | ✅  Yes   |
+| hmac_sha1_hex<br>(previously [hmac_sha_1](https://shopify.dev/api/liquid/filters/string-filters#hmac_sha1)) | Converts a string into a SHA-1 hash using a hash message authentication code (HMAC). Pass the secret key for the message as a parameter to the filter. Refer to [Encoding Filters]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/advanced_filters/#encoding-filters) for more. | ✅  Yes   |
+| [hmac_sha256](https://shopify.dev/api/liquid/filters/string-filters#hmac_sha256)    | Converts a string into a SHA-256 hash using a hash message authentication code (HMAC). Pass the secret key for the message as a parameter to the filter.       | ✅  Yes   |
 | hmac_sha512 | Converts a string into a SHA-512 hash using a hash message authentication code (HMAC). Pass the secret key for the message as a parameter to the filter. | ✅  Yes  |
-| [newline_to_br][6.12]     | Inserts a `<br>` line break HTML tag in front of each line break in a string.        | ✅  Yes   |
-| [pluralize][6.13]   | Outputs the singular or plural version of an English string based on the value of a number.      | ⛔  No    |
-| [prepend][6.14]     | Prepends characters to a string.      | ✅  Yes   |
-| [remove][6.15]      | Removes all occurrences of a substring from a string.       | ✅  Yes   |
-| [remove_first][6.16]    | Removes only the first occurrence of a substring from a string.      | ✅  Yes   |
-| [replace][6.17]        | Replaces all occurrences of a string with a substring.   | ✅  Yes   |
-| [replace_first][6.18]        | Replaces the first occurrence of a string with a substring.      | ✅  Yes   |
-| [slice][6.19]       | The slice filter returns a substring, starting at the specified index.       | ✅  Yes   |
-| [split][6.20]  | The split filter takes on a substring as a parameter. The substring is used as a delimiter to divide a string into an array.            | ✅  Yes   |
-| [strip][6.21]   | Strips tabs, spaces, and newlines (all whitespace) from the left and right side of a string.                                                                                                    | ✅  Yes   |
-| [lstrip][6.22]     | Strips tabs, spaces, and newlines (all whitespace) from the left side of a string.    | ⛔  No    |
-| [rstrip][6.23]             | Strips tabs, spaces, and newlines (all whitespace) from the right side of a string.          | ⛔  No    |
-| [strip_html][6.24]         | Strips all HTML tags from a string.        | ✅  Yes   |
-| [strip_newlines][6.25]  | Removes any line breaks/newlines from a string.        | ✅  Yes   |
-| [truncate][6.26]    | Truncates a string down to the number of characters passed as the first parameter. An ellipsis (...) is appended to the truncated string and is included in the character count.    | ✅  Yes   |
-| [truncatewords][6.27]   | Truncates a string down to the number of words passed as the first parameter. An ellipsis (...) is appended to the truncated string.    | ✅  Yes   |
-| [upcase][6.28]   | Converts a string into uppercase.      | ✅  Yes   |
+| [newline_to_br](https://shopify.dev/api/liquid/filters/string-filters#newline_to_br)     | Inserts a `<br>` line break HTML tag in front of each line break in a string.        | ✅  Yes   |
+| [pluralize](https://shopify.dev/api/liquid/filters/string-filters#pluralize)   | Outputs the singular or plural version of an English string based on the value of a number.      | ⛔  No    |
+| [prepend](https://shopify.dev/api/liquid/filters/string-filters#prepend)     | Prepends characters to a string.      | ✅  Yes   |
+| [remove](https://shopify.dev/api/liquid/filters/string-filters#remove)      | Removes all occurrences of a substring from a string.       | ✅  Yes   |
+| [remove_first](https://shopify.dev/api/liquid/filters/string-filters#remove_first)    | Removes only the first occurrence of a substring from a string.      | ✅  Yes   |
+| [replace](https://shopify.dev/api/liquid/filters/string-filters#replace)        | Replaces all occurrences of a string with a substring.   | ✅  Yes   |
+| [replace_first](https://shopify.dev/api/liquid/filters/string-filters#replace_first)        | Replaces the first occurrence of a string with a substring.      | ✅  Yes   |
+| [slice](https://shopify.dev/api/liquid/filters/string-filters#slice)       | The slice filter returns a substring, starting at the specified index.       | ✅  Yes   |
+| [split](https://shopify.dev/api/liquid/filters/string-filters#split)  | The split filter takes on a substring as a parameter. The substring is used as a delimiter to divide a string into an array.            | ✅  Yes   |
+| [strip](https://shopify.dev/api/liquid/filters/string-filters#strip)   | Strips tabs, spaces, and newlines (all whitespace) from the left and right side of a string.                                                                                                    | ✅  Yes   |
+| [lstrip](https://shopify.dev/api/liquid/filters/string-filters#lstrip)     | Strips tabs, spaces, and newlines (all whitespace) from the left side of a string.    | ⛔  No    |
+| [rstrip](https://shopify.dev/api/liquid/filters/string-filters#rstrip)             | Strips tabs, spaces, and newlines (all whitespace) from the right side of a string.          | ⛔  No    |
+| [strip_html](https://shopify.dev/api/liquid/filters/string-filters#strip_html)         | Strips all HTML tags from a string.        | ✅  Yes   |
+| [strip_newlines](https://shopify.dev/api/liquid/filters/string-filters#strip_newlines)  | Removes any line breaks/newlines from a string.        | ✅  Yes   |
+| [truncate](https://shopify.dev/api/liquid/filters/string-filters#truncate)    | Truncates a string down to the number of characters passed as the first parameter. An ellipsis (...) is appended to the truncated string and is included in the character count.    | ✅  Yes   |
+| [truncatewords](https://shopify.dev/api/liquid/filters/string-filters#truncatewords)   | Truncates a string down to the number of words passed as the first parameter. An ellipsis (...) is appended to the truncated string.    | ✅  Yes   |
+| [upcase](https://shopify.dev/api/liquid/filters/string-filters#upcase)   | Converts a string into uppercase.      | ✅  Yes   |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 ## Additional filters
@@ -272,10 +272,10 @@ The following general filters serve many different purposes, including formattin
 
 | Filter                | Description                                                                                                                      | Supported |
 | --------------------- | -------------------------------------------------------------------------------------------------------------------------------- | :-------- |
-| [date][7.1]           | Converts a timestamp into another date format. Refer to [Date Filter](#date-filter) for more.         | ✅  Yes   |
-| [default][7.2]        | Sets a default value for any variable with no assigned value. Can be used with strings, arrays, and hashes.      | ✅  Yes   |
-| [format_address][7.3] | Formats an address to print the elements of the address in order according to their locale.        | ⛔  No    |
-| [highlight][7.4]      | Wraps words inside search results with an HTML `<strong>` tag with the class highlight if it matches the submitted search terms. | ⛔  No    |
+| [date](https://shopify.dev/api/liquid/filters/additional-filters#date)           | Converts a timestamp into another date format. Refer to [Date Filter](#date-filter) for more.         | ✅  Yes   |
+| [default](https://shopify.dev/api/liquid/filters/additional-filters#default)        | Sets a default value for any variable with no assigned value. Can be used with strings, arrays, and hashes.      | ✅  Yes   |
+| [format_address](https://shopify.dev/api/liquid/filters/additional-filters#format_address) | Formats an address to print the elements of the address in order according to their locale.        | ⛔  No    |
+| [highlight](https://shopify.dev/api/liquid/filters/additional-filters#highlight)      | Wraps words inside search results with an HTML `<strong>` tag with the class highlight if it matches the submitted search terms. | ⛔  No    |
 | `time_zone`             | Refer to [Time Zone Filter](#time-zone-filter) for more.     | ✅  Yes   |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 

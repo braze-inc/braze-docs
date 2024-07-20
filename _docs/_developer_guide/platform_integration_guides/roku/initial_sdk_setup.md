@@ -14,7 +14,7 @@ search_rank: 1
 
 ## Step 1: Add files
 
-Braze SDK files can be found in the `sdk_files` directory in the [Braze Roku SDK repository][1].
+Braze SDK files can be found in the `sdk_files` directory in the [Braze Roku SDK repository](https://github.com/braze-inc/braze-roku-sdk).
 
 1. Add `BrazeSDK.brs` to your app in the `source` directory.
 2. Add `BrazeTask.brs` and `BrazeTask.xml` to your app in the `components` directory.
@@ -61,9 +61,9 @@ To debug your Braze integration, you can view the Roku debug console for Braze l
 
 Braze should now be collecting data from your application with the Braze Roku SDK. 
 
-See the following articles on how to [log attributes][2], [events][3], and [purchases][4] to our SDK.
+See the following articles on how to [log attributes]({{site.baseurl}}/developer_guide/platform_integration_guides/roku/analytics/setting_custom_attributes/), [events]({{site.baseurl}}/developer_guide/platform_integration_guides/roku/analytics/logging_custom_events/), and [purchases]({{site.baseurl}}/developer_guide/platform_integration_guides/roku/analytics/logging_purchases/) to our SDK.
 
-To learn more about in-app messaging on Roku, see our [in-app message integration guide][5].
+To learn more about in-app messaging on Roku, see our [in-app message integration guide]({{site.baseurl}}/developer_guide/platform_integration_guides/roku/in-app_messaging/overview/).
 
 
 [1]: https://github.com/braze-inc/braze-roku-sdk

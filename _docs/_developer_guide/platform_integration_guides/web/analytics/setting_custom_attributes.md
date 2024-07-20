@@ -11,13 +11,13 @@ description: "This reference article covers how to assign and set custom attribu
 
 > Braze provides methods for assigning attributes to users. You can filter and segment your users according to these attributes on the dashboard.
 
-Before implementation, review examples of the segmentation options afforded by custom events, custom attributes, and purchase events in our [Best practices][7].
+Before implementation, review examples of the segmentation options afforded by custom events, custom attributes, and purchase events in our [Best practices]({{site.baseurl}}/developer_guide/platform_wide/getting_started/analytics_overview/#best-practices).
 
 To assign attributes to your users, call the `braze.getUser()` method to get a reference to the current user of your app. After you have a reference to the current user, you can call methods to set predefined or custom attributes.
 
 ## Assigning predefined user attributes
 
-Braze provides predefined methods for setting the following user attributes within the [`User` class][1]:
+Braze provides predefined methods for setting the following user attributes within the [`User` class](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.user.html):
 
 - First Name
 - Last Name
@@ -53,11 +53,11 @@ braze.getUser().setDateOfBirth(2000, 12, 25);
 
 In addition to our predefined user attribute methods, Braze also provides [custom attributes](https://www.braze.com/docs/user_guide/data_and_analytics/custom_data/custom_attributes/#custom-attribute-data-types) to track data from your applications. 
 
-Full method specifications for custom attributes can be found here within the [JSDocs][1].
+Full method specifications for custom attributes can be found here within the [JSDocs](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.user.html).
 
 ### Custom attribute length
 
-Custom attribute keys and values have a maximum length of 255 characters. Refer to the [full technical documentation][1] for details about valid custom attribute values.
+Custom attribute keys and values have a maximum length of 255 characters. Refer to the [full technical documentation](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.user.html) for details about valid custom attribute values.
 
 ### Implementation examples
 
@@ -106,7 +106,7 @@ braze.getUser().setCustomUserAttribute(
 
 #### Setting a custom attribute with an array value
 
-The maximum number of elements in custom attribute arrays defaults to 25. Individual arrays can be increased up to 100 in the Braze dashboard under **Data Settings** > **Custom Attributes**. If you want this maximum increased, contact your customer service manager. [Arrays][6] exceeding the maximum number of elements will be truncated to contain the maximum number of elements.
+The maximum number of elements in custom attribute arrays defaults to 25. Individual arrays can be increased up to 100 in the Braze dashboard under **Data Settings** > **Custom Attributes**. If you want this maximum increased, contact your customer service manager. [Arrays]({{site.baseurl}}/developer_guide/platform_wide/getting_started/analytics_overview/#arrays) exceeding the maximum number of elements will be truncated to contain the maximum number of elements.
 
 ```javascript
 braze.getUser().setCustomUserAttribute(YOUR_ATTRIBUTE_KEY_STRING, YOUR_ARRAY_OF_STRINGS);
@@ -128,7 +128,7 @@ braze.getUser().setCustomUserAttribute(YOUR_ATTRIBUTE_KEY_STRING, null);
 
 ### Setting a custom attribute via the REST API
 
-You can also use our REST API to set user attributes. Refer to the [users API][4] documentation for details.
+You can also use our REST API to set user attributes. Refer to the [users API]({{site.baseurl}}/developer_guide/rest_api/user_data/#user-data) documentation for details.
 
 ## Setting up user subscriptions
 
@@ -143,7 +143,7 @@ To set up a subscription for your users (either email or push), call the functio
 
 When a user is registered for push, the browser forces them to choose to allow or block notifications, and if they choose to allow push, they are set `OPTED_IN` by default. 
 
-Visit [Managing user subscriptions][10] for more information on implementing subscriptions and explicit opt-ins.
+Visit [Managing user subscriptions]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#managing-user-subscriptions) for more information on implementing subscriptions and explicit opt-ins.
 
 ### Example code
 

@@ -26,7 +26,7 @@ Click <i class="fas fa-plus"></i> **Create Segment** to begin building your segm
 
 Optionally, you can add a description to the segment to provide more details about the intention of this audience and leave notes for other team members to refer back to.
 
-![Create Segment modal where the segment is named "Lapsed Users" with the Segment Description as "This is our main Lapsed User segment to target non-actives within the past fourteen days." with two buttons: Cancel and Create Segment.][2]{: style="max-width:70%;"}
+![Create Segment modal where the segment is named "Lapsed Users" with the Segment Description as "This is our main Lapsed User segment to target non-actives within the past fourteen days." with two buttons: Cancel and Create Segment.]({% image_buster /assets/img_archive/Segment2.png %}){: style="max-width:70%;"}
 
 ## Step 3: Choose your app or platform
 
@@ -34,7 +34,7 @@ Choose which apps or platforms you'd like to target by selecting **Users from al
 
 For example, if you'd like to send an in-app message to only iOS devices, select your iOS app. This will ensure that users who might use both an iOS and an Android device will only receive the message on their iOS device. In the list of specific apps, the option **Users from no apps** allows you to include users with no sessions and no app data (typically created via user import or REST API).
 
-![Segment Details panel with the "Users from all apps" option selected in the Apps Used section.][5]
+![Segment Details panel with the "Users from all apps" option selected in the Apps Used section.]({% image_buster /assets/img_archive/segment_app_selection.png %})
 
 ## Step 4: Add filters to your segment
 
@@ -44,7 +44,7 @@ Add at least one filter to your segment as depicted in the following image. You 
 Braze doesn't generate profiles for users until they've used the app for the first time, so you can't target users who haven't opened your app yet.
 {% endalert %}
 
-![Segment filters with the "OR" selected.][3]
+![Segment filters with the "OR" selected.]({% image_buster /assets/img_archive/segment_step4.png %})
 
 Choosing "OR" for your filters means that your segment will contain users satisfying any combination of one, some, or all of those filters, while "AND" means that users who do not pass that filter will not be included in your segment. This logic can be combined so that you can segment users who pass one filter "AND" either one of two other filters.
 
@@ -58,7 +58,7 @@ Segments already using the Segment Membership Filter cannot be further included 
 
 After adding apps and filters to your segment, you can test if your segment is set up as expected by looking up a user to confirm if they match the segment criteria. To do so, click **Lookup User** and search for a user’s `external_id` or `braze_id`.
 
-![User Lookup section with a "Lookup User" button.][6]{: style="max-width:50%;"}
+![User Lookup section with a "Lookup User" button.]({% image_buster /assets/img_archive/user_lookup.png %}){: style="max-width:50%;"}
 
 User lookup is available when:
 - Creating a segment
@@ -67,11 +67,11 @@ User lookup is available when:
 
 When a user matches the segment, filter, and app criteria, you see the following:
 
-![A user lookup of "user007" triggers an alert stating, "user007 matches all of the segments, filters, and apps.][7]{: style=" max-width:60%;"}
+![A user lookup of "user007" triggers an alert stating, "user007 matches all of the segments, filters, and apps.]({% image_buster /assets/img_archive/user_lookup_match.png %}){: style=" max-width:60%;"}
 
 When a user doesn’t match part or all of the segment, filter, or app criteria, the missing criteria is listed for troubleshooting purposes.
 
-![A user lookup of "user1234" triggers an alert stating, "user1234 does not match the following targeting criteria:" and displays two missing criteria: a tenure greater than one year and today being an anniversary.][8]{: style=" max-width:60%;"}
+![A user lookup of "user1234" triggers an alert stating, "user1234 does not match the following targeting criteria:" and displays two missing criteria: a tenure greater than one year and today being an anniversary.]({% image_buster /assets/img_archive/user_lookup_nomatch.png %}){: style=" max-width:60%;"}
 
 ### Single-user segments
 
@@ -93,7 +93,7 @@ Braze updates the user's segment membership as data is sent back to our servers 
 
 Each segment displays the total number of users that are members of that segment. When filtering for **Users from all apps**, it also displays all of the different channels available to communicate with those users, such as web push or email. It is possible that the number of total users is different than the number of users reachable by each channel. Why is this?
 
-![A table displaying 9,100 total reachable users, 8,899 reachable users by email, 6,720 reachable users by web push, 4,521 reachable users by Android push, and 5,122 reachable users by iOS push.][4]
+![A table displaying 9,100 total reachable users, 8,899 reachable users by email, 6,720 reachable users by web push, 4,521 reachable users by Android push, and 5,122 reachable users by iOS push.]({% image_buster /assets/img_archive/reachable_users.png %})
 
 For a user to be listed as reachable through a certain channel, the user must have both:
 * A valid email address/push token associated with their profile; and
@@ -129,7 +129,7 @@ When segmenting with device-dependent filters (device model, device OS, and app 
 
 You can specify that only one push notification is sent to each user. When [composing your message]({{ssite.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message#step-4-compose-your-push-message), select **Only send to the user’s last used device** under **Additional Settings**.
 
-![][9]{: style="max-width:60%;"}
+![]({% image_buster /assets/img_archive/send_to_last_device.png %}){: style="max-width:60%;"}
 
 ### Considerations
 

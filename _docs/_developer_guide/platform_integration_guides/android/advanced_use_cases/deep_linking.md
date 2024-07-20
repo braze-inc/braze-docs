@@ -11,9 +11,9 @@ description: "This article covers how to implement the universal deep linking de
 
 # Deep linking
 
-> As part of the [implementation process for your Android SDK][1], you will configure the ability for your app to use deep links. This article provides additional examples for deep linking use cases.
+> As part of the [implementation process for your Android SDK]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/integration/standard_integration/#step-4-add-deep-links), you will configure the ability for your app to use deep links. This article provides additional examples for deep linking use cases.
 
-For introductory information on deep links, refer to our [User Guide article][4].
+For introductory information on deep links, refer to our [User Guide article]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/#what-is-deep-linking).
 
 {% alert note %}
 This article includes information on News Feed, which is being deprecated. Braze recommends that customers who use our News Feed tool move over to our Content Cards messaging channel—it's more flexible, customizable, and reliable. Check out the [migration guide]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) for more.
@@ -23,9 +23,9 @@ This article includes information on News Feed, which is being deprecated. Braze
 
 The Android SDK provides the ability to set a single delegate object to custom handle all deep links opened by Braze across Content Cards, in-app messages, and push notifications.
 
-Your delegate object should implement the [`IBrazeDeeplinkHandler`][udl-3] interface and be set using [`BrazeDeeplinkHandler.setBrazeDeeplinkHandler()`][udl-2]. In most cases, the delegate should be set in your app's `Application.onCreate()`.
+Your delegate object should implement the [`IBrazeDeeplinkHandler`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui/-braze-deeplink-handler/index.html) interface and be set using [`BrazeDeeplinkHandler.setBrazeDeeplinkHandler()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui/-braze-deeplink-handler/-companion/set-braze-deeplink-handler.html). In most cases, the delegate should be set in your app's `Application.onCreate()`.
 
-The following is an example of overriding the default [`UriAction`][udl-1] behavior with custom intent flags and custom behavior for YouTube URLs:
+The following is an example of overriding the default [`UriAction`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.actions/-uri-action/index.html) behavior with custom intent flags and custom behavior for YouTube URLs:
 
 {% tabs %}
 {% tab JAVA %}
@@ -181,15 +181,15 @@ BrazeDeeplinkHandler.setBrazeDeeplinkHandler(object : IBrazeDeeplinkHandler {
 News Feed is being deprecated. Braze recommends that customers who use our News Feed tool move over to our Content Cards messaging channel—it's more flexible, customizable, and reliable. Check out the [migration guide]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) for more.
 {% endalert %}
 
-To deep link to the Braze News Feed from a push notification, [create a custom deep link][1] for your News Feed activity.
+To deep link to the Braze News Feed from a push notification, [create a custom deep link]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/integration/standard_integration/#step-4-add-deep-links) for your News Feed activity.
 
-Then, as you set up your push notification campaign (either through the [dashboard][2] or [API][3]), configure the notification to navigate to your News Feed deep link.
+Then, as you set up your push notification campaign (either through the [dashboard]({{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/#creating-a-push-message) or [API]({{site.baseurl}}/api/endpoints/messaging/)), configure the notification to navigate to your News Feed deep link.
 
 ## Custom WebView activity {#Custom_Webview_Activity}
 
-By default, when website deeplinks are opened inside the app by Braze, they are handled by [`BrazeWebViewActivity`][udl-4]. To change this:
+By default, when website deeplinks are opened inside the app by Braze, they are handled by [`BrazeWebViewActivity`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui/-braze-web-view-activity/index.html). To change this:
 
-**1.** Create a new Activity that handles the target URL from `Intent.getExtras()` with the key `com.braze.Constants.BRAZE_WEBVIEW_URL_EXTRA`. See [`BrazeWebViewActivity.java`][udl-8] for an example.<br><br>
+**1.** Create a new Activity that handles the target URL from `Intent.getExtras()` with the key `com.braze.Constants.BRAZE_WEBVIEW_URL_EXTRA`. See [`BrazeWebViewActivity.java`](https://github.com/braze-inc/braze-android-sdk/blob/master/android-sdk-ui/src/main/java/com/braze/ui/BrazeWebViewActivity.kt) for an example.<br><br>
 **2.** Add that activity to `AndroidManifest.xml` and set `exported` to `false`.
 
 ```xml
@@ -198,7 +198,7 @@ By default, when website deeplinks are opened inside the app by Braze, they are 
     android:exported="false" />
 ```
 
-**3.** Set your custom Activity in a `BrazeConfig` [builder object][udl-6]. Build the builder and pass it to [`Braze.configure()`][udl-5] in your [`Application.onCreate()`][udl-7]
+**3.** Set your custom Activity in a `BrazeConfig` [builder object](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.configuration/-braze-config/-builder/set-custom-web-view-activity-class.html). Build the builder and pass it to [`Braze.configure()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze/index.html#-1864418529%2FFunctions%2F-1725759721) in your [`Application.onCreate()`](https://developer.android.com/reference/android/app/Application.html#onCreate())
 
 {% tabs %}
 {% tab JAVA %}

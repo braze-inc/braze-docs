@@ -74,7 +74,7 @@ If an action-based Canvas is triggered by an inbound SMS message, you can refere
 ## Multi-language support
 
 When sending to certain countries, a sender may be required to support inbound keywords and outbound replies with a local language. To support this, Braze allows you to create a language-specific keyword setting. 
-![][16]{: style="float:right;max-width:40%;margin-left:10px;"}
+![]({% image_buster /assets/img/sms/multi-language.png %}){: style="float:right;max-width:40%;margin-left:10px;"}
 
 ### Creating language-specific keywords
 
@@ -86,7 +86,7 @@ Note that other languages do not come with preset keywords and responses like En
 
 If you need to delete a language, click the **Delete Language** button at the bottom right.
 
-![SMS Global Keywords page with the "French" tab selected. Additional tabs exist for each added language.][5]
+![SMS Global Keywords page with the "French" tab selected. Additional tabs exist for each added language.]({% image_buster /assets/img/sms/multi-language2.png %})
 
 ## Custom keyword categories
 
@@ -94,14 +94,14 @@ In addition to the three default keyword categories (Opt-in, Opt-out, and Help),
 
 These custom keywords operate in an "always-on" capacity, meaning that any user subscribed to your message service can text keywords and receive a response at any point. In addition to this behavior, you also have the option to define specific keywords that can only be sent to at [certain points]({{site.baseurl}}/user_guide/message_building_by_channel/sms/keywords/keyword_handling/#lifecycle-specific-keywords) of your user's lifecycle. 
 
-![Keywords for a "Doubleoptin" category. If a user texts "Y", they receive the message "Thank you for confirming your enrollment in Hair Cuttery SMS."][12]
+![Keywords for a "Doubleoptin" category. If a user texts "Y", they receive the message "Thank you for confirming your enrollment in Hair Cuttery SMS."]({% image_buster /assets/img/sms/sms_custom_keyword.png %})
 
 ### Creating a custom category
 
 To create a custom keyword category, do the following:
 
 1. Edit the appropriate subscription group.
-2. Click **Add custom keyword**. ![][13]{: style="max-width:90%;"}
+2. Click **Add custom keyword**. ![]({% image_buster /assets/img/sms/sms_custom_step.png %}){: style="max-width:90%;"}
 3. Provide a keyword category name and define which keywords a user can text in to receive the reply message.
 
 After this keyword category is created, it will be available to [filter and trigger]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/retargeting/) against in your campaigns and Canvases.
@@ -116,11 +116,11 @@ This trigger supports filtering on the specific inbound message using is or is n
 
 #### Canvas
 
-![Action-based Canvas step with the trigger Send inbound SMS to subscription group "Messaging Service" within keyword category "Other" where the message body matches the regular expression "caret symbol skip."][14]{: style="max-width:90%;"}
+![Action-based Canvas step with the trigger Send inbound SMS to subscription group "Messaging Service" within keyword category "Other" where the message body matches the regular expression "caret symbol skip."]({% image_buster /assets/img/sms/canvas_trigger.png %}){: style="max-width:90%;"}
 
 #### Campaign
 
-![Action-based campaign with the trigger Send inbound SMS to subscription group "Marketing Message Service A" within keyword category "Other" where the message body is "Keyword1" or is "Keyword2" or is not "Keyword A".][15]{: style="max-width:90%;"}
+![Action-based campaign with the trigger Send inbound SMS to subscription group "Marketing Message Service A" within keyword category "Other" where the message body is "Keyword1" or is "Keyword2" or is not "Keyword A".]({% image_buster /assets/img/sms/campaign_trigger.png %}){: style="max-width:90%;"}
 
 ### Dealing with unknown keywords
 

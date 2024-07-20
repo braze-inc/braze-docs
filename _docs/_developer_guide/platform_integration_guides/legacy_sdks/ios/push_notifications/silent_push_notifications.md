@@ -28,9 +28,9 @@ To send a silent push notification, set the `content-available` flag to `1` in a
 Attaching both a title and body with `content-available=1` is not recommended because it can lead to undefined behavior. To ensure that a notification is truly silent, exclude both the title and body when setting the `content-available` flag to `1.` For further details, refer to the official [Apple documentation on background updates](https://developer.apple.com/documentation/usernotifications/setting_up_a_remote_notification_server/pushing_background_updates_to_your_app).
 {% endalert %}
 
-The `content-available` flag can be set in the Braze dashboard as well as within our [Apple push object]({{site.baseurl}}/api/objects_filters/messaging/apple_object/) in the [messaging API][1].
+The `content-available` flag can be set in the Braze dashboard as well as within our [Apple push object]({{site.baseurl}}/api/objects_filters/messaging/apple_object/) in the [messaging API]({{site.baseurl}}/api/endpoints/messaging/).
 
-![The Braze dashboard showing the "content-available" checkbox found in the "settings" tab of the push composer.][2]
+![The Braze dashboard showing the "content-available" checkbox found in the "settings" tab of the push composer.]({% image_buster /assets/img_archive/remote_notification.png %} "content available")
 
 ## Use silent push notifications to trigger background work
 
@@ -38,13 +38,13 @@ Silent push notifications can wake your app from a "Suspended" or "Not Running" 
 
 To use silent push notifications to trigger background work, set up the `content-available` flag following the preceding instructions with no message or sound. Set up your app's background mode to enable `remote notifications` under the **Capabilities** tab in your project settings. A remote notification is just a normal push notification with the `content-available` flag set. 
 
-![Xcode showing the "remote notifications" mode checkbox under "capabilities".][3]
+![Xcode showing the "remote notifications" mode checkbox under "capabilities".]({% image_buster /assets/img_archive/background_mode.png %} "background mode enabled")
 
-Enabling background mode for remote notifications is required for [uninstall tracking][6].
+Enabling background mode for remote notifications is required for [uninstall tracking]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/uninstall_tracking/).
 
 Even with the remote notifications background mode enabled, the system will not launch your app into the background if the user has force-quit the application. The user must explicitly launch the application or reboot the device before the app can be automatically launched into the background by the system.
 
-For more information, refer to [pushing background updates][4] and [`application:didReceiveRemoteNotification:fetchCompletionHandler:`][5].
+For more information, refer to [pushing background updates](https://developer.apple.com/documentation/usernotifications/setting_up_a_remote_notification_server/pushing_background_updates_to_your_app?language=objc) and [`application:didReceiveRemoteNotification:fetchCompletionHandler:`](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIApplicationDelegate_Protocol/index.html#//apple_ref/occ/intfm/UIApplicationDelegate/application:didReceiveRemoteNotification:fetchCompletionHandler:).
 
 ## iOS silent notifications limitations
 
@@ -58,7 +58,7 @@ Braze has several features which rely on iOS silent push notifications:
 |Geofences | Silent syncing of geofences from server to device.|
 {: .reset-td-br-1 .reset-td-br-2}
 
-Refer to Apple's [instance method][7] and [unreceived notifications][8] documentation for more details.
+Refer to Apple's [instance method](https://developer.apple.com/documentation/uikit/uiapplicationdelegate/1623013-application) and [unreceived notifications](https://developer.apple.com/library/content/technotes/tn2265/_index.html#//apple_ref/doc/uid/DTS40010376-CH1-TNTAG23) documentation for more details.
 
 [1]: {{site.baseurl}}/api/endpoints/messaging/
 [2]: {% image_buster /assets/img_archive/remote_notification.png %} "content available"

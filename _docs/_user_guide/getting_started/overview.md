@@ -27,13 +27,13 @@ Braze is a customer engagement platform that helps brands of all sizes create pe
 
 Users are your customers—the people receiving the messages you send using Braze. All the data you gather about a user and ingest into Braze is stored in their user profile, such as their demographics, personal information, preferences, and behaviors. This information powers your messaging and is how you can tailor your messages to the right user.
 
-![][1]
+![]({% image_buster /assets/img/getting_started/user_profile.png %})
 
 Segments divide your customer base into smaller groups that you can then target with specific messaging. You can use different variables to create segments, ranging from characteristics such as gender, location, and age to behaviors like interaction patterns with previous campaigns or where they are in the customer journey.
 
 Segments are dynamic—users can move in and out of segments in real time based on their behavior and where they are in relation to your brand. This ensures that your customers receive the messaging most relevant to them at any given time. You can create as many segments as needed for your targeting and messaging purposes.
 
-![][2]
+![]({% image_buster /assets/img/getting_started/segment.png %})
 
 For more, check out: [Getting Started: Users and segments]({{site.baseurl}}/user_guide/getting_started/users_segments/).
 
@@ -64,7 +64,7 @@ For more, check out: [Getting Started: Workspaces]({{site.baseurl}}/user_guide/g
 
 Braze is designed to get up and running quickly and easily. Our average time-to-value is six weeks across our customer base of hundreds of brands.
 
-![][3]
+![]({% image_buster /assets/img/getting_started/timetovalue.png %})
 
 Here's the Braze framework for estimating the length of your integration based on four components you can work on in parallel. The typical range is 30 to 180 days, with most accounts completing their integration within 45 to 60 days.
 

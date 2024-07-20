@@ -9,7 +9,7 @@ search_tag: Partner
 
 # Kognitiv Inspire
 
-> [Kognitiv Inspire][1] is a loyalty technology system that helps unlock unparalleled customer experiences through results-driven loyalty programs that amplify customer engagement, augment spending, and celebrate loyal behavior.
+> [Kognitiv Inspire](http://kognitiv.com) is a loyalty technology system that helps unlock unparalleled customer experiences through results-driven loyalty programs that amplify customer engagement, augment spending, and celebrate loyal behavior.
 
 The Braze and Kognitiv integration allows you to implement and evaluate your loyalty strategy, offering innovative capabilities and tailored member communications for enhanced program efficacy.
 
@@ -17,7 +17,7 @@ The Braze and Kognitiv integration allows you to implement and evaluate your loy
 
 | Requirement | Description |
 |---|---|
-| Kognitiv account | A [Kognitiv][1] account is required to take advantage of this partnership. |
+| Kognitiv account | A [Kognitiv](http://kognitiv.com) account is required to take advantage of this partnership. |
 | Kognitiv API key | A Kognitiv REST API key. This can be created within the **API Security Tokens** page. |
 | Braze REST endpoint | Your REST endpoint URL. Your endpoint will depend on the Braze URL for [your instance]({{site.baseurl}}/api/basics/#endpoints). |
 {: .reset-td-br-1 .reset-td-br-2}
@@ -104,7 +104,7 @@ The following Kognitiv example creates a new user in Braze when they enroll in K
 
 ## Kognitiv Inspire documentation and integration features
 
-Once you integrate Braze with Kognitiv Inspire, Kognitiv empowers you to access its extensive API portfolio, cutting-edge webhook features, and robust data import and export capabilities for seamless bulk transfer. For more information on Kognitiv Inspire features and integration capabilities, view the Kognitiv [resource guide][2] or contact them for a guided demonstration.
+Once you integrate Braze with Kognitiv Inspire, Kognitiv empowers you to access its extensive API portfolio, cutting-edge webhook features, and robust data import and export capabilities for seamless bulk transfer. For more information on Kognitiv Inspire features and integration capabilities, view the Kognitiv [resource guide](https://info.kognitivloyalty.com) or contact them for a guided demonstration.
 
 ### Endpoints
 

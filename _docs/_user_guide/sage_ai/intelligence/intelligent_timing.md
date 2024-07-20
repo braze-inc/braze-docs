@@ -39,7 +39,7 @@ To use Intelligent Timing in your campaigns:
 5. Determine if you want to [only send messages within specific hours](#sending-within-specific-hours).
 6. Specify a [fallback time](#fallback-time). This is when the message will send if a user's profile doesn't have enough data to calculate an optimal time.
 
-![Scheduling a campaign with Intelligent Timing][1]
+![Scheduling a campaign with Intelligent Timing]({% image_buster /assets/img/intelligent_timing_1.png %})
 
 #### Sending messages within specific hours {#sending-within-specific-hours}
 
@@ -48,7 +48,7 @@ If desired, you can choose to limit the optimal time to within a specific window
 1. When configuring Intelligent Timing, select **Only send messages within specific hours**.
 2. Enter the start and end time of the delivery window.
 
-![Checkbox for "Only send messages within specific hours" selected, where the time window is set to between 8 am and 12 am in the user's local time.][4]
+![Checkbox for "Only send messages within specific hours" selected, where the time window is set to between 8 am and 12 am in the user's local time.]({% image_buster /assets/img/intelligent_timing_hours.png %})
 
 When a delivery window is specified, Braze only looks at engagement data within the window to determine a user's optimal time. If there isn't enough engagement data within that window, the message sends at the [fallback time](#fallback-time) specified.
 
@@ -60,7 +60,7 @@ To see an estimate of how many users will receive the message in each hour of th
 2. In the section **Preview Delivery Times for** (which appears in both the Target Audiences and Schedule Delivery steps), select your channel.
 3. Click **Refresh Data**.
 
-![][2]
+![]({% image_buster /assets/img/intel-timing-preview.png %})
 
 Whenever you change any settings about Intelligent Timing or your campaign audience, refresh the data again to view an updated chart.
 
@@ -82,7 +82,7 @@ If a campaign is launched and a user's optimal time is less than an hour in the 
 
 If you're targeting an audience that has performed an action in a certain period of time, allow for at least a 3-day window in your segment filters. For example, instead of `First used these apps more than 1 day ago` and `First used these apps less than 3 days ago`, use 1 day and 4 days.
 
-![Filters for the target audience where the campaign targets users who first used these apps between 1 and 4 days ago.][3]
+![Filters for the target audience where the campaign targets users who first used these apps between 1 and 4 days ago.]({% image_buster /assets/img/intelligent_timing.png %})
 
 This is also because of time zones—selecting a period of less than 3 days may cause some users to fall out of the segment before their optimal send time is reached.
 
@@ -94,7 +94,7 @@ If you are leveraging [A/B testing with an optimization]({{site.baseurl}}/user_g
 
 We recommend that if you're using both Intelligent Timing and A/B testing, schedule the Winning Variant to send 2 days after the initial test instead of 1 day.
 
-![A/B Testing section of the Target Audiences step where the test ends and sends the Winning Variant two days after the initial test starts.][5]
+![A/B Testing section of the Target Audiences step where the test ends and sends the Winning Variant two days after the initial test starts.]({% image_buster /assets/img/intelligent_timing_ab_test_duration.png %})
 
 ### Canvas
 

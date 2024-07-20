@@ -56,9 +56,9 @@ Click **Create New Catalog**, then choose to either **Upload CSV** or **Create i
 
 ### Method 1: Upload CSV
 
-1. Drag and drop your file to the upload zone, or click **Upload CSV** and choose your file. <br>![][1]{: style="max-width:80%;"} <br><br>
+1. Drag and drop your file to the upload zone, or click **Upload CSV** and choose your file. <br>![]({% image_buster /assets/img_archive/catalog_CSV_upload.png %}){: style="max-width:80%;"} <br><br>
 2. Select one of the following data types for each column: boolean, number, string, or time.
-<br> ![][9]{: style="max-width:80%;"} <br><br>
+<br> ![]({% image_buster /assets/img_archive/catalog_data_type.png %}){: style="max-width:80%;"} <br><br>
 3. Give your catalog a name. Keep in mind the following requirements for a catalog name:
 - Must be unique
 - Maximum of 250 characters
@@ -88,11 +88,11 @@ You can also update the CSV file after selecting to create a catalog in the brow
 1. Enter a name for your catalog. Keep in mind the following requirements for your catalog name:
 - Must be unique
 - Maximum of 250 characters
-- Can only include numbers, letters, hyphens, and underscores <br> ![][14]{: style="max-width:80%;"} <br><br>
+- Can only include numbers, letters, hyphens, and underscores <br> ![]({% image_buster /assets/img_archive/in_browser_catalog.png %}){: style="max-width:80%;"} <br><br>
 2. (optional) Type a description for your catalog.
 3. Select the catalog you've just created from the list **Catalogs** page to update your catalog.
-4. Click **Update Catalog > Add fields** to add your fields. Then, enter the **Field name** and use the dropdown to select the data type. Repeat as needed.<br> ![][12]{: style="max-width:50%;"}<br><br>
-5. Click **Update Catalog > Add items** to add an item to your catalog by entering the information based on the fields you previously added. Then, click **Save Item** or **Save and Add Another** to continue adding your items. <br> ![][13]{: style="max-width:50%;"}
+4. Click **Update Catalog > Add fields** to add your fields. Then, enter the **Field name** and use the dropdown to select the data type. Repeat as needed.<br> ![]({% image_buster /assets/img_archive/add_catalog_fields.png %}){: style="max-width:50%;"}<br><br>
+5. Click **Update Catalog > Add items** to add an item to your catalog by entering the information based on the fields you previously added. Then, click **Save Item** or **Save and Add Another** to continue adding your items. <br> ![]({% image_buster /assets/img_archive/add_catalog_items.png %}){: style="max-width:50%;"}
 
 You can also upload a CSV file after selecting to create a catalog in the browser.
 
@@ -140,11 +140,11 @@ We'll create the catalog by uploading a CSV file. The data types for `id`, `titl
 This data type cannot be edited after you set up your catalog.
 {% endalert %}
 
-![][9]{: style="max-width:85%;"}
+![]({% image_buster /assets/img_archive/catalog_data_type.png %}){: style="max-width:85%;"}
 
 Next, we'll name this catalog "games_catalog" and click the **Process Catalog** button. Then, Braze will check the catalog for any errors before catalog creation.
 
-![][11]{: style="max-width:85%;"}
+![]({% image_buster /assets/img_archive/catalog_new_name.png %}){: style="max-width:85%;"}
 
 Note that you won't be able to edit this name after the catalog is created. You can delete a catalog and re-upload an updated version using the same catalog name. 
 
@@ -156,7 +156,7 @@ You can use catalogs in all of your messaging channels, including anywhere in th
 
 In the message composer of your choice, click the <i class="fas fa-plus-circle"></i> plus icon to open the **Add Personalization** modal and select **Catalogs Items** for the **Personalization Type**. Then, select your **Catalog Name**. Using our previous example, we'll select the "Games" catalog.
 
-![][2]
+![]({% image_buster /assets/img_archive/use_catalog_personalization.png %})
 
 We can immediately see the following Liquid preview:
 
@@ -208,7 +208,7 @@ You aren't limited to just one item in a single message! Simply insert the addit
 
 Check out this example where we add the `id` of three games, Tales, Teslagrad, and Acaratus, for **Catalog Items** and select `title` for **Information to Display**.
 
-![][6]{: style="max-width:70%" }
+![]({% image_buster /assets/img_archive/catalog_multiple_items.png %}){: style="max-width:70%" }
 
 We can further personalize our message by adding some text around our Liquid:
 
@@ -277,11 +277,11 @@ For example, to add the `image_link` from our Games catalog to our promotional m
 ```
 {% endraw %}
 
-![Content Card composer with catalog Liquid tag used in the image field.][3]
+![Content Card composer with catalog Liquid tag used in the image field.]({% image_buster /assets/img_archive/catalog_image_link1.png %})
 
 Here's what this looks like when the Liquid is rendered:
 
-![Example Content Card with catalog Liquid tags rendered.][4]{: style="max-width:50%" }
+![Example Content Card with catalog Liquid tags rendered.]({% image_buster /assets/img_archive/catalog_image_link2.png %}){: style="max-width:50%" }
 
 ### Templating catalog items
 
@@ -298,7 +298,7 @@ You can also use templating to dynamically pull catalog items based on custom at
 }
 ```
 
-Using Liquid templating, you can dynamically pull out the wishlist IDs and then use them in your message. To do so, [assign a variable][10] to your custom attribute, then use the **Add Personalization** modal to pull a specific item from the array.
+Using Liquid templating, you can dynamically pull out the wishlist IDs and then use them in your message. To do so, [assign a variable]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/using_liquid/#assigning-variables) to your custom attribute, then use the **Add Personalization** modal to pull a specific item from the array.
 
 {% alert tip %}
 Remember, arrays start at `0`, not `1`.

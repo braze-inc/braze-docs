@@ -16,7 +16,7 @@ Record in-app purchases so that you can track your revenue over time and across 
 
 Braze supports purchases in multiple currencies. Purchases that you report in a currency other than USD will be shown in the dashboard in USD based on the exchange rate at the date they were reported.
 
-Before implementation, be sure to review examples of the segmentation options afforded by custom events, custom attributes, and purchase events in our [best practices][5], as well as our notes on [event naming conventions]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/event_naming_conventions/).
+Before implementation, be sure to review examples of the segmentation options afforded by custom events, custom attributes, and purchase events in our [best practices]({{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#user-data-collection), as well as our notes on [event naming conventions]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/event_naming_conventions/).
 
 ## Tracking purchases and revenue
 
@@ -50,7 +50,7 @@ Appboy.sharedInstance()?.logPurchase("your product ID", inCurrency: "USD", atPri
 
 You can add metadata about purchases by either passing an [event property array]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events#nested-objects) or by passing an `NSDictionary` populated with `NSNumber`, `NSString`, or `NSDate` values.
 
-Refer to the [iOS class documentation][8] for additional details.
+Refer to the [iOS class documentation](http://appboy.github.io/appboy-ios-sdk/docs/interface_appboy.html#aaca4b885a8f61ac9fad3936b091448cc "logpurchase w/ properties class documentation") for additional details.
 
 ### Adding quantity
 You can add a quantity to your purchases if customers make the same purchase multiple times in a single checkout. You can accomplish this by passing in an `NSUInteger` for the quantity.
@@ -59,7 +59,7 @@ You can add a quantity to your purchases if customers make the same purchase mul
 * Methods without a quantity input will have a default quantity value of 1.
 * Methods with a quantity input have no default value, and **must** receive a quantity input for the SDK to log a purchase.
 
-Refer to the [iOS class documentation][7] for additional details.
+Refer to the [iOS class documentation](http://appboy.github.io/appboy-ios-sdk/docs/interface_appboy.html#ab50403068be47c0acba9943583e259fa "logpurchase w/ quantity class documentation") for additional details.
 
 {% tabs %}
 {% tab OBJECTIVE-C %}
@@ -101,7 +101,7 @@ The following keys are reserved and cannot be used as purchase properties:
 
 ### REST API
 
-You can also use our REST API to record purchases. Refer to the [User API documentation][4] for details.
+You can also use our REST API to record purchases. Refer to the [User API documentation]({{site.baseurl}}/developer_guide/rest_api/user_data/#user-data) for details.
 
 [2]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/include/Appboy.h
 [4]: {{site.baseurl}}/developer_guide/rest_api/user_data/#user-data

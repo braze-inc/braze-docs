@@ -33,7 +33,7 @@ To access the nested data in your custom event, generate a schema for each event
 2. Select **Manage Properties** for the events with nested properties.
 3. Select the <i class="fas fa-arrows-rotate"></i> button to generate the schema. To view the schema, select the <i class="fas fa-plus"></i> plus button.
 
-![][6]{: style="max-width:80%;"}
+![]({% image_buster /assets/img_archive/schema_generation_example.png %}){: style="max-width:80%;"}
 
 ## Step 2: Use the nested object
 
@@ -154,7 +154,7 @@ If your event property contains the `[]` or `.` characters, escape them by wrapp
 
 To segment users based on nested event properties, you must use [Segment Extensions]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/). After you've generated a schema, the nested objects explorer will display in the segmentation section. 
 
-![][4]
+![]({% image_buster /assets/img_archive/nested_event_properties_segmentation.png %})
 
 Segmentation uses the same notation as triggering (see [Message triggering](#message-triggering)).
 
@@ -162,7 +162,7 @@ Segmentation uses the same notation as triggering (see [Message triggering](#mes
 
 Using the **Add Personalization** modal, select **Advanced Event Properties** as the personalization type. This allows the option to add a nested event properties after a schema has been generated.
 
-![][5]{: style="max-width:70%;"}
+![]({% image_buster /assets/img_archive/nested_event_properties_personalization.png %}){: style="max-width:70%;"}
 
 ## Frequently asked questions
 

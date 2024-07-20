@@ -32,7 +32,7 @@ To integrate the two platforms, you must integrate the two SDKs and map the matc
 To correctly map fields between the two SDKs, set the same user ID in both systems using the [`changeUser` method]({{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/setting_user_ids/#setting-user-ids) in the Braze SDK and the `setUserId` method of [`PilgrimUserInfo`](https://developer.foursquare.com/docs/pilgrim-sdk/advanced-setup-guide#custom-user-data) in the Pilgrim SDK.
 
 ### Step 2: Configure Pilgrim console
-![An image of the Pilgrim console asking for Group ID, Android App ID, and iOS App ID.][2]{: style="float:right;max-width:40%;margin-left:15px;"}
+![An image of the Pilgrim console asking for Group ID, Android App ID, and iOS App ID.]({% image_buster /assets/img_archive/pilgrim-dev-console.png %}){: style="float:right;max-width:40%;margin-left:15px;"}
 
 Find the workspace and App IDs in the Braze developer console. Next, enter your Braze REST API Key and App IDs in the Foursquare Pilgrim Console.
 

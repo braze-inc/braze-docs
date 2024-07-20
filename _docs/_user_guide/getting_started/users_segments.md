@@ -126,11 +126,11 @@ Tips for working with segments:
 
 Suppose you run an online clothing store, and you've set up a messaging flow to send a series of emails to users who have added an item to their cart but have not completed the purchase. This abandoned cart flow might include an initial reminder email, a follow-up email offering a discount, and a final reminder email.
 
-![][1]{: style="max-width:70%" }
+![]({% image_buster /assets/img/getting_started/segment_example.png %}){: style="max-width:70%" }
 
 You could create a segment of users who have triggered the custom event "Added Item to Cart" but have not triggered the custom event "Completed Purchase". Then, within this segment, you could further identify users who have opened the initial reminder email (engagement with a specific message) but have not made a purchase.
 
-![][2]
+![]({% image_buster /assets/img/getting_started/segment_example_breakdown.png %})
 
 This segment could be targeted with a more aggressive campaign to try and convert these users into buyers. For example, you might send them a special offer or a personalized recommendation based on the items in their cart.
 

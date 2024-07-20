@@ -10,7 +10,7 @@ search_tag: Partner
 
 # Quikly
 
-> [Quikly][1], an urgency marketing platform, leverages psychology to motivate consumers, so brands can immediately increase response around their key marketing initiatives.
+> [Quikly](https://www.quikly.com), an urgency marketing platform, leverages psychology to motivate consumers, so brands can immediately increase response around their key marketing initiatives.
 
 The Braze and Quikly partnership allows you to accelerate conversions on events within a Braze customer journey. Quikly does this by using urgency psychology to motivate consumers in fun — and instant — ways. For example, brands can use Quikly to immediately acquire new email and SMS subscribers directly into Braze or to motivate other key marketing objectives like downloading your mobile app.
 
@@ -18,9 +18,9 @@ The Braze and Quikly partnership allows you to accelerate conversions on events 
 
 | Requirement | Description |
 | ----------- | ----------- |
-| Quikly account | A [Quikly][1] brand partner account is required to take advantage of this partnership. |
+| Quikly account | A [Quikly](https://www.quikly.com) brand partner account is required to take advantage of this partnership. |
 | Braze REST API key | A Braze REST API key with `users.track` permissions. <br><br> This can be created in the Braze dashboard from **Settings** > **API Keys**. |
-| Braze REST endpoint | [Your REST endpoint URL][2]. Your endpoint will depend on the Braze URL for your instance. |
+| Braze REST endpoint | [Your REST endpoint URL]({{site.baseurl}}/developer_guide/rest_api/basics/#endpoints). Your endpoint will depend on the Braze URL for your instance. |
 | Quikly API key (optional) | A Quikly API key provided by your client success manager (webhook only). |
 {: .reset-td-br-1 .reset-td-br-2}
 
@@ -29,8 +29,8 @@ The Braze and Quikly partnership allows you to accelerate conversions on events 
 Quikly allows brands to accelerate email or SMS acquisition and motivates subscribers to provide first-party data directly within Braze. You can also use Braze to target lapsed customers with a Quikly activation that will reactivate and retain that audience. Additionally, marketers can use this integration to incentivize specific customer journey events with unique reward structures. 
 
 For example:
- - Build anticipation and engagement over days as consumers opt-in for a chance to claim exciting rewards with [Quikly Hype][3]. First-party data is automatically pushed to Braze.
- - Accelerate acquisition of new email and SMS subscribers using unique, real-time offers based on a consumer's speed of response, rank against others, randomly, or before time or quantities run out with [Quikly Swap][4].
+ - Build anticipation and engagement over days as consumers opt-in for a chance to claim exciting rewards with [Quikly Hype](https://www.quikly.com/urgency-marketing/platform/product-overview/hype). First-party data is automatically pushed to Braze.
+ - Accelerate acquisition of new email and SMS subscribers using unique, real-time offers based on a consumer's speed of response, rank against others, randomly, or before time or quantities run out with [Quikly Swap](https://www.quikly.com/urgency-marketing/platform/product-overview/swap).
  - Motivate specific steps in the customer journey with unique reward structures using webhooks.
  - Apply custom attributes or events to the user's profile upon participating in a Quikly activation.
 

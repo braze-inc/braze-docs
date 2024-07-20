@@ -74,7 +74,7 @@ If all of the messages in your campaign are going to be similar or have the same
 
 Write your message using languages and personalization (such as Liquid or Connected Content) as needed. LINE allows up to five message bubbles in each message, which can be text or image messages.
 
-![LINE composer with a message displayed in the preview.][1]{: style="max-width:70%;"}
+![LINE composer with a message displayed in the preview.]({% image_buster /assets/img/line/line_composer.png %}){: style="max-width:70%;"}
 
 {% alert tip %}
 If you plan to use Liquid, be sure to include a default value for your personalization. This will prevent recipients with incomplete user profiles from receiving a blank placeholder. For example, instead of a user receiving the message "Hi, !", they might receive the message "Hi, new subscriber!".
@@ -84,7 +84,7 @@ If you plan to use Liquid, be sure to include a default value for your personali
 
 Switch to the **Test** tab to send a test LINE message to content test groups or individual users, or preview the message as a user directly in Braze.
 
-![The "Tests" tab displaying a preview of a test message.][2]
+![The "Tests" tab displaying a preview of a test message.]({% image_buster /assets/img/line/test_preview.png %})
 
 ## Step 4: Build the remainder of your campaign or Canvas
 

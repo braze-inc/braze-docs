@@ -478,17 +478,17 @@ When segmenting users based on arrays of objects, a user will qualify for the se
 
 Create a new segment and select **Nested Custom Attribute** as your filter. Then search for and select the name of your array of objects.
 
-![Filter by array of objects][1]
+![Filter by array of objects]({% image_buster /assets/img_archive/array_of_objects_segmenting_1.gif %})
 
 Use dot notation to specify which field in the array of objects you want to use. Start the text field with an empty set of square brackets `[]` to tell Braze that you're looking inside an array of objects. After that, add a period `.`, followed by the name of the field you want to use.
 
 For example, if you want to filter the `pets` array of objects based on the `type` field, enter `[].type` and choose which type of pet to filter for, such as `snake`.
 
-![Filter by pet type equals snake][3]
+![Filter by pet type equals snake]({% image_buster /assets/img_archive/array_of_objects_segmenting_3.png %})
 
 Or you might filter for pets that have a `type` of `dog`. Here a user has at least one dog so that user qualifies into the segment of "any user who has at least one pet of type dog".
 
-![Filter by pet type equals dog][2]
+![Filter by pet type equals dog]({% image_buster /assets/img_archive/array_of_objects_segmenting_2.png %})
 
 ### Levels of nesting
 

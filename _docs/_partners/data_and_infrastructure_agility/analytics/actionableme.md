@@ -10,7 +10,7 @@ search_tag: Partner
 
 # actionable.me
 
-> [actionable.me][2], built by the team at Massive Rocket, a data and CRM agency, is a standardized and automated approach to running CRM programs, providing tools and processes designed to get Braze customers to value quickly, consistently, and predictably. 
+> [actionable.me](https://actionable.me), built by the team at Massive Rocket, a data and CRM agency, is a standardized and automated approach to running CRM programs, providing tools and processes designed to get Braze customers to value quickly, consistently, and predictably. 
 
 The Braze and actionable.me integration allows you to deploy a service to monitor your progress in the utilization of Braze. Through a combination of tools and processes, they will rapidly benchmark your CRM performance, identify new opportunities and provide recommendations on how to perform better.
 
@@ -20,7 +20,7 @@ The Braze and actionable.me integration allows you to deploy a service to monito
 | --- | --- |
 | actionable.me account | An actionable.me account is required to take advantage of this partnership. |
 | Braze REST API key | A Braze REST API key with the permissions listed in the next section.<br><br> This can be created in the Braze dashboard from **Settings** > **API Keys**. |
-| Braze REST endpoint | [Your REST endpoint URL][1]. Your endpoint will depend on the Braze URL for your instance. |
+| Braze REST endpoint | [Your REST endpoint URL]({{site.baseurl}}/developer_guide/rest_api/basics/#endpoints). Your endpoint will depend on the Braze URL for your instance. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## Integration
@@ -54,13 +54,13 @@ If you are using the [older navigation]({{site.baseurl}}/navigation), you can cr
 
 ### Step 2: Provide information to the actionable.me team
 
-To complete the integration, you must provide your REST API key and [REST endpoint URL][1] to your actionable.me operations team. actionable.me will then establish the connection and reach out to you after the setup is complete and be in touch to start sharing insights.
+To complete the integration, you must provide your REST API key and [REST endpoint URL]({{site.baseurl}}/developer_guide/rest_api/basics/#endpoints) to your actionable.me operations team. actionable.me will then establish the connection and reach out to you after the setup is complete and be in touch to start sharing insights.
 
-![The actionable.me "add platform" page that the actionable.me operations team will configure.][5]
+![The actionable.me "add platform" page that the actionable.me operations team will configure.]({% image_buster /assets/img/actionableme/image2.png %})
 
 ## Troubleshooting
 
-Contact the actionable.me or Massive Rocket team for additional support: [info@massiverocket.com][3]
+Contact the actionable.me or Massive Rocket team for additional support: [info@massiverocket.com](mailto:info@massiverocket.com)
 
 [1]: {{site.baseurl}}/developer_guide/rest_api/basics/#endpoints
 [2]: https://actionable.me

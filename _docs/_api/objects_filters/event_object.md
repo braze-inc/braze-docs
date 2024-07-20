@@ -15,13 +15,13 @@ description: "This reference article goes over the event object, what it is, and
 
 An event object is an object that gets passed through the API when a specific event occurs. Events objects are housed in an events array. Each event object in the events array represents a single occurrence of a custom event by a particular user at the designated time value. The event object has many different fields that allow you to customize by setting and using event properties in messages, data collection, and personalization.
 
-You can check out how to set up custom events for a specific platform by reading the Platform Integration Guide within the [Developer Guide][1]. You can find this information housed within the **Tracking Custom Events** page under the **Analytics** tab of the various platforms. We have linked several for you.
+You can check out how to set up custom events for a specific platform by reading the Platform Integration Guide within the [Developer Guide]({{site.baseurl}}/developer_guide/home/). You can find this information housed within the **Tracking Custom Events** page under the **Analytics** tab of the various platforms. We have linked several for you.
 
 Tracking Custom Events article:
 
-- [Android][2]
-- [iOS][3]
-- [Web][4]
+- [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/tracking_custom_events/)
+- [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/tracking_custom_events/)
+- [Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/tracking_custom_events/)
 
 ### Object body
 
@@ -45,7 +45,7 @@ Tracking Custom Events article:
 
 - [External User ID]({{site.baseurl}}/api/basics/#user-ids)
 - [App identifier]({{site.baseurl}}/api/identifier_types/)
-- [ISO 8601 Time Code Wiki][22]
+- [ISO 8601 Time Code Wiki](https://en.wikipedia.org/wiki/ISO_8601 "ISO 8601 Time Code")
 
 #### Update existing profiles only
 
@@ -73,7 +73,7 @@ Property values can be any of the following data types:
 Event property objects that contain array or object values can have an event property payload of up to 50&nbsp;KB.
 
 ### Event property persistence
-Event properties are designed for filtering of, and Liquid personalization in, messages triggered by their parent events. By default, they are not persisted on the Braze user profile. To use event property values in segmentation, refer to [custom events][5], which details the various approaches to storing event property values long-term.
+Event properties are designed for filtering of, and Liquid personalization in, messages triggered by their parent events. By default, they are not persisted on the Braze user profile. To use event property values in segmentation, refer to [custom events]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/), which details the various approaches to storing event property values long-term.
 
 #### Event example request
 
@@ -108,7 +108,7 @@ Authorization: Bearer YOUR-REST-API-KEY
   ]
 }
 ```
-- [ISO 8601 Time Code Wiki][19]
+- [ISO 8601 Time Code Wiki](http://en.wikipedia.org/wiki/ISO_8601 "ISO 8601 Time Code Wiki")
 
 ## Event objects
 

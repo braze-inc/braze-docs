@@ -47,7 +47,7 @@ Use this field to define how long Braze will keep your session active. After Bra
 
 You can restrict your users from logging in using a password or SSO.
 
-For [SAML SSO][15], customers need to set up their SAML settings prior to enforcing. If customers use Google SSO, they only need to enforce the security settings page with no additional lift.
+For [SAML SSO]({{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/), customers need to set up their SAML settings prior to enforcing. If customers use Google SSO, they only need to enforce the security settings page with no additional lift.
 
 ## Dashboard IP allowlisting
 
@@ -63,7 +63,7 @@ Users who fail to set up their two-factor authentication will be locked out of t
 
 ### Remember me
 
-![Remember this account for 30 days checkbox][04]{: style="float:right;max-width:40%;margin-left:15px;"}
+![Remember this account for 30 days checkbox]({% image_buster /assets/img/remember_me.png %}){: style="float:right;max-width:40%;margin-left:15px;"}
 
 After toggling on two-factor authentication for your company, the **Remember Me** checkbox becomes available to users. This feature stores a cookie on your device, only requiring you to log in with two-factor authentication once over the course of 30 days.
 

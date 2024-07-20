@@ -14,13 +14,13 @@ description: "This reference article covers the Android push notification integr
 
 > This reference article covers the Android push notification integration for the Unity platform.
 
-These instructions are for integrating push with [Firebase Cloud Messaging (FCM)][9].
+These instructions are for integrating push with [Firebase Cloud Messaging (FCM)](https://firebase.google.com/docs/cloud-messaging/).
 
-See our [Unity ADM][64] documentation for ADM integration instructions.
+See our [Unity ADM]({{site.baseurl}}/developer_guide/platform_integration_guides/unity/push_notifications/adm_push_notifications/) documentation for ADM integration instructions.
 
 ## Step 1: Enable Firebase
 
-To get started, follow the [Firebase Unity setup documentation][11].
+To get started, follow the [Firebase Unity setup documentation](https://firebase.google.com/docs/unity/setup).
 
 {% alert note %}
 Integrating the Firebase Unity SDK may cause your `AndroidManifest.xml` to be overridden. If that occurs, make sure to revert it to the original.
@@ -28,17 +28,17 @@ Integrating the Firebase Unity SDK may cause your `AndroidManifest.xml` to be ov
 
 ## Step 2: Set your Firebase credentials
 
-You need to input your Firebase Server Key and Sender ID into the Braze dashboard. To do this, log in to the [Firebase Developers Console][58] and select your Firebase project. Next, select **Cloud Messaging** under **Settings** and copy the Server Key and Sender ID:<br>![][59]
+You need to input your Firebase Server Key and Sender ID into the Braze dashboard. To do this, log in to the [Firebase Developers Console](https://console.firebase.google.com/) and select your Firebase project. Next, select **Cloud Messaging** under **Settings** and copy the Server Key and Sender ID:<br>![]({% image_buster /assets/img_archive/finding_firebase_server_key.png %} "FirebaseServerKey")
 
 In Braze, select your Android app on the **App Settings** page under **Manage Settings**. Next, enter your Firebase Server Key in the **Firebase Cloud Messaging Server Key** field and Firebase Sender ID in the **Firebase Cloud Messaging Sender** ID field.
 
-![][15]
+![]({% image_buster /assets/img_archive/fcm_api_insert.png %} "FCMKey")
 
 ## Step 3: Implement automatic push integration
 
 The Braze SDK can automatically handle push registration with the Firebase Cloud Messaging Servers to have devices receive push notifications.
 
-![The Unity editor shows the Braze configuration options. In this editor, the "Automate Unity Android Integration", "Push Notification Firebase Push", "Push Configuration Handle Push Deeplinks Automatically", "Push Configuration Push Notification HTML Rendering Enabled", and "Set Push Deleted/Opened/Received Listeners" are set. The fields "Firebase Sender ID", "Small/Large Icon Drawable", "Default Notification Accent Color" are also provided.][62]
+![The Unity editor shows the Braze configuration options. In this editor, the "Automate Unity Android Integration", "Push Notification Firebase Push", "Push Configuration Handle Push Deeplinks Automatically", "Push Configuration Push Notification HTML Rendering Enabled", and "Set Push Deleted/Opened/Received Listeners" are set. The fields "Firebase Sender ID", "Small/Large Icon Drawable", "Default Notification Accent Color" are also provided.]({% image_buster /assets/img/unity/android/unity_android_push_settings_config.png %} "Android Push Settings")
 
 - **Automatic Firebase Cloud Messaging Registration Enabled**<br> Instructs the Braze SDK to automatically retrieve and send an FCM push token for a device. 
 - **Firebase Cloud Messaging Sender ID**<br> The Sender ID from your Firebase console.
@@ -67,7 +67,7 @@ The push deleted listener is fired when a user swipes away or dismisses a push n
 
 The following example implements the `BrazeCallback` game object using a callback method name of `PushNotificationReceivedCallback`, `PushNotificationOpenedCallback`, and `PushNotificationDeletedCallback` respectively.
 
-![This implementation example graphic shows the Braze configuration options mentioned in the preceding sections and a C# code snippet.][63]
+![This implementation example graphic shows the Braze configuration options mentioned in the preceding sections and a C# code snippet.]({% image_buster /assets/img/unity/android/unity_android_full_push_listener.png %} "Android Full Listener Example")
 
 ```csharp
 public class MainMenu : MonoBehaviour {
@@ -105,13 +105,13 @@ public class MainMenu : MonoBehaviour {
 
 ### Implementation example
 
-The sample project in the [Braze Unity SDK repository][13] contains a full working sample app that includes FCM.
+The sample project in the [Braze Unity SDK repository](https://github.com/Appboy/appboy-unity-sdk/tree/master/unity-samples) contains a full working sample app that includes FCM.
 
 ## Deep linking to in-app resources
 
 Although Braze can handle standard deep links (such as website URLs, Android URIs, etc.) by default, creating custom deep links requires an additional Manifest setup.
 
-For setup guidance, visit [Deep Linking to In-App Resources][26].
+For setup guidance, visit [Deep Linking to In-App Resources](https://developer.android.com/training/app-links/deep-linking).
 
 [8]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/troubleshooting/
 [9]: https://firebase.google.com/docs/cloud-messaging/

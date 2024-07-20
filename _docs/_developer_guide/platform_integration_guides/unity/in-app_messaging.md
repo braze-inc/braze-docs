@@ -69,7 +69,7 @@ If you need to configure your game object listener at runtime, use `AppboyBindin
 
 Incoming `string` messages received in your in-app message game object callback can be parsed into our pre-supplied model objects for convenience.
 
-Use `InAppMessageFactory.BuildInAppMessage()` to parse your in-app message. The resulting object will either be an instance of [`IInAppMessage.cs`][13] or [`IInAppMessageImmersive.cs`][12] depending on its type.
+Use `InAppMessageFactory.BuildInAppMessage()` to parse your in-app message. The resulting object will either be an instance of [`IInAppMessage.cs`](https://github.com/braze-inc/braze-unity-sdk/blob/18cb8ee89f1841c576eb954793edb6e06f9130b4/Assets/Plugins/Appboy/Models/InAppMessage/IInAppMessage.cs) or [`IInAppMessageImmersive.cs`](https://github.com/braze-inc/braze-unity-sdk/blob/18cb8ee89f1841c576eb954793edb6e06f9130b4/Assets/Plugins/Appboy/Models/InAppMessage/IInAppMessageImmersive.cs) depending on its type.
 
 ### Example in-app message callback
 
@@ -90,9 +90,9 @@ void InAppMessageReceivedCallback(string message) {
 
 Clicks and impressions must be manually logged for in-app messages not displayed directly by Braze.
 
-Use `LogClicked()` and `LogImpression()` on [`IInAppMessage`][13] to log clicks and impressions on your message.
+Use `LogClicked()` and `LogImpression()` on [`IInAppMessage`](https://github.com/braze-inc/braze-unity-sdk/blob/18cb8ee89f1841c576eb954793edb6e06f9130b4/Assets/Plugins/Appboy/Models/InAppMessage/IInAppMessage.cs) to log clicks and impressions on your message.
 
-Use `LogButtonClicked(int buttonID)` on [`IInAppMessageImmersive`][12] to log button clicks. Note that buttons are represented as lists of[`InAppMessageButton`][8] instances, each of which contains a `ButtonID`.
+Use `LogButtonClicked(int buttonID)` on [`IInAppMessageImmersive`](https://github.com/braze-inc/braze-unity-sdk/blob/18cb8ee89f1841c576eb954793edb6e06f9130b4/Assets/Plugins/Appboy/Models/InAppMessage/IInAppMessageImmersive.cs) to log button clicks. Note that buttons are represented as lists of[`InAppMessageButton`](https://github.com/braze-inc/braze-unity-sdk/blob/18cb8ee89f1841c576eb954793edb6e06f9130b4/Assets/Plugins/Appboy/Models/InAppMessage/InAppMessageButton.cs) instances, each of which contains a `ButtonID`.
 
 ## Custom action listeners
 

@@ -14,7 +14,7 @@ description: "This reference article covers the message and design requirements 
 
 > Our slideups typically appear at the top or bottom of the app screen (you can set this when you create your message). These are great for alerting your users about new terms of service, cookies, and other snippets of information. These are non-obtrusive and allow your users to continue to interact with your app while the message displays.
 
-![Two slide-up in-app messages, one appearing from the top of the screen and the other from the bottom, detailing the image and text recommendations. See following sections for details.][2a]{: style="max-width: 40%; border: none;"}
+![Two slide-up in-app messages, one appearing from the top of the screen and the other from the bottom, detailing the image and text recommendations. See following sections for details.]({% image_buster /assets/img/slideup-spec.png %}){: style="max-width: 40%; border: none;"}
 
 ## Image and copy behavior
 

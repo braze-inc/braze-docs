@@ -35,11 +35,11 @@ If you plan to use the Sage AI [Intelligent Channel filter]({{site.baseurl}}/use
 
 To enable link shortening, make sure the link shortening toggle in the message composer is enabled. From there, choose whether to use basic or advanced tracking by selecting the respective radial button. 
 
-![][1]
+![]({% image_buster /assets/img/link_shortening/shortening1.png %})
 
 For Braze to recognize URLs, they must start with _http://_ or _https://_. When a URL is recognized, the **Preview** pane will update with a placeholder URL. Braze will estimate the length of the URL after shortening, but a warning will prompt you to select a test user and save the message as a draft for a more accurate estimate.
 
-![][3]
+![]({% image_buster /assets/img/link_shortening/shortening3.png %})
 
 ### Liquid personalization in URLs
 
@@ -94,7 +94,7 @@ Make sure to save the campaign or Canvas before sending a test message to receiv
 If a draft is created within an active Canvas, a shortened URL will not be generated. The actual shortened URL will be generated when the Canvas draft is made active.
 {% endalert %}
 
-![][2]
+![]({% image_buster /assets/img/link_shortening/shortening2.png %})
 
 {% alert note %}
 Liquid personalization and shortened URLs are templated in the **Test** tab after a user has been selected. Make sure a user is selected to receive an accurate character count.
@@ -104,7 +104,7 @@ Liquid personalization and shortened URLs are templated in the **Test** tab afte
 
 When link shortening is enabled, the SMS and MMS performance table include a column titled **Total Clicks** that shows a count of click events per variant and an associated click rate. For more details on SMS metrics, see [SMS message performance]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_campaign_analytics/#message-performance).
 
-![][4]
+![]({% image_buster /assets/img/link_shortening/shortening4.png %})
 
 The **Historical Performance** and **SMS/MMS Performance** charts also include an option for **Total Clicks** and show a daily time series of click events. Clicks are incremented on redirect (such as when a user visits a link), and may be incremented more than once per user.
 
@@ -146,11 +146,11 @@ To delegate your domain to Braze, do the following:
 
 Once configured, custom domains can be assigned to one or multiple SMS subscription groups. 
 
-![Subscription groups settings that allow you to select a link-shortening domain.][7]
+![Subscription groups settings that allow you to select a link-shortening domain.]({% image_buster /assets/img/custom_domain.png %})
 
 Campaigns sent with link shortening enabled will use the assigned domain associated with your SMS subscription group.
 
-![][8]
+![]({% image_buster /assets/img/custom_domain2.png %})
 
 ## Frequently asked questions
 

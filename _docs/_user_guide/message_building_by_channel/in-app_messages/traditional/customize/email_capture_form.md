@@ -44,7 +44,7 @@ For more information, refer to the [User profile lifecycle]({{site.baseurl}}/use
 
 To navigate to this option, you must create an in-app messaging campaign. From there, depending on your use case, set **Send To** to either **Web Browsers**, **Mobile Apps**, or **Both Mobile Apps & Web Browsers**, then select **Email Capture Form** as your **Message Type**.
 
-![][4]
+![]({% image_buster /assets/img/email_capture_config.png %})
 
 {% alert note %}
 To enable HTML in-app messages through the Web SDK, you must supply the `allowUserSuppliedJavascript` initialization option to Braze, for example, `braze.initialize('YOUR-API_KEY', {allowUserSuppliedJavascript: true})`. This is for security reasons since HTML in-app messages can execute JavaScript, so we require a site maintainer to enable them.
@@ -61,7 +61,7 @@ Next, customize your form as needed. You can customize the following features fo
 - Key-value pairs
 - Style for header and body text, buttons, button border color, background, and overlay
 
-![Composer for email capture form.][5]
+![Composer for email capture form.]({% image_buster /assets/img/email_capture.png %})
 
 If you need to make further customization, choose **Custom Code** for your **Message Type**. You can use this [email capture modal template](https://github.com/braze-inc/in-app-message-templates/tree/master/braze-templates/5-email-capture-modal) from the [Braze Templates](https://github.com/braze-inc/in-app-message-templates/tree/master/braze-templates) GitHub repository as your starter code.
 
@@ -69,11 +69,11 @@ If you need to make further customization, choose **Custom Code** for your **Mes
 
 If you only want to send this form to users without existing email addresses, use the filter `Email Available is false`.
 
-![Filter by email available is false][10]{: style="max-width:50%"}
+![Filter by email available is false]({% image_buster /assets/img_archive/web_email_filter_1.png %}){: style="max-width:50%"}
 
 If you only want to send this form to users without external IDs (anonymous users), use the filter `External User ID is blank`.
 
-![Filter by external user ID is blank][11]{: style="max-width:50%"}
+![Filter by external user ID is blank]({% image_buster /assets/img_archive/web_email_filter_2.png %}){: style="max-width:50%"}
 
 You can also combine the two filters using `AND` logic, if desired.
 
@@ -83,7 +83,7 @@ After you've launched the email capture form and collected email addresses from 
 
 Set the filter to `Has clicked in-app message button 1` for campaign `<CAMPAIGN_NAME>`. Replace `<CAMPAIGN_NAME>` with the name of your email capture form campaign.
 
-![Filter for has clicked in-app message button 1 for your web email capture form campaign][12]
+![Filter for has clicked in-app message button 1 for your web email capture form campaign]({% image_buster /assets/img_archive/web_email_filter_3.png %})
 
 [4]: {% image_buster /assets/img/email_capture_config.png %}
 [5]: {% image_buster /assets/img/email_capture.png %}

@@ -24,7 +24,7 @@ It's important to ensure that your segment size in the campaign reflects your in
 
 If the impression count is low compared to where it once was, make sure no one unintentionally altered the segment or campaign since launch. Our segment and campaign changelogs will give you insight into changes that have been made, who made the change, and when it happened.
 
-![Link to view changelog on the Campaign Details page with seven changes since the user has last viewed the campaign][10]
+![Link to view changelog on the Campaign Details page with seven changes since the user has last viewed the campaign]({% image_buster /assets/img_archive/trouble4.png %})
 
 ## Run tests
 
@@ -32,15 +32,15 @@ A quick way to identify any obvious issues is to clone the campaign, target your
 
 ## Event triggers
 
-If the campaign is triggered by a session start or a custom event, you want to ensure that this event or session is happening frequently enough to trigger the message. Check this data on the [Overview][1] (for session data) or [Custom Events][2] pages:
+If the campaign is triggered by a session start or a custom event, you want to ensure that this event or session is happening frequently enough to trigger the message. Check this data on the [Overview]({{site.baseurl}}/user_guide/data_and_analytics/analytics/understanding_your_app_usage_data/#understanding-your-app-usage-data) (for session data) or [Custom Events]({{site.baseurl}}/user_guide/data_and_analytics/configuring_reporting/#configuring-reporting) pages:
 
-![Custom Events page showing a graph for the number of times the custom event Added to Favorites occurred over a one month period][11]
+![Custom Events page showing a graph for the number of times the custom event Added to Favorites occurred over a one month period]({% image_buster /assets/img_archive/trouble5.png %})
 
 ## Message impressions
 
 Customization of the in-app message UI or delivery mechanisms within the SDK may require your developers to utilize our methods to manually log in-app message impressions. Check with your developers to see if you use in-app message customization for:
-  * [iOS][12] 
-  * [Android][13] 
+  * [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/in-app_messaging/customization/handling_in_app_display/) 
+  * [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/in-app_messaging/customization/custom_listeners/) 
 
 Still need help? Open a [support ticket]({{site.baseurl}}/braze_support/).
 

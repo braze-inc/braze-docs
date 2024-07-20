@@ -24,7 +24,7 @@ While Predictive Churn is turned on at a company level, some workspaces may not 
 
 ### Problems with prediction audience size
 
-![][3]{: style="float:right;max-width:60%;margin-left:15px;margin-bottom:15px;margin-top:15px;"}
+![]({% image_buster /assets/img/churn/audience_size_error.png %}){: style="float:right;max-width:60%;margin-left:15px;margin-bottom:15px;margin-top:15px;"}
 
 When building out your prediction audience to fine-tune the kind of use you want your model trained against, you might encounter this message notifying you your prediction audience has too few users: 
 
@@ -40,7 +40,7 @@ A prediction audience definition cannot exceed 100 million users. If you see a m
 
 ### Prediction has poor quality
 
-![][1]{: style="float:right;max-width:40%;margin-left:15px;"}
+![]({% image_buster /assets/img/churn/churn3.png %}){: style="float:right;max-width:40%;margin-left:15px;"}
 If your model has a [prediction quality]({{site.baseurl}}/user_guide/predictive_suite/predictive_churn/prediction_analytics/prediction_quality/) of 40% or greater, you are in a great place! But if your prediction quality drops to 39% or less, you may need to edit your churn and prediction audience definitions to be more specific or have different time windows. 
 
 If you are unable to meet both the audience size requirement while building your prediction definitions and achieve a prediction quality of greater than 40%, it likely means that the data sent to Braze is not ideal for this use case, that there are not enough users with which to build a model against, or that your product life cycle is longer than our current 60-day lookback window supports. 

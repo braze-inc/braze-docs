@@ -77,13 +77,13 @@ To learn more about the expected behavior and look of each of these message type
 
 You can edit all aspects of your message's content and behavior in the **Compose** tab of the message editor.
 
-![Sample Content Card details in the Compose tab of the message editor][24]
+![Sample Content Card details in the Compose tab of the message editor]({% image_buster /assets/img/content_card_compose.png %})
 
 The content here varies based on the **Card Type** chosen in the previous step, but may include any of the following options:
 
 #### Language
 
-Click **Add Languages** and select your desired languages from the provided list. This will insert [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/conditional_logic/#conditional-logic) into your message. We recommend selecting your languages before writing your content so you can fill in your text where it belongs in the Liquid. See our [full list of available languages][18].
+Click **Add Languages** and select your desired languages from the provided list. This will insert [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/conditional_logic/#conditional-logic) into your message. We recommend selecting your languages before writing your content so you can fill in your text where it belongs in the Liquid. See our [full list of available languages]({{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/localization/#languages-supported).
 
 #### Title and message
 
@@ -97,7 +97,7 @@ To add an image to your Content Card, click **Add Image** or provide an image UR
 
 A pinned card will display at the top of a user's feed and can't be dismissed by the user. If more than one card in a user's feed is pinned, the pinned cards will display in chronological order. After a card has been sent, you cannot update its pinned option retroactively. Changing this option after a campaign has been sent will only affect future sends.
 
-![Side-by-side of the Content Card preview in Braze for Mobile and Web with the option "Pin this card to the top of the feed" selected.][1]{:style="border:none"}
+![Side-by-side of the Content Card preview in Braze for Mobile and Web with the option "Pin this card to the top of the feed" selected.]({% image_buster /assets/img/cc_pin_to_top.png %}){:style="border:none"}
 
 #### On-click behavior
 
@@ -123,7 +123,7 @@ Content Card message fields are limited to 2&nbsp;KB in total size, calculated b
 
 ## Step 4: Configure additional settings (optional)
 
-You can use [key-value pairs][19] to create categories for your Cards, create [multiple Content Card feeds]({{site.baseurl}}/developer_guide/customization_guides/content_cards/customizing_feed/#multiple-feeds) and customize how cards are sorted.
+You can use [key-value pairs]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/key_value_pairs/) to create categories for your Cards, create [multiple Content Card feeds]({{site.baseurl}}/developer_guide/customization_guides/content_cards/customizing_feed/#multiple-feeds) and customize how cards are sorted.
 
 To add key-value pairs to your message, switch to the **Settings** tab and click **Add New Pair**.
 
@@ -183,7 +183,7 @@ Once Content Cards have been sent, similar to emails, they sit waiting in an "in
 
 If you need to remove old cards, you must stop the campaign to do so. To stop a campaign, open your Content Card campaign and select **Stop Campaign**. Stopping the campaign will prompt you to decide how to handle users that have already received your card. If you would like to remove the Content Card from your users' feeds, select **Remove card from feed**. The card will then be hidden by the SDK on the next sync.
 
-![Dialog for confirming Content Card deactivation][25]{: style="max-width:75%" }
+![Dialog for confirming Content Card deactivation]({% image_buster /assets/img/cc_remove.png %}){: style="max-width:75%" }
 
 {% alert tip %}
 Do you want to have Content Cards that seem to last longer than the 30-day max? One way to accomplish this is to:

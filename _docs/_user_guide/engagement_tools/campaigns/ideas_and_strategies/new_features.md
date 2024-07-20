@@ -20,7 +20,7 @@ Feature awareness campaigns are a great way to encourage users to stay engaged w
 
 Braze SDKs automatically track a user's most recent app version. These versions can be used in filters and segments to determine which users should receive a message or campaign.
 
-![The Targeting Options panel in the Target Users step in the campaign building workflow. The Additional Filters section includes the following filter "Most Recent App Version Number for Android Stopwatch (Android) is below 3.7.0 (134.0.0.0)".][1]
+![The Targeting Options panel in the Target Users step in the campaign building workflow. The Additional Filters section includes the following filter "Most Recent App Version Number for Android Stopwatch (Android) is below 3.7.0 (134.0.0.0)".]({% image_buster /assets/img_archive/new_app_version.png %})
 
 ### App version number
 
@@ -37,7 +37,7 @@ This new filter can replace the legacy "App Version Name" filter which would req
 
 **Important**
 
-* Android apps have both a human readable [`versionName`][7] and an internal [`versionCode`][9]. The App Version Number filter uses `versionCode` because it is guaranteed to be incremented with each app store release.
+* Android apps have both a human readable [`versionName`](https://developer.android.com/reference/android/content/pm/PackageInfo#versionName) and an internal [`versionCode`](https://developer.android.com/reference/android/content/pm/PackageInfo.html#getLongVersionCode()). The App Version Number filter uses `versionCode` because it is guaranteed to be incremented with each app store release.
 * This can cause confusion when your app's `versionName` and `versionCode` get out of sync, especially since both fields can be viewed from the Braze dashboard. As a best practice, check that your app's `versionName` and `versionCode` are incremented together.
 * If you need to filter by the human readable `versionName` field instead (uncommon), use the App Version Name filter.
 
@@ -45,9 +45,9 @@ This new filter can replace the legacy "App Version Name" filter which would req
 
 Values for this filter are collected starting with Braze Android SDK v3.6.0+ and iOS SDK v3.21.0+. Even though this filter has SDK requirements, you will still be able to target users who are on lower (older) versions of your app using this feature!
 
-For Android, this version number is based on the [Package Long Version Code][9] for the app.
+For Android, this version number is based on the [Package Long Version Code](https://developer.android.com/reference/android/content/pm/PackageInfo.html#getLongVersionCode()) for the app.
 
-For iOS, this version number is based on the [Short Version String][8] for the app.
+For iOS, this version number is based on the [Short Version String](https://developer.apple.com/documentation/bundleresources/information_property_list/cfbundleshortversionstring) for the app.
 
 {% alert tip %}
 This filter will populate values after users upgrade their apps to the supported Braze SDK Versions. Until then, the filter won't show any versions when selected.
@@ -73,11 +73,11 @@ Use the "App Version Name" filter to segment users by the app's user-facing "bui
 
 This filter supports matching with "is", "is not", and regular expressions. For example, you can target users who have an app that is not version "1.2.3-test-build".
 
-For Android, this version name is based on the [Package Version Name][7] for the app. For iOS, this version name is based on the [Short Version String][8] for the app.
+For Android, this version name is based on the [Package Version Name](https://developer.android.com/reference/android/content/pm/PackageInfo#versionName) for the app. For iOS, this version name is based on the [Short Version String](https://developer.apple.com/documentation/bundleresources/information_property_list/cfbundleshortversionstring) for the app.
 
 ### Have not used feature
 
-When you release a new app version and introduce new features, users may not notice new content. Running a feature awareness campaign is a great way to teach users about new features or features they have never used. To do so, you must create a [custom attribute][3] that is assigned to users who have never completed a certain action within your app or use a [custom event][4] to track a particular action. You can use this attribute (or event) to segment the users you want to send the campaign to.
+When you release a new app version and introduce new features, users may not notice new content. Running a feature awareness campaign is a great way to teach users about new features or features they have never used. To do so, you must create a [custom attribute]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/#custom-data) that is assigned to users who have never completed a certain action within your app or use a [custom event]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/#custom-data) to track a particular action. You can use this attribute (or event) to segment the users you want to send the campaign to.
 
 {% alert tip %}
 Looking to retarget a specific portion of your audience? Check out [Retargeting Campaigns]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/retargeting_campaigns/) to learn how to retarget campaigns by leveraging your user's previous actions.

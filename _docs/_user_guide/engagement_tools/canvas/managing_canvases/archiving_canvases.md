@@ -15,17 +15,17 @@ Go to the **Canvas** page, click the <i class="fas fa-gear"></i> gear icon next 
 
 There are also bulk actions you can use, such as archiving multiple Canvases, by checking the boxes next to the Canvases and selecting the relevant button. 
 
-![][1]
+![]({% image_buster /assets/img_archive/archive_canvas1.png %})
 
 When you archive a Canvas, no further messages from the Canvas will be sent. You can view all previously archived Canvases by selecting the **Archived** status on the **Canvas** page.
 
-![][2]
+![]({% image_buster /assets/img_archive/archived_canvas.png %})
 
 ## Unarchiving Canvases
 
 You can also choose to unarchive a Canvas. You can either search for the Canvas, or go to the list of your archived Canvases on the **Canvas** page. Then, click the <i class="fas fa-gear"></i> gear icon next to the selected Canvas, and click **Unarchive**. Note that when you unarchive a Canvas, the associated archived segments will also be unarchived.
 
-![][3]
+![]({% image_buster /assets/img_archive/unarchive_canvas.png %})
 
 [1]: {% image_buster /assets/img_archive/archive_canvas1.png %}
 [2]: {% image_buster /assets/img_archive/archived_canvas.png %}

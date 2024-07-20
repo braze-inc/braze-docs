@@ -47,17 +47,17 @@ In the Braze dashboard, go to **Partner Integrations** > **Technology Partners**
 If you are using the [older navigation]({{site.baseurl}}/navigation), you can find **Technology Partners** under **Integrations**.
 {% endalert %}
 
-![Criteo technology page in Braze that includes an Overview module and Criteo module with the Connected Criteo button.][5]{: style="max-width:80%;"}
+![Criteo technology page in Braze that includes an Overview module and Criteo module with the Connected Criteo button.]({% image_buster /assets/img/criteo/criteo5.png %}){: style="max-width:80%;"}
 
 A Criteo oAuth page will appear to authorize Braze for the permissions related to your Audience Sync integration.
 
 Once you have selected confirm, you’ll then be redirected back into Braze to select which Criteo ad accounts you wish to sync to. 
 
-![A list of available ad accounts you can connect to Criteo.][7]{: style="max-width:80%;"}
+![A list of available ad accounts you can connect to Criteo.]({% image_buster /assets/img/criteo/criteo7.png %}){: style="max-width:80%;"}
 
 Once you have successfully connected, you will be taken back to the partner page, where you can view which accounts are connected and disconnect existing accounts.
 
-![An updated version of the Criteo technology partners page showing the ad accounts successfully connected.][4]{: style="max-width:80%;"}
+![An updated version of the Criteo technology partners page showing the ad accounts successfully connected.]({% image_buster /assets/img/criteo/criteo4.png %}){: style="max-width:80%;"}
 
 Your Criteo connection will be applied at the Braze workspace level. If your Criteo admin removes you from your Criteo ad account, Braze will detect an invalid token. As a result, your active Canvases using Criteo will show errors, and Braze will not be able to sync users.
 
@@ -67,11 +67,11 @@ When building audiences for Ad Tracking, you may wish to include or exclude cert
 
 If you have collected the [iOS IDFA through the Braze SDK]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/initial_sdk_setup/other_sdk_customizations/#optional-idfa-collection), you will be able to use the Ads Tracking Enabled filter. Select the value as true to only send users into Audience Sync destinations where they have opted in.
 
-![][11]
+![]({% image_buster /assets/img/criteo/criteo11.png %})
 
 If you are collecting `opt-ins`, `opt-outs`, `Do Not Sell Or Share` or any other relevant custom attributes, you should include these within your Canvas entry criteria as a filter:
 
-![][12]
+![]({% image_buster /assets/img/criteo/criteo12.png %})
 
 To learn more on how to comply with these Data Protection laws within the Braze platform, see [Data Protection Technical Assistance]({{site.baseurl}}/dp-technical-assistance/).
 
@@ -79,7 +79,7 @@ To learn more on how to comply with these Data Protection laws within the Braze 
 
 Add a component in your Canvas and select **Audience Sync**.
 
-![Workflow of the previous steps to add a Criteo Audience component in Canvas Flow.][9]{: style="max-width:35%;"} ![Workflow of the previous steps to add a Criteo Audience component in Canvas Flow.][10]{: style="max-width:28%;"}
+![Workflow of the previous steps to add a Criteo Audience component in Canvas Flow.]({% image_buster /assets/img/criteo/criteo9.png %}){: style="max-width:35%;"} ![Workflow of the previous steps to add a Criteo Audience component in Canvas Flow.]({% image_buster /assets/img/criteo/criteo10.png %}){: style="max-width:28%;"}
 
 ### Step 4: Sync setup
 
@@ -87,7 +87,7 @@ Click on the **Custom Audience** button to open the component editor.
 
 Select **Criteo** as the desired Audience Sync partner. 
 
-![][6]
+![]({% image_buster /assets/img/criteo/criteo6.png %})
 
 Then select your desired Criteo ad account. Under the **Choose a New or Existing Audience** dropdown, type in the name of a new or existing audience.
 
@@ -119,7 +119,7 @@ Once you have configured your Audience Sync to Criteo, simply launch the Canvas!
 
 You can view the audience in Criteo by going into your ads manager account and then selecting Segments from the **Audience Library** of the navigation. From the **Segments** page, you can see the size of each audience after it reaches ~1,000.
 
-![The audience library showing the segment, id, source, type, size, currently used, and last update.][0]
+![The audience library showing the segment, id, source, type, size, currently used, and last update.]({% image_buster /assets/img/criteo/criteo.png %})
 
 ## User syncing and rate limit considerations
 

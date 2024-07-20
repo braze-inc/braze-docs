@@ -21,7 +21,7 @@ Promotion codes can't be sent in in-app messages.
 
 ### Step 1: Navigate to the Promotion Code section
 
-![][1]{: style="float:right;max-width:30%;margin-left:15px;"}
+![]({% image_buster /assets/img/promocodes/promocode1.png %}){: style="float:right;max-width:30%;margin-left:15px;"}
 
 From the dashboard, go to **Data Settings** > **Promotion Codes**, then select **Create Promotion Code List**.
 
@@ -33,7 +33,7 @@ If you are using the [older navigation]({{site.baseurl}}/navigation), you can fi
 
 Name your promotion code list and add an optional description.
 
-![][2]{: style="max-width:90%"}
+![]({% image_buster /assets/img/promocodes/promocode2.png %}){: style="max-width:90%"}
 
 Next, create a code snippet for the promotion code. This code snippet will be what you will reference in Liquid to display this specific set of promotion codes. Make sure that it is a code snippet that is not already being used in another list.
 
@@ -41,7 +41,7 @@ Next, create a code snippet for the promotion code. This code snippet will be wh
 Snippets are case-sensitive. For example, "Birthday_promo" and "birthday_promo" will be recognized as two different snippets.
 {% endalert %}
 
-![][3]{: style="max-width:90%"}
+![]({% image_buster /assets/img/promocodes/promocode3.png %}){: style="max-width:90%"}
 
 {% alert warning %}
 You can't change the code snippet after saving!
@@ -51,11 +51,11 @@ You can't change the code snippet after saving!
 
 Each promotion code list has a corresponding expiration date and time that gets set upon creation. The maximum expiration length is six months into the future from the day you're creating or editing your list. Within that time, you can change and update the expiration date repeatedly. This expiration date will apply to all codes added to this list. Upon expiration, the codes will be deleted from the Braze system and any messages calling that list's code snippet will not be sent.
 
-![][4]{: style="max-width:90%"}
+![]({% image_buster /assets/img/promocodes/promocode4.png %}){: style="max-width:90%"}
 
 You also have the option to set up optional and customized threshold alerts. If set up, these alerts will email the designated recipient either when the list is running low on available promotion codes in this list, or when your promotion code list is close to expiration. The recipient will be notified once a day.
 
-![][5]
+![]({% image_buster /assets/img/promocodes/promocode5.png %})
 
 ### Step 4: Promotion code upload
 
@@ -65,15 +65,15 @@ Braze does not manage code creation or redemption. As a result, you'll have to g
 The maximum file size is 100&nbsp;MB and the maximum list size is 20MM of unused codes. If you find the wrong file was uploaded, upload a new one, and the previous one will be replaced.
 {% endalert %}
 
-![][6]
+![]({% image_buster /assets/img/promocodes/promocode6.png %})
 
 After the upload is complete, click **Save List** to save all the details and codes you just entered.
 
-![][7]
+![]({% image_buster /assets/img/promocodes/promocode7.png %})
 
 Upon clicking save, you will see that a new row appears in the **Import History**. To refresh the table to see if your import has finished, click <span style="font-size: 14px;margin-bottom: .5rem;height: 16px;width: 16px;" class="fas fa-sync" ></span> **Sync** at the top of the table.
 
-![][8]
+![]({% image_buster /assets/img/promocodes/promocode8.png %})
 
 {% alert note %}
 Larger files will take a few minutes to import. While you wait, you can leave the page and work on something while the import is in progress. When the import is finished, you will see the status change to **Complete** in the table.
@@ -89,13 +89,13 @@ All codes in the list will have the same expiration, regardless of the date of i
 
 To send promotion codes in messages, click **Copy Snippet** to copy the code snippet you set when creating your promotion code list.
 
-![][9]{: style="max-width:70%"}
+![]({% image_buster /assets/img/promocodes/promocode9.png %}){: style="max-width:70%"}
 
 From there, you can paste this code into a message within the dashboard.
 
-![][10]{: style="max-width:70%"}
+![]({% image_buster /assets/img/promocodes/promocode10.png %}){: style="max-width:70%"}
 
-Using [Liquid][11], you can insert one of the unique promotion codes from the uploaded CSV file into a message. That code will be marked as sent on the Braze backend to ensure no other message sends that same code. 
+Using [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/), you can insert one of the unique promotion codes from the uploaded CSV file into a message. That code will be marked as sent on the Braze backend to ensure no other message sends that same code. 
 
 When a code snippet is used in a multichannel campaign or Canvas step, each user always receives a unique code. For different steps in a Canvas, each user receives several promotion codes. 
 
@@ -113,11 +113,11 @@ Test sends and seed group email sends will use up promotion codes unless request
 
 You can find the remaining code count in the **Remaining** column of the promotion code list, located on the **Promotion Codes** page.
 
-![][12]{: style="max-width:90%"}
+![]({% image_buster /assets/img/promocodes/promocode11.png %}){: style="max-width:90%"}
 
 This code count can also be found when revisiting a pre-existing promotion code list page. 
 
-![][13]{: style="max-width:50%"}
+![]({% image_buster /assets/img/promocodes/promocode12.png %}){: style="max-width:50%"}
 
 ## Multichannel and single-channel sends
 

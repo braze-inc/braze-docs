@@ -42,7 +42,7 @@ Check out these additional resources to learn more about campaigns at Braze:
 
 Rather than sending out sporadic messages over multiple campaigns, Canvases create an ongoing fluid conversation with users. This is because a user's journey through a Canvas can split into different paths depending on their actions (or inaction) with your brand, allowing you to automatically advance users through a specific flow in real time.
 
-![][2]
+![]({% image_buster /assets/img/getting_started/canvas_flow.png %})
 
 In this way, Canvases are great for casting a net to capture users who fall off the path to conversion and placing them in the most effective outreach initiatives.
 
@@ -60,7 +60,7 @@ Check out these additional resources to learn more about Canvas Flow:
 
 Messaging channels are the various communication channels through which you can engage with your customers and deliver targeted messages. 
 
-![][1]
+![]({% image_buster /assets/img/getting_started/channels.png %})
 
 The following table outlines our supported channels.
 

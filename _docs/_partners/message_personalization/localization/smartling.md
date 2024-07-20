@@ -9,7 +9,7 @@ search_tag: Partner
 
 # Smartling
 
-> [Smartling][2] is an end-to-end cloud translation management software for customers looking to automate the translation of websites, applications, and customer experiences.
+> [Smartling](https://dashboard.smartling.com/) is an end-to-end cloud translation management software for customers looking to automate the translation of websites, applications, and customer experiences.
 
 The Braze and Smartling integration allows you to translate email templates and Content Blocks. Smartling provides linguists with the benefit of visual context during translation, which reduces errors and maintains quality.
 
@@ -17,10 +17,10 @@ The Braze and Smartling integration allows you to translate email templates and 
 
 | Requirement | Description |
 | ----------- | ----------- |
-| Smartling account | A [Smartling account][2] is required to take advantage of this partnership. |
-| Smartling translation project | To connect your Braze account with Smartling, you must first sign up and [create a translation project][3]. |
+| Smartling account | A [Smartling account](https://dashboard.smartling.com/) is required to take advantage of this partnership. |
+| Smartling translation project | To connect your Braze account with Smartling, you must first sign up and [create a translation project](https://help.smartling.com/hc/en-us/articles/13248549217435). |
 | Braze REST API key | A Braze REST API key with all templates and Content Blocks permissions. <br><br> This can be created in the Braze dashboard from **Settings** > **API Keys**. |
-| Braze REST endpoint | [Your REST endpoint URL][1]. Your endpoint will depend on the Braze URL for your instance. |
+| Braze REST endpoint | [Your REST endpoint URL]({{site.baseurl}}/api/basics/#endpoints). Your endpoint will depend on the Braze URL for your instance. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## Integration
@@ -40,7 +40,7 @@ Content Blocks:
 
 #### Connecting Braze to Smartling
 
-1. In [Smartling][2], create a [Braze Connector][6] project type in your Smartling account. 
+1. In [Smartling](https://dashboard.smartling.com/), create a [Braze Connector](https://help.smartling.com/hc/en-us/articles/115003074093) project type in your Smartling account. 
   - Ensure all required target languages are added to the project.
 2. From within this project, click **Settings** > **Braze Settings** > **Connect to Braze**.
 3. Enter your Braze API URL and Braze API key.
@@ -48,24 +48,24 @@ Content Blocks:
 
 #### Complete Braze connector configuration
 
-Refer to Smartling [documentation][3] for details on connector configuration.
+Refer to Smartling [documentation](https://help.smartling.com/hc/en-us/articles/13248549217435) for details on connector configuration.
 
 Select how you want automation of prior requests for translation.
 
 Configure the source and target languages in **Language Configuration**. It will be used by the connector for ingesting content into Smartling TMS and delivering translations back to Braze.
 
-![][8]
+![]({% image_buster /assets/img/smartling/smartling-braze-settings.png %})
 
 ### Step 2: Send content to Smartling
 
-Once the Braze connector has been connected and set up, you will find Braze content in the **Braze** tab in your Smartling project. Refer to Smartling [documentation][7] to learn more.
+Once the Braze connector has been connected and set up, you will find Braze content in the **Braze** tab in your Smartling project. Refer to Smartling [documentation](https://help.smartling.com/hc/en-us/articles/13248577069979) to learn more.
 
 Smartling provides advanced features to search and select content by:
 * Keyword search
 * Braze content type
 * Braze tagging
 
-![][9]
+![]({% image_buster /assets/img/smartling/smartling-content-blocks-list.png %})
 
 ### Step 3: Add translations to Braze
 

@@ -10,7 +10,7 @@ search_tag: Knak
 
 # Knak
 
-> [Knak][1] is the first campaign creation platform built for enterprise marketing teams to use in-house. Their drag-and-drop platform lets anyone create beautiful, on-brand emails and landing pages in minutes, with no coding or outside help required.
+> [Knak](https://knak.com/) is the first campaign creation platform built for enterprise marketing teams to use in-house. Their drag-and-drop platform lets anyone create beautiful, on-brand emails and landing pages in minutes, with no coding or outside help required.
 
 The Braze and Knak integration allows you to create fully responsive emails in minutes or hours instead of days or weeks and export them as ready-to-use Braze templates. Knak is built for marketers who want to level up their email creation for campaigns managed in Braze, without the need for outside agencies or hand-coding. 
 
@@ -20,7 +20,7 @@ The Braze and Knak integration allows you to create fully responsive emails in m
 | ----------- | ----------- |
 | Knak account | A Knak account is required to take advantage of this partnership. |
 | Braze REST API key | A Braze REST API key with full **Templates** permissions. <br><br>This can be created in the Braze dashboard from **Settings** > **API Keys**. |
-| Braze REST endpoint | [Your REST endpoint URL][2]. Your endpoint will depend on the Braze URL for your instance. |
+| Braze REST endpoint | [Your REST endpoint URL]({{site.baseurl}}/developer_guide/rest_api/basics/#endpoints). Your endpoint will depend on the Braze URL for your instance. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## Use cases
@@ -36,21 +36,21 @@ Knak is built for marketers who want to level up their email creation, with no c
 
 In Knak, navigate to **Integrations > Platforms > + Add New Integration**.
 
-![Add integration button][5]
+![Add integration button]({% image_buster /assets/img/knak/integration-setup-step-2-add-new-integration.png %})
 
 Next, select the **Braze** platform and provide the Braze API key and REST endpoint. Click on **Create New Integration** to complete your integration. 
 
-![Create new integration][6]
+![Create new integration]({% image_buster /assets/img/knak/integration-setup-step-4-add-api-key.png %})
 
 ### Step 2: Sync your Knak templates
 
 In Knak, locate an email you would like to sync to Braze and select **Publish** and then **Sync**.
 
-![Knak integration 1][8]
+![Knak integration 1]({% image_buster /assets/img/knak/integration-post-step-1-sync.png %})
 
 Next, verify the email name and click **Sync**.
 
-![Knak integration 2][9]
+![Knak integration 2]({% image_buster /assets/img/knak/integration-post-step-2-asset-name.png %})
 
 ## Using the Integration
 

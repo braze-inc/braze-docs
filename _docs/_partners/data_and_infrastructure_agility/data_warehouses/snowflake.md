@@ -69,7 +69,7 @@ Similar to Currents, you can use your Snowflake Secure Data Sharing to:
 - Map raw event or user data to a CRM (like Salesforce)
 - And more
 
-[Download the raw table schemas here.][schemas]
+[Download the raw table schemas here.]({% image_buster /assets/download_file/data-sharing-raw-table-schemas.txt %})
 
 ### User ID schema
 
@@ -133,7 +133,7 @@ The initial industries include:
 
 Our benchmarking data is also available directly in the [Snowflake Data Exchange](https://app.snowflake.com/marketplace/listing/GZT0Z5I4XXR).
 
-> For a set of example queries to reference when setting up snowflake, check out our [sample queries][SQ] and [ETL event pipeline setup][ETL] examples.
+> For a set of example queries to reference when setting up snowflake, check out our [sample queries]({{site.baseurl}}/partners/data_and_infrastructure_agility/data_warehouses/snowflake/sample_queries/) and [ETL event pipeline setup]({{site.baseurl}}/partners/data_and_infrastructure_agility/data_warehouses/snowflake/etl_pipline_setup/) examples.
 
 [SQ]: {{site.baseurl}}/partners/data_and_infrastructure_agility/data_warehouses/snowflake/sample_queries/
 [ETL]: {{site.baseurl}}/partners/data_and_infrastructure_agility/data_warehouses/snowflake/etl_pipline_setup/

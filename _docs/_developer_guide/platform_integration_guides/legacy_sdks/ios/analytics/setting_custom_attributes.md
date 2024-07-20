@@ -14,7 +14,7 @@ noindex: true
 
 Braze provides methods for assigning attributes to users. You'll be able to filter and segment your users according to these attributes on the dashboard.
 
-Before implementation, be sure to review examples of the segmentation options afforded by custom events, custom attributes, and purchase events in our [best practices][1], as well as our notes on [event naming conventions]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/event_naming_conventions/).
+Before implementation, be sure to review examples of the segmentation options afforded by custom events, custom attributes, and purchase events in our [best practices]({{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#user-data-collection), as well as our notes on [event naming conventions]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/event_naming_conventions/).
 
 ## Assigning default user attributes
 
@@ -136,7 +136,7 @@ Appboy.sharedInstance()?.user.setCustomAttributeWithKey("your_attribute_key", an
 
 ### Custom attribute with a date value
 
-Dates passed to Braze with this method must either be in the [ISO 8601][2] format (e.g `2013-07-16T19:20:30+01:00`) or in the `yyyy-MM-dd'T'HH:mm:ss:SSSZ` format (`2016-12-14T13:32:31.601-0800`).
+Dates passed to Braze with this method must either be in the [ISO 8601](http://en.wikipedia.org/wiki/ISO_8601) format (e.g `2013-07-16T19:20:30+01:00`) or in the `yyyy-MM-dd'T'HH:mm:ss:SSSZ` format (`2016-12-14T13:32:31.601-0800`).
 
 {% tabs %}
 {% tab OBJECTIVE-C %}
@@ -157,7 +157,7 @@ Appboy.sharedInstance()?.user.setCustomAttributeWithKey("your_attribute_key", an
 
 ### Custom attribute with an array value
 
-The maximum number of elements in [custom attribute arrays][8] defaults to 25. Arrays exceeding the maximum number of elements will be truncated to contain the maximum number of elements. The maximum for individual arrays can be increased to up to 100. If you would like this maximum increased, reach out to your customer service manager. 
+The maximum number of elements in [custom attribute arrays]({{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#arrays) defaults to 25. Arrays exceeding the maximum number of elements will be truncated to contain the maximum number of elements. The maximum for individual arrays can be increased to up to 100. If you would like this maximum increased, reach out to your customer service manager. 
 
 
 {% tabs %}
@@ -233,7 +233,7 @@ Appboy.sharedInstance()?.user.incrementCustomUserAttribute("your_attribute_key",
 
 ### Setting a custom attribute via the REST API
 
-You can also use our REST API to set user attributes. Refer to the [User API documentation][3] for details.
+You can also use our REST API to set user attributes. Refer to the [User API documentation]({{site.baseurl}}/developer_guide/rest_api/user_data/#user-data) for details.
 
 ### Custom attribute value limits
 
@@ -241,8 +241,8 @@ Custom attribute values have a maximum length of 255 characters; longer values w
 
 #### Additional information
 
-- More details can be found within the [`ABKUser.h` file][5].
-- Refer to the [`ABKUser` documentation][6] for more information.
+- More details can be found within the [`ABKUser.h` file](https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/include/Appboy.h).
+- Refer to the [`ABKUser` documentation](http://appboy.github.io/appboy-ios-sdk/docs/interface_a_b_k_user.html) for more information.
 
 ## Setting up user subscriptions
 

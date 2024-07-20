@@ -104,7 +104,7 @@ If you plan to export iOS IDFA or Google Advertising IDs within your audience sy
 
 Add a component in your Canvas and select **Audience Sync**.
 
-![][18]{: style="max-width:35%;"} ![][20]{: style="max-width:28%;"}
+![]({% image_buster /assets/img/audience_sync/audience_sync3.png %}){: style="max-width:35%;"} ![]({% image_buster /assets/img/audience_sync/audience_sync5.png %}){: style="max-width:28%;"}
 
 ### Step 3: Sync setup
 
@@ -112,7 +112,7 @@ Click on the **Custom Audience** button to open the component editor.
 
 Select **Google** as the desired Audience Sync partner.
 
-![][19]{: style="max-width:80%;"}
+![]({% image_buster /assets/img/audience_sync/audience_sync4.png %}){: style="max-width:80%;"}
 
 Select the desired Google ad account. Under the **Choose a New or Existing Audience** dropdown, type in the name of a new or existing audience. 
 

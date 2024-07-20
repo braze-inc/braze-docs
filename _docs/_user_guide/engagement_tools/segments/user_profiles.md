@@ -29,13 +29,13 @@ If you are using the [older navigation]({{site.baseurl}}/navigation), **Search U
 
 If a match is found, you can view the information you've recorded for this user with the Braze SDK. Otherwise, if your search returns multiple user profiles, you can merge each profile individually or perform a bulk user merge. For a full walkthrough, see [Duplicate Users]({{site.baseurl}}/user_guide/engagement_tools/segments/user_profiles/duplicate_users/).
 
-![Search results with a banner that reads "Multiple users match your search criteria" and two buttons labeled Previous and Next.][1]
+![Search results with a banner that reads "Multiple users match your search criteria" and two buttons labeled Previous and Next.]({% image_buster /assets/img_archive/User_Search_Nonunique.png %})
 
 ## Use cases
 
 User profiles are a great resource for troubleshooting and testing because you can easily access information about a user's engagement history, segment membership, device, and operating system.
 
-For example, if a user reports a problem and you aren't sure what device and operating system they are using, you can use the [Overview tab](#overview-tab) to find this information (as long as you have their email or user ID). You can also view a user's language, which could be helpful if you're troubleshooting a [multi-lingual campaign][13] that didn't behave as expected.
+For example, if a user reports a problem and you aren't sure what device and operating system they are using, you can use the [Overview tab](#overview-tab) to find this information (as long as you have their email or user ID). You can also view a user's language, which could be helpful if you're troubleshooting a [multi-lingual campaign]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/campaigns_in_multiple_languages/#campaigns-in-multiple-languages) that didn't behave as expected.
 
 You can use the [Engagement tab](#engagement-tab) to verify whether a certain user received a campaign. In addition, if this particular user did receive the campaign, you can see when they received it. You can also verify whether a user is in a certain segment, and whether a user is opted in to push, email, or both. This information is useful for troubleshooting purposes. For example, you should check this information if a user doesn't receive a campaign that you expected them to receive or receives a campaign that you did not expect them to receive.
 
@@ -61,9 +61,9 @@ The **Overview** tab contains basic information about a user and their interacti
 | Purchases | Lifetime revenue attributed to this user, their last purchase, total number of purchases, and a list of each purchase. |
 {: .reset-td-br-1 .reset-td-br-2}
 
-For more information on this data, see [User Data Collection][12].
+For more information on this data, see [User Data Collection]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/).
 
-![][2]
+![]({% image_buster /assets/img_archive/user_profile2.png %})
 
 ### Engagement tab {#engagement-tab}
 
@@ -81,7 +81,7 @@ The **Engagement** tab contains information about a user's interactions with the
 | Predictions | [Churn prediction]({{site.baseurl}}/user_guide/predictive_suite/predictive_churn) and [event prediction]({{site.baseurl}}/user_guide/predictive_suite/predictive_purchases) scores for this user. |
 {: .reset-td-br-1 .reset-td-br-2}
 
-![][3]
+![]({% image_buster /assets/img_archive/profiles_engagement_tab.png %})
 
 ### Messaging History tab
 
@@ -91,7 +91,7 @@ The **Message History** tab of the user profile shows recent messaging related e
 If you have feedback on this table, or would like to see specific events, please email [user-targeting@braze.com](mailto:user-targeting@braze.com?subject=Messaging%20History%20Tab%20Feedback) with the subject line "Messaging History Tab Feedback".
 {% endalert %}
 
-![][5]
+![]({% image_buster /assets/img_archive/profiles_messaging_history_tab.png %})
 
 #### Viewing and understanding events
 

@@ -13,7 +13,7 @@ Braze has removed support for the Eclipse IDE due to [Google sunsetting support 
 {% endalert %}
 
 ## Step 1
-In your command line, clone the [Braze Android GitHub Repository][03].
+In your command line, clone the [Braze Android GitHub Repository](https://github.com/braze-inc/braze-android-sdk "Appboy Android GitHub Repository").
 
 ```bash
 $ git clone git@github.com:braze-inc/braze-android-sdk.git
@@ -26,16 +26,16 @@ In Eclipse:
 
   - Navigate to File > Import.
 
-    ![File Import][04]
+    ![File Import]({{site.baseurl}}/assets/img_archive/file_import.png)
   - Select Android > Existing Android Code into Workspace.
 
-    ![Android Import][05]
+    ![Android Import]({{site.baseurl}}/assets/img_archive/android_import.png)
   - Click "Browse."
 
-    ![Browse][06]
+    ![Browse]({{site.baseurl}}/assets/img_archive/click_browse.png)
   - Check the Braze UI project folder as well as "copy project into workspace" and click "Finish."
 
-    ![Select Android UI Project][07]
+    ![Select Android UI Project]({{site.baseurl}}/assets/img_archive/select_project_android.png)
 
 ## Step 3
 Reference Braze in your own project.
@@ -43,10 +43,10 @@ In Eclipse:
 
   - Right click your project and select "Properties."
 
-    ![Click Properties][08]
+    ![Click Properties]({{site.baseurl}}/assets/img_archive/click_properties.png)
   - Under "Android," click "Add..." in the Library section and add android-sdk-ui as a library to your app.
 
-    ![Braze Add][09]
+    ![Braze Add]({{site.baseurl}}/assets/img_archive/add_appboy_ui.png)
 
 ## Step 4
 Resolve dependency errors and correct build target.
@@ -55,10 +55,10 @@ At this time, you may see errors coming up with the Braze code, that is because 
 
    - Right click the Braze UI project and  select Properties->Android to make sure build target is set to Braze's current build tools version.
 
-      ![Build Target][10]
+      ![Build Target]({{site.baseurl}}/assets/img_archive/build_target.png)
    - Right click the Braze UI project and  select Properties->Java Build Path->Add JARs… and add 'android-support-v4.jar' from the main application as a library.
 
-      ![Support][11]
+      ![Support]({{site.baseurl}}/assets/img_archive/android_support_v4.png)
 
 ## Step 5
 

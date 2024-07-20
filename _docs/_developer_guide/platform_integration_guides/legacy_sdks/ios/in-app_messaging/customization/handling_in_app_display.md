@@ -14,7 +14,7 @@ noindex: true
 
 # Custom handling in-app message display
 
-When the [`ABKInAppMessageControllerDelegate`][16] is set, the following delegate method will be called before in-app messages are displayed:
+When the [`ABKInAppMessageControllerDelegate`](https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/include/ABKInAppMessageControllerDelegate.h) is set, the following delegate method will be called before in-app messages are displayed:
 
 {% tabs %}
 {% tab OBJECTIVE-C %}
@@ -33,7 +33,7 @@ func beforeInAppMessageDisplayed(inAppMessage: ABKInAppMessage!) -> ABKInAppMess
 {% endtab %}
 {% endtabs %}
 
-If you have only implemented [`ABKInAppMessageUIDelegate`][34], the following UI delegate method will be called instead:
+If you have only implemented [`ABKInAppMessageUIDelegate`](https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyUI/ABKInAppMessage/ABKInAppMessageUIDelegate.h), the following UI delegate method will be called instead:
 
 {% tabs %}
 {% tab OBJECTIVE-C %}
@@ -63,7 +63,7 @@ You can customize in-app message handling by implementing this delegate method a
 
 You can use the `beforeInAppMessageDisplayed:` delegate method to add in-app message display logic, customize in-app messages before Braze displays them, or opt-out of Braze's in-app message display logic and UI entirely.
 
-Check out our [sample application][36] for an implementation example.
+Check out our [sample application](https://github.com/Appboy/appboy-ios-sdk/blob/master/Samples/InAppMessage/BrazeInAppMessageSample/BrazeInAppMessageSample/AppDelegate.m) for an implementation example.
 
 ## Overriding in-app messages before display
 
@@ -177,12 +177,12 @@ func logInAppMessageClickedWithButtonID(buttonId: NSInteger)
 
 For additional information, see the following header files:
 
-- [`ABKInAppMessage.h`][14]
-- [`ABKInAppMessageControllerDelegate.h`][16]
+- [`ABKInAppMessage.h`](https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/include/ABKInAppMessage.h)
+- [`ABKInAppMessageControllerDelegate.h`](https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/include/ABKInAppMessageControllerDelegate.h)
 
 ## Implementation samples
 
-See [`AppDelegate.m`][36] in-app message sample app.
+See [`AppDelegate.m`](https://github.com/Appboy/appboy-ios-sdk/blob/master/Samples/InAppMessage/BrazeInAppMessageSample/BrazeInAppMessageSample/AppDelegate.m) in-app message sample app.
 
 
 [16]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/include/ABKInAppMessageControllerDelegate.h

@@ -17,7 +17,7 @@ tool:
 If you are using the [older navigation]({{site.baseurl}}/navigation), the channel performance dashboards are located under **Overview**.
 {% endalert %}
 
-![Email performance dashboard displaying email channel engagement from the last thirty days.][1]
+![Email performance dashboard displaying email channel engagement from the last thirty days.]({% image_buster /assets/img_archive/email_performance_dashboard_1.png %})
 
 ## Email performance dashboard
 
@@ -25,7 +25,7 @@ To use your email performance dashboard, go to **Analytics** > **Email Performan
 
 ### Metrics calculations
 
-![][2]{: style="max-width:40%;float:right;margin-left:15px;border:none;"}
+![]({% image_buster /assets/img_archive/email_performance_dashboard_2.png %}){: style="max-width:40%;float:right;margin-left:15px;border:none;"}
 
 The calculations for different metrics in the email performance dashboard are the same as those on an individual message level (such as campaign analytics). On this dashboard, the metrics are aggregated across all campaigns and Canvases for the date range you've selected. To learn more about these definitions, refer to [Email metrics]({{site.baseurl}}/user_guide/message_building_by_channel/email/reporting_and_analytics/email_reporting#email-metrics).
 
@@ -63,7 +63,7 @@ For email opens, Braze will separate Google Image Proxy, Apple Image Proxy, and 
 
 The **Engagement by Mailbox Provider** report displays the top mailbox providers contributing to your clicks or opens. You can click into specific premier mailbox providers to drill down into specific receiving domains. For example, if Microsoft is listed on this report as one of your top mailbox providers metric, you can further view details for their receiving domains such as “outlook.com”, “hotmail.com”, “live.com”, and more.
 
-![][5]{: style="max-width:70%;"}
+![]({% image_buster /assets/img_archive/mailbox_provider_time_engagement.png %}){: style="max-width:70%;"}
 
 ### Time of Engagement
 
@@ -71,11 +71,11 @@ The **Time of Engagement** report displays data on when users are engaging with 
 
 The **Day of the Week** engagement report breaks down opens or clicks by day of the week. 
 
-![][6]
+![]({% image_buster /assets/img_archive/time_engagement.png %})
 
 The **Time of the Day** engagement report breaks down opens or clicks by each hour in a 24-hour time window.
 
-![][7]
+![]({% image_buster /assets/img_archive/time_engagement_day.png %})
 
 For more information on analytics for your emails, check out [Email reporting]({{site.baseurl}}/user_guide/message_building_by_channel/email/reporting_and_analytics/email_reporting/).
 
@@ -85,7 +85,7 @@ To use your SMS performance dashboard, go to **Analytics** > **SMS Performance**
 
 ### Metrics calculations
 
-![][2]{: style="max-width:40%;float:right;margin-left:15px;border:none;"}
+![]({% image_buster /assets/img_archive/email_performance_dashboard_2.png %}){: style="max-width:40%;float:right;margin-left:15px;border:none;"}
 
 The calculations for different metrics in the SMS performance dashboard are the same as those on an individual message level (such as campaign analytics). On this dashboard, the metrics are aggregated across all campaigns and Canvases for the date range you've selected. To learn more about these definitions, refer to [SMS metrics]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_campaign_analytics/).
 
@@ -110,7 +110,7 @@ You can filter the data on your dashboard using the following filter options:
 - **Canvas:** Choose up to 10 Canvases. When applied, your dashboard will show metrics for only your selected Canvases. If you select a tag filter first, then your options for Canvas filters will only include Canvases that have your selected tag.
 - **Campaign:** Choose up to 10 campaigns. When applied, your dashboard will show metrics for only your selected campaigns. If you select a tag filter first, then your options for campaign filters will only include campaigns that have your selected tag.
 
-![Filter options on the Channel Performance Dashboard where you can select a tag and list of Canvases to filter by.][3]
+![Filter options on the Channel Performance Dashboard where you can select a tag and list of Canvases to filter by.]({% image_buster /assets/img_archive/dashboard_filters.png %})
 
 ## Comparison to last period: Change in totals or rates
 
@@ -120,7 +120,7 @@ The comparison is the percentage change between the last and current periods, ca
 
 You can switch between **Show Change in Totals**—which compares the total counts (such as the number of emails delivered) between the two periods—and **Show Change in Rates**—which compares the rates (such as the delivery rate).
 
-![Radio buttons to switch between showing change in totals or change in rates for the Channel Performance Dashboard.][4]
+![Radio buttons to switch between showing change in totals or change in rates for the Channel Performance Dashboard.]({% image_buster /assets/img_archive/email_performance_dashboard_3.png %})
 
 ## Frequently asked questions
 

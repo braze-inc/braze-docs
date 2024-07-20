@@ -12,7 +12,7 @@ noindex: true
 
 # Deep linking for iOS
 
-For introductory information on deep links, refer to our [User Guide article][4]. If you're looking to implement deep links for the first time in your Braze app, the steps below will get you started.
+For introductory information on deep links, refer to our [User Guide article]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/#what-is-deep-linking). If you're looking to implement deep links for the first time in your Braze app, the steps below will get you started.
 
 {% alert note %}
 This article includes information on News Feed, which is being deprecated. Braze recommends that customers who use our News Feed tool move over to our Content Cards messaging channel—it's more flexible, customizable, and reliable. Check out the [migration guide]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) for more.
@@ -66,11 +66,11 @@ You should add all the schemes that the app needs to deep link to in an allowlis
 </array>
 ```
 
-For more information, refer to [Apple's documentation][12] on the `LSApplicationQueriesSchemes` key.
+For more information, refer to [Apple's documentation](https://developer.apple.com/library/content/documentation/General/Reference/InfoPlistKeyReference/Articles/LaunchServicesKeys.html#//apple_ref/doc/uid/TP40009250-SW14) on the `LSApplicationQueriesSchemes` key.
 
 ## Step 3: Implement a handler
 
-After activating your app, iOS will call the method [`application:openURL:options:`][13]. The important argument is the [NSURL][2] object.
+After activating your app, iOS will call the method [`application:openURL:options:`](https://developer.apple.com/reference/uikit/uiapplicationdelegate/1623112-application?language=objc). The important argument is the [NSURL](https://developer.apple.com/library/ios/DOCUMENTATION/Cocoa/Reference/Foundation/Classes/NSURL_Class/Reference/Reference.html#//apple_ref/doc/c_ref/NSURL) object.
 
 {% tabs %}
 {% tab OBJECTIVE-C %}
@@ -99,7 +99,7 @@ func application(_ app: UIApplication, open url: URL, options: [UIApplication.Op
 {% endtab %}
 {% endtabs %}
 
-![][10]
+![]({% image_buster /assets/img_archive/deep_link.png %})
 
 # Universal links
 
@@ -136,7 +136,7 @@ func application(_ application: UIApplication, continue userActivity: NSUserActi
 {% endtab %}
 {% endtabs %}
 
-Refer to [Apple][11] for more information.
+Refer to [Apple](https://developer.apple.com/library/content/documentation/General/Conceptual/AppSearch/UniversalLinks.html) for more information.
 
 {% alert note %}
 The default universal link integration is not compatible with Braze push notifications, in-app messages, or News Feed. See [linking customization](#linking-handling-customization) to handle universal links within your application. Alternatively, we recommend using [scheme-based deep links](#step-1-registering-a-scheme) with push notifications, in-app messages, and the News Feed.
@@ -146,9 +146,9 @@ The default universal link integration is not compatible with Braze push notific
 iOS 9 introduced a breaking change affecting web URLs embedded in in-app messages, News Feed cards, and push notifications.
 
 ### ATS requirements
-From [Apple's documentation][16]: "App Transport Security is a feature that improves the security of connections between an app and web services. The feature consists of default connection requirements that conform to best practices for secure connections. Apps can override this default behavior and turn off transport security."
+From [Apple's documentation](https://developer.apple.com/library/prerelease/ios/releasenotes/General/WhatsNewIniOS/Articles/iOS9.html#//apple_ref/doc/uid/TP40016198-SW14): "App Transport Security is a feature that improves the security of connections between an app and web services. The feature consists of default connection requirements that conform to best practices for secure connections. Apps can override this default behavior and turn off transport security."
 
-ATS is applied by default on iOS 9+. It requires that all connections use HTTPS and are encrypted using TLS 1.2 with forward secrecy. Refer to [Requirements for Connecting Using ATS][14] for more information. All images served by Braze to end devices are handled by a content delivery network ("CDN") that supports TLS 1.2 and is compatible with ATS.
+ATS is applied by default on iOS 9+. It requires that all connections use HTTPS and are encrypted using TLS 1.2 with forward secrecy. Refer to [Requirements for Connecting Using ATS](https://developer.apple.com/library/ios/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW35) for more information. All images served by Braze to end devices are handled by a content delivery network ("CDN") that supports TLS 1.2 and is compatible with ATS.
 
 Unless they are specified as exceptions in your application's `Info.plist`, connections that do not follow these requirements will fail with errors that look something like this:
 
@@ -170,7 +170,7 @@ You can handle ATS in one of the following three ways:
 #### Confirm all links are ATS compliant (recommended)
 Your Braze integration can satisfy ATS requirements by ensuring that any existing links you drive users to (through in-app message and push campaigns or News Feed cards) satisfy ATS requirements. While there are ways to bypass ATS restrictions, we recommended checking that all linked URLs are ATS compliant. Given Apple's increasing emphasis on application security, the following approaches to allowing ATS exceptions are not guaranteed to be supported by Apple.
 
-An SSL tool can help you pinpoint web server security issues. This [SSL server test][15] from Qualys, Inc. provides a line item specifically for Apple ATS 9 and iOS 9 compliance.
+An SSL tool can help you pinpoint web server security issues. This [SSL server test](https://www.ssllabs.com/ssltest/index.html) from Qualys, Inc. provides a line item specifically for Apple ATS 9 and iOS 9 compliance.
 
 #### Partially disable ATS
 You can allow a subset of links with certain domains or schemes to be treated as exceptions to the ATS rules. Your Braze integration will satisfy ATS requirements if every link you use in a Braze messaging channel is either ATS compliant or handled by an exception.
@@ -195,7 +195,7 @@ To add a domain as an exception of the ATS, add the following to your app's `Inf
 </dict>
 ```
 
-Refer to Apple's article on [app transport security keys][19] for more information.
+Refer to Apple's article on [app transport security keys](https://developer.apple.com/library/ios/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW33) for more information.
 
 #### Disable ATS entirely
 
@@ -209,13 +209,13 @@ You can turn off ATS entirely. Note that this is not recommended practice, due t
 </dict>
 ```
 
-Refer to [Shipping an App With App Transport Security][17] for more information on how to debug ATS failures.
+Refer to [Shipping an App With App Transport Security](http://timekl.com/blog/2015/08/21/shipping-an-app-with-app-transport-security/?utm_campaign=iOS+Dev+Weekly&utm_medium=email&utm_source=iOS_Dev_Weekly_Issue_213) for more information on how to debug ATS failures.
 
 ## URL encoding
 
 As of Braze iOS SDK v2.21.0, the SDK percent-encodes links to create valid `NSURL`s. All link characters that are not allowed in a properly formed URL, such as Unicode characters, will be percent escaped.
 
-To decode an encoded link, use the `NSString` method [`stringByRemovingPercentEncoding`][8]. Note that you must also return `YES` in the `ABKURLDelegate` and that a call to action is required to trigger the handling of the URL by the app. For example:
+To decode an encoded link, use the `NSString` method [`stringByRemovingPercentEncoding`](https://developer.apple.com/library/ios/documentation/Cocoa/Reference/Foundation/Classes/NSString_Class/index.html#//apple_ref/occ/instm/NSString/stringByRemovingPercentEncoding). Note that you must also return `YES` in the `ABKURLDelegate` and that a call to action is required to trigger the handling of the URL by the app. For example:
 
 {% tabs %}
 {% tab OBJECTIVE-C %}
@@ -248,11 +248,11 @@ To decode an encoded link, use the `NSString` method [`stringByRemovingPercentEn
 
 The customizable `ABKModalWebViewController` class displays web URLs opened by the SDK, typically when "Open Web URL Inside App" is selected for a web deep link.
 
-You can declare a category for, or directly modify, the `ABKModalWebViewController` class to apply customization to the web view. Check the class' [.h file][6] and [.m file][5] for more detail.
+You can declare a category for, or directly modify, the `ABKModalWebViewController` class to apply customization to the web view. Check the class' [.h file](https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/include/ABKModalWebViewController.h) and [.m file](https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/ABKModalWebViewController.m) for more detail.
 
 ### Linking handling customization
 
-The `ABKURLDelegate` protocol can be used to customize the handling of URLs such as deep links, web URLs, and universal links. To set the delegate during Braze initialization, pass a delegate object to the `ABKURLDelegateKey` in the `appboyOptions` of [`startWithApiKey:inApplication:withAppboyOptions:`][22]. Braze will then call your delegate's implementation of `handleAppboyURL:fromChannel:withExtras:` before handling any URIs.
+The `ABKURLDelegate` protocol can be used to customize the handling of URLs such as deep links, web URLs, and universal links. To set the delegate during Braze initialization, pass a delegate object to the `ABKURLDelegateKey` in the `appboyOptions` of [`startWithApiKey:inApplication:withAppboyOptions:`](https://appboy.github.io/appboy-ios-sdk/docs/interface_appboy.html#aa9f1bd9e4a5c082133dd9cc344108b24). Braze will then call your delegate's implementation of `handleAppboyURL:fromChannel:withExtras:` before handling any URIs.
 
 #### Integration example: ABKURLDelegate
 
@@ -287,7 +287,7 @@ func handleAppboyURL(_ url: URL?, from channel: ABKChannel, withExtras extras: [
 {% endtab %}
 {% endtabs %}
 
-For more information, see [`ABKURLDelegate.h`][23].
+For more information, see [`ABKURLDelegate.h`](https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/include/ABKURLDelegate.h).
 
 ## Frequent use cases
 
@@ -295,7 +295,7 @@ For more information, see [`ABKURLDelegate.h`][23].
 
 iOS can take users from your app into its page in the iOS settings application. You can take advantage of `UIApplicationOpenSettingsURLString` to deep link users to settings from push notifications, in-app messages, and the News Feed.
 
-1. First, make sure your application is set up for either [scheme-based deep links][25] or [universal links][27].
+1. First, make sure your application is set up for either [scheme-based deep links](#deep-links) or [universal links](#universal-links).
 2. Decide on a URI for deep linking to the **Settings** page (for example, `myapp://settings` or `https://www.braze.com/settings`).
 3. If you are using custom scheme-based deep links, add the following code to your `application:openURL:options:` method:
 

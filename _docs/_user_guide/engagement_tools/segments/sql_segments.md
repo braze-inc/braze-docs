@@ -103,7 +103,7 @@ In order to generate your SQL, Braze will send your prompts to OpenAI’s API Pl
 SQL queries that take longer than 20 minutes to run will time out.
 {% endalert %}
 
-When the extension finishes processing, you can [create a segment][4] using your Segment Extension and target this new segment with your campaigns and Canvases.
+When the extension finishes processing, you can [create a segment]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension#step-5-use-your-extension-in-a-segment) using your Segment Extension and target this new segment with your campaigns and Canvases.
 
 ## Writing SQL
 
@@ -176,7 +176,7 @@ On the **Segment Extensions** page, segments generated using SQL are denoted wit
 
 Select a SQL Segment Extension to view where the extension is being used, archive the extension, or manually [refresh the segment membership](#refreshing-segment-membership).
 
-![Messaging Use section of the SQL editor showing where the SQL segment is being used.][3]
+![Messaging Use section of the SQL editor showing where the SQL segment is being used.]({% image_buster /assets/img_archive/sql_segments_usage.png %})
 
 ### Refreshing segment membership
 
@@ -200,7 +200,7 @@ To save on credits, preview your query to ensure it is correct before saving the
 
 Your credits will reset to 5 on the first of each month at 12 am UTC. You can monitor your credit usage throughout the month within the credits usage panel. From the **Segment Extensions** page, click <i class="fa-solid fa-chart-column"></i> **View SQL Credit Usage**.
 
-![SQL Credit Usage panel in the SQL Segment Extensions page][5]{: style="max-width:60%"}
+![SQL Credit Usage panel in the SQL Segment Extensions page]({% image_buster /assets/img_archive/sql_segments_credits.png %}){: style="max-width:60%"}
 
 The following will happen when your credits reach zero:
 

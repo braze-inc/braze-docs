@@ -13,7 +13,7 @@ platform:
 
 # Creating feature flags
 
-> Feature flags allow you to remotely enable or disable functionality for a selection of users. Create a new feature flag within the Braze dashboard. Provide a name and an `ID`, a target audience, and a percentage of users for whom to enable to this feature. Then, using that same `ID` in your app or website's code, you can conditionally run certain parts of your business logic. To learn more about feature flags and how you can use them in Braze, see [About feature flags][5].
+> Feature flags allow you to remotely enable or disable functionality for a selection of users. Create a new feature flag within the Braze dashboard. Provide a name and an `ID`, a target audience, and a percentage of users for whom to enable to this feature. Then, using that same `ID` in your app or website's code, you can conditionally run certain parts of your business logic. To learn more about feature flags and how you can use them in Braze, see [About feature flags]({{site.baseurl}}/developer_guide/platform_wide/feature_flags/about/).
 
 ## Prerequisites
 
@@ -25,7 +25,7 @@ To use feature flags, ensure your SDKs are up to date with at least these minimu
 
 ### Braze permissions
 
-To manage feature flags in the dashboard, you'll either need to be an Administrator, or have the following [permissions][9]:
+To manage feature flags in the dashboard, you'll either need to be an Administrator, or have the following [permissions]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/):
 
 | Permission                                                                    | What you can do                           |
 |-------------------------------------------------------------------------------|-------------------------------------------|
@@ -39,7 +39,7 @@ To manage feature flags in the dashboard, you'll either need to be an Administra
 
 Go to **Messaging** > **Feature Flags**, then select **Create Feature Flag**.
 
-![A list of previously created feature flags on the Braze dashboard][1]{: style="max-width:75%"}
+![A list of previously created feature flags on the Braze dashboard]({% image_buster /assets/img/feature_flags/feature-flags-list.png %}){: style="max-width:75%"}
 
 ### Step 2: Fill out the details
 
@@ -80,13 +80,13 @@ There is no limit to the number of properties you can add. However, a feature fl
 
 Before rolling out a feature flag, you need to choose a [segment]({{site.baseurl}}/user_guide/engagement_tools/segments/) of users to target. Use the **Add Filter** dropdown menu to filter users out of your target audience. Add multiple filters to narrow your audience further.
 
-![Two dropdown menus. The first reads Target Users by Segment. The second reads Additional Filters.][3]
+![Two dropdown menus. The first reads Target Users by Segment. The second reads Additional Filters.]({% image_buster /assets/img/feature_flags/feature-flags-targeting.png %})
 
 ### Step 5: Set the rollout traffic {#rollout}
 
 Feature flags are always disabled by default, allowing you to separate your feature release's date from your total user activation. To begin your rollout, use the **Rollout Traffic** slider to choose the percentage of random users in your selected segment to receive this new feature.
 
-![A slider labeled Rollout Traffic, spanning between 0 and 100.][4]
+![A slider labeled Rollout Traffic, spanning between 0 and 100.]({% image_buster /assets/img/feature_flags/feature-flags-rollout.png %})
 
 {% alert important %}
 Do not set your rollout traffic above 0% until you are ready for your new feature to go live. When you initially define your feature flag in the dashboard, leave this setting at 0%.
@@ -742,9 +742,9 @@ Here, you can review when a changed happened, who made the change, which categor
 
 ## Segmenting with feature flags {#segmentation}
 
-Braze automatically keeps track of which users are currently eligible for or participating in a feature flag. You can create a segment or target messaging using the [**Feature Flag** filter]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/#feature-flags). For more information about filtering on segments, see [Creating a segment][7].
+Braze automatically keeps track of which users are currently eligible for or participating in a feature flag. You can create a segment or target messaging using the [**Feature Flag** filter]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/#feature-flags). For more information about filtering on segments, see [Creating a segment]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/).
 
-![The "Filters" section with "Feature Flag" typed into the filter search bar.][10]
+![The "Filters" section with "Feature Flag" typed into the filter search bar.]({% image_buster /assets/img/feature_flags/feature-flags-filter-name.png %})
 
 {% alert note %}
 To prevent recursive segments, it is not possible to create a segment that references other feature flags.

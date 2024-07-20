@@ -29,7 +29,7 @@ There is a limit of five concurrently active predictions. Before purchasing Pred
 {: start="2"}
 2. Give your prediction a unique name. You can also provide a description to save any relevant notes.
 
-![][1]
+![]({% image_buster /assets/img/purchasePrediction/purchases_step1.png %})
 
 {: start="3"}
 3. Click **Forward** to move to the next step. <br><br>Optionally, you can click **Build Now** to use all the default settings and skip to the last step of creation. You will have a chance to review the settings before starting the build process. Also, you can return to any step later by clicking it in the top bar.

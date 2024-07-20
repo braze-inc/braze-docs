@@ -11,7 +11,7 @@ tool: Media
 
 # Creative details for Content Cards
 
-> Customizing Content Cards and the feed they are located in can't be done during the campaign creation process—you must work with your engineers and developers to build and customize your cards. For technical details, visit our [developer documentation][7].
+> Customizing Content Cards and the feed they are located in can't be done during the campaign creation process—you must work with your engineers and developers to build and customize your cards. For technical details, visit our [developer documentation]({{site.baseurl}}/developer_guide/customization_guides/customization_overview).
 
 ## Content Card types
 
@@ -63,17 +63,17 @@ If you want fancy, the banner card is for you. This is completely customized to 
 
 ## Global creative details {#general}
 
-Content Cards come with great functionality from the very beginning. At this time, card styling cannot be done natively in your Braze account, but you can style your Content Card by type and the Content Card feed during integration. Refer to [Customizing Content Cards][4] for more information.
+Content Cards come with great functionality from the very beginning. At this time, card styling cannot be done natively in your Braze account, but you can style your Content Card by type and the Content Card feed during integration. Refer to [Customizing Content Cards]({{site.baseurl}}/developer_guide/customization_guides/content_cards) for more information.
 
 ### Dismissal behavior
 
 For a user to dismiss a card, they can either swipe it away on mobile, or use a `close X` function, as shown in the following screenshot. The `x` will appear on hover for the Web SDK only.
 
-![Image that shows swipe or close dismissal behaviors for a card][5]
+![Image that shows swipe or close dismissal behaviors for a card]({% image_buster /assets/img/dismissal-cc.png %})
 
 If a user has dismissed all of their cards or you haven't pushed out any new updates, the user's feed will usually look something like this:
 
-![Image of an empty Content Card feed][6]{: style="max-width:45%"}
+![Image of an empty Content Card feed]({% image_buster /assets/img/empty-cc.png %}){: style="max-width:45%"}
 
 {% alert tip %}
 Keep Content Cards relevant by setting them to dismiss when a user takes relevant actions. For example, set promotional Content Cards to be dismissed as soon as users make a purchase so they don't continue to see an offer for something they already bought.

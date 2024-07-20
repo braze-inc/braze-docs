@@ -14,7 +14,7 @@ tool: Segments
 
 Segment Extensions are audience definitions which allow you to use nested event properties or create windowed aggregations of custom event and purchase event properties in the past 2 years (730 days). For example, Braze segmentation allows you to find users who have purchased a specific product in their lifetime. With Segment Extensions, you can further refine that audience to users who have purchased a specific color of a specific product at least twice in the past 2 years. When creating a Segment Extension, you can also specify that the audience be static or regenerated daily.
 
-The use of nested event properties for [action-based delivery][19] does not require Segment Extensions, as event processing occurs in real-time. Nested custom attributes similarly do not require the use of Segment Extensions.
+The use of nested event properties for [action-based delivery]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/) does not require Segment Extensions, as event processing occurs in real-time. Nested custom attributes similarly do not require the use of Segment Extensions.
 
 {% alert important %}
 There is a default allotment of 25 active Segment Extensions per workspace at a particular time. If you need to increase this limit, contact your Braze customer success manager to discuss your use case.
@@ -36,7 +36,7 @@ Best for when you don't want to use SQL.
 - **Incremental refresh:** Write a Snowflake SQL segment that automatically refreshes the last 2 days of data or manually refresh as needed. Best for balancing accuracy and cost-efficiency.
 - **Full refresh:** Write a Snowflake SQL segment that recalculates the entire audience upon manual refresh. Best for when you need a complete, up-to-date view of your audience.
 
-![][20]{: style="max-width:50%"}
+![]({% image_buster /assets/img/segment/segment_extension_modal.png %}){: style="max-width:50%"}
 
 If you select an experience that uses SQL, see [SQL Segment Extensions]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/) for further information.
 
@@ -46,7 +46,7 @@ If you select **Simple extension**, continue to the steps below.
 
 Name your Segment Extension by describing the type of users you intend to filter for. This will ensure that this extension can be easily and accurately discovered when applying it as a filter in your segment.
 
-![Segment Extension named "Online Shoppers Extension - 90 Days" with the checkbox "Regenerate Extension Daily" selected.][2]
+![Segment Extension named "Online Shoppers Extension - 90 Days" with the checkbox "Regenerate Extension Daily" selected.]({% image_buster /assets/img/segment/segment_extension2.png %})
 
 ## Step 3: Choose your criteria
 
@@ -54,7 +54,7 @@ Select between purchase, message engagement, or custom event criteria for target
 
 Segmentation based on event data from more than 730 days can be done using other filters located in **Segments**. When choosing your time period, you can specify a relative date range (such as past X days), a start date, an end date, or an exact date range (date A to date B).
 
-![][3]
+![]({% image_buster /assets/img/segment/segment_extension1.png %})
 
 ### Event property segmentation
 
@@ -62,17 +62,17 @@ To increase targeting precision, select the **Add Property Filters** checkbox. T
 
 For string properties, you can enter in multiple values at once. In the example below, this filter looks for users with a status equal to any of the following: gold, silver, or bronze.
 
-![Segmenting based on string properties.][13.5]
+![Segmenting based on string properties.]({% image_buster /assets/img/segment/property5.png %})
 
-![Segmenting based on numeric properties.][13]
+![Segmenting based on numeric properties.]({% image_buster /assets/img/segment/property2.png %})
 
-![Segmenting based on boolean properties.][14]
+![Segmenting based on boolean properties.]({% image_buster /assets/img/segment/property3.png %})
 
-![Segmenting based on datetime objects.][15]
+![Segmenting based on datetime objects.]({% image_buster /assets/img/segment/property4.png %})
 
 We also support segmentation based on [nested event properties]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/nested_objects/).
 
-![Segmenting based on nested event properties.][18]
+![Segmenting based on nested event properties.]({% image_buster /assets/img/segment/nested_segment_extensions.png %})
 
 Segment Extensions rely on long term storage of event properties and don't have a time-stamped property storage limit. You can look back on event properties tracked within the past two years.
 
@@ -100,23 +100,23 @@ Once you click **Save**, your extension will begin processing. The length of tim
 
 While your extension is processing, you will see a small animation next to the name of the extension, and the word "Processing" in the **Last Processed** column on the extension list. Note that you will not be able to edit an extension while it is processing.
 
-![][5]
+![]({% image_buster /assets/img/segment/segment_extension5.png %})
 
 ## Step 5: Use your extension in a segment
 
 Once you have created an extension, you can use it as a filter when creating a segment or defining an audience for a campaign or Canvas. Start by choosing **Braze Segment Extension** from the filter list under the **User Attributes** section.
 
-![][6]
+![]({% image_buster /assets/img/segment/segment_extension7.png %})
 
 From the Braze Segment Extension filter list, choose the extension you wish to include or exclude in this segment.
 
-![][7]
+![]({% image_buster /assets/img/segment/segment_extension6.png %})
 
 To view the extension criteria, click **View Extension Details** to show the details in a modal popup.
 
-![][8]{: style="max-width:70%;"}
+![]({% image_buster /assets/img/segment/segment_extension8.png %}){: style="max-width:70%;"}
 
-Now you can proceed as usual with [creating your segment][11].
+Now you can proceed as usual with [creating your segment]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/).
 
 [2]: {% image_buster /assets/img/segment/segment_extension2.png %}
 [3]: {% image_buster /assets/img/segment/segment_extension1.png %}

@@ -22,7 +22,7 @@ The top of the **Canvas Details** page contains top-line Canvas statistics. Thes
 
 This is a great place to get a high-level overview to check how your Canvas is performing against your goal.
 
-![][24]
+![]({% image_buster /assets/img_archive/Journey_5.png %})
 
 ## Performance visualization
 
@@ -34,7 +34,7 @@ For Canvas Flow, a user will exit the Canvas after entering and receiving the me
 
 The metrics also include impressions, unique recipients, conversion count, and revenue generated. You can click on a component to further breakdown your data and see channel-specific performance.
 
-![Two examples of performance details for Canvas components. On the left shows the performance details for a user path with one Canvas component. On the right shows performance details for an expanded Canvas component and a nested step that shows the in-app message impression count.][25]
+![Two examples of performance details for Canvas components. On the left shows the performance details for a user path with one Canvas component. On the right shows performance details for an expanded Canvas component and a nested step that shows the in-app message impression count.]({% image_buster /assets/img_archive/Journey_6.png %})
 
 ## Performance breakdown by variant
 
@@ -50,7 +50,7 @@ In the **Analyze Variants** tab, you can see a breakdown of performance by varia
 
 You can quickly infer effective variants and identify the right cadences, content, triggers, timing, and more.
 
-![][26]
+![]({% image_buster /assets/img_archive/analyze_variants.png %})
 
 Basic metrics include the following:  
 
@@ -73,11 +73,11 @@ Beyond that, you can see a more explicit breakdown of [conversion events]({{site
 
 ### Funnel report
 
-Funnel reporting offers a visual report that allows you to analyze the journeys your customers take after receiving a Canvas. If your Canvas uses a control group or multiple variants, you'll be able to understand how the different variants have impacted the conversion funnel at a more granular level and optimize based on this data. For more information on funnel reports, see [Funnel reports][2].
+Funnel reporting offers a visual report that allows you to analyze the journeys your customers take after receiving a Canvas. If your Canvas uses a control group or multiple variants, you'll be able to understand how the different variants have impacted the conversion funnel at a more granular level and optimize based on this data. For more information on funnel reports, see [Funnel reports]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_funnel_reports/).
 
 ### Retention report
 
-User retention is one of the most important metrics for any marketer. Keeping engaged users coming back for more indicates that business is healthy. Braze now allows you to measure user retention right on the **Canvas Analytics** page. For more information on how to read and interpret your retention report, check out [Retention reports][1].
+User retention is one of the most important metrics for any marketer. Keeping engaged users coming back for more indicates that business is healthy. Braze now allows you to measure user retention right on the **Canvas Analytics** page. For more information on how to read and interpret your retention report, check out [Retention reports]({{site.baseurl}}/user_guide/engagement_tools/canvas/retention_reports/).
 
 [1]: {{site.baseurl}}/user_guide/engagement_tools/canvas/retention_reports/
 [2]: {{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_funnel_reports/

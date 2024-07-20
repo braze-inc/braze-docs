@@ -9,7 +9,7 @@ search_tag: Partner
 
 # Scuba Analytics
 
->[Scuba Analytics][1] is a full-stack, machine-learning-powered data collaboration platform designed for high-velocity time-series data. Scuba allows you to selectively export users (also called actors) and load them into your Braze platform. In Scuba, custom actor properties are used to analyze behavioral trends, activate your data across various platforms, and conduct predictive modeling using machine learning.
+>[Scuba Analytics](https://scuba.io) is a full-stack, machine-learning-powered data collaboration platform designed for high-velocity time-series data. Scuba allows you to selectively export users (also called actors) and load them into your Braze platform. In Scuba, custom actor properties are used to analyze behavioral trends, activate your data across various platforms, and conduct predictive modeling using machine learning.
 
 ## Prerequisites
 
@@ -50,12 +50,12 @@ Replace the following:
 | `BRAZE_API_KEY`         | Your Braze REST API key with the `users.track` permission.                                                                                                                                      |
 | `HOSTNAME`              | The hostname of your current Scuba instance.                                                                                                                                                    |
 | `SCUBA_API_TOKEN`       | Your Scuba API token.                                                                                                                                                                           |
-| `TABLE_NAME`            | The table your dataset belongs to. For more information, see [Glossary: Dataset table][3].                                                                                                      |
-| `ACTOR_PROPERTY_NAME`   | The actor property your dataset belongs to. Only data matching this name will be returned. For more information, see [Glossary: Actor property][4].                                             |
+| `TABLE_NAME`            | The table your dataset belongs to. For more information, see [Glossary: Dataset table](https://docs.scuba.io/glossary/dataset-table).                                                                                                      |
+| `ACTOR_PROPERTY_NAME`   | The actor property your dataset belongs to. Only data matching this name will be returned. For more information, see [Glossary: Actor property](https://docs.scuba.io/glossary/actor-property).                                             |
 | `ACTOR_PROPERTY_FILTER` | The audience search filter for your actor property.                                                                                                                                             |
-| `ACTOR_ID`              | The ID of the actor property your dataset belongs to. This ID matches your `external_id` in Braze. For more information, see [Glossary: Actor][5].                                              |
-| `PERIOD_START`          | The start period as a BQL-compatible date. For more information, see [BQL syntax and usage][6].                                                                                                 |
-| `PERIOD_END`            | The end period as a BQL-compatible date. For more information, see [BQL syntax and usage][6].                                                                                                   |
+| `ACTOR_ID`              | The ID of the actor property your dataset belongs to. This ID matches your `external_id` in Braze. For more information, see [Glossary: Actor](https://docs.scuba.io/glossary/actor).                                              |
+| `PERIOD_START`          | The start period as a BQL-compatible date. For more information, see [BQL syntax and usage](https://docs.scuba.io/guides/bql-syntax-and-usage).                                                                                                 |
+| `PERIOD_END`            | The end period as a BQL-compatible date. For more information, see [BQL syntax and usage](https://docs.scuba.io/guides/bql-syntax-and-usage).                                                                                                   |
 | `RECORD_LIMIT`          | **Optional**: The maximum number of records to return. If `scuba_record_limit` is omitted, Scuba will return a maximum of 100 records. To change this, assignin any non-negative number to `scuba_record_limit`.    |
 {: .reset-td-br-1 .reset-td-br-2}
 
@@ -75,23 +75,23 @@ After you [upload your data](#uploading-your-scuba-data-to-braze), you can creat
 
 In Braze, go to **Audience** > **Segments**, then select **Create Segment** and enter a name for your segment.
 
-![Creating a new segment in Braze.][501]
+![Creating a new segment in Braze.]({% image_buster /assets/img/scuba/analytics/segment_name.png %})
 
 ### Step 2: Find and select the Scuba attribute
 
 Under **Segment Details** > **Filters**, select **Custom Attributes**.
 
-![Selecting the 'Custom Attribute' filter under 'Segment Details'.][502]
+![Selecting the 'Custom Attribute' filter under 'Segment Details'.]({% image_buster /assets/img/scuba/analytics/filter_attribute.png %})
 
 Select **Search custom attributes**, then choose the actor property name you used in your previous POST request.
 
-![Selecting the actor property as a custom attribute.][503]
+![Selecting the actor property as a custom attribute.]({% image_buster /assets/img/scuba/analytics/select_property.png %})
 
 ### Step 3: Configure the attribute
 
 Next to your actor property name, choose an operator and a value (if applicable). These values are determined by the actor properties you've defined in Scuba. When you're finished, select **Save**.
 
-![Choosing an operating and value for the selected ][504]
+![Choosing an operating and value for the selected ]({% image_buster /assets/img/scuba/analytics/operator_end.png %})
 
 [1]: https://scuba.io
 [3]: https://docs.scuba.io/glossary/dataset-table

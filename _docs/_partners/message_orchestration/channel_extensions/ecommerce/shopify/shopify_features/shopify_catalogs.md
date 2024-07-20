@@ -20,7 +20,7 @@ If you have already installed your Shopify store, you can still sync your produc
 
 You can sync your products to a Braze catalog through the Shopify install flow or on the Shopify partner page. 
 
-![Step 3 of the set up process with "Shopify Variant ID" as the "Catalog product identifier".][1]{: style="max-width:70%;"}
+![Step 3 of the set up process with "Shopify Variant ID" as the "Catalog product identifier".]({% image_buster /assets/img/Shopify/sync_products_step1.png %}){: style="max-width:70%;"}
 
 Products synced to a Braze catalog will contribute to your [Catalog limit]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/catalog/#limits).
 

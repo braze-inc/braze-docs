@@ -38,17 +38,17 @@ The **Firebase Messaging Delivery Priority** field lets you control whether a pu
 
 The summary text allows you to set additional text in the **Expanded Notification** view. The summary text will display under the body of the message in the expanded view. It also serves as a caption for notifications with images.
 
-![][9]
+![]({% image_buster /assets/img_archive/summary_text.png %})
 
 For push notifications that include images, the message text will be shown in the collapsed view, while the summary text will be displayed as the image caption when the notification is expanded. Check out the following animation for an example of this behavior.
 
-![Summary Text Behavior][15]
+![Summary Text Behavior]({% image_buster /assets/img_archive/messagesummary.gif %})
 
 ## Custom URIs
 
-The **Custom URI** feature allows you to specify a Web URL or an Android resource to navigate to when the notification is clicked. If no custom URI is specified, clicking on the notification brings users into your app. You can use the custom URI to deep-link inside your app as well as direct users to resources that exist outside of your app as well. This can be specified via our [Messaging API][13] or in the **Settings** in the push composer.
+The **Custom URI** feature allows you to specify a Web URL or an Android resource to navigate to when the notification is clicked. If no custom URI is specified, clicking on the notification brings users into your app. You can use the custom URI to deep-link inside your app as well as direct users to resources that exist outside of your app as well. This can be specified via our [Messaging API]({{site.baseurl}}/api/endpoints/messaging/) or in the **Settings** in the push composer.
 
-![Custom URI][12]
+![Custom URI]({% image_buster /assets/img_archive/deep_link.png %})
 
 ## Notification display priority
 
@@ -62,7 +62,7 @@ This feature is useful for differentiating your messages based on how critical o
 
 In Android O, notification priority became a property of notification channels. You will need to work with your developer to define the priority for a channel during its configuration and then use the dashboard to select the proper channel when sending your notification sounds. For devices running versions of Android before O, specifying a priority level for Android and Fire OS notifications is possible via the Braze dashboard and Messaging API.
 
-To message your full user base with a specific priority, we recommend that you indirectly specify the priority through [notification channel configuration][17] (to target O+ devices) and send the individual priority from the dashboard (to target &#60;O devices).
+To message your full user base with a specific priority, we recommend that you indirectly specify the priority through [notification channel configuration](https://developer.android.com/training/notify-user/channels#importance) (to target O+ devices) and send the individual priority from the dashboard (to target &#60;O devices).
 
 Refer to the following table for priority levels that you can set on Android or Fire OS push notifications:
 
@@ -75,13 +75,13 @@ Refer to the following table for priority levels that you can set on Android or 
 | Min | Contextual or background information. | `-2`|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
-For more information, refer to Google's documentation on [Android notifications][2].
+For more information, refer to Google's documentation on [Android notifications](http://developer.android.com/design/patterns/notifications.html).
 
 ## Push category
 
 Android push notifications provide the option to specify if your notification falls into a predefined category. The Android system UI may use this category to make ranking or filtering decisions about where to place the notification in the user's notification tray.
 
-![Settings tab with the Category set to None, which is the default setting.][52]
+![Settings tab with the Category set to None, which is the default setting.]({% image_buster /assets/img_archive/braze_category.png %})
 
 | Category | Description |
 |---|-------|
@@ -116,13 +116,13 @@ Android push notifications provide an optional field to determine how a notifica
 
 Additionally, Android users can override how push notifications appear on their lock screen by changing the notification privacy setting on their device. This setting will override the visibility from the push notification.
 
-![Dashboard push priority location with Set Visibility enabled and set to Private.][53]{: style="float:right;max-width:60%;margin-left:15px;"}
+![Dashboard push priority location with Set Visibility enabled and set to Private.]({% image_buster /assets/img_archive/braze_visibility.png %}){: style="float:right;max-width:60%;margin-left:15px;"}
 
 Regardless of the visibility, all notifications will be shown on the user's lock screen if the notification privacy setting on their device is **Show all content** (default setting). Likewise, notifications will not be shown on their lock screen if their notification privacy is set to **Do not show notifications**. The visibility only has an effect if their notification privacy is set to **Hide sensitive content**.
 
 The visibility has no effect on devices earlier than Android Lollipop 5.0.0, meaning all notifications will be shown on these devices.
 
-Refer to our [Android documentation][51] for more information.
+Refer to our [Android documentation](https://developer.android.com/guide/topics/ui/notifiers/notifications) for more information.
 
 ## Notification sounds
 
@@ -130,13 +130,13 @@ In Android O, notification sounds became a property of notification channels. Yo
 
 For devices running versions of Android before Android O, Braze allows you to set the sound of an individual push message through the dashboard composer. You can do so by specifying a local sound resource on the device (for example, `android.resource://com.mycompany.myapp/raw/mysound`). 
 
-Selecting **Default** in this field will play the default notification sound on the device. This can be specified via our [Messaging API][13] or in the **Settings** in the push composer.
+Selecting **Default** in this field will play the default notification sound on the device. This can be specified via our [Messaging API]({{site.baseurl}}/api/endpoints/messaging/) or in the **Settings** in the push composer.
 
-![][11]
+![]({% image_buster /assets/img_archive/sound_android.png %})
 
 Next, enter the full sound resource URI (for example, `android.resource://com.mycompany.myapp/raw/mysound`) into the dashboard prompt.
 
-To message your full user base with a specific sound, we recommend that you indirectly specify the sound through [notification channel configuration][16] (to target O+ devices) and send the individual sound from the dashboard (to target &#60;O devices).
+To message your full user base with a specific sound, we recommend that you indirectly specify the sound through [notification channel configuration](https://developer.android.com/training/notify-user/channels) (to target O+ devices) and send the individual sound from the dashboard (to target &#60;O devices).
 
 [2]: http://developer.android.com/design/patterns/notifications.html
 [9]: {% image_buster /assets/img_archive/summary_text.png %}

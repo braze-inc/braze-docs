@@ -16,13 +16,13 @@ search_rank: 3
 
 > A push notification is an alert that appears on the user's screen when an important update occurs. Push notifications can be received even when your web page is not currently open in the user's browser. Push notifications are a valuable way to provide your users with time-sensitive and relevant content or to re-engage them with your site. This reference article covers how to integrate Braze web push with the Braze SDK.
 
-Refer to our [push best practices][8] for more resources.
+Refer to our [push best practices]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/) for more resources.
 
-![][27]
+![]({{site.baseurl}}/assets/img_archive/web_push2.png)
 
-Web push notifications are implemented using the [W3C push standard][1], which most major browsers support.
+Web push notifications are implemented using the [W3C push standard](http://www.w3.org/TR/push-api/), which most major browsers support.
 
-For more information on the push protocol standards and browser support, you can review resources from [Apple][5] [Mozilla][6] and [Microsoft][7]
+For more information on the push protocol standards and browser support, you can review resources from [Apple](https://developer.apple.com/notifications/safari-push-notifications/ "Safari Push Notifications") [Mozilla](https://developer.mozilla.org/en-us/docs/web/api/push_api#browser_compatibility "Mozilla Push API browser compatibility") and [Microsoft](https://developer.microsoft.com/en-us/microsoft-edge/status/pushapi/ "Microsoft Push API")
 
 {% multi_lang_include archive/web-v4-rename.md %}
 
@@ -71,21 +71,21 @@ This step is no longer required as of Safari 16 on macOS 13. Only complete this 
 
 If you wish to support push notifications for Safari on Mac OS X, follow these additional instructions:
 
-- Generate a safari push certificate following the [Registering with Apple][3] instructions.
+- Generate a safari push certificate following the [Registering with Apple](https://developer.apple.com/library/mac/documentation/NetworkingInternet/Conceptual/NotificationProgrammingGuideForWebsites/PushNotifications/PushNotifications.html#//apple_ref/doc/uid/TP40013225-CH3-SW33) instructions.
 - In the Braze dashboard, on the **Settings** page (where your API keys are located), select your Web app. Click **Configure Safari Push** and follow the instructions, uploading the push certificate you just generated.
 - When you call `braze.initialize`, supply the optional `safariWebsitePushId` configuration option with the website push ID you used when generating your Safari push certificate. For example `braze.initialize('YOUR-API-KEY', {safariWebsitePushId: 'web.com.example.domain'})`
 
 ## Safari Mobile push {#safari-mobile}
 
-Safari 16.4+ on iOS and iPadOS supports web push for apps that have been [added to the homescreen][add-to-homescreen] and have a [Web Application Manifest][manifest-file] file. After you have completed the steps to integrate web push notifications, you can provide support for mobile push for Safari as well. 
+Safari 16.4+ on iOS and iPadOS supports web push for apps that have been [added to the homescreen](https://support.apple.com/guide/iphone/bookmark-favorite-webpages-iph42ab2f3a7/ios#iph4f9a47bbc) and have a [Web Application Manifest](https://developer.mozilla.org/en-US/docs/Web/Manifest) file. After you have completed the steps to integrate web push notifications, you can provide support for mobile push for Safari as well. 
 
-To support mobile Safari web push, follow our [guide here][safari-mobile-push-guide].
+To support mobile Safari web push, follow our [guide here]({{site.baseurl}}/developer_guide/platform_integration_guides/web/push_notifications/safari_mobile_push/).
 
 ## Soft push prompt
 
 A soft push prompt (also known as a "push primer") helps optimize your opt-in rate when it comes to asking for permission.
 
-Visit [Soft push prompt][push-primer] to learn more about setting up a soft push prompt.
+Visit [Soft push prompt]({{ site.baseurl }}/developer_guide/platform_integration_guides/web/push_notifications/soft_push_prompt/) to learn more about setting up a soft push prompt.
 
 ## HTTPS requirement
 
@@ -108,7 +108,7 @@ This security requirement in the open standards specification that Braze Web pus
 
 ### What if a secure site is not available?
 
-While industry best practice is to make your whole site secure, customers who cannot secure their site domain can work around the requirement by using a secure modal. Read more in our guide to using [Alternate push domain][28] or view a [working demo][4].
+While industry best practice is to make your whole site secure, customers who cannot secure their site domain can work around the requirement by using a secure modal. Read more in our guide to using [Alternate push domain]({{ site.baseurl }}/developer_guide/platform_integration_guides/web/push_notifications/alternate_push_domain) or view a [working demo](http://appboyj.com/modal-test.html).
 
 ## Service worker advanced settings
 

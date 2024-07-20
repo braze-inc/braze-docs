@@ -18,7 +18,7 @@ Before you start, you'll need the following:
 
 | Prerequisite          | Description                                                                                                                              |
 |-----------------------|------------------------------------------------------------------------------------------------------------------------------------------|
-| A Friendbuy account   | A [Friendbuy account][1] is required to take advantage of this partnership.                                                              |
+| A Friendbuy account   | A [Friendbuy account](https://retailer.friendbuy.io/) is required to take advantage of this partnership.                                                              |
 | A Braze REST API key  | A Braze REST API key with `users.track` permissions. This can be created in the Braze dashboard from **Settings** > **API Keys**.        |
 | A Braze REST endpoint | [Your REST endpoint URL]({{site.baseurl}}/developer_guide/rest_api/basics/#endpoints), which depends on the URL for your Braze instance. |
 {: .reset-td-br-1 .reset-td-br-2}
@@ -29,17 +29,17 @@ If you are using the [older navigation]({{site.baseurl}}/navigation), you can cr
 
 ## Integrating Friendbuy
 
-In [Friendbuy][1], go to **Developer Center** > **Integrations**, then on the Braze integration card select **Add integration**.
+In [Friendbuy](https://retailer.friendbuy.io/), go to **Developer Center** > **Integrations**, then on the Braze integration card select **Add integration**.
 
-![The Braze integration card in Friendbuy.][100]{: style="max-width:75%;"}
+![The Braze integration card in Friendbuy.]({% image_buster /assets/img/friendbuy/choosing_braze.png %}){: style="max-width:75%;"}
 
 In the form, enter your REST endpoint and API Key, then select **Install Integration**.
 
-![The Friendbuy integration form.][101]{: style="max-width:55%;"}
+![The Friendbuy integration form.]({% image_buster /assets/img/friendbuy/install_form.png %}){: style="max-width:55%;"}
 
-Go to back to your [Friendbuy account][1] and refresh the page. If your integration was successful, you'll see a message similar to the following:
+Go to back to your [Friendbuy account](https://retailer.friendbuy.io/) and refresh the page. If your integration was successful, you'll see a message similar to the following:
 
-![integration installed][102]{: style="max-width:55%;"}
+![integration installed]({% image_buster /assets/img/friendbuy/install_success.png %}){: style="max-width:55%;"}
 
 ### Custom attributes
 
@@ -62,7 +62,7 @@ Go to back to your [Friendbuy account][1] and refresh the page. If your integrat
 
 Before customer data can be sent to Braze, customers must opt-in through the referral widget by checking one or more boxes of the following boxes:
 
-![referral widget][103]
+![referral widget]({% image_buster /assets/img/friendbuy/referral_widget.png %})
 
 {% alert note %}
 Friendbuy uses the international standard (E.164) to verify real phone numbers. Invalid numbers, such as `555-555-5555`, will not be sent to Braze.

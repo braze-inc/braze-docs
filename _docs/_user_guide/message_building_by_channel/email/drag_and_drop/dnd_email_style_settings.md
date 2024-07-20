@@ -14,13 +14,13 @@ tool:
 
 > With global style settings, you can personalize the look of your email campaigns and Canvases. You can add and customize a default theme for your drag-and-drop editor. This includes editing your styles for email titles, text, buttons, and more. Using a combination of these settings can help create a consistent look across your email messaging.
 
-To edit your global style settings, go to **Settings** > **Email Preferences** > **Drag-and-Drop Email Preferences**. After editing the styles in the drag-and-drop email editor, click **Save**. To further customize your email campaigns and Canvases, check out how you can incorporate [drag-and-drop editor blocks][8].
+To edit your global style settings, go to **Settings** > **Email Preferences** > **Drag-and-Drop Email Preferences**. After editing the styles in the drag-and-drop email editor, click **Save**. To further customize your email campaigns and Canvases, check out how you can incorporate [drag-and-drop editor blocks]({{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/dnd_editor_blocks).
 
 {% alert note %}
 If you are using the [older navigation]({{site.baseurl}}/navigation), this page is located at **Manage Settings** > **Email Settings** > **Drag-and-Drop Email Editor Settings**.
 {% endalert %}
 
-![][1]
+![]({% image_buster /assets/img_archive/dnd_global_style_settings.png %})
 
 {% alert note %}
 Updates made to the global style settings will apply to all future email campaigns and Canvases. 
@@ -30,7 +30,7 @@ Updates made to the global style settings will apply to all future email campaig
 
 For **Basic Styling**, you can set your default email and content background colors for your email campaigns and Canvases. You can also select a default font, add a custom font, and edit link colors.
 
-![Basic styling options that include options to edit the email and content background colors, default font name, and default link color.][2] 
+![Basic styling options that include options to edit the email and content background colors, default font name, and default link color.]({% image_buster /assets/img_archive/dnd_basic_styling.png %}) 
 
 ## Custom font
 
@@ -63,7 +63,7 @@ To use alternative custom fonts in your email campaigns, you have the option to 
 
 Fallback fonts are used for the title, header, and body text when your default font choice isn't supported by the inbox provider or operating system. By default, Braze automatically sets Arial as a fallback font when global style settings are saved. You also have the option of adding serif or sans serif as options for your default font family.
 
-![][11]
+![]({% image_buster /assets/img_archive/dnd_fallbacks.png %})
 
 You can add up to 17 fallback fonts. The first fallback font selected will be the one attempted first. The fallback font will only be applied for newly created templates, email campaigns, and Canvas components. The fallback font isn't automatically set for messages that were created before the fallback font was specified. We highly recommend selecting fallback fonts that are similar to your email messaging to maintain consistency across your branding.
 
@@ -71,7 +71,7 @@ You can add up to 17 fallback fonts. The first fallback font selected will be th
 
 Here, you can adjust the styles of your email titles by editing the font size, font color, and text alignment. This applies to the main header and secondary header. 
 
-![][9]
+![]({% image_buster /assets/img_archive/dnd_title_styling.png %})
 
 Optionally, you can override the default style of your drag-and-drop editor theme. Click **Override default style** to apply your choice of title styling. This can include setting a different font and link color.
 
@@ -79,7 +79,7 @@ Optionally, you can override the default style of your drag-and-drop editor them
 
 To set a default paragraph style, go to the **Paragraph Styling**, enter the **Font Size**, and select **Font Color** to choose a font color. You can also adjust the block styling for the body text by editing the **Padding Top**, **Padding Right**, **Padding Bottom**, and **Padding Left** values. This will apply to the spacing around all four areas surrounding the paragraph block.
 
-![][7]
+![]({% image_buster /assets/img_archive/dnd_paragraph_styling.png %})
 
 ## List styling
 
@@ -99,7 +99,7 @@ When adding lists to your messaging, the **List Styling** section creates consis
 
 You can set the **List Type** to be either numbered or bulleted. The **List Style Type** provides additional customization for the style of your lists. For example, you can set the list types to always be bulleted and for each bullet to be a square.  
 
-![][10]
+![]({% image_buster /assets/img_archive/dnd_list_styling.png %})
 
 ## Button styling
 
@@ -112,7 +112,7 @@ In the **Button Styling** section, you can edit the following default styles for
 - Border weight
 - Button padding
 
-![][12]
+![]({% image_buster /assets/img_archive/dnd_button_styling.png %})
 
 As with all other styling sections, you can adjust the block styling by editing the **Padding Top**, **Padding Right**, **Padding Bottom**, and **Padding Left** values.
 
@@ -120,13 +120,13 @@ As with all other styling sections, you can adjust the block styling by editing 
 
 Using the email template width, you can adjust and set a width for consistency across your email campaigns. 
 
-![][13]
+![]({% image_buster /assets/img_archive/dnd_email_template_width.png %})
 
 ## Content Block width
 
 You can also set the Content Block width in the email drag-and-drop editor. We recommend matching the Content Block width to the email template width.
 
-![][14]
+![]({% image_buster /assets/img_archive/dnd_content_block_width.png %})
 
 
 [1]: {% image_buster /assets/img_archive/dnd_global_style_settings.png %}

@@ -10,7 +10,7 @@ channel:
 
 # Gmail Promotion setup
 
-> The [Gmail mobile Promotions tab][1] allows marketers to send more information via annotations in a "card" rather than just the subject line or preheader information. Braze has a built-in tool to help you build the card from your email campaign.
+> The [Gmail mobile Promotions tab](https://developers.google.com/gmail/promotab/) allows marketers to send more information via annotations in a "card" rather than just the subject line or preheader information. Braze has a built-in tool to help you build the card from your email campaign.
 
 ## Prerequisite
 
@@ -20,10 +20,10 @@ First, forward your domains and subdomains to Google’s Promotions Tab outreach
 
 Follow these steps to build a Gmail promotion card for an email campaign. Note that navigating away from the **Content** section in the editor will reset the fields and information in the **Gmail Promotion** tab. Complete the setup of your promotion card, and copy the HTML generated so you don't lose your HTML code.
 
-1. [Create your email campaign][7], and select the **HTML Editor** as your editing experience.
+1. [Create your email campaign]({{site.baseurl}}/user_guide/message_building_by_channel/email/html_editor/creating_an_email_campaign/), and select the **HTML Editor** as your editing experience.
 2. Go to the **Content** section in the HTML editor, and select the **Gmail Promotion** tab.
-3. Fill out the fields under **Basic Information**, then click **Generate HTML Code**. This will help generate the script for your Gmail Promo Tab card under the **Copy and Paste HTML code into `<Head>`** section. <br> ![An example of how to build a card.][2]
-4. Choose whether to include only a discount offer, promotion cards, or both for your Gmail Promotion card. <br> ![Options to include a discount offer and promotion cards.][10]{: style="max-width:50%;"}
+3. Fill out the fields under **Basic Information**, then click **Generate HTML Code**. This will help generate the script for your Gmail Promo Tab card under the **Copy and Paste HTML code into `<Head>`** section. <br> ![An example of how to build a card.]({% image_buster /assets/img/create-gmail-promo.png %})
+4. Choose whether to include only a discount offer, promotion cards, or both for your Gmail Promotion card. <br> ![Options to include a discount offer and promotion cards.]({% image_buster /assets/img_archive/gmail_promo_discount.png %}){: style="max-width:50%;"}
 5. Copy and paste the script into the `<head>` element of your email's HTML.
 
 {% alert warning %}
@@ -34,13 +34,13 @@ The Promotions script only appears if your email lands in the Gmail Promotions t
 
 Setting up a discount offer allows you to specify the valid dates for a discount. After determining your discount offer, select a start date and time. You have the option of ending your discount offer at a specific time, or selecting to never end it.
 
-![Options to specify the offer value, code, and start date and time for a discount offer.][11]{: style="max-width:50%;"}
+![Options to specify the offer value, code, and start date and time for a discount offer.]({% image_buster /assets/img/gmail_promo_discount_details.png %}){: style="max-width:50%;"}
 
 ### Customizing your product carousel
 
 Promotion cards in your product carousel are helpful to provide images to your offer. You can also customize variables in your product carousel and include up to ten image previews, where each image is unique.
 
-![An example of a product carousel from a company named Motto with the email heading "Our best selling socks are on sale", with three images of socks and their discounted prices.][9]{: style="max-width:40%;"}
+![An example of a product carousel from a company named Motto with the email heading "Our best selling socks are on sale", with three images of socks and their discounted prices.]({% image_buster /assets/img_archive/product_carousel.png %}){: style="max-width:40%;"}
 
 | Customizable Variable | Description |
 |---|---|
@@ -58,7 +58,7 @@ We recommend uploading your product images to the media library, then copy and p
 
 ### Best practices
 
-In general, adhere to these [best practices recommended by Gmail][8]. 
+In general, adhere to these [best practices recommended by Gmail](https://developers.google.com/gmail/promotab/best-practices). 
 
 {% alert tip %}
 While you can use Liquid within this script, we strongly suggest that you test your messaging as much as possible to avoid an error.

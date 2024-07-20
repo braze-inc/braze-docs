@@ -52,7 +52,7 @@ You can activate the Backfill feature only once in your integration.
 
 On the Shopify partner page, select **Start Data Backfill**. For existing Shopify customers, you will need to reauthorize access for Braze to collect all past order events before you can start data backfill.
 
-![][3]{: style="max-width:75%;"}
+![]({% image_buster /assets/img/Shopify/backfill3.png %}){: style="max-width:75%;"}
 
 ### Step 2: Toggle on the backfill of Shopify data
 
@@ -69,13 +69,13 @@ This feature will only sync email and SMS subscription states for new users crea
 
 Once you hit **Next**, the backfill will activate and start syncing over past data. Note that Historical Backfill can only be completed **once**, so you will not be able to run this import again after the data has finished syncing.
 
-![][1]{: style="max-width:75%;"}
+![]({% image_buster /assets/img/Shopify/backfill1.jpg %}){: style="max-width:75%;"}
 
 ### Step 3: Backfill in progress
 
 You will receive a dashboard notification, and your status will display as "In Progress" to indicate the backfill has started. Note that the time it takes for the backfill to finish will depend on how many customers and orders Braze will need to sync over from Shopify. During this time, you can leave this page and wait for a dashboard notification or email to notify you of when the backfill is complete.
 
-![][2]{: style="max-width:75%;"}
+![]({% image_buster /assets/img/Shopify/backfill2.png %}){: style="max-width:75%;"}
 
 ### Step 4: Backfill completed
 You will receive a dashboard notification and an email after the Shopify backfill has been completed. The Shopify partner page will also update the status under Historical Backfill to "Complete".

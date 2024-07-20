@@ -14,7 +14,7 @@ tool:
 
 > Push notifications are wonderful for time-sensitive calls to action, as well as re-engaging users who haven't come into the app in a while. Successful push campaigns drive the user directly to content and demonstrate the value of your app.
 
-To see examples of push notifications, check out our [Case Studies][8].
+To see examples of push notifications, check out our [Case Studies](https://www.braze.com/customers).
 
 ## Step 1: Choose where to build your message {#create-new-campaign-push}
 
@@ -88,7 +88,7 @@ There are a few different ways to do this depending on your previous selections:
 
 If you're creating a quick push campaign, the notification type is automatically set to Standard Push and cannot be changed.
 
-![Notification Type with Standard Push selected as an example.][3]{: style="float:right;max-width:40%;margin-left:15px;"}
+![Notification Type with Standard Push selected as an example.]({% image_buster /assets/img_archive/push_2.png %}){: style="float:right;max-width:40%;margin-left:15px;"}
 
 Otherwise, for iOS and Android, select your notification type:
 
@@ -112,7 +112,7 @@ For more information on platform-specific notification options, see [iOS Notific
 
 #### Language
 
-Add copy in multiple languages using the **Add Languages** button. We recommend selecting your languages before writing your content so you can fill in your text where it belongs in the Liquid. See our [full list of available languages][18].
+Add copy in multiple languages using the **Add Languages** button. We recommend selecting your languages before writing your content so you can fill in your text where it belongs in the Liquid. See our [full list of available languages]({{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/localization/#languages-supported).
 
 #### Title and body
 
@@ -150,7 +150,7 @@ Here, you can also set up button prompts within your push notification, such as:
 
 If a user has your app installed on multiple devices, by default, your push message is sent to all devices with a valid push token assigned. If desired, you can select **Only send this push to the user's most recently used device**.
 
-![Device options checkbox to only send this push to the user's most recently used device.][9]{: style="max-width:70%;" }
+![Device options checkbox to only send this push to the user's most recently used device.]({% image_buster /assets/img_archive/push_recent_device.png %}){: style="max-width:70%;" }
 
 There is some nuance for this setting. If this option is selected, Braze will limit multiple sends from occurring except when a campaign targets multiple platforms, such as both iOS and Android. If the user has your app on both an iOS and an Android device, they will receive a push for both platforms. If a user's most recently used device isn't [push enabled]({{site.baseurl}}/user_guide/message_building_by_channel/push/users_and_subscriptions/#push-enabled), the message will not send.
 
@@ -158,7 +158,7 @@ For iOS, you can further limit messaging by only sending push notifications to i
 
 ### Step 4a: Preview and test your message
 
-![Test push message][7]{: style="float:right;max-width:30%;margin-left:15px;"}
+![Test push message]({% image_buster /assets/img_archive/push_3.png %}){: style="float:right;max-width:30%;margin-left:15px;"}
 
 Testing is arguably one of the most critical steps. After you finish composing your perfect push message, test it before sending it out. Select the **Test** tab and use **Preview Message as User** to get a sense of how your message may view on mobile. Use **Send Test** to send yourself a test push and ensure that your message displays properly.
 

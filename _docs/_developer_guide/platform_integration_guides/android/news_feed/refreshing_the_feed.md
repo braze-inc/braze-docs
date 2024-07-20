@@ -25,7 +25,7 @@ You can queue a manual refresh of the Braze News Feed at any time by calling:
 Braze.requestFeedRefresh()
 ```
 
-Refer to our [KDoc][16] for more information.
+Refer to our [KDoc](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-i-braze/request-feed-refresh.html) for more information.
 
 
 [16]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-i-braze/request-feed-refresh.html

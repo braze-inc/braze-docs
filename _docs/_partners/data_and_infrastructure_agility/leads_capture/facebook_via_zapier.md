@@ -23,7 +23,7 @@ Facebook Lead Ads is an ad format that allows businesses to collect lead informa
 | <a href="https://www.facebook.com/business/help/1710077379203657?id=180505742745347" target="_blank">Facebook Business Manager</a> | You will use Facebook Business Manager, a centralized tool to manage your brand’s Facebook assets (for example, ad accounts, pages, and apps), as part of this integration. |
 | <a href="https://www.facebook.com/business/help/195296697183682?id=829106167281625/" target="_blank">Facebook ad account</a> | You will need an active Facebook ad account tied to your brand’s business manager. <br><br>Ensure that you have the "Manage ad accounts" permission for each ad account you plan to use with Braze, and that you have accepted your ad account terms and conditions. |
 | <a href="https://www.facebook.com/business/help/183277585892925?id=420299598837059/" target="_blank">Facebook Page</a> | You will need an active Facebook Page tied to your brand’s business manager. <br><br>Ensure that you have the "Manage Pages" permissions for each Facebook Page you plan to use with Braze. |
-| Braze REST endpoint | Ensure you know your [REST endpoint URL][1]. Your API endpoint matches the dashboard URL for your Braze instance. <br><br> For example, if your dashboard URL is `https://dashboard-03.braze.com`, your endpoint will be `dashboard-03`. |
+| Braze REST endpoint | Ensure you know your [REST endpoint URL]({{site.baseurl}}/api/basics/#api-definitions). Your API endpoint matches the dashboard URL for your Braze instance. <br><br> For example, if your dashboard URL is `https://dashboard-03.braze.com`, your endpoint will be `dashboard-03`. |
 | Braze REST API key | Ensure you have a Braze REST API key with `users.track` permissions. <br><br> This can be created in the Braze dashboard from **Settings** > **API Keys**. |
 {: .reset-td-br-1 .reset-td-br-2}
 
@@ -46,13 +46,13 @@ For more information on these two methods of connecting your Facebook account to
 - <a href="https://help.zapier.com/hc/en-us/articles/8496123584781-How-to-get-started-with-Facebook-Lead-Ads-for-Business-Admins-on-Zapier#h_01HC9VZFZG0GR2KRYM5EQJN329" target="_blank">Facebook Lead Ads (for Business Admins)</a>
 - <a href="https://help.zapier.com/hc/en-us/articles/8496061306253#h_01HC9VMZ2XP0017AR6SE7S30JG" target="_blank">Facebook Lead Ads</a>
 
-![][2]{: style="max-width:80%;"}
+![]({% image_buster /assets/img/fb_lead_ads_zapier/integration1.png %}){: style="max-width:80%;"}
 
 #### Step 2b: Add Zapier to Leads Access in Facebook Business Manager
 
 In your Facebook Business Manager, go to **Integrations** > **Leads Access** on the left-hand menu. Select your Facebook Page, then click **CRMs**. On the CRM tab, select **Assign CRMs** and add **Zapier**.
 
-![][3]{: style="max-width:80%;"}
+![]({% image_buster /assets/img/fb_lead_ads_zapier/integration2.png %}){: style="max-width:80%;"}
 
 For steps to assign Zapier as a CRM integration, refer to Facebook's <a href="https://www.facebook.com/business/help/540596413257598?id=735435806665862" target="_blank">documentation</a>.
 
@@ -62,19 +62,19 @@ For steps to assign Zapier as a CRM integration, refer to Facebook's <a href="ht
 
 Once you have connected your Facebook account, you can proceed to create a Zap. For the **Trigger**, select **Facebook Lead Ads** or **Facebook Lead Ads (for Business Admins)** based on your choice from step 2. 
 
-![][4]{: style="max-width:80%;"}
+![]({% image_buster /assets/img/fb_lead_ads_zapier/create_zap1.png %}){: style="max-width:80%;"}
 
 For the **Event**, select **New Leads** > **Continue**. 
 
-![][5]{: style="max-width:80%;"}
+![]({% image_buster /assets/img/fb_lead_ads_zapier/create_zap2.png %}){: style="max-width:80%;"}
 
 Select your Facebook account, then **Continue**. 
 
-![][6]{: style="max-width:80%;"}
+![]({% image_buster /assets/img/fb_lead_ads_zapier/create_zap3.png %}){: style="max-width:80%;"}
 
 Select your Facebook Page and instant form you previously created, then **Continue**.
 
-![][7]{: style="max-width:80%;"}
+![]({% image_buster /assets/img/fb_lead_ads_zapier/create_zap4.png %}){: style="max-width:80%;"}
 
 Next, test this trigger. After validating your form output, select **Continue with selected record**.
 
@@ -82,7 +82,7 @@ Next, test this trigger. After validating your form output, select **Continue wi
 
 Add a new step, then select **Webhooks by Zapier**. Next, select **Custom Request** for the **Event** field, then click **Continue**. 
 
-![][8]{: style="max-width:80%;"}
+![]({% image_buster /assets/img/fb_lead_ads_zapier/create_zap5.png %}){: style="max-width:80%;"}
 
 Lastly, set up your custom request by inserting fields in your payload. The following code snippet shows an example payload. 
 
@@ -118,7 +118,7 @@ Lastly, set up your custom request by inserting fields in your payload. The foll
 
 Here's an example of what this looks like in Zapier:
 
-![][9]{: style="max-width:80%;"}
+![]({% image_buster /assets/img/fb_lead_ads_zapier/configuration_example.png %}){: style="max-width:80%;"}
 
 After configuring your webhook, select **Continue and test**. If the test is successful, you can publish your Zap.
 

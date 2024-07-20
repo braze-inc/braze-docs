@@ -16,7 +16,7 @@ Testing behavior within your own application versus expected behavior and codepa
 
 ## Navigating examples
 
-Several test applications are available within the `Examples` folder of the [Swift SDK GitHub repository][1]. The README describes all of the different permutations of sample integrations, such as:
+Several test applications are available within the `Examples` folder of the [Swift SDK GitHub repository](https://github.com/braze-inc/braze-swift-sdk/tree/main/Examples). The README describes all of the different permutations of sample integrations, such as:
 
 1. Integration types (Swift Package Manager, CocoaPods, Manual)
 2. Coding languages (Swift and Objective-C)
@@ -28,7 +28,7 @@ Several test applications are available within the `Examples` folder of the [Swi
 
 Follow these instructions to build and run our test applications.
 
-1. Create a new [workspace][2] and note the app identifier API key and endpoint.
+1. Create a new [workspace]({{site.baseurl}}/developer_guide/platform_wide/app_group_configuration/#creating-your-app-group-in-my-apps) and note the app identifier API key and endpoint.
 2. Based on your integration method (Swift Package Manager, CocoaPods, Manual), select the appropriate `xcodeproj` file to open.
 3. Place your API key and your endpoint within the appropriate field in the `Credentials` file.
 

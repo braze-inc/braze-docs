@@ -10,7 +10,7 @@ channel: push
 
 # Push primer in-app messages
 
-![Push primer in-app message for streaming app. The notification reads "Get push notifications from Movie Cannon? Notifications may include new movies, TV shows, or other notices and can be turned off at any time."][1]{: style="float:right;max-width:40%;margin-left:15px;border:none;"}
+![Push primer in-app message for streaming app. The notification reads "Get push notifications from Movie Cannon? Notifications may include new movies, TV shows, or other notices and can be turned off at any time."]({% image_buster /assets/img_archive/push_primer_iam.png %}){: style="float:right;max-width:40%;margin-left:15px;border:none;"}
 
 > You only get one chance to ask users for push permission, so optimizing your push registration is crucial to maximize the reach of your push messages. To help achieve this, you can use in-app messages to explain what type of messages your users can expect to receive if they choose to opt in, before showing them the native push prompt. This is referred to as a push primer.
 
@@ -69,7 +69,7 @@ android.permission.POST_NOTIFICATIONS
 
 ## Step 1: Create an in-app message
 
-[Create an in-app message][2] as you usually would.
+[Create an in-app message]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/create/) as you usually would.
 
 Select a message type and layout. To give you enough space to explain what push notifications your users can expect (and to allow for buttons), Braze suggests either a full screen or modal message. Note that for a fullscreen in-app message, an image is required. 
 
@@ -85,7 +85,7 @@ While a streaming app might use the following:
 
 > Get push notifications from Movie Cannon? Notifications may include new movies, TV shows, or other notices and can be turned off at any time.
 
-For best practices and additional resources, refer to [Creating custom opt-in prompts][3].
+For best practices and additional resources, refer to [Creating custom opt-in prompts]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/creating_custom_opt-in_prompts/).
 
 ## Step 3: Specify button behavior {#button-actions}
 
@@ -96,7 +96,7 @@ After you've added button copy, specify the on-click behavior for each button:
 - **Button 1:** Set this to "Close Message". This is your secondary button, or the "Not now" option.
 - **Button 2:** Set this to "Request Push Permission". This is your primary button, or the "Allow notifications" option.
 
-![][4]
+![]({% image_buster /assets/img_archive/push_primer_button_behavior.png %})
 
 ## Step 4: Schedule delivery
 
@@ -104,7 +104,7 @@ To set your push primer to send at a relevant time, you must schedule your in-ap
 
 While the ideal time will vary, Braze suggests waiting until a user completes some sort of [high-value action](https://www.braze.com/resources/videos/mapping-high-value-actions), indicating that they're starting to see value in your app or site, or when there's a compelling need that push notifications can address (such as after they've placed an order and you want to offer them shipping tracking information). This way, the prompt is beneficial to the customer rather than only to your brand.
 
-![][5]
+![]({% image_buster /assets/img_archive/push_primer_trigger.png %})
 
 ## Step 5: Target users
 

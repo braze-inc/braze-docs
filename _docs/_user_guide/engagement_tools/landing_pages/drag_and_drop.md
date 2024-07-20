@@ -21,7 +21,7 @@ Landing pages are currently in beta. Contact your Braze account manager if you'r
 
 Go to **Messaging** > **Landing Pages** and select **Create landing page**, or select the name of an existing one to duplicate it or make changes to it.
 
-![The "Landing Pages" homepage.][2]{: style="max-width:90%;"}
+![The "Landing Pages" homepage.]({% image_buster /assets/img/landing_pages/create.png %}){: style="max-width:90%;"}
 
 ### Step 2: Set up your landing page details
 
@@ -51,19 +51,19 @@ Custom subdomain support is not available during the beta.
 
 Select **Launch Editor** to start designing your landing page in the drag-and-drop editor. The editor will preload with a default template that you can customize to fit your use case.
 
-![Landing page template with a form for customer sign-up.][8]{: style="max-width:90%;"}
+![Landing page template with a form for customer sign-up.]({% image_buster /assets/img/landing_pages/template.png %}){: style="max-width:90%;"}
 
 #### Drag-and-drop blocks
 
 The editor uses two types of components for landing page composition: rows and blocks. All blocks must be placed in a row.
 
-![The "Build" editor section containing "Rows" and "Form Blocks".][4]{: style="max-width:30%;"}
+![The "Build" editor section containing "Rows" and "Form Blocks".]({% image_buster /assets/img/landing_pages/dnd.png %}){: style="max-width:30%;"}
 
 #### Form block
 
 If you include a form block, you must include at least one button with the toggle turned on for **Submit form when button is clicked**. You should also create another landing page for the [confirmation state](#confirmation-state).
 
-![A form block that registers a new customer and will send a discount code to their email.][5]{: style="max-width:70%;"}
+![A form block that registers a new customer and will send a discount code to their email.]({% image_buster /assets/img/landing_pages/form.png %}){: style="max-width:70%;"}
 
 #### Page container styles
 
@@ -71,13 +71,13 @@ You can set styles to be applied across all relevent component blocks in your la
 
 We recommend setting up page container-level styles before you customize styles at the block level. You can also add a background image for the entire page.
 
-![The page container with options to customize background images, colors, border details, and content styling.][6]{: style="max-width:30%;"}
+![The page container with options to customize background images, colors, border details, and content styling.]({% image_buster /assets/img/landing_pages/page_container.png %}){: style="max-width:30%;"}
 
 ### Step 4: Preview your landing page
 
 You can preview your landing page in the editor's **Preview** tab, but testing functionality is disabled for the beta. After saving your landing page as a draft, you can visit the URL by going to **Landing Pages** and selecting **Copy URL** next to your landing page. You can also share the URL with collaborators.
 
-![A landing page with the menu open to show the "Copy URL" option.][7]{: style="max-width:90%;"}
+![A landing page with the menu open to show the "Copy URL" option.]({% image_buster /assets/img/landing_pages/url_handle.png %}){: style="max-width:90%;"}
 
 After you're satisfied with the landing page, select **Publish Landing Page**.
 

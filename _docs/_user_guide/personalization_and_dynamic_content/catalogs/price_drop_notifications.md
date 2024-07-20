@@ -31,7 +31,7 @@ Follow these steps to set up price drop notifications in a specific catalog.
 1. Go to your catalog and select the **Settings** tab.<br>
 2. Select the **Price Drop** toggle.<br>
 3. If the global catalog settings have not been configured, you will be prompted to set up the custom events and properties that will be used to trigger notifications:
-    <br> ![Catalog settings drawer.][2]{: style="max-width:70%;"}
+    <br> ![Catalog settings drawer.]({% image_buster /assets/img/catalog_settings_drawer.png %}){: style="max-width:70%;"}
     - **Custom event for subscribing:** The Braze custom event used to subscribe a user for catalog notifications. When this event occurs, the user who performed the event will be subscribed.
     - **Custom event for unsubscribing:** The Braze custom event used to unsubscribe a user from notifications.
     - **Item ID event property:** The property on the above custom event used to determine the item for a subscription or unsubscription. This property on the custom event should contain an item ID that exists in a catalog. The custom event must contain a `catalog_name` property to specify which catalog this item is in.
@@ -62,7 +62,7 @@ Follow these steps to set up price drop notifications in a specific catalog.
 7. Set the **Price drop rule**. This is the logic used to determine if a notification should be sent. A price drop can be configured as a percentage price change or how much value the price field has changed by.<br>
 8. Select **Save settings**.
 
-![Catalog settings that show the price drop feature turned on. The price drop rule is a change of three percent to the original price.][1]{:style="max-width:60%;"}
+![Catalog settings that show the price drop feature turned on. The price drop rule is a change of three percent to the original price.]({% image_buster /assets/img/price_drop_notifications.png %}){:style="max-width:60%;"}
 
 {% alert important %}
 Notification rules in these settings do not replace Canvas notification settings, such as Quiet Hours.

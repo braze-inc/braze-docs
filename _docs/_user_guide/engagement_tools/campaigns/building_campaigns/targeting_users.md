@@ -9,7 +9,7 @@ description: "This reference article covers the Targeting Options found in the T
 
 # Targeting users
 
-> After you have [composed your campaign][1] and determined your [delivery schedule][2], you can set the target recipients of your campaign on the **Target Audiences** step. 
+> After you have [composed your campaign]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/creating_campaign/) and determined your [delivery schedule]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/), you can set the target recipients of your campaign on the **Target Audiences** step. 
 
 ## Targeting options
 
@@ -31,13 +31,13 @@ To target users that fall into multiple previously created segments, add multipl
 
 You can also target users of one or more previously created segments that also fall under additional filters. After first selecting your segments, you can further refine your audience under the **Additional Filters** section. This is demonstrated in the following screenshot, which targets users that are in the Daily Active Users segment, Not Open Emails segment, and made a purchase less than 30 days ago.
 
-![][25]
+![]({% image_buster /assets/img_archive/target_segmenter.png %})
 
 ### Target users without segments {#without-segment}
 
 To target users without adding a segment, you can use a series of filters. This means you do not need to target a campaign at a pre-existing segment, you can make an impromptu audience during campaign creation by just using the additional filters, and not selecting any segments under **Target Users By Segment**. This will allow you to skip segment creation when sending campaigns to one-off audiences.
 
-![][26]
+![]({% image_buster /assets/img_archive/additional_filters.png %})
 
 ## Targeting Seed Groups
 
@@ -51,15 +51,15 @@ After adding segments and filters to your audience, you can test if your audienc
 
 ## Audience summary
 
-Once you have added segments or filters to fine tune your audience, the **Audience Summary** will show an overview of who is in your target audience. Here, you can further limit your campaign audience by setting a maximum user cap, or [rate-limiting][3] delivery speed. For email and push notification campaigns, you can select which subscription and opt-in status to target.
+Once you have added segments or filters to fine tune your audience, the **Audience Summary** will show an overview of who is in your target audience. Here, you can further limit your campaign audience by setting a maximum user cap, or [rate-limiting]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/rate-limiting/) delivery speed. For email and push notification campaigns, you can select which subscription and opt-in status to target.
 
-![][27]
+![]({% image_buster /assets/img_archive/audience_summary.png %})
 
 ## A/B testing
 
 Under the **A/B Testing** section, you can set up a test to compare users' responses to multiple versions of the same marketing campaign. These versions share similar marketing goals but differ in wording and style. The objective is to identify the version of the campaign that best accomplishes your marketing goals. 
 
-For more information and best practices, refer to [Multivariate & A/B Testing][4].
+For more information and best practices, refer to [Multivariate & A/B Testing]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/).
 
 ## Audience statistics
 
@@ -69,7 +69,7 @@ For campaigns, select **Calculate Exact Statistics** to determine an accurate nu
 
 For segments, the larger your user base is, the more likely the **Reachable Users** amount is a rough estimate. For more details, refer to [Calculating exact statistics]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment#calculating-exact-statistics).
 
-![][24]
+![]({% image_buster /assets/img_archive/multi_channel_footer.png %})
 
 In order to see what percentage of your user base is being targeted or the Lifetime Value (LTV) for this segment, click **Show Additional Stats** located after the statistics footer.
 

@@ -20,7 +20,7 @@ Once you implement this prompt, Braze stops automatically tracking impressions, 
 
 Creating a campaign to ask users for an App Store review is a popular usage of in-app messages.
 
-Start by setting the [in-app message delegate][30] in your app. Next, implement the following delegate method to disable the default App Store review message:
+Start by setting the [in-app message delegate](#in-app-message-controller-delegate) in your app. Next, implement the following delegate method to disable the default App Store review message:
 
 {% tabs %}
 {% tab OBJECTIVE-C %}

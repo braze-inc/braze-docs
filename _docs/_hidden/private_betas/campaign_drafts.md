@@ -12,7 +12,7 @@ page_type: reference
 
 If you have a campaign that requires large-scale changes, you can create a draft for these edits.
 
-![A draft of an active campaign with an option to view the active campaign.][1]
+![A draft of an active campaign with an option to view the active campaign.]({% image_buster /assets/img/campaign_draft.png %})
 
 You can create drafts within an active campaign to build, save, and quality-check prior to launching these changes in the active campaign. These drafts don't have any analytics since the draft changes aren't launched yet. A campaign can only have one draft at a time.
 

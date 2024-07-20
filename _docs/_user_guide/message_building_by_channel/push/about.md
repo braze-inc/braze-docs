@@ -15,9 +15,9 @@ channel:
 
 Keep in mind that users need to opt-in to push to receive your messages, which means it's a good idea to use in-app messages to explain to your customers why you want to send them push notifications, and how enabling push will benefit them. This process is called [push priming]({{site.baseurl}}/user_guide/message_building_by_channel/push/ios/create_push_primer/).
 
-![Push message example across Apple products.][1]{: height="400px"}  ![Push message example from Stopwatch on an iPhone home screen that reads: "Hello! This is an iOS Push".][2]{: height="400px"}
+![Push message example across Apple products.]({% image_buster /assets/img/red-dress.gif %}){: height="400px"}  ![Push message example from Stopwatch on an iPhone home screen that reads: "Hello! This is an iOS Push".]({% image_buster /assets/img/ios_push.png %}){: height="400px"}
 
-To see more examples of push notifications, check out our [Case Studies][8].
+To see more examples of push notifications, check out our [Case Studies](https://www.braze.com/customers).
 
 ## Potential use cases
 
@@ -31,7 +31,7 @@ Push notifications are a great tool for attracting new users and making re-engag
 | Time Sensitive Offers | If you have a clock ticking on an offer, sometimes push is a great way to let your users know about it before it expires. These messages generally carry a high sense of urgency and are optimal for reminding recently-lapsed users about your app.<br><br> For example, suppose your app is a game and you offer your users an in-game currency bonus if they maintain a streak of playing the game daily. Alerting a user that that streak is in danger of being broken could be a reasonable push if they've exceeded a certain number of days. |
 {: .reset-td-br-1 .reset-td-br-2}
 
-For more information on re-engaging lapsed users, see our [Quick Wins][23] page on the topic.
+For more information on re-engaging lapsed users, see our [Quick Wins]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/capturing_lapsing_users/#capturing-lapsing-users) page on the topic.
 
 ## Prerequisites to use push
 
@@ -53,13 +53,13 @@ Your push messages must fall within the guidelines of the Apple App Store and Go
 
 |Apple App Store Policies|
 |---|
-|[4.5.4][7] Push Notifications must not be required for the app to function, and should not be used for advertising, promotions, or direct marketing purposes or to send sensitive personal or confidential information.|
-|[3.2.2][9] (i) Creating an interface for displaying third-party apps, extensions, or plug-ins similar to the App Store or as a general-interest collection. (ii) Monetizing built-in capabilities provided by the hardware or operating system, such as push notifications, the camera, or the gyroscope; or Apple services, such as Apple Music access or iCloud storage.|
+|[4.5.4](https://developer.apple.com/app-store/review/guidelines/#apple-sites-and-services) Push Notifications must not be required for the app to function, and should not be used for advertising, promotions, or direct marketing purposes or to send sensitive personal or confidential information.|
+|[3.2.2](https://developer.apple.com/app-store/review/guidelines/#unacceptable) (i) Creating an interface for displaying third-party apps, extensions, or plug-ins similar to the App Store or as a general-interest collection. (ii) Monetizing built-in capabilities provided by the hardware or operating system, such as push notifications, the camera, or the gyroscope; or Apple services, such as Apple Music access or iCloud storage.|
 {: .reset-td-br-1 .reset-td-br-2}
 
 |Google Play Store Policy|
 |---|
-|[Unauthorized Use or Imitation of System Functionality][10] We don't allow apps or ads that mimic or interfere with system functionality, such as notifications or warnings. System-level notifications may only be used for an app's integral features, such as an airline app that notifies users of special deals, or a game that notifies users of in-game promotions.|
+|[Unauthorized Use or Imitation of System Functionality](https://developers.google.com/android/play-protect/mobile-unwanted-software#muws-categories) We don't allow apps or ads that mimic or interfere with system functionality, such as notifications or warnings. System-level notifications may only be used for an app's integral features, such as an airline app that notifies users of special deals, or a game that notifies users of in-game promotions.|
 {: .reset-td-br-1}
 
 [1]: {% image_buster /assets/img/red-dress.gif %}

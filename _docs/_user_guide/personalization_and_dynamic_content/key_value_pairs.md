@@ -53,7 +53,7 @@ The Braze message composer automatically handles the creation of the following k
 
 These values can be input in the **Settings** tab when building a push message. Select **Alert Options** and select an alert dictionary key for the key to be automatically populated in a new key-value entry.
 
-![][16]
+![]({% image_buster /assets/img_archive/keyvalue_automatickeys.png %})
 {% raw %}
 When Braze sends a push notification to APNs, the payload will be formatted as a JSON.
 
@@ -88,9 +88,9 @@ When Braze sends a push notification to APNs, the payload will be formatted as a
 
 In addition to the ```aps``` library payload values, you may send custom key-value pairs to a user's device. The values in these pairs are restricted to primitive types: dictionary (object), array, string, number, and Boolean.
 
-![][17]
+![]({% image_buster /assets/img_archive/keyvalue_enterpairs.png %})
 
-Use-cases for custom key-value pairs include but are not limited to internal metrics keeping and setting the context for the user interface. Braze allows you to send additional key-value pairs along with a push notification to be used however you so via your application within the [extras key][1]. If you prefer to use another key, ensure that your app can handle this custom key.
+Use-cases for custom key-value pairs include but are not limited to internal metrics keeping and setting the context for the user interface. Braze allows you to send additional key-value pairs along with a push notification to be used however you so via your application within the [extras key]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/customization/advanced_settings/#extracting-data-from-push-key-value-pairs). If you prefer to use another key, ensure that your app can handle this custom key.
 
 {% alert warning %}
 You should avoid handling a top-level key or dictionary called ab in your application.
@@ -126,15 +126,15 @@ Braze allows you to send custom-defined string key-value pairs, known as `extras
 
 ##### FCM messaging options
 
-Android push notifications can be further customized with FCM message options. These include [notification priority][8], [sound][10], delay, lifespan, and collapsibility. These values can be specified in the **Settings** tab when creating a push message. Refer to [Advanced push notification settings][7] for further instructions on how to set these options in the Braze message composer.
+Android push notifications can be further customized with FCM message options. These include [notification priority]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/customization/advanced_settings/#notification-priority), [sound]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/customization/advanced_settings/#sounds), delay, lifespan, and collapsibility. These values can be specified in the **Settings** tab when creating a push message. Refer to [Advanced push notification settings]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/customization/advanced_settings/) for further instructions on how to set these options in the Braze message composer.
 
-![][18]
+![]({% image_buster /assets/img_archive/keyvalue_androidkeys.png %})
 
 ### Silent push notifications
 
-A silent push notification is a push notification containing no alert message or sound, used to update your app's interface or content in the background. These notifications make use of key-value pairs to trigger these background app actions. Silent push notifications also power our [uninstall tracking][4].
+A silent push notification is a push notification containing no alert message or sound, used to update your app's interface or content in the background. These notifications make use of key-value pairs to trigger these background app actions. Silent push notifications also power our [uninstall tracking]({{site.baseurl}}/user_guide/data_and_analytics/tracking/uninstall_tracking/).
 
-Marketers should test that silent push notifications trigger expected behavior before sending them to their app's users. After you compose your [iOS][2] or [Android][13] silent push notification, ensure that you only target a test user by filtering on [external user ID][14] or [email address][15].
+Marketers should test that silent push notifications trigger expected behavior before sending them to their app's users. After you compose your [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/silent_push_notifications/) or [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/silent_push_notifications/) silent push notification, ensure that you only target a test user by filtering on [external user ID]({{site.baseurl}}/developer_guide/rest_api/messaging/#external-user-id) or [email address]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/).
 
 Upon campaign launch, you should check that you have not received any visible push notification on your test device.
 
@@ -146,7 +146,7 @@ The iOS operating system may [gate notifications]({{site.baseurl}}/developer_gui
 
 To add a key-value pair to an in-app message, select the **Settings** tab in the message composer, click **Add New Pair**, and specify your key-value pairs.
 
-![][21]
+![]({% image_buster /assets/img_archive/keyvalue_iam.png %})
 
 #### API-triggered campaigns
 
@@ -154,19 +154,19 @@ Braze allows you to send custom-defined string key-value pairs, known as `extras
 
 ## Emails
 
-Both SparkPost and SendGrid support key-value pairs in emails. If you use SendGrid, key-value pairs will be sent as [unique arguments][11]. SendGrid allows you to attach an unlimited number of key-value pairs up to 10,000 bytes of data. These key-value pairs can be seen in posts from the SendGrid [Event Webhook][12].
+Both SparkPost and SendGrid support key-value pairs in emails. If you use SendGrid, key-value pairs will be sent as [unique arguments](https://docs.sendgrid.com/for-developers/sending-email/unique-arguments). SendGrid allows you to attach an unlimited number of key-value pairs up to 10,000 bytes of data. These key-value pairs can be seen in posts from the SendGrid [Event Webhook](https://sendgrid.com/docs/for-developers/tracking-events/event/).
 
 {% alert note %}
 Bounced emails will not deliver key-value pairs to SparkPost or SendGrid.
 {% endalert %}
 
-![Sending Info tab of the email message composer in Braze.][22]
+![Sending Info tab of the email message composer in Braze.]({% image_buster /assets/img_archive/keyvalue_email.png %})
 
 ## Content Cards
 
 To add a key-value pair to a Content Card, go to the **Settings** tab in the Braze message composer and click **Add New Pair**.
 
-![Add key-value pair to Content Card][24]{: style="max-width:70%;"}
+![Add key-value pair to Content Card]({% image_buster /assets/img_archive/kvp_content_cards.png %}){: style="max-width:70%;"}
 
 
 [1]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/customization/advanced_settings/#extracting-data-from-push-key-value-pairs

@@ -45,7 +45,7 @@ The AI Query Builder leverages [GPT](https://openai.com/gpt-4), powered by OpenA
 The AI Query Builder is currently available as a beta feature. Contact your customer success manager if you’re interested in participating in this beta trial.
 {% endalert %}
 
-![][2]{: style="max-width:60%;" }
+![]({% image_buster /assets/img_archive/query_builder_ai_tab.png %}){: style="max-width:60%;" }
 
 To use the AI Query Builder, do the following:
 
@@ -118,7 +118,7 @@ Your query may fail for any of the following reasons:
 
 Variables allow you to use predefined variable types in SQL to reference values without needing to manually copy the value. For example, instead of manually copying a campaign's ID to the SQL editor, you can use {% raw %}`{{campaign.${My campaign}}}`{% endraw %} to directly select a campaign from a dropdown in the **Variables** tab.
 
-![][3]
+![]({% image_buster /assets/img_archive/sql_variables_panel.png %})
 
 After a variable is created, it will appear in the **Variables** tab of your Query Builder report. Benefits of using SQL variables include:
 
@@ -157,7 +157,7 @@ The following variable types are accepted:
 
 #### Date range
 
-![][4]{: style="max-width:50%;"}
+![]({% image_buster /assets/img_archive/query_builder_time_range.png %}){: style="max-width:50%;"}
 
 If both `start_date` and `end_date` are being used, they must have the same name so you can use them as a date range.
 
@@ -184,7 +184,7 @@ All four types are shown if both `start_date` and `end_date` are used with the s
 
 All messaging variables must share the same identifier when you want to tie their state together in one group.
 
-![][5]{: style="max-width:50%;"}
+![]({% image_buster /assets/img_archive/sql_variables_canvases.png %}){: style="max-width:50%;"}
 
 ##### Canvas
 
@@ -359,7 +359,7 @@ For whether the select dropdown allows a single or multi-select. For now, you ca
 
 **Usage example:** `is_multi_select: ‘true’`
 
-![][7]{: style="max-width:50%;"}
+![]({% image_buster /assets/img_archive/sql_variables_productname.png %}){: style="max-width:50%;"}
 
 #### Radio button
 
@@ -367,7 +367,7 @@ For showing options as radio buttons instead of a select dropdown in the **Varia
 
 **Usage example:** `is_radio_button: ‘true’`
 
-![][6]{: style="max-width:50%;"}
+![]({% image_buster /assets/img_archive/sql_variables_campaigns.png %}){: style="max-width:50%;"}
 
 #### Options 
 
@@ -430,7 +430,7 @@ Credit usage is correlated to the run time of your SQL query. The longer the run
 
 Credits are not used when writing, editing, or saving reports within the Braze SQL editor. Your credits will reset to 5 on the first of each month at 12 am UTC. You can monitor your monthly credit usage at the top of the Query Builder page.
 
-![Query Builder showing the amount of credits used in the current month.][1]{: style="max-width:60%;"}
+![Query Builder showing the amount of credits used in the current month.]({% image_buster /assets/img_archive/query_builder_credits.png %}){: style="max-width:60%;"}
 
 When you reach the credit cap, you cannot run queries, but you can create, edit, and save SQL reports. If you want to purchase more Query Builder credits, please get in touch with your account manager.
 

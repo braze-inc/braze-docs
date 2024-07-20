@@ -163,7 +163,7 @@ See the [iOS integration instructions]({{site.baseurl}}/developer_guide/platform
 
 ## Location tracking
 
-For an example of logging and tracking analytics, refer to our [Android MAUI][4] and [iOS MAUI][5] sample applications.
+For an example of logging and tracking analytics, refer to our [Android MAUI](https://github.com/braze-inc/braze-xamarin-sdk/blob/master/appboy-component/samples/android-net-maui/BrazeAndroidMauiSampleApp/BrazeAndroidMauiSampleApp/MainActivity.cs) and [iOS MAUI](https://github.com/braze-inc/braze-xamarin-sdk/blob/master/appboy-component/samples/ios-net-maui/BrazeiOSMauiSampleApp/BrazeiOSMauiSampleApp/MainPage.xaml.cs) sample applications.
 
 {% tabs %}
 {% tab android %}

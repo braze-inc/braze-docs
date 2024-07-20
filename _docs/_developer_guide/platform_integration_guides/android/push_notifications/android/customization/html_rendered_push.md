@@ -15,7 +15,7 @@ channel:
 
 In Braze SDK version 3.1.1, HTML can be sent to a device to render multiplier text in push notifications.
 
-![An Android push message "Multicolor Push test message" where the letters are different colors, italicized and given a background color.][1]{: style="max-width:40%;"}
+![An Android push message "Multicolor Push test message" where the letters are different colors, italicized and given a background color.]({% image_buster /assets/img/multicolor_android_push.png %}){: style="max-width:40%;"}
 
 This example is rendered with the following HTML:
 
@@ -45,7 +45,7 @@ Add the following in your `braze.xml`:
 
 **OR** 
 
-Add the following in your [`BrazeConfig`][2]:
+Add the following in your [`BrazeConfig`]({{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/runtime_configuration/#runtime-configuration):
 
 {% tabs %}
 {% tab JAVA %}

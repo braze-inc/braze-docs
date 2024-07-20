@@ -85,15 +85,15 @@ From **Templates & Media**, go to **Webhook Templates** and choose the **Faceboo
 
 Before you send your message, test your webhook. Make sure your Messenger ID is saved in Braze (or find it and test as a customized user), and use the preview to send the test message:
 
-![Test tab in the Facebook Messenger webhook template showing you can preview the message by sending it to an existing user.][60]
+![Test tab in the Facebook Messenger webhook template showing you can preview the message by sending it to an existing user.]({% image_buster /assets/img_archive/fbm-test.png %})
 
 If you receive the message successfully, you can configure its delivery settings.
 
 ## Using this integration
 
-Once set up, use this integration to target Facebook Messenger users. If you are not sending messages using users' phone numbers and plan on sending Messenger messages repeatedly, you should [create a segment][62] for all users for whom the Messenger ID exists as a custom attribute and turn on [analytics tracking][61] to track your Messenger subscription rates over time. 
+Once set up, use this integration to target Facebook Messenger users. If you are not sending messages using users' phone numbers and plan on sending Messenger messages repeatedly, you should [create a segment]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/#creating-a-segment) for all users for whom the Messenger ID exists as a custom attribute and turn on [analytics tracking]({{site.baseurl}}/user_guide/data_and_analytics/reporting/viewing_and_understanding_segment_data/) to track your Messenger subscription rates over time. 
 
-![Segment filter "messenger_id" set to "is not blank".][63]
+![Segment filter "messenger_id" set to "is not blank".]({% image_buster /assets/img_archive/fbm-segmentation.png %})
 
 If you choose not to create a specific segment for Messenger subscribers, make sure to include a filter for Messenger ID existing to avoid errors.
 

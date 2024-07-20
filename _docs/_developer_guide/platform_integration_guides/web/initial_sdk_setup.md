@@ -8,7 +8,7 @@ page_type: reference
 
 # Initial SDK setup for web
 
-> This reference article covers how to install the Braze Web SDK. The Braze Web SDK lets you collect analytics and display rich in-app messages, push, and Content Card messages to your web users. See our [JavaScript Documentation][9] for a complete technical reference.
+> This reference article covers how to install the Braze Web SDK. The Braze Web SDK lets you collect analytics and display rich in-app messages, push, and Content Card messages to your web users. See our [JavaScript Documentation](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html "JSDocs") for a complete technical reference.
 
 {% multi_lang_include archive/web-v4-rename.md %}
 

@@ -20,14 +20,14 @@ News Feed is being deprecated. Braze recommends that customers who use our News 
 
 ## Requesting unread News Feed card counts
 
-![][45]{: style="float:right;max-width:25%;margin-left:15px;"}
+![]({% image_buster /assets/img_archive/newsfeed_badges.png %}){: style="float:right;max-width:25%;margin-left:15px;"}
 
 Badges are a great way to call attention to new content awaiting your users in the News Feed. If you'd like to add a badge to your News Feed, the Braze SDK provides methods to query the following:
 
 - Unread News Feed cards for the current user
 - Total viewable News Feed cards for the current user
 
-The following method declarations in [`ABKFeedController`][44] describe this in detail:
+The following method declarations in [`ABKFeedController`](http://appboy.github.io/appboy-ios-sdk/docs/interface_a_b_k_feed_controller.html "abk feed controller") describe this in detail:
 
 ```
 - (NSInteger)unreadCardCountForCategories:(ABKCardCategory)categories;
@@ -105,7 +105,7 @@ UIApplication.shared.applicationIconBadgeNumber = 0
 {% endtab %}
 {% endtabs %}
 
-For more information, see the `Appboy.h` [header file][15].
+For more information, see the `Appboy.h` [header file](https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/include/Appboy.h "Appboy.h Header File").
 
 [15]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/include/Appboy.h "Appboy.h Header File"
 [42]: {% image_buster /assets/img_archive/badge_example.png %} "Badge Example"

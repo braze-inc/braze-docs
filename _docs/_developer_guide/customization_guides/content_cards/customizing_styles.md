@@ -20,7 +20,7 @@ platform:
 
 The default Content Cards UI is imported from the UI layer of the Braze SDK. From there, you can tweak certain parts of the card's styling, the order in which cards are displayed, and how the feed is shown to your users.
 
-![Two content cards, one with the default font and square corners, and one with rounded corners and a curly font][1]
+![Two content cards, one with the default font and square corners, and one with rounded corners and a curly font]({% image_buster/assets/img/content_cards/content-card-customization-attributes.png %})
 
 {% alert note %}
 Content Card properties such as `title`, `cardDescription`, `imageUrl`, etc., are directly editable through the [dashboard]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/creative_details), which is the preferred method for changing these details.
@@ -299,7 +299,7 @@ Just like any other web element, you can easily customize the appearance of Cont
 
 When creating a Content Card, marketers have the option of pinning the card. A pinned card will display at the top of a user's feed and can't be dismissed by the user. As you customize your card styles, you have the ability to change what the pinned icon looks like.
 
-![Side-by-side of the Content Card preview in Braze for Mobile and Web with the option "Pin this card to the top of the feed" selected.][2]{:style="border:none"}
+![Side-by-side of the Content Card preview in Braze for Mobile and Web with the option "Pin this card to the top of the feed" selected.]({% image_buster /assets/img/cc_pin_to_top.png %}){:style="border:none"}
 
 {% tabs %}
 {% tab Android %}
@@ -414,7 +414,7 @@ pinnedIndicator.replaceChildren(customIcon);
 
 Content Cards contain a blue line at the bottom of the card which indicates whether or not the card has been viewed. 
 
-![Two Content Cards displayed side by side. The first card has a blue line at the bottom, indicating it has not been seen. The second card does not have a blue line, indicating it has already been seen.][3]
+![Two Content Cards displayed side by side. The first card has a blue line at the bottom, indicating it has not been seen. The second card does not have a blue line, indicating it has already been seen.]({% image_buster /assets/img/braze-content-cards-seen-unseen-behavior.png %})
 
 {% tabs %}
 {% tab Android %}

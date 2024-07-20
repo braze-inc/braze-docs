@@ -46,13 +46,13 @@ To retrieve your access key ID and secret access key, you'll need to [create an 
 
 After creating a new user, click **Show User Security Credentials** to reveal your access key ID and secret access key. Next, note these credentials somewhere or click the **Download Credentials** button, as you will need to input these into the Braze dashboard later on.
 
-![][11]
+![]({% image_buster /assets/img_archive/S3_Credentials.png %})
 
 ### Step 3: Create policy {#secret-key-3}
 
 Navigate to **Policies > Get Started > Create Policy** to add permissions for your user. Next, select **Create Your Own Policy**. This will give limited permissions, so Braze can only access the specified buckets. 
 
-![][12]
+![]({% image_buster /assets/img_archive/S3_CreatePolicy.png %})
 
 {% alert note %}
 Different policies are required for "Currents" and "Dashboard Data Export".
@@ -105,7 +105,7 @@ Specify a policy name of your choice, and input the following code snippet into 
 
 After creating a new policy, navigate to **Users** and click into your specific user. In the **Permissions** tab, click **Attach Policy**, and select the new policy you created. You are now ready to link your AWS credentials to your Braze account.
 
-![][13]
+![]({% image_buster /assets/img_archive/S3_AttachPolicy.png %})
 
 ### Step 5: Link Braze to AWS {#secret-key-5}
 

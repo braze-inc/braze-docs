@@ -32,12 +32,12 @@ guide_featured_list:
 
 You can use and manage templates and creative content in the **Templates** section for the following features:
 
-- **[Email templates][2]**
-- **[Content Blocks][7]**
-- **[Webhook templates][3]**
-- **[Link templates][6]**
-- **[In-app message color profiles and CSS templates][4]**
-- **[Manage assets in the media library][5]**
+- **[Email templates]({{site.baseurl}}/user_guide/message_building_by_channel/email/creating_an_email_template/#creating-an-email-template)**
+- **[Content Blocks]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/content_blocks/)**
+- **[Webhook templates]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/webhook_template/#creating-a-webhook-template)**
+- **[Link templates]({{site.baseurl}}/user_guide/message_building_by_channel/email/link_templates/#link-templates)**
+- **[In-app message color profiles and CSS templates]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/#color-profile)**
+- **[Manage assets in the media library]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/media_library/#media-library)**
 <br><br><br>
 
 [2]: {{site.baseurl}}/user_guide/message_building_by_channel/email/creating_an_email_template/#creating-an-email-template

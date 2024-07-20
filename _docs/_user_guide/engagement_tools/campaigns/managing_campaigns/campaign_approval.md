@@ -30,7 +30,7 @@ After the campaign approval is turned on, you must have the "Approve and Deny Ca
 
 In the **Review Summary** step of the campaign building workflow, use the approval option to approve or deny your campaign's key components: **Messages**, **Delivery**, **Target Population**, and **Conversion Events**. The default state for campaign approval is **Pending Approval**. Note that it's possible to self-approve components of a campaign.
 
-![][1]
+![]({% image_buster /assets/img_archive/campaign_approval_example.png %})
 
 Once each section is approved, the **Launch** button will be enabled, and you can launch your campaign! 
 

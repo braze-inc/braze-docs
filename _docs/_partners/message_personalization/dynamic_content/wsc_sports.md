@@ -10,7 +10,7 @@ search_tag: Partner
 
 # WSC Sports
 
-> The [WSC Sports][1] platform generates personalized sports videos for every digital platform and every sports fan - automatically and in real-time. 
+> The [WSC Sports](https://wsc-sports.com/) platform generates personalized sports videos for every digital platform and every sports fan - automatically and in real-time. 
 
 The Braze and WSC Sports integration allows you to include rich and robust sports media in your Braze push notifications. 
 
@@ -28,7 +28,7 @@ The WSC Sports application handles the end-to-end process, from selecting the vi
 
 ### Step 1: Select send settings
 
-![][2]{: style="float:right;max-width:25%;margin-bottom:15px;"}
+![]({% image_buster /assets/img/wsc_sports/braze_integration.jpg %} "braze_integration.jpg"){: style="float:right;max-width:25%;margin-bottom:15px;"}
 
 Before starting the integration, make sure you have your desired campaign and user segments built in Braze. When completed, in the WSC Sports platform, select your desired video, and in the send settings, select Braze user segment and campaign ID you would like to use. Lastly, choose the time you would like your push message sent out. 
 

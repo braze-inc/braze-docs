@@ -49,7 +49,7 @@ All in-app messages that a user is eligible for are delivered to the user's devi
 
 When a trigger event has more than one eligible in-app message associated with it, only the in-app message with the highest priority will be delivered.
 
-There can be some latency for in-app messages that display immediately on delivery (session start, push click) due to assets not being prefetched. For more information about the SDK's session start semantics, read about our [session lifecycle][45].
+There can be some latency for in-app messages that display immediately on delivery (session start, push click) due to assets not being prefetched. For more information about the SDK's session start semantics, read about our [session lifecycle]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/tracking_sessions/#session-lifecycle).
 
 ## Minimum time interval between triggers
 

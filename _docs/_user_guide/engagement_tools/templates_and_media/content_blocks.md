@@ -23,7 +23,7 @@ With Content Blocks, you can:
 
 ## Create a Content Block
 
-There are two types of editors used to create a Content Block—classic and drag-and-drop. These two types of editors correspond to the type of Content Block: HTML and drag-and-drop. You can also create and manage your Content Blocks [via API][5].
+There are two types of editors used to create a Content Block—classic and drag-and-drop. These two types of editors correspond to the type of Content Block: HTML and drag-and-drop. You can also create and manage your Content Blocks [via API]({{site.baseurl}}/api/endpoints/templates/).
 
 {% tabs %}
 {% tab Drag-and-drop %}
@@ -75,7 +75,7 @@ If you want to update a Content Block for a single message or make a copy to use
 
 After making edits to a Content Block, you can save and launch the updated Content Block by clicking **Launch Content Block**. Or, you can select **More** > **Duplicate** to create a duplicate of your Content Block.
 
-![][2]
+![]({% image_buster /assets/img/copy-content-block.png %})
 
 You can also [duplicate]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/duplicate/) a Content Block. This creates a draft copy of the Content Block.
 
@@ -85,7 +85,7 @@ After adding a Content Block in an active campaign or Canvas, you can preview th
 
 This preview includes information about the Content Block such as who created it, tags, creation date, last edited date, description, editor type, inclusion count with details, and an actual preview of the Content Block.
 
-![][7]{: style="max-width:60%;"} 
+![]({% image_buster /assets/img/preview_tab_content_block.png %}){: style="max-width:60%;"} 
 
 ### Nesting Content Blocks
 
@@ -99,7 +99,7 @@ Additionally, Content Blocks cannot be used within an email footer, though email
 
 ### Archiving Content Blocks
 
-![Expanded Settings dropdown menu that shows three options: Archive, Duplicate, and Copy to workspace.][3]{: style="max-width:20%;float:right;margin-left:15px;" }
+![Expanded Settings dropdown menu that shows three options: Archive, Duplicate, and Copy to workspace.]({% image_buster /assets/img/template_archive_cog.png %}){: style="max-width:20%;float:right;margin-left:15px;" }
 
 Once you have finished using a Content Block, you can archive it from the [Templates & Media]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/archive/) page. Archived Content Blocks are read-only, so unarchive the Content Block before editing. Content Blocks cannot be archived if they're used in any messages.
 
@@ -110,7 +110,7 @@ Once you have finished using a Content Block, you can archive it from the [Templ
 - When your block is used in more messages than you can reasonably manage with the first suggestion in this list, we recommend removing all content from the block and then archiving it. This will ensure no outdated information is included in any newly sent emails.
 - If you accidentally archive a Content Block, you can unarchive it.
 
-![Saved Content Blocks panel where the settings dropdown menu for "Test_32" is expanded to show three options: Unarchive, Duplicate, and Copy to workspace][4]
+![Saved Content Blocks panel where the settings dropdown menu for "Test_32" is expanded to show three options: Unarchive, Duplicate, and Copy to workspace]({% image_buster /assets/img/unarchive-content-block.png %})
 
 [2]: {% image_buster /assets/img/copy-content-block.png %}
 [3]: {% image_buster /assets/img/template_archive_cog.png %}

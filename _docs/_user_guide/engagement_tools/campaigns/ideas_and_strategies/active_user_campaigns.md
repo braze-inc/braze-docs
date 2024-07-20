@@ -29,7 +29,7 @@ If you set User IDs to identify users when a new user logs in they will be count
 
 Using our selection of filters, create a user segment that you feel encompasses your most loyal, consistent user base. The following sample segment defines the top users.
 
-![][1]
+![]({% image_buster /assets/img_archive/define_top_users.png %} "Define your top users")
 
 Additionally, you will not have to continue updating this segment, as users who pass in or out of the campaign's restrictions will be correspondingly targeted or dismissed.
 
@@ -45,7 +45,7 @@ Make your users feel appreciated by thanking them for their loyalty and dedicati
 
 Unexpected rewards can be more effective at encouraging continued user actions than if you had promised them from the start!
 
-![A campaign in the Compose step with an iOS rich notification that reads: "Thanks again for shopping with us! To show our appreciation, we're giving you free shipping on your next purchase".][2]
+![A campaign in the Compose step with an iOS rich notification that reads: "Thanks again for shopping with us! To show our appreciation, we're giving you free shipping on your next purchase".]({% image_buster /assets/img/congratulations_push.jpg %})
 
 ### Keep track of your results
 

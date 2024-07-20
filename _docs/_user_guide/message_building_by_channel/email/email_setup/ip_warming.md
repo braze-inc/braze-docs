@@ -61,7 +61,7 @@ Most ISPs only store reputation data for 30 days. If you go a month without send
 
 Our built-in user limiting feature serves as a useful tool to help you with warming your IP address. After choosing your desired messaging segments during campaign creation, on the [Target Users]({{site.baseurl}}/user_guide/message_building_by_channel/email/html_editor/creating_an_email_campaign/#step-4-build-the-remainder-of-your-campaign-or-canvas) step, select the **Advanced Options** dropdown to limit your users. As your warming schedule continues, you can gradually raise this limit to increase the volume of emails you send.
 
-![][18]
+![]({% image_buster /assets/img_archive/email_ip_warming_sends_limit_new.png %})
 
 ## Subdomain segmentation
 
@@ -93,12 +93,12 @@ Refer to our [IP warming schedule](#ip-warming-schedules) to spread your send ac
 
 ### Clean your email lists
 
-Confirm that your email list is clean and doesn't have old or unverified emails. Ensuring that you're both [CASL- and CAN-SPAM-compliant][40] is ideal.
+Confirm that your email list is clean and doesn't have old or unverified emails. Ensuring that you're both [CASL- and CAN-SPAM-compliant]({{site.baseurl}}/user_guide/onboarding_with_braze/spam_regulations/) is ideal.
 
 ### Monitor your sender reputation
 
 When conducting the IP warming process, be sure to carefully monitor your sender reputation while you conduct the IP warming process. These specific metrics are important to watch:
-- **Bounce Rates:** If any campaign bounces at more than 3-5%, you should evaluate the cleanliness of your list by following the guidelines in our [Keep It Clean: The Importance of Email List Hygiene][43] article. Additionally, you should consider implementing a [sunset policy][46] to stop emailing unengaged or dormant email addresses.
+- **Bounce Rates:** If any campaign bounces at more than 3-5%, you should evaluate the cleanliness of your list by following the guidelines in our [Keep It Clean: The Importance of Email List Hygiene](https://www.braze.com/blog/email-list-hygiene/) article. Additionally, you should consider implementing a [sunset policy]({{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices/sunset_policies/) to stop emailing unengaged or dormant email addresses.
 - **Spam Reports:** If any campaign is reported as spam at a rate of more than 0.08%, you should re-evaluate the content you're sending, check that it is targeted to an interested audience, and make sure your emails are appropriately worded to pique their interest.
 - **Open Rates:** Open rates are a useful proxy for inbox placement. If your unique open rates are over 25%, you're likely experiencing high inbox placement, which indicates a positive sender reputation.
 

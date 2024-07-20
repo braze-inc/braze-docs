@@ -30,7 +30,7 @@ To enable HTML in-app messages through the Web SDK, you must supply the `allowUs
 
 ## Creating a survey {#create}
 
-When creating an [in-app message][1], select **Simple Survey** for your **Message Type**.
+When creating an [in-app message]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/create/), select **Simple Survey** for your **Message Type**.
 
 ![]({% image_buster /assets/img/iam/survey-message-type.png %}){: style="max-width:80%"}
 
@@ -62,9 +62,9 @@ Select **Log attributes upon submission** to collect attributes based on the use
 
 ![Choices dropdown with "Log attributes upon submission" selected.]({% image_buster /assets/img/iam/collect-attributes.png %}){: style="max-width:60%"}
 
-To add a custom attribute to each choice, select a custom attribute name from the dropdown menu (or create a new one), and then enter the value to set when this choice is submitted. You can create a new custom attribute in your [Settings Page][5].
+To add a custom attribute to each choice, select a custom attribute name from the dropdown menu (or create a new one), and then enter the value to set when this choice is submitted. You can create a new custom attribute in your [Settings Page]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/managing_custom_data).
 
-For example, in a notification preferences survey, you might make each choice a boolean (true/false) attribute to allow users to select which topics they're interested in. If a user checks the "Promotions" choice, that will update their [user profile][3] with the custom attribute `Promotions Topic` set to `true`. If they leave the choice unchecked, that same attribute will remain unchanged.
+For example, in a notification preferences survey, you might make each choice a boolean (true/false) attribute to allow users to select which topics they're interested in. If a user checks the "Promotions" choice, that will update their [user profile]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/) with the custom attribute `Promotions Topic` set to `true`. If they leave the choice unchecked, that same attribute will remain unchanged.
 
 ![]({% image_buster /assets/img/iam/iam-survey3.png %}){: style="max-width:60%"}
 
@@ -117,15 +117,15 @@ Once your campaign has launched, you can analyze results in real-time to see the
 Deleted survey choices will still appear in analytics but will not be shown as a choice to new users.
 {% endalert %}
 
-For definitions of survey metrics, refer to the [Report Metrics Glossary][11] and filter by "In-App Message".
+For definitions of survey metrics, refer to the [Report Metrics Glossary]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics/) and filter by "In-App Message".
 
 ![In-app message performance panel with click analytics for each choice and button on the survey.]({% image_buster /assets/img/iam/iam-survey-analytics.png %}){: style="max-width:95%"}
 
-Check out [In-app message reporting][4] for a breakdown of your campaign metrics.
+Check out [In-app message reporting]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/reporting/) for a breakdown of your campaign metrics.
 
 ### Currents {#currents}
 
-Selected choices will automatically flow through to Currents, under the [**In-App Message Click Events**][6] `button_id` field. Each choice will be sent with its universally unique identifier (UUID).
+Selected choices will automatically flow through to Currents, under the [**In-App Message Click Events**]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events/#api_fzzdoylmrtwe) `button_id` field. Each choice will be sent with its universally unique identifier (UUID).
 
 ## Use cases
 
@@ -137,7 +137,7 @@ For this use case, use single-choice selection, with choices ranging from "Very 
 
 After you've launched your survey, you can then target your win-back campaigns to users who reported being "Very Dissatisfied" or "Dissatisfied", which are users with `customer_satisfaction` set to 1 or 2.
 
-![][7]
+![]({% image_buster /assets/img_archive/simple_survey_use_case_1.png %})
 
 ### Identify customer goals
 
@@ -147,7 +147,7 @@ For this use case, use single-choice selection, with each choice being a common 
 
 For example, if the user selects "Upgrading my account", that will set `product_goal = upgrade` on the user's profile.
 
-![][8]
+![]({% image_buster /assets/img_archive/simple_survey_use_case_2.png %})
 
 ### Improve conversion rates
 
@@ -157,7 +157,7 @@ For this use case, use single-choice selection, with each choice being a common 
 
 For example, if the user selects "Too Expensive", that will set `upgrade_reason = expensive` on the user's profile. You can target these users for promotional campaigns like discounts or free trials.
 
-![][9]
+![]({% image_buster /assets/img_archive/simple_survey_use_case_3.png %})
 
 ### Favorite features
 
@@ -165,7 +165,7 @@ For example, if the user selects "Too Expensive", that will set `upgrade_reason 
 
 For this use case, use multiple-choice selection with each choice being an app feature. Each choice has the custom attribute `favorite_features` set to the user's selection. Because this use case involves multiple choice, after the user has completed the survey, their profile will be updated with the `favorite_features` attribute set to an array of all selected options.
 
-![][10]
+![]({% image_buster /assets/img_archive/simple_survey_use_case_4.png %})
 
 [1]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/create/
 [2]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#custom-attribute-data-types

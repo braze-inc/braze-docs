@@ -92,7 +92,7 @@ To restore your interaction data, follow these steps:
 1. Go to the expired campaign or Canvas.
 2. At the top of the campaign or Canvas landing page, click **Restore interaction data** in the banner.
 
-![][1]
+![]({% image_buster /assets/img/restore_interaction_data.png %})
 
 You can also restore interaction data for multiple campaigns from the Campaigns page by selecting the campaigns and clicking the Restore interaction data button.
 

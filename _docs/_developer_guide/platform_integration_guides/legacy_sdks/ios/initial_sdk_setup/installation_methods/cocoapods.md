@@ -14,7 +14,7 @@ noindex: true
 
 ## Step 1: Install CocoaPods
 
-Installing the iOS SDK via [CocoaPods][apple_initial_setup_1] automates the majority of the installation process for you. Before beginning this process, make sure you use [Ruby version 2.0.0][apple_initial_setup_2] or greater. Don't worry, knowledge of Ruby syntax isn't necessary to install this SDK.
+Installing the iOS SDK via [CocoaPods](http://cocoapods.org/) automates the majority of the installation process for you. Before beginning this process, make sure you use [Ruby version 2.0.0](https://www.ruby-lang.org/en/installation/) or greater. Don't worry, knowledge of Ruby syntax isn't necessary to install this SDK.
 
 Run the following command to get started:
 
@@ -22,7 +22,7 @@ Run the following command to get started:
 $ sudo gem install cocoapods
 ```
 
-If you have issues regarding CocoaPods, refer to the CocoaPods [troubleshooting guide][apple_initial_setup_25].
+If you have issues regarding CocoaPods, refer to the CocoaPods [troubleshooting guide](http://guides.cocoapods.org/using/troubleshooting.html "CocoaPods Troubleshooting Guide").
 
 {% alert note %}
 If prompted to overwrite the `rake` executable, refer to the [Getting started](http://guides.cocoapods.org/using/getting-started.html "CocoaPods Installation Directions") directions on CocoaPods.org for more details.
@@ -63,7 +63,7 @@ pod install
 
 At this point, you should be able to open the new Xcode project workspace created by CocoaPods. Make sure to use this Xcode workspace instead of your Xcode project. 
 
-![An Appboy Example folder expanded to show the new `AppbpyExample.workspace`.][apple_initial_setup_15]
+![An Appboy Example folder expanded to show the new `AppbpyExample.workspace`.]({% image_buster /assets/img_archive/podsworkspace.png %})
 
 ## Next steps
 

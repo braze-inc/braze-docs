@@ -60,7 +60,7 @@ In Braze, navigate to **Templates & Media > Content Blocks Library > + Create Co
 
 Next, paste your channel access token in the Content Block body, and save it.
 
-![An image the Content Block showing the Content Block name, Liquid tag, and censored channel access token.][2]
+![An image the Content Block showing the Content Block name, Liquid tag, and censored channel access token.]({% image_buster /assets/img_archive/line_content_block_token.png %})
 
 Once you've set the channel access token inside a Content Block, you will be able to use the LINE webhook template to send messages to users.
 
@@ -111,15 +111,15 @@ The custom attribute `LINE ID` should be templated in the message body's `To:` f
 
 Before you send your message, test your webhook. Make sure your LINE ID is saved in Braze (or find it and test as a customized user), and use the preview to send the test message:
 
-![Test tab in the Braze webhook builder that shows you can preview the message by sending it to an existing user.][3]
+![Test tab in the Braze webhook builder that shows you can preview the message by sending it to an existing user.]({% image_buster /assets/img_archive/line_preview.png %})
 
 If you receive the message successfully, you can start to configure its delivery settings.
 
 ## Using this integration
 
-Once set up, use this integration to target LINE users. First, [create a segment][62] for all users for whom the `LINE ID` exists as a custom attribute and turn on [analytics tracking][61] to track your Messenger subscription rates over time. 
+Once set up, use this integration to target LINE users. First, [create a segment]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/#creating-a-segment) for all users for whom the `LINE ID` exists as a custom attribute and turn on [analytics tracking]({{site.baseurl}}/user_guide/data_and_analytics/reporting/viewing_and_understanding_segment_data/) to track your Messenger subscription rates over time. 
 
-![Segment filter "line_id" set to "is not blank".][63]
+![Segment filter "line_id" set to "is not blank".]({% image_buster /assets/img_archive/line_segment.png %})
 
 If you choose not to create a specific segment for Messenger subscribers, make sure to include a filter for `LINE ID` existing to avoid errors.
 

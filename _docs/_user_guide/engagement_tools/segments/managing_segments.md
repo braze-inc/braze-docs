@@ -12,7 +12,7 @@ description: "This article covers the actions you can take to manage your segmen
 
 > The Segments section allows you to view a comprehensive list of your existing segments, create new segments, and edit existing segments. You can refine the list of segments by selecting a variety of filters and columns so only the most relevant information to you is displayed.
 
-![The Segments section displaying a list of Active segments.][1]
+![The Segments section displaying a list of Active segments.]({% image_buster /assets/img/segment/segments_page.png %})
 
 ## Customizing your view
 
@@ -50,7 +50,7 @@ Selecting **Show Starred Only** narrows your view to the segments that were star
 
 ## Managing specific segments
 
-![The edit menu for a segment showing the options "Edit", "Duplicate", "Archive", and "Add to starred".][2]{: style="float:right;max-width:25%;"}
+![The edit menu for a segment showing the options "Edit", "Duplicate", "Archive", and "Add to starred".]({% image_buster /assets/img/segment/segments_page_edit_menu.png %}){: style="float:right;max-width:25%;"}
 
 To manage a specific segment, hover over it and select the menu icon at the end of the row to reveal the following options:
 - **Edit:** Edit the filters in your segment.
@@ -60,14 +60,14 @@ To manage a specific segment, hover over it and select the menu icon at the end 
  
 You can also perform bulk actions–specifically, bulk archiving and bulk tagging–by checking the boxes next to multiple segment names.
 
-![Multiple segments selected with "CRM" selected in the "Tag As" dropdown field.][3]{: style="max-width:45%;"}
+![Multiple segments selected with "CRM" selected in the "Tag As" dropdown field.]({% image_buster /assets/img/segment/segments_bulk_action.png %}){: style="max-width:45%;"}
 
 ## Searching for segments
 Search for segment names by entering terms into the search field. 
 
 All terms and strings entered in this field will be searched for. For example, searching for “test segment 1” will return segments with “test”, “segment”, or “1” anywhere in their name. To search for an exact string, put quotes around your search term. Searching for [“test segment 1”] will return all segments that contain the exact phrase “test segment 1” in their name.
 
-![The search results for entering "all users" into the search field include "All Users (Test)", "All Users", "All Users 15".][4]
+![The search results for entering "all users" into the search field include "All Users (Test)", "All Users", "All Users 15".]({% image_buster /assets/img/segment/segments_search.png %})
 
 [1]: {% image_buster /assets/img/segment/segments_page.png %}
 [2]: {% image_buster /assets/img/segment/segments_page_edit_menu.png %}

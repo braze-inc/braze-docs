@@ -64,21 +64,21 @@ You can target users who interact with an active campaign, or users who interact
 
 #### Targeting users who interact with a campaign
 
-Select [Action-Based Delivery][7] and add the "Interact with Campaign" trigger. Then, choose the trigger interaction. Next, you'll select the active campaign that you'd like to target.
+Select [Action-Based Delivery]({{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/triggered_delivery/) and add the "Interact with Campaign" trigger. Then, choose the trigger interaction. Next, you'll select the active campaign that you'd like to target.
 
-![][4]
+![]({% image_buster /assets/img_archive/Campaign_Connector1.png %})
 
 #### Targeting users who interact with a News Feed card (deprecating)
 
 Select **Action-Based Delivery** and add the "Interact with Card" trigger. Then choose whether you'd like to target users who view a News Feed Card or users who click a News Feed Card. Select the active News Feed Card that you'd like to target.
 
-![][5]
+![]({% image_buster /assets/img_archive/Campaign_Connector2.png %})
 
 ### Step 3: Set schedule delay and add exceptions if necessary
 
 If you choose to set a schedule delay, you can add an exception to the trigger action. For example, you might want to resend an email campaign to users who did not open the original email.  In this scenario, you can choose "Received email" as the trigger and set a schedule delay of one week. Then, you can add "Open email" as an exception. Now, you'll resend the email to users who did not open the original email within a week of receiving it.
 
-![][6]
+![]({% image_buster /assets/img_archive/Campaign_Connector3.png %})
 
 Exception events will only trigger while a user is waiting to receive the message it's associated with. If a user performs the action before waiting for the message, the exception event will not trigger.
 

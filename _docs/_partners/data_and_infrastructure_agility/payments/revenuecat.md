@@ -20,8 +20,8 @@ At a minimum, you will need to enable the integration from the RevenueCat dashbo
 
 | Requirement | Description |
 |---|---|
-| RevenueCat account and app | A [RevenueCat account][9] is required to take advantage of this partnership. You must also have a configured RevenueCat app. |
-| RevenueCat SDK | In addition to the required Braze SDK, we recommend installing the [RevenueCat SDK][8] to provide user aliases to RevenueCat. |
+| RevenueCat account and app | A [RevenueCat account](https://app.revenuecat.com/login) is required to take advantage of this partnership. You must also have a configured RevenueCat app. |
+| RevenueCat SDK | In addition to the required Braze SDK, we recommend installing the [RevenueCat SDK](https://docs.revenuecat.com/docs/configuring-sdk) to provide user aliases to RevenueCat. |
 | Braze instance | Your Braze instance can be obtained from your Braze onboarding manager or can be found on the [API overview page]({{site.baseurl}}/api/basics/#endpoints).<br><br>RevenueCat requires the Braze instance to send server-side to the correct Braze REST endpoint. |
 | Braze REST API key | A Braze REST API key with `users.track` permissions. <br><br> This can be created in the Braze dashboard from **Settings** > **API Keys**. |
 | Braze test REST API key (optional) | A test API key can be used for test and production purchases if you'd like these requests sent to separate Braze instances. |
@@ -94,11 +94,11 @@ If you want to send an alternative unique user identifier different from the Rev
 
 | Key | Description |
 |---|---|
-| `$brazeAliasName` | The Braze `alias_name` in the [user alias object][2] |
-| `$brazeAliasLabel` | The Braze `alias_label` in the [user alias object][2] |
+| `$brazeAliasName` | The Braze `alias_name` in the [user alias object]({{site.baseurl}}/api/objects_filters/user_alias_object/) |
+| `$brazeAliasLabel` | The Braze `alias_label` in the [user alias object]({{site.baseurl}}/api/objects_filters/user_alias_object/) |
 {: .reset-td-br-1 .reset-td-br-2}
 
-Both attributes are required for the [user alias object][2] to be sent alongside your event data. These properties can be set manually, like any other [RevenueCat subscriber attribute][4]. Example code snippets are shown in step one.
+Both attributes are required for the [user alias object]({{site.baseurl}}/api/objects_filters/user_alias_object/) to be sent alongside your event data. These properties can be set manually, like any other [RevenueCat subscriber attribute](https://docs.revenuecat.com/docs/subscriber-attributes). Example code snippets are shown in step one.
 
 ### Step 2: Send RevenueCat events to Braze
 
@@ -109,7 +109,7 @@ After you've set up the RevenueCat purchases SDK and Braze SDK to have the same 
 3. Enter the event names that RevenueCat will send or choose the default event names. More details on available events can be found in [step 3](#configure-event-names).
 4. Select whether you want RevenueCat to report proceeds (after app store cut) or revenue (gross sales).
 
-![Braze settings in RevenueCat with fields for Braze instance, API key identifier, and sandbox identifier.][3]
+![Braze settings in RevenueCat with fields for Braze instance, API key identifier, and sandbox identifier.]({% image_buster /assets/img/revenuecat/braze_settings_in_revenuecat.png %})
 
 ### Step 3: Configure event names {#configure-event-names}
 
@@ -138,7 +138,7 @@ After configuring Braze settings in RevenueCat, events will automatically begin 
 
 ### Add a sandbox API key for Testing
 
-If you only provide one Braze REST API key to RevenueCat, only production events will be sent. If you also want to send sandbox testing events, [create another Braze REST API key][11] and add it to your Braze settings in RevenueCat.
+If you only provide one Braze REST API key to RevenueCat, only production events will be sent. If you also want to send sandbox testing events, [create another Braze REST API key]({{site.baseurl}}/api/basics/#app-group-rest-api-keys) and add it to your Braze settings in RevenueCat.
 
 [2]: {{site.baseurl}}/api/objects_filters/user_alias_object/
 [3]: {% image_buster /assets/img/revenuecat/braze_settings_in_revenuecat.png %}

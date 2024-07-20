@@ -27,7 +27,7 @@ If you're entering users according to their local time zone using a scheduled en
 You'll see an alert if you haven't scheduled enough of a buffer. A quick solution is to adjust the send time to ensure that users can remain in the targeted segment for a full 24 hours.
 {% endalert %}
 
-![][1]
+![]({% image_buster /assets/img_archive/canvas_checklist1.png %})
 
 ### Consider using regular expressions for audience filters
 

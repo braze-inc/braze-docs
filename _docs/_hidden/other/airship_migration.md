@@ -68,7 +68,7 @@ To directly recreate a static Airship segment in Braze, there exist two options:
 We recommend importing users via the [`/users/track` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) and while doing so, assigning a custom attribute to those imported users. For example, you might create a segment of users that each have a custom attribute `Segment_Group_1` that is set to `true`. To later segment these users, you would [create a segment]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/) of all users where `Segment_Group_1` is `true`.<br><br>
 - **Filter Based on CSV User Import**<br>
 There is an option in Braze to filter specifically users who are included within a specific CSV import. This filtering option can be found during the target users step of our engagement tools under "filter users by `Updated/Imported via CSV`".
-![CSV Import Filter][1]{: style="max-width:90%;border:0;"}
+![CSV Import Filter]({% image_buster /assets/img/csv_filter.png %}){: style="max-width:90%;border:0;"}
 Note that for CSV imports, an external ID is required for each imported user and **segments with anonymous or alias only users will not able to be imported**. To view an import template and learn more about importing data into the dashboard, check out our [CSV documentation]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/#csv).
 
 ## Rip and replace SDK code snippets

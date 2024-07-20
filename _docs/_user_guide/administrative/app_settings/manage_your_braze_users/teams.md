@@ -23,7 +23,7 @@ Go to **Settings** > **Internal Teams** and select <i class="fas fa-plus"></i> *
 If you are using the [older navigation]({{site.baseurl}}/navigation), **Internal Teams** is located under **Manage Settings** > **Manage Teams**.
 {% endalert %}
 
-![Adding a new team][68]
+![Adding a new team]({% image_buster /assets/img_archive/adding_a_team.png %})
 
 Enter the **Team Name**. If desired, use the **Define Team** field to select a custom attribute, location, or language to further define what user data the team has access to. For example, a possible use case is to perform [testing with teams](#testing-with-teams) by creating a development team that only has access to test users, identified by a custom attribute. Another use case is to restrict communication with users based on product.
 
@@ -46,7 +46,7 @@ Then perform the following steps:
 3. Add them to the appropriate workspace. 
 4. Select the **Team** you'd like to add this user to, and assign specific permissions from the **Team** permissions column.
 
-![][2]
+![]({% image_buster /assets/img/teams.png %})
 
 ### Available team-level permissions
 
@@ -67,7 +67,7 @@ To see descriptions of what each user permission includes and how to use them, c
 
 You can assign a team to Canvases, campaigns, cards, segments, email templates, and media library assets with the **Add Team** filter.
  
-![Adding a Team tag to a campaign][3]{: style="max-width:70%;"}
+![Adding a Team tag to a campaign]({% image_buster /assets/img/teams1.png %}){: style="max-width:70%;"}
 
 - Based on the *definitions* applied when the team was created, when a team filter is assigned, that engagement tool's audience is restricted to user profiles that match the definition.
 - Based on assigned *permissions*, team members will only be allowed to access dashboard engagement tools that have their team filter set. If they have limited or no workspace permissions, they must add a team filter to certain objects before they can save or launch them. Team members are also able to filter Canvases, campaigns, cards, and segments by team to identify content relevant to them.
@@ -127,7 +127,7 @@ You can archive teams from the **Internal Teams** page.
 
 Select one or many teams to archive. If the team is not associated with any object within Braze, the team will be archived immediately. If the team is associated with an object, you will be presented with an option to remove the team after the archive process or replace the team.
 
-![Archiving a Team that is associated with an object in Braze][86]{: style="max-width:70%;"}
+![Archiving a Team that is associated with an object in Braze]({% image_buster /assets/img_archive/archive_a_team.png %}){: style="max-width:70%;"}
 
 Braze admins can unarchive a team by selecting the archived team and selecting **Unarchive**.
 

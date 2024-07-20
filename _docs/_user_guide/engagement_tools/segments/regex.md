@@ -16,13 +16,13 @@ tool:
 
 > Regular expression, known commonly as a regex, is a sequence of characters that defines a search pattern. Regular expressions let you validate text groupings and perform find and replace actions. At Braze, we leverage regular expressions to give you a more flexible string matching solution in your segmentation and campaign filtering for your target audience.
 
-In the linked Braze Learning course, we show you how regular expressions can be used and tested on [Regex101][regex]. We also offer an [in-house regex tester](#regex-debugger), a helpful reference page, sample data referenced in the regex Braze Learning video, as well as some frequently asked questions.
+In the linked Braze Learning course, we show you how regular expressions can be used and tested on [Regex101](https://regex101.com/). We also offer an [in-house regex tester](#regex-debugger), a helpful reference page, sample data referenced in the regex Braze Learning video, as well as some frequently asked questions.
 
 ## Resources
 
 - [Regular expression basics](https://learning.braze.com/regular-expression-basics-for-braze) Braze Learning course
 - [Regex Cheat Sheet]({{site.baseurl}}/regex_cheat_sheet/)
-- [Sample Data RTF][dummydata]
+- [Sample Data RTF]({% image_buster /assets/download_file/regex-dummy-data.rtf %})
 
 ## Regex debugger
 

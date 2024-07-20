@@ -16,7 +16,7 @@ This upgrade makes it easier for you to use the Message Error Log on the Develop
 
 Braze detects uninstalls by sending a silent push to a customer's apps to see which devices respond. This feature adds an unobtrusive timestamp indicating when uninstall tracking last ran. This timestamp can be found on your Settings page where uninstall tracking is configured. Learn more about [Uninstall Tracking]({{site.baseurl}}/user_guide/data_and_analytics/uninstall_tracking/#uninstall-tracking).
 
-![Uninstall tracking checkbox][6]
+![Uninstall tracking checkbox]({% image_buster /assets/img_archive/uninstall_tracking_checkbox.png %})
 
 ## Added webhook testing enhancements
 
@@ -30,7 +30,7 @@ We've added a column indicating the message variation received to the Campaign R
 
 Once an in-app message has received a certain number of impressions, Braze will stop allowing users to become eligible to receive the message. Learn more about setting approximate [limits on impressions]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/rate-limiting/#setting-a-max-impression-cap).
 
-![IAM impression cap][11]
+![IAM impression cap]({% image_buster /assets/img_archive/approx_limit_for_IAM.png %})
 
 [6]: {% image_buster /assets/img_archive/uninstall_tracking_checkbox.png %}
 [11]: {% image_buster /assets/img_archive/approx_limit_for_IAM.png %}

@@ -16,9 +16,9 @@ search_rank: 2
 
 To enable location collection on your app, refer to the developer guide for the platform you're using:
 
-- [iOS][2]
-- [Android][3]
-- [Web][4]
+- [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/location_tracking/)
+- [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/location_tracking/)
+- [Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/location_tracking/)
 
 In general, mobile apps will use the device's GPS chip and other systems (such as Wi-Fi scanning) to track a user's location. Web apps will use WPS (Wi-Fi Positioning System) to track a user's locations. All of these platforms will require users opt-in to location tracking.
 
@@ -28,11 +28,11 @@ Note that the accuracy of your location tracking data may be affected by whether
 
 Using location tracking data and segments, you can set up location-based campaigns and strategies. For example, you may want to run a promotional campaign for users that live in a particular region, or exclude users in a region that has stricter regulations.
 
-Refer to [Location targeting][1] for more information on creating a location segment.
+Refer to [Location targeting]({{site.baseurl}}/user_guide/engagement_tools/segments/location_targeting/) for more information on creating a location segment.
 
 ## Hard setting the default location attribute
 
-You can also use the [`users/track` endpoint][8] in our API to update the [`current_location`][9] standard attribute. An example is: 
+You can also use the [`users/track` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) in our API to update the [`current_location`]({{site.baseurl}}/api/objects_filters/user_attributes_object/) standard attribute. An example is: 
 ```
 https://[your_braze_rest_endpoint]/users/track
 Content-Type: application/json
@@ -51,13 +51,13 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 You can also leverage location tracking with some of our partners: 
 
-- [Radar][6]
-- [Foursquare][7]
-- [Gimbal][10]
+- [Radar]({{site.baseurl}}/partners/data_augmentation/contextual_location/radar/)
+- [Foursquare]({{site.baseurl}}/partners/data_augmentation/contextual_location/foursquare/)
+- [Gimbal]({{site.baseurl}}/partners/data_augmentation/contextual_location/gimbal/)
 
 ## Frequently asked questions
 
-Check out our [Locations FAQ][11] for answers to frequently asked questions about locations.
+Check out our [Locations FAQ]({{site.baseurl}}/user_guide/engagement_tools/locations_and_geofences/faqs/#locations) for answers to frequently asked questions about locations.
 
 [1]: {{site.baseurl}}/user_guide/engagement_tools/segments/location_targeting/
 [2]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/location_tracking/

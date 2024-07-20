@@ -110,11 +110,11 @@ Finally, use the `show pipes;` command to show your SQS information. The name of
 
 In AWS, navigate to the corresponding bucket of the new Snowflake stage. Then, under the **Properties** tab, go to **Events**.
 
-![AWS Properties tab][1]{: height="50%" width="50%"}
+![AWS Properties tab]({% image_buster /assets/img/aws-properties.png %}){: height="50%" width="50%"}
 
 Create new events for each set of Currents Data, as needed ([Messaging]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/message_engagement_events/), [User Behavior]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/customer_behavior_events/)), or both.
 
-![Creating a new event in AWS][2]{: height="50%" width="50%"}
+![Creating a new event in AWS]({% image_buster /assets/img/aws-events.png %}){: height="50%" width="50%"}
 
 Check the appropriate box for the object create notifications, as well as the ARN on the bottom of the form (from the notification channel column in Snowflake).
 

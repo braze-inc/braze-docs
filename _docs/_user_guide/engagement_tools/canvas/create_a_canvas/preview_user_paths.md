@@ -89,11 +89,11 @@ Webhooks will execute when test messages are sent, but not during the test run. 
 
 In this scenario, the Canvas is set up to target users who haven't had a session in an app. This journey includes a Message step with a welcome email, a Delay step set for one day, and an Audience Paths step that splits into two paths: users with at least one session, and everyone else. Depending on which audience path a user falls in, the subsequent Message step will be sent.
 
-![][1]{:style="max-width:70%"}
+![]({% image_buster /assets/img/preview_user_path_example.png %}){:style="max-width:70%"}
 
 Because our test user meets the Canvas entry criteria, they can enter the Canvas and go through the user journey. However, because our test user hasn't opened the app in the last calendar day, they will continue down the "Everyone else" path and receive a push notification that reads: "Last chance! Complete your first task for an exclusive bonus."
 
-![][2]
+![]({% image_buster /assets/img/preview_user_path_results_example.png %})
 
 [1]: {% image_buster /assets/img/preview_user_path_example.png %}
 [2]: {% image_buster /assets/img/preview_user_path_results_example.png %}

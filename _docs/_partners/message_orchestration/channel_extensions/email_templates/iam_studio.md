@@ -34,7 +34,7 @@ With the Braze and IAM Studio integration, you can easily insert customizable in
 
 Choose an in-app message template you want to use from the in-app message template gallery
 
-![The IAM Studio template gallery shows different templates such as "carousel slide modal", "simple icon modal", "modal full image", and more.][1]
+![The IAM Studio template gallery shows different templates such as "carousel slide modal", "simple icon modal", "modal full image", and more.]({% image_buster /assets/img/iam_studio/iam_template_gallery.png %})
 
 ### Step 2: Customize the template
 
@@ -70,13 +70,13 @@ Next, create your personalized in-app message by adding custom fonts and using L
 
 Once all editing has been completed, export the template by clicking **Export**. After exporting, the in-app message HTML code will be generated. Copy this code by clicking the **Copy code** button. 
 
-![][2]{: style="max-width:45%;"}
+![]({% image_buster /assets/img/iam_studio/export_iam_code.png %}){: style="max-width:45%;"}
 
 ### Step 4: Use code in Braze 
 
 Navigate to Braze, and in your in-app message, paste the custom code in the **HTML Input** box. Make sure to test your message to check it is displaying correctly.
 
-![][3]{: style="max-width:85%;"}
+![]({% image_buster /assets/img/iam_studio/braze_campaign_editor.png %}){: style="max-width:85%;"}
 
 [1]: {% image_buster /assets/img/iam_studio/iam_template_gallery.png %}
 [2]: {% image_buster /assets/img/iam_studio/export_iam_code.png %}

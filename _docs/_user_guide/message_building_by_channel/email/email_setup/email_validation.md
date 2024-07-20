@@ -110,7 +110,7 @@ The domain name must follow these parameters:
 
 ### Additional validation required
 
-The final label of the domain must be a valid top-level domain (TLD) which is determined by anything after the final period (.). This TLD should be in [ICANN's TLD list][2]. The Braze email validator only checks that the syntax of the email is correct according to the regular expression listed in this section. It does not catch typos or addresses that don't exist.
+The final label of the domain must be a valid top-level domain (TLD) which is determined by anything after the final period (.). This TLD should be in [ICANN's TLD list](https://data.iana.org/TLD/tlds-alpha-by-domain.txt). The Braze email validator only checks that the syntax of the email is correct according to the regular expression listed in this section. It does not catch typos or addresses that don't exist.
 
 {% alert important %}
 Unicode is accepted only for the local part of the email address. Unicode is not accepted for the domain part, but it may be Punycode-encoded. 

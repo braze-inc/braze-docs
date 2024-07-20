@@ -20,9 +20,9 @@ If you find that your in-app messages are not displaying or rendering properly, 
 
 ## Event triggers
 
-If the campaign is triggered by a session start or a custom event, you want to ensure that this event or session is happening frequently enough to trigger the message. Check this data on the [Overview][1] (for session data) or [Custom Events][2] pages:
+If the campaign is triggered by a session start or a custom event, you want to ensure that this event or session is happening frequently enough to trigger the message. Check this data on the [Overview]({{site.baseurl}}/user_guide/data_and_analytics/analytics/understanding_your_app_usage_data/#understanding-your-app-usage-data) (for session data) or [Custom Events]({{site.baseurl}}/user_guide/data_and_analytics/configuring_reporting/#configuring-reporting) pages:
 
-![Custom Events page showing a graph for the number of times the custom event Added to Favorites occurred over a one month period][14]
+![Custom Events page showing a graph for the number of times the custom event Added to Favorites occurred over a one month period]({% image_buster /assets/img_archive/trouble5.png %})
 
 ## Message impressions
 
@@ -32,7 +32,7 @@ Customization of the in-app message UI or delivery mechanisms within the SDK may
 
 It is important to determine whether the trigger event is failing to occur, or the message itself is unable to display. To test, trigger the message using a different action (like a session start or different custom event) and verify whether it displays. This will help isolate if this is potentially a data issue.
 
-Alternatively try using a different type of in-app message template or size of image. There are [specifications for in-app messages][15] that must be followed. Sometimes, if an image is too large, it will prevent the in-app message from displaying.
+Alternatively try using a different type of in-app message template or size of image. There are [specifications for in-app messages]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/creative_details/) that must be followed. Sometimes, if an image is too large, it will prevent the in-app message from displaying.
 
 ## Session timeout
 
@@ -41,16 +41,16 @@ Find out if you have customized your session timeout. By default, Braze retrieve
 If you have an extended the session timeout it will extended the period of time from which we can refresh the potential in-app messages you are eligible for. Additionally, if your campaign is set to trigger off of a session start, you'll need to make sure the appropriate amount of time has passed for a new session to be registered. For example, the session timeout may have been customized to be 30 seconds. If you open and close the app in less than 30 seconds you will not be eligible to receive another in-app message triggered on session start. 
 
 Learn more about customizing session timeouts for the following platforms:
-* [iOS][16]
-* [Android][17]
-* [Web][18]
+* [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/tracking_sessions/)
+* [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/tracking_sessions/#customizing-session-timeout)
+* [Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/tracking_sessions/#customizing-session-timeout)
 
 ## Minimum interval
 
 There is a minimum interval at which we'll allow in-app messages to be consecutively triggered, so you might be trying to trigger them too quickly. Learn more about the minimum interval for the following platforms: 
-* [iOS][19]
-* [Android][20]
-* [Web][21]
+* [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/in-app_messaging/in-app_message_delivery/#minimum-time-interval-between-triggers)
+* [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/in-app_messaging/in-app_message_delivery/#minimum-time-interval-between-triggers)
+* [Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/in-app_messaging/in-app_message_delivery/#in-app-message-delivery)
 
 While intervals are customizable, we still have them in place to avoid over-messaging your users.
 

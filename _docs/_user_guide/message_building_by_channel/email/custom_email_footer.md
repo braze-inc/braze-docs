@@ -32,21 +32,21 @@ If you are using the [older navigation]({{site.baseurl}}/navigation), this page 
 2. Go to the **Custom Footer** section and turn on custom footers.
 3. Edit your footer in the **Compose** section and send a test message. 
 
-![][20]
+![]({% image_buster /assets/img_archive/custom_footer.png %})
 
 The default footer uses the {% raw %}`{{${set_user_to_unsubscribed_url}}}`{% endraw %} attribute and our physical mailing address. To comply with CAN-SPAM regulations, your custom footer must include {% raw %}`{{${set_user_to_unsubscribed_url}}}`{% endraw %}. You won't be able to save a custom footer without this attribute.
 
 If using the default footer, which uses the {% raw %}`{{${set_user_to_unsubscribed_url}}}`{% endraw %} attribute, be sure to select **&#60;other&#62;** for the **Protocol**.
 
-![Protocol and URL values needed for the custom footer.][24]{: style="max-width:50%;"}
+![Protocol and URL values needed for the custom footer.]({% image_buster /assets/img_archive/email_unsub_protocol.png %}){: style="max-width:50%;"}
 
 ## Footers without unsubscribe links
 
 Be very careful when using a template with the custom footer {% raw %}`{{${email_footer}}}` but without the `{{${set_user_to_unsubscribed_url}}}`{% endraw %} unsubscribe link tag. A warning will appear, but it'll be your choice to send an email with or without an unsubscribe link.
 
-**Warning within email composer:**<br>![Example email composed without a footer.][21]
+**Warning within email composer:**<br>![Example email composed without a footer.]({% image_buster /assets/img_archive/no_unsub_link_warning.png %})
 
-**Warning within campaign composer:**<br>![No-footer campaign composition.][22]
+**Warning within campaign composer:**<br>![No-footer campaign composition.]({% image_buster /assets/img_archive/no_footer_test.png %})
 
 ## Best practices
 
@@ -75,7 +75,7 @@ As a best practice, Braze recommends including both an unsubscribe link (such as
 
 You can also choose to set a custom footer for plaintext emails from the **Subscription Pages and Footers** tab on the **Email Preferences** page, which follows the same rules as the custom footer for HTML emails. If you don't include a plaintext footer, Braze will automatically build one from the HTML footer. When your custom footers are to your liking, click **Save** at the bottom of the page.
 
-![Email with Set Custom Plaintext Footer option selected.][23]{: style="max-width:70%" }
+![Email with Set Custom Plaintext Footer option selected.]({% image_buster /assets/img_archive/custom_footer_save_changes.png %}){: style="max-width:70%" }
 
 [20]: {% image_buster /assets/img_archive/custom_footer.png %}
 [21]: {% image_buster /assets/img_archive/no_unsub_link_warning.png %}

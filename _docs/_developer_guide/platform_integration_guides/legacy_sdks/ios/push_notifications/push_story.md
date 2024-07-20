@@ -18,13 +18,13 @@ The Push Story feature requires the `UNNotification` framework and iOS 10. The f
 
 ## Step 1: Enable push in your app
 
-Follow the [push notification integration][1] to enable push in your app.
+Follow the [push notification integration]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/) to enable push in your app.
 
 ## Step 2: Adding the Notification Content Extension target
 
 In your app project, go to menu **File > New > Target...** and add a new `Notification Content Extension` target and activate it.
 
-![][2]
+![]({% image_buster /assets/img/ios/push_story/add_content_extension.png %})
 
 Xcode should generate a new target for you and create files automatically for you including:
 
@@ -48,7 +48,7 @@ Xcode should generate a new target for you and create files automatically for yo
 
 The Push Story feature requires the background mode in the **Capabilities** section of the main app target. After turning on the background modes, select **Background fetch** and **Remote notifications**.
 
-![][3]
+![]({% image_buster /assets/img/ios/push_story/enable_background_mode.png %})
 
 ### Adding an App Group
 
@@ -185,13 +185,13 @@ class NotificationViewController: UIViewController, UNNotificationContentExtensi
 
 Open the `Notification Content Extension` storyboard and place a new `UIView` in the notification view controller. Rename the class to `ABKStoriesView`. Make the view width and height auto-resizable matching the notification view controller's main view frame.
 
-![][10]
+![]({% image_buster /assets/img/ios/push_story/abkstoriesview_class.png %})
 
-![][11]
+![]({% image_buster /assets/img/ios/push_story/abkstoriesview_size.png %})
 
 Next, link the notification view controller's `storiesView` IBOutlet to the added `ABKStoriesView`.
 
-![][13]
+![]({% image_buster /assets/img/ios/push_story/abkstoriesview_outlet.png %})
 
 ## Step 7: Set the notification content extension plist
 
@@ -201,7 +201,7 @@ Open the `Info.plist` file of the `Notification Content Extension` and add and c
 `UNNotificationExtensionDefaultContentHidden` = `YES` (`Boolean` type)
 `UNNotificationExtensionInitialContentSizeRatio` = `0.65` (`Number` type)
 
-![][12]
+![]({% image_buster /assets/img/ios/push_story/notificationcontentextension_plist.png %})
 
 ## Step 8: Updating the Braze integration in your main app
 

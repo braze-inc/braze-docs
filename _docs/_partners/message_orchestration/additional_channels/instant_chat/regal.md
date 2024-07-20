@@ -10,7 +10,7 @@ search_tag: Partner
 
 # Regal
 
-> [Regal.io][6] is the phone and SMS sales solution built to drive more conversations so you can hit your growth goals way faster.
+> [Regal.io](https://regal.io) is the phone and SMS sales solution built to drive more conversations so you can hit your growth goals way faster.
 
 By integrating Regal and Braze, you can create a more consistent and personalized experience across all your customer touchpoints.
 - Send the right next best email or push notification from Braze based on what's said in a phone conversation on Regal.
@@ -210,7 +210,7 @@ To create a Data Transformation:
 2. Give your transformation a name and click **Create transformation**.
 3. From the list of transformations, click <i class="fa-solid fa-ellipsis-vertical" title="View actions"></i> and select **Copy webhook URL**.
 
-![][4]
+![]({% image_buster /assets/img/regal/copy_webhook_url.png %})
 
 ### Step 2: Enable reporting webhooks in Regal
 
@@ -221,14 +221,14 @@ To set up reporting webhooks:
 
 3. In the webhook endpoint input, add the Braze Data Transformation webhook URL for the associated Data Transformation.
 
-![][5]{: style="max-width:60%;"}
+![]({% image_buster /assets/img/regal/edit_webhook.png %}){: style="max-width:60%;"}
 
 #### Updating an endpoint
 When you edit an endpoint, it can take up to 5 minutes for the cache to refresh and send events to your new endpoint instead.
 #### Retries
 Currently, there are no retries on these events. If a response is not received within 5 seconds, the event is dropped and not retried. Regal will be adding retries in a future release.
 #### Events
-Regal's [Reporting Webhooks guide][7] includes the complete list of Reporting events they publish. There you can see definitions of properties and sample payloads as well.
+Regal's [Reporting Webhooks guide](https://developer.regal.io/docs/reporting-webhooks#events) includes the complete list of Reporting events they publish. There you can see definitions of properties and sample payloads as well.
 
 ### Step 3: Transform Regal events into Braze events
 
@@ -244,7 +244,7 @@ Braze's [Data Transformation]({{site.baseurl}}/data_transformation) feature allo
    - `traits.email` - only set on events if you've previously sent this identifier for a contact
 
 #### Braze-supported identifiers
-- Braze does not support phone numbers as an identifier. To use this as an identifier, the phone number can be set as a [user alias][8] in Braze.
+- Braze does not support phone numbers as an identifier. To use this as an identifier, the phone number can be set as a [user alias]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/#user-aliases) in Braze.
 - When using Braze Data Transformation email address can be used as an identifier. If the email address exists as a profile within Braze, the existing profile will be updated. If the email address does not yet exist within Braze, an email-only profile will be created.
 
 ## Use cases

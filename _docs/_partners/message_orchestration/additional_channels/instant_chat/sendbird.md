@@ -10,7 +10,7 @@ search_tag: Partner
 
 # Sendbird
 
-> [Sendbird][4] Notifications offers marketers and product managers a powerful new channel to communicate with their customers in-app with persistent, interactive one-way messages. These messages can be used for any communication and are most commonly used for promotional and transactional purposes.
+> [Sendbird](https://sendbird.com/) Notifications offers marketers and product managers a powerful new channel to communicate with their customers in-app with persistent, interactive one-way messages. These messages can be used for any communication and are most commonly used for promotional and transactional purposes.
 
 The Braze and Sendbird integration allows Braze users to:
 * Utilize Braze's segmentation and triggering capabilities to initiate personalized in-app notifications.
@@ -23,14 +23,14 @@ By harnessing the joint capabilities of Braze and Sendbird Notifications, busine
 | Requirement | Description |
 | ----------- | ----------- |
 | Sendbird account | A Sendbird account is required to take advantage of this partnership. |
-| Sendbird UIKit | You must have the Sendbird UIKit installed in your [iOS][2] or [Android][3] app. |
+| Sendbird UIKit | You must have the Sendbird UIKit installed in your [iOS](https://sendbird.com/docs/notifications/v1/uikit/ios/install-uikit) or [Android](https://sendbird.com/docs/notifications/v1/uikit/android/install-uikit) app. |
 | Braze REST API key | A Braze REST API key with `users.track` permissions. <br><br> This can be created in the Braze dashboard from **Settings** > **API Keys**. |
-| Braze REST endpoint | [Your REST endpoint URL][1]. Your endpoint will depend on the Braze URL for your instance. |
+| Braze REST endpoint | [Your REST endpoint URL]({{site.baseurl}}/developer_guide/rest_api/basics/#endpoints). Your endpoint will depend on the Braze URL for your instance. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## Use cases
 
-![][13]
+![]({% image_buster /assets/img/sendbird/use-cases.png %})
 
 The Braze and Sendbird Notifications integration offers a range of use cases to boost customer engagement and deliver an exceptional user experience:
 
@@ -41,9 +41,9 @@ The Braze and Sendbird Notifications integration offers a range of use cases to 
 
 ### Step 1: Create a notification template
 
-[Sendbird templates][7] allow you to send personalized in-app notifications by building and using multiple templates for each channel. Templates can be created and customized on Sendbird Dashboard without writing code.
+[Sendbird templates](https://sendbird.com/docs/notifications/v1/templates) allow you to send personalized in-app notifications by building and using multiple templates for each channel. Templates can be created and customized on Sendbird Dashboard without writing code.
 
-![][10]
+![]({% image_buster /assets/img/sendbird/sendbird-dashboard-template.png %})
 
 ### Step 2: Set up the Braze integration on Sendbird dashboard
 
@@ -53,9 +53,9 @@ Once you have provided all fields, click **Save** to complete the integration an
 
 ### Step 3: Install Sendbird Notification Builder
 
-Next, you must install [Sendbird Notification Builder][6]. This Google Chrome extension lets you send customized notifications through Sendbird on the Braze Dashboard.
+Next, you must install [Sendbird Notification Builder](https://chrome.google.com/webstore/detail/apbhgfffamdcdogeijjcnjbmghahoaji). This Google Chrome extension lets you send customized notifications through Sendbird on the Braze Dashboard.
 
-![][12]
+![]({% image_buster /assets/img/sendbird/sendbird-notification-builder.png %})
 
 #### Add Sendbird credentials to the extension
 
@@ -63,7 +63,7 @@ Once the extension is installed, click the Sendbird icon in your browser's toolb
 
 ### Step 4: Map Sendbird user ID to Braze user ID
 
-A Sendbird user ID must be added to a Braze user profile as a [custom attribute][5] for the integration to be used. You can upload and update user profiles via CSV files from the [User import][8] page. Alternatively, you can use the Braze user ID as the Sendbird user ID.
+A Sendbird user ID must be added to a Braze user profile as a [custom attribute]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/) for the integration to be used. You can upload and update user profiles via CSV files from the [User import]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/#csv) page. Alternatively, you can use the Braze user ID as the Sendbird user ID.
 
 ### Step 5: Set up your webhook template
 

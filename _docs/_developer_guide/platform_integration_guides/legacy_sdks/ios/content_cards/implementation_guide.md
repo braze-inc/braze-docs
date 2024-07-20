@@ -434,7 +434,7 @@ We've provided three use cases below. Each use case offers a detailed explanatio
 
 ### Content Cards as supplemental content
 
-![][1]{: style="float:right;max-width:25%;margin-left:15px;border:0;"}
+![]({% image_buster /assets/img/cc_implementation/supplementary.png %}){: style="float:right;max-width:25%;margin-left:15px;border:0;"}
 
 You can seamlessly blend Content Cards into an existing feed, allowing data from multiple feeds to load simultaneously. This creates a cohesive, harmonious experience with Braze Content Cards and existing feed content.
 
@@ -444,7 +444,7 @@ The example to the right shows a `UICollectionView` with a hybrid list of items 
 
 This Content Card is delivered by an API-triggered campaign with API-triggered key-value pairs. This is ideal for campaigns where the card's values depend on external factors to determine what content to display to the user. Note that `class_type` should be known at set-up time.
 
-![The key-value pairs for the supplemental Content Cards use case. In this example, different aspects of the card such as "tile_id", "tile_deeplink", and "tile_title" are set using Liquid.][2]{: style="max-width:60%;"}
+![The key-value pairs for the supplemental Content Cards use case. In this example, different aspects of the card such as "tile_id", "tile_deeplink", and "tile_title" are set using Liquid.]({% image_buster /assets/img/cc_implementation/supplementary_content.png %}){: style="max-width:60%;"}
 
 ##### Ready to log analytics?
 Visit the [following section](#logging-impressions-clicks-and-dismissals) to get a better understanding of how the flow of data should look.
@@ -453,7 +453,7 @@ Visit the [following section](#logging-impressions-clicks-and-dismissals) to get
 <br>
 Content Cards can be used in a message center format where each message is its own card. Each message in the message center is populated via a Content Card payload, and each card contains additional key-value pairs that power on-click UI/UX. In the following example, one message directs you to an arbitrary custom view, while another opens to a webview that displays custom HTML.
 
-![][3]{: style="border:0;"}{: style="max-width:80%;border:0"}
+![]({% image_buster /assets/img/cc_implementation/message_center.png %}){: style="border:0;"}{: style="max-width:80%;border:0"}
 
 #### Dashboard configuration
 
@@ -529,7 +529,7 @@ When a message is clicked, the `ContentCardClassType` handles how the next scree
 ##### Ready to log analytics?
 Visit the [following section](#logging-impressions-clicks-and-dismissals) to get a better understanding of how the flow of data should look.
 
-![An interactive Content Card showing a 50 percent promotion appear in the bottom left corner of the screen. After it's clicked, a promotion will be applied to the cart.][6]{: style="border:0;"}{: style="float:right;max-width:45%;border:0;margin-left:15px;"} 
+![An interactive Content Card showing a 50 percent promotion appear in the bottom left corner of the screen. After it's clicked, a promotion will be applied to the cart.]({% image_buster /assets/img/cc_implementation/discount2.png %}){: style="border:0;"}{: style="float:right;max-width:45%;border:0;margin-left:15px;"} 
 
 ### Interactive Content Cards
 <br>
@@ -541,7 +541,7 @@ Well-placed cards like this are a great way to give users a "nudge" toward speci
 
 The dashboard configuration for interactive Content Cards is straightforward. The key-value pairs for this use case include a `discount_percentage` set as the desired discount amount and `class_type` set as `coupon_code`. These key-value pairs are how type-specific Content Cards get filtered and displayed on the checkout screen.
 
-![][7]{: style="max-width:70%;"} 
+![]({% image_buster /assets/img/cc_implementation/discount.png %}){: style="max-width:70%;"} 
 
 ##### Ready to log analytics?
 Visit the [following section](#logging-impressions-clicks-and-dismissals) to get a better understanding of how the flow of data should look.

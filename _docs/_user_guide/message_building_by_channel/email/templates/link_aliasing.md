@@ -24,7 +24,7 @@ Link aliasing works by decorating a Braze-generated query parameter on links in 
 
 You can also set an alias that will be used to reference a specific link when dealing with reporting or segmentation. 
 
-![][2]
+![]({% image_buster /assets/img/link_aliasing_composer.png %})
 
 Link aliasing is only supported in `href` attributes within HTML anchor tags where it is safe to append a query parameter. It's best to include a question mark (?) at the end of your link so that Braze can easily append the `lid` value. Without appending the `lid` value, Braze will not recognize the URL for link aliasing.
 
@@ -41,7 +41,7 @@ If you are using the [older navigation]({{site.baseurl}}/user_guide/administrati
 
 Here, you can also sort and search through all link aliases.
 
-![Tracked Link Aliases page that shows a link alias named "test" that is an active part of a Canvas step.][8]
+![Tracked Link Aliases page that shows a link alias named "test" that is an active part of a Canvas step.]({% image_buster /assets/img/tracked_aliases.png %})
 
 #### Untracking link aliases
 
@@ -62,7 +62,7 @@ When link aliasing is enabled, messages, Content Blocks, and link templates are 
 
 ### Extracting data
 
-Use the [List link alias for campaign][3] and [List link alias for Canvas][4] endpoints to extract the `alias` set in each message variant in a campaign or an email-specific Canvas component.
+Use the [List link alias for campaign]({{site.baseurl}}/get_campaign_link_alias/) and [List link alias for Canvas]({{site.baseurl}}/get_canvas_link_alias/) endpoints to extract the `alias` set in each message variant in a campaign or an email-specific Canvas component.
 
 ## Link aliasing in Content Blocks
 
@@ -159,7 +159,7 @@ Untracking a link will not reallocate existing segments with the filter to the u
 
 For segmentation purposes, only 100 links can be tracked per workspace by default. Links in archived messages are automatically untracked. However, if archived messages are unarchived, the links will need to be tracked again. When link aliases are tracked, link reporting is indexed by the alias instead of top-level domains or full URLs.
 
-![][1]
+![]({% image_buster /assets/img/link_aliasing_click_table.png %})
 
 ### Segment filters
 
@@ -177,17 +177,17 @@ Retarget users based on the specific alias that was clicked in a Canvas componen
 
 Retarget users based on any alias that was clicked in the campaign or Canvas component. Because aliases are considered "global", any global alias will target link clicks from all campaigns and Canvas steps.
 
-![][5]
+![]({% image_buster /assets/img/link_aliasing_segmentation_filters.png %})
 
 ### Action-based filters
  
 You can create action-based messages targeting any link (tracked or not tracked) or retarget users based on if they clicked an alias across any email campaign or Canvas component. 
 
-![][6]
+![]({% image_buster /assets/img/link_aliasing_action_based_filters.png %})
 
 ### Email clicks event
 
-The [email clicks event][7] occurs when a user clicks an email. Multiple events may be generated for the same campaign if a user clicks multiple times or clicks different links within the email. There are two additional fields for the email clicks event when link aliasing is enabled: `link_id` and `link_alias`.
+The [email clicks event]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events#email-clicks-events/) occurs when a user clicks an email. Multiple events may be generated for the same campaign if a user clicks multiple times or clicks different links within the email. There are two additional fields for the email clicks event when link aliasing is enabled: `link_id` and `link_alias`.
 
 ```json
 // Email Click: users.messages.email.Click

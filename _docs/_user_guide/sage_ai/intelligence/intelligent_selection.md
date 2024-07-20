@@ -10,17 +10,17 @@ search_rank: 10
 
 > Intelligent Selection is a feature that analyzes the performance of a recurring campaign or Canvas twice a day and automatically adjusts the percentage of users that receive each message variant. 
 
-A variant that appears to be performing better than others will get sent to more users, while underperforming variants will be targeted at fewer users. Each adjustment is made using a [statistical algorithm][227] that makes sure we are adjusting for real performance differences and not just random chance.
+A variant that appears to be performing better than others will get sent to more users, while underperforming variants will be targeted at fewer users. Each adjustment is made using a [statistical algorithm](https://en.wikipedia.org/wiki/Multi-armed_bandit) that makes sure we are adjusting for real performance differences and not just random chance.
 
-![A/B Testing section of a campaign with Intelligent Selection enabled.][3]
+![A/B Testing section of a campaign with Intelligent Selection enabled.]({% image_buster /assets/img/intelligent_selection1.png %})
 
 Intelligent Selection will:
 - Repeatedly look at performance data and shift campaign traffic toward Winning Variants gradually.
 - Check that more users receive your best-performing variant without sacrificing statistical confidence.
-- Rule out underperforming variants and identify high-performing variants faster than a [traditional A/B test][1].
+- Rule out underperforming variants and identify high-performing variants faster than a [traditional A/B test]({{site.baseurl}}/user_guide/intelligence/multivariate_testing/).
 - Test more frequently and with greater confidence that your users will see your best message. 
 
-Intelligent Selection is ideal for campaigns that are scheduled to send multiple times. Initial results are needed to begin adjusting your campaign; therefore, a campaign that sends only once will not benefit. For those campaigns, an [A/B test][1] would be more effective.
+Intelligent Selection is ideal for campaigns that are scheduled to send multiple times. Initial results are needed to begin adjusting your campaign; therefore, a campaign that sends only once will not benefit. For those campaigns, an [A/B test]({{site.baseurl}}/user_guide/intelligence/multivariate_testing/) would be more effective.
 
 ## How do I add Intelligent Selection to my campaigns?
 
@@ -30,7 +30,7 @@ Intelligent Selection can be added to any multi-send campaign in the **Target Au
 ### Canvas Intelligent Selection
 When adding variants into your Canvas, click on one of the variant percentages. This allows you to edit the variant distribution and turn on Intelligent Selection.
 
-![A Canvas with two variants, each set to 50% variant distribution, allowing Intelligent Selection to be enabled.][2]
+![A Canvas with two variants, each set to 50% variant distribution, allowing Intelligent Selection to be enabled.]({% image_buster /assets/img/intelligent_selection.png %})
 
 Intelligent Selection will not be available if you haven't yet added conversion events to your Canvas or if your campaign is composed of a solo variant.
 

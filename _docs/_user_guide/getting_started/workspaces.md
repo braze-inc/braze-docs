@@ -77,15 +77,15 @@ You must create separate app instances for each version of your app on each plat
 
 #### Teams
 
-[Teams][1] can be set up across customer base location, language, and custom attributes so that team members and non-team members have different access to messaging features and customer data.
+[Teams]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams/) can be set up across customer base location, language, and custom attributes so that team members and non-team members have different access to messaging features and customer data.
 
 #### Braze user permissions
 
-Workspaces have independent access and user permission definitions. [User permissions][2] allow you to create granular controls regarding what an individual dashboard user or team has access to within a single workspace.
+Workspaces have independent access and user permission definitions. [User permissions]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/) allow you to create granular controls regarding what an individual dashboard user or team has access to within a single workspace.
 
 #### Currents connectors
 
-The [Currents][3] tool is a real-time data stream of your engagement events that is the most robust yet granular export out of the Braze platform. Currents connectors are included with certain Braze packages, and you might have initially received one, assuming a single workspace.
+The [Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents) tool is a real-time data stream of your engagement events that is the most robust yet granular export out of the Braze platform. Currents connectors are included with certain Braze packages, and you might have initially received one, assuming a single workspace.
 
 When you're deciding between creating separate or combined workspaces, it's important to think about the number of Currents connectors you have, as Currents connectors are not shared across workspaces. 
 
@@ -93,7 +93,7 @@ For example, if you have separate workspaces for the development and production 
 
 #### User profiles
 
-All persistent data associated with a user is stored in their [user profile][4]. However, user profiles are also a great resource for troubleshooting and testing because you can easily access information about a user’s engagement history, segment membership, device, and operating system.
+All persistent data associated with a user is stored in their [user profile]({{site.baseurl}}/user_guide/engagement_tools/segments/user_profiles/). However, user profiles are also a great resource for troubleshooting and testing because you can easily access information about a user’s engagement history, segment membership, device, and operating system.
 
 #### Segments, campaigns, and Canvases
 
@@ -240,7 +240,7 @@ You should have more than one Braze user with admin permissions for a single wor
 
 ## Next steps
 
-After you've determined your workspace plan, it's time to create your workspace and add app instances. For steps, check out [Creating and managing workspaces][5].
+After you've determined your workspace plan, it's time to create your workspace and add app instances. For steps, check out [Creating and managing workspaces]({{site.baseurl}}/user_guide/administrative/app_settings/workspaces/).
 
 [1]: {{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams/
 [2]: {{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/

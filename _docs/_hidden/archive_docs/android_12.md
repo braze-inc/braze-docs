@@ -19,7 +19,7 @@ For a full Android 12 migration guide, see the [Android developer documentation]
 
 ## Braze SDK compatibility
 
-If you target Android 12, you must use [Braze Android SDK v13.1.2+][1]. If you do not target Android 12 yet, upgrading is still recommended.
+If you target Android 12, you must use [Braze Android SDK v13.1.2+](https://github.com/braze-inc/braze-android-sdk/blob/master/CHANGELOG.md#1312). If you do not target Android 12 yet, upgrading is still recommended.
 
 **What happens if I don't upgrade my Braze Android SDK?**
 

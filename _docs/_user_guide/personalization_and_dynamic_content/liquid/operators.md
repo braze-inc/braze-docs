@@ -8,7 +8,7 @@ description: "This reference page notes the operators that Liquid supports, as w
 
 # Operators
 
-Liquid supports many [operators][25] that can be used in your conditional statements.
+Liquid supports many [operators](https://docs.shopify.com/themes/liquid/basics/operators) that can be used in your conditional statements.
 
 |   Syntax| Operator Description|
 |---------|-----------|
@@ -39,7 +39,7 @@ Buy now! Would 5% off convince you?
 ```
 {% endraw %}
 
-![][13]{: width="100%"}
+![]({% image_buster /assets/img/liquid-if-totalspend.png %}){: width="100%"}
 
 In this example, if a customer's "Total Spend" custom attribute is greater than `0`, they will get the message:
 
@@ -66,7 +66,7 @@ Hey! Get in here and play this Game!
 ```
 {% endraw %}
 
-![][14]
+![]({% image_buster /assets/img/liquid-if-elsif-games.png %})
 
 In this example, if you have played a certain game, you'll receive the following message:
 
@@ -100,9 +100,9 @@ Stream now!
 ```
 {% endraw %}
 
-![][26]
+![]({% image_buster /assets/img/abort-if.png %})
 
-You can also [abort messages][1] based on Connected Content.
+You can also [abort messages]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/aborting_connected_content/) based on Connected Content.
 
 
 [1]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/aborting_connected_content/

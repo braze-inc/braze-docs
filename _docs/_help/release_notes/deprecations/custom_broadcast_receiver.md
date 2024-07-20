@@ -14,7 +14,7 @@ Braze also broadcasts custom intents when push notifications are received, opene
 
 ## Step 1: Register your BroadcastReceiver
 
-Register your custom `BroadcastReceiver` to listen for Braze push opened and received intents in your [`AndroidManifest.xml`][71]:
+Register your custom `BroadcastReceiver` to listen for Braze push opened and received intents in your [`AndroidManifest.xml`](https://github.com/braze-inc/braze-android-sdk/blob/master/samples/custom-broadcast/src/main/AndroidManifest.xml "AndroidManifest.xml"):
 
 ```xml
 <receiver android:name="YOUR-BROADCASTRECEIVER-NAME" android:exported="false" >
@@ -30,7 +30,7 @@ Register your custom `BroadcastReceiver` to listen for Braze push opened and rec
 
 Your receiver should handle intents broadcast by Braze and launch your activity with them:
 
-- It should subclass [`BroadcastReceiver`][53] and override `onReceive()`.
+- It should subclass [`BroadcastReceiver`](https://developer.android.com/reference/android/content/BroadcastReceiver.html) and override `onReceive()`.
 - The `onReceive()` method should listen for intents broadcast by Braze.
   - A `NOTIFICATION_RECEIVED` intent will be received when a push notification arrives.
   - A `NOTIFICATION_OPENED` intent will be received when the user clicks a push notification.

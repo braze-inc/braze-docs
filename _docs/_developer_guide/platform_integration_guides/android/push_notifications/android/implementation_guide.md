@@ -29,13 +29,13 @@ Android imposes some limitations on what components can be used to implement cus
 
 Push notifications can display user-specific information inside a custom view hierarchy. The following example shows a push notification after a user has completed a specific task (Braze Learning course) and is now encouraged to expand this notification to check their progress. The information provided here is user-specific and can be fired off as a session is completed or specific user action is taken by leveraging an API trigger. 
 
-![Personalized Push dashboard Example][1]{: style="max-width:65%;border:0"}
+![Personalized Push dashboard Example]({% image_buster /assets/img/push_implementation_guide/android_push_custom_layout.png %}){: style="max-width:65%;border:0"}
 
 #### Dashboard configuration
 
 To set up a personalized push in the dashboard, you must register the specific category you want to be displayed. Set the appropriate user attributes you want the message to show within the key-value pairs using standard Liquid. These views can be personalized based on specific user attributes of a specific user profile.
 
-![Personalized Push dashboard Example][2]{: style="max-width:60%;"}
+![Personalized Push dashboard Example]({% image_buster /assets/img/push_implementation_guide/push5.png %}){: style="max-width:60%;"}
 
 ##### Ready to log analytics?
 Visit the [following section](#logging-analytics) to better understand how the flow of data should look.
@@ -46,7 +46,7 @@ Visit the [following section](#logging-analytics) to better understand how the f
 
 Logging analytics can only be done in real-time with the help of the customer's server hitting our [`/users/track` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track/). To log analytics, send down the `braze_id` value in the key-value pairs field (as seen in the following screenshot) to identify which user profile to update.
 
-![Personalized Push dashboard Example][3]{: style="max-width:80%;"}
+![Personalized Push dashboard Example]({% image_buster /assets/img/push_implementation_guide/android_braze_id_configuration.png %}){: style="max-width:80%;"}
 
 ### Logging manually 
 

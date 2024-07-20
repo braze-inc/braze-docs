@@ -25,9 +25,9 @@ The following are some examples of the kinds of behavior patterns that can be de
 
 ## Creating formulas
 
-Formulas can be accessed in the statistics panels on the [Home][9], [Revenue][10] and [Custom Events][11] pages in the dashboard. To view this panel, change the **View Statistics For** dropdown to **KPI Formulas**.
+Formulas can be accessed in the statistics panels on the [Home]({{site.baseurl}}/user_guide/data_and_analytics/analytics/understanding_your_app_usage_data/), [Revenue]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/exporting_revenue_data/) and [Custom Events]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) pages in the dashboard. To view this panel, change the **View Statistics For** dropdown to **KPI Formulas**.
 
-![View statistics for KPI formulas in the Braze dashboard][16]
+![View statistics for KPI formulas in the Braze dashboard]({% image_buster /assets/img_archive/kpi_forms.png %})
 
 To create a new formula:
 
@@ -84,7 +84,7 @@ table td {
 | --- | --- |
 | Custom event count | MAU |
 |  | DAU |
-|  | Segment size (only segments that have [analytics tracking][17] enabled can be used) |
+|  | Segment size (only segments that have [analytics tracking]({{site.baseurl}}/user_guide/data_and_analytics/reporting/viewing_and_understanding_segment_data/) enabled can be used) |
 {: .reset-td-br-1 .reset-td-br-2}
 
 [9]: {{site.baseurl}}/user_guide/data_and_analytics/analytics/understanding_your_app_usage_data/

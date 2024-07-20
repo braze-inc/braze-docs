@@ -28,13 +28,13 @@ You can create campaigns and Canvases that start, branch, and have mid-journey c
 
 Set your trigger words when scheduling an action-based delivery campaign.
 
-![Action-based trigger of "Send this campaign to users who sent inbound LINE to subscription group where the message body is" and a blank field.][1]
+![Action-based trigger of "Send this campaign to users who sent inbound LINE to subscription group where the message body is" and a blank field.]({% image_buster /assets/img/line/trigger_word_campaign.png %})
 
 ### Canvas
 
 Set your trigger words within [action paths]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/action_paths) in your Canvas.
 
-![Action path with a trigger of "Send this campaign to users who sent inbound LINE to subscription group where the message body is" and a blank field.][2]
+![Action path with a trigger of "Send this campaign to users who sent inbound LINE to subscription group where the message body is" and a blank field.]({% image_buster /assets/img/line/trigger_word_canvas.png %})
 
 ### Requirements
 

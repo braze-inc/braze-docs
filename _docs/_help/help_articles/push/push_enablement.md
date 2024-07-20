@@ -16,7 +16,7 @@ Push enabled refers to users who have a push token available. For example, this 
 
 Background push enabled refers to users that are push enabled but have disabled foreground push notifications. In this case, Braze cannot display user-visible notifications on that device. However, you can use background push for tracking uninstalls, enabling silent push notifications, and geofencing.  
 
-For more information, check out our article on [About push notifications][1].
+For more information, check out our article on [About push notifications]({{site.baseurl}}/user_guide/message_building_by_channel/push/about).
 
 Still need help? Open a [support ticket]({{site.baseurl}}/braze_support/).
 

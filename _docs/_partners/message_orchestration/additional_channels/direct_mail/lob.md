@@ -10,7 +10,7 @@ search_tag: Partner
 
 # Lob
 
-> [Lob.com][38] is an online service that allows you to send direct mail to your users.
+> [Lob.com](https://lob.com) is an online service that allows you to send direct mail to your users.
 
 The Braze and Lob integration leverages Braze webhooks and the Lob API to send mail like letters, postcards, and checks through the mail.  
 
@@ -26,7 +26,7 @@ The Braze and Lob integration leverages Braze webhooks and the Lob API to send m
 
 ### Step 1: Select Lob endpoint
 
-The HTTP URL to request in the webhook is different for each action you can make to Lob. In the following example, we use the postcards API endpoint `https://api.lob.com/v1/postcards`. Visit the [complete endpoint list][39] to select the endpoint appropriate for your use case. 
+The HTTP URL to request in the webhook is different for each action you can make to Lob. In the following example, we use the postcards API endpoint `https://api.lob.com/v1/postcards`. Visit the [complete endpoint list](https://lob.com/docs#intro) to select the endpoint appropriate for your use case. 
 
 | API endpoint | Available endpoints |
 | ------------ | ------------------- |
@@ -56,7 +56,7 @@ Lob requires an HTTP Header for authorization and an HTTP method. The following 
   - **Authorization**: Basic `{{'<LOB_API_KEY>:' | base64_encode}}`
   - **Content-Type**: application/json
 
-![Request body code and webhook URL shown in the Braze webhook builder compose tab.][35]
+![Request body code and webhook URL shown in the Braze webhook builder compose tab.]({% image_buster /assets/img_archive/lob_full_request.png %})
 
 #### Request body
 
@@ -79,7 +79,7 @@ The following is an example request body for the Lob postcards endpoint. While t
 
 At this point, your campaign should be ready to test and send. Check the Lob dashboard and the Braze developer console error message logs if you run into errors. For example, the following error was caused by an incorrectly formatted authentication header. 
 
-![A message error log showing the time, app name, channel, and error message. The error message includes the message alert and the status code.][36]
+![A message error log showing the time, app name, channel, and error message. The error message includes the message alert and the status code.]({% image_buster /assets/img_archive/error_log.png %})
 
 {% alert important %}
 Remember to save your template before leaving the page! <br>Updated webhook templates can be found in the **Saved Webhook Templates** list when creating a new [webhook campaign]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/). 

@@ -19,7 +19,7 @@ Retention Reports are not available for API-triggered campaigns.
 
 ### Step 1: Select a date range
 
-![Report Date][8]{: style="float:right;max-width:30%;margin-left:15px;"}
+![Report Date]({% image_buster /assets/img/date_select_retention.png %}){: style="float:right;max-width:30%;margin-left:15px;"}
 
 Get started by visiting any campaign or Canvas in your Braze dashboard, and select a date range for your report. Selecting an appropriate date range is crucial because of the way it affects the retention reports. 
 
@@ -42,13 +42,13 @@ Next, click **Analyze Variants** at the bottom of the page. From here, you can a
 {% endtab %}
 {% endtabs %}
 
-![Select a Retention event][1]{: style="max-width:80%"}
+![Select a Retention event]({% image_buster /assets/img/retention_1.png %}){: style="max-width:80%"}
 
 ### Step 3: Generate the report
 
 Once you've selected a retention event, click **Run Report** to start the query.
 
-![Run Report][2]{: style="max-width:80%"}
+![Run Report]({% image_buster /assets/img/retention_2.png %}){: style="max-width:80%"}
 
 This query may take a few minutes to run, depending on how much data needs to be retrieved to generate the results. If it takes too long, you'll see a notification asking you to retry loading the report again. You may need to wait up to five minutes before the report will load.
 
@@ -97,7 +97,7 @@ Range retention measures how many users come back in the range of days listed ac
 
 Range Reports are some of the most intuitive reports to read. They clearly state, of all the users in a cohort, what percentage of those users performed the retention event within a given date range. For example, in the following image, referencing the All Users Cohort, on date range "Day 0 (0-24hrs)", 35.71% of the cohort performed the retention report. If a user performs multiple retention events within multiple date ranges, they will be counted as retained for each range.
 
-![Retention Report][5]
+![Retention Report]({% image_buster /assets/img/range_retention.png %})
 
 ### Retention report components
 

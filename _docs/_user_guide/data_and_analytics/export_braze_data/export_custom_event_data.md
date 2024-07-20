@@ -18,7 +18,7 @@ You can find the **Custom Events Report** under **Analytics**.
 If you are using the [older navigation]({{site.baseurl}}/navigation), you can find **Custom Events** report page under **Data**.
 {% endalert %}
 
-![Custom events][14]
+![Custom events]({% image_buster /assets/img_archive/Export_events.png %})
 
 You can export the following CSVs:
 

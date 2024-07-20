@@ -42,12 +42,12 @@ Users receive geofence triggered notifications after performing enter or exit tr
 
 You can also leverage geofences with some of our partners, for example: 
 
-- [Radar][12]
-- [Foursquare][13]
+- [Radar]({{site.baseurl}}/partners/data_augmentation/contextual_location/radar/)
+- [Foursquare]({{site.baseurl}}/partners/data_augmentation/contextual_location/foursquare/)
 
 ## Frequently asked questions
 
-Visit our [Geofence FAQ][5] for answers to frequently asked questions about geofences.
+Visit our [Geofence FAQ]({{site.baseurl}}/user_guide/engagement_tools/locations_and_geofences/faqs/#geofences) for answers to frequently asked questions about geofences.
 
 [3]: https://developers.google.com/android/reference/com/google/android/gms/location/package-summary
 [4]: https://developer.apple.com/library/content/documentation/UserExperience/Conceptual/LocationAwarenessPG/RegionMonitoring/RegionMonitoring.html

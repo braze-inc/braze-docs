@@ -13,7 +13,7 @@ channel:
 
 > This reference article covers how to set up iOS push notifications for the Braze Swift SDK.
 
-[Push notifications][1] allow you to send out notifications from your app when important events occur. You might send a push notification when you have new instant messages to deliver, breaking news alerts to send, or the latest episode of your user's favorite TV show ready for them to download for offline viewing. Push notifications can also be [silent][2], being used only to update your app's interface or trigger background work. 
+[Push notifications]({{site.baseurl}}/user_guide/message_building_by_channel/push/about/) allow you to send out notifications from your app when important events occur. You might send a push notification when you have new instant messages to deliver, breaking news alerts to send, or the latest episode of your user's favorite TV show ready for them to download for offline viewing. Push notifications can also be [silent]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/silent_push_notifications/), being used only to update your app's interface or trigger background work. 
 
 Push notifications are great for sporadic but immediately important content, where the delay between background fetches might not be acceptable. Push notifications can also be much more efficient than background fetch, as your application only launches when necessary. 
 
@@ -41,7 +41,7 @@ If you are using the [older navigation]({{site.baseurl}}/navigation), you can up
 
 In Xcode, add the Push Notifications capability using the **Signing & Capabilities** pane to the main app target.
 
-![][24]
+![]({% image_buster /assets/img_archive/Enable_push_capabilities.png %})
 
 ## Automatic push integration
 
@@ -121,7 +121,7 @@ If you rely on push notifications for additional behavior specific to your app, 
 
 Include the appropriate code sample within your app's [`application:didFinishLaunchingWithOptions:` delegate method](https://developer.apple.com/documentation/uikit/uiapplicationdelegate/1622921-application) so that your users' devices can register with APNs. Ensure that you call all push integration code in your application's main thread.
 
-Braze also provides default push categories for push action button support, which must be manually added to your push registration code. Refer to [push action buttons][35] for additional integration steps.
+Braze also provides default push categories for push action button support, which must be manually added to your push registration code. Refer to [push action buttons]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/customization/action_buttons/) for additional integration steps.
 
 Add the following code to the `application:didFinishLaunchingWithOptions:` method of your app delegate. 
 
@@ -301,7 +301,7 @@ If the foreground notification is clicked, the push delegate `userNotificationCe
 
 ## Deep linking
 
-Deep linking from a push into the app is automatically handled via our standard push integration documentation. If you'd like to learn more about how to add deep links to specific locations in your app, see our [advanced use cases][10].
+Deep linking from a push into the app is automatically handled via our standard push integration documentation. If you'd like to learn more about how to add deep links to specific locations in your app, see our [advanced use cases]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/advanced_use_cases/linking/#linking-implementation).
 
 ## Subscribing to push notifications updates
 
@@ -337,10 +337,10 @@ When using the automatic push integration, `subscribeToUpdates(_:)` is the only 
 
 ## Testing {#push-testing}
 
-If you'd like to test in-app and push notifications via the command line, you can send a single notification through the terminal via CURL and the [messaging API][29]. You will need to replace the following fields with the correct values for your test case:
+If you'd like to test in-app and push notifications via the command line, you can send a single notification through the terminal via CURL and the [messaging API]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_messages/). You will need to replace the following fields with the correct values for your test case:
 
 - `YOUR_API_KEY` - available at **Settings** > **API Keys**.
-- `YOUR_EXTERNAL_USER_ID` - available on the **Search Users** page. See [assigning user IDs][32] for more information.
+- `YOUR_EXTERNAL_USER_ID` - available on the **Search Users** page. See [assigning user IDs]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/setting_user_ids/#assigning-a-user-id) for more information.
 - `YOUR_KEY1` (optional)
 - `YOUR_VALUE1` (optional)
 
@@ -361,7 +361,7 @@ curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer {YOUR
   }
 }' https://rest.iad-01.braze.com/messages/send
 ```
-The preceding example is for customers on the `US-01` instance. If you are not on this instance, refer to our [API documentation][66] to see which endpoint to make requests to.
+The preceding example is for customers on the `US-01` instance. If you are not on this instance, refer to our [API documentation]({{site.baseurl}}/api/basics/) to see which endpoint to make requests to.
 
 ## Push primers {#push-primers}
 

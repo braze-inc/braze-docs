@@ -15,15 +15,15 @@ tool:
 
 ## Accessing data about your segments and membership
 
-The **Segments** page of your Braze dashboard contains a summary of all of your segments and allows you to examine detailed data for each one. On this page, search for and click the name of a segment to edit and view its data. To learn how to create a segment, check out [Creating a Segment][3].
+The **Segments** page of your Braze dashboard contains a summary of all of your segments and allows you to examine detailed data for each one. On this page, search for and click the name of a segment to edit and view its data. To learn how to create a segment, check out [Creating a Segment]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/#creating-a-segment).
 
-![Segments page][1]
+![Segments page]({% image_buster /assets/img_archive/segments.png %})
 
 After clicking on the name of a segment, you'll be able to view segment statistics and filters. You can edit your segment by adding or deleting filters. Be sure to save any changes!
 
-![Segment data][2]
+![Segment data]({% image_buster /assets/img_archive/A_Tracking.png %})
 
-When you turn [analytics tracking on for a segment][9], Braze will let you view sessions, custom events, and revenue over time by this segment.
+When you turn [analytics tracking on for a segment]({{site.baseurl}}/user_guide/data_and_analytics/tracking/segment_analytics_tracking/), Braze will let you view sessions, custom events, and revenue over time by this segment.
 
 ### Segment statistics
 
@@ -34,7 +34,7 @@ You will see the following segment statistics, which update in real-time as you 
 | **Total Users** | How many users your app has in total. |
 | **Selected Users** | How many users are in your segment and what percentage of your total user base they are. |
 | **LTV (Paying Users)** | The lifetime value per user (LTV) in this segment and the lifetime value per paying user in this segment. The LTV is calculated by dividing your lifetime revenue by lifetime users. |
-| **Emailable (Opted In)** | Emailable refers to all users who can be reached via email. These users have provided an email address and have not opted out. Opted In refers to users who have explicitly opted in to email. Due to [spam regulations][6], it's often a good idea to ask your users to explicitly opt-in by implementing a double opt-in policy where users must click a link in an initial confirmation email. To encourage more users to opt-in, you can target a message at [those who have neither opted in nor out][5]. |
+| **Emailable (Opted In)** | Emailable refers to all users who can be reached via email. These users have provided an email address and have not opted out. Opted In refers to users who have explicitly opted in to email. Due to [spam regulations]({{site.baseurl}}/help/best_practices/spam_regulations/#spam-regulations), it's often a good idea to ask your users to explicitly opt-in by implementing a double opt-in policy where users must click a link in an initial confirmation email. To encourage more users to opt-in, you can target a message at [those who have neither opted in nor out]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#segmenting-by-user-subscriptions). |
 | **Push Enabled (Opted In)** | Push enabled refers to the number of users with at least one push token. Some users may have multiple push tokens (for example, if they own an iPhone and iPad), so the number of push notifications you send to this segment may be greater than the number of "push enabled" users. Opted In refers to the number of users who have explicitly opted in to push notifications. Users must always explicitly opt-in for you to send them pushes. |
 {: .reset-td-br-1 .reset-td-br-2}
 
@@ -48,18 +48,18 @@ The **Messaging Use** section shows which campaigns have targeted your segment, 
 
 The historical segment membership count is an estimate, similar to how the segment size is an estimate before you click **Calculate Exact Statistics**. Braze estimates the membership count by querying users in a random bucket range. This means that on one day, the membership count could be based on users with a random bucket number of 111–120, and on another day, users with a random bucket number of 8,452–8,455. Therefore, the graph might show slight fluctuations on each date due to different amounts of users landing within the random bucket ranges.
 
-![Under Messaging Use, view the campaigns that your segment is being used in.][4]
-![Use the Historical Membership dropdown to filter segment membership by date range.][10]
+![Under Messaging Use, view the campaigns that your segment is being used in.]({% image_buster /assets/img_archive/historical_membership1.png %})
+![Use the Historical Membership dropdown to filter segment membership by date range.]({% image_buster /assets/img_archive/historical_membership2.png %})
 
 ### User preview
 
 To view detailed, user-specific information about your segments, click **User Data** and select **User Preview**.
 
-![User Specific Info][7]
+![User Specific Info]({% image_buster /assets/img_archive/preview_users.png %})
 
 On this page, you can view a number of user-specific attributes, such as gender, age, number of sessions, and whether they have opted into push and email.
 
-![User Preview][8]
+![User Preview]({% image_buster /assets/img_archive/user_preview.png %})
 
 ## Performance data by segment
 
@@ -276,7 +276,7 @@ To create a report from a [Query Builder]({{site.baseurl}}/user_guide/data_and_a
 
 Before generating your report, go to the **Variables** tab to provide information for the Report Builder template, including required variables that will vary based on report. 
 
-![][11]
+![]({% image_buster /assets/img_archive/variables_panel.png %})
 
 The variables include:
 

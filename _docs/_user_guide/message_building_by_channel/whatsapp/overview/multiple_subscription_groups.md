@@ -22,7 +22,7 @@ Business accounts that are nested within the same Meta Business Manager will als
 
 You can add up to 10 WhatsApp Business accounts per workspace. To add an account:
 
-1. Go **Technology Partners** > **WhatsApp** and select **Add WhatsApp Business Account**. ![WhatsApp Messaging Integration section with options to add a business account or add a subscription group and number.][1]<br>
+1. Go **Technology Partners** > **WhatsApp** and select **Add WhatsApp Business Account**. ![WhatsApp Messaging Integration section with options to add a business account or add a subscription group and number.]({% image_buster /assets/img/whatsapp/multiple_wabas.png %})<br>
 2. Go through the sign-up workflow. In the **Select your WhatsApp Business Account** step, select **Create a new WhatsApp Business Account**.
 3. Add a phone number. This number must follow all the requirements of any WhatsApp phone number, including not being registered to any other WhatsApp accounts. 
 
@@ -40,7 +40,7 @@ Each WhatsApp phone number will appear as a separate WhatsApp chat to users. Eac
 
 You can add up to 20 subscription groups (and sending phone numbers) per WhatsApp Business account. To add a subscription group and phone number:
 
-1. Go to **Technology Partners** > **WhatsApp** and select **Add Subscription Group and Number**.![WhatsApp Messaging Integration section with options to add a business account or add a subscription group and number.][1]<br>
+1. Go to **Technology Partners** > **WhatsApp** and select **Add Subscription Group and Number**.![WhatsApp Messaging Integration section with options to add a business account or add a subscription group and number.]({% image_buster /assets/img/whatsapp/multiple_wabas.png %})<br>
 2. Go through the sign-up workflow. In the **Select your WhatsApp Business Account** step, select your existing WhatsApp Business account and add a new phone number. This number must follow all the requirements of any WhatsApp phone number, including not being registered to any other WhatsApp accounts.
 
 ### Removing a subscription group and phone number 

@@ -62,14 +62,14 @@ Touches include `Email Click`, `Content Card Click`, `In-App Message Click`, `SM
 
 1. Select **Create Dashboard**, or an existing dashboard and **Edit**. Then select **+ Add Tile**.
 2. Select **Select Existing Query** and choose a query you've run in Query Builder.
-3. To edit how the query results display in the tile, select the pencil icon to change the title and chart type.<br><br>![Tile editor view with options to change the title and chart type.][2]{: style="max-width:60%;"}<br><br>
+3. To edit how the query results display in the tile, select the pencil icon to change the title and chart type.<br><br>![Tile editor view with options to change the title and chart type.]({% image_buster /assets/img/sample_tile.png %}){: style="max-width:60%;"}<br><br>
     - If selecting a chart type of **Column**, **Bar**, or **Line**:
         - Select a field from the query to use for your X-axis.
-        - De-select the columns you're not interested in.<br><br>![Dropdown with the chart types.][1]{: style="max-width:40%;"}
+        - De-select the columns you're not interested in.<br><br>![Dropdown with the chart types.]({% image_buster /assets/img/chart_type.png %}){: style="max-width:40%;"}
 
 {: start="4"}        
 4. Make sure to save your changes. If you want to delete the tile, select the trash can icon. Deleted tiles can't be reverted and must be recreated.
-5. Adjust the tile size by dragging the bottom right corner, and the tile position on the dashboard by dragging the handle at the top right corner.<br><br>![Tile getting dragging by the handle.][3]<br><br>
+5. Adjust the tile size by dragging the bottom right corner, and the tile position on the dashboard by dragging the handle at the top right corner.<br><br>![Tile getting dragging by the handle.]({% image_buster /assets/img/drag_tile.png %})<br><br>
 6. Add additional tiles until your dashboard is complete.
 7. Select **View Dashboard**, and then select **Run Dashboard**. Your dashboard might take up to a few minutes to finish generating reports.
 

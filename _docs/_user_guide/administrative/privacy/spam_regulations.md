@@ -13,16 +13,16 @@ channel:
 
 # Spam regulations
 
-> There are a number of laws that regulate senders of electronic communications, including email, push notifications and SMS. You should always be aware of [local regulations][4] that may affect you or your users. 
+> There are a number of laws that regulate senders of electronic communications, including email, push notifications and SMS. You should always be aware of [local regulations](https://en.wikipedia.org/wiki/Email_spam_legislation_by_country "Wikipedia: Email spam legislation by country") that may affect you or your users. 
 
 Braze is providing relevant information based on our own research, but you should also refer to the full text of these laws for complete and up-to-date details.
 
-- [CAN-SPAM][1]
-- [Canadian Anti-Spam Law][2]
+- [CAN-SPAM](#can-spam)
+- [Canadian Anti-Spam Law](#casl)
 
 ## CAN-SPAM
 
-The CAN-SPAM Act of 2003 regulates email senders in the U.S. sending "any electronic mail message, the primary purpose of which is the commercial advertisement or promotion of a commercial product or service." You can read more details on the official [Federal Trade Commission][5] website.
+The CAN-SPAM Act of 2003 regulates email senders in the U.S. sending "any electronic mail message, the primary purpose of which is the commercial advertisement or promotion of a commercial product or service." You can read more details on the official [Federal Trade Commission](http://www.business.ftc.gov/documents/bus61-can-spam-act-compliance-guide-business "CAN-SPAM Act: A Compliance Guide for Business") website.
 
 There are seven key requirements for CAN-SPAM:
 
@@ -38,7 +38,7 @@ Transactional emails are exempt from these rules with the exception of #1.
 
 ## Canadian Anti-Spam Law (CASL) {#casl}
 
-On July 1, 2014, the Canadian Anti-Spam Law (CASL) goes into effect for emails sent to Canadian residents. You can read the full text of the law on the Government of Canada [Justice Laws Website][3]. The law essentially says that Canadian recipients of both email and push notifications need to provide "expressed or implied" consent to your communication with them.
+On July 1, 2014, the Canadian Anti-Spam Law (CASL) goes into effect for emails sent to Canadian residents. You can read the full text of the law on the Government of Canada [Justice Laws Website](http://laws-lois.justice.gc.ca/eng/annualstatutes/2010_23/FullText.html). The law essentially says that Canadian recipients of both email and push notifications need to provide "expressed or implied" consent to your communication with them.
 
 ### CASL versus CAN-SPAM
 
@@ -62,7 +62,7 @@ The following types of messages are exempt from the requirements of CASL:
 - Messages providing notification of factual information about subscription, membership or account
 - Messages delivering a product or service, including product updates or upgrades
 
->  This is not the complete list of exemptions. View the [full text of the law][3] for more details.
+>  This is not the complete list of exemptions. View the [full text of the law](http://laws-lois.justice.gc.ca/eng/annualstatutes/2010_23/FullText.html) for more details.
 
 ### Message consent
 
@@ -117,7 +117,7 @@ In iOS, your users have always been asked to opt-in to push notifications. The i
 
 ### Android {#spam-android}
 
-In Android, your users can assume to be opted-in by the implied opt-in that is stated in your privacy policy or end user license agreement. You may want to implement an expressed opt-in process perhaps in an initial screen just as the user starts the app for the first time. Visit the [Push best practices][6] article for more details. You can also orient the user as to what types of push notifications they will receive, thereby increasing the opt-in rate.
+In Android, your users can assume to be opted-in by the implied opt-in that is stated in your privacy policy or end user license agreement. You may want to implement an expressed opt-in process perhaps in an initial screen just as the user starts the app for the first time. Visit the [Push best practices]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/) article for more details. You can also orient the user as to what types of push notifications they will receive, thereby increasing the opt-in rate.
 
 [1]: #can-spam
 [2]: #casl

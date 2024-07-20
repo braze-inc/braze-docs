@@ -9,7 +9,7 @@ search_tag: Partner
 
 # SmarterSends
 
-> [SmarterSends][2] drives personalization with marketing campaigns that businesses can create, schedule, and deploy to enforce brand and legal compliance with control over the content and data used. 
+> [SmarterSends](https://smartersends.com) drives personalization with marketing campaigns that businesses can create, schedule, and deploy to enforce brand and legal compliance with control over the content and data used. 
 
 The Braze and SmarterSends partnership allows you to combine the power of Braze with the hyper-localized content owned by your distributed users to elevate your marketing campaigns.
 
@@ -17,9 +17,9 @@ The Braze and SmarterSends partnership allows you to combine the power of Braze 
 
 | Requirement | Description |
 | --- | --- |
-| SmarterSends account | A [SmarterSends account][2] is required to take advantage of this partnership. |
+| SmarterSends account | A [SmarterSends account](https://smartersends.com) is required to take advantage of this partnership. |
 | Braze REST API key | A Braze REST API key with these permissions: {::nomarkdown}<ul><li><code>users.track</code></li><li><code>users.export.ids</code></li><li><code>messages.schedule.create</code></li><li><code>messages.schedule.update</code></li> <li><code>messages.schedule.delete</code></li><li><code>sends.id.create</code></li><li><code>segments.list</code></li><li><code>segments.data_series</code></li><li><code>segments.details</code></li><li><code>sends.data_series</code></li></ul>{:/} This can be created in the Braze dashboard from **Settings** > **API Keys**. For additional security, allowlist the SmarterSends IP address (available in your instance). |
-| Braze REST endpoint | [Your REST endpoint URL][1]. Your endpoint will depend on the Braze URL for your instance. |
+| Braze REST endpoint | [Your REST endpoint URL]({{site.baseurl}}/developer_guide/rest_api/basics/#endpoints). Your endpoint will depend on the Braze URL for your instance. |
 | Braze API campaign ID | The [Braze API campaign ID]({{site.baseurl}}/api/api_campaigns/) is the unique identifier for all campaigns sent through SmarterSends. This can be created in the Braze dashboard at **Messaging** > **Campaigns**. |
 {: .reset-td-br-1 .reset-td-br-2}
 

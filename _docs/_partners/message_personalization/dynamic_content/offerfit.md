@@ -21,7 +21,7 @@ The OfferFit and Braze integration allows you to automatically discover the righ
 |-------------|-------------|
 | OfferFit License | An active OfferFit license is required to take advantage of this partnership. |
 | Braze REST API key | A Braze REST API key with the following permissions: {::nomarkdown}<ul><li><code>users.export.ids</code></li><li><code>users.export.segment</code></li><li><code>messages.send</code></li><li><code>campaigns.trigger.send</code></li> <li><code>campaigns.list</code></li><li><code>campaigns.data_series</code></li><li><code>campaigns.details</code></li><li><code>canvas.trigger.send</code></li><li><code>canvas.list</code></li><li><code>canvas.data_series</code></li><li><code>canvas.details</code></li><li><code>segments.list</code></li><li><code>segments.data_series</code></li><li><code>segments.details</code></li><li><code>templates.create</code></li><li><code>templates.update</code></li><li><code>templates.info</code></li><li><code>templates.list</code></li></ul>{:/} This can be created in the Braze dashboard from **Settings** > **API Keys**. |
-| Braze REST API endpoint | [Your REST API endpoint URL][1]. Your endpoint depends on the Braze URL for your instance. |
+| Braze REST API endpoint | [Your REST API endpoint URL]({{site.baseurl}}/developer_guide/rest_api/basics/#endpoints). Your endpoint depends on the Braze URL for your instance. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% alert note %}
@@ -64,7 +64,7 @@ KPI you can measure from your customer data. This is the metric OfferFit will tr
 2. Select the **dimensions** to test (for example, offer, subject line, creative, channel, time, day, frequency, etc.).
 3. Select the **options** available for each dimension. For example, you could select email, SMS, and push for the channel dimension, and then select daily, twice a week, and weekly for the frequency dimension.
 
-![of_use_case_example][2]
+![of_use_case_example]({% image_buster /assets/img/offerfit/of_use_case_example.png %})
 
 
 After the experimentation process is automated, OfferFit will begin making daily recommendations for each customer with the goal of maximizing the chosen success metric. 

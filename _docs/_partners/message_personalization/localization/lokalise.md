@@ -47,11 +47,11 @@ For example, let's create a simple translation key, `description`:
 3. Add "Web" in the **Platforms** dropdown. 
 4. When you are ready, click **Save**.
 
-![][1]{: style="max-width:60%"}
+![]({% image_buster /assets/img/lokalise/1_add_key.png %}){: style="max-width:60%"}
 
 Your translation key should appear in the project editor:
 
-![][2]{: style="max-width:90%"}
+![]({% image_buster /assets/img/lokalise/2_translation_key_added.png %}){: style="max-width:90%"}
 
 #### Known issues
 
@@ -62,7 +62,7 @@ Your translation key should appear in the project editor:
 
 Open your Lokalise project, and click **Apps**. Here, search and install the Braze app. You will see the following screen:
 
-![Braze configuration on Lokalise listing the project ID and the translation files URL.][3]
+![Braze configuration on Lokalise listing the project ID and the translation files URL.]({% image_buster /assets/img/lokalise/3_lokalise_braze_app.png %})
 
 In the **Translation File URL**, Lokalise publishes a JSON file containing all the translations for your keys in the project. You'll get as many translation file URLs as target languages you have in your project. This is why the resulting translation file URLs have two pieces:
 
@@ -75,7 +75,7 @@ The translation file URL is the URL that you will need when configuring a Braze 
 
 To test this URL, copy it and replace {% raw %}`{{${language}}}`{% endraw %} with a language code (for example, `en`) and open this URL in your browser. You will see a JSON file with your keys and translations:
 
-![][4]
+![]({% image_buster /assets/img/lokalise/4_testing_json_lokalise.png %})
 
 ### Step 4: Using translations in Braze campaign
 
@@ -104,7 +104,7 @@ Now use the translations variable to display the desired translations by their k
 For example, to display the `description` key, use`{{ translations.description }}`.
 
 {% endraw %}
-![][6]
+![]({% image_buster /assets/img/lokalise/6_integration_usage_sample.png %})
 
 Lastly, save the email template and preview it. You should see your translation being displayed.
 

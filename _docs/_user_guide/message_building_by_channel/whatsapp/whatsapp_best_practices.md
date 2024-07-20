@@ -18,7 +18,7 @@ WhatsApp bases its [phone quality rating](https://www.facebook.com/business/help
 
 The first time you message a user in WhatsApp, these options are displayed within the message thread.
 
-![WhatsApp message thread with options to block or report a business][1]{: style="max-width:30%;"}
+![WhatsApp message thread with options to block or report a business]({% image_buster /assets/img/whatsapp/whatsapp_block_report.png %}){: style="max-width:30%;"}
 
 {% alert note %}
 For metrics about your blocks and reports, make sure the [Insights tab](https://www.facebook.com/business/help/683499390267496) is turned on in your WhatsApp Manager.
@@ -46,7 +46,7 @@ Opt-outs don’t impact your phone quality rating, so it’s better for a user t
 
 A suggested best practice is to provide instructions about how to out-out in the footer of the first message you send users. For example, you could state that users can unsubscribe from your WhatsApp channel by responding with your opt-out trigger word. You could also regularly include the opt-out footer in future campaigns. To learn how to set this up, see [Opt-in and opt-out]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/message_processing/opt-ins_and_opt-outs/).
  
-![WhatsApp message with a footer stating to respond STOP to unsubscribe from the channel][2]{: style="max-width:35%;"}
+![WhatsApp message with a footer stating to respond STOP to unsubscribe from the channel]({% image_buster /assets/img/whatsapp/whatsapp_unsubscribe.png %}){: style="max-width:35%;"}
 
 [1]: {% image_buster /assets/img/whatsapp/whatsapp_block_report.png %}
 [2]: {% image_buster /assets/img/whatsapp/whatsapp_unsubscribe.png %}

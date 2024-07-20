@@ -23,7 +23,7 @@ There are two key steps to creating a lead-scoring workflow in Braze:
 
 1. Go to **Messaging** > **Canvas** and select **Create Canvas**, and then fill in your Canvas basics.
 
-2. Give your Canvas a relevant name such as “Lead Scoring Canvas” and, for better findability, tag it with something like “Lead Management”.<br><br>![Step 1 of creating a Canvas with the name “Lead Scoring Canvas” and tag “Lead Management”.][1]{: style="max-width:80%;"}
+2. Give your Canvas a relevant name such as “Lead Scoring Canvas” and, for better findability, tag it with something like “Lead Management”.<br><br>![Step 1 of creating a Canvas with the name “Lead Scoring Canvas” and tag “Lead Management”.]({% image_buster /assets/img/b2b/step_1_simple.png %}){: style="max-width:80%;"}
 
 ### Step 2: Set up your entry criteria
 
@@ -33,7 +33,7 @@ There are two key steps to creating a lead-scoring workflow in Braze:
     - **Change Custom Attribute Value** with the name of your lead scoring attribute (such as `lead score`). If you haven’t created a lead scoring attribute yet, follow the steps in [Custom attributes]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/). This will enter users into the Canvas whenever their lead score changes.
     - **Add an Email Address**
 
-![Step 2 of creating a Canvas with the entry schedule of “Action-Based” and action-based options of changing a custom attribute “lead score” and adding an email address.][2]{: style="max-width:80%;"}
+![Step 2 of creating a Canvas with the entry schedule of “Action-Based” and action-based options of changing a custom attribute “lead score” and adding an email address.]({% image_buster /assets/img/b2b/step_2_simple.png %}){: style="max-width:80%;"}
 
 ### Step 3: Identify your target audience
 
@@ -41,7 +41,7 @@ There are two key steps to creating a lead-scoring workflow in Braze:
 
 All users are eligible for lead scoring, so you can add company-specific rules about who to score by selecting which user [segments]({{site.baseurl}}/user_guide/engagement_tools/segments/) to target and applying additional [filters]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/). For example, you can exclude employees, users who are already customers, and similar. 
 
-![Step 3 of creating a Canvas with options for selecting segments and filters to narrow down the entry audience.][3]{: style="max-width:80%;"}
+![Step 3 of creating a Canvas with options for selecting segments and filters to narrow down the entry audience.]({% image_buster /assets/img/b2b/step_3_simple.png %}){: style="max-width:80%;"}
 
 #### Step 3b: Set Canvas re-eligibilty
 
@@ -52,7 +52,7 @@ In **Entry Controls**, do the following:
 - Select **Specified Window**.
 - Set the re-eligibility to “0” **seconds**.
 
-![“Entry Controls” section that has selections for “Allow users to re-enter this Canvas” in a “Specified Window” of 0 seconds.][4]{: style="max-width:80%;"}
+![“Entry Controls” section that has selections for “Allow users to re-enter this Canvas” in a “Specified Window” of 0 seconds.]({% image_buster /assets/img/b2b/entry_controls_simple.png %}){: style="max-width:80%;"}
 
 #### Step 3c: Update send settings
 
@@ -60,7 +60,7 @@ Given the operational nature of this Canvas and the fact that no messages will b
 
 Under **Subscription Settings**, for **Send to these users:** select **all users including unsubscribed users**. 
 
-![Step 4 of creating a Canvas for setting message sending options.][5]{: style="max-width:80%;"}
+![Step 4 of creating a Canvas for setting message sending options.]({% image_buster /assets/img/b2b/step_4_simple.png %}){: style="max-width:80%;"}
 
 ### Step 4: Build your Canvas
 
@@ -68,7 +68,7 @@ Under **Subscription Settings**, for **Send to these users:** select **all users
 
 Under your variant, select the plus icon and then select **Action Paths**.
 
-![Canvas with “Action Paths” displaying in the menu opened by the plus icon.][6]{: style="max-width:60%;"}
+![Canvas with “Action Paths” displaying in the menu opened by the plus icon.]({% image_buster /assets/img/b2b/action_paths_simple.png %}){: style="max-width:60%;"}
 
 #### Step 4b: Create Action Groups
 
@@ -81,19 +81,19 @@ Add the following groups to your Action Path:
 - **Group 3:** All events that count for a 1-point decrement.
 - **Everyone Else:** Action Paths allow you to define the window to wait and see if a user takes an action, before dropping them into an “everyone else” group. For lead scoring, this is an opportunity to decrement the score for “inactivity”.
 
-![Action Path containing Action Groups for adding one point, five poins, and ten points; subtracting one point and ten points; and “Everyone Else”.][7]
+![Action Path containing Action Groups for adding one point, five poins, and ten points; subtracting one point and ten points; and “Everyone Else”.]({% image_buster /assets/img/b2b/action_paths_selected_simple.png %})
 
 #### Step 4c: Configure each group to include the relevant events
 
 In each Action Group, select **Select trigger** and choose the event that will add the number of points for that particular Action Group. Add more triggers to include all the events that will increment the lead score by one. For example, a user could increment their score by one when they start a session in any app or perform a custom event (such as registering or joining a webinar). 
 
-![Action Group for adding a point with the triggers of “Starting Session in Any App” and “Performing Custom Event”.][8]{: style="max-width:80%;"}
+![Action Group for adding a point with the triggers of “Starting Session in Any App” and “Performing Custom Event”.]({% image_buster /assets/img/b2b/action_groups_simple.png %}){: style="max-width:80%;"}
 
 #### Step 4d: Add User Update steps
 
 Add a User Update step to each Canvas path created below your Action Path. 
 
-![Canvas displaying the Action Path with branched User Update paths for each Action Group.][9]{: style="max-width:80%;"}
+![Canvas displaying the Action Path with branched User Update paths for each Action Group.]({% image_buster /assets/img/b2b/user_update_paths_simple.png %}){: style="max-width:80%;"}
 
 {: start=”2”}
 In each User Update step’s **Compose** tab, do the following for the respective fields:
@@ -184,7 +184,7 @@ To update the lead record in Salesforce with the lead status from Braze, we reco
 | Content_Type | application/json |
 {: .reset-td-br-1 reset-td-br-2}
 
-![Webhook being composed with a Salesforce webhook URL, PATCH HTTP method, raw text request body, and request headers.][10]{: style="max-width:80%;"}
+![Webhook being composed with a Salesforce webhook URL, PATCH HTTP method, raw text request body, and request headers.]({% image_buster /assets/img/b2b/webhook.png %}){: style="max-width:80%;"}
 
 #### Step 2b: Schedule webhook sends
 
@@ -198,7 +198,7 @@ In the **Schedule Delivery** step, select the following:
 
 In the **Target Audiences** step, include a filter that excludes users whose lead statuses are already at MQL or beyond, such as "`lead_status` `is none of` `MQL`".
 
-![Webhook targeting options with the filter of “lead_status” is none of “MQL”.][11]{: style="max-width:80%;"}
+![Webhook targeting options with the filter of “lead_status” is none of “MQL”.]({% image_buster /assets/img/b2b/step_3_webhook.png %}){: style="max-width:80%;"}
 
 ### Step 3: Launch campaign
 

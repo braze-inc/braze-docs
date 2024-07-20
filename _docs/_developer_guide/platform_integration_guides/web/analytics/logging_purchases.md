@@ -14,9 +14,9 @@ description: "This article describes how to log purchases and add properties to 
 
 Braze supports purchases in multiple currencies. Purchases that you report in a currency other than USD will be shown in the dashboard in USD based on the exchange rate at the date they were reported.
 
-Before implementation, be sure to review examples of the segmentation options afforded by custom events, custom attributes, and purchase events in our [Best practices][3].
+Before implementation, be sure to review examples of the segmentation options afforded by custom events, custom attributes, and purchase events in our [Best practices]({{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#user-data-collection).
 
-To use this feature, add the [`logPurchase()`][8] call after a successful purchase in your app. Note that the `quantity` must be less than or equal to 100.
+To use this feature, add the [`logPurchase()`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#logpurchase) call after a successful purchase in your app. Note that the `quantity` must be less than or equal to 100.
 
 ```javascript
 braze.logPurchase(product_id, price, "USD", quantity);
@@ -24,7 +24,7 @@ braze.logPurchase(product_id, price, "USD", quantity);
 
 ## Adding properties
 
-You can add [metadata][8] about purchases by either passing an [event property array]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events#nested-objects) or by passing an object of key-value pairs with your purchase information. 
+You can add [metadata](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#logpurchase) about purchases by either passing an [event property array]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events#nested-objects) or by passing an object of key-value pairs with your purchase information. 
 
 #### Object formatting
 
@@ -39,7 +39,7 @@ If you want to log purchases at the order level instead of the product level, yo
 
 ## REST API
 
-You can also use our REST API to record purchases. Refer to the [users API][1] documentation for details.
+You can also use our REST API to record purchases. Refer to the [users API]({{site.baseurl}}/developer_guide/rest_api/user_data/#user-data) documentation for details.
 
 [1]: {{site.baseurl}}/developer_guide/rest_api/user_data/#user-data
 [3]: {{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#user-data-collection

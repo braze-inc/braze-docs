@@ -10,7 +10,7 @@ search_rank: 1
 
 Braze makes a standard GET request at send time to the endpoint specified within the `connected_content` tag. If the endpoint returns JSON, it's automatically parsed and stored in a variable called `connected`. If the endpoint returns text, it will be directly inserted into the message in place of the `connected_content` tag.
 
-If you want to save your response to a variable, it's recommended to return JSON objects. And if you want the response of Connected Content to replace the tag with the text, make sure the response is not valid JSON (as defined by [json.org][46])
+If you want to save your response to a variable, it's recommended to return JSON objects. And if you want the response of Connected Content to replace the tag with the text, make sure the response is not valid JSON (as defined by [json.org](http://www.json.org))
 
 You can also specify `:save your_variable_name` after the URL in order to save the data as something else. For example, the following `connected_content` tag will store the response to a local variable called `localweather` (you can save multiple `connected_content` JSON variables):
 
@@ -82,7 +82,7 @@ Enjoy the weather!
 
 If the API responded with {%raw%}`{{localweather.consolidated_weather[0].weather_state_name}}`{%endraw%} returning `Rain`, the user would then receive this push.
 
-![Push notification with the message "It's raining! Grab an umbrella!"][17]{:style="max-width:50%" }
+![Push notification with the message "It's raining! Grab an umbrella!"]({% image_buster /assets/img_archive/connected_weather_push2.png %} "Connected Content Push Usage Example"){:style="max-width:50%" }
 
 By default, Connected Content will set a `Content-Type` header on a GET HTTP request that it makes to `application/json` with `Accept: */*`. If you require another content type, specify it explicitly by adding `:content_type your/content-type` to the tag. Braze will then set both the Content-Type and Accept header to the type you specify.
 

@@ -12,7 +12,7 @@ description: "This article provides an overview of the updated HTML editor for e
 
 With the updated HTML editor, you can seamlessly switch between editors (HTML, classic, plaintext, and AMP) with the top editor navigation. These options were previously hidden in a dropdown in the old HTML editor. This updated HTML editor also creates a consistent experience across our editors in other messaging channels, allowing Braze to more efficiently build universal improvements to these editors in the future.
 
-![][1]
+![]({% image_buster /assets/img_archive/email_html_editor_updated.png %})
 
 {% alert important %}
 To access the **Link Management** tab in the updated HTML email editor, you must have [link aliasing]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates/link_aliasing/) turned on. To turn on link aliasing, contact your account manager.

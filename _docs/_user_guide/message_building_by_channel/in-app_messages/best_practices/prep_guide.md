@@ -40,7 +40,7 @@ channel: in-app messages
 
 - What is your goal for this message? How can you represent that in your message?
 - Do your buttons offer options that make sense to your user? What is your [primary call to action]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/create/#buttons)?
-- Are you [deep linking to other in-app content][1]? Are you using this in-app message to send and accept a [permission or push priming request][21]?
+- Are you [deep linking to other in-app content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/#deep-linking-to-in-app-content)? Are you using this in-app message to send and accept a [permission or push priming request]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/)?
 - Do you have a message exit option? If not, you can always copy and paste this snippet to create a quick button:
     ```html
     <a href="appboy://close">X</a>

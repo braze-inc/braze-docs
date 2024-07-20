@@ -23,7 +23,7 @@ The change will make the filter more intuitive and more consistent with the beha
 
 The following campaign shown sends at 9 pm on April 16. The audience's segmentation is "Made More than 2 Purchases in the past 3 days".
 
-![Campaign Schedule][1]
+![Campaign Schedule]({% image_buster /assets/img/campaign-schuedule-example.png %})
 
 9 pm ET on April 16 is 1 am UTC on April 17.
 

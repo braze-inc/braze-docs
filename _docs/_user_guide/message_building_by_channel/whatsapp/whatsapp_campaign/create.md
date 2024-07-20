@@ -69,7 +69,7 @@ Select if you’d like to create a WhatsApp [template message](#template-message
 WhatsApp templates currently don't support coupon code buttons.
 {% endalert %}
 
-![The Message Variants section lets you select a subscription group and one of two message types: WhatsApp Template Message and Response Message.][5]{: style="max-width:80%;"}
+![The Message Variants section lets you select a subscription group and one of two message types: WhatsApp Template Message and Response Message.]({% image_buster /assets/img/whatsapp/whatsapp_message_variants.png %}){: style="max-width:80%;"}
 
 ### Template messages
 
@@ -82,7 +82,7 @@ Disabled text fields (highlighted gray) cannot be edited as they are part of the
 
 Each template has an assigned language, so you need to create a campaign or Canvas step for each language to correctly set up user matching. For example, if you're building a Canvas that uses templates assigned with Indonesian and English, you need to create a Canvas step for the Indonesian template and a Canvas step for the English template.
 
-![List of templates including previews of their messages, their assigned languages, and their approved status.][8]{: style="max-width:80%;"}
+![List of templates including previews of their messages, their assigned languages, and their approved status.]({% image_buster /assets/img/whatsapp/whatsapp_templates.png %}){: style="max-width:80%;"}
 
 #### Variables
 
@@ -96,7 +96,7 @@ If you plan to use Liquid, be sure to include a default value for your chosen pe
 {% endraw %}
 {% endalert %}
 
-![The Add Personalization tool with the attribute "first_name" and the default value "you".][2]{: style="max-width:80%;"}
+![The Add Personalization tool with the attribute "first_name" and the default value "you".]({% image_buster /assets/img/whatsapp/whatsapp7.png %}){: style="max-width:80%;"}
 
 ### Dynamic links 
 
@@ -115,19 +115,19 @@ There are three response message layouts you can use:
 - Text Message
 - Media Message
 
-![The response message composer for a Reply Message that welcomes new users with a discount code.][6]{: style="max-width:80%;"}
+![The response message composer for a Reply Message that welcomes new users with a discount code.]({% image_buster /assets/img/whatsapp/whatsapp_response_messages.png %}){: style="max-width:80%;"}
 
 ## Step 3: Preview and test your message
 
 Braze always recommends previewing and testing your message before sending it. Switch to the **Test** tab to send a test WhatsApp message to [content test groups]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/internal_groups_tab/#content-test-groups) or individual users, or preview the message as a user directly in Braze.
 
-![A preview message for an existing user named Suzanne.][3]{: style="max-width:80%;"}
+![A preview message for an existing user named Suzanne.]({% image_buster /assets/img/whatsapp/whatsapp8.png %}){: style="max-width:80%;"}
 
 {% alert note %}
 A conversation window is required to send response messages, including test messages. To initiate a conversation window, send a WhatsApp message to the phone number associated with the subscription group you’re using for this message. The associated phone number is listed in the alert on the **Test** tab.
 {% endalert %}
 
-![An alert that says, "To test, first open a conversation window by sending a WhatsApp message to +1 631-202-0907. Then, send your response message to the test user."][7]{: style="max-width:80%;"}
+![An alert that says, "To test, first open a conversation window by sending a WhatsApp message to +1 631-202-0907. Then, send your response message to the test user."]({% image_buster /assets/img/whatsapp/whatsapp_test_phone_number.png %}){: style="max-width:80%;"}
 
 ## Step 4: Build the remainder of your campaign or Canvas
 

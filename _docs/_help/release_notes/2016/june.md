@@ -22,11 +22,11 @@ Customers can now pause and resume multiple campaigns simultaneously from the ca
 
 ## Uninstall data API endpoint
 
-Customers can now fetch uninstall tracking data from our export APIs directly. Check out the [export endpoints][4] for additional details.
+Customers can now fetch uninstall tracking data from our export APIs directly. Check out the [export endpoints]({{site.baseurl}}/developer_guide/rest_api/export/#kpi-export) for additional details.
 
 ## Improved error log
 
-We've improved your ability to sort by error type in the [Message Error Log][5]!
+We've improved your ability to sort by error type in the [Message Error Log]({% image_buster /assets/img_archive/improved_error_log.png %})!
 
 [4]: {{site.baseurl}}/developer_guide/rest_api/export/#kpi-export
 [5]: {% image_buster /assets/img_archive/improved_error_log.png %}

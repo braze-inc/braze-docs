@@ -36,7 +36,7 @@ The scores and the corresponding categories will be updated according to the sch
 
 The distribution of the likelihood scores for the entire prediction audience is displayed at the top of the page. Users in buckets further to the right have higher scores and are more likely to perform the event. Users in buckets further to the left are less likely to perform the event. The slider beneath the chart will allow you to select a section of users and estimate what the results would be of targeting those users.
 
-![][4]{: style="max-width:90%"} 
+![]({% image_buster /assets/img/purchasePrediction/purchaseTargeting.png %}){: style="max-width:90%"} 
 
 As you move the slider handles to different positions, the bar in the left half of the panel will inform you how many users out of the entire prediction audience would be targeted using the part of the population you've selected.
 
@@ -44,7 +44,7 @@ As you move the slider handles to different positions, the bar in the left half 
 
 In the right half of the panel beneath the chart, we show estimates of the expected accuracy of targeting the portion of the prediction audience you selected in two ways: how many selected users are expected to perform the event, and how many are expected not to.
 
-![][6]
+![]({% image_buster /assets/img/purchasePrediction/purchaseEstimatedResults.png %})
 
 
 #### How many selected users are expected to perform the event

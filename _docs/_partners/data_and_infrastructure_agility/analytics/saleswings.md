@@ -10,7 +10,7 @@ search_tag: Partner
 
 # SalesWings
 
-> [SalesWings][1] is a B2B SaaS lead profiling add-on built for marketing and sales teams, which helps manage lead and account qualification through lead scoring and grading, sales insights and alerts, marketing alignment, and B2B attribution reporting, along with a tight Salesforce CRM integration.
+> [SalesWings](https://www.saleswingsapp.com/?utm_source=braze&utm_campaign=technicaldocs) is a B2B SaaS lead profiling add-on built for marketing and sales teams, which helps manage lead and account qualification through lead scoring and grading, sales insights and alerts, marketing alignment, and B2B attribution reporting, along with a tight Salesforce CRM integration.
 
 SalesWings allows marketing teams and marketing operations managers to qualify leads and accounts for their sales teams, essential for sales and marketing alignment and efficiency. Furthermore, SalesWings, together with Braze, can surface a lead’s customer journey and Braze marketing campaign engagement data to sales reps, allowing you to increase lead qualification rates through more educated conversations.
 
@@ -18,9 +18,9 @@ SalesWings allows marketing teams and marketing operations managers to qualify l
  
 | Requirement | Description |
 | ----------- | ----------- |
-| SalesWings account | A [SalesWings][1] account is required to take advantage of this partnership. |
+| SalesWings account | A [SalesWings](https://www.saleswingsapp.com/?utm_source=braze&utm_campaign=technicaldocs) account is required to take advantage of this partnership. |
 | Braze REST API key | A Braze REST API key with `users.export.ids` permissions. <br><br> This can be created in the Braze dashboard from **Settings** > **API Keys**. |
-| Braze REST endpoint | [Your REST endpoint URL][2]. Your endpoint will depend on the Braze URL for your instance. |
+| Braze REST endpoint | [Your REST endpoint URL]({{site.baseurl}}/developer_guide/rest_api/basics/#endpoints). Your endpoint will depend on the Braze URL for your instance. |
 | Segment.com account (optional) | If you are a Segment.com user, you can send all lead engagement and profile data and identify events via Segment.com for lead profiling. |
 {: .reset-td-br-1 .reset-td-br-2}
 
@@ -76,29 +76,29 @@ _Example dashboard linked to Braze email & marketing engagement within Salesforc
 
 ### Step 1: SalesWings account and configuration
 
-[Schedule a demo][4] with the friendly SalesWings team to learn more about SalesWings.
+[Schedule a demo](https://www.saleswingsapp.com/schedule-a-demo?utm_source=braze&utm_campaign=technicaldocs) with the friendly SalesWings team to learn more about SalesWings.
 
 ### Step 2: Installing behavioral tracking on your website or app
 
 Currently, there are two ways for you to collect behavioral data in SalesWings for lead scoring and sales insights:
-* [Deploy the SalesWings tracking JavaScript][5] on the websites and apps where you want to track and identify leads
+* [Deploy the SalesWings tracking JavaScript](https://support.saleswingsapp.com/en/collections/3285135-1-implementing-saleswings-tracking-script) on the websites and apps where you want to track and identify leads
 * Send behavioral lead activity data (and lead profile data) via SalesWings integration with Segment.com
 
 ### Step 3: Connecting SalesWings to Braze
 
-Go to the [**SalesWings Settings** page][6] and expand the **Braze Integration** section.
+Go to the [**SalesWings Settings** page](https://helium.saleswings.pro/settings) and expand the **Braze Integration** section.
 
-![The Braze Integration section of the SalesWings Settings page.][7]
+![The Braze Integration section of the SalesWings Settings page.]({% image_buster /assets/img/saleswings/saleswings_braze_lead_scoring_integration_settings.png %})
 
 Copy the value of the **Identifier** column for the newly created key and paste it into the **Braze API key** field of the SalesWings **Braze Integration** section.
 
-Add your Braze API endpoint as described in [API and SDK endpoints article][8], and enter it in the **Braze API endpoint** field. Copy the value of the **REST Endpoint** column and enter it in the **Braze API endpoint** field in the SalesWings **Braze Integration** section.
+Add your Braze API endpoint as described in [API and SDK endpoints article]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints), and enter it in the **Braze API endpoint** field. Copy the value of the **REST Endpoint** column and enter it in the **Braze API endpoint** field in the SalesWings **Braze Integration** section.
 
 Then, click **Save Changes** in the SalesWings settings.
 
 ### Step 4: Configuring SalesWings lead scoring for Braze, CRM integration, and more
 
-Consult the SalesWings services team for full onboarding support via the [website][1].
+Consult the SalesWings services team for full onboarding support via the [website](https://www.saleswingsapp.com/?utm_source=braze&utm_campaign=technicaldocs).
 
 ## Using this integration 
 
@@ -121,7 +121,7 @@ You can identify users automatically when they click on a trackable URL (for exa
 
 The `braze_id` variable is set to an identifier of the user-generated by Braze and is always available. The `br_user_id` variable is set to the user's identifier in your system and may be missing in certain scenarios (for example, for anonymous users created by the Braze SDK). If both `braze_id` and `br_user_id` are used in a link, SalesWings will only consider the `braze_id` parameter.
 
-For configuration and further troubleshooting, contact the [SalesWings services team][1] for onboarding support.
+For configuration and further troubleshooting, contact the [SalesWings services team](https://www.saleswingsapp.com/?utm_source=braze&utm_campaign=technicaldocs) for onboarding support.
 
 [1]: https://www.saleswingsapp.com/?utm_source=braze&utm_campaign=technicaldocs
 [2]: {{site.baseurl}}/developer_guide/rest_api/basics/#endpoints

@@ -26,9 +26,9 @@ Braze will process the following keywords automatically and update the subscript
 | Help | `HELP`<br> `INFO` | User will receive your defined Help auto response. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
-Only the **exact, single-word message** will be processed (case insensitive). Keywords such as `STOP PLEASE` will be ignored unless [fuzzy opt-out][fuzzylink] is turned on.
+Only the **exact, single-word message** will be processed (case insensitive). Keywords such as `STOP PLEASE` will be ignored unless [fuzzy opt-out]({{site.baseurl}}/user_guide/message_building_by_channel/sms/keywords/fuzzy_opt_out/) is turned on.
 
-If a recipient uses the keywords `HELP` or `INFO`, a response will be triggered automatically. The SMS template for these automatic response messages will be set during your [onboarding][oblink] and phone number procurement period. Note that you may continue to update these responses after the initial onboarding period.
+If a recipient uses the keywords `HELP` or `INFO`, a response will be triggered automatically. The SMS template for these automatic response messages will be set during your [onboarding]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_subscription_group/#setup-process) and phone number procurement period. Note that you may continue to update these responses after the initial onboarding period.
 
 {% alert tip %}
 Interested in expanding your opt-out processing? Try [fuzzy opt-out]({{site.baseurl}}/user_guide/message_building_by_channel/sms/keywords/fuzzy_opt_out/), a feature that attempts to recognize when an inbound message does not match an opt-out keyword, but indicates opt-out intent.

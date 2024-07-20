@@ -163,12 +163,12 @@ You can use these methods by passing your `BrazeInAppMessage` instance to log an
 Follow these steps to test a sample in-app message.
 
 1. Set an active user in the React application by calling `Braze.changeUserId('your-user-id')` method.
-2. Head to **Campaigns** and follow [this guide][5] to create a new in-app message campaign.
+2. Head to **Campaigns** and follow [this guide]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/create/) to create a new in-app message campaign.
 3. Compose your test in-app messaging campaign and head over to the **Test** tab. Add the same `user-id` as the test user and click **Send Test**. You should be able to launch an in-app message on your device shortly.
 
-![A Braze in-app message campaign showing you can add your own user ID as a test recipient to test your in-app message.][6]
+![A Braze in-app message campaign showing you can add your own user ID as a test recipient to test your in-app message.]({% image_buster /assets/img/react-native/iam-test.png %} "In-App Messaging Test")
 
-A sample implementation can be found in BrazeProject, within the [React Native SDK][7]. Additional Android and iOS implementation samples can be found in the [Android][8] and [iOS][9] SDK.
+A sample implementation can be found in BrazeProject, within the [React Native SDK](https://github.com/braze-inc/braze-react-native-sdk). Additional Android and iOS implementation samples can be found in the [Android](https://github.com/braze-inc/braze-android-sdk) and [iOS](https://github.com/braze-inc/braze-swift-sdk) SDK.
 
 ## In-app message data model
 
@@ -196,7 +196,7 @@ The in-app message model provides the base for all in-app messages.
 |`toString()`      | The message as a String representation.                                                                                |
 {: .reset-td-br-1 .reset-td-br-2}
 
-For a full reference of the in-app message model, see the [Android][10] and [iOS][11] documentation.
+For a full reference of the in-app message model, see the [Android](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/index.html) and [iOS](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/inappmessage) documentation.
 
 ### In-app message button model properties
 
@@ -212,7 +212,7 @@ Buttons can be added to in-app messages to perform actions and log analytics. Th
 |`toString()`      | The button as a String representation.                                                                                      |
 {: .reset-td-br-1 .reset-td-br-2}
 
-For a full reference of button model, see the [Android][12] and [iOS][13] documentation.
+For a full reference of button model, see the [Android](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/-message-button/index.html) and [iOS](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/inappmessage/button) documentation.
 
 ## GIF Support
 

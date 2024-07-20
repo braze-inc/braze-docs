@@ -28,7 +28,7 @@ guide_featured_list:
 
 ## Overview
 
-![An overview of churn, which includes a past prediction audience with training with historical data. This contributes to predicting risk for future churn by measuring today's predicted audience with a churn risk score.][1]
+![An overview of churn, which includes a past prediction audience with training with historical data. This contributes to predicting risk for future churn by measuring today's predicted audience with a churn risk score.]({% image_buster /assets/img/churn/churn_overview.png %})
 
 > With Predictive Churn, you can define what churn means for your business ([churn definition]({{site.baseurl}}/user_guide/predictive_suite/predictive_churn/creating_a_churn_prediction/#step-2-define-churn)), and the users you'd like to prevent from churning ([prediction audience]({{site.baseurl}}/user_guide/predictive_suite/predictive_churn/creating_a_churn_prediction/#step-3-filter-your-prediction-audience)). When you create a prediction, Braze trains a machine learning model using [gradient boosted decision trees](https://en.wikipedia.org/wiki/Gradient_boosting) to identify users at risk of churn by learning from activity patterns of past users who did and did not churn according to your definition.
 

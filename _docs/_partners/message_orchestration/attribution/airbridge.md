@@ -196,7 +196,7 @@ If you are using the [older navigation]({{site.baseurl}}/navigation), you can fi
 
 Here, you will find the REST endpoint and generate your Braze data import key. After the key is generated generated, you can create a new key or invalidate an existing one. The data import key and the REST endpoint are used in the next step when setting up a postback in Airbridge's dashboard.
 
-![][1]
+![]({% image_buster /assets/img/airbridge/airbridge_integration_step_1.png %})
 
 ### Step 3: Configure Braze in Airbridge's dashboard
 
@@ -231,7 +231,7 @@ Assuming you configure your integration as suggested, Braze will map install dat
 
 Your user base can be segmented by attribution data in the Braze dashboard using the Install Attribution filters.
 
-![][2]
+![]({% image_buster /assets/img/airbridge/airbridge_integration_step_2.png %})
 
 ## Meta Business attribution data
 

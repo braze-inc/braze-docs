@@ -16,7 +16,7 @@ platform:
 
 ### What platforms support Live Activities?
 
-Live Activities are currently a feature specific to iOS. The Live Activities article covers the [prerequisites][2] for managing Live Activities through the Braze Swift SDK.
+Live Activities are currently a feature specific to iOS. The Live Activities article covers the [prerequisites]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/live_activities/live_activities/#prerequisites) for managing Live Activities through the Braze Swift SDK.
 
 ### Do React Native apps support Live Activities?
 
@@ -32,7 +32,7 @@ No, this is not currently supported.
 
 ### What happens if a push notification is sent while a Live Activity is active? 
 
-![A phone screen with a Bulls versus Bears sports game live activity toward the middle of the screen and push notification lorem ipsum text at the bottom of the screen.][4]{: style="max-width:30%;float:right;margin-left:15px;"}
+![A phone screen with a Bulls versus Bears sports game live activity toward the middle of the screen and push notification lorem ipsum text at the bottom of the screen.]({% image_buster /assets/img/push-vs-live-activities.png %}){: style="max-width:30%;float:right;margin-left:15px;"}
 
 Live Activities and push notifications occupy different screen real estate and won't conflict on a user's screen.
 
@@ -44,7 +44,7 @@ Apple requires that the user initiates the Live Activity through some action in 
 
 ### Do Live Activities require push primers?
 
-[Push primers][1] are a best practice to prompt your users to opt in to push notifications from your app. However, there is no system prompt to opt into Live Activities. Users are, by default, opted into Live Activities when they upgrade to iOS 16.1+.
+[Push primers]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/push_primer_messages/) are a best practice to prompt your users to opt in to push notifications from your app. However, there is no system prompt to opt into Live Activities. Users are, by default, opted into Live Activities when they upgrade to iOS 16.1+.
 
 ## Technical topics and troubleshooting
 
@@ -54,11 +54,11 @@ Any Live Activity errors will be logged in the Braze dashboard in the [Message A
 
 ### I am receiving an Access Denied response when I try to use the `live_activity/update` endpoint. Why?
 
-The API keys you use need to be given the correct permissions to access the different Braze API endpoints. If you are using an API key that you previously created, it's possible that you neglected to update its permissions. Read our [API key security overview][3] for a refresher.
+The API keys you use need to be given the correct permissions to access the different Braze API endpoints. If you are using an API key that you previously created, it's possible that you neglected to update its permissions. Read our [API key security overview]({{site.baseurl}}/api/basics/#rest-api-key-security) for a refresher.
 
 ### Does the `messages/send` endpoint share rate limits with the `messages/live_activity/update` endpoint? 
 
-By default, the rate limit for the `messages/live_activity/update` endpoint is 250,000 requests per hour, per workspace, and across multiple endpoints. See the [API rate limits][5] for more information.
+By default, the rate limit for the `messages/live_activity/update` endpoint is 250,000 requests per hour, per workspace, and across multiple endpoints. See the [API rate limits]({{site.baseurl}}/api/api_limits/) for more information.
 
 ### Why aren't my push-to-start tokens being generated?
 

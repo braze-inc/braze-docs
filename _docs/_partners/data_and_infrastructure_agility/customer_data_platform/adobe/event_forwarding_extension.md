@@ -59,7 +59,7 @@ Create a new [event forwarding secret](https://experienceleague.adobe.com/docs/e
 
 After installing the extension, create a new event forwarding [rule](https://experienceleague.adobe.com/docs/experience-platform/tags/ui/rules.html?lang=en) and configure its conditions as desired. When configuring the actions for the rule, select the **Braze** extension, then select **Send Event** for the action type.
 
-![][1]
+![]({% image_buster /assets/img/efe.png %})
 
 {% tabs local %}
 {% tab User Identification %}
@@ -122,7 +122,7 @@ All attributes added within the configuration will be sent each time the event i
 
 After installing the extension, create a new event forwarding [rule](https://experienceleague.adobe.com/docs/experience-platform/tags/ui/rules.html?lang=en) and configure its conditions as desired. When configuring the actions for the rule, select the **Braze** extension, then select **Send Purchase Event** for the action type.
 
-![][3]
+![]({% image_buster /assets/img/efe2.png %})
 
 {% tabs local %}
 {% tab User Identification %}

@@ -29,7 +29,7 @@ All U.S. numbers must be valid, 10-digit phone numbers with a valid area code. T
 
 All international numbers should start with a `+`, followed by their country code and then the phone number. (e.g `+442071838750`)
 
-![][picture]{: style="max-width:50%;border: 0;"}
+![]({% image_buster /assets/img/sms/e164.png %}){: style="max-width:50%;border: 0;"}
 
 However, to ensure accuracy in the event that you are sending to multiple regions with different country or area codes, it is recommended to use the `E.164` format, even for U.S.-based phone numbers.
 

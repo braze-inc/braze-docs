@@ -13,7 +13,7 @@ description: "This article covers in-app message dismissal for your web applicat
 
 > This article covers how to handle in-app message dismissal for your web application.
 
-By default, when an in-app message is showing, pressing the escape button or a click on the grayed-out background of the page will dismiss the message. Configure the `requireExplicitInAppMessageDismissal` [initialization option][41] to `true` to prevent this behavior and require an explicit button click to dismiss messages. 
+By default, when an in-app message is showing, pressing the escape button or a click on the grayed-out background of the page will dismiss the message. Configure the `requireExplicitInAppMessageDismissal` [initialization option](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#initializationoptions) to `true` to prevent this behavior and require an explicit button click to dismiss messages. 
 
 ```javascript
 import * as braze from "@braze/web-sdk";

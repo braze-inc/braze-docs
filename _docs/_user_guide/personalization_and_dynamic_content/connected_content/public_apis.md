@@ -19,72 +19,72 @@ Public APIs can be subject to usage restrictions and rate limiting.  Be sure to 
 
 |	 API 	| Description |
 | --------- | --- |
-| [OpenWeatherMap][7] | Provides current weather data, 5 and 16 day forecast, and historical data. |
-| [NYT Article Search][8] | Provides NYT article data which includes headline, topic, URL, date, abstract, etc. |
-| [The Guardian API][9] | Provides Guardian article data which includes headline, topic, URL, date, abstract, etc.|
+| [OpenWeatherMap](http://openweathermap.org/api) | Provides current weather data, 5 and 16 day forecast, and historical data. |
+| [NYT Article Search](https://developer.nytimes.com/docs/articlesearch-product/1/overview) | Provides NYT article data which includes headline, topic, URL, date, abstract, etc. |
+| [The Guardian API](http://open-platform.theguardian.com/documentation/) | Provides Guardian article data which includes headline, topic, URL, date, abstract, etc.|
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## Events and ticketing
 
 |	 API 	| Description |
 | --------- | --- |
-| [SeatGeek][11]| Provides ticket information for concerts, sports, and theater events.  |
-| [OnConnect][12] | Provides box-office movie information and showtimes in US and Canadian theaters. |
-| [Eventbrite][19] | Provides data on a variety of public events. |
-| [Eventful][20] | Provides data on a variety of public events |
-| [Ticketmaster][38] | Provides data on public events, venues, and prices |
+| [SeatGeek](http://platform.seatgeek.com/)| Provides ticket information for concerts, sports, and theater events.  |
+| [OnConnect](http://developer.tmsapi.com/docs/read/data_v1_1/movies/movie_showtimes) | Provides box-office movie information and showtimes in US and Canadian theaters. |
+| [Eventbrite](http://developer.eventbrite.com/) | Provides data on a variety of public events. |
+| [Eventful](http://api.eventful.com/) | Provides data on a variety of public events |
+| [Ticketmaster](http://developer.ticketmaster.com/products-and-docs/apis/getting-started/) | Provides data on public events, venues, and prices |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## Food and drink
 
 |  API  | Description |
 | --------- | --- |
-| [BreweryDB][40] | Provides information on breweries, beers, and beer events. |
+| [BreweryDB](http://www.brewerydb.com/) | Provides information on breweries, beers, and beer events. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## Finance
 
 |  api  | description |
 | --------- | --- |
-| [Barchart OnDemand][36] | Provides a variety of stock, futures, and foreign exchange data. |
-| [CoinDesk][37] | Provides a variety of cryptocurrency data. |
+| [Barchart OnDemand](https://www.barchartondemand.com/free) | Provides a variety of stock, futures, and foreign exchange data. |
+| [CoinDesk](https://www.coindesk.com/api/) | Provides a variety of cryptocurrency data. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## Health
 
 |  api  | description |
 | --------- | --- |
-| [AirVisual][42] | Provides Air quality and weather data. |
-| [Nutritionix Worlds][43] | Provides verified nutrition data. |
-| [USDA Nutrients][45] | Provides access to the National Nutrient Database. |
+| [AirVisual](https://airvisual.com/api) | Provides Air quality and weather data. |
+| [Nutritionix Worlds](https://developer.nutritionix.com/) | Provides verified nutrition data. |
+| [USDA Nutrients](https://fdc.nal.usda.gov/api-guide.html) | Provides access to the National Nutrient Database. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## Music
 
 |	 api 	| description |
 | --------- | --- |
-| [Last.fm][14] | Provides a variety of music data including artist information, recommended artists, and more. |
-| [iTunes][24] | Provides data on a variety of items in the iTunes, App Store, and iBooks stores. |
-| [Bandsintown][13] | Provides local concert information and recommends live music events. |
-| [Songkick][22] | Provides live music information with artists, venues, locations, etc. |
-| [Discogs][21] | Provides information on artists, labels, and recordings. |
+| [Last.fm](http://www.last.fm/api) | Provides a variety of music data including artist information, recommended artists, and more. |
+| [iTunes](https://affiliate.itunes.apple.com/resources/documentation/itunes-store-web-service-search-api/) | Provides data on a variety of items in the iTunes, App Store, and iBooks stores. |
+| [Bandsintown](http://www.bandsintown.com/api/overview) | Provides local concert information and recommends live music events. |
+| [Songkick](http://www.songkick.com/developer) | Provides live music information with artists, venues, locations, etc. |
+| [Discogs](http://www.discogs.com/developers/) | Provides information on artists, labels, and recordings. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## Product information
 
 |	 API 	| Description |
 | --------- | --- |
-| [eBay][15] | Provides live eBay data including item data, popular searches, and more. |
+| [eBay](http://developer.ebay.com/devzone/shopping/docs/concepts/shoppingapiguide.html) | Provides live eBay data including item data, popular searches, and more. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## Miscellaneous
 
 |	 api 	| description |
 | --------- | --- |
-| [Numbers API][18] | Provides random numerical trivia facts. |
-| [Clearbit][27] | Provides company logo images. |
-| [London Unified][28] and [NYC MTA][29] | Provide real-time public transit data including line statuses, arrival times, etc. |
-| [Sunrise and Sunset][39] | Provides Sunset and sunrise times for a given latitude and longitude. |
+| [Numbers API](http://numbersapi.com/) | Provides random numerical trivia facts. |
+| [Clearbit](http://blog.clearbit.com/logo) | Provides company logo images. |
+| [London Unified](http://api.tfl.gov.uk/#Line) and [NYC MTA](https://new.mta.info/developers) | Provide real-time public transit data including line statuses, arrival times, etc. |
+| [Sunrise and Sunset](https://sunrise-sunset.org/api) | Provides Sunset and sunrise times for a given latitude and longitude. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 [7]: http://openweathermap.org/api

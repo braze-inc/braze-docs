@@ -22,7 +22,7 @@ With the Braze SDK installed in your app or website, you can use the segmentatio
 |---|---|
 |Iterate account | A [Iterate account](https://iteratehq.com) is required to take advantage of this partnership. |
 | Braze REST API key | A Braze REST API key with `users.track` permissions. To send surveys via Braze in-app messages, you'll also need the `kpi.mau.data_series` permission.<br><br> This can be created in the Braze dashboard from **Settings** > **API Keys**.|
-| Braze REST endpoint  | Your REST endpoint URL. Your endpoint will depend on the [Braze URL for your instance][6]. |
+| Braze REST endpoint  | Your REST endpoint URL. Your endpoint will depend on the [Braze URL for your instance]({{site.baseurl}}/api/basics?redirected=true#endpoints). |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 ## Use cases
@@ -63,7 +63,7 @@ You'll then see the configuration options to send responses to Braze. Toggle on 
 
 Your survey can be shared in two ways: by embedding the first question into your message or including a direct link to the survey on the Iterate platform.
 
-![Iterate link options][2]
+![Iterate link options]({% image_buster /assets/img/iterate.png %})
 
 - **Embed the code**
   - Copy the code snippet under **Email embed code** within the Braze integration section of the **Send survey** tab. Insert the code into the HTML of your Braze email where you would like the beginning of the survey to appear. 

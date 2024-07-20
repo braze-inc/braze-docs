@@ -42,12 +42,12 @@ Let’s say you have a health food app and want to create a Content Card campaig
 {: start="2"}
 2. After the catalog is uploaded to Braze, check the preview of a select number of catalog items to confirm the information imported accurately. The items may be randomized in the preview, but this won’t affect the output of the recommendation engine.
 
-![][1]
+![]({% image_buster /assets/img/recs/catalog_items.png %})
 
 {: start="3"}
 3. Create a Content Card campaign. In the composer, enter Liquid logic to determine which users should receive the campaign, and which recipe and image should display. In this use case, Braze will pull the user’s `start_date` (or sign-up date) and compare it to the current date. The difference in days will determine which Content Card is sent. 
 
-![][2]
+![]({% image_buster /assets/img/recs/content_card_preview.png %})
 
 **Title:**
 
@@ -106,12 +106,12 @@ Let’s say you have a health food app and want to create a Content Card campaig
 ```
 {% endraw %}
 
-![][3]{: style="max-width:60%;"}<br><br>
+![]({% image_buster /assets/img/recs/on_click_behavior.png %}){: style="max-width:60%;"}<br><br>
 
 {: start="5"}
 5. Go to the **Test** tab and select **Custom user** under **Preview message as user**. Enter a date in the **Custom attribute** field to preview the Content Card that would be sent to a user who signed up on that date. <br><br>
 
-![][4]
+![]({% image_buster /assets/img/recs/custom_attributes_test.png %})
 
 ## Creating a Connected Content recommendation engine
 
@@ -260,7 +260,7 @@ Good places
 
 See the below screenshot for an example of how the response displays on a user’s device.
 
-![][5]{: style="max-width:30%;"}
+![]({% image_buster /assets/img/recs/sample_response.png %}){: style="max-width:30%;"}
 
 ## Considerations
 

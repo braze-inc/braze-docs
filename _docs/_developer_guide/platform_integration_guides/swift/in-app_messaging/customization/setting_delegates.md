@@ -11,17 +11,17 @@ channel:
 
 # In-app message UI delegate
 
-> Use the optional [`BrazeInAppMessageUIDelegate`][34] to customize the presentation of in-app messages and react to various lifecycle events. This delegate protocol can be used to receive triggered in-app message payloads for further processing, receive display lifecycle events, and control display timing. 
+> Use the optional [`BrazeInAppMessageUIDelegate`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazeinappmessageuidelegate) to customize the presentation of in-app messages and react to various lifecycle events. This delegate protocol can be used to receive triggered in-app message payloads for further processing, receive display lifecycle events, and control display timing. 
 
 ## Prerequisites
 
 To use `BrazeInAppMessageUIDelegate`:
-* You must be using the default [`BrazeInAppMessageUI`][1] implementation as your `inAppMessagePresenter`. 
+* You must be using the default [`BrazeInAppMessageUI`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazeinappmessageui) implementation as your `inAppMessagePresenter`. 
 * You must include the `BrazeUI` library in your project.
 
 ## Setting the in-app message delegate
 
-Set your [`BrazeInAppMessageUIDelegate`][34] delegate object on the Braze instance by following this sample code:
+Set your [`BrazeInAppMessageUIDelegate`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazeinappmessageuidelegate) delegate object on the Braze instance by following this sample code:
 
 {% tabs %}
 {% tab swift %}

@@ -67,7 +67,7 @@ For a user recommendations recipe, you must provide an interactions dataset cont
 Once datasets are imported, you can create a solution. A solution uses one of Amazon Personalize [recipes](https://docs.aws.amazon.com/personalize/latest/dg/working-with-predefined-recipes.html) (algorithms) to train a model. In our case, we will use the `USER_PERSONALIZATION` recipe. Training the solution creates a solution version (trained model) which you can evaluate based on the performance metrics of the model.
 
 Amazon Personalize lets you adjust hyperparameters that the model uses for training. For example:
-- The "User history length percentile" parameter found in the Amazon Personalize console lets you adjust the percentile of user history to include in the training:<br><br>![Min max user profile setting][3]
+- The "User history length percentile" parameter found in the Amazon Personalize console lets you adjust the percentile of user history to include in the training:<br><br>![Min max user profile setting]({% image_buster /assets/img/amazon_personalize/min_and_max_user_percentile.png %})
   - `min_user_history_length_percentile`: excludes a percentage of users with very short history lengths, which can be helpful to eliminate popular items and build recommendations based on deeper underlying patterns.
   - `max_user_history_length_percentile`: adjust the percentage of users to take into account when training with very long history lengths.
 
@@ -98,7 +98,7 @@ Filters let you adjust the recommendation output by excluding items based on the
 ## Integrating results with Braze
 
 With the created model and recommendations campaign, you are ready to run a Braze campaign for your users using Content Cards and Connected Content.
-Before running a Braze campaign, you must create a service that can serve these recommendations through an API. You can follow [step 3 in the workshop article][1] to deploy the service using AWS services. You can also deploy your own independent backend service that provides the recommendations.
+Before running a Braze campaign, you must create a service that can serve these recommendations through an API. You can follow [step 3 in the workshop article]({{site.baseurl}}/partners/message_personalization/dynamic_content/amazon_personalize/workshop/#step-3-send-personalized-emails-from-braze) to deploy the service using AWS services. You can also deploy your own independent backend service that provides the recommendations.
 
 ### Content Card campaign use case
 
@@ -146,7 +146,7 @@ This seems like a great fit for you:
 
 Including the title, the image, and linking the URL, this is what the complete Content Card would look like:
 
-![An image of a campaign with Connected Content added to the message body and "Add Image" field. This image also shows Connected Content logic added to the "Redirect to Web URL" field, linking users to a recommendation URL.][2]
+![An image of a campaign with Connected Content added to the message body and "Add Image" field. This image also shows Connected Content logic added to the "Redirect to Web URL" field, linking users to a recommendation URL.]({% image_buster /assets/img/amazon_personalize/content-card-campaign.png %})
 
 [1]: {{site.baseurl}}/partners/message_personalization/dynamic_content/amazon_personalize/workshop/#step-3-send-personalized-emails-from-braze
 [2]: {% image_buster /assets/img/amazon_personalize/content-card-campaign.png %}

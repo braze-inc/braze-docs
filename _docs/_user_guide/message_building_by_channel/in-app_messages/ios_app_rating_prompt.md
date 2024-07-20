@@ -24,7 +24,7 @@ While Apple requires you to use the native prompt, you can still take advantage 
 
 With this approach, you want to encourage users to visit the App Store to add a review. To do so, create an in-app message campaign that [deep links]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/) to the App Store.
 
-![Two mobile screens side-by-side. The first is an in-app message that asks the user to rate the app on the App Store. The second is the iOS App Store page for that app.][1]
+![Two mobile screens side-by-side. The first is an in-app message that asks the user to rate the app on the App Store. The second is the iOS App Store page for that app.]({% image_buster /assets/img_archive/app_store_app_review.png %})
 
 ### Approach 2: Soft priming
 
@@ -32,7 +32,7 @@ If you don't want users to leave your app, you can first prime users with a sepa
 
 For detailed steps, refer to [Custom App Store review prompt]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/in-app_messaging/customization/custom_app_store_review_prompt/).
 
-![Two in-app messages side-by-side. The first primes the user to rate the app by asking if they have a moment to rate the app. The second is the native iOS App Store review message, displaying a scale of five stars the user can select to rate the app.][2]
+![Two in-app messages side-by-side. The first primes the user to rate the app by asking if they have a moment to rate the app. The second is the native iOS App Store review message, displaying a scale of five stars the user can select to rate the app.]({% image_buster /assets/img_archive/prime_app_review.png %})
 
 Users will submit a rating through the native App Store review prompt, and can write and submit a review without leaving the app.
 

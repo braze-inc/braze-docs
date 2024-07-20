@@ -51,7 +51,7 @@ Braze customers can [integrate with Jampp]({{site.baseurl}}/partners/advertising
 
 We've made it easier to select where your in-app messages are going and which platforms they're built for with our platform picker, which emphasizes this step in the campaign creation process.
 
-![Platform Picker][1]
+![Platform Picker]({% image_buster /assets/img/iam_platforms.gif %})
 
 ## Dispatch ID Currents field for email
 

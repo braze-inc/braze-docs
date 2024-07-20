@@ -15,7 +15,7 @@ channel: content cards
 
 As with other Canvas messaging channels, Content Cards will be sent to a user's device when they meet the audience and targeting criteria specified for its step. After the Content Card is sent, it will be available in each eligible user's feed the next time their cards feed is refreshed.
 
-![][1]
+![]({% image_buster /assets/img_archive/content-cards-in-canvas.png %})
 
 Two options that will change how the Content Card step will interact with Canvas are its [Expiration](#content-card-expiration) and [Advancement Behavior](#advancement-behavior-options).
 
@@ -67,7 +67,7 @@ If a step contains only Content Cards (and no other messaging channel), you can 
 | Immediately Advance Audience | Users will advance to the next steps of the Canvas when the Content Card sending is attempted. If the card is aborted and not sent, users will still advance to the next step. Use this option when you want users to advance regardless of whether the content card is sent successfully or aborted. |
 {: .reset-td-br-1 .reset-td-br-2}
 
-![][2]
+![]({% image_buster /assets/img_archive/content-cards-in-canvas-single-channel.png %})
 
 ### Components with multiple channels {#steps-with-multiple-message-channels}
 
@@ -79,15 +79,15 @@ Canvas components with a Content Card and another messaging channel have the fol
 | Immediately Advance Audience | When this option is selected, everyone in the component's audience will advance to the next steps after the delay elapses, whether they have seen the noted message or not.  <br> <br> _Users must match the component's segment and filter criteria to advance to next steps._ |
 {: .reset-td-br-1 .reset-td-br-2}
 
-![][3]
+![]({% image_buster /assets/img_archive/content-cards-in-canvas-multiple-channels.png %})
 
 ## Reporting and analytics
 
 After launching a Content Cards step in Canvas you can begin to analyze several different metrics for this step. These metrics include the number of messages sent, unique recipients, conversion rates, total revenue, and more.
 
-![][4]
+![]({% image_buster /assets/img_archive/content-cards-in-canvas-analytics.png %})
 
-For more information on the available metrics and their definitions, see our [Report Metrics Glossary][6].
+For more information on the available metrics and their definitions, see our [Report Metrics Glossary]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics/).
 
 ## Use cases
 
@@ -103,7 +103,7 @@ Using Canvas, you can add a component that sends both a Content Card and push no
 
 #### Multiple feeds based on categories
 
-You can separate your Content Cards into multiple feeds based on categories such as different topics users can browse, or transactional and marketing feeds. For more information on creating multiple feeds using key-value pairs, check out our guide for [Customizing Content Card feeds][7].
+You can separate your Content Cards into multiple feeds based on categories such as different topics users can browse, or transactional and marketing feeds. For more information on creating multiple feeds using key-value pairs, check out our guide for [Customizing Content Card feeds]({{site.baseurl}}/developer_guide/customization_guides/content_cards/customizing_feed/#multiple-feeds).
 
 
 [1]: {% image_buster /assets/img_archive/content-cards-in-canvas.png %}

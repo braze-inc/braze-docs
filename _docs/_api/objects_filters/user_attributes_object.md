@@ -11,7 +11,7 @@ description: "This reference article explains the different components of the us
 
 > An API request with any fields in the attributes object will create or update an attribute of that name with the given value on the specified user profile. 
 
-Use Braze user profile field names (listed as follows or any listed in the section for [Braze user profile fields][27]) to update those special values on the user profile in the dashboard or add your own custom attribute data to the user.
+Use Braze user profile field names (listed as follows or any listed in the section for [Braze user profile fields](#braze-user-profile-fields)) to update those special values on the user profile in the dashboard or add your own custom attribute data to the user.
 
 ## Object body
 
@@ -74,7 +74,7 @@ After import, as each user launches the Braze-enabled version of your app, Braze
 
 Braze will check once a month to find any anonymous profile with the `push_token_import` flag that doesn't have a push token. If the anonymous profile no longer has a push token, we will delete the profile. However, if the anonymous profile still has a push token, suggesting that the actual user has yet to login to the device with said push token, we will do nothing.
 
-For more information, refer to [Migrating push tokens][3].
+For more information, refer to [Migrating push tokens]({{site.baseurl}}/help/help_articles/push/push_token_migration/).
 
 #### Custom attribute data types
 
@@ -82,9 +82,9 @@ The following data types can be stored as a custom attribute:
 
 | Data Type | Notes |
 | --- | --- |
-| Arrays | Custom attribute arrays are one-dimensional sets; multi-dimensional arrays are not supported. Adding an element to a custom attribute array appends the element to the end of the array, unless it's already present, in which case it gets moved from its current position to the end of the array.<br><br>For example, if an array `['hotdog','hotdog','hotdog','pizza']` were imported, it will show in the array attribute as `['hotdog', 'pizza']` because only unique values are supported.<br><br>In addition to setting the values of an array by saying something like `"my_array_custom_attribute":[ "Value1", "Value2" ]` you may add to existing arrays by doing something like `"my_array_custom_attribute" : { "add" : ["Value3"] },` or remove values from an array by doing something like `"my_array_custom_attribute" : { "remove" : [ "Value1" ]}`<br><br>The maximum number of elements in custom attribute arrays defaults to 25, but can be increased up to 100 for an individual array. For more information, see [Arrays][6]. |
+| Arrays | Custom attribute arrays are one-dimensional sets; multi-dimensional arrays are not supported. Adding an element to a custom attribute array appends the element to the end of the array, unless it's already present, in which case it gets moved from its current position to the end of the array.<br><br>For example, if an array `['hotdog','hotdog','hotdog','pizza']` were imported, it will show in the array attribute as `['hotdog', 'pizza']` because only unique values are supported.<br><br>In addition to setting the values of an array by saying something like `"my_array_custom_attribute":[ "Value1", "Value2" ]` you may add to existing arrays by doing something like `"my_array_custom_attribute" : { "add" : ["Value3"] },` or remove values from an array by doing something like `"my_array_custom_attribute" : { "remove" : [ "Value1" ]}`<br><br>The maximum number of elements in custom attribute arrays defaults to 25, but can be increased up to 100 for an individual array. For more information, see [Arrays]({{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#arrays). |
 | Booleans | `true` or `false` |
-| Dates | Must be stored in the [ISO 8601][19] format or in any of the following formats: <br>- `yyyy-MM-ddTHH:mm:ss:SSSZ` <br>- `yyyy-MM-ddTHH:mm:ss` <br>- `yyyy-MM-dd HH:mm:ss` <br>- `yyyy-MM-dd` <br>- `MM/dd/yyyy` <br>- `ddd MM dd HH:mm:ss.TZD YYYY` <br><br>Note that "T" is a time designator, not a placeholder, and should not be changed or removed. <br><br>Time attributes without a time zone will default to Midnight UTC (and will be formatted on the dashboard as the equivalent of Midnight UTC in the company's time zone). <br><br> Events with timestamps in the future will default to the current time. <br><br> For regular custom attributes, if the year is less than 0 or greater than 3000, Braze stores these values as strings on the user. |
+| Dates | Must be stored in the [ISO 8601](http://en.wikipedia.org/wiki/ISO_8601 "ISO 8601 Time Code Wiki") format or in any of the following formats: <br>- `yyyy-MM-ddTHH:mm:ss:SSSZ` <br>- `yyyy-MM-ddTHH:mm:ss` <br>- `yyyy-MM-dd HH:mm:ss` <br>- `yyyy-MM-dd` <br>- `MM/dd/yyyy` <br>- `ddd MM dd HH:mm:ss.TZD YYYY` <br><br>Note that "T" is a time designator, not a placeholder, and should not be changed or removed. <br><br>Time attributes without a time zone will default to Midnight UTC (and will be formatted on the dashboard as the equivalent of Midnight UTC in the company's time zone). <br><br> Events with timestamps in the future will default to the current time. <br><br> For regular custom attributes, if the year is less than 0 or greater than 3000, Braze stores these values as strings on the user. |
 | Floats |  |
 | Integers | Integer custom attributes may be incremented by positive or negative integers by assigning them an object with the field "inc" and the value by which you want to increment them. <br><br>Example: `"my_custom_attribute_2" : {"inc" : int_value},`|
 | Strings |  |
@@ -103,7 +103,7 @@ The following user profile fields are case sensitive, so be sure to reference th
 | alias_name | (string) |
 | alias_label | (string) |
 | braze_id | (string, optional) When a user profile is recognized by the SDK, an anonymous user profile is created with an associated `braze_id`. The `braze_id` is automatically assigned by Braze, cannot be edited, and is device-specific. | 
-| country | (string) We require that country codes be passed to Braze in the [ISO-3166-1 alpha-2 standard][17]. Our API will make a best effort to map countries received in different formats. For example, "Australia" may map to "AU". However, if the input doesn't match a given [ISO-3166-1 alpha-2 standard][17], the country value will be set to `NULL`. <br><br>Setting `country` on a user by CSV import or API will prevent Braze from automatically capturing this information through the SDK. |
+| country | (string) We require that country codes be passed to Braze in the [ISO-3166-1 alpha-2 standard](http://en.wikipedia.org/wiki/ISO_3166-1 "ISO-3166-1 codes"). Our API will make a best effort to map countries received in different formats. For example, "Australia" may map to "AU". However, if the input doesn't match a given [ISO-3166-1 alpha-2 standard](http://en.wikipedia.org/wiki/ISO_3166-1 "ISO-3166-1 codes"), the country value will be set to `NULL`. <br><br>Setting `country` on a user by CSV import or API will prevent Braze from automatically capturing this information through the SDK. |
 | current_location | (object) Of the form {"longitude": -73.991443, "latitude": 40.753824} |
 | date_of_first_session | (date at which the user first used the app) String in ISO 8601 format or in any of the following formats: <br>- `yyyy-MM-ddTHH:mm:ss:SSSZ` <br>- `yyyy-MM-ddTHH:mm:ss` <br>- `yyyy-MM-dd HH:mm:ss` <br>- `yyyy-MM-dd` <br>- `MM/dd/yyyy` <br>- `ddd MM dd HH:mm:ss.TZD YYYY` |
 | date_of_last_session | (date at which the user last used the app) String in ISO 8601 format or in any of the following formats: <br>- `yyyy-MM-ddTHH:mm:ss:SSSZ` <br>- `yyyy-MM-ddTHH:mm:ss` <br>- `yyyy-MM-dd HH:mm:ss` <br>- `yyyy-MM-dd` <br>- `MM/dd/yyyy` <br>- `ddd MM dd HH:mm:ss.TZD YYYY`  |
@@ -117,14 +117,14 @@ The following user profile fields are case sensitive, so be sure to reference th
 | first_name | (string) |
 | gender | (string) "M", "F", "O" (other), "N" (not applicable), "P" (prefer not to say) or nil (unknown). |
 | home_city | (string) |
-| language | (string) we require that language be passed to Braze in the [ISO-639-1 standard][24]. For supported languages, see our [list of accepted languages][2].<br><br>Setting `language` on a user by CSV import or API will prevent Braze from automatically capturing this information through the SDK. |
+| language | (string) we require that language be passed to Braze in the [ISO-639-1 standard](http://en.wikipedia.org/wiki/List_of_ISO_639-1_codes "ISO-639-1 codes"). For supported languages, see our [list of accepted languages]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/language_codes/).<br><br>Setting `language` on a user by CSV import or API will prevent Braze from automatically capturing this information through the SDK. |
 | last_name | (string) |
 | marked_email_as_spam_at | (string) Date at which the user's email was marked as spam. Appears in ISO 8601 format or in any of the following formats: <br>- `yyyy-MM-ddTHH:mm:ss:SSSZ` <br>- `yyyy-MM-ddTHH:mm:ss` <br>- `yyyy-MM-dd HH:mm:ss` <br>- `yyyy-MM-dd` <br>- `MM/dd/yyyy` <br>- `ddd MM dd HH:mm:ss.TZD YYYY` |
 | phone | (string) |
 | push_subscribe | (string) Available values are "opted_in" (explicitly registered to receive push messages), "unsubscribed" (explicitly opted out of push messages), and "subscribed" (neither opted in nor out).  |
 | push_tokens | Array of objects with `app_id` and `token` string. You may optionally provide a `device_id` for the device this token is associated with, for example, `[{"app_id": App Identifier, "token": "abcd", "device_id": "optional_field_value"}]`. If a `device_id` is not provided, one will be randomly generated. |
 | subscription_groups| Array of objects with `subscription_group_id` and `subscription_state` string, for example, `[{"subscription_group_id" : "subscription_group_identifier", "subscription_state" : "subscribed"}]`. Available values for `subscription_state` are "subscribed" and "unsubscribed".|
-| time_zone | (string) Of time zone name from [IANA Time Zone Database][26] (for example, "America/New_York" or "Eastern Time (US & Canada)"). Only valid time zone values will be set. |
+| time_zone | (string) Of time zone name from [IANA Time Zone Database](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) (for example, "America/New_York" or "Eastern Time (US & Canada)"). Only valid time zone values will be set. |
 | twitter | Hash containing any of `id` (integer), `screen_name` (string, X (formerly Twitter) handle), `followers_count` (integer), `friends_count` (integer), `statuses_count` (integer). |
 {: .reset-td-br-1 .reset-td-br-2}
 

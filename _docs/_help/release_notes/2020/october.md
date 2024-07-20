@@ -10,7 +10,7 @@ description: "This article contains release notes for October 2020."
 
 ## Report Builder
 
-![Campaign Comparison Example][5]{: style="max-width:80%;"}
+![Campaign Comparison Example]({% image_buster /assets/img/campaign_comparison/campaign_main.png %}){: style="max-width:80%;"}
 
 The [Report Builder]({{site.baseurl}}/report_builder) allows you to compare the results of multiple campaigns in a single view so that you can easily determine which engagement strategies most impacted your key metrics.
 

@@ -16,11 +16,11 @@ Shopify collections sync is currently in beta. Contact your Braze account manage
 
 ## Setting up Shopify collections sync
 
-To sync your products from your Shopify store to Braze, select the checkbox to **Sync Shopify collections** in the **Sync products** step of [integrating Shopify]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/shopify/setting_up_shopify#setting-up-shopify-in-braze).<br><br>![Step 4 of the Shopify product sync with the "Sync Shopify collections" checkbox selected.][1]
+To sync your products from your Shopify store to Braze, select the checkbox to **Sync Shopify collections** in the **Sync products** step of [integrating Shopify]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/shopify/setting_up_shopify#setting-up-shopify-in-braze).<br><br>![Step 4 of the Shopify product sync with the "Sync Shopify collections" checkbox selected.]({% image_buster /assets/img/Shopify/sync_products.png %})
 
-Once your products have been synced, you can view which products are associated with your collections by viewing your Shopify catalog. <br><br>![Catalog table row showing a product in the collections of "best-sellers" and "frontpage".][2]
+Once your products have been synced, you can view which products are associated with your collections by viewing your Shopify catalog. <br><br>![Catalog table row showing a product in the collections of "best-sellers" and "frontpage".]({% image_buster /assets/img/Shopify/view_catalog.png %})
 
-From your Shopify catalog, you can view your Shopify collection in the **Selections** tab. <br><br>![The Selections tab showing a list of two collections: "best-sellers" and "frontpage".][3]
+From your Shopify catalog, you can view your Shopify collection in the **Selections** tab. <br><br>![The Selections tab showing a list of two collections: "best-sellers" and "frontpage".]({% image_buster /assets/img/Shopify/selections_tab.png %})
 
 ### Beta functionality
 
@@ -44,7 +44,7 @@ Be aware of the following behavior in the beta: <br><br>If you update the Shopif
 2. Enter the maximum number of results (up to 50) for the **Limit number**.
 3. Select **Update Selection**.
 
-![The Edit Selection page where you can select the filter settings, sort type, and results limit.][4]
+![The Edit Selection page where you can select the filter settings, sort type, and results limit.]({% image_buster /assets/img/Shopify/edit_selection.png %})
 
 ### Step 2: Use the collection in a campaign
 
@@ -54,7 +54,7 @@ Be aware of the following behavior in the beta: <br><br>If you update the Shopif
 {: start="3"}
 3. Copy and paste the Liquid snippet where you want the information to appear in your message.
 
-![The "Add Personalization" section with fields to select your catalog, item selection method, and the information to display.][5]{: style="max-width:30%;"}
+![The "Add Personalization" section with fields to select your catalog, item selection method, and the information to display.]({% image_buster /assets/img/Shopify/add_personalization.png %}){: style="max-width:30%;"}
 
 #### Liquid in selection results
 

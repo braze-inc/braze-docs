@@ -10,7 +10,7 @@ search_tag: Partner
 
 # BlueConic
 
-> [BlueConic][1], the leading pure-play customer data platform, liberates companies' first-party data from disparate systems and makes it accessible wherever and whenever it is required to transform customer relationships and drive business growth. 
+> [BlueConic](https://www.blueconic.com/), the leading pure-play customer data platform, liberates companies' first-party data from disparate systems and makes it accessible wherever and whenever it is required to transform customer relationships and drive business growth. 
 
 The Braze and BlueConic integration allows users to unify data across persistent, individual profiles and then sync it across the two systems for import goals via an Amazon Web Services S3 server. Potential goals include growth-focused initiatives, customer lifecycle orchestration, modeling and analytics, digital products and experiences, audience-based monetization, and more. This integration supports both scheduled batch import and export. 
 
@@ -22,9 +22,9 @@ When using the integration, BlueConic will send deltas (changing data) on each s
 
 | Requirement | Description |
 | --- | --- |
-| BlueConic account | A [BlueConic account][1] is required to take advantage of this partnership. You will need access to [view and edit connections][4] within your BlueConic account to access the plugins. |
+| BlueConic account | A [BlueConic account](https://www.blueconic.com/) is required to take advantage of this partnership. You will need access to [view and edit connections](https://support.blueconic.com/hc/en-us/articles/202607121-BlueConic-Roles) within your BlueConic account to access the plugins. |
 | Braze REST API key | A Braze REST API key with `users.track`, `users.export.segment`, `campaigns.list`, `campaigns.details`, `segments.lists`, and `segments.details` permissions. <br><br> This can be created in the Braze dashboard from **Settings** > **API Keys**. |
-| Braze REST endpoint | Your REST endpoint URL. Your endpoint will depend on the [Braze URL for your instance][2]. |
+| Braze REST endpoint | Your REST endpoint URL. Your endpoint will depend on the [Braze URL for your instance](https://portal.aws.amazon.com/billing/signup#/start). |
 | S3 authentication | You will need access to an Amazon Web Services (S3) server to export and import the data. |
 | Access key ID<br>Secret access key | The access key ID and secret access key will allow you to authenticate your S3 server for importing and exporting. |
 | AWS bucket | You will need to connect to S3 within the plugin. After authentication, the available buckets will show in a dropdown menu. This is where files to be imported or exported are stored. |
@@ -36,7 +36,7 @@ When using the integration, BlueConic will send deltas (changing data) on each s
 
 In BlueConic, select **Connections** in the navigation bar, and then **Add Connection**. In the prompt that appears, search **Braze** and select **Braze connection**. 
 
-Expand or collapse available metadata fields in the connection by clicking the gray chevron icon. Within these fields, you can favorite this connection, name your connection, add labels, include a description, and choose to get email notifications if the connection [runs or fails to run][5]. 
+Expand or collapse available metadata fields in the connection by clicking the gray chevron icon. Within these fields, you can favorite this connection, name your connection, add labels, include a description, and choose to get email notifications if the connection [runs or fails to run](https://support.blueconic.com/hc/en-us/articles/205957522#h_01F4VR7SG7NKB3FMQXCB2Q8JNZ). 
 
 Save your settings.
 

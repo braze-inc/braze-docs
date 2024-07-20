@@ -27,7 +27,7 @@ All U.S. numbers must be valid, 10-digit phone numbers with a valid area code. T
 
 All international numbers should start with a `+`, followed by their country code and then the phone number. (e.g `+442071838750`)
 
-![][picture]{: style="max-width:50%;border: 0;"}
+![]({% image_buster /assets/img/sms/e164.png %}){: style="max-width:50%;border: 0;"}
 
 However, to ensure accuracy in the event that you are sending to multiple regions with different country or area codes, it is recommended to use the `E.164` format, even for U.S.-based phone numbers.
 
@@ -42,13 +42,13 @@ You can see the differences between local number formatting as well as universal
 
 ### Adding users to SMS subscription groups
 
-For a customer to receive an SMS message, they must have a valid phone number and be opted-in to a subscription group. Subscription groups are tied to the SMS program you are running (make sure you follow the [legal requirements for SMS]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_laws_and_regulations/) and have recorded consent for each customer). For more information, refer to [SMS subscription groups][1]. 
+For a customer to receive an SMS message, they must have a valid phone number and be opted-in to a subscription group. Subscription groups are tied to the SMS program you are running (make sure you follow the [legal requirements for SMS]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_laws_and_regulations/) and have recorded consent for each customer). For more information, refer to [SMS subscription groups]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_subscription_group/). 
 
 ### Handling invalid phone numbers
 
 When a phone number is deemed invalid, Braze will mark the user's phone number as invalid and will not attempt to send further communications to that phone number. An invalid phone number is marked in the **Engagement Tab** of a user profile.
 
-![][picture2]{: style="max-width:50%;border: 0;"}
+![]({% image_buster /assets/img/sms/invalid_banner.png %}){: style="max-width:50%;border: 0;"}
 
 A phone number is considered invalid for the following reasons:
 - **Provider Error**: a permanent error was received from the SMS provider. This indicates that the phone number supplied is incorrectly formatted or permanently unable to receive SMS messages.
@@ -60,7 +60,7 @@ These invalid phone numbers can be managed using [SMS endpoints]({{site.baseurl}
 If multiple user profiles have the same phone number and that phone number is marked invalid, then all existing User Profiles with that number will display as invalid. Newly created user profiles will never initially be marked as invalid.
 {% endalert %}
 
-You can also include or exclude any users with invalid phone numbers when [creating a segment][2]. 
+You can also include or exclude any users with invalid phone numbers when [creating a segment]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/#step-4-add-filters-to-your-segment). 
 
 ### Third-party sourcing and verification
 

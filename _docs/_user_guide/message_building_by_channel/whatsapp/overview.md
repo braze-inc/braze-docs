@@ -46,7 +46,7 @@ If you are using the [older navigation]({{site.baseurl}}/navigation), you can fi
 
 On the WhatsApp partner page, select **Login with Facebook** to start the integration process.
 
-![][1]{: style="max-width:70%;"}
+![]({% image_buster /assets/img/whatsapp/whatsapp1.png %}){: style="max-width:70%;"}
 
 It is likely that you already have at least one existing Meta Business account at your company. If that is the case, select the one you would like your WhatsApp Business account to live within. User permissions and business verification for WhatsApp will be controlled centrally in your Meta Business account.
 
@@ -56,7 +56,7 @@ Next, you will be prompted by the Braze setup workflow. Within this flow, you wi
 2. Create your WhatsApp Business profile.
 3. Verify your WhatsApp Business number.<br><br>
 
-	![][2]{: style="max-width:100%;"}
+	![]({% image_buster /assets/img/whatsapp/whatsapp10.png %}){: style="max-width:100%;"}
 
 {% alert note %}
 WhatsApp Business Accounts (WABA) cannot be shared with multiple Business Solution Providers. You will need a specific WABA for each Braze workspace.
@@ -70,16 +70,16 @@ Only approved WhatsApp message templates can be used to initiate conversations w
 
 1. **Navigate to the [template manager](https://business.facebook.com/wa/manage/message-templates)**<br>
 In the Meta Business Manager, under **Account Tools**, select **Message Templates**.
-Next, select **Create Templates**.<br><br>![][3]{: style="max-width:100%;"}<br><br>
+Next, select **Create Templates**.<br><br>![]({% image_buster /assets/img/whatsapp/whatsapp2.png %}){: style="max-width:100%;"}<br><br>
 2. **Message settings**<br>
 In the new message template composer, select the category of your message, name your template, and choose the languages you want to support. You can delete or add more languages later.<br><br> 
 	The available message template categories include the following:
 	- Marketing: Send promotional offers, product announcements, and more to increase awareness and engagement
 	- Utility: Send account updates, order updates, alerts, and more to share important information
 	- Authentication: Send codes that allow your customers to access their accounts<br><br> 
-	![][4]{: style="max-width:100%;"}<br><br>
+	![]({% image_buster /assets/img/whatsapp/whatsapp3.png %}){: style="max-width:100%;"}<br><br>
 3. **Edit template**<br>
-Next, you will be prompted to create your message template. <br><br>Here, you can provide a text or media header, the text body, a message footer, and buttons. Note that video and document headers are not currently available, and headers must be of either text or image type. A preview of your message will be shown on the right. <br><br>While Meta does not support Liquid, you can template in variables that can be later replaced in Braze for Liquid variables. Select the **+ Add variable** button to do so.<br><br>![][5]{: style="max-width:100%;"}<br><br>Once you have completed your template, press **Submit**. 
+Next, you will be prompted to create your message template. <br><br>Here, you can provide a text or media header, the text body, a message footer, and buttons. Note that video and document headers are not currently available, and headers must be of either text or image type. A preview of your message will be shown on the right. <br><br>While Meta does not support Liquid, you can template in variables that can be later replaced in Braze for Liquid variables. Select the **+ Add variable** button to do so.<br><br>![]({% image_buster /assets/img/whatsapp/whatsapp4.png %}){: style="max-width:100%;"}<br><br>Once you have completed your template, press **Submit**. 
 
 #### Template approval time
 

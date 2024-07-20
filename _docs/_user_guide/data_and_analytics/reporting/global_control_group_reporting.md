@@ -20,7 +20,7 @@ If you are using the [older navigation]({{site.baseurl}}/navigation), this page 
 
 Next, select the parameter you wish to run your report with (sessions or a particular custom event) and click **Run Report**.
 
-![][6]
+![]({% image_buster /assets/img/control_group/control_group6.png %})
 
 ## About your report
 

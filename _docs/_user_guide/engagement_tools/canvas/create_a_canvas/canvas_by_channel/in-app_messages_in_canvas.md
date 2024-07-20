@@ -26,7 +26,7 @@ You can customize [when your message will expire](#in-app-message-expiration) an
 
 In the in-app message composer, you can choose when the in-app message will expire. During this time, the in-app message will sit and wait to be viewed until it has reached the expiry date. After the in-app message is sent, it can be viewed one time.
 
-![][1]
+![]({% image_buster /assets/img/expires-after.png %} "IAM Live")
 
 | Option | Description | Example |
 |---|---|---|
@@ -168,7 +168,7 @@ If you have multiple in-app messages within one Canvas, a user must start multip
 In-app messages can't be triggered by events in Canvas.
 {% endalert %}
 
-![][2]
+![]({% image_buster /assets/img/iam-advancement-behavior.png %} "IAM Live")
 
 {% alert important %}
 When **Advance When In-App Message Live** is selected, the in-app message will be available until it expires, even if the user has moved to subsequent steps. If you do not want the in-app message to be live when the next steps in the Canvas are delivered, ensure that the expiration is shorter than the delay on subsequent steps.
@@ -184,7 +184,7 @@ Steps with an in-app message and another channel have the following advancement 
 | Immediately Advance Audience | Everyone in the step's audience advances to the next steps after the delay elapses, whether they have seen the noted message or not.  <br> <br> Users must match the step's segment and filter criteria to advance to next steps. |
 {: .reset-td-br-1 .reset-td-br-2}
 
-![][3]
+![]({% image_buster /assets/img/push-advancement-behavior.png %} "IAM Live")
 
 {% alert important %}
   When "Entire Audience" is selected, the in-app message will be available until it expires, even if the user has moved to subsequent steps. If you do not want the in-app message to be live when the next steps in the Canvas are delivered, ensure that the expiration is shorter than the delay on subsequent steps.

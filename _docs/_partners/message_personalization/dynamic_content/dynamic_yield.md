@@ -29,11 +29,11 @@ The Braze and Dynamic Yield partnership allows you to leverage Dynamic Yield's r
 
 To create an Experience Block in Dynamic Yield, navigate to **Email > Experience Emails > Create New**.
 
-Next, select **Create Experience Block** to design a Dynamic Content or Recommendations block to embed inside a Braze email template.<br>![][8]
+Next, select **Create Experience Block** to design a Dynamic Content or Recommendations block to embed inside a Braze email template.<br>![]({% image_buster /assets/img/dynamic_yield/dynamic_yield7.png %})
 
 ### Step 2: Draft your messaging
 
-The following image shows an email from scratch in the builder.<br>![][6]
+The following image shows an email from scratch in the builder.<br>![]({% image_buster /assets/img/dynamic_yield/dynamic_yield5.png %})
 
 1. Enter a campaign name, note, and labels for the campaign in the heading area.<br><br>
 2. Insert an Experience Block. These blocks include:
@@ -60,8 +60,8 @@ The recommendations block enables you to set algorithms and filtering to source 
 Use Dynamic Content to target different promotions and messages to different users. Targeting can be based on either affinity or audience. Dynamic Yield determines which personalized experience to serve when the email is opened. 
 
 1. Drag a Dynamic Content Block from the editing pane into the body of your email.<br><br> 
-2. Select a template for the first variation. You can now define design and content variables. Save the variation when complete. <br>![][4]<br><br> 
-3. Set the audience in the Dynamic Content pane.<br>![][5]<br><br> 
+2. Select a template for the first variation. You can now define design and content variables. Save the variation when complete. <br>![]({% image_buster /assets/img/dynamic_yield/dynamic_yield3.png %})<br><br> 
+3. Set the audience in the Dynamic Content pane.<br>![]({% image_buster /assets/img/dynamic_yield/dynamic_yield4.png %})<br><br> 
 4. Add another variation to target another specific audience or all users. Repeat as needed.<br><br> 
 5. Set the priorities for your variations using the up and down arrows. <br><br> 
 6. Priorities determine which variation is served when a user is eligible for more than one experience.
@@ -71,11 +71,11 @@ Use Dynamic Content to target different promotions and messages to different use
 This integration allows you to add personalized recommendation widgets and dynamic content powered by Dynamic Yield into your Braze email campaigns. Embedding these campaigns into Braze campaigns is done with a simple embed code that you paste into the Braze email editor.
 
 1. Click the ESP Integration icon on the Experience Email list page.<br><br> 
-2. Enter the relevant token from Braze that inserts the user's CUID and Email ID.<br>![][3]
+2. Enter the relevant token from Braze that inserts the user's CUID and Email ID.<br>![]({% image_buster /assets/img/dynamic_yield/dynamic_yield2_new.png %})
   
 When satisfied with your email, the next step is to generate the code to embed in Braze.
 1. In **Experience Emails**, click **Generate Code**.<br><br> 
-2. Next, click **Copy to Clipboard**.<br>![][1]<br><br> 
+2. Next, click **Copy to Clipboard**.<br>![]({% image_buster /assets/img/dynamic_yield/dynamic_yield.png %})<br><br> 
 3. Paste the code into your Braze email campaign, and then continue to design, test, and publish your email campaign.
 
 

@@ -22,7 +22,7 @@ To test your email message in Inbox Vision, do the following:
 
 1. Go to your drag-and-drop editor or HTML email editor. 
 2. Open the **Preview and Test** tab.
-3. Select **Inbox Vision** and click **Run Inbox Vision**. <br><br> ![][3]{: style="max-width:80%;"} <br><br> Braze then sends an HTML version of your email to various email clients used across the globe, which may take between two and ten minutes to complete. <br><br> The rendered HTML previews will be divided into three sections: 
+3. Select **Inbox Vision** and click **Run Inbox Vision**. <br><br> ![]({% image_buster /assets/img_archive/inboxvision4.png %}){: style="max-width:80%;"} <br><br> Braze then sends an HTML version of your email to various email clients used across the globe, which may take between two and ten minutes to complete. <br><br> The rendered HTML previews will be divided into three sections: 
 - **Web Clients** 
 - **Application Clients** 
 - **Mobile Clients** <br><br>
@@ -32,7 +32,7 @@ To test your email message in Inbox Vision, do the following:
 Use Inbox Vision to test for differences across dark and light modes to confirm you get your emails just right!
 {% endalert %}
 
-![Overview of Inbox Vision for the HTML editor.][1]
+![Overview of Inbox Vision for the HTML editor.]({% image_buster /assets/img_archive/inboxvision1.png %})
 
 {: start="5"}
 5. Make changes to a template, if necessary, and then click **Re-run Test** to see the updated previews.
@@ -49,7 +49,7 @@ Code analysis is a way for Braze to highlight issues that may exist with your HT
 
 This information can be found on the **Inbox Vision** tab by selecting <i class="fas fa-list"></i> **List view**. This list view is available for HTML email templates only. If you're using drag-and-drop email templates, check the previews to resolve any possible issues instead.
 
-![Example code analysis on the Inbox Vision preview.][2]
+![Example code analysis on the Inbox Vision preview.]({% image_buster /assets/img_archive/inboxvision2.png %})
 
 {% alert note %} 
 Sometimes the code analysis will display faster than the preview for a particular email client. This is because Braze waits until the email arrives in the inbox before taking the screenshot. 
@@ -63,7 +63,7 @@ Spam testing attempts to predict whether your email will land in spam folders or
 
 To check your spam test results, click the **Spam Testing** tab in the **Inbox Vision** section. The **Spam Test Result** table lists the spam filter name, status, and type.
 
-![Spam Test Result table with three columns: Name, Status, and Type. There is a list of spam filters and ISP filters that have passed spam testing, indicating that the email campaign will not land in the spam folder.][4]
+![Spam Test Result table with three columns: Name, Status, and Type. There is a list of spam filters and ISP filters that have passed spam testing, indicating that the email campaign will not land in the spam folder.]({% image_buster /assets/img_archive/email_spam_testing.png %})
 
 After reviewing these results and making any adjustments to your email campaign, click **Re-run Test** to reload your spam test results.
 

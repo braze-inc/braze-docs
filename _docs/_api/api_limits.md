@@ -27,29 +27,29 @@ Requests not listed in this table share a total default rate limit of 250,000 re
 
 | Request Type | Default API Rate Limit |
 | --- | --- |
-| [`/users/track`][10] | **Requests:** 50,000 requests per minute.<br><br>**Batching:** 75 events, 75 purchases, and 75 attributes per API request. See [Batching User Track requests](#batch-user-track) for more. |
-| [`/users/export/ids`][11] | 2,500 requests per minute. |
-| [`/users/delete`][12]<br>[`/users/alias/new`][13]<br>[`/users/alias/update`][45]<br>[`/users/identify`][14]<br>[`/users/merge`][44] | 20,000 requests per minute, shared between the endpoints. |
-| [`/users/external_id/rename`][20] | 1,000 requests per minute. |
-| [`/users/external_id/remove`][21] | 1,000 requests per minute. |
-| [`/events/list`][15] | 1,000 requests per hour, shared with the `/purchases/product_list` endpoint. |
-| [`/purchases/product_list`][16] | 1,000 requests per hour, shared with the `/events/list` endpoint. |
-| [`/campaigns/data_series`][17.3] | 50,000 requests per minute. |
-| [`/messages/send`][17]<br>[`/campaigns/trigger/send`][17.1]<br>[`/canvas/trigger/send`][17.2]| 250 requests per minute for broadcast calls (when only specifying a segment or Connected Audience). Otherwise, 250,000 requests per hour shared between the endpoints. |
-| [`/sends/id/create`][18] | 100 requests per day. |
-| [`/subscription/status/set`][19] | 5,000 requests per minute. |
-| [`/preference_center/v1/{preferenceCenterExternalId}/url/{userId}`][26]<br>[`/preference_center/v1/list`][27]<br>[`/preference_center/v1/{preferenceCenterExternalId}`][28] | 1,000 requests per minute, per workspace. |
-| [`/preference_center/v1`][29]<br>[`/preference_center/v1/{preferenceCenterExternalId}`][30] | 10 requests per minute, per workspace. |
-| [`/catalogs/{catalog_name}`][31]<br>[`/catalogs`][32]<br>[`/catalogs`][33] | 50 requests per minute shared between the endpoints. |
-| [`/catalogs/{catalog_name}/items`][34]<br>[`/catalogs/{catalog_name}/items`][35]<br>[`/catalogs/{catalog_name}/items`][36] | 16,000 requests per minute shared between the endpoints. |
-| [`/catalogs/{catalog_name}/items/{item_id}`][37]<br>[`/catalogs/{catalog_name}/items/{item_id}`][38]<br>[`/catalogs/{catalog_name}/items`][39]<br>[`/catalogs/{catalog_name}/items/{item_id}`][40]<br>[`/catalogs/{catalog_name}/items/{item_id}`][41] | 50 requests per minute shared between the endpoints. |
-| [`/scim/v2/Users/{id}`][22]<br>[`/scim/v2/Users?filter={userName@example.com}`][43]<br>[`/scim/v2/Users/{id}`][25]<br>[`/scim/v2/Users/{id}}`][24]<br>[`/scim/v2/Users/`][23] | 5,000 requests per day, per company, shared between the endpoints. |
+| [`/users/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) | **Requests:** 50,000 requests per minute.<br><br>**Batching:** 75 events, 75 purchases, and 75 attributes per API request. See [Batching User Track requests](#batch-user-track) for more. |
+| [`/users/export/ids`]({{site.baseurl}}/api/endpoints/export/user_data/post_users_identifier/) | 2,500 requests per minute. |
+| [`/users/delete`]({{site.baseurl}}/api/endpoints/user_data/post_user_delete/)<br>[`/users/alias/new`]({{site.baseurl}}/api/endpoints/user_data/post_user_alias/)<br>[`/users/alias/update`]({{site.baseurl}}/api/endpoints/user_data/post_users_alias_update/)<br>[`/users/identify`]({{site.baseurl}}/api/endpoints/user_data/post_user_identify/)<br>[`/users/merge`]({{site.baseurl}}/api/endpoints/user_data/post_users_merge/) | 20,000 requests per minute, shared between the endpoints. |
+| [`/users/external_id/rename`]({{site.baseurl}}/api/endpoints/user_data/external_id_migration/post_external_ids_rename/) | 1,000 requests per minute. |
+| [`/users/external_id/remove`]({{site.baseurl}}/api/endpoints/user_data/external_id_migration/post_external_ids_remove/) | 1,000 requests per minute. |
+| [`/events/list`]({{site.baseurl}}/api/endpoints/export/custom_events/get_custom_events/) | 1,000 requests per hour, shared with the `/purchases/product_list` endpoint. |
+| [`/purchases/product_list`]({{site.baseurl}}/api/endpoints/export/purchases/get_list_product_id/) | 1,000 requests per hour, shared with the `/events/list` endpoint. |
+| [`/campaigns/data_series`]({{site.baseurl}}/api/endpoints/export/campaigns/get_campaign_analytics/) | 50,000 requests per minute. |
+| [`/messages/send`]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_messages/)<br>[`/campaigns/trigger/send`]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_campaigns/)<br>[`/canvas/trigger/send`]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_canvases/)| 250 requests per minute for broadcast calls (when only specifying a segment or Connected Audience). Otherwise, 250,000 requests per hour shared between the endpoints. |
+| [`/sends/id/create`]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_create_send_ids/) | 100 requests per day. |
+| [`/subscription/status/set`]({{site.baseurl}}/api/endpoints/subscription_groups/post_update_user_subscription_group_status/) | 5,000 requests per minute. |
+| [`/preference_center/v1/{preferenceCenterExternalId}/url/{userId}`]({{site.baseurl}}/api/endpoints/preference_center/get_create_url_preference_center/)<br>[`/preference_center/v1/list`]({{site.baseurl}}/api/endpoints/preference_center/get_list_preference_center/)<br>[`/preference_center/v1/{preferenceCenterExternalId}`]({{site.baseurl}}/api/endpoints/preference_center/get_view_details_preference_center/) | 1,000 requests per minute, per workspace. |
+| [`/preference_center/v1`]({{site.baseurl}}/api/endpoints/preference_center/post_create_preference_center/)<br>[`/preference_center/v1/{preferenceCenterExternalId}`]({{site.baseurl}}/api/endpoints/preference_center/put_update_preference_center/) | 10 requests per minute, per workspace. |
+| [`/catalogs/{catalog_name}`]({{site.baseurl}}/api/endpoints/catalogs/catalog_management/synchronous/delete_catalog/)<br>[`/catalogs`]({{site.baseurl}}/api/endpoints/catalogs/catalog_management/synchronous/get_list_catalogs/)<br>[`/catalogs`]({{site.baseurl}}/api/endpoints/catalogs/catalog_management/synchronous/post_create_catalog/) | 50 requests per minute shared between the endpoints. |
+| [`/catalogs/{catalog_name}/items`]({{site.baseurl}}/api/endpoints/catalogs/catalog_items/asynchronous/delete_catalog_items_bulk/)<br>[`/catalogs/{catalog_name}/items`]({{site.baseurl}}/api/endpoints/catalogs/catalog_items/asynchronous/patch_catalog_items_bulk/)<br>[`/catalogs/{catalog_name}/items`]({{site.baseurl}}/api/endpoints/catalogs/catalog_items/asynchronous/post_create_catalog_items_bulk/) | 16,000 requests per minute shared between the endpoints. |
+| [`/catalogs/{catalog_name}/items/{item_id}`]({{site.baseurl}}/api/endpoints/catalogs/catalog_items/synchronous/delete_catalog_item/)<br>[`/catalogs/{catalog_name}/items/{item_id}`]({{site.baseurl}}/api/endpoints/catalogs/catalog_items/synchronous/get_catalog_item_details/)<br>[`/catalogs/{catalog_name}/items`]({{site.baseurl}}/api/endpoints/catalogs/catalog_items/synchronous/get_catalog_items_details_bulk/)<br>[`/catalogs/{catalog_name}/items/{item_id}`]({{site.baseurl}}/api/endpoints/catalogs/catalog_items/synchronous/patch_catalog_item/)<br>[`/catalogs/{catalog_name}/items/{item_id}`]({{site.baseurl}}/api/endpoints/catalogs/catalog_items/synchronous/post_create_catalog_item/) | 50 requests per minute shared between the endpoints. |
+| [`/scim/v2/Users/{id}`]({{site.baseurl}}/get_see_user_account_information/)<br>[`/scim/v2/Users?filter={userName@example.com}`]({{site.baseurl}}/get_search_existing_dashboard_user_email/)<br>[`/scim/v2/Users/{id}`]({{site.baseurl}}/post_update_existing_user_account/)<br>[`/scim/v2/Users/{id}}`]({{site.baseurl}}/delete_existing_dashboard_user/)<br>[`/scim/v2/Users/`]({{site.baseurl}}/post_create_user_account/) | 5,000 requests per day, per company, shared between the endpoints. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 <!-- Add during CDI endpoints GA
-| [`/cdi/integrations`][46] | 50 requests per minute. |
-| [`/cdi/integrations/{integration_id}/sync`][47] | 20 requests per minute. |
-| [`/cdi/integrations/{integration_id}/job_sync_status`][48] | 100 requests per minute. |
+| [`/cdi/integrations`]({{site.baseurl}}/api/endpoints/cdi/get_integration_list/) | 50 requests per minute. |
+| [`/cdi/integrations/{integration_id}/sync`]({{site.baseurl}}/api/endpoints/cdi/job_sync/) | 20 requests per minute. |
+| [`/cdi/integrations/{integration_id}/job_sync_status`]({{site.baseurl}}/api/endpoints/cdi/job_sync_status/) | 100 requests per minute. |
 -->
 
 ## Batching API requests
@@ -72,11 +72,11 @@ Requests made to this endpoint will generally begin processing in this order:
 
 ### Batching Messaging endpoint requests
 
-A single request to the [Messaging endpoints][1] can reach any one of the following:
+A single request to the [Messaging endpoints]({{site.baseurl}}/api/endpoints/messaging/) can reach any one of the following:
 
 - Up to 50 specific `external_ids`, each with individual message parameters
 - A segment of any size created in the Braze dashboard, specified by its `segment_id`
-- Users who match additional audience filters of any size, defined in the request as a [connected audience][2] object
+- Users who match additional audience filters of any size, defined in the request as a [connected audience]({{site.baseurl}}/api/objects_filters/connected_audience/) object
 
 ### Example batch request
 
@@ -115,7 +115,7 @@ Header Name             | Description
 
 This information is intentionally included in the header of the response to the API request rather than the Braze dashboard. This allows your system to better react in real time as you're interacting with our API. For example, if the `X-RateLimit-Remaining` value drops below a certain threshold, you might want to slow sending to make sure all transactional emails go out. Or, if it reaches zero, you might want to pause all sending until the time specified in `X-RateLimit-Reset` elapses.
 
-If you have questions about API limits, contact your customer success manager or open a [support ticket][support].
+If you have questions about API limits, contact your customer success manager or open a [support ticket]({{site.baseurl}}/braze_support/).
 
 ### Optimal delay between endpoints
 

@@ -13,7 +13,7 @@ search_rank: 4.9
 
 > In-app messages are good for a lot of things. They're content rich and have a lower sense of urgency, as these messages don't deliver outside of the user's app and won't intrude on their home screen. In-app messages exist within your app (hence the name), come with context, and are almost never unwelcome! They're always delivered when the user is active within your app.
 
-To see examples of in-app messages, check out our [Case Studies][1].
+To see examples of in-app messages, check out our [Case Studies](https://www.braze.com/customers).
 
 ## Potential use cases
 
@@ -21,10 +21,10 @@ With the rich level of content offered by in-app messages, you can leverage this
 
 | Use case | Explanation |
 | --- | --- |
-| Push priming | Run a [push priming][2] campaign using a rich in-app message to show your customers the benefit of opting into push for your app or site, and present them with a prompt to grant push permission.
+| Push priming | Run a [push priming]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/creating_custom_opt-in_prompts/) campaign using a rich in-app message to show your customers the benefit of opting into push for your app or site, and present them with a prompt to grant push permission.
 | Sales and promotions | Use modal in-app messages to greet customers with visually appealing media containing static promotion codes or offers. Incentivize them to make purchases or conversions when they otherwise wouldn't have. |
 | Encouraging feature adoption | Encourage customers to use other parts of your app or take advantage of a service. |
-| Highly personalized campaigns | Place in-app messages as the first thing your customers see when they enter your app or site. Add in some Braze personalization features, such as [Connected Content][3], to compel users to take action and therefore make your outreach more effective.
+| Highly personalized campaigns | Place in-app messages as the first thing your customers see when they enter your app or site. Add in some Braze personalization features, such as [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/), to compel users to take action and therefore make your outreach more effective.
 {: .reset-td-br-1 .reset-td-br-2}
 
 Other use cases to consider include the following:
@@ -69,11 +69,11 @@ Fullscreen messages are exactly what you'd expect—they take up the whole scree
 {% endtab %}
 {% endtabs %}
 
-In addition to these out-of-the box message templates, you can also further customize your messaging using custom HTML in-app messages, web modals with CSS, or web email capture forms. For more information, refer to [Customization][4].
+In addition to these out-of-the box message templates, you can also further customize your messaging using custom HTML in-app messages, web modals with CSS, or web email capture forms. For more information, refer to [Customization]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/).
 
 ## More resources
 
-Before you get started with creating your own in-app message campaigns—or using in-app messages in a multi-channel campaign—we highly recommend that you check out our [In-app message prep guide][5]. This guide covers targeting, content, and conversion questions you should consider when building in-app messages.
+Before you get started with creating your own in-app message campaigns—or using in-app messages in a multi-channel campaign—we highly recommend that you check out our [In-app message prep guide]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/best_practices/prep_guide/). This guide covers targeting, content, and conversion questions you should consider when building in-app messages.
 
 
 [1]: https://www.braze.com/customers

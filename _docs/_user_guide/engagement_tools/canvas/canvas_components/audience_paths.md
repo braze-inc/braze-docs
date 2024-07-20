@@ -15,7 +15,7 @@ tool: Canvas
 
 This Canvas component replaces the need to create excessive audience-based full steps, allowing you to combine what might have been eight full components into one. This helps you simplify user targeting while clearing up your Canvases from unnecessary clutter and complexity. 
 
-![][0]{: style="float:right;max-width:13%;margin-left:15px;margin-top:15px;"}
+![]({% image_buster /assets/img/audience_path/audience_path.png %}){: style="float:right;max-width:13%;margin-left:15px;margin-top:15px;"}
 
 Audience Paths are similar to sorting funnels with ranking criteria. Users are evaluated for each criterion in priority order and sent down the path of the highest-ranking criteria they qualify. This reduces ambiguity of where users will go and what messages they will receive. Note that the rankings aren't [editable after launch]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/change_your_canvas_after_launch/).
 
@@ -29,7 +29,7 @@ With Audience Paths, you can:
 
 ## Creating an Audience Path
 
-![][1]{: style="float:right;max-width:20%;margin-left:15px;"}
+![]({% image_buster /assets/img/audience_path/audience_path1.png %}){: style="float:right;max-width:20%;margin-left:15px;"}
 
 To add an Audience Paths step, do the following: 
 
@@ -44,11 +44,11 @@ The following screenshot shows the layout of an expanded Audience Paths step. He
 
 For example, if you wanted to send a group of users helpful food recommendations, you might select custom attribute filters you have already built out such as "Loves Asian Cuisine", "Loves Latin Cuisine", and "Loves European Cuisine". 
 
-![][3]{: style="max-width:90%;margin-left:15px;"}
+![]({% image_buster /assets/img/audience_path/audience_path3.png %}){: style="max-width:90%;margin-left:15px;"}
 
 After the Audience Paths step is complete, each audience group will have a separate branch. You can continue using Audience Paths to further filter your audience, or continue your Canvas journey with the standard Canvas steps. 
 
-![][4]{: style="max-width:90%;margin-left:15px;"}
+![]({% image_buster /assets/img/audience_path/audience_path4.png %}){: style="max-width:90%;margin-left:15px;"}
 
 ### Testing audience groups
 
@@ -62,7 +62,7 @@ The true power of Audience Paths lies in the ability to assign priority. While t
 
 By assigning a high priority to these groups, you can target users that fall into specific filters and segments while still targeting users that might not fit those specific criteria—all in a single Canvas step.
 
-![][2]{: style="float:right;max-width:40%;margin-left:15px;margin-bottom:15px;"}
+![]({% image_buster /assets/img/audience_path/audience_path2.png %}){: style="float:right;max-width:40%;margin-left:15px;margin-bottom:15px;"}
 
 For example, let's say you wanted to send a group of users ads for new products. You'd start by ranking filters that fall under those products high on the Audience Path. If you were creating a marketing campaign for the company "Big Brand" and a new shoe brand had just released, you might select filters like "Likes Big Brand Shoes" or "Likes Big Brand", and send different email messages based on what filtered group they fall into. 
 

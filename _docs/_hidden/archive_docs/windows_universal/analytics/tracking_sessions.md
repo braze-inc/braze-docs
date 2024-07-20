@@ -22,7 +22,7 @@ Our Windows integration logs session opens when the app is launched and logs ses
 
 To detect sessions via your user, find your user on the dashboard and navigate to "App Usage" on the user profile. You can confirm that session tracking is working by checking that the "Sessions" metric increases when you would expect it to.
 
-![A user profile showing app usage as 25 sessions, last used two hours ago, and first used twenty days ago][session_tracking_7]
+![A user profile showing app usage as 25 sessions, last used two hours ago, and first used twenty days ago]({% image_buster /assets/img_archive/test_session.png %})
 
 [session_tracking_1]: {{ site.baseurl }}/developer_guide/platform_integration_guides/swift/initial_sdk_setup/overview#customizing-braze-on-startup
 [session_tracking_3]: {{ site.baseurl }}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/#step-2-configure-the-braze-sdk-in-appboyxml

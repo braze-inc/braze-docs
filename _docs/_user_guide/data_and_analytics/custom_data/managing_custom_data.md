@@ -22,10 +22,10 @@ To pre-populate custom events and attributes, do the following:
 If you are using the [older navigation]({{site.baseurl}}/navigation), you can find these pages under **Manage Settings**.
 {% endalert %}
 
-![Navigate to Custom Attributes or Custom Events or Products.][21]{: style="max-width:90%;" }
+![Navigate to Custom Attributes or Custom Events or Products.]({% image_buster /assets/img_archive/prepopulate_page.png %}){: style="max-width:90%;" }
 
 {: start="2"}
-2. To add a custom attribute, event, or product, go to the respective page and click **Add Custom Attributes** or **Add Custom Events** or **Add Products**.<br><br>For custom attributes, select a [data type][20] for this attribute (for instance, boolean or string). An attribute's data type will determine the segmentation filters available for that attribute. <br><br>![Add new attribute or event][22]{: style="max-width:80%;" }
+2. To add a custom attribute, event, or product, go to the respective page and click **Add Custom Attributes** or **Add Custom Events** or **Add Products**.<br><br>For custom attributes, select a [data type]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#custom-attribute-data-types) for this attribute (for instance, boolean or string). An attribute's data type will determine the segmentation filters available for that attribute. <br><br>![Add new attribute or event]({% image_buster /assets/img_archive/prepopulate_add.png %}){: style="max-width:80%;" }
 3. Click **Save**.
 
 ### Naming custom events and custom attributes
@@ -36,7 +36,7 @@ Custom events and custom attributes are case-sensitive. Keep this in mind when y
 
 After you have created a custom event or product, you can click **Manage Properties** for that event or product to add new properties, blocklist existing properties, and view which campaigns or Canvases use this property in a [trigger event]({{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/triggered_delivery/#step-1-select-a-trigger-event).
 
-![Custom properties for a custom event.][73]{: style="max-width:80%"}
+![Custom properties for a custom event.]({% image_buster /assets/img_archive/manageproperties1.png %}){: style="max-width:80%"}
 
 To make these added custom attributes, events, products, or event properties traceable, you must ask your development team to create it in the SDK using the exact name you used to add it earlier. Or, you can use the Braze [API]({{site.baseurl}}/api/basics/) to import data on that attribute. After that, the custom attribute, event, or other will be actionable and apply to your users.
 
@@ -64,7 +64,7 @@ To stop tracking a specific custom attribute, event, or product, follow these st
 
 ![Multiple selected custom attributes that are blocklisted on the Custom Attributes page.]({% image_buster /assets/img_archive/blocklist_custom_attr.png %})
 
-You can blocklist up to 300 custom attributes and 300 custom events. To prevent collecting certain device attributes, see our [SDK guide][88].
+You can blocklist up to 300 custom attributes and 300 custom events. To prevent collecting certain device attributes, see our [SDK guide]({{site.baseurl}}/developer_guide/platform_integration_guides/sdk_primer/#blocking-data-collection).
 
 When a custom event or attribute is blocklisted, the following applies:
 
@@ -101,7 +101,7 @@ Braze automatically recognizes data types for attribute data that is sent to us.
 
 {% alert note %} Forcing data types does not apply to event properties, or purchase properties. {% endalert %}
 
-![Custom attributes data type drop-down][75]
+![Custom attributes data type drop-down]({% image_buster /assets/img_archive/custom_events_view_data_type_dropdown.png %})
 
 {% alert warning %}
 If you choose to force the data type for an attribute, any data that comes in that isn't the specified type will be ignored.
@@ -116,7 +116,7 @@ If you choose to force the data type for an attribute, any data that comes in th
 | Number | Integers or Floats (such as `1`, `1.5`) will be stored as numbers |
 {: .reset-td-br-1 .reset-td-br-2}
 
-For more information on specific filter options exposed by different data type comparisons, check out [Configuring reporting][43]. And for more information on the different available data types, refer to [Custom attribute data types][44].
+For more information on specific filter options exposed by different data type comparisons, check out [Configuring reporting]({{site.baseurl}}/user_guide/data_and_analytics/configuring_reporting/#configuring-reporting). And for more information on the different available data types, refer to [Custom attribute data types]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#custom-attribute-data-types).
 
 {% alert note %}
 Data sent to Braze is immutable and cannot be deleted or modified after we've received it. However, you can use any of the steps listed in the preceding sections to exercise control over what you're tracking in your dashboard.

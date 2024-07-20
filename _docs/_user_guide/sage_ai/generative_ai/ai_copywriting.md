@@ -25,7 +25,7 @@ To generate copy using the AI copywriting assistant, follow these steps:
 
 We use the information you provide to prompt GPT to write copy for you. The response will be fetched from OpenAI and provided to you. 
 
-![AI copywriting assistant modal showing various features available"][1]{: style="max-width:70%;"}
+![AI copywriting assistant modal showing various features available"]({% image_buster /assets/img/ai_copywriter/gpt3.png %} "GPT3"){: style="max-width:70%;"}
 
 {% alert important %}
 We filter out responses for offensive content that violates OpenAI's [content policy](https://beta.openai.com/docs/usage-guidelines/content-policy).

@@ -18,13 +18,13 @@ noindex: true
 
 Phone carriers have a specific type of format they expect called E.164 which is the international telephone numbering plan that ensures that each device has a globally unique number. This is what allows phone calls and text messages to be correctly routed to individual phones in different countries. E.164 numbers are formatted as shown in the following image, and can have a maximum of 15 digits.
 
-![E.164 format consists of a plus sign, country code, area code, and phone number][picture]{: style="max-width:50%;border: 0;"}
+![E.164 format consists of a plus sign, country code, area code, and phone number]({% image_buster /assets/img/sms/e164.jpg %}){: style="max-width:50%;border: 0;"}
 
-For more information, refer to [User phone numbers][userphone].
+For more information, refer to [User phone numbers]({{site.baseurl}}/user_guide/message_building_by_channel/sms/phone_numbers/user_phone_numbers/).
 
 ## Update historical information on users subscription states
 
-If you have any historical information about your user's [subscription states][subscriptionstate] for your various messaging channels, be sure to update this information in Braze.
+If you have any historical information about your user's [subscription states]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_subscription_group/#sms-subscription-states) for your various messaging channels, be sure to update this information in Braze.
 
 ## Example migration steps
 
@@ -32,11 +32,11 @@ Before you begin composing SMS campaigns through Braze, you'll need to update yo
 
 **Here's a quick summary of the user data you'll need to update in Braze:**
 
-1. **Import users' phone numbers in the correct format** ([E.164][0]) formatting requires a plus sign (+) and a country code. An example is +12408884782. For more information on how to import user phone numbers, check out [User phone numbers][userphone].
-    * Use the [`/users/track` endpoint][1] to assign the `phone` value.<br><br>
+1. **Import users' phone numbers in the correct format** ([E.164](https://en.wikipedia.org/wiki/E.164)) formatting requires a plus sign (+) and a country code. An example is +12408884782. For more information on how to import user phone numbers, check out [User phone numbers]({{site.baseurl}}/user_guide/message_building_by_channel/sms/phone_numbers/user_phone_numbers/).
+    * Use the [`/users/track` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) to assign the `phone` value.<br><br>
 
-2. **Assign your user's SMS [subscription state][subscriptionstate]** (such as subscribed or unsubscribed) if you have this information.
-    * Use the [`/subscription/status/set` endpoint][6] to set users as subscribed or unsubscribed from your SMS Subscription Groups.
+2. **Assign your user's SMS [subscription state]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_subscription_group/#sms-subscription-states)** (such as subscribed or unsubscribed) if you have this information.
+    * Use the [`/subscription/status/set` endpoint]({{site.baseurl}}/api/endpoints/subscription_groups/post_update_user_subscription_group_status/) to set users as subscribed or unsubscribed from your SMS Subscription Groups.
 
 {% alert note %}
 After you have configured the SMS Subscription Groups in your dashboard, you'll be able to grab the associated `subscription_group_id`, which you'll need for your API request.

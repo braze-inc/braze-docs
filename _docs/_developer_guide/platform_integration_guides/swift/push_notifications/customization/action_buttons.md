@@ -15,7 +15,7 @@ channel:
 
 There are four sets of default push action buttons for Braze default push categories: `Accept/Decline`, `Yes/No`, `Confirm/Cancel`, and `More`. 
 
-![A GIF of a push message being pulled down to display two customizable action buttons.][13]{: style="max-width:60%"}
+![A GIF of a push message being pulled down to display two customizable action buttons.]({% image_buster /assets/img_archive/iOS8Action.gif %}){: style="max-width:60%"}
 
 If you want to create your own custom notification categories, see [action button customization](#push-category-customization).
 
@@ -29,7 +29,7 @@ To manually enable these push action buttons, first register for the default pus
 
 ### Step 1: Adding Braze default push categories {#registering}
 
-Use the following code to register for the default push categories when you [register for push][36]:
+Use the following code to register for the default push categories when you [register for push]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/integration/#step-4-register-push-tokens-with-braze):
 
 {% tabs %}
 {% tab swift %}
@@ -74,7 +74,7 @@ AppDelegate.braze?.notifications.handleUserNotification(response: response, with
 {% endtab %}
 {% endtabs %}
 
-If you use the `UNNotification` framework and have implemented the Braze [notification methods][39], you should already have this method integrated. 
+If you use the `UNNotification` framework and have implemented the Braze [notification methods]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/integration/#step-5-enable-push-handling), you should already have this method integrated. 
 
 ## Push category customization
 
@@ -86,7 +86,7 @@ These categories can then be assigned to push notifications via our dashboard to
 
 Here's an example that leverages the `LIKE_CATEGORY` displayed on the device:
 
-![A push message displaying two push action buttons "unlike" and "like".][17]
+![A push message displaying two push action buttons "unlike" and "like".]({% image_buster /assets/img_archive/push_example_category.png %})
 
 #### Step 1: Register a category
 
@@ -151,7 +151,7 @@ You only need to define custom notification categories for action buttons with _
 3. In the **iOS Notification Category** dropdown, select **Enter pre-registered custom iOS Category**.
 4. Finally, enter one of the categories you created earlier. The following example, uses the custom category: `LIKE_CATEGORY`.
 
-![The push notification campaign dashboard with the setup for custom categories.][18]
+![The push notification campaign dashboard with the setup for custom categories.]({% image_buster /assets/img_archive/ios-notification-category.png %})
 
 [13]: {% image_buster /assets/img_archive/iOS8Action.gif %}
 [17]: {% image_buster /assets/img_archive/push_example_category.png %}

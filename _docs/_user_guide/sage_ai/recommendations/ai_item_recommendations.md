@@ -14,7 +14,7 @@ You can use AI item recommendations to calculate the most popular products or cr
 
 ## Prerequisites
 
-- You must have at least one [catalog][catalog] to use any of the recommendation types described below.
+- You must have at least one [catalog]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/) to use any of the recommendation types described below.
 - You must have purchase or event data on Braze (custom events or the purchase object) that includes a reference to unique product IDs stored in a catalog.
 - AI Personalized recommendations work best with hundreds or thousands of items and typically at least 30,000 users with purchase or interaction data. This is only a rough guide and can vary. The other recommendation types can work with less data.
 
@@ -31,7 +31,7 @@ You can also choose to create a recommendation straight from an individual catal
 
 First, give your recommendation a name and optional description.
 
-![][1]
+![]({% image_buster /assets/img/item_recs_1.png %})
 
 ### Step 2: Define your recommendation {#recommendation-type}
 
@@ -49,7 +49,7 @@ When using **Most recent** or **AI Personalized**, users with insufficient data 
 
 To avoid suggesting items that a user has already purchased or interacted with, select **Do not recommend items users have previously interacted with**. This option is only available when the recommendation **Type** is set to **AI Personalized**.
 
-![][2-3]
+![]({% image_buster /assets/img/item_recs_2-3.png %})
 
 This setting makes sure that items a user has already bought or interacted with are not surfaced in messages again, provided the recommendation has been updated recently. Items purchased or interacted with between recommendation updates may still appear. For the free version of item recommendations, updates happen weekly. For the pro version of AI item recommendations, updates happen every 24 hours.
 
@@ -57,13 +57,13 @@ For example, when using the pro version of AI item recommendations, if a user pu
 
 #### Step 2b: Select a catalog
 
-If not already populated, select the [catalog][catalog] that this recommendation will pull items from.
+If not already populated, select the [catalog]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/) that this recommendation will pull items from.
 
 #### Step 2c: Add a selection (optional)
 
 If you'd like more control over your recommendation, choose a [selection]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/selections/) to apply custom filters. Selections filter recommendations by specific columns in your catalog, such as brand, size, or location. Selections that contain Liquid can't be used in your recommendation.
 
-![][2-2]
+![]({% image_buster /assets/img/item_recs_2-2.png %})
 
 {% alert tip %}
 If you can't find your selection, make sure it's set up in your catalog first.
@@ -81,7 +81,7 @@ You can optimize for:
 
 If you choose **Custom Event**, select your event from the list.
 
-![][3]
+![]({% image_buster /assets/img/item_recs_3.png %})
 
 ### Step 4: Choose the corresponding property name {#property-name}
 
@@ -91,7 +91,7 @@ Select this field for the **Property Name**.
 
 The **Property Name** field will be pre-populated with a list of fields sent through the SDK to Braze. If enough data is provided, these properties will also be ranked in order of probability to be the correct property. Select the one that corresponds to the `id` field of the catalog.
 
-![][4]
+![]({% image_buster /assets/img/item_recs_4.png %})
 
 #### Requirements {#requirements}
 
@@ -249,7 +249,7 @@ You can view analytics for your recommendation to see which items users were rec
 
 At the top of the page, you can find statistics about your recommendation, such as precision and coverage.
 
-![][5]
+![]({% image_buster /assets/img/item_recs_analytics_1.png %})
 
 These metrics are defined in the following table. 
 
@@ -265,15 +265,15 @@ The next section shows a breakdown of items in the catalog, split into two possi
 - **Personalized items** or **Most recent items:** This column lists each item in the catalog in descending order of most often recommended to users. This column also shows how many users were assigned each item by the model.
 - **Most Popular items:** This column lists each item in the catalog in descending order of popularity. Popularity here refers to items in the catalog that users interact with most often in the entire workspace. Most popular is used as the fallback when personalized or most recent cannot be calculated for an individual user.
 
-![][6]
+![]({% image_buster /assets/img/item_recs_analytics_2.png %})
 
 The **Recommendation overview** shows a summary of your chosen recommendation configuration, including when the recommendation was last updated.
 
-![][7]{: style="max-width:45%" }
+![]({% image_buster /assets/img/item_recs_analytics_3.png %}){: style="max-width:45%" }
 
 ## Using recommendations in messaging
 
-![][10]{: style="max-width:30%;float:right;margin-left:15px;"}
+![]({% image_buster /assets/img/add_personalization.png %}){: style="max-width:30%;float:right;margin-left:15px;"}
 
 After your recommendation finishes training, you can personalize your messages with Liquid to insert the most popular products in that catalog. The Liquid can be generated for you by the personalization window found in message composers:
 

@@ -81,13 +81,13 @@ Here, you'll name your Canvas, assign [Teams]({{site.baseurl}}/user_guide/admini
 Tag your Canvases so they're easy to find and build reports out of. For instance, when using [Report Builder]({{site.baseurl}}/user_guide/data_and_analytics/reporting/report_builder/), you can filter by particular tags.
 {% endalert %}
 
-![][53]
+![]({% image_buster /assets/img/canvas_details.png %})
 
 #### Choose conversion events
 
 Choose your conversion event type, then select the conversions to record. These [conversion events]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/conversion_events/) will measure the efficiency of your Canvas. 
 
-![Primary Conversion Event A with the Makes Purchase conversion event type to record conversations for users who make any purchase within a three day conversion deadline.][52]
+![Primary Conversion Event A with the Makes Purchase conversion event type to record conversations for users who make any purchase within a three day conversion deadline.]({% image_buster /assets/img/add_canvas_conversions.png %})
 
 If your Canvas has multiple variants or a control group, Braze will use this conversion event to determine the best variation for achieving this conversion goal. Using the same logic, you can create multiple conversion events.
 
@@ -164,7 +164,7 @@ Setting the [exit criteria]({{site.baseurl}}/user_guide/engagement_tools/canvas/
 
 ### Step 2d: Select your send settings
 
-Select **Send Settings** to edit your subscription settings, turn on rate limiting, and to turn on Quiet Hours. By turning on [rate limiting][6b] or [frequency capping][6c], you can ease the marketing pressure placed on your users and ensure you aren't over messaging them.
+Select **Send Settings** to edit your subscription settings, turn on rate limiting, and to turn on Quiet Hours. By turning on [rate limiting]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/#rate-limiting-and-canvas-components) or [frequency capping]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting#frequency-capping), you can ease the marketing pressure placed on your users and ensure you aren't over messaging them.
 
 For Canvases targeting email and push channels, you may want to limit your Canvas so that only the users who are explicitly opted in will receive the message (excluding subscribed or unsubscribed users). For example, say you have three users of different opt-in status:
 
@@ -182,19 +182,19 @@ With this configuration, don't include any filters in the **Target Users** step 
 
 If desired, specify Quiet Hours (the time during which your messages will not be sent) for your Canvas. Check **Enable Quiet Hours** in your **Send Settings**. Then, select your Quiet Hours in your user's local time and what action will follow if the message triggers inside of those Quiet Hours.
 
-![][50]
+![]({% image_buster /assets/img/quiet_hours.png %})
 
 ## Step 3: Build your Canvas
 
 ### Adding a variant
 
-![][11]{: style="float:right;max-width:35%;margin-left:15px;"}
+![]({% image_buster /assets/img_archive/canvas_add_variant.gif %}){: style="float:right;max-width:35%;margin-left:15px;"}
 
 Select **Add Variant**, then add a new variant to your Canvas. Variants represent a journey that your users will take and can contain multiple steps and branches.
 
 You can add additional variants by selecting the <i class="fas fa-plus-circle"></i> plus button. When you add new variants, you'll be able to adjust how your users will be distributed between them so that you can cross-compare and analyze the efficacy of different engagement strategies.
 
-![][12]
+![]({% image_buster /assets/img_archive/Canvas_Multiple_Variants.png %})
 
 {% alert tip %}
 By default, the Canvas variant assignment is locked in when users enter the Canvas, meaning that if a user first enters a variant, that will be their variant every time they re-enter the Canvas. However, there are ways to circumvent this behavior. <br><br>To do so, you can create a random number generator using Liquid, run it at the beginning of each user's Canvas entry, store the value as a custom attribute, and then use that attribute to randomly divide users.
@@ -300,11 +300,11 @@ In this example, we have our Canvas divided into two variants. Variant 1 has 70%
 
 ### Intelligent Selection for Canvas
 
-Intelligent Selection capabilities are now available within multivariate Canvases. Similar to the [Intelligent Selection][18a] feature for multivariate Campaigns, Intelligent Selection for Canvas analyzes the performance of each Canvas variant and adjusts the percentage of users being funneled through each variant. This distribution is based off each variant's performance metrics to maximize the total expected number of conversions.
+Intelligent Selection capabilities are now available within multivariate Canvases. Similar to the [Intelligent Selection]({{site.baseurl}}/user_guide/sage_ai/intelligence/intelligent_selection/) feature for multivariate Campaigns, Intelligent Selection for Canvas analyzes the performance of each Canvas variant and adjusts the percentage of users being funneled through each variant. This distribution is based off each variant's performance metrics to maximize the total expected number of conversions.
 
 Keep in mind that multivariate Canvases allow you to test more than copy, but timing and channels as well. Through Intelligent Selection, you can test Canvases more efficiently and have confidence that your users will be sent on the best possible Canvas journey.
 
-![][18b]
+![]({% image_buster /assets/img_archive/canvas_intelligent_selection.png %})
 
 Intelligent Selection for Canvas optimizes your Canvas results by making gradual real-time adjustments to the distribution of users sorted into each variant. When the statistical algorithm determines a decisive winner among your variants it will rule out the underperforming variants and slot all future eligible recipients of the Canvas into the Winning Variants. 
 
@@ -316,7 +316,7 @@ Once you're done creating your Canvas, select **Launch Canvas** to save and laun
 
 You can also save your Canvas as a draft if you need to come back to it.
 
-![][19]
+![]({% image_buster /assets/img_archive/Canvas_Analytics.png %})
 
 {% alert tip %}
 Need to make edits to your Canvas after launch? Well, you can! Check out [Editing Canvases after launch]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/change_your_canvas_after_launch/) for more information.

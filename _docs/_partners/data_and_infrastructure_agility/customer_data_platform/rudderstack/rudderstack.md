@@ -9,7 +9,7 @@ search_tag: Partner
 
 # RudderStack
 
-> [RudderStack][1] is an open-source customer data infrastructure for collecting and routing customer event data to your preferred data warehouse and dozens of other analytics providers, such as Braze. It is enterprise-ready and offers a robust transformation framework to process your event data on the fly.
+> [RudderStack](https://rudderstack.com/) is an open-source customer data infrastructure for collecting and routing customer event data to your preferred data warehouse and dozens of other analytics providers, such as Braze. It is enterprise-ready and offers a robust transformation framework to process your event data on the fly.
 
 The Braze and RudderStack integration offers a native SDK integration for your Android, iOS, and web applications and a server-to-server integration from your backend services.
 
@@ -18,17 +18,17 @@ The Braze and RudderStack integration offers a native SDK integration for your A
 | Requirement | Description |
 | --- | --- |
 | RudderStack account | A [RudderStack account](https://app.rudderstack.com/) is required to take advantage of this partnership. |
-| Configured source | A [source][3] is essentially the origin of any data sent to RudderStack, such as websites, mobile apps, or backend servers. You are required to configure the source before setting up Braze as a destination in RudderStack. |
+| Configured source | A [source](https://www.rudderstack.com/docs/dashboard-guides/sources/) is essentially the origin of any data sent to RudderStack, such as websites, mobile apps, or backend servers. You are required to configure the source before setting up Braze as a destination in RudderStack. |
 | Braze REST API key | A Braze REST API key with `users.track`, `users.identify`, `users.delete`, and `users.alias.new` permissions.<br><br>This can be created in the Braze dashboard from **Settings** > **API Keys**. |
 | Braze app key | To get your app key in the Braze dashboard go to **Settings** > **App Settings** > **Identification** and find your app name. Save the associated identifier string.
-| Data center | Your data center aligns with your Braze dashboard [instance][15].  |
+| Data center | Your data center aligns with your Braze dashboard [instance]({{site.baseurl}}/api/basics/#endpoints).  |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ## Integration
 
 ### Step 1: Add a source
 
-To start sending data to Braze, you first need to make sure a source is set up in your RudderStack app. Visit [RudderStack][22] to learn how to set up your data source.
+To start sending data to Braze, you first need to make sure a source is set up in your RudderStack app. Visit [RudderStack](https://www.rudderstack.com/docs/destinations/streaming-destinations/braze/#getting-started) to learn how to set up your data source.
 
 ### Step 2: Configure destination
 
@@ -36,7 +36,7 @@ Now that your data source is set up, in the RudderStack dashboard, select **ADD 
 
 In the Braze destination, provide the app key, Braze REST API key, data cluster, and native SDK option (device mode only). The native SDK option will use the Braze native SDK to send events if toggled on. 
 
-![][0]{: style="max-width:70%;margin-bottom:15px;border:none;"}
+![]({% image_buster /assets/img/RudderStack/braze_settings.png %}){: style="max-width:70%;margin-bottom:15px;border:none;"}
 
 ### Step 3: Choose the type of integration
 
@@ -56,12 +56,12 @@ With this mode, you can send your events to Braze using the Braze SDK set up on 
 
 Set up the mappings to the RudderStack SDK for your platform on Braze's GitHub repository, as described under [supported methods](#supported-methods):
 
-- [Android][android]
-- [iOS][ios]
-- [Swift][swift]
-- [Web][web]
-- [React Native][react]
-- [Flutter][flutter]
+- [Android](https://github.com/rudderlabs/rudder-integration-braze-android)
+- [iOS](https://github.com/rudderlabs/rudder-integration-braze-ios/tree/master)
+- [Swift](https://github.com/rudderlabs/rudder-integration-braze-swift)
+- [Web](https://github.com/rudderlabs/rudder-sdk-js/tree/production/src/integrations/Braze)
+- [React Native](https://github.com/rudderlabs/rudder-sdk-react-native/tree/develop/libs/rudder-integration-braze-react-native)
+- [Flutter](https://github.com/rudderlabs/rudder-sdk-flutter/tree/develop/packages/integrations/rudder_integration_braze_flutter)
 
 To complete the device mode integration, refer to the detailed RudderStack instructions for [adding Braze to your project](https://rudderstack.com/docs/destinations/marketing/braze/#adding-device-mode-integration).
 
@@ -128,7 +128,7 @@ You can delete a user in Braze using the [Suppression with Delete regulation](ht
 RudderStack's [`track` method](https://rudderstack.com/docs/destinations/marketing/braze/#track) captures all the user activities and the properties associated with those activities.
 
 **Order completed**<br>
-On using the [RudderStack Ecommerce API][20] to call the track method for an event with the name `Order Completed`, RudderStack sends the products listed in that event to Braze as [`purchases`][21].
+On using the [RudderStack Ecommerce API](https://www.rudderstack.com/docs/event-spec/ecommerce-events-spec/) to call the track method for an event with the name `Order Completed`, RudderStack sends the products listed in that event to Braze as [`purchases`]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/exporting_revenue_data/#revenue-data).
 
 {% endtab %}
 {% tab Screen %}

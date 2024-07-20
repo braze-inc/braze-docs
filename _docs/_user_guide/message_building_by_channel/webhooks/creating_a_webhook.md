@@ -10,7 +10,7 @@ search_rank: 2
 
 # Creating a webhook
 
-> Creating a webhook campaign or including a webhook in a multichannel campaign allows you to trigger non-app actions. More specifically, [webhooks][14] can be used to provide other systems and applications with real-time information. 
+> Creating a webhook campaign or including a webhook in a multichannel campaign allows you to trigger non-app actions. More specifically, [webhooks](https://sendgrid.com/blog/whats-webhook) can be used to provide other systems and applications with real-time information. 
 
 You can use webhooks to send information to systems such as Salesforce or Marketo. You can also use webhooks to send information to your backend systems. For example, you might want to credit your customers' accounts with a promotion after they've performed a custom event a certain number of times.
 
@@ -66,7 +66,7 @@ The **Compose** tab consists of the following fields:
 
 #### Language {#internationalization}
 
-[Internationalization][16] is supported in the URL and the request body. To internationalize your message, click **Add Languages** and fill out the required fields. We recommend selecting your languages before writing your content so you can fill in your text where it belongs in the Liquid. See our full list of [available languages]({{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/localization/#languages-supported).
+[Internationalization]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/campaigns_in_multiple_languages/#campaigns-in-multiple-languages) is supported in the URL and the request body. To internationalize your message, click **Add Languages** and fill out the required fields. We recommend selecting your languages before writing your content so you can fill in your text where it belongs in the Liquid. See our full list of [available languages]({{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/localization/#languages-supported).
 
 #### Webhook URL
 
@@ -74,7 +74,7 @@ The webhook URL, or HTTP URL, specifies your endpoint. The endpoint is the place
 
 Braze only allows URLs that communicate over standard ports `80` (HTTP) and `443` (HTTPS).
 
-You can personalize your webhook URLs using [Liquid][15]. At times, certain endpoints may require you to identify a user or provide user-specific information as part of your URL. When using Liquid, make sure to include a [default value][19] for each piece of user-specific information that you use in your URL.
+You can personalize your webhook URLs using [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/). At times, certain endpoints may require you to identify a user or provide user-specific information as part of your URL. When using Liquid, make sure to include a [default value]({{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/setting_user_ids/) for each piece of user-specific information that you use in your URL.
 
 #### Request body
 
@@ -84,15 +84,15 @@ The request body is the information that will be sent to the URL that you specif
 
 JSON key-value pairs allow you to easily write a request for an endpoint that expects a JSON format. You can only use this feature with an endpoint that expects a JSON request. For example, if your key is `message_body`, the corresponding value might be `Your order just arrived!`. After you've entered your key-value pair, the composer will configure your request in JSON syntax, and a preview of your JSON request will automatically populate.
 
-![Request body set to JSON key-value pairs][21]
+![Request body set to JSON key-value pairs]({% image_buster /assets/img/webhook_json_1.png %})
 
-You can personalize your key-value pairs using [Liquid][15], such as including any user attribute, [custom attribute][17], or [event property][18] in your request. For example, you can include a customer's first name and email in your request. Don't forget to include a [default value][19] for each attribute!
+You can personalize your key-value pairs using [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/), such as including any user attribute, [custom attribute]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/setting_user_ids/#additional-notes-and-best-practices), or [event property]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) in your request. For example, you can include a customer's first name and email in your request. Don't forget to include a [default value]({{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/setting_user_ids/) for each attribute!
 
 ##### Raw text
 
-The raw text option gives you the flexibility to write a request for an endpoint that expects a body of any format. For example, you might use this feature to write a request for an endpoint that expects your request to be in XML format. Both [personalization][15] and [internationalization][16] using Liquid is supported in raw text.
+The raw text option gives you the flexibility to write a request for an endpoint that expects a body of any format. For example, you might use this feature to write a request for an endpoint that expects your request to be in XML format. Both [personalization]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/) and [internationalization]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/campaigns_in_multiple_languages/#campaigns-in-multiple-languages) using Liquid is supported in raw text.
 
-![Request body set to raw text][22]
+![Request body set to raw text]({% image_buster /assets/img_archive/webhook_rawtext.png %})
 
 If you set the `Content-Type` [request header](#request-headers-optional) to `application/x-www-form-url-encoded`, the request body must be formatted as a URL-encoded string. For example:
 
@@ -102,7 +102,7 @@ to={{custom_attribute.${example}}}&text=Your+order+just+arrived
 ```
 {% endraw %}
 
-![Request body with URL-encoded string.][23]
+![Request body with URL-encoded string.]({% image_buster /assets/img_archive/webhook_rawtext_URL-encoded.png %})
 
 ## Step 3: Configure additional settings
 
@@ -118,7 +118,7 @@ Authorization headers must use the key `Authorization`. Common values are {% raw
 
 The [HTTP method]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/understanding_webhooks/#methods) that you should use will vary depending on the endpoint to which you are sending information. The majority of the time, you'll be using POST.
 
-![Specify request headers and HTTP method in the Settings tab of the composer][26]
+![Specify request headers and HTTP method in the Settings tab of the composer]({% image_buster /assets/img_archive/webhook_request_header.png %})
 
 ## Step 4: Test send your message
 
@@ -180,11 +180,11 @@ After you've finished building the last of your campaign or Canvas, review its d
 
 ### Errors, retry logic, and timeouts
 
-Webhooks rely on Braze servers making requests to an external endpoint, and syntax and other errors may arise. The first step to avoiding webhook errors is to test your webhook campaign for syntax errors and to make sure that personalized variables have a default value. However, webhooks may still fail due to issues like expired API keys, rate limits, or unexpected server errors. If your webhook fails to send, an error message gets logged to the [Message Activity Log][42].
+Webhooks rely on Braze servers making requests to an external endpoint, and syntax and other errors may arise. The first step to avoiding webhook errors is to test your webhook campaign for syntax errors and to make sure that personalized variables have a default value. However, webhooks may still fail due to issues like expired API keys, rate limits, or unexpected server errors. If your webhook fails to send, an error message gets logged to the [Message Activity Log]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/message_activity_log_tab/).
 
 This description contains the time the error occurred, the app name, and the error message:
 
-![Webhook error with the message "An active access token must be used to query information about the current user"][43]
+![Webhook error with the message "An active access token must be used to query information about the current user"]({% image_buster /assets/img_archive/webhook-error.png %})
 
 If the message body is not clear enough regarding the source of the error, you should check the documentation of the API endpoint you're using. These typically provide an explanation of the error codes the endpoint uses as well as what they're typically caused by.
 

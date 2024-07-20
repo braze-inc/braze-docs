@@ -33,7 +33,7 @@ Note, you will additionally need to make a call to `AppboyBinding.RequestContent
 
 ## Parsing Content Cards
 
-Incoming `string` messages received in your Content Cards game object callback can be parsed into our pre-supplied [`ContentCard`][17] model object for convenience.
+Incoming `string` messages received in your Content Cards game object callback can be parsed into our pre-supplied [`ContentCard`](https://github.com/braze-inc/braze-unity-sdk/blob/master/Assets/Plugins/Appboy/Models/Cards/ContentCard.cs) model object for convenience.
 
 Parsing Content Cards requires Json parsing, see the following example for details:
 
@@ -85,6 +85,6 @@ AppboyBinding.RequestContentCardsRefreshFromCache()
 
 Clicks and impressions must be manually logged for Content Cards not displayed directly by Braze.
 
-Use `LogClick()` and `LogImpression()` on [ContentCard][17] to log clicks and impressions for specific cards.
+Use `LogClick()` and `LogImpression()` on [ContentCard](https://github.com/braze-inc/braze-unity-sdk/blob/master/Assets/Plugins/Appboy/Models/Cards/ContentCard.cs) to log clicks and impressions for specific cards.
 
 [17]: https://github.com/braze-inc/braze-unity-sdk/blob/master/Assets/Plugins/Appboy/Models/Cards/ContentCard.cs

@@ -32,6 +32,6 @@ Give your export a name, then proceed to the **Current Details** page. On this p
 
 After configuring your integration's credentials, check all message engagement, customer behavior, and user events you would like to export to Heap, and click **Launch Current**.
 
-![][5]{: style="max-width:90%;"}
+![]({% image_buster /assets/img/heap/heap4.png %}){: style="max-width:90%;"}
 
 [5]: {% image_buster /assets/img/heap/heap4.png %} 

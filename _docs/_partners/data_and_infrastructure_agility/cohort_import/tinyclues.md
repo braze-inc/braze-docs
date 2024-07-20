@@ -33,7 +33,7 @@ In Braze, navigate to **Partner Integrations** > **Technology Partners** and sel
 If you are using the [older navigation]({{site.baseurl}}/navigation), you can find **Technology Partners** under **Integrations**.
 {% endalert %}
 
-Here, you will find your REST endpoint and generate your Braze data import key. After the key is generated, you can create a new key or invalidate an existing one.<br><br>![][6]{: style="max-width:90%;"} 
+Here, you will find your REST endpoint and generate your Braze data import key. After the key is generated, you can create a new key or invalidate an existing one.<br><br>![]({% image_buster /assets/img/tinyclues/tinyclues_6.png %}){: style="max-width:90%;"} 
 
 To complete the integration, you will need to provide the data import key and REST endpoint to your Tinyclues data operations team. Tinyclues will then establish the connection and reach out to you after the setup is complete.
 
@@ -43,14 +43,14 @@ Each time you want to create a cohort of Tinyclues users to use in Braze, you'll
 
 In Tinyclues, select the campaign(s) you want to export and click **Export Campaigns**. Upon export, the audience will be automatically uploaded to your Braze account.
 
-![][1]
+![]({% image_buster /assets/img/tinyclues/tinyclues_1.png %})
 
 ### Step 3: Create a segment from the Tinyclues custom audience
 
 In Braze, navigate to **Segments**, name your Tinyclues cohort segment, and select **Tinyclues Cohorts** as your filter. From here, you can choose which Tinyclues cohort you wish to include. After your Tinyclues cohort segment is created, you can select it as an audience filter when creating a campaign or Canvas.
 
-![][3]{: style="max-width:90%;"}<br><br>
-![In the Braze segment builder, the user attributes filter "Tinyclues cohort" is set to "includes" and "Primary cohort".][4]{: style="max-width:90%;"}
+![]({% image_buster /assets/img/tinyclues/tinyclues_3.png %}){: style="max-width:90%;"}<br><br>
+![In the Braze segment builder, the user attributes filter "Tinyclues cohort" is set to "includes" and "Primary cohort".]({% image_buster /assets/img/tinyclues/tinyclues_4.png %}){: style="max-width:90%;"}
 
 Having trouble locating your cohort? Check out our [troubleshooting](#troubleshooting) section for guidance. 
 
@@ -58,13 +58,13 @@ Having trouble locating your cohort? Check out our [troubleshooting](#troublesho
 
 To use your Tinyclues segment, create a Braze campaign or Canvas and select the segment as your target audience. 
 
-![In the Braze campaign builder on the targeting step, the "Target users by segment" filter is set to "Tinyclues cohort".][5]{: style="max-width:90%;"}
+![In the Braze campaign builder on the targeting step, the "Target users by segment" filter is set to "Tinyclues cohort".]({% image_buster /assets/img/tinyclues/tinyclues_5.png %}){: style="max-width:90%;"}
 
 ## Troubleshooting
 
 Are you having trouble finding the right cohort within the list? In Tinyclues, view your campaign details and verify the name by checking the **Export File Name**.
 
-![The bottom of the campaign details page shows your cohort name.][2]{: style="max-width:30%;"}
+![The bottom of the campaign details page shows your cohort name.]({% image_buster /assets/img/tinyclues/tinyclues_2.png %}){: style="max-width:30%;"}
 
 Still having trouble retrieving your audience? Contact the [Tinyclues team](mailto:support@tinyclues.com) for additional support.
 

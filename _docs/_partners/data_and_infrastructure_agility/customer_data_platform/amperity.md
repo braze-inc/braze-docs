@@ -62,9 +62,9 @@ Custom attributes will be updated only for those users that have a matching `ext
 
 Audiences synced from Amperity to Braze will be logged to user profiles as custom attributes. These can then be used to target those users in Braze.
 
-![Dropdown list of filters with Custom Attributes displaying in the Custom Data category.][1]{: style="max-width:60%;"}
+![Dropdown list of filters with Custom Attributes displaying in the Custom Data category.]({% image_buster /assets/img/amperity/custom_attributes_filters.png %}){: style="max-width:60%;"}
 
-![Dropdown list of custom attributes such as "l12m_frequency" and "l12m_monetary".][2]{: style="max-width:40%;"}
+![Dropdown list of custom attributes such as "l12m_frequency" and "l12m_monetary".]({% image_buster /assets/img/amperity/search_custom_attributes_filters.png %}){: style="max-width:40%;"}
 
 ### Data types
 
@@ -110,7 +110,7 @@ Name the table "Braze Customer Attributes" and save it. Verify that the table is
 
 In the Amperity platform, navigate to the **Destinations** tab. Look for the option to add a new destination. From the available options, select **Braze**.
 
-![The New Destination section with a name of "Braze API", description of "Send audience attributes to Braze.", and plugin of "Braze".][3]{: style="max-width:60%;"}
+![The New Destination section with a name of "Braze API", description of "Send audience attributes to Braze.", and plugin of "Braze".]({% image_buster /assets/img/amperity/destination_name.png %}){: style="max-width:60%;"}
 
 #### Step 2d: Configure destination details
 
@@ -118,7 +118,7 @@ Under **Braze settings**, provide the Braze credentials and destination settings
 - `braze_id`: An automatically assigned Braze identifier that is unchangeable and associated with a particular user when they are created in Braze.
 - `external_id`: A customer-assigned identifier, typically a UUID. 
 
-![The Braze Settings section with an instance of "US-03", user identifier of "external_id", blank segment name, S3 bucket of "amperity-training-abc123", and S3 folder of "braze-attributes".][4]{: style="max-width:60%;"}
+![The Braze Settings section with an instance of "US-03", user identifier of "external_id", blank segment name, S3 bucket of "amperity-training-abc123", and S3 folder of "braze-attributes".]({% image_buster /assets/img/amperity/braze_settings.png %}){: style="max-width:60%;"}
 
 #### Step 2e: Add a data template
 
@@ -126,7 +126,7 @@ In the **Destinations** tab, open the menu for the Braze destination and select 
 
 If any required settings weren’t configured as part of the destination, configure them as part of the data template. Save the data template.
 
-![The Data Template Name section with the name "Braze Audience Attributes" and description "Send audience attributes to Braze."][5]{: style="max-width:60%;"}
+![The Data Template Name section with the name "Braze Audience Attributes" and description "Send audience attributes to Braze."]({% image_buster /assets/img/amperity/data_template_name.png %}){: style="max-width:60%;"}
 
 #### Step 2f: Save the configuration 
 
@@ -174,8 +174,8 @@ Check out Amperity’s documentation for examples of different segment types you
 
 1. Go to the **Campaign** section and click the option to create a new campaign.
 2. Give your campaign a descriptive and unique name that will help you identify it later, especially if you have multiple campaigns.
-3. Select the segment of customers that you want to target with this campaign. This should be the segment you created earlier. <br>![The dropdown field for segments to exclude from targeting.][6]{: style="max-width:50%;"}<br><br>
-4. Choose the data you want to send as part of the campaign. This can include a range of customer attributes. ![The Edit Campaign Attributes modal allows for selecting a destination and customer attributes. ][7]{: style="max-width:90%;"}<br><br>
+3. Select the segment of customers that you want to target with this campaign. This should be the segment you created earlier. <br>![The dropdown field for segments to exclude from targeting.]({% image_buster /assets/img/amperity/select_segments.png %}){: style="max-width:50%;"}<br><br>
+4. Choose the data you want to send as part of the campaign. This can include a range of customer attributes. ![The Edit Campaign Attributes modal allows for selecting a destination and customer attributes. ]({% image_buster /assets/img/amperity/edit_campaign_attributes.png %}){: style="max-width:90%;"}<br><br>
 5. Select **Braze** as the destination where the campaign data will be sent.
 6. Choose when and how often you want the campaign to run. This can be a one-time event or a recurring schedule.
 7. Save your campaign and run a test to make sure it works as expected.

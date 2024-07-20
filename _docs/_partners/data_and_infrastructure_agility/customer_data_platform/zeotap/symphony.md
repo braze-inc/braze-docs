@@ -80,8 +80,8 @@ After creating a destination, next, you have to add workflow-level inputs, as me
 #### Data to send tab
 The **Data To Send** tab allows the you to map the Zeotap Catalogue fields to the Braze fields that can be sent to Braze. The mapping can be done in one of the following ways:
 - **Static Mapping** - There are certain fields that Zeotap automatically maps to the relevant Braze fields like email, phone, first name, last name, and so on.<br>
-- **Dropdown Selection** - Map the relevant fields ingested in Zeotap to the Braze fields provided in the dropdown menu.<br>![Various user traits set in Zeotap, such as language, city, birthday, and more.][3]{: style="max-width:70%;"}<br>
-- **Custom Data Input** - Add custom data mapped to the relevant Zeotap field and send to Braze.<br>![Selecting "loyalty_points" as the user trait in Zeotap.][4]{: style="max-width:70%;"}
+- **Dropdown Selection** - Map the relevant fields ingested in Zeotap to the Braze fields provided in the dropdown menu.<br>![Various user traits set in Zeotap, such as language, city, birthday, and more.]({% image_buster /assets/img/zeotap/zeotap7.png %}){: style="max-width:70%;"}<br>
+- **Custom Data Input** - Add custom data mapped to the relevant Zeotap field and send to Braze.<br>![Selecting "loyalty_points" as the user trait in Zeotap.]({% image_buster /assets/img/zeotap/zeotap8.png %}){: style="max-width:70%;"}
 
 ## Supported attributes
 You can find details of all the Braze fields in this section.
@@ -115,7 +115,7 @@ You can find details of all the Braze fields in this section.
 
 After you have mapped the relevant attributes to be sent and published in the workflow, the events start flowing to Braze based on the criteria defined. You can search by email ID or external ID on the Braze console.
 
-![][2]
+![]({% image_buster /assets/img/zeotap/zeotap6.jpg %})
 
 Various attributes come under different sections of the user dashboard within Braze.
 - The **Profile** tab contains the user attributes.

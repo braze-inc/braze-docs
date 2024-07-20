@@ -15,11 +15,11 @@ description: "This reference article shows how to track in-app purchases and rev
 
 Braze supports purchases in multiple currencies. Purchases that you report in a currency other than USD will be shown in the dashboard in USD based on the exchange rate at the date they were reported.
 
-Before implementation, be sure to review examples of the segmentation options afforded by custom events, custom attributes, and purchase events in our [analytics overview][3].
+Before implementation, be sure to review examples of the segmentation options afforded by custom events, custom attributes, and purchase events in our [analytics overview]({{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#user-data-collection).
 
 ## Tracking purchases and revenue
 
-To use this feature, call [`logPurchase()`][6] after a successful purchase in your app. If the product Identifier is empty, the purchase will not be logged to Braze.
+To use this feature, call [`logPurchase()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-i-braze/log-purchase.html) after a successful purchase in your app. If the product Identifier is empty, the purchase will not be logged to Braze.
 
 {% tabs %}
 {% tab JAVA %}
@@ -54,11 +54,11 @@ If you pass in a value of `10 USD` and a quantity of `3`, that will log to the u
 
 ### Adding properties
 
-You can add metadata about purchases by either passing an [event property array]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events#nested-objects) or a [Braze Properties][4] object with your purchase information.
+You can add metadata about purchases by either passing an [event property array]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events#nested-objects) or a [Braze Properties](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.outgoing/-braze-properties/index.html) object with your purchase information.
 
 #### Braze properties object formatting
 
-Properties are defined as key-value pairs. Keys are `String` objects, and values can be `String`, `int`, `float`, `boolean`, or [`Date`][5] objects.
+Properties are defined as key-value pairs. Keys are `String` objects, and values can be `String`, `int`, `float`, `boolean`, or [`Date`](http://developer.android.com/reference/java/util/Date.html) objects.
 
 {% tabs %}
 {% tab JAVA %}
@@ -81,7 +81,7 @@ Braze.getInstance(context).logPurchase(..., purchaseProperties)
 {% endtab %}
 {% endtabs %}
 
-Refer to our [KDoc][6] for more information.
+Refer to our [KDoc](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-i-braze/log-purchase.html) for more information.
 
 ### Log purchases at the order level
 If you want to log purchases at the order level instead of the product level, you can use order name or order category as the `product_id`. Refer to our [purchase object specification]({{site.baseurl}}/api/objects_filters/purchase_object/#product-id-naming-conventions) to learn more. 
@@ -99,7 +99,7 @@ The following keys are reserved and cannot be used as purchase properties:
 
 ### REST API
 
-You can also use our REST API to record purchases. Refer to the [User API documentation][1] for details.
+You can also use our REST API to record purchases. Refer to the [User API documentation]({{site.baseurl}}/developer_guide/rest_api/user_data/#user-data) for details.
 
 [1]: {{site.baseurl}}/developer_guide/rest_api/user_data/#user-data
 [3]: {{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#user-data-collection

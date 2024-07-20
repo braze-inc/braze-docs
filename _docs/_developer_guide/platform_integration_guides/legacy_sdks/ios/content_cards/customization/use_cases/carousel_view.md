@@ -15,7 +15,7 @@ noindex: true
 
 ![Sample news app showing carousel of Content Cards in an article.]({% image_buster/assets/img_archive/cc_politer_carousel.png %}){: style="max-width:35%;float:right;margin-left:15px;border:none;"}
 
-This section covers how to implement a multi-card carousel feed where a user can swipe horizontally to view additional featured cards. To integrate a carousel view, you'll need to use a fully customized Content Card implementation—the "run" phase of the [crawl, walk, run approach][1].
+This section covers how to implement a multi-card carousel feed where a user can swipe horizontally to view additional featured cards. To integrate a carousel view, you'll need to use a fully customized Content Card implementation—the "run" phase of the [crawl, walk, run approach]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/customize/#customization-approaches).
 
 With this approach, you will not use Braze views and default logic but instead, display the Content Cards in a completely custom manner by using your own views populated with data from the Braze models.
 

@@ -13,7 +13,7 @@ description: "This reference article covers your available options for monitorin
 
 The **Notification Preferences** page is where you can configure who (if anyone) receives notifications about your company. You can configure who should receive notifications about campaign delivery or technical errors. You can also specify recipients for the weekly analytics report. For most notifications, Braze supports email and webhook channels.
 
-![Notification Preferences page in the Braze dashboard][61]
+![Notification Preferences page in the Braze dashboard]({% image_buster /assets/img_archive/notification_preferences.png %})
 
 To access this page, go to **Settings** > **Admin Settings** > **Notification Preferences**.
 
@@ -50,23 +50,23 @@ If you are using the [older navigation]({{site.baseurl}}/navigation), this page 
 
 You may select up to five events to be included in your weekly report:
 
-![Selecting events to be included in the Analytics Report][22]
+![Selecting events to be included in the Analytics Report]({% image_buster /assets/img_archive/company_analytics_report_new.png %})
 
 ## Slack incoming webhook integration
 
-Slack has an [incoming webhook app][67] that allows messages to be posted from external sources into Slack. To get started, open the incoming webhook app.
+Slack has an [incoming webhook app](https://my.slack.com/services/new/incoming-webhook/) that allows messages to be posted from external sources into Slack. To get started, open the incoming webhook app.
 
 1. Select the Slack channel that you'd like the notifications to go to and click **Add Incoming Webhooks Integration**.<br><br>
-    ![Add incoming webhooks integration in Slack][63]<br><br>
+    ![Add incoming webhooks integration in Slack]({% image_buster /assets/img_archive/slack_f.png %})<br><br>
   Slack will generate a URL that you'll need to enter into Braze for the notifications that you wish to receive.<br><br>
 2. Copy the **Webhook URL**.<br><br>
-    ![Copy webhook URL][64]<br><br>
+    ![Copy webhook URL]({% image_buster /assets/img_archive/copy_url.png %})<br><br>
 3. Navigate to the **Notification Preferences** tab in **Company Settings**.<br><br>
 4. Select the notification that you wish to enable for Slack. Or, if you have multiple notifications that you want to send to this Slack channel, use **Bulk Add** to add the webhook to multiple notifications.<br><br>
-    ![Select Slack notifications to enable][65]{: style="max-width:60%;"}<br><br>
+    ![Select Slack notifications to enable]({% image_buster /assets/img_archive/click_edit_f.png %}){: style="max-width:60%;"}<br><br>
 5. Enter the URL that Slack generated for you.
 
-That's it! You should start receiving notifications about your company to this Slack channel. You can also check out Slack's help article on this topic: [Sending messages using Incoming Webhooks][62].
+That's it! You should start receiving notifications about your company to this Slack channel. You can also check out Slack's help article on this topic: [Sending messages using Incoming Webhooks](https://api.slack.com/incoming-webhooks).
 
 
 [22]: {% image_buster /assets/img_archive/company_analytics_report_new.png %}

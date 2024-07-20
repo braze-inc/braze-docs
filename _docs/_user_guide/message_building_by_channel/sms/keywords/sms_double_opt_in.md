@@ -24,19 +24,19 @@ Users can provide their explicit consent through outbound or inbound SMS message
 
 When a user provides their phone number, they are sent an SMS message that asks for their consent.
 
-![Screenshot of outbound SMS message with the brand texting, "Welcome to BRAND text updates! 1 msg a week for the latest offers. Reply Y to opt-in.", the users replying with "Y", and the brand responding with "Thanks! You're now opted-in to BRAND alerts. Here is a promo code SMS10 for 10% off your first purchase!"][2]{:style="max-width:40%;"}
+![Screenshot of outbound SMS message with the brand texting, "Welcome to BRAND text updates! 1 msg a week for the latest offers. Reply Y to opt-in.", the users replying with "Y", and the brand responding with "Thanks! You're now opted-in to BRAND alerts. Here is a promo code SMS10 for 10% off your first purchase!"]({% image_buster /assets/img/double_opt_in_outbound.png %}){:style="max-width:40%;"}
 
 ### Inbound SMS double opt-in
 
 When a user sends an SMS message that contains an opt-in keyword, they are sent an SMS message that asks for their consent.
 
-![Screenshot of inbound SMS message where a user sends "JOIN" and receives the response "Reply Y to confirm you want to JOIN our SMS program. 3msg/week, text STOP at any time to STOP, then texts back "Y".][1]{:style="max-width:40%;"}
+![Screenshot of inbound SMS message where a user sends "JOIN" and receives the response "Reply Y to confirm you want to JOIN our SMS program. 3msg/week, text STOP at any time to STOP, then texts back "Y".]({% image_buster /assets/img/double_opt_in_inbound.png %}){:style="max-width:40%;"}
 
 ## Enabling SMS double opt-in
 
 To turn on SMS double opt-in, navigate to the **SMS Global Keywords** table in the applicable subscription group, and click **Edit** in the **Opt-In Keyword Category**. Next, select your opt-in method (**Opt-In** or **Double Opt-In**). Selecting **Double Opt-In** will expand the page to show additional [configurable fields](#configurable-fields).
 
-![The Opt-In Method section has two opt-in methods to choose from: Opt-In and Double Opt-In.][3]{:style="max-width:50%;"}
+![The Opt-In Method section has two opt-in methods to choose from: Opt-In and Double Opt-In.]({% image_buster /assets/img/double_opt_in_method.png %}){:style="max-width:50%;"}
 
 ### Configurable fields {#configurable-fields}
 
@@ -50,7 +50,7 @@ To turn on SMS double opt-in, navigate to the **SMS Global Keywords** table in t
 
 When a user receives an opt-in prompt, they have 30 days to confirm their opt-in intent. If a user wants to subscribe after the 30-day window, they need to text an opt-in keyword to start the double opt-in workflow again.
 
-![The configurable fields have two sections, Opt-In Prompt and Double Opt-In Confirmation, each with the fields Keywords and Reply Message.][4]
+![The configurable fields have two sections, Opt-In Prompt and Double Opt-In Confirmation, each with the fields Keywords and Reply Message.]({% image_buster /assets/img/double_opt_in_fields.png %})
 
 ## Subscription group status
 

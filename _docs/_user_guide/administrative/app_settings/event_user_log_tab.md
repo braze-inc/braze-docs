@@ -38,7 +38,7 @@ Each log is broken up into multiple sections, which can include:
 
 Click the **Raw Data** button to show the raw JSON data for that specific log.
 
-![Raw logs for events][10]
+![Raw logs for events]({% image_buster /assets/img_archive/rawlogs.png %})
 
 Event User Logs will remain in the dashboard for 30 days after they are logged.
 

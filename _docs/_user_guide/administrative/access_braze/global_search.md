@@ -10,7 +10,7 @@ description: "Learn about global search in Braze."
 
 You can use the search bar to find your work and other information within your Braze dashboard. The search bar is at the top of your Braze dashboard. Click the search bar, or press <kbd>Ctrl</kbd>&nbsp;+&nbsp;<kbd>K</kbd> on Windows or <kbd>⌘</kbd>&nbsp;+&nbsp;<kbd>K</kbd> on a Mac to jump directly to the search bar.
 
-![][3]
+![]({% image_buster /assets/img/global_search/global_search2.png %})
 
 ## What can you search for?
 
@@ -65,7 +65,7 @@ Each search result is paired with tags that indicate the result's content type (
 
 You can revisit recently accessed content from the search menu. The search interface displays your recently opened results below the search bar, including items interacted with throughout the entire Braze platform. This lets you return to previously viewed pages, campaigns, Canvases, segments, or email templates so you can pick up right where you left off with fewer clicks.
 
-![][1]
+![]({% image_buster /assets/img/global_search/global_search.png %})
 
 ### Find pages that have been renamed
 
@@ -77,7 +77,7 @@ The search understands synonyms for pages that have been renamed in our [updated
 
 Search for channels to see quick create options among your top 10 results. For example, searching for "email" shows "Create Email Campaign" or "Create Transactional Email Campaign".
 
-![][2]
+![]({% image_buster /assets/img/global_search/search_create_campaign.png %})
 
 --->
 
@@ -85,7 +85,7 @@ Search for channels to see quick create options among your top 10 results. For e
 
 You can include archived content in your search results by selecting **Show Archived Content**. By default, the toggle is off, and archived content isn't included.
 
-![The "Show Archived Content" toggle.][4]
+![The "Show Archived Content" toggle.]({% image_buster /assets/img/global_search/archived_content.png %})
 
 ### Search for emojis
 

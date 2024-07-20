@@ -9,7 +9,7 @@ search_tag: Redpoint
 
 # Redpoint
 
-> [Redpoint][2] is a technology platform that provides marketers with a fully integrated campaign orchestration platform. Leverage Redpoint's segmentation, scheduling, and automation capabilities to control how and when CDP data is imported to Braze.
+> [Redpoint](https://www.redpointglobal.com) is a technology platform that provides marketers with a fully integrated campaign orchestration platform. Leverage Redpoint's segmentation, scheduling, and automation capabilities to control how and when CDP data is imported to Braze.
 
 The Braze and Redpoint integration allows you to create Braze segments based on your Redpoint CDP data. Redpoint provides two modes for passing data to Braze: 
 
@@ -27,8 +27,8 @@ You'll configure an export template and outbound channel for each mode.
 | Requirement | Description |
 | ----------- | ----------- |
 | Braze REST API key | A Braze REST API key with `users.track` permissions. <br><br>This can be created in the Braze dashboard from **Settings** > **API Keys**. |
-| Braze REST endpoint | [Your REST endpoint URL][1]. Your endpoint will depend on the Braze URL for your instance. |
-| Redpoint Data Management artifacts | The Braze integration is supported by a set of Redpoint Data Management artifacts. Contact [Redpoint Support][3] to request the artifacts for your version of Redpoint Data Management. |
+| Braze REST endpoint | [Your REST endpoint URL]({{site.baseurl}}/developer_guide/rest_api/basics/#endpoints). Your endpoint will depend on the Braze URL for your instance. |
+| Redpoint Data Management artifacts | The Braze integration is supported by a set of Redpoint Data Management artifacts. Contact [Redpoint Support](https://support.redpointglobal.com/hc/en-us/restricted?return_to=https%3A%2F%2Fsupport.redpointglobal.com%2Fhc%2Fen-us) to request the artifacts for your version of Redpoint Data Management. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% alert note %}
@@ -48,7 +48,7 @@ The following Redpoint custom attributes can be added to a Braze user profile.
 | `rpi_channel_exec_ids`| Array of channel execution IDs where the user is targeted in a Redpoint Outbound Delivery Braze channel execution       |
 {: .reset-td-br-1 .reset-td-br-2}
 
-![][4]{: style="max-width:75%;"}
+![]({% image_buster /assets/img/redpoint/rpi_to_braze_custom_attributes.png %}){: style="max-width:75%;"}
 
 ## Integration
 
@@ -58,7 +58,7 @@ The following Redpoint custom attributes can be added to a Braze user profile.
 
 In Redpoint Interaction (RPI), create a new export template, and name it **Braze Onboarding and Upsert**. This template defines the core mappings between the Redpoint CDP and the Braze user profile, along with any additional custom attributes you want to add to your user profiles in Braze.
 
-Drag Redpoint CDP attributes into the **Attribute** column. Set each **Header Row Value** to the corresponding Braze [user attribute][17]. 
+Drag Redpoint CDP attributes into the **Attribute** column. Set each **Header Row Value** to the corresponding Braze [user attribute]({{site.baseurl}}/api/objects_filters/user_attributes_object#braze-user-profile-fields). 
 
 The following table lists Redpoint CDP attributes and their corresponding Braze attributes:
 
@@ -77,7 +77,7 @@ The following table lists Redpoint CDP attributes and their corresponding Braze 
 
 Add the **Output Name** attribute from the **Offer History** table. Lastly, add any additional custom Redpoint attributes you want to merge into Braze. For example, the following is an onboarding and upsert template with education, income, and marital status as additional attributes.
 
-![][7]{: style="max-width:75%;"}
+![]({% image_buster /assets/img/redpoint/rpi_to_braze_upsert_export_format.png %}){: style="max-width:75%;"}
 
 #### Step 1b: Create the Braze Append template
 
@@ -85,19 +85,19 @@ Create a second export template for append-only operations named **Braze Append*
 
 You will set only two attributes for this template. For **PID**, set the **Header Row Value** as `external_id`. For **Output Name**, set the **Header Row** as `output_name`.
 
-![A sample export template with the `external_id` and output name attributes.][8]{: style="max-width:75%;"}
+![A sample export template with the `external_id` and output name attributes.]({% image_buster /assets/img/redpoint/rpi_to_braze_append_export_format.png %}){: style="max-width:75%;"}
 
 #### Step 1c: Set date format
 
 For both export templates, navigate to the **Options** tab and set the **Date Format** to the value of **Custom Format**. Set the format as **yyyy-MM-dd**.
 
-![The options tab showing date format set to yyyy-MM-dd.][16]{: style="max-width:75%;"}
+![The options tab showing date format set to yyyy-MM-dd.]({% image_buster /assets/img/redpoint/rpi_to_braze_export_format_config.png %}){: style="max-width:75%;"}
 
 ### Step 2: Create outbound channels
 
 In RPI, create two new channels. Set both channels to **Outbound Delivery**. Name one channel **Braze Onboarding and Upsert**, and the other **Braze Append**.
 
-![][9]{: style="max-width:75%;"}
+![]({% image_buster /assets/img/redpoint/rpi_to_braze_channel_config_general.png %}){: style="max-width:75%;"}
 
 {% alert note %}
 After the initial onboarding of your CDP records to Braze, check whether subsequent Redpoint Interaction workflows that use the Braze Onboarding and Upsert channel are designed to select only records that have changed since the initial onboarding sync.
@@ -111,11 +111,11 @@ Navigate to the **General** tab in the channels **Configuration** screen. Set th
 
 Next, define an **Export path format** on both channels that point to a shared network, file transfer protocol, or external content provider location that is accessible to both Redpoint Interaction and Redpoint Data Management. 
 
-![][10]{: style="max-width:75%;"}
+![]({% image_buster /assets/img/redpoint/rpi_to_braze_channel_config_specific.png %}){: style="max-width:75%;"}
 
 The export directory format on both channels will be identical and should end with `\\[Channel]\\[Offer]\\[Workflow ID]`.
 
-![][11]{: style="max-width:50%;"}
+![]({% image_buster /assets/img/redpoint/rpi_to_braze_export_directory_setup.png %}){: style="max-width:50%;"}
 
 #### Step 3b: Configure post execution
 
@@ -123,7 +123,7 @@ Navigate to the **Post Execution** tab in the Channels **Configuration** screen.
 
 Check the **Post-execution** checkbox to call a service URL after channel execution. Enter your Redpoint Data Management web service URL. This entry will be identical on both your Onboarding and Append channel.
 
-![][14]{: style="max-width:75%;"}
+![]({% image_buster /assets/img/redpoint/rpi_to_braze_channel_config_post_execution.png %}){: style="max-width:75%;"}
 
 ### Step 4: Set up Braze components in Redpoint Data Management 
 
@@ -136,7 +136,7 @@ After importing the Braze related artifacts into Redpoint Data Management, open 
 * **BRAZE_API_URL**: The Braze REST endpoint
 * **BASE_OUTPUT_DIRECTORY**: The shared output directory between Redpoint Interaction and Redpoint Data Management
 
-![][5]{: style="max-width:40%;"}
+![]({% image_buster /assets/img/redpoint/rpi_to_braze_auto_variables.png %}){: style="max-width:40%;"}
 
 #### Step 4b: Update the RPI to Braze append project 
 
@@ -144,7 +144,7 @@ The Redpoint Data Management project named **PROJ_RPI_to_Braze_Append** contains
 
 Update the file input schema and document injector tool named **RPI to Braze Document Injector** with any additional custom CDP attributes defined in your export file template. This example shows the additional mapping of education, income, and marital status:
 
-![][6]{: style="max-width:40%;"}
+![]({% image_buster /assets/img/redpoint/rpi_to_braze_doc_injector_mappings.png %}){: style="max-width:40%;"}
 
 ## Using the integration
 
@@ -152,15 +152,15 @@ The Outbound Delivery Braze channel can now be leveraged within Redpoint Interac
 
 To enable the sync of an RPI Audience output to Braze, create an outbound delivery offer and associate it to either the **Braze Onboarding and Upsert** or the **Braze Append** channel. This depends on whether the intent is to create or merge new records in Braze, or to only append campaign data if the record already exists in Braze.
 
-![][13]{: style="max-width:80%;"}
+![]({% image_buster /assets/img/redpoint/rpi_to_braze_rpi_canvas.png %}){: style="max-width:80%;"}
 
 Once the workflow has executed successfully in RPI, the orchestration and CDP data sourced from RPI can now be used to create segments in Braze.
 
-![][12]{: style="max-width:80%;"}
+![]({% image_buster /assets/img/redpoint/rpi_to_braze_build_braze_segment.png %}){: style="max-width:80%;"}
 
 You can view the Redpoint associated properties on the user profile.
 
-![][15]{: style="max-width:80%;"}
+![]({% image_buster /assets/img/redpoint/rpi_to_braze_record_example.png %}){: style="max-width:80%;"}
 
 [1]: {{site.baseurl}}/developer_guide/rest_api/basics/#endpoints
 [2]: https://www.redpointglobal.com

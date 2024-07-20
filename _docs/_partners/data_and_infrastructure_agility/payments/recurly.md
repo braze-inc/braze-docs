@@ -25,7 +25,7 @@ Additional details around using Recurly with Braze can be found in the [Recurly 
 | ----------- | ----------- |
 | Recurly account | An Elite [Recurly](https://recurly.com/) subscription plan with the Braze feature flag enabled is required to take advantage of this partnership. The activation of credit invoices in your Recurly platform is also required.|
 | Braze REST API key | A Braze REST API key with `users.track` permissions. <br><br> This can be created in the Braze dashboard from **Settings** > **API Keys**. Since Recurly only uses the `users.track` endpoint, we recommend provisioning a Recurly specific key with only this permission. |
-| Braze REST endpoint | [Your REST endpoint URL][1]. Your endpoint will depend on the Braze URL for your instance. |
+| Braze REST endpoint | [Your REST endpoint URL]({{site.baseurl}}/developer_guide/rest_api/basics/#endpoints). Your endpoint will depend on the Braze URL for your instance. |
 
 ## Integration
 
@@ -57,7 +57,7 @@ Recurly uses an account's `account_code` as the `external_id` in Braze. Because 
 
 ### Custom events
 
-For effective customer engagement, you must [configure custom events][2] in Braze to receive events triggered by Recurly. Ensure to include each event from Recurly for thorough data integration. These events can also be tracked within [Braze analytics][3]. Once configured, these custom events can be used to segment users or personalize messaging. 
+For effective customer engagement, you must [configure custom events]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) in Braze to receive events triggered by Recurly. Ensure to include each event from Recurly for thorough data integration. These events can also be tracked within [Braze analytics]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/#analytics). Once configured, these custom events can be used to segment users or personalize messaging. 
 
 | Braze Custom Event| Recurly Event |
 | ----------- | ----------- |
@@ -84,7 +84,7 @@ Recurly batches certain subscription lifecycle events as single API calls to Bra
 - When multiple subscriptions are renewed at the same time for an account, each of those renewals is batched into a single request.
 - Same model subscription lifecycle events are sent as a single request. An example being a newly created invoice with a payment would send a single API request with both the `Recurly Invoice Created` and `Recurly Successful Payment` custom events.
 
-Batches are sent to Braze in groups of up to 75 events at a time. For example, if 100 subscriptions were created at once, Recurly would make two API requests to Braze. See [batching User Track requests][4] for details.
+Batches are sent to Braze in groups of up to 75 events at a time. For example, if 100 subscriptions were created at once, Recurly would make two API requests to Braze. See [batching User Track requests]({{site.baseurl}}/api/api_limits/#batch-user-track) for details.
 
 [1]: {{site.baseurl}}/developer_guide/rest_api/basics/#endpoints
 [2]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/

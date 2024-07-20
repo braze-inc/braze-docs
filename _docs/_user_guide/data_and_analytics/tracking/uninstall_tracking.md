@@ -31,11 +31,11 @@ If you are using the older navigation, **App Settings** is **Settings** and is l
 
 When uninstall tracking is enabled for an app, background push messages will be sent nightly to users who have not recorded a session or received a push in 24 hours. 
 
-If you are interested in filtering Braze background push on iOS, you can use a [utility method][iOS docs]. On Android, you can use [`BrazeNotificationUtils.isUninstallTrackingPush()`][8] to detect uninstall push. When Braze detects an uninstall, whether from Uninstall Tracking or normal push campaign delivery, we will record the best estimated time of the uninstall on the user. This time is stored in the user profile as a standard attribute.
+If you are interested in filtering Braze background push on iOS, you can use a [utility method]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/uninstall_tracking/). On Android, you can use [`BrazeNotificationUtils.isUninstallTrackingPush()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.push/-braze-notification-utils/is-uninstall-tracking-push.html) to detect uninstall push. When Braze detects an uninstall, whether from Uninstall Tracking or normal push campaign delivery, we will record the best estimated time of the uninstall on the user. This time is stored in the user profile as a standard attribute.
 
 This time can be used to define a segment of users for win-back campaigns. Using the "Uninstalled" filter on the **Segments** page, you can select users who uninstalled your app within a time range. Since determining the exact time of an uninstall is difficult, we recommend that uninstall filters have wider time ranges to make sure everyone who uninstalls falls into the segment at some point.
 
-![Uninstall Segment][5]
+![Uninstall Segment]({% image_buster /assets/img_archive/Uninstall_Segment.png %} "Uninstall Segment")
 
 ## App-level analysis
 
@@ -47,9 +47,9 @@ The graph can then be broken down by segment and app using the dropdowns.
 Apps without uninstall tracking enabled will report uninstalls from only a subset of their users (those who were targeted with push notifications), so daily uninstall totals may be higher than what is shown.
 {% endalert %}
 
-![Uninstall Graph Selection][2]
+![Uninstall Graph Selection]({% image_buster /assets/img_archive/Uninstall_Tracking_App2.png %} "Uninstall Graph Selection")
 
-![Uninstall Graph][3]
+![Uninstall Graph]({% image_buster /assets/img_archive/Uninstall_232.png %} "Uninstall Graph")
 
 ## Uninstall tracking for campaigns
 
@@ -63,11 +63,11 @@ Braze tracks uninstalls by observing when push messages sent to users' devices r
 
 Uninstall tracking is subject to restrictions placed on this information by FCM and APNs. Braze only increments the uninstall count when FCM or APNs tells us that a user has uninstalled, but these third-party systems reserve the right to notify us of uninstalls at any point in time. As a result, Uninstall Tracking should be used to detect directional trends as opposed to precise statistics.
 
-For more on using uninstall tracking, see [this blog post][7].
+For more on using uninstall tracking, see [this blog post](https://www.braze.com/blog/uninstall-tracking-an-industry-look-at-its-strengths-and-limitations/).
 
 Uninstall statistics for campaigns are located on the Campaign Details page. For multichannel and multivariate campaigns, uninstalls can be broken down by channel and variant, respectively.
 
-![Uninstall Campaign Level][6]
+![Uninstall Campaign Level]({% image_buster /assets/img_archive/campaign_level_uninstall_tracking.png %})
 
 ## Troubleshooting
 

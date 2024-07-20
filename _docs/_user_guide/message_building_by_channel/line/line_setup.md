@@ -37,7 +37,7 @@ You'll need the following to integrate LINE with Braze:
 1. In LINE, go the **Messaging API** tab and edit your **Webhook settings**:
    - Set the **Webhook URL** to `https://anna.braze.com/line/events`.
        - Braze will automatically change this to a different URL when integrating, based on your dashboard cluster.
-   - Turn on **Use webhook** and **Webhook redelivery**. <br><br> ![Webhook settings page to verify or edit the webhook URL, toggling on or off "Use webhook", "Webhook redelivery", and "Error statistics aggregation".][1]{: style="max-width:70%;"}
+   - Turn on **Use webhook** and **Webhook redelivery**. <br><br> ![Webhook settings page to verify or edit the webhook URL, toggling on or off "Use webhook", "Webhook redelivery", and "Error statistics aggregation".]({% image_buster /assets/img/line/webhook_settings.png %}){: style="max-width:70%;"}
 2. Take note of the following information in the **Providers** tab:
 
 | Information type | Location |
@@ -54,7 +54,7 @@ You'll need the following to integrate LINE with Braze:
    - Turn off **Auto-response messages**. All triggered messaging should be through Braze. This won't prevent you from sending directly from the LINE console.
    - Turn on **Webhooks**.
 
-![Response settings page with toggles for how your account will handle chats.][2]{: style="max-width:80%;"}
+![Response settings page with toggles for how your account will handle chats.]({% image_buster /assets/img/line/response_settings.png %}){: style="max-width:80%;"}
 
 ### Step 2: Set up your LINE page in Braze
 
@@ -64,12 +64,12 @@ You'll need the following to integrate LINE with Braze:
    - Channel secret
    - Channel access token
 
-![LINE messaging integration page with LINE integration section.][3]{: style="max-width:80%;"}
+![LINE messaging integration page with LINE integration section.]({% image_buster /assets/img/line/integration.png %}){: style="max-width:80%;"}
 
 {: start="2"}
 2. After connecting, Braze will automatically generate a Braze subscription group for each LINE integration that's successfully added to your workspace. <br><br> Any changes to your followers list (such as new followers or unfollowers) will be automatically pushed into Braze.
 
-![LINE subscription groups section displaying one subscription group for the "LINE" channel.][4]{: style="max-width:80%;"}
+![LINE subscription groups section displaying one subscription group for the "LINE" channel.]({% image_buster /assets/img/line/line_subscription_groups.png %}){: style="max-width:80%;"}
 
 ## Types of LINE accounts
 
@@ -105,9 +105,9 @@ You can test your LINE channel before setting up user reconciliation in two ways
 
 1. After connecting your account, follow your LINE channel.
 
-2. In Braze, go to **Segments** and create a segment for your LINE subscription group. <br><br>![Filter group with a subscription group.][5]{: style="max-width:80%;"}<br><br>
+2. In Braze, go to **Segments** and create a segment for your LINE subscription group. <br><br>![Filter group with a subscription group.]({% image_buster /assets/img/line/filter_group.png %}){: style="max-width:80%;"}<br><br>
 
-3. Select **User Data** > **CSV Export User Data**. <br><br>![Segment Details with a segment named "line subscribed" and the "User Data" menu with a list of export options.][6]{: style="max-width:80%;"}<br><br>
+3. Select **User Data** > **CSV Export User Data**. <br><br>![Segment Details with a segment named "line subscribed" and the "User Data" menu with a list of export options.]({% image_buster /assets/img/line/csv_export_user_data.png %}){: style="max-width:80%;"}<br><br>
 
 4. In the CSV download, reference the `created_at` field and when you followed your LINE channel to find your users.
 
@@ -115,7 +115,7 @@ You can test your LINE channel before setting up user reconciliation in two ways
 
 ### Create a "Who am I" Canvas or campaign
 
-1. Set up a Canvas that returns a user's Braze user ID on a specific trigger word. <br><br>Example trigger <br><br>![Trigger to send the campaign to users who sent an inbound LINE to a specific subscription group.][7]{: style="max-width:80%;"}<br><br>Example message<br><br>![LINE message stating the Braze user ID.][8]{: style="max-width:40%;"}<br><br>
+1. Set up a Canvas that returns a user's Braze user ID on a specific trigger word. <br><br>Example trigger <br><br>![Trigger to send the campaign to users who sent an inbound LINE to a specific subscription group.]({% image_buster /assets/img/line/trigger.png %}){: style="max-width:80%;"}<br><br>Example message<br><br>![LINE message stating the Braze user ID.]({% image_buster /assets/img/line/message.png %}){: style="max-width:40%;"}<br><br>
 
 2. In Braze, you can use the Braze ID to search for specific users and modify them as needed.
 

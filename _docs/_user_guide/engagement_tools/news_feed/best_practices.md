@@ -14,9 +14,9 @@ channel: news feed
 News Feed is being deprecated. Braze recommends that customers who use our News Feed tool move over to our Content Cards messaging channel—it's more flexible, customizable, and reliable. Check out the [migration guide]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) for more.
 {% endalert %}
 
-> The Braze News Feed is a targeted, dynamic stream of rich content. It offers a powerful way to reach users with continuously updated content that does not require additional development work. This content can be targeted at various segments and scheduled in the same way as other Braze messages. Each card consists of a title, a summary, an image, and optionally a URL. The feed also includes the ability to deep-link within the app, link directly to the App Store, Google Play, etc. or direct users to a web view. This unique Braze UI element must be enabled during [integration][1]. Make sure to discuss it with your developers.
+> The Braze News Feed is a targeted, dynamic stream of rich content. It offers a powerful way to reach users with continuously updated content that does not require additional development work. This content can be targeted at various segments and scheduled in the same way as other Braze messages. Each card consists of a title, a summary, an image, and optionally a URL. The feed also includes the ability to deep-link within the app, link directly to the App Store, Google Play, etc. or direct users to a web view. This unique Braze UI element must be enabled during [integration]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/news_feed/). Make sure to discuss it with your developers.
 
-To learn about the different types of News Feed cards, how to create them, use cases, as well as card and image specifications, read our page on [creating News Feed items][4].
+To learn about the different types of News Feed cards, how to create them, use cases, as well as card and image specifications, read our page on [creating News Feed items]({{site.baseurl}}/user_guide/engagement_tools/news_feed/).
 
 > Braze improves load times by using a global CDN to host all News feed images.
 
@@ -52,9 +52,9 @@ The content you choose to show through the News Feed can range widely and work i
 
 1-800-Flowers.com uses the News Feed to deliver relevant information to its users. The SDK integration remains entirely transparent: there is no mention of Braze in the app itself and the News Feed module has a design aesthetic that is consistent with the rest of the app.
 
-![shapefeed][2]{: style="max-width:50%;"}
+![shapefeed]({% image_buster /assets/img_archive/18F_newsfeed.png %}){: style="max-width:50%;"}
 
-You can view more examples of News Feeds in our [Case Studies][3].
+You can view more examples of News Feeds in our [Case Studies](https://www.braze.com/customers).
 
 [1]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/news_feed/
 [2]: {% image_buster /assets/img_archive/18F_newsfeed.png %}

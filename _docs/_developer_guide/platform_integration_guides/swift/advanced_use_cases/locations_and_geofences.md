@@ -21,14 +21,14 @@ As of iOS 14, geofences do not work reliably for users who choose to give their 
 
 ## Step 1: Enable background push
 
-To fully utilize our geofence syncing strategy, you must have [silent push notifications][6] enabled in addition to completing the standard push integration.
+To fully utilize our geofence syncing strategy, you must have [silent push notifications]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/silent_push_notifications/) enabled in addition to completing the standard push integration.
 
 ## Step 2: Enable Braze location services
-Braze location services [must be enabled][1] through the SDK. They are not enabled by default.
+Braze location services [must be enabled](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/d1-brazelocation/) through the SDK. They are not enabled by default.
 
 ## Step 3: Enable geofences
 
-Enable geofences by setting `location.geofencesEnabled` to `true` on the `configuration` object that initializes the[`Braze`][1] instance. Other `location` configuration options can be found [here][2].
+Enable geofences by setting `location.geofencesEnabled` to `true` on the `configuration` object that initializes the[`Braze`](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/d1-brazelocation/) instance. Other `location` configuration options can be found [here](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/configuration-swift.class/location-swift.class).
 {% tabs %}
 {% tab swift %}
 
@@ -88,7 +88,7 @@ To prevent battery drain and rate limiting, be sure to configure `distanceFilter
 
 ## Step 4: Check for Braze background push
 
-Braze syncs geofences to devices using background push notifications. Follow the [ignoring silent push][7] article to ensure that your application does not take any unwanted actions upon receiving Braze geofence sync notifications.
+Braze syncs geofences to devices using background push notifications. Follow the [ignoring silent push]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/customization/ignoring_internal_push/) article to ensure that your application does not take any unwanted actions upon receiving Braze geofence sync notifications.
 
 ## Step 5: Add location usage description strings to your Info.plist
 
@@ -181,7 +181,7 @@ If you are using the [older navigation]({{site.baseurl}}/navigation), you can fi
 
 ## Disabling automatic geofence requests
 
-You can disable automatic geofence requests in your `configuration` object passed to [`init(configuration)`][4]. Set `automaticGeofenceRequests` to `false`. For example:
+You can disable automatic geofence requests in your `configuration` object passed to [`init(configuration)`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/init(configuration:)). Set `automaticGeofenceRequests` to `false`. For example:
 
 {% tabs %}
 {% tab swift %}

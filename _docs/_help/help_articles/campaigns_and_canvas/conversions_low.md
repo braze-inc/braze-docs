@@ -20,15 +20,15 @@ To quickly troubleshoot why that is, we recommend checking your event tracking a
 
 ## Event tracking
 
-When a campaign triggers a session start or custom event, you want to ensure that this event, or session, is happening frequently enough to trigger the message. Check this data on the [Overview][1] (for session data) or [Custom Events][2] pages:
+When a campaign triggers a session start or custom event, you want to ensure that this event, or session, is happening frequently enough to trigger the message. Check this data on the [Overview]({{site.baseurl}}/user_guide/data_and_analytics/analytics/understanding_your_app_usage_data/) (for session data) or [Custom Events]({{site.baseurl}}/user_guide/data_and_analytics/configuring_reporting/#configuring-reporting) pages:
 
-![The Custom Events page with the statistics for Custom Event Counts.][43]
+![The Custom Events page with the statistics for Custom Event Counts.]({% image_buster /assets/img_archive/trouble5.png %})
 
 ## Conversion deadlines
 
-For each conversion event that you select per campaign, you set the [deadline][44]. This means you are setting a time limit within which a conversion must happen in order for it to count toward each respective campaign.
+For each conversion event that you select per campaign, you set the [deadline]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/conversion_events/#step-2-add-conversion-events). This means you are setting a time limit within which a conversion must happen in order for it to count toward each respective campaign.
 
-Check that you've reviewed information on [calculating conversions][45] in order to understanding your campaign metrics. For user conversions in Canvas, refer to [Canvas FAQ]({{site.baseurl}}/user_guide/engagement_tools/canvas/faqs/#how-are-user-conversions-tracked-in-a-canvas). 
+Check that you've reviewed information on [calculating conversions]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/conversion_events/#conversion-tracking-rule) in order to understanding your campaign metrics. For user conversions in Canvas, refer to [Canvas FAQ]({{site.baseurl}}/user_guide/engagement_tools/canvas/faqs/#how-are-user-conversions-tracked-in-a-canvas). 
 
 Still need help? Open a [support ticket]({{site.baseurl}}/braze_support/).
 

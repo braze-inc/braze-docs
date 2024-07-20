@@ -22,14 +22,14 @@ Confirm that your app is collecting location data:
 
 To see whether user location data is being sent to Braze, use the **Location Available** filter. This filter allows you to see the percentage of users with a "most recent location".
 
-![][25]
+![]({% image_buster /assets/img_archive/trouble7.png %})
 
 ## Data transfer
 
 Confirm that your developers are passing location data to Braze. Normally, the passing of location data is handled automatically by the SDK after the user gives permissions, but your developers may have disabled location tracking in Braze. More information on location tracking can be found for:
-- [Android][26]
-- [iOS][27]
-- [Web][28]
+- [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/location_tracking/)
+- [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/location_tracking/)
+- [Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/location_tracking/)
 
 Still need help? Open a [support ticket]({{site.baseurl}}/braze_support/).
 

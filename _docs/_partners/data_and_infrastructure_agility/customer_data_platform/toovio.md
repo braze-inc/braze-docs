@@ -25,7 +25,7 @@ The Braze and Toovio partnership provides near real-time message triggering, the
 
 ## Integration
 
-The following integration allows Toovio to generate triggers targeting specific customers and communicate near real-time. Triggers determined by Toovio will transmit to Braze via the Braze [`/users/track` endpoint][3].
+The following integration allows Toovio to generate triggers targeting specific customers and communicate near real-time. Triggers determined by Toovio will transmit to Braze via the Braze [`/users/track` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track/).
 
 ### Step 1: Define data partner
 
@@ -33,7 +33,7 @@ A drop location for the Currents feed must be shared with Toovio; this allows To
 
 ### Step 2: Set up a triggered campaign
 
-Create a Braze [API triggered campaign][4] based on the customer events that Toovio will target. Additionally, target user attributes and values that will trigger the campaign should be defined.
+Create a Braze [API triggered campaign]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_campaigns/) based on the customer events that Toovio will target. Additionally, target user attributes and values that will trigger the campaign should be defined.
 
 ### Step 3: Set up your Toovio account
 

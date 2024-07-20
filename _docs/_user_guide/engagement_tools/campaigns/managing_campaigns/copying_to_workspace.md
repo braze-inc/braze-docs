@@ -18,7 +18,7 @@ Copying campaigns across workspaces is generally available for the following sup
 
 ## How to copy a campaign to a different workspace
 
-![][1]{: style="float:right;max-width:70%;margin-left:15px;"}
+![]({% image_buster /assets/img_archive/clone_campaign.png %}){: style="float:right;max-width:70%;margin-left:15px;"}
 
 Select the <i class="fas fa-cog"></i> gear icon next to the selected campaign, and click **Copy to Workspace**. After copying, we recommend reviewing and testing your campaign to ensure that all fields are working properly.
 

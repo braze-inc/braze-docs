@@ -22,25 +22,25 @@ Navigate to the **Segments** page, under **Audience**, to view all of your curre
 If you are using the [older navigation]({{site.baseurl}}/navigation), **Segments** is located under **Engagement**.
 {% endalert %}
 
-![][1]{: style="max-width:70%;"}
+![]({% image_buster /assets/img_archive/createsegment2.png %}){: style="max-width:70%;"}
 
 ## Step 2: Customize your location
 
 Once you have created your segment, add a **Most Recent Location** filter to target users by the last place that they used your app. You have the option of either highlighting users in a standard circular region or a customizable polygonal region.
 
-![][2]
+![]({% image_buster /assets/img_archive/filter_recent_location.png %})
 
 ### Circular regions
 
 For circular regions, you can move the origin and adjust the location radius for your segmentation.
 
-![A circular outline of cities between New Jersey and New York.][3]{: style="max-width:70%;"}
+![A circular outline of cities between New Jersey and New York.]({% image_buster /assets/img_archive/location_circle.png %}){: style="max-width:70%;"}
 
 ### Polygonal regions
 
 For polygonal regions, you can more specifically designate which areas you wish to be included in your segment.
 
-![An outline of New York state as the selected polygonal region.][4]{: style="max-width:70%;"}
+![An outline of New York state as the selected polygonal region.]({% image_buster /assets/img_archive/create_polygon.png %}){: style="max-width:70%;"}
 
 {% alert tip %}
 Interested in taking advantage of location targeting with the help of a Braze partner? Check out our available Braze [contextual location partners]({{site.baseurl}}/partners/message_personalization/location/).

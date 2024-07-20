@@ -14,19 +14,19 @@ alias: "/sms_geographic_permissions/"
 
 > SMS Geographic Permissions enhance security and protect against fraudulent SMS traffic by enforcing controls on the countries to which you can send SMS messages. You can specify an allowlist of countries to make sure that SMS messages are only sent to approved regions. Only admins can make changes to the country allowlist. Non-admin users have access to a read-only version of the allowlist that indicates which countries a subscription group is able to send to.
 
-![The read-only SMS Geographic Permissions section for a non-admin user with the United States and United Kingdom selected in the "Country allowlist".][6]{: style="max-width:80%;"}
+![The read-only SMS Geographic Permissions section for a non-admin user with the United States and United Kingdom selected in the "Country allowlist".]({% image_buster /assets/img/sms/sms_geographic_permissions_read_only.png %}){: style="max-width:80%;"}
 
 ## Configuring your SMS country allowlist
 
 If you're an admin, you can configure the countries that are on the allowlist. The country allowlist is configured at the [subscription group]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_subscription_group/) level. You can access it by going to **Audience** > **Subscriptions** and selecting an SMS subscription group. The allowlist is under **SMS Geographic Permissions**.
 
-![The editable SMS Geographic Permissions section for an admin with Australia, Canada, and the United States selected in the "Country allowlist".][1]{: style="max-width:80%;"}
+![The editable SMS Geographic Permissions section for an admin with Australia, Canada, and the United States selected in the "Country allowlist".]({% image_buster /assets/img/sms/sms_geographic_permissions.png %}){: style="max-width:80%;"}
 
 ### Selecting countries
 
 Add countries to the allowlist with the dropdown. The most common SMS countries are shown at the top, with others shown below. You can also search for countries by typing in the text field.
 
-![The "Country allowlist" dropdown with the most common countries displaying at the top.][2]{: style="max-width:80%;"}
+![The "Country allowlist" dropdown with the most common countries displaying at the top.]({% image_buster /assets/img/sms/allowlist_dropdown.png %}){: style="max-width:80%;"}
 
 Remove previously selected countries by clearing the respective boxes next to them.
 
@@ -34,13 +34,13 @@ Remove previously selected countries by clearing the respective boxes next to th
 
 Changes will take effect after you select **Save**. Removing countries from your allowlist will prevent all SMS and MMS messages from sending to numbers in those countries.
 
-![Warning modal confirming the countries that will be deleted from the allowlist.][3]{: style="max-width:70%;"}
+![Warning modal confirming the countries that will be deleted from the allowlist.]({% image_buster /assets/img/sms/delete_allowlist_warning.png %}){: style="max-width:70%;"}
 
 ## High-risk countries
 
 Certain countries have a higher risk of SMS traffic pumping. These countries are indicated by a **High Risk** tag in the country dropdown.
 
-![The country downdown with Azerbaijan having a "High Risk" tag.][4]{: style="max-width:80%;"}
+![The country downdown with Azerbaijan having a "High Risk" tag.]({% image_buster /assets/img/sms/high_risk.png %}){: style="max-width:80%;"}
 
 If you allow sending in these countries, you must first acknowledge the risk of doing so before the country is added to your allowlist.
 
@@ -54,7 +54,7 @@ Attempted sends to countries that aren't on your allowlist will be aborted. Abor
 
 Aborted messages caused by blocked sends will show as `Abort_Type = "blocked_recipient_country"` with the abort log detailing the blocked country.
 
-![Abort log showing the abort_type of blocked_recipient_country and the country initials of the blocked phone number.][5]{: style="max-width:80%;"}
+![Abort log showing the abort_type of blocked_recipient_country and the country initials of the blocked phone number.]({% image_buster /assets/img/sms/abort_log.png %}){: style="max-width:80%;"}
 
 [1]: {% image_buster /assets/img/sms/sms_geographic_permissions.png %}
 [2]: {% image_buster /assets/img/sms/allowlist_dropdown.png %}

@@ -25,7 +25,7 @@ Triggers take time to sync to the device on session start, so there can be a rac
 
 ## Expected in-app message did not display
 
-Most in-app message issues can be broken down into two main categories: delivery and display. To troubleshoot why an expected in-app message did not display on your device, you should first ensure that the [in-app message was delivered to the device][iam_11], then [troubleshoot message display][iam_12].
+Most in-app message issues can be broken down into two main categories: delivery and display. To troubleshoot why an expected in-app message did not display on your device, you should first ensure that the [in-app message was delivered to the device](#troubleshooting-in-app-message-delivery), then [troubleshoot message display](#troubleshooting-in-app-message-display).
 
 ### Troubleshooting in-app message delivery {#troubleshooting-in-app-message-delivery}
 
@@ -33,32 +33,32 @@ The SDK requests in-app messages from Braze servers on session start. To check i
 
 #### Check if messages are requested and returned
 
-1. Add yourself as a [test user][iam_1] on the dashboard.
+1. Add yourself as a [test user]({{ site.baseurl }}/user_guide/administrative/app_settings/developer_console/internal_groups_tab/#adding-test-users) on the dashboard.
 2. Set up an in-app message campaign targeted at your user.
 3. Ensure that a new session occurs in your application.
-4. Use the [event user logs][iam_3] to check that your device is requesting in-app messages on session start. Find the SDK request associated with your test user's session start event.
+4. Use the [event user logs]({{ site.baseurl }}/user_guide/administrative/app_settings/developer_console/event_user_log_tab/#event-user-log-tab) to check that your device is requesting in-app messages on session start. Find the SDK request associated with your test user's session start event.
   - If your app was meant to request triggered in-app messages, you should see `trigger` in the **Requested Responses** field under **Response Data**.
   - If your app was meant to request original in-app messages, you should see  `in_app` in the **Requested Responses** field under **Response Data**.
-5. Use the [event user logs][iam_3] to check if the correct in-app messages are being returned in the response data.<br>![][iam_5]
+5. Use the [event user logs]({{ site.baseurl }}/user_guide/administrative/app_settings/developer_console/event_user_log_tab/#event-user-log-tab) to check if the correct in-app messages are being returned in the response data.<br>![]({% image_buster /assets/img_archive/event_user_log_iams.png %})
 
 #### Messages not being requested
 
 If your in-app messages are not being requested, your app might not be tracking sessions correctly, as in-app messages are refreshed upon session start. Also, be sure that your app is actually starting a session based on your app's session timeout semantics:
 
-![The SDK request found in the event user logs displaying a successful session start event.][iam_10]
+![The SDK request found in the event user logs displaying a successful session start event.]({% image_buster /assets/img_archive/event_user_log_session_start.png %})
 
 #### Messages not being returned
 
 If your in-app messages are not being returned, you're likely experiencing a campaign targeting issue.
 
 ##### Your segment does not contain your user
-Check your user's [**Engagement**][iam_6] tab to see if the correct segment appears under **Segments**.
+Check your user's [**Engagement**]({{ site.baseurl }}/user_guide/engagement_tools/segments/user_profiles/#engagement-tab) tab to see if the correct segment appears under **Segments**.
 
 ##### Your user has previously received the in-app message and was not re-eligible to receive it again
-Check the [campaign re-eligibility settings][iam_7] under the **Delivery** step of the **Campaign Composer** and make sure the re-eligibility settings align with your testing setup.
+Check the [campaign re-eligibility settings]({{ site.baseurl }}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/reeligibility/) under the **Delivery** step of the **Campaign Composer** and make sure the re-eligibility settings align with your testing setup.
 
 ##### Your user hit the frequency cap for the campaign
-Check the campaign [frequency cap settings][iam_8] and ensure they align with your testing setup.
+Check the campaign [frequency cap settings]({{ site.baseurl }}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/#frequency-capping) and ensure they align with your testing setup.
 
 ##### User fallen out of the control group
 If there was a control group on the campaign, your user may have fallen into the control group. You can check if this has happened by creating a segment with a received campaign variant filter, where the campaign variant is set to **Control**, and checking if your user fell into that segment. 

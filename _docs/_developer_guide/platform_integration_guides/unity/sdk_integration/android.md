@@ -15,23 +15,23 @@ search_rank: .9
 
 ## Step 1: Choose your Braze Unity package
 
-The Braze [`.unitypackage`][41] bundles native bindings for the Android and iOS platforms, along with a C# interface.
+The Braze [`.unitypackage`](https://docs.unity3d.com/Manual/AssetPackages.html) bundles native bindings for the Android and iOS platforms, along with a C# interface.
 
-There are several Braze Unity packages available for download on the [Braze Unity releases page][42]:
+There are several Braze Unity packages available for download on the [Braze Unity releases page](https://github.com/Appboy/appboy-unity-sdk/releases):
  
 - `Appboy.unitypackage`
-    - This package bundles the Braze Android and iOS SDKs and the [SDWebImage][unity-1] dependency for the iOS SDK, which is required for the proper functionality of Braze in-app messaging, and Content Cards features on iOS. The SDWebImage framework is used for downloading and displaying images, including GIFs. If you intend on utilizing full Braze functionality, download and import this package.
+    - This package bundles the Braze Android and iOS SDKs and the [SDWebImage](https://github.com/SDWebImage/SDWebImage) dependency for the iOS SDK, which is required for the proper functionality of Braze in-app messaging, and Content Cards features on iOS. The SDWebImage framework is used for downloading and displaying images, including GIFs. If you intend on utilizing full Braze functionality, download and import this package.
 - `Appboy-nodeps.unitypackage`
-    - This package is similar to `Appboy.unitypackage` except for the [SDWebImage][unity-1] framework is not present. This package is useful if you do not want the SDWebImage framework present in your iOS app.
+    - This package is similar to `Appboy.unitypackage` except for the [SDWebImage](https://github.com/SDWebImage/SDWebImage) framework is not present. This package is useful if you do not want the SDWebImage framework present in your iOS app.
 
-**iOS**: To see if you require the [SDWebImage][unity-1] dependency for your iOS project, visit the [iOS in-app message documentation][unity-4].<br>
-**Android**: As of Unity 2.6.0, the bundled Braze Android SDK artifact requires  [AndroidX][unity-3] dependencies. If you were previously using a `jetified unitypackage`, then you can safely transition to the corresponding `unitypackage`.
+**iOS**: To see if you require the [SDWebImage](https://github.com/SDWebImage/SDWebImage) dependency for your iOS project, visit the [iOS in-app message documentation]({{ site.baseurl }}/developer_guide/platform_integration_guides/android/in-app_messaging/integration/).<br>
+**Android**: As of Unity 2.6.0, the bundled Braze Android SDK artifact requires  [AndroidX](https://developer.android.com/jetpack/androidx) dependencies. If you were previously using a `jetified unitypackage`, then you can safely transition to the corresponding `unitypackage`.
 
 ## Step 2: Import the package
 
 In the Unity Editor, import the package into your Unity project by navigating to **Assets > Import Package > Custom Package**. Next, click **Import**.
 
-Alternatively, follow the [Unity asset package import][41] instructions for a more detailed guide on importing custom Unity packages. 
+Alternatively, follow the [Unity asset package import](https://docs.unity3d.com/Manual/AssetPackages.html) instructions for a more detailed guide on importing custom Unity packages. 
 
 {% alert note %}
 If you only wish to import the iOS or Android plugin, deselect the `Plugins/Android` or `Plugins/iOS` subdirectory when importing the Braze `.unitypackage`.
@@ -98,7 +98,7 @@ In your `AndroidManifest.xml`, all instances of `REPLACE_WITH_YOUR_PACKAGE_NAME`
 
 ## Step 4: Add gradle dependencies {#unity-android-gradle-configuration}
 
-To add gradle dependencies to your Unity project, first enable ["Custom Main Gradle Template"][unity-5] in your Publishing Settings. This will create a template gradle file that your project will use. A gradle file handles setting dependencies and other build-time project settings. For more information, check out the Braze Unity sample app's [mainTemplate.gradle][unity-6].
+To add gradle dependencies to your Unity project, first enable ["Custom Main Gradle Template"](https://docs.unity3d.com/Manual/class-PlayerSettingsAndroid.html#Publishing) in your Publishing Settings. This will create a template gradle file that your project will use. A gradle file handles setting dependencies and other build-time project settings. For more information, check out the Braze Unity sample app's [mainTemplate.gradle](https://github.com/braze-inc/braze-unity-sdk/blob/master/unity-samples/Assets/Plugins/Android/mainTemplate.gradle).
 
 The following dependencies are required:
 
@@ -127,9 +127,9 @@ This automatic integration should not be used with a manually created `braze.xml
 
 ## Basic SDK integration complete
 
-Braze should now be collecting data from your application, and your basic integration should be complete. For more information on integration push, check out the following articles: [Android][53] and [iOS][50], [in-app messages][34], and [Content Cards][40].
+Braze should now be collecting data from your application, and your basic integration should be complete. For more information on integration push, check out the following articles: [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/unity/push_notifications/android/) and [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/unity/push_notifications/ios/), [in-app messages]({{site.baseurl}}/developer_guide/platform_integration_guides/unity/in-app_messaging/), and [Content Cards]({{site.baseurl}}/developer_guide/platform_integration_guides/unity/content_cards/).
 
-To learn about advanced SDK integration options, check out [Advanced Implementation][54].
+To learn about advanced SDK integration options, check out [Advanced Implementation]({{site.baseurl}}/developer_guide/platform_integration_guides/unity/sdk_integration/advanced_use_cases/#android-sdk-advanced).
 
 [5]: #transitioning-from-manual-to-automated-integration
 [34]: {{site.baseurl}}/developer_guide/platform_integration_guides/unity/in-app_messaging/

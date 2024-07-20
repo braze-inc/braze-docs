@@ -28,7 +28,7 @@ Getting out-of-office replies can actually provide valuable information, increas
 
 The preheader text in an email communicates the main point of the message efficiently to catch the reader's interest and encourage opens. Preheader text is also often used by email marketers to provide additional information on an email's contents. A preheader is the preview text displayed immediately after an email subject. In the following example, the preheader is `- Brand. New. Lounge Shorts`.
 
-![Preheader text in a Gmail inbox with the text "Brand. New. Lounge Shorts".][61]
+![Preheader text in a Gmail inbox with the text "Brand. New. Lounge Shorts".]({% image_buster /assets/img_archive/preheader_example.png %})
 
 The amount of visible preheader text is dependent on the user's email client and the length of the email's subject line. Generally, we suggest email preheaders to be between 50 and 100 characters.
 

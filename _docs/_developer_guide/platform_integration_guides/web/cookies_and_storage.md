@@ -12,9 +12,9 @@ description: "This reference article describes the different cookies used by the
 
 > This article describes the different cookies used by the Braze Web SDK.
 
-Before reading on, note that the Braze Web SDK will not store any data in the browser (cookies or otherwise) until your website [initializes][5] the SDK.
+Before reading on, note that the Braze Web SDK will not store any data in the browser (cookies or otherwise) until your website [initializes](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#initialize) the SDK.
 
-Additionally, these values are subject to change and should not be accessed directly through your integration. Instead, see our [JavaScript documentation][1] for our public API interfaces.
+Additionally, these values are subject to change and should not be accessed directly through your integration. Instead, see our [JavaScript documentation](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html) for our public API interfaces.
 
 {% multi_lang_include archive/web-v4-rename.md %}
 
@@ -26,7 +26,7 @@ When Braze creates cookies, they are stored with a one-year expiration that auto
 
 ### Disabling cookies {#disable-cookies}
 
-To disable all cookies, use the [`noCookies`][6] option when initializing the Web SDK. 
+To disable all cookies, use the [`noCookies`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#initializationoptions) option when initializing the Web SDK. 
 Disabling cookies will prevent you from associating anonymous users who navigate across sub-domains and will result in a new user on each subdomain.
 
 ```javascript
@@ -37,7 +37,7 @@ braze.initialize("API-KEY", {
 });
 ```
 
-To stop Braze tracking in general, or to clear all stored browser data, see the [`disableSDK`][3] and [`wipeData`][4] SDK methods, respectively. These two methods can be useful should a user revoke consent or you want to stop all Braze functionality after the SDK has already been initialized.
+To stop Braze tracking in general, or to clear all stored browser data, see the [`disableSDK`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#disableSDK) and [`wipeData`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#wipedata) SDK methods, respectively. These two methods can be useful should a user revoke consent or you want to stop all Braze functionality after the SDK has already been initialized.
 
 ### List of cookies
 
@@ -62,7 +62,7 @@ By default, Braze will collect the following device-level properties to allow de
 * TIME_ZONE
 * USER_AGENT
 
-You can disable or specify the properties you wish to collect by setting the `devicePropertyAllowlist` initialization option to a list of [`DeviceProperties`][2]. 
+You can disable or specify the properties you wish to collect by setting the `devicePropertyAllowlist` initialization option to a list of [`DeviceProperties`](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.deviceproperties.html). 
 
 ```javascript
 import * as braze from"@braze/web-sdk";

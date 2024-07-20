@@ -58,7 +58,7 @@ Fullscreen in-app messages will fill the entire height of a device and crop hori
 
 When previewing a fullscreen in-app message in the Braze platform, you can enable the Image Safe Zone to the area of the message that is safe from cropping when displayed across devices. In addition to testing the Image Safe Zone in the preview pane, we recommend you [test your message]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/testing/) as always.
 
-![Previewing an in-app message in Braze with "Show Image Safe Zone" enabled. The image safe zone is an overlay over the image that visualizes what parts of the image will be safe from cropping.][3c]
+![Previewing an in-app message in Braze with "Show Image Safe Zone" enabled. The image safe zone is an overlay over the image that visualizes what parts of the image will be safe from cropping.]({% image_buster /assets/img/image-safe-zone-full-screen-in-app-message.png %})
 
 ## Larger screens
 

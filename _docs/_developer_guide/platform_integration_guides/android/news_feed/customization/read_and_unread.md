@@ -19,7 +19,7 @@ News Feed is being deprecated. Braze recommends that customers who use our News 
 
 > Braze allows you to optionally toggle on unread and read indicators on News Feed cards.
 
-![A News Feed card showing an image of a watch along with some text. In the upper corner of the text is a blue or gray triangle that indicates if a card has been read or not. A blue triangle signifies that a card has been read.][25]
+![A News Feed card showing an image of a watch along with some text. In the upper corner of the text is a blue or gray triangle that indicates if a card has been read or not. A blue triangle signifies that a card has been read.]({% image_buster /assets/img_archive/UnreadvsReadNewsFeedCard.png %})
 
 ## Enabling the indicators
 

@@ -18,7 +18,7 @@ Triggers take time to sync to the device on session start; this can result in a 
 
 ## Expected in-app message did not display
 
-Most in-app message issues can be broken down into two main categories: delivery and display. To troubleshoot why an expected in-app message did not display on your device, you should first ensure that the [in-app message was delivered to the device][troubleshooting_iams_11], then [troubleshoot message display][troubleshooting_iams_12].
+Most in-app message issues can be broken down into two main categories: delivery and display. To troubleshoot why an expected in-app message did not display on your device, you should first ensure that the [in-app message was delivered to the device](#troubleshooting-in-app-message-delivery), then [troubleshoot message display](#troubleshooting-in-app-message-display).
 
 ## In-app message delivery {#troubleshooting-in-app-message-delivery}
 
@@ -26,30 +26,30 @@ The SDK requests in-app messages from Braze servers on session start. To check i
 
 ### Check if messages are requested and returned
 
-1. Add yourself as a [test user][troubleshooting_iams_1] on the dashboard.
+1. Add yourself as a [test user]({{ site.baseurl }}/user_guide/administrative/app_settings/developer_console/internal_groups_tab/#adding-test-users) on the dashboard.
 2. Set up an in-app message campaign targeted at your user.
 3. Ensure that a new session occurs in your application.
-4. Use the [event user logs][troubleshooting_iams_3] to check that your device is requesting in-app messages on session start. Find the SDK Request associated with your test user's session start event.
+4. Use the [event user logs]({{ site.baseurl }}/user_guide/administrative/app_settings/developer_console/event_user_log_tab/#event-user-log-tab) to check that your device is requesting in-app messages on session start. Find the SDK Request associated with your test user's session start event.
   - If your app was meant to request triggered in-app messages, you should see `trigger` in the **Requested Responses** field under **Response Data**.
   - If your app was meant to request original in-app messages, you should see  `in_app` in the **Requested Responses** field under **Response Data**.
-5. Use the [event user logs][troubleshooting_iams_3] to check if the correct in-app messages are being returned in the response data.<br>![][troubleshooting_iams_5]
+5. Use the [event user logs]({{ site.baseurl }}/user_guide/administrative/app_settings/developer_console/event_user_log_tab/#event-user-log-tab) to check if the correct in-app messages are being returned in the response data.<br>![]({% image_buster /assets/img_archive/event_user_log_iams.png %})
 
 ### Troubleshoot messages not being requested
 
 If your in-app messages are not being requested, your app might not be tracking sessions correctly, as in-app messages are refreshed upon session start. Also, be sure that your app is actually starting a session based on your app's session timeout semantics:
 
-![The SDK request found in the event user logs displaying a successful session start event.][troubleshooting_iams_10]
+![The SDK request found in the event user logs displaying a successful session start event.]({% image_buster /assets/img_archive/event_user_log_session_start.png %})
 
 ### Troubleshoot messages not being returned
 
 If your in-app messages are not being returned, you're likely experiencing a campaign targeting issue:
 
 - Your segment does not contain your user.
-  - Check your user's [**Engagement**][troubleshooting_iams_6] tab to see if the correct segment appears under **Segments**.
+  - Check your user's [**Engagement**]({{ site.baseurl }}/user_guide/engagement_tools/segments/using_user_search/#engagement-tab) tab to see if the correct segment appears under **Segments**.
 - Your user has previously received the in-app message and was not re-eligible to receive it again.
-  - Check the [campaign re-eligibility settings][troubleshooting_iams_7] under the **Delivery** step of the **Campaign Composer** and make sure the re-eligibility settings align with your testing setup.
+  - Check the [campaign re-eligibility settings]({{ site.baseurl }}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/reeligibility/) under the **Delivery** step of the **Campaign Composer** and make sure the re-eligibility settings align with your testing setup.
 - Your user hit the frequency cap for the campaign.
-  - Check the campaign [frequency cap settings][troubleshooting_iams_8] and ensure they align with your testing setup.
+  - Check the campaign [frequency cap settings]({{ site.baseurl }}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/#frequency-capping) and ensure they align with your testing setup.
 - If there was a control group on the campaign, your user may have fallen into the control group.
   - You can check if this has happened by creating a segment with a received campaign variant filter, where the campaign variant is set to **Control**, and checking if your user fell into that segment.
   - When creating campaigns for integration testing purposes, make sure to opt out of adding a control group.
@@ -58,7 +58,7 @@ If your in-app messages are not being returned, you're likely experiencing a cam
 
 If your app is successfully requesting and receiving in-app messages, but they are not being shown, some device-side logic may be preventing display:
 
-- Triggered in-app messages are rate-limited based on the [minimum time interval between triggers][troubleshooting_iams_9], which defaults to 30 seconds.
+- Triggered in-app messages are rate-limited based on the [minimum time interval between triggers]({{site.baseurl}}/developer_guide/platform_integration_guides/web/in-app_messaging/in-app_message_delivery/#minimum-time-interval-between-triggers), which defaults to 30 seconds.
 - If you have custom in-app message handling through `braze.subscribeToInAppMessage` or `appboy.subscribeToNewInAppMessages`, check that subscription to ensure it is not affecting in-app message display.
 
 [troubleshooting_iams_1]: {{ site.baseurl }}/user_guide/administrative/app_settings/developer_console/internal_groups_tab/#adding-test-users

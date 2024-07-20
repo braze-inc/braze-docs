@@ -13,7 +13,7 @@ search_rank: 1
 
 # Creating an MMS Campaign
 
-> This page only contains information specific to MMS composition, which is part of the SMS composer. For more detailed information about the SMS/MMS composer, check the [SMS Composer][1].
+> This page only contains information specific to MMS composition, which is part of the SMS composer. For more detailed information about the SMS/MMS composer, check the [SMS Composer]({{ site.baseurl }}/user_guide/message_building_by_channel/sms/create/).
 
 ## MMS sending basics
 
@@ -36,7 +36,7 @@ Contact Cards (sometimes known as vCard or Virtual Contact Files (vcf)) are a st
 
 Creating an MMS message requires your subscription group to be configured for MMS sending. This is indicated by seeing the MMS tag when selecting a subscription group. Upon selecting an MMS-enabled subscription group, you will have the ability to upload an image, reference an image URL, or include a Contact Card.
 
-![][2]
+![]({% image_buster /assets/img/sms/mms_composer.png %})
 
 ### Image specifications
 
@@ -54,7 +54,7 @@ Braze provides a preview of the image you have uploaded in the **Preview** panel
 The ordering of SMS/MMS assets cannot be customized. The ordering is dependent on the phone receiving this message.
 {% endalert %}
 
-![][3]
+![]({% image_buster /assets/img/sms/mms_preview.png %})
 
 
 [1]: {{ site.baseurl }}/user_guide/message_building_by_channel/sms/create/

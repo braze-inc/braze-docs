@@ -28,7 +28,7 @@ You can now return to the copywriting view. Your new guidelines will be saved to
 You can change the output language regardless of what language your copy is in, but neither Braze nor OpenAI guarantee the quality of translation. You should test and verify translations before using them.
 {% endalert %}
 
-![Brand guideline creation view"][1]
+![Brand guideline creation view"]({% image_buster /assets/img/ai_copywriter/manual_brand_guidelines.png %} "Brand Guidelines")
 
 ## Editing guidelines
 

@@ -15,7 +15,7 @@ search_tag: Partner
 Common use cases for exporting Facebook Custom Audiences include:
 - Retargeting users at specific points within their lifecycle
 - Creating exclusion targeting lists
-- Creating [Lookalike Audiences][4] to acquire new users more efficiently
+- Creating [Lookalike Audiences](https://www.facebook.com/business/help/164749007013531?id=401668390442328) to acquire new users more efficiently
 <br><br>
 
 {% alert note %}
@@ -31,9 +31,9 @@ If you are participating in testing Meta Work Accounts in beta, ensure you disco
 
 | Requirement | Description |
 | ----------- | ----------- |
-| [Facebook Business Manager][1] | A centralized tool to manage your brand's Facebook assets (for example, ad accounts, pages, apps). |
-| [Facebook ad account][2] | An active Facebook ad account tied to your brand's business manager that you want to use with Braze custom audiences.<br><br>Ensure that your Facebook business manager administrator has granted you administrator permissions to the Facebook ad accounts you plan to use with Braze, and that you have accepted your ad account terms and conditions. Otherwise, you will not be able to access any Facebook ad accounts within Braze. |
-| [Facebook Custom Audiences Terms][3]| You must accept Facebook's Custom Audiences Terms for your Facebook ad accounts you plan to use with Braze.|
+| [Facebook Business Manager](https://www.facebook.com/business/help/113163272211510?id=180505742745347) | A centralized tool to manage your brand's Facebook assets (for example, ad accounts, pages, apps). |
+| [Facebook ad account](https://www.facebook.com/business/help/910137316041095?id=420299598837059) | An active Facebook ad account tied to your brand's business manager that you want to use with Braze custom audiences.<br><br>Ensure that your Facebook business manager administrator has granted you administrator permissions to the Facebook ad accounts you plan to use with Braze, and that you have accepted your ad account terms and conditions. Otherwise, you will not be able to access any Facebook ad accounts within Braze. |
+| [Facebook Custom Audiences Terms](https://www.facebook.com/ads/manage/customaudiences/tos.php)| You must accept Facebook's Custom Audiences Terms for your Facebook ad accounts you plan to use with Braze.|
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## Integration
@@ -47,13 +47,13 @@ If you are using the [older navigation]({{site.baseurl}}/navigation), you can fi
 {% endalert %}
 
 {: start="2"}
-2. In the Facebook Audience Export module, click **Connect Facebook**. <br><br>![Facebook technology partners page in the Braze platform.][6]{: style="max-width:70%;"}
+2. In the Facebook Audience Export module, click **Connect Facebook**. <br><br>![Facebook technology partners page in the Braze platform.]({% image_buster /assets/img/fb/afb_1.png %}){: style="max-width:70%;"}
 
 {: start="3"}
-3. In the Facebook oAuth dialog window, authorize Braze to create Custom Audiences into your Facebook ad accounts. <br><br>![The first facebook dialog box prompting to "Connect as X", where X is your Facebook username.][8]{: style="max-width:30%;"}  ![The second Facebook dialog box prompting for permission to manage ads for your ad accounts.][7]{: style="max-width:40%;"}
+3. In the Facebook oAuth dialog window, authorize Braze to create Custom Audiences into your Facebook ad accounts. <br><br>![The first facebook dialog box prompting to "Connect as X", where X is your Facebook username.]({% image_buster /assets/img/fb/afb_3.png %}){: style="max-width:30%;"}  ![The second Facebook dialog box prompting for permission to manage ads for your ad accounts.]({% image_buster /assets/img/fb/afb_2.png %}){: style="max-width:40%;"}
 
 {: start="4"}
-4. After Braze is linked to your Facebook account, select which ad accounts you would like to sync within your Braze workspace. <br><br>![A list of available ad accounts you can connect to Facebook.][9]{: style="max-width:70%;"}<br><br> After you connect, you will be taken back to the partner page, where you can view which accounts are connected and disconnect existing accounts. <br><br> ![An updated version of the Facebook technology partners page showing the ad accounts successfully connected.][10]{: style="max-width:70%;"}<br>
+4. After Braze is linked to your Facebook account, select which ad accounts you would like to sync within your Braze workspace. <br><br>![A list of available ad accounts you can connect to Facebook.]({% image_buster /assets/img/fb/afb_4.png %}){: style="max-width:70%;"}<br><br> After you connect, you will be taken back to the partner page, where you can view which accounts are connected and disconnect existing accounts. <br><br> ![An updated version of the Facebook technology partners page showing the ad accounts successfully connected.]({% image_buster /assets/img/fb/afb_5.png %}){: style="max-width:70%;"}<br>
 <br> Your Facebook connection is applied at the Braze workspace level. If your Facebook administrator removes you from your Facebook Business Manager or access to the connected Facebook accounts, Braze will detect an invalid token. As a result, your active Canvases using Facebook audience steps will show errors, and Braze will not be able to sync users. 
 
 {% alert important %}
@@ -67,7 +67,7 @@ For customers that have previously undergone the Facebook app review process for
 In Braze, Facebook audience export is accessible through the **Segments** page. 
 
 1. On the **Segments** page, click the gear next to the segment you'd like to export.
-2. Click **Export as Facebook Audience**. <br><br>![A list of Braze segments. For the first segment, the setting symbol is selected and the "Export as Facebook Audience" button is shown.][11]
+2. Click **Export as Facebook Audience**. <br><br>![A list of Braze segments. For the first segment, the setting symbol is selected and the "Export as Facebook Audience" button is shown.]({% image_buster /assets/img/fb/afb_6.png %})
 
 {: start="3"}
 3. If you haven't already activated Facebook within Braze, you will be prompted to go to the Facebook Technology Partners page in the dashboard. If you already activated Facebook through **Technology Partners** > **Facebook**, you will be able to select the user field to export, and a dropdown to select your Facebook ad account will show. <br><br> There are three possible user fields you can export:  
@@ -81,7 +81,7 @@ You can only select one user field within a single export. If you choose more th
 
 {: start="4"}
 4. After you select the user field, click **Export**. Like CSV exports, you will receive an email when the segment has finished exporting into Facebook.
-5. View the custom audience on the [Facebook Ads Manager][13].
+5. View the custom audience on the [Facebook Ads Manager](https://www.facebook.com/ads/manager/audiences/manage/).
 
 {% alert important %}
 Due to user privacy reasons, Facebook doesn't allow you to see:
@@ -96,16 +96,16 @@ When building Facebook audiences, you may wish to include or exclude certain use
 
 - If you have collected the [iOS IDFA through the Braze SDK]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/initial_sdk_setup/other_sdk_customizations/#optional-idfa-collection), you will be able to use the **Ads Tracking Enabled** filter. Select the value as `true` to only send users into Audience Sync destinations where they have opted in. 
 
-![][16]{: style="max-width:75%;"}
+![]({% image_buster /assets/img/tiktok/tiktok16.png %}){: style="max-width:75%;"}
 
 - If you are collecting opt ins, opt outs, `Do Not Sell Or Share`, or other relevant custom attributes, you should include these within your Canvas entry criteria as a filter: 
 
-![A Canvas with an entry audience of "opted_in_marketing" equals "true".][15]{: style="max-width:75%;"}
+![A Canvas with an entry audience of "opted_in_marketing" equals "true".]({% image_buster /assets/img/tiktok/tiktok13.png %}){: style="max-width:75%;"}
 
 
 #### Lookalike Audiences
 
-Once you've successfully exported a segment as a Facebook Audience, you can create additional groups using Facebook [Lookalike Audiences][4]. This feature looks at your chosen audience's demographics, interests, and other attributes and creates a new audience of people with similar attributes.
+Once you've successfully exported a segment as a Facebook Audience, you can create additional groups using Facebook [Lookalike Audiences](https://www.facebook.com/business/help/164749007013531?id=401668390442328). This feature looks at your chosen audience's demographics, interests, and other attributes and creates a new audience of people with similar attributes.
 
 [1]: https://www.facebook.com/business/help/113163272211510?id=180505742745347
 [2]: https://www.facebook.com/business/help/910137316041095?id=420299598837059

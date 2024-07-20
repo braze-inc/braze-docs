@@ -51,6 +51,6 @@ Each of these events will have metadata in the form of Datadog tags to give you 
 
 These events and tags can be monitored on the Datadog **Metrics Explorer** page. These metrics are logged as [distributions](https://docs.datadoghq.com/metrics/distributions/) to DataDog. Given the nature of metrics and the imprecision of DataDog's aggregations and rollups, Braze does not retry intermittent network errors or other DataDog API errors that may be encountered during transmission. This means that these metric counts may differ slightly from counts seen in the Braze dashboard and/or through Currents.
 
-![][1]
+![]({% image_buster /assets/img/datadog.png %})
 
 [1]: {% image_buster /assets/img/datadog.png %}

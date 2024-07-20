@@ -32,7 +32,7 @@ If you are using the [older navigation]({{site.baseurl}}/navigation), you can fi
 3. Give your group a meaningful name.
 4. Choose one or more group types, as listed in the following chart.
 
-![Creating an Internal Group in Braze][7]
+![Creating an Internal Group in Braze]({% image_buster /assets/img_archive/internal_group.png %})
 
 | Group Type     | Use Case     |
 | :------------- | :------------- |
@@ -45,7 +45,7 @@ If you are using the [older navigation]({{site.baseurl}}/navigation), you can fi
 
 After you create your Internal Group, you can add test users as members of that group. From your Internal Group's management page, click **Add Test User** and either add them as identified or anonymous users in bulk.
 
-![Internal Group Settings when creating a new Internal Group][8]
+![Internal Group Settings when creating a new Internal Group]({% image_buster /assets/img_archive/UserLogs1.png %})
 
 | Addition Method | Description |
 | :------------- | :------------- |
@@ -70,7 +70,7 @@ Lastly, if you use an IP pool to send out an email, you can select which IP pool
 
 Only groups tagged as Content Test Groups will be available in the preview section of a message.
 
-![Test send to Content Test Groups][9]{: style="max-width:50%" }
+![Test send to Content Test Groups]({% image_buster /assets/img_archive/content_test_preview.png %}){: style="max-width:50%" }
 
 ### Seed Groups
 
@@ -94,7 +94,7 @@ If your campaign is multivariate and your variant has a 0% send percentage, it w
 If there is a recurring campaign and an update is conducted on any one of the variants, you have the option of re-sending to only the updated variants, all variants, or turning off Seed Group sending upon update.
 {% endalert %}
 
-![Seed groups preview for a campaign][11]
+![Seed groups preview for a campaign]({% image_buster /assets/img_archive/seed_group_campaign.png %})
 
 #### For Canvas
 

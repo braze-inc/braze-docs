@@ -9,7 +9,7 @@ search_rank: 1
 
 # Initial SDK setup
 
-> This reference article covers how to install the Braze SDK for Flutter. Follow these instructions to install the [Braze Flutter SDK][1] that contains a package to allows integrators to use Braze APIs in [Flutter apps][2] written in Dart.
+> This reference article covers how to install the Braze SDK for Flutter. Follow these instructions to install the [Braze Flutter SDK](https://pub.dev/packages/braze_plugin) that contains a package to allows integrators to use Braze APIs in [Flutter apps](https://flutter.dev/) written in Dart.
 
 This plugin provides basic analytics functionality and lets you integrate in-app messages and Content Cards for both iOS and Android with a single codebase.
 
@@ -19,9 +19,9 @@ You will need to complete installation steps on both platforms separately.
 
 ## Prerequisites
 
-To complete the installation, you will need the [app identifier API key]({{site.baseurl}}/api/identifier_types/) as well as the [SDK endpoint][4]. Both are located under **Manage Settings** in the dashboard.
+To complete the installation, you will need the [app identifier API key]({{site.baseurl}}/api/identifier_types/) as well as the [SDK endpoint]({{site.baseurl}}/api/basics/#endpoints). Both are located under **Manage Settings** in the dashboard.
 
-Before following these steps, install and set up the [Flutter SDK][5]. Ensure your machine and project are running the minimum required Flutter and Dart versions [noted here][7].
+Before following these steps, install and set up the [Flutter SDK](https://docs.flutter.dev/get-started/install). Ensure your machine and project are running the minimum required Flutter and Dart versions [noted here](https://github.com/braze-inc/braze-flutter-sdk#readme).
 
 ## Step 1: Integrate the Braze library
 
@@ -138,7 +138,7 @@ To import the plugin into your Dart code, use the following:
 import 'package:braze_plugin/braze_plugin.dart';
 ```
 
-Then, initialize an instance of the Braze plugin by calling `new BrazePlugin()` like in [our sample app][6].
+Then, initialize an instance of the Braze plugin by calling `new BrazePlugin()` like in [our sample app](https://github.com/braze-inc/braze-flutter-sdk/blob/master/example/lib/main.dart).
 
 ## Test your basic integration
 

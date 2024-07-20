@@ -18,11 +18,11 @@ Braze does not sanitize HTML data during ingestion time. This means that script 
 
 ## REST API
 
-You can use the [`/users/track` endpoint][12] to record custom events, user attributes, and purchases for users.
+You can use the [`/users/track` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) to record custom events, user attributes, and purchases for users.
 
 ## Cloud Data Ingestion
 
-You can use Braze [Cloud Data Ingestion][14] to import and maintain user attributes. 
+You can use Braze [Cloud Data Ingestion]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/) to import and maintain user attributes. 
 
 ## CSV
 
@@ -36,11 +36,11 @@ If you are uploading a mix of users with an `external_id` and users without, you
 
 ### Importing with external ID
 
-When importing your customer data, you'll need to specify each customer's unique identifier, also known as `external_id`. Before starting your CSV import it's important to understand from your engineering team how users will be identified in Braze. Typically this would be a database ID used internally. This should align with how users will be identified by the Braze SDK on mobile and web, and is designed for each customer to have a single user profile within Braze across their devices. Read more about the Braze [user profile lifecycle][13].
+When importing your customer data, you'll need to specify each customer's unique identifier, also known as `external_id`. Before starting your CSV import it's important to understand from your engineering team how users will be identified in Braze. Typically this would be a database ID used internally. This should align with how users will be identified by the Braze SDK on mobile and web, and is designed for each customer to have a single user profile within Braze across their devices. Read more about the Braze [user profile lifecycle]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/).
 
 When you provide an `external_id` in your import, Braze will update any existing user with the same `external_id` or create a newly identified user with that `external_id` set if one is not found.
 
-**Download:** [CSV Import Template][template]
+**Download:** [CSV Import Template]({% image_buster /assets/download_file/braze-user-import-template-csv.xlsx %})
 
 ### Importing with user alias
 
@@ -63,7 +63,7 @@ When you provide both a `user_alias_name` and `user_alias_label` in your import,
 You can't use a CSV import to update an existing user with a `user_alias_name` if they already have an `external_id`. Instead, this will create a new user profile with the associated `user_alias_name`. To associate an alias-only user with an `external_id`, use the [Identify users endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_identify/).
 {% endalert %}
 
-**Download:** [CSV Alias Import Template][template_alias]
+**Download:** [CSV Alias Import Template]({% image_buster /assets/download_file/braze-user-import-alias-template-csv.xlsx %})
 
 ### Importing with Braze ID
 
@@ -119,8 +119,8 @@ Setting `language` or `country` on a user via CSV import or API will prevent Bra
 | `dob` | String | Must be passed in the format "YYYY-MM-DD" (for example, `1980-12-21`). This will import your user's Date of Birth and enable you to target users whose birthday is "today". | No |
 | `gender` | String | "M", "F", "O" (other), "N" (not applicable), "P" (prefer not to say), or nil (unknown). | No |
 | `home_city` | String | The home city of your users as they have indicated (for example, `London`). | No |
-| `language` | String | Language must be passed to Braze in the ISO-639-1 standard (for example, `en`). <br>Refer to our [list of accepted languages][1]. | No |
-| `phone` | String | A telephone number as indicated by your users, in `E.164` format (for example, `+442071838750`). <br> Refer to [User Phone Numbers][2] for formatting guidance. | No |
+| `language` | String | Language must be passed to Braze in the ISO-639-1 standard (for example, `en`). <br>Refer to our [list of accepted languages]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/language_codes/). | No |
+| `phone` | String | A telephone number as indicated by your users, in `E.164` format (for example, `+442071838750`). <br> Refer to [User Phone Numbers]({{site.baseurl}}/user_guide/message_building_by_channel/sms/phone_numbers/user_phone_numbers/) for formatting guidance. | No |
 | `email_open_tracking_disabled` | Boolean | true or false accepted.  Set to true to disable the open tracking pixel from being added to all future emails sent to this user.   | No |
 | `email_click_tracking_disabled` | Boolean | true or false accepted.  Set to true to disable the click tracking for all links within a future email, sent to this user. | No |
 | `email_subscribe` | String | Available values are `opted_in` (explicitly registered to receive email messages), `unsubscribed` (explicitly opted out of email messages), and `subscribed` (neither opted in nor out). | No |
@@ -211,7 +211,7 @@ To download a CSV template, refer to the sections [Importing with external ID](#
 CSV imports are case sensitive. This means capital letters in CSV imports will write the field as a custom attribute instead of a standard one. For example, "email" is correct, but "Email" would be written as a custom attribute.
 {% endalert %}
 
-![][3]
+![]({% image_buster /assets/img/importcsv.png %})
 
 Once the upload is complete, you will see a modal with a preview of the contents of your file. All the information in this table is based on the values in the top few rows of your CSV file. For column headers, standard attributes will be written in normal text, while custom attributes will be italicized and have their type noted in parentheses. There will also be a short summary of your file at the top of the pop-up.
 
@@ -221,7 +221,7 @@ If Braze notices something malformed in your file during the upload, these error
 
 Malformed rows and rows lacking an external ID will not be imported. All other errors can be imported, but may interfere with filtering when creating a segment. For more information, skip to the [Troubleshooting](#troubleshooting) section.
 
-![CSV upload completed with errors involving mixed data types in a single column][4]{: style="max-width:70%"}
+![CSV upload completed with errors involving mixed data types in a single column]({% image_buster /assets/img/importcsv2.png %}){: style="max-width:70%"}
 
 {% alert warning %}
 Errors are based solely on data type and file structure. For example, a poorly formatted email address would still be imported as it can still be parsed as a string.

@@ -13,7 +13,7 @@ Selections are groups of data that can be used to personalize a message for each
 
 After creating a [catalog]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalog/), you can further reference your catalog data by incorporating selections in your Braze campaigns or recommendations.
 
-![The Selections section in an example catalog.][1]
+![The Selections section in an example catalog.]({% image_buster /assets/img_archive/catalog_selections1.png %})
 
 ## Things to know
 
@@ -37,7 +37,7 @@ To create a selection, do the following.
 
 Using any Liquid in catalogs, such as custom attributes and custom events, can result in different results returned for each user in your selection.
 
-![Filter settings for catalog selection where the attribute is set to a Liquid custom attribute.][7]
+![Filter settings for catalog selection where the attribute is set to a Liquid custom attribute.]({% image_buster /assets/img_archive/catalog_selections7.png %})
 
 ## Using selections in messaging
 
@@ -51,7 +51,7 @@ After creating your selection, personalize your messages with Liquid to insert t
 5. For **Information to Display**, select which fields from the catalog should be included for each item.
 6. Click the **Copy** icon and paste the Liquid wherever it needs to go in your message.
 
-![The Add Personalization modal with the following selections: "Catalog Items" for "Personalization Type", "Games" for "Catalog Name", "Selections" for "Selection Type", "game_selection" for "Selection", and "title" and "description_en" for "Information to Display".][6]{: style="max-width:70%;"}
+![The Add Personalization modal with the following selections: "Catalog Items" for "Personalization Type", "Games" for "Catalog Name", "Selections" for "Selection Type", "game_selection" for "Selection", and "title" and "description_en" for "Information to Display".]({% image_buster /assets/img_archive/catalog_selections6.png %}){: style="max-width:70%;"}
 
 ## Use case
 
@@ -59,19 +59,19 @@ Let's say you own a meal delivery service and want to send a personalized messag
 
 Using a catalog with your meal delivery service's information for the meal name, price, image, and category of the meal, you can create a selection to recommend three meals based on a user's most recently viewed category.
 
-![An example of a selection for a meal delivery service with two filters: one that identifies a product type as a meal, and one that identifies the category as the most recently viewed. The selection is set to randomize the order in which the three results are returned.][2]{: style="max-width:90%;"}
+![An example of a selection for a meal delivery service with two filters: one that identifies a product type as a meal, and one that identifies the category as the most recently viewed. The selection is set to randomize the order in which the three results are returned.]({% image_buster /assets/img_archive/catalog_selections2.png %}){: style="max-width:90%;"}
 
 To use this catalog and selection in a campaign, use the **Add Personalization** modal in the message composition section of building a campaign. In this example, we've selected the catalog with your meal delivery service's information, and the selection for meal recommendations based on the most recently viewed category. This allows us to display the meal name and price. To further build your message, you can use the selection to also add an image of the first recommended meal.
 
-![A Content Card with the header "You will LOVE these highly rated meals!" with the selection "recommendations_be_recent_category" in message composition section.][3]{: style="max-width:90%;"}
+![A Content Card with the header "You will LOVE these highly rated meals!" with the selection "recommendations_be_recent_category" in message composition section.]({% image_buster /assets/img_archive/catalog_selections3.png %}){: style="max-width:90%;"}
 
 For example, say you have a user whose most recently viewed category is "Chicken". Using the set personalization and a Content Card campaign, you can send three meal recommendations that include chicken for this user.
 
-![A Content Card with an image of chargrilled lemon chicken, and a list of three meal recommendations that include chicken based on the user's most recently viewed category.][4]{: style="max-width:90%;"}
+![A Content Card with an image of chargrilled lemon chicken, and a list of three meal recommendations that include chicken based on the user's most recently viewed category.]({% image_buster /assets/img_archive/catalog_selections4.png %}){: style="max-width:90%;"}
 
 Using the same personalization, you can also send three meal recommendations for a user whose most recently viewed category is "Beef".
 
-![A Content Card with an image of beef stroganoff, and a list of two meal recommendations that include beef based on the user's most recently viewed category.][5]{: style="max-width:90%;"}
+![A Content Card with an image of beef stroganoff, and a list of two meal recommendations that include beef based on the user's most recently viewed category.]({% image_buster /assets/img_archive/catalog_selections5.png %}){: style="max-width:90%;"}
 
 
 [1]: {% image_buster /assets/img_archive/catalog_selections1.png %}

@@ -21,6 +21,6 @@ Braze is pleased to announce that due to a number of infrastructure upgrades mad
 
 We have added the option for any Canvas step to be sent immediately.
 
-![Canvas Delay][1]
+![Canvas Delay]({% image_buster /assets/img/canvas_delay_immediate.png %})
 
 [1]: {% image_buster /assets/img/canvas_delay_immediate.png %}

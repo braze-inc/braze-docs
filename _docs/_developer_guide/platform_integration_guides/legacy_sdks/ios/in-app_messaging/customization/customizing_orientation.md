@@ -46,7 +46,7 @@ Following this, all in-app messages will be displayed in the supported orientati
 
 ## Setting orientation per in-app message
 
-You may alternatively set orientation on a per-message basis. To do this, set an [in-app message delegate][1]. Then, in your `beforeInAppMessageDisplayed:` delegate method, set the `orientation` property on the `ABKInAppMessage`:
+You may alternatively set orientation on a per-message basis. To do this, set an [in-app message delegate]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/in-app_messaging/customization/setting_delegates/). Then, in your `beforeInAppMessageDisplayed:` delegate method, set the `orientation` property on the `ABKInAppMessage`:
 
 {% tabs %}
 {% tab OBJECTIVE-C %}
@@ -83,7 +83,7 @@ For iPads, in-app messages will appear in the user's preferred orientation style
 
 For additional information, see the following header file:
 
-- [`ABKInAppMessage.h`][14]
+- [`ABKInAppMessage.h`](https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/include/ABKInAppMessage.h)
 
 [1]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/in-app_messaging/customization/setting_delegates/
 [14]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/include/ABKInAppMessage.h

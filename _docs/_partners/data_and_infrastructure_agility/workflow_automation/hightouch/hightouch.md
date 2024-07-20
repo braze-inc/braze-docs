@@ -9,7 +9,7 @@ search_tag: Partner
 
 # Hightouch
 
-> [Hightouch][1] is a modern data integration platform that enables you to sync customer, product, or proprietary data from your warehouse or data lake to any app of your choice, all without assistance from your IT or engineering teams.
+> [Hightouch](https://hightouch.io) is a modern data integration platform that enables you to sync customer, product, or proprietary data from your warehouse or data lake to any app of your choice, all without assistance from your IT or engineering teams.
 
 The Braze and Hightouch integration allows you to build better campaigns on Braze with up-to-date customer data from your data warehouse. By automatically syncing customer data into Braze, you no longer need to worry about data consistency and can focus on building world-class customer experiences. 
 
@@ -21,7 +21,7 @@ This integration also allows you to [import user cohorts to Braze]({{site.baseur
 |---|---|
 | Hightouch account | A Hightouch account is required to take advantage of this partnership.
 | Braze REST API key | A Braze REST API key with `users.track` and `users.export.ids` permissions. <br><br> This can be created in the Braze dashboard from **Settings** > **API Keys**. |
-| Braze REST endpoint  | Your REST endpoint URL. Your endpoint will depend on the [Braze URL for your instance][2].<br><br>Hightouch requires the name of the cluster your Braze instance sits on. For example, if your Braze endpoint is `https://rest.iad-01.braze.com`, you only need `iad-01`.|
+| Braze REST endpoint  | Your REST endpoint URL. Your endpoint will depend on the [Braze URL for your instance]({{site.baseurl}}/developer_guide/rest_api/basics/#endpoints).<br><br>Hightouch requires the name of the cluster your Braze instance sits on. For example, if your Braze endpoint is `https://rest.iad-01.braze.com`, you only need `iad-01`.|
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## Use cases
@@ -37,7 +37,7 @@ This integration also allows you to [import user cohorts to Braze]({{site.baseur
 
 1. On the Hightouch platform, in the **Destinations** section, click **Add destination**.
 2. Select **Braze** from the list of available destinations.
-3. Provide your Braze REST endpoint (excluding "https://rest.") and your Braze REST API Key.<br><br>![][3]
+3. Provide your Braze REST endpoint (excluding "https://rest.") and your Braze REST API Key.<br><br>![]({% image_buster /assets/img/hightouch/hightouch_braze_setup.png %})
 
 ### Step 2: Object and event syncing
 

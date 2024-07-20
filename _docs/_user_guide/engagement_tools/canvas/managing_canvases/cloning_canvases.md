@@ -21,12 +21,12 @@ To clone your Canvas, do the following:
 2. Identify the Canvas you want to create a copy of in the Canvas Flow workflow. You can clone Canvases with a **Draft**, **Active**, or **Stopped** status. 
 3. Click <i class="fas fa-ellipsis-vertical"></i> **More actions** and select **Clone to Canvas Flow**.
 
-![][1]{: style="max-width:25%;"}
+![]({% image_buster /assets/img_archive/clone_to_v2_workflow.png %}){: style="max-width:25%;"}
 
 {: start="4"}
 4. Enter the name of your new Canvas and click **Clone to Canvas Flow**. 
 
-![][2]{: style="max-width:70%;"}
+![]({% image_buster /assets/img_archive/clone_to_v2_modal.png %}){: style="max-width:70%;"}
 
 Now, you have two versions of your Canvas: the original Canvas and the Canvas Flow version. Your original Canvas still has its original status, and the cloned Canvas has a **Draft** status. You can still access the original Canvas, but Braze recommends using the Canvas Flow workflow to continue building your Canvases.
 
@@ -36,7 +36,7 @@ Previously, some Canvases with branching were unable to be cloned. Now, you can 
 If you clone an active Canvas, Braze will continue to send users through the original Canvas. We recommend stopping a Canvas before cloning to avoid sending duplicate messages to users from both Canvases.
 {% endalert %}
 
-![Canvas dashboard with two Canvases listed: V2 Copy of Canvas V1 and Canvas V1. The V2 Copy of Canvas V1 has an icon that indicates it is using the Canvas Flow workflow.][3]
+![Canvas dashboard with two Canvases listed: V2 Copy of Canvas V1 and Canvas V1. The V2 Copy of Canvas V1 has an icon that indicates it is using the Canvas Flow workflow.]({% image_buster /assets/img_archive/clone_to_v2_dashboard.png %})
 
 You've completed cloning your Canvas into the Canvas Flow workflow. Now, you can continue building your Canvases in this updated experience!
 

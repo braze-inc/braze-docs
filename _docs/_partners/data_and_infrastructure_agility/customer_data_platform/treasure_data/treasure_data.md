@@ -10,7 +10,7 @@ search_tag: Partner
 
 # Treasure Data
 
-> [Treasure Data][4] is a customer data platform (CDP) that collects and routes information from multiple sources to a variety of other locations in your marketing stack.
+> [Treasure Data](https://www.treasuredata.com/) is a customer data platform (CDP) that collects and routes information from multiple sources to a variety of other locations in your marketing stack.
 
 The Braze and Treasure Data integration allows you to write job results from Treasure Data directly to Braze, letting you:
 * **Map external IDs**: Map IDs to the Braze user account from your CRM system. 
@@ -23,7 +23,7 @@ The Braze and Treasure Data integration allows you to write job results from Tre
 | --- | --- |
 | Treasure Data account | A [Treasure Data account](https://www.treasuredata.com/custom-demo/) is required to take advantage of this partnership. |
 | Braze REST API key | A Braze REST API key with `users.track`, `users.delete`, `users.alias.new`, `users.identify` permissions.<br><br>This can be created in the Braze dashboard from **Settings** > **API Keys**. |
-| Braze REST endpoint  | Your REST endpoint URL. Your endpoint will depend on the [Braze URL for your instance][1]. |
+| Braze REST endpoint  | Your REST endpoint URL. Your endpoint will depend on the [Braze URL for your instance]({{site.baseurl}}/developer_guide/rest_api/basics/#endpoints)). |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
 ## Use cases
@@ -38,7 +38,7 @@ In Treasure Data, navigate to the **Catalog** under the **Integrations Hub** and
 
 In the **New Authentication** prompt that shows up, name your connection and provide your Braze REST API key and REST endpoint. Select **Done** when finished.
 
-![][2]{: style="max-width:80%;"}
+![]({% image_buster /assets/img/treasure_data/braze_authentication.png %}){: style="max-width:80%;"}
 
 ### Step 2: Define your query
 
@@ -50,11 +50,11 @@ For users using HIVE to build queries, HIVE requires that any columns or tables 
 
 Next, select **Export Results** and select an existing integration authentication.
 
-![][11]{: style="max-width:80%;"}
+![]({% image_buster /assets/img/treasure_data/query_2.png %}){: style="max-width:80%;"}
 
 Define additional export results parameters as outlined in the following [customization section](#customization). In your export integration content, review the integration parameters.
 
-![The "Export Results" page. On this page are fields for "mode", "track record type", and "pre-formatted fields". For this example, "User-Track" and "Custom Events" are set to these fields, respectively.][3]{: style="max-width:80%;"}
+![The "Export Results" page. On this page are fields for "mode", "track record type", and "pre-formatted fields". For this example, "User-Track" and "Custom Events" are set to these fields, respectively.]({% image_buster /assets/img/treasure_data/braze_export_configuration.png %}){: style="max-width:80%;"}
 
 Finally, select **Done**, run your query, and validate that your data moved to Braze.
 
@@ -76,7 +76,7 @@ Visit [Treasure Data](https://docs.treasuredata.com/display/public/INT/Braze+Exp
 
 ## Webhooks
 
-Treasure Data users can ingest data through the public REST API. You can use Treasure Data to create custom webhooks into your data. To learn more, visit [Treasure Data][6]
+Treasure Data users can ingest data through the public REST API. You can use Treasure Data to create custom webhooks into your data. To learn more, visit [Treasure Data](https://docs.treasuredata.com/display/public/PD/Postback+API)
 
 [6]: https://docs.treasuredata.com/display/public/PD/Postback+API
 [1]: {{site.baseurl}}/developer_guide/rest_api/basics/#endpoints)

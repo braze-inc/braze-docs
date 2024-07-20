@@ -8,7 +8,7 @@ description: "This reference article covers how tags can and should be used in y
 
 # Conditional messaging logic
 
-> [Tags][7] allow you to include programming logic in your messaging campaigns. Tags can be used for executing conditional statements as well as for advanced use cases, like assigning variables or iterating through a block of code.
+> [Tags](https://docs.shopify.com/themes/liquid-documentation/tags) allow you to include programming logic in your messaging campaigns. Tags can be used for executing conditional statements as well as for advanced use cases, like assigning variables or iterating through a block of code.
 
 {% raw %}
 A tag must be wrapped in `{% %}`.
@@ -42,7 +42,7 @@ Buy now! Would 5% off convince you?
 
 ## Conditional logic
 
-You can include many types of [intelligent logic within messages][1], such as a conditional statement. See the following example which uses [conditionals][8] to internationalize a campaign:
+You can include many types of [intelligent logic within messages](http://docs.shopify.com/themes/liquid-documentation/basics), such as a conditional statement. See the following example which uses [conditionals](http://docs.shopify.com/themes/liquid-documentation/tags/control-flow-tags "Control Flow Tags") to internationalize a campaign:
 {% raw %}
 
 ```liquid
@@ -112,7 +112,7 @@ The following tag allows you to specify a message for users with a null "first n
 ```
 {% endraw %} 
 
-![][36]{: style="max-width:60%;"}
+![]({% image_buster /assets/img/value_null.png %}){: style="max-width:60%;"}
 
 {% raw %}
 ```liquid
@@ -143,11 +143,11 @@ The following tag allows you to specify a message for users that have a blank "f
 
 ## Referencing custom attributes
 
-After you have [created custom attributes][2], you can reference these custom attributes in your Liquid messaging.
+After you have [created custom attributes]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#managing-custom-attributes), you can reference these custom attributes in your Liquid messaging.
 
 When using conditional logic, you'll need to know the custom attribute's data type to ensure you're using the correct syntax. From the **Custom Attributes** page in the dashboard, look for the data type associated with your custom attribute, then reference the following examples listed for each data type.
 
-![Selecting a data type for a custom attribute. The example provided shows an attribute of Favorite_Category with a data type of string.][20]{: style="max-width:80%;"}
+![Selecting a data type for a custom attribute. The example provided shows an attribute of Favorite_Category with a data type of string.]({% image_buster /assets/img_archive/custom_attribute_data_type.png %}){: style="max-width:80%;"}
 
 {% alert tip %}
 Strings and arrays require straight apostrophes around them, while booleans and integers will never have apostrophes.
@@ -155,7 +155,7 @@ Strings and arrays require straight apostrophes around them, while booleans and 
 
 #### Boolean
 
-[Booleans][9] are binary values, and can be set to either `true` or `false`, such as `registration_complete: true`. Boolean values don't have apostrophes around them.
+[Booleans]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#booleans) are binary values, and can be set to either `true` or `false`, such as `registration_complete: true`. Boolean values don't have apostrophes around them.
 
 {% raw %}
 
@@ -167,7 +167,7 @@ Strings and arrays require straight apostrophes around them, while booleans and 
 
 #### Number
 
-[Numbers][10] are numeric values, which can be integers or floats. For example, a user may have `shoe_size: 10` or `levels_completed: 287`. Number values don't have apostrophes around them.
+[Numbers]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#numbers) are numeric values, which can be integers or floats. For example, a user may have `shoe_size: 10` or `levels_completed: 287`. Number values don't have apostrophes around them.
 
 {% raw %}
 
@@ -189,7 +189,7 @@ You can also use other [basic operators](https://shopify.dev/docs/themes/liquid/
 
 #### String
 
-A [string][11] is made up of alphanumeric characters and stores a piece of data about your user. For example, you may have `favorite_color: red` or `phone_number: 3025981329`. String values must have apostrophes around them.
+A [string]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#strings) is made up of alphanumeric characters and stores a piece of data about your user. For example, you may have `favorite_color: red` or `phone_number: 3025981329`. String values must have apostrophes around them.
 
 {% raw %}
 
@@ -203,7 +203,7 @@ For strings, you can use both "==" or "contains" in your Liquid.
 
 #### Array
 
-An [array][12] is a list of information about your user. For example, a user may have `last_viewed_shows: stranger things, planet earth, westworld`. Array values must have apostrophes around them.
+An [array]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#arrays) is a list of information about your user. For example, a user may have `last_viewed_shows: stranger things, planet earth, westworld`. Array values must have apostrophes around them.
 
 {% raw %}
 
@@ -217,7 +217,7 @@ For arrays, you must use "contains" and can't use "==".
 
 #### Time
 
-A time stamp of when an event took place. [Time][13] values must have a [math filter][5] on them to be used in conditional logic.
+A time stamp of when an event took place. [Time]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#time) values must have a [math filter]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/filters/#math-filters) on them to be used in conditional logic.
 
 {% raw %}
 

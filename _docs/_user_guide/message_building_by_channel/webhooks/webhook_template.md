@@ -22,7 +22,7 @@ Go to **Templates** > **Webhook Templates**.
 If you are using the [older navigation]({{site.baseurl}}/navigation), you can find this page under **Engagement** > **Templates & Media** > **Webhook Templates**.
 {% endalert %}
 
-![Webhook Templates tab under the Templates and Media page on the Braze dashboard.][1]
+![Webhook Templates tab under the Templates and Media page on the Braze dashboard.]({% image_buster /assets/img_archive/webhook_template_campaign.png %})
 
 ## Step 2: Create a new template
 
@@ -32,7 +32,7 @@ You can now create a new template, edit an existing template, or use one of the 
 
 Webhook templates can be used for many different use cases.  You can start by entering a unique template name to be used.  You can also fill in the webhook URL, the Request Body, Request Headers, and select the HTTP Method to be used.
 
-![Compose tab when creating a webhook template. Available fields are language, webhook URL, and request body.][2]{: style="max-width:80%"}
+![Compose tab when creating a webhook template. Available fields are language, webhook URL, and request body.]({% image_buster /assets/img_archive/Webhook_template_test.png %}){: style="max-width:80%"}
 
 If you want to see how your webhook looks before sending it out to your users, you can send a test webhook through the **Settings** tab.
 
@@ -40,7 +40,7 @@ If you want to see how your webhook looks before sending it out to your users, y
 
 Be sure to save your template by clicking the **Save Template** button. You're now ready to use this template in any campaign you choose.
 
-![Webhook Template Save][3]{: style="max-width:50%"}
+![Webhook Template Save]({% image_buster /assets/img_archive/Webhook_template_save.png %}){: style="max-width:50%"}
 
 {% alert note %}
 Edits made to an existing template will not be reflected in campaigns that were created using the previous versions of that template.

@@ -10,13 +10,13 @@ search_tag: Partner
 
 # AccuWeather
 
-> [AccuWeather](https://www.accuweather.com/) is a media company that provides weather forecasting services worldwide. With AccuWeather, you can enrich and personalize your marketing campaigns, as well as automate translations through the use of Braze [Connected Content][60]. 
+> [AccuWeather](https://www.accuweather.com/) is a media company that provides weather forecasting services worldwide. With AccuWeather, you can enrich and personalize your marketing campaigns, as well as automate translations through the use of Braze [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/about_connected_content/). 
 
 ## Prerequisites
 
 | Requirement | Description |
 |---|---|
-| AccuWeather API Key | Contact your AccuWeather account manager for compatible API keys to use in your request URLs.<br><br>Further instructions can be found on the [AccuWeather Enterprise API][57] page. |
+| AccuWeather API Key | Contact your AccuWeather account manager for compatible API keys to use in your request URLs.<br><br>Further instructions can be found on the [AccuWeather Enterprise API](https://apidev.accuweather.com/developers/) page. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## Available AccuWeather APIs
@@ -25,15 +25,15 @@ The following are the AccuWeather APIs you can reference within your Braze campa
 
 | API | Description |
 |---|---|
-|[Locations][48] | Get a location key for your desired location. Use the location key to retrieve weather data from the Forecast or Current Conditions API. |
-| [Forecast][49] | Get forecast information for a specific location. |
-| [Current Conditions][50] | Get Current Conditions data for a specific location. |
-| [Indices][51] | Get daily index values for a specific location. Index availability varies by location. |
-| [Weather Alarms][52] | Get Weather Alarms for a specific location. AccuWeather Weather Alarms are determined using the daily forecasts for a location. An alarm exists for a location if the forecast weather meets or exceeds [specific thresholds][58]. |
-| [Alerts][53] | Get severe weather alerts from official Government Meteorological Agencies and leading global weather alert providers. |
-| [Imagery][54] | Get radar and satellite images. |
-| [Tropical][55] | Get current position, past positions, and forecasts for tropical cyclones worldwide. |
-| [Translations][56] | Get a list of available languages. Get translations for specific groups of phrases. |
+|[Locations](https://apidev.accuweather.com/developers/locationsAPIguide) | Get a location key for your desired location. Use the location key to retrieve weather data from the Forecast or Current Conditions API. |
+| [Forecast](https://apidev.accuweather.com/developers/forecastsAPIguide) | Get forecast information for a specific location. |
+| [Current Conditions](https://apidev.accuweather.com/developers/currentConditionsAPIGuide) | Get Current Conditions data for a specific location. |
+| [Indices](https://apidev.accuweather.com/developers/indicesApiGuide) | Get daily index values for a specific location. Index availability varies by location. |
+| [Weather Alarms](https://apidev.accuweather.com/developers/weatheralarmsAPIguide) | Get Weather Alarms for a specific location. AccuWeather Weather Alarms are determined using the daily forecasts for a location. An alarm exists for a location if the forecast weather meets or exceeds [specific thresholds](https://apidev.accuweather.com/developers/weatheralarms). |
+| [Alerts](https://apidev.accuweather.com/developers/alertsApiGuide) | Get severe weather alerts from official Government Meteorological Agencies and leading global weather alert providers. |
+| [Imagery](https://apidev.accuweather.com/developers/imageryAPIguide) | Get radar and satellite images. |
+| [Tropical](https://apidev.accuweather.com/developers/tropicalAPIGuide) | Get current position, past positions, and forecasts for tropical cyclones worldwide. |
+| [Translations](https://apidev.accuweather.com/developers/translationsApiGuide) | Get a list of available languages. Get translations for specific groups of phrases. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## Connected Content example
@@ -56,7 +56,7 @@ Enjoy the weather!
 ```
 {% endraw %}
 
-![A Connected Content push message that says "It's raining! Grab an Umbrella!" shown on an Android device][17]{: style="max-width:40%"}
+![A Connected Content push message that says "It's raining! Grab an Umbrella!" shown on an Android device]({% image_buster /assets/img_archive/connected_weather_push2.png %} "Connected Content Push Usage Example"){: style="max-width:40%"}
 
 A breakdown of the two Connected Content calls can be found in the following examples.
 

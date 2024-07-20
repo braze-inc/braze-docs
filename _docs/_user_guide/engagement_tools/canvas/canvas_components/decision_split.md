@@ -15,7 +15,7 @@ tool: Canvas
 
 This component can be used to create Canvas branches based on whether a user matches a query.
 
-![][1]{: style="float:right;max-width:20%;margin-left:15px;margin-top:15px;margin-bottom:15px;"}
+![]({% image_buster /assets/img/decision-split-1.png %}){: style="float:right;max-width:20%;margin-left:15px;margin-top:15px;margin-bottom:15px;"}
 
 ## Create a decision split 
 
@@ -23,9 +23,9 @@ To create a decision split in your workflow, first add a step to your Canvas. Dr
 
 ### Define your split
 
-How do you want to split your users? You can use [segments][5] and filters to draw the line. Essentially, you're creating a `true` or `false` query that will evaluate your users and then funnel them to one step or another. You must use at least one segment or one filter. You do not need to use both a segment and a filter.
+How do you want to split your users? You can use [segments]({{site.baseurl}}/user_guide/engagement_tools/segments/) and filters to draw the line. Essentially, you're creating a `true` or `false` query that will evaluate your users and then funnel them to one step or another. You must use at least one segment or one filter. You do not need to use both a segment and a filter.
 
-![][2]{: style="max-width:90%;"}
+![]({% image_buster /assets/img/define-split-2.png %}){: style="max-width:90%;"}
 
 {% alert note %} 
 By default, segments and filters for a Decision Split component are checked right after receiving a previous step, unless you add a delay. 
@@ -37,7 +37,7 @@ Using a decision split can help you distinguish paths for your users based on th
 
 Let's say that you're creating an onboarding flow. You might start with a welcome email upon signing up. Then, two days later, you want to send a push message, but only to users who are push enabled. After that, all users get another email three days after they signed up. You could also use your decision split to send an in-app message to users who don't have push enable to encourage them to enable push.
 
-![][3]{: style="max-width:60%;"}
+![]({% image_buster /assets/img/use-split-onboarding-3.png %}){: style="max-width:60%;"}
 
 If there is no step following one of the paths, users who go down that path will exit the Canvas. 
 

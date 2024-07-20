@@ -13,7 +13,7 @@ search_tag: Partner
 
 > [Tealium](https://tealium.com/) is a universal data hub and customer data platform composed of EventStream, AudienceStream, and iQ Tag Management that enables you to connect mobile, web, and alternative data from third-party sources. Tealium's connection to Braze enables a data flow of custom events, user attributes, and purchases that empower you to act on your data in real-time.
 
-![A Tealium overview graphic showing how the different Tealium products and the Braze platform fit together to activate cross-channel campaigns in real-time.][22]{: style="border:0;"}
+![A Tealium overview graphic showing how the different Tealium products and the Braze platform fit together to activate cross-channel campaigns in real-time.]({% image_buster /assets/img/tealium/tealium_overview.png %}){: style="border:0;"}
 
 The Braze and Tealium integration allows you to track your users and route data to various user analytics providers. Tealium allows you to:
 - Sync Tealium audiences with [AudienceStream]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/tealium/tealium_audience_stream/) to Braze for use in personalizing Braze campaigns and Canvases or building segments.
@@ -143,10 +143,10 @@ If you wish to use this data and these features, consider our [side-by-side]({{s
 
 Tealium requires that you first set up a valid data source for your connector to draw from.
 1. From the sidebar in Tealium under **Server-Side**, navigate to **Sources > Data Sources > + Add Data Source**.
-2. Locate your desired platform within the available categories, and name your source, this is a required field.<br>![][6]{: style="max-width:80%;margin-left:15px;margin-bottom:15px;"}
-3. From the **Event Specifications** options, choose the [event specifications](https://docs.tealium.com/server-side/event-specifications/about/) you would like to include. Event specifications help you identify the event names and required attributes to track in your installation. These specifications will be applied to incoming events.<br>![][7]{: style="max-width:80%;margin-left:15px;margin-bottom:15px;"}<br>Take some time to think about what data is most valuable to you and which specifications seem most appropriate for your use case. [Custom event specifications][19] are also available. <br>
+2. Locate your desired platform within the available categories, and name your source, this is a required field.<br>![]({% image_buster /assets/img/tealium/data_source.png %}){: style="max-width:80%;margin-left:15px;margin-bottom:15px;"}
+3. From the **Event Specifications** options, choose the [event specifications](https://docs.tealium.com/server-side/event-specifications/about/) you would like to include. Event specifications help you identify the event names and required attributes to track in your installation. These specifications will be applied to incoming events.<br>![]({% image_buster /assets/img/tealium/event_specs.png %}){: style="max-width:80%;margin-left:15px;margin-bottom:15px;"}<br>Take some time to think about what data is most valuable to you and which specifications seem most appropriate for your use case. [Custom event specifications](https://docs.tealium.com/iq-tag-management/events/about/) are also available. <br>
 4. The next dialogue advances to the **Get Code** step. The base code and event tracking code provided here serve as your installation guide. Download the provided PDF if you wish to share these instructions with your team. Select **Save & Continue** when finished.<br>
-5. You will now be able to view your saved source as well as add or remove event specs. <br>![][18]{: style="max-width:80%;margin-left:15px;margin-bottom:15px;"}<br>From the detailed data source view you can perform the following actions:
+5. You will now be able to view your saved source as well as add or remove event specs. <br>![]({% image_buster /assets/img/tealium/braze_connection.png %}){: style="max-width:80%;margin-left:15px;margin-bottom:15px;"}<br>From the detailed data source view you can perform the following actions:
 - View and copy the data source key
 - View installation instructions
 - Return to the **Get Code** page
@@ -175,7 +175,7 @@ In the dialogue that opens, select the data source you just built, and under **E
 
 Next, select **Add Connector** at the bottom of the page. Name your connector and provide your Braze API endpoint and Braze REST API key here.
 
-![][15]{: style="max-width:70%;"}
+![]({% image_buster /assets/img/tealium/create_configuration.png %}){: style="max-width:70%;"}
 
 If you have created a connector before, you may optionally use an existing one from the available connector list and modify it to fit your needs with the pencil icon or delete it with the trash icon. 
 
@@ -228,7 +228,7 @@ If you would like to modify your chosen options, select **Back** to edit or **Fi
 
 Select **Continue**.
 
-Your connector now displays in the list of connectors on your Tealium home page. <br>![][13]{: style="max-width:80%;"}
+Your connector now displays in the list of connectors on your Tealium home page. <br>![]({% image_buster /assets/img/tealium/summary_list.png %}){: style="max-width:80%;"}
 
 Make sure to **Save / Publish** your connector when finished. The actions you configured will now fire when the trigger connections are met. 
 
@@ -242,7 +242,7 @@ After your connector is up and running, you should test it to ensure it's workin
 4. Check for the action you want to validate by clicking the **Actions Triggered** entry to expand.
 5. Look for the action you want to validate and view the log status. 
 
-Refer to Tealium's [Trace documentation][21] for more detailed instructions on implementing Tealium's Trace tool.
+Refer to Tealium's [Trace documentation](https://docs.tealium.com/server-side/connectors/trace/about/) for more detailed instructions on implementing Tealium's Trace tool.
 
 ## Integration demo
 

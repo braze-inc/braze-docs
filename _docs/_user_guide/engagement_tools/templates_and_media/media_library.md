@@ -30,7 +30,7 @@ You can use the **Media Library** to:
 * Drag and drop images or folders to be uploaded
 * Delete images
 
-![Media Library page that includes an "Upload To Library" section to drag and drop or upload files. There is also a list of uploaded content in the media library.][1]
+![Media Library page that includes an "Upload To Library" section to drag and drop or upload files. There is also a list of uploaded content in the media library.]({% image_buster /assets/img_archive/media_library_main.png %})
 
 {% alert tip %} For more help with the media library, check out our [Templates & Media FAQ]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/faqs). {% endalert %}
 
@@ -72,7 +72,7 @@ For more information, refer to [In-app message creative details]({{site.baseurl}
 
 The media library acts as your dashboard's centralized location for assets, as all images are uploaded directly to it. This lets you re-use images across different messages.
 
-![Two common ways of accessing the media library depending on the message composer. One shows the email Drag and Drop Editor with the title "Images and GIFs" and a button to "Add from Media Library". The other shows the standard editors, such as push and in-app messages, with the title "Media" and a button to "Add Image".][1.5]{: style="border:none"}
+![Two common ways of accessing the media library depending on the message composer. One shows the email Drag and Drop Editor with the title "Images and GIFs" and a button to "Add from Media Library". The other shows the standard editors, such as push and in-app messages, with the title "Media" and a button to "Add Image".]({% image_buster /assets/img_archive/media_library_composers.png %}){: style="border:none"}
 
 ## Generate an image using AI {#generate-ai}
 
@@ -83,7 +83,7 @@ You can generate images for your media library using [DALL·E 2](https://openai.
 3. Select **Generate Images**. It can take about a minute for images to generate.
 4. Select <i class="fas fa-download" title="Add image to Media Library"></i> on the images you like to add them to your media library.
 
-![AI image generator modal in the media library.][6]{: style="max-width:75%"}
+![AI image generator modal in the media library.]({% image_buster /assets/img_archive/media_library_dalle.png %}){: style="max-width:75%"}
 
 Between you and Braze, any images generated using DALL·E 2 are your intellectual property. Braze will not assert any claims of copyright ownership on such images and makes no warranty of any kind with respect to any AI-generated content or images. 
 

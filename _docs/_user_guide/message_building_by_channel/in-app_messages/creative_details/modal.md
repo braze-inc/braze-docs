@@ -14,7 +14,7 @@ description: "This reference article covers the message and design requirements 
 
 > Modals appear in the center of the device's screen with a screen overlay that helps it stand out from your app in the background. These are perfect for not-so-subtly suggesting that your user take advantage of a sale or giveaway.
 
-![Two modal in-app messages side-by-side, detailing the image and text recommendations. See following sections for details.][1a]{: style="max-width: 801px; border: none;"}
+![Two modal in-app messages side-by-side, detailing the image and text recommendations. See following sections for details.]({% image_buster /assets/img/modal-spec.png %}){: style="max-width: 801px; border: none;"}
 
 ## Image specifications
 
@@ -24,7 +24,7 @@ description: "This reference article covers the message and design requirements 
 
 On a tablet or desktop browser, a modal in-app message will still sit in the center of the app screen as shown in the following screenshot.
 
-![Modal in-app message as it would appear on a large screen. Similarly to phone screens, the message sits in the center of the screen.][1b]{: style="max-width: 800px; border: none;"}
+![Modal in-app message as it would appear on a large screen. Similarly to phone screens, the message sits in the center of the screen.]({% image_buster /assets/img/modal-large-viewport.png %}){: style="max-width: 800px; border: none;"}
 
 [1a]: {% image_buster /assets/img/modal-spec.png %}
 [1b]: {% image_buster /assets/img/modal-large-viewport.png %}

@@ -14,7 +14,7 @@ tool: Canvas
 
 If you have an active Canvas that requires large-scale changes, you can use this feature to create drafts for these edits. As with any Canvas, only one user can edit a draft at a time.
 
-![An example draft Canvas with a banner that indicates to the user that they're editing a draft Canvas with an option to view the active Canvas. The footer has options to go back to the analytics view, save as draft, or launch draft.][1]
+![An example draft Canvas with a banner that indicates to the user that they're editing a draft Canvas with an option to view the active Canvas. The footer has options to go back to the analytics view, save as draft, or launch draft.]({% image_buster /assets/img_archive/canvas_draft1.png %})
 
 You can create drafts within an active Canvas to build, save, and quality-check **prior** to launching these changes in the active Canvas. A Canvas can only have one draft at a time. These drafts don't have any analytics since the draft changes haven't been launched yet.
 

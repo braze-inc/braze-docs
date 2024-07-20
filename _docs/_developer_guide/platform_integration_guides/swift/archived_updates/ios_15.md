@@ -17,7 +17,7 @@ noindex: true
 
 As part of our annual testing of iOS betas, we have identified a change made by Apple which causes certain UI navigation bars to appear transparent instead of opaque. This will be visible on iOS 15 when using Braze's default UI for Content Cards, or when web deep links are opened inside your app instead of in a separate browser app.
 
-To avoid this visual change in iOS 15, we strongly recommend you upgrade to the [Braze iOS SDK v4.3.2][1] as soon as possible, before users begin to upgrade their phone to the new iOS 15 operating system.
+To avoid this visual change in iOS 15, we strongly recommend you upgrade to the [Braze iOS SDK v4.3.2](https://github.com/Appboy/appboy-ios-sdk/releases/tag/4.3.2) as soon as possible, before users begin to upgrade their phone to the new iOS 15 operating system.
 
 ## New notification settings {#notification-settings}
 

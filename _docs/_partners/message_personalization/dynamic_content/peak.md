@@ -36,7 +36,7 @@ Based on when attributes have been updated, a selection is carried out to collec
 
 ### Step 2: Update Braze
 
-With the updated customers and associated attributes, Peak will POST these to Braze using the [`/user/track` endpoint][1], utilizing the [bulk]({{site.baseurl}}/api/endpoints/user_data/post_user_track/#making-bulk-updates) header.
+With the updated customers and associated attributes, Peak will POST these to Braze using the [`/user/track` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track/), utilizing the [bulk]({{site.baseurl}}/api/endpoints/user_data/post_user_track/#making-bulk-updates) header.
 
 On receipt of successful status codes from the API, Peak will record the successful sync between Peak and Braze.
 

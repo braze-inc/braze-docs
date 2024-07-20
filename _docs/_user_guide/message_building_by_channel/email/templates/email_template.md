@@ -27,9 +27,9 @@ If you are using the [older navigation]({{site.baseurl}}/navigation), this page 
 
 Select between **Drag-And-Drop Editor** or **HTML Editor** for your editing experience. 
 
-Next, you can choose from predesigned Braze templates, create a new template, or edit an existing template (plain or [mobile responsive][8]).
+Next, you can choose from predesigned Braze templates, create a new template, or edit an existing template (plain or [mobile responsive]({{site.baseurl}}/help/release_notes/2018/may/#mobile-responsive-email-templates)).
 
-![][2]
+![]({% image_buster /assets/img/email_templates/template2.png %})
 
 {% alert note %}
 Any existing custom HTML templates will need to be re-created using the drag-and-drop editor.
@@ -47,12 +47,12 @@ As you design your email template, if you do not include an unsubscribe link, Br
 
 Email errors are presented on the **Compose** tab of the message workflow. Errors prevent you from progressing forward. "Warnings" indicate reminders to help you follow best practices. Depending on your business, you might choose to ignore them.
 
-![Errors and warnings list from an example email.][1]{: style="float:right;max-width:40%;margin-left:15px;"}
+![Errors and warnings list from an example email.]({% image_buster /assets/img/dnd_compose_error.png %}){: style="float:right;max-width:40%;margin-left:15px;"}
 
 Here's a list of errors that are accounted for in our editor:
 
 - Incorrect Liquid syntax
-- [Email bodies larger than 400kb; bodies are highly recommended to be less than 102kb][7]
+- [Email bodies larger than 400kb; bodies are highly recommended to be less than 102kb]({{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices/)
 - Templates without an unsubscribe link
 - Emails with a blank **Body** or **Subject**
 - Emails with no unsubscribe link
@@ -67,7 +67,7 @@ You can also switch between desktop, mobile, and plaintext views to get a sense 
 
 When you're ready for a final check, select **Test Send** and send a test message to yourself or a group of content testers to ensure that your email displays properly on a variety of devices and email clients.
 
-![Example email preview to be sent for testing.][6]
+![Example email preview to be sent for testing.]({% image_buster /assets/img_archive/newEmailTest.png %})
 
 If you see any issues with your template or want to make any changes, click **Edit Email** to return to the editor.
 
@@ -87,7 +87,7 @@ As you create more email templates, you can [duplicate]({{site.baseurl}}/user_gu
 
 To use your email for an API campaign, you need an `email_template_id`, which can be found at the bottom of any email template created in Braze.
 
-![API identifier located at the bottom of an email template.][5]
+![API identifier located at the bottom of an email template.]({% image_buster /assets/img/email_templates/template5.png %})
 
 ### Commenting on email templates
 
@@ -101,9 +101,9 @@ You can collaborate and comment on email templates in the drag-and-drop editor.
 
 After your template is saved, users can see icons over unaddressed comments. Select **Resolve** to resolve these comments.
 
-![An email template comment that reads "Looks good to me".][10]
+![An email template comment that reads "Looks good to me".]({% image_buster /assets/img/email_templates/template_comment.png %})
 
-For answers to frequently asked questions about email templates, check out our [Templates FAQ][9].
+For answers to frequently asked questions about email templates, check out our [Templates FAQ]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates/faq/).
 
 [1]: {% image_buster /assets/img/dnd_compose_error.png %}
 [2]: {% image_buster /assets/img/email_templates/template2.png %}

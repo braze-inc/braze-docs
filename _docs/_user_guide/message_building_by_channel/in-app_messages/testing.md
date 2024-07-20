@@ -24,11 +24,11 @@ In **Preview**, the view of your message might not be identical to its actual re
 
 Preview what your message will look like to a random user, a specific user, or a customized user—the latter two are especially useful if your message contains personalization or multiple languages. You can also preview messages for either mobile devices or tablets to get a better idea of what users will experience.
 
-![Compose tab when building an in-app message showing the preview of what the message will look like. A user is not selected, so the Liquid added in the body section displays as is.][1]
+![Compose tab when building an in-app message showing the preview of what the message will look like. A user is not selected, so the Liquid added in the body section displays as is.]({%image_buster /assets/img/in-app-message-preview.png %})
 
 Braze has three generations of in-app messages available. You can fine-tune to which devices your messages should be sent, based on which Generation they support.
 
-![Switching between generations when previewing an in-app message.][2]{: height="50%" width="50%"}
+![Switching between generations when previewing an in-app message.]({% image_buster /assets/img/iam-generations.gif %}){: height="50%" width="50%"}
 
 ## Test
 
@@ -40,7 +40,7 @@ To send a test to either [Content Test Groups]({{site.baseurl}}/user_guide/admin
 
 You can also preview messages from the **Test** tab, as though you were a user. You can select a specific user, a random user, or create a custom user.
 
-![Test tab when building an in-app message. "Preview message as user" is set to "Custom User" with available profile fields appearing as configurable options.][3]
+![Test tab when building an in-app message. "Preview message as user" is set to "Custom User" with available profile fields appearing as configurable options.]({% image_buster /assets/img/iam-user-preview.png %})
 
 ### Test checklist
 

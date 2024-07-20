@@ -19,13 +19,13 @@ noindex: true
 Our tvOS SDK currently supports analytics functionality. To add a tvOS app in your dashboard, open a [support ticket]({{site.baseurl}}/braze_support/).
 {% endalert %}
 
-The tvOS Braze SDK should be installed or updated using [CocoaPods][apple_initial_setup_1], a dependency manager for Objective-C and Swift projects. CocoaPods provides added simplicity for integration and updating.
+The tvOS Braze SDK should be installed or updated using [CocoaPods](http://cocoapods.org/), a dependency manager for Objective-C and Swift projects. CocoaPods provides added simplicity for integration and updating.
 
 ## tvOS SDK CocoaPods integration
 
 ### Step 1: Install CocoaPods
 
-Installing the SDK via the tvOS [CocoaPods][apple_initial_setup_1] automates the majority of the installation process for you. Before beginning this process, ensure that you are using [Ruby version 2.0.0][apple_initial_setup_2] or greater.
+Installing the SDK via the tvOS [CocoaPods](http://cocoapods.org/) automates the majority of the installation process for you. Before beginning this process, ensure that you are using [Ruby version 2.0.0](https://www.ruby-lang.org/en/installation/) or greater.
 
 Run the following command to get started:
 
@@ -33,8 +33,8 @@ Run the following command to get started:
 $ sudo gem install cocoapods
 ```
 
-- If you are prompted to overwrite the `rake` executable, refer to [Getting started][apple_initial_setup_3] on CocoaPods.org for further details.
-- If you have issues regarding CocoaPods, refer to the [CocoaPods troubleshooting guide][apple_initial_setup_25].
+- If you are prompted to overwrite the `rake` executable, refer to [Getting started](http://guides.cocoapods.org/using/getting-started.html "CocoaPods Installation Directions") on CocoaPods.org for further details.
+- If you have issues regarding CocoaPods, refer to the [CocoaPods troubleshooting guide](http://guides.cocoapods.org/using/troubleshooting.html "CocoaPods Troubleshooting Guide").
 
 ### Step 2: Constructing the Podfile
 
@@ -59,7 +59,7 @@ pod install
 
 At this point, you should be able to open the new Xcode project workspace created by CocoaPods. Make sure to use this Xcode workspace instead of your Xcode project. 
 
-![][apple_initial_setup_15]
+![]({% image_buster /assets/img_archive/podsworkspace.png %})
 
 ### Step 4: Updating your app delegate
 
@@ -181,7 +181,7 @@ This method would replace the `startWithApiKey:inApplication:withLaunchOptions:`
 - `launchOptions`: The options `NSDictionary` that you get from `application:didFinishLaunchingWithOptions:`.
 - `appboyOptions`: An optional `NSDictionary` with startup configuration values for Braze.
 
-See [Appboy.h][apple_initial_setup_5] for a list of Braze startup keys.
+See [Appboy.h](https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/include/Appboy.h) for a list of Braze startup keys.
 
 ## Appboy.sharedInstance() and Swift nullability
 Differing somewhat from common practice, the `Appboy.sharedInstance()` singleton is optional. This is because `sharedInstance` is `nil` before `startWithApiKey:` is called, and there are some non-standard but not-invalid implementations in which a delayed initialization can be used.
@@ -190,10 +190,10 @@ If you call `startWithApiKey:` in your `didFinishLaunchingWithOptions:` delegate
 
 ## Manual integration options
 
-You can also integrate our tvOS SDK manually - simply grab the Framework from our [Public Repository][1] and initialize Braze as outlined in the preceding sections.
+You can also integrate our tvOS SDK manually - simply grab the Framework from our [Public Repository](https://github.com/appboy/appboy-ios-sdk) and initialize Braze as outlined in the preceding sections.
 
 ## Identifying users and reporting analytics
-See our [iOS documentation][3] for information about setting user ids, logging custom events, setting user attributes. We also recommend familiarizing yourself with our [event naming conventions]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/event_naming_conventions/).
+See our [iOS documentation]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/setting_user_ids/) for information about setting user ids, logging custom events, setting user attributes. We also recommend familiarizing yourself with our [event naming conventions]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/event_naming_conventions/).
 
 [1]: https://github.com/appboy/appboy-ios-sdk
 [3]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/setting_user_ids/

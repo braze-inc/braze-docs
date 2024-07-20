@@ -25,7 +25,7 @@ When setting out to recommend items to your customers, there are a few approache
 
 ### AI Personalized recommendations {#ai}
 
-Part of the [AI item recommendations][1] feature, AI Personalized recommendations takes advantage of deep learning to predict what your users are most likely to be interested in next based on what they’ve shown interest for in the past. This method provides a dynamic and tailored recommendation system that adapts to user behavior.
+Part of the [AI item recommendations]({{site.baseurl}}/ai_item_recommendations) feature, AI Personalized recommendations takes advantage of deep learning to predict what your users are most likely to be interested in next based on what they’ve shown interest for in the past. This method provides a dynamic and tailored recommendation system that adapts to user behavior.
 
 AI Personalized recommendations use the last 6 months of item interaction data, like purchases or custom events, to build the recommendation model. For users without enough data for a personalized list, the most popular items serve as a fallback so your users are still getting relevant suggestions.
 
@@ -40,7 +40,7 @@ AI Personalized recommendations work best with hundreds or thousands of items an
 
 ### Most popular item recommendations {#most-popular}
 
-In addition to the "AI Personalized" model, the [AI item recommendations][1] feature also includes a recommendation model for "Most popular", which features items that users engage with most.
+In addition to the "AI Personalized" model, the [AI item recommendations]({{site.baseurl}}/ai_item_recommendations) feature also includes a recommendation model for "Most popular", which features items that users engage with most.
 
 Based on the interaction data being tracked, use cases for this model could include recommending:
 
@@ -51,7 +51,7 @@ Based on the interaction data being tracked, use cases for this model could incl
 
 ### Most recent item recommendations {#most-recent}
 
-In addition to the "AI Personalized" model, the [AI item recommendations][1] feature also includes a recommendation model for "Most recent", which features items that users engage with most. Use this model to reduce churn by encouraging lapsing users to re-engage with relevant content.
+In addition to the "AI Personalized" model, the [AI item recommendations]({{site.baseurl}}/ai_item_recommendations) feature also includes a recommendation model for "Most recent", which features items that users engage with most. Use this model to reduce churn by encouraging lapsing users to re-engage with relevant content.
 
 Based on the interaction data being tracked, use cases for this model could include recommending:
 

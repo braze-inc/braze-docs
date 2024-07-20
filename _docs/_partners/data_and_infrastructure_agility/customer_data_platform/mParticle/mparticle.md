@@ -59,7 +59,7 @@ While this is the default option in mParticle, most Braze users opt to use [sing
 This solution is not recommended if you have more than a few audiences because custom attributes can be up to 255 characters long, so you will not be able to store dozens or hundreds of audiences on a user profile using this method. If you have a large number of cohorts per user, we strongly recommend the "one attribute per segment" configuration.
 {% endalert %}
 
-![mParticle segment membership][6]
+![mParticle segment membership]({% image_buster /assets/img_archive/mparticle1.png %})
 
 ##### Single array attribute {#array}
 
@@ -75,7 +75,7 @@ Braze array attributes have a maximum length of 25. If any of your users are mem
 
 mParticle will create a boolean custom attribute for each audience a user belongs to. For example, if an mParticle audience is called "Possible Parisians", you can segment these users with the filter `In Possible Parisians` - `equals` - `true`.
 
-![mParticle custom attribute][7]
+![mParticle custom attribute]({% image_buster /assets/img_archive/mparticle2.png %})
 
 ##### Both single array attribute and single string attribute {#both-1}
 
@@ -120,8 +120,8 @@ You should begin seeing audiences syncing to Braze within a few minutes. Audienc
 
 In Braze, to create a segment of these users, navigate to **Segments** under **Engagement** and name your segment. The following are two examples of segments depending on the option you selected for **Send segments as**. For more details on each option, see [Forwarding audiences](#forwarding-audiences.)
 
-- **Single array attribute:** Select `SegmentMembershipArray` as your filter. Next, use the "includes value" option and input your desired audience ID. ![mParticle segment filter "SegmentMembershipArray" set as "includes value" and audience ID.][11]<br><br>
-- **One attribute per segment:** Select your custom attribute as the filter. Next, use the "equals" option and choose the appropriate logic. ![mParticle segment filter "in possible parisians" set as "equals" and "true".][8]
+- **Single array attribute:** Select `SegmentMembershipArray` as your filter. Next, use the "includes value" option and input your desired audience ID. ![mParticle segment filter "SegmentMembershipArray" set as "includes value" and audience ID.]({% image_buster /assets/img_archive/mparticle5.png %})<br><br>
+- **One attribute per segment:** Select your custom attribute as the filter. Next, use the "equals" option and choose the appropriate logic. ![mParticle segment filter "in possible parisians" set as "equals" and "true".]({% image_buster /assets/img_archive/mparticle3.png %})
 
 Once saved, you can reference this segment during Canvas or campaign creation in the targeting users step.
 
@@ -150,7 +150,7 @@ In mParticle, navigate to **Setup > Outputs > Add Outputs** and selected **Braze
 | Enable event stream forwarding | (Server-to-server) When enabled, all events will be forwarded in real-time. If not, all events will be forwarded in bulk. When choosing to enable event stream forwarding, ensure that the data you are passing to Braze will respect [rate limits]({{site.baseurl}}/api/basics/#api-limits). |
 {: .reset-td-br-1 .reset-td-br-2}
 
-![][10]
+![]({% image_buster /assets/img_archive/configure_settings.png %})
 
 ### Embedded kit integration
 
@@ -182,7 +182,7 @@ mParticle's [Braze event kit integration guide](https://docs.mparticle.com/integ
 
 In mParticle, navigate to **Connections > Connect > [Your desired platform] > Connect Output** to add Braze as an output. **Save** when completed.
 
-![][3]
+![]({% image_buster /assets/img_archive/mParticle_event_config.png %})
 
 Not all connection settings will apply to all platforms and integration types. For a breakdown of connection settings and the platforms they apply to, see [mParticle's documentation](https://docs.mparticle.com/integrations/braze/event/#connection-settings).
 
@@ -202,7 +202,7 @@ For server-side data to be forwarded to Braze, it must include an `external_id`;
 
 In mParticle, navigate to **Connections > Connect > [Your desired platform] > Connect Output** to add Braze as an output. **Save** when completed. 
 
-![][4]
+![]({% image_buster /assets/img_archive/mParticle_connections.png %})
 
 Not all connection settings will apply to all platforms and integration types. For a breakdown of connection settings and the platforms they apply to, see [mParticle's documentation](https://docs.mparticle.com/integrations/braze/event/#connection-settings).
 

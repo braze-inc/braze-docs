@@ -53,7 +53,7 @@ These characteristics could then be tagged as the following custom attributes:
 Adding these attributes would allow the ability to send campaigns to users such as:
 
 1. Reminding users who haven't used the app in 7 days and have promotional credit in their account to return to the app and use the credit.
-2. Using our message templates and [personalization features][13] to drag the unique promotion code attribute into messaging directed at users.
+2. Using our message templates and [personalization features]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/overview/#personalized-messaging) to drag the unique promotion code attribute into messaging directed at users.
 
 
 {% alert important %}

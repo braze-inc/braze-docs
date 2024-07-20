@@ -12,7 +12,7 @@ hidden: true
 
 Braze provides methods for assigning attributes to users. You'll be able to filter and segment your users according to these attributes on the dashboard.
 
-Before implementation, be sure to review examples of the segmentation options afforded by custom events, custom attributes, and purchase events in our [Best practices][7].
+Before implementation, be sure to review examples of the segmentation options afforded by custom events, custom attributes, and purchase events in our [Best practices]({{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#user-data-collection).
 
 User attributes can be assigned to the current `IAppboyUser`. To obtain a reference to the current `IAppboyUser`, call `Appboy.SharedInstance.AppboyUser`
 
@@ -72,7 +72,7 @@ bool SetCustomAttribute(STRING_KEY, LONG_VALUE);
 ```csharp
 bool SetCustomAttribute(STRING_KEY, "DATE_VALUE");
 ```
->  Dates passed to Braze must either be in the [ISO 8601][2] format, e.g `2013-07-16T19:20:30+01:00` or in the `yyyy-MM-dd'T'HH:mm:ss:SSSZ` format e.g `2016-12-14T13:32:31.601-0800`
+>  Dates passed to Braze must either be in the [ISO 8601](http://en.wikipedia.org/wiki/ISO_8601) format, e.g `2013-07-16T19:20:30+01:00` or in the `yyyy-MM-dd'T'HH:mm:ss:SSSZ` format e.g `2016-12-14T13:32:31.601-0800`
 {% endtab %}
 {% tab Array %}
 ```csharp
@@ -104,7 +104,7 @@ bool UnsetCustomAttribute(STRING_KEY);
 
 ### Setting a custom attribute via the REST API
 
-You can also use our REST API to set user attributes. Refer to the [users API][4] documentation for details.
+You can also use our REST API to set user attributes. Refer to the [users API]({{site.baseurl}}/developer_guide/rest_api/user_data/#user-data) documentation for details.
 
 ### Custom attribute value limits
 
@@ -126,7 +126,7 @@ To set up a subscription for your users (either email or push), you can set foll
 - `PushNotificationSubscriptionType`
   - Users will be set to `Subscribed` automatically upon valid push registration, however, we suggest that you establish an explicit opt-in process and set this value to `OptedIn` upon receipt of explicit consent from your user.
 
->  These types fall under `AppboyPlatform.PCL.Models.NotificationSubscriptionType`. Visit [Managing user subscriptions][10] for more details.
+>  These types fall under `AppboyPlatform.PCL.Models.NotificationSubscriptionType`. Visit [Managing user subscriptions]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#managing-user-subscriptions) for more details.
 
 [1]: {{site.baseurl}}/developer_guide/platform_integration_guides/windows_universal/analytics/setting_user_ids/#user-id-integration-best-practices--notes
 [2]: http://en.wikipedia.org/wiki/ISO_8601

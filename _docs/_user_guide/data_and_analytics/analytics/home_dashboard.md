@@ -19,25 +19,25 @@ The **Home** page on the dashboard provides key metrics for you to track and und
 If you are using the [older navigation]({{site.baseurl}}/navigation), this is your **Overview** page.
 {% endalert %}
 
-![Home dashboard in Braze][1]
+![Home dashboard in Braze]({% image_buster /assets/img_archive/home_dashboard.png %})
 
 ## Reading the dashboard
 
 By default, the dashboard shows the last 30 days of data for all apps and sites. Your metrics are all calculated based on the selected date range.
 
-![Date range and app fields on the Home dashboard.][5]{: style="max-width:60%;"}
+![Date range and app fields on the Home dashboard.]({% image_buster /assets/img_archive/home_dashboard_select_date.png %}){: style="max-width:60%;"}
 
 Percentages are calculated based on the current date range as compared to the previous date range, with the exception of MAU, which uses the last day of the prior period instead of a range. 
 
 For example, if you set your date range to **Last 7 Days** and your *Daily Active Users* shows a percent increase of 1.8%, that means you had 1.8% more daily active users this week compared to last week.
 
-![][4]{: style="max-width:60%;"}
+![]({% image_buster /assets/img_archive/home_dashboard_metric_tile.png %}){: style="max-width:60%;"}
 
 ## Show breakdown
 
 You can click **Show Breakdown** for each row of the dashboard statistics to view each statistic's value per day for the date range specified.
 
-![Expand][2]
+![Expand]({% image_buster /assets/img_archive/home_dashboard_breakdown.png %})
 
 ## Available statistics
 
@@ -47,7 +47,7 @@ The following are the definitions of these statistics, how we calculate them, an
 
 *Users* is the total number of users created in that workspace. This includes all users we have recorded using your app or website at any point in time, and those who might not be associated with a specific app or website. This number is the percentage of how many of your lifetime users are represented as *Monthly Active Users* (MAU) which is useful for seeing user retention over a long period of time.
 
-A low MAU to user ratio may indicate that you need to diversify your messaging channels or increase your efforts in reaching out to lapsing users. See our quick win on [capturing lapsing users][3] for more info. In general, the MAU to lifetime ratio will inevitably decrease over time due to user churn, but Braze tools can help you minimize this effect by keeping users engaged longer.
+A low MAU to user ratio may indicate that you need to diversify your messaging channels or increase your efforts in reaching out to lapsing users. See our quick win on [capturing lapsing users]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/capturing_lapsing_users/#capturing-lapsing-users) for more info. In general, the MAU to lifetime ratio will inevitably decrease over time due to user churn, but Braze tools can help you minimize this effect by keeping users engaged longer.
 
 ### Lifetime sessions
 

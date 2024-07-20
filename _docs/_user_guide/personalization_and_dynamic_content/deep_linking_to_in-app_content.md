@@ -31,7 +31,7 @@ Braze does not support using a wrapper like Flutter to send deep links. To use t
 
 ### What is a UTM tag?
 
-[UTM (Urchin Traffic Manager) tags][4] allow you to include campaign attribution details directly within links. UTM tags are used by Google Analytics to collect campaign attribution data, and can be used to track the following properties:
+[UTM (Urchin Traffic Manager) tags](https://support.google.com/analytics/answer/1033863?hl=en) allow you to include campaign attribution details directly within links. UTM tags are used by Google Analytics to collect campaign attribution data, and can be used to track the following properties:
 
 - `utm_source`: the identifier for the source of the traffic (for example,`my_app`)
 - `utm_medium`: the campaign medium (for example,`newsfeed`)
@@ -43,9 +43,9 @@ UTM tags can be embedded into both regular HTTP (web) links and deep links and t
 
 ### Using UTM tags with Braze
 
-If you want to use UTM tags with regular HTTP (web) links—for example, to do campaign attribution for your email campaigns—and your organization already uses Google Analytics, you can simply use [Google's URL builder][6] to generate UTM links. These links can be readily embedded into Braze campaign copy just like any other link.
+If you want to use UTM tags with regular HTTP (web) links—for example, to do campaign attribution for your email campaigns—and your organization already uses Google Analytics, you can simply use [Google's URL builder](https://support.google.com/analytics/answer/1033867) to generate UTM links. These links can be readily embedded into Braze campaign copy just like any other link.
 
-In order to use UTM tags in deep links to your app, your app must have the relevant [Google Analytics SDK][5] integrated and [correctly configured to handle deep links][7]. Check with your developers if you're unsure about this.
+In order to use UTM tags in deep links to your app, your app must have the relevant [Google Analytics SDK](https://developers.google.com/analytics/devguides/collection/) integrated and [correctly configured to handle deep links](https://developers.google.com/analytics/solutions/mobile-campaign-deep-link). Check with your developers if you're unsure about this.
 
 Once the Analytics SDK is integrated and configured, UTM tags can be used with deep links in Braze campaigns. To set up UTM tags for your campaign, simply include the necessary UTM tags in the destination URL or deep links. The following examples show how to use UTM tags in push notifications and in-app messages.
 
@@ -57,7 +57,7 @@ To include UTM tags in your deep links for push notifications, simply set the on
 myapp://products/20-gift-card?utm_source=my_app&utm_medium=push&utm_campaign=spring2016giftcards&utm_content=ios_deeplink
 ```
 
-![][8]
+![]({% image_buster /assets/img_archive/push_utm_tags.png %})
 
 #### Attributing in-app message clicks with UTM tags
 
@@ -67,7 +67,7 @@ You can include UTM tags in the deep links included within your in-app messages 
 myapp://products/20-gift-card?utm_source=my_app&utm_medium=iam&utm_campaign=spring2021giftcards&utm_content=web_link
 ```
 
-![][10]
+![]({% image_buster /assets/img_archive/iam_utm_tags.png %})
 
 [1]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/integration/
 [2]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/advanced_use_cases/linking/

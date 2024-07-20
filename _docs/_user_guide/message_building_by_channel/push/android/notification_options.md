@@ -17,7 +17,7 @@ channel:
 
 Create your Android push campaign, then look to the top of the **Compose** tab for the **Notification Channel** dropdown.
 
-![][28]{: style="max-width:60%;" }
+![]({% image_buster /assets/img_archive/notification_channel_dropdown.png %}){: style="max-width:60%;" }
 
 Select your Notification Channel from the dropdown. You must also select a fallback channel in the event that your Notification Channel settings malfunction.
 
@@ -25,7 +25,7 @@ If you don't have any [Notification Channels]({{site.baseurl}}/user_guide/messag
 
 To add a Notification ID to your Notification Channel, click **Manage Notification Channel** in the **Notification Channel** dropdown menu and fill out the required fields. Notification Channels must be defined on the app before they can be used in the Braze platform.
 
-![][29]{: style="max-width:80%;" }
+![]({% image_buster /assets/img_archive/notification_channels.png %}){: style="max-width:80%;" }
 
 
 [28]: {% image_buster /assets/img_archive/notification_channel_dropdown.png %}

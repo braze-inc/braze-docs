@@ -21,7 +21,7 @@ For every campaign, Braze checks a list of attributes and user behaviors and com
 
 To run a conversion correlation analysis, select the conversion event of interest from the dropdown menu.
 
-![Conversion Correlation panel that shows an example with "Select a conversion event" set to "Primary Conversion Event - A" with the Event Setting as "Made Purchase within 12 hours (Any product)".][1]
+![Conversion Correlation panel that shows an example with "Select a conversion event" set to "Primary Conversion Event - A" with the Event Setting as "Made Purchase within 12 hours (Any product)".]({% image_buster /assets/img/convcorr.png %})
 
 ## What is checked?
 

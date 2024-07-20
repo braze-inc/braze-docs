@@ -118,7 +118,7 @@ To see a full list of supported actions:
 2. Choose the **Braze** system.
 3. Navigate to the **Actions** tab.
 
-![][7]
+![]({% image_buster /assets/img/onetrust/onetrust7.png %})
 
 [1]: {% image_buster /assets/img/onetrust/onetrust.png %}
 [2]: {% image_buster /assets/img/onetrust/onetrust2.png %}

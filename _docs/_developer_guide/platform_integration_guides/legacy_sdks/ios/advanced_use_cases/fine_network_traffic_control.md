@@ -53,7 +53,7 @@ Appboy.sharedInstance()?.flushDataAndProcessRequestQueue()
 
 - This protocol is the same as automatic request processing except:
     - Custom attributes and custom event data are not automatically flushed to the server throughout the user session.
-- Braze will still perform automatic network requests for internal features, such as requesting in-app messages, Liquid templating in in-app messages, Geofences, and location tracking. For more details, see the `ABKRequestProcessingPolicy` declaration in [`Appboy.h`][4]. When these internal requests are made, locally stored custom attributes and custom event data may be flushed to the Braze server, depending on the request type.
+- Braze will still perform automatic network requests for internal features, such as requesting in-app messages, Liquid templating in in-app messages, Geofences, and location tracking. For more details, see the `ABKRequestProcessingPolicy` declaration in [`Appboy.h`](https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/include/Appboy.h). When these internal requests are made, locally stored custom attributes and custom event data may be flushed to the Braze server, depending on the request type.
 
 Data can be manually flushed to Braze servers at any time using the following method:
 
@@ -78,7 +78,7 @@ Appboy.sharedInstance()?.flushDataAndProcessRequestQueue()
 
 ### Set request policy on startup
 
-These policies can be set at app startup time from the [`startWithApiKey:inApplication:withLaunchOptions:withAppboyOptions`][3] method. In the `appboyOptions` dictionary, set the `ABKRequestProcessingPolicyOptionKey` as shown in the following code snippet:
+These policies can be set at app startup time from the [`startWithApiKey:inApplication:withLaunchOptions:withAppboyOptions`](https://appboy.github.io/appboy-ios-sdk/docs/interface_appboy.html#aa9f1bd9e4a5c082133dd9cc344108b24) method. In the `appboyOptions` dictionary, set the `ABKRequestProcessingPolicyOptionKey` as shown in the following code snippet:
 
 {% tabs %}
 {% tab OBJECTIVE-C %}

@@ -25,7 +25,7 @@ guide_featured_list:
 
 ## Overview
 
-![Graphic titled "How Predictive Events Works". On the left shows user data being funneled into the machine learning model. The label reads "Train with historical data, compare the behavior of users who did perform the event in a certain period with those who didn't." On the right shows the results of the machine learning, where users are ranked by least likely to most likely to perform the event. The label reads "Predict likelihood of future events, assign a likelihood score to users for accurate, convenient targeting."][1]
+![Graphic titled "How Predictive Events Works". On the left shows user data being funneled into the machine learning model. The label reads "Train with historical data, compare the behavior of users who did perform the event in a certain period with those who didn't." On the right shows the results of the machine learning, where users are ranked by least likely to most likely to perform the event. The label reads "Predict likelihood of future events, assign a likelihood score to users for accurate, convenient targeting."]({% image_buster /assets/img/how_predictive_events_works.png %})
 
 > Predictive Events give marketers a powerful tool for identifying and messaging users based on their likelihood to perform an event. When you create an event prediction, Braze trains a machine learning model using [gradient boosted decision trees](https://en.wikipedia.org/wiki/Gradient_boosting) to learn from previous activity and predict future activity.
 

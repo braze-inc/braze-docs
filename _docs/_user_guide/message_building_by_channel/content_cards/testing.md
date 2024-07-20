@@ -26,7 +26,7 @@ To send a test to either [content test groups]({{site.baseurl}}/user_guide/admin
 
 You can also preview messages from the **Test** tab as if you were a user. You can select a specific user, a random user, or create a custom user.
 
-![Custom_User_Preview][3]
+![Custom_User_Preview]({% image_buster /assets/img/cc-user-preview.png %})
 
 ### Test checklist
 
@@ -76,7 +76,7 @@ If you are using the [older navigation]({{site.baseurl}}/navigation), you can fi
 
 6. Go to the **Campaigns** page and search for the `campaign_id`.
 
-![Search for campaign_id on Campaigns page][1]
+![Search for campaign_id on Campaigns page]({% image_buster /assets/img_archive/cc_debug.png %})
 
 From there, you can review your message settings and content to drill down and determine why a user can't see a particular Content Card.
 

@@ -8,7 +8,7 @@ description: "Learn how to use Winning Variant or Personalized Variant when crea
 
 # Optimizing A/B tests with Winning Variant or Personalized Variants
 
-When [creating an A/B test][1] for email, push, webhook, SMS, and WhatsApp campaigns scheduled to send once, you can select an optimization. There are two optimization options: **Winning Variant** and **Personalized Variant**.
+When [creating an A/B test]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/create_multivariate_campaign/) for email, push, webhook, SMS, and WhatsApp campaigns scheduled to send once, you can select an optimization. There are two optimization options: **Winning Variant** and **Personalized Variant**.
 
 ![Optimization options listed in the A/B Testing section when choosing your target audience. Three options are listed: No Optimiziation, Winning Variant, and Personalized Variant. Personalized Variant is selected.]({% image_buster /assets/img_archive/ab_personalized_variant.png %})
 
@@ -52,7 +52,7 @@ To determine the best variant for each user, Braze will send an initial test to 
 
 ## Analytics
 
-To learn about the results of your A/B test with an optimization, refer to [Multivariate and A/B test analytics][2].
+To learn about the results of your A/B test with an optimization, refer to [Multivariate and A/B test analytics]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/multivariate_analytics/).
 
 [1]: {{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/create_multivariate_campaign/
 [2]: {{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/multivariate_analytics/

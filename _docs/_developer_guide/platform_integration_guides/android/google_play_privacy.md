@@ -16,9 +16,9 @@ table td {
 
 # Google Play privacy questionnaire
 
-> As of April 2022, Android developers must complete Google Play's [Data safety form][4] to disclose privacy and security practices. This guide provides instructions on how to fill out this new form with information on how Braze handles your app data. 
+> As of April 2022, Android developers must complete Google Play's [Data safety form](https://support.google.com/googleplay/android-developer/answer/10787469) to disclose privacy and security practices. This guide provides instructions on how to fill out this new form with information on how Braze handles your app data. 
 
-As the app developer, you are in control of what data you send to Braze. Data received by Braze is processed according to your instructions. This is what Google classifies as a [service provider][3]. 
+As the app developer, you are in control of what data you send to Braze. Data received by Braze is processed according to your instructions. This is what Google classifies as a [service provider](https://support.google.com/googleplay/android-developer/answer/10787469?hl=en#zippy=%2Cwhat-kinds-of-activities-can-service-providers-perform). 
 
 {% alert important %}
 This article provides information related to the data the Braze SDK processes as related to the Google safety section questionnaire. This article is not providing legal advice, so we recommend consulting with your legal team before submitting any information to Google.
@@ -32,11 +32,11 @@ This article provides information related to the data the Braze SDK processes as
 |Is all of the user data collected by your app encrypted in transit?|Yes.|
 |Do you provide a way for users to request that their data be deleted?|Yes.|
 
-For more information about handling user requests for their data and deletion, see [Braze Data Retention Information][1].
+For more information about handling user requests for their data and deletion, see [Braze Data Retention Information]({{site.baseurl}}/api/data_retention/).
 
 ## Data collection
 
-The data collected by Braze is determined by your specific integration and the user data you choose to collect. To learn more about what data Braze collects by default and how to disable certain attributes, see our [SDK data collection options][5].
+The data collected by Braze is determined by your specific integration and the user data you choose to collect. To learn more about what data Braze collects by default and how to disable certain attributes, see our [SDK data collection options]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/sdk_data_collection/#minimum-integration).
 
 <table id="datatypes">
     <thead>
@@ -192,7 +192,7 @@ The data collected by Braze is determined by your specific integration and the u
     </tbody>
 </table>
 
-To learn more about other device data that Braze collects which may fall outside the scope of Google Play's data safety guidelines, see our [Android storage overview][2] and our [SDK data collection options][5].
+To learn more about other device data that Braze collects which may fall outside the scope of Google Play's data safety guidelines, see our [Android storage overview]({{site.baseurl}}/developer_guide/platform_integration_guides/android/storage) and our [SDK data collection options]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/sdk_data_collection/#minimum-integration).
 
 [1]: {{site.baseurl}}/api/data_retention/
 [2]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/storage

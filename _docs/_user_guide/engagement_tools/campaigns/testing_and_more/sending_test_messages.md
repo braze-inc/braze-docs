@@ -142,7 +142,7 @@ These filters can also be used in conjunction to narrow down your list of test u
 
 ![Verify Test Segment]({% image_buster /assets/img_archive/testmessages3.png %})
 
-> Exporting the segment's User Data to CSV will give you the most accurate picture of who falls under that segment. The **Preview** tab is only a sample of users in the segment and therefore may appear to have not selected all intended members. For more information, check out [Viewing and Understanding Segment Data][7].
+> Exporting the segment's User Data to CSV will give you the most accurate picture of who falls under that segment. The **Preview** tab is only a sample of users in the segment and therefore may appear to have not selected all intended members. For more information, check out [Viewing and Understanding Segment Data]({{site.baseurl}}/user_guide/data_and_analytics/reporting/viewing_and_understanding_segment_data/#user-preview).
 
 After you've confirmed that you're only targeting the users you want to receive the test message, you can either select this segment in an existing campaign that you want to test or click the **Start Campaign** button in the segment menu.
 
@@ -165,48 +165,48 @@ If you are testing campaigns that populate user data or use custom event propert
 
 ### Testing campaigns personalized with user attributes
 
-If you are using [personalization][26] in your message, you'll need to take additional steps to properly preview your campaign and check that user data is properly populating the content.
+If you are using [personalization]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/overview/) in your message, you'll need to take additional steps to properly preview your campaign and check that user data is properly populating the content.
 
 When sending a test message, make sure to choose either the option to **Select Existing User** or preview as a **Custom User**.
 
-![Testing a personalized message][23]{: style="max-width:70%;" }
+![Testing a personalized message]({% image_buster /assets/img_archive/personalized_testing.png %}){: style="max-width:70%;" }
 
 #### Selecting an existing user
 
 If selecting an existing user, enter the specific user ID or email in the search field. Then, use the dashboard preview to see how your message would appear to that user, and send a test message to your device that reflects what that user would see.
 
-![Select a user][24]
+![Select a user]({% image_buster /assets/img_archive/personalized_testing_select.png %})
 
 #### Selecting a custom user
 
 If previewing as a custom user, enter text for various fields available for personalization, such as the user's first name and any custom attributes. Once again, you can enter your own email address to send a test to your device.
 
-![Custom user][25]
+![Custom user]({% image_buster /assets/img_archive/personalized_testing_custom.png %})
 
 ### Testing campaigns personalized with custom event properties
 
-Testing campaigns personalized with [custom event properties][19] differs slightly from testing other types of campaigns outlined. The most robust way to test campaigns personalized using custom event properties is to trigger the campaign yourself by doing the following:
+Testing campaigns personalized with [custom event properties]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/#custom-event-properties) differs slightly from testing other types of campaigns outlined. The most robust way to test campaigns personalized using custom event properties is to trigger the campaign yourself by doing the following:
 
-1. Write up the copy involving the event property. ![Composing Test Message with Properties][15]
-2. Use [action-based delivery][21] to deliver the campaign when the event occurs.
+1. Write up the copy involving the event property. ![Composing Test Message with Properties]({% image_buster /assets/img_archive/testeventproperties-compose.png %})
+2. Use [action-based delivery]({{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/triggered_delivery/) to deliver the campaign when the event occurs.
 
 {% alert note %}
 If you're testing an iOS push campaign, you must set the delay to 1 minute to allow yourself time to exit the app since iOS doesn't deliver push notifications for the currently open app. Other types of campaigns can be set to deliver immediately.
 {% endalert %}
 
-![Test Message Delivery][16]
+![Test Message Delivery]({% image_buster /assets/img_archive/testeventproperties-delivery.png %})
 
 {: start="3"}
 3. Target the users as you would for testing by using a testing filter or targeting your own email address, and finish creating the campaign. 
 
-![Test Message Targeting][17]
+![Test Message Targeting]({% image_buster /assets/img_archive/testeventproperties-target.png %})
 
 {: start="4"}
 4. Go into your app and complete the custom event.
 
 The campaign will trigger and show the message customized with the event property.
 
-![Test Message Example][18]
+![Test Message Example]({% image_buster /assets/img_archive/testeventproperties-message.PNG %})
 
 Alternatively, if you are saving custom user IDs, you can also test the campaign by sending a customized test message to yourself.
 
@@ -215,7 +215,7 @@ Alternatively, if you are saving custom user IDs, you can also test the campaign
 3. Add the custom event property on the bottom of the page, and add your user ID or email address to the top box.
 4. Click **Send Test** to receive a message personalized with the property.
 
-![Testing Using Customized User][22]
+![Testing Using Customized User]({% image_buster /assets/img_archive/testeventproperties-customuser.png %})
 
 [7]: {{site.baseurl}}/user_guide/data_and_analytics/reporting/viewing_and_understanding_segment_data/#user-preview
 [13]: {% image_buster /assets/img_archive/test-push-for-in-app.png %}

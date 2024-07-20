@@ -37,7 +37,7 @@ However, a rate can be higher than 98% and still have deliverability issues. For
 
 Additionally, messages may be getting delivered and ending up in Spam, indicating potentially serious reputation issues. It's important to monitor not just the number of messages being delivered, but also open and click rates to determine whether users are actually seeing the messages in their inboxes. Because providers usually don't report every spam instance, a spam rate of even 1% could be cause for concern and further analysis.
 
-Finally, your business and the types of emails you send may also affect delivery. For example, someone sending mostly [transactional emails][1] should expect to see a better rate than someone sending many marketing messages.
+Finally, your business and the types of emails you send may also affect delivery. For example, someone sending mostly [transactional emails]({{site.baseurl}}/api/api_campaigns/transactional_api_campaign) should expect to see a better rate than someone sending many marketing messages.
 
 ### Why are my email delivery metrics not adding up to 100%?
 
@@ -69,7 +69,7 @@ For best practices on how to handle these responses, refer to [Handling increase
 ### How can I check a user's email subscription group?
 
 - **User Profile:** Individual user profiles can be accessed through the Braze dashboard from the [Search Users]({{site.baseurl}}/user_guide/engagement_tools/segments/user_profiles/#access-profiles) page. Here, you can look up user profiles by email address, phone number, or external user ID. When inside a user profile, under the Engagement tab, you can view a user's email subscription groups.
-- **Rest API:** Individual user profiles subscription group can be viewed by the [List user’s subscription groups endpoint][9] or [List user’s subscription group status endpoint][8] by using the Braze REST API. 
+- **Rest API:** Individual user profiles subscription group can be viewed by the [List user’s subscription groups endpoint]({{site.baseurl}}/api/endpoints/subscription_groups/get_list_user_subscription_groups/) or [List user’s subscription group status endpoint]({{site.baseurl}}/api/endpoints/subscription_groups/get_list_user_subscription_group_status/) by using the Braze REST API. 
 
 ### How can I update a user's email subscription group?
 

@@ -22,7 +22,7 @@ Consider the [race conditions]({{site.baseurl}}/user_guide/engagement_tools/test
 
 To enter a Canvas, users must be in the entry audience before the entry schedule occurs regardless of whether the Canvas is scheduled, action-based, or API-triggered. 
 
-![][1]{: style="max-width:75%;"}
+![]({% image_buster /assets/img_archive/launch_with_canvas_flow_example.png %}){: style="max-width:75%;"}
 
 Note that users who qualify for your entry audience after the Canvas launches will not enter the Canvas.
 

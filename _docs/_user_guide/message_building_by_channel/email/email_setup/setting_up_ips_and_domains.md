@@ -67,7 +67,7 @@ A sending domain is used in the "from" address when sending an email. Enter a se
 
 Next, add the TXT and CNAME records from the bottom of the page to your DNS provider. Then, return to the Braze dashboard and click **Verify**.
 
-![][1]
+![]({% image_buster /assets/img_archive/email_setup_rdns_records.png %})
 
 {% alert important %}
 The sending domain must be a subordinate to a domain you own. For example, if you own "example.com", a subdomain could be "mail.example.com", which allows you to use the sending address "@mail.example.com".

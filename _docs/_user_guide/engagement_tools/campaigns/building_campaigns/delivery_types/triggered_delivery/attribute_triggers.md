@@ -22,7 +22,7 @@ Attribute triggers are available for the following scenarios:
 
 To start using attribute triggers, create a campaign or Canvas component and select **Action-Based Delivery** as your delivery method. Then, select the attribute trigger that you'd like to use.
 
-![][1]
+![]({% image_buster /assets/img_archive/trigger_attribute.png %})
 
 ### Update subscription status
 
@@ -66,7 +66,7 @@ Consider the next example use case with a tier update notification. You might wa
 Attribute triggers are not currently available for array attributes.
 {% endalert %}
 
-![Any new value][2]
+![Any new value]({% image_buster /assets/img_archive/any_value.png %})
 
 You can also use Liquid to personalize the message body with the customer's new loyalty tier and provide the customer with more information about the change.
 
@@ -82,7 +82,7 @@ Use the `Change Custom Attribute Value` trigger with the `specific value` option
 
 For example, target users when their loyalty tier changes to the best tier. For this example, say that the best loyalty tier is Super VIP. You can set up a campaign to trigger when a user's loyalty tier custom attribute changes to `Super VIP` so that you can congratulate the user on becoming a Super VIP.
 
-![][4]
+![]({% image_buster /assets/img_archive/super_vip.png %})
 
 {% alert important %}
 - Attribute triggers for specific custom attribute values are not available for array and date custom attributes.

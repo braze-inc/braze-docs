@@ -10,7 +10,7 @@ search_tag: Partner
 
 # Fresh Relevance
 
-> [Fresh Relevance][1] is a versatile personalization solution that empowers commerce-driven businesses to create customized cross-channel experiences with ease. The platform saves you time, integrates with your tech stack, and empowers you to deliver conversion-boosting personalized customer experiences across your website, app, emails, SMS, and ads, without relying on your IT team.
+> [Fresh Relevance](https://www.freshrelevance.com/) is a versatile personalization solution that empowers commerce-driven businesses to create customized cross-channel experiences with ease. The platform saves you time, integrates with your tech stack, and empowers you to deliver conversion-boosting personalized customer experiences across your website, app, emails, SMS, and ads, without relying on your IT team.
 
 The Braze and Fresh Relevance integration allows you to:
 * Send advanced triggered email campaigns such as price drop, back in stock, multi-stage browse, or cart abandoned messages.
@@ -25,7 +25,7 @@ The Braze and Fresh Relevance integration allows you to:
 |-------------| ----------- |
 | Fresh Relevance account  | A Fresh Relevance account is required to take advantage of this partnership. |
 | Braze REST API key | A Braze REST API key with permissions sufficient for the endpoints listed below. <br><br> This can be created in the Braze dashboard from **Settings** > **API Keys**. |
-| Braze REST endpoint | [Your REST endpoint URL][3]. Your endpoint will depend on the Braze URL for your instance. |
+| Braze REST endpoint | [Your REST endpoint URL]({{site.baseurl}}/developer_guide/rest_api/basics/#endpoints). Your endpoint will depend on the Braze URL for your instance. |
 | Braze campaign ID | The default Braze campaign that you want to use to send emails. |
 {: .reset-td-br-1 .reset-td-br-2}
 
@@ -33,16 +33,16 @@ The Braze and Fresh Relevance integration allows you to:
 
 To set up the integration in Fresh Relevance, you must create a Braze channel in **Messaging Channels** and use the channel in appropriate Fresh Relevance triggers or content as required. 
 
-For step-by-step instructions, log in to Fresh Relevance and follow their [documentation][2].
+For step-by-step instructions, log in to Fresh Relevance and follow their [documentation](https://admin.freshrelevance.com/help/esp_instructions/?esp_class_name=EspBraze).
 
 The Fresh Relevance system will communicate with Braze using the API key provided. A full integration makes use of the following Braze API endpoints:
 
-* [`/users/alias/new`][4]
-* [`/users/track`][5]
-* [`/campaigns/triggers/send`][6]
-* [`/users/export/ids`][7]
-* [`/subscription/status/get`][8]
-* [`/v2/subscription/status/set`][9]
+* [`/users/alias/new`]({{site.baseurl}}/api/endpoints/user_data/post_user_alias/)
+* [`/users/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track/)
+* [`/campaigns/triggers/send`]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_campaigns/)
+* [`/users/export/ids`]({{site.baseurl}}/api/endpoints/export/user_data/post_users_identifier/)
+* [`/subscription/status/get`]({{site.baseurl}}/api/endpoints/subscription_groups/get_list_user_subscription_group_status/)
+* [`/v2/subscription/status/set`]({{site.baseurl}}/api/endpoints/subscription_groups/post_update_user_subscription_group_status_v2/)
 
 [1]: https://www.freshrelevance.com/
 [2]: https://admin.freshrelevance.com/help/esp_instructions/?esp_class_name=EspBraze

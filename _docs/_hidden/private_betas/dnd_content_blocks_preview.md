@@ -20,7 +20,7 @@ Only Content Blocks used exclusively in the Drag & Drop Editor are viewable unde
 
 Once you've dragged and dropped the Content Block into your email campaign, you can make changes to any and all content in the Content Block. Note that if a Content Block contains Liquid, you'll see the Liquid in the **Preview & Test** section.
 
-![The Rows tab in the Content section of the drag-and-drop editor, showing the Content Blocks option selected. There are two Content Block previews available for use as an email header for MyDealz and ArtNight.][1]{: style="max-width:50%" }
+![The Rows tab in the Content section of the drag-and-drop editor, showing the Content Blocks option selected. There are two Content Block previews available for use as an email header for MyDealz and ArtNight.]({% image_buster /assets/img_archive/dnd_content_block_preview.png %}){: style="max-width:50%" }
 
 
 [1]: {% image_buster /assets/img_archive/dnd_content_block_preview.png %} 

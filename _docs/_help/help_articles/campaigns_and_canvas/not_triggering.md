@@ -22,7 +22,7 @@ If your campaign is triggered off of a custom event, you will want to make sure 
 
 For example, if the segment includes the event `SessionStart` "Has Used App more than once" and the event the campaign triggers off of is `SessionStart`, the user will receive the message, but it won't necessarily be for the first session. This is because during the first step when checking if a user should receive a campaign, the campaign is reviewing the segment target audience. 
 
-In short, avoid configuring an action-based campaign or Canvas with the same trigger as the audience filter (such as a changed attribute or performed a custom event). A [race condition][2] may occur in which the user is not in the audience when they perform the trigger event, which means they won't receive the campaign or enter the Canvas.
+In short, avoid configuring an action-based campaign or Canvas with the same trigger as the audience filter (such as a changed attribute or performed a custom event). A [race condition]({{site.baseurl}}/user_guide/engagement_tools/testing/race_conditions/#race-conditions/) may occur in which the user is not in the audience when they perform the trigger event, which means they won't receive the campaign or enter the Canvas.
 
 {% alert tip %}
 For further assistance with campaign troubleshooting, be sure to contact Braze Support within 30 days of your issue's occurrence as we only have the last 30 days of diagnostic logs.

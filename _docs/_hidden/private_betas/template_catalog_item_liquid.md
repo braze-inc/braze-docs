@@ -19,7 +19,7 @@ If a catalog item contains user profile fields (within a Liquid personalization 
 
 For example, if a catalog named "Messages" has an item with this Liquid:
 
-![][15]{: style="max-width:80%;"}<br>
+![]({% image_buster /assets/img_archive/catalog_liquid_templating.png %}){: style="max-width:80%;"}<br>
 
 To render the following Liquid content:
 

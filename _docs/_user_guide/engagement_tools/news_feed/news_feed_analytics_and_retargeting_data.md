@@ -20,11 +20,11 @@ News Feed is being deprecated. Braze recommends that customers who use our News 
 
 At the top of the page, you can select your data date range and see a quick visualization of your most important metrics. Additionally, you can see specifics about this News Feed message, such as when it was sent and who it was sent to.
 
-![Details and analytics for News Feed.][19]
+![Details and analytics for News Feed.]({% image_buster /assets/img_archive/braze_newsfeedanalytics.png %})
 
 By scrolling down the page, you can see a larger breakdown of your clicks and impressions day-by-day. Total clicks/impressions are easily compared with unique clicks and impressions through line charts, while a clickthrough rate is presented as an interactive bar chart.
 
-![Performance Breakdown graph.][20]
+![Performance Breakdown graph.]({% image_buster /assets/img_archive/braze_newsfeedanalytics2.png %})
 
 ## Retargeting data
 
@@ -57,7 +57,7 @@ You can create segments based on how users have interacted with specific cards i
   - Avoid over-using this targeting because user's may end up with empty feeds. Best practice is to use a combination of static and automatically removed content.
 - It also works well to retarget users who do not click on a card to follow up with another call to action.
 
-![Segment filter example that shows targets users who have not clicked the card "Cheers! The Dos and Don'ts of Giving a Toast".][14]
+![Segment filter example that shows targets users who have not clicked the card "Cheers! The Dos and Don'ts of Giving a Toast".]({% image_buster /assets/img_archive/braze_newsfeedsegment.png %})
 
 
 [19]: {% image_buster /assets/img_archive/braze_newsfeedanalytics.png %}

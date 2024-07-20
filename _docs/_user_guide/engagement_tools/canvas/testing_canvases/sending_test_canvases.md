@@ -31,13 +31,13 @@ Next, identify a set of test users that will go through the Canvas steps without
 
 Next, it's time to test your Canvas! To keep your original Canvas and test Canvas information organized, create a duplicate of your Canvas for testing purposes. 
 
-![][1]
+![]({% image_buster /assets/img_archive/canvas_test1.png %})
 
 In this duplicated Canvas, edit the **Entry Audience** portion of the Canvas builder so that only test users are eligible for the Canvas. You can also enter your own email address as a test user by adding the **Email Address** testing filter. 
 
 In the example below, we've limited the Canvas to two test users that have first used the app less than three days ago.
 
-![][2]
+![]({% image_buster /assets/img_archive/canvas_test2.png %})
 
 ## Step 4: Launch your test
 

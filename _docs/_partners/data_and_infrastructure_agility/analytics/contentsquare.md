@@ -48,6 +48,6 @@ Once the integration is complete, Contentsquare custom events will be available 
 If you are using the [older navigation]({{site.baseurl}}/navigation), you can find this page at **Manage Settings** > **Custom Events**.
 {% endalert %}
 
-![Contentsquare Live Signals data in Braze Custom Events tab][1]
+![Contentsquare Live Signals data in Braze Custom Events tab]({% image_buster /assets/img/contentsquare_custom_events.png %})
 
 [1]: {% image_buster /assets/img/contentsquare_custom_events.png %} 

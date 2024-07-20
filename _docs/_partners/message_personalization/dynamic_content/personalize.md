@@ -19,7 +19,7 @@ The Braze and Personalize.AI integration allows you to export data from Personal
 | ----------- | ----------- |
 | Personalize.AI instance | A Personalize.AI instance is required to take advantage of this partnership. |
 | Braze REST API key | A Braze REST API key with all permissions. <br><br>This can be created in the Braze dashboard from **Settings** > **API Keys**. |
-| Braze REST endpoint | Your REST endpoint URL. Your endpoint will depend on the [Braze URL for your instance][1]. |
+| Braze REST endpoint | Your REST endpoint URL. Your endpoint will depend on the [Braze URL for your instance]({{site.baseurl}}/developer_guide/rest_api/basics/#endpoints). |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## Use cases
@@ -51,7 +51,7 @@ Once your data has been exported, Personalize.AI will continue to pass data to B
 
 ## Using this integration
 
-Personalize.AI exports identifiers used for personalized targeting into Braze. These custom attributes indicate timing, content, treatment, and offers for each customer. Depending on the integration, fields can be passed as an event or pulled into the [Connected Content APIs][2] instead of stored on the customer's profile. Personalize.AI supports the use of `external_id` as an identifier.
+Personalize.AI exports identifiers used for personalized targeting into Braze. These custom attributes indicate timing, content, treatment, and offers for each customer. Depending on the integration, fields can be passed as an event or pulled into the [Connected Content APIs]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/public_apis/) instead of stored on the customer's profile. Personalize.AI supports the use of `external_id` as an identifier.
 
 The data attributes imported into Braze are intuitively named for use in Canvases, following consistent terminology. For example, the attribute `C402_Target_Variant` in Personalize.AI would be exported to Braze as `"P.AI_Model_Treatment"`. The attributes exported from Personalize.AI are designed to not interfere with any existing attributes or tracking your use. These attributes are validated continuously to confirm that you can reference them confidently. 
 

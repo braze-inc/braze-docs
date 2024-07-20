@@ -42,7 +42,7 @@ Looking for guidance on creating subscription groups? Check out our articles for
 4. Select the Braze connection you would like to use to orchestrate the opt-in and opt-out signals.
 5. Enter the Braze `subscription_group_id` for the subscription group to which you want to send the Ketch user preferences.
 
-![Braze Subscription Group ID.][1]
+![Braze Subscription Group ID.]({% image_buster /assets/img/ketch/ketch1.png %})
 
 {% alert note %}
 In order to collect and orchestrate user opt-in and opt-out signals, identities must be properly configured. Ketch recommends configuring email as the identifier to orchestrate user preference signals for this integration.
