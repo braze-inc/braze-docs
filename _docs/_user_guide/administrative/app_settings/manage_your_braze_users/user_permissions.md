@@ -50,17 +50,24 @@ Roles allow for more structure by bundling together your individual custom permi
 
 To edit a user's current [admin](#admin), [company](#company), or [workspace](#workspace) permissions, go to **Settings** > **Company Users**, then select their name.
 
-![ALT_TEXT]()
+![ALT_TEXT]({% image_buster /assets/img/braze_permissions/selecting_a_user.png %}){: style="max-width:80%;"}
 
 ### Admin
 
-Admins have access to all features and the ability to modify any company setting. To grant or remove admin privileges, select **This user is an admin**. Keep in mind, if you remove admin privileges from a user, they can't access Braze until you assign them at least one [compnay-level](#company) or [workspace-level](#workspace) permission.
+Admins have access to all features and the ability to modify any company setting. To grant or remove admin privileges, select **This user is an admin**, then select **Update user**.
 
-![ALT_TEXT. Screenshot of checkbox.]()
+![ALT_TEXT. Screenshot of checkbox.]({% image_buster /assets/img/braze_permissions/admin_level_permissions.png %}){: style="max-width:40%;"}
+
+{% alert warning %}
+If you remove admin privileges from a user, they won't be able to access Braze until you assign them at least one [compnay-level](#company) or [workspace-level](#workspace) permission.
+{% endalert %}
 
 ### Company
 
-To manage the following company-level permissions for a user, check or uncheck the box next to that permission.
+To manage the following company-level permissions for a user, check or uncheck the box next to that permission. When you're finished, select **Update user**.
+
+<!-- Unsure if this image is needed. I feel like it isn't, but I've commented it out for you just in case. -->
+<!-- ![ALT_TEXT]({% image_buster /assets/img/braze_permissions/company_level_permissions.png %}){: style="max-width:60%;"} -->
 
 |Permission name|Description|
 |----------|-----------|
@@ -68,25 +75,19 @@ To manage the following company-level permissions for a user, check or uncheck t
 |Create and delete workspaces|Allows users to create and delete workspaces.|
 {: .reset-td-br-1 .reset-td-br-2}
 
-![ALT_TEXT]()
-
 ### Workspace
 
-You can give a user different permissions for each workspace they belong to in Braze. To manage their workspace-level permissions, select **Select workspaces and permissions**.
+You can give a user different permissions for each workspace they belong to in Braze. To manage their workspace-level permissions, select **Select workspaces and permissions**, then choose their permissions manually select or assign a permission set [you previously created](#creating-a-permission-set).
 
-![Manage User Permissions][89]
-
-You can either select permissions manually or assign a permission set [you created previously](#creating-a-permission-set). If you need to give a user different permissions for different workspaces, repeat this process as many times as needed. For a description of each permission, see [List of permissions](#list-of-permissions).
+If you need to give a user different permissions for different workspaces, repeat this process as many times as needed. For a description of each permission, see [List of permissions](#list-of-permissions).
 
 {% tabs local %}
 {% tab select manually %}
-Under **Workspaces**, choose one or more workspaces from the dropdown. Then, under **Permissions** choose one or more permissions from the dropdown. They will be assigned these permissions only for the workspaces you have selected.
-
-Optionally, you can select **Enable Admin Access** if you'd like to give them full permissions for this workspace instead.
+Under **Workspaces**, choose one or more workspaces from the dropdown. Then, under **Permissions** choose one or more permissions from the dropdown. They will be assigned these permissions only for the workspaces you have selected. Optionally, you can select **Enable Admin Access** if you'd like to give them full permissions for this workspace instead.
 
 When you're finished, select **Update user**.
 
-![ALT_TEXT]()
+![ALT_TEXT]({% image_buster /assets/img/braze_permissions/workspace_level_permissions_individual.png %})
 {% endtab %}
 
 {% tab assign permission set %}
@@ -94,7 +95,7 @@ Under **Workspaces**, choose one or more workspaces from the dropdown. Then, und
 
 When you're finished, select **Update user**.
 
-![ALT_TEXT]()
+![ALT_TEXT]({% image_buster /assets/img/braze_permissions/workspace_level_permissions_set.png %})
 {% endtab %}
 {% endtabs %}
 
@@ -102,7 +103,7 @@ When you're finished, select **Update user**.
 
 To download list of your users and their permissions, go to **Settings** > **Company Users**, then select **Export Users**. A CSV file will be sent to your email address shortly.
 
-![ALT_TEXT]()
+![ALT_TEXT]({% image_buster /assets/img/braze_permissions/exporting_user_permissions.png %})
 
 ## List of permissions
 
@@ -146,9 +147,3 @@ As of April 2024, to create or update promotion code lists, Braze users need the
 |Workspace|View Transformations|Allows users to view [Braze Data Transformations]({{site.baseurl}}/user_guide/data_and_analytics/data_transformation/overview/).|
 |Workspace|View Usage Data|Allows users to view app usage, including the channel performance dashboards.|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
-
-[29]: {% image_buster /assets/img_archive/editing_user_permission_new.png %} "Edit User Permission"
-[30]: {% image_buster /assets/img_archive/two_factor_authentication_manage_users_new.png %}
-[76]: {{site.baseurl}}/user_guide/administrative/manage_your_braze_users/user_permissions/
-[89]: {% image_buster /assets/img/user_permissions_selection.png %}
-[5]: {% image_buster /assets/img/permission_sets_manage.png %}
