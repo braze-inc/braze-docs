@@ -51,6 +51,7 @@ If you are using the [older navigation]({{site.baseurl}}/navigation), **Template
 ![Expanded settings dropdown menu that shows three options: Edit, Archive, and Duplicate, where the Archive option highlighted.][10]{: style="float:right;max-width:20%;margin-left:15px;"}
 
 To archive an individual template, click the settings icon on the template grid screen and select **Archive**.
+Archiving a template will not edit any Campaigns or Canvases that are Live or Saved as Draft that have referenced the template as Braze take s acopy of the template and inserts this into campaigns. 
 
 ### Archive multiple templates
 
