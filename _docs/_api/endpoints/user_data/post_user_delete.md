@@ -56,7 +56,7 @@ Authorization: Bearer YOUR_REST_API_KEY
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ### Deleting users by email
-If an `email` is specified as an identifier, an additional `prioritization` value is required in the identifier. The `prioritization` should be an array specifying which user to delete if there are multiple users found. `prioritization` is an ordered array, meaning if more than one user matches from a prioritization, then deletion will not occur.
+If an `email` is specified as an identifier, an additional `prioritization` value is required in the identifier. The `prioritization` is an ordered array and should specify which user to delete if multiple users are found. This means deleting users will not occur if more than one user matches a prioritization.
 
 The allowed values for the array are: `identified`, `unidentified`, `most_recently_updated`. `most_recently_updated` refers to prioritizing the most recently updated user.
 
