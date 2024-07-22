@@ -1,64 +1,53 @@
 ---
 page_order: 0
-layout: dev_guide
-guide_top_header: "Braze 開発者ガイド"
-guide_top_text: "ここでは、開発者がBrazeで利用可能なすべてのインテグレーションを見つけることができます。<br>その他のリソースやBrazeの開発者コミュニティへの参加については、 <a href='https://www.braze.com/dev-portal'>Braze開発者ポータル</a>."
-article_title: Braze 開発者ガイド
-description: "このランディングページでは、開発者は Braze で利用可能なすべての統合を見つけることができます。"
+nav_title: ホーム
+article_title: Braze ヘルプ
+layout: self_help
+help_top_header: "Braze Help"
 
-guide_featured_title: "注目の統合"
-guide_featured_list:
-- name: Android and FireOS
-  image: /assets/img/braze_icons/android.svg
-  link: /docs/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/
-  nav_link: android
-- name: Swift
-  link: /docs/developer_guide/platform_integration_guides/swift/initial_sdk_setup/overview/
-  image: /assets/img/braze_icons/swift.svg
-- name: Web
-  link: /docs/developer_guide/platform_integration_guides/web/initial_sdk_setup/
-  image: /assets/img/braze_icons/globe-02.svg
-  nav_link: web
+page_type: landing
+user_top_text: "Welcome to the Braze self-help section! Here you'll find a variety of help articles that can help you troubleshoot issues you may encounter. You can also learn more about the best practices to communicate with and reach your users."
+description: "このランディングページには、最高の自己啓発セクションがあります。ここでは、さまざまなヘルプ記事、ベストプラクティスと FAQ、リリースノート、メディアリソースなどを見つけることができます。"
 
-guide_menu_title: "All integrations"
-guide_menu_list:
-  - name: Cordova Android
-    link: /docs/developer_guide/platform_integration_guides/cordova/initial_sdk_setup/android/
-    image: /assets/img/cordova.png
-    nav_link: cordova
-  - name: Cordova iOS
-    link: /docs/developer_guide/platform_integration_guides/cordova/initial_sdk_setup/ios/
-    image: /assets/img/cordova.png
-    nav_link: cordova
-  - name: Flutter Android and iOS
-    link: /docs/developer_guide/platform_integration_guides/flutter/flutter_sdk_integration/
-    image: /assets/img/flutter_icon.png
-    nav_link: flutter
-  - name: React Native
-    link: /docs/developer_guide/platform_integration_guides/react_native/react_sdk_setup/
-    image: /assets/img/reactnative_icon.png
-    nav_link: reactnative
-  - name: Unity Android
-    link: /docs/developer_guide/platform_integration_guides/unity/sdk_integration/android/
-    image: /assets/img/unity.png
-    nav_link: unity
-  - name: Unity iOS
-    link: /docs/developer_guide/platform_integration_guides/unity/sdk_integration/ios/
-    image: /assets/img/unity.png
-    nav_link: unity
-  - name: Xamarin
-    link: /docs/developer_guide/platform_integration_guides/xamarin/initial_sdk_setup/
-    image: /assets/img/xamarin.png
-    nav_link: xamarin
-  - name: Roku
-    link: /docs/developer_guide/platform_integration_guides/roku/initial_sdk_setup/
-    image: /assets/img/roku.png
-    nav_link: roku
-  - name: Unreal Engine
-    link: /docs/developer_guide/platform_integration_guides/unreal_engine/initial_sdk_setup/
-    image: /assets/img/unreal.png
-    nav_link: unrealengine
+resources_list:
+  - name: Help Articles
+    link: /docs/help/help_articles/overview/
+    image: /assets/img/braze_icons/info-circle.svg
+  - name: Best Practices and FAQ
+    link: /docs/help/faqs/
+    image: /assets/img/braze_icons/book-open-01.svg
+  - name: Release Notes
+    link: /docs/help/release_notes/most_recent/
+    image: /assets/img/braze_icons/sticker-square.svg
+  - name: Braze Learning Login
+    link: https://learning.braze.com/
+    image: /assets/img/braze_icons/user-square.svg
+  - name: Media Resources
+    link: https://www.youtube.com/channel/UCEXVTEWeAHx1OlddOMRTaOg
+    image: /assets/img/braze_icons/youtube.svg
+  - name: Braze Support
+    link: /docs/braze_support/
+    image: /assets/img/braze_icons/mail-01.svg
 
-guide_footer_header: " "
-guide_footer_text: " "
+popular_topic_list:
+  - name: Know Before You Send
+    link: /docs/help/help_articles/campaigns_and_canvas/know_before_send/
+  - name: Migrating Push Token
+    link: /docs/help/help_articles/push/push_token_migration/
+  - name: Logging Custom Event Properties
+    link: /docs/help/help_articles/campaigns_and_canvas/using_custom_event_properties/
+  - name: Dispatch ID
+    link: /docs/help/help_articles/data/dispatch_id/
+  - name: Email Bounces
+    link: /docs/help/help_articles/email/email_bounces/
+  - name: Deleting Users via API
+    link: /docs/help/help_articles/api/delete_user/
+  - name: Changing Custom Data Type
+    link: /docs/help/help_articles/data/change_custom_data_type/
+  - name: In-App Messages Not Displaying
+    link: /docs/help/help_articles/in-app_messages/in-app_messages_not_displaying/  
+  - name: Using Event Logging
+    link: /docs/help/help_articles/campaigns_and_canvas/using_event_logging/ 
 ---
+
+
