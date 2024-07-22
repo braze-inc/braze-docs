@@ -40,7 +40,7 @@ Appboy.sharedInstance()?.changeUser("YOUR_USER_ID")
 {% endtabs %}
 
 {% alert warning %}
-**Do not call `changeUser()` when a user logs out. `changeUser()` should only be called when the user logs into the application.** Setting [`changeUser()`][5] to a static default value will associate ALL user activity with that default "user" until the user logs in again.
+**Do not call `changeUser()` when a user logs out. `changeUser()` should only be called when the user logs into the application.** Setting [`changeUser()`](https://appboy.github.io/appboy-ios-sdk/docs/interface_appboy.html#ac8b369b40e15860b0ec18c0f4b46ac69%20%22changeuser%22) to a static default value will associate ALL user activity with that default "user" until the user logs in again.
 {% endalert %}
 
 Be sure to call this method in your application's main thread. Calling the method asynchronously can lead to undefined behavior.
@@ -58,4 +58,3 @@ Additionally, we recommend against changing the user ID when a user logs out, as
 [1]: {{site.baseurl}}/developer_guide/rest_api/user_data/#user-data
 [2]: {{site.baseurl}}/api/endpoints/messaging/
 [4]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/include/Appboy.h
-[5]: http://appboy.github.io/appboy-ios-sdk/docs/interface_appboy.html#ac8b369b40e15860b0ec18c0f4b46ac69 "changeuser"
