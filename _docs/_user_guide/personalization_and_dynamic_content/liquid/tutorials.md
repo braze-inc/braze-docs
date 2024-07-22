@@ -8,12 +8,14 @@ page_type: tutorial
 
 # Tutorials: Writing Liquid code
 
-> New to Liquid? These tutorials will help you get started with writing Liquid code for common use cases.
+> New to Liquid? These tutorials will help you get started with writing Liquid code for beginner-friendly use cases. Each tutorial covers a different combination of learning objectives, such as conditional logic and operators.
 
 When you’re finished with these tutorials, you’ll be able to:
 
 - Write Liquid code for common use cases
 - String together Liquid conditional logic to personalize messages based on user data
+- Use variables and filters to write equations that use the values of attributes
+- Recongize basic commands in Liquid code and form a general understanding about what the code is doing
 
 | Tutorial | Learning objectives |
 | --- | --- |
@@ -84,9 +86,9 @@ Thanks for traveling with us! Enjoy your unique discount code: SUMMRTRVLS240.
 
 ## Abandoned cart reminders {#reminders}
 
-Let’s send personalized messages to remind users of items left in their cart. We’ll customize them to send based on how many items are in their cart.
+Let’s send personalized messages to remind users of items left in their cart. We’ll further customize them to send based on how many items are in their cart, so that if they have more three items or fewer, we'll list all the items. If there are more than three items, we'll send a more concise message.
 
-1. Let’s check if their cart is empty by opening a Liquid conditional logic with the operator `!=`, which means “does not equal”. In this case, we’ll set the condition to the custom attribute `cart_items` not equaling a blank value.
+1. Let’s check if the user's cart is empty by opening a Liquid conditional logic with the operator `!=`, which means “does not equal”. In this case, we’ll set the condition to the custom attribute `cart_items` not equaling a blank value.
 
 {% raw %}
 ```liquid
@@ -95,7 +97,7 @@ Let’s send personalized messages to remind users of items left in their cart. 
 {% endraw %}
 
 {: start="2"}
-2. Let’s check if the cart has more than three items by using the operator `>’, which means “greater than”.
+2. We'll then need to narrow our focus and check if the cart has more than three items by using the operator `>’, which means “greater than”.
 
 {% raw %}
 ```liquid
@@ -104,7 +106,7 @@ Let’s send personalized messages to remind users of items left in their cart. 
 {% endraw %}
 
 {: start="3"}
-3. Write a message that greets the user by their first name, or if that’s not available, use “there” as a replacement for their name. Include what should be stated if there are more than three items in the cart. Because we don’t want to overwhelm the user with a complete list, let’s list the first three `cart_items`.
+3. Write a message that greets the user by their first name, or if that’s not available, use “there” as the default value. Include what should be stated if there are more than three items in the cart. Because we don’t want to overwhelm the user with a complete list, let’s list the first three `cart_items`.
 
 {% raw %}
 ```liquid
@@ -113,7 +115,7 @@ Hi {{${first_name} | default: 'there'}}, don't forget to complete your purchase!
 {% endraw %}
 
 {: start="4"}
-4. Use `else` to specify what should happen in all other cases (if `cart_items` is fewer than three), and then provide the message to send. Because three items don’t take up a lot of space, we can list them all. We’ll use the Liquid operator `join` and `,` to specify that the items should be listed with a comma separating them. Close the logic with `endif`.
+4. Use the `else` tag to specify what should happen if the previous conditions aren't met (in other words, if `cart_items` is blank or fewer than three), and then provide the message to send. Because three items don’t take up a lot of space, we can list them all. We’ll use the Liquid operator `join` and `,` to specify that the items should be listed with a comma separating them. Close the logic with `endif`.
 
 {% raw %}
 ```liquid
@@ -152,18 +154,18 @@ Hi {{${first_name} | default: 'there'}}, don't forget to complete your purchase!
 
 ## Event countdown {#countdown}
 
-Let’s send users a message that states how many days are left until an anniversary sale.
+Let’s send users a message that states how many days are left until an anniversary sale. To do this, we'll use variables so we can create equations that manipulate the values of attributes.
 
-1. First, let’s assign a variable, `sale_date`, to the custom attribute `anniversary_date` and apply the `date` filter of `%s`. This assigns the variable `event_date` the value of the `last_selected_event_date`’s seconds, which allows us to manipulate the value in later Liquid code lines.
+1. First, let’s assign the variable `sale_date` to the custom attribute `anniversary_date`, and apply the `date: "s"` filter. This converts the `anniversary_date` to a timestamp format that is expressed in seconds, then assigns that value to `sale_date`.
 
 {% raw %}
 ```liquid
-{% assign event_date = {{custom_attribute.${anniversary_date}}} | date: "%s" %}
+{% assign sale_date = {{custom_attribute.${anniversary_date}}} | date: "%s" %}
 ```
 {% endraw %}
 
 {: start="2"}
-2. We also need to assign a variable to today to define what today’s value should be. Let’s assign the variable `today` the value of `now`, and use the `date` filter of `%s` to specify that we’re using seconds.
+2. We also need to assign a variable to capture today's timestamp. Let’s assign the variable `today` to `now` (the current date and time), then apply the `date: "%s"` filter.
 
 {% raw %}
 ```liquid
@@ -172,7 +174,7 @@ Let’s send users a message that states how many days are left until an anniver
 {% endraw %}
 
 {: start="3"}
-3. We’ll assign the variable of `difference` to equal the value of `event_date` minus `today`.
+3. Now let's calculate how many seconds are between now (`today`) and the Anniversary Sale (`sale_date`). To do this, assign the variable `difference` to equal the value of `sale_date` minus `today`.
 
 {% raw %}
 ```liquid
@@ -181,7 +183,7 @@ Let’s send users a message that states how many days are left until an anniver
 {% endraw %}
 
 {: start="4"}
-4. Now we can assign the variable we’ll reference in our message. Let’s assign `difference_days` to the `event_date` divided by `86400`. This will give us the number of days until the Anniversary Sale.
+4. Now we need to convert `difference` to a value that we can reference in a message, as it isn't ideal to tell the user how many seconds there are until a sale. Let’s assign `difference_days` to the `event_date` and divide it by `86400` to get the number of days.
 
 {% raw %}
 ```liquid
@@ -201,7 +203,7 @@ Get ready! Our Anniversary Sale is in {{ difference_days }} days!
 {% details Full Liquid code %}
 {% raw %}
 ```liquid
-{% assign event_date = {{custom_attribute.${anniversary_date}}} | date: "%s" %}
+{% assign sale_date = {{custom_attribute.${anniversary_date}}} | date: "%s" %}
 {% assign today =  'now' | date: "%s"  %}
 {% assign difference =  event_date | minus: today %}
 {% assign difference_days = difference | divided_by: 86400 %}
@@ -212,9 +214,9 @@ Get ready! Our Anniversary Sale is in {{ difference_days }} days!
 
 ## Monthly birthday message {#birthday}
 
-Let’s send a special promotion to all users whose birthday falls within today’s month. 
+Let’s send a special promotion to all users whose birthday falls within today’s month. Users who don't have a birthday this month won't receive any message.
 
-1. Pull the month from today’s date. We’ll assign the variable `this_month` to `now`, then use the `date` filter `%B` to pull the month from the timestamp.
+1. First, let's pull today's month. We'll assign the variable `this_month` to `now` (the current date and time), then use the `date: "%B"` filter to specify that the variable should equal the month.
 
 {% raw %}
 ```liquid
@@ -223,7 +225,7 @@ Let’s send a special promotion to all users whose birthday falls within today�
 {% endraw %}
 
 {: start="2"}
-2. Pull the birth month from the user’s `date_of_birth`. We’ll assign the variable `birth_month` to `date_of_birth`, then use the same `date` filter of `%B`.
+2. Now, let's pull the birth month from the user’s `date_of_birth`. We’ll assign the variable `birth_month` to `date_of_birth`, then use the `date: "%B"` filter.
 
 {% raw %}
 ```liquid
@@ -232,7 +234,7 @@ Let’s send a special promotion to all users whose birthday falls within today�
 {% endraw %}
 
 {: start="3"}
-3. Begin a conditional logic that defines a condition of the variable `date_of_birth` equaling the user’s `birth_month`.
+3. Now that we have two variables that have a month as a value, we can compare them with conditional logic. Let's set the condition to be `date_of_birth` equaling the user’s `birth_month`.
 
 {% raw %}
 ```liquid
@@ -241,7 +243,7 @@ Let’s send a special promotion to all users whose birthday falls within today�
 {% endraw %}
 
 {: start="4"}
-4. Write the message to send if `this_month` is the user’s `birth_month`.
+4. Let's create the message to send if this month is also the user's birth month.
 
 {% raw %}
 ```liquid
@@ -250,7 +252,7 @@ We heard {{this_month}} is a special month! Enjoy a 50% discount on your purchas
 {% endraw %}
 
 {: start="5"}
-5. Use the `else` tag to specify what happens if this month isn’t the user’s birth month.
+5. Use the `else` tag to specify what happens if the condition isn't met (because this month isn’t the user’s birth month).
 
 {% raw %}
 ```liquid
@@ -259,7 +261,7 @@ We heard {{this_month}} is a special month! Enjoy a 50% discount on your purchas
 {% endraw %}
 
 {: start="6"}
-6. Use `abort_message` to cancel the message, then close the conditional logic with `endif`.
+6. We don't want to send a message if the user's birth month isn't this month, so we'll use `abort_message` to cancel the message, then close the conditional logic with `endif`.
 
 {% raw %}
 ```liquid
@@ -286,7 +288,7 @@ We heard {{this_month}} is a special month! Enjoy a 50% discount on your purchas
 
 Let’s promote a user’s favorite product if their last purchase date was over six months ago.
 
-1. Use conditional logic to check if we have the user’s favorite product and last purchase date.
+1. First, we'll use conditional logic to check if we have the user’s favorite product and last purchase date.
 
 {% raw %}
 ```liquid
@@ -295,7 +297,7 @@ Let’s promote a user’s favorite product if their last purchase date was over
 {% endraw %}
 
 {: start="2"}
-2. State that if we don’t have the user’s favorite product or last purchase date, not to send a message.
+2. Then we'll state that if we don’t have the user’s favorite product or last purchase date, not to send a message.
 
 {% raw %}
 ```liquid
@@ -304,7 +306,7 @@ Let’s promote a user’s favorite product if their last purchase date was over
 {% endraw %}
 
 {: start="3"}
-3. Use `else` to specify what should happen if we have the user’s favorite product and last purchase date.
+3. We'll use `else` to specify what should happen if the condiiton above isn't met (because we _do_ have the user’s favorite product and last purchase date).
 
 {% raw %}
 ```liquid
@@ -313,25 +315,26 @@ Let’s promote a user’s favorite product if their last purchase date was over
 {% endraw %}
 
 {: start="4"}
-4. Capture the current date in seconds by assigning the variable `today` to `now` and using the `date` filter of `%s`.
+4. If we have purchase date, we need to assign it to a variable so we can compare it to today's date. First, let's create a value for today's date by assigning the variable `today` to `now` (the current date and time) and using the `date: "%s"` filter to convert the value to a timestamp format that is expressed in seconds. We'll add the `plus: 0` filter to add a "0" to the timestamp. This doesn't change the timestamp's value, but is useful for using the timestamp in future equations.
+
 
 {% raw %}
 ```liquid
-{% assign today = 'now' | date: '%s' | plus: 0 %}
+{% assign today = 'now' | date: "%s" | plus: 0 %}
 ```
 {% endraw %}
 
 {: start="5"}
-5. Capture the last purchase date in seconds by assigning the variable `last_purchase_date` to the custom attribute `last_purchase_date` and using the `date` filter of `%s`.
+5. Now let's capture the last purchase date in seconds by assigning the variable `last_purchase_date` to the custom attribute `last_purchase_date` and using the `date: "s"` filter. We'll again add the `plus: 0` filter.
 
 {% raw %}
 ```liquid
-{% assign last_purchase_date = {{custom_attribute.${last_purchase_date}}} | date: '%s' | plus: 0 %}
+{% assign last_purchase_date = {{custom_attribute.${last_purchase_date}}} | date: "%s" | plus: 0 %}
 ```
 {% endraw %}
 
 {: start="6"}
-6. Calculate six months in seconds (approximately 6 months * 30.44 days * 24 hours * 60 minutes * 60 seconds) by assigning the variable `six_months` to the calculation. Use `times` to specify multiplication of time units.
+6. Because the last purchase date and today's date are in seconds, we'll need to caculate how many seconds are in six months. Let's make an equation (approximately 6 months * 30.44 days * 24 hours * 60 minutes * 60 seconds) and assign it to the variable `six_months`. We'll use `times` to specify the multiplication of time units.
 
 {% raw %}
 ```liquid
@@ -340,16 +343,16 @@ Let’s promote a user’s favorite product if their last purchase date was over
 {% endraw %}
 
 {: start="7"}
-7. Check if the last purchase date was at least six months ago by comparing `now` to whether `last_purchase_date` is `>=` (equal to or greater than) `six_months`.
+7. Now that all our time values are in seconds, we can directly compare them. Let's make another equation and incorpriate it into conditional logic. Let's define the condition as today (in seconds) minus the last purchase date (in seconds) being greater than or equal (`>=`) to six months.
 
 {% raw %}
 ```liquid
-{% if now | minus: last_purchase_date >= six_months %}
+{% if today | minus: last_purchase_date >= six_months %}
 ```
 {% endraw %}
 
 {: start="8"}
-8. Create the message to send if the purchase was at least six months ago.
+8. Let's create the message to send if the purchase was at least six months ago.
 
 {% raw %}
 ```liquid
@@ -358,7 +361,7 @@ We noticed it’s been a while since you last purchased {{custom_attribute.${fav
 {% endraw %}
 
 {: start="9"}
-9. Use the `else` tag to specify what should happen if the purchase wasn’t at least six months ago.
+9. We'll the `else` tag to specify what should happen if the condition isn't met (because the purchase wasn’t at least six months ago).
 
 {% raw %}
 ```liquid
@@ -367,7 +370,7 @@ We noticed it’s been a while since you last purchased {{custom_attribute.${fav
 {% endraw %}
 
 {: start="10"}
-10. Use `abort_message` to cancel the message.
+10. We'll include an `abort_message` to cancel the message.
 
 {% raw %}
 ```liquid
@@ -376,7 +379,7 @@ We noticed it’s been a while since you last purchased {{custom_attribute.${fav
 {% endraw %}
 
 {: start="11"}
-11. Add two `endif` tags. The first `endif` closes the conditional check for the favorite product or last purchase date, and the second `endif` closes the conditional check for the last purchase date being at least six months ago.
+11. To finish, we'll end the Liquid with two `endif` tags. The first `endif` closes the conditional check for the favorite product or last purchase date, and the second `endif` closes the conditional check for the last purchase date being at least six months ago.
 
 {% raw %}
 ```liquid
@@ -391,8 +394,10 @@ We noticed it’s been a while since you last purchased {{custom_attribute.${fav
 {% if {{custom_attribute.${favorite_product}}} == blank or {{custom_attribute.${last_purchase_date}}} == blank %}
 {% abort_message('Favorite product or last purchase date is not set') %}
 {% else %}
-{% assign today = 'now' | date: '%s' | plus: 0 %}
-{% assign last_purchase_date = {{custom_attribute.${last_purchase_date}}} | date: '%s' | plus: 0 %}
+{% assign today = 'now' | date: "%s" | plus: 0 %}
+{% assign last_purchase_date = {{custom_attribute.${last_purchase_date}}} | date: "%s" | plus: 0 %}
+{% assign six_months = 6 | times: 30.44 | times: 24 | times: 60 | times: 60 %}
+{% if today | minus: last_purchase_date >= six_months %}
 We noticed it’s been a while since you last purchased {{custom_attribute.${favorite_product}}}. Have you checked out our latest offerings?
 {% else %}
 {% abort_message('Last purchase was less than six months ago') %}
