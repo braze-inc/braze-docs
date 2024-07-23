@@ -200,7 +200,7 @@ In addition to managing your catalogs, you can also use asynchronous and synchro
 
 For example, if you want to edit an individual catalog item, you can use the [`/catalogs/catalog_name/items/item_id` endpoint]({{site.baseurl}}/api/endpoints/catalogs/catalog_items/synchronous/patch_catalog_item/).
 
-## Additional use cases
+## Additional use cases {#additional-use-cases}
 
 ### Multiple items
 
