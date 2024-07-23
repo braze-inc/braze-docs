@@ -46,7 +46,7 @@ Navigate to the Braze dashboard to create your email campaign. When creating you
 
 ![The Braze email builder emphasizing the email tag that can be added directly under the campaign description field.]({% image_buster /assets/img/jacquard/4_braze_emailtag.png %})
 
-Next, click **Edit Sending Info** for each variant to paste the Jacquard variant into the subject line. Ensure the number of variants matches between Jacquard and Braze.
+Next, select **Edit Sending Info** for each variant to paste the Jacquard variant into the subject line. Ensure the number of variants matches between Jacquard and Braze.
 
 You will not need to recreate each email from scratch; you can simply copy the first variant and then edit the subject line for each new variant.
 
@@ -68,7 +68,7 @@ Finalize any other settings as needed and save your campaign.
 
 #### Step 5: Jacquard integration inputs
 
-Navigate back to your Jacquard campaign and click the **Braze integration** button.
+Navigate back to your Jacquard campaign and select the **Braze integration** button.
 
 The schedule campaign window will pop up. Here, select your Braze campaign from the dropdown list. Next, select the date and time your campaign is scheduled to start and complete. Lastly, input the send time your A/B test is scheduled to complete, and save the details. The time zone of your Braze account will appear near the campaign dropdown to ensure the times align between applications.
 
@@ -87,7 +87,7 @@ Ensure your scheduled date and time match Braze's configured schedule so that Ja
 
 #### Step 1: Set up your push campaign in Jacquard to generate the variants of your split test
 
-Set up your Jacquard email campaign as you normally would. After you have approved your variants, you will be taken to the summary page. Here, you will need to copy the variants that will be added to your Braze campaign. If preferred, you can also click the **Download variants** button to download a .txt file containing all of your variants.
+Set up your Jacquard email campaign as you normally would. After you have approved your variants, you will be taken to the summary page. Here, you will need to copy the variants that will be added to your Braze campaign. If preferred, you can also select the **Download variants** button to download a .txt file containing all of your variants.
 
 ![A Jacquard campaign showing the available variants.]({% image_buster /assets/img/jacquard/3_phrasee_braze1.png %})
 
@@ -127,7 +127,7 @@ Finalize any other settings as needed and save your campaign.
 
 #### Step 6: Jacquard integration inputs
 
-Navigate back to your Jacquard campaign and click the **Braze integration** button.
+Navigate back to your Jacquard campaign and select the **Braze integration** button.
 
 The schedule campaign window will pop up. Here, select your Braze campaign from the dropdown list. Next, select the date and time your campaign is scheduled to start and complete. Lastly, input the send time your A/B test is scheduled to complete, and save the details. The time zone of your Braze account will appear near the campaign dropdown to ensure the times align between applications.
 

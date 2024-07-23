@@ -3,7 +3,7 @@ nav_title: Jacquard
 noindex: true
 layout: dev_guide
 guide_top_header: "Jacquard"
-guide_top_text: "Jacquard is an AI-powered SaaS platform that revolutionizes customer experiences through Brand Language Optimization. Jacquard is rewriting the digital marketing playbook one optimized word at a time, empowering brands all over the world to say it better."
+guide_top_text: "Jacquard is an AI-powered Software-as-a-Service (SaaS) platform that revolutionizes customer experiences through Brand Language Optimization. Jacquard is rewriting the digital marketing playbook one optimized word at a time, empowering brands all over the world to say it better."
 description: "This landing page is home to all things Jacquard, including integration instructions, and Jacquard React."
 alias: /partners/phrasee/
 

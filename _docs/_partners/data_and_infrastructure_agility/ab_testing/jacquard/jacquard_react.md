@@ -2,7 +2,7 @@
 nav_title: Jacquard React
 article_title: Jacquard React
 page_order: 2
-description: "This reference article outlines the partnership between Braze and Jacquard React that leverages Braze Currents and Connected Content to collect click tracking information from your subscribers via webhooks. Jacquard then ties those events back to your language variants for real-time language optimization."
+description: "This reference article outlines the partnership between Braze and Jacquard React that leverages Braze Currents and Connected Content to collect click tracking information from your subscribers through webhooks. Jacquard then ties those events back to your language variants for real-time language optimization."
 page_type: partner
 search_tag: Partner
 
@@ -12,13 +12,13 @@ search_tag: Partner
 
 > [Jacquard][1] brings together artificial intelligence, computational linguistics, and a spirit of customer-centricity to help deploy brand language, at scale, across channels that are customized to your brand voice.
 
-Jacquard React, powered by Jacquard X, leverages Braze Currents and Connected Content to collect click tracking information from your subscribers via webhooks. Jacquard then ties those events back to your language variants for real-time language optimization. 
+Jacquard React, powered by Jacquard X, leverages Braze Currents and Connected Content to collect click tracking information from your subscribers through webhooks. Jacquard then ties those events back to your language variants for real-time language optimization. 
 
 ## Prerequisites
 
 | Requirement | Description |
 |---|---|
-| Jacquard account | A [Jacquard account][3] is required to take advantage of this partnership. |
+| Jacquard account | A [Jacquard account][1] is required to take advantage of this partnership. |
 | Jacquard connect server token | A long string of characters that will serve as your Braze campaign's password to access your Jacquard language.<br><br>You can request this from your Jacquard customer success manager if you haven't already been provided it. |
 | Currents | In order to export data to Currents, you need to have [Braze Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/#access-currents) set up for your account. |
 {: .reset-td-br-1 .reset-td-br-2}
@@ -36,7 +36,7 @@ You'll need Jacquard to set up a dedicated Amazon S3 bucket to receive your clic
 3. Add your Jacquard AWS access key ID and secret access key in the credentials box. Then, add "phrasee-braze-currents-exports" as the AWS S3 bucket name. 
 4. Lastly, add the AWS S3 bucket folder you received from your Jacquard customer success manager. It will likely be your company's name.
 5. Under **General Settings**, check the "Include events from anonymous users" box, and under **Manage Engagement Events** check "Email Click".
-6. When you are finished, click **Launch Current**.
+6. When you are finished, select **Launch Current**.
 
 ### Step 3: Request to remove personally identifiable information (PII).
 
