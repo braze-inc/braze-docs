@@ -74,7 +74,7 @@ A test push message will appear at the top of your device screen.
 
 ![Test In App]({% image_buster /assets/img_archive/test-in-app.png %})
 
-Directly clicking and opening the push message will send you to your app, where you can view your in-app message test. Note this in-app message testing feature relies on the user clicking a test push notification in order to trigger the in-app message.
+Directly clicking and opening the push message will send you to your app, where you can view your in-app message test. Note this in-app message testing feature relies on the user clicking a test push notification to trigger the in-app message. As such, the user must be eligible to receive push notifications in the relevant app for the successful delivery of the test push notification.
 
 #### Troubleshooting
 

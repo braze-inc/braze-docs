@@ -63,7 +63,11 @@ If all of the messages in your campaign are similar or have the same content, co
 
 ## Step 2: Compose your WhatsApp message
 
-Select if you’d like to create a WhatsApp [template message](#template-messages) or response message, depending on your use case. Any business-initiated conversation must start from an approved template, whereas response messages can be used in responses to inbound messages from users within a 24-hour window. 
+Select if you’d like to create a WhatsApp [template message](#template-messages) or response message, depending on your use case. Any business-initiated conversation must start from an approved template, whereas response messages can be used in responses to inbound messages from users within a 24-hour window.
+
+{% alert note %}
+WhatsApp templates currently don't support coupon code buttons.
+{% endalert %}
 
 ![The Message Variants section lets you select a subscription group and one of two message types: WhatsApp Template Message and Response Message.][5]{: style="max-width:80%;"}
 

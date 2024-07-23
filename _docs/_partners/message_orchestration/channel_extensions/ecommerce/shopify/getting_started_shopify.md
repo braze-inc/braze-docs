@@ -38,7 +38,7 @@ Before you begin onboarding the integration, please review the following with yo
 |-------------|-------------|-------------|------------
 | Default on-site tracking      | <i class="fas fa-check" title="Supported"></i> | <i class="fas fa-times" title="Not supported"></i> | <i class="fas fa-times" title="Not supported"></i>          
 | Capture form user reconciliation (Low engineering lift required)   | <i class="fas fa-check" title="Supported"></i> | <i class="fas fa-check" title="Supported"></i> | <i class="fas fa-times" title="Not supported"></i> 
-| Checkout user reconciliation     | <i class="fas fa-check" title="Supported"></i>  | <i class="fas fa-check" title="Supported"></i>   | <i class="fas fa-times" title="Not supported"></i>                                        
+| Checkout user reconciliation     | <i class="fas fa-check" title="Supported"></i>  | <i class="fas fa-times" title="Not supported"></i>   | <i class="fas fa-times" title="Not supported"></i>                                        
 | Product viewed<br> Product clicked<br> Abandoned cart   | <i class="fas fa-check" title="Supported"></i> |<i class="fas fa-check" title="Supported"></i> | <i class="fas fa-times" title="Not supported"></i> 
 | Abandoned checkout<br> Created order<br> Braze Purchase<br> Order paid<br> Partially fulfilled order<br> Fulfilled order<br> Cancelled order<br> Created refund<br> Customer create & update | <i class="fas fa-check" title="Supported"></i> | <i class="fas fa-check" title="Supported"></i> | <i class="fas fa-check" title="Supported"></i>
 | Historical backfill | <i class="fas fa-check" title="Supported"></i>  | <i class="fas fa-check" title="Supported"></i>  | <i class="fas fa-check" title="Supported"></i>  
@@ -174,7 +174,7 @@ At this time, the Braze email capture form will not create a Shopify customer. A
 
 The Web SDK will initialize upon session start. Braze will need to collect the `device_id` for tracking anonymous user data as other identifiers like the Shopify customer ID, email, or phone number may not be readily available for guest visitors of your Shopify store.
 
-The `device_id` will also be used to reconcile user data to the anonymous user profile as a customer provides more identifiable information (such as an email address or phone number) during and after the checkout process.
+The `device_id` will also be used to reconcile user data to the anonymous user profile as a customer provides more identifiable information (such as an email address or phone number) after the checkout process.
 
 **Braze Web SDK version**
 

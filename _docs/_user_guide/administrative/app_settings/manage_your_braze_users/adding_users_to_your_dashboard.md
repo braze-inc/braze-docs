@@ -1,5 +1,5 @@
 ---
-nav_title: Managing Braze Users
+nav_title: Users
 article_title: Managing Braze Users
 page_order: 0
 page_type: reference

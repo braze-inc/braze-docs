@@ -14,7 +14,7 @@ platform:
 
 # Customizing Content Card behavior
 
-> This implementation guide discusses changing the behavior of Content Cards, adding extras such as key-value pairs to your payload, and recipes for common customizations.
+> This implementation guide discusses changing the behavior of Content Cards, adding extras such as key-value pairs to your payload, and recipes for common customizations. For a basic overview of the types of customization options you have with Content Cards, see [Customization overview]({{site.baseurl}}/developer_guide/customization_guides/customization_overview). 
 
 ## Key-value pairs
 

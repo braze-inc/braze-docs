@@ -14,7 +14,7 @@ platform:
 
 # Customizing the default Content Card feed
 
-> A Content Card feed is the sequence of Content Cards in your mobile or web applications. This article covers configuring when the feed is refreshed, the order of the cards, managing multiple feeds, and "empty feed" error messages.
+> A Content Card feed is the sequence of Content Cards in your mobile or web applications. This article covers configuring when the feed is refreshed, the order of the cards, managing multiple feeds, and "empty feed" error messages. For a basic overview of the types of customization options you have with Content Cards, see [Customization overview]({{site.baseurl}}/developer_guide/customization_guides/customization_overview). 
 
 ## Refreshing the feed
 
