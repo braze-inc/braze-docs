@@ -46,6 +46,8 @@ To prevent duplicate user profiles, it is critical you review the user reconcili
 
 {% alert note %}
 The default Shopify integration provides tooling to assist with merging your anonymous user profile and the Shopify alias profile. If you are implementing the integration to a headless Shopify site, review [Implementing the Web SDK directly onto your headless Shopify site]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/shopify/getting_started_shopify/?tab=headless%20shopify%20site#supported-features) to confirm you are properly reconciling your users. 
+
+If you encounter duplicate user profiles, our [bulk merging tool]({{site.baseurl}}/user_guide/engagement_tools/segments/user_profiles/duplicate_users#bulk-merging) is available to help streamline your data.
 {% endalert %}
 
 Braze merges the fields from the anonymous user profile to the identified user profile when we find a match with one of the following:
