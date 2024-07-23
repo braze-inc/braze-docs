@@ -53,8 +53,8 @@ You can bring in any type of data into a catalog. Typically, the data is metadat
 - **Travel methods**: Import deals and promotions for travel modes (such as flights, trains, rental cars, and others), then send them to your users based on their recent search history.
 - **Meal preferences:** Import information about meal offerings and use [selections]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/selections/) to send personalized messages to users who have specific meal preferences based on their most recently viewed food category.
 
-## How do catalogs and Liquid relate to each other?
+## How catalogs and Liquid work together
 
-Catalogs are a data storage feature. They contain large sets of data that can be referenced in your messages for personalization. To actually reference the data, you'll use Liquid as the templating language. In other words, catalogs is storage where the data is held, and Liquid is the language that pulls the relevent data from the storage.
+Catalogs are a data storage feature. They contain large sets of data that can be referenced in your messages for personalization. To actually reference the data, you'll use [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/) as the templating language. In other words, catalogs is storage where the data is held, and Liquid is the language that pulls the relevent data from the storage.
 
 For examples of how you can use Liquid to pull catalog information, see the additional use cases in [Creating a catalog]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/catalog/#additional-use-cases/).
