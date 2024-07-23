@@ -106,9 +106,9 @@ Braze currently hosts all user-level data in the Snowflake AWS US East-1 and EU-
 ### Data Retention
 
 #### Retention Policy
-Braze will store all event data for up to two years. Any data older than two years will be archived and moved to cold storage. As part of the archival process all events will be anonymized and any personal identifiable information (PII) sensitive fields will be stripped out (this includes optionally PII fields like `properties`). Archived data will still contain the `user_id` field which will remain consistent and can be tracked across both hot and cold tables.
+Any data older than two years will be archived and moved to longer term storage. As part of the archival process, all events are anonymized and any personal identifiable information (PII) sensitive fields is stripped out (this includes optionally PII fields like `properties`). Archived data still contains the `user_id` field, which allows for per-user analytics across all events data.
 
-You will be able to query against the most recent two years of data for each event in the corresponding `USERS_*_SHARED` view. Additionally, each event will have a `USERS_*_SHARED_ALL` view which can be queried against to return all data across both hot and cold storage tables.
+You will be able to query against the most recent two years of data for each event in the corresponding `USERS_*_SHARED` view. Additionally, each event will have a `USERS_*_SHARED_ALL` view which can be queried against to return both anonymized and non-anonymized data.
 
 #### Historical data
 The archive of historical event data in Snowflake goes back to April 2019. In the first few months of Braze storing data in Snowflake, product changes were made that may have resulted in some of that data looking slightly different or having some null values (as we weren't passing data into every available field at this time). It's best to assume that any results that include data before August 2019 may look slightly different from expectations.
