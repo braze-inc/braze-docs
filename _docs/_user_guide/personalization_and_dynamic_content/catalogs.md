@@ -31,22 +31,28 @@ guide_featured_list:
 
 ## Catalog use cases
 
+You can bring in any type of data into a catalog. Typically, the data is metadata about offerings, such as products, discounts, promotions, events, and similar. See the use cases below for a few examples of how you can use this data to target users with highly-relevent messaging.
+
 ### Retail and ecommerce
 
 - **Seasonal promotions:** Import seasonal product collections and personalize messages to reflect current trends.
 - **Localized messages:** Import your physical location addresses, hours, and services, then personalize notifications based on user locations.
-- Import promotional campaigns and send the most relevant offers to users based on their shopping behaviors.
+- **Back-in-stock notifications:** Import product information that includes inventory quantity, then use [back-in-stock notifications]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/back_in_stock_notifications/) and Braze custom events to trigger a campaign or Canvas that sends users a notification that a product is now stocked.
+- **Price drop notifications:** Import product information that includes product prices, then use [price drop notifications]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/price_drop_notifications/) and Braze custom events to trigger a Canvas that sends users a notification that a product's price dropped.
 
 ### Entertainment
 
 - **Subscription plans:** Import subscription plans and promote add-ons to your users based on their usage patterns and the types of content they most often consume.
-- **Events:** Import upcoming event listings and their locations and audience ages, then send personalized notifications to users who are within the area and of the target ages.
-- Import information about movies and shows, then recommend content to your users based on their favorited titles and most-watched genres.
+- **Upcoming events:** Import upcoming event listings and their locations and audience ages, then send personalized notifications to users who are within the area and of the target ages.
+- **Media preferences:** Import information about movies and shows, then recommend content to your users based on their favorited titles and most-watched genres.
 
 ### Travel and hospitality
 
-- Import travel destinations and their most popular attractions, restaurants, and activities, then personalize recommendations to your users based on their previous trips.
-- Import hotel properties and their amenities, room types, and pricing, then send promotions to your users based on their selected preferences.
-- Import flight deals and promotions, then send them to your users based on their recent search history.
+- **Destinations:** Import travel destinations and their most popular attractions, restaurants, and activities, then personalize recommendations to your users based on their previous trips.
+- **Accomodations:** Import hotel properties and their amenities, room types, and pricing, then send promotions to your users based on their selected preferences.
+- **Travel methods**: Import deals and promotions for travel modes (such as flights, trains, rental cars, and others), then send them to your users based on their recent search history.
+- **Meal preferences:** Import information about meal offerings and use [selections]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/selections/) to send personalized messages to users who have specific meal preferences based on their most recently viewed food category.
 
-## The difference between catalogs and Liquid
+## How do catalogs and Liquid relate to each other?
+
+Catalogs are a data storage feature. They contain large sets of data that can be referenced in your messages for personalization. To reference the data, you use Liquid as a templating language.
