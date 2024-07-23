@@ -106,7 +106,7 @@ Braze currently hosts all user-level data in the Snowflake AWS US East-1 and EU-
 ### Data Retention
 
 #### Retention Policy
-Any data older than two years will be archived and moved to longer term storage. As part of the archival process, all events are anonymized and any personal identifiable information (PII) sensitive fields is stripped out (this includes optionally PII fields like `properties`). Archived data still contains the `user_id` field, which allows for per-user analytics across all events data.
+Any data older than two years will be archived and moved to long term storage. As part of the archival process, all events are anonymized and any personal identifiable information (PII) sensitive fields are stripped out (this includes optionally PII fields like `properties`). Archived data still contains the `user_id` field, which allows for per-user analytics across all events data.
 
 You will be able to query against the most recent two years of data for each event in the corresponding `USERS_*_SHARED` view. Additionally, each event will have a `USERS_*_SHARED_ALL` view which can be queried against to return both anonymized and non-anonymized data.
 
