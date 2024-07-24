@@ -19,17 +19,17 @@ guide_featured_title: "セクションの記事"
 guide_featured_list:
   - name: Customizing Content Card Styles
     link: /docs/developer_guide/customization_guides/content_cards/customizing_styles
-    fa_icon: fa fa-paint-brush
+    image: /assets/img/braze_icons/brush-02.svg
   - name: Customizing Content Card Behavior
     link: /docs/developer_guide/customization_guides/content_cards/customizing_behavior/
-    fa_icon: fa fa-cog
+    image: /assets/img/braze_icons/settings-01.svg
   - name: Customizing the Default Content Card Feed
     link: /docs/developer_guide/customization_guides/content_cards/customizing_feed/
-    fa_icon: fa fa-book
+    image: /assets/img/braze_icons/book-closed.svg
   - name: Logging Analytics 
     link: /docs/developer_guide/customization_guides/content_cards/logging_analytics/
-    fa_icon: fa fa-mouse-pointer
+    image: /assets/img/braze_icons/navigation-pointer-01.svg
   - name: Creating Custom Content Cards
     link: /docs/developer_guide/customization_guides/content_cards/creating_custom_content_cards
-    fa_icon: fa fa-arrows-h
+    image: /assets/img/braze_icons/switch-horizontal-01.svg
 ---
