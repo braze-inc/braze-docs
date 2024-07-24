@@ -37,7 +37,7 @@ Choose which apps or platforms you'd like to target by selecting **Users from al
 
 For example, if you'd like to send an in-app message to only iOS devices, select your iOS app. This will ensure that users who might use both an iOS and an Android device will only receive the message on their iOS device. In the list of specific apps, the option **Users from no apps** allows you to include users with no sessions and no app data (typically created via user import or REST API).
 
-![Segment Details panel with the "Users from all apps" option selected in the Apps Used section.][5]
+![Segment Details panel with the "Users from all apps" option selected in the Apps Used section.][5]{: style="max-width:70%;"}
 
 ## Step 4: Add filters to your segment
 
@@ -49,9 +49,11 @@ Braze doesn't generate profiles for users until they've used the app for the fir
 
 #### Filter groups
 
-Filters are organized into filter groups. Every filter must be part of a filter group that has a minimum of one filter. A segment can have multiple filter groups. To add one, select **Add filter group**.
+Filters are organized into filter groups. Every filter must be part of a filter group that has a minimum of one filter. A segment can have multiple filter groups. To add one, select **Add filter group**. Edit the filter group name by selecting the icon that appears when you hover next to it.
 
-Select the icons next to each filter to duplicate or remove it. After duplicating a filter, you can adjust its values within each dropdown.
+![Filter group with an editing icon next to its name.][14]{: style="max-width:70%;"}
+
+Select the icons next to each filter to collapse the filter editor, duplicate the filter, or remove the filter. After duplicating a filter, you can adjust its values within each dropdown.
 
 You can also use the icon within each filter group to duplicate that filter group and the filters within it, or delete that filter group from your segment.
 
@@ -199,3 +201,4 @@ You can specify that only one push notification is sent to each user. When [comp
 [11]: {% image_buster /assets/img_archive/segmenter_and_or.png %}
 [12]: {% image_buster /assets/img_archive/segmenter_exclusion_groups.png %}
 [13]: {% image_buster /assets/img_archive/send_to_last_device.png %}
+[14]: {% image_buster /assets/img_archive/edit_filter_group_name.png %}
