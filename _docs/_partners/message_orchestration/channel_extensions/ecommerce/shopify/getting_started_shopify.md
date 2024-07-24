@@ -86,7 +86,7 @@ Typical email capture forms include:
 
 There are two ways to reconcile the user's email and `device_id`: 
 - Using the Braze automated email capture script 
-- Calling the setEmail or setPhoneNumber methods
+- Calling the `setEmail` or `setPhoneNumber` methods
 
 ##### Capturing email or phone signups
 
@@ -200,7 +200,7 @@ Typical email capture forms include:
 
 There are two ways to reconcile the user's email and `device_id`: 
 - Using the Braze automated email capture script 
-- Calling the setEmail or setPhoneNumber methods
+- Calling the `setEmail` or `setPhoneNumber` methods
 
 ##### Capturing email or phone signups
 
