@@ -108,7 +108,7 @@ You can also set the users’ subscription state as you are collecting their ema
 
 {% raw %}
 ```javascript
-    braze.getUser().setEmail(<email address>);
+    braze.getUser().setEmailNotificationSubscriptionType(braze.User.NotificationSubscriptionTypes.SUBSCRIBED);
 ```
 {% endraw %}
 
