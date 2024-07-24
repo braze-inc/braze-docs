@@ -96,7 +96,7 @@ If you are leveraging a Shopify email or phone number capture or a 3rd party cap
 
 {% raw %}
 ```javascript
-    braze.getUser().setEmail(<email address>);
+braze.getUser().setEmail(<email address>);
 ```
 {% endraw %}
 
@@ -108,7 +108,7 @@ You can also set the users’ subscription state as you are collecting their ema
 
 {% raw %}
 ```javascript
-    braze.getUser().setEmailNotificationSubscriptionType(braze.User.NotificationSubscriptionTypes.SUBSCRIBED);
+braze.getUser().setEmailNotificationSubscriptionType(braze.User.NotificationSubscriptionTypes.SUBSCRIBED);
 ```
 {% endraw %}
 
@@ -122,19 +122,19 @@ Adding the user to a [subscription group](https://js.appboycdn.com/web-sdk/lates
 
 {% raw %}
 ```javascript
-    <script>
-      const emailInputPoller = setInterval(()=>{
-        if (document.getElementById('{FORM_ID}')) {
-          document.getElementById('{FORM_ID}').addEventListener("submit",
-            function() {  
-              var email = document.getElementById('{INPUT_EMAIL_ID}').value
-              braze.getUser().setEmail(email)
-            }
-          );
+<script>
+  const emailInputPoller = setInterval(()=>{
+    if (document.getElementById('{FORM_ID}')) {
+      document.getElementById('{FORM_ID}').addEventListener("submit",
+        function() {  
+          var email = document.getElementById('{INPUT_EMAIL_ID}').value
+          braze.getUser().setEmail(email)
         }
-        clearInterval(emailInputPoller)
-      }, 2000)
-    </script>
+      );
+    }
+    clearInterval(emailInputPoller)
+  }, 2000)
+</script>
 ```
 {% endraw %}
 
@@ -210,7 +210,7 @@ If you are leveraging a Shopify email or phone number capture or a 3rd party cap
 
 {% raw %}
 ```javascript
-    braze.getUser().setEmail(<email address>);
+braze.getUser().setEmail(<email address>);
 ```
 {% endraw %}
 
@@ -222,7 +222,7 @@ You can also set the users’ subscription state as you are collecting their ema
 
 {% raw %}
 ```javascript
-    braze.getUser().setEmailNotificationSubscriptionType(braze.User.NotificationSubscriptionTypes.SUBSCRIBED);
+braze.getUser().setEmailNotificationSubscriptionType(braze.User.NotificationSubscriptionTypes.SUBSCRIBED);
 ```
 {% endraw %}
 
@@ -236,19 +236,19 @@ Adding the user to a [subscription group](https://js.appboycdn.com/web-sdk/lates
 
 {% raw %}
 ```javascript
-    <script>
-      const emailInputPoller = setInterval(()=>{
-        if (document.getElementById('{FORM_ID}')) {
-          document.getElementById('{FORM_ID}').addEventListener("submit",
-            function() {  
-              var email = document.getElementById('{INPUT_EMAIL_ID}').value
-              braze.getUser().setEmail(email)
-            }
-          );
+<script>
+  const emailInputPoller = setInterval(()=>{
+    if (document.getElementById('{FORM_ID}')) {
+      document.getElementById('{FORM_ID}').addEventListener("submit",
+        function() {  
+          var email = document.getElementById('{INPUT_EMAIL_ID}').value
+          braze.getUser().setEmail(email)
         }
-        clearInterval(emailInputPoller)
-      }, 2000)
-    </script>
+      );
+    }
+    clearInterval(emailInputPoller)
+  }, 2000)
+</script>
 ```
 {% endraw %}
 
