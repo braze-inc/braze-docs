@@ -274,8 +274,10 @@ func userNotificationCenter(
   willPresent notification: UNNotification,
   withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions
 ) -> Void) {
-  // Forward notification payload to Braze for processing.
-  AppDelegate.braze?.notifications.handleForegroundNotification(notification: notification)
+  if let braze = AppDelegate.braze {
+    // Forward notification payload to Braze for processing.
+    braze.notifications.handleForegroundNotification(notification: notification)
+  }
 
   // Configure application's foreground notification display options.
   if #available(iOS 14.0, *) {
@@ -318,7 +320,9 @@ Deep linking from a push into the app is automatically handled via our standard 
 
 {% tabs %}
 {% tab Swift %}
-To access the push notification payloads processed by Braze, use the [`Braze.Notifications.subscribeToUpdates(_:)`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/notifications-swift.class/subscribetoupdates(_:)/) method. You can use the `payloadTypes` parameter to specify whether you'd like to subscribe to notifications involving push open events, foreground push received events, or both.
+To access the push notification payloads processed by Braze, use the [`Braze.Notifications.subscribeToUpdates(payloadTypes:_:)`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/notifications-swift.class/subscribetoupdates(payloadtypes:_:)/) method.
+
+You can use the `payloadTypes` parameter to specify whether you'd like to subscribe to notifications involving push open events, foreground push received events, or both.
 
 ```swift
 // This subscription is maintained through a Braze cancellable, which will observe for changes until the subscription is cancelled.
@@ -331,7 +335,9 @@ let cancellable = AppDelegate.braze?.notifications.subscribeToUpdates(payloadTyp
 {% endtab %}
 
 {% tab OBJECTIVE-C %}
-To access the push notification payloads processed by Braze, use the [`Braze.Notifications.subscribeToUpdates(_:)`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/notifications-swift.class/subscribetoupdates(_:)/) method. You can use the `payloadTypes` parameter to specify whether you'd like to subscribe to notifications involving push open events, foreground push received events, or both.
+To access the push notification payloads processed by Braze, use the [`Braze.Notifications.subscribeToUpdates(payloadTypes:_:)`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/notifications-swift.class/subscribetoupdates(payloadtypes:_:)/) method.
+
+You can use the `payloadTypes` parameter to specify whether you'd like to subscribe to notifications involving push open events, foreground push received events, or both.
 
 ```objc
 BRZCancellable *cancellable = [notifications subscribeToUpdates:^(BRZNotificationsPayload * _Nonnull payload) {
