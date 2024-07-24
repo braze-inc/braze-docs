@@ -19,7 +19,7 @@ The WhatsApp embedded signup workflow is accessed when you first [integrate What
 Go to **Partner Integrations** > **Technology Partners**, then search for and select **WhatsApp**. Your next selection depends on your use case:
 
 - If you're integrating WhatsApp into your workspace, select **Begin Integration**. <br><br>![][10]{: style="max-width:80%;"}<br><br>
-- If you're adding a WhatsApp Business account to a existing WhatsApp integration, select **Add WhatsApp Business Account**. <br><br>![][11]{: style="max-width:80%;"}
+- If you're adding a WhatsApp Business account to an existing WhatsApp integration, select **Add WhatsApp Business Account**. <br><br>![][11]{: style="max-width:80%;"}
 
 The workflow from here is the same for both use cases.
 
@@ -35,8 +35,8 @@ The workflow from here is the same for both use cases.
 - WhatsApp business account name
 - WhatsApp business display name
 - Category <br><br>![Fields to provide details for the new WhatsApp Business account.][5]{: style="max-width:50%;"}<br><br>
-6. Enter your phone number and choose either **Text message** or **Phone call**. This number must follow all the requirements of any WhatsApp phone number, including not being registered to any other WhatsApp accounts. <br><br>![Fields to add phone number.][6]{: style="max-width:50%;"}<br><br>
-7. Enter your two-factor authentication code, then select **Next**. <br><br>![An input field for a two-factor autentication code.][7]{: style="max-width:50%;"}<br><br>
+6. Enter your phone number and choose either **Text message** or **Phone call**. This number must follow all the requirements of any WhatsApp phone number, including not being registered to any other WhatsApp accounts. <br><br>![Fields to add a phone number.][6]{: style="max-width:50%;"}<br><br>
+7. Enter your two-factor authentication code, then select **Next**. <br><br>![An input field for a two-factor authentication code.][7]{: style="max-width:50%;"}<br><br>
 8. Review the permissions that your WhatsApp Business account will receive, then select **Continue**. <br><br>![List of permissions requested by the WhatsApp Business account.][8]{: style="max-width:50%;"}<br><br>
 9. You're done! <br><br>![Window saying you're ready to start messaging people.][9]{: style="max-width:50%;"}
 
