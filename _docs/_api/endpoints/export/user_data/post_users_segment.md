@@ -20,7 +20,7 @@ description: "This article outlines details about the Export users by segment Br
 When using this endpoint, note the following:<br><br>1. The `fields_to_export` field in this API request is **required**.<br>2. The fields for `custom_events`, `purchases`, `campaigns_received`, and `canvases_received` only contain data from the last 90 days.
 {% endalert %}
 
-User data is exported as multiple files of user JSON objects separated by newlines (such as one JSON object per line). Data is exported to an automatically generated URL, or to an S3 bucket if this integration is already set up.
+User data is exported as multiple files of user JSON objects separated by new lines (such as one JSON object per line). Data is exported to an automatically generated URL, or to an S3 bucket if this integration is already set up.
 
 Note that a company may run at most one export per segment using this endpoint at a given time. Wait for your export to complete before trying again. 
 
