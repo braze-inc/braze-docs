@@ -50,7 +50,7 @@ The Swift SDK provides a configuration-only approach to automate the processing 
 To enable the automatic push integration, set the `automation` property of the `push` configuration to `true`:
 
 {% tabs %}
-{% tab swift %}
+{% tab Swift %}
 ```swift
 let configuration = Braze.Configuration(apiKey: "{YOUR-BRAZE-API-KEY}", endpoint: "{YOUR-BRAZE-API-ENDPOINT}")
 configuration.push.automation = true
@@ -85,7 +85,7 @@ The SDK must be initialized on the main thread to enable push notification autom
 For more granular control, each automation step can be enabled or disabled individually:
 
 {% tabs %}
-{% tab swift %}
+{% tab Swift %}
 
 ```swift
 // Enable all automations and disable the automatic notification authorization request at launch.
@@ -130,7 +130,7 @@ The following code sample includes integration for provisional push authenticati
 {% endalert %}
 
 {% tabs %}
-{% tab swift %}
+{% tab Swift %}
 
 ```swift
 application.registerForRemoteNotifications()
@@ -178,7 +178,7 @@ You must assign your delegate object using `center.delegate = self` synchronousl
 Once APNs registration is complete, pass the resulting `deviceToken` to Braze to enable for push notifications for the user.  
 
 {% tabs %}
-{% tab swift %}
+{% tab Swift %}
 
 Add the following code to your app's `application(_:didRegisterForRemoteNotificationsWithDeviceToken:)` method:
 
@@ -206,10 +206,11 @@ The `application:didRegisterForRemoteNotificationsWithDeviceToken:` delegate met
 
 Next, pass the received push notifications along to Braze. This step is necessary for logging push analytics and link handling. Ensure that you call all push integration code in your application's main thread.
 
-{% tabs %}
-{% tab swift %}
+#### Default push handling
 
-Add the following code to your app's `application(_:didReceiveRemoteNotification:fetchCompletionHandler:)` method:
+{% tabs %}
+{% tab Swift %}
+To enable Braze's default push handling, add the following code to your app's `application(_:didReceiveRemoteNotification:fetchCompletionHandler:)` method:
 
 ```swift
 if let braze = AppDelegate.braze, braze.notifications.handleBackgroundNotification(
@@ -221,7 +222,7 @@ if let braze = AppDelegate.braze, braze.notifications.handleBackgroundNotificati
 completionHandler(.noData)
 ```
 
-Next, add the following code to your app's `userNotificationCenter(_:didReceive:withCompletionHandler:)` method:
+Next, add the following to your app's `userNotificationCenter(_:didReceive:withCompletionHandler:)` method:
 
 ```swift
 if let braze = AppDelegate.braze, braze.notifications.handleUserNotification(
@@ -232,29 +233,10 @@ if let braze = AppDelegate.braze, braze.notifications.handleUserNotification(
 }
 completionHandler()
 ```
-
-**Foreground push handling**
-
-To display a push notification while the app is in the foreground, implement `userNotificationCenter(_:willPresent:withCompletionHandler:)`:
-
-```swift
-func userNotificationCenter(_ center: UNUserNotificationCenter,
-                            willPresent notification: UNNotification,
-                            withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
-  if #available(iOS 14.0, *) {
-    completionHandler([.list, .banner])
-  } else {
-    completionHandler([.alert])
-  }
-}
-```
-
-If the foreground notification is clicked, the push delegate `userNotificationCenter(_:didReceive:withCompletionHandler:)` will be called, and Braze will log a push click event.
-
 {% endtab %}
-{% tab OBJECTIVE-C %}
 
-Add the following code to your application's `application:didReceiveRemoteNotification:fetchCompletionHandler:` method:
+{% tab OBJECTIVE-C %}
+To enable Braze's default push handling, add the following code to your application's `application:didReceiveRemoteNotification:fetchCompletionHandler:` method:
 
 ```objc
 BOOL processedByBraze = AppDelegate.braze != nil && [AppDelegate.braze.notifications handleBackgroundNotificationWithUserInfo:userInfo
@@ -277,15 +259,47 @@ if (processedByBraze) {
 
 completionHandler();
 ```
+{% endtab %}
+{% endtabs %}
 
-**Foreground push handling**
+#### Foreground push handling
 
-To display a push notification while the app is in the foreground, implement `userNotificationCenter:willPresentNotification:withCompletionHandler:`:
+{% tabs %}
+{% tab Swift %}
+To enable foreground push notifications and let Braze recognize them when they're received, implement `UNUserNotificationCenter.userNotificationCenter(_:willPresent:withCompletionHandler:)`. If a user taps your foreground notification, the `userNotificationCenter(_:didReceive:withCompletionHandler:)` push delegate will be called and Braze will log the push click event.
+
+```swift
+func userNotificationCenter(
+  _ center: UNUserNotificationCenter,
+  willPresent notification: UNNotification,
+  withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions
+) -> Void) {
+  // Forward notification payload to Braze for processing.
+  AppDelegate.braze?.notifications.handleForegroundNotification(notification: notification)
+
+  // Configure application's foreground notification display options.
+  if #available(iOS 14.0, *) {
+    completionHandler([.list, .banner])
+  } else {
+    completionHandler([.alert])
+  }
+}
+```
+{% endtab %}
+
+{% tab OBJECTIVE-C %}
+To enable foreground push notifications and let Braze recognize them when they're received, implement `userNotificationCenter:willPresentNotification:withCompletionHandler:`. If a user taps your foreground notification, the `userNotificationCenter:didReceiveNotificationResponse:withCompletionHandler:` push delegate will be called and Braze will log the push click event.
 
 ```objc
 - (void)userNotificationCenter:(UNUserNotificationCenter *)center
        willPresentNotification:(UNNotification *)notification
          withCompletionHandler:(void (^)(UNNotificationPresentationOptions options))completionHandler {
+  if (AppDelegate.braze != nil) {
+    // Forward notification payload to Braze for processing.
+    [AppDelegate.braze.notifications handleForegroundNotificationWithNotification:notification];
+  }
+
+  // Configure application's foreground notification display options.
   if (@available(iOS 14.0, *)) {
     completionHandler(UNNotificationPresentationOptionList | UNNotificationPresentationOptionBanner);
   } else {
@@ -293,9 +307,6 @@ To display a push notification while the app is in the foreground, implement `us
   }
 }
 ```
-
-If the foreground notification is clicked, the push delegate `userNotificationCenter:didReceiveNotificationResponse:withCompletionHandler:` will be called, and Braze will log a push click event.
-
 {% endtab %}
 {% endtabs %}
 
@@ -305,32 +316,41 @@ Deep linking from a push into the app is automatically handled via our standard 
 
 ## Subscribing to push notifications updates
 
-To access the push notification payloads processed by Braze, use the [`Braze.Notifications.subscribeToUpdates(_:)`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/notifications-swift.class/subscribetoupdates(_:)/) method.
-
 {% tabs %}
-{% tab swift %}
+{% tab Swift %}
+To access the push notification payloads processed by Braze, use the [`Braze.Notifications.subscribeToUpdates(_:)`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/notifications-swift.class/subscribetoupdates(_:)/) method. You can use the `payloadTypes` parameter to specify whether you'd like to subscribe to notifications involving push open events, foreground push received events, or both.
 
 ```swift
 // This subscription is maintained through a Braze cancellable, which will observe for changes until the subscription is cancelled.
 // You must keep a strong reference to the cancellable to keep the subscription active.
 // The subscription is canceled either when the cancellable is deinitialized or when you call its `.cancel()` method.
-let cancellable = AppDelegate.braze?.notifications.subscribeToUpdates { payload in
+let cancellable = AppDelegate.braze?.notifications.subscribeToUpdates(payloadTypes: [.open, .received]) { payload in
   print("Braze processed notification with title '\(payload.title)' and body '\(payload.body)'")
 }
 ```
-
 {% endtab %}
+
 {% tab OBJECTIVE-C %}
+To access the push notification payloads processed by Braze, use the [`Braze.Notifications.subscribeToUpdates(_:)`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/notifications-swift.class/subscribetoupdates(_:)/) method. You can use the `payloadTypes` parameter to specify whether you'd like to subscribe to notifications involving push open events, foreground push received events, or both.
 
 ```objc
-BRZCancellable *cancellable = [notifications subscribeToUpdatesWithInternalNotifications:NO update:^(BRZNotificationsPayload * _Nonnull payload) {
+BRZCancellable *cancellable = [notifications subscribeToUpdates:^(BRZNotificationsPayload * _Nonnull payload) {
   NSLog(@"Braze processed notification with title '%@' and body '%@'", payload.title, payload.body);
 }];
 ```
 
-{% endtab %}
-{% endtabs %}
+Or, to specify the types of push events you'd like to subscribe to:
 
+```objc
+NSInteger filtersValue = BRZNotificationsPayloadTypeFilter.opened.rawValue | BRZNotificationsPayloadTypeFilter.received.rawValue;
+BRZNotificationsPayloadTypeFilter *filters = [[BRZNotificationsPayloadTypeFilter alloc] initWithRawValue: filtersValue];
+BRZCancellable *cancellable = [notifications subscribeToUpdatesWithPayloadTypes:filters:^(BRZNotificationsPayload * _Nonnull payload) {
+  NSLog(@"Braze processed notification with title '%@' and body '%@'", payload.title, payload.body);
+}];
+```
+{% endtab %}
+
+{% endtabs %}
 {% alert note %}
 When using the automatic push integration, `subscribeToUpdates(_:)` is the only way to be notified of remote notifications processed by Braze. The `UIAppDelegate` and `UNUserNotificationCenterDelegate` system methods are not called when the notification is automatically processed by Braze.
 {% endalert %}
