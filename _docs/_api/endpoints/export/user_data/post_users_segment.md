@@ -17,10 +17,10 @@ description: "This article outlines details about the Export users by segment Br
 > Use this endpoint to export all the users within a segment. 
 
 {% alert important %}
-Beginning December 2021, the following changed for this API:<br><br>1. The `fields_to_export` field in this API request is **required**. The option to default to all fields has been removed.<br>2. The fields for `custom_events`, `purchases`, `campaigns_received`, and `canvases_received` only contain data from the last 90 days.
+When using this endpoint, note the following:<br><br>1. The `fields_to_export` field in this API request is **required**.<br>2. The fields for `custom_events`, `purchases`, `campaigns_received`, and `canvases_received` only contain data from the last 90 days.
 {% endalert %}
 
-User data is exported as multiple files of user JSON objects separated by new lines (such as one JSON object per line). Data is exported to an automatically generated URL, or to an S3 bucket if this integration is already set up.
+User data is exported as multiple files of user JSON objects separated by newlines (such as one JSON object per line). Data is exported to an automatically generated URL, or to an S3 bucket if this integration is already set up.
 
 Note that a company may run at most one export per segment using this endpoint at a given time. Wait for your export to complete before trying again. 
 
@@ -77,7 +77,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 {
   "segment_id" : (required, string) identifier for the segment to be exported,
   "callback_endpoint" : (optional, string) endpoint to post a download URL when the export is available,
-  "fields_to_export" : (required, array of string) name of user data fields to export, you may also export custom attributes. *Beginning April 2021, new accounts must specify specific fields to export.
+  "fields_to_export" : (required, array of string) name of user data fields to export, you may also export custom attributes. New accounts must specify specific fields to export,
   "output_format" : (optional, string) when using your own S3 bucket,  specifies file format as 'zip' or 'gzip'. Defaults to ZIP file format
 }
 ```
@@ -163,7 +163,7 @@ The following is a list of valid `fields_to_export`. Using `fields_to_export` to
 ## Important reminders
 
 - The fields for `custom_events`, `purchases`, `campaigns_received`, and `canvases_received` will contain only contain data from the last 90 days.
-- Both `custom_events` and `purchases` contain fields for `first` and `count`. Both of these fields will reflect information from all time, and will not be limited to just data from the last 90 days. For example, if a particular user first did the event prior to 90 days ago, this will be accurately reflected in the `first` field, and the `count` field will take into account events that occurred prior to the last 90 days as well.
+- Both `custom_events` and `purchases` contain fields for `first` and `count`. Both of these fields will reflect information from all time, and will not be limited to just data from the last 90 days. For example, if a particular user first did the event 90 days ago, this will be accurately reflected in the `first` field, and the `count` field will take into account events that occurred prior to the last 90 days as well.
 - The number of concurrent segment exports a company can run at the endpoint level is capped at 100. Attempts that surpass this limit will result in an error.
 - Attempting to export a segment a second time while the first export job is still running will result in a 429 error.
 
