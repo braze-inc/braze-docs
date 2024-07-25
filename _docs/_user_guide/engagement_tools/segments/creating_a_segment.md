@@ -22,7 +22,7 @@ If you are using the [older navigation]({{site.baseurl}}/navigation), you can fi
 
 ## Step 2: Name your segment
 
-Select **Create Segment** to begin building your segment. Name your segment by describing the type of user you intend to filter for. This will help you identify the segment when you want to target it for multiple campaigns or Canvases. Vague segment titles can be confusing.
+Select **Create Segment** to begin building your segment. Name your segment by describing the type of user you intend to filter for. This will help you identify the segment when you want to target it for your campaigns or Canvases. Vague segment titles can be confusing.
 
 Optionally, you can do the following:
 - Add a description to the segment to provide more details about the intention of this audience and leave notes for other team members to refer back to.
@@ -41,7 +41,7 @@ For example, if you'd like to send an in-app message to only iOS devices, select
 
 ## Step 4: Add filters to your segment
 
-Add at least one filter to your segment. You can combine as many filters as you want in order to make your segmentation more specific.
+Add at least one filter to your segment. You can combine as many filters as you want to make your segmentation more specific.
 
 {% alert note %}
 Braze doesn't generate profiles for users until they've used the app for the first time, so you can't target users who haven't opened your app yet.
@@ -83,7 +83,7 @@ Segments already using the **Segment Membership** filter cannot be further inclu
 
 When building a segment, you can apply one or multiple exclusion groups. Exclusion groups contain criteria that identify users to exclude from your segment, and will always be connected to your filter groups with an "AND NOT" operator.
 
-If a user falls into your exclusion group criteria, they will not be part of your segment, even if they meet the criteria within your filter groups.
+Exclusion groups override segment criteria. If a user falls into your exclusion group criteria, they will not be part of your segment, even if they meet the criteria within your filter groups.
 
 Create an exclusion group by adding filters like you would for filter groups. The _Estimated Reachable Users_ statistic in an exclusion group shows the estimated number of users remaining in your segment after the exclusion criteria is applied.
 
@@ -124,7 +124,7 @@ Select **Save**. Now you're ready to start sending messages to your users!
 
 ## Segment membership calculation {#segment-membership-calculation}
 
-Braze updates the user’s segment membership as data is sent back to our servers and processed, typically instantaneously. A user’s segment membership will not change until that session has been processed. For example, a user who falls into a lapsed user segment when the session first starts will be immediately moved out of the lapsed user segment when the session is processed.
+Braze updates the user's segment membership as data is sent back to our servers and processed, typically instantaneously. A user's segment membership will not change until that session has been processed. For example, a user who falls into a lapsed user segment when the session first starts will be immediately moved out of the lapsed user segment when the session is processed.
 
 ### Total reachable users calculation
 
@@ -140,7 +140,7 @@ A single user may belong to different reachable user groups. For example, a user
 
 ### Statistics for segment size
 
-Braze provides the following statistics on segment size. All estimated statistics are (+/- 1%) and the exact segment membership will always be calculated before a segment is affected by a message sent in a campaign or Canvas.
+Braze provides the following statistics on segment size. All estimated statistics are within 1% above or below the actual value, and the exact segment membership will always be calculated before a segment is affected by a message sent in a campaign or Canvas.
 
 #### Filter statistics
 
