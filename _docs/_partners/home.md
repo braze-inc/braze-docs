@@ -131,8 +131,8 @@ valid_partner_list:
   url: /docs/partners/message_personalization/location/bluedot/
 - name: NPAW
   url: /docs/partners/data_and_infrastructure_agility/analytics/npaw/
-- name: Phrasee
-  url: /docs/partners/data_and_infrastructure_agility/ab_testing/phrasee/
+- name: Jacquard
+  url: /docs/partners/data_and_infrastructure_agility/ab_testing/jacquard/
 - name: optilyz
   url: /docs/partners/message_orchestration/additional_channels/direct_mail/optilyz/
 - name: Digioh

@@ -53,8 +53,8 @@ valid_partner_list:
   url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/treasure_data/
 - name: NPAW
   url: /docs/partners/data_and_infrastructure_agility/analytics/npaw/
-- name: Phrasee
-  url: /docs/partners/data_and_infrastructure_agility/ab_testing/phrasee/
+- name: Jacquard
+  url: /docs/partners/data_and_infrastructure_agility/ab_testing/jacquard/
 - name: Nexla
   url: /docs/partners/data_and_infrastructure_agility/workflow_automation/nexla/
 - name: Amperity

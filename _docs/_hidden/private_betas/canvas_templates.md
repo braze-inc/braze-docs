@@ -11,7 +11,8 @@ page_type: reference
 > This reference article covers how to create and manage templates for Canvas. Using templates can refine your messaging by creating a consistent framework that can be easily customized to fit your specific goals across your Canvases.
 
 {% alert important %}
-Canvas templates are currently in early access. Contact your customer success manager if you're interested in participating in this early access.
+Canvas templates are currently in early access. Contact your customer success manager if you're interested in participating in this early access.<br><br>
+WhatsApp and push notifications with action buttons are not yet supported in Canvas templates.
 {% endalert %}
 
 ## Method 1: Create from an existing Canvas

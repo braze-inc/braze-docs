@@ -151,6 +151,8 @@ validurls['/docs/release_notes/'] = '/docs/help/release_notes/most_recent/';
 validurls['/docs/templates_and_media/'] = '/docs/user_guide/engagement_tools/templates_and_media/';
 validurls['/docs/troubleshooting_guide/'] = '/docs/help/home/';
 validurls['/docs/user_targeting/'] = '/docs/user_guide/engagement_tools/segments/creating_a_segment/';
+validurls['/docs/updated_segment_experience/'] = '/docs/user_guide/engagement_tools/segments/creating_a_segment/';
+
 validurls['/docs/user_guide/engagement_tools/segments/user_lookup/'] = '/docs/user_guide/engagement_tools/segments/creating_a_segment/';
 validurls['/docs/webinars/'] = '/docs/help/webinars/overview';
 validurls['/docs/create_send/'] = '/docs/api/endpoints/messaging/send_messages/post_send_triggered_campaigns/#create-send-endpoint';
@@ -1158,5 +1160,10 @@ validurls['/docs/user_guide/message_building_by_channel/content_cards/integratio
 validurls['/docs/user_guide/data_and_analytics/your_reports/'] = '/docs/user_guide/data_and_analytics/reporting/'
 
 validurls['/docs/user_guide/message_building_by_channel/email/best_practices/managing_email_subscriptions/'] = '/docs/user_guide/message_building_by_channel/email/best_practices/duplicate_emails/';
+
+validurls['/docs/partners/data_and_infrastructure_agility/ab_testing/phrasee'] = '/docs/partners/data_and_infrastructure_agility/ab_testing/jacquard/';
+validurls['/docs/partners/data_and_infrastructure_agility/ab_testing/phrasee/phrasee'] = '/docs/partners/data_and_infrastructure_agility/ab_testing/jacquard/jacquard/';
+validurls['/docs/partners/data_and_infrastructure_agility/ab_testing/phrasee/phrasee_react'] = '/docs/partners/data_and_infrastructure_agility/ab_testing/jacquard/jacquard_react/';
+validurls['/docs/partners/data_and_infrastructure_agility/ab_testing/phrasee/phrasee#phrasee'] = '/docs/partners/data_and_infrastructure_agility/ab_testing/jacquard/jacquard/';
 
 // validurls['OLD'] = 'NEW';

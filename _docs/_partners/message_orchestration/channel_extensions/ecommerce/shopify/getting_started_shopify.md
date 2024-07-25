@@ -81,77 +81,62 @@ Capture forms obtain identifiable customer information early in the customer’s
 The Web SDK tracks Shopify onsite behavior and anonymous users by using the `device_id`. The Braze Shopify ScriptTag integration assigns emails from Shopify email capture forms, such as a newsletter signup, to the user’s `device_id`.
 
 Typical email capture forms include: 
-- Account login page 
-- Account registration page 
 - Email capture form 
 - Newsletter signup form
 
 There are two ways to reconcile the user's email and `device_id`: 
 - Using the Braze automated email capture script 
-- Adding your own call to the Braze `reconcileEmail()` script.
+- Calling the `setEmail` or `setPhoneNumber` methods
 
-##### Automated email capture script (early access)
+##### Capturing email or phone signups
 
-The automated email capture script reconciles customer email input with the user’s `device_id`. There are several requirements for it to work properly:
+With Braze, you can use our [email]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/customize/email_capture_form/#step-1-create-an-in-app-message-campaign) and [SMS and WhatsApp]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/templates/phone_number_capture) sign-up forms to leverage the Web SDK and in-app messages. 
 
-- The textbox where the customer inputs their email must be an Input HTML Element under a Form HTML Element named "email".
-- The email must be entered through an HTML form submission, not a web service.
-- All email input fields should be used for the customer to enter their own email address, or the wrong email may be assigned to the `device_id`. For example, an email referral for friends and family would be incorrectly treated as the customer’s email and updated on the Braze user profile.
-
-{% alert important %}
-The automated email capture script is currently in early access. Contact your customer success manager if you're interested in participating in this early access. <br><br> If your integration is already installed, it will need to be reinstalled at this point to complete its activation.
-{% endalert %}
-
-##### Calling reconcileEmail()
-
-Adding calls to `reconcileEmail()` to your Shopify storefront’s website allows you to control exactly which input fields are used to assign a customer email to their `device_id`. We suggest you use this approach if your storefront does not meet the requirements for the automated email capture script.
-
-Here are examples of how to implement the `reconcileEmail` method into your Shopify `theme.liquid` code: 
-
-**Account and registration**
-
-1. When a user is logged into Shopify, the customer object is defined. In the `theme.liquid` file, add the following snippet in the `head tag`:
+If using a Shopify email or phone number capture, or a third-party capture form, you can be set directly on the user that is tracked by the Braze Web SDK. For example, if you obtain the customer’s email address, you can set it on their user profile like this:
 
 {% raw %}
 ```javascript
-   <script>
-      const customerPoller = setInterval(()=>{
-        {% if customer %}
-          reconcileEmail("{{customer.email}}");
-        {% endif %}{}
-        clearInterval(customerPoller)
-      }, 2000)
-    </script>
+braze.getUser().setEmail(<email address>);
 ```
 {% endraw %}
 
-{: start="2"}
-2. We first call `setInterval` so that the BrazeSDK is loaded first
-3. We use Liquid to check if a customer object is set on the page
-4. If there is a customer, we call `reconcileEmail`
-5. We retrieve email value in the Liquid form `customer.email`
-6. After the script loads, we call `clearInterval` so that it loads only once
-7. You can check the console to confirm the email is reconciled
+For details on setting these values, refer to these Javascript resources:
 
-**Newsletter and email capture forms**
+- Setting the user’s [email](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.user.html#setemail)
+- Setting the user’s [phone number](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.user.html#setphonenumber)
+
+You can also set the users’ subscription state as you collect their email or phone number, like this:
+
+{% raw %}
+```javascript
+braze.getUser().setEmailNotificationSubscriptionType(braze.User.NotificationSubscriptionTypes.SUBSCRIBED);
+```
+{% endraw %}
+
+For details on setting these values, refer to these Javascript resources:
+
+- Setting the user’s [email notification subscription type](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.user.html#setemailnotificationsubscriptiontype)
+- Adding the user to a [subscription group](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.user.html#addtosubscriptiongroup)
+
+**Example third-party capture form implementation**
 
 1. In `theme.liquid`, copy the following snippet in the `head tag`:
 
 {% raw %}
 ```javascript
-    <script>
-         const emailInputPoller = setInterval(()=>{
-      if (document.getElementById('{FORM_ID}')) {
-        document.getElementById('{FORM_ID}').addEventListener("submit",
-          function() {  
-            var email = document.getElementById('{INPUT_EMAIL_ID}').value
-            reconcileEmail(email)
-          }
-        );
-      }
-      clearInterval(emailInputPoller)
-        }, 2000)
-    </script>
+<script>
+  const emailInputPoller = setInterval(()=>{
+    if (document.getElementById('{FORM_ID}')) {
+      document.getElementById('{FORM_ID}').addEventListener("submit",
+        function() {  
+          var email = document.getElementById('{INPUT_EMAIL_ID}').value
+          braze.getUser().setEmail(email)
+        }
+      );
+    }
+    clearInterval(emailInputPoller)
+  }, 2000)
+</script>
 ```
 {% endraw %}
 
@@ -160,9 +145,8 @@ Here are examples of how to implement the `reconcileEmail` method into your Shop
 3. Replace `{FORM_ID}` with the element ID of the form you want to capture
 (such as “ContactFooter”.)
 4. Replace `{INPUT_EMAIL_ID}` with the element ID of the email input field inside the form
-5. When the form is submitted, the script will call `reconcileEmail` with the email input value
+5. When the form is submitted, the script will call `setEmail` with the email input value
 6. After the script loads, we call `clearInterval` so that it loads only once
-7. You can check the console to confirm the email is reconciled
 
 {% alert note %}
 At this time, the Braze email capture form will not create a Shopify customer. As a result, you could have Braze user profiles without associated Shopify user profiles until the customer goes through checkout or creates an account. 
@@ -213,77 +197,62 @@ Capture forms obtain identifiable customer information early in the customer’s
 The Web SDK tracks Shopify onsite behavior and anonymous users by using the `device_id`. The Braze Shopify ScriptTag integration assigns emails from Shopify email capture forms, such as a newsletter signup, to the user’s `device_id`.
 
 Typical email capture forms include: 
-- Account login page 
-- Account registration page 
 - Email capture form 
 - Newsletter signup form
 
 There are two ways to reconcile the user's email and `device_id`: 
 - Using the Braze automated email capture script 
-- Adding your own call to the Braze `reconcileEmail()` script.
+- Calling the `setEmail` or `setPhoneNumber` methods
 
-##### Automated email capture script (early access)
+##### Capturing email or phone signups
 
-The automated email capture script reconciles customer email input with the user’s `device_id`. There are several requirements for it to work properly:
+With Braze, you can use our [email]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/customize/email_capture_form/#step-1-create-an-in-app-message-campaign) and [SMS and WhatsApp]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/templates/phone_number_capture) sign-up forms to leverage the Web SDK and in-app messages. 
 
-- The textbox where the customer inputs their email must be an Input HTML Element under a Form HTML Element named "email".
-- The email must be entered through an HTML form submission, not a web service.
-- All email input fields should be used for the customer to enter their own email address, or the wrong email may be assigned to the `device_id`. For example, an email referral for friends and family would be incorrectly treated as the customer’s email and updated on the Braze user profile.
-
-{% alert important %}
-The automated email capture script is currently in early access. Contact your customer success manager if you're interested in participating in this early access. <br><br> If your integration is already installed, it will need to be reinstalled at this point to complete its activation.
-{% endalert %}
-
-##### Calling reconcileEmail()
-
-Adding calls to `reconcileEmail()` to your Shopify storefront’s website allows you to control exactly which input fields are used to assign a customer email to their `device_id`. We suggest you use this approach if your storefront does not meet the requirements for the automated email capture script.
-
-Here are examples of how to implement the `reconcileEmail` method into your Shopify `theme.liquid` code: 
-
-**Account and registration**
-
-1. When a user is logged into Shopify, the customer object is defined. In the `theme.liquid` file, add the following snippet in the `head tag`:
+If using a Shopify email or phone number capture, or a third-party capture form, you can be set directly on the user object that is tracked by the Braze Web SDK. For example, if you obtain the customer’s email address, you can set it on their user profile like this:
 
 {% raw %}
 ```javascript
-   <script>
-      const customerPoller = setInterval(()=>{
-        {% if customer %}
-          reconcileEmail("{{customer.email}}");
-        {% endif %}{}
-        clearInterval(customerPoller)
-      }, 2000)
-    </script>
+braze.getUser().setEmail(<email address>);
 ```
 {% endraw %}
 
-{: start="2"}
-2. We first call `setInterval` so that the BrazeSDK is loaded first
-3. We use Liquid to check if a customer object is set on the page
-4. If there is a customer, we call `reconcileEmail`
-5. We retrieve email value in the Liquid form `customer.email`
-6. After the script loads, we call `clearInterval` so that it loads only once
-7. You can check the console to confirm the email is reconciled
+For details on setting these values, refer to these Javascript resources:
 
-**Newsletter and email capture forms**
+- Setting the user’s [email](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.user.html#setemail)
+- Setting the user’s [phone number](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.user.html#setphonenumber)
+
+You can also set the users’ subscription state as you are collecting their email or phone number like this:
+
+{% raw %}
+```javascript
+braze.getUser().setEmailNotificationSubscriptionType(braze.User.NotificationSubscriptionTypes.SUBSCRIBED);
+```
+{% endraw %}
+
+For details on setting these values, refer to these Javascript resources:
+
+- Setting the user’s [email notification subscription type](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.user.html#setemailnotificationsubscriptiontype)
+- Adding the user to a [subscription group](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.user.html#addtosubscriptiongroup)
+
+**Example third-party capture form implementation**
 
 1. In `theme.liquid`, copy the following snippet in the `head tag`:
 
 {% raw %}
 ```javascript
-    <script>
-         const emailInputPoller = setInterval(()=>{
-      if (document.getElementById('{FORM_ID}')) {
-        document.getElementById('{FORM_ID}').addEventListener("submit",
-          function() {  
-            var email = document.getElementById('{INPUT_EMAIL_ID}').value
-            reconcileEmail(email)
-          }
-        );
-      }
-      clearInterval(emailInputPoller)
-        }, 2000)
-    </script>
+<script>
+  const emailInputPoller = setInterval(()=>{
+    if (document.getElementById('{FORM_ID}')) {
+      document.getElementById('{FORM_ID}').addEventListener("submit",
+        function() {  
+          var email = document.getElementById('{INPUT_EMAIL_ID}').value
+          braze.getUser().setEmail(email)
+        }
+      );
+    }
+    clearInterval(emailInputPoller)
+  }, 2000)
+</script>
 ```
 {% endraw %}
 
@@ -292,9 +261,8 @@ Here are examples of how to implement the `reconcileEmail` method into your Shop
 3. Replace `{FORM_ID}` with the element ID of the form you want to capture
 (such as “ContactFooter”.)
 4. Replace `{INPUT_EMAIL_ID}` with the element ID of the email input field inside the form
-5. When the form is submitted, the script will call `reconcileEmail` with the email input value
+5. When the form is submitted, the script will call `setEmail` with the email input value
 6. After the script loads, we call `clearInterval` so that it loads only once
-7. You can check the console to confirm the email is reconciled
 
 {% alert note %}
 At this time, the Braze email capture form will not create a Shopify customer. As a result, you could have Braze user profiles without associated Shopify user profiles until the customer goes through checkout or creates an account. 
