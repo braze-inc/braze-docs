@@ -38,7 +38,13 @@ Your phone number must meet the WhatsApp API requirements.
 
 ### Step 2: Configure your phone number
 
-Follow Twilio’s instructions to [create a WhatsApp sender](https://www.twilio.com/docs/whatsapp/self-sign-up#1-create-a-whatsapp-sender). You'll receive a verification code through email by using voicemail transcription. **Do not follow any other steps**, as that will connect your WABA to Twilio and you won’t be able to connect to Braze.
+Follow Twilio's instructions to [set up your Twilio phone number to receive the verification code via email using voicemail transcription](https://www.twilio.com/docs/whatsapp/self-sign-up#setting-up-your-twilio-phone-number-to-receive-the-verification-code-via-email-using-voicemail-transcription). **Do not follow the instructions in any other step, as that will connect your phone number to Twilio, not Braze.**
+
+{% alert warning %}
+**Only follow Twilio's instructions to receive a verification code.**
+
+If you follow the next steps, you'll connect your phone number to Twilio. That means you can't connect that number to Braze unless you do a migration or purchase a different number.
+{% endalert %}
 
 ### Step 3: Complete the embedded sign up workflow
 
@@ -60,7 +66,7 @@ Follow Twilio’s instructions to [create a WhatsApp sender](https://www.twilio.
 
 6. When your phone number is ready in Infobip, go to your Braze dashboard -> **Technology Partners** -> **WhatsApp** and select **Begin integration** or **Add WhatsApp Business Account**, whichever shows up, to trigger the [embedded sign up workflow]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/overview/embedded_signup/).<br><br> In the **Add a phone number for WhatsApp** step, select **Text message** for how you'd like to verify your phone number.<br><br>![Section with the options to verify your phone number through text message or a phone call.][9]<br><br>
 
-7. Check Infobip’s [analyze logs](https://www.infobip.com/docs/analyze/analyze-logs) in their customer portal for the verification code, then enter the verification code and complete setup.
+7. Check Infobip’s [analyze logs](https://www.infobip.com/docs/analyze/analyze-logs) in their customer portal for the verification code, which could take a few minutes to appear, then enter the verification code and complete setup.
 
 
 
