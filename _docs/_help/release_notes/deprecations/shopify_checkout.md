@@ -43,136 +43,18 @@ Shopify will deprecate support for [ScriptTags](https://shopify.dev/docs/apps/bu
 
 This guidance applies to Shopify Plus customers who have added custom SDK code snippets to the information, shipping, or payment pages in `checkout.liquid`. If you haven't made these customizations, you can disregard this guidance.
 
-### Guidance for Shopify 2.0 theme stores (such as Liquid)
-
-When migrating to Checkout Extensibility, follow these steps to maintain usage of Braze during checkout.
-
-1. Set up the Braze web SDK on the storefront pages.
-  - Create a [theme app extension](https://shopify.dev/docs/apps/build/online-store/theme-app-extensions) to turn on in the storefront.
-  - Create an [app embed block](https://shopify.dev/docs/apps/build/online-store/theme-app-extensions/configuration#app-embed-blocks).
-  - Load and initailize the Braze SDK with [Google Tag Manager]({{site.baseurl}}/developer_guide/platform_integration_guides/web/initial_sdk_setup/?tab=google%20tag%20manager) or [Braze CDN]({{site.baseurl}}/developer_guide/platform_integration_guides/web/initial_sdk_setup/?tab=braze%20cdn).
-
-2. Retrieve the `deviceID` from the Braze web SDK.
-
-3. Publish custom events from the theme app extension with the Braze `deviceID` in the payload.
+You will no longer be able to add custom SDK code snippets to the information, shipping, or payment pages in `checkout.liquid`. Instead, you'll need to add custom SDK code snippets to the thank you or order status pages. This allows you to reconcile users that completed checkout.
+1. Load the Braze web SDK on the thank you and order status pages.
+2. Retrieve the email from the user.
+3. Call `setEmail`.
 
 {% raw %}
 ```java
-// After initializing the Braze WebSDK
-let event_data = {
-	device_id: braze.getDeviceId()
-}
-Shopify.analytics.publish("custom_event", event_data);
+braze.getUser().setEmail(<email address>);
 ```
 {% endraw %}
 
 {: start="4"}
-4. Create a [web pixel](https://shopify.dev/docs/apps/build/marketing-analytics/build-web-pixels) and load it in checkout.
+4. On Braze, merge the user profiles on email.
 
-5. Subscribe to `custom_event` and save the Braze `deviceID` as a cookie.
-
-6. Send a request to the Braze SDK or REST API depending on your use case.
-  - Send requests to a proxy URL that will call server-side code to call the Braze REST API.
-  - Fetch the `shopify/email_user_reconcile` endpoint and supply the URL parameter with the `deviceId` and `email`.
-
-{% raw %}
-```java
-register(({analytics, browser, settings, init}) => {
-
-  // subscribe to the custom events
-  analytics.subscribe("custom_event", (event) => {
-    // save braze deviceId in cookie
-    browser.cookie.set('device_id', event.device_id);
-  });
-
-  // reconcile user by email after user enters contact info
-  analytics.subscribe('checkout_contact_info_submitted', (event) => {
-    // retrieve email from checkout
-    const checkout = event.data.checkout;
-    const email = checkout.email;
-
-    // retrieve deviceId from cookies
-    const deviceId = browser.cookie.get('device_id')
-
-    fetch(
-      'https://'
-        + SDK_URL
-        + `/api/v3/shopify/email_user_reconcile`
-        + `?email=${encodeURIComponent(email)}`
-        + `&device_id=${deviceId}`
-        + `&api_key=${API_KEY}`
-        + `&shop=${SHOP_DOMAIN}`,
-      {method: 'POST'}
-    ).then(response => {
-      console.log(`Successfully reconciled email ${email} with device ID ${deviceId}`);
-    }).catch(error => {
-      console.error('There was a problem with the operation:', error);
-    });
-  });
-});
-```
-{% endraw %}
-
-### Guidance for Shopify hydrogen (headless) 
-
-When migrating to Checkout Extensibility, follow these steps to maintain usage of Braze during checkout.
-
-1. Set the checkout page as a subdomain of the main storefront.
-  - For example, if your hydrogen store is hosted at `myshop.com`, the checkout must be on `checkout.myshop.com` or similar.
-
-2. Set up the Braze web SDK on the storefront pages.
-  - Load and initialize the Braze SDK via [NPM]({{site.baseurl}}/developer_guide/platform_integration_guides/web/initial_sdk_setup/#step-1-install-the-braze-library).
-
-3. Retrieve the `deviceID` from the Braze web SDK.
-
-4. Create a first-party cookie and set the value as the Braze `deviceID`.
-
-{% raw %}
-```java
-const SHOP_DOMAIN = "SHOP_DOMAIN"; // shopify shop domain
-
-// Set first party cookie to hold Braze deviceId on shop domain
-document.cookie = "device_id={{ braze.getDeviceId() }}; domain={{ SHOP_DOMAIN }}; path=/";
-```
-{% endraw %}
-
-{: start="5"}
-5. Create a [web pixel](https://shopify.dev/docs/apps/marketing/pixels/getting-started) and load it in checkout.
-
-6. Subscribe to checkout events and retireve the Braze `deviceID` from the first-party cookie.
-
-7. Send a request to the Braze SDK or REST API depending on your use case:
-  - Send requests to a proxy URL that will call server-side code to call the Braze REST API.
-  - Fetch the `shopify/email_user_reconcile` endpoint and supply the URL parameter with the `deviceId` and `email`.
-
-{% raw %}
-```java
-register(({analytics, browser, settings, init}) => {
-
-  // reconcile user by email after user enters contact info
-  analytics.subscribe('checkout_contact_info_submitted', (event) => {
-    // retrieve email from checkout
-    const checkout = event.data.checkout;
-    const email = checkout.email;
-
-    // retrieve deviceId from cookies
-    const deviceId = browser.cookie.get('device_id')
-
-    fetch(
-      'https://'
-        + SDK_URL
-        + `/api/v3/shopify/email_user_reconcile`
-        + `?email=${encodeURIComponent(email)}`
-        + `&device_id=${deviceId}`
-        + `&api_key=${API_KEY}`
-        + `&shop=${SHOP_DOMAIN}`,
-      {method: 'POST'}
-    ).then(response => {
-      console.log(`Successfully reconciled email ${email} with device ID ${deviceId}`);
-    }).catch(error => {
-      console.error('There was a problem with the operation:', error);
-    });
-  });
-});
-```
-{% endraw %}
+If you encounter duplicate user profiles, you can use our [bulk merging tool](https://www.braze.com/docs/user_guide/engagement_tools/segments/user_profiles/duplicate_users#bulk-merging) to help streamline your data. 
