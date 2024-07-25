@@ -42,11 +42,9 @@ Follow Twilio’s instructions to [create a WhatsApp sender](https://www.twilio.
 
 ### Step 3: Complete the embedded sign up workflow
 
-1. After Twilio is configured, go to your Braze dashboard -> **Technology Partners** -> **WhatsApp** and select **Begin integration** or **Add WhatsApp Business Account**, whichever shows up, to trigger the [emmbedded sign up workflow]().
+1. After Twilio is configured, go to your Braze dashboard -> **Technology Partners** -> **WhatsApp** and select **Begin integration** or **Add WhatsApp Business Account**, whichever shows up, to trigger the [embedded sign up workflow]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/overview/embedded_signup/).<br><br>In the **Add a phone number for WhatsApp** step, select **Phone call** for how you'd like to verify your phone number. <br><br>![Section with the options to verify your phone number through text message or a phone call.][4]{: style="max-width:50%;"}<br><br>
 
-2. In the **Add a phone number for WhatsApp** step, select **Phone call** for how you'd like to verify your phone number. <br><br>![Section with the options to verify your phone number through text message or a phone call.][4]{: style="max-width:70%;"}<br><br>
-
-3. Wait a few minutes for the verification code to send to your email inbox, then enter the verification code and complete your setup.
+2. Wait a few minutes for the verification code to send to your email inbox, then enter the verification code and complete your setup.
 
 ## Acquiring an Infobip phone number 
 
@@ -58,13 +56,11 @@ Follow Twilio’s instructions to [create a WhatsApp sender](https://www.twilio.
 
 4. Select the available offer, then proceed through the rest of the steps and wait for your request to be processed. You can check the status by going to **Numbers** -> **My Request**. <br><br>![An offer with information including fees and coverage.][8]{: style="max-width:70%;"}<br><br>
 
-5. Depending on your selected country, wait for the Infobip team to reach out for registration details (such as for 10DLC in the US).
+5. Depending on your selected country, wait for the Infobip team to reach out for registration details (such as for 10DLC in the US).<br><br>
 
-6. When your phone number is ready in Infobip, go to your Braze dashboard -> **Technology Partners** -> **WhatsApp** and select **Begin integration** or **Add WhatsApp Business Account**, whichever shows up, to trigger the [embedded sign up workflow].
+6. When your phone number is ready in Infobip, go to your Braze dashboard -> **Technology Partners** -> **WhatsApp** and select **Begin integration** or **Add WhatsApp Business Account**, whichever shows up, to trigger the [embedded sign up workflow]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/overview/embedded_signup/).<br><br> In the **Add a phone number for WhatsApp** step, select **Text message** for how you'd like to verify your phone number.<br><br>![Section with the options to verify your phone number through text message or a phone call.][9]<br><br>
 
-7. In the **Add a phone number for WhatsApp** step, select **Text message** for how you'd like to verify your phone number.<br><br>![Section with the options to verify your phone number through text message or a phone call.][9]<br><br>
-
-8. Check Infobip’s [analyze logs](https://www.infobip.com/docs/analyze/analyze-logs) in their customer portal for the verification code, then enter the verification code and complete setup.
+7. Check Infobip’s [analyze logs](https://www.infobip.com/docs/analyze/analyze-logs) in their customer portal for the verification code, then enter the verification code and complete setup.
 
 
 
@@ -77,3 +73,4 @@ Follow Twilio’s instructions to [create a WhatsApp sender](https://www.twilio.
 [6]: {% image_buster /assets/img/whatsapp/infoblip_buy.png %}
 [7]: {% image_buster /assets/img/whatsapp/infoblip_10dlc.png %}
 [8]: {% image_buster /assets/img/whatsapp/infoblip_offer.png %}
+[9]: {% image_buster /assets/img/whatsapp/infoblip_verify.png %}
