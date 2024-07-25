@@ -95,4 +95,4 @@ Do you use emojis when naming your work in Braze? Search for them! You can use e
 [1]: {% image_buster /assets/img/global_search/global_search.png %}
 [2]: {% image_buster /assets/img/global_search/search_create_campaign.png %}
 [3]: {% image_buster /assets/img/global_search/global_search2.png %}
-[4]: {% image_buster /assets/img/global_search/archived_content.png %}
+[4]: {% image_buster /assets/img/global_search/show_active_draft.png %}
