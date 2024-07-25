@@ -8,13 +8,13 @@ description: "This reference article covers how to import users into your Braze 
 ---
 # User import
 
-> Braze offers a variety of ways to import user data into the platform: SDKs, APIs, cloud data ingestion, technology partner integrations, and CSVs.
+> Braze offers a variety of ways to import user data into the platform: SDKs, APIs, cloud data ingestion, technology partner integrations, and CSVs. <!-- Can add information hierarchy here to cover what this article includes, simliar to what is in the metadata "description"-->
 
 {% alert important %}
-Braze does not sanitize HTML data during ingestion time. This means that script tags must be stripped for all import data meant for web personalization. Skip to the [HTML data stripping](#html-data-stripping) section to read more.
+Braze does not sanitize HTML data during ingestion time. <!--What does "sanitize" mean? What is "ingestion time"?-->This means that script tags must be stripped for all import data meant for web personalization. Skip to the [HTML data stripping](#html-data-stripping) section to read more. <!-- This alert as a whole can be editted to be more human-centric and have less jargon-->
 {% endalert %}
 
-{% multi_lang_include email-via-sms-warning.md %}
+{% multi_lang_include email-via-sms-warning.md %} <!-- This alert seems to be written by Legal, so it probably shouldn't be touched, but it has some jargon-->
 
 ## REST API
 
@@ -28,15 +28,15 @@ You can use Braze [Cloud Data Ingestion][14] to import and maintain user attribu
 
 You can also upload and update user profiles via CSV files from **Audience** > **Import Users**.
 
-This feature supports recording and updating user attributes such as first name and email, in addition to custom attributes such as shoe size. There are two different ways you can approach a CSV import: importing with an `external_id` or with a user alias.
+This feature supports recording and updating user attributes such as first name and email, in addition to custom attributes such as shoe size. <!--Should these attributes have backticks? --> There are two different ways you can approach a CSV import: importing with an `external_id` or with a user alias.<!-- I like the information hierarchy in the final sentence, which would be useful for other top-level headers. -->
 
 {% alert note %}
-If you are uploading a mix of users with an `external_id` and users without, you need to create one CSV for each import. One CSV can't contain both `external_ids` and user aliases.
+If you are uploading a mix of users with an `external_id` and users without, you need to create one CSV for each import. One CSV can't contain both `external_ids` and user aliases.<!-- Is a user alias an attirbute field? -->
 {% endalert %}
 
 ### Importing with external ID
 
-When importing your customer data, you'll need to specify each customer's unique identifier, also known as `external_id`. Before starting your CSV import it's important to understand from your engineering team how users will be identified in Braze. Typically this would be a database ID used internally. This should align with how users will be identified by the Braze SDK on mobile and web, and is designed for each customer to have a single user profile within Braze across their devices. Read more about the Braze [user profile lifecycle][13].
+When importing your customer data, you'll need to specify each customer's unique identifier, also known as `external_id`.<!-- Nice inclusion of a definition --> Before starting your CSV import it's important to understand from your engineering team how users will be identified in Braze. Typically, this is a database ID used internally.<!-- "Typically, this is an internal database ID." Is that correct? --> This should align with how users will be identified by the Braze SDK on mobile and web, and is designed for each customer to have a single user profile within Braze across their devices. Read more about the Braze [user profile lifecycle][13].
 
 When you provide an `external_id` in your import, Braze will update any existing user with the same `external_id` or create a newly identified user with that `external_id` set if one is not found.
 
@@ -44,7 +44,7 @@ When you provide an `external_id` in your import, Braze will update any existing
 
 ### Importing with user alias
 
-To target users who don't have an `external_id`, you can import a list of users with user aliases. An alias serves as an alternative unique user identifier, and can be helpful if you are trying to market to anonymous users who haven't signed up or made an account with your app.
+To target users who don't have an `external_id`, you can import a list of users with user aliases. An alias serves as an alternative unique user identifier,<!-- This can be defined earlier, when user alias is first mentioned --> and can be helpful if you are trying to market to anonymous users who haven't signed up or made an account with your app.
 
 If you are uploading or updating user profiles that are alias only, you must have the following two columns in your CSV:
 
