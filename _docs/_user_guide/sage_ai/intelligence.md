@@ -34,7 +34,7 @@ guide_menu_list:
 
 ## Use cases
 
-The Intelligence Suite provides powerful tools to analyze user history and campaign and Canvas performance, then make automatic adjustments to increase engagement, viewship, and conversions. For a few examples of how these tools can benefit different industries, see the below use cases.
+The Intelligence Suite provides powerful features to analyze user history and campaign and Canvas performance, then make automatic adjustments to increase engagement, viewship, and conversions. For a few examples of how these features can benefit different industries, see the below use cases.
 
 ### Ecommerce
 
@@ -50,3 +50,17 @@ The Intelligence Suite provides powerful tools to analyze user history and campa
 
 - **New content promotion:** Use Intelligent Timing to send notifications about new movies, shows, music, and other types of content when users are most likely to open your messaging.
 - **In-game purchases:** Use Intelligent Selection to test different promotional messages for in-game purchases and automatically select the one that generates the highest conversion rates.
+
+### Quick service restaurant
+
+Here's how SandwichEmperor, a fast food restaurant, can use multiple Intelligence Suite features to send personalized promotions for a new limited-time menu item: the Royal Roast.
+
+### Use Intelligent Timing for when to send notifications
+
+SandwichEmperor can use Intelligent Timing to analyze its users' past interactions with their app and each messaging channel, then select the best time to promote the Royal Roast to each user. Some users might receive the promotion in the afternoon, while others might receive it in the evening. 
+
+SandwichEmperor can also provide a fallback time for users who don't have enough past interactions to analyze, such as the most popular time to use the app among all users.
+
+### Use Intelligent Selection to select the promotion
+
+SandwichEmperor can use Intelligent Selection to test three different promotional messages for the Royal Roast. Intelligent Selection will analyze the performance of all promotional messages twice a day and adjust the 
