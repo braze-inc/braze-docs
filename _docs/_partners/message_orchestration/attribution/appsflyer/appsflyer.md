@@ -74,27 +74,14 @@ Braze *braze = [[Braze alloc] initWithConfiguration:configurations];
 {% endtab %}
 {% tab Swift %}
 
-##### Swift completion handler
+##### Swift
 ```swift
 let configuration = Braze.Configuration(
     apiKey: "<BRAZE_API_KEY>",
     endpoint: "<BRAZE_ENDPOINT>")
 configuration.useUUIDAsDeviceId = false
 let braze = Braze(configuration: configuration)
-braze.deviceId {
-    brazeDeviceId in
-    AppsFlyerLib.shared().customData = ["brazeDeviceId": brazeDeviceId]
-}
-```
-##### Swift await
-```swift
-let configuration = Braze.Configuration(
-    apiKey: "<BRAZE_API_KEY>",
-    endpoint: "<BRAZE_ENDPOINT>")
-configuration.useUUIDAsDeviceId = false
-let braze = Braze(configuration: configuration)
-let brazeDeviceId = await braze.deviceId()
-AppsFlyerLib.shared().customData = ["brazeDeviceId": brazeDeviceId]
+AppsFlyerLib.shared().customData = ["brazeDeviceId": braze.deviceId]
 ```
 
 {% endtab %}
