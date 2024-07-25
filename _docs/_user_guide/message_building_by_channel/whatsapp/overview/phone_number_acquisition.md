@@ -43,7 +43,7 @@ Follow Twilio's instructions to [set up your Twilio phone number to receive the 
 {% alert warning %}
 **Only follow Twilio's instructions to receive a verification code.**
 
-If you follow the next steps, you'll connect your phone number to Twilio. That means you can't connect that number to Braze unless you do a migration or purchase a different number.
+If you follow the next steps in Twilio's instructions, you'll connect your phone number to Twilio. That means you can't connect that number to Braze unless you do a migration or purchase a different number.
 {% endalert %}
 
 ### Step 3: Complete the embedded sign up workflow
