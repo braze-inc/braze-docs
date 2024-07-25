@@ -39,11 +39,12 @@ If you have an Android app, you will need to pass a unique Braze device ID to Ap
 
 Make sure the following lines of code are inserted at the correct place—after the Braze SDK is launched and before the initialization code for the AppsFlyer SDK. See the AppsFlyer [Android SDK integration guide](https://dev.appsflyer.com/hc/docs/integrate-android-sdk#initializing-the-android-sdk) for more information.
 
-```java
-HashMap<String, Object> customData = new HashMap<String,Object>();
-String deviceId =(Braze.getInstance(MyActivity.this).getDeviceId());
-customData.put("brazeCustomerId", deviceId);
-AppsFlyerLib.setAdditionalData(customData);
+```kotlin
+val customData = HashMap<String, Any>()
+Braze.getInstance(context).getDeviceIdAsync { deviceId ->
+   customData["brazeCustomerId"] = deviceId
+   setAdditionalData(customData)
+}
 ```
 
 #### iOS
