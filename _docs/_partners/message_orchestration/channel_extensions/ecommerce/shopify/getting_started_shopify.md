@@ -90,9 +90,9 @@ There are two ways to reconcile the user's email and `device_id`:
 
 ##### Capturing email or phone signups
 
-With Braze, you can leverage our [email]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/customize/email_capture_form/#step-1-create-an-in-app-message-campaign), [SMS and WhatsApp]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/templates/phone_number_capture) sign-up forms leveraging the Web SDK and in-app messages. 
+With Braze, you can use our [email]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/customize/email_capture_form/#step-1-create-an-in-app-message-campaign) and [SMS and WhatsApp]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/templates/phone_number_capture) sign-up forms to leverage the Web SDK and in-app messages. 
 
-If you are leveraging a Shopify email or phone number capture or a 3rd party capture form provider, you can be set directly on the user object being tracked by the Braze Web SDK. For instance, if you obtain the customer’s email address, you can set it on their user profile like this:
+If using a Shopify email or phone number capture, or a third-party capture form, you can be set directly on the user that is tracked by the Braze Web SDK. For example, if you obtain the customer’s email address, you can set it on their user profile like this:
 
 {% raw %}
 ```javascript
@@ -100,11 +100,12 @@ braze.getUser().setEmail(<email address>);
 ```
 {% endraw %}
 
-Here are some links to our Javascript documentation for setting these values:
+For details on setting these values, refer to these Javascript resources:
+
 - Setting the user’s [email](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.user.html#setemail)
 - Setting the user’s [phone number](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.user.html#setphonenumber)
 
-You can also set the users’ subscription state as you are collecting their email or phone number like this:
+You can also set the users’ subscription state as you collect their email or phone number, like this:
 
 {% raw %}
 ```javascript
@@ -112,9 +113,10 @@ braze.getUser().setEmailNotificationSubscriptionType(braze.User.NotificationSubs
 ```
 {% endraw %}
 
-Here are some links to our Javascript documentation for setting these values:
-Setting the user’s [email notification subscription type](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.user.html#setemailnotificationsubscriptiontype)
-Adding the user to a [subscription group](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.user.html#addtosubscriptiongroup)
+For details on setting these values, refer to these Javascript resources:
+
+- Setting the user’s [email notification subscription type](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.user.html#setemailnotificationsubscriptiontype)
+- Adding the user to a [subscription group](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.user.html#addtosubscriptiongroup)
 
 **Example third-party capture form implementation**
 
@@ -204,9 +206,9 @@ There are two ways to reconcile the user's email and `device_id`:
 
 ##### Capturing email or phone signups
 
-With Braze, you can leverage our [email]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/customize/email_capture_form/#step-1-create-an-in-app-message-campaign), [SMS and WhatsApp]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/templates/phone_number_capture) sign-up forms leveraging the Web SDK and in-app messages. 
+With Braze, you can use our [email]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/customize/email_capture_form/#step-1-create-an-in-app-message-campaign) and [SMS and WhatsApp]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/templates/phone_number_capture) sign-up forms to leverage the Web SDK and in-app messages. 
 
-If you are leveraging a Shopify email or phone number capture or a 3rd party capture form provider, you can be set directly on the user object being tracked by the Braze Web SDK. For instance, if you obtain the customer’s email address, you can set it on their user profile like this:
+If using a Shopify email or phone number capture, or a third-party capture form, you can be set directly on the user object that is tracked by the Braze Web SDK. For example, if you obtain the customer’s email address, you can set it on their user profile like this:
 
 {% raw %}
 ```javascript
@@ -214,7 +216,8 @@ braze.getUser().setEmail(<email address>);
 ```
 {% endraw %}
 
-Here are some links to our Javascript documentation for setting these values:
+For details on setting these values, refer to these Javascript resources:
+
 - Setting the user’s [email](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.user.html#setemail)
 - Setting the user’s [phone number](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.user.html#setphonenumber)
 
@@ -226,9 +229,10 @@ braze.getUser().setEmailNotificationSubscriptionType(braze.User.NotificationSubs
 ```
 {% endraw %}
 
-Here are some links to our Javascript documentation for setting these values:
-Setting the user’s [email notification subscription type](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.user.html#setemailnotificationsubscriptiontype)
-Adding the user to a [subscription group](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.user.html#addtosubscriptiongroup)
+For details on setting these values, refer to these Javascript resources:
+
+- Setting the user’s [email notification subscription type](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.user.html#setemailnotificationsubscriptiontype)
+- Adding the user to a [subscription group](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.user.html#addtosubscriptiongroup)
 
 **Example third-party capture form implementation**
 

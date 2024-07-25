@@ -43,10 +43,10 @@ Shopify will deprecate support for [ScriptTags](https://shopify.dev/docs/apps/bu
 
 This guidance applies to Shopify Plus customers who have added custom SDK code snippets to the information, shipping, or payment pages in `checkout.liquid`. If you haven't made these customizations, you can disregard this guidance.
 
-You will no longer be able to add custom SDK code snippets to the information, shipping, or payment pages in checkout.liquid. Instead you will need to add custom SDK code snippets to the thank you or order status pages. This will allow you to reconcile users that have completed the checkout flow.
-1. Load the Braze web SDK on the thank you and order page.
+You will no longer be able to add custom SDK code snippets to the information, shipping, or payment pages in `checkout.liquid`. Instead, you'll need to add custom SDK code snippets to the thank you or order status pages. This allows you to reconcile users that completed checkout.
+1. Load the Braze web SDK on the thank you and order status pages.
 2. Retrieve the email from the user.
-3. Call setEmail
+3. Call `setEmail`.
 
 {% raw %}
 ```java
@@ -57,4 +57,4 @@ braze.getUser().setEmail(<email address>);
 {: start="4"}
 4. On Braze, merge the user profiles on email.
 
-If you encounter duplicate user profiles, our [bulk merging tool](https://www.braze.com/docs/user_guide/engagement_tools/segments/user_profiles/duplicate_users#bulk-merging) is available to help streamline your data. 
+If you encounter duplicate user profiles, you can use our [bulk merging tool](https://www.braze.com/docs/user_guide/engagement_tools/segments/user_profiles/duplicate_users#bulk-merging) to help streamline your data. 
