@@ -34,12 +34,12 @@ guide_menu_list:
 
 ## Use cases
 
-The Intelligence Suite provides powerful features to analyze user history and campaign and Canvas performance, then make automatic adjustments to increase engagement, viewship, and conversions. For a few examples of how these features can benefit different industries, see the below use cases.
+The Intelligence Suite provides powerful features to analyze user history and campaign and Canvas performance, then make automatic adjustments to increase engagement, viewership, and conversions. For a few examples of how these features can benefit different industries, see the below use cases.
 
 ### Ecommerce
 
-- **Flash sales:** Use the Intelligent Channel filter to study user history to identify the users who are more responsive to push notifications versus emails, then send push notifications and emails to the respective users. Optionally, select a specific channel for users who don't have enough data to determine their preferred channel.
-- **Promotional banners:** Use Intelligent Selection to analyze the performace of different promotional banners in a recurring campaign, then automatically select and send the banner that generates the highest click-through rates.
+- **Flash sales:** Use the [Intelligent Channel filter]({{site.baseurl}}/user_guide/sage_ai/intelligence/intelligent_channel/) to study user history to identify the users who are more responsive to push notifications versus emails, then send push notifications and emails to the respective users. Optionally, select a specific channel for users who don't have enough data to determine their preferred channel.
+- **Promotional banners:** Use [Intelligent Selection]({{site.baseurl}}/user_guide/sage_ai/intelligence/intelligent_selection/) to analyze the performace of different promotional banners in a recurring campaign, then automatically select and send the banner that generates the highest click-through rates.
 
 ### Travel
 
@@ -48,19 +48,32 @@ The Intelligence Suite provides powerful features to analyze user history and ca
 
 ### Entertainment
 
-- **New content promotion:** Use Intelligent Timing to send notifications about new movies, shows, music, and other types of content when users are most likely to open your messaging.
+- **New content promotion:** Use [Intelligent Timing]({{site.baseurl}}/user_guide/sage_ai/intelligence/intelligent_timing/) to send notifications about new movies, shows, music, and other types of content when users are most likely to open your messaging.
 - **In-game purchases:** Use Intelligent Selection to test different promotional messages for in-game purchases and automatically select the one that generates the highest conversion rates.
 
 ### Quick service restaurant
 
-Here's how SandwichEmperor, a fast food restaurant, can use multiple Intelligence Suite features to send personalized promotions for a new limited-time menu item: the Royal Roast.
+Let's pretend we work at SandwichEmperor, a fast food restaurant that has a new limited-time menu item: the Royal Roast. We'll use two Intelligence Suite features to send personalized promotions in a Canvas.
 
-### Use Intelligent Timing for when to send notifications
+#### Use Intelligent Timing for when to send notifications
 
-SandwichEmperor can use Intelligent Timing to analyze its users' past interactions with their app and each messaging channel, then select the best time to promote the Royal Roast to each user. Some users might receive the promotion in the afternoon, while others might receive it in the evening. 
+We'll use Intelligent Timing to analyze our users' past interactions with our app and each messaging channel, then automatically select the best time to promote the Royal Roast to each user. Some users might receive the promotion in the afternoon, while others might receive it in the evening. 
 
-SandwichEmperor can also provide a fallback time for users who don't have enough past interactions to analyze, such as the most popular time to use the app among all users.
+We'll provide a fallback time for users who don't have enough past interactions to analyze: the most popular time to use the app among all users.
 
-### Use Intelligent Selection to select the promotion
+![Intelligent Timing delivery settings for a Message step.][1]
 
-SandwichEmperor can use Intelligent Selection to test three different promotional messages for the Royal Roast. Intelligent Selection will analyze the performance of all promotional messages twice a day and adjust the 
+#### Use Intelligent Selection to select the promotion
+
+For the actual promotional messages, we'll use Intelligent Selection to test three different messages (push notification, email, and SMS) for the Royal Roast. Intelligent Selection will analyze the performance of all our promotional messages twice a day, then gradually send more of the best performing message and less of the others.
+
+After Intelligent Selection gathers enough data to determine the best performing message, it will use that message in 100% of future sends.
+
+![A/B Testing section of a Canvas with Intelligent Selection enabled.][3]
+
+#### Launch the Canvas
+
+With both Intelligent Timing and Intelligent Selection, we've set up our Royal Roast promotions to be optimized for timing and messaging. We can launch our Canvas and watch as our sends shift to accomodate user preferences.
+
+[1]: {% image_buster /assets/img/intelligence_suite1.png %}
+[3]: {% image_buster /assets/img/intelligent_selection_canvas.png %}
