@@ -1,6 +1,6 @@
 ---
 nav_title: Metrics by Segments
-article_title: Metrics by segments
+article_title: Metrics by Segments
 page_order: 2.5
 page_type: reference
 description: "This reference article shows how you can use Query Builder report templates to break down performance metrics for campaigns, Canvas, variants, and steps by segments."
