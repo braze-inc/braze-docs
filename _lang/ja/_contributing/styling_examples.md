@@ -1,78 +1,78 @@
 ---
 nav_title: スタイリング例
 article: Styling examples
-description: "これは、ヘッダー、タブ、コードブロックなど、Braze Docs でページがスタイル設定される方法です。"
+description: "ヘッダー、タブ、コードブロックなど、Braze Docsでページがどのようにスタイリングされるかを示す。"
 page_order: 8 
 noindex: true
 ---
 
 # スタイリング例
 
-これは、ヘッダー、タブ、コードブロックなど、Braze Docs でページがスタイル設定される方法です。
+ヘッダー、タブ、コードブロックなど、Braze Docsでページがどのようにスタイリングされるかを示す。
 
 ## ヘッダーテスト
 
 {% tabs %}
-{% tab Styling %}
+{% tab スタイリング %}
 
 # H1バナー
 H1テキスト
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit.レクタステンポアのSedネクトトータ。Tellus diam, finibus eu dictum non, varius et ipsum をサスペンドします。
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.Sed nec tortor at lectus tempus tempor.Suspendisse tellus diam, finibus eu dictum non, varius et ipsum.
 
 ## H2バナー
 H2テキスト
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit.レクタステンポアのSedネクトトータ。Tellus diam, finibus eu dictum non, varius et ipsum をサスペンドします。
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.Sed nec tortor at lectus tempus tempor.Suspendisse tellus diam, finibus eu dictum non, varius et ipsum.
 
 ### H3バナー
 H3テキスト
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit.レクタステンポアのSedネクトトータ。Tellus diam, finibus eu dictum non, varius et ipsum をサスペンドします。
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.Sed nec tortor at lectus tempus tempor.Suspendisse tellus diam, finibus eu dictum non, varius et ipsum.
 
 #### H4バナー
 H4テキスト
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit.レクタステンポアのSedネクトトータ。Tellus diam, finibus eu dictum non, varius et ipsum をサスペンドします。
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.Sed nec tortor at lectus tempus tempor.Suspendisse tellus diam, finibus eu dictum non, varius et ipsum.
 
 ##### H5バナー
 H5テキスト
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit.レクタステンポアのSedネクトトータ。Tellus diam, finibus eu dictum non, varius et ipsum をサスペンドします。
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.Sed nec tortor at lectus tempus tempor.Suspendisse tellus diam, finibus eu dictum non, varius et ipsum.
 
 ###### H6バナー
-H6 テキスト
+H6テキスト
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit.レクタステンポアのSedネクトトータ。Tellus diam, finibus eu dictum non, varius et ipsum をサスペンドします。
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.Sed nec tortor at lectus tempus tempor.Suspendisse tellus diam, finibus eu dictum non, varius et ipsum.
 
 {% endtab %}
-{% tab Markdown %}
+{% tab マークダウン %}
 
-\`\`\`
-# H1バナー
+```
+# H1 Banner
 
-## H2バナー
+## H2 Banner
 
-### H3バナー
+### H3 Banner
 
-#### H4バナー
+#### H4 Banner
 
-##### H5バナー
+##### H5 Banner
 
-###### H6バナー
-\`\`\`
+###### H6 Banner
+```
 {% endtab %}
 {% endtabs %}
 
 ## カスタムヘッダーアンカー
 
-ヘッダーにアンカーを追加するには、ヘッダーがある行の末尾に次のコードを追加します。`anchor-text` をこの見出しのアンカーに置き換えます。小文字を使用し、単語間にハイフンを入れます。
+見出しにアンカーを追加するには、見出しのある行のエンドツーエンドの部分に以下のコードを追加する。`anchor-text` をこの見出しのアンカーに置き換える。小文字を使い、単語と単語の間にはハイフンを入れる。
 
-\`\`\`
-# 見出しテキスト {#anchor-text}
-\`\`\`
+```
+# Heading Text {#anchor-text}
+```
 
-番号記号`#` の後にカスタムアンカーが続く標準リンクを作成することで、カスタムアンカーを使用してヘッダーにリンクできます。
+`#` 、その後にカスタム・アンカーが続く標準リンクを作成することで、カスタム・アンカーを持つ見出しにリンクすることができる。
 
 {% raw %}
 ```
@@ -83,162 +83,162 @@ Here is my [link](#anchor-text)
 ## フォントテスト
 
 {% tabs %}
-{% tab Styling %}
+{% tab スタイリング %}
 
-標準テキスト
+通常のテキスト
 
 *テキストを強調する*
 
 **太字**
 
-_**大胆な強調**_
+_**太字で強調する**_
 
-～～打撃～～
+~~取り消し線~~
 
 {% endtab %}
-{% tab Markdown %}
-\`\`\`
-標準テキスト
+{% tab マークダウン %}
+```
+Normal Text
 
-*テキストを強調する*
+*Emphasize Text*
 
-**太字**
+**Bold**
 
-_**大胆な強調**_
+_**Bold Emphasize**_
 
-～～打撃～～
-\`\`\`
+~~Strikethrough~~
+```
 {% endtab %}
 {% endtabs %}
 
-## 見積テスト
+## 引用テスト
 
 {% tabs %}
-{% tab Styling %}
-> 引用文
+{% tab スタイリング %}
+> 引用テキスト
 
-#### インラインクォート
-Lorem ipsum dolor ``sit amet, consectetur adipiscing elit``.レクタステンポアのSedネクトトータ。
+#### インライン見積もり
+Lorem ipsum dolor ``sit amet, consectetur adipiscing elit``.Sed nec tortor at lectus tempus tempor.
 
-#### チャンクを引用
+#### 引用 チャンク
 ```
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec tortor at lectus tempus tempor.
 ```
 {% endtab %}
-{% tab Markdown %}
-\`\`\`
-> 引用文
+{% tab マークダウン %}
+```
+> Quoted Text
 
-Lorem ipsum dolor ``sit amet, consectetur adipiscing elit``.レクタステンポアのSedネクトトータ。
+Lorem ipsum dolor ``sit amet, consectetur adipiscing elit``. Sed nec tortor at lectus tempus tempor.
 
 ``` Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec tortor at lectus tempus tempor. ```
-\`\`\`
+```
 {% endtab %}
 {% endtabs %}
 
 ## テーブルテスト
 
 {% tabs %}
-{% tab Styling %}
-インスタンス| ダッシュボードURL | REST エンドポイント
------------ |---------------- | --------------------
-US-01 | `https://dashboard.braze.com`または<br> `https://dashboard-01.braze.com` | `https://rest.iad-01.braze.com`
-米国
-米国
-米国
-米国
-米国
-米国
-米国
-EU-01 | `https://dashboard.braze.eu`または<br> `https://dashboard-01.braze.eu` | `https://rest.fra-01.braze.eu`
+{% tab スタイリング %}
+| Instance | Dashboard URL                                                         | REST Endpoint                   |
+| -------- | --------------------------------------------------------------------- | ------------------------------- |
+| US-01｜`https://dashboard.braze.com` または<br> `https://dashboard-01.braze.com` |`https://rest.iad-01.braze.com` |
+| US-02 |`https://dashboard-02.braze.com` |`https://rest.iad-02.braze.com` |
+| US-03 |`https://dashboard-03.braze.com` |`https://rest.iad-03.braze.com` |
+｜US-04｜`https://dashboard-04.braze.com` ｜`https://rest.iad-04.braze.com` ｜｜。
+| US-05 |`https://dashboard-05.braze.com` |`https://rest.iad-05.braze.com` |
+| US-06 |`https://dashboard-06.braze.com` |`https://rest.iad-06.braze.com` |
+｜US-07｜`https://dashboard-07.braze.com` ｜`https://rest.iad-07.braze.com` ｜｜。
+| US-08｜`https://dashboard-08.braze.com` ｜`https://rest.iad-08.braze.com` ｜。
+| EU-01｜`https://dashboard.braze.eu` または<br> `https://dashboard-01.braze.eu`   |`https://rest.fra-01.braze.eu` |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 {% endtab %}
-{% tab Markdown %}
+{% tab マークダウン %}
 ```
-Instance    | Dashboard URL   | REST Endpoint
------------ |---------------- | --------------------
-US-01 | `https://dashboard.braze.com` or<br> `https://dashboard-01.braze.com` | `https://rest.iad-01.braze.com`
-US-02 | `https://dashboard-02.braze.com` | `https://rest.iad-02.braze.com`
-US-03 | `https://dashboard-03.braze.com` | `https://rest.iad-03.braze.com`
-US-04 | `https://dashboard-04.braze.com` | `https://rest.iad-04.braze.com`
-US-05 | `https://dashboard-05.braze.com` | `https://rest.iad-05.braze.com`
-US-06 | `https://dashboard-06.braze.com` | `https://rest.iad-06.braze.com`
-US-07 | `https://dashboard-07.braze.com` | `https://rest.iad-07.braze.com`
-US-08 | `https://dashboard-08.braze.com` | `https://rest.iad-08.braze.com`
-EU-01 | `https://dashboard.braze.eu` or<br> `https://dashboard-01.braze.eu` | `https://rest.fra-01.braze.eu`
-EU-02 | `https://dashboard-02.braze.eu` | `https://rest.fra-02.braze.eu`
+| Instance | Dashboard URL                                                         | REST Endpoint                   |
+| -------- | --------------------------------------------------------------------- | ------------------------------- |
+| US-01    | `https://dashboard.braze.com` or<br> `https://dashboard-01.braze.com` | `https://rest.iad-01.braze.com` |
+| US-02    | `https://dashboard-02.braze.com`                                      | `https://rest.iad-02.braze.com` |
+| US-03    | `https://dashboard-03.braze.com`                                      | `https://rest.iad-03.braze.com` |
+| US-04    | `https://dashboard-04.braze.com`                                      | `https://rest.iad-04.braze.com` |
+| US-05    | `https://dashboard-05.braze.com`                                      | `https://rest.iad-05.braze.com` |
+| US-06    | `https://dashboard-06.braze.com`                                      | `https://rest.iad-06.braze.com` |
+| US-07    | `https://dashboard-07.braze.com`                                      | `https://rest.iad-07.braze.com` |
+| US-08    | `https://dashboard-08.braze.com`                                      | `https://rest.iad-08.braze.com` |
+| EU-01    | `https://dashboard.braze.eu` or<br> `https://dashboard-01.braze.eu`   | `https://rest.fra-01.braze.eu`  |
+| EU-02    | `https://dashboard-02.braze.eu`                                       | `https://rest.fra-02.braze.eu`  |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 ```
 {% endtab %}
 {% endtabs %}
 
-#### 列ごとのテーブルのワードブレークのリセット
-word-break をデフォルトスタイルにリセットする必要があるテーブル列の場合、Markdown オプションを使用して、`.reset-td-br-1`、`.reset-td-br-2`、`.reset-td-br-3`、`.reset-td-br-4`、`.reset-td-br-4` を使用してテーブルにクラスを追加し、列に対応する`#` を最大4 にします。
+#### テーブルの改行を列ごとにリセットする
+改行がデフォルトのスタイルにリセットされるべきテーブルの列については、Markdownオプションを使用して、`.reset-td-br-1`,`.reset-td-br-2`,`.reset-td-br-3`,`.reset-td-br-4` を使用してテーブルにクラスを追加し、`#` は4までの列に対応する。
 
 #### 使用
-\`\`\`
-| イベント名| フィードタイプ| 説明| カスタム属性
-| ------------------------------------ | ---------------------- | ----------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
-| UNBROKENWORDTHATISVERYLONGUNBROKENWORDTHATISVERYLONG | Unbound Feed | メールがユーザのメールサーバに正常に配信されました。| `campaign_id`、`canvas_step_id`、`canvas_id`、`canvas_variation_id` |
-| `UNBROKENHIGHLIGHTTHATISVERYLONGUNBROKENHIGHLIGHTTHATISVERYLONG` | Unbound Feed | ユーザーがメールを開きました。| `campaign_id`、`canvas_step_id`、`canvas_id`、`canvas_variation_id` |
-| アプリ内メッセージ印象| プラットフォーム固有のフィード| アプリ内メッセージを表示したユーザ。| `app_id`、`campaign_id`、`canvas_step_id`、`canvas_id`、`canvas_variation_id` |
+```
+| Event Name                                                       | Feed Type              | Description                                                  | Custom Attributes                                                             |
+| ---------------------------------------------------------------- | ---------------------- | ------------------------------------------------------------ | ----------------------------------------------------------------------------- |
+| UNBROKENWORDTHATISVERYLONGUNBROKENWORDTHATISVERYLONG             | Unbound Feed           | An email was successfully delivered to a User's mail server. | `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id`           |
+| `UNBROKENHIGHLIGHTTHATISVERYLONGUNBROKENHIGHLIGHTTHATISVERYLONG` | Unbound Feed           | User opened an email.                                        | `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id`           |
+| In-App Message Impression                                        | Platform-specific Feed | User viewed an In-App Message.                               | `app_id`, `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id` |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
-\`\`\`
-{% tabs local %}
-{% tab Before %}
+```
+{% tabs ローカル %}
+{% tab 前 %}
 
-| イベント名| フィードタイプ| 説明| カスタム属性|
-|------------------------------------------------------------------|------------------------|--------------------------------------------------------------|-------------------------------------------------------------------------------|
-| UNBROKENWORDTHATISVERYLONGUNBROKENWORDTHATISVERYLONG | Unbound Feed | メールがユーザのメールサーバに正常に配信されました。| `campaign_id`、`canvas_step_id`、`canvas_id`、`canvas_variation_id` |
-| `UNBROKENHIGHLIGHTTHATISVERYLONGUNBROKENHIGHLIGHTTHATISVERYLONG` | Unbound Feed | ユーザーがメールを開きました。| `campaign_id`、`canvas_step_id`、`canvas_id`、`canvas_variation_id` |
-| アプリ内メッセージ印象| プラットフォーム固有のフィード| アプリ内メッセージを表示したユーザ。| `app_id`、`campaign_id`、`canvas_step_id`、`canvas_id`、`canvas_variation_id` |
+| イベント名                                                       | フィードタイプ              | 説明                                                  | カスタム属性                                                             |
+| ---------------------------------------------------------------- | ---------------------- | ------------------------------------------------------------ | ----------------------------------------------------------------------------- |
+| UNBROKENWORDTHATISVERYLONGUNBROKENWORDTHATISVERYLONG             | アンバインド・フィード           | ユーザーのメールサーバーにメールが正常に配信された。 | `campaign_id``canvas_step_id`,`canvas_id` 、 `canvas_variation_id`           |
+| `UNBROKENHIGHLIGHTTHATISVERYLONGUNBROKENHIGHLIGHTTHATISVERYLONG` | アンバインド・フィード           | ユーザーがメールを開封した。                                        | `campaign_id``canvas_step_id`,`canvas_id` 、 `canvas_variation_id`           |
+| アプリ内メッセージ-インプレッション                                        | プラットフォーム別フィード | ユーザーがアプリ内メッセージを閲覧した。                               | `app_id``campaign_id`,`canvas_step_id`,`canvas_id` 、 `canvas_variation_id` |
 
 {% endtab %}
-{% tab After %}
+{% tab その後 %}
 
-| イベント名| フィードタイプ| 説明| カスタム属性|
-|------------------------------------------------------------------|------------------------|--------------------------------------------------------------|-------------------------------------------------------------------------------|
-| UNBROKENWORDTHATISVERYLONGUNBROKENWORDTHATISVERYLONG | Unbound Feed | メールがユーザのメールサーバに正常に配信されました。| `campaign_id`、`canvas_step_id`、`canvas_id`、`canvas_variation_id` |
-| `UNBROKENHIGHLIGHTTHATISVERYLONGUNBROKENHIGHLIGHTTHATISVERYLONG` | Unbound Feed | ユーザーがメールを開きました。| `campaign_id`、`canvas_step_id`、`canvas_id`、`canvas_variation_id` |
-| アプリ内メッセージ印象| プラットフォーム固有のフィード| アプリ内メッセージを表示したユーザ。| `app_id`、`campaign_id`、`canvas_step_id`、`canvas_id`、`canvas_variation_id` |
+| イベント名                                                       | フィードタイプ              | 説明                                                  | カスタム属性                                                             |
+| ---------------------------------------------------------------- | ---------------------- | ------------------------------------------------------------ | ----------------------------------------------------------------------------- |
+| UNBROKENWORDTHATISVERYLONGUNBROKENWORDTHATISVERYLONG             | アンバインド・フィード           | ユーザーのメールサーバーにメールが正常に配信された。 | `campaign_id``canvas_step_id`,`canvas_id` 、 `canvas_variation_id`           |
+| `UNBROKENHIGHLIGHTTHATISVERYLONGUNBROKENHIGHLIGHTTHATISVERYLONG` | アンバインド・フィード           | ユーザーがメールを開封した。                                        | `campaign_id``canvas_step_id`,`canvas_id` 、 `canvas_variation_id`           |
+| アプリ内メッセージ-インプレッション                                        | プラットフォーム別フィード | ユーザーがアプリ内メッセージを閲覧した。                               | `app_id``campaign_id`,`canvas_step_id`,`canvas_id` 、 `canvas_variation_id` |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 {% endtab %}
 {% endtabs %}
 
 ## リンクテスト
 {% tabs %}
-{% tab Styling %}
-リンク先:[Braze.com](https://www.braze.com){: height="36px" width="36px"}
+{% tab スタイリング %}
+リンクはこちら：[Braze.com](https://www.braze.com){: height="36px" width="36px"}
 {% endtab %}
-{% tab Markdown %}
+{% tab マークダウン %}
 ```
 [Braze.com](https://www.braze.com)
 ```
 {% endtab %}
 {% endtabs %}
 
-## 画像テスト
+## 画像, 写真
 {% tabs %}
-{% tab Styling %}
-画像
+{% tab スタイリング %}
+画像：![ロゴ]({% image_buster /assets/img/braze-logo-mark.png %}){: style="max-width:30%;"}
 
-#### リンク画像テスト
+#### リンク画像、写真テスト
 
-リンクされた画像: [![Braze]({% image_buster /assets/img/braze-logo-mark.png %}){: style="max-width:30%;"}](https://www.braze.com)
+リンク画像、写真：[![Braze]({% image_buster /assets/img/braze-logo-mark.png %}){: style="max-width:30%;"}](https://www.braze.com)
 
-#### イメージスタイリング
+#### 画像, 写真
 
-![Text]({% image_buster /assets/img/logo-braze-fa.svg %}){: style="max-width:30%; color: green" }
+![テキスト]({% image_buster /assets/img/logo-braze-fa.svg %}){: style="max-width:30%; color: green" }
 
-#### イメージのアンカー
+#### 画像、写真を固定する
 
-![Text]({% image_buster /assets/img/logo-braze-fa.svg %}){: style="float:right;max-width:30%; color: green" }
+![テキスト]({% image_buster /assets/img/logo-braze-fa.svg %}){: style="float:right;max-width:30%; color: green" }
 <br><br><br><br><br>
 {% endtab %}
-{% tab Markdown %}
+{% tab マークダウン %}
 
-\`\`\`
+```
 ![Logo]({% image_buster /assets/img/braze-logo-mark.png %}){: style="max-width:30%;"}
 
 [![Braze]({% image_buster /assets/img/braze-logo-mark.png %})](https://www.braze.com)
@@ -246,22 +246,22 @@ word-break をデフォルトスタイルにリセットする必要があるテ
 ![Text]({% image_buster /assets/img/logo-braze-fa.svg %}){: style="max-width:30%; color: green" }
 
 ![Text]({% image_buster /assets/img/logo-braze-fa.svg %}){: style="float:right;max-width:30%;" }
-\`\`\`
+```
 {% endtab %}
 {% endtabs %}
 
-## ギャラリー試験
+## ギャラリーテスト
 {% tabs %}
-{% tab Styling %}
+{% tab スタイリング %}
 {% gallery %}
-{{site.baseurl}}/assets/img_archive/EBTH_Email.png?bf892368baf287cba5ab9a6e3b09431d <br> これは[リンク](https://www.braze.com)です。
-{{site.baseurl}}/assets/img_archive/iHeartRadio_Email.png?ecd2c8fe148939b7de957fe85cd6317e <br> これは別の`comment` です。
-{{site.baseurl}}/assets/img_archive/Saucey_Email.png?b9768937a1cc12d4c08e55a52e700d68 <br> これは、さらに別の**comment** です。
-{{site.baseurl}}/assets/img/schellman_iso27001_seal_grey_CMYK_300dpi_jpg.png?1b1fb9dbb80b0332c62512dcf9c83258 <br> **画像のタイトル**<br> これは改行するかどうかを調べるテストです。
-{{site.baseurl}}/assets/img/SOC2.png?6338040be8e98c4c9abe1f35b3e43e3a <br> これは通常のコメントです。
+{{site.baseurl}}/assets/img_archive/EBTH_Email.png?bf892368baf287cba5ab9a6e3b09431d<br> これは[リンク](https://www.braze.com)だ。
+{{site.baseurl}}/assets/img_archive/iHeartRadio_Email.png?ecd2c8fe148939b7de957fe85cd6317e<br> これも`comment` だ。
+{{site.baseurl}}/assets/img_archive/Saucey_Email.png?b9768937a1cc12d4c08e55a52e700d68<br> これはまた別の**コメント**だ。
+{{site.baseurl}}/assets/img/schellman_iso27001_seal_grey_CMYK_300dpi_jpg.png?1b1fb9dbb80b0332c62512dcf9c83258<br> **画像、写真タイトル**<br> これはラインブレイクするかどうかのテストだ。
+{{site.baseurl}}/assets/img/SOC2.png?6338040be8e98c4c9abe1f35b3e43e3a<br> これはいつものコメントだ。
 {% endgallery %}
 {% endtab %}
-{% tab Markdown %}
+{% tab マークダウン %}
 {% raw %}
 ```
 {% gallery %}
@@ -276,12 +276,12 @@ word-break をデフォルトスタイルにリセットする必要があるテ
 {% endtab %}
 {% endtabs %}
 
-## 対話型画像テスト
+## インタラクティブ画像, 写真
 {% tabs %}
-{% tab Styling %}
+{% tab スタイリング %}
 <div class="iactiveImg" data-ii="6967"></div><script src="https://interactive-img.com/js/include.js"></script>
 {% endtab %}
-{% tab Markdown %}
+{% tab マークダウン %}
 ```
 <div class="iactiveImg" data-ii="6967"></div><script src="https://interactive-img.com/js/include.js"></script>
 ```
@@ -291,24 +291,24 @@ word-break をデフォルトスタイルにリセットする必要があるテ
 <div style="position: relative; padding-bottom: 83%; padding-top: 0; height: 0;"><iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-width:0px; max-width:100%; overflow-y:auto;" width="100%" height="100%" src="https://interactive-img.com/view?id=6967&iframe=true"></iframe></div>
 -->
 
-## コードスニペットテスト
+## コード・スニペット・テスト
 
 {% tabs %}
-{% tab Styling %}
-#### コードテスト目標C
+{% tab スタイリング %}
+#### コードテスト Objective C
 ```objc
 - (void)submitFeedback:(ABKFeedback * )feedback
  withCompletionHandler:(nullable void (^)(ABKFeedbackSentResult feedbackSentResult))completionHandler;
 ```
 
-#### コードテストスイフト
+#### コードテスト SWIFT
 ```swift
 Appboy.sharedInstance()?.submitFeedback(feedback) { (feedbackSentResult) in
       print("Feedback sent: (feedbackSentResult)")
     }
 ```
 
-#### コードテストJava
+#### コードテスト Java
 ```java
 @Override
 public void onResume() {
@@ -319,7 +319,7 @@ public void onResume() {
 }
 ```
 
-#### コードテストjson
+#### コードテスト json
 ```json
 {
    "attributes" : "Attributes" ,
@@ -328,7 +328,7 @@ public void onResume() {
 }
 ```
 
-#### コードテストJavaScript
+#### コードテスト JavaScript
 ```javascript
 braze.subscribeToFeedUpdates(function(feed) {
   var cards = feed.cards;
@@ -337,15 +337,15 @@ braze.subscribeToFeedUpdates(function(feed) {
 braze.requestFeedRefresh();
 ```
 
-#### ピグメント試験
-\`\`\`python
-/usr/bin/python3
+#### パイグメンテスト
+```python
+#!/usr/bin/python3
 
-RunForrestRunのインポートエンジンから
+from engine import RunForrestRun
 
-"""構文ハイライト用のテストコード!""""
+"""Test code for syntax highlighting!"""
 
-Fooクラス:
+class Foo:
 	def __init__(self, var):
 		self.var = var
 		self.run()
@@ -353,72 +353,72 @@ Fooクラス:
 	def run(self):
 		RunForrestRun()  # run along!
 
-\`\`\`
+```
 {% endtab %}
-{% tab Markdown %}
-![Markdown Example]({% image_buster /assets/img_archive/code_snippet.png %})
+{% tab マークダウン %}
+![マークダウンの例]({% image_buster /assets/img_archive/code_snippet.png %})
 {% endtab %}
 {% endtabs %}
 
 ## アラートテスト
 
 {% tabs %}
-{% tab Styling %}
+{% tab スタイリング %}
 
-{% alert tip %}これはヒントです{% endalert %}
+{% alert tip %}これがヒントだ。{% endalert %}
 
-{% alert note %}これは注記です{% endalert %}
+{% alert note %}これは注釈である。{% endalert %}
 
-{% alert important %}これは重要な警告です{% endalert %}
+{% alert important %}これは重要な警告である。{% endalert %}
 
-{% alert warning %}これは警告です{% endalert %}
+{% alert warning %}これは警告である。{% endalert %}
 
-{% alert update %}アップデートです{% endalert %}
+{% alert update %}これは更新である。{% endalert %}
 
 {% endtab %}
-{% tab Markdown %}
+{% tab マークダウン %}
 {% raw %}
-\`\`\`
+```
 {% alert tip %}
-これはヒントです
+This is a tip
 {% endalert %}
 
 {% alert note %}
-これは注記です
+This is a note
 {% endalert %}
 
 {% alert important %}
-これは重要な警告です
+This is a important alert
 {% endalert %}
 
 {% alert warning %}
-これは警告です
+This is a warning
 {% endalert %}
 
 {% alert update %}
-これはアップデートです
+This is a update
 {% endalert %}
-\`\`\`
+```
 {% endraw %}
 {% endtab %}
 {% endtabs %}
 
-## 内蔵ビデオテスト
+## 埋め込み動画テスト
 {% tabs %}
-{% tab Styling %}
-#### 内蔵ビデオ/YouTube
-デフォルトはYouTube 組み込みです。
-{% multi_lang_include video.html id="XY5vFY" source="youtube" %}
+{% tab スタイリング %}
+#### 埋め込み動画/YouTube
+デフォルトはYouTube embeddedである。
+{% multi_lang_include video.html id="9SrKbY4BV2E" source="youtube" %}
 
-#### 埋め込みビデオの右揃え
-{% multi_lang_include video.html id="XYuXoKIvFY" align="right" source="youtube" %}
+#### 埋め込み動画の右揃え
+{% multi_lang_include video.html id="9SrKbY4BV2E" align="right" source="youtube" %}
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit.Sed nec tortor at lectus tempus tempor.Tellus diam, finibus eu dictum non, varius et ipsum をサスペンドします。Lorem ipsum dolor sit amet, consectetur adipiscing elit.Sed nec tortor at lectus tempus tempor.Tellus diam, finibus eu dictum non, varius et ipsum をサスペンドします。Lorem ipsum dolor sit amet, consectetur adipiscing elit.Sed nec tortor at lectus tempus tempor.Tellus diam, finibus eu dictum non, varius et ipsum をサスペンドします。
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.Sed nec tortor at lectus tempus tempor.Suspendisse tellus diam, finibus eu dictum non, varius et ipsum.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Sed nec tortor at lectus tempus tempor.Suspendisse tellus diam, finibus eu dictum non, varius et ipsum.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Sed nec tortor at lectus tempus tempor.Suspendisse tellus diam, finibus eu dictum non, varius et ipsum.
 
-#### 内蔵ビデオの左揃え
-{% multi_lang_include video.html id="XY5uXvFY" align="left" source="youtube" %}
+#### 埋め込み動画の左揃え
+{% multi_lang_include video.html id="9SrKbY4BV2E" align="left" source="youtube" %}
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit.Sed nec tortor at lectus tempus tempor.Tellus diam, finibus eu dictum non, varius et ipsum をサスペンドします。Lorem ipsum dolor sit amet, consectetur adipiscing elit.Sed nec tortor at lectus tempus tempor.Tellus diam, finibus eu dictum non, varius et ipsum をサスペンドします。Lorem ipsum dolor sit amet, consectetur adipiscing elit.Sed nec tortor at lectus tempus tempor.Tellus diam, finibus eu dictum non, varius et ipsum をサスペンドします。
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.Sed nec tortor at lectus tempus tempor.Suspendisse tellus diam, finibus eu dictum non, varius et ipsum.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Sed nec tortor at lectus tempus tempor.Suspendisse tellus diam, finibus eu dictum non, varius et ipsum.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Sed nec tortor at lectus tempus tempor.Suspendisse tellus diam, finibus eu dictum non, varius et ipsum.
 <br /><br />
 
 #### 織機の例
@@ -426,24 +426,26 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit.Sed nec tortor at lectus
 {% multi_lang_include video.html id="c1d3199463c448e8918f046265b54eb2" source="loom" %}
 
 {% endtab %}
-{% tab Markdown %}
+{% tab マークダウン %}
+
+YouTube動画を埋め込むにはYouTube IDが必要だ。URLの`v=` の後に表示される。例えば、`https://www.youtube.com/watch?v=VR1qn1OBP7k` のIDは`VR1qn1OBP7k` である。
 
 {% raw %}
 ```html
-{% multi_lang_include video.html id="[youte_id]" source="youtube" %}
+{% multi_lang_include video.html id="[youtube_id]" source="youtube" %}
 ```
 {% endraw %}
 
-右または左に揃え、最大幅を50% に制限するには、`align` パラメータ= `left` または`right` を使用します。
+右寄せまたは左寄せにし、最大幅を50%に制限するには、`align` パラメータ =`left` または`right` を使用する：
 {% raw %}
-\`\`\`html
-{% multi_lang_include video.html id="[ytube_id]" align="left" source="youtube" %}
+```html
+{% multi_lang_include video.html id="[youtube_id]" align="left" source="youtube" %}
 
-{% multi_lang_include video.html id="[youe_id]" align="right" source="youtube" %}
-\`\`\`
+{% multi_lang_include video.html id="[youtube_id]" align="right" source="youtube" %}
+```
 {% endraw %}
 
-織機の例:
+織機の例：
 {% raw %}
 ```html
 {% multi_lang_include video.html id="[lid]" source="loom" %}
@@ -453,9 +455,9 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit.Sed nec tortor at lectus
 {% endtab %}
 {% endtabs %}
 
-#### 高解像度のためのステータス配置を備えた特徴的なビデオレイアウト
+#### 高解像度のためにステータスを配置した注目の動画レイアウト
 
-高解像度表示のためにスタティックビデオを左側に配置する機能付きビデオレイアウトを使用するには、ページのyaml ヘッダに`video_id` と`video_type` (`youtube` など) を追加します。デフォルトでは、`video_source` は`youtube` に設定されます。
+高解像度表示のために左側に静的動画を配置する特集動画レイアウトを使用するには、ページのYAMLヘッダーに`video_id` と`video_type` (`youtube` など) を追加する。デフォルトでは、`video_source` は`youtube` に設定されている。
 
 {% raw %}
 ```yaml
@@ -467,17 +469,17 @@ video_source: youtube
 
 ## リストテスト
 {% tabs %}
-{% tab Styling %}
-#### ビュレット
+{% tab スタイリング %}
+#### 弾丸
 
 - リスト1
   - サブリスト1
 - リスト2
   - サブリスト2a
-    - サブサブリスト2
+    - サブ・サブ・リスト2
 - リスト3
 
-#### 番号
+#### 番号付き
 
 1. リスト1
    - サブリスト1
@@ -485,55 +487,55 @@ video_source: youtube
 3. リスト3
    - サブリスト3a
    - サブリスト3b
-     - サブサブリスト3
+     - サブ・サブ・リスト3
 4. リスト4
     1. サブリスト4a
-        1. サブサブリスト4
+        1. サブ・サブ・リスト 4
     2. サブリスト4b
-        1. サブリスト4
+        1. サブ・サブ・リスト 4
 
 {% endtab %}
-{% tab Markdown %}
-\`\`\`
-#### ビュレット
+{% tab マークダウン %}
+```
+#### Bullet
 
-- リスト1
-  - サブリスト1
-- リスト2
-  - サブリスト2a
-    - サブサブリスト2
-- リスト3
+- List 1
+  - Sub List 1
+- List 2
+  - Sub List 2a
+    - Sub Sub List 2
+- List 3
 
-#### 番号
+#### Numbered
 
-1. リスト1
-   - サブリスト1
-2. リスト2
-3. リスト3
-   - サブリスト3a
-   - サブリスト3b
-     - サブサブリスト3
-4. リスト4
-    1. サブリスト4a
-        1. サブサブリスト4
-    2. サブリスト4b
-        1. サブリスト4
-\`\`\`
+1. List 1
+   - Sub List 1
+2. List 2
+3. List 3
+   - Sub List 3a
+   - Sub List 3b
+     - Sub Sub List 3
+4. List 4
+    1. Sub list 4a
+        1. Sub Sub List 4
+    2. Sub list 4b
+        1. sub sub list 4
+```
 {% endtab %}
 {% endtabs %}
 
-## 折りたたみ式コンテンツテスト
+## 折りたたみ式コンテンツ・テスト {#collapsible-content}
 {% tabs %}
-{% tab Styling %}
-{% details Click me to Expand %}
-#### 見てください!隠されたコードブロック!
+{% tab スタイリング %}
+{% details クリックして拡大する %}
+#### 見てごらん！隠されたコードブロック！
 
 ```python
 print("hello world!")
 ```
 {% enddetails %}
 {% endtab %}
-{% tab Markdown %}
+{% tab マークダウン %}
 {% raw %}
 ```liquid
 {% details Click me to Expand %}
@@ -548,10 +550,10 @@ print("hello world!")
 
 #### カスタムタブ
 
-{% tabs local %}
+{% tabs ローカル %}
 {% tab OBJECTIVE-C %}
 
-以下のコード行を`AppDelegate.m` ファイルに追加します。
+次のコード行を `AppDelegate.m` ファイルに追加します。
 
 ```objc
 {% if include.platform == 'iOS' %}#import "Appboy-iOS-SDK/AppboyKit.h"{% else %}#import <AppboyTVOSKit/AppboyKit.h>{% endif %}
@@ -566,17 +568,17 @@ print("hello world!")
 ```
 
 {% endtab %}
-{% tab swift %}
+{% tab 速い %}
 
-Braze SDK をCocoaPods またはCarthage と統合する場合は、`AppDelegate.swift` ファイルに次のコード行を追加します。
+Braze SDK を CocoaPods または Carthage と統合する場合は、次のコード行を `AppDelegate.swift` ファイルに追加します。
 
 ```swift
 {% if include.platform == 'iOS' %}#import Appboy_iOS_SDK{% else %}#import AppboyTVOSKit{% endif %}
 ```
 
-Swift プロジェクトでObjective-C コードを使用する方法の詳細については、[Apple Developer Docs][apple\_initial\_setup\_19] を参照してください。
+Swift プロジェクトで ObJECTIVE-C コードを使用することについての詳細な情報は、\[Apple Developer Docs]\[apple_initial_setup_19].
 
-`AppDelegate.swift` で、`application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool` に次のスニペットを追加します。
+`AppDelegate.swift` で、次のスニペットを `application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool` に追加します。
 
 ```swift
 Appboy.start(withApiKey: "YOUR-API-KEY", in:application, withLaunchOptions:launchOptions)
@@ -586,14 +588,14 @@ Appboy.start(withApiKey: "YOUR-API-KEY", in:application, withLaunchOptions:launc
 
 #### 使用
 {% raw %}
-**tabs**を`{% tabs %}`で囲み `{% endtabs %}`
-個々の**tab**を`{% tab [Tab name] %}`タブのリキッドコードと名前で囲み `{% endtab %}`
+`{% tabs %}` 、**タブを**内部で囲む。 `{% endtabs %}`
+個々の**タブを**Liquidコードとタブ名で囲む`{% tab [Tab name] %}` および `{% endtab %}`
 {% endraw %}
 
 {% alert important %}
- ページ上のタブの数は一貫している必要があります。一貫していない場合は、タブの内容が非表示になっている可能性があります。
- たとえば、あるタブセットに`C++`、`C-Sharp`および`JS`があり、別のタブセットに`C-Sharp`および`JS`がある場合、
-誰かが`C++` をクリックすると、他のセクションには何も表示されません。回避策については、次のローカルタブオプションを参照してください。
+ ページ上のタブの数は一定であるべきで、そうでないとタブの内容が隠れてしまう可能性がある。
+ 例えば、あるタブの設定に`C++` 、`C-Sharp` 、`JS` があり、別のタブの設定に`C-Sharp` 、`JS` があるとする、
+誰かが`C++` をクリックすると、他のセクションには何も表示されない。回避策としては、以下のローカルタブのオプションを参照のこと。
 {% endalert %}
 
 {% raw %}
@@ -610,7 +612,7 @@ Content of swift
 {% endraw %}
 
 #### ローカルタブ
-特定のセクションのタブコンテンツのみを変更するタブなど、自己完結型のタブの場合は、親タブブロックでローカルパラメータを使用します。
+特定のセクションのタブコンテンツだけを変更するタブなど、自己完結型のタブの場合は、親タブブロックのローカライゼーションパラメータを使用する。
 
 {% raw %}
 ```liquid
@@ -621,12 +623,12 @@ Content of swift
 {% endraw %}
 
 #### サブタブ
-タブ内のタブの場合は、`subtabs` と`subtab` を使用できます。デフォルト設定は`local`です。
-グローバル`subtabs` の場合は、`global` オプションを使用します。 {% raw %}`{% subtabs global %}`{% endraw %}
+タブ内のタブには、`subtabs` と`subtab` が使える。デフォルト設定は`local` である。
+グローバルな`subtabs` 、`global` オプションを使用する： {% raw %}`{% subtabs global %}`{% endraw %}
 
-{% tabs local %}
-{% tab Tab 1 %}
-タブ内容1
+{% tabs ローカル %}
+{% tab タブ1 %}
+タブ・コンテンツ 1
 {% subtabs %}
 {% subtab Subtab 1a %}
 サブタブ1aの内容
@@ -636,8 +638,8 @@ Content of swift
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
-{% tab Tab 2 %}
-タブ内容2
+{% tab タブ2 %}
+タブ・コンテンツ 2
 {% subtabs %}
 {% subtab Subtab 1b %}
 サブタブ1aの内容
@@ -649,7 +651,7 @@ Content of swift
 {% endtab %}
 {% endtabs %}
 
-##### 値下げ
+##### マークダウン
 {% raw %}
 ```
 {% tabs local %}
