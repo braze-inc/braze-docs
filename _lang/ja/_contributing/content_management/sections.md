@@ -1,22 +1,22 @@
 ---
 nav_title: セクション
-article: Sections
-description: "Brazeドークスでセクションを作成および順序付けする方法について説明します。"
+article: Managing Sections
+description: "Braze Docsでセクションを作成し、注文する方法を学習する。"
 page_order: 2
 noindex: true
 ---
 
-# セクション
+# セクションのマネージャー
 
-> Brazeドークスでセクションを作成および順序付けする方法について説明します。個々のページを作成、変更、または削除するには、[ページ]({{site.baseurl}}/contributing/content_management/pages/)を参照してください。セクションの一般的な情報については、[コンテンツ管理]({{site.baseurl}}/contributing/content_management/#sections)を参照してください。
+> Braze Docsでセクションを作成し、注文する方法を学習する。代わりに個々のページを作成、変更、削除するには、「[ページ]({{site.baseurl}}/contributing/content_management/pages/)」を参照のこと。セクションに関する一般的な情報については、[コンテンツ管理についてを]({{site.baseurl}}/contributing/content_management/#sections)参照のこと。
 
-{% multi_lang_include contributing/prerequisites.md %}
+{% multi_lang_include 貢献しているprerequisites.md %}
 
-## セクションの作成
+## セクションを作成する
 
-### ステップ 1:ディレクトリとマークダウンファイルを作成する
+### ステップ 1:ディレクトリとMarkdownファイルを作成する
 
-関連するプライマリセクションまたはサブセクションを開き、新しいセクションのディレクトリとマークダウンファイルを作成します。
+該当する主要セクションまたはサブセクションを開封し、新しいセクション用のディレクトリとMarkdownファイルを作成する。
 
 ```plaintext
 braze-docs
@@ -27,17 +27,17 @@ braze-docs
             └── NEW_FILE.md
 ```
 
-以下を交換します。
+次のように置き換えます。
 
-| プレースホルダ| 説明                                                                                                                                                                                                                                                 |
+| placeholder       | 説明                                                                                                                                                                                                                                                 |
 |-------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `PRIMARY_SECTION` | 新しいコンテンツが属するプライマリセクションの名前。詳細については、[プライマリセクション]({{site.baseurl}}/contributing/content_management/#primary-sections)を参照してください。|
-| `SUBSECTION` | 該当する場合は、新しいコンテンツのサブセクションの名前が属します。詳細については、[サブセクション]({{site.baseurl}}/contributing/content_management/#subsections)を参照してください。|
-| `NEW_DIRECTORY` | 新しいセクションの名前。[ろう付けドックススタイルガイド]({{site.baseurl}}/contributing/style_guide/) に従います。すべての小文字を使用し、特殊文字を削除し、スペースをアンダースコアに置き換えます(`_`)。この名前は`NEW_FILE` と一致する必要があります。|
-| `NEW_FILE` | 新しいセクションの名前。[Braze Docs Style Guide]({{site.baseurl}}/contributing/style_guide/) に従います。すべての小文字を使用し、特殊文字を削除し、スペースをアンダースコアに置き換えます(`_`)。この名前は`NEW_DIRECTORY` と一致する必要があります。|
+| `PRIMARY_SECTION` | 新しいコンテンツが属する主セクションの名前。詳しくは、[プライマリーセクションを]({{site.baseurl}}/contributing/content_management/#primary-sections)参照のこと。                                                                              |
+| `SUBSECTION`      | 該当する場合、新しいコンテンツが属するサブセクションの名前。詳細は[サブセクションを]({{site.baseurl}}/contributing/content_management/#subsections)参照のこと。                                                                              |
+| `NEW_DIRECTORY`   | 新しいセクションの名前。[Braze Docsスタイルガイドに]({{site.baseurl}}/contributing/style_guide/)従うこと。すべて小文字を使用し、特殊文字を削除し、スペースをアンダースコア (`_`) に置き換える。この名前は`NEW_FILE` と一致しなければならない。       |
+| `NEW_FILE`        | 新しいセクションの名前。[Braze Docsスタイルガイドに]({{site.baseurl}}/contributing/style_guide/)従うこと。すべて小文字を使用し、特殊文字を削除し、スペースをアンダースコア (`_`) に置き換える。この名前は`NEW_DIRECTORY` と一致しなければならない。 |
 {: .reset-td-br-1 .reset-td-br-2}
 
-ディレクトリ構造は、次のようになります。
+ディレクトリ構造は以下のようになっているはずだ：
 
 ```plaintext
 braze-docs
@@ -48,79 +48,79 @@ braze-docs
             └── getting_started.md
 ```
 
-### ステップ 2:セクションの設定
+### ステップ2:セクションを設定する
 
-新しいセクションを作成するときに、ランディングページの有無にかかわらず、新しいセクションを設定できます。
+新しいセクションを作成する際、ランディングページの有無を設定することができる。
 
-- **ランディングページあり:**セクションで&quot のランディングページ、Getting started&quot、前提条件のリスト化、ユーザージャーニーの概要など、専用の概要が必要な場合は、この方法を使用します。
-- **ランディングページなし:**セクションに専用の概要が必要ない場合は、この方法を使用します。[Braze Docs Style Guide]({{site.baseurl}}/contributing/style_guide/)に記載されているように、コンテンツは常に役立つはずです。便利なコンテンツが少ない場合は、ランディングページを追加しないでください。
+- **ランディングページがある：**この方法は、「はじめに」セクションのランディングページのように、前提条件やユーザー・ジャーニーの概要を列挙した専用の概要が必要な場合に使用する。
+- **ランディングページはない：**セクションに専用の概要が必要ない場合は、この方法を使う。[Braze Docsのスタイルガイドに]({{site.baseurl}}/contributing/style_guide/)あるように、コンテンツは常に有用であるべきなので、有用なコンテンツがほとんどない場合はランディングページを追加しないこと。
 
 {% tabs %}
-{% tab with landing page %}
-新しいMarkdown ファイルを開き、以下のテンプレートを追加します。テンプレートの詳細については、[テンプレート]({{site.baseurl}}/contributing/templates/)を参照してください。
+{% tab ランディングページ付き %}
+新しいMarkdownファイルを開封し、以下のテンプレートを追加する。その他のテンプレートについては、[テンプレートを]({{site.baseurl}}/contributing/templates/)参照のこと。
 
-\`\`\`markdown
+```markdown
 ---
-nav_title: NAV\_TITLE
-article_title: LANDING\_PAGE\_TITLE
-description: SHORT\_DESCRIPTION
+nav_title: NAV_TITLE
+article_title: LANDING_PAGE_TITLE
+description: SHORT_DESCRIPTION
 ---
 
-# LANDING\_PAGE\_TITLE 
+# LANDING_PAGE_TITLE 
 
-> SHORT\_DESCRIPTION
+> SHORT_DESCRIPTION
 
 ## HEADING
 
 CONTENT
-\`\`\`
+```
 
-以下を交換します。
+次のように置き換えます。
 
-| プレースホルダ| 説明|
+| placeholder          | 説明                                                                                                                                                                                                                                 |
 |----------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `NAV_TITLE` | ページのタイトルが左側のナビゲーションバーに表示されます。ほとんどの場合、`nav_title` は`article_title` に一致する必要がありますが、領域を節約するには、より短い_ を使用しますが、_ title は同じです。|
-| `LANDING_PAGE_TITLE` | ランディングページのタイトル。メタデータの`LANDING_PAGE_TITLE` の値は検索エンジンの結果に使用され、`LANDING_PAGE_TITLE` の値はページに表示されるタイトルに使用されます。|
-| `SHORT_DESCRIPTION` | ページの短い1-2 センテンスの説明。YAML の`SHORT_DESCRIPTION` 値は検索エンジンの結果に使用され、`SHORT_DESCRIPTION` 値はページに表示される説明に使用されます。|
-| `HEADING` | 見出し2セクションのタイトル。|
-| `CONTENT` | 見出し2 セクションの本文段落。|
+| `NAV_TITLE`          | 左側のナビゲーションバーに表示されるあなたのページのタイトル。ほとんどの場合、`nav_title` は、`article_title` と一致すべきであるが、スペースを節約するために、_短くても似たような_タイトルを使ってもよい。                                  |
+| `LANDING_PAGE_TITLE` | ランディングページのタイトル。メタデータの`LANDING_PAGE_TITLE` の値は検索エンジンの検索結果に使われ、見出し1の`LANDING_PAGE_TITLE` の値はページに表示されるタイトルに使われる。                             |
+| `SHORT_DESCRIPTION`  | あなたのページについての1-2文の短い説明文。YAMLのメタデータの`SHORT_DESCRIPTION` の値は検索エンジンの結果のために使われ、一方、見出し1の後の`SHORT_DESCRIPTION` の値はページでレンダリングされる説明のために使われる。 |
+| `HEADING`            | 見出し2セクションのタイトル。                                                                                                                                                                                                        |
+| `CONTENT`            | 見出し2セクションの本文段落。                                                                                                                                                                                              |
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% alert tip %}
-このテンプレートは、必要に応じてstarted-add [追加のメタデータ]({{site.baseurl}}/contributing/yaml_front_matter/metadata/)とヘッダーを追加するためだけのものです。
+必要に応じて[メタデータや]({{site.baseurl}}/contributing/yaml_front_matter/metadata/)見出しを追加してほしい。
 {% endalert %}
 {% endtab %}
 
-{% tab without landing page %}
-サブセクションのMarkdown ファイルを開き、以下のメタデータを追加してページのナビゲーションタイトルを設定し、ランディングページを無効にします。
+{% tab ランディングページなし %}
+サブセクションのMarkdownファイルを開封し、以下のメタデータを追加して、ページのナビゲーションタイトルを設定し、ランディングページを無効にする。
 
-\`\`\`markdown
+```markdown
 ---
-nav_title: NAV\_TITLE
+nav_title: NAV_TITLE
 config_only: true
 ---
-\`\`\`
+```
 
 {% alert tip %}
-このテンプレートは、必要に応じてstarted-add [追加のメタデータ]({{site.baseurl}}/contributing/yaml_front_matter/metadata/)とヘッダーを追加するためだけのものです。
+必要に応じて[メタデータや]({{site.baseurl}}/contributing/yaml_front_matter/metadata/)見出しを追加してほしい。
 {% endalert %}
 
-`NAV_TITLE` は、左側のナビゲーションバーに表示されるページのタイトルに置き換えます。ページは次のようになります。
+`NAV_TITLE` 、左側のナビゲーションバーに表示されるあなたのページのタイトルに置き換える。あなたのページは次のようなものであるべきだ：
 
-\`\`\`markdown
+```markdown
 ---
-nav_title: はじめに
+nav_title: Getting started
 page_order: 2
 noindex: true
 config_only: true
 ---
-\`\`\`
+```
 {% endtab %}
 {% endtabs %}
 
 ### ステップ 3:ページを追加する
 
-新しいディレクトリで、ページごとにマークダウンファイルを作成します。デフォルトのページレイアウトを使用するには、[ステップ2]({{site.baseurl}}/contributing/content_management/sections/?tab=with%20landing%20page#step-2-configure-your-section) でテンプレートを使用します。ディレクトリ構造は、次のようになります。
+新しいディレクトリに、各ページ用のMarkdownファイルを作成する。デフォルトのページレイアウトを使用するには、[ステップ]({{site.baseurl}}/contributing/content_management/sections/?tab=with%20landing%20page#step-2-configure-your-section)2のテンプレートを使用する。ディレクトリ構造は以下のようになっているはずだ：
 
 ```plaintext
 braze-docs
@@ -133,35 +133,35 @@ braze-docs
             └── getting_started.md
 ```
 
-各ページへのコンテンツの追加が完了したら、[セクション](#ordering-a-section)の順序付けに進みます。
+各ページにコンテンツを追加し終わったら、[セクションの順序付けに](#ordering-a-section)進む。
 
 {% alert tip %}
-ページへのコンテンツの追加に関する詳細なウォークスルーについては、[ページ]({{site.baseurl}}/contributing/content_management/pages/#writing-content)を参照してください。
+ページにコンテンツを追加するための完全なチュートリアルについては、[ページを]({{site.baseurl}}/contributing/content_management/pages/#writing-content)参照のこと。
 {% endalert %}
 
-## セクションの注文
+## セクションを注文する
 
-セクションを注文するには、そのセクションのいずれかのMarkdown ファイルを開き、YAML の前面にある[`page_order`]({{site.baseurl}}/contributing/yaml_front_matter/metadata/#page-order) キーを検索します。
+セクションを順番に並べるには、そのセクションのMarkdownファイルを開封し、そのYAMLフロントマター内の [`page_order`]({{site.baseurl}}/contributing/yaml_front_matter/metadata/#page-order)キーを検索する。
 
-\`\`\`markdown
+```markdown
 ---
 page_order:
 ---
-\`\`\`
+```
 
-`page_order` キーは、左側のナビゲーションバーのセクションのページの相対的な順序を表し、負でない任意の番号(`0`、`20`、`5.5` など) に設定できます。つまり、カレントディレクトリ内の各Markdown ファイルの`page_order` を知る必要がありますが、他のディレクトリ(サブディレクトリを含む) を知る必要はありません。
+`page_order` キーは、左側のナビゲーションバー上のセクションにおけるページの相対的な順序を表し、負でない任意の数字（`0` 、`20` 、`5.5` など）を設定できる。`page_order` つまり、カレント・ディレクトリにある各MarkdownファイルのCurrentsを知る必要があるが、他のディレクトリ（サブディレクトリを含む）のCurrentsを知る必要はない。
 
-カレントディレクトリ内の各Markdown ファイルの`page_order` キーを任意の負でない番号に設定します。次の例では、`page_order` が`2` に設定されています。  
+現在のディレクトリにある各Markdownファイルの`page_order` キーを任意の非負の数に設定する。以下の例では、`page_order` を`2` に設定している。  
 
-\`\`\`markdown
+```markdown
 ---
-nav_title: B項
+nav_title: Subsection B
 page_order: 2 
 ---
 
-# B項上陸ページ
-\`\`\`
+# Subsection B landing page
+```
 
-出力は次のようになります。
+出力は以下のようになる：
 
-![The left-side navigation on Braze Docs, with the 'Section B' landing page listed third.]({% image_buster /assets/img/contributing/styling_examples/subsection_landing_page.png %})
+![Braze Docsの左側ナビゲーション。「セクションB」のランディングページは3番目に表示されている。]({% image_buster /assets/img/contributing/styling_examples/subsection_landing_page.png %})
