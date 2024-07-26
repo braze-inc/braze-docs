@@ -1,59 +1,59 @@
 ---
-nav_title: Twilioとのパートナーシップ
+nav_title: Twilioパートナーシップ
 alias: /partners/twilio/
 
-description: "この記事では、BrazeとTwilioのパートナーシップについて概説します。"
+description: "この記事では、BrazeとTwilioのパートナーシップについて概説する。"
 page_type: update
 channel: 
   - SMS
   - Webhook
 ---
 
-# Twilio
+# トワイリオ
 
 {% alert warning %}
-なお、Twilio Webhook Integrationのサポートは2020年1月31日に終了します。BrazeでSMSサービスにアクセスしたい場合は、 [SMSのドキュメント]({{site.baseurl}}/user_guide/message_building_by_channel/sms/)をご覧ください。
+なお、Twilio Webhook Integrationのサポートは2020年1月31日に終了する。BrazeでSMSサービスにアクセスしたい場合は、[SMSドキュメントを]({{site.baseurl}}/user_guide/message_building_by_channel/sms/)参照のこと。
 {% endalert %}
 
-この例では、Twilioの [メッセージ送信API][20]を介してSMSとMMSをユーザーに送信するようにBraze Webhookチャネルを構成します。便宜上、Twilio Webhook テンプレートがダッシュボードに含まれています。
+この例では、Twilioの[メッセージ送信APIを介して][20]、ユーザーにSMSとMMSを送信するようにBrazeのWebhookチャネルを設定する。便宜上、Twilio Webhookテンプレートがダッシュボードに含まれている。
 
 ## HTTP URL
 
-Webhook URL は、Twilio によってダッシュボードで提供されます。この URL には Twilio アカウント ID ()`TWILIO_ACCOUNT_SID` が含まれているため、Twilio アカウントに固有です。
+WebhookのURLはダッシュボードでTwilioから提供される。このURLにはTwilioアカウントID(`TWILIO_ACCOUNT_SID`)が含まれているため、Twilioアカウントに固有のURLとなる。
 
-Twilio の例では、Webhook URL は `https://api.twilio.com/2010-04-01/Accounts/TWILIO_ACCOUNT_SID/Messages.json`です。この URL は、Twilio コンソールの *[はじめに* ] セクションにあります。
+Twilio の例では、Webhook の URL は`https://api.twilio.com/2010-04-01/Accounts/TWILIO_ACCOUNT_SID/Messages.json` である。このURLは、Twilioコンソールの*Getting Started*セクションに記載されている。
 
-![Twilio\_Console][28]
+![Twilio_Console][28]
 
-## 要求本文
+## リクエスト・ボディ
 
-Twilio APIはリクエスト本文がURLエンコードされることを前提としているため、Braze Webhookコンポーザー `Raw Text`のリクエストタイプをに変更することから始める必要があります。要求の本文に必要なパラメーターは、 *To*、 *From*、および *Body* です。
+Twilio APIはリクエストボディがURLエンコードされていることを期待するので、Braze webhook composerでリクエストタイプを`Raw Text` に変更することから始める必要がある。リクエスト本文に必要なパラメータは、*To*、*From*、*Body*である。
 
-次のスクリーンショットは、各ユーザーの電話番号に SMS を送信し、本文が "Hello from Braze!" の場合のリクエストの例です。
+次のスクリーンショットは、各ユーザーの電話番号に "Hello from Braze!"という本文でSMSを送信する場合のリクエストの例である。
 
-- ターゲットオーディエンスの各ユーザープロフィールに有効な電話番号が必要です。
-- Twilioのリクエスト形式を満たすには、メッセージの内容にLiquidフィルターを使用します `url_param_escape` 。このフィルターは、すべての文字が HTML 要求で許可されるように文字列をエンコードします。たとえば、電話番号`+12125551212`のプラス文字 ()`+` は URL エンコードされたデータでは禁止されており、`%2B12125551212`.
+- ターゲットオーディエンスの各ユーザープロファイルに有効な電話番号が必要だ。
+- Twilioのリクエストフォーマットを満たすには、メッセージ内容に`url_param_escape` Liquidフィルターを使用する。例えば、電話番号`+12125551212` のプラス文字 (`+`) は URL エンコードされたデータでは禁止されており、`%2B12125551212` に変換される。
 
-![Webhook Body][29]
+![Webhook本体][29]
 
-## 要求ヘッダーとメソッド
+## リクエストヘッダーとメソッド
 
-Twilio には、要求 Content-Type と [HTTP 基本認証][32] ヘッダーの 2 つの要求ヘッダーが必要です。Webhook コンポーザーの横にある歯車アイコンをクリックし、[ *Add New Pair]* を 2 回クリックして、ペアを Webhook に追加します。
+Twilioは2つのリクエストヘッダー、リクエストContent-Typeと\[HTTP Basic Authentication][32] ]ヘッダーを要求する。Webhookコンポーザーの横にある歯車のアイコンをクリックし、*新しいペアを追加を*2回クリックして、Webhookに追加する。
 
-ヘッダー名 |ヘッダー値
---- |---
+ヘッダー名 | ヘッダー値
+--- | ---
 コンテンツタイプ | `application/x-www-form-urlencoded`
-オーソリゼーション | `{% raw %}Basic {{ 'TWILIO_ACCOUNT_SID:TWILIO_AUTH_TOKEN' | base64_encode }}{% endraw %}`
+認可 | `{% raw %}Basic {{ 'TWILIO_ACCOUNT_SID:TWILIO_AUTH_TOKEN' | base64_encode }}{% endraw %}`
 
-必ず と `TWILIO_AUTH_TOKEN` を Twilio ダッシュボードの値に置き換え`TWILIO_ACCOUNT_SID`てください。最後に、Twilio の API エンドポイントは HTTP POST リクエストを期待しているため、 *[HTTP メソッド]* のドロップダウンでそのオプションを選択します。
+`TWILIO_ACCOUNT_SID` と`TWILIO_AUTH_TOKEN` は必ずTwilioダッシュボードの値で置き換えること。最後に、TwilioのAPIエンドポイントはHTTP POSTリクエストを想定しているので、*HTTP Methodの*ドロップダウンでそのオプションを選択する。
 
-![Webhook方式][30]
+![Webhookメソッド][30]
 
-## リクエストのプレビュー
+## リクエストをプレビューする
 
-Webhook コンポーザーを使用して、ランダムなユーザーまたは特定の資格情報を持つユーザーの要求をプレビューし、要求が正しくレンダリングされていることを確認します。
+Webhook composer を使って、ランダムなユーザー、または特定の認証情報を持つユーザーのリクエストをプレビューし、リクエストが適切にレンダリングされていることを確認する。
 
-![Webhook プレビュー][31]
+![Webhookプレビュー][31]
 
 [20]: https://www.twilio.com/docs/api/rest/sending-messages
 [28]: {% image_buster /assets/img_archive/Twilio_Console.png %}
