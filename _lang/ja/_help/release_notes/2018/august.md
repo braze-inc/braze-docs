@@ -3,24 +3,24 @@ nav_title: 8月
 page_order: 6
 noindex: true
 page_type: update
-description: "この記事には、2018 年 8 月のリリースノートが含まれています。"
+description: "この記事には2018年8月のリリースノートが含まれている。"
 ---
-# 2018 年 8 月
+# 2018年8月
 
-## iOS 12 通知グループ
+## iOS 12の通知グループ
 
-最近のiOS 12リリースでは、アプリケーションの通知のグループ化（Android通知チャネルと同様）がサポートされています。[Brazeでは、メッセージコンポーザーを使用してiOSでこのグループ化機能を利用できます。]({{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/#notification-groups)
+最近リリースされたiOS 12では、アプリケーションのグループ化通知（Androidの通知チャネルに似ている）がサポートされている。[Brazeでは、メッセージ作成画面を使って、このグループ化機能をiOSで利用することができる。]({{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/#notification-groups)
 
 ## プッシュストーリーのトリガー
 
-Push Story スライドでの特定のページクリックに基づいてユーザーをリターゲティングできるようになりました。「**インタラクト対象キャンペーン**」に追加のフィルターを使用してください。
+プッシュストーリースライドの特定のページクリックに基づいてユーザー群をリターゲティングすることができるようになった。**Interacted with Campaignの**追加フィルターを使用する。
 
-## 匿名ユーザーからの S3 および Azure データイベント
+## 匿名ユーザーからのS3およびAzureデータイベント
 
-Amazon S3 と Microsoft Azure にデータをエクスポートするお客様は、匿名ユーザーからのイベントを含めることができるようになりました。この機能は、新しく作成されたすべてのインテグレーションでデフォルトでオンになりますが、既存のすべてのインテグレーションではオフのままになります。質問がある場合は、アカウントマネージャーに連絡するか、[サポートチケットを開いてください][support]。
+Amazon S3とMicrosoft Azureにデータをエクスポートする顧客は、匿名ユーザーのイベントを含めることができるようになった。この機能は、新規に作成されたすべての統合ではデフォルトでオンになるが、既存のすべての統合ではオフのままである。ご質問がある場合は、アカウントマネージャーに連絡するか、[サポートチケットを][support]開封する。
 
-## ミックスパネルコホート統合
+## Mixpanel Cohortsの統合
 
-BrazeとMixpanelの両方のお客様は、[Mixpanelコホートをセグメントフィルターとして統合してBrazeに送信できるようになりました]({{site.baseurl}}/partners/insights/behavioral_analytics/mixpanel_for_currents/#mixpanel-cohort-import)。1 回限りの手動エクスポートまたは 2 時間ごとの動的エクスポートを設定できます。更新された各ユーザーはデータポイントとしてカウントされますが、Mixpanelは前回の同期以降の変更のみを送信します。
+BrazeとMixpanelの両方の顧客が、[Mixpanelコホートを]({{site.baseurl}}/partners/insights/behavioral_analytics/mixpanel_for_currents/#mixpanel-cohort-import)統合し、[セグメントフィルターとしてBrazeに送信]({{site.baseurl}}/partners/insights/behavioral_analytics/mixpanel_for_currents/#mixpanel-cohort-import)できるようになった。一度だけ手動でエクスポートするか、2時間ごとにダイナミックなエクスポートを設定することができる。更新されたユーザーはそれぞれデータポイントとしてカウントされるが、Mixpanelは最後の同期以降の変更のみを送信する。
 
 [support]: {{site.baseurl}}/braze_support/
