@@ -1,22 +1,22 @@
 ---
-nav_title: 画像
-article: Images
-description: "Braze Docsで画像を追加、変更、削除する方法を学びます。"
-page_order: 2
+nav_title: 画像、写真
+article: Managing Images
+description: "Braze Docsで画像写真を追加、修正、削除する方法を学習する。"
+page_order: 1
 noindex: true
 ---
 
-# 画像
+# 画像、写真をマネージャーする
 
-> Braze Docsで画像を追加、変更、削除する方法を学びます。画像に関する一般的な情報については、「 [コンテンツ管理]({{site.baseurl}}/contributing/content_management/#images)」を参照してください。
+> Braze Docsで画像写真を追加、修正、削除する方法を学習する。画像, 写真に関する一般的な情報は、[コンテンツ管理についてを]({{site.baseurl}}/contributing/content_management/#images)参照のこと。
 
 {% multi_lang_include contributing/prerequisites.md %}
 
-## 新しい画像を追加する
+## 新しい画像、写真を追加する
 
 ### ステップ 1:画像ファイルを追加する
 
-テキストエディタで、>`img`を開きます`assets`。通常、新しい画像は、ページ上の他の画像と同じディレクトリに追加する必要があります。ただし、最善の判断を下すことができます。新しい画像が [Braze Docsスタイルガイド]({{site.baseurl}}/contributing/style_guide/)に従っていることを確認し、PNGファイルを関連するサブディレクトリに追加します。
+テキストエディタで`assets` >`img` を開封する。一般的に、新しい画像はページの他の画像と同じディレクトリに追加する。ただし、最善の判断を下すことはできる。新しい画像写真が[Braze Docsスタイルガイドに従って]({{site.baseurl}}/contributing/style_guide/)いることを確認し、関連するサブディレクトリにPNGファイルを追加する。
 
 ```bash
 braze-docs
@@ -26,15 +26,15 @@ braze-docs
             └── FILE.png
 ```
 
-以下を置き換えます。
+次のように置き換えます。
 
-|プレースホルダー |説明 |
+| placeholder | 説明                                                                               |
 |-------------|-------------------------------------------------------------------------------------------|
-| `DIRECTORY` |関連するディレクトリの名前。関連するディレクトリがない場合は、作成できます。|
-| `FILE`      |ファイル拡張子を含むファイルの名前。                                       |
+| `DIRECTORY` | 関連するディレクトリの名前。関連するディレクトリがない場合は、作成してもよい。 |
+| `FILE`      | 拡張子を含むファイル名。                                        |
 {: .reset-td-br-1 .reset-td-br-2}
 
-画像ファイルは次のようになります。
+画像ファイルは以下のようなものであるべきだ：
 
 ```bash
 braze-docs
@@ -44,13 +44,13 @@ braze-docs
             └── github_home_page.png
 ```
 
-### ステップ 2:画像へのリンク
+### ステップ2:画像、写真へのリンク
 
-新しい画像にリンクする場合は、インライン構文または参照スタイルの構文を使用できます。インライン構文は明瞭さを優先し、参照スタイルの構文は読みやすさを優先します。
+{% alert important %}
+Liquidの{% raw %}`{% tab %}`{% endraw %} タグは参照スタイルのリンクをサポートしていないので、インラインリンクのみを以下にドキュメントする。既存の参照リンクは引き続き機能するが、もはや推奨されない。
+{% endalert %}
 
-{% tabs local %}
-{% tab in-line %}
-Markdown ファイルで、インライン構文を使用して新しい画像にリンクします。
+Markdownファイルで、インライン構文を使って新しい画像写真にリンクする。
 
 {% raw %}
 ```markdown
@@ -58,79 +58,45 @@ Markdown ファイルで、インライン構文を使用して新しい画像�
 ```
 {% endraw %}
 
-以下を置き換えます。
+次のように置き換えます。
 
-|プレースホルダー |説明 |
+| placeholder | 説明                                                                                                             |
 |-------------|-------------------------------------------------------------------------------------------------------------------------|
-| `ALT_TEXT`  |画像の代替テキスト。これは、ブラッドリーダーを使用しているユーザーがBraze Docsに等しくアクセスできるようにするために必要です。|
-| `IMAGE`     |ディレクトリから `img` 始まるイメージへの相対パス。                                                     |
+| `ALT_TEXT`  | 画像, 写真のaltテキスト。これは、Braze Docsをスクリーンリーダーを使っている人たちにも同じようにアクセシブルにするために必要なことである。 |
+| `IMAGE`     | `img` ディレクトリを起点とする画像, 写真への相対パス。                                                      |
 {: .reset-td-br-1 .reset-td-br-2}
 
-インライン画像は次のようになります。
+インライン画像は以下のようなものであるべきだ：
 
 {% raw %}
 ```markdown
 ![The form for creating a new pull request on GitHub.]({% image_buster /assets/img/contributing/getting_started/github_pull_request.png %})
 ```
 {% endraw %}
-{% endtab %}
 
-{% tab reference-style %}
-Markdown ファイルで、参照スタイルの構文を使用して新しい画像にリンクします。
+### ステップ 3:画像, 写真の最大幅を設定する(オプション)
 
-{% raw %}
-```markdown
-![ALT_TEXT.][REFERENCE_NUMBER]
-```
-{% endraw %}
-
-以下を置き換えます。
-
-|プレースホルダー |説明 |
-|--------------------|-------------------------------------------------------------------------------------------------------------------------|
-| `ALT_TEXT`         |画像の代替テキスト。これは、ブラッドリーダーを使用しているユーザーがBraze Docsに等しくアクセスできるようにするために必要です。|
-| `REFERENCE_NUMBER` |このページの別の参照スタイルのリンクにまだ割り当てられていない正の整数を割り当てます。                  |
-{: .reset-td-br-1 .reset-td-br-2}
-
-インライン画像は次のようになります。
+画像リンクに以下のLiquidコードを追加することで、画像の最大幅を設定できる：
 
 {% raw %}
 ```markdown
-![The form for creating a new pull request on GitHub.][10]
+{: style="max-width:NUMBER%;"}
 ```
 {% endraw %}
 
-ページの下部に、参照を追加します。
+`NUMBER` 、パーセンテージで設定したい最大幅に置き換える。画像, 写真のリンクは以下のようにする：
 
 {% raw %}
 ```markdown
-[REFERENCE_NUMBER]: {{site.baseurl}}SHORT_URL
+![The form for creating a new pull request on GitHub.]({% image_buster /assets/img/contributing/getting_started/github_pull_request.png %}){: style="max-width:65%;"}
 ```
 {% endraw %}
 
-以下を置き換えます。
+## 画像, 写真の更新
 
-|プレースホルダー |説明 |
-|--------------------|---------------------------------------------------------|
-| `REFERENCE_NUMBER` |リンク先の参照の番号。     |
-| `IMAGE` |ディレクトリから `img` 始まるイメージへの相対パス。 |
-{: .reset-td-br-1 .reset-td-br-2}
+### ステップ 1:オリジナルのリファレンスを探す
 
-リンクは次のようになります。
-
-{% raw %}
-```markdown
-[10]: {% image_buster /assets/img/contributing/getting_started/github_pull_request.png %}
-```
-{% endraw %}
-{% endtab %}
-{% endtabs %}
-
-## イメージの更新
-
-### ステップ 1:元の参照を検索する
-
-関連するMarkdownファイルを開き、次のような古い [インライン]({{site.baseurl}}/contributing/content_management/images/?tab=in-line#step-2-link-to-the-image) または [参照スタイルの]({{site.baseurl}}/contributing/content_management/images/?tab=reference-style#step-2-link-to-the-image) 画像リンクを探します。
+該当するMarkdownファイルを開封し、古い[インライン]({{site.baseurl}}/contributing/content_management/images/?tab=in-line#step-2-link-to-the-image)または[参照スタイルの]({{site.baseurl}}/contributing/content_management/images/?tab=reference-style#step-2-link-to-the-image)画像リンクを探す。
 
 {% raw %}
 ```markdown
@@ -138,21 +104,21 @@ Markdown ファイルで、参照スタイルの構文を使用して新しい�
 ```
 {% endraw %}
 
-### ステップ 2:イメージを更新する
+### ステップ 2:画像、写真を更新する
 
-既存のイメージを更新する場合は、新しいイメージ ファイルを追加するか、既存のイメージ ファイルを置き換えることができます。新しい画像は、 [Braze Docsスタイルガイド]({{site.baseurl}}/contributing/style_guide/)に従っていることを確認してください。
+既存の画像を更新する場合、新しい画像ファイルを追加するか、既存の画像ファイルを置き換えることができる。新しい画像, 写真が[Braze Docs Style Guideに従って]({{site.baseurl}}/contributing/style_guide/)いることを確認する。
 
-- **既存のファイルを上書きする(推奨):**この方法は、元の画像が正確なコンテンツを表しているが、古いブランドを描写した画像など、視覚的に古くなっている場合に使用します。この方法により、Braze Docsリポジトリに保存される画像の総数が減ります。
-- **新しいファイルを追加:**この方法は、廃止された機能やワークフローを描いた画像など、元の画像に完全に古いコンテンツが描かれている場合に使用します。
+- **既存のファイルを上書きする（推奨）：**オリジナルの画像写真が正確な内容を描写しているが、古いブランディングを描いた画像など、視覚的に古くなっている場合にこの方法を使う。この方法により、Braze Docsリポジトリに保存される画像の総数が減る。
+- **新しいファイルを追加する：**この方法は、非推奨の機能やワークフローを描いた画像など、元の画像が完全に古いコンテンツを描いている場合に使用する。
 
-{% tabs local %}
-{% tab overwrite existing file %}
-元の画像の名前と一致するように新しい画像の名前を変更します。次の例では、イメージ ファイル名がどのように同一であるかを確認します。
+{% tabs ローカル %}
+{% tab 既存のファイルを上書きする %}
+新しい画像の名前を元の画像の名前と同じにする。次の例では、画像ファイル名が同じであることを確認してほしい。
 
-- **元のファイル name:** `getting_started_with_github_select_start3.png`
-- **新規ファイル name:** `getting_started_with_github_select_start3.png`
+- **元のファイル名** `getting_started_with_github_select_start3.png`
+- **新しいファイル名だ：** `getting_started_with_github_select_start3.png`
 
-次に、元のイメージと同じディレクトリに新しいイメージを追加します。確認を求められたら、画像を上書きすることを確認します。画像ファイルは次のようになります。
+次に、新しい画像を元の画像と同じディレクトリに追加する。聞かれたら、画像, 写真を上書きすることを確認する。画像ファイルは以下のようなものであるべきだ：
 
 ```bash
 braze-docs
@@ -163,11 +129,11 @@ braze-docs
 ```
 {% endtab %}
 
-{% tab add new file%}
-通常、新しい画像はこのページの他の画像と同じディレクトリに追加する必要がありますが、最善の判断を下すことができます。準備ができたら、PNG ファイルを の `assets/img/`適切な場所に追加します。
+{% tab 新しいファイルを追加する%}。
+一般的に、新しい画像は、このページの他の画像と同じディレクトリに追加されるべきであるが、あなたの最善の判断で追加してもよい。準備ができたら、`assets/img/` の該当する場所にPNGファイルを追加する。
 
 {% alert warning %}
-新しい画像ファイルを追加するときに、古い画像ファイルを削除しないでください。
+新しい画像ファイルを追加する際、古い画像ファイルは削除しないこと。
 {% endalert %}
 
 ```bash
@@ -178,15 +144,15 @@ braze-docs
             └── FILE.png
 ```
 
-以下を置き換えます。
+次のように置き換えます。
 
-|プレースホルダー |説明 |
+| placeholder | 説明                                                                               |
 |-------------|-------------------------------------------------------------------------------------------|
-| `DIRECTORY` |関連するディレクトリの名前。関連するディレクトリがない場合は、作成できます。|
-| `FILE`      |ファイル拡張子を含むファイルの名前。                                       |
+| `DIRECTORY` | 関連するディレクトリの名前。関連するディレクトリがない場合は、作成してもよい。 |
+| `FILE`      | 拡張子を含むファイル名。                                        |
 {: .reset-td-br-1 .reset-td-br-2}
 
-画像ファイルは次のようになります。
+画像ファイルは以下のようなものであるべきだ：
 
 ```bash
 braze-docs
@@ -196,14 +162,14 @@ braze-docs
             └── github_home_page.png
 ```
 
-イメージが関連するディレクトリに追加されたら、 [インライン]({{site.baseurl}}/contributing/content_management/images/?tab=in-line#step-2-link-to-the-image) または [参照スタイルの]({{site.baseurl}}/contributing/content_management/images/?tab=reference-style#step-2-link-to-the-image) 構文を使用してこのイメージにリンクできます。
+画像, 写真が関連するディレクトリに追加された後、[インライン]({{site.baseurl}}/contributing/content_management/images/?tab=in-line#step-2-link-to-the-image)または[参照スタイルの]({{site.baseurl}}/contributing/content_management/images/?tab=reference-style#step-2-link-to-the-image)構文を使用して、この画像にリンクすることができる。
 {% endtab %}
 {% endtabs %}
 
-## イメージの削除
+## 画像、写真を削除する
 
-画像を削除するには、関連する Markdown ファイルを開き、 [インライン]({{site.baseurl}}/contributing/content_management/images/?tab=in-line#step-2-link-to-the-image) または [参照スタイルの]({{site.baseurl}}/contributing/content_management/images/?tab=reference-style#step-2-link-to-the-image) 画像リンクを削除します。リポジトリからイメージ ファイルを削除しないでください。
+画像を削除するには、該当するMarkdownファイルを開封し、[インライン]({{site.baseurl}}/contributing/content_management/images/?tab=in-line#step-2-link-to-the-image)または[参照スタイルの]({{site.baseurl}}/contributing/content_management/images/?tab=reference-style#step-2-link-to-the-image)画像リンクを削除する。リポジトリから画像ファイルを削除しない。
 
 {% alert warning %}
-画像ファイルを削除すると、その画像は他のBraze Docs言語の翻訳では壊れます。
+画像ファイルが削除されると、その画像は他のBraze Docs言語翻訳のために壊れる。
 {% endalert %}
