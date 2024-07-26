@@ -1,22 +1,22 @@
 ---
-nav_title: コンテンツを再利用する
+nav_title: コンテンツの再利用
 article: Reusing content
-description: "コンテンツの一貫性を高め、コンテンツ作成にかかる時間を短縮できるように、Braze Docs全体でコンテンツを再利用する方法を学びましょう。"
-page_order: 5
+description: "Braze Docs全体でコンテンツを再利用する方法を学習することで、コンテンツの一貫性を高め、コンテンツ作成の時間を短縮することができる。"
+page_order: 4
 noindex: true
 ---
 
-# コンテンツを再利用する
+# コンテンツの再利用
 
-> コンテンツの一貫性を高め、コンテンツ作成にかかる時間を短縮できるように、Braze Docs全体でコンテンツを再利用する方法を学びましょう。コンテンツの再利用に関する一般的な情報については、「[コンテンツ管理]({{site.baseurl}}/contributing/content_management/#content-reuse)」を参照してください。
+> Braze Docs全体でコンテンツを再利用する方法を学習することで、コンテンツの一貫性を高め、コンテンツ作成の時間を短縮することができる。コンテンツの再利用に関する一般的な情報は、[コンテンツ・マネジメントについてを]({{site.baseurl}}/contributing/content_management/#content-reuse)参照のこと。
 
-Jekyll でのコンテンツの再利用は、インクルードを使用して行われます。インクルードは通常の Markdown `_includes` ファイルとしてディレクトリに保存されます。ただし、`_docs`ディレクトリ内のMarkdownファイルとは異なり、これらのファイルにはYAMLフロントマターは必要ありません。
+Jekyllのコンテンツの再利用は、インクルードを使用して達成される。インクルードは、通常のMarkdownファイルとして`_includes` ディレクトリに保存される。しかし、`_docs` ディレクトリのMarkdownファイルとは異なり、これらのファイルにはYAMLのフロントマターが必要ない。
 
 {% multi_lang_include contributing/prerequisites.md %}
 
-## インクルードの作成
+## インクルードを作成する
 
-`.md``_includes`ディレクトリに拡張子を付けた新しい Markdown ファイルを作成します。インクルードファイルはこのディレクトリのどこにでも保存できますが、関連するコンテンツはサブディレクトリを使用してまとめておくのが一番です。ファイルツリーは次のようになっているはずです。
+`_includes` ディレクトリに、`.md` の拡張子を持つ新しいMarkdownファイルを作成する。インクルードファイルはこのディレクトリのどこにでも格納できるが、サブディレクトリを使って関連するコンテンツをまとめておくのがベストだ。ファイルツリーは以下のようになっているはずだ：
 
 ```bash
 braze-docs
@@ -27,34 +27,34 @@ braze-docs
         └── site_generator.md
 ```
 
-ページにコンテンツを追加し、必ず [Braze Docs スタイルガイドに従ってください]({{site.baseurl}}/contributing/style_guide/)。すでに YAML フロントマターがあるページにインクルードを追加する予定がある場合は、インクルードにフロントマターを追加しないでください。コンテンツは次のようになっているはずです。
+ページにコンテンツを追加し、[Braze Docsスタイルガイドに]({{site.baseurl}}/contributing/style_guide/)必ず従うこと。すでにYAMLのフロントマターを持っているページにインクルードを追加するつもりなら、インクルードにフロントマターを追加しないこと。内容は以下のようなものであるべきだ：
 
 {% raw %}
-\`\`\`markdown
-## サイトジェネレーター 
+```markdown
+## Site generator 
 
-Braze Docsは、人気の静的サイトジェネレーター（SSG）であるJekyllを使用して構築されています。これにより、コンテンツファイルとデザインファイルをコンテンツファイル用とデザインファイル用に別々のディレクトリに保存できます。`_docs` `assets`サイトを構築すると、Jekyllは各ファイルをインテリジェントにマージし、XMLおよびHTMLデータとしてディレクトリに保存します。`_site`詳細については、「[Jekyll ディレクトリ構造](https://jekyllrb.com/docs/structure/)」を参照してください。
+Braze Docs is built using Jekyll, a popular static-site generator (SSG) that allows content files and design files to be stored in separate directories, such as `_docs` for content files and `assets` for design files. When the site is built, Jekyll intelligently merges each file and stores them as XML and HTML data in the `_site` directory. For more information, see [Jekyll Directory Structure](https://jekyllrb.com/docs/structure/).
 
 ![The home page for Braze Docs.]({% image_buster /assets/img/contributing/braze_docs_github.png %})
 
-寄稿者は、主に以下のディレクトリで作業することになります。
+As a contributor, you'll primarily work within the following directories.
 
-| ディレクトリ | 説明 |
+| Directory                                                                     | Description                                                                                                                                                                                                                                                                                                                       |
 |-------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [`_docs`](https://github.com/braze-inc/braze-docs/tree/develop/_docs)| Braze Docs用に書かれたすべてのコンテンツが、Markdownで記述されたテキストファイルとして含まれています。テキストファイルは、[[APIセクションやユーザーガイドセクションなど`_api`]({{site.baseurl}}/user_guide/introduction)]({{site.baseurl}}/api/home)、`user_guide`ドキュメントサイトを反映したディレクトリとサブディレクトリに整理されています。|
-| [`_includes`](https://github.com/braze-inc/braze-docs/tree/develop/_includes)| `_docs` ディレクトリ内のどのファイルでも再利用できるテキストファイル (「include」と呼ばれる) が含まれています。通常、インクルードは標準フォーマットを使用しない短いモジュール形式のコンテンツです。この場所に保存されているファイルは、[コンテンツを再利用する上で重要です](#content-reuse)。|
-| [`assets`](https://github.com/braze-inc/braze-docs/tree/develop/assets)| ブレイズドキュメントのすべての画像が含まれています。`_docs``_includes`またはディレクトリ内の任意のテキストファイルをこのディレクトリにリンクして、そのページに画像を表示できます。|
+| [`_docs`](https://github.com/braze-inc/braze-docs/tree/develop/_docs)         | Contains all the written content for Braze Docs as text files written in Markdown. Text files are organized into directories and subdirectories mirroring the docs site, such as `_api` for the [API section]({{site.baseurl}}/api/home) and `user_guide` for the [User Guide section]({{site.baseurl}}/user_guide/introduction). |
+| [`_includes`](https://github.com/braze-inc/braze-docs/tree/develop/_includes) | Contains text files (called "includes") that can be reused in any file within the `_docs` directory. Typically, includes are short, modular pieces of content that don't use standard formatting. The files stored in this location are important for [content reuse](#content-reuse).                                            |
+| [`assets`](https://github.com/braze-inc/braze-docs/tree/develop/assets)       | Contains all the images for Braze Docs. Any text file in the `_docs` or `_includes` directory can link to this directory to display an image on its page.                                                                                                                                                                         |
 {: .reset-td-br-1 .reset-td-br-2}
-\`\`\`
+```
 {% endraw %}
 
 {% alert tip %}
-詳細なチュートリアルについては、「[コンテンツの作成]({{site.baseurl}}/contributing/content_management/pages/#writing-content)」を参照してください。
+詳しい説明は、「[コンテンツを書く]({{site.baseurl}}/contributing/content_management/pages/#writing-content)」を参照のこと。
 {% endalert %}
 
 ## インクルードを参照する
 
-インクルードを参照するには、関連する Markdown ファイル内で以下の構文を使用してください。
+インクルードを参照するには、関連するMarkdownファイル内で以下の構文を使う：
 
 {% raw %}
 ```plaintext
@@ -62,7 +62,7 @@ Braze Docsは、人気の静的サイトジェネレーター（SSG）であるJ
 ```
 {% endraw %}
 
-`PATH_TO_INCLUDE``_includes`ディレクトリ内の相対パスに置き換えます。たとえば、次のファイルツリーがあるとします。
+`PATH_TO_INCLUDE` を`_includes` ディレクトリ内部からの相対パスに置き換える。例えば、次のようなファイルツリーがあるとする：
 
 ```bash
 braze-docs
@@ -73,22 +73,22 @@ braze-docs
         └── prerequisites.md
 ```
 
-リファレンスは以下のようになります。
+参考文献は以下のようなものだ：
 
-{% tabs local %}
-{% tab example input %}
+{% tabs ローカル %}
+{% tab 入力例 %}
 {% raw %}
-\`\`\`markdown
-# ページ
+```markdown
+# Pages
 
-> Braze Docs でページを作成、変更、削除する方法をご覧ください。
+> Learn how to create, modify, and remove pages on Braze Docs.
 
 {% multi_lang_include contributing/prerequisites.md %}
-\`\`\`
+```
 {% endraw %}
 {% endtab %}
 
-{% tab example output %}
-![Content reuse example on Braze Docs.]({% image_buster /assets/img/contributing/styling_examples/includes.png %}){: style="max-width:90%;"}
+{% tab 出力例 %}
+![Braze Docsのコンテンツ再利用例]({% image_buster /assets/img/contributing/styling_examples/includes.png %}){: style="max-width:90%;"}
 {% endtab %}
 {% endtabs %}
