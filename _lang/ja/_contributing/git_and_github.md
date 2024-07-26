@@ -1,37 +1,37 @@
 ---
-nav_title: Git と GitHub
+nav_title: GitとGitHub
 article: Git and GitHub
-description: "Braze Docs に貢献できるように、Git と GitHub の使い方を学びましょう。"
+description: "GitとGitHubの使い方を学び、Braze Docsに貢献できるようにしましょう。"
 page_order: 6
 noindex: true
 ---
 
-# Git と GitHub
+# GitとGitHub
 
-> Braze Docs に貢献できるように、Git と GitHub の使い方を学びましょう。
+> GitとGitHubの使い方を学び、Braze Docsに貢献できるようにしましょう。
 
 {% alert tip %}
-Git やコマンドラインを初めて使用する場合は、代わりにチュートリアルから始めてください。[あなたの最初の貢献]({{site.baseurl}}/contributing/your_first_contribution/)。
+Gitやコマンドラインに不慣れな場合は、代わりにチュートリアルから始めてください:[あなたの最初の貢献]({{site.baseurl}}/contributing/your_first_contribution/)。
 {% endalert %}
 
 {% multi_lang_include contributing/prerequisites.md %}
 
-## ブランチの作成
+## ブランチを作成する
 
-新しい Git ブランチを作成するには、`develop`まずブランチをチェックアウトしてローカル環境を更新します。
+新しいGitブランチを作成するには、まず`develop`ブランチをチェックアウトしてローカル環境を更新します。
 
 ```bash
 git checkout develop
 git pull
 ```
 
-Git `checkout` のコマンドを使用して新しい Git ブランチを作成します。 
+Git の `checkout` コマンドを使用して新しい Git Branch を作成します。 
 
 ```bash
 git checkout -b BRANCH_NAME
 ```
 
-`BRANCH_NAME`ブランチの変更点をスペースで区切らない短い説明に置き換えてください。出力は次のようになるはずです。
+`BRANCH_NAME` を短く、スペースを含まない説明に置き換えてください。出力は次のようになります:
 
 ```bash
 $ git checkout -b fixing-typo-in-metadata
@@ -40,27 +40,27 @@ Switched to a new branch 'fixing-typo-in-metadata'
 
 ## プルリクエストの作成
 
-プルリクエスト (PR) を作成するには、まずブランチをチェックアウトします。 
+プルリクエスト（PR）を作成するには、まずブランチをチェックアウトします。 
 
 ```bash
 git checkout BRANCH_NAME
 ```
 
-`BRANCH_NAME`[前に作成したブランチの名前に置き換えてください](#creating-a-branch)。出力は次のようになるはずです。
+`BRANCH_NAME` を以前に作成した [Branch](#creating-a-branch) の名前に置き換えます。出力は次のようになります:
 
 ```bash
 $ git checkout fixing-typo-in-metadata
 Switched to branch 'fixing-typo-in-metadata'
 ```
 
-変更を追加し、コミットをステージングします。
+変更を追加してコミットをステージします。
 
 ```bash
 git add --all
 git commit -m "COMMIT_MESSAGE"
 ```
 
-`COMMIT_MESSAGE`変更内容を説明する短い文に置き換えてください。出力は次のようになるはずです。
+変更内容を説明する短い文に`COMMIT_MESSAGE`を置き換えます。出力は次のようになります:
 
 ```bash
 $ git commit -m "Fixing a typo in the recommended software doc
@@ -68,13 +68,13 @@ $ git commit -m "Fixing a typo in the recommended software doc
  1 file changed, 1 insertion(+), 1 deletion(-)
 ```
 
-最後に、変更を Braze Docs GitHub リポジトリにプッシュしてください。
+最後に、変更をBraze Docs GitHubリポジトリにプッシュします。
 
 ```bash
 git push -u origin BRANCH_NAME
 ```
 
-`BRANCH_NAME`あなたの支店の名前に置き換えてください。出力は以下のようになります。
+`BRANCH_NAME`をあなたのBranchの名前に置き換えてください。出力は次のようになります：
 
 ```bash
 $ git push -u origin fixing-typo-in-recommended-software
@@ -85,30 +85,30 @@ To github.com:braze-inc/braze-docs.git
 branch 'fixing-typo-in-recommended-software' set up to track 'origin/fixing-typo-in-recommended-software'.
 ```
 
-次に、[Braze Docs GitHub リポジトリに移動し](https://github.com/braze-inc/braze-docs)、「**比較とプルリクエスト**」を選択します。
+次に、[Braze Docs GitHubリポジトリ](https://github.com/braze-inc/braze-docs)に移動し、**Compare & pull request**を選択します。
 
-![The Braze Docs GitHub repository showing "Open pull request".]({% image_buster /assets/img/contributing/github/compare_and_pull_request.png %})
+![Braze Docs GitHubリポジトリに「開封プルリクエスト」が表示されています。]({% image_buster /assets/img/contributing/github/compare_and_pull_request.png %})
 
-PRの説明には、次のようなMarkdownのコメントが表示されます。これらのコメントを PR の記入に役立ててください。
+PRの説明には、次のようなMarkdownコメントが表示されます。これらのコメントを使用して、PRを記入してください。
 
-\`\`\`markdown
+```markdown
 <!-- This is a Markdown comment. -->
 ```
 
-完了したら、プルリクエストのドロップダウンを選択し、[**ドラフトプルリクエスト**] を選択します。
+完了したら、プルリクエストのドロップダウンを選択し、次に**下書きプルリクエスト**を選択します。
 
-![The Braze Docs GitHub repository showing "Draft pull request".]({% image_buster /assets/img/contributing/github/draft_pull_request.png %}){: style="max-width:65%;"}
+![Braze Docs GitHubリポジトリに「下書きプルリクエスト」が表示されています。]({% image_buster /assets/img/contributing/github/draft_pull_request.png %}){: style="max-width:65%;"}
 
-## レビューをリクエストする
+## レビューを依頼
 
-Braze Docs チームのメンバーに PR レビューをリクエストするには、[以前に作成した PR](#creating-a-pull-request) を開いて [**レビューの準備完了**] を選択します。
+Braze Docs チームのメンバーに PR レビューを依頼するには、[以前に作成した PR を開封](#creating-a-pull-request)し、**レビューの準備ができました**を選択します。
 
-![An example pull request with the "Ready for review" button highlighted.]({% image_buster /assets/img/contributing/github/ready_for_review.png %}){: style="max-width:75%;"}
+![「レビューの準備ができました」ボタンが強調表示されたプルリクエストの例です。]({% image_buster /assets/img/contributing/github/ready_for_review.png %}){: style="max-width:75%;"}
 
-**レビュアーとタイプ**`braze-inc/docs-team`。チーム名を選択して [<kbd>Esc</kbd>] を押すか、ドロップダウンをクリックして選択を確定します。
+**レビュアー**とタイプ`braze-inc/docs-team`。チーム名を選択し、<kbd>Esc</kbd>を押すか、ドロップダウンの外をクリックして選択を確定します。
 
-![An example pull request with "docs-team" added as the reviewer.]({% image_buster /assets/img/contributing/github/add_docs_team_as_reviewers.png %}){: style="max-width:55%;"}
+![「docs-team」がレビュアーとして追加されたプルリクエストの例です。]({% image_buster /assets/img/contributing/github/add_docs_team_as_reviewers.png %}){: style="max-width:55%;"}
 
-Braze Docs チームがレビュー後に追加の変更を要求した場合、[GitHub](https://docs.github.com/en/account-and-profile/managing-subscriptions-and-notifications-on-github/setting-up-notifications/configuring-notifications) の通知設定に従って通知されます。変更が不要な場合は、チームが変更を承認してマージします。
+Braze Docsチームがレビュー後に追加の変更を要求した場合、[GitHub通知設定](https://docs.github.com/en/account-and-profile/managing-subscriptions-and-notifications-on-github/setting-up-notifications/configuring-notifications)に従って通知されます。変更が必要ない場合、チームはあなたの変更を承認してマージします。
 
-承認された寄付金は、次の火曜日または木曜日に配布されます。必ず Braze Docs をチェックして、頑張ったことを祝いましょう。貢献していただきありがとうございます！
+承認された貢献は、次の火曜日または木曜日に展開されます。必ずBrazeドキュメントをチェックして、あなたの努力を祝ってください。貢献してくれてありがとう！
