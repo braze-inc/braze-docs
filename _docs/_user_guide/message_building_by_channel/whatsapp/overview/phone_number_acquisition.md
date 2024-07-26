@@ -16,7 +16,7 @@ You must acquire your phone number yourself, as Braze won't provision the number
 
 ## WhatsApp API requirements
 
-Your phone number must meet the WhatsApp API requirements.
+Your phone number must meet these WhatsApp API requirements:
 
 - Owned by your business 
 - Have a country and area code (such as a landline and cell numbers)
@@ -30,7 +30,7 @@ Your phone number must meet the WhatsApp API requirements.
 
 ### Step 1: Buy a phone number from the Twilio console or API
 
-1. From the Twilio console, go to **Develop** -> **Phone Numbers** -> **Manage** -> **Buy a number**. If you don’t see this option, select **Explore Products**, scroll to **Super Networks**, then select **Phone Number** -> **Buy a number**. <br><br>![Twilio console with the "Develop" tab opened and "Buy a number" option.][1]{: style="max-width:20%;"}<br><br>
+1. From the Twilio console, go to **Develop** > **Phone Numbers** > **Manage** > **Buy a number**. If you don’t see this option, select **Explore Products**, scroll to **Super Networks**, then select **Phone Number** > **Buy a number**. <br><br>![Twilio console with the "Develop" tab opened and "Buy a number" option.][1]{: style="max-width:20%;"}<br><br>
 
 2. Enter your desired area code or locality (if you have one). Find a number, then select **Buy**. <br><br> ![A button to buy the listed phone number.][2]<br><br>
 
@@ -48,7 +48,7 @@ If you follow the next steps in Twilio's instructions, you'll connect your phone
 
 ### Step 3: Complete the embedded sign up workflow
 
-1. After Twilio is configured, go to your Braze dashboard -> **Technology Partners** -> **WhatsApp** and select **Begin integration** or **Add WhatsApp Business Account**, whichever shows up, to trigger the [embedded sign up workflow]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/overview/embedded_signup/).<br><br>In the **Add a phone number for WhatsApp** step, select **Phone call** for how you'd like to verify your phone number. <br><br>![Section with the options to verify your phone number through text message or a phone call.][4]{: style="max-width:50%;"}<br><br>
+1. After Twilio is configured, go to your Braze dashboard > **Technology Partners** > **WhatsApp** and select **Begin integration** or **Add WhatsApp Business Account**, whichever shows up, to trigger the [embedded sign up workflow]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/overview/embedded_signup/).<br><br>In the **Add a phone number for WhatsApp** step, select **Phone call** for how you'd like to verify your phone number. <br><br>![Section with the options to verify your phone number through text message or a phone call.][4]{: style="max-width:50%;"}<br><br>
 
 2. Wait a few minutes for the verification code to send to your email inbox, then enter the verification code and complete your setup.
 
@@ -56,15 +56,15 @@ If you follow the next steps in Twilio's instructions, you'll connect your phone
 
 1. In the Infobip console, go to **Channels and Numbers** and select **Numbers**.<br><br>![Infoblip "Channels and Numbers" section with "Numbers" listed beneath.][5]{: style="max-width:30%;"}<br><br>
 
-2. Select **Buy Number** -> the country where you want to send messages -> **SMS**.<br><br>![Button to buy a number.][6]<br><br>
+2. Select **Buy Number** > the country where you want to send messages > **SMS**.<br><br>![Button to buy a number.][6]<br><br>
 
-3. Depending on your selected country, you might need to complete an additional registration process (such as selecting a 10 DLC or toll-free option for US phone numbers). Be sure to select the available option.<br><br>![A page asking for you to select the number tyype: either 10 DLC or toll-free.][7]{: style="max-width:70%;"}<br><br>
+3. Depending on your selected country, you might need to complete an additional registration process (such as selecting a 10 DLC or toll-free option for US phone numbers). Be sure to select the available option.<br><br>![A page asking for you to select the number type: either 10 DLC or toll-free.][7]{: style="max-width:70%;"}<br><br>
 
-4. Select the available offer, then proceed through the rest of the steps and wait for your request to be processed. You can check the status by going to **Numbers** -> **My Request**. <br><br>![An offer with information including fees and coverage.][8]{: style="max-width:70%;"}<br><br>
+4. Select the available offer, then proceed through the rest of the steps and wait for your request to be processed. You can check the status by going to **Numbers** > **My Request**. <br><br>![An offer with information including fees and coverage.][8]{: style="max-width:70%;"}<br><br>
 
 5. Depending on your selected country, wait for the Infobip team to reach out for registration details (such as for 10DLC in the US).<br><br>
 
-6. When your phone number is ready in Infobip, go to your Braze dashboard -> **Technology Partners** -> **WhatsApp** and select **Begin integration** or **Add WhatsApp Business Account**, whichever shows up, to trigger the [embedded sign up workflow]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/overview/embedded_signup/).<br><br> In the **Add a phone number for WhatsApp** step, select **Text message** for how you'd like to verify your phone number.<br><br>![Section with the options to verify your phone number through text message or a phone call.][9]<br><br>
+6. When your phone number is ready in Infobip, go to your Braze dashboard > **Technology Partners** > **WhatsApp** and select **Begin integration** or **Add WhatsApp Business Account**, whichever shows up, to trigger the [embedded sign up workflow]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/overview/embedded_signup/).<br><br> In the **Add a phone number for WhatsApp** step, select **Text message** for how you'd like to verify your phone number.<br><br>![Section with the options to verify your phone number through text message or a phone call.][9]<br><br>
 
 7. Check Infobip’s [analyze logs](https://www.infobip.com/docs/analyze/analyze-logs) in their customer portal for the verification code, which could take a few minutes to appear, then enter the verification code and complete setup.
 
