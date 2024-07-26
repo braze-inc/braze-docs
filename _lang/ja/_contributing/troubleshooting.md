@@ -1,69 +1,69 @@
 ---
 nav_title: トラブルシューティング
 article: Troubleshooting
-description: "Braze Docs への投稿中に発生する可能性のある一般的な問題のトラブルシューティング手順。"
+description: "Braze Docsへの投稿中に発生する可能性のある一般的な問題に対するトラブルシューティングのステップ。"
 page_order: 9
 noindex: true
 ---
 
 # トラブルシューティング
 
-> Braze Docs への投稿に問題がある場合は、まずこれらの一般的な問題を確認してください。発生している問題がリストにない場合は、[お知らせください](https://github.com/braze-inc/braze-docs/issues/new?assignees=&labels=issue&projects=&template=report_an_issue.md&title=)。ここに追加させていただきます。
+> Braze Docsへの投稿に問題がある場合は、まずこれらの一般的な問題を確認してほしい。もしあなたが経験している問題が掲載されていない場合は、ここに追加することができるので[お知らせ](https://github.com/braze-inc/braze-docs/issues/new?assignees=&labels=issue&projects=&template=report_an_issue.md&title=)いただきたい。
 
-## リダイレクトが機能しない
+## リダイレクトが機能していない
 
-[グローバルリダイレクトファイル (`assets/js/broken_redirect_list.js`) で設定したリダイレクトが機能しない場合は]({{site.baseurl}}/contributing/content_management/redirecting_urls/)、URL 文字列に大文字が含まれていないか再確認してください。見つかった場合は、それらを小文字に変換します (`_docs`ディレクトリ内の対応するファイル名に大文字が含まれていても)。
+グローバル・リダイレクト・ファイル(`assets/js/broken_redirect_list.js`)で設定した[リダイレクトが]({{site.baseurl}}/contributing/content_management/redirecting_urls/)機能していない場合は、URL文字列に大文字が含まれていないか再確認すること。もし見つかったら、（`_docs` ディレクトリの対応するファイル名に大文字が含まれていても）小文字に変換する。
 
-{% tabs local %}
-{% tab before %}
+{% tabs ローカル %}
+{% tab 前に %}
 ```javascript
 validurls['/docs/hidden/WIP_Partnerships/WIP_Guidelines'] = '/docs/contributing/home/';
 ```
 {% endtab %}
 
-{% tab after %}
+{% tab 後に %}
 ```javascript
 validurls['/docs/hidden/wip_partnerships/wip_guidelines'] = '/docs/contributing/home/';
 ```
 {% endtab %}
 {% endtabs %}
 
-## クロスリファレンスリンクが 404 を返す
+## 相互参照リンクは404を返す
 
-[ページ上の相互参照リンク]({{site.baseurl}}/contributing/content_management/cross_referencing/) (など`{% raw %}[Braze Developer Guide]({{site.baseurl}}/developer_guide/home){% endraw %}`) が 404 ページを返す場合は、URL で次の文字列を確認してください。
+あなたのページの[相互参照リンク]({{site.baseurl}}/contributing/content_management/cross_referencing/)（例えば`{% raw %}[Braze Developer Guide]({{site.baseurl}}/developer_guide/home){% endraw %}` ）が404ページを返す場合、URLに以下の文字列がないかチェックする。
 
 ```plaintext
 %7B%7Bsite.baseurl%7D%7D
 ```
 
-この文字列を含む URL は以下のようになります。
+この文字列を含むURLは以下のようになる：
 
 ```plaintext
 https://www.braze.com/docs/user_guide/personalization_and_dynamic_content/connected_content/%7B%7Bsite.baseurl%7D%7D/user_guide/administrative/app_settings/message_activity_log_tab
 ```
 
-URL にこの文字列が見つかった場合は、1 つ以上のクロスリファレンスリンクが [Liquid raw タグで囲まれています](https://shopify.dev/docs/api/liquid/tags/raw)。
+URLにこの文字列がある場合、相互参照リンクの1つ以上が[Liquid rawタグで](https://shopify.dev/docs/api/liquid/tags/raw)囲まれている。
 
-{% tabs local %}
-{% tab liquid raw tag %}
+{% tabs ローカル %}
+{% tab Liquid rawタグで %}
 <code>
-{% raw %} {% endraw %}
+&#123;% raw %} &#123;% endraw %}
 </code>
 {% endtab %}
 {% endtabs %}
 
-これらのタグを移動して、未加工のまま表示したいLiquidコンテンツだけを囲むようにします。
+これらのタグを動かして、rawとして表示したいLiquidコンテンツだけを囲むようにする。
 
-{% tabs local %}
-{% tab before %}
+{% tabs ローカル %}
+{% tab 前に %}
 <code>
-{% raw %} リキッドの <code> {{page\_title}} タグの使い方を学んでください。詳細については、「[Liquid タグ](&#123;&#123;site.baseurl}}/contributing/liquid/)」を参照してください。 {% endraw %}
+&#123;% raw %} Learn how to use Liquid's <code>&#123;&#123; page_title }} tag. For more information, see <mem_106f3a07-ce6d-47a8-961d-e39c7fd48182 href="#">Liquid tags</mem_106f3a07-ce6d-47a8-961d-e39c7fd48182>. &#123;% endraw %}
 </code>
 {% endtab %}
 
-{% tab after %}
+{% tab 後に %}
 <code>
-リキッドの {% raw %} {{page\_title}} {% endraw %} タグの使い方を学んでください。詳細については、「[Liquid タグ](&#123;&#123;site.baseurl}}/contributing/liquid/)」を参照してください。
+Learn how to use Liquid's &#123;% raw %} &#123;&#123; page_title }} &#123;% endraw %} tag. For more information, see <mem_c86a2785-7ad6-44d1-aa36-16905eff927d href="#">Liquid tags</mem_c86a2785-7ad6-44d1-aa36-16905eff927d>.
 </code>
 {% endtab %}
 {% endtabs %}
