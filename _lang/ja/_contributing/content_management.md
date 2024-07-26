@@ -1,92 +1,92 @@
 ---
-nav_title: コンテンツ管理
-article: Content Management
-description: "これは Braze Docs でのコンテンツ管理方法の概要です。"
+nav_title: コンテンツのマネージャー
+article: Managing Content
+description: "Braze Docsのコンテンツ管理方法の概要を説明する。"
 page_order: 2 
 noindex: true
 ---
 
-# コンテンツ管理について
+# コンテンツマネージャーについて
 
-> これは Braze Docs でのコンテンツ管理方法の概要です。特定のトピックについて詳しく知るには、ナビゲーションの専用トピックページを選択してください。
+> これは、Braze Docsのコンテンツ管理方法の概要である。特定のトピックについて学習するには、ナビゲーションの専用トピックページを選択する。
 
 ## 方法論
 
-Braze Docsは、バージョン管理システムを使用してソフトウェア開発ライフサイクルを反映したドキュメントを管理する方法であるdocs-as-codeを使用して管理されます。Braze Docs は Git バージョン管理システムを使用しているため、寄稿者はお互いの作業を上書きすることなく、同じドキュメントを編集できます。詳細については、「[バージョン管理と Git について](https://docs.github.com/en/get-started/using-git/about-git#about-version-control-and-git)」を参照してください。
+Braze Docsは、docs-as-codeを使用して管理されている。docs-as-codeは、バージョンコントロールシステムを使用することで、ソフトウェア開発者のライフサイクルを反映したドキュメント管理方法である。Braze Docsは、Gitバージョンコントロールシステムを使用しているため、貢献者は、お互いの作業を上書きすることなく、同じドキュメントに取り組むことができる。詳しくは、[バージョンコントロールとGitについてを](https://docs.github.com/en/get-started/using-git/about-git#about-version-control-and-git)参照のこと。
 
-![The Braze Docs repository's home page on GitHub.]({% image_buster /assets/img/contributing/github/home_page.png %})
+![GitHub 上の Braze Docs リポジトリのホームページ。]({% image_buster /assets/img/contributing/github/home_page.png %})
 
-## サイトジェネレーター 
+## サイト・ジェネレーター 
 
-Braze Docsは、コンテンツファイルとデザインファイルを別々のディレクトリに保存できる、人気の静的サイトジェネレーターであるJekyllを使用して構築されています。これにより、`_docs`コンテンツファイル用とデザインファイル用など、コンテンツファイルとデザインファイルを別々のディレクトリに保存できます。`assets`サイトを構築すると、Jekyllは各ファイルをインテリジェントにマージし、XMLおよびHTMLデータとしてディレクトリに保存します。`_site`詳細については、「[Jekyll ディレクトリ構造](https://jekyllrb.com/docs/structure/)」を参照してください。
+Braze DocsはJekyllを使用して構築されている。Jekyllは人気のある静的サイトジェネレーターで、コンテンツファイルとデザインファイルを別々のディレクトリ（コンテンツファイルは`_docs` 、デザインファイルは`assets` ）に保存することができる。サイトが構築されると、Jekyllはインテリジェントに各ファイルをマージし、XMLとHTMLデータとして`_site` ディレクトリに格納される。詳細については、参照してください[Jekyllディレクトリ構造](https://jekyllrb.com/docs/structure/).
 
-![The home page for Braze Docs.]({% image_buster /assets/img/contributing/styling_examples/home.png %})
+![Braze Docsのホームページ]({% image_buster /assets/img/contributing/styling_examples/home.png %})
 
-寄稿者は、主に以下のディレクトリで作業することになります。
+コントリビューターとして、主に以下のディレクトリを担当する。
 
-| ディレクトリ | 説明 |
+| ディレクトリ                                                                     | 説明                                                                                                                                                                                                                                                                                                                       |
 |-------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [`_docs`](https://github.com/braze-inc/braze-docs/tree/develop/_docs)| Braze Docs用に書かれたすべてのコンテンツが、Markdownで記述されたテキストファイルとして含まれています。テキストファイルは、[[APIセクションやユーザーガイドセクションなど`_api`]({{site.baseurl}}/user_guide/introduction)]({{site.baseurl}}/api/home)、`user_guide`ドキュメントサイトを反映したディレクトリとサブディレクトリに整理されています。|
-| [`_includes`](https://github.com/braze-inc/braze-docs/tree/develop/_includes)| `_docs` ディレクトリ内のどのファイルでも再利用できるテキストファイル (「include」と呼ばれる) が含まれています。通常、インクルードは標準フォーマットを使用しない短いモジュール形式のコンテンツです。この場所に保存されているファイルは、[コンテンツを再利用する上で重要です](#content-reuse)。|
-| [`assets`](https://github.com/braze-inc/braze-docs/tree/develop/assets)| ブレイズドキュメントのすべての画像が含まれています。`_docs``_includes`またはディレクトリ内の任意のテキストファイルをこのディレクトリにリンクして、そのページに画像を表示できます。|
+| [`_docs`](https://github.com/braze-inc/braze-docs/tree/develop/_docs)         | Braze DocsのすべてのコンテンツがMarkdownで書かれたテキストファイルとして格納されている。テキストファイルは、[APIセクションは]({{site.baseurl}}/api/home) `_api` 、[ユーザーガイドセクションは]({{site.baseurl}}/user_guide/introduction) `user_guide` のように、docsサイトを反映したディレクトリとサブディレクトリに整理されている。 |
+| [`_includes`](https://github.com/braze-inc/braze-docs/tree/develop/_includes) | `_docs` ディレクトリ内のどのファイルでも再利用できるテキストファイル（「インクルード」と呼ばれる）が含まれている。通常、インクルードとは、標準的な書式を使用しない、短くてモジュール化されたコンテンツのことである。この場所に保存されているファイルは、[コンテンツの再利用にとって](#content-reuse)重要である。                                            |
+| [`assets`](https://github.com/braze-inc/braze-docs/tree/develop/assets)       | Braze Docsのすべての画像写真が含まれている。`_docs` または`_includes` ディレクトリにあるテキストファイルは、このディレクトリにリンクして、そのページに画像、写真を表示することができる。                                                                                                                                                                         |
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% alert tip %}
-詳細な手順については、「[プレビューの生成」を参照してください。]({{site.baseurl}}/contributing/generating_a_preview/)
+完全なチュートリアルについては、[プレビューを生成するを]({{site.baseurl}}/contributing/generating_a_preview/)参照のこと。
 {% endalert %}
 
 ## ページ
 
-Braze Docsの各ページはマークダウン構文で記述され、ファイル拡張子を使用してマークダウンファイルとして保存されます。`.md`各Markdownファイルの上部では、YAMLフロントマターを使用して各ページに非表示のメタデータを追加します。
+Braze Docsの各ページはMarkdown構文で記述され、`.md` ファイル拡張子を使用したMarkdownファイルとして保存される。各Markdownファイルの先頭には、各ページの隠されたメタデータを追加するためにYAMLフロントマターが使われる。
 
-\`\`\`markdown
+```markdown
 ---
-METADATA\_KEY:METADATA\_VALUE
+METADATA_KEY: METADATA_VALUE
 ---
 
 # CONTENT
-\`\`\`
+```
 
-以下を置き換えてください。
+以下を交換する。
 
-| プレースホルダー | 説明 |
+| placeholder      | 説明                                                                                                                              |
 |------------------|------------------------------------------------------------------------------------------------------------------------------------------|
-| `METADATA_KEY` | サポートされているメタデータ型を表すキー。詳細については、「[メタデータ]({{site.baseurl}}/contributing/yaml_front_matter/metadata/)」を参照してください。|
-`METADATA_VALUE`| | メタデータ型のキーに割り当てられた値。詳細については、「[メタデータ]({{site.baseurl}}/contributing/yaml_front_matter/metadata/)」を参照してください。|
-| `CONTENT` | ページのコンテンツは Markdown 構文で記述されています。|
+| `METADATA_KEY`   | サポートされているメタデータ・タイプを表すキー。詳細は[メタデータを]({{site.baseurl}}/contributing/yaml_front_matter/metadata/)参照のこと。 |
+| `METADATA_VALUE` | メタデータ・タイプのキーに割り当てられた値。詳細は[メタデータを]({{site.baseurl}}/contributing/yaml_front_matter/metadata/)参照のこと。  |
+| `CONTENT`        | Markdown構文で書かれたページのコンテンツ。                                                                                           |
 {: .reset-td-br-1 .reset-td-br-2}
 
-{% tabs local %}
-{% tab example input %}
-\`\`\`markdown
+{% tabs ローカル %}
+{% tab 入力例 %}
+```markdown
 ---
-nav_title: Braze ドキュメントへの貢献
-記事:Braze ドキュメントへの貢献
-description: 「Braze Docs への貢献を始めるために必要なものは次のとおりです。」
-page_order:0
-search_tag: 寄稿
+nav_title: Contributing to Braze Docs
+article: Contributing to Braze Docs
+description: "Here's what you need to start contributing to Braze Docs!"
+page_order: 0
+search_tag: Contributing
 ---
 
-# Braze ドキュメントへの貢献
+# Contributing to Braze Docs
 
-> Braze Docs に貢献していただきありがとうございます！毎週火曜日と木曜日には、コミュニティの投稿をまとめて Braze Docs にデプロイしています。このガイドを使用して、次回のデプロイ時に変更内容をマージしてください。
-\`\`\`
+> Thanks for contributing to Braze Docs! Every Tuesday and Thursday, we merge community contributions and deploy them to Braze Docs. Use this guide to get your changes merged during our next deployment.
+```
 {% endtab %}
 
-{% tab example output %}
-![Example page on Braze Docs.]({% image_buster /assets/img/contributing/styling_examples/page.png %})
+{% tab 出力例 %}
+![Braze Docsのページ例]({% image_buster /assets/img/contributing/styling_examples/page.png %})
 {% endtab %}
 {% endtabs %}
 
 {% alert tip %}
-[詳細な手順については、「ページの作成」を参照してください。]({{site.baseurl}}/contributing/content_management/pages/#creating-a-page)
+完全なチュートリアルについては、[ページを作成するを]({{site.baseurl}}/contributing/content_management/pages/#creating-a-page)参照のこと。
 {% endalert %}
 
-## 画像
+## 画像、写真
 
-`assets/img`画像は内部にPNGファイルとして保存されます。`img`ディレクトリの構造は Braze Docs の構造と一致する必要はありませんが、関連する画像をサブディレクトリにまとめるのがベストです。
+画像, 写真はPNGファイルとして`assets/img` 内部に保存される。`img` ディレクトリの構造は、Braze Docsの構造と一致させる必要はないが、関連する画像写真をサブディレクトリにまとめるのがベスト。
 
-各画像は、次の構文を使用して1つまたは複数のページにリンクできます。
+各画像写真は、以下の構文を使って1つ以上のページにリンクすることができる。
 
 {% raw %}
 ```markdown
@@ -94,15 +94,15 @@ search_tag: 寄稿
 ```
 {% endraw %}
 
-以下を置き換えてください。
+以下を交換する。
 
-| プレースホルダー | 説明 |
+| placeholder | 説明                                                                                                             |
 |-------------|-------------------------------------------------------------------------------------------------------------------------|
-`ALT_TEXT`| | 画像の代替テキスト。これは、スクリーンリーダーを使用するユーザーが Braze Docs に同等にアクセスできるようにするために必要です。|
-| `IMAGE` | `img` ディレクトリから始まる画像への相対パス。| |
+| `ALT_TEXT`  | 画像, 写真のaltテキスト。これは、Braze Docsをスクリーンリーダーを使っている人たちにも同じようにアクセシブルにするために必要なことである。 |
+| `IMAGE`     | `img` ディレクトリを起点とする画像, 写真への相対パス。                                                      |
 {: .reset-td-br-1 .reset-td-br-2}
 
-インライン画像は次のようになるはずです。
+インライン画像は以下のようなものであるべきだ：
 
 {% raw %}
 ```markdown
@@ -111,29 +111,30 @@ search_tag: 寄稿
 {% endraw %}
 
 {% alert tip %}
-詳細な手順については、「[新しい画像の追加]({{site.baseurl}}/contributing/content_management/images/#adding-a-new-image)」を参照してください。
+詳しい説明は、[新しい画像を]({{site.baseurl}}/contributing/content_management/images/#adding-a-new-image)追加するを参照のこと。
 {% endalert %}
 
 ## セクション
 
-[Braze Docs [は主要なセクションとサブセクションに分かれています](#primary-sections)。](#subsections)
+Braze Docsは、[主要なセクションと](#primary-sections) [サブセクションで](#subsections)構成されている。
 
 ### 主要セクション
 
-Braze ドキュメントの主なセクションは以下のとおりです。
+Braze Docsの主なセクションは以下の通りである：
 
 - [Brazeドックスホーム]({{site.baseurl}})
 - [ユーザーガイド]({{site.baseurl}}/user_guide/introduction)
-- 開発者ガイド
+- [開発者ガイド]({{site.baseurl}}/developer_guide/home)
 - [Braze API ガイド]({{site.baseurl}}/api/home)
 - [テクノロジーパートナー]({{site.baseurl}}/partners/home)
 - [Braze ヘルプ]({{site.baseurl}}/help/home)
+- [Braze Docsに貢献する]({{site.baseurl}}/contributing/home/)
 
-これらの主要セクションには、Braze Docsのどのページからでもサイトヘッダーからアクセスできます。
+**Contributing to Braze Docs**以外の主なセクションは、Braze Docsのどのページからでもサイトヘッダーからアクセスできる。
 
-![The primary sections as shown on the site header on Braze Docs.]({% image_buster /assets/img/contributing/styling_examples/header.png %})
+![Braze Docsのサイトヘッダーに表示されている主要セクション]({% image_buster /assets/img/contributing/styling_examples/header.png %})
 
-[各主要セクションはJekyllコレクションを使用して構築されているため](https://jekyllrb.com/docs/collections/)、関連するコンテンツをグループ化して簡単に管理できます。すべてのプライマリセクションはコレクションですが、すべてのコレクションがプライマリセクションであるとは限らないことに注意してください。Braze Docs コレクションの全リストは Jekyll 設定ファイルにあります。`_config.yml`
+各主要セクションは[Jekyllコレクションを](https://jekyllrb.com/docs/collections/)使用して構築されており、関連するコンテンツをグループ化して簡単に管理できる。すべてのプライマリー・セクションがコレクションである一方で、すべてのコレクションがプライマリー・セクションであるわけではないことを覚えておいてほしい。Braze Docsコレクションの完全なリストは、Jekyllの設定ファイル`_config.yml` 。
 
 ```yaml
 collections:
@@ -167,6 +168,9 @@ collections:
     output: true
     default_nav_url: home/
     page_order: 6
+  contributing:
+    output: true
+    default_nav_url: contributing/
   hidden: # Hidden pages not directly linked via navigation
     title: Braze
     output: true
@@ -177,12 +181,13 @@ collections:
     hidden: true
 ```
 
-リストされている各コレクションは、`_docs`ディレクトリ内のディレクトリを表します。
+記載されている各コレクションは、`_docs` ディレクトリ内のディレクトリを表している。
 
 ```plaintext
 braze-docs
 └── _docs
     ├── _api
+    ├── _contributing
     ├── _developer_guide
     ├── _docs_pages
     ├── _help
@@ -192,31 +197,31 @@ braze-docs
     └── _user_guide
 ```
 
-各主要セクションのランディングページは、`page_order:``0`キーがに設定された標準のMarkdownファイルです。
+各主要セクションのランディングページは、`page_order:` キーが`0` に設定された標準的なMarkdownファイルである。
 
-{% tabs local %}
-{% tab example input %}
-\`\`\`markdown
+{% tabs ローカル %}
+{% tab 入力例 %}
+```markdown
 ---
 page_order: 0
-nav_title: ホーム
-article_title: Braze ユーザーガイド
-layout: user\_guide
-user\_top\_header:「Braze ユーザーガイド」
+nav_title: Home
+article_title: Braze User Guide
+layout: user_guide
+user_top_header: "Braze User Guide"
 ---
-\`\`\`
+```
 {% endtab %}
 
-{% tab example output %}
-![An example landing page on Braze Docs.]({% image_buster /assets/img/contributing/styling_examples/primary_section.png %})
+{% tab 出力例 %}
+![Braze Docsのランディングページの例]({% image_buster /assets/img/contributing/styling_examples/primary_section.png %})
 {% endtab %}
 {% endtabs %}
 
 ### サブセクション
 
-Braze Docsのすべての主要セクションには1つ以上のサブセクションがあり、それぞれが左側のナビゲーションの展開可能な項目を表しています。
+Braze Docsのすべての主要セクションには、1つ以上のサブセクションがあり、それぞれが左側のナビゲーションで展開可能な項目を表している。
 
-プライマリセクションとは異なり、サブセクションはランディングページの有無にかかわらず設定できます。ランディングページのないサブセクションは、Braze Docsの役に立たないページの数を最小限に抑えながら、関連するコンテンツをまとめて整理するのに役立ちます。サブセクションがランディングページの有無にかかわらず、すべてのサブセクションはリポジトリ内のディレクトリと Markdown ファイルの両方を表します。例については、以下を参照してください。
+プライマリーセクションとは異なり、サブセクションはランディングページの有無にかかわらず設定できる。ランディングページのないサブセクションは、Braze Docsの有用でないページ数を最小限に抑えながら、関連するコンテンツをまとめて整理するのに役立つ。サブセクションがランディングページありで設定されていても、ランディングページなしで設定されていても、すべてのサブセクションはリポジトリ内のディレクトリとMarkdownファイルの両方を表す。例として、以下を参照のこと。
 
 ```plaintext
 braze-docs
@@ -233,100 +238,130 @@ braze-docs
 ```
 
 {% alert tip %}
-[詳細な手順については、「セクションの作成]({{site.baseurl}}/contributing/content_management/sections/#creating-a-section)」を参照してください。
+詳しい説明は[セクションの]({{site.baseurl}}/contributing/content_management/sections/#creating-a-section)作成を参照のこと。
 {% endalert %}
 
-`_primary_section`ディレクトリでは、`subsection_a`はランディングページで構成されていませんが`subsection_b`、にはランディングページが設定されています。次の例では、`subsection_a.md``config_only:`がに設定されています。これにより`true`、このページはランディングページとしてレンダリングされません。
+`_primary_section` 、`subsection_a` にはランディングページが設定されていないが、`subsection_b` にはランディングページが設定されている。以下の例では、`subsection_a.md` は`config_only:` に`true` を設定し、このページがランディングページとしてレンダリングされるのを防いでいる。
 
-{% tabs local %}
-{% tab example input %}
-\`\`\`markdown
+{% tabs ローカル %}
+{% tab 入力例 %}
+```markdown
 ---
-nav_title: サブセクション A
+nav_title: Subsection A
 page_order: 0
 config_only: true
 ---
-\`\`\`
+```
 {% endtab %}
 
-{% tab example output %}
-![The left-side navigation on Braze Docs, showing an example of an expanded section without a landing page.]({% image_buster /assets/img/contributing/styling_examples/subsection_config_only.png %})
+{% tab 出力例 %}
+![Braze Docsの左側ナビゲーション。ランディングページのない拡張セクションの例を示す。]({% image_buster /assets/img/contributing/styling_examples/subsection_config_only.png %})
 {% endtab %}
 {% endtabs %}
 
-ただし、`subsection_b.md``config_only:`キーを使用しないため、_このページはランディングページとしてレンダリングされます_。
+しかし、`subsection_b.md` は`config_only:` キーを使わないので、このページはランディングページとしてレンダリングさ_れる_。
 
-{% tabs local %}
-{% tab example input %}
-\`\`\`markdown
+{% tabs ローカル %}
+{% tab 入力例 %}
+```markdown
 ---
-nav_title: サブセクション B
+nav_title: Subsection B
 page_order: 0
 ---
-\`\`\`
+```
 {% endtab %}
 
-{% tab example output %}
-![The left-side navigation on Braze Docs, showing an example of an expanded section with a landing page.]({% image_buster /assets/img/contributing/styling_examples/subsection_landing_page.png %})
+{% tab 出力例 %}
+![Braze Docsの左側ナビゲーション。ランディングページのある拡張セクションの例を示す。]({% image_buster /assets/img/contributing/styling_examples/subsection_landing_page.png %})
 {% endtab %}
 {% endtabs %}
 
 {% alert note %}
-`config_only:``true`がに設定されているサブセクションはページとして表示されませんが、そのサブセクション内のページの URL にはサブセクションのディレクトリ名が引き続き使用されます。詳細については、「[URL](#urls)」を参照してください。
+`config_only:` 」を「`true` 」に設定したサブセクションは、ページとしてレンダリングされないが、サブセクションのディレクトリ名は、そのサブセクションのページのURLに使用される。詳しくは[URLを](#urls)参照のこと。
 {% endalert %}
 
-## コンテンツ再利用
+## クロスリファレンス
 
-Jekyllには、タグを使用して書かれたコンテンツをドキュメント全体で再利用する機能があります。`include``_includes`インクルードはディレクトリにあり、MarkdownまたはHTML構文で記述できます。
+相互参照とは、Braze Docsのあるページが、Braze Docsの別のページにリンクしていることである。Braze Docsはサイトの要件により、相互参照リンクのための[標準的なMarkdown構文を](https://www.markdownguide.org/basic-syntax/)サポートしていないため、Liquidを使って作成した。
+
+{% raw %}
+```markdown
+[LINK_TEXT]({{site.baseurl}}/SHORT_URL)
+```
+{% endraw %}
+
+次のように置き換えます。
+
+| placeholder | 説明                                        |
+|-------------|----------------------------------------------------|
+| `LINK_TEXT` | ページタイトルまたは関連アクション。                  |
+| `SHORT_URL` | `https://www.braze.com` を削除したページのURL。 |
+{: .reset-td-br-1 .reset-td-br-2}
+
+あなたの相互参照リンクは以下のようなものであるべきだ：
+
+{% raw %}
+```markdown
+Before continuing, [create your SSH token]({{site.baseurl}}/docs/developer_guide/platform_wide/sdk_authentication).
+```
+{% endraw %}
+
+{% alert tip %}
+完全なウォークスルーは、[相互参照を]({{site.baseurl}}/contributing/content_management/cross_referencing/)参照のこと。
+{% endalert %}
+
+## コンテンツの再利用
+
+Jekyllは、`include` タグを使用してドキュメント全体で書かれたコンテンツを再利用する機能を提供する。インクルードは`_includes` ディレクトリにあり、MarkdownまたはHTML構文で記述できる。
 
 ```markdown
 {% raw %}{% multi_lang_include RELATIVE_PATH/FILE %}{% endraw %}
 ```
 
-以下を置き換えてください。
+次のように置き換えます。
 
-| プレースホルダー | 説明 |
+| placeholder     | 説明                                                                                                                                                                                                             |
 |-----------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `RELATIVE_PATH` | (オプション) `_includes` ディレクトリからファイルへの相対パス。これは、`_includes`などのディレクトリ内のディレクトリからファイルをインクルードする場合にのみ必要です`_includes/braze/upgrade_notice.md`。|
-`FILE`| | ファイル拡張子を含むファイルの名前。|
+| `RELATIVE_PATH` | (オプション）`_includes` ディレクトリからのファイルへの相対パス。これは、`_includes/braze/upgrade_notice.md` のように、`_includes` ディレクトリ内部のファイルをインクルードする場合にのみ必要である。 |
+| `FILE`          | 拡張子を含むファイル名。                                                                                                                                                                      |
 {: .reset-td-br-1 .reset-td-br-2}
 
-{% tabs local %}
-{% tab example input %}
+{% tabs ローカル %}
+{% tab 入力例 %}
 {% raw %}
-\`\`\`markdown
-# ページ
+```markdown
+# Pages
 
-> Braze Docs でページを作成、変更、削除する方法をご覧ください。
+> Learn how to create, modify, and remove pages on Braze Docs.
 
 {% multi_lang_include contributing/prerequisites.md %}
-\`\`\`
+```
 {% endraw %}
 {% endtab %}
 
-{% tab example output %}
-![Content reuse example on Braze Docs.]({% image_buster /assets/img/contributing/styling_examples/includes.png %})
+{% tab 出力例 %}
+![Braze Docsのコンテンツ再利用例]({% image_buster /assets/img/contributing/styling_examples/includes.png %})
 {% endtab %}
 {% endtabs %}
 
 {% alert tip %}
-詳細な手順については、「[コンテンツの再利用]({{site.baseurl}}/contributing/content_management/reusing_content)」を参照してください。
+完全なチュートリアルについては、[コンテンツの再利用を]({{site.baseurl}}/contributing/content_management/reusing_content)参照のこと。
 {% endalert %}
 
 ## レイアウト
 
-デフォルトでは、`default.html` `_layouts` Jekyllはディレクトリ内のレイアウトを使用してBraze Docsの各ページを作成します。ただし、YAML `layout:` フロントマターのキーにレイアウトを割り当てることで、さまざまなレイアウトを使用できます。
+デフォルトでは、JekyllはBraze Docsの各ページを構築するために、`_layouts` ディレクトリの`default.html` レイアウトを使用する。しかしながら、YAMLフロントマターの`layout:` キーにレイアウトを割り当てることで、異なるレイアウトを使うことができる。
 
-\`\`\`markdown
+```markdown
 ---
-layout: レイアウト値
+layout: LAYOUT_VALUE
 ---
-\`\`\`
+```
 
-レイアウトファイルの名前とファイル拡張子を削除した名前に置き換えます`LAYOUT_VALUE`。
+`LAYOUT_VALUE` をレイアウトファイル名に置き換え、ファイル拡張子を削除する。
 
-{% tabs local %}
-{% tab example input %}
+{% tabs ローカル %}
+{% tab 入力例 %}
 **ファイルツリー**
 
 ```plaintext
@@ -337,25 +372,25 @@ braze-docs
 
 **ページ内メタデータ**
 
-\`\`\`markdown
+```markdown
 ---
-layout: page
+layout: api_page
 ---
-\`\`\`
+```
 {% endtab %}
 
-{% tab example output %}
-![API glossary layout example on Braze Docs.]({% image_buster /assets/img/contributing/styling_examples/layouts/api_page.png %})
+{% tab 出力例 %}
+![Braze DocsのAPI用語集のレイアウト例]({% image_buster /assets/img/contributing/styling_examples/layouts/api_page.png %})
 {% endtab %}
 {% endtabs %}
 
 {% alert tip %}
-詳しくは、「[ページレイアウト]({{site.baseurl}}/contributing/yaml_front_matter/page_layouts)」を参照してください。
+詳しくは[ページレイアウトを]({{site.baseurl}}/contributing/yaml_front_matter/page_layouts)参照のこと。
 {% endalert %}
 
 ## URL
 
-Braze Docs の URL は、常にドキュメントリポジトリ内のディレクトリ構造と一致します。次のファイルツリーの例を考えると、の URL `page_a.md` はになります`https://www.braze.com/docs/primary_section/subsection_a/page_a`。
+Braze DocsのURLは、常にdocsリポジトリ内のディレクトリ構造と一致する。以下のファイルツリーの例を考えると、`page_a.md` のURLは`https://www.braze.com/docs/primary_section/subsection_a/page_a` となる。
 
 ```plaintext
 braze-docs
@@ -365,7 +400,7 @@ braze-docs
             └── page_a.md
 ```
 
-これには、[`config_only:`がに設定されているサブセクションにあるページの](#subsections) URL が含まれます。`true``config_only`サブセクションはページとしてレンダリングされませんが、サブセクションのディレクトリ名は、そのディレクトリ内のページの URL を生成するために引き続き使用されます。例については、以下を参照してください。
+これには、`config_only:` を`true` に設定した[サブセクションに](#subsections)あるページの URL も含まれる。`config_only` 、サブセクションはページとしてレンダリングされないが、サブセクションのディレクトリ名は、そのディレクトリ内のページのURLを生成するために使用される。例として、以下を参照のこと。
 
 ```plaintext
 braze-docs
@@ -381,22 +416,22 @@ braze-docs
         └── subsection_b.md # configured as a landing page  
 ```
 
-{% tabs local %}
-{% tab subsection a %}
+{% tabs ローカル %}
+{% tab a款 %}
 
 **ランディングページの例**
 
-\`\`\`markdown
+```markdown
 ---
-nav_title: サブセクション A
-page_order: 1
+nav_title: Subsection A
+page_order: 1 
 config_only: true
 ---
-\`\`\`
+```
 
-`subsection_a.md`はランディングページとして設定されているため、固有の URL `page_a.md` `page_b.md` のみを受け取ります。`subsection_b.md`URL **は受信されません**。
+`subsection_a.md`はランディングページとして設定されているため、`page_a.md`と`page_b.md`のみが固有のURLを受け取ります。`subsection_b.md`はURLを受け取り**ません**。
 
-**URL の例**
+**URLの例**
 
 ```plaintext
 Subsection A URL: N/A
@@ -404,19 +439,19 @@ Page A URL: https://www.braze.com/docs/primary_section/subsection_a/page_a
 Page B URL: https://www.braze.com/docs/primary_section/subsection_a/page_b
 ```
 {% endtab %}
-{% tab subsection b %}
+{% tab b項 %}
 **ランディングページの例**
 
-\`\`\`markdown
+```markdown
 ---
-nav_title: サブセクション B
+nav_title: Subsection B
 page_order: 2 
 ---
-\`\`\`
+```
 
-`subsection_b.md`がランディングページ、、として設定されているので`page_a.md``page_b.md`、固有の URL `subsection_b.md` が割り当てられます。
+`subsection_b.md` はランディングページとして設定されているので、`page_a.md` 、`page_b.md` 、`subsection_b.md` はユニークなURLを受け取る。
 
-**URL の例**
+**URLの例**
 
 ```plaintext
 Subesction B URL: https://www.braze.com/docs/primary_section/subsection_b
