@@ -1,51 +1,51 @@
 ---
-nav_title: URL のリダイレクト
+nav_title: URLをリダイレクトする
 article: Redirecting URLs
-description: "Braze Docsでページとページ見出しのURLをリダイレクトする方法を学びます。"
-page_order: 6
+description: "Braze Docsのページやページ見出しのURLをリダイレクトする方法を学習する。"
+page_order: 5
 noindex: true
 ---
 
-# URL のリダイレクト
+# URLをリダイレクトする
 
-> Braze Docsでページとページ見出しのURLをリダイレクトする方法を学びます。
+> Braze Docsのページやページ見出しのURLをリダイレクトする方法を学習する。URLに関する一般的な情報は、[コンテンツ管理についてを]({{site.baseurl}}/contributing/content_management/#urls)参照のこと。
 
-ページのURLは、Braze Docsリポジトリのディレクトリ構造と常に一致します。Markdown ファイルの名前を変更したり、別のディレクトリに移動したりすると、リダイレクトが設定されていない場合、元の URL で 404 エラーが発生します。
+ページURLは常にBraze Docsリポジトリのディレクトリ構造と一致する。Markdownファイルがリネームされたり、別のディレクトリに移動された場合、リダイレクトが設定されていないと、元のURLは404エラーになる。
 
-![Example of a 404 page on Braze Docs.]({% image_buster /assets/img/contributing/styling_examples/404.png %})
+![Braze Docsの404ページの例]({% image_buster /assets/img/contributing/styling_examples/404.png %})
 
-URL リダイレクトを設定することで、ユーザーのブックマークが壊れるのを防ぐことができます。
+URLリダイレクトを設定することで、ユーザーのブックマークが壊れるのを防ぐことができる。
 
 {% multi_lang_include contributing/prerequisites.md %}
 
-## ページのリダイレクト
+## ページをリダイレクトする
 
-ページのURLをBraze Docsのホームページにリダイレクトするか、新しい場所にリダイレクトするかを選択できます。
+ページのURLをBraze Docsのホームページまたは新しい場所にリダイレクトすることができる。
 
-{% tabs local %}
-{% tab home page %}
-関連する Markdown ファイルを開き、次のキーと値のペアを YAML フロントマターに追加します。既に `layout` キーがある場合は、既存のキーを新しいキーに置き換えます。
+{% tabs ローカル %}
+{% tab ホームページ %}
+該当するMarkdownファイルを開封し、以下のキーと値のペアをYAMLのフロント・マターに追加する。すでに`layout` キーがある場合は、既存のキーを新しいキーに置き換える。
 
-\`\`\`markdown
+```markdown
 ---
-layout: blank\_config
+layout: blank_config
 ---
-\`\`\`
+```
 
-YAML のフロントマターは、次のようになります。
+あなたのYAMLフロント・マターは以下のようなものでなければならない：
 
-\`\`\`markdown
+```markdown
 ---
-nav_title: カスタマイズガイド
+nav_title: Customization Guides
 config_only: true
-layout: blank\_config
-2.3.
+layout: blank_config
+page_order: 3
 ---
-\`\`\`
+```
 {% endtab %}
 
-{% tab new location %}
-関連する Markdown ファイルを移動または名前変更した後、ディレクトリ `assets/js/` に移動し、グローバル リダイレクト ファイルを開きます。
+{% tab 新天地 %}
+関連するMarkdownファイルを移動またはリネームしたら、`assets/js/` ディレクトリに移動し、グローバル・リダイレクト・ファイルを開封する。
 
 ```bash
 braze-docs
@@ -54,23 +54,23 @@ braze-docs
         └── broken_redirect_list.js
 ```
 
-ファイルの で、次の構文を使用して新しい行にリダイレクトを作成します。
+ファイルの先頭で、以下の構文を使って新しい行にリダイレクトを作成する：
 
 ```javascript
 validurls['REDIRECT_FROM'] = 'REDIRECT_TO';
 ```
 
-以下を置き換えます。
+次のように置き換えます。
 
-|プレースホルダー |説明 |
+| placeholder     | 説明                                                                                    |
 |-----------------|------------------------------------------------------------------------------------------------|
-| `REDIRECT_FROM` |リダイレクト _元の_ `https://www.braze.com/` URL を URL 文字列から削除します。 |
-|`REDIRECT_TO` |リダイレクト_先_`https://www.braze.com/`の URL を URL 文字列から削除します。  |
+| `REDIRECT_FROM` | URL文字列から`https://www.braze.com/` を削除したリダイレクト_先の_URL。 |
+| `REDIRECT_TO`   | URL文字列から`https://www.braze.com/` を削除したリダイレクト_先の_URL。   |
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% multi_lang_include contributing/alerts/warning_urls_must_be_lowercase.md %}
 
-リダイレクトは次のようになります。
+リダイレクトは以下のようなものであるべきだ：
 
 ```javascript
 validurls['/docs/user_guide/data_and_analytics/engagement_reports'] = '/docs/user_guide/data_and_analytics/your_reports/engagement_reports';
@@ -78,32 +78,32 @@ validurls['/docs/user_guide/data_and_analytics/engagement_reports'] = '/docs/use
 {% endtab %}
 {% endtabs %}
 
-## 見出しのリダイレクト
+## 見出しをリダイレクトする
 
-ページ内見出しのURLをリダイレクトするには、ページのYAMLフロントマター内のキーを使用します `local_redirect` 。まず、関連するMarkdownファイルを移動または名前変更し、ページのYAMLフロントマターで次の構文を使用します。
+ページ内部の見出しのURLをリダイレクトするには、ページのYAMLフロントマターで`local_redirect` キーを使う。最初に、関連するMarkdownファイルを移動するか名前を変更し、ページのYAMLフロントマターで次の構文を使う：
 
 ```
 local_redirect:
   OLD_HEADING: 'NEW_HEADING_URL'
 ```
 
-以下を置き換えます。
+次のように置き換えます。
 
-|プレースホルダー |説明 |
+| placeholder       | 説明                                                                                                                                   |
 |-------------------|-----------------------------------------------------------------------------------------------------------------------------------------------|
-| `OLD_HEADING`     | [Markdown構文](https://www.markdownguide.org/basic-syntax/#an-example-putting-the-parts-together) の古い見出しと `#` 削除された。 |
-|`NEW_HEADING_URL` |リダイレクト_先_`https://www.braze.com/`の新しい見出し URL が URL 文字列から削除されます。                                     |
+| `OLD_HEADING`     | `#` 、[Markdown構文の](https://www.markdownguide.org/basic-syntax/#an-example-putting-the-parts-together)古い見出しは削除された。 |
+| `NEW_HEADING_URL` | URL文字列から`https://www.braze.com/` を削除した、リダイレクト_先の_新しい見出しURL。                                      |
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% multi_lang_include contributing/alerts/warning_urls_must_be_lowercase.md %}
 
-リダイレクトは次のようになります。
+リダイレクトは以下のようなものであるべきだ：
 
-\`\`\`yaml
+```yaml
 ---
-開始
-article_title: Braze SDKを使い始める
-description: 「Braze SDKを初めて使用する場合は、開始方法を学びます。」
-local\_redirect:
-  ソースから構築: '/docs/developer_guide/getting_started/#using-our-install-script'
-\`\`\`
+nav_title: Getting started
+article_title: Getting started with the Braze SDK
+description: "If you're new to the Braze SDK, learn how to get started."
+local_redirect:
+  building-from-source: '/docs/developer_guide/getting_started/#using-our-install-script'
+```
