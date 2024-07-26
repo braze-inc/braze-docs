@@ -1,42 +1,42 @@
 ---
 nav_title: プレビューの生成
 article: Generating a preview
-description: "ローカルサイトプレビューを生成する方法を学習します。これにより、Braze Docs で作業がどのように見えるかを確認できます。"
+description: "ローカルサイトのプレビューを生成する方法を学び、Braze Docsでの作業の見え方を確認しましょう。"
 page_order: 5 
 noindex: true
 ---
 
-# プレビューの生成
+# プレビューを生成中
 
-> ローカルサイトプレビューを生成する方法を学習します。これにより、Braze Docs で作業がどのように見えるかを確認できます。
+> ローカルサイトのプレビューを生成する方法を学び、Braze Docsでの作業の見え方を確認しましょう。
 
-{% multi_lang_include contributing/prerequisites.md %}
+{% multi_lang_include 貢献する/prerequisites.md %}
 
 ## プレビューの生成
 
-### ステップ 1:ブランチのチェックアウト
+### ステップ 1:ブランチをチェックアウトする
 
-端末で、サイトプレビューに使用するブランチをチェックアウトします。
+ターミナルで、サイトプレビューに使用するブランチをチェックアウトします。
 
 ```bash
 git checkout BRANCH_NAME
 ```
 
-`BRANCH_NAME` を、あるブランチまたは別の人のブランチの名前に置き換えます。コマンドは次のようになります。
+`BRANCH_NAME`をあなたのBranchまたは他の人のBranchの名前に置き換えてください。あなたのコマンドは次のようになります:
 
 ```bash
 git checkout BD-2346-fixing-typo-swift
 ```
 
-### ステップ 2:ローカルサーバーを起動する
+### ステップ2:ローカルサーバーを開始する
 
-ローカルサーバを起動すると、[現在のブランチ](#step-1-checkout-a-branch) 内のファイルが、Braze Docs のローカルプレビューを構築するために使用されます。現在のブランチを使用してローカルサーバを起動するには、`braze-docs` ディレクトリで次のコマンドを実行します。
+ローカルサーバーを開始すると、[現在のBranch](#step-1-checkout-a-branch)のファイルが使用され、Braze Docsのローカルプレビューが作成されます。現在のBranchを使用してローカルサーバーを開始するには、`braze-docs`ディレクトリで次のコマンドを実行します。
 
 ```bash
 rake
 ```
 
-出力は次のようになります。
+出力は次のようになります:
 
 ```bash
 == Sinatra (v3.0.4) has taken the stage on 4000 for development with backup from Puma
@@ -50,19 +50,19 @@ Puma starting in single mode...
 ...
 ```
 
-### ステップ 3:サイトプレビューを開く
+### ステップ 3:開封 your site プレビュー
 
-デフォルトでは、サイトプレビューはlocalhost [`http://127.0.0.1:4000`](http://127.0.0.1:4000) に生成されます。サイトプレビューを開くには、Web ブラウザでリンクを開きます。
+デフォルトでは、サイトのプレビューはlocalhost [`http://127.0.0.1:4000`](http://127.0.0.1:4000)で生成されます。サイトのプレビューを開封するには、リンクをWebブラウザーで開封してください。
 
-![An example site preview running in a web browser.]({% image_buster /assets/img/contributing/styling_examples/home.png %})
+![Webブラウザで実行されている例サイトのプレビュー]({% image_buster /assets/img/contributing/styling_examples/home.png %})
 
-### ステップ 4: ローカルサーバーを停止する
+### ステップ 4:ローカルサーバーを停止する
 
-ローカルサーバーを停止するには、ターミナルを再度開き、<kbd>Control</kbd> + <kbd>C</kbd> を押します。
+ローカルサーバーを停止するには、ターミナルを再度開き、<kbd>コントロール</kbd> + <kbd>C</kbd>を押します。
 
 ## プレビューの更新
 
-ほとんどの場合、`braze-docs` のファイルを変更すると、サイトプレビューが自動的に更新されます。この場合、ターミナルは次のようなメッセージを出力します。
+ほとんどの場合、`braze-docs`のファイルに変更を加えると、サイトのプレビューが自動的に更新されます。このような場合、ターミナルは次のようなメッセージを出力します:
 
 ```bash
 Asset Pipeline: Processing 'javascript_asset_tag' manifest 'global'
@@ -70,16 +70,16 @@ Asset Pipeline: Saved 'global-128fd02b54e35ea79fcb21ea460fac06.js' to '/Users/al
                     ...done in 1.940883 seconds.
 ```
 
-ブラウザでこれらの更新を表示するには、ページを更新します。
+ブラウザでこれらの更新を表示するには、ページを更新してください。
 
 {% alert tip %}
-ブラウザでページを更新するには、macOS で<kbd>Command</kbd> + <kbd>R</kbd> を押すか、Windows で<kbd>Control</kbd> + <kbd>R</kbd> を押します。
+ブラウザでページを更新するには、macOSでは<kbd>Command</kbd> + <kbd>R</kbd>、Windowsでは<kbd>コントロール</kbd> + <kbd>R</kbd>を押します。
 {% endalert %}
 
-ただし、次の場合など、サイトプレビューが**not** を自動的に更新する場合があります。
+しかし、サイトのプレビューが自動的に更新され**ない**場合があります。例えば、次のような場合です。
 
-- ファイル名またはディレクトリ名が変更された場合
-- 新しいファイルまたはディレクトリが追加された
-- `_includes` ディレクトリ内のファイルの内容が編集されます 
+- ファイルまたはディレクトリ名が変更されました
+- 新しいファイルまたはディレクトリが追加されました
+- ファイルの内容は`_includes`ディレクトリで編集されます 
 
-これらの更新を確認するには、[ローカルサーバーを停止し、[再起動する必要があります](#step-2-start-a-local-server)。
+これらの更新を確認するには、[ローカルサーバーを停止して](#step-4-stop-your-local-server)、[再起動する必要があります](#step-2-start-a-local-server)。
