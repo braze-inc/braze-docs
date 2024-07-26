@@ -64,11 +64,8 @@ If set to `true`, you must implement the iOS device ID mapping for Swift in orde
 BRZConfiguration *configurations = [[BRZConfiguration alloc] initWithApiKey:@"BRAZE_API_KEY" endpoint:@"BRAZE_END_POINT"];
 [configurations setUseUUIDAsDeviceId:NO];
 Braze *braze = [[Braze alloc] initWithConfiguration:configurations];
-[braze deviceIdWithCompletion:^(NSString * _Nonnull brazeDeviceId) {
-    NSLog(@">>[BRZ]: %@", brazeDeviceId);
-    [[AppsFlyerLib shared] setAdditionalData:@{
-        @"brazeDeviceId": brazeDeviceId
-    }];
+[[AppsFlyerLib shared] setAdditionalData:@{
+    @"brazeDeviceId": braze.deviceId
 }];
 ```
 
