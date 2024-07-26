@@ -4,41 +4,41 @@ article_title: ディスパッチIDの動作
 page_order: 0
 
 page_type: solution
-description: "このヘルプ記事では、ディスパッチID の使用法、影響、および制限を含むディスパッチID の動作について説明します。"
+description: "このヘルプ記事では、使用法、影響、および制限を含むディスパッチIDの動作について説明します。"
 ---
 
 # ディスパッチIDの動作
 
-`dispatch_id` はメッセージディスパッチのID で、各"transmission" の一意のID です。Braze から送信されます。スケジュールされたメッセージを送信したユーザは、同じ`dispatch_id` を受け取ります。通常、アクションベースまたはAPI トリガのメッセージは、ユーザごとに一意の`dispatch_id` を受け取りますが、別のユーザに近接して送信されたメッセージは、複数のユーザ間で同じ`dispatch_id` を共有する場合があります。
+`dispatch_id`はメッセージ配信のIDであり、Brazeから送信される各「送信」の一意のIDです。スケジュールされたメッセージが送信されたユーザーは、同じ`dispatch_id`を受け取ります。通常、アクションベースまたはAPIトリガーのメッセージはユーザーごとに一意の`dispatch_id`を受け取りますが、他のメッセージと近接して送信されたメッセージは複数のユーザー間で同じ`dispatch_id`を共有する場合があります。
 
-これにより、メッセージが2 つの異なる時間に送信された場合、2 つの異なるユーザが1 つのキャンペーンに対して異なるディスパッチID を持つことになります。これは、多くの場合、API 要求が個別に行われたためです。両方のユーザが1 回の送信で同じキャンペーンオーディエンスにいる場合、そのディスパッチID は同じになります。
+これは、メッセージが異なる時間に送信された場合、単一のキャンペーンに対して異なるディスパッチIDを持つ2人の異なるユーザーが存在する可能性があることを意味します。これは、多くの場合、APIリクエストが別々に行われたためです。両方のユーザーが同じ{キャンペーン}オーディエンスに単一の送信で含まれていた場合、彼らの配信IDは同じになります。
 
-## キャンペーンでのディスパッチID の動作
+## キャンペーンにおけるディスパッチIDの動作
 
-スケジュールされたキャンペーンメッセージは、同じ`dispatch_id` になります。アクションベースまたはAPI トリガのキャンペーンメッセージは、ユーザごとに一意の`dispatch_id` を取得することができます。または、`dispatch_id` は、上で説明したように、近くにあるか、同じAPI コールで送信された場合、複数のユーザに対して同じになることがあります。たとえば、スケジュールされたキャンペーンオーディエンスの2 人のユーザは、キャンペーンがスケジュールされるたびに同じ`dispatch_id` を持ちます。ただし、API トリガーキャンペーンのオーディエンスの2 人のユーザは、別々のAPI コールで送信され、互いに近接していない場合、異なるディスパッチID を持つ可能性があります。
+スケジュールされたキャンペーンメッセージは同じ`dispatch_id`を取得します。アクションベースまたはAPIトリガーのキャンペーンメッセージは、ユーザーごとに一意の`dispatch_id`を取得する場合や、上記のように近接して送信されたり同じAPI呼び出し内で送信されたりする場合に複数のユーザーで`dispatch_id`が同じになる場合があります。例えば、スケジュールされたキャンペーンのオーディエンスにいる2人のユーザーは、キャンペーンがスケジュールされるたびに同じ`dispatch_id`を持つことになります。ただし、API トリガー キャンペーンのオーディエンス内の 2 人のユーザーは、別々の API 呼び出しで送信され、互いに近接していない場合、異なるディスパッチ ID を持つことがあります。
 
-マルチチャネルキャンペーンは、配信タイプで説明されているものと同じ動作を持ちます。
-
-{% alert warning %}
-キャンバスステップが"scheduled" であっても、キャンバスステップはトリガーされたイベントとして扱われるため、`dispatch_id` はすべてのキャンバスステップに対してランダムに生成されます。これにより、ID の生成に不整合が生じる可能性があります。キャンバスコンポーネントには、送信ごとにユーザごとに一意の`dispatch_id`が含まれる場合や、送信ごとにユーザ間の共有ディスパッチIDが含まれる場合があります。
-{% endalert %}
-
-## Template dispatch ID をLiquid でメッセージに送信する
-
-(URL などで) メッセージ内からのメッセージの配信を追跡する場合は、`dispatch_id` 内のテンプレートを使用できます。この書式設定は、[サポートされているパーソナライゼーションタグ]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/) のリストの「Canvas Attributes」にあります。
-
-これは、`api_id` と同じように動作します。つまり、`api_id` はキャンペーンの作成時に使用できないため、プレースホルダとしてテンプレート化され、`dispatch_id_for_unsent_campaign` としてプレビューされます。ID はメッセージが送信される前に生成され、送信時間として含まれます。
+マルチチャネルキャンペーンは、その配信タイプについて説明されているのと同じ動作をします。
 
 {% alert warning %}
-アプリ内メッセージに`dispatch_id_for_unsent_campaign` は`dispatch_id` がないため、`dispatch_id_for_unsent_campaign` の液体テンプレートはアプリ内メッセージでは機能しません。
+すべてのキャンバスステップに対して`dispatch_id`がランダムに生成されます。なぜなら、Brazeはキャンバスステップを「スケジュールされた」場合でもトリガーイベントとして扱うからです。これにより、IDの生成に不整合が生じる可能性があります。場合によっては、キャンバスコンポーネントは送信ごとにユーザーごとに一意の`dispatch_id`を持つこともあれば、送信ごとにユーザー間で共有されるディスパッチIDを持つこともあります。
 {% endalert %}
 
-## メールのDispatch ID Currents フィールド
+## メッセージにLiquidを使用してテンプレートディスパッチID
 
-Currents 機能を引き続き強化するための努力で、`dispatch_id` は、すべてのコネクタタイプにわたるCurrents メールイベントのフィールドでもあります。`dispatch_id` は、Braze プラットフォームから送信される各送信またはディスパッチに対して生成される一意のID です。
+メッセージ内からメッセージの送信を追跡したい場合（たとえば、URL内など）、`dispatch_id`にテンプレートを使用できます。この書式設定は、キャンバス属性の下にある[サポートされているパーソナライゼーションタグ]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/)のリストにあります。
 
-スケジュールされたメッセージを送信されたすべての顧客は同じ`dispatch_id` を取得しますが、アクションベースまたはAPI トリガのいずれかのメッセージを受信する顧客は、メッセージごとに一意の`dispatch_id` を取得します。`dispatch_id` フィールドを使用すると、定期的なキャンペーンのどのインスタンスが変換を担当しているかを識別できるため、どのタイプのキャンペーンがビジネス目標の達成に役立っているかについて、より多くの洞察と情報を得ることができます。
+これはちょうど`api_id`のように動作します。つまり、`api_id`はキャンペーン作成時には利用できないため、プレースホルダーとしてテンプレート化され、`dispatch_id_for_unsent_campaign`としてプレビューされます。IDはメッセージが送信される前に生成され、送信時に含まれます。
 
-`dispatch_id` を[personalization tag]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/#supported-personalization-tags)、[メッセージエンゲージメントイベント]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/message_engagement_events/)、または[Segment]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/segment_for_currents/#integration-details)、[Mixpanel]({{site.baseurl}}/partners/insights/behavioral_analytics/mixpanel_for_currents/#email-events)、または[Amplitude]({{site.baseurl}}/partners/data_and_infrastructure_agility/analytics/amplitude/amplitude_for_currents/) をCurrents に使用できます。
+{% alert warning %}
+Liquidのテンプレート`dispatch_id_for_unsent_campaign`はアプリ内メッセージでは機能しません。なぜなら、アプリ内メッセージには`dispatch_id`がないからです。
+{% endalert %}
 
-_最終更新日2021年7月15日_
+## ディスパッチID Currents フィールド メール用
+
+私たちのCurrents機能を引き続き強化するために、`dispatch_id`はすべてのコネクタタイプにわたるCurrentsメールイベントのフィールドでもあります。`dispatch_id` は、Braze プラットフォームから送信される各伝送または配信に対して生成される一意のIDです。
+
+すべての顧客がスケジュールされたメッセージを受け取ると同じ`dispatch_id`を受け取りますが、アクションベースまたはAPIトリガーメッセージを受け取る顧客は、メッセージごとに一意の`dispatch_id`を受け取ります。`dispatch_id`フィールドにより、どのリカーリングキャンペーンのインスタンスがコンバージョンの原因であるかを特定できるため、どのタイプのキャンペーンがビジネス目標の達成に役立っているかについての洞察と情報を提供します。
+
+`dispatch_id` を [パーソナライゼーション タグ]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/#supported-personalization-tags) として、[メッセージ エンゲージメント イベント]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/message_engagement_events/) で使用するか、[Segment]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/segment_for_currents/#integration-details)、[Mixpanel]({{site.baseurl}}/partners/insights/behavioral_analytics/mixpanel_for_currents/#email-events)、または Currents 用の [Amplitude]({{site.baseurl}}/partners/data_and_infrastructure_agility/analytics/amplitude/amplitude_for_currents/) を使用する場合に使用できます。
+
+_最終更新日：2021年7月15日_
