@@ -3,93 +3,93 @@ nav_title: 7月
 page_order: 6
 noindex: true
 page_type: update
-description: "この記事には、2019 年 7 月のリリース ノートが含まれています。"
+description: "この記事には2019年7月のリリースノートが含まれています。"
 ---
 
 # 2019年7月
 
 {% alert update %}
-Braze では今月、2 回 (その通り、**2 回**です) の製品リリース サイクルがありました。最新リリースは上部に記載されており、以前のリリースは [このページの下から始まります](#earlier-this-month)。
+Brazeは今月、**2**回の製品リリースサイクルを持っていました！最新リリースは上部に記載されており、以前のリリースはこのページのさらに下に[開始します](#earlier-this-month)！
 {% endalert %}
 
-## SSO の有効化
+## SAML/SSO
 
-[シングル サインオン]({{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/) (SSO) により、企業は Braze ダッシュボードへのアクセスを安全かつ集中的に制御できるようになります。つまり、単一の資格情報セットを使用して、Braze を含むさまざまなアプリケーションにアクセスできます。
+[シングルサインオン]({{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/)（SSO）は、企業にBrazeダッシュボードへのアクセスを制御するための安全で集中化された方法を提供します。要するに、1つの資格情報セットを使用して、Brazeを含むさまざまなアプリケーションにアクセスできます。
 
-企業は、[OAuth 2.0 サポートを使用した Google ログイン](https://developers.google.com/identity/protocols/OAuth2)に加えて、セキュリティ アサーション マークアップ言語 (SAML) サポートを使用した SSO を希望しています。これにより、最新の業界標準 (SAML 2.0) をサポートする [Azure Active Directory]({{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/azure_ad/) や [Okta]({{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/okta/)などの大規模な ID プロバイダー (IdP) とシームレスに統合できるようになります。
+さらに、[OAuth 2.0 を使用した Google サインインのサポート<1>に加えて、企業は Security Assertion Markup Language (SAML) サポートを備えた SSO を希望しています。これにより、[Azure Active Directory]({{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/azure_ad/)や[Okta]({{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/okta/)などの大手アイデンティティプロバイダー（IdP）とシームレスに統合でき、最新の業界標準（SAML 2.0）をサポートします。
 
-Braze は以下をサポートします:
-- [ワンログイン]({{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/onelogin/)
--[Azure アクティブ ディレクトリ]({{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/azure_ad/)
-- [オクタ]({{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/okta/)
+Brazeはサポートしています:
+- [OneLogin]({{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/onelogin/)
+- [Azure Active Directory]({{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/azure_ad/)
+- [Okta]({{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/okta/)
 
-## イベントAPIキーの表示を調整する
+## Adjust イベント API キーを表示
 
-この API キーをお客様が利用できるように、Adjust のパートナー ページを更新しました。
+Adjust のパートナーページを更新して、この API キーを顧客が利用できるようにしました。
 
 ## 新しいパートナー
 
-いくつかの新しいパートナーが Alloys プログラムに参加し、ドキュメントに追加されました。挨拶しましょう:
-- [ファイブトラン]({{site.baseurl}}/partners/fivetran/)
-- [タロンワン]({{site.baseurl}}/partners/talonone/)
-- [バウチャー]({{site.baseurl}}/partners/voucherify/)
+新しいパートナーが私たちのAlloysプログラムに参加し、Docsに追加されました！こんにちはと言ってください：
+- [Fivetran]({{site.baseurl}}/partners/fivetran/)
+- [Talon.One]({{site.baseurl}}/partners/talonone/)
+- [Voucherify]({{site.baseurl}}/partners/voucherify/)
 
 ## キャンペーン詳細の改善
 
-**キャンペーン** ページの**[キャンペーンの詳細]** セクションに、拡張されたキャンペーンの詳細が表示されるようになりました。
+拡張されたキャンペーンの詳細は、...待ってください...**キャンペーンの詳細**セクションに表示されます**キャンペーン**ページ！
 
-## セグメントとキャンバスに自分のものだけを表示
+## セグメントで自分のものだけを表示 & キャンバス
 
-**キャンペーン** ページの「自分のものだけを表示」チェック フィルターは、非常に人気があることが証明されています。その結果、このオプションはキャンバス リストとセグメント リストにも追加されます。
+「自分のものだけ表示」チェックフィルターは**キャンペーン**ページで非常に人気があります。その結果、このオプションをキャンバスおよびSegmentリストにも追加します！
 
-### 進歩行動
+### 昇進動作
 
-[ユーザーが Canvas の 1 つのステップから次のステップに進むタイミングを]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/advancement/) 選択できるようになりました。これらのオプションには、「メッセージを送信」と「遅延後に全視聴者に通知」が含まれます。
+ユーザーが1つのキャンバスステップから次のステップに進むタイミングを選択できるようになりました。これらのオプションには「メッセージ送信済み」と「遅延後の全オーディエンス」が含まれます。
 
-### Canvasのアプリ内メッセージ
+### キャンバスのアプリ内メッセージ
 
-Canvas で[アプリ内メッセージ]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/in-app_messages_in_canvas/) が利用できるようになりました。キャンバス ステップを追加し、利用可能なチャネルを参照してアプリ内メッセージを追加します。
+[アプリ内メッセージ]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/in-app_messages_in_canvas/)は現在キャンバスで利用可能です！キャンバスステップを追加し、利用可能なチャネルを参照してアプリ内メッセージを追加します。
 
-# 今月上旬
+# 今月初め
 
-## ユーザープロフィール画像の削除
+## ユーザープロファイル画像削除
 
-Braze ユーザー プロファイルとユーザー検索に表示されるユーザー プロファイル写真を削除します。
+Brazeユーザープロファイルおよびユーザー検索に表示されるユーザープロファイル画像を削除しています。
 
-## コンテンツ カード内の接続されたコンテンツ
+## コンテンツカードのコネクテッドコンテンツ
 
-[コンテンツ カード]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/overview/)で [接続されたコンテンツの]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/about_connected_content/#about-connected-content) 文字列と機能を使用できるようになりました。
+[コネクテッドコンテンツ]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/about_connected_content/#about-connected-content)の文字列と機能を[コンテンツカード]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/overview/)で使用できるようになりました。
 
-外部サーバーへの接続されたコンテンツの呼び出しは、カードがユーザーによって表示されたときではなく、カードが実際に送信されたときに行われます。電子メールと同様に、動的コンテンツはカードが実際に表示されたときではなく、送信時に計算され、決定されます。
+コネクテッドコンテンツ calls to external servers will happen when a カード is actually sent, not when the カード is viewed by the ユーザー.メールと同様に、ダイナミックなコンテンツは実際にカードが表示されるときではなく、送信時に計算および決定されます。
 
-## 返信先アドレスが空です
+## Null "返信先" address
 
-お客様は、 `null`Braze の **メール設定** ページまたは [API]({{site.baseurl}}/api/endpoints/messaging/#email-object-specification)を使用して、メール メッセージの「返信先」アドレスの値を取得します。 使用すると、返信はリストされた「送信元」アドレスに送信されます。 「差出人」アドレス欄を以下のようにカスタマイズできるようになりました。 `dan@emailaddress.com`すると、顧客は Dan に直接返信できるようになります。
+顧客は現在、Brazeの**メール設定**ページまたは[API]({{site.baseurl}}/api/endpoints/messaging/#email-object-specification)を使用して、メールメッセージの「返信先」アドレスに`null`値を設定できます。 使用すると、返信は記載された「差出人」アドレスに送信されます。 「From」アドレスフィールドを`dan@emailaddress.com`としてパーソナライズできるようになり、顧客はDanに直接返信することができます。
 
-設定するには `null` Braze からの電子メール メッセージの「返信先」アドレスの値を変更するには、ナビゲーションの **[設定の管理]** に移動し、**[電子メール設定]** タブに移動します。**[送信メール設定]** セクションまでスクロールし、**[「返信先」を除外し、返信をデフォルトのアドレスとして「送信元」に送信する]** を選択します。
+メールメッセージの「返信先」アドレスに`null`値を設定するには、ナビゲーションの**設定の管理**に移動し、**メール設定**タブに移動します。**送信メール設定**セクションまでスクロールし、デフォルトのアドレスとして**「返信先」を除外し、「From」に返信を送信**を選択します。
 
 ## キャンペーンの比較
 
-Braze では、1 つのウィンドウで [複数のキャンペーンを一度に確認して、それらの相対的なパフォーマンスを並べて比較できます]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/comparing_campaigns/)。
+Braze で複数のキャンペーンを一度に見て、それらの相対的なパフォーマンスを比較し、一つのウィンドウで並べて表示します！
 
-## Liquid でメッセージにディスパッチ ID をテンプレート化する
+## テンプレート dispatch ID into messages with Liquid
 
 {% alert note %}
-行動 `dispatch_id` Braze は、Canvas ステップ (スケジュール可能なエントリ ステップを除く) を、たとえ「スケジュール」されている場合でもトリガーされたイベントとして扱うため、Canvas とキャンペーンでは異なります。詳細はこちら [`dispatch_id`]({{site.baseurl}}/help/help_articles/data/dispatch_id/) キャンバスとキャンペーンでの動作。
+Canvasとキャンペーンの間での`dispatch_id`の動作は異なります。なぜなら、BrazeはCanvasのステップ（エントリステップはスケジュール可能ですが）を「スケジュールされた」場合でもトリガーイベントとして扱うためです。キャンバスとキャンペーンでの[`dispatch_id`行動]({{site.baseurl}}/help/help_articles/data/dispatch_id/)について詳しく学びましょう。
 {% endalert %}
 
-メッセージ内（例えばURL内）からメッセージの送信を追跡したい場合は、 `dispatch_id`。この書式設定については、[Canvas 属性]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/)の下にある、サポートされているパーソナライズ タグのリストを参照してください。
+メッセージ内からメッセージの送信を追跡したい場合（たとえば、URL内など）、`dispatch_id`にテンプレートを使用できます。このフォーマットは、サポートされているパーソナライゼーションタグのリストの[キャンバス属性]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/)の下にあります。
 
-これは、 `api_id`、その点で `api_id` キャンペーン作成時には利用できませんが、プレースホルダーとしてテンプレート化されており、次のようにプレビューされます。 `dispatch_id_for_unsent_campaign`。ID はメッセージが送信される前に生成され、送信時間として含められます。
+これはちょうど`api_id`のように動作します。キャンペーン作成時に`api_id`が利用できないため、プレースホルダーとしてテンプレート化され、`dispatch_id_for_unsent_campaign`としてプレビューされます。IDはメッセージが送信される前に生成され、送信時に含まれます。
 
 {% alert warning %}
-液体テンプレートの `dispatch_id_for_unsent_campaign` アプリ内メッセージでは機能しません。アプリ内メッセージには `dispatch_id`。
+Liquidテンプレートの`dispatch_id_for_unsent_campaign`はアプリ内メッセージでは機能しません。なぜなら、アプリ内メッセージには`dispatch_id`がないからです。
 {% endalert %}
 
-## 「自分のものだけを表示」設定が維持される
+## 「自分のもののみを表示」設定が持続する
 
-キャンペーン グリッドの「自分のものだけを表示」フィルターは、 **キャンペーン** ページにアクセスするたびにオンのままになります。
+「自分のもののみ表示」フィルターは、キャンペーングリッド上で**キャンペーン**ページにアクセスするたびにオンのままになります。
 
-## A/B テストのアップデート
+## AB テスト更新
 
-最大 8 つのバリエーション (およびオプションのコントロール) を含む 1 回限りの [A/B テストを、]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/multivariate_testing/) キャンペーンのオーディエンスのユーザー指定の割合に送信し、その後、事前にスケジュールされた時間に残りのオーディエンスに最適なバリエーションを送信できます。
+ユーザー指定の割合のキャンペーンのオーディエンスに、最大8つのバリアント（およびオプションのコントロール）を含む一度限りの[A/Bテスト]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/multivariate_testing/)を送信し、事前にスケジュールされた時間に残りのオーディエンスに最適なバリアントを送信できます。
