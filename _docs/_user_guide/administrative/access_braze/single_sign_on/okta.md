@@ -42,15 +42,15 @@ If you are using the [older navigation]({{site.baseurl}}/navigation), select you
 
 ### Step 1b: Edit SAML SSO settings
 
-From your Okta Admin dashboard, you will be provided a target URL (login URL) and `x.509` certificate under **SAML Signing Certificate** which you must input into your Braze account's **Security Settings** page.
+From your Okta Admin dashboard, you will be provided a target URL (login URL) and `x.509` certificate, which you must input into your Braze account's **Security Settings** page.
 
 ![][7]{: style="max-width:75%"}
 
 | Requirement | Details |
 |---|---|
 | `SAML Name` | This will appear as the button text on the login screen. This is typically your identity provider's name, For example, "Okta". |
-| `Target URL` | This is the login URL provided by Okta Admin dashboard.|
-| `Certificate` | The `x.509` PEM encoded certificate is provided by your identity provider. You must copy and paste it into this field. In Okta, you can retrieve it by selecting **Actions** > **Download certificate**.  |
+| `Target URL` | This is the login URL provided by Okta Admin dashboard. Find it by going to **Applications** > your application > **General** tab > **App Embed Link** > **Embed Link**. |
+| `Certificate` | The `x.509` PEM encoded certificate is provided by your identity provider. You must copy and paste it into this field. Retrieve it in Okta by going to **SAML Signing Certificates** and selecting **Actions** > **Download certificate**. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 Select **Save Changes** at the bottom of the page when completed.
