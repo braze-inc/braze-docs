@@ -1,37 +1,37 @@
 ---
 nav_title: ページ
-article: Pages
-description: "Braze Docs でページを作成、変更、削除する方法をご覧ください。"
+article: Managing Pages
+description: "Braze Docsでページを作成、変更、削除する方法を学習する。"
 page_order: 0
 noindex: true
 ---
 
-# ページ
+# ページのマネージャー
 
-> Braze Docs でページを作成、変更、削除する方法をご覧ください。代わりにセクションを作成または並べ替えるには、「[セクション]({{site.baseurl}}/contributing/content_management/sections/)」を参照してください。ページに関する一般的な情報については、「[コンテンツ管理]({{site.baseurl}}/contributing/content_management/#pages)」を参照してください。
+> Braze Docsでページを作成、変更、削除する方法を学習する。代わりにセクションを作成したり並べ替えたりするには、[セクションを]({{site.baseurl}}/contributing/content_management/sections/)参照のこと。ページに関する一般的な情報は、[コンテンツ・マネージャーについてを]({{site.baseurl}}/contributing/content_management/#pages)参照のこと。
 
 {% multi_lang_include contributing/prerequisites.md %}
 
-## ページの作成
+## ページを作成する
 
-### ステップ 1:新しいファイルを作成
+### ステップ 1:新しいファイルを作成する
 
-該当するディレクトリを開き、ページ用の新しい Markdown ファイルを作成します。
+該当するディレクトリを開封し、ページ用の新しいMarkdownファイルを作成する。
 
 ```bash
 PAGE_TITLE.md
 ```
 
-[Braze Docs `PAGE_TITLE` スタイルガイドに従ったページのタイトルに置き換えてください]({{site.baseurl}}/contributing/style_guide/)。すべて小文字を使用し、特殊文字を削除し、スペースをアンダースコア () に置き換えます。`_`ファイル名は次のようになっているはずです。
+`PAGE_TITLE` 、[Braze Docs Style Guideに]({{site.baseurl}}/contributing/style_guide/)従ったページタイトルに置き換える。すべて小文字を使用し、特殊文字を削除し、スペースをアンダースコア (`_`) に置き換える。ファイル名は以下のようなものであるべきだ：
 
-- **ページ:**C++ title: 用の開発環境のセットアップ
-- **[ファイル] name:** `setting_up_your_development_environment_for_cpp.md`
+- **ページのタイトル**C++の開発環境を設定する
+- **ファイル名：** `setting_up_your_development_environment_for_cpp.md`
 
 {% multi_lang_include contributing/alerts/tip_locating_a_file.md %}
 
-### ステップ 2:テンプレートを追加
+### ステップ2:テンプレートを追加する
 
-以下のテンプレートのいずれかをコピーして Markdown ファイルに貼り付けます。詳細については、「[テンプレート]({{site.baseurl}}/contributing/templates/)」を参照してください。
+以下のテンプレートのいずれかをコピーし、Markdownファイルに貼り付ける。詳しくは[テンプレートを]({{site.baseurl}}/contributing/templates/)参照のこと。
 
 #### 基本テンプレート
 
@@ -43,11 +43,11 @@ PAGE_TITLE.md
 
 ## コンテンツを書く
 
-このセクションで説明するBraze固有の構文を除き、[すべてのコンテンツは標準のMarkdown構文を使用して記述してください](https://www.markdownguide.org/basic-syntax/)。
+このセクションで取り上げるBraze特有の構文以外は、すべてのコンテンツは[標準的なMarkdown構文を使って](https://www.markdownguide.org/basic-syntax/)記述する。
 
-### クロスリファレンス
+### 相互参照
 
-Braze Docs 以外でホストされているページを参照するには、標準の Markdown 構文を使用してください。
+Braze Docsの外でホストされているページを参照するには、標準的なMarkdown構文を使う。
 
 {% raw %}
 ```markdown
@@ -55,7 +55,7 @@ Braze Docs 以外でホストされているページを参照するには、標
 ```
 {% endraw %}
 
-Braze Docs でホストされているページを相互参照するには、以下の Braze 固有の構文を使用してください。
+Braze Docsでホストされているページを相互参照するには、以下のBraze固有の構文を使用する。
 
 {% raw %}
 ```markdown
@@ -64,12 +64,12 @@ Braze Docs でホストされているページを相互参照するには、以
 {% endraw %}
 
 {% alert note %}
-[詳細な手順については、「クロスリファレンス」を参照してください。]({{site.baseurl}}/contributing/content_management/cross_referencing/)
+完全なウォークスルーは、[相互参照を]({{site.baseurl}}/contributing/content_management/cross_referencing/)参照のこと。
 {% endalert %}
 
-### 画像を追加する
+### 画像、写真を追加する
 
-画像を追加するには、画像の PNG ファイルを内の該当する場所に配置し`assets/img`、次の構文を使用します。
+画像を追加するには、画像のPNGファイルを`assets/img` 内の関連する場所に置き、次の構文を使う。
 
 {% raw %}
 ```markdown
@@ -78,5 +78,5 @@ Braze Docs でホストされているページを相互参照するには、以
 {% endraw %}
 
 {% alert note %}
-詳細な手順については、「[新しい画像の追加]({{site.baseurl}}/contributing/content_management/images/)」を参照してください。
+詳しい説明は、[新しい画像を]({{site.baseurl}}/contributing/content_management/images/)追加するを参照のこと。
 {% endalert %}
