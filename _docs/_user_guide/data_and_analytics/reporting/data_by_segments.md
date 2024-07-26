@@ -14,7 +14,6 @@ tool:
 
 > Use [Query Builder]({{site.baseurl}}/user_guide/data_and_analytics/query_builder/) report templates to break down performance metrics for campaigns, Canvas, variants, and steps by segments.
 
-![The Segment breakdown page contains a SQL editor, a side panel with tabs for Variables, Available Data Tables, Query History, and the AI Query Builder, and a results section.]({% image_buster /assets/img_archive/segment_breakdown.png %})
 
 [Analytics tracking]({{site.baseurl}}/user_guide/data_and_analytics/tracking/segment_analytics_tracking#segment-analytics-tracking) must be turned on for the segments you want to access metrics for.
 
@@ -26,6 +25,9 @@ To run these reports, do the following:
 - Purchases and revenue by segment
 - Purchases and revenue for variants or steps, by segment
 - Push performance by segment
+
+
+![The Segment breakdown page contains a SQL editor, a side panel with tabs for Variables, Available Data Tables, Query History, and the AI Query Builder, and a results section.]({% image_buster /assets/img_archive/segment_breakdown.png %})
 
 ## Report templates
 
