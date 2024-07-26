@@ -1,84 +1,84 @@
 ---
 nav_title: メタデータ
 article: Metadata
-description: "これらは、ページのYAML フロントマターに追加できるメタデータキーです。"
+description: "これらはページのYAMLフロントマターに追加できるメタデータキーである。"
 page_order: 0
 noindex: true
 ---
 
 #  メタデータ
 
-> これらは、ページのYAML フロントマターに追加できるメタデータキーです。詳細は、[Content Management]({{site.baseurl}}/contributing/content_management/#pages)を参照してください。
+> これらはページのYAMLフロントマターに追加できるメタデータキーである。より一般的な情報については、[コンテンツマネージャーについてを]({{site.baseurl}}/contributing/content_management/#pages)参照のこと。
 
-Markdown ファイルにメタデータを追加するには、Jekyll のフロントマター構文をファイルの先頭に追加する必要があります。
+Markdownファイルにメタデータを追加するには、ファイルの先頭にJekyllのフロントマター構文を追加する必要がある。
 
-\`\`\`markdown
+```markdown
 ---
-METADATA\_KEY:METADATA\_VALUE
+METADATA_KEY: METADATA_VALUE
 ---
 
-# Brazeドークスの使用開始
+# Getting started with Braze Docs
 
-Braze Docs またはdocs-as-code を初めて使用する場合は、チュートリアルから始めてください。
-\`\`\`
+If you're new to Braze Docs or docs-as-code, start with our tutorial.
+```
 
-以下を交換します。
+次のように置き換えます。
 
-| プレースホルダ| 説明                                                                                                               |
+| placeholder      | 説明                                                                                                               |
 |------------------|---------------------------------------------------------------------------------------------------------------------------|
-| `METADATA_KEY` | サポートされているメタデータ型を表すキー。次のセクションの[メタデータキー](#required-keys) で置き換えます。|
-| `METADATA_VALUE` | メタデータキーに割り当てられた値。次のセクションで、メタデータキーのサポートされる値を確認します。|
+| `METADATA_KEY`   | サポートされているメタデータ・タイプを表すキー。次のセクションの[メタデータ・キーで](#required-keys)置き換える。 |
+| `METADATA_VALUE` | メタデータのキーに割り当てられた値。次のセクションで、メタデータ・キーがサポートしている値を確認する。                 |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## 必須キー
 
 ### 記事タイトル
 
-`article_title` キーは、オンライン検索結果のページタイトルとエンドユーザーのブラウザタブを設定するために使用されます。このキーは、任意の`string` 値を受け入れます。命名規則については、[ろう付けドックススタイルガイド]({{site.baseurl}}/contributing/style_guide/)を参照してください。
+`article_title` キーは、オンライン検索結果やエンドユーザーのブラウザタブのページタイトルの設定に使用される。このキーは`string` 。命名規則については、[Braze Docs Style Guideを]({{site.baseurl}}/contributing/style_guide/)参照のこと。
 
-{% tabs local %}
-{% tab usage example %}
-\`\`\`markdown
+{% tabs ローカル %}
+{% tab 使用例 %}
+```markdown
 ---
-article_title: Brazeドークスの使用開始
+article_title: Getting started with Braze Docs
 ---
-\`\`\`
+```
 {% endtab %}
 {% endtabs %}
 
 ### 説明
 
-`description` キーは、オンライン検索結果のページ記述を設定するために使用されます。このキーは、二重引用符で囲まれた150 文字未満の`string` 値を受け入れます。
+`description` キーは、オンライン検索結果でページの説明を設定するために使用される。このキーは、二重引用符で囲まれた150文字以下の`string` 。
 
-{% tabs local %}
-{% tab usage example %}
-\`\`\`markdown
+{% tabs ローカル %}
+{% tab 使用例 %}
+```markdown
 ---
-description: "Braze Docs を初めて使用する場合は、このステップバイステップのチュートリアルから始めてください。"
+description: "If you're new to Braze Docs, start with this step-by-step tutorial."
 ---
-\`\`\`
+```
 {% endtab %}
 {% endtabs %}
 
 ### ナビゲーションタイトル
 
-`nav_title` キーは、Braze Docs の左側のナビゲーションバーのページタイトルを設定するために使用します。このキーでは、30 文字未満の`string` を使用できます。[`hidden`](#hide-page-from-navigation)キーが`true`に設定されている場合、`nav_title`は不要です。
+`nav_title` キーは、Braze Docsの左側のナビゲーションバーにページタイトルを設定するために使用する。このキーは、`string` 30文字未満の任意の文字を受け付ける。もし [`hidden`](#hide-page-from-navigation)キーが`true` に設定されている場合、`nav_title` は必要ない。
 
-{% tabs local %}
-{% tab usage example %}
-\`\`\`markdown
+{% tabs ローカル %}
+{% tab 使用例 %}
+```markdown
 ---
-nav_title: はじめに
+nav_title: Getting started
 ---
-\`\`\`
+```
 {% endtab %}
 {% endtabs %}
 
 ## オプションキー
 
-### エンゲージメントツール
+### エンゲージメント・ツール
 
-`tool` キーは、ページに関連するエンゲージメントツールを設定するために使用されます。このキーは、以下の`string` 値の1 つ以上をリストとして受け入れます。
+`tool` キーは、ページの関連エンゲージメントツールの設定に使われる。このキーは、以下の`string` 、1つ以上の値をリストとして受け付ける。
 
 - `dashboard`
 - `docs`
@@ -91,84 +91,84 @@ nav_title: はじめに
 - `segments`
 - `templates`
 
-{% tabs local %}
-{% tab usage example %}
-\`\`\`markdown
+{% tabs ローカル %}
+{% tab 使用例 %}
+```markdown
 ---
 tool:
-  \- 電流
-  セグメント
+  - currents
+  - segments
 ---
-\`\`\`
+```
 {% endtab %}
 {% endtabs %}
 
-### ナビゲーションからページを非表示にする
+### ナビゲーションからページを隠す
 
-`hidden` キーは、Braze Docs の左側のナビゲーションからページを非表示にするために使用します。このキーはブール値`true` または`false` を受け入れます。
+`hidden` キーは、Braze Docsの左側ナビゲーションからページを隠すために使用する。このキーは、`true` または`false` というブーリアン値を受け付ける。
 
-{% tabs local %}
-{% tab usage example %}
-\`\`\`markdown
+{% tabs ローカル %}
+{% tab 使用例 %}
+```markdown
 ---
-hidden: 真
+hidden: true
 ---
-\`\`\`
+```
 {% endtab %}
 {% endtabs %}
 
 ### 検索からページを隠す
 
-`noindex` キーは、ページを内部および外部の検索結果(Braze Docs やGoogle Search など) から隠すために使用します。このキーはブール値`true` または`false` を受け入れます。
+`noindex` キーは、内部および外部の検索結果（Braze DocsやGoogle検索など）からページを隠すために使用する。このキーは、`true` または`false` というブーリアン値を受け付ける。
 
-{% tabs local %}
-{% tab usage example %}
-\`\`\`markdown
+{% tabs ローカル %}
+{% tab 使用例 %}
+```markdown
 ---
 noindex: true
 ---
-\`\`\`
+```
 {% endtab %}
 {% endtabs %}
 
 ### 目次を隠す
 
-`hide_toc` キーは、ページ右側のページ内目次(TOC) を非表示にするために使用されます。このキーはブール値`true` または`false` を受け入れます。
+`hide_toc` キーは、ページの右側にあるページ内目次（TOC）を隠すために使われる。このキーは、`true` または`false` というブーリアン値を受け付ける。
 
-{% tabs local %}
-{% tab usage example %}
-\`\`\`markdown
+{% tabs ローカル %}
+{% tab 使用例 %}
+```markdown
 ---
-hide_toc: 真
+hide_toc: true
 ---
-\`\`\`
+```
 {% endtab %}
 {% endtabs %}
 
 ### 目次から見出しを隠す
 
-`toc_headers` キーは、ページ右側のページ内目次(TOC) から同じレベルのすべての見出しを非表示にするために使用されます。このキーでは、次の文字列値を使用できます。
+デフォルトでは、目次（TOC）はすべての見出しレベルを表示する。特定の見出しレベルのみを表示するには、`toc_headers` キーで必要なレベルを明示的にリストアップする。リストにない見出しレベルは、TOCから隠される。
+
+このキーは以下の文字列値を受け付ける：
 
 - `h1`
 - `h2`
 - `h3`
 - `h4`
 
-`toc_headers` 割り当てられた値に一致するすべての見出しを非表示にします。特定の見出しを目次から非表示にするために使用することはできません。
-
-{% tabs local %}
-{% tab usage example %}
-\`\`\`markdown
+{% tabs ローカル %}
+{% tab 使用例 %}
+```markdown
 ---
-toc\_headers: h2
+toc_headers: h2
 ---
-\`\`\`
+```
 {% endtab %}
 {% endtabs %}
 
 ### メッセージングチャネル
 
-`channel` キーは、ページの関連するメッセージングチャネルを設定するために使用されます。このキーは、以下の`string` 値の1 つ以上をリストとして受け入れます。
+`channel` 、ページに関連するメッセージングチャネルを設定する。このキーは、以下の`string` 、1つ以上の値をリストとして受け付ける。
 
 - `content cards`
 - `email`
@@ -178,55 +178,55 @@ toc\_headers: h2
 - `sms`
 - `webhooks`
 
-{% tabs local %}
-{% tab usage example %}
-\`\`\`markdown
+{% tabs ローカル %}
+{% tab 使用例 %}
+```markdown
 ---
-チャネル:
-  メール
-  ニュースフィード
+channel:
+  - email
+  - news feed
 ---
-\`\`\`
+```
 {% endtab %}
 {% endtabs %}
 
 ### ナビゲーションのみ
 
-`config_only` キーは、ページのコンテンツを左側のナビゲーションバーで非表示にせずに非表示にするために使用します。[ランディングページのないセクションを作成する]({{site.baseurl}}/contributing/content_management/sections?tab=without%20landing%20page#step-2-configure-your-section)時に使用します。このキーは、ブール値`true` または`false` を受け入れます。
+`config_only` 、左側のナビゲーション・バーに非表示にすることなく、ページのコンテンツを隠すことができる。このキーは、[ランディングページのないセクションを作る]({{site.baseurl}}/contributing/content_management/sections?tab=without%20landing%20page#step-2-configure-your-section)ときに使う。このキーは、`true` または`false` というブーリアン値を受け付ける。
 
-{% tabs local %}
-{% tab usage example %}
-\`\`\`markdown
+{% tabs ローカル %}
+{% tab 使用例 %}
+```markdown
 ---
 config_only: true
 ---
-\`\`\`
+```
 {% endtab %}
 {% endtabs %}
 
-### デフォルトURL を上書きする
+### デフォルトのURLを上書きする
 
-`permalink` キーは、[`hidden`](#hide-page-from-navigation) キーと一緒に使用して、Braze Docs のページのデフォルトURL をオーバーライドします。`permalink` に割り当てられた値は、リダイレクトの前に`https://www.braze.com/docs` が付加されます。このキーは、以下の要件を満たす任意の`string` 値を受け入れます。
+`permalink` 。 [`hidden`](#hide-page-from-navigation)キーを使って、Braze DocsのページのデフォルトURLを上書きする。`permalink` に割り当てられた値は、リダイレクトされる前に`https://www.braze.com/docs` でプリペンドされる。このキーは、以下の条件を満たす`string` 値を受け付ける。
 
 - 文字は小文字
-- ワードはアンダースコアで区切られます(`_`)。
-- "Directories"はスラッシュで区切られます(`/`)
-- その他の特殊文字はすべて削除されます
+- 単語はアンダースコア (`_`) で区切る。
+- "ディレクトリ "はフォワード・スラッシュ(`/`)で区切られる。
+- その他の特殊文字はすべて削除される
 
-{% tabs local %}
-{% tab usage example %}
-\`\`\`markdown
+{% tabs ローカル %}
+{% tab 使用例 %}
+```markdown
 ---
-hidden: 真
+hidden: true
 permalink: /support_contact/docs_team/
 ---
-\`\`\`
+```
 {% endtab %}
 {% endtabs %}
 
 ### ページレイアウト
 
-`layout` キーは、ページのレイアウトを設定するために使用されます。`layout` が設定されていない場合、`default` レイアウトが使用されます。このキーは、次の`string` 値のいずれかを受け入れます。
+`layout` キーでページのレイアウトを設定する。`layout` が設定されていない場合は、`default` のレイアウトが使用される。このキーは、以下の`string` 。
 
 - `api_page`
 - `dev_guide`
@@ -236,35 +236,35 @@ permalink: /support_contact/docs_team/
 - `blank_config`
 - `redirect`
 
-各値の詳細については、[ページレイアウト]({{site.baseurl}}/contributing/yaml_front_matter/page_layouts/)を参照してください。
+各値の詳細については、[ページレイアウトを]({{site.baseurl}}/contributing/yaml_front_matter/page_layouts/)参照のこと。
 
-{% tabs local %}
-{% tab usage example %}
-\`\`\`markdown
+{% tabs ローカル %}
+{% tab 使用例 %}
+```markdown
 ---
-page_layout: glossary\_page
+page_layout: glossary_page
 ---
-\`\`\`
+```
 {% endtab %}
 {% endtabs %}
 
 ### ページ順
 
-`page_order` キーは、左側のナビゲーションバーの[ order sections]({{site.baseurl}}/contributing/content_management/sections/#ordering-a-section) に使用します。このキーは、負でない任意の数値(`0`、`20`、または`5.5` など) を受け入れます。
+`page_order` キーは、左側のナビゲーションバーで[セクションを順番に並べる]({{site.baseurl}}/contributing/content_management/sections/#ordering-a-section)ときに使う。このキーは、負でない任意の数字（`0` 、`20` 、`5.5` など）を受け付ける。
 
-{% tabs local %}
-{% tab usage example %}
-\`\`\`markdown
+{% tabs ローカル %}
+{% tab 使用例 %}
+```markdown
 ---
 page_order: 35.6
 ---
-\`\`\`
+```
 {% endtab %}
 {% endtabs %}
 
 ### ページタイプ
 
-`page_type` キーは、ページの書式を設定するために使用します。このキーは、次の`string` 値のいずれかを受け入れます。
+`page_type` 、ページの書式設定を行う。このキーは、以下の`string` 。
 
 - `glossary`
 - `solution`
@@ -274,31 +274,31 @@ page_order: 35.6
 - `partner`
 - `update`
 
-各値の詳細については、[ページタイプ]({{site.baseurl}}/contributing/yaml_front_matter/page_layouts/)を参照してください。
+各値の詳細については、[ページの種類を]({{site.baseurl}}/contributing/yaml_front_matter/page_layouts/)参照のこと。
 
-{% tabs local %}
-{% tab usage example %}
-\`\`\`markdown
+{% tabs ローカル %}
+{% tab 使用例 %}
+```markdown
 ---
-page_type: チュートリアル
+page_type: tutorial
 ---
-\`\`\`
+```
 {% endtab %}
 {% endtabs %}
 
 ### プラットフォーム
 
-`platform` キーは、ページの関連プラットフォームを設定するために使用されます。このキーは、1 つ以上の[Braze SDKs]({{site.baseurl}}/developer_guide/home/) をリスト内の`string` 値として受け入れます。
+`platform` キーは、ページの関連プラットフォームの設定に使われる。このキーは、1つ以上の[Braze SDKを]({{site.baseurl}}/developer_guide/home/)リスト内の`string` 値として受け付ける。
 
-{% tabs local %}
-{% tab usage example %}
-\`\`\`markdown
+{% tabs ローカル %}
+{% tab 使用例 %}
+```markdown
 ---
-プラットフォーム: 
-  iOS
-  Web
-  Android
+platform:
+  - iOS
+  - Web
+  - Android
 ---
-\`\`\`
+```
 {% endtab %}
 {% endtabs %}
