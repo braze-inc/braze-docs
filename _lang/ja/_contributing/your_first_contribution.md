@@ -1,87 +1,87 @@
 ---
-nav_title: 初めての貢献
+nav_title: 初めての寄付
 article: Your first contribution
-description: "Docs-as-Code や Braze Docs を初めて使用する場合は、このステップバイステップのチュートリアルから始めてください。"
+description: "docs-as-codeやBraze Docsを初めて使う人は、このステップバイステップのチュートリアルから始めよう。"
 page_order: 1
 noindex: true
 ---
 
-# 初めての寄付
+# 最初の寄付
 
-> Docs-as-Code や Braze Docs を初めて使用する場合は、このステップバイステップのチュートリアルから始めてください。経験豊富な寄稿者の場合は、代わりに「[コンテンツ管理]({{site.baseurl}}/contributing/content_management/)」を参照してください。
+> docs-as-codeやBraze Docsを初めて使う人は、このステップバイステップのチュートリアルから始めよう。経験豊富な投稿者であれば、代わりに[コンテンツマネージャーについてを]({{site.baseurl}}/contributing/content_management/)参照してほしい。
 
-このチュートリアルを終了すると、次のことができるようになります。
+このチュートリアルを終えると、次のことができるようになる：
 
-- Braze Docs GitHub リポジトリをナビゲートする
-- GitHub Web サイトまたはローカル環境を使用して変更を加える
-- プルリクエスト (PR) の作成
-- テストサイトでの変更のプレビュー
-- Braze Docs チームにレビューをリクエストする
+- Braze DocsのGitHubリポジトリに移動する
+- GitHubのWebサイトやローカルの環境を使って変更を加える
+- プルリクエスト（PR）を作成する
+- テストサイトで変更をプレビューする
+- Braze Docsチームにレビューを依頼する
 
 {% multi_lang_include contributing/prerequisites.md %}
 
-## ステップ 1:GitHub リポジトリを調べる
+## ステップ 1:GitHubリポジトリを探索する
 
-[Braze Docs GitHub リポジトリは](https://github.com/braze-inc/braze-docs) Braze Docs のソースファイルをホストしています。まだすべてを理解していなくても、数分かけてリポジトリを探索してください。時間が経つにつれて、あなたはより親しみやすくなるでしょう。
+[Braze DocsのGitHubリポジトリは](https://github.com/braze-inc/braze-docs)、Braze Docsのソースファイルをホストしている。まだすべてを理解していなくても、数分かけてリポジトリを探索してほしい。時間が経てば、もっと慣れるだろう。
 
-![The Braze Docs GitHub repository homepage.]({% image_buster /assets/img/contributing/github/home_page.png %})
+![Braze Docs GitHub リポジトリのホームページ]({% image_buster /assets/img/contributing/github/home_page.png %})
 
-## ステップ 2:変更を加える
+## ステップ2:変化を起こす
 
-ドキュメントリポジトリに少し慣れてきたので、変更を開始する準備が整いました。まず、[Braze Docsを開いて]({{site.baseurl}})、行いたい簡単な変更を見つけて、どのように変更したいかを決めます。
+docsリポジトリに少し慣れたところで、変更を始める準備ができた。まず、[Braze Docsを]({{site.baseurl}})開封し、簡単な変更を見つけ、どのように変更するかを決める：
 
-- **GitHub を使用する (シンプル):**ドキュメントが 1 つしかない小さな変更の場合は、GitHub Web サイトから直接変更できます。
-- **ローカル環境の使用 (上級者向け):**複雑な変更や複数の文書の変更を行う場合は、ローカル環境から変更する必要があります。これが推奨方法です。
+- **GitHubを使う（シンプル）：**小規模の単一ドキュメントの変更であれば、GitHubのWebサイトから直接変更できる。
+- **ローカル環境を使用する（詳細）：**複雑なドキュメントや複数のドキュメントを変更する場合は、ローカル環境から変更する必要がある。これが推奨される方法だ。
 
 {% tabs %}
 {% tab github %}
-[Braze Docs GitHub リポジトリで](https://github.com/braze-inc/braze-docs)、を選択します。`_docs`
+[Braze Docs GitHubリポジトリで](https://github.com/braze-inc/braze-docs)、`_docs` を選択する。
 
-![The Braze Docs GitHub repository homepage with the '_docs' folder highlighted in the file tree.]({% image_buster /assets/img/contributing/github/select_docs_directory.png %})
+![Braze DocsのGitHubリポジトリのホームページで、ファイルツリーで'_docs'フォルダがハイライトされている。]({% image_buster /assets/img/contributing/github/select_docs_directory.png %})
 
-Braze Docsの各ページのURLは、リポジトリのディレクトリ構造を反映しています。ページのURLを使用して、`_docs`ディレクトリ内の対応するMarkdownファイルを見つけてください。たとえば、の Markdown ファイルは `_docs` > `_contributing` > `home.md` にあります。`braze.com/contributing/home`
+Braze Docsの各ページのURLは、リポジトリのディレクトリ構造を反映している。ページのURLを使って、`_docs` ディレクトリにある対応するMarkdownファイルを探す。例えば、`braze.com/contributing/home` のMarkdownファイルは`_docs` >`_contributing` >`home.md` にある。
 
-![The home page for the "Contributing" section on Braze Docs.]({% image_buster /assets/img/contributing/github/example_file_path.png %})
+![Braze Docsの "Contributing "セクションのホームページ。]({% image_buster /assets/img/contributing/github/example_file_path.png %})
 
-[**このファイルを編集**] を選択し、[Markdownフォーマットを使用して変更を加えます](https://www.markdownguide.org/basic-syntax/)。
+**このファイルを編集する**」を選択し、[Markdownフォーマットを使って](https://www.markdownguide.org/basic-syntax/)変更を加える。
 
-![An example page on Braze Docs showing "Edit this file".]({% image_buster /assets/img/contributing/github/edit_from_directory.png %})
+![Braze Docsにある「このファイルを編集する」ページの例。]({% image_buster /assets/img/contributing/github/edit_from_directory.png %})
 
-終了したら、[**変更をコミット**] を選択します。
+終了したら、**Commit changesを**選択する。
 
-![The Braze Docs GitHub repository showing "Commit changes" after editing a file.]({% image_buster /assets/img/contributing/github/commit_changes.png %})
+![Braze DocsのGitHubリポジトリで、ファイル編集後に「Commit changes」を表示する。]({% image_buster /assets/img/contributing/github/commit_changes.png %})
 
-次のウィンドウで、[**変更の提案**] を選択します。
+次のウィンドウで、「**変更を提案する**」を選択する。
 
-![The "Propose changes" window after selecting "Commit changes" in GitHub.]({% image_buster /assets/img/contributing/github/propose_changes.png %}){: style="max-width:65%;"}
+![GitHubで「変更をコミット」を選択した後の「変更提案」ウィンドウ]({% image_buster /assets/img/contributing/github/propose_changes.png %}){: style="max-width:65%;"}
 {% endtab %}
 
-{% tab local environment %}
+{% tab 地域環境 %}
 {% alert important %}
-続行する前に、[すべての前提条件を満たしていることを確認してください](#prerequisites)。
+続行する前に、すべての[前提](#prerequisites)条件が完了していることを確認する。
 {% endalert %}
 
-最近のほとんどのテキストエディター ([VS Code](https://code.visualstudio.com/Download) や [Intellij IDEA](https://www.jetbrains.com/idea/download/) など) には、コマンドを実行したりプロジェクトファイルを操作したりするためのアプリ内ターミナルが用意されています。テキストエディターを開き、テキストエディターのアプリ内ターミナルを開きます。
+最近のテキストエディタ（[VS Codeや](https://code.visualstudio.com/Download) [Intellij IDEAなど](https://www.jetbrains.com/idea/download/)）のほとんどは、コマンドを実行したりプロジェクトファイルを操作したりするためのアプリ内ターミナルを提供している。テキストエディタを開封し、テキストエディタのアプリ内ターミナルを開く。
 
-![Intellij IDEA with the in-app terminal open.]({% image_buster /assets/img/contributing/text_editor_with_terminal.png %})
+![アプリ内ターミナルを開封したIntellij IDEA]({% image_buster /assets/img/contributing/text_editor_with_terminal.png %})
 
 {% alert tip %}
-問題が発生した場合は、代わりにスタンドアロン端末を使用できます。
+もし問題があれば、代わりにスタンドアロン・ターミナルを使うこともできる。
 {% endalert %}
 
-ターミナルで、`braze-docs`ディレクトリを開きます。
+ターミナルで、`braze-docs` ディレクトリを開封する。
 
 ```bash
 cd ~/PATH_TO_REPOSITORY
 ```
 
-`PATH_TO_REPOSITORY``braze-docs`[環境を設定したときにリポジトリを保存した場所に置き換えてください]({{site.baseurl}}/contributing/home/#step-2-set-up-your-environment)。コマンドは次のようになるはずです。
+`PATH_TO_REPOSITORY` を、[環境]({{site.baseurl}}/contributing/home/#step-2-set-up-your-environment)設定時に`braze-docs` リポジトリを保存した場所に置き換える。コマンドは以下のようなものだ：
 
 ```bash
 cd ~/braze/braze-docs
 ```
 
-`braze-docs`ディレクトリにいるかどうかを確認し、Git のステータスを確認します。
+`braze-docs` 、Gitステータスをチェックする。
 
 ```bash
 pwd
@@ -89,62 +89,62 @@ git status
 ```
 
 {% alert tip %}
-`git status` Git ディレクトリの現在の状態を表示します。Git を初めて使用する場合は、すべてのステップの後にこのコマンドを実行して Git ワークフローを視覚化できます。詳細については、を参照してください[`git status`](https://git-scm.com/docs/git-status)。
+`git status` はGitディレクトリの現在のステータスを表示する。Gitを使い始めたばかりの人は、ステップごとにこのコマンドを実行すると、Gitのワークフローを視覚化しやすくなる。詳細については、[`git status`](https://git-scm.com/docs/git-status) を参照してください。
 {% endalert %}
 
-ドキュメントリポジトリでは、`develop`ブランチには最新バージョンの Braze Docs が反映されています。`develop`ブランチをチェックして、最新のアップデートをローカル環境に取り込んでください。
+docsリポジトリでは、`develop` ブランチがBraze Docsの最新バージョンを反映している。`develop` Branchをチェックして、最新の更新をあなたの内部環境に取り込もう。
 
 ```bash
 git checkout develop
 git pull
 ```
 
-ドキュメントに変更を加えるときは、必ず新しいブランチを作成します。`git branch``-b`フラグと一緒に使用して新しいブランチを作成します。
+ドキュメントに変更を加える場合は、常に新しいブランチを作成する。新しいブランチを作成するには、`git branch` と`-b` フラグを使用する。
 
 ```bash
 git checkout -b BRANCH_NAME
 ```
 
-`BRANCH_NAME`スペースで区切らず、変更内容の短い説明に置き換えてください。コマンドは次のようになるはずです。
+`BRANCH_NAME` 、変更点をスペースで区切らない短い説明に置き換える。コマンドは以下のようなものだ：
 
 ```bash
 $ git checkout -b fixing-typo-in-metadata
 Switched to a new branch 'fixing-typo-in-metadata'
 ```
 
-テキストエディターで、変更する文書を開き、[Markdownフォーマットを使用して変更を行います](https://www.markdownguide.org/basic-syntax/)。
+テキストエディタで、変更したいドキュメントを開封し、[Markdownフォーマットを使って](https://www.markdownguide.org/basic-syntax/)変更を加える。
 
 {% multi_lang_include contributing/alerts/tip_locating_a_file.md %}
 
-終了したら、変更を保存し、ターミナルを選択して Git のステータスを確認します。出力は以下のようになります。
+終了したら、変更を保存し、ターミナルを選択してGitのステータスをチェックする。出力は以下のようになる：
 
-\`\`\`bash
+```bash
 $ git status
-ブランチでのメタデータのタイプミスの修正について
-コミット用にステージングされていない変更:
-  (「git add<file>...」を使用してください。「」でコミットされる内容を更新する)
-  (「git restore」を使用してください<file>...「」を使用して作業ディレクトリの変更を破棄する)
-        変更済み:\_docs/_home/metadata.md
+On branch fixing-typo-in-metadata
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   _docs/_home/metadata.md
 
-コミットに変更は加えられません (「git add」または「git commit-a」を使用)
-\`\`\`
+no changes added to commit (use "git add" and/or "git commit -a")
+```
 
-`git add`どの変更をコミット用にステージングするかを Git に伝えるのに使います。次のコマンドは 2 つのオプションを表示します。
+`git add` を使って、どの変更をコミットのステージに入れたいかをGitに伝える。次のコマンドは2つのオプションを示す：
 
-- **パイプの左側:**を使用して、`--all`変更したファイルをすべて追加します。
-- **パイプの右側:**`PATH_TO_FILE`変更したファイルへの相対パスに置き換えて、個々のファイルを追加します。
+- **パイプの左側：**`--all` を使って変更したファイルをすべて追加する。
+- **パイプの右側：**`PATH_TO_FILE` を変更したファイルへの相対パスに置き換えて、個々のファイルを追加する。
 
 ```bash
 git add {--all|PATH_TO_FILE}
 ```
 
-`git commit``-m`フラグを付けて使用すると、短い説明 (またはメッセージ) とともにコミットを作成できます。
+短い説明（またはメッセージ）とともにコミットを作成するには、`git commit` に`-m` フラグを付ける。
 
 ```bash
 git commit -m "COMMIT_MESSAGE"
 ```
 
-`COMMIT_MESSAGE`変更内容を説明する短い文に置き換えてください。コマンドは次のようになるはずです。
+`COMMIT_MESSAGE` を、変更点を説明する短い文章に置き換える。コマンドは以下のようなものだ：
 
 ```bash
 $ git commit -m "Fixing a typo in the recommended software doc"
@@ -152,13 +152,13 @@ $ git commit -m "Fixing a typo in the recommended software doc"
  1 file changed, 1 insertion(+), 1 deletion(-)
 ```
 
-最後に、変更を Braze Docs GitHub リポジトリにプッシュしてください。
+最後に、変更をBraze DocsのGitHubリポジトリにプッシュする。
 
 ```bash
 git push -u origin BRANCH_NAME
 ```
 
-`BRANCH_NAME`あなたの支店の名前に置き換えてください。出力は以下のようになります。
+`BRANCH_NAME` 、あなたのBranchの名前に置き換える。出力は以下のようになる：
 
 ```bash
 $ git push -u origin fixing-typo-in-recommended-software
@@ -171,47 +171,47 @@ branch 'fixing-typo-in-recommended-software' set up to track 'origin/fixing-typo
 {% endtab %}
 {% endtabs %}
 
-## ステップ 3:プルリクエスト (PR) を作成する
+## ステップ 3:プルリクエスト（PR）を作成する
 
-まだ行っていない場合は、[リポジトリのホームページに戻り](https://github.com/braze-inc/braze-docs)、**Compare & pull request** を選択してください。
+まだそこにいない場合は、[リポジトリのホームページに](https://github.com/braze-inc/braze-docs)戻り、**比較＆プルリクエストを**選択する。
 
-![The Braze Docs GitHub repository homepage showing "Open pull request".]({% image_buster /assets/img/contributing/github/compare_and_pull_request.png %})
+![Braze Docs GitHub リポジトリのトップページに "Open pull request "と表示されている。]({% image_buster /assets/img/contributing/github/compare_and_pull_request.png %})
 
-PRの説明には、次のようなMarkdownのコメントが表示されます。
+PRの説明の中に、以下のようなMarkdownのコメントがある：
 
-\`\`\`markdown
+```markdown
 <!-- This is a Markdown comment. -->
 ```
 
-これらのコメントは、PRの説明をガイドしてくれます。完了したら、プルリクエストのドロップダウンを選択し、[**ドラフトプルリクエスト**] を選択します。
+これらのコメントは、あなたのPR記述の指針となるだろう。完了したら、プルリクエストのドロップダウンを選択し、**プルリクエストの下書きを**選択する。
 
-![An example pull request showing "Draft pull request".]({% image_buster /assets/img/contributing/github/draft_pull_request.png %}){: style="max-width:65%;"}
+![]({% image_buster /assets/img/contributing/github/draft_pull_request.png %}) "Draft pull request "を示すプルリクエストの例。{: style="max-width:65%;"}
 
-## ステップ 4: 作業内容を確認する
+## ステップ 4:自分の仕事を見直す
 
-サイトプレビューで作業内容を確認して、コンテンツが [Braze Docs スタイルガイドに従っていることを確認してください]({{sitebase.url}}/contributing/style_guide/)。[さらに変更を加える必要がある場合は、「その他の変更を加える」を参照してください。](#step-6-make-additional-changes-optional)それ以外の場合は、Braze Docs [チームにレビューをリクエストできます](#step-5-request-a-review)。
+[Braze Docsスタイルガイドに従って]({{sitebase.url}}/contributing/style_guide/)コンテンツを作成し、サイトプレビューで作品を確認する。追加の変更が必要な場合は、[追加の変更を行う](#step-6-make-additional-changes-optional)を参照のこと。それ以外の場合は、Braze Docsチームに[レビューを依頼](#step-5-request-a-review)することができる。
 
 {% tabs %}
 {% tab github %}
-PR コメントで、`@braze-inc/docs-team`タグを付けてサイトプレビューをリクエストします。
+PRコメントで、`@braze-inc/docs-team` タグを付けて、サイトプレビューをリクエストする。
 
-![An example comment tagging the Braze Docs team to request a site preview.]({% image_buster /assets/img/contributing/github/tag_docs_team_in_comment.png %}){: style="max-width:83%;"}
+![サイトプレビューを依頼するためにBraze Docsチームにタグ付けしたコメントの例。]({% image_buster /assets/img/contributing/github/tag_docs_team_in_comment.png %}){: style="max-width:83%;"}
 
-サイトプレビューを開くには、[**デプロイメントを表示**] を選択します。
+サイトプレビューを開封するには、**配置を表示するを**選択する。
 
-![An example pull request showing the "View deployment" button generated by the Vercel bot.]({% image_buster /assets/img/contributing/github/view_deployment.png %})
+![Vercel botによって生成された "View deployment "ボタンを示すプルリクエストの例。]({% image_buster /assets/img/contributing/github/view_deployment.png %})
 
 {% endtab %}
 
-{% tab local environment %}
-ターミナルで、「ローカルサーバーを起動する」`rake` コマンドを使用します。
+{% tab 地域環境 %}
+ターミナルで、`rake` コマンドを使ってローカル・サーバーを起動する。
 
 ```bash
 cd ~/braze-docs
 rake
 ```
 
-出力は以下のようになります。
+出力は以下のようになる：
 
 ```bash
 == Sinatra (v3.0.4) has taken the stage on 4000 for development with backup from Puma
@@ -225,65 +225,65 @@ Puma starting in single mode...
 ...
 ```
 
-デフォルトでは、[`http://127.0.0.1:4000`](http://127.0.0.1:4000)サイトプレビューはローカルホストで生成されます。サイトプレビューを開くには、Web ブラウザでリンクを開きます。
+デフォルトでは、サイトのプレビューはlocalhost上に生成される。 [`http://127.0.0.1:4000`](http://127.0.0.1:4000).サイトのプレビューを開封するには、Webブラウザでリンクを開く。
 
-![An example site preview running in a web browser.]({% image_buster /assets/img/contributing/styling_examples/home.png %})
+![ウェブブラウザで動作するサイトプレビューの例。]({% image_buster /assets/img/contributing/styling_examples/home.png %})
 
-ローカルサーバーを停止するには、ターミナルを再度開き、<kbd><kbd>Control+C</kbd></kbd> を押します。
+ローカルサーバーを停止するには、ターミナルを再び開き、<kbd>コントロール</kbd>＋<kbd>C</kbd>キーを押す。
 
 {% alert tip %}
-詳細な手順については、「[プレビューの生成]({{site.baseurl}}/contributing/generating_a_preview/)」を参照してください。
+完全なチュートリアルについては、[プレビューを生成するを]({{site.baseurl}}/contributing/generating_a_preview/)参照のこと。
 {% endalert %}
 {% endtab %}
 {% endtabs %}
 
-## ステップ 5: レビューをリクエストする
+## ステップ 5レビューを依頼する
 
-Braze Docs **チームのメンバーに作業内容をレビューしてもらう準備ができたら、[レビュー準備完了**] を選択します。
+Braze Docsチームのメンバーがあなたの作品をレビューする準備ができたら、**Ready for reviewを**選択する。
 
-![An example pull request showing "Ready for review".]({% image_buster /assets/img/contributing/github/ready_for_review.png %}){: style="max-width:75%;"}
+![]({% image_buster /assets/img/contributing/github/ready_for_review.png %}) "Ready for review "を示すプルリクエストの例。{: style="max-width:75%;"}
 
-**レビュアーとタイプ**`braze-inc/docs-team`。チーム名を選択して [<kbd>Esc</kbd>] を押すか、ドロップダウンをクリックして選択を確定します。
+**レビュアーの**フィールドに、`braze-inc/docs-team` と入力する。チーム名を選択し、<kbd>Esc</kbd>キーを押すか、ドロップダウンの外をクリックして選択を確定する。
 
-![An example pull request with "docs-team" added as the reviewer.]({% image_buster /assets/img/contributing/github/add_docs_team_as_reviewers.png %}){: style="max-width:55%;"}
+![レビュアーに "docs-team "を加えたプルリクエストの例。]({% image_buster /assets/img/contributing/github/add_docs_team_as_reviewers.png %}){: style="max-width:55%;"}
 
-ドキュメントチームがレビュー後に追加の変更を要求した場合、[GitHubの通知設定に従って通知されます](https://docs.github.com/en/account-and-profile/managing-subscriptions-and-notifications-on-github/setting-up-notifications/configuring-notifications)。それ以外の場合は、ドキュメントチームが変更を承認してマージします。
+docsチームがレビュー後に追加の変更を要求した場合は、[GitHubの通知設定に従って](https://docs.github.com/en/account-and-profile/managing-subscriptions-and-notifications-on-github/setting-up-notifications/configuring-notifications)通知される。そうでなければ、docsチームがあなたの変更を承認し、マージする。
 
-承認された寄付金は、次の火曜日または木曜日に配布されます。必ず Braze Docs をチェックして、あなたの頑張りを確認してください。貢献していただきありがとうございます！
+承認された献金は、翌週の火曜日か木曜日に配備される。ぜひBraze Docsをチェックして、あなたの頑張りを見てほしい。貢献してくれてありがとう！
 
-## ステップ 6: その他の変更を加える (オプション)
+## ステップ 6: 追加の変更を加える（オプション）
 
-あなたまたは Braze Docs チームのメンバーが作業内容を確認した後、PR に追加の変更を加える必要があるかもしれません。ローカル環境または GitHub を使用して行うことができます。
+あなたまたはBraze Docsチームのメンバーがあなたの作品を確認した後、PRに追加の変更を加える必要があるかもしれない。ローカル環境かGitHubを使って行うことができる。
 
 {% tabs %}
 {% tab github %}
-PRで、[**変更されたファイル**] を選択し、更新するファイルを見つけて、[<i class="fa-solid fa-ellipsis"></i>**オプションを表示**] > [**ファイルを編集**] を選択します。
+PRで、**Files changedを**選択し、更新したいファイルを探し、<i class="fa-solid fa-ellipsis"></i> **Show options**>**Edit fileを**選択する。
 
-![The "Files changed" section in an example pull request showing "Edit file".]({% image_buster /assets/img/contributing/github/edit_from_pr.png %})
+![プルリクエスト例の「変更されたファイル」セクションに「ファイルの編集」が表示されている。]({% image_buster /assets/img/contributing/github/edit_from_pr.png %})
 
-終了したら、[**変更をコミット**] を選択します。
+終了したら、**Commit changesを**選択する。
 
-![A file from an example pull request showing "Commit changes" after editing.]({% image_buster /assets/img/contributing/github/commit_changes.png %})
+![]({% image_buster /assets/img/contributing/github/commit_changes.png %}) 編集後の「変更をコミット」を示すプルリクエスト例のファイル。
 
-[**BRANCH\_NAME ブランチに直接コミット**] > [**変更をコミット**] を選択します。ここで、`BRANCH_NAME`はブランチの名前です。
+**BRANCH_NAME ブランチに直接コミット**>**変更をコミット** を選択する。ここで、`BRANCH_NAME` はブランチの名前である。
 
-![The "Commit changes" option after choosing "Commit directly to BRANCH_NAME branch.]({% image_buster /assets/img/contributing/github/confirm_committed_changes.png %}){: style="max-width:65%;"}
+![BRANCH_NAME ブランチに直接コミット」を選択した後に、「変更をコミット」オプションを選択する]({% image_buster /assets/img/contributing/github/confirm_committed_changes.png %}){: style="max-width:65%;"}
 
-終了したら、[レビューをリクエストしてください](#step-5-request-a-review)。
+終わったら、[レビューをリクエスト](#step-5-request-a-review)する。
 {% endtab %}
 
-{% tab local environment %}
-PRで、支店名の横にある [<i class="fa-regular fa-clone"></i>**コピー**] を選択します。
+{% tab 地域環境 %}
+PRの中で、Branch名の横にある<i class="fa-regular fa-clone"></i> **Copyを**選択する。
 
-![An example pull request with the "Copy" icon shown next to the branch name.]({% image_buster /assets/img/contributing/github/clone_the_fork.png %})
+![ブランチ名の横に「コピー」アイコンが表示されているプルリクエストの例。]({% image_buster /assets/img/contributing/github/clone_the_fork.png %})
 
-テキストエディタのターミナルで、ブランチをチェックアウトし、GitHub のリモートブランチから最新の更新を取得します。
+テキストエディタのターミナルで、自分のBranchをチェックアウトし、GitHubのリモートブランチから最新の更新をプルする。
 
 ```bash
 git checkout BRANCH_NAME && git pull
 ```
 
-`BRANCH_NAME`クリップボードにコピーしたブランチ名に置き換えます。出力は以下のようになります。
+`BRANCH_NAME` をクリップボードにコピーした Branch 名に置き換える。出力は以下のようになる：
 
 ```bash
 $ git checkout fixing-typo-in-metadata  && git pull
@@ -291,6 +291,6 @@ Switched to branch 'fixing-typo-in-metadata'
 Your branch is up to date with 'origin/fixing-typo-in-metadata'.
 ```
 
-テキストエディターで、変更する文書を開き、[手順 2 で行った手順を繰り返します。変更を加えてください](#step-2-make-a-change)。
+テキストエディタで、変更したいドキュメントを開封し、[ステップ2で完了したステップを繰り返す：変更を加える](#step-2-make-a-change).
 {% endtab %}
 {% endtabs %}
