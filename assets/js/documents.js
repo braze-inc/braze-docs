@@ -528,7 +528,7 @@ $(document).ready(function() {
       if ($(this)[0].nextSibling){
         punctuation = ($(this)[0].nextSibling.nodeValue || '').substr(0,1);
         if (punctuations.includes(punctuation)) {
-          $(this)[0].nextSibling = $(this)[0].nextSibling.substring(1);
+          $(this)[0].nextSibling = ($(this)[0].nextSibling || '').substring(1);
           has_punchtuation = true;
         }
       }
