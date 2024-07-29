@@ -53,7 +53,7 @@ The policy you have in your DMARC record will tell the participating recipient e
 
 There are two options to check your domain's DMARC authentication:
 
-* **Option 1:** You can input your parent domain or subdomain in any third-party DMARC checker, such as [MXToolbox](https://mxtoolbox.com/dmarc.aspx), to audit whether you have a DMARC policy in place and what that policy is set to.
+* **Option 1:** You can input your parent domain or subdomain in any third-party DMARC checker, such as [MXToolbox](https://mxtoolbox.com/dmarc.aspx), to audit whether you have a DMARC policy in place and what that policy is set to. 
 * **Option 2:** Open up an email from your domain or subdomain in your mailbox, and find the original message to check whether DMARC is passing authentication on this email.
 
 For example, if you’re using Gmail, follow these steps:
