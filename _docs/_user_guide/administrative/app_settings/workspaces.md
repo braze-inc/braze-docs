@@ -81,7 +81,7 @@ Repeat steps 2 and 3 to set up as many workspaces as your plan requires. As a be
 
 {% alert tip %}
 **Add a testing workspace**<br>You can perform app testing by completely sandboxing certain users from your production instance. Create a new workspace, and when you publish your application, be sure to change the API key that Braze is using to match that of your production workspace rather than your testing workspace.
-{% endalert %
+{% endalert %}
 
 ## Managing workspaces
 
