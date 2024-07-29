@@ -290,7 +290,7 @@ The following table describes the differences between the free and pro version o
 
 | Area                   | Free version                          | Pro version             |
 | :---------------------- | ------------------------------------- | :--------------------------------------- |
-| Item update frequency<sup>1</sup>   | Weekly                                | Daily                                    |
+| User update frequency<sup>1</sup>   | Weekly                                | Daily                                    |
 | Model retraining frequency  | Monthly                               | Monthly                                   |
 | Maximum recommendations | 1 recommendation per type<sup>1</sup> | 100 recommendations per type<sup>2</sup> |
 
