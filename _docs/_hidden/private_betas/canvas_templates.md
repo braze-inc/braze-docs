@@ -66,5 +66,15 @@ Canvas templates can be duplicated and archived, similar to an actual Canvas. To
 
 At a workspace level, you can update user permissions to allow or limit the access to create, edit, view, or archive Canvas templates. These permissions are not yet available for [teams]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams).
 
+## Frequently asked questions
+
+### Can I save an incomplete setup in a Canvas template?
+
+Yes, you can save incomplete steps as a Canvas template. However, there will be an error on the **Save template** button that indicates what is needed to launch the Canvas where the template is used.
+
+### Can I save my Canvas builder settings as a template, or can I only save Canvas steps? 
+
+Yes, you can save settings in the Canvas builder within a Canvas template. For example, if you plan to use a combination of segments and filters often, you can save these **Target Audience** settings as part of your Canvas template.
+
 [1]: {% image_buster /assets/img/canvas_template_example.png %}
 [2]: {% image_buster /assets/img/save_canvas_as_template.png %}
