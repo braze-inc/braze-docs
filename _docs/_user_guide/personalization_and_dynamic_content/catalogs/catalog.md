@@ -35,7 +35,7 @@ Need more space to accommodate for your CSV files? Contact your Braze account ma
 
 Note these guidelines when creating your CSV file. The first column of the CSV file must be a header of `id`, and each item's `id` must be unique. All other column names must be unique. Additionally, the following limitations apply to catalog CSV files:
 
-- Maximum of 500 fields (columns)
+- Maximum of 1,000 fields (columns)
 - Maximum field (column) name of 250 characters
 - Maximum 100&nbsp;MB for all CSV files combined across your company (Free)
 - Maximum CSV file size of 2&nbsp;GB (Pro)
