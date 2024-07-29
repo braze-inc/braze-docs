@@ -290,11 +290,12 @@ The following table describes the differences between the free and pro version o
 
 | Area                   | Free version                          | Pro version            |
 | :---------------------- | ------------------------------------- | :--------------------------------------- |
-| Item update frequency   | Weekly                                | Daily                                    |
+| User update frequency<sup>1</sup>   | Weekly                                | Daily                                    |
 | Model retraining frequency  | Monthly                               | Monthly                                   |
-| Maximum recommendations | 1 recommendation per type<sup>1</sup> | 100 recommendations per type<sup>1</sup> |
+| Maximum recommendations | 1 recommendation per type<sup>1</sup> | 100 recommendations per type<sup>2</sup> |
 
-<sup>1. Available recommendation types are AI Personalized, Most recent, and Most popular.</sup>
+<sup>1. This is the frequency at which user-specific item recommendations are updated (all models except Most Popular items, which updates when the model retrains). For example, if a user purchases an item recommended based on AI item recommendations, their recommended items will be updated according to this frequency</sup>
+<sup>2. Available recommendation types are AI Personalized, Most recent, and Most popular.</sup>
 
 ## Frequently asked questions
 
