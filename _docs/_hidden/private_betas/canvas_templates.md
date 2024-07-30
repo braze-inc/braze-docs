@@ -11,8 +11,7 @@ page_type: reference
 > This reference article covers how to create and manage templates for Canvas. Using templates can refine your messaging by creating a consistent framework that can be easily customized to fit your specific goals across your Canvases.
 
 {% alert important %}
-Canvas templates are currently in early access. Contact your customer success manager if you're interested in participating in this early access.<br><br>
-WhatsApp and push notifications with action buttons are not yet supported in Canvas templates.
+Canvas templates are currently in early access. Contact your customer success manager if you're interested in participating in this early access.
 {% endalert %}
 
 ## Method 1: Create from an existing Canvas
@@ -66,6 +65,16 @@ There are two ways to use your template when composing a Canvas:
 Canvas templates can be duplicated and archived, similar to an actual Canvas. To edit a Canvas template, select the template then **<i class="fas fa-pencil-alt"></i>Edit**.
 
 At a workspace level, you can update user permissions to allow or limit the access to create, edit, view, or archive Canvas templates. These permissions are not yet available for [teams]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams).
+
+## Frequently asked questions
+
+### Can I save an incomplete step in a Canvas template?
+
+Yes, you can save incomplete steps as a Canvas template. However, when the template is used, there will be an error on the **Save template** button that indicates what is needed to launch the Canvas.
+
+### Can I save my Canvas builder settings as a template, or can I only save steps? 
+
+Yes, you can save settings in the Canvas builder within a Canvas template. For example, if you plan to use a combination of segments and filters often, you can save these **Target Audience** settings as part of your Canvas template.
 
 [1]: {% image_buster /assets/img/canvas_template_example.png %}
 [2]: {% image_buster /assets/img/save_canvas_as_template.png %}

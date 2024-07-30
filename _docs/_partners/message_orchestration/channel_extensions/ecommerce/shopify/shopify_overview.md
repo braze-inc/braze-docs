@@ -37,7 +37,7 @@ The Shopify and Braze integration allows you to connect your Shopify store to se
   - Order refunds
 - Product recommendations
 - Cross-sell and upsells
-- [Back-in-stock]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/shopify/shopify_catalogs/back_in_stock/) (early access) 
+- [Back-in-stock]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/shopify/shopify_catalogs/back_in_stock/)
 
 ## Requirements
 

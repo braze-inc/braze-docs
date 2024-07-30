@@ -163,10 +163,20 @@ If you're updating a user on their purchase, an account balance, or anything reg
 
 | Filter         | Definition          | Supported |
 | :--------------- | :--------------- | :-------- |
-| [money][5.1]      | Formats numbers to ensure that decimals are in the proper place, and zeros are not dropped off the end of any numbers.         | ✅  Yes   |
+| [money][5.1]      | Formats numbers to ensure that decimals are in the proper place, and zeros are not dropped off the end of any numbers.   | ✅  Yes   |
 | [money_with_currency][5.2]    | Formats numbers with the currency symbol.     | ⛔  No    |
 | [money_without_currency][5.4]     | Formats numbers without the currency symbol.      | ⛔  No    |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+
+{% alert important %}
+To properly format a number with the `money` filter, remove any commas in the number and add the `plus: 0` filter before the `money` filter. For example, see the following Liquid:<br><br>
+{% raw %}
+```liquid
+{% assign my_int = "350000.25" | plus: 0 %}
+{{ my_int | money }}
+```
+{% endraw %}
+{% endalert %}
 
 ### Shopify money filter versus Braze money filter
 
