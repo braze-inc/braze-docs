@@ -44,13 +44,13 @@ If you are selecting SKU as your catalog ID, make sure that all your products an
 
 You will receive a dashboard notification, and your status will display as “In Progress” to indicate the initial sync is starting. Note that the time it takes for the sync to finish will depend on how many products and variants Braze will need to sync over from Shopify. During this time, you can leave this page and wait for a dashboard notification or email to notify you when this is complete.
 
-Note that if your initial sync exceeds your [catalog limit](https://www.braze.com/docs/user_guide/personalization_and_dynamic_content/catalogs/catalog/#limits), Braze will stop syncing any more products. If you exceed the limit after the sync is successful due to new products being added over time, the sync will no longer be active. In both these cases, product updates from Shopify will no longer be reflected in Braze. Reach out to your account manager to consider upgrading your tier. 
+Note that if your initial sync exceeds your [catalog limit]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/catalog/#limits), Braze will stop syncing any more products. If you exceed the limit after the sync is successful due to new products being added over time, the sync will no longer be active. In both these cases, product updates from Shopify will no longer be reflected in Braze. Reach out to your account manager to consider upgrading your tier. 
 
 ### Step 4: Sync completed
 
 You will receive a dashboard notification and an email after the sync is successful. The Shopify partner page will also update the status under Shopify catalogs to “Syncing". You can view your products by clicking the catalog name on the Shopify partner page.
 
-Refer to [Catalogs additional use cases](https://www.braze.com/docs/user_guide/personalization_and_dynamic_content/catalogs/catalog/#additional-use-cases) to learn more about how to leverage catalog data to personalize your message.
+Refer to [Catalogs additional use cases]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/catalog/#additional-use-cases) to learn more about how to leverage catalog data to personalize your message.
 
 #### Supported Shopify catalog data
 
@@ -83,6 +83,15 @@ To access and use `product_handle` and `product_url`, disconnect and reconnect y
 {% alert warning %}
 Modifying the Shopify catalog in any way may unintentionally interfere with real-time product syncs. Do not make any edits to the Shopify catalog, as these have the potential to be overridden by Shopify. Instead, make the necessary product updates in your Shopify instance.<br><br>To delete your Shopify catalog, go to the Shopify page and deactivate sync. Do not delete the Shopify catalog directly on the catalogs page. 
 {% endalert %}
+
+## Back-in-stock and price-drop use cases 
+
+To set up back-in-stock notifications, follow the steps [here](({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/back_in_stock_notifications#back-in-stock-notifications).
+
+To set up price drop notifications, follow the steps [here](({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/price_drop_notifications).
+
+Note that with the Shopify integration, you'll need to create a custom event that captures a user's subscription status in your catalog for each use case. The custom event will require an event property that maps to either the [SKU or Shopify variant ID](({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/shopify/shopify_features/shopify_catalogs#step-2-select-your-product-identifier)) that you have selected as part of your Shopify product sync. 
+
 
 ## Changing catalog ID
 
