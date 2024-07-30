@@ -68,9 +68,9 @@ At a workspace level, you can update user permissions to allow or limit the acce
 
 ## Frequently asked questions
 
-### Can I save an incomplete setup in a Canvas template?
+### Can I save an incomplete step in a Canvas template?
 
-Yes, you can save incomplete steps as a Canvas template. However, there will be an error on the **Save template** button that indicates what is needed to launch the Canvas where the template is used.
+Yes, you can save incomplete steps as a Canvas template. However, when the template is used, there will be an error on the **Save template** button that indicates what is needed to launch the Canvas.
 
 ### Can I save my Canvas builder settings as a template, or can I only save Canvas steps? 
 
