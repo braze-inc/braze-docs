@@ -68,7 +68,7 @@ Before preparing any PII-based tables, consider using [LiveRamp’s privacy filt
 
 #### Braze identifiers
 
-Braze’s Event Logs provide identifiers usable within LiveRamp’s Application. For the full list, download the [Braze Event Schemas](https://www.braze.com/docs/assets/download_file/data-sharing-raw-table-schemas.txt).
+Braze’s Event Logs provide identifiers usable within LiveRamp’s Application. For the full list, download the [Braze Event Schemas and Identifiers](https://www.braze.com/docs/assets/download_file/data-sharing-raw-table-schemas.txt).
 
 | Identifier Type | Description  |
 |-----------------|--------------|
@@ -88,7 +88,19 @@ Use of any client/brand-specific custom identifier within LiveRamp’s applicati
 
 ### Step 6: Verify the output
 
-To verify your output, run the following code and confirm that your previous identifiers were replaced with your LiveRamp Identifier. For a full walkthrough, see [Perform Identity Resolution](https://docs.liveramp.com/identity/en/perform-identity-resolution-in-snowflake.html).
+To verify your output, run the following code. For a full walkthrough, see [Perform Identity Resolution](https://docs.liveramp.com/identity/en/perform-identity-resolution-in-snowflake.html).
+
+```sql
+call lr_resolution_and_transcoding(
+$customer_input_table_name,
+$customer_meta_table_name,
+$output_table_name,
+$customer_logging_table_name,
+$customer_metrics_table_name
+);
+```
+
+Confirm that your previous identifiers were replaced with your LiveRamp Identifier.
 
 ```sql
 call check_for_output(
