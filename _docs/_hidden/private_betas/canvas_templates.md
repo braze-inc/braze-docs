@@ -72,7 +72,7 @@ At a workspace level, you can update user permissions to allow or limit the acce
 
 Yes, you can save incomplete steps as a Canvas template. However, when the template is used, there will be an error on the **Save template** button that indicates what is needed to launch the Canvas.
 
-### Can I save my Canvas builder settings as a template, or can I only save Canvas steps? 
+### Can I save my Canvas builder settings as a template, or can I only save steps? 
 
 Yes, you can save settings in the Canvas builder within a Canvas template. For example, if you plan to use a combination of segments and filters often, you can save these **Target Audience** settings as part of your Canvas template.
 
