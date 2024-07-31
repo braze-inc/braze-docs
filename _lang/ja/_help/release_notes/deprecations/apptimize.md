@@ -1,79 +1,79 @@
 ---
-nav_title: パートナーシップを最適化
+nav_title: アプティマイズパートナーシップ
 page_order: 0
 
 page_type: update
-description: "このアーカイブ記事では、ApptimizeとBrazeのパートナーシップについて説明しています。Braze は、2019 年 9 月をもって Apptimize パートナーシップのサポートを終了しました。"
+description: "この記事は、ApptimizeとBrazeの提携について説明しています。Brazeは2019年9月をもってApptimizeパートナーシップのサポートを廃止しました。"
 ---
 
-# 最適化する
+# アプティマイズ
 
 {% alert update %}
-Braze は、2019 年 9 月をもって Apptimize パートナーシップのサポートを終了しました。
+Brazeは2019年9月をもってApptimizeパートナーシップのサポートを廃止しました。
 
 <br>
 
-現在 Apptimize を Braze と一緒に使用している場合、サービスの中断は発生しません。Apptimize カスタム属性を Braze ユーザープロファイルに設定することは引き続き可能です。ただし、パートナーとの正式なエスカレーションサポートは提供されません。
+現在、ApptimizeをBrazeと一緒に使用している場合、サービスの中断は発生しません。まだApptimizeカスタム属性をBrazeユーザープロファイルに設定できます。しかし、パートナーとの正式なエスカレーションサポートは提供されません。
 
 <br>
 
-ご不明な点がございましたら、Braze または Apptimize の担当者にお問い合わせください。
+ご不明点がございましたら、BrazeまたはApptimizeの担当者にお問い合わせください。
 {% endalert %}
 
 
-[Apptimizeは](https://apptimize.com/)、モバイルアプリのテストおよび成長プラットフォームです
-これにより、顧客はアプリ開発プロセス全体を迅速に反復できます。
+[Apptimize](https://apptimize.com/)はモバイルアプリのテストおよび成長プラットフォームです
+顧客がアプリ開発プロセス全体で迅速にIterateできるようにします。
 
-AptimizeはBrazeと組み合わせて使用することで、あなたの成長を補完することができます
-マーケティング/CRM戦略と実験の同期による製品UIテストと
-両方のプラットフォームにわたるデータ。
+ApptimizeはBrazeと連携して、成長を補完するために使用できます
+マーケティング / CRM 戦略と製品UIテストを実験と同期させることによって
+両方のプラットフォームにまたがるデータ。
 
 ## ユースケース
 
-Braze と Apptimize を併用すると、両方のプラットフォームを組み合わせて活用できます。
-パワフルなエンドツーエンドのエクスペリエンスを実現するには:
+BrazeとApptimizeを一緒に使用することで、両方のプラットフォームを連携して活用できます。
+強力なエンドツーエンドの体験を作成するために:
 
-* アプリ内マーケティングエクスペリエンスとCRMマーケティングエクスペリエンスを同期して、カスタムプロモーションを行います。
-* Apptimize で新しいオンボーディング体験をテストし、Braze を使って新しいフロー全体でユーザーを育成しましょう。
-* 適切なユーザーメッセージとともに、製品の機能構成を同時にテストします。
-* さまざまなユーザーセグメントに合わせて、アプリ内エクスペリエンスと適切なメッセージをカスタマイズします。
+* カスタムプロモーションのために、アプリ内およびCRMマーケティング体験を同期させます。
+* Apptimizeで新しいオンボーディング体験をテストし、新しいフロー全体でユーザーを育成するためにBrazeを使用します。
+* 適切なユーザーメッセージングと並行して製品機能の構成をテストします。
+* さまざまなユーザーセグメントに合わせて、アプリ内の体験とそれに適したメッセージングを調整します。
 
-## 仕組み
+## その仕組み
 
-Braze と Apptimize を統合して、SDK から SDK にデータを渡すことができます。
-アクティブな Apptimize A/B テストグループを Braze に同期することで、次のことが可能になります。
-Braze内の特定のApptimizeテストでユーザーをプッシュ、メールなどでリターゲティングします。
-またはアプリ内メッセージング。
+BrazeとApptimizeは統合して、SDKからSDKにデータを渡すことができます。
+ApptimizeのアクティブなA/BテストグループをBrazeに同期させることができます。
+リターゲティングする the users in a particular Apptimize test within Braze via push, メール,
+またはインアプリメッセージング。
 
-BrazeとApptimizeがどのように機能するかを示すサンプル統合コードがあります
-SDK は、以下に基づいてデータを渡して Braze のカスタムターゲティングとセグメンテーションを強化できます。
-実験データを最適化します。
+サンプルの統合コードがあり、BrazeとApptimizeの使い方を示しています。
+SDKは、Brazeに基づいてカスタムターゲティングとセグメンテーションを強化するためのデータを渡すことができます。
+アプティマイズ実験データ。
 
-このサンプルインテグレーションでは、ユーザーの Braze User にカスタム属性を設定します
-以下の Aptimize データのプロファイル:
+このサンプル統合は、ユーザーのBrazeユーザーにカスタム属性を設定します
+次のApptimizeデータのプロファイル：
 
-* ユーザーが現在登録しているアクティブなテストの全リスト。
-* ユーザーがこれまでに登録したテストの全リスト (完了したテストを含む)。
+* ユーザーが現在登録されているアクティブな実験の完全なリスト。
+* ユーザーがこれまでに参加したすべての実験の完全なリスト（完了した実験を含む）。
 * ユーザーが実験参加の一環として見たバリアント。
 
-> 機能フラグは、機能フラグがオンになっているかどうかが唯一のバリエーションである実験とみなされます。機能フラグがオフの場合、データは報告されません。
+> フィーチャーフラグは、唯一のバリアントがフィーチャーフラグがオンかどうかである実験と見なされます。フィーチャーフラグがオフの場合、データは報告されません。
 
-さらに、この統合により、Braze カスタムイベントが初めてログに記録されます
-実験の参加イベント。これは次の 2 つの方法のいずれかで実行できます。
+さらに、この統合は最初のBrazeカスタムイベントを記録します
+実験の参加イベント。これは、次の 2 つの方法のいずれかで実行できます。
 
-* カスタムイベントは、テスト名、テスト ID、バリアント名、バリアント ID を示すプロパティデータを使用して生成されます。その後、Brazeのアクションベースの配信キャンペーンとCanvasesを使用してリアルタイムトリガーでユーザーをリターゲティングできます。これらのプロパティを使用して、トリガーしたいAptimize Experimentを正確に特定してください。
-* 発生したすべての参加のエントリを含む属性配列が生成されます。各参加は次のようにフォーマットされます `experiment_id_EXPERIMENT_ID:variant_id_VARIANT_ID:experiment_name_EXPERIMENT_NAME:variant_name_VARIANT_NAME`
+* カスタムイベントは、プロパティデータを使用して生成され、実験名、実験ID、バリアント名、およびバリアントIDを示します。次に、Brazeのアクションベースの配信キャンペーンとCanvasを使用して、リアルタイムトリガーを介してユーザーをリターゲティングすることができます。これらのプロパティを使用して、トリガーしたい正確なApptimize実験を特定します。
+* 属性配列は、発生したすべての参加のエントリで生成されます。各参加は`experiment_id_EXPERIMENT_ID:variant_id_VARIANT_ID:experiment_name_EXPERIMENT_NAME:variant_name_VARIANT_NAME`としてフォーマットされています
 
-その後、Brazeのアクションベースの配信キャンペーンまたはCanvasesを使用して送信できます
-これらのイベントがトリガーされると、ユーザーにリアルタイムでフォローオンメッセージが送信されます。
+次に、Brazeのアクションベースの配信キャンペーンやCanvasを使用して送信できます
+これらのイベントがトリガーされたときに、リアルタイムでユーザーにフォローオンメッセージを送信します。
 
-## インテグレーション
+## 統合
 
 ### iOS
-アプリと統合するには、`Appboy-Apptimize.m`以下をインポートして
-`Apptimize-Appboy.h` Xcode プロジェクトにファイルをインポートし、 `Appboy-Apptimize.h`
-AppDelegate の実装にヘッダーを追加し、以下を追加します
-`didFinishLaunchingWithOptions` アプリボーイとアプリティマイズの両方を初期化した後:
+アプリと統合するために、次の`Appboy-Apptimize.m`をインポートし
+`Apptimize-Appboy.h` ファイルをXcodeプロジェクトにインポートし、`Appboy-Apptimize.h` をインポートします
+ヘッダー into your AppDelegate implementation and add the following to
+`didFinishLaunchingWithOptions` AppboyとApptimizeの両方を初期化した後:
 
 ```objc
 [ApptimizeAppboy setupExperimentTracking];
@@ -81,54 +81,54 @@ AppDelegate の実装にヘッダーを追加し、以下を追加します
 
 #### Appboy-Apptimize.h:
 
-\`\`\`objc
+```objc
 //  Apptimize-Appboy.h
 
-\#ifndef Apptimize\_Appboy\_h
-\#define Apptimize\_Appboy\_h
+#ifndef Apptimize_Appboy_h
+#define Apptimize_Appboy_h
 
-@interface apptimizeAppBoy:NSObject
-\+ (void)setupExperimentTracking;
+@interface ApptimizeAppboy : NSObject
++ (void)setupExperimentTracking;
 @end
 
-\#endif /* Apptimize_Appboy_h */
-\`\`\`
+#endif /* Apptimize_Appboy_h */
+```
 
 #### Appboy-Apptimize.m:
 
-\`\`\`objc
+```objc
 //  Apptimize-Appboy.m
 
-\#import <Foundation/Foundation.h>
+#import <Foundation/Foundation.h>
 
-\#import "Apptimize-Appboy.h"
+#import "Apptimize-Appboy.h"
 
-\#import <Apptimize/Apptimize.h>
+#import <Apptimize/Apptimize.h>
 #import <Apptimize/Apptimize+Variables.h>
 
-\#import "Appboy.h"
-\#import "ABKUser.h"
+#import "Appboy.h"
+#import "ABKUser.h"
 
-//以前の登録辞書を保存して、登録が変更されたかどうかを確認するためのキー
-nsString \*const appTimizeAppBoy TestEnrollmentStorageKey = @「AppTimizeAppBoy TestEnrollmentStorageKey」;
+// Key to store previous enrollment dictionary to check against to see if enrollment has changed
+NSString *const ApptimizeAppboyTestEnrollmentStorageKey = @"ApptimizeAppboyTestEnrollmentStorageKey";
 
-@implementation apptimizeAppBoy
+@implementation ApptimizeAppboy
 
 + (void)setupExperimentTracking
 {
-// Track for enrollment changes
-[[NSNotificationCenter defaultCenter] addObserver:self
-selector:@selector(apptimizeTestsProcessed:)
-name:ApptimizeTestsProcessedNotification
-object:nil];
-// Track for participation events
-[[NSNotificationCenter defaultCenter] addObserver:self
-selector:@selector(experimentDidGetViewed:)
-name:ApptimizeTestRunNotification
-object:nil];
+    // Track for enrollment changes
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                                selector:@selector(apptimizeTestsProcessed:)
+                                                    name:ApptimizeTestsProcessedNotification
+                                                object:nil];
+    // Track for participation events
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                                selector:@selector(experimentDidGetViewed:)
+                                                    name:ApptimizeTestRunNotification
+                                                object:nil];
 }
 
-+ (void)apptimizeTestsProcessed:(NSNotification\*)notification
++ (void)apptimizeTestsProcessed:(NSNotification*)notification
 {
     NSLog(@"Appboy-Apptimize integration processing new Apptimize tests");
     [self updateForNewTests];
@@ -136,25 +136,25 @@ object:nil];
 
 + (void)updateForNewTests
 {
-    NSDictionary \*savedEnrollmentDictionary = [[NSUserDefaults standardUserDefaults] objectForKey:ApptimizeAppboyTestEnrollmentStorageKey];
-    NSDictionary \*currentEnrollmentDictionary = [self getEnrollmentDictionaryFromTestInfo];
+    NSDictionary *savedEnrollmentDictionary = [[NSUserDefaults standardUserDefaults] objectForKey:ApptimizeAppboyTestEnrollmentStorageKey];
+    NSDictionary *currentEnrollmentDictionary = [self getEnrollmentDictionaryFromTestInfo];
 
-    BOOL 登録が変更されました = いいえ;
+    BOOL enrollmentChanged = NO;
 
     for (id key in currentEnrollmentDictionary) {
-if (![savedEnrollmentDictionary[key] isEqualToString:currentEnrollmentDictionary[key]]) {
-enrollmentChanged = YES;
-NSString *testAttributeKey = [@"apptimize_test_" stringByAppendingString:key];
-[[Appboy sharedInstance].user addToCustomAttributeArrayWithKey:testAttributeKeyvalue :currentEnrollmentDictionary[key]];
-}
+        if (![savedEnrollmentDictionary[key] isEqualToString:currentEnrollmentDictionary[key]]) {
+            enrollmentChanged = YES;
+            NSString *testAttributeKey = [@"apptimize_test_" stringByAppendingString:key];
+            [[Appboy sharedInstance].user addToCustomAttributeArrayWithKey:testAttributeKeyvalue :currentEnrollmentDictionary[key]];
         }
+    }
 
     if (currentEnrollmentDictionary.count != savedEnrollmentDictionary.count) {
-        登録変更 = はい;
+        enrollmentChanged = YES;
     }
 
     if (enrollmentChanged) {
-        [[Appboy sharedInstance].user setCustomAttributeArrayWithKey:@"active\_apptimize\_tests" array:currentEnrollmentDictionary.allKeys];
+        [[Appboy sharedInstance].user setCustomAttributeArrayWithKey:@"active_apptimize_tests" array:currentEnrollmentDictionary.allKeys];
 
         for (id key in currentEnrollmentDictionary.allKeys) {
             [[Appboy sharedInstance].user addToCustomAttributeArrayWithKey:@"all_apptimize_tests" value:key];
@@ -165,10 +165,10 @@ NSString *testAttributeKey = [@"apptimize_test_" stringByAppendingString:key];
     }
 }
 
-//テスト ID をキーにしたバリアント ID を持つディクショナリ。両方とも NSString
-\+ (NSMutableDictionary \*)getEnrollmentDictionaryFromTestInfo
+// Dictionary with variant IDs keyed by test ID, both as NSStrings
++ (NSMutableDictionary *)getEnrollmentDictionaryFromTestInfo
 {
-    NSMutableDictionary \*enrollmentDictionary = [NSMutableDictionary dictionary];
+    NSMutableDictionary *enrollmentDictionary = [NSMutableDictionary dictionary];
 
     for(id key in [Apptimize testInfo]) {
         NSLog(@"key=%@ value=%@", key, [[Apptimize testInfo] objectForKey:key]);
@@ -179,21 +179,21 @@ NSString *testAttributeKey = [@"apptimize_test_" stringByAppendingString:key];
     return enrollmentDictionary;
 }
 
-+ (void)experimentDidGetViewed:(NSNotification\*)notification
++ (void)experimentDidGetViewed:(NSNotification*)notification
 {
     if (![notification.userInfo[ApptimizeTestFirstRunUserInfoKey] boolValue]) {
-        返品;
+        return;
     }
 
-    //Apptimize は ID で通知しないので、すべての実験を繰り返して一致するものを見つけます。
-    NSString \*name = notification.userInfo[ApptimizeTestNameUserInfoKey];
-    NSString \*variant = notification.userInfo[ApptimizeVariantNameUserInfoKey];
+    // Apptimize doesn't notify with IDs, so we iterate over all experiments to find the matching one.
+    NSString *name = notification.userInfo[ApptimizeTestNameUserInfoKey];
+    NSString *variant = notification.userInfo[ApptimizeVariantNameUserInfoKey];
 
-    [[Apptimize testInfo] enumerateKeysAndObjectsUsingBlock:^(id key, id<ApptimizeTestInfo> experiment, BOOL \*stop) {
-BOOL match = [experiment.testName isEqualToString:name] && [experiment.enrolledVariantName isEqualToString:variant];
-if (!match) {
-return;
-}
+    [[Apptimize testInfo] enumerateKeysAndObjectsUsingBlock:^(id key, id<ApptimizeTestInfo> experiment, BOOL *stop) {
+        BOOL match = [experiment.testName isEqualToString:name] && [experiment.enrolledVariantName isEqualToString:variant];
+        if (!match) {
+            return;
+        }
 
         // If you want to log a custom event for each participation
         [[Appboy sharedInstance] logCustomEvent:@"apptimize_experiment_viewed"
@@ -211,51 +211,51 @@ return;
 }
 
 @end
-\`\`\`
+```
 
 ### Android
 
-`apptimizeappboy.java`クラスをアプリとメインにインポートする `activity`
-実装、プライベートメンバーの作成`appboyApptimizeIntegration`:
+インポート `apptimizeappboy.java` クラスをアプリにして、メイン `activity` に
+実装、プライベートメンバー`appboyApptimizeIntegration`を作成します:
 
 ```java
 private ApptimizeAppboy appboyApptimizeIntegration;
 ```
 
-次に、onCreateメソッドで、BrazeとApptimizeを初期化した後、次のことを行います。
+次に、onCreateメソッドで、BrazeとApptimizeを初期化した後: 
 
 ```java
 appboyApptimizeIntegration = new ApptimizeAppboy();
 appboyApptimizeIntegration.configureExperimentTracking(this);
 ```    
 
-#### ApptimizeAppboy.java:
+#### ApptimizeAppboy.java: 
 
-\`\`\`java
-パッケージ com.apptimize.appboykit;
+```java
+package com.apptimize.appboykit;
 
-java.io ファイルをインポートします。
-java.io.File入力ストリームをインポートします。
-java.io.file 出力ストリームをインポートします。
-java.io.ObjectInputStream をインポートします。
-java.io.object 出力ストリームをインポートします。
-java.util.Map をインポート;
-java.util.HashMap をインポート;
-android.util.log をインポート;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.util.Map;
+import java.util.HashMap;
+import android.util.Log;
 
-android.content.Context をインポート;
+import android.content.Context;
 
-com.apptimize.appTimize; をインポート;
-import com.apptimize.apptimizeTestInfo;
-import com.apptimize.apptimize.onExperimentsProcsedListener;
-com.apptimize.apptimize.onExperimentRunListener; をインポート;
+import com.apptimize.Apptimize;
+import com.apptimize.ApptimizeTestInfo;
+import com.apptimize.Apptimize.OnExperimentsProcessedListener;
+import com.apptimize.Apptimize.OnExperimentRunListener;
 
-com.appboy.AppBoy; をインポート;
-com.appboy.AppBoyUser; をインポート;
-com.appboy.models.outgoing.AppBoyProperties; をインポートする;
+import com.appboy.Appboy;
+import com.appboy.AppboyUser;
+import com.appboy.models.outgoing.AppboyProperties;
 
-パブリッククラスアプリイマイズアプリボーイ
-        AppTimize.onExperimize.onExperimentRunListener を実装しています。
+public class ApptimizeAppboy
+        implements Apptimize.OnExperimentRunListener,
                     Apptimize.OnExperimentsProcessedListener {
 
     public void configureExperimentTracking(Context context) {
@@ -401,4 +401,4 @@ com.appboy.models.outgoing.AppBoyProperties; をインポートする;
     private static String ApptimizeAppboyStorageDirectory;
     private static String ApptimizeAppboyTestEnrollmentStorage = "ApptimizeAppboyTestEnrollmentStorage";
 }
-\`\`\`
+```

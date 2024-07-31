@@ -1,40 +1,40 @@
 ---
-nav_title: 1 月
+nav_title: 1月
 page_order: 12
 noindex: true
 page_type: update
-description: "この記事には、2018 年 1 月のリリース ノートが含まれています。"
+description: "この記事には2018年1月のリリースノートが含まれている。"
 ---
-# 2018年1月号
+# 2018年1月
 
-## CSS のインライン化
+## CSSインライン化
 
-メール**設定**に移動して、個々のメールメッセージの[CSSインライン化][84]のオンとオフを切り替えられるようになりました。
+**メール**設定で、個々のメールメッセージの[CSSインラインの][84]オン・オフを切り替えられるようになった。
 
-## 新しいセグメント フィルター
+## 新しいセグメンテーションフィルター
 
-次のフィルターを使用してセグメントを作成できるようになりました。
-\- 受信キャンバスステップ
-\- Opened/Clicked Canvas ステップ
-\- Last Received Specific Canvas Step (最後に受信した特定のキャンバス ステップ)
+以下のフィルターを使用して、セグメンテーションを作成できるようになった：
+- キャンバスステップを受け取る
+- 開封/クリック キャンバスステップ
+- 最後に受け取った特定のキャンバスステップ
 
 {% alert update %}
-2019 年 3 月現在、 `Received Canvas Step` は に `Received Message from Canvas Step`改名され、 `Last Received Specific Canvas Step` に改名 `Last Received Message from Specific Canvas Step`されました。
+2019年3月現在、`Received Canvas Step` は`Received Message from Canvas Step` に、`Last Received Specific Canvas Step` は`Last Received Message from Specific Canvas Step` に名称が変更されている。
 {% endalert %}
 
-## デバイス ID を使用したユーザーのエクスポート
+## デバイスIDを使ってユーザーをエクスポートする
 
-このエンドポイントは、デバイス識別子をパラメーターとして受け入れるようになり、 [匿名ユーザープロファイルをエクスポート][82]できるようになりました。
+このエンドポイントはパラメータとしてデバイス識別子を受け付けるようになり、[匿名ユーザープロファイルをエクスポート][82]できるようになった。
 
-デバイス ID を使用して、そのデバイス上のすべてのユーザー プロファイルをエクスポートできます。
+デバイスIDを使って、そのデバイス上のすべてのユーザープロファイルをエクスポートできる。
 
-## エンゲージメントレポートの更新
+## エンゲージメントレポート更新
 
-**プッシュ開封率**や**コンバージョン率**などの追加統計が[エンゲージメントレポート][81]で利用できるようになりました。
+**プッシュ開封率や** **コンバージョン率などの**追加統計が、[エンゲージメントレポートで][81]利用できるようになった。
 
-## Apple プッシュ証明書:.p8 ファイルの使用
+## アップルのプッシュ証明書：.p8ファイルを使う
 
-Apple プッシュ証明書のアップロード時に [p8 ファイルを][80] 使用できるようになり、iOS プッシュ資格情報が期限切れにならないようにできるようになりました。
+Apple Push証明書をアップロードする際に[p8ファイルを][80]使用できるようになり、iOSプッシュ認証情報の有効期限が切れることがなくなった。
 
 
 [80]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/integration/#recommended-option-using-a-p8-file-authentication-tokens

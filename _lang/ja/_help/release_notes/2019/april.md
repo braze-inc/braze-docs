@@ -3,23 +3,23 @@ nav_title: 4月
 page_order: 9
 noindex: true
 page_type: update
-description: "この記事には、2019 年 4 月のリリースノートが含まれています。"
+description: "この記事には2019年4月のリリースノートが含まれている。"
 ---
 
-# 2019 年 4 月
+# 2019年4月
 
-## Currentsの新しいイベントとフィールド
+## 百花繚乱のイベント＆フィールド
 
-セクションへのいくつかの修正に加えて、新しい [サブスクリプションイベント] ({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/message_engagement_events/#subscription-events) has been added to the Message Engagement Events page. 
+セクションのいくつかの修正に加え、新しい\[サブスクリプション・イベント]({{ site.baseurl}}/user_guide/data_and_analytics/braze_currents/message_engagement_events/#subscription-events) )がメッセージ・エンゲージメント・イベント・ページに追加された。 
 
-[[サブスクリプショングループの状態変更データをBrazeからSegmentとmParticleにエクスポートできるようになりました]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/mParticle/mparticle_for_currents/)]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/segment_for_currents/#integration-details)[。また、Mixpanelにアトリビューションイベントをインストールすることもできます。]({{site.baseurl}}/partners/insights/behavioral_analytics/mixpanel_for_currents)
+サブスクリプショングループの状態変化データを、Brazeから[セグメンテーションと]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/segment_for_currents/#integration-details) [mParticleに]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/mParticle/mparticle_for_currents/)エクスポートできるようになった。
 
-さらに、`canvas_step_id`[このプロパティは利用可能なコンバージョンイベントに追加されました]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/message_engagement_events/#conversion-events)。
+さらに、利用可能な[コンバージョンイベントに]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/message_engagement_events/#conversion-events)プロパティ（`canvas_step_id` ）が追加された。
 
 {% alert important %}
-これらの更新を利用するには、Currents コネクタの設定を編集し、使用するイベントを有効にする必要があります。ご不明な点がございましたら、アカウントマネージャーにお問い合わせください。
+これらの更新を利用するには、Currentsコネクタ設定を編集し、使用したいイベントをイネーブルメントにする必要がある。ご不明な点があれば、アカウントマネージャーにご相談を。
 {% endalert %}
 
-## 購読グループのアーカイブ
+## サブスクリプショングループのアーカイブ化
 
-[サブスクリプショングループをアーカイブできるようになりました]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#archiving-groups)！アーカイブされたサブスクリプショングループは編集できず、セグメントフィルターに表示されなくなります。 電子メール、キャンペーン、またはキャンバスでセグメントフィルターとして使用されているグループをアーカイブしようとすると、すべての使用を削除するまでグループをアーカイブできないというエラーメッセージが表示されます。
+[サブスクリプショングループをアーカイブ]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#archiving-groups)できるようになった！アーカイブされたサブスクリプショングループは編集できず、セグメンテーションフィルターにも表示されなくなる。 メール、キャンペーン、キャンバスでセグメンテーションフィルターとして使用されているグループをアーカイブしようとすると、エラーメッセージが表示され、そのグループの使用をすべて削除するまでアーカイブできない。
