@@ -426,13 +426,13 @@ var integerProperty = featureFlag.getIntegerProperty("height");
 var doubleProperty = featureFlag.getDoubleProperty("height");
 
 // Returns the Unix UTC millisecond timestamp property as a long
-var timestampProperty = featureFlag.getTimestampProperty("account_start");
+var timestampProperty = featureFlag.GetTimestampProperty("account_start");
 
 // Returns the image property as a String of the image URL
-var imageProperty = featureFlag.getImageProperty("homepage_icon");
+var imageProperty = featureFlag.GetImageProperty("homepage_icon");
 
 // Returns the JSON object property as a JSONObject
-var jsonObjectProperty = featureFlag.getJSONProperty("footer_settings");
+var jsonObjectProperty = featureFlag.GetJSONProperty("footer_settings");
 ```
 
 {% endtab %}
