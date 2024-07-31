@@ -28,7 +28,7 @@ Column definitions are as follows:
 | **Channel Credit Ratio** | Baseline credit amount for each channel |
 | **Destination** | Specific final region, country, or type of message being sent through the Braze platform |
 | **Multiplier** | Scaler to the Channel Credit Ratio, depending on pricing of the specific destination |
-| **Credits per Message** | Exact number of Message Credits used to send one message<br> (credits per message = channel credit ratio x destination multiplier) |
+| **Credits Used with 1 Send** | Exact number of Message Credits used to send one message<br> (credits per message = channel credit ratio x destination multiplier) |
 {: .reset-td-br-1 .reset-td-br-2}
 
 
