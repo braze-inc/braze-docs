@@ -146,4 +146,6 @@ As of April 2024, to create or update promotion code lists, Braze users need the
 |Workspace|View PII|Allows users to view the personally identifiable information fields as defined by your company within the dashboard.|
 |Workspace|View Transformations|Allows users to view [Braze Data Transformations]({{site.baseurl}}/user_guide/data_and_analytics/data_transformation/overview/).|
 |Workspace|View Usage Data|Allows users to view app usage, including the channel performance dashboards.|
+|Workspace|Merge Duplicate Users|Allows users to merge duplicate user profiles.}
+|Workspace|Preview Duplicate Users|Allows users to preview which user profiles are duplicated.|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
