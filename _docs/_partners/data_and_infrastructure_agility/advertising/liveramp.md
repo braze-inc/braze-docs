@@ -13,11 +13,10 @@ search_tag: Partner
 
 ## Use cases
 
-- **Actionable Person & Household Based Insights:** Consolidation of consumer touchpoints to a person-based view enables a more accurate understanding of consumer preferences for better audience segmentation, testing, and model building across LiveRamp & Braze. Providing you a holistic and actionable view across both your marketing and advertising engagements in a single cloud environment.
-- **Reduce Time to Insights:** Access customer engagement and campaign data in real-time, eliminating the need for time-consuming ETL processes. This means you can base your customer experiences on the most up-to-date information, enhancing the timeliness and relevance of your campaigns.
-- **Break Down Data Silos & Interoperability:** Create a comprehensive view of your customers across various channels and platforms. Data becomes more valuable when you can effectively connect it to an ecosystem, and LiveRamp Identity solutions combined with Braze can be flexibly applied to sophisticated customer use cases and are integrated as an identity layer across the ecosystem.
-- **Optimize Customer Engagement:** Leverage [Braze Benchmarks](https://www.google.com/url?q=https://www.braze.com/docs/partners/data_and_infrastructure_agility/data_warehouses/snowflake/%23braze-benchmarks&sa=D&source=editors&ust=1719246601732592&usg=AOvVaw0zjg0fsIH0dk618YMiPrGC), powered by Snowflake, to compare your brand's engagement data to LiveRamp ROAS and benchmarks across channels, industries, and platforms. This valuable insight helps fine-tune your marketing strategies.
-
+- **Data Minimization:** LiveRamp’s Activation app uses Snowflake’s Secure Data Share feature to effectively read the tables directly from your instance. No data is moved from Snowflake until the point of delivery to the downstream partner.
+- **Secure 1st Party Activation:** By using the above Identity Resolution application, LiveRamp’s Activation application will only utilize the RampID-based tables in your Snowflake instance, and thus PII will never have to leave your walls.
+- **Expedite Time to Live:** By resolving data to RampID directly in your environment, delivery to an end destination can occur within a matter of hours, as compared to several days when using LiveRamp’s more traditional file-based approach. This greatly increases the ability to optimize campaign performance in a timely manner.
+- **Operational Savings:** Similar to the above, through the use of Snowflake’s Secure Data Share feature customers save time and money when compared to coordinating egress of files to LiveRamp or directly to any end destination.
 
 ## Prerequisites
 
