@@ -1,20 +1,20 @@
 ---
-nav_title: プッシュコールバックブロードキャストレシーバ
-article_title: Android 用カスタムブロードキャストレシーバープッシュコールバック
-description: "この参考記事では、Android プッシュ通知用のカスタムブロードキャストレシーバーの作成について説明しています。"
+nav_title: プッシュ・コールバック・ブロードキャスト・レシーバー
+article_title: Android用カスタム・ブロードキャスト・レシーバー・プッシュ・コールバック
+description: "このリファレンス記事では、Androidプッシュ通知用のカスタムBroadcastレシーバーの作成について説明する。"
 ---
 
-# Broadcast Receiverによるプッシュ受信、オープン、却下、およびキーと値のペアのカスタム処理 {#android-push-listener-broadcast-receiver}
+# ブロードキャスト・レシーバーを介したプッシュ受信、開封、却下、キーと値のペアのカスタム・ハンドリング {#android-push-listener-broadcast-receiver}
 
 {% alert important %}
-`BroadcastReceiver`プッシュ通知にカスタムを使用することは廃止されました。[` subscribeToPushNotificationEvents()`](/docs/developer_guide/platform_integration_guides/android/push_notifications/android/customization/custom_event_callback/)代わりに使用してください。
+プッシュ通知にカスタム`BroadcastReceiver` を使用することは廃止された。代わりに [` subscribeToPushNotificationEvents()`](/docs/developer_guide/platform_integration_guides/android/push_notifications/android/customization/custom_event_callback/)で代用する。
 {% endalert %}
 
-また、Braze はプッシュ通知の受信、開封、または却下時にカスタムインテントをブロードキャストします。これらのシナリオで特定のユースケース（カスタムのキーと値のペアを監視する必要がある場合や、ディープリンクの独自の処理が必要な場合など）がある場合は、カスタムを作成してこれらの意図に耳を傾ける必要があります。`BroadcastReceiver`
+Brazeはまた、プッシュ通知の受信、開封、解除時にカスタムインテントをブロードキャストする。これらのシナリオの特定のユースケース（カスタムキーと値のペアやディープリンクの独自の処理をリッスンする必要性など）がある場合は、カスタム`BroadcastReceiver` を作成することによって、これらのインテントをリッスンする必要がある。
 
-## ステップ 1:放送受信機を登録する
+## ステップ 1:BroadcastReceiverを登録する
 
-カスタムを登録すると`BroadcastReceiver`、以下の画面で Braze のプッシュが開いて受信したインテントを聞くことができます。[`AndroidManifest.xml`][71]
+カスタム`BroadcastReceiver` を登録し、Brazeのプッシュ開封と受信インテントをリッスンする。 [`AndroidManifest.xml`][71]:
 
 ```xml
 <receiver android:name="YOUR-BROADCASTRECEIVER-NAME" android:exported="false" >
@@ -26,31 +26,31 @@ description: "この参考記事では、Android プッシュ通知用のカス�
 </receiver>
 ```
 
-## ステップ 2:ブロードキャストレシーバーを作成
+## ステップ2:BroadcastReceiverを作成する
 
-受信者は Braze によってブロードキャストされたインテントを処理し、その受信者でアクティビティを開始する必要があります。
+レシーバーは、Brazeからブロードキャストされたインテントを処理し、アクティビティを起動する：
 
-- [`BroadcastReceiver`][53]`onReceive()`サブクラス化してオーバーライドする必要があります。
-- `onReceive()`このメソッドは Braze によってブロードキャストされたインテントをリッスンする必要があります。
-  - プッシュ通知が到着すると、`NOTIFICATION_RECEIVED`インテントが受信されます。
-  - ユーザーがプッシュ通知をクリックすると、`NOTIFICATION_OPENED`インテントが受信されます。
-  - ユーザーがプッシュ通知を閉じる (スワイプする) と、`NOTIFICATION_DELETED`インテントが受信されます。
-- それぞれのケースでカスタムロジックを実行する必要があります。受信者がディープリンクを開く場合は、`com_braze_handle_push_deep_links_automatically``false`でに設定してディープリンクの自動開封を必ずオフにしてください`braze.xml`。
+- をサブクラス化すべきである。 [`BroadcastReceiver`][53]`onReceive()`をオーバーライドする必要がある。
+- `onReceive()` メソッドは、Brazeからブロードキャストされるインテントをリッスンする必要がある。
+  - プッシュ通知が届くと、`NOTIFICATION_RECEIVED` インテントを受信する。
+  - ユーザーがプッシュ通知をクリックすると、`NOTIFICATION_OPENED` インテントを受信する。
+  - `NOTIFICATION_DELETED` インテントは、プッシュ通知がユーザーによって却下（スワイプして離す）されたときに受信される。
+- これらのケースごとに、あなたのカスタムロジックを実行する必要がある。受信機がディープリンクを開封する場合は、`braze.xml` で`com_braze_handle_push_deep_links_automatically` を`false` に設定し、ディープリンクの自動開封をオフにしておくこと。
 
-詳細なカスタムレシーバーの例については、次のコードスニペットを参照してください。
+詳細なカスタムレシーバーの例については、以下のコードスニペットを参照のこと：
 
 {% tabs %}
 {% tab JAVA %}
 
-\`\`\`java
+```java
 public class CustomBroadcastReceiver extends BroadcastReceiver {
   private static final String TAG = CustomBroadcastReceiver.class.getName();
 
   @Override
   public void onReceive(Context context, Intent intent) {
-    String pushReceivedAction = Constants.BRAZE\_PUSH\_INTENT\_NOTIFICATION\_RECEIVED;
-    String notificationOpenedAction = Constants.BRAZE\_PUSH\_INTENT\_NOTIFICATION\_OPENED;
-    String notificationDeletedAction = Constants.BRAZE\_PUSH\_INTENT\_NOTIFICATION\_DELETED;
+    String pushReceivedAction = Constants.BRAZE_PUSH_INTENT_NOTIFICATION_RECEIVED;
+    String notificationOpenedAction = Constants.BRAZE_PUSH_INTENT_NOTIFICATION_OPENED;
+    String notificationDeletedAction = Constants.BRAZE_PUSH_INTENT_NOTIFICATION_DELETED;
 
     String action = intent.getAction();
     Log.d(TAG, String.format("Received intent with action %s", action));
@@ -66,17 +66,17 @@ public class CustomBroadcastReceiver extends BroadcastReceiver {
     }
   }
 }
-\`\`\`
+```
 
 {% endtab %}
 {% tab KOTLIN %}
 
-\`\`\`kotlin
-クラスカスタム放送受信機：BroadcastReceiver() {
-  override fun onReceive(context:コンテキスト、意図:Intent) {
-    val pushReceivedAction = Constants.BRAZE\_PUSH\_INTENT\_NOTIFICATION\_RECEIVED
-    val notificationOpenedAction = Constants.BRAZE\_PUSH\_INTENT\_NOTIFICATION\_OPENED
-    val notificationDeletedAction = Constants.BRAZE\_PUSH\_INTENT\_NOTIFICATION\_DELETED
+```kotlin
+class CustomBroadcastReceiver : BroadcastReceiver() {
+  override fun onReceive(context: Context, intent: Intent) {
+    val pushReceivedAction = Constants.BRAZE_PUSH_INTENT_NOTIFICATION_RECEIVED
+    val notificationOpenedAction = Constants.BRAZE_PUSH_INTENT_NOTIFICATION_OPENED
+    val notificationDeletedAction = Constants.BRAZE_PUSH_INTENT_NOTIFICATION_DELETED
 
     val action = intent.action
     Log.d(TAG, String.format("Received intent with action %s", action))
@@ -98,55 +98,55 @@ public class CustomBroadcastReceiver extends BroadcastReceiver {
   }
 
   companion object {
-private val TAG = CustomBroadcastReceiver::class.java.name
+    private val TAG = CustomBroadcastReceiver::class.java.name
+  }
 }
-    }
-  \`\`\`
+```
 
 {% endtab %}
 {% endtabs %}
 
 {% alert tip %}
-通知アクションボタンでは、`BRAZE_PUSH_INTENT_NOTIFICATION_OPENED``opens app``deep link`またはアクションの付いたボタンがクリックされたときにインテントが起動します。ディープリンクとエクストラの処理は変わりません。`close``BRAZE_PUSH_INTENT_NOTIFICATION_OPENED`アクション付きのボタンはインテントを起動せず、通知を自動的に閉じます。
+通知アクションボタンを使用すると、`opens app` または `deep link` アクションを持つボタンがクリックされると、`BRAZE_PUSH_INTENT_NOTIFICATION_OPENED` インテントが起動します。ディープリンクとエクストラの処理は変わりません。`close` アクション付きのボタンは `BRAZE_PUSH_INTENT_NOTIFICATION_OPENED` インテントを起動せず、通知を自動的に閉じます。
 {% endalert %}
 
-## ステップ 3:カスタムのキーと値のペアへのアクセス
+## ステップ 3:カスタムキーと値のペアにアクセスする
 
-ダッシュボードまたはメッセージAPIを介して送信されたカスタムキーと値のペアは、任意の目的でカスタムブロードキャストレシーバーからアクセスできます。
+ダッシュボードまたはメッセージングAPIを介して送信されたカスタムキーと値のペアは、あなたが選択した任意の目的のために、カスタムブロードキャストレシーバでアクセスできるようになる：
 
 {% tabs %}
 {% tab JAVA %}
 
-\`\`\`java
-//インテントは、カスタムブロードキャストレシーバーが受信する Braze プッシュインテントです。
-String deepLink = intent.getStringExtra(Constants.BRAZE\_PUSH\_DEEP\_LINK\_KEY);
+```java
+// intent is the Braze push intent received by your custom broadcast receiver.
+String deepLink = intent.getStringExtra(Constants.BRAZE_PUSH_DEEP_LINK_KEY);
 
-//インテントから抽出されたエクストラバンドルには、カスタムのキーと値のペアがすべて含まれています。
-Bundle extras = intent.getBundleExtra(Constants.BRAZE\_PUSH\_EXTRAS\_KEY);
+// The extras bundle extracted from the intent contains all custom key-value pairs.
+Bundle extras = intent.getBundleExtra(Constants.BRAZE_PUSH_EXTRAS_KEY);
 
-//Extras バンドルから特定のキーと値のペアを取得する例。
-String myExtra = extras.getString("my\_key");
-\`\`\`
+// example of getting specific key-value pair from the extras bundle.
+String myExtra = extras.getString("my_key");
+```
 
 {% endtab %}
 {% tab KOTLIN %}
 
-\`\`\`kotlin
-//インテントは、カスタムブロードキャストレシーバーが受信する Braze プッシュインテントです。
-val deepLink = intent.getStringExtra(Constants.BRAZE\_PUSH\_DEEP\_LINK\_KEY)
+```kotlin
+// intent is the Braze push intent received by your custom broadcast receiver.
+val deepLink = intent.getStringExtra(Constants.BRAZE_PUSH_DEEP_LINK_KEY)
 
-//インテントから抽出されたエクストラバンドルには、カスタムのキーと値のペアがすべて含まれています。
-val extras = intent.getBundleExtra(Constants.BRAZE\_PUSH\_EXTRAS\_KEY)
+// The extras bundle extracted from the intent contains all custom key-value pairs.
+val extras = intent.getBundleExtra(Constants.BRAZE_PUSH_EXTRAS_KEY)
 
-//Extras バンドルから特定のキーと値のペアを取得する例。
-val myExtra = extras.getString("my\_key")
-\`\`\`
+// example of getting specific key-value pair from the extras bundle.
+val myExtra = extras.getString("my_key")
+```
 
 {% endtab %}
 {% endtabs %}
 
 {% alert note %}
-Braze プッシュデータキーに関するドキュメントについては、[Android SDK](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-constants/index.html?query=object%20Constants) を参照してください。
+Braze のプッシュデータキーに関するドキュメントは、[Android SDK](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-constants/index.html?query=object%20Constants) を参照してください。
 {% endalert %}
 
 [53]: https://developer.android.com/reference/android/content/BroadcastReceiver.html

@@ -1,60 +1,60 @@
 ---
-nav_title: 12 月
+nav_title: 12月
 page_order: 0
 noindex: true
 page_type: update
-description: "この記事には、2021 年 12 月のリリース ノートが含まれています。"
+description: "この記事には、2021年12月のリリースノートが含まれている。"
 alias: "/help/release_notes/2022/january/"
 ---
-# 2021年12月発売
+# 2021年12月
 
-## セグメントエンドポイント別にユーザーをエクスポートするための更新
+## セグメンテーションのエンドポイントごとにユーザーをエクスポートするように更新された。
 
-2021 年 12 月以降、 [セグメント別にユーザーをエクスポート]({{site.baseurl}}/api/endpoints/export/user_data/post_users_segment/)エンドポイントで次の変更が有効になります。
+2021年12月より、セ[グメンテーション別ユーザーのエクスポートのエンドポイントに]({{site.baseurl}}/api/endpoints/export/user_data/post_users_segment/)以下の変更が適用される：
 
-1. この API 要求の `fields_to_export` フィールドは必須です。すべてのフィールドをデフォルトにするオプションは削除されます。
-2. 、`purchases`、 `campaigns_received`の`canvases_received`フィールドに`custom_events`は、過去 90 日間のデータのみが含まれます。
+1. このAPIリクエストの`fields_to_export` フィールドは必須となる。すべてのフィールドをデフォルトにするオプションは削除される。
+2. `custom_events` 、`purchases` 、`campaigns_received` 、`canvases_received` のフィールドには、過去90日間のデータのみが含まれる。
 
-## Currents メッセージ エンゲージメント イベントの新しいプロパティ
+## Currentsメッセージエンゲージメントイベントの新しいプロパティ
 
-選択した [メッセージエンゲージメントイベント]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events/)に新しいプロパティが追加されました。このアップデートは、以下の Currents メッセージ エンゲージメント イベントと、それらを使用するすべてのパートナーに適用されます。
+一部の[メッセージ・エンゲージメント・イベントに]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events/)新しいプロパティが追加された。この更新は、以下のCurrentsメッセージエンゲージメントイベントと、それらを使用するすべてのパートナーに適用される：
 
-- `LINK_ID`に を追加します`LINK_ALIAS`。
-  - Eメールクリック(すべての宛先)
-- 追加 `USER_AGENT` 先:
+- `LINK_ID`,`LINK_ALIAS` を加える：
+  - メールクリック（全送信先）
+- `USER_AGENT` ：
   - メール開封
   - メールクリック
-  - メールをスパムとしてマーク
-- 追加 `MACHINE_OPEN` 先:
+  - スパムとしてメールをマークする
+- `MACHINE_OPEN` ：
   - メール開封
 
-## 新しいLiquidパーソナライゼーションタグ
+## ニューリキッドパーソナライゼーションタグ
 
-デバイスでフォアグラウンドプッシュを有効にしているユーザーのターゲット設定を、以下のLiquidタグでサポートするようになりました。
+以下のLiquidタグでフォアグラウンドプッシュを有効にしているユーザーをターゲットにできるようになった：
 
 {% raw %}
 - `{{most_recently_used_device.${foreground_push_enabled}}}`
 - `{{targeted_device.${foreground_push_enabled}}}`
 {% endraw %}
 
-詳細については、「 [サポートされているパーソナライゼーションタグ]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/)」を参照してください。
+詳しくは、[サポートされたパーソナライゼーション・タグを]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/)参照のこと。
 
-## Webhook について
+## Webhookについて
 
-Webhook は強力で柔軟なツールですが、少し混乱を招く可能性があります。Webhookとは何か、Brazeでどのように使用できるのか疑問に思っている場合は、 [Webhookについて]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/understanding_webhooks/)に関する新しい記事をご覧ください。
+Webhookは強力で柔軟なツールだが、少しわかりにくいかもしれない。Webhookとは何なのか、Brazeでどのように使うことができるのか気になる方は、[Webhookについての]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/understanding_webhooks/)新しい記事をチェックしよう。
 
-## Amazon パーソナライズ
+## Amazon Personalize
 
-Amazon Personalize は、独自の終日 Amazon 機械学習レコメンデーションシステムを持っているようなものです。Amazon Personalize は、20 年以上にわたるレコメンデーションの経験に基づいて、リアルタイムでパーソナライズされた製品とコンテンツのレコメンデーションとターゲットを絞ったマーケティングプロモーションを強化することで、顧客エンゲージメントを向上させることができます。 
+Amazon Personalizeは、Amazonの機械学習によるレコメンデーションシステムを一日中利用できるようなものだ。20年以上にわたるレコメンデーションの経験に基づくAmazon Personalizeは、リアルタイムでパーソナライズされた商品やコンテンツのレコメンデーション、ターゲットマーケティングプロモーションを可能にし、カスタマーエンゲージメントの向上を実現する。 
 
-詳細については、Amazon Personalize の新しい記事にアクセスして、Amazon [Personalize]({{site.baseurl}}/partners/message_personalization/dynamic_content/amazon_personalize/amazon_personalize/) が提供するユースケース、Amazon Personalize が扱うデータ、サービスの設定方法、Braze との統合方法を理解してください。
+さらに詳しく知りたい方は、[Amazon Personalizeの]({{site.baseurl}}/partners/message_personalization/dynamic_content/amazon_personalize/amazon_personalize/)新しい記事をご覧いただき、Amazon Personalizeが提供するユースケース、Amazon Personalizeが扱うデータ、サービスの設定方法、そしてパーソナライゼーションとBrazeの統合方法についてご理解いただきたい。
 
-## Brazeの新しいパートナーシップ
+## 新しいBrazeパートナーシップ
 
-### Yotpo – eコマース
+### Yotpo - eコマース
 
-[Yotpo]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/yotpo/)とBrazeの統合により、Braze内の電子メールやその他のコミュニケーションチャネル内の製品に、星評価、トップレビュー、視覚的なユーザー生成コンテンツを動的に取得して表示できます。また、顧客レベルのロイヤルティデータをメールやその他のコミュニケーション方法に含めて、よりパーソナライズされたインタラクションを作成し、売上とロイヤルティを高めることもできます。
+[Yotpoと]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/yotpo/)Brazeの統合により、メールやBraze内の他のコミュニケーションチャネルで、製品に関する星評価、トップレビュー、視覚的なユーザー生成コンテンツをダイナミックな方法で取得し、表示することができる。また、顧客レベルのロイヤルティデータをメールやその他のコミュニケーション手段に含めることで、よりパーソナライズされたインタラクションを実現し、売上とロイヤルティを高めることができる。
 
-### Zeotap – 顧客データプラットフォーム
+### Zeotap - 顧客データプラットフォーム
 
-[Zeotap]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/zeotap/) と Braze の統合により、Zeotap の顧客セグメントを同期して Zeotap のユーザーデータを Braze のユーザーアカウントにマッピングすることで、キャンペーンの規模とリーチを拡張できます。その後、このデータに基づいて行動し、パーソナライズされたターゲットエクスペリエンスをユーザーに提供できます。
+[Zeotapと]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/zeotap/)Brazeの統合により、Zeotap顧客セグメントを同期してZeotapユーザーデータをBrazeユーザーアカウントにマッピングすることで、キャンペーンの規模とリーチを拡大することができる。そして、このデータに基づいて行動し、ユーザーにパーソナライズされたターゲット体験を提供することができる。

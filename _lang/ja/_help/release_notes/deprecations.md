@@ -3,139 +3,146 @@ nav_title: 非推奨
 article_title: 非推奨
 page_order: 9
 page_type: reference
-description: "このページには、非推奨の記事への参照が含まれており、非推奨およびサポートされていない機能の一覧を提供します。"
+description: "このページでは、非推奨の記事への参照を含み、非推奨およびサポートされない機能のリストを提供する。"
 ---
 
 # 非推奨
 
-テクノロジーは、Brazeの内側と外側で常に動いています。そして、私たちはそれに追いつくために最善を尽くします。ここでは、Brazeとそのテクノロジーの起源、つまり「ビフォア・タイム」に私たちがどのように人々をサポートしてきたか、そしてビフォア・ナウ...
+テクノロジーは常に動いている。Brazeの内部でも外部でも！そして、私たちはそれについていくためにベストを尽くしている。ここには、Brazeの原点とそのテクノロジーがある。
 
-存在しない統合または機能の用語を検索して、ここにたどり着いた可能性があります。これは、テクノロジー業界における当社の進歩と動きについてお知らせするための試みです。非推奨およびサポートされていない機能の一覧を確認し、非推奨の記事を読むには、次のリンクにアクセスしてください。
+もう存在しない統合や機能を検索してここにたどり着いたかもしれない。これは、テクノロジー業界における我々の進歩や動きをお知らせするための試みである。以下のリンクから、非推奨およびサポートされない機能のリストや、非推奨の記事を読むことができる。
 
-## 非推奨の記事
+## 非推奨記事
 
-- [Android用のカスタムプッシュブロードキャストレシーバー]({{site.baseurl}}/help/release_notes/deprecations/custom_broadcast_receiver/)
-- [Eclipse SDK のセットアップ]({{site.baseurl}}/help/release_notes/deprecations/eclipse_setup_deprecated/)
-- [TLS 1.0 および 1.1 の廃止]({{site.baseurl}}/help/release_notes/deprecations/tls_deprecation/)
-- [Twilio Webhook の統合]({{site.baseurl}}/help/release_notes/deprecations/twilio/)
-- [Apptimizeとのパートナーシップ]({{site.baseurl}}/help/release_notes/deprecations/apptimize/)
-- [Grouparooとのパートナーシップ]({{site.baseurl}}/help/release_notes/deprecations/grouparoo)
+- [Android用カスタム・プッシュ放送受信機]({{site.baseurl}}/help/release_notes/deprecations/custom_broadcast_receiver/)
+- [Eclipse SDKのセットアップ]({{site.baseurl}}/help/release_notes/deprecations/eclipse_setup_deprecated/)
+- [TLS 1.0および1.1の廃止]({{site.baseurl}}/help/release_notes/deprecations/tls_deprecation/)
+- [Twilio Webhookの統合]({{site.baseurl}}/help/release_notes/deprecations/twilio/)
+- [Apptimizeパートナーシップ]({{site.baseurl}}/help/release_notes/deprecations/apptimize/)
+- [Grouparooパートナーシップ]({{site.baseurl}}/help/release_notes/deprecations/grouparoo)
+- [Shopify`checkout.liquid` 非推奨]({{site.baseurl}}/help/release_notes/deprecations/shopify_checkout/)
 
 ## 非推奨ログ
 
-### Android用のカスタムプッシュブロードキャストレシーバー
+### Shopify `checkout.liquid`
 
-**サポートの撤回:**2022年10月発売
+**支援は撤回された**：2024年8月（第1フェーズ）、2025年8月（第2フェーズ）
 
-プッシュ通知のカスタム `BroadcastReceiver` の使用は非推奨になりました。代わりに使用してください [` subscribeToPushNotificationEvents()`](/docs/developer_guide/platform_integration_guides/android/push_notifications/android/customization/custom_event_callback/) 。
+Shopify`checkout.liquid` のサポートは2024年8月に非推奨となり、2025年8月に終了する。Shopifyは、より安全でパフォーマンスも高く、カスタマイズ可能な[Checkout Extensibilityに](https://www.shopify.com/enterprise/blog/checkout-extensibility-winter-editions)移行する予定だ。
 
-### Grouparooとのパートナーシップ
+### Android用カスタム・プッシュ放送受信機
 
-**サポートの撤回:**2022年4月発売
+**支援は撤回された**：2022年10月
 
-Grouparoo のサポートは 2022 年 4 月をもって終了しています。
+プッシュ通知にカスタム`BroadcastReceiver` を使用することは廃止された。代わりに [` subscribeToPushNotificationEvents()`](/docs/developer_guide/platform_integration_guides/android/push_notifications/android/customization/custom_event_callback/)で代用する。
+
+### Grouparooパートナーシップ
+
+**支援は撤回された**：2022年4月
+
+Grouparooのサポートは2022年4月をもって終了した。
 
 ### Braze Windows SDK
 
-**2022年3月24日**:Braze Windows SDKは廃止され、Brazeダッシュボードで新しいWindowsアプリを作成することはできません。<br>
-**2022年9月15日**:Windows アプリに新しいメッセージを送信できません。既存のメッセージとデータ収集は影響を受けません。<br>
-**2024年1月11日**:Brazeは、Windowsアプリからメッセージを提供したり、データを収集したりしなくなります。
+**2022年3月24**日だ：Braze Windows SDKは非推奨であり、ダッシュボードで新しいWindowsアプリを作成することはできない。<br>
+**2022年9月15**日である：Windowsアプリに新しいメッセージを送ることはできない。既存のメッセージングやデータ収集に影響はない。<br>
+**2024年1月11**日だ：Brazeは今後、Windowsアプリからのメッセージ送信やデータ収集を行わない。
 
-### Baidu プッシュ統合
+### 百度プッシュの統合
 
-**2022年3月24日**:Braze Baidu プッシュ統合は廃止され、Braze ダッシュボードで新しい Baidu アプリを作成することはできません。<br>
-**2022年9月15日**:新しいバイドゥプッシュメッセージは作成できません。既存のメッセージとデータ収集は影響を受けません。<br>
-**2024年1月11日**:Brazeは、Baiduアプリからメッセージを配信したり、データを収集したりしなくなります。
+**2022年3月24**日だ：BrazeのBaiduプッシュ統合は非推奨となり、Brazeダッシュボードで新しいBaiduアプリを作成することはできない。<br>
+**2022年9月15**日である：新しいBaiduプッシュメッセージは作成できない。既存のメッセージングやデータ収集に影響はない。<br>
+**2024年1月11**日だ：Brazeは今後、Baiduアプリからのメッセージングやデータ収集を行わない。
 
 ### appboyBridge グローバル変数
 
-**サポートの撤回:**2021年5月発売<br>
-**置換後の文字列**: `brazeBridge`
+**支援は撤回された**：2021年5月<br>
+**に取って代わられた**： `brazeBridge`
 
-グローバル変数`appboyBridge`は廃止`brazeBridge`され、 に置き換えられました。 `appboyBridge` 既存のお客様に対しては引き続き機能しますが、 を使用している場合は、に移行する`brazeBridge``appboyBridge`ことをお勧めします。
+グローバル変数`appboyBridge` は非推奨となり、`brazeBridge` に置き換えられる。`appboyBridge` は既存の顧客には引き続き機能するが、`appboyBridge` を使用している場合は、`brazeBridge` に移行することを推奨する。
 
-### Amazon Momentsのパートナーシップ
+### Amazon Momentsパートナーシップ
 
-**サポートの撤回:**2020年6月発売
+**支援は撤回された**：2020年6月
 
-Amazon Momentsのサポートは、2020年6月をもって終了しました。Amazon MomentsはAmazon Advertisingに統合され、APIと統合は廃止されました。
+Amazon Momentsのサポートは2020年6月をもって終了した。Amazon MomentsはAmazon Advertisingに統合され、APIと我々の統合は廃止された。
 
 ### 事実上のパートナーシップ
 
-**サポートの撤回:**2020年6月発売
+**支援は撤回された**：2020年6月
 
-2020 年 6 月をもって Factual のサポートは終了しました。Ffactualは最近Foursquareに買収され、Brazeプラットフォームと統合されなくなりました。
+Factualのサポートは2020年6月をもって終了した。Factualは最近Foursquareに買収され、Brazeプラットフォームとの統合はなくなった。
 
-### Twilio Webhook の統合
+### Twilio Webhookの統合
 
-**サポートの撤回:**2020年1月発売
+**支援は撤回された**：2020年1月
 
-[Twilio Webhook 統合]({{site.baseurl}}/partners/twilio/)のサポートは、2020 年 1 月 31 日をもって終了しました。BrazeでSMSサービスにアクセスしたい場合は、 [SMSのドキュメント]({{site.baseurl}}/user_guide/message_building_by_channel/sms/)をご覧ください。
+[Twilio Webhook統合の]({{site.baseurl}}/partners/twilio/)サポートは2020年1月31日をもって終了した。BrazeでSMSサービスにアクセスしたい場合は、[SMSドキュメントを]({{site.baseurl}}/user_guide/message_building_by_channel/sms/)参照のこと。
 
-### Apptimizeとのパートナーシップ
+### Apptimizeパートナーシップ
 
-**サポートの撤回:**2019年8月発売
+**支援は撤回された**：2019年8月
 
-現在、 [ApptimizeとBrazeを併用]({{site.baseurl}}/help/release_notes/deprecations/apptimize)している場合、サービスの中断は発生しません。Apptimizeのカスタム属性をBrazeユーザープロファイルに設定することはできます。ただし、パートナーとの正式なエスカレーション サポートは提供されません。
+現在、[BrazeでApptimizeを]({{site.baseurl}}/help/release_notes/deprecations/apptimize)使用している場合、サービスが中断することはない。BrazeユーザープロファイルにApptimizeカスタム属性を設定することはできる。しかし、パートナーとの正式なエスカレーション・サポートは提供されない。
 
-### オリジナルのアプリ内メッセージ
+### アプリ内オリジナルメッセージ
 
-**サポートの撤回:**2019年2月発売<br>
-**置換後の文字列**:[アプリ内メッセージング]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/creating_an_in-app_message)
+**支援は撤回された：**2019年2月<br>
+**に取って代わられた**：[アプリ内メッセージング]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/creating_an_in-app_message)
 
-Brazeは、最新のUXとUIのベストプラクティスに準拠するためにアプリ内メッセージのルック&フィールを改善し、元のアプリ内メッセージをサポートしなくなりました。
+Brazeは、最新のUXとUIのベストプラクティスに準拠するためにアプリ内メッセージのルック＆フィールを改善し、オリジナルのアプリ内メッセージのサポートは終了した。
 
-Brazeは、以下のSDKリリースで新しい形式のアプリ内メッセージに移行しました。
-\- iOSの場合: `2.19.0`
--アンドロイド： `1.13.0`
--ウェブ： `1.3.0`
+Brazeは、以下のSDKリリースにより、アプリ内メッセージという新しい形態に移行した：
+- iOSだ： `2.19.0`
+- Android: `1.13.0`
+- Web: `1.3.0`
 
-これらのリリース以前は、Brazeは「オリジナルのアプリ内メッセージ」をサポートしていました。 以前は、新しいリリース前にアプリ内キャンペーンを実施したすべてのお客様に、オリジナルのアプリ内メッセージのサポートが提供されていました。すべてのキャンペーン統計は変更の影響を受けず、オリジナルのアプリ内メッセージを送信したユーザーは、**キャンペーン**ページの**[キャンペーンを作成**]ボタンから他のユーザーを送信する機会がありました。
+これらのリリース以前は、Brazeは "オリジナルアプリ内メッセージ "をサポートしていた。これまで、アプリ内オリジナルメッセージのサポートは、新リリース以前にアプリ内キャンペーンを実施した顧客に対して提供されていた。すべてのキャンペーン統計はこの変更の影響を受けず、アプリ内オリジナルメッセージを送信した人は、**キャンペーン**ページの「**キャンペーンを作成**」ボタンから他のメッセージを送信することができた。
 
-### フィードバックウィジェット
+### フィードバック・ウィジェット
 
-**サポートの撤回:**2019年7月1日。
+**支援は撤回された**：2019年7月1日
 
-Braze SDKは、ユーザーがこの `submitfeedback` メソッドを使用してフィードバックを残し、Desk.com またはZendeskに渡すことができるフィードバックウィジェットをアプリに追加できるフィードバックウィジェットを提供し、ダッシュボードで管理していました。
+Braze SDKは、アプリに追加できるフィードバックウィジェットを提供し、ユーザーが`submitfeedback` メソッドを使ってフィードバックを残し、それをDesk.com またはZendeskに渡し、ダッシュボードで管理できるようにした。
 
-### Google Cloud Messaging (GCM) (英語)
+### Googleクラウドメッセージング（GCM）
 
-**サポートの撤回:**サポートのろう付け除去:2018年7月、Googleによるサポートの削除:2019年5月29日<br>
-**置換後の文字列**:[Firebase クラウド メッセージング (FCM)]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/integration/standard_integration/#step-1-enable-firebase)
+**支援は撤回された**：サポートをBrazeで取り外す：2018年7月、グーグルはサポートを打ち切った：2019年5月29日<br>
+**に取って代わられた**：[Firebaseクラウドメッセージング(FCM)]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/integration/standard_integration/#step-1-enable-firebase)
 
-Google は 2019 年 5 月 29 日をもって [GCM のサポートを終了しました](https://developers.googleblog.com/2018/04/time-to-upgrade-from-gcm-to-fcm.html) 。Brazeは、2018年7月にAndroid SDKからのGCMのサポートを終了[しました。](https://github.com/braze-inc/braze-android-sdk/blob/master/CHANGELOG.md)つまり、既存の GCM トークンは引き続き機能し、既存のユーザーにメッセージを送信できるようになります。ただし、新しいユーザーにメッセージを送信することはできません。
+グーグルは2019年5月29日をもって[GCMのサポートを終了](https://developers.googleblog.com/2018/04/time-to-upgrade-from-gcm-to-fcm.html)した。Brazeは2018年7月にAndroid SDKからのGCMのサポートを終了しており、そのことは[Android SDKの変更履歴に](https://github.com/braze-inc/braze-android-sdk/blob/master/CHANGELOG.md)記載されている。これは、既存のGCMトークンが引き続き機能し、既存のユーザーにメッセージを送ることができることを意味する。ただし、新規ユーザーへのメッセージングはできない。
 
-[Firebase Cloud Messaging(FCM)]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/integration/standard_integration/#step-1-enable-firebase)にまだ移行していないお客様は、この変更の影響を受ける可能性があります。
+[Firebase Cloud Messaging (FCM]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/integration/standard_integration/#step-1-enable-firebase)) に移行していない顧客は、この変更の影響を受ける可能性がある。
 
-FCM に移行していない場合、すべての GCM プッシュ トークンの登録が失敗します。アプリが現在 GCM をサポートしている場合は、開発チームと協力して [GCM から Firebase Cloud Messaging(FCM)に移行する](https://developers.google.com/cloud-messaging/android/android-migrate-fcm)必要があります。
+FCMに移行していない場合、GCMのプッシュトークン登録はすべて失敗する。アプリが現在GCMをサポートしている場合、[GCMからFirebase Cloud Messaging (FCM)への移行について](https://developers.google.com/cloud-messaging/android/android-migrate-fcm)開発者と協力する必要がある。
 
-### 食
+### エクリプス
 
-**サポートの撤回:**2014-2015<br>
-**置換後の文字列**:[Androidスタジオ]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/#using-android-studio)
+**支援は撤回された**：2014-2015<br>
+**に取って代わられた**：[Android Studio]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/#using-android-studio)
 
-Brazeは、GoogleがEclipse Android Developer Tools(ADT)プラグイン [のサポートを終了した](http://android-developers.blogspot.com/2015/06/an-update-on-eclipse-android-developer.html) ため、Eclipse IDEのサポートを終了しました。 
+GoogleがEclipse Android Developer Tools（ADT）プラグインの[サポートを終了した](http://android-developers.blogspot.com/2015/06/an-update-on-eclipse-android-developer.html)ため、BrazeはEclipse IDEのサポートを終了した。 
 
-移行前に Eclipse 統合についてサポートが必要な場合は、 [サポート]({{site.baseurl}}/support_contact/) にお問い合わせください。
+移行前にEclipseとの統合についてサポートが必要な場合は、[サポートに]({{site.baseurl}}/support_contact/)問い合わせること。
 
-### 未加工のイベント ストリーム (RES)
+### ロー・イベント・ストリーム（RES）
 
-**サポートの撤回:**2018年7月発売<br>
-**置換後の文字列**:[Currents]({{site.baseurl}}/partners/braze_currents/about/)
+**支援は撤回された**：2018年7月<br>
+**に取って代わられた**：[Currents]({{site.baseurl}}/partners/braze_currents/about/)
 
-Raw Event Stream は [Currents]({{site.baseurl}}/partners/braze_currents/about/) の前身であり、Braze データの将来に備えて廃止されました。
+Rawイベントストリームは[Currentsの]({{site.baseurl}}/partners/braze_currents/about/)前身であり、Brazeデータの将来のために廃止された。
 
-### アイドル時の遅延 - GCM 機能
+### アイドル時のディレイ - GCM機能
 
-**サポートの撤回:**2016年11月号
+**支援は撤回された**：2016年11月
 
-「アイドル時の遅延」パラメーターは、以前は [GCM プッシュ・オプション](https://developers.google.com/cloud-messaging/http-server-ref)の一部でした。Google は 2016 年 11 月 15 日にこのオプションのサポートを終了しました。以前は、 **true** に設定すると、デバイスがアクティブになるまでメッセージを送信しないことが示されていました。
+Delay While Idleパラメータは、以前は[GCMプッシュオプションの](https://developers.google.com/cloud-messaging/http-server-ref)一部であった。グーグルは2016年11月15日、このオプションのサポートを打ち切った。以前は、**trueに**設定すると、デバイスがアクティブになるまでメッセージを送信しないことを表していた。
 
-### カスタム エンドポイント
+### カスタムエンドポイント
 
-**サポートの撤回:**2019年12月発売
+**支援は撤回された**：2019年12月
 
-カスタム エンドポイントの削除。カスタムエンドポイントがある場合は、引き続き使用できますが、Brazeはそれらを提供しなくなりました。
+顧客エンドポイントの削除。カスタムエンドポイントを持っている場合は、それを使い続けることができるが、Brazeはもうそれを提供しない。
 
 
 [15]: {% image_buster /assets/img_archive/in-app-choices.png %}

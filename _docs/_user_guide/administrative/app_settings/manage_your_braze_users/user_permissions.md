@@ -141,7 +141,7 @@ As of April 2024, to create or update promotion code lists, Braze users need the
 |Workspace|Publish Cards|This permission is only visible if your account is enabled for News Feed, which is being deprecated. This does not affect Content Cards. Allows users to create and edit News Feed cards. You can still view News Feed cards without this permission. If your account is enabled for News Feed and a user should be able to launch existing Content Blocks, they need both "Publish Cards" and "Launch Content Blocks" permissions.|
 |Workspace|Send Campaigns, Canvases|Allows users to edit, archive, and stop campaigns and Canvases, create campaigns, and launch Canvases.|
 |Workspace|View Billing Details|Allows users to view subscriptions and billing.|
-|Workspace|View Currents Integration|Allows users to view all information about a Currents connection, excluding credentials. By default, users assigned the "Basic Read access" permission are also assigned this permission.|
+|Workspace|View Currents Integration|Allows users to view all information about a Currents connection, excluding credentials. By default, users assigned the "Access Campaigns, Canvases, Cards, Content Blocks, Feature Flags, Segments, Media Library, Locations, Promotion Codes, and Preference Centers" permission are also assigned this permission.|
 |Workspace|View Custom Attributes Marked as PII|Allows this user to view custom attributes that are marked as PII without being an admin.|
 |Workspace|View PII|Allows users to view the personally identifiable information fields as defined by your company within the dashboard.|
 |Workspace|View Transformations|Allows users to view [Braze Data Transformations]({{site.baseurl}}/user_guide/data_and_analytics/data_transformation/overview/).|

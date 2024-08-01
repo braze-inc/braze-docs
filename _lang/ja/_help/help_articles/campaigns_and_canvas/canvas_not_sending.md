@@ -1,38 +1,40 @@
 ---
-nav_title: キャンバス配信の問題
-article_title: キャンバス配信の問題
+nav_title: キャンバス配送問題
+article_title: キャンバス配送問題
 page_order: 0
 page_type: solution
-description: "このヘルプ記事では、Canvas の配信に関する問題のトラブルシューティングについて説明します。"
+description: "このヘルプでは、キャンバスの配信に関する問題のトラブルシューティングについて説明する。"
 tool: Canvas
 ---
 
-# キャンバス配信の問題
+# キャンバスの配送に関する問題
 
-キャンバスは堅牢で複雑で、作成時には時間と注意を払う必要があります。そのため、キャンバスが目的の方法を送信していないことがわかった場合は、キャンバスのスケジュール、エントリーオーディエンス、およびエントリー設定を確認することをお勧めします。
+キャンバスは頑丈で複雑なものであり、あなたがキャンバスを制作する際に時間をかけ、細心の注意を払っていることを私たちは知っている。キャンバスが思い通りに送信されない場合は、キャンバスのスケジュール、エントリーのオーディエンス、エントリーの設定を確認し、[キャンバスの作成]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/)ステップを見直すことをお勧めする。
 
-## スケジュール
+## スケジュールされた
 
-- キャンバス[が正しくスケジュールされていますか]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#scheduled-delivery)?
-- 正しい日時を選択していますか?
-- [action-based delivery]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#action-based-delivery)の場合、ユーザはキャンバスを起動してから指定されたアクションを実行しましたか?
+- キャンバスの[スケジュールは正しく]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#scheduled-delivery)組まれているか？
+- 正しい日時を選択したか？
+- [アクションベースの配信では]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#action-based-delivery)、キャンバスを起動してからユーザーが指定されたアクションを実行したか。
 
-## 入力設定
+## エントリ設定
 
-[エントリ設定]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#step-2-set-up-your-canvas)は、キャンバスの送信方法を理解するために重要です。キャンバスに入る可能性のあるユーザーの数が限られているかどうかを確認します。
+[エントリーの設定は]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#step-2-set-up-your-canvas)、キャンバスがどのように送信されているかを理解するために重要である。キャンバスに入る可能性のある人数を制限しているかどうかを確認する。
 
-ユーザがメッセージを受信できなくなった場合は、キャンバスを終了することもできます。たとえば、キャンバスにプッシュ通知のみが含まれており、最初のステップを受信した後でユーザがプッシュをオプトアウトした場合、そのユーザはキャンバスからドロップアウトされます。代替ユーザージャーニーを追加するには、[異なるキャンバスステップ]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components)を使用することを検討してください。
+ユーザーは、メッセージを受け取る資格がなくなった場合、キャンバスから退出することもできる。例えば、キャンバスがプッシュ通知のみを含む場合、ユーザーが最初のステップを受信した後にプッシュ通知を拒否すると、そのユーザーはキャンバスから脱落することになる。[異なるキャンバスステップを]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components)使用して、代替ユーザージャーニーを追加することを検討する。
 
-## 視聴者のセグメンテーション
+## オーディエンスをセグメント化する
 
-対象読者に対して、以下の質問を検討してください。
+あなたのターゲットオーディエンスについて、以下の質問を考えてみよう：
 
-- 正しいセグメントを選択しましたか?
-- セグメントはどのように設定されていますか?
-- セグメントにユーザーが含まれていることを確認しましたか。
-- キャンバスに入るユーザ数を制限するフィルタを追加しましたか?
-- ユーザーは、バリアントの最初のステップを受け取る資格がありますか?たとえば、キャンバスの最初のステップがプッシュ通知で、エントリオーディエンスがすべてプッシュ無効になっている場合、ユーザはメッセージを受信しません。
+- 正しいセグメンテーションを選択したか？
+- セグメンテーションはどのように設定されているのか？
+- セグメンテーションにユーザーが含まれていることを確認したか？
+- キャンバスに入るユーザー数を制限するようなフィルターを追加したか？
+- ユーザーはバリアントの最初のステップを受ける資格があるか？例えば、キャンバスの最初のステップがプッシュ通知であるにもかかわらず、エントリーのオーディエンスが全員プッシュを無効にしている場合、どのユーザーにもメッセージは届かない。
 
-それでも助けが必要ですか?[ Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/) の作成手順を確認するか、[サポートチケット]({{site.baseurl}}/braze_support/) を開きます。
+{% alert tip %}
+キャンバスのトラブルシューティングについては、過去30日分の診断ログしか残っていないため、問題発生から30日以内に必ずBrazeサポートに連絡すること。
+{% endalert %}
 
-_最終更新日2022年11月16日_
+_最終更新日：2024年6月25日_
