@@ -7,7 +7,7 @@ page_type: reference
 search_rank: 1
 ---
 
-# [![Braze ラーニングコース]](https://learning.braze.com/the-braze-support-portal/)([{% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/the-braze-support-portal/){: style="float:right;width:120px;border:0;" class="noimgborder"}Braze サポート
+# [![Braze ラーニングコース]]([{% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/the-braze-support-portal/){: style="float:right;width:120px;border:0;" class="noimgborder"}Braze サポート
 
 ## サポートポータルにアクセスする
 
