@@ -18,33 +18,47 @@ The AI Liquid Assistant is currently in beta for a limited number of customers w
 
 ## How it works
 
-The AI Liquid Assistant is designed to help you write effective Liquid code tailored to your marketing needs. Trained on both Liquid syntax and how marketers use Liquid in their messages, our AI understands the nuances of crafting personalized content. Additionally, by providing the AI Liquid Assistant with your custom attribute names (such as `favourite_color`) and data types (such as boolean and string), our AI Assistant ensures your messages are precisely targeted and aligned with your goals.
+The AI Liquid Assistant is designed to help you write effective Liquid code tailored to your marketing needs. Trained on both Liquid syntax and how marketers use Liquid in their messages, our AI understands the nuances of crafting personalized content. Additionally, by providing the AI Liquid Assistant with your custom attribute names (such as `favourite_color`) and data types (such as a boolean or string), our AI Assistant ensures your messages are precisely targeted and aligned with your goals.
 
 ## Generating Liquid code
 
-Access the AI Liquid Assistant by selecting the [insert Braze icon] icon above the **Message** composer. You can select from the prompts listed in the assistant or enter your prompt into the textbox.  
+To launch the AI Liquid assistant, select the AI assistant icon in the message composer.
 
-After you provide the assistant with information about the message you want to create, it will generate Liquid code that you can view by selecting **Update composer**. You can select **Regenerate** to generate another message for the same prompt or **Undo update** to remove the generated message from the composer and revert the prior message contents.
+![Message composer with the AI assistant.][1]{: style="max-width:50%;"}
 
-### Example assistant prompts
+You can choose a [provided prompt](#provided-prompts) or enter your own into the textbox. To generate your Liquid code, select **Update composer**.
 
-While using the AI Liquid Assistant, you might see a variety of prompts to help you get started with Liquid.
+![AI assistant window with provided prompts.][2]{: style="max-width:50%;"}
+ 
+You can generate another message using the same prompt by selecting **Regenerate**. To remove the message and revert to your previous one, select **Undo update**.
+
+### Provided prompts
+
+While using the AI Liquid Assistant, you might see a variety of prompts to help you get started with Liquid. Some of the prompts are listed below.
 
 #### Use app activity
 
-This prompt will generate Liquid code that sends different messages based on when your app was last used. It will ask you questions so you can provide more context about the type of messages it should generate. For example, it might ask you for the app usage timeframe or specifics about the message content.
+The **Use app activity** prompt generates Liquid code to help you send different messages based on when your app was last used. You may be asked follow-up questions so the assistant can generate a more accurate result.
+
+![Example output of the "Use app activity" prompt.][3]{: style="max-width:45%;"}
 
 #### Add countdown
 
 This prompt will generate Liquid code that sends a message with how much time until an event happens. It will ask you to provide details about the event date and time.
 
+![Example output of the "Add countdown" prompt.][4]{: style="max-width:45%;"}
+
 #### Inspire me
 
 This prompt appears when there is content in your message box. It generates a list of options you can choose from to personalize your message with Liquid. 
 
+![Example output of the "Inspire me" prompt.][5]{: style="max-width:60%;"}
+
 #### Improve my Liquid
 
 This prompt appears when there is content in your message composer. Select it when you want the assistant to make your code more efficient and easier to read.
+
+![Example output of the "Improve my Liquid" prompt.][6]{: style="max-width:45%;"}
 
 ## Supported attributes in beta
 
@@ -59,3 +73,10 @@ This prompt appears when there is content in your message composer. Select it wh
 ## How is my data used and sent to OpenAI?
 
 To modify or create your message content, Braze will send your prompts, messages, and content submitted to the Liquid AI Assistant to OpenAI’s API platform. All queries sent to OpenAI from Braze are anonymized, meaning that OpenAI will not be able to identify from whom the query was sent unless you include uniquely identifiable information in the content you provide. As detailed in [OpenAI’s API platform commitments](https://openai.com/policies/api-data-usage-policies), data sent to OpenAI’s API via Braze is not used to train or improve their models and will be deleted after 30 days. Make sure to adhere to OpenAI’s policies relevant to you, which may include its [Usage policies](https://openai.com/policies/usage-policies) and its [Sharing & publication policy](https://openai.com/policies/sharing-publication-policy). Braze makes no warranty of any kind with respect to any AI-generated content
+
+[1]: {% image_buster /assets/img/ai_liquid/ai_assistant_icon.png %}
+[2]: {% image_buster /assets/img/ai_liquid/ai_assistant_window.png %}
+[3]: {% image_buster /assets/img/ai_liquid/use_app_activity.png %}
+[4]: {% image_buster /assets/img/ai_liquid/add_countdown.png %}
+[5]: {% image_buster /assets/img/ai_liquid/inspire_me.png %}
+[6]: {% image_buster /assets/img/ai_liquid/improve_my_liquid.png %}
