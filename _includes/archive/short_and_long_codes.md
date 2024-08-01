@@ -5,85 +5,21 @@ Short and long codes are the phone number from which you send messages to your u
 
 ## Types of sending numbers
 
-<style type="text/css">
-.tg td{word-break:normal;}
-.tg th{word-break:normal;}
-.leftHeader{font-size: 12px; font-weight: bold; background-color: #f4f4f7; text-transform: uppercase; color: #212123; font-family: "Sailec W00 Bold",Arial,Helvetica,sans-serif;}
-.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
-</style>
-<table class="tg">
-<thead>
-  <tr>
-    <th class="tg-0pky"></th>
-    <th class="tg-0pky">Short Codes</th>
-    <th class="tg-0pky">Long Codes</th>
-    <th class="tg-0pky">Vanity Short Code</th>
-    <th class="tg-0pky">Alphanumeric Sender ID</th>
-    <th class="tg-0pky">SMS-Enabled Toll-Free Number</th>
-  </tr>
-</thead>
-<tbody>
-  <tr>
-    <td class="leftHeader">Length</td>
-    <td class="tg-0pky">5–6 digits</td>
-    <td class="tg-0pky">10 digits (US/Canada)</td>
-    <td class="tg-0pky">5–6 digits</td>
-    <td class="tg-0pky">Up to 11 characters</td>
-    <td class="tg-0pky">10 digits (US/Canada)</td>
-  </tr>
-  <tr>
-    <td class="leftHeader">Availability</td>
-    <td class="tg-0pky">US, Canada, UK, and more in beta</td>
-    <td class="tg-0pky">Around 100 countries worldwide</td>
-    <td class="tg-0pky">US and Canada</td>
-    <td class="tg-0pky">Handful of countries worldwide</td>
-    <td class="tg-0pky">US and Canada only</td>
-  </tr>
-  <tr>
-    <td class="leftHeader">Access</td>
-    <td class="tg-0pky">8–12 week application</td>
-    <td class="tg-0pky">Available immediately</td>
-    <td class="tg-0pky">8–12 week application</td>
-    <td class="tg-0pky">Available immediately if pre-registration is not required</td>
-    <td class="tg-0pky">Available immediately</td>
-  </tr>
-  <tr>
-    <td class="leftHeader">Throughput</td>
-    <td class="tg-0pky">100 messages per second or more</td>
-    <td class="tg-0pky">1 message per second or more depending on 10DLC trust score (US)<br>10 messages per second (International)</td>
-    <td class="tg-0pky">100 messages per second</td>
-    <td class="tg-0pky">10 messages per second</td>
-    <td class="tg-0pky">1 message per second</td>
-  </tr>
-  <tr>
-    <td class="leftHeader">MMS Enabled</td>
-    <td class="tg-0pky">Yes</td>
-    <td class="tg-0pky">Yes</td>
-    <td class="tg-0pky">Yes</td>
-    <td class="tg-0pky">No </td>
-    <td class="tg-0pky">No</td>
-  </tr>
-  <tr>
-    <td class="leftHeader">1-way vs. 2-way</td>
-    <td class="tg-0pky">2-way</td>
-    <td class="tg-0pky">2-way</td>
-    <td class="tg-0pky">2-way</td>
-    <td class="tg-0pky">1-way</td>
-    <td class="tg-0pky">2-way</td>
-  </tr>
-</tbody>
-</table>
-
-{% alert important %}
-If throughput is exceeded, some messages may fail.
-{% endalert %}
-
 {% tabs %}
 {% tab Short Codes %}
 
 #### Short codes
 
 A short code is a memorable 5-6 digit sequence that allows senders to send messages at more consistent rates than long codes. If you are sending several hundred messages a day from a long code, your messages run the risk of being marked as spam. This makes short codes perfect for high-volume time-sensitive sending.
+
+##### Details
+
+| Length | Access | Throughput | MMS enabled | 1-way vs. 2-way |
+| --- | --- | --- | --- | --- |
+| 5-6 digits | 8-12 week application| 100 messages per second or more | Yes | 2-way |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 }
+
+##### Pros and cons
 
 | Pros |
 | ---- |
@@ -101,6 +37,15 @@ A short code is a memorable 5-6 digit sequence that allows senders to send messa
 #### Long codes
 
 A long code is a standard phone number used to send and receive voice calls and SMS messages. Phone numbers are typically called “long codes” (10-digit numbers in many countries) when comparing them with SMS short codes (5-6 digit numbers).
+
+##### Details
+
+| Length | Access | Throughput | MMS enabled | 1-way vs. 2-way |
+| --- | --- | --- | --- | --- |
+| 10 digits | 4-6 week application | 1 message per second or more depending on 10DLC trust score (US)<br>10 messages per second (international) | Yes | 2-way |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 }
+
+##### Pros and cons
 
 | Pros |
 | ---- |
@@ -121,6 +66,15 @@ A vanity short code is a 5-6 digit phone number that is specifically selected by
 - The NYC health department has a vanity short code of `692-692` which spells out NYC-NYC on a telephone keypad.
 - Amazon uses a short code of `262-966` which spells out AMA-ZON for shipment tracking updates.
 - PayPal uses a short code of `729-725` that spells PAY-PAL for text message commands.<br><br>
+
+##### Details
+
+| Length | Access | Throughput | MMS enabled | 1-way vs. 2-way |
+| --- | --- | --- | --- | --- |
+| 5-6 digits | 8-12 week application | 100 messages per second | Yes | 2-way |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 }
+
+##### Pros and cons
 
 | Pros |
 | ---- |
@@ -143,6 +97,15 @@ Sender IDs are the short or long codes that appear at the top of an SMS message 
 
 Alphanumeric Sender IDs allow you to set your company name or brand as the Sender ID when sending one-way messages to mobile users. They may be up to 11 characters and accepts upper (A-Z) and lower (a-z) case letters, spaces, and digits (0-9). There **may not** be only numbers. 
 
+##### Details
+
+| Length | Access | Throughput | MMS enabled | 1-way vs. 2-way |
+| --- | --- | --- | --- | --- |
+| Up to 11 characters	 | Available immediately if pre-registration is not required | 110 messages per second | No | 1-way |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 }
+
+##### Pros and cons
+
 | Pros | Cons |
 | ---- | ---- | 
 | {::nomarkdown} <ul> <li> No additional charge to implement </li> <li> Improves brand awareness </li> <li> Increases SMS open rates </li> <li> Matches sending speed of phone numbers inside the subscription group </li> <li> Available immediately if pre-registration is not required </li> </ul> {:/} | {::nomarkdown} <ul> <li> <a href='/docs/user_guide/message_building_by_channel/sms/keywords/#two-way-messaging-custom-keyword-responses/'>Two-way messaging</a> is not supported </li> <li> Not all countries support this feature </li> <li> Some countries require an additional approval processes </li> <li> MMS is not enabled </li> </ul> {:/} |
@@ -156,6 +119,15 @@ For more information on Alphanumeric Sender ID, please reach out to your custome
 
 A toll-free telephone number, or a freephone number, is a telephone number that is billed for all arriving calls instead of incurring charges at the originating telephone subscriber. Toll-free numbers in the US and Canada are SMS-enabled, where subscribers are charged for incoming and outgoing texts.
 
+##### Details
+
+| Length | Access | Throughput | MMS enabled | 1-way vs. 2-way |
+| --- | --- | --- | --- | --- |
+| 10 digits	 | 2-4 week application | 1 message per second | No | 2-way |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 }
+
+##### Pros and cons
+
 | Pros | Cons |
 | ---- | ---- | 
 | {::nomarkdown} <ul> <li> Can be used immediately to send messages </li> </ul> {:/} | {::nomarkdown} <ul> <li> Toll-free numbers are only the US and Canada </li> <li> Slower sending speed of 1 segment per second. </li> <li> MMS is not enabled </li> </ul> {:/} |
@@ -163,6 +135,10 @@ A toll-free telephone number, or a freephone number, is a telephone number that 
 
 {% endtab %} 
 {% endtabs %}
+
+{% alert important %}
+If throughput is exceeded, some messages may fail.
+{% endalert %}
 
 Besides these differences, know that a brand will usually have one short code, but multiple, back-up long codes, depending on how many recipients they plan to send SMS.
 
