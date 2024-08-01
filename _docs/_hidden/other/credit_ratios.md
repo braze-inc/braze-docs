@@ -13,14 +13,14 @@ hidden: true
 In the event that Meta modifies its pricing or packaging for WhatsApp, Braze reserves the right to modify its credit ratios accordingly upon reasonable notice.
 {% endalert %}
 
+**Authentication Conversations**: Enable businesses to authenticate users with one-time passcodes, potentially at multiple steps in the login process (for example, account verification, account recovery, integrity challenges) 
+  - Authentication conversations will only be supported on a case-by-case basis and Braze cannot guarantee specific SLAs. Additionally, Braze does not support PIN generation.
+
 **Marketing Conversations**: Include promotions or offers, informational updates, or invitations for customers to respond or take action. 
 
+**Service Conversations**: End-user sends a message to the business. When the business sends a message in response, this begins the 24-hour window.
+
 **Utility Conversations**: Facilitate a specific, agreed-upon request or transaction or update to a customer about an ongoing transaction, including post-purchase notifications and recurring billing statements.
-
-**Service Conversations**: End-user sends a message to the business. When the business sends a message in response, this begins the 24hr window.
-
-**Authentication Conversations**: Enable businesses to authenticate users with one-time passcodes, potentially at multiple steps in the login process (for example, account verification, account recovery, integrity challenges) 
-  - Authentication conversations will only be supported on a case-by-case basis and Braze cannot guarantee specific SLAs. Additionally, Braze does not support pin generation.
 
 | References | Credit Ratio |
 |------------|--------------|
