@@ -27,16 +27,16 @@ Snowflake's [Secure Data Shares](https://docs.snowflake.com/en/user-guide/data-s
 | Prerequisite       | Description                                                                                                                                                                                     |
 |-------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Snowflake Account | You need a Snowflake account with admin-level permissions.                                                                                                                                      |
-| Braze Account     | Reach out to your Braze Account or customer success manager to consult Braze data strategy services on Secure Data Sharing with Snowflake and to purchase their Snowflake Data Share Connector. |
 | LiveRamp Account  | Reach out to your LiveRamp account team or [snowflake@liveramp.com](mailto:snowflake@liveramp.com) to discuss the required LiveRamp applications within Snowflake.                              |
-| A Snowflake Braze integration | To integrate Snowflake with Braze, see [Snowflake integration guide]({{site.baseurl}}/partners/data_and_infrastructure_agility/data_warehouses/snowflake/).                             |
 {: .reset-td-br-1 .reset-td-br-2 }
 
 ## Setting up the integration
 
-### Step 1: Braze?
+### Step 1: Request a data share from Braze
 
-When you request a data share, Braze will provision the share from the workspace(s) that the share was purchased. After the share is provisioned, all data is immediately accessible from within your Snowflake instance in the form of an incoming data share. Once the share is visible in your instance create a database from the share so you can see and query the tables. Note that you’ll need to be an account admin to see the data share.
+First, reach out to your Braze account manager or customer success manager to purchase a Snowflake Data Share Connector for your Braze account. When you request a data share, Braze will provision the share from the workspace(s) that the share was purchased. After the share is provisioned, all data is immediately accessible from within your Snowflake instance in the form of an incoming data share. Once the share is visible in your instance create a database from the share so you can see and query the tables.
+
+For a full walkthrough, see [Snowflake integration guide with Braze]({{site.baseurl}}/partners/data_and_infrastructure_agility/data_warehouses/snowflake/).
 
 ### Step 2: Set up the LiveRamp app in Snowflake 
 
@@ -78,16 +78,18 @@ The use of any client or brand-specific custom identifiers within LiveRamp’s a
 
 ### Step 4: Set your variables
 
-[Set your variables](https://docs.liveramp.com/identity/en/perform-identity-resolution-in-snowflake.html) for the job in the Execution Steps worksheet provided in the app. This includes details like the target database, associated tables (input data, metrics, logging), and defining the output table name.
+Next, set your variables for the job in the Execution Steps worksheet provided in the app. This includes details like the target database, associated tables (input data, metrics, logging), and defining the output table name. For a full walkthrough, see [LiveRamp: Specify the Variables](https://docs.liveramp.com/identity/en/perform-identity-resolution-in-snowflake.html#specify-the-variables-43-150727).
 
 ### Step 6: Create the metadata table for PII resolution
 
-With the variables set, you’ll then [create the metadata table](https://docs.liveramp.com/identity/en/perform-identity-resolution-in-snowflake.html#create-the-input-table-for-identity-resolution), which gives details on the specific job type to be executed based on the category of identifiers involved.
+Now that your variables are set, create the metadata table for PII resolution. This will give details on the specific job type to be executed based on the category of identifiers involved. For a full walkthrough, see [LiveRamp: Create the Metadata Table](https://docs.liveramp.com/identity/en/perform-identity-resolution-in-snowflake.html#create-the-metadata-table-43), which 
 
 ### Step 7: Perform the identity resolution operation
 
-For a full walkthrough, see [Perform Identity Resolution](https://docs.liveramp.com/identity/en/perform-identity-resolution-in-snowflake.html).
+Finally, preform the identity resolution operation in LiveRamp. For a full walkthrough, see [LiveRamp: Perform the Identity Resolution Operation](https://docs.liveramp.com/identity/en/perform-identity-resolution-in-snowflake.html#perform-the-identity-resolution-operation).
 
+{% tabs local %}
+{% tab example input %}
 ```sql
 call lr_resolution_and_transcoding(
 $customer_input_table_name,
@@ -97,14 +99,16 @@ $customer_logging_table_name,
 $customer_metrics_table_name
 );
 ```
+{% endtab %}
 
-Your output should be similar to the following based on the identifiers you used. Verify your Braze data belongs to a dedicated encoding of RampID, LiveRamp’s person-based, pseudonymous identifier.
-
+{% tab example output %}
 ```sql
 call check_for_output(
 $output_table_name
 );
 ```
+{% endtab %}
+{% endtabs %}
 
 ### Next steps
 
