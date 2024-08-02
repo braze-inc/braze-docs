@@ -123,15 +123,15 @@ glossaries:
     tags:
       - Sessions
   - name: Received Message from Campaign
-    description: 
+    description: Segments your users by whether or not they have received a specific campaign.<br><br> For Content Cards and in-app messages, this is calculated when a user logs an impression, not when the card or in-app message is sent.<br><br>For push and webhooks, this is calculated when the message is sent to the user.<br><br> For WhatsApp, this is calculated when the last message API request is sent to WhatsApp, not when the message is delivered to user's device. <br><br>For emails, this is when an email request is sent to the email service provider (regardless if it actually gets delivered). When multiple users share the same email address:<br>- On the initial send, only the specific targeted user's profile is updated. <br>- When the email is delivered, or if the user then opens the email or a link in the email, the <code><nobr>cs.{name_store_token}</nobr></code> is set for all users sharing that email and they will all appear to have received the message.
     tags:
       - Retargeting
   - name: Received Campaign Variant
-    description: Segments your users by which variant of a multivariate campaign they have received.
+    description: Segments your users by which variant of a multivariate campaign they have received.<br><br> For Content Cards and in-app messages, this is calculated when a user logs an impression, not when the card or in-app message is sent.<br><br>For push and webhooks, this is calculated when the message is sent to the user.<br><br> For WhatsApp, this is calculated when the last message API request is sent to WhatsApp, not when the message is delivered to user's device. <br><br>For emails, this is when an email request is sent to the email service provider (regardless if it actually gets delivered). When multiple users share the same email address:<br>- On the initial send, only the specific targeted user's profile is updated. <br>- When the email is delivered, or if the user then opens the email or a link in the email, the <code><nobr>cs.{name_store_token}</nobr></code> is set for all users sharing that email and they will all appear to have received the message.
     tags:
       - Retargeting
   - name: Received Message from Canvas Step
-    description: Segments your users by whether or not they have received a specific Canvas component.
+    description: Segments your users by whether or not they have received a specific Canvas component.<br><br> For Content Cards and in-app messages, this is calculated when a user logs an impression, not when the card or in-app message is sent.<br><br>For push and webhooks, this is calculated when the message is sent to the user.<br><br> For WhatsApp, this is calculated when the last message API request is sent to WhatsApp, not when the message is delivered to user's device. <br><br>For emails, this is when an email request is sent to the email service provider (regardless if it actually gets delivered). When multiple users share the same email address:<br>- On the initial send, only the specific targeted user's profile is updated. <br>- When the email is delivered, or if the user then opens the email or a link in the email, the <code><nobr>cs.{name_store_token}</nobr></code> is set for all users sharing that email and they will all appear to have received the message.
     tags:
       - Retargeting
   - name: Last Received Message from Specific Canvas Step
@@ -143,7 +143,7 @@ glossaries:
     tags:
       - Retargeting
   - name: Received Message from Campaign or Canvas with Tag
-    description: Segments your users by whether or not they have received a specific campaign or Canvas with a specific tag.
+    description: Segments your users by whether or not they have received a specific campaign or Canvas with a specific tag.<br><br> For Content Cards and in-app messages, this is calculated when a user logs an impression, not when the card or in-app message is sent.<br><br>For push and webhooks, this is calculated when the message is sent to the user.<br><br> For WhatsApp, this is calculated when the last message API request is sent to WhatsApp, not when the message is delivered to user's device. <br><br>For emails, this is when an email request is sent to the email service provider (regardless if it actually gets delivered). When multiple users share the same email address:<br>- On the initial send, only the specific targeted user's profile is updated. <br>- When the email is delivered, or if the user then opens the email or a link in the email, the <code><nobr>cs.{name_store_token}</nobr></code> is set for all users sharing that email and they will all appear to have received the message.
     tags:
       - Retargeting
   - name: Last Received Message from Campaign or Canvas With Tag
@@ -175,7 +175,7 @@ glossaries:
     tags:
       - Retargeting
   - name: Last Received WhatsApp
-    description: Segments your users by the last time that they have received a WhatsApp message. (24-hour period)<br><br>Time zone:<br>Company's Time Zone
+    description: Segments your users by the last time that they have received a WhatsApp message. This is when the last message API request is sent to WhatsApp, not when the message is delivered to user's device. (24-hour period)<br><br>Time zone:<br>Company's Time Zone
     tags:
       - Retargeting
   - name: Last Viewed News Feed
@@ -187,11 +187,11 @@ glossaries:
     tags:
       - Retargeting
   - name: Clicked/Opened Campaign
-    description: Filter by interaction with a specific campaign.
+    description: Filter by interaction with a specific campaign. <br><br> If multiple users share the same email address:<br>- When the email is opened or clicked, all other users with that same email address also have their profiles updated. <br>- If the original user changes their email address after the message is sent and before the open or click, the open or click gets applied to all remaining users with that email address instead of the original user.
     tags:
       - Retargeting
   - name: Clicked/Opened Campaign or Canvas With Tag
-    description: Filter by interaction with a specific campaign that has a specific tag.
+    description: Filter by interaction with a specific campaign that has a specific tag. <br><br> If multiple users share the same email address:<br>- When the email is opened or clicked, all other users with that same email address also have their profiles updated. <br>- If the original user changes their email address after the message is sent and before the open or click, the open or click gets applied to all remaining users with that email address instead of the original user.
     tags:
       - Retargeting
   - name: Clicked/Opened Step
@@ -199,15 +199,15 @@ glossaries:
     tags:
       - Retargeting
   - name: Clicked Alias in Campaign
-    description: Filter your users by whether they clicked a specific alias in a specific campaign.
+    description: Filter your users by whether they clicked a specific alias in a specific campaign. This only applies to email messages. <br><br> If multiple users share the same email address:<br>- When the email is opened or clicked, all other users with that same email address also have their profiles updated. <br>- If the original user changes their email address after the message is sent and before the open or click, the open or click gets applied to all remaining users with that email address instead of the original user.
     tags:
       - Retargeting
   - name: Clicked Alias in Canvas Step
-    description: Filter your users by whether they clicked a specific alias in a specific Canvas.
+    description: Filter your users by whether they clicked a specific alias in a specific Canvas. This only applies to email messages. <br><br> If multiple users share the same email address:<br>- When the email is opened or clicked, all other users with that same email address also have their profiles updated. <br>- If the original user changes their email address after the message is sent and before the open or click, the open or click gets applied to all remaining users with that email address instead of the original user.
     tags:
       - Retargeting
   - name: Clicked Alias in Any Campaign or Canvas Step
-    description: Filter your users by whether they clicked a specific alias in any campaign or Canvas.
+    description: Filter your users by whether they clicked a specific alias in any campaign or Canvas. This only applies to email messages. <br><br> If multiple users share the same email address:<br>- When the email is opened or clicked, all other users with that same email address also have their profiles updated. <br>- If the original user changes their email address after the message is sent and before the open or click, the open or click gets applied to all remaining users with that email address instead of the original user.
     tags:
       - Retargeting
   - name: Hard Bounced
@@ -251,11 +251,11 @@ glossaries:
     tags:
       - Retargeting
   - name: Last Received Any Message
-    description: Segments your users by determining the last message that was received. (24-hour period)<br><br>Example:<br>Last Received Message Less than 1 Day ago = less than 24 hours ago<br><br>Time zone:<br>Company's Time Zone
+    description: Segments your users by determining the last message that was received. (24-hour period)<br><br> For Content Cards and in-app messages, this is calculated when a user last logged an impression, not when the card or in-app message was last sent.<br><br>For push and webhooks, this is calculated when any message was sent to the user.<br><br> For WhatsApp, this is calculated when the last message API request was sent to WhatsApp, not when the message was delivered to user's device. <br><br>For emails, this is when an email request is sent to the email service provider (regardless if it actually gets delivered). When multiple users share the same email address:<br>- On the initial send, only the specific targeted user's profile is updated. <br>- When the email is delivered, or if the user then opens the email or a link in the email, the <code><nobr>cs.{name_store_token}</nobr></code> is set for all users sharing that email and they will all appear to have received the message.<br><br>Example:<br>Last Received Message Less than 1 Day ago = less than 24 hours ago<br><br>Time zone:<br>Company's Time Zone
     tags:
       - Retargeting
   - name: Last Engaged With Message
-    description: Segments your users by the last time that they have clicked or opened one of your messaging channels (email, in-app, push). Includes option to filter by machine opens or other opens for email messages. (24-hour period)<br><br>Time zone:<br>Company's Time Zone
+    description: Segments your users by the last time that they have clicked or opened one of your messaging channels (Content Card, email, in-app, push, WhatsApp). Includes the option to filter by machine opens or other opens for email messages. (24-hour period)<br><br>For emails, this is when an email request is sent to the email service provider (regardless if it actually gets delivered). When multiple users share the same email address:<br>- On the initial send, only the specific targeted user's profile is updated. <br>- When the email is delivered, or if the user then opens the email or a link in the email, the <code><nobr>cs.{name_store_token}</nobr></code> is set for all users sharing that email and they will all appear to have received the message.<br><br>Time zone:<br>Company's Time Zone
     tags:
       - Retargeting
   - name: Clicked card 
@@ -267,7 +267,7 @@ glossaries:
     tags:
       - Retargeting
   - name: Subscription Group
-    description: Segments your users by their subscription group for email or SMS/MMS. Archived Groups will not appear and cannot be used.
+    description: Segments your users by their subscription group for email, SMS/MMS, or WhatsApp. Archived Groups will not appear and cannot be used.
     tags:
       - Channel subscription behavior
   - name: Email Available
@@ -459,7 +459,7 @@ glossaries:
     tags:
       - Advertising use cases  
   - name: Ad Tracking Enabled
-    description: Allows you to filter based on if your users have opted-in to ad tracking. Ad tracking relates to the IDFA or "identifier for advertisers" assigned to all iOS devices by Apple. This identifier allows advertisers to track users and serve them targeted ads.
+    description: Allows you to filter based on if your users have opted-in to ad tracking. Ad tracking relates to the IDFA or "identifier for advertisers" assigned to all iOS devices by Apple, which can be set by SDKs. This identifier allows advertisers to track users and serve them targeted ads.
     tags:
       - Advertising use cases
   - name: Most Recent Location
