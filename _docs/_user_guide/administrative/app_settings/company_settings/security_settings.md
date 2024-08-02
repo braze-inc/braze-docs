@@ -87,7 +87,7 @@ The Security Event report is a CSV report of security events such as account inv
 
 To download this report, do the following:
 
-1. Go to your user profile and select **Company Settings**.
+1. Go to **Settings** > **Admin Settings**.
 2. Select the **Security Settings** tab and go to the **Security Event Download** section.
 2. Select **Download report**. 
 
