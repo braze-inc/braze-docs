@@ -80,11 +80,11 @@ The use of any client or brand-specific custom identifiers within LiveRamp’s a
 
 Next, set your variables for the job in the Execution Steps worksheet provided in the app. This includes details like the target database, associated tables (input data, metrics, logging), and defining the output table name. For a full walkthrough, see [LiveRamp: Specify the Variables](https://docs.liveramp.com/identity/en/perform-identity-resolution-in-snowflake.html#specify-the-variables-43-150727).
 
-### Step 6: Create the metadata table for PII resolution
+### Step 5: Create the metadata table for PII resolution
 
 Now that your variables are set, create the metadata table for PII resolution. This will give details on the specific job type to be executed based on the category of identifiers involved. For a full walkthrough, see [LiveRamp: Create the Metadata Table](https://docs.liveramp.com/identity/en/perform-identity-resolution-in-snowflake.html#create-the-metadata-table-43), which 
 
-### Step 7: Perform the identity resolution operation
+### Step 6: Perform the identity resolution operation
 
 Finally, preform the identity resolution operation in LiveRamp. For a full walkthrough, see [LiveRamp: Perform the Identity Resolution Operation](https://docs.liveramp.com/identity/en/perform-identity-resolution-in-snowflake.html#perform-the-identity-resolution-operation).
 
