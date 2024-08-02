@@ -48,7 +48,7 @@ Here are guidelines to select the variables:
 
 ### Health app
 
-Let's say you have health app and want to segment users who have booked a visit for the dentist. You also have the following:
+Let's say you have a health app and want to segment users who have booked a visit for the dentist. You also have the following:
 
 - A catalog `Doctors` that contains the different doctors a patient can book, each assigned with a `doctor ID`
 - A custom event `Booked Visit` with a `doctor ID` property that shares the same values as the `doctor ID` field in your catalog
