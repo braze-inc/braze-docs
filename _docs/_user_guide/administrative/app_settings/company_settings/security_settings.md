@@ -75,7 +75,7 @@ Be sure to save your changes before leaving the page!
 
 Users experiencing issues logging in via two-factor authentication can reach out to their company admins to reset their two-factor authentication. To do this, have an admin perform the following steps:
 
-1. Navigate to **Manage Users**.
+1. Go to **Settings** > **Company Users**.
 2. Select the user from the provided list.
 3. Select **Reset** under **Two Factor Authentication**.
 
