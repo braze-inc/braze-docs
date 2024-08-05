@@ -65,6 +65,10 @@ Within a filter group, filters can be joined by either "AND" or "OR". Between fi
 
 Selecting "OR" for your filters means that your segment will contain users satisfying any combination of one, some, or all of those filters. Selecting "AND" means that users who do not pass that filter will not be included in your segment.
 
+{% alert tip %}
+When selecting "OR" for filters that include a negative filter (such as "is not" in a subscription group), remember that users only need to fulfill one of the "OR" filters to be included in the segment. To apply the negative filter regardless of the other filters, use an [exclusion group](#exclusion).
+{% endalert %}
+
 #### Filter operators
 
 Depending on the specific filter you select, you will have different operators for identifying filter values. To dive deeper into the operators available for different types of custom attributes, see [Custom attribute storage]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#setting-custom-attributes). Note that when using the “is any of” operator, the maximum number of items you can include in that field is 256.
@@ -79,7 +83,7 @@ Braze doesn't generate profiles for users until they've used the app for the fir
 Segments already using the **Segment Membership** filter cannot be further included or nested into other segments.
 {% endalert %}
 
-#### Exclusion groups (optional)
+#### Exclusion groups (optional) {#exclusion}
 
 When building a segment, you can apply one or multiple exclusion groups. Exclusion groups contain criteria that identify users to exclude from your segment, and will always be connected to your filter groups with an "AND NOT" operator.
 
