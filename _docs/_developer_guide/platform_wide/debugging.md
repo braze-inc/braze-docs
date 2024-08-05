@@ -35,17 +35,24 @@ Select **Create debugging session**.
 
 ![The "SDK Debugger" page.]({% image_buster /assets/img/sdk_debugger/select_create_debugging_session.png %})
 
-### Step 3: Select a user
+### Step 3: Search & Select a user
 
 Search for a user using their email address, `external_id`, user alias, or push token. When you're ready to start your session, select **Select User**.
 
 ![The debugging page for the selected user.]({% image_buster /assets/img/sdk_debugger/search_and_select_user.png %}){: style="max-width:85%;"}
 
-### Step 4: Complete the reproduction steps
+### Step 4: Pair device & relaunch app
+{% alert important %}
+Once your device is successfully paired, you will need to relaunch your app to ensure initialization logs are captured as well. 
+{% endalert %}
 
-Open your app, then follow the reproduction steps for your error. When you're reproducing the error, be sure to follow the reproduction steps as closely as possible, so you can create quality [debug logs](#step-6-export-your-session-logs-optional).
+Open your application and wait for confirmation that your device is paired. Once paired, confirm and proceed to the next step where you will need to close and relaunch your app in order to ensure initialzation logs are captured for your application. 
 
-### Step 5: End your session
+### Step 5: Complete the reproduction steps
+
+After restarting your app, follow the reproduction steps for your error. When you're reproducing the error, be sure to follow the reproduction steps as closely as possible, so you can create quality [debug logs](#step-6-export-your-session-logs-optional).
+
+### Step 6: End your session
 
 When you're finished with your reproduction steps, select **End Session** > **Close**.
 
@@ -55,7 +62,7 @@ When you're finished with your reproduction steps, select **End Session** > **Cl
 It may take a few minutes to generate your logs depending on your session length and network connectivity.
 {% endalert %}
 
-### Step 6: Share or export your session (optional)
+### Step 7: Share or export your session (optional)
 
 After your session, you can export your session logs as a CSV file. Additionally, others can use your **Session ID** to search for your debug session, so you don't need to send them your logs directly.
 
