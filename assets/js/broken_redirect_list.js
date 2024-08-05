@@ -636,7 +636,6 @@ validurls['/docs/back_in_stock/'] = '/docs/user_guide/personalization_and_dynami
 validurls['/docs/user_guide/personalization_and_dynamic_content/catalogs/back_in_stock_notifications/'] = '/docs/user_guide/personalization_and_dynamic_content/catalogs/catalog_triggers/back_in_stock_notifications/';
 validurls['/docs/user_guide/personalization_and_dynamic_content/catalogs/price_drop_notifications'] = '/docs/user_guide/personalization_and_dynamic_content/catalogs/catalog_triggers/price_drop_notifications';
 
-
 validurls['/docs/api/endpoints/templates/content_blocks_templates/post_update_email_content_block'] = '/docs/api/endpoints/templates/content_blocks_templates/post_update_content_block/';
 
 validurls['/docs/developer_guide/platform_integration_guides/android/push_notifications/android/customization/custom_broadcast_receiver/'] = '/docs/help/release_notes/deprecations/custom_broadcast_receiver/';
