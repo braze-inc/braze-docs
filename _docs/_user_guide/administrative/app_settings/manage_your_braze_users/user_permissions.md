@@ -54,7 +54,15 @@ To edit a user's current [admin](#admin), [company](#company), or [workspace](#w
 
 ### Admin
 
-Admins have access to all features and the ability to modify any company setting. To grant or remove admin privileges, select **This user is an admin**, then select **Update user**.
+Admins have access to all features and the ability to modify any company setting. There are also a few things that only admins can do in Braze. 
+
+Only admins can:
+
+- Change [approval settings]({{site.baseurl}}/user_guide/engagement_tools/campaigns/managing_campaigns/campaign_approval/#turning-on-campaign-approval)
+- Add, edit, delete, suspend, or unsuspend other [Braze users]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/adding_users_to_your_dashboard/#adding-braze-users)
+- Export Braze users as a CSV
+
+To grant or remove admin privileges, select **This user is an admin**, then select **Update user**.
 
 ![The details of the selected user with the admin checkbox in focus.]({% image_buster /assets/img/braze_permissions/admin_level_permissions.png %}){: style="max-width:40%;"}
 
