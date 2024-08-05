@@ -82,7 +82,7 @@ Next, set your variables for the job in the Execution Steps worksheet provided i
 
 ### Step 5: Create the metadata table for PII resolution
 
-Now that your variables are set, create the metadata table for PII resolution. This will give details on the specific job type to be executed based on the category of identifiers involved. For a full walkthrough, see [LiveRamp: Create the Metadata Table](https://docs.liveramp.com/identity/en/perform-identity-resolution-in-snowflake.html#create-the-metadata-table-43), which 
+Now that your variables are set, create the metadata table for PII resolution. This will give details on the specific job type to be executed based on the category of identifiers involved. For a full walkthrough, see [LiveRamp: Create the Metadata Table](https://docs.liveramp.com/identity/en/perform-identity-resolution-in-snowflake.html#create-the-metadata-table-43).
 
 ### Step 6: Perform the identity resolution operation
 
