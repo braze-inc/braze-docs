@@ -34,7 +34,7 @@ For [Content Block]({{site.baseurl}}/user_guide/engagement_tools/templates_and_m
 
 Duplicating multiple templates can be achieved by selecting the checkbox next to the template name. First, select the templates and then select the **Duplicate** button that appears.
 
-Duplicated templates can be found by sorting the **Last Edited** column. By default, new templates will be named `Copy of {{original template name}}`.
+Duplicated templates can be found by sorting the **Last Edited** column. By default, new templates will be named `Copy of ORIGINAL_TEMPLATE_NAME`.
 
 {% endraw %}
 
