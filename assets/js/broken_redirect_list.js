@@ -620,22 +620,26 @@ validurls['/docs/user_guide/engagement_tools/testing/multivariant_testing/create
 validurls['/docs/email_history/'] = '/docs/user_guide/engagement_tools/segments/user_profiles/#messaging-history-tab';
 validurls['/docs/user_guide/engagement_tools/segments/using_user_search/'] = '/docs/user_guide/engagement_tools/segments/user_profiles/';
 
-validurls['/docs/user_guide/personalization_and_dynamic_content/catalog/'] = '/docs/user_guide/personalization_and_dynamic_content/catalogs/';
 
 validurls['/docs/user_guide/engagement_tools/canvas/best_practices/'] = '/docs/user_guide/engagement_tools/canvas/ideas_and_strategies/best_practices/';
 
+validurls['/docs/user_guide/personalization_and_dynamic_content/catalog/'] = '/docs/user_guide/personalization_and_dynamic_content/catalogs/';
 validurls['/docs/api/endpoints/catalogs/delete_catalog_items_bulk/'] = '/docs/api/endpoints/catalogs/catalog_items/asynchronous/delete_catalog_items_bulk/';
 validurls['/docs/api/endpoints/catalogs/get_catalog_item_details/'] = '/docs/api/endpoints/catalogs/catalog_items/synchronous/get_catalog_items_details_bulk/';
 validurls['/docs/api/endpoints/catalogs/patch_catalog_items_bulk/'] = '/docs/api/endpoints/catalogs/catalog_items/asynchronous/patch_catalog_items_bulk/';
 validurls['/docs/api/endpoints/catalogs/post_create_catalog_items_bulk/'] = '/docs/api/endpoints/catalogs/catalog_items/asynchronous/post_create_catalog_items_bulk/';
-
-validurls['/docs/developer_guide/platform_integration_guides/android/push_notifications/android/customization/custom_broadcast_receiver/'] = '/docs/help/release_notes/deprecations/custom_broadcast_receiver/';
-
 validurls['/docs/api/endpoints/catalogs/catalogs/synchronous/delete_catalog/'] = '/docs/api/endpoints/catalogs/catalog_management/synchronous/delete_catalog_items_bulk/';
 validurls['/docs/api/endpoints/catalogs/catalogs/synchronous/get_list_catalogs/'] = '/docs/api/endpoints/catalogs/catalog_management/synchronous/get_list_catalogs/';
 validurls['/docs/api/endpoints/catalogs/catalogs/synchronous/post_create_catalog/'] = '/docs/api/endpoints/catalogs/catalog_management/synchronous/post_create_catalog/';
-validurls['/docs/api/endpoints/templates/content_blocks_templates/post_update_email_content_block'] = '/docs/api/endpoints/templates/content_blocks_templates/post_update_content_block/';
 validurls['/docs/user_guide/personalization_and_dynamic_content/catalogs/filtered_sets/'] = '/docs/user_guide/personalization_and_dynamic_content/catalogs/selections/';
+validurls['/docs/back_in_stock/'] = '/docs/user_guide/personalization_and_dynamic_content/catalogs/catalog_triggers/back_in_stock_notifications/';
+validurls['/docs/user_guide/personalization_and_dynamic_content/catalogs/back_in_stock_notifications/'] = '/docs/user_guide/personalization_and_dynamic_content/catalogs/catalog_triggers/back_in_stock_notifications/';
+validurls['/docs/user_guide/personalization_and_dynamic_content/catalogs/price_drop_notifications'] = '/docs/user_guide/personalization_and_dynamic_content/catalogs/catalog_triggers/price_drop_notifications';
+
+
+validurls['/docs/api/endpoints/templates/content_blocks_templates/post_update_email_content_block'] = '/docs/api/endpoints/templates/content_blocks_templates/post_update_content_block/';
+
+validurls['/docs/developer_guide/platform_integration_guides/android/push_notifications/android/customization/custom_broadcast_receiver/'] = '/docs/help/release_notes/deprecations/custom_broadcast_receiver/';
 validurls['/docs/developer_guide/platform_integration_guides/android/push_notifications/advanced_settings/#advanced-settings'] = '/docs/developer_guide/platform_integration_guides/android/push_notifications/android/customization/custom_event_callback';
 validurls['/docs/user_guide/data_and_analytics/cloud_ingestion/'] = '/docs/user_guide/data_and_analytics/user_data_collection/cloud_ingestion/';
 
@@ -1134,7 +1138,6 @@ validurls['/docs/idle_campaigns/'] = '/docs/idle_campaigns_canvases/';
 
 validurls['/docs/one-click_unsubscribe/'] = '/docs/user_guide/administrative/app_settings/email_settings/';
 
-validurls['/docs/back_in_stock/'] = '/docs/user_guide/personalization_and_dynamic_content/catalogs/back_in_stock_notifications/';
 
 validurls['/docs/hidden/archive_docs/ios_14/'] = '/docs/developer_guide/platform_integration_guides/swift/archived_updates/ios_14/';
 validurls['/docs/hidden/archive_docs/ios_15/'] = '/docs/developer_guide/platform_integration_guides/swift/archived_updates/ios_15/';
