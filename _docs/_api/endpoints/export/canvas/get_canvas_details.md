@@ -103,7 +103,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ### Messages by channel
 
-The following is an example response that includes messages sent through different channels (email, push, SMS, and in-app messages):
+The following is an example response that includes Canvas messages sent through different channels (email, push, SMS, and in-app messages):
 
 ```json
 {
