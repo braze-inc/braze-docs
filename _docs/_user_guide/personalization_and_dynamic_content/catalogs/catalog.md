@@ -70,10 +70,13 @@ Click **Create New Catalog**, then choose to either **Upload CSV** or **Create i
 This data type cannot be edited after you set up your catalog.
 {% endalert %}
 
-Note that you cannot use templates in a catalog name. For example, you cannot have the following as the catalog name, or the call will fail.
+You can also use templates in a catalog name. For example, you can use the following:
 {% raw %}
 ```liquid
-{% catalog_items custom_attribute.${catalog} item1, item2 %}
+{% assign language = "content_spanish" %}
+
+{% catalog_items language fall_campaign %}
+{{ items[0].body }}
 ```
 {% endraw %}
 
