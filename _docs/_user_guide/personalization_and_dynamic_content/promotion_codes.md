@@ -67,11 +67,11 @@ The maximum file size is 100&nbsp;MB and the maximum list size is 20MM of unused
 
 ![][6]
 
-After the upload is complete, click **Save List** to save all the details and codes you just entered.
+After the upload is complete, select **Save List** to save all the details and codes you just entered.
 
 ![][7]
 
-Upon clicking save, you will see that a new row appears in the **Import History**. To refresh the table to see if your import has finished, click <span style="font-size: 14px;margin-bottom: .5rem;height: 16px;width: 16px;" class="fas fa-sync" ></span> **Sync** at the top of the table.
+After selecting save, a new row will appear in the **Import History**. To refresh the table to see if your import has finished, select <span style="font-size: 14px;margin-bottom: .5rem;height: 16px;width: 16px;" class="fas fa-sync" ></span> **Sync** at the top of the table.
 
 ![][8]
 
@@ -87,7 +87,7 @@ All codes in the list will have the same expiration, regardless of the date of i
 
 ### Step 5: Use promotion codes
 
-To send promotion codes in messages, click **Copy Snippet** to copy the code snippet you set when creating your promotion code list.
+To send promotion codes in messages, select **Copy Snippet** to copy the code snippet you set when creating your promotion code list.
 
 ![][9]{: style="max-width:70%"}
 
@@ -168,7 +168,9 @@ The same promotion code will be templated for all instances of the Liquid snippe
 
 ### What happens when a promotion code list is expired or empty?
 
-The message will be canceled. However, because promotion codes are "preloaded," the promotion code will still be used up, even if the message is not sent.
+If the Liquid conditional in the message is true and results in sending a promotion code to the user, the message will be canceled. However, because promotion codes are "preloaded", the promotion code will still be used up, even though the message wasn't sent.
+
+If the Liquid conditional is false and the email normally wouldn't contain a promotion code, the message won't be canceled.
 
 [1]:{% image_buster /assets/img/promocodes/promocode1.png %}
 [2]:{% image_buster /assets/img/promocodes/promocode2.png %}
