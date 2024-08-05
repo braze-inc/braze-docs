@@ -27,7 +27,9 @@ The primary conversion event is the first event added during the campaign or Can
 - Determine the window when revenue is calculated for the campaign or Canvas.
 - Adjust message distributions for campaigns and Canvases using [Intelligent Selection][5].
 
-Note if messages are aborted using the Liquid `abort` tag, only the users who go through variants are potentially aborted. This means the messages to users who go through the control group won't be aborted, which may lead to skewed conversion percentages across variants and control groups. As a workaround, use [segmentation]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment) to target your users at campaign and Canvas entry.
+{% alert note %}
+If messages are aborted using the Liquid `abort` tag, only the users who go through variants are potentially aborted. This means the messages to users who go through the control group won't be aborted, which may lead to skewed conversion percentages across variants and control groups. As a workaround, use [segmentation]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment) to target your users at campaign and Canvas entry.
+{% endalert %}
 
 ## Step 1: Create a campaign with conversion tracking
 
