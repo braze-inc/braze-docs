@@ -168,9 +168,9 @@ The same promotion code will be templated for all instances of the Liquid snippe
 
 ### What happens when a promotion code list is expired or empty?
 
-If the Liquid conditional in the message is true and results in sending a promotion code to the user, the message will be canceled. However, because promotion codes are "preloaded", the promotion code will still be used up, even though the message wasn't sent.
+If the Liquid conditional in the message is true and results in sending a promotion code to the user, the message will be canceled. However, because promotion codes are "preloaded," the promotion code will still be used up, even though the message wasn't sent.
 
-If the Liquid conditional is false and the message normally wouldn't contain a promotion code, the message won't be canceled.
+If the Liquid conditional is false and the message normally doesn't contain a promotion code, the message won't be canceled.
 
 [1]:{% image_buster /assets/img/promocodes/promocode1.png %}
 [2]:{% image_buster /assets/img/promocodes/promocode2.png %}
