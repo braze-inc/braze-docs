@@ -86,7 +86,7 @@ Now that your variables are set, create the metadata table for PII resolution. T
 
 ### Step 6: Perform the identity resolution operation
 
-Finally, preform the identity resolution operation. For a full walkthrough, see [LiveRamp: Preform the Identity Resolution Operation](https://docs.liveramp.com/identity/en/perform-identity-resolution-in-snowflake.html#perform-the-identity-resolution-operation).
+Finally, perform the identity resolution operation. For a full walkthrough, see [LiveRamp: Perform the Identity Resolution Operation](https://docs.liveramp.com/identity/en/perform-identity-resolution-in-snowflake.html#perform-the-identity-resolution-operation).
 
 {% tabs local %}
 {% tab example input %}
