@@ -47,7 +47,7 @@ You can use Braze [Cloud Data Ingestion][14] to import and maintain user attribu
 
 You can also upload and update user profiles though CSV files from **Audience** > **Import Users**.
 
-This feature supports recording and updating user attributes such as first name and email, in addition to custom attributes such as shoe size. You can import a CSV by specifiying one of two unique user identifiers: an `external_id` or a user alias.
+This feature supports recording and updating user attributes such as first name and email, in addition to custom attributes such as shoe size. You can import a CSV by specifying one of two unique user identifiers: an `external_id` or a user alias.
 
 {% alert note %}
 If you are uploading a mix of users with an `external_id` and users without, you need to create one CSV for each import. One CSV can't contain both `external_ids` and user aliases.
@@ -55,7 +55,7 @@ If you are uploading a mix of users with an `external_id` and users without, you
 
 ### Importing with external ID
 
-When importing your customer data, you'll need to specify each customer's unique identifier, also known as `external_id`. Before starting your CSV import, it's important to understand from your engineering team how users will be identified in Braze. Typically, this is an internal database ID. This should align with how users will be identified by the Braze SDK on mobile and web, and is designed for each customer to have a single user profile within Braze across their devices. Read more about the Braze [user profile lifecycle][13].
+When importing your customer data, you'll need to specify each customer's unique identifier, also known as `external_id`. Before starting your CSV import, it's important to understand from your engineering team how users will be identified in Braze. Typically, this is an internal database ID. This should align with how users will be identified by the Braze SDK on mobile and web and is designed for each customer to have a single user profile within Braze across their devices. Read more about the Braze [user profile lifecycle][13].
 
 When you provide an `external_id` in your import, Braze will update any existing user with the same `external_id` or create a newly identified user with that `external_id` set if one is not found.
 
@@ -220,9 +220,9 @@ Only a single `subscription_group_id` can be set per row in the user import. Dif
 
 ### Importing a CSV
 
-To import your CSV file, navigate to the **User Import** page under the Users section. In the lower text box, **Recent Imports**, there's a table that lists up to twenty of your most recent imports, their file names, number of lines in the file, number of lines successfully imported, total lines in each file, and the status of each import.
+To import your CSV file, go to the **User Import** page under the **Users** section. In the lower text box, **Recent Imports**, there's a table that lists up to twenty of your most recent imports, their file names, the number of lines in the file, the number of lines successfully imported, total lines in each file, and the status of each import.
 
-The upper box, **Import CSV**, contains importing directions and a button to begin your import. Select **Select CSV File** and your file of interest, then select **Start Upload**. Braze will upload your file and check the column headers as well as the data types of each column. 
+The upper box, **Import CSV**, contains importing directions and a button to begin your import. Select **Select CSV File** and your file of interest, then select **Start Upload**. Braze will upload your file and check the column headers and the data types of each column. 
 
 To download a CSV template, refer to the sections [Importing with external ID](#importing-with-external-id) or [Importing with user alias](#importing-with-user-alias) on this page.
 
@@ -232,14 +232,14 @@ CSV imports are case sensitive. This means capital letters in CSV imports will w
 
 ![][3]
 
-After the upload is completed, you'll see a modal with a preview of the contents of your file. All the information in this table is based on the values in the top few rows of your CSV file. For column headers, standard attributes are written in normal text, while custom attributes are italicized and have their type noted in parentheses. There is also a short summary of your file at the top of the pop-up.
+After the upload is completed, you'll see a modal with a preview of the contents of your file. All the information in this table is based on the values in the top few rows of your CSV file. For column headers, standard attributes are written in normal text, while custom attributes are italicized and have their type noted in parentheses. There is also a summary of your file at the top of the pop-up.
 
 You can import more than one CSV at the same time. CSV imports run concurrently, so the order of updates is not guaranteed to be serial. If you require CSV imports to run one after another, wait until a CSV import has finished before uploading a second one.
 
 If Braze notices something malformed in your file during the upload, these errors will show with the summary. For example, if your file includes a malformed row, that error will be noted in the preview when you import the file. So, a file can be imported with errors, but an import can't be canceled or rolled-back after it's started. Review the preview, and if you find any errors, cancel the import and modify your file. 
 
 {% alert important %}
-Examine the full CSV file before upload, as Braze doesn't scan every row of the input file for the preview. This means errors can exist which Braze doesn't catch while generating this preview.
+Examine the full CSV file before upload, as Braze doesn't scan every row of the input file for the preview. This means errors can exist that Braze doesn't catch while generating this preview.
 {% endalert %}
 
 Malformed rows and rows lacking an external ID will not be imported. All other errors can be imported, but may interfere with filtering when creating a segment. For more information, skip to the [Troubleshooting](#troubleshooting) section.
@@ -258,7 +258,7 @@ If the import process runs into an error, a yellow warning icon will display nex
 
 ### Lambda user CSV import
 
-You can use our serverless S3 Lambda CSV import script to upload user attributes to the platform. This solution works as a CSV uploader where you drop your CSVs into an S3 bucket, and the scripts uploads it through our API.
+You can use our serverless S3 Lambda CSV import script to upload user attributes to the platform. This solution works as a CSV uploader where you drop your CSVs into an S3 bucket, and the scripts upload it through our API.
 
 Estimated execution times for a file with one million rows should be around five minutes. See [User attribute CSV to Braze import]({{site.baseurl}}/user_csv_lambda/) for more information.
 
