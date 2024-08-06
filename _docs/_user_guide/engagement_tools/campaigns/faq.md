@@ -101,6 +101,10 @@ Local time zone delivery may miss users in this segment based on the delivery ti
 
 When the campaign is scheduled, edits to anything other than the message composition need to be made before we enqueue the messages to send. As per all campaigns, you can't edit conversion events after it is launched.
 
+### I scheduled my campaign. Why was it not launched?
+
+This can happen when a campaign is scheduled to launch at the exact time that it was updated. For example, if it's currently 3:10pm and you changed the campaign to launch at 3:10pm and selected **Update campaign**, it's now past 3:10pm, meaning the scheduled time for launch has passed. Instead of scheduling the campaign for the same time, select **Send as soon as campaign launch**.
+
 ### What is the "safe zone" before messages on a scheduled campaign are enqueued?
 
 You can safely make changes to messages within the following safe zones:
