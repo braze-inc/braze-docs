@@ -84,10 +84,11 @@ Replace the following:
 
 To link to a Puncch-hosted web page, add the Dynamic Generation URL provided in Punchh Campaign creation UI and replace `GENERATED_SIGNATURE` with `{% raw %}{{jwt}}{% endraw %}`:
 
+{% raw %}
 ```
 https://example.punchh.com/request_coupons/XXXXXXXXXXXXX?sign={{jwt}}
 ```
-
+{% endraw %}
 
 When a user clicks the coupon URL, they'll be redirected to a Punchh-hosted web page, where their generated coupon will be displayed.
 
@@ -117,9 +118,11 @@ You could then leverage [Connected Content]({{site.baseurl}}/user_guide/personal
 
 To link the coupon code inside an image, add `.png` before the sign query parameter of the Dynamic Generation URL as shown in the following snippet example:
 
+{% raw %}
 ```liquid
 <img src="https://example.punchh.com/request_coupons/XXXXXXXXXXXXX.png?sign={{jwt}}">
 ````
+{% endraw %}
 
 Your output will be similar to the following:
 
