@@ -52,10 +52,12 @@ Easily access the **Canvas**, **Campaigns**, and **Segments** pages with quick l
 
 1. **Workspace selector** - The name of the workspace you're currently in. Select this dropdown to change workspaces.
 2. **Tour new navigation** - Retake the navigation tour or expand the dropdown to access options for documentation or to send us feedback on the new navigation.
-3. **Support** - Check our system status and access links to Braze documentation, Braze Learning, or get help from support.
-4. **Community** - Access links to the Braze Bonfire community, our blog, case studies, and the product roadmap.
-5. **Notifications** – View your dashboard notifications.
-6. **Your profile** - View your account profile, change the language the dashboard appears in, or sign out.
+3. **Search** - Search for pages and find your work by name or API ID.
+4. **Support** - Check our system status and access links to Braze documentation, Braze Learning, or get help from support.
+5. **Community** - Access links to the Braze Bonfire community, our blog, case studies, and the product roadmap.
+6. **Language** - Select this dropdown to change the language of your Braze dashboard.
+7. **Notifications** – View your dashboard notifications.
+8. **Your profile** - View your account profile, change the language the dashboard appears in, or sign out.
 
 {% endtab %}
 {% tab Old navigation %}
