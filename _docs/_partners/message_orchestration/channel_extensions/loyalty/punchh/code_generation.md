@@ -33,35 +33,47 @@ The JWT.IO library decodes, verifies, and generates JSON web tokens, an open, in
 
 The following `ClaimType` names can be used to ensure the uniqueness of guests and coupons:
 
+- `campaign_id`: represents the system-generated Punchh campaign ID.
 - `email`: represents the user's email address. 
-- `campaign_id`: represents the system-generated Punchh campaign ID. 
 - `first_name`: captures the user's first name. 
 - `last_name`: captures the user's last name.
 
 To use the Punchh dynamic coupon code API, a JWT Token must be constructed. Add the following Liquid template to your Braze dashboard in the message body of the channel you'd like to use:
 
-{% raw %}
+
 ```liquid
-{% capture header %}{"alg":"HS256","typ":"JWT"}{% endcapture %}
+{% assign header = '{"alg":"HS256","typ":"JWT"}' | base64_encode | replace: '=', '' | replace: '+', '-' | replace: '/', '_' %}
 
-{% capture payload %}{"campaign_id":"CAMPAIGN_ID","email":"{{${email_address}}}","first_name":"{{${first_name}}}","last_name":"{{${last_name}}}"}{% endcapture %}
+{% capture payload_raw %}
 
-{% capture signature_structure %}{{header | base64_encode}}.{{payload | base64_encode | remove: '='}}{% endcapture %}
+{
+  "campaign_id": "CAMPAIGN_ID",
+  "email": "{{${email_address}}}",
+  "first_name": "{{${first_name}}}",
+  "last_name": "{{${last_name}}}"
+}
+
+{% endcapture %}
+
+{% assign payload = payload_raw | replace: ' ', '' | replace: '\n', '' | base64_encode | replace: '=', '' | replace: '+', '-' | replace: '/', '_' %}
+
+{% assign unsigned_token = header | append: "." | append: payload %}
 
 {% assign secret = "DYNAMIC_COUPON_GENERATION_TOKEN" %}
 
-{% assign final_signature = {{signature_structure | hmac_sha256_base64: secret}} %}
+{% assign signature_raw = unsigned_token | hmac_sha256_base64: secret %}
 
-{% capture jwt %}{{signature_structure}}.{{final_signature | remove: '='}}{% endcapture %}
+{% assign signature = signature_raw | replace: '=', '' | replace: '+', '-' | replace: '/', '_' %}
+
+{% assign jwt = unsigned_token | append: "." | append: signature %}
 
 ```
-{% endraw %}
+
 
 Replace the following:
 
 | Placeholder        | Description                                          |
 |--------------------|------------------------------------------------------|
-| `SERVER_NAME`                     | The name of your server.              |
 | `DYNAMIC_COUPON_GENERATION_TOKEN` | Your dynamic coupon generation token. |
 | `CAMPAIGN_ID`                     | Your campaign ID.                     |
 
@@ -69,20 +81,12 @@ Replace the following:
 
 #### Link to Punchh web page
 
-To link to a Puncch-hosted web page, add the following snippet to your message body.
+To link to a Puncch-hosted web page, add the Dynamic Generation URL provided in Punchh Campaign creation UI and replace `GENERATED_SIGNATURE` with `{{jwt}}`:
 
-{% raw %}
-```liquid
-https://SERVER_NAME.punchh.com/request_coupons/DYNAMIC_COUPON_GENERATION_TOKEN?sign={{jwt}}
 ```
-{% endraw %}
+https://example.punchh.com/request_coupons/XXXXXXXXXXXXX?sign={{jwt}}
+```
 
-Replace the following:
-
-| Placeholder        | Description                                          |
-|--------------------|------------------------------------------------------|
-| `SERVER_NAME`                     | The name of your server.              |
-| `DYNAMIC_COUPON_GENERATION_TOKEN` | Your dynamic coupon generation token. |
 
 When a user clicks the coupon URL, they'll be redirected to a Punchh-hosted web page, where their generated coupon will be displayed.
 
@@ -90,46 +94,26 @@ When a user clicks the coupon URL, they'll be redirected to a Punchh-hosted web 
 
 #### Extract code via JSON as plain text
 
-To return a JSON response, add `.json` before the sign query parameter of the Punchh URL as shown in the following snippet:
+To return a JSON response, add `.json` before the sign query parameter of the Dynamic Generation URL as shown in the following snippet example:
 
-{% raw %}
 ```liquid
-https://SERVER_NAME.punchh.com/request_coupons/DYNAMIC_COUPON_GENERATION_TOKEN.json?sign={{jwt}}
+https://example.punchh.com/request_coupons/XXXXXXXXXXXXX.json?sign={{jwt}}
 ```
-{% endraw %}
-
-Replace the following:
-
-| Placeholder        | Description                                          |
-|--------------------|------------------------------------------------------|
-| `SERVER_NAME`                     | The name of your server.              |
-| `DYNAMIC_COUPON_GENERATION_TOKEN` | Your dynamic coupon generation token. |
 
 You could then leverage [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/making_an_api_call/) to insert the code as plain text into any message body. For example:
 
-{% raw %}
 ```liquid
-{% connected_content https://SERVER_NAME.punchh.com/request_coupons/DYNAMIC_COUPON_GENERATION_TOKEN.json?sign={{jwt}} :save punchh_coupon %}
+{% connected_content https://example.punchh.com/request_coupons/XXXXXXXXXXXXX.json?sign={{jwt}} :save punchh_coupon %}
 {{punchh_coupon.coupon}}
-```
-{% endraw %}
+````
 
 #### Link image inside email content
 
-To link the coupon code inside an image, add the following snippet to your message body:
+To link the coupon code inside an image, add `.png` before the sign query parameter of the Dynamic Generation URL as shown in the following snippet example:
 
-{% raw %}
 ```liquid
-<img src="https://SERVER_NAME.punchh.com/request_coupons/DYNAMIC_COUPON_GENERATION_TOKEN.png?sign={{jwt}}">`
-```
-{% endraw %}
-
-Replace the following:
-
-| Placeholder        | Description                                          |
-|--------------------|------------------------------------------------------|
-| `SERVER_NAME`                     | The name of your server.              |
-| `DYNAMIC_COUPON_GENERATION_TOKEN` | Your dynamic coupon generation token. |
+<img src="https://example.punchh.com/request_coupons/XXXXXXXXXXXXX.png?sign={{jwt}}">
+````
 
 Your output will be similar to the following:
 
