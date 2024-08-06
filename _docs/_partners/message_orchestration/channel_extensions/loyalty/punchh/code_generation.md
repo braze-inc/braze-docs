@@ -40,7 +40,7 @@ The following `ClaimType` names can be used to ensure the uniqueness of guests a
 
 To use the Punchh dynamic coupon code API, a JWT Token must be constructed. Add the following Liquid template to your Braze dashboard in the message body of the channel you'd like to use:
 
-
+{% raw %}
 ```liquid
 {% assign header = '{"alg":"HS256","typ":"JWT"}' | base64_encode | replace: '=', '' | replace: '+', '-' | replace: '/', '_' %}
 
@@ -68,6 +68,7 @@ To use the Punchh dynamic coupon code API, a JWT Token must be constructed. Add 
 {% assign jwt = unsigned_token | append: "." | append: signature %}
 
 ```
+{% endraw %}
 
 
 Replace the following:
@@ -81,7 +82,7 @@ Replace the following:
 
 #### Link to Punchh web page
 
-To link to a Puncch-hosted web page, add the Dynamic Generation URL provided in Punchh Campaign creation UI and replace `GENERATED_SIGNATURE` with `{{jwt}}`:
+To link to a Puncch-hosted web page, add the Dynamic Generation URL provided in Punchh Campaign creation UI and replace `GENERATED_SIGNATURE` with `{% raw %}{{jwt}}{% endraw %}`:
 
 ```
 https://example.punchh.com/request_coupons/XXXXXXXXXXXXX?sign={{jwt}}
@@ -96,16 +97,21 @@ When a user clicks the coupon URL, they'll be redirected to a Punchh-hosted web 
 
 To return a JSON response, add `.json` before the sign query parameter of the Dynamic Generation URL as shown in the following snippet example:
 
+{% raw %}
 ```liquid
 https://example.punchh.com/request_coupons/XXXXXXXXXXXXX.json?sign={{jwt}}
 ```
+{% endraw %}
+
 
 You could then leverage [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/making_an_api_call/) to insert the code as plain text into any message body. For example:
 
+{% raw %}
 ```liquid
 {% connected_content https://example.punchh.com/request_coupons/XXXXXXXXXXXXX.json?sign={{jwt}} :save punchh_coupon %}
 {{punchh_coupon.coupon}}
 ````
+{% endraw %}
 
 #### Link image inside email content
 
