@@ -1166,4 +1166,6 @@ validurls['/docs/partners/data_and_infrastructure_agility/ab_testing/phrasee/phr
 validurls['/docs/partners/data_and_infrastructure_agility/ab_testing/phrasee/phrasee_react'] = '/docs/partners/data_and_infrastructure_agility/ab_testing/jacquard/jacquard_react/';
 validurls['/docs/partners/data_and_infrastructure_agility/ab_testing/phrasee/phrasee#phrasee'] = '/docs/partners/data_and_infrastructure_agility/ab_testing/jacquard/jacquard/';
 
+validurls['/docs/developer_guide/platform_integration_guides/legacy_sdks/ios/initial_sdk_setup'] = ['/docs/developer_guide/platform_integration_guides/legacy_sdks/ios/initial_sdk_setup/overview']
+
 // validurls['OLD'] = 'NEW';
