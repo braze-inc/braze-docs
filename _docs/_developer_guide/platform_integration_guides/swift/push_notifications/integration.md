@@ -340,17 +340,9 @@ To access the push notification payloads processed by Braze, use the [`Braze.Not
 You can use the `payloadTypes` parameter to specify whether you'd like to subscribe to notifications involving push open events, foreground push received events, or both.
 
 ```objc
-BRZCancellable *cancellable = [notifications subscribeToUpdates:^(BRZNotificationsPayload * _Nonnull payload) {
-  NSLog(@"Braze processed notification with title '%@' and body '%@'", payload.title, payload.body);
-}];
-```
-
-Or, to specify the types of push events you'd like to subscribe to:
-
-```objc
 NSInteger filtersValue = BRZNotificationsPayloadTypeFilter.opened.rawValue | BRZNotificationsPayloadTypeFilter.received.rawValue;
 BRZNotificationsPayloadTypeFilter *filters = [[BRZNotificationsPayloadTypeFilter alloc] initWithRawValue: filtersValue];
-BRZCancellable *cancellable = [notifications subscribeToUpdatesWithPayloadTypes:filters:^(BRZNotificationsPayload * _Nonnull payload) {
+BRZCancellable *cancellable = [notifications subscribeToUpdatesWithPayloadTypes:filters update:^(BRZNotificationsPayload * _Nonnull payload) {
   NSLog(@"Braze processed notification with title '%@' and body '%@'", payload.title, payload.body);
 }];
 ```
