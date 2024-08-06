@@ -29,7 +29,7 @@ guide_featured_list:
     image: /assets/img/braze_icons/brush-01.svg
   - name: "Email Services"
     link: /docs/user_guide/message_building_by_channel/email/best_practices/email_services/
-    image: /assets/img/braze_icons/email.svg
+    image: /assets/img/braze_icons/mail-01.svg
   - name: "Sunset Policies"
     link: /docs/user_guide/message_building_by_channel/email/best_practices/sunset_policies/
     image: /assets/img/braze_icons/sun-setting-03.svg

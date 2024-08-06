@@ -437,9 +437,9 @@ hide_toc: true
                 Request Type
                 </label>
               <select id="doc_urgent" name="Request_Type" class="drop-down-sel">
-              <option value="urgent">Urgent — This request raises smoke on the Doc Site or requires a high-priority change.</option>
-              <option value="feature_release">Feature Release: Feature Update - This request is for new or existing product features that need to be communicated to the Tech Writing and Braze Learning teams.</option>
-              <option value="standard" selected="selected">Standard: I have a suggestion, question about, or update to an article.</option>
+              <option value="urgent">Urgent: Raise smoke on the Doc Site or request a high-priority change</option>
+              <option value="feature_release">Feature update: Communicate new or updated product features with Tech Writing and Braze Learning</option>
+              <option value="standard" selected="selected">Standard: I have a suggestion, question about, or update to an article</option>
               </select>
 
               </div>

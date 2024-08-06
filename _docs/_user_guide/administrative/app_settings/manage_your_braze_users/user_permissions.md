@@ -54,7 +54,15 @@ To edit a user's current [admin](#admin), [company](#company), or [workspace](#w
 
 ### Admin
 
-Admins have access to all features and the ability to modify any company setting. To grant or remove admin privileges, select **This user is an admin**, then select **Update user**.
+Admins have access to all features and the ability to modify any company setting. There are also a few things that only admins can do in Braze. 
+
+Only admins can:
+
+- Change [approval settings]({{site.baseurl}}/user_guide/engagement_tools/campaigns/managing_campaigns/campaign_approval/#turning-on-campaign-approval)
+- Add, edit, delete, suspend, or unsuspend other [Braze users]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/adding_users_to_your_dashboard/#adding-braze-users)
+- Export Braze users as a CSV
+
+To grant or remove admin privileges, select **This user is an admin**, then select **Update user**.
 
 ![The details of the selected user with the admin checkbox in focus.]({% image_buster /assets/img/braze_permissions/admin_level_permissions.png %}){: style="max-width:40%;"}
 
@@ -146,4 +154,6 @@ As of April 2024, to create or update promotion code lists, Braze users need the
 |Workspace|View PII|Allows users to view the personally identifiable information fields as defined by your company within the dashboard.|
 |Workspace|View Transformations|Allows users to view [Braze Data Transformations]({{site.baseurl}}/user_guide/data_and_analytics/data_transformation/overview/).|
 |Workspace|View Usage Data|Allows users to view app usage, including the channel performance dashboards.|
+|Workspace|Merge Duplicate Users|Allows users to merge duplicate user profiles.|
+|Workspace|Preview Duplicate Users|Allows users to preview which user profiles are duplicated.|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
