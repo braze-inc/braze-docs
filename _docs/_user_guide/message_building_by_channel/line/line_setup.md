@@ -101,10 +101,7 @@ If you want to sync users who followed a specific channel before that channel wa
 
 LINE IDs are automatically received by Braze when a user follows your channel, or when you use the one-time “sync followers” workflow. LINE IDs are also specific to the channel that users follow, so it's unlikely that users can provide their LINE IDs.
 
-To combine a LINE ID with an existing Braze user profile, we recommend one of two methods:
-
-- LINE login 
-- Linking a user's LINE ID to your LINE account
+To combine a LINE ID with an existing Braze user profile, you can use the LINE login method.
 
 ### LINE login
 
@@ -113,14 +110,6 @@ This method uses social media logins for reconciliation. When a user logs into y
 1. Implement the LINE login feature so users can log into your app. For details about implementation, refer to the LINE developer page. After implementation, you can get an access token by calling the [issue access token](https://developers.line.biz/en/reference/line-login/#oauth/) endpoint of the LINE login API. After that, you can get the user’s profile information from ID tokens that are included in the response from the [issue access token](https://developers.line.biz/en/reference/line-login/#oauth/) request.
 
 2. After you get the profile information of a LINE follower, send their LINE user ID to Braze by calling the [user/track]({{site.baseurl}}/api/endpoints/user_data/post_user_track#track-users/) endpoint.
-
-### LINE ID linkage to your LINE account
-
-Another method for reconciliation is by having users link their LINE ID with their login account information and your LINE account. 
-
-1. Use your LINE account to send followers messages that promote LINE ID linkage. This message contains a URL to the service login page, which allows users to [link their account](https://developers.line.biz/en/docs/messaging-api/linking-accounts/).
-
-2. After a LINE ID is successfully linked to a follower’s account, you can get their LINE ID and login ID. Now, you can use the [`user/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track#track-users/) endpoint to send their LINE ID with an external ID to Braze. 
 
 ## Create LINE test users in Braze
 
