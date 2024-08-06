@@ -125,7 +125,7 @@ The **App Level Total Data Point Usage** table shows you data point usage for ea
 
 
 [2]: {% image_buster /assets/img/subscription_and_billing2.png %}
-[3]: {% image_buster /assets/img/subscription_and_billing3.png %}
+[3]: {% image_buster /assets/img/subscription_and_billing4.png %}
 [4]: {% image_buster /assets/img/most_used_events_attributes_time.png %}
 [5]: {% image_buster /assets/img/contract_details.png %}
 [6]: {% image_buster /assets/img/current_billing_cycle.png %}
