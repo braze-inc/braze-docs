@@ -17,7 +17,7 @@ tool:
 
 ### Can I preview how my email appears in dark mode?
 
-Yes. Go to the **Preview and Test** section of the drag-and-drop editor and select the dark mode toggle. We recommend also previewing and testing your emails across different user platforms and using transparent images for row background images when possible. 
+Yes. Go to the **Preview and Test** section of the drag-and-drop editor and turn on **Dark mode**. We recommend also previewing and testing your emails across different user platforms and using transparent images for row background images when possible. 
 
 ### How can I change the email padding on mobile without updating the padding in the web view?
 
