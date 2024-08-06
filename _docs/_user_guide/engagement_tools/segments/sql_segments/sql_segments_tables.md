@@ -1043,6 +1043,10 @@ Field | Type | Description
 `language` | `null,`&nbsp;`string` | [PII] Language of the user
 `email_address` | `string` | [PII] email address of the user
 `ip_pool` | `null,`&nbsp;`string` | IP Pool from which the email send was made
+`message_extras` | `null,`&nbsp;`string` | [PII] A JSON string of the tagged key-value pairs during Liquid rendering
+`esp` | `null,`&nbsp;`string` | ESP related to the event (SparkPost or SendGrid)
+`from_domain` | `null,`&nbsp;`string` | Sending domain for the email
+`sf_created_at` | `timestamp`,&nbsp;`null` | When this event was picked up by the Snowpipe
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 ### USERS_MESSAGES_EMAIL_SOFTBOUNCE_SHARED {#USERS_MESSAGES_EMAIL_SOFTBOUNCE_SHARED}
