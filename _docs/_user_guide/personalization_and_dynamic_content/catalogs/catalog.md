@@ -238,7 +238,7 @@ To do this, you'll use a Liquid `if` statement in a format like this:
 
 {% raw %}
 ```liquid
-{% catalog_items Test-list %}
+{% catalog_items Test-list 1234 %}
 {% if {{items[0].first-item}} == true %}
 Do this
 {% else %}
@@ -247,7 +247,7 @@ Do that
 ```
 {% endraw %}
 
-Note that you must declare the catalog list before using `if` statements. In the example above, `Test-list` is the catalog list.
+You must declare the catalog list before using `if` statements. In the example above, `Test-list` is the catalog list.
 
 #### Use case: Liquid `if` snippet
 
@@ -255,7 +255,7 @@ In this scenario, different messages will display if the custom attribute `venue
 
 {% raw %}
 ```liquid
-{% catalog_selection_items item-list selections %} 
+{% catalog_selection_items venue-list venue_selection %} 
 {% if items[0].venue_name.size > 10 %}
 Message if the venue name's size is more than 10 characters. 
 {% elsif items[0].venue_name.size < 10 %}
@@ -265,6 +265,8 @@ Message if the venue name's size is less than 10 characters.
 {% endif %}
 ```
 {% endraw %}
+
+Note that this scenario uses `catalog_selection_items` instead of `catalog_items`. This is because we're pulling items from a [selection]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/selections/), where `venue-list` is the catalog name and `venue_selection` is the selection. 
 
 ### Using images {#using-images}
 
