@@ -35,7 +35,7 @@ If messages are aborted using the Liquid `abort` tag, only the users who go thro
 
 [Create a campaign]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/creating_campaign) for your desired messaging channel. After setting up your campaign's messages and schedule, you'll have the option to add up to four conversion events for tracking.
 
-We highly recommend using as many conversion events as you feel is necessary since the addition of a second (or third) conversion event can significantly enrich your reporting. For instance, let's say you have a campaign that targets lapsing users. In this case, adding a secondary conversion event and the primary **Starts Session** conversion event can further your understanding of how effective your campaign is in ushering your users back into your application. 
+We highly recommend using as many conversion events as you feel is necessary because the addition of a second (or third) conversion event can significantly enrich your reporting. For instance, let's say you have a campaign that targets lapsing users. In this case, adding a secondary conversion event and the primary **Starts Session** conversion event can further your understanding of how effective your campaign is in ushering your users back into your application. 
 
 ## Step 2: Add conversion events
 
