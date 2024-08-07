@@ -24,7 +24,7 @@ For more information about iOS view controller options, refer to the [Apple deve
 The `BrazeUI` library of the Swift SDK provides two default view controller contexts: navigation or modal. This means you can integrate Content Cards in these contexts by adding a few lines of code to your app or site. Both views offer customization and styling options as described in the [customization guide]({{site.baseurl}}/developer_guide/customization_guides/content_cards/customizing_styles/?tab=ios). You can also create a custom Content Card view controller instead of using the standard Braze one for even more customization options&#8212;refer to the [Content Cards UI tutorial](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/c2-contentcardsui/) for an example.
 
 {% alert important %}
-For a control variant Content Card, a custom object should still be instantiated, and UI logic should set the object’s corresponding view as hidden. The object can then log an impression to inform our analytics of when a user would have seen the control card.
+To handle control variant Content Cards in your custom UI, pass in your [`Braze.ContentCard.Control`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcard/control(_:)) object, then call the `logImpression` method as you would with any other Content Card type. The object will implicitly log a control impression to inform our analytics of when a user would have seen the control card.
 {% endalert %}
 
 ## Navigation context
