@@ -243,8 +243,7 @@ BrazeContentCardsManager.getInstance().contentCardsActionListener = object : ICo
 {% endsubtabs %}
 
 {% alert important %}
-For a control variant Content Card, a custom object should still be instantiated, and UI logic should set the object’s corresponding view as hidden. The object can then log an impression to inform our analytics of when a user would have seen the control card.
-{% endalert %}
+To handle control variant Content Cards in your custom UI, pass in your [`com.braze.models.cards.Card`](https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/models/cards/Card.html) object, then call the `logImpression` method as you would with any other Content Card type. The object will implicitly log a control impression to inform our analytics of when a user would have seen the control card.{% endalert %}
 
 {% endtab %}
 {% tab iOS %}
@@ -288,9 +287,8 @@ contentCardsController.delegate = delegate;
 {% endsubtabs %}
 
 {% alert important %}
-For a control variant Content Card, a custom object should still be instantiated, and UI logic should set the object’s corresponding view as hidden. The object can then log an impression to inform our analytics of when a user would have seen the control card.
+To handle control variant Content Cards in your custom UI, pass in your [`Braze.ContentCard.Control`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcard/control(_:)) object, then call the `logImpression` method as you would with any other Content Card type. The object will implicitly log a control impression to inform our analytics of when a user would have seen the control card.
 {% endalert %}
-
 {% endtab %}
 
 {% tab Web %}
