@@ -214,7 +214,7 @@ For more information, visit the [Roku integration guide][3].
 
 ### Apple TV OS {#tvos}
 
-Use the Braze Swift SDK to integrate with tvOS. Keep in mind, the Swift SDK doesn't include any default UI or views, so you will need to implement your own.
+Use the Braze Swift SDK to integrate with tvOS. Keep in mind, the Swift SDK doesn't include any default UI or views for tvOS, so you will need to implement your own.
 
 Features include:
 
