@@ -82,11 +82,11 @@ Replace the following:
 
 #### Link to Punchh web page
 
-To link to a Puncch-hosted web page, add the Dynamic Generation URL provided in Punchh Campaign creation UI and replace `GENERATED_SIGNATURE` with `{% raw %}{{jwt}}{% endraw %}`:
+To link to a Puncch-hosted web page, add the Dynamic Generation URL provided in Punchh Campaign creation UI and replace `GENERATED_SIGNATURE` with `{% raw %}{{jwt}}{% endraw %}`.
 
 {% raw %}
 ```
-https://SERVER.punchh.com/request_coupons/11111?sign={{jwt}}
+https://SERVER.punchh.com/request_coupons/DYNAMIC_COUPON_GENERATION_TOKEN?sign={{jwt}}
 ```
 {% endraw %}
 
@@ -100,7 +100,7 @@ To return a JSON response, add `.json` after the Dynamic Generation URL as shown
 
 {% raw %}
 ```liquid
-https://SERVER.punchh.com/request_coupons/11111.json?sign={{jwt}}
+https://SERVER.punchh.com/request_coupons/DYNAMIC_COUPON_GENERATION_TOKEN.json?sign={{jwt}}
 ```
 {% endraw %}
 
@@ -109,7 +109,7 @@ You could then leverage [Connected Content]({{site.baseurl}}/user_guide/personal
 
 {% raw %}
 ```liquid
-{% connected_content https://SERVER.punchh.com/request_coupons/11111.json?sign={{jwt}} :save punchh_coupon %}
+{% connected_content https://SERVER.punchh.com/request_coupons/DYNAMIC_COUPON_GENERATION_TOKEN.json?sign={{jwt}} :save punchh_coupon %}
 {{punchh_coupon.coupon}}
 ````
 {% endraw %}
@@ -120,7 +120,7 @@ To link the coupon code inside an image, add `.png` after the Dynamic Generation
 
 {% raw %}
 ```liquid
-<img src="https://SERVER.punchh.com/request_coupons/11111.png?sign={{jwt}}">
+<img src="https://SERVER.punchh.com/request_coupons/DYNAMIC_COUPON_GENERATION_TOKEN.png?sign={{jwt}}">
 ````
 {% endraw %}
 
