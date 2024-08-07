@@ -214,7 +214,7 @@ For more information, visit the [Roku integration guide][3].
 
 ### Apple TV OS {#tvos}
 
-Use the Braze Swift SDK to integrate with tvOS.
+Use the Braze Swift SDK to integrate with tvOS. Keep in mind, the Swift SDK doesn't include any default UI or views, so you will need to implement your own.
 
 Features include:
 
@@ -257,11 +257,11 @@ To target OTT apps for messaging, we recommend creating a segment specific to yo
 
 ## Headless UI {#custom-ui}
 
-For platforms that support in-app messages or Content Cards via headless UI, Braze will deliver a data model, such as JSON, that your app can read and use within a UI your app controls. These platforms don't include any default UI or views.
+{% alert important %}
+Platforms that support in-app messages or Content Cards via headless UI **do not** include any default UI or views, so be sure to implement your own custom UI.
+{% endalert %}
 
-This data will contain the fields configured in the dashboard (title, body, button text, colors, etc.) which your app can read and display accordingly.
-
-Read more about custom handling messaging:
+With headless UI, Braze will deliver a data model, such as JSON, that your app can read and use within a UI your app controls. This data will contain the fields configured in the dashboard (title, body, button text, colors, etc.) which your app can read and display accordingly. For more information about custom handling messaging, see the following:
 
 **Android SDK**
 - [In-App Message Customization](https://www.braze.com/docs/developer_guide/platform_integration_guides/android/in-app_messaging/customization/custom_listeners/)
