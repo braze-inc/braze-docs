@@ -54,7 +54,7 @@ Once you've selected your conversion events, continue the campaign creation proc
 
 ## Step 3: View results
 
-Navigate to the **Details** page to view the details for each conversion event associated with the campaign you just created. Regardless of your selected conversion events, you can also see the total revenue that can be attributed to this specific campaign, as well as specific variants, during the window of the primary conversion event.
+Go to the **Details** page to view the details for each conversion event associated with the campaign you just created. Regardless of your selected conversion events, you can also see the total revenue that can be attributed to this specific campaign, as well as specific variants, during the window of the primary conversion event.
 
 {% alert note %}
 If there are no conversion events selected during campaign creation, the time defaults to three days. 
