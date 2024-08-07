@@ -47,7 +47,7 @@ A Xamarin binding is a way to use native libraries in Xamarin apps.  The impleme
 
 {% subtabs local %}
 {% subtab NuGet %}
-The simplest integration method involves getting the Braze SDK from the [NuGet.org][2] central repository. In the Visual Studio sidebar, right-click `Packages` folder and click `Add Packages...`.  Search for 'Braze' and install the latest Xamarin iOS NuGet packages: [Braze.iOS.BrazeKit](https://www.nuget.org/packages/Braze.iOS.BrazeKit), [Braze.iOS.BrazeUI](https://www.nuget.org/packages/Braze.iOS.BrazeUI), and [Braze.iOS.BrazeLocation]https://www.nuget.org/packages/Braze.iOS.BrazeLocation into your project.
+The simplest integration method involves getting the Braze SDK from the [NuGet.org](https://www.nuget.org/) central repository. In the Visual Studio sidebar, right-click `Packages` folder and click `Add Packages...`.  Search for 'Braze' and install the latest Xamarin iOS NuGet packages: [Braze.iOS.BrazeKit](https://www.nuget.org/packages/Braze.iOS.BrazeKit), [Braze.iOS.BrazeUI](https://www.nuget.org/packages/Braze.iOS.BrazeUI), and [Braze.iOS.BrazeLocation]https://www.nuget.org/packages/Braze.iOS.BrazeLocation into your project.
 
 We also provide the compatibility libraries packages: [Braze.iOS.BrazeKitCompat](https://www.nuget.org/packages/Braze.iOS.BrazeKitCompat) and [Braze.iOS.BrazeUICompat](https://www.nuget.org/packages/Braze.iOS.BrazeUICompat), to help make your migration to .NET MAUI easier.
 {% endsubtab %}

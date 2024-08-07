@@ -33,9 +33,9 @@ The **Subscriptions and Usage** tab includes usage graphs and your contract deta
 
 Here, you will find usage graphs that apply to your workspaces. You may find your own dashboard shows different usage metrics based on the products you have purchased.
 
-![Usage graphs showing Monthly Active Users, Monthly Unique Visitors, and email sends][3]{: style="max-width:90%;"}
+![Usage graph showing Monthly Unique Visitors][3]{: style="max-width:90%;"}
 
-Usage graphs like these are particularly helpful when trying to budget usage and gain a deeper understanding of what workspaces contribute to overall usage.
+These graphs can show monthly active users, monthly unique visitors, and email sends. Usage graphs like these are particularly helpful when trying to budget usage and gain a deeper understanding of what workspaces contribute to overall usage.
 
 ### Contract details
 
@@ -125,7 +125,7 @@ The **App Level Total Data Point Usage** table shows you data point usage for ea
 
 
 [2]: {% image_buster /assets/img/subscription_and_billing2.png %}
-[3]: {% image_buster /assets/img/subscription_and_billing3.png %}
+[3]: {% image_buster /assets/img/subscription_and_billing4.png %}
 [4]: {% image_buster /assets/img/most_used_events_attributes_time.png %}
 [5]: {% image_buster /assets/img/contract_details.png %}
 [6]: {% image_buster /assets/img/current_billing_cycle.png %}
