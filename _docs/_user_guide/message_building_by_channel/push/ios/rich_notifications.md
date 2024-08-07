@@ -19,13 +19,16 @@ tool:
 
 ## Requirements
 
+
 - To ensure your app can send rich notifications, follow the [iOS push integration][1] instructions, as your developer will need to add a service extension to your app.
 - You should also reference [Apple's documentation][2] for media limitations and specs.
-
-> As of January 2020, iOS rich push notifications can handle images 1038x1038 as long as they are under 10&nbsp;MB, but we recommend using as small a file size as possible. In practice, sending large files can cause both unnecessary network stress and make download timeouts more common.
-
+- iOS rich notifications aren't available when creating a quick push campaign.
 - iOS will scale images to fit in the screen and will scale rich images for the active or locked view.
 - File types that we currently support for direct uploading within our dashboard include JPEG, PNG, or GIF. These files can also be entered into the templatable URL field along with these additional file types: AIF, M4A, MP3, MP4, or WAV.
+
+{% alert note %}
+As of January 2020, iOS rich push notifications can handle images 1038x1038 as long as they are under 10&nbsp;MB, but we recommend using as small a file size as possible. In practice, sending large files can cause both unnecessary network stress and make download timeouts more common.
+{% endalert %}
 
 ### Character count
 
@@ -149,6 +152,6 @@ When a user receives the push notification, they can hard press on the push mess
 [2]: https://developer.apple.com/reference/usernotifications/unnotificationattachment
 [3]: {{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/#creating-a-push-message
 [4]: {% image_buster /assets/img_archive/rich_notification_add_image.png %}
-[5]: {% image_buster /assets/img_archive/rich_notification_ios_select.png %}
+[5]: {% image_buster /assets/img_archive/rich_notification_ios10_select.png %}
 [6]: {{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/#schedule-push-campaign
 [8]: {% image_buster /assets/img_archive/rich_notification_ios.gif %}

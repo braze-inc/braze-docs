@@ -18,11 +18,15 @@ tool:
 
 ## Requirements
 
-- Note that the expanded notification view is only available on devices using Jelly Bean (Android 4.1) or later. If a user's device is not running on these systems, they will not see the notification image.
+- Android rich notifications aren't available when creating a quick push campaign.
+- The expanded notification view is only available on devices using Jelly Bean (Android 4.1) or later. If a user's device isn't running on these systems, they will not see the notification image.
 - Android Extended Notification images must be 2:1 ratio, but do not have a size limit.
-- Android also allows for setting a separate image for the standard notification view. <br>Recommended size images: 512x256 for Small, 1024x512 for Medium, and 2048x1024 for Large.
+- Android also allows for setting a separate image for the standard notification view. These are the recommended size images: 
+  - Small: 512x256
+  - Medium: 1024x512 
+  - Large: 2048x1024
 - Currently, Android rich notifications only allow for static images, including JPEG and PNG image formats. GIF and other image formats are not yet supported.
-- Note, adding action buttons to your push notification may affect the area of the image that is displayable. Test with the dashboard preview and live devices to ensure that results are as expected.
+- Adding action buttons to your push notification may affect the area of the image that is displayable. Test with the dashboard preview and live devices to ensure that results are as expected.
 
 {% alert note %}
 While Braze provides instructions on how to set up rich push, the actual rendering of rich push notifications can vary depending on outside factors such as device aspect ratio, Android version, OEM-specific constraints, etc. We recommend doing a send test to multiple Android devices to make sure your rich push notifications are appearing as you intend them to.
