@@ -29,7 +29,7 @@ tool:
 - Adding action buttons to your push notification may affect the area of the image that is displayable. Test with the dashboard preview and live devices to ensure that results are as expected.
 
 {% alert note %}
-While Braze provides instructions on how to set up rich push, the actual rendering of rich push notifications can vary depending on outside factors such as device aspect ratio, Android version, OEM-specific constraints, etc. We recommend doing a send test to multiple Android devices to make sure your rich push notifications are appearing as you intend them to.
+While Braze provides instructions on how to set up rich push, the actual rendering of rich push notifications can vary depending on outside factors such as device aspect ratio, Android version, OEM-specific constraints, and others. We recommend doing a send test to multiple Android devices to make sure your rich push notifications appear as you intend them to.
 {% endalert %}
 
 ## Setting up your Android rich notification
