@@ -154,7 +154,7 @@ Message sending endpoint responses will include the message's `dispatch_id` for 
 
 ### Example success response
 
-The status code 201 could return the following response body. If the Canvas is archived, stopped, or paused, the Canvas will not be sent via this endpoint. 
+The status code 201 could return the following response body. If the Canvas is archived, stopped, or paused, the Canvas will not be sent through this endpoint. 
 
 ```
 {
