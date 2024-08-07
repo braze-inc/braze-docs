@@ -222,7 +222,9 @@ Only a single `subscription_group_id` can be set per row in the user import. Dif
 
 To import your CSV file, go to the **User Import** page under the **Audiences** section. Here, you'll find a table that lists the most recent imports, which includes details such as the upload date, the uploader's name, file name, targeting availability, number of imported rows, and status of each import.
 
-Select **Browse Files** and your file, then select **Start Upload**. Braze will upload your file and check the column headers and the data types of each column. 
+![][3]
+
+Select **Browse Files** and your file. Braze will upload your file and check the column headers and the data types of each column.
 
 To download a CSV template, refer to the sections [Importing with external ID](#importing-with-external-id) or [Importing with user alias](#importing-with-user-alias) on this page.
 
@@ -301,7 +303,7 @@ If you are seeing a piece of default user data (for example, `email` or `first_n
 
 [1]: {{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/language_codes/
 [2]: {{site.baseurl}}/user_guide/message_building_by_channel/sms/phone_numbers/user_phone_numbers/
-[3]: {% image_buster /assets/img/importcsv.png %}
+[3]: {% image_buster /assets/img/importcsv5.png %}
 [4]: {% image_buster /assets/img/importcsv2.png %}
 [7]: {% image_buster /assets/img/segment-imported-users.png %}
 [8]: {% image_buster /assets/img_archive/user_alias_import_1.png %}
