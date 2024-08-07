@@ -86,7 +86,7 @@ To link to a Puncch-hosted web page, add the Dynamic Generation URL provided in 
 
 {% raw %}
 ```
-https://example.punchh.com/request_coupons/XXXXXXXXXXXXX?sign={{jwt}}
+https://SERVER.punchh.com/request_coupons/11111?sign={{jwt}}
 ```
 {% endraw %}
 
@@ -96,11 +96,11 @@ When a user clicks the coupon URL, they'll be redirected to a Punchh-hosted web 
 
 #### Extract code via JSON as plain text
 
-To return a JSON response, add `.json` before the sign query parameter of the Dynamic Generation URL as shown in the following snippet example:
+To return a JSON response, add `.json` after the Dynamic Generation URL as shown in the following snippet example:
 
 {% raw %}
 ```liquid
-https://example.punchh.com/request_coupons/XXXXXXXXXXXXX.json?sign={{jwt}}
+https://SERVER.punchh.com/request_coupons/11111.json?sign={{jwt}}
 ```
 {% endraw %}
 
@@ -109,18 +109,18 @@ You could then leverage [Connected Content]({{site.baseurl}}/user_guide/personal
 
 {% raw %}
 ```liquid
-{% connected_content https://example.punchh.com/request_coupons/XXXXXXXXXXXXX.json?sign={{jwt}} :save punchh_coupon %}
+{% connected_content https://SERVER.punchh.com/request_coupons/11111.json?sign={{jwt}} :save punchh_coupon %}
 {{punchh_coupon.coupon}}
 ````
 {% endraw %}
 
 #### Link image inside email content
 
-To link the coupon code inside an image, add `.png` before the sign query parameter of the Dynamic Generation URL as shown in the following snippet example:
+To link the coupon code inside an image, add `.png` after the Dynamic Generation URL, as shown in the following snippet:
 
 {% raw %}
 ```liquid
-<img src="https://example.punchh.com/request_coupons/XXXXXXXXXXXXX.png?sign={{jwt}}">
+<img src="https://SERVER.punchh.com/request_coupons/11111.png?sign={{jwt}}">
 ````
 {% endraw %}
 
