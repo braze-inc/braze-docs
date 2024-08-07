@@ -11,6 +11,10 @@ page_order: 0
 
 > Learn how to customize your in-app messages for Apple's tvOS platform.
 
+{% alert important %}
+Keep in mind, you'll need to implement your own custom UI since in-app messaging is supported via headless UI using the Swift SDK&#8212;which does not include any default UI or views for tvOS.
+{% endalert %}
+
 ## Setting up your tvOS app
 
 ### Step 1: Create a new iOS app
