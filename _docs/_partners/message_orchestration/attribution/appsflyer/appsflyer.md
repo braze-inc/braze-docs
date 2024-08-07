@@ -60,7 +60,6 @@ If set to `true`, you must implement the iOS device ID mapping for Swift in orde
 {% tabs local %}
 {% tab Swift %}
 
-##### Swift
 ```swift
 let configuration = Braze.Configuration(
     apiKey: "<BRAZE_API_KEY>",
