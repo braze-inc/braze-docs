@@ -37,7 +37,7 @@ The following lists features and messaging channels supported today.
             <th>Content Cards</th>
             <th>Push notifications</th>
             <th>Canvas</th>
-            <th>[Feature Flags](https://www.braze.com/docs/developer_guide/platform_wide/feature_flags/about)</th>
+            <th>Feature Flags</th>
         </tr>
     </thead>
     <tbody>
