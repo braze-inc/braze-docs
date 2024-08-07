@@ -7,7 +7,7 @@ page_type: partner
 search_tag: Partner
 ---
 
-# Dynamic code generation
+# Dynamic code generation with Punchh
 
 > A coupon code is a unique code that can be used by a single user (either single or multiple use). The Punchh framework generates coupon codes, which can be processed within a mobile app or at the point-of-sale (POS) system.
 
@@ -16,16 +16,16 @@ Using the Punchh coupon framework and Braze, you can achieve the following scena
 - Generate a coupon code when the guest clicks a coupon generation link in an email: The coupon code will be generated dynamically and shown on a web page.
 - Generate a coupon code when the guest opens an email: The coupon code will be generated dynamically and shown as an image within the email.
 
-## How to integrate Punchh dynamic coupon code generation
+## Integrating dynamic coupon code generation
 
-### Step 1: Create a coupon campaign in Punchh
+### Step 1: Create a coupon campaign
 
 1. Using a Punchh coupon campaign, create a dynamic generation coupon campaign as shown in the following image.
 2. The Punchh coupon framework will generate the following parameters to enable dynamic coupon generation:
     - Dynamic coupon generation token: This is a system-generated security token for encryption.
     - Dynamic coupon generation URL: This URL will be embedded in the email as a link or image, as required by the business.
 
-![The form for creating a coupon campagin in Punchh.][2]{: style="max-width:60%;"}
+![The form for creating a coupon campagin in Punchh.]({% image_buster /assets/img/punchh/punchh8.png %}){: style="max-width:60%;"}
 
 ### Step 2: Generate signature and construct URL
 
@@ -80,55 +80,62 @@ Replace the following:
 
 ### Step 3: Append coupon code to message body
 
-#### Link to Punchh web page
+#### Linking to Punchh web page
 
-To link to a Puncch-hosted web page, add the Dynamic Generation URL provided in Punchh Campaign creation UI and replace `GENERATED_SIGNATURE` with `{% raw %}{{jwt}}{% endraw %}`.
+To link to a Puncch-hosted web page, add `{% raw %}{{jwt}}{% endraw %}` to the dynamic generation URL [you created earlier](#step-1-create-a-coupon-campaign-in-punchh). Your link should be similar to the following: 
 
 {% raw %}
 ```
-https://SERVER.punchh.com/request_coupons/DYNAMIC_COUPON_GENERATION_TOKEN?sign={{jwt}}
+https://fakebrandz.punchh.com/request_coupons/7xY3bL9jRfZ1pA6mc8qD2eS4vT5wX?sign={{jwt}}
 ```
 {% endraw %}
 
 When a user clicks the coupon URL, they'll be redirected to a Punchh-hosted web page, where their generated coupon will be displayed.
 
-![Example confirmation message after a user successfully generates a coupon code.][1]
+![Example confirmation message after a user successfully generates a coupon code.]({% image_buster /assets/img/punchh/punchh7.png %})
 
-#### Extract code via JSON as plain text
+#### Extracting code via JSON as plain text
 
-To return a JSON response, add `.json` after the Dynamic Generation URL as shown in the following snippet example:
+To return a JSON response, append `{% raw %}{{jwt}}{% endraw %}` to the dynamic generation URL [you created earlier](#step-1-create-a-coupon-campaign-in-punchh), then add `.json` after the token in the URL string. Your link should be similar to the following:
 
 {% raw %}
 ```liquid
-https://SERVER.punchh.com/request_coupons/DYNAMIC_COUPON_GENERATION_TOKEN.json?sign={{jwt}}
+https://fakebrandz.punchh.com/request_coupons/7xY3bL9jRfZ1pA6mc8qD2eS4vT5wX.json?sign={{jwt}}
 ```
 {% endraw %}
-
 
 You could then leverage [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/making_an_api_call/) to insert the code as plain text into any message body. For example:
 
 {% raw %}
 ```liquid
-{% connected_content https://SERVER.punchh.com/request_coupons/DYNAMIC_COUPON_GENERATION_TOKEN.json?sign={{jwt}} :save punchh_coupon %}
+{% connected_content https://fakebrandz.punchh.com/request_coupons/7xY3bL9jRfZ1pA6mc8qD2eS4vT5wX.json?sign={{jwt}} :save punchh_coupon %}
 {{punchh_coupon.coupon}}
 ````
 {% endraw %}
 
-#### Link image inside email content
+#### Linking an image inside email content
 
-To link the coupon code inside an image, add `.png` after the Dynamic Generation URL, as shown in the following snippet:
+To link the coupon code inside an image:
 
+1. Append `{% raw %}{{jwt}}{% endraw %}` to the dynamic generation URL [you created earlier](#step-1-create-a-coupon-campaign-in-punchh).
+2. Add `.png` after the token in the URL string.
+3. Embed your link in an HTML {% raw %}`<img>`{% endraw %} tag.
+
+{% tabs local %}
+{% tab example input %}
 {% raw %}
 ```liquid
-<img src="https://SERVER.punchh.com/request_coupons/DYNAMIC_COUPON_GENERATION_TOKEN.png?sign={{jwt}}">
+<img src="https://fakebrandz.punchh.com/request_coupons/7xY3bL9jRfZ1pA6mc8qD2eS4vT5wX.png?sign={{jwt}}">
 ````
 {% endraw %}
+{% endtab %}
 
-Your output will be similar to the following:
+{% tab example output %}
+![Rendered output of the coupon code image tag.]({% image_buster /assets/img/punchh/punchh9.png %})
+{% endtab %}
+{% endtabs %}
 
-![Rendered output of the coupon code image tag.][3]
-
-## Associated error messages
+## Error messages
 
 | Error code | Error message | Description |
 | --- | --- | --- |
@@ -140,7 +147,3 @@ Your output will be similar to the following:
 | `usage_exceeded_by_guest` | This promo code has already been processed. | The usage of the code by a user exceeds the number of times a user can use it. For example, the dashboard configuration allows a single code to be used three times by a user. If it is used more than that, this error will occur. |
 | `already_used_by_other_guest` | This promo code has already been used by some other guest. | Another user has already used the code. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
-
-[1]: {% image_buster /assets/img/punchh/punchh7.png %}
-[2]: {% image_buster /assets/img/punchh/punchh8.png %}
-[3]: {% image_buster /assets/img/punchh/punchh9.png %}
