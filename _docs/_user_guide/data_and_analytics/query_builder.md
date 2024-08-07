@@ -408,7 +408,7 @@ For knowing whether a variable’s value is filled. This is useful for optional 
 
 Reports that take longer than six minutes to run will time out. If this is the first query you're running in some time, it may take longer to process and therefore has a higher likelihood of timing out. If this happens, try running the report again.
 
-If a report times out or runs into errors even after retrying, please contact [support]({{site.baseurl}}/help/support#braze-support).
+If a report times out or runs into errors even after retrying, contact [Support]({{site.baseurl}}/help/support#braze-support).
 
 ## Data and results
 
