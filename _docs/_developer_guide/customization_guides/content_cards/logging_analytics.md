@@ -243,7 +243,7 @@ BrazeContentCardsManager.getInstance().contentCardsActionListener = object : ICo
 {% endsubtabs %}
 
 {% alert important %}
-To handle control variant Content Cards in your custom UI, pass in your [`com.braze.models.cards.Card`](https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/models/cards/Card.html) object, then call the `logImpression` method as you would with any other Content Card type. The object will implicitly log a control impression to inform our analytics of when a user would have seen the control card.{% endalert %}
+To handle control variant Content Cards in your custom UI, pass in your [`com.braze.models.cards.Card`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/index.html) object, then call the `logImpression` method as you would with any other Content Card type. The object will implicitly log a control impression to inform our analytics of when a user would have seen the control card.{% endalert %}
 
 {% endtab %}
 {% tab iOS %}
