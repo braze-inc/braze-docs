@@ -58,18 +58,6 @@ For those using the Swift SDK v5.7.0+, if you wish to continue using IDFV as the
 If set to `true`, you must implement the iOS device ID mapping for Swift in order to pass the Braze `device_id` to AppsFlyer upon app install in order for Braze to appropriately match iOS attributions.
 
 {% tabs local %}
-{% tab Objective-C %}
-
-```objc
-BRZConfiguration *configurations = [[BRZConfiguration alloc] initWithApiKey:@"BRAZE_API_KEY" endpoint:@"BRAZE_END_POINT"];
-[configurations setUseUUIDAsDeviceId:NO];
-Braze *braze = [[Braze alloc] initWithConfiguration:configurations];
-[[AppsFlyerLib shared] setAdditionalData:@{
-    @"brazeDeviceId": braze.deviceId
-}];
-```
-
-{% endtab %}
 {% tab Swift %}
 
 ##### Swift
@@ -80,6 +68,18 @@ let configuration = Braze.Configuration(
 configuration.useUUIDAsDeviceId = false
 let braze = Braze(configuration: configuration)
 AppsFlyerLib.shared().customData = ["brazeDeviceId": braze.deviceId]
+```
+
+{% endtab %}
+{% tab Objective-C %}
+
+```objc
+BRZConfiguration *configurations = [[BRZConfiguration alloc] initWithApiKey:@"BRAZE_API_KEY" endpoint:@"BRAZE_END_POINT"];
+[configurations setUseUUIDAsDeviceId:NO];
+Braze *braze = [[Braze alloc] initWithConfiguration:configurations];
+[[AppsFlyerLib shared] setAdditionalData:@{
+    @"brazeDeviceId": braze.deviceId
+}];
 ```
 
 {% endtab %}
