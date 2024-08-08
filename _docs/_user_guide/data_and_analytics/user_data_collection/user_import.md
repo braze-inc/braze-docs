@@ -50,7 +50,7 @@ You can also upload and update user profiles though CSV files from **Audience** 
 This feature supports recording and updating user attributes such as first name and email, in addition to custom attributes such as shoe size. You can import a CSV by specifying one of two unique user identifiers: an `external_id` or a user alias.
 
 {% alert note %}
-If you are uploading a mix of users with an `external_id` and users without, you need to create one CSV for each import. One CSV can't contain both `external_ids` and user aliases.
+If you're uploading a mix of users with an `external_id` and users without, you need to create one CSV for each import. One CSV can't contain both `external_ids` and user aliases.
 {% endalert %}
 
 ### Importing with external ID
@@ -220,9 +220,11 @@ Only a single `subscription_group_id` can be set per row in the user import. Dif
 
 ### Importing a CSV
 
-To import your CSV file, go to the **User Import** page under the **Users** section. In the lower text box, **Recent Imports**, there's a table that lists up to twenty of your most recent imports, their file names, the number of lines in the file, the number of lines successfully imported, total lines in each file, and the status of each import.
+To import your CSV file, go to the **User Import** page under the **Audiences** section. Here, you'll find a table that lists the most recent imports, which includes details such as the upload date, the uploader's name, file name, targeting availability, number of imported rows, and status of each import.
 
-The upper box, **Import CSV**, contains importing directions and a button to begin your import. Select **Select CSV File** and your file of interest, then select **Start Upload**. Braze will upload your file and check the column headers and the data types of each column. 
+![][3]
+
+Select **Browse Files** and your file. Braze will upload your file and check the column headers and the data types of each column.
 
 To download a CSV template, refer to the sections [Importing with external ID](#importing-with-external-id) or [Importing with user alias](#importing-with-user-alias) on this page.
 
@@ -230,13 +232,11 @@ To download a CSV template, refer to the sections [Importing with external ID](#
 CSV imports are case sensitive. This means capital letters in CSV imports will write the field as a custom attribute instead of a standard one. For example, "email" is correct, but "Email" would be written as a custom attribute.
 {% endalert %}
 
-![][3]
-
 After the upload is completed, you'll see a modal with a preview of the contents of your file. All the information in this table is based on the values in the top few rows of your CSV file. For column headers, standard attributes are written in normal text, while custom attributes are italicized and have their type noted in parentheses. There is also a summary of your file at the top of the pop-up.
 
 You can import more than one CSV at the same time. CSV imports run concurrently, so the order of updates is not guaranteed to be serial. If you require CSV imports to run one after another, wait until a CSV import has finished before uploading a second one.
 
-If Braze notices something malformed in your file during the upload, these errors will show with the summary. For example, if your file includes a malformed row, that error will be noted in the preview when you import the file. So, a file can be imported with errors, but an import can't be canceled or rolled-back after it's started. Review the preview, and if you find any errors, cancel the import and modify your file. 
+If Braze notices something malformed in your file during the upload, these errors will show with the summary. For example, if your file includes a malformed row, that error is noted in the preview when you import the file. So, a file can be imported with errors, but an import can't be canceled or rolled-back after it's started. Review the preview, and if you find any errors, cancel the import and modify your file. 
 
 {% alert important %}
 Examine the full CSV file before upload, as Braze doesn't scan every row of the input file for the preview. This means errors can exist that Braze doesn't catch while generating this preview.
@@ -303,7 +303,7 @@ If you are seeing a piece of default user data (for example, `email` or `first_n
 
 [1]: {{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/language_codes/
 [2]: {{site.baseurl}}/user_guide/message_building_by_channel/sms/phone_numbers/user_phone_numbers/
-[3]: {% image_buster /assets/img/importcsv.png %}
+[3]: {% image_buster /assets/img/importcsv5.png %}
 [4]: {% image_buster /assets/img/importcsv2.png %}
 [7]: {% image_buster /assets/img/segment-imported-users.png %}
 [8]: {% image_buster /assets/img_archive/user_alias_import_1.png %}

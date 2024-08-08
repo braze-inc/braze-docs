@@ -6,6 +6,8 @@ page_type: reference
 description: "This reference article describes News Feed Categories, which make it possible to integrate multiple instances of the News Feed into your application."
 tool: Dashboard
 channel: news feed
+hidden: true
+
 ---
 
 # News Feed categories

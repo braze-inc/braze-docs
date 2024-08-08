@@ -9,27 +9,25 @@ tool: Reports
 
 # Query Builder
 
-> With the Query Builder, you can generate reports using Braze data in Snowflake. The Query Builder comes with pre-built SQL [query templates]({{site.baseurl}}/user_guide/data_and_analytics/query_builder/query_templates/) to get you started, or you can write your own custom SQL queries to unlock even more insights.
+> The Query Builder generates reports using Braze data in Snowflake. The Query Builder comes with pre-built SQL [query templates]({{site.baseurl}}/user_guide/data_and_analytics/query_builder/query_templates/) to get you started, or you can write your own custom SQL queries to unlock even more insights.
 
-## Who has access
-
-Because this feature allows direct access to some customer data, you can only access the Query Builder if you have the "View PII" [permission]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/user_permissions/).
+Because the Query Builder allows direct access to some customer data, you can only access the Query Builder if you have the "View PII" [permission]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/user_permissions/).
 
 ## Running reports in the Query Builder
 
-To run a report:
+To run a Query Builder report:
 
 1. Go to **Analytics** > **Query Builder**.
 
 {% alert note %}
-If you are using the [older navigation]({{site.baseurl}}/navigation), you can find **Query Builder** under **Data**.
+If you're using the [older navigation]({{site.baseurl}}/navigation), you can find **Query Builder** under **Data**.
 {% endalert %}
 
 {:start="2"}
 2. Select **Create SQL Query**. If you need inspiration or help in crafting your query, select **Query Template** and choose a template from the list. Otherwise, select **SQL Editor** to head straight to the editor.
-3. Your report is automatically given a name with the current date and time. Hover over the name and click <i class="fas fa-pencil" alt="Edit"></i> to give your SQL query a meaningful name.
-4. Write your SQL query in the editor or [get help from AI](#ai-query-builder) from the **AI Query Builder** tab. If you choose to write your own SQL, see [custom SQL](#custom-sql) for requirements and resources.
-5. Click **Run Query**.
+3. Your report is automatically given a name with the current date and time. Hover over the name and select <i class="fas fa-pencil" alt="Edit"></i> to give your SQL query a meaningful name.
+4. Write your SQL query in the editor or [get help from AI](#ai-query-builder) from the **AI Query Builder** tab. If writing your own SQL, see [Writing custom SQL queries](#custom-sql) for requirements and resources.
+5. Select **Run Query**.
 6. Save your query.
 7. To download a CSV of your report, select **Export**.
 
@@ -37,7 +35,13 @@ If you are using the [older navigation]({{site.baseurl}}/navigation), you can fi
 
 Results from each report can be generated once a day. If you run the same report more than once in one calendar day, you'll see the same results in both reports.
 
-## AI Query Builder
+### Query templates
+
+All query templates surface data from the last 60 days. Access templates by selecting **Create SQL Query** > **Query Template** when first creating a report.
+
+See [Query templates]({{site.baseurl}}/user_guide/data_and_analytics/query_builder/query_templates/) for a list of available templates.
+
+## Generating SQL with the AI Query Builder
 
 The AI Query Builder leverages [GPT](https://openai.com/gpt-4), powered by OpenAI, to recommend SQL for your query.
 
@@ -47,7 +51,7 @@ The AI Query Builder is currently available as a beta feature. Contact your cust
 
 ![][2]{: style="max-width:60%;" }
 
-To use the AI Query Builder, do the following:
+To generate SQL with the AI Query Builder:
 
 1. After creating a report in the Query Builder, select the **AI Query Builder** tab.
 2. Type in your prompt or select a sample prompt and select **Generate** to translate your prompt into SQL.
@@ -60,32 +64,21 @@ To use the AI Query Builder, do the following:
 - You can send up to 20 prompts per minute with the AI Query Builder.
 
 ### How is my data used and sent to OpenAI?
+<!-- Contact Legal for changes. -->
 
 In order to generate your SQL, Braze will send your prompts to OpenAI’s API Platform. All queries sent to OpenAI from Braze are anonymized, meaning that OpenAI will not be able to identify from whom the query was sent unless you include uniquely identifiable information in the content you provide. As detailed in [OpenAI’s API Platform Commitments](https://openai.com/policies/api-data-usage-policies), data sent to OpenAI’s API via Braze is not used to train or improve their models and will be deleted after 30 days. Please ensure that you adhere to OpenAI’s policies relevant to you, including the [Usage Policy](https://openai.com/policies/usage-policies). Braze makes no warranty of any kind with respect to any AI-generated content. 
 
-## Report timeout
+## Writing custom SQL queries {#custom-sql}
 
-Reports that take longer than six minutes to run will time out. If this is the first query you're running in some time, it may take longer to process and therefore has a higher likelihood of timing out. If this happens, try running the report again.
-
-If a report times out or runs into errors even after retrying, please contact [support]({{site.baseurl}}/help/support#braze-support).
-
-## Query templates
-
-All templates surface data from the last 60 days. You can access query templates by selecting **Create SQL Query** > **Query Template** when first creating a report.
-
-See [Query templates]({{site.baseurl}}/user_guide/data_and_analytics/query_builder/query_templates/) for a list of available templates.
-
-## Custom SQL
-
-Your SQL query should be written using [Snowflake syntax](https://docs.snowflake.com/en/sql-reference). Consult the [table reference]({{site.baseurl}}/sql_segments_tables/) for a full list of tables and columns available to be queried.
+Write your SQL query using [Snowflake syntax](https://docs.snowflake.com/en/sql-reference). Consult the [table reference]({{site.baseurl}}/sql_segments_tables/) for a full list of tables and columns available to be queried.
 
 To view table details within the Query Builder:
 
 1. From the **Query Builder** page, open the **Reference** panel and select **Available Data Tables** to view available data tables and their names.
-3. Click <i class="fas fa-chevron-down" alt=""></i> **See Details** to view the table description and information about the table columns, such as data types.
-4. To insert the table name in your SQL, click <i class="fas fa-copy" title="Copy table name to SQL editor"></i>.
+3. Select <i class="fas fa-chevron-down" alt=""></i> **See Details** to view the table description and information about the table columns, such as data types.
+4. To insert the table name in your SQL, select <i class="fas fa-copy" title="Copy table name to SQL editor"></i>.
 
-To view pre-written queries provided by Braze select **Query Template** when first creating a report in the Query Builder.
+To use pre-written queries provided by Braze, select **Query Template** when first creating a report in the Query Builder.
 
 Restricting your query to a specific time period will help you generate results quicker. The following is an example query that gets the number of purchases and the revenue generated for the last hour.
 
@@ -112,11 +105,9 @@ Your query may fail for any of the following reasons:
     - Reports that take longer than 6 minutes to run will time out.
     - If a report times out, try to limit the time range in which you are querying data or query a more specific set of data.
 
-## Variables
+## Using variables
 
-### Overview
-
-Variables allow you to use predefined variable types in SQL to reference values without needing to manually copy the value. For example, instead of manually copying a campaign's ID to the SQL editor, you can use {% raw %}`{{campaign.${My campaign}}}`{% endraw %} to directly select a campaign from a dropdown in the **Variables** tab.
+Use variables to use predefined variable types in SQL to reference values without needing to manually copy the value. For example, instead of manually copying a campaign's ID to the SQL editor, you can use {% raw %}`{{campaign.${My campaign}}}`{% endraw %} to directly select a campaign from a dropdown in the **Variables** tab.
 
 ![][3]
 
@@ -159,7 +150,7 @@ The following variable types are accepted:
 
 ![][4]{: style="max-width:50%;"}
 
-If both `start_date` and `end_date` are being used, they must have the same name so you can use them as a date range.
+If using both `start_date` and `end_date`, they must have the same name so you can use them as a date range.
 
 ##### Example values
 
@@ -169,10 +160,10 @@ All four types are shown if both `start_date` and `end_date` are used with the s
 
 | Date range type | Description | Required values |
 | --- | --- | --- |
-| Relative | Allows you to specify the past X days | Requires `start_date` |
-| Start date | Allows you to specify a start date | Requires `start_date` |
-| End date | Allows you to specify an end date | Requires `end_date` |
-| Date range | Allows you to specify both a start and end date | Requires both `start_date` and `end_date` |
+| Relative | Specifies the past X days | Requires `start_date` |
+| Start date | Specifies a start date | Requires `start_date` |
+| End date | Specifies an end date | Requires `end_date` |
+| Date range | Specifies both a start and end date | Requires both `start_date` and `end_date` |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 - **Replacement value:** Replaces `start_date` and `end_date` with a Unix timestamp in seconds for a specified date in UTC, such as `1696517353`.
@@ -182,34 +173,34 @@ All four types are shown if both `start_date` and `end_date` are used with the s
 
 #### Messaging
 
-All messaging variables must share the same identifier when you want to tie their state together in one group.
+All messaging variables must share the same identifier when you want to tie together their state in one group.
 
 ![][5]{: style="max-width:50%;"}
 
 ##### Canvas
 
-For selecting one Canvas. Sharing the same name with a campaign will result in a radio button within the Variables panel that enables you to select either Canvas or campaign.
+For selecting one Canvas. Sharing the same name with a campaign will result in a radio button within the **Variables** tab that for selecting either Canvas or campaign.
 
 - **Replacement value:** Canvas BSON ID
 - **Usage example:** {% raw %}`canvas_id = ‘{{canvas.${some name}}}’`{% endraw %}
 
 ##### Canvases
 
-For selecting multiple Canvases. Sharing the same name with a campaign will result in a radio button within the **Variables** tab that allows you to select either Canvas or campaign.
+For selecting multiple Canvases. Sharing the same name with a campaign will result in a radio button within the **Variables** tab for selecting either Canvas or campaign.
 
 - **Replacement value:** Canvases BSON IDs
 - **Usage example:** {% raw %}`canvas_id IN ({{canvases.${some name}}})`{% endraw %}
 
 ##### Campaign
 
-For selecting one campaign. Sharing the same name with a Canvas will result in a radio button within the **Variables** tab that allows you to select either Canvas or campaign.
+For selecting one campaign. Sharing the same name with a Canvas will result in a radio button within the **Variables** tab that for selecting either Canvas or campaign.
 
 - **Replacement value:** Campaign BSON ID
 - **Usage example:** {% raw %}`campaign_id = ‘{{campaign.${some name}}}’`{% endraw %}
 
 ##### Campaigns
 
-For multi-selecting campaigns. Sharing the same name with a Canvas will result in a radio button within the **Variables** tab that allows you to select either Canvas or campaign.
+For multi-selecting campaigns. Sharing the same name with a Canvas will result in a radio button within the **Variables** tab for selecting either Canvas or campaign.
 
 - **Replacement value:** Campaigns BSON IDs
 - **Usage example:** {% raw %}`campaign_id IN ({{campaigns.${some name}}})`{% endraw %}
@@ -223,7 +214,7 @@ For selecting campaign variants that belong to the selected campaign. It must be
 
 ##### Canvas variants
 
-For selecting Canvas variants that belong to a chosen Canvas. It must be used in conjunction with a Canvas or Canvases variable.
+For selecting Canvas variants that belong to a chosen Canvas. It must be used with a Canvas or Canvases variable.
 
 - **Replacement value:** Canvas variants API IDs, strings delimited by commas such as in `api-id1, api-id2`.
 - **Usage example:** {% raw %}`canvas_variation_api_id IN ({{canvas_variants.${some name}}})`{% endraw %}
@@ -237,7 +228,7 @@ For selecting a Canvas step that belongs to a chosen Canvas. It must be used wit
 
 ##### Canvas Steps
 
-For selecting Canvas steps that belong to chosen Canvases. It must be used in conjunction with a Canvas or Canvases variable.
+For selecting Canvas steps that belong to chosen Canvases. It must be used with a Canvas or Canvases variable.
 
 - **Replacement value:** Canvas steps API IDs
 - **Usage example:** {% raw %}`canvas_step_api_id IN ({{canvas_steps.${some name}}})`{% endraw %}
@@ -279,7 +270,7 @@ For selecting catalogs.
 
 #### Catalog Fields
 
-For selecting catalog fields. It has to be used with the catalogs variable.
+For selecting catalog fields. It must be used with the catalogs variable.
 
 - **Replacement value:** Catalog field names
 - **Usage example:** {% raw %}`field_name = '{{catalog_fields.${some name}}}’`{% endraw %}
@@ -296,9 +287,9 @@ For selecting from a list of options.
 
 #### Segments
 
-For selecting segments that have [Analytics Tracking]({{site.baseurl}}/user_guide/data_and_analytics/tracking/segment_analytics_tracking/) enabled.
+For selecting segments that have [Analytics Tracking]({{site.baseurl}}/user_guide/data_and_analytics/tracking/segment_analytics_tracking/) turned on.
 
-- **Replacement value:** The segment analytics ID, which corresponds to the IDs stored in the  `user_segment_membership_ids` column in the tables where this column is available.
+- **Replacement value:** The segment analytics ID, which corresponds to the IDs stored in the `user_segment_membership_ids` column in the tables where this column is available.
 - **Usage example:** {% raw %}`{{segments.${analytics_segments}}}`{% endraw %}
 
 #### String
@@ -317,7 +308,7 @@ For selecting tags for campaigns and Canvases.
 
 ### Variable metadata
 
-Metadata can be attached to a variable to change its behavior. You can do this by appending the metadata with a pipe ( &#124; ) character following the variable name. The ordering of the metadata doesn’t matter and you can append any number of them. Additionally, all types of metadata can be used for any variable, except for special metadata that is specific to certain variables (this will be indicated in those cases). The usage of all metadata is optional and is used to change the default’s variable behavior.
+Metadata can be attached to a variable to change its behavior by appending the metadata with a pipe ( &#124; ) character following the variable name. The ordering of the metadata doesn’t matter and you can append any number of them. Additionally, all types of metadata can be used for any variable, except for special metadata that is specific to certain variables (this will be indicated in those cases). The usage of all metadata is optional and is used to change the default’s variable behavior.
 
 **Usage example:** {% raw %}`{{string.${my var}| is_required: ‘false’ | description: ‘My optional string var’}}`{% endraw %}
 
@@ -325,7 +316,7 @@ Metadata can be attached to a variable to change its behavior. You can do this b
 
 For whether variables are visible. All variables are visible by default in the **Variables** tab, where you can input values.
 
-There are several special variables whose value is dependent on another variable, such as whether another variable has a value. For these special variables, we mark them as not visible so they don't show in the **Variables** tab.
+There are several special variables whose value is dependent on another variable, such as whether another variable has a value. These special variables are marked as not visible so they don't show in the **Variables** tab.
 
 **Usage example:** `visible: ‘false’`
 
@@ -371,8 +362,7 @@ For showing options as radio buttons instead of a select dropdown in the **Varia
 
 #### Options 
 
-For providing the list of selectable options in the form of a label and value. The label is what gets shown and the value is what the variable gets replaced with when the option is selected.
-You can include this metadata only if you use the [Options](#options) variable.
+For providing the list of selectable options in the form of a label and value. The label is what gets shown and the value is what the variable gets replaced with when the option is selected. You can include this metadata only if you use the [Options](#options) variable.
 
 **Usage example:** `options: '[{"label": "test", "value": "test_value"}, {"label": "test2", "value": "test_value2"}]'`
 
@@ -413,6 +403,12 @@ For knowing whether a variable’s value is filled. This is useful for optional 
 
 `type` and `name` refer to the referenced variable. For example, to short-circuit the following optional variable: {% raw %}`{{campaigns.${messaging}}`, you can use the following:
 `{{string.${campaigns_messaging_has_no_value}  | visible: 'false'}} OR campaign_id IN ({{campaigns.${messaging} | is_required: ‘false’}})`{% endraw %}
+
+## Report timeout
+
+Reports that take longer than six minutes to run will time out. If this is the first query you're running in some time, it may take longer to process and therefore has a higher likelihood of timing out. If this happens, try running the report again.
+
+If a report times out or runs into errors even after retrying, contact [Support]({{site.baseurl}}/help/support#braze-support).
 
 ## Data and results
 

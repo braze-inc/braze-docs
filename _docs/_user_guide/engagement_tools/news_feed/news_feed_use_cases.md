@@ -5,6 +5,7 @@ page_order: 3
 page_type: reference
 description: "This reference article lists helpful News Feed use cases."
 channel: news feed
+hidden: true
 
 ---
 

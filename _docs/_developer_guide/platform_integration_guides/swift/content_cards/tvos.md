@@ -11,6 +11,10 @@ page_order: 1
 
 > Learn how to customize your Content Cards for Apple's tvOS platform.
 
+{% alert important %}
+Keep in mind, you'll need to implement your own custom UI since Content Cards are supported via headless UI using the Swift SDK&#8212;which does not include any default UI or views for tvOS.
+{% endalert %}
+
 ## Setting up your tvOS app
 
 ### Step 1: Create a new iOS app
