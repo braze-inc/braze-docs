@@ -9,11 +9,11 @@ description: "This article covers how to implement the Swift SDK delayed initial
 
 # Delayed Initialization
 
-Delayed initialization is a feature that allows you to initialize the Braze SDK asynchronously while ensuring that push notification handling is preserved. This feature is useful when you need to perform additional setup before initializing the SDK, such as fetching configuration data from a server or waiting for user consent.
+Delayed initialization is a feature that allows you to initialize the Braze SDK asynchronously while ensuring that push notification handling is preserved. This feature is useful when you need to perform additional setup before initializing the SDK, such as fetching configuration data from a server.
 
 ## Step 1: Preparing the SDK for delayed initialization
 
-By default, push notifications received and clicked while your application is in the terminated state cannot be processed before the SDK is initialized. Since the version [9.1.0][1] of the Braze Swift SDK, we offer a new static helper method to handle this scenario: [Braze.prepareForDelayedInitialization(pushAutomation:)][2].
+By default, push notifications received and clicked while your application is in the terminated state cannot be processed before the SDK is initialized. Since the version [10.1.0][1] of the Braze Swift SDK, we offer a new static helper method to handle this scenario: [Braze.prepareForDelayedInitialization(pushAutomation:)][2].
 
 This method prepares the SDK for delayed initialization by setting up the push automation system. All push notifications originating from Braze will be captured, queued, and processed by the SDK once it is initialized. This method must be called as early as possible in your application lifecycle, in or before the `application(_:didFinishLaunchingWithOptions:)` method of your `AppDelegate`.
 
@@ -36,22 +36,31 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
 {% endtab %}
 {% tab Swift (SwiftUI) %}
 
-SwiftUI applications that do not implement the [@UIApplicationDelegateAdaptor][3] property wrapper can add the call to `prepareForDelayedInitialization()` in the `init` method of the `App` struct.
+SwiftUI applications require implementing the [@UIApplicationDelegateAdaptor][3] property wrapper to call the `prepareForDelayedInitialization()` method.
 
 ```swift
 @main
 struct MyApp: App {
-
-  init() {
-    // Prepare the SDK for delayed initialization
-    Braze.prepareForDelayedInitialization()
-  }
+  @UIApplicationDelegateAdaptor var appDelegate: AppDelegate
 
   var body: some Scene {
     WindowGroup {
       ContentView()
     }
   }
+}
+
+class AppDelegate: NSObject, UIApplicationDelegate {
+  
+  func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
+    // Prepare the SDK for delayed initialization
+    Braze.prepareForDelayedInitialization()
+
+    // ... Additional non-Braze setup code
+
+    return true
+  }
+  
 }
 ```
 
@@ -89,7 +98,7 @@ Actions resulting of the user clicking on the push notification will be processe
 
 If you need to perform additional processing on Braze push notifications, please refer to the [Subscribing to push notifications updates][6]. You must implement the subscription handler right after initializing the SDK to receive updates for push notifications that were previously enqueued.
 
-[1]: https://github.com/braze-inc/braze-swift-sdk/releases/tag/9.1.0
+[1]: https://github.com/braze-inc/braze-swift-sdk/releases/tag/10.1.0
 [2]: https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/preparefordelayedinitialization(pushautomation:)
 [3]: https://developer.apple.com/documentation/swiftui/uiapplicationdelegateadaptor
 [4]: https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/configuration-swift.class/push-swift.class/automation-swift.class
