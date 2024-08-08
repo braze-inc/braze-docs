@@ -116,4 +116,4 @@ The plaintext email address is included in messaging archiving. These are sent d
 
 ### Can I use mail-to list-unsubscribe for subscription management with field-level encryption?
 
-No. Instead, we recommend using one-click and list-unsubscribe URL to process the unsubscribes from users.
+No. Mail-to list-unsubscribe would send the plaintext decrypted email address to Braze. With field-level encryption enabled, we support the URL-based HTTP: method, including one-click. We also recommend including a one-click unsubscribe link in your email body.
