@@ -7,6 +7,7 @@ description: "This reference article covers News Feed analytics, and various rel
 tool: 
 - Reports
 channel: news feed
+hidden: true
 
 ---
 
