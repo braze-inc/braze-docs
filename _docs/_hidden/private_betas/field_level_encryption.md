@@ -113,3 +113,7 @@ The hashed email address is included in email delivery and engagement events.
 ### What email address should I expect to see in message archiving?
 
 The plaintext email address is included in messaging archiving. These are sent directly to the customer’s cloud storage provider and there may be other personal data included in the email bodies.
+
+### Can I use mail-to list-unsubscribe for subscription management with field-level encryption?
+
+No. Instead, we recommend using one-click and list-unsubscribe URL to process the unsubscribes from users.
