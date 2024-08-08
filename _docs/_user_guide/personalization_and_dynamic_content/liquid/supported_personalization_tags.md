@@ -29,7 +29,7 @@ As a convenience, a summary of supported personalization tags are provided. For 
 | Event Properties <br> (These are custom to your workspace.)| `{{event_properties.${your_custom_event_property}}}` |
 | Canvas Entry Properties| `{{canvas_entry_properties}}` |
 | Custom Attributes <br> (These are custom to your workspace.) | `{{custom_attribute.${your_custom_attribute}}}` |
-| API trigger Properties |`{{api_trigger_properties}}` |
+| [API trigger Properties]({{site.baseurl}}/api/objects_filters/trigger_properties_object/) |`{{api_trigger_properties}}` |
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% endraw %}
