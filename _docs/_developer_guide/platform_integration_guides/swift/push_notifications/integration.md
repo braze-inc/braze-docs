@@ -324,7 +324,9 @@ To access the push notification payloads processed by Braze, use the [`Braze.Not
 
 You can use the `payloadTypes` parameter to specify whether you'd like to subscribe to notifications involving push open events, push received events, or both.
 
-However, note that push received events will only trigger for foreground notifications and `content-available` background notifications. It will not trigger for notifications received while terminated or for background notifications without the `content-available` field.
+{% alert important %}
+Keep in mind, push received events will only trigger for foreground notifications and `content-available` background notifications. It will not trigger for notifications received while terminated or for background notifications without the `content-available` field.
+{% endalert %}
 
 ```swift
 // This subscription is maintained through a Braze cancellable, which will observe for changes until the subscription is cancelled.
@@ -341,7 +343,9 @@ To access the push notification payloads processed by Braze, use the [`Braze.Not
 
 You can use the `payloadTypes` parameter to specify whether you'd like to subscribe to notifications involving push open events, push received events, or both.
 
-However, note that push received events will only trigger for foreground notifications and `content-available` background notifications. It will not trigger for notifications received while terminated or for background notifications without the `content-available` field.
+{% alert important %}
+Keep in mind, push received events will only trigger for foreground notifications and `content-available` background notifications. It will not trigger for notifications received while terminated or for background notifications without the `content-available` field.
+{% endalert %}
 
 ```objc
 NSInteger filtersValue = BRZNotificationsPayloadTypeFilter.opened.rawValue | BRZNotificationsPayloadTypeFilter.received.rawValue;
@@ -370,6 +374,8 @@ If you'd like to test in-app and push notifications via the command line, you ca
 If you are using the [older navigation]({{site.baseurl}}/navigation), these pages are in a different location: <br>- **API Keys** is located at **Developer Console** > **API Settings** <br>- **Search Users** is located at **Users** > **User Search**
 {% endalert %}
 
+In the following example, the `US-01` instance is being used. If you're not on this instance, refer to our [API documentation][66] to see which endpoint to make requests to.
+
 ```bash
 curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer {YOUR_API_KEY}" -d '{
   "external_user_ids":["YOUR_EXTERNAL_USER_ID"],
@@ -383,7 +389,6 @@ curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer {YOUR
   }
 }' https://rest.iad-01.braze.com/messages/send
 ```
-The preceding example is for customers on the `US-01` instance. If you are not on this instance, refer to our [API documentation][66] to see which endpoint to make requests to.
 
 ## Push primers {#push-primers}
 
