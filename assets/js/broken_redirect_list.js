@@ -1165,8 +1165,6 @@ validurls['/docs/partners/data_and_infrastructure_agility/ab_testing/phrasee'] =
 validurls['/docs/partners/data_and_infrastructure_agility/ab_testing/phrasee/phrasee'] = '/docs/partners/data_and_infrastructure_agility/ab_testing/jacquard/';
 validurls['/docs/partners/data_and_infrastructure_agility/ab_testing/phrasee/phrasee_react'] = '/docs/partners/data_and_infrastructure_agility/ab_testing/jacquard/';
 validurls['/docs/partners/data_and_infrastructure_agility/ab_testing/phrasee/phrasee#phrasee'] = '/docs/partners/data_and_infrastructure_agility/ab_testing/jacquard/';
-
-validurlsvalidurls['/docs/partners/data_and_infrastructure_agility/ab_testing/jacquard/'] = '/docs/partners/data_and_infrastructure_agility/ab_testing/jacquard/';
 validurls['/docs/partners/data_and_infrastructure_agility/ab_testing/jacquard/jacquard/'] = '/docs/partners/data_and_infrastructure_agility/ab_testing/jacquard/';
 validurls['/docs/partners/data_and_infrastructure_agility/ab_testing/jacquard/jacquard_react/'] = '/docs/partners/data_and_infrastructure_agility/ab_testing/jacquard/';
 
