@@ -219,7 +219,7 @@ Typically around 10,000 delivered emails are required for the statistic to be co
 
 ###### Limitations
 
-Estimated Real Open Rate is only available in campaigns, and is not reported in Current events. This metric is not retroactively calculated for any non-active campaigns launched before November 14, 2023.
+Estimated Real Open Rate is only available in campaigns, and is not reported in Current events. This metric is only retroactively calculated for active campaigns launched before November 14, 2023.
 
 {% elsif include.channel == "in-app message" %}
 
