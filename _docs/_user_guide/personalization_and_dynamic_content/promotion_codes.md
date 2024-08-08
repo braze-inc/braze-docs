@@ -172,7 +172,6 @@ If the message should have contained a promotion code from an empty or expired l
 
 If the message contains Liquid logic that conditionally inserts a promotion code, the message will only be canceled if it should have contained a promotion code. If the message shouldn't have contained a promotion code, message will send normally.
 
-If the Liquid conditional is false and the message normally doesn't contain a promotion code, the message won't be canceled.
 
 [1]:{% image_buster /assets/img/promocodes/promocode1.png %}
 [2]:{% image_buster /assets/img/promocodes/promocode2.png %}
