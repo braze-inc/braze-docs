@@ -1162,9 +1162,13 @@ validurls['/docs/user_guide/data_and_analytics/your_reports/'] = '/docs/user_gui
 validurls['/docs/user_guide/message_building_by_channel/email/best_practices/managing_email_subscriptions/'] = '/docs/user_guide/message_building_by_channel/email/best_practices/duplicate_emails/';
 
 validurls['/docs/partners/data_and_infrastructure_agility/ab_testing/phrasee'] = '/docs/partners/data_and_infrastructure_agility/ab_testing/jacquard/';
-validurls['/docs/partners/data_and_infrastructure_agility/ab_testing/phrasee/phrasee'] = '/docs/partners/data_and_infrastructure_agility/ab_testing/jacquard/jacquard/';
-validurls['/docs/partners/data_and_infrastructure_agility/ab_testing/phrasee/phrasee_react'] = '/docs/partners/data_and_infrastructure_agility/ab_testing/jacquard/jacquard_react/';
-validurls['/docs/partners/data_and_infrastructure_agility/ab_testing/phrasee/phrasee#phrasee'] = '/docs/partners/data_and_infrastructure_agility/ab_testing/jacquard/jacquard/';
+validurls['/docs/partners/data_and_infrastructure_agility/ab_testing/phrasee/phrasee'] = '/docs/partners/data_and_infrastructure_agility/ab_testing/jacquard/';
+validurls['/docs/partners/data_and_infrastructure_agility/ab_testing/phrasee/phrasee_react'] = '/docs/partners/data_and_infrastructure_agility/ab_testing/jacquard/';
+validurls['/docs/partners/data_and_infrastructure_agility/ab_testing/phrasee/phrasee#phrasee'] = '/docs/partners/data_and_infrastructure_agility/ab_testing/jacquard/';
+
+validurlsvalidurls['/docs/partners/data_and_infrastructure_agility/ab_testing/jacquard/'] = '/docs/partners/data_and_infrastructure_agility/ab_testing/jacquard/';
+validurls['/docs/partners/data_and_infrastructure_agility/ab_testing/jacquard/jacquard/'] = '/docs/partners/data_and_infrastructure_agility/ab_testing/jacquard/';
+validurls['/docs/partners/data_and_infrastructure_agility/ab_testing/jacquard/jacquard_react/'] = '/docs/partners/data_and_infrastructure_agility/ab_testing/jacquard/';
 
 validurls['/docs/developer_guide/platform_integration_guides/legacy_sdks/ios/initial_sdk_setup'] = ['/docs/developer_guide/platform_integration_guides/legacy_sdks/ios/initial_sdk_setup/overview'];
 
