@@ -154,16 +154,7 @@ State: {{ custom_attribute.${address.state} | default: 'Unknown' }}
 
 Let's say you have an array custom attribute called `upcoming_trips` that contains trips with the properties `destination` and `departure_date`. You want to send users personalized messages based on whether they have trips scheduled.
 
-1. Address the user and include a default value, in case you don't have their name.
-
-{% raw %}
-```liquid
-Hello {{ ${first_name} | default: 'fellow traveler' }},
-```
-{% endraw %}
-
-{: start="2"}
-2. Write conditional logic to specify that a message shouldn't send `upcoming_trips` is `empty`.
+1. Write conditional logic to specify that a message shouldn't send if `upcoming_trips` is `empty`.
 
 {% raw %}
 ```liquid
@@ -172,12 +163,14 @@ Hello {{ ${first_name} | default: 'fellow traveler' }},
 ```
 {% endraw %}
 
-{: start="3"}
-3. Specify what message to send if `upcoming_trips` has content. Use a `for` tag to specifiy that you'll pull properties (or information) for each trip that is contained in `upcoming_trips`. Then list the properties in the message and include a default value for if the `departure_date` isn't set. (Let's say a `destination` is required for a trip to be created, so you don't need to set a default value for that.)<br><br> Finally, close the `for` tag, then close the conditional logic.
+{: start="2"}
+2. Specify what message to send if `upcoming_trips` has content:<br><br>1. Address the user and include a default value, in case you don't have their name. <br>2. Use a `for` tag to specify that you'll pull properties (or information) for each trip that is contained in `upcoming_trips`. <br>3. List the properties in the message and include a default value for if the `departure_date` isn't set. (Let's say a `destination` is required for a trip to be created, so you don't need to set a default value for that.)<br>4. Close the `for` tag, then close the conditional logic.
 
 {% raw %}
 ```liquid
 {% else %}
+Hello {{ ${first_name} | default: 'fellow traveler' }},
+
   Here are your upcoming trips:
   <ul>
   {% for trip in custom_attribute.${upcoming_trips} %}
@@ -194,11 +187,11 @@ Hello {{ ${first_name} | default: 'fellow traveler' }},
 {% details Full Liquid code %}
 {% raw %}
 ```liquid
+{% if custom_attribute.upcoming_trips == empty %}
+{% abort_message('No upcoming trips scheduled') %}
+{% else %}
 Hello {{ ${first_name} | default: 'fellow traveler' }},
 
-{% if custom_attribute.upcoming_trips == empty %}
-  {% abort_message('No upcoming trips scheduled') %}
-{% else %}
   Here are your upcoming trips:
   <ul>
   {% for trip in custom_attribute.upcoming_trips %}
