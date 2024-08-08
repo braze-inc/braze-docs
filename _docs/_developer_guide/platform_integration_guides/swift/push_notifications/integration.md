@@ -322,7 +322,9 @@ Deep linking from a push into the app is automatically handled via our standard 
 {% tab Swift %}
 To access the push notification payloads processed by Braze, use the [`Braze.Notifications.subscribeToUpdates(payloadTypes:_:)`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/notifications-swift.class/subscribetoupdates(payloadtypes:_:)/) method.
 
-You can use the `payloadTypes` parameter to specify whether you'd like to subscribe to notifications involving push open events, foreground push received events, or both.
+You can use the `payloadTypes` parameter to specify whether you'd like to subscribe to notifications involving push open events, push received events, or both.
+
+However, note that push received events will only trigger for foreground notifications and `content-available` background notifications. It will not trigger for notifications received while terminated or for background notifications without the `content-available` field.
 
 ```swift
 // This subscription is maintained through a Braze cancellable, which will observe for changes until the subscription is cancelled.
@@ -337,7 +339,9 @@ let cancellable = AppDelegate.braze?.notifications.subscribeToUpdates(payloadTyp
 {% tab OBJECTIVE-C %}
 To access the push notification payloads processed by Braze, use the [`Braze.Notifications.subscribeToUpdates(payloadTypes:_:)`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/notifications-swift.class/subscribetoupdates(payloadtypes:_:)/) method.
 
-You can use the `payloadTypes` parameter to specify whether you'd like to subscribe to notifications involving push open events, foreground push received events, or both.
+You can use the `payloadTypes` parameter to specify whether you'd like to subscribe to notifications involving push open events, push received events, or both.
+
+However, note that push received events will only trigger for foreground notifications and `content-available` background notifications. It will not trigger for notifications received while terminated or for background notifications without the `content-available` field.
 
 ```objc
 NSInteger filtersValue = BRZNotificationsPayloadTypeFilter.opened.rawValue | BRZNotificationsPayloadTypeFilter.received.rawValue;
