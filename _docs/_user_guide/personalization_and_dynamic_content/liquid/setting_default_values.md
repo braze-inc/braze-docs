@@ -158,7 +158,7 @@ Let's say you have an array custom attribute called `upcoming_trips` that contai
 
 {% raw %}
 ```liquid
-{% if custom_attribute.${upcoming_trips} == empty %}
+{% if {{custom_attribute.${upcoming_trips}}} == empty %}
 {% abort_message('No upcoming trips scheduled') %}
 ```
 {% endraw %}
@@ -170,10 +170,9 @@ Let's say you have an array custom attribute called `upcoming_trips` that contai
 ```liquid
 {% else %}
 Hello {{ ${first_name} | default: 'fellow traveler' }},
-
   Here are your upcoming trips:
   <ul>
-  {% for trip in custom_attribute.${upcoming_trips} %}
+  {% for trip in {{custom_attribute.${upcoming_trips}}} %}
     <li>
       Destination: {{ trip.destination }}
       Departure Date: {{ trip.departure_date | default: 'Date not set' }}
@@ -187,14 +186,13 @@ Hello {{ ${first_name} | default: 'fellow traveler' }},
 {% details Full Liquid code %}
 {% raw %}
 ```liquid
-{% if custom_attribute.upcoming_trips == empty %}
+{% if {{custom_attribute.${upcoming_trips}}} == blank %}
 {% abort_message('No upcoming trips scheduled') %}
 {% else %}
 Hello {{ ${first_name} | default: 'fellow traveler' }},
-
   Here are your upcoming trips:
   <ul>
-  {% for trip in custom_attribute.upcoming_trips %}
+  {% for trip in {{custom_attribute.${upcoming_trips}}} %}
     <li>
       Destination: {{ trip.destination }}
       Departure Date: {{ trip.departure_date | default: 'Date not set' }}
