@@ -13,19 +13,19 @@ guide_featured_title: "Section articles"
 guide_featured_list:
 - name: About Feature Flags
   link: /docs/developer_guide/platform_wide/feature_flags/about/
-  fa_icon: fas fa-check
+  image: /assets/img/braze_icons/check-square-broken.svg
 - name: Create a Feature Flag
   link: /docs/developer_guide/platform_wide/feature_flags/create/
-  fa_icon: fas fa-columns
+  image: /assets/img/braze_icons/columns-01.svg
 - name: Feature Flag Experiments
   link: /docs/developer_guide/platform_wide/feature_flags/experiments/
-  fa_icon: fas fa-flask
+  image: /assets/img/braze_icons/beaker-02.svg
 - name: Feature Flags in Canvas
   link: /docs/developer_guide/platform_wide/feature_flags/canvas/
-  fa_icon: fas fa-project-diagram
+  image: /assets/img/braze_icons/dataflow-03.svg
 - name: Frequently Asked Questions
   link: /docs/developer_guide/platform_wide/feature_flags/faq/
-  fa_icon: fas fa-question
+  image: /assets/img/braze_icons/annotation-question.svg
 ---
 
 <br><br>

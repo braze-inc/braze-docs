@@ -13,8 +13,8 @@ guide_featured_title: "Section Articles"
 guide_featured_list:
 - name: Gérer les paramètres
   link: /docs/user_guide/administrative/app_settings/manage_app_group/
-  fa_icon: fas fa-users-cog
+  image: /assets/img/braze_icons/users-01.svg
 - name: Developer Console
   link: /docs/user_guide/administrative/app_settings/developer_console/
-  fa_icon: fas fa-terminal
+  image: /assets/img/braze_icons/terminal-square.svg
 ---

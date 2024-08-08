@@ -19,36 +19,50 @@ With the Braze and IAM Studio integration, you can easily insert customizable in
 | Requirement | Description |
 | ----------- | ----------- |
 | IAM Studio account | A [IAM Studio account](https://www.inappmessage.com/register) is required to take advantage of this partnership. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 ## Use cases
 
-- Customized onboarding experiences
-- In-app experiences for personalized events and promotions
-- Gathering customer feedback and ratings based on app behavior
-- Quickly testing potential app product ideas
+- Encouraging the purchase of goods
+- User information collection
+- Increasing membership registration
+- Coupon issuance information
 
 ## Integration
 
 ### Step 1: Choose a template
 
-Login to IAM Studio and choose an in-app message template you want to use from the in-app message template gallery.
+Choose an in-app message template you want to use from the in-app message template gallery
 
-![The IAM Studio template gallery shows different templates such as "modal slick contents", "full survey", "modal full image", and more.][1]
+![The IAM Studio template gallery shows different templates such as "carousel slide modal", "simple icon modal", "modal full image", and more.][1]
 
 ### Step 2: Customize the template
 
-Next, replace the images, text, and buttons with your desired content.
+First, customize the image, text, and button for your content. Be sure to connect **Deeplink** for the image and button.
 
 {% tabs local %}
-{% tab Customize Image %}
+{% tab Image %}
 ![The IAM Studio UI showing the options to customize the image. These options include the image, image radius, and image dimmed.]({% image_buster /assets/img/iam_studio/iam_customize_image.png %})
 {% endtab %}
-{% tab Customize Text %}
+{% tab Text %}
 ![The IAM Studio UI showing the options to customize the title and subtitle of your message. These options include text, formatting, and font.]({% image_buster /assets/img/iam_studio/iam_customize_text.png %})
 {% endtab %}
-{% tab Customize Button %}
+{% tab Button %}
 ![The IAM Studio UI showing the options to customize the main, left and right button. These options include color, deep link, text, and formatting.]({% image_buster /assets/img/iam_studio/iam_customize_button.png %})
+{% endtab %}
+{% endtabs %}
+
+Next, create your personalized in-app message by adding custom fonts and using Liquid tags. To enable logging and tracking, select **Log data and track user behavior**.
+
+{% tabs local %}
+{% tab Fonts %}
+![The IAM Studio UI showing the options to add Liquid. These options include making personalized setence.]({% image_buster /assets/img/iam_studio/iam_custom_font.png %})
+{% endtab %}
+{% tab Liquid %}
+![The IAM Studio UI showing the options to customize event/attribute logging. These options include that user behavior log.]({% image_buster /assets/img/iam_studio/iam_liquid.png %})
+{% endtab %}
+{% tab Logging and Tracking %}
+![The IAM Studio UI showing the options to customize font. These options include that user can customize font style.]({% image_buster /assets/img/iam_studio/iam_tracking_logging.png  %})
 {% endtab %}
 {% endtabs %}
 

@@ -28,6 +28,10 @@ Braze defines an "active user" for a given period of time as any user who has re
 
 If you set user IDs to identify users when a new user logs in they will be counted as a separate active user. Users who are updated via the API will also be counted as an active user in the time period that they are updated.
 
+{% alert important %} 
+Both inactive users and dormant users will be archived unless the user is excluded from archiving for the reasons listed below. 
+{% endalert %}
+
 ### Inactive users
 
 "Inactive users" are users that are unreachable and have likely churned. Inactive users are those that meet all of these criteria:
@@ -35,6 +39,7 @@ If you set user IDs to identify users when a new user logs in they will be count
 - Can't receive email. For example, they do not have an email address or they are unsubscribed from all email lists.
 - Can't receive SMS. For example, they do not have a valid phone number or they are unsubscribed from all SMS subscription groups.
 - Can't receive push. For example, they have uninstalled the app or disabled push permissions.
+- Can't receive a WhatsApp message. For example, they do not have a valid phone number or are unsubscribed from all WhatsApp subscription groups.
 - Haven't used any mobile app or visited a website in a workspace in more than six months.
 - Haven't received any messages from a workspace in more than six months.
 - Haven't been updated in more than six months.
@@ -48,6 +53,18 @@ In this case, these users cannot be messaged and are not engaging with your bran
 - Haven't used any mobile app or visited a website in a workspace in more than 12 months.
 - Haven't received any messages from a workspace in more than 12 months.
 - Haven't been updated in more than 12 months.
+
+## Global Control Group users
+
+Users in the Global Control Group will never be archived, even if they meet the definition of inactive or dormant users. 
+
+### Treatment sample group
+
+Treatment sample group users are excluded from archiving within a Global Control Group report.
+
+## Test users
+
+Test users will never be archived, even if they meet the definition of inactive or dormant users.
 
 ## Spam blocking
 

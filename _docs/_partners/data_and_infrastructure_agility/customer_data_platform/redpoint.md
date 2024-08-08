@@ -1,7 +1,6 @@
 ---
 nav_title: Redpoint
 article_title: Redpoint 
-page_order: 7.1
 description: "The Redpoint to Braze integration allows you to onboard and enrich Braze user profiles with your first-party data."
 alias: /partners/redpoint/
 page_type: partner

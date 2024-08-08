@@ -98,7 +98,7 @@ The following table describes available segmentation options for string attribut
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 {% alert important %}
-When segmenting using the **DOES NOT MATCH REGEX** filter, it is required that there already exists a custom attribute with a value assigned in that user profile. Braze suggests using "OR" logic to check if a custom attribute is blank in order to ensure users are being targeted properly.
+When segmenting using the **DOES NOT MATCH REGEX** filter, it is required that there already exists a custom attribute with a value assigned in that user profile. Braze suggests using "OR" logic to check if a custom attribute is blank in order to properly target users.
 {% endalert %}
 
 {% alert tip %}

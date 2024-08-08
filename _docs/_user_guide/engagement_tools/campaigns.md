@@ -13,21 +13,21 @@ guide_featured_title: "Sections"
 guide_featured_list:
   - name: Getting Started
     link: /docs/user_guide/engagement_tools/campaigns/getting_started/
-    fa_icon: fas fa-book-open
+    image: /assets/img/braze_icons/book-closed.svg
   - name: Building Campaigns
     link: /docs/user_guide/engagement_tools/campaigns/building_campaigns/
-    fa_icon: fas fa-list-alt
+    image: /assets/img/braze_icons/list.svg
   - name: Managing Campaigns
     link: /docs/user_guide/engagement_tools/campaigns/managing_campaigns/
-    fa_icon: fas fa-pen-square
+    image: /assets/img/braze_icons/edit-05.svg
   - name: Testing Campaigns
     link: /docs/user_guide/engagement_tools/campaigns/testing_and_more/
-    fa_icon: fas fa-vials
+    image: /assets/img/braze_icons/beaker-02.svg
   - name: Ideas and Strategies
     link: /docs/user_guide/engagement_tools/campaigns/ideas_and_strategies/
-    fa_icon: fas fa-lightbulb
+    image: /assets/img/braze_icons/lightbulb-02.svg
   - name: Frequently Asked Questions
     link: /docs/user_guide/engagement_tools/campaigns/faq/
-    fa_icon: fas fa-question
+    image: /assets/img/braze_icons/annotation-question.svg
 
 ---

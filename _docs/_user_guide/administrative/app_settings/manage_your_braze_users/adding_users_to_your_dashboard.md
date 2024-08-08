@@ -1,5 +1,5 @@
 ---
-nav_title: Managing Braze Users
+nav_title: Users
 article_title: Managing Braze Users
 page_order: 0
 page_type: reference
@@ -48,7 +48,7 @@ Administrators can also suspend a user by selecting their name from the list and
 
 ## Deleting Braze users
 
-To delete a user, go to **Settings** > **Company Users**, find their username and click <i class="fa fa-trash-can"></i> **Delete user**.
+To delete a user, go to **Settings** > **Company Users**, find their username and select <i class="fa fa-trash-can"></i> **Delete user**.
 
 ![Delete a user][34]
 
@@ -62,8 +62,6 @@ After a user is deleted, Braze does not keep any of the following data:
 - Country
 - Language
 - Other similar data
-
-
 
 [1]: {% image_buster /assets/img/add_new_user_1.png %}
 [2]: {% image_buster /assets/img/add_new_user_2.png %}

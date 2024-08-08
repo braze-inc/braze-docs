@@ -17,7 +17,7 @@ Les conventions de nommage de nos différents partenaires pour les événements 
 {% endalert %}
 
 ## Entrepôts de données
-[![Cours d’apprentissage Braze]({% image_buster /assets/img/bl_icon2.png %})](https://learning.braze.com/introduction-to-data-warehouses){: style="float:right;width:120px;border:0;" class="noimgborder"}
+[![Cours d’apprentissage Braze]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/introduction-to-data-warehouses){: style="float:right;width:120px;border:0;" class="noimgborder"}
 Ces partenaires peuvent soit agir comme des entrepôts (pour le stockage de fichiers plats) ou des passerelles vers d’autres outils de manipulation de données. C’est utile si vous voulez des données flexibles, capables de faire des saltos arrière et peut -être même la roue.
 
 * [Amazon S3][1]

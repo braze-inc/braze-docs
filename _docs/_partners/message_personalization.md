@@ -75,5 +75,6 @@ valid_partner_list:
 - name: Stylitics
   url: /docs/partners/message_personalization/dynamic_content/stylitics/
 - name: NiftyImages
-  url: /docs/partners/message_personalization/dynamic_content/niftyimages 
+  url: /docs/partners/message_personalization/dynamic_content/niftyimages/
+  
 ---

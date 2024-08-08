@@ -14,12 +14,12 @@ guide_featured_title: "Section articles"
 guide_featured_list:
   - name: "Creating an Email with Custom HTML"
     link: /docs/user_guide/message_building_by_channel/email/html_editor/creating_an_email_campaign/
-    fa_icon: fas fa-envelope
+    image: /assets/img/braze_icons/mail-01.svg
   - name: "CSS Inlining"
     link: /docs/user_guide/message_building_by_channel/email/html_editor/css_inline/
-    fa_icon: fas fa-file-code
+    image: /assets/img/braze_icons/file-code-01.svg
   - name: "Gmail Promotions Tab"
     link: /docs/user_guide/message_building_by_channel/email/html_editor/gmail_promotions_tab/
-    fa_icon: fas fa-envelope-circle-check
+    image: /assets/img/braze_icons/message-check-circle.svg
 
 ---

@@ -32,4 +32,6 @@ valid_partner_list:
   url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/segment/segment_engage/
 - name: Census
   url: /docs/partners/data_and_infrastructure_agility/cohort_import/census/
+- name: Treasure Data
+  url: /docs/partners/data_and_infrastructure_agility/cohort_import/treasuredata/
 ---

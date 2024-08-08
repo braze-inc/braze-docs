@@ -14,28 +14,28 @@ guide_featured_title: "Section Articles"
 guide_featured_list:
 - name: À propos des SMS
   link: /docs/user_guide/onboarding_with_braze/sms_setup/about_sms/
-  fa_icon: fas fa-comment-dots
+  image: /assets/img/braze_icons/annotation-dots.svg
 - name: Lois et réglementations SMS
   link: /docs/user_guide/onboarding_with_braze/sms_setup/sms_laws_and_regulations/
-  fa_icon: fas fa-gavel
+  image: /assets/img/braze_icons/briefcase-02.svg
 - name: Termes à connaître
   link: /docs/user_guide/onboarding_with_braze/sms_setup/terms/
-  fa_icon: fas fa-bookmark
+  image: /assets/img/braze_icons/book-closed.svg
 - name: Codes courts et codes longs
   link: /docs/user_guide/onboarding_with_braze/sms_setup/short_and_long_codes/
-  fa_icon: fas fa-address-card
+  image: /assets/img/braze_icons/phone-outgoing-01.svg
 - name: Migration des données utilisateur
   link: /docs/user_guide/onboarding_with_braze/sms_setup/user_data_migration/
-  fa_icon: fas fa-user
+  image: /assets/img/braze_icons/users-01.svg
 - name: Envoi de message SMS
   link: /docs/user_guide/onboarding_with_braze/sms_setup/sms_sending/
-  fa_icon: fas fa-comment-alt
+  image: /assets/img/braze_icons/message-square-02.svg
 - name: Groupes d’abonnement SMS
   link: /docs/user_guide/onboarding_with_braze/sms_setup/sms_subscription_groups/
-  fa_icon: fas fa-users
+  image: /assets/img/braze_icons/users-01.svg
 - name: Étapes suivantes
   link: /docs/user_guide/onboarding_with_braze/sms_setup/next_steps/
-  fa_icon: fas fa-forward
+  image: /assets/img/braze_icons/fast-forward.svg
   
 ---
 <br>

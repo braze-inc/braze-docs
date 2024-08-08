@@ -45,7 +45,7 @@ This section includes a list of identifiers used to reference specific apps in r
 
 ### Additional API identifiers
 
-To integrate with our API, you can search for the identifiers related to any segments, campaigns, Content Cards, and more that you want to access from the Braze external API. All messages should follow [UTF-8][12] encoding. Once you've selected any of them, the identifier will be displayed underneath the dropdown menu.
+To integrate with our API, you can search for the identifiers related to any segments, campaigns, Content Cards, and more that you want to access from the Braze external API. All messages should follow [UTF-8][12] encoding. After you've selected any of them, the identifier will be displayed underneath the dropdown menu.
 
 For more information, refer to [API identifier types]({{site.baseurl}}/api/identifier_types/).
 

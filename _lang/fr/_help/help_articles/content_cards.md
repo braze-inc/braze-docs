@@ -13,6 +13,6 @@ guide_menu_title: ""
 guide_menu_list:
   - name: Flux de carte de contenu vide
     link: /docs/help/help_articles/content_cards/empty_content_card_feed/
-    fa_icon: fas fa-times-circle
+    image: /assets/img/braze_icons/x-circle.svg
 
 ---

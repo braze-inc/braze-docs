@@ -14,14 +14,14 @@ guide_featured_title: "Section Articles"
 guide_featured_list:
 - name: Paramètres API
   link: /docs/user_guide/administrative/app_settings/developer_console/api_settings_tab/
-  fa_icon: fas fa-users-cog
+  image: /assets/img/braze_icons/users-01.svg
 - name: Journal des activités de message
   link: /docs/user_guide/administrative/app_settings/developer_console/message_activity_log_tab/
-  fa_icon: fas fa-table
+  image: /assets/img/braze_icons/table.svg
 - name: Journal d’événements utilisateurs
   link: /docs/user_guide/administrative/app_settings/developer_console/event_user_log_tab/
-  fa_icon: fas fa-user
+  image: /assets/img/braze_icons/users-01.svg
 - name: Groupes internes
   link: /docs/user_guide/administrative/app_settings/developer_console/internal_groups_tab/
-  fa_icon: fas fa-users
+  image: /assets/img/braze_icons/users-01.svg
 ---

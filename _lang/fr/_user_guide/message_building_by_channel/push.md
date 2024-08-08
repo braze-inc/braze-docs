@@ -13,42 +13,42 @@ guide_featured_title: "Articles courants"
 guide_featured_list:
 - name: À propos des notifications push
   link: /docs/user_guide/message_building_by_channel/push/about/
-  fa_icon: fas fa-check
+  image: /assets/img/braze_icons/check-square-broken.svg
 - name: Types de notifications push
   link: /docs/user_guide/message_building_by_channel/push/types/
-  fa_icon: fas fa-list
+  image: /assets/img/braze_icons/list.svg
 - name: Enregistrement d’une notification push
   link: /docs/user_guide/message_building_by_channel/push/push_registration/
-  fa_icon: fas fa-check-square
+  image: /assets/img/braze_icons/check-square-broken.svg
 - name: Activation et abonnement aux notifications push
   link: /docs/user_guide/message_building_by_channel/push/users_and_subscriptions/
-  fa_icon: fas fa-users
+  image: /assets/img/braze_icons/users-01.svg
 - name: Création d’un message de notification push
   link: /docs/user_guide/message_building_by_channel/push/creating_a_push_message/
-  fa_icon: fas fa-edit
+  image: /assets/img/braze_icons/edit-05.svg
 
 guide_menu_title: "Autres articles"
 guide_menu_list:
 - name: Options avancées
   link: /docs/user_guide/message_building_by_channel/push/advanced_push_options/
-  fa_icon: fas fa-gear
+  image: /assets/img/braze_icons/settings-01.svg
 - name: Amorces de notifications push
   link: /docs/user_guide/message_building_by_channel/push/best_practices/push_primer_messages/
-  fa_icon: fas fa-mobile-alt
+  image: /assets/img/braze_icons/phone-02.svg
 - name: Reporting
   link: /docs/user_guide/message_building_by_channel/push/push_reporting/
-  fa_icon: fas fa-chart-bar
+  image: /assets/img/braze_icons/bar-chart-01.svg
 - name: Options Android
   link: /docs/user_guide/message_building_by_channel/push/android/
-  fa_icon: fab fa-android
+  image: /assets/img/braze_icons/android.svg
 - name: Options iOS
   link: /docs/user_guide/message_building_by_channel/push/ios/
-  fa_icon: fab fa-apple
+  image: /assets/img/braze_icons/apple.svg
 - name: Notification push Web
   link: /docs/user_guide/message_building_by_channel/push/web/
-  fa_icon: fas fa-desktop
+  image: /assets/img/braze_icons/monitor-01.svg
 - name: Bonnes pratiques
   link: /docs/user_guide/message_building_by_channel/push/best_practices/
-  fa_icon: fas fa-check-square
+  image: /assets/img/braze_icons/check-square-broken.svg
 ---
 <br><br>

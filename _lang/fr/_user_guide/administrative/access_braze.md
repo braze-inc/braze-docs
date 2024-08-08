@@ -13,20 +13,20 @@ guide_featured_title: "Section Articles"
 guide_featured_list:
 - name: Instances de Braze
   link: /docs/user_guide/administrative/access_braze/braze_instances/
-  fa_icon: fas fa-server
+  image: /assets/img/braze_icons/server-01.svg
 - name: Endpoints SDK
   link: /docs/user_guide/administrative/access_braze/sdk_endpoints/
-  fa_icon: fas fa-location-arrow
+  image: /assets/img/braze_icons/navigation-pointer-01.svg
 - name: Obtenir votre compte
   link: /docs/user_guide/administrative/access_braze/getting_your_account/
-  fa_icon: far fa-user-circle
+  image: /assets/img/braze_icons/user-circle.svg
 - name: Connexion
   link: /docs/user_guide/administrative/access_braze/getting_your_account/
-  fa_icon: fas fa-user-circle
+  image: /assets/img/braze_icons/user-circle.svg
 - name: Réinitialiser votre mot de passe
   link: /docs/user_guide/administrative/access_braze/resetting_your_password/
-  fa_icon: fas fa-unlock-alt
+  image: /assets/img/braze_icons/lock-unlocked-01.svg
 - name: SAML et authentification unique
   link: /docs/user_guide/administrative/access_braze/single_sign_on/
-  fa_icon: fas fa-sign-in-alt
+  image: /assets/img/braze_icons/log-in-01.svg
 ---

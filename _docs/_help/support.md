@@ -7,7 +7,7 @@ page_type: reference
 search_rank: 1
 ---
 
-# [![Braze Learning course]({% image_buster /assets/img/bl_icon2.png %})](https://learning.braze.com/the-braze-support-portal/){: style="float:right;width:120px;border:0;" class="noimgborder"}Braze Support
+# [![Braze Learning course]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/the-braze-support-portal/){: style="float:right;width:120px;border:0;" class="noimgborder"}Braze Support
 
 ## Access the support portal
 
@@ -44,6 +44,10 @@ When communicating with support, you may find you need to access your developer 
 ### Provide as much information as possible
 
 The more insights you can offer, the better. Include specifics like the workspace, the URL to the campaign or segment, and any relevant external IDs. This can help us troubleshoot your issue more efficiently.
+
+### Provide a sample of users
+
+Share a sampling of users rather than the entire affected segment. Providing a smaller amount of users helps us narrow our scope and speed up our investigations.
 
 ### Clarify expected versus actual behavior
 

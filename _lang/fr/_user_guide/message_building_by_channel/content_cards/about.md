@@ -8,7 +8,7 @@ channel:
 search_rank: 4
 ---
 
-# [![Cours d’apprentissage Braze]({% image_buster /assets/img/bl_icon2.png %})](https://learning.braze.com/messaging-channels-content-cards){: style="float:right;width:120px;border:0;" class="noimgborder"} À propos des cartes de contenu
+# [![Cours d’apprentissage Braze]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/messaging-channels-content-cards){: style="float:right;width:120px;border:0;" class="noimgborder"} À propos des cartes de contenu
 
 > Les cartes de contenu sont un canal qui est intégré directement à l’interface de votre application ou de votre site Web afin que vous puissiez engager les utilisateurs d’une manière ressemblant à une expérience native et harmonieuse. Vous pouvez réaliser beaucoup de choses avec les cartes de contenu, mais les implémentations les plus courantes sont une boîte de réception de message, un carrousel ou une bannière.
 

@@ -36,7 +36,7 @@ First, add Firebase to your Android project. For step-by-step instructions, see 
 Next, add the Cloud Messaging library to your project dependencies. In your Android project, open `build.gradle`, then add the following line to your `dependencies` block.
 
 ```gradle
-implementation "com.braze:android-sdk-ui:+"
+implementation "google.firebase:firebase-messaging:+"
 ```
 
 Your dependencies should look similar to the following:
@@ -44,7 +44,7 @@ Your dependencies should look similar to the following:
 ```gradle
 dependencies {
   implementation project(':android-sdk-ui')
-  implementation "com.braze:android-sdk-ui:+"
+  implementation "com.google.firebase:firebase-messaging:+"
 }
 ```
 
@@ -82,12 +82,14 @@ Select **Add Key** > **Create new key**.
 
 ![The selected service account with the "Add Key" menu open.]({% image_buster /assets/img/android/push_integration/generate_json_credentials/select-create-new-key.png %})
 
-Choose **JSON**, then select **Create**. Be sure to remember where you downloaded the key&#8212;you'll need it in the next step.
+Choose **JSON**, then select **Create**. If you created your service account using a different Google Cloud project ID than your FCM project ID, you'll need to manually update the value assigned to the `project_id` in your JSON file.
+
+Be sure to remember where you downloaded the key&#8212;you'll need it in the next step.
 
 ![The form for creating a private key with "JSON" selected.]({% image_buster /assets/img/android/push_integration/generate_json_credentials/select-create.png %}){: style="max-width:65%;"}
 
 {% alert warning %}
-Private keys could pose a security risk if compromised. Store your JSON credentials in a secure location&#8212;you'll delete your key after you upload it to Braze.
+Private keys could pose a security risk if compromised. Store your JSON credentials in a secure location for now&#8212;you'll delete your key after you upload it to Braze.
 {% endalert %}
 
 ### Step 6: Upload your JSON credentials to Braze
@@ -195,19 +197,7 @@ Braze.configure(this, brazeConfig)
 If you'd like manually register FCM tokens instead, you can call [`Braze.setRegisteredPushToken()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze/registered-push-token.html) inside your app's [`onCreate()`](https://developer.android.com/reference/android/app/Application.html#onCreate()) method.
 {% endalert %}
 
-### Step 8: Remove unnecessary permissions
-
-With your new push integration set up, the following permissions are no longer needed by Braze in your project's `braze.xml` file:
-
-  ```xml
-  <uses-permission android:name="android.permission.GET_ACCOUNTS" />
-  <uses-permission android:name="android.permission.WAKE_LOCK" />
-  <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
-  <permission android:name="YOUR-APPLICATION-PACKAGE-NAME.permission.C2D_MESSAGE" android:protectionLevel="signature"/>
-  <uses-permission android:name="YOUR-APPLICATION-PACKAGE-NAME.permission.C2D_MESSAGE" />
-  ```
-
-### Step 9: Remove automatic requests in your application class
+### Step 8: Remove automatic requests in your application class
 
 To prevent Braze from triggering unnecessary network requests everytime you send silent push notifications, remove any automatic network requests configured in your `Application` class's `onCreate()` method. For more information see, [Android Developer Reference: Application](https://developer.android.com/reference/android/app/Application).
 
@@ -232,7 +222,7 @@ Braze includes a service to handle push receipt and open intents. Our `BrazeFire
 </service>
 ```
 
-Our notification code also uses `BrazeFirebaseMessagingService` to handle open and click action tracking. This service must be registered in the `AndroidManifest.xml` to function correctly. Also, remember that Braze prefixes notifications from our system with a unique key to ensure we only render notifications sent from our systems. You may register additional services separately to render notifications sent from other FCM services. See [`AndroidManifest.xml`][70] in the Firebase push sample app.
+Our notification code also uses `BrazeFirebaseMessagingService` to handle open and click action tracking. This service must be registered in the `AndroidManifest.xml` to function correctly. Also, remember that Braze prefixes notifications from our system with a unique key so that we only render notifications sent from our systems. You may register additional services separately to render notifications sent from other FCM services. See [`AndroidManifest.xml`][70] in the Firebase push sample app.
 
 {% alert important %}
 Before Braze SDK 3.1.1, `AppboyFcmReceiver` was used to handle FCM push. The `AppboyFcmReceiver` class should be removed from your manifest and replaced with the preceding integration.
@@ -460,7 +450,7 @@ To set the user facing name of the default Braze notification channel, use [`Bra
 
 To set the user facing description of the default Braze notification channel, use [`BrazeConfig.setDefaultNotificationChannelDescription()`][73].
 
-You should ensure that any API campaigns with the [Android push object][63] parameter are updated to include the `notification_channel` field. If this field is not specified, Braze will send the notification payload with the [dashboard fallback][64] channel ID.
+Update any API campaigns with the [Android push object][63] parameter to include the `notification_channel` field. If this field is not specified, Braze will send the notification payload with the [dashboard fallback][64] channel ID.
 
 Other than the default notification channel, Braze will not create any channels. All other channels must be programmatically defined by the host app and then entered into the Braze dashboard.
 

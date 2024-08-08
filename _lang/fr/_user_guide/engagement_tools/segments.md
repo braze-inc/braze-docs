@@ -15,35 +15,35 @@ guide_featured_title: "Articles courants"
 guide_featured_list:
   - name: Créer un segment
     link: /docs/user_guide/engagement_tools/segments/creating_a_segment/
-    fa_icon: fas fa-chart-pie
+    image: /assets/img/braze_icons/pie-chart-01.svg
   - name: Filtres de segmentation
     link: /docs/user_guide/engagement_tools/segments/segmentation_filters/
-    fa_icon: fas fa-filter
+    image: /assets/img/braze_icons/flag-02.svg
   - name: Entonnoirs de segments
     link: /docs/user_guide/engagement_tools/segments/segment_funnels/
-    fa_icon: fas fa-user-slash
+    image: /assets/img/braze_icons/users-right.svg
 
 guide_menu_title: "Autres articles"
 guide_menu_list:
   - name: Segment Insights
     link: /docs/user_guide/engagement_tools/segments/segment_insights/
-    fa_icon: fas fa-chart-pie
+    image: /assets/img/braze_icons/pie-chart-01.svg
   - name: Segment Extension
     link: /docs/user_guide/engagement_tools/segments/segment_extension/
-    fa_icon: fas fa-users
+    image: /assets/img/braze_icons/users-01.svg
   - name: Profils utilisateur
     link: /docs/user_guide/engagement_tools/segments/using_user_search/
-    fa_icon: fas fa-users
+    image: /assets/img/braze_icons/users-01.svg
   - name: Recherche d’utilisateur
     link: /docs/user_guide/engagement_tools/segments/user_lookup/
-    fa_icon: fas fa-magnifying-glass
+    image: /assets/img/braze_icons/search-refraction.svg
   - name: Ciblage de localisation
     link: /docs/user_guide/engagement_tools/segments/location_targeting/
-    fa_icon: fas fa-street-view
+    image: /assets/img/braze_icons/marker-pin-06.svg
   - name: Prise en charge des balises et geofences
     link: /docs/user_guide/engagement_tools/segments/beacon_support/
-    fa_icon: fas fa-map-marker-alt
+    image: /assets/img/braze_icons/marker-pin-01.svg
   - name: Expressions régulières
     link: /docs/user_guide/engagement_tools/segments/regex/
-    fa_icon: fas fa-search
+    image: /assets/img/braze_icons/search-sm.svg
 ---

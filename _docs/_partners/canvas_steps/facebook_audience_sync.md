@@ -1,5 +1,5 @@
 ---
-nav_title: Audience Sync to Facebook
+nav_title: Facebook
 article_title: Canvas Audience Sync to Facebook
 description: "This reference article will cover how to use Braze Audience Sync to Facebook, to deliver advertisements based upon behavioral triggers, segmentation, and more."
 page_order: 1
@@ -166,7 +166,7 @@ Facebook does not provide this information for privacy reasons.
 {% enddetails %}
 
 {% details Does Braze support value-based custom audiences? %}
-At this time, value-based custom audiences are not supported by Braze. If you are interested in syncing these types of custom audiences, reach out to your customer success manager or contact Support.
+At this time, value-based custom audiences are not supported by Braze. If you are interested in syncing these types of custom audiences, submit [product feedback]({{site.baseurl}}/user_guide/administrative/access_braze/portal/).
 {% enddetails %}
 
 {% details How do I resolve an issue with syncing a value-based lookalike custom audience? %}

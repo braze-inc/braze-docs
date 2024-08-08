@@ -23,7 +23,7 @@ Entry properties can be used in action-based and API-triggered Canvases. These e
 
 Properties passed in from these objects can be referenced by using the `canvas_entry_properties` Liquid tag. For example, a request with `\"canvas_entry_properties\" : {\"product_name\" : \"shoes\", \"product_price\" : 79.99}` could add the word "shoes" to a message by adding the Liquid {% raw %}`{{canvas_entry_properties.${product_name}}}`{% endraw %}.
 
-When a Canvas includes a message with the `canvas_entry_properties` Liquid tag, the values associated with those properties will be saved for the duration of a user's journey in the Canvas and deleted once the user exits the Canvas. Note that Canvas entry properties are only available for reference in Liquid. To filter on the properties within the Canvas, use [event property segmentation]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/nested_objects/) instead.
+When a Canvas includes a message with the `canvas_entry_properties` Liquid tag, the values associated with those properties will be saved for the duration of a user's journey in the Canvas and deleted when the user exits the Canvas. Note that Canvas entry properties are only available for reference in Liquid. To filter on the properties within the Canvas, use [event property segmentation]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/nested_objects/) instead.
 
 {% alert note %}
 The Canvas entry properties object has a maximum size limit of 50 KB. 
@@ -50,7 +50,7 @@ To read more about aborting messages with Liquid, check out our [Liquid document
 
 With `canvas_entry_properties`, you can set global properties that apply to all users or user-specific properties that only apply to the specified user. The user-specific property will supersede the global property for that user.
 
-### Example
+### Example request
 
 ```
 url -X POST \
@@ -78,7 +78,7 @@ url -X POST \
  
 In this request, the global value for "food allergies" is "none". For Customer_123, the value is "dairy". Messages in this Canvas containing the Liquid snippet {%raw%}`{{canvas_entry_properties.${food_allergies}}}`{%endraw%} will template with "dairy" for Customer_123 and "none" for everyone else. 
 
-## Use cases
+## Use case
 
 If you have a Canvas that is triggered when a user browses an item in your ecommerce site but does not add it to their cart, the first step of the Canvas might be a push notification asking if they are interested in purchasing the item. You could reference the product name by using {% raw %}`{{canvas_entry_properties.${product_name}}}`{% endraw %}
 

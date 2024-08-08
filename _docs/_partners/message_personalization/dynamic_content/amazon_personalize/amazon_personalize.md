@@ -79,10 +79,10 @@ Additionally, Amazon Personalize offers automatic hyperparameter tuning by runni
 
 Once a solution finishes training, you are ready to evaluate it and compare different versions. Each solution version displays computed metrics. Some of the available metrics include:
 
-- `Normalize discounted cumulative gain`: compares recommended order of items to the actual list of items and gives each item a weight corresponding to its position in the list
-- `Precision @k`: the amount of properly recommended items divided by the amount of all recommended items, where `k` is the number of items
-- `Mean reciprocal rank`: focuses on the first, highest ranked recommendation and calculates how many recommended items are seen before the first matched recommendation appears
-- `Coverage`: the proportion of unique recommended items to the total number of unique items in the dataset
+- **Normalize discounted cumulative gain:** compares the recommended order of items to the actual list of items and gives each item a weight corresponding to its position in the list
+- **Precision @k:** the amount of properly recommended items divided by the amount of all recommended items, where `k` is the number of items
+- **Mean reciprocal rank:** focuses on the first, highest ranked recommendation and calculates how many recommended items are seen before the first matched recommendation appears
+- **Coverage:** the proportion of unique recommended items to the total number of unique items in the dataset
 
 ## Getting Recommendations
 
@@ -100,7 +100,7 @@ Filters let you adjust the recommendation output by excluding items based on the
 With the created model and recommendations campaign, you are ready to run a Braze campaign for your users using Content Cards and Connected Content.
 Before running a Braze campaign, you must create a service that can serve these recommendations through an API. You can follow [step 3 in the workshop article][1] to deploy the service using AWS services. You can also deploy your own independent backend service that provides the recommendations.
 
-### Example Content Card campaign
+### Content Card campaign use case
 
 Let's run a Content Card campaign with the first recommended item from the list.<br><br>
 In the following examples, we are going to query

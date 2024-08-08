@@ -71,7 +71,7 @@ App-specific details will display only if the user has used more than one app.
 
 ## Subscribing to session updates
 
-To listen to session updates, use the [`subscribeToSessionUpdates(_:)`][1] method:
+To listen to session updates, use the [`subscribeToSessionUpdates(_:)`][1] method. Session start and end events will only be logged when the app is running in the foreground. If you register a callback to session end events and the app is backgrounded, the callback will fire when the app is foregrounded again. Session duration, however, is still measured as the time from app open or foregrounding until app closing or backgrounding.
 
 {% tabs %}
 {% tab swift %}

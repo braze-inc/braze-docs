@@ -17,16 +17,16 @@ guide_featured_title: "Section Articles"
 guide_featured_list:
   - name: Notifications push d’images insérées pour Android
     link: /docs/developer_guide/platform_integration_guides/android/push_notifications/android/customization/inline_image_push/
-    fa_icon: fa-regular fa-image
+    image: /assets/img/braze_icons/image-01.svg
   - name: Notifications push HTML
     link: /docs/developer_guide/platform_integration_guides/android/push_notifications/android/customization/html_rendered_push/
-    fa_icon: fa fa-pencil
+    image: /assets/img/braze_icons/pencil-01.svg
   - name: Paramètres avancés
     link: /docs/developer_guide/platform_integration_guides/android/push_notifications/android/customization/advanced_settings/
-    fa_icon: fa fa-cog
+    image: /assets/img/braze_icons/settings-01.svg
   - name: Récepteur de diffusion personnalisé
     link: /docs/developer_guide/platform_integration_guides/android/push_notifications/android/customization/custom_broadcast_receiver/
-    fa_icon: fa fa-cog
+    image: /assets/img/braze_icons/settings-01.svg
 
 
 ---

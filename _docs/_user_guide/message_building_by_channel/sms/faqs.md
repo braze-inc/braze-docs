@@ -56,7 +56,7 @@ For more guidelines on avoiding spam detection, visit [SMS laws and regulations 
 
 Custom keywords would be written as custom events, so you would want to create segments based on the keywords customers can text in. For example, if a user opts in to SMS for VIP messages but not alerts, you can create a VIP segment and an alerts segment, then assign the user to the appropriate segment.
 
-### How many characters does an emoji utilize?
+### How many characters does an emoji use?
 
 Emojis can be tricky, as there is no standard character count across all emojis. There is the risk the emoji will exceed the character limit and break the SMS into multiple messages, despite it showing as one message in the Braze composer. When testing your messages, you can better verify if a message will be split using our [segment calculator]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/segments/#segment-calculator).
 

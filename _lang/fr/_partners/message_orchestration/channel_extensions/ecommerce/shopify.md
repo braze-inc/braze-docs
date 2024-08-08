@@ -13,25 +13,25 @@ guide_featured_title: "Articles"
 guide_featured_list:
 - name: Aperçu de Shopify
   link: /docs/shopify_overview/
-  fa_icon: fa-brands fa-shopify
+  image: /assets/img/braze_icons/shopify.svg
 - name: Intégration SDK Web avec Shopify ScriptTag
   link: /docs/scripttag_web_sdk_integration/
-  fa_icon: fa-solid fa-tag
+  image: /assets/img/braze_icons/tag-01.svg
 - name: Configuration de Shopify
   link: /docs/partners/message_orchestration/channel_extensions/ecommerce/shopify/setting_up_shopify/
-  fa_icon: fa fa-shopping-cart
+  image: /assets/img/braze_icons/shopping-cart-03.svg
 - name: Traitement des données Shopify
   link: /docs/shopify_processing/
-  fa_icon: fa-solid fa-database
+  image: /assets/img/braze_icons/database-01.svg
 - name: Données Shopify dans Braze
   link: /docs/shopify_data/
-  fa_icon: fas fa-cogs
+  image: /assets/img/braze_icons/settings-01.svg
 - name: Remplissage Shopify
   link: /docs/partners/message_orchestration/channel_extensions/ecommerce/shopfiy/shopify_backfill/
-  fa_icon: fa-solid fa-database
+  image: /assets/img/braze_icons/database-01.svg
 - name: Cas d’utilisation
   link: /docs/shopify_use_cases/
-  fa_icon: fa fa-users
+  image: /assets/img/braze_icons/users-01.svg
 
 ---
 <br><br>

@@ -12,10 +12,10 @@ guide_featured_title: "Fonctionnalités"
 guide_featured_list:
 - name: Prédiction du taux d'attrition
   link: /docs/user_guide/predictive_suite/predictive_churn/
-  fa_icon: fas fa-cogs
+  image: /assets/img/braze_icons/settings-01.svg
 - name: Achats prédictifs
   link: /docs/user_guide/predictive_suite/predictive_purchases/
-  fa_icon: fa-solid fa-cart-shopping
+  image: /assets/img/braze_icons/shopping-cart-03.svg
 ---
 
 <br><br>

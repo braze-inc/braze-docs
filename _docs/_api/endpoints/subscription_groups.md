@@ -16,16 +16,16 @@ guide_featured_title: ""
 guide_featured_list:
   - name: "GET: List User's Subscription Group Status"
     link: /docs/api/endpoints/subscription_groups/get_list_user_subscription_group_status/
-    fa_icon: fas fa-user
+    image: /assets/img/braze_icons/users-01.svg
   - name: "GET: List User's Subscription Groups"
     link: /docs/api/endpoints/subscription_groups/get_list_user_subscription_groups/
-    fa_icon: fas fa-users
+    image: /assets/img/braze_icons/users-01.svg
   - name: "POST: Update User's Subscription Group Status"
     link: /docs/api/endpoints/subscription_groups/post_update_user_subscription_group_status/
-    fa_icon: fas fa-user-plus
+    image: /assets/img/braze_icons/user-plus-01.svg
   - name: "POST: Update User's Subscription Group Status V2"
     link: /docs/api/endpoints/subscription_groups/post_update_user_subscription_group_status_v2/
-    fa_icon: fas fa-user-edit
+    image: /assets/img/braze_icons/user-edit.svg
 ---
 <br>
 <br>

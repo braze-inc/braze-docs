@@ -7,7 +7,7 @@ description: "This reference article describes custom attributes, and explains t
 search_rank: 1
 ---
 
-# [![Braze Learning course]({% image_buster /assets/img/bl_icon2.png %})](https://learning.braze.com/custom-events-and-attributes){: style="float:right;width:120px;border:0;" class="noimgborder"}Custom attributes
+# [![Braze Learning course]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/custom-events-and-attributes){: style="float:right;width:120px;border:0;" class="noimgborder"}Custom attributes
 
 > Custom attributes are a collection of your users' unique traits. Custom attributes are best for storing attributes about your users, or information about low-value actions within your application. 
 
@@ -21,13 +21,47 @@ To create and manage custom attributes in the dashboard, go to **Data Settings**
 If you are using the [older navigation]({{site.baseurl}}/navigation), you can find **Custom Attributes** under **Manage Settings**.
 {% endalert %}
 
-From this page, you can view, manage, create, or blocklist existing custom attributes.
+From this page, you can view, manage, create, or blocklist existing custom attributes. Select the menu next to a custom attribute for the following actions:
+
+### Blocklisting
 
 Custom attributes can be blocklisted individually via the actions menu, or up to 10 attributes can be selected and blocklisted in bulk. If you block a custom attribute, no data will be collected regarding that attribute, existing data will be unavailable unless reactivated, and blocklisted attributes will not show up in filters or graphs. In addition, if the attribute is currently being referenced by filters or triggers in other areas of the Braze dashboard, a warning modal will appear explaining that all instances of the filters or triggers that reference it will be removed and archived.
 
+### Marking as PII
+
 Admins can also create custom attributes and mark them as PII from this page. These attributes will only be visible to admins and dashboard users with the “View Custom Attributes Marked as PII” permission.
 
-To remove custom attributes from user profiles, set the value to "null" in your API request to the [`/users/track` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track#user-track).
+### Adding descriptions
+
+You can add a description to a custom attribute after it's created if you have the `Manage Events, Attributes, Purchases` [user permission]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/). Edit the custom attribute and input whatever you like, such as a note for your team.
+
+### Adding tags
+
+You can add tags to a custom attribute after it's created if you have the "Manage Events, Attributes, Purchases" [user permission]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/). The tags can then be used to filter the list of attributes. 
+
+{% alert important %}
+This feature is currently in early access. Contact your customer success manager if you're interested in participating in this early access.
+{% endalert %}
+
+### Removing custom attributes
+
+There are two ways you can remove custom attributes from user profiles:
+* Select the custom attribute name to be removed in a [User Update step]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/user_update/#removing-custom-attributes).
+* Set the `null` value in your API request to the [`/users/track` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track#user-track).
+
+### Viewing usage reports
+
+The usage report lists all the Canvases, campaigns, and segments using a specific custom attribute. This list does not include uses of Liquid. 
+
+You can view up to 10 usage reports at a time by selecting the checkboxes next to the respective custom attributes and then selecting **View usage report**.
+
+### Exporting data
+
+To export the list of custom attributes as a CSV file, select **Export all** at the top of the page. The CSV file will be generated, and a download link will be emailed to you. 
+
+{% alert important %}
+This feature is currently available in early access. Contact your customer success manager if you're interested in participating in this early access.
+{% endalert %}
 
 ## Setting custom attributes
 

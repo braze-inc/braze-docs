@@ -12,31 +12,31 @@ guide_featured_title: "Section Articles"
 guide_featured_list:
 - name: Utilisation de Liquid
   link: /docs/user_guide/personalization_and_dynamic_content/liquid/using_liquid/
-  fa_icon: fas fa-flask
+  image: /assets/img/braze_icons/beaker-02.svg
 - name: Balises de personnalisation prises en charge
   link: /docs/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/
-  fa_icon: fas fa-tag
+  image: /assets/img/braze_icons/tag-01.svg
 - name: Opérateurs
   link: /docs/user_guide/personalization_and_dynamic_content/liquid/operators/
-  fa_icon: fas fa-code
+  image: /assets/img/braze_icons/code-02.svg
 - name: Filtres
   link: /docs/user_guide/personalization_and_dynamic_content/liquid/filters/
-  fa_icon: fas fa-filter
+  image: /assets/img/braze_icons/flag-02.svg
 - name: Filtres avancés
   link: /docs/user_guide/personalization_and_dynamic_content/liquid/advanced_filters/
-  fa_icon: fas fa-cog
+  image: /assets/img/braze_icons/settings-01.svg
 - name: Paramétrage des valeurs par défaut
   link: /docs/user_guide/personalization_and_dynamic_content/liquid/setting_default_values/
-  fa_icon: fas fa-table
+  image: /assets/img/braze_icons/table.svg
 - name: Logique de messagerie conditionnelle
   link: /docs/user_guide/personalization_and_dynamic_content/liquid/conditional_logic/
-  fa_icon: fas fa-columns
+  image: /assets/img/braze_icons/columns-01.svg
 - name: Abandon des messages
   link: /docs/user_guide/personalization_and_dynamic_content/liquid/aborting_messages/
-  fa_icon: fas fa-undo
+  image: /assets/img/braze_icons/refresh-ccw-01.svg
 - name: Scénarios d’utilisation de Liquid
   link: /docs/user_guide/personalization_and_dynamic_content/liquid/liquid_use_cases/
-  fa_icon: fas fa-list-ul
+  image: /assets/img/braze_icons/list.svg
 ---
 
 ## À propos de Liquid

@@ -17,64 +17,88 @@ guide_featured_title: "Using Braze"
 guide_featured_list:
 - name: Data Protection Technical Assistance for Data Subject Requests
   link: /docs/dp-technical-assistance/
-  fa_icon: fas fa-cogs
+  image: /assets/img/braze_icons/settings-01.svg
 - name: Email Open Pixel and Click Tracking
   link: /docs/user_guide/data_and_analytics/tracking/email_tracking#open-pixel-and-click-tracking-overview
-  fa_icon: fa-solid fa-envelope
+  image: /assets/img/braze_icons/mail-01.svg
+- name: Email Subscriptions
+  link: /docs/user_guide/message_building_by_channel/email/managing_user_subscriptions/#subscription-states
+  image: /assets/img/braze_icons/mail-01.svg
+- name: Managing Email Subscriptions
+  link: /docs/user_guide/message_building_by_channel/email/best_practices/managing_email_subscriptions#unsubscribed-email-addresses
+  image: /assets/img/braze_icons/users-01.svg
+- name: Email Preference Center
+  link: /docs/user_guide/message_building_by_channel/email/preference_center
+  image: /assets/img/braze_icons/list.svg
+- name: SMS Subscription Groups
+  link: /docs/user_guide/message_building_by_channel/sms/sms_subscription_group/
+  image: /assets/img/braze_icons/users-01.svg
+- name: SMS Laws and Regulations
+  link: /docs/user_guide/message_building_by_channel/sms/sms_laws_and_regulations/
+  image: /assets/img/braze_icons/briefcase-02.svg
+- name: WhatsApp Subscription Groups
+  link: /docs/user_guide/message_building_by_channel/whatsapp/user_subscription
+  image: /assets/img/braze_icons/whatsapp.svg
+- name: Push Subscriptions
+  link: /docs/user_guide/message_building_by_channel/push/users_and_subscriptions/#push-sub-states
+  image: /assets/img/braze_icons/users-01.svg
+- name: Message Archiving
+  link: /docs/user_guide/data_and_analytics/export_braze_data/message_archiving#overview
+  image: /assets/img/braze_icons/clock-rewind.svg
 - name: Default and Minimum SDK Data Collection
   link: /docs/user_guide/data_and_analytics/user_data_collection/sdk_data_collection/
-  fa_icon: fas fa-cogs
+  image: /assets/img/braze_icons/settings-01.svg
 - name: Canvas Audience Sync Data Privacy Considerations
   link: /docs/partners/canvas_steps/overview#data-privacy-considerations
-  fa_icon: fa-solid fa-arrows-rotate
+  image: /assets/img/braze_icons/fingerprint-03.svg
 - name: Braze Data Retention
   link: /docs/api/data_retention#data-retention-handled-by-braze-for-specific-features-of-the-braze-services
-  fa_icon: fa-solid fa-database
+  image: /assets/img/braze_icons/database-01.svg
 - name: User Archival
   link: /docs/user_archival/
-  fa_icon: fa-solid fa-user
+  image: /assets/img/braze_icons/users-01.svg
 - name: Additional Privacy Resources
   link: https://www.braze.com/resources/search?section%5B%5D=articles&q=privacy
-  fa_icon: fa-solid fa-book
+  image: /assets/img/braze_icons/book-closed.svg
 
 guide_menu_title: "Legal"
 guide_menu_list:
 - name: Data Processing Addendum (PDF)
   link: https://marketing-assets.braze.com/production/hero/Braze-DPA-Rev-June-2023-Final-copy.pdf?v=1685959392
-  fa_icon: fa-solid fa-gavel
+  image: /assets/img/braze_icons/briefcase-02.svg
 - name: DPA FAQs
   link: https://www.braze.com/company/legal/dpa
-  fa_icon: fa-solid fa-question
+  image: /assets/img/braze_icons/annotation-question.svg
 - name: Standard Contractual Clauses
   link: https://www.braze.com/company/legal/scc
-  fa_icon: fa-solid fa-gavel
+  image: /assets/img/braze_icons/briefcase-02.svg
 - name: Braze Subprocessors
   link: https://www.braze.com/company/legal/subprocessors
-  fa_icon: fa-sharp fa-solid fa-network-wired
+  image: /assets/img/braze_icons/dataflow-04.svg
 - name: Transparency Report
   link: https://www.braze.com/company/legal/transparency-report
-  fa_icon: fa-solid fa-magnifying-glass
+  image: /assets/img/braze_icons/search-refraction.svg
 - name: GDPR FAQs
   link: https://www.braze.com/company/legal/gdpr-faq
-  fa_icon: fa-solid fa-question
+  image: /assets/img/braze_icons/annotation-question.svg
 - name: Acceptable Use Policy
   link: https://www.braze.com/company/legal/aup
-  fa_icon: fa-solid fa-thumbs-up
+  image: /assets/img/braze_icons/thumbs-up.svg
 - name: Innovation Statement
   link: /docs/developer_guide/disclosures/innovation_statement
-  fa_icon: fa-regular fa-lightbulb
+  image: /assets/img/braze_icons/lightbulb-05.svg
 - name: Data Privacy Framework Notice
   link: https://www.braze.com/company/legal/data-privacy-framework-notice
-  fa_icon: fa-solid fa-book
+  image: /assets/img/braze_icons/book-closed.svg
 
 guide_menu_title2: "Security"
 guide_menu_list2:
 - name: Security, Privacy, and Architecture Datasheet
   link: https://www.braze.com/company/legal/security-schedule
-  fa_icon: fa-solid fa-lock
+  image: /assets/img/braze_icons/lock-01.svg
 - name: Braze Security Certifications
   link: /docs/developer_guide/disclosures/security_qualifications/#soc-2-examination
-  fa_icon: fa-solid fa-lock
+  image: /assets/img/braze_icons/lock-01.svg
 
 ---
 

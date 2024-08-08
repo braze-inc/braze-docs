@@ -51,7 +51,7 @@ Authorization: Bearer YOUR-REST-API-KEY
   "override_messaging_limits": (optional, bool) ignore frequency capping rules, defaults to false,
   "recipient_subscription_state": (optional, string) use this to send messages to only users who have opted in ('opted_in'), only users who have subscribed or are opted in ('subscribed') or to all users, including unsubscribed users ('all'), the latter being useful for transactional email messaging. Defaults to 'subscribed',
   "schedule": { 
-    "time": (required, datetime as ISO 8601 string) time to send the message,
+    "time": (required, datetime as ISO 8601 string) time to send the message in UTC,
     "in_local_time": (optional, bool),
     "at_optimal_time": (optional, bool),
   },

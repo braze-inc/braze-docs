@@ -25,11 +25,11 @@ When setting out to recommend items to your customers, there are a few approache
 
 ### AI Personalized recommendations {#ai}
 
-Part of the [AI Item Recommendations][1] feature, AI Personalized recommendations takes advantage of deep learning to predict what your users are most likely to be interested in next based on what they’ve shown interest for in the past. This method provides a dynamic and tailored recommendation system that adapts to user behavior.
+Part of the [AI item recommendations][1] feature, AI Personalized recommendations takes advantage of deep learning to predict what your users are most likely to be interested in next based on what they’ve shown interest for in the past. This method provides a dynamic and tailored recommendation system that adapts to user behavior.
 
 AI Personalized recommendations use the last 6 months of item interaction data, like purchases or custom events, to build the recommendation model. For users without enough data for a personalized list, the most popular items serve as a fallback so your users are still getting relevant suggestions.
 
-With AI Item Recommendations, you can also further filter the items available with 
+With AI item recommendations, you can also further filter the items available with 
 [selections]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/selections/). However, selections with Liquid cannot be used in AI recommendations, so keep that in mind when building your catalog selections.
 
 For examples, see the [Use cases](#use-cases) section in this article.
@@ -40,7 +40,7 @@ AI Personalized recommendations work best with hundreds or thousands of items an
 
 ### Most popular item recommendations {#most-popular}
 
-In addition to the "AI Personalized" model, the [AI Item Recommendations][1] feature also includes a recommendation model for "Most popular", which features items that users engage with most.
+In addition to the "AI Personalized" model, the [AI item recommendations][1] feature also includes a recommendation model for "Most popular", which features items that users engage with most.
 
 Based on the interaction data being tracked, use cases for this model could include recommending:
 
@@ -51,7 +51,7 @@ Based on the interaction data being tracked, use cases for this model could incl
 
 ### Most recent item recommendations {#most-recent}
 
-In addition to the "AI Personalized" model, the [AI Item Recommendations][1] feature also includes a recommendation model for "Most recent", which features items that users engage with most. Use this model to reduce churn by encouraging lapsing users to re-engage with relevant content.
+In addition to the "AI Personalized" model, the [AI item recommendations][1] feature also includes a recommendation model for "Most recent", which features items that users engage with most. Use this model to reduce churn by encouraging lapsing users to re-engage with relevant content.
 
 Based on the interaction data being tracked, use cases for this model could include recommending:
 
@@ -95,7 +95,7 @@ Predict and recommend the items a user is most likely to purchase next, based on
 
 {% details Requirements %}
 
-- AI Item Recommendations
+- AI item recommendations
 - Catalog of relevant items
 - A method for tracking purchases, either a purchase object or custom event
 
@@ -103,7 +103,7 @@ Predict and recommend the items a user is most likely to purchase next, based on
 
 {% details How to set up %}
 
-1. Create an [AI Item Recommendation]({{site.baseurl}}/ai_item_recommendations).
+1. Create an [AI item recommendation]({{site.baseurl}}/ai_item_recommendations).
 2. Set the **Type** to **AI Personalized**.
 3. Select your catalog.
 4. (Optional) Add a selection to filter your recommendation to only relevant items.
@@ -119,7 +119,7 @@ Remind users of their interest in items that they recently added to their cart, 
 
 {% details Requirements %}
 
-- AI Item Recommendations
+- AI item recommendations
 - Catalog of relevant items
 - Custom event for added to cart
 
@@ -127,7 +127,7 @@ Remind users of their interest in items that they recently added to their cart, 
 
 {% details How to set up %}
 
-1. Create an [AI Item Recommendation]({{site.baseurl}}/ai_item_recommendations).
+1. Create an [AI item recommendation]({{site.baseurl}}/ai_item_recommendations).
 2. Set the **Type** to **Most recent**.
 3. Select your catalog.
 4. (Optional) Add a selection to filter your recommendation to only relevant items.
@@ -143,7 +143,7 @@ Encourage users to explore items that they’ve recently liked or items that are
 
 {% details Requirements %}
 
-- AI Item Recommendations
+- AI item recommendations
 - Catalog of relevant items
 - Custom event for likes
 
@@ -151,7 +151,7 @@ Encourage users to explore items that they’ve recently liked or items that are
 
 {% details How to set up %}
 
-1. Create an [AI Item Recommendation]({{site.baseurl}}/ai_item_recommendations).
+1. Create an [AI item recommendation]({{site.baseurl}}/ai_item_recommendations).
 2. Set the **Type** to **Most recent**.
 3. Select your catalog.
 4. (Optional) Add a selection to filter your recommendation to only relevant items.
@@ -167,7 +167,7 @@ Encourage users to explore popular items in your catalog based on purchases. To 
 
 {% details Requirements %}
 
-- AI Item Recommendations
+- AI item recommendations
 - Catalog of relevant items
 - A purchase object or any custom event
 
@@ -175,7 +175,7 @@ Encourage users to explore popular items in your catalog based on purchases. To 
 
 {% details How to set up %}
 
-1. Create an [AI Item Recommendation]({{site.baseurl}}/ai_item_recommendations).
+1. Create an [AI item recommendation]({{site.baseurl}}/ai_item_recommendations).
 2. Set the **Type** to **Most popular**.
 3. Select your catalog.
 4. (Optional) Add a selection to filter your recommendation to only relevant items. For example, the food delivery service might have a selection to filter for restaurant location or type of dish.
@@ -191,7 +191,7 @@ Highlight items that have gained attention across your user base through views t
 
 {% details Requirements %}
 
-- AI Item Recommendations
+- AI item recommendations
 - Catalog of relevant items
 - Custom event for views
 
@@ -199,7 +199,7 @@ Highlight items that have gained attention across your user base through views t
 
 {% details How to set up %}
 
-1. Create an [AI Item Recommendation]({{site.baseurl}}/ai_item_recommendations).
+1. Create an [AI item recommendation]({{site.baseurl}}/ai_item_recommendations).
 2. Set the **Type** to **Most popular**.
 3. Select your catalog.
 4. (Optional) Add a selection to filter your recommendation to only relevant items.
@@ -213,7 +213,7 @@ Highlight items that have gained attention across your user base through views t
 
 This scenario doesn't rely directly on user actions but rather on catalog data. You can filter for new items based on their addition date to the catalog and promote these through targeted campaigns or Canvases without needing to train a recommendation model.
 
-For example, a tech e-commerce platform could alert tech enthusiasts about the latest gadgets or upcoming pre-orders, using filters to target items that have been recently added to the catalog.
+For example, a tech ecommerce platform could alert tech enthusiasts about the latest gadgets or upcoming pre-orders, using filters to target items that have been recently added to the catalog.
 
 {% details Requirements %}
 
@@ -240,7 +240,7 @@ For example, a fashion retailer could promote clothes and accessories that are t
 
 {% details Requirements %}
 
-- AI Item Recommendations
+- AI item recommendations
 - Catalog of relevant items
 - Custom event for added to cart
 
@@ -248,7 +248,7 @@ For example, a fashion retailer could promote clothes and accessories that are t
 
 {% details How to set up %}
 
-1. Create an [AI Item Recommendation]({{site.baseurl}}/ai_item_recommendations).
+1. Create an [AI item recommendation]({{site.baseurl}}/ai_item_recommendations).
 2. Set the **Type** to **Most popular**.
 3. Select your catalog.
 4. (Optional) Add a selection to filter your recommendation to only relevant items.
@@ -286,7 +286,7 @@ Encourage users to revisit items that they’ve recently clicked on, based on a 
 
 {% details Requirements %}
 
-- AI Item Recommendations
+- AI item recommendations
 - Catalog of relevant items
 - Custom event for clicks
 
@@ -294,7 +294,7 @@ Encourage users to revisit items that they’ve recently clicked on, based on a 
 
 {% details How to set up %}
 
-1. Create an [AI Item Recommendation]({{site.baseurl}}/ai_item_recommendations).
+1. Create an [AI item recommendation]({{site.baseurl}}/ai_item_recommendations).
 2. Set the **Type** to **Most recent**.
 3. Select your catalog.
 4. (Optional) Add a selection to filter your recommendation to only relevant items.
@@ -314,7 +314,7 @@ Promote items that users have recently interacted with, including views, clicks,
 
 {% details Requirements %}
 
-- AI Item Recommendations
+- AI item recommendations
 - Catalog of relevant items
 - A purchase object or any custom event for an engagement interaction
 
@@ -322,7 +322,7 @@ Promote items that users have recently interacted with, including views, clicks,
 
 {% details How to set up %}
 
-1. Create an [AI Item Recommendation]({{site.baseurl}}/ai_item_recommendations).
+1. Create an [AI item recommendation]({{site.baseurl}}/ai_item_recommendations).
 2. Set the **Type** to **Most recent**.
 3. Select your catalog.
 4. (Optional) Add a selection to filter your recommendation to only relevant items.

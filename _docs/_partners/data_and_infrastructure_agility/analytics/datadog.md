@@ -36,8 +36,6 @@ In the Braze dashboard, navigate to **Partner Integrations** > **Technology Part
 If you are using the [older navigation]({{site.baseurl}}/navigation), you can find **Technology Partners** under **Integrations**.
 {% endalert %}
 
-If you are hosted in the Datadog EU1 or US1-FED sites, reach out to support to have your Datadog integration configured to send metrics to those sites, otherwise, the integration will not work.
-
 ## Braze events
 
 After the connection is integrated, Braze will send the following events to Datadog:

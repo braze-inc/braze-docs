@@ -9,7 +9,7 @@ tool: Canvas
 
 # Canvas delivery issue
 
-Canvases are robust and complex, and we know you dedicate time and care when creating them. So, if you find that your Canvas isn't sending the way you want it to, we recommend checking your Canvas schedule, entry audience, and entry settings.
+Canvases are robust and complex, and we know you dedicate time and care when creating them. So, if you find that your Canvas isn't sending the way you want it to, we recommend checking your Canvas schedule, entry audience, and entry settings and reviewing the steps for [creating a Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/).
 
 ## Schedule
 
@@ -33,6 +33,8 @@ Consider the following questions for your target audience:
 - Have you added any additional filters that would limit the number of users entering the Canvas?
 - Do the users qualify to receive the first step of your variants? For example, if the first step of your Canvas is a push notification, but the entry audience is all push-disabled, then no users will receive messages.
 
-Still need help? Review the steps for [creating a Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/), or open a [support ticket]({{site.baseurl}}/braze_support/).
+{% alert tip %}
+For further assistance with Canvas troubleshooting, be sure to contact Braze Support within 30 days of your issue's occurrence as we only have the last 30 days of diagnostic logs.
+{% endalert %}
 
-_Last updated on November 16, 2022_
+_Last updated on June 25, 2024_

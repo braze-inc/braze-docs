@@ -13,33 +13,33 @@ guide_featured_title: "Sujets"
 guide_featured_list:
   - name: Compte
     link: /docs/help/help_articles/account/
-    fa_icon: fas fa-user-circle
+    image: /assets/img/braze_icons/user-circle.svg
   - name: API
     link: /docs/help/help_articles/api/
-    fa_icon: fas fa-plug
+    image: /assets/img/braze_icons/terminal-square.svg
   - name: Campagnes et Canvas
     link: /docs/help/help_articles/campaigns_and_canvas/
-    fa_icon: fas fa-comments
+    image: /assets/img/braze_icons/annotation.svg
   - name: Cartes de contenu
     link: /docs/help/help_articles/content_cards/
-    fa_icon: fas fa-stream
+    image: /assets/img/braze_icons/sticker-square.svg
   - name: Data
     link: /docs/help/help_articles/data/
-    fa_icon: fas fa-chart-line
+    image: /assets/img/braze_icons/line-chart-up-01.svg
   - name: Docs
     link: /docs/help/help_articles/docs/
-    fa_icon: fas fa-file-alt
+    image: /assets/img/braze_icons/file-06.svg
   - name: E-mail
     link: /docs/help/help_articles/email/
-    fa_icon: fas fa-envelope
+    image: /assets/img/braze_icons/mail-01.svg
   - name: Messages In-App
     link: /docs/help/help_articles/in-app_messages/
-    fa_icon: fas fa-mobile-alt
+    image: /assets/img/braze_icons/phone-02.svg
   - name: Notification push
     link: /docs/help/help_articles/push/
-    fa_icon: fas fa-comment-alt
+    image: /assets/img/braze_icons/message-square-02.svg
   - name: Segments
     link: /docs/help/help_articles/segments/
-    fa_icon: fas fa-users
+    image: /assets/img/braze_icons/users-01.svg
 ---
 

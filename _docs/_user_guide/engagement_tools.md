@@ -12,20 +12,20 @@ guide_featured_title: "Build a messaging campaign"
 guide_featured_list:
   - name: Campaigns
     link: /docs/user_guide/engagement_tools/campaigns/
-    fa_icon: fas fa-envelope
+    image: /assets/img/braze_icons/mail-01.svg
   - name: Canvas
     link: /docs/user_guide/engagement_tools/canvas/
-    fa_icon: fas fa-palette
+    image: /assets/img/braze_icons/palette.svg
   - name: Templates & Media
     link: /docs/user_guide/engagement_tools/templates_and_media/
-    fa_icon: fas fa-table
+    image: /assets/img/braze_icons/table.svg
 
 guide_menu_title: "Target your audience"
 guide_menu_list:
   - name: Segments
     link: /docs/user_guide/engagement_tools/segments/
-    fa_icon: fas fa-chart-pie
+    image: /assets/img/braze_icons/pie-chart-01.svg
   - name: Location & Geofences
     link: /docs/user_guide/engagement_tools/locations_and_geofences/
-    fa_icon: fas fa-street-view
+    image: /assets/img/braze_icons/marker-pin-06.svg
 ---

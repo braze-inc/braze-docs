@@ -1,5 +1,5 @@
 ---
-nav_title: Audience Sync to Pinterest
+nav_title: Pinterest
 article_title: Canvas Audience Sync to Pinterest
 description: "This reference article will cover how to use Braze Audience Sync to Pinterest, to deliver advertisements based upon behavioral triggers, segmentation, and more."
 page_order: 3
@@ -88,7 +88,7 @@ Enter a name for the new audience, select **Add Users to Audience**, and select 
 
 Users will be notified at the top of the step editor if the audience is created successfully or if errors arise during this process. Users can also reference this audience for user removal later in the Canvas journey because the audience was created in draft mode.
 
-![An alert that appears once a new audience is created in the Canvas component.]({% image_buster /assets/img/audience_sync/pinterest_sync3.png %})
+![An alert that appears after a new audience is created in the Canvas component.]({% image_buster /assets/img/audience_sync/pinterest_sync3.png %})
 
 When you launch a Canvas with a new audience, Braze syncs users in near real-time as they enter the Audience Sync step.
 {% endtab %}

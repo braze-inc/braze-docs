@@ -14,19 +14,25 @@ guide_featured_title: "Section articles"
 guide_featured_list:
   - name: Overview and Best Practices
     link: /docs/user_guide/data_and_analytics/cloud_ingestion/overview/
-    fa_icon: fa-solid fa-users-between-lines
+    image: /assets/img/braze_icons/users-01.svg
+  - name: Connected Sources
+    link: /docs/user_guide/data_and_analytics/cloud_ingestion/connected_sources/
+    image: /assets/img/braze_icons/server-01.svg
   - name: Data Warehouse Integrations
     link: /docs/user_guide/data_and_analytics/cloud_ingestion/integrations/
-    fa_icon: fa-solid fa-database
+    image: /assets/img/braze_icons/cloud-blank-01.svg
   - name: File Storage Integrations
     link: /docs/user_guide/data_and_analytics/cloud_ingestion/file_storage_integrations/
-    fa_icon: fa-solid fa-folder-open  
+    image: /assets/img/braze_icons/folder.svg 
   - name: Sync Catalogs Data
     link: /docs/user_guide/data_and_analytics/cloud_ingestion/sync_catalogs_data/
-    fa_icon: fa-solid fa-rotate
+    image: /assets/img/braze_icons/refresh-ccw-02.svg
   - name: Delete Users with CDI
     link: /docs/user_guide/data_and_analytics/cloud_ingestion/delete_users/
-    fa_icon: fa-solid fa-trash
+    image: /assets/img/braze_icons/trash-01.svg
+  - name: Frequently Asked Questions
+    link: /docs/user_guide/data_and_analytics/cloud_ingestion/faqs/
+    image: /assets/img/braze_icons/annotation-question.svg
 ---
 
 [1]: {% image_buster /assets/img/cloud_ingestion/ingestion_1.png %}

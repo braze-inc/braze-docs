@@ -3,7 +3,7 @@ nav_title: Adobe
 article_title: Adobe
 description: "This reference article outlines the partnership between Braze and Adobe, a customer data platform, that allows brands to connect and map their Adobe data (custom attributes and segments) to Braze in real-time. Brands can then act on this data, delivering personalized, targeted experiences to those users."
 page_type: partner
-page_order: 2.1
+page_order: 1
 search_tag: Partner
 
 ---
@@ -82,7 +82,7 @@ To correctly send your audience data from the Adobe Experience Platform to Braze
 6. You should now see your field mapping in the list.<br>![][11]<br><br>
 7. To add more mappings, repeat steps 1 through 6, as necessary. 
 
-## Example
+## Use case
 
 Let's say your XDM profile schema and your Braze instance contains the following attributes and identities:
 

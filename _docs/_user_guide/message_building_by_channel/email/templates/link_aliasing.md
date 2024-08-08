@@ -9,7 +9,7 @@ channel:
 
 ---
 
-# [![Braze Learning course]({% image_buster /assets/img/bl_icon2.png %})](https://learning.braze.com/link-aliasing){: style="float:right;width:120px;border:0;" class="noimgborder"}Link aliasing
+# [![Braze Learning course]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/link-aliasing){: style="float:right;width:120px;border:0;" class="noimgborder"}Link aliasing
  
 > Use link aliasing to create recognizable, user-generated names to identify links sent in email messages from Braze. These links are available for segmentation retargeting, action-based triggering, and link analytics. Link aliasing gives you the ability to retarget users that have clicked specific links, allowing you to create action-based triggers when users click a specific aliased link.
 
@@ -100,7 +100,17 @@ Check out this link aliasing example for the recommended formatting of the ancho
 ```liquid
 {% assign link1 = "https://www.braze1.com" %}
 
-<a href="{{link1}}?">{{link1}}</a>
+<a href="{{link1}}?">Click Here</a>
+```
+{% endraw %}
+
+If the link has parameters within it that contain a question mark (`?`), you can replace it in the anchor tag with an ampersand (`&`), such as in this example:
+
+{% raw %}
+```liquid
+{% assign link_with_params = "https://www.braze1.com?param_1&param_2" %}
+
+<a href="{{link_with_params}}&">Click Here</a>
 ```
 {% endraw %}
 

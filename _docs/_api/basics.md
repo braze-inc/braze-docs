@@ -9,7 +9,24 @@ alias: /api/api_key/
 
 # API overview
 
-> This reference article covers the API basics including common terminology and an overview of REST API keys, permissions, and how to keep them secure. 
+> This reference article covers the API basics, including common terminology and an overview of REST API keys, permissions, and how to keep them secure.
+
+## Braze REST API collection
+
+| Collection                                                                 | Purpose                                                                               |
+|----------------------------------------------------------------------------|---------------------------------------------------------------------------------------|
+| [Catalogs]({{site.baseurl}}/api/endpoints/catalogs/)                       | Create and manage catalogs and catalog items to reference in your Braze campaigns.    |
+| [Cloud Data Ingestion]({{site.baseurl}}/api/endpoints/cdi/)                | Manage your data warehouse integrations and syncs.                                    |
+| [Email lists and addresses]({{site.baseurl}}/api/endpoints/email/)         | Set up and manage bi-directional sync between Braze and your email systems.           |
+| [Export]({{site.baseurl}}/api/endpoints/export/)                           | Access and export various details of your campaigns, Canvases, KPIs, and more.        |
+| [Messages]({{site.baseurl}}/api/endpoints/messaging/)                      | Schedule, send, and manage your campaigns and Canvases.                               |
+| [Preference center]({{site.baseurl}}/api/endpoints/preference_center/)     | Build your preference center and update the styling of it.                            |
+| [SCIM]({{site.baseurl}}/api/endpoints/scim/)                               | Manage user identities in cloud-based applications and services.                      |
+| [SMS]({{site.baseurl}}/api/endpoints/sms/)                                 | Manage your users' phone numbers in your subscription groups.                         |
+| [Subscription groups]({{site.baseurl}}/api/endpoints/subscription_groups/) | List and update both SMS and email subscription groups stored in the Braze dashboard. |
+| [Templates]({{site.baseurl}}/api/endpoints/templates/)                     | Create and update templates for email messaging and Content Blocks.                   |
+| [User data]({{site.baseurl}}/api/endpoints/user_data/)                     | Identify, track, and manage your users.                                               |
+{: .reset-td-br-1 .reset-td-br-2}
 
 ## API definitions
 
@@ -295,17 +312,17 @@ News Feed is being deprecated. Braze recommends that customers who use our News 
 
 To create a new REST API key:
 
-1. Go to **Settings** > **API Keys**. This page displays your existing API keys.
+1. Go to **Settings** > **APIs and Identifiers**.
 
 {% alert note %}
 If you are using the [older navigation]({{site.baseurl}}/navigation), you can create an API key from **Developer Console** > **API Settings**.
 {% endalert %}
 
 {:start="2"}
-2. Click **+ Create New API Key**.
+2. Select **Create API Key**.
 3. Give your new key a name for identification at a glance.
-4. Select which [permissions](#rest-api-key-permissions) you want to be associated with your new key.
-5. Specify [allowlisted IP addresses](#api-ip-allowlisting) and subnets for the new key.
+4. Specify [allowlisted IP addresses](#api-ip-allowlisting) and subnets for the new key.
+5. Select which [permissions](#rest-api-key-permissions) you want to be associated with your new key.
 
 {% alert important %}
 Keep in mind that after you create a new API key, you cannot edit the scope of permissions or the allowlisted IPs. This limitation is in place for security reasons. If you need to change the scope of a key, create a new key with the updated permissions and implement that key in place of the old one. After you've completed your implementation, go ahead and delete the old key.
@@ -328,7 +345,7 @@ To view the details for a specific key, select a key from the list. You can then
 
 ![][30]
 
-To delete a key, click <i class="fas fa-gear" alt="Settings"></i> and select the corresponding option.
+Note when [deleting a user]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/adding_users_to_your_dashboard/), the associated API keys a user created will not be deleted. To delete a key, click <i class="fas fa-gear" alt="Settings"></i> and select the corresponding option.
 
 ![][29]
 

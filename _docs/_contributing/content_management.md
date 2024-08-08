@@ -1,6 +1,6 @@
 ---
-nav_title: Content Management
-article: Content Management
+nav_title: Managing Content
+article: Managing Content
 description: "This is an overview of how content is managed on Braze Docs."
 page_order: 2 
 noindex: true
@@ -98,7 +98,7 @@ Replace the following.
 
 | Placeholder | Description                                                                                                             |
 |-------------|-------------------------------------------------------------------------------------------------------------------------|
-| `ALT_TEXT`  | The alt text for the image. This is required to ensure Braze Docs is equally accessible for those using screen readers. |
+| `ALT_TEXT`  | The alt text for the image. This is required to make Braze Docs equally accessible for those using screen readers. |
 | `IMAGE`     | The relative path to your image starting from the `img` directory.                                                      |
 {: .reset-td-br-1 .reset-td-br-2}
 
@@ -128,8 +128,9 @@ The primary sections on Braze Docs are:
 - [Braze API Guide]({{site.baseurl}}/api/home)
 - [Technology Partners]({{site.baseurl}}/partners/home)
 - [Braze Help]({{site.baseurl}}/help/home)
+- [Contributing to Braze Docs]({{site.baseurl}}/contributing/home/)
 
-These primary sections can be accessed on the site header from any page on Braze Docs.
+Other than **Contributing to Braze Docs**, these primary sections can be accessed on the site header from any page on Braze Docs.
 
 ![The primary sections as shown on the site header on Braze Docs.]({% image_buster /assets/img/contributing/styling_examples/header.png %})
 
@@ -167,6 +168,9 @@ collections:
     output: true
     default_nav_url: home/
     page_order: 6
+  contributing:
+    output: true
+    default_nav_url: contributing/
   hidden: # Hidden pages not directly linked via navigation
     title: Braze
     output: true
@@ -183,6 +187,7 @@ Each collection listed represents a directory within the `_docs` directory.
 braze-docs
 └── _docs
     ├── _api
+    ├── _contributing
     ├── _developer_guide
     ├── _docs_pages
     ├── _help
@@ -273,6 +278,36 @@ page_order: 0
 
 {% alert note %}
 While a subsection with `config_only:` set to `true` is not rendered as a page, the subsection's directory name is still used in the URLs for pages in that subsection. For more information, see [URLs](#urls).
+{% endalert %}
+
+## Cross-references
+
+A cross-reference is when one page on Braze Docs links to another page on Braze Docs. Due to certain site requirements, Braze Docs doesn't support [standard Markdown syntax](https://www.markdownguide.org/basic-syntax/) for cross-reference links, so we created one using Liquid.
+
+{% raw %}
+```markdown
+[LINK_TEXT]({{site.baseurl}}/SHORT_URL)
+```
+{% endraw %}
+
+Replace the following:
+
+| Placeholder | Description                                        |
+|-------------|----------------------------------------------------|
+| `LINK_TEXT` | The page title or related action.                  |
+| `SHORT_URL` | The page URL with `https://www.braze.com` removed. |
+{: .reset-td-br-1 .reset-td-br-2}
+
+Your cross-reference link should be similar to the following:
+
+{% raw %}
+```markdown
+Before continuing, [create your SSH token]({{site.baseurl}}/docs/developer_guide/platform_wide/sdk_authentication).
+```
+{% endraw %}
+
+{% alert tip %}
+For a full walkthrough, see [Cross-referencing]({{site.baseurl}}/contributing/content_management/cross_referencing/).
 {% endalert %}
 
 ## Content reuse

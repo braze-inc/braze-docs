@@ -10,10 +10,10 @@ description: "Cette page d’accueil contient tout ce qui concerne AppsFlyer, y 
 guide_featured_list:
 - name: AppsFlyer
   link: /docs/partners/message_orchestration/attribution/appsflyer/appsflyer/
-  fa_icon: fas fa-user-circle
+  image: /assets/img/braze_icons/user-circle.svg
 - name: AppsFlyer Audiences
   link: /docs/partners/message_orchestration/attribution/appsflyer/appsflyer_audiences/
-  fa_icon: fas fa-users
+  image: /assets/img/braze_icons/users-01.svg
 
 ---
 <br>

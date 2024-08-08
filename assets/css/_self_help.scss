@@ -18,7 +18,7 @@ $help_transition_time : 0.25s;
   }
   .help_menu_title {
     margin-top: 40px;
-    color: $navy-bay;
+    color: $braze-purple-dark;
   }
   #help_step2 {
     width: 100%;
@@ -69,7 +69,9 @@ $help_transition_time : 0.25s;
       .help_item {
 
         width: 100%;
-        height: 60px;
+        height: 80px;
+        margin-top: auto;
+        margin-bottom: auto;
 
         color: $black-shark;
         @media (min-width:  $window-medium-px) {
@@ -84,13 +86,13 @@ $help_transition_time : 0.25s;
 
         vertical-align: top;
         text-align: left;
-        font-size: 15px;
+        font-size: 16px;
         font-family: $braze-regular;
 
         overflow: hidden;
         border: 1px solid $grey-ghost;
         box-shadow: 0 0 6px 0 rgba(32,32,36,0.12);
-        border-radius: 2px;
+        border-radius: 8px;
 
         .help_img {
 
@@ -100,8 +102,7 @@ $help_transition_time : 0.25s;
           img {
             display: block;
             margin: auto;
-            width: 40px;
-            height: 40px;
+            max-width: 40px;
             position: relative;
             top: 50%;
           }
@@ -128,7 +129,7 @@ $help_transition_time : 0.25s;
     #help_status {
       border: 1px solid $grey-ghost;
       box-shadow: 0 0 6px 0 rgba(32,32,36,0.12);
-      border-radius: 2px;
+      border-radius: 8px;
       padding: 15px 25px;
       &:hover {
         border-color: $braze-link-color;

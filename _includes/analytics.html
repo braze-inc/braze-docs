@@ -1,3 +1,33 @@
+{% comment %} Google Consent {% endcomment %}
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  // Set default consent for opt-in regions
+  gtag('consent', 'default', {
+    ad_storage: 'denied',
+    analytics_storage: 'denied',
+    functionality_storage: 'denied',
+    personalization_storage: 'denied',
+    security_storage: 'denied',
+    ad_user_data: 'denied',
+    ad_personalization: 'denied',
+    region: ['DE','NO','BE','FI','PT','BG','JP','DK','LT','LU','HR','LV','FR','HU','SE','SI','MC','SK','MF','SM','GB','YT','IE','GF','EE','MQ','KR','MT','GP','IS','GR','IT','ES','AR','AT','RE','CY','AX','CZ','PL','LI','RO','NL'],
+    wait_for_update: 500
+  });
+  // Set default consent for all other regions
+  gtag('consent', 'default', {
+    ad_storage: 'granted',
+    analytics_storage: 'granted',
+    functionality_storage: 'granted',
+    personalization_storage: 'granted',
+    security_storage: 'granted',
+    ad_user_data: 'granted',
+    ad_personalization: 'granted',
+    wait_for_update: 500
+  });
+</script>
+{% comment %} End Google Consent {% endcomment %}
+
 {% comment %} Google Tag Manager {% endcomment %}
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],

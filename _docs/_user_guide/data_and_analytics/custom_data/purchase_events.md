@@ -115,7 +115,7 @@ You can view this data on the [Revenue Report]({{site.baseurl}}/user_guide/data_
 
 Braze uses purchase events to calculate the lifetime revenue (also called lifetime value or LTV) of a user, which is a prediction of the net profit attributed to the entire future relationship with a customer. This can help you make informed decisions about customer acquisition and retention strategies.
 
-$$\text{Lifetime revenue} = \frac{\text{Total spend in dollars}}{\text{Total number of purchase events}}$$
+$$\text{Average purchase value} = \frac{\text{Total spend in dollars}}{\text{Total number of purchase events}}$$  
 
 There are two main places in Braze you can reference to understand your users' LTV:
 
@@ -178,7 +178,7 @@ You can't use `event_properties` in the lead Message step. Instead, you must use
 
 [Canvas entry properties]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object/) are the properties you map for Canvases that are action-based or API-triggered. Note that the `canvas_entry_properties` object has a maximum size limit of 50 KB.
 
-{% alert note %}
+{% alert important %}
 For in-app message channels specifically, `canvas_entry_properties` can only be referenced in Canvas Flow and the original Canvas editor if you have persistent entry properties enabled in the original editor as part of the previous early access.
 {% endalert %}
 

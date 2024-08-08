@@ -14,7 +14,7 @@
   color: $black-shark;
   .title {
     color: $black-shark;
-    font-family: $braze-black;
+    font-family: $braze-medium;
     font-size: 16px;
     margin-bottom: 0px;
     .glossary_share {
@@ -98,7 +98,7 @@
     b {
       font-size: 30px;
       line-height: 1.4;
-      color: $navy-bay;
+      color: $braze-purple-dark;
       margin-top: 20px;
       margin-bottom: 10px;
     }
@@ -140,7 +140,7 @@
         vertical-align: middle;
         color: $text-color;
 
-        line-height: 1.8;
+        line-height: 1.25;
         display: inline-block;
       }
 
@@ -148,7 +148,7 @@
     a {
       border: 1px solid $grey-ghost;
       box-shadow: 0 0 6px 0 rgba(32,32,36,0.12);
-      border-radius: 2px;
+      border-radius: 8px;
       margin-bottom: 30px;
 
       flex: 0 0 100%;
@@ -347,7 +347,7 @@
       border-style: solid;
     }
     a {
-      font-family: $braze-black;
+      font-family: $braze-medium;
       display: inline;
       color: $black-shark;
       font-weight: 700;
@@ -361,7 +361,8 @@
       -webkit-transition:  all ease $content_transition_time;
       -moz-transition:  all ease $content_transition_time;
       &:hover {
-        background-color: $braze-link-color;
+        background-color: transparent !important;
+        border-color: black;
         img {
           background-color: transparent;
         }

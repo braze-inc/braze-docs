@@ -14,17 +14,17 @@ guide_featured_title: "Section Articles"
 guide_featured_list:
 - name: Paramètres
   link: /docs/user_guide/administrative/app_settings/manage_app_group/app_group_management/
-  fa_icon: fas fa-users-cog
+  image: /assets/img/braze_icons/users-01.svg
 - name: Événement personnalisé et Attributs personnalisés
   link: /docs/user_guide/administrative/app_settings/manage_app_group/custom_event_and_attribute_management/
-  fa_icon: fas fa-table
+  image: /assets/img/braze_icons/table.svg
 - name: Paramètres d’e-mail
   link: /docs/user_guide/administrative/app_settings/manage_app_group/email_settings/
-  fa_icon: fas fa-envelope-open
+  image: /assets/img/braze_icons/mail-04.svg
 - name: Paramètres TTL (Durée de vie) de notification push
   link: /docs/user_guide/administrative/app_settings/manage_app_group/push_ttl_settings/
-  fa_icon: fas fa-exclamation
+  image: /assets/img/braze_icons/alert-circle.svg
 - name: Balises
   link: /docs/user_guide/administrative/app_settings/manage_app_group/tags/
-  fa_icon: fas fa-tags
+  image: /assets/img/braze_icons/tag-01.svg
 ---

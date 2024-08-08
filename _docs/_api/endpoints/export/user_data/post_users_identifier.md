@@ -16,7 +16,7 @@ description: "This article outlines details about the Export users by identifier
 
 > Use this endpoint to export data from any user profile by specifying a user identifier. 
 
-Up to 50 `external_ids` or `user_aliases` can be included in a single request. Should you want to specify `device_id` or `email_address` only one of either identifier can be included per request.
+Up to 50 `external_ids` or `user_aliases` can be included in a single request. Should you want to specify `device_id`, `email_address`, or `phone`, only one of any identifier can be included per request.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#b9750447-9d94-4263-967f-f816f0c76577 {% endapiref %}
 
@@ -133,9 +133,9 @@ Authorization: Bearer YOUR-REST-API-KEY
 }
 ```
 
-For an example of the data that is accessible via this endpoint see the following example.
+For an example of the data that is accessible through this endpoint see the following example.
 
-### Sample user export file output
+### Example user export file output
 
 User export object (we will include the least data possible - if a field is missing from the object it should be assumed to be null, false, or empty):
 

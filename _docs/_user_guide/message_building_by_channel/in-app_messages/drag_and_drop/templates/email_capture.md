@@ -1,19 +1,19 @@
 ---
-nav_title: Email Capture
-article_title: Email Capture
+nav_title: Email Sign-up Form
+article_title: Email Sign-up Form
 alias: "/email_capture/"
-description: "This reference page covers how to create an email capture form with the in-app message drag-and-drop editor."
+description: "This reference page covers how to create an email sign-up form with the in-app message drag-and-drop editor."
 ---
 
-# Email capture form
+# Email sign-up form
 
-> Use the drag-and-drop email capture in-app message template to collect users' email addresses and grow your subscription groups.
+> Use the drag-and-drop email sign-up in-app message template to collect users' email addresses and grow your subscription groups.
 
 ## SDK requirements
 
 ### Minimum SDK versions
 
-Messages created using the drag-and-drop editor can only be sent to users on the following minimum SDK versions. See the [Prerequisites][1] section of the Creating an in-app message with drag-and-drop article for more details and nuances to be aware of.
+Messages created using the drag-and-drop editor can only be sent to users on the following minimum SDK versions. See the [Prerequisites][1] section of the [Creating an in-app message with drag-and-drop]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/create/) article for more details and nuances to be aware of.
 
 {% sdk_min_versions swift:5.0.0 android:8.0.0 web:2.5.0 %}
 
@@ -27,17 +27,17 @@ If you want to include text links that do not dismiss the message, users must be
 If you include a link in your in-app message that redirects to a URL and the end user is not on the minimum SDK versions specified, clicking on the link will close the message, and the user will not be able to return to the message to submit the form.
 {% endalert %}
 
-## Creating an email capture form
+## Creating an email sign-up form
 
-When creating a drag-and-drop in-app message, select **Email capture** for your template and click **Build message**. This template is supported for both mobile apps and web browsers.
+When creating a drag-and-drop in-app message, select **Email sign-up** for your template and click **Build message**. This template is supported for both mobile apps and web browsers.
 
 ### Step 1: Set up your message styles
 
 Before you start customizing your template, you can set message-level styles for the entire message using the side menu. For example, you may want to customize the font of all the text or the color of all the links included in your message. You can also make the message a modal or fullscreen display type.
 
-### Step 2: Customize your email capture component
+### Step 2: Customize your email sign-up component
 
-To get started building your email capture form, select the email capture element in the editor. By default, collected email addresses will have the global subscription group **Subscribed**. To opt in users to specific subscription groups, refer to [Updating email subscription states]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions#updating-email-subscription-states).
+To get started building your email sign-up form, select the email capture element in the editor. By default, collected email addresses will have the global subscription group **Subscribed**. To opt in users to specific subscription groups, refer to [Updating email subscription states]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions#updating-email-subscription-states).
 
 You can customize the placeholder text and label text of the email capture element.
 
@@ -65,7 +65,7 @@ Once your campaign has launched, you can analyze results in real time to see how
 
 ### Double opt-in verification
 
-To make sure that anyone who signed up for your list really meant to sign up for your list and provided the correct email address, we recommend getting a second confirmation from anyone who signed up via your email capture form by sending a [double opt-in](https://www.braze.com/resources/articles/embracing-the-email-double-opt-in) flow.
+To make sure that anyone who signed up for your list meant to sign up for your list and provided the correct email address, we recommend getting a second confirmation from anyone who signed up via your email sign-up form by sending a [double opt-in](https://www.braze.com/resources/articles/embracing-the-email-double-opt-in) flow.
 
 One of the ways you can set this up is through Canvas Flow:
 

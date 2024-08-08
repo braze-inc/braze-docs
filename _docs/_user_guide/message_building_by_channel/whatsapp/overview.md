@@ -5,7 +5,7 @@ alias: /partners/whatsapp/
 description: "This article covers how to set up the Braze WhatsApp channel, including prerequisites and suggested next steps."
 page_type: partner
 search_tag: Partner
-page_order: 0
+page_order: 1
 channel:
   - WhatsApp
 search_rank: 2
@@ -13,7 +13,7 @@ search_rank: 2
 
 # WhatsApp setup
 
-> [WhatsApp](https://www.whatsapp.com/) Business messaging is a popular peer-to-peer messaging platform used across the world offering conversation based messaging for businesses.	
+> [WhatsApp](https://www.whatsapp.com/) Business messaging is a popular peer-to-peer messaging platform used across the world offering conversation-based messaging for businesses.	
 
 ## Prerequisites
 
@@ -31,7 +31,7 @@ Acknowledge the following before proceeding with integration:
 | ---| --- |
 | Meta Business Manager account | A Meta Business account is required to leverage this messaging channel. |
 | WhatsApp Business account | A WhatsApp Business account is required to leverage this messaging channel. |
-| WhatsApp phone number | You must acquire a phone number that meets [WhatsApp's requirements](https://developers.facebook.com/docs/whatsapp/phone-numbers/) for use of the messaging channel.  | 
+| WhatsApp phone number | You must acquire a phone number that meets WhatsApp's requirements for [Cloud API](https://developers.facebook.com/docs/whatsapp/cloud-api/phone-numbers) or [On-Premises API](https://developers.facebook.com/docs/whatsapp/on-premises/phone-numbers) for use of the messaging channel.  | 
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## Integration
@@ -44,19 +44,22 @@ In Braze, go to **Partner Integrations** > **Technology Partners** and search fo
 If you are using the [older navigation]({{site.baseurl}}/navigation), you can find **Technology Partners** under **Integrations**.
 {% endalert %}
 
-On the WhatsApp partner page, select **Login with Facebook** to start the integration process.
+On the WhatsApp partner page, select **Begin Integration**.
 
-![][1]{: style="max-width:70%;"}
+![][1]
 
-It is likely that you already have at least one existing Meta Business account at your company. If that is the case, select the one that you would like your WhatsApp Business account to live within. User permissions and business verification for WhatsApp will be controlled centrally in your Meta Business account.
+In the open window, select **Next** until the **Begin Integration** button appears. Select the button to begin the integration process.
+
+![Instructions for connecting Braze to WhatsApp.][7]
 
 ### Step 2: WhatsApp setup
-Next, you will be prompted by the Braze setup workflow. Within this flow, you will:
-1. Create or select your Meta and WhatsApp Business accounts. Make sure to review the [WhatsApp display name guidelines](https://www.facebook.com/business/help/757569725593362).
+
+Next, you will be prompted by the Braze setup workflow. For a step-by-step walkthrough, refer to [WhatsApp embedded signup]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/overview/embedded_signup/). 
+
+Within this flow, you will:
+1. Create or select your Meta and WhatsApp Business accounts. Make sure to review the [WhatsApp display name guidelines](https://www.facebook.com/business/help/757569725593362). <br><br>It is likely that you already have at least one existing Meta Business account at your company. If that is the case, select the one you would like your WhatsApp Business account to live within. User permissions and business verification for WhatsApp will be controlled centrally in your Meta Business account.<br><br>
 2. Create your WhatsApp Business profile.
 3. Verify your WhatsApp Business number.<br><br>
-
-	![][2]{: style="max-width:100%;"}
 
 {% alert note %}
 WhatsApp Business Accounts (WABA) cannot be shared with multiple Business Solution Providers. You will need a specific WABA for each Braze workspace.
@@ -86,7 +89,7 @@ Next, you will be prompted to create your message template. <br><br>Here, you ca
 You can check the approval status of your message template in either the **Message Template** page in the Meta Business Manager, or when creating a campaign or Canvas in Braze. Additionally, you can be notified by email by the WhatsApp team depending on your notification permissions. 
 
 {% alert note %}
-Approved templates can be used in as many campaigns and Canvases as you like. They can also be sent to as many opt-ed in users as you like. This is true unless the quality of the template decreases. 
+Approved templates can be used in as many campaigns and Canvases as you like. They can also be sent to as many opt-in users as you like. This is true unless the quality of the template decreases. 
 {% endalert %}
 
 ### Step 4: Create a WhatsApp campaign
@@ -116,3 +119,4 @@ Braze supports WhatsApp’s [Cloud API Local Storage](https://developers.faceboo
 [4]: {% image_buster /assets/img/whatsapp/whatsapp3.png %} 
 [5]: {% image_buster /assets/img/whatsapp/whatsapp4.png %} 
 [6]: {% image_buster /assets/img/whatsapp/whatsapp5.png %} 
+[7]: {% image_buster /assets/img/whatsapp/instructions.png %} 

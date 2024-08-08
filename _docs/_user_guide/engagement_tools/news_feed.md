@@ -15,14 +15,14 @@ guide_featured_title: "Section articles"
 guide_featured_list:
   - name: Creating a News Feed Item
     link: /docs/user_guide/engagement_tools/news_feed/creating_a_news_feed_item/
-    fa_icon: fas fa-newspaper
+    image: /assets/img/braze_icons/announcement-02.svg
   - name: News Feed Categories
     link: /docs/user_guide/engagement_tools/news_feed/news_feed_categories/
-    fa_icon: fas fa-columns
+    image: /assets/img/braze_icons/columns-01.svg
   - name: Analytics
     link: /docs/user_guide/engagement_tools/news_feed/news_feed_analytics_and_retargeting_data/
-    fa_icon: fas fa-chart-line
+    image: /assets/img/braze_icons/line-chart-up-01.svg
   - name: Use Cases
     link: /docs/user_guide/engagement_tools/news_feed/news_feed_use_cases/
-    fa_icon: fas fa-user-tie
+    image: /assets/img/braze_icons/user-circle.svg
 ---

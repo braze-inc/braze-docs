@@ -1,6 +1,6 @@
 ---
 nav_title: Add-to-Calendar Links
-article_title: Add-to-Calendar links
+article_title: Add-to-Calendar Links
 page_order: 1
 page_type: tutorial
 description: "This article describes how to include an add-to-calendar link in your email campaigns."
@@ -57,12 +57,12 @@ https://ics.agical.io/?subject=Meet%20Braze&location=114%20Sansome%20Street&dtst
 
 The following parameters are optional and can be used to define additional aspects of an event.
 
-**Organizer name:** `&organizer=name`
-**Attach URL related to event:** `&attach=http://www.example.com/`
-**Duration:** `duration=30M`, as an alternative to the event end time (dtend), specify a duration like 1H or 30M
-**Reminder alarm time, in minutes:** `&reminder=15`
-**All day event:** `&allday=1`
-**UID:** optional parameter to hard-code the unique identifier for the event allowing some calendar apps the ability to update the event over time. The string @ics.agical.io is automatically appended to the value.
+- **Organizer name:** `&organizer=name`
+- **Attach URL related to event:** `&attach=http://www.example.com/`
+- **Duration:** `duration=30M`, as an alternative to the event end time (dtend), specify a duration like 1H or 30M
+- **Reminder alarm time, in minutes:** `&reminder=15`
+- **All day event:** `&allday=1`
+- **UID:** optional parameter to hard-code the unique identifier for the event allowing some calendar apps the ability to update the event over time. The string @ics.agical.io is automatically appended to the value.
 
 You can also add additional parameters for recurring events:
 - **Weekly events:** `&recur=weekly`
@@ -77,7 +77,7 @@ For example, if you open the example "Add to Google Calendar" link and your cale
 
 ### Google Calendar
 
-When clicked, Google Calendar opens in a new tab or window with the event's details pre-populated in the invite and ready for a user to hit save. This happens on both mobile and desktop.
+When clicked, Google Calendar opens in a new tab or window with the event's details pre-populated in the invite and ready for a user to save. This happens on both mobile and desktop.
 
 ![Google Calendar dialog to add an event with the event's details added and ready to save.][2]{: style="max-width:75%"}
 
@@ -92,6 +92,10 @@ When clicked on desktop, an ICS file is downloaded. The user then needs to open 
 On mobile, users need to press and hold the link, which prompts them to add it to their calendar.
 
 ![iOS pop-up when you press and hold on a calendar link, which includes a button to "Add to Calendar".][5]{: style="max-width:50%"}
+
+For more information, refer to:
+* [Create events for Google Calendar](https://developers.google.com/calendar/api/guides/create-events)
+* [Create an Add to calendar link in an email message](https://support.microsoft.com/en-us/office/create-an-add-to-calendar-link-in-an-email-message-34f8ea28-322a-4867-b423-2998f9634e59)
 
 
 [1]: {% image_buster /assets/img_archive/calendar_1.png %}

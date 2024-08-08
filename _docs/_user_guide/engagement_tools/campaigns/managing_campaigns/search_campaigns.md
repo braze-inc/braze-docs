@@ -25,7 +25,7 @@ Expand the search dropdown to filter by last editor, target segment, messaging c
 
 ## Search syntax
 
-Selecting a campaign filter will automatically add the appropriate syntax to the search field. However, you can manually enter these filters as well. When using manual search, the syntax is the filter name, followed by a semicolon, followed by your input. For example, to search for push campaigns, enter `channel:push`.
+Selecting a campaign filter will automatically add the appropriate syntax to the search field. However, you can manually enter these filters as well. When using manual search, the syntax is the filter name, followed by a colon, followed by your input. For example, to search for push campaigns, enter `channel:push`.
 
 Here's a list of supported search filters:
 
@@ -33,7 +33,7 @@ Here's a list of supported search filters:
 | --- | --- | --- |
 | Campaign API identifier | `api_id` | A specific [campaign API identifier]({{site.baseurl}}/api/identifier_types#api-identifier-types) |
 | Segment a campaign targets | `segment` | Segment name |
-| Messaging channel a campaign targets | `channel` | One of the following: <br>-`content_cards` <br>- `email`<br>- `push`<br>- `sms` (returns both SMS and MMS)<br>- `webhook`
+| Messaging channel that a campaign targets | `channel` | One of the following: <br>-`content_cards` <br>- `email`<br>- `push`<br>- `sms` (returns both SMS and MMS)<br>- `webhook`
 | Status or delivery type | `status` | One of the following: <br>- `one-time` <br>- `recurring` <br>- `triggered` <br>- `multivariate` <br>- `transactional` <br> - `drafts` <br> - `stopped` <br> - `archived` <br> - `all` |
 | Tag | `tag` | - A single tag name <br>- A list of tag names separated by commas |
 | Most recent editor | `edited_by` | A user's email address |

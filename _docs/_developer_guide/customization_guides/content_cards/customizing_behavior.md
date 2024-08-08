@@ -14,7 +14,7 @@ platform:
 
 # Customizing Content Card behavior
 
-> This implementation guide discusses changing the behavior of Content Cards, adding extras such as key-value pairs to your payload, and recipes for common customizations.
+> This implementation guide discusses changing the behavior of Content Cards, adding extras such as key-value pairs to your payload, and recipes for common customizations. For a basic overview of the types of customization options you have with Content Cards, see [Customization overview]({{site.baseurl}}/developer_guide/customization_guides/customization_overview). 
 
 ## Key-value pairs
 
@@ -43,7 +43,7 @@ Key-value pairs are stored on <a href="https://js.appboycdn.com/web-sdk/latest/d
 {% endtabs %}
 
 {% alert tip %}
-It's important to ensure your marketing and developer teams coordinate on which key-value pairs will be used (for example, `feed_type = brand_homepage`), as any key-value pairs marketers input into the Braze dashboard must exactly match the key-value pairs that developers build into the app logic.
+It's important that your marketing and developer teams coordinate on which key-value pairs will be used (for example, `feed_type = brand_homepage`), as any key-value pairs marketers input into the Braze dashboard must exactly match the key-value pairs that developers build into the app logic.
 {% endalert %}
 
 ## Content Cards as supplemental content
@@ -61,7 +61,7 @@ The example to the right shows a feed with a hybrid list of items that are popul
 ![The key-value pairs for the supplemental Content Cards use case. In this example, different aspects of the card such as "tile_id", "tile_deeplink", and "tile_title" are set using Liquid.][2]{: style="max-width:60%;"}
 
 ## Content Cards as interactive content
-![An interactive Content Card showing a 50 percent promotion appear in the bottom left corner of the screen. Once clicked, a promotion will be applied to the cart.][4]{: style="border:0;"}{: style="float:right;max-width:45%;border:0;margin-left:15px;"} 
+![An interactive Content Card showing a 50 percent promotion appear in the bottom left corner of the screen. After it's clicked, a promotion will be applied to the cart.][4]{: style="border:0;"}{: style="float:right;max-width:45%;border:0;margin-left:15px;"} 
 
 Content Cards can be leveraged to create dynamic and interactive experiences for your users. In the example to the right, we have a Content Card pop-up appear at checkout providing users last-minute promotions. Well-placed cards like this are a great way to give users a "nudge" toward specific user actions. 
 
@@ -109,7 +109,7 @@ You can then use this information to display a badge signifying how many unread 
 {% endtab %}
 {% tab iOS %}
 
-The following sample uses `braze.contentCards` to request and display the number of unread Content Cards. Once the app is closed and the user's session ends, this code requests a card count, filtering the number of cards based on the `viewed` property.
+The following sample uses `braze.contentCards` to request and display the number of unread Content Cards. After the app is closed and the user's session ends, this code requests a card count, filtering the number of cards based on the `viewed` property.
 
 {% subtabs %}
 {% subtab Swift %}

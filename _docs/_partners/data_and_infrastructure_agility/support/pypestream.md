@@ -1,7 +1,6 @@
 ---
 nav_title: Pypestream
 article_title: Pypestream
-page_order: 5
 description: "This reference article outlines the partnership between Braze and Pypestream, a full-stack conversational AI platform that allows you to enhance digital engagement with your brand."
 alias: /partners/pypestream/
 page_type: partner
@@ -160,9 +159,9 @@ The final step of integrating with the Braze REST API involves configuring the f
 Visit this [Pypestream article](https://pypestream.atlassian.net/servicedesk/customer/kb/view/669352070) for an overview on how to configure modes within Design Studio. You must be a Pypestream customer to access this documentation.
 {% endalert %}
 
-## Example integration
+## Integration use case
 
-Once the prerequisites are met, and an action node structure has been created, the developer has a blank Canvas to work from when interacting with the Braze API endpoints. This example shows the steps required to integrate an action node into the Braze [`/user/track` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track/)-specifically to create a user profile to track a specific user entering a Pypestream conversational flow.
+After the prerequisites are met, and an action node structure has been created, the developer has a blank Canvas to work from when interacting with the Braze API endpoints. This example shows the steps required to integrate an action node into the Braze [`/user/track` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track/)-specifically to create a user profile to track a specific user entering a Pypestream conversational flow.
 
 ### Step 1: Collect data from the user in conversation
 

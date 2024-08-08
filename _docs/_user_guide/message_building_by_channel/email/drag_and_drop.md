@@ -14,19 +14,19 @@ guide_featured_title: "Section articles"
 guide_featured_list:
 - name: Creating a Drag-and-Drop Email
   link: /docs/dnd/overview/
-  fa_icon: fas fa-paint-brush
+  image: /assets/img/braze_icons/brush-02.svg
 - name: Creating an Email Template
   link: /docs/dnd/email_template/
-  fa_icon: fas fa-table
+  image: /assets/img/braze_icons/table.svg
 - name: Editor Blocks
   link: /docs/dnd/editor_blocks/
-  fa_icon: fas fa-align-left
+  image: /assets/img/braze_icons/align-left.svg
 - name: Global Style Settings
   link: /docs/dnd/global_style_settings/
-  fa_icon: fas fa-cogs
+  image: /assets/img/braze_icons/settings-01.svg
 - name: Inbox Vision
   link: /docs/user_guide/message_building_by_channel/email/inbox_vision/
-  fa_icon: fas fa-inbox
+  image: /assets/img/braze_icons/inbox-01.svg
 
 
 ---

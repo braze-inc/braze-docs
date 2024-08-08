@@ -20,8 +20,15 @@ You might have gotten here from searching a term for an integration or feature t
 - [Twilio webhook integration]({{site.baseurl}}/help/release_notes/deprecations/twilio/)
 - [Apptimize partnership]({{site.baseurl}}/help/release_notes/deprecations/apptimize/)
 - [Grouparoo partnership]({{site.baseurl}}/help/release_notes/deprecations/grouparoo)
+- [Shopify `checkout.liquid` deprecation]({{site.baseurl}}/help/release_notes/deprecations/shopify_checkout/)
 
 ## Deprecations log
+
+### Shopify `checkout.liquid`
+
+**Support withdrawn**: August 2024 (phase 1), August 2025 (phase 2)
+
+Support for Shopify `checkout.liquid` will begin deprecation in August 2024 and finish in August 2025. Shopify will be transitioning to [Checkout Extensibility](https://www.shopify.com/enterprise/blog/checkout-extensibility-winter-editions), which is more secure, performant, and customizable.
 
 ### Custom push broadcast receiver for Android
 

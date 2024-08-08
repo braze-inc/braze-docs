@@ -8,7 +8,7 @@ description: "This reference page lists filters that can be used to reformat sta
 
 # Filters
 
-> This reference article provides an overview of filters in liquid, and covers which filters are supported by Braze. Looking for ideas on how you can use these filters? Check out our [Liquid use case library]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/liquid_use_cases/).
+> This reference article provides an overview of filters in Liquid, and covers which filters are supported by Braze. Looking for ideas on how you can use these filters? Check out our [Liquid use case library]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/liquid_use_cases/).
 
 {% raw %}
 
@@ -163,10 +163,20 @@ If you're updating a user on their purchase, an account balance, or anything reg
 
 | Filter         | Definition          | Supported |
 | :--------------- | :--------------- | :-------- |
-| [money][5.1]      | Formats numbers to ensure that decimals are in the proper place, and zeros are not dropped off the end of any numbers.         | ✅  Yes   |
+| [money][5.1]      | Formats numbers to ensure that decimals are in the proper place, and zeros are not dropped off the end of any numbers.   | ✅  Yes   |
 | [money_with_currency][5.2]    | Formats numbers with the currency symbol.     | ⛔  No    |
 | [money_without_currency][5.4]     | Formats numbers without the currency symbol.      | ⛔  No    |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+
+{% alert important %}
+To properly format a number with the `money` filter, remove any commas in the number and add the `plus: 0` filter before the `money` filter. For example, see the following Liquid:<br><br>
+{% raw %}
+```liquid
+{% assign my_int = "350000.25" | plus: 0 %}
+{{ my_int | money }}
+```
+{% endraw %}
+{% endalert %}
 
 ### Shopify money filter versus Braze money filter
 
@@ -238,7 +248,7 @@ Straight quotes are different from curly quotes in Liquid. Be careful when copyi
 | :--------------- | ------------- | --------- |
 | [append][6.1]     | Appends characters to a string.           | ✅  Yes   |
 | [camelcase][6.2]     | Converts a string into CamelCase.             | ⛔  No    |
-| [capitalize][6.3]     | Capitalizes the first word in a string.         | ✅  Yes   |
+| [capitalize][6.3]     | Capitalizes the first word in a string and downcases the remaining characters.         | ✅  Yes   |
 | [downcase][6.4]      | Converts a string into lowercase.         | ✅  Yes   |
 | [escape][6.5]    | Escapes a string.             | ✅  Yes   |
 | [handle/handleize][6.6]        | Formats a string into a handle.        | ⛔  No    |

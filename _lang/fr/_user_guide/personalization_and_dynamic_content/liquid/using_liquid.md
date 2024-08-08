@@ -6,7 +6,7 @@ description: "Cet article de référence fournit un aperçu des cas d’utilisat
 search_rank: 2
 ---
 
-# [![Cours d’apprentissage Braze]({% image_buster /assets/img/bl_icon2.png %})](https://learning.braze.com/dynamic-personalization-with-liquid){: style="float:right;width:120px;border:0;" class="noimgborder"}Utilisation de Liquid
+# [![Cours d’apprentissage Braze]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/dynamic-personalization-with-liquid){: style="float:right;width:120px;border:0;" class="noimgborder"}Utilisation de Liquid
 
 {% raw %}
 

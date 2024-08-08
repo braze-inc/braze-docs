@@ -74,7 +74,15 @@ A test push message will appear at the top of your device screen.
 
 ![Test In App]({% image_buster /assets/img_archive/test-in-app.png %})
 
-Directly clicking and opening the push message will send you to your app, where you can view your in-app message test. Note this in-app message testing feature relies on the user clicking a test push notification in order to trigger the in-app message.
+Directly clicking and opening the push message will send you to your app, where you can view your in-app message test. Note this in-app message testing feature relies on the user clicking a test push notification to trigger the in-app message. As such, the user must be eligible to receive push notifications in the relevant app for the successful delivery of the test push notification.
+
+#### Troubleshooting
+
+* If your in-app message campaign is not triggered by a push campaign, check the in-app campaign segmentation to confirm the user meets the target audience **before** receiving the push message.
+* For test sends on Android and iOS, the in-app messages that use the **Request push permission** on-click behavior may not display on some devices. As a workaround:
+  * **Android:** Devices must be on Android 13 and our Android SDK version 21.0.0. Another reason may be that the device on which the in-app message is displayed already has a system-level prompt. You may have selected **Do not ask again**, so you may need to reinstall the app to reset the notification permissions before testing again.
+  * **iOS:** We recommend your developer team review the implementation of push notifications for your app and manually remove any code that would request push permissions. For more information, see [Push primer in-app messages]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/push_primer_messages/).
+* For an action-based in-app message campaign to deliver, custom events must be logged through the Braze SDK, not REST APIs, so the user can receive eligible in-app messages directly to their device. Users can receive the in-app message if they perform the event during the session.
 
 {% endtab %}
 {% tab Content Card %}
@@ -116,7 +124,7 @@ Sending a test News Feed card requires you to set up a test segment and subseque
 
 ##### Step 1: Create a designated test segment
 
-Once you set up a test segment, you can utilize these messaging channels. The process takes a few short steps and, if configured properly, will only need to be done once.
+Once you set up a test segment, you can use these messaging channels. The process takes a few short steps and, if configured properly, will only need to be done once.
 
 1. Go to the **Segments** page and [create a new segment]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/). 
 2. Click the dropdown menu under **Add Filter** and locate the testing filters at the bottom of the list <br><br>![Testing Filters]({% image_buster /assets/img_archive/testmessages1.png %})<br><br>

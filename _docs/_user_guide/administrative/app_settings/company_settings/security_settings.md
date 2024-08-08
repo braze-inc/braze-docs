@@ -55,11 +55,11 @@ Use the field shown to allowlist specific IP addresses and subnets from which us
 
 ## Two-factor authentication
 
-Two-factor authentication adds a second level of identity verification to an account log, making it more secure than just a username and password.
+Two-factor authentication is required for all Braze users. It adds a second level of identity verification to an account log, making it more secure than just a username and password. If your dashboard cannot support two-factor authentication, contact your customer success manager. 
 
 When two-factor authentication is turned on, in addition to entering a password, users will need to enter a verification code when logging in to their Braze account. The code can be sent via an authenticator app, email, or SMS.
 
-Two-factor authentication can be optional for admins, and enabled for non-admin users by default. However, when turned on, users who fail to set up their two-factor authentication will be locked out of their Braze account. Braze account users also can set up two-factor authentication on their own in **Account Settings**, even if not required by the administrator.
+Users who fail to set up their two-factor authentication will be locked out of their Braze account. Braze account users also can set up two-factor authentication on their own in **Account Settings**, even if not required by the administrator.
 
 ### Remember me
 
@@ -75,16 +75,11 @@ Be sure to save your changes before leaving the page!
 
 Users experiencing issues logging in via two-factor authentication can reach out to their company admins to reset their two-factor authentication. To do this, have an admin perform the following steps:
 
-1. Navigate to **Manage Users**.
+1. Go to **Settings** > **Company Users**.
 2. Select the user from the provided list.
 3. Select **Reset** under **Two Factor Authentication**.
 
 A reset can solve common authentication issues such as trouble with authenticator apps, email verification not sending, login failure due to SMS outages or user error, and more.
-
-#### Two-factor authentication enforcement
-
-- If two-factor authentication is not enforced at the company level, when reset, the user will log in normally and need to go to **Account Settings** to turn on and set up two-factor authentication.
-- If two-factor authentication is enforced at the company level, the next time the user logs in, they’ll be asked to set up their two-factor authentication.
 
 ## Downloading a security event report
 
@@ -92,7 +87,7 @@ The Security Event report is a CSV report of security events such as account inv
 
 To download this report, do the following:
 
-1. Go to your user profile and select **Company Settings**.
+1. Go to **Settings** > **Admin Settings**.
 2. Select the **Security Settings** tab and go to the **Security Event Download** section.
 2. Select **Download report**. 
 
@@ -131,6 +126,34 @@ The following assumes that all fields are set as PII and the users mentioned are
 {% alert note %}
 When previewing a message, the **View PII** permission is not applied, so users can see the preceding standard attributes if they were referenced in the message via Liquid.
 {% endalert %}
+
+## Data deletion preferences 
+
+You can use this setting to set preferences for whether or not certain fields should be deleted during the user delete process for events. These preferences only impact data for users that have been deleted from Braze. 
+
+When a user is deleted, Braze removes all PII from events data but retains the anonymized data for analytics purposes. Some user-defined fields may contain PII if you send end-user information to Braze.  If these fields contain PII, you can opt to delete the data when event data is anonymized for deleted users; if the fields contain no PII, they can be retained for analytics.
+
+You are responsible for determining the correct preferences for your workspace.  The best way to determine the appropriate settings is to review with internal teams sending events data to Braze and to teams using message extras in Braze to confirm whether the fields may contain PII.  
+
+### Relevant fields  
+
+| Event name or type | Field | Notes |
+| -------------------- | ------ | ----- |
+| Custom event | properties |  |
+| Purchase event | properties |  |
+| Message send | message_extras | Several event types contain a message_extras field. The preference applies to all message send event types that support message_extras, including event types added in the future. |
+
+{% alert important %}
+Deletion is permanent! If you opt to remove any fields from Snowflake for deleted users, the setting will apply to all historical data in your workspaces and any events for users deleted in the future. After Braze has run the process to apply the settings to historical event data for deleted users, the data **cannot be restored**.
+{% endalert %}
+
+### Configure preferences
+
+Set default preferences by checking boxes for any fields that should be removed if a user is deleted. Select any of the fields that contain PII. This preference will apply to all current and future workspaces unless workspaces are explicitly added to a preference group.
+
+To customize preference by workspace, you may add preference groups with different settings from the default. We apply the default settings to any workspaces not added to an additional preference group, including workspaces created in the future.  
+
+![]({% image_buster /assets/img/deletion_preferences_1.png %})
 
 
 [1]: {% image_buster /assets/img/user_profile_obfuscated1.png %} "user profile obfuscated1"

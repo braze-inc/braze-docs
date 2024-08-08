@@ -69,11 +69,11 @@ Rate limits apply to all message sending across a Canvas. If multiple channels a
 
 ### Delivery speed rate limiting
 
-If you anticipate large campaigns driving a spike in user activity and overloading your servers, you may specify a per-minute rate limit for sending messages. While targeting users during campaign creation, you can navigate to Advanced Options to select a rate limit (in various increments from as low as 50 to as high as 500,000 messages per minute). Note that non-rate-limited campaigns may exceed these delivery limits. Be aware, however, that messages will be aborted if they are delayed 72 hours or more due to a low rate limit. The user who created the campaign will receive alerts in the dashboard and via email if the rate limit is too low.
+If you anticipate large campaigns driving a spike in user activity and overloading your servers, you can specify a per-minute rate limit for sending messages—this means Braze will send no more than your rate-limited setting within a minute. When targeting users during campaign creation, you can navigate to **Advanced Options** to select a rate limit (in various increments from as low as 50 to as high as 500,000 messages per minute). Note that non-rate-limited campaigns may exceed these delivery limits. Be aware, however, that messages will be aborted if they're delayed 72 hours or more due to a low rate limit. The user who created the campaign will receive alerts in the dashboard and via email if the rate limit is too low.
 
 ![][3]
 
-For instance, if you are trying to send out 75,000 messages with a 10,000 per minute rate limit, the delivery will be spread out over 8 minutes. Your campaign will deliver 10k for each of the first seven minutes, and 5,000 over the last minute. Be wary of delaying time-sensitive messages, however, with this form of rate limiting. If the segment contains 30 million users but we set the rate limit to 10,000 per minute, a large portion of the user base won't receive the message until the following day.
+For instance, if you are trying to send out 75,000 messages with a 10,000-per-minute rate limit, the delivery will be spread out over 8 minutes. Your campaign will deliver no more than 10,000 for each of the first seven minutes, and 5,000 over the last minute. Note that messages sent using a rate limit won't have the rate limit setting (such as 10,000 per minute) evenly sent out over 60 seconds. Instead, Braze makes sure no more than 10,000 per minute messages are sent (this could mean a higher percentage of the 10,000 messages are sent within the first half minute versus the last half minute). Be wary of delaying time-sensitive messages with this form of rate limiting. If the segment contains 30 million users but we set the rate limit to 10,000 per minute, a large portion of your user base won't receive the message until the following day.
 
 {% alert important %}
 When sending a multichannel campaign with a speed rate limit, each channel is sent independently of the others. The effect is that users could receive the different channels at different times, and it is not predictable which channel they will get first. For example, if you send a campaign that contains an email and a push notification, you may have 10,000 users with valid push tokens but 50,000 users with valid email addresses. If you set the campaign to send 100 messages per minute (a slow rate limit for the campaign size), a user could receive the push notification in the first batch of sends and the email in the last batch of sends, almost nine hours later.
@@ -154,19 +154,19 @@ In-app messages and Content Cards are not counted as or toward caps on campaigns
 Global frequency capping is scheduled based on the user's time zone, and is calculated by calendar days, not 24-hour periods. For example, if you set up a frequency capping rule of sending no more than one campaign a day, a user may receive a message at 11 pm in their local time zone and they would be eligible to receive another message an hour later.
 {% endalert %}
 
-#### Examples
+#### Use cases
 
 {% tabs %}
-{% tab Example 1 %}
+{% tab Use case 1 %}
 
 Let's say that you set a frequency capping rule which asks that your user receive no more than three push notification campaigns or Canvas components per week from all campaign or Canvas components.
 
 If your user is slated to receive three push notifications, two in-app messages, and one Content Card this week, they will receive all of those messages.
 
 {% endtab %}
-{% tab Example 2 %}
+{% tab Use case 2 %}
 
-This following example uses the following frequency capping rules:
+This scenario uses the following frequency capping rules:
 
 **When following scenario occurs:**
 
@@ -217,7 +217,7 @@ In this example, your user will not receive more than one push notification camp
 
 Frequency capping by tag rules compute at the time a message sends. This means that frequency capping by tag only counts tags that are currently on the campaigns or Canvases that a user received in the past. It does not count the tags that were on the campaigns or Canvases during the time they were sent but have since been removed. It will count if a tag is later added to a message that a user received in the past, but before the newest tagged message is sent.
 
-##### Example
+##### Use case
 
 Consider the following campaigns and frequency capping by tag rule:
 

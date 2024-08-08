@@ -5,7 +5,6 @@ description: "This reference article outlines the partnership between Braze and 
 alias: /partners/octolis/
 page_type: partner
 search_tag: Octolis
-page_order: 7
 
 ---
 

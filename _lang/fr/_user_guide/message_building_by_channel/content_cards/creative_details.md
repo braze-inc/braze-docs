@@ -11,13 +11,13 @@ guide_featured_title: "Spécifications créatives pour les types message"
 guide_featured_list:
 - name: Classique
   link: /docs/user_guide/message_building_by_channel/content_cards/creative_details/#classic
-  image: /assets/img/icon-classic-cc.png
+  image: /assets/img/braze_icons/layout-top.svg
 - name: Image avec légende
   link: /docs/user_guide/message_building_by_channel/content_cards/creative_details/#captioned-image
-  image: /assets/img/captioned-cc.png
+  image: /assets/img/braze_icons/layout-alt-03.svg
 - name: Bannière
   link: /docs/user_guide/message_building_by_channel/content_cards/creative_details/#banner
-  image: /assets/img/icon-banner-cc.png
+  image: /assets/img/braze_icons/layout-bottom.svg
 
 channel:
   - cartes de contenu

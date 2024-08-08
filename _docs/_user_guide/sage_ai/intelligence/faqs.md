@@ -51,7 +51,7 @@ Intelligent Selection will be unavailable if:
 
 ### Does Intelligent Timing predict when a user is most likely to convert, or only when a user is most likely to open or click?
 
-Intelligent timing predicts when a user is most likely to open or click.
+Intelligent Timing predicts when a user is most likely to open or click.
 
 ### How is the most popular app time determined?
 

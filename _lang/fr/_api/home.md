@@ -14,23 +14,23 @@ glossary_filter_text: "Sélectionnez le type d’endpoint pour affiner le glossa
 glossary_mid_text: "Recherche d’endpoint"
 guide_featured_list:
   - name: Overview API
-    fa_icon: fa-solid fa-info
+    image: /assets/img/braze_icons/annotation-info.svg
     link: /docs/api/basics/
   - name: Types d’identifiant API
     link: /docs/api/identifier_types/
-    fa_icon: fa-solid fa-clipboard-list
+    image: /assets/img/braze_icons/clipboard-check.svg
   - name: Objets et filtres
     link: /docs/api/objects_filters/
-    fa_icon: fa-solid fa-gear
+    image: /assets/img/braze_icons/settings-01.svg
   - name: Erreurs et réponses
     link: /docs/api/errors/
-    fa_icon: fa-solid fa-list-check
+    image: /assets/img/braze_icons/list.svg
   - name: Conservation des données
     link: /docs/api/data_retention/
-    fa_icon: fa-solid fa-laptop-code
+    image: /assets/img/braze_icons/laptop-02.svg
   - name: Limites de débit
     link: /docs/api/api_limits/
-    fa_icon: fa-solid fa-hand
+    image: /assets/img/braze_icons/hand.svg
 
 # canal à icône/fa ou mappage d’image
 glossary_tags:

@@ -14,20 +14,20 @@ guide_featured_title: "Section Articles"
 guide_featured_list:
   - name: Approuver des campagnes
     link: /docs/user_guide/engagement_tools/campaigns/managing_campaigns/campaign_approval
-    fa_icon: fas fa-check-square
+    image: /assets/img/braze_icons/check-square-broken.svg
   - name: Modifier votre campagne après son lancement
     link: /docs/user_guide/engagement_tools/campaigns/managing_campaigns/change_your_campaign_after_launch/
-    fa_icon: fas fa-edit
+    image: /assets/img/braze_icons/edit-05.svg
   - name: Archiver des campagnes
     link: /docs/user_guide/engagement_tools/campaigns/managing_campaigns/archiving_campaigns/
-    fa_icon: fas fa-archive
+    image: /assets/img/braze_icons/archive.svg
   - name: Dupliquer des campagnes
     link: /docs/user_guide/engagement_tools/campaigns/managing_campaigns/duplicating_segments_and_campaigns/
-    fa_icon: fas fa-copy
+    image: /assets/img/braze_icons/copy-04.svg
   - name: Alertes de campagne
     link: /docs/user_guide/engagement_tools/campaigns/managing_campaigns/campaign_alerts/
-    fa_icon: fas fa-bell
+    image: /assets/img/braze_icons/bell-03.svg
   - name: Recherche de campagnes
     link: /docs/user_guide/engagement_tools/campaigns/managing_campaigns/search_campaigns/
-    fa_icon: fas fa-magnifying-glass
+    image: /assets/img/braze_icons/search-refraction.svg
 ---

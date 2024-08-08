@@ -15,39 +15,39 @@ guide_featured_title: "WhatsApp"
 guide_featured_list:
 - name: "WhatsApp Setup"
   link: /docs/user_guide/message_building_by_channel/whatsapp/overview
-  fa_icon: fa-brands fa-whatsapp
+  image: /assets/img/braze_icons/whatsapp.svg
 - name: "WhatsApp Subscription Group"
   link: /docs/user_guide/message_building_by_channel/whatsapp/user_subscription/
-  fa_icon: fas fa-table
+  image: /assets/img/braze_icons/table.svg
 - name: "User Phone Numbers"
   link: /docs/user_guide/message_building_by_channel/whatsapp/user_phone_numbers/
-  fa_icon: fa-solid fa-phone
+  image: /assets/img/braze_icons/phone-02.svg
 - name: "Create a WhatsApp Campaign"
   link: /docs/user_guide/message_building_by_channel/whatsapp/whatsapp_campaign/create/
-  fa_icon: fas fa-mobile-alt
+  image: /assets/img/braze_icons/phone-02.svg
 - name: "User Retargeting"
   link: /docs/user_guide/message_building_by_channel/whatsapp/whatsapp_campaign/user_retargeting/
-  fa_icon: fa-solid fa-user
+  image: /assets/img/braze_icons/users-01.svg
 - name: "Opt-in and Opt-outs"
   link: /docs/user_guide/message_building_by_channel/whatsapp/message_processing/opt-ins_and_opt-outs/
-  fa_icon: fas fa-commenting
+  image: /assets/img/braze_icons/message-dots-circle.svg
 - name: "Messaging Users"
   link: /docs/user_guide/message_building_by_channel/whatsapp/message_processing/user_messages/
-  fa_icon: fa-solid fa-comments
+  image: /assets/img/braze_icons/message-chat-circle.svg
 - name: "Handling Unknown Phone Numbers"
   link: /docs/user_guide/message_building_by_channel/whatsapp/message_processing/handling_unknown_numbers/
 - name: "WhatsApp Marketing Experiment"
   link: /docs/user_guide/message_building_by_channel/whatsapp/message_processing/experiments/
-  fa_icon: fas fa-vials
+  image: /assets/img/braze_icons/beaker-02.svg
 - name: "WhatsApp Reporting"
   link: /docs/user_guide/message_building_by_channel/whatsapp/whatsapp_campaign_analytics/
-  fa_icon: fas fa-file-alt
+  image: /assets/img/braze_icons/file-06.svg
 - name: "WhatsApp Best Practices"
   link: /docs/user_guide/message_building_by_channel/whatsapp/whatsapp_best_practices/
-  fa_icon: fas fa-check-square
+  image: /assets/img/braze_icons/check-square-broken.svg
 - name: "WhatsApp FAQ"
   link: /docs/user_guide/message_building_by_channel/whatsapp/faqs/
-  fa_icon: fas fa-question
+  image: /assets/img/braze_icons/annotation-question.svg
 
 ---
 <br><br>

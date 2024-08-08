@@ -13,25 +13,25 @@ guide_featured_title: "Section articles"
 guide_featured_list:
 - name: Navigation
   link: /docs/user_guide/administrative/access_braze/navigation/
-  fa_icon: fas fa-list
+  image: /assets/img/braze_icons/list.svg
 - name: Searching Your Dashboard
   link: /docs/user_guide/administrative/access_braze/global_search/
-  fa_icon: fas fa-search
+  image: /assets/img/braze_icons/search-sm.svg
 - name: API and SDK Endpoints
   link: /docs/user_guide/administrative/access_braze/sdk_endpoints/
-  fa_icon: fas fa-location-arrow
+  image: /assets/img/braze_icons/navigation-pointer-01.svg
 - name: Accessing Your Account
   link: /docs/user_guide/administrative/access_braze/accessing_your_account/
-  fa_icon: fas fa-user-circle
+  image: /assets/img/braze_icons/user-circle.svg
 - name: Language Settings
   link: /docs/user_guide/administrative/access_braze/language/
-  fa_icon: fas fa-language
+  image: /assets/img/braze_icons/globe-04.svg
 - name: SAML and Single Sign-On
   link: /docs/user_guide/administrative/access_braze/single_sign_on/
-  fa_icon: fas fa-sign-in-alt
+  image: /assets/img/braze_icons/log-in-01.svg
 - name: Product Portal
   link: /docs/user_guide/administrative/access_braze/portal/
-  fa_icon: fa-solid fa-question
+  image: /assets/img/braze_icons/annotation-question.svg
 ---
 ## Supported browsers
 

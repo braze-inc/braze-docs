@@ -69,7 +69,7 @@ File naming conventions may change in the future, Braze recommends searching all
 
 ### Avro write threshold
 
-Under normal circumstances, Braze will write data files to your storage bucket every 5 minutes or 15,000 events, whichever is sooner. Under heavy load, we may write larger data files with as many as 100,000 events within the same 5-minute period.
+Under normal circumstances, Braze will write data files to your storage bucket every 5 minutes or 15,000 events, whichever is sooner. Under heavy load, we may write larger data files with as many as 100,000 events per file.
 
 {% alert important %}
 Currents will never write empty files.
@@ -77,7 +77,7 @@ Currents will never write empty files.
 
 ### Avro schema changes
 
-From time to time, Braze may make changes to the Avro schema when fields are added, changed, or removed. For our purposes here, there are two types of changes: breaking and non-breaking. In all cases, the `<schema-id>` will be advanced to indicate the schema was updated.
+From time to time, Braze may make changes to the Avro schema when fields are added, changed, or removed. For our purposes here, there are two types of changes: breaking and non-breaking. In all cases, the `<schema-id>` will be advanced to indicate the schema was updated. Currents events written to Azure Blob Storage, Google Cloud Storage, and Amazon S3 will write the `<schema-id>` in the path. For example `<your-bucket-name0>/<currents-integration-id>/<event-type>/<date-of-event>/<schema-id>/<environment>/<avro-file>`.
 
 #### Non-breaking changes
 
