@@ -188,7 +188,7 @@ These are the minimum required permissions for this user. If creating multiple C
 
 #### Step 3: Allow access to Braze IPs
 
-If you have a firewall or other network policies, you must give Braze network access to your Redshift instance.
+If you have a firewall or other network policies, you must give Braze network access to your Redshift instance. An example of the Redshift URL endpoint is "example-cluster.ap-northeast-2.redshift.amazonaws.com".
 
 Some important things to know:
 - You may also need to change your security groups to allow Braze to access your data in Redshift.
