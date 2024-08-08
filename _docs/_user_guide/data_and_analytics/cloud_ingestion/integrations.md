@@ -186,15 +186,17 @@ GRANT SELECT ON TABLE USERS_ATTRIBUTES_SYNC TO braze_user;
 
 These are the minimum required permissions for this user. If creating multiple CDI integrations, you may want to grant permissions to a schema or manage permissions using a group. 
 
-#### Step 3: Allow access to Braze IPs    
+#### Step 3: Allow access to Braze IPs
 
-If you have a firewall or other network policies, you must give Braze network access to your Redshift instance. Allow access from the below IPs corresponding to your Braze dashboard's region. 
+If you have a firewall or other network policies, you must give Braze network access to your Redshift instance.
 
-{% alert important %}
-You may also need to change your security groups to allow Braze to access your data in Redshift. Make sure to explicitly allow inbound traffic on the IPs below and on the port used to query your Redshift cluster (default is 5439). You should explicitly allow Redshift TCP connectivity on this port even if the inbound rules are set to "allow all". In addition, it is important that the endpoint for the Redshift cluster be publicly accessible in order for Braze to connect to your cluster.
-
-If you won't want your Redshift cluster to be publicly accessible, you can set up a VPC and EC2 instance to use an ssh tunnel to access the Redshift data. [Check out this AWS Knowledge Center post for more information.](https://repost.aws/knowledge-center/private-redshift-cluster-local-machine)
-{% endalert %}
+Some important things to know:
+- You may also need to change your security groups to allow Braze to access your data in Redshift.
+- Make sure to explicitly allow inbound traffic on the IPs in the table and on the port used to query your Redshift cluster (default is 5439). You should explicitly allow Redshift TCP connectivity on this port even if the inbound rules are set to “allow all”.
+- The endpoint for the Redshift cluster must be publicly accessible for Braze to connect to your cluster.
+     - If you don't want your Redshift cluster to be publicly accessible, you can set up a VPC and EC2 instance to use an SSH tunnel to access the Redshift data. Check out this [AWS Knowledge Center post](https://repost.aws/knowledge-center/private-redshift-cluster-local-machine) for more information.
+ 
+Allow access from the following IPs corresponding to your Braze dashboard’s region.
 
 | For Instances `US-01`, `US-02`, `US-03`, `US-04`, `US-05`, `US-06`, `US-07` | For Instances `EU-01` and `EU-02` |
 |---|---|
