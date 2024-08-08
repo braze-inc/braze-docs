@@ -233,7 +233,7 @@ Although user aliases are supported as an identifier in the Braze Cloud Mode (Ac
 | User alias | Cloud mode destinations |
 {: .reset-td-br-1 .reset-td-br-2}
 
-The Cloud Mode Actions destination offers a [create alias action](https://segment.com/docs/connections/destinations/catalog/braze-cloud-mode-actions/#create-alias) that can be used to create an alias-only user or add an alias to an existing `external_id` profile. The [Identify User Action](https://segment.com/docs/connections/destinations/catalog/braze-cloud-mode-actions/#identify-user) can be used alongside the Create Alias Action to merge an alias-only user with an `external_id` after one becomes available for the user. 
+The Cloud Mode Actions destination offers a [create alias action](https://segment.com/docs/connections/destinations/catalog/actions-braze-cloud/#create-alias) that can be used to create an alias-only user or add an alias to an existing `external_id` profile. The [Identify User Action](https://segment.com/docs/connections/destinations/catalog/actions-braze-cloud/#identify-user) can be used alongside the Create Alias Action to merge an alias-only user with an `external_id` after one becomes available for the user. 
 
 It is also possible to engineer a workaround and use `braze_id` to send anonymous user data in cloud-mode. This requires manually including the user's `braze_id` in all your Segment API calls. You can learn more about how to set up this workaround in [Segment's documentation](https://segment.com/docs/connections/destinations/catalog/braze/#capture-the-braze_id-of-anonymous-users).
 
