@@ -113,3 +113,7 @@ The hashed email address is included in email delivery and engagement events.
 ### What email address should I expect to see in message archiving?
 
 The plaintext email address is included in messaging archiving. These are sent directly to the customer’s cloud storage provider and there may be other personal data included in the email bodies.
+
+### Can I use mail-to list-unsubscribe for subscription management with field-level encryption?
+
+No. Using mail-to list-unsubscribe would send the plaintext decrypted email address to Braze. With field-level encryption enabled, we support the URL-based HTTP: method, including one-click. We also recommend including a one-click unsubscribe link in your email body.
