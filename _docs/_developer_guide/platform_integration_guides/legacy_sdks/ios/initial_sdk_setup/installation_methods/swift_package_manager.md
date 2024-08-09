@@ -8,7 +8,7 @@ description: "This tutorial covers installing the Braze SDK using Swift Package 
 noindex: true
 ---
 
-{% multi_lang_include archive/objective-c-deprecation-notice.md %}
+{% multi_lang_include deprecations/objective-c.md %}
 
 # Swift Package Manager integration
 

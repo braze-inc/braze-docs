@@ -8,7 +8,7 @@ description: "This article shows how to disable data collection for your iOS app
 noindex: true
 ---
 
-{% multi_lang_include archive/objective-c-deprecation-notice.md %}
+{% multi_lang_include deprecations/objective-c.md %}
 
 # Disabling data collection for iOS
 

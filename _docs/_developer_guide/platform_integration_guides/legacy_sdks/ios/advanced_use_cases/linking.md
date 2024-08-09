@@ -8,7 +8,7 @@ description: "This article covers how to implement the universal deep linking de
 noindex: true
 ---
 
-{% multi_lang_include archive/objective-c-deprecation-notice.md %}
+{% multi_lang_include deprecations/objective-c.md %}
 
 # Deep linking for iOS
 

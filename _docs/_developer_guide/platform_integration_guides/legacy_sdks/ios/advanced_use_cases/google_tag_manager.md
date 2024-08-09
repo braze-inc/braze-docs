@@ -8,7 +8,7 @@ description: "This article covers how to initialize, configure, and implement th
 noindex: true
 ---
 
-{% multi_lang_include archive/objective-c-deprecation-notice.md %}
+{% multi_lang_include deprecations/objective-c.md %}
 
 # Google Tag Manager for iOS
 

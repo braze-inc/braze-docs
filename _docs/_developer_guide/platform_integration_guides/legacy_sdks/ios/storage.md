@@ -9,7 +9,7 @@ description: "This reference article describes the device-level properties captu
 noindex: true
 ---
 
-{% multi_lang_include archive/objective-c-deprecation-notice.md %}
+{% multi_lang_include deprecations/objective-c.md %}
 
 # Storage
 

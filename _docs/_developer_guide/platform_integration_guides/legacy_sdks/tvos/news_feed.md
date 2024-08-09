@@ -9,7 +9,7 @@ description: "This page describes how to fetch and display News Feed data in you
 noindex: true
 ---
 
-{% multi_lang_include archive/objective-c-deprecation-notice.md %}
+{% multi_lang_include deprecations/objective-c.md %}
 
 # News Feed integration
 

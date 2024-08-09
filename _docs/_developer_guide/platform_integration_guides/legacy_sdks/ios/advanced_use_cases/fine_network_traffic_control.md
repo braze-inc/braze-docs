@@ -8,7 +8,7 @@ description: "This article covers implementing fine network traffic control for 
 noindex: true
 ---
 
-{% multi_lang_include archive/objective-c-deprecation-notice.md %}
+{% multi_lang_include deprecations/objective-c.md %}
 
 # Fine network traffic control
 
