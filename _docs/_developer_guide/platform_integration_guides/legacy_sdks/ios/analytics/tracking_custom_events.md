@@ -8,7 +8,7 @@ description: "This reference article covers how to add and track custom events f
 noindex: true
 ---
 
-{% multi_lang_include archive/objective-c-deprecation-notice.md %}
+{% multi_lang_include deprecations/objective-c.md %}
 
 # Tracking custom events for iOS
 
