@@ -247,7 +247,7 @@ Do that
 ```
 {% endraw %}
 
-You must declare the catalog list before using `if` statements. In the example above, `Test-list` is the catalog list.
+You must declare the catalog name before using `if` statements. In the example above, `Test-list` is the catalog name.
 
 #### Use case: Liquid `if` snippet
 
