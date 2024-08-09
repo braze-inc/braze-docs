@@ -16,10 +16,10 @@ Tool:
 Follow these steps to preview your user journey:
 
 1. Go to your Canvas builder. Save any unsaved changes and resolve any errors.
-2. Click **Test Canvas** in the footer.
+2. Select **Test Canvas** in the footer.
 3. Select a test user.
 4. (optional) Select a recipient for the test.
-5. Click **Run Test**.
+5. Select **Run Test**.
 
 You can run a preview if you don't have permission to edit a Canvas, but this preview will run with unsaved changes if there are any.
 
@@ -38,7 +38,7 @@ If the test overlaps with a step type that isn't listed above, the unsupported s
 
 ### Canvas step details
 
-To view more details for entrance criteria, click **See more**. Steps with segmentation will show the met or unmet criteria. Messages will also show this for delivery validations and channel eligibility. Message steps will show which channels were sent versus not sent.
+To view more details for entrance criteria, select **See more**. Steps with segmentation will show the met or unmet criteria. Messages will also show this for delivery validations and channel eligibility. Message steps will show which channels were sent versus not sent.
 
 ## Previews for timing
 
@@ -67,7 +67,7 @@ Test users will enter the preview even if they are not eligible in real life. If
 
 You can opt to send test messages to an internal test group or an individual user as the test run populates. This means that only messages the user encounters along the test path will be sent. The recipients will receive messages with their own attributes by default, but you can override these with the test user’s attributes.
 
-To send all test messages in a Canvas at once, regardless of the path and without previewing the path, you can click **Send All Test Messages** in the **Test Sends** tab. 
+To send all test messages in a Canvas at once, regardless of the path and without previewing the path, you can select **Send All Test Messages** in the **Test Sends** tab. 
 
 ## Responsiveness
 

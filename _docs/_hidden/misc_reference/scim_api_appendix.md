@@ -31,7 +31,7 @@ A valid permissions object is a JSON object with the following key-value pairs:
 
 | Key | Required | Data type | Description |
 | --- | --- | --- | --- |
-| `companyPermissions` | Required | Array | Array of company-level permission strings from the [Company permission strings](#company) table, in which the presence of the string corresponds to the user having the corresponding permission. |
+| `companyPermissions` | Optional | Array | Array of company-level permission strings from the [Company permission strings](#company) table, in which the presence of the string corresponds to the user having the corresponding permission. |
 | `appGroup` | Required | Array | Array of [workspace permission objects](#workspace-permission-object). |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 

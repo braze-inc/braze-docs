@@ -3,14 +3,12 @@ nav_title: Creating a Catalog
 article_title: Creating a Catalog
 alias: "/catalogs/"
 page_order: 1
-description: "This reference article covers how to create and use catalogs to reference non-user data in your Braze campaigns through Liquid."
+description: "This reference article covers how to create catalogs that reference non-user data in your Braze campaigns through Liquid."
 ---
 
 # Creating a catalog
 
-> With catalogs, you can reference non-user data in your Braze campaigns through [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid). 
-
-Creating a catalog involves importing a CSV file of non-user data into Braze. This allows you to then access that information to enrich your messages. You can bring in any type of data into a catalog. This data is typically some sort of metadata from your company such as product information for an ecommerce business, or course information for an education provider.
+> Creating a catalog involves importing a CSV file of non-user data into Braze. This allows you to then access that information to enrich your messages. You can bring in any type of data into a catalog. This data is typically some sort of metadata from your company such as product information for an ecommerce business, or course information for an education provider.
 
 Some common use cases for catalogs include:
 
@@ -149,51 +147,11 @@ Next, we'll name this catalog "games_catalog" and click the **Process Catalog** 
 
 ![][11]{: style="max-width:85%;"}
 
-Note that you won't be able to edit this name after the catalog is created. You can delete a catalog and re-upload an updated version using the same catalog name. 
+Note that you won't be able to edit this name after the catalog is created. You can delete a catalog and re-upload an updated version using the same catalog name.
 
-## Using catalogs in a message
+After creating the catalog, you can begin referencing the [catalog in a campaign]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/using_catalogs/).
 
-You can use catalogs in all of your messaging channels, including anywhere in the Drag & Drop Editor where Liquid is supported.
-
-### Step 1: Add personalization type {#step-one-personalization}
-
-In the message composer of your choice, click the <i class="fas fa-plus-circle"></i> plus icon to open the **Add Personalization** modal and select **Catalogs Items** for the **Personalization Type**. Then, select your **Catalog Name**. Using our previous example, we'll select the "Games" catalog.
-
-![][2]
-
-We can immediately see the following Liquid preview:
-
-{% raw %}
-```liquid
-{% catalog_items Games %}
-```
-{% endraw %}
-
-### Step 2: Select catalog items
-
-Next, it's time to add your catalog items! Using the dropdown, select the catalog items and the information to display. This information corresponds to the columns in your uploaded CSV file used to generate your catalog.
-
-For example, to reference the title and price of our Tales game, we could select the `id` for Tales (1234) as the catalog item and request `title` and `price` for the displayed information.
-
-{% raw %}
-```liquid
-{% catalog_items Games 1234 %}
- 
-Get {{ items[0].title }} for just {{ items[0].price }}!
-```
-{% endraw %}
-
-This renders as the following:
-
-> Get Tales for just 7.49!
-
-## Catalogs via API
-
-You can leverage our [Catalogs endpoints]({{site.baseurl}}/api/endpoints/catalogs/) to manage the growing data and information.
-
-### Managing catalogs
-
-You can create a catalog using the [Create catalogs endpoint]({{site.baseurl}}/api/endpoints/catalogs/catalog_management/synchronous/post_create_catalog/).
+## Managing catalogs through API
 
 As you build more catalogs, you can also use the [List catalogs endpoint]({{site.baseurl}}/api/endpoints/catalogs/catalog_management/synchronous/get_list_catalogs/) to return a list of the catalogs in a workspace.
 
@@ -337,9 +295,11 @@ You can also manually piece together catalogs Liquid logic. However, note that i
 Liquid currently can't be used inside catalogs. If Liquid personalization is listed inside a cell in your catalog, the dynamic value won't render and only the actual Liquid will display.
 {% endalert %}
 
-## Managing catalogs
+You can leverage our [Catalogs endpoints]({{site.baseurl}}/api/endpoints/catalogs/) to manage the growing data and information. This includes the ability to create, edit, and delete catalog items, and to list catalog item details.
 
-As you create more catalogs, you can leverage the [Catalogs Endpoints]({{site.baseurl}}/api/endpoints/catalogs/) to manage the growing data and information. This includes the ability to create, edit, and delete catalog items, and to list catalog item details.
+For example, you can create a catalog using the [Create catalogs endpoint]({{site.baseurl}}/api/endpoints/catalogs/catalog_management/synchronous/post_create_catalog/). As you build more catalogs, you can also use the [List catalogs endpoint]({{site.baseurl}}/api/endpoints/catalogs/catalog_management/synchronous/get_list_catalogs/) to return a list of the catalogs in a workspace.
+
+In addition to managing your catalogs, you can also use asynchronous and synchronous endpoints to manage the catalog items. This includes the ability to edit and delete catalog items, and to list catalog item details. For example, if you want to edit an individual catalog item, you can use the [`/catalogs/catalog_name/items/item_id` endpoint]({{site.baseurl}}/api/endpoints/catalogs/catalog_items/synchronous/patch_catalog_item/).
 
 ## Catalog tiers {#tiers}
 
@@ -368,11 +328,9 @@ The storage size for the free version of catalogs is up to 100&nbsp;MB. You can 
 At a company level, the maximum storage for Catalogs Pro is based on the size of catalog data. The storage size options are: 5&nbsp;GB, 10&nbsp;GB, or 15&nbsp;GB. Note that the free version's storage (100&nbsp;MB) is included in each of these plans.
 
 [1]: {% image_buster /assets/img_archive/catalog_CSV_upload.png %}
-[2]: {% image_buster /assets/img_archive/use_catalog_personalization.png %}
 [3]: {% image_buster /assets/img_archive/catalog_image_link1.png %}
 [4]: {% image_buster /assets/img_archive/catalog_image_link2.png %}
 [5]: {% image_buster /assets/img_archive/catalog_CSV_example.png %}
-[6]: {% image_buster /assets/img_archive/catalog_multiple_items.png %}
 [7]: {% image_buster /assets/img_archive/create_catalog_option.png %}
 [9]: {% image_buster /assets/img_archive/catalog_data_type.png %}
 [11]: {% image_buster /assets/img_archive/catalog_new_name.png %}

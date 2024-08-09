@@ -14,6 +14,9 @@ guide_featured_list:
 - name: Creating a Catalog
   link: /docs/user_guide/personalization_and_dynamic_content/catalogs/catalog/
   image: /assets/img/braze_icons/users-01.svg
+- name: Using Catalogs
+  link: /docs/user_guide/personalization_and_dynamic_content/catalogs/using_catalogs/
+  image: /assets/img/braze_icons/users-01.svg
 - name: Back-In-Stock Notifications
   link: /docs/user_guide/personalization_and_dynamic_content/catalogs/back_in_stock_notifications/
   image: /assets/img/braze_icons/shopping-cart-03.svg
