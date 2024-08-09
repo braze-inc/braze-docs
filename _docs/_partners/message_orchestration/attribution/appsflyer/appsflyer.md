@@ -39,11 +39,12 @@ If you have an Android app, you will need to pass a unique Braze device ID to Ap
 
 Make sure the following lines of code are inserted at the correct place—after the Braze SDK is launched and before the initialization code for the AppsFlyer SDK. See the AppsFlyer [Android SDK integration guide](https://dev.appsflyer.com/hc/docs/integrate-android-sdk#initializing-the-android-sdk) for more information.
 
-```java
-HashMap<String, Object> customData = new HashMap<String,Object>();
-String deviceId =(Braze.getInstance(MyActivity.this).getDeviceId());
-customData.put("brazeCustomerId", deviceId);
-AppsFlyerLib.setAdditionalData(customData);
+```kotlin
+val customData = HashMap<String, Any>()
+Braze.getInstance(context).getDeviceIdAsync { deviceId ->
+   customData["brazeCustomerId"] = deviceId
+   setAdditionalData(customData)
+}
 ```
 
 #### iOS
@@ -57,44 +58,27 @@ For those using the Swift SDK v5.7.0+, if you wish to continue using IDFV as the
 If set to `true`, you must implement the iOS device ID mapping for Swift in order to pass the Braze `device_id` to AppsFlyer upon app install in order for Braze to appropriately match iOS attributions.
 
 {% tabs local %}
+{% tab Swift %}
+
+```swift
+let configuration = Braze.Configuration(
+    apiKey: "<BRAZE_API_KEY>",
+    endpoint: "<BRAZE_ENDPOINT>")
+configuration.useUUIDAsDeviceId = false
+let braze = Braze(configuration: configuration)
+AppsFlyerLib.shared().customData = ["brazeDeviceId": braze.deviceId]
+```
+
+{% endtab %}
 {% tab Objective-C %}
 
 ```objc
 BRZConfiguration *configurations = [[BRZConfiguration alloc] initWithApiKey:@"BRAZE_API_KEY" endpoint:@"BRAZE_END_POINT"];
 [configurations setUseUUIDAsDeviceId:NO];
 Braze *braze = [[Braze alloc] initWithConfiguration:configurations];
-[braze deviceIdWithCompletion:^(NSString * _Nonnull brazeDeviceId) {
-    NSLog(@">>[BRZ]: %@", brazeDeviceId);
-    [[AppsFlyerLib shared] setAdditionalData:@{
-        @"brazeDeviceId": brazeDeviceId
-    }];
+[[AppsFlyerLib shared] setAdditionalData:@{
+    @"brazeDeviceId": braze.deviceId
 }];
-```
-
-{% endtab %}
-{% tab Swift %}
-
-##### Swift completion handler
-```swift
-let configuration = Braze.Configuration(
-    apiKey: "<BRAZE_API_KEY>",
-    endpoint: "<BRAZE_ENDPOINT>")
-configuration.useUUIDAsDeviceId = false
-let braze = Braze(configuration: configuration)
-braze.deviceId {
-    brazeDeviceId in
-    AppsFlyerLib.shared().customData = ["brazeDeviceId": brazeDeviceId]
-}
-```
-##### Swift await
-```swift
-let configuration = Braze.Configuration(
-    apiKey: "<BRAZE_API_KEY>",
-    endpoint: "<BRAZE_ENDPOINT>")
-configuration.useUUIDAsDeviceId = false
-let braze = Braze(configuration: configuration)
-let brazeDeviceId = await braze.deviceId()
-AppsFlyerLib.shared().customData = ["brazeDeviceId": brazeDeviceId]
 ```
 
 {% endtab %}
