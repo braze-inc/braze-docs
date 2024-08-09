@@ -153,6 +153,148 @@ After creating the catalog, you can begin referencing the [catalog in a campaign
 
 ## Managing catalogs through API
 
+As you build more catalogs, you can also use the [List catalogs endpoint]({{site.baseurl}}/api/endpoints/catalogs/catalog_management/synchronous/get_list_catalogs/) to return a list of the catalogs in a workspace.
+
+### Managing catalog items
+
+In addition to managing your catalogs, you can also use asynchronous and synchronous endpoints to manage the catalog items. This includes the ability to edit and delete catalog items, and to list catalog item details. 
+
+For example, if you want to edit an individual catalog item, you can use the [`/catalogs/catalog_name/items/item_id` endpoint]({{site.baseurl}}/api/endpoints/catalogs/catalog_items/synchronous/patch_catalog_item/).
+
+## Additional use cases
+
+### Multiple items
+
+You aren't limited to just one item in a single message! Simply insert the additional catalog items and information to display using the **Add Personalization** modal. Note that you can add up to three catalog items only. 
+
+Check out this example where we add the `id` of three games, Tales, Teslagrad, and Acaratus, for **Catalog Items** and select `title` for **Information to Display**.
+
+![][6]{: style="max-width:70%" }
+
+We can further personalize our message by adding some text around our Liquid:
+
+{% raw %}
+```liquid
+Get the ultimate trio {% catalog_items games 1234 1235 1236 %}
+{{ items[0].title }}, {{ items[1].title }}, and {{ items[2].title }} today!
+```
+{% endraw %}
+
+This returns as the following:
+
+> Get the ultimate trio Tales, Teslagrad, and Acaratus today!
+
+{% alert tip %}
+Check out [selections]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/selections/) to create groups of data for more personalized messaging!
+{% endalert %}
+
+### Using Liquid `if` statements
+
+You can use catalog items to create conditional statements. For example, you can trigger a certain message to display when a specific item is selected in your campaign.
+
+To do this, you'll use a Liquid `if` statement in a format like this:
+
+{% raw %}
+```liquid
+{% catalog_items Test-list 1234 %}
+{% if {{items[0].first-item}} == true %}
+Do this
+{% else %}
+Do that
+{% endif %}
+```
+{% endraw %}
+
+You must declare the catalog name before using `if` statements. In the example above, `Test-list` is the catalog name.
+
+#### Use case: Liquid `if` snippet
+
+In this scenario, different messages will display if the custom attribute `venue_name` has more then 10 characters or less then 10 characters. If `venue_name` is `blank`, nothing will display.
+
+{% raw %}
+```liquid
+{% catalog_selection_items venue-list venue_selection %} 
+{% if items[0].venue_name.size > 10 %}
+Message if the venue name's size is more than 10 characters. 
+{% elsif items[0].venue_name.size < 10 %}
+Message if the venue name's size is less than 10 characters. 
+{% else %} 
+{% abort_message(no venue_name) %} 
+{% endif %}
+```
+{% endraw %}
+
+Note that this scenario uses `catalog_selection_items` instead of `catalog_items`. This is because we're pulling items from a [selection]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/selections/), where `venue-list` is the catalog name and `venue_selection` is the selection. 
+
+### Using images {#using-images}
+
+You can also reference images in the catalog to use in your messaging. To do so, use the `catalogs` tag and `item` object in the Liquid field for images.
+
+For example, to add the `image_link` from our Games catalog to our promotional message for Tales, select the `id` for the **Catalog Items** field and `image_link` for the **Information to Display** field. This adds the following Liquid tags to our image field:
+
+{% raw %}
+```liquid
+{% catalog_items Games 1234 %}
+
+{{ items[0].image_link }}
+```
+{% endraw %}
+
+![Content Card composer with catalog Liquid tag used in the image field.][3]
+
+Here's what this looks like when the Liquid is rendered:
+
+![Example Content Card with catalog Liquid tags rendered.][4]{: style="max-width:50%" }
+
+### Templating catalog items
+
+You can also use templating to dynamically pull catalog items based on custom attributes. For example, let's say a user has the custom attribute `wishlist`, which contains an array of game IDs from your catalog.
+
+```json
+{
+    "attributes": [
+        {
+            "external_id": "user_id",
+            "wishlist": ["1234", "1235"]
+        }
+    ]
+}
+```
+
+Using Liquid templating, you can dynamically pull out the wishlist IDs and then use them in your message. To do so, [assign a variable][10] to your custom attribute, then use the **Add Personalization** modal to pull a specific item from the array.
+
+{% alert tip %}
+Remember, arrays start at `0`, not `1`.
+{% endalert %}
+
+For example, to let a user know that Tales (an item in our catalog that they've wished for) is on sale, we can add the following to our message composer:
+
+{% raw %}
+```liquid
+{% assign wishlist = {{custom_attribute.${wishlist}}}%}
+{% catalog_items Games {{ wishlist[0] }} %}
+
+Get {{ items[0].title }} now, for just {{ items[0].price }}!
+```
+{% endraw %}
+
+Which will display as the following:
+> Get Tales now, for just 7.49!
+
+With templating, you can render a different catalog item for each user based on their individual custom attributes, event properties, or any other templatable field.
+
+### Uploading a CSV
+
+You can upload a CSV of new catalog items to add or catalog items to update. To delete a list of items, you can upload a CSV of item IDs to delete them.
+
+### Using Liquid
+
+You can also manually piece together catalogs Liquid logic. However, note that if you type in an ID that doesn't exist, Braze will still return an items array without objects. We recommend that you include error handling, such as checking the size of the array and using an `if` statement to account for an empty array case.
+
+{% alert note %}
+Liquid currently can't be used inside catalogs. If Liquid personalization is listed inside a cell in your catalog, the dynamic value won't render and only the actual Liquid will display.
+{% endalert %}
+
 You can leverage our [Catalogs endpoints]({{site.baseurl}}/api/endpoints/catalogs/) to manage the growing data and information. This includes the ability to create, edit, and delete catalog items, and to list catalog item details.
 
 For example, you can create a catalog using the [Create catalogs endpoint]({{site.baseurl}}/api/endpoints/catalogs/catalog_management/synchronous/post_create_catalog/). As you build more catalogs, you can also use the [List catalogs endpoint]({{site.baseurl}}/api/endpoints/catalogs/catalog_management/synchronous/get_list_catalogs/) to return a list of the catalogs in a workspace.
