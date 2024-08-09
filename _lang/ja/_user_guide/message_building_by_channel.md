@@ -5,30 +5,27 @@ page_order: 5
 layout: dev_guide
 
 guide_top_header: "チャネル別メッセージ構築"
-guide_top_text: "メッセージングチャネルは、電話や Web ブラウザでのプッシュ通知、メール、アプリ内メッセージなどを通じて、顧客と実質的にコミュニケーションを図ることができる方法です。これらのチャネルと Braze での活用方法に関する詳細については、以下のセクションを参照してください。または、<a href='https://learning.braze.com/series/messaging-channels' target='_blank'>メッセージングチャネル</a>に関するBrazeラーニングコースをご覧ください。<br><br>Braze を使用して、各チャネルにアクセス可能なメッセージングキャンペーンを作成できます。エンジニアと協力して、実装においてアクセシビリティ基準を満たすようにしてください。"
+guide_top_text: "メッセージングチャネルは、電話や Web ブラウザでのプッシュ通知、メール、アプリ内メッセージなどを通じて、顧客と実質的にコミュニケーションを図ることができる方法です。これらのチャネルと Braze での活用方法に関する詳細については、以下のセクションを参照してください。または、<a href='https://learning.braze.com/series/messaging-channels' target='_blank'>メッセージングチャネル</a>のBrazeラーニングコースをご覧ください!<br><br>Braze を使えば、各チャネルでアクセスしやすいメッセージングキャンペーンを作成できます。エンジニアと協力して、実装においてアクセシビリティ基準を満たすようにしてください。"
 description: "このランディングページは、Braze メッセージングチャネルを対象としています。メッセージングチャネルは、電話や Web ブラウザでのプッシュ通知、メール、アプリ内メッセージなどを通じて、顧客と実質的にコミュニケーションを図ることができる方法です。"
 
 guide_featured_title: "使用可能なチャネル"
 guide_featured_list:
-- name: Content Cards
+- name: コンテンツカードによって促進された
   link: /docs/user_guide/message_building_by_channel/content_cards/
   image: /assets/img/braze_icons/table.svg
-- name: Email Messaging
+- name: メールメッセージ
   link: /docs/user_guide/message_building_by_channel/email/
   image: /assets/img/braze_icons/mail-01.svg
-- name: "In-App Messaging"
+- name: "アプリ内メッセージング"
   link: /docs/user_guide/message_building_by_channel/in-app_messages/
   image: /assets/img/braze_icons/annotation-dots.svg
-- name: News Feed
-  link: /docs/user_guide/engagement_tools/news_feed/
-  image: /assets/img/braze_icons/announcement-02.svg
-- name: Push Messaging
+- name: プッシュメッセージング
   link: /docs/user_guide/message_building_by_channel/push/
   image: /assets/img/braze_icons/marker-pin-01.svg
-- name: SMS & MMS
+- name: SMS &amp; MMS
   link: /docs/user_guide/message_building_by_channel/sms/
   image: /assets/img/braze_icons/message-text-circle-01.svg
-- name: Webhooks
+- name: Webhook
   link: /docs/user_guide/message_building_by_channel/webhooks/
   image: /assets/img/braze_icons/brackets.svg
 - name: WhatsApp
