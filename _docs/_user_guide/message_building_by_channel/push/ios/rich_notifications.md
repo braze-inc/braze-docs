@@ -1,6 +1,6 @@
 ---
-nav_title: "Create iOS Rich Notifications"
-article_title: Create Rich Push Notifications
+nav_title: "Creating Rich Notifications"
+article_title: "Creating rich push notifications for iOS"
 page_order: 3
 page_type: tutorial
 description: "This tutorial covers the requirements and steps on how to create iOS Rich Notifications for your Braze campaigns."
@@ -13,7 +13,7 @@ tool:
 
 ---
 
-# Create iOS rich notifications
+# Creating rich push notifications for iOS
 
 > Rich Notifications allow for more customization in your push notifications by adding additional content beyond copy. Android notifications have included images in push notifications for some time now, messaged as an 'Expanded Notification Image'. Starting with iOS 10, your customers will be able to receive iOS push notifications that include GIFs, images, videos, or audio.
 

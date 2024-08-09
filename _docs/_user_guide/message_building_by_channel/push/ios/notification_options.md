@@ -15,6 +15,10 @@ channel:
 
 > With the release of Apple's iOS 12, Braze offers support for several of its features, including [Notification Groups](#notification-groups), [Quiet Notifications/Provisional Authorization](#provisional-push-authentication--quiet-notifications), and [Critical Alerts](#critical-alerts).
 
+## Silent notifications
+
+When you [compose your push notification message]({{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message//?tab=ios#step-4-compose-your-push-message), you can send an iOS push message without a title or a title with a single space. In either case, your message will be sent as a silent push notification. For more information, see [Silent push notifications]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/silent_push_notifications/).
+
 ## Notification groups
 
 If you want to categorize your messages and group them in your user's notification tray, you can utilize iOS's Notification Groups feature through Braze.
