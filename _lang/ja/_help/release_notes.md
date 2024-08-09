@@ -139,7 +139,7 @@ SMSの地理的許可は、SMSメッセージを送信できる国に対する�
 
 以前は、Brazeで重複するユーザーを個別または一括で見つけてマージすることができました。これで、重複が解決される方法をコントロールするルールを作成できるようになり、最も関連性の高いユーザーが保持されます。詳細については、[ルールベースのマージ]({{site.baseurl}}/user_guide/engagement_tools/segments/user_profiles/duplicate_users/#rules-based-merging)を参照してください。
 
-#### AI Liquid アシスタント
+#### AI Liquidアシスタント
 
 {% multi_lang_include release_type.md release="ベータ" %}
 
