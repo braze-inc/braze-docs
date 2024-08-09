@@ -8,7 +8,7 @@ description: "This reference article shows how to set user IDs in your iOS app, 
 noindex: true
 ---
 
-{% multi_lang_include archive/objective-c-deprecation-notice.md %}
+{% multi_lang_include deprecations/objective-c.md %}
 
 # Setting user IDs for iOS
 
