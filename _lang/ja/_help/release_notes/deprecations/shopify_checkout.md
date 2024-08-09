@@ -1,5 +1,5 @@
 ---
-nav_title: "Shopifyチェックアウト&#46;リキッド"
+nav_title: "Shopify checkout&#46;liquid"
 page_order: 7
 description: "この記事では、Shopifyチェックアウト&#46;liquidの非推奨について、Shopifyとの統合への影響や開発者のためのガイダンスを含めて説明する。"
 page_type: update
