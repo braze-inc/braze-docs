@@ -36,7 +36,7 @@ The total number of users who clicked into the AMP version of your AMP HTML Emai
 All
 {% endapitags %}
 
-Percentage of users who received a particular message. This number is received from Braze.
+The percentage of users who received a particular message. This number is received from Braze.
 
 {% endapi %}
 
@@ -48,7 +48,7 @@ Percentage of users who received a particular message. This number is received f
 Email, Web Push, iOS Push
 {% endapitags %}
 
-The total number of messages that were unsuccessful. This could occur because there is not a valid push token, the email addresses were incorrect or deactivated, or the user unsubscribed after the campaign was launched. An email bounce for customers using SendGrid consists of hard bounces, spam, and emails sent to invalid addresses.
+The total number of unsuccessful messages. This could occur because there isn't a valid push token, the email addresses were incorrect or deactivated, or the user unsubscribed after the campaign was launched. An email bounce for customers using SendGrid consists of hard bounces, spam, and emails sent to invalid addresses.
 
 <span class="calculation-line">Calculation: (Bounces) / (Sends)</span>
 
@@ -93,7 +93,7 @@ Occurs when someone clicks on any of the following in-app message types:
 In-App Message
 {% endapitags %}
 
-Total number of clicks on Button 1 of the message.
+The total number of clicks on Button 1 of the message.
 
 <span class="calculation-line">Calculation: (Button 1 Clicks) / (Impressions)</span>
 
@@ -107,7 +107,7 @@ Total number of clicks on Button 1 of the message.
 In-App Message
 {% endapitags %}
 
-Total number of clicks on Button 2 of the message.
+The total number of clicks on Button 2 of the message.
 
 <span class="calculation-line">Calculation: (Button 2 Clicks) / (Impressions)</span>
 
@@ -121,7 +121,7 @@ Total number of clicks on Button 2 of the message.
 In-App Message
 {% endapitags %}
 
-Total number of choices selected when the user clicks the submit button on the survey question page of a [simple survey]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/templates/simple_survey/).
+The total number of choices selected when the user clicks the submit button on the survey question page of a [simple survey]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/templates/simple_survey/).
 
 {% endapi %}
 
@@ -173,7 +173,7 @@ The percentage of confidence that a certain variant of a message is outperformin
 In-App Message
 {% endapitags %}
 
-Total clicks on the call to action button on the confirmation page of a [simple survey]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/templates/simple_survey/).
+The total clicks on the call to action button on the confirmation page of a [simple survey]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/templates/simple_survey/).
 
 {% endapi %}
 
@@ -185,7 +185,7 @@ Total clicks on the call to action button on the confirmation page of a [simple 
 In-App Message
 {% endapitags %}
 
-Total clicks on the close (x) button on the confirmation page of a [simple survey]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/templates/simple_survey/).
+The total clicks on the close (x) button on the confirmation page of a [simple survey]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/templates/simple_survey/).
 
 {% endapi %}
 
@@ -197,7 +197,7 @@ Total clicks on the close (x) button on the confirmation page of a [simple surve
 Content Cards, Email, In-App Message, Web Push, iOS Push, Android Push, Webhook, SMS
 {% endapitags %}
 
-Additional conversion events added after the Primary Conversion Event. The number of times a defined event occurred after interacting with or viewing a received message from a Braze campaign. This defined event is determined by the marketer when building the campaign. For Email, Push and Webhooks, we start tracking conversions after the initial send. For Content Cards and In-App Messages, this count begins when they view a Content Card or Message for the first time.
+Additional conversion events added after the Primary Conversion Event. The number of times a defined event occurred after interacting with or viewing a received message from a Braze campaign. <br><br> This defined event is determined by the marketer when building the campaign. For Email, Push and Webhooks, we start tracking conversions after the initial send. For Content Cards and In-App Messages, this count begins when they view a Content Card or Message for the first time.
 
 {% endapi %}
 
@@ -235,7 +235,7 @@ The number of days after receiving the message during which user actions are tra
 Email, Web Push, iOS Push, Android Push, WhatsApp
 {% endapitags %}
 
-The total number of message requests that are accepted by the receiving server. This does not mean the message was delivered to a device, only that the message was accepted by the server.
+The total number of message requests that are accepted by the receiving server. This doesn't mean the message was delivered to a device, only that the message was accepted by the server.
 
 <span class="calculation-line">Calculation: Count</span>
 
@@ -289,7 +289,7 @@ The number of errors returned by webhook events (incremented during the sending 
 WhatsApp
 {% endapitags %}
 
-The WhatsApp message could not send because the Internet Service Provider returned a hard bounce. A hard bounce signifies a permanent deliverability failure.
+The WhatsApp message couldn't send because the internet service provider returned a hard bounce. A hard bounce signifies a permanent deliverability failure.
 
 {% endapi %}
 
@@ -315,7 +315,7 @@ The total number (and percentage) of users who opened the app after the push not
 Email
 {% endapitags %}
 
-The number of requests that were temporarily rejected, by the receiving server, but still attempted for re-delivery by the ESP. The ESP will retry delivery until a timeout period is reached (typically after 72 hours).
+The number of requests that were temporarily rejected, by the receiving server, but still attempted for re-delivery by the email service provider (ESP). The ESP will retry delivery until a timeout period is reached (typically after 72 hours).
 
 {% endapi %}
 
@@ -327,7 +327,7 @@ The number of requests that were temporarily rejected, by the receiving server, 
 Content Cards, Email, In-App Message, Web Push, iOS Push, Android Push, Webhook, SMS, WhatsApp
 {% endapitags %}
 
-The number of times a defined event occurred after interacting with or viewing a received message from a Braze campaign. This defined event is determined by the marketer when building the campaign. For Email, Push, and Webhooks, we start tracking conversions after the initial send. For Content Cards and In-App Messages, this count begins when they view a Content Card or Message for the first time.
+The number of times a defined event occurred after interacting with or viewing a received message from a Braze campaign. This defined event is determined by the marketer when building the campaign. <br><br>For email, push, and webhooks, we start tracking conversions after the initial send. For Content Cards and in-app messages, this count begins when they view a Content Card or message for the first time.
 
 {% endapi %}
 
@@ -339,7 +339,7 @@ The number of times a defined event occurred after interacting with or viewing a
 WhatsApp
 {% endapitags %}
 
-When a WhatsApp message is read by the end user. The end user's read receipts must be "On" for Braze to track reads.
+When the user reads the WhatsApp message. The user's read receipts must be "On" for Braze to track reads.
 
 {% endapi %}
 
@@ -355,7 +355,7 @@ Email, Content Cards, In-App Message, Web Push, iOS Push, Android Push, SMS, Wha
 - Push: Received when messages are sent from the Braze server to the push provider.
 - Email: Received when messages are sent from the Braze server to the email service provider.
 - SMS/MMS: "Delivered" after the SMS provider receives confirmation from the upstream carrier and destination device.
-- In-App Message: Received at the time of display based on the trigger action defined.
+- In-app message: Received at the time of display based on the trigger action defined.
 - WhatsApp: Received at the time of display based on the trigger action defined.
 
 {% endapi %}
@@ -368,7 +368,7 @@ Email, Content Cards, In-App Message, Web Push, iOS Push, Android Push, SMS, Wha
 SMS
 {% endapitags %}
 
-The SMS has been rejected by the carrier. This can happen for a number of reasons, including carrier content filtering, availability of the destination device, the phone number is no longer in service, etc. As a Braze customer, rejections are charged toward your SMS allotment.
+The SMS has been rejected by the carrier. This can happen for a number of reasons, including carrier content filtering, availability of the destination device, the phone number is no longer in service, and similar. As a Braze customer, rejections are charged toward your SMS allotment.
 
 <span class="calculation-line">Calculation: Count</span>
 
@@ -382,7 +382,7 @@ The SMS has been rejected by the carrier. This can happen for a number of reason
 Content Cards, Email, In-App Message, Web Push, iOS Push, Android Push, Webhook, SMS, WhatsApp, LINE
 {% endapitags %}
 
-*Sends*, or *Messages Sent*, is the total number of messages sent in a campaign. Upon launching a scheduled campaign, this metric will include all messages sent, regardless of whether they have been sent out yet due to rate limiting. This does not mean the message was received or delivered to a device, only that the message was sent. This metric is provided by Braze.
+*Sends*, or *Messages Sent*, is the total number of messages sent in a campaign. After launching a scheduled campaign, this metric will include all messages sent, regardless of whether they have been sent out yet due to rate limiting. This doesn't mean the message was received or delivered to a device, only that the message was sent. This metric is provided by Braze.
 
 {% alert tip %}
 For Content Cards, this metric is calculated differently depending on what you selected for **Card creation**. See [Card creation]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/create/card_creation/) for details.
@@ -404,7 +404,7 @@ SMS
 *Sends to Carrier* is deprecated, but will continue to be supported for users that already have it.
 {% endalert %}
 
-This stat is the sum of Confirmed Deliveries, Rejections, and Sends where delivery or rejection was not confirmed by the carrier. There are instances where carriers do not provide delivery or rejected confirmation, as some carriers do not provide this confirmation or were unable to do so at the time of send.
+The sum of Confirmed Deliveries, Rejections, and Sends where delivery or rejection wasn't confirmed by the carrier. This includes instances where carriers don't provide delivery or rejected confirmation, as some carriers don't provide this confirmation or can't do so at the time of send.
 
 <span class="calculation-line">Calculation: Count</span>
 
@@ -432,7 +432,7 @@ The total number of emails delivered that were marked as "spam."
 In-App Message
 {% endapitags %}
 
-Total clicks on the close (x) button on the survey question page of a [simple survey]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/templates/simple_survey/).
+The total clicks on the close (x) button on the survey question page of a [simple survey]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/templates/simple_survey/).
 
 {% endapi %}
 
@@ -444,7 +444,7 @@ Total clicks on the close (x) button on the survey question page of a [simple su
 In-App Message
 {% endapitags %}
 
-Total clicks on the submit button of a [simple survey]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/templates/simple_survey/).
+The total clicks on the submit button of a [simple survey]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/templates/simple_survey/).
 
 {% endapi %}
 
@@ -543,7 +543,7 @@ The total revenue in dollars from campaign recipients within the set primary con
 Email, Content Cards, LINE
 {% endapitags %}
 
-Distinct number of recipients who have clicked within a message at least once. This is tracked over a 7-day period for Email. Note that clicks on Braze-provided unsubscribe links are counted as unique clicks.
+The distinct number of recipients who have clicked within a message at least once. This is tracked over a 7-day period for Email. This includes clicks on Braze-provided unsubscribe links.
 
 For LINE, this is tracked after a minimum threshold of 20 messages per day has been reached. 
 
@@ -595,7 +595,7 @@ The total number of users who received and viewed a given in-app message or card
 Email, LINE
 {% endapitags %}
 
-For emails, this is the total number of delivered emails that have been opened by a single user at least once. This is tracked over a 7-day period for Email. For LINE, this is tracked after a minimum threshold of 20 messages per day has been reached.
+This is the total number of delivered emails that have been opened by a single user at least once, and is tracked over a 7-day period. For LINE, this is tracked after a minimum threshold of 20 messages per day has been reached.
 
 <span class="calculation-line">Calculation: (Unique Opens) / (Deliveries)</span>
 
@@ -609,7 +609,7 @@ For emails, this is the total number of delivered emails that have been opened b
 All
 {% endapitags %}
 
-Unique Daily Recipients. The number of users who received a particular message in a day. This number is received from Braze.
+The number of unique daily recipients, or users who received a particular message in a day. This number is received from Braze.
 
 <span class="calculation-line">Calculation: Count</span>
 
