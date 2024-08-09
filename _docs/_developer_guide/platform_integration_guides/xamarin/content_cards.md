@@ -101,6 +101,10 @@ Classic cards have a title, description, and an optional image on the left of th
 
 For a full reference of the classic (text announcement) Content Card, see the [Android][9] and [iOS][10] documentation. For a full reference of the classic image (short news) card, see the [Android][11] and [iOS][12] documentation.
 
+## GIF Support
+
+{% multi_lang_include wrappers/gif_support/content_cards.md %}
+
 [1]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/data_models/
 [2]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/content_cards/integration/
 [3]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/index.html

@@ -81,6 +81,10 @@ AppboyBinding.RequestContentCardsRefresh()
 AppboyBinding.RequestContentCardsRefreshFromCache()
 ```
 
+## GIF Support
+
+{% multi_lang_include wrappers/gif_support/content_cards.md %}
+
 ## Analytics
 
 Clicks and impressions must be manually logged for Content Cards not displayed directly by Braze.

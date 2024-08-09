@@ -86,6 +86,10 @@ void InAppMessageReceivedCallback(string message) {
 }
 ```
 
+## GIF Support
+
+{% multi_lang_include wrappers/gif_support/in_app_messaging.md %}
+
 ## Analytics
 
 Clicks and impressions must be manually logged for in-app messages not displayed directly by Braze.
