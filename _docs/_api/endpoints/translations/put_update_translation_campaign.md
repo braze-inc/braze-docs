@@ -37,8 +37,12 @@ There are no path parameters for this endpoint.
 
 | Parameter | Required | Data Type | Description |
 | --------- | ---------| --------- | ----------- |
+| `step_id` | Required | String | The ID of your Canvas step. | 
+| `message_variation_id` | Required | String | The ID of your message. |
 |`locale_id`| Required | String | The ID of the locale. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+
+Note all translation IDs are considered universal unique identifiers (UUIDs), which can be in **Multi-Language Support** settings.
 
 ## Example request
 
