@@ -8,7 +8,7 @@ description: "この参照記事では、iOS 用 CocoaPods を使用して Braze
 noindex: true
 ---
 
-{% multi_lang_include archive/objective-c-deprecation-notice.md %}
+{% multi_lang_include deprecations/objective-c.md %}
 
 # CocoaPods との統合
 

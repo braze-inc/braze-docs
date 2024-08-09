@@ -10,7 +10,7 @@ search_rank: 3
 noindex: true
 ---
 
-{% multi_lang_include archive/objective-c-deprecation-notice.md %}
+{% multi_lang_include deprecations/objective-c.md %}
 
 # コンテンツカード統合
 

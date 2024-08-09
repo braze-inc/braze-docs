@@ -9,7 +9,7 @@ channel:
 search_rank: 4
 ---
 
-{% multi_lang_include archive/objective-c-deprecation-notice.md %}
+{% multi_lang_include deprecations/objective-c.md %}
 
 # Messages in-app
 

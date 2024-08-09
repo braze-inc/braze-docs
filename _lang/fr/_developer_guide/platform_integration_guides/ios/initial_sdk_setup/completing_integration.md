@@ -7,7 +7,7 @@ page_order: 2
 
 ---
 
-{% multi_lang_include archive/objective-c-deprecation-notice.md %}
+{% multi_lang_include deprecations/objective-c.md %}
 
 # Terminer l’intégration
 
