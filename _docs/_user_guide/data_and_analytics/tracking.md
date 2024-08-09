@@ -4,7 +4,7 @@ article_title: Tracking
 page_order: 5
 layout: dev_guide
 guide_top_header: "Tracking"
-guide_top_text: "You can track many actions on your apps. We recommend viewing the following articles to learn how to implement the tracking that best fits your use case."
+guide_top_text: "You can track many user actions on your apps. We recommend viewing the following articles to learn how to implement the tracking that best fits your use case."
 
 page_type: landing
 description: "This landing page is home to resources on implementing tracking in your apps, such as open pixel and click tracking, uninstall tracking, influences opens, and segment analytics tracking."
