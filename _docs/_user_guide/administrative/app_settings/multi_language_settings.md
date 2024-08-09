@@ -25,7 +25,7 @@ To edit and manage multi-language support, you must have the "Manage Multi-Langu
 
 ![An example of French added as a locale for users whose country is Canada.][2]{: style="max-width:80%;"}
 
-For steps to use these locales in your email campaigns and Canvas, refer to [Using locales]({{site.baseurl}}/user_guide/message_building_by_channel/email/using_locales/)
+For steps to use these locales in your email campaigns and Canvas, refer to [Using locales]({{site.baseurl}}/user_guide/message_building_by_channel/email/using_locales/).
 
 ## Frequently asked questions
 
@@ -33,7 +33,7 @@ For steps to use these locales in your email campaigns and Canvas, refer to [Usi
 You can add up to 200 locales.
 
 #### Where are the translation files stored in Braze?
-Translation files are stored at a campaign level, meaning each message variant will need to have uploaded translations.
+Translation files are stored at a campaign level, meaning each message variant must have uploaded translations.
 
 #### Does the locale name have to follow a specific pattern or format?
 No. You can use your preferred naming convention. The locale name is used when selecting the locale in the editor and will be in the headings of the file you download with translation IDs.
