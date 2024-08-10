@@ -10,6 +10,10 @@ description: "This reference article provides steps to create a transformation u
 
 > Braze Data Transformation enables you to build and manage webhook integrations to automate data flow from external platforms into Braze. These webhook integrations can then power even more sophisticated marketing use cases.
 
+{% alert important %}
+Data Transformation now includes a template library to help you get started with certain external platforms. See Templates. <br>Data Transformation also supports the `/messages/send` destination. Refer to [More on destinations] for more details.
+{% endalert %}
+
 ## Prerequisites 
 
 | Requirement | Description |
@@ -29,6 +33,22 @@ The following is an example [Typeform webhook](https://www.typeform.com/help/a/w
 ## Step 2: Create a transformation
 
 {% multi_lang_include create_transformation.md location="default" %}
+
+Choose Use a Template to browse through a template library of known Data Transformation use cases. Or, choose Start From Scratch to load a default code template.
+
+If you’re starting from scratch, choose a destination for your transformation. Note that you can still insert a code template from the template library after starting from scratch.
+
+### More on destinations
+
+- POST: Track users: Transforms webhooks from a source platform into user profile updates, such as attributes, events, or purchases.
+- PUT: Update multiple catalog items: Transforms webhooks from a source platform into catalog item updates.
+- DELETE: Delete multiple catalog items: Transforms webhooks from a source platform into catalog item deletions.
+- PATCH: Edit multiple catalog items: Transforms webhooks from a source platform into catalog item edits.
+- **POST: Send messages immediately via API Only:** Transforms webhooks from a source platform to send immediate messages to designated users.
+
+{% alert note %}
+Want to request additional templates or destinations? Consider leaving product feedback.
+{% endalert %}
 
 ## Step 3: Send a test webhook (recommended)
 
