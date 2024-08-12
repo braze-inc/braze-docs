@@ -10,7 +10,7 @@ search_rank: 4
 noindex: true
 ---
 
-{% multi_lang_include archive/objective-c-deprecation-notice.md %}
+{% multi_lang_include deprecations/objective-c.md %}
 
 # アプリ内メッセージ
 

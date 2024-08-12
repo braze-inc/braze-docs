@@ -7,7 +7,7 @@ description: "Cet article explique comment définir des ID utilisateur dans votr
  
 ---
 
-{% multi_lang_include archive/objective-c-deprecation-notice.md %}
+{% multi_lang_include deprecations/objective-c.md %}
 
 # Définir des ID Utilisateur pour iOS
 

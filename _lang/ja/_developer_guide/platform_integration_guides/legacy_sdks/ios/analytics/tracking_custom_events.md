@@ -8,7 +8,7 @@ description: "このリファレンス記事では、iOS アプリケーショ�
 noindex: true
 ---
 
-{% multi_lang_include archive/objective-c-deprecation-notice.md %}
+{% multi_lang_include deprecations/objective-c.md %}
 
 # iOS のカスタムイベントの追跡
 
