@@ -200,7 +200,7 @@ Like other campaigns, Braze tracks the delivery of your webhook campaigns and co
 | 5xx (server error)   | No | Yes |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
-Braze will retry webhook sends for up to 24 hours before aborting the individual webhook call. When retrying after 5xx errors, Braze will make five attempts using exponential backoff for a period of approximately 30 minutes before aborting the individual webhook call. 
+Braze will retry webhook sends for up to 24 hours before aborting the individual webhook call. When retrying after any 500-level error, Braze will make 5 attempts using exponential backoff for a period of approximately 30 minutes before aborting the individual webhook call.
 
 Each webhook is allowed 90 seconds before it times out.
 
