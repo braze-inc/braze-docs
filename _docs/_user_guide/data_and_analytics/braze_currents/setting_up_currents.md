@@ -96,7 +96,7 @@ To upgrade your Test Currents connector, edit the integration in the dashboard a
 
 {% multi_lang_include updating_currents.md %}
 
-## IP Allowlisting
+## IP allowlisting
 
 Braze will send Currents data from the listed IPs, which are automatically and dynamically added to any API keys that have been opted-in for allowlisting.
 
