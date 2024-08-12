@@ -37,7 +37,7 @@ This endpoint has a rate limit of 250,000 requests per hour.
 |`message_variation_id`| Required | String | The ID of your message. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
-Note all translation IDs are considered universal unique identifiers (UUIDs), which can be in **Multi-Language Support** settings. You can also find the UUID in the request response.
+Note all translation IDs are considered universal unique identifiers (UUIDs), which can be found in **Multi-Language Support** settings or in the request response.
 
 ## Example request
 
