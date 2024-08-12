@@ -14,29 +14,29 @@ guide_featured_title: "Articles courants"
 guide_featured_list:
   - name: Campagnes d’utilisateurs actifs
     link: /docs/user_guide/engagement_tools/campaigns/ideas_and_strategies/active_user_campaigns/
-    fa_icon: fas fa-users
+    image: /assets/img/braze_icons/users-01.svg
   - name: Capturer les utilisateurs inactifs
     link: /docs/user_guide/engagement_tools/campaigns/ideas_and_strategies/capturing_lapsing_users/
-    fa_icon: far fa-user
+    image: /assets/img/braze_icons/users-01.svg
   - name: Campagnes de reciblage
     link: /docs/user_guide/engagement_tools/campaigns/ideas_and_strategies/retargeting_campaigns/
-    fa_icon: fas fa-bullseye
+    image: /assets/img/braze_icons/target-04.svg
 
 guide_menu_title: "Autres articles"
 guide_menu_list:
   - name:  Bonnes pratiques
     link: /docs/user_guide/engagement_tools/campaigns/ideas_and_strategies/best_practices/
-    fa_icon: fas fa-bullseye
+    image: /assets/img/braze_icons/target-04.svg
   - name: Localisation
     link: /docs/user_guide/engagement_tools/campaigns/ideas_and_strategies/localizing_a_campaign/
-    fa_icon: fas fa-globe
+    image: /assets/img/braze_icons/globe-02.svg
   - name: Campagne d’attribution d’installation
     link: /docs/user_guide/engagement_tools/campaigns/ideas_and_strategies/install_attribution/
-    fa_icon: fas fa-chart-pie
+    image: /assets/img/braze_icons/pie-chart-01.svg
   - name: Connaissance des fonctionnalités et nouvelle version de l’application
     link: /docs/user_guide/engagement_tools/campaigns/ideas_and_strategies/new_features/
-    fa_icon: fas fa-mobile
+    image: /assets/img/braze_icons/phone-02.svg
   - name: Liens d’ajout au calendrier
     link: /docs/user_guide/engagement_tools/campaigns/ideas_and_strategies/add_to_calendar_links/
-    fa_icon: fas fa-calendar
+    image: /assets/img/braze_icons/calendar-date.svg
 ---

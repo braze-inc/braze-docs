@@ -19,22 +19,23 @@ guide_featured_title: "Section Articles"
 guide_featured_list:
   - name: Style personnalisé
     link: /docs/developer_guide/platform_integration_guides/android/news_feed/customization/custom_styling/
-    fa_icon: fa fa-paint-brush
+    image: /assets/img/braze_icons/brush-02.svg
   - name: Gestion manuelle des clics
     link: /docs/developer_guide/platform_integration_guides/android/news_feed/customization/click_listener/
-    fa_icon: fa fa-mouse-pointer
+    image: /assets/img/braze_icons/navigation-pointer-01.svg
   - name: Paires clé-valeur
     link: /docs/developer_guide/platform_integration_guides/android/news_feed/customization/key_value_pairs/
-    fa_icon: fa fa-code
+    image: /assets/img/braze_icons/code-square-01.svg
+
   - name: Indicateurs de messages non lus et lus
     link: /docs/developer_guide/platform_integration_guides/android/news_feed/customization/read_and_unread/
-    fa_icon: fa fa-book
+    image: /assets/img/braze_icons/book-closed.svg
   - name: Badges
     link: /docs/developer_guide/platform_integration_guides/android/news_feed/customization/badges/
-    fa_icon: fa fa-id-badge
+    image: /assets/img/braze_icons/key-01.svg
   - name: GIF
     link: /docs/developer_guide/platform_integration_guides/android/news_feed/customization/gifs/
-    fa_icon: fa-solid fa-file-image
+    image: /assets/img/braze_icons/image-01.svg
 
 
 ---

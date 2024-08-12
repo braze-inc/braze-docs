@@ -10,16 +10,20 @@ description: "This article covers iOS, Android, and FireOS analytics for the Xam
 
 ---
  
-# Xaramin Analytics
+# Xamarin Analytics
 
-> This article covers how to handle analytics for Xamarin.
+> Learn how to generate and review analytics for the Xamarin platform.
 
-## Setting user IDs
+## Session tracking
+
+The Braze SDK reports session data used by the Braze dashboard to calculate user engagement and other analytics integral to understanding your users. Based on the following session semantics, our SDK generates “start session” and “close session” data points that account for session length and session counts viewable within the Braze dashboard.
+
+To set a user ID or start a session, use the `ChangeUser` method, which takes a user ID parameter.
 
 {% tabs %}
 {% tab Android %}
 ```csharp
-Braze.getInstance(context).ChangeUser("YOUR_USER_ID");
+Braze.GetInstance(this).ChangeUser("user_id");
 ```
 
 See the [Android integration instructions]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/setting_user_ids/) for an in-depth discussion of when and how to set and change a user ID.
@@ -27,86 +31,149 @@ See the [Android integration instructions]({{site.baseurl}}/developer_guide/plat
 {% endtab %}
 {% tab iOS %}
 ```csharp
-// C#
-Appboy.SharedInstance().ChangeUser("YOUR_USER_ID");
+App.braze?.ChangeUser("user_id");
 ```
 
-See the [iOS integration instructions]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/setting_user_ids/) for an in-depth discussion of when and how to set and change a user ID.
+See the [iOS integration instructions]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/setting_user_ids/) for an in-depth discussion of when and how to set and change a user ID.
+
 {% endtab %}
 {% endtabs %}
 
-## Tracking custom events
+## Logging custom events
+
+You can record custom events in Braze using `LogCustomEvent` to learn more about your app’s usage patterns and to segment your users by their actions in the dashboard.
+
 {% tabs %}
 {% tab Android %}
 ```csharp
-Braze.getInstance(context).LogCustomEvent("YOUR_EVENT_NAME");
+Braze.GetInstance(this).LogCustomEvent("event_name");
 ```
 
-See the [Android integration instructions]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/) for an in-depth discussion of event tracking best practices and interfaces.
+See the [Android integration instructions]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/tracking_custom_events/) for an in-depth discussion of event tracking best practices and interfaces.
+
 {% endtab %}
 {% tab iOS %}
 ```csharp
-// C#
-Appboy.SharedInstance ().LogCustomEvent ("YOUR_EVENT_NAME");
+App.braze?.LogCustomEvent("event_name");
 ```
 
-**Implementation Example** - `logCustomEvent` is utilized within the `AppboySampleViewController.cs` within the [TestApp.XamariniOS](https://github.com/braze-inc/braze-xamarin-sdk/tree/master/appboy-component/samples/ios-unified/TestApp.XamariniOS) sample application.
+See the [iOS integration instructions]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/tracking_custom_events/) for an in-depth discussion of event tracking best practices and interfaces.
 
-See the [iOS integration instructions]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/tracking_custom_events/) for an in-depth discussion of event tracking best practices and interfaces.
 {% endtab %}
 {% endtabs %}
 
 ## Logging purchases
+
+Record in-app purchases using `LogPurchase` to track your revenue over time and across revenue sources, as well as segment your users by their lifetime value.
+
+Braze supports purchases in multiple currencies. Purchases that you report in a currency other than USD will be shown in the dashboard in USD based on the exchange rate at the date they were reported.
+
 {% tabs %}
 {% tab Android %}
 ```csharp
-Braze.getInstance(context).LogPurchase("product_id", 100);
+Braze.GetInstance(this).LogPurchase("product_id", "USD", new Java.Math.BigDecimal(3.50));
 ```
 
-See the [Android integration instructions]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/logging_purchases/#logging-purchases=) for an in-depth discussion of revenue tracking best practices and interfaces.
+See the [Android integration instructions]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/logging_purchases/) for an in-depth discussion of revenue tracking best practices and interfaces.
+
 {% endtab %}
 {% tab iOS %}
 ```csharp
-// C#
-Appboy.SharedInstance ().LogPurchase ("product_id", "USD", new NSDecimalNumber("10"));
+App.braze?.LogPurchase("product_id", "USD", 3.50);
 ```
 
-**Implementation Example** - You can see user properties being set in the sample application's `EventsAndPurchasesButtonHandler` method inside `AppboySampleViewController.cs`.
+See the [iOS integration instructions]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/logging_purchases/) for an in-depth discussion of revenue tracking best practices and interfaces.
 
-See the [iOS integration instructions]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/logging_purchases/) for an in-depth discussion of revenue tracking best practices and interfaces.
 {% endtab %}
 {% endtabs %}
 
 ### Log purchases at the order level
+
 If you want to log purchases at the order level instead of the product level, you can use order name or order category as the `product_id`. Refer to our [purchase object specification]({{site.baseurl}}/api/objects_filters/purchase_object/#product-id-naming-conventions) to learn more. 
 
-## Setting custom attributes
+### Reserved keys
+
+The following keys are reserved and **cannot** be used as purchase properties:
+
+- `time`
+- `product_id`
+- `quantity`
+- `event_name`
+- `price`
+- `currency`
+
+## Logging custom attributes
+
+Braze provides methods for assigning attributes to users. You’ll be able to filter and segment your users according to these attributes on the dashboard.
+
+### Default user attributes
+
+To assign user attributes automatically collected by Braze, you can use setter methods that come with the SDK. For example, you can set the user's first name:
+
 {% tabs %}
-{% tab %}
+{% tab Android %}
 ```csharp
-Braze.getInstance(context).CurrentUser.SetFirstName("FirstName");
+Braze.GetInstance(this).CurrentUser.SetFirstName("first_name");
 ```
 
-See the [Android integration instructions]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/setting_custom_attributes/) for an in-depth discussion of attribute tracking best practices and interfaces.
 {% endtab %}
 {% tab iOS %}
 
 ```csharp
-// C#
-Appboy.SharedInstance ().User.FirstName = "YOUR_NAME";
+App.braze?.User.SetFirstName("first_name");
 ```
 
-**Implementation Example** - You can see user properties being set in the sample application's `UserPropertyButtonHandler` method inside `AppboySampleViewController.cs`.
+{% endtab %}
+{% endtabs %}
 
-See the [iOS integration instructions]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/setting_custom_attributes/) for an in-depth discussion of attribute tracking best practices and interfaces.
+The following attributes are supported:
+
+- First Name
+- Last Name
+- Gender
+- Date of Birth
+- Home City
+- Country
+- Phone Number
+- Email
+
+### Custom user attributes
+
+In addition to our predefined user attribute methods, Braze also provides custom attributes using `SetCustomUserAttribute` to track data from your applications.
+
+{% tabs %}
+{% tab Android %}
+```csharp
+Braze.GetInstance(this).CurrentUser.SetCustomUserAttribute("custom_attribute_key", true);
+```
+
+See the [Android integration instructions]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/setting_custom_attributes/) for an in-depth discussion of attribute tracking best practices and interfaces.
+
+{% endtab %}
+{% tab iOS %}
+
+```csharp
+App.braze?.User.SetCustomAttributeWithKey("custom_attribute_key", true);
+```
+
+See the [iOS integration instructions]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/setting_custom_attributes/) for an in-depth discussion of attribute tracking best practices and interfaces.
+
 {% endtab %}
 {% endtabs %}
 
 ## Location tracking
 
-- Android: See the [Android integration instructions][2] for information on how to support location tracking.
-- iOS: See the Xamarin [using background location walkthrough][11] and the [iOS integration instructions][12] for information on how to support location tracking.
+For an example of logging and tracking analytics, refer to our [Android MAUI][4] and [iOS MAUI][5] sample applications.
 
-[2]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/location_tracking/#location-tracking
-[11]: http://developer.xamarin.com/guides/cross-platform/application_fundamentals/backgrounding/part_4_ios_backgrounding_walkthroughs/location_walkthrough/
-[12]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/advanced_use_cases/locations_and_geofences/
+{% tabs %}
+{% tab android %}
+For more information, see the [Android integration instructions]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/location_tracking/).
+{% endtab %}
+
+{% tab ios %}
+To support local tracking, see [iOS: Using background location](http://developer.xamarin.com/guides/cross-platform/application_fundamentals/backgrounding/part_4_ios_backgrounding_walkthroughs/location_walkthrough/) and the [iOS integration instructions]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/advanced_use_cases/locations_and_geofences/).
+{% endtab %}
+{% endtabs %}
+
+[4]: https://github.com/braze-inc/braze-xamarin-sdk/blob/master/appboy-component/samples/android-net-maui/BrazeAndroidMauiSampleApp/BrazeAndroidMauiSampleApp/MainActivity.cs
+[5]: https://github.com/braze-inc/braze-xamarin-sdk/blob/master/appboy-component/samples/ios-net-maui/BrazeiOSMauiSampleApp/BrazeiOSMauiSampleApp/MainPage.xaml.cs

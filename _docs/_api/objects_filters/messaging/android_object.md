@@ -10,9 +10,9 @@ description: "This reference article lists and explains the different Android ob
 ---
 # Android object
 
-> The `android_push` object allows you to define or request information related to Android Push and Android Push Alert content via our [messaging endpoints]({{site.baseurl}}/api/endpoints/messaging).
+> The `android_push` object allows you to define or request information related to Android Push and Android Push Alert content through our [messaging endpoints]({{site.baseurl}}/api/endpoints/messaging).
 
-##  Android push object
+## Android push object
 
 You must include an Android push object in `messages` if you want users you have targeted to receive a push on their Android devices. The total number of bytes in your `alert` string and `extra` object should not exceed 4,000. The Messaging API will return an error if you exceed the message size allowed by Google.
 
@@ -35,18 +35,18 @@ You must include an Android push object in `messages` if you want users you have
    "push_icon_image_url": (optional, string) an image URL for the large icon,
    "accent_color": (optional, integer) accent color to be applied by the standard Style templates when presenting this notification, an RGB integer value,
    "send_to_most_recent_device_only": (optional, boolean) defaults to false, if set to true, Braze will only send this push to a user's most recently used Android device, rather than all eligible Android devices,
-   "buttons" : (optional, array of Android Push Action Button Objects) push action buttons to display
-   "conversation_data" : (optional, Android Conversation Push Object) the data to be displayed via Conversation Push.
+   "buttons" : (optional, array of Android push action button objects) push action buttons to display
+   "conversation_data" : (optional, Android Conversation Push Object) the data to be displayed through Conversation Push.
 }
 ```
 
 You can send "Big Picture" notifications by specifying the key `appboy_image_url` in the `extra` object. The value for `appboy_image_url` should be a URL that links to where your image is hosted. Images need to be cropped to a 2:1 aspect ratio and should be at least 600 x 300 px. Images used for notifications will only display on devices running Jelly Bean (Android 4.1) or higher.
 
-#### Additional parameter details
+### Additional parameter details
 
 | Parameter | Details |
 | --------- | ------- |
-| `priority` | This parameter will accept values from `-2` to `2`, where `-2` represents "MIN" priority and `2` represents "MAX". `0` is the "DEFAULT" value. <br> <br> Any values sent that outside of that integer range will default to 0. For more information on which priority level to use, see our section on [Android notification priority][29]. |
+| `priority` | This parameter will accept values from `-2` to `2`, where `-2` represents "MIN" priority and `2` represents "MAX". `0` is the "DEFAULT" value. <br> <br> Any values sent outside of that range will default to 0. For more information on which priority level to use, see [Android notification priority]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/customization/advanced_settings#notification-priority). |
 | `collapse_key` | FCM can simultaneously store only up to four collapse keys per device. If you use more than four collapse keys, FCM does not make any guarantees as to which ones will be kept. Braze uses one of these by default for campaigns, so make sure to specify only up to three additional collapse keys for Android messages. |
 | `push_icon_image_url` | The value for the large icon parameter should be a URL that links to where your image is hosted. <br> <br> Images need to be cropped to a 1:1 aspect ratio and should be at least 40x40. |
 | `notification_channel` | If this is not specified, Braze will attempt to send the notification payload with the [dashboard fallback][45] channel ID. For more, see [Notification channels][44] and refer to the steps for [defining notification channels][43] during integration. |
@@ -99,7 +99,6 @@ The concepts in this message correspond to those in the [Android People and Conv
 ```
 
 [28]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/silent_push_notifications/#silent-push-notifications
-[29]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/deep_linking/
 [44]: {{site.baseurl}}/user_guide/message_building_by_channel/push/notification_channels/
 [43]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/integration/standard_integration/#step-5-define-notification-channels
 [45]: {{site.baseurl}}/user_guide/message_building_by_channel/push/android/notification_channels/#dashboard-fallback-channel

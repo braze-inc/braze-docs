@@ -29,7 +29,7 @@ By default, Braze will collect the following [device-level properties][1] to all
 * `TIMEZONE`
 
 {% alert note %}
-`AD_TRACKING_ENABLED` and `TIMEZONE` aren't collected if they are `null` or blank. `GOOGLE_ADVERTISING_ID` is not collected automatically by the SDK and must be passed in via [`setGoogleAdvertisingId`][4].
+`AD_TRACKING_ENABLED` and `TIMEZONE` aren't collected if they are `null` or blank. `GOOGLE_ADVERTISING_ID` is not collected automatically by the SDK and must be passed in via [`setGoogleAdvertisingId`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-i-braze/set-google-advertising-id.html).
 {% endalert %}
 
 You can disable or specify the properties you wish to collect by setting them using [`BrazeConfig.Builder.setDeviceObjectAllowlistEnabled()`][2] and [`BrazeConfig.Builder.setDeviceObjectAllowlist()`][3].
@@ -47,4 +47,4 @@ Visit our [SDK Data Collection]({{site.baseurl}}/user_guide/data_and_analytics/u
 [1]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.enums/-device-key/index.html
 [2]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.configuration/-braze-config/-builder/set-device-object-allowlist-enabled.html
 [3]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.configuration/-braze-config/-builder/set-device-object-allowlist.html
-[4]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-i-braze/set-google-advertising-id.html
+

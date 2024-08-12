@@ -14,28 +14,28 @@ guide_featured_title: "Canaux de communication"
 guide_featured_list:
   - name: Cartes de contenu
     link: /docs/user_guide/message_building_by_channel/content_cards/reporting/
-    image: /assets/img/cc_icon.png
+    image: /assets/img/braze_icons/channel-content-cards.svg
   - name: E-mail
     link: /docs/user_guide/message_building_by_channel/email/reporting_and_analytics/email_reporting/
-    image: /assets/img/email_icon.png
+    image: /assets/img/braze_icons/channel-email.svg
   - name: Messages in-app
     link: /docs/user_guide/message_building_by_channel/in-app_messages/reporting/
-    image: /assets/img/in-app_message_icon.png
+    image: /assets/img/braze_icons/channel-in-app-messages.svg
   - name: Notification push
     link: /docs/user_guide/message_building_by_channel/push/push_reporting/
-    image: /assets/img/push_icon.png
+    image: /assets/img/braze_icons/channel-mobile-push.svg
   - name: SMS
     link: /docs/user_guide/message_building_by_channel/sms/sms_campaign_analytics/
-    image: /assets/img/sms_icon.png
+    image: /assets/img/braze_icons/channel-sms.svg
 
 
 guide_menu_title: "Autres articles"
 guide_menu_list:
   - name: Rapports d'entonnoir
     link: /docs/user_guide/data_and_analytics/reporting/funnel_reports/
-    fa_icon: fas fa-filter
+    image: /assets/img/braze_icons/flag-02.svg
   - name: Rapports de rétention
     link: /docs/user_guide/data_and_analytics/reporting/retention_reports/
-    fa_icon: fas fa-user-check
+    image: /assets/img/braze_icons/user-check-01.svg
 
 ---

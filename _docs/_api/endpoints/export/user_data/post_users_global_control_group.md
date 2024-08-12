@@ -147,9 +147,9 @@ Authorization: Bearer YOUR-REST-API-KEY
 }
 ```
 
-Once made available, the URL will only be valid for a few hours. As such, we highly recommend that you add your own S3 credentials to Braze.
+After the URL is made available, it will only be valid for a few hours. As such, we highly recommend that you add your own S3 credentials to Braze.
 
-### Sample user export file output
+### Example user export file output
 
 User export object (we will include the least data possible - if a field is missing from the object it should be assumed to be null, false, or empty):
 

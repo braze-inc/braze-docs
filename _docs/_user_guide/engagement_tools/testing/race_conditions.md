@@ -34,10 +34,10 @@ There are a few scenarios where multiple API endpoints can also result in this r
 
 When user information is sent to Braze via the `/users/track` endpoint, it may occasionally take a few seconds to process. As a result, when requests are made to the `/users/track` and [Messaging endpoints][4] at the same time, there is currently no guarantee that the user information will be updated before a message is sent.
 
-For both of the preceding scenarios, if these requests are made in the same API request, there should be no issue.
+For both of the preceding scenarios, if these requests are made in the same API request, there will be no issue.
 
 {% alert note %}
-If user attributes and events are sent in the same request (either from `/users/track` or from the SDK), then Braze will generally process attributes before events or attempting to send any message.
+If user attributes and events are sent in the same request (either from `/users/track` or from the SDK), then Braze will process attributes before events or attempting to send any message.
 {% endalert %}
 
 Note that if you are sending a scheduled message API request, these requests must be separate, and a user must be created before sending the scheduled API request.

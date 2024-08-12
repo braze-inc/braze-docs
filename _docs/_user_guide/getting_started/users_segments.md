@@ -37,7 +37,7 @@ Attributes are specific characteristics or properties associated with a user. Th
 
 #### Standard attributes
 
-Standard attributes are predefined attributes that Braze provides. These are automatically tracked by Braze once the SDK is integrated into your app. They are common pieces of user information that most apps would find useful, such as demographics and device data. Examples of standard attributes include:
+Standard attributes are predefined attributes that Braze provides. These are automatically tracked by Braze after the SDK is integrated into your app. They are common pieces of user information that most apps would find useful, such as demographics and device data. Examples of standard attributes include:
 
 - First Name
 - Last Name
@@ -78,7 +78,7 @@ Events represent specific actions or behaviors performed by users within your ap
 
 #### Standard events
 
-[Standard events]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/events#standard-events) are predefined events that Braze automatically tracks once the SDK is integrated into your app or site. Some examples of standard events include:
+[Standard events]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/events#standard-events) are predefined events that Braze automatically tracks after the SDK is integrated into your app or site. Some examples of standard events include:
 
 - **Session Start:** This event is triggered when a user opens the app.
 - **Session End:** This event is triggered when a user closes the app.
@@ -122,7 +122,7 @@ Tips for working with segments:
 - You’re not limited to using one filter at a time. Create finely tuned, granular segments by layering multiple filters on top of each other.
 - You can use the actions or inactions of your users to understand how to reach your users where they want to engage with you. These actions might be custom events, engagement with an existing campaign or Canvas, or even a specific message within a Canvas.
 
-### Example
+### Use case
 
 Suppose you run an online clothing store, and you've set up a messaging flow to send a series of emails to users who have added an item to their cart but have not completed the purchase. This abandoned cart flow might include an initial reminder email, a follow-up email offering a discount, and a final reminder email.
 

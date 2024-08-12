@@ -8,7 +8,7 @@ description: "Cet article de référence explique les bases des webhooks."
 
 ---
 
-# [![Cours d’apprentissage Braze]({% image_buster /assets/img/bl_icon2.png %})](https://learning.braze.com/understanding-webhooks){: style="float:right;width:120px;border:0;" class="noimgborder"}À propos des webhooks
+# [![Cours d’apprentissage Braze]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/understanding-webhooks){: style="float:right;width:120px;border:0;" class="noimgborder"}À propos des webhooks
 
 > Cet article de référence explique les bases des webhooks pour vous fournir les blocs de construction nécessaires pour créer les vôtres. Vous cherchez les étapes nécessaires pour créer un webhook dans Braze ? Reportez-vous à la section [Création d’un webhook][1].
 

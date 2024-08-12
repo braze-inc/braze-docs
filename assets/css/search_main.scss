@@ -6,14 +6,25 @@ $base_url : '/docs';
 $white: #ffffff;
 $black: #000000;
 $black-shark: #212123;
+$braze-purple: #801ED7;
+$braze-pink: #FFA4FB;
+$braze-orange: #FFA524;
+
+// Other versions of core palette
+$braze-purple-light: #C9C4FF;
+$braze-purple-dark: #300266;
+$braze-pink-light: #F8D3E8;
+$braze-pink-dark: #91186E;
+$braze-orange-light: #FFD4BC;
+$braze-orange-dark: #E9371F;
+
+// Old colors
 $navy-bay: #27368f;
 // Lighter versions of navy-bay
 $navy-cove: #7c86bc;
-
-
 $blue-scooter: #3accdd;
 
-$braze-link-color: $blue-scooter;
+$braze-link-color: $braze-purple-dark;
 
 // Lighter versions of blue-scooter
 $blue-blizzard: #a6e8f0;
@@ -43,16 +54,16 @@ $grey-athens: #f4f4f7;
 
 $search_font_color: #58585A;
 //Font Variables
-$braze-light: 'Sailec W00 Light', Arial, Helvetica, sans-serif;
-$braze-light-oblique: 'Sailec W00 Light Italic', Arial, Helvetica, sans-serif;
-$braze-thin: 'Sailec W00 Thin', Arial, Helvetica, sans-serif;
-$braze-regular: 'Sailec W00 Regular', Arial, Helvetica, sans-serif;
-$braze-regular-oblique: 'Sailec W00 Italic', Arial, Helvetica, sans-serif;
-$braze-heavy: 'Sailec W00 Demi', Arial, Helvetica, sans-serif;
-$braze-heavy-oblique:'Sailec W00 Demi Italic', Arial, Helvetica, sans-serif;
-$braze-medium: 'Sailec W00 Medium', Arial, Helvetica, sans-serif;
-$braze-medium-oblique: 'Sailec W00 Medium Italic', Arial, Helvetica, sans-serif;
-$braze-black: 'Sailec W00 Bold', Arial, Helvetica, sans-serif;
-$braze-black-oblique: 'Sailec W00 Bold Italic', Arial, Helvetica, sans-serif;
+$braze-light: 'Aribau Grotesk Light', 'Aribau Grotesk', 'Aribau Grotesk Regular', Arial, Helvetica, sans-serif;
+$braze-light-oblique: 'Aribau Grotesk Light Italic','Aribau Grotesk', 'Aribau Grotesk Regular', Arial, Helvetica, sans-serif;
+$braze-thin: 'Aribau Grotesk Thin', 'Aribau Grotesk', 'Aribau Grotesk Regular', Arial, Helvetica, sans-serif;
+$braze-regular: 'Aribau Grotesk Regular', 'Aribau Grotesk', 'Aribau Grotesk Regular', Arial, Helvetica, sans-serif;
+$braze-regular-oblique: 'Aribau Grotesk Regular Italic', 'Aribau Grotesk', 'Aribau Grotesk Regular', Arial, Helvetica, sans-serif;
+$braze-heavy: 'Aribau Grotesk Bold', 'Aribau Grotesk', 'Aribau Grotesk Regular', Arial, Helvetica, sans-serif;
+$braze-heavy-oblique:'Aribau Grotesk Bold Italic', 'Aribau Grotesk', 'Aribau Grotesk Regular', Arial, Helvetica, sans-serif;
+$braze-medium: 'Aribau Grotesk Bold', 'Aribau Grotesk', 'Aribau Grotesk Regular', Arial, Helvetica, sans-serif;
+$braze-medium-oblique: 'Aribau Grotesk Bold Italic', 'Aribau Grotesk', 'Aribau Grotesk Regular', Arial, Helvetica, sans-serif;
+$braze-black: 'Aribau Grotesk Black', 'Aribau Grotesk', Arial, Helvetica, sans-serif;
+$braze-black-oblique: 'Aribau Grotesk Bold Italic', 'Aribau Grotesk', 'Aribau Grotesk Regular', Arial, Helvetica, sans-serif;
 
 @import 'search_page.scss';

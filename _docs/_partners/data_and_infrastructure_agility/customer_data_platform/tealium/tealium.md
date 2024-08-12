@@ -1,7 +1,7 @@
 ---
 nav_title: Tealium
 article_title: Tealium
-page_order: 2
+page_order: 1
 alias: /partners/tealium/
 description: "This reference article outlines the partnership between Braze and Tealium, a universal data hub that enables you to connect mobile, web, and alternative data to other third-party sources."
 page_type: partner
@@ -44,7 +44,7 @@ To learn more about the pros and cons of each method, refer to the following [Te
 {% alert important %}
 Tealium offers both batch and non-batch connector actions. The non-batch connector should be used when real-time requests are important to the use case and there are no concerns about hitting Braze's API rate limit specifications. Contact Braze Support or your customer success manager if you have any questions.<br><br>
 
-For batch connectors, requests are queued until one of the following thresholds is met:
+For batch connectors, requests are queued until one of the following thresholds is met:<br><br>
 - Maximum number of requests: 75
 - Maximum time since oldest request: 10 minutes
 - Maximum size of requests: 1 MB

@@ -50,7 +50,7 @@ There are two types of editors used to create a Content Block—classic and drag
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% alert tip %}
-When creating Content Blocks, it sometimes helps to visualize HTML and Liquid by adding line breaks. If these line breaks are left in during sending, you risk having extraneous spaces that can affect how the block will render. To avoid this, utilize the **Capture** tag on your block along with the **&#124; strip** filter. 
+When creating Content Blocks, it sometimes helps to visualize HTML and Liquid by adding line breaks. If these line breaks are left in during sending, you risk having extraneous spaces that can affect how the block will render. To avoid this, use the **Capture** tag on your block along with the **&#124; strip** filter. 
 {% raw %}
 ```
 {% capture your_variable %}
@@ -81,9 +81,11 @@ You can also [duplicate]({{site.baseurl}}/user_guide/engagement_tools/templates_
 
 ### Previewing Content Blocks
 
-After adding a Content Block in an active campaign or Canvas, you can preview this Content Block from the Content Blocks Library by hovering over the Content Block and selecting the <i class="fa fa-eye preview-icon"></i> **Preview** icon.
+After adding a Content Block in an active campaign or Canvas, you can preview this Content Block from the Content Blocks Library by hovering over the Content Block and selecting the <i class="fa fa-eye preview-icon"></i> **Preview** icon. 
 
-![][7]
+This preview includes information about the Content Block such as who created it, tags, creation date, last edited date, description, editor type, inclusion count with details, and an actual preview of the Content Block.
+
+![][7]{: style="max-width:60%;"} 
 
 ### Nesting Content Blocks
 

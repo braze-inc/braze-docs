@@ -13,17 +13,17 @@ guide_featured_title: "Section articles"
 guide_featured_list:
 - name: About Webhooks
   link: /docs/user_guide/message_building_by_channel/webhooks/understanding_webhooks/
-  fa_icon: fas fa-check
+  image: /assets/img/braze_icons/check-square-broken.svg
 - name: Creating a Webhook
   link: /docs/user_guide/message_building_by_channel/webhooks/creating_a_webhook/
-  fa_icon: fas fa-undo
+  image: /assets/img/braze_icons/refresh-ccw-01.svg
 - name: Creating a Webhook Template
   link: /docs/user_guide/message_building_by_channel/webhooks/webhook_template/
-  fa_icon: fas fa-table
+  image: /assets/img/braze_icons/table.svg
 - name: Braze-to-Braze Webhooks
   link: /docs/user_guide/message_building_by_channel/webhooks/braze_to_braze_webhooks/
-  fa_icon: fas fa-exchange-alt
+  image: /assets/img/braze_icons/switch-horizontal-01.svg
 - name: Reporting
   link: /docs/user_guide/message_building_by_channel/webhooks/reporting/
-  fa_icon: fas fa-chart-bar
+  image: /assets/img/braze_icons/bar-chart-01.svg
 ---

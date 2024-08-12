@@ -9,7 +9,7 @@ search_tag: Partner
 
 ---
 
-# [![Braze Learning course]({% image_buster /assets/img/bl_icon2.png %})](https://learning.braze.com/amplitude-integration-with-braze){: style="float:right;width:120px;border:0;" class="noimgborder"}Amplitude for Currents
+# [![Braze Learning course]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/amplitude-integration-with-braze){: style="float:right;width:120px;border:0;" class="noimgborder"}Amplitude for Currents
 
 > [Amplitude](https://amplitude.com/) is a product analytics and business intelligence platform.
 
@@ -32,8 +32,9 @@ To use this feature, your Amplitude user ID must match the Braze external ID.
 {% endalert %}
 
 Braze will only send event data for users who have their `external_user_id` set or anonymous users who have their `device_id` set. For the anonymous users, you will need to sync your Amplitude device ID with the Braze device ID in the SDK. For example:
+
 ```java
-amplitude.setDeviceId(Apppboy.getInstance(context).getDeviceId();)
+amplitude.setDeviceId(Appboy.getInstance(context).getDeviceId();)
 ```
 
 You can export two types of events to Amplitude: [Message Engagement Events](#supported-currents-events) consisting of the Braze Events directly related to message sending, and [Customer Behavior Events](#supported-currents-events), including other app or website activity such as sessions, custom events, and purchases tracked through the platform. All regular events are prefixed with `[Appboy]`, and all custom events are prefixed with `[Appboy] [Custom Event]`. Custom event and purchase event properties are prefixed with `[Custom event property]` and `[Purchase property]`, respectively.

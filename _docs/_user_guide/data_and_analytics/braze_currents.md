@@ -16,28 +16,28 @@ guide_featured_title: "Section articles"
 guide_featured_list:
 - name: "Setting Up Currents"
   link: /docs/user_guide/data_and_analytics/braze_currents/setting_up_currents/
-  fa_icon: fas fa-warehouse
+  image: /assets/img/braze_icons/building-01.svg
 - name: "Available Partners"
   link: /docs/user_guide/data_and_analytics/braze_currents/available_partners/
-  fa_icon: fas fa-handshake
+  image: /assets/img/braze_icons/heart-hand.svg
 - name: "Event Delivery Semantics"
   link: /docs/user_guide/data_and_analytics/braze_currents/event_delivery_semantics/
-  fa_icon: fas fa-keyboard
+  image: /assets/img/braze_icons/data.svg
 - name: "Message Engagement Events"
   link: /docs/user_guide/data_and_analytics/braze_currents/message_engagement_events/
-  fa_icon: fas fa-reply-all
+  image: /assets/img/braze_icons/message-plus-square.svg
 - name: "Customer Behavior Events"
   link: /docs/user_guide/data_and_analytics/braze_currents/customer_behavior_events/
-  fa_icon: fas fa-user
+  image: /assets/img/braze_icons/users-01.svg
 - name: "How Braze Uses Currents"
   link: /docs/user_guide/data_and_analytics/braze_currents/how_braze_uses_currents/
-  fa_icon: fas fa-arrows-alt
+  image: /assets/img/braze_icons/expand-05.svg
 - name: "Transfer Data from Amazon"
   link: /docs/user_guide/data_and_analytics/braze_currents/s3_to_snowflake/
-  fa_icon: fab fa-amazon
+  image: /assets/img/braze_icons/amazon.svg
 - name: "Transfer Data to Redshift"
   link: /docs/user_guide/data_and_analytics/braze_currents/transferring_data_to_redshift/
-  fa_icon: fas fa-exchange-alt
+  image: /assets/img/braze_icons/switch-horizontal-01.svg
 
 ---
 

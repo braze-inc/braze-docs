@@ -10,7 +10,7 @@ channel:
 noindex: true
 ---
 
-{% multi_lang_include archive/objective-c-deprecation-notice.md %}
+{% multi_lang_include deprecations/objective-c.md %}
 
 # iOS 10 rich notifications
 
@@ -71,7 +71,7 @@ static NSString *const AppboyAPNSDictionaryAttachmentTypeKey = @"type";
 
 To manually display push with a Braze payload, download the content from the value under `AppboyAPNSDictionaryAttachmentURLKey`, save it as a file with the file type stored under the `AppboyAPNSDictionaryAttachmentTypeKey` key, and add it to the notification attachments.
 
-### Sample code
+### Example code
 
 You can write the service extension in either Objective-C or Swift.
 

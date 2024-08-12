@@ -1,7 +1,6 @@
 ---
 nav_title: Stylitics
 article_title: Stylitics
-
 description: "This reference article outlines the partnership between Braze and Stylitics, a cloud-based SaaS platform that allows you to enhance your existing email campaigns with engaging and relevant bundled content, creating a personalized customer experience."
 alias: /partners/stylitics/
 page_type: partner

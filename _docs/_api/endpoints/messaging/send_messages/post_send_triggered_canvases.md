@@ -152,6 +152,20 @@ curl --location --request POST 'https://rest.iad-01.braze.com/canvas/trigger/sen
 
 Message sending endpoint responses will include the message's `dispatch_id` for reference back to the dispatch of the message. The `dispatch_id` is the ID of the message dispatch (unique ID for each "transmission" sent from the Braze platform). Check out [Dispatch ID behavior]({{site.baseurl}}/help/help_articles/data/dispatch_id/) for more information.
 
+### Example success response
+
+The status code 201 could return the following response body. If the Canvas is archived, stopped, or paused, the Canvas will not be sent through this endpoint. 
+
+```
+{
+  "notice": "The Canvas is paused. Resume the Canvas to ensure trigger requests will take effect.", 
+  "dispatch_id": "example_dispatch_id", 
+  "message": "success"
+}
+```
+
+If your Canvas is archived, you'll see this `notice` message: "The Canvas is archived. Unarchive the Canvas to ensure trigger requests will take effect." If your Canvas is not active, you'll see this `notice` message: "The Canvas is paused. Resume the Canvas to ensure trigger requests will take effect."
+
 ## Create send endpoint
 
 **Using the Attributes Object in Canvas**

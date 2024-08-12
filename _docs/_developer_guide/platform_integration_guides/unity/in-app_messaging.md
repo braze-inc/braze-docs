@@ -31,6 +31,8 @@ The initial in-app message display operation can be set in Braze config via the 
 
 On iOS, in-app messages from Braze are automatically displayed natively. To disable this functionality, set game object listeners in the Braze configuration editor and ensure **Braze Displays In-App Messages** is not selected.
 
+The initial in-app message display operation can be set in Braze config via the "In App Message Manager Initial Display Operation".
+
 {% endtab %}
 {% endtabs %}
 

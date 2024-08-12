@@ -19,7 +19,7 @@ The change will make the filter more intuitive and more consistent with the beha
 
 <br>
 
-## Example
+## Use case
 
 The following campaign shown sends at 9 pm on April 16. The audience's segmentation is "Made More than 2 Purchases in the past 3 days".
 

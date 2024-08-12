@@ -131,8 +131,8 @@ valid_partner_list:
   url: /docs/partners/message_personalization/location/bluedot/
 - name: NPAW
   url: /docs/partners/data_and_infrastructure_agility/analytics/npaw/
-- name: Phrasee
-  url: /docs/partners/data_and_infrastructure_agility/ab_testing/phrasee/
+- name: Jacquard
+  url: /docs/partners/data_and_infrastructure_agility/ab_testing/jacquard/
 - name: optilyz
   url: /docs/partners/message_orchestration/additional_channels/direct_mail/optilyz/
 - name: Digioh
@@ -289,6 +289,8 @@ valid_partner_list:
   url: /docs/partners/message_orchestration/channel_extensions/surveys/typeform/
 - name: Scuba
   url: /docs/partners/data_and_infrastructure_agility/analytics/scuba/
+- name: Celebrus
+  url: /docs/partners/data_and_infrastructure_agility/analytics/celebrus/
 - name: Friendbuy
   url: /docs/partners/message_orchestration/channel_extensions/loyalty/friendbuy/
 - name: Alpaco
@@ -297,4 +299,8 @@ valid_partner_list:
   url: /docs/partners/message_personalization/dynamic_content/niftyimages
 - name: MetaRouter
   url: /docs/partners/data_and_infrastructure_agility/workflow_automation/metarouter/
+- name: Treasure Data
+  url: /docs/partners/data_and_infrastructure_agility/cohort_import/treasuredata/
+- name: LiveRamp
+  url: /docs/partners/data_and_infrastructure_agility/advertising/liveramp/
 ---

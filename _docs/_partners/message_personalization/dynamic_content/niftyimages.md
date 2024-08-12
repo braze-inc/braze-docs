@@ -13,7 +13,7 @@ search_tag: Partner
 
 ## Prerequisites
 
-NiftyImages works with Braze out-of-the-box with no integration required. To get started, all you need is a [NiftyImages account](https://niftyimages.com/Signup).
+NiftyImages works with the default Braze platform with no integration required. To get started, all you need is a [NiftyImages account](https://niftyimages.com/Signup).
 
 ## Supported features
 

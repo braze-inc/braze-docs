@@ -14,7 +14,7 @@ page_type: reference
 
 ## Step 1: Install the Braze library
 
-You can install the Braze library using one of the following methods. If your website uses a `Content-Security-Policy`, refer to our [CSP Header Guide][19] before installing the library.
+You can install the Braze library using one of the following methods. If your website uses a `Content-Security-Policy`, refer to our [Content security policy headers guide]({{site.baseurl}}/developer_guide/platform_integration_guides/web/content_security_policy/) before installing the library.
 
 {% alert important %}
 While most ad blockers will not block the Braze Web SDK, some more restrictive ad blockers are known to cause issues.
@@ -24,7 +24,7 @@ While most ad blockers will not block the Braze Web SDK, some more restrictive a
 {% tab package manager %}
 If your site uses NPM or Yarn package managers, you can add the [Braze NPM package](https://www.npmjs.com/package/@braze/web-sdk) as a dependency.
 
-Typescript definitions are now included as of v3.0.0. For notes on upgrading from 2.x to 3.x, see our [Changelog][17].
+Typescript definitions are now included as of v3.0.0. For notes on upgrading from 2.x to 3.x, see our [changelog](https://github.com/braze-inc/braze-web-sdk/blob/master/UPGRADE_GUIDE.md).
 
 ```bash
 npm install --save @braze/web-sdk
@@ -47,7 +47,7 @@ The Braze Web SDK can be installed from the Google Tag Manager Template Library.
 1. Initialization tag: loads the Web SDK onto your website and optionally sets the External User ID.
 2. Actions tag: used to trigger custom events, purchases, change user IDs, or toggle SDK tracking.
 
-Visit the [Google Tag Manager integration guide][18] for more information.
+Visit the [Google Tag Manager integration guide]({{site.baseurl}}/developer_guide/platform_integration_guides/web/google_tag_manager/) for more information.
 {% endtab %}
 
 {% tab braze cdn %}
@@ -97,7 +97,7 @@ Anonymous users on mobile or web devices may be counted towards your [MAU]({{sit
 
 ## Step 3: Set up push notifications (optional)
 
-To set up push notifications for the Braze Web SDK, additional set up is required. For a full walkthrough, see [Push notifications for web][16].
+To set up push notifications for the Braze Web SDK, additional set up is required. For a full walkthrough, see [Push notifications for web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/push_notifications/integration/).
 
 ## Logging
 
@@ -173,7 +173,7 @@ You can keep up-to-date with our latest release [following our release feed](htt
 - Update the Braze library version by changing the version number of `https://js.appboycdn.com/web-sdk/[OLD VERSION NUMBER]/braze.min.js`, or in your package manager's dependencies.
 - If you have web push integrated, update the service worker file on your site - by default, this is located at `/service-worker.js` at your site's root directory, but the location may be customized in some integrations. You must access the root directory to host a service worker file.
 
-These two files must be updated in coordination with each other to ensure proper functionality.
+These two files must be updated in coordination with each other for proper functionality.
 
 ## Alternative integration methods
 
@@ -271,7 +271,3 @@ When using Jest, you may see an error similar to `SyntaxError: Unexpected token 
 ```
 
 [9]: https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html "JSDocs"
-[16]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/push_notifications/integration/
-[17]: https://github.com/braze-inc/braze-web-sdk/blob/master/UPGRADE_GUIDE.md
-[18]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/google_tag_manager/
-[19]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/content_security_policy/

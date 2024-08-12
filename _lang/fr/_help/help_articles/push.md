@@ -13,15 +13,15 @@ guide_menu_title: ""
 guide_menu_list:
   - name: Messages d’erreur « Push » courants
     link: /docs/help/help_articles/push/push_error_codes/
-    fa_icon: fas fa-exclamation-circle
+    image: /assets/img/braze_icons/alert-circle.svg
   - name: Définition de l’activation Push
     link: /docs/help/help_articles/push/defining_push_enablement/
-    fa_icon: fas fa-book-open
+    image: /assets/img/braze_icons/book-closed.svg
   - name: Notifications push manquantes
     link: /docs/help/help_articles/push/no_push_notification_was_received/
-    fa_icon: fas fa-comment-slash
+    image: /assets/img/braze_icons/message-x-circle.svg
   - name: Migration des jetons Push
     link: /docs/help/help_articles/push/push_token_migration/
-    fa_icon: fas fa-map-signs
+    image: /assets/img/braze_icons/map-01.svg
 
 ---

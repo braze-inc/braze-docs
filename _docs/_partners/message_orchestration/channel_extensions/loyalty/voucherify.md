@@ -5,21 +5,20 @@ alias: /partners/voucherify/
 layout: dev_guide
 guide_top_header: "Voucherify"
 guide_top_text: "Voucherify is an all-in-one promotional platform that allows users to automatically send personalized coupons, gift cards, loyalty cards, referral codes, and more – all through their Braze account while tracking redemption and campaign growth at every step."
-description: "This landing page is home to all things Voucherify including how to integrate, how to fetch data through Connected Content, distributions with custom attributes, and Voucherify and Promotion Codes list."
-
+description: "This landing page is home to all things Voucherify including how to integrate, how to fetch data through Connected Content, distributions with custom attributes, and Voucherify and promotion codes list."
 guide_featured_list:
 - name: Voucherify
   link: /docs/partners/message_orchestration/channel_extensions/loyalty/voucherify/voucherify/
-  fa_icon: fa fa-percent
+  image: /assets/img/braze_icons/percent-02.svg
 - name: Fetching data through Connected Content
   link: /docs/partners/message_orchestration/channel_extensions/loyalty/voucherify/voucherify_fetching_data_through_braze_connected_content/
-  fa_icon: fa fa-plug
+  image: /assets/img/braze_icons/link-05.svg
 - name: Distributions with Custom Attributes
   link: /docs/partners/message_orchestration/channel_extensions/loyalty/voucherify/voucherify_distribution_with_braze_custom_attributes/
-  fa_icon: fa fa-paper-plane
+  image: /assets/img/braze_icons/send-01.svg
 - name: Voucherify and Promotion Codes List
   link: /docs/partners/message_orchestration/channel_extensions/loyalty/voucherify/voucherify_using_braze_promotion_codes_list/
-  fa_icon: fa fa-bullhorn
+  image: /assets/img/braze_icons/announcement-02.svg
   
 ---
 

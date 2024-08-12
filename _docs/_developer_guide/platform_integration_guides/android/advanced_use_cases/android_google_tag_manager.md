@@ -164,8 +164,8 @@ public class BrazeGtmTagProvider implements CustomTagProvider {
   private static Context sApplicationContext;
 
   /**
-   * Must be set before calling any of the follwing methods to
-   * ensure that the proper application context is available when needed.
+   * Must be set before calling any of the following methods
+   * so that the proper application context is available when needed.
    *
    * Recommended to be called in your {@link Application#onCreate()}.
    */
@@ -372,8 +372,8 @@ class BrazeGtmTagProvider : CustomTagProvider {
     private var sApplicationContext: Context? = null
 
     /**
-     * Must be set before calling any of the following methods to
-     * ensure that the proper application context is available when needed.
+     * Must be set before calling any of the following methods so
+     * that the proper application context is available when needed.
      *
      * Recommended to be called in your [Application.onCreate].
      */

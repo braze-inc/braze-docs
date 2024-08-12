@@ -47,12 +47,12 @@ If you are unable to meet both the audience size requirement while building your
 
 ## Data considerations
 
-The following lists some questions to ask yourself as you set up Predictive Churn. Machine learning models are only as good as the data that trains them, so having good data hygiene practices and understanding what goes into the model will make a big difference.
+The following are questions to ask yourself as you set up Predictive Churn. Machine learning models are only as good as the data that trains them, so having good data hygiene practices and understanding what goes into the model will make a big difference.
 
-- What high-value actions lead to retention and loyalty?
+- What High-Value Actions lead to retention and loyalty?
 - Have you set up custom events that map back to these specific actions? Predictive Churn works with custom events as opposed to custom attributes.
 - Are you thinking in windows of time within which you'll define churn? You can define churn as something that happens in up to 60 days.
-- Have you considered times of the year that lead to atypical user behaviors - like holidays? Rapid shifts in consumer behavior will impact your predictions. 
+- Have you considered times of the year that lead to atypical user behaviors such as holidays? Rapid shifts in consumer behavior will impact your predictions. 
 
 [1]: {% image_buster /assets/img/churn/churn3.png %}
 [3]: {% image_buster /assets/img/churn/audience_size_error.png %}

@@ -13,58 +13,58 @@ guide_featured_title: "Articles courants"
 guide_featured_list:
 - name: À propos de l’e-mail
   link: /docs/user_guide/message_building_by_channel/email/about/
-  fa_icon: fas fa-check
+  image: /assets/img/braze_icons/check-square-broken.svg
 - name: Créer une campagne e-mail
   link: /docs/user_guide/message_building_by_channel/email/creating_an_email_campaign/
-  fa_icon: fas fa-envelope
+  image: /assets/img/braze_icons/mail-01.svg
 - name: Éditeur Drag & Drop
   link: /docs/user_guide/message_building_by_channel/email/drag_and_drop/
-  fa_icon: fas fa-paint-brush
+  image: /assets/img/braze_icons/brush-02.svg
 - name: Modèles
   link: /docs/user_guide/message_building_by_channel/email/templates/
-  fa_icon: fas fa-table
+  image: /assets/img/braze_icons/table.svg
 - name: Gérer les inscriptions des utilisateurs
   link: /docs/user_guide/message_building_by_channel/email/managing_user_subscriptions/
-  fa_icon: fas fa-users
+  image: /assets/img/braze_icons/users-01.svg
 
 guide_menu_title: "Autres articles"
 guide_menu_list:
 - name: Centre de préférences
   link: /docs/user_guide/message_building_by_channel/email/preference_center/
-  fa_icon: fa-solid fa-list-check
+  image: /assets/img/braze_icons/list.svg
 - name: Inlining CSS
   link: /docs/user_guide/message_building_by_channel/email/css_inline/
-  fa_icon: fas fa-align-left
+  image: /assets/img/braze_icons/align-left.svg
 - name: Inbox Vision
   link: /docs/user_guide/message_building_by_channel/email/inbox_vision/
-  fa_icon: fas fa-inbox
+  image: /assets/img/braze_icons/inbox-01.svg
 - name: E-mails transactionnels
   link: /docs/user_guide/message_building_by_channel/email/transactional_message_api_campaign/
-  fa_icon: fas fa-money-bill
+  image: /assets/img/braze_icons/bank-note-02.svg
 - name: Outil de promotion Gmail
   link: /docs/user_guide/message_building_by_channel/email/gmail_promotions_tab/
-  fa_icon: fas fa-trophy
+  image: /assets/img/braze_icons/trophy-01.svg
 - name: SSO Apple Private Relay
   link: /docs/user_guide/message_building_by_channel/email/email_private_relay_apple_sso/
-  fa_icon: fab fa-apple
+  image: /assets/img/braze_icons/apple.svg
 - name: Protection de la confidentialité dans Apple Mail
   link: /docs/user_guide/message_building_by_channel/email/mpp/
-  fa_icon: fab fa-apple
+  image: /assets/img/braze_icons/apple.svg
 - name: AMP pour e-mail
   link: /docs/user_guide/message_building_by_channel/email/amphtml/
-  fa_icon: fas fa-bolt
+  image: /assets/img/braze_icons/lightning-02.svg
 - name: Reporting E-mail
   link: /docs/user_guide/message_building_by_channel/email/reporting_and_analytics/email_reporting/
-  fa_icon: fas fa-chart-bar
+  image: /assets/img/braze_icons/bar-chart-01.svg
 - name: Glossaire analytique pour l’e-mail
   link: /docs/user_guide/message_building_by_channel/email/reporting_and_analytics/analytics_glossary/
-  fa_icon: fas fa-chart-pie
+  image: /assets/img/braze_icons/pie-chart-01.svg
 - name: Bonnes pratiques
   link: /docs/user_guide/message_building_by_channel/email/best_practices/
-  fa_icon: fas fa-check-square
+  image: /assets/img/braze_icons/check-square-broken.svg
 - name: Foire aux questions
   link: /docs/user_guide/message_building_by_channel/email/faq/
-  fa_icon: fas fa-question
+  image: /assets/img/braze_icons/annotation-question.svg
 
 
 ---

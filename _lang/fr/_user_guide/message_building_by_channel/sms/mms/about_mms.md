@@ -9,7 +9,7 @@ channel:
 search_rank: 2  
 ---
 
-# [![Cours d’apprentissage Braze]({% image_buster /assets/img/bl_icon2.png %})](https://learning.braze.com/messaging-channels-sms){: style="float:right;width:120px;border:0;" class="noimgborder"}À propos des messages MMS
+# [![Cours d’apprentissage Braze]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/messaging-channels-sms){: style="float:right;width:120px;border:0;" class="noimgborder"}À propos des messages MMS
 
 > Le MMS (Multimedia Message Service) est un service utilisé pour envoyer des messages contenant des ressources multimédias (JPG, GIF, PNG) à des téléphones portables.<br><br>Comme le SMS, le MMS est un canal de messagerie d’urgence qui vous permet de communiquer avec les clients de façon immédiate et sans pareille. Cependant, MMS étend les capacités des SMS en permettant aussi d’ajouter des médias à des SMS uniquement textuels.
 

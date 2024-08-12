@@ -17,10 +17,10 @@ guide_featured_title: "Section articles"
 guide_featured_list:
   - name: Custom Styling
     link: /docs/developer_guide/platform_integration_guides/ios/news_feed/customization/custom_styling/
-    fa_icon: fa fa-paint-brush
+    image: /assets/img/braze_icons/brush-02.svg
   - name: Badges
     link: /docs/developer_guide/platform_integration_guides/ios/news_feed/customization/badges/
-    fa_icon: fa fa-id-badge
+    image: /assets/img/braze_icons/key-01.svg
 
 
 

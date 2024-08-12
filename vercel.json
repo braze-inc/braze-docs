@@ -18,15 +18,6 @@
 			"destination": "/api/404.html"
 		}
 	],
-	"redirects": [
-		{
-			"source": "/docs/ja/:path*",
-			"destination": "/docs/:path*?wovn=ja"
-		}
-	],
-	"github": {
-		"silent": true
-	},
 	"headers": [
 		{
 			"source": "/(.*)",

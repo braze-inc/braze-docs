@@ -12,22 +12,22 @@ guide_featured_title: "Section Articles"
 guide_featured_list:
 - name: Effectuer un appel API
   link: /docs/user_guide/personalization_and_dynamic_content/connected_content/making_an_api_call/
-  fa_icon: fas fa-location-arrow
+  image: /assets/img/braze_icons/navigation-pointer-01.svg
 - name: Variables du contenu connecté local
   link: /docs/user_guide/personalization_and_dynamic_content/connected_content/local_connected_content_variables/
-  fa_icon: fas fa-server
+  image: /assets/img/braze_icons/server-01.svg
 - name: Abandon du contenu connecté
   link: /docs/user_guide/personalization_and_dynamic_content/connected_content/aborting_connected_content/
-  fa_icon: fas fa-eject
+  image: /assets/img/braze_icons/stop-circle.svg
 - name: Nouvelles tentatives de contenu connecté
   link: /docs/user_guide/personalization_and_dynamic_content/connected_content/connected_content_retries/
-  fa_icon: fas fa-undo
+  image: /assets/img/braze_icons/refresh-ccw-01.svg
 - name: API publiques
   link: /docs/user_guide/personalization_and_dynamic_content/connected_content/public_apis/
-  fa_icon: far fa-dot-circle
+  image: /assets/img/braze_icons/target-05.svg
 - name: Extraction des données de profil utilisateur
   link: /docs/user_guide/personalization_and_dynamic_content/connected_content/user_profile_fields_connected_content/
-  fa_icon: fas fa-users
+  image: /assets/img/braze_icons/users-01.svg
 ---
 
 <br><br>

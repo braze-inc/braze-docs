@@ -18,7 +18,13 @@ module Jekyll
       partnerembed = site.config['partner_api']
 
       if partnerembed
+        lang = site.config['language'] || 'en'
         url = context[@url.strip]
+        case lang
+        when 'ja'
+          url.gsub!('braze.com', 'braze.co.jp')
+        end
+
         if context['site']['data'].include?(url)
           puts 'Using cache for: ' + url
           return context['site']['data'][url]

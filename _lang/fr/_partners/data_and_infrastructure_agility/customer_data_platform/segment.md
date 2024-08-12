@@ -10,13 +10,13 @@ description: "Cette page d’accueil contient tout ce qui concerne Segment.io, y
 guide_featured_list:
 - name: Segment.io
   link: /docs/partners/data_and_infrastructure_agility/customer_data_platform/segment/segment/
-  fa_icon: fas fa-user-circle
+  image: /assets/img/braze_icons/user-circle.svg
 - name: Segment.io Engage
   link: /docs/partners/data_and_infrastructure_agility/customer_data_platform/segment/segment_engage/
-  fa_icon: fas fa-users
+  image: /assets/img/braze_icons/users-01.svg
 - name: Segment.io pour Currents
   link: /docs/partners/data_and_infrastructure_agility/customer_data_platform/segment/segment_for_currents/
-  fa_icon: fas fa-warehouse
+  image: /assets/img/braze_icons/building-01.svg
 
 ---
 <br>

@@ -1,7 +1,6 @@
 ---
 nav_title: Microsoft Azure Blob Storage
 article_title: Microsoft Azure Blob Storage
-page_order: 3
 alias: /partners/microsoft_azure_blob_storage_for_currents/
 description: "This reference article outlines the partnership between Braze Currents and Microsoft Azure Blog Storage, a massively scalable object storage for unstructured data."
 page_type: partner
@@ -21,7 +20,7 @@ The Braze and Microsoft Azure Blob Storage integration allows you to export data
 | Requirement | Description |
 | ----------- | ----------- |
 | Microsoft Azure and Azure storage account | A Microsoft Azure and Azure storage account are required to take advantage of this partnership. |
-| Currents (optional) | To export data to Currents, you must have [Braze Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/#access-currents) set up for your account. |
+| Currents | To export data to Currents, you must have [Braze Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/#access-currents) set up for your account. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## Integration
@@ -36,7 +35,7 @@ Even if you already have a storage account, we recommend creating a new one spec
 
 ![]({% image_buster /assets/img/azure-currents-step-1.png %})
 
-### Step 2: Get connection string
+### Step 2: Get the connection string
 
 Once the storage account is deployed, navigate to the **Access Keys** menu from the storage account and take note of the connection string.
 
@@ -92,4 +91,4 @@ It's important to keep your connection string up to date; if your connector's cr
 Users that have integrated a cloud data storage solution, and are trying to export APIs, dashboard reports, or CSV reports will experience the following:
 
 - All API exports will not return a download URL in the response body and must be retrieved through data storage.
-- All dashboard reports and CSV reports will be sent to the users email for download (no storage permissions required) and backed up on Data Storage. 
+- All dashboard reports and CSV reports will be sent to the user's email for download (no storage permissions required) and backed up on data storage. 

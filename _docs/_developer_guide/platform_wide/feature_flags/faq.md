@@ -89,7 +89,7 @@ No, the SDK must be initialized to download and synchronize feature flags for th
 
 ### How frequently does the SDK refresh feature flags? {#refresh-frequency}
 
-Feature flags are refreshed at session start and when changing active users. Feature flags can also be manually refreshed using the SDK's [refresh method][refreshing].
+Feature flags are refreshed at session start and when changing active users. Feature flags can also be manually refreshed using the SDK's [refresh method][refreshing]. Feature flag refreshes are rate limited to once every five minutes (subject to change).
 
 Keep in mind that good data practices recommend not refreshing feature flags too quickly (with potential rate limiting if done so), so it's best only to refresh before a user interacts with new features or periodically in the app if necessary.
 

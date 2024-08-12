@@ -9,11 +9,11 @@ tool:
 description: "This how-to article will walk you through how to use, interpret, and share Segment Insights."
 ---
 
-# [![Braze Learning course]({% image_buster /assets/img/bl_icon2.png %})](https://learning.braze.com/segmentation-course){: style="float:right;width:120px;border:0;" class="noimgborder"}Segment Insights
+# [![Braze Learning course]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/segmentation-course){: style="float:right;width:120px;border:0;" class="noimgborder"}Segment Insights
 
 > Learn how to how to use, interpret, and share Segment Insights. 
 
-Segment Insights allows you to quickly see how one segment is performing compared to another across a set of pre-selected KPIs.
+Segment Insights shows you how one segment is performing compared to another across a set of pre-selected KPIs.
 
 ## Viewing Segment Insights
 
@@ -47,7 +47,7 @@ Segment Insights have also been built right into the **Segment Details** view. W
 
 ![][3]
 
-## Sample use cases {#insights-use-cases}
+## Use cases {#insights-use-cases}
 
 ### Comparing demographic usage and purchasing patterns
 

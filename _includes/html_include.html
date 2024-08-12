@@ -42,17 +42,13 @@
 
 
 {% include analytics.html %}
-{% include wovn.html %}
 
 <link type="text/css" rel="stylesheet" href="{{site.baseurl}}/assets/css/swiper.css" />
 <link type="text/css" rel="stylesheet" href="{{site.baseurl}}/assets/css/algolia_theme.css"  />
 
-<link type="text/css" rel="stylesheet" href="https://cdn-prod.securiti.ai/consent/cookie-consent.css" />
-
-
 {%- css_asset_tag global -%}
 - /assets/css/application.scss
-- /assets/css/securitiai.css
+
 {%- endcss_asset_tag -%}
 
 {%- case site.language -%}
@@ -95,7 +91,6 @@
 - /assets/js/documents.js
 - /assets/js/feedback.js
 - /assets/js/contentcards.js
-- /assets/js/securitiai.js
 {% endjavascript_asset_tag %}
 
 <script type='text/javascript' src='{{site.baseurl}}/assets/js/developer_nav.js?{{site.time | date: '%s'}}' ></script>

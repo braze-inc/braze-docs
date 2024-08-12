@@ -127,17 +127,34 @@ hide_toc: true
 }
 
 .gradient-line {
-    background: linear-gradient(30deg,#3accdd,#f7918e 64%,#ff9349 90%);
-    height: 2px;
-    width: 108px;
+  background: linear-gradient(90deg, rgba(201,196,255,1) 30%, rgba(128,30,215,1) 60%, rgba(255,165,36,1) 90%);
+  height: 3px;
+  width: 108px;
 }
 
 a {
-  color: #3accdd;
+  font-family: "Aribau Grotesk Regular", "Aribau Grotesk", "Aribau Grotesk Regular", Arial, Helvetica, sans-serif;
+  display: inline;
+  color: rgb(128, 30, 215);
+  font-weight: normal;
+  @media print {
+    font-weight: normal;
+  }
+  transition: all ease 0.2s;
+  -webkit-transition: all ease 0.2s;
+  -moz-transition: all ease 0.2s;
+  border-color: rgb(128, 30, 215);
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  line-height: 2.5;
 }
+
 a:hover {
-  color: #333;
+  background-color: rgb(128, 30, 215);
+  text-decoration: none;
+
 }
+
 #ticket_mainform {
   margin-top: 20px;
 }
@@ -191,7 +208,7 @@ a:hover {
   font-size: 14px;
   font-size: 1rem;
   line-height: 1.4;
-  font-family: Sailec W00 Bold, Arial, sans-serif;
+  font-family: "Aribau Grotesk Regular", "Aribau Grotesk", "Aribau Grotesk Regular", Arial, Helvetica, sans-serif;
   text-transform: uppercase;
   padding: 1.14286rem 2.85714rem;
   border-radius: 0;
@@ -1413,9 +1430,9 @@ $( document ).ready(function() {
 
                       <div class="form-group" >
 
-                          <label for="ticket_issue" id="ticket_issue_label">     Question </label>
+                          <label for="ticket_issue" id="ticket_issue_label">     Question * </label>
 
-                          <textarea name="ticket_issue" class="form-control" id="ticket_issue" data-toggle="popover" data-trigger="focus" data-placement="top"
+                          <textarea name="ticket_issue" class="form-control" id="ticket_issue"  required="required" data-toggle="popover" data-trigger="focus" data-placement="top"
                           data-content="Include information helpful for investigation and troubleshooting, such as your platform, SDK version, REST API endpoints, links to segments or campaigns, relevant user IDs, and steps to reproduce your issue.   "
                           placeholder="Include information helpful for investigation and troubleshooting, such as your:
 - Platform

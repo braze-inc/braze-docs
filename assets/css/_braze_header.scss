@@ -1,6 +1,10 @@
+// Define variables for font size and transition time for header elements
 $header_nav_font_size: 15px;
 $header_transition_time: 0.25s;
+
+// Styles specific to the Braze header component
 #braze_header {
+  // Reset border properties for all child elements to ensure consistency
   *,
   *::before,
   *::after {
@@ -8,20 +12,25 @@ $header_transition_time: 0.25s;
     border-style: solid;
   }
 
+  // Ensure the header has a minimum height consistent with the banner height variable
   min-height: $banner_height;
+  // Hide the header during print to improve print layouts
   @media print {
     display: none;
     min-height: 0;
   }
+  // Style navigation items to be in a row for screen display
   nav {
     flex-direction: row !important;
   }
+  // Center-align nav items on medium screens or smaller
   @media (max-width: $window-medium-px) {
     .nav-item {
       text-align: center;
     }
 
   }
+  // Padding adjustments for the navbar for aesthetic spacing
   .navbar {
     padding: .5rem 1rem 0rem 1rem;
   }
@@ -36,6 +45,7 @@ $header_transition_time: 0.25s;
       letter-spacing: normal;
     }
   }
+  // Alternate header section, hidden by default, shown on larger screens
   #braze_header_alt {
     margin-left: 0px;
     display: none;
@@ -45,6 +55,7 @@ $header_transition_time: 0.25s;
       display: flex;
       display: -webkit-flex; /* Safari */
     }
+    // Get Started list item visibility adjustments based on screen size
     #getstarted-li {
       @media (min-width: $window-large-px) {
         display: none;
@@ -57,6 +68,7 @@ $header_transition_time: 0.25s;
 
   }
 
+  // Language selector styling adjustments based on screen width
   @media (min-width: $window-medium-px) {
     #nav-item-lang {
       min-width: 50px;
@@ -75,11 +87,13 @@ $header_transition_time: 0.25s;
         background-color: transparent;
         font-size: 0.525rem;
         font-weight: 700;
-        font-family: $braze-heavy;
+        font-family: $braze-medium;
 
       }
     }
   }
+
+  // Adjustments for language selector on larger screens
   @media (min-width: $window-large-px) {
     #nav-item-lang {
       min-width: 70px;
@@ -94,7 +108,7 @@ $header_transition_time: 0.25s;
     }
   }
 
-
+  // Wrapper for Braze navigation, including dropdowns and their content
   #braze_nav_wrapper {
     flex-wrap: wrap;
     justify-content: center;
@@ -109,27 +123,30 @@ $header_transition_time: 0.25s;
         margin-top: 18px;
       }
       left: 0px;
+      // Rounded corners for the dropdown bottom
       border-top-left-radius: 0;
       border-top-right-radius: 0;
       border-bottom-left-radius: .5rem;
       border-bottom-right-radius: .5rem;
       font-size: 1rem;
 
+      // Styling for headings within the dropdown
       h4 {
         font-weight: 600;
       }
       h5 {
         font-size: .875rem;
         font-weight: 700;
-        text-transform: uppercase;
+        text-transform: uppercase; // Make headings uppercase for emphasis
       }
+      // List styling within dropdowns
       .dropdown-div {
         margin: 0;
         list-style-type: none;
         font-size: 1rem;
         padding: 2.5rem 4rem;
       }
-
+      // Link styling within dropdowns, including hover effects and transitions
       .dropdown-div-link {
         margin-top: 16px;
         color: #212123;
@@ -145,7 +162,7 @@ $header_transition_time: 0.25s;
             border-color: $black-shark;
         }
       }
-
+      // Hover effect for all links within the dropdown
       a:hover{
         color: $black-shark;
         text-decoration: none;
@@ -155,7 +172,7 @@ $header_transition_time: 0.25s;
         font-weight: normal;
         text-transform: none;
       }
-
+      // Gradient bar styling at the top of dropdowns
       .bg-gradient {
         width: 100%;
         height: 3px;
@@ -163,12 +180,13 @@ $header_transition_time: 0.25s;
         background-image: linear-gradient(90deg,var(--tw-gradient-stops));
         // margin: 2rem 0;
       }
+      // Hover background color change for dropdown items
       .background-hover:hover {
         background-color: #e7f9fb;
         border-bottom-left-radius: .5rem;
         border-bottom-right-radius: .5rem;
       }
-
+      // Product options list styling within dropdowns
       .product-opt {
         padding: 1.5rem;
         ul {
@@ -177,6 +195,7 @@ $header_transition_time: 0.25s;
       }
 
     }
+    // Focus and hover styles for border elements, like input fields or buttons
     .border-focus {
       color: black;
       border-bottom: 2px solid transparent;
@@ -215,9 +234,10 @@ $header_transition_time: 0.25s;
       display: none;
     }
   }
+  // Link styling within the navbar, including hover and focus states
   .nav-link {
     text-transform: capitalize;
-    color: #212123;
+    color: #212123; // Default link color
     transition: all ease $header_transition_time;
     -webkit-transition:  all ease $header_transition_time;
     -moz-transition:  all ease $header_transition_time;
@@ -255,7 +275,7 @@ $header_transition_time: 0.25s;
   line-height: 1.625;
   font-weight: 700;
   letter-spacing: .018em;
-  font-family: $braze-heavy;
+  font-family: $braze-medium;
 
   display: none;
 

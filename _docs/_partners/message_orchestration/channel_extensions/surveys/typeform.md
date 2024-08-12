@@ -322,13 +322,13 @@ Content-Type: application/json
 }
 ```
 
-## Example Data Transformations
+## Data Transformation use cases
 
 The following are example templates built using our [example Typeform webhook payload](#example-typeform-webhook-payload). These templates can be used as a starting point. You can start from scratch or delete specific components as you see fit.
 
 In these example templates, we are logging a custom event to the Braze profile. The title of the Typeform will be passed as the custom event name, and the Typeform results will be passed as event properties. These example templates do not account for the Calendly, File Upload, or Payment question types in Typeform.
 
-### Example: Email as identifier
+### Use case: Email as identifier
 
 In this example template, we are using an email address (captured from an email address question within the typeform) as the identifier.
 
@@ -470,7 +470,7 @@ return brazecall;
 {% endtab %}
 {% endtabs %}
 
-### Example: Using identifier passed in Hidden Fields
+### Use case: Using identifier passed in Hidden Fields
 
 You can use Typeform Hidden Fields to pass data in the Typeform webhook payload, such as a user's ID, without having to pass this information in the Typeform response.
 

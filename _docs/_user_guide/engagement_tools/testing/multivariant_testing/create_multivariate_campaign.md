@@ -31,6 +31,8 @@ For some ideas on how to get started differentiating your variants, refer to [Ti
 
 Scheduling your multivariate campaign works the same as scheduling any other Braze campaign. All standard [delivery types][4] are available.
 
+Once a multivariate test begins, you can't make changes to the campaign. If you change the parameters, such as the subject line or HTML body, Braze will consider the experiment compromised and will immediately disable the experiment.
+
 {% alert important %}
 If you want to use an [optimization]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/optimizations/) (available for select channels), schedule your campaign to deliver once. Optimizations aren't available for campaigns that repeat or have re-eligibility turned on.
 {% endalert %}
@@ -70,7 +72,10 @@ On the confirmation page, review the details of your multivariate campaign and l
 ## Things to know
 
 {% alert important %}
-Making edits to your messages after your experiment is finished will result in invalidated test results. 
+Making edits to messages after your experiment begins will invalidate your test results.
+
+- If your experiment is in mid-send and you edit the message, the experiment will be rendered useless and any experiment results will be removed.
+- If your experiment is completed and you edit the message post-send, the experiment results will remain available on the dashboard analytics page. If you relaunch the campaign, the experiment results will be removed.
 {% endalert %}
 
 ### Tips for different channels {#tips-different-channels}
@@ -105,7 +110,7 @@ For instance, while active users may have equal response rates to "This deal exp
 Additionally, when choosing which segment to run your test on, be sure to consider whether the size of that segment will be large enough for your test. In general, multivariate and A/B tests with more variants require a larger test group to achieve statistically significant results. This is because more variants will result in fewer users seeing each individual variant.
 
 {% alert tip %}
-As a guide, you likely need around 15,000 users per variant (including the control) to achieve 95% confidence in your test results. However, the exact number of users you need could be higher or lower than that depending on your particular case. For more exact guidance on variant sample sizes, consider referring to [Optimizely's Sample Size Calculator](https://www.optimizely.com/resources/sample-size-calculator/).
+As a guide, you likely need around 15,000 users per variant (including the control) to achieve 95% confidence in your test results. However, the exact number of users you need could be higher or lower than that depending on your particular case. For more exact guidance on variant sample sizes, consider referring to a [sample size calculator](https://www.calculator.net/sample-size-calculator.html).
 {% endalert %}
 
 ### Bias and randomization

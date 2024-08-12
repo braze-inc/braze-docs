@@ -15,28 +15,28 @@ guide_featured_title: "Features"
 guide_featured_list:
 - name: Intelligence Suite
   link: /docs/user_guide/sage_ai/intelligence
-  image: /assets/img/icons/clock.svg
+  image: /assets/img/braze_icons/clock.svg
 - name: Predictive Suite
   link: /docs/user_guide/sage_ai/predictive_suite/
-  image: /assets/img/icons/prediction_crystal_ball.svg
+  image: /assets/img/braze_icons/stars-01.svg
 - name: Generative AI
   link: /docs/user_guide/sage_ai/generative_ai/
-  image: /assets/img/icons/brain.svg
+  image: /assets/img/braze_icons/lightbulb-02.svg
 
 guide_menu_title: "Other"
 guide_menu_list:
 - name: Winning Variant and Personalized Variant
   link: /docs/user_guide/engagement_tools/testing/multivariant_testing/optimizations/
-  image: /assets/img/icons/ab_testing.svg
+  image: /assets/img/braze_icons/trophy-01.svg
 - name: Winning Path
   link: /docs/user_guide/engagement_tools/canvas/canvas_components/experiment_step/winning_path/
-  image: /assets/img/icons/strategy_playbook.svg
+  image: /assets/img/braze_icons/dataflow-03.svg
 - name: Personalized Paths
   link: /docs/user_guide/engagement_tools/canvas/canvas_components/experiment_step/personalized_paths/
-  image: /assets/img/icons/strategy_playbook.svg
+  image: /assets/img/braze_icons/chevron-up-double.svg
 - name: Recommendations
   link: /docs/user_guide/sage_ai/recommendations/
-  image: /assets/img/icons/loyalty_heart.svg
+  image: /assets/img/braze_icons/hearts.svg
 ---
 
 

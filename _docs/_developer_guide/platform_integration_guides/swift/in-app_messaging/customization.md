@@ -16,19 +16,19 @@ guide_featured_title: "Section articles"
 guide_featured_list:
   - name: In-App Message UI Delegate
     link: /docs/developer_guide/platform_integration_guides/swift/in-app_messaging/customization/setting_delegates/
-    fa_icon: fa fa-cogs
+    image: /assets/img/braze_icons/settings-01.svg
   - name: Custom On-Click Behavior
     link: /docs/developer_guide/platform_integration_guides/swift/in-app_messaging/customization/behavior_on_click/
-    fa_icon: fa fa-mouse-pointer
+    image: /assets/img/braze_icons/navigation-pointer-01.svg
   - name: Custom Triggering
     link: /docs/developer_guide/platform_integration_guides/swift/in-app_messaging/customization/custom_triggering/
-    fa_icon: fa fa-check
+    image: /assets/img/braze_icons/check-square-broken.svg
   - name: Modal Dismissal
     link: /docs/developer_guide/platform_integration_guides/swift/in-app_messaging/customization/modal_dismissal/
-    fa_icon: fa fa-times
+    image: /assets/img/braze_icons/message-x-circle.svg
   - name: Example - App Store Review Prompt
     link: /docs/developer_guide/platform_integration_guides/swift/in-app_messaging/customization/custom_app_store_review_prompt/
-    fa_icon: fa fa-eye
+    image: /assets/img/braze_icons/eye.svg
 
 
 ---

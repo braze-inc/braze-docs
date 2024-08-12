@@ -25,7 +25,7 @@ local_redirect:
   
 ---
 
-{% multi_lang_include archive/objective-c-deprecation-notice.md %}
+{% multi_lang_include deprecations/objective-c.md %}
 
 # Intégration de notifications push
 

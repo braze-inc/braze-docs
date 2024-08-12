@@ -13,13 +13,13 @@ guide_featured_title: "Sujets"
 guide_featured_list:
 - name: Créer une prédiction d’achat
   link: /docs/user_guide/predictive_suite/predictive_purchases/creating_a_purchase_prediction/
-  fa_icon: fas fa-cogs
+  image: /assets/img/braze_icons/settings-01.svg
 - name: Analyses prédictives
   link: /docs/user_guide/predictive_suite/predictive_purchases/prediction_analytics/
-  fa_icon: fas fa-chart-bar
+  image: /assets/img/braze_icons/bar-chart-01.svg
 - name: Écrire aux utilisateurs
   link: /docs/user_guide/predictive_suite/predictive_purchases/messaging_users/
-  fa_icon: fas fa-arrow-right
+  image: /assets/img/braze_icons/arrow-narrow-right.svg
 
 ---
 

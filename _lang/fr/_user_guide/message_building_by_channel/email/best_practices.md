@@ -14,27 +14,27 @@ guide_featured_title: "Section Articles"
 guide_featured_list:
   - name: "Recommandations"
     link: /docs/user_guide/message_building_by_channel/email/best_practices/guidelines_and_tips/
-    fa_icon: fas fa-award
+    image: /assets/img/braze_icons/award-03.svg
   - name: "Style des e-mails"
     link: /docs/user_guide/message_building_by_channel/email/best_practices/email_styling/
-    fa_icon: fas fa-paint-brush
+    image: /assets/img/braze_icons/brush-02.svg
   - name: "Cas d’utilisation"
     link: /docs/user_guide/message_building_by_channel/email/best_practices/use_cases/
-    fa_icon: fas fa-pen-square
+    image: /assets/img/braze_icons/edit-05.svg
   - name: "Gestion des abonnements aux e-mails"
     link: /docs/user_guide/message_building_by_channel/email/best_practices/managing_email_subscriptions/
-    fa_icon: fas fa-tasks
+    image: /assets/img/braze_icons/list.svg
   - name: "Services E-mail"
     link: /docs/user_guide/message_building_by_channel/email/best_practices/email_services/
-    fa_icon: fas fa-concierge-bell
+    image: /assets/img/braze_icons/email.svg
   - name: "Politiques de temporisation "
     link: /docs/user_guide/message_building_by_channel/email/best_practices/sunset_policies/
-    fa_icon: fas fa-sun
+    image: /assets/img/braze_icons/sun-setting-03.svg
   - name: "Envoyer des messages de test"
     link: /docs/user_guide/engagement_tools/campaigns/testing_and_more/sending_test_messages/
-    fa_icon: fas fa-envelope
+    image: /assets/img/braze_icons/mail-01.svg
   - name: "À savoir avant l’envoi"
     link: /docs/know_before_send/
-    fa_icon: fa-solid fa-paper-plane
+    image: /assets/img/braze_icons/send-01.svg
 
 ---

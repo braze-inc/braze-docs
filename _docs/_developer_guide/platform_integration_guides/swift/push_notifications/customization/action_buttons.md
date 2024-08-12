@@ -88,13 +88,9 @@ Here's an example that leverages the `LIKE_CATEGORY` displayed on the device:
 
 ![A push message displaying two push action buttons "unlike" and "like".][17]
 
-To register categories in your application, refer to the following code snippet:
+#### Step 1: Register a category
 
-{% alert note %}
-When creating a `UNNotificationAction`, you may specify a list of action options. For example, adding `UNNotificationActionOptions.foreground` allows your users to open the app upon clicking the action button, which is necessary for Braze on-click behaviors that navigate into your app, such as "Open App" and "Deep Link into Application".
-
-Refer to [`UNNotificationActionOptions`](https://developer.apple.com/documentation/usernotifications/unnotificationactionoptions) for further usage details.
-{% endalert %}
+To register a category in your app, use a similar approach to the following:
 
 {% tabs %}
 {% tab swift %}
@@ -117,19 +113,20 @@ UNUserNotificationCenter.current().setNotificationCategories(Braze.Notifications
 
 ```objc
 NSMutableSet<UNNotificationCategory *> *categories = [BRZNotifications.categories mutableCopy];
+
 UNNotificationAction *likeAction = [UNNotificationAction actionWithIdentifier:@"LIKE_IDENTIFIER"
                                                                         title:@"Like"
                                                                       options:UNNotificationActionOptionForeground];
+
 UNNotificationAction *unlikeAction = [UNNotificationAction actionWithIdentifier:@"UNLIKE_IDENTIFIER"
                                                                           title:@"Unlike"
                                                                         options:UNNotificationActionOptionForeground];
+
 UNNotificationCategory *likeCategory = [UNNotificationCategory categoryWithIdentifier:@"LIKE_CATEGORY"
-                                                                              actions:@[likeAction,
-                                                                                        unlikeAction
-                                                                                      ]
+                                                                              actions:@[likeAction, unlikeAction]
                                                                     intentIdentifiers:@[]
-                                                                              options:UNNotificationCategoryOptionNone
-];
+                                                                              options:UNNotificationCategoryOptionNone];
+
 [categories addObject:likeCategory];
 [UNUserNotificationCenter.currentNotificationCenter setNotificationCategories:categories];
 ```
@@ -137,11 +134,22 @@ UNNotificationCategory *likeCategory = [UNNotificationCategory categoryWithIdent
 {% endtab %}
 {% endtabs %}
 
-Once you register categories in your application, use the Braze dashboard to send notifications of that type to your users. Define your custom notification category in **Compose** step of the push composer. 
+{% alert note %}
+When you create a `UNNotificationAction`, you can specify a list of action options. For example, `UNNotificationActionOptions.foreground` let's your users open your app after tapping the action button. This is necessary for navigational on-click behaviors, such as "Open App" and "Deep Link into Application". For more information, see [`UNNotificationActionOptions`](https://developer.apple.com/documentation/usernotifications/unnotificationactionoptions).
+{% endalert %}
 
-1. Make sure **Action Buttons** are turned on. 
-2. For **iOS Notification Category**, select **Enter pre-registered custom iOS Category**.
-3. Enter the category you previously defined (for example `LIKE_CATEGORY`).
+#### Step 2: Select your categories
+
+After you register a category, use the Braze dashboard to send notifications of that type to users.
+
+{% alert tip %}
+You only need to define custom notification categories for action buttons with _special actions_, such as deep linking into your app or opening a URL. You do not need to define them for action buttons that only dismiss a notification.
+{% endalert %}
+
+1. In the Braze dashboard, select **Messaging** > **Push Notifications**, then choose your iOS [push campaign]({{site.baseurl}}/docs/user_guide/message_building_by_channel/push/creating_a_push_message).
+2. Under **Compose push notification**, turn on **Action Buttons**.
+3. In the **iOS Notification Category** dropdown, select **Enter pre-registered custom iOS Category**.
+4. Finally, enter one of the categories you created earlier. The following example, uses the custom category: `LIKE_CATEGORY`.
 
 ![The push notification campaign dashboard with the setup for custom categories.][18]
 

@@ -10,11 +10,20 @@ tool: Canvas
 
 > Personalized Paths is similar to [Personalized Variant]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/optimizations/#personalized-variant) in campaigns and lets you personalize any point of a Canvas journey for individual users based on conversion likelihood.
 
-When Personalized Paths is turned on in an Experiment Path step, a group of users is held back in a delay group. The remaining users pass into an initial test to train a look-alike model for a duration you configure. After the test, a model is created to learn which user behaviors were associated with a greater likelihood of converting on a given path. Finally, each user in the delay group is sent down the path most likely to result in conversion for them based on the behaviors they exhibit and what the look-alike model learned during the initial test.
+## How Personalized Paths works
 
-## Prerequisites
+When Personalized Paths is turned on in an Experiment Path step, the behavior is slightly different depending on if your Canvas is set to send once or to recur:
 
-You can use Personalized Paths in your Experiment Step when your Canvas is set to send once. Personalized Paths is not available for recurring or triggered Canvases.
+- **Single-send Canvas:** A group of users is held back in a delay group. The remaining users pass into an initial test to train a look-alike model for a duration you configure—at least 24 hours for best results. After the test, a model is created to learn which user behaviors were associated with a greater likelihood of converting on a given path. Finally, each user in the delay group is sent down the path most likely to result in conversion for them based on the behaviors they exhibit and what the look-alike model learned during the initial test.
+- **Recurring Canvas (early access):** An initial experiment is performed on all users who enter the Experiment Path during a specified window. To maintain the integrity of the experiment, if a user receives multiple messages before the window ends, they'll be assigned to the same variant each time. After the experiment window, each user is sent down the path most likely to result in conversion for them.
+
+### Prerequisites
+
+Personalized Paths is available in Experiment Paths for scheduled Canvases (both single sends and recurring), and is unavailable for use in triggered Canvases.
+
+{% alert important %}
+The ability to use Personalized Paths in recurring Canvases is in early access. Contact your Braze customer success manager if you're interested in participating in the early access.
+{% endalert %}
 
 ## Using Personalized Paths
 
@@ -26,7 +35,7 @@ Add an [Experiment Path]({{site.baseurl}}/user_guide/engagement_tools/canvas/can
 
 ### Step 2: Configure Personalized Paths settings
 
-Specify the conversion event that should determine the winner. If there are no conversion events available, return to the first step of Canvas setup and [assign conversion events]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#choose-conversion-events). Note that if you determine the winner with opens and clicks, only the first message in the path that generates opens or clicks will contribute to determining the winner.  
+Specify the conversion event that should determine the winner. If there are no conversion events available, return to the first step of Canvas setup and [assign conversion events]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#choose-conversion-events). If you choose a conversion event with opens or clicks to determine the winner, then only the first Message step in the path that generates opens or clicks will contribute to determining the winner. Subsequent steps in the path are not considered.
 
 Then set the **Experiment Window**. The **Experiment Window** determines how long users will be sent down all paths before choosing the best path for each user in the delay group. The window begins when the first user enters the step.
 
@@ -46,15 +55,32 @@ This option will send future users down the mix of paths according to the percen
 
 ### Step 4: Add your paths and launch the Canvas
 
-A single Experiment Path component can contain up to four paths. However, when Personalized Paths is turned on, you can add up to three paths in your Experiment. The fourth path should be reserved for the Delay Group that Braze automatically adds to your experiment.
+{% tabs local %}
+{% tab Single-send Canvas %}
+
+A single Experiment Path component can contain up to four paths. However, for single-send Canvases, you can add up to three paths when Personalized Paths is turned on. The fourth path should be reserved for the Delay Group that Braze automatically adds to your experiment.
 
 Finish setting up your Canvas as needed, then launch it. When the first user has entered the experiment, you can check the Canvas to see analytics as they come in and [track your experiment's performance]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step/#tracking-performance).
 
-![][5]{: style="max-width:75%;" }
+![]({% image_buster /assets/img/experiment_step/experiment_personalized_delay_group_pending.png %}){: style="max-width:75%;" }
 
 When the experiment window passes and the experiment is complete, Braze will send users in the delay group to their respective paths with the highest personalized likelihood of conversion based on the recommendation of the look-alike model.
 
-![][6]{: style="max-width:75%;" }
+![]({% image_buster /assets/img/experiment_step/experiment_personalized_delay_group_complete.png %}){: style="max-width:75%;" }
+
+{% endtab %}
+{% tab Recurring Canvas %}
+
+You can test up to four paths in a single Experiment Path. Add your paths and finish setting up your Canvas as needed, then launch it.  
+
+When the first user has entered the experiment, you can check the Canvas to see analytics as they come in and [track your experiment's performance]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step/#tracking-performance).
+
+When the experiment window passes and the experiment is complete, all subsequent users to enter the Canvas will be sent down the path most likely to result in conversion for them.
+
+![]({% image_buster /assets/img/experiment_step/experiment_personalized_recurring_analytics.png %}){: style="max-width:75%;" }
+
+{% endtab %}
+{% endtabs %}
 
 ## Analytics {#analytics}
 

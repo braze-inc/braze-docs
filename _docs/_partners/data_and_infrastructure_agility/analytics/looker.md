@@ -8,7 +8,7 @@ search_tag: Partner
 
 ---
 
-# [![Braze Learning course]({% image_buster /assets/img/bl_icon2.png %})](https://learning.braze.com/looker-integration-with-braze/){: style="float:right;width:120px;border:0;" class="noimgborder"}Looker
+# [![Braze Learning course]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/looker-integration-with-braze/){: style="float:right;width:120px;border:0;" class="noimgborder"}Looker
 
 > [Looker](https://looker.com/), a business intelligence and big-data analytics platform, enables you to explore, analyze, and share real-time business analytics seamlessly.
 
@@ -108,9 +108,9 @@ Note the following limitations:
 4. Give the export a name. If none is provided, `LOOKER_EXPORT` will be used.
 5. Under **Advanced Options**, select **Results in Table** or **All Results** and then **Send**.<br><br>![][13]<br><br>If the export was correctly sent, then `LOOKER_EXPORT` should appear in the user's profile as a custom attribute with the value you entered in the action.<br><br>![][14]
 
-##### Sample outgoing API
+##### Example outgoing API
 
-The following is a sample of an outgoing API call, which will be sent to the [`/users/track/` endpoint][10].
+The following is an example of an outgoing API call, which will be sent to the [`/users/track/` endpoint][10].
 
 ###### Header
 ```

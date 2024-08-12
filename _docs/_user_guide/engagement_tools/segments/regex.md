@@ -10,7 +10,7 @@ tool:
   
 ---
 
-# [![Braze Learning course]({% image_buster /assets/img/bl_icon2.png %})](https://learning.braze.com/regular-expression-basics-for-braze){: style="float:right;width:120px;border:0;" class="noimgborder"} Regular expressions
+# [![Braze Learning course]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/regular-expression-basics-for-braze){: style="float:right;width:120px;border:0;" class="noimgborder"} Regular expressions
 
 <!--{% multi_lang_include video.html id="3h5Xbhl-TxE" align="right" %}-->
 
@@ -22,7 +22,7 @@ In the linked Braze Learning course, we show you how regular expressions can be 
 
 - [Regular expression basics](https://learning.braze.com/regular-expression-basics-for-braze) Braze Learning course
 - [Regex Cheat Sheet]({{site.baseurl}}/regex_cheat_sheet/)
-- <i class="fas fa-file-alt"></i> [Sample Data RTF][dummydata]
+- [Sample Data RTF][dummydata]
 
 ## Regex debugger
 

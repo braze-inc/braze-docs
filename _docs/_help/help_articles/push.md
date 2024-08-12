@@ -13,18 +13,21 @@ guide_menu_title: ""
 guide_menu_list:
   - name: Common Push Error Messages
     link: /docs/help/help_articles/push/push_error_codes/
-    fa_icon: fas fa-exclamation-circle
+    image: /assets/img/braze_icons/alert-circle.svg
   - name: Defining Push Enablement
     link: /docs/help/help_articles/push/defining_push_enablement/
-    fa_icon: fas fa-book-open
+    image: /assets/img/braze_icons/book-closed.svg
   - name: Missing Push Notifications
     link: /docs/help/help_articles/push/no_push_notification_was_received/
-    fa_icon: fas fa-comment-slash
+    image: /assets/img/braze_icons/message-x-circle.svg
   - name: Migrating Push Tokens
     link: /docs/help/help_articles/push/push_token_migration/
-    fa_icon: fas fa-map-signs
+    image: /assets/img/braze_icons/map-01.svg
   - name: Resetting Push Permissions
     link: /docs/help/help_articles/push/resetting_push_permissions/
-    fa_icon: fas fa-circle-check
+    image: /assets/img/braze_icons/check-circle.svg
+  - name: Tracking Push Unsubscribes
+    link: /docs/help/help_articles/push/push_unsubscribes/
+    image: /assets/img/braze_icons/users-01.svg
 
 ---

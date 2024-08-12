@@ -8,7 +8,7 @@ noindex: true
 
 #  Page layouts
 
-> These are the page layouts that can be assigned to the [`page_layout`]({{site.baseurl}}/contributing/yaml_front_matter/metadata/#page-layout) key in a page's YAML front matter. For more general information, see [Content Management]({{site.baseurl}}/contributing/content_management/#layouts).
+> These are the page layouts that can be assigned to the [`page_layout`]({{site.baseurl}}/contributing/yaml_front_matter/metadata/#page-layout) key in a page's YAML front matter. For more general information, see [About content management]({{site.baseurl}}/contributing/content_management/#layouts).
 
 ## Prerequisites
 
@@ -78,7 +78,7 @@ guide_top_text: ><br>
 
 ### Blank config
 
-The `blank_config` value is used to hide a page on Braze Docs and automatically redirect users to `www.braze.com/docs`. For more information, see [Redirecting URLs]({{site.baseurl}}/contributing/content_management/redirecting_urls/?tab=home%20page#redirecting-a-page).
+The `blank_config` value is combined with `config_only: true` to make the current article a folder. This lets you create subsections without needing a landing page. Because the landing page becomes a folder and has no page content, users who try to visit the URL directly are automatically redirected to `www.braze.com/docs`. For more information, see [Redirecting URLs]({{site.baseurl}}/contributing/content_management/redirecting_urls/?tab=home%20page#redirecting-a-page).
 
 ### Redirect
 

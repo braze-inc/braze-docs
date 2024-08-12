@@ -1,7 +1,6 @@
 ---
 nav_title: Crowdin
 article_title: Crowdin
-page_order: 1
 description: "This reference article outlines the partnership between Braze and Crowdin, a cloud-based software platform that allows you to automate the translation of your email templates and Content Blocks in Braze."
 alias: /partners/crowdin/
 page_type: partner
@@ -32,7 +31,7 @@ The Braze and Crowdin integration allows you to translate email templates and Co
 #### Crowdin
 To set up the Braze app in Crowdin, follow these steps:
 
-1. Go to the [Braze app in the marketplace](https://crowdin.com/resources#marketplace/braze).
+1. Go to the [Braze app in the marketplace](https://store.crowdin.com/braze-app).
 2. Click **Install** to add it to your account.
 3. Open the project you created for your Braze content localization.
 4. Go to **Settings > Integrations** tab.

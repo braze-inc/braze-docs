@@ -32,8 +32,10 @@ You can choose when Braze creates a card on the **Delivery** step when creating 
 
 The following options are available:
 
-- **At campaign launch:** The previous default behavior for Content Cards. Braze calculates audience eligibility and personalization when the campaign launches, then creates the card and stores it until the user opens your app.
+- **At campaign launch:** The previous default behavior for Content Cards. Braze calculates audience eligibility and personalization when the campaign launches, then creates the card and stores it until the user opens your app. 
 - **At first impression (recommended):** When the user next opens your app (that is, starts a new [session](https://www.braze.com/resources/articles/whats-an-app-session-anyway)), Braze determines which Content Cards the user is eligible for, templates any personalization like Liquid or Connected Content, then creates the card. This option will usually see better performance in card deliveries.
+
+Regardless of your selected option, the Content Card expiration date countdown will begin when the campaign launches.
 
 {% endtab %}
 {% tab Canvas %}
@@ -46,6 +48,8 @@ The following options are available:
 
 - **At step entry:** The previous default behavior for Content Cards. Braze calculates audience eligibility when the user enters the Canvas step, then creates the card and stores it until the user opens your app.
 - **At first impression (recommended):** Braze calculates audience eligibility when the user enters the Canvas step. When the user next opens your app (that is, starts a new [session](https://www.braze.com/resources/articles/whats-an-app-session-anyway)), Braze templates any personalization like Liquid or Connected Content, then creates the card. This option will see better performance in card deliveries and more up to date personalization.
+
+Regardless of your selected option, the Content Card expiration date countdown will begin when the user enters the Canvas step.
 
 {% endtab %}
 {% endtabs %}

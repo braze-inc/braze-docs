@@ -10,7 +10,7 @@ search_tag: Partenaire
 
 ---
 
-# [![Cours d’apprentissage Braze]({% image_buster /assets/img/bl_icon2.png %})](https://learning.braze.com/amplitude-integration-with-braze){: style="float:right;width:120px;border:0;" class="noimgborder"}Audiences Amplitude
+# [![Cours d’apprentissage Braze]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/amplitude-integration-with-braze){: style="float:right;width:120px;border:0;" class="noimgborder"}Audiences Amplitude
 
 > [Amplitude](https://amplitude.com/) est une plateforme d’aide à la décision et d’analyse de produits.
 

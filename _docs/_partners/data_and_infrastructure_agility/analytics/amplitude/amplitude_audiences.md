@@ -10,7 +10,7 @@ search_tag: Partner
 
 ---
 
-# [![Braze Learning course]({% image_buster /assets/img/bl_icon2.png %})](https://learning.braze.com/amplitude-integration-with-braze){: style="float:right;width:120px;border:0;" class="noimgborder"}Amplitude
+# [![Braze Learning course]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/amplitude-integration-with-braze){: style="float:right;width:120px;border:0;" class="noimgborder"}Amplitude
 
 > [Amplitude](https://amplitude.com/) is a product analytics and business intelligence platform.
 
@@ -28,7 +28,7 @@ The Braze and Amplitude bi-directional integration allows you to [import your Am
 
 Amplitude and Braze offer two different integration methods. Read through the following documentation to decide which methods will fit your needs:
 
-- Braze Event Streaming (beta): An integration that allows you to forward raw Amplitude event data straight to Braze.
+- Braze Event Streaming: An integration that allows you to forward raw Amplitude event data straight to Braze.
 - [Cohort import]({{site.baseurl}}/partners/data_and_infrastructure_agility/cohort_import/amplitude/): An integration that allows you to forward Amplitude cohorts to Braze.
 
 ## Braze Event Streaming

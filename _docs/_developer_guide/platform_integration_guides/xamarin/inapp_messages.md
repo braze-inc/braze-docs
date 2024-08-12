@@ -8,23 +8,110 @@ platform:
 page_order: 2
 description: "This article covers iOS, Android, and FireOS in-app messaging for the Xamarin platform."
 channel: in-app messages
-
+toc_headers: h2
 ---
 
 # In-app messaging integration
 
-> This article covers how to set up a iOS, Android, and FireOS in-app messages for the Xamarin platform.
+> Learn how to set up iOS, Android, and FireOS In-App Messages (IAM) for the Xamarin platform.
 
-## Android
-See the [Android integration instructions][11] for information on how to integrate in-app messages into your Xamarin Android app.  Furthermore, you can look at the [sample application][12] for implementation samples.
+## Prerequisites
 
-## iOS
+To use this feature, you'll need to [integrate the Braze SDK for Xamarin]({{site.baseurl}}/developer_guide/platform_integration_guides/xamarin/initial_sdk_setup/).
 
-In-app messages will work by default if you've included the Appboy.bundle folder in your application. On Xamarin we don't currently support in-app message custom styling. If you want to customize your in-app message UI, implement the ABKInAppMessageControllerDelegate method `ABKInAppMessageViewController InAppMessageViewControllerWithInAppMessage(ABKInAppMessage inAppMessage);` and return your custom view controller. That will make sure Braze passes you the in-app message object rather than displaying it for you. You will then have the option of displaying the in-app message object's content manually.
+## Integrating in-app messaging
 
-See the [iOS integration instructions][1] for information on In-app best practices. Furthermore, you can look at the [sample application][2] for implementation samples.
+{% tabs %}
+{% tab android %}
 
-[1]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/in-app_messaging/overview/
-[2]: https://github.com/braze-inc/braze-xamarin-sdk/tree/master/appboy-component/samples
-[11]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/in-app_messaging/overview/
-[12]: https://github.com/braze-inc/braze-xamarin-sdk/tree/master/appboy-component/samples
+{% alert tip %}
+To see an example, check out our [sample Xamrin app on GitHub](https://github.com/braze-inc/braze-xamarin-sdk/tree/master/appboy-component/samples/android-net-maui/BrazeAndroidMauiSampleApp).
+{% endalert %}
+
+### Step 1: Set up in-app message registration
+
+Every activity in your app must be registered with the [`BrazeInAppMessageManager`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage/-braze-in-app-message-manager/index.html) class. To automatically register in-app messages using the [activity lifecycle callback integration]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/#step-4-tracking-user-sessions-in-android), add the following code to the `onCreate()` method in your `Application` class:
+
+{% subtabs %}
+{% subtab JAVA %}
+```java
+public class MyApplication extends Application {
+  @Override
+  public void onCreate() {
+    super.onCreate();
+    registerActivityLifecycleCallbacks(new BrazeActivityLifecycleCallbackListener());
+  }
+}
+```
+{% endsubtab %}
+
+{% subtab KOTLIN %}
+```kotlin
+class MyApplication : Application() {
+  override fun onCreate() {
+    super.onCreate()
+    registerActivityLifecycleCallbacks(BrazeActivityLifecycleCallbackListener())
+  }
+}
+```
+{% endsubtab %}
+{% endsubtabs %}
+
+{% alert note %}
+For the full list of available parameters, see [`BrazeActivityLifecycleCallbackListener`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze-activity-lifecycle-callback-listener/index.html).
+{% endalert %}
+
+### Step 2: Set up a blocklist manager (optional)
+
+To prevent certain activities from displaying in-app messages, use the [activity lifecycle callback integration]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/#step-4-tracking-user-sessions-in-android). The following sample code adds two activities to the in-app message registration blocklist: `SplashActivity` and `SettingsActivity`.
+
+{% subtabs %}
+{% subtab JAVA %}
+```java
+public class MyApplication extends Application {
+  @Override
+  public void onCreate() {
+    super.onCreate();
+    Set<Class> inAppMessageBlocklist = new HashSet<>();
+    inAppMessageBlocklist.add(SplashActivity.class);
+    inAppMessageBlocklist.add(SettingsActivity.class);
+    registerActivityLifecycleCallbacks(new BrazeActivityLifecycleCallbackListener(inAppMessageBlocklist));
+  }
+}
+```
+{% endsubtab %}
+
+{% subtab KOTLIN %}
+```kotlin
+class MyApplication : Application() {
+  override fun onCreate() {
+    super.onCreate()
+    val inAppMessageBlocklist = HashSet<Class<*>>()
+    inAppMessageBlocklist.add(SplashActivity::class.java)
+    inAppMessageBlocklist.add(SettingsActivity::class.java)
+    registerActivityLifecycleCallbacks(BrazeActivityLifecycleCallbackListener(inAppMessageBlocklist))
+  }
+}
+```
+{% endsubtab %}
+{% endsubtabs %}
+{% endtab %}
+
+{% tab ios %}
+{% alert tip %}
+To see an example, check out our [sample Xamrin app on GitHub](https://github.com/braze-inc/braze-xamarin-sdk/tree/master/appboy-component/samples/ios-net-maui/BrazeiOSMauiSampleApp/BrazeiOSMauiSampleApp).
+{% endalert %}
+
+To use Braze's default in-app message UI, first create a new `BrazeInAppMessageUI`:
+```csharp
+public static BrazeInAppMessageUI? inAppMessageUI = new BrazeInAppMessageUI();
+```
+
+Then, register the `BrazeInAppMessageUI` as the in-app message presenter when setting up your Braze instance:
+```csharp
+braze.InAppMessagePresenter = inAppMessageUI;
+```
+
+Now you can present new in-app messages using Braze's default in-app message UI.
+{% endtab %}
+{% endtabs %}

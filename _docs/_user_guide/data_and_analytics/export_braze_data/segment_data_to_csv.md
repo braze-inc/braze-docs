@@ -9,15 +9,19 @@ description: "This reference article covers how to export segment data to CSV."
 
 # Exporting segment data to CSV
 
-> To request a CSV export of user data from a segment, click the **User Data** dropdown while editing a segment and select to export either the user data or email addresses for the segment.
+> To request a CSV export of user data from a segment, select the **User Data** dropdown while editing a segment and select to export either the user data or email addresses for the segment.
 
 ![][1]
 
-You can also request a CSV export from the main **Segments** page by clicking the <i class="fas fa-gear"></i> **Settings** dropdown for a segment:
+You can also request a CSV export from the main **Segments** page by selecting the <i class="fas fa-gear"></i> **Settings** dropdown for a segment:
 
 ![][2]
 
-The CSV output contains the data from each user profile captured in the segment at the time of export. You can export any segment by clicking the gear icon and CSV export. Braze will generate the report in the background and email it to the user who is currently logged in.
+{% alert tip %}
+To export data from all your user profiles, create a segment with no filters, and then request a CSV export.
+{% endalert %}
+
+The CSV output contains the data from each user profile captured in the segment at the time of export. You can export any segment by selecting the gear icon and CSV export. Braze will generate the report in the background and email it to the user who is currently logged in.
 
 {% alert important %} 
 Due to file size restrictions, your export may fail if the estimated size of your segment is over 500,000 users. Note that this restriction uses the estimated size of your segment, and not the exact calculation. For more details, see [Exporting large segments]({{site.baseurl}}/help/help_articles/segments/exporting_large_segments/).

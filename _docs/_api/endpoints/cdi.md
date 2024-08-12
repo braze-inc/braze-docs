@@ -16,13 +16,13 @@ guide_featured_title: ""
 guide_featured_list:
   - name: "GET: List Integrations"
     link: /docs/api/cdi/get_integration_list/
-    fa_icon: fas fa-list-ul
+    image: /assets/img/braze_icons/list.svg
   - name: "GET: List Job Sync Status"
     link: /docs/api/cdi/get_job_sync
-    fa_icon: fas fa-list-ul
+    image: /assets/img/braze_icons/list.svg
   - name: "POST: Trigger Sync"
     link: /docs/api/cdi/post_trigger_sync/
-    fa_icon: fas fa-play
+    image: /assets/img/braze_icons/play.svg
 
 ---
 

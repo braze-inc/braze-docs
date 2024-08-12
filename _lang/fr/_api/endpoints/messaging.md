@@ -31,53 +31,53 @@ guide_featured_title: "Endpoints de planification des messages"
 guide_featured_list:
   - name: "GET : répertorier les campagnes et Canvas planifiés à venir"
     link: /docs/api/endpoints/messaging/schedule_messages/get_messages_scheduled/
-    fa_icon: fas fa-calendar
+    image: /assets/img/braze_icons/calendar-date.svg
   - name: "POST : supprimer les messages planifiés"
     link: /docs/api/endpoints/messaging/schedule_messages/post_delete_scheduled_messages/
-    fa_icon: fas fa-calendar-minus
+    image: /assets/img/braze_icons/calendar-minus-01.svg
   - name: "POST : supprimer des campagnes planifiées déclenchées par API"
     link: /docs/api/endpoints/messaging/schedule_messages/post_delete_scheduled_triggered_messages/
-    fa_icon: fas fa-calendar-minus
+    image: /assets/img/braze_icons/calendar-minus-01.svg
   - name: "POST : supprimer des Canvas planifiés déclenchés par API"
     link: /docs/api/endpoints/messaging/schedule_messages/post_delete_scheduled_triggered_canvases/
-    fa_icon: fas fa-calendar-minus
+    image: /assets/img/braze_icons/calendar-minus-01.svg
   - name: "POST : planifier les messages"
     link: /docs/api/endpoints/messaging/schedule_messages/post_schedule_messages/
-    fa_icon: fas fa-calendar-plus
+    image: /assets/img/braze_icons/calendar-plus-01.svg
   - name: "POST : planifier des messages de campagne déclenchés par API"
     link: /docs/api/endpoints/messaging/schedule_messages/post_schedule_triggered_campaigns/
-    fa_icon: fas fa-calendar-alt
+    image: /assets/img/braze_icons/calendar-check-02.svg
   - name: "POST : planifier des messages Canvas déclenchés par API"
     link: /docs/api/endpoints/messaging/schedule_messages/post_schedule_triggered_canvases/
-    fa_icon: fas fa-calendar-alt
+    image: /assets/img/braze_icons/calendar-check-02.svg
   - name: "POST : mettre à jour les messages planifiés"
     link: /docs/api/endpoints/messaging/schedule_messages/post_update_scheduled_messages/
-    fa_icon: fas fa-calendar
+    image: /assets/img/braze_icons/calendar-date.svg
   - name: "POST : mettre à jour les messages de campagnes planifiés déclenchés par API"
     link: /docs/api/endpoints/messaging/schedule_messages/post_update_scheduled_triggered_campaigns/
-    fa_icon: fas fa-calendar
+    image: /assets/img/braze_icons/calendar-date.svg
   - name: "POST : mettre à jour des messages Canvas planifiés déclenchés par API"
     link: /docs/api/endpoints/messaging/schedule_messages/post_update_scheduled_triggered_canvases/
-    fa_icon: fas fa-calendar-alt
+    image: /assets/img/braze_icons/calendar-check-02.svg
 
 guide_menu_title: "Endpoints des messages d’envoi"
 guide_menu_list:
   - name: "POST : créer des ID d’envoi"
     link: /docs/api/endpoints/messaging/send_messages/post_create_send_ids/
-    fa_icon: fas fa-id-card
+    image: /assets/img/braze_icons/user-square.svg
   - name: "POST : envoyer les messages immédiatement"
     link: /docs/api/endpoints/messaging/send_messages/post_send_messages/
-    fa_icon: fas fa-paper-plane
+    image: /assets/img/braze_icons/send-01.svg
   - name: "POST : envoyer immédiatement les messages de campagnes déclenchés par API"
     link: /docs/api/endpoints/messaging/send_messages/post_send_triggered_campaigns/
-    fa_icon: fas fa-inbox
+    image: /assets/img/braze_icons/inbox-01.svg
   - name: "POST : envoyer immédiatement les messages Canvas déclenchés par API"
     link: /docs/api/endpoints/messaging/send_messages/post_send_triggered_canvases/
-    fa_icon: fas fa-inbox
+    image: /assets/img/braze_icons/inbox-01.svg
 
 guide_menu_title2: "Activité en direct des endpoints"
 guide_menu_list2:
   - name: "POST : Mettre à jour l’activité en direct"
     link: /docs/api/endpoints/messaging/live_activity/update/
-    fa_icon: fas fa-tablet-alt
+    image: /assets/img/braze_icons/tablet-01.svg
 ---

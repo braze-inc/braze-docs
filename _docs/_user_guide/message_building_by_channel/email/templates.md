@@ -13,19 +13,19 @@ guide_featured_title: "Section articles"
 guide_featured_list:
 - name: Creating an Email Template
   link: /docs/user_guide/message_building_by_channel/email/templates/email_template/
-  fa_icon: fas fa-paintbrush
+  image: /assets/img/braze_icons/brush-02.svg
 - name: Uploading an Email Template
   link: /docs/user_guide/message_building_by_channel/email/templates/html_email_template/
-  fa_icon: fas fa-upload
+  image: /assets/img/braze_icons/upload-01-alt.svg
 - name: Link Aliasing
   link: /docs/user_guide/message_building_by_channel/email/templates/link_aliasing/
-  fa_icon: fas fa-link
+  image: /assets/img/braze_icons/link-03.svg
 - name: Link Templates
   link: /docs/user_guide/message_building_by_channel/email/templates/link_template/
-  fa_icon: fas fa-link
+  image: /assets/img/braze_icons/link-03.svg
 - name: Frequently Asked Questions
   link: /docs/user_guide/message_building_by_channel/email/templates/faq/
-  fa_icon: fas fa-question
+  image: /assets/img/braze_icons/annotation-question.svg
 
 ---
 <br><br>

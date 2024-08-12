@@ -14,18 +14,18 @@ guide_featured_title: "Articles"
 guide_featured_list:
   - name: Bonnes pratiques
     link: /docs/user_guide/engagement_tools/canvas/ideas_and_strategies/best_practices/
-    fa_icon: fas fa-book-open
+    image: /assets/img/braze_icons/book-closed.svg
   - name: Liste de contrôle avant et après lancement
     link: /docs/user_guide/engagement_tools/canvas/ideas_and_strategies/pre_post_launch_checklist/
-    fa_icon: fas fa-check-square
+    image: /assets/img/braze_icons/check-square-broken.svg
   - name: Lancement avec Canvas Flow
     link: /docs/user_guide/engagement_tools/canvas/ideas_and_strategies/launching_canvas_flow/
-    fa_icon: fas fa-code-branch
+    image: /assets/img/braze_icons/git-branch-01.svg
   - name: Localisation
     link: /docs/user_guide/engagement_tools/canvas/ideas_and_strategies/localization/
-    fa_icon: fas fa-globe
+    image: /assets/img/braze_icons/globe-02.svg
   - name: Envoyer des Canvas de test
     link: /docs/user_guide/engagement_tools/canvas/testing_canvases/sending_test_canvases/
-    fa_icon: fas fa-user-check
+    image: /assets/img/braze_icons/user-check-01.svg
 
 ---

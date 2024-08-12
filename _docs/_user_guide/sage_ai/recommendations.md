@@ -12,14 +12,13 @@ guide_featured_title: "Articles"
 guide_featured_list:
 - name: About Recommendations
   link: /docs/user_guide/sage_ai/recommendations/about_item_recommendations/
-  fa_icon: fas fa-book
+  image: /assets/img/braze_icons/book-closed.svg
 - name: AI Item Recommendations
   link: /docs/user_guide/sage_ai/recommendations/ai_item_recommendations/
-  fa_icon: fas fa-person-circle-question 
+  image: /assets/img/braze_icons/user-check-01.svg
 - name: Rules-based Recommendations
   link: /docs/user_guide/sage_ai/recommendations/rules_based_recommendations/
-  fa_icon: fas fa-list
+  image: /assets/img/braze_icons/list.svg
 ---
-
 
 <br><br>

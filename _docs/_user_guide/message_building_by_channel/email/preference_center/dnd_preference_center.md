@@ -8,7 +8,7 @@ page_order: 2
 
 # Create an email preference center with drag-and-drop
 
-With the drag-and-drop, you can now create and customize a preference center to help manage which users receive certain types of communication. 
+> Using the drag-and-drop editor, you can create and customize a preference center to help manage which users receive certain types of communication. You can have up to 50 preference centers per workspace.
 
 ## Step 1: Create an email preference center
 
@@ -18,7 +18,7 @@ Create a preference center by navigating to **Audience** > **Subscriptions** > *
 If you are using the [older navigation]({{site.baseurl}}/navigation), go to **Users** > **Subscription Groups** > **Email Preference Center**.
 {% endalert %}
 
-Here, a list of custom preference centers will be displayed. Click **Create New** to create a new preference center, or click the name of an existing one to make changes.
+Here, a list of custom preference centers will be displayed. Select **Create New** to create a new preference center, or select the name of an existing one to make changes.
 
 ![][1]
 
@@ -32,14 +32,14 @@ This Liquid tag can be included in any outbound email campaigns or Canvas steps 
 
 ## Step 3: Add subscription groups to the preference center
 
-Click **Launch Editor** to begin designing your preference center in the drag-and-drop editor.
+Select **Launch Editor** to begin designing your preference center in the drag-and-drop editor.
 
 ### Define available subscription groups
 
-To determine which subscription groups should be shown in the preference center, click the **+ Add subscription groups** button to launch a modal where desired subscription groups can be selected. After selecting, click the **Add Subscription Groups** button to add them to the preference center.
+To determine which subscription groups should be shown in the preference center, select the **+ Add subscription groups** button to launch a modal where desired subscription groups can be selected. After selecting, select the **Add Subscription Groups** button to add them to the preference center.
 
-You can further configure the selected subscription groups by clicking on the smart block and adjusting the block properties.
-- Adjust the order that subscription groups appear
+You can further configure the selected subscription groups by selecting the smart block and adjusting the block properties.
+- Adjust the order of subscription groups
 - Add or remove additional subscription groups
 - Include descriptions
 - Add or remove a **Subscribe to all** checkbox which will subscribe the user to all subscription groups shown in this block
@@ -58,10 +58,10 @@ You can set certain styles to be applied across all relevant blocks in your pref
 ![][5]{: style="max-width:45%;"}
 
 {% alert tip %}
-To return to the common styles, click the "X" button on individual block properties. Next, select the message container, message "X" button, or editor background.
+To return to the common styles, select the "X" button on individual block properties. Next, select the message container, message "X" button, or editor background.
 {% endalert %}
 
-## Drag and drop preference center components
+## Drag-and-drop preference center components
 
 The drag-and-drop editor uses two key components to make preference center composition quick and easy: rows and blocks. All blocks must be placed in a row.
 
@@ -83,7 +83,7 @@ As a best practice, format your row and column properties before formatting any 
 {% endtab %}
 {% tab Blocks %}
 
-Blocks represent different types of content you can use in your message. Simply drag one inside an existing row segment, which will auto-adjust to the cell width.
+Blocks represent different types of content you can use in your message. Drag one inside an existing row segment, which will auto-adjust to the cell width.
 
 ![]({% image_buster /assets/img/preference_center/preference_center8.png %}){: style="max-width:45%;"}
 
@@ -96,21 +96,21 @@ If you're using the Custom Code block in your preference center, inline frames m
 
 ## Step 5: Customize your confirmation page
 
-Don’t forget to customize the confirmation page! You can edit this page by clicking on **Confirmation Page** at the top of the drag-and-drop editor window. This page will be displayed to users after updating their preferences using the preference center. The same styling capabilities above apply to this page as well.
+Don’t forget to customize the confirmation page! You can edit this page by selecting **Confirmation Page** at the top of the drag-and-drop editor window. This page will be displayed to users after updating their preferences using the preference center. The same styling capabilities above apply to this page as well.
 
 ![][9]{: style="max-width:65%;"}
 
 ## Step 6: Preview and launch your preference center
 
-You can preview your preference center by clicking the **Preview** tab within the editor. However, testing functionality is disabled. After editing your preference center, you can close the editor by clicking the **Done** button.
+You can preview your preference center by selecting the **Preview** tab within the editor. However, testing functionality is disabled. After editing your preference center, you can close the editor by selecting the **Done** button.
 
-You will see a preview of both the preference center and the confirmation page. Click **Save as Draft** to return to this preference center later, or if you are satisfied, click **Launch Preference Center**.
+You will see a preview of both the preference center and the confirmation page. Select **Save as Draft** to return to this preference center later, or if you are satisfied, select **Launch Preference Center**.
 
 When launching the preference center, you will be prompted to confirm the name, as it cannot be edited after launching. After you confirm the name, the preference center will be launched and ready for use.
 
 ## Using the preference center
 
-To place a link to the preference center in your emails, copy the Liquid tag of the desired preference center by clicking the **Copy Liquid** icon.
+To place a link to the preference center in your emails, copy the Liquid tag of the desired preference center by selecting the **Copy Liquid** icon.
 
 ![][10]{: style="max-width:75%;"}
 
@@ -118,7 +118,7 @@ Add the Liquid tag to the desired place in your email, similar to how [unsubscri
 
 ## Handling errors
 
-If an error occurs when a user clicks **Save** on a preference center, they will be presented with the following default error message, which cannot be customized or styled in the editor. However, localization of the error messages is still supported on these pages. 
+If an error occurs when a user selects **Save** on a preference center, they will be presented with the following default error message, which cannot be customized or styled in the editor. However, localization of the error messages is still supported on these pages. 
 
 ![An error noting "There was a problem saving your preferences. Please try again."][11]{: style="max-width:55%;"}
 

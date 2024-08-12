@@ -3,7 +3,7 @@ nav_title: Funnel Reports
 article_title: Funnel Reports for Campaigns and Canvases
 page_order: 6
 page_type: reference
-description: "This reference article covers the benefits of funnel reports, how to set them up, as well as how to interpret your report."
+description: "This reference article covers the benefits of funnel reports, how to set them up, and how to interpret your report."
 tool: Reports
 ---
 
@@ -19,7 +19,7 @@ If your campaign or Canvas uses a control group or multiple variants, you can un
 
 ![Funnel Report 5][5]{: style="float:right;max-width:40%;border:0;margin-left:15px;"}
 
-You can run Funnel Reports for existing active campaigns and Canvases. These reports show a series of events that a campaign recipient progresses through over a period of 1–30 days from the date they received the message. A user is considered converted through a step in the funnel if they perform the event in the specified order.
+You can run funnel reports for existing active campaigns and Canvases. These reports show a series of events that a campaign recipient progresses through over 1-30 days from the date they enter the Canvas or campaign. A user is considered converted through a step in the funnel if they perform the event in the specified order.
 
 Funnel reporting is available from the following locations in the dashboard:
 
@@ -35,7 +35,7 @@ Funnel Reports are not available for [API campaigns]({{site.baseurl}}/api/api_ca
 You can select a time frame for your report (within the past 6 months), and refine the data to see users who, upon entering the campaign or Canvas, completed the funnel events within a set window (maximum of 30 days). In the following example, your funnel would look for users who received this campaign or Canvas in the last 7 days and completed the funnel within 3 days.
 
 {% alert note %}
-If you set the window to complete the funnel to 1 day, then the funnel event must occur within 24 hours of message receipt. However, if you select multiple days, the timing window is then counted as calendar days in the company time zone.
+If you set the window to complete the funnel to 1 day, then the funnel event must occur within 24 hours of message receipt. However, if you select multiple days, the timing window is counted as calendar days in the company time zone.
 {% endalert %}
 
 ![Funnel Report 5][6]{: style="max-width:90%;"}
@@ -61,16 +61,16 @@ In your funnel report, you can directly compare the control group alongside the 
 ### Funnel report components
 
 - **Horizontal axis**: Displays the percentage of message recipients who performed those actions. 
-- **Chart**: Displays the number of received messages, the number of users that performed the prior actions as well as the action you chose, the conversion rate, and the percentage change from control.
-- **Regenerate Option**: Allows you to regenerate your report and notes when the current report was last generated. 
+- **Chart**: Displays the number of received messages, the number of users that performed the prior actions, as well as the action you chose, the conversion rate, and the percentage change from control.
+- **Regenerate Option**: Allows you to regenerate your report and indicates when the current report was last generated. 
 - **Variants**: Denoted by colored columns, funnel reporting allows up to 8 variants and a control group. By default, the **chart** will only show three variants. To see more, you can manually select the rest of the variants.
 
 ![Funnel Report 4][4]
 
-**For campaigns with multiple variants**: Braze will show a table that displays metrics for each event and variant, as well as the percentage change from control. The conversion rate is the number of users who performed the event (and subsequent ones) per message recipients.
+**For campaigns with multiple variants**: Braze will show a table with metrics for each event and variant and the percentage change from control. The conversion rate is the number of users who performed the event (and subsequent ones) per message recipient.
 
 **For campaigns with re-eligibility**: If a user receives the campaign more than once in the report time window, Braze will determine whether the user should be included in the funnel based on the actions this user took after the first time they received the campaign within the time window.
-- Note that there may be a discrepancy between funnel and standard conversion values, as users can convert more than once with re-eligibility, but Funnel Reports will convert a maximum of one time even if a user performs the event more than once. 
+- Note that there may be a discrepancy between the funnel and standard conversion values, as users can convert more than once with re-eligibility, but funnel reports will convert a maximum of one time even if a user performs the event more than once. 
 
 **For multivariant campaigns with re-eligibility**: If a user receives multiple variants from the campaign during the report time window, Braze will determine whether they should be included in the variant funnel based on the actions this user took after the first time they received the campaign variant. This means that the same user could count toward multiple different variants if they received multiple variants during the time window for the funnel.
 

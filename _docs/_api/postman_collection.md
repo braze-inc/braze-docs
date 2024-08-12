@@ -9,7 +9,7 @@ page_type: reference
 
 # Postman and sample requests
 
-> Braze allows you to generate sample API requests for all of our endpoints via our Postman Collection. This reference article covers the Braze Postman Collection, what it is, how to set up and use the collection, as well as how to edit and send requests.
+> Braze allows you to generate sample API requests for all of our endpoints through our Postman Collection. This reference article covers the Braze Postman Collection, what it is, how to set up and use the collection, as well as how to edit and send requests.
 
 ## What is Postman?
 
@@ -42,7 +42,7 @@ In `POST` request bodies, the `api_key` should be encapsulated in quotes: `"MY-A
 
 ### Using the pre-built requests from the collection
 
-Once you have configured your environment. You can use any of the pre-built requests in the collection as a template for building new API requests. To start using one of the pre-built requests, click on it within the **Collections** menu of Postman. This will open the request as a new tab in the main window of the Postman app.
+After you have configured your environment, you can use any of the pre-built requests in the collection as a template for building new API requests. To start using one of the pre-built requests, click on it within the **Collections** menu of Postman. This will open the request as a new tab in the main window of the Postman app.
 
 In general, there are two types of requests that Braze API endpoints accept - `GET` and `POST`. Depending on which `HTTP` method the endpoint uses, you'll need to edit the pre-built request differently.
 
@@ -60,7 +60,7 @@ When editing a `GET` request, edit the parameters passed in the request URL. To 
 
 ### Send your request
 
-Once your API request is ready, click **Send**. The request sends and the response data populates in a section underneath the request editor. From here, you can view the raw data returned from the Braze API, see the HTTP response code, see how long the request took to process, and view header information.
+After your API request is ready, click **Send**. The request sends and the response data populates in a section underneath the request editor. From here, you can view the raw data returned from the Braze API, see the HTTP response code, see how long the request took to process, and view header information.
 
 ![Example body response data from a POST request with a status of 201 Created and response time of 269 milliseconds.][6]
 

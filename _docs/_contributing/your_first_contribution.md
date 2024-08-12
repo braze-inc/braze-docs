@@ -8,7 +8,7 @@ noindex: true
 
 # Your first contribution
 
-> If you're new to docs-as-code or Braze Docs, start with this step-by-step tutorial. If you're an experienced contributor, see [Content Management]({{site.baseurl}}/contributing/content_management/) instead.
+> If you're new to docs-as-code or Braze Docs, start with this step-by-step tutorial. If you're an experienced contributor, see [About content management]({{site.baseurl}}/contributing/content_management/) instead.
 
 When you're finished with this tutorial, you'll be able to:
 
@@ -189,7 +189,7 @@ These comments will guide you through your PR description. When you're finished,
 
 ## Step 4: Review your work
 
-Ensure your content follows the [Braze Docs Style Guide]({{sitebase.url}}/contributing/style_guide/) by reviewing your work in a site preview. If you need to make additional changes, see [Make additional changes](#step-6-make-additional-changes-optional). Otherwise, you can [request a review](#step-5-request-a-review) from the Braze Docs team.
+Create your content by following the [Braze Docs Style Guide]({{sitebase.url}}/contributing/style_guide/) and reviewing your work in a site preview. If you need to make additional changes, see [Make additional changes](#step-6-make-additional-changes-optional). Otherwise, you can [request a review](#step-5-request-a-review) from the Braze Docs team.
 
 {% tabs %}
 {% tab github %}
@@ -243,7 +243,7 @@ If you're ready for a member of the Braze Docs team to review your work, select 
 
 ![An example pull request showing "Ready for review".]({% image_buster /assets/img/contributing/github/ready_for_review.png %}){: style="max-width:75%;"}
 
-**Reviewers** and type `braze-inc/docs-team`. Select the team name and press <kbd>Esc</kbd> or click out of the dropdown to confirm your selection.
+In the **Reviewers** field, type `braze-inc/docs-team`. Select the team name and press <kbd>Esc</kbd> or click out of the dropdown to confirm your selection.
 
 ![An example pull request with "docs-team" added as the reviewer.]({% image_buster /assets/img/contributing/github/add_docs_team_as_reviewers.png %}){: style="max-width:55%;"}
 

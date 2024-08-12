@@ -8,8 +8,8 @@ $toc_toggle_down: 'f0d7'; //"f103"; /* 103 Double Arrow Down */
 
 $toc_transition_time: 0.35s;
 
-$toc_font_size: 12px;
-$toc_color: rgba($navy-bay,0.6);
+$toc_font_size: 13px;
+$toc_color: rgba($braze-purple-dark,0.6);
 
 #toc_col {
   @media print {
@@ -35,7 +35,7 @@ $toc_color: rgba($navy-bay,0.6);
     overflow-y: auto;
     overflow-x: hidden;
     font-size: $toc_font_size;
-    line-height: 18px;
+    line-height: 1.6;
     position: -webkit-sticky;
     position: sticky;
     top: $header_height; //$calc_offset_top;
@@ -70,6 +70,9 @@ $toc_color: rgba($navy-bay,0.6);
           display: block;
           height: 6px;
         }
+        div {
+          padding-bottom: 5px;
+        }
         a.nav-link {
           padding: 0 0 0 0;
           width: fit-content;
@@ -88,7 +91,7 @@ $toc_color: rgba($navy-bay,0.6);
           -moz-transition:  all ease $toc_transition_time;
 
           &.active {
-            font-family: $braze-black;
+            font-family: $braze-medium;
             color: $black-shark;
             width: fit-content;
             border-bottom-width: 2px;
@@ -109,7 +112,7 @@ $toc_color: rgba($navy-bay,0.6);
     }
     .toc_header {
       // border-bottom: 2px solid $toc_color;
-      font-family: $braze-black;
+      font-family: $braze-medium;
       font-size: $toc_font_size + 1;
       margin-bottom: 6px;
     }

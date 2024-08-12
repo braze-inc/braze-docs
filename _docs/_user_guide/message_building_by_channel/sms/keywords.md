@@ -12,19 +12,19 @@ guide_featured_title: "Section articles"
 guide_featured_list:
 - name: Default Opt-In/Opt-Out
   link: /docs/user_guide/message_building_by_channel/sms/keywords/optin_optout/
-  fa_icon: fas fa-commenting
+  image: /assets/img/braze_icons/message-dots-circle.svg
 - name: SMS Double Opt-In
   link: /docs/user_guide/message_building_by_channel/sms/keywords/sms_double_opt_in/
-  fa_icon: fas fa-mobile-alt
+  image: /assets/img/braze_icons/phone-02.svg
 - name: Custom Keyword Handing
   link: /docs/user_guide/message_building_by_channel/sms/keywords/custom_keyword_handling/
-  fa_icon: fas fa-mobile-alt
+  image: /assets/img/braze_icons/phone-02.svg
 - name: Handling Unknown Phone Numbers
   link: /docs/user_guide/message_building_by_channel/sms/keywords/unknown_phone_numbers/
-  fa_icon: fas fa-phone-volume
+  image: /assets/img/braze_icons/phone.svg
 - name: Fuzzy Opt-Out
   link: /docs/user_guide/message_building_by_channel/sms/keywords/fuzzy_opt_out/
-  fa_icon: fa-solid fa-hand
+  image: /assets/img/braze_icons/hand.svg
 
 ---
 <br><br>

@@ -24,12 +24,12 @@ Not sure whether your message should be sent using a campaign or a Canvas? Campa
 
 **Steps:**
 
-1. Go to **Messaging** > **Campaigns** and click <i class=“fas fa-plus”></i> **Create Campaign**.
+1. Go to **Messaging** > **Campaigns** and click **Create Campaign**.
 {% alert note %}
 If you are using the [older navigation]({{site.baseurl}}/navigation), you can find **Campaigns** under **Engagement**.
 {% endalert %}
 
-{:start=“2"}
+{: start="2"}
 2. Select **SMS**, or, for campaigns targeting multiple channels, select **Multichannel Campaign**.
 3. Name your campaign something clear and meaningful.
 4. Add [Teams]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/teams/) and [Tags]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/tags/) as needed.
@@ -95,7 +95,7 @@ If you'd like to test how many segments your SMS may be split into, test your co
 {% tabs %}
 {% tab Campaign %}
 
-Next, build the remainder of your campaign. See the following sections for further details on how to best utilize our tools to build SMS messages.
+Next, build the remainder of your campaign. See the following sections for further details on how to best use our tools to build SMS messages.
 
 #### Choose delivery schedule or trigger
 

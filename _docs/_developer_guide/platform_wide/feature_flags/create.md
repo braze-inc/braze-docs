@@ -13,69 +13,52 @@ platform:
 
 # Creating feature flags
 
-> Feature flags allow you to remotely enable or disable functionality for a selection of users. Create a new feature flag within the Braze dashboard. Provide a name and an `ID`, a target audience, and a percentage of users for whom to enable to this feature. Then, using that same `ID` in your app or website's code, you can conditionally run certain parts of your business logic.
-
-Looking to learn more about what feature flags are and how you can use them in Braze? Check out [About feature flags][5] before proceeding.
+> Feature flags allow you to remotely enable or disable functionality for a selection of users. Create a new feature flag within the Braze dashboard. Provide a name and an `ID`, a target audience, and a percentage of users for whom to enable to this feature. Then, using that same `ID` in your app or website's code, you can conditionally run certain parts of your business logic. To learn more about feature flags and how you can use them in Braze, see [About feature flags][5].
 
 ## Prerequisites
+
+### SDK version
 
 To use feature flags, ensure your SDKs are up to date with at least these minimum versions:
 
 {% sdk_min_versions swift:5.9.0 android:24.2.0 web:4.6.0 unity:4.1.0 cordova:5.0.0 reactnative:4.1.0 flutter:6.0.0 roku:1.0.0 %}
 
-## Implement feature flags in the dashboard
+### Braze permissions
 
-Create, edit, and archive feature flags from **Messaging** > **Feature Flags**. This page displays a list of existing feature flags for this workspace.
+To manage feature flags in the dashboard, you'll either need to be an Administrator, or have the following [permissions][9]:
 
-{% alert note %}
-If you are using the [older navigation]({{site.baseurl}}/navigation), you can find **Feature Flags** under **Engagement**.
-{% endalert %}
+| Permission                                                                    | What you can do                           |
+|-------------------------------------------------------------------------------|-------------------------------------------|
+| **Manage Feature Flags**                                                      | View, create, and edit feature flags.     |
+| **Access Campaigns, Canvases, Cards, Feature Flags, Segments, Media Library** | View the list of available feature flags. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+
+## Creating a feature flag
+
+### Step 1: Create a new feature flag
+
+Go to **Messaging** > **Feature Flags**, then select **Create Feature Flag**.
 
 ![A list of previously created feature flags on the Braze dashboard][1]{: style="max-width:75%"}
 
-### Access permissions {#permissions}
+### Step 2: Fill out the details
 
-You must have "Manage Feature Flags" [permission][9] to view, create, or edit feature flags. To view the list of available feature flags, you must have the "Access Campaigns, Canvases, Cards, Feature Flags, Segments, Media Library" permission.
+Under **Details**, enter a name, ID, and description for your feature flag.
 
-{% alert note %}
-Administrator users automatically have access to manage feature flags. For limited users, you can explicitly allow or restrict access to **Manage Feature Flags** at a workspace level. This is useful if certain users should only be able to modify feature flags for specific environments or business units.
-{% endalert %}
+| Field        | Description                                                                                                                                                                                                         |
+|--------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Name         | A human-readable title for your marketers and administrators.                                                                                                                                                       |
+| ID           | The unique ID you'll use in your code to check if this feature is [enabled for a user](#enabled). This ID cannot be changed later, so review our [ID naming best practices](#naming-conventions) before continuing. |
+| Description  | An optional description that gives some context about your feature flag.                                                                                                                                            |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
-![Manage Feature Flags permission][8]{: style="max-width:60%"}
+### Step 3: Create custom properties
 
-### Create a new feature flag
+Under **Properties**, create custom properties your app can access through the Braze SDK when your feature is enabled. You can assign a string, boolean, image, timestamp, JSON or a number value to each variable, as well as set a default value.
 
-To create a new feature flag, click the **Create Feature Flag** button. Then, define your feature flag's [details](#details), [properties](#properties), user [targeting](#targeting), and [rollout traffic](#rollout-traffic).
-
-![A blank feature flag form][2]{: style="float:right;max-width:55%;margin-left:15px;"}
-
-#### Details
-
-Give your new feature flag a **Name** and **ID**.
-
-* The **Name** field allows you to provide a human-readable title for this feature flag that will be used by marketers and administrators.
-* The **ID** field will be referenced in your code to determine whether the feature is enabled for a particular user. This must be unique and cannot be modified after it's created.
-* The **Description** field is an optional field that allows you to provide additional context around this feature flag.
-
-Choose an `ID` thoughtfully as it will be used as you develop your feature. Practice good naming conventions to ensure that your code is readable by your colleagues (and your future self).
-
-For example, it's common to use a naming convention of `{verb}_{product}_{feature}`, such as `enable_rider_new_profile_page` to make it clear what enabling the feature flag does.
-
-{% alert important %} 
-To prevent breaking production app behavior, feature flag `ID`s must be unique and cannot be modified after they are created. 
-
-Feature flags are shared across apps within a workspace so that different platforms (iOS/Android/Web) can share references to the same feature.
-{% endalert %}
-
-#### Properties {#properties}
-
-Custom properties can be defined as part of your feature flag. These properties will be accessible by your app through the Braze SDK when the feature is enabled. Defining properties is an optional step.
-
-Variables can be **strings**, **boolean** values, or **numbers**. Define both the variable key and default value for each property.
-
-##### Example properties
-
-For example, if we are defining a feature flag that shows an out-of-stock banner for our ecommerce store, we might set the following properties, which our app will use when displaying the banner:
+{% tabs local %}
+{% tab example %}
+In the following example, the feature flag shows an out-of-stock banner for an ecommerce store using the custom properties listed: 
 
 |Property Name|Type|Value|
 |--|--|--|
@@ -83,32 +66,33 @@ For example, if we are defining a feature flag that shows an out-of-stock banner
 |`banner_color`|`string`|`blue`|
 |`banner_text`|`string`|`Widgets are out of stock until July 1.`|
 |`dismissible`|`boolean`|`false`|
+|`homepage_icon`|`image`|`http://s3.amazonaws.com/[bucket_name]/`|
+|`account_start`|`timestamp`|`2011-01-01T12:00:00Z`|
+|`footer_settings`|`JSON`|`{ "colors": [ "red", "blue", "green" ], "placement": 123 }`|
 
 {% alert tip %}
-There is no limit to the number of properties you can add, though a feature flag's properties are limited to 10kB in total. Both property values and keys are limited to 255 characters in length.
+There is no limit to the number of properties you can add. However, a feature flag's properties are limited to a total of 10kB. Both property values and keys are limited to 255 characters in length.
 {% endalert %}
+{% endtab %}
+{% endtabs %}
 
-#### Targeting
+### Step 4: Choose segments to target
 
-To begin the rollout of a feature flag, you must choose a particular [segment]({{site.baseurl}}/user_guide/engagement_tools/segments/) of users.
-
-Use the **Add Filter** dropdown menu to filter users out of your target audience. Add multiple filters to narrow your audience.
+Before rolling out a feature flag, you need to choose a [segment]({{site.baseurl}}/user_guide/engagement_tools/segments/) of users to target. Use the **Add Filter** dropdown menu to filter users out of your target audience. Add multiple filters to narrow your audience further.
 
 ![Two dropdown menus. The first reads Target Users by Segment. The second reads Additional Filters.][3]
 
-#### Rollout traffic {#rollout}
+### Step 5: Set the rollout traffic {#rollout}
 
-Feature flags always start as turned off to allow you to separate the timing of the feature's release and activation in your users' experience. 
-
-When you are ready to rollout your new feature, specify an audience and then use the **Rollout Traffic** slider to define the random percentage of your targeted user base to receive the new feature. Set the **Rollout Traffic** slider to set a percentage between 0% (no users) and 100% (the entire target audience). 
+Feature flags are always disabled by default, allowing you to separate your feature release's date from your total user activation. To begin your rollout, use the **Rollout Traffic** slider to choose the percentage of random users in your selected segment to receive this new feature.
 
 ![A slider labeled Rollout Traffic, spanning between 0 and 100.][4]
 
-{% alert tip %}
+{% alert important %}
 Do not set your rollout traffic above 0% until you are ready for your new feature to go live. When you initially define your feature flag in the dashboard, leave this setting at 0%.
 {% endalert %}
 
-## Check if the feature flag is enabled within your application {#enabled}
+## Verifying the feature flag {#enabled}
 
 Once you have defined your feature flag, configure your app or site to check whether or not it is enabled for a particular user. When it is enabled, you'll set some action or reference the feature flag's variable properties based on your use case. The Braze SDK provides getter methods to pull your feature flag's status and its properties into your app. 
 
@@ -225,7 +209,7 @@ end if
 
 ### Logging a feature flag impression {#impressions}
 
-Track a feature flag impression whenever a user has had an opportunity to interact with your new feature, or when they __could__ have interacted if the feature is disabled (in the case of a control group in an A/B test).
+Track a feature flag impression whenever a user has had an opportunity to interact with your new feature, or when they __could__ have interacted if the feature is disabled (in the case of a control group in an A/B test). Feature flag impressions are only logged once per session. 
 
 Usually, you can put this line of code directly underneath where you reference your feature flag in your app:
 
@@ -307,6 +291,12 @@ const stringProperty = featureFlag.getStringProperty("color");
 const booleanProperty = featureFlag.getBooleanProperty("expanded");
 // Number properties
 const numberProperty = featureFlag.getNumberProperty("height");
+// returns the property as a number in milliseconds
+const timestampProperty = featureFlag.getTimestampProperty("account_start");
+// returns the property as a string of the image URL
+const imageProperty = featureFlag.getImageProperty("homepage_icon");
+// returns the JSON property as as JSON object 
+const jsonProperty = featureFlag.getJsonProperty("footer_settings");
 ```
 
 {% endtab %}
@@ -321,6 +311,12 @@ let stringProperty: String? = featureFlag.stringProperty(key: "color")
 let booleanProperty: Bool? = featureFlag.boolProperty(key: "expanded")
 // Number properties
 let numberProperty: Double? = featureFlag.numberProperty(key: "height")
+// returns the property as a TimeInterval in milliseconds
+let timestampProperty : Int? = featureFlag.timestampProperty(key: "account_start")
+// returns the property as a string of the image URL 
+let imageProperty : String? = featureFlag.imageProperty(key: "homepage_icon")
+// returns the property as a [String: Any] dictionary
+let jsonObjectProperty : [String: Any]? = featureFlag.jsonObjectProperty(key: "footer_settings")
 ```
 
 {% endtab %}
@@ -335,6 +331,12 @@ String stringProperty = featureFlag.getStringProperty("color");
 Boolean booleanProperty = featureFlag.getBooleanProperty("expanded");
 // Number properties
 Number numberProperty = featureFlag.getNumberProperty("height");
+// returns the property as a nullable long in milliseconds
+Long timestampProperty = featureFlag.getTimestampProperty("account_start");
+// returns the property as a string of the image URL 
+String imageProperty = featureFlag.getImageProperty("homepage_icon");
+// returns the property as a JSON Object
+JSONObject jsonObjectProperty = featureFlag.getJSONProperty("footer_settings");
 ```
 
 {% endtab %}
@@ -344,11 +346,17 @@ Number numberProperty = featureFlag.getNumberProperty("height");
 // feature flag instance
 val featureFlag = braze.getFeatureFlag("expanded_user_profile")
 // string properties
-val stringProperty = featureFlag.getStringProperty("color")
+val stringProperty: String? = featureFlag.getStringProperty("color")
 // boolean properties
-val booleanProperty = featureFlag.getBooleanProperty("expanded")
+val booleanProperty: Boolean? = featureFlag.getBooleanProperty("expanded")
 // number properties
-val numberProperty = featureFlag.getNumberProperty("height")
+val numberProperty: Number? = featureFlag.getNumberProperty("height")
+// returns the property as a nullable long in milliseconds
+val timestampProperty: Long? = featureFlag.getTimestampProperty("account_start")
+// returns the property as a string of the image URL 
+val String imageProperty: String?  = featureFlag.getImageProperty("homepage_icon")
+// returns the property as a JSON Object
+val jsonObjectProperty: JSONObject? = featureFlag.getJSONProperty("footer_settings")
 ```
 
 {% endtab %}
@@ -413,7 +421,7 @@ height = featureFlag.getNumberProperty("height")
 {% endtab %}
 {% endtabs %}
 
-### Get a list of all feature flags {#get-list-of-flags}
+### Getting a list of all feature flags {#get-list-of-flags}
 
 {% tabs %}
 {% tab JavaScript %}
@@ -502,7 +510,7 @@ end for
 {% endtab %}
 {% endtabs %}
 
-### Refresh feature flags {#refreshing}
+### Refreshing feature flags {#refreshing}
 
 You can refresh the current user's feature flags mid-session to pull the latest values from Braze.
 
@@ -581,8 +589,7 @@ m.Braze.refreshFeatureFlags()
 {% endtab %}
 {% endtabs %}
 
-
-### Listen for changes {#updates}
+### Listening for changes {#updates}
 
 You can configure the Braze SDK to listen and update your app when the SDK refreshes any feature flags.
 
@@ -723,13 +730,21 @@ export const useFeatureFlag = (id: string): FeatureFlag => {
 {% endtab %}
 {% endtabs %}
 
+## Viewing the changelog
+
+To view a feature flag's changelog, open a feature flag and select **Changelog**.
+
+![A feature flag's "Edit" page, with the "Changelog" button highlighted.]({% image_buster /assets/img/feature_flags/changelog/open_changelog.png %}){: style="max-width:60%;"}
+
+Here, you can review when a changed happened, who made the change, which category it belongs to, and more.
+
+![The changelog of the selected feature flag.]({% image_buster /assets/img/feature_flags/changelog/changelog.png %}){: style="max-width:90%;"}
+
 ## Segmenting with feature flags {#segmentation}
 
-{% alert note %}
-Feature Flag membership filter is being gradually rolled out and may not be on your dashboard just yet.
-{% endalert %}
+Braze automatically keeps track of which users are currently eligible for or participating in a feature flag. You can create a segment or target messaging using the [**Feature Flag** filter]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/#feature-flags). For more information about filtering on segments, see [Creating a segment][7].
 
-Braze automatically keeps track of which users are currently eligible for or participating in a feature flag. You can create a segment or target messaging using the [**Feature Flag** filter][6]. For more information about filtering on segments, see [Creating a segment][7].
+![The "Filters" section with "Feature Flag" typed into the filter search bar.][10]
 
 {% alert note %}
 To prevent recursive segments, it is not possible to create a segment that references other feature flags.
@@ -743,11 +758,26 @@ To avoid users being enabled and disabled by different entry points, you should 
 
 ### Naming conventions
 
-- Consider following a pattern such as `{product}.{feature}.{action}`. 
-  - For example, in a ride sharing app your feature ID may be `driver.profile.show_animation_v3`
-- This also helps when searching for a specific product area or team's feature flags.
-- Make sure that the default state for a feature flag is disabled in your app.
-  - For example, it is an anti-pattern if you have a flag named `disable_feature_xyz`. There may be exceptions, but try to avoid confusing a feature's "enabled" status with the actual enabled behavior (disabling feature XYZ).
+To keep your code clear and consistent, consider using the following format when naming your feature flag ID:
+
+```plaintext
+BEHAVIOR_PRODUCT_FEATURE
+```
+
+Replace the following:
+
+| Placeholder | Description                                                                                                               |
+|-------------|---------------------------------------------------------------------------------------------------------------------------|
+| `BEHAVIOR`  | The behavior of the feature. In your code, be sure the behavior is disabled by default and avoid using phrases like `disabled` in the feature flag name. |
+| `PRODUCT`   | The product the feature belongs to.                                                                                       |
+| `FEATURE`    | The name of the feature.                                                                                                  |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+
+Here's an example feature flag where `show` is the behavior, `animation_profile` is the product, and `driver` is the feature:
+
+```plaintext
+show_animation_profile_driver
+```
 
 ### Planning ahead
 
@@ -773,7 +803,7 @@ To help keep your code (and Braze dashboard) clean, remove permanent feature fla
 [3]: {% image_buster /assets/img/feature_flags/feature-flags-targeting.png %}
 [4]: {% image_buster /assets/img/feature_flags/feature-flags-rollout.png %}
 [5]: {{site.baseurl}}/developer_guide/platform_wide/feature_flags/about/
-[6]: {{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters#feature-flag
 [7]: {{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/
 [8]: {% image_buster /assets/img/feature_flags/feature-flags-manage-permission.png %}
 [9]: {{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/
+[10]: {% image_buster /assets/img/feature_flags/feature-flags-filter-name.png %}

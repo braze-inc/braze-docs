@@ -20,7 +20,7 @@ When this feature is turned on, if you have connected a cloud storage bucket to 
 
 This file will contain the fields defined under [File references](#file-references) and reflect the final templated messages sent to the user. Any templated values defined in your campaign (for example, {% raw %}`{{${first_name}}}`{% endraw %}) will show the final value that the user received based on their profile information. This will allow you to retain a copy of the message sent to satisfy compliance, audit, or customer support requirements.
 
-If you setup credentials for multiple cloud storage providers, Message Archiving will only export to the one explicitly marked as the default data export destination. If no explicit default is provided and an AWS S3 bucket is connected, Message Archiving will upload to that bucket.
+If you set up credentials for multiple cloud storage providers, message archiving will only export to the one explicitly marked as the default data export destination. If no explicit default is provided and an AWS S3 bucket is connected, message archiving will upload to that bucket.
 
 {% alert important %}
 Turning on this feature will impact the delivery speed of your messages, as the file upload is performed immediately before the message send to ensure accuracy. This introduces additional latency into the Braze sending pipeline, affecting sending speeds.
@@ -84,11 +84,11 @@ The following are references of the JSON payload delivered to your cloud storage
   "headers": HashOfHeaders,
   "sent_at": UnixTimestamp,
   "dispatch_id": DispatchIdFromBraze,
-  "campaign_id": CampaignApiKey, // may not be available
-  "canvas_id": CanvasApiKey, // may not be available
-  "canvas_step_id": CanvasStepID, // may not be available
-  "canvas_variation_id" : CanvasVariationId, // may not be available
-  "message_variation_id": MessageVariationId, // may not be available,
+  "campaign_id": CampaignApiId, // may not be available
+  "canvas_id": CanvasApiId, // may not be available
+  "canvas_step_id": CanvasStepApiId, // may not be available
+  "canvas_variation_id" : CanvasVariationApiId, // may not be available
+  "message_variation_id": MessageVariationApiId, // may not be available,
   "attachments": Array of JSON Objects containing 'bytes' and 'file_name', // may not be available
   "user_id": String,
   "campaign_name": String, // will only be available if the message is from a campaign
@@ -115,11 +115,11 @@ The `extras` field referred to in this payload is from the key-value pairs added
   "media_urls": ArrayOfString,
   "sent_at": UnixTimestamp,
   "dispatch_id": DispatchIdFromBraze,
-  "campaign_id": CampaignApiKey, // may not be available
-  "canvas_id": CanvasApiKey, // may not be available
-  "canvas_step_id": CanvasStepID, // may not be available
-  "canvas_variation_id" : CanvasVariationId, // may not be available
-  "message_variation_id": MessagVariationId, // may not be available
+  "campaign_id": CampaignApiId, // may not be available
+  "canvas_id": CanvasApiId, // may not be available
+  "canvas_step_id": CanvasStepApiId, // may not be available
+  "canvas_variation_id" : CanvasVariationApiId, // may not be available
+  "message_variation_id": MessagVariationApiId, // may not be available
   "user_id": String,
   "campaign_name": String, // will only be available if the message is from a campaign
   "canvas_name": String, // will only be available if the message is a from Canvas
@@ -140,11 +140,11 @@ The `extras` field referred to in this payload is from the key-value pairs added
   "app_id": ApiKeyOfApp,
   "sent_at": UnixTimestamp,
   "dispatch_id": DispatchIdFromBraze,
-  "campaign_id": CampaignApiKey, // may not be available
-  "canvas_id": CanvasApiKey, // may not be available
-  "canvas_step_id": CanvasStepID, // may not be available
-  "canvas_variation_id" : CanvasVariationId, // may not be available
-  "message_variation_id": MessagVariationId, // may not be available
+  "campaign_id": CampaignApiId, // may not be available
+  "canvas_id": CanvasApiApiId, // may not be available
+  "canvas_step_id": CanvasStepApiId, // may not be available
+  "canvas_variation_id" : CanvasVariationApiId, // may not be available
+  "message_variation_id": MessagVariationApiId, // may not be available
   "user_id": String,
   "campaign_name": String, // will only be available if the message is from a campaign
   "canvas_name": String, // will only be available if the message is a from Canvas

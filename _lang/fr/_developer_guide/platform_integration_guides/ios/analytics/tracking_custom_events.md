@@ -7,7 +7,7 @@ description: "Cet article de référence explique comment ajouter et suivre des 
 
 ---
 
-{% multi_lang_include archive/objective-c-deprecation-notice.md %}
+{% multi_lang_include deprecations/objective-c.md %}
 
 # Suivre les événements personnalisés pour iOS
 

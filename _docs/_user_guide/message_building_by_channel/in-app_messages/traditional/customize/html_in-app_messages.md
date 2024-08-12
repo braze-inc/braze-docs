@@ -91,7 +91,7 @@ You cannot reference Liquid to insert <code>customAttributes</code> into JavaScr
 
 In addition to custom JavaScript, Braze SDKs can also send analytics data with these convenient URL shortcuts. Note that these query parameters and URL schemes are all case sensitive.
 
-### Button click tracking
+### Button click tracking (deprecated)
 
 {% alert warning %}
 The use of `abButtonID` is not supported in [HTML with Preview]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/customize/html_in-app_messages/#html-upload-with-preview/) message types. For more information, see our [upgrade guide]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/preview/#backward-incompatible-changes).
@@ -101,7 +101,7 @@ To log button clicks for in-app message analytics, you can add `abButtonId` as a
 
 As with other URL parameters, the first parameter should begin with a question mark `?`, while subsequent parameters should be separated by an ampersand `&`.
 
-#### Examples
+#### Example URLs
 
 - `https://example.com/?abButtonId=0` - Button 1 click
 - `https://example.com/?abButtonId=1` - Button 2 click
@@ -124,16 +124,6 @@ For deep linking, Braze will open your URL regardless of the value of `abExterna
 To have Braze handle your HTTP or HTTPS link as a deep link, set `?abDeepLink=true`.
 
 When this query string parameter is absent or set to `false`, Braze will try to open the web link in an internal web browser inside the host app.
-
-### News Feed (mobile only)
-
-{% alert note %}
-News Feed is being deprecated. Braze recommends that customers who use our News Feed tool move over to our Content Cards messaging channel—it's more flexible, customizable, and reliable. Check out the [migration guide]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) for more.
-{% endalert %}
-
-For mobile apps, you can open the News Feed by setting a link's URL to `braze://feed`.
-
-For example, `<a href="braze://feed">View Feed</a>`.
 
 ### Close in-app message
 

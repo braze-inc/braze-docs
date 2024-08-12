@@ -18,5 +18,14 @@ fr:
   edit_github: Modifier cette page sur GitHub
   page_nav_title: Sur cette page
   helpful: "CETTE PAGE A-T-ELLE ÉTÉ UTILE?"
-
+ja:
+  next: 次へ
+  previous: 前へ
+  popular_topic: 人気のトピック
+  helpful_resources: 役立つリソース
+  braze_status: BRAZE システム ステータス
+  braze_status_check: Braze ステータスの確認
+  edit_github: GitHub でこのページを編集
+  page_nav_title: このページについて
+  helpful: 「このページはどの程度役に立ちましたか?」
 

@@ -10,19 +10,19 @@ description: "This is the User Guide landing page. Here, marketers and administr
 
 user_menu_list:
   - name: Manage Your Account
-    image: /assets/img/new-icons/gears.svg
-    bg_color: '#e3f8fa'
-    link: /docs/user_guide/administrative/manage_your_braze_users/company-wide_settings_management/
+    image: /assets/img/braze_icons/settings-01-braze-purple-dark.svg
+    bg_color: '#C9C4FF'
+    link: /docs/user_guide/administrative/app_settings/company_settings/
     description: Manage your company settings, users, and more.
   - name: Logging Into Braze
-    image: /assets/img/new-icons/right-arrow2.svg
-    bg_color: '#fce0df'
+    image: /assets/img/braze_icons/log-in-04-braze-pink-dark.svg
+    bg_color: '#F8D3E8'
     link: /docs/user_guide/administrative/access_braze/accessing_your_account/
     description: Log into our platform.
   - name: Create a Canvas
-    bg_color: '#ffe1cc'
+    bg_color: '#FFD4BC'
     link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/
-    image: /assets/img/new-icons/users2.svg
+    image: /assets/img/braze_icons/users-01-braze-orange-dark.svg
     description: Are you ready to start building a customer journey? We'll guide you through it.
 
 popular_topic_list:

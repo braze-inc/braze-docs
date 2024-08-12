@@ -12,46 +12,46 @@ guide_featured_title: "Sujets"
 guide_featured_list:
   - name: Aperçu des points de données
     link: /docs/user_guide/data_and_analytics/data_points/
-    fa_icon: fa-solid fa-check
+    image: /assets/img/braze_icons/check-square-broken.svg
   - name: Glossaire d’indicateurs de rapport
     link: /docs/user_guide/data_and_analytics/report_metrics/
-    fa_icon: fas fa-book-open
+    image: /assets/img/braze_icons/book-closed.svg
   - name: Configuration de reporting
     link: /docs/user_guide/data_and_analytics/configuring_reporting/
-    fa_icon: fas fa-cog
+    image: /assets/img/braze_icons/settings-01.svg
   - name: Création d’une formule
     link: /docs/user_guide/data_and_analytics/creating_a_formula/
-    fa_icon: fas fa-flask
+    image: /assets/img/braze_icons/beaker-02.svg
   - name: Currents
     link: /docs/user_guide/data_and_analytics/braze_currents/
-    fa_icon: fas fa-swimmer
+    image: /assets/img/braze_icons/waves.svg
   - name: Collecte de données utilisateur
     link: /docs/user_guide/data_and_analytics/user_data_collection/
-    fa_icon: fas fa-users
+    image: /assets/img/braze_icons/users-01.svg
   - name: Données personnalisées
     link: /docs/user_guide/data_and_analytics/custom_data/
-    fa_icon: fas fa-wrench
+    image: /assets/img/braze_icons/tool-01.svg
   - name: Suivi
     link: /docs/user_guide/data_and_analytics/tracking/
-    fa_icon: fas fa-chart-line
+    image: /assets/img/braze_icons/line-chart-up-01.svg
   - name: Exportation de données Braze
     link: /docs/user_guide/data_and_analytics/export_braze_data/
-    fa_icon: fas fa-file-export
+    image: /assets/img/braze_icons/file-download-01.svg
   - name: Ingestion de données Cloud
     link: /docs/user_guide/data_and_analytics/user_data_collection/cloud_ingestion/
-    fa_icon: fa-solid fa-cloud
+    image: /assets/img/braze_icons/upload-cloud-01.svg
   - name: Votre tableau de bord d’analytiques
     link: /docs/user_guide/data_and_analytics/analytics/
-    fa_icon: fa-solid fa-chart-simple
+    image: /assets/img/braze_icons/trend-up-01.svg
   - name: Vos rapports
     link: /docs/user_guide/data_and_analytics/reporting/
-    fa_icon: fas fa-chart-bar
+    image: /assets/img/braze_icons/bar-chart-01.svg
   - name: Catalogues
     link: /docs/user_guide/personalization_and_dynamic_content/catalog/
-    fa_icon: fas fa-list-ul
+    image: /assets/img/braze_icons/list.svg
   - name: Générateur de requêtes
     link: /docs/user_guide/data_and_analytics/query_builder/
-    fa_icon: fas fa-code
+    image: /assets/img/braze_icons/code-02.svg
 
 ---
 <br><br>

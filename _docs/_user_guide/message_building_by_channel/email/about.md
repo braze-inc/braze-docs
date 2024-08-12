@@ -8,7 +8,7 @@ channel:
 
 ---
 
-# [![Braze Learning course]({% image_buster /assets/img/bl_icon2.png %})](https://learning.braze.com/messaging-channels-email){: style="float:right;width:120px;border:0;" class="noimgborder"} About email
+# [![Braze Learning course]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/messaging-channels-email){: style="float:right;width:120px;border:0;" class="noimgborder"} About email
 
 > You can do a lot with email messages! Email messages are a great way to deliver rich content to your users. Email messaging has unlimited flexibility for communicating with your users outside of your app or website. Customize your email messages from managing your audience to including eye-catching multimedia content. To see examples of email campaigns, check out our [case studies][6].
 

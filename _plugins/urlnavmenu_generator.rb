@@ -58,7 +58,6 @@ module Jekyll
       @activeparentclass = ' active_parent'
 
       @unique_postfix = "_nav_page"
-
       super
     end
 
@@ -78,7 +77,6 @@ module Jekyll
         params = Liquid::Template.parse(@menu_root).render(context).split('|')
         @minlevel = params[0].to_i
         collection = params[1]
-
         @currentpage = context.registers[:page]
         Jekyll.logger.debug("Current Page: " + @currentpage.id)
 
@@ -179,7 +177,6 @@ module Jekyll
 
       def build_menu_html(menu_hash,parent_key,level)
         resultstr = ''
-
         unless menu_hash.nil?
           # Loop through list of pages on the current navigation, sorted by page weight
           unless menu_hash[@menu_nav_list].nil?
@@ -286,8 +283,8 @@ module Jekyll
                   end
 
                   cur_url = @baseurl + curinfo.url
-                  if curinfo['redirect_to']
-                    cur_url = curinfo['redirect_to']
+                  if curinfo['redirect_to'] && level == 0
+                    cur_url = curinfo['redirect_to'].gsub!(/^\/docs\//, "#{@baseurl}\/")
                   end
 
                   items << "<div class='#{@nav_item_class}  #{curclass}' id='parent_#{@nav_prefix}_#{parent_page_key}' data-parent='parent_#{@nav_prefix}_#{parent_key}'>"

@@ -11,7 +11,7 @@ search_rank: 2
 
 > This page explains what multivariate and A/B testing are and their benefits. For steps on how to create a multivariate or A/B test, refer to [Creating multivariate and A/B tests with Braze]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/create_multivariate_campaign/). 
 
-Multivariate and A/B testing can be quickly utilized using [Intelligent Selection]({{site.baseurl}}/user_guide/sage_ai/intelligence/intelligent_selection/).
+Multivariate and A/B testing can be  used using [Intelligent Selection]({{site.baseurl}}/user_guide/sage_ai/intelligence/intelligent_selection/).
 
 ## What are multivariate and A/B testing?
 

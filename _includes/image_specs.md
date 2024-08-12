@@ -17,7 +17,6 @@ We recommend the following payload sizes:
 | --- | --- |
 | iOS (pre-iOS 8) | 0.256 KB |
 | iOS (post-iOS 8) | 2 KB |
-| Android (GCM) | 2 KB |
 | Android (FCM) | 4 KB |
 {: .reset-td-br-1 .reset-td-br-2}
 
@@ -73,7 +72,7 @@ All in-app messages have a recommended image size of 500 KB, maximum image size 
 
 {% if include.variable_name == "push notifications" %}
 
-| Message type | Max message length | Max title length |
+| Message type | Maximum message length | Maximum title length |
 | --- | --- | --- |
 | iOS lock screen | 175 characters | 43 characters |
 | iOS notification | 175 characters | 43 characters |

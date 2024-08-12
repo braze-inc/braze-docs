@@ -42,7 +42,7 @@ $guide_transition_time : 0.25s;
   }
   .guide_menu_title {
     margin-top: 40px;
-    color: $navy-bay;
+    color: $braze-purple-dark;
   }
 
   #guide_list, #guide_featured_list {
@@ -86,16 +86,16 @@ $guide_transition_time : 0.25s;
         vertical-align: middle;
         color: $text-color;
 
-        line-height: 1.8;
+        line-height: 1.25;
         display: inline-block;
       }
 
     }
-
+    // Styling for tile card links
     a {
       border: 1px solid $grey-ghost;
       box-shadow: 0 0 6px 0 rgba(32,32,36,0.12);
-      border-radius: 2px;
+      border-radius: 8px;
       margin-bottom: 2%;
 
       flex: 0 0 100%;
@@ -125,8 +125,9 @@ $guide_transition_time : 0.25s;
     border-width: 0;
     border-style: solid;
   }
+  // Styling for regular text links
   a {
-    font-family: $braze-black;
+    font-family: $braze-medium;
     font-weight: 700;
     display: inline;
     color: $black-shark;
@@ -137,7 +138,8 @@ $guide_transition_time : 0.25s;
     -webkit-transition:  all ease $guide_transition_time;
     -moz-transition:  all ease $guide_transition_time;
     &:hover {
-      background-color: $braze-link-color;
+      background-color: transparent !important;
+      border-color: $black;
     }
   }
 }

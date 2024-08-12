@@ -354,7 +354,7 @@ Email, Content Cards, In-App Message, Web Push, iOS Push, Android Push, SMS, Wha
 - Content Cards: Received when users view the card in the app.
 - Push: Received when messages are sent from the Braze server to the push provider.
 - Email: Received when messages are sent from the Braze server to the email service provider.
-- SMS/MMS: "Delivered" once the SMS provider receives confirmation from the upstream carrier and destination device.
+- SMS/MMS: "Delivered" after the SMS provider receives confirmation from the upstream carrier and destination device.
 - In-App Message: Received at the time of display based on the trigger action defined.
 - WhatsApp: Received at the time of display based on the trigger action defined.
 
@@ -379,7 +379,7 @@ The SMS has been rejected by the carrier. This can happen for a number of reason
 ### Sends
 
 {% apitags %}
-Content Cards, Email, In-App Message, Web Push, iOS Push, Android Push, Webhook, SMS, WhatsApp
+Content Cards, Email, In-App Message, Web Push, iOS Push, Android Push, Webhook, SMS, WhatsApp, LINE
 {% endapitags %}
 
 *Sends*, or *Messages Sent*, is the total number of messages sent in a campaign. Upon launching a scheduled campaign, this metric will include all messages sent, regardless of whether they have been sent out yet due to rate limiting. This does not mean the message was received or delivered to a device, only that the message was sent. This metric is provided by Braze.
@@ -453,10 +453,10 @@ Total clicks on the submit button of a [simple survey]({{site.baseurl}}/user_gui
 ### Total Clicks
 
 {% apitags %}
-Email, Content Cards
+Email, Content Cards, SMS, LINE
 {% endapitags %}
 
-The total number (and percentage) of users who clicked within the delivered email or card.
+The total number (and percentage) of users who clicked within the delivered email, card, or message. For LINE, this is tracked after a minimum threshold of 20 messages per day has been reached.
 
 {::nomarkdown}
 <span class="calculation-line">
@@ -464,6 +464,7 @@ The total number (and percentage) of users who clicked within the delivered emai
     <ul>
         <li><b>Email:</b> (Total Clicks) / (Deliveries)</li>
         <li><b>Content Cards:</b> (Total Clicks) / (Total Impressions)</li>
+        <li><b>SMS:</b> (Click Opens) / (Deliveries)</li>
     </ul>
 </span>
 {:/}
@@ -503,10 +504,10 @@ The number of times the in-app message has been viewed (if a user is shown a mes
 ### Total Opens
 
 {% apitags %}
-Email, iOS Push, Android Push, Web Push
+Email, iOS Push, Android Push, Web Push, LINE
 {% endapitags %}
 
-The total number of messages that were opened.
+The total number of messages that were opened. For LINE, this is tracked after a minimum threshold of 20 messages per day has been reached.
 
 {::nomarkdown}
 <span class="calculation-line">
@@ -539,10 +540,12 @@ The total revenue in dollars from campaign recipients within the set primary con
 ### Unique Clicks
 
 {% apitags %}
-Email, Content Cards
+Email, Content Cards, LINE
 {% endapitags %}
 
 Distinct number of recipients who have clicked within a message at least once. This is tracked over a 7-day period for Email. Note that clicks on Braze-provided unsubscribe links are counted as unique clicks.
+
+For LINE, this is tracked after a minimum threshold of 20 messages per day has been reached. 
 
 {::nomarkdown}
 <span class="calculation-line">
@@ -589,10 +592,10 @@ The total number of users who received and viewed a given in-app message or card
 ### Unique Opens
 
 {% apitags %}
-Email
+Email, LINE
 {% endapitags %}
 
-The total number of delivered emails that have been opened by a single user at least once. This is tracked over a 7-day period for Email.
+For emails, this is the total number of delivered emails that have been opened by a single user at least once. This is tracked over a 7-day period for Email. For LINE, this is tracked after a minimum threshold of 20 messages per day has been reached.
 
 <span class="calculation-line">Calculation: (Unique Opens) / (Deliveries)</span>
 

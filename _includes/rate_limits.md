@@ -72,22 +72,32 @@ For customers who onboarded with Braze on or after September 16, 2021, we apply 
 {% elsif include.endpoint == "users merge" %}
 For customers who onboarded with Braze on or after September 16, 2021, we apply a shared rate limit of 20,000 requests per minute to this endpoint. This rate limit is shared with the `/users/delete`, `/users/alias/new`, `/users/identify`, and `/users/alias/update` endpoints, as documented in [API rate limits]({{site.baseurl}}/api/api_limits/).
 
+<!---/custom_attributes-->
+
+{% elsif include.endpoint == "custom_attributes" %}
+For customers who onboarded with Braze on or after September 16, 2021, we apply a shared rate limit of 1,000 requests per hour to this endpoint. This rate limit is shared with the `/events`, `/events/list`, and `/purchases/product_list` endpoints, as documented in [API rate limits]({{site.baseurl}}/api/api_limits/).
+
+<!---/events-->
+
+{% elsif include.endpoint == "events" %}
+For customers who onboarded with Braze on or after September 16, 2021, we apply a shared rate limit of 1,000 requests per hour to this endpoint. This rate limit is shared with the `/custom_attributes`, `/events/list`, and `/purchases/product_list` endpoints, as documented in [API rate limits]({{site.baseurl}}/api/api_limits/).
+
 <!---/events/list-->
 
 {% elsif include.endpoint == "events list" %}
-For customers who onboarded with Braze on or after September 16, 2021, we apply a shared rate limit of 1,000 requests per hour to this endpoint. This rate limit is shared with the `/purchases/product_list` endpoint, as documented in [API rate limits]({{site.baseurl}}/api/api_limits/).
+For customers who onboarded with Braze on or after September 16, 2021, we apply a shared rate limit of 1,000 requests per hour to this endpoint. This rate limit is shared with the `/custom_attributes`, `/events`, and `/purchases/product_list` endpoints, as documented in [API rate limits]({{site.baseurl}}/api/api_limits/).
 
 <!---/purchases/product_list-->
 
 {% elsif include.endpoint == "purchases product list" %}
-For customers who onboarded with Braze on or after September 16, 2021, we apply a shared rate limit of 1,000 requests per hour to this endpoint. This rate limit is shared with the `/events/list` endpoint, as documented in [API rate limits]({{site.baseurl}}/api/api_limits/).
+For customers who onboarded with Braze on or after September 16, 2021, we apply a shared rate limit of 1,000 requests per hour to this endpoint. This rate limit is shared with the `/custom_attributes`, `/events`, and `/events/list` endpoints, as documented in [API rate limits]({{site.baseurl}}/api/api_limits/).
 
 <!---/messages/send-->
 <!---/campaigns/trigger/send-->
 <!---/canvas/trigger/send-->
 
 {% elsif include.endpoint == "send endpoints" %}
-When specifying a segment or connected audience in your request, we apply a rate limit of 250 requests per minute to this endpoint. Otherwise, if specifying an `external_id`, this endpoint has a default rate limit of 250,000 requests per hour, as documented in [API rate limits]({{site.baseurl}}/api/api_limits/).
+When specifying a segment or Connected Audience in your request, we apply a rate limit of 250 requests per minute to this endpoint. Otherwise, if specifying an `external_id`, this endpoint has a default rate limit of 250,000 requests per hour shared between `/messages/send`, `/campaigns/trigger/send`, and `/canvas/trigger/send`, as documented in [API rate limits]({{site.baseurl}}/api/api_limits/).
 
 <!---/transactional/v1/campaigns/{campaign_id}/send -->
 
@@ -158,6 +168,12 @@ This endpoint has a shared rate limit of 50 requests per minute between all sync
 {% if include.endpoint == "synchronous catalog" %}
 
 This endpoint has a shared rate limit of 50 requests per minute between all synchronous catalog endpoints, as documented in [API rate limits]({{site.baseurl}}/api/api_limits/).
+
+{% endif %}
+
+{% if include.endpoint == "asynchronous catalog fields" or include.endpoint == "asynchronous catalog selections" %}
+
+This endpoint has a shared rate limit of 50 requests per minute between all asynchronous catalog fields and selections endpoints, as documented in [API rate limits]({{site.baseurl}}/api/api_limits/).
 
 {% endif %}
 

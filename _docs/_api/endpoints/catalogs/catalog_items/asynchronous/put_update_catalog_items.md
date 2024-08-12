@@ -59,12 +59,20 @@ curl --location --request PUT 'https://rest.iad-03.braze.com/catalogs/restaurant
         "Latitude": 33.6112,
         "Longitude": -117.8711
       },
+      "Top_Dishes": [
+        "Hamburger",
+        "Deluxe Cheeseburger"
+      ],
       "Open_Time": "2021-09-03T09:03:19.967+00:00"
     },
     {
       "id": "restaurant3",
       "City": "San Francisco",
-      "Rating": 2
+      "Rating": 2,
+      "Top_Dishes": [
+        "Hot Dog",
+        "French Fries"
+      ]
     }
   ]
 }'

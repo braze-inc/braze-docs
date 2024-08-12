@@ -12,28 +12,28 @@ guide_featured_title: "Sujets"
 guide_featured_list:
 - name: Liquid
   link: /docs/user_guide/personalization_and_dynamic_content/liquid/
-  fa_icon: fas fa-flask
+  image: /assets/img/braze_icons/beaker-02.svg
 - name: Contenu connecté
   link: /docs/user_guide/personalization_and_dynamic_content/connected_content/
-  fa_icon: fas fa-server
+  image: /assets/img/braze_icons/server-01.svg
 - name: "Lien profond au contenu d’application"
   link: /docs/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/
-  fa_icon: fas fa-mobile
+  image: /assets/img/braze_icons/phone-02.svg
 - name: Blocs de contenu
   link: /docs/user_guide/engagement_tools/templates_and_media/content_blocks/
-  fa_icon: fas fa-columns
+  image: /assets/img/braze_icons/columns-01.svg
 - name: "Paires clé-valeur"
   link: /docs/user_guide/personalization_and_dynamic_content/key_value_pairs/
-  fa_icon: fa-solid fa-key
+  image: /assets/img/braze_icons/key-01.svg
 - name: Promotion Codes
   link: /docs/user_guide/personalization_and_dynamic_content/promotion_codes/
-  fa_icon: fa-solid fa-tag
+  image: /assets/img/braze_icons/tag-01.svg
 - name: Propriétés d’entrées persistantes Canvas
   link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/canvas_persistent_entry_properties/
-  fa_icon: fas fa-project-diagram
+  image: /assets/img/braze_icons/dataflow-03.svg
 - name: Catalogues
   link: /docs/user_guide/personalization_and_dynamic_content/catalog/
-  fa_icon: fas fa-list-ul
+  image: /assets/img/braze_icons/list.svg
 ---
 
 <br>

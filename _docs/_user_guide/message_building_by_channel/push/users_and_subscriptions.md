@@ -38,11 +38,40 @@ Braze does not automatically change a user's push subscription state to `Unsubsc
 
 ### Updating push subscription states {#update-push-subscription-state}
 
-There are three ways a user's push subscription state can be updated:
+There are three ways you can update a user's push subscription state:
 
-1. **SDK integration**<br>Use the Braze SDK to update a user's subscription state. For example, you can add a settings page to your app where users can turn push notifications for their profile on or off.<br>To do this, use the `setPushNotificationSubscriptionType` method on [Web](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.user.html#setpushnotificationsubscriptiontype), [Android](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze-user/set-push-notification-subscription-type.html), or [iOS](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/user-swift.class/set(pushnotificationsubscriptionstate:)).<br><br>
-2. **REST API**<br>Use the [`/users/track` endpoint][users-track] to update the [`push_subscribe`][user_attributes_object] attribute for a given user.<br><br>
-3. **Automatically during opt-in** <br>When a user accepts the native OS push permission prompt, Braze will automatically change that user's subscription state to `Opted-In`.
+#### Automatic opt-in (default)
+
+By default, Braze sets a user's push subscription state to `Opted-In` when they first authorize push notifications for your app. Braze also does this when a user re-enables push permissions in their system settings after previously disabling them.
+
+{% tabs local %}
+{% tab android %}
+To disable this default behavior, add the following property to your Android Studio project's `braze.xml` file:
+
+```xml
+<bool name="com_braze_optin_when_push_authorized">false</bool>
+```
+{% endtab %}
+
+{% tab swift %}
+Starting with [Braze Swift SDK version 7.5.0](https://github.com/braze-inc/braze-swift-sdk/releases/tag/7.5.0), you can disable or further customize this behavior by adding the `optInWhenPushAuthorized` configuration to your Xcode project's `AppDelegate.swift` file:
+
+```swift
+configuration.optInWhenPushAuthorized = false // disables the default behavior
+
+let braze = Braze(configuration: configuration)
+AppDelegate.braze = braze
+```
+{% endtab %}
+{% endtabs %}
+
+#### SDK integration
+
+You can update a user's subscription state with the Braze SDK using the `setPushNotificationSubscriptionType` method on [Web](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.user.html#setpushnotificationsubscriptiontype), [Android](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze-user/set-push-notification-subscription-type.html), or [iOS](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/user-swift.class/set(pushnotificationsubscriptionstate:)). For example, you can use this method to create a settings page in your app where users can manually enable or disable push notifications.
+
+#### REST API
+
+You can update a user's subscription state with the Braze REST API using the [`/users/track` endpoint][users-track] to update their [`push_subscribe`][user_attributes_object] attribute.
 
 ### Checking push subscription state
 

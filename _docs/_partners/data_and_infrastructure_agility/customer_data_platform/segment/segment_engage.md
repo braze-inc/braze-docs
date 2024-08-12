@@ -1,7 +1,7 @@
 ---
 nav_title: Segment Engage
 article_title: Segment Engage
-page_order: 1.3
+page_order: 3
 alias: /partners/segment_personas/
 alias: /partners/segment_engage/
 alias: /partners/data_and_infrastructure_agility/customer_data_platform/segment/segment_personas/

@@ -10,7 +10,7 @@ channel:
 noindex: true
 ---
 
-{% multi_lang_include archive/objective-c-deprecation-notice.md %}
+{% multi_lang_include deprecations/objective-c.md %}
 
 <br>
 {% alert important %}
@@ -425,9 +425,9 @@ The `class_type` is used to determine which of your custom objects will be initi
 {% endtab %}
 {% endtabs %}
 
-## Sample use cases
+## Use cases
 
-There are three sample customer use cases provided. Each use case offers a detailed explanation, relevant code snippets, and a look into how Content Card variables may look and be used in the Braze dashboard:
+We've provided three use cases below. Each use case offers a detailed explanation, relevant code snippets, and a look into how Content Card variables may look and be used in the Braze dashboard:
 - [Content Cards as supplemental content](#content-cards-as-supplemental-content)
 - [Content Cards in a message center](#content-cards-in-a-message-center)
 - [Interactive Content Cards](#interactive-content-cards)
@@ -529,7 +529,7 @@ When a message is clicked, the `ContentCardClassType` handles how the next scree
 ##### Ready to log analytics?
 Visit the [following section](#logging-impressions-clicks-and-dismissals) to get a better understanding of how the flow of data should look.
 
-![An interactive Content Card showing a 50 percent promotion appear in the bottom left corner of the screen. Once clicked, a promotion will be applied to the cart.][6]{: style="border:0;"}{: style="float:right;max-width:45%;border:0;margin-left:15px;"} 
+![An interactive Content Card showing a 50 percent promotion appear in the bottom left corner of the screen. After it's clicked, a promotion will be applied to the cart.][6]{: style="border:0;"}{: style="float:right;max-width:45%;border:0;margin-left:15px;"} 
 
 ### Interactive Content Cards
 <br>
