@@ -56,7 +56,7 @@ If you have little to no experience with JavaScript code or prefer more detailed
 If you're a developer or have significant experience with JavaScript code, follow the **Advanced - POST: Track users** tab for high-level instructions on writing your transformation code.
 
 {% alert tip %}
-Braze Data Transformation has an AI copilot that asks ChatGPT to help you write your code, instead of using the default template. Access the AI copilot by clicking <i class="fa-solid fa-wand-magic-sparkles"></i> **Generate transformation code**. To use this, a webhook must be sent to your transformation.
+Braze Data Transformation has an AI copilot that asks ChatGPT to help you write your code. Access the AI copilot by clicking <i class="fa-solid fa-wand-magic-sparkles"></i> **Generate transformation code**. To use this, a webhook must be sent to your transformation. You can also access the template library by selecting **Insert code** > **Insert template**.
 
 ![]({% image_buster /assets/img/data_transformation/data_transformation3.png %})
 {% endalert %}
@@ -205,7 +205,7 @@ In this step, you will transform the webhook payload from the source platform to
   - Subscription group updates
   - Email address as an identifier
 
-Click **Validate** to return a preview of your code's output and to check if it's an acceptable `/users/track` request.
+Select **Validate** to return a preview of your code's output and to check if it's an acceptable `/users/track` request.
 
 {% alert note %}
 External network requests, third-party libraries, and non-JSON webhooks are not currently supported.
