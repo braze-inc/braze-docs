@@ -16,7 +16,7 @@ channel: push
 
 At their base, influenced opens measure the number of users who open the app after receiving a notification without selecting the notification. Because there is no direct action linking the notification to the app open, an influenced open is logged if the user opens the app less than thirty minutes after receiving the push notification or under half the average time since that user's last session.
 
-For example, say you send a push notification your app users. If a user who normally opens the app 30 times a day opens your app six hours after receiving the push, the push gets little to no credit for influencing the open. However, if a user who normally uses the app once a month opens the app six hours after receiving the push, the open has a much better chance of being counted as an influenced open. 
+For example, say you send a push notification to your app users. If a user who normally opens the app 30 times a day opens your app six hours after receiving the push, the push gets little to no credit for influencing the open. However, if a user who normally uses the app once a month opens the app six hours after receiving the push, the open has a much better chance of being counted as an influenced open. 
 
 This differs from setting app opens as a conversion event for a push campaign. For conversions, all opens within the conversion window will be attributed to the campaign. Influenced opens set a time window and attribution credit based on an individual user's behavior.
 
