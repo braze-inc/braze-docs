@@ -197,7 +197,7 @@ The total clicks on the close (x) button on the confirmation page of a [simple s
 Content Cards, Email, In-App Message, Web Push, iOS Push, Android Push, Webhook, SMS
 {% endapitags %}
 
-Additional conversion events added after the Primary Conversion Event. The number of times a defined event occurred after interacting with or viewing a received message from a Braze campaign. <br><br> This defined event is determined by the marketer when building the campaign. For Email, Push and Webhooks, we start tracking conversions after the initial send. For Content Cards and In-App Messages, this count begins when they view a Content Card or Message for the first time.
+Additional conversion events added after the primary conversion event. The number of times a defined event occurred after interacting with or viewing a received message from a Braze campaign. <br><br> This defined event is determined by the marketer when building the campaign. For email, push, and webhooks, we start tracking conversions after the initial send. For Content Cards and in-app messages, this count begins when they view a Content Card or message for the first time.
 
 {% endapi %}
 
@@ -368,7 +368,7 @@ Email, Content Cards, In-App Message, Web Push, iOS Push, Android Push, SMS, Wha
 SMS
 {% endapitags %}
 
-The SMS has been rejected by the carrier. This can happen for a number of reasons, including carrier content filtering, availability of the destination device, the phone number is no longer in service, and similar. As a Braze customer, rejections are charged toward your SMS allotment.
+The SMS has been rejected by the carrier. This can happen for several reasons, including carrier content filtering, availability of the destination device, the phone number is no longer in service, and similar. As a Braze customer, rejections are charged toward your SMS allotment.
 
 <span class="calculation-line">Calculation: Count</span>
 
@@ -595,7 +595,7 @@ The total number of users who received and viewed a given in-app message or card
 Email, LINE
 {% endapitags %}
 
-This is the total number of delivered emails that have been opened by a single user at least once, and is tracked over a 7-day period. For LINE, this is tracked after a minimum threshold of 20 messages per day has been reached.
+This is the total number of delivered emails that have been opened by a single user at least once and are tracked over a 7-day period. For LINE, this is tracked after a minimum threshold of 20 messages per day has been reached.
 
 <span class="calculation-line">Calculation: (Unique Opens) / (Deliveries)</span>
 
