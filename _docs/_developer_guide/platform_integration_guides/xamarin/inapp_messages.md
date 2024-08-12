@@ -115,3 +115,7 @@ braze.InAppMessagePresenter = inAppMessageUI;
 Now you can present new in-app messages using Braze's default in-app message UI.
 {% endtab %}
 {% endtabs %}
+
+## GIF Support
+
+{% multi_lang_include wrappers/gif_support/in_app_messaging.md %}

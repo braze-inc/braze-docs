@@ -92,6 +92,9 @@ Follow these steps to test a sample Content Card.
 
 For more details on each platform, follow the [Android integration][5] or [iOS integration][6] guides.
 
+## GIF Support
+
+{% multi_lang_include wrappers/gif_support/content_cards.md %}
 
 [3]: {{site.baseurl}}/user_guide/message_building_by_channel/content_cards/create
 [4]: {% image_buster /assets/img/react-native/content-card-test.png %} "Content Card Campaign Test"
