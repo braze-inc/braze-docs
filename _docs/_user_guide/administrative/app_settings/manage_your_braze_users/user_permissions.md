@@ -3,7 +3,7 @@ nav_title: Permissions
 article_title: Braze permissions
 page_order: 2
 page_type: reference
-description: "This reference article covers how user permissions works at Braze. Here, you can learn how to edit and set user permissions, choosing who can access your apps in the dashboard."
+description: "This reference article covers how user permissions work at Braze. Here, you can learn how to edit and set user permissions, choosing who can access your apps in the dashboard."
 tool: Dashboard
 
 ---
@@ -67,15 +67,12 @@ To grant or remove admin privileges, select **This user is an admin**, then sele
 ![The details of the selected user with the admin checkbox in focus.]({% image_buster /assets/img/braze_permissions/admin_level_permissions.png %}){: style="max-width:40%;"}
 
 {% alert warning %}
-If you remove admin privileges from a user, they won't be able to access Braze until you assign them at least one [compnay-level](#company) or [workspace-level](#workspace) permission.
+If you remove admin privileges from a user, they won't be able to access Braze until you assign them at least one [company-level](#company) or [workspace-level](#workspace) permission.
 {% endalert %}
 
 ### Company
 
 To manage the following company-level permissions for a user, check or uncheck the box next to that permission. When you're finished, select **Update user**.
-
-<!-- Unsure if this image is needed. I feel like it isn't, but I've commented it out for you just in case. -->
-<!-- ![The "Company-level" permissions options in Braze.]({% image_buster /assets/img/braze_permissions/company_level_permissions.png %}){: style="max-width:60%;"} -->
 
 |Permission name|Description|
 |----------|-----------|
