@@ -34,7 +34,6 @@ This endpoint has a rate limit of 250,000 requests per hour.
 | Parameter | Required | Data Type | Description |
 | --------- | ---------| --------- | ----------- |
 |`campaign_id`| Required for translating a campaign | String | The ID of your campaign. |
-| `step_id` | Required | String | The ID of your Canvas step. | 
 | `message_variation_id` | Required | String | The ID of your message. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
