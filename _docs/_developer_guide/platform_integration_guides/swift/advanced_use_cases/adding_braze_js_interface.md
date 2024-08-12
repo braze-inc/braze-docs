@@ -19,7 +19,6 @@ to a WkWebView's `userContentController` we can make use of the Braze Javascript
 
 {% tabs %}
 {% tab SWIFT %}
-
 ```swift
     // Create the script message handler using your initialized Braze instance.
     lazy var scriptMessageHandler: Braze.WebViewBridge.ScriptMessageHandler = webViewScriptMessageHandler()
@@ -36,7 +35,6 @@ to a WkWebView's `userContentController` we can make use of the Braze Javascript
             return myWebView
         }()
 ```
-
 {% endtab %}
 {% endtabs %}
 
@@ -46,7 +44,6 @@ If you do not need to handle those actions, you may use
 
 {% tabs %}
 {% tab SWIFT %}
-
 ```swift
 func webViewScriptMessageHandler() -> Braze.WebViewBridge.ScriptMessageHandler
 {
@@ -65,9 +62,8 @@ The Braze ScriptMessageHandler is responsible for:
 
 Here’s an example of how to log a custom event from your web content to the Braze Swift SDK using the BrazeBridge:
 
-{% tabs %}
+{% tabs local %}
 {% tab HTML %}
-
 ```javascript
 
 <!DOCTYPE html>
