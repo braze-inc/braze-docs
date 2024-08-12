@@ -34,22 +34,6 @@ The following is an example [Typeform webhook](https://www.typeform.com/help/a/w
 
 {% multi_lang_include create_transformation.md location="default" %}
 
-Choose Use a Template to browse through a template library of known Data Transformation use cases. Or, choose Start From Scratch to load a default code template.
-
-If you’re starting from scratch, choose a destination for your transformation. Note that you can still insert a code template from the template library after starting from scratch.
-
-### More on destinations
-
-- POST: Track users: Transforms webhooks from a source platform into user profile updates, such as attributes, events, or purchases.
-- PUT: Update multiple catalog items: Transforms webhooks from a source platform into catalog item updates.
-- DELETE: Delete multiple catalog items: Transforms webhooks from a source platform into catalog item deletions.
-- PATCH: Edit multiple catalog items: Transforms webhooks from a source platform into catalog item edits.
-- **POST: Send messages immediately via API Only:** Transforms webhooks from a source platform to send immediate messages to designated users.
-
-{% alert note %}
-Want to request additional templates or destinations? Consider leaving product feedback.
-{% endalert %}
-
 ## Step 3: Send a test webhook (recommended)
 
 This step is optional, but we recommend sending a test webhook from your source platform to your newly created transformation. 
@@ -61,7 +45,9 @@ This step is optional, but we recommend sending a test webhook from your source 
 - If your source platform asks for secrets, select **No secrets**.
 3. Refresh your page in Braze to see if the webhook has been received. If it was received, you should see a webhook payload under “Most recent webhook”.
 
-Here’s what it looks like for Typeform:<br>![][12]
+Here’s what it looks like for Typeform:
+
+![][12]
 
 {% alert note %}
 Braze Data Transformation may not yet support external platforms that require special verification or authentication for webhooks. Consider leaving [product feedback]({{site.baseurl}}/user_guide/administrative/access_braze/portal/) if you're interested in using this type of platform with Braze Data Transformation.
