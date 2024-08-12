@@ -3,33 +3,37 @@ nav_title: Data Points
 article_title: Data Points Overview
 page_order: 0
 page_type: reference
-description: "This reference article outlines what Data Points are at Braze and how you can be aware of their usage."
+description: "This reference article outlines what data points are at Braze and how you can be aware of their usage."
 search_rank: 6
 ---
 
 # Data points
 
-At Braze, data means action: each piece of data that arrives in Braze updates segment membership, can trigger and cancel messaging, is immediately available for messaging personalization, and more. Data points help you define the most impactful information for your business. By thoughtfully considering what information to track, you ensure that you're targeting the highest-impact data for your users' experience.
+> At Braze, data means action: each piece of data that arrives in Braze updates segment membership, can trigger and cancel messaging, is immediately available for messaging personalization, and more. Data points help you define the most impactful information for your business. By thoughtfully considering what information to track, you ensure that you're targeting the highest-impact data for your users' experience.
 
 Data points define a billing and pricing structure based on information logged against user profiles. Our Customer Success team can help recommend data best practices to fit your needs. You can find a more detailed breakdown of this definition in your Braze contract. 
 
-> "Data points" shall refer to a billable unit of use of the Braze Services, measured by a session start, session end, custom event, or purchase recorded, as well as any attribute set on an end user profile. For clarity, each one of the above-mentioned data (such as session start, session end, custom event, or purchase recorded, as well as any attribute) set to an end user’s profile at one point in time shall each count as a single data point.<br><br>Data and events collected by default by the Braze Services, including, for example, push tokens, device information, and all campaign engagement tracking events, such as email opens and push notification clicks, are *not* counted as data points.
+## Definition
+
+"Data points" shall refer to a billable unit of use of the Braze Services, measured by a session start, session end, custom event, or purchase recorded, as well as any attribute set on an end user profile. For clarity, each one of the above-mentioned data (such as session start, session end, custom event, or purchase recorded, as well as any attribute) set to an end user’s profile at one point in time shall each count as a single data point.
+
+Data and events collected by default by the Braze Services, including, for example, push tokens, device information, and all campaign engagement tracking events, such as email opens and push notification clicks, are *not* counted as data points.
 
 See this article's [Consumption count](#consumption-count) section to understand what data counts toward your data point allocation.
 
-## Management and usage
+## Viewing data point usage
 
 To view your data point usage, go to **Settings** > **Billing** and select the **Total Data Points Usage** tab.
 
 {% alert note %}
-If you are using the [older navigation]({{site.baseurl}}/navigation), you can find this page by selecting your account icon > **Subscriptions and Usage** > **Total Data Points Usage**.
+If you're using the [older navigation]({{site.baseurl}}/navigation), you can find this page by selecting your account icon > **Subscriptions and Usage** > **Total Data Points Usage**.
 {% endalert %}
 
 For more information on the data point dashboard components, refer to [Billing]({{site.baseurl}}/user_guide/onboarding_with_braze/subscription_and_usage/).
 
 {% alert tip %}
 **Don't waste data points. Only update changing data!**<br><br>
-To ensure you minimize data point consumption, we recommend setting up a program to prevent sending the same unchanging data and only passing new and relevant data to Braze. Braze will work with you to establish this best practice during onboarding. 
+To minimize data point consumption, we recommend setting up a program to prevent sending the same unchanging data and only passing new and relevant data to Braze. Braze will work with you to establish this best practice during onboarding. 
 {% endalert %}
 
 ## Consumption count
@@ -57,7 +61,7 @@ If you set the whole array at once, it will count as a single data point. As suc
 
 #### CSV
 
-Custom attributes uploaded via CSV count toward your data points. However, CSV imports for segmentation purposes (imports made with `external_id`, `braze_id`, or `user_alias_name` as the only field) will not consume data points.
+Custom attributes uploaded through CSV import count toward your data points. However, CSV imports for segmentation purposes (imports made with `external_id`, `braze_id`, or `user_alias_name` as the only field) will not consume data points.
 
 Also, as subscription state changes do not consume data points, updating the `email_subscribe`, `push_subscribe`, `subscription_group_id`, or `subscription_state` fields in your CSV file will not incur charges.
 
@@ -66,7 +70,7 @@ Also, as subscription state changes do not consume data points, updating the `em
 {% tabs %}
 {% tab Non-billable %}
 
-#### Non-billable data points (out of the box)
+#### Non-billable data points (default)
 
 <div class="small_table"></div>
 
