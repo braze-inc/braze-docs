@@ -6,7 +6,7 @@ If you are using the [older navigation]({{site.baseurl}}/navigation), you can fi
 
 Select **Create Transformation** to name your transformation, then choose your editing experience.
 
-![]({% image_buster /assets/img/data_transformation/data_transformation10.png %})
+![Transformation details with the option to choose "Use a template" or "Start from scratch" for your editing experience.]({% image_buster /assets/img/data_transformation/data_transformation10.png %})
 
 Select **Use a template** to browse through a template library, including Data Transformation use cases. Or, select **Start from scratch** to load a default code template. 
 
