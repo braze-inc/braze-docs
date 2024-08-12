@@ -8,11 +8,7 @@ description: "This reference article provides steps to create a transformation u
 
 # Creating a transformation
 
-> Braze Data Transformation enables you to build and manage webhook integrations to automate data flow from external platforms into Braze. These webhook integrations can then power even more sophisticated marketing use cases.
-
-{% alert important %}
-Data Transformation now includes a template library to help you get started with certain external platforms. See Templates. <br>Data Transformation also supports the `/messages/send` destination. Refer to [More on destinations] for more details.
-{% endalert %}
+> Braze Data Transformation enables you to build and manage webhook integrations to automate data flow from external platforms into Braze. These webhook integrations can then power even more sophisticated marketing use cases. You can build your Data Transformation from default code, or by using our dedicated template library to help you get started with certain external platforms.
 
 ## Prerequisites 
 
@@ -36,7 +32,7 @@ The following is an example [Typeform webhook](https://www.typeform.com/help/a/w
 
 ## Step 3: Send a test webhook (recommended)
 
-This step is optional, but we recommend sending a test webhook from your source platform to your newly created transformation. 
+This step is optional, but we recommend sending a test webhook from your source platform to your newly created transformation.
 
 1. Copy the URL from your transformation.
 2. In your source platform, find a “Send Test” capability to have it generate a sample webhook to send over to this URL. 
