@@ -43,7 +43,7 @@ This step is optional, but we recommend sending a test webhook from your source 
 
 Here’s what it looks like for Typeform:
 
-![][12]
+![Example Data Transformation code that maps the webhook to Braze user profiles.][12]
 
 {% alert note %}
 Braze Data Transformation may not yet support external platforms that require special verification or authentication for webhooks. Consider leaving [product feedback]({{site.baseurl}}/user_guide/administrative/access_braze/portal/) if you're interested in using this type of platform with Braze Data Transformation.
