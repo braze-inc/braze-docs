@@ -18,6 +18,7 @@ You can search for the following items and actions:
 
 - Campaign names
 - Canvas names
+- Content Blocks
 - Segment names
 - Email template names
 - [Pages within Braze](#find-pages-that-have-been-renamed)

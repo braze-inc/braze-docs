@@ -8,7 +8,7 @@ description: "この参考記事では、iOS 16、アップグレード方法、
 noindex: true
 ---
 
-{% multi_lang_include archive/objective-c-deprecation-notice.md %}
+{% multi_lang_include deprecations/objective-c.md %}
 
 # iOS 16 SDK アップグレードガイド
 

@@ -8,7 +8,7 @@ description: "この記事では、iOS アプリケーションのデータ収�
 noindex: true
 ---
 
-{% multi_lang_include archive/objective-c-deprecation-notice.md %}
+{% multi_lang_include deprecations/objective-c.md %}
 
 # iOS のデータ収集を無効にする
 

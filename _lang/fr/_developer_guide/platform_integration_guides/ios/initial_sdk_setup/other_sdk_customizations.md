@@ -7,7 +7,7 @@ page_order: 3
 
 ---
 
-{% multi_lang_include archive/objective-c-deprecation-notice.md %}
+{% multi_lang_include deprecations/objective-c.md %}
 
 # Autres personnalisations du SDK
 
