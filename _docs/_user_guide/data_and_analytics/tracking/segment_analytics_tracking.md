@@ -33,7 +33,7 @@ If you're using the [older navigation]({{site.baseurl}}/navigation), you can fin
 
 ![Revenue data by segment][17]
 
-To visually compare segment data for any custom time range, add or remove segments from the graph. Select **By Segment** in the **Breakdown** dropdown, and then select your segments in **Breakdown values**. 
+To visually compare segment data for any custom time range, add or remove segments from the graph. Select **By Segment** in the **Breakdown** dropdown, and then select your segments in **Breakdown values**.
 
 Select any segment name above the graph to turn on or off visibility for that segment's metrics.
 

@@ -23,7 +23,7 @@ You must opt-in to uninstall tracking on your Braze dashboard. This feature is c
 
 ## How it works
 
-Braze automatically collects a base level of uninstall information from your regular push campaigns. However, because the frequency that different users receive push campaigns may vary, we offer uninstall tracking to provide a more accurate snapshot of uninstall activity among your users.
+Braze automatically collects a base level of uninstall information from your regular push campaigns. However, because the frequency with which different users receive push campaigns may vary, we offer uninstall tracking to provide a more accurate snapshot of uninstall activity among your users.
 
 ## Turning on uninstall tracking
 
@@ -33,7 +33,7 @@ You can turn on uninstall tracking on the **App Settings** page, under **Setting
 If you're using the older navigation, **App Settings** is **Settings** and is located under **Manage Settings**.
 {% endalert %}
 
-When uninstall tracking is turned on for an app, background push messages will be sent nightly to users who haven't recorded a session or received a push in 24 hours. 
+When uninstall tracking is turned on for an app, background push messages will be sent nightly to users who haven't recorded a session or received a push in 24 hours.
 
 ### Configuration
 
@@ -47,11 +47,11 @@ The **Uninstalled** filter on the **Segments** page selects users who uninstalle
 
 ### App-level analysis
 
-Daily statistics on uninstalls are on the **Home** page. The graph can be broken down by app and segment, similar to other statistics Braze provides. In the **Performance overview** section, select your date range and, if desired, an app. Then scroll down to the **Performance Over Time** graph and select the following:
+Daily statistics on uninstalls are on the **Home** page. The graph can be broken down by app and segment, similar to other statistics Braze provides. In the **Performance overview** section, select your date range and, if desired, an app. Then scroll down to the **Performance Over Time** graph and do the following:
 
-1. In the **Statistics For** dropdown, **Uninstalls**
-2. In the **Breakdown** dropdown, **By segment**
-3. In the **Breakdown Values** dropdown, the segments to include in the graph
+1. In the **Statistics For** dropdown, select **Uninstalls**.
+2. In the **Breakdown** dropdown, select **By segment**.
+3. In the **Breakdown Values** dropdown, select the segments to include in the graph.
 
 {% alert note %}
 Apps without uninstall tracking enabled will report uninstalls from only a subset of their users (those who were targeted with push notifications), so daily uninstall totals may be higher than what is shown.
@@ -75,9 +75,9 @@ Braze tracks uninstalls by observing when push messages sent to users' devices r
 * Increment the uninstall count for every campaign that the user successfully received in the past 24 hours by one.
 * If a user receives three campaigns in a 24-hour period and then uninstalls, we increment the count of "uninstalls" for all three campaigns.
 
-Uninstall tracking is subject to restrictions placed on this information by FCM and APNs. Braze only increments the uninstall count when FCM or APNs tells us that a user has uninstalled, but these third-party systems reserve the right to notify us of uninstalls at any point in time. As a result, uninstall yracking should be used to detect directional trends as opposed to precise statistics.
+Uninstall tracking is subject to restrictions placed on this information by FCM and APNs. Braze only increments the uninstall count when FCM or APNs tell us that a user has uninstalled, but these third-party systems reserve the right to notify us of uninstalls at any point in time. As a result, uninstall tracking should be used to detect directional trends as opposed to precise statistics.
 
-For more on using uninstall tracking, see [this blog post][7].
+For more on using uninstall tracking, see our blog post [Uninstall Tracking: An Industry Look at its Strengths and Limitations][7].
 
 ## Troubleshooting
 
