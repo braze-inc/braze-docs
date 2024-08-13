@@ -190,7 +190,7 @@ Importing custom events is currently in early access. Contact your Braze account
 To import custom events for your users, go to **Import Users** > **Events**.
 
 - Custom events are custom to your business. For example, a streaming app may have a custom event called rented_movie. Your CSV must have column headers for:
-    - One of `external_id`, `braze_id` or `user_alias_name` and `user_alias_label`
+    - One of `external_id`, `braze_id`, or `user_alias_name` and `user_alias_label`
     - name
     - time
 - Custom events may have event properties. For example, the custom event rented_movie may have the properties title and genre. These event properties should have a column header of `<event_name>.properties.<property name>`. For example, `rented_movie.properties.title`.
