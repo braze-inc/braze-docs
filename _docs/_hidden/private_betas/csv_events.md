@@ -12,7 +12,7 @@ page_type: reference
 
 {% multi_lang_include email-via-sms-warning.md %}
 
-Before proceeding, note that Braze does not sanitize (validate or properly format) HTML data during import. This means that script tags must be stripped for all import data meant for web personalization.
+Before proceeding, note that Braze does not sanitize (validate or properly format) HTML data during import. This means that script tags must be stripped from all import data meant for web personalization.
 
 ## REST API
 
@@ -20,12 +20,12 @@ You can use the [`/users/track` endpoint]({{site.baseurl}}/api/endpoints/user_da
 
 ## CSV import
 
-You can also upload and update user profiles though CSV files from **Audience** > **Import Users**.
+You can upload and update user profiles though CSV files from **Audience** > **Import Users**.
 
 Importing user data using CSV files supports recording and updating user attributes such as first name and email, in addition to custom attributes such as shoe size. You can import a CSV by specifying one of two unique user identifiers: an `external_id` or a user alias.
 
 {% alert important %}
-User import also supports recording and updating user custom events. Similar to user attributes, you can import with an `external_id`, `braze_id` or with `user_alias_name` with `user_alias_label`. See [Importing custom events](#importing-custom-events) for more details.
+User import also supports recording and updating user custom events. Similar to user attributes, you can import with an `external_id`, `braze_id` or with `user_alias_name` with `user_alias_label`. For more details, see [Importing custom events](#importing-custom-events).
 {% endalert %}
 
 {% alert note %}
@@ -91,7 +91,7 @@ When importing customer data as attributes, the column headers you use must exac
 
 | USER PROFILE FIELD | DATA TYPE | INFORMATION | REQUIRED |
 |---|---|---|---|
-| `external_id` | String | A unique user identifier for your customer. | Yes, see the following note |
+| `external_id` | String | A unique user identifier for your customer. | Yes, see [the following note](#about-external-ids). |
 | `user_alias_name` | String | A unique user identifier for anonymous users. An alternative to the `external_id`. | No, see the following note |
 | `user_alias_label` | String | A common label by which to group user aliases. | Yes if `user_alias_name` is used |
 | `first_name` | String | The first name of your users as they have indicated (for example, `Jane`). | No |
@@ -113,12 +113,11 @@ When importing customer data as attributes, the column headers you use must exac
 | `subscription_state` | String | The subscription state for the subscription group specified by `subscription_group_id`. Allowed values are `unsubscribed` (not in subscription group) or `subscribed` (in subscription group). | No, but strongly recommended if `subscription_group_id` is used |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
-{% alert note %}
+##### About external IDs
 While `external_id` itself is not mandatory, you **must** include one of these fields: <br>
 - `external_id`: A unique user identifier for your customer <br> - OR -
 - `braze_id`: A unique user identifier pulled for existing Braze users <br> - OR -
 - `user_alias_name` and `user_alias_label` : A unique user identifier for an anonymous user
-{% endalert %}
 
 ### Importing custom attributes
 
@@ -127,6 +126,7 @@ You can import custom attributes for users by going to **Import Users** > **Attr
 The following data types are accepted in user import:
 
 | Data type | Description |
+|-----------|-------------|
 | Datetime | Must be stored in ISO-8601 format |
 | Boolean | TRUE or FALSE |
 | Number | Integer or float with no spaces or commas, floats must use a period (.) as the decimal separator |
@@ -135,7 +135,7 @@ The following data types are accepted in user import:
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% alert important %}
-Arrays and push tokens are not supported in user import. Especially for arrays, commas in your CSV file will be interpreted as a column separator, so any commas in values will cause errors parsing the file. <br>For uploading these kinds of values, use the [`/users/track` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) or [Cloud Data Ingestion]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/).
+Arrays and push tokens are not supported in user import. Especially for arrays, commas in your CSV file will be interpreted as a column separator, so any commas in values will cause errors parsing the file. <br>To upload these kinds of values, use the [`/users/track` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) or [Cloud Data Ingestion]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/).
 {% endalert %}
 
 ### Updating subscription group status
@@ -187,7 +187,7 @@ Only a single `subscription_group_id` can be set per row in the user import. Dif
 Importing custom events is currently in early access. Contact your Braze account manager if you're interested in participating in the early access.
 {% endalert %}
 
-Go to **Import Users** > **Events** to import custom events for your users.
+To import custom events for your users, go to **Import Users** > **Events**.
 
 - Custom events are custom to your business. For example, a streaming app may have a custom event called rented_movie. Your CSV must have column headers for:
     - One of `external_id`, `braze_id` or `user_alias_name` and `user_alias_label`
@@ -229,7 +229,7 @@ Setting language or country on a user via CSV import or API will prevent Braze f
 
 ## Importing a CSV
 
-To import your CSV file, do the following.
+To import your CSV file:
 1. Go to **Audiences** > **User Import**. 
 2. Select **Browse Files** and select your file of interest, then select **Start Upload**. Braze will upload your file and check the column headers as well as the data types of each column.
 
@@ -267,7 +267,7 @@ If the import process runs into an error, a warning icon will appear next to the
 
 You can use our serverless S3 Lambda CSV import script to upload user attributes to the platform. This solution works as a CSV uploader where you drop your CSVs into an S3 bucket, and the scripts upload it through our API.
 
-Estimated execution times for a file with one million rows should be around five minutes. See [User attribute CSV to Braze import]({{site.baseurl}}/user_csv_lambda/) for more information.
+Estimated execution times for a file with one million rows should be around five minutes. For more information, see [User attribute CSV to Braze import]({{site.baseurl}}/user_csv_lambda/).
 
 ## Segmenting
 
@@ -288,7 +288,7 @@ There are a few reasons why the number of users imported might not match the tot
 
 ### Malformed row
 
-There must be a header row in order to properly import data. Each row must have the same number of cells as the header row. Rows with a length of more or fewer values than the header row will be excluded from the import. Commas in a value will be interpreted as a separator and can lead to this error being thrown. Additionally, all data must be UTF-8 encoded.
+You must include a header row in your CSV file to properly import your data. Each row must have the same number of cells as the header row. Rows with a length of more or fewer values than the header row will be excluded from the import. Commas in a value will be interpreted as a separator and can lead to this error being thrown. Additionally, all data must be UTF-8 encoded.
 
 If your CSV file has blank rows and imports less rows than the total lines in the CSV file, this may not indicate a problem with the import since the blank rows wouldn't need to be imported. Check the number of lines that were correctly imported and make sure it matches the number of users you're attempting to import.
 
