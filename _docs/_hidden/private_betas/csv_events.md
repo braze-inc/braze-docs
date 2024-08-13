@@ -212,7 +212,7 @@ While external_id itself is not mandatory, you must include one of the following
 
 #### CSV size
 
-Braze accepts user data in the standard CSV format from files up to 500 MB in size. Refer to the previous sections on importing for downloadable CSV templates.
+Braze accepts user data in the standard CSV format from files up to 500 MB in size. To download one of our CSV file templates, refer to [Importing with external ID](#importing-with-external-id) or [Importing with user alias](#importing-with-user-alias).
 
 #### Data point considerations
 
