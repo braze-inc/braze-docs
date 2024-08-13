@@ -149,6 +149,7 @@ As of April 2024, to create or update promotion code lists, Braze users need the
 |Workspace|View Currents Integration|Allows users to view all information about a Currents connection, excluding credentials. By default, users assigned the "Access Campaigns, Canvases, Cards, Content Blocks, Feature Flags, Segments, Media Library, Locations, Promotion Codes, and Preference Centers" permission are also assigned this permission.|
 |Workspace|View Custom Attributes Marked as PII|Allows this user to view custom attributes that are marked as PII without being an admin.|
 |Workspace|View PII|Allows users to view the personally identifiable information fields as defined by your company within the dashboard.|
+|Workspace|View User Profiles PII Compliant|Allows users to view user profiles but redacts fields your company has defined as personally identifiable information (PII).|
 |Workspace|View Transformations|Allows users to view [Braze Data Transformations]({{site.baseurl}}/user_guide/data_and_analytics/data_transformation/overview/).|
 |Workspace|View Usage Data|Allows users to view app usage, including the channel performance dashboards.|
 |Workspace|Merge Duplicate Users|Allows users to merge duplicate user profiles.|

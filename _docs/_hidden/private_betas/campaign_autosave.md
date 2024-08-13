@@ -15,6 +15,10 @@ page_type: reference
 Autosave is currently in beta and only available for campaigns. Contact your customer success manager if you're interested in participating in this beta.
 {% endalert %}
 
+{% alert warning %}
+When editing a message in a fullscreen editor, such as email or in-app message, changes to the message are not autosaved. When you select **Done** to exit the editor and return to the campaign, changes to the message will be saved the next time an autosave occurs. You can also manually save your message as a precaution.
+{% endalert %}
+
 ## How it works
 
 ![][1]{: style="float:right;max-width:40%;margin-left:15px;"}

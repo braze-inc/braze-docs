@@ -8,7 +8,7 @@ description: "This reference article provides steps to create a transformation u
 
 # Creating a transformation
 
-> Braze Data Transformation enables you to build and manage webhook integrations to automate data flow from external platforms into Braze. These webhook integrations can then power even more sophisticated marketing use cases.
+> Braze Data Transformation enables you to build and manage webhook integrations to automate data flow from external platforms into Braze. These webhook integrations can then power even more sophisticated marketing use cases. You can build your Data Transformation from default code, or by using our dedicated template library to help you get started with certain external platforms.
 
 ## Prerequisites 
 
@@ -32,7 +32,7 @@ The following is an example [Typeform webhook](https://www.typeform.com/help/a/w
 
 ## Step 3: Send a test webhook (recommended)
 
-This step is optional, but we recommend sending a test webhook from your source platform to your newly created transformation. 
+This step is optional, but we recommend sending a test webhook from your source platform to your newly created transformation.
 
 1. Copy the URL from your transformation.
 2. In your source platform, find a “Send Test” capability to have it generate a sample webhook to send over to this URL. 
@@ -41,7 +41,9 @@ This step is optional, but we recommend sending a test webhook from your source 
 - If your source platform asks for secrets, select **No secrets**.
 3. Refresh your page in Braze to see if the webhook has been received. If it was received, you should see a webhook payload under “Most recent webhook”.
 
-Here’s what it looks like for Typeform:<br>![][12]
+Here’s what it looks like for Typeform:
+
+![Example Data Transformation code that maps the webhook to Braze user profiles.][12]
 
 {% alert note %}
 Braze Data Transformation may not yet support external platforms that require special verification or authentication for webhooks. Consider leaving [product feedback]({{site.baseurl}}/user_guide/administrative/access_braze/portal/) if you're interested in using this type of platform with Braze Data Transformation.
@@ -54,7 +56,7 @@ If you have little to no experience with JavaScript code or prefer more detailed
 If you're a developer or have significant experience with JavaScript code, follow the **Advanced - POST: Track users** tab for high-level instructions on writing your transformation code.
 
 {% alert tip %}
-Braze Data Transformation has an AI copilot that asks ChatGPT to help you write your code, instead of using the default template. Access the AI copilot by clicking <i class="fa-solid fa-wand-magic-sparkles"></i> **Generate transformation code**. To use this, a webhook must be sent to your transformation.
+Braze Data Transformation has an AI copilot that asks ChatGPT to help you write your code. Access the AI copilot by clicking <i class="fa-solid fa-wand-magic-sparkles"></i> **Generate transformation code**. To use this, a webhook must be sent to your transformation. You can also access the template library by selecting **Insert code** > **Insert template**.
 
 ![]({% image_buster /assets/img/data_transformation/data_transformation3.png %})
 {% endalert %}
@@ -203,7 +205,7 @@ In this step, you will transform the webhook payload from the source platform to
   - Subscription group updates
   - Email address as an identifier
 
-Click **Validate** to return a preview of your code's output and to check if it's an acceptable `/users/track` request.
+Select **Validate** to return a preview of your code's output and to check if it's an acceptable `/users/track` request.
 
 {% alert note %}
 External network requests, third-party libraries, and non-JSON webhooks are not currently supported.
