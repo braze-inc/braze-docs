@@ -12,6 +12,10 @@ search_rank: 1
 
 > This reference article covers how to install the Braze SDK for Roku. Installing the Braze Roku SDK will provide you with basic analytics and segmentation functionality.
 
+{% alert tip %}
+Checkout our sample Roku app on GitHub: [TorchieTV](https://github.com/braze-inc/braze-roku-sdk/tree/main/torchietv).
+{% endalert %}
+
 ## Step 1: Add files
 
 Braze SDK files can be found in the `sdk_files` directory in the [Braze Roku SDK repository][1].
