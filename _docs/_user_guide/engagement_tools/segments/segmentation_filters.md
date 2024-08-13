@@ -167,7 +167,7 @@ glossaries:
     tags:
       - Retargeting
   - name: Last Received SMS
-    description: Segments your users by the time that the last message was delivered to the SMS provider. This doesn't guarantee that the message was delivered to the user's device.(24-hour period)<br><br>Time zone:<br>Company's Time Zone
+    description: Segments your users by the time that the last message was delivered to the SMS provider. This doesn't guarantee that the message was delivered to the user's device. (24-hour period)<br><br>Time zone:<br>Company's Time Zone
     tags:
       - Retargeting
   - name: Last Received Webhook
