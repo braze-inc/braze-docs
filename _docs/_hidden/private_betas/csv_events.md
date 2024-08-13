@@ -41,7 +41,7 @@ When you provide an `external_id` in your import, Braze will update any existing
 - **Download:** [CSV Attributes Import Template][import_template]
 - **Download:** [CSV Events Import Template][events_template]
 
-## Importing with user alias
+### Importing with user alias
 
 To target users who don't have an `external_id`, you can import a list of users with user aliases. An alias serves as an alternative unique user identifier, and can be helpful if you are trying to market to anonymous users who haven't signed up or made an account with your app.
 
@@ -79,7 +79,7 @@ You can't use a CSV import to create a new user using `braze_id`. This method ca
 The `braze_id` value might be labeled as `Appboy ID` in CSV exports from the Braze dashboard. This ID will be the same as the `braze_id` for a user, so you can rename this column to `braze_id` when you re-import the CSV.
 {% endalert %}
 
-## Importing default attributes
+### Importing default attributes
 
 To import default attributes for users, go to **Import Users** > **Attributes**. Default user attributes are reserved keys in Braze. For example, `first_name` or `email`. Custom attributes are custom to your business. For example, a travel booking app may have a custom attribute called `last_destination_searched`.
 
@@ -120,7 +120,7 @@ While `external_id` itself is not mandatory, you **must** include one of these f
 - `user_alias_name`: A unique user identifier for an anonymous user
 {% endalert %}
 
-## Importing custom attributes
+### Importing custom attributes
 
 You can import custom attributes for users by going to **Import Users** > **Attributes**. Any headers that do not exactly match default attributes create a custom attribute within Braze.
 
@@ -181,7 +181,7 @@ If you are updating subscription group status, you must have the following two c
 Only a single `subscription_group_id` can be set per row in the user import. Different rows can have different `subscription_group_id` values. However, if you need to enroll the same users into multiple subscription groups, you will need to do multiple imports.
 {% endalert %}
 
-## Importing custom events (early access) {#importing-custom-events}
+### Importing custom events (early access) {#importing-custom-events}
 
 {% alert important %}
 Importing custom events is currently in early access. Contact your Braze account manager if you're interested in participating in the early access.
