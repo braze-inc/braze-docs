@@ -33,8 +33,8 @@ You can also pass your AppsFlyer audiences (cohorts) directly to Braze with the 
 
 ### Step 1: Map device ID
 
-#### Android
-
+{% tabs local %}
+{% tab Android %}
 If you have an Android app, you will need to pass a unique Braze device ID to AppsFlyer. 
 
 Make sure the following lines of code are inserted at the correct place—after the Braze SDK is launched and before the initialization code for the AppsFlyer SDK. See the AppsFlyer [Android SDK integration guide](https://dev.appsflyer.com/hc/docs/integrate-android-sdk#initializing-the-android-sdk) for more information.
@@ -46,9 +46,9 @@ Braze.getInstance(context).getDeviceIdAsync { deviceId ->
    setAdditionalData(customData)
 }
 ```
+{% endtab %}
 
-#### iOS
-
+{% tab ios %}
 {% alert important %}
 Prior to February 2023, our AppsFlyer attribution integration used the IDFV as the primary identifier to match iOS attribution data. It is not necessary for Braze customers using Objective-C to fetch the Braze `device_id` and sent to AppsFlyer upon install as there will be no disruption of service. 
 {% endalert%}
@@ -57,8 +57,8 @@ For those using the Swift SDK v5.7.0+, if you wish to continue using IDFV as the
 
 If set to `true`, you must implement the iOS device ID mapping for Swift in order to pass the Braze `device_id` to AppsFlyer upon app install in order for Braze to appropriately match iOS attributions.
 
-{% tabs local %}
-{% tab Swift %}
+{% subtabs local %}
+{% subtab Swift %}
 
 ```swift
 let configuration = Braze.Configuration(
@@ -68,10 +68,9 @@ configuration.useUUIDAsDeviceId = false
 let braze = Braze(configuration: configuration)
 AppsFlyerLib.shared().customData = ["brazeDeviceId": braze.deviceId]
 ```
+{% endsubtab %}
 
-{% endtab %}
-{% tab Objective-C %}
-
+{% subtab Objective-C %}
 ```objc
 BRZConfiguration *configurations = [[BRZConfiguration alloc] initWithApiKey:@"BRAZE_API_KEY" endpoint:@"BRAZE_END_POINT"];
 [configurations setUseUUIDAsDeviceId:NO];
@@ -80,11 +79,12 @@ Braze *braze = [[Braze alloc] initWithConfiguration:configurations];
     @"brazeDeviceId": braze.deviceId
 }];
 ```
-
+{% endsubtab %}
+{% endsubtabs %}
 {% endtab %}
-{% endtabs %}
 
-#### Unity
+{% tab unity %}
+To map the device ID in Unity, use the following:
 
 ```
 Appboy.AppboyBinding.getDeviceId()
@@ -92,6 +92,8 @@ Dictionary<string, string> customData = new Dictionary<string, string>();
 customData.Add("brazeCustomerId", Appboy.AppboyBinding.getDeviceId());
 AppsFlyer.setAdditionalData(customData);
 ```
+{% endtab %}
+{% endtabs %}
 
 ### Step 2: Get the Braze data import key
 
