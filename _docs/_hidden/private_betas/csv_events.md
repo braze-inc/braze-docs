@@ -114,9 +114,10 @@ When importing customer data as attributes, the column headers you use must exac
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ##### About external IDs
-While `external_id` itself is not mandatory, you **must** include one of these fields: <br>
-- `external_id`: A unique user identifier for your customer <br> - OR -
-- `braze_id`: A unique user identifier pulled for existing Braze users <br> - OR -
+
+While `external_id` is not mandatory, you **must** include one of these fields: 
+- `external_id`: A unique user identifier for your customer, **or**
+- `braze_id`: A unique user identifier pulled for existing Braze users, **or**
 - `user_alias_name` and `user_alias_label` : A unique user identifier for an anonymous user
 
 ### Importing custom attributes
@@ -235,15 +236,23 @@ To import your CSV file:
 
 ![The "Events" option is selected as the type of user information to import.][5]
 
-Under **Recent Imports**, you can view up to twenty of your most recent imports, their file names, CSV type, number of lines in the file, number of lines successfully imported, total lines in each file, and the status of each import.
+After the upload is complete, you can view a preview of the contents of your file. The information in the table is based on the values in the top rows of your CSV file.
+
+Under **Recent Imports**, you can view up to twenty of your most recent imports, their file names, CSV type, number of lines in the file, number of lines successfully imported, total lines in each file, and the status of each import. 
 
 {% alert important %}
 CSV imports are case sensitive. This means capital letters in CSV imports will write the field as a custom attribute instead of a standard one. For example, "email" is correct, but "Email" would be written as a custom attribute.
 {% endalert %}
 
-After the upload is complete, you can view a preview of the contents of your file. The information in the table is based on the values in the top rows of your CSV file.
+You can import more than one CSV file at the same time. CSV imports will run concurrently, meaning the order of updates is not guaranteed to be serial. If you require CSV imports to run one after another, you should wait until a CSV import has finished before uploading a second one.
 
-You can import more than one CSV file at the same time. CSV imports will run concurrently, and as such the order of updates is not guaranteed to be serial. If you require CSV imports to run one after another, you should wait until a CSV import has finished before uploading a second one.
+When you're satisfied with the upload, start the import. You can track the progress on the **User Import** page, which refreshes every five seconds, or when you select the refresh button in **Recent Imports**.
+
+Under **Lines Processed** is the progress of the import; the status will change to **Complete** when finished. You can still use the rest of the Braze dashboard during the import, and you'll receive notifications when the import begins and ends.
+
+If the import process runs into an error, a warning icon will appear next to the total number of lines in the file. You can hover over the icon to see details about why certain lines failed. After the import is completed, all data will be added to existing profiles, or new profiles will be created.
+
+### Considerations
 
 If Braze notices something malformed in the top rows of your file during the upload, these errors will be shown with the summary. For example, if your file includes a malformed row, then this error will be noted in the preview when you import the file. Although a file can be imported with errors, it is recommended that you fix such errors in your file before continuing on with your import.
 
@@ -256,12 +265,6 @@ Malformed rows and rows lacking an external ID will not be imported. All other e
 {% alert warning %}
 Errors are based solely on data type and file structure. For example, a poorly formatted email address would still be imported as it can still be parsed as a string.
 {% endalert %}
-
-When you're satisfied with the upload, start the import. You can track the progress on the **User Import** page, which refreshes every five seconds, or when you select the refresh button in **Recent Imports**.
-
-Under **Lines Processed** is the progress of the import; the status will change to **Complete** when finished. You can still use the rest of the Braze dashboard during the import, and you'll receive notifications when the import begins and ends.
-
-If the import process runs into an error, a warning icon will appear next to the total number of lines in the file. You can hover over the icon to see details about why certain lines failed. After the import is completed, all data will be added to existing profiles, or new profiles will be created.
 
 ### Lambda user CSV import
 
