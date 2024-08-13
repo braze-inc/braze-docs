@@ -5,9 +5,6 @@ alias: /partners/Partners/
 layout: partner_page
 search_tag: Partenaire
 
-partner_api: "https://www.braze.com/api/v1/partners"
-partner_path: "https://www.braze.com/product/alloys/partners/"
-
 partner_top_header: "Technology Partners (Partenaires technologiques)"
 partner_top_text: "Bienvenue sur notre liste d’alliés (nos acolytes, nos camarades, nos partenaires) ! Elle vous permettra d’explorer notre documentation technique pour vous aider à implémenter nos Technology Partners (Partenaires technologiques) dans votre SDK Braze. <br> <br>  Si vous cherchez des informations sur comment rejoindre nos Firebrands, une communauté de personnes influentes qui utilisent Braze pour moderniser leur expérience client et leur marketing, consultez notre page d’informations en cliquant <a href='https://brazefirebrands.splashthat.com/'>ici</a>."
 description: "Cette page d’accueil inclut tous les partenaires de Braze. Utilisez-la pour explorer la documentation technique qui vous aidera à implémenter des Technology Partners dans votre SDK Braze."
@@ -160,9 +157,9 @@ valid_partner_list:
 - name: Adobe
   url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/adobe/
 - name: Worthy
-  url: /docs/partners/message_personalization/dynamic_content/worthy/ 
+  url: /docs/partners/message_personalization/dynamic_content/worthy/
 - name: Yotpo
-  url: /docs/partners/message_orchestration/channel_extensions/ecommerce/yotpo/ 
+  url: /docs/partners/message_orchestration/channel_extensions/ecommerce/yotpo/
 - name: Zeotap
   url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/zeotap/
 - name: Toovio
@@ -213,7 +210,7 @@ valid_partner_list:
   url: /docs/partners/data_and_infrastructure_agility/analytics/thoughtspot/
 - name: Wunderkind
   url: /docs/partners/data_and_infrastructure_agility/analytics/wunderkind/
-- name: B.Layer 
+- name: B.Layer
   url: /docs/partners/message_orchestration/channel_extensions/email_templates/blayer/
 - name: Tellius
   url: /docs/partners/data_and_infrastructure_agility/analytics/tellius/

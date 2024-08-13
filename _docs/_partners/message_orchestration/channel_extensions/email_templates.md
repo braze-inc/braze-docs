@@ -8,8 +8,6 @@ description: "This landing page lists Braze partners (Alloys) whose integration 
 
 layout: partner_page
 search_tag: Partner
-partner_api: "https://www.braze.com/api/v1/partners"
-partner_path: "https://www.braze.com/product/alloys/partners/"
 
 partner_top_header: "Message Templates"
 
@@ -28,7 +26,7 @@ valid_partner_list:
   url: /docs/partners/message_orchestration/channel_extensions/email_templates/knak/
 - name: IAM Studio (NNT)
   url: /docs/partners/message_orchestration/channel_extensions/email_templates/iam_studio/
-- name: B.Layer 
+- name: B.Layer
   url: /docs/partners/message_orchestration/channel_extensions/email_templates/blayer/
 - name: Sageflo
   url: /docs/partners/message_orchestration/channel_extensions/email_templates/sageflo/
