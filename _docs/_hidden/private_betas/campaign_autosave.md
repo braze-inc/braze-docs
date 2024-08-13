@@ -16,7 +16,7 @@ Autosave is currently in beta and only available for campaigns. Contact your cus
 {% endalert %}
 
 {% alert warning %}
-When editing a message in a fullscreen editor, such as email or in-app message, changes to the message are not autosaved. When you select **Done** to exit the composer and return to the campaign, changes to the message will be saved the next time an autosave occurs. You can also manually save your message as a precaution.
+When editing a message in a fullscreen editor, such as email or in-app message, changes to the message are not autosaved. When you select **Done** to exit the editor and return to the campaign, changes to the message will be saved the next time an autosave occurs. You can also manually save your message as a precaution.
 {% endalert %}
 
 ## How it works
