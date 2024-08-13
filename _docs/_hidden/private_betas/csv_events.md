@@ -8,7 +8,7 @@ page_type: reference
 
 # Importing user data (CSV events early access)
 
-> Braze offers a variety of ways to import user data into the platform: SDKs, APIs, cloud data ingestion, technology partner integrations, and CSV files. This article provides detailed instructions on how to import user data, including how to import custom events via CSV files (early access).
+> Braze offers a variety of ways to import user data into the platform: SDKs, APIs, cloud data ingestion, technology partner integrations, and CSV files. This article provides detailed instructions on how to import user data, including how to [import custom events via CSV files (early access)](#importing-custom-events).
 
 {% multi_lang_include email-via-sms-warning.md %}
 
@@ -67,7 +67,7 @@ You can't use a CSV import to update an existing user with a `user_alias_name` i
 
 ### Importing with Braze ID
 
-To update existing user profiles in Braze by using an internal Braze ID value instead of an `external_id` or `user_alias_name` / `user_alias_label` value, specify `braze_id` as a column header.
+To update existing user profiles in Braze by using an internal Braze ID value instead of an `external_id` or `user_alias_name` and `user_alias_label` value, specify `braze_id` as a column header.
 
 This can be helpful if you exported user data from Braze through our CSV export option within segmentation and want to add a new custom attribute to those existing users.
 
@@ -114,10 +114,10 @@ When importing customer data as attributes, the column headers you use must exac
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 {% alert note %}
-While `external_id` itself is not mandatory, you **must** include one of these fields:
+While `external_id` itself is not mandatory, you **must** include one of these fields: <br>
 - `external_id`: A unique user identifier for your customer <br> - OR -
 - `braze_id`: A unique user identifier pulled for existing Braze users <br> - OR -
-- `user_alias_name`: A unique user identifier for an anonymous user
+- `user_alias_name` and `user_alias_label` : A unique user identifier for an anonymous user
 {% endalert %}
 
 ### Importing custom attributes
