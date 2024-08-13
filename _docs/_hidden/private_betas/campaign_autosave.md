@@ -21,6 +21,10 @@ Autosave is currently in beta and only available for campaigns. Contact your cus
 
 Your campaigns will automatically and periodically save as you edit and switch between tabs in the campaign editor.
 
+{% alert warning %}
+When editing a message in a fullscreen editor, such as email or in-app message, changes to the message are not autosaved. When you select **Done** to exit the composer and return to the campaign, changes to the message will be saved the next time an autosave occurs. You can also manually save your message as a precaution.
+{% endalert %}
+
 Changes are saved as a draft for both draft and active campaigns. For stopped campaigns, your changes will be saved, but the campaign will stay stopped.
 
 If you and another user make changes to a campaign, the first set of changes will be saved. If you're the second person to save changes, you'll need to refresh the page to see the latest updates to the campaign.
