@@ -67,7 +67,9 @@ After creating your Content Block, you can insert it in your messages by followi
 1. Copy the **Content Block Liquid Tag** from the **Content Block Details** section.
 2. Insert the Content Block Liquid tag into the message. You can also begin typing the Liquid and have the tag auto-populate.
 
-Note that Canvas entry properties and event properties are only supported in a Canvas, not in the Content Block.
+{% alert note %}
+Canvas entry properties and event properties are only supported in a Canvas, not in the Content Block.
+{% endalert %}
 
 ### Updating and copying Content Blocks
 
