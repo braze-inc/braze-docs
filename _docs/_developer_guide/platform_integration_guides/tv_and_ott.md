@@ -14,7 +14,7 @@ platform:
 
 # TV and OTT integrations
 
-> As technology evolves to new platforms and devices, so can your messaging with Braze!<br><br>Braze offers different engagement channels for a number of different TV Operating Systems and "OTT" Set Top Boxes.
+> As technology evolves to new platforms and devices, so can your messaging with Braze! Braze offers different engagement channels for a number of different TV Operating Systems and "OTT" Set Top Boxes.
 
 ## Platforms and features
 
