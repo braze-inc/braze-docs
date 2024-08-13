@@ -91,9 +91,9 @@ When importing customer data as attributes, the column headers you use must exac
 
 | USER PROFILE FIELD | DATA TYPE | INFORMATION | REQUIRED |
 |---|---|---|---|
-| `external_id` | String | A unique user identifier for your customer. | Yes, see [the following note](#about-external-ids). |
-| `user_alias_name` | String | A unique user identifier for anonymous users. An alternative to the `external_id`. | No, see the following note |
-| `user_alias_label` | String | A common label by which to group user aliases. | Yes if `user_alias_name` is used |
+| `external_id` | String | A unique user identifier for your customer. | Yes, see the [following note](#about-external-ids). |
+| `user_alias_name` | String | A unique user identifier for anonymous users. An alternative to the `external_id`. | No, see the [following note](#about-external-ids). |
+| `user_alias_label` | String | A common label by which to group user aliases. | Yes, if `user_alias_name` is used. |
 | `first_name` | String | The first name of your users as they have indicated (for example, `Jane`). | No |
 | `last_name` | String | The last name of your users as they have indicated (for example, `Doe`). | No |
 | `email` | String | The email of your users as they have indicated (for example, `jane.doe@braze.com`). | No |
@@ -110,7 +110,7 @@ When importing customer data as attributes, the column headers you use must exac
 | `time_zone` | String | Time zone must be passed to Braze in the same format as the IANA Time Zone Database (for example, `America/New_York` or `Eastern Time (US & Canada)`).  | No |
 | `date_of_first_session` <br><br> `date_of_last_session`| String | May be passed in one of the following ISO-8601 formats: {::nomarkdown} <ul> <li> "YYYY-MM-DD" </li> <li> "YYYY-MM-DDTHH:MM:SS+00:00" </li> <li> "YYYY-MM-DDTHH:MM:SSZ" </li> <li> "YYYY-MM-DDTHH:MM:SS" (for example, 2019-11-20T18:38:57) </li> </ul> {:/} | No |
 | `subscription_group_id` | String | The `id` of your subscription group. This identifier can be found on the subscription group page of your dashboard. | No |
-| `subscription_state` | String | The subscription state for the subscription group specified by `subscription_group_id`. Allowed values are `unsubscribed` (not in subscription group) or `subscribed` (in subscription group). | No, but strongly recommended if `subscription_group_id` is used |
+| `subscription_state` | String | The subscription state for the subscription group specified by `subscription_group_id`. Allowed values are `unsubscribed` (not in subscription group) or `subscribed` (in subscription group). | No, but strongly recommended if `subscription_group_id` is used. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ##### About external IDs
@@ -190,11 +190,16 @@ Importing custom events is currently in early access. Contact your Braze account
 
 To import custom events for your users, go to **Import Users** > **Events**.
 
-- Custom events are custom to your business. For example, a streaming app may have a custom event called rented_movie. Your CSV must have column headers for:
-    - One of `external_id`, `braze_id`, or `user_alias_name` and `user_alias_label`
-    - name
-    - time
-- Custom events may have event properties. For example, the custom event rented_movie may have the properties title and genre. These event properties should have a column header of `<event_name>.properties.<property name>`. For example, `rented_movie.properties.title`.
+Custom events are custom to your business. For example, a streaming app may have a custom event called rented_movie. Your CSV must have column headers for:
+
+- One of the following:
+  - `external_id`, **or**
+  - `braze_id`, **or** 
+  - `user_alias_name` and `user_alias_label`
+- Name
+- Time
+
+Custom events may have event properties. For example, the custom event rented_movie may have the properties title and genre. These event properties should have a column header of `<event_name>.properties.<property name>`. An example is `rented_movie.properties.title`.
 
 | USER PROFILE FIELD                      | DATA TYPE | INFORMATION                                                                                                                                                                                                             | REQUIRED                                                                                        |
 |-----------------------------------------|-----------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------|
@@ -231,26 +236,26 @@ Setting language or country on a user via CSV import or API will prevent Braze f
 ## Importing a CSV
 
 To import your CSV file:
-1. Go to **Audiences** > **User Import**. 
-2. Select **Browse Files** and select your file of interest, then select **Start Upload**. Braze will upload your file and check the column headers as well as the data types of each column.
-
-![The "Events" option is selected as the type of user information to import.][5]
-
-After the upload is complete, you can view a preview of the contents of your file. The information in the table is based on the values in the top rows of your CSV file.
-
-Under **Recent Imports**, you can view up to twenty of your most recent imports, their file names, CSV type, number of lines in the file, number of lines successfully imported, total lines in each file, and the status of each import. 
+1. Go to **Audience** > **Import Users**. 
+2. Select **Browse Files** and select your file of interest, then select **Start import**. Braze will upload your file and check the column headers as well as the data types of each column.
 
 {% alert important %}
 CSV imports are case sensitive. This means capital letters in CSV imports will write the field as a custom attribute instead of a standard one. For example, "email" is correct, but "Email" would be written as a custom attribute.
 {% endalert %}
 
+![The "Events" option is selected as the type of user information to import.][5]
+
+After the upload is complete, you can view a preview of the contents of your file. The information in the table is based on the values in the top rows of your CSV file.
+
+You can track the progress on the **Import Users** page, which refreshes every five seconds, or when you select **Refresh table**. You can still use the rest of the Braze dashboard during the import, and you'll receive notifications when the import begins and ends.
+
+You can also view your most recent imports, their file names, CSV type, number of lines in the file, number of lines successfully imported, total lines in each file, and the status of each import.
+
 You can import more than one CSV file at the same time. CSV imports will run concurrently, meaning the order of updates is not guaranteed to be serial. If you require CSV imports to run one after another, you should wait until a CSV import has finished before uploading a second one.
 
-When you're satisfied with the upload, start the import. You can track the progress on the **User Import** page, which refreshes every five seconds, or when you select the refresh button in **Recent Imports**.
-
-Under **Lines Processed** is the progress of the import; the status will change to **Complete** when finished. You can still use the rest of the Braze dashboard during the import, and you'll receive notifications when the import begins and ends.
-
 If the import process runs into an error, a warning icon will appear next to the total number of lines in the file. You can hover over the icon to see details about why certain lines failed. After the import is completed, all data will be added to existing profiles, or new profiles will be created.
+
+![CSV file upload completed with errors involving mixed data types in a single column][4]{: style="max-width:70%"}
 
 ### Considerations
 
@@ -259,8 +264,6 @@ If Braze notices something malformed in the top rows of your file during the upl
 Moreover, it’s important to examine the full CSV file before upload, as Braze doesn’t scan every row of the input file for the preview. This means errors can exist which Braze doesn’t catch while generating this preview.
 
 Malformed rows and rows lacking an external ID will not be imported. All other errors can be imported, but may interfere with filtering when creating a segment. For more information, skip to the [Troubleshooting](#troubleshooting) section.
-
-![CSV file upload completed with errors involving mixed data types in a single column][4]{: style="max-width:70%"}
 
 {% alert warning %}
 Errors are based solely on data type and file structure. For example, a poorly formatted email address would still be imported as it can still be parsed as a string.
