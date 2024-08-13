@@ -9,7 +9,7 @@ description: "This article covers how to implement the Swift SDK delayed initial
 
 # Delayed Initialization
 
-Delayed initialization is a feature that allows you to initialize the Braze SDK asynchronously while ensuring that push notification handling is preserved. This feature is useful when you need to perform additional setup before initializing the SDK, such as fetching configuration data from a server.
+Delayed initialization is a feature that allows you to initialize the Braze SDK asynchronously while ensuring that push notification handling is preserved. This feature is useful when you need to perform additional setup before initializing the SDK, such as fetching configuration data from a server or waiting for user consent.
 
 ## Step 1: Preparing the SDK for delayed initialization
 
