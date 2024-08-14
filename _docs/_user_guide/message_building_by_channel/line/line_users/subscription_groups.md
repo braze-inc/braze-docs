@@ -1,7 +1,7 @@
 ---
 nav_title: Subscription Groups
 article_title: Subscription Groups
-page_order: 3
+page_order: 1
 description: "This article covers LINE message subscription groups."
 page_type: reference
 channel:
@@ -12,7 +12,7 @@ permalink: /line/subscription_groups/
 
 # LINE subscription groups
 
-> There are two subscription states for LINE users: subscribed and unsubscribed. LINE can have up to 100 subscription groups per workspace, with each subscription group connected to its own LINE channel.<br><br>This article is part of the LINE beta collection. [Return to main page](https://www.braze.com/docs/line/).
+> There are two subscription states for LINE users:x subscribed and unsubscribed. LINE can have up to 100 subscription groups per workspace, with each subscription group connected to its own LINE channel.<br><br>This article is part of the LINE beta collection. [Return to main page](https://www.braze.com/docs/line/).
 
 {% alert important %}
 LINE access is in beta and only available in select Braze packages. Reach out to your account manager or customer success manager to get started.
