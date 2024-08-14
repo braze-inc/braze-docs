@@ -55,6 +55,10 @@ When viewing your results, you can compare the conversion rates of your variants
 Using a control group when determining winner by Opens or Clicks is not recommended. Because the control group won't receive the message, those users cannot perform any opens or clicks. Therefore, that group's conversion rate is 0% by definition and does not constitute a meaningful comparison to the variants.
 {% endalert %}
 
+#### Control groups with A/B testing
+
+When using rate limiting with an A/B test, the rate limit isn't applied to the control group in the same way as the test group, which is a potential source of time bias. Use appropriate conversion windows to avoid this bias.
+
 #### Control groups with Intelligent Selection
 
 The size of the control group for a campaign with [Intelligent Selection][1] is based on the number of variants. If each variant is sent to more than 20% of users, then the control group is 20% and the variants are split evenly across the remaining 80%. However, if you have enough variants that each variant is sent to less than 20% of users, then the control group must become smaller. When Intelligent Selection starts analyzing the performance of your test, the control group grows or shrinks based on the results.
