@@ -43,10 +43,6 @@ Duplicate user profiles cannot be recovered after merging.
 
 ## Bulk merging
 
-{% alert important %}
-Bulk merging duplicate users is currently in early access. Contact your Braze account manager if you’re interested in participating in the early access.
-{% endalert %}
-
 When you bulk merge duplicate users, Braze finds profiles with matching identifiers (such as an email address) and merges all their data into the most recently updated profile with an `external_id`. If there are no profiles with an `external_id`, the most recently updated profile without an `external_id` will be used instead.
 
 ### Step 1: Go to Manage Audience
