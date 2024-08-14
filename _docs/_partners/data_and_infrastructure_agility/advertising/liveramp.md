@@ -66,7 +66,7 @@ Braze’s event logs contain identifiers you can use within the LiveRamp native 
 
 | Identifier Type | Description  |
 |-----------------|--------------|
-| `AD_ID` | Advertising IDs, such as `ios_idfa`, `google_ad_id`, `roku_ad_id`, captured within particular event types, which can be used in conjunction with LiveRamp’s Device Resolution services. By default, Advertising IDs are not collected&#8212;however, you can enable tracking by following [Braze's documentation](https://www.braze.com/docs/user_guide/data_and_analytics/user_data_collection/sdk_data_collection/#data-not-collected-by-default). |
+| `AD_ID` | Advertising IDs, such as `ios_idfa`, `google_ad_id`, `roku_ad_id`, captured within particular event types, which can be used in conjunction with LiveRamp’s Device Resolution services. By default, Advertising IDs are not collected&#8212;however, you can enable tracking by following [Braze documentation]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/sdk_data_collection/#data-not-collected-by-default). |
 | `EMAIL_ADDRESS`   | Email address which can be used in conjunction with LiveRamp’s Email Only Resolution services |
 | `TO_PHONE_NUMBER` | Phone number, which can be used in conjunction with LiveRamp’s PII Resolution services. |
 | `EXTERNAL_USER_ID` | The external ID associated with a user, which can be used in conjunction with LiveRamp’s Device Resolution services (CID). |
