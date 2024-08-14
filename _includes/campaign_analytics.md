@@ -321,14 +321,14 @@ Here are some key webhook metrics you may see in your analytics. To see the defi
 
 Here are some key WhatsApp metrics you may see in your analytics. To see the definitions of all WhatsApp metrics used in Braze, refer to our [Report Metrics Glossary][1].
 
-| Term | Definition | 
-| --- | --- | 
+| Term | Definition |
+| --- | --- |
 | Sends | The total number of sends successfully communicated between Braze and WhatsApp. However, this does not necessarily mean the message was received by the end user. |
 | Deliveries | The total number of WhatsApp messages sent that successfully made it to the end user's device. | 
 | Delivery rate | The percentage of users who had a delivery over users who had a send. Calculation: (Deliveries) / (Sends)|
 | Reads | When a WhatsApp message is read by the end user. The end user's read receipts must be "on" for Braze to track reads. | 
 | Read rate | The percentage of users who read the message over users who had a send. Calculation: (Reads) / (Sends)|
-| Failures | The total number of sends that were not successful because WhatsApp could not deliver the message to the end user. Failures are included in the _Sends_ count but are not included in the _Deliveries_ count. | 
+| Failures | The total number of sends that were not successful because WhatsApp could not deliver the message to the end user. Failures are included in the _Sends_ count but not in the _Deliveries_ count. | 
 | Failure rate | The percentage of users who had unsuccessful sends over users who had a successful send. Calculation: (Failures) / (Sends)|
 {: .reset-td-br-1 .reset-td-br-2}
 
