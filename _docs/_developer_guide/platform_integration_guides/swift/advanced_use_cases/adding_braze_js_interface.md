@@ -72,3 +72,5 @@ Here’s an example of how to log a custom event from your web content to the Br
 ```
 {% endtab %}
 {% endtabs %}
+
+[1]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/#custom-html-messages
