@@ -414,16 +414,16 @@ const jsonObjectProperty = await Braze.getFeatureFlagJSONProperty("expanded_user
 var featureFlag = Appboy.AppboyBinding.GetFeatureFlag("expanded_user_profile");
 
 // Returns the String property
-var stringProperty = featureFlag.getStringProperty("color");
+var stringProperty = featureFlag.GetStringProperty("color");
 
 // Returns the boolean property
-var booleanProperty = featureFlag.getBooleanProperty("expanded");
+var booleanProperty = featureFlag.GetBooleanProperty("expanded");
 
 // Returns the number property as an integer
-var integerProperty = featureFlag.getIntegerProperty("height");
+var integerProperty = featureFlag.GetIntegerProperty("height");
 
 // Returns the number property as a double
-var doubleProperty = featureFlag.getDoubleProperty("height");
+var doubleProperty = featureFlag.GetDoubleProperty("height");
 
 // Returns the Unix UTC millisecond timestamp property as a long
 var timestampProperty = featureFlag.GetTimestampProperty("account_start");
