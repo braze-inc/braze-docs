@@ -57,4 +57,4 @@ braze.getUser().setEmail(<email address>);
 {: start="4"}
 4. On Braze, merge the user profiles on email.
 
-If you encounter duplicate user profiles, you can use our [bulk merging tool](https://www.braze.com/docs/user_guide/engagement_tools/segments/user_profiles/duplicate_users#bulk-merging) to help streamline your data. 
+If you encounter duplicate user profiles, you can use our [bulk merging tool]({{site.baseurl}}/user_guide/engagement_tools/segments/user_profiles/duplicate_users#bulk-merging) to help streamline your data. 
