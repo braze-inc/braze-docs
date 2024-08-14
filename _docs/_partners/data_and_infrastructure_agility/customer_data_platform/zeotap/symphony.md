@@ -90,7 +90,7 @@ You can find details of all the Braze fields in this section.
 | --- | --- | --- |
 | External ID | Dropdown selection | This is the persistent `User ID` you defined by Braze to track users across devices and platforms. We recommend that you map `User ID` to `External ID`; otherwise, Zeotap may send email as a user alias.<br><br>Zeotap recommends that you map the `hashed email` available in the Zeotap Catalogue to the `External ID`.|
 | Email | Static Mapping | This is mapped to `Email Raw` in the Zeotap Catalogue. |
-| Phone | Static Mapping | This is mapped to `Mobile Raw` in the Zeotap Catalogue.<br><br>• Braze accepts phone numbers in `E.164` format. Zeotap does not perform any transformation. Hence, you are required to ingest the phone numbers in the prescribed format. For more information, refer to [User phone numbers](https://www.braze.com/docs/user_guide/message_building_by_channel/sms/phone_numbers/user_phone_numbers/). |
+| Phone | Static Mapping | This is mapped to `Mobile Raw` in the Zeotap Catalogue.<br><br>• Braze accepts phone numbers in `E.164` format. Zeotap does not perform any transformation. Hence, you are required to ingest the phone numbers in the prescribed format. For more information, refer to [User phone numbers]({{site.baseurl}}/user_guide/message_building_by_channel/sms/phone_numbers/user_phone_numbers/). |
 | First Name | Static Mapping | This is mapped to `First Name` in the Zeotap Catalogue. |
 | Last Name | Static Mapping | This is mapped to `Last Name` in the Zeotap Catalogue. |
 | Gender | Static Mapping | This is mapped to `Gender` in the Zeotap Catalogue. |

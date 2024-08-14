@@ -51,7 +51,7 @@ braze.getUser().setDateOfBirth(2000, 12, 25);
 
 ## Assigning custom user attributes
 
-In addition to our predefined user attribute methods, Braze also provides [custom attributes](https://www.braze.com/docs/user_guide/data_and_analytics/custom_data/custom_attributes/#custom-attribute-data-types) to track data from your applications. 
+In addition to our predefined user attribute methods, Braze also provides [custom attributes]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#custom-attribute-data-types) to track data from your applications. 
 
 Full method specifications for custom attributes can be found here within the [JSDocs][1].
 
