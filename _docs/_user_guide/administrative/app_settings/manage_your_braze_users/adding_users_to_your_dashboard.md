@@ -33,7 +33,7 @@ The department listed in a user's profile determines what types of communication
 
 {:start="4"}
 
-4. For users with a limited role (meaning they aren't administrators), select the company-level and workspace-level [permissions]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/#editing-a-users-permissions) you want this user to have.
+4. For users that aren't administrators, select the company-level and workspace-level [permissions]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/#editing-a-users-permissions) you want this user to have.
 
 ![][3]
 
