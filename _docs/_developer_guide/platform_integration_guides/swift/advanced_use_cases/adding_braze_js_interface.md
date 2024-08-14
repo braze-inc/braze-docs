@@ -48,26 +48,26 @@ Here’s an example of how to log a custom event from your web content to the Br
 {% tabs local %}
 {% tab HTML %}
 ```javascript
-
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Logging data via BrazeBridge Example</title>
     <script>
-
-        function logData(data) {
-            window.brazeBridge.logCustomEvent(data);
-        }
+      function logData(data) {
+        window.brazeBridge.logCustomEvent(data);
+      }
     </script>
-</head>
-<body>
-    <center>
-        <br><br>
-            <input type="button" value="Click to log a custom Event 'completed_level'" onclick="logData('completed_level')"><br>
-    </center>
-</body>
+  </head>
+
+  <body>
+    <input
+      type="button"
+      value="Click to log a custom Event 'completed_level'"
+      onclick="logData('completed_level')"
+    />
+  </body>
 </html>
 ```
 {% endtab %}
