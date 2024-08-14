@@ -110,6 +110,8 @@ When launching the preference center, you will be prompted to confirm the name, 
 
 ## Using the preference center
 
+{% multi_lang_include preference_center_warning.md %}
+
 To place a link to the preference center in your emails, copy the Liquid tag of the desired preference center by selecting the **Copy Liquid** icon.
 
 ![][10]{: style="max-width:75%;"}
