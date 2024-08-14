@@ -23,7 +23,7 @@ To add a new user:
 
 1. Go to **Settings** > **Company Users**.
 2. Click **+ Add New User**.
-3. Enter their information as prompted, including their email, department, and [user role]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/user_permissions/#editing-user-permissions).
+3. Enter their information as prompted, including their email, department, and [user role]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/user_permissions/#creating-a-role.
 
 {% alert tip %}
 The department listed in a user's profile determines what types of communications they receive from Braze. This is so everyone only receives the communications and alerts that are relevant to how they use Braze.
