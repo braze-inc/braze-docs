@@ -212,7 +212,7 @@ You can specify multiple custom events and purchases that should remove a card f
 Content Cards cannot be edited after they are sent. If you find you need to make changes to cards that have already been sent, consider using [Campaign Re-eligibility]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/reeligibility/) as shown in the following options.
 
 {% alert note %}
-Content Cards using [at first impression]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/create/card_creation/#differences-between-creating-cards-at-launch-or-entry-versus-at-first-impression) use impression time to calculate re-eligibility&#8212;however, all other Content Card types use send time.
+Content Cards using [at first impression]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/create/card_creation/#differences-between-creating-cards-at-launch-or-entry-versus-at-first-impression) use impression time to calculate re-eligibility&#8212;however, all other Content Card types use whichever send time or impression time is latest.
 {% endalert %}
 
 #### Option 1: Duplicating the campaign
