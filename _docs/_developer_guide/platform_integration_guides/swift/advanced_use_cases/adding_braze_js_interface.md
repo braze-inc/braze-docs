@@ -20,20 +20,21 @@ to a WkWebView's `userContentController` we can make use of the Braze Javascript
 {% tabs %}
 {% tab SWIFT %}
 ```swift
-    // Create the script message handler using your initialized Braze instance.
-    lazy var scriptMessageHandler: Braze.WebViewBridge.ScriptMessageHandler = webViewScriptMessageHandler()
-    
-    private lazy var myWebView: WKWebView = {
-        let contentController = WKUserContentController()
-        let config = WKWebViewConfiguration()
-        typealias ScriptMessageHandler = Braze.WebViewBridge.ScriptMessageHandler
-        contentController.addUserScript(ScriptMessageHandler.script)
-        contentController.add(scriptMessageHandler, name: ScriptMessageHandler.name)
-        
-        config.userContentController = contentController
-            let myWebView = WKWebView(frame: .zero, configuration: config)
-            return myWebView
-        }()
+// Create the script message handler using your initialized Braze instance.
+let scriptMessageHandler = Braze.WebViewBridge.ScriptMessageHandler(braze: braze)
+
+// Create a web view configuration and setup the script message handler.
+let configuration = WKWebViewConfiguration()
+configuration.userContentController.addUserScript(
+  Braze.WebViewBridge.ScriptMessageHandler.script
+)
+configuration.userContentController.add(
+  scriptMessageHandler,
+  name: Braze.WebViewBridge.ScriptMessageHandler.name
+)
+
+// Create the webview using the configuration
+let webView = WKWebView(frame: .zero, configuration: configuration)
 ```
 {% endtab %}
 {% endtabs %}
