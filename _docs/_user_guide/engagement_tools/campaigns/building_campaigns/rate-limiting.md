@@ -67,6 +67,10 @@ For example, let's say you have a game with an in-app message that triggers when
 
 Rate limits apply to all message sending across a Canvas. If multiple channels are utilized in a Canvas or Canvas step, the rate limit will be shared across channels. 
 
+### Rate limiting and A/B testing
+
+When using rate limiting with an A/B test, the rate limit isn't applied to the control group in the same way as the test group, which is a potential source of time bias. Use appropriate conversion windows to avoid this bias.
+
 ### Delivery speed rate limiting
 
 If you anticipate large campaigns driving a spike in user activity and overloading your servers, you can specify a per-minute rate limit for sending messages—this means Braze will send no more than your rate-limited setting within a minute. When targeting users during campaign creation, you can navigate to **Advanced Options** to select a rate limit (in various increments from as low as 50 to as high as 500,000 messages per minute). Note that non-rate-limited campaigns may exceed these delivery limits. Be aware, however, that messages will be aborted if they're delayed 72 hours or more due to a low rate limit. The user who created the campaign will receive alerts in the dashboard and via email if the rate limit is too low.
