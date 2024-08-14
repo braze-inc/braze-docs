@@ -39,24 +39,6 @@ let webView = WKWebView(frame: .zero, configuration: configuration)
 {% endtab %}
 {% endtabs %}
 
-The initializer accepts closures parameters specific to the handling of in-app messages.
-If you do not need to handle those actions, you may use
-``Braze.WebViewBridge.ScriptMessageHandler(braze: braze)`` directly.
-
-{% tabs %}
-{% tab SWIFT %}
-```swift
-func webViewScriptMessageHandler() -> Braze.WebViewBridge.ScriptMessageHandler
-{
-let braze = AppDelegate.braze! as Braze
-        return .init(
-            braze: braze
-        )
-    }
-```
-{% endtab %}
-{% endtabs %}
-
 The Braze ScriptMessageHandler is responsible for:
 1. Injecting the Braze Javascript bridge into your WebView (i.e. as outlined here [HTML in-app messages][1])
 2. Passing the  bridge methods received from your WebView to the native Braze SDK
