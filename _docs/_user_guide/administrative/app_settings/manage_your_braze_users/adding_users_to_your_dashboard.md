@@ -17,22 +17,32 @@ Several sections on this page refer to the **Company Users** page. If you are us
 
 ## Adding Braze users
 
-There is no limit to the number of users (administrators or limited users) you can have on your company account. Your company admins will be responsible for adding users and setting relevant permissions. However, if there is only one admin left in your workspace, that individual will not be able to remove their own admin permissions.
+You must have administrator permissions to add users to your Braze account. 
 
-To add a new user to your Braze account, ensure you have admin privileges and perform the following:
+To add a new user:
 
 1. Go to **Settings** > **Company Users**.
 2. Click **+ Add New User**.
-3. Enter their information as prompted, including their email, department, and [user role]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/user_permissions/#editing-user-permissions).<br><br>![][2]<br><br>
-4. For users with a limited role, select the company level and workspace level permissions you want this user to have.<br><br>![][3]
+3. Enter their information as prompted, including their email, department, and [user role]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/user_permissions/#editing-user-permissions).
 
-Every email address used in a workspace must be unique. This means that if you try to add an email address that's already associated with a user who had or still has access to the workspace, you'll see an error message. As a workaround for Gmail accounts that recognize the alias created by adding a plus sign (+) to the email address, you could add "+example" to the email address. For example, `contractor@braze.com` can be `contractor+1@braze.com`.
+{% alert tip %}
+The department listed in a user's profile determines what types of communications they receive from Braze. This is so everyone only receives the communications and alerts that are relevant to how they use Braze.
+{% endalert %}
 
-### Selecting a department
+![][2]
 
-You must select a department for each user added to your company's Braze account.
+{:start="4"}
 
-Adding your department to your user profile helps ensure you receive relevant communications built around how you use Braze. You will receive support and alerts that apply to you.
+4. For users with a limited role (meaning they aren't administrators), select the company-level and workspace-level [permissions]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/#editing-a-users-permissions) you want this user to have.
+
+![][3]
+
+### Email address requirements
+
+Every email address used in a workspace must be unique. This means that if you try to add an email address that's already associated with a user who had or still has access to the workspace, you'll see an error message. 
+
+As a workaround for Gmail accounts that recognize the alias created by adding a plus sign (+) to the email address, you could add a suffix like "+1" or "+test" to the email address. For example, `contractor@braze.com` can be `contractor+1@braze.com`.
+
 
 ## Suspending Braze users
 
