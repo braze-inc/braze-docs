@@ -39,7 +39,7 @@ The department listed in a user's profile determines what types of communication
 
 ### Email address requirements
 
-Every email address used in a workspace must be unique. This means that if you try to add an email address that's already associated with a user who had or still has access to the workspace, you'll see an error message. 
+Every email address used in an [instance]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints) must be unique. This means that if you try to add an email address that's already associated with a user who had or still has access to a company workspace in that instance, you'll see an error message. 
 
 As a workaround for Gmail accounts that recognize the alias created by adding a plus sign (+) to the email address, you could add a suffix like "+1" or "+test" to the email address. For example, `contractor@braze.com` can be `contractor+1@braze.com`.
 
