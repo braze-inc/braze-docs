@@ -31,9 +31,7 @@ mParticle has app-level and workspace-level credentials which impact how your ev
 - **App-level:** mParticle will separate events by each individual app, meaning the app-level credentials you give to your iOS app can only be used to send iOS-specific events.
 - **Workspace-level:** mParticle groups all events together (that are **not** app-specific), meaning the workspace-level credentials you give your app group will be used to send all of your non-app-specific events.
 
-<!--
 You can think of this as mParticle ingesting a "feed" based on each individual app. For example, if you have one app for iOS, one for Android, and one for Web, your events will be disjointed. This means if you provide the same credentials for each app, then one mParticle BUCKET? will be used to receive all data for all of your apps, with no duplication.
--->
 
 ## Integration
 
