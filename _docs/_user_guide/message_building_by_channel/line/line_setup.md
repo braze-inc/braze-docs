@@ -123,7 +123,7 @@ After your existing LINE user base is imported into or updated in Braze, you can
 
 ![Response settings page with toggles for how your account will handle chats.][2]{: style="max-width:80%;"}
 
-### Step 2: Set up your LINE subscription group in Braze
+### Set up your LINE subscription group in Braze
 
 1. Go to the Braze Technology Partners page for LINE and input the information you noted from your LINE **Providers** tab:
    - Provider ID
