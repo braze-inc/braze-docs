@@ -54,7 +54,7 @@ This pattern reduces the risk of data loss/leaks by eliminating the need to tran
 
 Within Braze, create a segment of users to target with SessionM promotions and offers. 
 
-{{SEGMENT SCREENSHOT}}
+![Create a segment.]({% image_buster /assets/img/SessionM/CreateSegment.png %})
 
 ### Step 2: Import Braze Segments into SessionM
 
