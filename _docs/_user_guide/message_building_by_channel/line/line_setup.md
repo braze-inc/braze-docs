@@ -30,11 +30,31 @@ You'll need the following to integrate LINE with Braze:
 - [LINE developers account](https://developers.line.biz/en/docs/line-developers-console/login-account/)
 - [LINE messaging API channel](https://developers.line.biz/en/docs/line-developers-console/overview/#channel)
 
-## Recommended order of integration steps
+## Types of LINE accounts
 
-1. [Set up users](#user-setup)
-2. [Connect your LINE account to Braze](#connecting-your-line-account-to-braze)
-3. [Sync existing followers into Braze](#sync-existing-followers-into-braze)
+| Account type | Description |
+| --- | --- |
+| Unverified account | An unreviewed account that can be obtained by anyone (individual or corporate). This account is represented with a gray badge and won't appear in search results within the LINE app. |
+| Verified account | An account that has passed the LINE Yahoo screening. This account is represented with a blue badge and will appear in search results within the LINE app.<br><br>This account is only available for accounts based in Japan, Taiwan, Thailand, and Indonesia.  |
+| Premium account | An account that has passed the LINE Yahoo screening. This account is represented with a green badge and will appear in search results within the LINE app. This account type is automatically granted during the screening at LINE's discretion. |
+{: .reset-td-br-1 .resest-td-br-2}
+
+### Sync existing followers into Braze
+
+To sync followers into Braze, your LINE account needs to be verified or premium. When you create an account, its default status will be unverified. You'll need to request account verification.
+
+### Applying for a verified LINE account
+
+{% alert important %}
+Verified accounts are only available for accounts based in Japan, Taiwan, Thailand, and Indonesia.
+{% endalert %}
+
+1. On the LINE **Official Account** page, select **Settings**.
+2. Under **Information Disclosure Verification Status**, select **Request Account Verification**.
+3. Enter the required information.
+4. Wait for a notification with the review results.
+
+If you want to sync users who followed a specific channel before that channel was synced with Braze, ask your customer success manager or account manager to [submit a request](https://servicedesk.braze.com/plugins/servlet/desk/portal/12) to the WhatsApp team.
 
 ## User setup
 
@@ -55,9 +75,9 @@ To help manage this, Braze offers tooling and logic that supports a well-integra
 {: start="2"}
 2. **Event updates:** These can be used to update a user's subscription status. When Braze receives user event updates for the integrated LINE channel and the event is a follow, the user profile will have a subscription group status of “Subscribed”. If the event is an unfollow, the user profile will have a subscription group status of “Unsubscribed”.<br><br>- All Braze user profiles with a matching `native_line_id` will be automatically updated. <br>- If no matching user profile exists for an event, Braze will [create an anonymous user](https://www.braze.com/docs/line/user_management/).
 
-### Setting up users
+## Recommended order of integration steps
 
-Follow these steps to set up consistent user updates, bring over existing users' LINE IDs, and sync them all to LINE’s subscription states: 
+Follow these steps to set up consistent user updates, bring over existing users' LINE IDs, and sync them all to LINE’s subscription states:
 
 1. [Import or update existing known users](#step-1-import-or-update-existing-line-users)
 2. [Integrate the LINE channel](#step-2-integrate-line-channel)
@@ -65,7 +85,7 @@ Follow these steps to set up consistent user updates, bring over existing users'
 4. [Update user update methods](#step-4-change-your-user-update-methods)
 5. [(Optional) Merge users](#step-5-merge-profiles-optional)
 
-#### Step 1: Import or update existing LINE users
+## Step 1: Import or update existing LINE users
 
 Users can be imported or updated by any of the methods that Braze supports, including the [`/users/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track) endpoint, [CSV]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/#csv-import), or [Cloud Data Ingestion]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion.). 
 
@@ -75,17 +95,54 @@ Regardless of the method you use, update the `native_line_id` to provide the use
 The subscription group state shouldn't be specified, and it will be ignored. LINE is the source of truth for user subscription status, which will be synced to Braze either through the subscription sync tool or by event updates.
 {% endalert %}
 
-#### Step 2: Integrate LINE channel
+## Step 2: Integrate LINE channel
 
-After your existing LINE user base is imported into or updated in Braze, you can integrate your channel.
+After your existing LINE user base is imported into or updated in Braze, you can integrate your channel. After integration, new followers of your LINE channel will have unidentified user profiles created when they follow the channel.
 
-After integration, new followers of your LINE channel will have unidentified user profiles created when they follow the channel.
+### Connect your LINE channel to Braze
 
-#### Step 3: Request a subscription status sync
+1. In LINE, go the **Messaging API** tab and edit your **Webhook settings**:
+   - Set the **Webhook URL** to `https://anna.braze.com/line/events`.
+      - Braze will automatically change this to a different URL when integrating, based on your dashboard cluster.
+   - Turn on **Use webhook** and **Webhook redelivery**. <br><br> ![Webhook settings page to verify or edit the webhook URL, toggling on or off "Use webhook", "Webhook redelivery", and "Error statistics aggregation".][1]{: style="max-width:70%;"}
+2. Take note of the following information in the **Providers** tab:
+
+| Information type | Location |
+| --- | --- |
+| Provider ID | Select your provider and then go to ***Settings** > **Basic information** |
+| Channel ID | Select your provider and then go to **Channels** > your channel > **Basic settings** |
+| Channel secret | Select your provider and then go to **Channels** > your channel > **Basic settings** |
+| Channel access token | Select your provider and then go to **Channels** > your channel > **Messaging API**. If there isn't a channel access token, select **Issue**. |
+{: .reset-td-br-1 .reset-td-br-2}
+
+{: start="3"}
+3. Go to your **Settings** page > **Response settings** and do the following:
+   - Turn off **Greeting message**. This can be handled in Braze via trigger on follow.
+   - Turn off **Auto-response messages**. All triggered messaging should be through Braze. This won't prevent you from sending directly from the LINE console.
+   - Turn on **Webhooks**.
+
+![Response settings page with toggles for how your account will handle chats.][2]{: style="max-width:80%;"}
+
+### Step 2: Set up your LINE subscription group in Braze
+
+1. Go to the Braze Technology Partners page for LINE and input the information you noted from your LINE **Providers** tab:
+   - Provider ID
+   - Channel ID
+   - Channel secret
+   - Channel access token
+
+![LINE messaging integration page with LINE integration section.][3]{: style="max-width:80%;"}
+
+{: start="2"}
+2. After connecting, Braze will automatically generate a Braze subscription group for each LINE integration that's successfully added to your workspace. <br><br> Any changes to your followers list (such as new followers or unfollowers) will be automatically pushed into Braze.
+
+![LINE subscription groups section displaying one subscription group for the "LINE" channel.][4]{: style="max-width:80%;"}
+
+## Step 3: Request a subscription status sync
 
 We recommend syncing all LINE followers before going live. This updates all followers' user profiles with the correct subscription status. That way, if users follow your LINE channel before they're identified in your app, there's an existing user profile to update or merge.
 
-#### Step 4: Change your user update methods 
+## Step 4: Change your user update methods 
 
 Assuming you already have a method to provide user updates to Braze, you’ll need to update that to include the new field `native_line_id` so that subsequent user updates sent to Braze will include that field.
 
@@ -131,7 +188,7 @@ Here is an example payload to `/users/track` that updates a user profile by the 
 ```
 {% endraw %}
 
-#### Step 5: Merge profiles (optional)
+## Step 5: Merge profiles (optional)
 
 As described above, there's a possibilty for multiple user profiles to exist with the same `native_line_id`. If your update methods create duplicate user profiles, you can merge unidentified user profiles to identified user profiles with the `/user/merge` endpoint. 
 
@@ -157,7 +214,7 @@ Here's an example payload to `/users/merge` that targets an unidentified user pr
 ```
 {% endraw %}
 
-#### Use cases
+## Use cases
 
 These are use cases of how users can be updated after you follow the setup steps above.
 
@@ -206,73 +263,6 @@ These are use cases of how users can be updated after you follow the setup steps
 4. The user is identified as having the LINE ID through [user reconciliation](https://www.braze.com/docs/line/).
 5. You update profile 1 to set the `native_line_id` attribute. This profile inherits the subscription status state of profile 2.
   - Now there are two user profiles with the same `native_line_id`. These can be merged at any time using the `/users/merge` endpoint in the process outlined in [Step 5](#step-5-merge-profiles-optional).
-
-## Connecting your LINE account to Braze
-
-### Step 1: Connect your LINE channel to Braze
-
-1. In LINE, go the **Messaging API** tab and edit your **Webhook settings**:
-   - Set the **Webhook URL** to `https://anna.braze.com/line/events`.
-       - Braze will automatically change this to a different URL when integrating, based on your dashboard cluster.
-   - Turn on **Use webhook** and **Webhook redelivery**. <br><br> ![Webhook settings page to verify or edit the webhook URL, toggling on or off "Use webhook", "Webhook redelivery", and "Error statistics aggregation".][1]{: style="max-width:70%;"}
-2. Take note of the following information in the **Providers** tab:
-
-| Information type | Location |
-| --- | --- |
-| Provider ID | Select your provider and then go to ***Settings** > **Basic information** |
-| Channel ID | Select your provider and then go to **Channels** > your channel > **Basic settings** |
-| Channel secret | Select your provider and then go to **Channels** > your channel > **Basic settings** |
-| Channel access token | Select your provider and then go to **Channels** > your channel > **Messaging API**. If there isn't a channel access token, select **Issue**. |
-{: .reset-td-br-1 .reset-td-br-2}
-
-{: start="3"}
-3. Go to your **Settings** page > **Response settings** and do the following:
-   - Turn off **Greeting message**. This can be handled in Braze via trigger on follow.
-   - Turn off **Auto-response messages**. All triggered messaging should be through Braze. This won't prevent you from sending directly from the LINE console.
-   - Turn on **Webhooks**.
-
-![Response settings page with toggles for how your account will handle chats.][2]{: style="max-width:80%;"}
-
-### Step 2: Set up your LINE page in Braze
-
-1. Go to the Braze Technology Partners page for LINE and input the information you noted from your LINE **Providers** tab:
-   - Provider ID
-   - Channel ID
-   - Channel secret
-   - Channel access token
-
-![LINE messaging integration page with LINE integration section.][3]{: style="max-width:80%;"}
-
-{: start="2"}
-2. After connecting, Braze will automatically generate a Braze subscription group for each LINE integration that's successfully added to your workspace. <br><br> Any changes to your followers list (such as new followers or unfollowers) will be automatically pushed into Braze.
-
-![LINE subscription groups section displaying one subscription group for the "LINE" channel.][4]{: style="max-width:80%;"}
-
-## Types of LINE accounts
-
-| Account type | Description |
-| --- | --- |
-| Unverified account | An unreviewed account that can be obtained by anyone (individual or corporate). This account is represented with a gray badge and won't appear in search results within the LINE app. |
-| Verified account | An account that has passed the LINE Yahoo screening. This account is represented with a blue badge and will appear in search results within the LINE app.<br><br>This account is only available for accounts based in Japan, Taiwan, Thailand, and Indonesia.  |
-| Premium account | An account that has passed the LINE Yahoo screening. This account is represented with a green badge and will appear in search results within the LINE app. This account type is automatically granted during the screening at LINE's discretion. |
-{: .reset-td-br-1 .resest-td-br-2}
-
-## Sync existing followers into Braze
-
-To sync followers into Braze, your LINE account needs to be verified or premium. When you create an account, its default status will be unverified. You'll need to request account verification.
-
-### Applying for a verified LINE account
-
-{% alert important %}
-Verified accounts are only available for accounts based in Japan, Taiwan, Thailand, and Indonesia. 
-{% endalert %}
-
-1. On the LINE **Official Account** page, select **Settings**.
-2. Under **Information Disclosure Verification Status**, select **Request Account Verification**.
-3. Enter the required information.
-4. Wait for a notification with the review results.
-
-If you want to sync users who followed a specific channel before that channel was synced with Braze, ask your customer success manager or account manager to [submit a request](https://servicedesk.braze.com/plugins/servlet/desk/portal/12) to the WhatsApp team.
 
 ## User ID reconciliation 
 
