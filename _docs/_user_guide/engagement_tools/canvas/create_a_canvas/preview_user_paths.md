@@ -40,6 +40,10 @@ If the test overlaps with a step type that isn't listed above, the unsupported s
 
 To view more details for entrance criteria, select **See more**. Steps with segmentation will show the met or unmet criteria. Messages will also show this for delivery validations and channel eligibility. Message steps will show which channels were sent versus not sent.
 
+### Liquid
+
+Liquid logic will be processed during a test run, even if you're not sending an actual test message. This means the [abort message logic]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/aborting_messages/#aborting-messages) and other Liquid logic are reflected and could impact the Canvas user journey.
+
 ## Previews for timing
 
 For scheduled Canvases, the test user will enter at the next scheduled entrance time. For action-based Canvases with start dates, the test user will enter on the start date and time. 
@@ -67,7 +71,7 @@ Test users will enter the preview even if they are not eligible in real life. If
 
 You can opt to send test messages to an internal test group or an individual user as the test run populates. This means that only messages the user encounters along the test path will be sent. The recipients will receive messages with their own attributes by default, but you can override these with the test user’s attributes.
 
-To send all test messages in a Canvas at once, regardless of the path and without previewing the path, you can select **Send All Test Messages** in the **Test Sends** tab. 
+To send all test messages in a Canvas at once, regardless of the path and without previewing the path, you can select **Send All Test Messages** in the **Test Sends** tab.
 
 ## Responsiveness
 
