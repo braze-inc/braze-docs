@@ -42,7 +42,7 @@ To view more details for entrance criteria, select **See more**. Steps with segm
 
 ### Liquid
 
-Liquid logic will be processed during a test run is sent, even if you're not sending an actual test message. This means the [abort message logic]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/aborting_messages/#aborting-messages) and other Liquid logic are reflected and could impact the Canvas user journey.
+Liquid logic will be processed during a test run, even if you're not sending an actual test message. This means the [abort message logic]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/aborting_messages/#aborting-messages) and other Liquid logic are reflected and could impact the Canvas user journey.
 
 ## Previews for timing
 
