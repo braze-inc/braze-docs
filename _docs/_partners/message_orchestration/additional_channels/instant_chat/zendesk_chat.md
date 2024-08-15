@@ -68,7 +68,7 @@ Feel free to respond directly to this number!
 
 ![An example SMS with formatting.][3]{: style="max-width:70%;"}
 
-#### 2.2 Schedule the delivery
+#### Step 2.2: Schedule the delivery
 
 For the delivery type, select **API-Triggered delivery**, then copy the Campaign ID which will be used in the next steps.
 
@@ -90,7 +90,7 @@ Go to **Objects and rules** > **Business rules** > **Triggers**.
 
 ![Respond via SMS Braze.][6]{: style="max-width:70%;"}
 
-Under **Actions**, select **Notify by Webhook** and choose the endpoint you created in step 1. Next, specify the body of the API call. Enter the `campaign_id` from step 2.2 into the request body.
+Under **Actions**, select **Notify by Webhook** and choose the endpoint you created in step 1. Next, specify the body of the API call. Enter the `campaign_id` from [step 2.2](#step-22-schedule-the-delivery) into the request body.
 
 ![Respond via SMS Braze JSON body.][7]{: style="max-width:70%;"}
 
