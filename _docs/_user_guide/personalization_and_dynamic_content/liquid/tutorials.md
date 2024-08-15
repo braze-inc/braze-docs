@@ -343,16 +343,25 @@ Let’s promote a user’s favorite product if their last purchase date was over
 {% endraw %}
 
 {: start="7"}
-7. Now that all our time values are in seconds, we can directly compare them. Let's make another equation and incorpriate it into conditional logic. Let's define the condition as today (in seconds) minus the last purchase date (in seconds) being greater than or equal (`>=`) to six months.
+7. Now that all our time values are in seconds, we can use their values in equations. Let's assign a variable called `today_minus_last_purchase_date` that takes today's value and subtracts from it the `last_purchase_date`. This gives us how many seconds it has been since the last purchase.
 
 {% raw %}
 ```liquid
-{% if today | minus: last_purchase_date >= six_months %}
+{% assign today_minus_last_purchase_date = {{today | minus: last_purchase_date}} %}
 ```
 {% endraw %}
 
 {: start="8"}
-8. Let's create the message to send if the purchase was at least six months ago.
+8. Now let's directly compare our time values in conditional logic. Let's define the condition as `today_minus_last_purchase_date` being greater than or equal (`>=`) to six months. In other words, the last purchase date was at least six months ago.
+
+{% raw %}
+```liquid
+{% if today_minus_last_purchase_date >= six_months %}
+```
+{% endraw %}
+
+{: start="9"}
+9. Let's create the message to send if the last purchase was at least six months ago.
 
 {% raw %}
 ```liquid
@@ -360,8 +369,8 @@ We noticed it’s been a while since you last purchased {{custom_attribute.${fav
 ```
 {% endraw %}
 
-{: start="9"}
-9. We'll the `else` tag to specify what should happen if the condition isn't met (because the purchase wasn’t at least six months ago).
+{: start="10"}
+10. We'll use the `else` tag to specify what should happen if the condition isn't met (because the purchase wasn’t at least six months ago).
 
 {% raw %}
 ```liquid
@@ -369,8 +378,8 @@ We noticed it’s been a while since you last purchased {{custom_attribute.${fav
 ```
 {% endraw %}
 
-{: start="10"}
-10. We'll include an `abort_message` to cancel the message.
+{: start="11"}
+11. We'll include an `abort_message` to cancel the message.
 
 {% raw %}
 ```liquid
@@ -378,8 +387,8 @@ We noticed it’s been a while since you last purchased {{custom_attribute.${fav
 ```
 {% endraw %}
 
-{: start="11"}
-11. To finish, we'll end the Liquid with two `endif` tags. The first `endif` closes the conditional check for the favorite product or last purchase date, and the second `endif` closes the conditional check for the last purchase date being at least six months ago.
+{: start="12"}
+12. To finish, we'll end the Liquid with two `endif` tags. The first `endif` closes the conditional check for the favorite product or last purchase date, and the second `endif` closes the conditional check for the last purchase date being at least six months ago.
 
 {% raw %}
 ```liquid
@@ -397,7 +406,8 @@ We noticed it’s been a while since you last purchased {{custom_attribute.${fav
 {% assign today = 'now' | date: "%s" | plus: 0 %}
 {% assign last_purchase_date = {{custom_attribute.${last_purchase_date}}} | date: "%s" | plus: 0 %}
 {% assign six_months = 6 | times: 30.44 | times: 24 | times: 60 | times: 60 %}
-{% if today | minus: last_purchase_date >= six_months %}
+{% assign today_minus_last_purchase_date = {{today | minus: last_purchase_date}} %}
+{% if today_minus_last_purchase_date >= six_months %}
 We noticed it’s been a while since you last purchased {{custom_attribute.${favorite_product}}}. Have you checked out our latest offerings?
 {% else %}
 {% abort_message('Last purchase was less than six months ago') %}
