@@ -41,8 +41,7 @@ The department listed in a user's profile determines what types of communication
 
 Every email address used in an [instance]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints) must be unique. This means that if you try to add an email address that's already associated with a user who had or still has access to a company workspace in that instance, you'll see an error message. 
 
-As a workaround for Gmail accounts that recognize the alias created by adding a plus sign (+) to the email address, you could add a suffix like "+1" or "+test" to the email address. For example, `contractor@braze.com` can be `contractor+1@braze.com`.
-
+If your team uses Gmail and you're experiencing issues adding an email address, you can create an alias by adding a plus sign (+) like "+1" or "+test" to the email address. For example, `contractor@braze.com` can have an alias of `contractor+1@braze.com`. Emails to `contractor+1@braze.com` will still be delivered to `contractor@braze.com`, but the alias will be recognized as a unique email address.
 
 ## Suspending Braze users
 
