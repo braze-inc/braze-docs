@@ -58,14 +58,14 @@ Within Braze, create a segment of users to target with SessionM promotions and o
 
 ### Step 2: Import Braze Segments into SessionM
 
-
 **Option 1: CSV Import**
 Export your Braze segment via the Braze segmenter tool UI and provide a CSV file  to SessionM containing all of the customers to tag, the tagname and a time to live for each user either in the file.
 
 **Option 2 (recommended): Export to the [SessionM Tag Endpoint](https://docs.sessionm.com/developer/APIs/Core/Customers/customers_tags.htm#create-or-increment-a-customer-tag)**
  1. Create a webhook campaign in Braze 
- 2. Set the Webhook URL to '{{endpoint_core}}/priv/v1/apps/{{appkey_core}}/users/{{${user_id}}}/tags'. Use liquid to define the user_id within the url. 
+ 2. Set the Webhook URL to {% raw %}`{{endpoint_core}}/priv/v1/apps/{{appkey_core}}/users/{{${user_id}}}/tags`{% endraw %}. Use liquid to define the user_id within the url. 
  3. Using a Raw Text **Request Body** compose the body of the webhook to include the desired tags that should be added to the user profile in sessionM and the desired time to live. For example:
+ 4. 
  ```
  {
    "tags":[
@@ -74,11 +74,12 @@ Export your Braze segment via the Braze segmenter tool UI and provide a CSV file
    "ttl":2592000
 }
  ```
+
 ![Webhook composer.]({% image_buster /assets/img/SessionM/SessionMWebhookComposer %})
 
  4. In the **Settings** tab add in the key-value pairs for each request header field.
     - Create a Key `Content-Type` with a corresponding Value `application/json`
-    - Create a Key `Authorization` with a corresponding Value ` Basic YOUR-ENCODED-STRING-KEY`. Ask your SessionM team for the encoded string key for your endpoint. 
+    - Create a Key `Authorization` with a corresponding Value `Basic YOUR-ENCODED-STRING-KEY`. Ask your SessionM team for the encoded string key for your endpoint. 
 
 ![Webhook settings.]({% image_buster /assets/img/SessionM/SessionMWebhookSettings %})
 
@@ -91,6 +92,7 @@ This process can also be done directly by making a request to the [SessionM Tag 
 
 The following example request uses cURL. For better API request management, we recommend using an API client, such as Postman.
 
+{% raw %}
 ```bash
 curl --location -g --request POST '{{endpoint_core}}/priv/v1/apps/{{apikey_core}}/users/{{user_id}}/tags' \
 --header 'Content-Type: application/json' \
@@ -103,6 +105,7 @@ curl --location -g --request POST '{{endpoint_core}}/priv/v1/apps/{{apikey_core}
 "ttl":20000
 }'
 ```
+{% endraw %}
 {% endalert %}
 
 ## Allowing Braze to Retrieve Real-time Offer Wallet
@@ -125,9 +128,9 @@ Inside of the Campaign or Canvas Step that should include the SessionM Offers, u
 Within the Connected Content request, specify the customer's SessionM `user_id` and your `retailer_id` to retrieve the full list of active offers the customer has in their wallet (single user per call). Ask your SessionM team for the encoded string key for the Basic Authorization header in your Connected Content call. 
 
 
-The `culture` defaults to `en-US` but Liquid can be used to pull in a user's language for multi-lingual SessionM offers. For example, using `"culture":"{{${language}}}"`.
+The `culture` defaults to `en-US` but Liquid can be used to pull in a user's language for multi-lingual SessionM offers. For example, using {% raw %}`"culture":"{{${language}}}"`{% endraw %}.
 
-
+{% raw %}
 ```
 {% capture postbody %}
 {"retailer_id":"YOUR-RETAIL-ID","user_id":"{{${user_id}}}","skip":0,"take":1000,"include_pending_extended_data":false,"culture":"en-US"}
@@ -144,11 +147,14 @@ The `culture` defaults to `en-US` but Liquid can be used to pull in a user's lan
      :save wallet
 %}
 ```
+{% endraw %}
 
 ### Step 2: Populate Offer Wallet into Braze Messaging
 SessionM returns in the response the full list of offers in the issued state along with the full details for each offer.
 
-Example returned response
+Example returned response:
+
+{% raw %}
 ```
 {
     "status": "ok",
@@ -187,8 +193,9 @@ Example returned response
     }
 }
 ```
-These can be populated into the message using Liquid dot notation. If you wanted to personalize the message with the resulting offer_id, you could leverage the return payload by using `{{wallet.payload.available_points}` which returns `100`.
+{% endraw %}
 
+These can be populated into the message using Liquid dot notation. If you wanted to personalize the message with the resulting offer_id, you could leverage the return payload by using {% raw %}`{{wallet.payload.available_points}`{% endraw %} which returns `100`.
 
 {% alert important %}
 This is an individual API, if you intend to do a batch send of over 500+ users please reach out to your SessionM account team to inquire about how to incorporate bulk data in the integration.
@@ -216,10 +223,11 @@ When setting the broadcast flag to `true` the message will be sent to the entire
 {% endalert %}
 
 Additional fields configurable based on need:
--Offer data: offer_id, offer title, user offer id, description, terms and conditions, logo, pos discount id, expiration date
--point award data: point award amount, point account name
--Event trigger data: any data contained in the event that triggered the behavior that utilizes the trigger/send Webhook outcome
--Campaign specific Data: Campaign runtime, campaign id, campaign name, campaign custom data
+
+- Offer data: offer_id, offer title, user offer id, description, terms and conditions, logo, pos discount id, expiration date
+- Point award data: point award amount, point account name
+- Event trigger data: any data contained in the event that triggered the behavior that utilizes the trigger/send Webhook outcome
+- Campaign specific Data: Campaign runtime, campaign id, campaign name, campaign custom data
 
 {% alert important %}
 Additional fields are sent to Braze as trigger_properties for use in personalizing the message. 
@@ -229,7 +237,7 @@ Additional fields are sent to Braze as trigger_properties for use in personalizi
 
 Create an API-triggered Campaign or Canvas within Braze that will be triggered by SessionM. 
 
-If you will be using the additional configurable fields, such as `offer_id` or `offer title`, use Liquid like {{api_trigger_properties.${offer_id}}} to add the personalization into your messaging.
+If you will be using the additional configurable fields, such as `offer_id` or `offer title`, use Liquid like {% raw %}`{{api_trigger_properties.${offer_id}}}`{% endraw %} to add the personalization into your messaging.
 
 ![API trigger properties.]({% image_buster /assets/img/SessionM/apiTriggerProperties.png %})
 
@@ -237,23 +245,29 @@ Within the Schedule Delivery tab in the dashboard composer, capture the Campaign
 
 ![API triggered campaign.]({% image_buster /assets/img/SessionM/apiTriggerCampaign.png %})
 
-
 Finalize your Campaign or Canvas details and Launch. 
 
 ### Step 3: SessionM Creates Promotional/Messaging Campaign
 
 Create your campaign in SessionM
 
-Update the advanced settings within the SessionM campaign to include the following JSON payload containing the Braze Campaign_id
+Update the advanced settings within the SessionM campaign to include the following JSON payload containing the `braze_campaign_id`:
+
+{% raw %}
+```
 {
 "braze_campaign_id": "{{campaign/Canvas id}}"
 }
+```
+{% endraw %}
+
 ![SessionM Campaign Creation.]({% image_buster /assets/img/SessionM/SessionMCampaignCreation.png %})
 ![SessionM advanced settings.]({% image_buster /assets/img/SessionM/SessionMAdvancedSettings.png %})
 
 Create a message trigger based on required schedule or behavior and select the Braze Messaging Variant as the Messaging Variant in the External Message Dropdown Menu to utilize the preconfigured template.
 
-This template will pull in all the relevant static and dynamic attributes and call out to the Braze Endpoint
+This template will pull in all the relevant static and dynamic attributes and call out to the Braze Endpoint.
+
 ![SessionM add message.]({% image_buster /assets/img/SessionM/SessionMAddMessage.png %})
 ![SessionM external message.]({% image_buster /assets/img/SessionM/SessionMExternalMessage.png %})
 ![SessionM Braze template.]({% image_buster /assets/img/SessionM/SessionMBrazeTemplate.png %})
