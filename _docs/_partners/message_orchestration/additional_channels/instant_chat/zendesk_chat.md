@@ -1,14 +1,14 @@
 ---
 nav_title: Zendesk
-article_title: Integrating Zendesk Chat with Braze
-description: "Learn how to integrate Zendesk with Braze"
+article_title: Zendesk Chat
+description: "Learn how to integrate Zendesk Chat with Braze"
 alias: /partners/zendesk_chat/
 page_type: partner
 search_tag: Partner
 
 ---
 
-# Integrating Zendesk Chat with Braze
+# Zendesk Chat
 
 > Zendesk’s integration uses webhooks from each platform to set up a two-way SMS conversation. When a user requests support, a ticket is created in Zendesk. Agent responses are forwarded to Braze through an API-triggered SMS campaign, and user replies are sent back to Zendesk.
 
@@ -26,7 +26,7 @@ Before you start, you'll need the following:
 
 Enhance customer support efficiency by combining Braze’s SMS capabilities with Zendesk’s live agent responses to promptly address user inquiries with human support.
 
-## Integrating Zendesk
+## Integrating Zendesk Chat
 
 ### Step 1: Create a Webhook in Zendesk
 
@@ -35,7 +35,7 @@ Enhance customer support efficiency by combining Braze’s SMS capabilities with
 3. In the **Endpoint URL** textbox, add the **campaign/trigger/send** endpoint.
 4. Under **Authentication**, select **Bearer token** and add the Braze REST API key with permission to `campaigns.trigger.send`.
 
-![An example Zendesk webhook.][1]
+![An example Zendesk webhook.][1]{: style="max-width:70%;"}
 
 ### Step 2: Create an outbound SMS campaign
 
@@ -49,9 +49,9 @@ When Zendesk sends the content of a message through the API, it comes in the fol
 **----------------------------------------------\n\n{Replier Name}, {Replier Date}\n\n{Message}**
 ```
 
-So we need to extract the detail we want from this string to display in the message, or else a user will see this:
+So we need to extract the detail we want from this string to display in the message, or else a user will see all the details.
 
-![An example SMS without formatting.][2]{: style="max-width:80%;"}
+![An example SMS without formatting.][2]{: style="max-width:40%;"}
 
 In the **Message** textbox, add the following Liquid code and any opt-out language or other static content:
 
@@ -67,13 +67,13 @@ Feel free to respond directly to this number!
 ```
 {% endraw %}
 
-![An example SMS with formatting.][3]{: style="max-width:80%;"}
+![An example SMS with formatting.][3]{: style="max-width:70%;"}
 
 #### 2.2 Schedule the delivery
 
 For the delivery type, select **API-Triggered delivery**, then copy the Campaign ID which will be used in the next steps.
 
-![API Triggered delivery][4]
+![API Triggered delivery][4]{: style="max-width:70%;"}
 
 Finally, under **Delivery Controls**, turn on re-eligibility.
 
@@ -89,11 +89,11 @@ Go to **Objects and rules** > **Business rules** > **Triggers**
 - **Ticket>Comment** is **Present and requester can see comment** so that the message is triggered whenever a new public comment is included in a ticket update
 - **Ticket>Update** *is not* **Web service (API)** so that when a user sends a message from Braze, it isn't forwarded back to their cell phone. Only messages coming from Zendesk will be forwarded.
 
-![Respond via SMS Braze.][6]
+![Respond via SMS Braze.][6]{: style="max-width:70%;"}
 
 Under **Actions**, select **Notify by Webhook** and choose the endpoint you created in step 1. Next, specify the body of the API call. Enter the `campaign_id` from step 2.2 into the request body.
 
-![Respond via SMS Braze JSON Body.][7]
+![Respond via SMS Braze JSON Body.][7]{: style="max-width:70%;"}
 
 {% raw %}
 ```liquid
@@ -120,7 +120,7 @@ Under **Actions**, select **Notify by Webhook** and choose the endpoint you crea
 
 If you’d like to notify the user that the ticket has been closed, create a new campaign in Braze with the templated response body.
 
-![Update a user when ticket is closed.][8]{: style="max-width:65%;"}
+![Update a user when ticket is closed.][8]{: style="max-width:70%;"}
 
 Select **API Triggered delivery**, and copy the campaign ID.
 
@@ -128,11 +128,11 @@ Next, set up a trigger to notify Braze when the ticket is closed:
 - Category: **Trigger a message**
 - Under Conditions, select **Ticket>Ticket Status** and change it to **Solved**
 
-![Solved ticket set up in Zendesk.][9]{: style="max-width:65%;"}
+![Solved ticket set up in Zendesk.][9]{: style="max-width:70%;"}
 
 Under **Actions**, select **Notify by Webhook** and choose the second endpoint you just created. From there, we need to specify the body of the API call:
 
-![Solved ticket JSON Body.][10]{: style="max-width:65%;"}
+![Solved ticket JSON Body.][10]{: style="max-width:70%;"}
 
 {% raw %}
 ```liquid
@@ -177,7 +177,7 @@ In the Braze dashboard, go to **Audience**, choose your **SMS subscription group
 |Keywords|Your custom keywords, such as `SUPPORT`.|
 |Reply Message|The message that will be sent when a keyword is detected, such as "A customer service rep will reach out to you shortly."|
 
-![An example SMS keyword category in Braze.][11]{: style="max-width:65%;"}
+![An example SMS keyword category in Braze.][11]{: style="max-width:70%;"}
 
 #### Step 6.2: Create your first webhook campaign
 
@@ -212,7 +212,7 @@ In the webhook composer:
 ```
 {% endraw %}
 
-![An example request with the two required headers.][12]{: style="max-width:65%;"}
+![An example request with the two required headers.][12]{: style="max-width:70%;"}
 
 
 #### Step 6.3: Schedule the first delivery
