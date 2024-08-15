@@ -74,13 +74,13 @@ Export your Braze segment via the Braze segmenter tool UI and provide a CSV file
    "ttl":2592000
 }
  ```
- {{WEBHOOK COMPOSE SCREENSHOT}}
+![Webhook composer.]({% image_buster /assets/img/SessionM/SessionMWebhookComposer %})
 
  4. In the **Settings** tab add in the key-value pairs for each request header field.
     - Create a Key `Content-Type` with a corresponding Value `application/json`
     - Create a Key `Authorization` with a corresponding Value ` Basic YOUR-ENCODED-STRING-KEY`. Ask your SessionM team for the encoded string key for your endpoint. 
 
-{{WEBHOOK SETTINGS SCREENSHOT}}
+![Webhook settings.]({% image_buster /assets/img/SessionM/SessionMWebhookSettings %})
 
  5. Schedule your delivery 
  6. Set your Target Audiences to target the segment created in Step 1
@@ -189,7 +189,6 @@ Example returned response
 ```
 These can be populated into the message using Liquid dot notation. If you wanted to personalize the message with the resulting offer_id, you could leverage the return payload by using `{{wallet.payload.available_points}` which returns `100`.
 
-{{ ONCE TESTED - INCLUDE SCREENSHOT OF EXAMPLE HERE}}
 
 {% alert important %}
 This is an individual API, if you intend to do a batch send of over 500+ users please reach out to your SessionM account team to inquire about how to incorporate bulk data in the integration.
@@ -232,11 +231,12 @@ Create an API-triggered Campaign or Canvas within Braze that will be triggered b
 
 If you will be using the additional configurable fields, such as `offer_id` or `offer title`, use Liquid like {{api_trigger_properties.${offer_id}}} to add the personalization into your messaging.
 
-{{LIQUID PERSONALIZATION SCREENSHOT}}
+![API trigger properties.]({% image_buster /assets/img/SessionM/apiTriggerProperties.png %})
 
 Within the Schedule Delivery tab in the dashboard composer, capture the Campaign or Canvas ID. This ID will be added to SessionM Campaign Advanced Settings.
 
-{{API TRIGGERED CAMPAIGN ID SCREENSHOT}}
+![API triggered campaign.]({% image_buster /assets/img/SessionM/apiTriggerCampaign.png %})
+
 
 Finalize your Campaign or Canvas details and Launch. 
 
@@ -248,12 +248,12 @@ Update the advanced settings within the SessionM campaign to include the followi
 {
 "braze_campaign_id": "{{campaign/Canvas id}}"
 }
-{{Insert Screenshot: "Campaign Creation"}}
-{{Insert Screenshot: "Advanced Settings"}}
+![SessionM Campaign Creation.]({% image_buster /assets/img/SessionM/SessionMCampaignCreation.png %})
+![SessionM advanced settings.]({% image_buster /assets/img/SessionM/SessionMAdvancedSettings.png %})
 
 Create a message trigger based on required schedule or behavior and select the Braze Messaging Variant as the Messaging Variant in the External Message Dropdown Menu to utilize the preconfigured template.
 
 This template will pull in all the relevant static and dynamic attributes and call out to the Braze Endpoint
-{{Insert Screenshot: "Add Message"}}
-{{Insert Screenshot: "External Message"}}
-{{Insert Screenshot: "Braze Template"}}
+![SessionM add message.]({% image_buster /assets/img/SessionM/SessionMAddMessage.png %})
+![SessionM external message.]({% image_buster /assets/img/SessionM/SessionMExternalMessage.png %})
+![SessionM Braze template.]({% image_buster /assets/img/SessionM/SessionMBrazeTemplate.png %})
