@@ -148,7 +148,7 @@ Assuming you already have a method to provide user updates to Braze, you’ll ne
 
 Unidentified user profiles with a `native_line_id` may exist in Braze that were created as part of the subscription status sync process, or when a new follower followed your channel. 
 
-When a LINE user is identified in your application through [user reconciliation](https://www.braze.com/docs/line/user_management/) or other means, you can target a potential unidentified user profile in Braze using the [`/users/identify`]({{site.baseurl}}/api/endpoints/user_data/post_user_identify) endpoint. Every unidentified user profile with a `native_line_id` also has a user alias `line_id` that can be used to target the user profile to identify.
+When a LINE user is identified in your application through [user reconciliation](#user-id-reconciliation) or other means, you can target a potential unidentified user profile in Braze using the [`/users/identify`]({{site.baseurl}}/api/endpoints/user_data/post_user_identify) endpoint. Every unidentified user profile with a `native_line_id` also has a user alias `line_id` that can be used to target the user profile to identify.
 
 Here is an example payload to `/users/identify` that targets an unidentified user profile by the user alias `line_id`: 
 
@@ -234,7 +234,7 @@ These are use cases of how users can be updated after you follow the setup steps
 
 1. The channel gets a new LINE follower.
 2. Braze creates an anonymous user profile with the `native_line_id` attribute set to be the follower’s LINE ID, and a user alias of `line_id` set to be the follower’s LINE ID. The profile has a subscription status of “Subscribed”.
-3. The user is identified as having the LINE ID through [user reconciliation](https://www.braze.com/docs/line/user_reconcilation/).
+3. The user is identified as having the LINE ID through [user reconciliation](#user-id-reconciliation).
   - The anonymous user profile can become identified using the [`/users/identify`]({{site.baseurl}}/api/endpoints/user_data/post_user_identify) endpoint. Subsequent updates (through the [`/users/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track) endpoint, [CSV import]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/#csv-import), or [Cloud Data Ingestion]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion)) to this user profile can target the user by this known `external_id`.
 
 {% raw %}
@@ -260,7 +260,7 @@ These are use cases of how users can be updated after you follow the setup steps
 1. You acquire a new user and send the information to Braze. A new user profile is created (profile 1).
 2. The user follows your LINE account.
 3. Braze receives a follow event and creates an anonymous user profile (profile 2).
-4. The user is identified as having the LINE ID through [user reconciliation](https://www.braze.com/docs/line/).
+4. The user is identified as having the LINE ID through [user reconciliation](#user-id-reconciliation).
 5. You update profile 1 to set the `native_line_id` attribute. This profile inherits the subscription status state of profile 2.
   - Now there are two user profiles with the same `native_line_id`. These can be merged at any time using the `/users/merge` endpoint in the process outlined in [Step 5](#step-5-merge-profiles-optional).
 
@@ -280,7 +280,7 @@ This method uses social media logins for reconciliation. When a user logs into y
 
 ## Creating LINE test users in Braze
 
-You can test your LINE channel before setting up [user reconciliation]() by creating a "Who am I" Canvas or campaign.
+You can test your LINE channel before setting up [user reconciliation](#user-id-reconciliation) by creating a "Who am I" Canvas or campaign.
 
 1. Set up a Canvas that returns a user's Braze user ID on a specific trigger word. <br><br>Example trigger <br><br>![Trigger to send the campaign to users who sent an inbound LINE to a specific subscription group.][7]{: style="max-width:80%;"}<br><br>Example message<br><br>![LINE message stating the Braze user ID.][8]{: style="max-width:40%;"}<br><br>
 
