@@ -75,13 +75,13 @@ Export your Braze segment via the Braze segmenter tool UI and provide a CSV file
 }
  ```
 
-![Webhook composer.]({% image_buster /assets/img/SessionM/SessionMWebhookComposer %})
+![Webhook composer.]({% image_buster /assets/img/SessionM/SessionMWebhookComposer.png %})
 
  4. In the **Settings** tab add in the key-value pairs for each request header field.
     - Create a Key `Content-Type` with a corresponding Value `application/json`
     - Create a Key `Authorization` with a corresponding Value `Basic YOUR-ENCODED-STRING-KEY`. Ask your SessionM team for the encoded string key for your endpoint. 
 
-![Webhook settings.]({% image_buster /assets/img/SessionM/SessionMWebhookSettings %})
+![Webhook settings.]({% image_buster /assets/img/SessionM/SessionMWebhookSettings.png %})
 
  5. Schedule your delivery 
  6. Set your Target Audiences to target the segment created in Step 1
