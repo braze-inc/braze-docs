@@ -1,5 +1,5 @@
 --- 
-nav_title: sessionm 
+nav_title: SessionM
 article_title: SessionM 
 description: "SessionM Loyalty Platform Integration" 
 alias: /partners/sessionm/ 
@@ -17,7 +17,7 @@ stronger, more loyal, and more profitable consumer relationships. With powerful 
 Before you start, you'll need the following:
 | Prerequisite | Description | Source |
 |-----------------------|--------------------------------------------------------------------------------------------------------------------------------------------|--------|
-| A PARTNER_NAME account | A PARTNER_NAME account is required to take advantage of this partnership. | Braze |
+| A SessionM account | A SessionM account is required to take advantage of this partnership. | Braze |
 | A Braze REST API key | A Braze REST API key with `trigger_send` permissions. This can be created in the Braze dashboard from **Settings** > **API Keys**. | Braze |
 | A Braze REST endpoint | [Your REST endpoint URL]({{site.baseurl}}/developer_guide/rest_api/basics/#endpoints). Your endpoint will depend on the Braze URL for your instance. | Braze |
 | A SessionM Core REST endpoint | [SessionM CORE endpoint URL]/priv/v1/apps/{{core_apikey}}/users/{{user_id}}/tags Your endpoint will depend on the SessionM url of your instance. This can be created in the SessionM dashboard from **Digital Properties**. | SessionM |
