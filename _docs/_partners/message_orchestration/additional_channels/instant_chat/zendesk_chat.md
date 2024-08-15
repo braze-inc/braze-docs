@@ -1,6 +1,6 @@
 ---
-nav_title: Zendesk_Chat
-article_title: Zendesk_Chat
+nav_title: Zendesk
+article_title: Integrating Zendesk Chat with Braze
 description: "Learn how to integrate Zendesk with Braze"
 alias: /partners/zendesk_chat/
 page_type: partner
@@ -8,7 +8,7 @@ search_tag: Partner
 
 ---
 
-# Zendesk
+# Integrating Zendesk Chat with Braze
 
 > Zendesk’s integration uses webhooks from each platform to set up a two-way SMS conversation. When a user requests support, a ticket is created in Zendesk. Agent responses are forwarded to Braze through an API-triggered SMS campaign, and user replies are sent back to Zendesk.
 
@@ -263,17 +263,17 @@ Sample Body:
 - Set up re-eligibility criteria.
 - Add applicable audiences (in this case, the custom attribute **zendesk_ticket_open** is **true**).
 
-[1]: {% image_buster assets/img/zendesk_images/chat1.png %}
-[2]: {% image_buster assets/img/zendesk_images/chat2.png %}
-[3]: {% image_buster assets/img/zendesk_images/chat3.png %}
-[4]: {% image_buster assets/img/zendesk_images/chat4.png %}
-[5]: {% image_buster assets/img/zendesk_images/chat5.png %}
-[6]: {% image_buster assets/img/zendesk_images/chat6.png %}
-[7]: {% image_buster assets/img/zendesk_images/chat7.png %}
-[8]: {% image_buster assets/img/zendesk_images/chat8.png %}
-[9]: {% image_buster assets/img/zendesk_images/chat9.png %}
-[10]: {% image_buster assets/img/zendesk_images/chat10.png %}
-[11]: {% image_buster assets/img/zendesk_images/chat11.png %}
-[12]: {% image_buster assets/img/zendesk_images/chat12.png %}
-[13]: {% image_buster assets/img/zendesk_images/chat13.png %}
-[14]: {% image_buster assets/img/zendesk_images/chat14.png %}
+[1]: {% image_buster /assets/img/zendesk/instant_chat/chat1.png %}
+[2]: {% image_buster /assets/img/zendesk/instant_chat/chat2.png %}
+[3]: {% image_buster /assets/img/zendesk/instant_chat/chat3.png %}
+[4]: {% image_buster /assets/img/zendesk/instant_chat/chat4.png %}
+[5]: {% image_buster /assets/img/zendesk/instant_chat/chat5.png %}
+[6]: {% image_buster /assets/img/zendesk/instant_chat/chat6.png %}
+[7]: {% image_buster /assets/img/zendesk/instant_chat/chat7.png %}
+[8]: {% image_buster /assets/img/zendesk/instant_chat/chat8.png %}
+[9]: {% image_buster /assets/img/zendesk/instant_chat/chat9.png %}
+[10]: {% image_buster /assets/img/zendesk/instant_chat/chat10.png %}
+[11]: {% image_buster /assets/img/zendesk/instant_chat/chat11.png %}
+[12]: {% image_buster /assets/img/zendesk/instant_chat/chat12.png %}
+[13]: {% image_buster /assets/img/zendesk/instant_chat/chat13.png %}
+[14]: {% image_buster /assets/img/zendesk/instant_chat/chat14.png %}
