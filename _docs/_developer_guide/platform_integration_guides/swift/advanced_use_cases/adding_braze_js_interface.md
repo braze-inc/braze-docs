@@ -1,5 +1,5 @@
 ---
-nav_title: Braze JavaScript Interface
+nav_title: Adding the JavaScript Interface
 article_title: Adding the Braze JavaScript Interface to WebViews for Swift
 platform: Swift
 page_order: 5
