@@ -39,7 +39,7 @@ You'll need the following to integrate LINE with Braze:
 | Premium account | An account that has passed the LINE Yahoo screening. This account is represented with a green badge and will appear in search results within the LINE app. This account type is automatically granted during the screening at LINE's discretion. |
 {: .reset-td-br-1 .resest-td-br-2}
 
-### Sync existing followers into Braze
+### Required account type
 
 To sync followers into Braze, your LINE account needs to be verified or premium. When you create an account, its default status will be unverified. You'll need to request account verification.
 
@@ -99,7 +99,7 @@ The subscription group state shouldn't be specified, and it will be ignored. LIN
 
 After your existing LINE user base is imported into or updated in Braze, you can integrate your channel. After integration, new followers of your LINE channel will have unidentified user profiles created when they follow the channel.
 
-### Connect your LINE channel to Braze
+### Step 2a: Connect your LINE channel to Braze
 
 1. In LINE, go the **Messaging API** tab and edit your **Webhook settings**:
    - Set the **Webhook URL** to `https://anna.braze.com/line/events`.
@@ -123,7 +123,7 @@ After your existing LINE user base is imported into or updated in Braze, you can
 
 ![Response settings page with toggles for how your account will handle chats.][2]{: style="max-width:80%;"}
 
-### Set up your LINE subscription group in Braze
+### Step 2b: Set up your LINE subscription group in Braze
 
 1. Go to the Braze Technology Partners page for LINE and input the information you noted from your LINE **Providers** tab:
    - Provider ID
