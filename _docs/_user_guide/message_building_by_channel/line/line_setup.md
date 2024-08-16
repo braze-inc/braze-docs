@@ -68,9 +68,9 @@ Follow these steps to set up consistent user updates, bring over existing users'
 
 ## Step 1: Import or update existing LINE users
 
-Users can be imported or updated by any of the methods that Braze supports, including the [`/users/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track) endpoint, [CSV]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/#csv-import), or [Cloud Data Ingestion]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion.). 
+Users can be imported or updated by any of the methods that Braze supports, including the [`/users/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) endpoint, [CSV import]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/#csv-import), or [Cloud Data Ingestion]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/). 
 
-Regardless of the method you use, update the `native_line_id` to provide the user’s LINE ID. 
+Regardless of the method you use, update the `native_line_id` to provide the user’s LINE ID. To learn more the `native_line_id`, see [User setup](#user-setup).
 
 {% alert note %}
 The subscription group state shouldn't be specified, and it will be ignored. LINE is the source of truth for user subscription status, which will be synced to Braze either through the subscription sync tool or by event updates.
@@ -129,7 +129,7 @@ Assuming you already have a method to provide user updates to Braze, you’ll ne
 
 Unidentified user profiles with a `native_line_id` may exist in Braze that were created as part of the subscription status sync process, or when a new follower followed your channel. 
 
-When a LINE user is identified in your application through [user reconciliation](#user-id-reconciliation) or other means, you can target a potential unidentified user profile in Braze using the [`/users/identify`]({{site.baseurl}}/api/endpoints/user_data/post_user_identify) endpoint. Every unidentified user profile with a `native_line_id` also has a user alias `line_id` that can be used to target the user profile to identify.
+When a LINE user is identified in your application through [user reconciliation](#user-id-reconciliation) or other means, you can target a potential unidentified user profile in Braze using the [`/users/identify`]({{site.baseurl}}/api/endpoints/user_data/post_user_identify/) endpoint. Every unidentified user profile with a `native_line_id` also has a user alias `line_id` that can be used to target the user profile to identify.
 
 Here is an example payload to `/users/identify` that targets an unidentified user profile by the user alias `line_id`: 
 
@@ -151,7 +151,7 @@ Here is an example payload to `/users/identify` that targets an unidentified use
 
 If no existing user profile exists for your provided `external_id`, it will be added to the unidentified user profile, making it identified. If a user profile does exist for the `external_id`, all attributes that are exclusively on the unidentified user profile will be copied to the known user profile, including `native_line_id` and the user’s subscription status.
 
-LINE users known in your application can be updated through the [`/users/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track) endpoint by passing their external identifiers and `native_line_id`. If an unidentified user profile already exists for a user and the same `native_line_id` is added to a different user profile through `/users/track`, it will inherit all the subscription states of the unidentified user profile. However, duplicate user profiles will exist with the same `native_line_id`. Any subsequent subscription updates from event updates will update all profiles accordingly. 
+LINE users known in your application can be updated through the [`/users/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) endpoint by passing their external identifiers and `native_line_id`. If an unidentified user profile already exists for a user and the same `native_line_id` is added to a different user profile through `/users/track`, it will inherit all the subscription states of the unidentified user profile. However, duplicate user profiles will exist with the same `native_line_id`. Any subsequent subscription updates from event updates will update all profiles accordingly. 
 
 Here is an example payload to `/users/track` that updates a user profile by the external user ID to add a `native_line_id`: 
 
@@ -235,7 +235,7 @@ These are use cases of how users can be updated after you follow the setup steps
 1. The channel gets a new LINE follower.
 2. Braze creates an anonymous user profile with the `native_line_id` attribute set to be the follower’s LINE ID, and a user alias of `line_id` set to be the follower’s LINE ID. The profile has a subscription status of “Subscribed”.
 3. The user is identified as having the LINE ID through [user reconciliation](#user-id-reconciliation).
-  - The anonymous user profile can become identified using the [`/users/identify`]({{site.baseurl}}/api/endpoints/user_data/post_user_identify) endpoint. Subsequent updates (through the [`/users/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track) endpoint, [CSV import]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/#csv-import), or [Cloud Data Ingestion]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion)) to this user profile can target the user by this known `external_id`.
+  - The anonymous user profile can become identified using the [`/users/identify`]({{site.baseurl}}/api/endpoints/user_data/post_user_identify/) endpoint. Subsequent updates (through the [`/users/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) endpoint, [CSV import]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/#csv-import), or [Cloud Data Ingestion]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/)) to this user profile can target the user by this known `external_id`.
 
 {% raw %}
 ```json
@@ -253,7 +253,7 @@ These are use cases of how users can be updated after you follow the setup steps
 ```
 {% endraw %}
 
-  - A new user profile can be created (through the [`/users/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track) endpoint, [CSV import]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/#csv-import), or [Cloud Data Ingestion]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion)) by setting the `native_line_id`. This new profile will inherit the subscription status state of the existing anonymous user profile. Note that this will result in multiple profiles sharing the same `native_line_id`. These can be merged at any time using the `/users/merge` endpoint in the process outlined in [Step 5](#step-5-merge-profiles-optional).
+  - A new user profile can be created (through the [`/users/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) endpoint, [CSV import]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/#csv-import), or [Cloud Data Ingestion]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/)) by setting the `native_line_id`. This new profile will inherit the subscription status state of the existing anonymous user profile. Note that this will result in multiple profiles sharing the same `native_line_id`. These can be merged at any time using the `/users/merge` endpoint in the process outlined in [Step 5](#step-5-merge-profiles-optional).
 
 ##### User profile creation occurs before LINE follow
 
