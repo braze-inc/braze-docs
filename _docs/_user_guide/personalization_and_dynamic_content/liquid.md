@@ -37,6 +37,9 @@ guide_featured_list:
 - name: Liquid Use Cases
   link: /docs/user_guide/personalization_and_dynamic_content/liquid/liquid_use_cases/
   image: /assets/img/braze_icons/list.svg
+- name: Tutorials
+  link: /docs/user_guide/personalization_and_dynamic_content/liquid/tutorials/
+  image: /assets/img/braze_icons/book-open-01.svg
 - name: Frequently Asked Questions
   link: /docs/user_guide/personalization_and_dynamic_content/liquid/faq/
   image: /assets/img/braze_icons/annotation-question.svg
