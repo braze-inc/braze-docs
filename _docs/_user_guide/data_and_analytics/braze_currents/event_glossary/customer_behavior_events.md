@@ -53,36 +53,6 @@ Custom Events
 This event occurs when a specific custom event is triggered. Use this to track when users perform custom events in your application.
 
 {% tabs %}
-{% tab Braze Standard REST %}
-```json
-// [Braze Custom Event] custom event name: users.behaviors.CustomEvent
-
-{
-  "event_type" : "(required, string) The name of the event type",
-  "id" : "(required, string) Globally unique ID for this event",
-  "properties" : {
-    "ad_id" : "(optional, string) Advertising identifier",
-    "ad_id_type" : "(optional, string) One of ['ios_idfa', 'google_ad_id', 'windows_ad_id', 'roku_ad_id']",
-    "ad_tracking_enabled" : "(optional, boolean) Whether advertising tracking is enabled for the device",
-    "app_id" : "(optional, string) API ID of the app on which this event occurred",
-    "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
-    "card_id" : "(optional, string) ID of the card this in-app message comes from",
-    "device_model" : "(optional, string) Model of the device",
-    "name" : "(required, string) Name of the custom event",
-    "os_version" : "(optional, string) Version of the operating system of the device",
-    "platform" : "(optional, string) Platform of the device"
-  },
-  "time" : "(required, int) UNIX timestamp at which the event happened",
-  "user" : {
-    "device_id" : "(optional, string) ID of the device on which the event occurred",
-    "external_user_id" : "(required, string) External ID of the user",
-    "timezone" : "(optional, string) Time zone of the user",
-    "user_id" : "(required, string) Braze user ID of the user who performed this event"
-  }
-}
-```
-{% endtab %}
-
 {% tab Mixpanel %}
 ```json
 // [Braze Custom Event] custom event name: users.behaviors.CustomEvent
@@ -181,37 +151,6 @@ Purchases are special custom events and come with a JSON encoded string of custo
 {% endalert %}
 
 {% tabs %}
-{% tab Braze Standard REST %}
-```json
-// Purchase: users.behaviors.Purchase
-
-{
-  "event_type" : "(required, string) The name of the event type",
-  "id" : "(required, string) Globally unique ID for this event",
-  "properties" : {
-    "ad_id" : "(optional, string) Advertising identifier",
-    "ad_id_type" : "(optional, string) One of ['ios_idfa', 'google_ad_id', 'windows_ad_id', 'roku_ad_id']",
-    "ad_tracking_enabled" : "(optional, boolean) Whether advertising tracking is enabled for the device",
-    "app_id" : "(optional, string) API ID of the app on which this event occurred",
-    "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
-    "card_id" : "(optional, string) ID of the card this in-app message comes from",
-    "currency" : "(required, string) Currency of the purchase",
-    "device_model" : "(optional, string) Model of the device",
-    "os_version" : "(optional, string) Version of the operating system of the device",
-    "platform" : "(optional, string) Platform of the device",
-    "price" : "(required, float) Price of the purchase",
-    "product_id" : "(required, string) ID of the product purchased"
-  },
-  "time" : "(required, int) UNIX timestamp at which the event happened",
-  "user" : {
-    "device_id" : "(optional, string) ID of the device on which the event occurred",
-    "external_user_id" : "(required, string) External ID of the user",
-    "user_id" : "(required, string) Braze user ID of the user who performed this event"
-  }
-}
-```
-{% endtab %}
-
 {% tab Mixpanel %}
 ```json
 // Purchase: users.behaviors.Purchase
@@ -318,33 +257,6 @@ When a user starts their first session, both a `FirstSession` and a `SessionStar
 {% endalert %}
 
 {% tabs %}
-{% tab Braze Standard REST %}
-```json
-// First Session: users.behaviors.app.FirstSession
-
-{
-  "event_type" : "(required, string) The name of the event type",
-  "id" : "(required, string) Globally unique ID for this event",
-  "properties" : {
-    "app_id" : "(optional, string) API ID of the app on which this event occurred",
-    "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
-    "card_id" : "(optional, string) ID of the card this in-app message comes from",
-    "device_model" : "(optional, string) Model of the device",
-    "os_version" : "(optional, string) Version of the operating system of the device",
-    "platform" : "(optional, string) Platform of the device",
-    "session_id" : "(optional, string) UUID of the session"
-  },
-  "time" : "(required, int) UNIX timestamp at which the event happened",
-  "user" : {
-    "device_id" : "(optional, string) ID of the device on which the event occurred",
-    "external_user_id" : "(required, string) External ID of the user",
-    "timezone" : "(optional, string) Time zone of the user",
-    "user_id" : "(required, string) Braze user ID of the user who performed this event"
-  }
-}
-```
-{% endtab %}
-
 {% tab Mixpanel %}
 ```json
 // First Session: users.behaviors.app.FirstSession
@@ -434,32 +346,6 @@ When a user starts their first session, both a `FirstSession` and a `SessionStar
 {% endalert %}
 
 {% tabs %}
-{% tab Braze Standard REST %}
-```json
-// Session Start: users.behaviors.app.SessionStart
-
-{
-  "event_type" : "(required, string) The name of the event type",
-  "id" : "(required, string) Globally unique ID for this event",
-  "properties" : {
-    "app_id" : "(optional, string) API ID of the app on which this event occurred",
-    "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
-    "card_id" : "(optional, string) ID of the card this in-app message comes from",
-    "device_model" : "(optional, string) Model of the device",
-    "os_version" : "(optional, string) Version of the operating system of the device",
-    "platform" : "(optional, string) Platform of the device",
-    "session_id" : "(optional, string) UUID of the session"
-  },
-  "time" : "(required, int) UNIX timestamp at which the event happened",
-  "user" : {
-    "device_id" : "(optional, string) ID of the device on which the event occurred",
-    "external_user_id" : "(required, string) External ID of the user",
-    "user_id" : "(required, string) Braze user ID of the user who performed this event"
-  }
-}
-```
-{% endtab %}
-
 {% tab Mixpanel %}
 ```json
 // Session Start: users.behaviors.app.SessionStart
@@ -544,33 +430,6 @@ When a user starts their first session, both a `FirstSession` and a `SessionStar
 {% endalert %}
 
 {% tabs %}
-{% tab Braze Standard REST %}
-```json
-// Session End: users.behaviors.app.SessionEnd
-
-{
-  "event_type" : "(required, string) The name of the event type",
-  "id" : "(required, string) Globally unique ID for this event",
-  "properties" : {
-    "app_id" : "(optional, string) API ID of the app on which this event occurred",
-    "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
-    "card_id" : "(optional, string) ID of the card this in-app message comes from",
-    "device_model" : "(optional, string) Model of the device",
-    "duration" : "(optional, float) Duration of the session in seconds",
-    "os_version" : "(optional, string) Version of the operating system of the device",
-    "platform" : "(optional, string) Platform of the device",
-    "session_id" : "(optional, string) UUID of the session"
-  },
-  "time" : "(required, int) UNIX timestamp at which the event happened",
-  "user" : {
-    "device_id" : "(optional, string) ID of the device on which the event occurred",
-    "external_user_id" : "(required, string) External ID of the user",
-    "user_id" : "(required, string) Braze user ID of the user who performed this event"
-  }
-}
-```
-{% endtab %}
-
 {% tab Mixpanel %}
 ```json
 // Session End: users.behaviors.app.SessionEnd
@@ -654,39 +513,6 @@ Locations
 This event is triggered when a user visits a specified location. Use this to track users triggering location events in your app.
 
 {% tabs %}
-{% tab Braze Standard REST %}
-```json
-// Location: users.behaviors.Location
-
-{
-  "event_type" : "(required, string) The name of the event type",
-  "id" : "(required, string) Globally unique ID for this event",
-  "properties" : {
-    "ad_id" : "(optional, string) Advertising identifier",
-    "ad_id_type" : "(optional, string) One of ['ios_idfa', 'google_ad_id', 'windows_ad_id', 'roku_ad_id']",
-    "ad_tracking_enabled" : "(optional, boolean) Whether advertising tracking is enabled for the device",
-    "alt_accuracy" : "(optional, float) Altitude accuracy of recorded location",
-    "altitude" : "(optional, float) Altitude of recorded location",
-    "app_id" : "(optional, string) API ID of the app on which this event occurred",
-    "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
-    "card_id" : "(optional, string) ID of the card this in-app message comes from",
-    "device_model" : "(optional, string) Model of the device",
-    "latitude" : "(required, float) Latitude of recorded location",
-    "ll_accuracy" : "(optional, float) Accuracy of the latitude and longitude of recorded location",
-    "longitude" : "(required, float) Longitude of recorded location",
-    "os_version" : "(optional, string) Version of the operating system of the device",
-    "platform" : "(optional, string) Platform of the device"
-  },
-  "time" : "(required, int) UNIX timestamp at which the event happened",
-  "user" : {
-    "device_id" : "(optional, string) ID of the device on which the event occurred",
-    "external_user_id" : "(required, string) External ID of the user",
-    "user_id" : "(required, string) Braze user ID of the user who performed this event"
-  }
-}
-```
-{% endtab %}
-
 {% tab Mixpanel %}
 ```json
 // Location: users.behaviors.Location
@@ -793,28 +619,6 @@ Attribution
 This event occurs when an app installation is attributed to a source. Use this to track where your app installs are coming from.
 
 {% tabs %}
-{% tab Braze Standard REST %}
-```json
-// Install Attribution: users.behaviors.InstallAttribution
-
-{
-  "event_type" : "(required, string) The name of the event type",
-  "id" : "(required, string) Globally unique ID for this event",
-  "properties" : {
-    "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
-    "card_id" : "(optional, string) ID of the card this in-app message comes from",
-    "source" : "(optional, string) The source of the attribution"
-  },
-  "time" : "(required, int) UNIX timestamp at which the event happened",
-  "user" : {
-    "device_id" : "(optional, string) ID of the device on which the event occurred",
-    "external_user_id" : "(required, string) External ID of the user",
-    "user_id" : "(required, string) Braze user ID of the user who performed this event"
-  }
-}
-```
-{% endtab %}
-
 {% tab Mixpanel %}
 ```json
 // Install Attribution: users.behaviors.InstallAttribution
