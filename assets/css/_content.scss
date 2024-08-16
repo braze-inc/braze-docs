@@ -192,7 +192,7 @@
 				}
 			}
 		}
-		@for $oli from 1 through 9 {
+		@for $oli from 1 through 12 {
 			ol[start="#{$oli}"] {
 				counter-reset: li #{$oli - 1};
 			}

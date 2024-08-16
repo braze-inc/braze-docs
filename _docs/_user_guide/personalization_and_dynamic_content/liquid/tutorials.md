@@ -383,7 +383,7 @@ We noticed it’s been a while since you last purchased {{custom_attribute.${fav
 
 {% raw %}
 ```liquid
-{% abort_message('Last purchase was less than six months ago') %}
+{% abort_message('No favorite product or last purchase date') %}
 ```
 {% endraw %}
 
@@ -401,7 +401,7 @@ We noticed it’s been a while since you last purchased {{custom_attribute.${fav
 {% raw %}
 ```liquid
 {% if {{custom_attribute.${favorite_product}}} == blank or {{custom_attribute.${last_purchase_date}}} == blank %}
-{% abort_message('Favorite product or last purchase date is not set') %}
+{% abort_message('No favorite product or last purchase date') %}
 {% else %}
 {% assign today = 'now' | date: "%s" | plus: 0 %}
 {% assign last_purchase_date = {{custom_attribute.${last_purchase_date}}} | date: "%s" | plus: 0 %}
