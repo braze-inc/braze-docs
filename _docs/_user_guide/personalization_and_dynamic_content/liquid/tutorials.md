@@ -126,7 +126,7 @@ Hi {{${first_name} | default: 'there'}}, don't forget to complete your purchase!
 {% endraw %}
 
 {: start="5"}
-5. Use `else` and then an `abort_message` to tell the Liquid code to not send a message if the cart doesn’t meet any of the previous conditions. In other words, if the cart doesn’t have fewer or more than three items (and is empty). Close the logic with `endif`.
+5. Use `else` and then an `abort_message` to tell the Liquid code to not send a message if the cart doesn’t meet any of the previous conditions. In other words, if the cart is empty. Close the logic with `endif`.
 
 {% raw %}
 ```liquid
