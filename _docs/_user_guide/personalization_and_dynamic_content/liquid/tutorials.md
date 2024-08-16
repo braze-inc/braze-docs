@@ -301,12 +301,12 @@ Let’s promote a user’s favorite product if their last purchase date was over
 
 {% raw %}
 ```liquid
-{% abort_message('Favorite product or last purchase date is not set') %}
+{% abort_message("No favorite product or last purchase date") %}
 ```
 {% endraw %}
 
 {: start="3"}
-3. We'll use `else` to specify what should happen if the condiiton above isn't met (because we _do_ have the user’s favorite product and last purchase date).
+3. We'll use `else` to specify what should happen if the condition above isn't met (because we _do_ have the user’s favorite product and last purchase date).
 
 {% raw %}
 ```liquid
@@ -383,7 +383,7 @@ We noticed it’s been a while since you last purchased {{custom_attribute.${fav
 
 {% raw %}
 ```liquid
-{% abort_message('No favorite product or last purchase date') %}
+{% abort_message("No favorite product or last purchase date") %}
 ```
 {% endraw %}
 
