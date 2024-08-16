@@ -401,7 +401,7 @@ We noticed it’s been a while since you last purchased {{custom_attribute.${fav
 {% raw %}
 ```liquid
 {% if {{custom_attribute.${favorite_product}}} == blank or {{custom_attribute.${last_purchase_date}}} == blank %}
-{% abort_message('No favorite product or last purchase date') %}
+{% abort_message("No favorite product or last purchase date") %}
 {% else %}
 {% assign today = 'now' | date: "%s" | plus: 0 %}
 {% assign last_purchase_date = {{custom_attribute.${last_purchase_date}}} | date: "%s" | plus: 0 %}
@@ -410,7 +410,7 @@ We noticed it’s been a while since you last purchased {{custom_attribute.${fav
 {% if today_minus_last_purchase_date >= six_months %}
 We noticed it’s been a while since you last purchased {{custom_attribute.${favorite_product}}}. Have you checked out our latest offerings?
 {% else %}
-{% abort_message('Last purchase was less than six months ago') %}
+{% abort_message("Last purchase was less than six months ago") %}
 {% endif %}
 {% endif %}
 ```
