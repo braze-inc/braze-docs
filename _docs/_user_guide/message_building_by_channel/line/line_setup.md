@@ -58,7 +58,7 @@ If you want to sync users who followed a specific channel before that channel wa
 
 ## Integrating LINE
 
-Follow these steps to set up consistent user updates, bring over existing users' LINE IDs, and sync them all to LINE’s subscription states:
+To set up consistent user updates, bring over existing users' LINE IDs, and sync them all to LINE’s subscription states:
 
 1. [Import or update existing known users](#step-1-import-or-update-existing-line-users)
 2. [Integrate the LINE channel](#step-2-integrate-line-channel)
@@ -68,7 +68,7 @@ Follow these steps to set up consistent user updates, bring over existing users'
 
 ## Step 1: Import or update existing LINE users
 
-Users can be imported or updated by any of the methods that Braze supports, including the [`/users/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) endpoint, [CSV import]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/#csv-import), or [Cloud Data Ingestion]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/). 
+You can import or update users using any of the methods that Braze supports, including the [`/users/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) endpoint, [CSV import]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/#csv-import), or [Cloud Data Ingestion]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/). 
 
 Regardless of the method you use, update the `native_line_id` to provide the user’s LINE ID. To learn more the `native_line_id`, see [User setup](#user-setup).
 
@@ -80,7 +80,7 @@ The subscription group state shouldn't be specified, and it will be ignored. LIN
 
 After your existing LINE user base is imported into or updated in Braze, you can integrate your channel. After integration, new followers of your LINE channel will have unidentified user profiles created when they follow the channel.
 
-### Step 2a: Connect your LINE channel to Braze
+### Step 2.1: Connect your LINE channel to Braze
 
 1. In LINE, go the **Messaging API** tab and edit your **Webhook settings**:
    - Set the **Webhook URL** to `https://anna.braze.com/line/events`.
@@ -104,7 +104,7 @@ After your existing LINE user base is imported into or updated in Braze, you can
 
 ![Response settings page with toggles for how your account will handle chats.][2]{: style="max-width:80%;"}
 
-### Step 2b: Set up your LINE subscription group in Braze
+### Step 2.2: Set up your LINE subscription group in Braze
 
 1. Go to the Braze Technology Partners page for LINE and input the information you noted from your LINE **Providers** tab:
    - Provider ID
@@ -151,7 +151,7 @@ Here is an example payload to `/users/identify` that targets an unidentified use
 
 If no existing user profile exists for your provided `external_id`, it will be added to the unidentified user profile, making it identified. If a user profile does exist for the `external_id`, all attributes that are exclusively on the unidentified user profile will be copied to the known user profile, including `native_line_id` and the user’s subscription status.
 
-LINE users known in your application can be updated through the [`/users/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) endpoint by passing their external identifiers and `native_line_id`. If an unidentified user profile already exists for a user and the same `native_line_id` is added to a different user profile through `/users/track`, it will inherit all the subscription states of the unidentified user profile. However, duplicate user profiles will exist with the same `native_line_id`. Any subsequent subscription updates from event updates will update all profiles accordingly. 
+You can update LINE users that are known in your application through the [`/users/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) endpoint by passing their external identifiers and `native_line_id`. If an unidentified user profile already exists for a user and the same `native_line_id` is added to a different user profile through `/users/track`, it will inherit all the subscription states of the unidentified user profile. However, duplicate user profiles will exist with the same `native_line_id`. Any subsequent subscription updates from event updates will update all profiles accordingly. 
 
 Here is an example payload to `/users/track` that updates a user profile by the external user ID to add a `native_line_id`: 
 
@@ -194,6 +194,10 @@ Here's an example payload to `/users/merge` that targets an unidentified user pr
 }
 ```
 {% endraw %}
+
+{% alert tip %}
+To learn more about managing duplicate users in Braze, see [Duplicate Users]({{site.baseurl}}/user_guide/engagement_tools/segments/user_profiles/duplicate_users).
+{% endalert %}
 
 ## User setup
 
