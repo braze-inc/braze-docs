@@ -15,15 +15,7 @@ tool: Canvas
 When Personalized Paths is turned on in an Experiment Path step, the behavior is slightly different depending on if your Canvas is set to send once or to recur:
 
 - **Single-send Canvas:** A group of users is held back in a delay group. The remaining users pass into an initial test to train a look-alike model for a duration you configure—at least 24 hours for best results. After the test, a model is created to learn which user behaviors were associated with a greater likelihood of converting on a given path. Finally, each user in the delay group is sent down the path most likely to result in conversion for them based on the behaviors they exhibit and what the look-alike model learned during the initial test.
-- **Recurring Canvas (early access):** An initial experiment is performed on all users who enter the Experiment Path during a specified window. To maintain the integrity of the experiment, if a user receives multiple messages before the window ends, they'll be assigned to the same variant each time. After the experiment window, each user is sent down the path most likely to result in conversion for them.
-
-### Prerequisites
-
-Personalized Paths is available in Experiment Paths for scheduled Canvases (both single sends and recurring), and is unavailable for use in triggered Canvases.
-
-{% alert important %}
-The ability to use Personalized Paths in recurring Canvases is in early access. Contact your Braze customer success manager if you're interested in participating in the early access.
-{% endalert %}
+- **Recurring, action-triggered, and API-triggered Canvases:** An initial experiment is performed on all users who enter the Experiment Path during a specified window. To maintain the integrity of the experiment, if a user receives multiple messages before the window ends, they'll be assigned to the same variant each time. After the experiment window, each user is sent down the path most likely to result in conversion for them.
 
 ## Using Personalized Paths
 
@@ -69,7 +61,7 @@ When the experiment window passes and the experiment is complete, Braze will sen
 ![]({% image_buster /assets/img/experiment_step/experiment_personalized_delay_group_complete.png %}){: style="max-width:75%;" }
 
 {% endtab %}
-{% tab Recurring Canvas %}
+{% tab Recurring, action-triggered, or API-triggered Canvas %}
 
 You can test up to four paths in a single Experiment Path. Add your paths and finish setting up your Canvas as needed, then launch it.  
 
