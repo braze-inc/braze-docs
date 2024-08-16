@@ -54,9 +54,9 @@ Within Braze, create a segment of users to target with SessionM promotions and o
 Export your Braze segment via the Braze segmenter tool UI and provide a CSV file  to SessionM containing all of the customers to tag, the tagname and a time to live for each user either in the file.
 
 #### Option 2 (recommended): Export to the [SessionM Tag Endpoint](https://docs.sessionm.com/developer/APIs/Core/Customers/customers_tags.htm#create-or-increment-a-customer-tag)
- 1. Create a webhook campaign in Braze 
- 2. Set the Webhook URL to {% raw %}`{{endpoint_core}}/priv/v1/apps/{{appkey_core}}/users/{{${user_id}}}/tags`{% endraw %}. Use liquid to define the user_id within the url. 
- 3. Using a Raw Text **Request Body** compose the body of the webhook to include the desired tags that should be added to the user profile in sessionM and the desired time to live. For example:
+Create a webhook campaign in Braze and set the Webhook URL to {% raw %}`{{endpoint_core}}/priv/v1/apps/{{appkey_core}}/users/{{${user_id}}}/tags`{% endraw %}. Use liquid to define the user_id within the URL. 
+
+Using a Raw Text **Request Body** compose the body of the webhook to include the desired tags that should be added to the user profile in sessionM and the desired time to live. For example:
 
  ```
  {
@@ -69,21 +69,19 @@ Export your Braze segment via the Braze segmenter tool UI and provide a CSV file
 
 ![Webhook composer.]({% image_buster /assets/img/SessionM/SessionMWebhookComposer.png %})
 
- 4. In the **Settings** tab add in the key-value pairs for each request header field.
+In the **Settings** tab, add the key-value pairs for each request header field.
     - Create a Key `Content-Type` with a corresponding Value `application/json`
     - Create a Key `Authorization` with a corresponding Value `Basic YOUR-ENCODED-STRING-KEY`. Ask your SessionM team for the encoded string key for your endpoint. 
 
 ![Webhook settings.]({% image_buster /assets/img/SessionM/SessionMWebhookSettings.png %})
 
- 5. Schedule your delivery 
- 6. Set your Target Audiences to target the segment created in Step 1
- 7. Finalize and launch your campaign
+Schedule your delivery, set your Target Audiences to target the segment created in Step 1, finalize and launch your campaign
 
 {% alert important %}
 
-This process can also be done directly by making a request to the [SessionM Tag Endpoint](https://docs.sessionm.com/developer/APIs/Core/Customers/customers_tags.htm#create-or-increment-a-customer-tag) specifying the customer, the tagname and a time to live for each user in the call (Single User Per Call).
+This process can also be done through an API client, such as Postman, by making a request directly to the [SessionM Tag Endpoint](https://docs.sessionm.com/developer/APIs/Core/Customers/customers_tags.htm#create-or-increment-a-customer-tag) specifying the customer, the tagname and a time to live for each user in the call (Single User Per Call).
 
-The following example request uses cURL. For better API request management, we recommend using an API client, such as Postman.
+The following example request uses cURL. 
 
 {% raw %}
 ```bash
