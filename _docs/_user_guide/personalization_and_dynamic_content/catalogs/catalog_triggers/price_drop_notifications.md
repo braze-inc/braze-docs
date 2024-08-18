@@ -54,6 +54,9 @@ Follow these steps to set up price drop notifications in a specific catalog.
     }
     ```
     <br>
+{% alert important %}
+Back In Stock and Price drop functionality use the same event to register the user for the respective notifations. You must define which one by specifying "type" as and event property. This array can contain one or both of these identifiers ["back_in_stock", "price_drop"]
+{% endalert %}
 4. Select **Save** and continue to the catalog's **Settings** page.<br>
 5. Set your notification rule. There are two options:
     - **Notify all subscribed users** notifies all customers who are waiting when the item's price drops.
