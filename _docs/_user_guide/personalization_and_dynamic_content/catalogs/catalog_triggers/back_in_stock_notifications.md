@@ -52,6 +52,9 @@ Follow these steps to set up back-in-stock notifications in a specific catalog.
         ]
     }
     ```
+{% alert important %}
+Back In Stock and Price drop functionality use the same event to register the user for the respective notifations. You must define which one by specifying "type" as and event property. This array can contain one or both of these identifiers ["back_in_stock", "price_drop"]
+{% endalert %}
 
 4. Select **Save** and continue to the catalog's back-in-stock settings page.
 5. Set your notification rule. There are two options:
