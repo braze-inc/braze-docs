@@ -19,7 +19,9 @@ platform:
 
 > This article covers the basic parts and capabilities of the Braze platform. Links from this article connect to essential Braze topics. 
 
-> Check out our free [Developer Learning Path](https://learning.braze.com/path/developer) course along with these articles. 
+{% alert tip %}
+Check out our free [Developer Learning Path](https://learning.braze.com/path/developer) course along with these articles. 
+{% endalert %}
 
 ## What is Braze?
 
