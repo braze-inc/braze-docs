@@ -57,6 +57,7 @@ Follow these steps to set up price drop notifications in a specific catalog.
 {% alert note %}
 Back-in-stock and price-drop triggers use the same event to subscribe the user to the notification. Create a price drop notification by setting `type` to `price_drop`. You cannot set both a price drop and back in stock notification.
 {% endalert %}
+
 {: start="4"}
 4. Select **Save** and continue to the catalog's **Settings** page.<br>
 5. Set your notification rule. There are two options:
