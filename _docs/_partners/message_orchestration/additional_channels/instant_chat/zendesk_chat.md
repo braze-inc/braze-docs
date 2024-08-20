@@ -100,7 +100,7 @@ Under **Actions**, select **Notify by Webhook** and choose the endpoint you crea
     "campaign_id": "{{YOUR_CAMPAIGN_ID}}",
     "recipients": [
         {
-            "external_user_id": "{{ticket.requester.custom_fields.braze_id}}",
+            "external_user_id": "{{ticket.requester.custom_fields.braze_external_id}}",
 			"trigger_properties": {
     "msg_body": "{{ticket.latest_public_comment_html}}"
 		},

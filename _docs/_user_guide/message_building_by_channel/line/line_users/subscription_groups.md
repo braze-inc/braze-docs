@@ -1,7 +1,7 @@
 ---
 nav_title: Subscription Groups
 article_title: Subscription Groups
-page_order: 3
+page_order: 1
 description: "This article covers LINE message subscription groups."
 page_type: reference
 channel:

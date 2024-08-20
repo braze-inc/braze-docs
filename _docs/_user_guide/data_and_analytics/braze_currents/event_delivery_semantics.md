@@ -31,6 +31,10 @@ If your use cases require exactly-once delivery, you can use the unique identifi
 
 All timestamps exported by Currents are sent in the UTC time zone. For some events where it is available, a time zone field is also included, which delivers the IANA format of the user's local time zone at the time of the event.
 
+### Latency
+
+Events sent to Braze through SDK or API can include a timestamp from the past. The most notable example is when SDK data gets queued, such as when there isn't mobile connectivity. In that case, the event timestamp will reflect when the event was generated. This means a percentage of events will appear to have high latency.
+
 ## Apache Avro
 
 The Braze Currents data storage integrations output data in the `.avro` format. We chose [Apache Avro](https://avro.apache.org/) because it is a flexible data format that natively supports schema evolution and is supported by a wide variety of data products: 
