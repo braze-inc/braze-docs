@@ -72,7 +72,7 @@ The Intelligence Suite provides powerful features to analyze user history and ca
 
 {% multi_lang_include release_type.md release="General availability" %}
 
-Build your Data Transformation using our dedicated [template library]({{site.baseurl}}) to help you get started with certain external platforms, instead of default code. You can now select **POST: Send messages immediately via API Only** as your destination to transform webhooks from a source platform to send immediate messages to your users.
+Build your Data Transformation using our dedicated [template library]({{site.baseurl}}/user_guide/data_and_analytics/data_transformation/creating_a_transformation#step-2-create-a-transformation) to help you get started with certain external platforms, instead of default code. You can now select **POST: Send messages immediately via API Only** as your destination to transform webhooks from a source platform to send immediate messages to your users.
 
 #### Merge users in bulk
 
