@@ -19,7 +19,27 @@ The **Home** page on the dashboard provides key metrics for you to track and und
 If you are using the [older navigation]({{site.baseurl}}/navigation), this is your **Overview** page.
 {% endalert %}
 
-![Home dashboard in Braze][1]
+![Home dashboard in Braze.][1]
+
+## Pick up where you left off
+
+You can pick up where you left off in the Braze dashboard with easy access to files you've recently edited or created. This section appears at the top of the **Home** page of the Braze dashboard.
+
+![A Canvas draft, an active segment, and a campaign draft in the "Pick up where you left off" section.][6]
+
+You can resume your activities for the following items:
+
+- Canvases
+- Campaigns
+- Segments
+
+### Access most recently edited content
+
+You can revisit recently edited or created campaigns, Canvases, and segments. This way, you can pick up where you left off whenever you return to the Braze dashboard.
+
+### Content type and status tags
+
+Each card is paired with tags that indicate the content type (campaign, Canvas, segment) and status (active, draft, archived, stopped).
 
 ## Reading the dashboard
 
@@ -105,3 +125,4 @@ The MAU value is calculated nightly and will not update until the next day.
 [3]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/capturing_lapsing_users/#capturing-lapsing-users
 [4]: {% image_buster /assets/img_archive/home_dashboard_metric_tile.png %}
 [5]: {% image_buster /assets/img_archive/home_dashboard_select_date.png %}
+[6]: {% image_buster /assets/img/pick_up_where_you_left_off.png %}

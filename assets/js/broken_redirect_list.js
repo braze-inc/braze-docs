@@ -1170,4 +1170,6 @@ validurls['/docs/partners/data_and_infrastructure_agility/ab_testing/jacquard/ja
 
 validurls['/docs/developer_guide/platform_integration_guides/legacy_sdks/ios/initial_sdk_setup'] = ['/docs/developer_guide/platform_integration_guides/legacy_sdks/ios/initial_sdk_setup/overview'];
 
+validurls['/docs/pick_up_where_you_left_off'] = '/docs/user_guide/data_and_analytics/analytics/home_dashboard/#pick-up-where-you-left-off';
+
 // validurls['OLD'] = 'NEW';
