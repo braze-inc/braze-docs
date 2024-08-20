@@ -88,7 +88,7 @@ You can [export the list of custom attributes]({{site.baseurl}}/user_guide/data_
 
 #### Currents IP allowlisting
 
-Braze will send Currents data from the listed IPs, which are automatically and dynamically added to any API keys that have been opted-in for[allowlisting]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/setting_up_currents).
+Braze will send Currents data from the listed IPs, which are automatically and dynamically added to any API keys that have been opted-in for [allowlisting]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/setting_up_currents).
 
 ### Robust channels
 
