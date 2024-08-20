@@ -26,7 +26,7 @@ Follow [Branch's SDK integration guide](https://help.branch.io/developers-hub/do
 
 To support sending iOS universal links as deep links from within Braze:
 
-1. Follow Branch's documentation for setting up [universal links][3].
+1. Follow Branch's documentation for setting up [universal links](https://help.branch.io/developers-hub/docs/ios-universal-links).
 2. Implement the [`BrazeDelegate`][4] method [braze(_:shouldOpenURL:)][5] in your Braze SDK integration to [route universal links][6] from within your app.
 
 ### Deep linking in email
