@@ -20,7 +20,7 @@ Default values can be added by specifying a [Liquid Filter][3] (use `|` to disti
 
 If a default value is not provided and the field is missing or not set on the user, the field will be blank in the message.
 
-The following example shows the correct syntax for adding a default value. In this case, the words "Valued User" will replace the attribute `{{ ${first_name} }}` if a user's `first_name` field is blank or unavailable.
+The following example shows the correct syntax for adding a default value. In this case, the words "Valued User" will replace the attribute `{{ ${first_name} }}` if a user's `first_name` field is empty or unavailable.
 
 ```liquid
 Hi {{ ${first_name} | default: 'Valued User' }}, thanks for using the App!
@@ -37,6 +37,11 @@ Or...
 ```
 Hi Valued User, thanks for using the App!
 ```
+{% endraw %}
+
+{% alert important %}
+The default value will show for empty values, but not for blank values. An empty value doesn't contain anything, while a blank value contains whitespace characters (such as spaces) and no other characters. For example, an empty string could look like `""` and a blank string could look like `" "`.
+{% endalert %}
 
 ## Setting default values for different data types
 
@@ -48,8 +53,9 @@ Let's say you have a boolean custom attribute called `premium_user` and you want
 
 1. You'll assign a variable called `is_premium_user` to the `premium_user` attribute with a default value of `false`. This means that if `premium_user` is `nil`, the value of `is_premium_user` will default to `false`. 
 
+{% raw %}
 ```liquid
-{% assign is_premium_user = {{ custom_attribute.${premium_user} | default: false }} %}
+{% assign is_premium_user = {{custom_attribute.${premium_user}}} | default: false %}
 ```
 
 {: start="2"}
@@ -57,7 +63,7 @@ Let's say you have a boolean custom attribute called `premium_user` and you want
 
 ```liquid
 {% if is_premium_user %}
-Hi {{ ${first_name} | default: 'premium user' }}, thank you for being a premium user!
+Hi {{${first_name} | default: 'premium user'}}, thank you for being a premium user!
 ```
 
 {: start="3"}
@@ -65,7 +71,7 @@ Hi {{ ${first_name} | default: 'premium user' }}, thank you for being a premium 
 
 ```liquid
 {% else %}
-Hi {{ ${first_name} | default: 'valued user' }}, consider upgrading to premium for more benefits!
+Hi {{${first_name} | default: 'valued user'}}, consider upgrading to premium for more benefits!
 {% endif %}
 ```
 {% endraw %}
@@ -73,11 +79,11 @@ Hi {{ ${first_name} | default: 'valued user' }}, consider upgrading to premium f
 {% details Full Liquid code %}
 {% raw %}
 ```liquid
-{% assign is_premium_user = {{ custom_attribute.${premium_user} | default: false }} %}
+{% assign is_premium_user = {{custom_attribute.${premium_user}}} | default: false %}
 {% if is_premium_user %}
-Hi {{ ${first_name} | default: 'premium user' }}, thank you for being a premium user!
+Hi {{${first_name} | default: 'premium user'}}, thank you for being a premium user!
 {% else %}
-Hi {{ ${first_name} | default: 'valued user' }}, consider upgrading to premium for more benefits!
+Hi {{${first_name} | default: 'valued user'}}, consider upgrading to premium for more benefits!
 {% endif %}
 ```
 {% endraw %}
@@ -91,7 +97,7 @@ Let's say you have a numeric custom attribute called `reward_points` and you wan
 
 {% raw %}
 ```liquid
-Hi {{ ${first_name} | default: 'valued user' }},
+Hi {{${first_name} | default: 'valued user'}},
 ```
 {% endraw %}
 
@@ -100,7 +106,7 @@ Hi {{ ${first_name} | default: 'valued user' }},
 
 {% raw %}
 ```liquid
-Hi {{ ${first_name} | default: 'valued user' }}, you have {{ custom_attribute.${reward_points} | default: 0 }} reward points.
+Hi {{${first_name} | default: 'valued user'}}, you have {{custom_attribute.${reward_points} | default: 0}} reward points.
 ```
 {% endraw %}
 
@@ -112,7 +118,7 @@ Let's say you have a nested custom attribute object called `location` that conta
 
 {% raw %}
 ```liquid
-Hi {{ ${first_name} | default: 'valued user' }},
+Hi {{${first_name} | default: 'valued user'}},
 ```
 {% endraw %}
 
@@ -131,21 +137,21 @@ We'd like to confirm the location associated with your account. We use this loca
 {% raw %}
 ```liquid
 Your location:
-City: {{ custom_attribute.${address.city} | default: 'Unknown' }}
-State: {{ custom_attribute.${address.state} | default: 'Unknown' }}
+City: {{custom_attribute.${address.city} | default: 'Unknown'}}
+State: {{custom_attribute.${address.state} | default: 'Unknown'}}
 ```
 {% endraw %}
 
 {% details Full Liquid code %}
 {% raw %}
 ```liquid
-Hi {{ ${first_name} | default: 'valued user' }}
+Hi {{${first_name} | default: 'valued user'}}
 
 We'd like to confirm the location associated with your account. We use this location to send you promotions and offers for stores nearest you. You can update your location in your profile settings.
 
 Your location:
-City: {{ custom_attribute.${address.city} | default: 'Unknown' }}
-State: {{ custom_attribute.${address.state} | default: 'Unknown' }}
+City: {{custom_attribute.${address.city} | default: 'Unknown'}}
+State: {{custom_attribute.${address.state} | default: 'Unknown'}}
 ```
 {% endraw %}
 {% enddetails %}
@@ -169,13 +175,13 @@ Let's say you have an array custom attribute called `upcoming_trips` that contai
 {% raw %}
 ```liquid
 {% else %}
-Hello {{ ${first_name} | default: 'fellow traveler' }},
+Hello {{${first_name} | default: 'fellow traveler'}},
   Here are your upcoming trips:
   <ul>
   {% for trip in {{custom_attribute.${upcoming_trips}}} %}
     <li>
-      Destination: {{ trip.destination }}
-      Departure Date: {{ trip.departure_date | default: 'Date not set' }}
+      Destination: {{trip.destination}}
+      Departure Date: {{trip.departure_date | default: 'Date not set'}}
     </li>
   {% endfor %}
   </ul>
@@ -189,13 +195,13 @@ Hello {{ ${first_name} | default: 'fellow traveler' }},
 {% if {{custom_attribute.${upcoming_trips}}} == blank %}
 {% abort_message('No upcoming trips scheduled') %}
 {% else %}
-Hello {{ ${first_name} | default: 'fellow traveler' }},
+Hello {{${first_name} | default: 'fellow traveler'}},
   Here are your upcoming trips:
   <ul>
   {% for trip in {{custom_attribute.${upcoming_trips}}} %}
     <li>
-      Destination: {{ trip.destination }}
-      Departure Date: {{ trip.departure_date | default: 'Date not set' }}
+      Destination: {{trip.destination}}
+      Departure Date: {{trip.departure_date | default: 'Date not set'}}
     </li>
   {% endfor %}
   </ul>
