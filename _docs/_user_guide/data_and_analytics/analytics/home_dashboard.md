@@ -25,21 +25,9 @@ If you are using the [older navigation]({{site.baseurl}}/navigation), this is yo
 
 You can pick up where you left off in the Braze dashboard with easy access to files you've recently edited or created. This section appears at the top of the **Home** page of the Braze dashboard.
 
+You can revisit recently edited or created campaigns, Canvases, and segments. Each card is paired with tags that indicate the content type (campaign, Canvas, segment) and status (active, draft, archived, stopped).
+
 ![A Canvas draft, an active segment, and a campaign draft in the "Pick up where you left off" section.][6]
-
-You can resume your activities for the following items:
-
-- Canvases
-- Campaigns
-- Segments
-
-### Access most recently edited content
-
-You can revisit recently edited or created campaigns, Canvases, and segments. This way, you can pick up where you left off whenever you return to the Braze dashboard.
-
-### Content type and status tags
-
-Each card is paired with tags that indicate the content type (campaign, Canvas, segment) and status (active, draft, archived, stopped).
 
 ## Reading the dashboard
 
