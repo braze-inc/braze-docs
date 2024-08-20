@@ -274,13 +274,26 @@ LINE IDs are automatically received by Braze when a user follows your channel, o
 
 To combine a LINE ID with an existing Braze user profile, you can use the LINE login method.
 
-### LINE login
+### LINE Login
 
-This method uses social media logins for reconciliation. When a user logs into your app, they're given the option to use the LINE login to create a user account or log in.
+This method uses social media logins for reconciliation. When a user logs into your app, they're given the option to use [LINE Login](https://developers.line.biz/en/docs/line-login/overview/) to create a user account or log in.
 
-1. Implement the LINE login feature so users can log into your app. For details about implementation, refer to the LINE developer page. After implementation, you can get an access token by calling the [issue access token](https://developers.line.biz/en/reference/line-login/#oauth/) endpoint of the LINE login API. After that, you can get the user’s profile information from ID tokens that are included in the response from the [issue access token](https://developers.line.biz/en/reference/line-login/#oauth/) request.
+{% alert note %}
+To acquire the correct LINE ID for each user, set up LINE Login under the same provider as your Braze integrated LINE official account or channel. 
+{% endalert %}
 
-2. After you get the profile information of a LINE follower, send their LINE user ID to Braze by calling the [user/track]({{site.baseurl}}/api/endpoints/user_data/post_user_track#track-users/) endpoint.
+1. Go to the LINE Developer Console and [request permission to obtain the email addresses of users](https://developers.line.biz/en/docs/line-login/integrate-line-login/#applying-for-email-permission) who log into your app through LINE Login.
+
+2. Follow the appropriate steps provided by LINE to implement LINE Login:<br><br>
+  - [Web app directions](https://developers.line.biz/en/docs/line-login/integrate-line-login/)
+  - [Native app directions](https://developers.line.biz/en/docs/line-login/secure-login-process/#using-openid-to-register-new-users)<br><br>Make sure to include `email` in the [scope set up](https://developers.line.biz/en/docs/line-login/integrate-line-login/#scopes) for verification requests. 
+
+{: start="3"}
+3. Use the [Verify ID token call](https://developers.line.biz/en/reference/line-login/#verify-id-token) to acquire the user’s email. 
+
+4. Save the user’s LINE ID (`native_line_id`) to the user’s profile with a matching email in your database, or create a new user profile with the user’s email and LINE ID.
+
+5. Send the new or updated user information to Braze using the [user/track]({{site.baseurl}}/api/endpoints/user_data/post_user_track#track-users/) endpoint, [CSV import]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/#csv-import), or [Cloud Data Ingestion]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/).
 
 ## Creating LINE test users in Braze
 
