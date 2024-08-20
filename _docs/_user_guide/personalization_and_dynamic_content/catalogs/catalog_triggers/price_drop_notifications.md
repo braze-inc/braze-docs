@@ -53,13 +53,12 @@ Follow these steps to set up price drop notifications in a specific catalog.
         ]
     }
     ```
-    <br>
 {% alert note %}
 Back-in-stock and price-drop triggers use the same event to subscribe the user to the notification. Create a price drop notification by setting `type` to `price_drop`. You cannot set both a price drop and back in stock notification.
 {% endalert %}
 
 {: start="4"}
-4. Select **Save** and continue to the catalog's **Settings** page.<br>
+4. Select **Save** and continue to the catalog's **Settings** page.
 5. Set your notification rule. There are two options:
     - **Notify all subscribed users** notifies all customers who are waiting when the item's price drops.
     - **Notify a certain number of users per a certain number of minutes** notifies a specified number of customers per your configured notification period. Braze will notify the specified numbers of customers in increments until there are no more customers to notify, or until the item's price goes back up. Your notification rate cannot exceed notifying 10,000 users per minute.

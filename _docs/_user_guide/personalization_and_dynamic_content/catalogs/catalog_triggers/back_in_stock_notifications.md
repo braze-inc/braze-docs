@@ -57,7 +57,7 @@ Back-in-stock and price-drop triggers use the same event to subscribe the user t
 {% endalert %}
 
 {: start="4"}
-4. Select **Save** and continue to the catalog's back-in-stock settings page.
+4. Select **Save** and continue to the catalog's **Settings** page.
 5. Set your notification rule. There are two options:
     - **Notify all subscribed users** notifies all customers who are waiting when the item is back in stock. 
     - **Notify a certain number of users per a certain number of minutes** notifies a specified number of customers per your configured notification period. Braze will notify the specified numbers of customers in increments until there are no more customers to notify or until the item goes out of stock. Your notification rate cannot exceed notifying 10,000 users per minute.
