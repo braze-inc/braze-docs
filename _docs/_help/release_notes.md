@@ -167,7 +167,7 @@ The following SDK updates have been released. Breaking updates are listed below;
 
 #### Diátaxis and Braze Docs
 
-We're in the process of standardizing our documentation using a framework called [Diátaxis](https://diataxis.fr/). To help our writers and contributors create content that fits into this new framework, we've [created templates for each content type]({{site.baseurl}}/contributing/content_types).
+We're in the process of standardizing our documentation using a framework called [Diátaxis](https://diataxis.fr/). To help our writers and contributors create content that fits into this new framework, we've created [templates for each content type]({{site.baseurl}}/contributing/content_types).
 
 #### New pull-request template for Braze Docs
 
@@ -179,15 +179,15 @@ We took the time to improve our pull-request (PR) template so it's easier and le
 
 {% multi_lang_include release_type.md release="General availability" %}
 
-Exporting through the [`/custom_attributes`]({{site.baseurl}}/api/endpoints/export/custom_attributes/get_custom_attributes) and [`/events`]({{site.baseurl}}/api/endpoints/export/custom_events/get_custom_events_data) API endpoints is no longer in early access.
+You can now export custom event and custom attributes using the [`/custom_attributes`]({{site.baseurl}}/api/endpoints/export/custom_attributes/get_custom_attributes) and [`/events`]({{site.baseurl}}/api/endpoints/export/custom_events/get_custom_events_data) endpoints.
 
 #### New Currents permissions for users
 
-There are two new permission settings for users: **View Currents Integrations** and **Edit Currents Integrations**. Learn more about user permissions [here]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions). 
+There are two new permission settings for users: **View Currents Integrations** and **Edit Currents Integrations**. Learn more about [user permissions]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions). 
 
 #### Update to Snowflake data retention policy
  
-Beginning August 27th, personally identifiable information (PII) will be removed from all Snowflake Secure Data Sharing events data that is older than two years old. If you use Snowflake, you may choose to retain the full events data in your environment by storing a copy in your Snowflake account before the retention policy is applied. To learn more, see [Snowflake data retention]({{site.baseurl}}/partners/data_and_infrastructure_agility/data_warehouses/snowflake/data_retention/).
+Beginning August 27, 2024, personally identifiable information (PII) will be removed from all Snowflake Secure Data Sharing events data that is older than two years old. If you use Snowflake, you may choose to retain the full events data in your environment by storing a copy in your Snowflake account before the retention policy is applied. Learn more about [Snowflake data retention]({{site.baseurl}}/partners/data_and_infrastructure_agility/data_warehouses/snowflake/data_retention/).
  
 ### Unlocking creativity
 
@@ -238,7 +238,6 @@ SMS Geographic Permissions enhance security and protect against fraudulent SMS t
 {% multi_lang_include release_type.md release="Early access" %}
 
 Now with Shopify, you can create custom notifications for [price drops]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/price_drop_notifications) and [back-in-stock items]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/back_in_stock_notifications).
-
  
 ### AI and ML automation
  
