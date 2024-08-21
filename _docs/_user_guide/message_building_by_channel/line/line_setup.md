@@ -279,7 +279,7 @@ To combine a LINE ID with an existing Braze user profile, you can use the LINE l
 This method uses social media logins for reconciliation. When a user logs into your app, they're given the option to use [LINE Login](https://developers.line.biz/en/docs/line-login/overview/) to create a user account or log in.
 
 {% alert note %}
-To acquire the correct LINE ID for each user, set up LINE Login under the same provider as your Braze integrated LINE official account or channel. 
+To acquire the correct LINE ID for each user, set up LINE Login under the same provider as your Braze-integrated LINE official account or channel. 
 {% endalert %}
 
 1. Go to the LINE Developer Console and [request permission to obtain the email addresses of users](https://developers.line.biz/en/docs/line-login/integrate-line-login/#applying-for-email-permission) who log into your app through LINE Login.
@@ -293,7 +293,7 @@ To acquire the correct LINE ID for each user, set up LINE Login under the same p
 
 4. Save the user’s LINE ID (`native_line_id`) to the user’s profile with a matching email in your database, or create a new user profile with the user’s email and LINE ID.
 
-5. Send the new or updated user information to Braze using the [user/track]({{site.baseurl}}/api/endpoints/user_data/post_user_track#track-users/) endpoint, [CSV import]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/#csv-import), or [Cloud Data Ingestion]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/).
+5. Send the new or updated user information to Braze using the [`/user/track` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track#track-users/), [CSV import]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/#csv-import), or [Cloud Data Ingestion]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/).
 
 #### Use cases
 
@@ -306,11 +306,11 @@ To acquire the correct LINE ID for each user, set up LINE Login under the same p
 
 ##### New follower uses LINE Login
 
-1. Pre-existing state: No user profile exists in Braze with user’s LINE ID.
+1. Pre-existing state: No user profile exists in Braze with the user’s LINE ID.
 2. The user logs into your app using LINE Login.
-3. LINE provides you the user’s email.
+3. LINE provides you with the user’s email.
 4. You either:
-  - Update an existing user profile that has that email to also have the user’s LINE ID.
+  - Update an existing user profile with that email to also have the user’s LINE ID.
   - Create a new user profile with the email and LINE ID.
 5. When the user follows your LINE Official Account, Braze receives a follow event and updates the user’s subscription status to “Subscribed”.
 
