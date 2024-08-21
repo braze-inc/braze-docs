@@ -9,7 +9,7 @@ channel:
 noindex: true
 ---
 
-{% multi_lang_include archive/objective-c-deprecation-notice.md %}
+{% multi_lang_include deprecations/objective-c.md %}
 
 # クリック時のアプリ内メッセージ動作のカスタマイズ
 

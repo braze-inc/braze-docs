@@ -17,7 +17,11 @@ platform:
 
 # [![Braze Learning course]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/path/developer){: style="float:right;width:120px;border:0;" class="noimgborder"}Getting started: Platform overview
 
-> This article covers the basic parts and capabilities of the Braze platform. Links from this article connect to essential Braze topics.
+> This article covers the basic parts and capabilities of the Braze platform. Links from this article connect to essential Braze topics. 
+
+{% alert tip %}
+Check out our free [Developer Learning Path](https://learning.braze.com/path/developer) course along with these articles. 
+{% endalert %}
 
 ## What is Braze?
 

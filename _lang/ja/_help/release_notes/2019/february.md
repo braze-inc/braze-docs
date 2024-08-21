@@ -3,19 +3,19 @@ nav_title: 2月
 page_order: 11
 noindex: true
 page_type: update
-description: "この記事には、2019 年 2 月のリリースノートが含まれています。"
+description: "この記事には2019年2月のリリースノートが含まれています。"
 ---
-# 2019 年 2 月
+# 2019年2月
 
-## E メール購読グループ
+## メールサブスクリプショングループ
 
-[サブスクリプショングループは]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#subscription-groups)、[上記のグローバルサブスクリプションステートからオーディエンスをさらに絞り込むことができるセグメントフィルターです]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/)。これらのグループでは、より詳細なサブスクリプションオプションをエンドユーザーに提示できます。
+[サブスクリプショングループ]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#subscription-groups) は、上記の [グローバルサブスクリプションステータス]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/) からオーディエンスをさらに絞り込むためのセグメントフィルターです。これらのグループは、エンドユーザーに対してより細かいサブスクリプションオプションを提供する機能を提供します。
 
-たとえば、複数のカテゴリのメールキャンペーンを送信する場合、[メールプリファレンスセンターを使用して](#email-preference-center)、1つのページからそれらのグループをまとめて購読または購読解除するオプションを顧客に提供できます。
+例えば、複数のカテゴリのメールキャンペーンを送信する場合、顧客に対して、当社の[ユーザー設定センター](#email-preference-center)を使用して、単一のページからそれらのグループを一括で購読または配信停止するオプションを提供できます。
 
-[サブスクリプショングループ REST API]({{site.baseurl}}/developer_guide/rest_api/subscription_group_api/) を使用して、Braze **ダッシュボードに保存したサブスクリプショングループをサブスクリプショングループページにプログラムで管理します**。
+Brazeダッシュボードに保存されているサブスクリプショングループをプログラムで管理するために、[サブスクリプショングループREST API]({{site.baseurl}}/developer_guide/rest_api/subscription_group_api/)を使用して**サブスクリプショングループ**ページにアクセスします。
 
-## Eメールプリファレンスセンター
+## メールユーザー設定センター
 
-[メールプリファレンスセンターでは]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#email-preference-center)、特定のグループのニュースレターを受信するユーザーを簡単に管理できます。作成した各サブスクリプショングループは、プリファレンスセンターリストに追加されます。プリファレンスセンターの名前をクリックすると、インタラクティブプレビューが表示されます。
+[メールユーザー設定センター]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#email-preference-center)は、どのユーザーが特定のグループのニュースレターを受け取るかを管理する簡単な方法です。作成した各サブスクリプショングループは、ユーザー設定センターリストに追加されます。ユーザー設定センターの名前をクリックして、インタラクティブなプレビューを表示します。
 

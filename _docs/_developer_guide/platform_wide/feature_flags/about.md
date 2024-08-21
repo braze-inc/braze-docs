@@ -177,10 +177,6 @@ Once we determine our winner, we can stop this campaign and increase the rollout
 
 ### Segmentation
 
-{% alert note %}
-The feature flag membership filter is being gradually rolled out and may not be on your Braze dashboard just yet.
-{% endalert %}
-
 Use the **Feature Flag** filter to create a segment or target messaging at users based on whether they're using a feature flag. For example, let's say we have a feature flag that controls premium content in our app. We could create a segment that filters for users who don't have the feature flag enabled, and then send that segment a message urging them to upgrade their account to view premium content.
 
 ![][14]

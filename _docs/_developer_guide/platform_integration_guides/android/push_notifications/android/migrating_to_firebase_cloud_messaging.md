@@ -133,7 +133,7 @@ As soon as you upload your credentials to Braze, you can start sending push noti
 
 - [Verify your sender ID](#step-2-verify-your-sender-id)
 - [Verify your permissions](#step-5-verify-permissions-optional)
-- Review push notification errors in your [message activity log](https://www.braze.com/docs/user_guide/administrative/app_settings/message_activity_log_tab/)
+- Review push notification errors in your [message activity log]({{site.baseurl}}/user_guide/administrative/app_settings/message_activity_log_tab/)
 
 If you're still having trouble, see [Reverting your credentials](#reverting-your-credentials).
 

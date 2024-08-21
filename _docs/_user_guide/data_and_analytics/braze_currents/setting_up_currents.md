@@ -86,12 +86,62 @@ Note that Currents will drop events with excessively large payloads of greater t
 
 Test Currents connectors are free versions of our existing connectors that can be used for testing and trying out different destinations. Test Currents have:
 - No limit to the number of Test Currents connectors you may build.
-- An aggregate maximum of 10,000 events per 30-day rolling period. This event total is updated hourly on the dashboard.
+- An aggregate maximum of 10,000 events per seven-day rolling period. This event total is updated hourly on the dashboard.
 
-After your Test Currents connectors reach the sending limit, your connector will not send events until the next 30-day period.
+After your Test Currents connectors reach the sending limit, your connector will not send events until the next seven-day period.
 
 To upgrade your Test Currents connector, edit the integration in the dashboard and select **Upgrade**.
 
 ## Updating Currents
 
 {% multi_lang_include updating_currents.md %}
+
+## IP allowlisting
+
+Braze will send Currents data from the listed IPs, which are automatically and dynamically added to any API keys that have been opted-in for allowlisting.
+
+| For Instances `US-01`, `US-02`, `US-03`, `US-04`, `US-05`, `US-06`, and `US-07`: |
+|---|
+| `127.0.0.1`
+| `23.21.118.191`
+| `34.206.23.173`
+| `50.16.249.9`
+| `52.4.160.214`
+| `54.87.8.34`
+| `54.156.35.251`
+| `52.54.89.238`
+| `18.205.178.15`
+
+| For Instances `EU-01` and `EU-02`: |
+|---|
+| `127.0.0.1`
+| `52.58.142.242`
+| `52.29.193.121`
+| `35.158.29.228`
+| `18.157.135.97`
+| `3.123.166.46`
+| `3.64.27.36`
+| `3.65.88.25`
+| `3.68.144.188`
+| `3.70.107.88` 
+
+| For Instance `US-08`: |
+|---|
+| `52.151.246.51`
+| `52.170.163.182`
+| `40.76.166.157`
+| `40.76.166.170`
+| `40.76.166.167`
+| `40.76.166.161`
+| `40.76.166.156`
+| `40.76.166.166`
+| `40.76.166.160`
+| `40.88.51.74`
+| `52.154.67.17`
+| `40.76.166.80`
+| `40.76.166.84`
+| `40.76.166.85`
+| `40.76.166.81`
+| `40.76.166.71`
+| `40.76.166.144`
+| `40.76.166.145`

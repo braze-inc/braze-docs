@@ -8,7 +8,7 @@ description: "このチュートリアルでは、iOS 用 Swift Package Manager 
 noindex: true
 ---
 
-{% multi_lang_include archive/objective-c-deprecation-notice.md %}
+{% multi_lang_include deprecations/objective-c.md %}
 
 # Swift Package Manager の統合
 

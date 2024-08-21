@@ -1,6 +1,6 @@
 ---
 nav_title: Duplicate Users
-article_title: Duplicate users
+article_title: Duplicate Users
 description: "Learn how to find and merge duplicate users in your Braze dashboard."
 page_order: 0
 ---
@@ -43,10 +43,6 @@ Duplicate user profiles cannot be recovered after merging.
 
 ## Bulk merging
 
-{% alert important %}
-Bulk merging duplicate users is currently in early access. Contact your Braze account manager if you’re interested in participating in the early access.
-{% endalert %}
-
 When you bulk merge duplicate users, Braze finds profiles with matching identifiers (such as an email address) and merges all their data into the most recently updated profile with an `external_id`. If there are no profiles with an `external_id`, the most recently updated profile without an `external_id` will be used instead.
 
 ### Step 1: Go to Manage Audience
@@ -87,3 +83,31 @@ Duplicate user profiles cannot be recovered after merging.
 {% endalert %}
 
 ![The "Manage Audience" page with "Merge all duplicates" highlighted.]({% image_buster /assets/img/audience_management/duplicate_users/bulk_merging/select_merge_profiles.png %}){: style="max-width:70%;"}
+
+## Rules-based merging
+
+You can use rules to control how duplicate profiles are resolved when running a merge so the most relevant user profile is kept. When rules are set, Braze will keep profiles that match your criteria.
+
+### Step 1: Define your rules
+
+1. Go to **Audience** > **Manage Audience** > **Edit rules**.
+2. In the **Profile to keep** section of the **Edit rules** panel, select the **Identifier** for the profiles that will be kept when merging duplicates. This can be the email address or phone number.
+3. In the **Resolving ties** section, select the criteria to determine how to solve ties between profiles with matching criteria from **Profile to keep**. You can select the following:<br>
+- **Resolve ties using**: Created date, Updated date, Last session
+- **Prioritization**: Newest, Oldest
+
+![The "Edit rules" panel with sections to select options for "Profile to keep" and "Resolving ties".]({% image_buster /assets/img/audience_management/duplicate_users/edit_rules.png %})
+
+For example, you could keep the profile that has a phone number. If multiple users have the same phone number, you could resolve ties using the **Updated date** field and prioritize the most recently updated user.
+
+### Step 2: Preview the results (optional)
+
+After saving your rules, you can preview how they'll work by selecting **Generate a list of duplicates**. Braze will generate your preview and send it to your email address as a CSV file that shows which users would be kept and merged if your rules were applied. 
+
+### Step 3: Merge duplicates
+
+If you're satisfied with the results of your preview, return to the **Manage Audience** page and select **Merge all duplicates**.
+
+{% alert warning %}
+Duplicate user profiles cannot be recovered after merging.
+{% endalert %}

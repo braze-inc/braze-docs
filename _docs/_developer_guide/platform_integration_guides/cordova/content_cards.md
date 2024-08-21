@@ -27,3 +27,7 @@ You can use these additional methods to build a custom Content Cards Feed within
 |`logContentCardImpression(cardId)`|Logs an impression for the given Content Card ID.|
 |`logContentCardDismissed(cardId)`|Logs a dismissal for the given Content Card ID.|
 {: .reset-td-br-1 .reset-td-br-2}
+
+## GIF Support
+
+{% multi_lang_include wrappers/gif_support/content_cards.md %}

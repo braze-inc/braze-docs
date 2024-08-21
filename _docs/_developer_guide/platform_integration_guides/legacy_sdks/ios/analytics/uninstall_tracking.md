@@ -8,7 +8,7 @@ description: "This article covers how to configure uninstall tracking for your i
 noindex: true
 ---
 
-{% multi_lang_include archive/objective-c-deprecation-notice.md %}
+{% multi_lang_include deprecations/objective-c.md %}
 
 # Uninstall tracking for iOS
 

@@ -8,7 +8,7 @@ page_type: reference
 
 # Field-level encryption
 
-> Using field-level encryption, you can seamlessly encrypt email addresses with AWS Key Management Service (KMS) and comply with industry regulations to minimize personally identifiable information (PII) shared in Braze. Encryption replaces sensitive data with ciphertext, which is unreadable encrypted information.
+> Using field-level encryption, you can seamlessly encrypt email addresses with AWS Key Management Service (KMS) to minimize personally identifiable information (PII) shared in Braze. Encryption replaces sensitive data with ciphertext, which is unreadable encrypted information.
 
 {% alert important %}
 Field-level encryption is currently available as a beta feature. Contact your Braze account manager if you're interested in participating in this beta.
@@ -20,18 +20,18 @@ Email addresses must be hashed and encrypted before they’re added to Braze. Wh
 
 ## Prerequisites
 
-To use field-level encryption, you must have access to AWS KMS to encrypt and hash email addresses **before** sending them to Braze. 
+To use field-level encryption, you must have access to AWS KMS to [encrypt](https://docs.aws.amazon.com/kms/latest/APIReference/API_Encrypt.html) and [hash](https://docs.aws.amazon.com/kms/latest/APIReference/API_GenerateMac.html) email addresses **before** sending them to Braze. 
 
 Follow these steps to set up your AWS secret key authentication method.
 
-1. To retrieve your access key ID and secret access key, [create an IAM user and administrators group in AWS with a permissions policy for AWS Key Management Service](https://docs.aws.amazon.com/IAM/latest/UserGuide/getting-set-up.html#create-an-admin).
+1. To retrieve your access key ID and secret access key, [create an IAM user and administrators group](https://docs.aws.amazon.com/IAM/latest/UserGuide/getting-set-up.html#create-an-admin) in AWS with a permissions policy for AWS Key Management Service. The IAM user must have the [kms:Decrypt](https://docs.aws.amazon.com/kms/latest/APIReference/API_Decrypt.html) and [kms:GenerateMac](https://docs.aws.amazon.com/kms/latest/APIReference/API_GenerateMac.html) permissions. For more details, refer to [AWS KMS permissions](https://docs.aws.amazon.com/kms/latest/developerguide/kms-api-permissions-reference.html).
 2. Select **Show User Security Credentials** to reveal your access key ID and secret access key. Note these credentials somewhere or select the **Download Credentials** button as you'll need to input these when connecting your AWS KMS keys.
-3. We recommend setting up KMS in the following AWS regions:
+3. You must set up KMS in the following AWS regions:
     - **Braze US clusters:** `us-east-1`
     - **Braze EU clusters:** `eu-central-1`
 4. In AWS Key Management Service, create two keys and make sure that the IAM user is added in key usage permissions:
-    - **Encrypt/decrypt:** Select **Symmetric** key type and **Encrypt and Decrypt** key usage.
-    - **Hash:** Select **Symmetric** key type and **Generate and Verify MAC** key usage. The key spec should be **HMAC_256**. After creating the key, note the HMAC key ID somewhere as you’ll need to input this in Braze.
+    - **[Encrypt/decrypt](https://docs.aws.amazon.com/kms/latest/developerguide/create-keys.html#create-symmetric-cmk):** Select **Symmetric** key type and **Encrypt and Decrypt** key usage.
+    - **[Hash](https://docs.aws.amazon.com/kms/latest/developerguide/hmac-create-key.html):** Select **Symmetric** key type and **Generate and Verify MAC** key usage. The key spec should be **HMAC_256**. After creating the key, note the HMAC key ID somewhere as you’ll need to input this in Braze.
 
 ![]({% image_buster /assets/img/field_level_encryption_aws_prereq.png %})
 
@@ -65,24 +65,26 @@ When updating email address in Braze, you should use the hashed email value wher
 - Adding or updating users via CSV
 
 {% alert note %}
-When creating a new user, you must add `email_encrypted` with the user's encrypted email value. Otherwise, the user will not be created.
+When creating a new user, you must add `email_encrypted` with the user's encrypted email value. Otherwise, the user will not be created. Similarly, if you're adding an email address to an existing user who doesn't have an email, you must add `email_encrypted`. Otherwise, the user will not be updated.
 {% endalert %}
 
 ## Considerations
 
-These features are not supported with field-level encryption
+These features are not supported with field-level encryption:
 
-- SDK
-- Audience sync
+- Identifying and capturing email address via SDK
 - In-app message email capture forms
+- Reporting on recipient domain, including Email Insights mailbox provider charts
 - Email address filter by regular expression
+- Audience sync
+- Shopify integration
 
 ### User attributes object
 
 When using field-level encryption with the `/users/track` endpoint, note these field details for the [user attributes object]({{site.baseurl}}/api/objects_filters/user_attributes_object):
 
 - The `email` field must be the hashed value of the email.
-- The `encrypted_email` field must be the encrypted value for the email.
+- The `email_encrypted` field must be the encrypted value for the email.
 
 ## Frequently asked questions
 
@@ -111,3 +113,7 @@ The hashed email address is included in email delivery and engagement events.
 ### What email address should I expect to see in message archiving?
 
 The plaintext email address is included in messaging archiving. These are sent directly to the customer’s cloud storage provider and there may be other personal data included in the email bodies.
+
+### Can I use mail-to list-unsubscribe for subscription management with field-level encryption?
+
+No. Using mail-to list-unsubscribe would send the plaintext decrypted email address to Braze. With field-level encryption enabled, we support the URL-based HTTP: method, including one-click. We also recommend including a one-click unsubscribe link in your email body.

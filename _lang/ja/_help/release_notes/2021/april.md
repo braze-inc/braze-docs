@@ -1,41 +1,41 @@
 ---
-nav_title: 4 月
+nav_title: 4月
 page_order: 8
 noindex: true
 page_type: update
-description: "この記事には、2021 年 4 月のリリース ノートが含まれています。"
+description: "この記事には、2021年4月のリリースノートが含まれている。"
 ---
-# 2021年4月発売
+# 2021年4月
 
-## iOS プッシュの高度な実装ガイド
+## iOSプッシュ上級実装ガイド
 
-この詳細なガイドでは、プッシュ通知コンテンツのアプリ拡張機能を活用して、プッシュメッセージを最大限に活用する方法について説明します。これには、私たちのチームが構築した3つのカスタムユースケース(インタラクティブプッシュ、データキャプチャプッシュ、進行状況ベースのプッシュ)、付随するコードスニペット、およびログ分析に関するガイダンスが含まれています。詳細については、 [iOS プッシュの高度な実装ガイド](/docs/developer_guide/platform_integration_guides/swift/push_notifications/implementation_guide/) を参照してください。
+この詳細なガイドでは、プッシュ通知コンテンツアプリの拡張機能を活用して、プッシュメッセージを最大限に活用する方法について説明する。私たちのチームが作成した3つのユースケース（インタラクティブ・プッシュ、データ・キャプチャ・プッシュ、プログレス・ベース・プッシュ）、付随するコード・スニペット、分析ログのガイダンスが含まれている。詳しくは、[iOSプッシュ上級実装ガイドを](/docs/developer_guide/platform_integration_guides/swift/push_notifications/implementation_guide/)学習しよう。
 
-## マルチメディア・メッセージ・サービス(MMS)の VFC サポート
+## マルチメディア・メッセージ・サービス（MMS）のVFCサポート
 
-vCardは、仮想連絡先ファイル(VCF)とも呼ばれ、ビジネス/contact information that can be easily imported into address/contact books. These VFC files can now be sent through [MMS]({{site.baseurl}}/user_guide/message_building_by_channel/sms/mms/create/) を送信するための標準化されたファイル形式であり、Brazeメディアライブラリに追加されています。 
+vCardsは、Virtual Contact Files (VCF)とも呼ばれ、ビジネス/連絡先情報を送信するための標準化されたファイル形式で、アドレス帳/連絡先帳に簡単にインポートできる。これらのVFCファイルを[MMSで]({{site.baseurl}}/user_guide/message_building_by_channel/sms/mms/create/)送信し、Brazeメディア・ライブラリーに追加できるようになった。 
 
 ## ユーザー削除の更新
 
-2020 年 10 月に、ユーザー削除によるデータ主体の電話番号またはメールアドレスの処理方法 [を改善し]({{site.baseurl}}/help/release_notes/2020/october/) ました。 
+2020年10月、我々はユーザーデータ削除がデータ対象者の電話番号やメールアドレスを処理する方法を[改善]({{site.baseurl}}/help/release_notes/2020/october/)した。 
 
-## Brazeの新しいパートナーシップ
+## 新しいBrazeパートナーシップ
 
-### Airbridge - アトリビューション
+### エアブリッジ - 属性
 
-[AirbridgeとBrazeの統合]({{site.baseurl}}/partners/message_orchestration/attribution/airbridge/)により、オーガニックおよび非オーガニックのすべてのインストールアトリビューションデータをBrazeに渡して、よりパーソナライズされたマーケティングキャンペーンを構築し、ユーザーがどこで獲得されたかを正確に把握できます。
-### Kubit - アナリティクス
+[AirbridgeとBrazeの統合により]({{site.baseurl}}/partners/message_orchestration/attribution/airbridge/)、オーガニックおよび非オーガニックのインストールアトリビューションデータをすべてBrazeに渡すことができ、よりパーソナライズされたマーケティングキャンペーンを構築し、ユーザーがどこで獲得されたかを正確に把握することができる。
+### Kubit - 分析
 
-[Kubit]({{site.baseurl}}/partners/data_and_infrastructure_agility/analytics/kubit/) は、ノーコードのセルフサービス分析プラットフォームであり、製品の洞察を即座に提供します。Brazeとのシームレスなノーコード統合により、ユーザーコホート情報をBrazeにインポートし、特定のコホートをターゲットとするエンゲージメントキャンペーンを開始することができます。さらに、Snowflake Secure Data Sharingを使用することで、Brazeの生のキャンペーンおよびインプレッションデータをKubitのプロダクトアナリティクスと統合し、これらのキャンペーンの影響をリアルタイムで測定できます。 
+[Kubitは]({{site.baseurl}}/partners/data_and_infrastructure_agility/analytics/kubit/)コード不要のセルフサービス分析プラットフォームで、即座に製品インサイトを提供する。Brazeとのシームレスなコードレス統合により、ユーザーコホート情報をBrazeにインポートし、特定のコホートをターゲットとしたエンゲージメントキャンペーンを開始することができる。さらに、Snowflake Secure Data Sharingを使用することで、Brazeの生のキャンペーンデータやインプレッションデータをKubitの製品分析と統合し、これらのキャンペーンのインプレッションをリアルタイムで測定することができる。 
 
-### 国勢調査 - 顧客データプラットフォーム
+### Census - 顧客データプラットフォーム
 
-[Census]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/census/) では、エンジニアリング部門の継続的なサポートなしに、顧客データを同期させることで、カスタマーサクセス、セールス、マーケティングの各チームをすべて同じページに保つことができます。
+[Censusは]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/census/)、カスタマーサクセスチーム、セールスチーム、マーケティングチームの全員が、顧客データを同期させることで、開発部門からの継続的な支援を受けることなく、顧客データを維持することを可能にする。
 
-### Treasure Data - 顧客データプラットフォーム
+### トレジャーデータ - 顧客データプラットフォーム
 
-[Treasure Data]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/treasure_data/) は、データ、インサイト、エンゲージメントを調和させ、完全に一体化させることで、関連性の高い顧客体験を推進します。マーケティング、セールス、カスタマーサービスを含むCXチームは、実用的な指標を武器に、支出を効果的に最適化し、カスタマージャーニー全体にわたってオムニチャネルインタラクションをパーソナライズすることができます。 
+[トレジャーデータは]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/treasure_data/)、データ、インサイト、エンゲージメントを完璧に調和させることで、適切なカスタマーエクスペリエンスの推進を支援する。アクション可能な指標を武器に、マーケティング、セールス、カスタマーサービスを含むCXチームは、効果的にコストを最適化し、カスタマージャーニー全体にわたってオムニチャネル・インタラクションをパーソナライズすることができる。 
 
-## Phrasee - A/Bテスト
+## ジャカード - ABテスト
 
-Brazeのカスタマーエンゲージメントは、マルチチャネルマーケティングを通じて関係を構築します。[BrazeはPhrasee]({{site.baseurl}}/partners/data_and_infrastructure_agility/ab_testing/phrasee/)と連携することで、ブランドボイスに合わせてカスタマイズされたチャネルにブランド言語を大規模に展開することができます。Phraseeのディープラーニングエンジンは、テストを処理し、結果を監視し、学習した内容に基づいて新しい言語を生成します。 
+Brazeのカスタマーエンゲージメントでは、マルチチャネルマーケティングを通じてリレーションシップマーケティングを展開。[Jacquardと]({{site.baseurl}}/partners/data_and_infrastructure_agility/ab_testing/jacquard/)協力することで、Brazeはブランド・ボイスに合わせてカスタマイズされたチャネルに、ブランド・ランゲージを大規模に展開することができる。ジャカードのディープラーニング・エンジンはテストを処理し、結果を監視し、学習した内容に基づいて新しい言語を生成する。 

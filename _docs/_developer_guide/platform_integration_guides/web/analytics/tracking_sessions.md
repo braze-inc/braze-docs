@@ -34,7 +34,7 @@ If you have set a session timeout, then the session semantics all extend to that
 
 To detect sessions via your user, find your user on the dashboard and navigate to **App Usage** on the user profile. You can confirm that session tracking is working by checking that the session metric increases when you would expect it to.
 
-![A user profile component showing how many sessions have occurred, when the app was first used, and when it was last used.][session_tracking_7]
+![A user profile component showing how many sessions have occurred, when the app was first used, and when it was last used.][session_tracking_7]{: style="max-width:50%"}
 
 [session_tracking_1]: {{ site.baseurl }}/developer_guide/platform_integration_guides/swift/initial_sdk_setup/overview/#customizing-braze-on-startup
 [session_tracking_3]: {{ site.baseurl }}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/#step-2-configure-the-braze-sdk-in-appboyxml

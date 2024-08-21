@@ -3,12 +3,12 @@ nav_title: AI Item Recommendations
 article_title: AI Item Recommendations
 page_order: 15
 alias: "/ai_item_recommendations/"
-description: "This reference article covers how to create an AI Item Recommendation for items in a catalog."
+description: "This reference article covers how to create an AI item recommendation for items in a catalog."
 ---
 
 # AI item recommendations
 
-> Learn how to create an AI Item Recommendation for items in a catalog.
+> Learn how to create an AI item recommendation for items in a catalog.
 
 You can use AI item recommendations to calculate the most popular products or create personalized AI recommendations for a specific [catalog]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/). After you create your recommendation, you can use personalization to insert those products into your messages.
 
@@ -18,7 +18,7 @@ You can use AI item recommendations to calculate the most popular products or cr
 - You must have purchase or event data on Braze (custom events or the purchase object) that includes a reference to unique product IDs stored in a catalog.
 - AI Personalized recommendations work best with hundreds or thousands of items and typically at least 30,000 users with purchase or interaction data. This is only a rough guide and can vary. The other recommendation types can work with less data.
 
-## Creating an AI Item Recommendation
+## Creating an AI item recommendation
 
 To create an item recommendation:
 
@@ -51,9 +51,9 @@ To avoid suggesting items that a user has already purchased or interacted with, 
 
 ![][2-3]
 
-This setting makes sure that items a user has already bought or interacted with are not surfaced in messages again, provided the recommendation has been updated recently. Items purchased or interacted with between recommendation updates may still appear. For the free version of Item Recommendations, updates happen weekly. For AI Item Recommendations Pro, updates happen every 24 hours.
+This setting makes sure that items a user has already bought or interacted with are not surfaced in messages again, provided the recommendation has been updated recently. Items purchased or interacted with between recommendation updates may still appear. For the free version of item recommendations, updates happen weekly. For the pro version of AI item recommendations, updates happen every 24 hours.
 
-For example, when using AI Item Recommendations Pro, if a user purchases something and then receives a marketing email within 30 minutes, the item they just purchased might not be excluded from the email in time. However, any messages sent after 24 hours won't include that item.
+For example, when using the pro version of AI item recommendations, if a user purchases something and then receives a marketing email within 30 minutes, the item they just purchased might not be excluded from the email in time. However, any messages sent after 24 hours won't include that item.
 
 #### Step 2b: Select a catalog
 
@@ -284,17 +284,18 @@ After your recommendation finishes training, you can personalize your messages w
 5. For **Information to Display**, select which fields from the catalog should be included for each item. The values for these fields for each item will be drawn from the catalog associated with this recommendation.
 6. Click the **Copy** icon and paste the Liquid wherever it needs to go in your message.
 
-## AI Item Recommendations tiers
+## AI item recommendations tiers
 
-The following table describes the differences between the free and pro version of AI Item Recommendations:
+The following table describes the differences between the free and pro version of AI item recommendations:
 
-| Area                   | Free version                          | AI Item Recommendations Pro              |
+| Area                   | Free version                          | Pro version            |
 | :---------------------- | ------------------------------------- | :--------------------------------------- |
-| Item update frequency   | Weekly                                | Daily                                    |
+| User update frequency<sup>1</sup>   | Weekly                                | Daily                                    |
 | Model retraining frequency  | Monthly                               | Monthly                                   |
-| Maximum recommendations | 1 recommendation per type<sup>1</sup> | 100 recommendations per type<sup>1</sup> |
+| Maximum recommendations | 1 recommendation per type<sup>1</sup> | 100 recommendations per type<sup>2</sup> |
 
-<sup>1. Available recommendation types are AI Personalized, Most recent, and Most popular.</sup>
+<sup>1. This is the frequency at which user-specific item recommendations are updated (all models except Most Popular items, which updates when the model retrains). For example, if a user purchases an item recommended based on AI item recommendations, their recommended items will be updated according to this frequency</sup>
+<sup>2. Available recommendation types are AI Personalized, Most recent, and Most popular.</sup>
 
 ## Frequently asked questions
 

@@ -194,7 +194,7 @@ hide_toc: true
     textarea {
       border-radius: 0 !important;
     }
-    #doc_pm_label, #doc_verify_label {
+    #doc_verify_label {
       font-size: 12pt !important;
       font-family: Sailec W00 Regular,Arial,sans-serif;
     }
@@ -431,12 +431,17 @@ hide_toc: true
                 <label for="doc_name" id="doc_name_label">Name</label>
                 <input type="text" name="Name" id="doc_name" maxlength="80" required="required" value="" placeholder="Enter your name" class="form-control" />
               </div>
-              <div class="form-group" id="doc_pm_div">
+              <div class="form-group" id="doc_urgent_div">
               <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="Y" id="doc_is_pm" name="Request_Is_PM">
-                <label class="form-check-label" for="doc_is_pm" id="doc_pm_label">
-                <span></span> I'm a product manager
-              </label>
+                <label class="form-check-label" for="doc_urgent" style="display: block;">
+                Request Type
+                </label>
+              <select id="doc_urgent" name="Request_Type" class="drop-down-sel">
+              <option value="urgent">Urgent: Raise smoke on the Doc Site or request a high-priority change</option>
+              <option value="feature_release">Feature update: Communicate new or updated product features with Tech Writing and Braze Learning</option>
+              <option value="standard" selected="selected">Standard: I have a suggestion, question about, or update to an article</option>
+              </select>
+
               </div>
               </div>
               <div class="form-group">
@@ -458,21 +463,6 @@ hide_toc: true
                 <label for="doc_request" id="doc_request_label">Request summary</label>
                 <div class="sublabel">This is the name for your ticket</div>
                 <input type="text" name="Request_Subject" id="doc_request" maxlength="180" required="required" value="" placeholder="Enter your request" class="form-control" />
-              </div>
-
-              <div class="form-group" id="doc_urgent_div">
-              <div class="form-check">
-                <label class="form-check-label" for="doc_urgent" style="display: block;">
-                Priority
-                </label>
-              <select id="doc_urgent" name="Request_Urgent" class="drop-down-sel">
-              <option value="urgent">Urgent — There's an urgent problem that is immediately blocking my work</option>
-              <option value="major">Major — There's a major issue and I can't find a workaround</option>
-              <option value="minor" selected="selected">Minor — There's a minor issue but I have a workaround</option>
-              <option value="trivial" selected="selected">Trivial — I have a question or suggestion</option>
-              </select>
-
-              </div>
               </div>
 
               <div class="form-group" id="doc_request_url">

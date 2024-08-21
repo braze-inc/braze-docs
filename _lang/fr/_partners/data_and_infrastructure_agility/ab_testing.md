@@ -8,9 +8,6 @@ page_type: landing
 search_tag: Partenaire
 description: "Cette page d’accueil répertorie les partenaires de Braze (Alloys) qui offrent des tests A/B supplémentaires sur leurs plateformes."
 
-partner_api: "https://www.braze.com/api/v1/partners"
-partner_path: "https://www.braze.com/product/alloys/partners/"
-
 partner_top_header: "Test A/B"
 
 valid_partner_list:

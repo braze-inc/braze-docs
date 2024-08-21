@@ -3,38 +3,38 @@ nav_title: 12月
 page_order: 1
 noindex: true
 page_type: update
-description: "この記事には2020年12月のリリースノートが含まれています。"
+description: "この記事には、2020年12月のリリースノートが含まれている。"
 ---
 # 2020年12月
 
-## 現在のメッセージングイベントプロパティへの更新
+## Currents メッセージングイベントプロパティの更新
 
-Currents メールメッセージエンゲージメントイベント内に、トラッキングプロパティ`ip_pool` が追加されました。トラッキングプロパティ`bounce_reason` および`bounce_code` も`users.messages.email.Bounce` および`users.messages.email.SoftBounce` イベントに追加されました。<br>完全なリストについては、[message engagement events glossary]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events/)をチェックしてください。
+Currentsのメールメッセージングエンゲージメントイベント内に、トラッキングプロパティ`ip_pool` が追加された。トラッキング・プロパティ`bounce_reason` と`bounce_code` は、`users.messages.email.Bounce` と`users.messages.email.SoftBounce` イベントにも追加された。<br>全リストは、[メッセージ・エンゲージメント・イベント用語集を]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events/)参照のこと。
 
-## Predictive Churn FAQ
+## 解約予測FAQ
 
-よくある質問の記事が、既存のPredictive Churn ドキュメントに追加されました。これらの潜在的なエラー、タイミングの明確化、およびデータに関する考慮事項の詳細については、[Predictive Churn FAQ]({{site.baseurl}}/user_guide/predictive_suite/predictive_churn/prediction_faq/)を参照してください。
+既存の解約予測ドキュメントに「よくある質問」が追加された。このような潜在的エラー、タイミングの明確化、データに関する考察の詳細については、[解約予測FAQを]({{site.baseurl}}/user_guide/predictive_suite/predictive_churn/prediction_faq/)ご覧いただきたい。
 
-## CSV およびAPI エクスポートのトラブルシューティングドキュメント
+## CSVおよびAPIエクスポートのトラブルシューティング・ドキュメント
 
-一般的なCSV およびAPI エラーのトラブルシューティングドキュメントが、Braze のドキュメントに追加されました。これらのエラーおよびよくある質問の詳細については、CSV およびAPI エクスポートの[トラブルシューティングの]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/) ドキュメントを参照してください。 
+Brazeのドキュメントに、よくあるCSVやAPIのエラーを詳しく説明したトラブルシューティングのドキュメントが追加された。これらのエラーやよくある質問については、CSVおよびAPIエクスポートの[トラブルシューティング・]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/)ドキュメントを参照されたい。 
 
 ## EduMeパートナーシップ
 
-EduMeは、モバイルベースのトレーニングツールで、成功するために必要な知識を従業員に提供します。Braze でConnected Content を使用して、EduMe のレッスンやコースに従業員や顧客がアクセスできるようにします。これらのコンテンツには、ブラウザからシームレスにアクセスできるようになり、グループとして、またはEduMeレポート機能を使用して個人として、その進捗状況をフォローすることができます。詳細については、[EduMe]({{site.baseurl}}/partners/channel_extensions/learning/edume/) のドキュメントを参照してください。
+EduMeはモバイルベースのトレーニングツールで、従業員が成功するために必要な知識を提供する。Brazeのコネクテッドコンテンツを使用して、従業員や顧客がEduMeのレッスンやコースにアクセスできるようにする。生徒はブラウザからシームレスにこのコンテンツにアクセスすることができ、EduMeのレポート機能を使って、グループまたは個人としての学習の進捗状況を確認することができる。詳しくは[EduMeの]({{site.baseurl}}/partners/channel_extensions/learning/edume/)ドキュメントをご覧いただきたい。
 
-## Pypestreamパートナーシップ
+## パイストリームとのパートナーシップ
 
-Pypestream はフルスタックの会話型AI プラットフォームで、ブランドを"always-on"デジタルエンティティに変換するための特許取得済みのオールインワン・クラウド・メッセージを提供します。Braze-Pypestreamのパートナーシップにより、ブランドは、最初のアウトリーチから会話体験へ、そして知的なリターゲットを介してオムニチャネルのフォローアップまで、エンドツーエンドの顧客ライフサイクルをシームレスに調整することができる。詳細については、[Pypestream]({{site.baseurl}}/partners/advertising_technologies/attribution/pypestream/) のドキュメントを参照してください。
+Pypestreamはフルスタックの会話AIプラットフォームで、特許を取得したオールインワンのクラウドメッセージングを提供し、ブランドを「常時接続」のデジタルエンティティに変える。Pypestreamとのパートナーシップにより、ブランドは最初のアウトリーチから会話型エクスペリエンス、そしてインテリジェントリターゲティングによるオムニチャネルフォローまで、エンドツーエンドのカスタマーライフサイクルをシームレスに編成することができる。詳細については、[Pypestreamの]({{site.baseurl}}/partners/advertising_technologies/attribution/pypestream/)ドキュメントをチェックしてほしい。
 
-## ダイスパッチ・パートナーシップ
+## Dyspatchパートナーシップ
 
-Dyspatch では、直感的なドラッグアンドドロップメールビルダーを使用して、コードを書く必要なく、美しく、レスポンシブで、魅力的なメールを作成します。チームと協力して、Dyspatch内で電子メールを作成して承認し、Braze内で使用するためにアップロードしましょう。これらはすべて2つのステップで行われます!詳細については、[Dyspatch]({{site.baseurl}}/partners/channel_extensions/creative_and_personalization/email_orchestration/dyspatch/) のドキュメントを参照してください。
+Dyspatchでは、ドラッグ＆ドロップで直感的に操作できるメールビルダーを使用し、コードを記述することなく、美しくレスポンシブでエンゲージメントの高いメールを作成することができる。チームと協力してDyspatchでメールを作成・承認し、アップロードしてBrazeで使用する！詳しくは[Dyspatch]({{site.baseurl}}/partners/channel_extensions/creative_and_personalization/email_orchestration/dyspatch/)ドキュメントを参照されたい。
 
-## ラダースタック社との提携
+## RudderStackパートナーシップ
 
-RudderStack は、オープンソースのCustomer Data Infrastructure で、顧客イベントデータを収集し、希望するデータウェアハウスや、Braze などの数十の他の分析プロバイダにルーティングします。これはエンタープライズ対応で、イベントデータを即座に処理するための堅牢なトランスフォーメーションフレームワークを提供します。詳細については、[RudderStack]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/rudderstack/#rudderstack) のドキュメントを参照してください。
+RudderStackは、顧客イベントデータを収集し、お好みのデータウェアハウスやBrazeなどの数多くの分析プロバイダーにルーティングするためのオープンソースの顧客データインフラである。エンタープライズ対応で、イベントデータをその場で処理するための堅牢な変換フレームワークを提供する。詳しくは[RudderStackの]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/rudderstack/#rudderstack)ドキュメントをご覧いただきたい。
 
 ## ジェビット・パートナーシップ
 
-Jebbit は、ユーザーがファーストパーティデータをキャプチャするための魅力的な体験を構築できるPaaS です。Jebbit はBraze と提携しており、Jebbit キャンペーンからユーザのメールと属性をユーザデータとしてリアルタイムでBraze に渡すことができます。このデータは、パーソナライズされたメールキャンペーンやトリガーなどのマーケティングイニシアチブの推進に活用できます。詳細については、[Jebbit]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/jebbit/#jebbit) のドキュメントを参照してください。
+Jebbitは、ファーストパーティデータを取得するためのユーザー向けエンゲージメント体験を構築できるPaaSだ。JebbitはBrazeと提携し、JebbitキャンペーンのユーザーメールやアトリビューションをユーザーデータとしてリアルタイムでBrazeに渡すことができる。このデータは、パーソナライズされたメールキャンペーンやトリガーなどのマーケティング施策に活用できる。詳しくは[Jebbitの]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/jebbit/#jebbit)ドキュメントを参照されたい。

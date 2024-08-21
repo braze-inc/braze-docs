@@ -34,7 +34,7 @@ noindex: true
 ---
 <br>
 
-{% multi_lang_include archive/objective-c-deprecation-notice.md %}
+{% multi_lang_include deprecations/objective-c.md %}
 
 Braze iOS SDK をインストールすると、基本的な分析機能 (セッション処理) と基本的なアプリ内メッセージが提供されます。追加のチャネルと機能のために統合をさらにカスタマイズする必要があります。<br> <br> Braze iOS SDK は、CocoaPods、Carthage、Swift Package Manager、または手動統合を使用してインストールまたは更新できます。<br> <br> さらに、Braze iOS SDK はRubyMotion アプリを完全にサポートしています。
 

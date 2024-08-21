@@ -36,16 +36,16 @@ Each tile shows the rate metric first, followed by the count metric (with the ex
 | Sends | Count | Total number of sends across each day in the date range |
 | Delivery rate | Rate | (Total number of deliveries across each day in the date range) / (Total number of sends across each day in the date range) |
 | Bounce rate | Rate | (Total number of bounces across each day in the date range) / (Total number of sends across each day in the date range) |
-| Unsubscribe rate | Rate | (Total number of unique unsubscribes across each day in the date range) / (Total number of deliveries for date range)<br><br>This uses unique unsubscribes, which is also used in Campaign Analytics, Overview, and Report Builder. |
-| Unique open rate | Rate | (Total number of unique opens across each day in the date range) / (Total number of deliveries for date range) |
+| Unsubscribe rate | Rate | (Total number of unique unsubscribes across each day in the date range) / (Total number of deliveries for a date range)<br><br>This uses unique unsubscribes, which is also used in Campaign Analytics, Overview, and Report Builder. |
+| Unique open rate | Rate | (Total number of unique opens across each day in the date range) / (Total number of deliveries for a date range) |
 | Other opens rate | Rate | (Total number of total other opens across each day in the date range) / (Total number of deliveries for date range)<br><br>Other opens includes emails that haven't been identified as machine opens, such as when a user opens an email. This metric is non-unique and is a sub-metric of total opens.  |
-| Unique click rate | Rate | (Total number of unique clicks across each day in the date range) / (Total number of deliveries for date range) |
+| Unique click rate | Rate | (Total number of unique clicks across each day in the date range) / (Total number of deliveries for a date range) |
 | Unique click to open rate | Rate | (Total number of unique clicks across each day in the date range) / (Total number of unique opens across each day in the date range) |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 ## Email Insights dashboard 
 
-The Email Insights dashboard helps you track and better understand where and when your customers are interacting with your emails. These reports can provide rich and granular data for marketers on how to optimize your emails to drive greater engagement. To access the dashboard, go to **Analytics** > **Email Performance** > **Email Insights**.
+The Email Insights dashboard helps you track and better understand where and when your customers are interacting with your emails. These reports can provide rich and granular data on how to optimize your emails to drive greater engagement. The Email Insights dashboard includes up to the last six months of data. To access the dashboard, go to **Analytics** > **Email Performance** > **Email Insights**.
 
 ### Engagement by Device
 
@@ -148,11 +148,11 @@ This means Braze recorded zero for that particular metric during the time frame 
 
 #### If a metric displays "N/A"
 
-This means that while Braze recorded positive counts for a particular metric for the time frame you've selected, the denominator for the rate calculation (either sends or deliveries in most cases) was zero. This can occur when emails are sent out on one day and opens and clicks are recorded the following days, if your selected time frame does not include the date the messages were sent.
+This means that while Braze recorded positive counts for a particular metric for the time frame you've selected, the denominator for the rate calculation (either sends or deliveries in most cases) was zero. This can occur when emails are sent out on one day and opens and clicks are recorded the following days if your selected time frame does not include the date the messages were sent.
 
 #### If a metric displays "--"
 
-This means Braze hasn't recorded any data for that metric during the time period you selected. If you haven't set up or sent any emails yet, learn more about how to do so in our dedicated [Email]({{site.baseurl}}/user_guide/message_building_by_channel/email) section.
+This means Braze hasn't recorded any data for that metric during the time you selected. If you haven't set up or sent any emails yet, learn more about how to do so in our dedicated [Email]({{site.baseurl}}/user_guide/message_building_by_channel/email) section.
 
 --->
 

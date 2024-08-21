@@ -3,14 +3,12 @@ nav_title: Creating a Catalog
 article_title: Creating a Catalog
 alias: "/catalogs/"
 page_order: 1
-description: "This reference article covers how to create and use catalogs to reference non-user data in your Braze campaigns through Liquid."
+description: "This reference article covers how to create catalogs that reference non-user data in your Braze campaigns through Liquid."
 ---
 
 # Creating a catalog
 
-> With catalogs, you can reference non-user data in your Braze campaigns through [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid). 
-
-Creating a catalog involves importing a CSV file of non-user data into Braze. This allows you to then access that information to enrich your messages. You can bring in any type of data into a catalog. This data is typically some sort of metadata from your company such as product information for an ecommerce business, or course information for an education provider.
+> Creating a catalog involves importing a CSV file of non-user data into Braze. This allows you to then access that information to enrich your messages. You can bring in any type of data into a catalog. This data is typically some sort of metadata from your company such as product information for an ecommerce business, or course information for an education provider.
 
 Some common use cases for catalogs include:
 
@@ -35,7 +33,7 @@ Need more space to accommodate for your CSV files? Contact your Braze account ma
 
 Note these guidelines when creating your CSV file. The first column of the CSV file must be a header of `id`, and each item's `id` must be unique. All other column names must be unique. Additionally, the following limitations apply to catalog CSV files:
 
-- Maximum of 500 fields (columns)
+- Maximum of 1,000 fields (columns)
 - Maximum field (column) name of 250 characters
 - Maximum 100&nbsp;MB for all CSV files combined across your company (Free)
 - Maximum CSV file size of 2&nbsp;GB (Pro)
@@ -70,10 +68,13 @@ Click **Create New Catalog**, then choose to either **Upload CSV** or **Create i
 This data type cannot be edited after you set up your catalog.
 {% endalert %}
 
-Note that you cannot use templates in a catalog name. For example, you cannot have the following as the catalog name, or the call will fail.
+You can also use templates in a catalog name. For example, you can use the following:
 {% raw %}
 ```liquid
-{% catalog_items custom_attribute.${catalog} item1, item2 %}
+{% assign language = "content_spanish" %}
+
+{% catalog_items language fall_campaign %}
+{{ items[0].body }}
 ```
 {% endraw %}
 
@@ -122,13 +123,13 @@ For this tutorial, we're using a catalog that lists two games, their cost, and a
   <tr>
     <td class="tg-0pky">1234</td>
     <td class="tg-0pky">Tales</td>
-    <td class="tg-0pky">7.49 USD</td>
+    <td class="tg-0pky">7.49</td>
     <td class="tg-0pky">https://picsum.photos/200</td>
   </tr>
   <tr>
     <td class="tg-0pky">1235</td>
     <td class="tg-0pky">Regeneration</td>
-    <td class="tg-0pky">22.49 USD</td>
+    <td class="tg-0pky">22.49</td>
     <td class="tg-0pky">https://picsum.photos/200</td>
   </tr>
 </tbody>
@@ -146,51 +147,11 @@ Next, we'll name this catalog "games_catalog" and click the **Process Catalog** 
 
 ![][11]{: style="max-width:85%;"}
 
-Note that you won't be able to edit this name after the catalog is created. You can delete a catalog and re-upload an updated version using the same catalog name. 
+Note that you won't be able to edit this name after the catalog is created. You can delete a catalog and re-upload an updated version using the same catalog name.
 
-## Using catalogs in a message
+After creating the catalog, you can begin referencing the [catalog in a campaign]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/using_catalogs/).
 
-You can use catalogs in all of your messaging channels, including anywhere in the Drag & Drop Editor where Liquid is supported.
-
-### Step 1: Add personalization type {#step-one-personalization}
-
-In the message composer of your choice, click the <i class="fas fa-plus-circle"></i> plus icon to open the **Add Personalization** modal and select **Catalogs Items** for the **Personalization Type**. Then, select your **Catalog Name**. Using our previous example, we'll select the "Games" catalog.
-
-![][2]
-
-We can immediately see the following Liquid preview:
-
-{% raw %}
-```liquid
-{% catalog_items Games %}
-```
-{% endraw %}
-
-### Step 2: Select catalog items
-
-Next, it's time to add your catalog items! Using the dropdown, select the catalog items and the information to display. This information corresponds to the columns in your uploaded CSV file used to generate your catalog.
-
-For example, to reference the title and price of our Tales game, we could select the `id` for Tales (1234) as the catalog item and request `title` and `price` for the displayed information.
-
-{% raw %}
-```liquid
-{% catalog_items Games 1234 %}
- 
-Get {{ items[0].title }} for just {{ items[0].price }}!
-```
-{% endraw %}
-
-This renders as the following:
-
-> Get Tales for just 7.49 USD!
-
-## Catalogs via API
-
-You can leverage our [Catalogs endpoints]({{site.baseurl}}/api/endpoints/catalogs/) to manage the growing data and information.
-
-### Managing catalogs
-
-You can create a catalog using the [Create catalogs endpoint]({{site.baseurl}}/api/endpoints/catalogs/catalog_management/synchronous/post_create_catalog/).
+## Managing catalogs through API
 
 As you build more catalogs, you can also use the [List catalogs endpoint]({{site.baseurl}}/api/endpoints/catalogs/catalog_management/synchronous/get_list_catalogs/) to return a list of the catalogs in a workspace.
 
@@ -235,7 +196,7 @@ To do this, you'll use a Liquid `if` statement in a format like this:
 
 {% raw %}
 ```liquid
-{% catalog_items Test-list %}
+{% catalog_items Test-list 1234 %}
 {% if {{items[0].first-item}} == true %}
 Do this
 {% else %}
@@ -244,7 +205,7 @@ Do that
 ```
 {% endraw %}
 
-Note that you must declare the catalog list before using `if` statements. In the example above, `Test-list` is the catalog list.
+You must declare the catalog name before using `if` statements. In the example above, `Test-list` is the catalog name.
 
 #### Use case: Liquid `if` snippet
 
@@ -252,7 +213,7 @@ In this scenario, different messages will display if the custom attribute `venue
 
 {% raw %}
 ```liquid
-{% catalog_selection_items item-list selections %} 
+{% catalog_selection_items venue-list venue_selection %} 
 {% if items[0].venue_name.size > 10 %}
 Message if the venue name's size is more than 10 characters. 
 {% elsif items[0].venue_name.size < 10 %}
@@ -262,6 +223,8 @@ Message if the venue name's size is less than 10 characters.
 {% endif %}
 ```
 {% endraw %}
+
+Note that this scenario uses `catalog_selection_items` instead of `catalog_items`. This is because we're pulling items from a [selection]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/selections/), where `venue-list` is the catalog name and `venue_selection` is the selection. 
 
 ### Using images {#using-images}
 
@@ -316,7 +279,7 @@ Get {{ items[0].title }} now, for just {{ items[0].price }}!
 {% endraw %}
 
 Which will display as the following:
-> Get Tales now, for just 7.49 USD!
+> Get Tales now, for just 7.49!
 
 With templating, you can render a different catalog item for each user based on their individual custom attributes, event properties, or any other templatable field.
 
@@ -332,20 +295,22 @@ You can also manually piece together catalogs Liquid logic. However, note that i
 Liquid currently can't be used inside catalogs. If Liquid personalization is listed inside a cell in your catalog, the dynamic value won't render and only the actual Liquid will display.
 {% endalert %}
 
-## Managing catalogs
+You can leverage our [Catalogs endpoints]({{site.baseurl}}/api/endpoints/catalogs/) to manage the growing data and information. This includes the ability to create, edit, and delete catalog items, and to list catalog item details.
 
-As you create more catalogs, you can leverage the [Catalogs Endpoints]({{site.baseurl}}/api/endpoints/catalogs/) to manage the growing data and information. This includes the ability to create, edit, and delete catalog items, and to list catalog item details.
+For example, you can create a catalog using the [Create catalogs endpoint]({{site.baseurl}}/api/endpoints/catalogs/catalog_management/synchronous/post_create_catalog/). As you build more catalogs, you can also use the [List catalogs endpoint]({{site.baseurl}}/api/endpoints/catalogs/catalog_management/synchronous/get_list_catalogs/) to return a list of the catalogs in a workspace.
+
+In addition to managing your catalogs, you can also use asynchronous and synchronous endpoints to manage the catalog items. This includes the ability to edit and delete catalog items, and to list catalog item details. For example, if you want to edit an individual catalog item, you can use the [`/catalogs/catalog_name/items/item_id` endpoint]({{site.baseurl}}/api/endpoints/catalogs/catalog_items/synchronous/patch_catalog_item/).
 
 ## Catalog tiers {#tiers}
 
 The following table describes the differences between the free and pro version of catalogs:
 
-| Area | Free version | Catalogs Pro |
-|---|---|---|
-| CSV file size | Up to 100&nbsp;MB for all CSV files combined across your company | Up to 2&nbsp;GB for a single CSV file |
-| Characters limit for item value | Up to 5,000 characters in one value. For example, if you had a field labeled `description`, the maximum number of characters within the field is 5,000. | Up to 5,000 characters in one value. For example, if you had a field labeled `description`, the maximum number of characters within the field is 5,000. |
-| Characters limit for item column name | Up to 250 characters | Up to 250 characters |
-| Selections | Up to 30 selections per catalog | Up to 30 selections per catalog |
+| Area                                  | Free version                                                                                                                                            | Catalogs Pro                                                                                                                                            |
+| ------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| CSV file size                         | Up to 100&nbsp;MB for all CSV files combined across your company                                                                                        | Up to 2&nbsp;GB for a single CSV file                                                                                                                   |
+| Characters limit for item value       | Up to 5,000 characters in one value. For example, if you had a field labeled `description`, the maximum number of characters within the field is 5,000. | Up to 5,000 characters in one value. For example, if you had a field labeled `description`, the maximum number of characters within the field is 5,000. |
+| Characters limit for item column name | Up to 250 characters                                                                                                                                    | Up to 250 characters                                                                                                                                    |
+| Selections                            | Up to 30 selections per catalog                                                                                                                         | Up to 30 selections per catalog                                                                                                                         |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 ### Catalog storage
@@ -360,14 +325,12 @@ The storage size for the free version of catalogs is up to 100&nbsp;MB. You can 
 
 #### Catalogs Pro
 
-At a company level, the maximum storage for Catalogs Pro will be based on the size of catalog data: 5&nbsp;GB, 10&nbsp;GB, or 15&nbsp;GB. Note that the free version's storage (100&nbsp;MB) is included in each of these plans.
+At a company level, the maximum storage for Catalogs Pro is based on the size of catalog data. The storage size options are: 5&nbsp;GB, 10&nbsp;GB, or 15&nbsp;GB. Note that the free version's storage (100&nbsp;MB) is included in each of these plans.
 
 [1]: {% image_buster /assets/img_archive/catalog_CSV_upload.png %}
-[2]: {% image_buster /assets/img_archive/use_catalog_personalization.png %}
 [3]: {% image_buster /assets/img_archive/catalog_image_link1.png %}
 [4]: {% image_buster /assets/img_archive/catalog_image_link2.png %}
 [5]: {% image_buster /assets/img_archive/catalog_CSV_example.png %}
-[6]: {% image_buster /assets/img_archive/catalog_multiple_items.png %}
 [7]: {% image_buster /assets/img_archive/create_catalog_option.png %}
 [9]: {% image_buster /assets/img_archive/catalog_data_type.png %}
 [11]: {% image_buster /assets/img_archive/catalog_new_name.png %}

@@ -11,7 +11,7 @@ page_order: 3
 > Learn how to target users for Predictive Events after you have created an event prediction.
 
 {% alert note %}
-Preview and Demo Predictions will not allow users to be targeted for messaging, and the **Create Segment**, and **Create Campaign** buttons will be disabled. To purchase this functionality, contact your account manager.
+Preview and demo predictions will not allow users to be targeted for messaging, and the **Create Segment**, and **Create Campaign** buttons will be disabled. To purchase this functionality, contact your account manager.
 {% endalert %}
 
 ## Implementing filters {#filters}

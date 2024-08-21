@@ -5,9 +5,6 @@ alias: /partners/Partners/
 layout: partner_page
 search_tag: Partner
 
-partner_api: "https://www.braze.com/api/v1/partners"
-partner_path: "https://www.braze.com/product/alloys/partners/"
-
 partner_top_header: "テクノロジーパートナー"
 partner_top_text: "Alloys（盟友、親友、パートナー）のリストへようこそ！テクノロジーパートナーの Braze SDK への実装に役立つ技術ドキュメントを検索するのにご利用ください。<br> <br> Braze を使用して顧客体験とマーケティングを近代化する有力者のコミュニティである Firebrands への参加に関する情報をお探しの場合は、情報ページ<a href='https://brazefirebrands.splashthat.com/'>こちら</a> をご覧ください。"
 description: "このランディングページには、すべての Braze パートナーが含まれています。テクノロジーパートナーを Braze SDK に実装するのに役立つ技術文書を検索するのにご利用ください。"

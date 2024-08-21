@@ -35,8 +35,7 @@ Note that these notifications **will not persist** and will only be visible to t
 
 To test if your push implementation is successful, send a notification from the Braze dashboard as you would normally for an Android device.
 
-- **If the application is closed**: The push message will display a toast notification in the corner of the screen.
-![An Android TV displaying a push notification in the upper left corner of the screen.][11]
+- **If the application is closed**: The push message will display a toast notification on the screen.
 - **If the application is open**: You have the opportunity to display the message in your own hosted UI. We recommend following the UI styling of our Android Mobile SDK in-app messages.
 
 ## Additional information

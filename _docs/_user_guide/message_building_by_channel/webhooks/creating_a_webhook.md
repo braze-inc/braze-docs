@@ -145,7 +145,7 @@ After sending the test webhook, a dialog will appear with the response message. 
 {% tabs %}
 {% tab Campaign %}
 
-Next, build the remainder of your campaign. See the following sections for further details on how to best utilize our tools to build webhooks.
+Next, build the remainder of your campaign. See the following sections for further details on how to best use our tools to build webhooks.
 
 #### Choose delivery schedule or trigger
 
@@ -188,7 +188,7 @@ This description contains the time the error occurred, the app name, and the err
 
 If the message body is not clear enough regarding the source of the error, you should check the documentation of the API endpoint you're using. These typically provide an explanation of the error codes the endpoint uses as well as what they're typically caused by.
 
-Like other campaigns, Braze tracks the delivery of your webhook campaigns and conversions resulting from them. When the webhook request is sent, the receiving server will return a response code indicating what happened with the request. The following table summarizes the different responses the server may send, how they impact campaign analytics and whether, in the case of errors, Braze will try to redeliver the campaign:
+Like other campaigns, Braze tracks the delivery of your webhook campaigns and the conversions resulting from them. When the webhook request is sent, the receiving server will return a response code indicating what happened with the request. The following table summarizes the different responses the server may send, how they impact campaign analytics, and whether, in the case of errors, Braze will try to redeliver the campaign:
 
 | Response code | Marked as received? | Retries? |
 |---------------|-----------|----------|
@@ -206,7 +206,7 @@ Each webhook is allowed 90 seconds before it times out.
 
 ### IP allowlisting {#ip-allowlisting}
 
-When a webhook is sent from Braze, the Braze servers make network requests to our customers or third parties servers. With IP allowlisting, you can verify that Webhooks requests are actually coming from Braze, adding an additional layer of security.
+When a webhook is sent from Braze, the Braze servers make network requests to our customers or third-party servers. With IP allowlisting, you can verify that webhook requests are coming from Braze, adding a layer of security.
 
 Braze will send webhooks from the following IPs. The listed IPs are automatically and dynamically added to any API keys that have been opted-in for allowlisting.
 
@@ -262,12 +262,12 @@ If you're making a Braze-to-Braze webhook and using allowlisting, you should all
 
 ### Using webhooks with Braze partners {#utilizing-webhooks}
 
-There are many ways to utilize webhooks, and with our technology partners (Alloys), you can use webhooks to level up your communication directly with your customers and users.
+There are many ways to use webhooks, and with our technology partners (Alloys), you can use webhooks to level up your communication directly with your customers and users.
 
 Check out:
-* [Messenger]({{site.baseurl}}/partners/additional_channels/instant_chat/messenger/)
-* [Remerge]({{site.baseurl}}/partners/advertising_technologies/retargeting/remerge/)
-* [Lob.com]({{site.baseurl}}/partners/additional_channels/direct_mail/lob/)
+* [Messenger]({{site.baseurl}}/partners/message_orchestration/additional_channels/instant_chat/messenger/)
+* [Remerge]({{site.baseurl}}/partners/message_orchestration/additional_channels/retargeting/remerge)
+* [Lob.com]({{site.baseurl}}/partners/message_orchestration/additional_channels/direct_mail/lob)
 * And many more of our [technology partners]({{site.baseurl}}/partners/home/)!
 
 [14]: https://sendgrid.com/blog/whats-webhook

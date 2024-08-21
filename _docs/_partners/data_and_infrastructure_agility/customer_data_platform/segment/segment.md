@@ -233,7 +233,7 @@ Although user aliases are supported as an identifier in the Braze Cloud Mode (Ac
 | User alias | Cloud mode destinations |
 {: .reset-td-br-1 .reset-td-br-2}
 
-The Cloud Mode Actions destination offers a [create alias action](https://segment.com/docs/connections/destinations/catalog/braze-cloud-mode-actions/#create-alias) that can be used to create an alias-only user or add an alias to an existing `external_id` profile. The [Identify User Action](https://segment.com/docs/connections/destinations/catalog/braze-cloud-mode-actions/#identify-user) can be used alongside the Create Alias Action to merge an alias-only user with an `external_id` after one becomes available for the user. 
+The Cloud Mode (Actions) Destination offers a [Create Alias action](https://segment.com/docs/connections/destinations/catalog/actions-braze-cloud/#create-alias) that can be used to create an alias-only user or add an alias to an existing `external_id` profile. The [Identify User action](https://segment.com/docs/connections/destinations/catalog/actions-braze-cloud/#identify-user) can be used alongside the Create Alias action to merge an alias-only user with an `external_id` after one becomes available for the user. 
 
 It is also possible to engineer a workaround and use `braze_id` to send anonymous user data in cloud-mode. This requires manually including the user's `braze_id` in all your Segment API calls. You can learn more about how to set up this workaround in [Segment's documentation](https://segment.com/docs/connections/destinations/catalog/braze/#capture-the-braze_id-of-anonymous-users).
 
@@ -363,7 +363,7 @@ When passing user attribute data, check that you only pass values for attributes
 
 When you track an event, we will record that event as a [custom event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/#custom-events) using the name provided. 
 
-Metadata sent within the properties object of the track call will be logged in Braze as the custom event properties for the associated event. All [custom event property data types](https://www.braze.com/docs/user_guide/data_and_analytics/custom_data/custom_events/#custom-event-properties) are supported.
+Metadata sent within the properties object of the track call will be logged in Braze as the custom event properties for the associated event. All [custom event property data types]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/#custom-event-properties) are supported.
 
 In the [Web Mode Actions](https://segment.com/docs/connections/destinations/catalog/braze-web-device-mode-actions/#track-event) and [Cloud Mode Actions](https://segment.com/docs/connections/destinations/catalog/braze-cloud-mode-actions/#track-event) destinations, the above mappings can be set using the Track Event Action.
 

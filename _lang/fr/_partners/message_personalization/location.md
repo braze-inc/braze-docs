@@ -8,9 +8,6 @@ description: "Cette page d’accueil répertorie les partenaires de Braze (Alloy
 layout: partner_page
 search_tag: Partenaire
 
-partner_api: "https://www.braze.com/api/v1/partners"
-partner_path: "https://www.braze.com/product/alloys/partners/"
-
 partner_top_header: "Localisation contextuelle"
 
 valid_partner_list:

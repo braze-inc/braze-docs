@@ -436,7 +436,7 @@ You'll need the YouTube ID to embed a YouTube video. It appears after `v=` in th
 ```
 {% endraw %}
 
-To align right or left, and limit max width to 50% use the `align` parameter = `left` or `right`:
+To align right or left, and limit the maximum width to 50% use the `align` parameter = `left` or `right`:
 {% raw %}
 ```html
 {% multi_lang_include video.html id="[youtube_id]" align="left" source="youtube" %}
@@ -457,7 +457,7 @@ Loom Example:
 
 #### Featured Video Layout with Status Placement for Higher Resolution
 
-To use the featured video layout which places a static video on the left side for higher resolution display, add a `video_id` and a `video_type` (such as `youtube`) to the yaml header for the page. By default, `video_source` is set to `youtube`.
+To use the featured video layout which places a static video on the left side for higher resolution display, add a `video_id` and a `video_type` (such as `youtube`) to the YAML header for the page. By default, `video_source` is set to `youtube`.
 
 {% raw %}
 ```yaml
@@ -524,7 +524,7 @@ video_source: youtube
 {% endtab %}
 {% endtabs %}
 
-## Collapsible Content Test
+## Collapsible Content Test {#collapsible-content}
 {% tabs %}
 {% tab Styling %}
 {% details Click me to Expand %}

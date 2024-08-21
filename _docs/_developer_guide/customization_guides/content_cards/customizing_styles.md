@@ -14,7 +14,7 @@ platform:
 
 # Customizing Content Card styles
 
-> Braze Content Cards come with a default look and feel. This article covers styling options for your Content Cards to help you match your brand identity.
+> Braze Content Cards come with a default look and feel. This article covers styling options for your Content Cards to help you match your brand identity. For a basic overview of the types of customization options you have with Content Cards, see [Customization overview]({{site.baseurl}}/developer_guide/customization_guides/customization_overview). 
 
 ## Customizing styling
 
@@ -453,7 +453,7 @@ let viewController = BrazeContentCardUI.ViewController(braze: AppDelegate.braze)
 viewController.view.tintColor = .systemGreen
 ```
 
-However, if you wish to modify only the unviewed indicator, you can access the `unviewedIndicatorColor` property of your `BrazeContentCardUI.ViewController.Attributes` struct. If you utilize Braze `UITableViewCell` implementations, you should access the property before the cell is drawn.
+However, if you wish to modify only the unviewed indicator, you can access the `unviewedIndicatorColor` property of your `BrazeContentCardUI.ViewController.Attributes` struct. If you use Braze `UITableViewCell` implementations, you should access the property before the cell is drawn.
 
 For example, to set the color of the unviewed indicator to red:
 

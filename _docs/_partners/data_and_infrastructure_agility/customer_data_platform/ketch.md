@@ -55,7 +55,7 @@ A user can only see the marketing preference center when Ketch can confirm that 
 
 1. To configure the marketing preference identity, go to the **Settings** page in Ketch, and click  **Identity space**. You will need to either create a new identity space or edit an existing identity space to assign that identity space as the marketing preference identity. Check that the Ketch tag deployed on the property properly captures that identity space.
 2. Go to **Experience Server** > **Properties**, and edit the desired property. Under the data layer for that property, make sure to enable the custom identity space. Then, configure how the marketing preference identity is captured on this site.
-3. Once you have the identity space configured, test to see if the preference center appears by opening the preference center on the website where the Ketch tag has been deployed.
+3. After you have the identity space configured, test to see if the preference center appears by opening the preference center on the website where the Ketch tag has been deployed.
 
 
 [1]: {% image_buster /assets/img/ketch/ketch1.png %}

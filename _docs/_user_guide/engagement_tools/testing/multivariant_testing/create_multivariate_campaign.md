@@ -55,6 +55,10 @@ When viewing your results, you can compare the conversion rates of your variants
 Using a control group when determining winner by Opens or Clicks is not recommended. Because the control group won't receive the message, those users cannot perform any opens or clicks. Therefore, that group's conversion rate is 0% by definition and does not constitute a meaningful comparison to the variants.
 {% endalert %}
 
+#### Control groups with A/B testing
+
+When using rate limiting with an A/B test, the rate limit isn't applied to the control group in the same way as the test group, which is a potential source of time bias. Use appropriate conversion windows to avoid this bias.
+
 #### Control groups with Intelligent Selection
 
 The size of the control group for a campaign with [Intelligent Selection][1] is based on the number of variants. If each variant is sent to more than 20% of users, then the control group is 20% and the variants are split evenly across the remaining 80%. However, if you have enough variants that each variant is sent to less than 20% of users, then the control group must become smaller. When Intelligent Selection starts analyzing the performance of your test, the control group grows or shrinks based on the results.
@@ -110,7 +114,7 @@ For instance, while active users may have equal response rates to "This deal exp
 Additionally, when choosing which segment to run your test on, be sure to consider whether the size of that segment will be large enough for your test. In general, multivariate and A/B tests with more variants require a larger test group to achieve statistically significant results. This is because more variants will result in fewer users seeing each individual variant.
 
 {% alert tip %}
-As a guide, you likely need around 15,000 users per variant (including the control) to achieve 95% confidence in your test results. However, the exact number of users you need could be higher or lower than that depending on your particular case. For more exact guidance on variant sample sizes, consider referring to [Optimizely's Sample Size Calculator](https://www.optimizely.com/resources/sample-size-calculator/).
+As a guide, you likely need around 15,000 users per variant (including the control) to achieve 95% confidence in your test results. However, the exact number of users you need could be higher or lower than that depending on your particular case. For more exact guidance on variant sample sizes, consider referring to a [sample size calculator](https://www.calculator.net/sample-size-calculator.html).
 {% endalert %}
 
 ### Bias and randomization

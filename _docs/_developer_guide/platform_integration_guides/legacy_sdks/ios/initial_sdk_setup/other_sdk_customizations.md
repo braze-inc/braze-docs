@@ -8,7 +8,7 @@ page_order: 3
 noindex: true
 ---
 
-{% multi_lang_include archive/objective-c-deprecation-notice.md %}
+{% multi_lang_include deprecations/objective-c.md %}
 
 # Other SDK customizations
 
@@ -101,7 +101,7 @@ Beginning in Swift SDK v5.7.0, the IDFV field can optionally be disabled, and in
 
 ## Optional IDFA collection
 
-IDFA Collection is optional within the Braze SDK and disabled by default. IDFA Collection is only required within Braze if you intend to utilize our [install attribution integrations][21]. If you opt to store your IDFA, we will store it free of charge, so you may take advantage of these options immediately upon release without additional development work.
+IDFA Collection is optional within the Braze SDK and disabled by default. IDFA Collection is only required within Braze if you intend to use our [install attribution integrations][21]. If you opt to store your IDFA, we will store it free of charge, so you may take advantage of these options immediately upon release without additional development work.
 
 As a result, we recommend continuing to collect the IDFA if you meet any of the following criteria:
 

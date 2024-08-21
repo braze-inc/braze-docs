@@ -34,7 +34,7 @@ Braze.requestContentCardsRefresh();
 ```
 
 {% alert important %}
-If you choose to build your own UI to display cards, you must call `logContentCardImpression` in order to receive analytics for those cards.
+If you choose to build your own UI to display cards, you must call `logContentCardImpression` in order to receive analytics for those cards. This includes `control` cards, which must be tracked even though they are not displayed to the user.
 {% endalert %}
 
 You can use these additional methods to build a custom Content Cards Feed within your app:
@@ -42,8 +42,8 @@ You can use these additional methods to build a custom Content Cards Feed within
 | Method                                   | Description                                                                                            |
 | ---------------------------------------- | ------------------------------------------------------------------------------------------------------ |
 | `launchContentCards()`                   | Launches the Content Cards UI element.                                                                 |
-| `requestContentCardsRefresh()`           | Requests the latest Content Cards from the Braze SDK server.                                           |
-| `getContentCards()`                      | Retrieves Content Cards from the Braze SDK. This will return the latest list of cards from the server. |
+| `requestContentCardsRefresh()`           | Requests the latest Content Cards from the Braze SDK server. The resulting list of cards is passed to each of the previously registered [content card event listeners](#customization). |
+| `getContentCards()`                      | Retrieves Content Cards from the Braze SDK. This returns a promise that resolves with the latest list of cards from the server. |
 | `getCachedContentCards()`                | Returns the most recent Content Cards array from the cache.                                            |
 | `logContentCardClicked(cardId)`          | Logs a click for the given Content Card ID. This method is used only for analytics. To execute the click action, call `processContentCardClickAction(cardId)` in addition.                                                        |
 | `logContentCardImpression(cardId)`       | Logs an impression for the given Content Card ID.                                                      |
@@ -69,7 +69,11 @@ A sample implementation of this can be found in BrazeProject within the [React N
 
 The Content Cards data model is available in the React Native SDK. For a full reference of the Content Card data model, see the [Android][6] and [iOS][7] documentation.
 
-The Braze React Native SDK has three unique Content Cards card types that share a base model: **image only**, **captioned image**, and **classic**. Each type inherits common properties from a base model and has the following additional properties.
+The Braze React Native SDK has three unique Content Cards card types that share a base model: **image only**, **captioned image**, and **classic**.
+
+There is also a special **control** card type, which is returned to users that are in the control group for a given card.
+
+Each type inherits common properties from a base model and has the following additional properties.
 
 ### Base Content Card model properties
 
@@ -137,18 +141,18 @@ Classic cards have a title, description, and an optional image on the left of th
 
 For a full reference of the classic (text announcement) Content Card, see the [Android][14] and [iOS][15] documentation. For a full reference of the classic image (short news) card, see the [Android][16] and [iOS][17] documentation.
 
+### Control Content Card model properties
+
+Control cards include all of the base properties, with a few important differences. Most importantly:
+
+- The `isControl` property is guaranteed to be `true`.
+- The `extras` property is guaranteed to be empty.
+
+For a full reference of the control card, see the [Android][18] and [iOS][19] documentation.
+
 ## GIF Support
 
-The Braze React Native SDK allows you to incorporate animated GIFs into your Content Cards, with distinct implementation methods for Android and iOS platforms.
-
-{% tabs %}
-{% tab Android %}
-The Android SDK requires an external image library to display animated GIFs with Content Cards. For more details, refer to the guide for [GIFs]({{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/GIFs/).
-{% endtab %}
-{% tab iOS %}
-The Swift SDK does not provide animated GIF support by default. Support can be added by wrapping a third party or your own view in an instance of `GIFViewProvider`. For more details on GIF support, refer to the tutorial for [GIF Support](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/c3-gif-support/).
-{% endtab %}
-{% endtabs %}
+{% multi_lang_include wrappers/gif_support/content_cards.md %}
 
 [1]: https://github.com/braze-inc/braze-react-native-sdk
 [2]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/data_models/
@@ -167,3 +171,5 @@ The Swift SDK does not provide animated GIF support by default. Support can be a
 [15]: https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcard/classic-swift.struct
 [16]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-short-news-card/index.html
 [17]: https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcard/classicimage-swift.struct
+[18]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-control-card/index.html
+[19]: https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcard/control-swift.struct

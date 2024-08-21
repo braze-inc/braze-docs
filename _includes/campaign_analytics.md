@@ -219,7 +219,7 @@ Typically around 10,000 delivered emails are required for the statistic to be co
 
 ###### Limitations
 
-Estimated Real Open Rate is only available in campaigns, and is not reported in Current events. This metric is not retroactively calculated for campaigns launched before November 14, 2023.
+Estimated Real Open Rate is only available in campaigns, and is not reported in Current events. This metric is only retroactively calculated for active campaigns launched before November 14, 2023.
 
 {% elsif include.channel == "in-app message" %}
 
@@ -299,6 +299,7 @@ Here is a breakdown of some key metrics you may see while reviewing your message
 | Rejections | The SMS has been rejected by the carrier. This can happen for several reasons, including carrier content filtering, availability of the destination device or the phone number is no longer in service. As a Braze customer, rejections are charged toward your SMS allotment. |
 | Opt-Out | A user replied to your message with an [opt-out keyword]({{site.baseurl}}/user_guide/message_building_by_channel/sms/keywords/keyword_handling/#default-opt-in-opt-out-keywords) and was unsubscribed from your SMS program. A user reply is measured anytime a user sends an inbound message within four hours of receiving your message. |
 | Help | A user replied to your message with a [HELP keyword]({{site.baseurl}}/user_guide/message_building_by_channel/sms/keywords/keyword_handling/#default-opt-in-opt-out-keywords) and was dispatched a HELP auto-response. A user reply is measured anytime a user sends an inbound message within four hours of receiving your message. |
+| Total Clicks | The total number (and percentage) of users who clicked within the delivered message. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% elsif include.channel == "webhook" %}
@@ -323,9 +324,12 @@ Here are some key WhatsApp metrics you may see in your analytics. To see the def
 | Term | Definition |
 | --- | --- |
 | Sends | The total number of sends successfully communicated between Braze and WhatsApp. However, this does not necessarily mean the message was received by the end user. |
-| Deliveries | The total number of WhatsApp messages sent that successfully made it to the end user's device. |
-| Reads | When a WhatsApp message is read by the end user. The end user's read receipts must be "on" for Braze to track reads. |
-| Failures | The total number of sends that were not successful because WhatsApp could not deliver the message to the end user. Failures are included in the _Sends_ count but are not included in the _Deliveries_ count. |
+| Deliveries | The total number of WhatsApp messages sent that successfully made it to the end user's device. | 
+| Delivery rate | The percentage of users who had a delivery over users who had a send. Calculation: (Deliveries) / (Sends)|
+| Reads | When a WhatsApp message is read by the end user. The end user's read receipts must be "on" for Braze to track reads. | 
+| Read rate | The percentage of users who read the message over users who had a send. Calculation: (Reads) / (Sends)|
+| Failures | The total number of sends that were not successful because WhatsApp could not deliver the message to the end user. Failures are included in the _Sends_ count but not in the _Deliveries_ count. | 
+| Failure rate | The percentage of users who had unsuccessful sends over users who had a successful send. Calculation: (Failures) / (Sends)|
 {: .reset-td-br-1 .reset-td-br-2}
 
 #### End-user blocking and reporting metrics

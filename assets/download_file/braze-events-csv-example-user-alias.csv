@@ -1,0 +1,3 @@
+user_alias_name,user_alias_label,name,time,rented_movie.properties.movie_name,rented_movie.properties.genre,bought_movie.properties.movie_name,bought_movie.properties.genre
+182736485,my_alt_identifier,rented_movie,2024-06-10T12:00:00.000Z,Ghostbusters,Action,,
+182736486,my_alt_identifier,bought_movie,2024-06-12T12:00:00.000Z,,,Ghostbusters,Action

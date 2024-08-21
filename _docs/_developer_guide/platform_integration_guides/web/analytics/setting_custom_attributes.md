@@ -51,7 +51,7 @@ braze.getUser().setDateOfBirth(2000, 12, 25);
 
 ## Assigning custom user attributes
 
-In addition to our predefined user attribute methods, Braze also provides [custom attributes](https://www.braze.com/docs/user_guide/data_and_analytics/custom_data/custom_attributes/#custom-attribute-data-types) to track data from your applications. 
+In addition to our predefined user attribute methods, Braze also provides [custom attributes]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#custom-attribute-data-types) to track data from your applications. 
 
 Full method specifications for custom attributes can be found here within the [JSDocs][1].
 
@@ -115,7 +115,7 @@ braze.getUser().setCustomUserAttribute(YOUR_ATTRIBUTE_KEY_STRING, YOUR_ARRAY_OF_
 braze.getUser().addToCustomAttributeArray(YOUR_ATTRIBUTE_KEY_STRING, "new string");
 
 // Removing an element from a custom attribute with an array value
-braze.getUser().removeFromCustomAttributeArray("custom_attribute_array_test", "value to be removed");
+braze.getUser().removeFromCustomAttributeArray(YOUR_ATTRIBUTE_KEY_STRING, "value to be removed");
 ```
 
 ### Unsetting a custom attribute
@@ -159,6 +159,6 @@ braze.getUser().setPushNotificationSubscriptionType(braze.User.NotificationSubsc
 
 [1]: https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.user.html
 [4]: {{site.baseurl}}/developer_guide/rest_api/user_data/#user-data
-[6]: {{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#arrays
-[7]: {{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#user-data-collection
+[6]: {{site.baseurl}}/developer_guide/platform_wide/getting_started/analytics_overview/#arrays
+[7]: {{site.baseurl}}/developer_guide/platform_wide/getting_started/analytics_overview/#best-practices
 [10]: {{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#managing-user-subscriptions

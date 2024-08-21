@@ -466,7 +466,7 @@ We use the `UPDATED_AT` timestamp to track what data has been synced successfull
 
 ### Table configuration
 
-We have a public [GitHub repository](https://github.com/braze-inc/braze-examples/tree/main/data-ingestion) for customers to share best practices or code snippets. To contribute your own snippets, create a pull request!
+We have a public [GitHub repository](https://github.com/braze-inc/braze-examples/tree/main/cloud-data-ingestion) for customers to share best practices or code snippets. To contribute your own snippets, create a pull request!
 
 ### Data formatting
 
