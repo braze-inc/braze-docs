@@ -134,6 +134,7 @@ No, this isn’t currently available. You can use the Custom Code block in the e
 ### What features are on the road map for landing pages?
 
 Because landing pages are currently in beta, additional features are in development. These include:
+
 * Custom subdomain support
 * New Liquid tag for linking a landing page in a Braze messaging channel
 * Basic reporting page
