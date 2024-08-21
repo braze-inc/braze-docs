@@ -7,7 +7,7 @@ layout: dev_guide
 
 # Shopify multiple store support
 
-> Connect multiple Shopify stores to a single workspace with our new beta for multiple store support to have a holistic view of your customers across all markets or brands. Build and launch automation programs and journeys in a single workspace without duplicating efforts across multiple instances. 
+> Connect multiple Shopify stores to a single workspace with our new beta for multiple store support to have a holistic view of your customers across all markets. Build and launch automation programs and journeys in a single workspace without duplicating efforts across multiple instances. 
 
 {% alert important %}
 Support for multiple Shopify stores is available in beta, which may contain bugs. This feature is subject to change as development continues.
@@ -29,9 +29,13 @@ With Braze’s multiple-store support, you can:
 - Set up messaging or journeys as your customers move across different stores
 - Manage email and SMS subscriptions across different stores
 
+{% alert important %}
+Supporting multiple brands in a single workspace increases the likelihood for duplicate user profiles, as users can shop between those brands. We suggest placing each brand into their own workspace.
+{% endalert %}
+
 ### Setting up an additional store
-1. After you have installed your first store, select the **+ Connect New Store** option.<br>![][1]{: style="max-width:70%;"}<br><br>
-2. You will be prompted to go through the onboarding flow for this new store. More details can be found in our [Setting up Shopify]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/shopify/setting_up_shopify/) guide.<br><br>Note that the settings from the previous store can be carried over, but you can update the settings accordingly as you progress through your onboarding.<br><br>
+1. After you install your first store, select the **+ Connect New Store** option.<br>![][1]{: style="max-width:70%;"}<br><br>
+2. Go through the onboarding flow for this new store. More details can be found in our [Setting up Shopify]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/shopify/setting_up_shopify/) guide.<br><br>Note that the settings from the previous store can be carried over, but you can update the settings accordingly as you progress through your onboarding.<br><br>
 3. For the collect email or SMS subscribers step:
 - To appropriately collect email and SMS subscriptions for each store, you must assign unique subscription groups to each store setup. 
 - We suggest that you **do not** enable “Override existing global state for users” as it can globally unsubscribe your customers if they interacted with more than one of your stores.<br><br>
