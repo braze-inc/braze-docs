@@ -11,11 +11,13 @@ description: "This reference article describes features and nuances specific to 
 
 Before continuing, you should have already [created your Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/) and set up delay and audience options.
 
-Now, you can add an in-app message to your Canvas. Add a [Message]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/) step and choose **In-App Message** for your **Messaging Channel**. After any delays pass and the audience options are checked, the in-app message will be set live and users will see it if they open the app. In-app messages in Canvas may only be triggered by the `start session` trigger event—they can't be triggered by custom events in a Canvas component.
+Add a [Message]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/) step and choose **In-App Message** for your **Messaging Channel**. 
+
+After any delays pass and the audience options are checked, the in-app message will be set live and users will see it if they open the app. In-app messages in Canvas may only be triggered by the `start session` trigger event—they can't be triggered by custom events in a Canvas component.
 
 For Canvas steps that have action-triggered entry, users can enter the Canvas mid-session. However, as noted above, in-app messages won't trigger until the next session starts, so these users would miss the initial in-app message since they weren't eligible to enter the Canvas before the session started.
 
-You can customize [when your message will expire](#in-app-message-expiration) and which [advancement behavior](#advancement-behavior-options) it will have.
+You can customize [when your message will expire](#in-app-message-expiration) and which [advancement behavior](#advancement-behavior) it will have.
 
 ## In-app message expiration
 
@@ -219,6 +221,8 @@ You can choose from the following trigger actions to target your users:
 - **Perform Custom Event:** Target users who perform the selected custom event
 
 A user has to enter the Canvas step, start a session, then perform the trigger to receive an in-app message. This means mid-session updates aren't supported.
+
+!["Make A Specific Purchase" selected as the trigger action.]({% image_buster /assets/img_archive/canvas_trigger_actions.png %}){: style="max-width:85%"}
 
 The following Canvas features aren't available with in-app messages, so if any of these features are turned on, they won't be applied to your in-app messages.
 
