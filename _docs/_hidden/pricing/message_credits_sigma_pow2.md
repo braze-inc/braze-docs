@@ -1780,7 +1780,7 @@ Column definitions are as follows:
         <td>WhatsApp</td>
         <td>7.5</td>
         <td>Argentina Utility</td>
-        <td>1.10</td>
+        <td>0.90</td>
         <td>6.75</td>
     </tr>
     <tr>
@@ -1808,7 +1808,7 @@ Column definitions are as follows:
         <td>WhatsApp</td>
         <td>7.5</td>
         <td>Brazil Utility</td>
-        <td>0.95</td>
+        <td>0.21</td>
         <td>1.58</td>
     </tr>
     <tr>
@@ -1836,7 +1836,7 @@ Column definitions are as follows:
         <td>WhatsApp</td>
         <td>7.5</td>
         <td>Chile Utility</td>
-        <td>1.55</td>
+        <td>0.53</td>
         <td>3.98</td>
     </tr>
     <tr>
@@ -1864,7 +1864,7 @@ Column definitions are as follows:
         <td>WhatsApp</td>
         <td>7.5</td>
         <td>Colombia Utility</td>
-        <td>0.25</td>
+        <td>0.01</td>
         <td>0.08</td>
     </tr>
     <tr>
@@ -1892,7 +1892,7 @@ Column definitions are as follows:
         <td>WhatsApp</td>
         <td>7.5</td>
         <td>Egypt Utility</td>
-        <td>1.80</td>
+        <td>0.14</td>
         <td>1.05</td>
     </tr>
     <tr>
@@ -1920,7 +1920,7 @@ Column definitions are as follows:
         <td>WhatsApp</td>
         <td>7.5</td>
         <td>France Utility</td>
-        <td>2.05</td>
+        <td>0.80</td>
         <td>6.00</td>
     </tr>
     <tr>
@@ -1948,7 +1948,7 @@ Column definitions are as follows:
         <td>WhatsApp</td>
         <td>7.5</td>
         <td>Germany Utility</td>
-        <td>2.25</td>
+        <td>1.46</td>
         <td>10.95</td>
     </tr>
     <tr>
@@ -1983,7 +1983,7 @@ Column definitions are as follows:
         <td>WhatsApp</td>
         <td>7.5</td>
         <td>India Utility</td>
-        <td>0.10</td>
+        <td>0.04</td>
         <td>0.30</td>
     </tr>
     <tr>
@@ -2046,7 +2046,7 @@ Column definitions are as follows:
         <td>WhatsApp</td>
         <td>7.5</td>
         <td>Israel Utility</td>
-        <td>0.50</td>
+        <td>0.14</td>
         <td>1.05</td>
     </tr>
     <tr>
@@ -2074,7 +2074,7 @@ Column definitions are as follows:
         <td>WhatsApp</td>
         <td>7.5</td>
         <td>Italy Utility</td>
-        <td>1.10</td>
+        <td>0.80</td>
         <td>6.00</td>
     </tr>
     <tr>
@@ -2102,7 +2102,7 @@ Column definitions are as follows:
         <td>WhatsApp</td>
         <td>7.5</td>
         <td>Malaysia Utility</td>
-        <td>0.55</td>
+        <td>0.37</td>
         <td>2.78</td>
     </tr>
     <tr>
@@ -2130,7 +2130,7 @@ Column definitions are as follows:
         <td>WhatsApp</td>
         <td>7.5</td>
         <td>Mexico Utility</td>
-        <td>0.70</td>
+        <td>0.27</td>
         <td>2.03</td>
     </tr>
     <tr>
@@ -2158,7 +2158,7 @@ Column definitions are as follows:
         <td>WhatsApp</td>
         <td>7.5</td>
         <td>Netherlands Utility</td>
-        <td>2.10</td>
+        <td>1.33</td>
         <td>9.98</td>
     </tr>
     <tr>
@@ -2186,7 +2186,7 @@ Column definitions are as follows:
         <td>WhatsApp</td>
         <td>7.5</td>
         <td>Nigeria Utility</td>
-        <td>0.85</td>
+        <td>0.18</td>
         <td>1.35</td>
     </tr>
     <tr>
@@ -2214,7 +2214,7 @@ Column definitions are as follows:
         <td>WhatsApp</td>
         <td>7.5</td>
         <td>North America Utility</td>
-        <td>0.40</td>
+        <td>0.11</td>
         <td>0.83</td>
     </tr>
     <tr>
@@ -2242,7 +2242,7 @@ Column definitions are as follows:
         <td>WhatsApp</td>
         <td>7.5</td>
         <td>Other Utility</td>
-        <td>0.90</td>
+        <td>0.20</td>
         <td>1.50</td>
     </tr>
     <tr>
@@ -2270,7 +2270,7 @@ Column definitions are as follows:
         <td>WhatsApp</td>
         <td>7.5</td>
         <td>Pakistan Utility</td>
-        <td>0.65</td>
+        <td>0.14</td>
         <td>1.05</td>
     </tr>
     <tr>
@@ -2298,7 +2298,7 @@ Column definitions are as follows:
         <td>WhatsApp</td>
         <td>7.5</td>
         <td>Peru Utility</td>
-        <td>1.10</td>
+        <td>0.53</td>
         <td>3.98</td>
     </tr>
     <tr>
@@ -2326,7 +2326,7 @@ Column definitions are as follows:
         <td>WhatsApp</td>
         <td>7.5</td>
         <td>Rest of Africa Utility</td>
-        <td>0.40</td>
+        <td>0.16</td>
         <td>1.20</td>
     </tr>
     <tr>
@@ -2354,7 +2354,7 @@ Column definitions are as follows:
         <td>WhatsApp</td>
         <td>7.5</td>
         <td>Rest of Asia Pacific Utility</td>
-        <td>1.25</td>
+        <td>0.42</td>
         <td>3.15</td>
     </tr>
     <tr>
@@ -2382,7 +2382,7 @@ Column definitions are as follows:
         <td>WhatsApp</td>
         <td>7.5</td>
         <td>Rest of Central &amp; Eastern Europe Utility</td>
-        <td>1.65</td>
+        <td>0.94</td>
         <td>7.05</td>
     </tr>
     <tr>
@@ -2410,7 +2410,7 @@ Column definitions are as follows:
         <td>WhatsApp</td>
         <td>7.5</td>
         <td>Rest of Latin America Utility</td>
-        <td>1.30</td>
+        <td>0.30</td>
         <td>2.25</td>
     </tr>
     <tr>
@@ -2438,7 +2438,7 @@ Column definitions are as follows:
         <td>WhatsApp</td>
         <td>7.5</td>
         <td>Rest of Middle East Utility</td>
-        <td>0.55</td>
+        <td>0.42</td>
         <td>3.15</td>
     </tr>
     <tr>
@@ -2466,7 +2466,7 @@ Column definitions are as follows:
         <td>WhatsApp</td>
         <td>7.5</td>
         <td>Rest of Western Europe Utility</td>
-        <td>1.10</td>
+        <td>0.80</td>
         <td>6.00</td>
     </tr>
     <tr>
@@ -2494,7 +2494,7 @@ Column definitions are as follows:
         <td>WhatsApp</td>
         <td>7.5</td>
         <td>Russia Utility</td>
-        <td>1.25</td>
+        <td>1.06</td>
         <td>7.95</td>
     </tr>
     <tr>
@@ -2522,7 +2522,7 @@ Column definitions are as follows:
         <td>WhatsApp</td>
         <td>7.5</td>
         <td>Saudi Arabia Utility</td>
-        <td>0.65</td>
+        <td>0.31</td>
         <td>2.33</td>
     </tr>
     <tr>
@@ -2550,7 +2550,7 @@ Column definitions are as follows:
         <td>WhatsApp</td>
         <td>7.5</td>
         <td>South Africa Utility</td>
-        <td>0.55</td>
+        <td>0.20</td>
         <td>1.50</td>
     </tr>
     <tr>
@@ -2578,7 +2578,7 @@ Column definitions are as follows:
         <td>WhatsApp</td>
         <td>7.5</td>
         <td>Spain Utility</td>
-        <td>1.00</td>
+        <td>0.53</td>
         <td>3.98</td>
     </tr>
     <tr>
@@ -2606,7 +2606,7 @@ Column definitions are as follows:
         <td>WhatsApp</td>
         <td>7.5</td>
         <td>Turkey Utility</td>
-        <td>0.25</td>
+        <td>0.14</td>
         <td>1.05</td>
     </tr>
     <tr>
@@ -2634,7 +2634,7 @@ Column definitions are as follows:
         <td>WhatsApp</td>
         <td>7.5</td>
         <td>United Arab Emirates Utility</td>
-        <td>0.55</td>
+        <td>0.42</td>
         <td>3.15</td>
     </tr>
     <tr>
@@ -2662,7 +2662,7 @@ Column definitions are as follows:
         <td>WhatsApp</td>
         <td>7.5</td>
         <td>United Kingdom Utility</td>
-        <td>1.05</td>
+        <td>0.58</td>
         <td>4.35</td>
     </tr>
     </tbody></table>
