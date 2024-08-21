@@ -20,7 +20,7 @@ guide_featured_list:
     image: /assets/img/braze_icons/mail-01.svg
   - name: Feature Flags
     link: docs/developer_guide/platform_wide/feature_flags/experiments/
-    image: /assets/img/braze_icons/whatsapp.svg
+    image: /assets/img/braze_icons/flag-06.svg
   - name: In-App Messages
     link: /docs/user_guide/message_building_by_channel/in-app_messages/reporting/
     image: /assets/img/braze_icons/message-text-circle-01.svg
