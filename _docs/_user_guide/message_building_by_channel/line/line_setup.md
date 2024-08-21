@@ -299,20 +299,22 @@ To acquire the correct LINE ID for each user, set up LINE Login under the same p
 
 ##### Existing follower uses LINE Login
 
-1. Pre-existing state: An anonymous user was created during initial subscriber sync or after integration through a “follow” event.
-2. The user logs into your app using LINE Login.
-3. LINE provides you the user’s email.
-4. You send Braze the updated user (the existing user profile with that email to add the LINE ID) or you update the anonymous user with the email.
+**Scenario:** An anonymous user was created during initial subscriber sync or after integration through a “follow” event.
+
+1. The user logs into your app using LINE Login.
+2. LINE provides you the user’s email.
+3. You send Braze the updated user (the existing user profile with that email to add the LINE ID) or you update the anonymous user with the email.
 
 ##### New follower uses LINE Login
 
-1. Pre-existing state: No user profile exists in Braze with the user’s LINE ID.
-2. The user logs into your app using LINE Login.
-3. LINE provides you with the user’s email.
-4. You either:
+**Scenario:** No user profile exists in Braze with the user’s LINE ID.
+
+1. The user logs into your app using LINE Login.
+2. LINE provides you with the user’s email.
+3. You either:
   - Update an existing user profile with that email to also have the user’s LINE ID.
   - Create a new user profile with the email and LINE ID.
-5. When the user follows your LINE Official Account, Braze receives a follow event and updates the user’s subscription status to “Subscribed”.
+4. When the user follows your LINE Official Account, Braze receives a follow event and updates the user’s subscription status to “Subscribed”.
 
 ## Creating LINE test users in Braze
 
