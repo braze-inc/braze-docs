@@ -38,6 +38,66 @@ To edit existing brand guidelines:
 2. Apply the brand guidelines you want to edit. A button will appear near the field.
 3. Select **Edit guideline**.
 
+## Describing your brand personality
+
+When describing your brand personality, consider all the elements that make up your brand. Below, you’ll find a breakdown of some key characteristics you might want to include in your brand guidelines.
+
+| **Characteristic**       | **Definition**                                                                       | **Example**                                                        |
+|--------------------------|--------------------------------------------------------------------------------------|--------------------------------------------------------------------|
+| Reputation               | How you want your brand to be perceived in the market.                               | _We are known for being the most reliable and customer-focused brand in our industry._ |
+| Personality traits       | Human-like characteristics that describe your brand’s character.                     | _Our brand is friendly, approachable, and always upbeat._          |
+| Values                   | Core values that guide your brand’s actions and decisions.                           | _We value sustainability, transparency, and community._            |
+| Differentiation          | Unique qualities that set your brand apart from competitors.                         | _We stand out by offering personalized customer service that goes above and beyond._ |
+| Brand voice              | The tone and style of communication your brand uses.                                 | _Our voice is casual yet informative, ensuring clarity without being too formal._ |
+| Brand archetype          | The archetype that represents your brand’s persona (The Hero, The Creator, and so on).    | _We embody the ‘Explorer’ archetype, always seeking new challenges and adventures._ |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+
+{% details Other characteristics to consider %}
+
+Consider also describing other characteristics of your overall brand kit in the **Brand personality** field, such as details about your product, promise, purpose, and user personas.
+
+#### Product
+
+| **Characteristic**       | **Definition**                                                                       | **Example**                                                        |
+|--------------------------|--------------------------------------------------------------------------------------|--------------------------------------------------------------------|
+| Value Propositions       | Key benefits your products or services offer.                                         | _We provide cutting-edge technology solutions that simplify complex tasks._ |
+| Product Features         | Important features of your products.                                                  | _Our software is user-friendly with an intuitive interface designed for efficiency._ |
+| Product Experience       | The overall experience customers should have when using your products.                | _We aim to make our product experience seamless and enjoyable, with a focus on user empowerment._ |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+
+#### Promise
+
+| **Characteristic**       | **Definition**                                                                       | **Example**                                                        |
+|--------------------------|--------------------------------------------------------------------------------------|--------------------------------------------------------------------|
+| Brand Promise            | What your brand promises to deliver to customers every time.                          | _We promise to always provide top-notch customer service and high-quality products._ |
+| Positioning Statement    | How your brand is positioned in the market and what makes you different.              | _We position ourselves as the leading provider of eco-friendly packaging solutions._ |
+| Tagline                  | Your brand’s tagline and its significance.                                            | _Our tagline, ‘Innovating for a better tomorrow,’ captures our commitment to sustainability._ |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+
+#### Purpose
+
+| **Characteristic**       | **Definition**                                                                       | **Example**                                                        |
+|--------------------------|--------------------------------------------------------------------------------------|--------------------------------------------------------------------|
+| Purpose                  | The reason your brand exists; the big picture.                                        | _Our purpose is to make sustainable living accessible to everyone._ |
+| Vision                   | The future you are working to create.                                                 | _Our vision is a world where all businesses operate sustainably._   |
+| Mission                  | Specific actions your brand is taking to achieve its purpose.                        | _Our mission is to innovate sustainable products that reduce environmental impact._ |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+
+#### Personas
+
+| **Characteristic**       | **Definition**                                                                       | **Example**                                                        |
+|--------------------------|--------------------------------------------------------------------------------------|--------------------------------------------------------------------|
+| Personality              | The personality traits of your ideal customer.                                        | _Our ideal customer is curious, tech-savvy, and values innovation._ |
+| Values                   | Values that your customers hold and that align with your brand.                      | _Our customers value sustainability and ethical business practices._ |
+| Pastimes                 | Hobbies or interests your customers typically have.                                   | _They enjoy outdoor activities, exploring new technology, and participating in community events._ |
+| Habitat                  | Where your customers live or work (urban, rural, digital spaces).                     | _Our customers are primarily urban professionals who are active on digital platforms._ |
+| Lifestyles               | The kind of lifestyle your customers lead.                                            | _They lead busy, on-the-go lifestyles but prioritize making environmentally conscious choices._ |
+| Professions              | Industries or job roles your customers typically work in.                             | _Our customers work in tech, design, and creative industries._     |
+| Demographics             | Relevant demographic information like age, gender, income level, etc.                | _Our primary demographic is millennials, aged 25-40, with a focus on middle to upper-income levels._ |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+
+{% enddetails %}
+
 ## How is my data used and sent to OpenAI?
 
 In order to generate copy using a brand guideline, Braze will send your query including the content of your guideline to OpenAI. All queries sent to OpenAI from Braze are anonymized, meaning that OpenAI will not be able to identify from whom the query was sent unless you include uniquely identifiable information in the input you provide or in your past campaign data when enabling the option labeled "Reference past campaign data". Per [OpenAI’s policy](https://openai.com/policies/api-data-usage-policies), data sent to OpenAI’s API via Braze is not used to train or improve their models and will be deleted after 30 days. Between you and Braze, any content generated using GPT is your intellectual property. Braze will not assert any claims of copyright ownership on such content and makes no warranty of any kind with respect to any AI-generated content.
