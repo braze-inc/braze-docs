@@ -50,7 +50,7 @@ First, launch the app and confirm that your device is paired. If the pairing is 
 After relaunching your app, follow the steps to reproduce the error.
 
 {% alert tip %}
-When you're reproducing the error, be sure to follow the reproduction steps as closely as possible, so you can create quality [debug logs](#step-6-export-your-session-logs-optional).
+When you're reproducing the error, be sure to follow the reproduction steps as closely as possible, so you can create [quality logs](#step-6-export-your-session-logs-optional).
 {% endalert %}
 
 ### Step 6: End your session
