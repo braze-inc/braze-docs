@@ -148,7 +148,7 @@ These push messages are spaced around an in-app message to make sure the user ha
 
 A user can trigger two in-app messages within your Canvas at the same time. When this happens, Braze will adhere to the following priority order to determine which in-app message is displayed. 
 
-Drag different Canvas steps to reorder their priority for the Canvas. By default, steps earlier in a Canvas variant will display before later steps.
+Select **Set exact priority** and drag different Canvas steps to reorder their priority for the Canvas. By default, steps earlier in a Canvas variant will display before later steps. After your steps are in your preferred order of prioritization, select **Apply sort**.
 
 ![]({% image_buster /assets/img_archive/canvas_priority2.png %}){: style="max-width:85%"}
 
