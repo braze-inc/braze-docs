@@ -26,7 +26,7 @@ guide_featured_list:
   link: https://www.braze.com/docs/line/subscription_groups/
   image: /assets/img/braze_icons/table.svg
 - name: User Management
-  link: https://www.braze.com/docs/line/line_setup/
+  link: https://www.braze.com/docs/line/user_management/
   image: /assets/img/braze_icons/users-01.svg
 - name: LINE Reporting
   link: https://www.braze.com/docs/line/reporting/
