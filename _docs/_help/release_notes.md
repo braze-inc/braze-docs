@@ -114,7 +114,7 @@ You must acquire your phone number yourself, as Braze won't provision the number
 
 ### New Braze partnerships
 
-#### ZenDesk Chat - Instant Chat
+#### Zendesk Chat - Instant Chat
 
 The Braze and [Zendesk Chat]({{site.baseurl}}/partners/zendesk_chat/) integration uses webhooks from each platform to set up a two-way SMS conversation. When a user requests support, a ticket is created in Zendesk. Agent responses are forwarded to Braze through an API-triggered SMS campaign, and user replies are sent back to Zendesk.
 
