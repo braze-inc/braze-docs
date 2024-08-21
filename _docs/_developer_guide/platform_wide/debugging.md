@@ -35,22 +35,23 @@ Select **Create debugging session**.
 
 ![The "SDK Debugger" page.]({% image_buster /assets/img/sdk_debugger/select_create_debugging_session.png %})
 
-### Step 3: Search & Select a user
+### Step 3: Select a user
 
 Search for a user using their email address, `external_id`, user alias, or push token. When you're ready to start your session, select **Select User**.
 
 ![The debugging page for the selected user.]({% image_buster /assets/img/sdk_debugger/search_and_select_user.png %}){: style="max-width:85%;"}
 
-### Step 4: Pair device & relaunch app
-{% alert important %}
-Once your device is successfully paired, you will need to relaunch your app to ensure initialization logs are captured as well. 
-{% endalert %}
+### Step 4: Relaunch the app
 
-Open your application and wait for confirmation that your device is paired. Once paired, confirm and proceed to the next step where you will need to close and relaunch your app in order to ensure initialzation logs are captured for your application. 
+First, launch the app and confirm that your device is paired. If the pairing is successful, relaunch your app&#8212;this will ensure that app's initialization logs are fully captured.
 
 ### Step 5: Complete the reproduction steps
 
-After restarting your app, follow the reproduction steps for your error. When you're reproducing the error, be sure to follow the reproduction steps as closely as possible, so you can create quality [debug logs](#step-6-export-your-session-logs-optional).
+After relaunching your app, follow the steps to reproduce the error.
+
+{% alert tip %}
+When you're reproducing the error, be sure to follow the reproduction steps as closely as possible, so you can create quality [debug logs](#step-6-export-your-session-logs-optional).
+{% endalert %}
 
 ### Step 6: End your session
 
