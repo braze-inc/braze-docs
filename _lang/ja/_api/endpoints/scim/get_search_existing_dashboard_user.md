@@ -1,23 +1,23 @@
 ---
-nav_title: "得る：既存のダッシュボードユーザーアカウントをメールで検索"
-article_title: "得る：既存のダッシュボードユーザーアカウントをメールで検索"
+nav_title: "取得:既存のダッシュボードユーザーアカウントをメールで検索する"
+article_title: "取得:既存のダッシュボードユーザーアカウントをメールで検索する"
 alias: /get_search_existing_dashboard_user_email/
 search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "この記事では、電子メールによる既存のダッシュボード ユーザー アカウントの検索 Braze エンドポイントの詳細について説明します。"
+description: "この記事では、EメールBrazeエンドポイントによる既存のダッシュボードユーザーアカウントの検索についての詳細を概説する。"
 ---
 
 {% api %}
-# 既存のダッシュボードユーザーアカウントをメールで検索
+# 既存のダッシュボードのユーザーアカウントをEメールで検索する
 {% apimethod get %}
-/scim/v2/Users?filter=userName%20eq%20user%40test.com
+scim/v2/Users?filter=userName%20eq%20"user%40test.com"
 {% endapimethod %}
 
-> このエンドポイントを使用して、フィルター クエリ パラメータで電子メールを指定して、既存のダッシュボード ユーザー アカウントを検索します。 
+> このエンドポイントを使用して、フィルタークエリーパラメーターにメールを指定して、既存のダッシュボードユーザーアカウントを検索します。 
 
-クエリ パラメータが URL エンコードされている場合は、次のように表示されます。
+クエリーパラメーターがURLエンコードされている場合、次のようになることに注意：
 
 `/scim/v2/Users?filter=userName%20eq%20%22user@test.com%22`
 
@@ -25,20 +25,20 @@ description: "この記事では、電子メールによる既存のダッシュ
 
 ## 前提条件
 
-このエンドポイントを使用するには、SCIM トークンが必要です。詳細については、[「自動ユーザープロビジョニング」]({{site.baseurl}}/scim/automated_user_provisioning/)を参照してください。
+このエンドポイントを使うには、SCIMトークンが必要だ。詳細については、「[自動ユーザープロビジョニング]({{site.baseurl}}/scim/automated_user_provisioning/)」を参照してください。
 
 ## レート制限
 
-{% multi_lang_include rate_limits.md endpoint='look up dashboard user email' %}
+{% multi_lang_include rate_limits.md endpoint='ダッシュボードのユーザーEメールを検索する' %}
 
-## パスパラメータ
+## パスパラメーター
 
-| パラメータ | 必須 | データ型 | 説明 |
+| パラメーター | required | データ型 | 説明 |
 |---|---|---|---|
-| `userName@example.com`| 必須 | 文字列 | ユーザーのメール。 |
+| `userName@example.com` | 必須 | string | ユーザーのEメール。 |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
-## リクエストパラメータ
+## リクエストパラメーター
 
 ```json
 Content-Type: application/json
