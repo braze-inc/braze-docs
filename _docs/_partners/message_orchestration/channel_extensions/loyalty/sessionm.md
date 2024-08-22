@@ -21,11 +21,11 @@ search_tag: Partner
 | A SessionM Core REST endpoint | Your endpoint will depend on the SessionM URL of your instance. This can be created in the SessionM dashboard from **Digital Properties**. | SessionM |
 | A SessionM Core REST API key | The SessionM API key associated with your instance and the Braze integration. This key can be used for all core based calls including tags. This can be created in the SessionM dashboard from **Digital Properties**. | SessionM |
 | A SessionM Core REST API secret | The SessionM API secret associated with your instance and the Braze integration. This key can be used for all core based calls including tags. This can be created in the SessionM dashboard from **Digital Properties**. | SessionM |
-| A SessionM Connect REST endpoint | Your endpoint will depend on the SessionM URL of your instance. Please reach out to your SessionM Technical Account Manager or Delivery team to provide. | SessionM |
-| A SessionM Connect REST Authorization string | The SessionM Connect Basic Authorization string associated with your instance. This authentication string can be used for all connect based calls including get_user_offers. Please reach out to your SessionM technical account manager or delivery team to provide. | SessionM |
-| A SessionM Connect REST Retailer ID | A unique guid identification to the specific customer associated with your instance. Reach out to your SessionM technical account manager or delivery team. | SessionM |
+| A SessionM Connect REST endpoint | Your endpoint will depend on the SessionM URL of your instance. Please reach out to your SessionM technical account manager or Delivery team to provide. | SessionM |
+| A SessionM Connect REST Authorization string | The SessionM Connect Basic Authorization string associated with your instance. This authentication string can be used for all connect based calls including get_user_offers. Please reach out to your SessionM technical account manager or Delivery team to provide. | SessionM |
+| A SessionM Connect REST Retailer ID | A unique guid identification to the specific customer associated with your instance. Reach out to your SessionM technical account manager or Delivery team. | SessionM |
 | Matching identifier | To use the integration, ensure that both SessionM and Braze have a record of the identifiers used by each platform. References to `user_id` correspond to SessionM's user identifier generated at the time of profile creation in SessionM. | Braze and SessionM |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 {% alert note %} 
 If you are using the [older navigation]({{site.baseurl}}/navigation), you can create an API key at **Developer Console** > **API Settings**. 
@@ -109,7 +109,7 @@ The following example shows Connected Content being used to template offer walle
 
 ### Step 1: Issue offer in SessionM
 
-SessionM issues offers to customers from several different internal levers that can be configured. Once issued, the offers are moved to a state which SessionM calls the “offer wallet”.
+SessionM issues offers to customers from several different internal levers that can be configured. After being issued, the offers are moved to a state which SessionM calls the “offer wallet”.
 
 A customer must complete the required action or meet the targeting and is issued the offer within SessionM.
 
@@ -144,9 +144,7 @@ In the request body, `culture` defaults to `en-US`, but you can use Liquid to te
 
 ### Step 3: Populate offer wallet to Braze messaging
 
-After a request is made to the endpoint, SessionM returns the complete list of offers in the issued state, along with the full details for each offer.
-
-This is an example returned response:
+After a request is made to the endpoint, SessionM returns the complete list of offers in the issued state, along with the full details for each offer. This is an example returned response:
 
 {% raw %}
 ```
@@ -189,7 +187,7 @@ This is an example returned response:
 ```
 {% endraw %}
 
-Using Liquid dot notation, this can be populated into the message. For example, if you wanted to personalize the message with the resulting `offer_id`, you could leverage the return payload by using {% raw %}`{{wallet.payload.available_points}`{% endraw %}, which returns `100`.
+Using Liquid dot notation, this can be populated into the message. For example, to personalize the message with the resulting `offer_id`, you could leverage the return payload by using {% raw %}`{{wallet.payload.available_points}`{% endraw %}, which returns `100`.
 
 {% alert note %}
 This is an individual API. If you intend to send a batch of over 500 users, reach out to your SessionM account team to inquire about how to incorporate bulk data in the integration.
@@ -235,13 +233,13 @@ In the **Schedule Delivery** tab, note down the campaign or Canvas ID as this wi
 
 Finalize your campaign or Canvas details, and select **Launch**. 
 
-### Step 3: Create a SessionM Promotional or Messaging Campaign
+### Step 3: Create a SessionM promotional or messaging campaign
 
 Next, create your campaign in SessionM.
 
 ![SessionM Campaign Creation.]({% image_buster /assets/img/SessionM/SessionMCampaignCreation.png %})
 
-Update the advanced settings within the SessionM campaign to include the following JSON payload containing the `braze_campaign_id` or `braze_canvas_id`.
+Update the advanced settings in the SessionM campaign to include the following JSON payload containing the `braze_campaign_id` or `braze_canvas_id`.
 
 {% raw %}
 ```
@@ -252,7 +250,7 @@ Update the advanced settings within the SessionM campaign to include the followi
 ```
 {% endraw %}
 
-![SessionM advanced settings.]({% image_buster /assets/img/SessionM/SessionMAdvancedSettings.png %})
+![SessionM advanced settings.]({% image_buster /assets/img/SessionM/SessionMAdvancedSettings.png %}){: style="max-width:85%;"}
 
 Create a message trigger on the desired schedule or behavior. Then, select **Braze Messaging Variant** as the **Messaging Variant** in the **External Message** menu to use the template.
 
@@ -260,4 +258,4 @@ Create a message trigger on the desired schedule or behavior. Then, select **Bra
 
 This template pulls the relevant static and dynamic attributes and call out to the Braze endpoint.
 
-![SessionM Braze template.]({% image_buster /assets/img/SessionM/SessionMBrazeTemplate.png %})
+![SessionM Braze template.]({% image_buster /assets/img/SessionM/SessionMBrazeTemplate.png %}){: style="max-width:85%;"}
