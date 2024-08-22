@@ -59,7 +59,7 @@ SingularConfig* config = [[SingularConfig
 ```
 
 {% endtab %}
-{% tab スウィフト｝
+{% tab Swift%}
 
 ```swift
 config.setGlobalProperty("brazeDeviceId", withValue: brazeDeviceId, overrideExisting: true)
