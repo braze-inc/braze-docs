@@ -49,7 +49,7 @@ The example above shows how to set a default for a string. You can set default v
 
 ### Use case: Booleans
 
-Let's say you have a boolean custom attribute called `premium_user` and you want to send a personalized message based on the user's premium status. Some users don't have a premimum status set up, so you'll need to set up a default value to capture those users.
+Let's say you have a boolean custom attribute called `premium_user` and you want to send a personalized message based on the user's premium status. Some users don't have a premium status set up, so you'll need to set up a default value to capture those users.
 
 1. You'll assign a variable called `is_premium_user` to the `premium_user` attribute with a default value of `false`. This means that if `premium_user` is `nil`, the value of `is_premium_user` will default to `false`. 
 
@@ -59,7 +59,7 @@ Let's say you have a boolean custom attribute called `premium_user` and you want
 ```
 
 {: start="2"}
-2. Then you'll use conditional logic to specify the message to send if `is_premium_user` is `true`. In other words, what to send if `premium_user` is `true`. You'll also assign a default value to the user's first name, in case we don't have the user's name.
+2. Then, use conditional logic to specify the message to send if `is_premium_user` is `true`. In other words, what to send if `premium_user` is `true`. You'll also assign a default value to the user's first name, in case we don't have the user's name.
 
 ```liquid
 {% if is_premium_user %}
@@ -67,7 +67,7 @@ Hi {{${first_name} | default: 'premium user'}}, thank you for being a premium us
 ```
 
 {: start="3"}
-3. Finally, you'll specify what message to send if `is_premium_user` is `false` (which means `premium_user` is `false` or `nil`). Then you'll close the conditional logic.
+3. Finally, specify what message to send if `is_premium_user` is `false` (which means `premium_user` is `false` or `nil`). Then you'll close the conditional logic.
 
 ```liquid
 {% else %}
@@ -93,7 +93,7 @@ Hi {{${first_name} | default: 'valued user'}}, consider upgrading to premium for
 
 Let's say you have a numeric custom attribute called `reward_points` and you want to send a message with the user's reward points. Some users don't have reward points set up, so you'll need to set up a default value to account for those users.
 
-1. You'll begin the message by addressing the user's first name or a default value of `Valued User`, in case you don't have their name.
+1. Begin the message by addressing the user's first name or a default value of `Valued User`, in case you don't have their name.
 
 {% raw %}
 ```liquid
@@ -102,7 +102,7 @@ Hi {{${first_name} | default: 'valued user'}},
 {% endraw %}
 
 {: start="2"}
-2. Then you'll end the message with how many reward points the user has by using the custom attribute called `reward_points` and use the default value of `0`. All users whose `reward_points` have a `nil` value will have `0` reward points in the message.
+2. End the message with how many reward points the user has by using the custom attribute called `reward_points` and using the default value of `0`. All users whose `reward_points` have a `nil` value will have `0` reward points in the message.
 
 {% raw %}
 ```liquid
