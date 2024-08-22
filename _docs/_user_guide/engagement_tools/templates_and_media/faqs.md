@@ -14,7 +14,7 @@ description: "This article provides answers to frequently asked questions about 
 
 ### Are there storage limits for images within the media library?
 
-No, there are no storage limits for images within the media library.  Assets within the media library are currently stored during the tenure of a customers contract with Braze.  Asset size limits are still enforced (> 5mb)
+No, there are no storage limits for assets within the media library. However, there are size limits for assets (maximum 5 MB).
 
 ### Are there expiration dates for uploaded assets?
 
