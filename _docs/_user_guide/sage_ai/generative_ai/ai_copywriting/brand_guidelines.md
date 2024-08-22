@@ -19,7 +19,7 @@ Follow these steps to create brand guidelines in the AI copywriting assistant.
    * In the drag-and-drop editor for in-app messages, select a text block and select <i class="fa-solid fa-wand-magic-sparkles" title="AI Copywriter"></i> in the block's toolbar.
 2. Select **Apply brand guideline** and then **Create a brand guideline**.
 3. Enter a name for this guideline. It will be the label you see in the previous selection.
-4. Describe **When will you use these brand guidelines?** to help your colleagues (and future you) understand the context for using this guideline.
+4. For **When will you use these brand guidelines?**, add details to help your colleagues (and future you) understand the context for using this guideline.
 
 ![Brand guideline creation view"][1]
 
@@ -29,56 +29,56 @@ For **Brand personality**, think about what makes your brand unique. Include tra
 
 | **Characteristic**       | **Definition**                                                                       | **Example**                                                        |
 |--------------------------|--------------------------------------------------------------------------------------|--------------------------------------------------------------------|
-| Reputation               | How you want your brand to be perceived in the market.                               | _We are known for being the most reliable and customer-focused brand in our industry._ |
-| Personality traits       | Human-like characteristics that describe your brand’s character.                     | _Our brand is friendly, approachable, and always upbeat._          |
-| Values                   | Core values that guide your brand’s actions and decisions.                           | _We value sustainability, transparency, and community._            |
-| Differentiation          | Unique qualities that set your brand apart from competitors.                         | _We stand out by offering personalized customer service that goes above and beyond._ |
-| Brand voice              | The tone and style of communication your brand uses.                                 | _Our voice is casual yet informative, ensuring clarity without being too formal._ |
-| Brand archetype          | The archetype that represents your brand’s persona (The Hero, The Creator, and so on).    | _We embody the ‘Explorer’ archetype, always seeking new challenges and adventures._ |
+| Reputation               | How you want your brand to be perceived in the market.                               | We are known for being the most reliable and customer-focused brand in our industry. |
+| Personality traits       | Human-like characteristics that describe your brand’s character.                     | Our brand is friendly, approachable, and always upbeat.          |
+| Values                   | Core values that guide your brand’s actions and decisions.                           | We value sustainability, transparency, and community.            |
+| Differentiation          | Unique qualities that set your brand apart from competitors.                         | We stand out by offering personalized customer service that goes above and beyond. |
+| Brand voice              | The tone and style of communication your brand uses.                                 | Our voice is casual yet informative, ensuring clarity without being too formal. |
+| Brand archetype          | The archetype that represents your brand’s persona (The Hero, The Creator, and so on).    | We embody the ‘Explorer’ archetype, always seeking new challenges and adventures. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 {% details Other elements to consider %}
 
-As you refine your brand personality, think about these other key areas. They’ll help ensure the AI copywriter stays on-brand with every piece of content.
+Consider including additional details about your brand kit, such as your product, brand promise, purpose, and user personas to help the AI copywriter stay on-brand with every piece of content.
 
 #### Product
 
 | **Characteristic**       | **Definition**                                                                       | **Example**                                                        |
 |--------------------------|--------------------------------------------------------------------------------------|--------------------------------------------------------------------|
-| Value Propositions       | Key benefits your products or services offer.                                         | _We provide cutting-edge technology solutions that simplify complex tasks._ |
-| Product Features         | Important features of your products.                                                  | _Our software is user-friendly with an intuitive interface designed for efficiency._ |
-| Product Experience       | The overall experience customers should have when using your products.                | _We aim to make our product experience seamless and enjoyable, with a focus on user empowerment._ |
+| Value propositions       | Key benefits your products or services offer.                                         | We provide cutting-edge technology solutions that simplify complex tasks. |
+| Product features         | Important features of your products.                                                  | Our software is user-friendly with an intuitive interface designed for efficiency. |
+| Product experience       | The overall experience customers should have when using your products.                | We aim to make our product experience seamless and enjoyable, with a focus on user empowerment. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 #### Promise
 
 | **Characteristic**       | **Definition**                                                                       | **Example**                                                        |
 |--------------------------|--------------------------------------------------------------------------------------|--------------------------------------------------------------------|
-| Brand Promise            | What your brand promises to deliver to customers every time.                          | _We promise to always provide top-notch customer service and high-quality products._ |
-| Positioning Statement    | How your brand is positioned in the market and what makes you different.              | _We position ourselves as the leading provider of eco-friendly packaging solutions._ |
-| Tagline                  | Your brand’s tagline and its significance.                                            | _Our tagline, ‘Innovating for a better tomorrow,’ captures our commitment to sustainability._ |
+| Brand promise            | What your brand promises to deliver to customers every time.                          | We promise to always provide top-notch customer service and high-quality products. |
+| Positioning statement    | How your brand is positioned in the market and what makes you different.              | We position ourselves as the leading provider of eco-friendly packaging solutions. |
+| Tagline                  | Your brand’s tagline and its significance.                                            | Our tagline, ‘Innovating for a better tomorrow,’ captures our commitment to sustainability. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 #### Purpose
 
 | **Characteristic**       | **Definition**                                                                       | **Example**                                                        |
 |--------------------------|--------------------------------------------------------------------------------------|--------------------------------------------------------------------|
-| Purpose                  | The reason your brand exists; the big picture.                                        | _Our purpose is to make sustainable living accessible to everyone._ |
-| Vision                   | The future you are working to create.                                                 | _Our vision is a world where all businesses operate sustainably._   |
-| Mission                  | Specific actions your brand is taking to achieve its purpose.                        | _Our mission is to innovate sustainable products that reduce environmental impact._ |
+| Purpose                  | The reason your brand exists; the big picture.                                        | Our purpose is to make sustainable living accessible to everyone. |
+| Vision                   | The future you are working to create.                                                 | Our vision is a world where all businesses operate sustainably.   |
+| Mission                  | Specific actions your brand is taking to achieve its purpose.                        | Our mission is to innovate sustainable products that reduce environmental impact. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 #### Personas
 
 | **Characteristic**       | **Definition**                                                                       | **Example**                                                        |
 |--------------------------|--------------------------------------------------------------------------------------|--------------------------------------------------------------------|
-| Personality              | The personality traits of your ideal customer.                                        | _Our ideal customer is curious, tech-savvy, and values innovation._ |
-| Values                   | Values that your customers hold and that align with your brand.                      | _Our customers value sustainability and ethical business practices._ |
-| Pastimes                 | Hobbies or interests your customers typically have.                                   | _They enjoy outdoor activities, exploring new technology, and participating in community events._ |
-| Habitat                  | Where your customers live or work (urban, rural, digital spaces).                     | _Our customers are primarily urban professionals who are active on digital platforms._ |
-| Lifestyles               | The kind of lifestyle your customers lead.                                            | _They lead busy, on-the-go lifestyles but prioritize making environmentally conscious choices._ |
-| Professions              | Industries or job roles your customers typically work in.                             | _Our customers work in tech, design, and creative industries._     |
-| Demographics             | Relevant demographic information like age, gender, income level, etc.                | _Our primary demographic is millennials, aged 25-40, with a focus on middle to upper-income levels._ |
+| Personality              | The personality traits of your ideal customer.                                        | Our ideal customer is curious, tech-savvy, and values innovation. |
+| Values                   | Values that your customers hold and that align with your brand.                      | Our customers value sustainability and ethical business practices. |
+| Pastimes                 | Hobbies or interests your customers typically have.                                   | They enjoy outdoor activities, exploring new technology, and participating in community events. |
+| Habitat                  | Where your customers live or work (urban, rural, digital spaces).                     | Our customers are primarily urban professionals who are active on digital platforms. |
+| Lifestyles               | The kind of lifestyle your customers lead.                                            | They lead busy, on-the-go lifestyles but prioritize making environmentally conscious choices. |
+| Professions              | Industries or job roles your customers typically work in.                             | Our customers work in tech, design, and creative industries.     |
+| Demographics             | Relevant demographic information like age, gender, income level, etc.                | Our primary demographic is millennials, aged 25-40, with a focus on middle to upper-income levels. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 {% enddetails %}
