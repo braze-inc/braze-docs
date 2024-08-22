@@ -115,8 +115,8 @@ Braze.requestPushPermission(permissionOptions);
 
 You can additionally subscribe to events where Braze has detected and handled an incoming push notification. Use the listener key `Braze.Events.PUSH_NOTIFICATION_EVENT`.
 
-{% alert note %}
-Braze push notification events are available on both Android and iOS. Due to platform differences, iOS will only detect Braze push events when a user has interacted with a notification.
+{% alert important %}
+iOS push received events will only trigger for foreground notifications and `content-available` background notifications. It will not trigger for notifications received while terminated or for background notifications without the `content-available` field.
 {% endalert %}
 
 ```javascript
@@ -128,15 +128,11 @@ Braze.addListener(Braze.Events.PUSH_NOTIFICATION_EVENT, data => {
 
 #### Push notification event fields
 
-{% alert note %}
-Because of platform limitations on iOS, the Braze SDK can only process push payloads while the app is in the foreground. Listeners will only trigger for the `push_opened` event type on iOS after a user has interacted with a push.
-{% endalert %}
-
 For a full list of push notification fields, refer to the table below:
 
 | Field Name         | Type      | Description |
 | ------------------ | --------- | ----------- |
-| `payload_type`     | String    | Specifies the notification payload type. The two values that are sent from the Braze React Native SDK are `push_opened` and `push_received`.  Only `push_opened` events are supported on iOS. |
+| `payload_type`     | String    | Specifies the notification payload type. The two values that are sent from the Braze React Native SDK are `push_opened` and `push_received`. |
 | `url`              | String    | Specifies the URL that was opened by the notification. |
 | `use_webview`      | Boolean   | If `true`, URL will open in-app in a modal webview. If `false`, the URL will open in the device browser. |
 | `title`            | String    | Represents the title of the notification. |

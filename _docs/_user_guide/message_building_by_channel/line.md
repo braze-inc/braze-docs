@@ -14,22 +14,22 @@ permalink: /line/
 guide_featured_title: "LINE"
 guide_featured_list:
 - name: LINE Setup
-  link: https://www.braze.com/docs/line/line_setup/
+  link: /docs/line/line_setup/
   image: /assets/img/braze_icons/phone-02.svg
 - name: Create a LINE Message
-  link: https://www.braze.com/docs/line/create/
+  link: /docs/line/create/
   image: /assets/img/braze_icons/table.svg
 - name: Messaging LINE Users
-  link: https://www.braze.com/docs/line/messaging_users/
+  link: /docs/line/messaging_users/
   image: /assets/img/braze_icons/message-chat-circle.svg
 - name: LINE Subscription Groups
-  link: https://www.braze.com/docs/line/subscription_groups/
+  link: /docs/line/subscription_groups/
   image: /assets/img/braze_icons/table.svg
 - name: User Management
-  link: https://www.braze.com/docs/line/line_setup/
+  link: /docs/line/user_management/
   image: /assets/img/braze_icons/users-01.svg
 - name: LINE Reporting
-  link: https://www.braze.com/docs/line/reporting/
+  link: /docs/line/reporting/
   image: /assets/img/braze_icons/bar-chart-01.svg
 ---
 

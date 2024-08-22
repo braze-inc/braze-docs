@@ -22,7 +22,7 @@ Additionally, these values are subject to change and should not be accessed dire
 
 This section provides information on how cookies in the Braze Web SDK can be set and managed. The Braze Web SDK is built to provide you with maximum flexibility, legal compliance, and messaging relevance.
 
-When Braze creates cookies, they are stored with a one-year expiration that automatically renews on new sessions.
+When Braze creates cookies, they are stored with a 400-day expiration that automatically renews on new sessions.
 
 ### Disabling cookies {#disable-cookies}
 
