@@ -18,7 +18,7 @@ No, there are no storage limits for assets within the media library. However, th
 
 ### Are there expiration dates for uploaded assets?
 
-No, uploaded assets will not expire when added to the media library.
+No, assets uploaded to the media library will be retained for the entire duration of your contract with Braze.
 
 ### Can I upload video assets?
 
