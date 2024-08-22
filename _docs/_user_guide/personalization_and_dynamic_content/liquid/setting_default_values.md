@@ -170,7 +170,7 @@ Let's say you have an array custom attribute called `upcoming_trips` that contai
 {% endraw %}
 
 {: start="2"}
-2. Specify what message to send if `upcoming_trips` has content:<br><br>1. Address the user and include a default value, in case you don't have their name. <br>2. Use a `for` tag to specify that you'll pull properties (or information) for each trip that is contained in `upcoming_trips`. <br>3. List the properties in the message and include a default value for if the `departure_date` isn't set. (Let's say a `destination` is required for a trip to be created, so you don't need to set a default value for that.)<br>4. Close the `for` tag, then close the conditional logic.
+2. Specify what message to send if `upcoming_trips` has content:<br><br>**2a.** Address the user and include a default value, in case you don't have their name. <br>**2b.** Use a `for` tag to specify that you'll pull properties (or information) for each trip that is contained in `upcoming_trips`. <br>**2c.** List the properties in the message and include a default value for if the `departure_date` isn't set. (Let's say a `destination` is required for a trip to be created, so you don't need to set a default value for that.)<br>**2d.** Close the `for` tag, then close the conditional logic.
 
 {% raw %}
 ```liquid
