@@ -1,40 +1,40 @@
 ---
-nav_title: "GET：輸出収入データ"
-article_title: "GET：輸出収入データ"
+nav_title: "取得:収益データのエクスポート"
+article_title: "取得:収益データのエクスポート"
 search_tag: Endpoint
 page_order: 2
 layout: api_page
 page_type: reference
-description: "この記事では、収益データのエクスポートBrazeエンドポイントの詳細について概説します。"
+description: "本稿では、輸出売上データBraze エンドポイントについて詳しく説明します。"
 
 ---
 {% api %}
-# 時間ごとの収益データのエクスポート
+# 時間別売上データのエクスポート
 {% apimethod get %}
 /purchases/revenue_series
 {% endapimethod %}
 
-> このエンドポイントを使用して、時間範囲にわたってアプリで使用された合計金額を返します。
+> このエンドポイントを使用して、ある期間にわたってアプリに費やされた総金額を返します。
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#f6e05f9a-13c0-4d66-8caa-4a376d25749f{% endapiref %}
 
 ## 前提条件
 
-このエンドポイントを使用するには、`purchases.revenue_series` パーミッションを持つ[API キーが]({{site.baseurl}}/api/basics#rest-api-key/)必要です。
+このエンドポイントを使用するには、`purchases.revenue_series` 権限を持つ[API キー]({{site.baseurl}}/api/basics#rest-api-key/) が必要です。
 
 ## レート制限
 
-{% multi_lang_include rate_limits.md endpoint='purchases product list' %}
+{% multi_lang_include rate_limits.md エンドポイント='purchases product list' %}
 
-## リクエストパラメータ
+## リクエストパラメーター
 
-| パラメータ｜必須｜データ型｜説明
+| パラメータ | required | データ型 | 説明 |
 |---|---|---|---|
-|`ending_at` ｜任意｜日時[（ISO-8601](https://en.wikipedia.org/wiki/ISO_8601)文字列）｜データ・エクスポートを終了する日付。デフォルトはリクエスト時刻。|
-|`length` ｜必須｜整数｜返されるシリーズに含める`ending_at` までの最大日数。1～100の間でなければならない。|
-|`unit` ｜オプション｜文字列｜データポイント間の時間の単位。デフォルトは日。|
-|`app_id` ｜任意｜文字列｜[API Keys]({{site.baseurl}}/user_guide/administrative/app_settings/api_settings_tab/)ページから取得したアプリAPI識別子。除外すると、ワークスペース内のすべてのアプリの結果が返されます。|
-|`product` ｜任意｜文字列｜応答をフィルタリングする製品名。除外した場合は、すべてのアプリの結果が返されます。|
+| `ending_at` | オプション | 日時([ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) 文字列) | データエクスポートを終了する日付。デフォルトはリクエストの時刻です。 |
+| `length` | required | 整数 | 返される系列に含める`ending_at` の前の最大日数。1以上100以下でなければなりません。 |
+| `unit` | オプション | string | データポイント間の時刻の単位。日、または時間を指定できます。デフォルトは日です。 |
+| `app_id` | オプション | string | [API Keys]({{site.baseurl}}/user_guide/administrative/app_settings/api_settings_tab/) ページから取得したアプリケーションAPI 識別子。除外すると、ワークスペース内のすべてのアプリs の結果が返されます。 |
+| `product` | オプション | string | 応答をフィルタリングする商品の名称。除外すると、すべてのアプリs の結果が返されます。 |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ## リクエスト例
@@ -64,5 +64,5 @@ Authorization: Bearer YOUR-REST-API-KEY
 {% endapi %}
 
 {% alert tip %}
-CSVおよびAPIエクスポートに関するヘルプは、[エクスポートのトラブルシューティングを]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/)ご覧ください。
+CSV および API のエクスポートに関するヘルプについては、「[エクスポートのトラブルシューティング]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/)」を参照してください。
 {% endalert %}
