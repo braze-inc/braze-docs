@@ -123,10 +123,9 @@ SessionM then adds the offer to the customer's wallet in the ISSUED state.
 
 ### Step 2: Call SessionM Offer Wallet API
 
-Inside of the Campaign or Canvas Step that should include the SessionM Offers, use [Connected Content](https://www.braze.com/docs/user_guide/personalization_and_dynamic_content/connected_content/making_an_api_call/) to make an API call to the [SessionM get_user_offers endpoint] (https://domains-connecteast1.ent-sessionm.com/offers/swagger/ui/index#!/InfoV232583210323232323232323232323232This32API32allows32for32the32querying32of32information32about32offers32in32a32read45only32fashion4610323232323232323232323232May32be32initiated32by32the32dashboard32or32the32mobile32app4610323232323232323232323232/InfoV2_GetUserOffers)
+Inside of the Campaign or Canvas Step that should include the SessionM Offers, use [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/making_an_api_call/) to make an API call to the [SessionM get_user_offers endpoint] (https://domains-connecteast1.ent-sessionm.com/offers/swagger/ui/index#!/InfoV232583210323232323232323232323232This32API32allows32for32the32querying32of32information32about32offers32in32a32read45only32fashion4610323232323232323232323232May32be32initiated32by32the32dashboard32or32the32mobile32app4610323232323232323232323232/InfoV2_GetUserOffers)
 
 Within the Connected Content request, specify the customer's SessionM `user_id` and your `retailer_id` to retrieve the full list of active offers the customer has in their wallet (single user per call). Ask your SessionM team for the encoded string key for the Basic Authorization header in your Connected Content call. 
-
 
 The `culture` defaults to `en-US` but Liquid can be used to pull in a user's language for multi-lingual SessionM offers. For example, using {% raw %}`"culture":"{{${language}}}"`{% endraw %}.
 
