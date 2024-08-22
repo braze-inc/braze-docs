@@ -47,7 +47,7 @@ The following use cases showcase a few ways to leverage the SessionM and Braze i
 
 In Braze, create a segment of users to target with SessionM promotions and offers. 
 
-![Segment Builder with the "Custom Attributes" filter selected.]({% image_buster /assets/img/SessionM/CreateSegment.png %})
+![Segment Builder with the "Custom Attributes" filter selected.]({% image_buster /assets/img/sessionm/createsegment.png %})
 
 ### Step 2: Import Braze segments into SessionM
 
@@ -66,13 +66,13 @@ Using a raw text **Request Body**, compose the webhook body to include the desir
 }
  ```
 
-![]({% image_buster /assets/img/SessionM/SessionMWebhookComposer.png %}){: style="max-width:85%;"}
+![]({% image_buster /assets/img/sessionm/sessionmwebhookcomposer.png %}){: style="max-width:85%;"}
 
 In the **Settings** tab, add the key-value pairs for each request header field:
     - Create a key `Content-Type` with a corresponding value `application/json`
     - Create a key `Authorization` with a corresponding value `Basic YOUR-ENCODED-STRING-KEY`. Contact your SessionM team for the encoded string key for your endpoint. 
 
-![Webhook settings.]({% image_buster /assets/img/SessionM/SessionMWebhookSettings.png %}){: style="max-width:85%;"}
+![Webhook settings.]({% image_buster /assets/img/sessionm/sessionmwebhooksettings.png %}){: style="max-width:85%;"}
 
 Schedule your delivery, set your **Target Audiences** to target the segment [you created previously](#step-1-create-a-segment-in-braze), then launch your campaign.
 
@@ -226,11 +226,11 @@ Additional fields are sent to Braze as `trigger_properties` for personalizing th
 
 Create an API-triggered campaign or Canvas in Braze to be triggered by SessionM. If additional fields have been configured, such as `offer_id` or `offer title`, use Liquid (such as {% raw %}`{{api_trigger_properties.${offer_id}}}`{% endraw %}) to add the personalized fields into your messaging.
 
-![API trigger properties.]({% image_buster /assets/img/SessionM/apiTriggerProperties.png %})
+![API trigger properties.]({% image_buster /assets/img/sessionm/apitriggerproperties.png %})
 
 In the **Schedule Delivery** tab, note down the campaign or Canvas ID as this will be added to SessionM campaign **Advanced Settings**.
 
-![API triggered campaign.]({% image_buster /assets/img/SessionM/apiTriggerCampaign.png %})
+![API triggered campaign.]({% image_buster /assets/img/sessionm/apitriggercampaign.png %})
 
 Finalize your campaign or Canvas details, and select **Launch**. 
 
@@ -238,7 +238,7 @@ Finalize your campaign or Canvas details, and select **Launch**.
 
 Next, create your campaign in SessionM.
 
-![SessionM Campaign Creation.]({% image_buster /assets/img/SessionM/SessionMCampaignCreation.png %})
+![SessionM Campaign Creation.]({% image_buster /assets/img/sessionm/sessionmcampaigncreation.png %})
 
 Update the advanced settings in the SessionM campaign to include the following JSON payload containing the `braze_campaign_id` or `braze_canvas_id`.
 
@@ -251,12 +251,12 @@ Update the advanced settings in the SessionM campaign to include the following J
 ```
 {% endraw %}
 
-![SessionM advanced settings.]({% image_buster /assets/img/SessionM/SessionMAdvancedSettings.png %}){: style="max-width:85%;"}
+![SessionM advanced settings.]({% image_buster /assets/img/sessionm/sessionmadvancedsettings.png %}){: style="max-width:85%;"}
 
 Create a message trigger on the desired schedule or behavior. Then, select **Braze Messaging Variant** as the **Messaging Variant** in the **External Message** menu to use the template.
 
-![SessionM external message.]({% image_buster /assets/img/SessionM/SessionMExternalMessage.png %})
+![SessionM external message.]({% image_buster /assets/img/sessionm/sessionmexternalmessage.png %})
 
 This template pulls the relevant static and dynamic attributes and call out to the Braze endpoint.
 
-![SessionM Braze template.]({% image_buster /assets/img/SessionM/SessionMBrazeTemplate.png %}){: style="max-width:85%;"}
+![SessionM Braze template.]({% image_buster /assets/img/sessionm/sessionmbrazetemplate.png %}){: style="max-width:85%;"}
