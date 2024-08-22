@@ -15,12 +15,12 @@ description: "This article covers how to implement the Swift SDK delayed initial
 
 ### Step 1: Preparing the SDK for delayed initialization
 
-By default, push notifications received and clicked while your application is in the terminated state cannot be processed before the SDK is initialized. Since the version [10.1.0](https://github.com/braze-inc/braze-swift-sdk/releases/tag/10.1.0) of the Braze Swift SDK, we offer a new static helper method to handle this scenario: [Braze.prepareForDelayedInitialization(pushAutomation:)](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/preparefordelayedinitialization(pushautomation:)).
+By default, if an end-user opens your push notification while your app is in a $TERMINATED$ state, the push notification cannot be processed before the SDK is initialized.
 
-This method prepares the SDK for delayed initialization by setting up the push automation system. All push notifications originating from Braze will be captured, queued, and processed by the SDK once it is initialized. This method must be called as early as possible in your application lifecycle, in or before the `application(_:didFinishLaunchingWithOptions:)` method of your `AppDelegate`.
+Starting with [Braze Swift SDK version 10.1.0](https://github.com/braze-inc/braze-swift-sdk/releases/tag/10.1.0) and later, you can handle this using the static helper method: [Braze.prepareForDelayedInitialization(pushAutomation:)](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/preparefordelayedinitialization(pushautomation:)). This method will prepare the SDK for delayed initialization by setting up the push automation system. After the SDK is initialized, all push notifications originating from Braze will be captured, queued, and processed by the SDK. This method must be called as early as possible in your application lifecycle, either in or before the `application(_:didFinishLaunchingWithOptions:)` method of your `AppDelegate`.
 
 {% alert note %}
-Non-Braze push notifications will not be captured by the SDK and will be handled by the system delegate methods as usual.
+The Swift SDK does not capture non-Braze push notifications&#8212;these will continue to be handled by the system delegate methods.
 {% endalert %}
 
 {% tabs %}
@@ -83,19 +83,19 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 {% endtabs %}
 
 {% alert note %}
-[Braze.prepareForDelayedInitialization(pushAutomation:)](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/preparefordelayedinitialization(pushautomation:)) takes an optional `pushAutomation` parameter that represents the automation configuration for push notifications. See [Braze.Configuration.Push.Automation](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/configuration-swift.class/push-swift.class/automation-swift.class) for more information. When this parameter is `nil`, all automation features are enabled except requesting authorization at launch.
+[Braze.prepareForDelayedInitialization(pushAutomation:)](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/preparefordelayedinitialization(pushautomation:)) takes an optional `pushAutomation` parameter that represents the automation configuration for push notifications. When [Braze.Configuration.Push.Automation](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/configuration-swift.class/push-swift.class/automation-swift.class) is `nil`, all automation features are enabled, other than requesting authorization at launch.
 {% endalert %}
 
 ### Step 2: Initializing the Braze SDK
 
-Once the SDK is prepared for delayed initialization, you can initialize the SDK asynchronously at a later time. The SDK will process all queued push notifications events once it is initialized.
+After you've prepared the SDK for delayed initialization, you can initialize the SDK asynchronously at any time in the future. Then the SDK will process all queued push notifications events originating from Braze.
 
-To do so, simply follow the standard initialization process described in the [Completing the integration]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/initial_sdk_setup/completing_integration/) documentation page.
+To initialize the Braze SDK, follow the [standard Swift SDK initialization process]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/initial_sdk_setup/completing_integration/).
 
 ## Considerations
 
-By using `Braze.prepareForDelayedInitialization(pushAutomation:)`, the SDK will automatically be configured to use the push notification automation features. Any system delegate methods that handle push notifications will not be called for push notifications originating from Braze.
+By using `Braze.prepareForDelayedInitialization(pushAutomation:)`, you are configuring the SDK to automatically use push notification automation features. Any system delegate methods that handle push notifications will not be called for push notifications originating from Braze.
 
-Actions resulting from the user clicking on Braze push notifications will only be processed by the SDK once it is initialized. For instance, if the user clicks on a push notification that opens a deep link, the deep link will be opened only after the `Braze` instance is initialized.
+The SDK will only process a Braze push notification and the resulting action **after** the SDK is initialized. For example, if a user taps a push notification that opens a deep link, the deep link will only open after the `Braze` instance is initialized.
 
-If you need to perform additional processing on Braze push notifications, please refer to the [Subscribing to push notifications updates]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/integration/#subscribing-to-push-notifications-updates). You must implement the subscription handler right after initializing the SDK to receive updates for push notifications that were previously enqueued.
+If you need to perform additional processing on Braze push notifications, see [Subscribing to push notifications updates]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/integration/#subscribing-to-push-notifications-updates). Keep in mind, to receive updates for push notifications that were previously enqueued, you must implement the subscription handler directly after initializing the SDK.
