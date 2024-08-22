@@ -13,18 +13,18 @@ search_tag: Partner
 
 ## Prerequisites
 
-| Requirement | Description | Source |
+| Source | Requirement | Description |
 | --- | --- | --- |
-| A SessionM account | A SessionM account is required to take advantage of this partnership. | Braze |
-| A Braze REST API key | A Braze REST API key with `trigger_send` permissions. This can be created in the Braze dashboard from **Settings** > **API Keys**. | Braze |
-| A Braze REST endpoint | Your REST endpoint URL. Your endpoint will depend on the Braze URL for [your instance]({{site.baseurl}}/api/basics/#endpoints). | Braze |
-| A SessionM Core REST endpoint | Your endpoint will depend on the SessionM URL of your instance. This can be created in the SessionM dashboard from **Digital Properties**. | SessionM |
-| A SessionM Core REST API key | The SessionM API key associated with your instance and the Braze integration. This key can be used for all core based calls including tags. This can be created in the SessionM dashboard from **Digital Properties**. | SessionM |
-| A SessionM Core REST API secret | The SessionM API secret associated with your instance and the Braze integration. This key can be used for all core based calls including tags. This can be created in the SessionM dashboard from **Digital Properties**. | SessionM |
-| A SessionM Connect REST endpoint | Your endpoint will depend on the SessionM URL of your instance. Please reach out to your SessionM technical account manager or Delivery team to provide. | SessionM |
-| A SessionM Connect REST Authorization string | The SessionM Connect Basic Authorization string associated with your instance. This authentication string can be used for all connect based calls including `get_user_offers`. Please reach out to your SessionM technical account manager or Delivery team to provide. | SessionM |
-| A SessionM Connect REST Retailer ID | A unique guid identification to the specific customer associated with your instance. Reach out to your SessionM technical account manager or Delivery team. | SessionM |
-| Matching identifier | To use the integration, check that both SessionM and Braze have a record of the identifiers used by each platform. References to `user_id` correspond to SessionM's user identifier generated at the time of profile creation in SessionM. | Braze and SessionM |
+| Braze | A Braze REST API key | A Braze REST API key with `trigger_send` permissions. This can be created in the Braze dashboard from **Settings** > **API Keys**. |
+| Braze | A Braze REST endpoint | Your REST endpoint URL. Your endpoint will depend on the Braze URL for [your instance]({{site.baseurl}}/api/basics/#endpoints). |
+| Braze and SessionM | Matching identifier | To use the integration, ensure that both SessionM and Braze have a record of the identifiers used by each platform. References to `user_id` correspond to SessionM's user identifier generated at the time of profile creation in SessionM. |
+| SessionM | A SessionM account | A SessionM account is required to take advantage of this partnership. |
+| SessionM | A SessionM Core REST endpoint | Your endpoint will depend on the SessionM URL of your instance. This can be created in the SessionM dashboard from **Digital Properties**. |
+| SessionM | A SessionM Core REST API key | The SessionM API key associated with your instance and the Braze integration. This key can be used for all core based calls including tags. This can be created in the SessionM dashboard from **Digital Properties**. |
+| SessionM | A SessionM Core REST API secret | The SessionM API secret associated with your instance and the Braze integration. This key can be used for all core based calls including tags. This can be created in the SessionM dashboard from **Digital Properties**. |
+| SessionM | A SessionM Connect REST endpoint | Your endpoint will depend on the SessionM URL of your instance. Please reach out to your SessionM technical account manager or Delivery team to provide. |
+| SessionM | A SessionM Connect REST Authorization string | The SessionM Connect Basic Authorization string associated with your instance. This authentication string can be used for all connect based calls including get_user_offers. Please reach out to your SessionM technical account manager or Delivery team to provide. |
+| SessionM | A SessionM Connect REST Retailer ID | A unique guid identification to the specific customer associated with your instance. Reach out to your SessionM technical account manager or Delivery team. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 {% alert note %} 
@@ -41,7 +41,7 @@ The following use cases showcase a few ways to leverage the SessionM and Braze i
 - Provide detailed notifications to customers on the progress and completion of promotional and loyalty activities.
 - Notify customers when a new offer is awarded and provide the offer details.
 
-## Integration
+## Integrating SessionM with Braze
 
 ### Step 1: Create a segment in Braze
 
@@ -74,7 +74,7 @@ In the **Settings** tab, add the key-value pairs for each request header field:
 
 ![Webhook settings.]({% image_buster /assets/img/SessionM/SessionMWebhookSettings.png %}){: style="max-width:85%;"}
 
-Schedule your delivery, set your **Target Audiences** to target the segment created in [step 1](#step-1-create-a-segment-in-braze), then launch your campaign.
+Schedule your delivery, set your **Target Audiences** to target the segment [you created previously](#step-1-create-a-segment-in-braze), then launch your campaign.
 
 {% alert important %}
 This process can also be done through an API client, such as Postman, by making a request directly to the [SessionM Tag endpoint](https://docs.sessionm.com/developer/APIs/Core/Customers/customers_tags.htm#create-or-increment-a-customer-tag) specifying the customer, the tag name, and a time to live for each user in the call (single user per call).
@@ -101,7 +101,7 @@ curl --location -g --request POST '{{endpoint_core}}/priv/v1/apps/{{apikey_core}
 
 Export your Braze segment using the Braze segmenter and provide a CSV file to SessionM that contains the customers to tag, the tag name, and a time to live for each user in the file.
 
-## Retrieve real-time offer wallet with Braze
+## Retrieving real-time offer wallet with Braze
 
 Integrating SessionM with Braze allows for the real-time pulling of SessionM user data at time of message send, using Connected Content, to eliminate the risk of communicating outdated, expired or already redeemed loyalty offers to customers. 
 
@@ -194,7 +194,7 @@ Using Liquid dot notation, this can be populated into the message. For example, 
 This is an individual API. If you intend to send a batch of over 500 users, reach out to your SessionM account team to inquire about how to incorporate bulk data in the integration.
 {% endalert %}
 
-## Triggered messaging
+## Setting up triggered messaging
 
 The integration between SessionM and Braze allows user profile data, offer details, and point balances to be dynamically populated into messaging and sent in real-time to the customer at the point of action.
 
