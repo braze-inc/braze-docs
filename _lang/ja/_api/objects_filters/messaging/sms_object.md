@@ -4,12 +4,12 @@ article_title: SMSメッセージング・オブジェクト
 page_order: 10
 page_type: reference
 channel: SMS
-description: "この参考記事では、Braze SMSオブジェクトのさまざまなコンポーネントについて説明しています。"
+description: "この参考記事では、Braze SMS オブジェクトのさまざまなコンポーネントについて説明します。"
 
 ---
 # SMSオブジェクト
 
-> `sms` オブジェクトを使用すると、当社の[メッセージングエンドポイントを介して]({{site.baseurl}}/api/endpoints/messaging) SMS メッセージを変更または作成できます。
+> `sms` オブジェクトを使用すると、[メッセージングエンドポイント[]({{site.baseurl}}/api/endpoints/messaging)を通じて SMS メッセージを変更または作成できます。
 
 ```json
 {
