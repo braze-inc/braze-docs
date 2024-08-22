@@ -3,6 +3,7 @@ nav_title: SessionM
 article_title: SessionM
 description: "This reference article outlines the partnership between Braze and SessionM, a customer engagement and loyalty platform."
 alias: /partners/sessionm/
+hidden: true
 page_type: partner
 search_tag: Partner
 --- 
