@@ -1,44 +1,44 @@
 ---
-nav_title: "設置:ダッシュボードユーザーアカウントの更新"
-article_title: "設置:ダッシュボードユーザーアカウントの更新"
+nav_title: "PUT:ダッシュボードのユーザーアカウントを更新する"
+article_title: "PUT:ダッシュボードのユーザーアカウントを更新する"
 alias: /post_update_existing_user_account/
 search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "この記事では、既存のダッシュボードユーザーアカウントの更新 Braze エンドポイントの詳細について説明します。"
+description: "この記事では、既存のダッシュボードのユーザーアカウントを更新するBrazeエンドポイントの詳細について概説する。"
 ---
 
 {% api %}
-# ダッシュボードユーザーアカウントの更新
+# ダッシュボードのユーザーアカウントを更新する
 {% apimethod put %}
 /scim/v2/Users/{id}
 {% endapimethod %}
 
-> このエンドポイントを使用して、SCIM `id` [`POST`]({{site.baseurl}}/scim/post_create_user_account/)メソッドによって返されるリソースを指定して、既存のダッシュボードユーザーアカウントを更新します。 
+> このエンドポイントを使用して、SCIM [`POST`]({{site.baseurl}}/scim/post_create_user_account/) メソッドによって返されるリソース `id` を指定して、既存のダッシュボードユーザーアカウントを更新します。 
 
-氏名や氏名、権限 (会社、ワークスペース、チームレベルでの権限設定用)、部署を更新できます。
+これにより、姓名、権限 (会社、ワークスペース、チームレベルでの権限設定)、および部門を更新できます。
 
-セキュリティ上の理由から、このエンドポイントでは `userName` (メールアドレス) を更新することはできません。ユーザーの `userName` (メールアドレス) を変更したい場合は、[サポートにお問い合わせください]({{site.baseurl}}/support_contact/)。
+セキュリティ上の理由から、`userName` （電子メールアドレス）はこのエンドポイントを通じて更新できない。ユーザーの`userName` （電子メールアドレス）を変更したい場合は、[サポートに]({{site.baseurl}}/support_contact/)連絡する。
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#5f9a1642-988e-4011-8fb8-db4340ea1ac7 {% endapiref %}
 
 ## 前提条件
 
-このエンドポイントを使用するには、SCIM トークンが必要です。詳しくは、「[自動ユーザープロビジョニング]({{site.baseurl}}/scim/automated_user_provisioning/)」を参照してください。
+このエンドポイントを使うには、SCIMトークンが必要だ。詳細については、「[自動ユーザープロビジョニング]({{site.baseurl}}/scim/automated_user_provisioning/)」を参照してください。
 
 ## レート制限
 
-{% multi_lang_include rate_limits.md endpoint='update dashboard user' %}
+{% multi_lang_include rate_limits.md endpoint='ダッシュボードのユーザーを更新する' %}
 
 ## パスパラメーター
 
-| パラメーター | 必須 | データ型 | 説明 |
+| パラメーター | required | データ型 | 説明 |
 |---|---|---|---|
-| `id` | 必須 | 文字列 | ユーザーのリソース ID。このパラメータは、`POST``/scim/v2/Users/``GET``/scim/v2/Users?filter=userName eq "user@test.com"`またはメソッドによって返されます。|
+| `id` | 必須 | string | ユーザーのリソースID。このパラメータは、`POST` `/scim/v2/Users/` または`GET`  `/scim/v2/Users?filter=userName eq "user@test.com"` メソッドによって返される。 |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
-## リクエスト本文
+## Request body
 ```
 Content-Type: application/json
 X-Request-Origin: YOUR-REQUEST-ORIGIN-HERE
@@ -80,12 +80,12 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ## リクエストパラメーター
 
-| パラメーター | 必須 | データ型 | 説明 |
+| パラメーター | required | データタイプ | 説明 |
 | --------- | -------- | --------- | ----------- |
-| `schemas` | 必須 | 文字列の配列 | ユーザーオブジェクトには SCIM 2.0 スキーマ名が必要です。|
-| `name` | 必須 | JSON オブジェクト | このオブジェクトには、ユーザーの指定した名前と姓が含まれます。|
-| `department` | 必須 | 文字列 | [部門文字列ドキュメントにある有効な部門文字列]({{site.baseurl}}/scim_api_appendix/#department-strings)。|
-| `permissions` | 必須 | JSON オブジェクト | [権限オブジェクトのドキュメントに記載されている権限オブジェクト]({{site.baseurl}}/scim_api_appendix/#permissions-object)。|
+| `schemas` | required | 文字列の配列 | ユーザーオブジェクトに期待される SCIM 2.0 スキーマ名。 |
+| `name` | required | JSONオブジェクト | このオブジェクトには、ユーザーの姓と名が含まれます。 |
+| `department` | 必須 | string | [部門文字列のドキュメント]({{site.baseurl}}/scim_api_appendix/#department-strings)にある有効な部門文字列。 |
+| `permissions` | required | JSONオブジェクト | [権限オブジェクトのドキュメント]({{site.baseurl}}/scim_api_appendix/#permissions-object)で説明されている権限オブジェクト。 |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 
@@ -153,18 +153,18 @@ curl --location --request PUT 'https://rest.iad-01.braze.com/scim/v2/Users/dfa24
 ```
 
 ### エラー状態
-この ID のユーザーが Braze に存在しない場合、エンドポイントは次のように応答します。
+このIDを持つユーザーがBrazeに存在しない場合、エンドポイントは次のように応答する：
 
-\`\`\`json
+```json
 HTTP/1.1 404 Not Found
 Content-Type: text/html; charset=UTF-8
 
 {
-"schemas": ["urn:ietf:params:scim:api:messages:2.0:Error"],
-"detail": "User not found",
-"status": 404
+    "schemas": ["urn:ietf:params:scim:api:messages:2.0:Error"],
+    "detail": "User not found",
+    "status": 404
 }
-    \`\`\`
+```
 
 {% endapi %}
 
