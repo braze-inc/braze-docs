@@ -6,16 +6,16 @@
 # Usage: ./bdocs release
 
 main() {
-    # Run script from the root of the git repository
+    # Run script from the root of the git repository.
     cd "$PROJECT_ROOT"
 
-    # Get the last release version tag
+    # Get the last release version tag.
     LAST_RELEASE_TAG=$(git describe --tags $(git rev-list --tags --max-count=1 --tags="v.*"))
 
-    # Get the timestamp of the last release tag
+    # Get the timestamp of the last release tag.
     LAST_RELEASE_TIMESTAMP=$(git log -1 --pretty=format:"%cI" "$LAST_RELEASE_TAG")
 
-    # Convert Git logs to JSON and sort by date
+    # Convert Git logs to JSON and sort by date.
     COMMIT_LOGS=$(git log --merges --first-parent --since="$LAST_RELEASE_TIMESTAMP" origin/master --pretty=format:'{%n  "commit": "%H",%n  "date": "%cI",%n  "title": "%s",%n  "body": "%b"%n},' | perl -pe 'BEGIN{print "["}; END{print "]\n"}' | perl -pe 's/},]/}]/' | jq -c '. | sort_by(.date)')
 
     if [ -z "$COMMIT_LOGS" ]; then
@@ -23,13 +23,13 @@ main() {
         exit 1
     fi
 
-    # Remove the first entry from the commit logs. It's from the last release
+    # Remove the first entry from the commit logs. It's from the last release.
     COMMIT_LOGS=$(echo "$COMMIT_LOGS" | jq '.[1:]')
 
-    # Initialize the previous commit date with the release timestamp
+    # Initialize the previous commit date with the release timestamp.
     PREV_COMMIT_DATE="$LAST_RELEASE_TIMESTAMP"
     
-    # Iterate over the commit logs and run deploy_text.sh for each commit
+    # Iterate over the commit logs and run 'deploy_text.sh' for each commit.
     echo "$COMMIT_LOGS" | jq -c '.[]' | while read commit; do
 
         # Pull variables from 'COMMIT_LOGS'.

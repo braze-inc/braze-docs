@@ -11,10 +11,12 @@ main() {
     LATEST_COMMIT_HASH=$(git log --max-count=1 --format="%H" origin/master ^origin/develop)
 
     if [ -z "$1" ] || [ -z "$2" ]; then
-        # Gets the log of commits starting from the latest commit hash if no dates are provided
+        # Gets the log of commits starting from the latest 
+        # commit hash if no dates are provided.
         COMMIT_LOGS=$(git log --first-parent "$LATEST_COMMIT_HASH"..origin/develop --pretty=%s»¦«%b)
     else
         # Use the provided start and end dates to get the commit logs
+        # Needed so 'release_text.sh' can get all deploys for a monthly release.
         START_DATE="$1"
         END_DATE="$2"
         COMMIT_LOGS=$(git log --first-parent --since="$START_DATE" --until="$END_DATE" origin/develop --pretty=%s»¦«%b)
