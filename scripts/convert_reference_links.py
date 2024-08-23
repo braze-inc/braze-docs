@@ -79,8 +79,8 @@ def main(path):
         link_dict = create_link_dictionary(path)
         replace_links(path, link_dict)
     else:
-        print(f"Invalid path: {path}.
-               Please provide a valid directory or a markdown file.")
+        print(f"Invalid path: {path}. Please provide a valid directory or a markdown file.")
+
 
 if __name__ == "__main__":
     if len(sys.argv) < 2:
