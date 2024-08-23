@@ -11,13 +11,13 @@ description: "This reference article describes features and nuances specific to 
 
 Before continuing, you should have already [created your Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/) and set up delay and audience options.
 
-Add a [Message]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/) step and choose **In-App Message** for your **Messaging Channel**. 
+In the Canvas builder, add a [Message]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/) step and select **In-App Message** as your **Messaging Channel**. You can customize [when your message will expire](#in-app-message-expiration) and which [advancement behavior](#advancement-behavior) it will have.
 
-After any delays pass and the audience options are checked, the in-app message will be set live and users will see it if they open the app. In-app messages in Canvas may only be triggered by the `start session` trigger event—they can't be triggered by custom events in a Canvas component.
+## Triggered in-app messages
 
-For Canvas steps that have action-triggered entry, users can enter the Canvas mid-session. However, as noted above, in-app messages won't trigger until the next session starts, so these users would miss the initial in-app message since they weren't eligible to enter the Canvas before the session started.
+After any delays pass and the audience options are checked, in-app messages are set live when a user reaches the Message step. If a user starts a session and performs the trigger event for the in-app message, the user will see the in-app message. 
 
-You can customize [when your message will expire](#in-app-message-expiration) and which [advancement behavior](#advancement-behavior) it will have.
+For Canvas steps that have action-triggered entry, users can enter the Canvas mid-session. In-app messages aren't set live until a session starts, so if a user is in the middle of the session when they reach the Message step, they won't receive the in-app message until they start another session and perform the relevant trigger.
 
 ## In-app message expiration
 
@@ -152,15 +152,13 @@ Select **Set exact priority** and drag different Canvas steps to reorder their p
 
 ![]({% image_buster /assets/img_archive/canvas_priority2.png %}){: style="max-width:85%"}
 
-### Drafts of an active Canvas
+### Making changes to drafts of active Canvases
 
-When editing a draft of an active Canvas, changes to the in-app message priority within **Send Settings** are not saved with a draft. These changes are applied directly to the active Canvas when the priority sorter modal is closed. However, in a Message step, the priority sorter will be updated when a user launches the draft since step settings apply at a step level.
+If you make changes to the in-app message priority in **Send Settings** of a draft of an active Canvas, these changes are applied directly to the active Canvas when the priority sorter is closed. However, in a Message step, the priority sorter wil be updated when the draft is launched since Canvas step settings apply at a step level. 
 
 ## Advancement behavior
 
-### Canvas Flow
-
-Message components automatically advance all users who enter the step. There is no requirement to specify message advancement behavior, making configuring the overall step simpler. If you want to implement the **Advance when message sent** option, add a separate [audience path]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/audience_paths/) to filter users that didn't receive the previous step.
+Message components automatically advance all users who enter the step. Note it doesn't wait for the in-app message to trigger or display. There is no requirement to specify message advancement behavior, making configuring the overall step simpler. If you want to implement the **Advance when message sent** option, add a separate [audience path]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/audience_paths/) to filter users that didn't receive the previous step.
 
 {% details Original Canvas editor %}
 
