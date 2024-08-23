@@ -17,7 +17,9 @@ description: "This article covers how to implement the Swift SDK delayed initial
 
 By default, if an end-user opens your push notification while your app is in a $TERMINATED$ state, the push notification cannot be processed before the SDK is initialized.
 
-Starting with [Braze Swift SDK version 10.1.0](https://github.com/braze-inc/braze-swift-sdk/releases/tag/10.1.0) and later, you can handle this using the static helper method: [Braze.prepareForDelayedInitialization(pushAutomation:)](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/preparefordelayedinitialization(pushautomation:)). This method will prepare the SDK for delayed initialization by setting up the push automation system. After the SDK is initialized, all push notifications originating from Braze will be captured, queued, and processed by the SDK. This method must be called as early as possible in your application lifecycle, either in or before the `application(_:didFinishLaunchingWithOptions:)` method of your `AppDelegate`.
+Starting with [Braze Swift SDK version 10.1.0](https://github.com/braze-inc/braze-swift-sdk/releases/tag/10.1.0) and later, you can handle this using the static helper method: [Braze.prepareForDelayedInitialization(pushAutomation:)](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/preparefordelayedinitialization(pushautomation:)). This method will prepare the SDK for delayed initialization by setting up the push automation system.
+
+Before the SDK is initialized, all push notifications originating from Braze will be captured and queued. After the SDK is initialized, those push notifications will be processed by the SDK. This method must be called as early as possible in your application lifecycle, either in or before the `application(_:didFinishLaunchingWithOptions:)` method of your `AppDelegate`.
 
 {% alert note %}
 The Swift SDK does not capture non-Braze push notifications&#8212;these will continue to be handled by the system delegate methods.
