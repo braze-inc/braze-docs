@@ -25,10 +25,6 @@ Braze has several features which rely on silent push notifications:
 
 ## Setting up silent push notifications
 
-{% alert tip %}
-When you [compose your push notification message]({{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message//?tab=ios#step-4-compose-your-push-message), you can send a silent iOS push notification by sending a message without a title, or with a single space. Keep in mind, this is **not** the recommended method for sending push notifications, but can be helpful in some cases.
-{% endalert %}
-
 To use silent push notifications to trigger background work, you must configure your app to receive notifications even when it is in the background. To do this, add the Background Modes capability using the **Signing & Capabilities** pane to the main app target in Xcode. Select the **Remote notifications** checkbox.
 
 ![Xcode showing the "remote notifications" mode checkbox under "capabilities".][3]

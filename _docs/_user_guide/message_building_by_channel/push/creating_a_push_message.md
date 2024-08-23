@@ -112,10 +112,6 @@ Add copy in multiple languages using the **Add Languages** button. We recommend 
 {% tabs local %}
 {% tab ios %}
 Start typing in the message box and watch a preview appear in the preview box to the left. Push messages must be formatted in plain text. Add a headline using the **Title** field. To make your push personalized and targeted, you can include [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/).
-
-{% alert important %}
-You can send an iOS push message without a title or a title with a single space. In either case, your message will be sent as a silent push notification. For more information, see [Silent push notifications]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/silent_push_notifications/).
-{% endalert %}
 {% endtab %}
 
 {% tab android %}
