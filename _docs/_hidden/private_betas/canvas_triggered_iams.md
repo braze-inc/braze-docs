@@ -15,7 +15,7 @@ In the Canvas builder, add a [Message]({{site.baseurl}}/user_guide/engagement_to
 
 ## Triggered in-app messages
 
-After any delays pass and the audience options are checked, in-app messages are set live when a user reaches the Message step. If a user starts a session and performs the trigger event for the in-app message, the user will see the in-app message. 
+After any delays pass and the audience options are checked, in-app messages are set to live when a user reaches the Message step. If a user starts a session and performs the trigger event for the in-app message, the user will see the in-app message. 
 
 For Canvas steps that have action-triggered entry, users can enter the Canvas mid-session. In-app messages aren't set to live until a session starts, so if a user is in the middle of the session when they reach the Message step, they won't receive the in-app message until they start another session and perform the relevant trigger.
 
