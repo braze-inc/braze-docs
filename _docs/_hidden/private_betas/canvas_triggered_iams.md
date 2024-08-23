@@ -17,7 +17,7 @@ In the Canvas builder, add a [Message]({{site.baseurl}}/user_guide/engagement_to
 
 After any delays pass and the audience options are checked, in-app messages are set live when a user reaches the Message step. If a user starts a session and performs the trigger event for the in-app message, the user will see the in-app message. 
 
-For Canvas steps that have action-triggered entry, users can enter the Canvas mid-session. In-app messages aren't set live until a session starts, so if a user is in the middle of the session when they reach the Message step, they won't receive the in-app message until they start another session and perform the relevant trigger.
+For Canvas steps that have action-triggered entry, users can enter the Canvas mid-session. In-app messages aren't set to live until a session starts, so if a user is in the middle of the session when they reach the Message step, they won't receive the in-app message until they start another session and perform the relevant trigger.
 
 ## In-app message expiration
 
@@ -38,7 +38,7 @@ When should you use this feature? Braze highly recommends that you consider usin
 {% tabs %}
   {% tab Promotional %}
 
-Promotions, coupons, and sales often have hard expiration dates. The following Canvas should alert your users at the most opportune times that there is a promotion they may use, and perhaps influence a purchase. This promotion expires on February 28, 2019, at 11:15 am in the company's time zone.
+Promotions, coupons, and sales often have hard expiration dates. The following Canvas should alert your users at the most opportune times that there is a promotion they may use, and perhaps influence a purchase. This promotion expires on February 28, 2019, at 11:15 am in your company's time zone.
 
 <style type="text/css">
 .tg td{word-break:normal;}
@@ -158,7 +158,7 @@ If you make changes to the in-app message priority in **Send Settings** of a dra
 
 ## Advancement behavior
 
-Message components automatically advance all users who enter the step. Note it doesn't wait for the in-app message to trigger or display. There is no requirement to specify message advancement behavior, making configuring the overall step simpler. If you want to implement the **Advance when message sent** option, add a separate [audience path]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/audience_paths/) to filter users that didn't receive the previous step.
+Message components automatically advance all users who enter the step. Note that it doesn't wait for the in-app message to trigger or display. There is no requirement to specify message advancement behavior, making configuring the overall step simpler. If you want to implement the **Advance when message sent** option, add a separate [audience path]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/audience_paths/) to filter users that didn't receive the previous step.
 
 {% details Original Canvas editor %}
 
@@ -166,7 +166,7 @@ Message components automatically advance all users who enter the step. Note it d
 As of February 28, 2023, you can no longer create or duplicate Canvases using the original editor. This section is available for reference when understanding how advancement behavior works for steps with in-app messages.
 {% endalert %}
 
-Canvases created in the original editor need to specify an advancement behavior—the criteria for advancement through your Canvas component. [Steps with only in-app messages](#steps-iam-only) have different advancement options than [steps with multiple message types](#steps-multiple-channels) (push, email, etc.). For in-app messages in a Canvas Flow workflow, this option is set to always immediately advance the audience.
+Canvases created in the original editor need to specify an advancement behavior—the criteria for advancement through your Canvas component. [Steps with only in-app messages](#steps-iam-only) have different advancement options than [steps with multiple message types](#steps-multiple-channels) (such as push or email). For in-app messages in a Canvas Flow workflow, this option is set to always immediately advance the audience.
 
 Action-based delivery is not available for Canvas steps with in-app messages. Canvas steps with in-app messages must be scheduled. Instead, Canvas in-app messages will appear the first time that your user opens the app (triggered by the start session) after the scheduled message in the Canvas component has been sent to them.
 
