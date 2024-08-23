@@ -395,11 +395,11 @@ User export object (we will include the least data possible - if a field is miss
     ],
     "push_tokens": [
       {
-        "app": "MovieCanon",
-        "platform": "Android",
-        "token": "12345abcd",
-        "device_id": "312ef2c1-83db-4789-967-554545a1bf7a",
-        "notifications_enabled": true
+        "app" : (string) app name,
+        "platform" : (string),
+        "token" : (string),
+        "device_id": (string),
+        "notifications_enabled": (boolean) whether the user's push notifications are turned on or turned off
       },
       ...
     ],
