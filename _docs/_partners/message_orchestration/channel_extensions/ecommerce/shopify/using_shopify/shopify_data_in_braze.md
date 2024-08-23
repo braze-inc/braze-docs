@@ -63,6 +63,7 @@ After the app installation is complete, Braze automatically creates your webhook
 {% raw %}
 | Variable | Liquid Templating |
 | --- | --- |
+| Cart ID | `{{event_properties.${cart_id}}}` |
 | Item ID | `{{event_properties.${line_items}[0].product_id}}` |
 | Item Quantity | `{{event_properties.${line_items}[0].quantity}}` |
 | Item SKU | `{{event_properties.${line_items}[0].sku}}` |
