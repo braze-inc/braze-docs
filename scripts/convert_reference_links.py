@@ -1,10 +1,14 @@
-# This script converts Markdown reference links to in-line links.
-# Created because reference links cannot be placed inside Liquid a {% tab %}.
+# Converts Markdown reference links to in-line links. Created because 
+# reference links cannot be placed inside Liquid {% tab %} tags.
 #
 # For more information, see:
 # https://www.braze.com/docs/contributing/content_management/cross_referencing/
 # 
-# Usage: ./convert_reference_links [directory|file]
+# Usage: ./bdocs transform [FILE|DIRECTORY]
+#
+# Options:
+#   FILE              Transform reference links in a single file.
+#   DIRECTORY         Recursively transform reference links in a directory.
 
 import os
 import sys
@@ -53,7 +57,8 @@ def replace_links(file_path, link_dict):
 
 def process_directory(directory):
     for root, dirs, files in os.walk(directory):
-        print(f"Traversing directory: {root}")  # Log the directory being traversed
+        # Log the directory being traversed
+        print(f"Traversing directory: {root}")
         for file in files:
             if file.endswith('.md'):
                 file_path = os.path.join(root, file)
@@ -69,7 +74,8 @@ def main(path):
         link_dict = create_link_dictionary(path)
         replace_links(path, link_dict)
     else:
-        print(f"Invalid path: {path}. Please provide a valid directory or a markdown file.")
+        print(f"Invalid path: {path}.
+               Please provide a valid directory or a markdown file.")
 
 if __name__ == "__main__":
     if len(sys.argv) < 2:

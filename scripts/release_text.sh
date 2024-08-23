@@ -1,9 +1,9 @@
 #!/bin/bash
-
-# This script lists the commit bodies, commit hash, and full date/time of all parent commits since the last release version tag,
+#
+# Lists the commit bodies, commit hash, and full date/time of all parent commits since the last release version tag,
 # and runs deploy_text.sh for each commit.
 #
-# Usage: ~/braze-docs/scripts/release_text.sh
+# Usage: ./bdocs release
 
 main() {
     # Run script from the root of the git repository

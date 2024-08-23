@@ -1,8 +1,8 @@
 #!/bin/bash
 #
-# This script generates the body text for deployment PRs in the Braze Docs repository.
+# Generates the body text for deployment PRs in the Braze Docs repository.
 # 
-# Usage: ./deploy_text.sh [start_date] [end_date]
+# Usage: ./bdocs deploy
 
 main() {
     TEMP_FILE=$(mktemp)

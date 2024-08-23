@@ -1,11 +1,11 @@
-# This script removes unused reference-style links from the bottom of a file, such as:
+# Removes unused reference-style links from the bottom of a file, such as:
 #   [1]: {{site.baseurl}}/contributing/your_first_contribution/
 # 
-# Usage: ruby remove_unused_reference_links.rb [option]
+# Usage: ./bdocs clean [FILE|DIRECTORY]
 #
 # Options:
-#   PATH/TO/FILE              Delete unused shortlinks in a single file.
-#   PATH/TO/DIRECTORY         Recursively delete unused shortlinks in a directory.
+#   FILE              Delete unused reference links in a single file.
+#   DIRECTORY         Recursively delete unused reference links in a directory.
 
 require 'fileutils'
 require "readline"

@@ -21,8 +21,8 @@ USUAGE:
 OPTIONS:
   deploy       Create the deploy body text for weekly deployments
   release      Create the release body text for monthly releases
-  transform    Transform reference links to inline links on a page
-  clean        Remove reference links that are not being used on a page
+  transform    Transform reference links to inline links on 1 or more pages
+  clean        Remove reference links that are not being used on 1 or more pages
   help         Display this help message and exit
 
 EOF
