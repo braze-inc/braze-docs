@@ -172,7 +172,7 @@ Action-based delivery is not available for Canvas steps with in-app messages. Ca
 
 If you have multiple in-app messages within one Canvas, a user must start multiple sessions to receive each of those individual messages.
 
-![][2]
+![]({% image_buster /assets/img/iam-advancement-behavior.png %})
 
 {% alert important %}
 When **Advance When In-App Message Live** is selected, the in-app message will be available until it expires, even if the user has moved to subsequent steps. If you do not want the in-app message to be live when the next steps in the Canvas are delivered, ensure that the expiration is shorter than the delay on subsequent steps.
@@ -188,7 +188,7 @@ Steps with an in-app message and another channel have the following advancement 
 | Immediately Advance Audience | Everyone in the step's audience advances to the next steps after the delay elapses, whether they have seen the noted message or not. <br> <br> Users must match the step's segment and filter criteria to advance to the next steps. |
 {: .reset-td-br-1 .reset-td-br-2}
 
-![][3]
+![]({% image_buster /assets/img/push-advancement-behavior.png %})
 
 {% alert important %}
 When **Entire Audience** is selected, the in-app message will be available until it expires, even if the user has moved to subsequent steps. If you don't want the in-app message to be live when the next steps in the Canvas are delivered, check that the expiration is shorter than the delay on subsequent steps.
@@ -219,7 +219,3 @@ The following Canvas features aren't available with in-app messages, so if any o
 ## Custom event properties in a Canvas
 
 Custom event properties in in-app messages for Canvas are supported. However, these properties are from the custom event or purchase triggering the in-app message, which is located in the Message step, not the preceding action path.
-
-[1]: {% image_buster /assets/img/expires-after.png %} "IAM Live"
-[2]: {% image_buster /assets/img/iam-advancement-behavior.png %} "IAM Live"
-[3]: {% image_buster /assets/img/push-advancement-behavior.png %} "IAM Live"
