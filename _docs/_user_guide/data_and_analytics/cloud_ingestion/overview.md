@@ -358,11 +358,11 @@ The `UPDATED_AT` column should be in UTC to prevent issues with daylight savings
 
 ### Separate EXTERNAL_ID from PAYLOAD column
 
-The PAYLOAD object should not include an external ID or other ID type. 
+The `PAYLOAD` object should not include an external ID or other ID type. 
 
 ### Remove an attribute
 
-You can set it to `null` if you want to completely remove an attribute from a user's profile. If you want an attribute to remain unchanged, don't send it to Braze until it's been updated.
+You can set it to `null` if you want to omit an attribute from a user's profile. If you want an attribute to remain unchanged, don't send it to Braze until it's been updated. To completely remove an attribute, use `TO_JSON(OBJECT_CONSTRUCT_KEEP_NULL(...))`.
 
 ### Create JSON string from another table
 
