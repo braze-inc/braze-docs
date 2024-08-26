@@ -3,7 +3,7 @@ nav_title: Message Usage Dashboard
 article_title: Message Usage Dashboard
 page_order: 0
 page_type: reference
-description: "This reference article covers the Message Usage dashboard, where you can view self-service insights into your SMS and WhatsApp credit usage."
+description: "This reference article covers the message usage dashboard, where you can view self-service insights into your SMS and WhatsApp credit usage."
 tool: Dashboard
 hidden: true
 permalink: /message_usage/
@@ -11,10 +11,10 @@ permalink: /message_usage/
 
 # Message usage dashboard
 
-> The **Message Usage** dashboard provides self-service insights into your SMS and WhatsApp credit usage for a comprehensive view of historical and current usage compared against contract allotments. These insights can reduce your confusion and help you make adjustments to prevent overage risks.
+> The message usage dashboard provides self-service insights into your SMS and WhatsApp credit usage for a comprehensive view of historical and current usage compared against contract allotments. These insights can reduce your confusion and help you make adjustments to prevent overage risks.
 
 {% alert important %}
-The **Message Usage** dashboard is currently in early access. Contact your Braze account manager if you're interested in participating in the early access.
+The message usage dashboard is currently in early access. Contact your Braze account manager if you're interested in participating in the early access.
 {% endalert %}
 
 The **Message Usage** dashboard is divided into three sections:
@@ -28,9 +28,9 @@ Access the dashboard by going to **Settings** > **Billing** > **Message Usage**.
 If you're using the [older navigation]({{site.baseurl}}/navigation), you can find this page by selecting your account icon, then selecting **Subscriptions and Usage**.
 {% endalert %}
 
-## Message Credits Usage Overview
+## Message credits usage overview
 
-**Message Credits Usage Overview** provides an overview of usage across all channels that use credits. You can see how you're pacing against your overall credit allotment, and find details around your active contract and your contract period.
+**Message Credits Usage Overview** provides an overview of usage across all channels that use credits. You can see how you're pacing against your overall credit allotment, and find details about your active contract and your contract period.
 
 This page displays if you're on a message credits contract or if you've purchased WhatsApp. The channels that use message credits are shown in the **Credits contract overview**.
 
@@ -46,7 +46,7 @@ The **Message Credits Usage over Contract** graph shows your usage over the sele
 
 ![Message Credits Usage Overview dashboard with sections for credit usage, credit contract overview, and credit consumption over contract.][1]{: style="max-width:80%;"}
 
-## SMS/MMS
+## SMS and MMS
 
 **SMS/MMS Credits Usage** shows the usage breakdown for the SMS/MMS channel. The columns in the data table vary depending on whether SMS/MMS is a credit channel. If SMS/MMS is a credit channel, additional **Credit ratio** and **Credits** columns will be visible and indicate the respective country rate and consumed credits. Additionally, high-level tiles will indicate the total SMS and, when relevent, MMS consumption across the selected date range.
 
