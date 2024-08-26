@@ -116,6 +116,13 @@ Beyond that, you can decide what additional segments you feel are most appropria
 
 Braze suggests default settings for conversions, but you may want to set up [conversion events]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/) surrounding push primers.
 
+## Troubleshooting
+
+### Custom event won't trigger a push primer in-app message
+
+If your push primer won't send, you may also receive an error that says your in-app message isn't eligible for a push prompt. This could mean you've already been granted permission to send push notifications to that device.
+
+
 [1]: {% image_buster /assets/img_archive/push_primer_iam.png %}
 [2]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/create/
 [3]: {{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/creating_custom_opt-in_prompts/
