@@ -104,6 +104,10 @@ Also, as subscription state changes do not consume data points, updating the `em
 
 #### Billable data points
 
+{% alert important %}
+Adding, removing, or updating the following data types will incur a billable data point.
+{% endalert %}
+
 <style>
 table th:nth-child(1) {
     width: 20%;
@@ -136,7 +140,7 @@ table td {
 | Profile data | Phone number | |
 | App usage data | Session start | |
 | App usage data | Session end | |
-| Custom attributes | All custom attributes | When added or removed. |
+| Custom attributes | All custom attributes | |
 | Custom events | All custom events | |
 | Custom event properties | All custom event properties | Custom event properties enabled for segmentation with the filters `X Custom Event Property in Y Days` or `X Purchase Property in Y Days` are all counted as separate data points in addition to the data point counted by the custom event itself.
 | Purchases | All purchases | |
