@@ -17,7 +17,7 @@ Currently, this feature is only available for native iOS and Android apps. To en
 
 To use the Braze SDK debugger, ensure your SDKs are up to date with at least these minimum versions:
 
-XXX XXX XXX 
+{% sdk_min_versions swift:10.2.0 android:32.1.0 %}
 
 ## Debugging the Braze SDK
 
