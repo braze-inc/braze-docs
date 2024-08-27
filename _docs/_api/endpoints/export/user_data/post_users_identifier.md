@@ -48,7 +48,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 ```
 
 {% alert note %}
-For customers who onboarded with Braze on or after August 22, 2024. Request parameter `fields_to_export` will be required.
+For customers who have onboarded with Braze on or after August 22, 2024, the request parameter `fields_to_export` is required.
 {% endalert %}
 
 ## Request parameters
