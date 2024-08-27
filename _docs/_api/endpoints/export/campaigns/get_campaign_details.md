@@ -83,7 +83,9 @@ The `messages` response will contain information about each message. The followi
 {
     "channel": (string) the description of the channel, such as "ios_push" or "android_push"
     "alert": (string) the alert body text,
-    "extras": (hash) any key-value pairs provided
+    "extras": (hash) any key-value pairs provided,
+    "title": (string) the alert title text,
+    "action": (string) action link from click
 }
 ```
 
