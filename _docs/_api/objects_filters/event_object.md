@@ -63,7 +63,7 @@ Property values can be any of the following data types:
 | Data Type | Description |
 | --- | --- |
 | Numbers | As either [integers](https://en.wikipedia.org/wiki/Integer) or [floats](https://en.wikipedia.org/wiki/Floating-point_arithmetic) |
-| Booleans |  |
+| Booleans | `true` or `false` |
 | Datetimes | Formatted as strings in [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) or `yyyy-MM-dd'T'HH:mm:ss:SSSZ` format. Not supported within arrays. |
 | Strings | 255 characters or fewer. |
 | Arrays | Arrays cannot include datetimes. |
