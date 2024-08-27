@@ -1,6 +1,6 @@
 ---
-nav_title: "Android Rich Notifications"
-article_title: Rich Notifications for Android
+nav_title: "Creating Rich Notifications"
+article_title: "Creating rich push notifications for Android"
 page_order: 3
 page_layout: tutorial
 description: "This tutorial covers how to set up Android Rich notifications for your Braze campaigns."
@@ -12,7 +12,7 @@ tool:
   
 ---
 
-# Android rich notifications
+# Creating rich push notifications for Android
 
 > Rich notifications allow for more customization in your push notifications by adding additional content beyond just copy. Android notifications have included images in push notifications for some time now, referred to as an "expanded notification image."
 

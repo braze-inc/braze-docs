@@ -13,7 +13,7 @@ page_order: 5
 With the AI Liquid Assistant, you can generate Liquid from templates, receive personalized Liquid suggestions, and optimize existing Liquid with the support of Sage AI. The AI Liquid Assistant also provides annotations explaining the Liquid used, so you can increase your understanding of Liquid and learn to write your own.
 
 {% alert important %}
-The AI Liquid Assistant is currently in beta for a limited number of customers who actively use the push and SMS channels. If you're interested in being considered for the beta, reach out to your customer success manager or indicate your interest on this [portal card](https://braze.productboard.com/entity-detail/features/27273918).
+The AI Liquid Assistant is currently in beta for a limited number of customers who actively use the push and SMS channels. If you're interested in being considered for the beta, reach out to your customer success manager.
 {% endalert %}
 
 ## How it works

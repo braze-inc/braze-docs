@@ -63,15 +63,19 @@ You can have multiple parameters appended to the end of a URL.
 
 After your link templates are set up, you can select the template to use in your email.
 
-- **HTML editor:** Go to the **Link Management** tab under the **Content** section. Click **Add a Link Template**, select your link template, and click **Add**.
+- **HTML editor:** Go to the **Link Management** tab under the **Content** section. Select **Add a Link Template**, choose your link template, and select **Add**.
 
 {% alert important %}
 To access the **Link Management** tab in the updated HTML email editor, you must have link aliasing turned on. To turn on link aliasing, contact your account manager.
 {% endalert %}
 
-- **Drag-and-drop editor:** Select **Content** > **Link Management** tab. Click **Add a Link Template**. To access link templates in the drag-and-drop editor, you must have [link aliasing]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates/link_aliasing/) turned on.
+- **Drag-and-drop editor:** Select **Content** > **Link Management** tab. Then, select **Add a Link Template**. To access link templates in the drag-and-drop editor, you must have [link aliasing]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates/link_aliasing/) turned on.
 
 ![Link Management tab in the drag-and-drop editor with an example list of link templates.][1]
+
+{% alert note %}
+Link templates aren't applied to plain text. This means Currents may show clicks that don't include the parameters from the link templates as those clicks may come from the plain text version of the email.
+{% endalert %}
 
 As you add link templates in the **Link Management** tab, scroll to the right to view the templates you've added.
 

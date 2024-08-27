@@ -9,7 +9,7 @@ channel:
 
 ---
 
-# Silent push notifications
+# Silent push notifications for iOS
 
 > Push notifications allow you to send out notifications from your app when important events occur. 
 
