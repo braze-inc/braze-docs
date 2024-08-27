@@ -40,7 +40,7 @@ See our page on [API rate limits]({{site.baseurl}}/api/api_limits/) for details,
 <!---/users/export/ids-->
 
 {% elsif include.endpoint == "users export ids" %}
-For customers who onboarded with Braze on or after August 16, 2021, we apply a rate limit of 2,500 requests per minute to this endpoint, as documented in [API rate limits]({{site.baseurl}}/api/api_limits/).
+This endpoint has a rate limit of 250 requests per minute, as documented in [API rate limits]({{site.baseurl}}/api/api_limits/).
 
 <!---/users/delete-->
 
