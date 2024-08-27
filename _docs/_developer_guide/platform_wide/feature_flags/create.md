@@ -84,7 +84,7 @@ Before rolling out a feature flag, you need to choose a [segment]({{site.baseurl
 
 ### Step 5: Set the rollout traffic {#rollout}
 
-Feature flags are always disabled by default, allowing you to separate your feature release's date from your total user activation. To begin your rollout, use the **Rollout Traffic** slider to choose the percentage of random users in your selected segment to receive this new feature.
+By default, Feature flags are always disabled, which allows you to separate your feature release's date from your total user activation. To begin your rollout, use the **Rollout Traffic** slider, or enter a percentage in the text box, to choose the percentage of random users in your selected segment to receive this new feature.
 
 ![A slider labeled Rollout Traffic, spanning between 0 and 100.][4]
 
