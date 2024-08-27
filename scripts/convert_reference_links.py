@@ -60,12 +60,9 @@ def replace_links(file_path, link_dict):
 # Recursively convert links for all Markdown files in given directory.
 def process_directory(directory):
     for root, dirs, files in os.walk(directory):
-        # Log the directory being traversed
-        print(f"Traversing directory: {root}")
         for file in files:
             if file.endswith('.md'):
                 file_path = os.path.join(root, file)
-                print(f"Processing file: {file_path}")
                 link_dict = create_link_dictionary(file_path)
                 replace_links(file_path, link_dict)
 
@@ -75,7 +72,6 @@ def main(path):
     if os.path.isdir(path):
         process_directory(path)
     elif os.path.isfile(path) and path.endswith('.md'):
-        print(f"Processing file: {path}")
         link_dict = create_link_dictionary(path)
         replace_links(path, link_dict)
     else:

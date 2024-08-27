@@ -48,10 +48,29 @@ case $1 in
         ;;
     transform)
         if [[ -z "$2" ]]; then
-            echo "Error: The path to file or directory is required."
+            echo "Error: A file or directory path is required."
             exit 1
         fi
         python3 "$PROJECT_ROOT/scripts/convert_reference_links.py" "$2"
+        echo "Success!"
+        while true; do
+            echo "Do you want to remove the unused reference links? [Y/n]."
+            read -r opt
+            case $opt in
+                y*|Y*) 
+                    ruby "$PROJECT_ROOT/scripts/remove_unused_reference_links.rb" "$2"
+                    echo "Success!"
+                    break 
+                    ;;
+                n*|N*)
+                    echo "The unused reference links were left untouched."
+                    break
+                    ;;
+                *) echo "Error: Invalid choice."
+                    echo ""
+                    ;;
+            esac
+        done    
         ;;
     clean)
         if [[ -z "$2" ]]; then
@@ -64,7 +83,7 @@ case $1 in
         display_help
         ;;
     *)
-        echo "Invalid option: $1. To see all options, run: ./bdocs help"
+        echo "Error: Invalid choice: '$1'. To see all options, run: ./bdocs help"
         exit 1
         ;;
 esac
