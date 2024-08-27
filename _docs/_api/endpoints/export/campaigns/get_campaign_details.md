@@ -85,7 +85,7 @@ The `messages` response will contain information about each message. The followi
     "alert": (string) the alert body text,
     "extras": (hash) any key-value pairs provided,
     "title": (string) the alert title text,
-    "action" (string) action link from click
+    "action": (string) action link from click
 }
 ```
 
