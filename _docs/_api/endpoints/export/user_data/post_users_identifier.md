@@ -43,7 +43,7 @@ Authorization: Bearer YOUR-REST-API-KEY
   "braze_id": (optional, string) Braze identifier for a particular user,
   "email_address": (optional, string) Email address of user,
   "phone": (optional, string) Phone number of user,
-  "fields_to_export": (required, array of strings) Name of user data fields to export. Defaults to all if not provided
+  "fields_to_export": (required, array of strings) Name of user data fields to export.
 }
 ```
 
