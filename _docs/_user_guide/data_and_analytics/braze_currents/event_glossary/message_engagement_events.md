@@ -523,6 +523,7 @@ This event occurs when a user has exited a Canvas by performing an event.
 
 {
   "id": (required, string) globally unique ID of this event,
+  "app_group_id": (required, string) Braze ID of the workspace this user belongs to,
   "user_id": (required, string) Braze user ID of the user, 
   "external_user_id": (optional, string) External user ID of the user,
   "app_group_id": (required, string) Braze ID of the workspace this user belongs to,
@@ -583,6 +584,7 @@ This event occurs when a user enters a Canvas experiment step path.
 
 {
   "id": (required, string) globally unique ID of this event,
+  "app_group_id": (required, string) Braze ID of the workspace this user belongs to,
   "user_id": (required, string) Braze user ID of the user, 
   "external_user_id": (optional, string) External user ID of the user,
   "time": (required, int) unix timestamp at which the event happened,
@@ -616,6 +618,7 @@ This event occurs when a user convert for a Canvas experiment step.
 
 {
   "id": (required, string) globally unique ID of this event,
+  "app_group_id": (required, string) Braze ID of the workspace this user belongs to,
   "user_id": (required, string) Braze user ID of the user, 
   "external_user_id": (optional, string) External user ID of the user,
   "app_id": (optional, string) Braze ID of the app this user belongs to,
@@ -648,6 +651,7 @@ This event occurs when Braze processes a push message for a user, communicating 
 // Push Notification Send: users.messages.pushnotification.Send
 {
   "id": (required, string) unique ID of this event,
+  "app_group_id": (required, string) Braze ID of the workspace this user belongs to,
   "user_id": (required, string) Braze user ID of the user,
   "external_user_id": (optional, string) External ID of the user,
   "app_id": (required, string) ID for the app on which the user action occurred,
@@ -693,6 +697,7 @@ This event occurs when a user directly clicks on the Push notification to open t
 // Push Notification Open: users.messages.pushnotification.Open
 {
   "id": (required, string) unique ID of this event,
+  "app_group_id": (required, string) Braze ID of the workspace this user belongs to,
   "user_id": (required, string) Braze user ID of the user,
   "external_user_id": (optional, string) External ID of the user,
   "time": (required, int) 10-digit UTC time of the event in seconds since the epoch,
@@ -742,6 +747,7 @@ This event is not supported by our [Swift SDK](https://github.com/braze-inc/braz
 // Push Notification iOS Foreground: users.messages.pushnotification.IosForeground
 {
   "id": (required, string) unique ID of this event,
+  "app_group_id": (required, string) Braze ID of the workspace this user belongs to,
   "user_id": (required, string) Braze user ID of the user,
   "external_user_id": (optional, string) External ID of the user,
   "app_id": (required, string) ID for the app on which the user action occurred,
@@ -784,6 +790,7 @@ This event occurs when an error is received from either Apple Push Notification 
 // Push Notification Bounce: users.messages.pushnotification.Bounce
 {
   "id": (required, string) unique ID of this event,
+  "app_group_id": (required, string) Braze ID of the workspace this user belongs to,
   "user_id": (required, string) Braze user ID of the user,
   "external_user_id": (optional, string) External ID of the user,
   "app_id": (required, string) ID for the app on which the bounce occurred,
@@ -825,6 +832,7 @@ This event occurs when an email send request was successfully communicated betwe
 // Email Send: users.messages.email.Send
 {
   "id": (required, string) unique ID of this event,
+  "app_group_id": (required, string) Braze ID of the workspace this user belongs to,
   "user_id": (required, string) Braze user ID of the user,
   "dispatch_id": (optional, string) ID of the message dispatch (unique ID for each 'transmission' sent from the Braze platform). Users who are sent a schedule message get the same dispatch_id. Action-based or API-triggered messages get a unique dispatch_id per user,
   "external_user_id": (optional, string) External ID of the user,
@@ -868,6 +876,7 @@ This event occurs when an email sent made it successfully to the end-users inbox
 // Email Delivery: users.messages.email.Delivery
 {
   "id": (required, string) unique ID of this event,
+  "app_group_id": (required, string) Braze ID of the workspace this user belongs to,
   "user_id": (required, string) Braze user ID of the user,
   "dispatch_id": (optional, string) ID of the message dispatch (unique ID for each 'transmission' sent from the Braze platform). Users who are sent a schedule message get the same dispatch_id. Action-based or API-triggered messages get a unique dispatch_id per user.,
   "external_user_id": (optional, string) External ID of the user,
@@ -915,6 +924,7 @@ It's known behavior that the email open event fields `browser`, `device_os`, `de
 // Email Open: users.messages.email.Open
 {
   "id": (required, string) unique ID of this event,
+  "app_group_id": (required, string) Braze ID of the workspace this user belongs to,
   "user_id": (required, string) Braze user ID of the user,
   "dispatch_id": (optional, string) ID of the message dispatch (unique ID for each 'transmission' sent from the Braze platform). Users who are sent a schedule message get the same dispatch_id. Action-based or API-triggered messages get a unique dispatch_id per user,
   "external_user_id": (optional, string) External ID of the user,
@@ -1021,6 +1031,7 @@ This event occurs when an Internet Service Provider returns a hard bounce. A har
 // Email Bounce: users.messages.email.Bounce
 {
   "id": (required, string) unique ID of this event,
+  "app_group_id": (required, string) Braze ID of the workspace this user belongs to,
   "user_id": (required, string) Braze user ID of the user,
   "dispatch_id": (optional, string) ID of the message dispatch (unique ID for each 'transmission' sent from the Braze platform). Users who are sent a schedule message get the same dispatch_id. Action-based or API-triggered messages get a unique dispatch_id per user.,
   "external_user_id": (optional, string) External ID of the user,
@@ -1066,6 +1077,7 @@ This event occurs when an Internet Service Provider returns a soft bounce. A sof
 // Email Soft Bounce: users.messages.email.SoftBounce
 {
   "id": (required, string) unique ID of this event,
+  "app_group_id": (required, string) Braze ID of the workspace this user belongs to,
   "user_id": (required, string) Braze user ID of the user,
   "dispatch_id": (optional, string) ID of the message dispatch (unique ID for each 'transmission' sent from the Braze platform). Users who are sent a schedule message get the same dispatch_id. Action-based or API-triggered messages get a unique dispatch_id per user.,
   "external_user_id": (optional, string) External ID of the user,
@@ -1110,6 +1122,7 @@ This event occurs when the end-user hits the "spam" button on the email. Note th
 // Email Mark As Spam: users.messages.email.MarkAsSpam
 {
   "id": (required, string) unique ID of this event,
+  "app_group_id": (required, string) Braze ID of the workspace this user belongs to,
   "user_id": (required, string) Braze user ID of the user,
   "dispatch_id": (optional, string) ID of the message dispatch (unique ID for each 'transmission' sent from the Braze platform). Users who are sent a schedule message get the same dispatch_id. Action-based or API-triggered messages get a unique dispatch_id per user.,
   "external_user_id": (optional, string) External ID of the user,
@@ -1158,6 +1171,7 @@ The `Unsubscribe` event is actually a specialized click event that is fired when
 // Email Unsubscribe: users.messages.email.Unsubscribe
 {
   "id": (required, string) unique ID of this event,
+  "app_group_id": (required, string) Braze ID of the workspace this user belongs to,
   "user_id": (required, string) Braze user ID of the user,
   "dispatch_id": (optional, string) ID of the message dispatch (unique ID for each 'transmission' sent from the Braze platform). Users who are sent a schedule message get the same dispatch_id. Action-based or API-triggered messages get a unique dispatch_id per user.,
   "external_user_id": (optional, string) External ID of the user,
@@ -1197,6 +1211,7 @@ This event occurs when a user views an in-app message.
 // In-App Message Impression: users.messages.inappmessage.Impression
 {
   "id": (required, string) unique ID of this event,
+  "app_group_id": (required, string) Braze ID of the workspace this user belongs to,
   "user_id": (required, string) Braze user ID of the user,
   "external_user_id": (optional, string) External ID of the user,
   "time": (required, int) 10-digit UTC time of the event in seconds since the epoch,
@@ -1217,6 +1232,7 @@ This event occurs when a user views an in-app message.
   "os_version": (optional, string) os version of device used for the action,
   "device_model": (optional, string) hardware model of the device,
   "send_id": (optional, string) ID of the message if specified for the campaign (See Send Identifier under API Identifier Types),
+  "dispatch_id": (optional, string) ID of the dispatch this message belongs to,
   "device_id": (optional, string) ID of the device on which the event occurred,
   "ad_id": (optional, string) advertising identifier,
   "ad_id_type": (optional, string) One of 'ios_idfa', 'google_ad_id', OR 'roku_ad_id',
@@ -1252,6 +1268,7 @@ This event occurs when a user clicks on an in-app message.
 // In-App Message Click: users.messages.inappmessage.Click
 {
   "id": (required, string) unique ID of this event,
+  "app_group_id": (required, string) Braze ID of the workspace this user belongs to,
   "user_id": (required, string) Braze user ID of the user,
   "external_user_id": (optional, string) External ID of the user,
   "app_id": (required, string) ID for the app on which the user action occurred,
@@ -1273,6 +1290,7 @@ This event occurs when a user clicks on an in-app message.
   "device_model": (optional, string) hardware model of the device,
   "button_id": (optional, string) index of the button clicked if it was a button that was clicked, tracking ID of the click if the event came from an appboyBridge.logClick or brazeBridge.logClick invocation, or choice_id if the in app-message type is a simple survey,
   "send_id": (optional, string) ID of the message if specified for the campaign (See Send Identifier under API Identifier Types),
+  "dispatch_id": (optional, string) ID of the dispatch this message belongs to,
   "device_id": (optional, string) ID of the device on which the event occurred,
   "ad_id": (optional, string) advertising identifier,
   "ad_id_type": (optional, string) One of 'ios_idfa', 'google_ad_id', OR 'roku_ad_id',
@@ -1299,6 +1317,7 @@ This event occurs when a webhook was processed and sent to the third party speci
 // Webhook Send: users.messages.webhook.Send
 {
   "id": (required, string) unique ID of this event,
+  "app_group_id": (required, string) Braze ID of the workspace this user belongs to,
   "user_id": (required, string) Braze user ID of the user,
   "external_user_id": (optional, string) External ID of the user,
   "time": (required, int) 10-digit UTC time of the event in seconds since the epoch,
@@ -1314,7 +1333,7 @@ This event occurs when a webhook was processed and sent to the third party speci
   "canvas_step_id": (optional, string) ID of the step for this message if from a Canvas,
   "canvas_step_name": (optional, string) name of the Canvas step this event belongs to,
   "send_id": (optional, string) ID of the message if specified for the campaign (See Send Identifier under API Identifier Types),
-  "dispatch_id": (optional, string) ID of the message dispatch (unique ID for each 'transmission' sent from the Braze platform),
+  "dispatch_id": (optional, string) ID of the dispatch this message belongs to,
   "message_extras": (optional, string) key-value pairs sent with this event
 }
 ```
@@ -1337,6 +1356,7 @@ This event occurs when a Content Card gets sent to a user.
 // Content Card Send: users.messages.contentcard.Send
 {
   "id": (required, string) unique ID of this event,
+  "app_group_id": (required, string) Braze ID of the workspace this user belongs to,
   "user_id": (required, string) Braze user ID of the user,
   "external_user_id": (optional, string) External ID of the user,
   "content_card_id": (required, string) ID of the content card that was sent,
@@ -1376,6 +1396,7 @@ This event occurs when a user views a Content Card.
 // Content Card Impression: users.messages.contentcard.Impression
 {
   "id": (required, string) unique ID of this event,
+  "app_group_id": (required, string) Braze ID of the workspace this user belongs to,
   "user_id": (required, string) Braze user ID of the user,
   "external_user_id": (optional, string) External ID of the user,
   "content_card_id": (required, string) ID of the content card that was viewed/clicked/dismissed,
@@ -1422,6 +1443,7 @@ This event occurs when a user clicks a Content Card.
 // Content Card Click: users.messages.contentcard.Click
 {
   "id": (required, string) unique ID of this event,
+  "app_group_id": (required, string) Braze ID of the workspace this user belongs to,
   "user_id": (required, string) Braze user ID of the user,
   "external_user_id": (optional, string) External ID of the user,
   "content_card_id": (required, string) ID of the content card that was viewed/clicked/dismissed,
@@ -1468,6 +1490,7 @@ This event occurs when a user dismisses a Content Card.
 // Content Card Dismiss: users.messages.contentcard.Dismiss
 {
   "id": (required, string) unique ID of this event,
+  "app_group_id": (required, string) Braze ID of the workspace this user belongs to,
   "user_id": (required, string) Braze user ID of the user,
   "external_user_id": (optional, string) External ID of the user,
   "content_card_id": (required, string) ID of the content card that was viewed/clicked/dismissed,
@@ -1550,6 +1573,7 @@ This event occurs when a user sends an SMS.
 // SMS Send: users.messages.sms.Send
 {
   "id": (required, string) unique ID of this event,
+  "app_group_id": (required, string) Braze ID of the workspace this user belongs to,
   "user_id": (required, string) Braze user ID of the user,
   "dispatch_id": (optional, string) ID of the message dispatch (unique ID for each 'transmission' sent from the Braze platform and users who are sent a schedule message get the same dispatch_id. Action-based or API-triggered messages get a unique dispatch_id per user
   "external_user_id": (optional, string) External ID of the user,
@@ -1595,6 +1619,7 @@ This event occurs when an SMS is sent to the carrier.
 // SMS Delivery: users.messages.sms.CarrierSend
 {
   "id": (required, string) unique ID of this event,
+  "app_group_id": (required, string) Braze ID of the workspace this user belongs to,
   "user_id": (required, string) Braze user ID of the user,
   "dispatch_id": (optional, string) ID of the message dispatch (unique ID for each 'transmission' sent from the Braze platform and users who are sent a schedule message get the same dispatch_id. Action-based or API-triggered messages get a unique dispatch_id per user,
   "external_user_id": (optional, string) External ID of the user,
@@ -1632,6 +1657,7 @@ This event occurs when an SMS was successfully delivered to the users mobile pho
 // SMS Delivery: users.messages.sms.Delivery
 {
   "id": (required, string) unique ID of this event,
+  "app_group_id": (required, string) Braze ID of the workspace this user belongs to,
   "user_id": (required, string) Braze user ID of the user,
   "dispatch_id": (optional, string) ID of the message dispatch (unique ID for each 'transmission' sent from the Braze platform and users who are sent a schedule message get the same dispatch_id. Action-based or API-triggered messages get a unique dispatch_id per user,
   "external_user_id": (optional, string) External ID of the user,
@@ -1669,6 +1695,7 @@ This event occurs when an SMS send gets rejected by the carrier, this can happen
 // SMS Rejection: users.messages.sms.Rejection
 {
   "id": (required, string) unique ID of this event,
+  "app_group_id": (required, string) Braze ID of the workspace this user belongs to,
   "user_id": (required, string) Braze user ID of the user,
   "dispatch_id": (optional, string) ID of the message dispatch (unique ID for each 'transmission' sent from the Braze platform and users who are sent a schedule message get the same dispatch_id. Action-based or API-triggered messages get a unique dispatch_id per user
   "external_user_id": (optional, string) External ID of the user,
@@ -1709,6 +1736,7 @@ This event occurs when an SMS experiences delivery failure. Use this event and t
 // SMS Delivery Failure: users.messages.sms.DeliveryFailure
 {
   "id": (required, string) unique ID of this event,
+  "app_group_id": (required, string) Braze ID of the workspace this user belongs to,
   "user_id": (required, string) Braze user ID of the user,
   "dispatch_id": (optional, string) ID of the message dispatch (unique ID for each 'transmission' sent from the Braze platform and users who are sent a schedule message get the same dispatch_id. Action-based or API-triggered messages get a unique dispatch_id per user,
   "external_user_id": (optional, string) External ID of the user,
@@ -1752,7 +1780,7 @@ If we detect that this inbound message is a reply to an outbound campaign or Can
   "id": (required, string) unique ID of this event,
   "user_id": (required, string) Braze user ID of the user,
   "external_user_id": (optional, string) External ID of the user,
-  "app_group_id": (required, string) API ID of the workspace associated with the inbound phone number,
+  "app_group_id": (required, string) Braze ID of the workspace this user belongs to,
   "time": (required, int) 10-digit UTC time of the event in seconds since the epoch,
   "user_phone_number": (required, string) the phone number of the user who sent the message to your Braze number,
   "subscription_group_id": (optional, string) ID of the subscription group which the phone number the user messaged belongs to,
@@ -1795,6 +1823,7 @@ Note that the conversion event is encoded in the `conversion_behavior` field, wh
   "id": (required, string) unique ID of this event,
   "user_id": (required, string) Braze user ID of the user,
   "external_user_id": (optional, string) External ID of the user,
+  "app_group_id": (required, string) Braze ID of the workspace this user belongs to,
   "app_id": (optional, string) ID for the app on which the user action occurred,
   "time": (required, int) 10-digit UTC time of the event in seconds since the epoch,
   "timezone": (optional, string) IANA time zone of the user at the time of the event,
@@ -1828,6 +1857,7 @@ Note that the conversion event is encoded in the `conversion_behavior` field, wh
 // Canvas Conversion Event: users.canvas.Conversion
 {
   "id": (required, string) unique ID of this event,
+  "app_group_id": (required, string) Braze ID of the workspace this user belongs to,
   "user_id": (required, string) Braze user ID of the user,
   "external_user_id": (optional, string) External ID of the user,
   "app_id": (optional, string) ID for the app on which the user action occurred,
@@ -1860,6 +1890,7 @@ This event occurs when a user enters into the Canvas. This event tells you which
 // Canvas Entry Event: users.canvas.Entry
 {
   "id": (required, string) unique ID of this event,
+  "app_group_id": (required, string) Braze ID of the workspace this user belongs to,
   "user_id": (required, string) Braze user ID of the user,
   "external_user_id": (optional, string) External ID of the user,
   "time": (required, int) 10-digit UTC time of the event in seconds since the epoch,
@@ -1889,6 +1920,7 @@ This event occurs when a user is enrolled in a control variant set on a multi-va
   "id": (required, string) unique ID of this event,
   "user_id": (required, string) Braze user ID of the user,
   "external_user_id": (optional, string) External ID of the user,
+  "app_group_id": (required, string) Braze ID of the workspace this user belongs to,
   "app_id": (optional, string) ID for the app on which the user action occurred,
   "time": (required, int) 10-digit UTC time of the event in seconds since the epoch,
   "timezone": (optional, string) IANA time zone of the user at the time of the event,
@@ -1920,6 +1952,7 @@ Subscription groups are only available for email, SMS, and WhatsApp channels at 
 // Subscription Group State Change: users.behaviors.subscriptiongroup.StateChange
 {
   "id": (required, string) unique ID of this event,
+  "app_group_id": (required, string) Braze ID of the workspace this user belongs to,
   "user_id": (required, string) Braze user ID of the user,
   "external_user_id": (optional, string) External ID of the user,
   "email_address": (optional, string) email address for this user,
@@ -2039,6 +2072,7 @@ This event is not fired when the user actually uninstalls the app, as that's imp
 // Uninstall Event: users.behaviors.Uninstall
 {
   "id": (required, string) unique ID of this event,
+  "app_group_id": (required, string) Braze ID of the workspace this user belongs to,
   "user_id": (required, string) Braze user ID of the user,
   "external_user_id": (optional, string) External ID of the user,
   "device_id": (optional, string) ID of the device on which the session occurred,
