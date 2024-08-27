@@ -24,7 +24,7 @@ tool: Reports
 Email
 {% endapitags %}
 
-The total number of users who clicked into the AMP version of your AMP HTML Email.
+{% multi_lang_include metrics.md metric="AMP Clicks glossary" %}
 
 {% endapi %}
 
@@ -36,7 +36,7 @@ The total number of users who clicked into the AMP version of your AMP HTML Emai
 All
 {% endapitags %}
 
-The percentage of users who received a particular message. This number is received from Braze.
+{% multi_lang_include metrics.md metric="Audience glossary" %}
 
 {% endapi %}
 
