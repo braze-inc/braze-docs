@@ -9,7 +9,7 @@ description: "This tutorial covers installing the Braze Swift SDK using Swift Pa
 
 # Swift Package Manager integration
 
-> Installing the Swift SDK via [Swift Package Manager][1] (SPM) automates the majority of the installation process for you. Before beginning this process, check the [version information][2] to ensure that your environment is supported by Braze.
+> Installing the Swift SDK via [Swift Package Manager](https://swift.org/package-manager/) (SPM) automates the majority of the installation process for you. Before beginning this process, check the [version information](https://github.com/braze-inc/braze-swift-sdk#version-information) to ensure that your environment is supported by Braze.
 
 ## Adding the dependency to your project
 
@@ -17,7 +17,7 @@ description: "This tutorial covers installing the Braze Swift SDK using Swift Pa
 
 Open your project and navigate to your project's settings. Select the **Swift Packages** tab and click on the <i class="fas fa-plus"></i> add button below the packages list.
 
-![][3]
+![]({% image_buster /assets/img/swiftpackages.png %})
 
 {% alert note %}
 Starting in version 7.4.0, the Braze Swift SDK has additional distribution channels as [static XCFrameworks](https://github.com/braze-inc/braze-swift-sdk-prebuilt-static) and [dynamic XCFrameworks](https://github.com/braze-inc/braze-swift-sdk-prebuilt-dynamic). If you'd like to use either of these formats instead, follow the installation instructions from its respective repository.
@@ -25,7 +25,7 @@ Starting in version 7.4.0, the Braze Swift SDK has additional distribution chann
 
 Enter the URL of our iOS Swift SDK repository `https://github.com/braze-inc/braze-swift-sdk` in the text field. Under the **Dependency Rule** section, select the SDK version. Finally, click **Add Package**.
 
-![][4]
+![]({% image_buster /assets/img/importsdk_example.png %})
 
 ### Select packages
 
@@ -52,14 +52,9 @@ The Braze Swift SDK separates features into standalone libraries to provide deve
 
  Select the package that best suits your needs and click **Add Package**. Make sure you select `BrazeKit` at a minimum.
 
-![][5]
+![]({% image_buster /assets/img/add_package.png %})
 
 ## Next steps
 
 Follow the instructions for [completing the integration]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/initial_sdk_setup/completing_integration/).
 
-[1]: https://swift.org/package-manager/
-[2]: https://github.com/braze-inc/braze-swift-sdk#version-information
-[3]: {% image_buster /assets/img/swiftpackages.png %}
-[4]: {% image_buster /assets/img/importsdk_example.png %}
-[5]: {% image_buster /assets/img/add_package.png %}

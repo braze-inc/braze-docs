@@ -16,7 +16,7 @@ noindex: true
 
 [In-app messages]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/) help you get content to your user without interrupting their day with a push notification. Customized and tailored in-app messages enhance the user experience and help your audience get the most value from your app. With a variety of layouts and customization tools to choose from, in-app messages engage your users more than ever before.
 
-Check out our [case studies][31] to see examples of in-app messages.
+Check out our [case studies](https://www.braze.com/customers) to see examples of in-app messages.
 
 ## In-app message types
 
@@ -31,7 +31,7 @@ Each in-app message type is highly customizable across content, images, icons, c
 
 All in-app messages are subclasses of the `ABKInAppMessage`, which defines basic behavior and traits for all in-app messages. The in-app message class structures are as follows:
 
-![A graphic showing that the ABKInAppMessage class is the root class of the ABKInAppMessageSlideup, ABKInAppMessageImmersive, and ABKInAppMessageHTML. The ABKInAppMessage includes customizable properties like message, extras, duration, click action, URI, dismiss action, icon orientation, and text alignment. The ABKInAppMessageSlideup includes customizable properties like chevron and slide-up anchor. The ABKInAppMessageImmersive includes customizable properties like header, close button, frame, and in-app message buttons. ABKInAppMessageHTML allows you to manually log HTML in-app message button clicks.][29]
+![A graphic showing that the ABKInAppMessage class is the root class of the ABKInAppMessageSlideup, ABKInAppMessageImmersive, and ABKInAppMessageHTML. The ABKInAppMessage includes customizable properties like message, extras, duration, click action, URI, dismiss action, icon orientation, and text alignment. The ABKInAppMessageSlideup includes customizable properties like chevron and slide-up anchor. The ABKInAppMessageImmersive includes customizable properties like header, close button, frame, and in-app message buttons. ABKInAppMessageHTML allows you to manually log HTML in-app message button clicks.]({% image_buster /assets/img_archive/ABKInAppMessage-models.png %})
 
 {% alert important %}
 By default, in-app messages are enabled after completing the standard SDK integration, including GIF support. 
@@ -83,6 +83,3 @@ Starting in iOS SDK version 3.19.0, the following JavaScript methods are no-ops 
 {% endtab %}
 {% endtabs %}
 
-[29]: {% image_buster /assets/img_archive/ABKInAppMessage-models.png %}
-[30]: {{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/
-[31]: https://www.braze.com/customers

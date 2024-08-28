@@ -15,7 +15,7 @@ search_rank: 2
 
 [In-app messages]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/) help you get content to your users without interrupting their day with a push notification. Customized and tailored in-app messages enhance the user experience and help your audience get the most value from your app. With various layouts and customization tools to choose from, in-app messages engage your users more than ever before.
 
-Check out our [case studies][53] to see examples of in-app messages.
+Check out our [case studies](https://www.braze.com/customers) to see examples of in-app messages.
 
 ## In-app message types
 
@@ -28,7 +28,7 @@ Braze currently offers the following default in-app message types:
 
 Each in-app message type is customizable across content, images, icons, click actions, analytics, display, and delivery.
 
-All in-app messages inherit their prototype from [`InAppMessage`][2], which defines basic behavior and traits for all in-app messages. The prototypical subclasses are [`SlideUpMessage`][3], [`ModalMessage`][6], [`FullScreenMessage`][7], and [`HtmlMessage`][12].
+All in-app messages inherit their prototype from [`InAppMessage`](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.inappmessage.html), which defines basic behavior and traits for all in-app messages. The prototypical subclasses are [`SlideUpMessage`](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.slideupmessage.html), [`ModalMessage`](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.modalmessage.html), [`FullScreenMessage`](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.fullscreenmessage.html), and [`HtmlMessage`](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.htmlmessage.html).
 
 ## Expected behaviors by message type
 
@@ -75,16 +75,5 @@ The following example shows a paginated HTML in-app message:
 
 ## Integration
 
-By default, in-app messages are automatically displayed as part of our recommended [integration instructions][1]. Additional customization can be done by following the steps in this guide.
+By default, in-app messages are automatically displayed as part of our recommended [integration instructions]({{ site.baseurl }}/developer_guide/platform_integration_guides/web/initial_sdk_setup/). Additional customization can be done by following the steps in this guide.
 
-[1]: {{ site.baseurl }}/developer_guide/platform_integration_guides/web/initial_sdk_setup/
-[2]: https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.inappmessage.html
-[3]: https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.slideupmessage.html
-[6]: https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.modalmessage.html
-[7]: https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.fullscreenmessage.html
-[12]: https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.htmlmessage.html
-[13]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/in_app_messaging/#slideup-in-app-messages
-[17]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/in_app_messaging/#modal-in-app-messages
-[41]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/in_app_messaging/#full-in-app-messages
-[42]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/in_app_messaging/#html-in-app-messages
-[53]: https://www.braze.com/customers

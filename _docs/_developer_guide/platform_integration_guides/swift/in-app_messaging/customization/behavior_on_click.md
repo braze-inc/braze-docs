@@ -53,7 +53,7 @@ For in-app messages containing buttons, the message `clickAction` will also be i
 
 ## Customizing in-app message and button clicks
 
-The following [`BrazeInAppMessageUIDelegate`][34] delegate method is called when an in-app message is clicked. For clicks on in-app message buttons and HTML in-app message buttons (links), a button ID is provided as an optional parameter.
+The following [`BrazeInAppMessageUIDelegate`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazeinappmessageuidelegate) delegate method is called when an in-app message is clicked. For clicks on in-app message buttons and HTML in-app message buttons (links), a button ID is provided as an optional parameter.
 
 {% tabs %}
 {% tab swift %}
@@ -85,4 +85,3 @@ func inAppMessage(
 
 This method returns a boolean value to indicate if Braze should continue to execute the click action.
 
-[34]: https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazeinappmessageuidelegate
