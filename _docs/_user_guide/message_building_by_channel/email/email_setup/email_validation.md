@@ -11,7 +11,7 @@ channel: email
 
 # Email validation
 
-> This reference article covers local and host part validation rules for email addresses. Validation is used for dashboard email addresses, end-user email addresses (your customers), and from and reply-to addresses done of an email message.
+> This reference article covers local and host part validation rules for email addresses. Validation is used for dashboard email addresses, end-user email addresses (your customers), and from and reply-to addresses of an email message.
 
 ## How it works
 
