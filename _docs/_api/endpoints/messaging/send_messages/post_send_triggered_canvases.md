@@ -164,9 +164,9 @@ The status code `201` could return the following response body. If the Canvas is
 
 If your Canvas is archived, you'll see this `notice` message: "The Canvas is archived. Unarchive the Canvas to ensure trigger requests will take effect." If your Canvas is not active, you'll see this `notice` message: "The Canvas is paused. Resume the Canvas to ensure trigger requests will take effect."
 
-## Using the attributes object in Canvas
+## Attributes object for Canvas
 
-Braze has a messaging object called `attributes` that allows you to add, create, or update attributes and values for a user before sending them an API-triggered Canvas using the `canvas/trigger/send` endpoint. This API call will process the user attributes object before it processes and sends the Canvas. This helps minimize the risk of issues caused by [race conditions]({{site.baseurl}}/help/best_practices/race_conditions/).
+Use the messaging object `attributes` to add, create, or update attributes and values for a user before sending them an API-triggered Canvas using the `canvas/trigger/send` endpoint. This API call processes the user attributes object before it processes and sends the Canvas. This helps minimize the risk of issues caused by [race conditions]({{site.baseurl}}/help/best_practices/race_conditions/).
 
 {% alert note %}
 Looking for the campaigns version of this endpoint? Check out [Sending campaign messages via API-triggered delivery]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_campaigns/).
