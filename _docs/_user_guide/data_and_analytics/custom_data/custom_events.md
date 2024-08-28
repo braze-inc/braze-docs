@@ -40,9 +40,9 @@ You can blocklist individual custom events through the actions menu, or select a
 
 When you block a custom event:
 
-- Future data won't be collected for that event
-- Existing data won't be available unless that event is unblocked
-- That event won't show up in filters or graphs
+- Future data won't be collected for that event.
+- Existing data won't be available unless that event is unblocked.
+- That event won't show up in filters or graphs.
 
 Additionally, if a blocked custom event is currently referenced by filters or triggers in other areas of Braze, a warning modal will appear explaining that all instances of the filters or triggers that reference it will be removed and archived.
 
@@ -52,7 +52,7 @@ You can add a description to a custom event after it's created if you have the `
 
 ## Adding tags
 
-You can add tags to a custom event after it's created if you have the `Manage Events, Attributes, Purchases` [user permission]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/). The tags can then be used to filter the list of events. 
+You can add tags to a custom event after it's created if you have the "Manage Events, Attributes, Purchases" [user permission]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/). The tags can then be used to filter the list of events. 
 
 {% alert important %}
 This feature is currently in early access. Contact your customer success manager if you're interested in participating in this early access.
@@ -66,7 +66,7 @@ You can view up to 10 usage reports at a time by selecting the checkboxes for mu
 
 ## Exporting data
 
-To export the list of custom events as a CSV file, select the **Export all** button at the top of the page. The CSV file will generate and a download link will be emailed to you.
+To export the list of custom events as a CSV file, select the **Export all** button at the top of the page. The CSV file will be generated, and a download link will be emailed to you.
 
 {% alert important %}
 This feature is currently in early access. Contact your customer success manager if you're interested in participating in this early access.
@@ -161,7 +161,7 @@ Property values can be any of the following data types:
 | Nested objects | Objects that are inside of other objects. For more, see the section in this article on [Nested objects](#nested-objects).
 {: .reset-td-br-1 .reset-td-br-2}
 
-Event property objects that contain array or object values can have a maximum event property payload of 50&nbsp;KB.
+Event property objects that contain array or object values can have an event property payload up to 50&nbsp;KB.
 
 You can change the data type of your custom event property, but be aware of the impacts of [changing data types]({{site.baseurl}}/help/help_articles/data/change_custom_data_type/) after data has been collected.
 
@@ -198,7 +198,7 @@ Well done, hero! Talk to villagers for tips on how to beat levels faster and unl
 {% endraw %}
 
 {% alert warning %}
-If the user doesn't have internet connection, triggered in-app messages with templated custom event properties (for example, {% raw %}``{{event_properties.${time_spent}}}``{% endraw %}) will fail and not display.
+If the user doesn't have an internet connection, triggered in-app messages with templated custom event properties (for example, {% raw %}``{{event_properties.${time_spent}}}``{% endraw %}) will fail and not display.
 {% endalert %}
 
 For a full list of Liquid tags that will cause in-app messages to deliver as templated in-app messages, refer to [Frequently asked questions]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/faq/#what-are-templated-in-app-messages/).
@@ -248,7 +248,7 @@ You can use `canvas_entry_properties` and `event_properties` in your Canvas user
 For in-app message channels specifically, `canvas_entry_properties` can only be referenced in Canvas Flow and the original Canvas editor if you have persistent entry properties enabled in the original editor as part of the previous early access.
 {% endalert %}
 
-For Canvas Flow messaging, `canvas_entry_properties` can be used within any Message step in this Liquid format: ``{% raw %} canvas_entry_properties.${property_name} {% endraw %}``. Note that the events must be custom events or purchase events to be used this way. 
+For Canvas Flow messaging, `canvas_entry_properties` can be used in any Message step with this Liquid format: ``{% raw %} canvas_entry_properties.${property_name} {% endraw %}``. Note that the events must be custom events or purchase events to be used this way. 
 
 #### Use case
 
@@ -263,7 +263,7 @@ RetailApp can also trigger specific messages to send for different `product_name
 {% if  {{canvas_entry_properties.${product_name}}} == "shoes" %}
   Your order is set to ship soon. While you're waiting, why not step up your shoe care routine with a little upgrade? Check out our selection of shoelaces and premium shoe polish.
 {% else %}
-  Your order will be on its way shortly. If you missed something, you have until the end of the week to add any additional items to your cart and apply the same discounts. 
+  Your order will be on its way shortly. If you missed something, you have until the end of the week to add more items to your cart for the same discounts.
 {% endif %}
 
 ```
