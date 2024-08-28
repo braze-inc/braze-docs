@@ -104,7 +104,7 @@ The User cohort endpoint allows for specifying which users have been added to or
 
 ## Rate limiting
 
-Other than the maximum of 1000 user IDs per request in the User cohort endpoint, these endpoints are not specifically rate limited.
+In additional to the maximum of 1000 user IDs per request in the User cohort endpoint, these endpoints requests are rate limited to 250k/hr.
 
 ## Cohort filter
 
@@ -116,14 +116,16 @@ Refer to the following table for errors codes specific to the Cohort Import endp
 
 | Error Code | Description |
 | ----- | ---- |
-| `401` | Invalid Partner API key |
-|  | Invalid client secret |
-|  | Partner not enabled for client with client secret: **&#60;client secret&#62;** |
 | `400` | `cohort_id` must be a valid string |
 |  | `cohort_changes` must be an array of objects each with key `user_ids` and/or `device_ids` mapping to an array of strings, or an `aliases` object |
 |  | Only 1,000 `user_ids`, `device_ids`, and `aliases` are allowed per request |
 |  | `name` must be a non-empty string |
 |  | `created_at` must be a valid time as an [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) string |
+| `401` | Invalid Partner API key |
+|  | Invalid client secret |
+|  | Partner not enabled for client with client secret: **&#60;client secret&#62;** |
+|  | Unauthorized access |
+| `423` | Resource locked |
 {: .reset-td-br-1 .reset-td-br-2}
 
 For additional troubleshooting, refer to [Errors & Responses]({{site.baseurl}}/api/errors/), which covers the various errors and server responses that can come up while using the Braze API.
