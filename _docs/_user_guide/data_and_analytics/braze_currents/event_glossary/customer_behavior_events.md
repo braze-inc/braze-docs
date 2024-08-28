@@ -57,6 +57,7 @@ This event occurs when a specific custom event is triggered. Use this to track w
 // Custom Event: users.behaviors.CustomEvent
 {
   "id": (required, string) unique ID of this event,
+  "app_group_id": (required, string) Braze ID of the workspace this user belongs to,
   "user_id": (required, string) Braze user ID of the user,
   "external_user_id": (optional, string) External ID of the user,
   "app_id": (optional, string) ID for the app on which the user action occurred,
@@ -97,6 +98,7 @@ Purchases are special custom events and come with a JSON encoded string of custo
 // Purchase Event: users.behaviors.Purchase
 {
   "id": (required, string) unique ID of this event,
+  "app_group_id": (required, string) Braze ID of the workspace this user belongs to,
   "user_id": (required, string) Braze user ID of the user,
   "external_user_id": (optional, string) External ID of the user,
   "app_id": (optional, string) ID for the app on which the user action occurred,
@@ -138,6 +140,7 @@ When a user starts their first session, both a `FirstSession` and a `SessionStar
 // Session Start: users.behaviors.app.FirstSession
 {
   "id": (required, string) unique ID of this event,
+  "app_group_id": (required, string) Braze ID of the workspace this user belongs to,
   "user_id": (required, string) Braze user ID of the user,
   "external_user_id": (optional, string) External ID of the user,
   "time": (required, int) 10-digit UTC time of the event in seconds since the epoch,
@@ -174,6 +177,7 @@ When a user starts their first session, both a `FirstSession` and a `SessionStar
 // Session Start: users.behaviors.app.SessionStart
 {
   "id": (required, string) unique ID of this event,
+  "app_group_id": (required, string) Braze ID of the workspace this user belongs to,
   "user_id": (required, string) Braze user ID of the user,
   "external_user_id": (optional, string) External ID of the user,
   "app_id": (required, string) ID for the app on which the user action occurred,
@@ -206,6 +210,7 @@ When a user starts their first session, both a `FirstSession` and a `SessionStar
 // Session End: users.behaviors.app.SessionEnd
 {
   "id": (required, string) unique ID of this event,
+  "app_group_id": (required, string) Braze ID of the workspace this user belongs to,
   "user_id": (required, string) Braze user ID of the user,
   "external_user_id": (optional, string) External ID of the user,
   "app_id": (required, string) ID for the app on which the user action occurred,
@@ -234,6 +239,7 @@ This event is triggered when a user visits a specified location. Use this to tra
 // Location Event: users.behaviors.Location
 {
   "id": (required, string) unique ID of this event,
+  "app_group_id": (required, string) Braze ID of the workspace this user belongs to,
   "user_id": (required, string) Braze user ID of the user,
   "external_user_id": (optional, string) External ID of the user,
   "app_id": (required, string) ID for the app on which the user action occurred,
@@ -271,6 +277,7 @@ This event occurs when an app installation is attributed to a source. Use this t
 // Install Attribution Event: users.behaviors.InstallAttribution
 {
   "id": (required, string) unique ID of this event,
+  "app_group_id": (required, string) Braze ID of the workspace this user belongs to,
   "user_id": (required, string) Braze user ID of the user,
   "external_user_id": (optional, string) External ID of the user,
   "time": (required, int) 10-digit UTC time of the event in seconds since the epoch,
