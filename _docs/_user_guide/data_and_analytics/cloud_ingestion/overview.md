@@ -364,6 +364,28 @@ The `PAYLOAD` object should not include an external ID or other ID type.
 
 You can set it to `null` if you want to omit an attribute from a user's profile. If you want an attribute to remain unchanged, don't send it to Braze until it's been updated. To completely remove an attribute, use `TO_JSON(OBJECT_CONSTRUCT_KEEP_NULL(...))`.
 
+### Make incremental updates
+
+Make incremental updates to make sure your data is updated to prevent any overwrites. When simultaneous updates are made, there may be unintentional overwrites in the data.
+
+Consider the following example where a user has two attributes:
+- Color: "Green"
+- Size: "Large"
+
+Now, let's say we receive the following two simultaneous requests, and both requests are initiated at the same time.
+- Request 1: Change color to "Red"
+- Request 2: Change size to "Medium"
+
+In this example, Request 1 occurs first, so the attributes are updated to:
+- Color: "Red"
+- Size: "Large"
+
+However, when Request 2 occurs, we begin with the original attribute values ("Green" and "Large"). This updates the attributes to the following:
+- Color: "Green"
+- Size: "Medium"
+
+When these requests have finished, Request 2 has overwritten the update from Request 1, so it's best practice to stagger updates to prevent requests to be overwritten.
+
 ### Create JSON string from another table
 
 If you prefer to store each attribute in its own column internally, you need to convert those columns to a JSON string to populate the sync with Braze. To do that, you can use a query like:
@@ -560,7 +582,7 @@ To sync purchase events, event name, `product_id`, `currency`, and `price` are r
 
 ### Avoiding timeouts for data warehouse queries
 
-We recommend that queries be completed within one hour for optimal performance and to avoid potential errors. If queries exceed this timeframe, consider reviewing your data warehouse configuration. Optimizing resources allocated to your warehouse can help improve query execution speed. 
+We recommend that queries be completed within one hour for optimal performance and to avoid potential errors. If queries exceed this timeframe, consider reviewing your data warehouse configuration. Optimizing resources allocated to your warehouse can help improve query execution speed.
 
 ## Product limitations
 
