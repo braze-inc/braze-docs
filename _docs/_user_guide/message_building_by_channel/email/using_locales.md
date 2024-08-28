@@ -30,10 +30,11 @@ To use locales in your messaging, compose an email campaign or Canvas. Select ei
 {% tab Drag-and-drop editor %}
 
 1. Add translation tags {% raw %}`{% translation %}` and `{% endtranslation %}`{% endraw %} to wrap all text and image or link URLs to be translated.<br>![]({% image_buster /assets/img/multi-language_support/dnd_editor_translation_example.png %})
-2. After adding the tags, save your message as a draft.
-3. Select **Multi-language** and add your locales for the message using the dropdown.
-4. Select **Download template** to download the translation template as a CSV. Then, fill in the translations in the CSV. <br>![]({% image_buster /assets/img/multi-language_support/translation_csv_example.png %})
-5. Select **Upload translations** to upload the CSV file with the completed translations.
+2.Add you tags of "id_1", "id_2" for all your content locations you want to include a translation against
+3. After adding the tags, save your message as a draft.
+4. Select **Multi-language** and add your locales for the message using the dropdown.
+5. Select **Download template** to download the translation template as a CSV. Then, fill in the translations in the CSV. <br>![]({% image_buster /assets/img/multi-language_support/translation_csv_example.png %})
+6. Select **Upload translations** to upload the CSV file with the completed translations.
 
 {% endtab %}
 {% endtabs %}
