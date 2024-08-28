@@ -43,7 +43,7 @@ Additional exception events include:
 
 ## Use case
 
-Let's say you want to target users who haven't made any purchases at your company yet. You would select **Make Purchase** as the exception event. Next, select **Add Trigger**. When your Canvas launches, your audience now excludes users who have made any purchases with the following **Exit Criteria** settings. 
+Let's say you want to target users who haven't made any purchases at your company yet. First, select **Make Purchase** as the exception event. Next, select **Add Trigger**. When your Canvas launches, your audience will exclude users who have made any purchases with the following **Exit Criteria** settings. 
 
 In the following example, this exit criteria is also applied to the "Used in last day" segment for any user who has made exactly one purchase.
 
