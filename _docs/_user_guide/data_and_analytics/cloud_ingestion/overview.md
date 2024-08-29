@@ -384,7 +384,7 @@ However, when Request 2 occurs, Braze starts with the original attribute values 
 - Color: "Green"
 - Size: "Medium"
 
-When these requests have finished, Request 2 has overwritten the update from Request 1, so it's best practice to stagger updates to prevent requests to be overwritten.
+When the requests are finished, Request 2 will overwrite the update from Request 1. Due to this, it's best to stagger your updates so you can prevent requests from being overwritten.
 
 ### Create JSON string from another table
 
