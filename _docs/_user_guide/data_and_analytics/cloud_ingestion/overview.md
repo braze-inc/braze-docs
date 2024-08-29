@@ -376,7 +376,7 @@ Then Braze receives the following two updates to that user simultaneously:
 - Request 1: Change color to "Red"
 - Request 2: Change size to "Medium"
 
-In this example, Request 1 occurs first, so the attributes are updated to:
+Because Request 1 occurs first, the user's attributes are updated to the following:
 - Color: "Red"
 - Size: "Large"
 
