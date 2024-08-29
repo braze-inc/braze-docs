@@ -372,7 +372,7 @@ Consider the following example where a user has two attributes:
 - Color: "Green"
 - Size: "Large"
 
-Now, let's say we receive the following two simultaneous requests, and both requests are initiated at the same time.
+Then Braze receives the following two updates to that user simultaneously:
 - Request 1: Change color to "Red"
 - Request 2: Change size to "Medium"
 
