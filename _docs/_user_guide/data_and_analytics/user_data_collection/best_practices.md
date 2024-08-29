@@ -3,19 +3,17 @@ nav_title: Collection Best Practices
 article_title: Collection Best Practices
 page_order: 3.1
 page_type: reference
-description: "The following article will help clarify different methods and best practices for collecting new and existing user data."
+description: "The following article helps to clarify different methods and best practices for collecting new and existing user data."
 
 ---
 
 # Collection best practices
 
-> Knowing when and how to collect user data for known and unknown users can be challenging when envisioning the user profile lifecycle of your customers. The following article will help clarify different methods and best practices for collecting new and existing user data.
+> Knowing when and how to collect user data for known and unknown users can be challenging when envisioning the user profile lifecycle of your customers. This article will help clarify different methods and best practices for collecting new and existing user data.
 
-## Overview
+The following example consists of an email collection use case, but the logic applies to many different data collection scenarios. In this example, we assume you have already integrated a sign-up form or way to collect user information. 
 
-The following example comprises an email collection use case, but the logic applies to many different data collection scenarios. In this example, we assume you have already integrated a sign-up form or way to collect user information. 
-
-Once a user provides information for you to log, we recommend you verify if the data already exists in your database and create a user alias profile or update the existing user profile, as necessary. 
+After a user provides information for you to log, we recommend you verify if the data already exists in your database and, when necessary, create a user alias profile or update the existing user profile.
 
 If an unknown user were to view your site and then, at a later date, create an account or identify themselves via email sign-up, profile merging must be handled carefully. Based on the method in which you merge, alias-only user information or anonymous data may be overwritten.
 

@@ -4,7 +4,7 @@ article_title: User Data Collection
 page_order: 3.5
 layout: dev_guide
 guide_top_header: "User Data Collection"
-guide_top_text: "Before completing your Braze implementation, ensure that you have a conversation between your marketing team and your development team regarding your marketing goals. It's useful to consider these goals and work backwards from them when deciding what data to track, and how to track that data with Braze."
+guide_top_text: "Before completing your Braze implementation, ensure that you have a conversation between your marketing team and your development team about your marketing goals. It's useful to consider those goals and work backwards from them when deciding what data to track, and how to track that data with Braze."
 
 page_type: landing
 description: "This landing page is home to articles on user data collection. Here, you can find resources on archival definitions, importing users, the user profile lifecycle, use cases, best practices, and more."
@@ -34,7 +34,7 @@ guide_featured_list:
 <br>
 
 {% alert important %}
-Braze will ban or block users ("dummy users") with over 5 million sessions and no longer ingest their SDK events because they are usually the result of misintegration. If you find that this has happened for a legitimate user, reach out to your Braze account manager.
+Braze will ban or block users ("dummy users") with over 5 million sessions and no longer ingest their SDK events because they're usually the result of misintegration. If you find that this has happened for a legitimate user, reach out to your Braze account manager.
 {% endalert %}
 
 <br>

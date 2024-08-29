@@ -9,34 +9,34 @@ description: "This reference article addresses the data that is collected by the
 
 # SDK data collection
 
-> When you integrate the Braze SDK with your app or site, Braze automatically collects certain types of data. Some of this data is essential for our processes and some of this data can be toggled on or off based on your needs. Integrators can also configure Braze to collect additional types of data to further power your segmentation and messaging.
+> When you integrate the Braze SDK with your app or site, Braze automatically collects certain types of data. Some of this data is essential for our processes and some of this data can be turned on or off based on your needs. You can also configure Braze to collect additional types of data to further power your segmentation and messaging.
 
-Braze is designed to allow for flexible data collection. The Braze SDK can be integrated in the following ways:
+Braze is designed to allow for flexible data collection, so you can integrate the Braze SDK in the following ways:
 
-- **Minimum integration:** Braze automatically collects data that is necessary to enable communication with the Braze services.
-- **Optional data collected by default:** Braze automatically captures some data that is broadly useful for most of our customers' use cases. Integrators can opt to disable automatically collecting this data if it is non-essential to the minimum integration.
-- **Optional data not collected by default:** Braze provides the ability to capture some data that is useful for certain customers' use cases but does not automatically enable the collection for broad compliance reasons. Integrators can opt in to collect this data where it suits their use cases.
-- **Personalized integration:** Integrators have the flexibility to collect data in addition to the default optional data.
+- **[Minimum integration](#minimum-integration):** Braze automatically collects data that is necessary to communicate with Braze services.
+- **[Optional data collected by default](#optional-data-collected-by-default):** Braze automatically captures some data that is broadly useful for most of your use cases. You can opt to disable automatically collecting this data if it's non-essential for communication with Braze services.
+- **[Optional data not collected by default](#data-not-collected-by-default):** Braze captures some data that is useful for certain use cases, and doesn't automatically enable the collection for broad compliance reasons. You can opt to collect this data where it suits your use cases.
+- **[Personalized integration](#personalized-integration):** Braze gives you the flexibility to collect data in addition to the default optional data.
 
 ## Minimum integration
 
-The following lists the strictly-necessary data generated and received by Braze when an integrator chooses to initialize the SDK. These elements are non-configurable and are essential in core platform functions. With the exception of session start and end, all other automatically tracked data does not count toward your data point allotment.
+The following lists the strictly-necessary data generated and received by Braze when you initialize the SDK. This data is non-configurable and is essential in core platform functions. With the exception of session start and session end, all other automatically tracked data doesn't count toward your data point allotment.
 
-| Attribute | Platform | Description | Why it's Collected |
+| Attribute | Platform | Description | Why it's collected |
 | --------- | -------- | ----------- | ------------------ |
-| App-Version-Name /<br> App-Version-Code | Android, iOS, Web | The most recent app version | This attribute is used to ensure messages related to app version compatibility are sent to the correct devices. It can be used to notify users of service disruption or bugs. |
-| Country | Android, iOS | Country identified via IP address geolocation | This attribute is used to target messages based on location. |
-| Device ID | Android, iOS, Web | Device identifier, a randomly generated string | This attribute is used to differentiate users' devices and ensure messages are sent to the correct intended device. |
-| OS and OS version | Android, iOS, Web | Currently reported device/browser and device/browser version | This attribute is used to ensure messages are only sent to compatible devices. It can also be used within segmentation to target users to upgrade app versions. |
+| App-Version-Name /<br> App-Version-Code | Android, iOS, Web | The most recent app version | This attribute is used to send messages related to app version compatibility to the correct devices. It can be used to notify users of service disruption or bugs. |
+| Country | Android, iOS | Country identified by IP address geolocation | This attribute is used to target messages based on location. |
+| Device ID | Android, iOS, Web | Device identifier, a randomly generated string | This attribute is used to differentiate users' devices and send messages to the correct device. |
+| OS and OS version | Android, iOS, Web | Currently reported device or browser and device or browser version | This attribute is used to only send messages to compatible devices. It can also be used within segmentation to target users to upgrade app versions. |
 | Session start and session end | Android, iOS, Web | When the user begins using your integrated app or site | The Braze SDK reports session data used by the Braze dashboard to calculate user engagement and other analytics integral to understanding your users. Exactly when the session start and session end is called by your app or site is configurable by a developer ([Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/tracking_sessions/), [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/tracking_sessions/), [Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/tracking_sessions/)). |
 | SDK message interaction data | Android, iOS, Web | Push direct opens, in-app message interactions, Content Card interactions | This attribute is used for quality control purposes, like checking that a message was received and that sending isn't duplicated. |
-| SDK version | Android, iOS, Web | Current SDK version | This attribute is used to ensure messages are only sent to compatible devices and to ensure no disruption of the service. |
+| SDK version | Android, iOS, Web | Current SDK version | This attribute is used to only send messages to compatible devices and avoid service disruption. |
 | Session ID and session timestamp | Android, iOS, Web | Session identifier, a randomly generated string and session timestamp | Used to determine whether the user is starting a new or existing session and to determine re-eligibility of messages intended for this user.<br><br>Certain messaging channels such as in-app messages and Content Cards are synchronized to the device upon session start. Our backend will then use data related to when it last contacted Braze servers (which the device stores and sends back) to know if the user is eligible for any new messages.|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ### Calculated metrics
 
-The Braze backend generates metrics calculated on SDK data, message interaction data related to non-SDK messages, and derived information. For clarity, this calculated data is not tracked by the SDK but generated by the Braze services, and a user profile will display both tracked data and generated data. 
+Braze generates metrics calculated on SDK data, message interaction data related to non-SDK messages, and derived information. For clarity, this calculated data is not tracked by the SDK but generated by the Braze services, and a user profile will display both tracked data and generated data. 
 
 Calculated metrics include the following attributes.
 
@@ -51,41 +51,41 @@ Calculated metrics include the following attributes.
 | Last received push campaign                    | Time                                                                 |
 | Number of feedback items                       | Number                                                               |
 | Number of sessions in the last Y days          | Number and time                                                      |
-| Received message from campaign                  | Boolean. This filter allows you to target users based on their having (not) received a previous campaign.                               |
-| Received message from campaign with tag        | Boolean. This filter allows you to target users based on their having (not) received a campaign that currently has a tag.                  |
-| Retarget campaign                              | Boolean. This filter allows you to target users based on whether or not they have opened, or clicked on a specific email, push, or in-app message in the past. |
+| Received message from campaign                  | Boolean. This filter targets users based on whether they have received a previous campaign.                               |
+| Received message from campaign with tag        | Boolean. This filter targets users based on whether they have received a campaign that currently has a tag.                  |
+| Retarget campaign                              | Boolean. This filter targets users based on whether they have opened or clicked on a specific email, push, or in-app message in the past. |
 | Uninstalled                                    | Boolean and time |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 {% alert important %}
-If you are interested in only the minimum integration, and you integrate with mParticle, Segment, Tealium, or GTM, note the following:
-- **Mobile platforms**: You must manually update the code for these configurations. mParticle and Segment do not offer a way to do this through their platform. 
-- **Web**: Braze integration must be done natively to allow for the minimum integration configuration. Tag managers do not offer a way to do this through their platform. 
+If you're interested in only the minimum integration, and you integrate with mParticle, Segment, Tealium, or GTM, note the following:
+- **Mobile platforms**: You must manually update the code for these configurations. mParticle and Segment don't offer a way to do this through their platform. 
+- **Web**: Braze integration must be done natively to allow for the minimum integration configuration. Tag managers don't offer a way to do this through their platform. 
 {% endalert %} 
 
 ## Optional data collected by default
 
-In addition to the minimum integration data, the following attributes are automatically captured by Braze when an integrator initializes the SDK. An integrator can [opt-out]({{site.baseurl}}/developer_guide/platform_integration_guides/sdk_primer/#blocking-data-collection) of collecting these attributes to allow for a minimum integration.
+In addition to the minimum integration data, the following attributes are automatically captured by Braze when you initialize the SDK integration. You can [opt-out]({{site.baseurl}}/developer_guide/platform_integration_guides/sdk_primer/#blocking-data-collection) of collecting these attributes to allow for a minimum integration.
 
 | Attribute               | Platform          | Description                                                                        | Why it's Collected                                                                                                                                                      |
 |-------------------------|-------------------|------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Browser name            | Web               | Name of the browser                                                                | This attribute is used to ensure messages are only sent to compatible browsers. It can also be used for browser-based segmentation.                                     |
+| Browser name            | Web               | Name of the browser                                                                | This attribute is used to only send messages to compatible browsers. It can also be used for browser-based segmentation.                                     |
 | Device locale           | Android, iOS      | The default locale of the device                                                   | This attribute is used to translate messages to a user's preferred language.                                                                                            |
-| Device model            | Android, iOS      | The specific hardware of the device                                                | This attribute is used to ensure messages are only sent to compatible devices. It can also be used within segmentation.                                                 |
-| Device brand            | Android           | The brand of device (for example, Samsung)                                         | This attribute is used to ensure messages are only sent to compatible devices.                                                                                          |
+| Device model            | Android, iOS      | The specific hardware of the device                                                | This attribute is used to only send messages to compatible devices. It can also be used within segmentation.                                                 |
+| Device brand            | Android           | The brand of device (for example, Samsung)                                         | This attribute is used to only send messages to compatible devices.                                                                                          |
 | Device wireless carrier | Android, iOS      | The mobile carrier                                                                 | This attribute is optionally used for message targeting.<br><br>**Note:** This field has been deprecated as of iOS 16 and will default to `--` in a future iOS version. |
-| Language                | Android, iOS, Web | Device/browser language                                                            | This attribute is used to translate messages to a user's preferred language.                                                                                            |
+| Language                | Android, iOS, Web | Device or browser language                                                            | This attribute is used to translate messages to a user's preferred language.                                                                                            |
 | Notification settings   | Android, iOS, Web | Whether this app has push notifications enabled.                                   | This attribute is used to enable push notifications.                                                                                                                    |
-| Resolution              | Android, iOS, Web | Device/browser resolution                                                          | Optionally used for device-based message targeting. The format of this value is "`<width>`x`<height>`".                                                                 |
-| Time zone               | Android, iOS, Web | Device/browser time zone                                                           | This attribute is used to ensure messages are sent at the appropriate time, according to each user's local time zone.                                                   |
-| User agent              | Web               | [User agent](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/User-Agent) | This attribute is used to ensure messages are only sent to compatible devices. It can also be used within segmentation.                                                 |
+| Resolution              | Android, iOS, Web | Device or browser resolution                                                          | Optionally used for device-based message targeting. The format of this value is "`<width>`x`<height>`".                                                                 |
+| Time zone               | Android, iOS, Web | Device or browser time zone                                                           | This attribute is used to send messages at the appropriate time, according to each user's local time zone.                                                   |
+| User agent              | Web               | [User agent](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/User-Agent) | This attribute is used to only send messages to compatible devices. It can also be used within segmentation.                                                 |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
-To learn more about tracking device-level properties such as device wireless carrier, time zone, resolution, etc.), see the platform specific documentation: [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/storage/ "Android allowlist documentation"), [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/storage/ "iOS allowlist documentation"), [Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/cookies_and_storage/#device-properties "Web allowlist documentation").
+To learn more about tracking device-level properties (such as device wireless carrier, time zone, resolution, and others), see the platform specific documentation: [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/storage/ "Android allowlist documentation"), [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/storage/ "iOS allowlist documentation"), [Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/cookies_and_storage/#device-properties "Web allowlist documentation").
 
 ## Data not collected by default
 
-By default, the following attributes are not collected. You'll need to integrate each one manually.
+By default, the following attributes aren't collected. Each attribute needs to be manually integrated.
 
 | Attribute                  | Platform     | Description                                                                                                                                                                                                                                                                                                               | Why it's Not Collected                                                                                                                                                                                                                                                                 |
 |----------------------------|--------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -96,12 +96,12 @@ By default, the following attributes are not collected. You'll need to integrate
 
 ## Personalized integration
 
-To make the most out of Braze, integrators often implement the Braze SDKs and log [custom attributes]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#setting-custom-attributes), [custom events]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/#logging-custom-events) and [purchase events]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/purchase_events/#logging-purchase-events) that are pertinent to their business on top of the automatically collected data.
+To make the most out of Braze, our SDK integrators often implement the Braze SDKs and log [custom attributes]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#setting-custom-attributes), [custom events]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/#logging-custom-events) and [purchase events]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/purchase_events/#logging-purchase-events) that are pertinent to their business on top of the automatically collected data.
 
 A personalized integration allows for customized communication that is relevant to your users' experience.
 
 {% alert important %}
-Braze will ban or block users with over 5 million sessions ("dummy users") and no longer ingest their SDK events. For more information, refer to [Spam blocking]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_archival/#spam-blocking).
+Braze will ban or block users with over 5,000,000 sessions ("dummy users") and will no longer ingest their SDK events. For more information, refer to [Spam blocking]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_archival/#spam-blocking).
 {% endalert %}
 
 
