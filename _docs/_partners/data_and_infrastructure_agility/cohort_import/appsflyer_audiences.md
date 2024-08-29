@@ -67,6 +67,10 @@ Once an AppsFlyer audience has been uploaded to Braze, you can use it as a filte
 
 ![User attributes filter "AppsFlyer Cohorts" selected.][7]
 
+## User Matching
+
+Identified users can be matched on either `external_ids` or `aliases`. Anonymous users can be matched on  `device_ids`. Identified users previously created as anonymous users with device_id can not be matched with device ids. You must use external IDs or aliases for identified users.
+
 [1]: https://www.appsflyer.com/
 [2]: https://www.appsflyer.com/product/audiences/
 [3]: {{site.baseurl}}/partners/message_orchestration/attribution/appsflyer/appsflyer/

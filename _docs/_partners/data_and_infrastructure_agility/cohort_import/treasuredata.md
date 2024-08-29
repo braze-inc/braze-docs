@@ -227,3 +227,7 @@ Define your desired sync schedule and save your activation.
 In Braze, navigate to **Segments**, create a new segment, and select **Treasure Data Cohorts** as your filter. From here, you can choose which Treasure Data cohort you wish to include. After your Treasure Data cohort segment is created, you can select it as an audience filter when creating a campaign or Canvas.
 
 ![Treasure Data Integrations Hub Catalog]({% image_buster /assets/img/treasure_data/cohort/cohort4.png %}) 
+
+## User Matching
+
+Identified users can be matched on either `external_ids` or `aliases`. Anonymous users can be matched on  `device_ids`. Identified users previously created as anonymous users with device_id can not be matched with device ids. You must use external IDs or aliases for identified users.

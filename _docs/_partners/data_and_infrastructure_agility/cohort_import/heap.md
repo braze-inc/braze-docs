@@ -61,6 +61,10 @@ To use your Heap segment, create a Braze campaign or Canvas and select the segme
 
 The payload structure for exported data is the same as the payload structure for custom HTTP connectors, which can be viewed in the [examples repository for custom HTTP connectors](https://github.com/Appboy/currents-examples/tree/master/sample-data/Custom%20HTTP/users/behaviors).
 
+## User Matching
+
+Identified users can be matched on either `external_ids` or `aliases`. Anonymous users can be matched on  `device_ids`. Identified users previously created as anonymous users with device_id can not be matched with device ids. You must use external IDs or aliases for identified users.
+
 [1]: {{site.baseurl}}/developer_guide/rest_api/basics/#endpoints
 [2]: {% image_buster /assets/img/heap/heap1.png %} 
 [3]: {% image_buster /assets/img/heap/heap2.png %} 

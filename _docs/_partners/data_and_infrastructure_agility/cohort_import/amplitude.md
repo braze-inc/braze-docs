@@ -50,3 +50,7 @@ In Braze, to create a segment of these users, navigate to **Segments** under **E
 ![In the Braze segment builder, the filter "amplitude_cohorts" is set to "includes_value" and "Amplitude cohort test".]({% image_buster /assets/img/amplitude2.png %})
 
 After saving, you can reference this segment during Canvas or campaign creation in the targeting users step.
+
+## User Matching
+
+Identified users can be matched on either `external_ids` or `aliases`. Anonymous users can be matched on  `device_ids`. Identified users previously created as anonymous users with device_id can not be matched with device ids. You must use external IDs or aliases for identified users.

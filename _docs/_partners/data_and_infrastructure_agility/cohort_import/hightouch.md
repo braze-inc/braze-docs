@@ -33,6 +33,10 @@ In Braze, navigate to **Segments**, create a new segment, and select **Hightouch
 ### Using this integration
 To use your Hightouch segment, create a Braze campaign or Canvas and select the segment as your target audience.<br><br>![][10]{: style="max-width:90%;"}
 
+## User Matching
+
+Identified users can be matched on either `external_ids` or `aliases`. Anonymous users can be matched on  `device_ids`. Identified users previously created as anonymous users with device_id can not be matched with device ids. You must use external IDs or aliases for identified users.
+
 [1]: https://hightouch.io
 [6]: {% image_buster /assets/img/hightouch/data_import_key.png %} 
 [7]: {% image_buster /assets/img/hightouch/cohort1.png %} 

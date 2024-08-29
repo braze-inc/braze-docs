@@ -44,6 +44,10 @@ After the sync, you can create and add a Braze segment with a Census cohort filt
 When using the Census and Braze integration, Census will only send the deltas (changing data) on each sync to Braze. 
 {% endalert %}
 
+## User Matching
+
+Identified users can be matched on either `external_ids` or `aliases`. Anonymous users can be matched on  `device_ids`. Identified users previously created as anonymous users with device_id can not be matched with device ids. You must use external IDs or aliases for identified users.
+
 [1]: https://www.getcensus.com/
 [8]: {% image_buster /assets/img/census/add_service.png %}
 [10]: {% image_buster /assets/img/census/census_2.png %}
