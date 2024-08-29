@@ -20,9 +20,6 @@ The integration requires the following resources:
  - SQS queue for new file notifications 
  - IAM role for Braze access  
 
-{% alert note %}
-Braze Cloud Data Ingestion support for S3 is currently in early access. Contact your Braze account manager if you are interested in participating in the early access. 
-{% endalert %}
 
 ## AWS definitions
 
