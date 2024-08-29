@@ -366,7 +366,7 @@ You can set it to `null` if you want to omit an attribute from a user's profile.
 
 ### Make incremental updates
 
-Make incremental updates to make sure your data is updated to prevent any overwrites. When simultaneous updates are made, there may be unintentional overwrites in the data.
+Make incremental updates to your data so you can prevent unintentional overwrites when simultaneous updates are made.
 
 Consider the following example where a user has two attributes:
 - Color: "Green"
