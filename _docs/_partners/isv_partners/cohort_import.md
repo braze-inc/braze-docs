@@ -104,7 +104,7 @@ The User cohort endpoint allows for specifying which users have been added to or
 
 ## Rate limiting
 
-In additional to the maximum of 1000 user IDs per request in the User cohort endpoint, these endpoints requests are rate limited to 250k/hr.
+In addition to the maximum of 1,000 user IDs per request in the user cohort endpoint, these endpoint requests are rate-limited to 250,000 requests per hour.
 
 ## Cohort filter
 
