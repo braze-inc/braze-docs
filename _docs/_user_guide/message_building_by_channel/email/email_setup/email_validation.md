@@ -11,9 +11,11 @@ channel: email
 
 # Email validation
 
-> This reference article covers local and host part validation rules for email addresses.
+> This reference article covers local and host part validation rules for email addresses. Validation is used for dashboard email addresses, end-user email addresses (your customers), and from and reply-to addresses of an email message.
 
-Validation is used for dashboard email addresses, end-user email addresses (your customers), and from and reply-to addresses done of an email message. Email validation is performed when a user's email address has been updated or is being imported into Braze via API, CSV upload, or SDK, or modified in the dashboard. Note that your email addresses cannot include whitespaces. If you're using the API, whitespaces will result in a `400` error.
+## How it works
+
+Email validation is performed when a user's email address has been updated or is being imported into Braze via API, CSV upload, or SDK, or modified in the dashboard. Note that your email addresses cannot include whitespaces. If you're using the API, whitespaces will result in a `400` error.
 
 Braze does not accept certain characters and recognizes them as invalid. If an email is bounced, Braze marks the email as invalid and the subscription status is not changed.  
 
@@ -70,9 +72,9 @@ The following regular expression can be used to validate if an email address wil
 /\A([a-zA-Z0-9_\-\^+$'\&#\/!%\*=\?`\|~]|[[^\p{ASCII}\p{Space}]&&\p{Alnum}\p{Punct}\p{S}])(([a-zA-Z0-9_\-\^+$'\&#\/!%\*=\?`\|~\.]|[[^\p{ASCII}\p{Space}]&&\p{Alnum}\p{Punct}\p{S}])*([a-zA-Z0-9_\-\^+$'\&#\/!%\*=\?`\|~]|[[^\p{ASCII}\p{Space}]&&\p{Alnum}\p{Punct}\p{S}]))?\z/
 ```
 
-{% alert important %}
-If the domain part is a Gmail address, the local part needs to be at least two characters long. This is in addition to the regular expression validation listed in this section.
-{% endalert %}
+### Gmail addresses
+
+If the domain part is a Gmail address, the local part needs to be at least two characters long and must follow the regular expression validation listed above.
 
 ### Microsoft domains
 
