@@ -1,40 +1,40 @@
 ---
-nav_title: "GET：アプリのセッションを時間ごとにエクスポート"
-article_title: "ゲットだ：アプリのセッションを時間ごとにエクスポート"
+nav_title: "取得:アプリのセッションを時間ごとにエクスポートする"
+article_title: "取得:アプリのセッションを時間ごとにエクスポートする"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "この記事では、時間Brazeエンドポイントによるアプリセッション分析のエクスポートについての詳細を概説します。"
+description: "この記事では、「アプリセッション分析の時間ごとのエクスポート」Braze エンドポイントの詳細について概説します。"
 
 ---
 {% api %}
-# アプリのセッションを時間ごとにエクスポート
+# アプリのセッションを時間ごとにエクスポートする
 {% apimethod get %}
 /sessions/data_series
 {% endapimethod %}
 
-> このエンドポイントを使用して、指定した期間におけるアプリの一連のセッション数を取得します。
+> このエンドポイントを使用して、指定された期間にわたり、アプリの一連のセッション数を取得します。
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#79efb6a9-62ec-4b8a-bf4a-e96313aa4be1 {% endapiref %}
 
 ## 前提条件
 
-このエンドポイントを使用するには、`sessions.data_series` パーミッションを持つ[API キーが]({{site.baseurl}}/api/basics#rest-api-key/)必要です。
+このエンドポイントを使用するには、`sessions.data_series` 権限を持つ [API キー]({{site.baseurl}}/api/basics#rest-api-key/)が必要です。
 
 ## レート制限
 
 {% multi_lang_include rate_limits.md endpoint='default' %}
 
-## リクエストパラメータ
+## リクエストパラメーター
 
-| パラメータ|必須|データ型|説明
+| パラメーター| required | データ型 | 説明 |
 | -------- | -------- | --------- | ----------- |
-|`length` ｜必須｜整数｜返されるシリーズに含める`ending_at` までの最大単位数（日または時間）。1～100の間でなければならない。|
-|`unit` ｜オプション｜文字列｜データポイント間の時間の単位。`day` `hour`デフォルトは`day` 。  |
-|`ending_at` ｜任意｜日時 <br>[(ISO-8601](https://en.wikipedia.org/wiki/ISO_8601)文字列）｜データシリーズが終了する日付。デフォルトはリクエスト時刻。|
-|`app_id` ｜任意｜文字列｜特定のアプリにアナリティクスを制限するために[APIキー]({{site.baseurl}}/user_guide/administrative/app_settings/api_settings_tab/)ページから取得したアプリAPI識別子。|
-|`segment_id` ｜任意｜文字列｜[セグメントAPI識別子を]({{site.baseurl}}/api/identifier_types/)参照。セッションを返す分析可能セグメントを示すセグメントID。|
+| `length` | required | 整数 | 返されるシリーズに `ending_at` が含まれるまでの最大単位数 (日または時間)。1以上100以下でなければなりません。 |
+| `unit` | オプション | string | データポイント間の時間の単位。`day` または `hour` にすることができ、デフォルトは `day` です。  |
+| `ending_at` | オプション | 日時 <br>[(ISO-8601](https://en.wikipedia.org/wiki/ISO_8601)文字列) | データシリーズが終了する日付。デフォルトはリクエストの時刻です。 |
+| `app_id` | オプション | string | 特定のアプリに分析を限定するために、[API Keys]({{site.baseurl}}/user_guide/administrative/app_settings/api_settings_tab/)ページから取得したアプリAPI識別子。 |
+| `segment_id` | オプション | string | 「[セグメント API 識別子]({{site.baseurl}}/api/identifier_types/)」を参照してください。セッションが返されるべき、分析可能なセグメントを示すセグメント ID。 |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ## リクエスト例
@@ -63,7 +63,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 ```
 
 {% alert tip %}
-CSVおよびAPIエクスポートに関するヘルプは、[エクスポートのトラブルシューティングを]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/)ご覧ください。
+CSV および API のエクスポートに関するヘルプについては、「[エクスポートのトラブルシューティング]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/)」を参照してください。
 {% endalert %}
 
 {% endapi %}
