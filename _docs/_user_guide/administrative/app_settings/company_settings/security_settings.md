@@ -81,7 +81,7 @@ Users experiencing issues logging in via two-factor authentication can reach out
 
 A reset can solve common authentication issues such as trouble with authenticator apps, email verification not sending, login failure due to SMS outages or user error, and more.
 
-## Downloading a security event report
+## Downloading a security event report 
 
 The Security Event report is a CSV report of security events such as account invitations, account removals, failed and successful login attempts, and other activities. 
 
