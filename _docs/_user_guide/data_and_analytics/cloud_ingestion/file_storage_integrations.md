@@ -148,7 +148,7 @@ To complete the setup on AWS, you will create an IAM role and attach the IAM pol
 
 1. Within the same IAM section of the console where you created the IAM policy, go to **Roles** > **Create Role**. <br><br>![]({{site.baseurl}}/assets/img/create_role_1_list.png)<br><br>
 
-2. Copy the Braze AWS account ID from the Create new import sync modal. Go to **Cloud Data Ingestion**, click **Create New Data Sync** and select **S3 Import**. <br><br>![]({{site.baseurl}}/assets/img/cloud_ingestion/s3_copy_braze_account_id.png)<br><br>
+2. Copy the Braze AWS account ID from your Braze dashboard. Go to **Cloud Data Ingestion**, click **Create New Data Sync** and select **S3 Import**. <br><br>![]({{site.baseurl}}/assets/img/cloud_ingestion/s3_copy_braze_account_id.png)<br><br>
 
 3. In AWS, select **Another AWS Account** as the trusted entity selector type. Provide your Braze account ID, select the **Require external ID** checkbox, and enter an external ID for Braze to use. Select **Next** when complete. <br><br> ![The S3 "Create Role" page. This page has fields for role name, role description, trusted entities, policies, and permissions boundary.]({{site.baseurl}}/assets/img/create_role_2_another.png)
 
