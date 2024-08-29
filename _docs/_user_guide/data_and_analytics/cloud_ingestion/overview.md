@@ -368,7 +368,7 @@ You can set it to `null` if you want to omit an attribute from a user's profile.
 
 Make incremental updates to your data so you can prevent unintentional overwrites when simultaneous updates are made.
 
-Consider the following example where a user has two attributes:
+In the following example, a user has two attributes:
 - Color: "Green"
 - Size: "Large"
 
