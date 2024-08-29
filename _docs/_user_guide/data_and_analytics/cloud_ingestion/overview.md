@@ -380,7 +380,7 @@ Because Request 1 occurs first, the user's attributes are updated to the followi
 - Color: "Red"
 - Size: "Large"
 
-However, when Request 2 occurs, we begin with the original attribute values ("Green" and "Large"). This updates the attributes to the following:
+However, when Request 2 occurs, Braze starts with the original attribute values ("Green" and "Large"), then updates the user's attributes to the following:
 - Color: "Green"
 - Size: "Medium"
 
