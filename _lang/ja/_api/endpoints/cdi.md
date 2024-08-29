@@ -6,23 +6,23 @@ page_order: 0.5
 layout: dev_guide
 alias: /api/cdi/
 
-description: "このランディング ページには、Braze Cloud Data Ingestion エンドポイントがリストされています。"
+description: "このランディングページには、Braze Cloud Data Ingestionのエンドポイントがリストされている。"
 page_type: landing
 
 guide_top_header: "クラウドデータ取り込みエンドポイント"
-guide_top_text: "Braze Cloud Data Ingestion エンドポイントを使用して、データ ウェアハウスの統合と同期を管理します。"
+guide_top_text: "Braze Cloud Data Ingestionエンドポイントを使用して、データウェアハウスの統合と同期を管理する。"
 
 guide_featured_title: ""
 guide_featured_list:
-  - name: "GET: List Integrations"
+  - name: "取得:リスト統合"
     link: /docs/api/cdi/get_integration_list/
-    fa_icon: fas fa-list-ul
-  - name: "GET: List Job Sync Status"
+    image: /assets/img/braze_icons/list.svg
+  - name: "取得:ジョブ同期ステータスを表示する"
     link: /docs/api/cdi/get_job_sync
-    fa_icon: fas fa-list-ul
-  - name: "POST: Trigger Sync"
+    image: /assets/img/braze_icons/list.svg
+  - name: "POST:トリガー同期"
     link: /docs/api/cdi/post_trigger_sync/
-    fa_icon: fas fa-play
+    image: /assets/img/braze_icons/play.svg
 
 ---
 
