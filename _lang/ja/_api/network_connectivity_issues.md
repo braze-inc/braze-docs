@@ -1,32 +1,32 @@
 ---
-nav_title: API ネットワーク接続の問題
-article_title: API ネットワーク接続の問題
+nav_title: APIネットワーク接続の問題
+article_title: APIネットワーク接続の問題
 page_order: 4
-description: "この参考記事では、API 接続の問題とそのトラブルシューティング方法について説明しています。"
+description: "この参考記事では、API接続の問題とそのトラブルシューティング方法について触れている。"
 page_type: reference
 
 ---
 
-# API ネットワーク接続の問題
+# APIネットワーク接続の問題
 
-> この参考記事では、API 接続の問題とそのトラブルシューティング方法について説明しています。
+> この参考記事では、API接続の問題とそのトラブルシューティング方法について触れている。
 
-Braze API エンドポイントは CDN を使用し、DNS 情報に基づいてトラフィックを最も近い POP にルーティングします。 接続に問題がある場合や、効率的でないPOPに接続していることに気付いた場合は、プロバイダーのDNSサーバーまたはサーバーと同じデータセンターに設置され、適切なIPロケーションのメタ情報が関連付けられているDNSサーバーを使用してください。
+Braze APIエンドポイントは、DNS情報に基づいて最も近いPOPにトラフィックをルーティングするCDNを使用する。 接続に問題がある場合、または効率的でないPOPに接続していることに気づいた場合は、プロバイダーのDNSサーバー、またはサーバーと同じデータセンターに設置され、適切なIPロケーションメタ情報が関連付けられているDNSサーバーを使用するようにしてほしい。
 
-一握りのファイアウォールがHTTPSを変更または保護しようとしていることに気付きました。/TLS traffic which interferes with connections to Braze API endpoints. If your servers are behind any sort of physical firewall, disable any HTTPS/TLS acceleration or modifications that the firewall or router is performing. Additionally, you can allowlist outbound traffic to our CDN providers (Fastly.com) to see if that resolves the issue.
+我々は、Braze APIエンドポイントへの接続を妨害するHTTPS/TLSトラフィックを変更または保護しようとする一握りのファイアウォールがあることに気づいた。サーバーが何らかの物理的なファイアウォールの背後にある場合、ファイアウォールやルーターが実行しているHTTPS/TLSのアクセラレーションや変更を無効にしておく。さらに、当社の CDN プロバイダー (Fastly.com) へのアウトバウンドトラフィックを許可して、問題が解決されるかを確認することもできます。
 
-場合によっては、iptables セットアップが SYN でフィルタリングされることがあります/ACK/RST packets can also cause issues, so if you are using iptables on your host you could also allowlist outbound traffic to our CDN providers (Fastly.com) to see if that resolves the issue.
+時折、SYN/ACK/RST のパケットをフィルタリングする iptables のセットアップも問題を引き起こすことがあるため、ホストに iptables を使用している場合は、当社の CDN プロバイダー (Fastly.com) へのアウトバウンドトラフィックを許可リストに登録し、問題が解決するかどうかを確認することもできます。
 
-Braze API エンドポイントへの接続でネットワークの問題が解決しない場合は、問題が発生している間に [MTR テストと][1] [Fastly Debug][2] の結果を提供して、サポートリクエストとともに送信してください。テスト結果は、開発マシンからではなく、Braze API エンドポイントへの接続に問題があるサーバーから取得する必要があることに注意してください。ネットワークキャプチャ (tcpdump または.pcap ファイル) も入手できれば役に立ちます。
+それでもBraze APIエンドポイントへの接続にネットワークの問題がある場合は、問題が発生している間の[MTRテストと][1] [Fastly Debugの][2]結果を提供し、それをサポートリクエストと一緒に提出する。テスト結果は、開発マシンからではなく、Braze API エンドポイントへの接続に問題があるサーバーから取得しなければならないことに注意してください。ネットワークキャプチャ（tcpdumpまたは.pcapファイル）も入手できれば役に立つだろう。
 
-MTR の詳細については、ご使用のオペレーティングシステムに応じた以下のリソースをご覧ください。
+MTRの詳細については、お使いのオペレーティング・システムに応じて、以下のリソースをチェックしてほしい：
 
 - [GNU/Linux][4]
-- [MacOSの][5]
+- [macOS][5]
 
-## Braze API エンドポイントの IP 範囲を許可リストに登録する
+## Braze API エンドポイントの IP 範囲の許可リスト登録
 
-ファイアウォール経由で Braze API エンドポイントを許可リストに追加するために、CDN は JSON ダンプ経由で割り当てられた IP 範囲のリストへのアクセスを提供します。Braze API IP範囲のリストについては、[[FastlyのパブリックIPリストとCloudflareのパブリックIPリストの両方を参照してください][6]][3]。これらの IP は変更される可能性があることに注意してください。
+ファイアウォールを通して Braze API エンドポイントを許可リストに登録するために、当社の CDN は、JSON ダンプを介して割り当てられた IP 範囲のリストへのアクセスを提供しています。Braze API の IP範囲のリストについては、[Fastly の公開 IP リスト][3]と [Cloudflare の公開 IP リスト][6]の両方を参照してください。これらのIPは変更される可能性がある。
 
 [1]: https://www.privateinternetaccess.com/helpdesk/kb/articles/what-is-an-mtr-test-and-how-do-i-run-one-2
 [2]: http://www.fastly-debug.com/
