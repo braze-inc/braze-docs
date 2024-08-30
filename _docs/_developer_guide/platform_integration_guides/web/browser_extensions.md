@@ -25,7 +25,7 @@ In general, since extensions are HTML and JavaScript, you can use Braze for the 
 
 ## What's not supported
 
-* Manifest v3 service workers do not support importing modules meant for web environments.
+* Service workers for Manifest v3 is not supported due to lack of DOM/Window API support. This is on our roadmap for future consideration.
 
 ## Extension types
 
