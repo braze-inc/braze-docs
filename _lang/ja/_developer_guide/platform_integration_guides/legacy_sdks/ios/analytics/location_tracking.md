@@ -27,7 +27,7 @@ Braze iOS SDK `v3.17.0` 以降、位置情報の追跡はデフォルトで無�
 [`startWithApiKey:inApplication:withLaunchOptions:withAppboyOptions`][4] メソッドを使用して、アプリの起動時に位置情報の自動追跡を有効にすることもできます。`appboyOptions` ディクショナリで、`ABKEnableAutomaticLocationCollectionKey` を `YES` に設定します。以下に例を示します。
 
 {% tabs %}
-{% tab OBJECTIVE-C %}
+{% tab 目標-C %}
 
 ```objc
 [Appboy startWithApiKey:@"YOUR-API_KEY"
@@ -37,7 +37,7 @@ Braze iOS SDK `v3.17.0` 以降、位置情報の追跡はデフォルトで無�
 ```
 
 {% endtab %}
-{% tab swift %}
+{% tab 速い %}
 
 ```swift
 Appboy.start(withApiKey: "YOUR-API-KEY",
@@ -54,26 +54,26 @@ Appboy.start(withApiKey: "YOUR-API-KEY",
 以下の 2 つのメソッドは、ユーザーの既知の最終位置情報を手動で設定するために使用できます。
 
 {% tabs %}
-{% tab OBJECTIVE-C %}
+{% tab 目標-C %}
 
-\`\`\`objc
+```objc
 [[Appboy sharedInstance].user setLastKnownLocationWithLatitude:latitude
                                                      longitude:longitude
                                             horizontalAccuracy:horizontalAccuracy];
 
-\`\`\`
+```
 
-\`\`\`objc
+```objc
 [[Appboy sharedInstance].user setLastKnownLocationWithLatitude:latitude
                                                      longitude:longitude
                                             horizontalAccuracy:horizontalAccuracy
                                                       altitude:altitude
                                               verticalAccuracy:verticalAccuracy];
 
-\`\`\`
+```
 
 {% endtab %}
-{% tab swift %}
+{% tab 速い %}
 
 ```swift
 Appboy.sharedInstance()?.user.setLastKnownLocationWithLatitude(latitude: latitude, longitude: longitude, horizontalAccuracy: horizontalAccuracy)
