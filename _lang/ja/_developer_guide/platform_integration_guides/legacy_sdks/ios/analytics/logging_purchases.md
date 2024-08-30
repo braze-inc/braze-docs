@@ -14,7 +14,7 @@ noindex: true
 
 アプリ内での購入を記録して、売上を経時的にトラッキングしたり、売上源を横断してトラッキングしたりできます。また、ユーザーを生涯価値でセグメント化することもできます。
 
-Braze では、複数の通貨での購入がサポートされています。米ドル以外の通貨でレポートする購入は、レポートされた日付の為替レートに基づいて米ドル単位でダッシュボードに表示されます。
+Braze は複数の通貨での購入に対応しています。ドル以外の通貨でレポートする購入は、レポートされた日付の為替レートに基づいてドルでダッシュボードに表示されます。
 
 実装前に、[ベストプラクティス][5]のカスタムイベント、カスタム属性、および購入イベントによって提供されるセグメンテーションオプションの例と、[イベント命名規則]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/event_naming_conventions/)のメモを必ず確認しておいてください。
 
@@ -32,7 +32,7 @@ atPrice:[[[NSDecimalNumber alloc] initWithString:@"0.99"] autorelease]];
 ```
 
 {% endtab %}
-{% tab swift %}
+{% tab SWIFT %}
 
 ```swift
 Appboy.sharedInstance()?.logPurchase("your product ID", inCurrency: "USD", atPrice: NSDecimalNumber(string: "0.99"))
@@ -44,7 +44,7 @@ Appboy.sharedInstance()?.logPurchase("your product ID", inCurrency: "USD", atPri
 - サポートされている通貨コードは USD、CAD、EUR、GBP、JPY、AUD、CHF、NOK、MXN、NZD、CNY、RUB、TRY、INR、IDR、ILS、SAR、ZAR、AED、SEK、HKD、SPD、DKK などです。
   - これ以外の通貨コードを指定すると警告が記録され、SDK でその他のアクションは実行されません。
 - 商品 ID は最大 255 文字です。
-- 商品 ID が空の場合、購入は Braze に記録されないことに注意してください。
+- 製品 ID が空の場合、購入は Braze に記録されないことに注意してください。
 
 ### プロパティ {#properties-purchases} の追加
 
@@ -55,7 +55,7 @@ Appboy.sharedInstance()?.logPurchase("your product ID", inCurrency: "USD", atPri
 ### 数量の追加
 顧客が 1 回のチェックアウト手続きで同じ購入を複数回行う場合は、購入に数量を追加できます。これを行うには、数量として `NSUInteger` を渡します。
 
-* SDK で購入を記録するには、数量入力が [0, 100] の範囲内である必要があります。
+* 数量入力は、SDKが購入を記録するために\[0, 100]の範囲内でなければなりません。
 * 数量入力のないメソッドは、デフォルトの数量の値が 1 になります。
 * 数量入力のあるメソッドにはデフォルト値がないため、SDK で購入を記録するために数量入力を受け取る**必要があります**。
 
@@ -72,7 +72,7 @@ withProperties:@{@"key1":"value1"}];
 ```
 
 {% endtab %}
-{% tab swift %}
+{% tab SWIFT %}
 
 ```swift
 Appboy.sharedInstance()?.logPurchase("your product ID", inCurrency: "USD", atPrice: NSDecimalNumber(string: "0.99"), withProperties: ["key1":"value1"])
@@ -86,7 +86,7 @@ Appboy.sharedInstance()?.logPurchase("your product ID", inCurrency: "USD", atPri
 {% endalert %}
 
 ### 注文レベルで購入を記録する
-商品レベルではなく、注文レベルで購入を記録するには、注文名または注文カテゴリに `product_id` を使用します。詳細については、[購入オブジェクトの仕様]({{site.baseurl}}/api/objects_filters/purchase_object/#product-id-naming-conventions)を参照してください。 
+商品レベルではなく、注文レベルで購入を記録したい場合、注文名または注文カテゴリを `product_id` として使用できます。詳細については、[購入オブジェクトの仕様]({{site.baseurl}}/api/objects_filters/purchase_object/#product-id-naming-conventions)を参照してください。 
 
 ### 予約済みのキー
 

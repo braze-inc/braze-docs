@@ -23,14 +23,14 @@ noindex: true
 以下を呼び出して、Braze インスタンスに `ABKInAppMessageUIDelegate` デリゲートオブジェクトを設定します。
 
 {% tabs %}
-{% tab OBJECTIVE-C %}
+{% tab 目標-C %}
 
 ```objc
 [[Appboy sharedInstance].inAppMessageController.inAppMessageUIController setInAppMessageUIDelegate:self];
 ```
 
 {% endtab %}
-{% tab swift %}
+{% tab 速い %}
 
 ```swift
 Appboy.sharedInstance()?.inAppMessageController.inAppMessageUIController?.setInAppMessageUIDelegate?(self)
@@ -48,14 +48,14 @@ Appboy.sharedInstance()?.inAppMessageController.inAppMessageUIController?.setInA
 以下を呼び出して、Braze インスタンスに `ABKInAppMessageControllerDelegate` デリゲートオブジェクトを設定します。
 
 {% tabs %}
-{% tab OBJECTIVE-C %}
+{% tab 目標-C %}
 
 ```objc
 [Appboy sharedInstance].inAppMessageController.delegate = self;
 ```
 
 {% endtab %}
-{% tab swift %}
+{% tab 速い %}
 
 ```swift
 Appboy.sharedInstance()?.inAppMessageController.delegate = self
@@ -66,7 +66,7 @@ Appboy.sharedInstance()?.inAppMessageController.delegate = self
 
 または、キー `ABKInAppMessageControllerDelegateKey` を使用して `appboyOptions` を使用いて、初期化時にコアのアプリ内メッセージデリゲートを設定することもできます。
 {% tabs %}
-{% tab OBJECTIVE-C %}
+{% tab 目標-C %}
 
 ```objc
 [Appboy startWithApiKey:@"YOUR-API_KEY"
@@ -76,7 +76,7 @@ Appboy.sharedInstance()?.inAppMessageController.delegate = self
 ```
 
 {% endtab %}
-{% tab swift %}
+{% tab 速い %}
 
 ```swift
 Appboy.start(withApiKey: "YOUR-API-KEY",

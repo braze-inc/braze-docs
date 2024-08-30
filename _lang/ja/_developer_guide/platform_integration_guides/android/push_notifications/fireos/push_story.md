@@ -1,5 +1,5 @@
 ---
-nav_title: プッシュ通知ストーリー
+nav_title: Push Stories
 article_title: FireOS のプッシュ通知ストーリー
 platform: FireOS
 page_order: 6
@@ -8,7 +8,7 @@ description: "このリファレンスページでは、Android プッシュ通�
 
 ---
 
-# プッシュ通知ストーリー
+# Push Stories
 
 Android プッシュ通知ストーリーを使用するために追加の統合は必要となりません。Braze にすでに組み込まれています。 
 

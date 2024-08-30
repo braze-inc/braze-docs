@@ -1,5 +1,5 @@
 ---
-nav_title: プッシュ通知ストーリー
+nav_title: Push Stories
 article_title: Android のプッシュ通知ストーリー
 platform: Android
 page_order: 5.91
@@ -9,7 +9,7 @@ channel:
 
 ---
 
-# プッシュ通知ストーリー
+# Push Stories
 
 Android プッシュ通知ストーリーを使用するために追加の統合は必要となりません。Braze にすでに組み込まれています。 
 

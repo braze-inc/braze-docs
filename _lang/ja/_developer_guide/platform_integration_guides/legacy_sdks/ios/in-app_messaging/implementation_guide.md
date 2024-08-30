@@ -13,12 +13,12 @@ noindex: true
 
 <br>
 {% alert important %}
-基本的なアプリ内メッセージ開発者統合ガイドをお探しですか？[ここ]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/in-app_messaging/overview/)で見つけてください。
+基本的なアプリ内メッセージ開発者統合ガイドをお探しですか?それを見つける[here]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/in-app_messaging/overview/).
 {% endalert %}
 
 # アプリ内メッセージング実装ガイド
 
-> このオプションの高度な実装ガイドでは、アプリ内メッセージコードに関する考慮事項、当社のチームが構築した3つのカスタムユースケース、および付属のコードスニペットについて説明します。[こちらから](https://github.com/braze-inc/braze-growth-shares-ios-demo-app)Braze Demo リポジトリにアクセスしてください！この実装ガイドは Swift の実装を中心としていますが、興味のある人のために Objective-C のスニペットが提供されています。HTML の実装をお探しですか?[私たちの HTML テンプレートリポジトリ](https://github.com/braze-inc/in-app-message-templates)を見てください！
+> このオプションの高度な実装ガイドでは、アプリ内メッセージコードに関する考慮事項、当社のチームが構築した3つのカスタムユースケース、および付属のコードスニペットについて説明します。[こちらから](https://github.com/braze-inc/braze-growth-shares-ios-demo-app)Braze Demo リポジトリにアクセスしてください！この実装ガイドは Swift の実装を中心としていますが、興味のある人のために Objective-C のスニペットが提供されています。HTML の実装をお探しですか?Braze の[HTML テンプレートリポジトリ](https://github.com/braze-inc/in-app-message-templates)をご確認ください。
 
 ## コードに関する考慮事項
 
@@ -29,7 +29,7 @@ noindex: true
 次のコードスニペットは Braze SDK の UI デリゲートメソッドで、アプリ内メッセージに入力するサブクラスビューを決定します。このガイドでは基本的な実装について説明し、フルサブクラス、スライドアップサブクラス、モーダルサブクラスを魅力的な方法で実装する方法を示します。カスタムビューコントローラーを設定する場合は、他のすべてのアプリ内メッセージサブクラスを設定する必要があることに注意してください。サブクラス化の背後にある概念をしっかりと理解したら、[ユースケース](#sample-use-cases)を確認してアプリ内メッセージングサブクラスの実装を開始してください。
 
 {% tabs %}
-{% tab Swift %}
+{% tab スウィフト %}
 **ABKInAppMessage サブクラス**<br>
 
 ```swift
@@ -51,7 +51,7 @@ extension AppboyManager: ABKInAppMessageUIDelegate {
 }
 ```
 {% endtab %}
-{% tab Objective-C %}
+{% tab 目的C %}
 **ABKInAppMessage サブクラス**<br> 
 
 ```objc
@@ -72,16 +72,16 @@ extension AppboyManager: ABKInAppMessageUIDelegate {
 {% endtab %}
 {% endtabs %}
 
-## サンプルユースケース
+## ユースケース
 
-3つのサンプルの顧客ユースケースが提供されています。それぞれのユースケースには、詳細な説明、関連するコードスニペット、アプリ内メッセージが Braze ダッシュボードでどのように表示され、どのように使用されるかが記載されています。
+以下の3つのユースケースを提供しました。それぞれのユースケースには、詳細な説明、関連するコードスニペット、アプリ内メッセージが Braze ダッシュボードでどのように表示され、どのように使用されるかが記載されています。
 - [カスタムスライドアップアプリ内メッセージ](#custom-slide-up-in-app-message)
 - [カスタムモーダルアプリ内メッセージ](#custom-modal-in-app-message)
 - [カスタムフルアプリ内メッセージ](#custom-full-in-app-message)
 
 ### カスタムスライドアップアプリ内メッセージ
 
-![2台の iPhone が並べて置いてあります。最初の iPhone では、スライドアップメッセージが画面の下部に表示されます。2台目の iPhone では、スライドアップメッセージが画面の上方に表示され、アプリのナビゲーションボタンが表示されています。][2]{: style="float:right;max-width:45%;margin-left:15px;border:0;"}
+![2台のiPhoneを並べて。最初の iPhone では、スライドアップメッセージが画面の下部に表示されます。2台目のiPhoneでは、画面の上にスライドアップメッセージが表示され、アプリのナビゲーションボタンが表示されます。][2]{: style="float:right;max-width:45%;margin-left:15px;border:0;"}
 
 スライドアップのアプリ内メッセージを作成しているときに、デフォルトの方法ではメッセージの配置を変更できないことに気付くかもしれません。このような変更は、`ABKInAppMessageSlideupViewController` をサブクラス化し、独自のカスタム変数で `offset` 変数をオーバーライドすることによって可能になります。右の画像は、これを使用してスライドアップアプリ内メッセージを調整する方法の例を示しています。 
 
@@ -90,7 +90,7 @@ extension AppboyManager: ABKInAppMessageUIDelegate {
 #### デフォルト UI への動作の追加<br><br>
 
 {% tabs %}
-{% tab Swift %}
+{% tab スウィフト %}
 **`offset` 変数を更新**<br>
 `offset` 変数を更新し、必要に応じて独自のオフセットを設定します。
 ```swift
@@ -110,7 +110,7 @@ override var offset: CGFloat {
 }
 ```
 
-{% details Version 3.34.0 or earlier  %}
+{% details バージョン3.34.0 以前  %}
 **`slideConstraint` 変数を更新**<br>
 `slideConstraint` パブリック変数はスーパークラス `ABKInAppMessageSlideupViewController` から取得されます。 
 
@@ -124,11 +124,11 @@ func setSlideConstraint() {
 private var bottomSpacing: CGFloat {
     return AppboyManager.shared.activeApplicationViewController.topMostViewController().view.safeAreaInsets.bottom
 }
-```
+``` 
 [`topMostViewController()`](https://github.com/braze-inc/braze-growth-shares-ios-demo-app/blob/master/Braze-Demo/Utils/UIViewController_Util.swift#L17) 機能については、Braze Demo リポジトリにアクセスしてください。
 {% enddetails %}
 {% endtab %}
-{% tab Objective-C %}
+{% tab 目的C %}
 **`offset` 変数を更新**<br>
 `offset` 変数を更新し、必要に応じて独自のオフセットを設定します。
 ```objc
@@ -137,16 +137,16 @@ private var bottomSpacing: CGFloat {
 }
 ```
 
-\`\`\`objc
-\- (CGFloat)offset {
+```objc
+- (CGFloat)offset {
   return [super offset];
 }
  
 - (void)setOffset:(CGFloat)offset {
-[super setOffset:offset + [self adjustedOffset]];
+  [super setOffset:offset + [self adjustedOffset]];
 }
-  \`\`\`
-{% details Version 3.34.0 or earlier  %}
+```
+{% details バージョン3.34.0 以前  %}
 **`slideConstraint` 変数を更新**<br>
 `slideConstraint` パブリック変数はスーパークラス `ABKInAppMessageSlideupViewController` から取得されます。 
 
@@ -166,7 +166,7 @@ private var bottomSpacing: CGFloat {
 {% endtabs %}
 
 {% tabs %}
-{% tab Swift %}
+{% tab スウィフト %}
 **カスタム制約のオーバーライドと設定**<br>
 `beforeMoveInAppMessageViewOnScreen()` をオーバーライドし、必要に応じて独自のカスタム制約値を設定します。元の値はスーパークラスに設定されます。
 
@@ -177,7 +177,7 @@ override func beforeMoveInAppMessageViewOnScreen() {
 }
 ```
 
-{% details Version 3.34.0 or earlier %}
+{% details バージョン3.34.0 以前 %}
 ```swift
 override func beforeMoveInAppMessageViewOnScreen() {
   setSlideConstraint()
@@ -186,7 +186,7 @@ override func beforeMoveInAppMessageViewOnScreen() {
 {% enddetails %}
 
 {% endtab %}
-{% tab Objective-C %}
+{% tab 目的C %}
 **カスタム制約のオーバーライドと設定**<br> 
 `beforeMoveInAppMessageViewOnScreen()` をオーバーライドし、必要に応じて独自のカスタム制約値を設定します。元の値はスーパークラスに設定されます。
 
@@ -197,7 +197,7 @@ override func beforeMoveInAppMessageViewOnScreen() {
 }
 ```
 
-{% details Version 3.34.0 or earlier  %}
+{% details バージョン3.34.0 以前  %}
 ```objc
 - (void)beforeMoveInAppMessageViewOnScreen {
   [self setSlideConstraint:self.slideConstraint];
@@ -212,7 +212,7 @@ override func beforeMoveInAppMessageViewOnScreen() {
 
 ### カスタムモーダルアプリ内メッセージ
 
-![iPhone にモーダルアプリ内メッセージが表示されるので、スポーツチームのリストを順番に表示してお気に入りのチームを選択できます。このアプリ内メッセージの下部には、大きな青い送信ボタンがあります。][3]{: style="float:right;max-width:23%;margin-left:15px;border:0;"}
+![スポーツチームの一覧を循環させ、好きなチームを選択できるモーダル アプリ内メッセージが表示されたiPhone。このアプリ内メッセージの一番下には、大きな青い送信ボタンがあります。][3]{: style="float:right;max-width:23%;margin-left:15px;border:0;"}
 
 `ABKInAppMessageModalViewController` をサブクラス化して、貴重なユーザー属性を収集する魅力的な方法を提供する `UIPickerView` を活用できます。カスタムモーダルアプリ内メッセージを使用すると、コネクテッドコンテンツまたは使用可能なリストを使用して、アイテムの動的なリストから属性を表示およびキャプチャできます。 
 
@@ -220,20 +220,20 @@ override func beforeMoveInAppMessageViewOnScreen() {
 
 開始するには、[ModalPickerViewController](https://github.com/braze-inc/braze-growth-shares-ios-demo-app/blob/master/Braze-Demo/ViewController/In-App-Messages/ModalPickerViewController/ModalPickerViewController.swift) にアクセスしてください。
 
-#### ダッシュボード構成
+#### ダッシュボードの構成
 
 ダッシュボードでモーダルアプリ内メッセージを設定するには、コンマ区切り文字列として書式設定された項目のリストを指定する必要があります。この例では、コネクテッドコンテンツを使用してチーム名の JSON リストを取得し、それに応じてフォーマットします。
 
-![アプリ内メッセージ作成画面にはアプリ内メッセージがどのように表示されるかのプレビューが表示されますが、代わりに Braze に提供したアイテムのリストが表示されます。スマートフォンに送信されない限り、Braze UI にはカスタムアプリ内メッセージUIが表示されないため、プレビューではメッセージがどのように表示されるかを示すものではないので、送信前にテストすることをお勧めします。][4]
+![in-アプリ メッセージ作成画面には、アプリ内メッセージの外観のプレビューが表示されますが、代わりにBrazeに指定したアイテムの一覧が表示されます。Braze UI は電話機に送信されない限りカスタムアプリ内メッセージ UI を表示しないため、プレビューにはメッセージがどのように表示されるかが表示されないため、送信前にテストすることをお勧めします。][4]
 
 キーと値のペアに `attribute_key` を入力します。このキーは、ユーザーが選択した値とともに、カスタム属性としてユーザープロファイルに保存されます。カスタムビューロジックは、Braze に送信されたユーザー属性を処理する必要があります。
 
 `ABKInAppMessage` オブジェクト内の `extras` ディクショナリを使用して、表示すべき正しいビューを示す `view_type` キー (存在する場合) をクエリできます。アプリ内メッセージはメッセージごとに設定されるため、カスタムとデフォルトのモーダルビューが調和して機能することに注意してください。
 
-![メッセージ作成画面に2つのキーと値のペアが見つかりました。最初のキーと値のペアでは「attribute\_key」が「お気に入りチーム」に設定され、2番目のペアでは「view\_type」が「ピッカー」に設定されています。][5]{: style="max-width:65%;"}
+![メッセージ作成画面で検出された2 つのキーと値のペア。最初のキーと値のペアには"属性_key"set as "Favorite Team"があり、2番目には"view_type"set as "picker"があります。][5]{: style="max-width:65%;"}
 
 {% tabs %}
-{% tab Swift %}
+{% tab スウィフト %}
 **UI 表示動作に `view_type` を使用**<br>
 `view_type` に対して `extras` ディクショナリを照会して、目的のサブクラス化されたビューコントローラをロードします。
 
@@ -248,57 +248,57 @@ func modalViewController(inAppMessage: ABKInAppMessage) -> ABKInAppMessageModalV
 }
 ```
 {% endtab %}
-{% tab Objective-C %}
+{% tab 目的C %}
 **UI 表示動作に `view_type` を使用**<br>
 `view_type` に対して `extras` ディクショナリを照会して、目的のサブクラス化されたビューコントローラをロードします。
 
-\`\`\`objc
-\- (ABKInAppMessageModalViewController \*)modalViewControllerWithInAppMessage:(ABKInAppMessage \*)inAppMessage {
-  InAppMessageData \*inAppMessageData = [[InAppMessageData alloc] init];
-  NSString \*key = [inAppMessageData rawValueForInAppMessageKey:InAppMessageKeyViewType];
-  NSString \*viewType = [inAppMessageData rawValueForInAppMessageViewType:InAppMessageViewTypePicker];
+```objc
+- (ABKInAppMessageModalViewController *)modalViewControllerWithInAppMessage:(ABKInAppMessage *)inAppMessage {
+  InAppMessageData *inAppMessageData = [[InAppMessageData alloc] init];
+  NSString *key = [inAppMessageData rawValueForInAppMessageKey:InAppMessageKeyViewType];
+  NSString *viewType = [inAppMessageData rawValueForInAppMessageViewType:InAppMessageViewTypePicker];
    
   if ([inAppMessage.extras objectForKey:key] && [inAppMessage.extras[key] isEqualToString:viewType]) {
-return [[ModalViewController alloc] initWithInAppMessage:inAppMessage];
-} else {
-return [[ABKInAppMessageModalViewController alloc] initWithInAppMessage:inAppMessage];
+    return [[ModalViewController alloc] initWithInAppMessage:inAppMessage];
+  } else {
+    return [[ABKInAppMessageModalViewController alloc] initWithInAppMessage:inAppMessage];
+  }
 }
-    }
-  \`\`\`
-    {% endtab %}
-  {% endtabs %}
+```
+{% endtab %}
+{% endtabs %}
 
 {% tabs %}
-{% tab Swift %}
+{% tab スウィフト %}
 **オーバーライドしてカスタムビューを提供する**<br>
 `loadView()` をオーバーライドし、必要に応じて独自のカスタムビューを設定します。
-\`\`\`swift
+```swift
 override var nibname: String{
   return "ModalPickerViewController"
 }
 
 override func loadView() {
-Bundle.main.loadNibNamed(nibName, owner: self, options: nil)
+  Bundle.main.loadNibNamed(nibName, owner: self, options: nil)
 }
-  ```
+```
 {% endtab %}
-{% tab Objective-C %}
-**Override and provide custom view**<br>
-Override `loadView()` and set your own custom view to suit your needs.
+{% tab 目的C %}
+**オーバーライドしてカスタムビューを提供する**<br>
+`loadView()` をオーバーライドし、必要に応じて独自のカスタムビューを設定します。
 ```objc
-\- (void)loadView {
-NSString *nibName = @"ModalPickerViewController";
-[[NSBundle mainBundle] loadNibNamed:nibName owner:self options:nil];
+- (void)loadView {
+  NSString *nibName = @"ModalPickerViewController";
+  [[NSBundle mainBundle] loadNibNamed:nibName owner:self options:nil];
 }
-\`\`\`
+```
 {% endtab %}
-  {% endtabs %}
+{% endtabs %}
 
 {% tabs %}
-{% tab Swift %}
+{% tab スウィフト %}
 **動的リストのフォーマット変数**<br>
 `UIPickerView` コンポーネントをリロードする前に、`inAppMessage` メッセージ変数は_文字列_として出力されます。正しく表示するには、このメッセージを項目の配列としてフォーマットする必要があります。例として、これは [`components(separatedBy: ", ")`](https://developer.apple.com/documentation/foundation/nsstring/1413214-components) を使用して実現できます。
-\`\`\`swift
+```swift
 override func viewDidLoad() {
   super.viewDidLoad()
  
@@ -307,45 +307,45 @@ override func viewDidLoad() {
 }
 ```
 {% endtab %}
-{% tab Objective-C %}
-**Format variables for PickerView**<br>
-Before reloading the `UIPickerView` components, the `inAppMessage` message variable is output as a _String_. This message must be formatted as an array of items to be displayed correctly. For example, this can be achieved using [`componentsSeparatedByString`](https://developer.apple.com/documentation/foundation/nsstring/1413214-componentsseparatedbystring?language=objc).
+{% tab 目的C %}
+**PickerView の出力形式変数**<br>
+`UIPickerView` コンポーネントをリロードする前に、`inAppMessage` メッセージ変数は_文字列_として出力されます。正しく表示するには、このメッセージを項目の配列としてフォーマットする必要があります。たとえば、[`componentsSeparatedByString`](https://developer.apple.com/documentation/foundation/nsstring/1413214-componentsseparatedbystring?language=objc) を使用してこれを実現できます。
 ```objc
-\- (void)viewDidLoad {
+- (void)viewDidLoad {
   [super viewDidLoad];
    
   self.items = [[NSArray alloc] initWithArray:[self.inAppMessage.message componentsSeparatedByString:@", "]];
   [self.pickerView reloadAllComponents];
 }
-\`\`\`
+```
 {% endtab %}
 {% endtabs %}
 
 {% tabs %}
-{% tab Swift %}
+{% tab スウィフト %}
 **カスタム属性を割り当てる**<br>
-サブクラスを使用して、ユーザーが [送信] を押した後に、属性とそれに対応する選択した値を Braze に渡します。
-\`\`\`swift
-@IBAction func primaryButtonTapped(_ sender:Any) {
-  guard let item = selectedItem, !item.isEmpty, let attributeKey = inAppMessage.extras?[InAppMessageKey.attributeKey.rawValue] as?String else { return }
+サブクラスを使用して、ユーザーが \[送信] を押した後に、属性とそれに対応する選択した値を Braze に渡します。
+```swift
+@IBAction func primaryButtonTapped(_ sender: Any) {
+  guard let item = selectedItem, !item.isEmpty, let attributeKey = inAppMessage.extras?[InAppMessageKey.attributeKey.rawValue] as? String else { return }
      
   AppboyManager.shared.setCustomAttributeWithKey(attributeKey, andStringValue: item)
 }
 ```
 {% endtab %}
-{% tab Objective-C %}
-**Assign custom attribute**<br>
-Using the subclass, after a user presses submit, pass the attribute with its corresponding selected value to Braze.
+{% tab 目的C %}
+**カスタム属性を割り当てる**<br>
+サブクラスを使用して、ユーザーが \[送信] を押した後に、属性とそれに対応する選択した値を Braze に渡します。
 ```objc
-\- (IBAction)primaryButtonTapped:(id)sender {
-  InAppMessageData \*inAppMessageData = [[InAppMessageData alloc] init];
-  NSString \*key = [inAppMessageData rawValueForInAppMessageKey:InAppMessageKeyAttributeKey];
+- (IBAction)primaryButtonTapped:(id)sender {
+  InAppMessageData *inAppMessageData = [[InAppMessageData alloc] init];
+  NSString *key = [inAppMessageData rawValueForInAppMessageKey:InAppMessageKeyAttributeKey];
    
   if (self.selectedItem.length > 0 && [self.inAppMessage.extras objectForKey:key]) {
-[[AppboyManager shared] setCustomAttributeWithKey:self.inAppMessage.extras[key] andStringValue:self.selectedItem];
+    [[AppboyManager shared] setCustomAttributeWithKey:self.inAppMessage.extras[key] andStringValue:self.selectedItem];
+  }
 }
-    }
-  \`\`\`
+```
 {% endtab %}
 {% endtabs %}
 
@@ -355,22 +355,22 @@ Using the subclass, after a user presses submit, pass the attribute with its cor
 
 ### カスタムフルアプリ内メッセージ
 
-![各オプションの横にトグルが付いた設定オプションのリストを表示するアプリ内メッセージ。メッセージの一番下には、大きな青い送信ボタンがあります。][6]{: style="float:right;max-width:23%;margin-left:15px;border:0;"}
+![各オプションの横にトグルがある設定オプションの一覧を表示するアプリ内メッセージ。メッセージの下部には、大きな青色の送信ボタンがあります。][6]{: style="float:right;max-width:23%;margin-left:15px;border:0;"}
 
 カスタムのフルアプリ内メッセージを使用して、インタラクティブで使いやすいプロンプトを作成し、貴重な顧客データを収集します。右の例は、通知設定を備えたインタラクティブなプッシュプライマーとして再構成されたカスタムフルアプリ内メッセージの実装を示しています。 
 
 開始するには、[`FullListViewController`](https://github.com/braze-inc/braze-growth-shares-ios-demo-app/blob/master/Braze-Demo/ViewController/In-App-Messages/FullListViewController/FullListViewController.swift) にアクセスしてください。
 
-#### ダッシュボード構成
+#### ダッシュボードの構成
 
 ダッシュボードでカスタムアプリ内メッセージ全体を設定するには、コンマ区切り文字列形式のタグのリストを指定する必要があります。 
 
 キーと値のペアに、`attribute_key` を入力します。このキーは、ユーザーが選択した値とともに、カスタム属性としてユーザープロファイルに保存されます。カスタムビューロジックは、Braze に送信されたユーザー属性を処理する必要があります。
 
-![メッセージ作成画面に3つのキーと値のペアが見つかりました。最初のキーと値のペア「attribute\_key」は「プッシュタグ」として設定され、2番目の「subtitle\_text」は「通知を有効にすると...」、として設定され、3番目の「view\_type」は「テーブルリスト」として設定されます。][7]{: style="max-width:65%;"}
+![メッセージ作成画面で見つかった3 つのキーと値のペア。最初のキーと値のペア&クォート; 属性_key" は" Push Tags" 2 番目の" subtitle_text" は" 有効化通知も。。" 3 番目の" view_type" は" table_list"][7]{: style="max-width:65%;"}
 
 #### アプリ内メッセージタッチのインターセプト
-![設定とトグルの行を表示する Apple デバイス。カスタムビューはボタンを処理し、ボタンコントロールの外側でのタッチはアプリ内メッセージによって処理され、閉じられます。][1]{: style="float:right;max-width:30%;margin-left:10px;border:0"}
+![設定の列を表示し、切り替えるアップル社の装置。カスタムビューはボタンを処理し、ボタンコントロールの外側のタッチはアプリ内メッセージによって処理され、削除されます。][1]{: style="float:right;max-width:30%;margin-left:10px;border:0"}
 カスタムフルアプリ内メッセージボタンを正しく機能させるには、アプリ内メッセージのタッチをインターセプトすることが重要です。デフォルトでは、`ABKInAppMessageImmersive` はメッセージにタップジェスチャ認識機能を追加するので、ユーザーはボタンなしでメッセージを閉じることができます。`UISwitch` またはボタンを `UITableViewCell` ビュー階層に追加すると、タッチはカスタムビューによって処理されるようになります。iOS 6 以降、ジェスチャー認識機能を使用する場合はボタンやその他のコントロールが優先され、カスタムのフルアプリ内メッセージが正常に機能するようになりました。 
 
 [1]: {% image_buster /assets/img/iam_implementation_guide.png %}

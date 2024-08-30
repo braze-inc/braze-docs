@@ -1,5 +1,5 @@
 ---
-nav_title: SDK の初期設定
+nav_title: SDK の初期セットアップ
 article_title: MacOS 用の SDK の初期設定
 platform: MacOS
 page_order: 0
@@ -11,7 +11,7 @@ noindex: true
 
 {% multi_lang_include deprecations/objective-c.md %}
 
-# SDK の初期設定
+# SDK の初期セットアップ
 
 > この参照記事では、MacOS 用の Braze SDKのインストール方法について説明します。 
 

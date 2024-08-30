@@ -14,21 +14,21 @@ guide_featured_list:
 - name: CocoaPods
   link: /docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/installation_methods/cocoapods/
   image: /assets/img/cocoapods.png
-- name: Swift Package Manager (SPM)
+- name: スイフトパッケージマネージャ (SPM)
   link: /docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/installation_methods/swift_package_manager/
-  image: /assets/img/swift.png
+  image: /assets/img/braze_icons/swift.svg
 - name: Carthage
   link: /docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/installation_methods/carthage_integration/
-  image: /assets/img/carthage.jpeg
-- name: Manual
+  image: /assets/img/carthage.png
+- name: マニュアル
   link: /docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/installation_methods/manual_integration_options/
-  fa_icon: fas fa-toolbox
-- name: "Completing the Integration"
+  image: /assets/img/braze_icons/tool-01.svg
+- name: "統合の完了"
   link: /docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/completing_integration/
-  fa_icon: fas fa-flag-checkered
-- name: "Other Optional SDK Customizations"
+  image: /assets/img/braze_icons/flag-05.svg
+- name: "その他のオプションSDKカスタマイズ"
   link: /docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/other_sdk_customizations/
-  fa_icon: fas fa-id-card-alt
+  image: /assets/img/braze_icons/user-square.svg
 
 noindex: true
 ---

@@ -15,7 +15,7 @@ page_order: 1
 次の設定をプロジェクトの `config.xml` ファイルの `platform` 要素に追加できます。
 
 {% tabs %}
-{% tab ios %}
+{% tab イオス %}
 | メソッド                                         | 説明                                                                                                                                            |
 | -----------------------------------------------| -------------------------------------------------------------------------------------------------------------------------------------------------------|
 | `api_key`                                      | アプリケーションの API キーを設定します。 |
@@ -34,7 +34,7 @@ page_order: 1
 | `ios_forward_universal_links`| SDK がユニバーサルリンクを自動的に認識してシステムメソッドに転送するかどうかを設定します。 |
 | `ios_log_level`| `Braze.Configuration.Logger` の最小ログレベルを設定します。 |
 | `ios_use_uuid_as_device_id`| ランダムに生成された UUID をデバイス ID として使用するかどうかを設定します。 |
-| `ios_flush_interval_seconds`| 自動データフラッシュの間隔を秒単位で設定します。デフォルトは 10 秒です。 |
+| `ios_flush_interval_seconds`| 自動データフラッシュの間隔を秒単位で設定します。デフォルトは 10 です。 |
 | `ios_use_automatic_request_policy`| `Braze.Configuration.Api` のリクエストポリシーを自動にするか手動にするかを設定します。 |
 | `should_opt_in_when_push_authorized`| プッシュ権限が承認されたときに、ユーザーの通知サブスクリプション状態を自動的に `optedIn` に設定するかどうかを設定します。 |
 
@@ -43,7 +43,7 @@ page_order: 1
 {% endalert %}
 {% endtab %}
 
-{% tab android %}
+{% tab Android %}
 | メソッド                                         | 説明                                                                                                                                            |
 | -----------------------------------------------| -------------------------------------------------------------------------------------------------------------------------------------------------------|
 | `api_key`                                      | アプリケーションの API キーを設定します。 |
@@ -51,7 +51,7 @@ page_order: 1
 | `android_small_notification_icon`              | 通知の小さいアイコンを設定します。 |
 | `android_large_notification_icon`              | 通知の大きいアイコンを設定します。 |
 | `android_notification_accent_color`            | 通知のアクセントカラーを 16 進数で設定します。 |
-| `android_default_session_timeout`              | アプリケーションの Braze セッションタイムアウトを秒単位で設定します。デフォルトは 10 秒です。 |
+| `android_default_session_timeout`              | アプリケーションの Braze セッションタイムアウトを秒単位で設定します。デフォルトは 10 です。 |
 | `android_handle_push_deep_links_automatically` | Braze SDK がプッシュディープリンクを自動的に処理するかどうかを設定します。 |
 | `android_log_level`                            | アプリケーションのログレベルを設定します。デフォルトのログレベルは 4 で、最小限の情報をロギングします。デバッグのために詳細ロギングを有効にするには、ログレベル 2 を使用します。|
 | `firebase_cloud_messaging_registration_enabled`| プッシュ通知に Firebase Cloud Messaging を使用するかどうかを設定します。 |
@@ -82,7 +82,7 @@ page_order: 1
 以下は、追加構成を含む `config.xml` ファイルの例です。
 
 {% tabs %}
-{% tab ios %}
+{% tab イオス %}
 ```xml
 <platform name="ios">
     <preference name="com.braze.ios_disable_automatic_push_registration" value="NO"/"YES" />
@@ -106,7 +106,7 @@ page_order: 1
 ```
 {% endtab %}
 
-{% tab android %}
+{% tab Android %}
 ```xml
 <platform name="android">
     <preference name="com.braze.android_small_notification_icon" value="RESOURCE_ENTRY_NAME_FOR_ICON_DRAWABLE" />
@@ -143,7 +143,7 @@ page_order: 1
 ### 整数
 
 {% tabs %}
-{% tab ios %}
+{% tab イオス %}
 整数の設定は、次の例のように文字列表現として読み取られます。
 
 ```xml
@@ -154,7 +154,7 @@ page_order: 1
 ```
 {% endtab %}
 
-{% tab android %}
+{% tab Android %}
 Cordova 8.0.0 以降のフレームワークによる設定の処理方法に従って、整数のみの設定 (送信者 ID など) は、次の例のように先頭に `str_` が付加された文字列に設定する必要があります。
 
 ```xml
@@ -169,7 +169,7 @@ Cordova 8.0.0 以降のフレームワークによる設定の処理方法に従
 ### ブール値
 
 {% tabs %}
-{% tab ios %}
+{% tab イオス %}
 ブール値の設定は、次の例のように、`YES` および `NO` キーワードを文字列表現として使用して SDK によって読み取られます。
 
 ```xml
@@ -180,7 +180,7 @@ Cordova 8.0.0 以降のフレームワークによる設定の処理方法に従
 ```
 {% endtab %}
 
-{% tab android %}
+{% tab Android %}
 ブール値の設定は、次の例のように、`true` および `false` キーワードを文字列表現として使用して SDK によって読み取られます。
 
 ```xml

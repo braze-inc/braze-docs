@@ -31,14 +31,14 @@ Braze では、ユーザーに対し、以下のプロトコルを使用して�
 データは、次の方法を使用して、いつでも手動で Braze サーバーにフラッシュできます。
 
 {% tabs %}
-{% tab OBJECTIVE-C %}
+{% tab 目標-C %}
 
 ```objc
 [[Appboy sharedInstance] flushDataAndProcessRequestQueue];
 ```
 
 {% endtab %}
-{% tab swift %}
+{% tab 速い %}
 
 ```swift
 Appboy.sharedInstance()?.flushDataAndProcessRequestQueue()
@@ -58,14 +58,14 @@ Appboy.sharedInstance()?.flushDataAndProcessRequestQueue()
 データは、次の方法を使用して、いつでも手動で Braze サーバーにフラッシュできます。
 
 {% tabs %}
-{% tab OBJECTIVE-C %}
+{% tab 目標-C %}
 
 ```objc
 [[Appboy sharedInstance] flushDataAndProcessRequestQueue];
 ```
 
 {% endtab %}
-{% tab swift %}
+{% tab 速い %}
 
 ```swift
 Appboy.sharedInstance()?.flushDataAndProcessRequestQueue()
@@ -81,7 +81,7 @@ Appboy.sharedInstance()?.flushDataAndProcessRequestQueue()
 これらのポリシーは、アプリの起動時に [`startWithApiKey:inApplication:withLaunchOptions:withAppboyOptions`][3] メソッドから設定できます。`appboyOptions` ディクショナリで、次のコードスニペットに示すように `ABKRequestProcessingPolicyOptionKey` を設定します。
 
 {% tabs %}
-{% tab OBJECTIVE-C %}
+{% tab 目標-C %}
 
 ```objc
 NSDictionary *appboyOptions = @{
@@ -91,7 +91,7 @@ NSDictionary *appboyOptions = @{
 ```
 
 {% endtab %}
-{% tab swift %}
+{% tab 速い %}
 
 ```swift
 let appboyOptions: [AnyHashable: Any] = [
@@ -108,7 +108,7 @@ let appboyOptions: [AnyHashable: Any] = [
 リクエスト処理ポリシーは、`requestProcessingPolicy` プロパティを `Appboy` で使用することで実行時に設定することもできます。
 
 {% tabs %}
-{% tab OBJECTIVE-C %}
+{% tab 目標-C %}
 
 ```objc
 // Sets the request processing policy to automatic (the default value)
@@ -116,7 +116,7 @@ let appboyOptions: [AnyHashable: Any] = [
 ```
 
 {% endtab %}
-{% tab swift %}
+{% tab 速い %}
 
 ```swift
 // Sets the request processing policy to automatic (the default value)
@@ -131,14 +131,14 @@ Appboy.sharedInstance()?.requestProcessingPolicy = ABKRequestProcessingPolicy.au
 「実行中」のサーバー通信を停止する必要がある場合は、次のメソッドを呼び出す必要があります。
 
 {% tabs %}
-{% tab OBJECTIVE-C %}
+{% tab 目標-C %}
 
 ```objc
 [[Appboy sharedInstance] shutdownServerCommunication];
 ```
 
 {% endtab %}
-{% tab swift %}
+{% tab 速い %}
 
 ```swift
 Appboy.sharedInstance()?.shutdownServerCommunication();

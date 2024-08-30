@@ -12,10 +12,10 @@ noindex: true
 
 {% multi_lang_include deprecations/objective-c.md %}
 
-# ニュースフィードのカテゴリーを定義する
+# ニュースフィードカテゴリの定義
 
 {% alert note %}
-ニュースフィードは非推奨になります。Braze では、ニュースフィードツールを使用しているお客様に、より柔軟でカスタマイズ可能で信頼性の高いコンテンツカードメッセージングチャネルに移行することをお勧めします。詳細については、[移行ガイド]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/)をご覧ください。
+ニュースフィードは非推奨になります。Braze では、News Feed ツールを使用するお客様は、コンテンツカードメッセージングチャネルに移動することを推奨しています。これは、より柔軟でカスタマイズ可能で、信頼性が高いチャネルです。詳しくは[マイグレーションガイド]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/)をご覧ください。
 {% endalert %}
 
 Braze ニュースフィードのインスタンスは、特定のカテゴリーからのカードのみを受信するように構成できます。これにより、1 つのアプリケーション内で複数のニュースフィードストリームを効果的に統合することができます。この機能の詳細については、ニュースフィードの[ベストプラクティス][40]をご覧ください。
@@ -35,7 +35,7 @@ Braze ニュースフィードのインスタンスは、特定のカテゴリ�
 ```
 
 {% endtab %}
-{% tab swift %}
+{% tab SWIFT %}
 
 ```swift
 newsFeed.categories = ABKCardCategory.all
@@ -50,7 +50,7 @@ newsFeed.categories = ABKCardCategory.noCategory
 {% endtabs %}
 
 
-次の例のように、カテゴリーの組み合わせをフィードに取り込むこともできます。
+次の例のように、カテゴリの組み合わせをフィードに取り込むこともできます。
 
 {% tabs %}
 {% tab OBJECTIVE-C %}
@@ -60,7 +60,7 @@ newsFeed.categories = ABKCardCategory.noCategory
 ```
 
 {% endtab %}
-{% tab swift %}
+{% tab SWIFT %}
 
 ```swift
 newsFeed.categories = ABKCardCategory([.announcements, .advertising])

@@ -17,7 +17,7 @@ search_rank: 4
 Android 12 で最適なパフォーマンスを得るには、できるだけ早く [Braze Android SDK v13.1.2 以降](https://github.com/braze-inc/braze-android-sdk/blob/master/CHANGELOG.md#1312)にアップグレードすることをお勧めします。詳細については、[Android 12 アップグレード ガイド]({{site.baseurl}}/android_12/)を参照してください。
 {% endalert %}
 
-## ステップ 1:Braze ライブラリーを統合する
+## ステップ1:Braze ライブラリーを統合する
 
 Braze Android SDK は、オプションで UI コンポーネントなしで統合できます。ただし、独自のデザインのみの UI にカスタムデータを渡さない限り、コンテンツカードとアプリ内メッセージングは​​操作できなくなります。さらに、プッシュ処理コードが UI ライブラリーにあるため、プッシュ通知は機能しません。これらの UI 要素は完全にカスタマイズ可能であることに注意してください。これらの機能を統合することを強くお勧めします。各チャネルまたはツールを使用する利点のリストについては、[コンテンツカード]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/about/#advantages-of-using-content-cards)と[アプリ内メッセージ]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/about/)に関するドキュメントを参照してください。
 
@@ -42,17 +42,17 @@ dependencies {
 }
 ```
 
-次の例は、依存関係行を配置する `build.gradle` 内の場所を示しています。なお、例で使用しているバージョンは古いバージョンです。Braze Android SDK の最新バージョンについては、[Braze Android SDK リリース][60]にアクセスしてください。
+次の例は、依存関係行を配置する `build.gradle` 内の場所を示しています。なお、例で使用しているバージョンは古いバージョンです。最新バージョンのBraze Android SDKについては、\[Braze Android SDKリリース][60]をご覧ください。
 
-![「build.gradle」を表示している Android Studio。このスクリーンショットでは、依存関係コードがファイルの最後に追加されています。][32]
+![Android Studioが「build.gradle」を表示しています。このスクリーンショットでは、依存関係のコードがファイルの下部に追加されています。][32]
 
 #### Gradle 同期を実行する
 
 Gradle 同期を実行してプロジェクトをビルドし、[依存関係の追加](#add-braze-dependency)を組み込んでください。
 
-![アプリケーションの上部に「前回のプロジェクトの同期以降、Gradle ファイルが変更されました。」というバナーとボタンが表示された Android Studio。IDE が適切に動作するためにプロジェクトの同期が必要となる場合があります。今すぐ同期する"][38]
+![Android Studioがアプリケーションの上部にバナーとボタンを表示して、「Gradleファイルが最後のプロジェクト同期以降に変更されました」と表示しています。IDE が適切に動作するためにプロジェクトの同期が必要となる場合があります。今すぐ同期。][38]
 
-## ステップ 2:braze.xml で Braze SDK を設定する
+## ステップ2:braze.xmlでBraze SDKを構成する
 
 {% alert note %}
 2019 年 12 月をもって、カスタムエンドポイントは提供されなくなりました。既存のカスタムエンドポイントがある場合は、それを引き続き使用できます。詳細については、<a href="{{site.baseurl}}/api/basics/#endpoints">利用可能なエンドポイントのリスト</a>を参照してください。
@@ -60,9 +60,9 @@ Gradle 同期を実行してプロジェクトをビルドし、[依存関係の
 
 ライブラリーが統合されたので、次に `braze.xml` ファイルをプロジェクトの `res/values` フォルダーに作成する必要があります。特定のデータクラスターを使用している場合、または既存のカスタムエンドポイントがある場合は、`braze.xml` ファイルでもエンドポイントを指定する必要があります。 
 
-ファイルの内容は、次のコードスニペットのようになります。Braze ダッシュボードの [**設定の管理**] ページにある識別子で `YOUR_APP_IDENTIFIER_API_KEY` を置き換えてください。[クラスターアドレス][1]を確認するには、[dashboard.braze.com](https://dashboard.braze.com) にログインします。 
+ファイルの内容は、次のコードスニペットのようになります。Braze ダッシュボードの \[**設定の管理**] ページにある識別子で `YOUR_APP_IDENTIFIER_API_KEY` を置き換えてください。[dashboard.braze.com](https://dashboard.braze.com)にログインして、[クラスターアドレス][1]を見つけてください。 
 
-\`\`\`xml
+```xml
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 <string name="com_braze_api_key">YOUR_APP_IDENTIFIER_API_KEY</string>
@@ -70,7 +70,7 @@ Gradle 同期を実行してプロジェクトをビルドし、[依存関係の
 </resources>
 ```
 
-## ステップ 3:必要な権限を AndroidManifest.xml に追加する
+## ステップ3:AndroidManifest.xmlに必要な権限を追加する
 API キーを追加したので、次の権限を `AndroidManifest.xml` に追加する必要があります。
 
 ```xml
@@ -79,18 +79,18 @@ API キーを追加したので、次の権限を `AndroidManifest.xml` に追�
 ```
 
 {% alert note %}
-Android M のリリースにより、Android はインストール時権限モデルから実行時権限モデルに切り替わりました。ただし、これらの権限はどちらも通常の権限であり、アプリのマニフェストにリストされている場合は自動的に付与されます。詳細については、Android の[権限に関するドキュメント][46]を参照してください。
+Android M のリリースにより、Android はインストール時権限モデルからランタイム権限モデルに切り替わりました。ただし、これらの権限はどちらも通常の権限であり、アプリのマニフェストにリストされている場合は自動的に付与されます。詳細については、Android の \[権限ドキュメント][46] をご覧ください。
 {% endalert %}
 
-## ステップ 4:Android でユーザーセッションを追跡する
+## ステップ4: Android でユーザーセッションを追跡する
 
 ### アクティビティライフサイクルコールバックの統合
 
-`openSession()`、`closeSession()`、[\`ensureSubscribedToInAppMessageEvents()\`][64]、および `InAppMessageManager` 登録への呼び出しは、オプションで自動的に処理されます。
+`openSession()`、`closeSession()`、\[`ensureSubscribedToInAppMessageEvents()`][64]、および`InAppMessageManager`登録への呼び出しは、オプションで自動的に処理されます。
 
 #### アクティビティライフサイクルコールバックを登録する
 
-`Application` クラスの `onCreate()` メソッドに次のコードを追加します。
+ クラスの  メソッドに次のコードを追加します。
 
 {% tabs %}
 {% tab JAVA %}
@@ -120,9 +120,9 @@ class MyApplication : Application() {
 {% endtab %}
 {% endtabs %}
 
-[\`BrazeActivityLifecycleCallbackListener\`][63] で使用できるパラメーターの詳細については、SDK リファレンスドキュメントを参照してください。
+パラメータに関する詳細は、SDKリファレンスドキュメントをご覧ください \[`BrazeActivityLifecycleCallbackListener`][63]。
 
-## ステップ 5:位置情報の追跡を有効にする
+## ステップ5:位置情報の追跡を有効にする
 
 Braze の位置情報収集機能を有効にする場合は、`com_braze_enable_location_collection` を含むように `braze.xml` ファイルを更新し、その値が `true` に設定されていることを確認します。
 
@@ -134,7 +134,7 @@ Braze の位置情報収集機能を有効にする場合は、`com_braze_enable
 Braze Android SDK バージョン3.6.0 以降、Braze の位置情報収集機能はデフォルトで無効になっています。
 {% endalert %}
 
-## SDK 統合の完了
+## SDK の統合が完了
 
 Braze は[アプリケーションから指定されたデータ]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/)を収集できるようになり、基本的な統合が完了しました。
 

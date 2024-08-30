@@ -1,12 +1,12 @@
 ---
 nav_title: 購入のロギング
-article_title: Unityの購入履歴
+article_title: Unityの購買の記録
 platform: 
   - Unity
   - iOS
   - Android
 page_order: 3
-description: "この参考記事では、Unityプラットフォームでの購入履歴の記録方法について説明します。"
+description: "このリファレンス記事では、Unity プラットフォーム での購買の記録方法について説明します。"
 
 ---
  
@@ -14,36 +14,36 @@ description: "この参考記事では、Unityプラットフォームでの購�
 
 > アプリ内での購入を記録して、売上を経時的にトラッキングしたり、売上源を横断してトラッキングしたりできます。また、ユーザーを生涯価値でセグメント化することもできます。
 
-Braze は複数の通貨での購入に対応しています。米ドル以外の通貨でレポートする購入は、レポートされた日付の為替レートに基づいて米ドル単位でダッシュボードに表示されます。
+Braze は複数の通貨での購入に対応しています。ドル以外の通貨でレポートする購入は、レポートされた日付の為替レートに基づいてドルでダッシュボードに表示されます。
 
-実装前に、[ベストプラクティス][5]記事のカスタムイベント、カスタム属性、および購入イベントで提供されるセグメンテーションオプションの例を確認してください。
+実施にあたっては、まずカスタムイベントs、カスタム属性s、購買イベントが提供するセグメンテーション選択肢の事例を[ベストプラクティス][5]で検討すること。
 
-この機能を使用するには、アプリで購入が成功した後に以下のメソッド呼び出しを追加します：
+この機能を使用するには、アプリで正常に購入した後に次のメソッド呼び出しを追加します。
 
 ```csharp
 AppboyBinding.LogPurchase("product_id", "currencyCode", price(decimal));
 ```
 
-この方法では、数量1の購入が記録される。別の数量を渡したい場合は、以下のメソッドを呼び出すことができる：
+このメソッドは、数量が1 の購入を記録します。別の数量を渡す場合は、以下のメソッドを呼び出すことができます。
 
 ```csharp
 AppboyBinding.LogPurchase("product_id", "currencyCode", price(decimal), quantity(int));
 ```
 
-数量は100以下でなければならない。Brazeは、`Dictionary` の購入プロパティを渡すことで、購入に関するメタデータを追加することもサポートしています：
+数量は100 以下である必要があります。Braze では、購入プロパティーの`Dictionary` を渡すことで、購入に関するメタデータの追加もサポートしています。
 
 ```csharp
 AppboyBinding.LogPurchase("product_id", "currencyCode", price(decimal), quantity(int), properties(Dictionary<string, object>));
 ```
 
-## 注文レベルで購入を記録する
+## 注文レベルでの購入記録
 商品レベルではなく、注文レベルで購入を記録したい場合、注文名または注文カテゴリを `product_id` として使用できます。詳細については、[購入オブジェクトの仕様]({{site.baseurl}}/api/objects_filters/purchase_object/#product-id-naming-conventions)を参照してください。 
 
-## 通貨コード
+## 為替コードs
 
-以下のコードがサポートされている通貨記号です。これ以外の通貨コードを指定すると警告が記録され、SDK でその他のアクションは実行されません。
+以下のコードs は、サポートされている通貨記号です。これ以外の通貨コードを指定すると警告が記録され、SDK でその他のアクションは実行されません。
 
-- USD、AED、AFN、ALL、AMD、ANG、AOA、ARS、AUD、AWG、AZN、BAM、BBD、BDT、BGN、BHD、BIF、BMD、BND、BOB、BRL、BSD、btc, btn, bwp, byr, bzd, cad, cdf, chf, clf, clp, cny, cop, crc, cuc, cup, cve, czk, djf, dkk, dop, dzd、eek, egp, ern, etb, eur, fjd, fkp, gbp, gel, ggp, ghs, gip, gmd, gnf, gtq, gyd, hkd, hnl, hrk, htg, huf, idr、ils、imp、inr、iqd、irr、isk、jep、jmd、jod、jpy、kes、kgs、khr、kmf、kpw、krw、kwd、kyd、kzt、lak、lbp、lkr, lrd, lsl, ltl, lvl, lyd, mad, mdl, mga, mkd, mmk, mnt, mop, mro, mtl, mur, mvr, mwk, mxn, myr, mzn, nad、ngn, nio, nok, npr, nzd, omr, pab, pen, pgk, php, pkr, pln, pyg, qar, ron, rsd, rub, rwf, sar, sbd, scr、sdg, sek, sgd, shp, sll, sos, srd, std, svc, syp, szl, thb, tjs, tmt, tnd, top, try, ttd, twd, tzs, uah、UGX、UYU、UZS、VEF、VND、VUV、WST、XAF、XAG、XAU、XCD、XDR、XOF、XPD、XPF、XPT、YER、ZAR、ZMK、ZMW、ZWL。
+- USD、AED、ALL、AMD、ANG、AOA、ARS、AWG、AZN、BAM BD、BND、BD、BD、BND、BD、BD、BT、BD、BT、BD、BT、BZD、CY、CYP、CYP、CUP、CYP、CUP、CUP、CYP、GBP、GGP、GGS、GNF、GNF、GYD、HRK、HUF、IDR、IMP、IQD、IRR、ISK、JEP、JOD、JPOD、KGS、KHR、KMF、KPW、KYD、KZD LBP、LBP、LK、LBP、LK、LBP、LYL、LBP、LK、LK、LB、LK、MK、MNT、MWR、MWN、MZN、NGN、NIO、NOK、NPR、PAB、PEN、PHP、PKR、PKR、PLN、QAR、RUB、RWF、RWF、SBD、SCR、SGD、SL、SRD、SVC、SYP、SZL、TJS、TT、TND、TRY、TWD、TZS、UYU、UZS、VEF、VND UV、WST、XAG、XAU、XCD、XDR、XOF、XPF、XPT、YER、ZMK、ZWL。
 
 ## サンプルコード
 
