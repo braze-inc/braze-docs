@@ -27,7 +27,7 @@ SDK では、以下のセッションセマンティクスに基づいて、Braz
 [`init(configuration)`][session_tracking_1] に渡された `configuration` オブジェクトで、`sessionTimeout` を希望する整数値に設定できます。
 
 {% tabs %}
-{% tab swift %}
+{% tab 速い %}
 
 ```swift
 // Sets the session timeout to 60 seconds
@@ -40,7 +40,7 @@ let braze = Braze(configuration: configuration)
 AppDelegate.braze = braze
 ```
 {% endtab %}
-{% tab objective-c %}
+{% tab オブジェクティブシー %}
 
 ```objc
 // Sets the session timeout to 60 seconds
@@ -58,21 +58,23 @@ AppDelegate.braze = braze;
 セッションタイムアウトを設定した場合、セッションセマンティクスの長さはすべてそのカスタマイズされたタイムアウトになります。
 
 {% alert note %}
-`sessionTimeout` の最小値は1秒です。デフォルト値は10秒です。
+`sessionTimeout` の最小値は 1 秒です。デフォルト値は 10 秒です。
 {% endalert %}
 
-## セッショントラッキングのテスト
+## セッショントラッキングをテストする
 
-ユーザーを介してセッションを検出するには、ダッシュボードでユーザーを見つけ、ユーザープロファイルの [**アプリの利用状況**] に移動します。「セッション」指標が想定どおりに増加していることを確認することで、セッショントラッキングが機能していることを確認できます。
+ユーザー経由でセッションを検出するには、ダッシュボードでユーザーを見つけ、ユーザープロファイルの「**セッションの概要**」に移動する。「セッション」指標が想定どおりに増加していることを確認することで、セッショントラッキングが機能していることを確認できます。アプリ固有の詳細は、ユーザーが複数のアプリを使用した後に表示される。
 
-![セッション数、最終使用日、初回使用日が表示されるユーザープロファイルのアプリの利用状況セクション。][session\_tracking\_7]
+![]\[session_tracking_7] セッション数、最終使用日、初使用日を示すユーザープロファイルのセッション概要セクション。]{: style="max-width:40%;"}
+
+アプリ別の詳細は、ユーザーが複数のアプリを使用している場合にのみ表示される。
 
 ## セッション更新の購読
 
-セッションの更新をリッスンするには。[`subscribeToSessionUpdates(_:)`][1] メソッドを使用します。
+セッションの更新をリッスンするには [`subscribeToSessionUpdates(_:)`][1]メソッドを使う。セッション開始と終了のイベントは、アプリがフォアグラウンドで実行されているときのみ記録される。セッション終了イベントにコールバックを登録し、アプリがバックグラウンドになった場合、アプリが再びフォアグラウンドになったときにコールバックが起動する。ただし、セッションの継続時間は、アプリを開くかフォアグラウンドにしてから、アプリを閉じるかバックグラウンドにするまでの時間として測定される。
 
 {% tabs %}
-{% tab swift %}
+{% tab 速い %}
 ```swift
 // This subscription is maintained through a Braze cancellable, which will observe changes until the subscription is cancelled.
 // You must keep a strong reference to the cancellable to keep the subscription active.
@@ -88,7 +90,7 @@ let cancellable = AppDelegate.braze?.subscribeToSessionUpdates { event in
 ```
 {% endtab %}
 
-{% tab objective-c %}
+{% tab オブジェクティブシー %}
 ```objc
 // This subscription is maintained through a Braze cancellable, which will observe changes until the subscription is cancelled.
 // You must keep a strong reference to the cancellable to keep the subscription active.
@@ -128,5 +130,5 @@ for await event in braze.sessionUpdatesStream {
 [session_tracking_3]: https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/configuration-swift.class
 [session_tracking_5]: https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#initialize
 [session_tracking_6]: http://msdn.microsoft.com/en-us/library/windows/apps/hh464925.aspx
-[session\_tracking\_7]: {% image_buster /assets/img_archive/test_session.png %}
-[session\_tracking\_8]: {{ site.baseurl }}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/#step-4-tracking-user-sessions-in-android
+\[session_tracking_7] ： {% image_buster /assets/img_archive/test_session.png %}
+\[session_tracking_8] ： {{ site.baseurl }}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/#step-4-tracking-user-sessions-in-android
