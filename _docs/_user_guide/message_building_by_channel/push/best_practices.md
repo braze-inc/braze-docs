@@ -16,7 +16,7 @@ Your push messages must fall within the guidelines of the Apple App Store and Go
 
 ## Compose your push message
 
-As a general rule of thumb, Braze recommends keeping each line of text for both the optional title and message body to approximately 30-40 characters in a mobile push notification. Note that the character counter in the composer doesn't account for Liquid characters. This means the final character count of a message depends on how Liquid renders for each user. When in doubt, keep it short and sweet.
+As a best practice, Braze recommends keeping each line of text for both the optional title and message body to approximately 30-40 characters in a mobile push notification. Note that the character counter in the composer doesn't account for Liquid characters. This means the final character count of a message depends on how Liquid renders for each user. When in doubt, keep it short and sweet.
 
 ## Optimize targeting
 
