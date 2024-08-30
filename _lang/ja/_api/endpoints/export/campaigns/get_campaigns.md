@@ -1,41 +1,41 @@
 ---
-nav_title: "得る：キャンペーンリストのエクスポート"
-article_title: "得る：キャンペーンリストのエクスポート"
+nav_title: "取得:キャンペーンリストをエクスポートする"
+article_title: "取得:キャンペーンリストをエクスポートする"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "この記事では、キャンペーン リストのエクスポート Braze エンドポイントの詳細について説明します。"
+description: "この記事では、「キャンペーンリストのエクスポート」Braze エンドポイントの詳細について説明します。"
 
 ---
 {% api %}
-# キャンペーンリストをエクスポート
+# キャンペーンリストをエクスポートする
 {% apimethod get %}
 /campaigns/list
 {% endapimethod %}
 
-> このエンドポイントを使用してキャンペーンのリストをエクスポートします。各リストには、キャンペーンの名前、キャンペーン API 識別子、API キャンペーンであるかどうか、キャンペーンに関連付けられたタグが含まれます。 
+> このエンドポイントを使用して、それぞれに名前、キャンペーン API 識別子、それが API キャンペーンであるかどうか、キャンペーンに関連付けられたタグが含まれたキャンペーンのリストをエクスポートします。 
 
-キャンペーンは、作成日時順に並べられた 100 個のグループで返されます (デフォルトでは古いものから新しいものへ)。
+キャンペーンは、作成された時間（デフォルトでは古いものから新しいもの）順にソートされた100のグループで返される。
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#f3b0b3ef-04fb-4a31-8570-e6ad88dacb18 {% endapiref %}
 
 ## 前提条件
 
-このエンドポイント [を]({{site.baseurl}}/api/basics#rest-api-key/) 使用するには、 `campaigns.list` 許可。
+このエンドポイントを使用するには、`campaigns.list` 権限を持つ [API キー]({{site.baseurl}}/api/basics#rest-api-key/)が必要です。
 
 ## レート制限
 
 {% multi_lang_include rate_limits.md endpoint='default' %}
 
-## リクエストパラメータ
+## リクエストパラメーター
 
-| パラメータ | 必須 | データ型 | 説明 |
+| パラメーター | required | データ型 | 説明 |
 | --------- | -------- | --------- | ----------- |
-| `page`| オプション | 整数 | 返されるキャンペーンのページ。デフォルトは 0 (最大 100 の最初のセットを返します)。 |
-| `include_archived`| オプション | ブール値 | アーカイブされたキャンペーンを含めるかどうか。デフォルトは false です。 |
-| `sort_direction`| オプション | 文字列 | - 作成日時を新しいものから古いものの順に並べ替える: 値を渡す `desc`。<br> \- 作成時間を古いものから新しいものの順に並べ替える: 値を渡す `asc`。<br><br>もし `sort_direction` 含まれていない場合、デフォルトの順序は古いものから新しいものになります。 |
-| `last_edit.time[gt]`| オプション | 時間 | 結果をフィルタリングし、現在までに指定された時間より後に編集されたキャンペーンのみを返します。フォーマットは `yyyy-MM-DDTHH:mm:ss`。 |
+| `page` | オプション | 整数 | 返すキャンペーンのページ、デフォルトは0（最大100の最初のセットを返す）。 |
+| `include_archived` | オプション | ブール値 | アーカイブされたキャンペーンを含めるかどうか。デフォルトはfalse。 |
+| `sort_direction` | オプション | string | \- 作成時刻を新しいものから古いものへとソートする: 値 `desc` を渡す。<br> \- 作成時刻を古いものから新しいものへとソートする: 値 `asc` を渡す。<br><br>`sort_direction` が含まれていない場合、デフォルトの順序は古いものから新しいものとなる。 |
+| `last_edit.time[gt]` | オプション | 時刻 | 結果をフィルタリングし、現在までに指定された時間以上編集されたキャンペーンのみを返す。形式は `yyyy-MM-DDTHH:mm:ss` です。 |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ## リクエスト例
@@ -66,7 +66,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 ```
 
 {% alert tip %}
-CSV および API エクスポートに関するヘルプについては、[「エクスポートのトラブルシューティング」]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/)をご覧ください。
+CSV および API のエクスポートに関するヘルプについては、「[エクスポートのトラブルシューティング]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/)」を参照してください。
 {% endalert %}
 
 {% endapi %}
