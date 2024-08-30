@@ -10,12 +10,12 @@ page_order: 0
 
 ## SDK の統合
 
-### ステップ 1:SDK をプロジェクトに追加する
+### ステップ1:SDK をプロジェクトに追加する
 
 Cordova 6 以降では、GitHub から直接 SDK を追加できます。または、[GitHub リポジトリ](https://github.com/braze-inc/braze-cordova-sdk)の ZIP をダウンロードして、SDK を手動で追加することもできます。
 
 {% tabs local %}
-{% tab geofence disabled %}
+{% tab ジオフェンス disabled %}
 ロケーションコレクションとジオフェンスを使用する予定がない場合は、GitHub の `master` ブランチを使用してください。
 
 ```bash
@@ -23,7 +23,7 @@ cordova plugin add https://github.com/braze-inc/braze-cordova-sdk#master
 ```
 {% endtab %}
 
-{% tab geofence enabled %}
+{% tab ジオフェンス enabled %}
 位置情報の収集とジオフェンスの使用を計画している場合は、GitHub の を使用します `geofence-branch` 。
 
 ```bash
@@ -36,19 +36,19 @@ cordova plugin add https://github.com/braze-inc/braze-cordova-sdk#geofence-branc
 ステップ 1 を繰り返すことで、いつでも `master` と `geofence-branch` を切り替えることができます。
 {% endalert %}
 
-### ステップ 2:プロジェクトを構成する
+### ステップ2:プロジェクトを構成する
 
-次に、プロジェクトの`config.xml`ファイル内の要素に`platform`次の設定を追加します。
+次に、プロジェクトの `config.xml` ファイル内の `platform` 要素に次の環境設定を追加します。
 
 {% tabs %}
-{% tab ios %}
+{% tab イオス %}
 ```xml
 <preference name="com.braze.api_key" value="BRAZE_API_KEY" />
 <preference name="com.braze.ios_api_endpoint" value="CUSTOM_API_ENDPOINT" />
 ```
 {% endtab %}
 
-{% tab android %}
+{% tab Android %}
 ```xml
 <preference name="com.braze.api_key" value="BRAZE_API_KEY" />
 <preference name="com.braze.android_api_endpoint" value="CUSTOM_API_ENDPOINT" />
@@ -60,13 +60,13 @@ cordova plugin add https://github.com/braze-inc/braze-cordova-sdk#geofence-branc
 
 | 値                 | 説明                                                                                                                      |
 |-----------------------|----------------------------------------------------------------------------------------------------------------------------------|
-| `BRAZE_API_KEY`       | [Braze REST API キー]({{site.baseurl}}/user_guide/administrative/app_settings/api_settings_tab/#rest-api-keys)。              |
-| `CUSTOM_API_ENDPOINT` | カスタム API エンドポイント。このエンドポイントは、Braze インスタンスデータを Braze ダッシュボードの正しいアプリグループにルーティングするために使用されます。 |
+| `BRAZE_API_KEY`       | あなたの[Braze REST APIキー]({{site.baseurl}}/user_guide/administrative/app_settings/api_settings_tab/#rest-api-keys)。              |
+| `CUSTOM_API_ENDPOINT` | カスタムAPIエンドポイント。このエンドポイントは、Brazeダッシュボードの正しいアプリグループにBrazeインスタンスデータをルーティングするために使用されます。 |
 
 `config.xml` ファイルの `platform` 要素は次のようになります。
 
 {% tabs %}
-{% tab ios %}
+{% tab イオス %}
 ```xml
 <platform name="ios">
     <preference name="com.braze.api_key" value="BRAZE_API_KEY" />
@@ -75,7 +75,7 @@ cordova plugin add https://github.com/braze-inc/braze-cordova-sdk#geofence-branc
 ```
 {% endtab %}
 
-{% tab android %}
+{% tab Android %}
 ```xml
 <platform name="android">
     <preference name="com.braze.api_key" value="BRAZE_API_KEY" />
