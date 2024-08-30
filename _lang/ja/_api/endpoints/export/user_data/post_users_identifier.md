@@ -1,11 +1,11 @@
 ---
-nav_title: "ポスト:識別子によるユーザプロファイルのエクスポート"
-article_title: "ポスト:識別子によるユーザプロファイルのエクスポート"
+nav_title: "POST:識別子によるユーザプロファイルのエクスポート"
+article_title: "POST:識別子によるユーザプロファイルのエクスポート"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "この記事では、識別子Braze エンドポイントによるエクスポートユーザの詳細について説明します。"
+description: "この記事では、「識別子ごとにユーザーをエクスポート」Braze エンドポイントの詳細について説明します。"
 
 ---
 {% api %}
@@ -14,9 +14,9 @@ description: "この記事では、識別子Braze エンドポイントによる
 /users/export/ids
 {% endapimethod %}
 
-> このエンドポイントを使用して、ユーザー識別子を指定して、任意のユーザープロファイルからデータをエクスポートします。 
+> このエンドポイントを使用して、ユーザー識別子を指定して任意のユーザープロファイルからデータをエクスポートします。 
 
-1 つのリクエストには、最大 50 個の `external_ids` または `user_aliases` を含めることができます。`device_id` または`email_address` を指定する場合は、リクエストごとにどちらか一方の識別子を含めることができます。
+1 つのリクエストには、最大 50 個の `external_ids` または `user_aliases` を含めることができます。`device_id`、`email_address`、または `phone` を指定する場合は、リクエストごとにいずれか 1 つの識別子のみを含めることができます。
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#b9750447-9d94-4263-967f-f816f0c76577 {% endapiref %}
 
@@ -28,7 +28,7 @@ description: "この記事では、識別子Braze エンドポイントによる
 
 {% multi_lang_include rate_limits.md endpoint='users export ids' %}
 
-## リクエスト本文
+## Request body
 
 ```
 Content-Type: application/json
@@ -47,17 +47,17 @@ Authorization: Bearer YOUR-REST-API-KEY
 }
 ```
 
-## 要求パラメータ
+## リクエストパラメーター
 
-| パラメータ| 必須| データ型| 説明|
+| パラメータ | required | データ型 | 説明 |
 |-----|-----|-----|-----|
-|`external_ids` | オプション| 文字列の配列| エクスポートするユーザの外部識別子。|
-|`user_aliases` | オプション| ユーザーエイリアスオブジェクトの配列| [エクスポートするユーザーのユーザーエイリアス]({{site.baseurl}}/api/objects_filters/user_alias_object/)。|
-|`device_id` | オプション| 文字列| デバイス識別子。`getDeviceId` などのさまざまなSDK メソッドによって返されます。|
-|`braze_id` | オプション| 文字列| 特定のユーザのBraze識別子。|
-|`email_address` | オプション| 文字列| ユーザーのメールアドレス|
-|`phone` | オプション| [E.164](https://en.wikipedia.org/wiki/E.164) 形式| ユーザの電話番号|
-|`fields_to_export` | オプション| 文字列の配列| エクスポートするユーザデータフィールドの名前。指定されていない場合は、デフォルトでall になります。|
+|`external_ids` | オプション | 文字列の配列 | エクスポートするユーザーの外部識別子s。 |
+|`user_aliases` | オプション | ユーザー別名オブジェクトの配列 | エクスポートするユーザーの[ユーザーエイリアス]({{site.baseurl}}/api/objects_filters/user_alias_object/)。 |
+|`device_id` | オプション | string | `getDeviceId` などのさまざまな SDK メソッドによって返されるデバイス識別子。 |
+|`braze_id` | オプション | string | 特定のユーザーのBraze 識別子。 |
+|`email_address` | オプション | string | ユーザーのメールアドレス。 |
+|`phone` | オプション | [E.164](https://en.wikipedia.org/wiki/E.164)形式の文字列 | ユーザーの電話番号。 |
+|`fields_to_export` | オプション | 文字列の配列 | エクスポートするユーザーデータ フィールドの名前。指定されていない場合は、デフォルトでall になります。 |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ## リクエスト例
@@ -83,45 +83,45 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/export/ids' 
 
 ## エクスポートするフィールド
 
-以下は、有効な`fields_to_export`のリストです。返されるデータを最小限に抑えるために`fields_to_export` を使用すると、このAPI エンドポイントの応答時間を短縮できます。
+以下は、有効な`fields_to_export`のリストです。`fields_to_export` を使用して返されるデータを最小限に抑えると、このAPI エンドポイントのレスポンスタイムが向上します。
 
-| エクスポートするフィールド| データ型| 説明|
+| エクスポートするフィールド | データタイプ | 説明 |
 |---|---|---|
-| `apps` | Array | このユーザーがセッションをログに記録したアプリケーション。以下のフィールドが含まれます。<br><br>-`name`: アプリ名<br>- `platform`: iOS、Android、Web などのアプリプラットフォーム<br>- `version`:アプリのバージョン番号または名前 <br>- `sessions`: このアプリのセッションの合計数<br>- `first_used`:最初のセッションの日付<br>- `last_used`:最後のセッションの日付<br><br>すべてのフィールドは文字列です。|
-| `attributed_campaign` | String | [属性積分]({{site.baseurl}}/partners/message_orchestration/attribution)からのデータ(設定されている場合)。特定の広告キャンペーンのID。|
-| `attributed_source` | String | [属性積分]({{site.baseurl}}/partners/message_orchestration/attribution)からのデータ(設定されている場合)。広告が掲載されたプラットフォームの識別子。|
-| `attributed_adgroup` | String | [属性積分]({{site.baseurl}}/partners/message_orchestration/attribution)からのデータ(設定されている場合)。campaign の下のオプションのサブグループの識別子。|
-| `attributed_ad` | String | [属性積分]({{site.baseurl}}/partners/message_orchestration/attribution)からのデータ(設定されている場合)。campaign およびad group の下にあるオプションのサブグループのID。|
-| `braze_id` | String | このユーザに対してBraze によって設定されるデバイス固有の一意のユーザ識別子。|
-| `country` | String | [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) standard を使用するユーザーの国|
-| `created_at` | String | ユーザープロファイルが作成された日時(ISO 8601 形式)。|
-| `custom_attributes` | Object | このユーザーのカスタム属性キーと値のペア。|
-| `custom_events` | Array | 過去90 日間にこのユーザに起因するカスタムイベント。|
-| `devices` | Array | ユーザーのデバイスに関する情報。プラットフォームに応じて、次の情報が含まれます。<br><br>`model`デバイスのモデル名<br>`os`デバイスのオペレーティングシステム<br>`carrier`デバイスのサービスキャリア(利用可能な場合)<br>- `idfv`: (iOS) Brazeデバイス識別子、ベンダーのアップル識別子(存在する場合)<br>- `idfa`: (iOS) Advertising の識別子(存在する場合)<br>`device_id`(Android) Brazeデバイス識別子<br>`google_ad_id`(Android) Google Play Advertising Identifier(存在する場合)<br>`roku_ad_id`(六)六広告識別子<br>`ad_tracking_enabled`デバイスで広告追跡が有効になっている場合、true またはfalse | を指定できます。
-| `dob` | String | ユーザの生年月日`YYYY-MM-DD`.|
-| `email` | 文字列| ユーザーの電子メールアドレス|
-| `external_id` | 文字列| 識別されたユーザの一意のユーザ識別子。|
-| `first_name` | String | ユーザーのファーストネーム|
-| `gender` | String | ユーザーの性別。可能な値は次のとおりです。<br><br>-`M`: 男性<br>-`F`: 女性<br>-`O`: その他<br>-`N`: 該当なし<br>-`P`: 言いたくない<br>-`nil`: 不明 |
-| `home_city` | String | ユーザのホームシティ。|
-| `language` | String | ISO-639-1 規格のユーザー言語|
-| `last_coordinates` | 浮動小数点の配列| ユーザの最新のデバイスの場所。`[longitude, latitude]` としてフォーマットされます。|
-| `last_name` | String | ユーザの姓|
-| `phone` | 文字列| E.164 形式のユーザの電話番号|
-| `purchases` | Array | このユーザが過去90 日間に行った購入。|
-| `push_tokens` | Array | アプリの通知の送信先を指定する一意の匿名識別子。|
-| `random_bucket` | Integer | User's [乱数バケット番号]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/customer_behavior_events#random-bucket-number-event)、ランダムユーザの均一に分散されたセグメントを作成するために使用されます。|
-| `time_zone` | String | IANAタイムゾーンデータベースと同じ形式のユーザーのタイムゾーン。|
-| `total_revenue` | Float | このユーザに帰属する総収益。総収益は、ユーザーが受領したキャンペーンおよびキャンバスの変換ウィンドウで行った購入に基づいて計算されます。|
-| `uninstalled_at` | Timestamp | ユーザーがアプリをアンインストールする日時。アプリがアンインストールされていない場合は省略。|
-| `user_aliases` | Object | [`alias_name` および`alias_label` (存在する場合) を含むユーザーエイリアスオブジェクト]({{site.baseurl}}/api/objects_filters/user_alias_object#user-alias-object-specification)。|
+| `apps` | 配列 | このユーザーがセッションを記録したアプリケーション。これには次のフィールドが含まれます。<br><br>-`name`: アプリ名<br>- `platform`: アプリ プラットフォーム(iOS、Android、またはWeb など)<br>- `version`:アプリのバージョン番号または名前 <br>-`sessions`: このアプリの総セッション数<br>-`first_used`: 初回セッションの日付<br>-`last_used`: 最終セッションの日付<br><br>すべてのフィールドsはストリングです。 |
+| `attributed_campaign` | string | [アトリビューション積分]({{site.baseurl}}/partners/message_orchestration/attribution)からのデーター(設定されている場合)。特定の広告キャンペーンのID。 |
+| `attributed_source` | string | [アトリビューション積分]({{site.baseurl}}/partners/message_orchestration/attribution)からのデーター(設定されている場合)。広告が表示されたプラットフォームのID。 |
+| `attributed_adgroup` | string | [アトリビューション積分]({{site.baseurl}}/partners/message_orchestration/attribution)からのデーター(設定されている場合)。キャンペーン の下のオプションのサブグループのID。 |
+| `attributed_ad` | string | [アトリビューション積分]({{site.baseurl}}/partners/message_orchestration/attribution)からのデーター(設定されている場合)。キャンペーンと広告グループの下にある任意のサブグループの識別子。 |
+| `braze_id` | string | このユーザーにBrazeで設定されたデバイス固有の一意のユーザー 識別子。 |
+| `country` | string | [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) 標準を使用するユーザーの国。 |
+| `created_at` | string | ユーザープロファイルが作成された日時 (ISO 8601形式)。 |
+| `custom_attributes` | オブジェクト | このユーザーのカスタム属性キーと値のペア。 |
+| `custom_events` | 配列 | 過去 90 日間にこのユーザーに帰属するカスタム イベント。 |
+| `devices` | 配列 | ユーザーのデバイスに関する情報。プラットフォームに応じて、次の情報が含まれます。<br><br>- `model`:デバイスのモデル名<br>- `os`:装置のオペレーティングシステム<br>- `carrier`:デバイスのサービスキャリア (利用可能な場合)<br>- `idfv`: (iOS) Braze デバイス識別子、ベンダーの Apple 識別子 (存在する場合)<br>- `idfa`: (iOS) Advertising の識別子(存在する場合)<br>- `device_id`:(Android)Braze機器識別子<br>- `google_ad_id`:(Android)グーグルプレイ広告識別子(存在する場合)<br>- `roku_ad_id`:(Roku） Roku 広告識別子<br>- `ad_tracking_enabled`:デバイスで広告"トラッキングが有効になっている場合、真または偽になることがあります |
+| `dob` | string | `YYYY-MM-DD` 形式のユーザーの生年月日。 |
+| `email` | string | ユーザーのメールアドレス。 |
+| `external_id` | string | 識別されたユーザー固有のユーザー識別子。 |
+| `first_name` | string | ユーザーの名。 |
+| `gender` | string | ユーザーの性別。可能な値は次のとおりです。<br><br>-`M`: 男性<br>-`F`: 女性<br>-`O`: その他<br>-`N`: 該当なし<br>-`P`: 言いたくない<br>- `nil`:不明 |
+| `home_city` | string | ユーザーの所在地。 |
+| `language` | string | ISO-639-1 規格のユーザー言語。 |
+| `last_coordinates` | 浮動小数点の配列 | `[longitude, latitude]` としてフォーマットされたユーザーの最新のデバイスの場所。 |
+| `last_name` | string | ユーザの姓。 |
+| `phone` | string | E.164 形式のユーザーの電話番号。 |
+| `purchases` | 配列 | このユーザーは過去90日間に購入しました。 |
+| `push_tokens` | 配列 | アプリの通知の送信先を指定する一意の匿名識別子。 |
+| `random_bucket` | 整数 | ユーザーの[乱数バケット番号]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/customer_behavior_events#random-bucket-number-event)。乱数ユーザーsの一様分布Segmentsを作成するために使用されます。 |
+| `time_zone` | string | IANAタイムゾーンデータベースと同じ形式のユーザーのタイムゾーン。 |
+| `total_revenue` | フロート | このユーザーに帰属する総収益。総収益は、受領したキャンペーンおよびキャンバスのコンバージョン期間中に行われたユーザーの購入に基づいて計算されます。 |
+| `uninstalled_at` | タイムスタンプ | ユーザーがアプリをアンインストールした日時。アプリがアンインストールされていない場合は省略されます。 |
+| `user_aliases` | オブジェクト | [`alias_name` および`alias_label` を含むユーザーエイリアスオブジェクト]({{site.baseurl}}/api/objects_filters/user_alias_object#user-alias-object-specification) (存在する場合)。 |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
-`/users/export/ids` エンドポイントは、受信したすべてのキャンペーンやキャンバス、実行されたすべてのカスタムイベント、作成されたすべての購入、すべてのカスタム属性などのデータを含む、このユーザのユーザプロファイル全体をまとめることに注意してください。その結果、このエンドポイントは他のREST API エンドポイントよりも低速になります。
+`/users/export/ids` エンドポイントは、受信したすべてのキャンペーンやキャンバス、実行されたすべてのカスタムイベント、作成されたすべての購入、すべてのカスタム属性などのデータを含む、このユーザーのユーザープロファイル全体をまとめることに注意してください。このため、このエンドポイントは他の REST API エンドポイントよりも低速になります。
 
-要求されたデータによっては、このAPI エンドポイントは、1 分あたり2500 件のリクエストのレート制限により、ニーズを満たすのに十分でない場合があります。このエンドポイントを定期的に使用してユーザをエクスポートすることを想定している場合は、セグメント別にユーザをエクスポートすることを検討してください。セグメントは非同期であり、データプルが大きくなるように最適化されています。
+要求されたデータによっては、この API エンドポイントでは 1 分あたり 2,500 件のリクエストのレート制限があるため、ニーズを満たすには不十分な場合があります。このエンドポイントを定期的に使用してユーザーをエクスポートすることを想定している場合は、代わりに、非同期で大規模なデータプルに最適化されているセグメント別にユーザーをエクスポートすることを検討してください。
 
-## レスポンス
+## 応答
 
 ```json
 Content-Type: application/json
@@ -133,14 +133,14 @@ Authorization: Bearer YOUR-REST-API-KEY
 }
 ```
 
-このエンドポイント経由でアクセス可能なデータの例については、次の例を参照してください。
+このエンドポイントからアクセスできるデータの例については、次の例を参照してください。
 
-### サンプルユーザーエクスポートファイルの出力
+### サンプルユーザーのエクスポートファイルアウトプット
 
-ユーザエクスポートオブジェクト(可能な限り最小のデータを含みます。フィールドがオブジェクトから欠落している場合は、null、false、または空であると見なされます):
+ユーザエクスポートオブジェクト(できるだけ少ないデータを含みます。オブジェクトにフィールドがない場合は、null、false、または空であると見なされます):
 
 {% tabs %}
-{% tab All fields %}
+{% tab すべてのフィールド %}
 
 ```json
 {
@@ -280,7 +280,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 ```
 
 {% endtab %}
-{% tab Sample output %}
+{% tab 出力例 %}
 
 ```json
 {
@@ -422,7 +422,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 {% endtabs %}
 
 {% alert tip %}
-CSV およびAPI エクスポートのヘルプについては、[トラブルシューティング]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/) をエクスポートしてください。
+CSV および API のエクスポートに関するヘルプについては、「[エクスポートのトラブルシューティング]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/)」を参照してください。
 {% endalert %}
 
 {% endapi %}

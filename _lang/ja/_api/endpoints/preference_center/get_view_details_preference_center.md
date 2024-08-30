@@ -5,16 +5,16 @@ search_tag: Endpoint
 page_order: 3
 layout: api_page
 page_type: reference
-description: "この記事では、プリファレンスセンターのBrazeエンドポイントのビューの詳細について説明します。"
+description: "この記事では、「ユーザー設定センターの詳細を表示」Braze エンドポイントの詳細について説明します。"
 
 ---
 {% api %}
-# 環境設定センターの詳細を表示する
+# ユーザー設定センターの詳細を表示する
 {% apimethod get %}
 /preference_center/v1/{preferenceCenterExternalID}
 {% endapimethod %}
 
-> このエンドポイントを使用して、いつ作成および更新されたかを含め、プリファレンスセンターの詳細を表示します。
+> このエンドポイントを使用して、ユーザー設定センターの詳細 (作成日時や更新日時など) を表示します。
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#6a47fd7c-2997-4832-aedb-d101a2dd03a5 {% endapiref %}
 
@@ -24,17 +24,17 @@ description: "この記事では、プリファレンスセンターのBrazeエ�
 
 ## レート制限
 
-このエンドポイントには、ワークスペースあたり1 分あたり1000 件のリクエストのレート制限があります。
+このエンドポイントには、1 分あたり、ワークスペース あたり、レート制限 1,000 のリクエストがあります。
 
 ## パスパラメータ
 
-| パラメータ| 必須| データ型| 説明|
+| パラメータ | required | データ型 | 説明 |
 | --------- | ---------| --------- | ----------- |
-|`preferenceCenterExternalID`| 必須| 文字列| お好みのセンターのID。|
+|`preferenceCenterExternalID`| 必須 | string | ユーザー設定センターの ID。 |
 
-## 要求パラメータ
+## リクエストパラメーター
 
-このエンドポイントにはリクエストパラメータはありません。
+このエンドポイントのリクエストパラメータはありません。
 
 ## リクエスト例
 
@@ -43,7 +43,7 @@ curl --location -g --request GET https://rest.iad-01.braze.com/preference_center
 --header 'Authorization: Bearer YOUR-REST-API-KEY'
 ```
 
-## レスポンス 
+## 応答 
 ```json 
 {
   "name": "My Preference Center",
