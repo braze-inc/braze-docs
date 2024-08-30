@@ -17,7 +17,7 @@ channel:
 
 以下は、HTML スニペットに YouTube 動画を埋め込んだ例です。
 
-\`\`\`html
+```html
 <body>
     <div class="box">
         <div class="relativeTopRight">

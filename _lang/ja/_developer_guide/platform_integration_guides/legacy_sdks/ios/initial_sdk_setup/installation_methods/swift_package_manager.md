@@ -22,23 +22,23 @@ tvOS は現在、Swift Package Manager 経由では利用できません。
 
 ### SDK バージョンのインポート
 
-プロジェクトを開き、プロジェクトの設定に移動します。[**Swift パッケージ**] タブを選択し、パッケージリストの下にある <i class="fas fa-plus"></i>[追加] ボタンをクリックします。
+プロジェクトを開き、プロジェクトの設定に移動します。\[**Swift パッケージ**] タブを選択し、パッケージリストの下にある <i class="fas fa-plus"></i>\[追加] ボタンをクリックします。
 
 ![][2]
 
-SDK バージョン `3.33.1` 以降をインポートする場合、iOS SDK リポジトリの URL (`https://github.com/braze-inc/braze-ios-sdk`) をテキストフィールドに入力し、[**次へ**] をクリックします。 
+SDK バージョン `3.33.1` 以降をインポートする場合、iOS SDK リポジトリの URL (`https://github.com/braze-inc/braze-ios-sdk`) をテキストフィールドに入力し、\[**次へ**] をクリックします。 
 
 バージョン `3.29.0` から `3.32.0` の場合、URL `https://github.com/Appboy/Appboy-ios-sdk` を使用してください。
 
 ![][3]
 
-次の画面で、SDK バージョンを選択し、[**次へ**] をクリックします。バージョン `3.29.0` 以降は Swift Package Manager と互換性があります。
+次の画面で、SDK バージョンを選択し、\[**次へ**] をクリックします。バージョン `3.29.0` 以降は Swift Package Manager と互換性があります。
 
 ![][4]
 
 ### パッケージの選択
 
-ニーズに最も適したパッケージを選択し、[**完了**] をクリックします。必ず `AppboyKit` または `AppboyUI` のどちらかを選択してください。両方のパッケージを含めると、望ましくない動作が発生する可能性があります。
+ニーズに最も適したパッケージを選択し、\[**完了**] をクリックします。必ず `AppboyKit` または `AppboyUI` のどちらかを選択してください。両方のパッケージを含めると、望ましくない動作が発生する可能性があります。
 
 - `AppboyUI`
   - Braze が提供するUIコンポーネントを使用する場合に最適です。
@@ -66,16 +66,16 @@ SDK バージョン `3.33.1` 以降をインポートする場合、iOS SDK リ�
 Xcode 12.5 以降を使用している場合は、この手順をスキップしてください。
 {% endalert %}
 
-Xcode 12.4 以前を使用している場合は、Appboy パッケージを含むターゲットのスキームを編集します (**[製品] > [スキーム] > [スキームの編集]** メニュー項目)。
-1\.[**ビルド**] メニューを展開し、[**ポストアクション**] を選択します。プラス (+) ボタンを押して、[**新しいスクリプト実行アクション**] を選択します。
-2\.[**ビルド設定の提供元**] ドロップダウンで、アプリのターゲットを選択します。
-3\. このスクリプトをオープンな field: にコピーします。
-\`\`\`sh
+Xcode 12.4 以前を使用している場合は、Appboy パッケージを含むターゲットのスキームを編集します (**\[製品] > \[スキーム] > \[スキームの編集]** メニュー項目)。
+1. \[**ビルド**] メニューを展開し、\[**ポストアクション**] を選択します。プラス (+) ボタンを押して、\[**新しいスクリプト実行アクション**] を選択します。
+2. \[**ビルド設定の提供元**] ドロップダウンで、アプリのターゲットを選択します。
+3.  このスクリプトを開封フィールドにコピーしてください:
+```sh
 # iOS
-bash "$BUILT\_PRODUCTS\_DIR/Appboy_iOS_SDK_AppboyKit.bundle/Appboy.bundle/appboy-spm-cleanup.sh"
-# macOS (該当する場合)
-bash "$BUILT\_PRODUCTS\_DIR/Appboy_iOS_SDK_AppboyKit.bundle/Contents/Resources/Appboy.bundle/appboy-spm-cleanup.sh"
-\`\`\`
+bash "$BUILT_PRODUCTS_DIR/Appboy_iOS_SDK_AppboyKit.bundle/Appboy.bundle/appboy-spm-cleanup.sh"
+# macOS (if applicable)
+bash "$BUILT_PRODUCTS_DIR/Appboy_iOS_SDK_AppboyKit.bundle/Contents/Resources/Appboy.bundle/appboy-spm-cleanup.sh"
+```
 
 ![][7]
 

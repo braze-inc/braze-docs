@@ -23,7 +23,7 @@ Braze SDK では、ユーザーエンゲージメントやユーザーの理解�
 braze.changeUser('user_id');
 ```
 
-## カスタムイベントを記録する
+## カスタムイベントのログ記録
 
 Braze でカスタムイベントを記録することで、アプリの使用パターンについて詳しく知ることができ、ダッシュボードでの行動によってユーザーを分類できます。
 
@@ -72,14 +72,14 @@ braze.setFirstName('Name');
 Braze では、デフォルトユーザー属性以外にも、複数の異なるデータ型を使用してカスタム属性を定義できます。
 
 {% tabs %}
-{% tab Boolean Value %}
+{% tab ブール値 %}
 
 ```dart
 braze.setBoolCustomUserAttribute("custom boolean attribute key", boolean);
 ```
 
 {% endtab %}
-{% tab Integer %}
+{% tab 整数 %}
 
 ```dart
 // Set Integer Attribute
@@ -89,26 +89,26 @@ braze.incrementCustomUserAttribute("key", integer);
 ```
 
 {% endtab %}
-{% tab Double %}
+{% tab ダブル %}
 ```dart
 braze.setDoubleCustomUserAttribute("custom double attribute key", double);
 ```
 
 {% endtab %}
-{% tab String %}
+{% tab ストリング %}
 
 ```dart
 braze.setStringCustomUserAttribute("custom string attribute", "string custom attribute");
 ```
 
 {% endtab %}
-{% tab Date %}
+{% tab 日付 %}
 
 ```dart
 braze.setDateCustomUserAttribute("custom date attribute key", date);
 ```
 {% endtab %}
-{% tab Array %}
+{% tab 配列 %}
 
 ```dart
 // Adding to an Array

@@ -31,7 +31,7 @@ Braze は、プッシュ通知エラーをメッセージアクティビティ�
 この問題が発生する理由はいくつか考えられます。
 
 - アプリケーションを強制終了すると、アプリケーションが実行されていない間はプッシュ通知が表示されません。
-- キャンペーンで [通知の優先度][15] が `HIGH` に設定されていることを確認します。
+- キャンペーンの\[通知優先度][15] ]設定が`HIGH` に設定されていることを確認する。
 - `api_key.txt` の ADM API キーが間違っているか、無効な文字を含んでいます。
 - `BrazeAmazonDeviceMessagingReceiver` は、`<action android:name="com.amazon.device.messaging.intent.RECEIVE" />` および `<action android:name="com.amazon.device.messaging.intent.REGISTRATION" />` のインテントフィルターを使用して `AndroidManifest.xml` に適切に登録されていません。
 

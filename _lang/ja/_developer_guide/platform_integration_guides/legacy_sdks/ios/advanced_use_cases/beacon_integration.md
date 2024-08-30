@@ -21,7 +21,7 @@ Gimbal ビーコンを設定してアプリに統合すると、カスタムイ�
 ユーザーが場所に入ったときにカスタムイベントをログに記録するには、次のコードを `didBeginVisit` メソッドに入力します。
 
 {% tabs %}
-{% tab OBJECTIVE-C %}
+{% tab 目標-C %}
 
 ```objc
 [[Appboy sharedInstance] logCustomEvent:@"Entered %@", visit.place.name];
@@ -29,7 +29,7 @@ Gimbal ビーコンを設定してアプリに統合すると、カスタムイ�
 ```
 
 {% endtab %}
-{% tab swift %}
+{% tab 速い %}
 
 ```swift
 Appboy.sharedInstance()?.logCustomEvent("Entered %@", visit.place.name)

@@ -26,7 +26,7 @@ channel:
 - [`IInAppMessageViewWrapperFactory`][88] - [アプリ内メッセージビューの階層操作のカスタム管理](#custom-view-wrapper-factory)
 
 {% alert note %}
-この記事には、廃止予定のニュースフィードの情報が含まれています。Braze では、ニュースフィードツールをご利用のお客様に、コンテンツカードのメッセージングチャネルへの移行を推奨しています。柔軟性、カスタマイズ性、信頼性が向上します。詳細については、[移行ガイド]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/)をご覧ください。
+この記事には、廃止予定のニュースフィードの情報が含まれています。Braze は、ニュースフィードツールを使っている顧客には、コンテンツカードのメッセージングチャネルに移行することを勧めています。詳しくは[マイグレーションガイド]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/)をご覧ください。
 {% endalert %}
 
 ## カスタムマネージャーリスナー
@@ -91,12 +91,12 @@ override fun beforeInAppMessageDisplayed(inAppMessageBase: IInAppMessage): InApp
 
 `InAppMessageOperation()`の戻り値により、メッセージを表示するタイミングを制御できます。この方法が推奨されるケースは、アプリ内メッセージがアプリのユーザーエクスペリエンスを妨害する場合に`DISPLAY_LATER`を返すことで、アプリの特定の部分でメッセージを遅延させることです。
 
-| `InAppMessageOperation`の戻り値 | 動作 |
+| `InAppMessageOperation` 戻り値 | 動作 |
 | -------------------------- | -------- |
-| `DISPLAY_NOW` | メッセージが表示されます |
-| `DISPLAY_LATER` | メッセージはスタックに返され、次に利用可能な機会に表示されます |
-| `DISCARD` | メッセージは破棄されます |
-| `null` | メッセージは無視されます。このメソッドは`null`を**返しません** |
+| `DISPLAY_NOW` | メッセージが表示される |
+| `DISPLAY_LATER` | メッセージはスタックに戻され、次の機会に表示される。 |
+| `DISCARD` | メッセージは破棄される |
+| `null` | メッセージは無視される。このメソッドは `null` |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 詳細については、[`InAppMessageOperation.java`][45]を参照してください。
@@ -219,7 +219,7 @@ Braze への他の呼び出しの前に、`Application.onCreate()`に`IInAppMess
 
 {% tabs %}
 {% tab JAVA %}
-\`\`\`java
+```java
 public class CustomInAppMessageAnimationFactory implements IInAppMessageAnimationFactory {
 
   @Override
@@ -242,24 +242,24 @@ public class CustomInAppMessageAnimationFactory implements IInAppMessageAnimatio
 {% endtab %}
 {% tab KOTLIN %}
 ```kotlin
-class CustomInAppMessageAnimationFactory :IInAppMessageAnimationFactory {
-override fun getOpeningAnimation(inAppMessage: IInAppMessage): Animation {
-val animation: Animation = AlphaAnimation(0, 1)
-animation.interpolator = AccelerateInterpolator()
-animation.duration = 2000L
-return animation
-}
+class CustomInAppMessageAnimationFactory : IInAppMessageAnimationFactory {
+  override fun getOpeningAnimation(inAppMessage: IInAppMessage): Animation {
+    val animation: Animation = AlphaAnimation(0, 1)
+    animation.interpolator = AccelerateInterpolator()
+    animation.duration = 2000L
+    return animation
+  }
 
-  override fun getClosingAnimation(inAppMessage:IInAppMessage):Animation {
-val animation: Animation = AlphaAnimation(1, 0)
-animation.interpolator = DecelerateInterpolator()
-animation.duration = 2000L
-return animation
+  override fun getClosingAnimation(inAppMessage: IInAppMessage): Animation {
+    val animation: Animation = AlphaAnimation(1, 0)
+    animation.interpolator = DecelerateInterpolator()
+    animation.duration = 2000L
+    return animation
+  }
 }
-    }
-    \`\`\`
-    {% endtab %}
-    {% endtabs %}
+```
+{% endtab %}
+{% endtabs %}
 
 ### ステップ2: Braze にアプリ内メッセージビューファクトリを使用するように指示する
 
@@ -284,7 +284,7 @@ Braze SDK にはデフォルトの`DefaultHtmlInAppMessageActionListener`クラ�
 
 {% tabs %}
 {% tab JAVA %}
-\`\`\`java
+```java
 public class CustomHtmlInAppMessageActionListener implements IHtmlInAppMessageActionListener {
   private final Context mContext;
 
@@ -294,35 +294,35 @@ public class CustomHtmlInAppMessageActionListener implements IHtmlInAppMessageAc
 
   @Override
   public void onCloseClicked(IInAppMessage inAppMessage, String url, Bundle queryBundle) {
-    Toast.makeText(mContext, "HTML In App Message closed", Toast.LENGTH\_LONG).show();
+    Toast.makeText(mContext, "HTML In App Message closed", Toast.LENGTH_LONG).show();
     BrazeInAppMessageManager.getInstance().hideCurrentlyDisplayingInAppMessage(false);
   }
 
   @Override
   public boolean onCustomEventFired(IInAppMessage inAppMessage, String url, Bundle queryBundle) {
-    Toast.makeText(mContext, "Custom event fired.Ignoring.", Toast.LENGTH\_LONG).show();
+    Toast.makeText(mContext, "Custom event fired. Ignoring.", Toast.LENGTH_LONG).show();
     return true;
   }
 
   @Override
   public boolean onNewsfeedClicked(IInAppMessage inAppMessage, String url, Bundle queryBundle) {
-    Toast.makeText(mContext, "Newsfeed button pressed.Ignoring.", Toast.LENGTH\_LONG).show();
+    Toast.makeText(mContext, "Newsfeed button pressed. Ignoring.", Toast.LENGTH_LONG).show();
     BrazeInAppMessageManager.getInstance().hideCurrentlyDisplayingInAppMessage(false);
     return true;
   }
 
   @Override
   public boolean onOtherUrlAction(IInAppMessage inAppMessage, String url, Bundle queryBundle) {
-Toast.makeText(mContext, "Custom url pressed: " + url + " . Ignoring", Toast.LENGTH_LONG).show();
-BrazeInAppMessageManager.getInstance().hideCurrentlyDisplayingInAppMessage(false);
-return true;
+    Toast.makeText(mContext, "Custom url pressed: " + url + " . Ignoring", Toast.LENGTH_LONG).show();
+    BrazeInAppMessageManager.getInstance().hideCurrentlyDisplayingInAppMessage(false);
+    return true;
+  }
 }
-    }
-    ```
+```
 {% endtab %}
 {% tab KOTLIN %}
 ```kotlin
-    class CustomHtmlInAppMessageActionListener(private val mContext:Context) :IHtmlInAppMessageActionListener {
+class CustomHtmlInAppMessageActionListener(private val mContext: Context) : IHtmlInAppMessageActionListener {
 
     override fun onCloseClicked(inAppMessage: IInAppMessage, url: String, queryBundle: Bundle) {
         Toast.makeText(mContext, "HTML In App Message closed", Toast.LENGTH_LONG).show()
@@ -346,7 +346,7 @@ return true;
         return true
     }
 }
-\`\`\`
+```
 {% endtab %}
 {% endtabs %}
 
@@ -381,7 +381,7 @@ BrazeInAppMessageManager.getInstance().setCustomHtmlInAppMessageActionListener(C
 
 {% tabs %}
 {% tab JAVA %}
-\`\`\`java
+```java
 public class CustomInAppMessageViewWrapper extends DefaultInAppMessageViewWrapper {
   public CustomInAppMessageViewWrapper(View inAppMessageView,
                                        IInAppMessage inAppMessage,
@@ -401,44 +401,44 @@ public class CustomInAppMessageViewWrapper extends DefaultInAppMessageViewWrappe
   @Override
   public void open(@NonNull Activity activity) {
     super.open(activity);
-    Toast.makeText(activity.getApplicationContext(), "Opened in-app message", Toast.LENGTH\_SHORT).show();
+    Toast.makeText(activity.getApplicationContext(), "Opened in-app message", Toast.LENGTH_SHORT).show();
   }
 
   @Override
   public void close() {
     super.close();
-    Toast.makeText(mInAppMessageView.getContext().getApplicationContext(), "Closed in-app message", Toast.LENGTH\_SHORT).show();
+    Toast.makeText(mInAppMessageView.getContext().getApplicationContext(), "Closed in-app message", Toast.LENGTH_SHORT).show();
   }
 }
 ```
 {% endtab %}
 {% tab KOTLIN %}
 ```kotlin
-class CustomInAppMessageViewWrapper(inAppMessageView:View,
-                                    inAppMessage：IInAppMessage,
-                                    inAppMessageViewLifecycleListener:IInAppMessageViewLifecycleListener,
-                                    brazeConfigurationProvider:BrazeConfigurationProvider,
-                                    openingAnimation:Animation,
-                                    closingAnimation:Animation, clickableInAppMessageView:View) :
-    DefaultInAppMessageViewWrapper(inAppMessageView,
-        inAppMessage,
-        inAppMessageViewLifecycleListener,
-        brazeConfigurationProvider,
-        openingAnimation,
-        closingAnimation,
+class CustomInAppMessageViewWrapper(inAppMessageView: View,
+                                    inAppMessage: IInAppMessage,
+                                    inAppMessageViewLifecycleListener: IInAppMessageViewLifecycleListener,
+                                    brazeConfigurationProvider: BrazeConfigurationProvider,
+                                    openingAnimation: Animation,
+                                    closingAnimation: Animation, clickableInAppMessageView: View) : 
+    DefaultInAppMessageViewWrapper(inAppMessageView, 
+        inAppMessage, 
+        inAppMessageViewLifecycleListener, 
+        brazeConfigurationProvider, 
+        openingAnimation, 
+        closingAnimation, 
         clickableInAppMessageView) {
 
-  override fun open(activity:Activity) {
+  override fun open(activity: Activity) {
     super.open(activity)
-    Toast.makeText(activity.applicationContext, "Opened in-app message", Toast.LENGTH\_SHORT).show()
+    Toast.makeText(activity.applicationContext, "Opened in-app message", Toast.LENGTH_SHORT).show()
   }
 
   override fun close() {
     super.close()
-    Toast.makeText(mInAppMessageView.context.applicationContext, "Closed in-app message", Toast.LENGTH\_SHORT).show()
+    Toast.makeText(mInAppMessageView.context.applicationContext, "Closed in-app message", Toast.LENGTH_SHORT).show()
   }
 }
-\`\`\`
+```
 {% endtab %}
 {% endtabs %}
 
