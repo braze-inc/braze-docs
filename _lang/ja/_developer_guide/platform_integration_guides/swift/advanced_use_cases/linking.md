@@ -13,13 +13,13 @@ description: "この記事では、iOS アプリにユニバーサルディー�
 
 ディープリンクに関する一般情報については、[よくある質問の記事][4]を参照してください。 
 
-## ステップ1: スキームの登録
+## ステップ1:スキームの登録
 
 ディープリンクを処理するには、`Info.plist` ファイルにカスタムスキームを記述する必要があります。ナビゲーション構造はディクショナリの配列によって定義されます。これらの各ディクショナリには、文字列の配列が含まれています。
 
 Xcode を使用して `Info.plist` ファイルを編集します。
 
-1. 新しいキー `URL types` を追加します。Xcode では、これが自動的に `Item 0` というディクショナリを含む配列にされます。
+1. 新しいキー `URL types` を追加します。Xcode では、これが自動的に `Item 0` というディクショナリを含む配列になります。
 2. `Item 0` 内に、キー `URL identifier` を追加します。カスタムスキームに値を設定します。
 3. `Item 0` 内に、キー `URL Schemes` を追加します。これは、自動的に `Item 0` 文字列を含む配列になります。
 4. `URL Schemes` >> `Item 0` をカスタムスキームに設定します。
@@ -40,9 +40,9 @@ Xcode を使用して `Info.plist` ファイルを編集します。
 </array>
 ```
 
-## ステップ2: スキーム許可リストの追加
+## ステップ2:スキーム許可リストの追加
 
-アプリの Info.plist ファイルに `LSApplicationQueriesSchemes` キーを追加して、`canOpenURL(_:)` に渡す URL スキームを宣言する必要があります。この許可リストに含まれないスキームを呼び出そうとすると、デバイスのログにエラーが記録され、ディープリンクは開かれません。以下はこのエラーの例です。
+URLスキームを`canOpenURL(_:)`に渡すには、`LSApplicationQueriesSchemes`キーをアプリのInfo.plistファイルに追加する必要があります。この許可リストに含まれないスキームを呼び出そうとすると、デバイスのログにエラーが記録され、ディープリンクは開かれません。以下はこのエラーの例です。
 
 ```
 <Warning>: -canOpenURL: failed for URL: "yourapp://deeplink" – error: "This app is not allowed to query for scheme yourapp"
@@ -63,12 +63,12 @@ Xcode を使用して `Info.plist` ファイルを編集します。
 
 詳細については、`LSApplicationQueriesSchemes` キーに関する [Apple のドキュメント][12]を参照してください。
 
-## ステップ3: ハンドラの実装
+## ステップ3:ハンドラの実装
 
 アプリをアクティブにすると、iOS でメソッド [`application:openURL:options:`][13] が呼び出されます。重要な引数は [NSURL][2] オブジェクトです。
 
 {% tabs %}
-{% tab swift %}
+{% tab SWIFT %}
 
 ```swift
 func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
@@ -164,10 +164,10 @@ SDK では、有効な `URL` を作成するためにリンクをパーセント
 
 エンコードされたリンクをデコードするには、`String` プロパティ [`removingPercentEncoding`][8] を使用します。また、`BrazeDelegate.braze(_:shouldOpenURL:)` で `true` を返す必要があります。アプリによる URL の処理をトリガーするには、アクションの呼び出しが必要です。 
 
-例:
+以下はその例です。
 
 {% tabs %}
-{% tab swift %}
+{% tab SWIFT %}
 
 ```swift
   func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
@@ -197,12 +197,12 @@ SDK では、有効な `URL` を作成するためにリンクをパーセント
 `UIApplicationOpenSettingsURLString` を利用して、Braze のプッシュ通知、アプリ内メッセージ、ニュースフィードからアプリの設定にユーザーをディープリンクできます。
 
 ユーザーをアプリから iOS 設定に移動させる手順は以下のとおりです。
-1\.まず、アプリケーションが[スキームベースのディープリンク][25]または[ユニバーサルリンク][27]用に設定されていることを確認します。
-2\.[**設定**] ページへのディープリンクの URI (`myapp://settings` や `https://www.braze.com/settings` など) を決定します。
-3\.カスタムスキームベースのディープリンクを使用している場合は、`application:openURL:options:` メソッドに次のコードを追加します。
+1. まず、アプリケーションが[スキームベースのディープリンク][25]または[ユニバーサルリンク][27]用に設定されていることを確認します。
+2. \[**設定**] ページへのディープリンクの URI (`myapp://settings` や `https://www.braze.com/settings` など) を決定します。
+3. カスタムスキームベースのディープリンクを使用している場合は、`application:openURL:options:` メソッドに次のコードを追加します。
 
 {% tabs %}
-{% tab swift %}
+{% tab SWIFT %}
 
 ```swift
 func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
@@ -237,7 +237,7 @@ func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpe
 
 ### デフォルト WebView のカスタマイズ
 
-一般的に Web ディープリンクに対して [アプリ内で Web URL を開く] が選択されている場合、`Braze.WebViewController` クラスには SDK によって開かれる Web URL が表示されます。
+一般的に Web ディープリンクに対して \[アプリ内で Web URL を開く] が選択されている場合、`Braze.WebViewController` クラスには SDK によって開かれる Web URL が表示されます。
 
 `Braze.WebViewController` は、[`BrazeDelegate.braze(_:willPresentModalWithContext:)`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/brazedelegate/braze(_:willpresentmodalwithcontext:)-12sqy/) デリゲートメソッドを使用してカスタマイズできます。
 
@@ -265,7 +265,7 @@ SDK では、ドメインの `apple-app-site-association` ファイルに対し�
 ### 統合の例: BrazeDelegate
 
 {% tabs %}
-{% tab swift %}
+{% tab SWIFT %}
 
 ```swift
 func braze(_ braze: Braze, shouldOpenURL context: Braze.URLContext) -> Bool {
