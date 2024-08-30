@@ -11,6 +11,10 @@ description: "This article covers how to configure uninstall tracking for the Sw
 
 > Learn how to set up uninstall tracking for your iOS application, so you can ensure your app doesn't take any unwanted automatic actions upon receiving a Braze uninstall tracking push. Uninstall tracking utilizes background push notifications with a Braze flag in the payload. For general information, see [uninstall tracking][6].
 
+{% alert important %}
+Keep in mind, because of how Apple handles uninstall tracking, the metrics you see on Braze may be delayed or inaccurate.
+{% endalert %}
+
 ## Step 1: Enable background push
 
 In your Xcode project, go to **Capabilities** and ensure you have **Background Modes** enabled. For more information, see [silent push notification][5].
