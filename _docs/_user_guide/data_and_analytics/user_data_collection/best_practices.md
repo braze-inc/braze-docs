@@ -3,19 +3,19 @@ nav_title: Collection Best Practices
 article_title: Collection Best Practices
 page_order: 3.1
 page_type: reference
-description: "The following article helps to clarify different methods and best practices for collecting new and existing user data."
+description: "The following article helps clarify different methods and best practices for collecting new and existing user data."
 
 ---
 
 # Collection best practices
 
-> Knowing when and how to collect user data for known and unknown users can be challenging when envisioning the user profile lifecycle of your customers. This article will help clarify different methods and best practices for collecting new and existing user data.
+> Knowing when and how to collect user data for known and unknown users can be challenging when envisioning the user profile lifecycle of your customers. This article helps clarify different methods and best practices for collecting new and existing user data by walking you through a use case.
 
 The following example consists of an email collection use case, but the logic applies to many different data collection scenarios. In this example, we assume you have already integrated a sign-up form or way to collect user information. 
 
 After a user provides information for you to log, we recommend you verify if the data already exists in your database and, when necessary, create a user alias profile or update the existing user profile.
 
-If an unknown user were to view your site and then, at a later date, create an account or identify themselves via email sign-up, profile merging must be handled carefully. Based on the method in which you merge, alias-only user information or anonymous data may be overwritten.
+If an unknown user were to view your site and then, at a later date, create an account or identify themselves through email sign-up, profile merging must be handled carefully. Based on the method in which you merge, alias-only user information or anonymous data may be overwritten.
 
 ## Capturing user data through a web form
 
@@ -23,8 +23,8 @@ If an unknown user were to view your site and then, at a later date, create an a
 
 When a user enters content through a web form, check if a user with that email already exists within your database. This can be done in one of two ways:
 
-- **Check internal database (recommended)**<br>If you have an external record or database containing the provided user information that exists outside of Braze, reference this at the time of email submission or account creation to ensure the information has not already been captured.<br><br>
-- **[`/users/export/id` endpoint]({{site.baseurl}}/api/endpoints/export/user_data/post_users_identifier/)**<br>Run the following call and check to see if the returned users array is empty or contains a value:
+- **Check internal database (recommended)**<br>If you have an external record or database containing the provided user information that exists outside of Braze, reference this at the time of email submission or account creation to confirm the information hasn't already been captured.<br><br>
+- **[`/users/export/id` endpoint]({{site.baseurl}}/api/endpoints/export/user_data/post_users_identifier/)**<br>Run the following call and check if the returned users array is empty or contains a value:
   ```json
   --data-raw '{
     "email_address": "example@braze.com",
@@ -33,22 +33,22 @@ When a user enters content through a web form, check if a user with that email a
   ```
 
 {% alert important %}
-It is not recommended to heavily leverage this endpoint when querying a single user. We apply a rate limit of 2,500 requests per minute to this endpoint. For more information on endpoint rate limits, refer to [Rate limits by request type]({{site.baseurl}}/api/api_limits/#rate-limits-by-request-type).
+We recommend that you lightly use this endpoint when querying a single user, as we apply a rate limit of 2,500 requests per minute to this endpoint. For more information on endpoint rate limits, refer to [Rate limits by request type]({{site.baseurl}}/api/api_limits/#rate-limits-by-request-type).
 {% endalert %}
 
 ### Step 2: Log or update user
 
 - **If a user exists:**
-  - Do not create a new profile.
-  - Log a custom attribute (for example, `newsletter_subscribed: true`) on the user's profile to indicate that the user has submitted their email via newsletter subscription. If multiple user profiles in Braze exist with the same email address, all profiles will be exported.<br><br>
-- **If a user does not exist:**
-  - Create an alias-only profile via [`/users/track` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track/). This endpoint will accept a [`user_alias` object]({{site.baseurl}}/api/objects_filters/user_alias_object/) and create an alias-only profile when `update_existing_only` is set to `false`. Set the user's email as the user alias to reference that user in the future (as the user won't have an `external_id`).
+  - Don't create a new profile.
+  - Log a custom attribute (for example, `newsletter_subscribed: true`) on the user's profile to indicate that the user has submitted their email through a newsletter subscription. If multiple Braze user profiles exist with the same email address, all profiles will be exported.<br><br>
+- **If a user doesn't exist:**
+  - Create an alias-only profile through the [`/users/track` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track/). This endpoint will accept a [`user_alias` object]({{site.baseurl}}/api/objects_filters/user_alias_object/) and create an alias-only profile when `update_existing_only` is set to `false`. Set the user's email as the user alias to reference that user in the future (as the user won't have an `external_id`).
 
 ![Diagram showing the process to update an alias-only user profile. A user submits their email address and a custom attribute, their zip code, on a marketing landing page. An arrow pointing from the landing page collection to an alias-only user profile shows a Braze API request to the Track user endpoint, with the request body containing the user's alias name, alias label, email, and zip code. The profile has the label "Alias Only user created in Braze" with the attributes from the request body to show the data being reflected on the newly-created profile.][3]{: style="max-width:90%;"}
 
 ## Capturing user emails through an email capture form
 
-Using an email capture form, you can prompt users to submit their email address, which will be added to their user profile. For more information on how to set up this form, check out [Email capture form]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/customize/email_capture_form/).
+Use an email capture form to prompt users to submit their email address, which will be added to their user profile. For more information on how to set up this form, check out [Email capture form]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/customize/email_capture_form/).
  
 ## Identifying alias-only users
 
@@ -57,11 +57,11 @@ When identifying users upon account creation, alias-only users can be identified
 To check if a user is alias-only, [check if the user exists](#step-1-check-if-user-exists) within your database. 
 - If an external record exists, you can call the `/users/identify/` endpoint. 
 - If the [`/users/export/id` endpoint]({{site.baseurl}}/api/endpoints/export/user_data/post_users_identifier/) returns an `external_id`, you can call the `/users/identify/` endpoint.
-- If the endpoint returns nothing, a `/users/identify/` call should not be made.
+- If the endpoint returns nothing, a `/users/identify/` call shouldn't be made.
 
 ## Capturing user data when alias-only user information is already present
 
-When a user creates an account or identifies themselves via email sign-up, you can merge the profiles. For a list of fields that can be merged, refer to [Merge updates behavior]({{site.baseurl}}/api/endpoints/user_data/post_users_merge/#merge_updates-behavior).
+When a user creates an account or identifies themselves through email sign-up, you can merge the profiles. For a list of fields that can be merged, refer to [Merge updates behavior]({{site.baseurl}}/api/endpoints/user_data/post_users_merge/#merge_updates-behavior).
 
 ### Merging duplicate user profiles
 
@@ -73,7 +73,7 @@ Note that after user profiles are merged, this action cannot be undone.
 
 ## Additional resources
 - Check out our article on the Braze [user profile lifecycle]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/) for additional context.<br>
-- Documentation on setting user IDs and calling the `changeUser()` method for [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/setting_user_ids/), [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/setting_user_ids/#suggested-user-id-naming-convention), and [Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/setting_user_ids/).
+- View our documentation on setting user IDs and calling the `changeUser()` method for [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/setting_user_ids/), [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/setting_user_ids/#suggested-user-id-naming-convention), and [Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/setting_user_ids/).
 
 [1]: {% image_buster /assets/img/user_profile_process.png %}
 [2]: {% image_buster /assets/img/user_profile_process2.png %}
