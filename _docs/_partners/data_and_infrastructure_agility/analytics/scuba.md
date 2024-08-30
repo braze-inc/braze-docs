@@ -14,6 +14,7 @@ search_tag: Partner
 ## Prerequisites
 
 To use Scuba Analytics with Braze, you'll need the following:
+
 | Requirement | Description |
 |---|---|
 |Scuba API Token | A Scuba API token you can retrieve from the `https://{scuba_hostname}/api/create_token` endpoint. |
