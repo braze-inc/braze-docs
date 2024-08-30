@@ -50,25 +50,25 @@ HTML アプリ内メッセージは、`IInAppMessage` のもう 1 つのサブ�
 {% tab Slideup %}
 [`Slideup`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/-in-app-message-slideup/index.html) アプリ内メッセージは、画面の上部または下部から「スライドアップ」または「スライドダウン」するため、このような名前が付けられています。画面の一部分だけを覆い、効果的で邪魔にならないメッセージング機能を提供します。
 
-![An in-app message sliding from the bottom of a phone screen displaying "Humans are complicated. Custom engagement shouldn't be." In the background is the same in-app message displayed in the bottom right corner of a web page.]({% image_buster /assets/img/slideup-behavior.gif %}){: style="border:0px;"}
+![&quot を表示している電話機のスクリーンの下部からスライドするアプリ内メッセージは複雑です。カスタムエンゲージメントは。&quot ではありません。バックグラウンドでは、ウェブページの右下隅に表示されるのと同じアプリ内メッセージです。]({% image_buster /assets/img/slideup-behavior.gif %}){: style="border:0px;"}
 
 {% endtab %}
-{% tab Modal %}
+{% tab モーダル %}
 [`Modal`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/-in-app-message-modal/index.html) アプリ内メッセージは画面中央に表示され、半透明のパネルに囲まれます。より重要なメッセージングの場合に有用で、2 つのクリックアクションと分析対応ボタンを装備できます。
 
-![A modal in-app message in the center of a phone screen displaying "Humans are complicated. Custom engagement shouldn't be." In the background is the same in-app message displayed in the center of a web page.]({% image_buster /assets/img/modal-behavior.gif %}){: style="border:0px;"}
+![&quot を表示する電話機の画面中央のモーダル アプリ内メッセージは複雑です。カスタムエンゲージメントは。&quot ではありません。バックグラウンドでは、ウェブページの中央に同じアプリ内メッセージが表示されます。]({% image_buster /assets/img/modal-behavior.gif %}){: style="border:0px;"}
 
 {% endtab %}
-{% tab Full Screen %}
+{% tab フルスクリーン %}
 [`Full`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/-in-app-message-full/index.html) アプリ内メッセージは、ユーザーコミュニケーションの内容とインパクトを最大化するのに有効です。`full` アプリ内メッセージの上半分には画像が含まれ、下半分にはテキストと最大 2 つのクリックアクションと分析対応ボタンが表示されます。
 
-![A full screen in-app message shown across an entire phone screen displaying, "Humans are complicated. Custom engagement shouldn't be." In the background is the same in-app message displayed largely in the center of a web page.]({% image_buster /assets/img_archive/In-App_Full.png %})
+![フルスクリーンのアプリ内メッセージは、電話機のスクリーン全体に表示されます。"Humans は複雑です。カスタムエンゲージメントは。&quot ではありません。バックグラウンドでは、主にウェブページの中央に同じアプリ内メッセージが表示されます。]({% image_buster /assets/img_archive/In-App_Full.png %})
 
 {% endtab %}
-{% tab Custom HTML %}
+{% tab カスタムHTML %}
 [`HTML`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/-in-app-message-html/index.html) アプリ内メッセージは、完全にカスタマイズされたユーザーコンテンツを作成するのに便利です。ユーザー定義の HTML アプリ内のメッセージコンテンツは、`WebView` に表示され、必要に応じて画像やフォントなどの他のリッチコンテンツを含めることができます。これにより、メッセージの外観と機能を完全に制御できます。<br><br>Android アプリ内メッセージは、HTML 内から Braze Web SDK のメソッドを呼び出すための JavaScript `brazeBridge` インターフェイスをサポートしています。詳細については、<a href="{{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/best_practices/">ベストプラクティス</a>を参照してください。
 
-![An HTML in-app message with the a carousel of content and interactive buttons.]({% image_buster /assets/img/full-screen-behavior.gif %}){: style="border:0px;"}
+![コンテンツとインタラクティブボタンのカルーセルを持つHTML アプリ内メッセージ。]({% image_buster /assets/img/full-screen-behavior.gif %}){: style="border:0px;"}
 
 {% alert important %}
 現在、iOS と Android のプラットフォームでは、iFrame でのカスタム HTML アプリ内メッセージの表示はサポートしていません。
@@ -84,7 +84,7 @@ HTML アプリ内メッセージは、`IInAppMessage` のもう 1 つのサブ�
 
 ## 統合 {#in-app-messaging-integration}
 
-### ステップ 1:Braze アプリ内メッセージマネージャー登録
+### ステップ1:Braze アプリ内メッセージマネージャー登録
 
 アプリ内メッセージ表示は [`BrazeInAppMessageManager`][34] クラスによって管理されまｓ。アプリ内のすべてのアクティビティを `BrazeInAppMessageManager` に登録して、アプリ内メッセージビューをビュー階層に追加できるようにする必要があります。これを行うには次の 2 つの方法があります。
 
@@ -175,7 +175,7 @@ public override fun onPause() {
 {% endtab %}
 {% endtabs %}
 
-### ステップ 2:アプリ内メッセージマネージャー禁止リスト (オプション)
+### ステップ2:アプリ内メッセージマネージャー禁止リスト (オプション)
 
 統合では、アプリ内の特定のアクティビティにアプリ内メッセージを表示しないようにする必要が生じる場合があります。[アクティビティライフサイクルコールバックの統合][59]により、これを簡単に実現できます。
 
