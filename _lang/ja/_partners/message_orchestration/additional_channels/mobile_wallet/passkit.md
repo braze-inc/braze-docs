@@ -280,7 +280,7 @@ Webhookをセットアップするには、リクエストボディに新しい�
 **液体の回答例**
 
 {% tabs local %}
-{{passes.redemptionDetails}} %}
+{% tab {{passes.redemptionDetails}} %}
 
 ```json
 {
