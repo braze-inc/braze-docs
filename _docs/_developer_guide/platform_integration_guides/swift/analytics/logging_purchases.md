@@ -13,7 +13,7 @@ Record in-app purchases so that you can track your revenue over time and across 
 
 Braze supports purchases in multiple currencies. Purchases that you report in a currency other than USD will be shown in the dashboard in USD based on the exchange rate at the date they were reported.
 
-Before implementation, be sure to review examples of the segmentation options afforded by custom events, custom attributes, and purchase events in our [best practices][5], as well as our notes on [event naming conventions]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/event_naming_conventions/).
+Before implementation, be sure to review examples of the segmentation options afforded by custom events, custom attributes, and purchase events in our [best practices]({{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#user-data-collection), as well as our notes on [event naming conventions]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/event_naming_conventions/).
 
 ## Tracking purchases and revenue
 
@@ -46,7 +46,7 @@ AppDelegate.braze?.logPurchase(productID: "product_id", currency: "USD", price: 
 ### Adding properties {#properties-purchases}
 You can add metadata about purchases by passing a Dictionary populated with `Int`, `Double`, `String`, `Bool`, or `Date` values.
 
-Refer to the [iOS class documentation][7] for additional details.
+Refer to the [iOS class documentation](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/logpurchase(productid:currency:price:quantity:properties:fileid:line:) "logpurchase documentation") for additional details.
 
 ### Adding quantity
 You can add a quantity to your purchases if customers make the same purchase multiple times in a single checkout. You can accomplish this by passing in an `Int` for the quantity.
@@ -54,7 +54,7 @@ You can add a quantity to your purchases if customers make the same purchase mul
 * A quantity input must be in the range of [0, 100] for the SDK to log a purchase.
 * Methods without a quantity input will have a default quantity value of 1.
 
-Refer to the [iOS class documentation][7] for additional details.
+Refer to the [iOS class documentation](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/logpurchase(productid:currency:price:quantity:properties:fileid:line:) "logpurchase documentation") for additional details.
 
 {% tabs %}
 {% tab swift %}
@@ -97,9 +97,5 @@ The following keys are reserved and cannot be used as purchase properties:
 
 ### REST API
 
-You can also use our REST API to record purchases. Refer to the [User API documentation][4] for details.
+You can also use our REST API to record purchases. Refer to the [User API documentation]({{site.baseurl}}/developer_guide/rest_api/user_data/#user-data) for details.
 
-[4]: {{site.baseurl}}/developer_guide/rest_api/user_data/#user-data
-[5]: {{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#user-data-collection
-[6]: https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/logcustomevent(name:properties:fileid:line:) "logcustomevent:properties documentation"
-[7]: https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/logpurchase(productid:currency:price:quantity:properties:fileid:line:) "logpurchase documentation"

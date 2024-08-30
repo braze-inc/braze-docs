@@ -31,7 +31,7 @@ To configure your game object listener at runtime on either platform, use `Appbo
 
 ## Parsing cards
 
-Incoming `string` messages received in your game object callback can be parsed into our pre-supplied [Feed][11] object, which has a list of [Card][12] objects for convenience.
+Incoming `string` messages received in your game object callback can be parsed into our pre-supplied [Feed](https://github.com/braze-inc/braze-unity-sdk/blob/master/Assets/Plugins/Appboy/Models/Feed.cs) object, which has a list of [Card](https://github.com/braze-inc/braze-unity-sdk/blob/master/Assets/Plugins/Appboy/Models/Cards/Card.cs) objects for convenience.
 
 See the following example for details:
 
@@ -64,9 +64,7 @@ Both methods will notify your News Feed listener and pass the News Feed along to
 
 Clicks and impressions must be manually logged for cards not displayed directly by Braze.
 
-Use `LogClick()` and `LogImpression()` on [Card][12] to log clicks and impressions for specific cards.
+Use `LogClick()` and `LogImpression()` on [Card](https://github.com/braze-inc/braze-unity-sdk/blob/master/Assets/Plugins/Appboy/Models/Cards/Card.cs) to log clicks and impressions for specific cards.
 
 To log that the user viewed the feed as a whole, call `AppboyBinding.LogFeedDisplayed()`.
 
-[11]: https://github.com/braze-inc/braze-unity-sdk/blob/master/Assets/Plugins/Appboy/Models/Feed.cs
-[12]: https://github.com/braze-inc/braze-unity-sdk/blob/master/Assets/Plugins/Appboy/Models/Cards/Card.cs

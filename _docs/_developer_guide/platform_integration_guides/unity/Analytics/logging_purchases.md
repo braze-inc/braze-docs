@@ -16,7 +16,7 @@ description: "This reference article covers how to log purchases on Unity platfo
 
 Braze supports purchases in multiple currencies. Purchases that you report in a currency other than USD will be shown in the dashboard in USD based on the exchange rate at the date they were reported.
 
-Before implementation, be sure to review examples of the segmentation options afforded by custom events, custom attributes, and purchase events in our [Best practices][5].
+Before implementation, be sure to review examples of the segmentation options afforded by custom events, custom attributes, and purchase events in our [Best practices]({{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#user-data-collection).
 
 To use this feature, add the following method call after a successful purchase in your app:
 
@@ -53,7 +53,5 @@ AppboyBinding.LogPurchase("product ID", "USD", 12.5m);
 
 ## REST API
 
-You can also use our REST API to record purchases. Refer to the [users API][4] documentation for details.
+You can also use our REST API to record purchases. Refer to the [users API]({{site.baseurl}}/developer_guide/rest_api/user_data/#user-data) documentation for details.
 
-[4]: {{site.baseurl}}/developer_guide/rest_api/user_data/#user-data
-[5]: {{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#user-data-collection

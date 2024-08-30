@@ -29,7 +29,7 @@ Braze is a customer engagement platform. This simply means that Braze helps you 
 
 If you're a marketer looking for a more general overview of Braze, check out the [Getting Started section for marketers]({{site.baseurl}}/user_guide/getting_started/overview/), instead.
 
-![Braze has different layers. In total, it consists of the SDK, the API, the dashboard, and partner integrations. These each contribute parts of a data ingestion layer, a classification layer, an orchestration layer, a personalization layer, and an action layer. The action layer has various channels, including push, in-app messages, Connected Catalog, webhook, SMS, and email.][17]{: style="max-width:55%;float:right;margin-left:15px;"}
+![Braze has different layers. In total, it consists of the SDK, the API, the dashboard, and partner integrations. These each contribute parts of a data ingestion layer, a classification layer, an orchestration layer, a personalization layer, and an action layer. The action layer has various channels, including push, in-app messages, Connected Catalog, webhook, SMS, and email.]({% image_buster /assets/img/getting-started/getting-started-vertically-integrated-stack.png %}){: style="max-width:55%;float:right;margin-left:15px;"}
 
 ### SDK
 
@@ -50,13 +50,13 @@ In brief, when fully integrated, the SDK:
 
 The dashboard is the UI that controls all of the data and interactions at the heart of the Braze platform. Marketers will use the dashboard to do their job and create content. Developers use the dashboard to manage settings for integrating apps, such as API keys and push notification credentials.
 
-If you're just getting started, your team administrator should add you (and all other team members who need access to Braze) as [users on your dashboard][1].
+If you're just getting started, your team administrator should add you (and all other team members who need access to Braze) as [users on your dashboard]({{site.baseurl}}/user_guide/administrative/access_braze).
 
 ### REST API
 
 The Braze API allows you move data in and out of Braze at scale. Use the API to bring in updates from your backend, data warehouses, and other first and third-party sources. Additionally, use the API to add custom events for segmentation purposes directly from a web-based applications. You can trigger and send messages through the API, allowing technical resources to include complex JSON metadata as part of your campaigns.
 
-The API also provides a web service where you can record actions taken by your users directly via HTTP, rather than through the mobile and web SDKs. Combined with webhooks, this means you can track actions and trigger activities for users inside and outside your app experience. The [API guide][2] lists available Braze API endpoints and their uses.
+The API also provides a web service where you can record actions taken by your users directly via HTTP, rather than through the mobile and web SDKs. Combined with webhooks, this means you can track actions and trigger activities for users inside and outside your app experience. The [API guide]({{site.baseurl}}/api/home) lists available Braze API endpoints and their uses.
 
 For more on the parts and pieces of Braze, check out: [Getting Started: Architecture overview]({{site.baseurl}}/developer_guide/platform_wide/getting_started/architecture_overview).
 
@@ -64,7 +64,7 @@ For more on the parts and pieces of Braze, check out: [Getting Started: Architec
 
 Data stored in Braze is retained and usable for segmentation, personalization, and targeting as long as you’re a Braze customer. That allows you to act on user profile data (for example, session activity or purchases) until you choose to deprecate that information. For instance, a streaming service could track each subscriber’s viewed content from their first day on the service (even if that was many years ago) and use that data to  power relevant messaging.
 
-![A segment in the Braze dashboard called "Recent purchasers" juxtaposed next to a phone screen showing a "Top Recommendations for Linda" email.][3]{: style="max-width:80%"}
+![A segment in the Braze dashboard called "Recent purchasers" juxtaposed next to a phone screen showing a "Top Recommendations for Linda" email.]({% image_buster /assets/img/getting-started/getting-started-segment.png %}){: style="max-width:80%"}
 
 ### App analytics
 
@@ -80,7 +80,7 @@ For more on our data models, check out: [Getting Started: Analytics overview]({{
 
 After you have defined a segment, Braze messaging tools allow you to engage with your users in a dynamic, personalized way. Braze was designed with a channel-agnostic, user-centric data model. Messaging is done inside your app or site (such as sending in-app messages or through graphic elements like Content Card carousels and banners) or outside your app experience (such as sending push notifications or emails). For example, your marketers can send a push notification and an email to the example segment defined in the previous section.
 
-![Create and trigger personalized messages on any channel, whether outside or within your app or website.][18]{: style="border:none" }
+![Create and trigger personalized messages on any channel, whether outside or within your app or website.]({% image_buster /assets/img/getting-started/messaging-channels.png %}){: style="border:none" }
 
 | Channel                                                                                              | Description                                                                                                                                            |
 | ---------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -159,21 +159,3 @@ As a technical resource, you'll be involved in a lot of the nuts and bolts of Br
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 
-[1]: {{site.baseurl}}/user_guide/administrative/access_braze
-[2]: {{site.baseurl}}/api/home
-[3]: {% image_buster /assets/img/getting-started/getting-started-segment.png %}
-[4]: {{site.baseurl}}/developer_guide/customization_guides/content_cards
-[5]: {{site.baseurl}}/user_guide/message_building_by_channel/push
-[6]: {{site.baseurl}}/user_guide/message_building_by_channel/email
-[7]: {{site.baseurl}}/user_guide/message_building_by_channel/sms
-[8]: {% image_buster /assets/img_archive/UOiOSPush.png %} "Example Push dashboard"
-[9]: {% image_buster /assets/img_archive/In-App_Modal.png %} "Slideup Example"
-[10]: {% image_buster /assets/img_archive/EmailTemplateEditor.png %} "Email Template Editor"
-[11]: {{site.baseurl}}/user_guide/message_building_by_channel/whatsapp
-[12]: {{site.baseurl}}/user_guide/message_building_by_channel/webhooks
-[13]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/
-[14]: {% image_buster /assets/img_archive/Webhook_Body_Edit.png %}
-[15]: {% image_buster /assets/img/whatsapp/whatsapp8.png %}
-[16]: {{site.baseurl}}/developer_guide/home
-[17]: {% image_buster /assets/img/getting-started/getting-started-vertically-integrated-stack.png %}
-[18]: {% image_buster /assets/img/getting-started/messaging-channels.png %}

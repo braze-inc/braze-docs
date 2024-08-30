@@ -10,22 +10,22 @@ channel:
 ---
 
 # Android TV push
-![][12]{: style="float:right;max-width:25%;margin-left:15px; border: 0"}
+![]({% image_buster /assets/img/Television.png %}){: style="float:right;max-width:25%;margin-left:15px; border: 0"}
 
 > While not a native feature, Android TV push integration is made possible by leveraging the Braze Android SDK and Firebase Cloud Messaging to register a push token for Android TV. It is, however, necessary to build a UI to display the notification payload after it is received.
 
 ## Implementation
 
 1. **Integrate the Braze Android SDK**<br>
-First, you must integrate the [Braze Android SDK][6] (If not already completed).<br><br>
+First, you must integrate the [Braze Android SDK]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/?redirected=true) (If not already completed).<br><br>
 2. **Integrate push notifications**<br>
-Next, you must integrate [Android Push Notifications][10] (If not already completed).<br><br>
+Next, you must integrate [Android Push Notifications]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/integration/standard_integration/) (If not already completed).<br><br>
 3. **Create a custom toast view**<br>
 Next, create a custom view in your app to display your notifications.<br><br>
 4. **Create a custom notification factory**<br>
-Lastly, you must create a [custom notification factory][8]. This will override the default SDK behavior and allow you to manually display the notifications. By returning `null`, this will prevent the SDK from processing and will require custom code to display the notification. After these steps have been completed, you can start sending push to Android TV!<br><br>
+Lastly, you must create a [custom notification factory]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/integration/standard_integration/#custom-displaying-notifications). This will override the default SDK behavior and allow you to manually display the notifications. By returning `null`, this will prevent the SDK from processing and will require custom code to display the notification. After these steps have been completed, you can start sending push to Android TV!<br><br>
 5. **Set up click analytics tracking (optional)**<br>
-To track click analytics effectively, it is necessary to handle this manually, as Braze does not handle the display of the messages automatically. This can be achieved by creating a [push callback][7] to listen for Braze push opened and received intents.
+To track click analytics effectively, it is necessary to handle this manually, as Braze does not handle the display of the messages automatically. This can be achieved by creating a [push callback]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/integration/standard_integration/#android-push-listener-callback) to listen for Braze push opened and received intents.
 
 {% alert note %}
 Note that these notifications **will not persist** and will only be visible to the user when the device displays them. This is due to Android TV's notification center not supporting historical notifications.
@@ -43,10 +43,3 @@ For a marketing end user in Braze, launching a campaign to Android TV will be id
 
 The delivered and clicked response returned by FCM will follow the same convention as a mobile Android device; therefore, any errors will be visible in the message activity log.
 
-[6]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/?redirected=true
-[7]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/integration/standard_integration/#android-push-listener-callback
-[8]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/integration/standard_integration/#custom-displaying-notifications
-[9]: https://developer.android.com/guide/topics/ui/notifiers/toasts#CustomToastView
-[10]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/integration/standard_integration/
-[11]: {% image_buster /assets/img/android_tv.png %}
-[12]: {% image_buster /assets/img/Television.png %}
