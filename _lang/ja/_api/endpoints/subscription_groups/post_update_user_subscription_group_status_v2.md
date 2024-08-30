@@ -1,9 +1,9 @@
 ---
-nav_title: "ポスト:ユーザーのサブスクリプション グループの状態の更新 v2"
+nav_title: "POST:ユーザーのサブスクリプション・グループ・ステータスを更新する V2"
 alias: /post_update_user_subscription_group_status_v2/
 layout: api_page
 page_type: reference
-description: "この記事では、Update user's subscription group status Braze V2エンドポイントの詳細について説明します。"
+description: "この記事では、「ユーザーのサブスクリプショングループステータスの更新」Braze V2エンドポイントの詳細について説明します。"
 
 platform: API
 channel:
@@ -11,36 +11,36 @@ channel:
 ---
 
 {% api %}
-# ユーザーのサブスクリプション グループの状態を更新する (V2)
+# ユーザーのサブスクリプショングループステータスの更新 (V2)
 {% apimethod post %}
 /v2/subscription/status/set
 {% endapimethod %}
 
-> このエンドポイントを使用して、Brazeダッシュボードで最大50人のユーザーのサブスクリプション状態を一括更新します。 
+> このエンドポイントを使用して、Brazeダッシュボード上の最大50ユーザーのサブスクリプション状態を一括更新する。 
 
-サブスクリプション グループ `subscription_group_id` にアクセスするには、[ **サブスクリプション グループ** ] ページに移動します。
+**サブスクリプショングループ**ページに移動すると、サブスクリプショングループの `subscription_group_id` にアクセスできます。
 
-例を参照したり、このエンドポイントを **メールサブスクリプショングループ**でテストしたりする場合は、次のようにします。
+**メールサブスクリプショングループ**に対してこのエンドポイントをテストしたり、例を見たりしたい場合：
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#b1b9a0e0-6329-4df2-a465-53347f410662 {% endapiref %}
 
-**SMS サブスクリプション グループ**についてこのエンドポイントの例を参照またはテストする場合は、次のようにします。
+**SMSサブスクリプション・グループの**例を見たい、またはこのエンドポイントをテストしたい場合：
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#81a5fe65-588b-4b61-82d8-5ce68b681409 {% endapiref %}
 
-**WhatsApp Groups**でこのエンドポイントの例を確認したり、テストしたりする場合は、次のようにします。
+**WhatsApp Groups**用のエンドポイントの例を見たい、またはテストしたい：
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#81a5fe65-588b-4b61-82d8-5ce68b681409 {% endapiref %}
 
 ## 前提条件
 
-このエンドポイントを使用するには、アクセス許可を持つ `subscription.status.set` [API キー]({{site.baseurl}}/api/basics#rest-api-key/)が必要です。
+このエンドポイントを使用するには、`subscription.status.set` 権限を持つ [API キー]({{site.baseurl}}/api/basics#rest-api-key/)が必要です。
 
 ## レート制限
 
 {% multi_lang_include rate_limits.md endpoint='subscription status set' %}
 
-## リクエスト本文
+## Request body
 
 ```
 Content-Type: application/json
@@ -60,30 +60,30 @@ Authorization: Bearer YOUR-REST-API-KEY
   ]
 }
 ```
-\* と`phones`パラメータの両方`emails`を含めることはできませんのでご注意ください。また、`emails`、 `phones``external_ids`
+*`emails` と `phones` の両方のパラメーターを含めることはできません。また、`emails`、`phones`、`external_ids` はすべて個別に送信できます。
 
 {% alert tip %}
-エンドポイントを介して[`/users/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track/)新しいユーザーを作成する場合、ユーザー属性オブジェクト内にサブスクリプション グループを設定できるため、1 回の API 呼び出しでユーザーを作成し、サブスクリプション グループの状態を設定できます。
+[`/users/track` エンドポイント]({{site.baseurl}}/api/endpoints/user_data/post_user_track/)経由で新規ユーザーを作成する際、ユーザー属性オブジェクト内にサブスクリプショングループを設定することができる。これにより、1回のAPIコールでユーザーを作成し、サブスクリプショングループの状態を設定することができる。
 {% endalert %}
 
-## 要求パラメーター
+## リクエストパラメーター
 
-|パラメータ |必須項目 |データ型 |説明 |
+| パラメーター | required | データ型 | 説明 |
 |---|---|---|---|
-|`subscription_group_id` |必須項目 |文字列 |サブスクリプション グループの |`id`
-| `subscription_state` |必須項目 |文字列 |使用可能な値は、(サブスクリプション グループ内にない) または (サブスクリプション グループ内) です `unsubscribed` `subscribed` 。 |
-| `external_ids` |必須項目* |文字列の配列 |ユーザー `external_id` またはユーザーの、最大50 `id`秒を含み得る。 |
-| `emails` |必須項目* |文字列または文字列の配列 |ユーザーのメールアドレスは、文字列の配列として渡すことができます。少なくとも 1 つのメール アドレス (最大 50 個) を含める必要があります。<br><br>同じワークスペース内の複数のユーザー ()`external_id` が同じメール アドレスを共有している場合、メール アドレスを共有するすべてのユーザーは、サブスクリプション グループの変更で更新されます。 |
-| `phones` |必須項目* | [E.164](https://en.wikipedia.org/wiki/E.164) 形式の文字列 |ユーザーの電話番号は、文字列の配列として渡すことができます。少なくとも 1 つの電話番号 (最大 50 個) を含める必要があります。|
+| [`subscription_group_id`]({{site.baseurl}}/api/identifier_types/?tab=subscription%20group%20ids) | required | string | サブスクリプション・グループの`id` 。 |
+| `subscription_state` | 必須 | string | 使用できる値は、`unsubscribed` (サブスクリプショングループに含まれない) または `subscribed` (サブスクリプショングループに含まれる) です。 |
+| `external_ids` | 必須 | 文字列の配列 | ユーザーの `external_id` には、最大で50個の `id` を含めることができます。 |
+| `emails` | 必須 | 文字列または文字列の配列 | ユーザーのメールアドレス。文字列の配列として渡すことができます。少なくとも1件のメールアドレス (最大50件まで) を含める必要があります。<br><br>同じワークスペース内の複数のユーザー (`external_id`) が同じメールアドレスを共有している場合、そのメールアドレスを共有するすべてのユーザーは、サブスクリプショングループの変更で更新されます。 |
+| `phones` | 必須 | 文字列 [E.164](https://en.wikipedia.org/wiki/E.164)形式 | ユーザーの電話番号。文字列の配列として渡すことができます。少なくとも1件の電話番号 (最大50件まで) を含める必要があります。 |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
 {% alert note %}
-パラメーター`phones`とパラメーターの両方`emails`を含めることはできません。また、`emails`、 `phones``external_ids`
+*`emails` と `phones` の両方のパラメーターを含めることはできません。また、`emails`、`phones`、`external_ids` はすべて個別に送信できます。
 {% endalert %}
 
-### 要求の例
+### リクエスト例
 
-次の例では、を使用して `external_id` 、メールと SMS の API 呼び出しを 1 回行います。
+以下の例では、`external_id` を使って、EメールとSMSのAPIコールを1回行っている。
 
 ```
 curl --location --request POST 'https://rest.iad-01.braze.com/v2/subscription/status/set' \
