@@ -17,5 +17,5 @@ Disallow: /
 User-agent:Sogou inst spider
 Disallow: /
 
-User-agent:
+User-agent: *
 Disallow: /
