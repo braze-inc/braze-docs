@@ -16,27 +16,27 @@ noindex: true
 
 Push Story 機能を使用するには、`UNNotification` フレームワークと iOS 10が必要です。この機能は iOS SDK バージョン3.2.1以降でのみ利用可能です。
 
-## ステップ1: アプリでプッシュを有効にする
+## ステップ1:アプリでプッシュを有効にする
 
 [プッシュ通知統合][1]に従って、アプリでプッシュを有効にします。
 
-## ステップ2: 通知コンテンツ拡張ターゲットを追加する
+## ステップ2:通知コンテンツ拡張ターゲットを追加する
 
-アプリプロジェクトで、メニュー **[ファイル] > [新規] > [ターゲット...]** を選択し、新しい `Notification Content Extension` ターゲットを追加してアクティブ化します。
+アプリプロジェクトで、メニュー **\[ファイル] > \[新規] > \[ターゲット...]** を選択し、新しい `Notification Content Extension` ターゲットを追加してアクティブ化します。
 
 ![][2]
 
 Xcode によって新しいターゲットが生成され、次のようなファイルが自動的に作成されるはずです。
 
 {% tabs %}
-{% tab OBJECTIVE-C %}
+{% tab 目標-C %}
 
 - `NotificationViewController.h`
 - `NotificationViewController.m`
 - `MainInterface.storyboard`
 
 {% endtab %}
-{% tab swift %}
+{% tab 速い %}
 
 - `NotificationViewController.swift`
 - `MainInterface.storyboard`
@@ -44,9 +44,9 @@ Xcode によって新しいターゲットが生成され、次のようなフ�
 {% endtab %}
 {% endtabs %}
 
-## ステップ 3 機能を有効にする
+## ステップ3:機能を有効にする
 
-Push Story 機能では、メインアプリターゲットの ［**機能**］ セクションのバックグラウンドモードが必要です。バックグラウンドモードをオンにしたら、[**バックグラウンドフェッチ**] と [**リモート通知**] を選択します。
+Push Story 機能では、メインアプリターゲットの ［**機能**］ セクションのバックグラウンドモードが必要です。バックグラウンドモードをオンにしたら、\[**バックグラウンドフェッチ**] と \[**リモート通知**] を選択します。
 
 ![][3]
 
@@ -62,19 +62,19 @@ Push Story 機能では、メインアプリターゲットの ［**機能**］ 
 
 ## ステップ4: Push Story フレームワークをアプリに追加する
 
-{% tabs local %}
-{% tab Swift Package Manager %}
+{% tabs ローカル %}
+{% tab スイフト・パッケージ・マネージャー %}
 
 [Swift Package Manager の統合ガイド]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/installation_methods/swift_package_manager/)に従って、`AppboyPushStory` を `Notification Content Extension` に追加します。
 
-![In Xcode, under frameworks and libraries, select the "+" icon to add a framework.]({% image_buster /assets/img/ios/push_story/spm1.png %})
+![Xcodeのフレームワークとライブラリの下にある「+」アイコンを選択して、フレームワークを追加する。]({% image_buster /assets/img/ios/push_story/spm1.png %})
 
-![\]({% image_buster /assets/img/ios/push_story/spm2.png %})
+![]({% image_buster /assets/img/ios/push_story/spm2.png %})
 
 {% endtab %}
-{% tab CocoaPods %}
+{% tab ココアポッズ %}
 
-Podfile に次の行を追加します。
+次の行を Podfile に追加します。
 
 ```ruby
 target 'YourContentExtensionTarget' do
@@ -85,27 +85,27 @@ end
 Podfile を更新したら、ターミナル内で Xcode アプリプロジェクトのディレクトリーに移動し、`pod install`　を実行します。
 
 {% endtab %}
-{% tab Manual %}
+{% tab マニュアル %}
 
 [GitHub リリースページ](https://github.com/Appboy/appboy-ios-sdk/releases)から最新の `AppboyPushStory.zip` をダウンロードして展開し、以下のファイルをプロジェクトの `Notification Content Extension` に追加します。
 - `Resources/ABKPageView.nib`
 - `AppboyPushStory.xcframework`
 
-![\]({% image_buster /assets/img/ios/push_story/manual1.png %})
+![]({% image_buster /assets/img/ios/push_story/manual1.png %})
 
 {% alert important %}
-[**埋め込み]** 列の下の **AppboyPushStory.xcframework** で [**埋め込まない**] が選択されていることを確認します。
+に**「埋め込まない**」が選択されていることを確認する。 **AppboyPushStory.xcframework**が選択されていることを確認する。
 {% endalert %}
 
-**[ビルド設定] > [その他のリンカーフラグ]** でプロジェクトの `Notification Content Extension` に `-ObjC` フラグを追加します。
+**\[ビルド設定] > \[その他のリンカーフラグ]** でプロジェクトの `Notification Content Extension` に `-ObjC` フラグを追加します。
 
 {% endtab %}
 {% endtabs %}
 
-## ステップ 5: 通知ビューコントローラーを更新する
+## ステップ5:通知ビューコントローラーを更新する
 
 {% tabs %}
-{% tab OBJECTIVE-C %}
+{% tab 目標-C %}
 
 `NotificationViewController.h` で、次の行を追加して新しいプロパティを追加し、ヘッダーファイルをインポートします。
 
@@ -120,31 +120,31 @@ Podfile を更新したら、ターミナル内で Xcode アプリプロジェ�
 
 `NotificationViewController.m` では、デフォルトの実装を削除し、次のコードを追加します。
 
-\`\`\`objc
+```objc
 @implementation NotificationViewController
 
-- (void)didReceiveNotification:(UNNotification \*)notification {
-self.dataSource = [[ABKStoriesViewDataSource alloc] initWithNotification:notification
-storiesView:self.storiesView
-appGroup:@"YOUR-APP-GROUP-IDENTIFIER"];
+- (void)didReceiveNotification:(UNNotification *)notification {
+  self.dataSource = [[ABKStoriesViewDataSource alloc] initWithNotification:notification
+                                                               storiesView:self.storiesView
+                                                                  appGroup:@"YOUR-APP-GROUP-IDENTIFIER"];
 }
 
-- (void)didReceiveNotificationResponse:(UNNotificationResponse \*)response
+- (void)didReceiveNotificationResponse:(UNNotificationResponse *)response
                      completionHandler:(void (^)(UNNotificationContentExtensionResponseOption option))completion {
-UNNotificationContentExtensionResponseOption option = [self.dataSource didReceiveNotificationResponse:response];
-completion(option);
+  UNNotificationContentExtensionResponseOption option = [self.dataSource didReceiveNotificationResponse:response];
+  completion(option);
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
-[self.dataSource viewWillDisappear];
-[super viewWillDisappear:animated];
+  [self.dataSource viewWillDisappear];
+  [super viewWillDisappear:animated];
 }
 
 @end
-\`\`\`
+```
 
 {% endtab %}
-{% tab swift %}
+{% tab 速い %}
 
 `NotificationViewController.swift` で、次の行を追加してヘッダーファイルをインポートします。
 
@@ -154,34 +154,34 @@ import AppboyPushStory
 
 次に、デフォルトの実装を削除し、次のコードを追加します。
 
-\`\`\`swift
-class NotificationViewController:UIViewController, UNNotificationContentExtension {
+```swift
+class NotificationViewController: UIViewController, UNNotificationContentExtension {
 
-  @IBOutlet weak var storiesView:ABKStoriesView!
-  var dataSource:ABKStoriesViewDataSource?
+  @IBOutlet weak var storiesView: ABKStoriesView!
+  var dataSource: ABKStoriesViewDataSource?
     
-  func didReceive(_ notification:UNNotification) {
-dataSource = ABKStoriesViewDataSource(notification: notification, storiesView: storiesView, appGroup: "YOUR-APP-GROUP-IDENTIFIER")
-}
+  func didReceive(_ notification: UNNotification) {
+    dataSource = ABKStoriesViewDataSource(notification: notification, storiesView: storiesView, appGroup: "YOUR-APP-GROUP-IDENTIFIER")
+  }
     
-  func didReceive(_ response:UNNotificationResponse, completionHandler completion: @escaping (UNNotificationContentExtensionResponseOption) -> Void) {
-if dataSource != nil {
-let option: UNNotificationContentExtensionResponseOption = dataSource!.didReceive(response)
-completion(option)
-}
+  func didReceive(_ response: UNNotificationResponse, completionHandler completion: @escaping (UNNotificationContentExtensionResponseOption) -> Void) {
+    if dataSource != nil {
+      let option: UNNotificationContentExtensionResponseOption = dataSource!.didReceive(response)
+      completion(option)
     }
+  }
     
-  override func viewWillDisappear(_ animated:Bool) {
+  override func viewWillDisappear(_ animated: Bool) {
     dataSource?.viewWillDisappear()
     super.viewWillDisappear(animated)
   }
 }
-\`\`\`
+```
 
 {% endtab %}
 {% endtabs %}
 
-## ステップ 6: 通知コンテンツ拡張ストーリーボードを設定する
+## ステップ 6:通知コンテンツ拡張ストーリーボードを設定する
 
 `Notification Content Extension` ストーリーボードを開き、通知ビューコントローラーに新しい `UIView` を配置します。クラスの名前を `ABKStoriesView` に変更します。通知ビューコントローラのメインビューフレームに合わせて、ビューの幅と高さを自動サイズ変更可能にします。
 
@@ -198,8 +198,8 @@ completion(option)
 `Notification Content Extension` の `Info.plist` ファイルを開き、`NSExtension \ NSExtensionAttributes` で以下のキーを追加および変更します。
 
 `UNNotificationExtensionCategory` = `ab_cat_push_story_v2` (`String` タイプ)
-`UNNotificationExtensionDefaultContentHidden` = `YES` (`Boolean` タイプ)
-`UNNotificationExtensionInitialContentSizeRatio` = `0.65` (`Number` タイプ)
+ =  ( タイプ)
+ =  ( タイプ)
 
 ![][12]
 
@@ -210,7 +210,7 @@ completion(option)
 Braze インスタンスの設定に使用する `appboyOptions` 辞書で、`ABKPushStoryAppGroupKey` エントリを追加し、値をワークスペース API 識別子に設定します。
 
 {% tabs %}
-{% tab OBJECTIVE-C %}
+{% tab 目標-C %}
 
 ```objc
 NSMutableDictionary *appboyOptions = [NSMutableDictionary dictionary];
@@ -222,7 +222,7 @@ appboyOptions[ABKPushStoryAppGroupKey] = @"YOUR-APP-GROUP-IDENTIFIER";
 ```
 
 {% endtab %}
-{% tab swift %}
+{% tab 速い %}
 
 ```swift
 let appboyOptions: [AnyHashable: Any] = [
@@ -234,9 +234,9 @@ Appboy.start(withApiKey: "YOUR-API-KEY", in:application, withLaunchOptions:launc
 {% endtab %}
 {% endtabs %}
 
-##### オプション 2: Info.plist
+##### オプション2： Info.plist
 
-または、`Info.plist` ファイルから Push Story ワークスペースを構成するには、`Braze` という名前の辞書を `Info.plist` ファイルに追加します。`Braze`辞書内で、文字列型の `PushStoryAppGroup` サブエントリを追加し、値をワークスペース識別子に設定します。なお、Braze iOS SDK v4.0.2より前のバージョンでは、`Braze` の代わりに辞書キー `Appboy` を使用する必要があります。
+または、`Info.plist` ファイルから Push Story ワークスペースを構成するには、`Braze` という名前の辞書を `Info.plist` ファイルに追加します。`Braze`辞書内で、文字列型の `PushStoryAppGroup` サブエントリを追加し、値をワークスペース識別子に設定します。なお、Braze iOS SDK v4.0.2 より前のバージョンでは、`Braze` の代わりにディクショナリキー `Appboy` を使用する必要があります。
 
 ## 次のステップ:
 
