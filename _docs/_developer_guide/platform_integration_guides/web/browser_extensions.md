@@ -25,7 +25,7 @@ In general, since extensions are HTML and JavaScript, you can use Braze for the 
 
 ## What's not supported
 
-* Service workers for Manifest v3 are not supported due to a lack of a Document Object Model (DOM) and Window API support. However, this is on the roadmap for future consideration.
+* Service workers are not supported by the Braze Web SDK, however, this is on the roadmap for future consideration.
 
 ## Extension types
 
