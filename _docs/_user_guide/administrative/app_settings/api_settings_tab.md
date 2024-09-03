@@ -3,19 +3,13 @@ nav_title: API Keys
 article_title: API Keys
 page_order: 3
 page_type: reference
-description: "This reference article covers the API Keys page, which displays API identifications for your workspace."
+description: "This article covers the API Keys page, which displays API identifications for your workspace."
 
 ---
 
-# API Keys
+# API keys
 
-> The **API Keys** page displays API identifications for your workspace. The first section on **Services** lists relevant articles for different uses of the Braze API ([user data][3],[messaging][4], [email sync][5], and [export][6]).
-
-The **API Keys** page is further divided into the following sections:
-
-- REST API Keys
-- Identification
-- Additional API Identifiers
+> The **API Keys** page displays API identifications for your workspace. 
 
 You can find the **API Keys** page under **Settings**.
 
