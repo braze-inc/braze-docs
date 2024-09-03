@@ -94,7 +94,7 @@ Statistics are only collected for the date range specified by the report. To rec
 
 #### Select time frame
 
-By default, the data range shown will go from the earliest message selected until the present date.  You can customize this by selecting the date dropdown and using the custom range selection OR by selecting the next radio button and defining your date range with the dropdown options available.
+By default, the data range shown will go from the earliest message selected until the present date.  You can customize this by selecting the date dropdown and using the custom range selection OR by selecting the next radio button and defining your date range with the dropdown options available. 
 
 #### Select data display
 
