@@ -325,9 +325,9 @@ For instances `EU-01` and `EU-02`, these are the relevant IP addresses:
 {% tab Snowflake %}
 #### Step 3.1: Add Snowflake connection information and source table
 
-Create a connected source in the Braze dashboard. Go to **Data Settings** > **Cloud Data Ingestion** > **Connected Sources** and select **Create data connection**.
+Create a connected source in the Braze dashboard. Go to **Data Settings** > **Cloud Data Ingestion** > **Connected Sources**, and then select **Create new data sync** > **Snowflake Import**.
 
-![]({% image_buster /assets/img/cloud_ingestion/connected_source_tab.png %})
+![]({% image_buster /assets/img/cloud_ingestion/connected_source_tab.png %}){: style="max-width:80%;"}
 
 Input the information for your Snowflake data warehouse and source schema, then proceed to the next step.
 
@@ -347,9 +347,93 @@ If queries are consistently timing out and you have set a maximum runtime of 60 
 
 #### Step 3.3: Note the public key  
 
-In the **Test connection** page, take note of the RSA public key. You'll need it complete the integration in Snowflake.
+In the **Test connection** step, take note of the RSA public key. You'll need it to complete the integration in Snowflake.
 
 ![]({% image_buster /assets/img/cloud_ingestion/connected_source_sf_3.png %})
+
+{% endtab %}
+{% tab Redshift %}
+#### Step 3.1: Add Redshift connection information and source table
+
+Create a connected source in the Braze dashboard. Go to **Data Settings** > **Cloud Data Ingestion** > **Connected Sources**, and then select **Create data connection** > **Amazon Redshift Import**.
+
+![]({% image_buster /assets/img/cloud_ingestion/connected_source_tab.png %}){: style="max-width:80%;"}
+
+Input the information for your Redshift data warehouse and source schema, then proceed to the next step.
+
+![]({% image_buster /assets/img/cloud_ingestion/connected_source_sf_1.png %})
+
+#### Step 3.2: Configure sync details
+
+Choose a name for the connected source. This name will be used in the list of available sources when you create a new CDI segment. 
+
+Configure a maximum runtime for this source. Braze will automatically abort any queries that exceed the maximum runtime when it's creating or refreshing a segment. The maximum runtime allowed is 60 minutes; a lower runtime will reduce costs incurred on your Redshift account. 
+
+{% alert note %}
+If queries are consistently timing out and you have set a maximum runtime of 60 minutes, consider trying to optimize your query execution time or dedicating a larger warehouse to the Braze user.
+{% endalert %}
+
+![]({% image_buster /assets/img/cloud_ingestion/connected_source_sf_2.png %})
+
+#### Step 3.3: Note the public key  
+
+In the **Test connection** step, take note of the RSA public key. You'll need it to complete the integration in Redshift.
+
+{% endtab %}
+{% tab BigQuery %}
+#### Step 3.1: Add BigQuery connection information and source table
+
+Create a connected source in the Braze dashboard. Go to **Data Settings** > **Cloud Data Ingestion** > **Connected Sources**, and then select **Create new data sync** > **Google BigQuery Import**.
+
+![]({% image_buster /assets/img/cloud_ingestion/connected_source_tab.png %}){: style="max-width:80%;"}
+
+Input the information for your BigQuery project and dataset, then proceed to the next step.
+
+![]({% image_buster /assets/img/cloud_ingestion/connected_source_bg_1.png %})
+
+#### Step 3.2: Configure sync details
+
+Choose a name for the connected source. This name will be used in the list of available sources when you create a new CDI segment. 
+
+Configure a maximum runtime for this source. Braze will automatically abort any queries that exceed the maximum runtime when it's creating or refreshing a segment. The maximum runtime allowed is 60 minutes; a lower runtime will reduce costs incurred on your BigQuery account. 
+
+{% alert note %}
+If queries are consistently timing out and you have set a maximum runtime of 60 minutes, consider trying to optimize your query execution time or dedicating a larger warehouse to the Braze user.
+{% endalert %}
+
+![]({% image_buster /assets/img/cloud_ingestion/connected_source_bg_2.png %})
+
+#### Step 3.3: Note the public key  
+
+In the **Test connection** step, take note of the RSA public key. You'll need it to complete the integration in BigQuery.
+
+{% endtab %}
+{% tab Databricks %}
+#### Step 3.1: Add Databricks connection information and source table
+
+Create a connected source in the Braze dashboard. Go to **Data Settings** > **Cloud Data Ingestion** > **Connected Sources**, and then select **Create new data sync** > **Databricks Import**.
+
+![]({% image_buster /assets/img/cloud_ingestion/connected_source_tab.png %}){: style="max-width:80%;"}
+
+Input the information for your Databricks credentials and, optional catalog and source schema, then proceed to the next step.
+
+![]({% image_buster /assets/img/cloud_ingestion/connected_source_databricks_1.png %})
+
+#### Step 3.2: Configure sync details
+
+Choose a name for the connected source. This name will be used in the list of available sources when you create a new CDI segment. 
+
+Configure a maximum runtime for this source. Braze will automatically abort any queries that exceed the maximum runtime when it's creating or refreshing a segment. The maximum runtime allowed is 60 minutes; a lower runtime will reduce costs incurred on your Databricks account. 
+
+{% alert note %}
+If queries are consistently timing out and you have set a maximum runtime of 60 minutes, consider trying to optimize your query execution time or dedicating a larger warehouse to the Braze user.
+{% endalert %}
+
+![]({% image_buster /assets/img/cloud_ingestion/connected_source_db_2.png %})
+
+#### Step 3.3: Note the public key  
+
+In the **Test connection** step, take note of the RSA public key. You'll need it to complete the integration in Databricks.
 
 {% endtab %}
 {% endtabs %}
