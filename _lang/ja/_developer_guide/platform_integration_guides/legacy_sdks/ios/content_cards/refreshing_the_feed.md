@@ -18,14 +18,14 @@ noindex: true
 
 `Appboy` インターフェースの `requestContentCardsRefresh:` メソッドを使用して、ユーザーのコンテンツカードを更新するように Braze に手動でリクエストできます。
 {% tabs %}
-{% tab OBJECTIVE-C %}
+{% tab 目標-C %}
 
 ```objc
 [[Appboy sharedInstance] requestContentCardsRefresh];
 ```
 
 {% endtab %}
-{% tab swift %}
+{% tab 速い %}
 
 ```swift
 Appboy.sharedInstance()?.requestContentCardsRefresh()

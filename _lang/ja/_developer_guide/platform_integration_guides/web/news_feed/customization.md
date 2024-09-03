@@ -1,31 +1,32 @@
 ---
 page_order: 1
 nav_title: カスタマイズ
-article_title: Web ニュースフィードのカスタマイズ
+article_title: Webニュースフィードのカスタマイズ
 layout: dev_guide
 
 platform: Web
 
 channel: news feed
 
-guide_top_header: "Web ニュースフィードのカスタマイズ"
+guide_top_header: "Webニュースフィードのカスタマイズ"
 guide_top_text: ""
-description: "このランディングページでは、Braze Web SDK ニュースフィードのカスタマイズオプションについて説明しています。"
+description: "このランディングページは、Braze Web SDKニュースフィードのカスタマイズオプションを網羅しています。"
 
 guide_featured_title: "セクションの記事"
 guide_featured_list:
-  - name: Custom Styling
+  - name: カスタムスタイリング
     link: /docs/developer_guide/platform_integration_guides/web/news_feed/customization/custom_styling/
-    fa_icon: fa fa-paint-brush
-  - name: Key-Value Pairs
+    image: /assets/img/braze_icons/brush-02.svg
+  - name: キーと値のペア
     link: /docs/developer_guide/platform_integration_guides/web/news_feed/customization/key_value_pairs/
-    fa_icon: fa fa-code
-  - name: Read & Unread Indicators
+    image: /assets/img/braze_icons/code-square-01.svg
+
+  - name: 既読 / 未読インジケーター
     link: /docs/developer_guide/platform_integration_guides/web/news_feed/customization/read_and_unread/
-    fa_icon: fa fa-book
-  - name: Badges
+    image: /assets/img/braze_icons/book-closed.svg
+  - name: バッジ
     link: /docs/developer_guide/platform_integration_guides/web/news_feed/customization/badges/
-    fa_icon: fa fa-id-badge
+    image: /assets/img/braze_icons/key-01.svg
 
 
 

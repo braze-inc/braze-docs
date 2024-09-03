@@ -15,7 +15,7 @@ noindex: true
 # ニュースフィード統合
 
 {% alert note %}
-ニュースフィードは非推奨になります。Braze では、ニュースフィードツールを使用しているお客様に、より柔軟でカスタマイズ可能で信頼性の高いコンテンツカードメッセージングチャネルに移行することをお勧めします。詳細については、[移行ガイド]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/)をご覧ください。
+ニュースフィードは非推奨になります。Braze では、News Feed ツールを使用するお客様は、コンテンツカードメッセージングチャネルに移動することを推奨しています。これは、より柔軟でカスタマイズ可能で、信頼性が高いチャネルです。詳しくは[マイグレーションガイド]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/)をご覧ください。
 {% endalert %}
 
 ## ニュースフィードデータモデル
@@ -46,7 +46,7 @@ noindex: true
 ```
 
 {% endtab %}
-{% tab swift %}
+{% tab 迅速 %}
 
 ```swift
 // Subscribe to feed updates
@@ -79,66 +79,66 @@ Braze には、バナー画像、キャプション付き画像、テキスト�
 
 |プロパティ|説明|
 |---|---|
-| `idString` | (読み取り専用) Braze によって設定されたカードの ID。|
-| `viewed` | このプロパティは、ユーザーがカードを読んだか、それとも未読かを反映します。|
-| `created` | (読み取り専用) このプロパティは Braze ダッシュボードからのカード作成時刻の UNIX タイムスタンプです。|
-| `updated` | (読み取り専用) このプロパティは、Braze ダッシュボードからのカードの最新更新時刻の UNIX タイムスタンプです。|
-| `categories` | カードに割り当てられているカテゴリーのリスト、カテゴリーのないカードは `ABKCardCategoryNoCategory` が割り当てられます。<br><br>利用可能なカテゴリー:<br>- `ABKCardCategoryNoCategory`<br>- `ABKCardCategoryNews`<br>- `ABKCardCategoryAdvertising`<br>- `ABKCardCategoryAnnouncements`<br>- `ABKCardCategorySocial`<br>- `ABKCardCategoryAll` |
-| `extras` | `NSString` 値のオプションの `NSDictionary`。|
+| `idString` | (参照のみ) Brazeで設定されたカードのID。 |
+| `viewed` | このプロパティは、カードがユーザーによって読み取られたか、または読み取られなかったかを反映します。 |
+| `created` | (参照のみ) プロパティは、Braze ダッシュボード からのカードの作成時刻のUNIX タイムスタンプです。 |
+| `updated` | (参照のみ) プロパティは、Braze ダッシュボード からのカードの最新更新時刻のUNIX タイムスタンプです。 |
+| `categories` | カードに割り当てられたカテゴリの一覧、カテゴリなしのカードs には、`ABKCardCategoryNoCategory` が割り当てられます。<br><br>利用可能なカテゴリー:<br>- `ABKCardCategoryNoCategory`<br>- `ABKCardCategoryNews`<br>- `ABKCardCategoryAdvertising`<br>- `ABKCardCategoryAnnouncements`<br>- `ABKCardCategorySocial`<br>- `ABKCardCategoryAll` |
+| `extras` | `NSString` 値のオプションの`NSDictionary`。 |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ### バナー画像カードのプロパティ
 
 |プロパティ|説明|
 |---|---|
-| `image` | (必須) このプロパティはカードの画像の URL です。|
-| `URL` | (オプション) カードをクリックした後に開かれる URL。HTTP (S) URL でもプロトコル URL でもかまいません。|
-| `domain` | (オプション) プロパティ URL のリンクテキスト (@"blog.braze.com" など)。カードの UI に表示して、カードをクリックしたときのアクションと方向を示すことができますが、デフォルトの Braze ニュースフィードでは非表示になっています。|
+| `image` | (必須) このプロパティは、カードの"画像のURL です。 |
+| `URL` | (オプション) カードをクリックした後に開封されるURL。HTTP(S) URL またはプロトコルURL を指定できます。 |
+| `domain` | (オプション) @"blog.braze.com" のようなプロパティ URL のリンクテキスト。カードのユーザーインターフェイスに表示され、カードをクリックするアクションと方向を示すことができますが、デフォルト Brazeのニュースフィードには表示されません。 |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ### キャプション付き画像カードのプロパティ
 
 |プロパティ|説明|
 |---|---|
-| `image` | (必須) このプロパティはカードの画像の URL です。|
-| `title` | (必須) カードのタイトルテキスト。|
-| `description` (必須) カードの本文テキスト。|
-| `URL` | (オプション) カードをクリックした後に開かれる URL。HTTP (S) URL でもプロトコル URL でもかまいません。|
-| `domain` | (オプション) プロパティ URL のリンクテキスト (@"blog.braze.com" など)。カードの UI に表示して、カードをクリックしたときのアクションと方向を示すことができます。|
+| `image` | (必須) このプロパティは、カードの"画像のURL です。 |
+| `title` | (必須) カードのタイトルテキスト。 |
+| `description` (必須) カードの本文。 |
+| `URL` | (オプション) カードをクリックした後に開封されるURL。HTTP(S) URL またはプロトコルURL を指定できます。 |
+| `domain` | (オプション) @"blog.braze.com" のようなプロパティ URL のリンクテキスト。カードのUI に表示され、カードをクリックするアクションと方向を示すことができます。 |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ### テキスト通知カード (画像なしのキャプション付き画像) のプロパティ
 
 |プロパティ|説明|
 |---|---|
-| `title` | (必須) カードのタイトルテキスト。|
-| `description` | (必須) カードの本文テキスト。 |
-| `url` | (オプション) カードをクリックした後に開かれる URL。HTTP (S) URL でもプロトコル URL でもかまいません。|
-| `domain` | (オプション) プロパティ URL のリンクテキスト (@"blog.braze.com" など)。カードの UI に表示して、カードをクリックしたときのアクションと方向を示すことができます。|
+| `title` | (必須) カードのタイトルテキスト。 |
+| `description` | (必須) カードの本文。 |
+| `url` | (オプション) カードをクリックした後に開封されるURL。HTTP(S) URL またはプロトコルURL を指定できます。 |
+| `domain` | (オプション) @"blog.braze.com" のようなプロパティ URL のリンクテキスト。カードのUI に表示され、カードをクリックするアクションと方向を示すことができます。 |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ### クラシックカードのプロパティ
 
 |プロパティ|説明|
 |---|---|
-| `image` | (必須) このプロパティはカードの画像の URL です。|
-| `title` | (オプション) カードのタイトルテキスト。|
-| `description` | (必須) カードの本文テキスト。|
-| `URL` | (オプション) カードをクリックした後に開かれる URL。HTTP (S) URL でもプロトコル URL でもかまいません。|
-| `domain` | (オプション) プロパティ URL のリンクテキスト (@"blog.braze.com" など)。カードの UI に表示して、カードをクリックしたときのアクションと方向を示すことができます。|
+| `image` | (必須) このプロパティは、カードの"画像のURL です。 |
+| `title` | (オプション) カードのタイトルテキスト。 |
+| `description` | (必須) カードの本文。 |
+| `URL` | (オプション) カードをクリックした後に開封されるURL。HTTP(S) URL またはプロトコルURL を指定できます。 |
+| `domain` | (オプション) @"blog.braze.com" のようなプロパティ URL のリンクテキスト。カードのUI に表示され、カードをクリックするアクションと方向を示すことができます。 |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## カードメソッド
 
-|メソッド|説明|
+|方法|説明|
 |---|---|
-| `logCardImpression` | 特定のカードのインプレッションを Braze に手動で記録します。|
-| `logCardClicked` | 特定のカードのクリックを Braze に手動で記録します。SDK は、カードに有効な値の `url` プロパティがある場合にのみカードクリックを記録します。`ABKCard` のすべてのサブクラスには `url` プロパティがあります。|
+| `logCardImpression` | 特定のカードのBrazeへのインプレッションを手動で記録します。 |
+| `logCardClicked` | 特定のカードのBrazeを手動で記録します。SDK は、カードに有効な値の `url` プロパティがある場合にのみカードクリックを記録します。`ABKCard` のすべてのサブクラスには`url` プロパティがあります。 |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## フィード表示を記録する
 
-独自のユーザーインターフェイスでニュースフィードを表示する場合、`- (void)logFeedDisplayed;` を使用してニュースフィードのインプレッションを手動で記録できます。例:
+独自のユーザーインターフェイスでニュースフィードを表示する場合、`- (void)logFeedDisplayed;` を使用してニュースフィードのインプレッションを手動で記録できます。以下に例を示します。
 
 {% tabs %}
 {% tab OBJECTIVE-C %}
@@ -148,7 +148,7 @@ Braze には、バナー画像、キャプション付き画像、テキスト�
 ```
 
 {% endtab %}
-{% tab swift %}
+{% tab 迅速 %}
 
 ```swift
 Appboy.sharedInstance()?.logFeedDisplayed()
@@ -180,7 +180,7 @@ ABKNewsFeedTableViewController *newsFeed = [[ABKNewsFeedTableViewController allo
 ```
 
 {% endtab %}
-{% tab swift %}
+{% tab 迅速 %}
 
 ```swift
 let newsFeed = ABKNewsFeedTableViewController()
@@ -194,9 +194,9 @@ self.navigationController?.pushViewController(newsFeed, animated: true)
 
 ### モーダルコンテキスト - AbkFeedView コントローラーモーダルコンテキスト
 
-このモーダルは、ビューコントローラをモーダルビューで表示するために使用され、上部にナビゲーションバーがあり、バーの右側に [**完了**] ボタンがあります。モーダルのタイトルをカスタマイズするには、`ABKNewsFeedTableViewController` インスタンスの `navigationItem` の `title` プロパティを設定します。 
+このモーダルは、ビューコントローラをモーダルビューで表示するために使用され、上部にナビゲーションバーがあり、バーの右側に \[**完了**] ボタンがあります。モーダルのタイトルをカスタマイズするには、`ABKNewsFeedTableViewController` インスタンスの `navigationItem` の `title` プロパティを設定します。 
 
-デリゲートが**設定されていない**場合、[**完了**] ボタンをクリックすると、モーダルビューが閉じます。デリゲートが**設定されている**場合、[**完了**] ボタンをクリックするとデリゲートが呼び出され、デリゲート自体によってビューが閉じられます。
+デリゲートが**設定されていない**場合、\[**完了**] ボタンをクリックすると、モーダルビューが閉じます。デリゲートが**設定されている**場合、\[**完了**] ボタンをクリックするとデリゲートが呼び出され、デリゲート自体によってビューが閉じられます。
 
 {% tabs %}
 {% tab OBJECTIVE-C %}
@@ -207,7 +207,7 @@ ABKNewsFeedViewController *newsFeed = [[ABKNewsFeedViewController alloc] init];
 ```
 
 {% endtab %}
-{% tab swift %}
+{% tab 迅速 %}
 
 ```swift
 let newsFeed = ABKNewsFeedViewController()

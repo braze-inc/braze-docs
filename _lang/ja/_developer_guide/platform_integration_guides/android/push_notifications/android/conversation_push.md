@@ -13,7 +13,7 @@ channel:
 
 > このアプリケーションでは、Android アプリケーションに Android 会話プッシュを実装する方法を説明します。
 
-![\]({% image_buster /assets/img/android/push/conversations_android.png %}){: style="float:right;max-width:35%;margin-left:15px;border: 0;"}
+![]({% image_buster /assets/img/android/push/conversations_android.png %}){: style="float:right;max-width:35%;margin-left:15px;border: 0;"}
 
 [人と会話のイニシアチブ][2]は、スマートフォンのシステム上で人との会話を向上させることを目的とした、複数年にわたる Android の取り組みです。人との会話を優先する理由は、他のユーザーとのコミュニケーションや対話が、あらゆるユーザー層にわたる大多数のユーザーにとって、依然として最も価値のある重要な機能分野であるからです。
 

@@ -22,13 +22,31 @@ Braze ダッシュボードを通じてプッシュ通知を作成するとき�
 {% tab OBJECTIVE-C %}
 
 ```objc
+// For iOS 16.0+
+UNUserNotificationCenter *center = [UNUserNotificationCenter currentNotificationCenter];
+[center setBadgeCount:0 withCompletionHandler:^(NSError * _Nullable error) {
+    if (error != nil) {
+        // Handle errors
+    }
+}];
+
+// Prior to iOS 16. Deprecated in iOS 17+.
 [UIApplication sharedApplication].applicationIconBadgeNumber = 0;
 ```
 
 {% endtab %}
-{% tab swift %}
+{% tab 迅速 %}
 
 ```swift
+// For iOS 16.0+
+let center = UNUserNotificationCenter.current()
+do {
+  try await center.setBadgeCount(0)
+} catch {
+  // Handle errors
+}
+
+// Prior to iOS 16. Deprecated in iOS 17+.
 UIApplication.shared.applicationIconBadgeNumber = 0
 ```
 

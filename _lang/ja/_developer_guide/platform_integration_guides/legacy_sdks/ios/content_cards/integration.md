@@ -12,7 +12,7 @@ noindex: true
 
 {% multi_lang_include deprecations/objective-c.md %}
 
-# コンテンツカード統合
+# コンテンツカードの統合
 
 ## コンテンツカードデータモデル
 
@@ -43,7 +43,7 @@ noindex: true
 }
 ```
 {% endtab %}
-{% tab swift %}
+{% tab 迅速 %}
 ```swift
 // Subscribe to content card updates
 // Note: you should remove the observer where appropriate
@@ -75,55 +75,55 @@ Braze には、バナー、キャプション付き画像、クラシックの3�
 
 |プロパティ|説明|
 |---|---|
-| `idString` | (読み取り専用) Braze によって設定されたカードの ID。|
-| `viewed` | このプロパティは、ユーザーがカードを閲覧したかどうかを反映します。|
-| `created` | (読み取り専用) このプロパティは、Braze からのカード作成時刻の UNIX タイムスタンプです。|
-| `expiresAt` | (読み取り専用) このプロパティは、カードの有効期限を示す UNIX タイムスタンプです。|
-| `dismissible` | このプロパティは、ユーザーがカードを消去できるかどうかを反映します。|
-| `pinned` | このプロパティは、カードがダッシュボードで「固定」されるように設定されているかどうかを反映します。|
-| `dismissed` | このプロパティは、ユーザーがカードを消去したかどうかを反映します。|
-| `url` | カードをクリックした後に開かれる URL。HTTP (s) URL でもプロトコル URL でもかまいません。|
-| `openURLInWebView` | このプロパティは、URL をアプリ内で開くか、外部 Web ブラウザーで開くかを決定します。|
-| `extras`| `NSString` 値のオプションの `NSDictionary`。|
+|`idString` | (参照のみ) Brazeで設定されたカードのID。 |
+| `viewed` | このプロパティは、ユーザーがカードを表示したかどうかを反映します。|
+| `created` | (参照のみ) このプロパティは、Braze からのカードの作成時刻のUNIX タイムスタンプです。 |
+| `expiresAt` | (参照のみ)このプロパティは、カードの有効期限のUNIX タイムスタンプです。|
+| `dismissible` | このプロパティは、ユーザーがカードを削除できるかどうかを反映します。|
+| `pinned` | このプロパティは、カードがダッシュボードで"pinned"として設定されているかどうかを反映します。|
+| `dismissed` | このプロパティは、ユーザーがカードを削除したかどうかを反映します。|
+| `url` | カードをクリックした後に開封されるURL。これは、HTTP URL またはプロトコルURL にすることができます。|
+| `openURLInWebView` | このプロパティは、URL をアプリ内で開封するか、外部Web ブラウザーで開封するかを決定します。|
+| `extras`| `NSString` 値のオプションの`NSDictionary`。|
 {: .reset-td-br-1 .reset-td-br-2}
 
 ### バナーコンテンツカードのプロパティ - ABKBannerContentCard
 
 |プロパティ|説明|
 |---|---|
-| `image` | このプロパティはカードの画像の URL です。|
-| `imageAspectRatio` | このプロパティはカードの画像の縦横比であり、画像の読み込みが完了する前のヒントとして機能します。状況によってはプロパティが提供されない場合がありますのでご注意ください。|
+| `image` | このプロパティは、カードの"画像のURL です。|
+| `imageAspectRatio` | このプロパティは、カードの"画像の縦横比であり、"画像 読み込むが完了するまでのヒントとして機能します。ただし、場合によってはプロパティが供給されないことがあります。 |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ### キャプション付き画像コンテンツカードのプロパティ-ABKCaptionedImageCard
 
 |プロパティ|説明|
 |---|---|
-| `image` | このプロパティはカードの画像の URL です。|
-| `imageAspectRatio` |このプロパティはカードの画像の縦横比です。|
-`title`| |カードのタイトルテキスト。|
-| `cardDescription` | カードの本文テキスト。|
-| `domain` |プロパティ URL のリンクテキスト (@ "blog.braze.com" など)。カードの UI に表示して、カードをクリックしたときのアクション/方向を示すことができます。|
+| `image` | このプロパティは、カードの"画像のURL です。|
+| `imageAspectRatio` | このプロパティは、カードの"画像の縦横比です。|
+| `title` | カードのタイトルテキスト。|
+| `cardDescription` | カードの本文。|
+| `domain` | @"blog.braze.com" のようなプロパティ URL のリンクテキスト。カードのUI に表示され、カードをクリックしたアクション/方向を示すことができます。|
 {: .reset-td-br-1 .reset-td-br-2}
 
 ### クラシックコンテンツカードのプロパティ - ABKClassicContentCard
 
 |プロパティ|説明|
 |---|---|
-| `image` | (オプション) このプロパティはカードの画像のURLです。|
-| `title` | カードのタイトルテキスト。|
-| `cardDescription` | カードの本文テキスト。|
-| `domain` | プロパティ URL のリンクテキスト (@ "blog.braze.com" など)。カードの UI に表示して、カードをクリックしたときのアクションと方向を示すことができます。|
+| `image` | (オプション) このプロパティは、カードの"画像のURL です。|
+| `title` | カードのタイトルテキスト。 |
+| `cardDescription` | カードの本文。 |
+| `domain` | @"blog.braze.com" のようなプロパティ URL のリンクテキスト。カードのUI に表示され、カードをクリックするアクションと方向を示すことができます。 |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## カードメソッド
 
 |方法|説明|
 |---|---|
-| `logContentCardImpression` | 特定のカードのインプレッションを Braze に手動で記録します。|
-| `logContentCardClicked` | 特定のカードのクリックを Braze に手動で記録します。SDK は、カードに有効な値の `url` プロパティがある場合にのみカードクリックを記録します。|
-| `logContentCardDismissed` | 特定のカードの消去を手動で Braze に記録します。SDK は、カードの `dismissed` プロパティがまだ `true` に設定されていない場合にのみ、カードの消去を記録します。|
-| `isControlCard` | カードが A/B テストのコントロールカードであるかどうかを判断します。|
+| `logContentCardImpression` | 特定のカードのBrazeへのインプレッションを手動で記録します。 |
+| `logContentCardClicked` | 特定のカードのBrazeを手動で記録します。SDK は、カードに有効な値の `url` プロパティがある場合にのみカードクリックを記録します。 |
+| `logContentCardDismissed` | 特定のカードのBrazeに、手動で削除を記録します。カードの`dismissed` プロパティがまだ`true` に設定されていない場合にのみ、SDKはカードの削除を記録します。 |
+| `isControlCard` | カードがA/B試験の制御カードかどうかを決定する。 |
 {: .reset-td-br-1 .reset-td-br-2}
 
 詳細については、[クラスリファレンスドキュメント](https://appboy.github.io/appboy-ios-sdk/docs/interface_a_b_k_content_card.html)を参照してください。
@@ -147,7 +147,7 @@ contentCards.disableUnreadIndicator = YES;
 ```
 
 {% endtab %}
-{% tab swift %}
+{% tab 迅速 %}
 
 ```swift
 let contentCards = ABKContentCardsTableViewController()
@@ -165,7 +165,7 @@ navigationController?.pushViewController(contentCards, animated: true)
 
 ### モーダルコンテキスト
 
-このモーダルは、ビューコントローラをモーダルビューに表示するために使用され、上部にナビゲーションバー、バーの横に [**完了**] ボタンが表示されます。
+このモーダルは、ビューコントローラをモーダルビューに表示するために使用され、上部にナビゲーションバー、バーの横に \[**完了**] ボタンが表示されます。
 
 {% tabs %}
 {% tab OBJECTIVE-C %}
@@ -178,7 +178,7 @@ contentCards.contentCardsViewController.disableUnreadIndicator = YES;
 ```
 
 {% endtab %}
-{% tab swift %}
+{% tab 迅速 %}
 
 ```swift
 let contentCards = ABKContentCardsViewController()

@@ -1,112 +1,179 @@
 ---
 nav_title: 分析
-article_title: Analytics for Xamarin
+article_title: キサマリンの分析
 platform: 
   - Xamarin
   - iOS
   - Android
 page_order: 4
-description: "この記事では、Xamarin プラットフォームの iOS、Android、FireOS 分析について説明します。"
+description: "ここでは、ザマリンプラットフォームのiOS、Android、およびFireOS 分析について説明します。"
 
 ---
  
-# Xaraminアナリティクス
+# キサマリン分析
 
-> この記事では、Xamarin の分析を処理する方法について説明します。
+> ザマリンプラットフォームの分析を生成および確認する方法について説明します。
 
-## ユーザー ID の設定
+## セッショントラッキング
+
+Braze SDK では、ユーザーエンゲージメントやユーザーの理解に不可欠なその他の分析を計算するため、Braze ダッシュボードで使用されるセッションデータがレポートされます。次のセッションセマンティクスに基づいて、このSDKは「スタートセッション」と「クローズセッション」データポイントを生成します。これは、Braze ダッシュボード内で表示可能なセッションの長さと数を考慮します。
+
+ユーザー ID を設定したり、セッションを開始したりするには、ユーザー ID パラメーターを受け取る `ChangeUser` メソッドを使用します。
 
 {% tabs %}
 {% tab Android %}
 ```csharp
-Braze.getInstance(context).ChangeUser("YOUR_USER_ID");
+Braze.GetInstance(this).ChangeUser("user_id");
 ```
 
-ユーザー ID をいつ、どのように設定および変更するかについての詳細な説明については、 [Android 統合手順]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/setting_user_ids/) を参照してください。
+いつ、どのようにユーザー IDを設定、変更するかについて詳しくは、[Android積分命令]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/setting_user_ids/)を参照してください。
 
 {% endtab %}
 {% tab iOS %}
 ```csharp
-// C#
-Appboy.SharedInstance().ChangeUser("YOUR_USER_ID");
+App.braze?.ChangeUser("user_id");
 ```
 
-ユーザーIDをいつ、どのように設定および変更するかについての詳細な説明については、 [iOS統合手順]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/setting_user_ids/) を参照してください。
+ユーザー IDの設定および変更方法の詳細については、[iOS 統合手順]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/setting_user_ids/)を参照してください。
+
 {% endtab %}
 {% endtabs %}
 
-## カスタムイベントのトラッキング
+## カスタムイベントのログ記録
+
+`LogCustomEvent` を使用してBrazeでカスタムイベントs を録音し、アプリの使用パターンの詳細を確認したり、ダッシュボードのアクションs でユーザーs をSegmentしたりできます。
+
 {% tabs %}
 {% tab Android %}
 ```csharp
-Braze.getInstance(context).LogCustomEvent("YOUR_EVENT_NAME");
+Braze.GetInstance(this).LogCustomEvent("event_name");
 ```
 
-イベント トラッキングのおすすめの方法とインターフェースの詳細については、 [Android の統合手順]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/) をご覧ください。
+イベント"トラッキングのベストプラクティスとインターフェイスs の詳細な説明については、[Androidインテグレーション命令]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/tracking_custom_events/)を参照してください。
+
 {% endtab %}
 {% tab iOS %}
 ```csharp
-// C#
-Appboy.SharedInstance ().LogCustomEvent ("YOUR_EVENT_NAME");
+App.braze?.LogCustomEvent("event_name");
 ```
 
-**実装例** - `logCustomEvent` [TestApp.XamariniOS](https://github.com/braze-inc/braze-xamarin-sdk/tree/master/appboy-component/samples/ios-unified/TestApp.XamariniOS) サンプル アプリケーション内で`AppboySampleViewController.cs`使用されます。
+イベント"トラッキングのベストプラクティスとインターフェイスの詳細については、[iOS統合手順]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/tracking_custom_events/)を参照してください。
 
-イベントトラッキングのベストプラクティスとインターフェースの詳細については、 [iOS統合手順]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/tracking_custom_events/) を参照してください。
 {% endtab %}
 {% endtabs %}
 
 ## 購入のロギング
+
+`LogPurchase` を使用してアプリ内の購買を記録し、収益を経時的に、また収益源間で追跡し、ユーザーs をその生涯価値でSegmentします。
+
+Braze は複数の通貨での購入に対応しています。米ドル以外の通貨でレポートする購入は、レポートされた日付の為替レートに基づいて米ドル単位でダッシュボードに表示されます。
+
 {% tabs %}
 {% tab Android %}
 ```csharp
-Braze.getInstance(context).LogPurchase("product_id", 100);
+Braze.GetInstance(this).LogPurchase("product_id", "USD", new Java.Math.BigDecimal(3.50));
 ```
 
-収益トラッキングのおすすめの方法とインターフェースの詳細については、 [Android の統合手順]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/logging_purchases/#logging-purchases=) をご覧ください。
+収益"トラッキングのベストプラクティスとインターフェイスsの詳細な説明については、[Androidインテグレーションの手順]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/logging_purchases/)を参照してください。
+
 {% endtab %}
 {% tab iOS %}
 ```csharp
-// C#
-Appboy.SharedInstance ().LogPurchase ("product_id", "USD", new NSDecimalNumber("10"));
+App.braze?.LogPurchase("product_id", "USD", 3.50);
 ```
 
-**実装例** \- サンプル・アプリケーションの `EventsAndPurchasesButtonHandler` メソッド `AppboySampleViewController.cs`でユーザー・プロパティが設定されているのを、 .
+収益"トラッキングのベストプラクティスとインターフェイスの詳細については、[iOS統合手順]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/logging_purchases/)を参照してください。
 
-収益トラッキングのベストプラクティスとインターフェースの詳細については、 [iOS統合手順]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/logging_purchases/) を参照してください。
 {% endtab %}
 {% endtabs %}
 
 ### 注文レベルで購入を記録する
+
 商品レベルではなく、注文レベルで購入を記録したい場合、注文名または注文カテゴリを `product_id` として使用できます。詳細については、[購入オブジェクトの仕様]({{site.baseurl}}/api/objects_filters/purchase_object/#product-id-naming-conventions)を参照してください。 
 
-## カスタム属性の設定
+### 予約済みのキー
+
+以下のキーは予約であり、**cannot**は購買物件として使用できます。
+
+- `time`
+- `product_id`
+- `quantity`
+- `event_name`
+- `price`
+- `currency`
+
+## カスタム属性を記録する
+
+Braze には、ユーザーに属性を割り当てるメソッドが用意されています。ダッシュボード上のこれらの属性sに従って、ユーザーsをフィルターおよびSegmentすることができます。
+
+### デフォルトのユーザー属性
+
+Braze が自動収集したユーザー属性を割り当てるには、SDK に付属のセッターメソッドを使用します。たとえば、ユーザーの名を設定できます。
+
 {% tabs %}
-{% tab %}
+{% tab Android %}
 ```csharp
-Braze.getInstance(context).CurrentUser.SetFirstName("FirstName");
+Braze.GetInstance(this).CurrentUser.SetFirstName("first_name");
 ```
 
-属性トラッキングのおすすめの方法とインターフェースの詳細については、 [Android の統合手順]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/setting_custom_attributes/) をご覧ください。
 {% endtab %}
 {% tab iOS %}
 
 ```csharp
-// C#
-Appboy.SharedInstance ().User.FirstName = "YOUR_NAME";
+App.braze?.User.SetFirstName("first_name");
 ```
 
-**実装例** \- サンプル・アプリケーションの `UserPropertyButtonHandler` メソッド `AppboySampleViewController.cs`でユーザー・プロパティが設定されているのを、 .
+{% endtab %}
+{% endtabs %}
 
-属性トラッキングのベストプラクティスとインターフェースの詳細な説明については、 [iOS統合手順]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/setting_custom_attributes/) を参照してください。
+以下の属性がサポートされています。
+
+- 名
+- 姓
+- 性別
+- 生年月日
+- 市区町村
+- 国
+- 電話番号
+- メール
+
+### カスタムユーザー属性
+
+Braze では、事前に定義されたユーザー 属性方法に加えて、`SetCustomUserAttribute` を使用してアプリのアプリケーションからデータを追跡するカスタム属性も提供されています。
+
+{% tabs %}
+{% tab Android %}
+```csharp
+Braze.GetInstance(this).CurrentUser.SetCustomUserAttribute("custom_attribute_key", true);
+```
+
+属性 "トラッキングのベストプラクティスとインターフェイス sの詳細な説明については、[Androidインテグレーション命令]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/setting_custom_attributes/)を参照してください。
+
+{% endtab %}
+{% tab iOS %}
+
+```csharp
+App.braze?.User.SetCustomAttributeWithKey("custom_attribute_key", true);
+```
+
+属性 "トラッキングのベストプラクティスとインターフェイスの詳細については、[iOS統合手順]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/setting_custom_attributes/)を参照してください。
+
 {% endtab %}
 {% endtabs %}
 
 ## 位置情報の追跡
 
-- Android :位置追跡をサポートする方法については、 [Android 統合手順][2] を参照してください。
-- iOS:位置追跡をサポートする方法については、 [バックグラウンドでの位置情報を使用した][11] Xamarin のチュートリアルと [iOS 統合の手順][12] を参照してください。
+ログと"トラッキング 分析の例については、[ Android MAUI][4] および[iOS MAUI][5] のサンプルアプリを参照してください。
 
-[2]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/location_tracking/#location-tracking
-[11]: http://developer.xamarin.com/guides/cross-platform/application_fundamentals/backgrounding/part_4_ios_backgrounding_walkthroughs/location_walkthrough/
-[12]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/advanced_use_cases/locations_and_geofences/
+{% tabs %}
+{% tab アンドロイド %}
+詳細については、[Android積分命令]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/location_tracking/)を参照してください。
+{% endtab %}
+
+{% tab イオス %}
+ローカル"トラッキングに対応するには、[iOS を参照してください。バックグラウンドの場所](http://developer.xamarin.com/guides/cross-platform/application_fundamentals/backgrounding/part_4_ios_backgrounding_walkthroughs/location_walkthrough/)と[iOS統合命令]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/advanced_use_cases/locations_and_geofences/)を使用します。
+{% endtab %}
+{% endtabs %}
+
+[4]: https://github.com/braze-inc/braze-xamarin-sdk/blob/master/appboy-component/samples/android-net-maui/BrazeAndroidMauiSampleApp/BrazeAndroidMauiSampleApp/MainActivity.cs
+[5]: https://github.com/braze-inc/braze-xamarin-sdk/blob/master/appboy-component/samples/ios-net-maui/BrazeiOSMauiSampleApp/BrazeiOSMauiSampleApp/MainPage.xaml.cs

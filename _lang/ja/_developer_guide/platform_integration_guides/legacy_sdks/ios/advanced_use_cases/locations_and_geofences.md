@@ -23,11 +23,11 @@ iOS のジオフェンスをサポートするには:
 iOS 14 の時点では、おおよその位置情報の提供許可を選択しているユーザーの場合、ジオフェンスが確実に機能しないことがあります。
 {% endalert %}
 
-## ステップ 1:バックグラウンドのプッシュを有効にする
+## ステップ1:バックグラウンドのプッシュを有効にする
 
 ジオフェンスの同期戦略を最大限に活用するには、標準のプッシュ統合を完了することに加えて、[バックグラウンドプッシュ][6]を有効にする必要があります。
 
-## ステップ 2:ジオフェンスを有効にする
+## ステップ2:ジオフェンスを有効にする
 
 デフォルトでは、ジオフェンスは位置情報の自動収集が有効かどうかに基づいて有効になります。ジオフェンスを有効にするには、`Info.plist` ファイルを使用します。`Braze` ディクショナリを `Info.plist` ファイルに追加します。`Braze` ディクショナリ内にブール値の `EnableGeofences` サブエントリを追加し、値を `YES` に設定します。なお、Braze iOS SDK v4.0.2 より前のバージョンでは、`Braze` の代わりにディクショナリキー `Appboy` を使用する必要があります。
 
@@ -44,7 +44,7 @@ iOS 14 の時点では、おおよその位置情報の提供許可を選択し�
 ```
 
 {% endtab %}
-{% tab swift %}
+{% tab SWIFT %}
 
 ```swift
 Appboy.start(withApiKey: "YOUR-API-KEY",
@@ -56,16 +56,16 @@ Appboy.start(withApiKey: "YOUR-API-KEY",
 {% endtab %}
 {% endtabs %}
 
-## ステップ 3:Braze のバックグラウンドプッシュを確認する
+## ステップ3:Braze のバックグラウンドプッシュを確認する
 
 Braze では、バックグラウンドプッシュ通知を使用してジオフェンスがデバイスと同期されます。[iOS のカスタマイズ][7]に関する記事に従って、Braze のジオフェンス同期通知を受信したときにアプリケーションで不要なアクションが実行されないようにします。
 
-## ステップ 4:NSLocationAlwaysUsageDescription を Info.plist に追加する
+## ステップ 4:NSLocationAlwaysUsageDescriptionをInfo.plistに追加します
 
 アプリケーションで位置情報を追跡する必要がある理由の説明を含んだ `String` 値を使用して、キー `NSLocationAlwaysUsageDescription` および `NSLocationAlwaysAndWhenInUseUsageDescription` を `info.plist` に追加します。iOS 11 以降では両方のキーが必要です。
 この説明は、システムの位置情報プロンプトで権限がリクエストされ、ユーザーに位置情報の追跡の利点を明確に説明する必要がある場合に表示されます。
 
-## ステップ 5:ユーザーに権限をリクエストする
+## ステップ5:ユーザーに権限をリクエストする
 
 ジオフェンス機能は、位置情報に対する権限 `Always` が付与されている場合にのみ機能します。
 
@@ -80,7 +80,7 @@ CLLocationManager *locationManager = [[CLLocationManager alloc] init];
 ```
 
 {% endtab %}
-{% tab swift %}
+{% tab SWIFT %}
 
 ```swift
 var locationManager = CLLocationManager()
@@ -98,11 +98,11 @@ iOS では、1 つのアプリに保存できるジオフェンスは 20 個ま�
 
 ### 場所ページからジオフェンスを有効にする
 
-![The geofence options on the Braze locations page.]({% image_buster /assets/img_archive/enable-geofences-locations-page.png %})
+![Brazeの位置情報ページのジオフェンスオプション]({% image_buster /assets/img_archive/enable-geofences-locations-page.png %})
 
 ### 設定ページからジオフェンスを有効にする
 
-![The geofence checkbox located on the Braze settings pages.]({% image_buster /assets/img_archive/enable-geofences-app-settings-page.png %})
+![Brazeの設定ページにあるジオフェンスのチェックボックス]({% image_buster /assets/img_archive/enable-geofences-app-settings-page.png %})
 
 ## 自動ジオフェンスリクエストを無効にする
 
@@ -121,7 +121,7 @@ iOS SDK バージョン 3.21.3 以降では、ジオフェンスが自動的に�
 ```
 
 {% endtab %}
-{% tab swift %}
+{% tab SWIFT %}
 
 ```swift
 Appboy.start(withApiKey: "YOUR-API-KEY",
@@ -150,7 +150,7 @@ SDK でレポートされる位置情報をコントロールして、最も関�
 ```
 
 {% endtab %}
-{% tab swift %}
+{% tab SWIFT %}
 
 ```swift
 Appboy.sharedInstance()?.requestGeofences(withLongitude: longitude, latitude: latitude)

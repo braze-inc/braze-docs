@@ -15,7 +15,7 @@ noindex: true
 # バッジ
 
 {% alert note %}
-ニュースフィードは非推奨になります。Braze では、ニュースフィードツールを使用しているお客様に、より柔軟でカスタマイズ可能で信頼性の高いコンテンツカードメッセージングチャネルに移行することをお勧めします。詳細については、[移行ガイド]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/)をご覧ください。
+ニュースフィードは非推奨になります。Braze では、News Feed ツールを使用するお客様は、コンテンツカードメッセージングチャネルに移動することを推奨しています。これは、より柔軟でカスタマイズ可能で、信頼性が高いチャネルです。詳しくは[マイグレーションガイド]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/)をご覧ください。
 {% endalert %}
 
 ## 未読のニュースフィードカードカウントのリクエスト
@@ -27,10 +27,10 @@ noindex: true
 - 現在のユーザーの未読のニュースフィードカード
 - 現在のユーザーが閲覧できるニュースフィードカードの合計数
 
-[\`ABKFeedController\`][44] の次のメソッド宣言でこれについて詳しく説明します。
+\[`ABKFeedController`][44] の以下のメソッド宣言で、これについて詳しく説明します。
 
-\`\`\`
-\- (NSInteger)unreadCardCountForCategories:(ABKCardCategory)categories;
+```
+- (NSInteger)unreadCardCountForCategories:(ABKCardCategory)categories;
 /*
 This method returns the number of currently active Content Cards that have not been viewed.
 A "view" happens when a card becomes visible in the Content Cards view. This differentiates between cards that are off-screen in the scrolling view and those which are on-screen; when a card scrolls onto the screen, it's counted as viewed.
@@ -39,10 +39,10 @@ Cards are counted only once, even if they appear in multiple Content Cards views
 */
 
 - (NSInteger)cardCountForCategories:(ABKCardCategory)categories;
-/*
+/* 
 This method returns the total number of currently active Content Cards. Cards are counted only once, even if they appear in multiple Content Cards views.
-*/
-\`\`\`
+ */
+ ```
 
 ## ニュースフィードの未読項目の数をアプリバッジ数に表示する
 
@@ -58,7 +58,7 @@ This method returns the total number of currently active Content Cards. Cards ar
 ```
 
 {% endtab %}
-{% tab swift %}
+{% tab 迅速 %}
 
 ```swift
 func applicationDidEnterBackground(_ application: UIApplication)
@@ -77,7 +77,7 @@ func applicationDidEnterBackground(_ application: UIApplication)
 ```
 
 {% endtab %}
-{% tab swift %}
+{% tab 迅速 %}
 
 ```swift
 UIApplication.shared.applicationIconBadgeNumber = Appboy.sharedInstance()?.feedController.unreadCardCount(forCategories: ABKCardCategory.all) ?? 0
@@ -96,7 +96,7 @@ UIApplication.shared.applicationIconBadgeNumber = Appboy.sharedInstance()?.feedC
 ```
 
 {% endtab %}
-{% tab swift %}
+{% tab 迅速 %}
 
 ```swift
 UIApplication.shared.applicationIconBadgeNumber = 0
@@ -107,7 +107,7 @@ UIApplication.shared.applicationIconBadgeNumber = 0
 
 詳細については、`Appboy.h` の[ヘッダーファイル][15]を参照してください。
 
-[15]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/include/Appboy.h "Appboy.h ヘッダー ファイル"
+[15]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/include/Appboy.h "Appboy.h ヘッダファイル"
 [42]: {% image_buster /assets/img_archive/badge_example.png %} 「バッジの例」
-[44]: http://appboy.github.io/appboy-ios-sdk/docs/interface_a_b_k_feed_controller.html "abk feed controller"
+[44]: http://appboy.github.io/appboy-ios-sdk/docs/interface_a_b_k_feed_controller.html "abk フィード コントロールler"
 [45]: {% image_buster /assets/img_archive/newsfeed_badges.png %}

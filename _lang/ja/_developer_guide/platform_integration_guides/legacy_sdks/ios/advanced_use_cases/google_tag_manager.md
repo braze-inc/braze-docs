@@ -14,7 +14,7 @@ noindex: true
 
 ## SDK の初期化{#initializing-ios-google-tag-provider}
 
-Braze iOS SDK は、[Google Tag Manager][5] 内で設定されたタグによって初期化および制御できます。
+Braze iOS SDKは、Google Tag Manager][5]内で設定されたタグによって初期化および制御できます。
 
 Google Tag Manager を使用する前に、まず [SDK の初期設定][1]を行ってください。
 
@@ -28,7 +28,7 @@ Google Tag Manager を使用する前に、まず [SDK の初期設定][1]を行
 
 最初に、`played song` である「イベント名」を検索するトリガーを作成します
 
-![「eventName」が「played song」である場合に一部のイベントに対してトリガーするよう設定された Google Tag Manager のカスタムトリガー。][3]
+![Google Tag Manager のカスタムトリガーは、「イベント名」が「再生された曲」と等しい場合にいくつかのイベントをトリガーするように設定されています。][3]
 
 次に、新しいタグ (「Function Call」) を作成し、この記事で後述する[カスタムタグプロバイダー](#adding-ios-google-tag-provider)のクラスパスを入力します。 
 
@@ -42,13 +42,13 @@ Google Tag Manager を使用する前に、まず [SDK の初期設定][1]を行
 この例のカスタムタグプロバイダーは、これらのキーを使用して、Google Tag Manager からのデータ受信時に実行するアクションと Braze に送信するイベント名を決定します。
 {% endalert %}
 
-![classpath フィールドと、キーと値のペアフィールドを含む Google Tag Manager のタグ。このタグは、事前に作成した「played song」トリガーによってトリガーするよう設定されている。][4]
+![Google Tag Manager のタグには、クラスパスとキーと値のペアフィールドがあります。このタグは、以前に作成された「再生された曲」トリガーでトリガーされるように設定されています。][4]
 
 また、追加のキーと値のペア引数をタグに含めることもできます。この引数は、カスタムイベントプロパティとして Braze に送信されます。`eventName` および `actionType` は、カスタムイベントプロパティで無視されません。次のサンプルタグでは、`genre` を渡します。これは、Google Tag Manager でタグ変数を使用して定義されており、アプリでロギングしたカスタムイベントから取得されます。
 
 `genre` イベントプロパティが、「Firebase - Event Parameter」変数として Google Tag Manager に送信されます。Google Tag Manager for iOS では、Firebase がデータレイヤーとして使用されるためです。
 
-![「genre」が「Braze - Played Song Event」タグのイベントパラメーターとして追加される Google Tag Manager の変数。][6]
+![Google Tag Managerの変数で、「ジャンル」が「Braze - Played Song Event」タグのイベントパラメータとして追加されます。][6]
 
 最後に、ユーザーがアプリで曲を再生すると、タグのトリガー名 `played song` と一致する Firebase 分析イベント名を使用し、Firebase と Google Tag Manager を介してイベントがロギングされます。
 
@@ -101,7 +101,7 @@ NSDictionary *parameters = @{@"externalUserId" : userId};
 
 Google Tag Manager がアプリにインストールされたら、カスタムタグプロバイダーを追加し、Google Tag Manager 内で設定したタグに基づいて Braze SDK メソッドを呼び出します。 
 
-ファイルに「クラスパス」を必ず書き留めておいてください。[Google Tag Manager][5] コンソールでタグを設定する際に、これを入力します。
+ファイルへの「クラスパス」を必ずメモしておいてください。これは、\[Google Tag Manager][5] コンソールでタグを設定する際に入力するものです。
 
 この例は、カスタムタグプロバイダーを構築する多くの方法の 1 つを示しています。ここでは、GTM タグから送信されたキーと値のペア `actionType` に基づいて、呼び出す Braze SDK メソッドを決定します。
 
@@ -112,14 +112,14 @@ Google Tag Manager がアプリにインストールされたら、カスタム�
 {% tabs %}
 {% tab OBJECTIVE-C %}
 
-\`\`\`obj-c
+```obj-c
 @import Firebase;
 @import GoogleTagManager;
 
-@interface BrazeGTMTagManager :NSObject <TAGCustomFunction>
+@interface BrazeGTMTagManager : NSObject <TAGCustomFunction>
 
 @end
-\`\`\`
+```
 
 {% endtab %}
 {% endtabs %}
@@ -129,96 +129,96 @@ Google Tag Manager がアプリにインストールされたら、カスタム�
 {% tabs %}
 {% tab OBJECTIVE-C %}
 
-\`\`\`obj-c
-\#import <Foundation/Foundation.h>
+```obj-c
+#import <Foundation/Foundation.h>
 #import "BrazeGTMTagManager.h"
 #import "Appboy-iOS-SDK/AppboyKit.h"
 
-static NSString \*const ActionTypeKey = @"actionType";
+static NSString *const ActionTypeKey = @"actionType";
 
-// カスタムイベント
-static NSString \*const LogEventActionType = @"logEvent";
-static NSString \*const LogEventEventName = @"eventName";
+// Custom Events
+static NSString *const LogEventActionType = @"logEvent";
+static NSString *const LogEventEventName = @"eventName";
 
-// カスタム属性
-static NSString \*const CustomAttributeActionType = @"customAttribute";
-static NSString \*const CustomAttributeKey = @"customAttributeKey";
-static NSString \*const CustomAttributeValueKey = @"customAttributeValue";
+// Custom Attributes
+static NSString *const CustomAttributeActionType = @"customAttribute";
+static NSString *const CustomAttributeKey = @"customAttributeKey";
+static NSString *const CustomAttributeValueKey = @"customAttributeValue";
 
-// ユーザーを変更
-static NSString \*const ChangeUserActionType = @"changeUser";
-static NSString \*const ChangeUserExternalUserId = @"externalUserId";
+// Change User
+static NSString *const ChangeUserActionType = @"changeUser";
+static NSString *const ChangeUserExternalUserId = @"externalUserId";
 
 @implementation BrazeGTMTagManager
 
-- (NSObject \*)executeWithParameters:(NSDictionary \*)parameters {
-  NSMutableDictionary \*mutableParameters = [parameters mutableCopy];
+- (NSObject *)executeWithParameters:(NSDictionary *)parameters {
+  NSMutableDictionary *mutableParameters = [parameters mutableCopy];
   
-  NSString \*actionType = mutableParameters[ActionTypeKey];
+  NSString *actionType = mutableParameters[ActionTypeKey];
   if (!actionType) {
-    NSLog(@"There is no Braze action type key in this call.Doing nothing.", nil);
+    NSLog(@"There is no Braze action type key in this call. Doing nothing.", nil);
     return nil;
   }
   
   [mutableParameters removeObjectForKey:ActionTypeKey];
   
   if ([actionType isEqualToString:LogEventActionType]) {
-[self logEvent:mutableParameters];
-} else if ([actionType isEqualToString:CustomAttributeActionType]) {
-[self logCustomAttribute:mutableParameters];
-} else if ([actionType isEqualToString:ChangeUserActionType]) {
-[self changeUser:mutableParameters];
-} else {
-    NSLog(@"Invalid action type.Doing nothing.");
+    [self logEvent:mutableParameters];
+  } else if ([actionType isEqualToString:CustomAttributeActionType]) {
+    [self logCustomAttribute:mutableParameters];
+  } else if ([actionType isEqualToString:ChangeUserActionType]) {
+    [self changeUser:mutableParameters];
+  } else {
+    NSLog(@"Invalid action type. Doing nothing.");
   }
-    return nil;
-  }
-
-- (void)logEvent:(NSMutableDictionary \*)parameters {
-NSString *eventName = parameters[LogEventEventName];
-[parameters removeObjectForKey:LogEventEventName];
-[[Appboy sharedInstance] logCustomEvent:eventName withProperties:parameters];
+  return nil;
 }
 
-- (void)logCustomAttribute:(NSMutableDictionary \*)parameters {
-  NSString \*customAttributeKey = parameters[CustomAttributeKey];
+- (void)logEvent:(NSMutableDictionary *)parameters {
+  NSString *eventName = parameters[LogEventEventName];
+  [parameters removeObjectForKey:LogEventEventName];
+  [[Appboy sharedInstance] logCustomEvent:eventName withProperties:parameters];
+}
+
+- (void)logCustomAttribute:(NSMutableDictionary *)parameters {
+  NSString *customAttributeKey = parameters[CustomAttributeKey];
   id customAttributeValue = parameters[CustomAttributeValueKey];
   
   if ([customAttributeValue isKindOfClass:[NSString class]]) {
-[[Appboy sharedInstance].user setCustomAttributeWithKey:customAttributeKey
-andStringValue:customAttributeValue];
-} else if ([customAttributeValue isKindOfClass:[NSDate class]]) {
-[[Appboy sharedInstance].user setCustomAttributeWithKey:customAttributeKey
-andDateValue:customAttributeValue];
-} else if ([customAttributeValue isKindOfClass:[NSNumber class]]) {
-if (strcmp([customAttributeValue objCType], [@(YES) objCType]) == 0) {
-[[Appboy sharedInstance].user setCustomAttributeWithKey:customAttributeKey
-andBOOLValue:[(NSNumber *)customAttributeValue boolValue]];
-} else if (strcmp([customAttributeValue objCType], @encode(short)) == 0 ||
-    strcmp([customAttributeValue objCType], @encode(int)) == 0 ||
-                                             strcmp([customAttributeValue objCType], @encode(long)) == 0) {
-[[Appboy sharedInstance].user setCustomAttributeWithKey:customAttributeKey
-andIntegerValue:[(NSNumber *)customAttributeValue integerValue]];
-} else if (strcmp([customAttributeValue objCType], @encode(float)) == 0 ||
-  strcmp([customAttributeValue objCType], @encode(double)) == 0) {
-[[Appboy sharedInstance].user setCustomAttributeWithKey:customAttributeKey
-andDoubleValue:[(NSNumber *)customAttributeValue doubleValue]];
-} else {
-NSLog(@"Could not map NSNumber value to Appboy custom attribute:%@", customAttributeValue);
+    [[Appboy sharedInstance].user setCustomAttributeWithKey:customAttributeKey
+                                             andStringValue:customAttributeValue];
+  } else if ([customAttributeValue isKindOfClass:[NSDate class]]) {
+    [[Appboy sharedInstance].user setCustomAttributeWithKey:customAttributeKey
+                                               andDateValue:customAttributeValue];
+  } else if ([customAttributeValue isKindOfClass:[NSNumber class]]) {
+    if (strcmp([customAttributeValue objCType], [@(YES) objCType]) == 0) {
+      [[Appboy sharedInstance].user setCustomAttributeWithKey:customAttributeKey
+                                                 andBOOLValue:[(NSNumber *)customAttributeValue boolValue]];
+    } else if (strcmp([customAttributeValue objCType], @encode(short)) == 0 ||
+               strcmp([customAttributeValue objCType], @encode(int)) == 0 ||
+               strcmp([customAttributeValue objCType], @encode(long)) == 0) {
+      [[Appboy sharedInstance].user setCustomAttributeWithKey:customAttributeKey
+                                              andIntegerValue:[(NSNumber *)customAttributeValue integerValue]];
+    } else if (strcmp([customAttributeValue objCType], @encode(float)) == 0 ||
+               strcmp([customAttributeValue objCType], @encode(double)) == 0) {
+      [[Appboy sharedInstance].user setCustomAttributeWithKey:customAttributeKey
+                                               andDoubleValue:[(NSNumber *)customAttributeValue doubleValue]];
+    } else {
+      NSLog(@"Could not map NSNumber value to Appboy custom attribute:%@", customAttributeValue);
+    }
+  } else if ([customAttributeValue isKindOfClass:[NSArray class]]) {
+    [[Appboy sharedInstance].user setCustomAttributeArrayWithKey:customAttributeKey
+                                                           array:customAttributeValue];
+  }
 }
-    } else if ([customAttributeValue isKindOfClass:[NSArray class]]) {
-[[Appboy sharedInstance].user setCustomAttributeArrayWithKey:customAttributeKey
-array:customAttributeValue];
-}
-                                               }
 
-- (void)changeUser:(NSMutableDictionary \*)parameters {
-NSString *userId = parameters[ChangeUserExternalUserId];
-[[Appboy sharedInstance] changeUser:userId];
+- (void)changeUser:(NSMutableDictionary *)parameters {
+  NSString *userId = parameters[ChangeUserExternalUserId];
+  [[Appboy sharedInstance] changeUser:userId];
 }
 
 @end
-\`\`\`
+```
 
 {% endtab %}
 {% endtabs %}

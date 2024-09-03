@@ -54,10 +54,10 @@ Braze.getInstance(context).currentUser?.setFirstName("first_name")
 {% endtab %}
 {% endtabs %}
 
-#### カスタム属性値の設定
+#### カスタム属性値を設定する
 
 {% tabs local %}
-{% tab String %}
+{% tab 文字列 %}
 {% subtabs global %}
 {% subtab JAVA %}
 
@@ -75,7 +75,7 @@ Braze.getInstance(context).currentUser?.setCustomUserAttribute("your_attribute_k
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
-{% tab Integer %}
+{% tab 整数 %}
 {% subtabs global %}
 {% subtab JAVA %}
 
@@ -97,7 +97,7 @@ Braze.getInstance(context).currentUser?.incrementCustomUserAttribute("your_attri
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
-{% tab Boolean %}
+{% tab ブール %}
 {% subtabs global %}
 {% subtab JAVA %}
 
@@ -115,7 +115,7 @@ Braze.getInstance(context).currentUser?.setCustomUserAttribute("your_attribute_k
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
-{% tab Long %}
+{% tab 長い %}
 {% subtabs global %}
 {% subtab JAVA %}
 
@@ -133,7 +133,7 @@ Braze.getInstance(context).currentUser?.setCustomUserAttribute("your_attribute_k
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
-{% tab Float %}
+{% tab フロート %}
 {% subtabs global %}
 {% subtab JAVA %}
 
@@ -151,7 +151,7 @@ Braze.getInstance(context).currentUser?.setCustomUserAttribute("your_attribute_k
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
-{% tab Double %}
+{% tab ダブル %}
 {% subtabs global %}
 {% subtab JAVA %}
 
@@ -169,7 +169,7 @@ Braze.getInstance(context).currentUser?.setCustomUserAttribute("your_attribute_k
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
-{% tab Date %}
+{% tab 日付 %}
 {% subtabs global %}
 {% subtab JAVA %}
 
@@ -196,13 +196,13 @@ Braze.getInstance(context).currentUser?.setCustomUserAttributeToSecondsFromEpoch
 {% endsubtabs %}
 
 {% alert warning %}
-このメソッドで Braze に渡される日付は、[ISO 8601](http://en.wikipedia.org/wiki/ISO_8601)フォーマット (例: `2013-07-16T19:20:30+01:00`) または`yyyy-MM-dd'T'HH:mm:ss:SSSZ`フォーマット (例: `2016-12-14T13:32:31.601-0800`) のいずれかである必要があります。
+この方法でBrazeに渡される日付は、[ISO 8601](http://en.wikipedia.org/wiki/ISO_8601)形式（e.g `2013-07-16T19:20:30+01:00`）または`yyyy-MM-dd'T'HH:mm:ss:SSSZ`形式（e.g `2016-12-14T13:32:31.601-0800`）のいずれかでなければなりません。
 {% endalert %}
 
 {% endtab %}
-{% tab Array %}
+{% tab 配列 %}
 
-カスタム属性配列内の要素の最大数は、25にデフォルト設定されています。個々の配列の最大値は、Braze ダッシュボードの [**データ設定**] > [**カスタム属性**] で100まで増やすことができます。要素の最大数を超える配列は、含まれる要素が最大数になるよう切り捨てられます。カスタム属性配列とその動作の詳細については、[配列に関する]({{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#arrays)ドキュメントを参照してください。
+カスタム属性配列内の要素の最大数は、25にデフォルト設定されています。個々の配列の最大値は、Braze ダッシュボードの \[**データ設定**] > \[**カスタム属性**] で100まで増やすことができます。要素の最大数を超える配列は、含まれる要素が最大数になるよう切り捨てられます。カスタム属性配列とその動作の詳細については、[配列に関する]({{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#arrays)ドキュメントを参照してください。
 
 {% subtabs global %}
 {% subtab JAVA %}
@@ -259,13 +259,13 @@ REST API を使用してユーザー属性を設定することもできます�
 
 ## ユーザーサブスクリプションの設定
 
-ユーザーのサブスクリプション (メールまたはプッシュ) を設定するには、それぞれ関数 `setEmailNotificationSubscriptionType()` または `setPushNotificationSubscriptionType()` を呼び出します。これらの関数では、いずれも引数として列挙型 `NotificationSubscriptionType` が使用されます。この型には、次の3つの状態があります。
+ユーザーのサブスクリプション (メールまたはプッシュ) を設定するには、それぞれ関数 `setEmailNotificationSubscriptionType()` または `setPushNotificationSubscriptionType()` を呼び出します。これらの関数では、いずれも引数として列挙型 `NotificationSubscriptionType` が使用されます。この型には、次の 3 つの状態があります。
 
 | サブスクリプションステータス | 定義 |
 | ------------------- | ---------- |
-| `OPTED_IN` | サブスクリプション登録済み、かつ明示的にオプトイン済み |
-| `SUBSCRIBED` | サブスクリプション登録済み、ただし明示的なオプトイン未実行 |
-| `UNSUBSCRIBED` | 配信停止済みおよび/または明示的にオプトアウト済み |
+| `OPTED_IN` | 購読し、明示的にオプトインしました |
+| `SUBSCRIBED` | 購読しましたが、明示的にオプトインしていません |
+| `UNSUBSCRIBED` | 購読を解除し、明示的にオプトアウトしました |
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% alert important %}

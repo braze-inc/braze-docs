@@ -30,20 +30,20 @@ noindex: true
 
 # プッシュ統合
 
-## ステップ 1プッシュ通知を構成する
+## ステップ1:プッシュ通知を構成する
 
 Braze を使用して iOS のプッシュ通知を送信する前に、Apple が提供する `.p8` のプッシュ通知ファイルを用意する必要があります。Apple の[開発者向けドキュメント](https://developer.apple.com/documentation/usernotifications)に記載されているように、
 
 1. Apple 開発者アカウントで、［[**証明書、識別子 & プロファイル**](https://developer.apple.com/account/ios/certificate)］ を開きます。
-2. [**キー**] で [**すべて**] を選択し、右上の追加ボタン (+) をクリックします。
-3. [**キーの説明**]で、署名キーの一意の名前を入力します。
-4. [**キーサービス**] で [**Apple プッシュ通知サービス (APNs)**] チェックボックスをオンにし、[**続行**] をクリックします。[**確認**] をクリックします。
-5. キー ID をメモしておきます。[**ダウンロード**] をクリックして、キーを生成してダウンロードします。ダウンロードしたファイルは、何度もダウンロードできませんので、安全な場所に保存してください。
-6. Braze で、[**設定**] > [**アプリ設定**] に移動し、[**Apple プッシュ通知証明書**] で `.p8` ファイルをアップロードします。開発用または実稼働用のプッシュ証明書のいずれかをアップロードできます。アプリが　App Store で公開された後にプッシュ通知をテストするには、アプリの開発バージョン用に別のワークスペースを設定することをお勧めします。
+2. \[**キー**] で \[**すべて**] を選択し、右上の追加ボタン (+) をクリックします。
+3. \[**キーの説明**]で、署名キーの一意の名前を入力します。
+4. \[**キーサービス**] で \[**Apple プッシュ通知サービス (APNs)**] チェックボックスをオンにし、\[**続行**] をクリックします。\[**確認**] をクリックします。
+5. キー ID をメモしておきます。\[**ダウンロード**] をクリックして、キーを生成してダウンロードします。ダウンロードしたファイルは、何度もダウンロードできませんので、安全な場所に保存してください。
+6. Braze で、\[**設定**] > \[**アプリ設定**] に移動し、\[**Apple プッシュ通知証明書**] で `.p8` ファイルをアップロードします。開発用または実稼働用のプッシュ証明書のいずれかをアップロードできます。アプリが　App Store で公開された後にプッシュ通知をテストするには、アプリの開発バージョン用に別のワークスペースを設定することをお勧めします。
 7. プロンプトが表示されたら、アプリの[バンドル ID](https://developer.apple.com/documentation/foundation/nsbundle/1418023-bundleidentifier)、[キー ID](https://developer.apple.com/help/account/manage-keys/get-a-key-identifier/)、[チーム ID](https://developer.apple.com/help/account/manage-your-team/locate-your-team-id)を入力し、［**保存**］ をクリックします。
 
 {% alert note %}
-[古いナビゲーション]({{site.baseurl}}/navigation)を使用している場合は、[**設定の管理**] > [**設定]** から `.p8` ファイルをアップロードできます。
+[古いナビゲーション]({{site.baseurl}}/navigation)を使用している場合は、\[**設定の管理**] > \[**設定]** から `.p8` ファイルをアップロードできます。
 {% endalert %}
 
 ## ステップ2:プッシュ機能を有効にする
@@ -52,15 +52,15 @@ Braze を使用して iOS のプッシュ通知を送信する前に、Apple が
 
 ![][24]
 
-開発用と実稼働用のプッシュ証明書が別々にある場合は、[**全般**] タブの [**署名を自動的に管理する**] チェックボックスをオフにしてください。これにより、Xcode の自動コード署名機能は開発署名のみを行うため、ビルド構成ごとに異なるプロビジョニングプロファイルを選択できるようになります。
+開発用と実稼働用のプッシュ証明書が別々にある場合は、\[**全般**] タブの \[**署名を自動的に管理する**] チェックボックスをオフにしてください。これにより、Xcode の自動コード署名機能は開発署名のみを行うため、ビルド構成ごとに異なるプロビジョニングプロファイルを選択できるようになります。
 
-! [ [一般] タブが表示されているXcode プロジェクトの設定。このタブでは、[署名を自動的に管理する] オプションはオフになっています。][34]
+![Xcodeのプロジェクト設定に "general "タブが表示されている。このタブでは、"Automatically manage signing"（署名を自動的に管理する）オプションのチェックを外す。][34]
 
 ## ステップ3:プッシュ通知に登録する
 
 ユーザーのデバイスを APNs に登録するには、アプリの `application:didFinishLaunchingWithOptions:` デリゲートメソッド内に適切なコードサンプルが含まれている必要があります。アプリケーションのメインスレッドですべてのプッシュ統合コードを呼び出すようにしてください。
 
-Braze には、プッシュアクションボタンをサポートするデフォルトのプッシュカテゴリーも用意されており、プッシュ登録コードに手動で追加する必要があります。その他の統合手順については [プッシュアクションボタン][35] を参照してください。
+Braze には、プッシュアクションボタンをサポートするデフォルトのプッシュカテゴリーも用意されており、プッシュ登録コードに手動で追加する必要があります。その他の統合手順については、\[プッシュアクションボタン][35] ]を参照のこと。
 
 {% alert warning %}
 当社の[プッシュ通知のベストプラクティス]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/troubleshooting/)の説明に従ってカスタムプッシュプロンプトを実装している場合は、アプリにプッシュ許可を付与した後、アプリが**実行される**たびに次のコードを呼び出すようにしてください。**](https://developer.apple.com/library/ios/documentation/iPhone/Conceptual/iPhoneOSProgrammingGuide/BackgroundExecution/BackgroundExecution.html)デバイストークンは任意に変更される可能性がある[ため、アプリは APNs に再登録する必要があります**。
@@ -75,7 +75,7 @@ iOS 10で導入された `UserNotifications` フレームワーク (推奨) を�
 {% endalert %}
 
 {% tabs %}
-{% tab OBJECTIVE-C %}
+{% tab 目標-C %}
 
 ```objc
 if (floor(NSFoundationVersionNumber) > NSFoundationVersionNumber_iOS_9_x_Max) {
@@ -98,7 +98,7 @@ if (floor(NSFoundationVersionNumber) > NSFoundationVersionNumber_iOS_9_x_Max) {
 ```
 
 {% endtab %}
-{% tab swift %}
+{% tab 速い %}
 
 ```swift
 if #available(iOS 10, *) {
@@ -133,7 +133,7 @@ if #available(iOS 10, *) {
 `UserNotifications` フレームワークを使用していない場合は、アプリデリゲートの`application:didFinishLaunchingWithOptions:` メソッドに次のコードを追加します。
 
 {% tabs %}
-{% tab OBJECTIVE-C %}
+{% tab 目標-C %}
 
 ```objc
 UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTypes:(UIUserNotificationTypeBadge | UIUserNotificationTypeAlert | UIUserNotificationTypeSound) categories:nil];
@@ -142,7 +142,7 @@ UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTy
 ```
 
 {% endtab %}
-{% tab swift %}
+{% tab 速い %}
 
 ```swift
 let types : UIUserNotificationType = UIUserNotificationType.Badge | UIUserNotificationType.Sound | UIUserNotificationType.Alert
@@ -155,12 +155,12 @@ UIApplication.shared.registerForRemoteNotifications()
 {% endtabs %}
 
 
-## ステップ4:Braze にプッシュトークンを登録する
+## ステップ4: Braze にプッシュトークンを登録する
 
 APNs の登録が完了したら、次のメソッドを変更し結果として得られる `deviceToken` を Braze に渡し、ユーザーがプッシュ通知を使用できるようにする必要があります。
 
 {% tabs %}
-{% tab OBJECTIVE-C %}
+{% tab 目標-C %}
 
 `application:didRegisterForRemoteNotificationsWithDeviceToken:` メソッドに次のコードを追加します。
 
@@ -169,7 +169,7 @@ APNs の登録が完了したら、次のメソッドを変更し結果として
 ```
 
 {% endtab %}
-{% tab swift %}
+{% tab 速い %}
 
 アプリの `application(_:didRegisterForRemoteNotificationsWithDeviceToken:)` メソッドに次のコードを追加します。
 
@@ -184,7 +184,7 @@ Appboy.sharedInstance()?.registerDeviceToken(deviceToken)
 `application:didRegisterForRemoteNotificationsWithDeviceToken:` デリゲートメソッドは、`[[UIApplication sharedApplication] registerForRemoteNotifications]` の呼び出し後に毎回呼び出されます。他のプッシュサービスから Braze に移行する場合、ユーザーのデバイスがすでに APNs に登録されていれば、このメソッドは次にこのメソッドが呼び出されたときに既存の登録からトークンを収集し、ユーザーはプッシュするために再オプトインする必要はありません。
 {% endalert %}
 
-## ステップ 5プッシュ処理を有効にする
+## ステップ5:プッシュ処理を有効にする
 
 以下のコードは受信したプッシュ通知を Braze に渡すコードで、プッシュ分析とリンク処理のログを取るために必要です。アプリケーションのメインスレッドですべてのプッシュ統合コードを呼び出すようにしてください。
 
@@ -193,7 +193,7 @@ Appboy.sharedInstance()?.registerDeviceToken(deviceToken)
 iOS 10以降に対してビルドする場合は、`UserNotifications` フレームワークを統合し、以下の手順を実行することをお勧めします。
 
 {% tabs %}
-{% tab OBJECTIVE-C %}
+{% tab 目標-C %}
 
 アプリケーションの `application:didReceiveRemoteNotification:fetchCompletionHandler:` メソッドに次のコードを追加します。
 
@@ -230,7 +230,7 @@ iOS 10以降に対してビルドする場合は、`UserNotifications` フレー
 フォアグラウンド通知がクリックされると、iOS 10のプッシュデリゲート `userNotificationCenter:didReceiveNotificationResponse:withCompletionHandler:` が呼び出され、Braze はプッシュクリックイベントをログに記録します。
 
 {% endtab %}
-{% tab swift %}
+{% tab 速い %}
 
 アプリの `application(_:didReceiveRemoteNotification:fetchCompletionHandler:)` メソッドに次のコードを追加します。
 
@@ -276,7 +276,7 @@ iOS 10では、プッシュがクリックされたときに `application:didRec
 iOS 10より前の SDK に対してビルドするアプリの場合は、以下の手順を使用します。
 
 {% tabs %}
-{% tab OBJECTIVE-C %}
+{% tab 目標-C %}
 
 プッシュ通知でオープントラッキングを有効にするには、アプリの `application:didReceiveRemoteNotification:fetchCompletionHandler:` メソッドに次のコードを追加します。
 
@@ -294,7 +294,7 @@ iOS 10でプッシュ分析をサポートするには、アプリの `applicati
 ```
 
 {% endtab %}
-{% tab swift %}
+{% tab 速い %}
 
 プッシュ通知でオープントラッキングを有効にするには、アプリの `application(_:didReceiveRemoteNotification:fetchCompletionHandler:)` メソッドに次のコードを追加します。
 
@@ -314,13 +314,13 @@ Appboy.sharedInstance()?.register(application,
 {% endtab %}
 {% endtabs %}
 
-## ステップ 6ディープリンク
+## ステップ 6:ディープリンク
 
 プッシュからアプリへのディープリンクは、標準のプッシュ統合ドキュメントを介して自動的に処理されます。アプリ内の特定の場所にディープリンクを追加する方法について詳しくは、[高度なユースケース][10]を参照してください。
 
-## ステップ 7:単体テスト (オプション)
+## ステップ 7: 単体テスト (オプション)
 
-今行った統合手順のテストカバレッジを追加するには、[プッシュ単体テスト][36] を実装します。
+先ほどの統合ステップのテストカバレッジを追加するには、\[push unit testing][36].
 
 [10]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/advanced_use_cases/linking/#linking-implementation
 [24]: {% image_buster /assets/img_archive/Enable_push_capabilities.png %}
