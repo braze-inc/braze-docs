@@ -40,7 +40,7 @@ Supporting multiple brands in a single workspace increases the likelihood for du
 - To appropriately collect email and SMS subscriptions for each store, you must assign unique subscription groups to each store setup. 
 - We suggest that you **do not** enable “Override existing global state for users” as it can globally unsubscribe your customers if they interacted with more than one of your stores.<br><br>
 4. Repeat this installation for as many stores as you need.<br><br>
-5. To view each store’s integration and configure advanced settings, click into a store in the drop-down menu:<br>![][2]{: style="max-width:70%;"}
+5. To view each store’s integration and configure advanced settings, click into a store in the dropdown menu:<br>![][2]{: style="max-width:70%;"}
 
 ## Shopify data
 
