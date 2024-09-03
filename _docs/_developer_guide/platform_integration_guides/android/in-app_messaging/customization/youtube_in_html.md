@@ -13,7 +13,7 @@ channel:
 
 # YouTube in HTML
 
-> YouTube and other HTML5 content can play in HTML in-app messages. This requires hardware acceleration to be enabled in the activity where the in-app message is being displayed; see the [Android developer guide][84] for more details. Hardware acceleration is only available on Android API versions 11 and later.
+> YouTube and other HTML5 content can play in HTML in-app messages. This requires hardware acceleration to be enabled in the activity where the in-app message is being displayed; see the [Android developer guide](https://developer.android.com/guide/topics/graphics/hardware-accel.html#controlling) for more details. Hardware acceleration is only available on Android API versions 11 and later.
 
 The following is an example of an embedded YouTube video in an HTML snippet:
 
@@ -29,4 +29,3 @@ The following is an example of an embedded YouTube video in an HTML snippet:
 </body>
 ```
 
-[84]: https://developer.android.com/guide/topics/graphics/hardware-accel.html#controlling

@@ -17,7 +17,7 @@ The Braze SDK includes a default card feed to get you started with Content Cards
 
 ## Customization
 
-You can use these additional methods to build a custom Content Cards Feed within your app by using the following methods available on the [plugin public interface][7]:
+You can use these additional methods to build a custom Content Cards Feed within your app by using the following methods available on the [plugin public interface](https://github.com/braze-inc/braze-flutter-sdk/blob/master/lib/braze_plugin.dart):
 
 | Method                                         | Description                                                                                            |
 | ---------------------------------------------- | ------------------------------------------------------------------------------------------------------ |
@@ -84,20 +84,15 @@ BrazePlugin braze = new BrazePlugin(customConfigs: {replayCallbacksConfigKey: tr
 Follow these steps to test a sample Content Card.
 
 1. Set an active user in the React application by calling `braze.changeUserId('your-user-id')` method.
-2. Head to **Campaigns** and follow [this guide][3] to create a new Content Card campaign.
+2. Head to **Campaigns** and follow [this guide]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/create) to create a new Content Card campaign.
 3. Compose your test Content Card campaign and head over to the **Test** tab. Add the same `user-id` as the test user and click **Send Test**.
 4. Tap the push notification and that should launch a Content Card on your device. You may need to refresh your feed for it to display.
 
-![A Braze Content Card campaign showing you can add your own user ID as a test recipient to test your Content Card.][4]
+![A Braze Content Card campaign showing you can add your own user ID as a test recipient to test your Content Card.]({% image_buster /assets/img/react-native/content-card-test.png %} "Content Card Campaign Test")
 
-For more details on each platform, follow the [Android integration][5] or [iOS integration][6] guides.
+For more details on each platform, follow the [Android integration]({{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/data_models/) or [iOS integration](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/c2-contentcardsui) guides.
 
 ## GIF Support
 
 {% multi_lang_include wrappers/gif_support/content_cards.md %}
 
-[3]: {{site.baseurl}}/user_guide/message_building_by_channel/content_cards/create
-[4]: {% image_buster /assets/img/react-native/content-card-test.png %} "Content Card Campaign Test"
-[5]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/data_models/
-[6]: https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/c2-contentcardsui
-[7]: https://github.com/braze-inc/braze-flutter-sdk/blob/master/lib/braze_plugin.dart

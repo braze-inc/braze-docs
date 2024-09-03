@@ -3,31 +3,31 @@ nav_title: 8月
 page_order: 5
 noindex: true
 page_type: update
-description: "この記事には2019年8月のリリースノートが含まれている。"
+description: "この記事は、2019年8月のリリースノートを含んでいます。"
 ---
 
 # 2019年8月
 
-## レポートのキャンペーン詳細
+## レポートsの運動内容
 
-キャンペーンパフォーマンスレポートにキャンペーンの詳細が表示されるようになったので、レポートの設定中に選択した配信、オーディエンス、コンバージョンの設定を確認するためにキャンペーンを遡る必要がなくなった。
+キャンペーン パフォーマンス レポートにはキャンペーンの詳細が表示されるので、レポートの設定中に選択した配信、オーディエンス、またはコンバージョン設定を確認するためにキャンペーンに戻る必要はありません。
 
 ![キャンペーン詳細]({% image_buster /assets/img/campaign_details_update.png %})
 
-## 新しいメールコンテンツブロックAPIエンドポイント
+## 新しいメールコンテンツブロックAPI エンドポイント
 
-API経由でメールコンテンツブロックのマネージャー[（作成]({{site.baseurl}}/api/endpoints/email_templates/#create-content-block)、[利用可能なリスト]({{site.baseurl}}/api/endpoints/email_templates/#list-available-content-blocks)、[情報の取得]({{site.baseurl}}/api/endpoints/email_templates/#see-content-block-information)）ができるようになった！
+管理できるようになりました([create]({{site.baseurl}}/api/endpoints/email_templates/#create-content-block),[list available]({{site.baseurl}}/api/endpoints/email_templates/#list-available-content-blocks),[get information]({{site.baseurl}}/api/endpoints/email_templates/#see-content-block-information)) メール コンテンツブロックをAPI で管理できます!
 
 {% alert update %}
-この機能は、一時的に限定的に利用可能となっている。詳しくはBrazeアカウントマネージャーにお問い合わせください。
+この機能は、一時的に限られた可用性で使用されます。詳しくは、Braze アカウントマネージャーにお問い合わせください。
 {% endalert %}
 
-## 顧客向け配信停止ランディングページ更新
+## カスタムメール 配信停止ランディングページの更新
 
-デフォルトの[カスタムメール配信停止ページが]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#custom-unsubscribe-landing-page)、よりスマートでモダンな外観に更新された。
+デフォルトの[カスタムメール 配信停止ページ]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#custom-unsubscribe-landing-page)は更新dで、より洗練された、よりモダンな外観です。
 
-## iOS SDK：電話サポートの改善
+## iOSSDK:ノッチ付き電話サポートの改善
 
-ノッチ付き」デバイス（iPhone X、Pixel 3XLなど）でのアプリ内メッセージのサポートが改善された。フルスクリーンメッセージは、ステータスバーを覆いながら、どの電話機でも画面いっぱいに拡大されるようになった。
+"notched" 機器(たとえば、iPhone X、Pixel 3XL) でのアプリ内メッセージ s のサポートを改善しました。フルスクリーンメッセージは、ステータスバーを覆いながら、すべての電話機の画面全体に表示されるように拡張されます。
 
-この変更を反映したBraze Docsの更新はまだあまり見られないが、これから行われる！
+Braze Docsでは、この変更をまだ反映している更新はあまり見られませんが、途中です!

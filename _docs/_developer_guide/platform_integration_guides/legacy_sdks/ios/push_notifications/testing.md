@@ -14,7 +14,7 @@ noindex: true
 
 # Testing {#push-testing}
 
-If you'd like to test in-app and push notifications via the command line, you can send a single notification through the terminal via CURL and the [messaging API][29]. You will need to replace the following fields with the correct values for your test case:
+If you'd like to test in-app and push notifications via the command line, you can send a single notification through the terminal via CURL and the [messaging API]({{site.baseurl}}/api/endpoints/messaging/). You will need to replace the following fields with the correct values for your test case:
 
 Required fields:
 
@@ -43,6 +43,3 @@ curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer YOUR-
   }
 }' https://{REST_API_ENDPOINT_URL}/messages/send 
 ```
-[29]: {{site.baseurl}}/api/endpoints/messaging/
-[32]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/setting_user_ids/#assigning-a-user-id
-[66]: {{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_messages/

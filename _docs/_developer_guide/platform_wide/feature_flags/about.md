@@ -20,7 +20,7 @@ platform:
 
 > Feature flags allow you to remotely enable or disable functionality for a specific or random selection of users. Importantly, they let you turn a feature on and off in production without additional code deployment or app store updates. This allows you to safely roll out new features with confidence. 
 
-Looking for steps on how to create a feature flag in Braze? Refer to [Creating feature flags][3].
+Looking for steps on how to create a feature flag in Braze? Refer to [Creating feature flags]({{site.baseurl}}/developer_guide/platform_wide/feature_flags/create/).
 
 ## Prerequisites
 
@@ -42,7 +42,7 @@ Use feature flags to:
 
 Use feature flags to gradually enable features to a sample population. For example, you can soft launch a new feature to your VIP users first. This strategy helps mitigate risks associated with shipping new features to everyone at once and helps catch bugs early.
 
-![Moving image of rollout traffic slider going from 0% to 100%.][1]
+![Moving image of rollout traffic slider going from 0% to 100%.]({% image_buster /assets/img/feature_flags/feature-flags-rollout.gif %})
 
 For example, let's say we've decided to add a new "Live Chat Support" link to our app for faster customer service. We could release this feature to all customers at once. However, a wide release carries risks, such as: 
 
@@ -59,7 +59,7 @@ With Braze feature flags, we can instead gradually roll out the feature and miti
 
 To gradually roll out this feature, we can [create]({{site.baseurl}}/developer_guide/platform_wide/feature_flags/create/) a feature flag named "Live Chat Widget."
 
-![Feature flag details for an example named Live Chat Widget. The ID is enable_live_chat. This feature flag description reads that the live chat widget will show on the support page.][7]
+![Feature flag details for an example named Live Chat Widget. The ID is enable_live_chat. This feature flag description reads that the live chat widget will show on the support page.]({% image_buster /assets/img/feature_flags/feature-flags-use-case-livechat-1.png %})
 
 In our app code, we will only show the **Start Live Chat** button when the Braze feature flag is enabled:
 
@@ -95,7 +95,7 @@ With feature flags, we can let Braze power the content of our app navigation lin
 
 To remotely configure this feature, we'll create a new feature flag called `navigation_promo_link` and define the following initial properties:
 
-![Feature flag with link and text properties directing to a generic sales page.][9]
+![Feature flag with link and text properties directing to a generic sales page.]({% image_buster /assets/img/feature_flags/feature-flags-use-case-navigation-link-1.png %})
 
 In our app, we'll use getter methods by Braze to retrieve this feature flag's properties and build the navigation links based on those values:
 
@@ -123,7 +123,7 @@ return (<>
 
 Now, the day before Thanksgiving, we only have to change those property values in the Braze dashboard.
 
-![Feature flag with link and text properties directing to a Thanksgiving sales page.][10]
+![Feature flag with link and text properties directing to a Thanksgiving sales page.]({% image_buster /assets/img/feature_flags/feature-flags-use-case-navigation-link-2.png %})
 
 As a result, the next time someone loads the app, they will see the new Thanksgiving deals.
 
@@ -135,11 +135,11 @@ Let's say that we're launching a new loyalty rewards program for our users. It c
 
 To effectively coordinate feature rollout and messaging, we'll create a new feature flag called `show_loyalty_program`. For our initial phased release, we'll let Canvas control when and for whom the feature flag is enabled. For now, we'll leave the rollout percentage at 0% and not select any target segments.
 
-![A feature flag with the name Loyalty Rewards Program. The ID is show_loyalty_program, and the description that this shows the new loyalty rewards program on the home screen and profile page.][11]
+![A feature flag with the name Loyalty Rewards Program. The ID is show_loyalty_program, and the description that this shows the new loyalty rewards program on the home screen and profile page.]({% image_buster /assets/img/feature_flags/feature-flags-use-case-loyalty.png %})
 
 Then, in Canvas Flow, we'll create a [Feature Flag step]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/feature_flags/) that enables the `show_loyalty_program` feature flag for our "High Value Customers" segment:
 
-![An example of a Canvas with an Audience Split step where the high-value customers segment turns on the show_loyalty_program feature flag.][4]
+![An example of a Canvas with an Audience Split step where the high-value customers segment turns on the show_loyalty_program feature flag.]({% image_buster /assets/img/feature_flags/feature-flags-use-case-canvas-flow.png %})
 
 Now, users in this segment will start to see the new loyalty program, and after it's enabled, an email and survey will be sent out automatically to help our team gather feedback.
 
@@ -167,11 +167,11 @@ if (featureFlag?.enabled) {
 }
 ```
 
-We'll set up our A/B test in a [Feature Flag Experiment][12].
+We'll set up our A/B test in a [Feature Flag Experiment]({{site.baseurl}}/developer_guide/platform_wide/feature_flags/experiments/).
 
 Now, 50% of users will see the old experience, while the other 50% will see the new experience. We can then analyze the two variants to determine which checkout flow resulted in a higher conversion rate.
 
-![A feature flag experiment splitting traffic into two 50 percent groups.][6]
+![A feature flag experiment splitting traffic into two 50 percent groups.]({% image_buster /assets/img/feature_flags/feature-flag-use-case-campaign-experiment.png %})
 
 Once we determine our winner, we can stop this campaign and increase the rollout percentage on the feature flag to 100% for all users while our engineering team hard-codes this into our next app release.
 
@@ -179,7 +179,7 @@ Once we determine our winner, we can stop this campaign and increase the rollout
 
 Use the **Feature Flag** filter to create a segment or target messaging at users based on whether they're using a feature flag. For example, let's say we have a feature flag that controls premium content in our app. We could create a segment that filters for users who don't have the feature flag enabled, and then send that segment a message urging them to upgrade their account to view premium content.
 
-![][14]
+![]({% image_buster /assets/img/feature_flags/feature_flag_segmentation_filter.png %})
 
 For more information about filtering on segments, see [Creating a segment]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/).
 
@@ -208,16 +208,3 @@ A feature flag is considered active and will count toward your limit if any of t
 
 Even if the same feature flag matches multiple criteria, such as if it's used in a Canvas and the rollout is 50%, it will only count as 1 active feature flag toward your limit.
 
-[1]: {% image_buster /assets/img/feature_flags/feature-flags-rollout.gif %} 
-[2]: {{site.baseurl}}/developer_guide/platform_wide/feature_flags/use_cases/
-[3]: {{site.baseurl}}/developer_guide/platform_wide/feature_flags/create/
-[4]: {% image_buster /assets/img/feature_flags/feature-flags-use-case-canvas-flow.png %}
-[5]: {{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step
-[6]: {% image_buster /assets/img/feature_flags/feature-flag-use-case-campaign-experiment.png %}
-[7]: {% image_buster /assets/img/feature_flags/feature-flags-use-case-livechat-1.png %}
-[8]: {{site.baseurl}}/developer_guide/platform_wide/feature_flags/create/
-[9]: {% image_buster /assets/img/feature_flags/feature-flags-use-case-navigation-link-1.png %}
-[10]: {% image_buster /assets/img/feature_flags/feature-flags-use-case-navigation-link-2.png %}
-[11]: {% image_buster /assets/img/feature_flags/feature-flags-use-case-loyalty.png %}
-[12]: {{site.baseurl}}/developer_guide/platform_wide/feature_flags/experiments/
-[14]: {% image_buster /assets/img/feature_flags/feature_flag_segmentation_filter.png %}

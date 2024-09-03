@@ -50,17 +50,17 @@ If you are using the [older navigation]({{site.baseurl}}/navigation), you can up
 
 In your project settings, ensure that under the **Capabilities** tab, your **Push Notifications** capability is toggled on.
 
-![][24]
+![]({% image_buster /assets/img_archive/Enable_push_capabilities.png %})
 
 If you have separate development and production push certificates, make sure to uncheck the **Automatically manage signing** box in the **General** tab. This will allow you to choose different provisioning profiles for each build configuration, as Xcode's automatic code signing feature only does development signing.
 
-![Xcode project settings showing the "general" tab. In this tab, the option "Automatically manage signing" is unchecked.][34]
+![Xcode project settings showing the "general" tab. In this tab, the option "Automatically manage signing" is unchecked.]({% image_buster /assets/img_archive/xcode8_auto_signing.png %})
 
 ## Step 3: Register for push notifications
 
 The appropriate code sample must be included within your app's `application:didFinishLaunchingWithOptions:` delegate method for your users' device to register with APNs. Ensure that you call all push integration code in your application's main thread.
 
-Braze also provides default push categories for push action button support, which must be manually added to your push registration code. Refer to [push action buttons][35] for additional integration steps.
+Braze also provides default push categories for push action button support, which must be manually added to your push registration code. Refer to [push action buttons]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/customization/action_buttons/) for additional integration steps.
 
 {% alert warning %}
 If you've implemented a custom push prompt as described in our [push best practices]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/troubleshooting/), make sure that you're calling the following code **every time the app runs** after they grant push permissions to your app. **Apps need to re-register with APNs as [device tokens can change arbitrarily](https://developer.apple.com/library/ios/documentation/iPhone/Conceptual/iPhoneOSProgrammingGuide/BackgroundExecution/BackgroundExecution.html).**
@@ -316,14 +316,9 @@ Appboy.sharedInstance()?.register(application,
 
 ## Step 6: Deep linking
 
-Deep linking from a push into the app is automatically handled via our standard push integration documentation. If you'd like to learn more about how to add deep links to specific locations in your app, see our [advanced use cases][10].
+Deep linking from a push into the app is automatically handled via our standard push integration documentation. If you'd like to learn more about how to add deep links to specific locations in your app, see our [advanced use cases]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/advanced_use_cases/linking/#linking-implementation).
 
 ## Step 7: Unit tests (optional)
 
-To add test coverage for the integration steps you've just followed, implement [push unit testing][36].
+To add test coverage for the integration steps you've just followed, implement [push unit testing]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/unit_tests/).
 
-[10]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/advanced_use_cases/linking/#linking-implementation
-[24]: {% image_buster /assets/img_archive/Enable_push_capabilities.png %}
-[34]: {% image_buster /assets/img_archive/xcode8_auto_signing.png %}
-[35]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/customization/action_buttons/
-[36]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/unit_tests/

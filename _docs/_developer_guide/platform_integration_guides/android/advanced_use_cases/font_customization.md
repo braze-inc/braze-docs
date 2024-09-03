@@ -13,11 +13,11 @@ description: "This reference article covers font customization options such as d
 
 > This reference article covers font customization options such as defining a font family and shows how to reference it throughout your Android or FireOS application.
 
-Fonts in the Braze SDK can be set via XML using the AndroidX libraries according to [Font in XML][1]. To use your custom font with the Braze SDK, you'll first need to create a font family.
+Fonts in the Braze SDK can be set via XML using the AndroidX libraries according to [Font in XML](https://developer.android.com/guide/topics/ui/look-and-feel/fonts-in-xml.html). To use your custom font with the Braze SDK, you'll first need to create a font family.
 
 ## Create a font family
 
-The following is an example custom font family definition using the [font family guide][2]. For this example, we use the [Bungee Shade font][3].
+The following is an example custom font family definition using the [font family guide](https://developer.android.com/guide/topics/ui/look-and-feel/fonts-in-xml.html#font-family). For this example, we use the [Bungee Shade font](https://fonts.google.com/specimen/Bungee+Shade).
 
 ```XML
 <?xml version="1.0" encoding="utf-8"?>
@@ -62,6 +62,3 @@ For example, the following styles override would use the `bungee` font family fo
 Both `android:fontFamily` and `fontFamily` style attributes must be set to maintain compatibility across all SDK versions.
 {% endalert %}
 
-[1]: https://developer.android.com/guide/topics/ui/look-and-feel/fonts-in-xml.html
-[2]: https://developer.android.com/guide/topics/ui/look-and-feel/fonts-in-xml.html#font-family
-[3]: https://fonts.google.com/specimen/Bungee+Shade

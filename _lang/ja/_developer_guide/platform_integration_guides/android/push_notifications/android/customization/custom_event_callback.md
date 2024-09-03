@@ -22,37 +22,37 @@ Braze には、プッシュ通知が受信されたとき、開かれたとき�
 {% tabs %}
 {% tab JAVA %}
 
-\`\`\`java
+```java
 Braze.getInstance(context).subscribeToPushNotificationEvents(event -> {
   final BrazeNotificationPayload parsedData = event.getNotificationPayload();
 
   //
-// The type of notification itself
+  // The type of notification itself
   //
-final boolean isPushOpenEvent = event.getEventType() == BrazePushEventType.NOTIFICATION_OPENED;
-final boolean isPushReceivedEvent = event.getEventType() == BrazePushEventType.NOTIFICATION_RECEIVED;
-// Sent when a user has dismissed a notification
-  final boolean isPushDeletedEvent = event.getEventType() == BrazePushEventType.NOTIFICATION\_DELETED;
+  final boolean isPushOpenEvent = event.getEventType() == BrazePushEventType.NOTIFICATION_OPENED;
+  final boolean isPushReceivedEvent = event.getEventType() == BrazePushEventType.NOTIFICATION_RECEIVED;
+  // Sent when a user has dismissed a notification
+  final boolean isPushDeletedEvent = event.getEventType() == BrazePushEventType.NOTIFICATION_DELETED;
 
   //
-// Notification data
+  // Notification data
   //
   final String pushTitle = parsedData.getTitleText();
   final Long pushArrivalTimeMs = parsedData.getNotificationReceivedTimestampMillis();
   final String deeplink = parsedData.getDeeplink();
 
   //
-// Custom KVP data
+  // Custom KVP data
   //
   final String myCustomKvp1 = parsedData.getBrazeExtras().getString("my first kvp");
   final String myCustomKvp2 = parsedData.getBrazeExtras().getString("my second kvp");
-  });
-\`\`\`
+});
+```
 
 {% endtab %}
 {% tab KOTLIN %}
 
-\`\`\`kotlin
+```kotlin
 Braze.getInstance(context).subscribeToPushNotificationEvents { event ->
     val parsedData = event.notificationPayload
 
@@ -77,7 +77,7 @@ Braze.getInstance(context).subscribeToPushNotificationEvents { event ->
     val myCustomKvp1 = parsedData.brazeExtras.getString("my first kvp")
     val myCustomKvp2 = parsedData.brazeExtras.getString("my second kvp")
 }
-\`\`\`
+```
 
 {% endtab %}
 {% endtabs %}

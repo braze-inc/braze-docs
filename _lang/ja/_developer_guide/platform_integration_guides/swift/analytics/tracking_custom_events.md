@@ -1,5 +1,5 @@
 ---
-nav_title: カスタムイベントのトラッキング
+nav_title: カスタムイベントの追跡
 article_title: iOS のカスタムイベントのトラッキング
 platform: Swift
 page_order: 2
@@ -11,12 +11,12 @@ description: "このリファレンス記事では、Swift SDK のカスタム�
 
 > Braze でカスタムイベントを記録することで、アプリの使用パターンに関する詳細を把握し、ダッシュボードでのアクションによってユーザーをセグメント化できます。
 
-実装前に、[ベストプラクティス][0]のカスタムイベント、カスタム属性、および購入イベントによって提供されるセグメンテーションオプションの例と、[イベント命名規則]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/event_naming_conventions/)のメモを必ず確認してください。
+実装前に、[ベストプラクティス][0]のカスタムイベント、カスタム属性、および購入イベントによって提供されるセグメンテーションオプションの例と、[イベント命名規則]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/event_naming_conventions/)のメモを必ず確認しておいてください。
 
 ## カスタムイベントの追加
 
 {% tabs %}
-{% tab swift %}
+{% tab 迅速 %}
 
 ```swift
 AppDelegate.braze?.logCustomEvent(name: "YOUR_EVENT_NAME")
@@ -37,7 +37,7 @@ AppDelegate.braze?.logCustomEvent(name: "YOUR_EVENT_NAME")
 `Int`、`Double`、`String`、`Bool`、または `Date` の値が入力された `Dictionary` を渡すことで、カスタムイベントに関するメタデータを追加できます。
 
 {% tabs %}
-{% tab swift %}
+{% tab 迅速 %}
 
 ```swift
 AppDelegate.braze?.logCustomEvent(
