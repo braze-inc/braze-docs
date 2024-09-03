@@ -121,7 +121,7 @@ Android アプリの \[**プッシュ通知設定**] で \[**Firebase**] を選�
 次に、Android Studio プロジェクトを開き、Firebase 送信者 ID を使用して、`braze.xml` または `BrazeConfig` 内で FCM トークンの自動登録を有効にします。
 
 {% tabs local %}
-braze.xml %}
+{% tab braze.xml %}
 FCM トークンの自動登録を設定するには、`braze.xml` ファイルに以下の行を追加します。
 
 ```xml
