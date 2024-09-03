@@ -11,7 +11,7 @@ page_type: reference
 
 > Connected sources are a zero-copy alternative to directly syncing data with Braze’s Cloud Data Ingestion (CDI) feature. A connected source directly queries your data warehouse to create new segments without copying any of the underlying data to Braze. 
 
-After adding a connected source to your Braze workspace, you can create a CDI segment within Segment Extensions. CDI segments lets you write SQL that directly queries your own data warehouse (using data there that’s made available through your CDI Connected Source), and creates and maintains a group of users that can be targeted within Braze. 
+After adding a connected source to your Braze workspace, you can create a CDI segment within Segment Extensions. CDI segments let you write SQL that directly queries your data warehouse (using data there that’s made available through your CDI Connected Source), and creates and maintains a group of users that can be targeted within Braze. 
 
 For more information on creating a segment with this source, view [CDI segments]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/cdi_segments/).
 
@@ -77,7 +77,7 @@ There may be two to five minutes of warm-up time when Braze connects to Classic 
 
 ### Step 2: Set up your data warehouse
 
-Set up the source data and required resources in your data warehouse environment. The connected source may reference one or more tables, so ensure your Braze user has permissions for all tables you want available in the connected source.
+Set up the source data and required resources in your data warehouse environment. The connected source may reference one or more tables, so ensure your Braze user has permission to access all tables you want in the connected source.
 
 {% tabs %}
 {% tab Snowflake %}
@@ -176,7 +176,7 @@ Create a user for your connected source to use. This user will be used to genera
 
 You may choose to grant access to all tables in a schema, or grant privileges only to specific tables. Whichever tables the Braze role has access to will be available to query in the CDI segment. Be sure to grant access to any new tables to the user when they're created, or set default permissions for the user. 
 
-The `create table` permission is required so Braze can create a table with your CDI Segment query results before updating the segment in Braze. Braze will create a temporary table per segment, and the table will only persist while Braze is updating the segment.
+The `create table` permission is required so Braze can create a table with your CDI segment query results before updating the segment in Braze. Braze will create a temporary table per segment, which will only persist while Braze updates the segment.
 
 
 #### Step 2.2: Allow access to Braze IPs    
@@ -185,7 +185,7 @@ If you have a firewall or other network policies, you must give Braze network ac
 
 You may also need to change your security groups to allow Braze access to your data in Redshift. Make sure to explicitly allow inbound traffic on the IPs below and on the port used to query your Redshift cluster (default is 5439). You should explicitly allow Redshift TCP connectivity on this port even if the inbound rules are set to "allow all". In addition, it is important that the endpoint for the Redshift cluster be publicly accessible in order for Braze to connect to your cluster.
 
-If you don't want your Redshift cluster to be publicly accessible, you can set up a VPC and EC2 instance to use an ssh tunnel to access the Redshift data. For more information, see [AWS: How do I access a private Aamazon Redshift cluster from my local machine?](https://repost.aws/knowledge-center/private-redshift-cluster-local-machine)
+If you don't want your Redshift cluster to be publicly accessible, you can set up a VPC and EC2 instance to use an ssh tunnel to access the Redshift data. For more information, see [AWS: How do I access a private Amazon Redshift cluster from my local machine?](https://repost.aws/knowledge-center/private-redshift-cluster-local-machine)
 
 {% subtabs %}
 {% subtab United States (US) %}
@@ -220,11 +220,11 @@ For instances `EU-01` and `EU-02`, these are the relevant IP addresses:
 
 Create a service account in GCP for Braze to use to connect and read data from your table(s). The service account should have the below permissions: 
 
-- **BigQuery Connection User:** This allows Braze to make connections.
-- **BigQuery User:** This provides Braze access to run queries, read dataset metadata, and list tables.
-- **BigQuery Data Viewer:** This provides Braze access to view datasets and their contents.
-- **BigQuery Job User:** This provides Braze access to run jobs.
-- **bigquery.tables.create** This provides Braze access to create temporary tables during segment refresh.
+- **BigQuery Connection User:** Allows Braze to make connections.
+- **BigQuery User:** Provides Braze access to run queries, read dataset metadata, and list tables.
+- **BigQuery Data Viewer:** Provides Braze access to view datasets and their contents.
+- **BigQuery Job User:** Provides Braze access to run jobs.
+- **bigquery.tables.create** Provides Braze access to create temporary tables during segment refresh.
 
 Create a service account for your connected source to use. This user will be used to generate the list of tables available in your CDI segments, and to query source tables to create new segments. After the connected source is created, Braze will discover the names and description of all tables available to the user in the source schema. 
 
@@ -267,13 +267,13 @@ For instances `EU-01` and `EU-02`, these are the relevant IP addresses:
 {% endtab %}
 
 {% tab Databricks %}
-#### Step 2.1: Create a Access Token  
+#### Step 2.1: Create an access token  
 
 For Braze to access Databricks, a personal access token needs to be created.
 
-1. In your Databricks workspace, select your Databricks username in the top bar, and then select **User Settings** from the drop-down.
+1. In your Databricks workspace, select your Databricks username in the top bar, then select **User Settings** from the dropdown.
 2. Make sure the service account has `CREATE TABLE` priviliges on the schema used for the connected souce. 
-3. On the Access tokens tab, select **Generate new token**.
+3. On the **Access tokens** tab, select **Generate new token**.
 4. Enter a comment that helps you to identify this token, such as "Braze CDI", and change the token’s lifetime to no lifetime by leaving the Lifetime (days) box empty (blank).
 5. Select **Generate**.
 6. Copy the displayed token, and then select **Done**.
@@ -282,7 +282,7 @@ This token will be used to generate the list of tables available in your CDI seg
 
 You may choose to grant access to all tables in a schema, or grant privileges only to specific tables. Whichever tables the Braze role has access to will be available to query in the CDI segment.
 
-The `create table` permission is required so Braze can create a table with your CDI Segment query results before updating the segment in Braze. Braze will create a temporary table per segment, and the table will only persist while Braze is updating the segment. 
+The `create table` permission is required so Braze can create a table with your CDI segment query results before updating the segment in Braze. Braze will create a temporary table per segment, which will only persist while Braze updates the segment. 
 
 Keep the token in a safe place until you need to enter it on the Braze dashboard during the credential creation step.
 
@@ -335,7 +335,7 @@ Input the information for your Snowflake data warehouse and source schema, then 
 
 #### Step 3.2: Configure sync details
 
-Choose a name for the connected source. This name will be used in the list of available sources when you create a new CDI Segment. 
+Choose a name for the connected source. This name will be used in the list of available sources when you create a new CDI segment. 
 
 Configure a maximum runtime for this source. Braze will automatically abort any queries that exceed the maximum runtime when it's creating or refreshing a segment. The maximum runtime allowed is 60 minutes; a lower runtime will reduce costs incurred on your Snowflake account. 
 
@@ -366,7 +366,7 @@ If you want to rotate the keys at any point, Braze can generate a new key pair a
 ALTER USER BRAZE_INGESTION_USER SET rsa_public_key='{INSERT_YOUR_KEY}';
 ```
 
-After you add the key to the user in Snowflake, select **Test Connection** in Braze, and then select **Done**. Your connected source is now created and ready to use in CDI Segments.
+After you add the key to the user in Snowflake, select **Test Connection** in Braze, and then select **Done**. Your connected source is now created and ready to use in CDI segments.
 {% endtab %}
 
 {% tab Redshift %}
@@ -396,7 +396,7 @@ If queries are consistently timing out and you have set a maximum runtime of 60 
 
 #### Step 4.3: Test Connection
 
-Select **Test Connection** in Braze to verify that the list of tables visible to the user is what you expect, then select **Done**. Your connected source is now created and ready to use in CDI Segments.
+Select **Test Connection** in Braze to verify that the list of tables visible to the user is what you expect, then select **Done**. Your connected source is now created and ready to use in CDI segments.
 
 ![]({% image_buster /assets/img/cloud_ingestion/connected_source_3.png %})
 {% endtab %}
@@ -436,7 +436,7 @@ Input the information for your Databricks data warehouse and source data, then p
 
 #### Step 4.2: Configure sync details
 
-Choose a name for connected source. This name will be used in the list of available sources when you create a new CDI Segment.
+Choose a name for connected source. This name will be used in the list of available sources when you create a new CDI segment.
 
 Configure a maximum runtime for this source. Braze will automatically abort any queries that exceed the maximum runtime when it's creating or refreshing a segment. The maximum runtime allowed is 60 minutes; a lower runtime will reduce costs incurred on your Snowflake account.
 
@@ -455,7 +455,7 @@ Select **Test Connection** in Braze to  verify that the list of tables visible t
 {% endtabs %}
 
 {% alert note %}
-You must successfully test a source before it can move from the "Draft" to "Active" state. If you need to close out of the creation page, your integration will be saved, and you can revisit the details page to make changes and test.  
+You must successfully test a source before it can move from the "draft" to the "active" state. If you need to close out of the creation page, your integration will be saved, and you can revisit the details page to make changes and test.  
 {% endalert %}
 
 ## Setting up additional integrations or users (optional)
