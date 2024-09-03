@@ -59,6 +59,10 @@ In Canvas, you'll see in-app message performance mapped onto the Canvas you've c
 
 {% endif %}
 
+### Changes Since Last Viewed
+
+The number of updates to the campaign from other members of your team are tracked by the **Changes Since Last Viewed** metric on the campaign overview page. Select **Changes Since Last Viewed** to view a changelog of updates to the campaign's name, schedule, tags, message, audience, approval status, or team access configuration. For each update, you can see who performed the update and when. You can use this changelog to audit changes to your campaign. 
+
 {% if include.channel == "Content Card" %}
 
 #### Control groups {#cc-control-group}
