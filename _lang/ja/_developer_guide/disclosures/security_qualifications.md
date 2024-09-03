@@ -23,17 +23,17 @@ Braze は、組織、お客様、お客様の消費者のデータプライバ�
 
 ![ISO認証グラフィック][1]{: height="25%" width="25%" style="border:0px;"}
 
-_Braze は、2018年12月18日付けで [ISO 27001][3]の認証を取得し、2023年8月22日付けで更新しました。2024年12月16日まで有効です。_
+_Brazeは、2018年12月18日付で\[ISO 27001][3] ]に準拠した認証を取得しており、2023年8月22日付で更新された。2024年12月16日まで有効です。_
 
-Braze の認証状況を独自に確認する場合は、[Schellman certificate directory][5] または[こちらの証明書][6]をご確認ください。
+Brazeの認証状況を独自に確認したい第三者は、\[Schelman certificate directory][5] ]または\[see our certificate here][6]]を参照することができる。
 
 ## SOC 2審査
 
-![SOC 2審査グラフィック][2]{: height="25%" width="25%" style="border:0px;"}
+![SOC 2 試験グラフィック][2]{: height="25%" width="25%" style="border:0px;"}
 
 _最終審査日/期間: 2022年7月1日から2023年6月30日まで_
 
-Braze は、独立系公認会計士事務所 [Schellman & Company, LLC][8] が実施した、_セキュリティ_と可用性に関する Type 2 SOC 2審査に合格しました。
+Brazeは、独立系公認会計士事務所\[Schelman & Company, LLC][8]]による_セキュリティと_可用性に関するタイプ2のSOC 2審査を無事終了した。
 
 ## HIPAA
 

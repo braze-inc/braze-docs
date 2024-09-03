@@ -5,17 +5,17 @@ description: "このオンボーディングリファレンス記事には、Bra
 page_order: 0
 ---
 
-# 開発者向けの SDK 概要
+# [![Brazeラーニングコース]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/path/developer/sdk-integration-basics){: style="float:right;width:120px;border:0;" class="noimgborder"}開発者sのSDK概観
 
-> Braze SDK の統合を開始する前に、正確に何を構築および統合するのかを疑問に思うかもしれません。また、ニーズに応じて SDK をより詳細にカスタマイズする方法に興味があるかもしれません。この記事は、SDK に関するすべての疑問を解決するのに役立ちます。Braze ラーニングの[技術統合チェックリストとツールキット](https://learning.braze.com/technical-integration-checklists-and-toolkits)に関するコースもご覧ください。
+> Braze SDK の統合を開始する前に、正確に何を構築および統合するのかを疑問に思うかもしれません。また、ニーズに応じて SDK をより詳細にカスタマイズする方法に興味があるかもしれません。この記事は、SDK に関するすべての疑問を解決するのに役立ちます。 
 
 SDK の基本的な概要を探しているマーケターは、代わりに[マーケターの概要][1]をご覧ください。
 
-以下は Braze SDK で実行される処理の概要です。
-\* ユーザーデータを収集し、統合されたユーザープロファイルに同期する
-\* セッションデータ、デバイス情報、プッシュトークンを自動的に収集する
-\* マーケティングエンゲージメントデータと、企業固有のカスタムデータを取得する
-\* プッシュ通知、アプリ内メッセージ、コンテンツカードメッセージングチャネルを強化する
+Braze SDK を簡単に説明すると、次のとおりです。
+* ユーザーデータを収集し、統合ユーザープロファイルに同期します
+* セッション情報、機器情報、プッシュトークンを自動的に収集
+* 業務に固有のマーケティング エンゲージメントデータおよびカスタムデータをキャプチャする
+* s、アプリ内メッセージ s、およびコンテンツカードメッセージング チャネルの電源をプッシュ通知にします
 
 ## アプリのパフォーマンス
 
@@ -41,11 +41,11 @@ Braze SDK は非常に円滑に動作し、アプリ内に存在する他の SDK
 
 Braze SDK では、データ (セッション、カスタムイベントなど) がキャッシュされ、定期的にアップロードされます。データがアップロードされた後でのみ、ダッシュボード上で値が更新されます。アップロード間隔は、デバイスの状態を考慮し、ネットワーク接続の品質に基づいて決定されます。
 
-| ネットワーク接続品質 | データフラッシュ間隔 |
+|ネットワーク接続品質 |    データフラッシュ間隔|
 |---|---|
-| 素晴らしい |10秒 |
-| 良い  |30秒 |
-| 悪い  |60秒 |
+|素晴らしい    |10秒|
+|良好    |30秒|
+|不良    |60秒|
 {: .reset-td-br-1 .reset-td-br-2}
 
 ネットワーク接続がない場合、ネットワーク接続が再確立されるまで、データはデバイスのローカルにキャッシュされます。接続が再確立されると、データが Braze にアップロードされます。
@@ -79,7 +79,7 @@ SDK の特定の部分を統合しないことも、ユーザーに [`disableSDK
 {% endalert %}
 
 {% endtab %}
-{% tab Swift SDK %}
+{% tab 迅速なSDK %}
 
 `Braze.Configuration` で対象となるフィールドのセットを [`configuration.devicePropertyAllowList`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/configuration-swift.class/devicepropertyallowlist) に割り当て、SDK で収集されるデバイスフィールドの許可リストを指定することができます。フィールドの完全なリストは [`Braze.Configuration.DeviceProperty`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/configuration-swift.class/deviceproperty) で定義されます。すべてのデバイスフィールドの収集をオフにするには、このプロパティの値を空のセット (`[]`) に設定します。
 
@@ -94,9 +94,9 @@ SDK の特定の部分を統合しないことも、ユーザーに [`disableSDK
 
 ## 使用している SDK バージョンの確認
 
-ダッシュボードを使用して、**[設定] > [アプリ設定]** から特定のアプリの SDK バージョンを確認できます。[**ライブ SDK バージョン**] には、ユーザーの5% 以上を対象とする最新のライブアプリケーションで使用されている最上位の Braze SDK バージョンが一覧にされています。
+ダッシュボードを使用して、**\[設定] > \[アプリ設定]** から特定のアプリの SDK バージョンを確認できます。\[**ライブ SDK バージョン**] には、ユーザーの5% 以上を対象とする最新のライブアプリケーションで使用されている最上位の Braze SDK バージョンが一覧にされています。
 
-![ワークスペースの Swifty という名前のアプリ。Live SDK バージョンは6.6.0です。][2]{: style="max-width:80%"} 
+![ワークスペース内のスウィフティという名前のアプリ。ライブSDKは6.6.0 です。][2]{: style="max-width:80%"} 
 
 {% alert tip %}
 iOS アプリをお持ちの場合、**Live SDK バージョン**が5.0.0 (最初にリリースされた Swift SDK のバージョン) 以降であれば、従来の [Objective-C iOS SDK]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/overview) の代わりに [Swift SDK]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/initial_sdk_setup/overview) を使用していることを確認できます。

@@ -17,14 +17,14 @@ Braze SDK には、コンテンツカードを使い始めるためのデフォ�
 
 ## カスタマイズ
 
-これらの追加メソッドを使用すると、[プラグインパブリックインターフェイス][7] で利用可能な次のメソッドを使用して、アプリ内にカスタムコンテンツカードフィードを構築できます。
+これらの追加メソッドを使用して、\[plugin public interface][7] ：
 
 | 方法                                         | 説明                                                                                            |
 | ---------------------------------------------- | ------------------------------------------------------------------------------------------------------ |
-| `braze.requestContentCardsRefresh()`     | Braze SDK サーバーに最新のコンテンツカードを要求します。                                           |
-| `braze.logContentCardClicked(contentCard)`    | 指定されたコンテンツカードオブジェクトのクリックを記録します。                                                            |
-| `braze.logContentCardImpression(contentCard)` | 指定されたコンテンツカードオブジェクトのインプレッションを記録します。                                                      |
-| `braze.logContentCardDismissed(contentCard)`  | 指定されたコンテンツカードオブジェクトが却下されたことを記録します。                                                        |
+| `braze.requestContentCardsRefresh()`     | Braze SDKサーバーから最新のコンテンツカードを要求する。                                           |
+| `braze.logContentCardClicked(contentCard)`    | 与えられたContent Cardオブジェクトのクリックを記録する。                                                            |
+| `braze.logContentCardImpression(contentCard)` | 与えられたContent Cardオブジェクトのインプレッションを記録する。                                                      |
+| `braze.logContentCardDismissed(contentCard)`  | 指定されたContent Cardオブジェクトの却下を記録する。                                                        |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## コンテンツカードデータの受信
@@ -33,30 +33,30 @@ Flutter アプリでコンテンツカードデータを受信するために、
 
 `BrazeContentCard` [オブジェクト](https://pub.dev/documentation/braze_plugin/latest/braze_plugin/BrazeContentCard-class.html)は、`description`、`title`、`image`、`url`、`extras` などを含む、ネイティブモデルオブジェクトで使用可能なフィールドのサブセットをサポートします。
 
-### ステップ 1Dart レイヤーでコンテンツカードデータをリッスンする
+### ステップ1:Dart レイヤーでコンテンツカードデータをリッスンする
 
 Dart レイヤーでコンテンツカードデータを受信するには、以下のコードを使用して `StreamSubscription` を作成し、`braze.subscribeToContentCards()` を呼び出します。不要になったストリームサブスクリプションを忘れずに `cancel()` してください。
 
-\`\`\`dart
-// ストリームサブスクリプションを作成
+```dart
+// Create stream subscription
 StreamSubscription contentCardsStreamSubscription;
 
 contentCardsStreamSubscription = braze.subscribeToContentCards((List<BrazeContentCard> contentCards) {
-  // コンテンツカードを処理
+  // Handle Content Cards
 }
 
-// ストリームのサブスクリプションをキャンセル
+// Cancel stream subscription
 contentCardsStreamSubscription.cancel();
-\`\`\`
+```
 
-例については、サンプルアプリの [main.dart](https://github.com/braze-inc/braze-flutter-sdk/blob/master/example/lib/main.dart) を参照してください。
+例としては [main.dart](https://github.com/braze-inc/braze-flutter-sdk/blob/master/example/lib/main.dart)を参照のこと。
 
-### ステップ 2:ネイティブレイヤーからコンテンツカードデータを転送する
+### ステップ2:ネイティブレイヤーからコンテンツカードデータを転送する
 
 ステップ 1 の Dart レイヤーでデータを受信するには、次のコードを追加して、ネイティブレイヤーからコンテンツカードデータを転送します。
 
 {% tabs %}
-{% tab Android %}
+{% tab アンドロイド %}
 
 コンテンツカードデータは Android レイヤーから自動的に転送されます。
 
@@ -67,7 +67,7 @@ contentCardsStreamSubscription.cancel();
 
 2. `contentCards.subscribeToUpdates` コールバックの実装では `BrazePlugin.processContentCards(contentCards)` を呼び出す必要があります。
 
-例については、サンプルアプリの [AppDelegate.swift](https://github.com/braze-inc/braze-flutter-sdk/blob/master/example/ios/Runner/AppDelegate.swift) を参照してください。
+例としては [AppDelegate.swift](https://github.com/braze-inc/braze-flutter-sdk/blob/master/example/ios/Runner/AppDelegate.swift)を参照のこと。
 
 {% endtab %}
 {% endtabs %}
@@ -84,14 +84,17 @@ BrazePlugin braze = new BrazePlugin(customConfigs: {replayCallbacksConfigKey: tr
 コンテンツカードのサンプルをテストする手順は、次のとおりです。
 
 1. `braze.changeUserId('your-user-id')` メソッドを呼び出して、React アプリケーションにアクティブユーザーを設定します。
-2. [**キャンペーン**] に移動し、[このガイド][3]に従って新しいコンテンツカードキャンペーンを作成します。
-3. コンテンツカードのテストキャンペーンを作成し、[**テスト**] タブに移動します。テストユーザーと同じ `user-id` を追加し、[**テストを送信**] をクリックします。
+2. \[**キャンペーン**] に移動し、[このガイド][3]に従って新しいコンテンツカードキャンペーンを作成します。
+3. コンテンツカードのテストキャンペーンを作成し、\[**テスト**] タブに移動します。テストユーザーと同じ `user-id` を追加し、[**テストを送信**] をクリックします。
 4. プッシュ通知をタップすると、デバイスでコンテンツカードが起動します。フィードを表示するには、フィードを更新する必要が生じる場合があります。
 
-![コンテンツカードをテストするために、テスト受信者として自分のユーザー ID を追加できることを示す Braze コンテンツカードキャンペーン。][4]
+![Brazeのコンテンツカードキャンペーンでは、自分のユーザーIDをテスト受信者として追加し、コンテンツカードをテストすることができる。][4]
 
-各プラットフォームの詳細については、[Android の統合] [5] または [iOS インテグレーション] [6] ガイドを参照してください。
+各プラットフォームの詳細については、\[Android integration][5] ]または\[iOS integration][6] ]のガイドに従うこと。
 
+## GIFサポート
+
+{% multi_lang_include wrappers/gif_support/content_cards.md %}
 
 [3]: {{site.baseurl}}/user_guide/message_building_by_channel/content_cards/create
 [4]: {% image_buster /assets/img/react-native/content-card-test.png %} 「コンテンツカードキャンペーンテスト」

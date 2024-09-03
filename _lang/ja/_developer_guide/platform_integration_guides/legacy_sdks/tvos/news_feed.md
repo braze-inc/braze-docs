@@ -16,7 +16,7 @@ noindex: true
 > この記事では、tvOS プラットフォーム用のニュースフィードを設定する方法について説明します。
 
 {% alert note %}
-ニュースフィードは非推奨になります。Braze では、ニュースフィードツールをご利用のお客様に、コンテンツカードのメッセージングチャネルへの移行を推奨しています。柔軟性、カスタマイズ性、信頼性が向上します。詳細については、[移行ガイド]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/)をご覧ください。
+ニュースフィードは非推奨になります。Braze では、News Feed ツールを使用するお客様は、コンテンツカードメッセージングチャネルに移動することを推奨しています。これは、より柔軟でカスタマイズ可能で、信頼性が高いチャネルです。詳しくは[マイグレーションガイド]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/)をご覧ください。
 {% endalert %}
 
 ## tvOS フィードの統合
@@ -24,14 +24,14 @@ noindex: true
 tvOS SDK はニュースフィードデータの取得をサポートしているため、独自のカスタム UI を使用してアプリケーションにニュースフィードを表示できます。ニュースフィードを取得するには、次のメソッドを呼び出し、クラスを調べて各カードを解析します。
 
 {% tabs %}
-{% tab OBJECTIVE-C %}
+{% tab 目標-C %}
 
 ```objc
 NSArray *feedCards =  [[Appboy sharedInstance].feedController getNewsFeedCards];
 ```
 
 {% endtab %}
-{% tab swift %}
+{% tab 速い %}
 
 ```swift
 let feedCards = Appboy.sharedInstance()?.feedController.newsFeedCards

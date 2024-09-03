@@ -1,16 +1,16 @@
 ---
-nav_title: "コンテンツ カード オブジェクト"
-article_title: コンテンツ カード メッセージング オブジェクト
+nav_title: "コンテンツ・カード・オブジェクト"
+article_title: コンテンツ・カード メッセージング・オブジェクト
 page_order: 4
 page_type: reference
 channel: content cards
-description: "このリファレンス記事では、Braze Content Card オブジェクトのさまざまなコンポーネントについて説明します。"
+description: "この参考記事では、Braze コンテンツカードオブジェクトのさまざまなコンポーネントについて説明します。"
 
 ---
 
-# コンテンツ カード オブジェクト
+# コンテンツ・カード・オブジェクト
 
-> この `content_card` オブジェクトを使用すると、 [メッセージングエンドポイント]({{site.baseurl}}/api/endpoints/messaging)を介してコンテンツカードを変更または作成できます。
+> `content_card` オブジェクトを使用して、[メッセージングエンドポイント]({{site.baseurl}}/api/endpoints/messaging)を通じてコンテンツカードを作成することができます。
 
 ```json
 {
@@ -34,5 +34,5 @@ description: "このリファレンス記事では、Braze Content Card オブ�
 ```
 
 {% alert important %}
-現在、Brazeは最大30日間の有効期限をサポートしています。
+現在、Brazeは最大30日間の有効期限をサポートしている。
 {% endalert %}

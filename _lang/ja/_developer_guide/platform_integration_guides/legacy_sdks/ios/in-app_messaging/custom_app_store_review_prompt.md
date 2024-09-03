@@ -37,7 +37,7 @@ noindex: true
 ```
 
 {% endtab %}
-{% tab swift %}
+{% tab SWIFT %}
 
 ```swift
 func before(inAppMessageDisplayed inAppMessage: ABKInAppMessage) -> ABKInAppMessageDisplayChoice {
@@ -70,7 +70,7 @@ func before(inAppMessageDisplayed inAppMessage: ABKInAppMessage) -> ABKInAppMess
 ```
 
 {% endtab %}
-{% tab swift %}
+{% tab SWIFT %}
 
 ```swift
 func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
@@ -90,8 +90,8 @@ func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpe
 
 次に、以下を使用してアプリ内メッセージングキャンペーンを作成します。
 
-- キーと値のペア`"Appstore Review" : "true"`
-- ディープリンク `{YOUR-APP-SCHEME}:appstore-review`を使用してクリック時の動作は、「アプリへのディープリンク」に設定します。
+- キーと値のペア `"Appstore Review" : "true"`
+- ディープリンク `{YOUR-APP-SCHEME}:appstore-review` を使用して、クリック時動作を [アプリにディープリンクする] に設定します。
 
 {% endraw %}
 

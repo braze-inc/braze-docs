@@ -9,7 +9,7 @@ page_order: 0
 
 > Before you begin to integrate the Braze SDKs, you may find yourself wondering what exactly you're building and integrating. You may be curious about how you can customize the SDK to further to meet your needs. This article can help you answer all of your SDK questions. 
 
-Are you a marketer looking for a basic rundown of the SDK? Check out our [marketer overview][1], instead.
+Are you a marketer looking for a basic rundown of the SDK? Check out our [marketer overview]({{site.baseurl}}/user_guide/onboarding_with_braze/web_sdk/), instead.
 
 In brief, the Braze SDK:
 * Collects and syncs user data into a consolidated user profile
@@ -96,11 +96,9 @@ For more usage details, refer to [Storage]({{site.baseurl}}/developer_guide/plat
 
 You can use the dashboard to see the SDK version of a particular app by visiting **Settings > App Settings**. The **Live SDK Version** lists the highest Braze SDK version used by your most recent live application for at least 5% of your users.
 
-![An app named Swifty in a workspace. The Live SDK version is 6.6.0.][2]{: style="max-width:80%"} 
+![An app named Swifty in a workspace. The Live SDK version is 6.6.0.]({% image_buster /assets/img/live-sdk-version.png %}){: style="max-width:80%"} 
 
 {% alert tip %}
 If you have an iOS app, you can confirm that you are using the [Swift SDK]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/initial_sdk_setup/overview) instead of the legacy [Objective-C iOS SDK]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/overview) if your **Live SDK Version** is equal to or higher than 5.0.0, which was the first released version of the Swift SDK.
 {% endalert %}
 
-[1]: {{site.baseurl}}/user_guide/onboarding_with_braze/web_sdk/
-[2]: {% image_buster /assets/img/live-sdk-version.png %}

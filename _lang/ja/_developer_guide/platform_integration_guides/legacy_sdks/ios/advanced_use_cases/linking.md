@@ -15,7 +15,7 @@ noindex: true
 ディープリンクの基本情報については、[ユーザーガイドの記事][4]を参照してください。Braze アプリにディープリンクを初めて実装する場合は、以下の手順で開始できます。
 
 {% alert note %}
-この記事には、廃止予定のニュースフィードの情報が含まれています。Braze では、ニュースフィードツールを利用しているお客様に、コンテンツカードのメッセージングチャネルへの移行をお勧めしています。移行により、柔軟性、カスタマイズ性、信頼性が向上します。詳細については、[移行ガイド]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/)をご覧ください。
+この記事には、廃止予定のニュースフィードの情報が含まれています。Braze は、ニュースフィードツールを使っている顧客には、コンテンツカードのメッセージングチャネルに移行することを勧めています。詳しくは[マイグレーションガイド]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/)をご覧ください。
 {% endalert %}
 
 ## ステップ 1:スキームを登録する
@@ -45,7 +45,7 @@ Xcode を使用して `Info.plist` ファイルを編集します。
 </array>
 ```
 
-## ステップ 2:カスタムスキームを許可リストに登録する (iOS 9 以降)
+## ステップ2:カスタムスキームを許可リストに登録する (iOS 9 以降)
 
 iOS 9 以降では、アプリが開くことを許可されているカスタムスキームの許可リストが必要です。このリストに含まれないスキームを呼び出そうとすると、デバイスのログにエラーが記録され、ディープリンクは開かれません。以下はこのエラーの例です。
 
@@ -55,7 +55,7 @@ iOS 9 以降では、アプリが開くことを許可されているカスタ�
 
 たとえば、アプリ内メッセージをタップしたときに Facebook アプリが開かれるようにするには、アプリの許可リストに Facebook カスタムスキーム (`fb`) が含まれている必要があります。含まれていないと、ディープリンクが拒否されます。自分のアプリ内のページやビューに誘導するディープリンクでも、アプリのカスタムスキームがアプリの `Info.plist` に含まれている必要があります。
 
-アプリがディープリンクする必要があるすべてのスキームを、キー `Info.plist` を使用してアプリの許可リストに追加する必要があります。以下はその例です。
+アプリがディープリンクする必要があるすべてのスキームを、キー `Info.plist` を使用してアプリの許可リストに追加する必要があります。以下に例を示します。
 
 ```html
 <key>LSApplicationQueriesSchemes</key>
@@ -66,11 +66,11 @@ iOS 9 以降では、アプリが開くことを許可されているカスタ�
 </array>
 ```
 
-詳細については、`LSApplicationQueriesSchemes` キーに関する [Apple のドキュメント][12] を参照してください。
+詳細については、\[Appleのドキュメント][12]を参照してください。`LSApplicationQueriesSchemes`キーに関する情報。
 
 ## ステップ 3:ハンドラを実装する
 
-アプリをアクティブにすると、iOS はメソッド [\`application:openURL:options:\`][13] を呼び出します。重要な引数は [NSURL][2] オブジェクトです。
+アプリを有効化した後、iOSはメソッド\[`application:openURL:options:`][13]を呼び出します。重要な引数は [NSURL][2] オブジェクトです。
 
 {% tabs %}
 {% tab OBJECTIVE-C %}
@@ -85,7 +85,7 @@ iOS 9 以降では、アプリが開くことを許可されているカスタ�
 ```
 
 {% endtab %}
-{% tab swift %}
+{% tab SWIFT %}
 
 ```swift
 func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
@@ -121,7 +121,7 @@ continueUserActivity:(NSUserActivity *)userActivity
 ```
 
 {% endtab %}
-{% tab swift %}
+{% tab SWIFT %}
 
 ```swift
 func application(_ application: UIApplication, continue userActivity: NSUserActivity, restorationHandler: @escaping ([UIUserActivityRestoring]?) -> Void) -> Bool {
@@ -136,7 +136,7 @@ func application(_ application: UIApplication, continue userActivity: NSUserActi
 {% endtab %}
 {% endtabs %}
 
-詳細については、[Apple][11] を参照してください。
+詳細については\[Apple][11]を参照してください。
 
 {% alert note %}
 デフォルトのユニバーサルリンク統合は、Braze プッシュ通知、アプリ内メッセージ、またはニュースフィードと互換性がありません。アプリケーション内のユニバーサルリンクを処理するには、「[リンクのカスタマイズを](#linking-handling-customization)」を参照してください。または、プッシュ通知、アプリ内メッセージ、ニュースフィードで[スキームベースのディープリンク](#step-1-registering-a-scheme)を使用することをお勧めします。
@@ -146,9 +146,9 @@ func application(_ application: UIApplication, continue userActivity: NSUserActi
 iOS 9 では、アプリ内メッセージ、ニュースフィードカード、プッシュ通知に埋め込まれた Web URL に影響を与える重大な変更が導入されました。
 
 ### ATS の要件
-[Apple のドキュメント][16] より:「アプリトランスポートセキュリティは、アプリと Web サービス間の接続のセキュリティを向上させる機能です。この機能は、安全な接続のベストプラクティスに準拠したデフォルトの接続要件で構成されています。アプリでこのデフォルト動作を無効にして、トランスポートセキュリティを無効にできます。」
+Appleのドキュメント][16]から:「アプリトランスポートセキュリティは、アプリと Web サービス間の接続のセキュリティを向上させる機能です。この機能は、安全な接続のベストプラクティスに準拠したデフォルトの接続要件で構成されています。アプリでこのデフォルト動作を無効にして、トランスポートセキュリティを無効にできます。」
 
-ATS は iOS 9 以降にデフォルトで適用されます。すべての接続が HTTPS を使用し、TLS 1.2を使用して暗号化され、前方秘匿性が確保される必要があります。詳細については、[ATS を使用して接続するための要件][14] を参照してください。Braze によりエンドデバイスに提供されるすべての画像は、TLS 1.2をサポートし、ATS と互換性のあるコンテンツ配信ネットワーク (「CDN」) によって処理されます。
+ATS は iOS 9 以降にデフォルトで適用されます。すべての接続が HTTPS を使用し、TLS 1.2を使用して暗号化され、前方秘匿性が確保される必要があります。ATS][14]を使用して接続するための要件については、詳細をご覧ください。Braze によりエンドデバイスに提供されるすべての画像は、TLS 1.2をサポートし、ATS と互換性のあるコンテンツ配信ネットワーク (「CDN」) によって処理されます。
 
 アプリケーションの `Info.plist` で例外として指定されていない限り、これらの要件に従わない接続は次のようなエラーにより失敗します。
 
@@ -170,7 +170,7 @@ ATS は、次の 3 つの方法のいずれかで処理できます。
 #### すべてのリンクが ATS に準拠していることを確認する (推奨)
 (アプリ内メッセージ、プッシュキャンペーン、ニュースフィードカードなどから) ユーザーを誘導する既存のリンクが ATS の要件を満たすようにすることで、Braze 統合が ATS 要件を満たすことができます。ATS の制限を回避する方法はありますが、リンクされたすべての URL が ATS に準拠するようにすることをお勧めします。Apple がアプリケーションのセキュリティをこれまで以上に重視していることを考えると、ATS の例外を許可する以下のアプローチが Apple によってサポートされる保証はありません。
 
-SSL ツールにより、Web サーバーのセキュリティの問題を正確に特定できます。Qualys, Inc. のこの [SSL サーバーテスト][15] は、Apple ATS 9 および iOS 9 への準拠に特化した項目を提供します。
+SSL ツールにより、Web サーバーのセキュリティの問題を正確に特定できます。この\[SSLサーバーテスト][15]は、Qualys, Inc.によって提供されており、Apple ATS 9およびiOS 9のコンプライアンスに特化した項目を提供します。
 
 #### ATS を一部無効にする
 特定のドメインやスキームのリンクのサブセットを ATS ルールの例外として処理することを許可できます。Braze メッセージングチャネルで使用するすべてのリンクが ATS に準拠しているか、例外として処理されている場合、Braze 統合は ATS 要件を満たします。
@@ -195,7 +195,7 @@ ATS の例外としてドメインを追加するには、アプリの `Info.pli
 </dict>
 ```
 
-詳細については、[アプリトランスポートセキュリティのキー][19] に関する Apple の記事を参照してください。
+詳細については、Apple の記事「アプリ トランスポート セキュリティ キー][19]」を参照してください。
 
 #### ATS を完全に無効にする
 
@@ -209,7 +209,7 @@ ATS を完全に無効にできます。ただし、セキュリティ保護が�
 </dict>
 ```
 
-ATS エラーをデバッグする方法の詳細については、[アプリトランスポートセキュリティを使用したアプリの配布][17] を参照してください。
+App Transport Security][17] でアプリを出荷する方法については、ATS の障害をデバッグする方法の詳細をご覧ください。
 
 ## URL エンコーディング
 
@@ -229,7 +229,7 @@ Braze iOS SDK v2.21.0 以降、SDK はリンクをパーセントエンコード
 ```
 
 {% endtab %}
-{% tab swift %}
+{% tab SWIFT %}
 
 ```swift
   func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
@@ -246,13 +246,13 @@ Braze iOS SDK v2.21.0 以降、SDK はリンクをパーセントエンコード
 
 ### デフォルト WebView のカスタマイズ
 
-一般的に Web ディープリンクに対して [アプリ内で Web URL を開く] が選択されている場合、カスタマイズ可能な `ABKModalWebViewController` クラスには SDK によって開かれる Web URL が表示されます。
+一般的に Web ディープリンクに対して \[アプリ内で Web URL を開く] が選択されている場合、カスタマイズ可能な `ABKModalWebViewController` クラスには SDK によって開かれる Web URL が表示されます。
 
 `ABKModalWebViewController` クラスのカテゴリを宣言するか、直接変更して、Web ビューにカスタマイズを適用できます。詳細については、このクラスの [.h ファイル][6]と [.m ファイル][5]をご確認ください。
 
 ### リンク処理のカスタマイズ
 
-`ABKURLDelegate` プロトコルを使用して、ディープリンク、Web URL、ユニバーサルリンクなどの URL の処理をカスタマイズできます。Braze の初期化中にデリゲートを設定するには、デリゲートオブジェクトを [\`startWithApiKey:inApplication:withAppboyOptions:\`][22] の `appboyOptions` で `ABKURLDelegateKey` に渡します。その後、URI を処理する前に Braze で `handleAppboyURL:fromChannel:withExtras:` のデリゲートの実装が呼び出されます。
+`ABKURLDelegate` プロトコルを使用して、ディープリンク、Web URL、ユニバーサルリンクなどの URL の処理をカスタマイズできます。Brazeの初期化中にデリゲートを設定するには、デリゲートオブジェクトを`ABKURLDelegateKey`の`appboyOptions`に渡します\[`startWithApiKey:inApplication:withAppboyOptions:`][22]。その後、URI を処理する前に Braze で `handleAppboyURL:fromChannel:withExtras:` のデリゲートの実装が呼び出されます。
 
 #### 統合の例:ABKURLDelegate
 
@@ -271,7 +271,7 @@ Braze iOS SDK v2.21.0 以降、SDK はリンクをパーセントエンコード
 ```
 
 {% endtab %}
-{% tab swift %}
+{% tab SWIFT %}
 
 ```swift
 func handleAppboyURL(_ url: URL?, from channel: ABKChannel, withExtras extras: [AnyHashable : Any]?) -> Bool {
@@ -287,7 +287,7 @@ func handleAppboyURL(_ url: URL?, from channel: ABKChannel, withExtras extras: [
 {% endtab %}
 {% endtabs %}
 
-詳細については、[\`ABKURLDelegate.h\`][23] を参照してください。
+詳細については、\[`ABKURLDelegate.h`][23]をご覧ください。
 
 ## よくあるユースケース
 
@@ -295,8 +295,8 @@ func handleAppboyURL(_ url: URL?, from channel: ABKChannel, withExtras extras: [
 
 iOS は、アプリから iOS 設定アプリケーションのページにユーザーを誘導できます。`UIApplicationOpenSettingsURLString` を利用して、プッシュ通知、アプリ内メッセージ、ニュースフィードから設定にユーザーをディープリンクできます。
 
-1. まず、アプリケーションが [スキームベースのディープリンク][25] または [ユニバーサルリンク][27] 用に設定されていることを確認します。
-2. [**設定**] ページへのディープリンクの URI (`myapp://settings` や `https://www.braze.com/settings` など) を決定します。
+1. まず、アプリケーションが\[スキームベースのディープリンク][25]または\[ユニバーサルリンク][27]に設定されていることを確認してください。
+2. \[**設定**] ページへのディープリンクの URI (`myapp://settings` や `https://www.braze.com/settings` など) を決定します。
 3. カスタムスキームベースのディープリンクを使用している場合は、`application:openURL:options:` メソッドに次のコードを追加します。
 
 {% tabs %}
@@ -316,7 +316,7 @@ iOS は、アプリから iOS 設定アプリケーションのページにユ�
 ```
 
 {% endtab %}
-{% tab swift %}
+{% tab SWIFT %}
 
 ```swift
 func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
@@ -347,6 +347,6 @@ func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpe
 [19]: https://developer.apple.com/library/ios/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW33
 [22]: https://appboy.github.io/appboy-ios-sdk/docs/interface_appboy.html#aa9f1bd9e4a5c082133dd9cc344108b24
 [23]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/include/ABKURLDelegate.h
-[25]: #deep-links
-[26]: #linking-customization
-[27]: #universal-links
+[25]: \#ディープリンク
+[26]: \#リンクのカスタマイズ
+[27]: \#ユニバーサルリンク

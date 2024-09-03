@@ -29,7 +29,7 @@ Next, you will be prompted to input your company name or nickname. This is the n
 
 ### Step 2: Assign phone number
 
-Select the subscription group and desired phone number from the available drop-down options. This number will be listed in your Contact Card and available on their phone to text to after it's saved.
+Select the subscription group and desired phone number from the available dropdown options. This number will be listed in your Contact Card and available on their phone to text to after it's saved.
 
 Note that alphanumeric codes are not compatible with two-way messaging and are not supported for Contact Cards.
 

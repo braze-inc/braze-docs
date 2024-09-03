@@ -32,7 +32,7 @@ Braze は、特定の高度な機能の内部実装にサイレントプッシ�
 ## 実装例 {#internal-push-implementation-example}
 
 {% tabs %}
-{% tab OBJECTIVE-C %}
+{% tab 目標-C %}
 
 ```objc
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
@@ -53,7 +53,7 @@ Braze は、特定の高度な機能の内部実装にサイレントプッシ�
 ```
 
 {% endtab %}
-{% tab swift %}
+{% tab 速い %}
 
 ```swift
 func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey : Any]? = nil) -> Bool {

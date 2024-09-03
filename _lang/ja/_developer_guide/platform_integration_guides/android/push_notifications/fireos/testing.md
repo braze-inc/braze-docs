@@ -20,10 +20,10 @@ channel:
 
 - `YOUR-API-KEY-HERE` - [**設定**] > [**API キー**] で利用できます。キーが `/messages/send` REST API エンドポイントを介してメッセージを送信することを許可されていることを確認します。 
 - `EXTERNAL_USER_ID` - [**ユーザーの検索**] ページで使用できます。
-- `REST_API_ENDPOINT_URL` - Braze [インスタンス]({{site.baseurl}}) /api/basics/#endpoints. Ensure using the endpoint corresponds to the Braze instance your workspace is on. にリストされています
+- `REST_API_ENDPOINT_URL` - Braze [Instances] （{{site.baseurl}}/api/basics/#endpoints. ）に記載されている。ワークスペースが使用しているBrazeインスタンスに対応するエンドポイントを使用していることを確認する。
 
 {% alert note %}
-[古いナビゲーション]({{site.baseurl}}/navigation)を使用している場合、これらのページは別の場所にあります。<br>\- [**API キー**] は [**開発者コンソール**] > [**API 設定**] にあります。<br>\- [**ユーザー検索**]は、[**ユーザー**] > [**ユーザー検索**] にあります。
+[古いナビゲーション]({{site.baseurl}}/navigation)を使用している場合、これらのページは別の場所にあります。<br>\- \[**API キー**] は \[**開発者コンソール**] > \[**API 設定**] にあります。<br>\- \[**ユーザー検索**]は、\[**ユーザー**] > \[**ユーザー検索**] にあります。
 {% endalert %}
 
 省略可能なフィールド:

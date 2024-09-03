@@ -11,7 +11,7 @@ description: "This reference article shows how to integrate the Braze Swift SDK 
 
 ## Step 1: Install CocoaPods
 
-Installing the iOS SDK via [CocoaPods][apple_initial_setup_1] automates the majority of the installation process for you. To install CocoaPods, refer to the CocoaPods [Getting Started guide][cocoapods_getting_started].
+Installing the iOS SDK via [CocoaPods](http://cocoapods.org/) automates the majority of the installation process for you. To install CocoaPods, refer to the CocoaPods [Getting Started guide](https://guides.cocoapods.org/using/getting-started.html).
 
 Run the following command to get started:
 
@@ -19,7 +19,7 @@ Run the following command to get started:
 $ sudo gem install cocoapods
 ```
 
-If you have issues regarding CocoaPods, refer to the CocoaPods [troubleshooting guide][apple_initial_setup_25].
+If you have issues regarding CocoaPods, refer to the CocoaPods [troubleshooting guide](http://guides.cocoapods.org/using/troubleshooting.html "CocoaPods Troubleshooting Guide").
 
 ## Step 2: Constructing the Podfile
 
@@ -70,7 +70,7 @@ pod install
 
 At this point, you should be able to open the new Xcode project workspace created by CocoaPods. Make sure to use this Xcode workspace instead of your Xcode project.
 
-![A Braze Example folder expanded to show the new `BrazeExample.workspace`.][apple_initial_setup_15]
+![A Braze Example folder expanded to show the new `BrazeExample.workspace`.]({% image_buster /assets/img/braze_example_workspace.png %})
 
 ## Next steps
 
@@ -84,10 +84,3 @@ To update a CocoaPod, simply run the following command within your project direc
 pod update
 ```
 
-[apple_initial_setup_1]: http://cocoapods.org/
-[cocoapods_getting_started]: https://guides.cocoapods.org/using/getting-started.html
-[apple_initial_setup_2]: https://www.ruby-lang.org/en/installation/
-[apple_initial_setup_3]: http://guides.cocoapods.org/using/getting-started.html "CocoaPods Installation Directions"
-[apple_initial_setup_5]: https://github.com/braze-inc/braze-ios-sdk/blob/master/AppboyKit/include/Appboy.h
-[apple_initial_setup_15]: {% image_buster /assets/img/braze_example_workspace.png %}
-[apple_initial_setup_25]: http://guides.cocoapods.org/using/troubleshooting.html "CocoaPods Troubleshooting Guide"

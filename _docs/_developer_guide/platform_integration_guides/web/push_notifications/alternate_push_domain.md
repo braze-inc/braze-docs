@@ -11,7 +11,7 @@ channel: push
 
 # Alternate web push domain
 
-> To integrate web push, your domain must be [secure][2], which generally means `https`, `localhost`, and other exceptions as defined in the [W3C push standard][1]. You'll also need to be able to register a Service Worker at the root of your domain, or at least be able to control the HTTP headers for that file. This article covers how to integrate Braze Web Push on an alternate domain.
+> To integrate web push, your domain must be [secure](https://w3c.github.io/webappsec-secure-contexts/), which generally means `https`, `localhost`, and other exceptions as defined in the [W3C push standard](https://www.w3.org/TR/service-workers/#security-considerations). You'll also need to be able to register a Service Worker at the root of your domain, or at least be able to control the HTTP headers for that file. This article covers how to integrate Braze Web Push on an alternate domain.
 
 _If you aren't able to meet all of those criteria_, use this guide to set up a workaround that lets you add a push prompt dialog to your website. For example, this article would be helpful if you want the user to opt-in from an `http` (insecure) website or from a browser extension popup that prevents the push prompt from displaying.
 
@@ -67,7 +67,7 @@ At this point, `secure.com` will open a popup window in which you can initialize
 
 Now that users can opt-in from this workflow originating on `insecure.com`, you may want to modify your site based on if the user is already opted-in or not. There's no point in asking the user to register for push if they already are.
 
-You can use iFrames and the [`postMessage`][3] API to communicate between your two domains. 
+You can use iFrames and the [`postMessage`](https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage) API to communicate between your two domains. 
 
 **insecure.com**
 
@@ -96,6 +96,3 @@ function getPushStatus(event){
 
 <script src="https://braze-inc.github.io/embed-like-gist/embed.js?target=https%3A%2F%2Fgithub.com%2Fbraze-inc%2Fbraze-web-sdk%2Fblob%2Fmaster%2Fsnippets%2Falternate-push-domain-status.html&style=github&showBorder=on&showLineNumbers=on&showFileMeta=on&showCopy=on"></script>
 
-[1]: https://www.w3.org/TR/service-workers/#security-considerations
-[2]: https://w3c.github.io/webappsec-secure-contexts/
-[3]: https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage

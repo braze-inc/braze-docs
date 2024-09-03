@@ -25,8 +25,8 @@ If you are using the [older navigation]({{site.baseurl}}/navigation), you can fi
 ![Navigate to Custom Attributes or Custom Events or Products.][21]{: style="max-width:90%;" }
 
 {: start="2"}
-2. To add a custom attribute, event, or product, go to the respective page and click **Add Custom Attributes** or **Add Custom Events** or **Add Products**.<br><br>For custom attributes, select a [data type][20] for this attribute (for instance, boolean or string). An attribute's data type will determine the segmentation filters available for that attribute. <br><br>![Add new attribute or event][22]{: style="max-width:80%;" }
-3. Click **Save**.
+2. To add a custom attribute, event, or product, go to the respective page and select **Add Custom Attributes** or **Add Custom Events** or **Add Products**.<br><br>For custom attributes, select a [data type][20] for this attribute (for instance, boolean or string). An attribute's data type will determine the segmentation filters available for that attribute. <br><br>![Add new attribute or event][22]{: style="max-width:80%;" }
+3. Select **Save**.
 
 ### Naming custom events and custom attributes
 
@@ -34,7 +34,7 @@ Custom events and custom attributes are case-sensitive. Keep this in mind when y
 
 ## Managing properties
 
-After you have created a custom event or product, you can click **Manage Properties** for that event or product to add new properties, blocklist existing properties, and view which campaigns or Canvases use this property in a [trigger event]({{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/triggered_delivery/#step-1-select-a-trigger-event).
+After you have created a custom event or product, select **Manage Properties** for that event or product to add new properties, blocklist existing properties, and view which campaigns or Canvases use this property in a [trigger event]({{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/triggered_delivery/#step-1-select-a-trigger-event).
 
 ![Custom properties for a custom event.][73]{: style="max-width:80%"}
 
@@ -60,7 +60,7 @@ To stop tracking a specific custom attribute, event, or product, follow these st
 
 1. Search for it in the **Custom Attributes**, **Custom Events**, or **Products** pages.
 2. Select the custom attribute, event, or product. For custom attributes and events, you can select up to 10 to blocklist at a time.
-3. Click **Blocklist**.
+3. Select **Blocklist**.
 
 ![Multiple selected custom attributes that are blocklisted on the Custom Attributes page.]({% image_buster /assets/img_archive/blocklist_custom_attr.png %})
 
@@ -97,11 +97,13 @@ Deleting does not remove data already recorded on user profiles, or prevent addi
 
 ## Forcing data type comparisons
 
-Braze automatically recognizes data types for attribute data that is sent to us. However, in the event multiple data types are applied to a single attribute, you can force the data type of any attribute to let us know what it really is. Click on the drop-down in the Data Type column to choose.
+Braze automatically recognizes data types for attribute data that is sent to us. However, in the event multiple data types are applied to a single attribute, you can force the data type of any attribute to let us know what it really is. Select from the dropdown in the **Data Type** column.
 
-{% alert note %} Forcing data types does not apply to event properties, or purchase properties. {% endalert %}
+{% alert note %}
+Forcing data types does not apply to event properties, or purchase properties.
+{% endalert %}
 
-![Custom attributes data type drop-down][75]
+![Custom attributes data type dropdown][75]
 
 {% alert warning %}
 If you choose to force the data type for an attribute, any data that comes in that isn't the specified type will be ignored.

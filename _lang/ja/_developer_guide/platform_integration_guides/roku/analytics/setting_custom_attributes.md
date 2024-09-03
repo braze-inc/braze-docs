@@ -40,12 +40,12 @@ Braze では、デフォルトユーザー属性以外にも、複数の異な�
 
 ### カスタム属性値の設定
 {% tabs %}
-{% tab Boolean %}
+{% tab ブール値 %}
 ```brightscript
 m.Braze.setCustomAttribute("boolAttribute", true)
 ```
 {% endtab %}
-{% tab Integer %}
+{% tab 整数 %}
 ```brightscript
 m.Braze.setCustomAttribute("intAttribute", 5)
 ```
@@ -56,19 +56,19 @@ m.Braze.setCustomAttribute("floatAttribute", 3.5)
 ```
 Braze では、FLOAT 値と DOUBLE 値がデータベースでまったく同じく処理されます。
 {% endtab %}
-{% tab String %}
+{% tab 文字列 %}
 ```brightscript
 m.Braze.setCustomAttribute("stringAttribute", "stringValue")
 ```
 {% endtab %}
-{% tab Date %}
+{% tab 日付 %}
 ```brightscript
 dateAttribute = CreateObject("roDateTime")
 dateAttribute.fromISO8601String("1992-11-29 00:00:00.000")
 m.Braze.setCustomAttribute("dateAttribute", dateAttribute)
 ```
 {% endtab %}
-{% tab Array %}
+{% tab 配列 %}
 ```brightscript
 stringArray = createObject("roArray", 3, true)
 stringArray.Push("string1")
@@ -79,7 +79,7 @@ m.Braze.setCustomAttribute("arrayAttribute", stringArray)
 {% endtab %}
 {% endtabs %}
 
-### インクリメント/デクリメントカスタム属性
+### カスタム属性のインクリメント / デクリメント
 
 このコードは、インクリメントカスタム属性の例です。カスタム属性の値は、正または負の整数値でインクリメントできます。
 
@@ -107,11 +107,11 @@ REST API を使用してユーザー属性を設定することもできます�
 
 SDK から、ユーザーに対して以下のメールのサブスクリプションステータスをプログラムで設定できます。
 
-| サブスクリプションステータス | 定義 |
+| サブスクリプションのステータス | 定義 |
 | ------------------- | ---------- |
-| `OptedIn` | サブスクリプション登録済み、かつ明示的にオプトイン済み |
-| `Subscribed` | サブスクリプション登録済み、ただし明示的なオプトイン未実行 |
-| `UnSubscribed` | 配信停止済みおよび/または明示的にオプトアウト済み |
+| `OptedIn` | サブスクライブされ、明示的にオプトイン |
+| `Subscribed` | 購読済み、ただし明示的に選択されていない |
+| `UnSubscribed` | サブスクライブされていない、および/または明示的にオプトアウトされた |
 {: .reset-td-br-1 .reset-td-br-2}
 
 >  これらの型は `BrazeConstants().SUBSCRIPTION_STATES` に属します
