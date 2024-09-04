@@ -42,7 +42,7 @@ A long code is a standard phone number used to send and receive voice calls and 
 
 | Length | Access | Throughput | MMS enabled | 1-way vs. 2-way |
 | --- | --- | --- | --- | --- |
-| 10 digits | 4-6 week application (can be shorter or longer for different countries) | In the US, throughput is dependent on your 10DLC trust score; in international markets, throughput can vary or be increased in some circumstances. | Yes | 2-way (depending on where you're sending) |
+| 10 digits | 4-6 week application (can be shorter or longer for different countries) | In the US, throughput depends on your 10DLC trust score; in international markets, throughput can vary or be increased in some circumstances. | Yes | 2-way (depending on where you're sending) |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 }
 
 ##### Pros and cons
@@ -83,7 +83,7 @@ A vanity short code is a 5-6 digit phone number that is specifically selected by
 
 | Cons |
 | ---- |
-| **Short codes are not available everywhere**<br> Short codes are currently available in only the **US and Canada (CA)**.<br><br>**Longer application process**<br> A 8-12 week application process where use cases must be outlined in great detail is required. This involved process is necessary to support deliverability because after granted a short code, carriers will audit short codes but will **not** filter messages allowing for higher sending rates.<br><br>**Higher cost in the US**<br> There isn't an additional cost for short codes in CA, but in the US, short codes cost more than long codes and take longer to get approved for. However, after you have a short code, you are considered "pre-approved" to send messages at better, faster rates and are subject to less scrutiny during the sending process, as you will have gone through all of the checks during your application for the short code. |
+| **Short codes are not available everywhere**<br> Short codes are currently available in only the **US and Canada (CA)**.<br><br>**Longer application process**<br> An 8-12 week application process where use cases must be outlined in great detail is required. This involved process is necessary to support deliverability because after granted a short code, carriers will audit short codes but will **not** filter messages allowing for higher sending rates.<br><br>**Higher cost in the US**<br> There isn't an additional cost for short codes in CA, but in the US, short codes cost more than long codes and take longer to get approved for. However, after you have a short code, you are considered "pre-approved" to send messages at better, faster rates and are subject to less scrutiny during the sending process, as you will have gone through all of the checks during your application for the short code. |
 {: .reset-td-br-1}
 
 {% endtab %}
