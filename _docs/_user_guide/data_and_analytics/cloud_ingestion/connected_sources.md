@@ -361,7 +361,7 @@ Create a connected source in the Braze dashboard. Go to **Data Settings** > **Cl
 
 Input the information for your Redshift data warehouse and source schema, then proceed to the next step.
 
-![]({% image_buster /assets/img/cloud_ingestion/connected_source_sf_1.png %})
+![]({% image_buster /assets/img/cloud_ingestion/connected_source_rd_1.png %})
 
 #### Step 3.2: Configure sync details
 
@@ -373,11 +373,13 @@ Configure a maximum runtime for this source. Braze will automatically abort any 
 If queries are consistently timing out and you have set a maximum runtime of 60 minutes, consider trying to optimize your query execution time or dedicating a larger warehouse to the Braze user.
 {% endalert %}
 
-![]({% image_buster /assets/img/cloud_ingestion/connected_source_sf_2.png %})
+![]({% image_buster /assets/img/cloud_ingestion/connected_source_rd_2.png %})
 
-#### Step 3.3: Note the public key  
+#### Step 3.3: Note the public key (optional)
 
-In the **Test connection** step, take note of the RSA public key. You'll need it to complete the integration in Redshift.
+If your credentials have **Connect with SSH Tunnel** selected, take note of the RSA public key in the **Test connection** step. You'll need it to complete the integration in Redshift.
+
+![]({% image_buster /assets/img/cloud_ingestion/connected_source_rd_3.png %})
 
 {% endtab %}
 {% tab BigQuery %}
@@ -403,10 +405,6 @@ If queries are consistently timing out and you have set a maximum runtime of 60 
 
 ![]({% image_buster /assets/img/cloud_ingestion/connected_source_bg_2.png %})
 
-#### Step 3.3: Note the public key  
-
-In the **Test connection** step, take note of the RSA public key. You'll need it to complete the integration in BigQuery.
-
 {% endtab %}
 {% tab Databricks %}
 #### Step 3.1: Add Databricks connection information and source table
@@ -430,10 +428,6 @@ If queries are consistently timing out and you have set a maximum runtime of 60 
 {% endalert %}
 
 ![]({% image_buster /assets/img/cloud_ingestion/connected_source_db_2.png %})
-
-#### Step 3.3: Note the public key  
-
-In the **Test connection** step, take note of the RSA public key. You'll need it to complete the integration in Databricks.
 
 {% endtab %}
 {% endtabs %}
