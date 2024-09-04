@@ -341,13 +341,13 @@ REST API keys cannot be edited after they're created, but you can view details f
 | Last Seen    | The date this key was last used. This field will show as "N/A" for keys that have never been used.                  |
 {: .reset-td-br-1 .reset-td-br-2}
 
-Select a key from the list to view the details for a specific key, including all the permissions this key has, whitelisted IPs (if any), and if this key is opted into Braze IP whitelisting.
+To view the details of an API key, hover over the key and select <i class="fa-solid fa-eye" alt="View"></i> **View**. This includes all the permissions this key has, whitelisted IPs (if any), and if this key is opted into Braze IP whitelisting.
 
 ![][30]
 
-Note when [deleting a user]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/adding_users_to_your_dashboard/), the associated API keys a user created won't be deleted. To delete a key, select <i class="fas fa-gear" alt="Settings"></i> and select the corresponding option.
+Note when [deleting a user]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/adding_users_to_your_dashboard/), the associated API keys a user created won't be deleted. To delete a key, hover over the key and select <i class="fa-solid fa-trash-can" alt="Delete"></i> **Delete**.
 
-![][29]
+![][29]{: style="max-width:30%;"}
 
 ## REST API key security
 
@@ -356,8 +356,6 @@ API keys are used to authenticate an API call. When you create a new REST API ke
 Given that REST API keys allow access to potentially sensitive REST API endpoints, secure these keys and only share them with trusted partners. They should never be publicly exposed. For example, do not use this key to make AJAX calls from your website or expose it in any other public manner.
 
 A good security practice is to assign a user only as much access as is necessary to complete their job: this principle can also be applied to API keys by assigning permissions to each key. These permissions give you better security and control over the different areas of your account. 
-
-![API key permissions available when creating an API key.][25]
 
 {% alert warning %}
 Given that REST API keys allow access to potentially sensitive REST API endpoints, make sure they are stored and used securely. For example, do not use this key to make AJAX calls from your website or expose it in any other public manner.
