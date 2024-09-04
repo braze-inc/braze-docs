@@ -30,7 +30,7 @@ To create an item recommendation:
 1. Go to **Analytics** > **AI Item Recommendation**.
 2. Select **Create Prediction** > **AI Item Recommendation**.
 
-You can also choose to create a recommendation straight from an individual catalog. Select your catalog from the **Catalogs** page, and then select **Create Recommendation**.
+You can also choose to create a recommendation straight from an individual catalog. Select your catalog from the **Catalogs** page, then select **Create Recommendation**.
 
 ### Step 1: Add recommendation details
 
@@ -40,7 +40,7 @@ Give your recommendation a name and optional description.
 
 ### Step 2: Define your recommendation {#recommendation-type}
 
-Select the recommendation type. All recommendation types use the last six months of item interaction (purchase or custom event) data. The interaction mentioned below refers to either a purchase event or custom event chosen in [Step 3](#step-3-select-the-interaction-to-drive-recommendations).
+Select the recommendation type. All recommendation types use the last six months of item interaction (purchase or custom event) data. The interaction mentioned below refers to either a purchase event or a custom event chosen in [Step 3](#step-3-select-the-interaction-to-drive-recommendations).
 
 - **Most popular:** Calculates up to 30 items from the catalog that all users in the workspace interact with most often, such as the most purchased products.
 - **Most recent:** Creates a list of up to 30 products a user has interacted with most recently.
