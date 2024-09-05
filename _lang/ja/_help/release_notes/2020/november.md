@@ -3,23 +3,23 @@ nav_title: 11月
 page_order: 2
 noindex: true
 page_type: update
-description: "この記事には、2020年11月のリリースノートが含まれている。"
+description: "この記事には2020年11月のリリースノートが含まれています。"
 ---
  
 # 2020年11月
 
-## Tealiumとのパートナーシップが始動
+## Tealiumのパートナーシップが開始されました
 
-[Tealiumは]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/tealium/#about-tealium)、モバイル、Web、サードパーティーソースからの代替データを簡単に接続できるデータハブである。Brazeと接続することで、Tealiumはカスタムイベント、ユーザー属性、購入のデータフローを可能にし、リアルタイムでのデータアクションを実現する。
+[Tealium]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/tealium/#about-tealium) は、サードパーティのソースからモバイル、Web、および代替データを簡単に接続できるデータハブです。Brazeと接続すると、Tealiumはカスタムイベント、ユーザー属性、および購入のデータフローをリアルタイムデータアクションのために可能にします。
 
-## Braze製品ポータル
+## Braze プロダクトポータル
 
-[Braze製品ポータルには]({{site.baseurl}}/user_guide/administrative/access_braze/portal/#product-portal-)、Braze製品のロードマップと、ユーザーがアイデアを提出する機会が掲載されている。また、最近リリースされた機能も見ることができる。製品ポータルは、Brazeダッシュボードの「**リソース**」にある。
+[Braze Product Portal]({{site.baseurl}}/user_guide/administrative/access_braze/portal/#product-portal-)には、Braze製品のロードマップとユーザーがアイデアを提出する機会が含まれています。最近リリースされた機能も確認できます。製品ポータルは、**リソース**のBrazeダッシュボードにあります。
 
 ## iOSコンテンツカード実装ガイド
 
-開発者中心の技術戦略を採用するBrazeは、ユースケースに基づいたiOSコンテンツカードガイドラインとベストプラクティスに焦点を当てた初の実装ガイドを発表した。この包括的なガイドでは、ユニークなユースケース、動画によるウォークスルー、付随するコードスニペット、貴重なユーザーメトリクスの記録方法に関するガイダンスを提供している。iOSコンテンツカードをプロ並みに実装する方法については、[実装ガイドを]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/content_cards/implementation_guide/)ご覧いただきたい。 
+開発者中心の技術戦略を採用し、Brazeはユースケース駆動のiOSコンテンツカードガイドラインとベストプラクティスを強調した最初の実装ガイドをリリースしました。この包括的なガイドは、ユニークな使用例、動画ウォークスルー、付随するコードスニペット、および貴重なユーザーメトリクスを記録する方法に関するガイダンスを提供します。プロのようにiOSコンテンツカードの実装を開始する方法について詳しく読むには、[実装ガイド]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/content_cards/implementation_guide/)をご覧ください。 
 
 ## Swift Package Manager
 
-[Swiftパッケージマネージャーは]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/initial_sdk_setup/overviewswift_package_manager)Swiftビルドシステムと統合されており、依存関係を自動的にダウンロード、コンパイル、リンクする。Swift Package Manager経由でiOS SDKをインストールすると、インストールプロセスの大部分がオートメーション化される。
+[Swift Package Manager]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/initial_sdk_setup/overviewswift_package_manager) は、Swift ビルドシステムと統合されており、自動的にダウンロード、コンパイル、リンクの依存関係が生成されます。Swiftパッケージマネージャーを介してiOS SDKをインストールすると、インストールプロセスの大部分が自動化されます。

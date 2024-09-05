@@ -9,7 +9,7 @@ search_tag: Partner
 
 ---
 
-# [![Braze Learning course]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/amplitude-integration-with-braze){: style="float:right;width:120px;border:0;" class="noimgborder"}電流に対する振幅
+# [![Braze Learning course]](https://learning.braze.com/amplitude-integration-with-braze)([{% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/amplitude-integration-with-braze){: style="float:right;width:120px;border:0;" class="noimgborder"}電流に対する振幅
 
 > [Amplitudeは](https://amplitude.com/)製品分析とビジネスインテリジェンスのプラットフォームである。
 

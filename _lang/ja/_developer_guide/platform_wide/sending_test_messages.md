@@ -32,7 +32,7 @@ description: "このリファレンス記事では、さまざまなチャネル
 
 "matches"オプションを使用して、メールの住所を| 文字で区切ることで、複数の特定のメールs を選択できます(たとえば、"matches" "email1@braze.com\|email2@braze.com")。
 
-これらのフィルターs は、テストユーザーs の一覧を絞り込むために、互いに組み合わせて使用することもできます。たとえば、テストSegmentには、"matches""@braze.com"と、"と等しくない"sales@braze.com"という別のフィルターを含めることができます。
+これらのフィルターs は、テストユーザーs の一覧を絞り込むために、互いに組み合わせて使用することもできます。たとえば、テストSegmentには、"matches""@braze.com"と、"と等しくない"sales@braze.com"という別のフィルターを含めることができます。 
 
 テストフィルターs をテストSegmentに追加した後、Segmentエディタの上部にある**プレビュー** をクリックするか、エディタの右隅にあるギアアイコンをクリックしてそのSegmentのユーザーデータをCSV にエクスポートし、ドロップダウンメニューから**すべてのユーザーデータをエクスポート** を選択することで、意図したユーザーのみを選択したことを確認できます。
 
@@ -52,7 +52,7 @@ description: "このリファレンス記事では、さまざまなチャネル
 
 ## 試験メールを送信する
 
-メールをテストするだけの場合は、必ずしもテストSegmentを設定する必要はありません。キャンペーンのメールを作成するキャンペーンコンポーザーの最初のステップで、**Send Test**をクリックし、テストメールを送信したいメールを入力します。
+メールをテストするだけの場合は、必ずしもテストSegmentを設定する必要はありません。キャンペーンのメールを作成するキャンペーンコンポーザーの最初のステップで、**Send Test**をクリックし、テストメールを送信したいメールを入力します。 
 
 ![「送信テスト」を選択したBraze キャンペーン][5]
 
@@ -85,7 +85,7 @@ curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer {YOUR
   "messages": {
     "apple_push": {
       "alert": "Test push",
-      "extra": {
+      "extra": { 
         "YOUR_KEY1" :"YOUR_VALUE1"
       }
     }
@@ -160,5 +160,5 @@ curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer {YOUR
 [11]: {% image_buster /assets/img_archive/test_segment.png %}
 [13]: {{site.baseurl}}/api/endpoints/messaging/
 [66]: {{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_messages/
-[16]: {{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#subscription-groups
+ /user_guide/message_building_by_channel/email/managing_user_subscriptions/#subscription-groups
 [14]: {{site.baseurl}}/user_guide/administrative/app_settings/email_settings/#append-email-subject-lines

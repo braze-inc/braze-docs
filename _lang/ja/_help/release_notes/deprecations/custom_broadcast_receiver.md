@@ -4,17 +4,17 @@ article_title: Android用カスタム・ブロードキャスト・レシーバ�
 description: "このリファレンス記事では、Androidプッシュ通知用のカスタムBroadcastレシーバーの作成について説明する。"
 ---
 
-# ブロードキャスト・レシーバーを介したプッシュ受信、開封、却下、キーと値のペアのカスタム・ハンドリング {#android-push-listener-broadcast-receiver}
+# ブロードキャスト・レシーバーによるプッシュ受信、開封、破棄、キーと値のペアのカスタム処理 {#android-push-listener-broadcast-receiver}
 
 {% alert important %}
 プッシュ通知にカスタム`BroadcastReceiver` を使用することは廃止された。代わりに [` subscribeToPushNotificationEvents()`](/docs/developer_guide/platform_integration_guides/android/push_notifications/android/customization/custom_event_callback/)で代用する。
 {% endalert %}
 
-Brazeはまた、プッシュ通知の受信、開封、解除時にカスタムインテントをブロードキャストする。これらのシナリオの特定のユースケース（カスタムキーと値のペアやディープリンクの独自の処理をリッスンする必要性など）がある場合は、カスタム`BroadcastReceiver` を作成することによって、これらのインテントをリッスンする必要がある。
+Brazeはまた、プッシュ通知の受信時、開封時、解除時にカスタムインテントをブロードキャストする。このようなシナリオに対して特定のユースケースがある場合（カスタムキーバリューペアをリッスンする必要がある場合や、ディープリンクを独自に処理する必要がある場合など）、カスタム`BroadcastReceiver` を作成して、これらのインテントをリッスンする必要がある。
 
 ## ステップ 1:BroadcastReceiverを登録する
 
-カスタム`BroadcastReceiver` を登録し、Brazeのプッシュ開封と受信インテントをリッスンする。 [`AndroidManifest.xml`][71]:
+カスタム`BroadcastReceiver` を登録し、Brazeのプッシュをリッスンする。 [`AndroidManifest.xml`][71]:
 
 ```xml
 <receiver android:name="YOUR-BROADCASTRECEIVER-NAME" android:exported="false" >
@@ -28,16 +28,16 @@ Brazeはまた、プッシュ通知の受信、開封、解除時にカスタム
 
 ## ステップ2:BroadcastReceiverを作成する
 
-レシーバーは、Brazeからブロードキャストされたインテントを処理し、アクティビティを起動する：
+レシーバーは、Brazeからブロードキャストされたインテントを処理し、それを使ってアクティビティを起動する：
 
 - をサブクラス化すべきである。 [`BroadcastReceiver`][53]`onReceive()`をオーバーライドする必要がある。
-- `onReceive()` メソッドは、Brazeからブロードキャストされるインテントをリッスンする必要がある。
+- `onReceive()` メソッドは、Brazeからブロードキャストされるインテントをリッスンしなければならない。
   - プッシュ通知が届くと、`NOTIFICATION_RECEIVED` インテントを受信する。
-  - ユーザーがプッシュ通知をクリックすると、`NOTIFICATION_OPENED` インテントを受信する。
+  - ユーザーがプッシュ通知をクリックすると、`NOTIFICATION_OPENED` インテントを受け取る。
   - `NOTIFICATION_DELETED` インテントは、プッシュ通知がユーザーによって却下（スワイプして離す）されたときに受信される。
-- これらのケースごとに、あなたのカスタムロジックを実行する必要がある。受信機がディープリンクを開封する場合は、`braze.xml` で`com_braze_handle_push_deep_links_automatically` を`false` に設定し、ディープリンクの自動開封をオフにしておくこと。
+- これらのケースごとに、カスタムロジックを実行する必要がある。受信機がディープリンクを開く場合は、`braze.xml` で`com_braze_handle_push_deep_links_automatically` を`false` に設定し、自動ディープリンクオープンをオフにしておくこと。
 
-詳細なカスタムレシーバーの例については、以下のコードスニペットを参照のこと：
+カスタム・レシーバーの詳細な例については、以下のコード・スニペットを参照のこと：
 
 {% tabs %}
 {% tab JAVA %}
@@ -112,7 +112,7 @@ class CustomBroadcastReceiver : BroadcastReceiver() {
 
 ## ステップ 3:カスタムキーと値のペアにアクセスする
 
-ダッシュボードまたはメッセージングAPIを介して送信されたカスタムキーと値のペアは、あなたが選択した任意の目的のために、カスタムブロードキャストレシーバでアクセスできるようになる：
+ダッシュボードまたはメッセージングAPIを介して送信されたカスタムKey-Valueペアは、カスタムブロードキャストレシーバーでアクセスできる：
 
 {% tabs %}
 {% tab JAVA %}

@@ -9,25 +9,25 @@ guide_top_text: "このランディングページには、Brazeダッシュボ�
 
 guide_featured_title: "FAQ記事"
 guide_featured_list:
-  - name: Canvas FAQ
+  - name: キャンバスに関する FAQ
     link: /docs/user_guide/engagement_tools/canvas/faqs/
     image: /assets/img/braze_icons/brush-02.svg
-  - name: Campaign FAQ
+  - name: キャンペーンに関する FAQ
     link: /docs/user_guide/engagement_tools/campaigns/faq/
     image: /assets/img/braze_icons/send-01.svg
-  - name: "Email and Link Templates FAQ"
+  - name: "Eメールとリンクのテンプレート FAQ"
     link: /docs/user_guide/message_building_by_channel/email/templates/faq/
     image: /assets/img/braze_icons/link-03.svg
-  - name: "Export FAQ"
+  - name: "エクスポートに関してよくある質問"
     link: /docs/user_guide/data_and_analytics/export_braze_data/faqs/
     image: /assets/img/braze_icons/file-download-01.svg
-  - name: "In-App Messages FAQ"
+  - name: "アプリ内メッセージ FAQ"
     link: /docs/user_guide/message_building_by_channel/in-app_messages/faq/
     image: /assets/img/braze_icons/channel-in-app-messages.svg
-  - name: "Locations and Geofences FAQ"
+  - name: "ロケーションとジオフェンス FAQ"
     link: /docs/user_guide/engagement_tools/locations_and_geofences/faqs/
     image: /assets/img/braze_icons/marker-pin-01.svg
-  - name: "Media Library FAQ"
+  - name: "メディアライブラリに関するよくある質問"
     link: /docs/user_guide/engagement_tools/templates_and_media/faqs/
     image: /assets/img/braze_icons/image-01.svg
   - name: "MMS FAQ"
@@ -39,41 +39,41 @@ guide_featured_list:
   - name: "WhatsApp FAQ"
     link: /docs/user_guide/message_building_by_channel/whatsapp/faqs/
     image: /assets/img/braze_icons/whatsapp.svg
-  - name: "Intelligence FAQ"
+  - name: "インテリジェンスFAQ"
     link: /docs/user_guide/intelligence/faqs/
     image: /assets/img/braze_icons/lightbulb-05.svg
-  - name: "Email Drag-and-Drop Editor FAQ"
+  - name: "メール ドラッグ＆ドロップ エディター FAQ"
     link: /docs/user_guide/message_building_by_channel/email/drag_and_drop/faq/
     image: /assets/img/braze_icons/channel-email.svg
-  - name: "API and CSV Export FAQ"
+  - name: "APIとCSVエクスポートFAQ"
     link: /docs/user_guide/data_and_analytics/export_braze_data/faqs/
     image: /assets/img/braze_icons/file-download-01.svg
-  - name: "Feature Flag FAQ"
+  - name: "特集フラッグFAQ"
     link: /docs/developer_guide/platform_wide/feature_flags/faq/
     image: /assets/img/braze_icons/flag-01.svg
-  - name: "Live Activities FAQ"
+  - name: "ライブ活動 よくある質問"
     link: /docs/developer_guide/platform_integration_guides/swift/live_activities/faq/
     image: /assets/img/braze_icons/swift.svg
-  - name: "Liquid FAQ"
+  - name: "リキッドFAQ"
     link: /docs/user_guide/personalization_and_dynamic_content/liquid/faq/
     image: /assets/img/braze_icons/beaker-02.svg
 
 
 guide_menu_title: "Best practices"
 guide_menu_list:
-  - name: "Content Card Best Practices"
+  - name: "コンテンツ・カードのベストプラクティス"
     link: /docs/user_guide/message_building_by_channel/content_cards/best_practices/
     image: /assets/img/braze_icons/sticker-square.svg
-  - name: "Email Best Practices"
+  - name: "電子メールのベストプラクティス"
     link: /docs/user_guide/message_building_by_channel/email/best_practices/
     image: /assets/img/braze_icons/mail-01.svg
-  - name: "In-App Message Best Practices"
+  - name: "アプリ内メッセージのベストプラクティス"
     link: /docs/user_guide/message_building_by_channel/in-app_messages/best_practices/
     image: /assets/img/braze_icons/phone-02.svg
-  - name: "Push Best Practices"
+  - name: "プッシュのベストプラクティス"
     link: /docs/user_guide/message_building_by_channel/push/best_practices/
     image: /assets/img/braze_icons/message-square-02.svg
-  - name: "SMS Best Practices"
+  - name: "SMSのベストプラクティス"
     link: /docs/user_guide/message_building_by_channel/sms/best_practices/
     image: /assets/img/braze_icons/message-text-circle-01.svg
 

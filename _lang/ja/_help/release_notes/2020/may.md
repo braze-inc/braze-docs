@@ -9,27 +9,27 @@ description: "この記事には2020年5月のリリースノートが含まれ�
 
 ## Google Tag Manager
 
-Googleタグマネージャーを使用したBrazeのAndroid SDKのデプロイと管理方法のドキュメントと例を追加。
+[Google Tag Managerを]({{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/android_google_tag_manager/)使用したBrazeのAndroid SDKのデプロイと管理方法に関するドキュメントと例を追加。
 
-## 新しいブラックリストメールAPIエンドポイント
+## 新しいブラックリスト電子メールAPIエンドポイント
 
-Braze API経由でメールアドレスを[ブラックリストに登録]({{site.baseurl}}/api/endpoints/email/post_blacklist/)できるようになった。メールアドレスをブラックリストに登録すると、ユーザーはメールの配信を停止され、ハードバウンスとしてマークされる。
+Braze API経由でメールアドレスを[ブラックリスト化]({{site.baseurl}}/api/endpoints/email/post_blacklist/)できるようになった。メールアドレスをブラックリストに登録すると、そのユーザーはメールの配信を停止され、ハードバウンスされたことになる。
 
 ## Braze APIエンドポイントのAPIキー変更
 
-2020年5月より、BrazeはAPIキーの読み取り方法をより安全なものに変更した。APIキーはリクエストヘッダーとして渡されなければならない。例は、**API Key Explanationと**同様に、**Example Requestの**下にある個々のエンドポイントのページで見ることができる。
+2020年5月より、BrazeはAPIキーの読み取り方法をより安全なものに変更した。APIキーはリクエスト・ヘッダとして渡さなければならない。例は、**API Key Explanationと**同様に、**Example Requestの**下にある個々のエンドポイントのページで見つけることができる。
 
-Brazeは、リクエストボディやURLパラメータを通して渡される`api_key` をサポートし続けるが、最終的にはSunsetting配信停止となる（未定）。**それに応じてAPIコールを更新する。**これらの変更は[Postman](https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#intro)内で更新された。
+Brazeは、リクエストボディやURLパラメータを通して渡される`api_key` をサポートし続けるが、いずれは廃止される予定である（未定）。**それに応じてAPIコールを更新する。**これらの変更は[Postman](https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#intro)内で更新された。
 {% details APIキーの説明 %}
 {% tabs %}
 {% tab GET Request %}
 この例では、`/email/hard_bounces` エンドポイントを使用している。
 
-**その前だ：リクエスト・ボディにAPIキーを入力する**
+**その前だ：リクエスト・ボディのAPIキー**
 ```
 curl --location --request GET 'https://rest.iad-01.braze.com/email/hard_bounces?api_key={YOUR_REST_API_KEY}&start_date=2019-01-01&end_date=2019-02-01&limit=100&offset=1&email=foo@braze.com' \
 ```
-**今すぐだ：ヘッダー内のAPIキー**
+**今すぐだ：ヘッダーのAPIキー**
 ```
 curl --location --request GET 'https://rest.iad-01.braze.com/email/hard_bounces?start_date=2019-01-01&end_date=2019-02-01&limit=100&offset=1&email=foo@braze.com' \
 --header 'Authorization: Bearer YOUR-REST-API-KEY'
@@ -38,7 +38,7 @@ curl --location --request GET 'https://rest.iad-01.braze.com/email/hard_bounces?
 {% tab POST Request %}
 この例では、`/user/track` エンドポイントを使用している。
 
-**その前だ：リクエスト・ボディにAPIキーを入力する**
+**その前だ：リクエスト・ボディのAPIキー**
 ```
 curl --location --request POST 'https://rest.iad-01.braze.com/users/track' \
 --header 'Content-Type: application/json' \
@@ -55,7 +55,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/track' \
     ]
 }'
 ```
-**今すぐだ：ヘッダー内のAPIキー**
+**今すぐだ：ヘッダーのAPIキー**
 ```
 curl --location --request POST 'https://rest.iad-01.braze.com/users/track' \
 --header 'Content-Type: application/json' \
