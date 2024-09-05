@@ -53,15 +53,15 @@ Authorization: Bearer YOUR-REST-API-KEY
    "override_frequency_capping": (optional, bool) ignore frequency_capping for campaigns, defaults to false,
    "recipient_subscription_state": (optional, string) use this to send messages to only users who have opted in ('opted_in'), only users who have subscribed or are opted in ('subscribed') or to all users, including unsubscribed users ('all'), the latter being useful for transactional email messaging. Defaults to 'subscribed',
    "messages": {
-     "apple_push": (optional, apple push object),
      "android_push": (optional, android push object),
+     "apple_push": (optional, apple push object),
+     "content_card": (optional, content card object),
+     "email": (optional, email object),
      "kindle_push": (optional, kindle/fireOS push object),
      "web_push": (optional, web push object),
-     "email": (optional, email object),
      "webhook": (optional, webhook object),
-     "content_card": (optional, content card object),
-     "sms": (optional, SMS object),
-     "whats_app": (optional, WhatsApp object)
+     "whats_app": (optional, WhatsApp object),
+     "sms": (optional, SMS object)
    }
  }
 ```
