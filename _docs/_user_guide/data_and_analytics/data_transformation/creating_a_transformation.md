@@ -20,7 +20,7 @@ description: "This reference article provides steps to create a transformation u
 
 ## Step 1: Identify a source platform
 
-Identify an external platform you want to connect to Braze and check that the platform supports webhooks. Sometimes, these settings are referred to as "API notifications" or "web service requests".
+Identify an external platform you want to connect to Braze and check that the platform supports webhooks. These settings are sometimes referred to as "API notifications" or "web service requests."
 
 The following is an example [Typeform webhook](https://www.typeform.com/help/a/webhooks-360029573471/), which is configurable by logging into their platform:
 
@@ -39,7 +39,7 @@ This step is optional, but we recommend sending a test webhook from your source 
 - If your source platform prompts for a request type, select **POST**.
 - If your source platform provides authentication options, select **No authentication**.
 - If your source platform asks for secrets, select **No secrets**.
-3. Refresh your page in Braze to see if the webhook has been received. If it was received, you should see a webhook payload under “Most recent webhook”.
+3. Refresh your page in the Braze dashboard to see if the webhook has been received. If it was received, you should see a webhook payload under **Most recent webhook**.
 
 Here’s what it looks like for Typeform:
 
@@ -56,7 +56,7 @@ If you have little to no experience with JavaScript code or prefer more detailed
 If you're a developer or have significant experience with JavaScript code, follow the **Advanced - POST: Track users** tab for high-level instructions on writing your transformation code.
 
 {% alert tip %}
-Braze Data Transformation has an AI copilot that asks ChatGPT to help you write your code. Access the AI copilot by clicking <i class="fa-solid fa-wand-magic-sparkles"></i> **Generate transformation code**. To use this, a webhook must be sent to your transformation. You can also access the template library by selecting **Insert code** > **Insert template**.
+Braze Data Transformation has an AI copilot that asks ChatGPT to help you write your code. To access the AI copilot, select <i class="fa-solid fa-wand-magic-sparkles"></i> **Generate transformation code**. To use this, a webhook must be sent to your transformation. You can also access the template library by selecting **Insert code** > **Insert template**.
 
 ![]({% image_buster /assets/img/data_transformation/data_transformation3.png %})
 {% endalert %}
@@ -64,9 +64,9 @@ Braze Data Transformation has an AI copilot that asks ChatGPT to help you write 
 {% tabs %}
 {% tab Beginner - POST: Track users %}
 
-Here, you will write transformation code to define how you’d like to map various webhook values to Braze user profiles.
+Here, you can write transformation code to define how you want to map various webhook values to Braze user profiles.
 
-1. New transformations will include this default template in the **Transformation Code** section:
+1. New transformations have this default template in the **Transformation Code** section:
     ```
     // Here, we will define a variable, "brazecall", to build up a `/users/track` request
     // Everything from the incoming webhook is accessible via the special variable "payload"
@@ -107,11 +107,11 @@ Here, you will write transformation code to define how you’d like to map vario
       ]
     };
 
-    // After the/users/track request is assigned to brazecall, you will want to explicitly return brazecall to create an output
+    // After the /users/track request is assigned to brazecall, you will want to explicitly return brazecall to create an output
     return brazecall;
     ```
 
-2. If you’d like all three (custom attributes, custom events, and purchases) in your transformation calls, skip to step 3. Otherwise, delete the sections that you don't need.<br><br>
+2. To include custom attributes, custom events, and purchases in your transformation calls, skip to step 3. Otherwise, delete the sections that you don't need.<br><br>
 3. Each attribute, event, and purchase object requires a user identifier, either an `external_id`, `user_alias`, `braze_id`, `email`, or `phone`. Find the user identifier in the incoming webhook's payload, and template in that value in your transformation code via a payload line. Use dot notation to access payload object properties. <br><br>
 4. Find the webhook values you’d like to represent as attributes, events, or purchases, and template those values in your transformation code via a payload line. Use dot notation to access payload object properties.<br><br>
 5. For each attribute, event, and purchase object, examine the `_update_existing_only` value. Set this to `false` if you want the transformation to create a new user that may not exist. Leave this as `true` to only update existing profiles.<br><br>
@@ -124,7 +124,7 @@ Your webhook integration is now complete!
 {% endtab %}
 {% tab Beginner - PUT: Update multiple catalog items %}
 
-Here, you will write transformation code to define how you’d like to map various webhook values to Braze catalog item updates.
+Here, you can write transformation code to define how you want to map various webhook values to Braze catalog item updates.
 
 1. New transformations will include this default template in the **Transformation Code** section:
     ```
@@ -184,9 +184,9 @@ Here, you will write transformation code to define how you’d like to map vario
     return brazecall;
     ```
 
-2. Transformations for `/catalogs` destinations require a `catalog_name` to define the specific catalog that you’d like to update. You can hard code this field, or template the field with a webhook field via a payload line. Use dot notation to access payload object properties.<br><br>
-3. Define which items you’d like to update in the catalog with the `id` field(s) in the items array. You can hard code these fields, or template in a webhook field via a payload line. <br><br> Keep in mind, “catalog_column” is a placeholder value. Be sure item objects only contain fields that exist in the catalog.<br><br>
-4. Click Validate to return a preview of your code’s output and to check if it is an acceptable request for the Update multiple catalog items endpoint.<br><br>
+2. Transformations for `/catalogs` destinations require a `catalog_name` to define the specific catalog to update. You can hard code this field or template the field with a webhook field via a payload line. Use dot notation to access payload object properties.<br><br>
+3. Define which items you’d like to update in the catalog with the `id` fields in the items array. You can hard code these fields, or template in a webhook field via a payload line. <br><br> Keep in mind, `catalog_column` is a placeholder value. Be sure item objects only contain fields that exist in the catalog.<br><br>
+4. Select **Validate** to return a preview of your code’s output and to check if it is an acceptable request for the [Update multiple catalog items endpoint]({{sitebaseurl}}/api/endpoints/catalogs/catalog_items/asynchronous/put_update_catalog_items).<br><br>
 5. Activate your transformation. For additional help with your code before activating it, contact your Braze account manager.<br><br>
 6. Make sure to check if your source platform has a setting to start sending webhooks. Your transformation code will run for each incoming webhook, and the catalog items will begin updating.
 
