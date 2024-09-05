@@ -460,15 +460,9 @@ After you add the key to the user in Snowflake, select **Test Connection** in Br
 {% endtab %}
 
 {% tab Redshift %}
-If connecting with an SSH tunnel, add the public key you noted during the last step to your user in Redshift. This will allow Braze to connect to Redshift. For details on how to do this, see the [Redshift documentation](https://docs.aws.amazon.com/redshift/latest/dg/welcome.html). 
+If connecting with an SSH tunnel, add the public key you noted during the last step to the SSH tunnel user. 
 
-If you want to rotate the keys at any point, Braze can generate a new key pair and provide you with the new public key.
-
-```json
-ALTER USER BRAZE_INGESTION_USER SET rsa_public_key='{INSERT_YOUR_KEY}';
-```
-
-After you add the key to the user in Redshift, select **Test Connection** in Braze, and then select **Done**. Your connected source is now created and ready to use in CDI segments.
+After you add the key to the user, select **Test Connection** in Braze, and then select **Done**. Your connected source is now created and ready to use in CDI segments.
 
 {% endtab %}
 {% tab BigQuery %}
