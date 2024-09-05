@@ -16,7 +16,7 @@ In the Canvas builder, add a [Message]({{site.baseurl}}/user_guide/engagement_to
 ## Triggered in-app messages
 
 {% alert important %}
-Trigger actions for in-app messages are currently in early access. Contact your account manager if you're interested in participating in this early access.<br>Previously, there was no option to select a trigger, meaning in-app messages were always triggered on session start. Now, all in-app messages created will include the session start trigger.
+Trigger actions for in-app messages are currently in early access. Contact your account manager if you're interested in participating in this early access.<br><br>Previously, there was no option to select a trigger, meaning in-app messages were always triggered on session start. Now, there's an option to select a trigger, meaning in-app messages can be triggered on session start, or by custom events and purchases. In-app messages created before this feature will have the session start as the trigger.
 {% endalert %}
 
 After any delays pass and the audience options are checked, in-app messages are set to live when a user reaches the Message step. If a user starts a session and performs the trigger event for the in-app message, the user will see the in-app message. 
