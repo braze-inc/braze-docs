@@ -1,79 +1,79 @@
 ---
-nav_title: アプティマイズパートナーシップ
+nav_title: パートナーシップを評価する
 page_order: 0
 
 page_type: update
-description: "この記事は、ApptimizeとBrazeの提携について説明しています。Brazeは2019年9月をもってApptimizeパートナーシップのサポートを廃止しました。"
+description: "このアーカイブされた記事は、ApptimizeとBrazeの提携を網羅しています。Brazeは、2019年9月現在、Apptimize提携の支援を廃止している。"
 ---
 
-# アプティマイズ
+# 評価する
 
 {% alert update %}
-Brazeは2019年9月をもってApptimizeパートナーシップのサポートを廃止しました。
+Brazeは、2019年9月現在、Apptimize提携の支援を廃止している。
 
 <br>
 
-現在、ApptimizeをBrazeと一緒に使用している場合、サービスの中断は発生しません。まだApptimizeカスタム属性をBrazeユーザープロファイルに設定できます。しかし、パートナーとの正式なエスカレーションサポートは提供されません。
+現在、Braze でApptimize を使用している場合、サービスの中断は発生しません。アプリのカスタム属性をBraze ユーザープロファイルsに設定することもできます。ただし、パートナーとの正式なエスカレーションサポートは提供されません。
 
 <br>
 
-ご不明点がございましたら、BrazeまたはApptimizeの担当者にお問い合わせください。
+ご不明な点がございましたら、BrazeまたはApptimizeの担当者までお問い合わせください。
 {% endalert %}
 
 
-[Apptimize](https://apptimize.com/)はモバイルアプリのテストおよび成長プラットフォームです
-顧客がアプリ開発プロセス全体で迅速にIterateできるようにします。
+[アプリ timize](https://apptimize.com/)は、携帯アプリのテストと増殖プラットフォームです
+これにより、顧客sはアプリの発生過程を通じて迅速に反復することができる。
 
-ApptimizeはBrazeと連携して、成長を補完するために使用できます
-マーケティング / CRM 戦略と製品UIテストを実験と同期させることによって
-両方のプラットフォームにまたがるデータ。
+Apptimizeは、Brazeと併用して、成長を補完することができます
+マーケティング / CRM ストラテジとプロダクトUI テストの同期化
+両プラットフォームのデーター
 
 ## ユースケース
 
-BrazeとApptimizeを一緒に使用することで、両方のプラットフォームを連携して活用できます。
-強力なエンドツーエンドの体験を作成するために:
+Braze とApptimize を併用すると、両方のプラットフォームを同時に活用できます
+強力なエンドツーエンドの体験の創出:
 
-* カスタムプロモーションのために、アプリ内およびCRMマーケティング体験を同期させます。
-* Apptimizeで新しいオンボーディング体験をテストし、新しいフロー全体でユーザーを育成するためにBrazeを使用します。
-* 適切なユーザーメッセージングと並行して製品機能の構成をテストします。
-* さまざまなユーザーセグメントに合わせて、アプリ内の体験とそれに適したメッセージングを調整します。
+* カスタムプロモーション用のアプリ内およびCRM マーケティングのエクスペリエンスを同期します。
+* Apptimize で新しいオンボーディングエクスペリエンスをテストし、Brazeを使用して新しいフロー全体でユーザーs を育成します。
+* アプリの適切なユーザー メッセージングと並行して、プロダクト機能の設定を同時にテストします。
+* ユーザー s のさまざまなSegmentに合わせて、アプリ体験とアプリの適切なメッセージングを調整します。
 
 ## その仕組み
 
-BrazeとApptimizeは統合して、SDKからSDKにデータを渡すことができます。
-ApptimizeのアクティブなA/BテストグループをBrazeに同期させることができます。
-リターゲティングする the users in a particular Apptimize test within Braze via push, メール,
-またはインアプリメッセージング。
+BrazeとApptimizeを統合して、SDKからSDKにデータを渡すことができます。
+有効なApptimize A/BテストグループをBrazeに同期し、次の操作を実行できます
+プッシュ、メールを使用して、Braze内の特定のアプリ見積もりテストのユーザーsをリターゲティングするします。
+アプリ内メッセージング。
 
-サンプルの統合コードがあり、BrazeとApptimizeの使い方を示しています。
-SDKは、Brazeに基づいてカスタムターゲティングとセグメンテーションを強化するためのデータを渡すことができます。
-アプティマイズ実験データ。
+BrazeとApptimizeの方法を示す標本積分コードがあります
+SDK s は、データをパワーカスタムターゲティングに渡し、それに基づくBrazeでセグメンテーションすることができます
+実験データを見積もる。
 
-このサンプル統合は、ユーザーのBrazeユーザーにカスタム属性を設定します
-次のApptimizeデータのプロファイル：
+このサンプルインテグレーションでは、ユーザーのBraze ユーザーにカスタム属性s を設定します
+次のApptimize データのプロファイル:
 
-* ユーザーが現在登録されているアクティブな実験の完全なリスト。
-* ユーザーがこれまでに参加したすべての実験の完全なリスト（完了した実験を含む）。
-* ユーザーが実験参加の一環として見たバリアント。
+* ユーザーが現在登録されている実証試験の全一覧。
+* 完成した実験を含め、ユーザーがこれまでに登録したすべての実験の一覧。
+* ユーザーが試験参加の一部と見なしたバリアント。
 
-> フィーチャーフラグは、唯一のバリアントがフィーチャーフラグがオンかどうかである実験と見なされます。フィーチャーフラグがオフの場合、データは報告されません。
+> 特徴フラグは、唯一のバリアントが特徴フラグが有効かどうかである実験と考えられる。機能フラグが消灯している場合は、レポートされません。
 
-さらに、この統合は最初のBrazeカスタムイベントを記録します
-実験の参加イベント。これは、次の 2 つの方法のいずれかで実行できます。
+さらに、このインテグレーションでは、最初のBraze カスタムイベントが記録されます
+実験参加イベントこれは、次の 2 つの方法のいずれかで実行できます。
 
-* カスタムイベントは、プロパティデータを使用して生成され、実験名、実験ID、バリアント名、およびバリアントIDを示します。次に、Brazeのアクションベースの配信キャンペーンとCanvasを使用して、リアルタイムトリガーを介してユーザーをリターゲティングすることができます。これらのプロパティを使用して、トリガーしたい正確なApptimize実験を特定します。
-* 属性配列は、発生したすべての参加のエントリで生成されます。各参加は`experiment_id_EXPERIMENT_ID:variant_id_VARIANT_ID:experiment_name_EXPERIMENT_NAME:variant_name_VARIANT_NAME`としてフォーマットされています
+* カスタムイベントは、実験名、実験ID、バリアント名、およびバリアント ID を示すプロパティデータを使用して生成されます。次に、Brazeのアクションベースの配信キャンペーンとキャンバスを使用して、リアルタイムのトリガーリングでs をリターゲティングする ユーザーできます。これらのプロパティーを使用して、トリガーしたい正確なApptimize Experiment を特定します。
+* 属性配列は、発生したすべての参加のエントリーとともに生成されます。各参加は次のように書式設定されます `experiment_id_EXPERIMENT_ID:variant_id_VARIANT_ID:experiment_name_EXPERIMENT_NAME:variant_name_VARIANT_NAME`
 
-次に、Brazeのアクションベースの配信キャンペーンやCanvasを使用して送信できます
-これらのイベントがトリガーされたときに、リアルタイムでユーザーにフォローオンメッセージを送信します。
+その後、Brazeのアクションベースの配信キャンペーンまたはキャンバスを使用して送信できます
+これらの事象がトリガーされたときにsをリアルタイムでユーザーするためのフォローオンメッセージ。
 
 ## 統合
 
 ### iOS
-アプリと統合するために、次の`Appboy-Apptimize.m`をインポートし
-`Apptimize-Appboy.h` ファイルをXcodeプロジェクトにインポートし、`Appboy-Apptimize.h` をインポートします
-ヘッダー into your AppDelegate implementation and add the following to
-`didFinishLaunchingWithOptions` AppboyとApptimizeの両方を初期化した後:
+アプリと統合するには、次の`Appboy-Apptimize.m` を読み込みます
+`Apptimize-Appboy.h` Xコードプロジェクトにファイルをインポートする `Appboy-Apptimize.h`
+AppDelegate インプリメンテーションにヘッダーし、以下を追加します
+`didFinishLaunchingWithOptions` Appboy とApptimize の両方を初期化した後:
 
 ```objc
 [ApptimizeAppboy setupExperimentTracking];
@@ -215,21 +215,21 @@ NSString *const ApptimizeAppboyTestEnrollmentStorageKey = @"ApptimizeAppboyTestE
 
 ### Android
 
-インポート `apptimizeappboy.java` クラスをアプリにして、メイン `activity` に
-実装、プライベートメンバー`appboyApptimizeIntegration`を作成します:
+`apptimizeappboy.java` クラスをアプリとメインにインポートする `activity`
+実装では、プライベートメンバー`appboyApptimizeIntegration` を作成します。
 
 ```java
 private ApptimizeAppboy appboyApptimizeIntegration;
 ```
 
-次に、onCreateメソッドで、BrazeとApptimizeを初期化した後: 
+次に、onCreate メソッドで、Braze とApptimize を初期化した後、次のようにします。
 
 ```java
 appboyApptimizeIntegration = new ApptimizeAppboy();
 appboyApptimizeIntegration.configureExperimentTracking(this);
 ```    
 
-#### ApptimizeAppboy.java: 
+#### ApptimizeAppboy.java:
 
 ```java
 package com.apptimize.appboykit;

@@ -69,7 +69,7 @@ Currentsと同様に、Snowflake Secure Data Sharingを使用して次のこと�
 - 生のイベントまたはユーザーデータをCRM（Salesforceなど）にマッピングする
 - さらに
 
-[生のテーブルスキーマをここからダウンロードしてください。][schemas]
+生のテーブルスキーマをここからダウンロードしてください。]\[schemas]
 
 ### ユーザー ID スキーマ
 
@@ -144,4 +144,4 @@ Snowflake における歴史的イベントデータのアーカイブは、2019
 
 [SQ]: {{site.baseurl}}/partners/data_and_infrastructure_agility/data_warehouses/snowflake/sample_queries/
 [ETL]: {{site.baseurl}}/partners/data_and_infrastructure_agility/data_warehouses/snowflake/etl_pipline_setup/
-[schemas]: {% image_buster /assets/download_file/data-sharing-raw-table-schemas.txt %}
+スキーマ]: {% image_buster /assets/download_file/data-sharing-raw-table-schemas.txt %}

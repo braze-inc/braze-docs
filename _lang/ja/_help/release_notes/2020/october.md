@@ -16,26 +16,26 @@ description: "この記事には2020年10月のリリースノートが含まれ
 
 ## iOS 14アップグレードガイド
 
-iOS 14アップグレードガイドでは、iOS 14で導入されたBraze関連の変更点と、お客様のBraze iOS SDK統合に必要なアップグレードステップについて説明している。注意すべき変更点は、今後のIDFAの権限要件、ジオフェンスのサポート、必要なXcodeのアップグレードである。詳しくは[アップグレードガイドを]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/overview/)ご覧いただきたい。 
+iOS 14アップグレードガイドでは、iOS 14で導入されたBraze関連の変更と、Braze iOS SDK統合に必要なアップグレード手順について説明している。注意すべき変更点としては、今後のIDFAの許可要件、ジオフェンスのサポート、必要なXcodeのアップグレードなどがある。詳しくは[アップグレードガイドを]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/overview/)ご覧いただきたい。 
 
 ## Android 11アップグレードガイド
 
-Android 11ガイドでは、Android 11リリースで導入された関連する変更と、Braze Android SDK統合に必要なアップグレードのステップについて説明しています。ディープリンク、アプリ内HTMLメッセージ、ロケーション権限に関する変更もある。詳しくは[アップグレードガイドを]({{site.baseurl}}/developer_guide/platform_integration_guides/android/android_11/)ご覧いただきたい。
+Android 11ガイドは、Android 11リリースで導入された関連する変更と、Braze Android SDK統合に必要なアップグレード手順について説明している。ディープリンク、HTMLアプリ内メッセージ、ロケーション許可に関する変更もある。詳しくは[アップグレードガイドを]({{site.baseurl}}/developer_guide/platform_integration_guides/android/android_11/)ご覧いただきたい。
 
-## アトリビューションパートナー - クリックトラッキングガイド
+## アトリビューション・パートナー - クリック追跡ガイド
 
-オプションのアトリビューションパートナーのクリック追跡ドキュメントが各アトリビューションパートナーのページに追加され、キャンペーンでクリック追跡を機能させるためのベストプラクティスと実装ガイドラインが含まれている。詳しくは[アトリビューション・パートナーの]({{site.baseurl}}/partners/advertising_technologies/attribution/)ページをご覧いただきたい。 
+各アトリビューション・パートナーのページに、オプションでクリックトラッキングのドキュメントが追加された。このドキュメントには、キャンペーンでクリックトラッキングを機能させるためのベストプラクティスと実装ガイドラインが含まれている。詳しくは、[アトリビューション・パートナーの]({{site.baseurl}}/partners/advertising_technologies/attribution/)ページをご覧いただきたい。 
 
 ## 新しい説明フィールド
 
-ユーザーがキャンペーンやキャンバスに説明を追加できるようになった！この新しいフィールドは、既存のキャンペーンまたはキャンバスを作成または編集する際に、キャンペーンまたはキャンバス名フィールドの下に表示される。 
+キャンペーンとキャンバスに説明文を追加できるようになった！この新しいフィールドは、既存のキャンペーンまたはキャンバスを作成または編集する際に、キャンペーンまたはキャンバス名フィールドの下に見つけることができる。 
 
 ## キャンバスの例外イベント
 
-Canvasesにおける[例外イベントの]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/exception_events/)期待される動作について説明したドキュメントが追加された。 
+Canvasesにおける[例外イベントの]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/exception_events/)期待される動作について説明した新しいドキュメントが追加された。 
 
-## ユーザー削除更新
+## ユーザーが更新を削除する
 
-BrazeはAPIに改良を加え、データ削除を要求しているデータ主体のエンドユーザープロファイルだけでなく、データ主体の電話番号やメールに関連するサブスクリプション状態も、顧客が追加アクションを起こすことなく同時に削除できるようにした。更新されたドキュメントは[ここに]({{site.baseurl}}/help/dp-technical-assistance/#braze-recommendation-2)ある。
+BrazeはAPIに改良を加え、データ削除を要求しているデータ対象者のエンドユーザープロファイルだけでなく、データ対象者の電話番号や電子メールアドレスに関連する購読状態も、顧客が追加の操作をすることなく同時に削除できるようにした。更新されたドキュメントは[ここに]({{site.baseurl}}/help/dp-technical-assistance/#braze-recommendation-2)ある。
 
 [5]: {% image_buster /assets/img/campaign_comparison/campaign_main.png %} 

@@ -11,6 +11,6 @@ description: "この記事には2020年1月のリリースノートが含まれ�
 
 ## SMS機能を追加
 
-Brazeでは、SMSメッセージのフリークエンシーキャップ]({{ site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/rate-limiting/) )ができるようになった。追加された\[セグメンテーションフィルター]({{ site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/) "Last Received SMS")を実装することもできる。
+Brazeでは、SMSメッセージの頻度]({{ site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/rate-limiting/) ) に上限を設定できるようになった。追加された\[セグメントフィルター]({{ site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/) "Last Received SMS")を実装することもできる。
 
 ユーザー設定と動作の詳細については、[SMSキーワード](/docs/user_guide/message_building_by_channel/sms/keywords/)処理を参照のこと。
