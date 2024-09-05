@@ -16,7 +16,7 @@ In the Canvas builder, add a [Message]({{site.baseurl}}/user_guide/engagement_to
 ## Triggered in-app messages
 
 {% alert important %}
-Trigger actions for in-app messages are currently in early access. Contact your account manager if you're interested in participating in this early access.
+Trigger actions for in-app messages are currently in early access. Contact your account manager if you're interested in participating in this early access.<br>In-app messages created before this feature now have the session start trigger. Previously, there was no option to select a trigger, and in-app messages were always triggered on session start.
 {% endalert %}
 
 After any delays pass and the audience options are checked, in-app messages are set to live when a user reaches the Message step. If a user starts a session and performs the trigger event for the in-app message, the user will see the in-app message. 
@@ -205,14 +205,14 @@ When **Entire Audience** is selected, the in-app message will be available until
 You can choose from the following trigger actions to target your users:
 
 - **Make Purchase:** Target users who make any purchase or a specific purchase
-- **Start Session:** Target users who start a session in any app or in a specific app
+- **Start Session:** Target users who start a session in any app or a specific app
 - **Perform Custom Event:** Target users who perform the selected custom event
 
-A user has to enter the Canvas step, start a session, then perform the trigger to receive an in-app message. This means mid-session updates aren't supported.
+A user has to enter the Canvas step, start a session, and then perform the trigger to receive an in-app message. This means mid-session updates aren't supported.
 
 !["Make A Specific Purchase" selected as the trigger action.]({% image_buster /assets/img_archive/canvas_trigger_actions.png %}){: style="max-width:85%"}
 
-The following Canvas features aren't available with in-app messages, so if any of these features are turned on, they won't be applied to your in-app messages.
+The following Canvas features aren't available with in-app messages, so they won't be applied to your in-app messages even if they're turned on.
 
 - Intelligent Timing
 - Rate limiting
