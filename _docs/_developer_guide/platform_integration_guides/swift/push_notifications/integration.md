@@ -363,7 +363,7 @@ When using the automatic push integration, `subscribeToUpdates(_:)` is the only 
 {% endalert %}
 
 {% alert tip %}
-If you want your push notification subscription to be triggered upon clicking on a notification while in the terminated state, you should set your subscription in `application(_:didFinishLaunchingWithOptions:)`. This will ensure that the subscription is set up prior to processing the push click.
+If you want your push notification subscription to be triggered upon clicking on a notification while in the terminated state, you should create your subscription in `application(_:didFinishLaunchingWithOptions:)`. This will ensure that the subscription is set up prior to processing the push click.
 {% endalert %}
 
 ## Testing {#push-testing}
