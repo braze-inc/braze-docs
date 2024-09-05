@@ -321,7 +321,7 @@ For instances `EU-01` and `EU-02`, these are the relevant IP addresses:
 
 ### Step 3: Create a connected source in the Braze dashboard
 
-{% tabs local %}
+{% tabs %}
 {% tab Snowflake %}
 #### Step 3.1: Add Snowflake connection information and source table
 
@@ -405,6 +405,12 @@ If queries are consistently timing out and you have set a maximum runtime of 60 
 
 ![]({% image_buster /assets/img/cloud_ingestion/connected_source_bg_2.png %})
 
+#### Step 3.3: Test the connection
+
+Select **Test Connection** to verify that the list of tables visible to the user is what you expect, then select **Done**. Your connected source is now created and ready to use in CDI segments.
+
+![]({% image_buster /assets/img/cloud_ingestion/connected_source_test_connection.png %})
+
 {% endtab %}
 {% tab Databricks %}
 #### Step 3.1: Add Databricks connection information and source table
@@ -428,6 +434,12 @@ If queries are consistently timing out and you have set a maximum runtime of 60 
 {% endalert %}
 
 ![]({% image_buster /assets/img/cloud_ingestion/connected_source_db_2.png %})
+
+#### Step 3.3: Test the connection
+
+Select **Test Connection** to verify that the list of tables visible to the user is what you expect, then select **Done**. Your connected source is now created and ready to use in CDI segments.
+
+![]({% image_buster /assets/img/cloud_ingestion/connected_source_test_connection.png %})
 
 {% endtab %}
 {% endtabs %}
