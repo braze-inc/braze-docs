@@ -319,15 +319,12 @@ Deep linking from a push into the app is automatically handled via our standard 
 
 ## Subscribing to push notifications updates
 
-{% tabs %}
-{% tab Swift %}
 To access the push notification payloads processed by Braze, use the [`Braze.Notifications.subscribeToUpdates(payloadTypes:_:)`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/notifications-swift.class/subscribetoupdates(payloadtypes:_:)/) method.
 
 You can use the `payloadTypes` parameter to specify whether you'd like to subscribe to notifications involving push open events, push received events, or both.
 
-{% alert important %}
-Keep in mind, push received events will only trigger for foreground notifications and `content-available` background notifications. It will not trigger for notifications received while terminated or for background notifications without the `content-available` field.
-{% endalert %}
+{% tabs %}
+{% tab Swift %}
 
 ```swift
 // This subscription is maintained through a Braze cancellable, which will observe for changes until the subscription is cancelled.
@@ -337,16 +334,14 @@ let cancellable = AppDelegate.braze?.notifications.subscribeToUpdates(payloadTyp
   print("Braze processed notification with title '\(payload.title)' and body '\(payload.body)'")
 }
 ```
-{% endtab %}
-
-{% tab OBJECTIVE-C %}
-To access the push notification payloads processed by Braze, use the [`Braze.Notifications.subscribeToUpdates(payloadTypes:_:)`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/notifications-swift.class/subscribetoupdates(payloadtypes:_:)/) method.
-
-You can use the `payloadTypes` parameter to specify whether you'd like to subscribe to notifications involving push open events, push received events, or both.
 
 {% alert important %}
 Keep in mind, push received events will only trigger for foreground notifications and `content-available` background notifications. It will not trigger for notifications received while terminated or for background notifications without the `content-available` field.
 {% endalert %}
+
+{% endtab %}
+
+{% tab OBJECTIVE-C %}
 
 ```objc
 NSInteger filtersValue = BRZNotificationsPayloadTypeFilter.opened.rawValue | BRZNotificationsPayloadTypeFilter.received.rawValue;
@@ -355,11 +350,20 @@ BRZCancellable *cancellable = [notifications subscribeToUpdatesWithPayloadTypes:
   NSLog(@"Braze processed notification with title '%@' and body '%@'", payload.title, payload.body);
 }];
 ```
+
+{% alert important %}
+Keep in mind, push received events will only trigger for foreground notifications and `content-available` background notifications. It will not trigger for notifications received while terminated or for background notifications without the `content-available` field.
+{% endalert %}
+
 {% endtab %}
 
 {% endtabs %}
 {% alert note %}
 When using the automatic push integration, `subscribeToUpdates(_:)` is the only way to be notified of remote notifications processed by Braze. The `UIAppDelegate` and `UNUserNotificationCenterDelegate` system methods are not called when the notification is automatically processed by Braze.
+{% endalert %}
+
+{% alert tip %}
+If you want your push notification subscription to be triggered upon clicking on a notification while in the terminated state, you should set your subscription in `application(_:didFinishLaunchingWithOptions:)`. This will ensure that the subscription is set up prior to processing the push click.
 {% endalert %}
 
 ## Testing {#push-testing}
