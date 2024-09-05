@@ -460,87 +460,24 @@ After you add the key to the user in Snowflake, select **Test Connection** in Br
 {% endtab %}
 
 {% tab Redshift %}
-#### Step 4.1: Add Redshift connection information and source table
+If connecting with an SSH tunnel, add the public key you noted during the last step to your user in Redshift. This will allow Braze to connect to Redshift. For details on how to do this, see the [Redshift documentation](https://docs.aws.amazon.com/redshift/latest/dg/welcome.html). 
 
-Go to **Data Settings** > **Cloud Data Ingestion**. Navigate to the **Connected Sources** tab and select **Create data connection**.
+If you want to rotate the keys at any point, Braze can generate a new key pair and provide you with the new public key.
 
-{% alert note %}
-If you're using the [older navigation]({{site.baseurl}}/navigation), go to **Cloud Data Ingestion** under **Data**.
-{% endalert %}
+```json
+ALTER USER BRAZE_INGESTION_USER SET rsa_public_key='{INSERT_YOUR_KEY}';
+```
 
-Input the information for your Redshift account and source schema, then proceed to the next step.
+After you add the key to the user in Redshift, select **Test Connection** in Braze, and then select **Done**. Your connected source is now created and ready to use in CDI segments.
 
-![]({% image_buster /assets/img/cloud_ingestion/connected_source_rs_1.png %})
-
-#### Step 4.2: Configure sync details
-
-Choose a name for connected source. This name will be used in the list of available sources when you create a new CDI segment. 
-
-Configure a maximum runtime for this source. Braze will automatically abort any queries that exceed the maximum runtime when it's creating or refreshing a segment. The maximum runtime allowed is 60 minutes; a lower runtime will reduce costs incurred on your Snowflake account. 
-
-{% alert note %}
-If queries are consistently timing out and you have set a maximum runtime of 60 minutes, consider trying to optimize your query execution time. 
-{% endalert %}
-
-![]({% image_buster /assets/img/cloud_ingestion/connected_source_sf_2.png %})
-
-#### Step 4.3: Test Connection
-
-Select **Test Connection** in Braze to verify that the list of tables visible to the user is what you expect, then select **Done**. Your connected source is now created and ready to use in CDI segments.
-
-![]({% image_buster /assets/img/cloud_ingestion/connected_source_3.png %})
 {% endtab %}
-
 {% tab BigQuery %}
-#### Step 4.1: Add BigQuery connection information and source dataset
+This doesn't apply to BigQuery.
 
-Upload the JSON key and provide a name for the service account, then input the details of your source dataset.
-
-![]({% image_buster /assets/img/cloud_ingestion/connected_source_bq_1.png %})
-
-#### Step 4.2: Configure sync details
-
-Choose a name for connected source. This name will be used in the list of available sources when you create a new CDI segment.
-
-Configure a maximum runtime for this source. Braze will automatically abort any queries that exceed the maximum runtime when it's creating or refreshing a segment. The maximum runtime allowed is 60 minutes; a lower runtime will reduce costs incurred on your Snowflake account. 
-
-{% alert note %}
-If queries are consistently timing out and you have set a maximum runtime of 60 minutes, consider trying to optimize your query execution time. 
-{% endalert %}
-
-![]({% image_buster /assets/img/cloud_ingestion/connected_source_sf_2.png %})
-
-#### Step 4.3: Test Connection
-
-Select **Test Connection** in Braze to verify that the list of tables visible to the user is what you expect, select **Done**. Your connected source is now created and ready to use in CDI segments.
-
-![]({% image_buster /assets/img/cloud_ingestion/connected_source_3.png %})
 {% endtab %}
-
 {% tab Databricks %}
-#### Step 4.1: Add Databricks connection information and source dataset
+This doesn't apply to Databricks.
 
-Input the information for your Databricks data warehouse and source data, then proceed to the next step.
-
-![]({% image_buster /assets/img/cloud_ingestion/connected_source_db_1.png %})
-
-#### Step 4.2: Configure sync details
-
-Choose a name for connected source. This name will be used in the list of available sources when you create a new CDI segment.
-
-Configure a maximum runtime for this source. Braze will automatically abort any queries that exceed the maximum runtime when it's creating or refreshing a segment. The maximum runtime allowed is 60 minutes; a lower runtime will reduce costs incurred on your Snowflake account.
-
-{% alert note %}
-If queries are consistently timing out and you have set a maximum runtime of 60 minutes, consider trying to optimize your query execution time. 
-{% endalert %}
-
-![]({% image_buster /assets/img/cloud_ingestion/connected_source_sf_2.png %})
-
-#### Step 4.3: Test Connection
-
-Select **Test Connection** in Braze to  verify that the list of tables visible to the user is what you expect, select **Done**. Your connected source is now created and ready to use in CDI segments.
-
-![]({% image_buster /assets/img/cloud_ingestion/connected_source_3.png %})
 {% endtab %}
 {% endtabs %}
 
