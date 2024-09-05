@@ -29,10 +29,6 @@ Use permission sets to bundle permissions related to specific subject areas or a
 
 ## Creating a role
 
-{% alert note %}
-Roles are currently in early access. Contact your Braze customer success manager if you are interested in participating in the early access. 
-{% endalert %}
-
 Roles allow for more structure by bundling together your individual custom permissions with workspace access controls. This is especially useful if you have many brands or regional workspaces in one dashboard. With roles, you can add dashboard users to the right workspaces and directly grant them the associated permissions. For a description of each permission, see [List of permissions](#list-of-permissions).
 
 {% tabs local %}

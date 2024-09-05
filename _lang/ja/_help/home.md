@@ -10,43 +10,43 @@ user_top_text: "Welcome to the Braze self-help section! Here you'll find a varie
 description: "このランディングページには、「ベスト・セルフヘルプ」のセクションがある。ここでは、さまざまなヘルプ記事、ベストプラクティスやFAQ、リリースノート、メディアリソースなどを見つけることができる。"
 
 resources_list:
-  - name: Help Articles
+  - name: ヘルプ記事
     link: /docs/help/help_articles/overview/
     image: /assets/img/braze_icons/info-circle.svg
-  - name: Best Practices and FAQ
+  - name: ベストプラクティスとFAQ
     link: /docs/help/faqs/
     image: /assets/img/braze_icons/book-open-01.svg
-  - name: Release Notes
+  - name: リリースノート
     link: /docs/help/release_notes/most_recent/
     image: /assets/img/braze_icons/sticker-square.svg
-  - name: Braze Learning Login
+  - name: ログイン
     link: https://learning.braze.com/
     image: /assets/img/braze_icons/user-square.svg
-  - name: Media Resources
+  - name: メディア・リソース
     link: https://www.youtube.com/channel/UCEXVTEWeAHx1OlddOMRTaOg
     image: /assets/img/braze_icons/youtube.svg
-  - name: Braze Support
+  - name: ブレイズ・サポート
     link: /docs/braze_support/
     image: /assets/img/braze_icons/mail-01.svg
 
 popular_topic_list:
-  - name: Know Before You Send
+  - name: 送る前に知っておこう
     link: /docs/help/help_articles/campaigns_and_canvas/know_before_send/
-  - name: Migrating Push Token
+  - name: プッシュトークンの移行
     link: /docs/help/help_articles/push/push_token_migration/
-  - name: Logging Custom Event Properties
+  - name: カスタムイベント・プロパティを記録する
     link: /docs/help/help_articles/campaigns_and_canvas/using_custom_event_properties/
-  - name: Dispatch ID
+  - name: 派遣ID
     link: /docs/help/help_articles/data/dispatch_id/
-  - name: Email Bounces
+  - name: メールバウンス
     link: /docs/help/help_articles/email/email_bounces/
-  - name: Deleting Users via API
+  - name: API経由でユーザーを削除する
     link: /docs/help/help_articles/api/delete_user/
-  - name: Changing Custom Data Type
+  - name: カスタムデータ型を変更する
     link: /docs/help/help_articles/data/change_custom_data_type/
-  - name: In-App Messages Not Displaying
+  - name: アプリ内メッセージが表示されない
     link: /docs/help/help_articles/in-app_messages/in-app_messages_not_displaying/  
-  - name: Using Event Logging
+  - name: イベントログを使う
     link: /docs/help/help_articles/campaigns_and_canvas/using_event_logging/ 
 ---
 

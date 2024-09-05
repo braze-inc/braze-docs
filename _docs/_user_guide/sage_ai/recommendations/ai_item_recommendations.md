@@ -10,13 +10,18 @@ description: "This reference article covers how to create an AI item recommendat
 
 > Learn how to create an AI item recommendation for items in a catalog.
 
-You can use AI item recommendations to calculate the most popular products or create personalized AI recommendations for a specific [catalog]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/). After you create your recommendation, you can use personalization to insert those products into your messages.
+Use AI item recommendations to calculate the most popular products or create personalized AI recommendations for a specific [catalog]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/). After creating your recommendation, you can use personalization to insert those products into your messages.
 
 ## Prerequisites
 
+Before you start, you'll need to complete the following:
+
 - You must have at least one [catalog][catalog] to use any of the recommendation types described below.
 - You must have purchase or event data on Braze (custom events or the purchase object) that includes a reference to unique product IDs stored in a catalog.
-- AI Personalized recommendations work best with hundreds or thousands of items and typically at least 30,000 users with purchase or interaction data. This is only a rough guide and can vary. The other recommendation types can work with less data.
+
+{% alert tip %}
+[AI Personalized recommendations](#recommendation-types) work best with hundreds or thousands of items and typically at least 30,000 users with purchase or interaction data. This is only a rough guide and can vary. The other recommendation types can work with less data.
+{% endalert %}
 
 ## Creating an AI item recommendation
 
@@ -25,21 +30,22 @@ To create an item recommendation:
 1. Go to **Analytics** > **AI Item Recommendation**.
 2. Select **Create Prediction** > **AI Item Recommendation**.
 
-You can also choose to create a recommendation straight from an individual catalog. Select your catalog from the **Catalogs** page and click **Create Recommendation**.
+You can also choose to create a recommendation straight from an individual catalog. Select your catalog from the **Catalogs** page, then select **Create Recommendation**.
 
 ### Step 1: Add recommendation details
 
-First, give your recommendation a name and optional description.
+Give your recommendation a name and optional description.
 
 ![][1]
 
 ### Step 2: Define your recommendation {#recommendation-type}
 
-Next, select the recommendation type. All recommendation types use the last 6 months of item interaction (purchase or custom event) data. The interaction mentioned below refers to either a purchase event or custom event chosen in Step 3.
+Select the recommendation type. All recommendation types use the last six months of item interaction (purchase or custom event) data. The interaction mentioned below refers to either a purchase event or a custom event chosen in [Step 3](#step-3-select-the-interaction-to-drive-recommendations).
 
 - **Most popular:** Calculates up to 30 items from the catalog that all users in the workspace interact with most often, such as the most purchased products.
 - **Most recent:** Creates a list of up to 30 products a user has interacted with most recently.
-- **AI Personalized:** Uses transformers, a new kind of deep learning, to predict each user's next most likely set of items to interact with. We calculate up to 30 of the next most likely items ranked from most to least likely. This type of recommendation does not use Large Language Models (LLMs) to combine your data with that of any other Braze customer.
+- **AI Personalized:** Uses transformers, a new kind of deep learning, to predict each user's next most likely set of items to interact with. We calculate up to 30 of the next most likely items ranked from most to least likely. This type of recommendation does not use large language models (LLMs) to combine your data with that of any other Braze customer.
+- **Trending:** Calculates up to 30 items from the workspace that had the most recent positive momentum when it comes to user interactions.
 
 {% alert tip %}
 When using **Most recent** or **AI Personalized**, users with insufficient data to create individualized recommendations will receive **Most popular** items as a fallback. The proportion of users receiving the **Most popular** fallback is displayed on the **Analytics** page.
@@ -51,7 +57,7 @@ To avoid suggesting items that a user has already purchased or interacted with, 
 
 ![][2-3]
 
-This setting makes sure that items a user has already bought or interacted with are not surfaced in messages again, provided the recommendation has been updated recently. Items purchased or interacted with between recommendation updates may still appear. For the free version of item recommendations, updates happen weekly. For the pro version of AI item recommendations, updates happen every 24 hours.
+This setting prevents messages from reusing the items a user has already bought or interacted with, provided the recommendation has been updated recently. Items purchased or interacted with between recommendation updates may still appear. For the free version of item recommendations, updates happen weekly. For the pro version of AI item recommendations, updates happen every 24 hours.
 
 For example, when using the pro version of AI item recommendations, if a user purchases something and then receives a marketing email within 30 minutes, the item they just purchased might not be excluded from the email in time. However, any messages sent after 24 hours won't include that item.
 
@@ -71,7 +77,7 @@ If you can't find your selection, make sure it's set up in your catalog first.
 
 ### Step 3: Select the interaction to drive recommendations
 
-Next, select the event you want this recommendation to optimize for. This event is usually a purchase, but it can also be any interaction with an item.
+Select the event you want this recommendation to optimize for. This event is usually a purchase, but it can also be any interaction with an item.
 
 You can optimize for:
 
@@ -89,7 +95,7 @@ To create a recommendation, you need to tell Braze which field of your interacti
 
 Select this field for the **Property Name**.
 
-The **Property Name** field will be pre-populated with a list of fields sent through the SDK to Braze. If enough data is provided, these properties will also be ranked in order of probability to be the correct property. Select the one that corresponds to the `id` field of the catalog.
+The **Property Name** field will pre-populate with a list of fields sent through the SDK to Braze. If enough data is provided, these properties will also be ranked in order of probability to be the correct property. Select the one that corresponds to the `id` field of the catalog.
 
 ![][4]
 
@@ -174,7 +180,7 @@ This event has `"product_sku": "ADI-BL-7"`, which matches the first item in the 
 {% endtab %}
 {% tab Purchase object %}
 
-A purchase object gets passed through the API when a purchase has been made.
+A purchase object is passed through the API when a purchase has been made.
 
 In terms of mapping, a similar logic applies for purchase objects as it does for custom events, except you can choose between using the purchase object's `product_id` or a field in the `properties` object.
 
