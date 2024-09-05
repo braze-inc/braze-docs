@@ -51,7 +51,7 @@ For in-app messages containing buttons, the message `clickAction` will also be i
 
 ## Customizing in-app message body clicks
 
-The following [`ABKInAppMessageUIDelegate`][34] delegate method is called when an in-app message is clicked:
+The following [`ABKInAppMessageUIDelegate`](https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyUI/ABKInAppMessage/ABKInAppMessageUIDelegate.h) delegate method is called when an in-app message is clicked:
 
 {% tabs %}
 {% tab OBJECTIVE-C %}
@@ -72,7 +72,7 @@ func onInAppMessageClicked(inAppMessage: ABKInAppMessage!) -> Bool
 
 ## Customizing in-app message button clicks
 
-For clicks on in-app message buttons and HTML in-app message buttons (such as links), [`ABKInAppMessageUIDelegate`][34] includes the following delegate methods:
+For clicks on in-app message buttons and HTML in-app message buttons (such as links), [`ABKInAppMessageUIDelegate`](https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyUI/ABKInAppMessage/ABKInAppMessageUIDelegate.h) includes the following delegate methods:
 
 {% tabs %}
 {% tab OBJECTIVE-C %}
@@ -138,7 +138,5 @@ When an in-app message has buttons, the only click actions that will be executed
 
 For additional information, see the following header files:
 
-- [`ABKInAppMessage.h`][14]
+- [`ABKInAppMessage.h`](https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/include/ABKInAppMessage.h)
 
-[34]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyUI/ABKInAppMessage/ABKInAppMessageUIDelegate.h
-[14]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/include/ABKInAppMessage.h

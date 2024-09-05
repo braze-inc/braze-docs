@@ -1,63 +1,63 @@
 ---
 nav_title: ソフト・プッシュ・プロンプト
-article_title: Web 用ソフト・プッシュ・プロンプト
+article_title: ウェブ用ソフト・プッシュ・プロンプト
 platform: Web
 page_order: 19
 page_type: reference
-description: "この記事では、Web アプリケーション用のソフトプッシュプロンプトを作成する方法について説明します。"
+description: "この記事では、Webアプリケーション用にソフトプッシュプロンプトを作成する方法を説明する。"
 channel: push
 
 ---
 
 # ソフト・プッシュ・プロンプト
 
-> 多くの場合、サイトでは「ソフト」プッシュプロンプトを実装して、ユーザーに「プライミング」を行い、プッシュ許可をリクエストする前にプッシュ通知を送信するように説得するとよいでしょう。これは、ブラウザがユーザーに直接プロンプトを出す頻度を制限し、ユーザーが許可を拒否した場合、二度とユーザーに尋ねることができないので便利です。この記事では、Web SDK統合を変更してWebアプリケーションのプッシュ入門キャンペーンを作成する方法について説明します。
+> プッシュ許可を要求する前に、ユーザーを "プライム "し、プッシュ通知を送信するケースを説明する "ソフト "プッシュ・プロンプトを実装するのは、サイトにとって良いアイデアだ。ブラウザは、ユーザーに直接プロンプトを表示する頻度を制限しているため、これは便利である。この記事では、Webアプリケーションのプッシュプライマーキャンペーンを作成するために、Web SDKインテグレーションを修正することについて説明する。
 
 {% alert tip %}
-これは、[新しいノーコードプッシュ入門書を使用すれば]({{site.baseurl}}/user_guide/message_building_by_channel/push/push_primer_messages/)、SDK をカスタマイズしなくても実行できます。
+これは、私たちの新しい[コードプッシュ不要の入門書を]({{site.baseurl}}/user_guide/message_building_by_channel/push/push_primer_messages/)使えば、SDKをカスタマイズすることなく行うことができる。
 {% endalert %} 
 
-または、`requestPushPermission()`[標準のWebプッシュ統合で説明されているように直接呼び出すのではなく]({{site.baseurl}}/developer_guide/platform_integration_guides/web/push_notifications/integration/#step-2-browser-registration)、特別なカスタム処理を含めたい場合は、[トリガーされたアプリ内メッセージを使用してください]({{site.baseurl}}/developer_guide/platform_integration_guides/web/in-app_messaging/in-app_message_delivery/)。
+また、特別なカスタム処理を含めたい場合は、標準の[ウェブプッシュ統合で]({{site.baseurl}}/developer_guide/platform_integration_guides/web/push_notifications/integration/#step-2-browser-registration)説明されているように、`requestPushPermission()` を直接呼び出す代わりに、[アプリ内メッセージのトリガーを]({{site.baseurl}}/developer_guide/platform_integration_guides/web/in-app_messaging/in-app_message_delivery/)使用する：
 
 {% multi_lang_include archive/web-v4-rename.md %}
 
-## ステップ 1:プッシュ入門キャンペーンを作成する
+## ステップ 1:プッシュ・プライマー・キャンペーンを作成する
 
-まず、Braze 管理画面で「Prime for Push」アプリ内メッセージキャンペーンを作成する必要があります。
+まず、Brazeダッシュボードで「Prime for Push」アプリ内メッセージングキャンペーンを作成する必要がある：
 
-1. **必要なテキストとスタイルでモーダルアプリ内メッセージを作成します**。 
-2. 次に、クリック時の動作を [**メッセージを閉じる**] に設定します。この動作は後でカスタマイズされます。
-3. キーと値のペアをメッセージに追加します。キーはあり`msg-id`、値はあります。`push-primer`
-4. メッセージにカスタムイベントトリガーアクション (「prime-for-push」など) を割り当てます。必要に応じて、ダッシュボードからカスタムイベントを手動で作成できます。
+1. 希望するテキストとスタイリングで**モーダルな**アプリ内メッセージを作成する。 
+2. 次に、クリック時の動作を「**メッセージを閉じる**」に設定する。この動作は後でカスタマイズする。
+3. メッセージにキーと値のペアを追加する。キーは`msg-id` 、値は`push-primer` 。
+4. カスタムイベントトリガーアクション（"prime-for-push "など）をメッセージに割り当てる。必要に応じて、ダッシュボードから手動でカスタムイベントを作成することもできる。
 
-## ステップ 2: 通話を削除
+## ステップ2:コールを削除する
 
-Braze SDK インテグレーションで、読み込みスニペット内の `automaticallyShowInAppMessages()` from への呼び出しをすべて見つけて削除します。
+Braze SDKインテグレーションで、ローディングスニペット内の`automaticallyShowInAppMessages()` 。
 
-## ステップ 3: アップデート統合
+## ステップ 3:アップデートの統合
 
-最後に、削除した呼び出しを次のスニペットに置き換えます。
+最後に、削除したコールを以下のスニペットで置き換える：
 
-\`\`\`javascript
-「@braze」から* をブレイズとしてインポートする/web-sdk";
+```javascript
+import * as braze from "@braze/web-sdk";
 // Be sure to remove any calls to braze.automaticallyShowInAppMessages()
 braze.subscribeToInAppMessage(function(inAppMessage) {
-// check if message is not a control variant
-if (inAppMessage instanceof braze.inAppMessage) {
-// access the key-value pairs, defined as `extras`
-  const keyValuePairs = inAppMessage.extras || {};
-  //Braze `msg-id` ダッシュボードで定義されたキーの値を確認します
+  // check if message is not a control variant
+  if (inAppMessage instanceof braze.inAppMessage) {
+    // access the key-value pairs, defined as `extras`
+    const keyValuePairs = inAppMessage.extras || {};
+    // check the value of our key `msg-id` defined in the Braze dashboard
     if (keyValuePairs["msg-id"] === "push-primer") {
-    // We don't want to display the soft push prompt to users on browsers
-// that don't support push, or if the user has already granted/blocked permission
-    if (
-    braze.isPushSupported() === false ||
-      braze.isPushPermissionGranted() ||
-      braze.isPushBlocked()
+      // We don't want to display the soft push prompt to users on browsers
+      // that don't support push, or if the user has already granted/blocked permission
+      if (
+        braze.isPushSupported() === false ||
+        braze.isPushPermissionGranted() ||
+        braze.isPushBlocked()
       ) {
-        //電話しないでください `showInAppMessage`
-        return
-        ()
+        // do not call `showInAppMessage`
+        return;
+      }
 
       // user is eligible to receive the native prompt
       // register a click handler on one of the two buttons
@@ -75,12 +75,12 @@ if (inAppMessage instanceof braze.inAppMessage) {
         });
       }
     }
-  ()
+  }
 
-  //アプリ内メッセージを今すぐ表示
+  // show the in-app message now
   braze.showInAppMessage(inAppMessage);
 });
-\`\`\`
+```
 
 
-ソフトプッシュプロンプトをユーザーに表示したい場合は、アプリ内メッセージをトリガーするイベント名を指定して `braze.logCustomEvent`-を呼び出します。
+ユーザーにソフトプッシュプロンプトを表示したい場合は、`braze.logCustomEvent` - このアプリ内メッセージをトリガーするイベント名で呼び出す。

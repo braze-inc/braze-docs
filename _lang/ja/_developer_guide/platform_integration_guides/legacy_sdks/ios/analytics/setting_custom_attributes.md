@@ -12,7 +12,7 @@ noindex: true
 
 # iOS のカスタム属性の設定
 
-Braze には、ユーザーに属性を割り当てるメソッドが用意されています。ダッシュボード上のこれらの属性に従って、ユーザーのフィルター処理とセグメント化を行うことができます。
+Braze では、ユーザーに属性を割り当てるメソッドが提供されています。ダッシュボードでこれらの属性に基づき、ユーザーをフィルターおよびセグメント化できます。
 
 実装前に、[ベストプラクティス][1]のカスタムイベント、カスタム属性、および購入イベントによって提供されるセグメンテーションオプションの例と、[イベント命名規則]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/event_naming_conventions/)のメモを必ず確認しておいてください。
 
@@ -30,7 +30,7 @@ Braze には、ユーザーに属性を割り当てるメソッドが用意さ�
 ```
 
 {% endtab %}
-{% tab swift %}
+{% tab SWIFT %}
 
 ```swift
 Appboy.sharedInstance()?.user.firstName = "first_name"
@@ -54,7 +54,7 @@ Appboy.sharedInstance()?.user.firstName = "first_name"
 
 ## カスタムユーザー属性の割り当て
 
-Braze では、デフォルトユーザー属性以外にも、複数の異なるデータ型を使用してカスタム属性を定義できます。これらの各属性で提供されるセグメンテーションオプションの詳細については、[ユーザーデータ収集]({{site.baseurl}}/developer_guide/platform_wide/analytics_overview/)を参照してください。
+Braze では、デフォルトユーザー属性以外にも、複数の異なるデータタイプを使用してカスタム属性を定義できます。これらの各属性で提供されるセグメンテーションオプションの詳細については、[ユーザーデータ収集]({{site.baseurl}}/developer_guide/platform_wide/analytics_overview/)を参照してください。
 
 ### 文字列値のカスタム属性
 
@@ -66,7 +66,7 @@ Braze では、デフォルトユーザー属性以外にも、複数の異な�
 ```
 
 {% endtab %}
-{% tab swift %}
+{% tab SWIFT %}
 
 ```swift
 Appboy.sharedInstance()?.user.setCustomAttributeWithKey("your_attribute_key", andStringValue: "your_attribute_value")
@@ -85,7 +85,7 @@ Appboy.sharedInstance()?.user.setCustomAttributeWithKey("your_attribute_key", an
 ```
 
 {% endtab %}
-{% tab swift %}
+{% tab SWIFT %}
 
 ```swift
 Appboy.sharedInstance()?.user.setCustomAttributeWithKey("your_attribute_key", andIntegerValue: yourIntegerValue)
@@ -106,7 +106,7 @@ Braze では、データベース内での `float` 値と `double` 値の扱い�
 ```
 
 {% endtab %}
-{% tab swift %}
+{% tab SWIFT %}
 
 ```swift
 Appboy.sharedInstance()?.user.setCustomAttributeWithKey("your_attribute_key", andDoubleValue: yourDoubleValue)
@@ -125,7 +125,7 @@ Appboy.sharedInstance()?.user.setCustomAttributeWithKey("your_attribute_key", an
 ```
 
 {% endtab %}
-{% tab swift %}
+{% tab SWIFT %}
 
 ```swift
 Appboy.sharedInstance()?.user.setCustomAttributeWithKey("your_attribute_key", andBOOLValue: yourBoolValue)
@@ -136,7 +136,7 @@ Appboy.sharedInstance()?.user.setCustomAttributeWithKey("your_attribute_key", an
 
 ### 日付値のカスタム属性
 
-このメソッドで Braze に渡される日付は、[ISO 8601][2] フォーマット (例: `2013-07-16T19:20:30+01:00`) または `yyyy-MM-dd'T'HH:mm:ss:SSSZ` フォーマット (`2016-12-14T13:32:31.601-0800`) のいずれかである必要があります。
+この方法でBrazeに渡される日付は、[ISO 8601][2]形式（e.g `2013-07-16T19:20:30+01:00`）または`yyyy-MM-dd'T'HH:mm:ss:SSSZ`形式（`2016-12-14T13:32:31.601-0800`）でなければなりません。
 
 {% tabs %}
 {% tab OBJECTIVE-C %}
@@ -146,7 +146,7 @@ Appboy.sharedInstance()?.user.setCustomAttributeWithKey("your_attribute_key", an
 ```
 
 {% endtab %}
-{% tab swift %}
+{% tab SWIFT %}
 
 ```swift
 Appboy.sharedInstance()?.user.setCustomAttributeWithKey("your_attribute_key", andDateValue:yourDateValue)
@@ -175,7 +175,7 @@ Appboy.sharedInstance()?.user.setCustomAttributeWithKey("your_attribute_key", an
 ```
 
 {% endtab %}
-{% tab swift %}
+{% tab SWIFT %}
 
 ```swift
 // Setting a custom attribute with an array value
@@ -201,7 +201,7 @@ Appboy.sharedInstance()?.user.removeFromCustomAttributeArrayWithKey("array_name"
 ```
 
 {% endtab %}
-{% tab swift %}
+{% tab SWIFT %}
 
 ```swift
 Appboy.sharedInstance()?.user.unsetCustomAttributeWithKey("your_attribute_key")
@@ -212,7 +212,7 @@ Appboy.sharedInstance()?.user.unsetCustomAttributeWithKey("your_attribute_key")
 
 ### カスタム属性のインクリメント / デクリメント
 
-このコードは、カスタム属性のインクリメントの例です。カスタム属性の値は、正または負の整数か、long 値でインクリメントできます。
+このコードは、インクリメントカスタム属性の例です。カスタム属性の値は、正または負の整数か、long 値でインクリメントできます。
 
 {% tabs %}
 {% tab OBJECTIVE-C %}
@@ -222,7 +222,7 @@ Appboy.sharedInstance()?.user.unsetCustomAttributeWithKey("your_attribute_key")
 ```
 
 {% endtab %}
-{% tab swift %}
+{% tab SWIFT %}
 
 ```swift
 Appboy.sharedInstance()?.user.incrementCustomUserAttribute("your_attribute_key", by: incrementIntegerValue)
@@ -248,11 +248,11 @@ REST API を使用してユーザー属性を設定することもできます�
 
 ユーザーのサブスクリプション (メールまたはプッシュ) を設定するには、それぞれ関数 `setEmailNotificationSubscriptionType` または `setPushNotificationSubscriptionType` を呼び出します。これらの関数では、いずれも引数として列挙型 `ABKNotificationSubscriptionType` が使用されます。この型には、次の 3 つの状態があります。
 
-| サブスクリプションステータス | 定義 |
+| サブスクリプション ステータス | 定義 |
 | ------------------- | ---------- |
-| `ABKOptedin` | 配信登録済み、かつ明示的にオプトイン済み |
-| `ABKSubscribed` | 配信登録済みだが、明示的なオプトインは未実行 |
-| `ABKUnsubscribed` | 配信停止済みまたは明示的にオプトアウト済み、あるいはその両方 |
+| `ABKOptedin` | 購読し、明示的にオプトインしました |
+| `ABKSubscribed` | 購読しましたが、明示的にオプトインしていません |
+| `ABKUnsubscribed` | 購読を解除し、明示的にオプトアウトしました |
 {: .reset-td-br-1 .reset-td-br-2}
 
 アプリにプッシュ通知の送信を許可するユーザーは、iOS で明示的なオプトインが必要であるため、ステータス `ABKOptedin` にデフォルト設定されます。
@@ -269,7 +269,7 @@ REST API を使用してユーザー属性を設定することもできます�
 ```
 
 {% endtab %}
-{% tab swift %}
+{% tab SWIFT %}
 
 ```swift
 Appboy.sharedInstance()?.user.setEmailNotificationSubscriptionType(ABKNotificationSubscriptionType)
@@ -288,7 +288,7 @@ Appboy.sharedInstance()?.user.setEmailNotificationSubscriptionType(ABKNotificati
 ```
 
 {% endtab %}
-{% tab swift %}
+{% tab SWIFT %}
 
 ```swift
 Appboy.sharedInstance()?.user.setPushNotificationSubscriptionType(ABKNotificationSubscriptionType)

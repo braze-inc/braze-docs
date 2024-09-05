@@ -1,5 +1,5 @@
 ---
-nav_title: メッセージのスケジュール
+nav_title: メッセージをスケジュール
 config_only: true
 noindex: true
 ---

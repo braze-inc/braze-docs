@@ -15,8 +15,12 @@ search_tag: Partner
 
 To use Scuba Analytics with Braze, you'll need the following:
 
-- A [Braze REST API key]({{site.baseurl}}/user_guide/administrative/app_settings/api_settings_tab/#rest-api-keys) with the `users.track` permission.
-- A Scuba API token you can retrieve from the `https://{scuba_hostname}/api/create_token` endpoint.
+| Requirement | Description |
+|---|---|
+|Scuba API Token | A Scuba API token you can retrieve from the `https://{scuba_hostname}/api/create_token` endpoint. |
+| Braze REST API key | A Braze REST API key with `users.track` permissions. <br><br> This can be created in the Braze dashboard from **Settings** > **API Keys**. |
+| Braze REST endpoint  | Your REST endpoint URL. Your endpoint will depend on the [Braze URL for your instance][1]. |
+{: .reset-td-br-1 .reset-td-br-2}
 
 ## Uploading your Scuba data to Braze
 

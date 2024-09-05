@@ -24,7 +24,7 @@ Triggered in-app messages only work with custom events logged through the Braze 
 
 ## Delivery semantics
 
-All in-app messages that a user is eligible for are delivered to the user's device on session start. In the case of two in-app messages being triggered by one event, the in-app message with the higher priority will be shown. For more information about the SDK's session start semantics, read about our [session lifecycle][45]. Upon delivery, the SDK will prefetch assets to be available immediately at trigger time, minimizing display latency.
+All in-app messages that a user is eligible for are delivered to the user's device on session start. In the case of two in-app messages being triggered by one event, the in-app message with the higher priority will be shown. For more information about the SDK's session start semantics, read about our [session lifecycle]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/tracking_sessions/#session-lifecycle). Upon delivery, the SDK will prefetch assets to be available immediately at trigger time, minimizing display latency.
 
 When a trigger event has more than one eligible in-app message associated with it, only the in-app message with the highest priority will be delivered.
 
@@ -89,14 +89,14 @@ A triggered in-app message can be returned to the stack in the following situati
 
 - The in-app message is triggered when the app is in the background.
 - Another in-app message is currently visible.
-- The deprecated `beforeInAppMessageDisplayed:withKeyboardIsUp:` [UI delegate method][38] has not been implemented, and the keyboard is currently being displayed.
-- The `beforeInAppMessageDisplayed:` [delegate method][30] or the deprecated `beforeInAppMessageDisplayed:withKeyboardIsUp:` [UI delegate method][38] returned `ABKDisplayInAppMessageLater`.
+- The deprecated `beforeInAppMessageDisplayed:withKeyboardIsUp:` [UI delegate method]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/in-app_messaging/customization/setting_delegates/#in-app-message-delegate) has not been implemented, and the keyboard is currently being displayed.
+- The `beforeInAppMessageDisplayed:` [delegate method]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/in-app_messaging/customization/setting_delegates/#core-in-app-message-delegate) or the deprecated `beforeInAppMessageDisplayed:withKeyboardIsUp:` [UI delegate method]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/in-app_messaging/customization/setting_delegates/#in-app-message-delegate) returned `ABKDisplayInAppMessageLater`.
 
 #### Discarding in-app messages
 
 A triggered in-app message will be discarded in the following situations:
 
-- The `beforeInAppMessageDisplayed:` [delegate method][30] or the deprecated `beforeInAppMessageDisplayed:withKeyboardIsUp:` [UI delegate method][38] returned `ABKDiscardInAppMessage`.
+- The `beforeInAppMessageDisplayed:` [delegate method]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/in-app_messaging/customization/setting_delegates/#core-in-app-message-delegate) or the deprecated `beforeInAppMessageDisplayed:withKeyboardIsUp:` [UI delegate method]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/in-app_messaging/customization/setting_delegates/#in-app-message-delegate) returned `ABKDiscardInAppMessage`.
 - The asset (image or ZIP file) of the in-app message failed to download.
 - The in-app message is ready to be displayed but past the timeout duration.
 - The device orientation doesn't match the triggered in-app message's orientation.
@@ -153,6 +153,3 @@ In-app messages can also be locally created within the app and displayed via Bra
 {% endtab %}
 {% endtabs %}
 
-[30]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/in-app_messaging/customization/setting_delegates/#core-in-app-message-delegate
-[38]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/in-app_messaging/customization/setting_delegates/#in-app-message-delegate
-[45]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/tracking_sessions/#session-lifecycle

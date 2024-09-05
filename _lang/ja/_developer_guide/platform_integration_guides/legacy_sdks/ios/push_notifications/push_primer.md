@@ -21,7 +21,7 @@ noindex: true
 標準統合の代わりに、次のコード行を `AppDelegate.m` ファイルに追加します。
 
 {% tabs %}
-{% tab OBJECTIVE-C %}
+{% tab 目標-C %}
 
 ```objc
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
@@ -50,7 +50,7 @@ if (@available(iOS 10.0, *)) {
   }
 ```
 {% endtab %}
-{% tab swift %}
+{% tab 速い %}
 
 ```swift
 if #available(iOS 10, *) {
@@ -78,12 +78,12 @@ if #available(iOS 10, *) {
 {% endtab %}
 {% endtabs %}
 
-## ステップ2: AppDelegate.m ファイルにカスタムイベントチェッカーを追加する
+## ステップ2:カスタム・イベント・チェッカーをAppDelegate.m ファイルに追加する。
 
 次のコードスニペットは、カスタムイベントを起動する必要があるかどうかをチェックします。`AppDelegate.m` に次のコード行を追加します。
 
 {% tabs %}
-{% tab OBJECTIVE-C %}
+{% tab 目標-C %}
 ```objc
 if (@available(iOS 10.0, *)) {
     UNUserNotificationCenter *center = [UNUserNotificationCenter currentNotificationCenter];
@@ -104,7 +104,7 @@ if (@available(iOS 10.0, *)) {
   }
 ```
 {% endtab %}
-{% tab swift %}
+{% tab 速い %}
 ```swift
 if #available(iOS 10, *) {
   let center = UNUserNotificationCenter.current()
@@ -127,14 +127,14 @@ let notificationSettiings = UIApplication.shared.currentUserNotificationSettings
 {% endtab %}
 {% endtabs %}
 
-## ステップ3: ディープリンクハンドラーの設定
+## ステップ3:ディープリンクハンドラーの設定
 
 以下のコードスニペットをディープリンク処理コードの中に入れてください。このディープリンクコードは、プッシュプライマーアプリ内メッセージに対してのみ実行してください。
 
 ディープリンクについて詳しくは、[リンク処理のカスタマイズ]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/advanced_use_cases/linking/#linking-handling-customization)を参照してください。
 
 {% tabs %}
-{% tab OBJECTIVE-C %}
+{% tab 目標-C %}
 ```objc
   // ...
   // check that this deep link relates to the push prompt
@@ -155,7 +155,7 @@ let notificationSettiings = UIApplication.shared.currentUserNotificationSettings
   }
 ```
 {% endtab %}
-{% tab swift %}
+{% tab 速い %}
 
 ```swift
   // ...

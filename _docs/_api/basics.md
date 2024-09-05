@@ -71,19 +71,19 @@ For more information, refer to the following articles based on your platform: [i
 
 A REST Application Programming Interface key (REST API key) is a unique code that is passed into an API to authenticate the API call and identify the calling application or user. API access is done using HTTPS web requests to your company's REST API endpoint. We use REST API keys at Braze in tandem with our App Identifier keys to track, access, send, export, and analyze data to help make sure everything is running smoothly on both your and our end.
 
-Workspaces and API Keys go hand in hand at Braze. Workspaces are designed to house versions of the same application across multiple platforms. Many customers also use workspaces to contain free and premium versions of their applications on the same platform. As you may notice, these workspaces are also making use of the REST API and have their own REST API keys. These keys can be individually scoped to include access to specific endpoints on the API. Each call to the API must include a key with access to the endpoint hit.
+Workspaces and API keys go hand in hand at Braze. Workspaces are designed to house versions of the same application across multiple platforms. Many customers also use workspaces to contain free and premium versions of their applications on the same platform. As you may notice, these workspaces are also making use of the REST API and have their own REST API keys. These keys can be individually scoped to include access to specific endpoints on the API. Each call to the API must include a key with access to the endpoint hit.
 
 We refer to both the REST API key and workspace API key as the `api_key`. The `api_key` is included in each request as a request header and acts as an authentication key that allows you to use our REST APIs. These REST APIs are used to track users, send messages, export user data, and more. When you create a new REST API key, you will need to give it access to specific endpoints. By assigning specific permissions to an API key, you can limit exactly which calls an API key can authenticate.
 
-![REST API keys panel on the API Keys page.][27]
+![REST API keys panel on the API Keys tab.][27]
 
 {% alert tip %}
-In addition to REST API keys, there also exists a type of key called Identifier keys that can be used to reference specific things like apps, templates, Canvases, campaigns, Content Cards, and segments from the API. For more information, refer to [API Identifier types]({{site.baseurl}}/api/identifier_types/).
+In addition to REST API keys, there also exists a type of key called Identifier keys that can be used to reference specific things like apps, templates, Canvases, campaigns, Content Cards, and segments from the API. For more information, refer to [API identifier types]({{site.baseurl}}/api/identifier_types/).
 {% endalert %}
 
 ### REST API key permissions
 
-API key permissions are permissions you can assign a user or group to limit their access to certain API calls. To view your list of API key permissions, go to **Settings** > **API Keys**, and select your API key.
+API key permissions are permissions you can assign a user or group to limit their access to certain API calls. To view your list of API key permissions, go to **Settings** > **APIs and Identifiers**, and select your API key.
 
 {% tabs %}
 {% tab User Data %}
@@ -325,12 +325,12 @@ If you are using the [older navigation]({{site.baseurl}}/navigation), you can cr
 5. Select which [permissions](#rest-api-key-permissions) you want to be associated with your new key.
 
 {% alert important %}
-Keep in mind that after you create a new API key, you cannot edit the scope of permissions or the allowlisted IPs. This limitation is in place for security reasons. If you need to change the scope of a key, create a new key with the updated permissions and implement that key in place of the old one. After you've completed your implementation, go ahead and delete the old key.
+Keep in mind that after you create a new API key, you cannot edit the scope of permissions or the allowlisted IPs. This limitation is in place for security reasons. If you need to change the scope of a key, create a new key with the updated permissions and implement that key in place of the old one. After you've completed your implementation, you can delete the old key.
 {% endalert %}
 
 ## Managing REST API keys
 
-REST API keys cannot be edited after they are created. However, you can view details for or delete existing REST API keys from the **API Keys** page. The **Rest API Keys** list shows the following information at a glance for each key:
+REST API keys cannot be edited after they're created, but you can view details for or delete existing REST API keys from the **API Keys** tab. This tab has the following information for each key:
 
 | Field        | Description                                                                                                         |
 | ------------ | :------------------------------------------------------------------------------------------------------------------ |
@@ -341,13 +341,13 @@ REST API keys cannot be edited after they are created. However, you can view det
 | Last Seen    | The date this key was last used. This field will show as "N/A" for keys that have never been used.                  |
 {: .reset-td-br-1 .reset-td-br-2}
 
-To view the details for a specific key, select a key from the list. You can then see all the permissions this key has, whitelisted IPs (if any), and if this key is opted into Braze IP whitelisting.
+To view the details of an API key, hover over the key and select <i class="fa-solid fa-eye" alt="View"></i> **View**. This includes all the permissions this key has, whitelisted IPs (if any), and if this key is opted into Braze IP whitelisting.
 
 ![][30]
 
-Note when [deleting a user]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/adding_users_to_your_dashboard/), the associated API keys a user created will not be deleted. To delete a key, click <i class="fas fa-gear" alt="Settings"></i> and select the corresponding option.
+Note when [deleting a user]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/adding_users_to_your_dashboard/), the associated API keys a user created won't be deleted. To delete a key, hover over the key and select <i class="fa-solid fa-trash-can" alt="Delete"></i> **Delete**.
 
-![][29]
+![][29]{: style="max-width:30%;"}
 
 ## REST API key security
 
@@ -356,8 +356,6 @@ API keys are used to authenticate an API call. When you create a new REST API ke
 Given that REST API keys allow access to potentially sensitive REST API endpoints, secure these keys and only share them with trusted partners. They should never be publicly exposed. For example, do not use this key to make AJAX calls from your website or expose it in any other public manner.
 
 A good security practice is to assign a user only as much access as is necessary to complete their job: this principle can also be applied to API keys by assigning permissions to each key. These permissions give you better security and control over the different areas of your account. 
-
-![API key permissions available when creating an API key.][25]
 
 {% alert warning %}
 Given that REST API keys allow access to potentially sensitive REST API endpoints, make sure they are stored and used securely. For example, do not use this key to make AJAX calls from your website or expose it in any other public manner.
@@ -369,7 +367,7 @@ If accidental exposure of a key occurs, it can be deleted from the Developer Con
 
 For additional security, you can specify a list of IP addresses and subnets which are allowed to make REST API requests for a given REST API key. This is referred to as allowlisting, or whitelisting. To allow specific IP addresses or subnets, add them to the **Whitelist IPs** section when creating a new REST API key: 
 
-![Option to whitelist IPs when creating an API key][26]
+![Option to allowlist IPs when creating an API key.][26]
 
 If you don't specify any, requests can be sent from any IP address.
 
@@ -383,7 +381,7 @@ Making a Braze-to-Braze webhook and using allowlisting? Check out our list of [I
 
 If you're implementing Braze using Ruby, you can use our [Ruby client library](https://github.com/braze-inc/braze-api-client-ruby) to reduce your data import time. A client library is a collection of code specific to one programming language—in this case, Ruby—that makes it easier to use an API.
 
-The Ruby client library supports the [User Endpoints]({{site.baseurl}}/api/endpoints/user_data).
+The Ruby client library supports the [User endpoints]({{site.baseurl}}/api/endpoints/user_data).
 
 {% alert note %}
 This client library is currently in beta. Want to help us make this library better? Send us feedback at [smb-product@braze.com](mailto:smb-product@braze.com).

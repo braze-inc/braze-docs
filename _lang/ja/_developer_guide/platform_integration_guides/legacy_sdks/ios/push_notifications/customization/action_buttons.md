@@ -16,53 +16,53 @@ noindex: true
 
 Braze iOS SDK は、各プッシュアクションボタンの URL 処理サポートなど、デフォルトのプッシュカテゴリーをサポートしています。現在、デフォルトカテゴリーには、`Accept`/`Decline`、`Yes`/`No`、`Confirm`/`Cancel`、および `More` の4セットのプッシュアクションボタンがあります。 
 
-![プッシュメッセージをプルダウンしてカスタマイズ可能な2つのアクションボタンを表示する GIF][13]
+![2つのカスタマイズ可能なアクションボタンを表示するためにプルダウンされているプッシュメッセージのGIF。][13]
 
 デフォルトのプッシュカテゴリーを登録するには、統合手順に従ってください。
 
 ## ステップ1:Braze のデフォルトプッシュカテゴリーの追加
 
-[プッシュ登録][36] を行うときに、次のコードを使用してデフォルトのプッシュカテゴリーに登録します。
+\[push][36] に登録する] ときに、以下のコードを使用してデフォルトのプッシュカテゴリを登録します。
 
 {% tabs %}
 {% tab OBJECTIVE-C %}
 
-\`\`\`objc
-//ユーザー通知フレームワーク用 (iOS 10以降のみ)
-NSSet \*appboyCategories = [ABKPushUtils getAppboyUNNotificationCategorySet];
+```objc
+// For UserNotification.framework (iOS 10+ only)
+NSSet *appboyCategories = [ABKPushUtils getAppboyUNNotificationCategorySet];
 [[UNUserNotificationCenter currentNotificationCenter] setNotificationCategories:appboyCategories];
 
-//UI ユーザー通知設定の場合 (iOS 10より前)
-NSSet \*appboyCategories = [ABKPushUtils getAppboyUIUserNotificationCategorySet];
-UIUserNotificationSettings \*settings = [UIUserNotificationSettings settingsForTypes:UIUserNotificationTypeBadge
+// For UIUserNotificationSettings (before iOS 10)
+NSSet *appboyCategories = [ABKPushUtils getAppboyUIUserNotificationCategorySet];
+UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTypes:UIUserNotificationTypeBadge
                                                                          categories:appboyCategories];
 [[UIApplication sharedApplication] registerUserNotificationSettings:settings];
-\`\`\`
+```
 
 {% endtab %}
-{% tab swift %}
+{% tab 迅速 %}
 
-\`\`\`swift
-//ユーザー通知フレームワーク用 (iOS 10以降のみ)
+```swift
+// For UserNotification.framework (iOS 10+ only)
 let appboyCategories = ABKPushUtils.getAppboyUNNotificationCategorySet()
 UNUserNotificationCenter.current().setNotificationCategories(appboyCategories)
 
-//UI ユーザー通知設定の場合 (iOS 10より前)
+// For UIUserNotificationSettings (before iOS 10)
 let appboyCategories = ABKPushUtils.getAppboyUIUserNotificationCategorySet()
 let settings = UIUserNotificationSettings.init(types: .badge, categories: appboyCategories)
 UIApplication.shared.registerUserNotificationSettings(settings)
-\`\`\`
+```
 
 {% endtab %}
 {% endtabs %}
 
 バックグラウンドアクティベーションモードでプッシュアクションボタンをクリックすると、通知が閉じられるだけで、アプリは開きません。ユーザーが次回アプリを開くと、これらのアクションのボタンクリック分析がサーバーにフラッシュされます。
 
-独自のカスタム通知カテゴリーを作成する場合は、[アクションボタンのカスタマイズ][37] を参照してください。
+独自のカスタム通知カテゴリを作成する場合は、\[アクションボタンカスタマイズ][37]を参照してください。
 
 ## ステップ2:インタラクティブなプッシュ処理を有効にする
 
-`UNNotification` フレームワークを使用しており、Braze [デリゲート][39] を実装している場合は、このメソッドがすでに統合されているはずです。 
+`UNNotification`フレームワークを使用し、Braze[delegates][39]を実装した場合、このメソッドはすでに統合されている必要があります。 
 
 クリック分析や URL ルーティングを含むプッシュアクションボタンの処理を有効にするには、アプリの `(void)userNotificationCenter:didReceiveNotificationResponse:withCompletionHandler:` デリゲートメソッドに次のコードを追加します。
 
@@ -76,7 +76,7 @@ UIApplication.shared.registerUserNotificationSettings(settings)
 ```
 
 {% endtab %}
-{% tab swift %}
+{% tab 迅速 %}
 
 ```swift
 Appboy.sharedInstance()?.userNotificationCenter(center,
@@ -99,7 +99,7 @@ UnNotification フレームワークを使用していない場合は、プッ�
 ```
 
 {% endtab %}
-{% tab swift %}
+{% tab 迅速 %}
 
 ```swift
 Appboy.sharedInstance()?.getActionWithIdentifier(identifier,
@@ -116,17 +116,17 @@ Appboy.sharedInstance()?.getActionWithIdentifier(identifier,
 
 ## プッシュカテゴリのカスタマイズ
 
-Brazeは [デフォルトのプッシュカテゴリ][2] のセットを提供するだけでなく、カスタムの通知カテゴリとアクションもサポートしています。アプリケーションにカテゴリーを登録すると、Braze ダッシュボードを使用して通知カテゴリーをユーザーに送信できます。
+一連の\[デフォルトプッシュカテゴリ][2]]を提供することに加えて、Brazeはカスタム通知カテゴリとアクションsをサポートします。アプリケーションにカテゴリーを登録すると、Braze ダッシュボードを使用して通知カテゴリーをユーザーに送信できます。
 
-`UserNotifications` フレームワークを使用していない場合は、[代替カテゴリ][31] のドキュメントを参照してください。
+`UserNotifications` フレームワークを使用していない場合は、[alternative categories][31] ドキュメントを参照してください。
 
 その後、これらのカテゴリーをダッシュボードからプッシュ通知に割り当てて、デザインのアクションボタン構成をトリガーできます。デバイスに表示される `LIKE_CATEGORY` を活用する例を次に示します。
 
-![「いいねを取り消す」と「いいね」の2つのプッシュアクションボタンを表示するプッシュメッセージ][17]
+![2 つのプッシュアクションボタンs " unlike" および" like" を表示するプッシュメッセージ。][17]
 
 
 [13]: {% image_buster /assets/img_archive/iOS8Action.gif %}
-[14]: https://developer.apple.com/reference/usernotifications/unnotificationcategory "Categories Docs"
+[14]: https://developer.apple.com/reference/usernotifications/unnotificationcategory "カテゴリDocs"
 [17]: {% image_buster /assets/img_archive/push_example_category.png %}
 [36]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/#step-4-register-push-tokens-with-braze
 [37]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/customization/action_buttons/#push-category-customization

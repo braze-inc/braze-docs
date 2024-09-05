@@ -4,47 +4,47 @@ article_title: iOS 用ストレージ
 platform: Swift
 page_order: 8.9
 page_type: reference
-description: "この参照記事では、Braze iOS SDKがキャプチャするデバイスレベルのプロパティについて説明します。"
+description: "このリファレンス記事では、Braze iOS Swift SDKによってキャプチャされたデバイスレベルのプロパティについて説明する。"
 ---
 
 # ストレージ
 
-> この記事では、Braze iOS SDK を使用する際にキャプチャされるさまざまなデバイスレベルのプロパティについて説明します。
+> この記事では、Braze iOS Swift SDKを使用する際に取得されるさまざまなデバイスレベルのプロパティについて説明する。
 
 ## デバイスのプロパティ
 
 デフォルトでは、Braze は以下の[デバイスレベルプロパティ][1]を収集し、デバイス、言語、タイムゾーンベースのメッセージのパーソナライズを可能にします。
 
-* デバイスキャリア(廃止に関する[`CTCarrier`][2]注記を参照)
+* デバイスキャリア[（`CTCarrier` 非推奨に関する][2]注記を参照のこと）
 * デバイスのロケール
 * デバイスモデル
 * デバイス OS のバージョン
-* プッシュ承認ステータス
+* プッシュ認証ステータス
 * プッシュ表示オプション
 * プッシュ通知が有効
 * デバイスの解像度
 * デバイスのタイムゾーン
 
 {% alert note %}
-Braze SDK はIDFA を自動的に収集しません。アプリは、すぐ下のメソッドを実装することで、必要に応じてIDFAをBrazeに渡すことができます。アプリは、IDFAをBrazeに渡す前に、App Tracking Transparencyフレームワークを通じてエンドユーザーによるトラッキングへの明示的なオプトインを取得する必要があります。
+Braze SDK はIDFA を自動的に収集しません。アプリは、以下のメソッドを直接実装することで、オプションでIDFAをBrazeに渡すことができる。アプリは、IDFAをBrazeに渡す前に、App Tracking Transparencyフレームワークを通じてエンドユーザーからトラッキングに対する明示的なオプトインを得なければならない。
 
-1. 広告トラッキングの状態を設定するには、 を使用します [`set(adTrackingEnabled:)`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/set(adtrackingenabled:)/)。
-2. 広告主の識別子(IDFA)を設定するには、 を使用します [`set(identifierForAdvertiser:)`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/set(identifierforadvertiser:)/)。
+1. 広告のトラッキング状態を設定するには [`set(adTrackingEnabled:)`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/set(adtrackingenabled:)/).
+2. 広告主の識別子（IDFA）を設定するには、以下を使用する。 [`set(identifierForAdvertiser:)`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/set(identifierforadvertiser:)/).
 {% endalert %}
 
-設定可能なデバイスフィールドは、[`Braze.Configuration.DeviceProperty`][1] 列挙で定義されます。許可リストに登録するデバイスフィールドを無効化または指定するには、オブジェクトのプロパティ`configuration`に[`devicePropertyAllowList`][3]フィールドを追加します。
+設定可能なデバイスフィールドは、[`Braze.Configuration.DeviceProperty`][1] 列挙で定義されます。許可リストにしたいデバイス・フィールドを無効にしたり指定したりするには、 オブジェクトの [`devicePropertyAllowList`][3]`configuration` プロパティに追加する。
 
 たとえば、許可リストに登録するタイムゾーンとロケール収集を指定するには、次のように設定します。
 
 {% tabs %}
-{% tab swift %}
+{% tab 速い %}
 
 ```swift
 configuration.devicePropertyAllowList = [.timeZone, .locale]
 ```
 
 {% endtab %}
-{% tab OBJECTIVE-C %}
+{% tab 目標-C %}
 
 ```objc
 configuration.devicePropertyAllowList = @[

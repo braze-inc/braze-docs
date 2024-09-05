@@ -1,5 +1,5 @@
 ---
-nav_title: フィードの更新
+nav_title: フィードを更新する
 article_title: iOS のニュースフィードを更新する
 platform: iOS
 page_order: 6
@@ -15,20 +15,20 @@ noindex: true
 # ニュースフィードの更新
 
 {% alert note %}
-ニュースフィードは非推奨になります。Braze では、ニュースフィードツールを使用しているお客様に、より柔軟でカスタマイズ可能で信頼性の高いコンテンツカードメッセージングチャネルに移行することをお勧めします。詳細については、[移行ガイド]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/)をご覧ください。
+ニュースフィードは非推奨になります。Braze では、News Feed ツールを使用するお客様は、コンテンツカードメッセージングチャネルに移動することを推奨しています。これは、より柔軟でカスタマイズ可能で、信頼性が高いチャネルです。詳しくは[マイグレーションガイド]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/)をご覧ください。
 {% endalert %}
 
-`- (void) requestFeedRefresh;` を使用して、`Appboy.h` のユーザーのニュースフィードを更新するよう Braze に手動で要求できます。例:
+`- (void) requestFeedRefresh;` を使用して、`Appboy.h` のユーザーのニュースフィードを更新するよう Braze に手動で要求できます。以下はその例です。
 
 {% tabs %}
-{% tab OBJECTIVE-C %}
+{% tab 目標-C %}
 
 ```objc
 [[Appboy sharedInstance] requestFeedRefresh];
 ```
 
 {% endtab %}
-{% tab swift %}
+{% tab 速い %}
 
 ```swift
 Appboy.sharedInstance()?.requestFeedRefresh()
@@ -37,7 +37,7 @@ Appboy.sharedInstance()?.requestFeedRefresh()
 {% endtab %}
 {% endtabs %}
 
-詳細については、`Appboy.h` の [ヘッダーファイル][15] を参照してください。
+詳細については、`Appboy.h` の[ヘッダーファイル][15]を参照してください。
 
 
-[15]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/include/Appboy.h "Appboy.h ヘッダー ファイル"
+[15]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/include/Appboy.h "Appboy.h ヘッダーファイル"

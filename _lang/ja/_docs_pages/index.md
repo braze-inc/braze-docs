@@ -12,69 +12,69 @@ description: "これは Braze ドキュメントサイトのランディング�
 doc_top_header: "Braze Documentation"
 doc_top_text: ""
 
-braze_learning: 専門用語やコンセプトを、動画、レッスン、インタラクティブな演習を織り交ぜて解説する。
+braze_learning: 動画、教訓、双方向の演習を組み合わせて説明した専門用語や概念。
 
 doc_menu_list:
   - name: ユーザーガイド
     bg_color: '#3accdd'
     image: /assets/img/braze_icons/users-01.svg
     link: /docs/user_guide/introduction/
-    description: "Brazeプラットフォームを使って、よりインパクトのあるカスタマーエクスペリエンスを育む方法を学習する。"
+    description: "Braze プラットフォームを使用して、よりインパクトのあるカスタマーエクスペリエンスを育成する方法について説明します。"
   - name: 開発者ガイド
     bg_color: '#f7918e'
     image: /assets/img/braze_icons/file-code-01.svg
     link: /docs/developer_guide/home/
-    description: "アプリやサイトをBraze SDKと統合し、有効化する。"
+    description: "アプリまたはサイトをBraze SDKに統合して有効化します。"
   - name: テクノロジーパートナー
     bg_color: '#ff9349'
     image: /assets/img/braze_icons/settings-02.svg
     link: /docs/partners/home/
-    description: "テクノロジーパートナーは、カスタマーエクスペリエンスと顧客関係をカスタマイズするお手伝いをいたします。"
-  - name: APIガイド
+    description: "当社のテクノロジーパートナーは、Brazeエクスペリエンスと顧客リレーションをカスタマイズするのに役立ちます。"
+  - name: API ガイド
     bg_color: '#ff9349'
     image: /assets/img/braze_icons/code-browser.svg
     link: /docs/api/home/
-    description: "Brazeは、ユーザー追跡、メッセージ送信、データエクスポートなどを可能にする高性能REST APIを提供。"
+    description: "Braze には、ユーザーs の追跡、メッセージの送信、データのエクスポートなどを可能にする高パフォーマンス RESTなAPI が用意されています。"
   - name: ヘルプ
     bg_color: '#ff9349'
     image: /assets/img/braze_icons/info-circle.svg
     link: /docs/help/home
-    description: "あなたが遭遇するかもしれない問題のトラブルシューティングに役立つ記事を見つけ、ユーザーとのコミュニケーションのベストプラクティスについての詳細を学ぶ。"
-  - name: コンプライアンス・ドキュメント
+    description: "発生する可能性のある問題のトラブルシューティングに役立つ記事を検索し、ユーザーと通信するためのベストプラクティスの詳細を学習します。"
+  - name: コンプライアンス文書
     bg_color: '#ff9349'
     image: /assets/img/braze_icons/certificate-01.svg
     link: /docs/compliance_documentation/
-    description: "コンプライアンス・ドキュメントには、購入した製品またはサービスに適用される特定の条件が概説されている。"
+    description: "コンプライアンスドキュメントには、購入した製品またはサービスにアプリライセンスされる具体的な条項が記載されています。"
 
 popular_topic_list:
-  - name: Braze API Dictionary
+  - name: Braze API ディクショナリ
     link: /docs/api/home/
-  - name: API Overview
+  - name: API の概要
     link: /docs/api/basics/
-  - name: POST&#58; Track Users Endpoint
+  - name: "POST:ユーザエンドポイントの追跡"
     link: /docs/api/endpoints/user_data/post_user_track/
-  - name: User Import
+  - name: ユーザーインポート
     link: /docs/user_guide/data_and_analytics/user_data_collection/user_import/
-  - name: Web SDK Setup
+  - name: Web SDK設定
     link: /docs/developer_guide/platform_integration_guides/web/initial_sdk_setup/
-  - name: Custom Events
+  - name: カスタムイベント
     link: /docs/user_guide/data_and_analytics/custom_data/custom_events/
-  - name: Custom Attributes
+  - name: カスタム属性
     link: /docs/user_guide/data_and_analytics/custom_data/custom_attributes/
   - name: Braze Currents
     link: /docs/user_guide/data_and_analytics/braze_currents
 
 helpful_resources_list:
-  - name: Innovation Statement
+  - name: イノベーションステートメント
     link: /docs/innovation_statement/
-  - name: Entitlements, Support & Success Services Handbooks
+  - name: エンタイトルメント、サポート&amp;アンプ、サクセスサービスハンドブック
     link: /docs/handbooks/
-  - name: Data Retention
+  - name: データリテンション
     link: /docs/api/data_retention/
-  - name: Data Protection Technical Assistance
+  - name: データ保護のテクニカルサポート
     link: /docs/dp-technical-assistance/
-  - name: Release Notes
+  - name: リリースノート
     link: /docs/help/release_notes/
-  - name: Contributing to Braze Docs
+  - name: Brazeドクへの貢献
     link: /docs/contributing/home/
 ---

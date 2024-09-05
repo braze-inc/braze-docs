@@ -13,17 +13,17 @@ channel:
 
 > [Huawei][1] 製の新しいスマートフォンには、プッシュ配信に使用されるサービス、Huawei Mobile Services (HMS) が、Google の Firebase Cloud Messaging (FCM) の代わりに搭載されています。<br><br>このガイドでは、Braze 経由でプッシュを送信し、セグメンテーション、分析、キャンバスなどの既存の Braze 機能をフルに活用できるように Huawei Android 統合を設定する方法について説明します。
 
-## ステップ 1:Huawei 開発者アカウントに登録する
+## ステップ1:Huawei 開発者アカウントに登録する
 
-始める前に、[Huawei 開発者アカウント][2]への登録と設定が必要です。Huawei アカウントで、**[My Projects] > [Project Settings] > [App Information]** に移動し、`App ID` と`App secret` を書き留めます。
+始める前に、[Huawei 開発者アカウント][2]への登録と設定が必要です。Huawei アカウントで、**\[My Projects] > \[Project Settings] > \[App Information]** に移動し、`App ID` と`App secret` を書き留めます。
 
 ![][3]
 
-## ステップ 2:Braze ダッシュボードで新しい Huawei アプリを作成する
+## ステップ2:Braze ダッシュボードで新しい Huawei アプリを作成する
 
-Braze ダッシュボードで、[**設定**] ナビゲーションの下にある [**アプリ設定**] に移動します。
+Braze ダッシュボードで、\[**設定**] ナビゲーションの下にある \[**アプリ設定**] に移動します。
 
-[**\+ アプリ**] をクリックし、名前 (My Huawei App など) を入力し、プラットフォームとして `Android` を選択します。
+\[**\+ アプリ**] をクリックし、名前 (My Huawei App など) を入力し、プラットフォームとして `Android` を選択します。
 
 ![][4]{: style="max-width:60%;"}
 
@@ -31,16 +31,16 @@ Braze ダッシュボードで、[**設定**] ナビゲーションの下にあ�
 
 ![][12]
 
-## ステップ 3:Huawei メッセージング SDK をアプリに統合する
+## ステップ3:Huawei メッセージング SDK をアプリに統合する
 
-Huawei は、Huawei Messaging Service をアプリケーションに統合する [Android 統合codelab][13] を提供しています。以下の手順に従って開始してください。
+ファーウェイは\[Android統合コードラボ][13] ]を提供し、ファーウェイ・メッセージング・サービスをアプリケーションに統合する詳細を説明している。以下の手順に従って開始してください。
 
-codelab が完了したら、カスタムの [Huawei Message Service][14] を作成してプッシュトークンを取得し、メッセージを Braze SDK に転送する必要があります。
+コードラボが完了したら、プッシュトークンを取得してBraze SDKにメッセージを転送するためのカスタム\[Huawei Message Service][14] ]を作成する必要がある。
 
 {% tabs %}
 {% tab JAVA %}
 
-\`\`\`java
+```java
 public class CustomPushService extends HmsMessageService {
   @Override
   public void onNewToken(String token) {
@@ -52,30 +52,30 @@ public class CustomPushService extends HmsMessageService {
   public void onMessageReceived(RemoteMessage remoteMessage) {
     super.onMessageReceived(remoteMessage);
     if (BrazeHuaweiPushHandler.handleHmsRemoteMessageData(this.getApplicationContext(), remoteMessage.getDataOfMap())) {
-      // Braze が Huawei プッシュ通知を処理しました
+      // Braze has handled the Huawei push notification
     }
   }
 }
-\`\`\`
+```
 
 {% endtab %}
 {% tab KOTLIN %}
 
-\`\`\`kotlin
-class CustomPushService:HmsMessageService() {
-override fun onNewToken(token: String?) {
-super.onNewToken(token)
-Braze.getInstance(applicationContext).setRegisteredPushToken(token!!)
-}
+```kotlin
+class CustomPushService: HmsMessageService() {
+  override fun onNewToken(token: String?) {
+    super.onNewToken(token)
+    Braze.getInstance(applicationContext).setRegisteredPushToken(token!!)
+  }
 
-  override fun onMessageReceived(hmsRemoteMessage:RemoteMessage?) {
+  override fun onMessageReceived(hmsRemoteMessage: RemoteMessage?) {
     super.onMessageReceived(hmsRemoteMessage)
     if (BrazeHuaweiPushHandler.handleHmsRemoteMessageData(applicationContext, hmsRemoteMessage?.dataOfMap)) {
-      // Braze が Huawei プッシュ通知を処理しました
+      // Braze has handled the Huawei push notification
     }
   }
 }
-\`\`\`
+```
 
 {% endtab %}
 {% endtabs %}
@@ -92,7 +92,7 @@ Braze.getInstance(applicationContext).setRegisteredPushToken(token!!)
 </service>
 ```
 
-## ステップ 4:Huawei プッシュを送信する
+## ステップ4: Huawei プッシュを送信する
 
 ここまでで、Braze ダッシュボードに新しい Huawei Android アプリを作成し、Huawei 開発者の認証情報を使用して設定し、Braze および Huawei SDK をアプリに統合しました。
 
@@ -100,19 +100,19 @@ Braze.getInstance(applicationContext).setRegisteredPushToken(token!!)
 
 ### 新しいプッシュ通知キャンペーンを作成する
 
-[**キャンペーン**] ページで、新しいキャンペーンを作成し、メッセージタイプとして [**プッシュ通知**] を選択します。
+\[**キャンペーン**] ページで、新しいキャンペーンを作成し、メッセージタイプとして \[**プッシュ通知**] を選択します。
 
-キャンペーンに名前を付けたら、プッシュプラットフォームとして [**Android プッシュ通知**] を選択します。
+キャンペーンに名前を付けたら、プッシュプラットフォームとして \[**Android プッシュ通知**] を選択します。
 
-![利用可能なプッシュプラットフォームを表示するキャンペーン作成コンポーザー][5]
+![利用可能なプッシュ・プラットフォームを表示するキャンペーン作成コンポーザー。][5]
 
 次に、タイトルとメッセージを付けてプッシュキャンペーンを作成します。
 
 ### テストプッシュを送信する
 
-[**テスト**] タブで、[\`changeUser(USER\_ID\_STRING)\` メソッド][9] を使用してアプリに設定したユーザー ID を入力し、[**テストを送信**] をクリックしてテストプッシュを送信します。
+**Test]**タブで、\[`changeUser(USER_ID_STRING)` method][9]]を使ってアプリに設定したユーザーIDを入力し、\[**Send Test]**をクリックしてテストプッシュを送信する。
 
-![キャンペーン作成コンポーザーのテストタブでは、ユーザー ID を指定し、[ユーザーを個別に追加] フィールドに入力することで、テストメッセージを自分に送信できます。][7]
+![キャンペーン作成コンポーザーのテストタブを見ると、ユーザーIDを入力し、「個人ユーザーを追加」フィールドに入力することで、自分自身にテストメッセージを送信できることがわかる。][7]
 
 この時点で、Braze から Huawei (HMS) デバイスにテストプッシュ通知が届くはずです。
 
@@ -120,7 +120,7 @@ Braze.getInstance(applicationContext).setRegisteredPushToken(token!!)
 
 Braze ダッシュボードの Huawei アプリは Android プッシュプラットフォーム上に構築されているため、すべての Android ユーザー (Firebase Cloud Messaging および Huawei Mobile Services) にプッシュを送信するか、キャンペーンオーディエンスを特定のアプリにセグメント化するかを柔軟に選択できます。
 
-Huawei アプリのみにプッシュを送信するには、[新しいセグメントを作成][15] して、[**アプリ**] セクション内で Huawei アプリを選択します。
+Huaweiアプリのみにプッシュを送信するには、\[新しいセグメントを作成し、][15] 、**アプリセクション**内でHuaweiアプリを選択する。
 
 ![][8]
 
@@ -128,7 +128,7 @@ Huawei アプリのみにプッシュを送信するには、[新しいセグメ
 
 ## 分析
 
-キャンペーンが開始されると、キャンペーンの分析または Android プッシュ用に集計されたキャンバスが表示されます。Android プッシュの分析と設定の詳細については、[プッシュユーザーガイド][10] を参照してください。
+キャンペーンが開始されると、キャンペーンの分析または Android プッシュ用に集計されたキャンバスが表示されます。Androidのプッシュ分析と設定の詳細については、\[プッシュユーザーガイド][10] ]を参照のこと。
 
 [1]: https://huaweimobileservices.com/
 [2]: https://developer.huawei.com/consumer/en/console

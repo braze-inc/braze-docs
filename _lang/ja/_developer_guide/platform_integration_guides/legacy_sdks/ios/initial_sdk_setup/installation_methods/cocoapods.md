@@ -22,17 +22,17 @@ noindex: true
 $ sudo gem install cocoapods
 ```
 
-CocoaPods に関して問題がある場合は、CocoaPods [トラブルシューティングガイド][apple\_initial\_setup\_25] を参照してください。
+CocoaPodsに関して問題がある場合は、CocoaPods \[トラブルシューティングガイド]\[apple_initial_setup_25].
 
 {% alert note %}
-`rake` 実行ファイルを上書きするよう求められた場合は、CocoaPods.org の「[の概要](http://guides.cocoapods.org/using/getting-started.html " CocoaPodsインストール手順")」を参照してください。
+`rake` 、実行ファイルを上書きするように指示された場合は、CocoaPods.org [「Getting startedCocoaPods](http://guides.cocoapods.org/using/getting-started.html "Installation Directions")」の指示を参照し、詳細を確認する。
 {% endalert %}
 
 ## ステップ2:Podfile の構築
 
 CocoaPods Ruby Gem をインストールしたら、Xcode プロジェクトのディレクトリに `Podfile` という名前のファイルを作成する必要があります。
 
-Podfile に次の行を追加します。
+次の行を Podfile に追加します。
 
 ```
 target 'YourAppTarget' do
@@ -40,18 +40,18 @@ target 'YourAppTarget' do
 end
 ```
 
-ポッドのアップデートがマイナーバージョンのアップデートよりも小さなものを自動的に取得するように、Braze のバージョンを設定することをお勧めします。これは `pod 'Appboy-iOS-SDK' ~> Major.Minor.Build` のように見えます。大きな変更があっても、Braze SDK の最新バージョンを自動的に統合したい場合は、Podfile で `pod 'Appboy-iOS-SDK'` を使用できます。
+ポッドの更新がマイナー バージョンの更新よりも小さいものを自動的に取得するように、Braze をバージョン管理することをお勧めします。これは `pod 'Appboy-iOS-SDK' ~> Major.Minor.Build` のように見えます。大きな変更があっても、Braze SDK の最新バージョンを自動的に統合したい場合は、Podfile で `pod 'Appboy-iOS-SDK'` を使用できます。
 
 #### サブスペック
 
 インテグレータは、弊社の完全な SDK をインポートすることをお勧めします。ただし、特定の Braze 機能のみを統合することが決まっている場合は、SDK 全体ではなく、目的の UIサブスペックのみをインポートできます。
 
-| サブスペック |詳細 |
+| 亜種 | 詳細 |
 | ------- | ------- |
-| `pod 'Appboy-iOS-SDK/InAppMessage'` | `InAppMessage` のサブスペックには、Braze のアプリ内メッセージ UI とCore SDK が含まれています。|
-| `pod 'Appboy-iOS-SDK/ContentCards'` | `ContentCards` のサブスペックには、Braze Content Card UI と Core SDKが含まれています。|
-| `pod 'Appboy-iOS-SDK/NewsFeed'` | `NewsFeed` のサブスペックには Braze Core SDK が含まれています。|
-| `pod 'Appboy-iOS-SDK/Core'` | `Core` のサブスペックには、カスタムイベントや属性などの分析のサポートが含まれています。|
+| `pod 'Appboy-iOS-SDK/InAppMessage'` | `InAppMessage` subspecには、Brazeのアプリ内メッセージUIとCore SDKが含まれている。|
+| `pod 'Appboy-iOS-SDK/ContentCards'` | `ContentCards` subspecには、Braze Content Card UIとCore SDKが含まれている。 |
+| `pod 'Appboy-iOS-SDK/NewsFeed'` | `NewsFeed` サブスペックにはBraze Core SDKが含まれている。 |
+| `pod 'Appboy-iOS-SDK/Core'` | `Core` サブスペックは、カスタムイベントやアトリビュートなどのアナリティクスをサポートしている。 |
 {: .ws-td-nw-1}
 
 ## ステップ3:Braze SDK のインストール
@@ -61,11 +61,11 @@ Braze SDK CocoaPods をインストールするには、ターミナル内で Xc
 pod install
 ```
 
-この時点で、CocoaPods で作成した新しい Xcode プロジェクトのワークスペースを開くことができるはずです。Xcode プロジェクトではなく、必ずこの Xcode ワークスペースを使用してください。 
+この時点で、CocoaPods によって作成された新しい Xcode プロジェクトワークスペースを開くことができるはずです。Xcode プロジェクトの代わりに、必ずこの Xcode ワークスペースを使用してください。 
 
-![新しい \`AppbpyExample.workspace\`を表示するために展開された Appboy Example フォルダ。][apple\_initial\_setup\_15]
+![Appboy Exampleフォルダを展開して新しいフォルダを表示`AppbpyExample.workspace`] \[apple_initial_setup_15]
 
-## 次のステップ
+## 次のステップ:
 
 指示に従って[統合を完了]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/completing_integration/)します。
 
@@ -81,5 +81,5 @@ pod update
 [apple_initial_setup_2]: https://www.ruby-lang.org/en/installation/
 [apple_initial_setup_3]: http://guides.cocoapods.org/using/getting-started.html "CocoaPods のインストール手順"
 [apple_initial_setup_5]: https://github.com/braze-inc/braze-ios-sdk/blob/master/AppboyKit/include/Appboy.h
-[apple\_initial\_setup\_15]: {% image_buster /assets/img_archive/podsworkspace.png %}
-[apple\_initial\_setup\_25]: http://guides.cocoapods.org/using/troubleshooting.html "CocoaPods Troubleshooting Guide"
+\[apple_initial_setup_15] ： {% image_buster /assets/img_archive/podsworkspace.png %}
+\[apple_initial_setup_25] ：http://guides.cocoapods.org/using/troubleshooting.html "CocoaPodsトラブルシューティングガイド"

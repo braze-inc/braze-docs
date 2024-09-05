@@ -20,7 +20,7 @@ Once you implement this prompt, Braze stops automatically tracking impressions, 
 
 Creating a campaign to ask users for an App Store review is a popular usage of in-app messages.
 
-Start by setting the [in-app message delegate][30] in your app. Next, implement the following delegate method to disable the default App Store review message:
+Start by setting the [in-app message delegate](#in-app-message-controller-delegate) in your app. Next, implement the following delegate method to disable the default App Store review message:
 
 {% tabs %}
 {% tab OBJECTIVE-C %}
@@ -99,4 +99,3 @@ Next, create an in-app messaging campaign with the following:
 Apple limits App Store review prompts to a maximum of three (3) times per year for each user, so your campaign should be [rate-limited]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/) to three times per year per user.<br><br>Users may turn off App Store review prompts. As a result, your custom review prompt should not promise that a native App Store review prompt will appear or directly ask for a review.
 {% endalert %}
 
-[30]: #in-app-message-controller-delegate

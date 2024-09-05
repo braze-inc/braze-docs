@@ -16,7 +16,7 @@ description: "この記事では、Android または FireOS アプリにユニ�
 ディープリンクの基本情報については、[ユーザーガイドの記事][4]を参照してください。
 
 {% alert note %}
-この記事には、廃止予定のニュースフィードの情報が含まれています。Braze では、ニュースフィードツールをご利用のお客様に、コンテンツカードのメッセージングチャネルへの移行を推奨しています。柔軟性、カスタマイズ性、信頼性が向上します。詳細については、[移行ガイド]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/)をご覧ください。
+この記事には、廃止予定のニュースフィードの情報が含まれています。Braze では、News Feed ツールを使用するお客様は、コンテンツカードメッセージングチャネルに移動することを推奨しています。これは、より柔軟でカスタマイズ可能で、信頼性が高いチャネルです。詳しくは[マイグレーションガイド]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/)をご覧ください。
 {% endalert %}
 
 ## ユニバーサルディープリンクデリゲート
@@ -30,7 +30,7 @@ Android SDK は、コンテンツカード、アプリ内メッセージ、プ�
 {% tabs %}
 {% tab JAVA %}
 
-\`\`\`java
+```java
 public class CustomDeeplinkHandler implements IBrazeDeeplinkHandler {
   private static final String TAG = BrazeLogger.getBrazeLogTag(CustomDeeplinkHandler.class);
 
@@ -42,7 +42,7 @@ public class CustomDeeplinkHandler implements IBrazeDeeplinkHandler {
   @Override
   public void gotoUri(Context context, UriAction uriAction) {
     String uri = uriAction.getUri().toString();
-    // 私たちのアプリではなく YouTube アプリで YouTube の URL を開く
+    // Open YouTube URLs in the YouTube app and not our app
     if (!StringUtils.isNullOrBlank(uri) && uri.contains("youtube.com")) {
       uriAction.setUseWebView(false);
     }
@@ -69,21 +69,21 @@ public class CustomDeeplinkHandler implements IBrazeDeeplinkHandler {
     }
   }
 }
-\`\`\`
+```
 
 {% endtab %}
 {% tab KOTLIN %}
 
-\`\`\`kotlin
-class CustomDeeplinkHandler :IBrazeDeeplinkHandler {
+```kotlin
+class CustomDeeplinkHandler : IBrazeDeeplinkHandler {
 
-  override fun gotoNewsFeed(context:Context, newsfeedAction:NewsfeedAction) {
+  override fun gotoNewsFeed(context: Context, newsfeedAction: NewsfeedAction) {
     newsfeedAction.execute(context)
   }
 
-  override fun gotoUri(context:Context, uriAction:UriAction) {
+  override fun gotoUri(context: Context, uriAction: UriAction) {
     val uri = uriAction.uri.toString()
-    // 私たちのアプリではなく YouTube アプリで YouTube の URL を開く
+    // Open YouTube URLs in the YouTube app and not our app
     if (!StringUtils.isNullOrBlank(uri) && uri.contains("youtube.com")) {
       uriAction.useWebView = false
     }
@@ -92,7 +92,7 @@ class CustomDeeplinkHandler :IBrazeDeeplinkHandler {
     customUriAction.execute(context)
   }
 
-  class CustomUriAction(uriAction:UriAction) :UriAction(uriAction) {
+  class CustomUriAction(uriAction: UriAction) : UriAction(uriAction) {
 
     override fun openUriWithActionView(context: Context, uri: Uri, extras: Bundle) {
       val intent = getActionViewIntent(context, uri, extras)
@@ -106,10 +106,10 @@ class CustomDeeplinkHandler :IBrazeDeeplinkHandler {
   }
 
   companion object {
-private val TAG = BrazeLogger.getBrazeLogTag(CustomDeeplinkHandler::class.java)
+    private val TAG = BrazeLogger.getBrazeLogTag(CustomDeeplinkHandler::class.java)
+  }
 }
-    }
-  \`\`\`
+```
 
 {% endtab %}
 {% endtabs %}
@@ -121,15 +121,15 @@ private val TAG = BrazeLogger.getBrazeLogTag(CustomDeeplinkHandler::class.java)
 {% tabs %}
 {% tab JAVA %}
 
-\`\`\`java
+```java
 BrazeDeeplinkHandler.setBrazeDeeplinkHandler(new IBrazeDeeplinkHandler() {
   @Override
   public void gotoUri(Context context, UriAction uriAction) {
     final Bundle extras = uriAction.getExtras();
-    if (extras.containsKey("open\_notification\_page")) {
+    if (extras.containsKey("open_notification_page")) {
       Intent intent = new Intent();
-      intent.setAction("android.settings.APP\_NOTIFICATION\_SETTINGS");
-      intent.setFlags(Intent.FLAG\_ACTIVITY\_NEW\_TASK);
+      intent.setAction("android.settings.APP_NOTIFICATION_SETTINGS");
+      intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
 
       //for Android 5-7
       intent.putExtra("app_package", context.getPackageName());
@@ -144,19 +144,19 @@ BrazeDeeplinkHandler.setBrazeDeeplinkHandler(new IBrazeDeeplinkHandler() {
   @Override
   public void gotoNewsFeed(Context context, NewsfeedAction newsfeedAction) {}
 });
-\`\`\`
+```
 
 {% endtab %}
 {% tab KOTLIN %}
 
-\`\`\`kotlin
-BrazeDeeplinkHandler.setBrazeDeeplinkHandler(object :IBrazeDeeplinkHandler {
-  override fun gotoUri(context:Context, uriAction:UriAction) {
+```kotlin
+BrazeDeeplinkHandler.setBrazeDeeplinkHandler(object : IBrazeDeeplinkHandler {
+  override fun gotoUri(context: Context, uriAction: UriAction) {
     val extras = uriAction.extras
-    if (extras.containsKey("open\_notification\_page")) {
+    if (extras.containsKey("open_notification_page")) {
       val intent = Intent()
-      intent.action = "android.settings.APP\_NOTIFICATION\_SETTINGS"
-      intent.flags = Intent.FLAG\_ACTIVITY\_NEW\_TASK
+      intent.action = "android.settings.APP_NOTIFICATION_SETTINGS"
+      intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
 
       //for Android 5-7
       intent.putExtra("app_package", context.packageName)
@@ -168,9 +168,9 @@ BrazeDeeplinkHandler.setBrazeDeeplinkHandler(object :IBrazeDeeplinkHandler {
     }
   }
 
-  override fun gotoNewsFeed(context:Context, newsfeedAction:NewsfeedAction) {}
+  override fun gotoNewsFeed(context: Context, newsfeedAction: NewsfeedAction) {}
 })
-\`\`\`
+```
 
 {% endtab %}
 {% endtabs %}
@@ -178,7 +178,7 @@ BrazeDeeplinkHandler.setBrazeDeeplinkHandler(object :IBrazeDeeplinkHandler {
 ## ニュースフィードへのディープリンク{#Android_Deep_Advance}
 
 {% alert note %}
-ニュースフィードは非推奨になります。Braze では、ニュースフィードツールをご利用のお客様に、コンテンツカードのメッセージングチャネルへの移行を推奨しています。柔軟性、カスタマイズ性、信頼性が向上します。詳細については、[移行ガイド]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/)をご覧ください。
+ニュースフィードは非推奨になります。Braze では、News Feed ツールを使用するお客様は、コンテンツカードメッセージングチャネルに移動することを推奨しています。これは、より柔軟でカスタマイズ可能で、信頼性が高いチャネルです。詳しくは[マイグレーションガイド]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/)をご覧ください。
 {% endalert %}
 
 プッシュ通知から Braze ニュースフィードにディープリンクするには、ニュースフィードアクティビティの[カスタムディープリンクを作成][1]します。

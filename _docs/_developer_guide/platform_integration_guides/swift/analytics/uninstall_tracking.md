@@ -21,7 +21,7 @@ In your Xcode project, go to **Capabilities** and ensure you have **Background M
 
 ## Step 2: Check for Braze background push
 
-Braze uses background push notifications to collect uninstall tracking analytics. Ensure that your application [does not take any unwanted actions][4] upon receiving our uninstall tracking notifications.
+Braze uses background push notifications to collect uninstall tracking analytics. Ensure that your application [does not take any unwanted actions]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/customization/ignoring_internal_push/) upon receiving our uninstall tracking notifications.
 
 ## Step 3: Test from the Braze dashboard
 
@@ -38,10 +38,5 @@ These testing steps are a proxy for sending an uninstall tracking push from Braz
 
 ## Step 4: Enable uninstall tracking
 
-Follow the instructions for [enabling uninstall tracking][6].
+Follow the instructions for [enabling uninstall tracking]({{site.baseurl}}/user_guide/data_and_analytics/tracking/uninstall_tracking/#uninstall-tracking).
 
-[4]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/customization/ignoring_internal_push/
-[5]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/silent_push_notifications/
-[6]: {{site.baseurl}}/user_guide/data_and_analytics/tracking/uninstall_tracking/#uninstall-tracking
-[9]: {% image_buster /assets/img_archive/ios-uninstall-tracking-2.png %}
-[10]: {% image_buster /assets/img_archive/ios-uninstall-tracking-3.png %}

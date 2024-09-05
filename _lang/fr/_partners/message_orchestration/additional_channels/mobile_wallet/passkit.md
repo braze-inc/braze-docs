@@ -274,7 +274,7 @@ Outre la création et la mise à jour des passes, vous pouvez également récup�
 **Exemples de réponses Liquid**
 
 {% tabs local %}
-{% tab {{passes.redemptionDetails}} %}
+{% tab passes.redemptionDetails %}
 
 ```json
 {
@@ -291,7 +291,7 @@ Outre la création et la mise à jour des passes, vous pouvez également récup�
 ```
 
 {% endtab %}
-{% tab {{passes.status}} %}
+{% tab passes.status %}
 ```
 UNREDEEMED 
 ```
