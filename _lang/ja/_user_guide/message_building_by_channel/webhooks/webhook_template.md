@@ -1,54 +1,54 @@
 ---
-nav_title: Webhook テンプレートの作成
-article_title: Webhook テンプレートの作成
+nav_title: Webhookテンプレートを作成する
+article_title: Webhookテンプレートを作成する
 page_order: 2
 tool:
   - Templates
 channel:
   - webhooks
-description: "このリファレンス記事では、Webhook テンプレートを作成およびカスタマイズして、Braze プラットフォーム内で後で使用する方法について説明します。"
+description: "このリファレンス記事では、Brazeプラットフォーム内で後で使用するためのWebhookテンプレートの作成とカスタマイズ方法について説明する。"
 
 ---
 
-# Webhook テンプレートの作成
+# ウェブフック・テンプレートを作成する
 
-> このリファレンス記事では、Webhook テンプレートを作成およびカスタマイズして、Braze プラットフォーム内で後で使用する方法について説明します。
+> このリファレンス記事では、Brazeプラットフォーム内で後で使用するためのWebhookテンプレートの作成とカスタマイズ方法について説明する。
 
-## ステップ 1:Webhook テンプレートエディタに移動します
+## ステップ 1:ウェブフック・テンプレート・エディターに移動する
 
-**Templates**> **Webhook Templates** に移動します。
-
-{% alert note %}
-[古いナビゲーション]({{site.baseurl}}/navigation) を使用している場合は、**Engagement**> **Templates & Media**> **Webhook Templates** の下にこのページがあります。
-{% endalert %}
-
-![ろうそくダッシュボードのテンプレートとメディアページの下のWebhook Templates(Webhook テンプレート)][1]
-
-## ステップ 2:新しいテンプレートの作成
-
-これで、新しいテンプレートを作成したり、既存のテンプレートを編集したり、提供されている事前に署名されたWebhook テンプレートのいずれかを使用したりできます。
-
-## ステップ 3:テンプレートのカスタマイズ
-
-Webhook テンプレートは、さまざまなユースケースで使用できます。 まず、使用する一意のテンプレート名を入力します。 Webhook URL、リクエスト本文、リクエストヘッダーを入力し、使用するHTTP メソッドを選択することもできます。
-
-![Webhook テンプレートを作成するときにタブを作成する]使用可能なフィールドは、言語、webhook URL、およびリクエスト本文です。][2]{: style="max-width:80%"}
-
-ユーザに送信する前にWebhook の外観を確認する場合は、**Settings** タブからテストWebhook を送信できます。
-
-## ステップ 4: テンプレートを保存する
-
-テンプレートを保存するには、**Save Template**ボタンをクリックします。これで、選択したキャンペーンでこのテンプレートを使用する準備ができました。
-
-![Webhook Template Save][3]{: style="max-width:50%"}
+**Templates**>**Webhook Templatesに**進む。
 
 {% alert note %}
-既存のテンプレートに対する編集は、そのテンプレートの以前のバージョンを使用して作成されたキャンペーンには反映されません。
+[古いナビゲーションを]({{site.baseurl}}/navigation)使用している場合、このページは**Engagement**>**Templates & Media**>**Webhook Templatesの**下にある。
 {% endalert %}
 
-## Webhook テンプレートの管理
+![Brazeダッシュボードの「Templates and Media」ページにある「Webhook Templates」タブ。][1]
 
-また、[duplicate]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/duplicate/)と[archive]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/archive/)Webhook Templates![Templates & Media]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/) でテンプレートとクリエイティブコンテンツの作成と管理について詳しく説明します。
+## ステップ2:新しいテンプレートを作成する
+
+新しいテンプレートを作成したり、既存のテンプレートを編集したり、あらかじめデザインされたウェブフック・テンプレートのいずれかを使用したりすることができる。
+
+## ステップ 3:テンプレートをカスタマイズする
+
+Webhookテンプレートは様々なユースケースに使用できる。 使用する一意のテンプレート名を入力することから始めることができる。 また、ウェブフックURL、リクエストボディ、リクエストヘッダーを入力し、使用するHTTPメソッドを選択することもできる。
+
+![ウェブフック・テンプレートを作成するときに「Compose」タブをクリックする。利用可能なフィールドは、言語、ウェブフックURL、リクエストボディである。][2]{: style="max-width:80%"}
+
+ユーザーに送信する前に、Webhookがどのように見えるかを確認したい場合は、**Settings**タブからテストWebhookを送信することができる。
+
+## ステップ 4:テンプレートを保存する
+
+**Save Template**ボタンをクリックしてテンプレートを保存する。これで、あなたが選んだキャンペーンでこのテンプレートを使う準備ができた。
+
+![Webhookテンプレート保存][3]{: style="max-width:50%"}
+
+{% alert note %}
+既存のテンプレートに加えた編集は、そのテンプレートの旧バージョンを使用して作成されたキャンペーンには反映されない。
+{% endalert %}
+
+## Webhookテンプレートを管理する
+
+Webhookテンプレートの[複製や]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/duplicate/) [アーカイブも]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/archive/)できる！テンプレートとクリエイティブ・コンテンツの作成と管理については、「[テンプレートとメディア]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/)」をご覧ください。
 
 [1]: {% image_buster /assets/img_archive/webhook_template_campaign.png %}
 [2]: {% image_buster /assets/img_archive/Webhook_template_test.png %}

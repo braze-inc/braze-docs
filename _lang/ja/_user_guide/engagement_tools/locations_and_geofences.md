@@ -9,20 +9,20 @@ page_type: landing
 tool: Location
 description: "このランディングページには、位置情報とジオフェンスに関する記事が掲載されています。ここでは、位置情報の追跡、ジオフェンスの作成、モバイル統合などに関するリソースを見つけることができます。"
 search_rank: 10
-guide_featured_title: "セクション記事"
+guide_featured_title: "セクションの記事"
 guide_featured_list:
-  - name: Location Tracking
+  - name: 位置情報の追跡
     link: /docs/user_guide/engagement_tools/locations_and_geofences/location_tracking
-    fa_icon: fas fa-map-marker-alt
-  - name: Creating Geofences
+    image: /assets/img/braze_icons/marker-pin-01.svg
+  - name: ジオフェンスの作成
     link: /docs/user_guide/engagement_tools/locations_and_geofences/creating_geofences/
-    fa_icon: fas fa-map-marker-alt
-  - name: Mobile Integrations
+    image: /assets/img/braze_icons/marker-pin-01.svg
+  - name: モバイル統合
     link: /docs/user_guide/engagement_tools/locations_and_geofences/mobile_integrations/
-    fa_icon: fas fa-mobile
-  - name: Frequently Asked Questions
+    image: /assets/img/braze_icons/phone-02.svg
+  - name: よくある質問
     link: /docs/user_guide/engagement_tools/locations_and_geofences/faqs/
-    fa_icon: fas fa-question
+    image: /assets/img/braze_icons/annotation-question.svg
 ---
 
 ## 位置情報とジオフェンスについて

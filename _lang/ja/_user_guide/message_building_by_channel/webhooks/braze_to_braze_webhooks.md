@@ -1,77 +1,77 @@
 ---
-nav_title: Braze-to-Braze Webhook (ろう付け Webhook)
-article_title: Braze-to-Braze Webhook (ろう付け Webhook)
+nav_title: ブレイズ・トゥ・ブレイズ・ウェブフック
+article_title: ブレイズ・トゥ・ブレイズ・ウェブフック
 page_order: 3
 channel:
   - webhooks
-description: "この記事では、主要なユースケースでBraze-to-Braze Webhookを作成する方法について説明します。"
+description: "この記事では、Braze-to-Brazeウェブフックの作成方法について説明する。"
 
 ---
 
-# Braze-to-Braze Webhook (ろう付け Webhook)
+# Braze-to-Brazeウェブフック
 
-> Webhookを使用してBraze [REST API][2]と通信し、基本的にAPIでできることはすべて行うことができます。これを Braze-to-Braze Webhook (Braze から Braze への通信を行う Webhook) と呼びます。
+> Webhookを使用して、Braze \[REST API][2]] と通信することができる。私たちはこれをBraze-to-Braze webhook-BrazeからBrazeへ通信するwebhookと呼んでいる。
 
-## 前提 条件
+## 前提条件
 
-Braze-to-Braze Webhook を作成するには、アクセスするエンドポイントの権限を持つ [API キー][3] が必要です。
+Braze-to-BrazeのWebhookを作成するには、到達したいエンドポイントのパーミッションを持つ\[APIキー][3] ]が必要だ。
 
 ## ユースケース
 
-Braze-to-Braze Webhook でできることはたくさんありますが、ここでは一般的なユースケースをいくつか紹介します。
+Braze-to-BrazeのWebhookでできることはたくさんあるが、ここでは一般的な使用例をいくつか紹介しよう：
 
-- ユーザーがメッセージを受信したときにカウンターの整数カスタム属性をインクリメントします。
-- 最初の Canvas から 2 つ目の Canvas をトリガーします。
+- ユーザがメッセージを受信すると、カウンタのカスタム属性（整数）をインクリメントする。
+- 最初のキャンバスから2番目のキャンバスをトリガーする。
 
 {% alert tip %}
-[ユーザー更新ステップ]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/user_update/)をキャンバスに追加して、JSON コンポーザーでユーザーの属性、イベント、購入を追跡します。このようにして、これらの更新はバッチ処理されるため、BrazeはBraze-to-Braze Webhookよりも効率的に処理できます。
+[ユーザー更新ステップを]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/user_update/)キャンバスに追加して、ユーザーの属性、イベント、購入をJSONコンポーザーで追跡する。こうすることで、BrazeがBraze-to-Braze webhookよりも効率的に更新を処理できるように、これらの更新はバッチ処理される。
 {% endalert %}
 
-このページのユースケースは、Brazeの[Webhookの仕組み][4]と[Webhookの作成][5]の方法に精通していることを前提としています。
+このページの使用例は、\[Webhookがどのように機能するか][4] ]と\[BrazeでWebhookを作成する方法][5] ]をすでに知っていることを前提としている。
 
-## Braze-to-Braze Webhook の作成手順
+## Braze-to-Brazeウェブフックの作成手順
 
-Webhook リクエストの詳細はユースケースごとに異なりますが、Braze-to-Braze Webhook を作成するための一般的なワークフローは同じです。
+Webhookリクエストの詳細はユースケースによって異なるが、Braze-to-Braze Webhookを作成するための一般的なワークフローは変わらない。
 
-1. [Webhookを作成する][5] キャンペーンまたはキャンバスコンポーネントとして。 
-2. **[Blank Template**] を選択します。
-3. [ **作成** ] タブで、ユースケースのメモに従って **[Webhook URL** ] と **[要求本文** ] を指定します。
-4. [ **設定** ] タブで、ユースケースのメモに従って **[HTTP メソッド** ] と **[要求ヘッダー** ] を指定します。
-5. 必要に応じて、残りの Webhook の構築を続けます。一部のユースケースでは、カスタムイベントからキャンペーンやキャンバスをトリガーするなど、特定の配信設定が必要です。
+1. \[キャンペーンまたはキャンバスのコンポーネントとしてウェブフック][5] を作成する。 
+2. **空白のテンプレートを**選択する。
+3. **Compose**タブで、**Webhook URLと** **Request Bodyを**ユースケースに応じて指定する。
+4. **Settings "**タブで、**HTTPメソッドと** **リクエスト・ヘッダを**指定する。
+5. 必要に応じて、Webhookの残りの部分を構築し続ける。ユースケースによっては、カスタムイベントからキャンペーンやキャンバスをトリガーするなど、特定の配信設定が必要なものもある。
 
-### ユースケース：カウンターの整数カスタム属性をインクリメントする
+### ユースケース:カウンターの整数カスタム属性をインクリメントする
 
-このユースケースでは、カスタム属性を作成し、Liquidを使用して特定のアクションが発生した回数をカウントします。 
+この使用例では、カスタム属性を作成し、特定のアクションが発生した回数をカウントするためにLiquidを使用する。 
 
-たとえば、ユーザーがアクティブなアプリ内メッセージキャンペーンを見た回数をカウントし、3回表示した後は再度キャンペーンを受け取らないようにすることができます。BrazeのLiquidロジックで何ができるかについては、 [Liquidのユースケースライブラリ]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/liquid_use_cases)をご覧ください。
+例えば、ユーザーがアクティブなアプリ内メッセージ・キャンペーンを何回見たかをカウントし、3回見たら二度とキャンペーンを受け取らないようにしたい場合がある。BrazeのLiquidロジックで何ができるか、より多くのアイデアについては、[Liquidユースケースライブラリを]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/liquid_use_cases)チェックしよう。
 
-Braze-to-Braze Webhook を作成するための一般的な手順に従い、Webhook を設定する際に以下を参照してください。
+Braze-to-BrazeのWebhookを作成するための一般的な手順に従い、Webhookを設定する際には以下を参照すること：
 
-- **Webhook URL:**[REST エンドポイント URL][7] の後に `/users/track`.たとえば、US-06 インスタンスの場合、URL は `https://rest.iad-06.braze.com/users/track`になります。
-- **要求本文:**生のテキスト
+- **Webhook URL:**あなたの\[RESTエンドポイントURL][7] の後に`/users/track`.例えば、US-06のインスタンスの場合、URLは`https://rest.iad-06.braze.com/users/track` となる。
+- **要求本文:**Raw Text
 
-#### 要求ヘッダーとメソッド
+#### リクエストヘッダと方法
 
-Brazeでは、認証のためにAPIキーを含むHTTPヘッダーと `content-type`、.
+Brazeは認証のために、APIキーと`content-type` を宣言するHTTPヘッダーを要求する。
 
 - **要求ヘッダー:**
-  - **認可：**Bearer {YOUR\_API\_KEY}
-  - **コンテンツタイプ:** application/json
-- **HTTP メソッド:**ポスト:
+  - **認可する：**Bearer {YOUR_API_KEY}
+  - **Content-Type:**application/json
+- **HTTP メソッド:**POST
 
-`YOUR_API_KEY`権限のある`users.track`Braze APIキーに置き換えてください。APIキーは、Brazeダッシュボードの **[設定** ]> **[APIキー**]で作成できます。
+`YOUR_API_KEY` を、`users.track` 権限を持つ Braze API キーに置き換える。APIキーは、Brazeダッシュボードの**「設定」**>「**APIキー**」で作成できる。
 
 {% alert note %}
-[古いナビゲーション]({{site.baseurl}}/navigation)を使用している場合は、**開発者コンソール**の **[API 設定**] > API キーを作成できます。
+[古いナビゲーション]({{site.baseurl}}/navigation)を使用している場合は、\[**開発者コンソール**] > \[**API 設定**] から API キーを作成できます。
 {% endalert %}
 
 ![][1]
 
-#### リクエスト本文
+#### Request body
 
-リクエスト本文とLiquidにユーザートラックリクエストを追加して、カウンター変数を割り当てます。詳しくは[ユーザートラック][8]を参照してください。
+リクエストボディにユーザートラックリクエストを追加し、リキッドにカウンタ変数を代入する。詳しくは\[ユーザートラック][8]]を参照のこと。
 
-以下は、このエンドポイントに必要な Liquid と要求本文の両方の例であり、 `your_attribute_count` はユーザーがメッセージを見た回数をカウントするために使用している属性です。 {% raw %}
+以下は、このエンドポイントに必要なリキッドとリクエストボディの例である。`your_attribute_count` は、ユーザーがメッセージを見た回数をカウントするために使用する属性である： {% raw %}
 
 ```json
 {% assign new_number = {{custom_attribute.${your_attribute_count}}} | plus: 1 %}
@@ -87,44 +87,44 @@ Brazeでは、認証のためにAPIキーを含むHTTPヘッダーと `content-t
 {% endraw %}
 
 {% alert note %}
-カスタム属性カウンターが更新 (インクリメントまたはデクリメント) されるたびに、 [データ ポイント]({{site.baseurl}}/user_guide/onboarding_with_braze/data_points/)が消費され、全体的な消費量にカウントされます。
+カスタム属性カウンターが更新（インクリメントまたはデクリメント）されるたびに、[データポイントが]({{site.baseurl}}/user_guide/onboarding_with_braze/data_points/)消費される。
 {% endalert %}
 
-### ユースケース：最初の Canvas から 2 つ目の Canvas をトリガーする
+### ユースケース:最初のキャンバスから2番目のキャンバスをトリガーする
 
-このユースケースでは、2 つの Canvas を作成し、Webhook を使用して最初の Canvas から 2 番目の Canvas をトリガーします。これは、ユーザーが別のキャンバスの特定のポイントに到達したときのエントリトリガーのように機能します。
+この使用例では、2つのCanvasを作成し、最初のCanvasから2つ目のCanvasをトリガーするためにウェブフックを使用する。これは、ユーザーが別のキャンバスのあるポイントに到達したときのエントリートリガーのような役割を果たす。
 
-1. まず、2 つ目の Canvas (最初の Canvas によってトリガーされる Canvas) を作成します。 
-2. [Canvas **Entry Schedule (キャンバスエントリスケジュール**)] で [ **API トリガー]** を選択します。
-3. **キャンバス ID** をメモします。これは後の手順で必要になります。
-4. 2 つ目の Canvas のステップの作成を続行し、Canvas を保存します。
-5. 最後に、最初のキャンバスを作成します。2 番目の Canvas をトリガーするステップを見つけ、Webhook を使用して新しいステップを作成します。 
+1. 最初のキャンバスによってトリガーされるキャンバスである。 
+2. キャンバスの**入力スケジュールで**、**API-Triggeredを**選択する。
+3. **キャンバスIDを控えて**おくこと。これは後のステップで必要になる。
+4. 2つ目のキャンバスのステップを作り続け、キャンバスを保存する。
+5. 最後に、最初のキャンバスを作成する。2つ目のキャンバスをトリガーしたいステップを見つけ、ウェブフック付きの新しいステップを作成する。 
 
-Webhook を構成するときは、以下を参照してください。
+ウェブフックを設定する際は、以下を参照のこと：
 
-- **Webhook URL:**[REST エンドポイント URL][7] の後に `canvas/trigger/send`.たとえば、US-06 インスタンスの場合、URL は `https://rest.iad-06.braze.com/canvas/trigger/send`になります。
-- **要求本文:**生のテキスト
+- **Webhook URL:**あなたの\[RESTエンドポイントURL][7] の後に`canvas/trigger/send`.例えば、US-06のインスタンスの場合、URLは`https://rest.iad-06.braze.com/canvas/trigger/send` となる。
+- **要求本文:**Raw Text
 
-#### 要求ヘッダーとメソッド
+#### リクエストヘッダと方法
 
-Brazeでは、認証のためにAPIキーを含むHTTPヘッダーと `content-type`、.
+Brazeは認証のために、APIキーと`content-type` を宣言するHTTPヘッダーを要求する。
 
 - **要求ヘッダー:**
-  - **認可：**持参人 `YOUR_API_KEY`
-  - **コンテンツタイプ:** application/json
-- **HTTP メソッド:**ポスト:
+  - **認可する：**ベアラー `YOUR_API_KEY`
+  - **Content-Type:**application/json
+- **HTTP メソッド:**POST
 
-`YOUR_API_KEY`権限のある`canvas.trigger.send`Braze APIキーに置き換えてください。APIキーは、Brazeダッシュボードの **[設定** ]> **[APIキー**]で作成できます。
+`YOUR_API_KEY` を、`canvas.trigger.send` 権限を持つ Braze API キーに置き換える。APIキーは、Brazeダッシュボードの**「設定」**>「**APIキー**」で作成できる。
 
 {% alert note %}
-[古いナビゲーション]({{site.baseurl}}/navigation)を使用している場合は、**開発者コンソール**の **[API 設定**] > API キーを作成できます。
+[古いナビゲーション]({{site.baseurl}}/navigation)を使用している場合は、\[**開発者コンソール**] > \[**API 設定**] から API キーを作成できます。
 {% endalert %}
 
 ![][1]
 
-#### リクエスト本文
+#### Request body
 
-`canvas/trigger/send`テキストフィールドにリクエストを追加します。詳細は、[APIトリガー配信によるCanvasメッセージの送信][9]を参照してください。以下は、このエンドポイントの要求本文の例で、 `your_canvas_id` は 2 番目の Canvas の Canvas ID です。 
+テキストフィールドに`canvas/trigger/send` リクエストを追加する。詳細については、\[APIトリガー配信によるCanvasメッセージの送信][9] を参照のこと。以下は、このエンドポイントのリクエストボディの例である。`your_canvas_id` は、2番目のキャンバスのキャンバスIDである： 
 
 {% raw %}
 ```json
@@ -139,13 +139,13 @@ Brazeでは、認証のためにAPIキーを含むHTTPヘッダーと `content-t
 ```
 {% endraw %}
 
-## 知っておきたいこと
+## 知っておくべきこと
 
-- Braze-to-Braze Webhook には、エンドポイント [のレート制限]({{site.baseurl}}/api/api_limits/)が適用されます。
-- ユーザー プロファイルを更新すると追加の [データ ポイント]({{site.baseurl}}/user_guide/onboarding_with_braze/data_points/#consumption-count)が発生しますが、メッセージング エンドポイントを介して別のメッセージをトリガーすると発生しません。
-- [匿名ユーザー]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle#anonymous-user-profiles)をターゲットにする場合は、Webhook の要求本文ではなく、代わりに`external_id`使用できます`braze_id`。
-- Braze-to-Braze Webhook を [テンプレート]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/webhook_template/) として保存し、再利用することができます。
-- [メッセージ アクティビティ ログ]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/message_activity_log_tab/)を確認して、Webhook のエラーを表示およびトラブルシューティングできます。
+- Braze-to-BrazeのWebhookは、エンドポイントの[レート制限に]({{site.baseurl}}/api/api_limits/)従う。
+- ユーザー・プロフィールの更新には追加の[データ・ポイントが]({{site.baseurl}}/user_guide/onboarding_with_braze/data_points/#consumption-count)発生するが、メッセージング・エンドポイントを通じて別のメッセージがトリガーされることはない。
+- [匿名ユーザーを]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle#anonymous-user-profiles)ターゲットにしたい場合は、Webhookのリクエスト本文で、`external_id` の代わりに`braze_id` を使うことができる。
+- Braze-to-Brazeウェブフックを[テンプレートとして]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/webhook_template/)保存し、再利用することができる。
+- [メッセージ・アクティビティ・ログを]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/message_activity_log_tab/)チェックして、ウェブフックの失敗を確認し、トラブルシューティングすることができる。
 
 
 [1]: {% image_buster /assets/img_archive/webhook_settings.png %}

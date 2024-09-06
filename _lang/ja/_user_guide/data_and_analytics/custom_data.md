@@ -11,22 +11,22 @@ description: "このランディングページにはカスタムデータに関
 
 guide_featured_title: "セクションの記事"
 guide_featured_list:
-  - name: Events
+  - name: イベント
     link: /docs/user_guide/data_and_analytics/custom_data/events/
-    fa_icon: fas fa-book
-  - name: Purchase Events
+    image: /assets/img/braze_icons/book-closed.svg
+  - name: 購入イベント
     link: /docs/user_guide/data_and_analytics/custom_data/purchase_events/
-    fa_icon: fas fa-shopping-cart
-  - name: Custom Events
+    image: /assets/img/braze_icons/shopping-cart-03.svg
+  - name: カスタムイベント
     link: /docs/user_guide/data_and_analytics/custom_data/custom_events/
-    fa_icon: fas fa-cog
-  - name: Custom Attributes
+    image: /assets/img/braze_icons/settings-01.svg
+  - name: カスタム属性
     link: /docs/user_guide/data_and_analytics/custom_data/custom_attributes/
-    fa_icon: fas fa-table
-  - name: Event Naming Conventions
+    image: /assets/img/braze_icons/table.svg
+  - name: イベントの命名規則
     link: /docs/user_guide/data_and_analytics/custom_data/event_naming_conventions/
-    fa_icon: fas fa-list
-  - name: Managing Custom Data
+    image: /assets/img/braze_icons/list.svg
+  - name: カスタムデータの管理
     link: /docs/user_guide/data_and_analytics/custom_data/managing_custom_data/
-    fa_icon: fas fa-check
+    image: /assets/img/braze_icons/check-square-broken.svg
 ---

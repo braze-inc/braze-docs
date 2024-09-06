@@ -1,86 +1,86 @@
 ---
-nav_title: メール分析用語集
-article_title: メール分析用語集 
+nav_title: 電子メール分析用語集
+article_title: 電子メール分析用語集 
 page_order: 0
 layout: glossary_page
 glossary_top_header: "Email analytics glossary"
 glossary_top_text: "These are terms you'll find in the analytics section of your email campaign or Canvas, post-launch. Search for the metrics you need in this glossary. <br><br> This glossary does not necessarily include metrics you might see in Currents or in other downloaded reports outside of your Braze account."
 
-description: "この用語集には、リリース後のメールキャンペーンまたはキャンバスの分析セクションに表示される用語が含まれています。この用語集には、Currents の指標は含まれていません。"
+description: "この用語集には、起動後にメール キャンペーンまたはキャンバスの分析の項に記載されている用語が含まれています。この用語集には、Currents測定基準は含まれていません。"
 channel:
   - email
 
 glossaries:
-  - name: "Variation"
-    description: Variation of a campaign, differing as defined by the creator.
+  - name: "バリエーション"
+    description: キャンペーンのバリエーション。作成者の定義によって異なります。
     calculation: Count
-  - name: "Emailable"
-    description: Users who have an email address on record and have explicitly opted in or subscribed.
+  - name: "電子メール"
+    description: レコードにメールの住所があり、明示的にオプトインまたは登録されているユーザ。
     calculation: Count
-  - name: "Audience %"
-    description: Percentage of users who received a particular variant.
+  - name: "対象者%"
+    description: 特定のバリアントを受信したユーザー s のパーセンスタグe。
     calculation: Number of Recipients in Variant / Unique Recipients
-  - name: "Unique Recipients"
-    description: Unique Daily Recipients. The number of users who received a particular message in a day. This number is received from Braze.
+  - name: "ユニーク受信者数"
+    description: 日次ユニーク受信者数。1 日に特定のメッセージを受信したユーザー数。この数値は Braze から受信します。
     calculation: Count
-  - name: "Sends or Messages Sent"
-    description: The total number of messages sent in an email campaign. This number is received from Braze. Note that upon launching a scheduled campaign, this metric will include all messages sent, regardless of whether they have been sent out yet due to rate limiting.
+  - name: "送信済みまたは送信済みのメッセージ"
+    description: メール キャンペーンで送信されたメールの総数。この数値は Braze から受信します。スケジュールされた キャンペーンを起動すると、このメトリクスには、レート制限のためにまだ送信されたかどうかに関係なく、送信されたすべてのメッセージが含まれることに注意してください。
     calculation: Count
-  - name: "Deliveries"
-    description: The total number of messages (Sends) successfully sent to and received by emailable parties.
+  - name: "配信数"
+    description: メール可能な相手に正常に送受信されたメール(送信)の総数。
     calculation: Sends - Bounces
-  - name: "Deliveries %"
-    description: The total number of messages (Sends) successfully sent to and received by emailable parties.
+  - name: "配送率"
+    description: メール可能な相手に正常に送受信されたメール(送信)の総数。
     calculation: (Sends - Bounces) / (Sends)
-  - name: "Bounces"
-    description: The total number of messages that were unsuccessfully sent or designated as "returned" or "not received" from send services used or not received by the intended emailable users. This could occur because there is not a valid push token, the email addresses were incorrect or deactivated, or the user unsubscribed after the campaign was launched. <br><br> <b>Hard Bounces</b>&#58; A hard bounce is an email message that has been returned to the sender because the recipient's address is invalid. A hard bounce might occur because the domain name doesn't exist or because the recipient is unknown. If an email has received a hard bounce, we will stop any future requests to this email address. <br><br><b>Soft Bounces</b>&#58; A soft bounce is an email message that gets as far as the recipient's mail server but is bounced back undelivered before it gets to the recipient. A soft bounce might occur because the recipient's inbox is full, the server was down, or the message was too large for the recipient's inbox. If an email has received a soft bounce, we will usually retry within a 72 hour period, but the number of retry attempts varies from receiver to receiver. <br><br> You can also track hard and soft bounces in the <a href='/docs/user_guide/administrative/app_settings/developer_console/message_activity_log_tab/#message-activity-log-tab'>Message Activity Log</a>. <br><br><i> An email bounce for customers using SendGrid consists of hard bounces, spam, and emails sent to invalid addresses. </i>
+  - name: "バウンス数"
+    description: "送信に失敗した、または\"returned\"または\"received\"not received\"送信サービスが使用されているか、またはメール可能なユーザーが受信していないメッセージの総数原因として、有効なプッシュトークンがない、メールアドレスが間違っているか無効になっている、またはキャンペーンの開始後にユーザーが配信停止した、などがあります。<br><br> <b>ハードバウンス</b>:ハードバウンスとは、受信者のアドレスが不正であるために送信者に返されたメールのことです。ドメイン名が存在しないか、受信者が不明なため、ハードバウンスが発生する可能性があります。メールがハードバウンスを受信した場合、このメール住所への今後のリクエストは中止されます。<br><br><b>ソフトバウンス</b>:ソフト・バウンスは、受信者のメール・サーバーまで送信されますが、配信されずにバウンスされてから受信者に送信されるメールなメッセージです。受信者の受信トレイがいっぱいであるか、サーバーが停止しているか、メッセージが受信者の受信トレイには大きすぎるため、ソフトバウンスが発生する可能性があります。メールがソフトバウンスを受信した場合、通常は72時間以内に再試行されますが、再試行回数は受信側によって異なります。<br><br> <a href='/docs/user_guide/administrative/app_settings/developer_console/message_activity_log_tab/#message-activity-log-tab'>Message Activity Log</a>でハードバウンスとソフトバウンスを追跡することもできます。<br><br><i> 不正なアドレスに送信されたハードバウンス、メール、および顧客 s のSendGridによるバウンスは、不正なアドレスに送信されるスパム、および s で構成されます。 </i>"
     calculation: Count
-  - name: "Bounces % or Bounce Rate"
-    description: The percentage of messages that were unsuccessfully sent or designated as "returned" or "not received" from send services used or not received by the intended emailable users. This could occur because there is not a valid push token, the email addresses were incorrect or deactivated, or the user unsubscribed after the campaign was launched. <br> <i> An email bounce for customers using SendGrid consists of hard bounces, spam (`spam_report_drops`), and emails sent to invalid addresses (`invalid_emails`). </i>
+  - name: "バウンス%またはバウンス・レート"
+    description: "送信に失敗した、または\"returned\"または\"not received\" from send services used またはnot received メール可能なユーザーs によって受信されなかったメッセージのパーセンテージe。原因として、有効なプッシュトークンがない、メールアドレスが間違っているか無効になっている、またはキャンペーンの開始後にユーザーが配信停止した、などがあります。<br> <i> メール は、顧客 s のSendGrid を使用したバウンスで、ハードバウンス、スパム (`スパム_レポート_drops`)、および不正なアドレス(`invalid_メール') に送信されます。 </i>"
     calculation: Bounces / Sends
-  - name: "Spam"
-    description: The total number of emails delivered that were marked as "spam." Braze automatically unsubscribes users that marked an email as spam, and those users won't be targeted by future emails.
+  - name: "スパム"
+    description: 「スパム」としてマークされたメール配信数の合計。Braze は自動的に配信停止 s ユーザー s をメールとしてマークし、それらのユーザーは将来のメール s にターゲットされません。
     calculation: (Marked as Spam) / (Sends)
-  - name: "Spam % or Spam Rate"
-    description: The percentage of emails delivered that were marked or otherwise designated as "spam." Braze automatically unsubscribes users that marked an email as spam, and those users won't be targeted by future emails.
+  - name: "スパム%またはスパム・レート"
+    description: "マークされた、または&amp;quot として指定された配信済みメールのパーセンテージe;スパム.\"Braze は自動的に配信停止 s ユーザー s をメールとしてマークし、それらのユーザーは将来のメール s にターゲットされません。"
     calculation: (Marked as Spam) / (Sends)
-  - name: "Unique Opens"
-    description: The total number of delivered emails that have been opened by a single user or machine at least once. This is tracked over a 7 day period for Email.
+  - name: "ユニーク開封数"
+    description: 1 つのユーザーまたはマシンによって少なくとも1 回開封された配信メールの総数。これは、Eメールの7日間にわたって追跡されます。
     calculation: (Unique Opens) / (Deliveries)
-  - name: "Unique Opens % or Unique Open Rate"
-    description: The percentage of delivered emails that have been opened by a single user at least once. This is tracked over a 7 day period for Email.
+  - name: "一意のオープン率%または一意のオープン率"
+    description: 少なくとも1回のユーザーによって開封された、送達されたメールsのパーセンテージe。これは、Eメールの7日間にわたって追跡されます。
     calculation: (Unique Opens) / (Deliveries)
-  - name: "Unique Clicks"
-    description: Distinct number of recipients who have clicked within a message at least once. This is tracked over a 7 day period for Email and measured by <a href='/docs/help/help_articles/data/dispatch_id/'>dispatch_id</a>
+  - name: "ユニーククリック数"
+    description: "メッセージ内を少なくとも 1 回クリックしたユニーク受信者の数。これは、電子メールの7 日間にわたって追跡され、<a href='/docs/help/help_articles/data/dispatch_id/'>dispatch_id</a> によって測定されます。"
     calculation: Count
-  - name: "Unique Clicks % or Click Rate"
-    description: Distinct number of recipients who have clicked within a message at least once. This is tracked over a 7 day period for Email.
+  - name: "一意のクリック率%またはクリック率"
+    description: メッセージ内を少なくとも 1 回クリックしたユニーク受信者の数。これは、Eメールの7日間にわたって追跡されます。
     calculation: Unique Clicks / Deliveries
-  - name: "Unsubscribers or Unsub"
-    description: Number of messages resulting in an unsubscription. Unsubscriptions occur when a user clicks on the Braze unsubscribe link.
+  - name: "Un サブスクライバー sまたはUnsub"
+    description: サブスクリプションが解除された件数。Un サブスクリプション s は、ユーザーがBraze 配信停止リンクをクリックしたときに発生します。
     calculation: Count
-  - name: "Unsubscribers % or Unsub Rate"
-    description: Percentage of messages delivered which resulted in an unsubscription. Unsubscriptions occur when a user clicks on the Braze unsubscribe link.
+  - name: "Un サブスクライバー s % またはUnsub Rate"
+    description: 未サブスクリプションとなった配信メールのパーセンスタグe。Un サブスクリプション s は、ユーザーがBraze 配信停止リンクをクリックしたときに発生します。
     calculation: Unsubscribes / Deliveries
-  - name: "Revenue"
-    description: The total revenue in dollars from campaign recipients within the set <a href='/docs/user_guide/engagement_tools/campaigns/testing_and_more/conversion_events/#primary-conversion-event'>primary conversion window</a>.
+  - name: "収益"
+    description: "設定された<a href='/docs/user_guide/engagement_tools/campaigns/testing_and_more/conversion_events/#primary-conversion-event'>1次コンバージョンウィンドウ</a>内のキャンペーン 受信者sからの総収益(ドル単位)。"
     calculation: Count
-  - name: "Primary Conversions (A) or Primary Conversion Event"
-    description: The number of times a defined event occurred after interacting with or viewing a received message from a Braze campaign. This defined event is determined by the marketer when building the campaign.
+  - name: "1 次コンバージョン (A) または 1 次コンバージョンイベント"
+    description: Braze キャンペーンから受信したメッセージの操作後または表示後に、定義されたイベントが発生した回数。このイベントは、キャンペーンを作成するときにマーケターが決定します。
     calculation: Count
-  - name: "Primary Conversions (A) or Primary Conversion Event"
-    description: The percentage of times a defined event occurred after interacting with or viewing a received message from a Braze campaign. This defined event is determined by the marketer when building the campaign.
+  - name: "1 次コンバージョン (A) または 1 次コンバージョンイベント"
+    description: Braze キャンペーンとやり取りした後、またはBraze キャンペーンから受信したメッセージを表示した後に、定義されたイベントが発生した時間のパーセンタグe。このイベントは、キャンペーンを作成するときにマーケターが決定します。
     calculation: "Primary Conversions / Unique Recipients"
-  - name: "Confidence"
-    description: The percentage of confidence that a certain variant of a message is outperforming the control group.
-  - name: "Machine Opens"
-    description: Includes the proportion of "opens" that are affected by Apple's Mail Privacy Protection (MPP) for iOS 15. For example, if a user opens an email using the Mail app on an Apple device, this will be logged as a <i>Machine Opens</i>. This metric is tracked starting November 11, 2021 for SendGrid and December 2, 2021 for SparkPost.
+  - name: "信頼度"
+    description: メッセージの特定のバリアントのパフォーマンスがコントロールグループよりも優れているという信頼度の割合。
+  - name: "マシンオープン"
+    description: "「\" 開封 s\"」の割合を含みます。iOS 15 のアップルのメールプライバシー保護(MPP)の影響を受けます。たとえば、ユーザー 開封がアプリ le デバイスのメールアプリを使用してメールを送信した場合、これは<i>Machine 開封 s</i> としてログに記録されます。このメトリクスは、SendGridの場合は2021年11月11日から、SparkPostの場合は2021年12月2日から追跡されます。"
     calculation: Count
-  - name: "Other Opens"
-    description: Includes emails that haven't been identified as <i>Machine Opens</i> . For example, when a user opens an email on another platform (such as Gmail app on a phone, Gmail on desktop browser), this will be logged as an  <i>Other Opens</i>. Note that a user can also open an email (such as the open counts toward <i>Other Opens</i>) before a <i>Machine Opens</i> count is logged. If a user opens an email once (or more) after a machine open event from a non-Apple Mail inbox, then the amount of times that the user opens the email is calculated toward <i>Other Opens</i> and only once toward <i>Unique Opens</i>.
+  - name: "その他のオープン"
+    description: <i>Machine Opens</i>と識別されていないメールを含みます。たとえば、ユーザー 開封が別のプラットフォーム(電話機のGmail アプリ、デスクトップブラウザのGmail など) でメールを送信すると、これは<i>Other 開封 s</i> としてログに記録されます。ユーザーは、<i>マシン開封s</i>数が記録される前に、(<i>他の開封s</i>に対する開封数などの)メールも開封できることに注意してください。ユーザー 開封が、Apple Mail 以外のメールからマシン開封を受信トレイした後、1 回(またはそれ以上) にメールが発生した場合、ユーザー 開封が<i>Other 開封 s</i> に向かって計算され、<i>Unique 開封 s</i> に向かって1 回だけ計算されます。
     calculation: Count
-  - name: "Click to Open Rate"
-    description: The percentage of unique emails opened that have been clicked at least once.
+  - name: "クリックして率を開く"
+    description: 一意のメールのパーセンテージe は、少なくとも1 回クリックされた開封です。
     calculation: Unique Clicks / Unique Opens
 
 ---

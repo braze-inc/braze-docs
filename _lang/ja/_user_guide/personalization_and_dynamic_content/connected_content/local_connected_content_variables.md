@@ -1,18 +1,18 @@
 ---
-nav_title: ローカル接続コンテンツ変数
-article_title: ローカル接続コンテンツ変数
+nav_title: ローカルコネクテッドコンテンツ変数
+article_title: ローカルコネクテッドコンテンツ変数
 page_order: 1
-description: "この参照記事では、ローカルのConnected Content 変数の使用方法と保存方法について説明します。"
+description: "このリファレンス記事では、ローカルのコネクテッドコンテンツ変数の使用方法と保存方法について説明します。"
 search_rank: 1
 ---
 
-# ローカル接続コンテンツ変数
+# ローカルコネクテッドコンテンツ変数
 
-Braze は、`connected_content` タグ内で指定されたエンドポイントへの送信時に標準のGET 要求を行います。エンドポイントがJSON を返すと、自動的に解析され、`connected` という変数に保存されます。エンドポイントがテキストを返す場合、`connected_content` タグの代わりにメッセージに直接挿入されます。
+Brazeは、`connected_content`タグ内に指定されたエンドポイントに送信時に標準のGETリクエストを行います。エンドポイントがJSONを返す場合、それは自動的に解析され、`connected`という変数に格納されます。エンドポイントがテキストを返す場合、それは`connected_content`タグの代わりにメッセージに直接挿入されます。
 
-変数に応答を保存する場合は、JSON オブジェクトを返すことをお勧めします。また、Connected Content の応答でタグをテキストに置き換える場合は、応答が([json.org][46] で定義されているように) 有効でないことを確認します。
+応答を変数に保存したい場合は、JSONオブジェクトを返すことをお勧めします。そして、コネクテッドコンテンツの応答でタグをテキストに置き換えたい場合は、応答が有効なJSONではないことを確認してください（\[json.org][46])
 
-URLの後に`:save your_variable_name`を指定して、データを別のものとして保存することもできます。たとえば、次の`connected_content` タグは、`localweather` というローカル変数への応答を格納します(複数の`connected_content` JSON 変数を保存できます)。
+URLの後に`:save your_variable_name`を指定して、データを別のものとして保存することもできます。例えば、次の`connected_content`タグは、`localweather`というローカル変数に応答を保存します（複数の`connected_content` JSON変数を保存できます）：
 
 {% raw %}
 ```js
@@ -20,13 +20,13 @@ URLの後に`:save your_variable_name`を指定して、データを別のもの
 ```
 {% endraw %}
 
-メタウェザーは、"Where-on-Earth ID"を使用して、エリア内の天気を返すフリーウェザーAPI です。このコードは、テストおよび学習目的でのみ使用してください。
+Metaweatherは、地域の天気を返すために「Where-on-Earth ID」を使用する無料の天気APIです。テストと学習の目的でのみこのコードを使用してください。
 
->  格納された変数は、`connected_content` 要求を含むフィールド内でのみアクセスできます。たとえば、message フィールドとtitle フィールドの両方で`localweather` 変数を使用する場合は、両方のフィールドで`connected_content` 要求を行う必要があります。リクエストが同一の場合、Braze は、宛先サーバーに対して2 回目のリクエストを行うのではなく、キャッシュされた結果を使用します。ただし、HTTP POST 経由で行われた接続コンテンツコールは、デフォルトではキャッシュされず、宛先サーバに対して2 回目の要求を行います。POST 呼び出しにキャッシュを追加する場合は、[`cache_max_age`](#configurable-caching) オプションを参照してください。
+>  格納された変数は、`connected_content`リクエストを含むフィールド内でのみアクセスできます。例えば、メッセージとタイトルフィールドの両方で`localweather`変数を使用したい場合は、両方のフィールド内で`connected_content`リクエストを行う必要があります。リクエストが同一である場合、Brazeは送信先サーバーへの2回目のリクエストを行うのではなく、キャッシュされた結果を使用します。ただし、コネクテッドコンテンツの呼び出しはHTTP POST経由ではデフォルトでキャッシュされず、送信先サーバーに2回目のリクエストを行います。POST呼び出しにキャッシュを追加したい場合は、[`cache_max_age`](#configurable-caching)オプションを参照してください。
 
 ## JSON解析
 
-接続されたコンテンツは、`:save`を指定すると、JSON形式の結果をローカル変数に解釈します。たとえば、weather-related Connected Content エンドポイントは、`localweather` というローカル変数に`:save localweather` を指定して保存した次のJSON オブジェクトを返します。
+コネクテッドコンテンツは、`:save`を指定すると、JSON形式の結果をローカル変数に解釈します。例えば、天気関連のコネクテッドコンテンツエンドポイントは、次のJSONオブジェクトを返します。これを`:save localweather`を指定してローカル変数`localweather`に格納します。
 {% raw %}
 
 ```js
@@ -60,31 +60,31 @@ URLの後に`:save your_variable_name`を指定して、データを別のもの
   }
 ```
 
-雨が降っているかどうかは、`{{localweather.consolidated_weather[0].weather_state_name}}` を参照してテストできます。このオブジェクトで使用した場合、`Clear` が返されます。結果のロケーション名でパーソナライズする場合、`{{localweather.title}}` は`New York` を返します。
+雨が降っているかどうかをテストするには、`{{localweather.consolidated_weather[0].weather_state_name}}`を参照してください。これをこのオブジェクトで使用すると、`Clear`が返されます。もし結果の場所の名前でもパーソナライズしたい場合は、`{{localweather.title}}`は`New York`を返します。
 {% endraw %}
 
-次の図は、正しく設定している場合にダッシュボードに表示される構文ハイライトのタイプを示しています。また、`connected_content` リクエストの例を活用する方法も示しています!
+次の画像は、設定が正しく行われている場合にダッシュボードで表示される構文のハイライトの種類を示しています。また、例の`connected_content`リクエストを活用する方法も示しています！
 
 {% raw %}
-\`\`\`liquid
+```liquid
 {% connected_content https://www.metaweather.com/api/location/search/?query={{custom_attribute.${customCity}}} :save locationjson %}
 {% connected_content https://www.metaweather.com/api/location/{{locationjson[0].woeid}}/ :save localweather %}
 
-{% if {{localweather.consolidated\_weather[0].weather\_state\_name}} == 'Rain' %}
-雨が降っています！傘を握ろう！
-{% elsif {{localweather.consolidated\_weather[0].weather\_state\_name}} == 'Clouds' %}
-日焼け止め不要:)
+{% if {{localweather.consolidated_weather[0].weather_state_name}} == 'Rain' %}
+It's raining! Grab an umbrella!
+{% elsif {{localweather.consolidated_weather[0].weather_state_name}} == 'Clouds' %}
+No sunscreen needed :)
 {% else %}
-天気をお楽しみください！
+Enjoy the weather!
 {% endif %}
-\`\`\`
+```
 {% endraw %}
 
-API が{%raw%}`{{localweather.consolidated_weather[0].weather_state_name}}`{%endraw%} で応答し、`Rain` を返した場合、ユーザはこのプッシュを受け取ります。
+APIが{%raw%}`{{localweather.consolidated_weather[0].weather_state_name}}`{%endraw%}で`Rain`を返した場合、ユーザーはこのプッシュを受け取ります。
 
-![メッセージ&quotでプッシュ通知;雨が降っているよ!傘をつかむ!"][17]{:style="max-width:50%" }
+![プッシュ通知 with the message "It's raining!"傘を持って行ってください！][17]{:style="max-width:50%" }
 
-デフォルトでは、Connected Content は、`application/json` に`Accept: */*` を設定するGET HTTP 要求に`Content-Type` ヘッダを設定します。別のコンテンツタイプが必要な場合は、`:content_type your/content-type` をタグに追加して明示的に指定します。Braze は、Content-Type ヘッダーとAccept ヘッダーの両方を指定したタイプに設定します。
+デフォルトでは、コネクテッドコンテンツは`Content-Type`ヘッダーをGET HTTPリクエストに設定し、それを`application/json`に`Accept: */*`で送信します。別のコンテンツタイプが必要な場合は、タグに`:content_type your/content-type`を追加して明示的に指定してください。Brazeは、指定したタイプにContent-TypeおよびAcceptヘッダーの両方を設定します。
 
 {% raw %}
 ```js
@@ -94,32 +94,32 @@ API が{%raw%}`{{localweather.consolidated_weather[0].weather_state_name}}`{%end
 
 ## HTTP POST
 
-デフォルトでは、Connected Content は指定されたURL に対してHTTP GET 要求を行います。代わりにPOST 要求を行うには、`:method post` を指定します。
+デフォルトでは、コネクテッドコンテンツは指定されたURLにHTTP GETリクエストを送信します。代わりにPOSTリクエストを行うには、`:method post`を指定します。
 
-オプションで、`:body` を指定し、その後に`key1=value1&key2=value2&...` 形式のクエリ文字列、またはキャプチャされた値への参照を指定して、POST 本文を指定できます。Content-Type のデフォルトは`application/x-www-form-urlencoded` です。`:content_type application/json` を指定し、`key1=value1&key2=value2` などのフォームURL コード化された本文を指定した場合、Braze は送信前に自動的に本文をJSON エンコードします。
+指定された`:body`の後に`key1=value1&key2=value2&...`形式のクエリ文字列またはキャプチャされた値への参照を指定することで、オプションでPOSTボディを提供できます。Content-Typeのデフォルトは`application/x-www-form-urlencoded`です。`:content_type application/json`を指定し、`key1=value1&key2=value2`のようなフォームURLエンコードされた本文を提供すると、Brazeは送信前に自動的に本文をJSONエンコードします。
 
 
-#### デフォルトのコンテンツタイプ
+#### デフォルトコンテンツタイプ
 {% raw %}
 ```js
 {% connected_content https://example.com/api/endpoint :method post :body key1=value1&key2=value2 %}
 ```
-#### アプリケーション/JSON コンテンツタイプ
+#### Application/JSON Content-Type
 ```js
 {% connected_content https://example.com/api/endpoint :method post :body key1=value1&key2=value2 :content_type application/json %}
 ```
 {% endraw %}
 
 ### JSONボディの提供
-独自のJSON 本文を指定する場合は、スペースがない場合にインラインで記述できます。身体にスペースがある場合は、assignまたはcaptureステートメントを使用する必要があります。つまり、次の3 つのいずれかを使用できます。
+独自のJSONボディを提供したい場合、スペースがない場合はインラインで記述できます。体にスペースがある場合は、割り当てまたはキャプチャのステートメントを使用する必要があります。つまり、これらの3つのいずれも受け入れられます:
 
 {% raw %}
-##### インライン: スペースは使用できません
+##### インライン：スペースは許可されていません
 ```js
 {% connected_content https://example.com/api/endpoint :method post :body {"foo":"bar","baz":"{{1|plus:1}}"} :content_type application/json %}
 ```
 
-##### capture 文の本文: 使用可能なスペース
+##### キャプチャ文の本文：スペースが許可されている
 ```js
 {% capture postbody %}
 {"foo": "bar", "baz": "{{ 1 | plus: 1 }}"}
@@ -129,7 +129,7 @@ API が{%raw%}`{{localweather.consolidated_weather[0].weather_state_name}}`{%end
 {% endraw %}
 
 {% raw %}
-\`\`\`js
+```js
 {% capture postbody %}
 {
 "ids":[ca_57832,ca_75869],"include":{"attributes":{"withKey":["daily_deals"]}}
@@ -137,18 +137,18 @@ API が{%raw%}`{{localweather.consolidated_weather[0].weather_state_name}}`{%end
 {% endcapture %}
 
 {% connected_content
-https://example.com/api/endpoint
-:method post
-:headers {
-"Content-Type": "application/json"
-}
-    :body {{postbody}}
-    結果保存
-    %}
-      \`\`\`
-  {% endraw %}
-  {% raw %}
-##### assign 文の本文: 使用可能なスペース
+    https://example.com/api/endpoint
+    :method post
+    :headers {
+      "Content-Type": "application/json"
+  }
+  :body {{postbody}}
+  :save result
+%}
+```
+{% endraw %}
+{% raw %}
+##### 代入文の本文：スペースが許可されている
 ```js
 {% assign postbody = '{"foo":"bar", "baz": "2"}' %}
 {% connected_content https://example.com/api/endpoint :method post :body {{postbody}} :content_type application/json %}
@@ -157,7 +157,7 @@ https://example.com/api/endpoint
 
 ## HTTPステータスコード
 
-Connected Content コールのHTTP ステータスを使用するには、まずローカル変数として保存し、次に`__http_status_code__` キーを使用します。次に例を示します。
+コネクテッドコンテンツ呼び出しからHTTPステータスをローカル変数として保存し、次に`__http_status_code__`キーを使用することで利用できます。以下に例を示します。
 
 {% raw %}
 ```js
@@ -169,26 +169,26 @@ Connected Content コールのHTTP ステータスを使用するには、まず
 {% endraw %}
 
 {% alert important %}
-このキーは、エンドポイントが有効なJSON オブジェクトと`2XX` 応答を返す場合にのみ、自動的に接続コンテンツオブジェクトに追加されます。エンドポイントが配列またはその他のタイプを返す場合、そのキーは応答で自動的に設定できません。
+このキーは、エンドポイントが有効なJSONオブジェクトと`2XX`応答を返す場合にのみ、コネクテッドコンテンツオブジェクトに自動的に追加されます。エンドポイントが配列や他の型を返す場合、そのキーは応答に自動的に設定されることはありません。
 {% endalert %}
 
 ## 設定可能なキャッシュ {#configurable-caching}
 
-接続コンテンツレスポンスは、異なるキャンペーンまたはメッセージ(同じワークスペース内) にキャッシュして、送信速度を最適化することができます。
+コネクテッドコンテンツの応答は、送信速度を最適化するために、異なるキャンペーンやメッセージ（同じワークスペース内）でキャッシュできます。
 
 ### キャッシュサイズの制限
-Connected Content レスポンスボディは、1MB を超えないようにする必要があります。超えない場合、キャッシュされません。
+コネクテッドコンテンツのレスポンスボディは1MBを超えてはならず、そうでないとキャッシュされません。
 
 ### キャッシュ時間
-Connected Content は、GET エンドポイントから返される値を最低5 分間キャッシュします。キャッシュ時間が指定されていない場合、デフォルトのキャッシュ時間は5分です。 
+コネクテッドコンテンツは、GETエンドポイントから返される値を最低5分間キャッシュします。キャッシュ時間が指定されていない場合、デフォルトのキャッシュ時間は5分です。 
 
-次の例に示すように、接続されたコンテンツキャッシュ時間を`:cache_max_age` で長く設定できます。最小キャッシュ時間は5 分、最大キャッシュ時間は4 時間です。接続されたコンテンツデータは、Memcached などの揮発性キャッシュシステムを使用してメモリ内にキャッシュされます。その結果、指定されたキャッシュ時間に関係なく、接続コンテンツデータは指定されたよりも前にBrazeのメモリ内キャッシュから削除される可能性があります。これは、キャッシュの継続時間が提案であり、データがBrazeによってキャッシュされることが保証されている期間を実際に表わしていない場合があることを意味します。また、特定のキャッシュの継続時間で予想されるよりも多くの接続コンテンツリクエストが表示される場合があります。
+コネクテッドコンテンツのキャッシュ時間は、次の例に示すように`:cache_max_age`で長く構成できます。最小キャッシュ時間は5分で、最大キャッシュ時間は4時間です。コネクテッドコンテンツデータは、Memcachedなどの揮発性キャッシュシステムを使用してインメモリでキャッシュされます。その結果、指定されたキャッシュ時間に関係なく、コネクテッドコンテンツデータは指定された時間よりも早くBrazeのインメモリキャッシュから削除される可能性があります。これは、キャッシュ期間が提案であり、実際にBrazeによってデータがキャッシュされる期間を保証するものではないことを意味します。また、指定されたキャッシュ期間で予想されるよりも多くのコネクテッドコンテンツリクエストが発生する可能性があります。
 
-デフォルトでは、接続コンテンツはPOST 呼び出しをキャッシュしません。この動作を変更するには、`:cache_max_age` をConnected Content POST コールに追加します。
+デフォルトでは、コネクテッドコンテンツはPOST呼び出しをキャッシュしません。`:cache_max_age` をコネクテッドコンテンツの POST 呼び出しに追加することで、この動作を変更できます。
 
-#### 指定した秒のキャッシュ
+#### 指定された秒数のキャッシュ
 
-この例では、900秒(または15分)間キャッシュします。
+この例は900秒（または15分）キャッシュされます。
 {% raw %}
 ```
 {% connected_content https://example.com/webservice.json :cache_max_age 900 %}
@@ -196,9 +196,9 @@ Connected Content は、GET エンドポイントから返される値を最低5
 {% endraw %}
 
 
-#### キャッシュバスト
+#### キャッシュバスティング
 
-接続コンテンツがGET 要求から返される値をキャッシュしないようにするには、`:no_cache` 設定を使用します。
+キャッシュを防ぐために、コネクテッドコンテンツがGETリクエストから返す値を`:no_cache`設定を使用できます。ただし、Braze 内部のホストからの応答は引き続きキャッシュされます。
 
 {% raw %}
 ```js
@@ -207,11 +207,11 @@ Connected Content は、GET エンドポイントから返される値を最低5
 {% endraw %}
 
 {% alert important %}
-このオプションを使用する前に、接続コンテンツエンドポイントが大量のトラフィックを処理できることを確認してください。または、1 つのメッセージごとに接続コンテンツリクエストを作成するため、送信遅延が増加(リクエストとレスポンスの間の遅延または時間間隔が長くなる)する可能性があります。
+このオプションを使用する前に、提供されたコネクテッドコンテンツのエンドポイントが大量のトラフィックを処理できることを確認してください。そうしないと、Brazeがすべてのメッセージに対してコネクテッドコンテンツのリクエストを行うため、送信遅延（リクエストとレスポンスの間の遅延や時間間隔の増加）が増加する可能性があります。
 {% endalert %}
 
-`POST` では、Braze は`POST` リクエストの結果をキャッシュしないため、bust をキャッシュする必要はありません。
+`POST` を使用するとキャッシュバストする必要はありません。Braze は `POST` リクエストの結果を決してキャッシュしないためです。
 
 [16]: [success@braze.com](mailto:success@braze.com)
-[17]: {% image_buster /assets/img_archive/connected_weather_push2.png %} "Connected Content Push Usage Example"
+[17]: {% image_buster /assets/img_archive/connected_weather_push2.png %}「コネクテッドコンテンツプッシュ使用例」
 [46]: http://www.json.org
