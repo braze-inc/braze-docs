@@ -10,7 +10,7 @@ tool:
   
 ---
 
-# [![Braze Learning course]({% image_buster /assets/img/bl_icon2.png %})](https://learning.braze.com/regular-expression-basics-for-braze){: style="float:right;width:120px;border:0;" class="noimgborder"} 正規表現
+# [![Brazeラーニングコース]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/regular-expression-basics-for-braze){: style="float:right;width:120px;border:0;" class="noimgborder"}正規表現
 
 <!--{% multi_lang_include video.html id="3h5Xbhl-TxE" align="right" %}-->
 
@@ -22,17 +22,17 @@ tool:
 
 - [正規表現の基礎](https://learning.braze.com/regular-expression-basics-for-braze) Braze ラーニングコース 
 - [正規表現チートシート]({{site.baseurl}}/regex_cheat_sheet/)
-- <i class="fas fa-file-alt"></i> [サンプルデータ RTF][dummydata］
+- \[サンプルデータ RTF]\[dummydata]
 
 ## 正規表現デバッガ
 
 {% tabs %}
-{% tab Regex Debugger %}
+{% tab 正規表現デバッガ %}
 
 このフォームでは、基本的な検証と正規表現のテストを行うことができます。
 ​
-<div class="alert alert-important" role="alert"><div class="alert-msg"> <b>重要:<br />
-<p>このツールはあくまで参考であり、正規表現が Braze プラットフォーム と100% 一致することを保証するものではありません。Braze のセグメンテーションとフィルター用の正規表現では、自動的に <code>/gi</code> 修飾子が追加されます。<a href='https://w3schools.sinsixx.com/jsref/jsref_regexp_modifier_gi.asp.htm'>gi 修飾子</a>は、文字列中に出現する正規表現を大文字小文字を区別せずに検索するために使われます。<br><br>カスタムイベントトリガープロパティの正規表現では、<code>/g</code> 修飾子 (大文字と小文字を区別します。<a href='https://www.w3schools.com/jsref/jsref_regexp_g.asp'>g 修飾子</a>を参照) を使用し、<code>/i</code> 修飾子は使用しません。カスタムイベントトリガープロパティの大文字と小文字を区別しない場合は、代わりに <code>(?i)</code> を使用します。</p>
+<div class="alert alert-important" role="alert"><div class="alert-msg"> <b>重要:</b><br />
+<p>このツールはあくまで参考であり、正規表現が Braze プラットフォーム と100% 一致することを保証するものではありません。Brazeのセグメンテーションとフィルター用の正規表現は、自動的に <code>/gi</code> という修飾語がある。<a href='https://w3schools.sinsixx.com/jsref/jsref_regexp_modifier_gi.asp.htm'>gi 修飾子</a>は、文字列中に出現する正規表現を大文字小文字を区別せずに検索するために使われます。<br><br>カスタムイベントトリガープロパティの正規表現では <code>/g</code> <a href='https://www.w3schools.com/jsref/jsref_regexp_g.asp'>修飾</a>子（大文字と小文字は区別される。 <code>/i</code> という修飾語がある。カスタム・イベント・トリガーのプロパティの大文字と小文字を区別しないようにするには、以下を使用する。 <code>(?i)</code> その代わりだ。</p>
 </div></div>
 <div>
 正規表現:
@@ -152,17 +152,17 @@ $( document ).ready(function() {
 
 この正規表現は以下の 3 つの部分に分解できます:
 
-- `[a-zA-Z0-9.+_-]+` はメールアドレスの先頭で、その後アットマーク `@` が続きます。つまり、「name@example.com」の「name」の部分です。
-- `[a-zA-Z0-9.-]+` はドメインの最初の部分です。つまり、「name@example.com」の「example」です。
-- `[a-zA-Z.-]+` はドメインの最後の部分です。つまり、「name@example.com」の「com」です。
+- `[a-zA-Z0-9.+_-]+` はメールアドレスの先頭で、その後アットマーク `@` が続きます。つまり、"name@example.com"の "name "である。
+- `[a-zA-Z0-9.-]+` はドメインの最初の部分です。つまり、「name@example.com 」の「例」ということになる。
+- `[a-zA-Z.-]+` はドメインの最後の部分です。つまり、「name@example.com 」の「com」である。
 
 {% endraw %}
 
 #### 特定のドメインに関連するメールアドレスをフィルタリングする方法を教えてください。
 
-例えば、"@braze.com" で終わるメールをフィルタリングしたいとします。メールアドレスフィルターを使い、`matches regex` に設定し、正規表現フィールドに "@braze.com" と入力します。他のメールドメインでも同様です。
+例えば、"@braze.com" で終わるメールをフィルタリングしたいとする。メールアドレスフィルターを使い、`matches regex` に設定し、正規表現フィールドに"@braze.com" と入力する。他のメールドメインでも同様です。
 
-![\]({% image_buster /assets/img/regex/regeximg1.png %})
+![]({% image_buster /assets/img/regex/regeximg1.png %})
 
 #### 値 ≥x または ≤x の場合、フィルターの番号文字列はどのように使用できますか？
 
@@ -180,7 +180,7 @@ $( document ).ready(function() {
 ^([x-y]|[a-b])$
 ```
 
-ここで、`x-y` は 1 桁目の数字（0～9）の範囲、`a-b` は x の下限範囲です。例えば、50 以下の値の場合、正規表現は`x-y` となります。
+ここで、`x-y` は 1 桁目の数字（0～9）の範囲、`a-b` は x の下限範囲です。たとえば、50以下の値の場合、正規表現は`^([5-9][0-9]|[0-4][0-9])$`になります。
 
 #### 特定の文字列で始まるカスタム属性をフィルタリングするには？
 
@@ -188,11 +188,11 @@ $( document ).ready(function() {
 
 例えば、"San" で始まる都市に住むユーザーをターゲットにする場合、正規表現は `^San \w` とします。この正規表現を使えば、サンフランシスコ、サンディエゴ、サンノゼなどの都市のユーザーをターゲットにできます。
 
-![\]({% image_buster /assets/img/regex/regeximg2.png %})
+![]({% image_buster /assets/img/regex/regeximg2.png %})
 
 #### 特定の電話番号をフィルタリングする方法を教えてください。
 
-正規表現を使用して電話番号をフィルタリングする前に、ユーザープロファイルに記録される番号は、「[ユーザーの電話番号]({{site.baseurl}}/user_guide/message_building_by_channel/sms/phone_numbers/user_phone_numbers/)」で指定されているように、[E.164](https://en.wikipedia.org/wiki/E.164) 形式でなければいけません。
+正規表現を使用して電話番号をフィルターするには、[E.164](https://en.wikipedia.org/wiki/E.164) 形式でユーザープロファイルs に記録された番号を[ユーザー電話番号]({{site.baseurl}}/user_guide/message_building_by_channel/sms/phone_numbers/user_phone_numbers/) に記録する必要があります。
 
 米国の電話番号を検索すると仮定すると、正規表現フォーマット `1?\d\d\d\d\d\d\d\d\d\d` を使用します。`\d` の各繰り返しは、指定したい桁数です。最初の 3 桁は市外局番です。
 
@@ -204,8 +204,8 @@ $( document ).ready(function() {
 ^1?718\d\d\d\d\d\d\d
 ```
 
-![\]({% image_buster /assets/img/regex/regeximg3.png %})
+![]({% image_buster /assets/img/regex/regeximg3.png %})
 
 
 [regex]: https://regex101.com/
-[dummydata]: {% image_buster /assets/download_file/regex-dummy-data.rtf %}
+\[dummydata] ： {% image_buster /assets/download_file/regex-dummy-data.rtf %}
