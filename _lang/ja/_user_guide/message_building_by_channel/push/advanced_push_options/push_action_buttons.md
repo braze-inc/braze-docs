@@ -1,73 +1,73 @@
 ---
-nav_title: "プッシュアクションボタン"
-article_title: プッシュアクションボタン
+nav_title: "プッシュ・アクション・ボタン"
+article_title: プッシュ・アクション・ボタン
 page_order: 1
 page_type: reference
-description: "この参考記事では、プッシュアクションボタンとは何か、iOS プラットフォームと Android プラットフォームの違いについて説明します。"
+description: "この参考記事では、プッシュ・アクション・ボタンとは何か、iOSとAndroidのプラットフォームにおける違いについて説明する。"
 channel:
   - Push
 
 ---
 
-# プッシュアクションボタン
+# アクションボタンを押す
 
-![2 つのプッシュアクションボタンがある iOS プッシュ通知:承諾および拒否。] [1]{: style="float:right;max-width:40%;margin-left:15px;border:none;"}
+![2つのプッシュアクションボタンを備えたiOSのプッシュ通知：受諾と拒否][1]{: style="float:right;max-width:40%;margin-left:15px;border:none;"}
 
-> プッシュアクションボタンを使用すると、Braze iOS および Android プッシュ通知を使用する際のボタンのコンテンツとアクションを設定できます。アクションボタンを使用すると、ユーザーはアプリエクスペリエンスをクリックしなくても、通知からアプリを直接操作できます。
+> プッシュアクションボタンを使用すると、BrazeのiOSおよびAndroidプッシュ通知を使用する際に、ボタンのコンテンツとアクションを設定できる。アクションボタンを使えば、ユーザーはアプリをクリックしなくても、通知から直接アプリと対話することができる。
 
-## アクションボタンの作成
+## アクションボタンを作成する
 
-各インタラクティブボタンは、ウェブページまたはディープリンクにリンクしたり、アプリを開いたりできます。プッシュアクションボタンは、ダッシュボードのプッシュメッセージコンポーザーの **On-Click Behavior** セクションで指定できます。
+各インタラクティブ・ボタンは、ウェブページやディープリンクにリンクしたり、アプリを開いたりすることができる。プッシュアクションボタンは、ダッシュボードのプッシュメッセージコンポーザーの**On-Click Behavior**セクションで指定できる。
 
 {% alert important %}
-1つのキャンペーンでiOSとAndroidの両方をターゲットにしたい場合は、マルチチャネルキャンペーンを作成してください。[クイックプッシュキャンペーンを使用してiOSとAndroidの両方をターゲットにする場合、プッシュアクションボタンはサポートされません]({{site.baseurl}}/quick_push)。
+1つのキャンペーンでiOSとAndroidの両方をターゲットにしたい場合は、マルチチャネルキャンペーンを作成する。[クイックプッシュキャンペーンを]({{site.baseurl}}/quick_push)使用してiOSとAndroidの両方をターゲットにする場合、プッシュアクションボタンはサポートされない。
 {% endalert %}
 
-### iOS {#ios}
+### iOS{#ios}
 
-iOS プッシュメッセージでアクションボタンを使用するには、次の操作を行います。
+iOSのプッシュ・メッセージでアクション・ボタンを使うには、以下のようにする：
 
-1. iOS [プッシュキャンペーンを作成し]({{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/)、「**作成**」タブでアクションボタンを有効にします。
-2. 以下のボタンの組み合わせから **iOS 通知カテゴリを選択します**。
- - 受諾する / 辞退する
- - はい / いいえ
- - 確認 / キャンセル
- - その他
- - 事前登録済みのカスタム iOS カテゴリ
+1. iOSの[プッシュキャンペーンを]({{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/)作成し、「**メール送信」**タブでアクションボタンを有効にする。
+2. 以下の利用可能なボタンの組み合わせから、**iOSの通知カテゴリーを**選択する：
+ - 受諾する／拒否する
+ - はい／いいえ
+ - 確認／キャンセル
+ - もっと見る
+ - 事前登録されたカスタムiOSカテゴリー
 
-![iOS Notification Category dropdown menu.]({% image_buster /assets/img_archive/push_action_buttons_ios.png %}){: style="max-width:70%"}
+![iOS 通知カテゴリのドロップダウンメニュー]({% image_buster /assets/img_archive/push_action_buttons_ios.png %}){: style="max-width:70%"}
 
 {% alert note %}
-iOS ではボタンが処理されるため、プッシュアクションボタンを設定する際には追加の統合手順を実行する必要があります。[詳細については開発者向けドキュメントを参照してください]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/customization/action_buttons/)。特に、iOSカテゴリを設定するか、特定のデフォルトボタンオプションから選択する必要があります。Android インテグレーションの場合、これらのボタンは自動的に機能します。
+iOSのボタンの取り扱いのため、プッシュアクションボタンを設定する際には追加の統合手順を実行する必要があります。これらの手順は、当社の[開発者ドキュメント]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/customization/action_buttons/)に記載されています。特に、iOSカテゴリーを設定するか、特定のデフォルトボタンオプションから選択する必要がある。アンドロイドとの統合では、これらのボタンは自動的に機能する。
 {% endalert %}
 
 ### Android{#android}
 
-Android プッシュメッセージでアクションボタンを使用するには、次の操作を行います。
+Androidのプッシュ・メッセージでアクション・ボタンを使うには、以下のようにする：
 
-1. Android [プッシュキャンペーンを作成し]({{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/)、**作成タブで通知ボタンを有効にします**。
-2. 「<i class="fas fa-plus-circle"></i>**ボタンを追加」** をクリックし、**ボタンのテキストとクリック時の動作を指定します**。次のアクションから選択できます。
+1. Androidの[プッシュ・キャンペーンを]({{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/)作成し、「**メール作成」**タブで通知ボタンを有効にする。
+2. <i class="fas fa-plus-circle"></i> **Add Buttonを**クリックし、ボタンテキストと**On-Click Behaviorを**指定する。以下のアクションから選択できる：
   - アプリを開く
-  - Web URL にリダイレクトする
+  - ウェブURLにリダイレクトする
   - [アプリケーションへのディープリンク]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/)
 
-![\]({% image_buster /assets/img_archive/push_action_buttons_android.png %}){: style="max-width:70%"}
+![]({% image_buster /assets/img_archive/push_action_buttons_android.png %}){: style="max-width:70%"}
 
-プッシュにはボタンを 3 つまで追加できます。
+プッシュのボタンは3つまで追加できる。
 
 #### アンドロイドの文字数制限
 
-積み重ねられている iOS ボタンとは異なり、Android のボタンは一列に並べて表示されます。つまり、追加するボタンが多いほど (最大 3 つ)、ボタンのコピーに必要なスペースが少なくなります。 
+重ねて表示されるiOSのボタンとは異なり、Androidのボタンは横一列に並んで表示される。つまり、ボタンを増やせば増やすほど（最大3つまで）、ボタンコピーのスペースは少なくなる。 
 
-![Android push action buttons with truncated text.]({% image_buster /assets/img_archive/push_action_truncated.png %}){: style="max-width:50%" }
+![テキストが切り捨てられたAndroidのプッシュ・アクション・ボタン]({% image_buster /assets/img_archive/push_action_truncated.png %}){: style="max-width:50%" }
 
-次の表は、ボタンの数に応じて、ボタンのコピーが切り捨てられるまでに追加できる文字数の概要を示しています。
+次の表は、ボタンの数に応じて、ボタンコピーが切り捨てられるまでに追加できる文字数の概要を示したものである：
 
 | ボタン数 | ボタンあたりの最大文字数 |
 | --- | --- |
-| 1 | 46 キャラクター |
-| 2 | 20 キャラクター |
-| 3 | 11 キャラクター |
+| 1 | 46文字 |
+| 2 | 20文字 |
+| 3 | 11文字 |
 {: .reset-td-br-1 .reset-td-br-2}
 
 
