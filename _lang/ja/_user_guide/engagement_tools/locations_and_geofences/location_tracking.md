@@ -32,7 +32,7 @@ search_rank: 2
 
 ## デフォルトロケーション属性のハード設定
 
-また、API の[`users/track`エンドポイント][8]を使用して[`current_location`][9]標準属性を更新することもできます。例は次のとおりです。
+また、API の[`users/track`エンドポイント][8]を使用して[`current_location`][9]標準属性を更新することもできます。例は次のとおりです。 
 ```
 https://[your_braze_rest_endpoint]/users/track
 Content-Type: application/json
