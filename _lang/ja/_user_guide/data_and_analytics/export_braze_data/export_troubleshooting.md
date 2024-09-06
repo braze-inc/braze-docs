@@ -1,35 +1,45 @@
 ---
-nav_title: エクスポートに関するトラブルシューティング
-article_title: エクスポートに関するトラブルシューティング
+nav_title: Export Troubleshooting
+article_title: Export Troubleshooting
 page_order: 10
 page_type: reference
-description: "このリファレンス記事では、API と CSV のエクスポートに関する一般的なトラブルシューティングシナリオをいくつか取り上げています。"
+description: "This reference article covers some common troubleshooting scenarios for API and CSV exports."
 
 ---
 
-# エクスポートに関するトラブルシューティング
+# Export troubleshooting
 
-> Braze から CSV または API を使用してデータをエクスポートするときに発生する可能性のあるエラーメッセージを以下に示します。
+> The following lists error messages you may encounter while exporting data via CSV or API from Braze.
 
-## 一般的なエラー
+## Common errors
 
-#### 「アクセス拒否」 
+### 'AccessDenied' 
 
 **独自の S3 バケット**を使用している場合、次の理由が考えられます。
-\- 必要なオブジェクトが S3 バケットに存在しません。エンジニアに問い合わせてください。
-\- Braze ダッシュボードに設定した S3 認証情報に正しい権限がありません。チームに正しい認証情報を確認してください。
+- 予期されたオブジェクトはS3バケットにもう存在しません。エンジニアに確認してください。
+- Brazeダッシュボード内で設定されたS3資格情報に正しい権限がありません。チームと共に適切な資格情報を確認してください。
 
 **Braze S3 バケット**を使用している場合、次の理由が考えられます。
--オブジェクトが存在しません。これは、4 時間以上前に実行したエクスポートのリンクをクリックした場合に発生する可能性があります。このような場合は、エクスポートを再実行してください。
-\- S3 がオブジェクトを提供する準備が整う前に、すぐにダウンロードリンクをクリックしました。数分後にもう一度やり直してください。通常、レポートのサイズが大きいほど時間がかかります。
-\- エクスポートが大きすぎるため、この zip ファイルを作成しようとしたときにサーバーのメモリが不足しました。このような場合は、このエクスポートを試みているユーザーにメールを自動的に送信します。この問題が頻繁に発生する場合、今後は独自の S3 バケットを使用することをお勧めします。
+- オブジェクトはもうそこにありません。これは、4 時間以上前に実行したエクスポートのリンクをクリックした場合に発生する可能性があります。このような場合は、エクスポートを再実行してください。
+- すぐにダウンロードリンクをクリックしましたが、S3がオブジェクトを提供する準備ができていませんでした。数分後にもう一度やり直してください。通常、レポートのサイズが大きいほど時間がかかります。 
+- エクスポートが大きすぎるため、サーバーがこのzipファイルを作成しようとしてメモリ不足になりました。このような場合は、このエクスポートを試みているユーザーにメールを自動的に送信します。If you consistently run into this issue, we recommend that you use your own S3 buckets in the future.
 
-#### 「期限切れトークン」
+### 'ExpiredToken'
 
-これは、メールが送信されてから 4 時間以上経過した場合に発生します。エクスポートを再実行して、4 時間以内にダウンロードしてください。
-この原因として、データのダウンロード先の S3 バケットに Braze がアクセスできなくなったことも考えられます。以下のステップを使用して、S3 認証情報を更新していることを確認してください。
+This will happen if the email was sent 4+ hours ago.Re-run the export and download it within 4 hours.
+This could also be caused by Braze no longer having access to the S3 bucket you are downloading the data to.Make sure you've updated your S3 credentials using these steps.
 
-#### 「ファイルがもう存在しないようです。バケットからオブジェクトが削除されていないことを確認してください」
+### "Looks like the file doesn't exist anymore, please check to make sure nothing is deleting objects from your bucket"
 
-Braze のエクスポートに関するメールが送信されてから、S3 で実際にオブジェクトを提供する準備が整うまで若干時間がかかる場合があります。このエラーが表示された場合は、数分待ってからやり直してください。
+There may be a slight lag between when Braze's email with the export gets sent, and when S3 is actually ready to serve the object.このエラーが表示された場合は、数分待ってからやり直してください。
 
+### フィールドにアポストロフィが追加されました
+
+Brazeは、フィールドが次のいずれかの文字で始まる場合、CSVエクスポートのフィールドに自動的にアポストロフィを追加します:
+
+- -
+- =
+- +
+- @
+
+例えば、フィールド「-1943」は「'-1943」としてエクスポートされます。これは、[`/users/export/segment`エンドポイント]({{site.baseurl}}/api/endpoints/export/user_data/post_users_segment/)によって返されるJSONエクスポートには適用されません。
