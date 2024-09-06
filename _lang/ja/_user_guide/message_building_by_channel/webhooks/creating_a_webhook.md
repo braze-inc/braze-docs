@@ -1,100 +1,100 @@
 ---
-nav_title: ウェブフックの作成
-article_title: ウェブフックの作成
+nav_title: Webhookの作成
+article_title: Webhookの作成
 page_order: 1
 channel:
   - webhooks
-description: "この参考記事では、Webhook を作成して設定する方法について説明します。"
+description: "このリファレンス記事では、Webhookの作成と設定方法について説明します。"
 search_rank: 2
 ---
 
-# ウェブフックの作成
+# Webhookを作成する
 
-> Webhookキャンペーンを作成するか、マルチチャネルキャンペーンにWebhookを含めると、アプリ以外のアクションをトリガーできます。具体的には、[Webhook][14] を使用して他のシステムやアプリケーションにリアルタイムの情報を提供できます。 
+> Webhookキャンペーンを作成するか、Webhookをマルチチャネルキャンペーンに含めることで、アプリ以外のアクションをトリガーできます。より具体的には、[webhook][14]は他のシステムやアプリケーションにリアルタイム情報を提供するために使用できます。 
 
-ウェブフックを使用して Salesforce や Marketo などのシステムに情報を送信できます。Webhook を使用してバックエンドシステムに情報を送信することもできます。たとえば、顧客がカスタムイベントを一定回数実行した後に、プロモーションを顧客のアカウントにクレジットしたい場合があります。
+webhookを使用して、SalesforceやMarketoなどのシステムに情報を送信できます。webhookを使用して、情報をバックエンドシステムに送信することもできます。例えば、カスタムイベントを一定回数行った後に、プロモーションで顧客のアカウントにクレジットを付与したい場合があります。
 
-ウェブフックとは何か、Braze でどのように使用できるかについて詳しく知りたい場合は、先に進む前に「[ウェブフックについて]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/understanding_webhooks/)」をご覧ください。
+webhookとは何か、またBrazeでの使用方法について詳しく知りたい場合は、先に[webhookについて]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/understanding_webhooks/)をご覧ください。
 
-## ステップ 1:メッセージを作成する場所を選択してください
+## ステップ 1:メッセージを作成する場所を選択する
 
-メッセージをキャンペーンとキャンバスのどちらを使用して送信すべきかわからない?キャンペーンは単一のシンプルなメッセージキャンペーンに適していますが、キャンバスは複数段階のユーザージャーニーに適しています。
+メッセージは、キャンペーンとキャンバスのどちらを使用して配信すべきでしょうか。キャンペーンは単一のシンプルなメッセージングキャンペーンに適していますが、キャンバスはマルチステップのユーザーのジャーニーに適しています。
 
 {% tabs %}
-{% tab Campaign %}
+{% tab キャンペーン %}
 
 **ステップ:**
 
-1. [**メッセージング**] > [**キャンペーン**] に移動し、[<i class="fas fa-plus"></i>**キャンペーンを作成**] をクリックします。
+1. **メッセージング** > **キャンペーン** に移動し、<i class="fas fa-plus"></i> **キャンペーンを作成** をクリックします。
 {% alert note %}
-[古いナビゲーションを使用している場合は]({{site.baseurl}}/navigation)、[**エンゲージメント**] に [**キャンペーン**] が表示されます。
+[古いナビゲーション]({{site.baseurl}}/navigation)を使用している場合は、\[**エンゲージメント**] の下に \[**キャンペーン**] が表示されます。
 {% endalert %}
 
 {:start="2"}
-2\.[**Webhook**] を選択するか、複数のチャネルをターゲットとするキャンペーンの場合は [**マルチチャネルキャンペーン**] を選択します。
-3\.キャンペーンには明確で意味のある名前を付けてください。
-4\.[[必要に応じてチームとタグを追加します]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/tags/)]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/teams/)。
-   \* タグを使うと、キャンペーンを簡単に見つけてレポートを作成できます。たとえば、[レポートビルダーを使用する場合]({{site.baseurl}}/user_guide/data_and_analytics/reporting/report_builder/)、特定のタグでフィルタリングできます。
-5\.キャンペーンに必要な数だけバリエーションを追加して名前を付けてください。追加したバリアントごとに異なるWebhookテンプレートを選択できます。このトピックの詳細については、「[多変量分析と]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/) A/B テスト」を参照してください。
+2\.**Webhook**を選択するか、複数のチャネルをターゲットにしたキャンペーンの場合は**マルチチャネルキャンペーン**を選択します。
+3\.キャンペーンに、明確で意味のある名前を付けます。
+4\.必要に応じて、\[[チーム]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/teams/)] と \[[タグ]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/tags/)] を追加します。
+   * タグを使用すると、キャンペーンを検索してレポートを作成しやすくなります。例えば、\[[レポートビルダー]({{site.baseurl}}/user_guide/data_and_analytics/reporting/report_builder/)] を使用する場合、特定のタグでフィルターできます。
+5. キャンペーンに必要な数だけバリアントを追加して名前を付けます。追加された各バリアントに対して、異なるWebhookテンプレートを選択できます。このトピックの詳細については、「[多変量テストと AB テスト]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/)」を参照してください。
 
 {% alert tip %}
-キャンペーン内のすべてのメッセージが類似または同じ内容になる場合は、バリエーションを追加する前にメッセージを作成してください。次に、「**バリエーションを追加**」**ドロップダウンから「バリアントからコピー**」を選択できます。
+キャンペーン内のすべてのメッセージが類似しているか、同じ内容になる場合は、メッセージを作成してからバリアントを追加します。その後、\[**バリアントを追加**] ドロップダウンから \[**バリアントをコピー**] を選択できます。
 {% endalert %}
 
 {% endtab %}
-{% tab Canvas %}
+{% tab キャンバス %}
 
 **ステップ:**
 
-1. [Canvas コンポーザーを使用して Canvas を作成します]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/)。
-2. キャンバスを設定したら、キャンバスビルダーにステップを追加します。ステップに明確で意味のある名前を付けてください。
-3. [ステップスケジュールを選択し]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/time_based_canvas/#schedule-delay)、必要に応じて遅延を指定します。
-4. このステップでは、必要に応じてオーディエンスを絞り込んでください。セグメントを指定し、フィルターを追加して、このステップの受信者をさらに絞り込みます。後から、メッセージの送信時に、オーディエンスオプションがチェックされます。
-5. [昇進行動を選択してください]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/advancement/)。
-6. メッセージとペアリングしたい他のメッセージングチャネルを選択してください。
+1. キャンバス作成ツールを使用して \[[キャンバスを作成]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/)] します。
+2. キャンバスを設定したら、キャンバスビルダーにステップを追加します。ステップに、明確で意味のある名前を付けます。
+3. \[[ステップスケジュール]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/time_based_canvas/#schedule-delay)] を選択し、必要に応じて遅延を指定します。
+4. 必要に応じて、このステップのオーディエンスをフィルターします。セグメントを指定し、フィルターを追加して、このステップの受信者をさらに絞り込むことができます。後から、メッセージの送信時に、オーディエンスオプションがチェックされます。
+5. \[[昇進動作]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/advancement/)] を選択します。
+6. メッセージと組み合わせる他のメッセージングチャネルを選択します。
 
 {% endtab %}
 {% endtabs %}
 
-## ステップ 2:ウェブフックを作成
+## ステップ 2:Webhookを作成する
 
-Webhook をゼロから作成するか、既存のテンプレートのいずれかを使用するかを選択できます。次に、エディターの [**作成**] タブでウェブフックを作成します。
+Webhookをゼロから構築するか、既存のテンプレートのいずれかを使用するかを選択できます。次に、エディタの**Compose**タブでWebhookを構築します。
 
-![Compose tab when creating a webhook in Braze]({% image_buster /assets/img_archive/webhook_compose.png %})
+![BrazeでWebhookを作成する際の作成タブ]({% image_buster /assets/img_archive/webhook_compose.png %})
 
-「**作成**」タブは以下のフィールドで構成されています。
+「**作成**」タブには次のフィールドが含まれています:
 
 #### 言語 {#internationalization}
 
-[国際化は][16] URL とリクエスト本文でサポートされています。メッセージを国際化するには、「**言語を追加**」をクリックして必須フィールドに入力します。Liquidの該当箇所にテキストを入力できるように、コンテンツを書く前に言語を選択することをおすすめします。[利用可能な言語の一覧をご覧ください]({{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/localization/#languages-supported)。
+[国際化][16]は、URLおよびリクエストボディでサポートされています。メッセージを国際化するには、**言語を追加**をクリックして、必要なフィールドに記入してください。コンテンツを書く前に言語を選択することをお勧めします。そうすれば、Liquidに適切な場所にテキストを入力できます。[利用可能な言語]({{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/localization/#languages-supported)の完全なリストをご覧ください。
 
 #### Webhook URL
 
-ウェブフック URL または HTTP URL は、エンドポイントを指定します。エンドポイントは、Webhook でキャプチャした情報を送信する場所です。ベンダーに情報を送信する場合、ベンダーはこの URL を API ドキュメントに記載する必要があります。自社のシステムに情報を送信する場合は、開発チームまたはエンジニアリングチームに問い合わせて、正しい URL を使用していることを確認してください。 
+Webhook URL、またはHTTP URLは、エンドポイントを指定します。エンドポイントは、Webhookでキャプチャしている情報を送信する場所です。ベンダーに情報を送信したい場合、ベンダーはAPIドキュメントにこのURLを提供する必要があります。自分のシステムに情報を送信する場合は、開発チームまたは開発チームに確認して、正しいURLを使用していることを確認してください。 
 
-Braze では、標準ポート `80` (HTTP) および `443` (HTTPS) を介して通信する URL のみを許可しています。
+Brazeは、標準ポート`80`（HTTP）および`443`（HTTPS）で通信するURLのみを許可します。
 
-[Liquidを使用してウェブフックURLをパーソナライズできます。][15]特定のエンドポイントでは、ユーザーを特定したり、URL の一部としてユーザー固有の情報を提供したりする必要がある場合があります。Liquidを使用するときは、[URLに使用するユーザー固有の情報ごとにデフォルト値を必ず含めてください][19]。
+[Liquid][15]を使用してWebhook URLをパーソナライズできます。場合によっては、特定のエンドポイントがユーザーを識別するか、URLの一部としてユーザー固有の情報を提供する必要がある場合があります。Liquidを使用する場合は、URLで使用するユーザー固有の情報ごとに[デフォルト値][19]を含めるようにしてください。
 
-#### リクエスト本文
+#### Request body
 
-リクエストボディは、指定した URL に送信される情報です。Webhook リクエストの本文を作成するには 2 つの方法があります。
+リクエストボディは、指定したURLに送信される情報です。Webhookリクエストの本文を作成する方法は2つあります:
 
-##### JSON キーと値のペア
+##### JSONキーと値のペア
 
-JSON キーと値のペアを使用すると、JSON 形式を必要とするエンドポイントへのリクエストを簡単に記述できます。この機能は、JSON リクエストを必要とするエンドポイントでのみ使用できます。たとえば、キーがの場合`message_body`、対応する値はになります`Your order just arrived!`。キーと値のペアを入力すると、コンポーザーがリクエストを JSON 構文で設定し、JSON リクエストのプレビューが自動的に表示されます。
+JSONキーと値のペアを使用すると、JSON形式を期待するエンドポイントへのリクエストを簡単に作成できます。この機能は、JSONリクエストを期待するエンドポイントでのみ使用できます。例えば、あなたのキーが`message_body`の場合、対応する値は`Your order just arrived!`かもしれません。キーと値のペアを入力すると、コンポーザーがリクエストをJSON構文で構成し、JSONリクエストのプレビューが自動的に表示されます。
 
-![リクエスト本文を JSON キーと値のペアに設定] [21]
+![リクエストボディをJSONキーと値のペアに設定][21]
 
-[Liquidを使用して][15]、ユーザー属性、[カスタム属性][17]、[またはイベントプロパティをリクエストに含めるなど][18]、キーと値のペアをパーソナライズできます。たとえば、顧客の名とメールアドレスをリクエストに含めることができます。[各属性にデフォルト値を含めることを忘れないでください][19]。
+リクエストに[Liquid][15]を使用して、任意のユーザー属性、[カスタム属性][17]、または[イベントプロパティ][18]を含めるなど、キーと値のペアをパーソナライズできます。例えば、リクエストに顧客の名とメールを含めることができます。各属性に[デフォルト値][19]を含めることを忘れないでください！
 
 ##### 生のテキスト
 
-未加工テキストオプションを使用すると、任意の形式の本文を想定するエンドポイントへのリクエストを柔軟に記述できます。たとえば、この機能を使用して、リクエストが XML 形式であることを期待するエンドポイントへのリクエストを作成できます。[[Liquidを使用したパーソナライゼーションと国際化の両方が未加工テキストでサポートされています][16]][15]。
+生のテキストオプションを使用すると、任意の形式の本文を期待するエンドポイントへのリクエストを作成する柔軟性が得られます。例えば、この機能を使用して、リクエストがXML形式であることを期待するエンドポイントへのリクエストを作成することができます。両方の[パーソナライゼーション][15]と[国際化][16]は、Liquidを使用して生のテキストでサポートされています。
 
-![リクエスト本文を未加工テキストに設定] [22]
+![リクエストボディが生のテキストに設定されました][22]
 
-`Content-Type`[リクエストヘッダーをに設定する場合`application/x-www-form-url-encoded`、リクエスト本文は](#request-headers-optional) URL でエンコードされた文字列としてフォーマットする必要があります。例えば:
+`Content-Type` [リクエストヘッダー](#request-headers-optional) を `application/x-www-form-url-encoded` に設定した場合、リクエストボディは URL エンコードされた文字列としてフォーマットする必要があります。以下に例を示します。
 
 {% raw %}
 ```
@@ -102,119 +102,119 @@ to={{custom_attribute.${example}}}&text=Your+order+just+arrived
 ```
 {% endraw %}
 
-![URL でエンコードされた文字列を含むリクエスト本文。] [23]
+![URLエンコードされた文字列を含むリクエストボディ。][23]
 
-## ステップ 3:その他の設定を行う
+## ステップ 3:追加設定を構成する
 
-#### リクエストヘッダー (オプション)
+#### リクエストヘッダー（オプション）
 
-特定のエンドポイントでは、リクエストにヘッダーを含める必要がある場合があります。コンポーザーの「設定 (**Settings**)」セクションでは、ヘッダーをいくつでも追加できます。一般的なリクエストヘッダーは、`Content-Type`仕様 (XML や JSON など、本文にどのような種類のデータが含まれるのかを記述したもの) と、ベンダーまたはシステムの認証情報を含む認証ヘッダーです。 
+特定のエンドポイントでは、リクエストにヘッダーを含める必要がある場合があります。作成者の**設定**セクションでは、好きなだけヘッダーを追加できます。一般的なリクエストヘッダーは`Content-Type`仕様（本文にどのようなデータが含まれるかを示すもので、XMLやJSONなど）と、ベンダーやシステムに対する認証情報を含む認証ヘッダーです。 
 
-コンテンツタイプの指定にはキーを使用する必要があります`Content-Type`。`application/json``application/x-www-form-urlencoded`一般的な値はまたはです。
+コンテンツタイプの仕様にはキー`Content-Type`を使用する必要があります。一般的な値は`application/json`または`application/x-www-form-urlencoded`です。
 
-認証ヘッダーはキーを使用する必要があります`Authorization`。一般的な値は、{% raw %}`Bearer {{YOUR_TOKEN}}``Basic {{YOUR_TOKEN}}`{% endraw %}`YOUR_TOKEN`ベンダーまたはシステムから提供された認証情報です。
+Authorization headers must use the key `Authorization`.一般的な値は{% raw %} `Bearer {{YOUR_TOKEN}}`または`Basic {{YOUR_TOKEN}}` {% endraw %}で、`YOUR_TOKEN`はベンダーまたはシステムによって提供される資格情報です。
 
-#### HTTP メソッド
+#### HTTPメソッド
 
-使用すべき [HTTP メソッドは]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/understanding_webhooks/#methods)、情報を送信するエンドポイントによって異なります。ほとんどの場合、POST を使用します。
+送信する情報のエンドポイントに応じて、使用する[HTTPメソッド]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/understanding_webhooks/#methods)が異なります。ほとんどの場合、POSTを使用します。
 
-![コンポーザーの [設定] タブでリクエストヘッダと HTTP メソッドを指定] [26]
+![作成者の設定タブでリクエストヘッダーとHTTPメソッドを指定します][26]
 
-## ステップ 4: メッセージをテスト送信
+## ステップ 4:テストメッセージを送信
 
-キャンペーンを公開する前に、BrazeはWebhookをテストしてリクエストが適切にフォーマットされていることを確認することを推奨しています。
+キャンペーンを公開する前に、Brazeはリクエストが正しくフォーマットされていることを確認するためにWebhookをテストすることを推奨します。
 
-そのためには、[**テスト] タブに切り替えて、テスト** Webhook を送信します。Webhookは、ランダムユーザー、特定のユーザー（メールアドレスまたは外部ユーザーIDを入力）、または任意の属性を持つカスタマイズされたユーザーとしてテストできます。  
+そのためには、**テスト**タブに切り替えてテストWebhookを送信します。Webhook をランダムなユーザー、特定のユーザー（外部ユーザーIDのメールアドレスを入力することによって）、または選択した属性を持つカスタマイズされたユーザーとしてテストできます。  
 
-テスト Webhook を送信すると、応答メッセージを含むダイアログが表示されます。Webhook リクエストが失敗した場合は、エラーメッセージを参照して Webhook のトラブルシューティングに役立ててください。次の例では、ウェブフック URL が無効な Web フックの応答の詳細を示しています。
+テストWebhookを送信した後、応答メッセージが表示されるダイアログが表示されます。Webhookリクエストが失敗した場合は、トラブルシューティングのためにエラーメッセージを参照してください。次の例は、無効なWebhook URLを持つWebhookの応答を詳述しています。
 
-\`\`\`json
-404 見つかりません
+```json
+404 Not Found
 
 {
-"error": {
-"message": "Unrecognized request URL. Please see https://lob.com/docs or email us at support@lob.com.",
-"status_code": 404
-}
+  "error": {
+    "message": "Unrecognized request URL. Please see https://lob.com/docs or email us at support@lob.com.",
+    "status_code": 404
   }
+}
 
-\`\`\`
+```
 
-## ステップ 5: 残りのキャンペーンやキャンバスを作成
+## ステップ 5: キャンペーンまたはキャンバスの残りの部分を作成する
 
 {% tabs %}
-{% tab Campaign %}
+{% tab キャンペーン %}
 
-次に、残りのキャンペーンを作成します。当社のツールを最大限に活用してウェブフックを構築する方法の詳細については、以下のセクションを参照してください。
+次に、キャンペーンの残りの部分を構築します。ツールを使用してwebhookを構築する方法の詳細については、次のセクションを参照してください。
 
-#### 配送スケジュールまたはトリガーを選択
+#### 配信スケジュールまたはトリガーを選択する
 
-Webhook は、スケジュールされた時間、アクション、または API トリガーに基づいて配信できます。詳細については、「[キャンペーンのスケジュール]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/)」を参照してください。
+webhookは、スケジュールされた時間、アクション、またはAPIトリガーに基づいて配信されます。詳細については、[キャンペーンのスケジューリング]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/)を参照してください。
 
-アクションベースの配信では、[キャンペーンの期間と待機時間を設定することもできます]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/time_based_campaign/#quiet-hours)。
+アクションベースの配信では、キャンペーンの継続時間と \[[サイレント時間]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/time_based_campaign/#quiet-hours)] を設定することもできます。
 
-このステップでは、[ユーザーにキャンペーンの再受領を許可したり]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/reeligibility/#campaigns)、[フリークエンシーキャップルールを有効にするなどの配信制御を指定することもできます]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/#frequency-capping)。
+このステップでは、ユーザーがキャンペーンを受け取るために[再適格]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/reeligibility/#campaigns)になることを許可したり、[フリークエンシーキャップ]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/#frequency-capping)ルールを有効にしたりするなど、配信制御を指定することもできます。
 
-#### ターゲットにするユーザーを選択
+#### ターゲットとするユーザーを選択する
 
-次に、[セグメントまたはフィルターを選択してユーザーをターゲットにし]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/targeting_users/)、オーディエンスを絞り込む必要があります。このステップでは、セグメントからより多くのオーディエンスを選択し、必要に応じてフィルターを使用してそのセグメントをさらに絞り込みます。現在のおおよそのセグメント人口がどのようになっているかのスナップショットが自動的に表示されます。正確なセグメントメンバーシップは常にメッセージが送信される直前に計算されることに注意してください。
+次に、セグメントやフィルターを選択して[ターゲットユーザー]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/targeting_users/)を絞り込み、オーディエンスを絞り込む必要があります。このステップでは、セグメントからより大きなオーディエンスを選択し、必要に応じてフィルターでそのセグメントをさらに絞り込みます。セグメントのおおよその人数について現在の状態を示すスナップショットが自動的に表示されます。正確なセグメントメンバーシップは常にメッセージが送信される直前に計算されることに注意してください。
 
 #### コンバージョンイベントを選択する
 
-Brazeでは、キャンペーンを受け取った後、[ユーザーが特定のアクションやコンバージョンイベントを実行する頻度を追跡できます]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/)。ユーザーが指定したアクションを実行した場合にコンバージョンがカウントされる期間を最大 30 日間設定できます。
+Braze では、キャンペーンを受信した後、ユーザーが指定のアクションや[コンバージョンイベント]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/)を実行する頻度を追跡できます。ユーザーが指定したアクションを実行した場合にコンバージョンがカウントされる期間は、最大 30 日間まで設定できます。
 
 {% endtab %}
 
-{% tab Canvas %}
+{% tab キャンバス %}
 
-まだ行っていない場合は、Canvasステップの残りのセクションを完了してください。Canvasの残りの部分を構築する方法、多変量分析テストやインテリジェントセレクションを実装する方法などの詳細については、[Canvasドキュメントの「キャンバスの構築]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#step-3-build-your-canvas)」ステップを参照してください。
+もしまだ行っていない場合は、キャンバスステップの残りのセクションを完了してください。詳細については、キャンバスの残りの部分を構築する方法、多変量テストとインテリジェントセレクションを実装する方法などについては、キャンバスドキュメントの[キャンバスを構築する]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#step-3-build-your-canvas)ステップを参照してください。
 
 {% endtab %}
 {% endtabs %}
 
-## ステップ 6:確認とデプロイ
+## ステップ 6:レビューと展開
 
-最後のキャンペーンやキャンバスの作成が終わったら、詳細を確認してテストし、送信しましょう！
+キャンペーンまたはキャンバスの最後の構築が完了したら、その詳細を確認し、テストしてから送信してください！
 
 ## 知っておくべきこと
 
 ### エラー、リトライロジック、タイムアウト
 
-Webhookは、Brazeサーバーが外部エンドポイントにリクエストを行うことに依存しているため、構文やその他のエラーが発生する可能性があります。Webhookエラーを回避するための最初のステップは、Webhookキャンペーンの構文エラーをテストし、パーソナライズされた変数にデフォルト値があることを確認することです。ただし、APIキーの期限切れ、レート制限、予期しないサーバーエラーなどの問題が原因で、Webhookが機能しなくなる可能性があります。Webhook が送信に失敗すると、エラーメッセージが [メッセージアクティビティログ] [42] に記録されます。
+webhookはBrazeサーバーが外部エンドポイントにリクエストを送信することに依存しており、構文やその他のエラーが発生する可能性があります。Webhookエラーを回避するための最初のステップは、Webhookキャンペーンを構文エラーについてテストし、パーソナライズされた変数にデフォルト値があることを確認することです。ただし、webhookは期限切れのAPIキー、レート制限、予期しないサーバーエラーなどの問題により失敗する可能性があります。Webhook が送信に失敗した場合、エラーメッセージが \[メッセージアクティビティログ][42] に記録されます。
 
-この説明には、エラーが発生した時刻、アプリ名、およびエラーメッセージが含まれています。
+この説明には、エラーが発生した時間、アプリ名、およびエラーメッセージが含まれています:
 
-![「現在のユーザーに関する情報を照会するには、アクティブなアクセストークンを使用する必要があります」というメッセージが表示される Webhook エラー] [43]
+![Webhookエラー: メッセージ「現在のユーザーに関する情報を照会するにはアクティブなアクセス トークンを使用する必要があります」][43]
 
-メッセージ本文がエラーの原因について十分に明確でない場合は、使用している API エンドポイントのドキュメントを確認する必要があります。これらは通常、エンドポイントが使用するエラーコードとその一般的な原因の説明を提供します。
+メッセージ本文がエラーの原因について十分に明確でない場合、使用しているAPIエンドポイントのドキュメントを確認する必要があります。これらは通常、エンドポイントが使用するエラーコードの説明と、それらが通常引き起こされる原因を提供します。
 
-他のキャンペーンと同様に、BrazeはWebhookキャンペーンの配信とそれらから生じるコンバージョンを追跡します。Webhook リクエストが送信されると、受信サーバーはリクエストで何が起こったかを示す応答コードを返します。次の表は、サーバーが送信する可能性のあるさまざまな応答、それらがキャンペーン分析に与える影響、エラーが発生した場合に Braze がキャンペーンの再配信を試みるかどうかをまとめたものです。
+他のキャンペーンと同様に、BrazeはWebhookキャンペーンの配信とそれに伴うコンバージョンを追跡します。Webhookリクエストが送信されると、受信サーバーはリクエストに何が起こったかを示す応答コードを返します。次の表は、サーバーが送信する可能性のあるさまざまな応答、それらがキャンペーン分析に与える影響、およびエラーの場合にBrazeがキャンペーンを再配信しようとするかどうかをまとめたものです。
 
-| 応答コード | 受信済みとマークされていますか？| 再試行?|
+| 応答コード | 受領済みとしてマークされましたか？ | リトライ？ |
 |---------------|-----------|----------|
-| 20倍 (成功) | はい | 該当なし |
-| 30x (リダイレクト) | いいえ | いいえ |
-| 408 (リクエストタイムアウト) | いいえ | はい |
-| 429 (レート制限) | いいえ | はい |
-| その他の 4xx (クライアントエラー) | いいえ | いいえ |
-| 5xx (サーバーエラー) | いいえ | はい |
+| 20x (成功)  | はい |   該当なし  |
+| 30x（リダイレクト）  | いいえ | いいえ |
+| 408 (リクエストタイムアウト)  | いいえ | はい |
+| 429（レート制限）  | いいえ | はい |
+| その他の4xx（クライアントエラー）  | いいえ | いいえ |
+| 5xx (サーバーエラー)   | いいえ | はい |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
-再試行すると、Brazeは指数バックオフを使用して約30分間5回試行した後、個々のWebhook呼び出しを中止します。
+BrazeはWebhookの送信を最大24時間再試行します。再試行する場合、Braze は指数バックオフを使用して約 30 分間にわたって FIVE 回試行し、個々の Webhook 呼び出しを中止します。
 
-各 Webhook は、タイムアウトの 90 秒前に許可されます。
+各Webhookはタイムアウトするまでに90秒が許可されています。
 
 ### IP 許可リスト {#ip-allowlisting}
 
-BrazeからWebhookが送信されると、Brazeサーバーはお客様または第三者のサーバーにネットワークリクエストを送信します。IP許可リストを使用すると、Webhooksリクエストが実際にBrazeから送信されていることを確認でき、セキュリティがさらに強化されます。
+BrazeからWebhookが送信されると、Brazeサーバーは顧客またはサードパーティのサーバーにネットワークリクエストを行います。IP許可リストを使用すると、WebhookリクエストがBrazeから送信されていることを確認でき、セキュリティの層が追加されます。
 
-Braze は次の IP アドレスからウェブフックを送信します。リストされている IP は、許可リストにオプトインされているすべての API キーに自動的かつ動的に追加されます。
+Brazeは次のIPからwebhookを送信します。記載されているIPは、許可リストにオプトインしたすべてのAPIキーに自動的かつ動的に追加されます。
 
 {% alert important %}
-Braze to Braze のウェブフックを作成して許可リストに登録する場合は、以下を含むすべての IP を許可リストに登録する必要があります。`127.0.0.1`
+Braze-to-Braze webhook を作成していて、許可リストを使用している場合は、`127.0.0.1` を含む次のすべての IP を許可リストに追加する必要があります。
 {% endalert %}
 
-| インスタンスの場合`US-01`、`US-02`、`US-03``US-04`、`US-05`、`US-06`、および`US-07`:|
+| インスタンス `US-01`、`US-02`、`US-03`、`US-04`、`US-05`、`US-06`、および `US-07` の場合: |
 |---|
 | `127.0.0.1`
 | `23.21.118.191`
@@ -226,7 +226,7 @@ Braze to Braze のウェブフックを作成して許可リストに登録す�
 | `52.54.89.238`
 | `18.205.178.15`
 
-| `EU-01` インスタンスと`EU-02`:|
+| インスタンス `EU-01` および `EU-02` の場合: |
 |---|
 | `127.0.0.1`
 | `52.58.142.242`
@@ -239,7 +239,7 @@ Braze to Braze のウェブフックを作成して許可リストに登録す�
 | `3.68.144.188`
 | `3.70.107.88` 
 
-| 例えば`US-08`:|
+| 例えば`US-08`: |
 |---|
 | `52.151.246.51`
 | `52.170.163.182`
@@ -260,15 +260,15 @@ Braze to Braze のウェブフックを作成して許可リストに登録す�
 | `40.76.166.144`
 | `40.76.166.145`
 
-### Braze パートナーとのウェブフックの使用 {#utilizing-webhooks}
+### Brazeパートナー{#utilizing-webhooks}とwebhookを使用する
 
-Webhook を利用する方法は多数ありますが、当社のテクノロジーパートナー (Alloys) では、Webhook を使用して顧客やユーザーとの直接的なコミュニケーションを強化できます。
+webhookを使用する方法はたくさんあり、私たちの技術パートナー（Alloys）と一緒に、顧客やユーザーと直接コミュニケーションを向上させるためにwebhookを使用できます。
 
-チェックアウト:
-* [メッセンジャー]({{site.baseurl}}/partners/additional_channels/instant_chat/messenger/)
-* [リマージ]({{site.baseurl}}/partners/advertising_technologies/retargeting/remerge/)
-* [Lob.com]({{site.baseurl}}/partners/additional_channels/direct_mail/lob/)
-\* そして、[さらに多くのテクノロジーパートナー]({{site.baseurl}}/partners/home/)！
+チェックアウト：
+* [Messenger]({{site.baseurl}}/partners/message_orchestration/additional_channels/instant_chat/messenger/)
+* [Remerge]({{site.baseurl}}/partners/message_orchestration/additional_channels/retargeting/remerge)
+* [Lob.com]({{site.baseurl}}/partners/message_orchestration/additional_channels/direct_mail/lob)
+* そして、私たちの多くの[技術パートナー]({{site.baseurl}}/partners/home/)も！
 
 [14]: https://sendgrid.com/blog/whats-webhook
 [15]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/
