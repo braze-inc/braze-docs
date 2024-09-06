@@ -49,18 +49,18 @@ Currents は、以下の形式で各イベントタイプのファイルを作�
 スクロールバーがあるために、コードが見えない場合は、[こちら]({{site.baseurl}}/help/help_articles/docs/scroll_bar_overlap/)の修正方法を参照してください。
 {% endalert %}
 
-|ファイル名セグメント |定義|
+|ファイル名 Segment |定義|
 |---|---|
-| `<your-bucket-prefix>` | この Currents 連携に設定されたプレフィックス。 |
-| `<cluster-identifier>` | Braze での内部使用。「prod-01」、「prod-02」、「prod-03」、「prod-04」などの文字列になります。すべてのファイルが同じクラスター識別子を持ちます。|
-| `<connection-type-identifier>` | 接続のタイプを示す識別子。オプションは 「S3」、「AzureBlob」、または「GCS」です。 |
-| `<integration-id>` | この Currents 連携の一意の ID。 |
-| `<event-type>` | ファイル内のイベントのタイプ。 |
-| `<date>` | UTC タイムゾーンで、処理のために弊社のシステムでイベントがキューに入れられた時刻。形式は YYYY-MM-DD-HH です。 |
-| `<schema-id>` | 後方互換性とスキーマ進化のために、`.avro` スキーマのバージョン管理に使用される整数。 |
-| `<zone>` | Braze での内部使用。
-| `<partition>` | Braze で内部使用される整数。 |
-| `<offset>` | Braze で内部使用される整数。異なるファイルが同一時刻内に送信される場合、`<offset>` パラメーターが異なることに注意してください。 |
+| `<your-bucket-prefix>` | このCurrents統合のために設定されたプレフィックス。 |
+| `<cluster-identifier>` | Brazeによる内部使用のため。「prod-01」、「prod-02」、「prod-03」、「prod-04」などの文字列になります。すべてのファイルは同じクラスタ識別子を持ちます。|
+| `<connection-type-identifier>` | 接続の種類の識別子。オプションは「S3」、「AzureBlob」、または「GCS」です。 |
+| `<integration-id>` | このCurrents統合の一意のID。 |
+| `<event-type>` | ファイル内のイベントの種類。 |
+| `<date>` | イベントがUTCタイムゾーンで処理のためにシステムにキューされる時間。書式設定された YYYY-MM-DD-HH。 |
+| `<schema-id>` | 後方互換性とスキーマの進化のために`.avro`スキーマのバージョン管理に使用されます。整数。 |
+| `<zone>` | Brazeによる内部使用のため。 |
+| `<partition>` | Brazeによる内部使用のため。整数。 |
+| `<offset>`| Brazeによる内部使用のため。整数。注意: 同じ時間内に送信された異なるファイルには、異なる`<offset>`パラメータが含まれます。 |
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% alert tip %}
@@ -69,7 +69,7 @@ Currents は、以下の形式で各イベントタイプのファイルを作�
 
 ### Avro の書き込みしきい値
 
-通常の場合、Braze は 5 分またはイベント 15,000 件のいずれか早い方に達するたびに、ストレージバケットにデータファイルを書き込みます。高負荷時には、10 万件ものイベントを含む大きなデータファイルを 5 分間に複数書き込むこともあります。
+通常の場合、Braze は 5 分またはイベント 15,000 件のいずれか早い方に達するたびに、ストレージバケットにデータファイルを書き込みます。高負荷時には、1ファイルあたり最大100,000件のイベントを含む大きなデータファイルを書き込むことがあります。
 
 {% alert important %}
 Currents は空のファイルの書き込みを行いません。
@@ -77,7 +77,7 @@ Currents は空のファイルの書き込みを行いません。
 
 ### Avro スキーマの変更
 
-Braze ではときどき、フィールドの追加、変更、または削除に伴って、Avro スキーマを変更することがあります。このため、破壊的と非破壊的の 2 つのタイプの変更があります。すべての場合において、スキーマが更新されたことを示すために、`<schema-id>` が増分されます。
+Braze ではときどき、フィールドの追加、変更、または削除に伴って、Avro スキーマを変更することがあります。このため、破壊的と非破壊的の 2 つのタイプの変更があります。すべての場合において、スキーマが更新されたことを示すために、`<schema-id>` が増分されます。Currentsのイベントは、Azure Blob Storage、Google Cloud Storage、およびAmazon S3に書き込まれ、パスに`<schema-id>`を書き込みます。例えば`<your-bucket-name0>/<currents-integration-id>/<event-type>/<date-of-event>/<schema-id>/<environment>/<avro-file>`。
 
 #### 非破壊的な変更
 
