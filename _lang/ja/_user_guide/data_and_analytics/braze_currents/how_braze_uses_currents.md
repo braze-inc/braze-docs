@@ -1,51 +1,51 @@
 ---
-nav_title: Braze で Currents を使用する方法
-article_title: Braze で Currents を使用する方法
+nav_title: How Braze Uses Currents
+article_title: How Braze Uses Currents
 page_order: 6
 page_type: tutorial
-description: "この Currents のハウツー記事では、イベントデータの適切な取り込みを設定するための基本的なプロセスと、それをデータベースや BI ツールに移動する方法を順に説明します。"
+description: "This Currents how-to article will walk you through the basic process for setting up proper intakes for event data, as well as moving it into a database and BI tool."
 tool: Currents
  
 ---
 
-# Braze で Currents を使用する方法
+# How Braze uses Currents
 
-> Braze では Currents を使用しています。自社製品を気に入っているため、弊社では[パートナー]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/available_partners/)数社との連携に使用しています。
+> Braze uses Currents!That's right, we like our own product enough to use it in conjunction with a few of [our partners]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/available_partners/).
 
-メールにフィルターを適用してデータを取り出し、キャンペーンをビジネスインサイトツールである Looker にプッシュしていますが、そこに到達するまでには興味深い経路をたどります。ETL (抽出、変換、読み込み) 手法を少し入れ替えたバージョンである ELT (抽出、読み込み、変換) を使用しています。
+We filter our data from our email and push campaigns into a business insights tool, Looker, but it takes an interesting route to get there.We use a slightly inverted version of the ETL (Extract, Transform, Load) methodology - we just switched up the order to ELT (Extract, Load, Transform)!
 
-## ステップ 1: イベントデータの取り込みと集約
+## Step 1:Intake and aggregate event data
 
-弊社のエンゲージメントツール (キャンペーンやキャンバスなど) を使用してキャンペーンを開始した後、独自のシステムやメールパートナーのシステムを使用してイベントデータを追跡します。このデータの一部は集計されてダッシュボードに表示されますが、さらに詳細を調べようと考えました。
+After launching campaigns using any of our Engagement Tools (like campaigns or Canvas), we track event data using our own system as well as some from our email partners.Some of this data is aggregated and shown in the dashboard, but we were interested in diving deeper!
 
-## ステップ 2: データストレージパートナーへのイベントデータの送信
+## Step 2:Send event data to a data storage partner
 
-保存と抽出の目的で、Braze のイベントデータを Amazon S3 に送信するように Currents を設定しました。これで、[Athena][2] を使用して S3 の上でクエリを実行できることがわかりました。これは短期的に優れたソリューションです。しかし、弊社ではリレーショナルデータベースとビジネスインテリジェンス / 分析ツールを使用する長期的なソリューションを求めていました。これはお客様に推奨するソリューションでもあります。
+We set up Currents to send Braze event data to Amazon S3 for storage and extraction.Now, we know that you can use [Athena][2] to sit on top of S3 and run queries.It's a great short-term solution.But we wanted (and recommend to you) a long-term solution using a Relational Database and a Business Intelligence/Analytics tool.
 
-私たちは S3 を、宝箱を開ける鍵だと見なしています。必要な場所にデータを転送することで、データの移動、変換、および分析の可能性が広がります。ただし、S3 には非常に特殊な構造があるため、S3 でデータを変換しないように注意しています。
+We think of S3 as our keys to the castle!It opens up the door to so many possibilities for moving, pivoting, and analyzing our data by transferring it where we need it to go.However, we are careful not to transform our data in S3, as we have a very specific structure for it.
 
-## ステップ 3: リレーショナルデータベースでのイベントデータの変換
+## Step 3:Transform event data with a relational database
 
-S3 からウェアハウス (弊社の場合では [Snowflake Data Sharing](https://www.snowflake.com/try-the-data-warehouse-built-for-the-cloud/?&utm_medium=search&utm_source=adwords&utm_campaign=NA%20-%20Branded&utm_adgroup=NA%20-%20Branded%20Snowflake%20-%20Data&utm_term=%2Bsnowflake%20%2Bdata&utm_region=NA&gclid=EAIaIQobChMI0vLv6uDA3gIVEFqGCh3aiwMzEAAYASAAEgI72fD_BwE) または Snowflake Reader Accounts) を選択します。そこでデータを変換してから Looker に移動します。Looker では、データを構造化して整理するブロックを設定しています。
+From S3, we choose a warehouse ([Snowflake Data Sharing](https://www.snowflake.com/try-the-data-warehouse-built-for-the-cloud/?&utm_medium=search&utm_source=adwords&utm_campaign=NA%20-%20Branded&utm_adgroup=NA%20-%20Branded%20Snowflake%20-%20Data&utm_term=%2Bsnowflake%20%2Bdata&utm_region=NA&gclid=EAIaIQobChMI0vLv6uDA3gIVEFqGCh3aiwMzEAAYASAAEgI72fD_BwE) or Snowflake Reader Accounts, in our case).We transform it there, then move it to Looker, where we have blocks set up that will structure and organize our data.
 
-ウェアハウスの選択肢は Snowflake のみに限りません。[Redshift](https://aws.amazon.com/redshift/)、[Google BigQuery](https://cloud.google.com/bigquery/?utm_source=google&utm_medium=cpc&utm_campaign=na-US-all-en-dr-bkws-all-all-trial-p-dr-1003905&utm_content=text-ad-none-any-DEV_c-CRE_288551384566-ADGP_Hybrid+%7C+AW+SEM+%7C+BKWS+%7C+US+%7C+en+%7C+PHR+~+Big+Data+~+BigQuery+~+google+bigquery-KWID_43700035823403663-kwd-300487425311&utm_term=KW_google%20bigquery-ST_google+bigquery&gclid=EAIaIQobChMIl9OK8uHA3gIVyVmGCh1lFgB-EAAYASAAEgIfWfD_BwE) なども選択できます。
+Snowflake isn't your only warehouse option.You can also choose [Redshift](https://aws.amazon.com/redshift/), [Google BigQuery](https://cloud.google.com/bigquery/?utm_source=google&utm_medium=cpc&utm_campaign=na-US-all-en-dr-bkws-all-all-trial-p-dr-1003905&utm_content=text-ad-none-any-DEV_c-CRE_288551384566-ADGP_Hybrid+%7C+AW+SEM+%7C+BKWS+%7C+US+%7C+en+%7C+PHR+~+Big+Data+~+BigQuery+~+google+bigquery-KWID_43700035823403663-kwd-300487425311&utm_term=KW_google%20bigquery-ST_google+bigquery&gclid=EAIaIQobChMIl9OK8uHA3gIVyVmGCh1lFgB-EAAYASAAEgIfWfD_BwE), and more!
 
 ### Snowflake Reader Accounts
 
-Snowflake Reader Accounts を使用すると、Snowflake アカウントや Snowflake との顧客関係がなくても、[Snowflake Data Sharing]({{site.baseurl}}/partners/snowflake/) と同じデータや機能にアクセスできます。Reader Accounts では、Braze がお客様のデータを作成してアカウントと共有し、またログインしてデータにアクセスするための認証情報を用意します。これにより、すべてのデータ共有と使用量請求は  Braze が完全に処理することになります。 
+Snowflake Reader Accounts offer users access to the same data and functionality as [Snowflake Data Sharing]({{site.baseurl}}/partners/snowflake/), all without requiring a Snowflake account or customer relationship with Snowflake.With Reader Accounts, Braze will create and share your data into an account and provide you credentials to log in and access your data.This will result in all data sharing and usage billing being handled entirely by Braze. 
 
-詳細については、カスタマーサクセスマネージャーにお問い合わせください。
+To learn more, reach out to your customer success manager.
 
-**その他のリソース**<br>
-役立つ使用量監視リソースについては、Snowflake の[リソースモニター](https://docs.snowflake.com/en/user-guide/resource-monitors.html)と[ウェアハウスクレジット使用量の表示](https://docs.snowflake.com/en/user-guide/credits.html#viewing-warehouse-credit-usage-for-your-account)に関する記事を参照してください。
+**Additional resources**<br>
+For helpful usage monitoring resources, check out Snowflake's [Resource Monitors](https://docs.snowflake.com/en/user-guide/resource-monitors.html) and [Viewing Warehouse Credit Usage](https://docs.snowflake.com/en/user-guide/credits.html#viewing-warehouse-credit-usage-for-your-account) articles.
 
-## ステップ 4: BI ツールを使用したデータの操作
+## Step 4:Use a BI tool to manipulate your data
 
-最後に、BI ツールを使用してデータを分析し、[Looker と Looker Blocks](https://www.marketplace.looker.com/) を使用してグラフやその他の視覚ツールなどに変換します。そのため、データが Currents から移動するたびに ETL / ELT を行う必要がありません。
+Finally, we use a BI tool to analyze our data, turn it into charts and other visual tools, and more using [Looker and Looker Blocks](https://www.marketplace.looker.com/) so we don't have to ETL/ELT data every time it moves from Currents.
 
-各ブロックとデータベースを構築する際の使用方法の詳細については、以下のドキュメントを参照してください。
+Check out the following docs to get more information on these and how you can use them to build your database!
 
-- [ユーザー行動ブロック](https://marketplace.looker.com/marketplace/detail/user-behavior-analytics-by-braze?latest&utm_campaign=7012R000000fxfC&utm_source=other&utm_medium=email&utm_content=brazedirectreferral&utm_term=braze_direct)
-- [メッセージエンゲージメントブロック](https://marketplace.looker.com/marketplace/detail/message-engagement-analytics-by-braze?latest&utm_campaign=7012R000000fxfC&utm_source=other&utm_medium=email&utm_content=brazedirectreferral&utm_term=braze_direct)
+- [User Behavior Block](https://marketplace.looker.com/marketplace/detail/user-behavior-analytics-by-braze?latest&utm_campaign=7012R000000fxfC&utm_source=other&utm_medium=email&utm_content=brazedirectreferral&utm_term=braze_direct)
+- [Message Engagement Block](https://marketplace.looker.com/marketplace/detail/message-engagement-analytics-by-braze?latest&utm_campaign=7012R000000fxfC&utm_source=other&utm_medium=email&utm_content=brazedirectreferral&utm_term=braze_direct)
 
 [2]: https://aws.amazon.com/athena/
