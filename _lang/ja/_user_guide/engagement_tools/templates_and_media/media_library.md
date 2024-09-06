@@ -12,10 +12,10 @@ tool: Media
 
 > メディアライブラリを使用すると、アセットを1か所で一元管理できます。 
 
-**メディアライブラリは** [**テンプレート**] にあります。
+**メディアライブラリは** \[**テンプレート**] にあります。
 
 {% alert note %}
-[古いナビゲーションを使用している場合]({{site.baseurl}}/navigation)、このページは [**テンプレートとメディア**] にあります。
+[古いナビゲーションを使用している場合]({{site.baseurl}}/navigation)、このページは \[**テンプレートとメディア**] にあります。
 {% endalert %}
 
 **メディアライブラリ**は次の用途に使用できます。
@@ -30,7 +30,7 @@ tool: Media
 * アップロードする画像またはフォルダーをドラッグ＆ドロップする
 * 画像を削除する
 
-![メディアライブラリページ。ファイルをドラッグ＆ドロップまたはアップロードするための[ライブラリにアップロード]セクションがあります。メディアライブラリにはアップロードされたコンテンツのリストもあります。] [1]
+![メディア・ライブラリーのページには、ファイルをドラッグ・アンド・ドロップまたはアップロードするための "Upload To Library "セクションがある。メディアライブラリーには、アップロードされたコンテンツのリストもある。][1]
 
 {% alert tip %} メディアライブラリの詳細については、[テンプレートとメディアに関するよくある質問]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/faqs)をご覧ください。 {% endalert %}
 
@@ -46,11 +46,11 @@ tool: Media
 
 メディアライブラリにアップロードされるすべての画像は5 MB 未満でなければなりません。サポートされているファイルタイプは PNG、JPEG、および GIF です。メッセージングチャネル別の特定の推奨画像については、次のセクションを参照してください。
 
-### コンテンツカード
+### コンテンツカードによって促進された
 
 {% multi_lang_include image_specs.md variable_name='content cards' %}
 
-### メールアドレス
+### メール
 
 {% multi_lang_include image_specs.md variable_name="email"  %}
 
@@ -60,7 +60,7 @@ tool: Media
 
 詳しくは、[アプリ内メッセージクリエイティブの詳細]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/creative_details/)をご覧ください。
 
-### プッシュ通知
+### プッシュ
 
 {% multi_lang_include image_specs.md variable_name="push notifications"  %}
 
@@ -72,7 +72,7 @@ tool: Media
 
 すべての画像がメディアライブラリに直接アップロードされるため、メディアライブラリはダッシュボードのアセットを一元管理する場所として機能します。これにより、さまざまなメッセージで画像を再利用できます。
 
-![メッセージ作成画面によってメディアライブラリにアクセスする一般的な方法が2つあります。そのうちの1つでは、「画像とGIF」というタイトルの付いたメールドラッグ＆ドロップエディターと「メディアライブラリから追加」ボタンが表示されます。もう1つでは、「メディア」というタイトルと「画像を追加」のボタンが付いたプッシュやアプリ内メッセージなどの標準エディターが表示されます。][1.5]{: style="border:none"}
+![メッセージ作成者によって、メディアライブラリにアクセスする2つの一般的な方法がある。そのうちの1つでは、「画像とGIF」というタイトルの付いたメールドラッグ＆ドロップエディターと「メディアライブラリから追加」ボタンが表示されます。もう一方は、プッシュやアプリ内メッセージなどの標準的なエディターが表示され、「メディア」というタイトルと「画像を追加」というボタンがある。]\[1.5]{: style="border:none"}
 
 ## AI を使用して画像を生成する {#generate-ai}
 
@@ -80,10 +80,10 @@ Braze のサードパーティプロバイダーである OpenAI の AI シス�
 
 1. メディアライブラリから、「<i class="fas fa-wand-magic-sparkles"></i>**AI 画像ジェネレーター**」を選択します。
 2. 生成する画像の説明を最大300文字で入力します。説明が詳細であればあるほど、結果は良くなります。
-3. [**画像を生成**] を選択します。画像が生成されるまでに約1分かかることがあります。
-4. メディアライブラリに追加する画像の [<i class="fas fa-download" title="メディアライブラリに画像を追加"></i>] を選択します。
+3. \[**画像を生成**] を選択します。画像が生成されるまでに約1分かかることがあります。
+4. メディアライブラリに追加する画像の \[<i class="fas fa-download" title="メディアライブラリに画像を追加"></i>] を選択します。
 
-![メディアライブラリの AI 画像ジェネレーターモーダル。][6]{: style="max-width:75%"}
+![メディアライブラリのAIイメージジェネレーターモーダル。][6]{: style="max-width:75%"}
 
 お客様と Braze の間において、DALL·E 2 を使用して生成された画像はお客様の知的財産となります。Braze は、そのような画像の著作権所有権を主張することはなく、AI が生成したコンテンツまたは画像に関していかなる種類の保証も行いません。 
 
@@ -91,7 +91,7 @@ Braze のサードパーティプロバイダーである OpenAI の AI シス�
 
 
 [1]: {% image_buster /assets/img_archive/media_library_main.png %}
-[1.5]: {% image_buster /assets/img_archive/media_library_composers.png %}
+\[1.5] ： {% image_buster /assets/img_archive/media_library_composers.png %}
 [2]: {% image_buster /assets/img_archive/media_library_crop1.png %}
 [3]: {% image_buster /assets/img_archive/media_library_crop2.png %}
 [4]: {{site.baseurl}}/user_guide/engagement_tools/templates_and_media/
