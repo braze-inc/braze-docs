@@ -12,17 +12,17 @@ tool: Reports
 
 guide_featured_title: "セクションの記事"
 guide_featured_list:
-  - name: Home Dashboard
+  - name: ホームダッシュボード
     link: /docs/user_guide/data_and_analytics/analytics/home_dashboard/
-    fa_icon: fas fa-mobile
-  - name: Channel Performance Dashboard
+    image: /assets/img/braze_icons/phone-02.svg
+  - name: チャネルパフォーマンスダッシュボード
     link: /docs/user_guide/data_and_analytics/analytics/email_performance_dashboard/
-    fa_icon: fas fa-chart-line
-  - name: Conversions Dashboard
+    image: /assets/img/braze_icons/line-chart-up-01.svg
+  - name: コンバージョンダッシュボード
     link: /docs/user_guide/data_and_analytics/analytics/conversions_dashboard/
-    fa_icon: fas fa-chart-simple
-  - name: Deliverability Center
+    image: /assets/img/braze_icons/bar-chart-07.svg
+  - name: 配信センター
     link: /docs/user_guide/data_and_analytics/analytics/deliverability_center/
-    fa_icon: fas fa-location-arrow
+    image: /assets/img/braze_icons/navigation-pointer-01.svg
 ---
 <br><br>
