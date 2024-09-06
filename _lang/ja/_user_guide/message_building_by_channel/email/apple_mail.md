@@ -1,22 +1,22 @@
 ---
-nav_title: Apple Mail
-article_title: Apple Mail
+nav_title: アップル・メール
+article_title: アップル・メール
 page_order: 7
 layout: dev_guide
-guide_top_header: "Apple Mail"
-description: "このランディングページには、Brazeのメールキャンペーンを構築する際のApple Mailに関する参考記事が掲載されています。"
-guide_top_text: "Apple Private Relayに関する詳細や、メールプロバイダーの設定方法など、Apple Mailを使用している受信者にメールを送信する際に注意すべき点がいくつかあります。"
+guide_top_header: "アップル・メール"
+description: "このランディングページには、Brazeのメールキャンペーンを構築する際のApple Mailに関する参考記事が掲載されている。"
+guide_top_text: "アップル・プライベート・リレーに関する詳細や、それに応じてメール・プロバイダーを設定する方法など、アップル・メールを使用している受信者にメールを送信する際に注意すべき点がいくつかある。"
 channel:
   - email
 
-guide_featured_title: "セクション記事"
+guide_featured_title: "セクションの記事"
 guide_featured_list:
-- name: Sending Emails to Apple Private Relay
+- name: Appleプライベートリレーにメールを送信する
   link: /docs/user_guide/message_building_by_channel/email/apple_mail/email_private_relay_apple_sso/
-  fa_icon: fa-solid fa-list-check
-- name: Apple Mail Privacy Protection
+  image: /assets/img/braze_icons/list.svg
+- name: アップル・メールのプライバシー保護
   link: /docs/user_guide/message_building_by_channel/email/apple_mail/mpp/
-  fa_icon: fab fa-apple
+  image: /assets/img/braze_icons/apple.svg
 
 ---
 <br><br>
