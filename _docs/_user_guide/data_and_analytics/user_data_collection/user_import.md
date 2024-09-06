@@ -208,7 +208,7 @@ The following data types are accepted in user import:
 
 {% alert important %}
 Arrays, push tokens, and custom event data types are not supported in user import.
-Especially for arrays, commas in your CSV file will be interpreted as a column separator, so any commas in values will cause errors parsing the file.<br><br>To upload these kinds of values, use the [`/users/track` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) or [Cloud Data Ingestion]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/).
+Especially for arrays, commas in your CSV file will be interpreted as a column separator, so any commas in values will cause errors in parsing the file.<br><br>To upload these kinds of values, use the [`/users/track` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) or [Cloud Data Ingestion]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/).
 {% endalert %}
 
 ### Lambda user CSV import

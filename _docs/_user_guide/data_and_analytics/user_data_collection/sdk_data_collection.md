@@ -15,16 +15,16 @@ Braze is designed to allow for flexible data collection, so you can integrate th
 
 - **[Minimum integration](#minimum-integration):** Braze automatically collects data that is necessary to communicate with Braze services.
 - **[Optional data collected by default](#optional-data-collected-by-default):** Braze automatically captures some data that is broadly useful for most of your use cases. You can opt to disable automatically collecting this data if it's non-essential for communication with Braze services.
-- **[Optional data not collected by default](#data-not-collected-by-default):** Braze captures some data that is useful for certain use cases, and doesn't automatically enable the collection for broad compliance reasons. You can opt to collect this data where it suits your use cases.
+- **[Optional data not collected by default](#data-not-collected-by-default):** Braze captures some data that is useful for certain use cases and doesn't automatically enable the collection for broad compliance reasons. You can opt to collect this data where it suits your use cases.
 - **[Personalized integration](#personalized-integration):** Braze gives you the flexibility to collect data in addition to the default optional data.
 
 ## Minimum integration
 
-The following lists the strictly-necessary data generated and received by Braze when you initialize the SDK. This data is non-configurable and is essential in core platform functions. With the exception of session start and session end, all other automatically tracked data doesn't count toward your data point allotment.
+The following lists the strictly necessary data generated and received by Braze when you initialize the SDK. This data is non-configurable and is essential in core platform functions. Except for session start and session end, all other automatically tracked data doesn't count toward your data point allotment.
 
 | Attribute | Platform | Description | Why it's collected |
 | --------- | -------- | ----------- | ------------------ |
-| App-Version-Name /<br> App-Version-Code | Android, iOS, Web | The most recent app version | This attribute is used to send messages related to app version compatibility to the correct devices. It can be used to notify users of service disruption or bugs. |
+| App-Version-Name /<br> App-Version-Code | Android, iOS, Web | The most recent app version | This attribute is used to send messages related to app version compatibility to the correct devices. It can be used to notify users of service disruptions or bugs. |
 | Country | Android, iOS | Country identified by IP address geolocation | This attribute is used to target messages based on location. |
 | Device ID | Android, iOS, Web | Device identifier, a randomly generated string | This attribute is used to differentiate users' devices and send messages to the correct device. |
 | OS and OS version | Android, iOS, Web | Currently reported device or browser and device or browser version | This attribute is used to only send messages to compatible devices. It can also be used within segmentation to target users to upgrade app versions. |
@@ -81,7 +81,7 @@ In addition to the minimum integration data, the following attributes are automa
 | User agent              | Web               | [User agent](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/User-Agent) | This attribute is used to only send messages to compatible devices. It can also be used within segmentation.                                                 |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
-To learn more about tracking device-level properties (such as device wireless carrier, time zone, resolution, and others), see the platform specific documentation: [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/storage/ "Android allowlist documentation"), [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/storage/ "iOS allowlist documentation"), [Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/cookies_and_storage/#device-properties "Web allowlist documentation").
+To learn more about tracking device-level properties (such as device wireless carrier, time zone, resolution, and others), see the platform-specific documentation: [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/storage/ "Android allowlist documentation"), [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/storage/ "iOS allowlist documentation"), [Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/cookies_and_storage/#device-properties "Web allowlist documentation").
 
 ## Data not collected by default
 
