@@ -1,25 +1,25 @@
 ---
-nav_title: CSV レポートを Excel で開く
-article_title: CSV レポートを Excel で開く 
+nav_title: Opening CSV Reports in Excel
+article_title: Opening CSV Reports in Excel 
 page_order: 9
 page_type: reference
-description: "このリファレンス記事では、Excel で CSV エクスポートを開く方法について説明します。"
+description: "This reference article covers how to open CSV exports in Excel."
 
 ---
 
-# CSV エクスポートを Excel で開く
+# Opening CSV exports in Excel
 
-## デフォルトのプログラムとしての Excel の設定
+## Set Excel as the default program
 
-通常、CSV ファイルはデフォルトで自動的に Excel で開きますが、常にそうであるとは限りません。Excel をデフォルトのプログラムとして設定する手順については、[Windows][20] および [Apple ][21]のトラブルシューティングの記事を参照してください。
+While CSV files are usually automatically opened in Excel by default, this may not always be the case.Refer to the [Windows][20] and [Apple][21] troubleshooting articles for steps to set Excel as your default program.
 
-## CSV から XLSX または XLS への変換
+## Converting CSV to XLSX or XLS
 
-CSV から XLSX または XLS に変換する方法、またはデータ値の間のコンマを削除する方法については、CSV を Excel にインポートするための[このガイド][19]を参照してください。
+To convert a CSV to XLSX or XLS, or get rid of the comma between data values, refer to [this guide][19] for importing CSVs into Excel.
 
-## ユーザー ID からの先頭のゼロの欠落
+## Leading zeroes stripped from user IDs
 
-CSV エクスポートのユーザー ID から先頭のゼロが欠落している場合があります。これは、Excel が CSV 内の数値をテキストではなくデータとして扱うために発生します。これを解決するには、[Excel のテキストインポートウィザード][22]を実行します。
+You may sometimes find that leading zeroes are stripped from user IDs in your CSV export.This happens because Excel treats the numbers in a CSV as data instead of text.To resolve this, run the [Excel Text Import Wizard][22].
 
 
 [19]: https://www.ablebits.com/office-addins-blog/convert-csv-excel/#import-csv-wizard
