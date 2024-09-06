@@ -64,7 +64,7 @@ Braze Data Transformation has an AI copilot that asks ChatGPT to help you write 
 {% tabs %}
 {% tab Beginner - POST: Track users %}
 
-Here, you can write transformation code to define how you want to map various webhook values to Braze user profiles.
+Here, write transformation code to define how to map various webhook values to Braze user profiles.
 
 1. New transformations have this default template in the **Transformation Code** section:
     ```
@@ -195,7 +195,7 @@ Your webhook integration is now complete!
 {% endtab %}
 {% tab Advanced - POST: Track users %}
 
-In this step, you will transform the webhook payload from the source platform to a JavaScript object return value. This return value must adhere to Braze’s `/users/track` request body format:
+In this step, you'll transform the webhook payload from the source platform to a JavaScript object return value. This return value must follow the `/users/track` endpoint request body format:
 
 - Transformation code is accepted in the JavaScript programming language. Any standard JavaScript control flow, such as if/else logic, is supported.
 - Transformation code accesses the webhook request body via the `payload` variable. This variable is an object populated by parsing the request body JSON.
@@ -216,19 +216,20 @@ External network requests, third-party libraries, and non-JSON webhooks are not 
 
 ## Step 5: Monitor your transformation
 
-After activating your transformation, refer to the analytics on the main **Transformations** page for a high level view of its performance.
+After activating your transformation, refer to the analytics on the main **Transformations** page for a performance summary.
 
 * **Incoming Requests:** This is the number of webhooks received at this transformation’s URL. If incoming requests are 0, your source platform hasn’t sent over any webhooks, or the connection cannot be made.
 * **Deliveries:** After receiving incoming requests, Data Transformation applies your transformation code to send to your selected Braze destination.
 
 It’s a good goal to have 100% of incoming requests leading to deliveries. The number of deliveries will never exceed the number of incoming requests.
 
-For more detailed monitoring and troubleshooting, refer to the **Logs** page for specific logs. This is where the last 1,000 incoming requests to all transformations across all workspaces are logged. You can click each log to view the incoming request body, transformation output, and response body from the transformation’s destination. You can use these details to troubleshoot any errors.
-
 ### Troubleshooting
 
-- If deliveries are 0, check your transformation code to ensure there are no syntax errors and that it compiles. Then, check whether the output is a valid destination request.
-- If deliveries are less than the number of incoming requests, this indicates that at least some webhooks are delivered successfully. Refer to transformation logs for example errors, and look to see if the transformation output is expected. It’s possible that your transformation code is not accounting for every variation of webhooks received.
+For more detailed monitoring and troubleshooting, refer to the **Logs** page for specific logs, which is where the last 1,000 incoming requests to all transformations across your workspaces are logged. You can select each log to view the incoming request body, transformation output, and response body from the transformation’s destination.
+
+If there are no deliveries, check your transformation code for any syntax errors and confirm that the code compiles. Then, check whether the output is a valid destination request.
+
+Deliveries less than the number of incoming requests indicate that at least some webhooks are delivered successfully. Refer to transformation logs for example errors, and look to see if the transformation output is expected. It’s possible that your transformation code is not accounting for every variation of webhooks received.
 
 
 [4]: {% image_buster /assets/img/data_transformation/data_transformation3.png %}
