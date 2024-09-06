@@ -1,174 +1,174 @@
 ---
-nav_title: レポートビルダー
-article_title: レポートビルダー
+nav_title: Report Builder
+article_title: Report Builder
 alias: /report_builder/
 page_order: 4
 page_type: reference
-description: "このリファレンス記事では、キャンペーンやキャンバスの比較レポートの作成、レポートやチャートの作成など、レポートビルダーを使用してレポートを実行する方法について説明します。"
+description: "This reference article covers how to run a report using the report builder including campaign and Canvas creating comparison reports, and building reports and charts."
 tool: 
   - Reports
 
 ---
 
-# レポートビルダー
+# Report Builder
 
-> レポートビルダーを使用すると、複数のキャンペーンまたはキャンバスの結果を 1 つのビューで比較できるため、主要な指標に最も影響を与えたエンゲージメント戦略を簡単に判断できます。キャンペーンとキャンバスの両方について、データをエクスポートし、レポートを保存して今後表示できます。
+> The Report Builder allows you to compare the results of multiple campaigns or Canvases in a single view so that you can easily determine which engagement strategies most impacted your key metrics.キャンペーンとキャンバスの両方について、データをエクスポートし、レポートを保存して今後表示できます。
 
 ![キャンペーン比較例][5]{: style="max-width:80%;"}
 
 このレポートを使用して、主要なエンゲージメントに関する質問の答えを求めます。以下に例を示します。
 
-- 特定のタグやチャネルについて、パフォーマンスが最も高かったキャンペーンまたはキャンバスはどれですか?
-- マルチバリアントキャンペーンで、コントロールから上昇が最大だったバリアントはどれですか?  
-- 夏のセール、秋のセール、または冬のセールの季節のプロモーションキャンペーンで、購入率が最も高かったものはどれですか?
-- このキャンバス内で開封率が最も高かったプッシュ通知はどれですか?
-- このキャンバスグループで、コンバージョンが最大のステップはどれですか?
-- ウェルカムメールのバージョン 1 やウェルカムメールのバージョン 2 は、エンゲージメントとコンバージョンの向上に結び付きましたか? 変更は良好に機能しましたか?
-- 異なる配信方法 (例えば、スケジュールされたプッシュ 3 つ、アクションベースのプッシュ 3つ、 API トリガープッシュ 3 つ) は、開封率、コンバージョン率、または購入率にどのように影響を与えますか?
-- 離脱ユーザーへのメッセージに関する継続的な改善は、時間の経過とともに KPIs に良い影響を与えましたか?
+- Which were the best performing campaigns or Canvases for a specific tag or channel?
+- Which variants of multivariant campaigns had the most uplift over the control?  
+- Which seasonal promotion campaign led to a higher purchase rate—the summer sale, fall sale, or winter sale?
+- Which push notifications within this Canvas had the highest open rates?
+- Which steps in this group of Canvases had the most conversions?
+- Did Version 1 of a welcome email or Version 2 of a welcome email lead to higher engagement and conversion?Did the changes work?
+- How do different delivery methods (for example, 3 scheduled pushes, 3 action-based pushes, and 3 API-triggered pushes) impact your open rates, conversion rates, or purchase rates?
+- Have the ongoing improvements to lapsing user messages positively impacted your KPIs over time?
 
 {% alert tip %}
-比較するキャンペーンやキャンバス全体で、コンバージョン A、コンバージョン B などに同じコンバージョンイベントを使用するようにしてください。それにより、レポートビルダーのレポートにそれらのコンバージョンを並べることができます。
+Try to use the same conversion events for conversion A, B, etc. across campaigns and Canvases you wish to compare, so that you can line up these conversions in your Report Builder reports.
 {% endalert %}
 
-## レポートの実行
+## Run a report
 
-### ステップ 1: 新規レポートの作成
+### Step 1:Create a new report
 
-ダッシュボード内で、[**分析]** > [**レポートビルダー**] に移動します。
+Within the dashboard, navigate to **Analytics** > **Report Builder**.
 
 {% alert note %}
-[古いナビゲーション]({{site.baseurl}}/navigation)を使用している場合、[**レポートビルダー**] は [**データ]** の下にあります。
+If you are using the [older navigation]({{site.baseurl}}/navigation), you can find **Report Builder** under **Data**.
 {% endalert %}
 
-[**新しいレポートを作成**] をクリックして、キャンペーン比較レポートまたはキャンバス比較レポートのいずれかを選択します。
+Click **Create New Report** and select either a campaign comparison report or a Canvas comparison report.
 
-キャンペーンに関するレポートを実行する場合は、**手動**レポートまたは**自動**レポートを選択できます。レポートには、キャンペーンまたはキャンバスのいずれかを含めることができますが、両方を含めることはできません。過去 6 か月以内に最後にメッセージを送信したキャンペーンおよびキャンバスがすべて、レポートの対象になります。
+If you choose to run a report on campaigns, you can select between a **Manual** or **Automated** report.Reports may contain either campaigns or Canvases, but not both together.過去 6 か月以内に最後にメッセージを送信したキャンペーンおよびキャンバスがすべて、レポートの対象になります。
 
-![キャンペーンダッシュボード][6]{: style="max-width:80%;"}
+![キャンペーン・ダッシュボード][6]{: style="max-width:80%;"}
 
 この 2 つのオプションの違いを以下に示します。
 
-| **アクション** | **手動** | **自動** |
+| **アクション (Action)** | **マニュアル** | **自動化された** |
 | ---- | ---------- | ------------- |
-| **レポートの作成** | フィルターを使用してキャンペーンリストを絞り込み、特定のキャンペーンを除外できます。 | フィルターオプションを使用してキャンペーンリストを絞り込み、レポートを作成します。|
-| **レポートの保存と表示** | レポートを保存できます。次回の表示時に、前回追加したものと同じキャンペーンを表示できます。それらのキャンペーンがまだ「最終送信」フィルターに該当するためです。 | レポートを保存できます。次回の表示時には、現在フィルターに一致するすべてのキャンペーンを含めてレポートが自動的に更新されます。 |
-| **レポートの編集** | [レポートを編集] をクリックして、レポートへのキャンペーンの追加または削除ができます。 | フィルター条件を調整することでレポートを編集できます。 |
+| **建物レポート** | フィルターを使ってキャンペーンリストを絞り込み、特定のキャンペーンにチェックを入れることができる。 | フィルターオプションを使ってキャンペーンリストを絞り込み、レポートを作成する。 |
+| **レポートの保存と閲覧** | レポートを保存することができる。これらのキャンペーンはまだ「最後に送信されたもの」フィルターに該当するため、次に表示するときは、以前に追加したのと同じキャンペーンを表示することができる。 | レポートを保存することができる。次回の閲覧時には、レポートが自動的に更新され、現在フィルターに一致するすべてのキャンペーンが含まれるようになる。 |
+| **編集レポート** | レポートの編集をクリックすると、レポートからキャンペーンを追加または削除できる。 | フィルター基準を調整することで、レポートを編集することができる。 |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 {% alert note %}
-**手動**レポートと**自動**レポートの両方で、レポートに最大 250 件のキャンペーンを含めることができます。
+Both **Manual** and **Automated** reports can include a maximum of 250 campaigns in a report.
 {% endalert %}
 
-キャンバスレポートは手動のキャンペーンレポートと同様に機能し、キャンバスの選択とレポートの更新も手動で行う必要があります。1 つのレポートに最大 5 つのキャンバスを含めることができます。
+Canvas reports work similarly to a manual campaign report in that Canvas selections and report updates must also be done manually.You can include at most five Canvases in one report.
 
-### ステップ 2: 指標の選択
+### Step 2:Choose your metrics
 
-レポートを作成すると、各行にキャンペーンを含む空白のテーブルが表示されます。[**列を編集**] を選択し、追加する指標を選択すると、テーブルにデータが読み込まれます。ここから、[**レポートを実行**] をクリックして指標を生成します。
+Once you've created your report, you'll find a blank table containing campaigns in each row.\[**列を編集**] を選択し、追加する指標を選択すると、テーブルにデータが読み込まれます。
 
-![キャンペーンのオプション][15]{: style="max-width:80%;"}
+![キャンペーン・オプション][15]{: style="max-width:80%;"}
 
-選択した指標がテーブルに読み込まれます。指標の定義については、「[レポート指標の用語集][16]」を参照してください。一部の指標は、キャンペーン比較レポートでのみ使用できます。
+選択した指標がテーブルに読み込まれます。For definitions of these metrics, refer to the [Report Metrics Glossary][16].Some metrics are only available for campaign comparison reports.
 
-また、任意の比率指標または数値指標の**平均**と、任意の数値指標の**合計**の計算を切り替えることもできます。
+You can also toggle calculations for the **Average** of any rate or numerical metric and **Total** for any numerical metric.
 
-### ステップ 3: 期間の選択
+### Step 3:Choose a time period
 
-特定の期間を選択して、レポートのデータを表示できます。特定のキャンペーン、キャンバス、キャンバスバリアント、またはキャンバスコンポーネントに選択した期間のデータがない場合、その行の結果は空白になります。 
+You can select a specific time period to view your report's data for.特定のキャンペーン、キャンバス、キャンバスバリアント、またはキャンバスコンポーネントに選択した期間のデータがない場合、その行の結果は空白になります。 
 
 ![キャンペーンの数値指標][4]{: style="max-width:60%;"}
 
-### ステップ 4: レポートに名前を付けて保存
+### ステップ 4:Name and save your report
 
-レポートを保存する前に、レポートに名前を付けます。レポートに名前を付けずに保存すると、Braze によりデフォルトの名前である「キャンペーン比較レポート」が適用されます。
+Name your report before saving it.レポートに名前を付けずに保存すると、Braze によりデフォルトの名前である「キャンペーン比較レポート」が適用されます。
 
-![キャンペーンの注][7]{: style="max-width:60%;"}
+![キャンペーンノート][7]{: style="max-width:60%;"}
 
-準備ができたら、[**保存**] をクリックします。保存されたレポートは、後で [**レポートビルダー**] ページに表示できます。
+準備ができたら、\[**保存**] をクリックします。Saved reports can be viewed at a later point on the **Report Builder** page.
 
-## 多変量キャンペーンとのキャンペーン比較レポート
+## Campaign comparison report with multivariate campaigns
 
-多変量キャンペーンの場合、キャンペーン名の横にある矢印をクリックして、指標をバリアント別、およびコントロールグループ別に表示できます。バリアントを含む行にはそのバリアントのパフォーマンス結果が含まれ、コントロールを含む行にはコンバージョンイベントの結果のみが含まれます。 
+For any multivariate campaigns, you can view these metrics broken down by your variants and control group by clicking the arrow next to the campaign name.バリアントを含む行にはそのバリアントのパフォーマンス結果が含まれ、コントロールを含む行にはコンバージョンイベントの結果のみが含まれます。 
 
-![キャンペーンの注][3]{: style="float:right;max-width:15%;margin-left:15px;"}
+![キャンペーンノート][3]{: style="float:right;max-width:15%;margin-left:15px;"}
 
-キャンペーン全体の行にある指標には、そのバリアントのパフォーマンスが反映されますが、コントロールのパフォーマンスは含まれません。例えば、キャンペーン全体の 1 次コンバージョンイベント A は、バリアントの 1 次コンバージョンイベント A の合計になり、コントロールの 1 次コンバージョンイベント A は含まれません。
+キャンペーン全体の行にある指標には、そのバリアントのパフォーマンスが反映されますが、コントロールのパフォーマンスは含まれません。For instance, Primary Conversion Event A for your overall campaign will be the sum of the Primary Conversion Event A for your variants, and this will not include the Primary Conversion Event A for your control.
 
 {% alert important %}
-マルチバリアントキャンペーンからバリアントを削除すると、そのバリアントのデータは今後のレポートで使用できなくなります。
+If you delete a variant from a multivariant campaign, the data from that variant will not be available for use in a future report.
 {% endalert %}
 
-## キャンバス比較レポートの内訳
+## Canvas comparison report breakdown
 
-キャンバスレポートでは、キャンバスをバリアント別、ステップ別、メッセージ別に表示できます。
+Within a Canvas report, you can view your Canvases broken down by variant, steps, or message.
 
-### バリアント
+### Variant
 
-[**バリアントごとの内訳**] を選択すると、キャンバス全体の大まかな統計情報と、各バリアントの統計情報が表示されます。これらの統計情報は、キャンバス名の横にある矢印をクリックすると展開できます。
+\[**バリアントごとの内訳**] を選択すると、キャンバス全体の大まかな統計情報と、各バリアントの統計情報が表示されます。これらの統計情報は、キャンバス名の横にある矢印をクリックすると展開できます。
 
-![バリアント][12]{: style="max-width:90%;"}
+![バリエーション][12]{: style="max-width:90%;"}
 
 ### ステップ 
 
-[**ステップごとの内訳**] を選択すると、ステップレベルの指標を表示できます。レポートの各行にステップの行が含まれます。
+\[**ステップごとの内訳**] を選択すると、ステップレベルの指標を表示できます。レポートの各行にステップの行が含まれます。
 
 ![ステップ][13]{: style="max-width:90%;"}
 
 ### メッセージ
 
-ステップレベルの内訳と同様に、[**メッセージごとの内訳**] を選択すると各行にステップ名が表示されます。ただし、[**列を編集**] では、メールクリック数やプッシュ通知の開封数など、チャネル固有の統計情報のようなメッセージレベルの指標にアクセスできます。
+Similar to a step-level breakdown, selecting **breakdown by message** shows the name of steps in each row.ただし、\[**列を編集**] では、メールクリック数やプッシュ通知の開封数など、チャネル固有の統計情報のようなメッセージレベルの指標にアクセスできます。
 
 ![レポート][14]{: style="max-width:90%;"}
 
-なお、Braze ダッシュボードでは、キャンバスレポートの最初の 50 行をプレビューできます。CSV をエクスポートすると、レポート全体にアクセスできます。
+なお、Braze ダッシュボードでは、キャンバスレポートの最初の 50 行をプレビューできます。You can access the full report when you export a CSV.
 
-## 保存したレポートへのアクセス
+## Accessing saved reports
 
-保存した**手動レポート**にアクセスすると、前回追加したものと同じキャンペーンを表示できます。それらのキャンペーンがまだ「最終送信」フィルターに該当するためです。
+When you access a saved **Manual Report**, you will be able to view the same campaigns you previously added, as these campaigns still fall under your "Last Sent" filter.
 
-保存した**自動レポート**にアクセスすると、レポートが自動的に更新され、現在フィルターに一致するすべてのキャンペーンが含まれます。例えば、レポートで「プロモーション」タグを指定したフィルターをキャンペーンに適用した場合、このレポートを表示するたびに、「プロモーション」タグの付いたすべてのキャンペーンを表示できます。これには、このレポートの作成後に作成されたキャンペーンも含まれます。
+When you access a saved **Automatic Report**, the report will automatically update to include all campaigns that currently match your filters.For instance, if your report filtered campaigns with the tag "Promotion," then each time you view this report, you will be able to see all campaigns with the "Promotion" tag, even if these campaigns were created after you made this report.
 
-## レポートの編集
+## Editing reports
 
-**手動レポート**では、[**編集**] をクリックしてレポートを編集できます。それから、レポートに含めるキャンペーンの選択または選択解除ができます。
+In a **Manual Report**, you can edit a report by clicking **Edit**.From there, you can select or deselect campaigns to include in your report.
 
-**自動レポート**では、フィルターを切り替えるだけで、レポートの結果を絞り込むことができます。
+In an **Automatic Report**, simply toggle your filters to narrow down the results in your report.
 
-## レポートのエクスポート
+## Exporting reports
 
-[**エクスポート**] をクリックして、レポートを CSV にダウンロードすることもできます。
+You can also click **Export** to download your report to CSV.
 
-レポートにマルチバリアントキャンペーンが含まれている場合、エクスポートには次の 2 つのCSVファイルが含まれます。 
+If your report contains any multivariant campaigns, your export will include two CSV files: 
 
-- 各キャンペーンのトップレベルの指標のみを含むファイル
-- バリアントレベルの指標を含むファイル
+- One file containing only the top-level metrics for each campaign
+- One file that contains variant-level metrics
 
-バリアントの指標を含むファイルでは、その名前の先頭に `variant_` が付け加えられます。自動レポートを初めてエクスポートするときに、複数ファイルのダウンロードの許可を求めるポップアップが表示されます。[**許可**] をクリックします。
+The file containing variant metrics will have `variant_` appended to the beginning of its name.自動レポートを初めてエクスポートするときに、複数ファイルのダウンロードの許可を求めるポップアップが表示されます。\[**許可**] をクリックします。
 
-![キャンペーンのダウンロード][8]{: style="max-width:60%;"}
+![キャンペーンダウンロード][8]{: style="max-width:60%;"}
 
 ### キャンバス比較レポートのエクスポート
 
-CSV エクスポートには、[**エクスポート**] をクリックしたときに表示していた内訳ビューが反映されます。例えば、ステップレベルの内訳ビューを表示していた場合、エクスポートにはステップ指標のデータが含まれます。別の内訳のデータをエクスポートするには、まずその内訳に移動してから、[**エクスポート**] をクリックする必要があります。
+Your CSV export will reflect whichever breakdown view you were on when you clicked **Export**.For instance, if you were on the step-level breakdown view, your export will contain data on your step metrics.To export data from a different breakdown, you'll need to navigate to that breakdown first, and click **Export** from there.
 
-バリアントの内訳を持つキャンバスレポートをダウンロードすると、次の 2 つの CSV ファイルを受信します。
+If you download a variant breakdown Canvas report, you'll receive two CSV files:
 
-- 各キャンバスのトップレベルの指標のみを含むファイル
-- バリアントレベルの指標を含むファイル
+- One file containing only top-level metrics for each Canvas
+- One file that contains variant-level metrics
 
-## チャートの作成 
+## Building Charts 
 
-レポートで選択した指標を可視化するには、チャートを使用します。チャートは、キャンペーンに関するレポートで、その列に少なくとも 1 つの指標が追加されている場合に使用できます。
+Use charts to visualize a selected metric in your report.チャートは、キャンペーンに関するレポートで、その列に少なくとも 1 つの指標が追加されている場合に使用できます。
 
-![[送信済みメッセージ] 指標が選択されたキャンペーンパフォーマンスのチャート][17]
+![キャンペーン・パフォーマンス・チャート。][17]
 
-デフォルトでは、各レポートのチャートに、レポートの最初の列の指標が表示されます。チャートに表示する別の指標を選択するには、ドロップダウンから指標を選択します。レポートのテーブルにある任意の指標をチャートに表示できます。
+デフォルトでは、各レポートのチャートに、レポートの最初の列の指標が表示されます。To select a different metric to graph, choose your metric from the dropdown.Any metric in your report table will be available to display in your chart.
 
-最大 3 つの指標をチャートに表示できます。すべての指標の単位は同じでなければなりません。例えば、最初のドロップダウンで比率を選択すると、2 番目のドロップダウンでは比率のみが選択可能になります。
+You can graph at most three metrics.The units for all metrics must be the same—for instance, if you choose a rate in the first dropdown, then only rates will be available for selection in the second dropdown.
 
-チャートに 1 つの指標のみが含まれている場合、選択した指標に基づいて降順で最大 30 件のキャンペーンが表示されます。例えば、チャートの指標がメールクリック数の場合、チャートにはクリック数の多いメールキャンペーン 30 件がクリック数の多い順に表示されます。レポートに 30 件を超えるキャンペーンが含まれている場合、上位 30 件のみがチャートに表示されます。複数の指標を選択した場合、最初に選択した指標に基づいて上位 5 件のキャンペーンのみがチャートに表示されます。
+If your chart contains only one metric, then it will display up to 30 campaigns in descending order based on the metric you've selected.For example, if your chart's metric is email clicks, then your chart will display the 30 email campaigns with the most clicks, ordered from most to fewest clicks.If your report contains more than 30 campaigns, only the top 30 will be displayed in the chart.If you select more than one metric, then your graph will only display the top five campaigns based on the first metric selected.
 
-現在、レポートの保存時にチャートは保存されません。
+Charts are currently not saved when you save your report.
 
 
 [3]: {% image_buster /assets/img/campaign_comparison/compare_note.png %}
