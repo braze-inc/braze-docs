@@ -369,7 +369,7 @@ PAYLOADオブジェクトには、external IDまたは他のIDタイプを含め
 各属性を内部的に独自の列に格納する場合は、それらの列を JSON 文字列に変換して、Braze との同期を取り込む必要があります。そのために、次のようなクエリを使用できます。
 
 {% tabs local %}
-Snowflake %}
+{% tab Snowflake %}
 ```json
 CREATE TABLE "EXAMPLE_USER_DATA"
     (attribute_1 string,
@@ -391,7 +391,7 @@ SELECT
     )as PAYLOAD FROM "EXAMPLE_USER_DATA";
 ```
 {% endtab %}
-Redshift %}
+{% tab Redshift %}
 ```json
 CREATE TABLE "EXAMPLE_USER_DATA"
     (attribute_1 string,
@@ -413,7 +413,7 @@ SELECT
     ) as PAYLOAD FROM "EXAMPLE_USER_DATA";
 ```
 {% endtab %}
-BigQuery %}
+{% tab BigQuery %}
 ```json
 CREATE OR REPLACE TABLE BRAZE.EXAMPLE_USER_DATA (attribute_1 string,
      attribute_2 STRING,
@@ -433,7 +433,7 @@ SELECT
   FROM BRAZE.EXAMPLE_USER_DATA;
 ```
 {% endtab %}
-Databricks %}
+{% tab Databricks %}
 ```json
 CREATE OR REPLACE TABLE BRAZE.EXAMPLE_USER_DATA (
     attribute_1 string,
