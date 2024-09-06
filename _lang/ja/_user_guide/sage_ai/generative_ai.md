@@ -1,22 +1,31 @@
 ---
-nav_title: ジェネレーティブAI
-article_title: ジェネレーティブAI
+nav_title: 生成AI
+article_title: 生成AI
 page_order: 20
 layout: dev_guide
-guide_top_header: "ジェネレーティブAI"
-guide_top_text: "BrazeのSage AIは、効率と創造性の向上に役立つさまざまな自動化生成AI機能を強化します。魅力的なクロスチャネルの顧客体験を創出しながら、日常的なコピーライティング作業、コンテンツの改良、画像作成に費やす時間を減らします。<br><br>詳しくは以下の記事をご覧ください。"
-description: "BrazeのSage AIは、効率と創造性の向上に役立つさまざまな自動化生成AI機能を強化します。"
+guide_top_header: "生成AI"
+guide_top_text: "Sage AI by Brazeは、効率性と創造性を高める様々な自動生成AI機能を提供する。定型的なコピーライティング作業、コンテンツの洗練、画像作成に費やす時間を減らしながら、魅力的なクロスチャネル顧客体験を創造する。<br><br>詳しくは以下の記事をご覧いただきたい。"
+description: "Sage AI by Brazeは、効率性と創造性を高める様々な自動生成AI機能を提供する。"
 
-guide_featured_title: "機能"
+guide_featured_title: "特徴"
 guide_featured_list:
-- name: AI Copywriting Assistant
+- name: AIコピーライティング・アシスタント
   link: /docs/user_guide/sage_ai/generative_ai/ai_copywriting/
-  fa_icon: fas fa-edit
-- name: AI Image Generator
+  image: /assets/img/braze_icons/edit-05.svg
+- name: AI画像ジェネレーター
   link: /docs/user_guide/engagement_tools/templates_and_media/media_library/#generate-ai
-  fa_icon: fas fa-wand-magic-sparkles
-- name: AI Content QA
+  image: /assets/img/braze_icons/image-03.svg
+- name: AIコンテンツQA
   link: /docs/user_guide/sage_ai/generative_ai/ai_content_qa/
-  fa_icon: fas fa-list-check
+  image: /assets/img/braze_icons/clipboard-check.svg
+- name: AIリキッド・アシスタント
+  link: /docs/user_guide/sage_ai/generative_ai/ai_liquid/
+  image: /assets/img/braze_icons/beaker-02.svg
+- name: SQLクエリビルダ
+  link: /docs/user_guide/data_and_analytics/query_builder/
+  image: /assets/img/braze_icons/tool-01.svg
+- name: SQLセグメント
+  link: /docs/sql_segments/
+  image: /assets/img/braze_icons/users-01.svg
 
 ---
