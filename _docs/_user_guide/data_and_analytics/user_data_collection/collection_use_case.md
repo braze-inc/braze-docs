@@ -3,24 +3,24 @@ nav_title: Collection Use Case
 article_title: Collection Use Case
 page_order: 3
 page_type: reference
-description: "This reference article covers a user data collection use case: How a ride-sharing app might decide what user data to collect."
+description: "This reference article covers a user data collection use case on how a ride-sharing app might decide what user data to collect."
 
 ---
 
 # Collection use case
 
-> This article covers a user data collection use case: how a ride-sharing app might decide what user data to collect.
+> This article covers a user data collection use case on how a ride-sharing app might decide what user data to collect.
 
-Let's say a taxi or ride-sharing app, called StyleRyde, wants to decide what user data to collect. The following questions and brainstorming process are a great model for their marketing and development teams to follow. By the end of this exercise, both teams should have a solid understanding of what custom events and attributes make sense to collect in order to help meet their goal.
+Let's say a taxi or ride-sharing app, called StyleRyde, wants to decide what user data to collect. The following questions and brainstorming process are a great model for their marketing and development teams to follow. By the end of this exercise, both teams should have a solid understanding of what custom events and attributes make sense to collect to help meet their goal.
 
-## Case question #1: What is the goal?
+## Case question 1: What is the goal?
 
 StyleRyde's goal is straightforward in that they want users to hail taxi rides through their app.
 
-## Case question #2: What are the steps to reach that goal after app installation?
+## Case question 2: What are the steps to reach that goal after app installation?
 
 1. StyleRyde needs users to begin the registration process and fill out their personal information.
-2. StyleRyde needs users omplete and verify the registration process by inputting a code into the app they receive through SMS.
+2. StyleRyde needs users to complete and verify the registration process by inputting a code into the app they receive through SMS.
 3. StyleRyde needs users to attempt to hail a taxi.
 4. StyleRyde needs to be available when users hail a taxi.
 
@@ -38,11 +38,11 @@ After implementing the events, StyleRyde can run campaigns including the followi
 3. Send apologies and promotional credit to users who had Unsuccessful Taxi Hails, that weren't followed by a Successful Taxi Hail within a certain amount of time.
 4. Send promotions to power users with lots of Successful Taxi Hails to thank them for their loyalty.
 
-## Case question #3: What other user information could we collect and use to inform our messaging?
+## Case question 3: What other user information could we collect and use to inform our messaging?
 
 - Whether users have any promotional credit?
 - The average rating users give to their drivers?
-- Unique Promo Codes for users?
+- Unique promo codes for users?
 
 These characteristics could then be tagged as the following custom attributes:
 
@@ -50,7 +50,7 @@ These characteristics could then be tagged as the following custom attributes:
 - Average Driver Rating (Integer Type)
 - Unique Promo Code (String Type)
 
-These attributes give you the opportunity to send campaigns to users such as:
+These attributes allow you to send campaigns to users such as:
 
 1. Reminding users who haven't used the app in seven days and have promotional credit in their account to return to the app and use the credit.
 2. Using our message templates and [personalization features][13] to drag the unique promotion code attribute into messaging directed at users.

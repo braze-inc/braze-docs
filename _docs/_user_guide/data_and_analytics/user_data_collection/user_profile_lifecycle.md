@@ -48,7 +48,7 @@ One of two scenarios can occur when you identify anonymous users:
 
 1) **An anonymous user becomes a new identified user:** <br>If the `external_id` doesn't yet exist in Braze, the anonymous user becomes a new identified user and retains all the same attributes and history of the anonymous user. 
 
-2) **An anonymous user is identified as an already existing user:** <br>If the `external_id` already exists in Braze, then this user was previously identified as a user in the system in some other way, such as through another device (like a tablet) or through imported user data. 
+2) **An anonymous user is identified as an already existing user:** <br>If the `external_id` already exists in Braze, then this user was previously identified as a user in the system in some other way, such as through another device (like a tablet) or imported user data. 
 
 In other words, you already have a user profile for this user. In this instance, Braze will do the following:
 1. Orphan the anonymous user

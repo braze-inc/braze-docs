@@ -11,7 +11,7 @@ description: "The following article helps clarify different methods and best pra
 
 > Knowing when and how to collect user data for known and unknown users can be challenging when envisioning the user profile lifecycle of your customers. This article helps clarify different methods and best practices for collecting new and existing user data by walking you through a use case.
 
-The following example consists of an email collection use case, but the logic applies to many different data collection scenarios. In this example, we assume you have already integrated a sign-up form or way to collect user information. 
+The following example is an email collection use case, but the logic applies to many different data collection scenarios. In this example, we assume you have already integrated a sign-up form or way to collect user information. 
 
 After a user provides information for you to log, we recommend you verify if the data already exists in your database and, when necessary, create a user alias profile or update the existing user profile.
 
@@ -23,8 +23,8 @@ If an unknown user were to view your site and then, at a later date, create an a
 
 When a user enters content through a web form, check if a user with that email already exists within your database. This can be done in one of two ways:
 
-- **Check internal database (recommended)**<br>If you have an external record or database containing the provided user information that exists outside of Braze, reference this at the time of email submission or account creation to confirm the information hasn't already been captured.<br><br>
-- **[`/users/export/id` endpoint]({{site.baseurl}}/api/endpoints/export/user_data/post_users_identifier/)**<br>Run the following call and check if the returned users array is empty or contains a value:
+- **Check internal database (recommended):** If you have an external record or database containing the provided user information that exists outside of Braze, reference this at the time of email submission or account creation to confirm the information hasn't already been captured.<br><br>
+- **[`/users/export/id` endpoint]({{site.baseurl}}/api/endpoints/export/user_data/post_users_identifier/):** Run the following call and check if the returned users array is empty or contains a value:
   ```json
   --data-raw '{
     "email_address": "example@braze.com",
