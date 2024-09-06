@@ -68,7 +68,7 @@ glossaries:
   - name: "Primary Conversions (A) or Primary Conversion Event"
     description: The number of times a defined event occurred after interacting with or viewing a received message from a Braze campaign. This defined event is determined by the marketer when building the campaign.
     calculation: Count
-  - name: "Primary Conversions (A) or Primary Conversion Event"
+  - name: "Primary Conversions (A) % or Primary Conversion Event Rate"
     description: The percentage of times a defined event occurred after interacting with or viewing a received message from a Braze campaign. This defined event is determined by the marketer when building the campaign.
     calculation: "Primary Conversions / Unique Recipients"
   - name: "Confidence"
