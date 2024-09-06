@@ -18,6 +18,7 @@ After creating a [catalog]({{site.baseurl}}/user_guide/personalization_and_dynam
 ## Things to know
 
 - You can create up to 30 selections per catalog.
+- You can add up to four filters per selection.
 - Selections are great for refining recommendations from Braze catalog data. If you're looking for inspiration, check out [About item recommendations]({{site.baseurl}}/user_guide/sage_ai/recommendations/about_item_recommendations/) for example use cases.
 
 ## Creating a selection
