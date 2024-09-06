@@ -15,7 +15,7 @@ Brazeは、\[Baidu Cloud Push][14].なお、Baidu Cloud Pushを利用する**場
 
 百度アカウントを作成するには、[百度ポータルに][7]アクセスし、**登录**（ログイン）をクリックすると、ログインまたは新しいアカウントを作成するためのダイアログが表示される。
 
-
+![][33]
 
 新しいアカウントを作成するには、ログインダイアログの一番下にある**立即注册**（新しいアカウント）をクリックする。
 
@@ -29,37 +29,37 @@ Brazeは、\[Baidu Cloud Push][14].なお、Baidu Cloud Pushを利用する**場
 
 次に、百度の開発者として登録しなければならない。まず、\[Baidu developer portal][36] ] にアクセスし、**注册**(create new developer account) を選択して登録を開始する。
 
-
+![][37]
 
 登録ページで、アカウントの種類（個人用には个人、ビジネス用には公司）と開発者の種類を選択する（ほとんどの場合、開発者があらかじめ選択されており、正しい）。氏名、略歴、電話番号（カッコ内に国番号を含む）を入力する（例：(1)xxxxxxxxxx）。**发送**验证码（認証コードを送信）をクリックし、次の行に認証コードを入力する。次の2つのフィールド、開発者のウェブサイトと開発者のロゴは任意である。使用許諾契約に同意し、**提交**（submit）をクリックして送信する。これでBaiduの開発者アカウントを取得したことになる。
 
-
+![][13]
 
 ## ステップ 3:百度にアプリケーションを登録する
 
 百度にアプリケーションを登録するには、\[百度プロジェクトポータル][11] ]にアクセスし、**创建**工程（プロジェクトの作成）をクリックする。
 
-
+![][10]
 
 次のページで、アプリケーション名を入力する。次の2つのチェックボックスは、百度の追加サービスを有効にするためのものである。ほとんどの場合、これらは空白のままでよい。
 
-
+![][26]
 
 アプリケーションをセットアップすると、APIキーを含むアプリケーションに関する情報を表示するコンソールが表示される。次に、サイドバーの「**云**推送（クラウドプッシュ）」に移動する。次のページで、**推送设置**（プッシュを設定する）をクリックする。
 
+![][14]
 
-
-
+![][29]
 
 次のページで、アプリのパッケージ名（例えば、`com.braze.sample` ）を入力し、メッセージをキャッシュするかどうか、キャッシュする場合はその期間（時間単位）を指定する。これは、バイドゥに対して、オフラインのユーザーへのメッセージ送信をいつまで継続するかを示すものである。**保存设置**（設定を保存する）をクリックして保存する。
 
-
+![][39]
 
 ## ステップ 4:アプリケーションに百度を追加する
 
 Baidu push SDK portal][40] ] にアクセスし、最新のBaidu Cloud Push Android SDKをダウンロードする。
 
-
+![][41]
 
 SDKの中には、プッシュ・サービスのjarとプラットフォーム固有のネイティブ・ライブラリがある。これらをプロジェクトに組み込む。あなたのアプリが、百度が現在サポートしているSDKの最高バージョンをターゲットにしていることを確認する。このドキュメントは、Baidu Cloud push Android SDK バージョン`4.6.2.38` のものである。
 
@@ -143,14 +143,14 @@ PushManager.startWork(getApplicationContext(), PushConstants.LOGIN_TYPE_API_KEY,
 Braze.getInstance(context).setRegisteredPushToken(channelId);
 ```
 
-
+{% endtab %}
 {% tab KOTLIN %}
 
 ```kotlin
 Braze.getInstance(context).setRegisteredPushToken(channelId)
 ```
 
-
+{% endtab %}
 {% endtabs %}
 
 ## ステップ 5: プッシュオープンを登録する
@@ -176,7 +176,7 @@ Baiduは、JSON形式のプッシュ・メッセージで余分なキー・バ�
   BrazeNotificationUtils.logBaiduNotificationClick(mApplicationContext, customContentString);
   ```
 
-
+{% endtab %}
 {% tab KOTLIN %}
 
 ```kotlin
@@ -184,7 +184,7 @@ val customContentString = intent.getStringExtra(ChinaPushMessageReceiver.NOTIFIC
 BrazeNotificationUtils.logBaiduNotificationClick(context, customContentString)
 ```
 
-
+{% endtab %}
 {% endtabs %}
 
 ## ステップ 6: エクストラ
@@ -203,7 +203,7 @@ try {
 }
 ```
 
-
+{% endtab %}
 {% tab KOTLIN %}
 
 ```kotlin
@@ -215,7 +215,7 @@ try {
 }
 ```
 
-
+{% endtab %}
 {% endtabs %}
 
 ## ステップ 7:百度キーを設定する
@@ -235,22 +235,22 @@ BrazeダッシュボードにBaidu API KeyとBaidu Secret Keyを入力する必�
 - \[バイドゥ統合ドキュメント][43]
 
 [7]: https://www.baidu.com/
-
+[10]: {% image_buster /assets/img_archive/baidu_project.png %}
 [11]: http://developer.baidu.com/console#app/project
-
-
-
+[13]: {% image_buster /assets/img_archive/baidu_dev_reg.png %}
+[14]: {% image_buster /assets/img_archive/baidu_app_console.png %}
+[17]: {% image_buster /assets/img_archive/baidu_signup.png %}
 [19]: {% image_buster /assets/img_archive/baidu_api_key.png %} 「APIKey」である。
-
-
-
-
-
+[26]: {% image_buster /assets/img_archive/baidu_app_name.png %}
+[29]: {% image_buster /assets/img_archive/baidu_continue.png %}
+[33]: {% image_buster /assets/img_archive/baidu_portal.png %}
+[34]: {% image_buster /assets/img_archive/baidu_email.png %}
+[35]: {% image_buster /assets/img_archive/baidu_text.png %}
 [36]: http://developer.baidu.com/
-
-
-
+[37]: {% image_buster /assets/img_archive/baidu_dev_portal.png %}
+[38]: {% image_buster /assets/img_archive/baidu_login_dialog.png %}
+[39]: {% image_buster /assets/img_archive/baidu_configure_cloud.png %}
 [40]: http://developer.baidu.com/wiki/index.php?title=docs/cplat/push/sdk/clientsdk
-
+[41]: {% image_buster /assets/img_archive/baidu_sdk.png %}
 [43]: http://developer.baidu.com/wiki/index.php?title=docs/frontia/guide-android/overview
 [44]: http://developer.android.com/reference/android/content/Intent.html
