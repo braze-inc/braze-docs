@@ -3,7 +3,7 @@ nav_title: "プッシュ通知の種類"
 article_title: プッシュ通知の種類
 page_order: 1
 page_type: glossary
-description: "この用語集には、Braze を使用して送信できるさまざまな種類のプッシュ通知がリストされています。"
+description: "この用語集には、Brazeで送信できるプッシュ通知の種類が記載されている。"
 channel: push
 
 layout: glossary_page
@@ -20,64 +20,64 @@ glossary_tags:
   - name: Web
 
 glossaries:
-  - name: "Regular Push"
-    description: "The all-encompassing Push message. These appear on your user's device with a notification sound and message which slides in or appears in a notification bar or stack."
+  - name: "レギュラープッシュ"
+    description: "包括的なプッシュ・メッセージだ。これらは、通知音とメッセージとともにユーザーのデバイスに表示され、通知バーやスタックにスライド表示される。"
     tags:
       - iOS
       - Android
       - Web
-  - name: "Web Push"
-    description: "These push messages appear in Web Apps or Browsers. They still require permission to reach the customer. Note that Web Push does not work if the user is using a hidden browser."
+  - name: "ウェブプッシュ"
+    description: "これらのプッシュメッセージは、ウェブアプリやブラウザに表示される。それでも、顧客と接触するには許可が必要だ。ユーザーが非表示のブラウザーを使用している場合、ウェブ・プッシュは機能しないことに注意。"
     tags:
       - Web
-  - name: "Push Primer Campaigns"
-    description: "In-app message campaigns used to gain explicit push opt-in or opt-out signal from users. Through the primer, you can avoid sending notifications to users that are likely to turn off push through the device settings. For iOS, push campaigns are relevant as foreground push notifications (such as notifications that wake up the device) are not enabled until a user explicitly opts into iOS' native push prompt."
-    tags:
-      - iOS
-      - Android
-      - Web
-  - name: "Push Stories"
-    description: "Push Stories are immersive messages that take your user through a visual journey in the form of a carousel. These are available for mobile devices only."
-    tags:
-      - iOS
-      - Android
-  - name: "Push with Action Buttons"
-    description: "Push with action buttons are messages that allow you to provide options to your users and offer several calls to action."
+  - name: "プッシュプライマーキャンペーン"
+    description: "アプリ内メッセージキャンペーンは、ユーザーから明示的なプッシュオプトインまたはオプトアウトのシグナルを得るために使用される。プライマーを通じて、デバイスの設定でプッシュをオフにしている可能性の高いユーザーへの通知送信を避けることができる。iOSの場合、フォアグラウンド・プッシュ通知（デバイスをスリープ解除する通知など）は、ユーザーが明示的にiOSのネイティブ・プッシュ・プロンプトをオプトインするまで有効にならないため、プッシュ・キャンペーンが関連する。"
     tags:
       - iOS
       - Android
       - Web
-  - name: "Rich Push Notifications"
-    description: "Rich Push Notifications are notifications with immersive images and creative content that can expand beyond a simple icon and call to action text."
+  - name: "プッシュ通知ストーリー"
+    description: "プッシュストーリーは、カルーセルの形でユーザーを視覚的な旅に誘う没入型のメッセージだ。これらはモバイル機器でのみ利用できる。"
     tags:
       - iOS
       - Android
-  - name: "Silent Push Notification"
-    description: "A push notification that does not wake up the device when rendering on the device. Instead, the notification will be stored in the device's notification tray."
-    tags:
-      - iOS
-      - Android
-  - name: "Provisional Push Notifications for iOS"
-    description: "Introduced by Apple in iOS 12, provisional authorization automatically occurs on install for iOS apps, allowing brands to send silent notifications without displaying a push prompt to users. When the silent push is sent and viewed in the device's notification tray, users will be given the option to allow or discontinue push notifications."
-    tags:
-      - iOS
-  - name: "HTML Push Notifications"
-    description: "HTML Push Notifications are push messages that are hard coded in HTML and do not use the pre-set push templates that Braze provides. Having the option to create HTML push notifications allows your company to have full creative freedom and consistent branding when it comes to how you want these push messages to look."
-    tags:
-      - Android
-  - name: "Notification IDs & Channel IDs"
-    description: "Notification IDs and Channel IDs allow you to replace or update push notifications already received, but not opened, by the user."
-    tags:
-      - iOS
-      - Android
-  - name: "Background Push Notifications"
-    description: "Push notifications that are not rendered for the device. Usually used to send packets of information down to the app for background processes and uninstall tracking. A Background-enabled push token is required for background push to be sent."
+  - name: "アクションボタンで押す"
+    description: "プッシュ・ウィズ・アクション・ボタンは、ユーザーに選択肢を提供し、いくつかの行動を呼びかけることができるメッセージだ。"
     tags:
       - iOS
       - Android
       - Web
-  - name: "Wearable Push Notifications"
-    description: "These push notifications allow brands to send messages directly to wearable devices like the Apple Watch."
+  - name: "リッチなプッシュ通知"
+    description: "リッチプッシュ通知とは、単純なアイコンと行動喚起のテキストだけでなく、没入感のある画像やクリエイティブなコンテンツを含む通知である。"
+    tags:
+      - iOS
+      - Android
+  - name: "サイレント・プッシュ通知"
+    description: "デバイス上でレンダリングする際、デバイスをスリープ解除しないプッシュ通知。代わりに、通知はデバイスの通知トレイに保存される。"
+    tags:
+      - iOS
+      - Android
+  - name: "iOS向け暫定プッシュ通知"
+    description: "iOS12でアップルによって導入された仮承認は、iOSアプリのインストール時に自動的に発生し、ブランドはユーザーにプッシュプロンプトを表示することなくサイレント通知を送ることができる。サイレント・プッシュが送信され、デバイスの通知トレイに表示されると、ユーザーにはプッシュ通知を許可または中止するオプションが与えられる。"
+    tags:
+      - iOS
+  - name: "HTML プッシュ通知"
+    description: "HTMLプッシュ通知は、HTMLでハードコーディングされたプッシュメッセージで、Brazeが提供するあらかじめ設定されたプッシュテンプレートを使用しない。HTMLプッシュ通知を作成するオプションがあることで、プッシュメッセージをどのように見せるかに関して、御社は完全な創造的自由と一貫したブランディングを持つことができる。"
+    tags:
+      - Android
+  - name: "通知IDとチャンネルID"
+    description: "Notification IDとChannel IDは、ユーザーが既に受信したが開いていないプッシュ通知を置き換えたり更新したりすることを可能にする。"
+    tags:
+      - iOS
+      - Android
+  - name: "バックグラウンド・プッシュ通知"
+    description: "デバイス用にレンダリングされていないプッシュ通知。通常、バックグラウンド・プロセスやアンインストール追跡のために、アプリに情報のパケットを送るために使われる。バックグラウンド・プッシュを送信するには、バックグラウンド対応プッシュ・トークンが必要である。"
+    tags:
+      - iOS
+      - Android
+      - Web
+  - name: "ウェアラブル・プッシュ通知"
+    description: "これらのプッシュ通知によって、ブランドはApple Watchのようなウェアラブル端末に直接メッセージを送ることができる。"
     tags:
       - iOS
 
