@@ -1,16 +1,16 @@
 ---
 nav_title: AI Liquid Assistant
 article_title: AI Liquid Assistant
-description: "This article will cover how Sage AI Liquid Assistant works and how you can use it to generate Liquid snippets for your messaging."
+description: "This article will cover how BrazeAI Liquid Assistant works and how you can use it to generate Liquid snippets for your messaging."
 page_type: reference
 page_order: 5
 ---
 
 # AI Liquid assistant
 
-> The Sage AI Liquid Assistant is a chat assistant powered by Sage AI that helps generate the Liquid you need to personalize message content. 
+> The BrazeAI Liquid Assistant is a chat assistant powered by BrazeAI that helps generate the Liquid you need to personalize message content. 
 
-With the AI Liquid Assistant, you can generate Liquid from templates, receive personalized Liquid suggestions, and optimize existing Liquid with the support of Sage AI. The AI Liquid Assistant also provides annotations explaining the Liquid used, so you can increase your understanding of Liquid and learn to write your own.
+With the AI Liquid Assistant, you can generate Liquid from templates, receive personalized Liquid suggestions, and optimize existing Liquid with the support of BrazeAI. The AI Liquid Assistant also provides annotations explaining the Liquid used, so you can increase your understanding of Liquid and learn to write your own.
 
 {% alert important %}
 The AI Liquid Assistant is currently in beta for a limited number of customers who actively use the push and SMS channels. If you're interested in being considered for the beta, reach out to your customer success manager.

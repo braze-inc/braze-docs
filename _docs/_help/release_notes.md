@@ -253,7 +253,7 @@ Previoulsy, you could find and merge duplicate users in Braze individually or in
 
 {% multi_lang_include release_type.md release="Beta" %}
 
-The Sage AI Liquid Assistant is a chat assistant powered by Sage AI that helps generate the Liquid you need to personalize message content. You can generate Liquid from templates, receive personalized Liquid suggestions, and optimize existing Liquid with the support of Sage AI. The AI Liquid Assistant also provides annotations explaining the Liquid used, so you can increase your understanding of Liquid and learn to write your own.
+The BrazeAI Liquid Assistant is a chat assistant powered by BrazeAI that helps generate the Liquid you need to personalize message content. You can generate Liquid from templates, receive personalized Liquid suggestions, and optimize existing Liquid with the support of BrazeAI. The AI Liquid Assistant also provides annotations explaining the Liquid used, so you can increase your understanding of Liquid and learn to write your own.
 
 To get started, see [AI Liquid assistant]({{site.baseurl}}/user_guide/sage_ai/generative_ai/ai_liquid).
  
@@ -588,13 +588,13 @@ Now you can remote start your live activities on iOS using the [`/messages/live_
 
 {% multi_lang_include release_type.md release="Early access" %}
 
-With Sage AI by Braze, you can now calculate the most popular products or create personalized AI recommendations for a specific catalog. For more information, see [About item recommendations]({{site.baseurl}}/user_guide/sage_ai/recommendations/about_item_recommendations/).
+With BrazeAI, you can now calculate the most popular products or create personalized AI recommendations for a specific catalog. For more information, see [About item recommendations]({{site.baseurl}}/user_guide/sage_ai/recommendations/about_item_recommendations/).
 
 #### QA in-app message content
 
 {% multi_lang_include release_type.md release="General availability" %}
 
-Previously, you could perform quality assurance on your SMS and push notification content using Sage AI in the Braze dashboard. Now, you can [QA in-app message content]({{site.baseurl}}/user_guide/sage_ai/generative_ai/ai_content_qa/) too.
+Previously, you could perform quality assurance on your SMS and push notification content using BrazeAI in the Braze dashboard. Now, you can [QA in-app message content]({{site.baseurl}}/user_guide/sage_ai/generative_ai/ai_content_qa/) too.
 
 ### New Braze partnerships
 

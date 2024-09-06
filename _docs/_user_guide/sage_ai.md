@@ -1,12 +1,12 @@
 ---
-nav_title: Sage AI by Braze
-article_title: Sage AI by Braze
+nav_title: BrazeAI
+article_title: BrazeAI
 page_order: 6.5
 layout: dev_guide
 search_rank: 12
-guide_top_header: "Sage AI by Braze"
-guide_top_text: "Sage is an acronym for Start Anywhere Go Everywhere. Sage AI by Braze powers a collection of accessible, easy-to-use tools that lower the barriers to entry for creativity, personalization and optimization for your engagement strategy. With Sage AI by Braze capabilities, you can have a trusted advisor to help guide your creativity, make better decisions, and optimize the user experience for your customers."
-description: "Sage AI by Braze powers a collection of accessible, easy-to-use tools that lower the barriers to entry for creativity, personalization and optimization for your engagement strategy."
+guide_top_header: "BrazeAI"
+guide_top_text: "BrazeAI powers a collection of accessible, easy-to-use tools that lower the barriers to entry for creativity, personalization and optimization for your engagement strategy. With BrazeAI capabilities, you can have a trusted advisor to help guide your creativity, make better decisions, and optimize the user experience for your customers."
+description: "BrazeAI powers a collection of accessible, easy-to-use tools that lower the barriers to entry for creativity, personalization and optimization for your engagement strategy."
 
 Tool:
   - Dashboard
@@ -14,7 +14,7 @@ Tool:
 guide_featured_title: "Features"
 guide_featured_list:
 - name: Intelligence Suite
-  link: /docs/user_guide/sage_ai/intelligence
+  link: /docs/user_guide/sage_ai/intelligence/
   image: /assets/img/braze_icons/clock.svg
 - name: Predictive Suite
   link: /docs/user_guide/sage_ai/predictive_suite/
