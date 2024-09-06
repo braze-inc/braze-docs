@@ -5,31 +5,75 @@ page_order: 10
 layout: dev_guide
 search_rank: 12
 guide_top_header: "Intelligence Suite"
-guide_top_text: "Braze Intelligence Suiteは、データに基づく洞察で意思決定の自動化を支援します。配信時間から多変量テストまで、ブランドはこれらのツールや機能を使用して、スケールで最適化されたダイナミックなクロスチャネル体験を作成することができます。 <br> <br> インテリジェンス・スイートは、3つの主要機能で構成されています：インテリジェント・タイミング、インテリジェント・チャンネル、インテリジェント・セレクション。"
-description: "Braze Intelligence Suiteは、データに基づく洞察で意思決定の自動化を支援します。配信時間から多変量テストまで、ブランドはこれらのツールや機能を使用して、スケールで最適化されたダイナミックなクロスチャネル体験を作成することができます。"
+guide_top_text: "Braze Intelligence Suiteは、データに基づく洞察で意思決定の自動化を支援する。配信時間から多変量テストに至るまで、ブランドはこれらのツールや機能を使用して、スケールで最適化されたダイナミックなクロスチャネル体験を作り出すことができる。<br> <br> インテリジェンス・スイートは3つの主要機能で構成されている：インテリジェント・タイミング、インテリジェント・チャンネル、インテリジェント・セレクションだ。"
+description: "Braze Intelligence Suiteは、データに基づく洞察で意思決定の自動化を支援する。配信時間から多変量テストに至るまで、ブランドはこれらのツールや機能を使用して、スケールで最適化されたダイナミックなクロスチャネル体験を作り出すことができる。"
 
 Tool:
   - Dashboard
 
 guide_featured_title: "ツールと機能"
 guide_featured_list:
-- name: Intelligent Timing
+- name: インテリジェントタイミング
   link: /docs/user_guide/sage_ai/intelligence/intelligent_timing/
-  image: /assets/img/icons/clock.svg
-- name: Intelligent Channel
+  image: /assets/img/braze_icons/clock.svg
+- name: インテリジェントチャネル
   link: /docs/user_guide/sage_ai/intelligence/intelligent_channel/
-  image: /assets/img/icons/mail_open.svg
-- name: Intelligent Selection
+  image: /assets/img/braze_icons/mail-04.svg
+- name: インテリジェントセレクション
   link: /docs/user_guide/sage_ai/intelligence/intelligent_selection/
-  image: /assets/img/icons/loyalty_heart.svg
+  image: /assets/img/braze_icons/hearts.svg
 
 guide_menu_title: "Additional resources"
 guide_menu_list:
-- name: Intelligence FAQ
+- name: インテリジェンスFAQ
   link: /docs/user_guide/sage_ai/intelligence/faqs/
-  image: /assets/img/icons/question.svg
+  image: /assets/img/braze_icons/annotation-question.svg
 
 
 ---
 
-<br>
+## ユースケース
+
+インテリジェンス・スイートは、ユーザー履歴やキャンペーン、キャンバスのパフォーマンスを分析し、エンゲージメント、視聴率、コンバージョンを高めるための自動調整を行う強力な機能を提供する。これらの機能がさまざまな業界にどのようなメリットをもたらすかについては、以下の使用例を参照されたい。
+
+### e コマース
+
+- **フラッシュセールだ：**[インテリジェント・チャネル・フィルターを使って]({{site.baseurl}}/user_guide/sage_ai/intelligence/intelligent_channel/)ユーザー履歴を調査し、プッシュ通知とEメールの反応が高いユーザーを特定し、それぞれのユーザーにプッシュ通知とEメールを送信する。オプションとして、好みのチャネルを決定するのに十分なデータがないユーザーのために、特定のチャネルを選択する。
+- **プロモーション用バナー：**[インテリジェントセレクションを]({{site.baseurl}}/user_guide/sage_ai/intelligence/intelligent_selection/)使用して、定期的なキャンペーンにおけるさまざまなプロモーションバナーのパフォーマンスを分析し、最も高いクリックスルー率を生み出すバナーを自動的に選択して送信する。
+
+### 旅行
+
+- **パッケージを提供する：**インテリジェントセレクションを使用して、繰り返しキャンバスでさまざまな旅行パッケージのオファーをテストし、キャンバスのトラフィックを最もパフォーマンスの高いバリアントに徐々にシフトさせることで、より高い予約率を促進する。
+- **お得な旅行情報：**インテリジェント・チャネル・フィルターを使用して、EメールやSMSなど、ユーザーの最もアクティブなチャネルを通じてパーソナライズされた旅行情報を送信し、ユーザーがメッセージングに参加する可能性を最大限に高める。
+
+### エンターテイメント
+
+- **新コンテンツのプロモーション：**[インテリジェント・タイミングを使って]({{site.baseurl}}/user_guide/sage_ai/intelligence/intelligent_timing/)、ユーザーがメッセージを開く可能性が最も高い時に、新しい映画、番組、音楽、その他のタイプのコンテンツに関する通知を送る。
+- **ゲーム内で購入する：**インテリジェントセレクションを使用して、ゲーム内購入のためのさまざまなプロモーションメッセージをテストし、最も高いコンバージョン率を生み出すものを自動的に選択する。
+
+### クイックサービスレストラン
+
+サンドイッチ・エンペラーというファストフード店で、期間限定の新メニュー「ロイヤル・ロースト」を作っているとしよう。Intelligence Suiteの2つの機能を使って、キャンバスにパーソナライズされたプロモーションを送る。
+
+#### 通知を送るタイミングにインテリジェント・タイミングを使う
+
+私たちは、インテリジェント・タイミングを使って、私たちのアプリと各メッセージング・チャネルに対するユーザーの過去のインタラクションを分析し、各ユーザーにロイヤル・ローストを宣伝する最適なタイミングを自動的に選択する。午後にプロモーションを受け取るユーザーもいれば、夕方に受け取るユーザーもいるだろう。 
+
+分析するのに十分な過去のインタラクションがないユーザーのために、フォールバック・タイムを提供する。
+
+![メッセージステップのインテリジェントタイミング配信設定。][1]
+
+#### インテリジェント・セレクションを使ってプロモーションを選択する
+
+実際の販促メッセージについては、Intelligent Selectionを使って、ロイヤル・ロースト用の3種類のメッセージ（プッシュ通知、Eメール、SMS）をテストする。インテリジェント・セレクションは、すべてのプロモーション・メッセージのパフォーマンスを1日2回分析し、最もパフォーマンスの高いメッセージを徐々に多く送り、その他のメッセージは少なくしていく。
+
+インテリジェント・セレクションは、十分なデータを収集し、最もパフォーマンスの高いメッセージを決定した後、今後送信するメッセージの100%にそのメッセージを使用する。
+
+![インテリジェントセレクションを有効にしたキャンバスのA/Bテストセクション。][3]
+
+#### キャンバスを立ち上げる
+
+インテリジェント・タイミングとインテリジェント・セレクションの両方により、ロイヤル・ロースト・プロモーションはタイミングとメッセージングが最適化されるように設定されている。キャンバスを立ち上げ、ユーザーの好みに合わせてセンドが変化していくのを見ることができる。
+
+[1]: {% image_buster /assets/img/intelligence_suite1.png %}
+[3]: {% image_buster /assets/img/intelligent_selection_canvas.png %}
