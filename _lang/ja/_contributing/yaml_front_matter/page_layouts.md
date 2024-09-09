@@ -48,7 +48,7 @@ page_layout: PAGE\_LAYOUT\_VALUE
 
 ### 特集ページ
 
-`featured` 値は、機能するページ形式を適用するために使用されます。次の例では、この形式が[Predictive Events]({{site.baseurl}}/user_guide/brazeai/predictive_suite/predictive_events) ページに適用されます。
+`featured` 値は、機能するページ形式を適用するために使用されます。次の例では、この形式が[Predictive Events]({{site.baseurl}}/user_guide/sage_ai/predictive_suite/predictive_events) ページに適用されます。
 
 {% tabs local %}
 {% tab example output %}

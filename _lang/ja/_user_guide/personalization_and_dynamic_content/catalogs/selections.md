@@ -18,7 +18,7 @@ description: "この参考記事では、Brazeのキャンペーンでデータ�
 ## 知っておくべきこと
 
 - カタログ1冊につき30セレクションまで作成できる。
-- セレクションは、ブレイズのカタログデータからおすすめを絞り込むのに最適だ。インスピレーションを得たいのであれば、使用例として[「About item recommendations」を]({{site.baseurl}}/user_guide/brazeai/recommendations/about_item_recommendations/)チェックしてほしい。
+- セレクションは、ブレイズのカタログデータからおすすめを絞り込むのに最適だ。インスピレーションを得たいのであれば、使用例として[「About item recommendations」を]({{site.baseurl}}/user_guide/sage_ai/recommendations/about_item_recommendations/)チェックしてほしい。
 
 ## セレクションを作成する
 

@@ -80,7 +80,7 @@ Braze のキャンペーンの詳細については、以下の追加リソー�
 <sup>\*\*アドオン機能として利用できます。*</sup>
 
 {% alert tip %}
-ほとんどのチャネル (メール、SMS、プッシュ) で送信できる短くて緊急のメッセージについては、[インテリジェントチャネル]({{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_channel/)フィルターを利用して、各ユーザーに最適なチャネルを介してメッセージを自動的に送信します。
+ほとんどのチャネル (メール、SMS、プッシュ) で送信できる短くて緊急のメッセージについては、[インテリジェントチャネル]({{site.baseurl}}/user_guide/sage_ai/intelligence/intelligent_channel/)フィルターを利用して、各ユーザーに最適なチャネルを介してメッセージを自動的に送信します。
 {% endalert %}
 
 [1]: {% image_buster /assets/img/getting_started/channels.png %}

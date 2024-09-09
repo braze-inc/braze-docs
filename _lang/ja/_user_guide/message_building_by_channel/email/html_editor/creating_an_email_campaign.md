@@ -262,7 +262,7 @@ Braze では、キャンペーンを受信した後、ユーザーが指定の�
 - 特定のカスタムイベントを実行する
 - メールを開く
 
-ユーザーが指定されたアクションを取った場合、コンバージョンがカウントされる最大30日間のウィンドウを許可することができる。Brazeはキャンペーンの開封とクリックを自動的に追跡するが、[インテリジェントセレクションを]({{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_selection/)活用するために、ユーザーがメールアドレスを開封またはクリックしたときにコンバージョンイベントを設定したい場合がある。
+ユーザーが指定されたアクションを取った場合、コンバージョンがカウントされる最大30日間のウィンドウを許可することができる。Brazeはキャンペーンの開封とクリックを自動的に追跡するが、[インテリジェントセレクションを]({{site.baseurl}}/user_guide/sage_ai/intelligence/intelligent_selection/)活用するために、ユーザーがメールアドレスを開封またはクリックしたときにコンバージョンイベントを設定したい場合がある。
 {% endtab %}
 
 {% tab キャンバス %}
@@ -280,12 +280,12 @@ Braze では、キャンペーンを受信した後、ユーザーが指定の�
 [5]: {% image_buster /assets/img_archive/targetsegment_email_new.png %}
 [6]: {% image_buster /assets/img_archive/confirm_email.png %}
 [10]: {{site.baseurl}}/user_guide/message_building_by_channel/email/creating_an_email_template/#creating-an-email-template
-[13]: {{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_selection/
+[13]: {{site.baseurl}}/user_guide/sage_ai/intelligence/intelligent_selection/
 [14]: {% image_buster /assets/img/email.png %}
 [15]: {% image_buster /assets/img_archive/newEmailTest.png %}
 [16]: {{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices/guidelines_and_tips/#email-size
 [18]: {{site.baseurl}}/user_guide/message_building_by_channel/email/templates/html_email_template/
 [19]: {% image_buster /assets/img_archive/new_campaign_email.png %}
 [20]: {{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/tags/
-[21]: {{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_timing/
+[21]: {{site.baseurl}}/user_guide/sage_ai/intelligence/intelligent_timing/
 [22]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/conversion_events/

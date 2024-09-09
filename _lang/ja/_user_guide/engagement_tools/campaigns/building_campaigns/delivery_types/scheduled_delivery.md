@@ -59,7 +59,7 @@ tool: Campaigns
 インテリジェントタイミングのキャンペーンは、ニュース速報や時間指定されたアナウンスに適していない場合など、配信時間に関して柔軟性がある 1 回限りの繰り返しメッセージに最適です。
 
 [3]: {% image_buster /assets/img_archive/time_based.png %}
-[8]: {{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_timing/
+[8]: {{site.baseurl}}/user_guide/sage_ai/intelligence/intelligent_timing/
 [9]: {% image_buster /assets/img_archive/schedule_designated.png %}
 [10]: {% image_buster /assets/img_archive/schedule_immediately.png %}
 [14]: {% image_buster /assets/img_archive/schedule_intelligent.png %}

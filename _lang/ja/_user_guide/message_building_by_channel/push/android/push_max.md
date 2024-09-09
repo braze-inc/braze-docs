@@ -67,7 +67,7 @@ Xiaomi、OPPO、およびVivoのような中国のOrigin al Equipment Manufactur
 
 ### インテリジェントタイミング
 
-Max を押してください。[インテリジェントタイミング]({{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_timing/) がオンのときに最適です。インテリジェントタイミングでは、ユーザーがアプリを使用している可能性が最も高く、プッシュが配信される可能性が最も高い時点で、プッシュ通知を計算して送信できます。
+Max を押してください。[インテリジェントタイミング]({{site.baseurl}}/user_guide/sage_ai/intelligence/intelligent_timing/) がオンのときに最適です。インテリジェントタイミングでは、ユーザーがアプリを使用している可能性が最も高く、プッシュが配信される可能性が最も高い時点で、プッシュ通知を計算して送信できます。
 
 ### 生存時間(TTL)
 

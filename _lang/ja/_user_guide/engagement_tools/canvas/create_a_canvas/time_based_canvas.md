@@ -61,7 +61,7 @@ description: "この記事では、キャンバスの定義、タイムゾーン
 
 | 定義 | タイムゾーン |
 | ---------- | ----- |
-| [インテリジェント・タイミングは]({{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_timing/)、ユーザーの過去のメッセージング（チャネル毎）やアプリとのインタラクションの統計分析に基づいて、最適な送信時間を計算する。 | [フォールバックとして]({{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_timing/#fallback-options) **特定の時間を**選択した場合、これはユーザーの現地時間で送信される。 |
+| [インテリジェント・タイミングは]({{site.baseurl}}/user_guide/sage_ai/intelligence/intelligent_timing/)、ユーザーの過去のメッセージング（チャネル毎）やアプリとのインタラクションの統計分析に基づいて、最適な送信時間を計算する。 | [フォールバックとして]({{site.baseurl}}/user_guide/sage_ai/intelligence/intelligent_timing/#fallback-options) **特定の時間を**選択した場合、これはユーザーの現地時間で送信される。 |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ![][5]

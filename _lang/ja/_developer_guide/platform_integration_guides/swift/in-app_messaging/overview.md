@@ -89,7 +89,7 @@ Braze は現在、以下のアプリ内メッセージタイプをデフォル�
 
 [`Control`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/inappmessage/control-swift.struct) アプリ内メッセージはUIコンポーネントを含まず、主に分析目的で使用される。このタイプは、コントロールグループに送信されたアプリ内メッセージの受信を確認するために使用される。
 
-インテリジェント・セレクションおよびコントロール・グループの詳細については、[インテリジェント・セレクションを]({{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_selection/)参照のこと。
+インテリジェント・セレクションおよびコントロール・グループの詳細については、[インテリジェント・セレクションを]({{site.baseurl}}/user_guide/sage_ai/intelligence/intelligent_selection/)参照のこと。
 
 {% endtab %}
 {% endtabs %}

@@ -145,7 +145,7 @@ Shopifyでは、[値下げや]({{site.baseurl}}/user_guide/personalization_and_d
 
 BrazeAI Liquid AssistantはBrazeAIを搭載したチャットアシスタントで、メッセージ内容をパーソナライズするために必要なLiquidの生成をサポートする。テンプレートからリキッドを生成し、パーソナライズされたリキッドの提案を受け、セージAIのサポートで既存のリキッドを最適化することができる。AIリキッド・アシスタントは、使用されているリキッドを説明する注釈も提供するので、リキッドへの理解を深め、自分で書けるようになる。
 
-まずは、[AIリキッド・アシスタントを]({{site.baseurl}}/user_guide/brazeai/generative_ai/ai_liquid)参照のこと。
+まずは、[AIリキッド・アシスタントを]({{site.baseurl}}/user_guide/sage_ai/generative_ai/ai_liquid)参照のこと。
  
 ### SDK
  
@@ -311,7 +311,7 @@ Brazeのダッシュボードでは、キャンバスがステータスごとに
 
 {% multi_lang_include release_type.md release="一般的な可用性" %}
 
-AIコピーライティングアシスタントが生成するコピーのスタイルを、ブランドの声に合わせてカスタマイズするための[ブランドガイドラインを]({{site.baseurl}}/user_guide/brazeai/generative_ai/ai_copywriting/brand_guidelines/)作成し、適用できるようになった。シナリオごとに複数のガイドラインを設定し、常に文脈に合ったトーンになるようにする。
+AIコピーライティングアシスタントが生成するコピーのスタイルを、ブランドの声に合わせてカスタマイズするための[ブランドガイドラインを]({{site.baseurl}}/user_guide/sage_ai/generative_ai/ai_copywriting/brand_guidelines/)作成し、適用できるようになった。シナリオごとに複数のガイドラインを設定し、常に文脈に合ったトーンになるようにする。
  
 ### 新しいブレイズ・パートナーシップ
 
@@ -478,13 +478,13 @@ Expo with React Nativeを使ってリッチなプッシュ通知とプッシュ�
 
 {% multi_lang_include release_type.md release="早期アクセス" %}
 
-BrazeAI by Brazeを使えば、最も人気のある商品を計算したり、特定のカタログに対してパーソナライズされたAIレコメンデーションを作成したりすることができる。詳しくは、[アイテムの推奨についてを]({{site.baseurl}}/user_guide/brazeai/recommendations/about_item_recommendations/)参照のこと。
+BrazeAI by Brazeを使えば、最も人気のある商品を計算したり、特定のカタログに対してパーソナライズされたAIレコメンデーションを作成したりすることができる。詳しくは、[アイテムの推奨についてを]({{site.baseurl}}/user_guide/sage_ai/recommendations/about_item_recommendations/)参照のこと。
 
 #### アプリ内メッセージの内容をQAする
 
 {% multi_lang_include release_type.md release="一般的な可用性" %}
 
-以前は、BrazeのダッシュボードでBrazeAIを使ってSMSやプッシュ通知のコンテンツの品質保証を行うことができた。[アプリ内メッセージの内容もQA]({{site.baseurl}}/user_guide/brazeai/generative_ai/ai_content_qa/)できるようになった。
+以前は、BrazeのダッシュボードでBrazeAIを使ってSMSやプッシュ通知のコンテンツの品質保証を行うことができた。[アプリ内メッセージの内容もQA]({{site.baseurl}}/user_guide/sage_ai/generative_ai/ai_content_qa/)できるようになった。
 
 ### 新しいブレイズ・パートナーシップ
 
@@ -532,7 +532,7 @@ Brazeダッシュボードで、**アーカイブされたコンテンツを表�
 
 #### AIコピーライティングのためのトーンコントロール
 
-AIコピーライティングアシスタントで生成されるコピーのスタイルを決定するために、[メッセージトーンを]({{site.baseurl}}/user_guide/brazeai/generative_ai/ai_copywriting/#steps)選択できるようになった。
+AIコピーライティングアシスタントで生成されるコピーのスタイルを決定するために、[メッセージトーンを]({{site.baseurl}}/user_guide/sage_ai/generative_ai/ai_copywriting/#steps)選択できるようになった。
 
 ### ロバスト・チャンネル
 

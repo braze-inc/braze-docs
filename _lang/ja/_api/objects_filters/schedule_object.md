@@ -43,4 +43,4 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 メッセージスケジューリングエンドポイント応答には、メッセージのディスパッチを参照できるように、メッセージの `dispatch_id` が含まれます。`dispatch_id` は、メッセージディスパッチの ID です (Braze から送信される「送信」ごとに固有の ID）。
 
-[33]: {{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_timing/
+[33]: {{site.baseurl}}/user_guide/sage_ai/intelligence/intelligent_timing/
