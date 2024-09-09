@@ -86,6 +86,6 @@ Braze.getInstance(context).subscribeToPushNotificationEvents { event ->
 With notification action buttons, `BRAZE_PUSH_INTENT_NOTIFICATION_OPENED` intents fire when buttons with `opens app` or `deep link` actions are clicked. Deep link and extras handling remains the same. Buttons with `close` actions don't fire `BRAZE_PUSH_INTENT_NOTIFICATION_OPENED` intents and dismiss the notification automatically.
 {% endalert %}
 
-{% alert tip %}
-If you want your push notification listener to be triggered upon clicking on a notification while in the terminated state, you should create your listener in `Application.onCreate`. This will ensure that the listener is set up prior to processing the push click.
+{% alert important %}
+Create your push notification listener in `Application.onCreate` to ensure your listener is trigger after an end-user taps a notification while your app is in a terminated state.
 {% endalert %}
