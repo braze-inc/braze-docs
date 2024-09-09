@@ -478,13 +478,13 @@ Expo with React Nativeを使ってリッチなプッシュ通知とプッシュ�
 
 {% multi_lang_include release_type.md release="早期アクセス" %}
 
-Sage AI by Brazeを使えば、最も人気のある商品を計算したり、特定のカタログに対してパーソナライズされたAIレコメンデーションを作成したりすることができる。詳しくは、[アイテムの推奨についてを]({{site.baseurl}}/user_guide/sage_ai/recommendations/about_item_recommendations/)参照のこと。
+BrazeAI by Brazeを使えば、最も人気のある商品を計算したり、特定のカタログに対してパーソナライズされたAIレコメンデーションを作成したりすることができる。詳しくは、[アイテムの推奨についてを]({{site.baseurl}}/user_guide/sage_ai/recommendations/about_item_recommendations/)参照のこと。
 
 #### アプリ内メッセージの内容をQAする
 
 {% multi_lang_include release_type.md release="一般的な可用性" %}
 
-以前は、BrazeのダッシュボードでSage AIを使ってSMSやプッシュ通知のコンテンツの品質保証を行うことができた。[アプリ内メッセージの内容もQA]({{site.baseurl}}/user_guide/sage_ai/generative_ai/ai_content_qa/)できるようになった。
+以前は、BrazeのダッシュボードでBrazeAIを使ってSMSやプッシュ通知のコンテンツの品質保証を行うことができた。[アプリ内メッセージの内容もQA]({{site.baseurl}}/user_guide/sage_ai/generative_ai/ai_content_qa/)できるようになった。
 
 ### 新しいブレイズ・パートナーシップ
 
