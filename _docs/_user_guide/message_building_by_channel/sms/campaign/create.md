@@ -76,9 +76,9 @@ Need help creating awesome copy? Try using the [AI copywriting assistant]({{site
 
 ![Launch AI Copywriter button, located in the Message field of the SMS composer.]({% image_buster /assets/img/ai_copywriter/ai_copywriter_sms.png %}){: style="max-width:60%"}
 
-### Contact Cards
+### Contact cards
 
-If desired, you can add a Contact Card to your SMS message to make it easy for your customers to add your business and contact information to their contacts. You can assign common properties to these cards, such as your company's name, phone number, address, email, and a small photo. Check out [Contact Cards]({{site.baseurl}}/user_guide/message_building_by_channel/sms/mms/contact_card/) to learn more.
+If desired, you can add a contact card to your SMS message to make it easy for your customers to add your business and contact information to their contacts. You can assign common properties to these cards, such as your company's name, phone number, address, email, and a small photo. Check out [Contact cards]({{site.baseurl}}/user_guide/message_building_by_channel/sms/mms/contact_card/) to learn more.
 
 ## Step 3: Preview and test your message
 
