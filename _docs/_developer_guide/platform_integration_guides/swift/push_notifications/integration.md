@@ -363,7 +363,7 @@ When using the automatic push integration, `subscribeToUpdates(_:)` is the only 
 {% endalert %}
 
 {% alert tip %}
-Create your push notification subscription in `application(_:didFinishLaunchingWithOptions:)` to ensure your subscription is trigger after an end-user taps a notification while your app is in a terminated state.
+Create your push notification subscription in `application(_:didFinishLaunchingWithOptions:)` to ensure your subscription is triggered after an end-user taps a notification while your app is in a terminated state.
 {% endalert %}
 
 ## Testing {#push-testing}

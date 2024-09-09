@@ -87,5 +87,5 @@ With notification action buttons, `BRAZE_PUSH_INTENT_NOTIFICATION_OPENED` intent
 {% endalert %}
 
 {% alert important %}
-Create your push notification listener in `Application.onCreate` to ensure your listener is trigger after an end-user taps a notification while your app is in a terminated state.
+Create your push notification listener in `Application.onCreate` to ensure your listener is triggered after an end-user taps a notification while your app is in a terminated state.
 {% endalert %}
