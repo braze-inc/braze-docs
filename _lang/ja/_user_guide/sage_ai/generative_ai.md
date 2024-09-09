@@ -4,8 +4,8 @@ article_title: 生成AI
 page_order: 20
 layout: dev_guide
 guide_top_header: "生成AI"
-guide_top_text: "BrazeAI by Brazeは、効率性と創造性を高める様々な自動生成AI機能を提供する。定型的なコピーライティング作業、コンテンツの洗練、画像作成に費やす時間を減らしながら、魅力的なクロスチャネル顧客体験を創造する。<br><br>詳しくは以下の記事をご覧いただきたい。"
-description: "BrazeAI by Brazeは、効率性と創造性を高める様々な自動生成AI機能を提供する。"
+guide_top_text: "Sage AI by Brazeは、効率性と創造性を高める様々な自動生成AI機能を提供する。定型的なコピーライティング作業、コンテンツの洗練、画像作成に費やす時間を減らしながら、魅力的なクロスチャネル顧客体験を創造する。<br><br>詳しくは以下の記事をご覧いただきたい。"
+description: "Sage AI by Brazeは、効率性と創造性を高める様々な自動生成AI機能を提供する。"
 
 guide_featured_title: "特徴"
 guide_featured_list:

@@ -5,8 +5,8 @@ page_order: 6.5
 layout: dev_guide
 search_rank: 12
 guide_top_header: "セージAI by ブレイズ"
-guide_top_text: "Sageとは、Start Anywhere Go Everywhereの頭文字をとったものだ。BrazeAI by Brazeは、クリエイティビティ、パーソナライゼーション、エンゲージメント戦略の最適化のための参入障壁を下げる、アクセスしやすく使いやすいツールのコレクションを提供する。BrazeAI by Brazeの機能を使えば、創造性を導き、より良い決断を下し、顧客のユーザー体験を最適化するための信頼できるアドバイザーを持つことができる。"
-description: "BrazeAI by Brazeは、クリエイティビティ、パーソナライゼーション、エンゲージメント戦略の最適化のための参入障壁を下げる、アクセスしやすく使いやすいツールのコレクションを提供する。"
+guide_top_text: "Sageとは、Start Anywhere Go Everywhereの頭文字をとったものだ。Sage AI by Brazeは、クリエイティビティ、パーソナライゼーション、エンゲージメント戦略の最適化のための参入障壁を下げる、アクセスしやすく使いやすいツールのコレクションを提供する。Sage AI by Brazeの機能を使えば、創造性を導き、より良い決断を下し、顧客のユーザー体験を最適化するための信頼できるアドバイザーを持つことができる。"
+description: "Sage AI by Brazeは、クリエイティビティ、パーソナライゼーション、エンゲージメント戦略の最適化のための参入障壁を下げる、アクセスしやすく使いやすいツールのコレクションを提供する。"
 
 Tool:
   - Dashboard
