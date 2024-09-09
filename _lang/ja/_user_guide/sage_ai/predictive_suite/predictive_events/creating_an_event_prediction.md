@@ -8,7 +8,7 @@ description: "この記事では、Brazeダッシュボード内でイベント�
 
 # イベント予測の作成
 
-> 予測は、訓練された機械学習モデルの1つのインスタンスと、それが使用するすべてのパラメーターおよびデータです。予測イベントの詳細については、[予測イベントの概要]({{site.baseurl}}/user_guide/sage_ai/predictive_suite/predictive_events)を参照してください。
+> 予測は、訓練された機械学習モデルの1つのインスタンスと、それが使用するすべてのパラメーターおよびデータです。予測イベントの詳細については、[予測イベントの概要]({{site.baseurl}}/user_guide/brazeai/predictive_suite/predictive_events)を参照してください。
 
 Brazeで、**分析** > **予測イベント**に移動します。
 

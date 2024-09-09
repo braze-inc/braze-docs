@@ -17,7 +17,7 @@ To generate copy using the AI copywriting assistant, follow these steps:
    * In the drag-and-drop editor for in-app messages, select a text block and select <i class="fa-solid fa-wand-magic-sparkles" title="AI Copywriter"></i> in the block's toolbar.
 2. Enter a product name or description in the input field.
 3. Select an approximate output length. You can choose a specific channel for an output length based on channel-specific best practices or select between short (1 sentence), medium (2-3 sentences), or long (1 paragraph). 
-4. (Optional) Create or apply a brand guideline to tailor this copy to your brand. These guidelines are saved in your workspace and reusable after they are created. For more information, see [Creating brand guidelines]({{site.baseurl}}/user_guide/sage_ai/generative_ai/ai_copywriting/brand_guidelines/).
+4. (Optional) Create or apply a brand guideline to tailor this copy to your brand. These guidelines are saved in your workspace and reusable after they are created. For more information, see [Creating brand guidelines]({{site.baseurl}}/user_guide/brazeai/generative_ai/ai_copywriting/brand_guidelines/).
 5. (Optional) Choose a message tone from the available options. This will determine the style of the copy generated.
 6. (Optional) Available for push notifications: Select **Reference past campaign data** to use your previous mobile push messages (campaigns and Canvas steps) as a stylistic reference for generating new copy. When selected, the output will mimic the style of your previous messages.
 7. Select the output language. This can be different from your input language.
@@ -35,7 +35,7 @@ We filter out responses for offensive content that violates OpenAI's [content po
 
 When using push as your output length, if you select **Reference past campaign data**, randomly selected previous mobile push campaigns will be sent to OpenAI so that GPT can use it as a basis for its copy generation. Leave this box unchecked if you do not want to leverage this ability. See the following sections for more information on how Braze and OpenAI use your data. 
 
-If used in conjunction with a [brand guideline]({{site.baseurl}}/user_guide/sage_ai/generative_ai/ai_copywriting/brand_guidelines/), both the brand guideline and the past campaign data will be incorporated into the final output.
+If used in conjunction with a [brand guideline]({{site.baseurl}}/user_guide/brazeai/generative_ai/ai_copywriting/brand_guidelines/), both the brand guideline and the past campaign data will be incorporated into the final output.
 
 ## What is GPT?
 

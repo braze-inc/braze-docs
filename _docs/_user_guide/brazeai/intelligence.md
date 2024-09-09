@@ -38,8 +38,8 @@ The Intelligence Suite provides powerful features to analyze user history and ca
 
 ### Ecommerce
 
-- **Flash sales:** Use the [Intelligent Channel filter]({{site.baseurl}}/user_guide/sage_ai/intelligence/intelligent_channel/) to study user history to identify the users who are more responsive to push notifications versus emails, then send push notifications and emails to the respective users. Optionally, select a specific channel for users who don't have enough data to determine their preferred channel.
-- **Promotional banners:** Use [Intelligent Selection]({{site.baseurl}}/user_guide/sage_ai/intelligence/intelligent_selection/) to analyze the performance of different promotional banners in a recurring campaign, then automatically select and send the banner that generates the highest click-through rates.
+- **Flash sales:** Use the [Intelligent Channel filter]({{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_channel/) to study user history to identify the users who are more responsive to push notifications versus emails, then send push notifications and emails to the respective users. Optionally, select a specific channel for users who don't have enough data to determine their preferred channel.
+- **Promotional banners:** Use [Intelligent Selection]({{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_selection/) to analyze the performance of different promotional banners in a recurring campaign, then automatically select and send the banner that generates the highest click-through rates.
 
 ### Travel
 
@@ -48,7 +48,7 @@ The Intelligence Suite provides powerful features to analyze user history and ca
 
 ### Entertainment
 
-- **New content promotion:** Use [Intelligent Timing]({{site.baseurl}}/user_guide/sage_ai/intelligence/intelligent_timing/) to send notifications about new movies, shows, music, and other types of content when users are most likely to open your messaging.
+- **New content promotion:** Use [Intelligent Timing]({{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_timing/) to send notifications about new movies, shows, music, and other types of content when users are most likely to open your messaging.
 - **In-game purchases:** Use Intelligent Selection to test different promotional messages for in-game purchases and automatically select the one that generates the highest conversion rates.
 
 ### Quick service restaurant

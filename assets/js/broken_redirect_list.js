@@ -853,6 +853,33 @@ validurls['/docs/user_guide/data_and_analytics/user_data_collection/cloud_ingest
 validurls['/docs/user_guide/message_building_by_channel/content_cards/customize'] = '/docs/developer_guide/customization_guides/content_cards/creating_custom_content_cards/';
 validurls['/docs/user_guide/data_and_analytics/user_data_collection/user_archival/'] = '/docs/user_archival/';
 
+validurls['/docs/user_guide/sage_ai/'] = '/docs/user_guide/brazeai/';
+validurls['/docs/user_guide/sage_ai/predictive_suite/'] = '/docs/user_guide/brazeai/predictive_suite/';
+validurls['/docs/user_guide/sage_ai/predictive_suite/predictive_churn'] = '/docs/user_guide/brazeai/predictive_suite/predictive_churn';
+validurls['/docs/user_guide/sage_ai/predictive_suite/predictive_churn/creating_a_churn_prediction/'] = '/docs/user_guide/brazeai/predictive_suite/predictive_churn/creating_a_churn_prediction';
+validurls['/docs/user_guide/sage_ai/predictive_suite/predictive_churn/prediction_analytics/'] = '/docs/user_guide/brazeai/predictive_suite/predictive_churn/prediction_analytics';
+validurls['/docs/user_guide/sage_ai/predictive_suite/predictive_churn/prediction_analytics/prediction_quality/'] = '/docs/user_guide/brazeai/predictive_suite/predictive_churn/prediction_analytics/prediction_quality/';
+validurls['/docs/user_guide/sage_ai/predictive_suite/predictive_churn/messaging_users/'] = '/docs/user_guide/brazeai/predictive_suite/predictive_churn/messaging_users/';
+validurls['/docs/user_guide/sage_ai/predictive_suite/predictive_churn/prediction_faq/'] = '/docs/user_guide/brazeai/predictive_suite/predictive_churn/prediction_faq/';
+validurls['/docs/user_guide/sage_ai/predictive_suite/predictive_events/'] = '/docs/user_guide/brazeai/predictive_suite/predictive_events/';
+validurls['/docs/user_guide/sage_ai/predictive_suite/predictive_events/creating_an_event_prediction/'] = '/docs/user_guide/brazeai/predictive_suite/predictive_events/creating_an_event_prediction';
+validurls['/docs/user_guide/sage_ai/predictive_suite/predictive_events/prediction_analytics/'] = '/docs/user_guide/brazeai/predictive_suite/predictive_events/prediction_analytics/';
+validurls['/docs/user_guide/sage_ai/predictive_suite/predictive_events/messaging_users/'] = '/docs/user_guide/brazeai/predictive_suite/predictive_events/messaging_users/';
+validurls['/docs/user_guide/sage_ai/intelligence/'] = '/docs/user_guide/brazeai/intelligence/';
+validurls['/docs/user_guide/sage_ai/intelligence/intelligent_channel/'] = '/docs/user_guide/brazeai/intelligence/intelligent_channel/';
+validurls['/docs/user_guide/sage_ai/intelligence/intelligent_selection/'] = '/docs/user_guide/brazeai/intelligence/intelligent_selection/';
+validurls['/docs/user_guide/sage_ai/intelligence/intelligent_timing/'] = '/docs/user_guide/brazeai/intelligence/intelligent_timing/';
+validurls['/docs/user_guide/sage_ai/intelligence/faqs'] = '/docs/user_guide/brazeai/intelligence/faqs';
+validurls['/docs/user_guide/sage_ai/recommendations/'] = '/docs/user_guide/brazeai/recommendations/';
+validurls['/docs/user_guide/sage_ai/recommendations/about_item_recommendations/'] = '/docs/user_guide/brazeai/recommendations/about_item_recommendations/';
+validurls['/docs/user_guide/sage_ai/recommendations/ai_item_recommendations/'] = '/docs/user_guide/brazeai/recommendations/ai_item_recommendations/';
+validurls['/docs/user_guide/sage_ai/recommendations/rules_based_recommendations/'] = '/docs/user_guide/brazeai/recommendations/rules_based_recommendations/';
+validurls['/docs/user_guide/sage_ai/generative_ai'] = '/docs/user_guide/brazeai/generative_ai/';
+validurls['/docs/user_guide/sage_ai/generative_ai/ai_copywriting/'] = '/docs/user_guide/brazeai/generative_ai/ai_copywriting/';
+validurls['/docs/user_guide/sage_ai/generative_ai/ai_copywriting/brand_guidelines/'] = '/docs/user_guide/brazeai/generative_ai/ai_copywriting/brand_guidelines/';
+validurls['/docs/user_guide/sage_ai/generative_ai/ai_liquid/'] = '/docs/user_guide/brazeai/generative_ai/ai_liquid/';
+validurls['/docs/user_guide/sage_ai/generative_ai/ai_content_qa/'] = '/docs/user_guide/brazeai/generative_ai/ai_content_qa/';
+
 validurls['/docs/user_guide/predictive_suite'] = '/docs/user_guide/sage_ai/predictive_suite/';
 validurls['/docs/user_guide/predictive_suite/predictive_churn'] = '/docs/user_guide/sage_ai/predictive_suite/predictive_churn/';
 validurls['/docs/user_guide/predictive_suite/predictive_churn/creating_a_churn_prediction/'] = '/docs/user_guide/sage_ai/predictive_suite/predictive_churn/creating_a_churn_prediction/';

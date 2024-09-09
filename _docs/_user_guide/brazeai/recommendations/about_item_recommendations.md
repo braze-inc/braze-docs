@@ -109,7 +109,7 @@ Predict and recommend the items a user is most likely to purchase next, based on
 4. (Optional) Add a selection to filter your recommendation to only relevant items.
 5. Choose how you currently track purchase events and the corresponding event property.
 6. Train the recommendation.
-7. [Use the recommendation in messaging]({{site.baseurl}}/user_guide/sage_ai/recommendations/ai_item_recommendations/#using-recommendations-in-messaging).
+7. [Use the recommendation in messaging]({{site.baseurl}}/user_guide/brazeai/recommendations/ai_item_recommendations/#using-recommendations-in-messaging).
 
 {% enddetails %}
 
@@ -133,7 +133,7 @@ Remind users of their interest in items that they recently added to their cart, 
 4. (Optional) Add a selection to filter your recommendation to only relevant items.
 5. Choose **Custom Event** and select your custom event for added to cart from the list.
 6. Train the recommendation.
-7. [Use the recommendation in messaging]({{site.baseurl}}/user_guide/sage_ai/recommendations/ai_item_recommendations/#using-recommendations-in-messaging).
+7. [Use the recommendation in messaging]({{site.baseurl}}/user_guide/brazeai/recommendations/ai_item_recommendations/#using-recommendations-in-messaging).
 
 {% enddetails %}
 
@@ -157,7 +157,7 @@ Encourage users to explore items that they’ve recently liked or items that are
 4. (Optional) Add a selection to filter your recommendation to only relevant items.
 5. Choose **Custom Event** and select your custom event for likes from the list.
 6. Train the recommendation.
-7. [Use the recommendation in messaging]({{site.baseurl}}/user_guide/sage_ai/recommendations/ai_item_recommendations/#using-recommendations-in-messaging).
+7. [Use the recommendation in messaging]({{site.baseurl}}/user_guide/brazeai/recommendations/ai_item_recommendations/#using-recommendations-in-messaging).
 
 {% enddetails %}
 
@@ -181,7 +181,7 @@ Encourage users to explore popular items in your catalog based on purchases. To 
 4. (Optional) Add a selection to filter your recommendation to only relevant items. For example, the food delivery service might have a selection to filter for restaurant location or type of dish.
 5. Choose how you currently track events and the corresponding event property.
 6. Train the recommendation.
-7. [Use the recommendation in messaging]({{site.baseurl}}/user_guide/sage_ai/recommendations/ai_item_recommendations/#using-recommendations-in-messaging).
+7. [Use the recommendation in messaging]({{site.baseurl}}/user_guide/brazeai/recommendations/ai_item_recommendations/#using-recommendations-in-messaging).
 
 {% enddetails %}
 
@@ -205,7 +205,7 @@ Highlight items that have gained attention across your user base through views t
 4. (Optional) Add a selection to filter your recommendation to only relevant items.
 5. Choose **Custom Event** and select your custom event for views from the list.
 6. Train the recommendation.
-7. [Use the recommendation in messaging]({{site.baseurl}}/user_guide/sage_ai/recommendations/ai_item_recommendations/#using-recommendations-in-messaging).
+7. [Use the recommendation in messaging]({{site.baseurl}}/user_guide/brazeai/recommendations/ai_item_recommendations/#using-recommendations-in-messaging).
 
 {% enddetails %}
 
@@ -254,7 +254,7 @@ For example, a fashion retailer could promote clothes and accessories that are t
 4. (Optional) Add a selection to filter your recommendation to only relevant items.
 5. Choose **Custom Event** and select your custom event for added to cart from the list.
 6. Train the recommendation.
-7. [Use the recommendation in messaging]({{site.baseurl}}/user_guide/sage_ai/recommendations/ai_item_recommendations/#using-recommendations-in-messaging).
+7. [Use the recommendation in messaging]({{site.baseurl}}/user_guide/brazeai/recommendations/ai_item_recommendations/#using-recommendations-in-messaging).
 
 {% enddetails %}
 
@@ -300,7 +300,7 @@ Encourage users to revisit items that they’ve recently clicked on, based on a 
 4. (Optional) Add a selection to filter your recommendation to only relevant items.
 5. Choose **Custom Event** and select your custom event for clicks from the list.
 6. Train the recommendation.
-7. [Use the recommendation in messaging]({{site.baseurl}}/user_guide/sage_ai/recommendations/ai_item_recommendations/#using-recommendations-in-messaging).
+7. [Use the recommendation in messaging]({{site.baseurl}}/user_guide/brazeai/recommendations/ai_item_recommendations/#using-recommendations-in-messaging).
 
 {% enddetails %}
 
@@ -328,7 +328,7 @@ Promote items that users have recently interacted with, including views, clicks,
 4. (Optional) Add a selection to filter your recommendation to only relevant items.
 5. Choose **Custom Event** and select your custom event for clicks from the list.
 6. Train the recommendation.
-7. [Use the recommendation in messaging]({{site.baseurl}}/user_guide/sage_ai/recommendations/ai_item_recommendations/#using-recommendations-in-messaging).
+7. [Use the recommendation in messaging]({{site.baseurl}}/user_guide/brazeai/recommendations/ai_item_recommendations/#using-recommendations-in-messaging).
 
 {% enddetails %}
 

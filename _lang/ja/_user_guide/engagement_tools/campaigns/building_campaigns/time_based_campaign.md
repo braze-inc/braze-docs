@@ -30,7 +30,7 @@ This section covers time-based scheduling and delivery options for [scheduled de
 
 | 定義 | タイムゾーン |
 | ---------- | --------- |
-| ユーザーの最適な時間各ユーザーは、エンゲージする可能性が最も高い時刻にキャンペーンを受け取ります。詳しくは[インテリジェント・タイミングを]({{site.baseurl}}/user_guide/sage_ai/intelligence/intelligent_timing/)ご覧いただきたい。 | [フォールバックとして]({{site.baseurl}}/user_guide/sage_ai/intelligence/intelligent_timing/#fallback-options)特定の時間を選択した場合、これはユーザーの現地時間で送信される。 |
+| ユーザーの最適な時間各ユーザーは、エンゲージする可能性が最も高い時刻にキャンペーンを受け取ります。詳しくは[インテリジェント・タイミングを]({{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_timing/)ご覧いただきたい。 | [フォールバックとして]({{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_timing/#fallback-options)特定の時間を選択した場合、これはユーザーの現地時間で送信される。 |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ![2021年7月13日の最適な時刻に1回送信し、最適な時刻を計算するのに十分なデータがプロファイルにないユーザーのために午前9時のフォールバック時刻をカスタム設定する「インテリジェントタイミング」オプションを選択したキャンペーン。][3]

@@ -43,7 +43,7 @@ tool: Canvas
 
 スケジュールされたコンポーネントの場合、ユーザーがステップを進むには、ステップのオーディエンスのオプションを満たす必要があります。ステップに[例外イベント]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/exception_events/)がある場合、例外イベントを実行したユーザーはステップを進みません。
 
-[インテリジェントタイミング]({{site.baseurl}}/user_guide/sage_ai/intelligence/intelligent_timing/)でマルチチャネルコンポーネントを送信する場合、異なるチャネルに対して異なる時間にメッセージを送信したり、送信しようとすることがあります。Braze は、コンポーネント内の最初のメッセージが送信を試みる時点でユーザーを自動的に進めます。
+[インテリジェントタイミング]({{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_timing/)でマルチチャネルコンポーネントを送信する場合、異なるチャネルに対して異なる時間にメッセージを送信したり、送信しようとすることがあります。Braze は、コンポーネント内の最初のメッセージが送信を試みる時点でユーザーを自動的に進めます。
 
 ### アクションベースのステップ
 

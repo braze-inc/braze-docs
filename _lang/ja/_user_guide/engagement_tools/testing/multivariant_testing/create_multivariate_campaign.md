@@ -133,10 +133,10 @@ AB テストを実施する際は、各バリアントがコンバージョン�
 コントロールグループにランダムなバケット番号を手動で使用する場合は、コントロールグループで[注意すべき点]({{site.baseurl}}/user_guide/engagement_tools/testing/global_control_group/#things-to-watch-for)のリストを参照してください。
 {% endalert %}
 
-[1]: {{site.baseurl}}/user_guide/sage_ai/intelligence/intelligent_selection/
+[1]: {{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_selection/
 [2]: {% image_buster /assets/img/ab_create_1.png %}
 [3]: {% image_buster /assets/img/ab_create_2.png %}
 tools/campaigns/scheduling_and_organizing/delivery_types/ {{site.baseurl}}/user_guide/engagement_
 [5]: {% image_buster /assets/img/ab_create_4.png %}
-[6]: {{site.baseurl}}/user_guide/sage_ai/intelligence/intelligent_selection/
+[6]: {{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_selection/
 [7]: {{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/message_format/

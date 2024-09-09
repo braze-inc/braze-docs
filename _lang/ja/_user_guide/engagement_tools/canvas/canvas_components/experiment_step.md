@@ -24,7 +24,7 @@ tool: Canvas
 
 実験パスは、配信、ケイデンス、メッセージコピー、チャネルの組み合わせをテストするのに最適です。
 
-- **配信:**ユーザーのアクション ([アクションパス]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/action_paths/)) に基づいた[インテリジェントタイミング]({{site.baseurl}}/user_guide/sage_ai/intelligence/intelligent_timing/#canvas)を使用し、異なる時間[遅延]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/delay_step/)で送信されたメッセージ間の結果を比較します。<br><br>
+- **配信:**ユーザーのアクション ([アクションパス]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/action_paths/)) に基づいた[インテリジェントタイミング]({{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_timing/#canvas)を使用し、異なる時間[遅延]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/delay_step/)で送信されたメッセージ間の結果を比較します。<br><br>
 - **ケイデンス:**特定の期間に複数のメッセージングフローをテストします。例えば、次の 2 つの異なるオンボーディングケイデンスをテストできます。
     - ケイデンス 1: ユーザーの最初の 2 週間に 2 通のメッセージを送信する
     - ケイデンス 2: ユーザーの最初の 2 週間に 3 通のメッセージを送信する

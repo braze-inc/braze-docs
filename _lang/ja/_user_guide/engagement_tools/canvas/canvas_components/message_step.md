@@ -35,7 +35,7 @@ tool: Canvas
 
 ### 配信設定を編集する
 
-メッセージコンポーネントには、インテリジェント配信、サイレント時間のオーバーライド、および配信検証の設定も含まれます。ユーザーのプロファイルに、最適な時間を計算するのに十分なデータがない場合、フォールバックのオプションとして[インテリジェントタイミング]({{site.baseurl}}/user_guide/sage_ai/intelligence/intelligent_timing/)を有効にできます。Braze では、ユーザーがメッセージステップに入ってから実際のメッセージを送信するまでの遅延の追加チェックとして、インテリジェントタイミングと[レート制限]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/#rate-limiting-and-frequency-capping/)を有効にすることを推奨しています。
+メッセージコンポーネントには、インテリジェント配信、サイレント時間のオーバーライド、および配信検証の設定も含まれます。ユーザーのプロファイルに、最適な時間を計算するのに十分なデータがない場合、フォールバックのオプションとして[インテリジェントタイミング]({{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_timing/)を有効にできます。Braze では、ユーザーがメッセージステップに入ってから実際のメッセージを送信するまでの遅延の追加チェックとして、インテリジェントタイミングと[レート制限]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/#rate-limiting-and-frequency-capping/)を有効にすることを推奨しています。
 
 \[**配信設定**] タブで \[**インテリジェントタイミングを使用**] を選択します。ここでは、使用率が最も高い時間または特定のフォールバック時間を選択できます。サイレント時間が有効になっている場合は、メッセージステップでこの設定をオーバーライドすることもできます。
 

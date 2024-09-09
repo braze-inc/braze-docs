@@ -11,7 +11,7 @@ search_rank: 2
 
 > このページでは、多変量とABテストとは何か、それらの利点について説明します。多変量またはA/Bテストの作成手順については、[Brazeを使用した多変量およびA/Bテストの作成]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/create_multivariate_campaign/)を参照してください。 
 
-多変量とABテストは[インテリジェントセレクション]({{site.baseurl}}/user_guide/sage_ai/intelligence/intelligent_selection/)を使用して使用できます。
+多変量とABテストは[インテリジェントセレクション]({{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_selection/)を使用して使用できます。
 
 ## 多変量テストとABテストとは
 
@@ -101,5 +101,5 @@ Braze のドキュメントでは、「多変量テスト」は「AB テスト�
 [10]: {% image_buster /assets/img/ab_send_winning_variant.png %}
 \[272]: #インテリジェント選択
 \[273]: {{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/message_format/
-\[intelselection]: {{site.baseurl}}/user_guide/sage_ai/intelligence/intelligent_selection/
+\[intelselection]: {{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_selection/
 \[自信]: {{site.baseurl}}/user_guide/intelligence/multivariate_testing/#understanding-confidence
