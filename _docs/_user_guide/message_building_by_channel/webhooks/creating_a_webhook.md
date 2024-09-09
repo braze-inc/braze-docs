@@ -204,7 +204,7 @@ Like other campaigns, Braze tracks the delivery of your webhook campaigns and th
 For 500-level errors, Braze will retry the webhook send up to 5 times over 30 minutes using exponential backoff. For all other errors, Braze will continue to retry for up to 24 hours.
 
 Each webhook is allowed 90 seconds before it times out.
-{% endalert %
+{% endalert %}
 
 
 ### IP allowlisting {#ip-allowlisting}
