@@ -156,9 +156,9 @@ description: "このリファレンス記事では、認証ルール、IP の許
 ![]({% image_buster /assets/img/deletion_preferences_1.png %})
 
 
-[1]: {% image_buster /assets/img/user_profile_obfuscated1.png %} 「ユーザープロファイルの難読化 1」
-[2]: {% image_buster /assets/img/user_profile_obfuscated2.png %} 「ユーザープロファイルの難読化 2」
-[3]: {% image_buster /assets/img/user_profile_obfuscated3.png %} 「ユーザープロファイルの難読化 3」
+[1]: {% image_buster /assets/img/user_profile_obfuscated1.png %} "user profile obfuscated1"
+[2]: {% image_buster /assets/img/user_profile_obfuscated2.png %} "user profile obfuscated2"
+[3]: {% image_buster /assets/img/user_profile_obfuscated3.png %} "user profile obfuscated3"
 
 [04]: {% image_buster /assets/img/remember_me.png %}
 [15]: {{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/
