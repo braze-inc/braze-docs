@@ -8,9 +8,9 @@ page_order: 5
 
 # AI Liquidアシスタント
 
-> BrazeAI Liquid Assistant は、BrazeAI を搭載したチャットアシスタントで、メッセージコンテンツをパーソナライズするために必要なLiquid を生成するのに役立ちます。 
+> Sage AI Liquid Assistant は、Sage AI を搭載したチャットアシスタントで、メッセージコンテンツをパーソナライズするために必要なLiquid を生成するのに役立ちます。 
 
-AI Liquid Assistant を使用すると、テンプレート s からLiquid を生成したり、パーソナライズされた Liquid の提案を受信したり、BrazeAI を使用して既存のLiquid を最適化したりできます。AI Liquid Assistant には、使用されているLiquid を説明するアノテーションも用意されているため、Liquid について理解を深め、自分で書くことを学ぶことができます。
+AI Liquid Assistant を使用すると、テンプレート s からLiquid を生成したり、パーソナライズされた Liquid の提案を受信したり、Sage AI を使用して既存のLiquid を最適化したりできます。AI Liquid Assistant には、使用されているLiquid を説明するアノテーションも用意されているため、Liquid について理解を深め、自分で書くことを学ぶことができます。
 
 {% alert important %}
 AIリキッドアシスタントは現在、プッシュ型およびSMS型のチャネルを積極的に利用している限られた顧客のためにベータ版に入っている。ベータの検討を希望する場合は、顧客のサクセスマネージャーに連絡するか、この[ポータルカード](https://braze.productboard.com/entity-detail/features/27273918)に関心を示します。
