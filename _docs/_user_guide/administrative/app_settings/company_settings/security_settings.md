@@ -73,7 +73,7 @@ Be sure to save your changes before leaving the page!
 
 ### Resetting user authentication
 
-Users experiencing issues logging in with two-factor authentication can reach out to their company administrators to reset their two-factor authentication. To do this, have an administrator perform the following steps:
+Users experiencing issues logging in with two-factor authentication can contact their company administrators to reset their two-factor authentication. To do this, have an administrator perform the following steps:
 
 1. Go to **Settings** > **Company Users**.
 2. Select the user from the provided list.
@@ -244,7 +244,7 @@ You are responsible for determining the correct preferences for your workspace. 
 | Purchase event | properties |  |
 | Message send | message_extras | Several event types contain a message_extras field. The preference applies to all message send event types that support message_extras, including event types added in the future. |
 
-{% alert important %}
+{% alert warning %}
 **Deletion is permanent!** If you opt to remove any fields from Snowflake for deleted users, the setting will apply to all historical data in your workspaces and any events for users deleted in the future. After Braze has run the process to apply the settings to historical event data for deleted users, the data **cannot be restored**.
 {% endalert %}
 
