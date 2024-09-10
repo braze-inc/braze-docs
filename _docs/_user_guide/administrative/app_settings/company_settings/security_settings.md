@@ -9,7 +9,7 @@ description: "This reference article covers generic cross-company security setti
 
 # Security settings
 
-> As an admin, security is a high priority on your list of concerns. This page can help you manage the generic, cross-company security settings, including authentication rules, IP allowlisting, and two-factor authentication.
+> As an administrator, security is a high priority on your list of concerns. The **Security Settings** page can help you manage the generic, cross-company security settings, including authentication rules, IP allowlisting, and two-factor authentication.
 
 To access this page, go to **Settings** > **Admin Settings** > **Security Settings**.
 
@@ -21,11 +21,11 @@ If you're using the [older navigation]({{site.baseurl}}/navigation), select your
 
 ### Password length
 
-The default minimum length is eight characters.
+Use this field to change the minimum password length required. The default minimum is eight characters.
 
 ### Password complexity
 
-Require passwords to include at least one of each of the following: 
+Select **Enforce complex passwords** to require passwords to include at least one of each of the following: 
 - Uppercase letter
 - Lowercase letter
 - Number
@@ -73,7 +73,7 @@ Be sure to save your changes before leaving the page!
 
 ### Resetting user authentication
 
-Users experiencing issues logging in via two-factor authentication can reach out to their company admins to reset their two-factor authentication. To do this, have an admin perform the following steps:
+Users experiencing issues logging in with two-factor authentication can contact their company administrators to reset their two-factor authentication. To do this, have an administrator perform the following steps:
 
 1. Go to **Settings** > **Company Users**.
 2. Select the user from the provided list.
@@ -93,15 +93,116 @@ To download this report, do the following:
 
 This report only contains the most recent 10,000 security events for your account. If you need specific event data, contact technical support.
 
+{% details Reported security events %}
+- Added App
+- Added Campaign
+- Edited Campaign
+- Added Company
+- Added Additional Developer
+- Company Settings Changed
+- Company SAML Configuration Created
+- Company SAML Configuration Updated
+- Company SAML Configuration Deleted
+- Removed Developer
+- Developer Suspended Event
+- Developer Unsuspended Event
+- Updated Account Permission
+- Created App Group Permission Set
+- Updated App Group Permission Set
+- Deleted App Group Permission Set
+- Created Custom Role
+- Updated Custom Role
+- Deleted Custom Role
+- Added News Item
+- Added Card
+- Edited Card
+- Added Segment
+- Edited Segment
+- Added Journey
+- Edited Journey
+- Downloaded SDK
+- Edited Segment Filters
+- Sent Campaign
+- Signed In
+- Signed Up
+- Failed Login
+- Started Elevated Access Flow
+- Completed Elevated Access Flow
+- Failed 2FA Verification For Elevated Access
+- Signed Sandbox TOS
+- Failed Login Non Existent Email
+- Failed Login With Country Code Change
+- Failed Login From Disallowed Country
+- Failed Login From Suspended Developer
+- Failed Switch Not Linked To Company
+- Switched To Linked To Company
+- Switched To Linked To Company Bypassing 2FA Check
+- Two-Factor Auth Setup Completed
+- Two-Factor Auth Reset Completed
+- Password Updated
+- Password Recovery Attempt From Suspended Developer
+- Password Recovery Attempt From Free Trial Developer
+- Linked Twitter
+- Engagement Report Contained Under 10 Campaigns
+- Engagement Report Contained 10 to 50 Campaigns
+- Engagement Report Contained Over 50 Campaigns
+- Downloaded Engagement Report
+- Created Spam Tests
+- Created Inbox Vision Tests
+- Changed Developer Internal Role
+- Added Additional Internal Permission
+- Searched Users
+- Added Funnel Report
+- Edited Funnel Report
+- Removed Funnel Report
+- Added Retention Report
+- Edited Retention Report
+- Removed Retention Report
+- Cleared Developer 2FA
+- Disabled Two Factor Authentication Enforcement
+- Confirmed Account
+- Added App Group
+- Added Push Campaign
+- Added Email Campaign
+- Added Slideup Campaign
+- Added Webhook Campaign
+- Added Content Card Campaign
+- Added Multivariate Campaign
+- Added API Campaign
+- Duplicated Campaign via API
+- Duplicated Canvas via API
+- Added Recurring Campaign
+- Added Optimal Send Time Campaign
+- Added Event-Based Campaign
+- Added In App Message Campaign
+- Added Custom HTML In App Message Campaign
+- Exported data to CSV
+- Exported Segment via API
+- Exported data as Facebook audience
+- Exported subscription group state change data to CSV
+- Added REST API key
+- Removed REST API key
+- Added Basic Auth credential
+- Updated Basic Auth credential
+- Removed Basic Auth credential
+- Added Email Template
+- Updated Email Template
+- Updated Push Credential
+- Removed Push Credential
+- Started SDK Debugger Session
+- Exported SDK Debugger Log
+- Charged Longtail Customer
+{% enddetails %}
+
 ## Viewing personally identifiable information (PII) {#view-pii}
 
-The **View PII** permission is only accessible to a few select Braze users. For the existing team permission capabilities, see [Setting user permissions]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/user_permissions/#available-limited-and-team-role-permissions).
+The **View PII** permission is only accessible to a few select Braze users. For the existing team permission capabilities, refer to [Setting user permissions]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/user_permissions/#available-limited-and-team-role-permissions).
 
-By default, all admins have their **View PII** permission enabled in [user permissions]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/user_permissions/#available-limited-and-team-role-permissions). This means they can see the following standard and custom attributes throughout the dashboard. When this permission is disabled for users, those users will not be able to see this information.
+By default, all admins have their **View PII** permission turned on in [user permissions]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/user_permissions/#available-limited-and-team-role-permissions). This means they can see the following standard and custom attributes throughout the dashboard. When this permission is turned off for users, those users won't be able to see this information.
 
 ### Defining PII
 
-You can define which fields are designated as PII in the dashboard. To do this, navigate to **Company Settings** > **Security Settings**.
+You can define which fields are designated as PII in the dashboard. To do this, go to **Company Settings** > **Security Settings**.
 
 The following fields can be hidden from Braze users who don't have **View PII** permissions.
 
@@ -116,7 +217,7 @@ The following assumes that all fields are set as PII and the users mentioned are
 
 | Dashboard Navigation | Result | Notes |
 | -------------------- | ------ | ----- |
-| User search | The user who logs in is unable to search by email address, phone number, first name, or last name: {::nomarkdown} <ul> <li> Will not be shown the preceding standard and custom attributes when viewing a user profile. </li> <li> Cannot edit the preceding standard attributes of a user profile from the Braze dashboard. </li> </ul> {:/} | Access to this section still requires access to view the user profile. |
+| User search | The user who logs in is unable to search by email address, phone number, first name, or last name: {::nomarkdown} <ul> <li> Won't be shown the preceding standard and custom attributes when viewing a user profile. </li> <li> Can't edit the preceding standard attributes of a user profile from the Braze dashboard. </li> </ul> {:/} | Access to this section still requires access to view the user profile. |
 | User import | The user can't download files from the **User Import** page. | |
 | {::nomarkdown} <ul> <li> Segments </li> <li> Campaigns </li> <li> Canvas </li> </ul> {:/} | In the **User Data** dropdown: {::nomarkdown} <ul> <li> The user won't have the <b>CSV Export Email Address</b> option. </li> <li> The user won't be provided the preceding standard and customer attributes in the CSV file when selecting <b>CSV Export User Data</b>. </li> </ul> {:/} | |
 | Internal test group | The user won't have access to the preceding standard attributes of any user added to the internal test group. | |
@@ -124,16 +225,16 @@ The following assumes that all fields are set as PII and the users mentioned are
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 {% alert note %}
-When previewing a message, the **View PII** permission is not applied, so users can see the preceding standard attributes if they were referenced in the message via Liquid.
+When previewing a message, the **View PII** permission isn't applied, so users can see the preceding standard attributes if they were referenced in the message through Liquid.
 {% endalert %}
 
 ## Data deletion preferences 
 
-You can use this setting to set preferences for whether or not certain fields should be deleted during the user delete process for events. These preferences only impact data for users that have been deleted from Braze. 
+You can use this setting to set preferences for whether certain fields should be deleted during the user delete process for events. These preferences only impact data for users that have been deleted from Braze. 
 
-When a user is deleted, Braze removes all PII from events data but retains the anonymized data for analytics purposes. Some user-defined fields may contain PII if you send end-user information to Braze.  If these fields contain PII, you can opt to delete the data when event data is anonymized for deleted users; if the fields contain no PII, they can be retained for analytics.
+When a user is deleted, Braze removes all PII from events data but retains the anonymized data for analytics purposes. Some user-defined fields may contain PII if you send end-user information to Braze. If these fields contain PII, you can opt to delete the data when event data is anonymized for deleted users; if the fields contain no PII, they can be retained for analytics.
 
-You are responsible for determining the correct preferences for your workspace.  The best way to determine the appropriate settings is to review with internal teams sending events data to Braze and to teams using message extras in Braze to confirm whether the fields may contain PII.  
+You are responsible for determining the correct preferences for your workspace. The best way to determine the appropriate settings is to review with internal teams sending events data to Braze and to teams using message extras in Braze to confirm whether the fields may contain PII.  
 
 ### Relevant fields  
 
@@ -143,8 +244,8 @@ You are responsible for determining the correct preferences for your workspace. 
 | Purchase event | properties |  |
 | Message send | message_extras | Several event types contain a message_extras field. The preference applies to all message send event types that support message_extras, including event types added in the future. |
 
-{% alert important %}
-Deletion is permanent! If you opt to remove any fields from Snowflake for deleted users, the setting will apply to all historical data in your workspaces and any events for users deleted in the future. After Braze has run the process to apply the settings to historical event data for deleted users, the data **cannot be restored**.
+{% alert warning %}
+**Deletion is permanent!** If you opt to remove any fields from Snowflake for deleted users, the setting will apply to all historical data in your workspaces and any events for users deleted in the future. After Braze has run the process to apply the settings to historical event data for deleted users, the data **cannot be restored**.
 {% endalert %}
 
 ### Configure preferences
