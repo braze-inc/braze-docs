@@ -11,12 +11,12 @@ search_rank: 5
 
 # Billing
 
-> Use this page as a self-serve tool to monitor and check your data consumption.
+> Use the **Billing** page as a self-serve tool to monitor and check your data consumption. This article covers the different sections on the page and the information they can provide you.
 
 To navigate to the **Billing** page, go to **Settings** > **Billing**.
 
 {% alert note %}
-If you are using the [older navigation]({{site.baseurl}}/navigation), you can find this page by selecting your account icon, then select **Subscriptions and Usage**.
+If you're using the [older navigation]({{site.baseurl}}/navigation), you can find this page by selecting your account icon, then selecting **Subscriptions and Usage**.
 {% endalert %}
 
 The **Billing** page includes the following tabs:
@@ -31,7 +31,7 @@ The **Subscriptions and Usage** tab includes usage graphs and your contract deta
 
 ### Usage graphs
 
-Here, you will find usage graphs that apply to your workspaces. You may find your own dashboard shows different usage metrics based on the products you have purchased.
+Here, you'll find usage graphs that apply to your workspaces. You may find your own dashboard shows different usage metrics based on the products you have purchased.
 
 ![Usage graph showing Monthly Unique Visitors][3]{: style="max-width:90%;"}
 
@@ -43,11 +43,15 @@ Contract details list the start and end date of your current contract with Braze
 
 ## Most used events and attributes by app
 
-The **Most Used Events and Attributes By App** tab is a useful tool to understand the drivers of your attribute and custom event data point consumption. For each app, you can find an estimated count of each specific custom attribute, profile attribute, and custom event for the selected time period as well as the percentage of that app's attribute and event updates that were driven by that attribute or event. 
-
-Data breakdowns like these can help you understand what specific data points are taking up large percentages of your allotment. We recommend that you monitor this information from time to time to make sure you aren't spending data points in accidental and unnecessary ways. Your customer success manager can provide guidance to get the most out of your current plan or provide options for greater flexibility. 
+The **Most Used Events and Attributes By App** tab is a useful tool to understand the drivers of your attribute and custom event data point consumption. 
 
 ![Most Used Events and Attributes By App][4]
+
+For each app, you can select **See breakdown** to view an estimated count of each specific custom attribute, profile attribute, and custom event for the selected time period as well as the percentage of that app's attribute and event updates that were driven by that attribute or event. 
+
+![Most Used Events and Attributes By App breakdown tab][1]
+
+Data breakdowns like these can help you understand what specific data points are taking up large percentages of your allotment. We recommend that you monitor this information from time to time to make sure you aren't spending data points in accidental and unnecessary ways. Your customer success manager can provide guidance to get the most out of your current plan or provide options for greater flexibility. 
 
 ## Total data points dashboard
 
@@ -117,13 +121,13 @@ The **Workspace Level Data Point Usage over Time** table shows you how that work
 
 ![Workspace Level Data Point Usage over Time][11]{: style="max-width:90%;"}
 
-##### Appl level total data point usage
+##### App level total data point usage
 
 The **App Level Total Data Point Usage** table shows you data point usage for each of the apps in your workspace. You can use this table to identify which apps are driving data point consumption for the workspace.
 
 ![App Level Total Data Point Usage table for multiple apps][12]{: style="max-width:90%;"}
 
-
+[1]: {% image_buster /assets/img/most_used_events_attributes_2.png %}
 [2]: {% image_buster /assets/img/subscription_and_billing2.png %}
 [3]: {% image_buster /assets/img/subscription_and_billing4.png %}
 [4]: {% image_buster /assets/img/most_used_events_attributes_time.png %}
