@@ -1,94 +1,94 @@
 ---
-nav_title: キャンペーンの時間ベースの機能
-article_title: キャンペーンの時間ベースの機能
+nav_title: Time-Based Functionalities for Campaigns
+article_title: Time-Based Functionalities for Campaigns
 page_order: 2
 tool: Campaigns
 page_type: reference
-description: "この参考記事では、スケジュール配信、インテリジェントタイミング、アクションベースの配信など、キャンペーンの時間ベースの機能について説明します。"
+description: "This reference article covers time-based functionalities for campaigns such as scheduled delivery, Intelligent Timing, and action-based delivery."
 
 ---
-# キャンペーンの時間ベースの機能
+# Time-based functionalities for campaigns
 
-> キャンペーンを利用する際には、時間ベースのスケジュール設定オプションを使用してオーディエンスにリーチできます。これらの時間ベースの機能には、スケジュール配信とアクションベースの配信に設定されたキャンペーンが含まれます。
+> When using campaigns, you can use the time-based scheduling options to reach your audience.These time-based functionalities include campaigns that are set to scheduled delivery and action-based delivery.
 
-また、キャンペーン配信の詳細については、 [キャンペーン設定](https://learning.braze.com/campaign-setup-delivery-targeting-conversions)の Braze ラーニングコースもご覧ください。 
+You can also check out our [Campaign Setup](https://learning.braze.com/campaign-setup-delivery-targeting-conversions) Braze Learning course for more on campaign delivery. 
 
-## スケジュール配信
+## Scheduled delivery
 
-このセクションでは、 [スケジュール配信]({{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/scheduled_delivery/) キャンペーンの時間ベースのスケジュール設定と配信オプションについて説明します。
+This section covers time-based scheduling and delivery options for [scheduled delivery]({{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/scheduled_delivery/) campaigns.
 
 ### 指定した時刻に送信
 
 | 定義 | タイムゾーン |
 | ---------- | --------- |
-|特定の暦日の指定した時刻にメッセージを送信します。| 会社のタイムゾーン。|
+| 指定した日付の指定した時間にメッセージを送信する。 | 会社のタイムゾーン |
 {: .reset-td-br-1 .reset-td-br-2}
 
-![2021 年 7 月 13 日午前 9 時から 1 回送信する、「指定した時刻に送信」オプションを選択したキャンペーン][2]
+![2021年7月13日午前9時から1回送信する「指定時間に送信」オプションを選択したキャンペーン。][2]
 
 ### インテリジェントタイミング
 
 | 定義 | タイムゾーン |
 | ---------- | --------- |
-|ユーザーの最適な時間。各ユーザーは、エンゲージする可能性が最も高い時刻にキャンペーンを受け取ります。詳細については、 [インテリジェントタイミング]({{site.baseurl}}/user_guide/sage_ai/intelligence/intelligent_timing/)をご覧ください。| [フォールバック]({{site.baseurl}}/user_guide/sage_ai/intelligence/intelligent_timing/#fallback-options)として特定の時刻を選択した場合、ユーザーの現地時間で送信されます。|
+| ユーザーの最適な時間各ユーザーは、エンゲージする可能性が最も高い時刻にキャンペーンを受け取ります。詳しくは[インテリジェント・タイミングを]({{site.baseurl}}/user_guide/sage_ai/intelligence/intelligent_timing/)ご覧いただきたい。 | [フォールバックとして]({{site.baseurl}}/user_guide/sage_ai/intelligence/intelligent_timing/#fallback-options)特定の時間を選択した場合、これはユーザーの現地時間で送信される。 |
 {: .reset-td-br-1 .reset-td-br-2}
 
-![2021 年 7 月 13 日の最適な時刻に 1 回送信するように [インテリジェントタイミング] オプションが選択されたキャンペーンで、最適な時刻を計算するのに十分なデータがプロファイルにないユーザーに対しては、カスタムフォールバック時刻を午前 9 時に設定します。[3]
+![2021年7月13日の最適な時刻に1回送信し、最適な時刻を計算するのに十分なデータがプロファイルにないユーザーのために午前9時のフォールバック時刻をカスタム設定する「インテリジェントタイミング」オプションを選択したキャンペーン。][3]
 
 ### ユーザーのローカルタイムゾーンにあわせてキャンペーンを送信
 
 | 定義 | タイムゾーン |
 | ---------- | --------- |
-|ユーザーの [個々のタイムゾーン]({{site.baseurl}}/user_guide/engagement_tools/campaigns/faq/#when-does-braze-evaluate-users-for-local-time-zone-delivery)に基づいてセグメントにメッセージを配信できます。|ユーザーの現地時間。ユーザーのタイムゾーンが設定されていない場合、会社のタイムゾーンに従います。|
+| ユーザーの[タイムゾーンに]({{site.baseurl}}/user_guide/engagement_tools/campaigns/faq/#when-does-braze-evaluate-users-for-local-time-zone-delivery)基づいたセグメントへのメッセージ配信を可能にする。 | ユーザーの現地時間。ユーザーのタイムゾーンが設定されていない場合、これは会社のタイムゾーンにフォールバックする。 |
 {: .reset-td-br-1 .reset-td-br-2}
 
-![「ローカルタイムゾーンのユーザーにキャンペーンを送信する」チェックボックスがオンにされ、2021 年 7 月 13 日午前 9 時から 1 回送信する「指定した時間に送信」オプションが選択されているキャンペーン。][4]
+![指定時間に送信」オプションを選択したキャンペーンで、「ローカルタイムゾーンのユーザーにキャンペーンを送信」チェックボックスを選択し、2021年7月13日午前9時から1回送信する。][4]
 
 ### ユーザーがキャンペーンを再度受信できるようにする
 
 | 定義 | タイムゾーン |
 | ---------- | --------- |
-|このキャンペーンによってユーザーにメッセージが届いた後、そのユーザーが再びキャンペーンを受け取る資格を再び得ることができる時期を指定します。[詳細情報]({{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/reeligibility/#campaigns)。| 該当なし |
+| ユーザーがこのキャンペーンでメッセージを受け取った後、再びキャンペーンを受け取る資格を得るタイミングを指定する。[詳細はこちら]({{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/reeligibility/#campaigns)。 | 該当なし |
 {: .reset-td-br-1 .reset-td-br-2}
 
-![1週間後に「ユーザーがキャンペーンを再度受信できるようにする」のチェックボックスをオンにしたキャンペーン][5]
+![1週間後に「ユーザーがキャンペーンを受け取る再資格になることを許可する」チェックボックスが選択されたキャンペーン。][5]
 
 ## アクションベースの配信
 
-このセクションでは、 [アクションベースの配信]({{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/triggered_delivery/)キャンペーンのスケジュール、遅延、および配信オプションについて説明します。
+This section covers the schedule delay and delivery options for [action-based delivery]({{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/triggered_delivery/) campaigns.
 
-### スケジュールの遅延
+### Schedule delay
 
 {% alert important %}
-遅延時間を選択する際に、 [キャンペーン期間]({{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/triggered_delivery/#step-4-assign-duration)よりも長い遅延を設定すると、ユーザーはキャンペーンを受け取れないことに注意してください。
+When choosing your delay length, keep in mind that if you set a delay that is longer than the [Campaign Duration]({{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/triggered_delivery/#step-4-assign-duration), your users will not receive your campaign.
 {% endalert %}
 
 #### キャンペーンをすぐに送信
 
 | 定義 | タイムゾーン |
 | ---------- | --------- |
-|ユーザーがトリガーアクションを実行した直後にメッセージを送信します。 | 該当なし |
+| ユーザーがトリガーアクションを実行した直後にメッセージを送信する。 | 該当なし |
 {: .reset-td-br-1 .reset-td-br-2}
 
-![トリガーイベントが発生したらすぐにキャンペーンを送信するように設定されたスケジュール遅延。][6]
+![スケジュール遅延は、トリガーイベントが発生した直後にキャンペーンを送信するように設定される。][6]
 
 #### X日後にキャンペーンを送信
 
 | 定義 | タイムゾーン |
 | ---------- | --------- |
-| 遅延後にメッセージを送信します。遅延は、秒、分、時間、日、または週単位で指定できます。| 該当なし |
+| 遅延後にメッセージを送信する。遅延は秒、分、時間、日、週単位で指定できる。 | 該当なし |
 {: .reset-td-br-1 .reset-td-br-2}
 
-![スケジュールの遅延は、トリガーイベントが発生してから 1 日後にキャンペーンを送信するように設定されています。][7]
+![スケジュール遅延は、トリガーイベントが発生してから1日後にキャンペーンを送信するように設定されている。][7]
 
-#### 次の [曜日] の X 時にキャンペーンを送信する
+#### 次の\[曜日] X時にキャンペーンを送る
 
 | 定義 | タイムゾーン |
 | ---------- | --------- |
-| 次の指定した曜日、選択した時刻にメッセージを送信します。| **ユーザーの現地時間**または**会社の時間**を選択する |
+| 指定した曜日の指定した時間にメッセージを送信する。 | **ユーザーの現地時間か** **会社時間かを**選択する**。** |
 {: .reset-td-br-1 .reset-td-br-2}
 
-たとえば、「次の土曜日の午後 3 時 15 分に送信」を選択するとします。ユーザーが土曜日にトリガーイベントを実行すると、そのメッセージは 7 日後の次の土曜日に受信されます。金曜日に入ると、次の土曜日は 1 日後になります。
+For example, suppose you select "Send on the next Saturday at 3:15 pm".If a user performs the trigger event on a Saturday, they would receive that message on the next Saturday in seven days.If they enter on a Friday, the next Saturday would be in one day.
 
 ![][8]
 
@@ -96,10 +96,10 @@ description: "この参考記事では、スケジュール配信、インテリ
 
 | 定義 | タイムゾーン |
 | ---------- | --------- |
-|指定した時刻に特定の日数でメッセージを送信します。| **ユーザーの現地時間**または**会社の時間**を選択する |
+| 指定した日数、指定した時間にメッセージを送る。 | **ユーザーの現地時間か** **会社時間かを**選択する**。** |
 {: .reset-td-br-1 .reset-td-br-2}
 
-Braze は遅延を `day of the week` + `calendar days` として計算し、`time` を加算します。たとえば、ユーザーが月曜日の午後 9 時にトリガーイベントを実行し、スケジュールの遅延が「1 日後の午前 9 時にキャンペーンを送信する」に設定されているとします。このメッセージは火曜日の午前 9 時に配信されますが、これは Braze が遅延を `Monday` + `1 calendar day` として計算し、`9 am` に加算するためです。
+Braze calculates the delay as `day of the week` + `calendar days`, then adds the `time`.For example, suppose the user performs the trigger event on Monday at 9 pm, and the schedule delay is set to "Send campaign in 1 day at 9 am".That message will be delivered on Tuesday at 9 am because Braze calculates the delay as `Monday` + `1 calendar day` and then adds on `9 am`.
 
 ![][9]
 
@@ -107,36 +107,36 @@ Braze は遅延を `day of the week` + `calendar days` として計算し、`tim
 
 | 定義 | タイムゾーン |
 | ---------- | --------- |
-|指定した時間帯にメッセージが送信されないようにします。通知停止時間中にメッセージがトリガーされた場合は、メッセージをキャンセルするか、次に利用可能な時間 (通知停止時間終了時に送信するなど) に送信するかを選択できます。| ユーザーの現地時間。ユーザーのタイムゾーンが設定されていない場合、会社のタイムゾーンに従います。|
+| 指定した時間帯にメッセージが送信されないようにする。クワイエットアワー中にメッセージがトリガーされた場合、メッセージをキャンセルするか、次の利用可能な時間（クワイエットアワーの終了時に送信するなど）に送信するかを選択できる。 | ユーザーの現地時間。ユーザーのタイムゾーンが設定されていない場合、これは会社のタイムゾーンにフォールバックする。 |
 {: .reset-td-br-1 .reset-td-br-2}
 
-![サイレント時間を有効にしたキャンペーン。この例では、ユーザーの現地時間の午前 12 時から午前 8 時まではメッセージは送信されません。メッセージがサイレント時間中にトリガーされた場合、メッセージは次に利用可能な時間に送信されます。[10]
+![クワイエットアワーを有効にしたキャンペーン。この例では、ユーザーの現地時間の午前 12 時から午前 8 時まではメッセージは送信されません。もしメッセージがクワイエットアワー中にトリガーされた場合、メッセージは次の利用可能な時間に送信される。][10]
 
 ### ユーザーがキャンペーンを再度受信できるようにする
 
 | 定義 | タイムゾーン |
 | ---------- | --------- |
-|このキャンペーンによってユーザーにメッセージが届いた後、そのユーザーが再びキャンペーンを受け取れるように [再有効化]({{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/reeligibility/#campaigns)することができる時期を指定します。| 該当なし |
+| |このキャンペーンによってユーザーにメッセージが届いた後、そのユーザーが再びキャンペーンを受け取れるように [再有効化]({{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/reeligibility/#campaigns)することができる時期を指定します。| 該当なし | | 該当なし |
 {: .reset-td-br-1 .reset-td-br-2}
 
-![1週間後に「ユーザーがキャンペーンを再度受信できるようにする」のチェックボックスをオンにしたキャンペーン][5]
+![1週間後に「ユーザーがキャンペーンを受け取る再資格になることを許可する」チェックボックスが選択されたキャンペーン。][5]
 
 ### グローバルフリークエンシーキャップ
 
 | 定義 | タイムゾーン |
 | ---------- | --------- |
-| 各ユーザーが特定の期間内にキャンペーンを受け取る回数を制限し、分、日、週(7日)、月単位で測定できます。詳細については、[フリークエンシー キャップ]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/rate-limiting/#frequency-capping)を参照してください。| ユーザーの現地時間。ユーザーのタイムゾーンが設定されていない場合、会社のタイムゾーンに従います。|
+| 分、日、週（7日）、月単位で、各ユーザーが一定の期間内にキャンペーンを受け取る回数を制限する。詳しくは、[周波数キャッピングを]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/rate-limiting/#frequency-capping)参照のこと。 | ユーザーの現地時間。ユーザーのタイムゾーンが設定されていない場合、これは会社のタイムゾーンにフォールバックする。 |
 {: .reset-td-br-1 .reset-td-br-2}
 
-デフォルトでは、フリークエンシーキャップは新しいキャンバスに対してはオフに切り替わります。フリークエンシーキャップは、キャンバスのエントリ レベルではなく、ステップレベルで適用されます。
+By default, frequency capping is toggled off for new Canvases.Frequency capping is applied at the step level, not at the Canvas entry level.
 
-フリークエンシーキャップは、24 時間ではなく暦日に基づきます。つまり、1 日に 1 回のみキャンペーンを送信するフリークエンシーキャップルールを設定できますが、ユーザーが現地時間の午後 11 時にメッセージを受信した場合、1 時間後 (翌暦日の深夜) に別のメッセージを受信できます。 
+Frequency capping is based on calendar days, not a 24-hour period.つまり、1 日に 1 回のみキャンペーンを送信するフリークエンシーキャップルールを設定できますが、ユーザーが現地時間の午後 11 時にメッセージを受信した場合、1 時間後 (翌暦日の深夜) に別のメッセージを受信できます。 
 
 ## コンバージョンの期限
 
 | 定義 | タイムゾーン |
 | ---------- | --------- |
-| ユーザーがキャンペーンを受信してから、割り当てられたアクションを実行しコンバージョンと見なされるまでに経過する可能性のある最大時間。詳しくは、 [コンバージョンイベント]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/conversion_events/)を参照してください。| 該当なし |
+| ユーザーがキャンペーンを受け取ってから指定されたアクションを実行するまでに、コンバージョンとみなされるまでの最大時間。詳しくは、[コンバージョンイベントを]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/conversion_events/)参照のこと。 | 該当なし |
 {: .reset-td-br-1 .reset-td-br-2}
 
 

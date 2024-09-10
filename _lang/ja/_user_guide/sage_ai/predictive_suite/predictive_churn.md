@@ -6,47 +6,47 @@ layout: dev_guide
 alias: /predictive_churn/
 search_rank: 2
 guide_top_header: "解約予測"
-guide_top_text: "顧客離れは、顧客離職率や顧客損失とも呼ばれ、成長する企業が考慮すべき最も重要な指標の1つです。解約に対処するための適切なツールを持つことは、損失を最小限に抑え、顧客維持を最大化するために重要です。このような解約の可能性があるユーザーをすぐに獲得するために、Brazeは予測解約を提供し、将来の解約を最小限に抑えるためのプロアクティブなアプローチを提供します。"
-description: "このランディングページでは、ビジネスにとっての解約の意味と、解約を防ぎたいユーザーを定義できるツールである予測解約について説明します。"
+guide_top_text: "顧客離職率や顧客喪失率とも呼ばれる顧客離れは、成長企業にとって最も重要な指標の一つである。解約に対処するための適切なツールを持つことは、損失を最小限に抑え、顧客維持を最大化する上で極めて重要である。Brazeは、このような潜在的なユーザー離脱に先手を打つため、将来のユーザー離脱を最小限に抑えるプロアクティブアプローチを提供するPredictive Churnを提供している。"
+description: "このランディングページでは、ビジネスにとっての解約とは何か、解約を防ぎたいユーザーを定義できるツール、Predictive Churnを取り上げる。"
 
 guide_featured_title: "トピック"
 guide_featured_list:
-- name: Creating A Churn Prediction
+- name: 解約予測の作成
   link: /docs/user_guide/sage_ai/predictive_suite/predictive_churn/creating_a_churn_prediction/
-  fa_icon: fas fa-cogs
-- name: Prediction Analytics
+  image: /assets/img/braze_icons/settings-01.svg
+- name: 予測分析
   link: /docs/user_guide/sage_ai/predictive_suite/predictive_churn/prediction_analytics/
-  fa_icon: fas fa-chart-bar
-- name: Messaging Users
+  image: /assets/img/braze_icons/bar-chart-01.svg
+- name: ユーザーへのメッセージング
   link: /docs/user_guide/sage_ai/predictive_suite/predictive_churn/messaging_users/
-  fa_icon: fas fa-arrow-right
-- name: Troubleshooting
+  image: /assets/img/braze_icons/arrow-narrow-right.svg
+- name: トラブルシューティング
   link: /docs/user_guide/sage_ai/predictive_suite/predictive_churn/prediction_faq/
-  fa_icon: fas fa-question
+  image: /assets/img/braze_icons/annotation-question.svg
 
 ---
 
 ## 概要
 
-![チャーンの概要には、履歴データを使用したトレーニングによる過去の予測対象ユーザーが含まれます。これは、今日の予測対象者を解約リスクスコアで測定することにより、将来の解約のリスクの予測に貢献します。[1]
+![解約の概要。過去のデータを使ったトレーニングによる過去の予測視聴者を含む。これは、今日の予測視聴者を解約リスクスコアで測定することで、将来の解約リスクを予測することに貢献する。][1]
 
-> 予測チャーンを使用すると、チャーンがビジネスにとって何を意味するか([チャーンの定義]({{site.baseurl}}/user_guide/predictive_suite/predictive_churn/creating_a_churn_prediction/#step-2-define-churn))と、チャーンを防ぐユーザー([予測オーディエンス]({{site.baseurl}}/user_guide/predictive_suite/predictive_churn/creating_a_churn_prediction/#step-3-filter-your-prediction-audience))を定義できます。予測を作成すると、Brazeは [勾配ブーストデシジョンツリー](https://en.wikipedia.org/wiki/Gradient_boosting) を使用して機械学習モデルをトレーニングし、定義に従って解約したユーザーとしなかった過去のユーザーのアクティビティパターンから学習することで、解約のリスクがあるユーザーを特定します。
+> Predictive Churnでは、ビジネスにとっての解約とは何か[（解約定義]({{site.baseurl}}/user_guide/predictive_suite/predictive_churn/creating_a_churn_prediction/#step-2-define-churn)）と、解約を防ぎたいユーザー[（予測対象者]({{site.baseurl}}/user_guide/predictive_suite/predictive_churn/creating_a_churn_prediction/#step-3-filter-your-prediction-audience)）を定義することができる。予測を作成すると、Brazeは[勾配ブースティング決定木を](https://en.wikipedia.org/wiki/Gradient_boosting)使用して機械学習モデルを訓練し、あなたの定義に従って解約したユーザーと解約しなかった過去のユーザーの活動パターンから学習して、解約リスクのあるユーザーを特定する。
 
-予測モデルが構築されると、予測対象ユーザーのユーザーには、定義に従って解約する可能性を示す 0 から 100 までの [解約リスク スコア]({{site.baseurl}}/user_guide/predictive_suite/predictive_churn/prediction_analytics/#churn_score) が割り当てられます。スコアが高いほど、ユーザーが解約する可能性が高くなります。 
+予測モデルが構築されると、予測対象ユーザーには、あなたの定義に従って解約する可能性を示す0から100の間の[解約リスクスコア]({{site.baseurl}}/user_guide/predictive_suite/predictive_churn/prediction_analytics/#churn_score)が割り当てられます。スコアが高ければ高いほど、ユーザーが解約する可能性は高くなる。 
 
-予測対象ユーザーのリスクスコアの更新は、 [選択した頻度]({{site.baseurl}}/user_guide/predictive_suite/predictive_churn/creating_a_churn_prediction/#step-4-choose-the-update-frequency-for-churn-predictions)で行うことができます。こうすることで、解約のリスクがあるユーザーに実際に手を差し伸べる前に手を差し伸べ、そもそも解約が起こらないようにすることができます。最大 3 つのアクティブな予測を使用して、予測チャーンを活用して個々のモデルを調整し、最も価値があると見なされるユーザーの特定のセグメント内での離脱を防ぐことができます。
+予測対象者のリスクスコアの更新は、[選択した頻度で]({{site.baseurl}}/user_guide/predictive_suite/predictive_churn/creating_a_churn_prediction/#step-4-choose-the-update-frequency-for-churn-predictions)行うことができる。こうすることで、実際に解約される前に、解約リスクのあるユーザーに接触し、解約を未然に防ぐことができる。最大3つのアクティブな予測を使用することで、Predictive Churnを活用して個々のモデルを調整し、最も価値があると思われるユーザーの特定のセグメントにおける解約防止を支援することができる。
 
-## アクセス予測チャーン
+## 解約予測にアクセスする
 
-**予測ページ**は、**分析**セクションにあります。フルアクセスについては、アカウントマネージャーにお問い合わせください。
+**予測」**ページは**「アナリティクス」**セクションにある。完全なアクセスについては、アカウント・マネージャーに連絡すること。
 
 {% alert note %}
-[古いナビゲーション]({{site.baseurl}}/navigation)を使用している場合は、[**エンゲージメント]** の下に **[予測**] があります。
+古いナビゲーション を使用している場合は、\[**エンゲージメント**] の下に \[[位置情報]({{site.baseurl}}/navigation)] が表示されます。
 {% endalert %}
 
-この機能を購入する前は、プレビューモードで利用できます。これにより、合成データを使用してデモのチャーン予測を確認し、ユーザーデータに基づいて一度に1つのチャーン予測モデルを作成できます。このプレビューでは、チャーン リスクに応じてメッセージングのターゲットをユーザーに設定することはできず、作成後に定期的に更新されることはありません。
+この機能を購入する前に、プレビュー・モードで利用できる。これにより、合成データを使った解約予測のデモを見ることができ、ユーザーデータに基づいて解約予測モデルを一度に1つ作成することができる。このプレビューでは、解約リスクに応じてユーザーをメッセージングのターゲットにすることはできず、作成後も定期的に更新されることはない。
 
-プレビューでは、1 つの予測を編集して再構築したり、アーカイブして別の予測を作成したりして、さまざまな[定義]({{site.baseurl}}/user_guide/predictive_suite/predictive_churn/creating_a_churn_prediction/#step-2-define-churn)の予想される[予測品質]({{site.baseurl}}/user_guide/predictive_suite/predictive_churn/prediction_analytics/prediction_quality/)をテストすることもできます。
+プレビューを使えば、1つの予測を編集して再構築したり、アーカイブして他の予測を作成し、異なる[定義の]({{site.baseurl}}/user_guide/predictive_suite/predictive_churn/creating_a_churn_prediction/#step-2-define-churn) [予測品質を]({{site.baseurl}}/user_guide/predictive_suite/predictive_churn/prediction_analytics/prediction_quality/)テストすることもできる。
 
 <br><br>
 

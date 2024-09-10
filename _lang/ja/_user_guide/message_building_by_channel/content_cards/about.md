@@ -8,7 +8,7 @@ channel:
 search_rank: 4
 ---
 
-# [![Braze Learning course]({% image_buster /assets/img/bl_icon2.png %})](https://learning.braze.com/messaging-channels-content-cards){: style="float:right;width:120px;border:0;" class="noimgborder"}コンテンツカードについて
+# [![Brazeラーニングコース]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/messaging-channels-content-cards){: style="float:right;width:120px;border:0;" class="noimgborder"} コンテンツカードについて
 
 > コンテンツカードは、アプリまたは Web サイトのインターフェイスに直接埋め込まれるチャネルです。このため、ネイティブでシームレスなエクスペリエンスの一部のようにユーザーをエンゲージメントさせることができます。コンテンツカードを使用するとさまざまなことができますが、最も一般的な実装はメッセージ受信トレイ、カルーセル、バナーです。
 
@@ -34,10 +34,10 @@ search_rank: 4
 
 マーケティング担当者は Braze でコンテンツカードを自分で作成するため、アプリやサイトを全面的に作成し直さなくても、メッセージングを更新することで投資対効果を得られます。コンテンツカードの ROI に関して参考になる統計をいくつかご紹介します。
 
-- コンテンツカードは、72時間以内に売上を伸ばすうえでメールよりも **38 倍**効果的です。[^1]
-- ロイヤルティ登録キャンペーンでコンテンツカードを使用すると、コンバージョンが **5 倍**増加します。[^1]
-- プッシュ通知、アプリ内メッセージ、コンテンツカードを介してユーザーにアウトリーチを送信すると、プッシュ通知のみでユーザーがエンゲージした場合と比較して、セッション数が **6.9 倍**増加します。[^2]
-- メール、アプリ内メッセージ、コンテンツ カードを介してユーザーにアウトリーチを送信すると、メールだけでユーザーがエンゲージした場合と比較して、平均ユーザー寿命が **3.6 倍**長くなります。[^2]
+- コンテンツカードは、72時間のウィンドウで売上を伸ばすのにメールよりも**38X**効果的です。\[^1]
+- ロイヤルティ登録キャンペーンでコンテンツカードを使用すると、コンバージョンが**5倍**向上します。\[^1]
+- プッシュ、アプリ内メッセージ、およびコンテンツカードを介してユーザーにアウトリーチを送信すると、プッシュのみでエンゲージメントされたユーザーと比較して、**6.9X**多くのセッションが発生します。\[^2]
+- メール、アプリ内メッセージ、およびコンテンツカードを介してユーザーにアウトリーチを送信すると、メールのみを介してエンゲージされたユーザーと比較して、平均ユーザー寿命が**3.6X**長くなります。\[^2]
 
 ## ユースケース
 
@@ -48,7 +48,7 @@ search_rank: 4
 {% endalert %}
 
 {% tabs %}
-{% tab Onboarding and next steps %}
+{% tab オンボーディング and next steps %}
 
 新規顧客がアプリや Web サイトを探索するときに、戦略的に配置されたコンテンツカードを使用して、提供するものの価値とメリットを説明します。ホームページ上でコンテンツカードを使用して他のコミュニケーションチャネルにオプトインするよう顧客に奨励し、未処理のオンボーディングタスクをコンテンツカードを利用した専用のオンボーディングタブに保存します。顧客が希望するタスクを完了したら、必ずカードを取り出してください。
 
@@ -63,7 +63,7 @@ search_rank: 4
 </div>
 
 {% endtab %}
-{% tab Event attendance %}
+{% tab イベント出席 %}
 
 ユーザーのホームページの上部にコンテンツカードを表示してイベントへの参加を促し、ロケーションターゲティングを使用して潜在顧客のいる場所にリーチします。関連する物理的なイベントにユーザーを招待すると、特にブランドでのこれまでの活動を活用したパーソナライズされたメッセージを使用して、ユーザー向けに特別感を演出できます。
 
@@ -72,7 +72,7 @@ search_rank: 4
 </div>
 
 {% endtab %}
-{% tab Recommendations %}
+{% tab おすすめ %}
 
 ユーザーの行動や好みに関するデータを使用して、ホームページまたは受信トレイのコンテンツカードから関連コンテンツをリアルタイムで表示し、それらを製品提供に引き込みます。
 
@@ -81,7 +81,7 @@ search_rank: 4
 </div>
 
 {% endtab %}
-{% tab Sales and promotions %}
+{% tab 販売とプロモーション %}
 
 コンテンツカードを活用して、ホームページまたは専用のプロモーション受信トレイでプロモーションメッセージやまだ反応のないオファーを直接強調表示します。顧客の以前の購入に基づいて関連コンテンツを取得し、注目を集めるパーソナライズされたプロモーションを提供します。
 
@@ -106,11 +106,11 @@ search_rank: 4
 
 これらの配置のロジックと実装は Braze のデフォルトではないため、これらのユースケースを実現する作業は、エンジニアリングチームが提供し、サポートする必要があります。これらの配置の実装方法の概要については、[カスタムコンテンツカードの作成に関する記事]({{site.baseurl}}/developer_guide/customization_guides/content_cards/creating_custom_content_cards)を参照してください。
 
-![\]({% image_buster /assets/img_archive/cc_placements.png %}){: style="border:0px;"}
+![]({% image_buster /assets/img_archive/cc_placements.png %}){: style="border:0px;"}
 
 ### メッセージの受信トレイ
 
-![\]({% image_buster /assets/img_archive/cc_placement_inbox.png %}){: style="float:right;margin-left:15px;max-width:30%;border:0px;"}
+![]({% image_buster /assets/img_archive/cc_placement_inbox.png %}){: style="float:right;margin-left:15px;max-width:30%;border:0px;"}
 
 メッセージ受信ボックス (通知センターまたはフィードとも呼ばれます) は、アプリまたは Web サイト内の永続的な場所であり、コンテンツカードを任意の形式で表示できます。受信トレイ内の各メッセージは、それぞれ独自のコンテンツカードです。 
 
@@ -132,7 +132,7 @@ search_rank: 4
 
 ### カルーセル
 
-![\]({% image_buster /assets/img_archive/cc_politer_carousel.png %}){: style="float:right;margin-left:15px;max-width:30%;border:0px;"}
+![]({% image_buster /assets/img_archive/cc_politer_carousel.png %}){: style="float:right;margin-left:15px;max-width:30%;border:0px;"}
 
 カルーセルは、顧客がスワイプして表示できる 1 つのスペースに複数のコンテンツを表示します。画像、テキスト、ビデオ、またはそれらすべての組み合わせのスライドショーにすることができます。これはカスタム実装であり、開発者による多少の作業が必要です。
 
@@ -149,7 +149,7 @@ search_rank: 4
 
 ### バナー
 
-![\]({% image_buster /assets/img_archive/cc_placement_banner.png %}){: style="float:right;margin-left:15px;max-width:30%;border:0px;"}
+![]({% image_buster /assets/img_archive/cc_placement_banner.png %}){: style="float:right;margin-left:15px;max-width:30%;border:0px;"}
 
 コンテンツカードは動的なバナーとして表示され、ホームページや他の指定ページの上部に永続的に表示されます。
 
@@ -186,5 +186,5 @@ search_rank: 4
 
 <span></span>
 
-[^1]:[カスタマーリテンションキャンペーンを最大限に活用するための 8 つのヒント](https://www.braze.com/resources/articles/8-tips-for-making-the-most-of-your-customer-retention-campaigns)
-[^2]:[レポート:クロスチャネルマーケティングの違い](https://www.braze.com/resources/reports-and-guides/the-cross-channel-marketing-difference-report)
+\[^1]: [カスタマーリテンションキャンペーンを最大限に活用するための 8 つのヒント](https://www.braze.com/resources/articles/8-tips-for-making-the-most-of-your-customer-retention-campaigns)
+\[^2]:[レポート:クロスチャネルマーケティングの違い](https://www.braze.com/resources/reports-and-guides/the-cross-channel-marketing-difference-report)

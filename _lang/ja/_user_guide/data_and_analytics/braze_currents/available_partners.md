@@ -13,18 +13,20 @@ tool: Currents
 > このページでは、Braze Currents との連携に使用できるデータパートナーのユースケースを概説します。
 
 {% alert note %}
-Braze から配信するイベントの命名規則が、パートナーによって異なる場合があります。例えば、Segment での Currents メール開封イベントは「Email Opened」で、Mixpanel では「Email Open」です。
+Braze から配信するイベントの命名規則が、パートナーによって異なる場合があります。例えば、Segment の Currents email open イベントは`Email Opened` であるが、Mixpanel では`Email Open` である。
 {% endalert %}
 
 ## データウェアハウス
-[![Braze Learning course]({% image_buster /assets/img/bl_icon2.png %})](https://learning.braze.com/introduction-to-data-warehouses){: style="float:right;width:120px;border:0;" class="noimgborder"}
-ここに示すパートナーは、ウェアハウス (フラットファイルストレージ) としても、他のデータ操作ツールへのゲートウェイとしても機能します。これは、データの柔軟性を高めたり、データを変換したりする必要がある場合に最適です。
+[![ブレイズ・ラーニング・コース]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/introduction-to-data-warehouses){: style="float:right;width:120px;border:0;" class="noimgborder"}
+データウェアハウスは、百花繚乱から流れてくるすべての情報の収集ソースを提供する。これらのパートナーは、ウェアハウス（フラットファイルのストレージ）として機能することも、ビジネスインテリジェンスツールや機械学習アルゴリズム、マーケティングパフォーマンスに関するインサイトの取得などに利用することもできる。
 
 * [Amazon S3][1]
 
 * [Google Cloud Storage][2]
 
 * [Microsoft Azure Blob Storage][3]
+
+我々は、カレントのパワーとデータウェアハウスの組み合わせに自信を持っており、[自分たちでも使っている]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/how_braze_uses_currents/)！
 
 ## 顧客データ
 
