@@ -14,19 +14,19 @@ Tool:
 guide_featured_title: "Tools and features"
 guide_featured_list:
 - name: Intelligent Timing
-  link: /docs/user_guide/sage_ai/intelligence/intelligent_timing/
+  link: /docs/user_guide/brazeai/intelligence/intelligent_timing/
   image: /assets/img/braze_icons/clock.svg
 - name: Intelligent Channel
-  link: /docs/user_guide/sage_ai/intelligence/intelligent_channel/
+  link: /docs/user_guide/brazeai/intelligence/intelligent_channel/
   image: /assets/img/braze_icons/mail-04.svg
 - name: Intelligent Selection
-  link: /docs/user_guide/sage_ai/intelligence/intelligent_selection/
+  link: /docs/user_guide/brazeai/intelligence/intelligent_selection/
   image: /assets/img/braze_icons/hearts.svg
 
 guide_menu_title: "Additional resources"
 guide_menu_list:
 - name: Intelligence FAQ
-  link: /docs/user_guide/sage_ai/intelligence/faqs/
+  link: /docs/user_guide/brazeai/intelligence/faqs/
   image: /assets/img/braze_icons/annotation-question.svg
 
 

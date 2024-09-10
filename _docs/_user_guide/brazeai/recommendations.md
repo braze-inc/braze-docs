@@ -11,13 +11,13 @@ description: "This landing page homes articles related to building and using rec
 guide_featured_title: "Articles"
 guide_featured_list:
 - name: About Recommendations
-  link: /docs/user_guide/sage_ai/recommendations/about_item_recommendations/
+  link: /docs/user_guide/brazeai/recommendations/about_item_recommendations/
   image: /assets/img/braze_icons/book-closed.svg
 - name: AI Item Recommendations
-  link: /docs/user_guide/sage_ai/recommendations/ai_item_recommendations/
+  link: /docs/user_guide/brazeai/recommendations/ai_item_recommendations/
   image: /assets/img/braze_icons/user-check-01.svg
 - name: Rules-based Recommendations
-  link: /docs/user_guide/sage_ai/recommendations/rules_based_recommendations/
+  link: /docs/user_guide/brazeai/recommendations/rules_based_recommendations/
   image: /assets/img/braze_icons/list.svg
 ---
 

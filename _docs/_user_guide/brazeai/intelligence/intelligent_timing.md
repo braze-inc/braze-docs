@@ -86,7 +86,7 @@ If you're targeting an audience that has performed an action in a certain period
 
 This is also because of time zones—selecting a period of less than 3 days may cause some users to fall out of the segment before their optimal send time is reached.
 
-Learn more about [when Braze checks the eligibility criteria for segments and filters]({{site.baseurl}}/user_guide/intelligence/faqs/#when-does-braze-check-the-eligibility-criteria-for-segment-and-audience-filters).
+Learn more about [when Braze checks the eligibility criteria for segments and filters]({{site.baseurl}}/user_guide/brazeai/intelligence/faqs/#when-does-braze-check-the-eligibility-criteria-for-segment-and-audience-filters).
 
 ##### A/B tests with optimizations
 

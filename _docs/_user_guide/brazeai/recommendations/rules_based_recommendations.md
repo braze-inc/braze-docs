@@ -22,7 +22,7 @@ To learn more about Liquid, catalogs, and Connected Content, check out these Bra
 - [Connected Content Fundamentals](https://learning.braze.com/path/dynamic-personalization-with-liquid/connected-content-fundamentals)
 
 {% alert important %}
-Rules-based recommendations are based on fixed logic that you must manually set. This means your recommendations won’t adjust to a user's purchase history and tastes unless you update the logic.<br><br>To create personalized AI recommendations that automatically adjust to a user’s history, check out [AI item recommendations]({{site.baseurl}}/ai_item_recommendations).
+Rules-based recommendations are based on fixed logic that you must manually set. This means your recommendations won’t adjust to a user's purchase history and tastes unless you update the logic.<br><br>To create personalized AI recommendations that automatically adjust to a user’s history, check out [AI item recommendations]({{site.baseurl}}/user_guide/brazeai/recommendations/ai_item_recommendations/).
 {% endalert %}
 
 ## Creating a catalogs recommendation engine
@@ -118,7 +118,7 @@ Let’s say you have a health food app and want to create a Content Card campaig
 1. Create a Connected Content endpoint in one of the following ways:
 - Convert a spreadsheet into a JSON API endpoint by using a service like SheetDP, and take note of the API URL this generates
 - Build, host, and maintain a custom-built in-house endpoint
-- Buy a recommendations engine via a third-party partner, such as one of our [Alloy partners]({{site.baseurl}}/partners/message_personalization/dynamic_content), including [Amazon Personalise]({{site.baseurl}}/partners/message_personalization/dynamic_content/amazon_personalize/), [Certona]({{site.baseurl}}/partners/message_personalization/dynamic_content/certona/), [Dynamic Yield]({{site.baseurl}}/partners/message_personalization/dynamic_content/dynamic_yield/) and others
+- Buy a recommendations engine via a third-party partner, such as one of our [Alloy partners]({{site.baseurl}}/partners/message_personalization/dynamic_content/), including [Amazon Personalise]({{site.baseurl}}/partners/message_personalization/dynamic_content/amazon_personalize/), [Certona]({{site.baseurl}}/partners/message_personalization/dynamic_content/certona/), [Dynamic Yield]({{site.baseurl}}/partners/message_personalization/dynamic_content/dynamic_yield/) and others
 
 2. Write Connected Content Liquid into the message body or Content Block HTML editor that will call your endpoint to search your database.
 3. Align the Liquid with a custom attribute value it finds in a given user's profile.
@@ -145,7 +145,7 @@ Let’s say you have a health food app and want to create a Content Card campaig
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% alert note %}
-This is a basic example and you might need to modify it further based on your specific needs and data structure. For more detailed guidance, refer to the [Liquid documentation]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid) or consult with a developer.
+This is a basic example and you might need to modify it further based on your specific needs and data structure. For more detailed guidance, refer to the [Liquid documentation]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/) or consult with a developer.
 {% endalert %}
 
 ## Connected Content use case

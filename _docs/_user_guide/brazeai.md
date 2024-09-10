@@ -1,6 +1,6 @@
 ---
-nav_title: BrazeAI<sup>TM</sup>
-article_title: BrazeAI<sup>TM</sup>
+nav_title: BrazeAI
+article_title: BrazeAI
 page_order: 6.5
 layout: dev_guide
 search_rank: 12
