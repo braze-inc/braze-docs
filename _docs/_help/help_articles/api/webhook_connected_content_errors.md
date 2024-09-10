@@ -120,6 +120,7 @@ table td {
 `5XX` errors indicate that there's an issue with the endpoint. These errors are typically caused by server-side issues.
 
 | Error code | What it means |
+|---|---|
 | **500 Internal Server Error** | The endpoint encountered an unexpected condition that prevented it from completing the request. |
 | **502 Bad Gateway** | The endpoint received an invalid response from the upstream server. |
 | **503 Service Unavailable** | The endpoint is currently unable to handle the request due to a temporary overload or maintenance. |
