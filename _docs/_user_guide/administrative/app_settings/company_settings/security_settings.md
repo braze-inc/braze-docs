@@ -83,7 +83,7 @@ A reset can solve common authentication issues such as trouble with authenticato
 
 ## Downloading a security event report
 
-The Security Event report is a CSV report of security events such as account invitations, account removals, failed and successful login attempts, and other activities. 
+The Security Event report is a CSV report of security events such as account invitations, account removals, failed and successful login attempts, and other activities. You can use it to perform internal audits.
 
 To download this report, do the following:
 
