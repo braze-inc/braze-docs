@@ -55,7 +55,7 @@ Data breakdowns like these can help you understand what specific data points are
 
 ## Total data points dashboard
 
-The **Total Data Points Usage** tab provides an in-depth look at your data point consumption. You can view all data in this section aggregated by either weeks or months. Click **Update** to apply any changes.
+The **Total Data Points Usage** tab provides an in-depth look at your data point consumption. You can view all data in this section aggregated by either weeks or months.
 
 ![Filtering Data Point Usage by weeks][2]
 
@@ -72,20 +72,9 @@ The fields in this section are defined as follows:
 
 ![Contract Details section of Total Data Point Usage tab][5]
 
-### Current billing cycle
-
-This section of the dashboard displays the data point usage for the current billing cycle. This includes the following information for the current billing cycle:
-
-- Start date 
-- End date  
-- Allotted number of data points 
-- Total data point usage 
-
-![Current Billing Cycle section of Total Data Points Usage tab][6]{: style="max-width:90%;"}
-
 ### Company billing data
 
-#### Usage across workspaces
+#### Workspace data point usage
 
 This graph allows you to assess the total data point usage of a company by workspace. This graph gives you the ability to assess how each workspace is contributing to the company's data point usage.
 
