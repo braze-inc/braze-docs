@@ -120,8 +120,10 @@ table td {
 `5XX` errors indicate that there's an issue with the endpoint. These errors are typically caused by server-side issues.
 
 | Error code | What it means |
-| 500 Internal Server Error | The endpoint encountered an unexpected condition that prevented it from fulfilling the request. |
-| 502 Bad Gateway |
+| **500 Internal Server Error** | The endpoint encountered an unexpected condition that prevented it from completing the request. |
+| **502 Bad Gateway** | The endpoint received an invalid response from the upstream server. |
+| **503 Service Unavailable** | The endpoint is currently unable to handle the request due to a temporary overload or maintenance. |
+| **504 Gateway Timeout** | The endpoint didn't receive a timely response from the upstream server. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 
@@ -129,5 +131,5 @@ table td {
 
 Here are tips for troubleshooting common `5XX` errors:
 
-- Review the error message for specific details available on the Message Activity Log page. For webhooks, go to the **Performance Over Time** section on the Braze home page and select the statistics for webhooks. From here, you can find the timestamp that indicates when the errors occurred.
+- Review the error message for specific details available in the **Message Activity Log**. For webhooks, go to the **Performance Over Time** section on the Braze home page and select the statistics for webhooks. From here, you can find the timestamp that indicates when the errors occurred.
 - Make sure you're not sending too many requests that overload the endpoint. You can send in batches or adjust the rate limit to check if this reduces any errors.
