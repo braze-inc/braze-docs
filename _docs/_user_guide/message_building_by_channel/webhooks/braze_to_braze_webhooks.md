@@ -71,8 +71,9 @@ If you are using the [older navigation]({{site.baseurl}}/navigation), you can cr
 
 Add your user track request in the request body and the Liquid to assign a counter variable. For more details, refer to [User track][8].
 
-The following is an example of both the required Liquid and request body for this endpoint, where `your_attribute_count` is the attribute you're using to count how many times a user has seen a message: {% raw %}
+The following is an example of both the required Liquid and request body for this endpoint, where `your_attribute_count` is the attribute you're using to count how many times a user has seen a message:
 
+{% raw %}
 ```json
 {% assign new_number = {{custom_attribute.${your_attribute_count}}} | plus: 1 %}
 {
