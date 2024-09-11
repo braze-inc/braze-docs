@@ -1,5 +1,3 @@
-<!-- Format all definitions as standalone sentences or paragraphs. -->
-
 {% if include.metric == "AMP Clicks" %}
 *AMP Clicks* is the total number of clicks in your AMP HTML email, cumulative of the HTML, plaintext, and AMP HTML versions of the email.
 {% endif %}
