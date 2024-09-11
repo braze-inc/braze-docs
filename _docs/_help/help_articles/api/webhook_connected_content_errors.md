@@ -38,8 +38,8 @@ table td {
       <td>
         <ul>
           <li>Check the request payload for any syntax errors.</li>
-          <li>Check that all required fields are included and correctly formatted.</li>
-          <li>Validate the JSON structure if you are sending a JSON payload.</li>
+          <li>Confirm that all required fields are included and correctly formatted.</li>
+          <li>If you're sending a JSON payload, validate the JSON structure.</li>
         </ul>
       </td>
     </tr>
@@ -49,7 +49,7 @@ table td {
       <td>
         <ul>
           <li>Verify that the correct authentication credentials (such as API keys or tokens) are included in the request headers.</li>
-          <li>Confirm that the credentials have the necessary permissions to access the endpoint.</li>
+          <li>Confirm that you have the user permissions to access the endpoint.</li>
         </ul>
       </td>
     </tr>
@@ -58,7 +58,7 @@ table td {
       <td>The endpoint understands the request but refuses to authorize it.</td>
       <td>
         <ul>
-          <li>Check if the API key or token has the necessary permissions.</li>
+          <li>Check if the API key or token has the required permissions.</li>
           <li>Confirm that you have the user permissions to access the endpoint.</li>
         </ul>
       </td>
@@ -68,7 +68,7 @@ table td {
       <td>The endpoint cannot find the requested resource.</td>
       <td>
         <ul>
-          <li>Verify the endpoint URL for any typos or incorrect paths.</li>
+          <li>Check the endpoint URL for any typos or incorrect paths.</li>
           <li>Confirm that the resource you're trying to access exists.</li>
         </ul>
       </td>
@@ -78,7 +78,7 @@ table td {
       <td>The request method is known by the endpoint but is not supported by the target resource.</td>
       <td>
         <ul>
-          <li>Check the HTTP method (GET, POST, PUT, DELETE) used in the request.</li>
+          <li>Check the HTTP method (DELETE, GET, POST, PUT) used in the request.</li>
           <li>Confirm that the endpoint supports the method you're using.</li>
         </ul>
       </td>
@@ -88,8 +88,8 @@ table td {
       <td>The endpoint timed out processing the request.</td>
       <td>
         <ul>
-          <li>Check the HTTP method (GET, POST, PUT, DELETE) used in the request.</li>
-          <li>Ensure that the endpoint supports the method you are using.</li>
+          <li>Check the HTTP method (DELETE, GET, POST, PUT) used in the request.</li>
+          <li>Confirm that the endpoint supports the method you're using.</li>
         </ul>
       </td>
     </tr>
@@ -98,8 +98,8 @@ table td {
       <td>The request is incomplete because of a conflict with the current state of the resource.</td>
       <td>
         <ul>
-          <li>Check the HTTP method (GET, POST, PUT, DELETE) used in the request.</li>
-          <li>Ensure that the endpoint supports the method you are using.</li>
+          <li>Check the HTTP method (DELETE, GET, POST, PUT) used in the request.</li>
+          <li>Confirm that the endpoint supports the method you're using.</li>
         </ul>
       </td>
     </tr>
@@ -119,14 +119,13 @@ table td {
 
 `5XX` errors indicate that there's an issue with the endpoint. These errors are typically caused by server-side issues.
 
-| Error code | What it means |
-|---|---|
-| **500 Internal Server Error** | The endpoint encountered an unexpected condition that prevented it from completing the request. |
-| **502 Bad Gateway** | The endpoint received an invalid response from the upstream server. |
-| **503 Service Unavailable** | The endpoint is currently unable to handle the request due to a temporary overload or maintenance. |
-| **504 Gateway Timeout** | The endpoint didn't receive a timely response from the upstream server. |
+| Error code                    | What it means                                                                                      |
+|-------------------------------|----------------------------------------------------------------------------------------------------|
+| **500 Internal Server Error** | The endpoint encountered an unexpected condition that prevented it from completing the request.    |
+| **502 Bad Gateway**           | The endpoint received an invalid response from the upstream server.                                |
+| **503 Service Unavailable**   | The endpoint is currently unable to handle the request due to a temporary overload or maintenance. |
+| **504 Gateway Timeout**       | The endpoint didn't receive a timely response from the upstream server.                            |
 {: .reset-td-br-1 .reset-td-br-2}
-
 
 ### Resolving 5XX errors
 
