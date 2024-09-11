@@ -9,7 +9,7 @@ description: "This article covers how to troubleshoot webhook and Connected Cont
 
 # Troubleshooting webhook and Connected Content requests
 
-> This article covers how to troubleshoot common webhook error codes and provides further explanations on how these errors can occur in endpoint requests.
+> This article covers how to troubleshoot common error codes for webhooks and Connected Content, and provides further explanations on how these errors can occur in your requests.
 
 ## 4XX errors
 
