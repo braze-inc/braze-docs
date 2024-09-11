@@ -13,7 +13,7 @@ page_type: reference
 
 S3 のクラウドデータインジェスト(CDI) を使用して、AWS アカウントの 1 つ以上の S3 バケットを Braze に直接統合できます。新規ファイルが S3 にパブリッシュされると、メッセージが SQS に投稿され、Braze のクラウドデータ取り込みがそれらの新規ファイルを取り込みます。 
 
-Cloud Data Ingestion supports JSON, CSV, and Parquet files, and attributes, event, purchase, and user delete data.
+クラウドデータ取り込みは、JSON、CSV、Parquet のファイルと、属性、イベント、購入、およびユーザー削除のデータをサポートします。
 
 連携には次のリソースが必要です。
  - データストレージ用の S3 バケット 
@@ -21,7 +21,7 @@ Cloud Data Ingestion supports JSON, CSV, and Parquet files, and attributes, even
  - Braze接続用のIAMロール  
 
 {% alert note %}
-Braze Cloud Data Ingestion support for S3 is currently in early access.Contact your Braze account manager if you are interested in participating in the early access.
+Braze の S3 用のクラウドデータ取り込みサポートは現在、早期アクセス段階です。早期アクセスへの参加に興味がある場合は、Braze アカウントマネージャーにお問い合わせください。
 {% endalert %}
 
 ## AWSの定義
@@ -38,9 +38,9 @@ Braze Cloud Data Ingestion support for S3 is currently in early access.Contact y
 
 ## AWS でのクラウドデータ取り込みの設定
 
-### ステップ 1:Create a source bucket
+### ステップ 1:ソースバケットの作成
 
-Create a general purpose S3 bucket with default settings in your AWS account. 
+AWS アカウントでデフォルト設定の汎用 S3 バケットを作成します。 
 
 デフォルト設定は次のとおりです。
   - ACL 無効
@@ -98,9 +98,9 @@ Create a general purpose S3 bucket with default settings in your AWS account.
 
 ### ステップ 5: IAM ポリシーの作成
 
-Create an IAM policy to allow Braze to interact with your source bucket.To get started, sign in to the AWS management console as an account administrator. 
+ソースバケットの操作を Braze に許可する IAM ポリシーを作成します。まず、アカウント管理者として AWS 管理コンソールにサインインします。 
 
-1. Go to the IAM section of the AWS Console, select **Policies** in the navigation bar, then select **Create Policy**.<br><br>![]({{site.baseurl}}/assets/img/create_policy_1_list.png)<br><br>
+1. AWS コンソールの \[IAM] セクションに移動し、ナビゲーションバーの \[**ポリシー**] を選択してから \[**ポリシーを作成**] を選択します。<br><br>![]({{site.baseurl}}/assets/img/create_policy_1_list.png)<br><br>
 
 2. **JSON** タブを開き、**Policy Document** セクションに以下のコード スニペットを入力します。`YOUR-BUCKET-NAME-HERE` をバケット名に、`YOUR-SQS-ARN-HERE` をSQS キュー名に置き換えるよう注意してください。 
 
@@ -134,9 +134,9 @@ Create an IAM policy to allow Braze to interact with your source bucket.To get s
 ```  
 
 {: start="3"}
-3\.Select **Review Policy** when you're finished.
+3\.入力が終わったら、\[**ポリシーの確認**] を選択します。
 
-4. Give the policy a name and description and select **Create Policy**.  
+4. ポリシーに名前と説明を付けて、\[**ポリシーの作成**] を選択します。  
 
 ![]({{site.baseurl}}/assets/img/create_policy_3_name.png)
 
@@ -148,11 +148,11 @@ AWSの設定を完了するには、IAMロールを作成し、ステップ 4か
 
 1. IAM ポリシーを作成したコンソールの同じ \[IAM] セクションで、\[**ロール**] > \[**ロールの作成**] に移動します。<br><br>![]({{site.baseurl}}/assets/img/create_role_1_list.png)<br><br>
 
-2. Retrieve the Braze AWS account ID from your Braze dashboard.\[**パートナー連携**] > \[**テクノロジーパートナー**] を選択し、\[**Amazon S3**] を選択します。ここには、ロールの作成に必要なアカウントID があります。<br><br>![]({{site.baseurl}}/assets/img/cloud_ingestion/s3_find_account.png)<br><br>
+2. Braze ダッシュボードから Braze AWS のアカウント ID を取得します。\[**パートナー連携**] > \[**テクノロジーパートナー**] を選択し、\[**Amazon S3**] を選択します。ここには、ロールの作成に必要なアカウントID があります。<br><br>![]({{site.baseurl}}/assets/img/cloud_ingestion/s3_find_account.png)<br><br>
 
-3. AWS で、信頼できるエンティティセレクターのタイプとして \[**別の AWS アカウント**] を選択します。Provide your Braze account ID, select the **Require external ID** checkbox, and enter an external ID for Braze to use.Select **Next** when complete.<br><br> ![The S3 "Create Role" page.このページには、ロール名、ロールの説明、信頼できるエンティティ、ポリシー、および権限境界のフィールドがあります。]({{site.baseurl}}/assets/img/create_role_2_another.png)
+3. AWS で、信頼できるエンティティセレクターのタイプとして \[**別の AWS アカウント**] を選択します。Braze のアカウント ID を入力し、\[**外部 ID が必要**] チェックボックスをオンにして、Braze で使用する external ID を入力します。完了したら \[**次へ**] を選択します。<br><br> ![S3 の \[ロールの作成] ページ。このページには、ロール名、ロールの説明、信頼できるエンティティ、ポリシー、および権限境界のフィールドがあります。]({{site.baseurl}}/assets/img/create_role_2_another.png)
 
-4. ステップ 4 で作成したポリシーをロールにアタッチします。検索バーでポリシーを検索し、ポリシーの横のチェックマークを選択してアタッチします。Select **Next** when complete.<br><br>![Role ARN]({{site.baseurl}}/assets/img/create_role_3_attach.png)<br><br>Give the role a name and a description, and click **Create Role**.<br><br>![Role ARN]({{site.baseurl}}/assets/img/create_role_4_name.png)<br><br>
+4. ステップ 4 で作成したポリシーをロールにアタッチします。検索バーでポリシーを検索し、ポリシーの横のチェックマークを選択してアタッチします。完了したら \[**次へ**] を選択します。<br><br>![ロールの ARN]({{site.baseurl}}/assets/img/create_role_3_attach.png)<br><br>ロールに名前と説明を付け、\[**ロールの作成**] をクリックします。<br><br>![ロールの ARN]({{site.baseurl}}/assets/img/create_role_4_name.png)<br><br>
 
 {: start="5"}
 5. Cloud Data Ingestion 統合を作成するときに使用するために、作成したロールのARN と生成した外部ID をメモしておきます。  
@@ -161,11 +161,11 @@ AWSの設定を完了するには、IAMロールを作成し、ステップ 4か
 
 1. 新しい連携を作成するには、\[**データ設定**] > \[**クラウドデータ取り込み**] を開き、\[**新しいデータ同期を作成**] を選択して、\[ファイルソース] セクションから \[**S3 インポート**]を選択します。 
 
-2. Input the information from the AWS setup process to create a new sync.Specify the following:
-- Role ARN
+2. AWS の設定プロセスからの情報を入力して新しい同期を作成します。次の項目を指定します。
+- ロールの ARN
 - External ID
-- SQS URL (must be unique for each new integration)
-- Bucket Name
+- SQS URL (新しい連携ごとに一意である必要があります)
+- バケット名
 - フォルダーのパス (オプション)
 - 地域  
 
@@ -185,11 +185,11 @@ AWSの設定を完了するには、IAMロールを作成し、ステップ 4か
 クラウドデータ取り込みは、JSON、CSV、およびParquet ファイルをサポートします。それぞれのファイルには、サポートされている1 つ以上の識別子列と、JSON ストリングとしての給与読み込む列が含まれている必要があります。 
 
 - ユーザ識別子ソースファイルには、1 つ以上のユーザー 識別子列またはキーを含めることができます。各行には1 つの識別子のみを含める必要がありますが、ソースファイルには複数の識別子型を含めることができます。 
-    - `EXTERNAL_ID` - 更新対象のユーザーを特定します。This should match the `external_id` value used in Braze. 
-    - `ALIAS_NAME` and `ALIAS_LABEL` \- These two columns create a user alias object. `alias_name` should be a unique identifier, and `alias_label` specifies the type of alias.Users may have multiple aliases with different labels but only one `alias_name` per `alias_label`.
-    - `BRAZE_ID` - The Braze user identifier.This is generated by the Braze SDK, and new users cannot be created using a Braze ID through Cloud Data Ingestion.To create new users, specify an external user ID or user alias.
-    - `EMAIL` - The user's email address.If multiple profiles with the same email address exist, the most recently updated profile will be prioritized for updates.If you include both email and phone, we will use the email as the primary identifier.
-    - `PHONE` - The user's email address.If multiple profiles with the same phone number exist, the most recently updated profile will be prioritized for updates. 
+    - `EXTERNAL_ID` - 更新対象のユーザーを特定します。これは Braze で使用されている `external_id` 値と一致しなければなりません。 
+    - `ALIAS_NAME` および `ALIAS_LABEL` \- この 2 列はユーザーエイリアスオブジェクトを作成します。`alias_name` は一意の識別子である必要があり、`alias_label` はエイリアスのタイプを指定します。ユーザーは、異なるラベルを持つ複数のエイリアスを持つことができますが、`alias_label` ごとに `alias_name` を 1 つしか持つことができません。
+    - `BRAZE_ID` - Braze のユーザー識別子。これは Braze SDK によって生成されます。クラウドデータ取り込み経由で Braze ID を使用して新規ユーザーを作成することはできません。新規ユーザーを作成するには、外部ユーザー ID またはユーザーエイリアスを指定します。
+    - `EMAIL` - ユーザーのメールアドレス。同じメールアドレスを持つプロファイルが複数存在する場合、最後に更新されたプロファイルが優先されて更新されます。メールと電話の両方が指定された場合は、メールをプライマリ識別子として使用します。
+    - `PHONE` - ユーザーのメールアドレス。同じ電話番号を持つプロファイルが複数存在する場合、最後に更新されたプロファイルが優先されて更新されます。 
 - `PAYLOAD` - Braze 内のユーザーと同期するフィールドの JSON 文字列。
 
 {% alert note %}

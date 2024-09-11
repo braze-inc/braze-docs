@@ -1,30 +1,30 @@
 ---
-nav_title: How Braze Uses Currents
-article_title: How Braze Uses Currents
+nav_title: Braze で Currents を使用する方法
+article_title: Braze で Currents を使用する方法
 page_order: 6
 page_type: tutorial
-description: "This Currents how-to article will walk you through the basic process for setting up proper intakes for event data, as well as moving it into a database and BI tool."
+description: "この Currents のハウツー記事では、イベントデータの適切な取り込みを設定するための基本的なプロセスと、それをデータベースや BI ツールに移動する方法を順に説明します。"
 tool: Currents
  
 ---
 
-# How Braze uses Currents
+# Braze で Currents を使用する方法
 
-> Braze uses Currents!That's right, we like our own product enough to use it in conjunction with a few of [our partners]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/available_partners/).
+> Braze では Currents を使用しています。自社製品を気に入っているため、弊社では[パートナー]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/available_partners/)数社との連携に使用しています。
 
-We filter our data from our email and push campaigns into a business insights tool, Looker, but it takes an interesting route to get there.We use a slightly inverted version of the ETL (Extract, Transform, Load) methodology - we just switched up the order to ELT (Extract, Load, Transform)!
+メールにフィルターを適用してデータを取り出し、キャンペーンをビジネスインサイトツールである Looker にプッシュしていますが、そこに到達するまでには興味深い経路をたどります。ETL (抽出、変換、読み込み) 手法を少し入れ替えたバージョンである ELT (抽出、読み込み、変換) を使用しています。
 
-## Step 1:Intake and aggregate event data
+## ステップ 1: イベントデータの取り込みと集約
 
-After launching campaigns using any of our Engagement Tools (like campaigns or Canvas), we track event data using our own system as well as some from our email partners.Some of this data is aggregated and shown in the dashboard, but we were interested in diving deeper!
+弊社のエンゲージメントツール (キャンペーンやキャンバスなど) を使用してキャンペーンを開始した後、独自のシステムやメールパートナーのシステムを使用してイベントデータを追跡します。このデータの一部は集計されてダッシュボードに表示されますが、さらに詳細を調べようと考えました。
 
-## Step 2:Send event data to a data storage partner
+## ステップ 2: データストレージパートナーへのイベントデータの送信
 
-We set up Currents to send Braze event data to Amazon S3 for storage and extraction.Now, we know that you can use [Athena][2] to sit on top of S3 and run queries.It's a great short-term solution.But we wanted (and recommend to you) a long-term solution using a Relational Database and a Business Intelligence/Analytics tool.
+保存と抽出の目的で、Braze のイベントデータを Amazon S3 に送信するように Currents を設定しました。これで、[Athena][2] を使用して S3 の上でクエリを実行できることがわかりました。これは短期的に優れたソリューションです。しかし、弊社ではリレーショナルデータベースとビジネスインテリジェンス / 分析ツールを使用する長期的なソリューションを求めていました。これはお客様に推奨するソリューションでもあります。
 
-We think of S3 as our keys to the castle!It opens up the door to so many possibilities for moving, pivoting, and analyzing our data by transferring it where we need it to go.However, we are careful not to transform our data in S3, as we have a very specific structure for it.
+私たちは S3 を、宝箱を開ける鍵だと見なしています。必要な場所にデータを転送することで、データの移動、変換、および分析の可能性が広がります。ただし、S3 には非常に特殊な構造があるため、S3 でデータを変換しないように注意しています。
 
-## Step 3:Transform event data with a relational database
+## ステップ 3: リレーショナルデータベースでのイベントデータの変換
 
 From S3, we choose a warehouse ([Snowflake Data Sharing](https://www.snowflake.com/try-the-data-warehouse-built-for-the-cloud/?&utm_medium=search&utm_source=adwords&utm_campaign=NA%20-%20Branded&utm_adgroup=NA%20-%20Branded%20Snowflake%20-%20Data&utm_term=%2Bsnowflake%20%2Bdata&utm_region=NA&gclid=EAIaIQobChMI0vLv6uDA3gIVEFqGCh3aiwMzEAAYASAAEgI72fD_BwE) or Snowflake Reader Accounts, in our case).We transform it there, then move it to Looker, where we have blocks set up that will structure and organize our data.
 
