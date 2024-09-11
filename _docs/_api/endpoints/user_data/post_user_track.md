@@ -294,4 +294,14 @@ The segmentation tool will include these users regardless of whether they have e
 
 Each event object in the events array represents a single occurrence of a custom event by a user at a designated time. This means each event ingested into Braze has its own event ID, so "duplicate" events are treated as separate, unique events.
 
+## Monthly Active Users CY 24-25
+For customers who have purchased Monthly Active Users - CY 24-25, Braze manages different rate limits on its /users/track endpoint:
+- Hourly rate limits are set according to the expected data ingestion activity on your account, which may correspond to the number of monthly active users you have purchased, industry, seasonality, or other factors.
+- In addition to the limit on requests per hour, Braze also imposes a burst limit on the number of requests allowed per second.
+- Each request may batch up to 50 updates combined across attribute, event, or purchase objects.
+
+Current limits based on expected ingestion can be found in the dashboard under Settings > APIs and Identifiers > API limits. We may modify rate limits to protect system stability or allow for increased data throughput on your account. Please contact Braze Technical Support or your CSM for questions or concerns regarding hourly or per-second request limit and the needs of your business.
+
+
+
 {% endapi %}
