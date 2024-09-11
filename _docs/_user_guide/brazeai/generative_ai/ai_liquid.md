@@ -1,28 +1,28 @@
 ---
-nav_title: AI Liquid Assistant
-article_title: AI Liquid Assistant
+nav_title: BrazeAI Liquid Assistant
+article_title: BrazeAI Liquid Assistant
 description: "This article will cover how the AI Liquid Assistant works and how you can use it to generate Liquid snippets for your messaging."
 page_type: reference
 page_order: 5
 ---
 
-# AI Liquid assistant
+# BrazeAI<sup>TM</sup> Liquid assistant
 
-> The AI Liquid Assistant is a chat assistant powered by BrazeAI<sup>TM</sup> that helps generate the Liquid you need to personalize message content. 
+> The BrazeAI<sup>TM</sup> Liquid Assistant is a chat assistant powered by BrazeAI<sup>TM</sup> that helps generate the Liquid you need to personalize message content. 
 
-With the AI Liquid Assistant, you can generate Liquid from templates, receive personalized Liquid suggestions, and optimize existing Liquid with the support of BrazeAI<sup>TM</sup>. The AI Liquid Assistant also provides annotations explaining the Liquid used, so you can increase your understanding of Liquid and learn to write your own.
+With the BrazeAI<sup>TM</sup> Liquid Assistant, you can generate Liquid from templates, receive personalized Liquid suggestions, and optimize existing Liquid with the support of BrazeAI<sup>TM</sup>. The assistant also provides annotations explaining the Liquid used, so you can increase your understanding of Liquid and learn to write your own.
 
 {% alert important %}
-The AI Liquid Assistant is currently in beta for a limited number of customers who actively use the push and SMS channels. If you're interested in being considered for the beta, reach out to your customer success manager.
+The BrazeAI<sup>TM</sup> Liquid Assistant is currently in beta for a limited number of customers who actively use the push and SMS channels. If you're interested in being considered for the beta, reach out to your customer success manager.
 {% endalert %}
 
 ## How it works
 
-The AI Liquid Assistant is designed to help you write effective Liquid code tailored to your marketing needs. Trained on both Liquid syntax and how marketers use Liquid in their messages, our AI understands the nuances of crafting personalized content. Additionally, by providing the AI Liquid Assistant with your custom attribute names (such as `favourite_color`) and data types (such as a boolean or string), our AI Assistant ensures your messages are precisely targeted and aligned with your goals.
+The BrazeAI<sup>TM</sup> Liquid Assistant is designed to help you write effective Liquid code tailored to your marketing needs. Trained on both Liquid syntax and how marketers use Liquid in their messages, our AI understands the nuances of crafting personalized content. Additionally, by providing the BrazeAI<sup>TM</sup> Liquid Assistant with your custom attribute names (such as `favourite_color`) and data types (such as a boolean or string), our assistant makes your messages are precisely targeted and aligned with your goals.
 
 ## Generating Liquid code
 
-To launch the AI Liquid assistant, select the AI assistant icon in the message composer.
+To launch the BrazeAI<sup>TM</sup> Liquid assistant, select the AI assistant icon in the message composer.
 
 ![Message composer with the AI assistant.][1]{: style="max-width:50%;"}
 
@@ -34,7 +34,7 @@ You can generate another message using the same prompt by selecting **Regenerate
 
 ### Provided prompts
 
-While using the AI Liquid Assistant, you might see a variety of prompts to help you get started with Liquid. Some of the prompts are listed below.
+While using the BrazeAI<sup>TM</sup> Liquid Assistant, you might see a variety of prompts to help you get started with Liquid. Some of the prompts are listed below.
 
 #### Use app activity
 
@@ -52,7 +52,7 @@ This prompt will generate Liquid code that sends a message with how much time un
 
 This prompt appears when there is content in your message box. It generates a list of options you can choose from to personalize your message with Liquid. 
 
-![Example output of the "Inspire me" prompt.][5]{: style="max-width:60%;"}
+![Example output of the "Inspire me" prompt.][5]{: style="max-width:45%;"}
 
 #### Improve my Liquid
 
