@@ -1,19 +1,19 @@
 ---
-nav_title: Export Troubleshooting
-article_title: Export Troubleshooting
+nav_title: エクスポートに関するトラブルシューティング
+article_title: エクスポートに関するトラブルシューティング
 page_order: 10
 page_type: reference
-description: "This reference article covers some common troubleshooting scenarios for API and CSV exports."
+description: "このリファレンス記事では、API と CSV のエクスポートに関する一般的なトラブルシューティングシナリオをいくつか取り上げています。"
 
 ---
 
-# Export troubleshooting
+# エクスポートに関するトラブルシューティング
 
-> The following lists error messages you may encounter while exporting data via CSV or API from Braze.
+> Braze から CSV または API を使用してデータをエクスポートするときに発生する可能性のあるエラーメッセージを以下に示します。
 
-## Common errors
+## 一般的なエラー
 
-### 'AccessDenied' 
+### 「アクセス拒否」 
 
 **独自の S3 バケット**を使用している場合、次の理由が考えられます。
 - 予期されたオブジェクトはS3バケットにもう存在しません。エンジニアに確認してください。
@@ -22,16 +22,16 @@ description: "This reference article covers some common troubleshooting scenario
 **Braze S3 バケット**を使用している場合、次の理由が考えられます。
 - オブジェクトはもうそこにありません。これは、4 時間以上前に実行したエクスポートのリンクをクリックした場合に発生する可能性があります。このような場合は、エクスポートを再実行してください。
 - すぐにダウンロードリンクをクリックしましたが、S3がオブジェクトを提供する準備ができていませんでした。数分後にもう一度やり直してください。通常、レポートのサイズが大きいほど時間がかかります。 
-- エクスポートが大きすぎるため、サーバーがこのzipファイルを作成しようとしてメモリ不足になりました。このような場合は、このエクスポートを試みているユーザーにメールを自動的に送信します。If you consistently run into this issue, we recommend that you use your own S3 buckets in the future.
+- エクスポートが大きすぎるため、サーバーがこのzipファイルを作成しようとしてメモリ不足になりました。このような場合は、このエクスポートを試みているユーザーにメールを自動的に送信します。この問題が頻繁に発生する場合、今後は独自の S3 バケットを使用することをお勧めします。
 
-### 'ExpiredToken'
+### 「期限切れトークン」
 
-This will happen if the email was sent 4+ hours ago.Re-run the export and download it within 4 hours.
-This could also be caused by Braze no longer having access to the S3 bucket you are downloading the data to.Make sure you've updated your S3 credentials using these steps.
+これは、メールが送信されてから 4 時間以上経過した場合に発生します。エクスポートを再実行して、4 時間以内にダウンロードしてください。
+この原因として、データのダウンロード先の S3 バケットに Braze がアクセスできなくなったことも考えられます。以下のステップを使用して、S3 認証情報を更新していることを確認してください。
 
-### "Looks like the file doesn't exist anymore, please check to make sure nothing is deleting objects from your bucket"
+### 「ファイルがもう存在しないようです。バケットからオブジェクトが削除されていないことを確認してください」
 
-There may be a slight lag between when Braze's email with the export gets sent, and when S3 is actually ready to serve the object.このエラーが表示された場合は、数分待ってからやり直してください。
+Braze のエクスポートに関するメールが送信されてから、S3 で実際にオブジェクトを提供する準備が整うまで若干時間がかかる場合があります。このエラーが表示された場合は、数分待ってからやり直してください。
 
 ### フィールドにアポストロフィが追加されました
 
