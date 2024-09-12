@@ -26,26 +26,26 @@ tool: Currents
 
 ## ステップ 3: リレーショナルデータベースでのイベントデータの変換
 
-From S3, we choose a warehouse ([Snowflake Data Sharing](https://www.snowflake.com/try-the-data-warehouse-built-for-the-cloud/?&utm_medium=search&utm_source=adwords&utm_campaign=NA%20-%20Branded&utm_adgroup=NA%20-%20Branded%20Snowflake%20-%20Data&utm_term=%2Bsnowflake%20%2Bdata&utm_region=NA&gclid=EAIaIQobChMI0vLv6uDA3gIVEFqGCh3aiwMzEAAYASAAEgI72fD_BwE) or Snowflake Reader Accounts, in our case).We transform it there, then move it to Looker, where we have blocks set up that will structure and organize our data.
+S3 からウェアハウス (弊社の場合では [Snowflake Data Sharing](https://www.snowflake.com/try-the-data-warehouse-built-for-the-cloud/?&utm_medium=search&utm_source=adwords&utm_campaign=NA%20-%20Branded&utm_adgroup=NA%20-%20Branded%20Snowflake%20-%20Data&utm_term=%2Bsnowflake%20%2Bdata&utm_region=NA&gclid=EAIaIQobChMI0vLv6uDA3gIVEFqGCh3aiwMzEAAYASAAEgI72fD_BwE) または Snowflake Reader Accounts) を選択します。そこでデータを変換してから Looker に移動します。Looker では、データを構造化して整理するブロックを設定しています。
 
-Snowflake isn't your only warehouse option.You can also choose [Redshift](https://aws.amazon.com/redshift/), [Google BigQuery](https://cloud.google.com/bigquery/?utm_source=google&utm_medium=cpc&utm_campaign=na-US-all-en-dr-bkws-all-all-trial-p-dr-1003905&utm_content=text-ad-none-any-DEV_c-CRE_288551384566-ADGP_Hybrid+%7C+AW+SEM+%7C+BKWS+%7C+US+%7C+en+%7C+PHR+~+Big+Data+~+BigQuery+~+google+bigquery-KWID_43700035823403663-kwd-300487425311&utm_term=KW_google%20bigquery-ST_google+bigquery&gclid=EAIaIQobChMIl9OK8uHA3gIVyVmGCh1lFgB-EAAYASAAEgIfWfD_BwE), and more!
+ウェアハウスの選択肢は Snowflake のみに限りません。[Redshift](https://aws.amazon.com/redshift/)、[Google BigQuery](https://cloud.google.com/bigquery/?utm_source=google&utm_medium=cpc&utm_campaign=na-US-all-en-dr-bkws-all-all-trial-p-dr-1003905&utm_content=text-ad-none-any-DEV_c-CRE_288551384566-ADGP_Hybrid+%7C+AW+SEM+%7C+BKWS+%7C+US+%7C+en+%7C+PHR+~+Big+Data+~+BigQuery+~+google+bigquery-KWID_43700035823403663-kwd-300487425311&utm_term=KW_google%20bigquery-ST_google+bigquery&gclid=EAIaIQobChMIl9OK8uHA3gIVyVmGCh1lFgB-EAAYASAAEgIfWfD_BwE) なども選択できます。
 
 ### Snowflake Reader Accounts
 
-Snowflake Reader Accounts offer users access to the same data and functionality as [Snowflake Data Sharing]({{site.baseurl}}/partners/snowflake/), all without requiring a Snowflake account or customer relationship with Snowflake.With Reader Accounts, Braze will create and share your data into an account and provide you credentials to log in and access your data.This will result in all data sharing and usage billing being handled entirely by Braze. 
+Snowflake Reader Accounts を使用すると、Snowflake アカウントや Snowflake との顧客関係がなくても、[Snowflake Data Sharing]({{site.baseurl}}/partners/snowflake/) と同じデータや機能にアクセスできます。Reader Accounts では、Braze がお客様のデータを作成してアカウントと共有し、またログインしてデータにアクセスするための認証情報を用意します。これにより、すべてのデータ共有と使用量請求は  Braze が完全に処理することになります。 
 
-To learn more, reach out to your customer success manager.
+詳細については、カスタマーサクセスマネージャーにお問い合わせください。
 
-**Additional resources**<br>
-For helpful usage monitoring resources, check out Snowflake's [Resource Monitors](https://docs.snowflake.com/en/user-guide/resource-monitors.html) and [Viewing Warehouse Credit Usage](https://docs.snowflake.com/en/user-guide/credits.html#viewing-warehouse-credit-usage-for-your-account) articles.
+**その他のリソース**<br>
+役立つ使用量監視リソースについては、Snowflake の[リソースモニター](https://docs.snowflake.com/en/user-guide/resource-monitors.html)と[ウェアハウスクレジット使用量の表示](https://docs.snowflake.com/en/user-guide/credits.html#viewing-warehouse-credit-usage-for-your-account)に関する記事を参照してください。
 
-## Step 4:Use a BI tool to manipulate your data
+## ステップ 4: BI ツールを使用したデータの操作
 
-Finally, we use a BI tool to analyze our data, turn it into charts and other visual tools, and more using [Looker and Looker Blocks](https://www.marketplace.looker.com/) so we don't have to ETL/ELT data every time it moves from Currents.
+最後に、BI ツールを使用してデータを分析し、[Looker と Looker Blocks](https://www.marketplace.looker.com/) を使用してグラフやその他の視覚ツールなどに変換します。そのため、データが Currents から移動するたびに ETL / ELT を行う必要がありません。
 
-Check out the following docs to get more information on these and how you can use them to build your database!
+各ブロックとデータベースを構築する際の使用方法の詳細については、以下のドキュメントを参照してください。
 
-- [User Behavior Block](https://marketplace.looker.com/marketplace/detail/user-behavior-analytics-by-braze?latest&utm_campaign=7012R000000fxfC&utm_source=other&utm_medium=email&utm_content=brazedirectreferral&utm_term=braze_direct)
-- [Message Engagement Block](https://marketplace.looker.com/marketplace/detail/message-engagement-analytics-by-braze?latest&utm_campaign=7012R000000fxfC&utm_source=other&utm_medium=email&utm_content=brazedirectreferral&utm_term=braze_direct)
+- [ユーザー行動ブロック](https://marketplace.looker.com/marketplace/detail/user-behavior-analytics-by-braze?latest&utm_campaign=7012R000000fxfC&utm_source=other&utm_medium=email&utm_content=brazedirectreferral&utm_term=braze_direct)
+- [メッセージエンゲージメントブロック](https://marketplace.looker.com/marketplace/detail/message-engagement-analytics-by-braze?latest&utm_campaign=7012R000000fxfC&utm_source=other&utm_medium=email&utm_content=brazedirectreferral&utm_term=braze_direct)
 
 [2]: https://aws.amazon.com/athena/
