@@ -1,7 +1,7 @@
 ---
 page_order: 1
-nav_title: Getting Started
-article_title: Getting Started
+nav_title: Overview
+article_title: About the Braze SDK
 layout: dev_guide
 
 guide_top_header: "Getting started with Braze"

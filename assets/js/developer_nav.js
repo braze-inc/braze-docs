@@ -1,7 +1,8 @@
 $(document).ready(function () {
-  if (page_collection !== "developer_guide") {
+  if (page_collection == "developer_guide" || page_collection !== "developer_guide") {
     return;
   }
+  /*
   var exclusion_list = [
     "parent_nav_top_platformintegrationguides_sdkprimer",
     "parent_nav_top_platformintegrationguides_sdkchangelogs",
@@ -115,5 +116,5 @@ $(document).ready(function () {
       navigation_id.trigger("click");
     }
   }
-
+*/
 });

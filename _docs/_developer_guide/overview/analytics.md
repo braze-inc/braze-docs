@@ -1,5 +1,5 @@
 ---
-nav_title: Analytics Overview
+nav_title: Analytics
 article_title: Analytics Overview
 page_order: 4
 description: "This reference article covers user data collection including what data is automatically collected, purchase events and custom events, as well as data collection best practices."
