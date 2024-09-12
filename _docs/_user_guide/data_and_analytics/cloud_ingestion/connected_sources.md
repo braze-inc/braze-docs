@@ -450,7 +450,9 @@ Select **Test Connection** to verify that the list of tables visible to the user
 {% tab Snowflake %}
 Add the public key you noted during the last step to your user in Snowflake. This will allow Braze to connect to Snowflake. For details on how to do this, see the [Snowflake documentation](https://docs.snowflake.com/en/user-guide/key-pair-auth.html). 
 
-If you want to rotate the keys at any point, Braze can generate a new key pair and provide you with the new public key.
+If you want to rotate the keys at any point, you can create a new public key by going to **Data Access Management** in **Cloud Data Ingestion** and selecting **Generate New Key** for the respective account.
+
+![Data Access Management for Snowflake Data Access Credentials, with a button to Generate New Key.]({% image_buster /assets/img/cloud_ingestion/connected_source_sf_4.png %})
 
 ```json
 ALTER USER BRAZE_INGESTION_USER SET rsa_public_key='{INSERT_YOUR_KEY}';
