@@ -352,7 +352,7 @@ Highlight items that your users have recently purchased with increased frequency
 
 - AI item recommendations
 - Catalog of relevant items
-- A method for tracking purchase (either a purchase object or custom event)
+- A method for tracking purchases (either a purchase object or custom event)
 
 {% enddetails %}
 
@@ -370,7 +370,7 @@ Highlight items that your users have recently purchased with increased frequency
 
 ### Trending liked items
 
-Highlight items that your users have recently liked with increased frequency. For example, a music app could feature up-and-coming artists who've had a recent surge in user likes.
+Highlight items that your users have recently liked with increased frequency. For example, a music app could feature up-and-coming artists who have experienced a recent surge in user likes.
 
 {% details Requirements %}
 
