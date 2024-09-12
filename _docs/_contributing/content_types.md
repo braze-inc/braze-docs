@@ -39,7 +39,7 @@ You can keep these comments in your file while writing, but you'll need to remov
 How-to guides are action-based, chronological steps that show users how to complete a specific task. For an example, see [Creating a Content Card]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/create/):
 
 {% tabs local %}
-{% tab template %}
+{% tab how-to template %}
 {% multi_lang_include contributing/templates/how_to_guide.md %}
 {% endtab %}
 {% endtabs %}
@@ -102,7 +102,7 @@ rake
 Tutorials are learning-oriented practical lessons. They focus on what the user learns, such as becoming familiar with terminology, how things interact, how to use commands, and similar. For an example, see [Rules-based recommendations]({{site.baseurl}}/user_guide/sage_ai/recommendations/rules_based_recommendations/):
 
 {% tabs local %}
-{% tab template %}
+{% tab tutorial template %}
 {% multi_lang_include contributing/templates/tutorial.md %}
 {% endtab %}
 {% endtabs %}
@@ -127,7 +127,7 @@ The title header should be prepended with `Tutorial:` and generally describe wha
 References are information-oriented content. They focus on providing the user with objective, authoritative, and technical knowledge. For an example, see [Message engagement events]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events/) (events glossary).
 
 {% tabs local %}
-{% tab template %}
+{% tab reference template %}
 {% multi_lang_include contributing/templates/reference.md %}
 {% endtab %}
 {% endtabs %}
@@ -152,7 +152,7 @@ Topmost should be nouns. For example, [Editor blocks]({{site.baseurl}}/user_guid
 Explanations are understanding-oriented content. They focus on improving the user’s conceptual understanding. For an example, see [Getting started: Braze overview]({{site.baseurl}}/user_guide/getting_started/overview/).
 
 {% tabs local %}
-{% tab template %}
+{% tab explanation template %}
 {% multi_lang_include contributing/templates/explanation.md %}
 {% endtab %}
 {% endtabs %}
@@ -197,7 +197,7 @@ Release notes are a monthly compilation of product updates in Braze. Each update
 You can use this template to create release notes for Braze Docs. For an example, see [January 9, 2024 release]({{site.baseurl}}/help/release_notes/2024/1_9_24/).
 
 {% tabs local %}
-{% tab template %}
+{% tab release note template %}
 {% multi_lang_include contributing/templates/release_notes.md %}
 {% endtab %}
 {% endtabs %}
