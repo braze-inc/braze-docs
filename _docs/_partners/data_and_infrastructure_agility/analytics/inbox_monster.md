@@ -26,7 +26,8 @@ The Braze and Inbox Monster integration allows marketers to eliminate manual see
 
 ## Integration
 
-Visit the step-by-step guide to learn how to [integrate braze with inbox monster](https://intercom.help/inbox-monster/en/articles/9518204-scheduled-placement-tests-with-braze#h_80147afaf3).
+The integration between Inbox Monster and Braze enables users to automate inbox placement testing, providing valuable deliverability insights. It also allows for the seamless import of email templates for creative diagnostics and device previews. 
+Visit the step-by-step guide to learn how to [integrate Braze with Inbox Monster](https://intercom.help/inbox-monster/en/articles/9518204-scheduled-placement-tests-with-braze#h_80147afaf3).
 
 ## Usage
 
