@@ -7,49 +7,48 @@ page_order: 0
 
 # Integrate the Braze SDK
 
-<!-- The overview starts with a '>' character and discusses what will be covered. In an optional following paragraph, contextualize the topic at a high-level in an introduction. -->
 > DESCRIPTION.
 
-INTRODUCTION.
+{% sdktabs %}
 
-<!-- The prerequisites for this task. If no prerequisites are required, you can remove this section. -->
-## Prerequisites
+{% sdktab swift %}
+Swift test
+{% endsdktab %}
 
-Before you start, you'll need to complete the following:
+{% sdktab android %}
+Android test
+{% endsdktab %}
 
-- ACTION_TO_COMPLETE
-- ACTION_TO_COMPLETE
-- ACTION_TO_COMPLETE
+{% sdktab web %}
+Android test
+{% endsdktab %}
 
-<!-- An optional, brief explanation of how the feature workflow looks. -->
-## How it works
+{% sdktab cordova %}
+Android test
+{% endsdktab %}
 
-CONTENT.
+{% sdktab flutter %}
+Android test
+{% endsdktab %}
 
-<!-- A how-to guide with nested steps. -->
-## TASK_TO_COMPLETE
+{% sdktab react native %}
+Android test
+{% endsdktab %}
 
-<!-- Optional overview of the task. -->
-CONTENT.
+{% sdktab roku %}
+Android test
+{% endsdktab %}
 
-<!-- Action-oriented header that describes the step’s goal. -->
-### Step 1: ACTION_TO_COMPLETE
+{% sdktab unity %}
+Android test
+{% endsdktab %}
 
-<!-- Use number bullets or paragraphs to describe how to complete this action -->
-CONTENT.
+{% sdktab unreal engine %}
+Android test
+{% endsdktab %}
 
-### Step 2: ACTION_TO_COMPLETE
+{% sdktab xamarin %}
+Android test
+{% endsdktab %}
 
-CONTENT.
-<!-- Optional references, such as supported data types, fields, definitions, and similar. -->
-### REFERENCE_TO_ASSIST_WITH_ACTION
-
-CONTENT.
-
-<!-- For optional steps, add “(optional)” to the end of the header. -->
-### Step 3: OPTIONAL_ACTION_TO_COMPLETE (optional)
-
-CONTENT.
-<!-- An optional section for what is supported. Add nested headers to be more specific. -->
-## Supported data types / Supported attributes / Supported events / Supported ETC.
-CONTENT.
+{% endsdktabs %}

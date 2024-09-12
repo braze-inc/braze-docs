@@ -1,6 +1,6 @@
 ---
-nav_title: SDK Authentication
-article_title: SDK Authentication
+nav_title: Authentication
+article_title: Authentication for the Braze SDK
 page_order: 2
 description: "This reference article covers SDK authentication and how to enable this feature in the Braze SDK."
 platform:
