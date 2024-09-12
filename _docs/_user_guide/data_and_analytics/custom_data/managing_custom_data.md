@@ -84,15 +84,22 @@ Changes to the blocklist may take a few minutes to propagate. You can re-enable 
 
 ## Deleting custom data
 
-The custom data can be deleted after you blocklist the custom data object and remove references from your app or website. For help deleting custom data, contact your customer success manager or the Support team.
+The custom data can be deleted after you blocklist the custom data object and remove references from your app or website.
 
 Deleting custom data does the following:
 
-- Removes the custom attribute, custom event, or purchase event from segment filter selections and analytics pages.
 - Removes the custom attribute, custom event, or purchase event from the respective page under **Data Settings**.
+- For custom attributes, permanently removes the attribute data from every user's profile.
+- For custom events, permanently removes the event metadata from every user's profile.
+
+For a custom attribute or custom event to become eligible for deletion, it must be blocklisted for a minimum of 7 days. At that time, a **Delete** option will appear in the kebab menu. Alternatively, multiple attributes or events may be selected and deleted in bulk (if they are all eligible for deletion).
+
+Once an attribute or event is selected for deletion, its status gets changed to **Trashed**. For 7 days, it is still possible to restore the attribute or event, which will place it back into blocklisted status indefinitely and prevent the deletion of data. After 7 days have passed, the data will be permanently deleted.
 
 {% alert important %}
-Deleting does not remove data already recorded on user profiles, or prevent additional recording of the custom data objects on user profiles. Make sure the custom data is no longer being recorded before having the event or attribute deleted.
+Custom data deletion is currently in early access. Contact your Braze account manager if you're interested in participating in the early access. For help deleting custom data, contact your customer success manager or the Support team.
+
+Deleting does not prevent additional recording of the custom data objects on user profiles. Make sure the custom data is no longer being recorded before deleting the event or attribute.
 {% endalert %}
 
 ## Forcing data type comparisons
