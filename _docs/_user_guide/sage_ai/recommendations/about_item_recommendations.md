@@ -22,6 +22,7 @@ When setting out to recommend items to your customers, there are a few approache
 - [Most recent](#most-recent)
 - [Selections-based](#selections-based)
 - [Rules-based](#rules-based)
+- [Trending](#trending)
 
 ### AI Personalized recommendations {#ai}
 
@@ -59,6 +60,17 @@ Based on the interaction data being tracked, use cases for this model could incl
 - [Recently liked items](#liked-items)
 - [Recently engaged with or purchased items](#recently-engaged-with-or-purchased-items)
 - [Items recently added to cart](#items-recently-added-to-cart)
+
+### Trending item recommendations {#trending}
+
+In addition to the "AI Personalized" model, the [AI item recommendations][1] feature also includes a recommendation model for "Trending", which features items that had the most positive momentum when it comes to recent user interactions. 
+
+Unlike the "Most Popular" model, which features items with consistently high interaction, this model features items that have experienced an uptick in interactions. You can use it to recommend products that are up-and-coming, and currently seeing increased traction.
+
+Based on the interaction data being tracked, use cases for this model could include recommending:
+
+- [Trending purchased items](#trending-purchased-items)
+- [Trending liked items](#trending-liked-items)
 
 ### Selections-based recommendations {#selections-based}
 
@@ -329,6 +341,54 @@ Promote items that users have recently interacted with, including views, clicks,
 5. Choose **Custom Event** and select your custom event for clicks from the list.
 6. Train the recommendation.
 7. [Use the recommendation in messaging]({{site.baseurl}}/user_guide/sage_ai/recommendations/ai_item_recommendations/#using-recommendations-in-messaging).
+
+{% enddetails %}
+
+### Trending purchased items
+
+Highlight items that your users have recently purchased with increased frequency. For example, an ecommerce business could recommend seasonal items that users are starting to stock up on during their preparations for the next season. 
+
+{% details Requirements %}
+
+- AI item recommendations
+- Catalog of relevant items
+- A method for tracking purchases (either a purchase object or custom event)
+
+{% enddetails %}
+
+{% details How to set up %}
+
+1. Create an [AI item recommendation]({{site.baseurl}}/ai_item_recommendations/).
+2. Set the **Type** to **Trending**.
+3. Select your catalog.
+4. (Optional) Add a selection to filter your recommendation to only relevant items.
+5. Choose either a purchase event or a custom event that tracks purchases, along with the corresponding property.
+6. Train the recommendation.
+7. [Use the recommendation in messaging.]({{site.baseurl}}/user_guide/sage_ai/recommendations/ai_item_recommendations/#using-recommendations-in-messaging)
+
+{% enddetails %}
+
+### Trending liked items
+
+Highlight items that your users have recently liked with increased frequency. For example, a music app could feature up-and-coming artists who have experienced a recent surge in user likes.
+
+{% details Requirements %}
+
+- AI item recommendations
+- Catalog of relevant items
+- Custom event for tracking likes
+
+{% enddetails %}
+
+{% details How to set up %}
+
+1. Create an [AI item recommendation]({{site.baseurl}}/ai_item_recommendations/).
+2. Set the **Type** to **Trending**.
+3. Select your catalog.
+4. (Optional) Add a selection to filter your recommendation to only relevant items.
+5. Choose your custom event for tracking likes, along with the corresponding property.
+6. Train the recommendation.
+7. [Use the recommendation in messaging.]({{site.baseurl}}/user_guide/sage_ai/recommendations/ai_item_recommendations/#using-recommendations-in-messaging/)
 
 {% enddetails %}
 
