@@ -1,9 +1,9 @@
 ---
-nav_title: Getting Started
-article_title: Getting Started with Canvas
+nav_title: はじめに
+article_title: キャンバスを使い始める
 page_order: 0
 layout: dev_guide
-guide_top_header: "Getting Started with Canvas"
+guide_top_header: "キャンバスを使い始める"
 guide_top_text: "キャンバスを送信する前に、これらの記事を参考にして、キャンバスとユーザージャーニーの計画を立ててください。"
 
 page_type: landing

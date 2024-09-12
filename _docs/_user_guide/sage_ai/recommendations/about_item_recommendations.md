@@ -7,7 +7,7 @@ page_order: 1
 
 # About item recommendations
 
-In this article, you’ll learn about the different ways you can suggest items that your customers are actually interested in, and get inspiration for common use cases for creating recommendation engines using Braze.
+In this article, you’ll learn about the different ways you can suggest items that your customers are interested in, and get inspiration for common use cases for creating recommendation engines using Braze.
 
 ## Prerequisites
 
@@ -25,7 +25,7 @@ When setting out to recommend items to your customers, there are a few approache
 
 ### AI Personalized recommendations {#ai}
 
-Part of the [AI item recommendations][1] feature, AI Personalized recommendations takes advantage of deep learning to predict what your users are most likely to be interested in next based on what they’ve shown interest for in the past. This method provides a dynamic and tailored recommendation system that adapts to user behavior.
+As part of the [AI item recommendations][1] feature, AI Personalized recommendations take advantage of deep learning to predict what your users are most likely to be interested in next based on what they’ve shown interest in in the past. This method provides a dynamic and tailored recommendation system that adapts to user behavior.
 
 AI Personalized recommendations use the last 6 months of item interaction data, like purchases or custom events, to build the recommendation model. For users without enough data for a personalized list, the most popular items serve as a fallback so your users are still getting relevant suggestions.
 
@@ -79,7 +79,7 @@ Rules-based recommendations are based on fixed logic that you must manually set.
 
 Some use cases include:
 
-- **Restock reminders:** Sending restock reminders for items that have a predictable usage cycle, like monthly vitamins or weekly groceries, based on their last purchase date.
+- **Restock reminders:** Sending restock reminders for items with a predictable usage cycle, like monthly vitamins or weekly groceries, based on their last purchase date.
 - **First-time buyers:** Recommend starter kits or introductory offers to first-time buyers to encourage a second purchase.
 Loyalty programs: Highlight products that would maximize a customer’s loyalty points or rewards based on their current points balance.
 - **Educational content:** Suggest new courses or content based on the topics of previously consumed or purchased materials.
@@ -234,9 +234,9 @@ For example, a tech ecommerce platform could alert tech enthusiasts about the la
 
 ### Popular items in users' carts
 
-Showcase items that have are added to carts by many other shoppers, providing users with a glimpse into the current trends among your offerings.
+Showcase items that are added to carts by many other shoppers, providing users with a glimpse into the current trends among your offerings.
 
-For example, a fashion retailer could promote clothes and accessories that are trending based on popular additions to carts by other customers. They can then create a dynamic "Trending Now" section on their homepage and mobile app, which updates in real time to encourage shoppers to purchase before items sell out.
+For example, a fashion retailer could promote clothes and accessories that are trending based on popular additions to carts by other customers. They can then create a dynamic "Trending Now" section on their homepage and mobile app, which updates in real-time to encourage shoppers to purchase before items sell out.
 
 {% details Requirements %}
 
