@@ -1,21 +1,21 @@
 ---
-nav_title: Time-Based Functionalities for Campaigns
-article_title: Time-Based Functionalities for Campaigns
+nav_title: キャンペーンの時間ベースの機能
+article_title: キャンペーンの時間ベースの機能
 page_order: 2
 tool: Campaigns
 page_type: reference
-description: "This reference article covers time-based functionalities for campaigns such as scheduled delivery, Intelligent Timing, and action-based delivery."
+description: "この参考記事では、スケジュール配信、インテリジェントタイミング、アクションベースの配信など、キャンペーンの時間ベースの機能について説明します。"
 
 ---
-# Time-based functionalities for campaigns
+# キャンペーンの時間ベースの機能
 
-> When using campaigns, you can use the time-based scheduling options to reach your audience.These time-based functionalities include campaigns that are set to scheduled delivery and action-based delivery.
+> キャンペーンを利用する際には、時間ベースのスケジュール設定オプションを使用してオーディエンスにリーチできます。これらの時間ベースの機能には、スケジュール配信とアクションベースの配信に設定されたキャンペーンが含まれます。
 
-You can also check out our [Campaign Setup](https://learning.braze.com/campaign-setup-delivery-targeting-conversions) Braze Learning course for more on campaign delivery. 
+また、キャンペーン配信の詳細については、 [キャンペーン設定](https://learning.braze.com/campaign-setup-delivery-targeting-conversions)の Braze ラーニングコースもご覧ください。 
 
-## Scheduled delivery
+## スケジュール配信
 
-This section covers time-based scheduling and delivery options for [scheduled delivery]({{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/scheduled_delivery/) campaigns.
+このセクションでは、 [スケジュール配信]({{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/scheduled_delivery/) キャンペーンの時間ベースのスケジュール設定と配信オプションについて説明します。
 
 ### 指定した時刻に送信
 
@@ -55,12 +55,12 @@ This section covers time-based scheduling and delivery options for [scheduled de
 
 ## アクションベースの配信
 
-This section covers the schedule delay and delivery options for [action-based delivery]({{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/triggered_delivery/) campaigns.
+このセクションでは、 [アクションベースの配信]({{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/triggered_delivery/)キャンペーンのスケジュール、遅延、および配信オプションについて説明します。
 
-### Schedule delay
+### スケジュールの遅延
 
 {% alert important %}
-When choosing your delay length, keep in mind that if you set a delay that is longer than the [Campaign Duration]({{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/triggered_delivery/#step-4-assign-duration), your users will not receive your campaign.
+遅延時間を選択する際に、 [キャンペーン期間]({{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/triggered_delivery/#step-4-assign-duration)よりも長い遅延を設定すると、ユーザーはキャンペーンを受け取れないことに注意してください。
 {% endalert %}
 
 #### キャンペーンをすぐに送信
@@ -88,7 +88,7 @@ When choosing your delay length, keep in mind that if you set a delay that is lo
 | 指定した曜日の指定した時間にメッセージを送信する。 | **ユーザーの現地時間か** **会社時間かを**選択する**。** |
 {: .reset-td-br-1 .reset-td-br-2}
 
-For example, suppose you select "Send on the next Saturday at 3:15 pm".If a user performs the trigger event on a Saturday, they would receive that message on the next Saturday in seven days.If they enter on a Friday, the next Saturday would be in one day.
+たとえば、「次の土曜日の午後 3 時 15 分に送信」を選択するとします。ユーザーが土曜日にトリガーイベントを実行すると、そのメッセージは 7 日後の次の土曜日に受信されます。金曜日に入ると、次の土曜日は 1 日後になります。
 
 ![][8]
 
@@ -99,7 +99,7 @@ For example, suppose you select "Send on the next Saturday at 3:15 pm".If a user
 | 指定した日数、指定した時間にメッセージを送る。 | **ユーザーの現地時間か** **会社時間かを**選択する**。** |
 {: .reset-td-br-1 .reset-td-br-2}
 
-Braze calculates the delay as `day of the week` + `calendar days`, then adds the `time`.For example, suppose the user performs the trigger event on Monday at 9 pm, and the schedule delay is set to "Send campaign in 1 day at 9 am".That message will be delivered on Tuesday at 9 am because Braze calculates the delay as `Monday` + `1 calendar day` and then adds on `9 am`.
+Braze は遅延を `day of the week` + `calendar days` として計算し、`time` を加算します。たとえば、ユーザーが月曜日の午後 9 時にトリガーイベントを実行し、スケジュールの遅延が「1 日後の午前 9 時にキャンペーンを送信する」に設定されているとします。このメッセージは火曜日の午前 9 時に配信されますが、これは Braze が遅延を `Monday` + `1 calendar day` として計算し、`9 am` に加算するためです。
 
 ![][9]
 
@@ -128,9 +128,9 @@ Braze calculates the delay as `day of the week` + `calendar days`, then adds the
 | 分、日、週（7日）、月単位で、各ユーザーが一定の期間内にキャンペーンを受け取る回数を制限する。詳しくは、[周波数キャッピングを]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/rate-limiting/#frequency-capping)参照のこと。 | ユーザーの現地時間。ユーザーのタイムゾーンが設定されていない場合、これは会社のタイムゾーンにフォールバックする。 |
 {: .reset-td-br-1 .reset-td-br-2}
 
-By default, frequency capping is toggled off for new Canvases.Frequency capping is applied at the step level, not at the Canvas entry level.
+デフォルトでは、フリークエンシーキャップは新しいキャンバスに対してはオフに切り替わります。フリークエンシーキャップは、キャンバスのエントリ レベルではなく、ステップレベルで適用されます。
 
-Frequency capping is based on calendar days, not a 24-hour period.つまり、1 日に 1 回のみキャンペーンを送信するフリークエンシーキャップルールを設定できますが、ユーザーが現地時間の午後 11 時にメッセージを受信した場合、1 時間後 (翌暦日の深夜) に別のメッセージを受信できます。 
+フリークエンシーキャップは、24 時間ではなく暦日に基づきます。つまり、1 日に 1 回のみキャンペーンを送信するフリークエンシーキャップルールを設定できますが、ユーザーが現地時間の午後 11 時にメッセージを受信した場合、1 時間後 (翌暦日の深夜) に別のメッセージを受信できます。 
 
 ## コンバージョンの期限
 
