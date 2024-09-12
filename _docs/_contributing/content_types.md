@@ -38,9 +38,11 @@ You can keep these comments in your file while writing, but you'll need to remov
 
 How-to guides are action-based, chronological steps that show users how to complete a specific task. For an example, see [Creating a Content Card]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/create/):
 
-{% alert tip %}
+{% tabs local %}
+{% tab template %}
 {% multi_lang_include contributing/templates/how_to_guide.md %}
-{% endalert %}
+{% endtab %}
+{% endtabs %}
 
 ![Screenshot of the "Creating a Content Card" page.]({% image_buster /assets/img/contributing/content_types/how_to_guide_example.png %}){: style="max-width:70%;"}
 
@@ -99,9 +101,11 @@ rake
 
 Tutorials are learning-oriented practical lessons. They focus on what the user learns, such as becoming familiar with terminology, how things interact, how to use commands, and similar. For an example, see [Rules-based recommendations]({{site.baseurl}}/user_guide/sage_ai/recommendations/rules_based_recommendations/):
 
-{% alert tip %}
+{% tabs local %}
+{% tab template %}
 {% multi_lang_include contributing/templates/tutorial.md %}
-{% endalert %}
+{% endtab %}
+{% endtabs %}
 
 ![Screenshot of the "Rules-based recommendations page.]({% image_buster /assets/img/contributing/content_types/tutorial_example.png %}){: style="max-width:70%;"}
 
@@ -122,9 +126,11 @@ The title header should be prepended with `Tutorial:` and generally describe wha
 
 References are information-oriented content. They focus on providing the user with objective, authoritative, and technical knowledge. For an example, see [Message engagement events]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events/) (events glossary).
 
-{% alert tip %}
+{% tabs local %}
+{% tab template %}
 {% multi_lang_include contributing/templates/reference.md %}
-{% endalert %}
+{% endtab %}
+{% endtabs %}
 
 ![Screenshot of the "Message engagement events" page.]({% image_buster /assets/img/contributing/content_types/reference_example.png %}){: style="max-width:70%;"}
 
@@ -145,9 +151,11 @@ Topmost should be nouns. For example, [Editor blocks]({{site.baseurl}}/user_guid
 
 Explanations are understanding-oriented content. They focus on improving the user’s conceptual understanding. For an example, see [Getting started: Braze overview]({{site.baseurl}}/user_guide/getting_started/overview/).
 
-{% alert tip %}
+{% tabs local %}
+{% tab template %}
 {% multi_lang_include contributing/templates/explanation.md %}
-{% endalert %}
+{% endtab %}
+{% endtabs %}
 
 ![Screenshot of the "Getting started: Braze overview" page.]({% image_buster /assets/img/contributing/content_types/explanation_example.png %}){: style="max-width:70%;"}
 
@@ -188,6 +196,8 @@ Release notes are a monthly compilation of product updates in Braze. Each update
 
 You can use this template to create release notes for Braze Docs. For an example, see [January 9, 2024 release]({{site.baseurl}}/help/release_notes/2024/1_9_24/).
 
-{% alert tip %}
+{% tabs local %}
+{% tab template %}
 {% multi_lang_include contributing/templates/release_notes.md %}
-{% endalert %}
+{% endtab %}
+{% endtabs %}
