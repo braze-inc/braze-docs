@@ -46,7 +46,7 @@ Movable Ink のインテリジェントクリエイティブ機能（投票、�
 | アプリ | カウントダウンタイマー | ✔* | ✔ | サポートされていますが、推奨されません。プッシュ通知は受信時にキャッシュされ、更新されません。 |
 || 世論調査 | ✗ | ✔* | \* 投票後、アプリをモバイルランディングページにします |
 || スクラッチオフ | ✔* | ✔* | クリックすると、スクラッチオフ体験のためにアプリを離れます |
-|| 動画 | ✔* | ✔* | アニメーションGIFのみ,<br>Androidの場合、Brazeは実装において\[GIFサポート]\[GIFサポート]を必要とします。 |
+|| 動画 | ✔* | ✔* | アニメーションGIFのみ,<br>Androidの場合、Brazeは実装において[GIFサポート][GIFサポート]を必要とします。 |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ## 統合
@@ -59,7 +59,7 @@ Movable Ink のインテリジェントクリエイティブ機能（投票、�
 
 {% tabs ローカル %}
 {% tab CSVデータソース %}
-- **CSVデータソース**:各行には少なくとも1つのSegment列と1つのコンテンツ列が必要です。CSVファイルがアップロードされたら、どの列をコンテンツのターゲットに使用するかを選択します。 \[例のCSVファイル]({% image_buster /assets/download_file/movable_ink_CSV.csv %})
+- **CSVデータソース**:各行には少なくとも1つのSegment列と1つのコンテンツ列が必要です。CSVファイルがアップロードされたら、どの列をコンテンツのターゲットに使用するかを選択します。 [例のCSVファイル]({% image_buster /assets/download_file/movable_ink_CSV.csv %})
 
 ![「CSV」をデータソースとして選択する際に表示されるフィールド。]({% image_buster /assets/img/movable_ink/movable_ink2.png %})
 {% endtab %}
@@ -91,7 +91,7 @@ Movable Inkには、テキスト、画像などの要素をドラッグ＆ドロ
 
 キャンペーンを終了する前に、ダイナミックな画像をプレビューし、クエリパラメータをテストして、画像が表示されるときの見た目を確認してください。完了すると、ダイナミックなURLが生成され、それをBrazeに挿入できます！
 
-Movable Inkプラットフォームの使用方法の詳細については、\[Movable Inkサポートセンター]\[サポート]を参照してください。
+Movable Inkプラットフォームの使用方法の詳細については、[Movable Inkサポートセンター][サポート]を参照してください。
 
 ### ステップ 3:Movable Ink コンテンツ URL を取得
 
@@ -158,20 +158,20 @@ Brazeプラットフォームで、クリエイティブタグをメール本文
 {% endtabs %}
 
 ## トラブルシューティング
-
+ 
 #### ダイナミックな画像が正しく表示されない？どのチャネルに問題がありますか？
 - **押す**:Movable Ink 画像 URL の前に空のロジックがあることを確認してください。<br>{% raw %}```{% if true %}{% endif %}https://movable-ink-image-url-goes-here```{% endraw %}
 - **アプリ内メッセージとコンテンツカード**:各インプレッションの画像URLが一意であることを確認してください。これは、各URLが異なるように適切なLiquidを追加することで実行できます。\[アプリ内およびコンテンツカードメッセージの指示]\[指示]をご覧ください。 
 - **画像 not loading**:必ずすべての「マージタグ」をBrazeダッシュボードの対応するLiquidフィールドに置き換えてください。例えば: {% raw %}```https://mi-msg.com/p/rp/image.png?mi_u=%%email%%```{% endraw %} と {% raw %}```https://mi-msg.com/p/rp/image.png?mi_u={{${email_address}}}```{% endraw %}。
 
 #### AndroidでGIFを表示するのに問題がありますか？
-- Androidは実装にGIFサポートを必要とします。Androidの\[アプリ内メッセージカスタマイズ]\[GIFサポート]記事に従って、この設定がない場合は設定してください。
+- Androidは実装にGIFサポートを必要とします。Androidの[アプリ内メッセージカスタマイズ][GIFサポート]記事に従って、この設定がない場合は設定してください。
 
 [1]: https://www.movableink.com/
-\[データソース]: ({% image_buster /assets/img/movable_ink/movable_ink1.png %})
-サポート]: https://support.movableink.com/
-\[GIFsupport]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/in-app_messaging/customization/gifs/
-\[指示]: {{site.baseurl}}/partners/message_personalization/dynamic_content/movable_ink/#step-4-braze-experience
+[データソース]: ({% image_buster /assets/img/movable_ink/movable_ink1.png %})
+[サポート]: https://support.movableink.com/
+[GIFサポート]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/in-app_messaging/customization/gifs/
+[指示]: {{site.baseurl}}/partners/message_personalization/dynamic_content/movable_ink/#step-4-braze-experience
 [1]: ({% image_buster /assets/img/movable_ink/android.png %})
 [2]: ({% image_buster /assets/img/movable_ink/ios.png %})
 [3]: ({% image_buster /assets/img/movable_ink/web.png %})
