@@ -84,7 +84,7 @@ Changes to the blocklist may take a few minutes to propagate. You can re-enable 
 
 ## Deleting custom data
 
-As you build targeted campaigns and segments, you may find that you no longer need a custom event or custom attribute. For example, if you used a specific custom attribute as part of a one-time campaign, you can delete this data after blocklisting it and removing its references from your app. 
+As you build targeted campaigns and segments, you may find that you no longer need a custom event or custom attribute. For example, if you used a specific custom attribute as part of a one-time campaign, you can delete this data after [blocklisting it](#blocklisting-custom-attributes-custom-events-and-products) and removing its references from your app. 
 
 To delete a custom event or custom attribute, do the following:
 
