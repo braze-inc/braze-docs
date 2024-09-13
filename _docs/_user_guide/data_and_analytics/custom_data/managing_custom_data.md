@@ -84,15 +84,17 @@ Changes to the blocklist may take a few minutes to propagate. You can re-enable 
 
 ## Deleting custom data
 
-The custom data can be deleted after you blocklist the custom data object and remove references from your app or website. For help deleting custom data, contact your customer success manager or the Support team.
+The custom data can be deleted after you blocklist the custom data object and remove references from your app or website. Custom attribute or custom event must be blocklisted for at least 7 days to be eligible for deletion.
 
-Deleting custom data does the following:
+When you delete custom data, the following occurs: 
 
-- Removes the custom attribute, custom event, or purchase event from segment filter selections and analytics pages.
-- Removes the custom attribute, custom event, or purchase event from the respective page under **Data Settings**.
+- **For custom attributes:** Permanently removes the attribute data from every user's profile.
+- **For custom events:** Permanently removes the event metadata from every user's profile.
+
+When an attribute or event is selected for deletion, its status is changed to **Trashed**. For the next 7 days, it's possible to restore the attribute or event, which will return its status to **Blocklisted** indefinitely and prevent the data from being deleted. After 7 days, the data will be permanently deleted.
 
 {% alert important %}
-Deleting does not remove data already recorded on user profiles, or prevent additional recording of the custom data objects on user profiles. Make sure the custom data is no longer being recorded before having the event or attribute deleted.
+Custom data deletion is currently in early access. Contact your Braze account manager if you're interested in participating in the early access. For more help with deleting custom data, contact your customer success manager or the Support team.<br><br>Deleting doesn't prevent additional recording of the custom data objects on user profiles, so make sure the custom data is no longer being recorded before deleting the event or attribute.
 {% endalert %}
 
 ## Forcing data type comparisons
