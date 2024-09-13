@@ -1,7 +1,7 @@
 ---
 nav_title: Inbox Monster
 article_title: Inbox Monster
-alias: /partners/inbox_monster
+alias: /partners/inbox_monster/
 description: "This reference article outlines the partnership between Braze and Inbox Monster, an online email marketing tool that allows Braze customers to unlock powerful deliverability insights and creative analysis to supercharge inbox performance."
 page_type: partner
 search_tag: Partner
@@ -10,9 +10,9 @@ search_tag: Partner
 
 # Inbox Monster
 
-> [Inbox Monster](https://inboxmonster.com//) is an inbox signals platform that helps enterprise brands land every send. An integrated suite of solutions for deliverability, creative rendering and SMS monitoring, that empower modern CRM teams. And end sending scaries.
+> [Inbox Monster](https://inboxmonster.com//) is an inbox signals platform that helps enterprise brands land every send. It's an integrated suite of solutions for deliverability, creative rendering, and SMS monitoring, that empowers modern customer relationship managment (CRM) teams and ends the sending scaries.
 
-The Braze and Inbox Monster integration allows marketers to eliminate manual seedlist testing and automate the creation of powerful and actionable inbox placement signals and simplify the process of reviewing and approving email creative assets.
+The Braze and Inbox Monster integration allows you to eliminate manual seedlist testing, automate the creation of powerful and actionable inbox placement signals, simplify the process of reviewing and approving email creative assets, and obtain valuable deliverability insights. You can also seamlessly import email templates for creative diagnostics and device previews.
 
 ## Prerequisites
 
@@ -26,9 +26,8 @@ The Braze and Inbox Monster integration allows marketers to eliminate manual see
 
 ## Integration
 
-The integration between Inbox Monster and Braze enables users to automate inbox placement testing, providing valuable deliverability insights. It also allows for the seamless import of email templates for creative diagnostics and device previews. 
-Visit the step-by-step guide to learn how to [integrate Braze with Inbox Monster](https://intercom.help/inbox-monster/en/articles/9518204-scheduled-placement-tests-with-braze#h_80147afaf3).
+To integrate Inbox Monster, follow the steps in [Integrating with Inbox Monster](https://intercom.help/inbox-monster/en/articles/9518204-scheduled-placement-tests-with-braze#h_80147afaf3).
 
 ## Usage
 
-Visit the step-by-step guide to learn how to [send scheduled inbox placement tests](https://intercom.help/inbox-monster/en/articles/9518204-scheduled-placement-tests-with-braze#h_7e74bc474e).
+To learn how to send schedule inbox placement tests through Inbox Monster, refer to [Scheduled Inbox Placement Tests](https://intercom.help/inbox-monster/en/articles/9518204-scheduled-placement-tests-with-braze#h_7e74bc474e).
