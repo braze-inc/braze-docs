@@ -12,11 +12,11 @@ toc_headers: h2
 
 {% sdktabs %}
 {% sdktab android %}
-Android test.
+{% multi_lang_include developer_guide/android/sdk_integration.md %}
 {% endsdktab %}
 
 {% sdktab swift %}
-Swift test.
+{% multi_lang_include developer_guide/swift/sdk_integration.md %}
 {% endsdktab %}
 
 {% sdktab web %}

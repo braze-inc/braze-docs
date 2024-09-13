@@ -4,7 +4,7 @@ You can either use the [Swift Package Manager (SwiftPM)](https://swift.org/packa
 
 Before you start, check out the [Braze SDK version information](https://github.com/braze-inc/braze-swift-sdk#version-information) to ensure your environment is supported.
 
-{% tabs %}
+{% tabs local %}
 {% tab Swift Package Manager %}
 ### Step 1.1: Import SDK version
 
@@ -147,7 +147,7 @@ The Braze Swift SDK contains a variety of standalone XCFrameworks, which gives y
 
 Decide whether you want to use **Static** or **Dynamic** XCFrameworks, then prepare your files:
 
-{% subtabs %}
+{% subtabs local %}
 {% subtab dynamic %}
 1. Create a temporary directory for your XCFrameworks.
 2. In `braze-swift-sdk-prebuilt`, open the `dynamic` directory and move `BrazeKit.xcframework` into your directory. Your directory should be similar to the following:
@@ -203,13 +203,13 @@ Decide whether you want to use **Static** or **Dynamic** XCFrameworks, then prep
 Only move over bundles for the [frameworks you prepared](#step-31-prepare-your-frameworks).
 {% endalert %}
 {% endsubtab %}
-{% endsubtabs %}
+{% endsubtabs local %}
 
 ### Step 1.4: Integrate your frameworks
 
 Next, integrate the **Dynamic** or **Static** XCFrameworks you [prepared previously](#step-3-prepare-your-files):
 
-{% subtabs %}
+{% subtabs local %}
 {% subtab dynamic %}
 In your Xcode project, select your build target, then **General**. Under **Frameworks, Libraries, and Embedded Content**, drag and drop the [files you prepared previously](#step-3-prepare-your-files).
 
@@ -233,7 +233,7 @@ While in your build target, select **Build Phases**. Under **Copy Bundle Resourc
 
 !["An example Xcode project with bundles added under 'Copy Bundle Resources.'"]({% image_buster /assets/img/swift/sdk_integration/copy-bundle-resources.png %})
 {% endsubtab %}
-{% endsubtabs %}
+{% endsubtabs local %}
 
 ### Common errors for Objective-C projects
 
@@ -249,11 +249,11 @@ Replace `FILE_NAME` with any non-spaced string. Your file should look similar to
 empty_swift_file.swift
 ```
 {% endtab %}
-{% endtabs %}
+{% endtabs local %}
 
 ## Step 2: Update your app delegate
 
-{% subtabs %}
+{% subtabs local %}
 {% subtab swift %}
 Add the following line of code to your `AppDelegate.swift` file to import the features included in the Braze Swift SDK:
 
@@ -319,7 +319,7 @@ AppDelegate.braze = braze;
 Update `YOUR-APP-IDENTIFIER-API-KEY` and `YOUR-BRAZE-ENDPOINT` with the correct value from your **Manage Settings** page. Check out our [API documentation]({{site.baseurl}}/api/api_key/#the-app-identifier-api-key) for more information on where to find your app identifier API key.
 
 {% endsubtab %}
-{% endsubtabs %}
+{% endsubtabs local %}
 
 ## Additional resources
 
