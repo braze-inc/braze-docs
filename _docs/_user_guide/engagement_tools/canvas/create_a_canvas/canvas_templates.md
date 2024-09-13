@@ -1,7 +1,8 @@
 ---
-nav_title: Canvas Templates
-article_title: Canvas Templates
-permalink: "/canvas_templates/"
+nav_title: Templates
+article_title: Templates
+alias: "/canvas_templates/"
+page_order: 0.5
 description: "This reference article covers how to create a template for Canvas."
 page_type: reference
 ---
@@ -10,8 +11,8 @@ page_type: reference
 
 > This reference article covers how to create and manage templates for Canvas. Using templates can refine your messaging by creating a consistent framework that can be easily customized to fit your specific goals across your Canvases.
 
-{% alert important %}
-Canvas templates are currently in early access. Contact your customer success manager if you're interested in participating in this early access.
+{% alert tip %}
+Save time and streamline your Canvas creation by using [Braze Canvas templates](#available-braze-templates)! Browse our library of pre-built templates to find one that fits your use case and customize it to meet your specific needs.
 {% endalert %}
 
 ## Method 1: Create from an existing Canvas
@@ -57,14 +58,28 @@ After you've finished customizing your template, select the **Save template** bu
 ## Using Canvas templates
 
 There are two ways to use your template when composing a Canvas:
+
 - **From Messsaging**: Go to **Messaging** > **Canvas**. Select the **Create Canvas** button and **Use a Canvas Template**.
 - **From Templates**: Go to **Templates** > **Canvas Templates** and find your desired template. Then, select the <i class="fas fa-ellipsis-vertical"></i> menu followed by **Apply template**. This will bring you to a new Canvas with the template applied in the Canvas composer.
+
+### Available Braze templates
+
+Braze has a selection of Canvas templates available for you to reference and use as best practices for common use cases. While these templates can't be edited, you can view them in **Templates** > **Braze templates** or use them in your Canvases.
+
+Select from the following available templates to reference or use as your Canvas:
+
+- **Abandoned Intent Flow:** Engage with users in real-time to encourage them to complete their purchases.
+- **Back in Stock:** Drive purchases by notifying your users when an item is back in stock with personalized messaging.
+- **Feature Adoption:** Deliver timely personalized messages to highlight the benefits and usage tips.
+- **Lapsed User:** Bring users back to your app with incentives based on their past engagements.
+- **Onboarding Flow:** Create onboarding journeys that promote strong initial adoption and encourage lasting relationships with your users.
+- **Post-Purchase Feedback:** Orchestrate personalized experiences that allow you to respond to feedback and build a relationship with your users.
 
 ## Managing Canvas templates
 
 Canvas templates can be duplicated and archived, similar to an actual Canvas. To edit a Canvas template, select the template then **<i class="fas fa-pencil-alt"></i>Edit**.
 
-At a workspace level, you can update user permissions to allow or limit the access to create, edit, view, or archive Canvas templates. These permissions are not yet available for [teams]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams).
+At a workspace level, you can update user permissions to allow or limit the access to create, edit, view, or archive Canvas templates. 
 
 ## Frequently asked questions
 
