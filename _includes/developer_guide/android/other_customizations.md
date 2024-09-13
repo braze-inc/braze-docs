@@ -38,7 +38,7 @@ Keep in mind, verbose logs are only intended for your development environment, s
 Enable verbose logs before any other calls in `Application.onCreate()` to ensure your logs are as complete as possible.
 {% endalert %}
 
-{% tabs %}
+{% tabs local %}
 {% tab Application %}
 To enable logs directly in your app, add the following to your application's `onCreate()` method before any other methods.
 
@@ -156,3 +156,85 @@ For each relevant build variant, create a new `braze.xml` for it in `src/<build 
 When the build variant is compiled, it will use the new API key.
 
 See the [runtime configuration]({{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/runtime_configuration/) documentation for setting an API key in code.
+
+## Accessibility
+
+You can implement specific Android SDK accessibility features such as in-app message talkback into your Android or FireOS application. The Braze Android SDK follows the [Android accessibility guidelines](https://developer.android.com/guide/topics/ui/accessibility).
+
+### In-app message talkback
+
+In order to have Android Talkback/"VoiceOver" not read the contents behind an in-app message during display, enable the following SDK configuration:
+
+{% tabs local %}
+{% tab braze.xml %}
+
+```xml
+<bool name="com_braze_device_in_app_message_accessibility_exclusive_mode_enabled">true</bool>
+```
+
+{% endtab %}
+{% tab KOTLIN %}
+
+```kotlin
+val brazeConfigBuilder = BrazeConfig.Builder()
+brazeConfigBuilder.setIsInAppMessageAccessibilityExclusiveModeEnabled(true)
+Braze.configure(this, brazeConfigBuilder.build())
+```
+
+{% endtab %}
+{% tab JAVA %}
+
+```java
+BrazeConfig.Builder brazeConfigBuilder = new BrazeConfig.Builder()
+brazeConfigBuilder.setIsInAppMessageAccessibilityExclusiveModeEnabled(true);
+Braze.configure(this, brazeConfigBuilder.build());
+```
+
+{% endtab %}
+{% endtabs %}
+
+## Google Advertising ID (Android only)
+
+The [Google Advertising ID](https://support.google.com/googleplay/android-developer/answer/6048248/advertising-id?hl=en) is an optional user-specific, anonymous, unique, and resettable ID for advertising, provided by Google Play services, that allows users the power to reset their identifier, opt-out of interest-based ads within Google Play apps, and provides developers with a simple, standard system to continue to monetize their apps.
+
+### Passing the Google Advertising ID to Braze
+
+The Google Advertising ID is not automatically collected by the Braze SDK and must be set manually via the [`Braze.setGoogleAdvertisingId()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-i-braze/set-google-advertising-id.html) method.
+
+{% alert important %}
+Google requires the Advertising ID to be collected on a non-UI thread.
+{% endalert %}
+
+{% tabs local %}
+{% tab JAVA %}
+
+```java
+new Thread(new Runnable() {
+  @Override
+  public void run() {
+    try {
+      AdvertisingIdClient.Info idInfo = AdvertisingIdClient.getAdvertisingIdInfo(getApplicationContext());
+      Braze.getInstance(getApplicationContext()).setGoogleAdvertisingId(idInfo.getId(), idInfo.isLimitAdTrackingEnabled());
+    } catch (Exception e) {
+      e.printStackTrace();
+    }
+  }
+}).start();
+```
+
+{% endtab %}
+{% tab KOTLIN %}
+
+```kotlin
+Thread(Runnable {
+  try {
+    val idInfo = AdvertisingIdClient.getAdvertisingIdInfo(getApplicationContext())
+    Braze.getInstance(getApplicationContext()).setGoogleAdvertisingId(idInfo.id, idInfo.isLimitAdTrackingEnabled)
+  } catch (e: Exception) {
+    e.printStackTrace()
+  }
+}).start()
+```
+
+{% endtab %}
+{% endtabs %}
