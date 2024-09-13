@@ -13,7 +13,7 @@ Warning! Don't make any changes to this document without approval from the legal
 
 # 혁신 성명
 
-{% tabs %
+{% tabs %}
 {% tab 영어 %}
 _마지막 업데이트 2022년 9월._
 
