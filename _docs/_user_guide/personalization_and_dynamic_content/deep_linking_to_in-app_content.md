@@ -51,7 +51,7 @@ After the Analytics SDK is integrated and configured, UTM tags can be used with 
 
 #### Attributing push opens with UTM tags
 
-To include UTM tags in your deep links for push notifications,  set the on-click behavior of the push message to be a deep link, write the deep link address and include the desired UTM tags in the following fashion:
+To include UTM tags in your deep links for push notifications, set the on-click behavior of the push message to be a deep link, then write the deep link address and include the desired UTM tags in the following fashion:
 
 ```
 myapp://products/20-gift-card?utm_source=my_app&utm_medium=push&utm_campaign=spring2016giftcards&utm_content=ios_deeplink
