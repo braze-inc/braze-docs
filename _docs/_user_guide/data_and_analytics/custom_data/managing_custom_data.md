@@ -84,7 +84,15 @@ Changes to the blocklist may take a few minutes to propagate. You can re-enable 
 
 ## Deleting custom data
 
-The custom data can be deleted after you blocklist the custom data object and remove references from your app or website. Custom attribute or custom event must be blocklisted for at least 7 days to be eligible for deletion.
+As you build targeted campaigns and segments, you may find that you no longer need a custom event or custom attribute. For example, if you used a specific custom attribute as part of a one-time campaign, you can delete this data after blocklisting it and removing its references from your app. 
+
+To delete a custom event or custom attribute, do the following:
+
+1. Go to **Data Settings** > **Custom Attributes** or **Custom Events**, depending on which data type you want to delete.
+2. Go to the custom data and select <i class="fa-solid fa-ellipsis-vertical"></i>&nbsp;**Actions** > **Blocklist**.
+3. After your custom data has been blocklisted for 7 days, select <i class="fa-solid fa-ellipsis-vertical"></i>&nbsp;**Actions** > **Delete**.
+
+### How deletion works
 
 When you delete custom data, the following occurs: 
 
