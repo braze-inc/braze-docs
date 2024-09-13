@@ -47,7 +47,7 @@ If you want to use UTM tags with regular HTTP (web) links—for example, to do c
 
 To use UTM tags in deep links to your app, your app must have the relevant [Google Analytics SDK][5] integrated and correctly configured to handle deep links. Check with your developers if you're unsure about this.
 
-Once the Analytics SDK is integrated and configured, UTM tags can be used with deep links in Braze campaigns. To set up UTM tags for your campaign, include the necessary UTM tags in the destination URL or deep links. The following examples show how to use UTM tags in push notifications and in-app messages.
+After the Analytics SDK is integrated and configured, UTM tags can be used with deep links in Braze campaigns. To set up UTM tags for your campaign, include the necessary UTM tags in the destination URL or deep links. The following examples show how to use UTM tags in push notifications and in-app messages.
 
 #### Attributing push opens with UTM tags
 
