@@ -1,11 +1,11 @@
 ---
-nav_title: Conversation push notifications
-article_title: Conversation push notifications for the Braze SDK
+nav_title: Delivery
+article_title: In-app message delivery for the Braze SDK
 description: "REPLACE"
-page_order: 4
+page_order: 2
 ---
 
-# Conversation push notifications
+# In-app message delivery
 
 > DESCRIPTION.
 
