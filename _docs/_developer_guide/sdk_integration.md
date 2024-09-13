@@ -51,6 +51,3 @@ Android test.
 Android test.
 {% endsdktab %}
 {% endsdktabs %}
-
-
-{% multi_lang_include developer_guide/swift/sdk_integration.md %}
