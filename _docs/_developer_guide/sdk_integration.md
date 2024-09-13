@@ -3,6 +3,7 @@ nav_title: Integrate the SDK
 article_title: Integrate the Braze SDK
 description: "Learn how to integrate the Braze SDK."
 page_order: 2
+toc_headers: h2
 ---
 
 # Integrate the Braze SDK
@@ -50,3 +51,6 @@ Android test.
 Android test.
 {% endsdktab %}
 {% endsdktabs %}
+
+
+{% multi_lang_include developer_guide/swift/sdk_integration.md %}
