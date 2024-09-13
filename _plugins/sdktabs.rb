@@ -9,7 +9,7 @@ module Tags
           end
       end
       def render(context)
-          tabs = super.scan(/data\-tab=\"(.*?)\"/)
+          tabs = super.scan(/data\-tab=\"sdk\-(.*?)\"/)
           tabslist = '<ul class="sdk-ab-nav sdk-ab-nav-tabs ' + @tabclass + '_ul" id="' + @tabid + '_nav">' + "\n"
           if tabs.length > 0
             tabs.each_with_index do |tab, ind|
@@ -50,7 +50,7 @@ module Tags
           content = content.strip # Strip again to avoid "\n"
           tabslug = @tab.gsub(' ', '-').gsub(/[^\w-]/, '')
 
-          return '<div class="sdk-ab-tab-pane ' + tabslug + '_tab " data-tab="' + @tab + '">' + content + "</div>"
+          return '<div class="sdk-ab-tab-pane ' + tabslug + '_tab " data-tab="sdk-' + @tab + '">' + content + "</div>"
       end
     end
 
