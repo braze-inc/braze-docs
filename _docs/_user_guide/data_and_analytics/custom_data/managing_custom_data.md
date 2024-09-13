@@ -97,6 +97,15 @@ When an attribute or event is selected for deletion, its status is changed to **
 Custom data deletion is currently in early access. Contact your Braze account manager if you're interested in participating in the early access. For more help with deleting custom data, contact your customer success manager or the Support team.<br><br>Deleting doesn't prevent additional recording of the custom data objects on user profiles, so make sure the custom data is no longer being recorded before deleting the event or attribute.
 {% endalert %}
 
+### Things to know
+
+When deleting custom data, keep in mind following details:
+
+* **Deletion is permanent**. Data cannot be recovered.
+* Data is removed from the Braze platform and from user profiles.
+* You can "reuse" the custom attribute name or custom event name after deletion. This means if you notice that custom data "reappears" in Braze after deletion, this may be caused by an integration that hasn't been stopped and is still sending data.
+* Blocklisting data isn't preserved since the custom data is deleted. You may need to blocklist an item again if your deletion results in custom data appearing.
+
 ## Forcing data type comparisons
 
 Braze automatically recognizes data types for attribute data that is sent to us. However, in the event multiple data types are applied to a single attribute, you can force the data type of any attribute to let us know what it really is. Select from the dropdown in the **Data Type** column.
