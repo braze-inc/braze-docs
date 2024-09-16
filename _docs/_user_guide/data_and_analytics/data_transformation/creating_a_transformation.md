@@ -67,49 +67,50 @@ Braze Data Transformation has an AI copilot that asks ChatGPT to help you write 
 Here, write transformation code to define how to map various webhook values to Braze user profiles.
 
 1. New transformations have this default template in the **Transformation Code** section:
-    ```
-    // Here, we will define a variable, "brazecall", to build up a `/users/track` request
-    // Everything from the incoming webhook is accessible via the special variable "payload"
-    // So you can template in desired values in your `/users/track` request with dot notation, such as payload.x.y.z
 
-    let brazecall = {
-       "attributes": [
-        {
-          "external_id": payload.user_id,
-          "_update_existing_only": true,
-          "attribute_1": payload.attribute_1
-        }
-      ],
-      "events": [
-        {
-          "external_id": payload.user_id,
-          "_update_existing_only": true,
-          "name": payload.event_1,
-          "time": new Date(),
-          "properties": {
-            "property_1": payload.event_1.property_1
-          }
-        }
-      ],
-      "purchases": [
-        {
-          "external_id": payload.user_id,
-          "_update_existing_only": true,
-          "product_id": payload.product_id,
-          "currency": payload.currency,
-          "price": payload.price,
-          "quantity": payload.quantity,
-          "time": payload.timestamp,
-          "properties": {
-            "property_1": payload.purchase_1.property_1
-          }
-        }
-      ]
-    };
+```java
+// Here, we will define a variable, "brazecall", to build up a `/users/track` request
+// Everything from the incoming webhook is accessible via the special variable "payload"
+// So you can template in desired values in your `/users/track` request with dot notation, such as payload.x.y.z
 
-    // After the /users/track request is assigned to brazecall, you will want to explicitly return brazecall to create an output
-    return brazecall;
-    ```
+let brazecall = {
+  "attributes": [
+    {
+      "external_id": payload.user_id,
+      "_update_existing_only": true,
+      "attribute_1": payload.attribute_1
+    }
+  ],
+  "events": [
+    {
+      "external_id": payload.user_id,
+      "_update_existing_only": true,
+      "name": payload.event_1,
+      "time": new Date(),
+      "properties": {
+        "property_1": payload.event_1.property_1
+      }
+    }
+  ],
+  "purchases": [
+    {
+      "external_id": payload.user_id,
+      "_update_existing_only": true,
+      "product_id": payload.product_id,
+      "currency": payload.currency,
+      "price": payload.price,
+      "quantity": payload.quantity,
+      "time": payload.timestamp,
+      "properties": {
+        "property_1": payload.purchase_1.property_1
+      }
+    }
+  ]
+};
+
+// After the /users/track request is assigned to brazecall, you will want to explicitly return brazecall to create an output
+return brazecall;
+```
 
 2. To include custom attributes, custom events, and purchases in your transformation calls, skip to step 3. Otherwise, delete the sections that you don't need.<br><br>
 3. Each attribute, event, and purchase object requires a user identifier, either an `external_id`, `user_alias`, `braze_id`, `email`, or `phone`. Find the user identifier in the incoming webhook's payload, and template in that value in your transformation code via a payload line. Use dot notation to access payload object properties. <br><br>
@@ -127,66 +128,66 @@ Your webhook integration is now complete!
 Here, you can write transformation code to define how you want to map various webhook values to Braze catalog item updates.
 
 1. New transformations will include this default template in the **Transformation Code** section:
-    ```
-    // This is a default template that you can use as a starting point
-    // Feel free to delete this entirely to start from scratch, or to edit specific components
 
+```java
+// This is a default template that you can use as a starting point
+// Feel free to delete this entirely to start from scratch, or to edit specific components
 
-    // First, this code defines a variable, "brazecall", to build a PUT /catalogs/{catalog_name}/items request
-    // Everything from the incoming webhook is accessible via the special variable "payload"
-    // As such, you can template in desired values in your request with JS dot notation, such as payload.x.y.z
+// First, this code defines a variable, "brazecall", to build a PUT /catalogs/{catalog_name}/items request
+// Everything from the incoming webhook is accessible via the special variable "payload"
+// As such, you can template in desired values in your request with JS dot notation, such as payload.x.y.z
 
-
-    let brazecall = {
-    // For Braze Data Transformation to update Catalog items, the special variable "catalog_name" is required
-    // This variable is used to specify the catalog name which would otherwise go in the request URL
-    "catalog_name": "catalog_name",
-    // After defining "catalog name", construct the Update Multiple Catalog Items request as usual below
-    // Documentation for the destination endpoint: https://www.braze.com/docs/api/endpoints/catalogs/catalog_items/asynchronous/put_update_catalog_items/
-    "items": [
-      {
-        "id": payload.item_id_1,
-        "catalog_column1": "string",
-        "catalog_column2": 1,
-        "catalog_column3": true,
-        "catalog_column4": "2021-09-03T09:03:19.967+00:00",
-        "catalog_column5": {
-          "Latitude": 33.6112,
-          "Longitude": -117.8711
-        }
-      },
-      {
-        "id": payload.item_id_2,
-        "catalog_column1": "string",
-        "catalog_column2": 1,
-        "catalog_column3": true,
-        "catalog_column4": "2021-09-03T09:03:19.967+00:00",
-        "catalog_column5": {
-          "Latitude": 33.6112,
-          "Longitude": -117.8711
-        }
-      },
-      {
-        "id": payload.item_id_3,
-        "catalog_column1": "string",
-        "catalog_column2": 1,
-        "catalog_column3": true,
-        "catalog_column4": "2021-09-03T09:03:19.967+00:00",
-        "catalog_column5": {
-          "Latitude": 33.6112,
-          "Longitude": -117.8711
-        }
+let brazecall = {
+  // For Braze Data Transformation to update Catalog items, the special variable "catalog_name" is required
+  // This variable is used to specify the catalog name which would otherwise go in the request URL
+  "catalog_name": "catalog_name",
+  
+  // After defining "catalog name", construct the Update Multiple Catalog Items request as usual below
+  // Documentation for the destination endpoint: https://www.braze.com/docs/api/endpoints/catalogs/catalog_items/asynchronous/put_update_catalog_items/
+  "items": [
+    {
+      "id": payload.item_id_1,
+      "catalog_column1": "string",
+      "catalog_column2": 1,
+      "catalog_column3": true,
+      "catalog_column4": "2021-09-03T09:03:19.967+00:00",
+      "catalog_column5": {
+        "Latitude": 33.6112,
+        "Longitude": -117.8711
       }
-    ]
-    };
+    },
+    {
+      "id": payload.item_id_2,
+      "catalog_column1": "string",
+      "catalog_column2": 1,
+      "catalog_column3": true,
+      "catalog_column4": "2021-09-03T09:03:19.967+00:00",
+      "catalog_column5": {
+        "Latitude": 33.6112,
+        "Longitude": -117.8711
+      }
+    },
+    {
+      "id": payload.item_id_3,
+      "catalog_column1": "string",
+      "catalog_column2": 1,
+      "catalog_column3": true,
+      "catalog_column4": "2021-09-03T09:03:19.967+00:00",
+      "catalog_column5": {
+        "Latitude": 33.6112,
+        "Longitude": -117.8711
+      }
+    }
+  ]
+};
 
-    // After the request body is assigned to brazecall, you will want to explicitly return brazecall to create an output
-    return brazecall;
-    ```
+// After the request body is assigned to brazecall, you will want to explicitly return brazecall to create an output
+return brazecall;
+```
 
 2. Transformations for `/catalogs` destinations require a `catalog_name` to define the specific catalog to update. You can hard code this field or template the field with a webhook field via a payload line. Use dot notation to access payload object properties.<br><br>
 3. Define which items you’d like to update in the catalog with the `id` fields in the items array. You can hard code these fields, or template in a webhook field via a payload line. <br><br> Keep in mind, `catalog_column` is a placeholder value. Be sure item objects only contain fields that exist in the catalog.<br><br>
-4. Select **Validate** to return a preview of your code’s output and to check if it is an acceptable request for the [Update multiple catalog items endpoint]({{sitebaseurl}}/api/endpoints/catalogs/catalog_items/asynchronous/put_update_catalog_items).<br><br>
+4. Select **Validate** to return a preview of your code’s output and to check if it is an acceptable request for the [Update multiple catalog items endpoint]({{site.baseurl}}/api/endpoints/catalogs/catalog_items/asynchronous/put_update_catalog_items).<br><br>
 5. Activate your transformation. For additional help with your code before activating it, contact your Braze account manager.<br><br>
 6. Make sure to check if your source platform has a setting to start sending webhooks. Your transformation code will run for each incoming webhook, and the catalog items will begin updating.
 
