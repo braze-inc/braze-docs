@@ -34,8 +34,8 @@ The integration is currently in Early Access. Please reach out to your Future An
 
 Reach out to your Future Anthem Customer Success Team to identify the most relevant attributes to send to Braze for your specific use cases.
 
-![A screenshot of a sports game](images/image1.png)
-![A screenshot of a computer](images/image2.png)
+![A screenshot of the attributes on the user's profile.]({% image_buster /assets/img/futureanthem/fa_image1.png %})
+![A screenshot of the object attribute.]({% image_buster /assets/img/futureanthem/fa_image2.png %})
 
 ## Braze Custom Attributes
 
