@@ -168,10 +168,10 @@ Brazeプラットフォームで、クリエイティブタグをメール本文
 - Androidは実装にGIFサポートを必要とします。Androidの\[アプリ内メッセージカスタマイズ]\[GIFサポート]記事に従って、この設定がない場合は設定してください。
 
 [1]: https://www.movableink.com/
-\[データソース]: ({% image_buster /assets/img/movable_ink/movable_ink1.png %})
-サポート]: https://support.movableink.com/
+\[datasource]: ({% image_buster /assets/img/movable_ink/movable_ink1.png %})
+\[support]: https://support.movableink.com/
 \[GIFsupport]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/in-app_messaging/customization/gifs/
-\[指示]: {{site.baseurl}}/partners/message_personalization/dynamic_content/movable_ink/#step-4-braze-experience
+\[Instructions]: {{site.baseurl}}/partners/message_personalization/dynamic_content/movable_ink/#step-4-braze-experience
 [1]: ({% image_buster /assets/img/movable_ink/android.png %})
 [2]: ({% image_buster /assets/img/movable_ink/ios.png %})
 [3]: ({% image_buster /assets/img/movable_ink/web.png %})
