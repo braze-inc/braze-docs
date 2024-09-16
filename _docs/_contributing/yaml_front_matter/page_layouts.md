@@ -8,21 +8,17 @@ noindex: true
 
 #  Page layouts
 
-> These are the page layouts that can be assigned to the [`page_layout`]({{site.baseurl}}/contributing/yaml_front_matter/metadata/#page-layout) key in a page's YAML front matter. For more general information, see [About content management]({{site.baseurl}}/contributing/content_management/#layouts).
+> These are the page layouts that can be assigned to the [`page_layout`]({{site.baseurl}}/contributing/yaml_front_matter/metadata/#page-layout) key in a page's YAML front matter. Most `page_layout` keys will visually modify the page&#8212;however, some only modify how the page functions. For more general information, see [About content management]({{site.baseurl}}/contributing/content_management/#layouts).
 
-## Prerequisites
+## Applying a layout
 
-To use a page layout, you'll need to add the [`page_layout`]({{site.baseurl}}/contributing/yaml_front_matter/metadata/#page-layout) key to your YAML front matter.
+To apply a layout to your page, add the following line to your YAML front matter, then replace `PAGE_LAYOUT_VALUE` with one of the keys found on this page.
 
 ```markdown
 ---
-nav_title: Getting started
-article_title: Getting started with Braze Docs
 page_layout: PAGE_LAYOUT_VALUE
 ---
 ```
-
-Replace `PAGE_LAYOUT_VALUE` with one of the values from the following sections.
 
 ## Visual layouts
 
