@@ -1,9 +1,8 @@
 ---
-nav_title: Drag-and-Drop Landing Pages
+nav_title: Drag-and-Drop Editor
 article_title: Creating Drag-and-Drop Landing Pages
 description: "This article covers how to create and customize Braze landing pages with the drag-and-drop editor."
 page_order: 31
-hidden: true
 alias: /landing_pages/drag_and_drop/
 ---
 
