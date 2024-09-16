@@ -99,7 +99,7 @@ When you delete custom data, the following occurs:
 - **For custom attributes:** Permanently removes the attribute data from every user's profile.
 - **For custom events:** Permanently removes the event metadata from every user's profile.
 
-When an attribute or event is selected for deletion, its status is changed to **Trashed**. For the next 7 days, it's possible to restore the attribute or event, which will return its status to **Blocklisted** indefinitely and prevent the data from being deleted. After 7 days, the data will be permanently deleted.
+When an attribute or event is selected for deletion, its status is changed to **Trashed**. For the next seven days, it's possible to restore the attribute or event, which will return its status to **Blocklisted** indefinitely and prevent the data from being deleted. After seven days, the data will be permanently deleted.
 
 {% alert important %}
 Custom data deletion is currently in early access. Contact your Braze account manager if you're interested in participating in the early access. For more help with deleting custom data, contact your customer success manager or the Support team.<br><br>Deleting doesn't prevent additional recording of the custom data objects on user profiles, so make sure the custom data is no longer being recorded before deleting the event or attribute.
@@ -112,7 +112,7 @@ When deleting custom data, keep in mind following details:
 * **Deletion is permanent**. Data cannot be recovered.
 * Data is removed from the Braze platform and from user profiles.
 * You can "reuse" the custom attribute name or custom event name after deletion. This means if you notice that custom data "reappears" in Braze after deletion, this may be caused by an integration that hasn't been stopped and is still sending data.
-* Blocklisting data isn't preserved since the custom data is deleted. You may need to blocklist an item again if your deletion results in custom data appearing.
+* Blocklisting data isn't preserved because the custom data is deleted. You may need to blocklist an item again if your deletion results in custom data appearing.
 
 ## Forcing data type comparisons
 
