@@ -30,4 +30,4 @@ fi
 
 # List all old URLs using 'BASE_URL' so the user can open links from terminal.
 echo ""
-echo "$NEW_REDIRECTS" | grep '^+' | grep -v '+++' | sed "s/^+validurls\['\([^']*\)'\].*/\1/" | sed "s|^|$BASE_URL|" | sed '$d'
+echo "$NEW_REDIRECTS" | grep '^+' | grep -v '+++' | grep -v '^+$' | sed "s/^+validurls\['\([^']*\)'\].*/\1/" | sed "s|^|$BASE_URL|" | sed '$d'
