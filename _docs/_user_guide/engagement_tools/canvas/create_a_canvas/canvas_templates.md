@@ -66,20 +66,85 @@ There are two ways to use your template when composing a Canvas:
 
 Braze has a selection of Canvas templates available for you to reference and use as best practices for common use cases. While these templates can't be edited, you can view them in **Templates** > **Braze templates** or use them in your Canvases.
 
-Select from the following available templates to reference or use as your Canvas:
+Select from the following available templates to reference or use as your Canvas.
 
-- **Abandoned Intent Flow:** Engage with users in real-time to encourage them to complete their purchases.
-- **Back in Stock:** Drive purchases by notifying your users when an item is back in stock with personalized messaging.
-- **Feature Adoption:** Deliver timely personalized messages to highlight the benefits and usage tips.
-- **Lapsed User:** Bring users back to your app with incentives based on their past engagements.
-- **Onboarding Flow:** Create onboarding journeys that promote strong initial adoption and encourage lasting relationships with your users.
-- **Post-Purchase Feedback:** Orchestrate personalized experiences that allow you to respond to feedback and build a relationship with your users.
+{% tabs %}
+{% tab Abandoned Intent %}
+
+Engage with users in real-time to encourage them to complete their purchases.
+
+Consider the following when using this template:
+
+- Update the entry trigger to be action-based, so performing a custom event  your own custom event to  the entry trigger to performing a custom event.
+- Add a specific audience. Currently, the audience paths are triggered based on "Made Any Purchase", but you can tailor this to specific products you want to target.
+- This template assumes you have a separate post-purchase journey, so making a purchase will cause users to exit the Canvas.
+- Fill out the details in the Audience Sync step.
+
+{% endtab %}
+{% tab Back In Stock %}
+
+Drive purchases by notifying your users when an item is back in stock with personalized messaging. Consider the following when using this template:
+
+- In **Entry Schedule**, select a catalog to use. This allows you to access data, such as products, discounts, and promotions, to further target your users.
+- In **Target Audience**, add a segment to target users who indicated interest in a certain item.
+- In the Message steps throughout the Canvas, update the Liquid to reference your catalog.
+
+{% endtab %}
+{% tab Feature Adoption %}
+
+Deliver timely personalized messages to highlight the benefits and usage tips. Consider the following when using this template:
+
+- Exclude users who have already used the product. For example, in **Target Audience**, add a filter in 
+-  To use the Experiment Path step, define a conversion event. This event should be the event that signals feature adoption.
+- Set up the Action Path step in the template with custom events for "Activated Feature" and "Taken Tour".
+- Set up the custom attributes in the Message step named "Feedback Survey" to capture sentiment of feedback.
+
+{% endtab %}
+{% tab Lapsed User %}
+
+Bring users back to your app with incentives based on their past engagements. Consider the following when using this template:
+
+- In **Basics**, select a specific app to track conversions for.
+- In the Canvas editor, add specific apps for the Action Paths steps.
+- Configure the Audience Sync step with the partners and audiences for your use case.
+
+{% endtab %}
+{% tab Onboarding %}
+
+Create onboarding journeys that promote strong initial adoption and encourage lasting relationships with your users. Consider the following when using this template:
+
+- In the Audience Paths step named "Audience Split", consider customizing the key actions for engaged users. In the template, the segment filter is "Has clicked email for step Welcome Email".
+
+{% endtab %}
+{% tab Post-Purchase Feedback %}
+
+Orchestrate personalized experiences that allow you to respond to feedback and build a relationship with your users. Consider the following when using this template:
+
+- In the first step of the Canvas editor:
+    - Specify the custom attributes in the in-app message to indicate the sentiment of the feedback based on the selected survey option. 
+    - Specify attributes on links for each call-to-action to capture which option is selected. These attributes are referenced in the subsequent audience path.
+- Set up the Audience Sync step named "Ad Retargeting".
+
+{% endtab %}
+{% endtabs %}
 
 ## Managing Canvas templates
 
 Canvas templates can be duplicated and archived, similar to an actual Canvas. To edit a Canvas template, select the template then **<i class="fas fa-pencil-alt"></i>Edit**.
 
-At a workspace level, you can update user permissions to allow or limit the access to create, edit, view, or archive Canvas templates. 
+At a workspace level, you can update user permissions to allow or limit the access to create, edit, view, or archive Canvas templates.
+
+### Permissions for teams and workspaces
+
+To only allow certain users to access and use specific Canvas templates, [add a team]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams/) to the templates, then assign team-level "Access Campaigns, Canvases, Content Cards, Content Blocks, Feature Flags, Segments, Media Library, and Preference Center" permissions.
+
+If you assign any of the following permissions at a team level, but not a workspace level, you can only do the following assigned to your team:
+
+- Create and edit Canvas templates
+- View Canvas templates
+- Archive Canvas templates
+
+If permissions are granted at both a workspace and teams level, the workspace level permissions will be prioritized.
 
 ## Frequently asked questions
 

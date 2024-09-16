@@ -121,7 +121,7 @@ For changes to active campaigns:
 2. Development team makes edits and shares with the Approver team.
 3. Approver team removes the "Development" team tag, pauses the previous campaign, and launches the new campaign.
 
-## Archiving an existing Team
+## Archiving an existing team
 
 You can archive teams from the **Internal Teams** page.
 
