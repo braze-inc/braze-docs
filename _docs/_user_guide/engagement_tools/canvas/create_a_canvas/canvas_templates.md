@@ -75,7 +75,6 @@ Engage with users in real-time to encourage them to complete their purchases.
 
 Consider the following when using this template:
 
-- Update the entry trigger to be action-based, so performing a custom event  your own custom event to  the entry trigger to performing a custom event.
 - Add a specific audience. Currently, the audience paths are triggered based on "Made Any Purchase", but you can tailor this to specific products you want to target.
 - This template assumes you have a separate post-purchase journey, so making a purchase will cause users to exit the Canvas.
 - Fill out the details in the Audience Sync step.
@@ -123,6 +122,7 @@ Orchestrate personalized experiences that allow you to respond to feedback and b
 - In the first step of the Canvas editor:
     - Specify the custom attributes in the in-app message to indicate the sentiment of the feedback based on the selected survey option. 
     - Specify attributes on links for each call-to-action to capture which option is selected. These attributes are referenced in the subsequent audience path.
+- Customize the Audience Path with the attributes from the first step of this template.
 - Set up the Audience Sync step named "Ad Retargeting".
 
 {% endtab %}
