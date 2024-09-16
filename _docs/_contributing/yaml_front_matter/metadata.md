@@ -226,7 +226,7 @@ permalink: /support_contact/docs_team/
 
 ### Page layout
 
-The `layout` key is used to set the layout for a page. If `layout` is not set, the `default` layout will be used. This key accepts any of the following `string` values.
+The `layout` key is used to set the layout for a page. If `layout` is not set, the `default` layout will be used. This key accepts any of the following `string` values. For a description and example of each layout, see [Page layouts]({{site.baseurl}}/contributing/yaml_front_matter/page_layouts/).
 
 - `api_page`
 - `dev_guide`
@@ -235,8 +235,6 @@ The `layout` key is used to set the layout for a page. If `layout` is not set, t
 - `glossary_page`
 - `blank_config`
 - `redirect`
-
-For more information about each value, see [Page layouts]({{site.baseurl}}/contributing/yaml_front_matter/page_layouts/).
 
 {% tabs local %}
 {% tab usage example %}
