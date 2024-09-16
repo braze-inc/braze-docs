@@ -186,7 +186,7 @@ Here, you can write transformation code to define how you want to map various we
 
 2. Transformations for `/catalogs` destinations require a `catalog_name` to define the specific catalog to update. You can hard code this field or template the field with a webhook field via a payload line. Use dot notation to access payload object properties.<br><br>
 3. Define which items you’d like to update in the catalog with the `id` fields in the items array. You can hard code these fields, or template in a webhook field via a payload line. <br><br> Keep in mind, `catalog_column` is a placeholder value. Be sure item objects only contain fields that exist in the catalog.<br><br>
-4. Select **Validate** to return a preview of your code’s output and to check if it is an acceptable request for the [Update multiple catalog items endpoint]({{sitebaseurl}}/api/endpoints/catalogs/catalog_items/asynchronous/put_update_catalog_items).<br><br>
+4. Select **Validate** to return a preview of your code’s output and to check if it is an acceptable request for the [Update multiple catalog items endpoint]({{site.baseurl}}/api/endpoints/catalogs/catalog_items/asynchronous/put_update_catalog_items).<br><br>
 5. Activate your transformation. For additional help with your code before activating it, contact your Braze account manager.<br><br>
 6. Make sure to check if your source platform has a setting to start sending webhooks. Your transformation code will run for each incoming webhook, and the catalog items will begin updating.
 
