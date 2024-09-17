@@ -1638,7 +1638,6 @@ This event occurs when an SMS is sent to the carrier.
   "canvas_variation_name": (optional, string) name of the Canvas variation the user is in if from a Canvas,
   "canvas_step_id": (optional, string) ID of the step for this message if from a Canvas,
   "canvas_step_name": (optional, string) name of the Canvas step this event belongs to,
-  "send_id": (optional, string) message send ID this message belongs to
 }
 ```
 {% endapi %}
@@ -1676,7 +1675,6 @@ This event occurs when an SMS was successfully delivered to the users mobile pho
   "canvas_variation_name": (optional, string) name of the Canvas variation the user is in if from a Canvas,
   "canvas_step_id": (optional, string) ID of the step for this message if from a Canvas,
   "canvas_step_name": (optional, string) name of the Canvas step this event belongs to,
-  "send_id": (optional, string) message send ID this message belongs to
 }
 ```
 {% endapi %}
@@ -1716,7 +1714,6 @@ This event occurs when an SMS send gets rejected by the carrier, this can happen
   "message_variation_name": (optional, string) the name of the message variation if from a campaign,
   "canvas_step_id": (optional, string) ID of the step for this message if from a Canvas,
   "canvas_step_name": (optional, string) name of the Canvas step this event belongs to,
-  "send_id": (optional, string) ID of the message if specified for the campaign (See Send Identifier under API Identifier Types)
 }
 ```
 {% endapi %}
@@ -1756,7 +1753,6 @@ This event occurs when an SMS experiences delivery failure. Use this event and t
   "canvas_variation_name": (optional, string) name of the Canvas variation the user is in if from a Canvas,
   "canvas_step_id": (optional, string) ID of the step for this message if from a Canvas,
   "canvas_step_name": (optional, string) name of the Canvas step this event belongs to,
-  "send_id": (optional, string) message send ID this message belongs to
 }
 ```
 {% endapi %}
