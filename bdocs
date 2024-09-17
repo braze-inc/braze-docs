@@ -81,7 +81,11 @@ case $1 in
         ruby "$PROJECT_ROOT/scripts/remove_unused_reference_links.rb" "$2"
         ;;
     redirects)
-        "$PROJECT_ROOT/scripts/list_redirect_urls.sh"
+        if [[ $# -eq 2 ]]; then
+            "$PROJECT_ROOT/scripts/list_redirect_urls.sh" "$2"
+        else
+            "$PROJECT_ROOT/scripts/list_redirect_urls.sh"
+        fi
         ;;
     help)
         display_help
