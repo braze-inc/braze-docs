@@ -139,7 +139,6 @@ Because landing pages are currently in beta, additional features are in developm
 * Drag-and-drop form blocks for checkboxes and dropdowns
 * Standard event for tracking and retargeting based on form submissions
 
-
 [1]: {% image_buster /assets/img/landing_pages/homepage.gif %}
 [2]: {% image_buster /assets/img/landing_pages/create.png %}
 [3]: {% image_buster /assets/img/landing_pages/details.png %}

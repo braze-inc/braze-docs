@@ -99,7 +99,7 @@ rake
 
 ### Tutorials
 
-Tutorials are learning-oriented practical lessons. They focus on what the user learns, such as becoming familiar with terminology, how things interact, how to use commands, and similar. For an example, see [Rules-based recommendations]({{site.baseurl}}/user_guide/sage_ai/recommendations/rules_based_recommendations/):
+Tutorials are learning-oriented practical lessons. They focus on what the user learns, such as becoming familiar with terminology, how things interact, how to use commands, and similar. For an example, see [Rules-based recommendations]({{site.baseurl}}/user_guide/brazeai/recommendations/rules_based_recommendations/):
 
 {% tabs local %}
 {% tab tutorial template %}
