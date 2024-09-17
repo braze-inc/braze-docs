@@ -1,28 +1,28 @@
 ---
-nav_title: AI Liquid Assistant
-article_title: AI Liquid Assistant
-description: "This article will cover how Sage AI Liquid Assistant works and how you can use it to generate Liquid snippets for your messaging."
+nav_title: BrazeAI Liquid Assistant
+article_title: BrazeAI Liquid Assistant
+description: "This article will cover how the BrazeAI<sup>TM</sup> Liquid Assistant works and how you can use it to generate Liquid snippets for your messaging."
 page_type: reference
 page_order: 5
 ---
 
-# AI Liquid assistant
+# BrazeAI<sup>TM</sup> Liquid Assistant
 
-> The Sage AI Liquid Assistant is a chat assistant powered by Sage AI that helps generate the Liquid you need to personalize message content. 
+> The BrazeAI<sup>TM</sup> Liquid Assistant is a chat assistant powered by BrazeAI<sup>TM</sup> that helps generate the Liquid you need to personalize message content. 
 
-With the AI Liquid Assistant, you can generate Liquid from templates, receive personalized Liquid suggestions, and optimize existing Liquid with the support of Sage AI. The AI Liquid Assistant also provides annotations explaining the Liquid used, so you can increase your understanding of Liquid and learn to write your own.
+With the BrazeAI<sup>TM</sup> Liquid Assistant, you can generate Liquid from templates, receive personalized Liquid suggestions, and optimize existing Liquid with the support of BrazeAI<sup>TM</sup>. The BrazeAI<sup>TM</sup> Liquid Assistant also provides annotations explaining the Liquid used, so you can increase your understanding of Liquid and learn to write your own.
 
 {% alert important %}
-The AI Liquid Assistant is currently in beta for a limited number of customers who actively use the push, SMS, or email channels. For the email channel, this works on email messages and **not** templates, and works best on email messages that are already built. <br><br> If you're interested in being considered for the beta, reach out to your customer success manager.
+The BrazeAI<sup>TM</sup> Liquid Assistant is currently in beta for a limited number of customers who actively use the push, SMS, or email channels. For the email channel, this works on email messages and **not** templates, and works best on email messages that are already built. <br><br> If you're interested in being considered for the beta, reach out to your customer success manager.
 {% endalert %}
 
 ## How it works
 
-The AI Liquid Assistant is designed to help you write effective Liquid code tailored to your marketing needs. Trained on both Liquid syntax and how marketers use Liquid in their messages, our AI understands the nuances of crafting personalized content. Additionally, by providing the AI Liquid Assistant with your custom attribute names (such as `favourite_color`) and data types (such as a boolean or string), our AI Assistant ensures your messages are precisely targeted and aligned with your goals.
+The BrazeAI<sup>TM</sup> Liquid Assistant is designed to help you write effective Liquid code tailored to your marketing needs. Trained on both Liquid syntax and how marketers utilize Liquid in their messages, our AI understands the nuances of crafting personalized content. Additionally, by providing the BrazeAI<sup>TM</sup> Liquid Assistant your custom attribute names (such as “favourite_color”) and data types (such as boolean and string), our BrazeAI<sup>TM</sup> Liquid Assistant ensures your messages are precisely targeted and aligned with your goals. Additionally, if you create Brand Guidelines, the BrazeAI<sup>TM</sup> Liquid Assistant may use Brand Guidelines to better personalize the outputs generated and to customize content to our own brand voice. The Brand Guidelines you create will only be used to personalize content for your own use. 
 
 ## Generating Liquid code
 
-To launch the AI Liquid assistant, select the AI assistant icon in the message composer.
+To launch the BrazeAI<sup>TM</sup> Liquid Assistant, select the AI assistant icon in the message composer.
 
 ![Message composer with the AI assistant.][1]{: style="max-width:50%;"}
 
@@ -34,7 +34,7 @@ You can generate another message using the same prompt by selecting **Regenerate
 
 ### Provided prompts
 
-While using the AI Liquid Assistant, you might see a variety of prompts to help you get started with Liquid. Some of the prompts are listed below.
+While using the BrazeAI<sup>TM</sup> Liquid Assistant, you may see a variety of prompts to help you get started with Liquid. Some of the prompts are listed below.
 
 #### Use app activity
 
@@ -72,7 +72,8 @@ This prompt appears when there is content in your message composer. Select it wh
 
 ## How is my data used and sent to OpenAI?
 
-To modify or create your message content, Braze will send your prompts, messages, and content submitted to the Liquid AI Assistant to OpenAI’s API platform. All queries sent to OpenAI from Braze are anonymized, meaning that OpenAI will not be able to identify from whom the query was sent unless you include uniquely identifiable information in the content you provide. As detailed in [OpenAI’s API platform commitments](https://openai.com/policies/api-data-usage-policies), data sent to OpenAI’s API via Braze is not used to train or improve their models and will be deleted after 30 days. Make sure to adhere to OpenAI’s policies relevant to you, which may include its [Usage policies](https://openai.com/policies/usage-policies) and its [Sharing & publication policy](https://openai.com/policies/sharing-publication-policy). Braze makes no warranty of any kind with respect to any AI-generated content
+In order to modify or create your message content, Braze will send your prompts, messages content and/or brand guidelines (if you decide to create them) submitted to the BrazeAI<sup>TM</sup> AI assistant to OpenAI’s API Platform. All queries sent to OpenAI from Braze are anonymized, meaning that OpenAI will not be able to identify from whom the query was sent unless you include uniquely identifiable information in the content you provide. As detailed in [OpenAI’s API platform commitments](https://openai.com/policies/api-data-usage-policies), data sent to OpenAI’s API via Braze is not used to train or improve their models and will be deleted after 30 days. Please ensure that you adhere to OpenAI’s policies relevant to you, which may include its [Usage policies](https://openai.com/policies/usage-policies) and its [Sharing & publication policy](https://openai.com/policies/sharing-publication-policy). Braze makes no warranty of any kind with respect to any AI-generated content.
+
 
 [1]: {% image_buster /assets/img/ai_liquid/ai_assistant_icon.png %}
 [2]: {% image_buster /assets/img/ai_liquid/ai_assistant_window.png %}
