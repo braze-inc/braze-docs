@@ -1,14 +1,4 @@
----
-nav_title: Integration
-article_title: Integrating the Cordova Braze SDK
-page_order: 0
----
-
-# Integrating the Cordova Braze SDK
-
-> Learn how to integrate the Cordova Braze SDK into your iOS or Android app. After you're finished, you can [further customize the SDK]({{site.baseurl}}/developer_guide/platform_integration_guides/cordova/initial_setup/customizations/).
-
-## Integrating the SDK
+## Integrating the Cordova SDK
 
 ### Step 1: Add the SDK to your project
 

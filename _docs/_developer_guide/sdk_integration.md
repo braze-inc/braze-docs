@@ -20,12 +20,11 @@ toc_headers: h2
 {% endsdktab %}
 
 {% sdktab web %}
-{% multi_lang_include developer_guide/web/initial_sdk_setup.md %}
+{% multi_lang_include developer_guide/web/sdk_integration.md %}
 {% endsdktab %}
 
 {% sdktab cordova %}
-Android test.
-{% endsdktab %}
+{% multi_lang_include developer_guide/cordova/sdk_integration.md %}{% endsdktab %}
 
 {% sdktab flutter %}
 Android test.
