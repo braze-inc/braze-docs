@@ -57,7 +57,7 @@ Movable Ink のインテリジェントクリエイティブ機能（投票、�
 
 ![表示されるさまざまなデータソースオプション:CSV アップロード、Web サイト、または API 統合。]({% image_buster /assets/img/movable_ink/movable_ink1.png %})
 
-{% tabs ローカル %}
+{% tabs local %}
 {% tab CSVデータソース %}
 - **CSVデータソース**:各行には少なくとも1つのSegment列と1つのコンテンツ列が必要です。CSVファイルがアップロードされたら、どの列をコンテンツのターゲットに使用するかを選択します。 \[例のCSVファイル]({% image_buster /assets/download_file/movable_ink_CSV.csv %})
 
@@ -105,7 +105,7 @@ BrazeメッセージにMovable Inkコンテンツを含めるには、Movable In
 
 ### ステップ4:Brazeエクスペリエンス
 
-{% tabs ローカル %}
+{% tabs local %}
 {% tab メール %}
 Brazeプラットフォームで、クリエイティブタグをメール本文に貼り付けます。![]({% image_buster /assets/img/movable_ink/web2.png %}){: style="max-width:90%"}<br><br>
 
