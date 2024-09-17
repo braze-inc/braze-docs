@@ -35,12 +35,14 @@ We apply a rate limit of 1,000 requests per minute to this endpoint, as document
 {% elsif include.endpoint == "users track" %}
 We apply a base speed limit of 50,000 requests per minute to this endpoint for all customers. Each `/users/track` request can contain up to 75 event objects, 75 attribute objects, and 75 purchase objects. Each object (event, attribute, and purchase arrays) can update one user each. In total, this means a maximum of 225 users can be updated in a single call. In addition, a single user profile can be updated by multiple objects.
 
+Different limits apply to customers who have purchased **Monthly Active Users - CY 24-25**. For details on these limits, see [Monthly Active Users - CY 24-25 limits]({{site.baseurl}}/api/endpoints/user_data/post_user_track/#monthly-active-users-cy-24-25).
+
 See our page on [API rate limits]({{site.baseurl}}/api/api_limits/) for details, and reach out to your customer success manager if you need your limit increased.
 
 <!---/users/export/ids-->
 
 {% elsif include.endpoint == "users export ids" %}
-This endpoint has a rate limit of 250 requests per minute, as documented in [API rate limits]({{site.baseurl}}/api/api_limits/).
+This endpoint has a rate limit of 2,500 requests per minute, as documented in [API rate limits]({{site.baseurl}}/api/api_limits/).
 
 <!---/users/delete-->
 

@@ -350,7 +350,7 @@ You can name the schema and table as you'd like, but the column names should mat
 
 In order for Braze to access Databricks, a personal access token needs to be created.
 
-1. In your Databricks workspace, select your Databricks username in the top bar, and then select **User Settings** from the drop-down.
+1. In your Databricks workspace, select your Databricks username in the top bar, and then select **User Settings** from the dropdown.
 2. On the Access tokens tab, select **Generate new token**.
 3. Enter a comment that helps you to identify this token, such as "Braze CDI", and change the token’s lifetime to no lifetime by leaving the Lifetime (days) box empty (blank).
 4. Select **Generate**.

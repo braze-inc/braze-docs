@@ -7,7 +7,6 @@ page_order: 31
 guide_top_header: "Landing Pages"
 guide_top_text: "Braze landing pages are standalone webpages that can drive your user acquisition and engagement strategy."
 description: "This article contains resources on building and customizing Braze landing pages."
-hidden: true
 alias: /landing_pages/
 
 guide_featured_title: "Section articles"

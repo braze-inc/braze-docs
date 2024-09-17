@@ -7,7 +7,7 @@ page_order: 1
 
 # About item recommendations
 
-In this article, you’ll learn about the different ways you can suggest items that your customers are actually interested in, and get inspiration for common use cases for creating recommendation engines using Braze.
+In this article, you’ll learn about the different ways you can suggest items that your customers are interested in, and get inspiration for common use cases for creating recommendation engines using Braze.
 
 ## Prerequisites
 
@@ -22,10 +22,11 @@ When setting out to recommend items to your customers, there are a few approache
 - [Most recent](#most-recent)
 - [Selections-based](#selections-based)
 - [Rules-based](#rules-based)
+- [Trending](#trending)
 
 ### AI Personalized recommendations {#ai}
 
-Part of the [AI item recommendations][1] feature, AI Personalized recommendations takes advantage of deep learning to predict what your users are most likely to be interested in next based on what they’ve shown interest for in the past. This method provides a dynamic and tailored recommendation system that adapts to user behavior.
+As part of the [AI item recommendations][1] feature, AI Personalized recommendations take advantage of deep learning to predict what your users are most likely to be interested in next based on what they’ve shown interest in in the past. This method provides a dynamic and tailored recommendation system that adapts to user behavior.
 
 AI Personalized recommendations use the last 6 months of item interaction data, like purchases or custom events, to build the recommendation model. For users without enough data for a personalized list, the most popular items serve as a fallback so your users are still getting relevant suggestions.
 
@@ -60,6 +61,17 @@ Based on the interaction data being tracked, use cases for this model could incl
 - [Recently engaged with or purchased items](#recently-engaged-with-or-purchased-items)
 - [Items recently added to cart](#items-recently-added-to-cart)
 
+### Trending item recommendations {#trending}
+
+In addition to the "AI Personalized" model, the [AI item recommendations][1] feature also includes a recommendation model for "Trending", which features items that had the most positive momentum when it comes to recent user interactions. 
+
+Unlike the "Most Popular" model, which features items with consistently high interaction, this model features items that have experienced an uptick in interactions. You can use it to recommend products that are up-and-coming, and currently seeing increased traction.
+
+Based on the interaction data being tracked, use cases for this model could include recommending:
+
+- [Trending purchased items](#trending-purchased-items)
+- [Trending liked items](#trending-liked-items)
+
 ### Selections-based recommendations {#selections-based}
 
 [Selections]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/selections/) are specific groups of catalog data. When you use a selection, you're essentially setting up custom filters based on specific columns in your catalog. This could include filters for brand, size, location, date added, and more. It gives you control over what you’re recommending by allowing you to define criteria that items must meet to be shown to users.
@@ -79,7 +91,7 @@ Rules-based recommendations are based on fixed logic that you must manually set.
 
 Some use cases include:
 
-- **Restock reminders:** Sending restock reminders for items that have a predictable usage cycle, like monthly vitamins or weekly groceries, based on their last purchase date.
+- **Restock reminders:** Sending restock reminders for items with a predictable usage cycle, like monthly vitamins or weekly groceries, based on their last purchase date.
 - **First-time buyers:** Recommend starter kits or introductory offers to first-time buyers to encourage a second purchase.
 Loyalty programs: Highlight products that would maximize a customer’s loyalty points or rewards based on their current points balance.
 - **Educational content:** Suggest new courses or content based on the topics of previously consumed or purchased materials.
@@ -234,9 +246,9 @@ For example, a tech ecommerce platform could alert tech enthusiasts about the la
 
 ### Popular items in users' carts
 
-Showcase items that have are added to carts by many other shoppers, providing users with a glimpse into the current trends among your offerings.
+Showcase items that are added to carts by many other shoppers, providing users with a glimpse into the current trends among your offerings.
 
-For example, a fashion retailer could promote clothes and accessories that are trending based on popular additions to carts by other customers. They can then create a dynamic "Trending Now" section on their homepage and mobile app, which updates in real time to encourage shoppers to purchase before items sell out.
+For example, a fashion retailer could promote clothes and accessories that are trending based on popular additions to carts by other customers. They can then create a dynamic "Trending Now" section on their homepage and mobile app, which updates in real-time to encourage shoppers to purchase before items sell out.
 
 {% details Requirements %}
 
@@ -329,6 +341,54 @@ Promote items that users have recently interacted with, including views, clicks,
 5. Choose **Custom Event** and select your custom event for clicks from the list.
 6. Train the recommendation.
 7. [Use the recommendation in messaging]({{site.baseurl}}/user_guide/sage_ai/recommendations/ai_item_recommendations/#using-recommendations-in-messaging).
+
+{% enddetails %}
+
+### Trending purchased items
+
+Highlight items that your users have recently purchased with increased frequency. For example, an ecommerce business could recommend seasonal items that users are starting to stock up on during their preparations for the next season. 
+
+{% details Requirements %}
+
+- AI item recommendations
+- Catalog of relevant items
+- A method for tracking purchases (either a purchase object or custom event)
+
+{% enddetails %}
+
+{% details How to set up %}
+
+1. Create an [AI item recommendation]({{site.baseurl}}/ai_item_recommendations/).
+2. Set the **Type** to **Trending**.
+3. Select your catalog.
+4. (Optional) Add a selection to filter your recommendation to only relevant items.
+5. Choose either a purchase event or a custom event that tracks purchases, along with the corresponding property.
+6. Train the recommendation.
+7. [Use the recommendation in messaging.]({{site.baseurl}}/user_guide/sage_ai/recommendations/ai_item_recommendations/#using-recommendations-in-messaging)
+
+{% enddetails %}
+
+### Trending liked items
+
+Highlight items that your users have recently liked with increased frequency. For example, a music app could feature up-and-coming artists who have experienced a recent surge in user likes.
+
+{% details Requirements %}
+
+- AI item recommendations
+- Catalog of relevant items
+- Custom event for tracking likes
+
+{% enddetails %}
+
+{% details How to set up %}
+
+1. Create an [AI item recommendation]({{site.baseurl}}/ai_item_recommendations/).
+2. Set the **Type** to **Trending**.
+3. Select your catalog.
+4. (Optional) Add a selection to filter your recommendation to only relevant items.
+5. Choose your custom event for tracking likes, along with the corresponding property.
+6. Train the recommendation.
+7. [Use the recommendation in messaging.]({{site.baseurl}}/user_guide/sage_ai/recommendations/ai_item_recommendations/#using-recommendations-in-messaging/)
 
 {% enddetails %}
 

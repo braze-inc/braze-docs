@@ -1,49 +1,49 @@
 ---
-nav_title: Targeting Users
-article_title: Targeting Users
+nav_title: ユーザーへのターゲット設定
+article_title: ユーザーへのターゲット設定
 page_order: 4
 tool: Campaigns
 page_type: reference
-description: "This reference article covers the Targeting Options found in the Target Audiences step of campaign creation."
+description: "この参考記事では、キャンペーン作成の「ターゲットオーディエンス」ステップにあるターゲティングオプションについて説明します。"
 ---
 
-# Targeting users
+# ユーザーへのターゲット設定
 
-> After you have [composed your campaign][1] and determined your [delivery schedule][2], you can set the target recipients of your campaign on the **Target Audiences** step. 
+> [キャンペーンを作成][1]し、[配信スケジュール][2]を決定したら、**ターゲットオーディエンス**ステップでキャンペーンのターゲット受信者を設定できます。 
 
-## Targeting options
+## ターゲティングオプション
 
-Under the **Targeting Options** section, you'll find a few options for who you can send your campaign to.
+**ターゲティングオプション**セクションには、キャンペーンを送信できる相手に関して、いくつかのオプションがあります。
 
 {% alert note %}
-Only the users who match your defined criteria will receive the campaign.Keep in mind that exact segment membership is always calculated just before the message is sent.
+定義した条件に一致するユーザーのみがキャンペーンを受け取ります。正確なセグメントメンバーシップは常にメッセージが送信される直前に計算されることに注意してください。
 {% endalert %}
 
-### Target users in an existing segment {#existing-segment}
+### 既存のセグメントのユーザーをターゲットにする {#existing-segment}
 
-To target members of a previously created segment, select one segment from the dropdown under **Target Users by Segment**.
+以前に作成したセグメントのメンバーをターゲットにするには、\[**セグメント別のターゲットユーザー**] のドロップダウンからセグメントを  1 つ選択します。
 
-### Target users in multiple existing segments {#multiple-existing-segment}
+### 複数の既存セグメントのユーザーをターゲットにする {#multiple-existing-segment}
 
-To target users that fall into multiple previously created segments, add multiple segments from the dropdown under **Target Users by Segment**.The resulting target audience will be users both in the first segment and the second segment and the third segment, etc.
+以前に作成した複数のセグメントに該当するユーザーをターゲットにするには、\[**セグメント別のターゲットユーザー**] のドロップダウンから複数のセグメントを追加します。結果として得られるターゲットオーディエンスは、第 1 セグメント、第 2 セグメント、第 3 セグメントなどのすべてのユーザーです。
 
-### Target users in multiple existing segments and filters {#existing_segment_filter}
+### 複数の既存のセグメントとフィルターのユーザーをターゲットにする {#existing_segment_filter}
 
-You can also target users of one or more previously created segments that also fall under additional filters.After first selecting your segments, you can further refine your audience under the **Additional Filters** section.This is demonstrated in the following screenshot, which targets users that are in the Daily Active Users segment, Not Open Emails segment, and made a purchase less than 30 days ago.
+また、以前に作成した 1 つ以上のセグメントのユーザーで、他のフィルターにも該当するものをターゲットにすることもできます。最初にセグメントを選択したら、\[**追加のフィルター**] セクションでオーディエンスをさらに絞り込むことができます。次のスクリーンショットにはこれが示されています。このスクリーンショットは、「1 日当たりのアクティブユーザー」セグメント、「未開封のメール」セグメントに属し、購入から30日以内のユーザーを対象としています。
 
 ![][25]
 
-### Target users without segments {#without-segment}
+### セグメントのないターゲットユーザー {#without-segment}
 
-To target users without adding a segment, you can use a series of filters.This means you do not need to target a campaign at a pre-existing segment, you can make an impromptu audience during campaign creation by just using the additional filters, and not selecting any segments under **Target Users By Segment**.This will allow you to skip segment creation when sending campaigns to one-off audiences.
+セグメントを追加せずにユーザーをターゲットにするには、一連のフィルターを使用できます。つまり、既存のセグメントをキャンペーンのターゲットにする必要はありません。追加のフィルターを使用するだけで、「**セグメント別にユーザーをターゲットにする**」でセグメントを選択しなくても、キャンペーンの作成中に即興のオーディエンスを作成できます。これにより、1 回限りのオーディエンスにキャンペーンを送信するときに、セグメントの作成を省略できます。
 
 ![][26]
 
-## Targeting Seed Groups
+## シードグループへのターゲット設定
 
-For email campaigns, you can target Seed Groups under the **Seed Groups** section.Note that Seed Groups aren't available for API campaigns, although you can include Seed Groups via an API-triggered entry in a campaign.For more information, see [Seed Groups]({{site.baseurl}}/user_guide/administrative/app_settings/internal_groups_tab/#seed-groups).
+メールキャンペーンの場合は、「**シードグループ**」セクションでシードグループをターゲットに設定できます。シードグループは API キャンペーンでは使用できませんが、API トリガーエントリを介してキャンペーンにシードグループを含めることはできます。詳細については、「[シードグループ]({{site.baseurl}}/user_guide/administrative/app_settings/internal_groups_tab/#seed-groups)」を参照してください。
 
-## Testing your audience
+## オーディエンスのテスト
 
 オーディエンスにセグメントとフィルターを追加したら、[ユーザーを検索]({{site.baseurl}}/user_guide/engagement_tools/segments/user_lookup/)してオーディエンスの条件と一致するかどうかを確認することで、オーディエンスが期待どおりに設定されているかどうかをテストできます。
 
@@ -51,17 +51,17 @@ For email campaigns, you can target Seed Groups under the **Seed Groups** sectio
 
 ## オーディエンスの概要
 
-Once you have added segments or filters to fine tune your audience, the **Audience Summary** will show an overview of who is in your target audience.Here, you can further limit your campaign audience by setting a maximum user cap, or [rate-limiting][3] delivery speed.For email and push notification campaigns, you can select which subscription and opt-in status to target.
+セグメントやフィルターを追加してオーディエンスを微調整すると、**オーディエンスの概要**にターゲットオーディエンスの概要が表示されます。ここでは、最大ユーザー上限を設定したり、配信速度を[レート制限][3]したりすることで、キャンペーンオーディエンスをさらに制限できます。メールとプッシュ通知のキャンペーンでは、ターゲットにするサブスクリプションとオプトインのステータスを選択できます。
 
 ![][27]
 
-## A/B testing
+## A/B テスト
 
-Under the **A/B Testing** section, you can set up a test to compare users' responses to multiple versions of the same marketing campaign.These versions share similar marketing goals but differ in wording and style.The objective is to identify the version of the campaign that best accomplishes your marketing goals. 
+**A/B テスト**セクションでは、同じマーケティングキャンペーンの複数のバージョンに対するユーザーの反応を比較するテストを設定できます。これらのバージョンはマーケティング目標は同様ですが、言葉遣いやスタイルが異なります。テストの目的は、マーケティング目標を最もよく達成するキャンペーンのバージョンを特定することです。 
 
-For more information and best practices, refer to [Multivariate & A/B Testing][4].
+詳細とベストプラクティスについては、[多変量分析と A/B テスト][4]を参照してください。
 
-## Audience statistics
+## オーディエンス統計
 
 Braze は、ターゲットチャンネルの詳細な視聴者統計をフッターに表示します。 
 
@@ -71,7 +71,7 @@ Braze は、ターゲットチャンネルの詳細な視聴者統計をフッ�
 
 ![][24]
 
-In order to see what percentage of your user base is being targeted or the Lifetime Value (LTV) for this segment, click **Show Additional Stats** located after the statistics footer.
+このセグメントのユーザーベースの何パーセントがターゲットになっているか、またはライフタイムバリュー　(LTV) がターゲットになっているかを確認するには、統計フッターの後ろにある \[**その他の統計を表示**] をクリックします。
 
 [1]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/creating_campaign/
 [2]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/

@@ -1,95 +1,95 @@
 ---
-nav_title: Conversions Dashboard
-article_title: Conversions Dashboard
+nav_title: コンバージョンダッシュボード
+article_title: コンバージョンダッシュボード
 alias: "/conversions_dashboard_v2/"
-description: "The conversions dashboard allows you to analyze conversions across campaigns, Canvases, and channels, using different attribution methods."
+description: "コンバージョンダッシュボードでは、さまざまなアトリビューション方法を使用して、キャンペーン、キャンバス、およびチャネル全体のコンバージョンを分析できます。"
 page_order: 3
 page_type: reference
 tool: 
   - Reports
 ---
 
-# Conversions dashboard
+# コンバージョンダッシュボード
 
-> The conversions dashboard allows you to analyze conversions across campaigns, Canvases, and channels, using different [attribution methods](#attribution-methods).When measuring your conversions, you can specify the time frame, conversion event, and conversion window.
+> コンバージョンダッシュボードでは、さまざまな[アトリビューション方法](#attribution-methods)を使用して、キャンペーン、キャンバス、およびチャネル全体のコンバージョンを分析できます。コンバージョンを測定するときに、期間、コンバージョンイベント、コンバージョン期間を指定できます。
 
-## Setting up your report
+## レポートの設定
 
-To set up your conversions dashboard report:
+コンバージョンダッシュボードのレポートを設定するには、次の手順に従います。
 
-1. Navigate to **Analytics** > **Conversions**.
-2. Select a **Date Range** for your report, up to a 90-day window.
-3. Select the campaigns or Canvases (or both) that you would like to analyze. 
-   - If you would like to filter campaigns and Canvases by tag, select a **Tag**.  
-4. Select the **Channel(s)** you would like to analyze for your messages.
-5. (optional) If desired, select a **Breakdown** layer.This allows you to view different dimensions of data, such as by variant, Canvas step, country, or language.
-6. (optional) If you are interested in calculating conversions of an event that was not set up as a conversion event on the campaign or Canvas, turn on [Use custom events](#using-custom-events).
-7. Select an [Attribution Method](#attribution-methods) through which to analyze the selected messages.
+1. \[**分析**] > \[**コンバージョン**] に移動します。
+2. レポートの \[**日付範囲**] を選択します (最長 90 日間)。
+3. 分析するキャンペーンまたはキャンバス (あるいはその両方) を選択します。 
+   - キャンペーンとキャンバスにタグのフィルターを適用する場合は、\[**タグ**] を選択します。  
+4. メッセージを分析する \[**チャネル**] を選択します。
+5. (オプション) 必要に応じて、\[**内訳**] レイヤーを選択します。これにより、バリアント別、キャンバスステップ別、国別、言語別など、さまざまな次元のデータを表示できます。
+6. (オプション) キャンペーンやキャンバスでコンバージョンイベントとして設定されていないイベントについて、コンバージョンを計算する場合は、\[[カスタムイベントを使用する](#using-custom-events)] をオンにします。
+7. 選択したメッセージを分析する \[[アトリビューション方法](#attribution-methods)] を選択します。
 
 {% alert note %}
-If you are analyzing conversions for multiple channels, your **Attribution Method** will default to **Last-Touch Attribution**.
+複数チャネルのコンバージョンを分析する場合、\[**アトリビューション方法**] はデフォルトで \[**最終タッチのアトリビューション**] になります。
 {% endalert %}
 
 {:start="8"}
-8\.Click **Create** to run the report.
+8\.\[**作成**] をクリックしてレポートを実行します。
 
-After the page has loaded, select a **Conversion Event** to filter the report for conversion data.The available selections will include the events that were pre-configured on the Canvases and campaigns.If you selected a custom event when setting up your report (step 6), this option is not available.
+ページが読み込まれたら、\[**コンバージョンイベント**] を選択してレポートをフィルター処理して、コンバージョンデータ表示します。選択できる項目には、キャンバスおよびキャンペーンで事前設定済みのイベントが含まれます。レポートの設定時にカスタムイベントを選択した場合 (ステップ 6)、このオプションは使用できません。
 
-### Using custom events
+### カスタムイベントの使用
 
-If you are interested in calculating conversions of an event that was not set up as a conversion event on the campaign or Canvas, you can select a specific custom event to use as a conversion event. 
+キャンペーンまたはキャンバスでコンバージョンイベントとして設定されていないイベントについて、コンバージョンを計算する場合は、特定のカスタムイベントを選択してコンバージョンイベントとして使用できます。 
 
-1. When setting up your report, turn on **Use custom events**.
-2. Select a custom event that you would like to use as the conversion event.
-3. Select the conversion window within which that event should have occurred to be counted as a conversion.
+1. レポートの設定時に、\[**カスタムイベントを使用する**] をオンにします。
+2. コンバージョンイベントとして使用するカスタムイベントを選択します。
+3. そのイベントが発生してコンバージョンとしてカウントされるコンバージョン期間を選択します。
 
 {% alert note %}
-If you select a custom event, you will not see the **Conversion Event** dropdown on the page and will have to re-run to report to view conversions for different custom events.
+カスタムイベントを選択した場合、ページに \[**コンバージョンイベント**] ドロップダウンが表示されないため、別のカスタムイベントのコンバージョンを表示するにはレポートを再実行する必要があります。
 {% endalert %}
 
-## Understanding your results
+## 結果の解釈
 
-Your report is split into three sections:
+レポートは次の 3 つのセクションに分かれています。
 
-- [Conversion details](#conversion-details)
-- [Conversion funnel](#conversion-funnel)
-- [Conversions over time](#conversions-over-time)
+- [コンバージョンの詳細](#conversion-details)
+- [コンバージョンの分布](#conversion-funnel)
+- [経時的なコンバージョン](#conversions-over-time)
 
-### Conversion details
+### コンバージョンの詳細
 
-The conversion details table will always show one column for *Recipients* and another for *Conversions* (rate and total).The remaining two table columns that appear depend on the options you selected when setting up your report.The following table describes possible metrics.
+コンバージョンの詳細の表には、常に*受信者*列と*コンバージョン*列 (比率と合計) が 1 列ずつ表示されます。表示される残りの 2 列は、レポートの設定時に選択したオプションによって異なります。次の表で、表示される指標について説明します。
 
-| Metric shown | Description |
+| 表示される指標 | 説明 |
  | --- | --- |
-| Recipients | The number of users who received a message through the selected channel within the report's date range |
-| Conversion Rate (Recipients) | Calculated as:(Number of conversions) / (Number of recipients) |
-| Attribution method | Defined by the [attribution method](#attribution-methods) you selected when you set up the report.For Last Touch attribution or if multiple channels are selected, this appears as [Touches](#terms-to-know). |
-| Conversion Rate (Attribution method) | Defined by the [attribution method](#attribution-methods) you selected when you set up the report.If multiple channels are selected, this defaults to last-touch attribution. |
+| 受信者 | レポートの日付範囲において、選択したチャネルを通じてメッセージを受信したユーザーの数 |
+| コンバージョン率 (受信者) | 計算方法: (コンバージョン数) / (受信者数) |
+| アトリビューション方法 | レポートの設定時に選択した \[[アトリビューション方法](#attribution-methods)] で定義されます。最終タッチのアトリビューションの場合、または複数チャネルを選択した場合、これは[タッチ](#terms-to-know)として表示されます。 |
+| コンバージョン率 (アトリビューション方法) | レポートの設定時に選択した \[[アトリビューション方法](#attribution-methods)] で定義されます。複数チャネルを選択した場合、これはデフォルトで最終タッチのアトリビューションになります。 |
 {: .reset-td-br-1 .reset-td-br-2 }
 
 ![]({% image_buster /assets/img_archive/conversions2_details.png %})
 
 レポートの設定時に、キャンペーンまたはキャンバスの内訳レベルの詳細を選択した場合 (ステップ 6) は、<i class="fas fa-angle-down"></i> をクリックして表を展開できます。
 
-### Conversion funnel
+### コンバージョンの分布
 
-This bar graph shows the absolute counts for each [engagement event]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events) based on the selected channel.The conversions count will be defined as per the selected attribution method.
+この棒グラフは、選択したチャネルに基づく各[エンゲージメントイベント]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events)の絶対コンバージョン数を示します。コンバージョン数は、選択したアトリビューション方法に従って定義されます。
 
-By default, all selected campaigns and Canvases are shown.To deselect a campaign or Canvas, click on the name of the campaign or Canvas that you'd like to exclude.For additional details on the engagement event, you can hover over each bar.
+デフォルトでは、選択したキャンペーンとキャンバスがすべて表示されます。キャンペーンまたはキャンバスを選択解除するには、除外するキャンペーンまたはキャンバスの名前をクリックします。エンゲージメントイベントの詳細を確認するには、個々のバーにカーソルを合わせます。
 
-To download the time series data, click and select your download option.Available options are PNG, JPEG, PDF, SVG, or CSV.
+時系列データをダウンロードするには、ダウンロードオプションをクリックして選択します。使用できるオプションは PNG、JPEG、PDF、SVG、または CSV です。
 
 {% alert note %}
-This graph only shows data for a single channel at a time.Use the **Channel** dropdown on the chart to select a single channel.
+このグラフには、一度に 1 チャネルのデータのみが表示されます。グラフの \[**チャネル**] ドロップダウンを使用して、そのチャネルを選択します。
 {% endalert %}
 
 ![]({% image_buster /assets/img_archive/conversions2_funnel.png %}){: style="max-width:70%"}
 
-### Conversions over time
+### 経時的なコンバージョン
 
-This time series graph includes a representation of the conversions per campaign or Canvas over time.By default, all selected campaigns and Canvases are shown.To deselect a campaign or Canvas, click on the name of the campaign or Canvas that you'd like to exclude.
+この時系列グラフには、キャンペーン別またはキャンバス別のコンバージョンが時系列で表示されます。デフォルトでは、選択したキャンペーンとキャンバスがすべて表示されます。キャンペーンまたはキャンバスを選択解除するには、除外するキャンペーンまたはキャンバスの名前をクリックします。
 
-To download the time series data, click <i class="fas fa-bars"></i> and select your download option.Available options are PNG, JPEG, PDF, SVG, or CSV.
+時系列データをダウンロードするには、<i class="fas fa-bars"></i> をクリックしてダウンロードオプションを選択します。使用できるオプションは PNG、JPEG、PDF、SVG、または CSV です。
 
 ![]({% image_buster /assets/img_archive/conversions2_over_time.png %}){: style="max-width:70%"}
 
@@ -98,9 +98,9 @@ To download the time series data, click <i class="fas fa-bars"></i> and select y
 | アトリビューション方法 | 定義 | レート計算 | チャネル固有のオプション |
 | --- | --- | --- | --- |
 | 受領時 | メッセージ受信後に発生した変換の総数 | （ユニーク受信コンバージョン）/（ユニーク受信者）として計算されます | {::nomarkdown}<ul><li>メール配信時</li><li>SMS 配信時</li></ul>{:/} |
-| 送信時 | メッセージ送信後に発生した変換の総数 | (一意の送信コンバージョン) / (一意の受信者)として計算されます | {::nomarkdown}<ul><li>プッシュ通知送信時</li><li>Upon Content Card send</li><li>SMS 送信時</li></ul>{:/} |
+| 送信時 | メッセージ送信後に発生した変換の総数 | (一意の送信コンバージョン) / (一意の受信者)として計算されます | {::nomarkdown}<ul><li>プッシュ通知送信時</li><li>コンテンツカード送信時</li><li>SMS 送信時</li></ul>{:/} |
 | 開封時 | メッセージ開封後に発生した変換の総数 | (ユニーク開封コンバージョン) / (ユニーク受信者)として計算されます | {::nomarkdown}<ul><li>メール開封時</li><li>プッシュオープン時</li></ul>{:/} |
-| クリック時 | クリックメッセージが発生した変換の総数 | (ユニーククリックコンバージョン) / (ユニーク受信者) として計算されます | {::nomarkdown}<ul><li>メールのクリック時</li><li>Upon Content Card click</li><li>IAM のクリック時</li></ul>{:/} |
+| クリック時 | クリックメッセージが発生した変換の総数 | (ユニーククリックコンバージョン) / (ユニーク受信者) として計算されます | {::nomarkdown}<ul><li>メールのクリック時</li><li>コンテンツカードのクリック時</li><li>IAM のクリック時</li></ul>{:/} |
 | インプレッション時に | インプレッション後に発生した総コンバージョン数 | （ユニークインプレッションコンバージョン） / （ユニーク受信者）として計算されます | {::nomarkdown}<ul><li>IAM のインプレッション時</li><li>コンテンツカードのインプレッション時</li></ul>{:/} |
 | 最終タッチ時 | コンバージョンウィンドウ中に最後にタッチまたはクリックされたメッセージにすべてのクレジットを与えるコンバージョン。 | (タッチ数) / (ユニーク受信者数) として計算されます | 最後のタッチアトリビューションは、複数のチャネルがレポートに追加された場合に自動的に選択されます。|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
@@ -109,4 +109,4 @@ To download the time series data, click <i class="fas fa-bars"></i> and select y
 
 | 用語 | 定義 |
 | --- | --- |
-| タッチ | メッセージとの物理的な相互作用またはタッチポイント。<br><br>タッチには次のものが含まれます。<br>{::nomarkdown}<ul><li>メール クリック</li><li>プッシュオープン</li><li>Content Card Click</li><li>In-App Message Click</li><li>SMS 配信</li></ul>{:/} |
+| タッチ | メッセージとの物理的な相互作用またはタッチポイント。<br><br>タッチには次のものが含まれます。<br>{::nomarkdown}<ul><li>メール クリック</li><li>プッシュオープン</li><li>コンテンツカードのクリック</li><li>アプリ内メッセージのクリック</li><li>SMS 配信</li></ul>{:/} |

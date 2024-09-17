@@ -8,7 +8,7 @@ description: "This glossary covers the current user language codes Braze support
 
 # User language codes
 
-> This reference article provides a completed list of currently supported user language codes at Braze.
+> This article covers the user language codes that are currently supported at Braze.
 
 In general, Braze uses the majority of [ISO-639-1](http://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) standard codes, but a few are not included in that set.
 

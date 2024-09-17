@@ -19,16 +19,17 @@ Expand our creative capabilities by leveraging Movable Ink's Intelligent Creativ
 | Requirement | Description |
 |---|---|
 | Movable Ink account | A Movable Ink account is required to take advantage of this partnership. |
-| Data source | You will need to connect a data source to Movable Ink. This can be done through CSV, website import, or API. Make sure that you pass data with a unifying identifier between Braze and Movable Ink (for example, `external_id`).
+| Data source | You'll need to connect a data source to Movable Ink. This can be done through CSV, website import, or API. Make sure that you pass data with a unifying identifier between Braze and Movable Ink (for example, `external_id`).
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## Use cases
+
 - Personalized monthly or end-of-year recaps.
 - Dynamically personalize images for email, push, or rich notifications based on last known behavior.<br>
 	For Example: 
 	- Using a rich push message to dynamically create a schedule of events by pulling data from API. 
-	- Using the Countdown Timer feature to notify users when a big sale is approaching (for example, Black Friday, Valentine's Day, Holiday Deals, etc.)
-	- Use the Scratch Off feature as a fun and interactive way to disburse Promo Codes.
+	- Using the countdown timer to notify users when a big sale is approaching (for example, Black Friday, Valentine's Day, or holiday deals)
+	- Use the Scratch Off feature as a fun and interactive way to disburse promotion codes.
 
 ## Supported Movable Ink capabilities
 
@@ -159,12 +160,12 @@ This template will take the current time (in seconds), append it to the end of t
 
 ## Troubleshooting
 
-#### Dynamic images not showing correctly? What channel are you experiencing difficulties with?
+### Dynamic images not showing correctly? What channel are you experiencing difficulties with?
 - **Push**: Make sure that you have empty logic before your Movable Ink image URL: <br>{% raw %}```{% if true %}{% endif %}https://movable-ink-image-url-goes-here```{% endraw %}
 - **In-app messages and Content Cards**: Make sure that the image URL is unique for each impression. This can be done by appending the appropriate Liquid so that each URL is different. See [in-app and content card messages instructions][instructions]. 
 - **Image not loading**: Be sure to replace any "merge tags" with the corresponding Liquid fields in the Braze dashboard. For example: {% raw %}```https://mi-msg.com/p/rp/image.png?mi_u=%%email%%```{% endraw %} with {% raw %}```https://mi-msg.com/p/rp/image.png?mi_u={{${email_address}}}```{% endraw %}.
 
-#### Having trouble showing GIFs on Android?
+### Having trouble showing GIFs on Android?
 - Android requires GIF support in implementation. Follow the Android [in-app message customization][GIFsupport] article if you do not have this setup.
 
 [1]: https://www.movableink.com/

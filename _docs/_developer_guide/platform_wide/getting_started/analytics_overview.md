@@ -302,7 +302,7 @@ These should not be used as user IDs:
 #### Give custom events and attributes readable names
 Imagine you're a marketer who begins using Braze a year or two after implementation, reading a dropdown list full of names like "usr_no_acct" without further context may be intimidating. Giving your event and attributes identifiable and readable names will make things easier for all users of your platform. Consider the following best-practices:
 
-- Do not begin a custom event with a numeric character. The drop-down list is sorted alphabetically and beginning with a numerical character makes it more difficult to segment by your filter of choice
+- Do not begin a custom event with a numeric character. The dropdown list is sorted alphabetically and beginning with a numerical character makes it more difficult to segment by your filter of choice
 - Try not to use obscure abbreviations or technical jargon where possible
   - Example: `usr_ctry` may be fine as a variable name for a user's country within a piece of code, but the custom attribute should be sent to Braze as something like `user_country` to lend some clarity to a marketer using the dashboard down the line.
 

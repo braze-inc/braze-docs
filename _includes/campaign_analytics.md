@@ -84,6 +84,11 @@ To measure the impact of an individual WhatsApp message, you can add a [control 
 To measure the impact of an individual webhook message, you can add a [control group][2] to an A/B test. The top-level **Campaign Details** panel doesn't include metrics from the Control Group variant.
 
 {% endif %}
+
+#### Changes Since Last Viewed
+
+The number of updates to the campaign from other members of your team is tracked by the *Changes Since Last Viewed* metric on the campaign overview page. Select **Changes Since Last Viewed** to view a changelog of updates to the campaign's name, schedule, tags, message, audience, approval status, or team access configuration. For each update, you can see who performed the update and when. You can use this changelog to audit changes to your campaign.
+
 <!--
 ### Message Performance
 

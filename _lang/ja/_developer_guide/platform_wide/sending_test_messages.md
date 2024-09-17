@@ -160,5 +160,5 @@ curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer {YOUR
 [11]: {% image_buster /assets/img_archive/test_segment.png %}
 [13]: {{site.baseurl}}/api/endpoints/messaging/
 [66]: {{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_messages/
-[16]: {{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#subscription-groups
+ /user_guide/message_building_by_channel/email/managing_user_subscriptions/#subscription-groups
 [14]: {{site.baseurl}}/user_guide/administrative/app_settings/email_settings/#append-email-subject-lines

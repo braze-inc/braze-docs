@@ -1,6 +1,6 @@
 ---
-nav_title: How campaign and Canvas attributes differ across sources
-article_title: How campaign and Canvas attributes differ across sources in Braze 
+nav_title: Differences between Campaign and Canvas Attributes in Braze
+article_title: Differences between Campaign and Canvas Attributes in Braze
 page_order: 1
 
 page_type: reference

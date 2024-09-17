@@ -28,7 +28,7 @@ These are the most engaging, but also the most intrusive since they cover your u
 
 - Header and body text
 - A large image
-- Up to two call to action buttons with separate on click behavior and deep links
+- Up to two call to action buttons with separate on-click behavior and deep links
 - Different colors for the header and body text, buttons and background
 - Key-value pairs
 
@@ -42,7 +42,7 @@ These messages aren't as intrusive as fullscreen messages, as they still allow u
 
 - Header and body text
 - An image or customizable badge icon
-- Up to two call to action buttons with separate on click behavior and deep links
+- Up to two call to action buttons with separate on-click behavior and deep links
 - Different colors for the header and body text, buttons and background
 - Key-value pairs
 

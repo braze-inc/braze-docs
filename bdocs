@@ -23,6 +23,7 @@ OPTIONS:
   release      Create the release body text for monthly releases
   transform    Transform reference links to inline links on 1 or more pages
   clean        Remove reference links that are not being used on 1 or more pages
+  redirects    List the old URLs for all new redirects in this branch
   help         Display this help message and exit
 
 EOF
@@ -78,6 +79,9 @@ case $1 in
             exit 1
         fi
         ruby "$PROJECT_ROOT/scripts/remove_unused_reference_links.rb" "$2"
+        ;;
+    redirects)
+        "$PROJECT_ROOT/scripts/list_redirect_urls.sh"
         ;;
     help)
         display_help
