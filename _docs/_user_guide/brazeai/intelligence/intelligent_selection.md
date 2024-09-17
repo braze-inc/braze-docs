@@ -35,7 +35,7 @@ When adding variants into your Canvas, click on one of the variant percentages. 
 Intelligent Selection will not be available if you haven't yet added conversion events to your Canvas or if your campaign is composed of a solo variant.
 
 {% alert note %}
-We do not allow the use of Intelligent Selection with campaigns with re-eligibility enabled in under 24 hours because it would affect the integrity of the control variant. Check out [Intelligence FAQ]({{site.baseurl}}/user_guide/intelligence/faqs/#why-is-re-eligibility-not-available-when-combined-with-intelligent-selection) to learn more.
+We do not allow the use of Intelligent Selection with campaigns with re-eligibility enabled in under 24 hours because it would affect the integrity of the control variant. Check out [Intelligence FAQ]({{site.baseurl}}/user_guide/brazeai/intelligence/faqs/#why-is-re-eligibility-in-less-than-24-hours-not-available-when-combined-with-intelligent-selection) to learn more.
 {% endalert %}
 
 ## For how long will it run?

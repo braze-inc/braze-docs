@@ -10,7 +10,7 @@ description: "This reference article covers how to create an AI item recommendat
 
 > Learn how to create an AI item recommendation for items in a catalog.
 
-Use AI item recommendations to calculate the most popular products or create personalized AI recommendations for a specific [catalog]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/). After creating your recommendation, you can use personalization to insert those products into your messages.
+Use AI item recommendations to calculate the most popular products or create personalized AI recommendations for a specific [catalog][catalog]. After creating your recommendation, you can use personalization to insert those products into your messages.
 
 ## Prerequisites
 

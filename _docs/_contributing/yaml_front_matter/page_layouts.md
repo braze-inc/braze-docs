@@ -44,7 +44,7 @@ The `dev_guide` value is used to apply the developer guide format. In the follow
 
 ### Featured page
 
-The `featured` value is used to apply the featured page format. In the following example, this format is applied to the [Predictive Events]({{site.baseurl}}/user_guide/sage_ai/predictive_suite/predictive_events) page:
+The `featured` value is used to apply the featured page format. In the following example, this format is applied to the [Predictive Events]({{site.baseurl}}/user_guide/brazeai/predictive_suite/predictive_events) page:
 
 {% tabs local %}
 {% tab example output %}
