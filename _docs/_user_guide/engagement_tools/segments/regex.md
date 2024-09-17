@@ -28,7 +28,7 @@ In the linked Braze Learning course, we show you how regular expressions can be 
 
 {% alert important %}
 This tool is only meant as a reference, and does not guarantee that the regex matches 100% with the Braze platform. Regular expressions in Braze for segmentation and filters automatically add the `/gi` modifier. The [gi modifier](https://w3schools.sinsixx.com/jsref/jsref_regexp_modifier_gi.asp.htm) is used to do a case-insensitive search of all occurrences of a regular expression in a string.  
-<br><br>
+<br>
 Regular expressions for custom event trigger properties use the `/g` modifier (case sensitive, see [g modifier](https://www.w3schools.com/jsref/jsref_regexp_g.asp)) and do not use the `/i` modifier. For case insensitivity for custom event trigger properties, use `(?i)` instead.
 {% endalert %}
 
