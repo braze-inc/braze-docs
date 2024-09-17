@@ -1,9 +1,8 @@
 ---
-nav_title: Drag-and-Drop Landing Pages
+nav_title: Drag-and-Drop Editor
 article_title: Creating Drag-and-Drop Landing Pages
 description: "This article covers how to create and customize Braze landing pages with the drag-and-drop editor."
 page_order: 31
-hidden: true
 alias: /landing_pages/drag_and_drop/
 ---
 
@@ -130,16 +129,6 @@ No, this isn't currently available.
 ### Is there an HTML editor for landing pages?
 
 No, this isn’t currently available. You can use the Custom Code block in the editor.
-
-### What features are on the roadmap for landing pages? {#roadmap}
-
-Because landing pages are currently in beta, additional features are in development. These include:
-
-* Custom subdomain support
-* New Liquid tag for linking a landing page in a Braze messaging channel
-* Basic reporting page
-* Drag-and-drop form blocks for checkboxes and dropdowns
-* Standard event for tracking and retargeting based on form submissions
 
 
 [1]: {% image_buster /assets/img/landing_pages/homepage.gif %}
