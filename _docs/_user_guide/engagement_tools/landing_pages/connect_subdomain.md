@@ -24,7 +24,7 @@ To connect a subdomain to your Braze account, have an administrator follow the s
 ![Landing Page Settings page with one TXT and two CNAME records listed with their respective names and values.][1]
 
 {% alert note %}
-The subdomain connection can take up to 48 hours, depending on your domain provider. We’ll update your **Landing Page Settings** page when the process is complete.
+Depending on your domain provider, the subdomain connection can take up to 48 hours. When the process is complete, we’ll update your **Landing Page Settings** page.
 {% endalert %}
 
 ## Using your subdomain
