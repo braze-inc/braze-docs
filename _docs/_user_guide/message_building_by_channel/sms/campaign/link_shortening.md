@@ -31,15 +31,23 @@ Static shortened URLs will be valid for one year from the date they were created
 If you plan to use the BrazeAI<sup>TM</sup> [Intelligent Channel filter]({{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_channel/) and want the SMS channel to be selectable, turn on SMS link shortening with advanced tracking and [click tracking]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/link_shortening/#click-tracking).
 {% endalert %}
 
-### Enabling link shortening
+### Using link shortening
 
-To enable link shortening, make sure the link shortening toggle in the message composer is enabled. From there, choose whether to use basic or advanced tracking by selecting the respective radial button. 
+To use link shortening, make sure the link shortening toggle in the message composer is turned on. Then, choose to use either basic or advanced tracking.
 
 ![][1]
 
-For Braze to recognize URLs, they must start with _http://_ or _https://_. When a URL is recognized, the **Preview** pane will update with a placeholder URL. Braze will estimate the length of the URL after shortening, but a warning will prompt you to select a test user and save the message as a draft for a more accurate estimate.
+Braze will only recognize URLs that start with _http://_ or _https://_. When a URL is recognized, the **Preview** section updates with a placeholder URL. Braze will estimate the length of the URL after shortening, but a warning will prompt you to select a test user and save the message as a draft for a more accurate estimate.
 
 ![][3]
+
+While Link Shortening will enable you to track your URLs automatically, you can also add UTM parameters to your URLs to help you track the performance of campaigns in Google Analytics or other 3rd party analytics tools.
+
+Here's how you can do so:
+1. Start with your base URL: This is the URL of the page you want to track. For example: https://www.example.com
+2. Format the URL: Start with a question mark  after your base URL, and then add each UTM parameter separated by an ampersand (&). For example:
+
+`https://www.example.com?utm_source=newsletter&utm_medium=sms`
 
 ### Liquid personalization in URLs
 
