@@ -60,7 +60,7 @@ Calls to `openSession()`, `closeSession()`,[`ensureSubscribedToInAppMessageEvent
 
 To register activity lifecycle callbacks, add the following code to the `onCreate()` method of your `Application` class:
 
-{% tabs %}
+{% tabs local %}
 {% tab JAVA %}
 
 ```java
