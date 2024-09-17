@@ -301,6 +301,45 @@ For example, you can create a catalog using the [Create catalogs endpoint]({{sit
 
 In addition to managing your catalogs, you can also use asynchronous and synchronous endpoints to manage the catalog items. This includes the ability to edit and delete catalog items, and to list catalog item details. For example, if you want to edit an individual catalog item, you can use the [`/catalogs/catalog_name/items/item_id` endpoint]({{site.baseurl}}/api/endpoints/catalogs/catalog_items/synchronous/patch_catalog_item/).
 
+#### Templating catalog items including Liquid
+
+Similar to [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content), the `:rerender` flag must be included in the Liquid tag to render its Liquid content. Note that the `:rerender` flag is only one level deep, meaning it won't apply to any nested Liquid tag calls.
+
+{% alert important %}
+Templating catalog items that include Liquid is in early access. Reach out to your Braze account manager if you're interested in participating in the early access.
+{% endalert %}
+
+If a catalog item contains user profile fields (within a Liquid personalization tag), these values must be defined earlier in the message via Liquid before the templating in order to render the Liquid properly. If `:rerender` flag is not provided, it will render the raw Liquid content.
+
+For example, if a catalog named "Messages" has an item with this Liquid:
+
+![]({% image_buster /assets/img_archive/catalog_liquid_templating.png %}){: style="max-width:80%;"}
+
+To render the following Liquid content:
+
+{% raw %}
+```liquid
+Hi ${first_name}
+
+{% catalog_items Messages greet_msg :rerender %}
+{{ items[0].Welcome_Message }}
+```
+{% endraw %}
+
+This will display as the following:
+
+{% raw %}
+```
+Hi Peter,
+
+Welcome to our store, Peter!
+```
+{% endraw %}
+
+{% alert note %}
+Catalog Liquid tags can't be used recursively inside catalogs.
+{% endalert %}
+
 ## Catalog tiers {#tiers}
 
 The following table describes the differences between the free and pro version of catalogs:
