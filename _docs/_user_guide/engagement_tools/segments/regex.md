@@ -34,7 +34,7 @@ Regular expressions for custom event trigger properties use the `/g` modifier (c
 
 {% tabs %}
 {% tab Regex Debugger %}
-
+<div>
 This form allows for basic validation and testing of regular expressions.
 ​
 Regex:
