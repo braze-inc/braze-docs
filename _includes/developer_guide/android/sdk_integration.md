@@ -1,12 +1,6 @@
-{% alert note %}
-For optimal performance on Android 12, we recommend upgrading to [Braze Android SDK v13.1.2+](https://github.com/braze-inc/braze-android-sdk/blob/master/CHANGELOG.md#1312) as soon as possible. For more information, see our [Android 12 upgrade guide]({{site.baseurl}}/android_12/).
-{% endalert %}
-
 ## Step 1: Integrate the UI library (optional)
 
-To use push notifications, in-app messaging, and Content Cards, you must integrate the Braze UI library. Although skipping this step is possible, it is not recommended.
-
-### Step 1.2: Add Braze dependency
+Although skipping this step is possible, it is not recommended. You must integrate the Braze UI library to use push notifications, in-app messaging, and Content Cards.
 
 In your Android Studio project, add the `android-sdk-ui` dependency to your app's `build.gradle`. If you're using any location or Braze Geofence functionality, also include `android-sdk-location` in your app's `build.gradle`.
 
@@ -24,8 +18,6 @@ dependencies {
 The following example shows where to place the dependency line in your `build.gradle`. Note that the version used in the example uses an old version. Visit [Braze Android SDK releases](https://github.com/braze-inc/braze-android-sdk/blob/master/CHANGELOG.md) for the most up-to-date version of the Braze Android SDK.
 
 ![Android studio displaying the "build.gradle". In this screenshot, the dependency code is added to the bottom of the file.]({% image_buster /assets/img_archive/androidstudio2.png %})
-
-### Step 1.2: Perform Gradle sync
 
 Be sure to perform a Gradle sync to build your project and incorporate the [dependency additions](#add-braze-dependency).
 
