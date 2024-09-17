@@ -14,33 +14,31 @@ search_rank: 3.9
 
 # Creating a Content Card
 
-> This article covers how to create a Content Card in Braze. Here, we'll cover choosing a messaging type, composing your card, and scheduling your message delivery.
-
-You can create a Content Card using the Braze platform using campaigns and Canvases.
+> This article covers how to create a Content Card in Braze when you build campaigns and Canvases. Here, we'll walk you through choosing a messaging type, composing your card, and scheduling your message delivery.
 
 ## Step 1: Choose where to build your message
 
-Not sure whether your message should be send using a campaign or a Canvas? Campaigns are better for single, simple messaging campaigns, while Canvases are better for multi-step user journeys.
+Not sure whether your message should be sent with a campaign or a Canvas? Campaigns are better for single, simple messaging campaigns (such as informing users about a new product with a single message), while Canvases are better for multi-step user journeys (such as sending tailored product suggestions based on user behavior over time).
 
 {% tabs %}
 {% tab Campaign %}
 
 **Steps:**
 
-1. Go to **Messaging** > **Campaigns** and click <i class="fas fa-plus"></i> **Create Campaign**.
+1. Go to **Messaging** > **Campaigns** and select <i class="fas fa-plus"></i> **Create Campaign**.
 {% alert note %}
-If you are using the [older navigation]({{site.baseurl}}/navigation), you can find **Campaigns** under **Engagement**.
+If you're using the [older navigation]({{site.baseurl}}/navigation), you can find **Campaigns** under **Engagement**.
 {% endalert %}
 
 {:start="2"}
 2. Select **Content Cards**, or, for campaigns targeting multiple channels, select **Multichannel Campaign**.
 3. Name your campaign something clear and meaningful.
 4. Add [Teams]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/teams/) and [Tags]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/tags/) as needed.
-   * Tags make your campaigns easier to find and build reports out of. For example, when using the [Report Builder]({{site.baseurl}}/user_guide/data_and_analytics/reporting/report_builder/), you can filter by particular tags.
-5. Add and name as many variants as you need for your campaign. You can choose different platforms, message types, and layouts for each of your added variants. For more on this topic, refer to [Multivariate and A/B testing]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/).
+   * Tags make your campaigns easier to find and build reports out of. For example, when using the [Report Builder]({{site.baseurl}}/user_guide/data_and_analytics/reporting/report_builder/), you can filter by the relevant tags.
+5. Add and name as many variants as you like for your campaign. You can choose different platforms, message types, and layouts for each of your added variants. For more on variants, refer to [Multivariate and A/B testing]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/).
 
 {% alert tip %}
-If all of the messages in your campaign are going to be similar or have the same content, compose your message before adding additional variants. You can then choose **Copy from Variant** from the **Add Variant** dropdown.
+If all of the messages in your campaign are going to be similar or have the same content, compose your message before adding additional variants. You can then select **Copy from Variant** from the **Add Variant** dropdown.
 {% endalert %}
 
 {% endtab %}
