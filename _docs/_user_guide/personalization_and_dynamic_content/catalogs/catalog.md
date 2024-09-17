@@ -309,7 +309,7 @@ Similar to [Connected Content]({{site.baseurl}}/user_guide/personalization_and_d
 Templating catalog items that include Liquid is in early access. Reach out to your Braze account manager if you're interested in participating in the early access.
 {% endalert %}
 
-If a catalog item contains user profile fields (within a Liquid personalization tag), these values must be defined earlier in the message via Liquid before the templating in order to render the Liquid properly. If `:rerender` flag is not provided, it will render the raw Liquid content.
+If a catalog item contains user profile fields (within a Liquid personalization tag), these values must be defined in Liquid earlier in the message and before the templating in order to render the Liquid properly. If the `:rerender` flag isn't provided, it will render the raw Liquid content.
 
 For example, if a catalog named "Messages" has an item with this Liquid:
 
