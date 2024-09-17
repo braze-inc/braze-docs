@@ -31,7 +31,7 @@ As part of the [AI item recommendations][1] feature, AI Personalized recommendat
 AI Personalized recommendations use the last 6 months of item interaction data, like purchases or custom events, to build the recommendation model. For users without enough data for a personalized list, the most popular items serve as a fallback so your users are still getting relevant suggestions.
 
 With AI item recommendations, you can also further filter the items available with 
-[selections]({{site.baseurl}}/user_guide/brazeai/personalization_and_dynamic_content/catalogs/selections/). However, selections with Liquid cannot be used in AI recommendations, so keep that in mind when building your catalog selections.
+[selections]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/selections/). However, selections with Liquid cannot be used in AI recommendations, so keep that in mind when building your catalog selections.
 
 For examples, see the [Use cases](#use-cases) section in this article.
 
