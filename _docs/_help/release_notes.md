@@ -106,7 +106,6 @@ You can use [response messages]({{site.baseurl}}/user_guide/message_building_by_
 #### Canvas templates
 
 {% multi_lang_include release_type.md release="General availability" %}
-josh-mccrowell-braze marked this conversation as resolved.
 
 Create [Canvas templates]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_templates/) to refine your messaging by creating a consistent framework that can be easily customized to fit your specific goals across your Canvases.
 
