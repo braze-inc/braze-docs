@@ -14,7 +14,7 @@ noindex: true
 > Prompting is the process of giving the AI Liquid Assistant clear instructions on what you want it to do.
 
 {% alert important %}
-The AI Liquid Assistant is currently in beta for a limited number of customers who actively use the push and SMS channels. If you're interested in being considered for the beta, reach out to your customer success manager or indicate your interest on this [portal card](https://braze.productboard.com/entity-detail/features/27273918).
+The BrazeAI<sup>TM</sup> Liquid Assistant is currently in beta for a limited number of customers who actively use the push, SMS, or email channels. For the email channel, this works on email messages and **not** templates, and works best on email messages that are already built. <br><br> If you're interested in being considered for the beta, reach out to your customer success manager.
 {% endalert %}
 
 The AI Liquid Assistant is designed to function as a best-in-class marketer who's an expert at using Braze and Liquid to create impactful marketing messages, but it still requires guidance on your particular use cases or questions.
