@@ -20,7 +20,7 @@ toc_headers: h2
 {% endsdktab %}
 
 {% sdktab web %}
-Android test.
+{% multi_lang_include developer_guide/web/initial_sdk_setup.md %}
 {% endsdktab %}
 
 {% sdktab cordova %}
