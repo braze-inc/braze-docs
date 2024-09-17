@@ -74,7 +74,7 @@ Based on the interaction data being tracked, use cases for this model could incl
 
 ### Selections-based recommendations {#selections-based}
 
-[Selections]({{site.baseurl}}/user_guide/brazeai/personalization_and_dynamic_content/catalogs/selections/) are specific groups of catalog data. When you use a selection, you're essentially setting up custom filters based on specific columns in your catalog. This could include filters for brand, size, location, date added, and more. It gives you control over what you’re recommending by allowing you to define criteria that items must meet to be shown to users.
+[Selections]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/selections/) are specific groups of catalog data. When you use a selection, you're essentially setting up custom filters based on specific columns in your catalog. This could include filters for brand, size, location, date added, and more. It gives you control over what you’re recommending by allowing you to define criteria that items must meet to be shown to users.
 
 The previous three types all involve setting up and training a recommendation model in Braze. While you can use selections in those models as well, you can also accomplish some recommendation use cases with just catalog selections and Liquid personalization.
 
@@ -240,7 +240,7 @@ For example, a tech ecommerce platform could alert tech enthusiasts about the la
 3. Make sure **Randomize Sort Order** is turned off.
 4. For **Sort Field**, select your date added field.
 5. Set **Sort Order** to descending.
-6. [Use the selection in messaging]({{site.baseurl}}/user_guide/brazeai/personalization_and_dynamic_content/catalogs/selections/#using-selections-in-messaging).
+6. [Use the selection in messaging]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/selections/#using-selections-in-messaging).
 
 {% enddetails %}
 
@@ -285,10 +285,10 @@ For example, an online bookstore could offer a "Surprise Me" feature, recommendi
 
 {% details How to set up %}
 
-1. [Create a selection]({{site.baseurl}}/user_guide/brazeai/personalization_and_dynamic_content/catalogs/selections/#creating-a-selection) based on your catalog.
+1. [Create a selection]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/selections/#creating-a-selection) based on your catalog.
 2. (Optional) Add any filters if desired.
 3. Turn on **Randomize Sort Order**.
-4. [Use the selection in messaging]({{site.baseurl}}/user_guide/brazeai/personalization_and_dynamic_content/catalogs/selections/#using-selections-in-messaging).
+4. [Use the selection in messaging]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/selections/#using-selections-in-messaging).
 
 {% enddetails %}
 
