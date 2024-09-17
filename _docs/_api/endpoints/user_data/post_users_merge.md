@@ -45,7 +45,7 @@ Authorization: Bearer YOUR_REST_API_KEY
 
 | Parameter | Required | Data Type | Description |
 |---|---|---|---|
-| `merge_updates` | Required | Array | An object array. Each object should contain an `identifier_to_merge` object and an `identifier_to_keep` object, which should each reference a user either by `external_id`,  `user_alias`, `phone_number`, or `email`. |
+| `merge_updates` | Required | Array | An object array. Each object should contain an `identifier_to_merge` object and an `identifier_to_keep` object, which should each reference a user either by `external_id`,  `user_alias`, `phone`, or `email`. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
 ### Merge behavior
@@ -101,7 +101,7 @@ These merged fields will update "for X events in Y days" filters. For purchase e
 
 ### Merging users by email or phone number
 
-If an `email` or `phone_number` is specified as an identifier, an additional `prioritization` value is required in the identifier. The `prioritization` should be an array specifying which user to merge if there are multiple users found. `prioritization` is an ordered array, meaning if more than one user matches from a prioritization, then merging will not occur.
+If an `email` or `phone` is specified as an identifier, an additional `prioritization` value is required in the identifier. The `prioritization` should be an array specifying which user to merge if there are multiple users found. `prioritization` is an ordered array, meaning if more than one user matches from a prioritization, then merging will not occur.
 
 The allowed values for the array are: `identified`, `unidentified`, `most_recently_updated`. `most_recently_updated` refers to prioritizing the most recently updated user.
 
