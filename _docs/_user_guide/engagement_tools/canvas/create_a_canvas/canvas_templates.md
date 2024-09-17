@@ -66,6 +66,8 @@ There are two ways to use your template when composing a Canvas:
 
 Braze has a selection of Canvas templates available for you to reference and use as best practices for common use cases. While these templates can't be edited, you can view them in **Templates** > **Braze templates** or use them in your Canvases.
 
+![Braze templates in the Canvas templates section with six available templates.][3]
+
 Select from the following available templates to reference or use as your Canvas.
 
 {% tabs %}
@@ -158,3 +160,4 @@ Yes, you can save settings in the Canvas builder within a Canvas template. For e
 
 [1]: {% image_buster /assets/img/canvas_template_example.png %}
 [2]: {% image_buster /assets/img/save_canvas_as_template.png %}
+[3]: {% image_buster /assets/img/braze_canvas_templates.png %}
