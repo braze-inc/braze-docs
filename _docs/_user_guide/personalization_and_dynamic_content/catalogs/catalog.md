@@ -303,7 +303,7 @@ In addition to managing your catalogs, you can also use asynchronous and synchro
 
 #### Templating catalog items including Liquid
 
-Similar to [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content), the `:rerender` flag must be included in the Liquid tag to render its Liquid content. Note that the `:rerender` flag is only one level deep, meaning it won't apply to any nested Liquid tag calls.
+Similar to [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content), you must use the `:rerender` flag in a Liquid tag to render a catalog item's Liquid content. Note that the `:rerender` flag is only one level deep, meaning it won't apply to any nested Liquid tag calls.
 
 {% alert important %}
 Templating catalog items that include Liquid is in early access. Reach out to your Braze account manager if you're interested in participating in the early access.
