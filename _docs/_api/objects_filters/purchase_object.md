@@ -19,11 +19,12 @@ A purchase object is an object that gets passed through the API when a purchase 
 
 ```json
 {
-  // One of "external_id" or "user_alias" or "braze_id" or "email" is required.
+  // One of "external_id" or "user_alias" or "braze_id" or "email" or `phone` is required.
   "external_id" : (optional, string) External user ID,
   "user_alias" : (optional, User Alias Object) User alias object,
   "braze_id" : (optional, string) Braze user identifier,
   "email": (optional, string) User email address,
+  "phone": (optional, string) User phone number,
   "app_id" : (optional, string) see App Identifier,
   // See the following product_id naming conventions for clarification.
   "product_id" : (required, string) identifier for the purchase, for example, Product Name or Product Category,
