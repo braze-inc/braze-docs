@@ -95,63 +95,63 @@ This report only contains the most recent 10,000 security events for your accoun
 
 {% details Reported security events %}
 ### Login and account 
-- Removed developer event
-- Added developer event
-- Signed in event
-- Failed login event
-- Two factor auth setup completed
-- Two factor auth reset completed
-- Cleared developer two factor auth event
-- Developer suspended event
-- Developer unsuspended event
+- REMOVED_DEVELOPER_EVENT
+- ADDED_DEVELOPER_EVENT
+- SIGNED_IN_EVENT
+- FAILED_LOGIN_EVENT
+- TWO_FACTOR_AUTH_SETUP_COMPLETED
+- TWO_FACTOR_AUTH_RESET_COMPLETED
+- CLEARED_DEVELOPER_TWO_FACTOR_AUTH_EVENT
+- DEVELOPER_SUSPENDED_EVENT
+- DEVELOPER_UNSUSPENDED_EVENT
 
-### Elevated access 
-- Elevated access flow started event
-- Elevated access flow completed event
-- Elevated access flow 2FA failed event
+### Elevated access
+- ELEVATED_ACCESS_FLOW_STARTED_EVENT
+- ELEVATED_ACCESS_FLOW_COMPLETED_EVENT
+- ELEVATED_ACCESS_FLOW_2FA_FAILED_EVENT
 
-### Campaign 
-- Added campaign event
-- Edited campaign event
+### Campaign
+- ADDED_CAMPAIGN_EVENT
+- EDITED_CAMPAIGN_EVENT
 
-### Canvas 
-- Added workflow event
-- Edited workflow event
+### Canvas
+- ADDED_WORKFLOW_EVENT
+- EDITED_WORKFLOW_EVENT
 
-### Segment 
-- Added segment event
-- Edited segment event
-- Exported segment to CSV
-- Exported segment via API
+### Segment
+- ADDED_SEGMENT_EVENT
+- EDITED_SEGMENT_EVENT
+- EXPORTED_SEGMENT_TO_CSV
+- EXPORTED_SEGMENT_VIA_API
 
-### REST API key 
-- Added REST API key
-- Removed REST API key
+### REST API key
+- ADDED_REST_API_KEY
+- REMOVED_REST_API_KEY
 
 ### Basic authentication credential
-- Added basic auth credential
-- Updated basic auth credential
-- Removed basic auth credential
+- ADDED_BASIC_AUTH_CREDENTIAL
+- UPDATED_BASIC_AUTH_CREDENTIAL
+- REMOVED_BASIC_AUTH_CREDENTIAL
 
-### Permission 
-- Cleared developer two factor auth event
-- Updated developer permission event
+### Permission
+- CLEARED_DEVELOPER_TWO_FACTOR_AUTH_EVENT
+- UPDATED_DEVELOPER_PERMISSION_EVENT
 
-### Company settings 
-- Added app group
-- Added app event
+### Company settings
+- ADDED_APP_GROUP
+- ADDED_APP_EVENT
 
-### Email template 
-- Added email template
-- Updated email template
+### Email template
+- ADDED_EMAIL_TEMPLATE
+- UPDATED_EMAIL_TEMPLATE
 
-### Push credential 
-- Updated push credential
-- Removed push credential
+### Push credential
+- UPDATED_PUSH_CREDENTIAL
+- REMOVED_PUSH_CREDENTIAL
 
-### SDK Debugger 
-- Started SDK debugger session
-- Exported SDK debugger logs
+### SDK Debugger
+- STARTED_SDK_DEBUGGER_SESSION
+- EXPORTED_SDK_DEBUGGER_LOGS
 {% enddetails %}
 
 ## Viewing personally identifiable information (PII) {#view-pii}
