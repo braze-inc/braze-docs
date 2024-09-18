@@ -110,7 +110,7 @@ local_redirect:
 
 ## Testing redirects
 
-You can use [`bdocs`]({{site.baseurl}}/contributing/bdocs) to lists all of the old URLs you set up in `broken_redirect_list.js` using a base URL of your choice.
+You can use [`bdocs`]({{site.baseurl}}/contributing/bdocs) to lists all of the old URLs you set up using a base URL of your choice.
 
 {% tabs local %}
 {% tab usage example %}
