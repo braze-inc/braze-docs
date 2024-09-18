@@ -80,6 +80,12 @@ This graph allows you to assess the total data point usage of a company by works
 
 ![Workspace Data Point Usage graph for two workspaces][7]{: style="max-width:90%;"}
 
+#### Billing cycle data point usage by event source
+
+This graph allows you to view how data point usage is spread across different event sources, such as different API attributes, custom events, and sessions.
+
+![Billing Cycle Data Point Usage by Event Source displaying the data point allocation among different event sources.][13]
+
 #### Data point usage over time
 
 This graph gives you the ability to quickly see your total data point usage versus your allotted amount of data points. 
@@ -128,3 +134,4 @@ The **App Level Total Data Point Usage** table shows you data point usage for ea
 [10]: {% image_buster /assets/img/appgroup_level_datapoint_usage_bycategory.png %}
 [11]: {% image_buster /assets/img/appgroup_level_usage_time.png %}
 [12]: {% image_buster /assets/img/app_level_stats.png %}
+[13]: {% image_buster /assets/img/event_source_stats.png %}
