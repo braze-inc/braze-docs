@@ -1414,7 +1414,6 @@ This event occurs when a user views a Content Card.
   "canvas_variation_name": (optional, string) name of the Canvas variation the user is in if from a Canvas,
   "canvas_step_id": (optional, string) ID of the step for this message if from a Canvas,
   "canvas_step_name": (optional, string) name of the Canvas step this event belongs to,
-  "canvas_name": (optional, string) name of the Canvas,
   "timezone": (optional, string) IANA time zone of the user at the time of the event,
   "device_id": (optional, string) ID of the device on which the event occurred,
   "platform": (optional, string) platform of the device (one of 'ios', 'android', 'web', 'kindle', 'tvos', OR 'roku'),
