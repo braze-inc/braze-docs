@@ -42,7 +42,7 @@ OPTIONS:
 
 ## Copying to your clipboard
 
-If you're on MacOS, you can copy the output of a command directly to your clipboard by using the following command. The `|` means to "pipe" (or send) the output of the first command to the next command. `pbcopy` means to write the output to your clipboard instead of the terminal. By combining these commands, you're sending the output from `bdocs` to `pbcopy` using a pipe.
+If you're on MacOS, you can copy the output of `bdocs` directly to your clipboard by using the following command. The `|` means to "pipe" (or send) the output of the first command to the next command. `pbcopy` means to write the output to your clipboard instead of the terminal. By combining these commands, you're sending the output from `bdocs` to `pbcopy` using a pipe.
 
 ```terminal
 ./bdocs COMMAND | pbcopy
@@ -136,7 +136,7 @@ Before continuing, [create your SSH token]({{site.baseurl}}/developer_guide/plat
 
 `rlinks` (short for "remove links") removes any unused reference links from the bottom of a Markdown file. This command takes a single file or an entire directory as an argument.
 
-{% alert note %}
+{% alert tip %}
 After you run `tlinks`, you'll be asked if you'd like to run `rlinks` next.
 {% endalert %}
 
