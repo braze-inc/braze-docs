@@ -5,23 +5,25 @@ description: "Learn how to use `bdocs`, the Braze-Docs CLI tool, that helps you 
 page_order: 8.5
 ---
 
-# Using the `bdocs` wrapper
+# The `bdocs` wrapper
 
-> Learn how to use `bdocs`, the Braze Docs wrapper script, that helps you replace links, generate redirect URLs, create deployment descriptions, and more.
+> [`bdocs`](https://github.com/braze-inc/braze-docs/blob/develop/bdocs) is a wrapper script located in the root of the Braze Docs repository that helps you replace links, generate redirect URLs, create deployment descriptions, and more.
 
 {% multi_lang_include contributing/prerequisites.md %}
 
-## Usage
+## Using `bdocs`
 
-To see the list of available commands and their definitions, run:
+To run a command, use the following syntax. Replace `COMMAND` with one of the [available commands](#list-of-commands).
 
 ```terminal
-./bdocs
+./bdocs COMMAND
 ```
 
-The following will be output to your terminal:
+To see the list of commands in your terminal, use the `help` command:
 
 ```terminal
+$ ./bdocs help
+
 bdocs is a CLI tool for executing Braze Docs scripts.
 
 USAGE:
@@ -35,6 +37,8 @@ OPTIONS:
   redirects    List the old URLs for all new redirects in this branch
   help         Display this help message and exit
 ```
+
+
 
 ## Copying to your clipboard
 
