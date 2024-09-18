@@ -134,7 +134,6 @@ No, this isn’t currently available. You can use the Custom Code block in the e
 
 Because landing pages are currently in beta, additional features are in development. These include:
 
-* Custom subdomain support
 * New Liquid tag for linking a landing page in a Braze messaging channel
 * Basic reporting page
 * Drag-and-drop form blocks for checkboxes and dropdowns
