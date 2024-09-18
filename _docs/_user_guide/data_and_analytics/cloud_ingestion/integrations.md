@@ -7,7 +7,7 @@ page_type: reference
 
 ---
 
-# Data warehouse integrations
+# Data warehouse storage integrations
 
 > This article covers how to use Braze Cloud Data Ingestion (CDI) to sync relevant data with your Snowflake, Redshift, BigQuery, and Databricks integration.
 
