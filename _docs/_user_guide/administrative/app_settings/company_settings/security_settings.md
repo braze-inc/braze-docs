@@ -96,7 +96,7 @@ This report only contains the most recent 10,000 security events for your accoun
 {% details Reported security events %}
 ### Login and account 
 - Removed developer event
-- dded developer event
+- Added developer event
 - Signed in event
 - Failed login event
 - Two factor auth setup completed
@@ -111,7 +111,7 @@ This report only contains the most recent 10,000 security events for your accoun
 - Elevated access flow 2FA failed event
 
 ### Campaign 
-- dded campaign event
+- Added campaign event
 - Edited campaign event
 
 ### Canvas 
