@@ -94,104 +94,64 @@ To download this report, do the following:
 This report only contains the most recent 10,000 security events for your account. If you need specific event data, contact technical support.
 
 {% details Reported security events %}
-- Added App
-- Added Campaign
-- Edited Campaign
-- Added Company
-- Added Additional Developer
-- Company Settings Changed
-- Company SAML Configuration Created
-- Company SAML Configuration Updated
-- Company SAML Configuration Deleted
-- Removed Developer
-- Developer Suspended Event
-- Developer Unsuspended Event
-- Updated Account Permission
-- Created App Group Permission Set
-- Updated App Group Permission Set
-- Deleted App Group Permission Set
-- Created Custom Role
-- Updated Custom Role
-- Deleted Custom Role
-- Added News Item
-- Added Card
-- Edited Card
-- Added Segment
-- Edited Segment
-- Added Journey
-- Edited Journey
-- Downloaded SDK
-- Edited Segment Filters
-- Sent Campaign
-- Signed In
-- Signed Up
-- Failed Login
-- Started Elevated Access Flow
-- Completed Elevated Access Flow
-- Failed 2FA Verification For Elevated Access
-- Signed Sandbox TOS
-- Failed Login Non Existent Email
-- Failed Login With Country Code Change
-- Failed Login From Disallowed Country
-- Failed Login From Suspended Developer
-- Failed Switch Not Linked To Company
-- Switched To Linked To Company
-- Switched To Linked To Company Bypassing 2FA Check
-- Two-Factor Auth Setup Completed
-- Two-Factor Auth Reset Completed
-- Password Updated
-- Password Recovery Attempt From Suspended Developer
-- Password Recovery Attempt From Free Trial Developer
-- Linked Twitter
-- Engagement Report Contained Under 10 Campaigns
-- Engagement Report Contained 10 to 50 Campaigns
-- Engagement Report Contained Over 50 Campaigns
-- Downloaded Engagement Report
-- Created Spam Tests
-- Created Inbox Vision Tests
-- Changed Developer Internal Role
-- Added Additional Internal Permission
-- Searched Users
-- Added Funnel Report
-- Edited Funnel Report
-- Removed Funnel Report
-- Added Retention Report
-- Edited Retention Report
-- Removed Retention Report
-- Cleared Developer 2FA
-- Disabled Two Factor Authentication Enforcement
-- Confirmed Account
-- Added App Group
-- Added Push Campaign
-- Added Email Campaign
-- Added Slideup Campaign
-- Added Webhook Campaign
-- Added Content Card Campaign
-- Added Multivariate Campaign
-- Added API Campaign
-- Duplicated Campaign via API
-- Duplicated Canvas via API
-- Added Recurring Campaign
-- Added Optimal Send Time Campaign
-- Added Event-Based Campaign
-- Added In App Message Campaign
-- Added Custom HTML In App Message Campaign
-- Exported data to CSV
-- Exported Segment via API
-- Exported data as Facebook audience
-- Exported subscription group state change data to CSV
+### Login and account 
+- Removed developer event
+- dded developer event
+- Signed in event
+- Failed login event
+- Two factor auth setup completed
+- Two factor auth reset completed
+- Cleared developer two factor auth event
+- Developer suspended event
+- Developer unsuspended event
+
+### Elevated access 
+- Elevated access flow started event
+- Elevated access flow completed event
+- Elevated access flow 2FA failed event
+
+### Campaign 
+- dded campaign event
+- Edited campaign event
+
+### Canvas 
+- Added workflow event
+- Edited workflow event
+
+### Segment 
+- Added segment event
+- Edited segment event
+- Exported segment to CSV
+- Exported segment via API
+
+### REST API key 
 - Added REST API key
 - Removed REST API key
-- Added Basic Auth credential
-- Updated Basic Auth credential
-- Removed Basic Auth credential
-- Added Email Template
-- Updated Email Template
-- Updated Push Credential
-- Removed Push Credential
-- Started SDK Debugger Session
-- Exported SDK Debugger Log
-- Charged Longtail Customer
+
+### Basic authentication credential
+- Added basic auth credential
+- Updated basic auth credential
+- Removed basic auth credential
+
+### Permission 
+- Cleared developer two factor auth event
+- Updated developer permission event
+
+### Company settings 
+- Added app group
+- Added app event
+
+### Email template 
+- Added email template
+- Updated email template
+
+### Push credential 
+- Updated push credential
+- Removed push credential
+
+### SDK Debugger 
+- Started SDK debugger session
+- Exported SDK debugger logs
 {% enddetails %}
 
 ## Viewing personally identifiable information (PII) {#view-pii}
