@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# Generates the body text for deployment PRs in the Braze Docs repository.
+# Creates the body text for deployment PRs in the Braze Docs repository.
 # 
 # Usage: ./bdocs deploy
 

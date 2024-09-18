@@ -1,7 +1,7 @@
 #!/bin/bash
 #
-# Lists the commit bodies, commit hash, and full date/time of all parent commits since the last release version tag,
-# and runs deploy_text.sh for each commit.
+# Lists the commit bodies, commit hash, and full date/time of all parent commits
+# since the last release version tag, and runs deploy_text.sh for each commit.
 #
 # Usage: ./bdocs release
 
