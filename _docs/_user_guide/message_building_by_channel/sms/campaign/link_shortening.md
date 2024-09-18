@@ -37,16 +37,16 @@ To use link shortening, make sure the link shortening toggle in the message comp
 
 ![][1]
 
-Braze will only recognize URLs that start with _http://_ or _https://_. When a URL is recognized, the **Preview** section updates with a placeholder URL. Braze will estimate the length of the URL after shortening, but a warning will prompt you to select a test user and save the message as a draft for a more accurate estimate.
+Braze will only recognize URLs that start with `http://` or `https://`. When a URL is recognized, the **Preview** section updates with a placeholder URL. Braze will estimate the length of the URL after shortening, but a warning will prompt you to select a test user and save the message as a draft for a more accurate estimate.
 
 ![][3]
 
-While link shortening allows you to track your URLs automatically, you can also add UTM parameters to your URLs to help you track the performance of campaigns in Google Analytics or other third-party analytics tools.
+While link shortening allows you to track your URLs automatically, you can also add UTM parameters to your URLs to help you track the performance of campaigns in third-party analytics tools, such as Google Analytics.
 
 Here's how you can do so:
 
-1. Start with your base URL: This is the URL of the page you want to track. An example is _https://www.example.com_
-2. Format the URL: Add a question mark after your base URL, then add each UTM parameter separated by an ampersand (&). An example is <i>https://www.example.com?utm_source=newsletter&utm_medium=sms</i>
+1. Start with your base URL: This is the URL of the page you want to track. An example is `https://www.example.com`
+2. Format the URL: Add a question mark after your base URL, then add each UTM parameter separated by an ampersand (&). An example is `https://www.example.com?utm_source=newsletter&utm_medium=sms`
 
 ### Liquid personalization in URLs
 
@@ -77,9 +77,9 @@ https://example.com/{{url_var}}
 
 We shorten URLs that are rendered by Liquid, even those included in API-trigger properties. For example, if {% raw %}`{{api_trigger_properties.${url_value}}}`{% endraw %} represents a valid URL, we will shorten and track that URL before sending out the SMS message. 
 
-#### Shorten URLs in /messages/send
+#### Shorten URLs in /messages/send endpoint
 
-Link shortening is also enabled for API-only messages through the [`/messages/send`]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_messages/) endpoint. To also enable basic or advanced tracking, use the `link_shortening_enabled` or `user_click_tracking_enabled` request parameters.
+Link shortening is also enabled for API-only messages through the [`/messages/send` endpoint]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_messages/). To also enable basic or advanced tracking, use the `link_shortening_enabled` or `user_click_tracking_enabled` request parameters.
 
 | Parameter | Required | Data Type | Description |
 | --------- | ---------| --------- | ----------- |
@@ -87,18 +87,18 @@ Link shortening is also enabled for API-only messages through the [`/messages/se
 |`user_click_tracking_enabled`| Optional | Boolean | Set `user_click_tracking_enabled` to `true` to turn on link shortening, and campaign-level and user-level click tracking. You can use the tracked data to create segments of users who clicked URLs. To use tracking, a `campaign_id` and `message_variation_id` must be present. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
-For a full list of request parameters, view [request parameters]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_messages/#request-parameters).
+For a full list of request parameters, go to [request parameters]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_messages/#request-parameters).
 
 ## Testing
 
-We always recommend that you preview and test your message before launching a campaign or Canvas. 
+Before launching your campaign or Canvas, it's best practice to preview and test your message first. To do so, go to the **Test** tab to preview and send an SMS to [content test groups]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/internal_groups_tab#content-test-groups) or an individual user. 
 
-Navigate to the **Test** tab to preview and send an SMS to [content test groups]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/internal_groups_tab#content-test-groups) or an individual user. The preview will update with relevant personalization and the shortened URL. The number of characters and [billable segments]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/segments/) will also update to reflect the rendered personalization and the shortened URL. 
+This preview will update with relevant personalization and the shortened URL. The number of characters and [billable segments]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/segments/) will also update to reflect the rendered personalization and the shortened URL. 
 
-Make sure to save the campaign or Canvas before sending a test message to receive a representation of the shortened URL that will be dispatched in your message. If the campaign or Canvas is not saved before a test send, the test send will contain a placeholder URL.
+Make sure to save the campaign or Canvas before sending a test message to receive a representation of the shortened URL that will be dispatched in your message. If the campaign or Canvas isn't saved before a test send, the test send will include a placeholder URL.
 
 {% alert important %}
-If a draft is created within an active Canvas, a shortened URL will not be generated. The actual shortened URL will be generated when the Canvas draft is made active.
+If a draft is created within an active Canvas, a shortened URL won't be generated. The actual shortened URL generates when the Canvas draft is made active.
 {% endalert %}
 
 ![][2]
@@ -141,13 +141,15 @@ When you delegate your domain to Braze, we automatically handle the certificate 
 To delegate your domain to Braze, do the following: 
 
 1. Bring a domain that meets the above requirements to your customer success manager. Braze will then check the existing DNS configuration for the domain and confirm that:
+
 - No CAA records exist OR
-- CAA records *do* exist but have a record for {% raw %}`<any number> issue "letsencrypt.org"`{% endraw %} or {% raw %}`<anynumber> issuewild "letsencrypt.org"`{% endraw %}
+- CAA records **do** exist but have a record for {% raw %}`<any number> issue "letsencrypt.org"`{% endraw %} or {% raw %}`<anynumber> issuewild "letsencrypt.org"`{% endraw %}
+
 2. Create four new A records, one for each IP, and confirm that they are the only A records that exist for the domain link host:
-- 151.101.130.133
-- 151.101.194.133
-- 151.101.2.133
-- 151.101.66.133
+- `151.101.130.133`
+- `151.101.194.133`
+- `151.101.2.133`
+- `151.101.66.133`
 
 ### Using custom domains
 
@@ -173,7 +175,7 @@ No. Link shortening works without any SDK integration.
 
 #### Do I know which individual users are clicking on a URL?
 
-Yes. When Advanced Tracking is turned on, you can retarget users who have clicked URLs by leveraging the [SMS retargeting filters]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/retargeting/) or the SMS click events (`users.messages.sms.ShortLinkClick`) sent via Currents.
+Yes. When **Advanced Tracking** is turned on, you can retarget users who have clicked URLs by leveraging the [SMS retargeting filters]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/retargeting/) or the SMS click events (`users.messages.sms.ShortLinkClick`) sent via Currents.
 
 #### Can I add UTM parameters to a URL before it is shortened?
 
@@ -181,23 +183,21 @@ Yes. Both static and dynamic parameters can be added.
 
 #### How long do shortened URLs remain valid?
 
-Static URLs are valid for one year from the time of URL registration (such as first send).
+Static URLs are valid for one year from the time of URL registration, such as first send. Dynamic URLs are valid for two months from the time of URL registration.
 
-Dynamic URs are valid for two months from the time of URL registration.
+#### Does link shortening work with deep links or universal links?
 
-#### Will Link Shortening work with deep links or universal links?
-
-Link shortening will shorten any static URLs that start with _http://_ or _https://_. However, it is not advised to further shorten generated universal links (from providers such as Branch or Appsflyer) as this may break the attribution or redirect of those tools.
+Link shortening shortens any static URLs that start with `http://` or `https://`. Avoid further shortening the generated universal links from providers such as Branch or Appsflyer as this may break the attribution or redirect.
 
 ### Custom domains
 
 #### Can delegated domains be shared across multiple subscription groups?
 
-Yes, a single domain can be used with multiple subscription groups. To do so, select the domain for each subscription group that it should be associated with.
+Yes. A single domain can be used with multiple subscription groups. To do so, select the domain for each subscription group that it should be associated with.
 
 #### Can delegated domains be shared across multiple workspaces?
 
-Yes, domains can be associated with subscription groups in multiple workspaces, assuming the workspaces are contained within the same company.
+Yes. Domains can be associated with subscription groups in multiple workspaces, assuming the workspaces are contained within the same company.
 
 [1]: {% image_buster /assets/img/link_shortening/shortening1.png %} 
 [2]: {% image_buster /assets/img/link_shortening/shortening2.png %} 
