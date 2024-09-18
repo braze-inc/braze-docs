@@ -2,7 +2,7 @@
 nav_title: bdocs wrapper
 article_title: Using the `bdocs` wrapper
 description: "Learn how to use `bdocs`, the Braze-Docs CLI tool, that helps you replace links, generate redirect URLs, generate deployment text, and more."
-page_order: 7
+page_order: 8.5
 ---
 
 # Using the `bdocs` wrapper
