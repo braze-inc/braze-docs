@@ -41,12 +41,17 @@ Braze will only recognize URLs that start with `http://` or `https://`. When a U
 
 ![][3]
 
-While link shortening allows you to track your URLs automatically, you can also add UTM parameters to your URLs to help you track the performance of campaigns in third-party analytics tools, such as Google Analytics.
+#### Adding UTM parameters
 
-Here's how you can do so:
+While link shortening allows you to track your URLs automatically, you can also add UTM parameters to your URLs to track the performance of campaigns in third-party analytics tools, such as Google Analytics.
 
-1. Start with your base URL: This is the URL of the page you want to track. An example is `https://www.example.com`
-2. Format the URL: Add a question mark after your base URL, then add each UTM parameter separated by an ampersand (&). An example is `https://www.example.com?utm_source=newsletter&utm_medium=sms`
+To add UTM parameters to your URL, do the following:
+
+1. Start with your base URL. This is the URL of the page you want to track (such as `https://www.example.com`).
+2. Add a question mark (?) after your base URL.
+3. Add each UTM parameter separated by an ampersand (&).
+
+An example is `https://www.example.com?utm_source=newsletter&utm_medium=sms`.
 
 ### Liquid personalization in URLs
 
