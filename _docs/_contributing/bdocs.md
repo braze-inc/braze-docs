@@ -52,7 +52,7 @@ If you're on MacOS, you can copy the output of a command directly to your clipbo
 
 ### `deploy`
 
-This command creates the pull request description for weekly deployments by comparing which pull requests have been merged into `develop` (but not `master`) and then listing them in the proper Markdown format.
+This command creates the pull request description for weekly deployments by comparing which pull requests have been merged into `develop` but not `master` and then listing them in the proper Markdown format.
 
 {% tabs local %}
 {% tab usage example %}
