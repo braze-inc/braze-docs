@@ -110,7 +110,7 @@ Braze will notify the company contact and creator of the extension when this set
 
 Within the **Refresh Settings** panel, you can select the frequency at which this segment extension will refresh: daily, weekly, or monthly. You’ll also be required to select the specific time (which is in your company’s time zone) the refresh would occur, such as:
 
-- If you have an email campaign that sends every Monday at 11 am company time, and you want to ensure your segment is refreshed right before it sends, you should choose a refresh schedule of weekly at 10 am on Mondays.
+- If you have an email campaign that is sent every Monday at 11 am company time, and you want to ensure your segment is refreshed right before it's sent, you should choose a refresh schedule of weekly at 10 am on Mondays.
 - If you’d like your segment to refresh every day, select the daily refresh frequency and then choose the time of day to refresh.
 
 ### Credit consumption and additional costs
@@ -118,7 +118,7 @@ Within the **Refresh Settings** panel, you can select the frequency at which thi
 Because refreshes re-run your segment’s query, each refresh for SQL segments will consume SQL segment credits, and each refresh for CDI segments will incur a cost within your third-party data warehouse.
 
 {% alert note %}
-Segments could require up to 60 minutes to refresh because of data processing times. Segments that are currently in the process of refreshing will have a “Processing” status within your Segment Extensions list. This has a couple implications:
+Segments could require up to 60 minutes to refresh because of data processing times. Segments that are currently in the process of refreshing will have a “Processing” status within your Segment Extensions list. This has a couple of implications:
 
 - To finish processing your segment before a specific time, choose a refresh time that is 60 minutes earlier. 
 - Only one refresh can occur at a time for a specific Segment Extension. If there is a conflict where a new refresh is initiated when an existing refresh has already begun processing, Braze will cancel the new refresh request and continue the in-progress processing. 
