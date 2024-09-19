@@ -175,7 +175,7 @@ Add the required permissions to your `AndroidManifest.xml` file:
 <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 ```
 
-To automatically pull in the android-sdk-location library, set `importBrazeLocationLibrary=true` in your `gradle.properties` file.
+Starting in version 12.2.0, set `importBrazeLocationLibrary=true` in your `gradle.properties` file to automatically pull in the android-sdk-location library
 
 #### Step 2.3: Implement user session tracking
 
