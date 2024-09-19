@@ -62,7 +62,7 @@ Braze Data Transformation has an AI copilot that asks ChatGPT to help you write 
 {% endalert %}
 
 {% tabs %}
-{% tab Beginner Track users %}
+{% tab Beginner - Track users %}
 
 Here, write transformation code to define how to map various webhook values to Braze user profiles.
 
@@ -124,7 +124,7 @@ return brazecall;
 Your webhook integration is now complete!
 
 {% endtab %}
-{% tab Beginner Update catalog items %}
+{% tab Beginner - Update catalog items %}
 
 Here, you can write transformation code to define how you want to map various webhook values to Braze catalog item updates.
 
@@ -196,7 +196,7 @@ return brazecall;
 Your webhook integration is now complete!
 
 {% endtab %}
-{% tab Advanced %}
+{% tab Advanced - Track users %}
 
 In this step, you'll transform the webhook payload from the source platform to a JavaScript object return value. This return value must follow the `/users/track` endpoint request body format:
 
