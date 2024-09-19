@@ -11,7 +11,7 @@ search_rank: 5
 
 # Billing
 
-> Use the **Billing** page as a self-serve tool to monitor and check your data consumption. This article covers the different sections on the page and the information they can provide you.
+> Use the **Billing** page as a self-serve tool to monitor and check your data consumption across workspaces, apps, and event sources. This article covers the different sections on the page and the information they can provide you.
 
 To navigate to the **Billing** page, go to **Settings** > **Billing**.
 
@@ -31,7 +31,7 @@ The **Subscriptions and Usage** tab includes usage graphs and your contract deta
 
 ### Usage graphs
 
-Here, you'll find usage graphs that apply to your workspaces. You may find your own dashboard shows different usage metrics based on the products you have purchased.
+Here, you'll find usage graphs that apply to your workspaces. You may find your own dashboard shows different usage metrics based on the products you have purchased. 
 
 ![Usage graph showing Monthly Unique Visitors][3]{: style="max-width:90%;"}
 
@@ -74,6 +74,16 @@ The fields in this section are defined as follows:
 
 ### Company billing data
 
+#### App level total data point usage
+
+This graph shows your data point usage across apps.
+
+![App Level Total Data Point Usage shows data points used for each app.][14]
+
+Select one of the totals to view the **Data Point Usage Over Time** table, which shows your weekly data point totals for each workspace.
+
+![Data Point Usage Over Time showing total weekly data points for two workspaces.][15]
+
 #### Workspace data point usage
 
 This graph allows you to assess the total data point usage of a company by workspace. This graph gives you the ability to assess how each workspace is contributing to the company's data point usage.
@@ -92,36 +102,6 @@ This graph gives you the ability to quickly see your total data point usage vers
 
 ![Data Point Usage over time contrasting current billing cycle allotted data points with running total][8]{: style="max-width:90%;"}
 
-### Workspace billing data
-
-{% alert note %}
-The workspace billing data and workspace charts only display for dates after October 1, 2021. 
-{% endalert %}
-
-#### Drill to workspaces
-
-The **Drill to Workspaces** lets you view granular data point data for each of your workspaces. Click a workspace to see its data point details.
-
-![Drill to workspaces for billable data points][9]{: style="max-width:90%;"}
-
-##### Workspace level data point usage by category
-
-Select the menu next to a workspace name and then **Billable Data Points For WORKSPACE_NAME** to view the **Workspace Level Data Point Usage by Category** table. This table shows you data point counts for each category of data points. For example, you can see the number of data points driven by sessions and custom events. You can use this table to identify the categories of data points that are driving data point consumption for the workspace.
-
-![Workspace Level Data Point Usage by Category][10]{: style="max-width:90%;"}
-
-##### Workspace level data point usage over time
-
-The **Workspace Level Data Point Usage over Time** table shows you how that workspace's data point usage has changed throughout your billing cycle.
-
-![Workspace Level Data Point Usage over Time][11]{: style="max-width:90%;"}
-
-##### App level total data point usage
-
-The **App Level Total Data Point Usage** table shows you data point usage for each of the apps in your workspace. You can use this table to identify which apps are driving data point consumption for the workspace.
-
-![App Level Total Data Point Usage table for multiple apps][12]{: style="max-width:90%;"}
-
 [1]: {% image_buster /assets/img/most_used_events_attributes_2.png %}
 [2]: {% image_buster /assets/img/subscription_and_billing2.png %}
 [3]: {% image_buster /assets/img/subscription_and_billing4.png %}
@@ -135,3 +115,5 @@ The **App Level Total Data Point Usage** table shows you data point usage for ea
 [11]: {% image_buster /assets/img/appgroup_level_usage_time.png %}
 [12]: {% image_buster /assets/img/app_level_stats.png %}
 [13]: {% image_buster /assets/img/event_source_stats.png %}
+[14]: {% image_buster /assets/img/app_level_total.png %}
+[15]: {% image_buster /assets/img/data_point_usage_time.png %}
