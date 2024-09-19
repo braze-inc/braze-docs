@@ -88,7 +88,7 @@ To create a new REST API key:
 1. Go to **Settings** > **APIs and Identifiers**.
 
 {% alert note %}
-If you are using the [older navigation]({{site.baseurl}}/navigation), you can create an API key from **Developer Console** > **API Settings**.
+If you're using the [older navigation]({{site.baseurl}}/navigation), you can create an API key from **Developer Console** > **API Settings**.
 {% endalert %}
 
 {:start="2"}
