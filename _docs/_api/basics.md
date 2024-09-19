@@ -330,7 +330,9 @@ News Feed is being deprecated. Braze recommends that customers who use our News 
 
 ### Managing REST API keys
 
-REST API keys cannot be edited after they're created, but you can view details for or delete existing REST API keys from the **API Keys** tab. This tab has the following information for each key:
+You can view details for or delete existing REST API keys from **Settings** > **APIs and Identifiers** > **API Keys** tab. Note that REST API keys cannot be edited after they're created. 
+
+The **API Keys** tab includes the following information for each key:
 
 | Field        | Description                                                                                                         |
 | ------------ | :------------------------------------------------------------------------------------------------------------------ |
