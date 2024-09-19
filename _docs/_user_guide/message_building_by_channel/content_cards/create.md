@@ -31,7 +31,7 @@ If you're using the [older navigation]({{site.baseurl}}/navigation), you can fin
 {% endalert %}
 
 {:start="2"}
-2. Select **Content Cards**, or, for campaigns targeting multiple channels, select **Multichannel Campaign**.
+2. Select **Content Cards** or, for campaigns targeting multiple channels, select **Multichannel Campaign**.
 3. Name your campaign something clear and meaningful.
 4. Add [Teams]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/teams/) and [Tags]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/tags/) as needed.
    * Tags make your campaigns easier to find and build reports out of. For example, when using the [Report Builder]({{site.baseurl}}/user_guide/data_and_analytics/reporting/report_builder/), you can filter by the relevant tags.
@@ -47,28 +47,28 @@ If all of the messages in your campaign are going to be similar or have the same
 **Steps:**
 
 1. [Create your Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/) using the Canvas composer.
-2. After you've set up your Canvas, add a Message step in the Canvas builder. Name your step something clear and meaningful.
+2. After setting up your Canvas, add a Message step in the Canvas builder. Name your step something clear and meaningful.
 3. Select **Content Cards** as your messaging channel.
 4. Choose when Braze calculates audience eligibility and personalization for the Content Card. This can be at step entry or at first impression (recommended). Steps containing Content Cards can be scheduled or action-based.
 5. Choose whether to remove Content Cards when users complete a purchase or perform a custom event.
 6. Set an expiration for the Content Card (time in feed). This can be after a duration of time or at a specific time.
-7. Filter your audience for this step as necessary in the **Delivery Settings**. You can further refine the recipients of this step by specifying segments and adding additional filters. Audience options will be checked after the delay, at the time messages are sent.
-8. Choose any other messaging channels that you would like to pair with your message.
+7. Filter your audience, or the receipients, for this step as necessary in the **Delivery Settings**. You can further refine your audience by specifying segments and adding additional filters. Audience options will be checked after the delay, at the time messages are sent.
+8. Choose any other messaging channels that you want to pair with your message.
 
 {% endtab %}
 {% endtabs %}
 
 ## Step 2: Specify your message types
 
-Next, select a **Card Type**. Braze provides three essential Content Card types: Classic, Captioned Image, and Image Only.
+Select one of three essential Content Card types: Classic, Captioned Image, and Image Only. 
 
-To learn more about the expected behavior and look of each of these message types, refer to [Creative Details]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/creative_details/), or check out the links in the following table. These Content Card types are accepted by both mobile apps and web applications.
+To learn more about the expected behavior and look of each type, refer to [Creative Details]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/creative_details/), or check out the links in the following table. These Content Card types are accepted by both mobile apps and web applications.
 
 | Message Type | Example | Description |
 |---|---|---|
 |[Classic]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/creative_details/#classic)| ![Classic Content Card]({% image_buster/assets/img_archive/cc_steppington_classic.png %}) |The Classic Card has a simple layout with a bolded title, message text, and an optional image that sits to the left of the title and text. It's best to use a square image or icon with the Classic Card. |
-|[Captioned Image]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/creative_details/#captioned-image)| ![Captioned Content Card]({% image_buster/assets/img_archive/cc_steppington_captioned.png %}) | The Captioned Image Card allows you to showcase your content with copy and an attention-grabbing image. |
-|[Image Only]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/creative_details/#banner)| ![Image Only Content Card]({% image_buster/assets/img_archive/cc_steppington_banner.png %}) | The Image Only Card allows you to get creative and command attention with space for images, GIFs, and other non-text based content. |
+|[Captioned Image]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/creative_details/#captioned-image)| ![Captioned Content Card]({% image_buster/assets/img_archive/cc_steppington_captioned.png %}) | The Captioned Image Card showcases your content with copy and an attention-grabbing image. |
+|[Image Only]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/creative_details/#banner)| ![Image Only Content Card]({% image_buster/assets/img_archive/cc_steppington_banner.png %}) | The Image Only Card commands attention with space for images, GIFs, and other creative non-text content. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 ## Step 3: Compose a Content Card
@@ -81,25 +81,27 @@ The content here varies based on the **Card Type** chosen in the previous step, 
 
 #### Language
 
-Click **Add Languages** and select your desired languages from the provided list. This will insert [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/conditional_logic/#conditional-logic) into your message. We recommend selecting your languages before writing your content so you can fill in your text where it belongs in the Liquid. See our [full list of available languages][18].
+Select **Add Languages** to add your desired languages from the provided list. This will insert [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/conditional_logic/#conditional-logic) into your message. We recommend selecting your languages before writing your content so you can fill in your text where it belongs in the Liquid. See our [full list of available languages][18].
+
+![A window with English, Spanish, and French selected for the languages, and title, description, and link text selected for fields to internationalize.][2]{: style="max-width:70%;"}
 
 #### Title and message
 
-Write anything you want. There are no limits, but the faster you can get your message across and get your customer clicking—the better! We recommend clear and concise titles and message content. These fields are not provided for Image Only Cards.
+Write anything you want. There are no limits, but the faster you can get your message across and get your customer clicking, the better! We recommend clear and concise titles and message content. Note that these fields aren't provided for Image Only Cards.
 
 #### Image
 
-To add an image to your Content Card, click **Add Image** or provide an image URL. Clicking **Add Image** opens the **Media Library**, where you can select a previously uploaded image or add a new one. Each message type and platform may have its own suggested proportions and requirements—be sure to check what those are before commissioning or making an image from scratch! Content Card message fields are limited to 2&nbsp;KB in total size.
+Add an image to your Content Card by selecting **Add Image** or providing an image URL. Selecting **Add Image** opens the **Media Library**, where you can select a previously uploaded image or add a new one. Each message type and platform may have its own suggested proportions and requirements, so be sure to check what those are before commissioning or making an image from scratch! Keep in mind that Content Card message fields are limited to 2&nbsp;KB in total size.
 
 #### Pin to top
 
-A pinned card will display at the top of a user's feed and can't be dismissed by the user. If more than one card in a user's feed is pinned, the pinned cards will display in chronological order. After a card has been sent, you cannot update its pinned option retroactively. Changing this option after a campaign has been sent will only affect future sends.
+A pinned card will display at the top of a user's feed and can't be dismissed by the user. If more than one card in a user's feed is pinned, the pinned cards will display in chronological order. After a card has been sent, you can't retroactively update its pinned option. Changing this option after a campaign has been sent will only affect future sends.
 
 ![Side-by-side of the Content Card preview in Braze for Mobile and Web with the option "Pin this card to the top of the feed" selected.][1]{:style="border:none"}
 
 #### On-click behavior
 
-When your customer clicks on a presented link in the card, your link can either lead them deeper into your app or to another site. If you choose an on-click behavior for your Content Card, remember to update your **Link Text** accordingly!
+When your customer clicks on a presented link in the card, your link can either lead them deeper into your app or to another site. If you choose an on-click behavior for your Content Card, remember to update your **Link Text** accordingly.
 
 The following actions are available to take for Content Card links:
 
@@ -116,12 +118,12 @@ The following actions are available to take for Content Card links:
 {% sdk_min_versions swift:5.4.0 android:21.0.0 web:4.0.3 %}
 
 {% alert warning %}
-Content Card message fields are limited to 2&nbsp;KB in total size, calculated by adding the byte-size length of the following fields: Title, Message, Image URL, Link Text, Link URL(s), and Key/Value Pairs (names + values). Messages that exceed this size will not be sent. Note that this does not include the size of the image but rather the length of the Image URL.
+Content Card message fields are limited to 2&nbsp;KB in total size, calculated by adding the byte-size length of the following fields: Title, Message, Image URL, Link Text, Link URL(s), and Key-Value Pairs (names + values). Messages that exceed this size will not be sent. Note that this does not include the size of the image but rather the length of the Image URL.
 {% endalert %}
 
 ## Step 4: Configure additional settings (optional)
 
-You can use [key-value pairs][19] to create categories for your Cards, create [multiple Content Card feeds]({{site.baseurl}}/developer_guide/customization_guides/content_cards/customizing_feed/#multiple-feeds) and customize how cards are sorted.
+You can use [key-value pairs][19] to create categories for your Cards, create [multiple Content Card feeds]({{site.baseurl}}/developer_guide/customization_guides/content_cards/customizing_feed/#multiple-feeds), and customize how cards are sorted.
 
 To add key-value pairs to your message, switch to the **Settings** tab and click **Add New Pair**.
 
@@ -130,11 +132,11 @@ To add key-value pairs to your message, switch to the **Settings** tab and click
 {% tabs %}
 {% tab Campaign %}
 
-Build the remainder of your campaign; see the following sections for further details on how to best use our tools to build Content Cards.
+Build the remainder of your campaign. Continue to the next sections for additional details on how to best use our tools to build Content Cards.
 
 #### Choose delivery schedule or trigger
 
-Content Cards can be delivered based on a scheduled time, an action, or based on an API trigger. For more, refer to [Scheduling your campaign]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/).
+Content Cards can be delivered based on a scheduled time, an action, or an API trigger. For more, refer to [Scheduling your campaign]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/).
 
 You can also set the campaign's duration and [Quiet Hours]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/time_based_campaign/#quiet-hours) and determine the Content Card's expiration. Set a specific expiration date or the days until a Card expires, up to 30 days. All variants have identical expiration dates.
 
@@ -262,3 +264,4 @@ If desired, you could keep an active Content Card campaign in users' feeds and n
 [24]: {% image_buster /assets/img/content_card_compose.png %}
 [25]: {% image_buster /assets/img/cc_remove.png %}
 [1]: {% image_buster /assets/img/cc_pin_to_top.png %}
+[2]: {% image_buster /assets/img/add_languages.png %}
