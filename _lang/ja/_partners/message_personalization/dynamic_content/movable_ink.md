@@ -58,7 +58,7 @@ search_tag: Partner
 
 ![耳にアプリを与えるさまざまなデータソース方法:CSV アップ読み込む、Web サイト、またはAPI 統合。]({% image_buster /assets/img/movable_ink/movable_ink1.png %})
 
-{% tabs local %}
+{% tabs ローカル %}
 {% tab CSVデータソース %}
 - **CSV データソース**:各行には、少なくとも1つのSegment列と1つの内容列が必要です。CSV がアップロードされたら、コンテンツをターゲットにする列を選択します。\[例: CSV ファイル]({% image_buster /assets/download_file/movable_ink_CSV.csv %})
 
@@ -106,7 +106,7 @@ Movable Inkの内容をBrazeメッセージに含めるには、入力した送�
 
 ### ステップ4:Braze体験
 
-{% tabs local %}
+{% tabs ローカル %}
 {% tab メール %}
 Braze プラットフォームで、クリエイティブなタグをメール本文に貼り付けます。![]({% image_buster /assets/img/movable_ink/web2.png %}){: style="max-width:90%"}<br><br>
 
