@@ -1,15 +1,15 @@
 ---
-nav_title: Azure Active Directory
-article_title: Azure Active Directory
+nav_title: Microsoft Entra SSO
+article_title: Microsoft Entra SSO
 page_order: 3
 page_type: tutorial
-description: "This article will walk you through how to set up Azure AD sign-on capabilities with Braze."
+description: "This article will walk you through how to set up Microsoft Entra single sign-on capabilities with Braze."
 
 ---
 
-# Azure Active Directory
+# Microsoft Entra SSO
 
-> [Azure Active Directory (Azure AD)](https://docs.microsoft.com/en-us/azure/active-directory/saas-apps/braze-tutorial) is Microsoft's cloud-based identity and access management service, which helps your employees sign in and access resources. You can use Azure AD to control access to your apps and your app resources, based on your business requirements.
+> [Microsoft Entra SSO](https://learn.microsoft.com/en-us/entra/identity/saas-apps/braze-tutorial) is Microsoft's cloud-based identity and access management service, which helps your employees sign in and access resources. You can use Entra SSO to control access to your apps and your app resources, based on your business requirements.
 
 ## Requirements
 
@@ -27,20 +27,18 @@ Upon setup, you will be asked to provide a sign-on URL and an Assertion Consumer
 If you are using the [older navigation]({{site.baseurl}}/navigation), you can find your API keys under **Settings** at **Developer Console** > **API Settings**.
 {% endalert %}
 
-## Service Provider (SP) initiated login within Azure AD
+## Service Provider (SP) initiated login within Microsoft Entra SSO
 
 ### Step 1: Add Braze from the gallery
 
-1. Go to the Azure Portal and click **Azure Active Directory** in the left navigation panel.
-2. Go to **Enterprise Applications**, then select **All applications**.
-3. Add a new application by clicking **+ New application** in the top of the dialog.
-4. Search for **Braze** in the search box, select it from the result panel, then click **Add**.
+1. In your Microsoft Entra admin center, go to **Identity** > **Applications** > **Enterprise Applications**, and then select **New application**.
+2. Search for **Braze** in the search box, select it from the result panel, and then select **Add**.
 
-### Step 2: Configure Azure AD single sign-on
+### Step 2: Configure Microsoft Entra SSO
 
-1. In your Azure Portal, go to the **Braze Application Integration** page and select **Single sign-on**.
-2. In the **Select a single sign-on method** dialog, select **SAML/WS-Fed** as your method
-3. In the **Set up Single Sign-On with SAML** page, select the edit icon for **Basic SAML Configuration**.
+1. In your Microsoft Entra admin center, go to your Braze application integration page and select **Single sign-on**.
+2. On the **Select a single sign-on method** page, select **SAML** as your method.
+3. On the **Set up Single Sign-On with SAML** page, select the edit icon for **Basic SAML Configuration**.
 4. Configure the application in IdP-initiated mode by entering a **Reply URL** that combines your [Braze instance]({{site.baseurl}}/user_guide/administrative/access_braze/braze_instances/#braze-instances) with the following pattern: `https://<SUBDOMAIN>.braze.com/auth/saml/callback`.
 5. Optionally configure RelayState by entering your Relay State generated API key into the **Relay State (Optional)** field.
 6. If you want to configure the application in SP-initiated mode, select **Set additional URLs** and enter a sign on URL that combines your [Braze instance]({{site.baseurl}}/user_guide/administrative/access_braze/braze_instances/#braze-instances) with the following pattern: `https://<SUBDOMAIN>.braze.com/sign_in`.
@@ -91,9 +89,9 @@ You can manage these user claims and values from the **Manage claim** section.
 8. Go to the **Set up Single Sign-On with SAML** page, then scroll to the **SAML Signing Certificate** section and download the appropriate **Certificate (Base64)** based on your requirements.
 9. Go to the **Set up Braze** section and copy the appropriate URLs for use in the [Braze configuration](#step-3).
 
-### Step 3: Configure Azure AD within Braze {#step-3}
+### Step 3: Configure Microsoft Entra SSO within Braze {#step-3}
 
-Once you have set up Braze within your Azure AD, they will provide a target URL (login URL) and **x.509** certificate which you will input into your Braze account.
+After you've set up Braze within Microsoft Entra admin center, Microsoft Entra will provide a target URL (login URL) and **x.509** certificate which you will input into your Braze account.
 
 After your account manager has enabled SAML SSO for your account, do the following:
 
@@ -108,8 +106,8 @@ If you are using the [older navigation]({{site.baseurl}}/navigation), select you
 
 | Requirement | Details |
 |---|---|
-| `SAML Name` | This will appear as the button text on the login screen. This is typically your identity provider's name, like "Azure AD." |
-| `Target URL` | This is the login URL provided by Azure AD.|
+| `SAML Name` | This will appear as the button text on the login screen. This is typically your identity provider's name, like "Microsoft Entra." |
+| `Target URL` | This is the login URL provided by Microsoft Entra.|
 | `Certificate` | The `x.509` PEM encoded certificate is provided by your identity provider. |
 {: .reset-td-br-1 .reset-td-br-2}
 

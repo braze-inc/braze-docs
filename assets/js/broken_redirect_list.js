@@ -251,6 +251,7 @@ validurls['/docs/partners/channel_extensions/calendar/rokt_calendar/'] = '/docs/
 validurls['/docs/partners/data_and_infrastructure_agility/data_warehouses/amazon_s3/'] = '/docs/partners/data_and_infrastructure_agility/cloud_storage/amazon_s3/';
 validurls['/docs/partners/data_and_infrastructure_agility/data_warehouses/google_cloud_storage_for_currents/'] = '/docs/partners/data_and_infrastructure_agility/cloud_storage/google_cloud_storage_for_currents/';
 validurls['/docs/partners/data_and_infrastructure_agility/data_warehouses/microsoft_azure_blob_storage_for_currents/'] = '/docs/partners/data_and_infrastructure_agility/cloud_storage/microsoft_azure_blob_storage_for_currents/';
+validurls['/docs/user_guide/administrative/access_braze/single_sign_on/azure_ad'] = '/docs/docs/user_guide/administrative/access_braze/single_sign_on/entra/';
 validurls['/docs/partners/technology_partners/data_and_infrastructure_agility/data_warehouses/amazon_s3/'] = '/docs/partners/data_and_infrastructure_agility/cloud_storage/amazon_s3/';
 validurls['/docs/partners/technology_partners/data_and_infrastructure_agility/data_warehouses/google_cloud_storage_for_currents/'] = '/docs/partners/data_and_infrastructure_agility/cloud_storage/google_cloud_storage_for_currents/';
 validurls['/docs/partners/technology_partners/data_and_infrastructure_agility/data_warehouses/microsoft_azure_blob_storage_for_currents/'] = '/docs/partners/data_and_infrastructure_agility/cloud_storage/microsoft_azure_blob_storage_for_currents/';
