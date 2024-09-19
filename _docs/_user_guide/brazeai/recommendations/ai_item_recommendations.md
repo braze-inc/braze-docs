@@ -283,16 +283,16 @@ The **Recommendation overview** shows a summary of your chosen recommendation co
 
 After your recommendation finishes training, you can personalize your messages with Liquid to insert the most popular products in that catalog. The Liquid can be generated for you by the personalization window found in message composers:
 
-1. In any message composers that support personalization, click <i class="fa-solid fa-circle-plus" style="color: #12aec5;" title="Add personalization"></i> to open the personalization window.
+1. In any message composers that support personalization, select <i class="fa-solid fa-circle-plus" style="color: #12aec5;" title="Add personalization"></i> to open the personalization window.
 2. For **Personalization Type**, select **Item Recommendation**.
 3. For **Item Recommendation Name**, select the recommendation you just created.
 4. For **Number of Predicted Items**, enter how many top products you'd like to be inserted. For example, you can display the top three most purchased items.
 5. For **Information to Display**, select which fields from the catalog should be included for each item. The values for these fields for each item will be drawn from the catalog associated with this recommendation.
-6. Click the **Copy** icon and paste the Liquid wherever it needs to go in your message.
+6. Select the **Copy** icon and paste the Liquid wherever it needs to go in your message.
 
 ## AI item recommendations tiers
 
-The following table describes the differences between the free and pro version of AI item recommendations:
+The following table describes the differences between the free and pro version of the AI Personalized, Popular, and Trending recommendation types:
 
 | Area                   | Free version                          | Pro version            |
 | :---------------------- | ------------------------------------- | :--------------------------------------- |
@@ -301,7 +301,7 @@ The following table describes the differences between the free and pro version o
 | Maximum recommendations | 1 recommendation per type<sup>1</sup> | 100 recommendations per type<sup>2</sup> |
 
 <sup>1. This is the frequency at which user-specific item recommendations are updated (all models except Most Popular items, which updates when the model retrains). For example, if a user purchases an item recommended based on AI item recommendations, their recommended items will be updated according to this frequency</sup>
-<sup>2. Available recommendation types are AI Personalized, Most recent, and Most popular.</sup>
+<sup>2. Available recommendation types are AI Personalized, Most recent, Most popular, and Trending.</sup>
 
 ## Frequently asked questions
 
