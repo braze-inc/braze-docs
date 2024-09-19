@@ -62,7 +62,7 @@ Braze Data Transformation has an AI copilot that asks ChatGPT to help you write 
 {% endalert %}
 
 {% tabs %}
-{% tab Beginner - POST: Track users %}
+{% tab Beginner Track users %}
 
 Here, write transformation code to define how to map various webhook values to Braze user profiles.
 
@@ -112,6 +112,7 @@ let brazecall = {
 return brazecall;
 ```
 
+{:start="2"}
 2. To include custom attributes, custom events, and purchases in your transformation calls, skip to step 3. Otherwise, delete the sections that you don't need.<br><br>
 3. Each attribute, event, and purchase object requires a user identifier, either an `external_id`, `user_alias`, `braze_id`, `email`, or `phone`. Find the user identifier in the incoming webhook's payload, and template in that value in your transformation code via a payload line. Use dot notation to access payload object properties. <br><br>
 4. Find the webhook values you’d like to represent as attributes, events, or purchases, and template those values in your transformation code via a payload line. Use dot notation to access payload object properties.<br><br>
@@ -123,7 +124,7 @@ return brazecall;
 Your webhook integration is now complete!
 
 {% endtab %}
-{% tab Beginner - PUT: Update multiple catalog items %}
+{% tab Beginner Update catalog items %}
 
 Here, you can write transformation code to define how you want to map various webhook values to Braze catalog item updates.
 
@@ -185,6 +186,7 @@ let brazecall = {
 return brazecall;
 ```
 
+{:start="2"}
 2. Transformations for `/catalogs` destinations require a `catalog_name` to define the specific catalog to update. You can hard code this field or template the field with a webhook field via a payload line. Use dot notation to access payload object properties.<br><br>
 3. Define which items you’d like to update in the catalog with the `id` fields in the items array. You can hard code these fields, or template in a webhook field via a payload line. <br><br> Keep in mind, `catalog_column` is a placeholder value. Be sure item objects only contain fields that exist in the catalog.<br><br>
 4. Select **Validate** to return a preview of your code’s output and to check if it is an acceptable request for the [Update multiple catalog items endpoint]({{site.baseurl}}/api/endpoints/catalogs/catalog_items/asynchronous/put_update_catalog_items).<br><br>
@@ -194,7 +196,7 @@ return brazecall;
 Your webhook integration is now complete!
 
 {% endtab %}
-{% tab Advanced - POST: Track users %}
+{% tab Advanced %}
 
 In this step, you'll transform the webhook payload from the source platform to a JavaScript object return value. This return value must follow the `/users/track` endpoint request body format:
 
