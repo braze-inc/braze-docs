@@ -54,7 +54,7 @@ Braze.getInstance(context).changeUser(YOUR_USER_ID_STRING)
 
 ## 사용자 앨리어싱
 
-{% multi_lang_include archive/setting_user_ids/aliasing.md 플랫폼="Android" %}
+{% multi_lang_include archive/setting_user_ids/aliasing.md platform="Android" %}
 
 [1]: {{site.baseurl}}/api/endpoints/user_data
 [2]: {{site.baseurl}}/api/endpoints/messaging/
