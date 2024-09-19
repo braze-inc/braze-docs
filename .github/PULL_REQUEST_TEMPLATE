@@ -3,9 +3,9 @@ Thank you for contributing to Braze Docs! Read comments like this one for help f
 braze.com/docs/contributing/.
 -->
 
-### Summary
+### Why is this change needed? (required)
 <!-- In one or two sentences, describe your changes. -->
-My PR...
+This change is needed because...
 
 ### Related PRs, issues, or features (optional)
 <!--
