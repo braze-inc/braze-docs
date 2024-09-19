@@ -170,7 +170,7 @@ The Web SDK tracks sessions of your Shopify customers and guests. As a result, t
 
 {% endtab %}
 
-{% tab theme.liquid %}
+{% tab theme liquid %}
 
 ### Implementing the Web SDK directly onto your Shopify site’s theme.liquid
 

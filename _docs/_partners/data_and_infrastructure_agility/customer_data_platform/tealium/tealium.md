@@ -139,7 +139,7 @@ Server-to-server integration does not support Braze UI features like in-app mess
 
 If you wish to use this data and these features, consider our [side-by-side]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/tealium/tealium/#side-by-side-sdk-integration) SDK integration.
 
-### Step 1: Set up a Source
+### Step 1: Set up a source
 
 Tealium requires that you first set up a valid data source for your connector to draw from.
 1. From the sidebar in Tealium under **Server-Side**, navigate to **Sources > Data Sources > + Add Data Source**.
@@ -167,9 +167,9 @@ A connector is an integration between Tealium and another vendor used to transmi
 
 #### Source
 
-Once the source has been configured, navigate back to the Braze connector page under **EventStream > Event Connectors > + Add Connector > Braze**. 
+After the source has been configured, go back to the Braze connector page under **EventStream** > **Event Connectors** > **+ Add Connector** > **Braze**. 
 
-In the dialogue that opens, select the data source you just built, and under **Event Feed**, select **All Events** or a specific event spec, the recommended path to send only changed values into Braze. Click **Continue**.
+Then, select the data source you just built, and under **Event Feed**, select **All Events** or a specific event specification, the recommended path to send only changed values into Braze. Select **Continue**.
 
 #### Configuration
 
@@ -190,7 +190,7 @@ Not all fields offered are required.
 {% endalert %}
 
 {% tabs local %}
-{% tab Track User (Batch and Non-Batch) %}
+{% tab Track User - Batch and Non-Batch %}
 
 This action allows you to track user, event, and purchase attributes all in one action.
 
@@ -210,7 +210,7 @@ This action allows you to track user, event, and purchase attributes all in one 
 ![]({% image_buster /assets/img/tealium/track_user_example.png %})
 
 {% endtab %}
-{% tab Delete User (Non-Batch) %}
+{% tab Delete User - Non-Batch %}
 
 This action allows you to delete users from the Braze dashboard.
 
@@ -230,16 +230,16 @@ Select **Continue**.
 
 Your connector now displays in the list of connectors on your Tealium home page. <br>![][13]{: style="max-width:80%;"}
 
-Make sure to **Save / Publish** your connector when finished. The actions you configured will now fire when the trigger connections are met. 
+Make sure to select **Save / Publish** for your connector when finished. The actions you configured will now fire when the trigger connections are met. 
 
 ### Step 3: Test your Tealium connector
 
 After your connector is up and running, you should test it to ensure it's working properly. The most simple way to test this is to use the Tealium **Trace Tool**. To start using Trace, make sure that you have added the Tealium Tools browser extension.
 
-1. To start a new trace, select **Trace** on the sidebar under **Server-Side** options. Click **Start** and capture the Trace ID.
+1. To start a new trace, select **Trace** on the sidebar under **Server-Side** options. Select **Start** and capture the Trace ID.
 2. Open the browser extension and enter the Trace ID into AudienceStream Trace.
 3. Examine the real-time log.
-4. Check for the action you want to validate by clicking the **Actions Triggered** entry to expand.
+4. Check for the action you want to validate by selecting **Actions Triggered** entry to expand.
 5. Look for the action you want to validate and view the log status. 
 
 Refer to Tealium's [Trace documentation][21] for more detailed instructions on implementing Tealium's Trace tool.
@@ -255,16 +255,22 @@ Refer to Tealium's [Trace documentation][21] for more detailed instructions on i
 There are three primary ways that you might accidentally hit data overages when integrating Braze through Tealium:
 
 #### Sending duplicate data - only send Braze deltas of attributes
-Tealium does not send Braze deltas of user attributes. For example, if you have an EventStream action that tracks a user's first name, email, and cell phone number, Tealium will send all three attributes to Braze anytime the action is triggered. Tealium won't be looking for what changed or was updated and send only that information.<br><br> 
+
+Tealium does not send Braze deltas of user attributes. For example, if you have an EventStream action that tracks a user's first name, email, and cell phone number, Tealium will send all three attributes to Braze anytime the action is triggered. Tealium won't be looking for what changed or was updated and send only that information.
+
 **Solution**: <br>You can check your backend to assess whether an attribute has changed or not, and if so, call Tealium's relevant methods to update the user profile. **This is what users who integrate Braze directly usually do.** <br>**OR**<br> If you don't store your own version of a user profile in your backend and can't tell if attributes change or not, you can use AudienceStream and 
 [create enrichments](https://docs.tealium.com/server-side/attributes/manage-enrichments/add-enrichment/) to only send user attributes when values have changed. See Tealium's documentation on [enrichment rules](https://docs.tealium.com/server-side-connectors/braze-connector/).
 
 #### Sending irrelevant data or needlessly overwriting data
-If you have multiple EventStreams that target the same event feed, **all actions enabled for that connector** will automatically fire anytime a single action is triggered, **this could also result in data being overwritten in Braze and consuming unnecessary data points.**<br><br>
+
+If you have multiple EventStreams that target the same event feed, **all actions enabled for that connector** will automatically fire anytime a single action is triggered, **this could also result in data being overwritten in Braze and consuming unnecessary data points.\
+
 **Solution**: <br>Set up a separate event specification or feed to track each action. <br>**OR**<br> Disable actions(or connectors) that you do not want to fire by using the toggles in the Tealium dashboard.
 
 #### Initializing Braze too early
-Users integrating with Tealium using the Braze Web SDK tag may see a dramatic increase in their MAU. **If Braze is initialized on page load, Braze will create an anonymous profile every time a web user navigates to the website for the first time.** Some may want to only track user behavior when users have completed some action, such as "Signed In" or "Watched Video", to lower their MAU count. <br><br>
+
+Users integrating with Tealium using the Braze Web SDK tag may see a dramatic increase in their MAU. **If Braze is initialized on page load, Braze will create an anonymous profile every time a web user navigates to the website for the first time.** Some may want to only track user behavior when users have completed some action, such as "Signed In" or "Watched Video", to lower their MAU count.
+
 **Solution**: <br>Set up [load rules](https://docs.tealium.com/iq-tag-management/load-rules/about/) to determine exactly when and where a tag loads on your site. 
 
 [1]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/initial_sdk_setup/

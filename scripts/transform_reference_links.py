@@ -4,7 +4,7 @@
 # For more information, see:
 # https://www.braze.com/docs/contributing/content_management/cross_referencing/
 # 
-# Usage: ./bdocs transform [FILE|DIRECTORY]
+# Usage: ./bdocs tlinks [FILE|DIRECTORY]
 #
 # Options:
 #   FILE              Transform reference links in a single file.
