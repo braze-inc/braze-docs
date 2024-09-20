@@ -15,7 +15,7 @@ You can use nested objects—objects that are inside of another object—to send
 ## Limitations
 
 - Nested data is supported for both [custom events]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) and [purchase events]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/purchase_events/), but not other event types.
-- Event property objects that contain array or object values can have an event property payload of up to 50 KB.
+- Event property objects that contain array or object values can have an event property payload of up to 100 KB.
 - Event property schemas cannot be generated for purchase events.
 - Event property schemas are generated through sampling custom events from the last 24 hours.
 
@@ -172,7 +172,7 @@ There is no change in how we charge data points as a result of adding this capab
 
 ### How much nested data can be sent?
 
-If one or more of the event's properties contains nested data, the maximum payload for all combined properties on an event is 50 KB. Any request over that size limit will be rejected.
+If one or more of the event's properties contains nested data, the maximum payload for all combined properties on an event is 100 KB. Any request over that size limit will be rejected.
 
 [4]: {% image_buster /assets/img_archive/nested_event_properties_segmentation.png %}
 [5]: {% image_buster /assets/img_archive/nested_event_properties_personalization.png %}

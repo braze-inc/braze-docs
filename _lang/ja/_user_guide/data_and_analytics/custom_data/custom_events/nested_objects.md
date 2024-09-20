@@ -15,7 +15,7 @@ description: "この記事では、階層化 JSON データをカスタムイベ
 ## 制限事項
 
 - 階層化トされたデータは、[カスタムイベント]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/)と[購入イベント]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/purchase_events/)の両方でサポートされていますが、他のイベントタイプではサポートされていません。
-- 配列またはオブジェクト値を含むイベントプロパティオブジェクトは、最大 50 KB のイベントプロパティペイロードを持つことができます。
+- 配列またはオブジェクト値を含むイベントプロパティオブジェクトは、最大 100 KB のイベントプロパティペイロードを持つことができます。
 - 購入イベントに対してイベントプロパティスキーマを生成することはできません。
 - イベントプロパティスキーマは、過去 24 時間のカスタムイベントをサンプリングすることで生成されます。
 
@@ -172,7 +172,7 @@ description: "この記事では、階層化 JSON データをカスタムイベ
 
 ### 送信できる階層化データの量はどの程度ですか?
 
-イベントの 1 つ以上のプロパティに階層化されたデータが含まれている場合、イベントのすべてのプロパティを合計した最大ペイロードは 50 KB です。そのサイズ制限を超えたリクエストは拒否されます。
+イベントの 1 つ以上のプロパティに階層化されたデータが含まれている場合、イベントのすべてのプロパティを合計した最大ペイロードは 5]100 KB です。そのサイズ制限を超えたリクエストは拒否されます。
 
 [4]: {% image_buster /assets/img_archive/nested_event_properties_segmentation.png %}
 [5]: {% image_buster /assets/img_archive/nested_event_properties_personalization.png %}
