@@ -7,14 +7,16 @@ page_order: 31
 guide_top_header: "Landing Pages"
 guide_top_text: "Braze landing pages are standalone webpages that can drive your user acquisition and engagement strategy."
 description: "This article contains resources on building and customizing Braze landing pages."
-hidden: true
 alias: /landing_pages/
 
 guide_featured_title: "Section articles"
 guide_featured_list:
-  - name: Landing Pages
+  - name: Drag-and-Drop Editor
     link: /docs/user_guide/engagement_tools/landing_pages/drag_and_drop/
     image: /assets/img/braze_icons/marker-pin-01.svg
+  - name: Connecting a Subdomain
+    link: /docs/user_guide/engagement_tools/landing_pages/connect_subdomain/
+    image: /assets/img/braze_icons/refresh-cw-02.svg
 ---
 
 {% alert important %}

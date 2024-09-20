@@ -251,6 +251,7 @@ validurls['/docs/partners/channel_extensions/calendar/rokt_calendar/'] = '/docs/
 validurls['/docs/partners/data_and_infrastructure_agility/data_warehouses/amazon_s3/'] = '/docs/partners/data_and_infrastructure_agility/cloud_storage/amazon_s3/';
 validurls['/docs/partners/data_and_infrastructure_agility/data_warehouses/google_cloud_storage_for_currents/'] = '/docs/partners/data_and_infrastructure_agility/cloud_storage/google_cloud_storage_for_currents/';
 validurls['/docs/partners/data_and_infrastructure_agility/data_warehouses/microsoft_azure_blob_storage_for_currents/'] = '/docs/partners/data_and_infrastructure_agility/cloud_storage/microsoft_azure_blob_storage_for_currents/';
+validurls['/docs/user_guide/administrative/access_braze/single_sign_on/azure_ad'] = '/docs/docs/user_guide/administrative/access_braze/single_sign_on/entra/';
 validurls['/docs/partners/technology_partners/data_and_infrastructure_agility/data_warehouses/amazon_s3/'] = '/docs/partners/data_and_infrastructure_agility/cloud_storage/amazon_s3/';
 validurls['/docs/partners/technology_partners/data_and_infrastructure_agility/data_warehouses/google_cloud_storage_for_currents/'] = '/docs/partners/data_and_infrastructure_agility/cloud_storage/google_cloud_storage_for_currents/';
 validurls['/docs/partners/technology_partners/data_and_infrastructure_agility/data_warehouses/microsoft_azure_blob_storage_for_currents/'] = '/docs/partners/data_and_infrastructure_agility/cloud_storage/microsoft_azure_blob_storage_for_currents/';
@@ -853,6 +854,38 @@ validurls['/docs/user_guide/data_and_analytics/user_data_collection/cloud_ingest
 validurls['/docs/user_guide/message_building_by_channel/content_cards/customize'] = '/docs/developer_guide/customization_guides/content_cards/creating_custom_content_cards/';
 validurls['/docs/user_guide/data_and_analytics/user_data_collection/user_archival/'] = '/docs/user_archival/';
 
+validurls['/docs/user_guide/sage_ai/'] = '/docs/user_guide/brazeai/';
+validurls['/docs/user_guide/sage_ai/predictive_suite/'] = '/docs/user_guide/brazeai/predictive_suite/';
+validurls['/docs/user_guide/sage_ai/predictive_suite/predictive_churn'] = '/docs/user_guide/brazeai/predictive_suite/predictive_churn';
+validurls['/docs/user_guide/sage_ai/predictive_suite/predictive_churn/creating_a_churn_prediction/'] = '/docs/user_guide/brazeai/predictive_suite/predictive_churn/creating_a_churn_prediction';
+validurls['/docs/user_guide/sage_ai/predictive_suite/predictive_churn/prediction_analytics/'] = '/docs/user_guide/brazeai/predictive_suite/predictive_churn/prediction_analytics';
+validurls['/docs/user_guide/sage_ai/predictive_suite/predictive_churn/prediction_analytics/prediction_quality/'] = '/docs/user_guide/brazeai/predictive_suite/predictive_churn/prediction_analytics/prediction_quality/';
+validurls['/docs/user_guide/sage_ai/predictive_suite/predictive_churn/messaging_users/'] = '/docs/user_guide/brazeai/predictive_suite/predictive_churn/messaging_users/';
+validurls['/docs/user_guide/sage_ai/predictive_suite/predictive_churn/prediction_faq/'] = '/docs/user_guide/brazeai/predictive_suite/predictive_churn/prediction_faq/';
+validurls['/docs/user_guide/sage_ai/predictive_suite/predictive_events/'] = '/docs/user_guide/brazeai/predictive_suite/predictive_events/';
+validurls['/docs/user_guide/sage_ai/predictive_suite/predictive_events/creating_an_event_prediction/'] = '/docs/user_guide/brazeai/predictive_suite/predictive_events/creating_an_event_prediction';
+validurls['/docs/user_guide/sage_ai/predictive_suite/predictive_events/prediction_analytics/'] = '/docs/user_guide/brazeai/predictive_suite/predictive_events/prediction_analytics/';
+validurls['/docs/user_guide/sage_ai/predictive_suite/predictive_events/messaging_users/'] = '/docs/user_guide/brazeai/predictive_suite/predictive_events/messaging_users/';
+validurls['/docs/user_guide/sage_ai/intelligence/'] = '/docs/user_guide/brazeai/intelligence/';
+validurls['/docs/user_guide/sage_ai/intelligence/intelligent_channel/'] = '/docs/user_guide/brazeai/intelligence/intelligent_channel/';
+validurls['/docs/user_guide/sage_ai/intelligence/intelligent_selection/'] = '/docs/user_guide/brazeai/intelligence/intelligent_selection/';
+validurls['/docs/user_guide/sage_ai/intelligence/intelligent_timing/'] = '/docs/user_guide/brazeai/intelligence/intelligent_timing/';
+validurls['/docs/user_guide/sage_ai/intelligence/faqs'] = '/docs/user_guide/brazeai/intelligence/faqs';
+validurls['/docs/user_guide/sage_ai/recommendations/'] = '/docs/user_guide/brazeai/recommendations/';
+validurls['/docs/user_guide/sage_ai/recommendations/about_item_recommendations/'] = '/docs/user_guide/brazeai/recommendations/about_item_recommendations/';
+validurls['/docs/user_guide/sage_ai/recommendations/ai_item_recommendations/'] = '/docs/user_guide/brazeai/recommendations/ai_item_recommendations/';
+validurls['/docs/user_guide/sage_ai/recommendations/rules_based_recommendations/'] = '/docs/user_guide/brazeai/recommendations/rules_based_recommendations/';
+validurls['/docs/user_guide/sage_ai/generative_ai'] = '/docs/user_guide/brazeai/generative_ai/';
+validurls['/docs/user_guide/sage_ai/generative_ai/ai_copywriting/'] = '/docs/user_guide/brazeai/generative_ai/ai_copywriting/';
+validurls['/docs/user_guide/sage_ai/generative_ai/ai_copywriting/brand_guidelines/'] = '/docs/user_guide/brazeai/generative_ai/ai_copywriting/brand_guidelines/';
+validurls['/docs/user_guide/sage_ai/generative_ai/ai_liquid/'] = '/docs/user_guide/brazeai/generative_ai/ai_liquid/';
+validurls['/docs/user_guide/sage_ai/generative_ai/ai_content_qa/'] = '/docs/user_guide/brazeai/generative_ai/ai_content_qa/';
+validurls['/docs/user_guide/predictive_suite/predictive_churn/prediction_analytics/#churn_score'] = '/docs/user_guide/braze_ai/predictive_suite/predictive_churn/prediction_analytics/#churn_score';
+validurls['/user_guide/intelligence/faqs/#when-does-braze-check-the-eligibility-criteria-for-segment-and-audience-filters'] = '/user_guide/brazeai/intelligence/faqs/#when-does-braze-check-the-eligibility-criteria-for-segment-and-audience-filters';
+validurls['/user_guide/intelligence/faqs/#why-is-re-eligibility-not-available-when-combined-with-intelligent-selection'] = '/user_guide/brazeai/intelligence/faqs/#why-is-re-eligibility-not-available-when-combined-with-intelligent-selection';
+validurls['/user_guide/predictive_suite/predictive_churn/messaging_users/#filters'] = '/user_guide/brazeai/predictive_suite/predictive_churn/messaging_users/#filters';
+validurls['/user_guide/predictive_suite/predictive_churn/prediction_analytics/prediction_quality/'] = '/user_guide/brazeai/predictive_suite/predictive_churn/prediction_analytics/prediction_quality/';
+
 validurls['/docs/user_guide/predictive_suite'] = '/docs/user_guide/sage_ai/predictive_suite/';
 validurls['/docs/user_guide/predictive_suite/predictive_churn'] = '/docs/user_guide/sage_ai/predictive_suite/predictive_churn/';
 validurls['/docs/user_guide/predictive_suite/predictive_churn/creating_a_churn_prediction/'] = '/docs/user_guide/sage_ai/predictive_suite/predictive_churn/creating_a_churn_prediction/';
@@ -1171,5 +1204,7 @@ validurls['/docs/partners/data_and_infrastructure_agility/ab_testing/jacquard/ja
 validurls['/docs/developer_guide/platform_integration_guides/legacy_sdks/ios/initial_sdk_setup'] = ['/docs/developer_guide/platform_integration_guides/legacy_sdks/ios/initial_sdk_setup/overview'];
 
 validurls['/docs/pick_up_where_you_left_off'] = '/docs/user_guide/data_and_analytics/analytics/home_dashboard/#pick-up-where-you-left-off';
+
+validurls['/docs/templating_catalog_items_liquid/'] = '/docs/user_guide/personalization_and_dynamic_content/catalogs/catalog/#using-liquid';
 
 // validurls['OLD'] = 'NEW';

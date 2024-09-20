@@ -140,7 +140,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/track' \
 You can update a user profile by phone number using the `/users/track` endpoint. This endpoint only works if you include a valid phone number.
 
 {% alert important %}
-If you include a request with both email and phone, Braze will use the email as the identifier.
+If you include a request with both `email` and `phone`, Braze will use the email as the identifier.
 {% endalert %}
 
 ```

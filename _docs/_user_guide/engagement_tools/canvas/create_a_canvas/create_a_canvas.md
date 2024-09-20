@@ -186,6 +186,10 @@ If desired, specify Quiet Hours (the time during which your messages will not be
 
 ## Step 3: Build your Canvas
 
+{% alert tip %}
+Save time and streamline your Canvas creation by using [Braze Canvas templates]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_templates/#available-braze-templates)! Browse our library of pre-built templates to find one that fits your use case and customize it to meet your specific needs.
+{% endalert %}
+
 ### Adding a variant
 
 ![][11]{: style="float:right;max-width:35%;margin-left:15px;"}
@@ -333,7 +337,7 @@ Need to make edits to your Canvas after launch? Well, you can! Check out [Editin
 [14]:{% image_buster /assets/img_archive/Canvas_Exception_Events.png %}
 [15]:{% image_buster /assets/img_archive/Canvas_Additional_Engagement.png %}
 [17]:{% image_buster /assets/img_archive/Canvas_More_Step.png %}
-[18a]: {{site.baseurl}}/user_guide/sage_ai/intelligence/intelligent_selection/
+[18a]: {{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_selection/
 [18b]: {% image_buster /assets/img_archive/canvas_intelligent_selection.png %}
 [19]:{% image_buster /assets/img_archive/Canvas_Analytics.png %}
 [50]: {% image_buster /assets/img/quiet_hours.png %}

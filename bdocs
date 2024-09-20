@@ -15,14 +15,15 @@ display_help() {
     cat << EOF
 bdocs is a CLI tool for executing Braze Docs scripts.
 
-USUAGE:
+USAGE:
   ./bdocs [option]
 
 OPTIONS:
   deploy       Create the deploy body text for weekly deployments
   release      Create the release body text for monthly releases
-  transform    Transform reference links to inline links on 1 or more pages
-  clean        Remove reference links that are not being used on 1 or more pages
+  tlinks       Transform reference links to inline links on 1 or more pages
+  rlinks       Remove reference links that are not being used on 1 or more pages
+  redirects    List the old URLs for all new redirects in this branch
   help         Display this help message and exit
 
 EOF
@@ -38,20 +39,20 @@ fi
 case $1 in
     deploy)
         if [[ $# -eq 3 ]]; then
-            "$PROJECT_ROOT/scripts/deploy_text.sh" "$2" "$3"
+            "$PROJECT_ROOT/scripts/create_deploy_text.sh" "$2" "$3"
         else
-            "$PROJECT_ROOT/scripts/deploy_text.sh"
+            "$PROJECT_ROOT/scripts/create_deploy_text.sh"
         fi
         ;;
     release)
-        "$PROJECT_ROOT/scripts/release_text.sh"
+        "$PROJECT_ROOT/scripts/create_release_text.sh"
         ;;
-    transform)
+    tlinks)
         if [[ -z "$2" ]]; then
             echo "Error: A file or directory path is required."
             exit 1
         fi
-        python3 "$PROJECT_ROOT/scripts/convert_reference_links.py" "$2"
+        python3 "$PROJECT_ROOT/scripts/transform_reference_links.py" "$2"
         echo "Success!"
         while true; do
             echo "Do you want to remove the unused reference links? [Y/n]."
@@ -72,12 +73,19 @@ case $1 in
             esac
         done    
         ;;
-    clean)
+    rlinks)
         if [[ -z "$2" ]]; then
             echo "Error: The path to file or directory is required."
             exit 1
         fi
         ruby "$PROJECT_ROOT/scripts/remove_unused_reference_links.rb" "$2"
+        ;;
+    redirects)
+        if [[ $# -eq 2 ]]; then
+            "$PROJECT_ROOT/scripts/list_redirect_urls.sh" "$2"
+        else
+            "$PROJECT_ROOT/scripts/list_redirect_urls.sh"
+        fi
         ;;
     help)
         display_help

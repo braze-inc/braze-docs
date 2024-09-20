@@ -79,7 +79,7 @@ When a user updates their email address, their subscription state will be set to
 
 ## Subscription groups
 
-Subscription groups are segment filters that can further narrow your audience from the [global subscription states](#subscription-states). You can add up to 100 subscription groups per workspace. These groups allow you to present more granular subscription options to end-users.
+Subscription groups are segment filters that can further narrow your audience from the [global subscription states](#subscription-states). You can add up to 350 subscription groups per workspace. These groups allow you to present more granular subscription options to end-users.
 
 For example, suppose you send out multiple categories of email campaigns (promotional, newsletter, or product updates). In that case, you can use subscription groups to let your customers pick and choose which email categories they want to subscribe or unsubscribe from in bulk from a single page, using an [email preference center](#email-preference-center). Alternatively, you could use subscription groups to let your customers choose how frequently they want to receive emails from you, by creating subscription groups for daily, weekly, or monthly emails.
 

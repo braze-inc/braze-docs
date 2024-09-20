@@ -17,9 +17,9 @@ guide_featured_list:
 - name: Restrict to SAML SSO
   link: /docs/user_guide/administrative/access_braze/single_sign_on/set_up/#restriction
   image: /assets/img/braze_icons/lock-01.svg
-- name: Azure AD
-  link: /docs/user_guide/administrative/access_braze/single_sign_on/azure_ad/
-  image: /assets/img/azure_ad.png
+- name: Microsoft Entra SSO
+  link: /docs/user_guide/administrative/access_braze/single_sign_on/entra/
+  image: /assets/img/entra.png
 - name: Okta
   link: /docs/user_guide/administrative/access_braze/single_sign_on/okta/
   image: /assets/img/okta.png
