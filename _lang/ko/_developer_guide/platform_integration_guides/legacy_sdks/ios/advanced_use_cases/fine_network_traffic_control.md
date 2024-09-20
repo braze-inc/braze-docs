@@ -8,7 +8,7 @@ description: "이 문서에서는 iOS 애플리케이션에 대한 미세 네트
 noindex: true
 ---
 
-{% multi_lang_include 사용 중단/목적-c.md %}
+{% multi_lang_include deprecations/objective-c.md %}
 
 # 정밀한 네트워크 트래픽 제어
 
