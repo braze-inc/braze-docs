@@ -903,7 +903,7 @@ validurls['/docs/user_guide/intelligence/intelligent_selection/'] = '/docs/user_
 validurls['/docs/user_guide/intelligence/intelligent_timing/'] = '/docs/user_guide/sage_ai/intelligence/intelligent_timing/';
 validurls['/docs/user_guide/intelligence/ai_copywriting/'] = '/docs/user_guide/sage_ai/generative_ai/ai_copywriting/';
 validurls['/docs/user_guide/intelligence/faqs/'] = '/docs/user_guide/sage_ai/intelligence/faqs/';
-validurls['/docs/user_guide/intelligence/ai_content_qa'] = '/docs/user_guide/sage_ai/generative_ai/ai_content_qa/';
+validurls['/docs/user_guide/intelligence/ai_content_qa'] = '/docs/user_guide/brazeai/generative_ai/ai_content_qa';
 validurls['/docs/user_guide/administrative/access_braze/resetting_your_password/'] = '/docs/user_guide/administrative/access_braze/accessing_your_account/';
 validurls['/docs/user_guide/administrative/access_braze/getting_your_account/'] = '/docs/user_guide/administrative/access_braze/accessing_your_account/';
 
