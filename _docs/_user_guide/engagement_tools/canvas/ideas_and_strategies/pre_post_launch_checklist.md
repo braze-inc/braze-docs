@@ -64,7 +64,7 @@ For a Message component in multi-channel messaging, we recommend the following:
 
 You've launched your Canvas! Now, what? Use this checklist to see how you can review and adjust your Canvas in the event of discrepancies after launch based on these scenarios.
 
-### Lots of entries, but few sends
+### Many entries, but few sends
 
 For example, let's say that you've noticed a disparity between your number of messages sent versus total entries. You can identify and uncover areas to adjust your Canvas by checking these key areas.
 
@@ -82,7 +82,7 @@ Review the distribution of users between your variants and your control group. I
 
 ### An empty total audience
 
-If you're noticing that messages have been sent, but aren't seeing any entry data for your Canvas, the main reason that users may not be entering your Canvas can be due to race conditions and restrictive audience segmentation filters. 
+If you aren’t seeing any entry data for your Canvas, the reason that users may not be entering your Canvas can be due to race conditions and restrictive audience segmentation filters.
 
 If you're using action-based entry in your entry schedule, check that you haven't used the same trigger action here as in your **Target Audience**. A race condition may occur in which the user is not in the audience at the time they perform the trigger event, which means they won't enter the Canvas.
 
