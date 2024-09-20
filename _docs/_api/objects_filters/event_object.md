@@ -27,7 +27,7 @@ Tracking Custom Events article:
 
 ```json
 {
-  // One of "external_id" or "user_alias" or "braze_id" or "email" or `phone` is required
+  // One of "external_id" or "user_alias" or "braze_id" or "email" or "phone" is required
   "external_id" : (optional, string) External user ID,
   "user_alias" : (optional, User Alias Object) User alias object,
   "braze_id" : (optional, string) Braze user identifier,

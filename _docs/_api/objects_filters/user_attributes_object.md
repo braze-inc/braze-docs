@@ -17,7 +17,7 @@ Use Braze user profile field names (listed as follows or any listed in the secti
 
 ```json
 {
-  // One of "external_id" or "user_alias" or "braze_id" or "email" or `phone` is required
+  // One of "external_id" or "user_alias" or "braze_id" or "email" or "phone" is required
   "external_id" : (optional, string) see external user ID,
   "user_alias" : (optional, User alias object),
   "braze_id" : (optional, string) Braze user identifier,
