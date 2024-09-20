@@ -2,7 +2,7 @@
 nav_title: Future Anthem
 article_title: Future Anthem
 description: "Learn how to integrate Future Anthem with Braze."
-alias: /partners/futureanthem/
+alias: /partners/future_anthem/
 page_type: partner
 search_tag: Partner
 layout: dev_guide
@@ -10,35 +10,39 @@ layout: dev_guide
 
 # Future Anthem
 
-Future Anthem's all-in-one product for the real money gaming industry, Amplifier AI, delivers content personalization, real-time experiences, and dynamic audiences. Amplifier AI works seamlessly across sports, casino, and lottery.
+> Future Anthem's all-in-one product for the real money gaming industry, Amplifier AI, delivers content personalization, real-time experiences, and dynamic audiences. Amplifier AI works seamlessly across sports, casino, and lottery, allowing customers to enhance Braze's player profiles with industry-specific player attributes, such as favorite game, favorite team, engagement score, next bet recommendation, expected next bet, and more.
 
-Amplifier AI and Braze's integration allows customers to enhance Braze's player profiles with industry-specific player attributes from Amplifier AI (e.g. favorite game, favorite team, engagement score, next bet recommendation, expected next bet, etc.)
-
+{% alert important %}
 The integration is currently in Early Access. Please reach out to your Future Anthem Customer Success Team to get started.
+{% endalert %}
 
 ## Prerequisites
 
 | Requirement              | Description                                            |
 |--------------------------|--------------------------------------------------------|
-| Future Anthem Account    | A Future Anthem account is required |
-| Braze REST API key       | A Braze REST API key with the following permissions: {::nomarkdown}<ul><li><code>users.track</code></li></ul>{:/} <br>This can be created in the Braze dashboard from **Settings** > **API Keys**. |
-| Braze REST endpoint      | Your Braze [REST endpoint](https://www.braze.com/docs/developer_guide/rest_api/basics/#endpoints) that corresponds to your instance (such as rest.iad-01.com) |
-
+| Future Anthem Account    | A Future Anthem account. |
+| Braze REST API key       | A Braze REST API key with the [`users.track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track). This can be created in the Braze dashboard from **Settings** > **API Keys**. |
+| Braze REST endpoint      | The Braze [REST endpoint](https://www.braze.com/docs/developer_guide/rest_api/basics/#endpoints) that matches your instance, such as `rest.iad-01.com`. |
+{: .reset-td-br-1 .reset-td-br-2}
 
 ## Use Cases
 
+With this integration, you can:
+
 - Identify users with high engagement scores and target them with personalized offers, such as exclusive promotions or VIP rewards.
-- If a user enjoys a specific game, suggest similar games they might like.
+- Suggest similar games to a user based on the games they already like.
 
 ## Integration
 
-Reach out to your Future Anthem Customer Success Team to identify the most relevant attributes to send to Braze for your specific use cases.
+The Future Anthem Customer Success team will help set up your integration. Reach out to your Customer Success Manager and they'll help you identify the most relevant attributes for you to send to Braze.
 
-![A screenshot of the attributes on the user's profile.]({% image_buster /assets/img/futureanthem/fa_image1.png %})
-![A screenshot of the object attribute.]({% image_buster /assets/img/futureanthem/fa_image2.png %})
+|Example attributes in Future Anthem|Example attributes in Braze|
+|-----------------------------------|---------------------------|
+|![The attributes on the user's profile.]({% image_buster /assets/img/future_anthem/future_anthem_example_attributes.png %})|![The object attribute.]({% image_buster /assets/img/future_anthem/braze_example_attributes.png %})|
 
-## Braze Custom Attributes
+## Braze custom attributes
 
+These are the available Braze custom attributes. For more detailed information, see [Future Anthem: Getting Started](https://knowledge.futureanthem.com/getting-started).
 
 {% tabs local %}
 {% tab Bet Recommendations %}
@@ -103,10 +107,3 @@ Reach out to your Future Anthem Customer Success Team to identify the most relev
 {: .reset-td-br-1 .reset-td-br-2}
 {% endtab %}
 {% endtabs %}
-
-More details on each attribute can be found in [Future Anthem's documentation](https://knowledge.futureanthem.com/getting-started).
-
-
-
-
-
