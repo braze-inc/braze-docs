@@ -76,5 +76,6 @@ valid_partner_list:
   url: /docs/partners/message_personalization/dynamic_content/stylitics/
 - name: NiftyImages
   url: /docs/partners/message_personalization/dynamic_content/niftyimages/
-  
+- name: Future Anthem
+  url: /docs/partners/message_personalization/dynamic_content/future_anthem
 ---

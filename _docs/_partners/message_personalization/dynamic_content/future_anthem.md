@@ -5,7 +5,6 @@ description: "Learn how to integrate Future Anthem with Braze."
 alias: /partners/future_anthem/
 page_type: partner
 search_tag: Partner
-layout: dev_guide
 ---
 
 # Future Anthem
@@ -13,7 +12,7 @@ layout: dev_guide
 > Future Anthem's all-in-one product for the real money gaming industry, Amplifier AI, delivers content personalization, real-time experiences, and dynamic audiences. Amplifier AI works seamlessly across sports, casino, and lottery, allowing customers to enhance Braze's player profiles with industry-specific player attributes, such as favorite game, favorite team, engagement score, next bet recommendation, expected next bet, and more.
 
 {% alert important %}
-The integration is currently in Early Access. Please reach out to your Future Anthem Customer Success Team to get started.
+This feature is currently in Early Access. Please reach out to the Future Anthem Customer Success Team to get started.
 {% endalert %}
 
 ## Prerequisites
@@ -34,7 +33,7 @@ With this integration, you can:
 
 ## Integration
 
-The Future Anthem Customer Success team will help set up your integration. Reach out to your Customer Success Manager and they'll help you identify the most relevant attributes for you to send to Braze.
+The Future Anthem Customer Success team will help set up your integration. Reach out to your Customer Success contact and they'll help you identify the most relevant attributes for you to send to Braze.
 
 |Example attributes in Future Anthem|Example attributes in Braze|
 |-----------------------------------|---------------------------|
@@ -47,13 +46,13 @@ These are the available Braze custom attributes. For more detailed information, 
 {% tabs local %}
 {% tab Bet Recommendations %}
 
-| Subcategory | Example | Datatype |
+| Subcategory | Example (JSON) | Datatype |
 | ------- | ----------- |----------- |
-| User Preferences | ```json {"Sport": "Ice Hockey", "League": "NHL", "Market": "Goals", "Team": "Rangers", "Player": "Kreider"}| Object |
-| Single Bet Recommendations | ```json {"Sport": "Ice Hockey", "League": "NHL", "Market": "Goals", "Team": "Rangers", "Player": "Kreider"}| Object |
-| Accumulator Bet Recommendations | ```json {"Bet_1": "Halland Goal vs. Manchester United", "Bet_2": "Liverpool vs. Everton"}| Object |
-| Accumulator Bet Recommendations | ```json {"Bet_1": 1.5, "Bet_2": 2} | xx |
-| Bet Builder Bet Recommendations | ```json {"Sport":"American Football", "Competition":"NFL", "Event":"Seahwaks@Giants", "Market":"MoneyLine", "Selection":"Seahawks"} | Object |
+| User Preferences | `{"Sport": "Ice Hockey", "League": "NHL", "Market": "Goals", "Team": "Rangers", "Player": "Kreider"}`| Object |
+| Single Bet Recommendations | `{"Sport": "Ice Hockey", "League": "NHL", "Market": "Goals", "Team": "Rangers", "Player": "Kreider"}`| Object |
+| Accumulator Bet Recommendations | `{"Bet_1": "Halland Goal vs. Manchester United", "Bet_2": "Liverpool vs. Everton"}`| Object |
+| Accumulator Bet Recommendations | `{"Bet_1": 1.5, "Bet_2": 2}` | Object |
+| Bet Builder Bet Recommendations | `{"Sport":"American Football", "Competition":"NFL", "Event":"Seahwaks@Giants", "Market":"MoneyLine", "Selection":"Seahawks"}`| Object |
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% endtab %}
