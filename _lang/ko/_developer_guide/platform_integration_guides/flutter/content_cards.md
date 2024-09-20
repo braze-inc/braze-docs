@@ -55,7 +55,7 @@ contentCardsStreamSubscription.cancel();
 
 1단계에서 Dart 계층의 데이터를 수신하려면 다음 코드를 추가하여 네이티브 계층에서 콘텐츠 카드 데이터를 전달하세요.
 
-{% tabs %
+{% tabs %}
 {% tab Android %}
 
 콘텐츠 카드 데이터는 Android 계층에서 자동으로 전달됩니다.
