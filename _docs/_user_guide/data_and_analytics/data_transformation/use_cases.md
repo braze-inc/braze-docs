@@ -25,7 +25,7 @@ When customers open customer service tickets on a platform like Zendesk, you can
 
 ## Integrating with Braze
 
-Braze has an [integration]({{site.baseurl}}/partners/message_orchestration/channel_extensions/surveys/iterate/) available with Iterate, a customer insights and survey platform. With Data Transformation, you can save multiple survey responses under one nested custom attribute, instead of to the existing integration that saves multiple custom attributes.
+Braze has an integration with [Iterate]({{site.baseurl}}/partners/message_orchestration/channel_extensions/surveys/iterate/), a customer insights and survey platform. With Data Transformation, you can save multiple survey responses under one nested custom attribute, instead of to the existing integration that saves multiple custom attributes.
 
 ## Example transformation code
 
@@ -36,7 +36,7 @@ Consider this sample payload from Typeform, a survey platform, which sends whene
 {% tabs local %}
 {% tab Basic transformation %}
 
-This use case takes survey answers as attributes and writes an event to indicate that the survey was completed:
+This example takes survey answers as attributes and writes an event to indicate that the survey was completed:
 
 ```
 return {
@@ -65,7 +65,7 @@ return {
 {% endtab %}
 {% tab Advanced transformation %}
 
-This advanced use case builds on the basic use case by introducing an `if` statement to categorize the user in one of the answers.
+Let's further build on the basic transformation example and introduce an `if` statement to categorize the user in one of the answers.
 
 ```
 let nps_category;

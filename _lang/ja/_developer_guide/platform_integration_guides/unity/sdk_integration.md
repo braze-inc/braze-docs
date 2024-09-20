@@ -1,5 +1,5 @@
 ---
-nav_title: SDK統合
+nav_title: SDKの統合
 config_only: true
 noindex: true
 layout: blank_config

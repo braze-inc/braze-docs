@@ -14,7 +14,7 @@ platform:
 
 # Customizing the default Content Card feed
 
-> A Content Card feed is the sequence of Content Cards in your mobile or web applications. This article covers configuring when the feed is refreshed, the order of the cards, managing multiple feeds, and "empty feed" error messages.
+> A Content Card feed is the sequence of Content Cards in your mobile or web applications. This article covers configuring when the feed is refreshed, the order of the cards, managing multiple feeds, and "empty feed" error messages. For a basic overview of the types of customization options you have with Content Cards, see [Customization overview]({{site.baseurl}}/developer_guide/customization_guides/customization_overview). 
 
 ## Refreshing the feed
 
@@ -25,7 +25,7 @@ By default, the Content Card feed will refresh automatically in the following in
 You can configure the SDK to refresh manually at specific times as well.
 
 {% alert tip %}
-To dynamically show up-to-date Content Cards without manually refreshing, select **At first impression** during card creation. These cards will be refreshed once they are available.
+To dynamically show up-to-date Content Cards without manually refreshing, select **At first impression** during card creation. These cards will be refreshed when they are available.
 {% endalert %}
 
 {% tabs local %}
@@ -331,7 +331,7 @@ braze.showContentCards(null, (cards) => {
 
 When a user does not qualify for any Content Cards, the SDK displays an "empty feed" error message stating: "We have no updates. Please check again later." You can customize this "empty feed" error message similar to the following:
 
-![An empty feed error message that reads "This is a custom empty state message."][1]
+![An empty feed error message that reads "This is a custom empty state message."]({% image_buster/assets/img/content_cards/content-card-customization-empty.png %})
 
 {% tabs %}
 {% tab Android View System %}
@@ -629,4 +629,3 @@ For more information, see the [SDK method documentation](https://js.appboycdn.co
 {% endtabs %}
 
 
-[1]: {% image_buster/assets/img/content_cards/content-card-customization-empty.png %}

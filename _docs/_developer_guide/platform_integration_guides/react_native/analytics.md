@@ -11,7 +11,7 @@ description: "This article covers how to set up and track basic analytics like s
 
 > This article covers how to set up and track basic analytics in your React Native app.
 
-Before you start, read our [Analytics Overview][0] article to learn more about Braze analytics and what is already tracked by default. We also recommend familiarizing yourself with our [event naming conventions][1].
+Before you start, read our [Analytics Overview]({{site.baseurl}}/developer_guide/platform_wide/analytics_overview/) article to learn more about Braze analytics and what is already tracked by default. We also recommend familiarizing yourself with our [event naming conventions]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/event_naming_conventions/).
 
 ## Session tracking
 
@@ -69,7 +69,7 @@ All string values such as first name, last name, country, and home city are limi
 
 ### Custom user attributes
 
-In addition to our predefined user attribute methods, Braze also provides [custom attributes](https://www.braze.com/docs/user_guide/data_and_analytics/custom_data/custom_attributes/#custom-attribute-data-types) to track data from your applications. 
+In addition to our predefined user attribute methods, Braze also provides [custom attributes]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#custom-attribute-data-types) to track data from your applications. 
 
 ```javascript
 Braze.setCustomUserAttribute("attribute_key", "attribute_value", function(){
@@ -135,5 +135,3 @@ The following keys are **reserved** and **cannot** be used as purchase propertie
 - `price`
 - `currency`
 
-[0]: {{site.baseurl}}/developer_guide/platform_wide/analytics_overview/
-[1]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/event_naming_conventions/

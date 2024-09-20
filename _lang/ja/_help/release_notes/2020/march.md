@@ -1,20 +1,20 @@
 ---
-nav_title: "3"
+nav_title: 3月
 page_order: 10
 noindex: true
 page_type: update
-description: "この記事には、2020 年 3 月のリリースノートが含まれています。"
+description: "この記事には2020年3月のリリースノートが含まれています。"
 ---
-# 2020 年 3 月
+# 2020年3月
 
-## カスタム属性フィルターの動作
+## カスタム属性 フィルタービヘイビア
 
-[ダッシュボードのフィルターが改善され]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#dates)、より直感的な動作が可能になりました。
-特定のカスタム属性フィルターの仕組みに 2 つの重要な変更がありました。 
+ダッシュボードは[改善されたフィルターs]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#dates)を持ち、より直感的な振る舞いを含む。
+特定のカスタム属性s フィルターs の動作には、2 つの重要な変更があります。 
 
-カスタム属性フィルターの変更はフィルターに反映されます。
--**X** 日未満前
--**今後X日未満**
--定期的なイベントの日<br>
+カスタム属性 フィルターの変更はフィルターs に反映されます。 
+- **X** Days Ago 未満
+- Less than **X** Days in the Future
+- 定期的なイベントの日<br>
 
-セグメンテーションでこれらのフィルターを使用する場合は、これらの変更を考慮してセグメントを再調整することをおすすめします。
+これらのフィルターs をセグメンテーションで使用する場合は、これらの変更を考慮してSegments を再調整することをお勧めします。

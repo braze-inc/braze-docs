@@ -37,7 +37,7 @@ You can choose the type of delay before the next message in your Canvas. You can
   Note the difference between how "days" and "calendar days" are calculated. 
   
     - A "day" is 24 hours and calculated from the time the user enters the Delay step. 
-    - A "calendar day" defines a day as 24 hours after a specified time, meaning you can choose to delay at company time or at a user's local time. If a time is not specified, the user will be delayed until midnight the next day in company time.
+    - A "calendar day" defines a day as 24 hours after a specified time. When a calendar day is chosen and the time is specified, you can choose to delay at company time or at a user's local time. If a time isn't specified, the user will be delayed until midnight the next day in company time.
 
   {% endtab %}
   {% tab Until a specific date %}

@@ -5,6 +5,7 @@ page_order: 20
 page_type: reference
 description: "This article provides best practices for designing and customizing News Feed cards."
 channel: news feed
+hidden: true
 
 ---
 

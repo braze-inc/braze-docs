@@ -29,6 +29,20 @@ Braze has three global subscription states for email users (listed in the follow
 Braze does not count subscription state changes against your data points, globally, and around subscription groups.
 {% endalert %}
 
+### Unsubscribed email addresses
+
+Braze will automatically unsubscribe any user who manually unsubscribes from your email through a [custom footer]({{site.baseurl}}/user_guide/message_building_by_channel/email/custom_email_footer). If the user updates their email address and **Resubscribe users when they update their email** is enabled in your **Sending Configuration** settings, normal email sending will resume.
+
+If a user has marked one or more of your emails as spam, Braze will only send transactional emails to this user. In this case, transactional emails refers to the selected **Send to all users including unsubscribed users** option in the **Target Audience** step.
+
+{% alert tip %}
+Refer to our [IP warming]({{site.baseurl}}/user_guide/onboarding_with_braze/email_setup/ip_warming/) best practices for guidance on how to re-engage your users effectively.
+{% endalert %}
+
+### Bounces and invalid emails
+
+Hard bounces can happen if the email is invalid or doesn't exist. In this case, Braze will mark the user's email address as invalid and will not attempt to send any further emails to that email address. If that user changes their email address, then we will resume sending emails to them since their new email may be valid. Soft bounces are automatically retried for 72 hours.
+
 ### Updating email subscription states
 
 There are four ways to update a user's email subscription state:
@@ -65,7 +79,7 @@ When a user updates their email address, their subscription state will be set to
 
 ## Subscription groups
 
-Subscription groups are segment filters that can further narrow your audience from the [global subscription states](#subscription-states). You can add up to 100 subscription groups per workspace. These groups allow you to present more granular subscription options to end-users.
+Subscription groups are segment filters that can further narrow your audience from the [global subscription states](#subscription-states). You can add up to 350 subscription groups per workspace. These groups allow you to present more granular subscription options to end-users.
 
 For example, suppose you send out multiple categories of email campaigns (promotional, newsletter, or product updates). In that case, you can use subscription groups to let your customers pick and choose which email categories they want to subscribe or unsubscribe from in bulk from a single page, using an [email preference center](#email-preference-center). Alternatively, you could use subscription groups to let your customers choose how frequently they want to receive emails from you, by creating subscription groups for daily, weekly, or monthly emails.
 

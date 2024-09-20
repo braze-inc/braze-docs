@@ -3,26 +3,27 @@ nav_title: ニュースフィード
 article_title: ニュースフィード
 page_order: 4
 layout: dev_guide
+hidden: true
 guide_top_header: "ニュースフィード"
-guide_top_text: "このセクションには、廃止予定のニュースフィードに関する情報が含まれています。Braze では、News Feed ツールを使用するお客様は、コンテンツカードメッセージングチャネルに移動することを推奨しています。これは、より柔軟でカスタマイズ可能で、信頼性が高いチャネルです。詳細については、<a href='/docs/user_guide/message_building_by_channel/content_cards/migrated_from_news_feed/'>移行ガイド</a>をご覧ください。"
+guide_top_text: "このセクションには、廃止予定のニュースフィードに関する情報が含まれています。Braze は、ニュースフィードツールを使っている顧客には、コンテンツカードのメッセージングチャネルに移行することを勧めています。詳しくは<a href='/docs/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/'>マイグレーション・ガイドを</a>ご覧いただきたい。"
 search_rank: 1
 page_type: landing
 channel: news feed
 description: "このランディングページには、さまざまなニュースフィードに関する記事が掲載されています。ここでは、ニュースフィードアイテムの作成、分類、分析のためのリソースを見つけることができます。"
 
-guide_featured_title: "セクション記事"
+guide_featured_title: "セクションの記事"
 
 guide_featured_list:
-  - name: Creating a News Feed Item
+  - name: ニュースフィードアイテムの作成
     link: /docs/user_guide/engagement_tools/news_feed/creating_a_news_feed_item/
-    fa_icon: fas fa-newspaper
-  - name: News Feed Categories
+    image: /assets/img/braze_icons/announcement-02.svg
+  - name: ニュースフィードのカテゴリ
     link: /docs/user_guide/engagement_tools/news_feed/news_feed_categories/
-    fa_icon: fas fa-columns
-  - name: Analytics
+    image: /assets/img/braze_icons/columns-01.svg
+  - name: 分析
     link: /docs/user_guide/engagement_tools/news_feed/news_feed_analytics_and_retargeting_data/
-    fa_icon: fas fa-chart-line
-  - name: Use Cases
+    image: /assets/img/braze_icons/line-chart-up-01.svg
+  - name: ユースケース
     link: /docs/user_guide/engagement_tools/news_feed/news_feed_use_cases/
-    fa_icon: fas fa-user-tie
+    image: /assets/img/braze_icons/user-circle.svg
 ---

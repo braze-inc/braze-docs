@@ -149,6 +149,7 @@ In addition, when creating welcome campaigns, you can trigger messages to send a
 Any of these things will prevent a user who has completed the trigger event from receiving the campaign:
 
 - The user completed the exception event before the time delay had fully elapsed.
+- Liquid [`abort_message` logic]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/aborting_messages)  was used and the message was aborted based on the `abort_message` logic or rules.
 - The time delay caused the user to become qualified to receive the campaign after the duration has ended.
 - The time delay caused the user to become qualified to receive the campaign outside of the specified portion of the day.
 - The user has already received the campaign, and users do not become re-eligible.
@@ -162,10 +163,17 @@ As a best practice, ensure that the attribute on which the campaign is segmented
 
 Additionally, if a campaign is action-based and has a delay, you can check the option to **Re-evaluate segment membership at send-time** to ensure users are still part of the target audience when the message is sent.
 
+If your campaign is triggered by a specific custom event and you select a segment as the audience, users must perform the same custom event to be included in the segment. This means users need to be part of the audience before an action-based campaign can be triggered. The general workflow for a triggered campaign is as follows:
+
+1. **Join the audience:** When a user performs the custom event, they're added to the campaign's target audience.
+2. **Trigger the email:** A user must perform the custom event again to trigger the email, as they need to be part of the audience before the email can be sent.
+
+We recommend either changing the target audience to include all users, or checking that the users expected to perform the event are already part of the campaign's audience for the message to be triggered.
+
 ![][51]
 
 [5]: #local-time-zone-campaigns
-[8]: {{site.baseurl}}/user_guide/sage_ai/intelligence/intelligent_timing/
+[8]: {{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_timing/
 [17]: {% image_buster /assets/img_archive/schedule_triggered1.png %}
 [18]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/conversion_events/#conversion-events
 [19]: {% image_buster /assets/img_archive/schedule_triggered22.png %}

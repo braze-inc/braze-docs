@@ -80,9 +80,19 @@ Segment Extensions rely on long term storage of event properties and don't have 
 Using event properties within Segment Extensions does not impact data point usage.
 {% endalert %}
 
-### Extension regeneration
+## Step 4: Designate refresh settings (optional)
 
-You can specify whether you want this extension to represent a single snapshot in time, or whether you want this extension to regenerate on a daily basis. Your extension will always begin processing after the initial save. If you would like the extension to be regenerated daily, select the **Regenerate Extension Daily** checkbox and the regeneration will begin processing at around midnight each day in your company's time zone.
+You can specify whether you want this extension to represent a single snapshot in time, or to refresh on a recurring schedule. 
+
+Your segment will always begin processing after the initial save. Whenever your segment refreshes, Braze will re-run the segment and update segment membership to reflect the users in your segment at the time of refresh. 
+
+### Saving a snapshot in time
+
+If you don't need your segment to refresh on a regular schedule, you can save it without using any refresh settings, and Braze will generate your segment based on your user membership at that moment. 
+
+### Setting up a recurring refresh
+
+To set up a recurring schedule, select **Refresh Settings** in the upper right corner of your specific extension. The option to designate refresh settings is available for SQL segments and CDI segments. Currently, this option is not available for simple form-based Segment Extensions.
 
 {% alert important %}
 The setting to regenerate extensions daily is automatically turned off for unused Segment Extensions. Braze defines unused extensions as ones that meet the following criteria:
@@ -94,7 +104,27 @@ The setting to regenerate extensions daily is automatically turned off for unuse
 Braze will notify the company contact and creator of the extension when this setting is turned off. The option to regenerate extensions daily can be turned on again at any time.
 {% endalert %}
 
-## Step 4: Save your Segment Extension
+#### Selecting your refresh settings
+
+![Refresh Interval Settings with a weekly refresh frequency, start time of 10 am, and Monday selected as a day.][21]{: style="max-width:60%;"}
+
+Within the **Refresh Settings** panel, you can select the frequency at which this segment extension will refresh: daily, weekly, or monthly. You’ll also be required to select the specific time (which is in your company’s time zone) the refresh would occur, such as:
+
+- If you have an email campaign that is sent every Monday at 11 am company time, and you want to ensure your segment is refreshed right before it's sent, you should choose a refresh schedule of weekly at 10 am on Mondays.
+- If you’d like your segment to refresh every day, select the daily refresh frequency and then choose the time of day to refresh.
+
+### Credit consumption and additional costs
+
+Because refreshes re-run your segment’s query, each refresh for SQL segments will consume SQL segment credits, and each refresh for CDI segments will incur a cost within your third-party data warehouse.
+
+{% alert note %}
+Segments could require up to 60 minutes to refresh because of data processing times. Segments that are currently in the process of refreshing will have a “Processing” status within your Segment Extensions list. This has a couple of implications:
+
+- To finish processing your segment before a specific time, choose a refresh time that is 60 minutes earlier. 
+- Only one refresh can occur at a time for a specific Segment Extension. If there is a conflict where a new refresh is initiated when an existing refresh has already begun processing, Braze will cancel the new refresh request and continue the in-progress processing. 
+{% endalert %}
+
+## Step 5: Save your Segment Extension
 
 Once you click **Save**, your extension will begin processing. The length of time it takes to generate your extension depends on how many users you have, how many custom events or purchase events you're capturing, and how many days you're looking back in history.
 
@@ -102,7 +132,7 @@ While your extension is processing, you will see a small animation next to the n
 
 ![][5]
 
-## Step 5: Use your extension in a segment
+## Step 6: Use your extension in a segment
 
 Once you have created an extension, you can use it as a filter when creating a segment or defining an audience for a campaign or Canvas. Start by choosing **Braze Segment Extension** from the filter list under the **User Attributes** section.
 
@@ -136,3 +166,4 @@ Now you can proceed as usual with [creating your segment][11].
 [18]: {% image_buster /assets/img/segment/nested_segment_extensions.png %}
 [19]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/
 [20]: {% image_buster /assets/img/segment/segment_extension_modal.png %}
+[21]: {% image_buster /assets/img/segment/segment_interval_settings.png %}

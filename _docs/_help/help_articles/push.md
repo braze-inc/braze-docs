@@ -26,5 +26,8 @@ guide_menu_list:
   - name: Resetting Push Permissions
     link: /docs/help/help_articles/push/resetting_push_permissions/
     image: /assets/img/braze_icons/check-circle.svg
+  - name: Tracking Push Unsubscribes
+    link: /docs/help/help_articles/push/push_unsubscribes/
+    image: /assets/img/braze_icons/users-01.svg
 
 ---

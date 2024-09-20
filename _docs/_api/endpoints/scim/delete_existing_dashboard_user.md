@@ -17,7 +17,7 @@ description: "This article outlines details about the Remove a dashboard user ac
 
 > Use this endpoint to permanently delete an existing dashboard user by specifying the resource `id` returned by the SCIM [`POST`]({{site.baseurl}}/scim/post_create_user_account/) method. 
 
-This is similar to deleting a user in the **Manage Users** section of the Braze dashboard. For information on how to obtain a SCIM token, visit [Automated user provisioning]({{site.baseurl}}/scim/automated_user_provisioning/).
+This is similar to deleting a user in the **Company Users** section of the Braze dashboard. For information on how to obtain a SCIM token, visit [Automated user provisioning]({{site.baseurl}}/scim/automated_user_provisioning/).
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#9c7c71ea-afd6-414a-99d1-4eb1fe274f16 {% endapiref %}
 

@@ -5,9 +5,6 @@ alias: /partners/Partners/
 layout: partner_page
 search_tag: Partner
 
-partner_api: "https://www.braze.com/api/v1/partners"
-partner_path: "https://www.braze.com/product/alloys/partners/"
-
 partner_top_header: "Technology Partners"
 partner_top_text: "Welcome to our list of Alloys (our allies - our best buds - our partners)! Use it to explore the technical documentation that will help implement Technology Partners into your Braze SDK. <br> <br>  If you're looking for information on joining our Firebrands, a community of movers and shakers using Braze to modernize their customer experience and marketing, check out our information page <a href='https://brazefirebrands.splashthat.com/'>here</a>."
 description: "This landing page includes all Braze partners. Use it to explore technical documentation that will help implement Technology Partners into your Braze SDK."
@@ -131,8 +128,8 @@ valid_partner_list:
   url: /docs/partners/message_personalization/location/bluedot/
 - name: NPAW
   url: /docs/partners/data_and_infrastructure_agility/analytics/npaw/
-- name: Phrasee
-  url: /docs/partners/data_and_infrastructure_agility/ab_testing/phrasee/
+- name: Jacquard
+  url: /docs/partners/data_and_infrastructure_agility/ab_testing/jacquard/
 - name: optilyz
   url: /docs/partners/message_orchestration/additional_channels/direct_mail/optilyz/
 - name: Digioh
@@ -303,4 +300,8 @@ valid_partner_list:
   url: /docs/partners/data_and_infrastructure_agility/cohort_import/treasuredata/
 - name: Future Anthem
   url: /docs/partners/message_personalization/dynamic_content/future_anthem
+- name: LiveRamp
+  url: /docs/partners/data_and_infrastructure_agility/advertising/liveramp/
+- name: Inbox Monster
+  url: /docs/partners/data_and_infrastructure_agility/analytics/inbox_monster/
 ---

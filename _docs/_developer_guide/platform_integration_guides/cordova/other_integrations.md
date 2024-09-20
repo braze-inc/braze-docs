@@ -14,6 +14,10 @@ page_order: 6
 
 By default the Cordova SDK supports in-app messages with no changes. See the [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/in-app_messaging/integration/) or [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/in-app_messaging/overview/) integration examples for information on customizing in-app messages. Furthermore, you can look at the [sample Cordova application](https://github.com/braze-inc/braze-cordova-sdk/blob/master/sample-project/www/js/index.js) or the sample [Android](https://github.com/braze-inc/braze-android-sdk) or [iOS](https://github.com/braze-inc/braze-swift-sdk) application for implementation samples.
 
+### GIF Support
+
+{% multi_lang_include wrappers/gif_support/in_app_messaging.md %}
+
 ## News Feed
 
 {% alert note %}

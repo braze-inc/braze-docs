@@ -27,6 +27,10 @@ While we provide an extensive list of resources to reference pre-send, each chan
   - Frequency capping rules will be applied to push, email, SMS, and webhooks, but not to in-app messages and Content Cards.
   - Global frequency capping is scheduled based on the user's time zone and is calculated by calendar days, not 24-hour periods. For example, if you set up a frequency capping rule of sending no more than one campaign a day, a user may receive a message at 11 pm in their local time zone, and they would be eligible to receive another message an hour later.
 
+{% alert tip %}
+For further assistance with Canvas and campaign troubleshooting, be sure to contact Braze Support within 30 days of your issue's occurrence as we only have the last 30 days of diagnostic logs.
+{% endalert %}
+
 ## Email
 
 #### Things to check
@@ -87,6 +91,6 @@ While we provide an extensive list of resources to reference pre-send, each chan
 
 #### Things to know
 - **In-app message triggering**: At the session start, the SDK requests that all eligible in-app messages be sent to the device along with its triggers, so if they perform the event during the session, they can receive the in-app message quickly and reliably. Due to this, in-app messages cannot be triggered by custom events in Canvas.
-- **Sent vs. impressions**: For in-app messages, the concept of "sent" differs from the other available channels. To see an in-app message, a user has to start a session, be in the eligible audience, and perform the trigger. Because of this, we track "impressions" as it is more clear.
+- **Sent versus impressions**: For in-app messages, the concept of "sent" differs from the other available channels. To see an in-app message, a user has to start a session, be in the eligible audience, and perform the trigger. Because of this, we track "impressions" as it is more clear.
 - **Triggering**: By default, in-app messages are triggered by events logged by the SDK. If you want to trigger in-app messages by server-sent events, you can also achieve this through these guides for [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/in-app_messaging/customization/custom_triggering/) and [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/in-app_messaging/customization).
 - [**Canvas in-app messages**]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/in-app_messages_in_canvas/#advancement-behavior-options): These messages appear the first time that your user opens the app (triggered by the start session) after the scheduled message in the Canvas component has been sent to them.

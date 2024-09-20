@@ -1,42 +1,42 @@
 ---
-nav_title: 9 月
+nav_title: 9月
 page_order: 5
 noindex: true
 page_type: update
-description: "この記事には、2018 年 9 月のリリース ノートが含まれています。"
+description: "この記事には2018年9月のリリースノートが含まれている。"
 ---
-# 2018年9月発売
+# 2018年9月
 
-## iOS 12 通知グループ:追加アビリティ
+## iOS 12の通知グループ：その他の能力
 
-Brazeを使用して [Appleの通知グループ機能]({{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/#notification-groups) にアクセスできるようになりました。サマリー引数とグループの追加、クリティカルアラートの利用、暫定認証ユーザのフィルタリング、およびユーザプロファイルの暫定認証ステータスの表示を行うことができます。
+Brazeを使って[アップルの通知グループ機能に]({{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/#notification-groups)アクセスできるようになった！サマリー引数およびグループの追加、クリティカルアラートの利用、仮認証ユーザのフィルタリング、ユーザプロファイルの仮認証ステータスの表示ができる。
 
-## クワイエットタイム
+## 静かな時間
 
-顧客は、Canvas の [待機時間]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#step-5-select-your-send-settings) (メッセージが送信されない時間) を指定できるようになりました。**Canvasの送信設定**に移動し、「クワイエットアワーを有効にする」にチェックを入れるだけです。次に、ユーザーの現地時間での待機時間を選択し、その待機時間内にメッセージがトリガーされた場合に実行されるアクションを選択します。
+顧客は、キャンバスの[Quiet Hours]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#step-5-select-your-send-settings)(メッセージが送信されない時間)を指定できるようになりました。**キャンバスの送信設定で**「静かな時間を有効にする」にチェックを入れるだけだ。次に、ユーザーの現地時間でサイレント時間を選択し、そのサイレント時間内にメッセージがトリガーされた場合の後続のアクションを選択します。
 
-また、キャンペーンでは、「一日の特定の時間帯にこのメッセージを送信する」代わりに、クワイエットタイムを使用するようになりました。
+キャンペーンでは、「1日のうち特定の時間帯にこのメッセージを送信する」のではなく、「クワイエットタイム」を使用するようになった。
 
 ## 顧客を調整する
 
-Brazeのお客様は、 [Adjust]({{site.baseurl}}/partners/advertising_technologies/attribution/adjust/) を使用しているBraze APIキーとBrazeインスタンスのURLを確認できるようになり、Adjustプラットフォームで連携することができます。
+[Adjustを]({{site.baseurl}}/partners/advertising_technologies/attribution/adjust/)使用しているBrazeのお客様は、Braze APIキーとBrazeインスタンスURLを確認できるようになり、Adjustプラットフォームで統合に使用できるようになった。
 
 ## セグメントフィルターにない
 
-お客様は、 [特定のセグメントに含まれていない]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/#retargeting)ユーザーからセグメントを作成できるようになりました。
+顧客は、[特定のセグメントに含まれない]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/#retargeting)ユーザーからセグメントを作成できるようになった。
 
 ## キャンバス受信者のCSVエクスポート
 
-お客様は、キャンバスに入ったユーザーの [データをエクスポート]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_canvas_data/) できるようになりました。生成されるCSVは、キャンペーンCSVと似ています。
+キャンバスにエントリーしたユーザーの[データをエクスポート]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_canvas_data/)できるようになった。生成されるCSVはキャンペーンCSVと同様のものになる。
 
-## 暫定的に承認された iOS 12 セグメント フィルター
+## iOS12のセグメントフィルターが暫定的に認可される
 
-特定のアプリに対して iOS 12 で暫定的に承認されたユーザーを検索できる [セグメント フィルター]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/#other) が追加されました。
+指定したアプリのiOS 12で仮承認されたユーザーを見つけることができる[セグメントフィルターが]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/#other)追加された。
 
 ## アプリ内メッセージ画像アップローダー
 
-アプリ内メッセージの画像アップローダーは、デザインパネルから作成パネルに移動しました。
+アプリ内メッセージの画像アップローダーがデザインパネルからメール作成パネルに移動した。
 
-## [ユーザー プロファイル] ページでの読み取り専用アクセス許可
+## ユーザープロファイルページの読み取り専用パーミッション
 
-このリリースより前は、読み取り専用 [のアクセス許可]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/user_permissions/#available-limited-and-team-role-permissions)を持つユーザー プロファイルのサブスクリプション ステータスとメール アドレスを変更できました。アクセス許可の名前を `import_user` アクセス許可に変更し `import_and_update_user` 、サブスクリプションの状態とメール アドレスへの編集アクセスを制限しました。これで、開発者が読み取り専用になりすますか、この権限がない場合、サブスクリプションのステータスやメールアドレスを変更できなくなります。
+このリリース以前は、顧客は[読み取り専用権限で]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/user_permissions/#available-limited-and-team-role-permissions)ユーザープロファイルの購読ステータスとメールアドレスを変更することができた。私たちは、`import_user` パーミッションの名前を`import_and_update_user` パーミッションに変更し、購読ステータスとメールアドレスの編集アクセスを制限した。現在、開発者が読み取り専用になりすましたり、このパーミッションを欠いている場合、購読ステータスやメールアドレスを変更することはできない。

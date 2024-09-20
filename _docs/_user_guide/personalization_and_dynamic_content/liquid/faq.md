@@ -1,7 +1,7 @@
 ---
 nav_title: FAQ
 article_title: Frequently Asked Questions
-page_order: 11
+page_order: 12
 description: "This article provides answers to frequently asked questions about Liquid."
 
 ---

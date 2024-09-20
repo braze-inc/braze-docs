@@ -1,8 +1,8 @@
 ---
-nav_title: 報告
-article_title: Webhook レポート
+nav_title: レポート
+article_title: ウェブフック・レポート
 page_order: 10
-description: "このリファレンス記事では、Braze ダッシュボードに用意されているさまざまなWebhook レポートメトリクスと分析オプションの概要について説明します。"
+description: "この参考記事では、Brazeダッシュボードで提供されるさまざまなWebhookレポートメトリクスと分析オプションの概要を説明する。"
 channel:
   - webhooks
 tool:
@@ -10,8 +10,8 @@ tool:
   
 ---
 
-# Webhookレポート
+# ウェブフック・レポート
 
-> Braze ダッシュボードに用意されているさまざまなWebhook レポートメトリクスと分析オプションについて説明します。
+> Brazeダッシュボードで提供されるさまざまなWebhookレポートメトリクスと分析オプションについて学ぶ。
 
 {% multi_lang_include campaign_analytics.md channel="webhook" %}

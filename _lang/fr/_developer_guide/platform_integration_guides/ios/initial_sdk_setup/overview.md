@@ -32,7 +32,7 @@ guide_featured_list:
 
 ---
 
-{% multi_lang_include archive/objective-c-deprecation-notice.md %}
+{% multi_lang_include deprecations/objective-c.md %}
 
 <br>
 

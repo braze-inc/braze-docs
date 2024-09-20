@@ -12,8 +12,6 @@ search_tag: Partner
 
 ## Data import integration
 
-{% multi_lang_include video.html id="8a57e44be7da423e9699cedd6c241eae" source="loom"%}
-
 Any integration you set up will count toward your account's data point volume.
 
 ### Step 1: Get the Braze data import key
@@ -52,3 +50,7 @@ In Braze, to create a segment of these users, navigate to **Segments** under **E
 ![In the Braze segment builder, the filter "amplitude_cohorts" is set to "includes_value" and "Amplitude cohort test".]({% image_buster /assets/img/amplitude2.png %})
 
 After saving, you can reference this segment during Canvas or campaign creation in the targeting users step.
+
+## User Matching
+
+Identified users can be matched by either their `external_id` or `alias`. Anonymous users can be matched by their `device_id`. Identified users who were originally created as anonymous users can't be identified by their `device_id`, and must be identified by their `external_id` or `alias`.

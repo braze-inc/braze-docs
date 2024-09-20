@@ -101,13 +101,13 @@ glossaries:
     tags:
       - User Data
   - name: <a href='/docs/api/endpoints/messaging/send_messages/post_send_triggered_campaigns/'>/campaigns/trigger/send</a>
-    description: Send immediate, one-off messages to designated users via API-triggered delivery.
+    description: Send immediate, one-off messages to designated users through API-triggered delivery.
       - Send Messages
   - name: <a href='/docs/api/endpoints/messaging/send_messages/post_send_triggered_canvases/'>/canvas/trigger/send</a>
-    description: Send Canvas messages via API-Triggered delivery.
+    description: Send Canvas messages through API-Triggered delivery.
       - Send Messages
   - name: <a href='/docs/api/endpoints/messaging/send_messages/post_send_messages/'>/messages/send</a>
-    description: Send immediate, one-off messages to designated users via the Braze API.
+    description: Send immediate, one-off messages to designated users through the Braze API.
     tags:
       - Send Messages
   - name: <a href='/docs/api/endpoints/messaging/send_messages/post_create_send_ids/'>/sends/id/create</a>
@@ -119,7 +119,7 @@ glossaries:
     tags:
       - Send Messages
   - name: <a href='/docs/api/endpoints/messaging/schedule_messages/post_schedule_triggered_campaigns/'>/campaigns/trigger/schedule/create</a>
-    description: Send dashboard created campaign messages via API-triggered delivery.
+    description: Send dashboard created campaign messages through API-triggered delivery.
     tags:
       - Schedule Messages
   - name: <a href='/docs/api/endpoints/messaging/schedule_messages/post_delete_scheduled_triggered_messages/'>/campaigns/trigger/schedule/delete</a>
@@ -135,7 +135,7 @@ glossaries:
     tags:
       - Schedule Messages
   - name: <a href='/docs/api/endpoints/messaging/schedule_messages/post_schedule_triggered_canvases/'>/canvas/trigger/schedule/create</a>
-    description: Schedule Canvas messages via API-triggered delivery.
+    description: Schedule Canvas messages through API-triggered delivery.
     tags:
       - Schedule Messages
   - name: <a href='/docs/api/endpoints/messaging/schedule_messages/post_update_scheduled_messages/'>/messages/schedule/update</a>
@@ -266,12 +266,20 @@ glossaries:
     description: Retrieve a series of the number of sessions for your app over a designated time period.
     tags:
       - Sessions
+  - name: <a href='/docs/api/endpoints/export/custom_attributes/get_custom_attributes/'>/custom_attributes</a>
+    description: Export a list of custom attributes including the name, description, data type, array length (if applicable), status, and associated tags.
+    tags:
+      - Custom Attributes
   - name: <a href='/docs/api/endpoints/export/custom_events/get_custom_events_analytics/'>/events/data_series</a>
     description: Retrieve a series of the number of occurrences of a custom event in your app over a designated time period.
     tags:
       - Custom Events
+  - name: <a href='/docs/api/endpoints/export/custom_events/get_custom_events_data/'>/events</a>
+    description: Export a list of custom events including the name, description, status, associated tags, and analytics report inclusion.
+    tags:
+      - Custom Events
   - name: <a href='/docs/api/endpoints/export/custom_events/get_custom_events/'>/events/list</a>
-    description: Export a list of custom events that have been recorded for your app.
+    description: Export a list of names of custom events that have been recorded for your app.
     tags:
       - Custom Events
   - name: <a href='/docs/api/endpoints/templates/content_blocks_templates/post_create_email_content_block/'>/content_blocks/create</a>

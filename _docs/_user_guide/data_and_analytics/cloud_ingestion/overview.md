@@ -358,11 +358,33 @@ The `UPDATED_AT` column should be in UTC to prevent issues with daylight savings
 
 ### Separate EXTERNAL_ID from PAYLOAD column
 
-The PAYLOAD object should not include an external ID or other ID type. 
+The `PAYLOAD` object should not include an external ID or other ID type. 
 
 ### Remove an attribute
 
-You can set it to `null` if you want to completely remove an attribute from a user's profile. If you want an attribute to remain unchanged, don't send it to Braze until it's been updated.
+You can set it to `null` if you want to omit an attribute from a user's profile. If you want an attribute to remain unchanged, don't send it to Braze until it's been updated. To completely remove an attribute, use `TO_JSON(OBJECT_CONSTRUCT_KEEP_NULL(...))`.
+
+### Make incremental updates
+
+Make incremental updates to your data so you can prevent unintentional overwrites when simultaneous updates are made.
+
+In the following example, a user has two attributes:
+- Color: "Green"
+- Size: "Large"
+
+Then Braze receives the following two updates to that user simultaneously:
+- Request 1: Change color to "Red"
+- Request 2: Change size to "Medium"
+
+Because Request 1 occurs first, the user's attributes are updated to the following:
+- Color: "Red"
+- Size: "Large"
+
+However, when Request 2 occurs, Braze starts with the original attribute values ("Green" and "Large"), then updates the user's attributes to the following:
+- Color: "Green"
+- Size: "Medium"
+
+When the requests are finished, Request 2 will overwrite the update from Request 1. Due to this, it's best to stagger your updates so you can prevent requests from being overwritten.
 
 ### Create JSON string from another table
 
@@ -466,7 +488,7 @@ We use the `UPDATED_AT` timestamp to track what data has been synced successfull
 
 ### Table configuration
 
-We have a public [GitHub repository](https://github.com/braze-inc/braze-examples/tree/main/data-ingestion) for customers to share best practices or code snippets. To contribute your own snippets, create a pull request!
+We have a public [GitHub repository](https://github.com/braze-inc/braze-examples/tree/main/cloud-data-ingestion) for customers to share best practices or code snippets. To contribute your own snippets, create a pull request!
 
 ### Data formatting
 
@@ -560,7 +582,7 @@ To sync purchase events, event name, `product_id`, `currency`, and `price` are r
 
 ### Avoiding timeouts for data warehouse queries
 
-We recommend that queries be completed within one hour for optimal performance and to avoid potential errors. If queries exceed this timeframe, consider reviewing your data warehouse configuration. Optimizing resources allocated to your warehouse can help improve query execution speed. 
+We recommend that queries be completed within one hour for optimal performance and to avoid potential errors. If queries exceed this timeframe, consider reviewing your data warehouse configuration. Optimizing resources allocated to your warehouse can help improve query execution speed.
 
 ## Product limitations
 

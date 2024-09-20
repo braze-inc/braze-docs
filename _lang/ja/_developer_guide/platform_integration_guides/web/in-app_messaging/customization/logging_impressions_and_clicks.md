@@ -1,21 +1,21 @@
 ---
-nav_title: インプレッション数とクリック数を記録する
-article_title: インプレッション数とクリック数を記録する
+nav_title: 印象とクリックの記録
+article_title: 印象とクリックの記録
 platform: Web
 channel: in-app messages
 page_order: 3
 page_type: reference
-description: "この記事では、ウェブアプリケーションのアプリ内メッセージのインプレッションとクリックのロギングについて説明します。"
+description: "この記事では、ウェブアプリライケーションのログアプリ内メッセージ インプレッションとクリックについて説明します。"
 
 ---
 
 # インプレッション数とクリック数を記録する
 
-> この記事では、ウェブアプリケーションのアプリ内メッセージのインプレッションとクリックを記録する方法について説明します。
+> ここでは、ウェブアプリライケーションのアプリ内メッセージ インプレッションとクリックを記録する方法について説明します。
 
-[[アプリ内メッセージのインプレッションとクリックの記録は](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#loginappmessagebuttonclick)](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#loginappmessageimpression)、`showInAppMessage``automaticallyShowInAppMessage`またはメソッドを使用すると自動的に実行されます。
+`showInAppMessage`または`automaticallyShowInAppMessage`メソッドを使用すると、ログアプリ内メッセージ[インプレッションs](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#loginappmessageimpression)および[clicks](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#loginappmessagebuttonclick)が自動的に実行されます。
 
-どちらの方法も使用せず、独自のUIコードを使用してメッセージを手動で表示することを選択した場合は、次の方法を使用して分析を記録してください。
+どちらのメソッドも使用せず、独自のUI コードを使用して手動でメッセージを表示することを選択した場合は、次の方法を使用して分析を記録します。
 
 ```javascript
 // Registers that a user has viewed an in-app message with the Braze server.

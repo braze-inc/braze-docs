@@ -1,25 +1,25 @@
 ---
-nav_title: 10 月
+nav_title: 10月
 page_order: 3
 noindex: true
 page_type: update
-description: "この記事には、2019 年 10 月のリリース ノートが含まれています。"
+description: "この記事には2019年10月のリリースノートが含まれている。"
 ---
 
-# 2019年10月発売
+# 2019年10月
 
-## Canvas バリアント分析の改善
+## キャンバスのバリアント分析の改善
 
-Canvas には、各バリエーションのパフォーマンスを表示するための新しい分析機能と改善された分析機能があります。特にコンバージョンイベントと信頼度に関する新しい指標や、セル、API IDのコピー、結果のダウンロード `.csv` などの新機能が追加されています。[改善された Canvas バリアント分析の詳細については]({{site.baseurl}}/user_guide/engagement_tools/canvas/get_started/measuring_and_testing_with_canvas_analytics/#performance-breakdown-by-variant)、こちらをご覧ください。
+Canvasには、各バリアントのパフォーマンスを見るための新しく改良されたアナリティクスがある。特にコンバージョンイベントや信頼度に関する新しい指標や、セルのコピー、API ID、結果のダウンロード（`.csv` ）といった新機能がある。[改良されたキャンバスのバリアント分析について]({{site.baseurl}}/user_guide/engagement_tools/canvas/get_started/measuring_and_testing_with_canvas_analytics/#performance-breakdown-by-variant)もっと読む。
 
 ## SMS
 
-Brazeは、キャンペーン、キャンバス、 [カレント]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/message_engagement_events/)をSMSで提供するようになりました。開始するにはセットアップ [ガイド]({{site.baseurl}}/user_guide/onboarding_with_braze/sms_setup/) を、 [詳細についてはSMS送信ガイド]({{site.baseurl}}/user_guide/message_building_by_channel/sms/) をご覧ください。
+Brazeは現在、キャンペーン、キャンバス、[カレントで]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/message_engagement_events/)SMSを提供している！詳しくは、[セットアップガイドと]({{site.baseurl}}/user_guide/onboarding_with_braze/sms_setup/) [SMS送信ガイドを]({{site.baseurl}}/user_guide/message_building_by_channel/sms/)ご覧いただきたい！
 
-## コンテンツブロックの改善
+## コンテンツ・ブロックの改善
 
-コンテンツブロックの API ID が、ダッシュボードの選択したコンテンツブロックページに表示されるようになりました。さらに、コンテンツブロックが使用されている場所も表示されます。
+コンテンツブロックのAPI IDが、ダッシュボードの選択したコンテンツブロックページに表示されるようになった。さらに、コンテンツ・ブロックが使用されている場所を表示する。
 
 ## APIによるエイリアスのみのユーザー作成と識別
 
-これで、属性オブジェクトの任意のフィールドで [APIリクエスト]({{site.baseurl}}/api/endpoints/user_data/#user-attributes-object-specification) を使用して、指定されたユーザープロファイルで指定された値でその名前の属性を作成または更新できます。
+Attributesオブジェクトの任意のフィールドを持つ[APIリクエストを使用する]({{site.baseurl}}/api/endpoints/user_data/#user-attributes-object-specification)ことができるようになり、指定されたユーザプロファイルに、指定された値を持つその名前の属性を作成または更新する。

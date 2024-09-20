@@ -1,29 +1,29 @@
 ---
-nav_title: 従来のエディター
-article_title: アプリ内メッセージ用の従来のエディター
+nav_title: 従来の編集者
+article_title: 従来のアプリ内メッセージ用エディター
 page_order: 3
 layout: dev_guide
-guide_top_header: "アプリ内メッセージ用の従来のエディター"
-description: "このランディング ページには、アプリ内メッセージ用の従来のエディターに関する情報が掲載されています。"
-guide_top_text: "このランディング ページには、アプリ内メッセージ用の従来のエディターに関する情報が掲載されています。"
+guide_top_header: "従来のアプリ内メッセージ用エディター"
+description: "このランディングページには、従来のアプリ内メッセージ用エディタに関する情報が掲載されている。"
+guide_top_text: "このランディングページには、従来のアプリ内メッセージ用エディタに関する情報が掲載されている。"
 
-guide_featured_title: "セクション記事"
+guide_featured_title: "セクションの記事"
 guide_featured_list:
-- name: Creating an In-App Message
+- name: アプリ内メッセージを作成する
   link: /docs/user_guide/message_building_by_channel/in-app_messages/traditional/create/
-  fa_icon: fas fa-mobile-alt
-- name: Customize
+  image: /assets/img/braze_icons/phone-02.svg
+- name: カスタマイズする
   link: /docs/user_guide/message_building_by_channel/in-app_messages/traditional/customize/
-  fa_icon: fas fa-paintbrush
-- name: Dark Mode
+  image: /assets/img/braze_icons/brush-02.svg
+- name: ダークモード
   link: /docs/user_guide/message_building_by_channel/in-app_messages/traditional/dark-mode/
-  fa_icon: fas fa-circle-half-stroke
+  image: /assets/img/braze_icons/circle-cut.svg
 
 guide_menu_title: Templates
 guide_menu_list:
-- name: Simple Survey
+- name: 簡単な調査
   link: /docs/user_guide/message_building_by_channel/in-app_messages/traditional/templates/simple_survey/
-  fa_icon: fas fa-clipboard
+  image: /assets/img/braze_icons/clipboard.svg
 ---
 
 <br><br>

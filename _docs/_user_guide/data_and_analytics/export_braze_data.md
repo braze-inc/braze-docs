@@ -34,9 +34,6 @@ guide_menu_list:
   - name: Export Revenue Data
     link: /docs/user_guide/data_and_analytics/export_braze_data/exporting_revenue_data/
     image: /assets/img/braze_icons/coins-hand.svg
-  - name: Export News Feed Data
-    link: /docs/user_guide/data_and_analytics/export_braze_data/export_news_feed_data/
-    image: /assets/img/braze_icons/announcement-02.svg
   - name: Export Custom Event Data
     link: /docs/user_guide/data_and_analytics/export_braze_data/export_custom_event_data/
     image: /assets/img/braze_icons/settings-01.svg

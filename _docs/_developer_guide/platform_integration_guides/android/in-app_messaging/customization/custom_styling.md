@@ -15,7 +15,7 @@ channel:
 
 > Braze UI elements come with a default look and feel that matches the Android standard UI guidelines and provides a seamless experience. This reference article covers custom in-app messaging styling for your Android or FireOS application.
 
-You can see default styles in the Braze SDK's [`styles.xml`][6] file:
+You can see default styles in the Braze SDK's [`styles.xml`](https://github.com/braze-inc/braze-android-sdk/blob/master/android-sdk-ui/src/main/res/values/styles.xml) file:
 
 ```xml
   <style name="Braze"/>
@@ -40,7 +40,7 @@ To override a style, copy it in its entirety to the `styles.xml` file in your pr
 
 ## Custom font
 
-Braze allows setting a custom font using the [font family guide][79]. To use it, override the style for message text, headers, and button text and use the `fontFamily` attribute to instruct Braze to use your custom font family.
+Braze allows setting a custom font using the [font family guide]({{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/font_customization/#font-customization). To use it, override the style for message text, headers, and button text and use the `fontFamily` attribute to instruct Braze to use your custom font family.
 
 For example, to update the font on your in-app message button text, override the `Braze.InAppMessage.Button` style and reference your custom font family. The attribute value should point to a font family in your `res/font` directory.
 
@@ -64,7 +64,7 @@ As with other custom styles, the entire style must be copied over to your local 
 
 ## Setting a fixed orientation
 
-To set a fixed orientation for an in-app message, first [set a custom in-app message manager listener][19]. Then, call `setOrientation()` on the `IInAppMessage` object in the `beforeInAppMessageDisplayed()` delegate method:
+To set a fixed orientation for an in-app message, first [set a custom in-app message manager listener]({{site.baseurl}}/developer_guide/platform_integration_guides/android/in-app_messaging/customization/custom_listeners/). Then, call `setOrientation()` on the `IInAppMessage` object in the `beforeInAppMessageDisplayed()` delegate method:
 
 {% tabs %}
 {% tab JAVA %}
@@ -89,6 +89,3 @@ override fun beforeInAppMessageDisplayed(inAppMessage: IInAppMessage): InAppMess
 
 For tablet devices, in-app messages will appear in the user's preferred orientation style regardless of actual screen orientation.
 
-[19]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/in-app_messaging/customization/custom_listeners/
-[6]: https://github.com/braze-inc/braze-android-sdk/blob/master/android-sdk-ui/src/main/res/values/styles.xml
-[79]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/font_customization/#font-customization

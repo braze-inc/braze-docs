@@ -200,7 +200,7 @@ Basic Liquid is supported in the drag-and-drop email editor. To add personalizat
 1. Select **Personalization** under the **Content** section. 
 2. Select the personalization type. This includes default (standard) attributes, device attributes, custom attributes, and more. 
 3. Search for the attribute to be added.
-4. Copy your generated Liquid snippet and paste it into a content block in your email body.
+4. Copy your generated Liquid snippet and paste it into a  in your email body.
 
 Liquid personalization is not supported for image blocks and button link type fields. 
 

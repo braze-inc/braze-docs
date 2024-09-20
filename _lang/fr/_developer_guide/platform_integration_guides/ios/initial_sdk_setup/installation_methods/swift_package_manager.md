@@ -7,7 +7,7 @@ description: "Ce didacticiel couvre le SDK Braze en utilisant le Gestionnaire de
 
 ---
 
-{% multi_lang_include archive/objective-c-deprecation-notice.md %}
+{% multi_lang_include deprecations/objective-c.md %}
 
 # Intégration du Gestionnaire de paquets Swift
 

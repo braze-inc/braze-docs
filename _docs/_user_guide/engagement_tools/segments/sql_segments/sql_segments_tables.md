@@ -32,16 +32,14 @@ Table | Description
 [USERS_BEHAVIORS_APP_NEWSFEEDIMPRESSION_SHARED](#USERS_BEHAVIORS_APP_NEWSFEEDIMPRESSION_SHARED) | When a user views the News Feed
 [USERS_BEHAVIORS_APP_SESSIONEND_SHARED](#USERS_BEHAVIORS_APP_SESSIONEND_SHARED) | When a user ends a session on an app
 [USERS_BEHAVIORS_APP_SESSIONSTART_SHARED](#USERS_BEHAVIORS_APP_SESSIONSTART_SHARED) | When a user begins a session on an app
-[USERS_BEHAVIORS_GEOFENCE_DATAEVENT_SHARED](#USERS_BEHAVIORS_GEOFENCE_DATAEVENT_SHARED) | When a user triggers a geofenced area (for example, when they enter or exit a geofence). This event was batched with other events and received through the standard events endpoint, and therefore may not have been received by the endpoint in real-time.
-[USERS_BEHAVIORS_GEOFENCE_RECORDEVENT_SHARED](#USERS_BEHAVIORS_GEOFENCE_RECORDEVENT_SHARED) | When a user triggers a geofenced area (for example, when they enter or exit a geofence). This event was received through the dedicated geofence endpoint, and is therefore received in real-time as soon as a user's device detects that it has triggered a geofence. <br><br>In addition, due to rate limiting on the geofence endpoint, it is possible that some geofence events are not reflected as a RecordEvent. All geofence events, however, are represented by DataEvent (but potentially with some delay due to batching).
+[USERS_BEHAVIORS_GEOFENCE_DATAEVENT_SHARED](#USERS_BEHAVIORS_GEOFENCE_DATAEVENT_SHARED) | When a user triggers a geofenced area (for example, when they enter or exit a geofence). This event was batched with other events and received through the standard events endpoint, and therefore may not have been received by the endpoint in real time.
+[USERS_BEHAVIORS_GEOFENCE_RECORDEVENT_SHARED](#USERS_BEHAVIORS_GEOFENCE_RECORDEVENT_SHARED) | When a user triggers a geofenced area (for example, when they enter or exit a geofence). This event was received through the dedicated geofence endpoint and is therefore received in real-time as soon as a user's device detects that it has triggered a geofence. <br><br>In addition, due to rate limiting on the geofence endpoint, it is possible that some geofence events are not reflected as a RecordEvent. All geofence events, however, are represented by DataEvent (but potentially with some delay due to batching).
 [USERS_BEHAVIORS_SUBSCRIPTION_GLOBALSTATECHANGE_SHARED](#USERS_BEHAVIORS_SUBSCRIPTION_GLOBALSTATECHANGE_SHARED) | When a user is subscribed or unsubscribed globally from a channel such as email
 [USERS_BEHAVIORS_SUBSCRIPTIONGROUP_STATECHANGE_SHARED](#USERS_BEHAVIORS_SUBSCRIPTIONGROUP_STATECHANGE_SHARED) | When a user is subscribed or unsubscribed to or from a subscription group
-[USERS_CAMPAIGNS_ABORT_SHARED](#USERS_CAMPAIGNS_ABORT_SHARED) | An originally scheduled campaign message was aborted for some reason.
 [USERS_CAMPAIGNS_CONVERSION_SHARED](#USERS_CAMPAIGNS_CONVERSION_SHARED) | When a user converts for a campaign
 [USERS_CAMPAIGNS_ENROLLINCONTROL_SHARED](#USERS_CAMPAIGNS_ENROLLINCONTROL_SHARED) | When a user is enrolled in the control group for a campaign
 [USERS_CAMPAIGNS_FREQUENCYCAP_SHARED](#USERS_CAMPAIGNS_FREQUENCYCAP_SHARED) | When a user gets frequency capped for a campaign
-[USERS_CAMPAIGNS_REVENUE_SHARED](#USERS_CAMPAIGNS_REVENUE_SHARED) | When a user generates revenue with in the primary conversion period
-[USERS_CANVAS_ABORT_SHARED](#USERS_CANVAS_ABORT_SHARED) | An originally scheduled Canvas step message was aborted for some reason
+[USERS_CAMPAIGNS_REVENUE_SHARED](#USERS_CAMPAIGNS_REVENUE_SHARED) | When a user generates revenue within the primary conversion period
 [USERS_CANVAS_CONVERSION_SHARED](#USERS_CANVAS_CONVERSION_SHARED) | When a user converts for a Canvas conversion event
 [USERS_CANVAS_ENTRY_SHARED](#USERS_CANVAS_ENTRY_SHARED) | When a user enters a Canvas
 [USERS_CANVAS_EXIT_MATCHEDAUDIENCE_SHARED](#USERS_CANVAS_EXIT_MATCHEDAUDIENCE_SHARED) | When a user exits a Canvas because they match audience exit criteria
@@ -77,7 +75,7 @@ Table | Description
 [USERS_MESSAGES_PUSHNOTIFICATION_OPEN_SHARED](#USERS_MESSAGES_PUSHNOTIFICATION_OPEN_SHARED) | When a user opens a push notification or clicks a push notification button (including a CLOSE button that does NOT open the app). <br><br> Push button actions have multiple outcomes. No, Decline, and Cancel actions are "clicks", and Accept actions are "opens". Both are represented in this table, but they can be distinguished in the **BUTTON_ACTION_TYPE** column. For example, a query can be used to group by a `BUTTON_ACTION_TYPE` that is not No, Decline, or Cancel.
 [USERS_MESSAGES_PUSHNOTIFICATION_SEND_SHARED](#USERS_MESSAGES_PUSHNOTIFICATION_SEND_SHARED) | When we send a push notification to a user
 [USERS_MESSAGES_SMS_ABORT_SHARED](#USERS_MESSAGES_SMS_ABORT_SHARED) | An originally scheduled SMS message was aborted for some reason.
-[USERS_MESSAGES_SMS_CARRIERSEND_SHARED](#USERS_MESSAGES_SMS_CARRIERSEND_SHARED) | When an SMS message is sent to carrier
+[USERS_MESSAGES_SMS_CARRIERSEND_SHARED](#USERS_MESSAGES_SMS_CARRIERSEND_SHARED) | When an SMS message is sent to the carrier
 [USERS_MESSAGES_SMS_DELIVERY_SHARED](#USERS_MESSAGES_SMS_DELIVERY_SHARED) | When an SMS message is delivered
 [USERS_MESSAGES_SMS_DELIVERYFAILURE_SHARED](#USERS_MESSAGES_SMS_DELIVERYFAILURE_SHARED) | When Braze is unable to deliver the SMS message to the SMS service provider
 [USERS_MESSAGES_SMS_INBOUNDRECEIVE_SHARED](#USERS_MESSAGES_SMS_INBOUNDRECEIVE_SHARED) | When an SMS message is received from a user
@@ -93,7 +91,7 @@ Table | Description
 [USERS_MESSAGES_WHATSAPP_READ_SHARED](#USERS_MESSAGES_WHATSAPP_READ_SHARED) | When a user opens a WhatsApp message
 [USERS_MESSAGES_WHATSAPP_SEND_SHARED](#USERS_MESSAGES_WHATSAPP_SEND_SHARED) | When we send a WhatsApp message for a user
 [USERS_RANDOMBUCKETNUMBERUPDATE_SHARED](#USERS_RANDOMBUCKETNUMBERUPDATE_SHARED) | When a user's random bucket number is changed
-[USERS_USERDELETEREQUEST_SHARED](#USERS_USERDELETEREQUEST_SHARED) | When a user is deleted by customer request
+[USERS_USERDELETEREQUEST_SHARED](#USERS_USERDELETEREQUEST_SHARED) | When a user is deleted by a customer request
 [USERS_USERORPHAN_SHARED](#USERS_USERORPHAN_SHARED) | When a user is merged with another user's profile and the original profile is orphaned
 
 
@@ -390,30 +388,6 @@ Field | Type | Description
 
 ## Campaigns
 
-### USERS_CAMPAIGNS_ABORT_SHARED {#USERS_CAMPAIGNS_ABORT_SHARED}
-
-Field | Type | Description
-------|------|------------
-`id` | `string` | Globally unique ID for this event
-`user_id` | `string` | Braze ID of the user that performed this event
-`external_user_id` | `null,`&nbsp;`string` | [PII] External user ID of the user
-`device_id` | `null,`&nbsp;`string` | `device_id` that is tied to this user if user is anonymous
-`app_group_api_id` | `null,`&nbsp;`string` | API ID of the workspace this user belongs to
-`time` | `int` | Unix timestamp at which the event happened
-`dispatch_id` | `null,`&nbsp;`string` | ID of the dispatch this message belongs to
-`send_id` | `null,`&nbsp;`string` | Message send ID this message belongs to
-`campaign_id` | `string` | Internal-use Braze ID of the campaign this event belongs to
-`campaign_api_id` | `null,`&nbsp;`string` | API ID of the campaign this event belongs to
-`message_variation_api_id` | `null,`&nbsp;`string` | API ID of the message variation this user received
-`channel` | `null,`&nbsp;`string` | Channel this event belongs to
-`gender` | `null,`&nbsp;`string` | [PII] Gender of the user
-`country` | `null,`&nbsp;`string` | [PII] Country of the user
-`timezone` | `null,`&nbsp;`string` | Time zone of the user
-`language` | `null,`&nbsp;`string` | [PII] Language of the user
-`abort_type` | `null,`&nbsp;`string` | Type of abort, one of: `liquid_abort_message`, `quiet_hours`, `rate_limit`
-`abort_log` | `null,`&nbsp;`string` | [PII] Log message describing abort details (maximum of 128 characters)
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
-
 ### USERS_CAMPAIGNS_CONVERSION_SHARED {#USERS_CAMPAIGNS_CONVERSION_SHARED}
 
 Field | Type | Description
@@ -505,32 +479,6 @@ Field | Type | Description
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 ## Canvas
-
-### USERS_CANVAS_ABORT_SHARED {#USERS_CANVAS_ABORT_SHARED}
-
-| Field                                  | Type                     | Description                                                                |
-| -------------------------------------- | ------------------------ | -------------------------------------------------------------------------- |
-| `id`                                   | `string`,&nbsp;`null`    | Globally unique ID for this event                                          |
-| `user_id`                              | `string`,&nbsp;`null`    | Braze ID of the user that performed this event                              |
-| `external_user_id`                     | `string`,&nbsp;`null`    | [PII] External user ID of the user                                         |
-| `device_id`                            | `string`,&nbsp;`null`    | ID of the device that is tied to this user, if the user is anonymous       |
-| `app_group_id`                         | `string`,&nbsp;`null`    | Braze ID of the workspace this user belongs to                              |
-| `app_group_api_id`                     | `string`,&nbsp;`null`    | API ID of the workspace this user belongs to                               |
-| `time`                                 | `int`,&nbsp;`null`       | Unix timestamp at which the event happened                                 |
-| `canvas_id`                            | `string`,&nbsp;`null`    | (For Braze use only) ID of the Canvas this event belongs to                |
-| `canvas_api_id`                        | `string`,&nbsp;`null`    | API ID of the Canvas this event belongs to                                 |
-| `canvas_variation_api_id`              | `string`,&nbsp;`null`    | API ID of the Canvas variation this event belongs to                       |
-| `canvas_step_api_id`                   | `string`,&nbsp;`null`    | API ID of the Canvas step this event belongs to                            |
-| `canvas_step_message_variation_api_id` | `string`,&nbsp;`null`    | API ID of the Canvas step message variation this user received             |
-| `channel`                              | `string`,&nbsp;`null`    | Messaging Channel this event belongs to (email, push, etc.)                |
-| `gender`                               | `string`,&nbsp;`null`    | [PII] Gender of the user                                                   |
-| `country`                              | `string`,&nbsp;`null`    | [PII] Country of the user                                                  |
-| `timezone`                             | `string`,&nbsp;`null`    | Time zone of the user                                                       |
-| `language`                             | `string`,&nbsp;`null`    | [PII] Language of the user                                                 |
-| `abort_type`                           | `string`,&nbsp;`null`    | Type of abort, one of: "liquid_abort_message", "quiet_hours", "rate_limit" |
-| `abort_log`                            | `string`,&nbsp;`null`    | [PII] Log message describing abort details, maximum 128 characters         |
-| `sf_created_at`                        | `timestamp`,&nbsp;`null` | When this event was picked up by the Snowpipe                              |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 ### USERS_CANVAS_CONVERSION_SHARED {#USERS_CANVAS_CONVERSION_SHARED}
 
@@ -1095,6 +1043,10 @@ Field | Type | Description
 `language` | `null,`&nbsp;`string` | [PII] Language of the user
 `email_address` | `string` | [PII] email address of the user
 `ip_pool` | `null,`&nbsp;`string` | IP Pool from which the email send was made
+`message_extras` | `null,`&nbsp;`string` | [PII] A JSON string of the tagged key-value pairs during Liquid rendering
+`esp` | `null,`&nbsp;`string` | ESP related to the event (SparkPost or SendGrid)
+`from_domain` | `null,`&nbsp;`string` | Sending domain for the email
+`sf_created_at` | `timestamp`,&nbsp;`null` | When this event was picked up by the Snowpipe
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 ### USERS_MESSAGES_EMAIL_SOFTBOUNCE_SHARED {#USERS_MESSAGES_EMAIL_SOFTBOUNCE_SHARED}

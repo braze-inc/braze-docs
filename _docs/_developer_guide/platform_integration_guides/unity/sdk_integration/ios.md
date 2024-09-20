@@ -13,29 +13,29 @@ search_rank: .9
 
 > This reference article covers the iOS SDK integration for the Unity platform. Follow these guide to get Braze running in your Unity application. 
 
-If you are transitioning from a manual integration, read the instructions on [Transitioning to an automated integration][5].
+If you are transitioning from a manual integration, read the instructions on [Transitioning to an automated integration](#transitioning-from-manual-to-automated-integration-ios).
 
 ## Step 1: Choose your Braze Unity package
 
-The Braze [`.unitypackage`][41] bundles native bindings for the Android and iOS platforms, along with a C# interface.
+The Braze [`.unitypackage`](https://docs.unity3d.com/Manual/AssetPackages.html) bundles native bindings for the Android and iOS platforms, along with a C# interface.
 
-The Braze Unity package is available for download on the [Braze Unity releases page][42] with two integration options:
+The Braze Unity package is available for download on the [Braze Unity releases page](https://github.com/Appboy/appboy-unity-sdk/releases) with two integration options:
 
 1. `Appboy.unitypackage` only
   - This package bundles the Braze Android and iOS SDKs without any additional dependencies. With this integration method, there will not be proper functionality of Braze in-app messaging, and Content Cards features on iOS. If you intend on utilizing full Braze functionality without custom code, use the option below instead.
   - To use this integration option, ensure that the box next to `Import SDWebImage dependency` is *unchecked* in the Unity UI under "Braze Configuration".
 2. `Appboy.unitypackage` with `SDWebImage`
-  - This integration option bundles the Braze Android and iOS SDKs and the [SDWebImage][unity-1] dependency for the iOS SDK, which is required for the proper functionality of Braze in-app messaging, and Content Cards features on iOS. The `SDWebImage` framework is used for downloading and displaying images, including GIFs. If you intend on utilizing full Braze functionality, download and import this package.
+  - This integration option bundles the Braze Android and iOS SDKs and the [SDWebImage](https://github.com/SDWebImage/SDWebImage) dependency for the iOS SDK, which is required for the proper functionality of Braze in-app messaging, and Content Cards features on iOS. The `SDWebImage` framework is used for downloading and displaying images, including GIFs. If you intend on utilizing full Braze functionality, download and import this package.
   - To automatically import `SDWebImage`, be sure to *check* the box next to `Import SDWebImage dependency` in the Unity UI under "Braze Configuration".
 
-**iOS**: To see if you require the [SDWebImage][unity-1] dependency for your iOS project, visit the [iOS in-app message documentation][unity-4].<br>
-**Android**: As of Unity 2.6.0, the bundled Braze Android SDK artifact requires [AndroidX][unity-3] dependencies. If you were previously using a `jetified unitypackage`, then you can safely transition to the corresponding `unitypackage`.
+**iOS**: To see if you require the [SDWebImage](https://github.com/SDWebImage/SDWebImage) dependency for your iOS project, visit the [iOS in-app message documentation]({{ site.baseurl }}/developer_guide/platform_integration_guides/swift/in-app_messaging/overview/).<br>
+**Android**: As of Unity 2.6.0, the bundled Braze Android SDK artifact requires [AndroidX](https://developer.android.com/jetpack/androidx) dependencies. If you were previously using a `jetified unitypackage`, then you can safely transition to the corresponding `unitypackage`.
 
 ## Step 2: Import the package
 
 In the Unity Editor, import the package into your Unity project by navigating to **Assets > Import Package > Custom Package**. Next, click **Import**.
 
-Alternatively, follow the [Unity asset package import][41] instructions for a more detailed guide on importing custom Unity packages. 
+Alternatively, follow the [Unity asset package import](https://docs.unity3d.com/Manual/AssetPackages.html) instructions for a more detailed guide on importing custom Unity packages. 
 
 {% alert note %}
 If you only wish to import the iOS or Android plugin, deselect the `Plugins/Android` or `Plugins/iOS` subdirectory when importing the Braze `.unitypackage`.
@@ -55,20 +55,7 @@ If your application is already using another `UnityAppController` subclass, you 
 
 ## Basic SDK integration complete
 
-Braze should now be collecting data from your application, and your basic integration should be complete. For more information on integrating push, check out the following articles: [Android][53] and [iOS][50], [in-app messages][34], and [Content Cards][40].
+Braze should now be collecting data from your application, and your basic integration should be complete. For more information on integrating push, check out the following articles: [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/unity/push_notifications/android/) and [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/unity/push_notifications/ios/), [in-app messages]({{site.baseurl}}/developer_guide/platform_integration_guides/unity/in-app_messaging/), and [Content Cards]({{site.baseurl}}/developer_guide/platform_integration_guides/unity/content_cards/).
 
-To learn about advanced SDK integration options, check out [Advanced Implementation][54].
+To learn about advanced SDK integration options, check out [Advanced Implementation]({{site.baseurl}}/developer_guide/platform_integration_guides/unity/sdk_integration/advanced_use_cases/#ios-sdk-advanced).
 
-[5]: #transitioning-from-manual-to-automated-integration-ios
-[34]: {{site.baseurl}}/developer_guide/platform_integration_guides/unity/in-app_messaging/
-[35]: {{site.baseurl}}/developer_guide/platform_integration_guides/unity/news_feed/
-[40]: {{site.baseurl}}/developer_guide/platform_integration_guides/unity/content_cards/
-[41]: https://docs.unity3d.com/Manual/AssetPackages.html
-[42]: https://github.com/Appboy/appboy-unity-sdk/releases
-[50]: {{site.baseurl}}/developer_guide/platform_integration_guides/unity/push_notifications/ios/
-[53]: {{site.baseurl}}/developer_guide/platform_integration_guides/unity/push_notifications/android/
-[54]: {{site.baseurl}}/developer_guide/platform_integration_guides/unity/sdk_integration/advanced_use_cases/#ios-sdk-advanced
-[unity-1]: https://github.com/SDWebImage/SDWebImage
-[unity-2]: https://firebase.google.com/docs/unity/setup
-[unity-3]: https://developer.android.com/jetpack/androidx
-[unity-4]: {{ site.baseurl }}/developer_guide/platform_integration_guides/swift/in-app_messaging/overview/

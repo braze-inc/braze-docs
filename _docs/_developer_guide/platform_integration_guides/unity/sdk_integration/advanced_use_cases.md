@@ -17,7 +17,7 @@ description: "This reference article covers advanced SDK implementation for the 
 
 You can choose to customize and export the Braze Unity package using the provided scripts.
 
-1. Clone the [Braze Unity SDK GitHub project][1]:
+1. Clone the [Braze Unity SDK GitHub project](https://github.com/appboy/appboy-unity-sdk):
 
 	```bash
 	git clone git@github.com:braze-inc/braze-unity-sdk.git
@@ -36,7 +36,7 @@ To use the Braze Unity plugin with Prime31 plugins, edit your project's `Android
 
 ## Amazon ADM push
 
-Braze supports integrating [Amazon ADM push][10] into Unity apps. If you want to integrate Amazon ADM push, create a file called `api_key.txt` containing your ADM API key and place it in the `Plugins/Android/assets/` folder.  For more information on integrating Amazon ADM with Braze, visit our [ADM push integration instructions][11].
+Braze supports integrating [Amazon ADM push](https://developer.amazon.com/public/apis/engage/device-messaging) into Unity apps. If you want to integrate Amazon ADM push, create a file called `api_key.txt` containing your ADM API key and place it in the `Plugins/Android/assets/` folder.  For more information on integrating Amazon ADM with Braze, visit our [ADM push integration instructions]({{site.baseurl}}/developer_guide/platform_integration_guides/unity/push_notifications/adm_push_notifications/).
 
 ## Android SDK advanced implementation options {#android-sdk-advanced}
 
@@ -82,6 +82,3 @@ To take advantage of the automated iOS integration offered in the Braze Unity SD
 2. Remove Braze iOS libraries from your Unity or Xcode project (such as `Appboy_iOS_SDK.framework` and `SDWebImage.framework`) and [import the Braze Unity package](#step-1-importing-the-braze-unity-package) into your Unity project.
 3. Follow the integration instructions on [setting your API key through Unity](#step-2-setting-your-api-key).
 
-[1]: https://github.com/appboy/appboy-unity-sdk
-[10]: https://developer.amazon.com/public/apis/engage/device-messaging
-[11]: {{site.baseurl}}/developer_guide/platform_integration_guides/unity/push_notifications/adm_push_notifications/

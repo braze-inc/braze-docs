@@ -37,15 +37,15 @@ Braze には、ベースモデルを共有する4つのユニークなコンテ�
 
 |プロパティ | 説明 |
 |---|---|
-|`getId()` | Braze が設定したカードの ID を返します。|
-|`getViewed()` | カードがユーザーによって読まれているか未読であるかを反映するブール値を返します。|
-|`getExtras()` | このカードのキーと値のエクストラのマップを返します。|
-|`getCreated()`  | Braze でのカードの作成時刻の UNIX タイムスタンプを返します。|
-|`getIsPinned` | カードが固定されているかどうかを反映するブール値を返します。|
-|`getOpenUriInWebView()`  | このカードの URI を Braze WebView で開くかどうかを反映する <br> ブール値を返します。|
-|`getExpiredAt()` | カードの有効期限を取得します。|
-|`getIsRemoved()` | エンドユーザーがこのカードを閉じたかどうかを反映するブール値を返します。|
-|`getIsDismissible()`  | カードが固定されているかどうかを反映するブール値を返します。|
+|`getId()` | Brazeが設定したカードのIDを返す。|
+|`getViewed()` | カードがユーザーによって既読か未読かを反映したブール値を返す。|
+|`getExtras()` | このカードのKey-Valueエクストラのマップを返す。|
+|`getCreated()`  | カードの作成時刻をBrazeからunixタイムスタンプで返す。|
+|`getIsPinned` | カードがピン留めされているかどうかを示すブール値を返す。|
+|`getOpenUriInWebView()`  | このカードの Uris を開くべきかどうかを示すブール値を返す。 <br> をBraze WebViewに表示するかどうか。|
+|`getExpiredAt()` | カードの有効期限を取得する。|
+|`getIsRemoved()` | エンドユーザーがこのカードを退会したかどうかを示すブール値を返す。|
+|`getIsDismissible()`  | カードがピン留めされているかどうかを示すブール値を返す。|
 {: .reset-td-br-1 .reset-td-br-2}
 
 ### 画像のみの画像カードのプロパティ{#banner-image-card-for-android}
@@ -54,9 +54,9 @@ Braze には、ベースモデルを共有する4つのユニークなコンテ�
 
 |プロパティ | 説明 |
 |---|---|
-|`getImageUrl()` | カードの画像の URL を返します。|
-|`getUrl()` | カードがクリックされた後に開かれる URL を返します。HTTP (S) URL でもプロトコル URL でもかまいません。|
-|`getDomain()` | プロパティ URL のリンクテキストを返します。|
+|`getImageUrl()` | カードの画像のURLを返す。|
+|`getUrl()` | カードがクリックされた後に開かれるURLを返す。これはHTTP(s)URLまたはプロトコルURLである。|
+|`getDomain()` | プロパティ URL のリンクテキストを返す。|
 {: .reset-td-br-1 .reset-td-br-2}
 
 ### キャプション付き画像カードのプロパティ{#captioned-image-card-for-android}
@@ -65,11 +65,11 @@ Braze には、ベースモデルを共有する4つのユニークなコンテ�
 
 |プロパティ | 説明 |
 |---|---|
-|`getImageUrl()` | カードの画像の URL を返します。|
-|`getTitle()` | カードのタイトルテキストを返します。|
-|`getDescription()` | カードの本文テキストを返します。|
-|`getUrl()` | カードがクリックされた後に開かれる URL を返します。HTTP (s) URL でもプロトコル URL でもかまいません。|
-|`getDomain()` | プロパティ URL のリンクテキストを返します。|
+|`getImageUrl()` | カードの画像のURLを返す。|
+|`getTitle()` | カードのタイトルテキストを返す。|
+|`getDescription()` | カードの本文を返す。|
+|`getUrl()` | カードがクリックされた後に開かれるURLを返す。これはHTTP(s)URLまたはプロトコルURLである。|
+|`getDomain()` | プロパティ URL のリンクテキストを返す。 |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ### クラシックカードのプロパティ{#text-Announcement-card-for-android}
@@ -78,22 +78,22 @@ Braze には、ベースモデルを共有する4つのユニークなコンテ�
 
 |プロパティ | 説明 |
 |---|---|
-|`getTitle()` | カードのタイトルテキストを返します。|
-|`getDescription()` | カードの本文を返します。|
-|`getUrl()` | カードがクリックされた後に開かれる URL を返します。HTTP (s) URL でもプロトコル URL でもかまいません。|
-|`getDomain()` | プロパティ URL のリンクテキストを返します。|
-|`getImageUrl()` | カードの画像の URL を返します。クラシックショートニュースカードにのみ適用されます。|
+|`getTitle()` | カードのタイトルテキストを返す。 |
+|`getDescription()` | カードの本文を返す。 |
+|`getUrl()` | カードがクリックされた後に開かれるURLを返す。これはHTTP(s)URLまたはプロトコルURLである。 | 
+|`getDomain()` | プロパティ URL のリンクテキストを返す。 |
+|`getImageUrl()` | クラシックなShort News Cardにのみ適用される。 |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## カードメソッド
 
 すべての[`Card`][1]データモデルオブジェクトは、ユーザーイベントを Braze サーバーに記録するための次の分析方法を提供します。
 
-|メソッド | 説明 |
+|方法 | 説明 |
 |---|---|
-|`logImpression()` | 特定のカードのインプレッションを Braze に手動で記録します。|
-|`logClick()` | 特定のカードのクリックを Braze に手動で記録します。|
-|`setIsDismissed()` | 特定のカードの消去を手動で Braze に記録します。カードがすでに却下済みとしてマークされている場合、そのカードを再度却下済みとしてマークすることはできません。|
+|`logImpression()` | 特定のカードのインプレッションを手動でBrazeに記録する。 |
+|`logClick()` | 特定のカードのBrazeへのクリックを手動で記録する。 |
+|`setIsDismissed()` | 特定のカードのBrazeへの解雇を手動で記録する。カードがすでに却下済みとしてマークされている場合、そのカードを再度却下済みとしてマークすることはできません。 |
 {: .reset-td-br-1 .reset-td-br-2}
 
 [1]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/index.html

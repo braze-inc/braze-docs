@@ -27,7 +27,7 @@ channel:
 
 ## 予期したアプリ内メッセージが表示されなかった
 
-ほとんどのアプリ内メッセージの問題は、配信と表示の 2 つの主要なカテゴリに分けることができます。予想されるアプリ内メッセージがデバイスで表示されない原因をトラブルシューティングするには、まず、[アプリ内メッセージがデバイスに配信された][troubleshooting\_iams\_11]ことを確認してから[メッセージ表示のトラブルシューティング][troubleshooting\_iams\_12]を行う必要があります。
+ほとんどのアプリ内メッセージの問題は、配信と表示の 2 つの主要なカテゴリに分けることができます。期待したアプリ内メッセージがデバイスに表示されなかった原因をトラブルシューティングするには、まず、\[アプリ内メッセージがデバイスに配信されたことを確認する必要がある]\[troubleshooting_iams_11]]、次に\[メッセージ表示のトラブルシューティング]\[troubleshooting_iams_12]]。
 
 ## アプリ内メッセージ配信 {#troubleshooting-in-app-message-delivery}
 
@@ -35,52 +35,52 @@ SDK はセッション開始時に Braze サーバーからアプリ内メッセ
 
 ### メッセージが要求され、返されたかどうかを確認する
 
-1. ダッシュボードで[テストユーザー][troubleshooting\_iams\_1]として自分自身を追加します。
+1. ダッシュボードの\[test user]\[troubleshooting_iams_1] ] として自分を追加する。
 2. ユーザーを対象としたアプリ内メッセージキャンペーンを設定します。
 3. アプリケーションで新しいセッションが発生することを確認します。
-4. [イベントユーザーログ][troubleshooting\_iams\_3]を使用して、セッション開始時にデバイスがアプリ内メッセージを要求していることを確認します。テストユーザーのセッション開始イベントに関連付けられた SDK リクエストを見つけます。
-  - トリガーされたアプリ内メッセージをリクエストするためのアプリであれば、[**レスポンスデータ**] の [**リクエスト済みレスポンス**] フィールドに `trigger` が表示されます。
-  - アプリが元のアプリ内メッセージをリクエストするためのものだった場合、[**レスポンスデータ］**] の [**リクエスト済みレスポンス**] フィールドに `in_app` が表示されます。
-5. [イベントユーザーログ][troubleshooting\_iams\_3]を使用して、応答データで正しいアプリ内メッセージが返されるかどうかを確認します。<br>![][troubleshooting\_iams\_5]
+4. event user logs]\[troubleshooting_iams_3] ] を使って、デバイスがセッション開始時にアプリ内メッセージを要求していることを確認する。テストユーザーのセッション開始イベントに関連付けられた SDK リクエストを見つけます。
+  - トリガーされたアプリ内メッセージをリクエストするためのアプリであれば、\[**レスポンスデータ**] の \[**リクエスト済みレスポンス**] フィールドに `trigger` が表示されます。
+  - アプリが元のアプリ内メッセージをリクエストするためのものだった場合、\[**レスポンスデータ］**] の \[**リクエスト済みレスポンス**] フィールドに `in_app` が表示されます。
+5. event user logs]\[troubleshooting_iams_3] ] を使って、レスポンスデータに正しいアプリ内メッセージが返されているかどうかをチェックする。<br>![]\[トラブルシューティング_iams_5]
 
 #### リクエストされていないメッセージのトラブルシューティング
 
 アプリ内メッセージがリクエストされていない場合、アプリ内メッセージはセッション開始時にリフレッシュされるため、アプリがセッションを正しくトラッキングしていない可能性があります。また、アプリのセッションタイムアウトセマンティクスに基づいて、アプリが実際にセッションを開始していることを確認してください:
 
-![成功したセッション開始イベントを表示するイベントユーザーログで見つかった SDK リクエスト。][troubleshooting\_iams\_10]
+![]\[troubleshooting_iams_10] セッション開始イベントが成功したことを示すイベントユーザーログでSDKリクエストが見つかった。]
 
 ### メッセージが返されない問題のトラブルシューティング
 
 アプリ内メッセージが返されない場合、キャンペーンターゲティングの問題が発生している可能性があります。
 
 - セグメントにユーザーが含まれていない。
-  - ユーザーの[\*\*エンゲージメント**][troubleshooting_iams_6]タブで、[**セグメント**] に正しいセグメントが表示されているかどうかを確認します。
+  - ユーザーの\[\*\*Engagement**]\[troubleshooting_iams_6] ] タブで、**\[Segments]の**下に正しいセグメントが表示されているか確認する。
 - ユーザーが以前にアプリ内メッセージを受け取ったことがあり、再度受け取る資格がなかった。
-  - **キャンペーン作成ツール**の**配信**ステップの[キャンペーン再適格性設定][troubleshooting\_iams\_7]を確認し、再適格性設定がテスト設定と整合していることを確認します。
+  - **キャンペーンコンポーザーの** **配信**ステップの下にある\[キャンペーンの再資格設定]\[troubleshooting_iams_7] ] をチェックし、再資格設定があなたのテストセットアップと一致していることを確認する。
 - ユーザーがキャンペーンのフリークエンシーキャップに達した。
-  - キャンペーン[フリークエンシーキャップ設定][troubleshooting\_iams\_8]を確認し、テスト設定と整合していることを確認します。
+  - キャンペーン\[フリークエンシーキャップ設定]]\[troubleshooting_iams_8] ] をチェックし、テストのセットアップと一致していることを確認する。
 - キャンペーンにコントロールグループが存在した場合、ユーザーがコントロールグループに分類された可能性があります。
-  - キャンペーンバリアントが [**制御**] に設定されている受信キャンペーンバリアントフィルターでセグメントを作成し、ユーザーがそのセグメントに分類されたかどうかを確認することで、これが発生したかどうかを確認できます。
+  - キャンペーンバリアントが \[**制御**] に設定されている受信キャンペーンバリアントフィルターでセグメントを作成し、ユーザーがそのセグメントに分類されたかどうかを確認することで、これが発生したかどうかを確認できます。
   - 統合テスト目的でキャンペーンを作成する場合は、コントロールグループの追加をオプトアウトしてください。
 
 ## アプリ内メッセージ表示 {#troubleshooting-in-app-message-display}
 
 アプリがアプリ内メッセージのリクエストと受信に成功しているのに表示されない場合は、デバイス側のロジックによって表示が妨げられている可能性があります。
 
-- トリガーされたアプリ内メッセージは、[トリガー間の最小時間間隔][troubleshooting\_iams\_9] (デフォルトは30秒) に基づいてレート制限されます。
+- トリガーされたアプリ内メッセージは、\[トリガー間の最小時間間隔]\[troubleshooting_iams_9]] に基づいてレート制限され、デフォルトは30秒である。
 - アプリ内メッセージ処理をカスタマイズするようにデリゲートを設定している場合は、デリゲートがアプリ内メッセージ表示に影響していないことを確認してください。
 - 画像のダウンロードに失敗すると、画像付きのアプリ内メッセージが表示されなくなります。`BrazeInAppMessageManager` が正しく登録されていない場合、画像のダウンロードは常に失敗します。画像のダウンロードに失敗していないか、デバイスのログを確認してください。
 - 端末の向きがアプリ内メッセージで指定された向きと一致しなかった場合、アプリ内メッセージは表示されません。デバイスの向きが正しいことを確認してください。
 
-[troubleshooting\_iams\_1]: {{ site.baseurl }}/user_guide/administrative/app_settings/developer_console/internal_groups_tab/#adding-test-users
-[troubleshooting\_iams\_2]: {{ site.baseurl }}/user_guide/administrative/app_settings/developer_console/event_user_log_tab/#event-user-log-tab
-[troubleshooting\_iams\_3]: {{ site.baseurl }}/user_guide/administrative/app_settings/developer_console/event_user_log_tab/#event-user-log-tab
-[troubleshooting\_iams\_4]: #session-tracking
-[troubleshooting\_iams\_5]:  {% image_buster /assets/img_archive/event_user_log_iams.png %}
-[troubleshooting\_iams\_6]: {{ site.baseurl }}/user_guide/engagement_tools/segments/using_user_search/#engagement-tab
-[troubleshooting\_iams\_7]: {{ site.baseurl }}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/reeligibility/
-[troubleshooting\_iams\_8]: {{ site.baseurl }}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/#frequency-capping
-[troubleshooting\_iams\_9]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/in-app_messaging/in-app_message_delivery/#minimum-time-interval-between-triggers
-[troubleshooting\_iams\_10]: {% image_buster /assets/img_archive/event_user_log_session_start.png %}
-[troubleshooting\_iams\_11]: #troubleshooting-in-app-message-delivery
-[troubleshooting\_iams\_12]: #troubleshooting-in-app-message-display
+\[troubleshooting_iams_1] ：{{ site.baseurl }}/user_guide/administrative/app_settings/developer_console/internal_groups_tab/#adding-test-users
+\[troubleshooting_iams_2]:{{ site.baseurl }}/user_guide/administrative/app_settings/developer_console/event_user_log_tab/#event-user-log-tab
+\[troubleshooting_iams_3]:{{ site.baseurl }}/user_guide/administrative/app_settings/developer_console/event_user_log_tab/#event-user-log-tab
+\[troubleshooting_iams_4]: #セッショントラッキング
+\[troubleshooting_iams_5] ：  {% image_buster /assets/img_archive/event_user_log_iams.png %}
+\[troubleshooting_iams_6]:{{ site.baseurl }}/user_guide/engagement_tools/segments/using_user_search/#engagement-tab
+\[troubleshooting_iams_7]:{{ site.baseurl }}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/reeligibility/
+\[troubleshooting_iams_8]:{{ site.baseurl }}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/#frequency-capping
+\[troubleshooting_iams_9] ： {{site.baseurl}}/developer_guide/platform_integration_guides/android/in-app_messaging/in-app_message_delivery/#minimum-time-interval-between-triggers
+\[troubleshooting_iams_10] ： {% image_buster /assets/img_archive/event_user_log_session_start.png %}
+\[troubleshooting_iams_11]: #アプリ内メッセージ配信のトラブルシューティング
+\[troubleshooting_iams_12]: #アプリ内メッセージ表示のトラブルシューティング

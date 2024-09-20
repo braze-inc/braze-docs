@@ -31,8 +31,8 @@ Create a Taxi template on the Taxi platform. After the template is created, navi
 
 ### Step 2: Create Braze connector
 
-1. In the dialogue that appears, click the **Add New** button and select **Braze** from the drop-down. 
-2. Click **Braze** to edit the Braze connector settings.
+1. In the dialogue that appears, select the **Add New** button, then select **Braze** from the dropdown. 
+2. Select **Braze** to edit the Braze connector settings.
 3. Enter your Braze endpoint and your Braze API key.
 
 Your connector field will change colors after details with correct permissions are provided. If this field does not change, check that your fields align with the requirements listed.

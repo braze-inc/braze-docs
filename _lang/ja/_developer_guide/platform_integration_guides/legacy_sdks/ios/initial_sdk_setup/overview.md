@@ -14,27 +14,27 @@ guide_featured_list:
 - name: CocoaPods
   link: /docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/installation_methods/cocoapods/
   image: /assets/img/cocoapods.png
-- name: Swift Package Manager (SPM)
+- name: スイフトパッケージマネージャ (SPM)
   link: /docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/installation_methods/swift_package_manager/
-  image: /assets/img/swift.png
+  image: /assets/img/braze_icons/swift.svg
 - name: Carthage
   link: /docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/installation_methods/carthage_integration/
-  image: /assets/img/carthage.jpeg
-- name: Manual
+  image: /assets/img/carthage.png
+- name: マニュアル
   link: /docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/installation_methods/manual_integration_options/
-  fa_icon: fas fa-toolbox
-- name: "Completing the Integration"
+  image: /assets/img/braze_icons/tool-01.svg
+- name: "統合の完了"
   link: /docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/completing_integration/
-  fa_icon: fas fa-flag-checkered
-- name: "Other Optional SDK Customizations"
+  image: /assets/img/braze_icons/flag-05.svg
+- name: "その他のオプションSDKカスタマイズ"
   link: /docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/other_sdk_customizations/
-  fa_icon: fas fa-id-card-alt
+  image: /assets/img/braze_icons/user-square.svg
 
 noindex: true
 ---
 <br>
 
-{% multi_lang_include archive/objective-c-deprecation-notice.md %}
+{% multi_lang_include deprecations/objective-c.md %}
 
 Braze iOS SDK をインストールすると、基本的な分析機能 (セッション処理) と基本的なアプリ内メッセージが提供されます。追加のチャネルと機能のために統合をさらにカスタマイズする必要があります。<br> <br> Braze iOS SDK は、CocoaPods、Carthage、Swift Package Manager、または手動統合を使用してインストールまたは更新できます。<br> <br> さらに、Braze iOS SDK はRubyMotion アプリを完全にサポートしています。
 

@@ -33,9 +33,9 @@ The **Subscriptions and Usage** tab includes usage graphs and your contract deta
 
 Here, you will find usage graphs that apply to your workspaces. You may find your own dashboard shows different usage metrics based on the products you have purchased.
 
-![Usage graphs showing Monthly Active Users, Monthly Unique Visitors, and email sends][3]{: style="max-width:90%;"}
+![Usage graph showing Monthly Unique Visitors][3]{: style="max-width:90%;"}
 
-Usage graphs like these are particularly helpful when trying to budget usage and gain a deeper understanding of what workspaces contribute to overall usage.
+These graphs can show monthly active users, monthly unique visitors, and email sends. Usage graphs like these are particularly helpful when trying to budget usage and gain a deeper understanding of what workspaces contribute to overall usage.
 
 ### Contract details
 
@@ -105,22 +105,27 @@ The **Drill to Workspaces** lets you view granular data point data for each of y
 
 ![Drill to workspaces for billable data points][9]{: style="max-width:90%;"}
 
-The **Workspace Level Data Point Usage by Category** table enables you to see data point counts for each category of data points. For example, you can see the number of data points driven by sessions and custom events. You can use this table to identify the categories of data points that are driving data point consumption for the workspace.
+##### Workspace level data point usage by category
+
+Select the menu next to a workspace name and then **Billable Data Points For WORKSPACE_NAME** to view the **Workspace Level Data Point Usage by Category** table. This table shows you data point counts for each category of data points. For example, you can see the number of data points driven by sessions and custom events. You can use this table to identify the categories of data points that are driving data point consumption for the workspace.
 
 ![Workspace Level Data Point Usage by Category][10]{: style="max-width:90%;"}
 
-The **Workspace Level Data Point Usage over Time** table enables you to see how that workspace's data point usage has changed throughout your billing cycle.
+##### Workspace level data point usage over time
+
+The **Workspace Level Data Point Usage over Time** table shows you how that workspace's data point usage has changed throughout your billing cycle.
 
 ![Workspace Level Data Point Usage over Time][11]{: style="max-width:90%;"}
 
-The **App Level Total Data Point Usage** table enables you to see data point usage for each of the apps in your workspace. You can use this table to identify which apps are driving data point consumption for the workspace.
+##### Appl level total data point usage
+
+The **App Level Total Data Point Usage** table shows you data point usage for each of the apps in your workspace. You can use this table to identify which apps are driving data point consumption for the workspace.
 
 ![App Level Total Data Point Usage table for multiple apps][12]{: style="max-width:90%;"}
 
 
-
 [2]: {% image_buster /assets/img/subscription_and_billing2.png %}
-[3]: {% image_buster /assets/img/subscription_and_billing3.png %}
+[3]: {% image_buster /assets/img/subscription_and_billing4.png %}
 [4]: {% image_buster /assets/img/most_used_events_attributes_time.png %}
 [5]: {% image_buster /assets/img/contract_details.png %}
 [6]: {% image_buster /assets/img/current_billing_cycle.png %}

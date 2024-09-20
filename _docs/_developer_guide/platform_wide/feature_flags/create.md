@@ -13,7 +13,7 @@ platform:
 
 # Creating feature flags
 
-> Feature flags allow you to remotely enable or disable functionality for a selection of users. Create a new feature flag within the Braze dashboard. Provide a name and an `ID`, a target audience, and a percentage of users for whom to enable to this feature. Then, using that same `ID` in your app or website's code, you can conditionally run certain parts of your business logic. To learn more about feature flags and how you can use them in Braze, see [About feature flags][5].
+> Feature flags allow you to remotely enable or disable functionality for a selection of users. Create a new feature flag within the Braze dashboard. Provide a name and an `ID`, a target audience, and a percentage of users for whom to enable to this feature. Then, using that same `ID` in your app or website's code, you can conditionally run certain parts of your business logic. To learn more about feature flags and how you can use them in Braze, see [About feature flags]({{site.baseurl}}/developer_guide/platform_wide/feature_flags/about/).
 
 ## Prerequisites
 
@@ -25,7 +25,7 @@ To use feature flags, ensure your SDKs are up to date with at least these minimu
 
 ### Braze permissions
 
-To manage feature flags in the dashboard, you'll either need to be an Administrator, or have the following [permissions][9]:
+To manage feature flags in the dashboard, you'll either need to be an Administrator, or have the following [permissions]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/):
 
 | Permission                                                                    | What you can do                           |
 |-------------------------------------------------------------------------------|-------------------------------------------|
@@ -39,7 +39,7 @@ To manage feature flags in the dashboard, you'll either need to be an Administra
 
 Go to **Messaging** > **Feature Flags**, then select **Create Feature Flag**.
 
-![A list of previously created feature flags on the Braze dashboard][1]{: style="max-width:75%"}
+![A list of previously created feature flags on the Braze dashboard]({% image_buster /assets/img/feature_flags/feature-flags-list.png %}){: style="max-width:75%"}
 
 ### Step 2: Fill out the details
 
@@ -80,13 +80,13 @@ There is no limit to the number of properties you can add. However, a feature fl
 
 Before rolling out a feature flag, you need to choose a [segment]({{site.baseurl}}/user_guide/engagement_tools/segments/) of users to target. Use the **Add Filter** dropdown menu to filter users out of your target audience. Add multiple filters to narrow your audience further.
 
-![Two dropdown menus. The first reads Target Users by Segment. The second reads Additional Filters.][3]
+![Two dropdown menus. The first reads Target Users by Segment. The second reads Additional Filters.]({% image_buster /assets/img/feature_flags/feature-flags-targeting.png %})
 
 ### Step 5: Set the rollout traffic {#rollout}
 
-Feature flags are always disabled by default, allowing you to separate your feature release's date from your total user activation. To begin your rollout, use the **Rollout Traffic** slider to choose the percentage of random users in your selected segment to receive this new feature.
+By default, Feature flags are always disabled, which allows you to separate your feature release's date from your total user activation. To begin your rollout, use the **Rollout Traffic** slider, or enter a percentage in the text box, to choose the percentage of random users in your selected segment to receive this new feature.
 
-![A slider labeled Rollout Traffic, spanning between 0 and 100.][4]
+![A slider labeled Rollout Traffic, spanning between 0 and 100.]({% image_buster /assets/img/feature_flags/feature-flags-rollout.png %}){: style="max-width:75%;"}
 
 {% alert important %}
 Do not set your rollout traffic above 0% until you are ready for your new feature to go live. When you initially define your feature flag in the dashboard, leave this setting at 0%.
@@ -209,7 +209,7 @@ end if
 
 ### Logging a feature flag impression {#impressions}
 
-Track a feature flag impression whenever a user has had an opportunity to interact with your new feature, or when they __could__ have interacted if the feature is disabled (in the case of a control group in an A/B test).
+Track a feature flag impression whenever a user has had an opportunity to interact with your new feature, or when they __could__ have interacted if the feature is disabled (in the case of a control group in an A/B test). Feature flag impressions are only logged once per session. 
 
 Usually, you can put this line of code directly underneath where you reference your feature flag in your app:
 
@@ -283,19 +283,25 @@ If a feature flag is not enabled, or a property you reference does not exist, th
 {% tab JavaScript %}
 
 ```javascript
-// Feature flag instance
+// Returns the Feature Flag instance
 const featureFlag = braze.getFeatureFlag("expanded_user_profile");
-// String properties
+
+// Returns the String property
 const stringProperty = featureFlag.getStringProperty("color");
-// Boolean properties
+
+// Returns the boolean property
 const booleanProperty = featureFlag.getBooleanProperty("expanded");
-// Number properties
+
+// Returns the number property
 const numberProperty = featureFlag.getNumberProperty("height");
-// returns the property as a number in milliseconds
+
+// Returns the Unix UTC millisecond timestamp property as a number
 const timestampProperty = featureFlag.getTimestampProperty("account_start");
-// returns the property as a string of the image URL
+
+// Returns the image property as a String of the image URL
 const imageProperty = featureFlag.getImageProperty("homepage_icon");
-// returns the JSON property as as JSON object 
+
+// Returns the JSON object property as a FeatureFlagJsonPropertyValue
 const jsonProperty = featureFlag.getJsonProperty("footer_settings");
 ```
 
@@ -303,19 +309,25 @@ const jsonProperty = featureFlag.getJsonProperty("footer_settings");
 {% tab Swift %}
 
 ```swift
-// Feature flag instance
+// Returns the Feature Flag instance
 let featureFlag: FeatureFlag = braze.featureFlags.featureFlag(id: "expanded_user_profile")
-// String properties
+
+// Returns the String property
 let stringProperty: String? = featureFlag.stringProperty(key: "color")
-// Boolean properties
+
+// Returns the boolean property
 let booleanProperty: Bool? = featureFlag.boolProperty(key: "expanded")
-// Number properties
+
+// Returns the number property as a double
 let numberProperty: Double? = featureFlag.numberProperty(key: "height")
-// returns the property as a TimeInterval in milliseconds
+
+// Returns the Unix UTC millisecond timestamp property as an integer
 let timestampProperty : Int? = featureFlag.timestampProperty(key: "account_start")
-// returns the property as a string of the image URL 
+
+// Returns the image property as a String of the image URL
 let imageProperty : String? = featureFlag.imageProperty(key: "homepage_icon")
-// returns the property as a [String: Any] dictionary
+
+// Returns the JSON object property as a [String: Any] dictionary
 let jsonObjectProperty : [String: Any]? = featureFlag.jsonObjectProperty(key: "footer_settings")
 ```
 
@@ -323,19 +335,25 @@ let jsonObjectProperty : [String: Any]? = featureFlag.jsonObjectProperty(key: "f
 {% tab Java %}
 
 ```java
-// Feature flag instance
+// Returns the Feature Flag instance
 FeatureFlag featureFlag = braze.getFeatureFlag("expanded_user_profile");
-// String properties
+
+// Returns the String property
 String stringProperty = featureFlag.getStringProperty("color");
-// Boolean properties
+
+// Returns the boolean property
 Boolean booleanProperty = featureFlag.getBooleanProperty("expanded");
-// Number properties
+
+// Returns the number property
 Number numberProperty = featureFlag.getNumberProperty("height");
-// returns the property as a nullable long in milliseconds
+
+// Returns the Unix UTC millisecond timestamp property as a long
 Long timestampProperty = featureFlag.getTimestampProperty("account_start");
-// returns the property as a string of the image URL 
+
+// Returns the image property as a String of the image URL
 String imageProperty = featureFlag.getImageProperty("homepage_icon");
-// returns the property as a JSON Object
+
+// Returns the JSON object property as a JSONObject
 JSONObject jsonObjectProperty = featureFlag.getJSONProperty("footer_settings");
 ```
 
@@ -343,19 +361,25 @@ JSONObject jsonObjectProperty = featureFlag.getJSONProperty("footer_settings");
 {% tab Kotlin %}
 
 ```kotlin
-// feature flag instance
+// Returns the Feature Flag instance
 val featureFlag = braze.getFeatureFlag("expanded_user_profile")
-// string properties
+
+// Returns the String property
 val stringProperty: String? = featureFlag.getStringProperty("color")
-// boolean properties
+
+// Returns the boolean property
 val booleanProperty: Boolean? = featureFlag.getBooleanProperty("expanded")
-// number properties
+
+// Returns the number property
 val numberProperty: Number? = featureFlag.getNumberProperty("height")
-// returns the property as a nullable long in milliseconds
+
+// Returns the Unix UTC millisecond timestamp property as a long
 val timestampProperty: Long? = featureFlag.getTimestampProperty("account_start")
-// returns the property as a string of the image URL 
-val String imageProperty: String?  = featureFlag.getImageProperty("homepage_icon")
-// returns the property as a JSON Object
+
+// Returns the image property as a String of the image URL
+val imageProperty: String?  = featureFlag.getImageProperty("homepage_icon")
+
+// Returns the JSON object property as a JSONObject
 val jsonObjectProperty: JSONObject? = featureFlag.getJSONProperty("footer_settings")
 ```
 
@@ -363,61 +387,126 @@ val jsonObjectProperty: JSONObject? = featureFlag.getJSONProperty("footer_settin
 {% tab React Native %}
 
 ```javascript
-// String properties
+// Returns the String property
 const stringProperty = await Braze.getFeatureFlagStringProperty("expanded_user_profile", "color");
-// Boolean properties
+
+// Returns the boolean property
 const booleanProperty = await Braze.getFeatureFlagBooleanProperty("expanded_user_profile", "expanded");
-// Number properties
+
+// Returns the number property
 const numberProperty = await Braze.getFeatureFlagNumberProperty("expanded_user_profile", "height");
+
+// Returns the Unix UTC millisecond timestamp property as a number
+const timestampProperty = await Braze.getFeatureFlagTimestampProperty("expanded_user_profile", "account_start");
+
+// Returns the image property as a String of the image URL
+const imageProperty = await Braze.getFeatureFlagImageProperty("expanded_user_profile", "homepage_icon");
+
+// Returns the JSON object property as an object
+const jsonObjectProperty = await Braze.getFeatureFlagJSONProperty("expanded_user_profile", "footer_settings");
 ```
 
 {% endtab %}
 {% tab Unity %}
 
 ```csharp
-// Feature flag instance
+// Returns the Feature Flag instance
 var featureFlag = Appboy.AppboyBinding.GetFeatureFlag("expanded_user_profile");
-// String properties
-var stringProperty = featureFlag.getStringProperty("color");
-// Boolean properties
-var booleanProperty = featureFlag.getBooleanProperty("expanded");
-// Number property as integer
-var integerProperty = featureFlag.getIntegerProperty("height");
-// Number property as double
-var doubleProperty = featureFlag.getDoubleProperty("height");
+
+// Returns the String property
+var stringProperty = featureFlag.GetStringProperty("color");
+
+// Returns the boolean property
+var booleanProperty = featureFlag.GetBooleanProperty("expanded");
+
+// Returns the number property as an integer
+var integerProperty = featureFlag.GetIntegerProperty("height");
+
+// Returns the number property as a double
+var doubleProperty = featureFlag.GetDoubleProperty("height");
+
+// Returns the Unix UTC millisecond timestamp property as a long
+var timestampProperty = featureFlag.GetTimestampProperty("account_start");
+
+// Returns the image property as a String of the image URL
+var imageProperty = featureFlag.GetImageProperty("homepage_icon");
+
+// Returns the JSON object property as a JSONObject
+var jsonObjectProperty = featureFlag.GetJSONProperty("footer_settings");
 ```
+
 {% endtab %}
 {% tab Cordova %}
 
 ```javascript
-// String properties
+// Returns the String property
 const stringProperty = await BrazePlugin.getFeatureFlagStringProperty("expanded_user_profile", "color");
-// Boolean properties
+
+// Returns the boolean property
 const booleanProperty = await BrazePlugin.getFeatureFlagBooleanProperty("expanded_user_profile", "expanded");
-// Number properties
+
+// Returns the number property
 const numberProperty = await BrazePlugin.getFeatureFlagNumberProperty("expanded_user_profile", "height");
+
+// Returns the Unix UTC millisecond timestamp property as a number
+const timestampProperty = await BrazePlugin.getFeatureFlagTimestampProperty("expanded_user_profile", "account_start");
+
+// Returns the image property as a String of the image URL
+const imageProperty = await BrazePlugin.getFeatureFlagImageProperty("expanded_user_profile", "homepage_icon");
+
+// Returns the JSON object property as an object
+const jsonObjectProperty = await BrazePlugin.getFeatureFlagJSONProperty("expanded_user_profile", "footer_settings");
 ```
+
 {% endtab %}
 {% tab Flutter %}
+
 ```dart
+// Returns the Feature Flag instance
 BrazeFeatureFlag featureFlag = await braze.getFeatureFlagByID("expanded_user_profile");
-// String properties
+
+// Returns the String property
 var stringProperty = featureFlag.getStringProperty("color");
-// Boolean properties
+
+// Returns the boolean property
 var booleanProperty = featureFlag.getBooleanProperty("expanded");
-// Number properties
+
+// Returns the number property
 var numberProperty = featureFlag.getNumberProperty("height");
+
+// Returns the Unix UTC millisecond timestamp property as an integer
+var timestampProperty = featureFlag.getTimestampProperty("account_start");
+
+// Returns the image property as a String of the image URL
+var imageProperty = featureFlag.getImageProperty("homepage_icon");
+
+// Returns the JSON object property as a Map<String, dynamic> collection
+var jsonObjectProperty = featureFlag.getJSONProperty("footer_settings");
 ```
+
 {% endtab %}
 {% tab Roku %}
+
 ```brightscript
-' String properties
+' Returns the String property
 color = featureFlag.getStringProperty("color")
-' Boolean properties
+
+' Returns the boolean property
 expanded = featureFlag.getBooleanProperty("expanded")
-' Number properties
+
+' Returns the number property
 height = featureFlag.getNumberProperty("height")
+
+' Returns the Unix UTC millisecond timestamp property
+account_start = featureFlag.getTimestampProperty("account_start")
+
+' Returns the image property as a String of the image URL
+homepage_icon = featureFlag.getImageProperty("homepage_icon")
+
+' Returns the JSON object property
+footer_settings = featureFlag.getJSONProperty("footer_settings")
 ```
+
 {% endtab %}
 {% endtabs %}
 
@@ -742,11 +831,9 @@ Here, you can review when a changed happened, who made the change, which categor
 
 ## Segmenting with feature flags {#segmentation}
 
-{% alert note %}
-Feature Flag membership filter is being gradually rolled out and may not be on your dashboard just yet.
-{% endalert %}
+Braze automatically keeps track of which users are currently eligible for or participating in a feature flag. You can create a segment or target messaging using the [**Feature Flag** filter]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/#feature-flags). For more information about filtering on segments, see [Creating a segment]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/).
 
-Braze automatically keeps track of which users are currently eligible for or participating in a feature flag. You can create a segment or target messaging using the [**Feature Flag** filter][6]. For more information about filtering on segments, see [Creating a segment][7].
+![The "Filters" section with "Feature Flag" typed into the filter search bar.]({% image_buster /assets/img/feature_flags/feature-flags-filter-name.png %}){: style="max-width:75%;"}
 
 {% alert note %}
 To prevent recursive segments, it is not possible to create a segment that references other feature flags.
@@ -800,12 +887,3 @@ We're all guilty of leaving features on at 100% rollout for longer than necessar
 
 To help keep your code (and Braze dashboard) clean, remove permanent feature flags from your code base after all users have upgraded and you no longer need the option to disable the feature. This helps reduce the complexity of your development environment, but also keeps your list of feature flags tidy.
 
-[1]: {% image_buster /assets/img/feature_flags/feature-flags-list.png %} 
-[2]: {% image_buster /assets/img/feature_flags/feature-flags-create.png %}
-[3]: {% image_buster /assets/img/feature_flags/feature-flags-targeting.png %}
-[4]: {% image_buster /assets/img/feature_flags/feature-flags-rollout.png %}
-[5]: {{site.baseurl}}/developer_guide/platform_wide/feature_flags/about/
-[6]: {{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters#feature-flag
-[7]: {{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/
-[8]: {% image_buster /assets/img/feature_flags/feature-flags-manage-permission.png %}
-[9]: {{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/

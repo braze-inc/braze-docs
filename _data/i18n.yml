@@ -28,4 +28,13 @@ ja:
   edit_github: GitHub でこのページを編集
   page_nav_title: このページについて
   helpful: 「このページはどの程度役に立ちましたか?」
-
+ko:
+  next: 다음
+  previous: 이전
+  popular_topic: 인기 주제
+  help_resources: 유용한 리소스
+  braze_status: 브레이즈 시스템 상태
+  braze_status_check: 브레이즈 상태 확인
+  edit_github: GitHub 에서 이 페이지를 편집합니다.
+  page_nav_title: 이 페이지에
+  helpful: "이 페이지가 얼마나 도움이 되었나요?"

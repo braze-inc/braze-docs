@@ -33,7 +33,7 @@ By default, segments and filters for a Decision Split component are checked righ
 
 ## Use your split
 
-Using a decision split can help you distinguish paths for your users based on their segment or their attributes, even whether they utilize certain messaging channels to receive your messages!
+Using a decision split can help you distinguish paths for your users based on their segment or their attributes, even whether they use certain messaging channels to receive your messages!
 
 Let's say that you're creating an onboarding flow. You might start with a welcome email upon signing up. Then, two days later, you want to send a push message, but only to users who are push enabled. After that, all users get another email three days after they signed up. You could also use your decision split to send an in-app message to users who don't have push enable to encourage them to enable push.
 

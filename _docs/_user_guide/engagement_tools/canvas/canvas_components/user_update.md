@@ -14,7 +14,7 @@ tool: Canvas
 
 > The User Update component allows you to update a user's attributes, events, and purchases in a JSON composer, so there's no need to include sensitive information like API keys.
 
-With User Update, updates don't count toward your users.Track per minute rate limit. Instead, these updates are batched so Braze can process them more efficiently than a Braze-to-Braze webhook. Note that this component doesn't consume [data points]({{site.baseurl}}/user_guide/onboarding_with_braze/data_points/) when being used to update non-billable data points (such as subscription groups).
+With User Update, updates don't count toward your `/users/track` requests per minute rate limit. Instead, these updates are batched so Braze can process them more efficiently than a Braze-to-Braze webhook. Note that this component doesn't consume [data points]({{site.baseurl}}/user_guide/onboarding_with_braze/data_points/) when being used to update non-billable data points (such as subscription groups).
 
 Users will only advance to the next Canvas steps after the relevant user updates have been completed. If your subsequent messaging relies on the user updates that you're making, you can ensure that these updates have been completed prior to when the messages send.
 
@@ -92,7 +92,7 @@ Track when a user has items in their shopping cart, when they add new items or r
 
 {:start="2"}
 2. Create a [custom event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) named `add_item_to_cart` that is logged when a user adds an item to the basket. 
-3. Create a Canvas with a target audience of users with this custom event. Now, when a user adds an item to their cart, this Canvas is triggered. You can then target messaging directly to that user, offering coupon codes once they've reached a certain spend, abandoned their cart for a certain amount of time, or anything else that aligns with your use case. 
+3. Create a Canvas with a target audience of users with this custom event. Now, when a user adds an item to their cart, this Canvas is triggered. You can then target messaging directly to that user, offering coupon codes when they've reached a certain spend, abandoned their cart for a certain amount of time, or anything else that aligns with your use case. 
 
 The `shopping_cart` attribute carries the total of many custom events: the total cost of all the items, the total number of items in the cart, if the shopping cart contains a gift, and so on. This can look something like the following:
 

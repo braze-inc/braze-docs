@@ -30,7 +30,7 @@ This section covers time-based scheduling and delivery options for [scheduled de
 
 | Definition | Time Zone |
 | ---------- | --------- |
-| User's optimal time. Each user will receive the campaign at the time they are most likely to engage. To learn more, check out [Intelligent Timing]({{site.baseurl}}/user_guide/sage_ai/intelligence/intelligent_timing/). | If you select a specific time as your [fallback]({{site.baseurl}}/user_guide/sage_ai/intelligence/intelligent_timing/#fallback-options), this will be sent in the user's local time. |
+| User's optimal time. Each user will receive the campaign at the time they are most likely to engage. To learn more, check out [Intelligent Timing]({{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_timing/). | If you select a specific time as your [fallback]({{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_timing/#fallback-options), this will be sent in the user's local time. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ![A campaign with the option "Intelligent Timing" selected to send once at the optimal time on July 13, 2021 with a custom fallback time of 9 am for users without enough data in their profiles to calculate an optimal time.][3]
@@ -70,7 +70,7 @@ When choosing your delay length, keep in mind that if you set a delay that is lo
 | Send message immediately after the user performs the trigger action. | N/A |
 {: .reset-td-br-1 .reset-td-br-2}
 
-![Schedule Delay set to send campaign immediately once the trigger event occurs.][6]
+![Schedule Delay set to send campaign immediately after the trigger event occurs.][6]
 
 #### Send campaign after X days
 
@@ -79,7 +79,7 @@ When choosing your delay length, keep in mind that if you set a delay that is lo
 | Send message after a delay. You can specify a delay in seconds, minutes, hours, days, or weeks. | N/A |
 {: .reset-td-br-1 .reset-td-br-2}
 
-![Schedule Delay set to send campaign after one day once the trigger event occurs.][7]
+![Schedule Delay set to send campaign after one day after the trigger event occurs.][7]
 
 #### Send campaign on the next [day of the week] at X time
 
@@ -103,7 +103,7 @@ Braze calculates the delay as `day of the week` + `calendar days`, then adds the
 
 ![][9]
 
-### Quiet hours
+### Quiet Hours
 
 | Definition | Time Zone |
 | ---------- | --------- |

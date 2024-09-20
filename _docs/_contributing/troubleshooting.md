@@ -45,7 +45,7 @@ https://www.braze.com/docs/user_guide/personalization_and_dynamic_content/connec
 If you find this string in the URL, one or more of your cross-reference links are surrounded in [Liquid raw tags](https://shopify.dev/docs/api/liquid/tags/raw).
 
 {% tabs local %}
-{% tab liquid raw tag %}
+{% tab Liquid raw tag %}
 <code>
 &#123;% raw %} &#123;% endraw %}
 </code>

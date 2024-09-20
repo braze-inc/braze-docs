@@ -80,7 +80,7 @@ The following table outlines our supported channels.
 <sup>**Available as an add-on feature.*</sup>
 
 {% alert tip %}
-For short and urgent messages that can be communicated through most channels (email, SMS, push), take advantage of the [Intelligent Channel]({{site.baseurl}}/user_guide/sage_ai/intelligence/intelligent_channel/) filter to automatically send the message through the best channel for each user.
+For short and urgent messages that can be communicated through most channels (email, SMS, push), take advantage of the [Intelligent Channel]({{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_channel/) filter to automatically send the message through the best channel for each user.
 {% endalert %}
 
 [1]: {% image_buster /assets/img/getting_started/channels.png %}

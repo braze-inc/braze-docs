@@ -137,8 +137,6 @@ curl --location --request POST 'https://rest.iad-01.braze.com/canvas/trigger/sen
         "alias_label" : "example_label"
       },
       "external_user_id": "user_identifier",
-      "trigger_properties": "",
-      "canvas_entry_properties": "",
       "send_to_existing_only": true,
       "attributes": {
           "first_name" : "Alex"
@@ -152,13 +150,25 @@ curl --location --request POST 'https://rest.iad-01.braze.com/canvas/trigger/sen
 
 Message sending endpoint responses will include the message's `dispatch_id` for reference back to the dispatch of the message. The `dispatch_id` is the ID of the message dispatch (unique ID for each "transmission" sent from the Braze platform). Check out [Dispatch ID behavior]({{site.baseurl}}/help/help_articles/data/dispatch_id/) for more information.
 
-## Create send endpoint
+### Example success response
 
-**Using the Attributes Object in Canvas**
+The status code `201` could return the following response body. If the Canvas is archived, stopped, or paused, the Canvas will not be sent through this endpoint. 
 
-Braze has a Messaging Object called `Attributes` that allows you to add, create, or update attributes and values for a user before sending them an API-Triggered Canvas using the `canvas/trigger/send` endpoint as this API call will process the User Attributes object before it processes and sends the Canvas. This helps minimize the risk of there being issues caused by [race conditions]({{site.baseurl}}/help/best_practices/race_conditions/).
+```
+{
+  "notice": "The Canvas is paused. Resume the Canvas to ensure trigger requests will take effect.", 
+  "dispatch_id": "example_dispatch_id", 
+  "message": "success"
+}
+```
 
-{% alert important %}
+If your Canvas is archived, you'll see this `notice` message: "The Canvas is archived. Unarchive the Canvas to ensure trigger requests will take effect." If your Canvas is not active, you'll see this `notice` message: "The Canvas is paused. Resume the Canvas to ensure trigger requests will take effect."
+
+## Attributes object for Canvas
+
+Use the messaging object `attributes` to add, create, or update attributes and values for a user before sending them an API-triggered Canvas using the `canvas/trigger/send` endpoint. This API call processes the user attributes object before it processes and sends the Canvas. This helps minimize the risk of issues caused by [race conditions]({{site.baseurl}}/help/best_practices/race_conditions/).
+
+{% alert note %}
 Looking for the campaigns version of this endpoint? Check out [Sending campaign messages via API-triggered delivery]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_campaigns/).
 {% endalert %}
 

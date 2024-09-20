@@ -1,21 +1,21 @@
 ---
 nav_title: 統合
-article_title: Web用アプリ内メッセージ統合
+article_title: ウェブ用アプリ内メッセージ統合
 platform: Web
 channel: in-app messages
 page_order: 0
 page_type: reference
-description: "この記事には、ウェブアプリケーションのアプリ内メッセージタイプとメッセージ動作に関するリソースが含まれています。"
+description: "この記事には、アプリ内メッセージ・タイプとウェブ・アプリケーションのメッセージ動作に関するリソースが含まれている。"
 search_rank: 2
 ---
 
 # アプリ内メッセージ統合
 
-> この記事では、ウェブアプリケーションのアプリ内メッセージを設定する方法について説明します。
+> この記事では、ウェブアプリケーションのアプリ内メッセージの設定方法について説明する。
 
 [アプリ内メッセージ]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/)を使用すると、プッシュ通知でユーザーの日常を邪魔することなく、コンテンツをユーザーに届けることができます。カスタマイズされ調整されたアプリ内メッセージは、ユーザーエクスペリエンスが向上し、オーディエンスがアプリから最大限の価値を得るのに役立ちます。アプリ内メッセージでは、さまざまなレイアウトとカスタマイズツールを選択できるため、これまで以上にユーザーの関心を引き付けることができます。
 
-[ケーススタディ][6] でアプリ内メッセージの例をチェックしましょう。
+アプリ内メッセージの事例を見るには、\[ケーススタディ][53] ] をチェックしよう。
 
 ## アプリ内メッセージのタイプ
 
@@ -26,9 +26,9 @@ Braze は現在、以下のアプリ内メッセージタイプをデフォル�
 - `Full`
 - `HTML`
 
-各アプリ内メッセージタイプは、コンテンツ、画像、アイコン、クリックアクション、分析、表示、配信に渡って高度にカスタマイズできます。
+各アプリ内メッセージタイプは、コンテンツ、画像、アイコン、クリックアクション、アナリティクス、表示、配信をカスタマイズできる。
 
-すべてのアプリ内メッセージは、すべてのアプリ内メッセージの基本的な動作と特性を定義する [\`InAppMessage\`] [2] のプロトタイプを継承します。プロトタイプのサブクラスは [\`SlideUpMessage\`] [3]、[\`ModalMessage\`] [6]、[\`フルスクリーンメッセージ\`] [7]、[\`\`HTMLメッセージ\`] [12] です。
+すべてのアプリ内メッセージは、そのプロトタイプを \[`InAppMessage`][2]] から継承する。このプロトタイプは、すべてのアプリ内メッセージの基本動作と特徴を定義している。プロトタイプのサブクラスは \[`SlideUpMessage`][3]] 、 \[`ModalMessage`][6]] 、 \[`FullScreenMessage`][7]] 、 \[`HtmlMessage`][12]] である。
 
 ## メッセージタイプ別に予想される動作
 
@@ -37,45 +37,45 @@ Braze は現在、以下のアプリ内メッセージタイプをデフォル�
 {% tabs %}
 {% tab Slideup %}
 
-[`SlideUp`](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.slideupmessage.html) アプリ内メッセージは、従来のモバイルプラットフォームでは、画面の上部または下部から「上」または「下にスライド」していたため、このように呼ばれています。Braze Web SDKでは、これらのメッセージは、ウェブの支配的なパラダイムに合わせて、どちらかというとGrowlまたはToastスタイルの通知として表示されます。画面の一部分だけを覆い、効果的で邪魔にならないメッセージング機能を提供します。
+[`SlideUp`](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.slideupmessage.html) アプリ内メッセージは、伝統的にモバイルプラットフォームでは、画面の上部または下部から「スライドアップ」または「スライドダウン」するため、このような名前が付けられている。Braze Web SDKでは、これらのメッセージは、Webの支配的なパラダイムに合わせるために、よりGrowlまたはToastスタイルの通知として表示される。画面の一部分だけを覆い、効果的で邪魔にならないメッセージング機能を提供します。
 
-![An in-app message sliding from the bottom of a phone screen displaying "Humans are complicated. Custom engagement shouldn't be." In the background is the same in-app message displayed in the bottom corner of a web page.]({% image_buster /assets/img/slideup-behavior.gif %}){: style="border:0px;"}
+![携帯電話の画面下部からスライドするアプリ内メッセージには「人間は複雑だ」と表示されている。カスタム・エンゲージメントはそうあるべきでない。背景には、ウェブページの下隅に表示されているのと同じアプリ内メッセージがある。]({% image_buster /assets/img/slideup-behavior.gif %}){: style="border:0px;"}
 
 {% endtab %}
 {% tab Modal %}
 
-[`Modal`](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.modalmessage.html) アプリ内のメッセージは画面中央に表示され、半透明のパネルに囲まれます。より重要なメッセージングに有用で、最大2つのクリックアクションと分析対応ボタンを装備できます。
+[`Modal`](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.modalmessage.html) アプリ内メッセージは画面中央に表示され、半透明のパネルに囲まれます。より重要なメッセージングに有用で、最大2つのクリックアクションと分析対応ボタンを装備できます。
 
-![A modal in-app message in the center of a phone screen displaying "Humans are complicated. Custom engagement shouldn't be." In the background is the same in-app message displayed in the center of a web page.]({% image_buster /assets/img/modal-behavior.gif %}){: style="border:0px;"}
-
-{% endtab %}
-{% tab Full Screen %}
-
-[`Full`](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.fullscreenmessage.html) アプリ内メッセージは、ユーザーコミュニケーションの内容とインパクトを最大化するのに有効です。狭いブラウザウィンドウ（モバイルウェブなど）では、`full`アプリ内メッセージがブラウザウィンドウ全体に表示されます。大きなブラウザウィンドウでは、`full``modal`アプリ内メッセージはアプリ内メッセージと同様に表示されます。`full`アプリ内メッセージの上半分には画像が含まれ、下半分には最大8行のテキスト、最大2回のクリックアクション、分析対応ボタンが表示されます。
-
-![A full screen in-app message shown across an entire phone screen displaying, "Humans are complicated. Custom engagement shouldn't be." In the background is the same in-app message displayed largely in the center of a web page.]({% image_buster /assets/img/full-screen-behavior.gif %}){: style="border:0px;"}
+![携帯電話の画面中央にモーダルなアプリ内メッセージが表示され、「人間は複雑だ」と表示される。カスタム・エンゲージメントはそうあるべきでない。背景には、ウェブページの中央に表示されているのと同じアプリ内メッセージがある。]({% image_buster /assets/img/modal-behavior.gif %}){: style="border:0px;"}
 
 {% endtab %}
-{% tab Custom HTML %}
+{% tab フルスクリーン %}
 
-[`HTML`](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.htmlmessage.html) アプリ内メッセージは、完全にカスタマイズされたユーザーコンテンツを作成するのに便利です。ユーザー定義のHTMLはiFrameに表示され、画像、フォント、ビデオ、インタラクティブ要素などの豊富なコンテンツを含む場合があり、メッセージの外観と機能を完全に制御できます。これらは HTML 内から Braze Web SDK のメソッドを呼び出すための JavaScript `brazeBridge` インターフェースをサポートしています。詳細については、[ベストプラクティスをご覧ください]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/best_practices/)。
+[`Full`](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.fullscreenmessage.html) アプリ内メッセージは、ユーザーコミュニケーションの内容とインパクトを最大化するのに有効です。狭いブラウザウィンドウ（例えばモバイルウェブ）では、`full` アプリ内メッセージがブラウザウィンドウ全体を占める。より大きなブラウザウィンドウでは、`full` アプリ内メッセージは、`modal` アプリ内メッセージと同様に表示される。`full` アプリ内メッセージの上半分には画像が含まれ、下半分には最大8行のテキストと最大2つのクリックアクション、アナリティクス対応ボタンが表示される。
+
+![携帯電話の画面全体に表示されるアプリ内メッセージには、「人間は複雑だ。カスタム・エンゲージメントはそうあるべきでない。背景には、同じアプリ内メッセージがウェブページの中央に大きく表示されている。]({% image_buster /assets/img/full-screen-behavior.gif %}){: style="border:0px;"}
+
+{% endtab %}
+{% tab カスタムHTML %}
+
+[`HTML`](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.htmlmessage.html) アプリ内メッセージは、完全にカスタマイズされたユーザーコンテンツを作成するのに便利です。ユーザー定義のHTMLはiFrame内に表示され、画像、フォント、ビデオ、インタラクティブ要素などのリッチコンテンツを含むことができる。これらは、HTML内からBraze Web SDKのメソッドを呼び出すためのJavaScript`brazeBridge` インターフェイスをサポートしている。
 
 {% alert important %}
 
-Web SDK を使用して HTML アプリ内メッセージを有効にするには、Braze `allowUserSuppliedJavascript` に初期化オプション (例:) **を指定する必要があります**。`braze.initialize('YOUR-API_KEY', {allowUserSuppliedJavascript: true})`これはセキュリティ上の理由からです。HTML アプリ内メッセージは JavaScript を実行できるため、サイト管理者に有効にしてもらう必要があります。
+Web SDKを通じてHTMLアプリ内メッセージを有効に**するには**、Brazeに`allowUserSuppliedJavascript` の初期化オプションを与える**必要がある**。例えば、`braze.initialize('YOUR-API_KEY', {allowUserSuppliedJavascript: true})` 。これはセキュリティ上の理由からだ。HTMLのアプリ内メッセージはJavaScriptを実行できるため、サイト管理者が有効にする必要がある。
 
 {% endalert %}
 
-次の例は、ページ分割された HTML アプリ内メッセージを示しています。
+次の例は、ページ分割されたHTMLアプリ内メッセージを示している：
 
-![An HTML in-app message with the a carousel of content and interactive buttons.]({% image_buster /assets/img_archive/ios-html-full-iam.gif %})
+![] （{% image_buster /assets/img_archive/ios-html-full-iam.gif %} ）。
 
 {% endtab %}
 {% endtabs %}
 
 ## 統合
 
-デフォルトでは、アプリ内メッセージは推奨される [統合手順] [1] の一部として自動的に表示されます。このガイドの手順に従うと、さらにカスタマイズできます。
+][1]デフォルトでは、アプリ内メッセージは自動的に表示される。このガイドのステップに従うことで、さらなるカスタマイズが可能だ。
 
 [1]: {{ site.baseurl }}/developer_guide/platform_integration_guides/web/initial_sdk_setup/
 [2]: https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.inappmessage.html

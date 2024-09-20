@@ -13,7 +13,7 @@ description: "This reference article shows how to set custom attributes in your 
 
 > Braze provides methods for assigning attributes to users. You'll be able to filter and segment your users according to these attributes on the dashboard. This reference article shows how to set custom attributes in your Android or FireOS application.
 
-Before implementation, be sure to review examples of the segmentation options afforded by custom events, custom attributes, and purchase events in our [analytics overview][7], as well as our notes on [event naming conventions]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/event_naming_conventions/).
+Before implementation, be sure to review examples of the segmentation options afforded by custom events, custom attributes, and purchase events in our [analytics overview]({{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#user-data-collection), as well as our notes on [event naming conventions]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/event_naming_conventions/).
 
 ## Assigning user attributes
 
@@ -21,7 +21,7 @@ To assign attributes to your users, call the `getCurrentUser()` method on your B
 
 ### Standard user attributes
 
-Braze provides predefined methods for setting the following user attributes within the [BrazeUser class][2]. Refer to our KDoc for [method specifications][2]:
+Braze provides predefined methods for setting the following user attributes within the [BrazeUser class](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze-user/index.html). Refer to our KDoc for [method specifications](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze-user/index.html):
 
 - First name
 - Last name
@@ -255,7 +255,7 @@ Braze.getInstance(context).currentUser?.unsetCustomUserAttribute("your_attribute
 
 #### Custom attribute via the REST API
 
-You can also use our REST API to set user attributes. To do so, refer to the [User API documentation][4].
+You can also use our REST API to set user attributes. To do so, refer to the [User API documentation]({{site.baseurl}}/developer_guide/rest_api/user_data/#user-data).
 
 ## Setting up user subscriptions
 
@@ -310,7 +310,3 @@ Braze.getInstance(context).currentUser?.setPushNotificationSubscriptionType(push
 {% endtab %}
 {% endtabs %}
 
-[2]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze-user/index.html
-[4]: {{site.baseurl}}/developer_guide/rest_api/user_data/#user-data
-[6]: {{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#arrays
-[7]: {{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#user-data-collection

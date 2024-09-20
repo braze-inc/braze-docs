@@ -43,7 +43,7 @@ Location tracking is used to collect and store a user's most recent location dat
 
 ### How accurate are Braze geofences?
 
-Braze geofences use a combination of all location providers available to a device to triangulate the user's location. These include WiFi, GPS, and cellular towers.
+Braze geofences use a combination of all location providers available to a device to triangulate the user's location. These include Wi-Fi, GPS, and cellular towers.
 
 Typical accuracy is in 20–50m range and best-case accuracy will be in the 5-10m range. In rural areas, accuracy may degrade significantly, potentially going up to several kilometers. Braze recommends creating geofences with larger radii in rural locations.
 

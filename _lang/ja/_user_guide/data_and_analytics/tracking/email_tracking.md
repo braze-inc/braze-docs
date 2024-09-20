@@ -9,18 +9,18 @@ description: "このリファレンス記事では、開封ピクセルとクリ
 
 # メール開封ピクセルとクリックの追跡
 
-> [開封ピクセル追跡][open_tracking]とクリック追跡は、ユーザープロファイルごとに無効にできます。このような柔軟性があるため、ユーザーが各自のユーザープロファイルを追跡対象外と指定したときに地域の個人情報保護法を遵守できます。
+> [開封ピクセルトラッキング][open_tracking]とクリックトラッキングは各ユーザープロファイルごとにオンまたはオフにすることができます。このような柔軟性があるため、ユーザーが各自のユーザープロファイルを追跡対象外と指定したときに地域の個人情報保護法を遵守できます。
 
-## 実装
+## 開封ピクセルまたはクリックトラッキングをオンにする
 
 [API][api_doc] または [CSV][csv_doc] を使用してユーザープロファイルのインポートまたは更新を行う場合、次の 2 つのフィールドを変更できます。
 
-- `email_open_tracking_disabled`
-- `email_click_tracking_disabled`
+- `email_open_tracking_disabled`: `true` または `false` を受け入れます。`false`に設定して、このユーザーに送信されるすべての将来のメールに開封トラッキングピクセルを追加します。
+- `email_click_tracking_disabled`: `true` または `false` を受け入れます。`false`に設定して、このユーザーに送信される将来のメール内のすべてのリンクにクリックトラッキングを追加します。
 
-簡単に参照できるように、この情報は [**エンゲージメント**] タブにあるメールの [**連絡先の設定**] のユーザープロファイルに反映されます。
+参考までに、この情報はユーザープロファイルのメール**連絡設定**に反映され、**エンゲージメント**タブにあります。
 
-![ユーザープロファイルの [エンゲージメント] タブのメールの開封追跡およびクリック追跡ピクセルフィールド] [1]{: style="max-width:60%;"}
+![メール開封およびクリックトラッキングピクセルフィールドは、ユーザーのプロファイルのエンゲージメントタブにあります][1]{: style="max-width:60%;"}
 
 [open_tracking]: {{site.baseurl}}/user_guide/administrative/app_settings/email_settings/#changing-location-of-tracking-pixel
 [api_doc]: {{site.baseurl}}/api/objects_filters/user_attributes_object/#braze-user-profile-fields

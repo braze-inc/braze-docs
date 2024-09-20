@@ -18,7 +18,7 @@ Before continuing, you should have already [created your Canvas]({{site.baseurl}
 
 Now you can add an in-app message to your Canvas. Add a [Message]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/) step and choose **In-App Message** for your **Messaging Channel**. After any delays pass and the audience options are checked, the in-app message will be set live and users will see it if they open the app. In-app messages in Canvas may only be triggered by the `start session` trigger event—they can't be triggered by custom events in a Canvas component.
 
-For Canvases that have action-triggered entry, users can enter the Canvas mid-session. However, as noted above, in-app messages won't trigger until the next session start, so these users would miss the initial in-app message since they weren't eligible to enter the Canvas prior to the session start.
+For Canvas steps that have action-triggered entry, users can enter the Canvas mid-session. However, as noted above, in-app messages won't trigger until the next session starts, so these users would miss the initial in-app message since they weren't eligible to enter the Canvas before the session started.
 
 You can customize [when your message will expire](#in-app-message-expiration) and which [advancement behavior](#advancement-behavior-options) it will have.
 
@@ -41,7 +41,7 @@ When should you use this feature? Braze highly recommends that you consider usin
 {% tabs %}
   {% tab Promotional %}
 
-Promotions, coupons, and sales often have hard expiration dates. The following Canvas should alert your users at the most opportune times that there is a promotion they may use, and perhaps influence a purchase. This promotion expires by February 28, 2019 at 11:15 am in the company's time zone.
+Promotions, coupons, and sales often have hard expiration dates. The following Canvas should alert your users at the most opportune times that there is a promotion they may use, and perhaps influence a purchase. This promotion expires on February 28, 2019, at 11:15 am in the company's time zone.
 
 <style type="text/css">
 .tg td{word-break:normal;}
@@ -68,7 +68,7 @@ Promotions, coupons, and sales often have hard expiration dates. The following C
     <td>Push</td>
     <td>N/A</td>
     <td>Advance Audience After Delay</td>
-    <td>Initial push that alerts your users of the promotion. This is intended to drive users to your app to take advantage of the promotion.</td>
+    <td>Initial push that alerts your users of the promotion. This is meant to drive users to your app to take advantage of the promotion.</td>
   </tr>
   <tr>
     <td>In-app: 50% off</td>
@@ -181,18 +181,18 @@ Steps with an in-app message and another channel have the following advancement 
 | Option | Description |
 |---|---|---|
 | Advance When Message Sent | Users must be sent an email, webhook, or push notification, or view the in-app message to advance to subsequent steps in the Canvas.  <br> <br>  If the in-app message expires and the user hasn't been sent the email, webhook, or push, or hasn't viewed the in-app message, they will exit the Canvas and will not advance to subsequent steps. |
-| Immediately Advance Audience | Everyone in the step's audience advances to the next steps after the delay elapses, whether they have seen the noted message or not.  <br> <br> Users must match the step's segment and filter criteria to advance to next steps. |
+| Immediately Advance Audience | Everyone in the step's audience advances to the next steps after the delay elapses, whether they have seen the noted message or not.  <br> <br> Users must match the step's segment and filter criteria to advance to the next steps. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ![][3]
 
 {% alert important %}
-  When "Entire Audience" is selected, the in-app message will be available until it expires, even if the user has moved to subsequent steps. If you do not want the in-app message to be live when the next steps in the Canvas are delivered, ensure that the expiration is shorter than the delay on subsequent steps.
+When **Entire Audience** is selected, the in-app message will be available until it expires, even if the user has moved to subsequent steps. If you don't want the in-app message to be live when the next steps in the Canvas are delivered, check that the expiration is shorter than the delay on subsequent steps.
 {% endalert %}
 
 ## Prioritizing in-app messages
 
-A customer may trigger two in-app messages within your Canvas at the same time. When this occurs, Braze will adhere to the following priority order to determine which in-app message is displayed. Drag different Canvas steps to reorder their priority. By default, steps earlier in a Canvas variant will display before later steps.
+A customer may trigger two in-app messages within your Canvas at the same time. When this happens, Braze will adhere to the following priority order to determine which in-app message is displayed. Drag different Canvas steps to reorder their priority. By default, steps earlier in a Canvas variant will display before later steps.
 
 ![]({% image_buster /assets/img_archive/step_priority.png %}){: style="max-width:80%"}
 
@@ -210,7 +210,7 @@ When editing a draft of an active Canvas, changes to the in-app message priority
 
 ## Custom event properties in a Canvas
 
-Due to action-based delivery being unavailable for Canvas steps with in-app messages, you similarly cannot use custom event properties for these steps. If you'd like to template event properties in Canvas, we recommend storing your event properties as custom attributes in your first Canvas step, and then personalizing your in-app message with the custom attributes in the second step. 
+Due to action-based delivery being unavailable for Canvas steps with in-app messages, you similarly cannot use custom event properties for these steps. To template event properties in Canvas, we recommend storing your event properties as custom attributes in your first Canvas step and then personalizing your in-app message with the custom attributes in the second step.
 
 
 [1]: {% image_buster /assets/img/expires-after.png %} "IAM Live"

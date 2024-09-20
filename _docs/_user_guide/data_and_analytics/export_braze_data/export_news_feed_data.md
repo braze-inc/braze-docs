@@ -6,6 +6,7 @@ page_type: reference
 description: "This reference article covers how to export News Feed data."
 tool: Reports
 channel: news feed
+hidden: true
 
 ---
 

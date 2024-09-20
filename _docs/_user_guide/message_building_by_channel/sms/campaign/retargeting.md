@@ -35,7 +35,7 @@ Users can be filtered by when they last received an SMS or if they have received
 Filters users who have received a message from a specific SMS campaign. With this filter, you also have the option to filter off those that have not received messages from an SMS campaign. <br>
 ![Segmentation filter Has received message from campaign "SMS retargeting".][1]
 
-### Trigger messages as users receive SMS
+### Trigger messages as users receive SMS {#trigger-messages}
 
 To trigger messages as users receive SMS messages from a specific campaign, select **Interact with Campaign** as the trigger action for an action-based campaign. Next, select **Receive SMS** and the SMS campaign you would like to use.
 

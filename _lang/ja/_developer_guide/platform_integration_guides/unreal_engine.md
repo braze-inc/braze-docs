@@ -1,5 +1,5 @@
 ---
-nav_title: アンリアルエンジン
+nav_title: アンリアル・エンジン
 config_only: true
 noindex: true
 layout: redirect

@@ -10,7 +10,7 @@ channel:
 noindex: true
 ---
 
-{% multi_lang_include archive/objective-c-deprecation-notice.md %}
+{% multi_lang_include deprecations/objective-c.md %}
 
 # フィードの更新
 
@@ -18,14 +18,14 @@ noindex: true
 
 `Appboy` インターフェースの `requestContentCardsRefresh:` メソッドを使用して、ユーザーのコンテンツカードを更新するように Braze に手動でリクエストできます。
 {% tabs %}
-{% tab OBJECTIVE-C %}
+{% tab 目標-C %}
 
 ```objc
 [[Appboy sharedInstance] requestContentCardsRefresh];
 ```
 
 {% endtab %}
-{% tab swift %}
+{% tab 速い %}
 
 ```swift
 Appboy.sharedInstance()?.requestContentCardsRefresh()

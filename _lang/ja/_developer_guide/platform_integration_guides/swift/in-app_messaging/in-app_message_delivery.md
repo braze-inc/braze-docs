@@ -28,14 +28,14 @@ Braze でアプリ内メッセージを表示できるようにするには、 `
 `BrazeInAppMessageUI` クラスにアクセスするには、`BrazeUI` ライブラリーをインポートする必要があることに注意してください。
 
 {% tabs %}
-{% tab swift %}
+{% tab 速い %}
 
 ```swift
 AppDelegate.braze?.inAppMessagePresenter = BrazeInAppMessageUI()
 ```
 
 {% endtab %}
-{% tab OBJECTIVE-C %}
+{% tab 目標-C %}
 
 ```objc
 AppDelegate.braze.inAppMessagePresenter = [[BrazeInAppMessageUI alloc] init];
@@ -53,12 +53,12 @@ AppDelegate.braze.inAppMessagePresenter = [[BrazeInAppMessageUI alloc] init];
 
 ## トリガー間の最小時間間隔
 
-デフォルトでは、高品質のユーザー エクスペリエンスを確保するために、アプリ内メッセージのレートが30秒に1回に制限されています。
+デフォルトでは、質の高いユーザー体験を促進するため、アプリ内メッセージは30秒に1回に制限されている。
 
 この値は、 Braze 構成の `triggerMinimumTimeInterval` プロパティを設定することで上書きできます。Braze インスタンスを初期化する前に、必ずこの値を設定してください。`triggerMinimumTimeInterval` を、アプリ内メッセージ間の最小時間 (秒) として使用する整数値に設定します。
 
 {% tabs %}
-{% tab swift %}
+{% tab 速い %}
 
 ```swift
 let configuration = Braze.Configuration(
@@ -71,7 +71,7 @@ let braze = Braze(configuration: configuration)
 AppDelegate.braze = braze
 ```
 {% endtab %}
-{% tab OBJECTIVE-C %}
+{% tab 目標-C %}
 
 ```objc
 BRZConfiguration *configuration =
@@ -99,7 +99,7 @@ Braze で特定のイベントに一致するトリガーを検出できない�
 - セッションが開始される
 - プッシュ通知からアプリを開く
 
-アプリ内メッセージのトリガーイベントが発生すると、そのイベントは「スタック」に配置されます。 複数のアプリ内メッセージがスタック内にあり、表示を待機している場合、Braze は最後に受信したアプリ内メッセージを最初に表示します (後入れ先出し)。
+アプリ内メッセージのトリガーイベントが発生すると、そのイベントは「スタック」に配置されます。複数のアプリ内メッセージがスタック内にあり、表示を待機している場合、Braze は最後に受信したアプリ内メッセージを最初に表示します (後入れ先出し)。
 
 ユーザーにアプリ内メッセージを受信する資格がある場合、`BrazeInAppMessagePresenter` により、アプリ内メッセージスタックから最新のアプリ内メッセージがリクエストされます。スタックはメモリに保存されたアプリ内メッセージのみを保持し、一時停止モードからアプリを起動するまでの間にクリアされます。
 
@@ -131,7 +131,7 @@ Braze で特定のイベントに一致するトリガーを検出できない�
 独自のアプリ内メッセージを作成すると、分析の追跡をオプトアウトすることになり、`message.context` を使用してクリックとインプレッションのロギングを手動で処理する必要があることに注意してください。
 
 {% tabs %}
-{% tab swift %}
+{% tab 速い %}
 
 ```swift
 let customInAppMessage = Braze.InAppMessage.slideup(
@@ -141,7 +141,7 @@ AppDelegate.braze?.inAppMessagePresenter?.present(message: customInAppMessage)
 ```
 
 {% endtab %}
-{% tab OBJECTIVE-C %}
+{% tab 目標-C %}
 
 ```objc
 BRZInAppMessageRaw *customInAppMessage = [[BRZInAppMessageRaw alloc] init];
@@ -165,7 +165,7 @@ customInAppMessage.themes = @{
 たとえば、アプリ内メッセージの表示をそのエクストラの内容に基づいてカスタマイズするケースを考えてみましょう。`extras` プロパティでキーと値のペアにアクセスし、実行に使用するカスタムロジックを定義します。
 
 {% tabs %}
-{% tab swift %}
+{% tab 速い %}
 
 ```swift
 let customization = message.extras["custom-display"] as? String
@@ -175,7 +175,7 @@ if customization == "colorful-slideup" {
 ```
 
 {% endtab %}
-{% tab OBJECTIVE-C %}
+{% tab 目標-C %}
 
 ```objc
 if ([message.extras[@"custom-display"] isKindOfClass:[NSString class]]) {

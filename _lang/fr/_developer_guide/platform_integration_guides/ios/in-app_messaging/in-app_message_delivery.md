@@ -9,7 +9,7 @@ channel:
 
 ---
 
-{% multi_lang_include archive/objective-c-deprecation-notice.md %}
+{% multi_lang_include deprecations/objective-c.md %}
 
 # Livraison de messages in-app
 

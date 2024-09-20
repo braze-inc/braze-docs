@@ -14,18 +14,18 @@ platform:
 
 # デフォルトのコンテンツカードフィードのカスタマイズ
 
-> コンテンツカードフィードは、モバイルまたは Web アプリケーションの一連のコンテンツカードです。この記事では、フィードの更新時の設定、カードの順序、複数フィードの管理、「空のフィード」エラーメッセージについて説明します。
+> コンテンツカードフィードは、モバイルまたは Web アプリケーションの一連のコンテンツカードです。この記事では、フィードの更新時の設定、カードの順序、複数フィードの管理、「空のフィード」エラーメッセージについて説明します。コンテンツカードで使用するカスタマイズオプションのタイプの基本的な概要については、[カスタマイズの概要]({{site.baseurl}}/developer_guide/customization_guides/customization_overview)を参照してください。 
 
 ## フィードの更新
 
-デフォルトでは、コンテンツカードフィードは次の場合に自動的に更新されます。
+デフォルトでは、コンテンツカードフィードは次の場合に自動的に更新されます。 
 1. 新しいセッションが開始される場合
 2. フィードが開かれ、最後の更新から 60  秒以上経過した場合
 
 SDK は、特定の時間に手動で更新するように設定することもできます。
 
 {% alert tip %}
-手動で更新せずに最新のコンテンツカードを動的に表示するには、カード作成時に **[最初のインプレッション発生時]** を選択します。これらのカードは使用可能になると更新されます。
+手動で更新せずに最新のコンテンツカードを動的に表示するには、カード作成時に **\[最初のインプレッション発生時]** を選択します。これらのカードは、使用可能になると更新されます。
 {% endalert %}
 
 {% tabs local %}
@@ -90,13 +90,13 @@ Web SDK から[`requestContentCardsRefresh()`](https://js.appboycdn.com/web-sdk/
 
 また、[`getCachedContentCards`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#getcachedcontentcards)を呼び出して、最新のコンテンツカード更新から現在利用可能なすべてのカードを取得することもできます。 
 
-\`\`\`javascript
+```javascript
 import * as braze from "@braze/web-sdk";
 
 function refresh() {
   braze.requestContentCardsRefresh();    
 }
-\`\`\`
+```
 
 {% endtab %}
 {% endtabs %}
@@ -111,7 +111,7 @@ function refresh() {
 コンテンツカードの表示順序を変更できます。これにより、時間的制約のあるプロモーションなど、特定のタイプのコンテンツに優先順位を付けることで、ユーザーエクスペリエンスを微調整できます。
 
 {% tabs %}
-{% tab Android View System %}
+{% tab Androidビューシステム %}
 
 [`ContentCardsFragment`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards/-content-cards-fragment/index.html)は、[`IContentCardsUpdateHandler`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards.handlers/-i-content-cards-update-handler/index.html)に依存して、フィードに表示される前にコンテンツカードのソートまたは変更を処理します。カスタム更新ハンドラは、`ContentCardsFragment`の[`setContentCardUpdateHandler`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards/-content-cards-fragment/set-content-card-update-handler.html)で設定できます。
 
@@ -120,15 +120,15 @@ function refresh() {
 {% subtabs local %}
 {% subtab Java %}
 
-\`\`\`java
+```java
 public class DefaultContentCardsUpdateHandler implements IContentCardsUpdateHandler {
 
   // Interface that must be implemented and provided as a public CREATOR
-// field that generates instances of your Parcelable class from a Parcel.
+  // field that generates instances of your Parcelable class from a Parcel.
   public static final Parcelable.Creator<DefaultContentCardsUpdateHandler> CREATOR = new Parcelable.Creator<DefaultContentCardsUpdateHandler>() {
-  public DefaultContentCardsUpdateHandler createFromParcel(Parcel in) {
-    return new DefaultContentCardsUpdateHandler();
-      }
+    public DefaultContentCardsUpdateHandler createFromParcel(Parcel in) {
+      return new DefaultContentCardsUpdateHandler();
+    }
 
     public DefaultContentCardsUpdateHandler[] newArray(int size) {
       return new DefaultContentCardsUpdateHandler[size];
@@ -139,14 +139,14 @@ public class DefaultContentCardsUpdateHandler implements IContentCardsUpdateHand
   public List<Card> handleCardUpdate(ContentCardsUpdatedEvent event) {
     List<Card> sortedCards = event.getAllCards();
     // Sort by pinned, then by the 'updated' timestamp descending
-// Pinned before non-pinned
+    // Pinned before non-pinned
     Collections.sort(sortedCards, new Comparator<Card>() {
-    @Override
+      @Override
       public int compare(Card cardA, Card cardB) {
-      // A が B の上に表示
+        // A displays above B
         if (cardA.getIsPinned() && !cardB.getIsPinned()) {
-        return -1;
-          }
+          return -1;
+        }
 
         // B displays above A
         if (!cardA.getIsPinned() && cardB.getIsPinned()) {
@@ -172,34 +172,34 @@ public class DefaultContentCardsUpdateHandler implements IContentCardsUpdateHand
     return sortedCards;
   }
 
-  // パーセル可能なインターフェイス方式
+  // Parcelable interface method
   @Override
   public int describeContents() {
     return 0;
   }
 
   // Parcelable interface method
-@Override
-public void writeToParcel(Parcel dest, int flags) {
-// No state is kept in this class so the parcel is left unmodified
+  @Override
+  public void writeToParcel(Parcel dest, int flags) {
+    // No state is kept in this class so the parcel is left unmodified
   }
-  }
-    \`\`\`
+}
+```
 
 {% endsubtab %}
 {% subtab Kotlin %}
 
-\`\`\`kotlin
-class DefaultContentCardsUpdateHandler :IContentCardsUpdateHandler {
-  override fun handleCardUpdate(event:ContentCardsUpdatedEvent):List<Card> {
-val sortedCards = event.allCards
-// Sort by pinned, then by the 'updated' timestamp descending
-// Pinned before non-pinned
-sortedCards.sortWith(Comparator sort@{ cardA: Card, cardB: Card ->
-// A displays above B
-if (cardA.isPinned && !cardB.isPinned) {
-return@sort -1
-}
+```kotlin
+class DefaultContentCardsUpdateHandler : IContentCardsUpdateHandler {
+  override fun handleCardUpdate(event: ContentCardsUpdatedEvent): List<Card> {
+    val sortedCards = event.allCards
+    // Sort by pinned, then by the 'updated' timestamp descending
+    // Pinned before non-pinned
+    sortedCards.sortWith(Comparator sort@{ cardA: Card, cardB: Card ->
+      // A displays above B
+      if (cardA.isPinned && !cardB.isPinned) {
+        return@sort -1
+      }
 
       // B displays above A
       if (!cardA.isPinned && cardB.isPinned) {
@@ -221,23 +221,23 @@ return@sort -1
     return sortedCards
   }
 
-  // パーセル可能なインターフェイス方式
-  override fun describeContents():Int {
+  // Parcelable interface method
+  override fun describeContents(): Int {
     return 0
   }
 
   // Parcelable interface method
-override fun writeToParcel(dest: Parcel, flags: Int) {
-// No state is kept in this class so the parcel is left unmodified
+  override fun writeToParcel(dest: Parcel, flags: Int) {
+    // No state is kept in this class so the parcel is left unmodified
   }
 
   companion object {
     // Interface that must be implemented and provided as a public CREATOR
-// field that generates instances of your Parcelable class from a Parcel.
-    val CREATOR:Parcelable.Creator<DefaultContentCardsUpdateHandler?> = object :Parcelable.Creator<DefaultContentCardsUpdateHandler?> {
-    override fun createFromParcel(`in`:Parcel):DefaultContentCardsUpdateHandler? {
-      return DefaultContentCardsUpdateHandler()
-        }
+    // field that generates instances of your Parcelable class from a Parcel.
+    val CREATOR: Parcelable.Creator<DefaultContentCardsUpdateHandler?> = object : Parcelable.Creator<DefaultContentCardsUpdateHandler?> {
+      override fun createFromParcel(`in`: Parcel): DefaultContentCardsUpdateHandler? {
+        return DefaultContentCardsUpdateHandler()
+      }
 
       override fun newArray(size: Int): Array<DefaultContentCardsUpdateHandler?> {
         return arrayOfNulls(size)
@@ -245,7 +245,7 @@ override fun writeToParcel(dest: Parcel, flags: Int) {
     }
   }
 }
-\`\`\`
+```
 
 {% endsubtab %}
 {% endsubtabs %}
@@ -253,7 +253,7 @@ override fun writeToParcel(dest: Parcel, flags: Int) {
 `ContentCardsFragment`ソースは [GitHub](https://github.com/braze-inc/braze-android-sdk/blob/master/android-sdk-ui/src/main/java/com/braze/ui/contentcards/ContentCardsFragment.kt) にあります。
 
 {% endtab %}
-{% tab Jetpack Compose %}
+{% tab Jetpack コンポーズ %}
 Jetpack Compose でコンテンツカードをフィルタリングおよびソートするには、`cardUpdateHandler`パラメータを設定します。次に例を示します。
 
 ```kotlin
@@ -309,7 +309,7 @@ let viewController = BrazeContentCardUI.ViewController(braze: AppDelegate.braze,
 {% endsubtab %}
 {% subtab Objective-C %}
 
-`BrazeContentCardUI.ViewController.Attributes`によるカスタマイズは OBJECTIVE-C では使用できません。 
+`BrazeContentCardUI.ViewController.Attributes` によるカスタマイズは Objective-C では使用できません。 
 
 {% endsubtab %}
 {% endsubtabs %}
@@ -329,12 +329,12 @@ braze.showContentCards(null, (cards) => {
 
 ## 「空のフィード」メッセージのカスタマイズ
 
-ユーザーがコンテンツカードに適格でない場合、SDK は次のような「空のフィード」エラーメッセージを表示します。「更新はありません。後で再度確認してください。」 この「空のフィード」エラーメッセージは、次のようにカスタマイズできます。
+ユーザーがコンテンツカードに適格でない場合、SDK は次のような「空のフィード」エラーメッセージを表示します。「更新はありません。後で再度確認してください。」この「空のフィード」エラーメッセージは、次のようにカスタマイズできます。
 
-![「これはカスタムの空状態のメッセージです。」と表示される空のフィードエラーメッセージ][1]
+![&quot を読み込む空のフィード エラーメッセージ。これはカスタム空の状態メッセージです。"][1]
 
 {% tabs %}
-{% tab Android View System %}
+{% tab Androidビューシステム %}
 
 [`ContentCardsFragment`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards/-content-cards-fragment/index.html)によって、ユーザがコンテンツカードに対応していないと判断された場合は、空のフィードエラーメッセージが表示されます。
 
@@ -342,7 +342,7 @@ braze.showContentCards(null, (cards) => {
 
 このメッセージを表示するために使用されるスタイルは、[`Braze.ContentCardsDisplay.Empty`](https://github.com/braze-inc/braze-android-sdk/blob/2e386dfa59a87bfc24ef7cb6ff5adf6b16f44d24/android-sdk-ui/src/main/res/values/styles.xml#L522-L530)で見つけることができ、次のコードスニペットで再現されます。
 
-\`\`\`xml
+```xml
 <style name="Braze.ContentCardsDisplay.Empty">
   <item name="android:lineSpacingExtra">1.5dp</item>
   <item name="android:text">@string/com_braze_feed_empty</item>
@@ -356,7 +356,7 @@ braze.showContentCards(null, (cards) => {
 
 コンテンツカードスタイル要素のカスタマイズの詳細については、[スタイルのカスタマイズ]({{site.baseurl}}/developer_guide/customization_guides/content_cards/customizing_styles)を参照してください。
 {% endtab %}
-{% tab Jetpack Compose %}
+{% tab Jetpack コンポーズ %}
 Jetpack Compose で「空のフィード」エラーメッセージをカスタマイズするには、`emptyString`を`ContentCardsList`に渡します。`emptyTextStyle`を`ContentCardListStyling`に渡して、このメッセージをさらにカスタマイズすることもできます。
 
 ```kotlin
@@ -428,7 +428,7 @@ Web SDK では、「空のフィード」の言語をプログラムで置き換
 キーと値のペアが割り当てられたら、他のタイプのカードを表示およびフィルタリングするカードを表示するロジックを含むフィードを作成します。この例では、`feed_type: "Transactional"`のキーと値のペアが一致するカードのみを表示します。
 
 {% tabs %}
-{% tab Android View System %}
+{% tab Androidビューシステム %}
 
 コンテンツカードのフィルタリングは、[`Card.getExtras()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/extras.html)を介してダッシュボードに設定されたキーと値のペアを読み取り、カスタム更新ハンドラを使用してフィルタリング (または他の必要なロジックを実行) することで実現できます。
 
@@ -439,14 +439,14 @@ Web SDK では、「空のフィード」の言語をプログラムで置き換
 {% subtabs local %}
 {% subtab Java %}
 
-\`\`\`java
+```java
 private IContentCardsUpdateHandler getUpdateHandlerForFeedType(final String desiredFeedType) {
   return new IContentCardsUpdateHandler() {
     @Override
     public List<Card> handleCardUpdate(ContentCardsUpdatedEvent event) {
       // Use the default card update handler for a first
-// pass at sorting the cards. This is not required
-      // ただし、便宜上行われる。
+      // pass at sorting the cards. This is not required
+      // but is done for convenience.
       final List<Card> cards = new DefaultContentCardsUpdateHandler().handleCardUpdate(event);
 
       final Iterator<Card> cardIterator = cards.iterator();
@@ -476,17 +476,17 @@ private IContentCardsUpdateHandler getUpdateHandlerForFeedType(final String desi
     }
   };
 }
-\`\`\`
+```
 
 {% endsubtab %}
 {% subtab Kotlin %}
 
-\`\`\`kotlin
-private fun getUpdateHandlerForFeedType(desiredFeedType:String):IContentCardsUpdateHandler {
+```kotlin
+private fun getUpdateHandlerForFeedType(desiredFeedType: String): IContentCardsUpdateHandler {
   return IContentCardsUpdateHandler { event ->
     // Use the default card update handler for a first
-// pass at sorting the cards. This is not required
-    // ただし、便宜上行われる。
+    // pass at sorting the cards. This is not required
+    // but is done for convenience.
     val cards = DefaultContentCardsUpdateHandler().handleCardUpdate(event)
 
     val cardIterator = cards.iterator()
@@ -515,7 +515,7 @@ private fun getUpdateHandlerForFeedType(desiredFeedType:String):IContentCardsUpd
     cards
   }
 }
-\`\`\`
+```
 
 {% endsubtab %}
 {% endsubtabs %}
@@ -545,7 +545,7 @@ customContentCardsFragment.contentCardUpdateHandler = getUpdateHandlerForFeedTyp
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
-{% tab Jetpack Compose %}
+{% tab Jetpack コンポーズ %}
 このフィードに表示されるコンテンツカードをフィルタリングするには、`cardUpdateHandler`を使用します。次に例を示します。
 
 ```kotlin
@@ -572,15 +572,15 @@ let transactionalCards = cards.filter { $0.extras["feed_type"] as? String == "Tr
 
 さらに一歩進むために、ビューコントローラーに表示されるカードは、`transform`プロパティを`Attributes`構造体に設定して、条件でフィルタリングされたカードのみを表示することでフィルタリングできます。
 
-\`\`\`swift
+```swift
 var attributes = BrazeContentCardUI.ViewController.Attributes.defaults
 attributes.transform = { cards in
-  cards.filter { $0.extras["feed\_type"] as?String == "Transactional" }
+  cards.filter { $0.extras["feed_type"] as? String == "Transactional" }
 }
 
-// 変換されたカードを含む属性をコンテンツカード UI に渡す。
-let viewController = BrazeContentCardUI.ViewController(braze:AppDelegate.braze, attributes: attributes)
-\`\`\`
+// Pass your attributes containing the transformed cards to the Content Card UI.
+let viewController = BrazeContentCardUI.ViewController(braze: AppDelegate.braze, attributes: attributes)
+```
 
 {% endsubtab %}
 {% subtab Objective-C %}
@@ -602,17 +602,17 @@ for (BRZContentCardRaw *card in AppDelegate.braze.contentCards.cards) {
 
 次の例では、`Transactional`タイプカードのコンテンツカードフィードを示します。
 
-\`\`\`javascript
+```javascript
 
 /**
-* @param {String} feed_type - value of the "feed_type" KVP to filter
-*/
- function showCardsByFeedType(feed\_type) {
- braze.showContentCards(null, function(cards) {
-return cards.filter((card) => card.extras["feed\_type"] === feed\_type);
+ * @param {String} feed_type - value of the "feed_type" KVP to filter
+ */
+function showCardsByFeedType(feed_type) {
+  braze.showContentCards(null, function(cards) {
+    return cards.filter((card) => card.extras["feed_type"] === feed_type);
   });
-    }
-  \`\`\`
+}
+```
 
 次に、カスタムフィードのトグルを設定できます。
 

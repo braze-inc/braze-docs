@@ -21,7 +21,7 @@ layout: documents
 
 3. **著作物のオリジナリティ**貴殿は、貴殿の各投稿が完全に貴殿のオリジナルの作品であることを表明します。貴殿がオリジナル作品ではない資料を投稿したい場合、以下の場合、プロジェクトに別個に投稿することができます。(a) 貴殿が資料を受領した時点で資料に含まれていたすべての著作権およびライセンス情報を貴殿が保有し、(b) 貴殿の投稿に付随する説明に、「第三者の資料を含む投稿」という文言に続けて第三者の名前および貴殿が認識しているライセンスまたはその他の制限を含め、かつ (c) 貴殿が投稿に関するプロジェクトの書面のガイドラインの他の指示に従っている。<br><br>
 
-4. **雇用主。**本契約における「雇用主」という用語には、貴殿様の雇用主、または貴殿が投稿を作成する際に、請負業者、ベンダー、または代理人などとして代行しているその他の者が含まれます。貴殿の投稿物が、雇用主または貴殿の雇用主のための貴殿の業務の過程において、契約または適用法により貴殿の投稿における知的財産権を有する場合、貴殿は、本契約に署名する前に、貴殿の雇用主から投稿を行う許可を得なければなりません。この場合、本契約における「貴殿」という用語は、貴殿と雇用者を総称して指すものとします。今後、雇用主を変更し、新たな雇用主のために追加の投稿物を投稿することを希望する場合、貴殿は、それらの投稿物を投稿する前に、新しい契約に署名し新しい雇用主から許可を得ることに同意します。<br><br>
+4. **雇用主。**本契約における「雇用主」には、利用者の雇用主、または利用者が利用者の提出物を作成する際に請負業者、ベンダー、または代理人として行動しているその他の者が含まれる（e.g ）。貴殿の投稿物が、雇用主または貴殿の雇用主のための貴殿の業務の過程において、契約または適用法により貴殿の投稿における知的財産権を有する場合、貴殿は、本契約に署名する前に、貴殿の雇用主から投稿を行う許可を得なければなりません。この場合、本契約における「貴殿」という用語は、貴殿と雇用者を総称して指すものとします。今後、雇用主を変更し、新たな雇用主のために追加の投稿物を投稿することを希望する場合、貴殿は、それらの投稿物を投稿する前に、新しい契約に署名し新しい雇用主から許可を得ることに同意します。<br><br>
 
 5. **ライセンス。**<br><br>
 **a.著作権ライセンス。**貴殿は、本件投稿物の複製、二次的著作物の作成、公に展示し、公に実施し、当該二次的著作物および当該二次的著作物を頒布し、ならびに上記の権利の一部またはすべてを第三者にサブライセンスすることについて、永久的、世界的、非独占的、無料、ロイヤルティ無償、取消不能のライセンスを、貴殿および Braze から直接または間接的に本件投稿を受領する者に付与します。<br><br>
@@ -49,7 +49,7 @@ layout: documents
 <br /><br />
 <label for="input_name"> 名前(「貴殿」):</label> <input type="text" value="" name="name" id="input_name" class="form-control" required="required" /><br />
 <label for="input_signature"> 署名:</label> <input type="text" value="" name="signature" id="input_signature" class="form-control" required="required" /><br />
-<label for="input_username"> GitHub ユーザーname:</label> <input type="text" value="" name="username" id="input_username" class="form-control" required="required" /><br />
+<label for="input_username"> GitHubユーザー名：</label> <input type="text" value="" name="username" id="input_username" class="form-control" required="required" /><br />
 <label for="input_email"> メール:</label> <input type="email" value="" name="email" id="input_email" class="form-control" required="required" /><br />
 <label for="input_address"> 住所:</label> <input type="text" value="" name="address" id="input_address" class="form-control" /><br />
 

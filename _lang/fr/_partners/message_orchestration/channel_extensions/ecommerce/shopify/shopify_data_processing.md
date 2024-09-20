@@ -585,18 +585,6 @@ Certaines des données utilisateur et certains des événements collectés par l
 - Au fur et à mesure que les clients progressent dans la procédure de paiement, Braze vérifie si l’e-mail, le numéro de téléphone ou l’identifiant client Shopify correspond à un [profil utilisateur identifié]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/#identified-user-profiles). En cas de correspondance, Braze synchronisera les données utilisateur Shopify à ce profil en utilisant notre [fonctionnalité de fusion](#user-profile-merging). 
 - Si l’adresse e-mail ou le numéro de téléphone est associé à plusieurs profils d’utilisateurs identifiés, Braze synchronise les données Shopify à celui ayant l’activité la plus récente.  
 
-## Rapprochement des utilisateurs en dehors du flux de paiement
-
-L’intégration Shopify rapproche l’ID de l’appareil de votre utilisateur et les informations personnelles lorsqu’il atteint le flux de paiement et y effectue n’importe quel événement de webhook Shopify. En dehors du flux de paiement, pour prendre en charge le rapprochement des utilisateurs via votre flux d’inscription et de connexion Shopify, vous pouvez exécuter la fonction Javascript suivante dans votre fichier `theme.liquid` :
-
-```
-reconcileEmail(<email address>);
-```
-
-Si vous souhaitez mettre en œuvre cette approche, contactez votre gestionnaire du succès des clients ou votre gestionnaire de compte pour activer cette fonctionnalité. Une fois cette option activée, vous devrez implémenter la fonction ci-dessus dans votre boutique Shopify.
-
-L’utilisateur anonyme sur le Web sera ainsi associé à l’adresse e-mail que vous fournirez. Par exemple, si l’utilisateur saisit son adresse e-mail dans un champ d’inscription ou de connexion, vous devez vous assurer qu’elle est transmise. Une fois cette fonction appelée, tout autre événement Shopify faisant référence à l’adresse e-mail donnée sera attribué au même utilisateur Braze.
-
 ### Fusion du profil utilisateur
 
 Braze fusionnera les champs suivants de l'utilisateur anonyme créé à partir de notre intégration Shopify avec l'utilisateur identifié lorsque nous trouverons une correspondance sur l'un de ces identifiants, ID client Shopify, e-mail ou numéro de téléphone. Notez que cette fonctionnalité de fusion des données utilisateur est uniquement disponible dans l'intégration Shopify.

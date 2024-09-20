@@ -9,7 +9,7 @@ description: "この参照記事では、Braze iOS SDKがキャプチャする�
 noindex: true
 ---
 
-{% multi_lang_include archive/objective-c-deprecation-notice.md %}
+{% multi_lang_include deprecations/objective-c.md %}
 
 # ストレージ
 

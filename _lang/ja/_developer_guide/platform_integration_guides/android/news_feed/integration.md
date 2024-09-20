@@ -16,16 +16,16 @@ channel:
 > このリファレンス記事では、さまざまなニュースフィードカードの種類、利用可能なカード固有のプロパティ、Android または FireOS アプリケーションのカスタム統合例について説明します。
 
 {% alert note %}
-ニュースフィードは非推奨になります。Braze では、ニュースフィードツールを利用しているお客様に、コンテンツカードのメッセージングチャネルへの移行をお勧めしています。移行により、柔軟性、カスタマイズ性、信頼性が向上します。詳細については、[移行ガイド]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/)をご覧ください。
+ニュースフィードは非推奨になります。Braze では、News Feed ツールを使用するお客様は、コンテンツカードメッセージングチャネルに移動することを推奨しています。これは、より柔軟でカスタマイズ可能で、信頼性が高いチャネルです。詳しくは[マイグレーションガイド]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/)をご覧ください。
 {% endalert %}
 
-Android では、ニュースフィードは Braze Android UI プロジェクトで使用可能な[フラグメント][2]として実装されます。アクティビティにフラグメントを追加する方法については、[フラグメントに関する Google のドキュメント][2]を参照してください。
+Android では、ニュースフィードは Braze Android UI プロジェクトで使用可能な[フラグメント][2]として実装されます。アクティビティにフラグメントを追加する方法については、フラグメントに関する Google のドキュメントを参照してください。
 
 `BrazeFeedFragment` クラスは、ニュースフィードの内容を自動的に更新して表示し、使用状況分析をログに記録します。ユーザーのニュースフィードカードに表示できるカードは、Braze ダッシュボードで設定されます。
 
 ## カードのタイプ
 
-Braze には、バナー画像、キャプション付き画像、テキストアナウンス、ショートニュースの 5 種類のユニークなカードタイプがあります。各タイプはベースモデルから共通のプロパティを継承し、次の追加プロパティを持ちます。
+Braze には、バナー画像、キャプション付き画像、テキストアナウンス、ショートニュースの 5 種類のユニークなカードタイプがあります。各型はベースモデルから共通のプロパティを継承し、以下の追加プロパティを持ちます。
 
 ### ベースカードモデルのプロパティ
 
@@ -33,14 +33,14 @@ Braze には、バナー画像、キャプション付き画像、テキスト�
 
 |プロパティ|説明|
 |---|---|
-| `getId()` | Braze が設定したカードの ID を返します。 |
-| `getViewed()` | カードがユーザーによって読まれているか未読であるかを反映するブール値を返します。 |
-| `getExtras()` | このカードのキーと値のエクストラのマップを返します。 |
-| `setViewed(boolean)` ｜カードの閲覧済みフィールドを設定します。|
-| `getCreated()` | Braze ダッシュボードでのカードの作成時刻の UNIX タイムスタンプを返します。 |
-| `getUpdated()` | Braze ダッシュボードでのカードの最終更新時刻の UNIX タイムスタンプを返します。 |
-| `getCategories()` | カードに割り当てられているカテゴリのリストを返します。カテゴリのないカードには `ABKCardCategoryNoCategory` が割り当てられます。 |
-| `isInCategorySet(EnumSet)` | 指定されたカテゴリセットにカードが属している場合は true を返します。 |
+| `getId()` | Brazeで設定されたカードのID を返します。 |
+| `getViewed()` | カードがユーザーによって読み込まれているか読み込まれていないかを示すブール値を返します。 |
+| `getExtras()` | このカードのキーと値の追加のマップを返します。 |
+| `setViewed(boolean)` | カードの表示フィールドを設定します。 |
+| `getCreated()` | カードの作成日時のBraze ダッシュボード からのユニックスタイムスタンプを返します。 |
+| `getUpdated()` | カードの更新時刻のBraze ダッシュボードからのユニックスタイムスタンプを返します。 |
+| `getCategories()` | カードに割り当てられたカテゴリの一覧を返します。カテゴリなしのカードs には`ABKCardCategoryNoCategory` が割り当てられます。 |
+| `isInCategorySet(EnumSet)` | カードが指定されたカテゴリセットに属する場合に真を返します。 |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ### バナー画像カードのプロパティ
@@ -49,8 +49,8 @@ Braze には、バナー画像、キャプション付き画像、テキスト�
 
 |プロパティ|説明|
 |---|---|
-|`getImageUrl()` | カードの画像のURLを返します。|
-|`getUrl()` | カードがクリックされた後に開かれる URL を返します。HTTP または HTTPS URL、あるいはプロトコル URL の場合もあります。|
+| `getImageUrl()` | カードの"画像のURLを返します。 |
+| `getUrl()` | カードをクリックした後に開封されるURL を返します。HTTP またはHTTPS URL、またはプロトコルURL にすることができます。 |
 | `getDomain()` | プロパティ URL のリンクテキストを返します。 |
 {: .reset-td-br-1 .reset-td-br-2}
 
@@ -60,11 +60,11 @@ Braze には、バナー画像、キャプション付き画像、テキスト�
 
 |プロパティ|説明|
 |---|---|
-|`getImageUrl()` | カードの画像のURLを返します。|
-|`getTitle()` | カードのタイトルテキストを返します。|
-|`getDescription()` | カードの本文を返します。|
-|`getUrl()` | カードがクリックされた後に開かれる URL を返します。 HTTP または HTTPS URL、あるいはプロトコル URL の場合もあります。|
-|`getDomain()` ｜プロパティ URL のリンクテキストを返します。|
+| `getImageUrl()` | カードの"画像のURLを返します。 |
+| `getTitle()` | カードのタイトルテキストを返します。 |
+| `getDescription()` | カードの本文を返します。 |
+| `getUrl()` | カードをクリックした後に開封されるURL を返します。 HTTP またはHTTPS URL、またはプロトコルURL にすることができます。 |
+| `getDomain()` | プロパティのリンクテキストを返します。 |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ### テキスト通知カード (画像なしのキャプション付き画像) のプロパティ
@@ -73,10 +73,10 @@ Braze には、バナー画像、キャプション付き画像、テキスト�
 
 |プロパティ|説明|
 |---|---|
-|`getTitle()` | カードのタイトルテキストを返します。|
-|`getDescription()` | カードの本文を返します。|
-|`getUrl()` | カードがクリックされた後に開かれる URL を返します。HTTP または HTTPS URL、あるいはプロトコル URL の場合もあります。|
-|`getDomain()` ｜プロパティ URL のリンクテキストを返します。|
+| `getTitle()` | カードのタイトルテキストを返します。 |
+| `getDescription()` | カードの本文を返します。 |
+| `getUrl()` | カードをクリックした後に開封されるURL を返します。HTTP またはHTTPS URL、またはプロトコルURL にすることができます。 |
+| `getDomain()` | プロパティのリンクテキストを返します。 |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ### ショートニュースカードのプロパティ
@@ -85,11 +85,11 @@ Braze には、バナー画像、キャプション付き画像、テキスト�
 
 |プロパティ|説明|
 |---|---|
-|`getImageUrl()` | カードの画像のURLを返します。|
-|`getTitle()` | カードのタイトルテキストを返します。|
-|`getDescription()` | カードの本文を返します。|
-|`getUrl()` | カードがクリックされた後に開かれる URL を返します。HTTP または HTTPS URL、あるいはプロトコル URL の場合もあります。|
-|`getDomain()` ｜プロパティ URL のリンクテキストを返します。|
+| `getImageUrl()` | カードの"画像のURLを返します。 |
+| `getTitle()` | カードのタイトルテキストを返します。 |
+| `getDescription()` | カードの本文を返します。 |
+| `getUrl()` | カードをクリックした後に開封されるURL を返します。HTTP またはHTTPS URL、またはプロトコルURL にすることができます。 |
+| `getDomain()` | プロパティのリンクテキストを返します。 |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## セッション分析
@@ -115,30 +115,30 @@ private IEventSubscriber<FeedUpdatedEvent> mFeedUpdatedSubscriber;
 
 次に、通常はカスタムフィードアクティビティの `Activity.onCreate()` 内で、以下のコードを追加して、Braze のフィードドの更新を購読します。
 
-\`\`\`java
-// まず古いサブスクリプションを削除
+```java
+// Remove the old subscription first
 Braze.getInstance(context).removeSingleSubscription(mFeedUpdatedSubscriber, FeedUpdatedEvent.class);
 mFeedUpdatedSubscriber = new IEventSubscriber<FeedUpdatedEvent>() {
   @Override
   public void trigger(final FeedUpdatedEvent event) {
-    // FeedUpdatedEvent に含まれる Card オブジェクトのこのリストは、ニュースフィードビューにデータを挿入するために使用する必要があります。
+    // This list of Card objects included in the FeedUpdatedEvent should be used to populate your News Feed views.
     List<Card> cards = event.getFeedCards();
-    // ここにロジックを挿入
+    // your logic here
   }
 };
 Braze.getInstance(context).subscribeToFeedUpdates(mFeedUpdatedSubscriber);
 
-// フィードデータの更新をリクエスト
+// Request a refresh of feed data
 Braze.getInstance(context).requestFeedRefresh();
-\`\`\`
+```
 
-また、カスタムフィードアクティビティが表示されなくなったら、配信を停止することをお勧めします。アクティビティの `onDestroy()` ライフサイクルメソッドに次のコードを追加します。
+また、カスタムフィードアクティビティが表示されなくなったら、配信を停止することをお勧めします。アクティビティの`onDestroy()`ライフサイクルメソッドに次のコードを追加します。
 
 ```
 Braze.getInstance(context).removeSingleSubscription(mFeedUpdatedSubscriber, FeedUpdatedEvent.class);
 ```
 
-### パート 2:分析のログ記録
+### パート 2:分析のロギング
 
 カスタムビューを使用する場合、分析は Braze ビューを使用する場合にのみ自動的に処理されるため、分析を手動でログに記録する必要があります。
 

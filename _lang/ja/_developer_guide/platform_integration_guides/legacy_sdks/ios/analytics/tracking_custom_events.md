@@ -8,7 +8,7 @@ description: "このリファレンス記事では、iOS アプリケーショ�
 noindex: true
 ---
 
-{% multi_lang_include archive/objective-c-deprecation-notice.md %}
+{% multi_lang_include deprecations/objective-c.md %}
 
 # iOS のカスタムイベントの追跡
 
@@ -19,14 +19,14 @@ Braze でカスタムイベントを記録することで、アプリの使用�
 ## カスタムイベントの追加
 
 {% tabs %}
-{% tab OBJECTIVE-C %}
+{% tab 目標-C %}
 
 ```objc
 [[Appboy sharedInstance] logCustomEvent:@"YOUR_EVENT_NAME"];
 ```
 
 {% endtab %}
-{% tab swift %}
+{% tab 速い %}
 
 ```swift
 Appboy.sharedInstance()?.logCustomEvent("YOUR_EVENT_NAME")
@@ -40,7 +40,7 @@ Appboy.sharedInstance()?.logCustomEvent("YOUR_EVENT_NAME")
 `NSNumber`、`NSString`、または `NSDate` の値が入力された `NSDictionary` を渡すことで、カスタムイベントに関するメタデータを追加できます。
 
 {% tabs %}
-{% tab OBJECTIVE-C %}
+{% tab 目標-C %}
 
 ```objc
 [[Appboy sharedInstance] logCustomEvent:@"YOUR-EVENT-NAME"
@@ -57,7 +57,7 @@ Appboy.sharedInstance()?.logCustomEvent("YOUR_EVENT_NAME")
 ```
 
 {% endtab %}
-{% tab swift %}
+{% tab 速い %}
 
 ```swift
 Appboy.sharedInstance()?.logCustomEvent(

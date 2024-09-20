@@ -84,6 +84,11 @@ To measure the impact of an individual WhatsApp message, you can add a [control 
 To measure the impact of an individual webhook message, you can add a [control group][2] to an A/B test. The top-level **Campaign Details** panel doesn't include metrics from the Control Group variant.
 
 {% endif %}
+
+#### Changes Since Last Viewed
+
+The number of updates to the campaign from other members of your team is tracked by the *Changes Since Last Viewed* metric on the campaign overview page. Select **Changes Since Last Viewed** to view a changelog of updates to the campaign's name, schedule, tags, message, audience, approval status, or team access configuration. For each update, you can see who performed the update and when. You can use this changelog to audit changes to your campaign.
+
 <!--
 ### Message Performance
 
@@ -219,7 +224,7 @@ Typically around 10,000 delivered emails are required for the statistic to be co
 
 ###### Limitations
 
-Estimated Real Open Rate is only available in campaigns, and is not reported in Current events. This metric is not retroactively calculated for campaigns launched before November 14, 2023.
+Estimated Real Open Rate is only available in campaigns, and is not reported in Current events. This metric is only retroactively calculated for active campaigns launched before November 14, 2023.
 
 {% elsif include.channel == "in-app message" %}
 
@@ -254,6 +259,8 @@ Here is a breakdown of some key metrics you may see while reviewing your message
 | Direct Opens | Instances in which a user opened your app by interacting directly with a push notification. |
 | Opens | Instances including both _Direct Opens_ and _Influenced Opens_ in which the Braze SDK has determined, using a proprietary algorithm, that a push notification has caused a user to open the app. |
 {: .reset-td-br-1 .reset-td-br-2}
+
+Push unsubscribes are not included as a metric in campaign analytics. Refer to [Tracking push unsubscribes]({{site.baseurl}}/help/help_articles/push/push_unsubscribes) for steps on how to manually track this metric.
 
 {% alert tip %}
 Even though _Direct Opens_ and _Influenced Opens_ include the word "opens", they're actually different metrics. _Direct Opens_ refers to the direct opening of a push notification, as stated in the table above. _Influenced Opens_ refers to the opening of an app, without opening a push notification within a specific time frame after receiving it. So, _Influenced Opens_ refers to the app opens, not push notification opens.
@@ -297,6 +304,7 @@ Here is a breakdown of some key metrics you may see while reviewing your message
 | Rejections | The SMS has been rejected by the carrier. This can happen for several reasons, including carrier content filtering, availability of the destination device or the phone number is no longer in service. As a Braze customer, rejections are charged toward your SMS allotment. |
 | Opt-Out | A user replied to your message with an [opt-out keyword]({{site.baseurl}}/user_guide/message_building_by_channel/sms/keywords/keyword_handling/#default-opt-in-opt-out-keywords) and was unsubscribed from your SMS program. A user reply is measured anytime a user sends an inbound message within four hours of receiving your message. |
 | Help | A user replied to your message with a [HELP keyword]({{site.baseurl}}/user_guide/message_building_by_channel/sms/keywords/keyword_handling/#default-opt-in-opt-out-keywords) and was dispatched a HELP auto-response. A user reply is measured anytime a user sends an inbound message within four hours of receiving your message. |
+| Total Clicks | The total number (and percentage) of users who clicked within the delivered message. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% elsif include.channel == "webhook" %}
@@ -321,9 +329,12 @@ Here are some key WhatsApp metrics you may see in your analytics. To see the def
 | Term | Definition |
 | --- | --- |
 | Sends | The total number of sends successfully communicated between Braze and WhatsApp. However, this does not necessarily mean the message was received by the end user. |
-| Deliveries | The total number of WhatsApp messages sent that successfully made it to the end user's device. |
-| Reads | When a WhatsApp message is read by the end user. The end user's read receipts must be "on" for Braze to track reads. |
-| Failures | The total number of sends that were not successful because WhatsApp could not deliver the message to the end user. Failures are included in the _Sends_ count but are not included in the _Deliveries_ count. |
+| Deliveries | The total number of WhatsApp messages sent that successfully made it to the end user's device. | 
+| Delivery rate | The percentage of users who had a delivery over users who had a send. Calculation: (Deliveries) / (Sends)|
+| Reads | When a WhatsApp message is read by the end user. The end user's read receipts must be "on" for Braze to track reads. | 
+| Read rate | The percentage of users who read the message over users who had a send. Calculation: (Reads) / (Sends)|
+| Failures | The total number of sends that were not successful because WhatsApp could not deliver the message to the end user. Failures are included in the _Sends_ count but not in the _Deliveries_ count. | 
+| Failure rate | The percentage of users who had unsuccessful sends over users who had a successful send. Calculation: (Failures) / (Sends)|
 {: .reset-td-br-1 .reset-td-br-2}
 
 #### End-user blocking and reporting metrics

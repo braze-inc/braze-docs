@@ -8,9 +8,6 @@ description: "Cette page d’accueil répertorie les partenaires de Braze (Alloy
 layout: partner_page
 search_tag: Partenaire
 
-partner_api: "https://www.braze.com/api/v1/partners"
-partner_path: "https://www.braze.com/product/alloys/partners/"
-
 partner_top_header: "Personnalisation des messages"
 
 valid_partner_list:
@@ -59,5 +56,5 @@ valid_partner_list:
 - name: Komo
   url: /docs/partners/message_personalization/dynamic_content/komo/
 - name: Phrase
-  url: /docs/partners/message_personalization/localization/phrase/ 
+  url: /docs/partners/message_personalization/localization/phrase/
 ---

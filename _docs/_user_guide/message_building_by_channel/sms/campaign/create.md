@@ -76,9 +76,9 @@ Need help creating awesome copy? Try using the [AI copywriting assistant]({{site
 
 ![Launch AI Copywriter button, located in the Message field of the SMS composer.]({% image_buster /assets/img/ai_copywriter/ai_copywriter_sms.png %}){: style="max-width:60%"}
 
-### Contact Cards
+### Contact cards
 
-If desired, you can add a Contact Card to your SMS message to make it easy for your customers to add your business and contact information to their contacts. You can assign common properties to these cards, such as your company's name, phone number, address, email, and a small photo. Check out [Contact Cards]({{site.baseurl}}/user_guide/message_building_by_channel/sms/mms/contact_card/) to learn more.
+If desired, you can add a contact card to your SMS message to make it easy for your customers to add your business and contact information to their contacts. You can assign common properties to these cards, such as your company's name, phone number, address, email, and a small photo. Check out [Contact cards]({{site.baseurl}}/user_guide/message_building_by_channel/sms/mms/contact_card/) to learn more.
 
 ## Step 3: Preview and test your message
 
@@ -95,7 +95,7 @@ If you'd like to test how many segments your SMS may be split into, test your co
 {% tabs %}
 {% tab Campaign %}
 
-Next, build the remainder of your campaign. See the following sections for further details on how to best utilize our tools to build SMS messages.
+Next, build the remainder of your campaign. See the following sections for further details on how to best use our tools to build SMS messages.
 
 #### Choose delivery schedule or trigger
 

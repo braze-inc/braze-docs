@@ -18,24 +18,24 @@ description: "このリファレンス記事では、WebView に Braze JavaScrip
 {% tabs %}
 {% tab JAVA %}
 
-\`\`\`java
+```java
 String javascriptString = BrazeFileUtils.getAssetFileStringContents(context.getAssets(), "appboy-html-in-app-message-javascript-component.js");
 myWebView.loadUrl("javascript:" + javascriptString);
 
 final InAppMessageJavascriptInterface javascriptInterface = new InAppMessageJavascriptInterface(context, inAppMessage);
 myWebView.addJavascriptInterface(javascriptInterface, "brazeInternalBridge");
-\`\`\`
+```
 
 {% endtab %}
 {% tab KOTLIN %}
 
-\`\`\`kotlin
+```kotlin
 val javascriptString = BrazeFileUtils.getAssetFileStringContents(context.getAssets(), "appboy-html-in-app-message-javascript-component.js")
 myWebView.loadUrl("javascript:" + javascriptString!!)
 
 val javascriptInterface = InAppMessageJavascriptInterface(context, inAppMessage)
 myWebView.addJavascriptInterface(javascriptInterface, "brazeInternalBridge")
-\`\`\`
+```
 
 {% endtab %}
 {% endtabs %}

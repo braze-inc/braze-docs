@@ -100,7 +100,17 @@ Check out this link aliasing example for the recommended formatting of the ancho
 ```liquid
 {% assign link1 = "https://www.braze1.com" %}
 
-<a href="{{link1}}?">{{link1}}</a>
+<a href="{{link1}}?">Click Here</a>
+```
+{% endraw %}
+
+If the link has parameters within it that contain a question mark (`?`), you can replace it in the anchor tag with an ampersand (`&`), such as in this example:
+
+{% raw %}
+```liquid
+{% assign link_with_params = "https://www.braze1.com?param_1&param_2" %}
+
+<a href="{{link_with_params}}&">Click Here</a>
 ```
 {% endraw %}
 

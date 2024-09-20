@@ -29,6 +29,7 @@ As a convenience, a summary of supported personalization tags are provided. For 
 | Event Properties <br> (These are custom to your workspace.)| `{{event_properties.${your_custom_event_property}}}` |
 | Canvas Entry Properties| `{{canvas_entry_properties}}` |
 | Custom Attributes <br> (These are custom to your workspace.) | `{{custom_attribute.${your_custom_attribute}}}` |
+| [API trigger Properties][75] |`{{api_trigger_properties}}` |
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% endraw %}
@@ -295,3 +296,4 @@ It is between 2:00:00 pm and 2:59:59 pm PT!
 [48]: {{site.baseurl}}/user_guide/message_building_by_channel/sms/keywords/keyword_handling/#trigger-messages-by-keyword
 [49]: https://shopify.github.io/liquid/basics/whitespace/
 [50]: {{site.baseurl}}/help/help_articles/data/dispatch_id/
+[75]: {{site.baseurl}}/api/objects_filters/trigger_properties_object/

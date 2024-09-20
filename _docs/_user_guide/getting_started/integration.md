@@ -72,7 +72,7 @@ Once you discover all of this information, share it with your engineer. They'll 
 
 If you want things like API-triggered launching and Connected Content, discuss that with both your Braze contact and your developers to ensure that you'll be able to get data that lives outside of your app and Braze into your messages.
 
-### Step 5: You both QA your implementation
+### Step 5: You both perform QA on your implementation
 
 Work together with your engineer to make sure everything is working. Send [test messages]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/sending_test_messages/), use our [test apps for Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/sample_apps/) and [test apps for iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/sample_apps/), check every box before you start sending!
 

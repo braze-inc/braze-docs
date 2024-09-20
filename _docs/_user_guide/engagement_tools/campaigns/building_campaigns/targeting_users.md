@@ -63,7 +63,11 @@ For more information and best practices, refer to [Multivariate & A/B Testing][4
 
 ## Audience statistics
 
-Braze provides detailed audience statistics of the targeted channels in the footer.
+Braze provides detailed audience statistics of the targeted channels in the footer. 
+
+For campaigns, select **Calculate Exact Statistics** to determine an accurate number for your reachable users as this will search through every user in your user base. The number of reachable users may decrease if you use a [Global Control Group]({{site.baseurl}}/user_guide/engagement_tools/testing/global_control_group/) or set up message eligibility.
+
+For segments, the larger your user base is, the more likely the **Reachable Users** amount is a rough estimate. For more details, refer to [Calculating exact statistics]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment#calculating-exact-statistics).
 
 ![][24]
 

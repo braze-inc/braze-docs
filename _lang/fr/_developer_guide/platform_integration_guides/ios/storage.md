@@ -8,7 +8,7 @@ description: "Cet article de référence décrit les propriétés capturées par
 
 ---
 
-{% multi_lang_include archive/objective-c-deprecation-notice.md %}
+{% multi_lang_include deprecations/objective-c.md %}
 
 # Stockage
 

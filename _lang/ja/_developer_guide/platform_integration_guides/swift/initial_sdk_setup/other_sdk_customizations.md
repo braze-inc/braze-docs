@@ -1,38 +1,38 @@
 ---
 nav_title: その他の SDK カスタマイズ
-article_title: iOS 向けのその他の SDK カスタマイズ
+article_title: Swift用のその他のSDKカスタマイズ
 platform: Swift
-description: "本書では、Braze Swift SDK を設定するための追加手順について説明します。"
+description: "この文書では、Braze Swift SDKを設定するための追加手順を説明する。"
 page_order: 3
 
 ---
 
-# その他の SDK のカスタマイズ
+# Swift用のその他のSDKカスタマイズ
 
-> Braze Swift SDK は、Braze インスタンスにアタッチされた`Braze.Configuration` オブジェクトのメンバープロパティを変更することで設定できます。設定は、`Braze(configuration:)` でBraze インスタンスを初期化する前にのみ行うことができます。
+> Braze Swift SDKは、Brazeインスタンスにアタッチされた`Braze.Configuration` オブジェクトのメンバープロパティを変更することで設定できる。設定は、Brazeインスタンスを`Braze(configuration:)` で初期化する前にのみ行えることに注意。
 
-使用可能な設定の完全なリストについては、[Braze.Configurationクラスのドキュメント][1]を参照してください。
+利用可能なコンフィギュレーションの全リストは、[Braze.Configuration クラスのドキュメントを][1]参照のこと。
 
 ## Braze ログレベル
 
-Braze Swift SDK のデフォルトのログレベルは、次のチャートの`.error` です。このレベルは、完全に無効化されたロギングを上回る最小レベルです。
+Braze Swift SDKのデフォルトのログレベルは、次の表の`.error` 。このレベルは、完全に無効化されたロギングを上回る最も最小のレベルである。
 
 次の使用可能なログレベルのリストを参照してください。
 
-| Swift | Objective-C | 説明|
+| Swift       | Objective-C              | 説明                                                       |
 |-------------|--------------------------|-------------------------------------------------------------------|
-| `.debug` | `BRZLoggerLevelDebug` | デバッグ情報+ `.info` + `.error` |
-| `.info` | `BRZLoggerLevelInfo` | 一般的なSDK 情報(ユーザーの変更など) + `.error`. |
-| `.error` | `BRZLoggerLevelError` | ログエラー|
-| `.disabled` | `BRZLoggerLevelDisabled` | ロギングは発生しません。|
+| `.debug`    | `BRZLoggerLevelDebug`    | デバッグ情報のログ`.info` + `.error`                    |
+| `.info`     | `BRZLoggerLevelInfo`     | 一般的なSDK情報（ユーザーの変更など）を記録する +`.error` 。 |
+| `.error`    | `BRZLoggerLevelError`    | ログのエラー。                                                       |
+| `.disabled` | `BRZLoggerLevelDisabled` | ロギングは行われない。                                                |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 ### ログレベルの設定
 
-ログレベルは、`Braze.Configuration` オブジェクトで実行時に割り当てることができます。
+ログ・レベルは、`Braze.Configuration` オブジェクトの実行時に割り当てることができる：
 
 {% tabs %}
-{% tab swift %}
+{% tab 速い %}
 
 ```swift
 let configuration = Braze.Configuration(
@@ -45,7 +45,7 @@ let braze = Braze(configuration: configuration)
 ```
 
 {% endtab %}
-{% tab OBJECTIVE-C %}
+{% tab 目標-C %}
 
 ```objc
 BRZConfiguration *configuration = [[BRZConfiguration alloc] initWithApiKey:self.APIKey
@@ -58,7 +58,7 @@ Braze *braze = [[Braze alloc] initWithConfiguration:configuration];
 {% endtab %}
 {% endtabs %}
 
-ろう付けロガーの使用については、[ロガークラスのドキュメント][2]を参照してください。
+Braze Loggerの完全な使い方については、[Loggerクラスのドキュメントを][2]参照のこと。
 
 [1]: https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/configuration-swift.class
 [2]: https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/configuration-swift.class/logger-swift.class

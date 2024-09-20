@@ -55,7 +55,14 @@ Authorization: Bearer YOUR-REST-API-KEY
       "send_to_existing_only": (optional, boolean) defaults to true, can't be used with user aliases; if set to `false`, an attributes object must also be included,
       "attributes": (optional, object) fields in the attributes object will create or update an attribute of that name with the given value on the specified user profile before the message is sent and existing values will be overwritten
     }
-  ]
+  ],
+  "attachments": (optional, array) array of JSON objects that define the files you need attached, defined by "file_name" and "url",
+    [
+      {  
+       "file_name": (required, string) the name of the file you want to attach to your email, excluding the extension (for example, ".pdf"). Attach files up to 2 MB. This is required if you use "attachments",
+       "url": (required, string) the corresponding URL of the file you want to attach to your email. The file name's extension will be detected automatically from the URL defined, which should return the appropriate "Content-Type" as a response header. This is required if you use "attachments",
+      }
+    ]
 }
 ```
 
@@ -69,6 +76,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 |`broadcast`| Optional | Boolean | You must set `broadcast` to true when sending a message to an entire segment that a campaign or Canvas targets. This parameter defaults to false (as of August 31, 2017). <br><br> If `broadcast` is set to true, a `recipients` list cannot be included. However, use caution when setting `broadcast: true`, as unintentionally setting this flag may cause you to send your message to a larger than expected audience. |
 |`audience`| Optional | Connected audience object| See [connected audience]({{site.baseurl}}/api/objects_filters/connected_audience/). |
 |`recipients`| Optional | Array | See [recipients object]({{site.baseurl}}/api/objects_filters/recipient_object/).<br><br>If `send_to_existing_only` is `false`, an attribute object must be included.<br><br>If `recipients` is not provided and `broadcast` is set to true, the message will send to the entire segment targeted by the campaign. |
+|`attachments`| Optional | Array | If `broadcast` is set to true, then `attachments` list cannot be included. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 - The recipients array may contain up to 50 objects, with each object containing a single `external_user_id` string and `trigger_properties` object.
@@ -147,7 +155,13 @@ curl --location --request POST 'https://rest.iad-01.braze.com/campaigns/trigger/
         "first_name" : "Alex"
       }
     }
-  ]
+  ],
+  "attachments": [
+    {
+      "file_name" : "YourFileName",
+      "url" : "https://exampleurl.com/YourFileName.pdf"
+    }
+  ] 
 }'
 ```
 
@@ -155,9 +169,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/campaigns/trigger/
 
 Message sending endpoint responses will include the message's `dispatch_id` for reference back to the dispatch of the message. The `dispatch_id` is the ID of the message dispatch, a unique ID for each transmission sent from Braze. When using this endpoint, you receive a single `dispatch_id` for an entire batched set of users. For more information on `dispatch_id` check out our documentation on [Dispatch ID behavior]({{site.baseurl}}/help/help_articles/data/dispatch_id/).
 
-## Create send endpoint
-
-**Using the Attributes Object in campaigns**
+## Attributes object for campaigns
 
 Braze has a messaging object called `attributes` that will allow you to add, create, or update attributes and values for a user before you send them an API-triggered campaign. Using the `campaign/trigger/send` endpoint as this API call will process the user attributes object before it processes and sends the campaign. This helps minimize the risk of there being issues caused by [race conditions]({{site.baseurl}}/help/best_practices/race_conditions/). 
 

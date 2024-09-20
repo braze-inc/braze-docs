@@ -9,10 +9,8 @@ description: "この記事では、Swift SDK のデータ収集を無効にす�
 
 # iOS SDK トラッキングを無効にする
 
-> データプライバシー規制を遵守するため、Braze インスタンスの [`enabled`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/enabled) プロパティを `false` に設定することで、iOS SDK のデータトラッキングアクティビティを完全に停止できます。 
+> データプライバシー規制を遵守するため、iOS SDKのデータ追跡アクティビティは、Brazeインスタンスの [`enabled`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/enabled)プロパティを`false` 。 
 
-`false` に設定されると、Braze SDK でパブリック API の呼び出しがすべて無視されます。また、SDK で実行中のアクション (ネットワークリクエスト、イベント処理など) がすべてキャンセルされます。データ収集を再開する場合は、[`enabled`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/enabled/) プロパティを `true` に設定できます。
+`enabled` が`false` に設定されている場合、Braze SDK はパブリック API への呼び出しをすべて無視する。SDKはまた、ネットワークリクエストやイベント処理など、飛行中のすべてのアクションをキャンセルする。データ収集を再開するには [`enabled`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/enabled/)を`true` に設定する。
 
-さらに、メソッド [`wipeData()`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/wipedata()) を使用して、デバイスにローカルで保存された SDK データを完全にクリアすることもできます。
-
-特定のデバイスで、ベンダーのアプリをユーザーがすべてアンインストールしない限り、`wipeData()` を呼び出した後の Braze SDK の次回実行時に、サーバーでデバイス識別子によってそのユーザーが再識別されます。すべてのユーザーデータを完全に削除するには、`wipeData()` の呼び出しと、Braze [REST API]({{site.baseurl}}/api/endpoints/user_data/post_user_delete/) を介したサーバーのデータ削除リクエストを組み合わせる必要があります。
+また [`wipeData()`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/wipedata())メソッドを使用して、ユーザーのデバイスにローカルに保存されたSDKデータを完全に消去することもできる。Swift SDKバージョン5.7.0以前を使用しているか、`useUUIDAsDeviceId` が`false` に設定されている場合、あなたのベンダー用識別子（IDFV）が彼らのデバイスIDとして使用されるため、あなたはまた、 にポストリクエストを行う必要がある。 [`/users/delete`]({{site.baseurl}}/api/endpoints/user_data/post_user_delete/)あなたのIdentifier for Vendors (IDFV)がデバイスIDとして使用されるからだ。Braze Swiftのバージョン7.0.0以降では、SDKと`wipeData()` メソッドが、デバイスIDの代わりにUUIDをランダムに生成する。
