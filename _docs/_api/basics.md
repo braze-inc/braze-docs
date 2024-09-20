@@ -67,7 +67,7 @@ For most APIs, Braze has a default rate limit of 250,000 requests per hour. Howe
 
 For more information, refer to the following articles based on your platform: [iOS][9], [Android][10], and [Web][13].
 
-## REST API key
+## About REST API keys
 
 A REST Application Programming Interface key (REST API key) is a unique code that is passed into an API to authenticate the API call and identify the calling application or user. API access is done using HTTPS web requests to your company's REST API endpoint. We use REST API keys at Braze in tandem with our App Identifier keys to track, access, send, export, and analyze data to help make sure everything is running smoothly on both your and our end.
 
@@ -79,6 +79,26 @@ We refer to both the REST API key and workspace API key as the `api_key`. The `a
 
 {% alert tip %}
 In addition to REST API keys, there also exists a type of key called Identifier keys that can be used to reference specific things like apps, templates, Canvases, campaigns, Content Cards, and segments from the API. For more information, refer to [API identifier types]({{site.baseurl}}/api/identifier_types/).
+{% endalert %}
+
+### Creating REST API keys
+
+To create a new REST API key:
+
+1. Go to **Settings** > **APIs and Identifiers**.
+
+{% alert note %}
+If you're using the [older navigation]({{site.baseurl}}/navigation), you can create an API key from **Developer Console** > **API Settings**.
+{% endalert %}
+
+{:start="2"}
+2. Select **Create API Key**.
+3. Give your new key a name for identification at a glance.
+4. Specify [allowlisted IP addresses](#api-ip-allowlisting) and subnets for the new key.
+5. Select which [permissions](#rest-api-key-permissions) you want to be associated with your new key.
+
+{% alert important %}
+Keep in mind that after you create a new API key, you cannot edit the scope of permissions or the allowlisted IPs. This limitation is in place for security reasons. If you need to change the scope of a key, create a new key with the updated permissions and implement that key in place of the old one. After you've completed your implementation, you can delete the old key.
 {% endalert %}
 
 ### REST API key permissions
@@ -308,29 +328,11 @@ News Feed is being deprecated. Braze recommends that customers who use our News 
 {% endtab %}
 {% endtabs %}
 
-## Creating REST API keys
+### Managing REST API keys
 
-To create a new REST API key:
+You can view details for or delete existing REST API keys from **Settings** > **APIs and Identifiers** > **API Keys** tab. Note that REST API keys cannot be edited after they're created. 
 
-1. Go to **Settings** > **APIs and Identifiers**.
-
-{% alert note %}
-If you are using the [older navigation]({{site.baseurl}}/navigation), you can create an API key from **Developer Console** > **API Settings**.
-{% endalert %}
-
-{:start="2"}
-2. Select **Create API Key**.
-3. Give your new key a name for identification at a glance.
-4. Specify [allowlisted IP addresses](#api-ip-allowlisting) and subnets for the new key.
-5. Select which [permissions](#rest-api-key-permissions) you want to be associated with your new key.
-
-{% alert important %}
-Keep in mind that after you create a new API key, you cannot edit the scope of permissions or the allowlisted IPs. This limitation is in place for security reasons. If you need to change the scope of a key, create a new key with the updated permissions and implement that key in place of the old one. After you've completed your implementation, you can delete the old key.
-{% endalert %}
-
-## Managing REST API keys
-
-REST API keys cannot be edited after they're created, but you can view details for or delete existing REST API keys from the **API Keys** tab. This tab has the following information for each key:
+The **API Keys** tab includes the following information for each key:
 
 | Field        | Description                                                                                                         |
 | ------------ | :------------------------------------------------------------------------------------------------------------------ |
@@ -349,7 +351,7 @@ Note when [deleting a user]({{site.baseurl}}/user_guide/administrative/app_setti
 
 ![][29]{: style="max-width:30%;"}
 
-## REST API key security
+### REST API key security
 
 API keys are used to authenticate an API call. When you create a new REST API key, you need to give it access to specific endpoints. By assigning specific permissions to an API key, you can limit exactly which calls an API key can authenticate.
 
