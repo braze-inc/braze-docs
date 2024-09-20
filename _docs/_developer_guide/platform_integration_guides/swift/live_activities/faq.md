@@ -44,7 +44,7 @@ Live Activity update tokens expire after eight hours.
 
 ### Do Live Activities require push primers?
 
-[Push primers]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/push_primer_messages/) are a best practice to prompt your users to opt in to push notifications from your app. However, there is no system prompt to opt into Live Activities. Users are, by default, opted into Live Activities for any individual app when they install that app on iOS 16.1+. This permission can be disabled or re-enabled in the device settings on a per-app basis.
+[Push primers]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/push_primer_messages/) are a best practice to prompt your users to opt in to push notifications from your app. However, there is no system prompt to opt into Live Activities. By default, users are opted into Live Activities for an individual app when the user installs that app on iOS 16.1 or later. This permission can be disabled or re-enabled in the device settings on a per-app basis.
 
 ## Technical topics and troubleshooting
 
@@ -54,9 +54,9 @@ Any Live Activity errors will be logged in the Braze dashboard in the [Message A
 
 ### After sending a push-to-start notification, why haven't I received my Live Activity?
 
-First, verify that your payload includes all the required fields described in the [`messages/live_activity/start`]({{site.baseurl}}/api/endpoints/messaging/live_activity/start) endpoint and that the `activity_attributes` and `content_state` fields match the properties defined in your project code. If you are certain that the payload is correct, you may be rate limited by APNs. This limit is imposed by Apple and not by Braze.
+First, verify that your payload includes all the required fields described in the [`messages/live_activity/start`]({{site.baseurl}}/api/endpoints/messaging/live_activity/start) endpoint. The `activity_attributes` and `content_state` fields should match the properties defined in your project's code. If you're certain that the payload is correct, its possible you may be rate-limited by APNs. This limit is imposed by Apple and not by Braze.
 
-To verify that your push-to-start notification successfully arrived at the device but was not displayed due to rate limits, you can debug your project using the Console app on your Mac. Attach the recording process for your desired device, and in the search bar, filter logs by `process:liveactivitiesd`.
+To verify that your push-to-start notification successfully arrived at the device but was not displayed due to rate limits, you can debug your project using the Console app on your Mac. Attach the recording process for your desired device, then filter the logs by `process:liveactivitiesd` in the search bar.
 
 ### I am receiving an Access Denied response when I try to use the `live_activity/update` endpoint. Why?
 
