@@ -172,7 +172,7 @@ description: "この記事では、階層化 JSON データをカスタムイベ
 
 ### 送信できる階層化データの量はどの程度ですか?
 
-イベントの 1 つ以上のプロパティに階層化されたデータが含まれている場合、イベントのすべてのプロパティを合計した最大ペイロードは 5]100 KB です。そのサイズ制限を超えたリクエストは拒否されます。
+イベントの 1 つ以上のプロパティに階層化されたデータが含まれている場合、イベントのすべてのプロパティを合計した最大ペイロードは 100 KB です。そのサイズ制限を超えたリクエストは拒否されます。
 
 [4]: {% image_buster /assets/img_archive/nested_event_properties_segmentation.png %}
 [5]: {% image_buster /assets/img_archive/nested_event_properties_personalization.png %}
