@@ -176,7 +176,7 @@ Braze には、ユーザーの LTV を把握するために参照できる主な
 {% tabs local %}
 {% tab キャンバスエントリのプロパティ %}
 
-[キャンバスエントリのプロパティ]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object/)は、アクションベースまたは API でトリガーされるキャンバスにマップするプロパティです。`canvas_entry_properties` オブジェクトのサイズ上限は 50 KB であることに注意してください。
+[キャンバスエントリのプロパティ]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object/)は、アクションベースまたは API でトリガーされるキャンバスにマップするプロパティです。`canvas_entry_properties` オブジェクトのサイズ上限は 100 KB であることに注意してください。
 
 {% alert important %}
 特にアプリ内メッセージチャネルでは、以前の早期アクセスの一環として元のエディターで永続的なエントリプロパティを有効にしている場合、キャンバスフローと元のキャンバスエディターでのみ `canvas_entry_properties` を参照できます。
