@@ -78,7 +78,7 @@ You can edit these Canvas settings and information after a Canvas launches using
 
 After a Canvas has launched:
 - Conversion events can't be edited. 
-- [Audience paths]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/audience_paths/), [action paths]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/action_paths/), and [experiment paths]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step) can't be added or removed to these steps and can't be reordered to adjust the ranking.
+- [Audience paths]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/audience_paths/), [action paths]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/action_paths/), and [experiment paths]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step) can't be added or removed to these steps and can't be reordered to adjust the ranking. As a workaround, edit the active Canvas and duplicate the step, which will be editable until you launch the draft.
 
 ### Individual steps
 
