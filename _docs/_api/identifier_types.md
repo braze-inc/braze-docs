@@ -25,11 +25,11 @@ The app identifier or `app_id` is a parameter associating activity with a specif
 
 There are two ways to locate your `app_id`:
 
-1. Go to **Settings** > **API Keys**. Under **Identification**, you can see every `app_id` that exists for your apps.
-2. Go to **Settings** > **APIs and Identifiers**. Your API key is listed next to the **API Key** field in the settings section.
+1. Go to **Settings** > **APIs and Identifiers** > **App Identifiers**. Your API key for each app is listed under the **Identifier** column.
+2. Go to **Settings** > **App Settings**. Your API key is listed next to the **API Key** field in the settings section.
 
 {% alert note %}
-If you are using the [older navigation]({{site.baseurl}}/navigation), these pages are in a new location:<br> - **API Keys** is located at **Developer Console** > **API Settings**<br> - **App Settings** located at **Manage Settings** > **Settings**
+If you are using the [older navigation]({{site.baseurl}}/navigation), these pages are in a new location:<br> - **App Identifiers** is located at **Developer Console** > **API Settings**<br> - **App Settings** located at **Manage Settings** > **Settings**
 {% endalert %}
 
 ### What can it be used for?
