@@ -109,7 +109,7 @@ The following tables provide examples of links in an email body, link aliasing r
 
 ### Link with anchor
 
-**Logic:** Braze expects the URL to use a standard structure where anchors (#) are present after a question mark (?). Because Braze reads from left to right, we will append the question mark and `lid` value before the anchor.
+**Logic:** Braze expects the URL to use a standard structure where anchors (#) are present after a question mark (?). Because Braze reads from left to right, the question mark and `lid` value are appended before the anchor.
 
 | Link in Email Body                               | Link with Aliasing                                                |
 |--------------------------------------------------|-------------------------------------------------------------------|
