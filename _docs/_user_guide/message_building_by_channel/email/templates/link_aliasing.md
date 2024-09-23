@@ -76,17 +76,54 @@ When a Content Block without a `lid` value is inserted into a new message, the l
 For Content Blocks, Braze recommends creating copies of existing Content Blocks to use in new messages. This can be done by bulk duplicating to prevent scenarios where you might reference a Content Block that has not been enabled for link aliasing in a new message.
 {% endalert %}
 
-## Examples
+## How links are updated with link aliasing
 
-The following table provides examples of links in an email body, link aliasing results, and explanations for how the original link is updated with link aliasing.
+The following tables provide examples of links in an email body, link aliasing results, and explanations for how the original link is updated with link aliasing.
 
-| Link in Email Body | Link with Aliasing | Logic |
+### Permalink
+
+**Logic:** Braze inserts a question mark (?) and adds the first query parameter into the URL.
+
+| Link in Email Body | Link with Aliasing |
 |---|---|---|
-| https://www.braze.com | https://www.braze.com?lid=slfdldtqdhdk | Braze inserts a question mark (?) and adds the first query parameter into the URL. |
-| https://www.braze.com?utm_campaign=retention&utm_source=email | https://www.braze.com?utm_campaign=retention&utm_source=email&lid=0goty30mviyz | Braze detects other query parameters and appends `lid=` to the end of the URL. |
-| {%raw%}`<a href="{{custom_attribute.{product_url}}}?">`{%endraw%} | {%raw%}`<a href="{{custom_attribute.{product_url}}}?lid=ac7a548g5kl7">`{%endraw%} | Braze recognizes that this is a URL and already has a question mark (?) present. Then, it appends the `lid` query parameter after the question mark. |
-| https://www.braze.com#bookmark1?utm_source=email | https://www.braze.com?lid=eqslgd5a9m3y#bookmark1?utm_source=email | Braze expects the URL to use a standard structure where anchors (#) are present after a question mark (?). Because Braze reads from left to right, we will append the question mark and `lid` value before the anchor. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+| https://www.braze.com | https://www.braze.com?lid=slfdldtqdhdk |
+{: .reset-td-br-1 .reset-td-br-2}
+
+### Link with more query parameters
+
+**Logic:** Braze detects other query parameters and appends `lid=` to the end of the URL.
+
+| Link in Email Body | Link with Aliasing |
+|---|---|---|
+| https://www.braze.com?utm_campaign=retention&utm_source=email | https://www.braze.com?utm_campaign=retention&utm_source=email&lid=0goty30mviyz |
+{: .reset-td-br-1 .reset-td-br-2}
+
+### HTML link
+
+**Logic:** Braze recognizes a link is a URL and already has a question mark (?) present, so the `lid` query parameter is appended after the question mark.
+
+| Link in Email Body | Link with Aliasing | 
+|---|---|---|
+| {%raw%}`<a href="{{custom_attribute.{product_url}}}?">`{%endraw%} | {%raw%}`<a href="{{custom_attribute.{product_url}}}?lid=ac7a548g5kl7">`{%endraw%} |
+{: .reset-td-br-1 .reset-td-br-2}
+
+### Link with anchor
+
+**Logic:** Braze expects the URL to use a standard structure where anchors (#) are present after a question mark (?). Because Braze reads from left to right, we will append the question mark and `lid` value before the anchor.
+
+| Link in Email Body | Link with Aliasing | 
+|---|---|---|
+| https://www.braze.com#bookmark1?utm_source=email | https://www.braze.com?lid=eqslgd5a9m3y#bookmark1?utm_source=email |
+{: .reset-td-br-1 .reset-td-br-2}
+
+### Link with anchor and capture tag
+
+**Logic:** When using link aliasing with URLs that contain anchors (#), Braze expects the anchor to be placed after the query parameters. This means that the `lid` value must be appended before the anchor for proper tracking, and since Braze reads the URL from left to right, the question mark (?) and `lid` should come before the anchor.
+
+| Link in Email Body | Link with Aliasing | 
+|---|---|---|
+| <a href="https://www.braze.com/promotions#special-offer">Check out our special offer!</a> | <a href="https://www.braze.com/promotions#special-offer?lid={{link_alias}}">Check out our special offer!</a> |
+{: .reset-td-br-1 .reset-td-br-2}
 
 ## Link aliasing for URLs generated via Liquid
 
