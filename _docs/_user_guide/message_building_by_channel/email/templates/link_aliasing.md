@@ -122,7 +122,7 @@ The following tables provide examples of links in an email body, link aliasing r
 
 | Link in Email Body                                                                        | Link with Aliasing                                                                                           |
 |-------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------|
-| <a href="https://www.braze.com/promotions#special-offer">Check out our special offer!</a> | <a href="https://www.braze.com/promotions#special-offer?lid={{link_alias}}">Check out our special offer!</a> |
+| {%raw%}`<a href="https://www.braze.com/promotions#special-offer">Check out our special offer!</a>`{%endraw%}  | {%raw%}`<a href="https://www.braze.com/promotions#special-offer?lid={{link_alias}}">Check out our special offer!</a>` {%endraw%} |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## Link aliasing for URLs generated via Liquid
