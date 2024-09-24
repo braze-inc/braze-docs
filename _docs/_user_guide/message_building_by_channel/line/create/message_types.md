@@ -54,7 +54,49 @@ Use URL images for use cases such as:
 
 ![][3]
 
+### Image map
+
+| **Image specifications** | **Recommended properties** |
+|--------------------------|----------------------------|
+| Image file URL length | 2,000 characters maximum  |
+| Image format          | PNG (can be transparent), JPEG             |
+| Aspect ratio          | 1:1 (width:height)
+| File size     |  10&nbsp;MB maximum |
+{: .reset-td-br-1 .reset-td-br-2}
+
+### URI link
+
+| **Image specifications** | **Recommended properties** |
+|--------------------------|----------------------------|
+| Character count      | 1,000 characters maximum |
+| Schemes              | HTTP, HTTPS, LINE, tel |
+{: .reset-td-br-1 .reset-td-br-2}
+
+### Text
+
+A text rich message can contain up to 400 characters.
+
 ## Card-based (carousel)
+
+| **Message specifications** | **Recommended properties** |
+|--------------------------|----------------------------|
+| Columns                  | 10 maximum |
+| Aspect ratio             | Rectangle: 1.51:1 <br> Square: 1:1  |
+{: .reset-td-br-1 .reset-td-br-2}
+
+| **Image specifications** | **Recommended properties** |
+|--------------------------|----------------------------|
+| Image URL                 | 2,000 maximum character limit |
+| Image format              | JPEG or PNG |
+| Width                     | 1,024 pixels  |
+| File size                 | 1 MB |
+{: .reset-td-br-1 .reset-td-br-2}
+
+| **Text specifications** | **Recommended properties** |
+|-------------------------|----------------------------|
+| Characters              | 120 maximum (no image or title) <br> 60 maximum (message with an image or title)  |
+| Actions                 | 3 maximum |
+{: .reset-td-br-1 .reset-td-br-2}
 
 ![][4]
 
