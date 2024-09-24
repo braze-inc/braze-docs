@@ -26,7 +26,7 @@ The Braze and Treasure Data integration allows you to seamlessly control the flo
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% alert note %}
-Treasure Data logs each event in batches. For more information on how to properly query Treasure Data to get event counts, refer to [Braze Currents Import Integration](https://docs.treasuredata.com/articles/#!int/braze-currents-import-integration).
+Treasure Data logs each event in batches. For more information on how to query Treasure Data to get event counts, refer to [Braze Currents Import Integration](https://docs.treasuredata.com/articles/#!int/braze-currents-import-integration).
 {% endalert %}
 
 ## Integration
