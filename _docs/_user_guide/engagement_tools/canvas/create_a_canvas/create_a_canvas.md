@@ -150,7 +150,7 @@ After adding segments and filters to your target audience, you can test if your 
 
 ![]({% image_buster /assets/img_archive/user_lookup.png %}){: style="max-width:50%;"}
 
-#### Adjust entry controls
+#### Selecting entry controls
 
 Entry controls determine if users are allowed to re-enter a Canvas. You can also limit the number of people who would potentially enter this Canvas. For example, if you set the **Maximum users to potentially enter this Canvas** field to 1,000 users, and select the **Limit everytime the Canvas is scheduled** checkbox, then the Canvas will sent to 1,000 users per day.
 
@@ -161,6 +161,19 @@ Braze doesn't recommend using the **Limit everytime the Canvas is scheduled** fe
 #### Setting exit criteria
 
 Setting the [exit criteria]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/exit_criteria) determines which users you want to exit a Canvas. If a user performs the exception event or matches the segments and filters, they won't receive any further messages.
+
+#### Calculating target population
+
+In the **Target Population** section, you can view a summary of your audience, such as your selected segments and additional filters, and a breakdown of how many users are reachable per messaging channel. To calculate the exact number of reachable users in your target audience instead of the default estimation, select [Calculate exact statistics]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment#calculating-exact-statistics).
+
+Note that:
+
+- Calculating exact statistics can take a few minutes to run. This function only calculates the exact statistics at the segment level, not at the filter or filter group level.
+- For large segments, it is normal to see slight variation even when calculating exact statistics. The accuracy of this feature is expected to be 99.999% or greater.
+
+To view additional statistics, such as the average lifetime revenue for targeted users, select **Show Additional Statistics**.
+
+![Target Population breakdown with option to cacluate exact statistics.][2]
 
 ### Step 2d: Select your send settings
 
@@ -327,7 +340,8 @@ Need to make edits to your Canvas after launch? Well, you can! Check out [Editin
 {% endalert %}
 
 
-[1]:{% image_buster /assets/img_archive/canvas_dropdown.png %}
+[1]: {% image_buster /assets/img_archive/canvas_dropdown.png %}
+[2]: {% image_buster /assets/img_archive/canvas_exact_stats.png %}
 [3]: {% image_buster /assets/img_archive/choose_canvas_experience.png %}
 [6b]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/#rate-limiting-and-canvas-components
 [6c]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting#frequency-capping
