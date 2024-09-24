@@ -64,7 +64,7 @@ As an online clothing retailer, PantsLabyrinth also has an active group of mobil
 - **Has clicked content card for step Welcome Content Card**
 - **Everyone Else**
 
-### Target users from the paths
+### Target more users with Audience Paths
 
 From the set of users who haven't interacted with your app, you can further target these users by creating another Audience Paths step. This creates another split for engaged users and everyone else. For the **Everyone Else** group, you can use a Message step to nudge these users to sign up for a subscription to PantsLabyrinth.
 
