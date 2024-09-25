@@ -95,7 +95,7 @@ You can specify whether you want this extension to represent a single snapshot i
 To set up a recurring schedule, select **Refresh Settings** in the upper right corner of your specific extension. The option to designate refresh settings is available for all types of Segment Extensions, including SQL segments, CDI segments, and simple form-based Segment Extensions.
 
 {% alert important %}
-The setting to regenerate extensions daily is automatically turned off for unused Segment Extensions. Braze defines unused extensions as ones that meet the following criteria:
+Refresh settings are automatically turned off for unused Segment Extensions. Braze defines unused extensions as ones that meet the following criteria:
 
 - Not used in any active campaigns, Canvases, or segments
 - Not used in any inactive (draft, stopped, archived) campaigns, Canvases, or segments
