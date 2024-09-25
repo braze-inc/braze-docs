@@ -22,26 +22,37 @@ LINE access is in beta and only available in select Braze packages. Reach out to
 
 When you compose a LINE message, you can drag-and-drop message types into the composer and then customize them.
 
-![][5]
+![][5]{: style="max-width:40%;"}
 
 ## Text
 
-A text message can contain up to 5,000 characters.
+A LINE text message can contain up to 5,000 characters.
 
-![][1]
+Use cases include:
+- Announce a limited-time promotion for clearance stock
+- Send personalized birthday greetings with unique promotion cards
+- Share quick updates about upcoming events
+
+![][1]{: style="max-width:40%;"}
 
 ## Image
 
-![][2]
+A LINE image message can be added through the [Media Library]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/media_library/) or a URL.
 
-An image can be added through the [Media Library]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/media_library/) or a URL.
+Use cases include:
+- Showcase a vacation destination to inspire users to look into purchasing plane tickets
+- Highlight end-of-season promotions to encourage users to stock up on next year's winter clothes with great deals
+- Start a visual countdown to a storewide annual sale
+
+![][2]{: style="max-width:40%;"}
 
 ### URL image
 
-Use URL images for use cases such as:
-- Liquid dynamic images 
-- Connected content 
-- Braze catalogs
+Use URL images for use cases that incorporate:
+- Liquid dynamic images
+    - Include the Liquid in your image source attribute. For example, you can insert {% raw %} `https://example.com/images/?imageBanner={{first_name}}` {% endraw %} as the image URL to include a user's first name in the image. 
+- [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/)
+- [Braze catalogs]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/)
 
 | **Image specifications** | **Recommended properties** |
 |--------------------------|----------------------------|
@@ -51,6 +62,13 @@ Use URL images for use cases such as:
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## Rich messages (image map)
+
+A LINE rich message is an image that contains one or more links that are opened by selecting specific areas on the image. Select a rich message templates to choose how the links are mapped onto the image.
+
+Use cases include:
+- Display a grid of newly arrived handbags with links to each bag's respective product page
+- Present an interactive menu that starts an combo order by selecting an item
+- Lay out multiple promotions for users to choose by selecting a grid square
 
 ![][3]
 
@@ -78,6 +96,15 @@ A text rich message can contain up to 400 characters.
 
 ## Card-based (carousel)
 
+A LINE card-based message allows users to scroll through multiple messages, like a carousel, and take action on the messages most relevent to them.
+
+Use cases include:
+- Display promotions for specific menu items
+- Highlight this season's best-selling jackets
+- Present a sampling of cooking tools and gadgets that are included in a kit
+
+![][4]
+
 | **Message specifications** | **Recommended properties** |
 |--------------------------|----------------------------|
 | Columns                  | 10 maximum |
@@ -98,7 +125,6 @@ A text rich message can contain up to 400 characters.
 | Actions                 | 3 maximum |
 {: .reset-td-br-1 .reset-td-br-2}
 
-![][4]
 
 [1]: {% image_buster /assets/img/line/line_text_message.png %}
 [2]: {% image_buster /assets/img/line/line_image_message.png %}
