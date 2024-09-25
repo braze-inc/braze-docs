@@ -8,13 +8,9 @@ page_order: 5
 
 # BrazeAI<sup>TM</sup> Liquid assistant
 
-> The BrazeAI<sup>TM</sup> Liquid Assistant is a chat assistant powered by BrazeAI<sup>TM</sup> that helps generate the Liquid you need to personalize message content. 
+> The BrazeAI<sup>TM</sup> Liquid Assistant is a chat assistant powered by BrazeAI<sup>TM</sup> that helps generate the Liquid you need to personalize message content. You can use it while creating SMS messages, push notifications, HTML email campaigns, and Canvases. For the email channel, the assistant works on email messages and not templates, and works best on email messages that are already built.
 
 With the BrazeAI<sup>TM</sup> Liquid Assistant, you can generate Liquid from templates, receive personalized Liquid suggestions, and optimize existing Liquid with the support of BrazeAI<sup>TM</sup>. The assistant also provides annotations explaining the Liquid used, so you can increase your understanding of Liquid and learn to write your own.
-
-{% alert important %}
-The BrazeAI<sup>TM</sup> Liquid Assistant is currently in beta for a limited number of customers who actively use the push, SMS, or email channels. For the email channel, this works on email messages and **not** templates, and works best on email messages that are already built. <br><br> If you're interested in being considered for the beta, reach out to your customer success manager.
-{% endalert %}
 
 ## How it works
 

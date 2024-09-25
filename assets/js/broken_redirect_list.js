@@ -879,6 +879,7 @@ validurls['/docs/user_guide/sage_ai/generative_ai'] = '/docs/user_guide/brazeai/
 validurls['/docs/user_guide/sage_ai/generative_ai/ai_copywriting/'] = '/docs/user_guide/brazeai/generative_ai/ai_copywriting/';
 validurls['/docs/user_guide/sage_ai/generative_ai/ai_copywriting/brand_guidelines/'] = '/docs/user_guide/brazeai/generative_ai/ai_copywriting/brand_guidelines/';
 validurls['/docs/user_guide/sage_ai/generative_ai/ai_liquid/'] = '/docs/user_guide/brazeai/generative_ai/ai_liquid/';
+validurls['/docs/ai_liquid_prompts/'] = '/docs/user_guide/brazeai/generative_ai/ai_liquid/ai_liquid_prompts/';
 validurls['/docs/user_guide/sage_ai/generative_ai/ai_content_qa/'] = '/docs/user_guide/brazeai/generative_ai/ai_content_qa/';
 validurls['/docs/user_guide/predictive_suite/predictive_churn/prediction_analytics/#churn_score'] = '/docs/user_guide/brazeai/predictive_suite/predictive_churn/prediction_analytics/#churn_score';
 validurls['/user_guide/intelligence/faqs/#when-does-braze-check-the-eligibility-criteria-for-segment-and-audience-filters'] = '/user_guide/brazeai/intelligence/faqs/#when-does-braze-check-the-eligibility-criteria-for-segment-and-audience-filters';
