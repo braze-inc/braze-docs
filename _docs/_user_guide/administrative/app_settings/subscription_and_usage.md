@@ -11,7 +11,7 @@ search_rank: 5
 
 # Billing
 
-> Use the **Billing** page as a self-serve tool to monitor and check your data consumption across workspaces, apps, and event sources. This article covers the different sections on the page and the information they can provide you.
+> Learn how to use the **Billing** page to monitor and check your data consumption across workspaces, apps, and event sources. This article covers the different sections on the page and the information they can provide you.
 
 To navigate to the **Billing** page, go to **Settings** > **Billing**.
 
@@ -43,7 +43,7 @@ Contract details list the start and end date of your current contract with Braze
 
 ## Most used events and attributes by app
 
-The **Most Used Events and Attributes By App** tab is a useful tool to understand the drivers of your attribute and custom event data point consumption. 
+Under **Most Used Events and Attributes By App**,  you can check the drivers of your attribute and custom event data point consumption. 
 
 ![Most Used Events and Attributes By App][4]
 
