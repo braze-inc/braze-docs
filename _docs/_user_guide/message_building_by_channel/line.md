@@ -19,9 +19,6 @@ guide_featured_list:
 - name: Create a LINE Message
   link: /docs/line/create/
   image: /assets/img/braze_icons/table.svg
-- name: LINE Message Types
-  link: /docs/line/create/message_types/
-  image: /assets/img/braze_icons/message-square-02.svg
 - name: Messaging LINE Users
   link: /docs/line/messaging_users/
   image: /assets/img/braze_icons/message-chat-circle.svg
@@ -34,5 +31,8 @@ guide_featured_list:
 - name: LINE Reporting
   link: /docs/line/reporting/
   image: /assets/img/braze_icons/bar-chart-01.svg
+- name: LINE Message Types
+  link: /docs/line/create/message_types/
+  image: /assets/img/braze_icons/message-square-02.svg
 ---
 
