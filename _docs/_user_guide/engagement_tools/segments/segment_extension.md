@@ -82,13 +82,9 @@ Using event properties within Segment Extensions does not impact data point usag
 
 ## Step 4: Designate refresh settings (optional)
 
-You can specify whether you want this extension to represent a single snapshot in time, or to refresh on a recurring schedule. 
+If you don't need your segment to refresh on a regular schedule, you can save it without using refresh settings, and Braze will default to generating your segment based on your user membership at that moment. 
 
 Your segment will always begin processing after the initial save. Whenever your segment refreshes, Braze will re-run the segment and update segment membership to reflect the users in your segment at the time of refresh. 
-
-### Saving a snapshot in time
-
-You can specify whether you want this extension to represent a single snapshot in time, or whether you want this extension to refresh on a recurring schedule.
 
 ### Setting up a recurring refresh
 
