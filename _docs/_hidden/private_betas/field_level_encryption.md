@@ -1,17 +1,17 @@
 ---
-nav_title: Field-Level Encryption
-article_title: Field-Level Encryption
+nav_title: Identifier Field-Level Encryption
+article_title: Identifier Field-Level Encryption
 permalink: "/field_level_encryption/"
 description: "This reference article covers how to encrypt email addresses to minimize personally identifiable information (PII) shared in Braze."
 page_type: reference
 ---
 
-# Field-level encryption
+# Identifier field-level encryption
 
-> Using field-level encryption, you can seamlessly encrypt email addresses with AWS Key Management Service (KMS) to minimize personally identifiable information (PII) shared in Braze. Encryption replaces sensitive data with ciphertext, which is unreadable encrypted information.
+> Using identifier field-level encryption, you can seamlessly encrypt email addresses with AWS Key Management Service (KMS) to minimize personally identifiable information (PII) shared in Braze. Encryption replaces sensitive data with ciphertext, which is unreadable encrypted information.
 
 {% alert important %}
-Field-level encryption is currently available as a beta feature. Contact your Braze account manager if you're interested in participating in this beta.
+Identifier field-level encryption is available as an add-on feature. To get started with identifier field-level encryption, please contact your Braze account manager.
 {% endalert %}
 
 ## How it works
@@ -20,7 +20,7 @@ Email addresses must be hashed and encrypted before they’re added to Braze. Wh
 
 ## Prerequisites
 
-To use field-level encryption, you must have access to AWS KMS to [encrypt](https://docs.aws.amazon.com/kms/latest/APIReference/API_Encrypt.html) and [hash](https://docs.aws.amazon.com/kms/latest/APIReference/API_GenerateMac.html) email addresses **before** sending them to Braze. 
+To use identifier field-level encryption, you must have access to AWS KMS to [encrypt](https://docs.aws.amazon.com/kms/latest/APIReference/API_Encrypt.html) and [hash](https://docs.aws.amazon.com/kms/latest/APIReference/API_GenerateMac.html) email addresses **before** sending them to Braze. 
 
 Follow these steps to set up your AWS secret key authentication method.
 
@@ -53,7 +53,7 @@ When encryption is enabled for a field, it can’t be reverted to a decrypted fi
 
 ## Step 3: Import and update users
 
-When field-level encryption is enabled, you must hash and encrypt the email address before adding to Braze. Be sure to downcase the email address before hashing it. See [user attributes object](#user-attributes-object) for more details.
+When identifier field-level encryption is enabled, you must hash and encrypt the email address before adding to Braze. Be sure to downcase the email address before hashing it. See [user attributes object](#user-attributes-object) for more details.
 
 When updating email address in Braze, you should use the hashed email value wherever `email` is included. This includes:
 
@@ -70,7 +70,7 @@ When creating a new user, you must add `email_encrypted` with the user's encrypt
 
 ## Considerations
 
-These features are not supported with field-level encryption:
+These features are not supported with identifier field-level encryption:
 
 - Identifying and capturing email address via SDK
 - In-app message email capture forms
@@ -81,7 +81,7 @@ These features are not supported with field-level encryption:
 
 ### User attributes object
 
-When using field-level encryption with the `/users/track` endpoint, note these field details for the [user attributes object]({{site.baseurl}}/api/objects_filters/user_attributes_object):
+When using identifier field-level encryption with the `/users/track` endpoint, note these field details for the [user attributes object]({{site.baseurl}}/api/objects_filters/user_attributes_object):
 
 - The `email` field must be the hashed value of the email.
 - The `email_encrypted` field must be the encrypted value for the email.
@@ -114,6 +114,6 @@ The hashed email address is included in email delivery and engagement events.
 
 The plaintext email address is included in messaging archiving. These are sent directly to the customer’s cloud storage provider and there may be other personal data included in the email bodies.
 
-### Can I use mail-to list-unsubscribe for subscription management with field-level encryption?
+### Can I use mail-to list-unsubscribe for subscription management with identifier field-level encryption?
 
-No. Using mail-to list-unsubscribe would send the plaintext decrypted email address to Braze. With field-level encryption enabled, we support the URL-based HTTP: method, including one-click. We also recommend including a one-click unsubscribe link in your email body.
+No. Using mail-to list-unsubscribe would send the plaintext decrypted email address to Braze. With identifier field-level encryption enabled, we support the URL-based HTTP: method, including one-click. We also recommend including a one-click unsubscribe link in your email body.
