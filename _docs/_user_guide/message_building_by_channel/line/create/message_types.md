@@ -14,7 +14,7 @@ permalink: /line/create/message_types/
 
 # LINE message types
 
-> This article covers the LINE message types you can compose, including aspects and li,itations, and is part of the LINE beta collection. [Return to the main page](https://www.braze.com/docs/line/).
+> This article covers the LINE message types you can compose, including aspects and limitations, and is part of the LINE beta collection. [Return to the main page]({{site.baseurl}}/line/).
 
 {% alert important %}
 LINE access is in beta and only available in select Braze packages. Reach out to your account manager or customer success manager to get started.
@@ -37,7 +37,7 @@ Use cases include:
 
 ## Image
 
-A LINE image message can be added through the [Media Library]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/media_library/) or a URL.
+A LINE image message can be added through the [media library]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/media_library/) or a URL.
 
 Use cases include:
 - Showcase a vacation destination to inspire users to look into purchasing plane tickets
