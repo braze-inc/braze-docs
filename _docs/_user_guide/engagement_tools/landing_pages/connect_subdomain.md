@@ -1,38 +1,38 @@
 ---
-nav_title: Connecting a Subdomain
-article_title: Connecting a Subdomain
-description: "This article covers how to connect your third-party domain's subdomains to your Braze account."
+nav_title: Bring your own domain
+article_title: Bring your own domain
+description: "This article covers how to connect your own domain to Braze landing pages."
 page_order: 1
 alias: /landing_pages/connect_subdomain/
 ---
 
-# Connecting a subdomain
+# Conencting your own domain
 
-> If you own a domain through a third-party service, you can connect its subdomains to your Braze account. You can then use subdomains with your Braze-hosted landing pages to brand and customize your URLs. 
+> If you own a domain you can connect it to your Braze landing pages in order to brand and customize your URLs. 
 
 {% alert note %}
 Landing pages are currently in beta. Contact your Braze account manager if you’re interested in participating in this beta.
 {% endalert %}
 
-To connect a subdomain to your Braze account, have an administrator follow the steps below.
+To connect a domain or subdomain to your Braze account, have an administrator follow the steps below.
 
 1. Go to **Settings** > **Landing Page Settings**.
-2. Enter the subdomain you want to connect and select **Submit**.
-3. Copy and paste the **TXT** and **CNAME** records into the relevant settings of your domain provider account.
+2. Enter the domain you want to connect and select **Submit**. For example, `forms.example.com`.
+3. Copy and paste the **TXT** and **CNAME** records into the DNS settings of your domain provider.
 4. Return to the Braze dashboard to verify the connection.
 
 ![Landing Page Settings page with one TXT and two CNAME records listed with their respective names and values.][1]
 
 {% alert note %}
-Depending on your domain provider, the subdomain connection can take up to 48 hours. When the process is complete, we’ll update your **Landing Page Settings** page.
+Depending on your domain provider, the subdomain connection can take up to 48 hours. When the process is complete, we’ll update your **Landing Page Settings** page and all references to your landing page URLs.
 {% endalert %}
 
-## Using your subdomain
+## Using your custom domain
 
-After your subdomain verification is complete, you can use your subdomain for your Braze-hosted landing pages by default. For example, if you connect the subdomain `promo.example.com`, you can add a URL to your landing page that looks like `promo.example.com/holiday-sale`.
+After your domain verification is complete, this domain will be used by default. For example, if you connect the subdomain `forms.example.com`, your landing page URLs will be updated to look like `forms.example.com/holiday-sale`.
 
 {% alert note %}
-Contact your customer success manager if you need to remove your subdomain.
+Custom domain deletion is coming soon. Contact your customer success manager if you need to remove your subdomain.
 {% endalert %}
 
 ## Resources from domain providers
@@ -44,13 +44,16 @@ Listed below are resources for creating and managing DNS records with commonly u
 | Bluehost | [DNS Records Explained](https://my.bluehost.com/hosting/help/508)<br> [DNS Management Add Edit or Delete DNS Entries](https://my.bluehost.com/hosting/help/559) |
 | Dreamhost | [How do I add custom DNS records?](https://help.dreamhost.com/hc/en-us/articles/360035516812) |
 | GoDaddy | [Add a CNAME record](https://www.godaddy.com/help/add-a-cname-record-19236?) |
+| Cloudflare | [Manage DNS records](https://developers.cloudflare.com/dns/manage-dns-records/how-to/create-dns-records/) |
+| Squarespace | [Adding custom DNS settings](https://support.squarespace.com/hc/en-us/articles/360002101888-Adding-custom-DNS-records-to-your-Squarespace-managed-domain) |
+
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## Troubleshooting 
 
-### My subdomain connection failed
+### My domain connection failed
 
-Verify that your subdomain was entered correctly and that it matches what you submitted to Braze from your domain provider account. If it's correct and matches, check the TXT and CNAME records provided by Braze. They should match the records you entered into your domain provider account.
+Verify that your domain was entered correctly and that it matches what you submitted to Braze from your domain provider account. If it's correct and matches, check the TXT and CNAME records provided by Braze. They should match the records you entered into your domain provider account.
 
 ## Frequently asked questions
 
