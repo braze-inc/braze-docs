@@ -17,19 +17,19 @@ Landing pages are currently in beta. Contact your Braze account manager if you�
 To connect a domain or subdomain to your Braze account, have an administrator follow the steps below.
 
 1. Go to **Settings** > **Landing Page Settings**.
-2. Enter the domain you want to connect and select **Submit**. For example, `forms.example.com`.
+2. Enter the domain or subdomain you want to connect and select **Submit**. For example, `forms.example.com`.
 3. Copy and paste the **TXT** and **CNAME** records into the DNS settings of your domain provider.
 4. Return to the Braze dashboard to verify the connection.
 
 ![Landing Page Settings page with one TXT and two CNAME records listed with their respective names and values.][1]
 
 {% alert note %}
-Depending on your domain provider, the subdomain connection can take up to 48 hours. When the process is complete, we’ll update your **Landing Page Settings** page and all references to your landing page URLs.
+Depending on your domain provider, the connection can take up to 48 hours. When the process is complete, we’ll update your **Landing Page Settings** page and all references to your landing page URLs.
 {% endalert %}
 
 ## Using your custom domain
 
-After your domain verification is complete, this domain will be used by default. For example, if you connect the subdomain `forms.example.com`, your landing page URLs will be updated to look like `forms.example.com/holiday-sale`.
+After your domain verification is complete it will be used by default in Braze. For example, if you connect the subdomain `forms.example.com`, your landing page URLs will be updated to look like `forms.example.com/holiday-sale`.
 
 {% alert note %}
 Custom domain deletion is coming soon. Contact your customer success manager if you need to remove your subdomain.
