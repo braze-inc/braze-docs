@@ -82,9 +82,9 @@ Using event properties within Segment Extensions does not impact data point usag
 
 ## Step 4: Designate refresh settings (optional)
 
-If you don't need your segment to refresh on a regular schedule, you can save it without using refresh settings, and Braze will default to generating your segment based on your user membership at that moment. 
+If you don't need your segment to refresh on a regular schedule, you can save it without using refresh settings, and Braze will default to generating your segment based on your user membership at that moment. Use the default behavior if you only want to generate a segment once and then target it with one-off campaign.
 
-Your segment will always begin processing after the initial save. Whenever your segment refreshes, Braze will re-run the segment and update segment membership to reflect the users in your segment at the time of refresh. 
+Your segment will always begin processing after the initial save. Whenever your segment refreshes, Braze will re-run the segment and update segment membership to reflect the users in your segment at the time of refresh. This can help your recurring campaigns reach the most relevant users.
 
 ### Setting up a recurring refresh
 
