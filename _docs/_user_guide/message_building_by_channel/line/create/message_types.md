@@ -86,7 +86,7 @@ Use cases include:
 
 | **Image specifications** | **Recommended properties** |
 |--------------------------|----------------------------|
-| Character count      | 1,000 characters maximum |
+| Character count      | 1,000 maximum |
 | Schemes              | HTTP, HTTPS, LINE, tel |
 {: .reset-td-br-1 .reset-td-br-2}
 
@@ -109,11 +109,12 @@ Use cases include:
 |--------------------------|----------------------------|
 | Columns                  | 10 maximum |
 | Aspect ratio             | Rectangle: 1.51:1 <br> Square: 1:1  |
+| Title                    | 40 characters maximum
 {: .reset-td-br-1 .reset-td-br-2}
 
 | **Image specifications** | **Recommended properties** |
 |--------------------------|----------------------------|
-| Image URL                 | 2,000 maximum character limit |
+| Image URL                 | 2,000 characters maximum |
 | Image format              | JPEG or PNG |
 | Width                     | 1,024 pixels  |
 | File size                 | 1 MB |
