@@ -17,7 +17,9 @@ In this article, we'll walk you through a use case for the **Onboarding** templa
 
 As a member of the marketing team at PantsLabyrinth, your goal is on enhance user engagement, build trust and loyalty with your users, and encourage them to stay engaged with PantsLabyrinth. To do so, you want to focus on crafting messages that target new users who have yet to interact with PantsLabyrinth.
 
-## Step 1: Assign your conversion events
+## Tailoring the template to your needs
+
+### Step 1: Assign your conversion events
 
 Conversion events are a type of success metric that can be used to measure the success of the Canvas. The onboarding template has the following [conversion event]({{site.baseurl}}//user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/#primary-conversion-event) to get you started.
 
@@ -25,7 +27,7 @@ Conversion events are a type of success metric that can be used to measure the s
 
 So, new users have up to four days to perform the custom event. In this case, you want your new users to feel a sense of urgency to engage with PantsLabyrinth and subscribe to a recurring delivery on seasonal clothing.
 
-## Step 2: Set an entry schedule
+### Step 2: Set an entry schedule
 
 Because your goal is to target new users of PantsLabyrinth, you'll keep the Canvas as action-based and allow users who start a session in the app to enter the Canvas. However, you could further evaluate if a user has taken any specific actions such as making a purchase.
 
@@ -33,19 +35,19 @@ Next, adjust the **Entry Window** to determine when users can enter the Canvas. 
 
 ![][4]
 
-## Step 3: Determine who enters the Canvas
+### Step 3: Determine who enters the Canvas
 
 By targeting the right audience, you can effectively engage with new users. For example, this template targets all users who first used an app less than one day ago.
 
-## Step 4: Set your send settings
+### Step 4: Set your send settings
 
 As the default, this Canvas is sent to users who are subscribed or opted in and follows frequency capping rules. 
 
-## Step 5: Personalize your onboarding messages
+### Step 5: Personalize your onboarding messages
 
 Next, it's time to build and customize your Canvas. In the Canvas builder, this template prepares you with the following user journey over the duration of five days.
 
-### Begin with a welcome email
+#### Begin with a welcome email
 
 1. In the Canvas builder, select the Message step named "Welcome Email".
 2. Select **Edit message** to begin customizing the email to match PansLabyrinth's branding. This is the email your users will receive upon 
@@ -53,7 +55,7 @@ Next, it's time to build and customize your Canvas. In the Canvas builder, this 
 
 Your users will receive this welcome email after they have started a session in your app. As to not overwhelm your users with repeated messaging, we recommend using the Delay step as part of the user journey.
 
-### Customize your Audience Path
+#### Customize your Audience Path
 
 In the Audience Path step named "Audience Split", you can customizing the filter for your engaged users. In the template, the filter is **Has clicked email for step Welcome Email**, which means users are split into two groups: users who have opened the welcome email and those who haven't. 
 
@@ -64,11 +66,11 @@ As an online clothing retailer, PantsLabyrinth also has an active group of mobil
 - **Has clicked content card for step Welcome Content Card**
 - **Everyone Else**
 
-### Target more users with Audience Paths
+#### Target more users with Audience Paths
 
 From the set of users who haven't interacted with your app, you can further target these users by creating another Audience Paths step. This creates another split for engaged users and everyone else. For the **Everyone Else** group, you can use a Message step to nudge these users to sign up for a subscription to PantsLabyrinth.
 
-## Step 6: Launch your Canvas
+### Step 6: Launch your Canvas
 
 Be sure to test and preview your Canvas before launch. After this, you're ready to target your new users by launching this Canvas!
 
