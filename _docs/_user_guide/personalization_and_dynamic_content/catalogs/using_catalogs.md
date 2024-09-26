@@ -45,7 +45,7 @@ This renders as the following:
 
 ### Multiple items
 
-You aren't limited to just one item in a single message! Simply insert the additional catalog items and information to display using the **Add Personalization** modal. Note that you can add up to three catalog items only. 
+You aren't limited to just one item in a single message. You can use the **Add Personalization** modal to add up to three catalog items at a time. To add more items to your message, select **Add Personalization** in the message composer and select the additional catalog items and information to display.
 
 Check out this example where we add the `id` of three games, Tales, Teslagrad, and Acaratus, for **Catalog Items** and select `title` for **Information to Display**.
 
