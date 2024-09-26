@@ -26,7 +26,7 @@ When you compose a LINE message, you can drag-and-drop message types into the co
 
 ## Text
 
-A LINE text message can contain up to 5,000 characters.
+A LINE text message can contain up to 5,000 characters and include emojis and Liquid personalization.
 
 Use cases include:
 - Announce a limited-time promotion for clearance stock
@@ -37,7 +37,7 @@ Use cases include:
 
 ## Image
 
-A LINE image message can be added through the [media library]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/media_library/) or a URL.
+A LINE image message can be added through the [media library]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/media_library/), a URL, or Liquid. These images are standalone and don't contain clickable links.
 
 Use cases include:
 - Showcase a vacation destination to inspire users to look into purchasing plane tickets
@@ -49,9 +49,9 @@ Use cases include:
 ### URL image
 
 Use URL images for use cases that incorporate:
-- Liquid dynamic images by including the Liquid in your image source attribute. For example, you can insert {% raw %} `https://example.com/images/?imageBanner={{first_name}}` {% endraw %} as the image URL to include a user's first name in the image.
-- [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/)
-- [Braze catalogs]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/)
+- Liquid dynamic images by including the Liquid in your image source attribute. For example, you can insert {% raw %} `https://example.com/images/?imageBanner={{first_name}}` {% endraw %} as the image URL to include a user's first name in the image
+- [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/) by pulling images directly from your web server or publicly accessible APIs
+- [Braze catalogs]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/) by accessing images from imported CSV files and API endpoints
 
 | **Image specifications** | **Recommended properties** |
 |--------------------------|----------------------------|
@@ -95,7 +95,7 @@ A text rich message can contain up to 400 characters.
 
 ## Card-based (carousel)
 
-A LINE card-based message allows users to scroll through multiple messages, like a carousel, and take action on the messages most relevent to them.
+A LINE card-based message allows users to scroll through multiple messages, like a carousel, and take action on the messages most relevent to them by selecting a card or a card's buttons.
 
 Use cases include:
 - Display promotions for specific menu items
