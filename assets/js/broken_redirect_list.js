@@ -879,6 +879,7 @@ validurls['/docs/user_guide/sage_ai/generative_ai'] = '/docs/user_guide/brazeai/
 validurls['/docs/user_guide/sage_ai/generative_ai/ai_copywriting/'] = '/docs/user_guide/brazeai/generative_ai/ai_copywriting/';
 validurls['/docs/user_guide/sage_ai/generative_ai/ai_copywriting/brand_guidelines/'] = '/docs/user_guide/brazeai/generative_ai/ai_copywriting/brand_guidelines/';
 validurls['/docs/user_guide/sage_ai/generative_ai/ai_liquid/'] = '/docs/user_guide/brazeai/generative_ai/ai_liquid/';
+validurls['/docs/ai_liquid_prompts/'] = '/docs/user_guide/brazeai/generative_ai/ai_liquid/ai_liquid_prompts/';
 validurls['/docs/user_guide/sage_ai/generative_ai/ai_content_qa/'] = '/docs/user_guide/brazeai/generative_ai/ai_content_qa/';
 validurls['/docs/user_guide/predictive_suite/predictive_churn/prediction_analytics/#churn_score'] = '/docs/user_guide/brazeai/predictive_suite/predictive_churn/prediction_analytics/#churn_score';
 validurls['/user_guide/intelligence/faqs/#when-does-braze-check-the-eligibility-criteria-for-segment-and-audience-filters'] = '/user_guide/brazeai/intelligence/faqs/#when-does-braze-check-the-eligibility-criteria-for-segment-and-audience-filters';
@@ -1061,8 +1062,7 @@ validurls['/docs/developer_guide/platform_integration_guides/ios/initial_sdk_set
 validurls['/docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/installation_methods/'] = '/docs/developer_guide/platform_integration_guides/legacy_sdks/ios/initial_sdk_setup/installation_methods/';
 validurls['/docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/ios_sdk_integration/'] = '/docs/developer_guide/platform_integration_guides/legacy_sdks/ios/initial_sdk_setup/ios_sdk_integration/';
 validurls['/docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/other_sdk_customizations/'] = '/docs/developer_guide/platform_integration_guides/legacy_sdks/ios/initial_sdk_setup/other_sdk_customizations/';
-validurls['/docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/'] = '/docs/developer_guide/platform_integration_guides/legacy_sdks/ios/initial_sdk_setup/';
-validurls['/docs/developer_guide/platform_integration_guides/ios/ios_16/'] = '/docs/developer_guide/platform_integration_guides/legacy_sdks/ios/ios_16/';
+validurls['/docs/developer_guide/platform_integration_guides/ios/ios_16/'] = '/docs/developer_guide/platform_integration_guides/swift/ios_18/';
 validurls['/docs/developer_guide/platform_integration_guides/ios/news_feed/customization/badges/'] = '/docs/developer_guide/platform_integration_guides/legacy_sdks/ios/news_feed/customization/badges/';
 validurls['/docs/developer_guide/platform_integration_guides/ios/news_feed/customization/custom_styling/'] = '/docs/developer_guide/platform_integration_guides/legacy_sdks/ios/news_feed/customization/custom_styling/';
 validurls['/docs/developer_guide/platform_integration_guides/ios/news_feed/customization/'] = '/docs/developer_guide/platform_integration_guides/legacy_sdks/ios/news_feed/customization/';
@@ -1094,7 +1094,7 @@ validurls['/docs/developer_guide/platform_integration_guides/macOS/'] = '/docs/d
 
 validurls['/docs/developer_guide/platform_integration_guides/ios/content_cards/'] = '/docs/developer_guide/platform_integration_guides/legacy_sdks/ios/content_cards/';
 validurls['/docs/developer_guide/platform_integration_guides/ios/in-app_messaging/'] = '/docs/developer_guide/platform_integration_guides/legacy_sdks/ios/in-app_messaging/';
-validurls['/docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/'] = '/docs/developer_guide/platform_integration_guides/legacy_sdks/ios/initial_sdk_setup/';
+validurls['/docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/'] = '/docs/developer_guide/platform_integration_guides/legacy_sdks/ios/initial_sdk_setup/overview/';
 validurls['/docs/developer_guide/platform_integration_guides/ios/news_feed/'] = '/docs/developer_guide/platform_integration_guides/legacy_sdks/ios/news_feed/';
 validurls['/docs/developer_guide/platform_integration_guides/tvos/'] = '/docs/developer_guide/platform_integration_guides/legacy_sdks/tvos/';
 

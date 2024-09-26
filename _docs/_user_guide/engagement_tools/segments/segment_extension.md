@@ -82,20 +82,16 @@ Using event properties within Segment Extensions does not impact data point usag
 
 ## Step 4: Designate refresh settings (optional)
 
-You can specify whether you want this extension to represent a single snapshot in time, or to refresh on a recurring schedule. 
+If you don't need your extension to refresh on a regular schedule, you can save it without using refresh settings, and Braze will default to generating your Segment Extension based on your user membership at that moment. Use the default behavior if you only want to generate the audience once and then target it with a one-off campaign.
 
-Your segment will always begin processing after the initial save. Whenever your segment refreshes, Braze will re-run the segment and update segment membership to reflect the users in your segment at the time of refresh. 
-
-### Saving a snapshot in time
-
-If you don't need your segment to refresh on a regular schedule, you can save it without using any refresh settings, and Braze will generate your segment based on your user membership at that moment. 
+Your segment will always begin processing after the initial save. Whenever your segment refreshes, Braze will re-run the segment and update segment membership to reflect the users in your segment at the time of refresh. This can help your recurring campaigns reach the most relevant users.
 
 ### Setting up a recurring refresh
 
-To set up a recurring schedule, select **Refresh Settings** in the upper right corner of your specific extension. The option to designate refresh settings is available for SQL segments and CDI segments. Currently, this option is not available for simple form-based Segment Extensions.
+To set up a recurring schedule, select **Refresh Settings** in the upper right corner of your specific extension. The option to designate refresh settings is available for all types of Segment Extensions, including SQL segments, CDI segments, and simple form-based Segment Extensions.
 
 {% alert important %}
-The setting to regenerate extensions daily is automatically turned off for unused Segment Extensions. Braze defines unused extensions as ones that meet the following criteria:
+Refresh settings are automatically turned off for unused Segment Extensions. Braze defines unused extensions as ones that meet the following criteria:
 
 - Not used in any active campaigns, Canvases, or segments
 - Not used in any inactive (draft, stopped, archived) campaigns, Canvases, or segments
@@ -108,10 +104,14 @@ Braze will notify the company contact and creator of the extension when this set
 
 ![Refresh Interval Settings with a weekly refresh frequency, start time of 10 am, and Monday selected as a day.][21]{: style="max-width:60%;"}
 
-Within the **Refresh Settings** panel, you can select the frequency at which this segment extension will refresh: daily, weekly, or monthly. You’ll also be required to select the specific time (which is in your company’s time zone) the refresh would occur, such as:
+Within the **Refresh Settings** panel, you can select the frequency at which this segment extension will refresh: hourly, daily, weekly, or monthly. You’ll also be required to select the specific time (which is in your company’s time zone) the refresh would occur, such as:
 
 - If you have an email campaign that is sent every Monday at 11 am company time, and you want to ensure your segment is refreshed right before it's sent, you should choose a refresh schedule of weekly at 10 am on Mondays.
 - If you’d like your segment to refresh every day, select the daily refresh frequency and then choose the time of day to refresh.
+
+{% alert note %}
+The ability to set an hourly refresh schedule isn't available for form-based Segment Extensions (but you can set daily, weekly, or monthly schedules). 
+{% endalert %}
 
 ### Credit consumption and additional costs
 
