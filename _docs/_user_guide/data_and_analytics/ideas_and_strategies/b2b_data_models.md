@@ -8,13 +8,13 @@ description: "Learn how to use Braze data tools to create B2B models."
 
 > This collection of use cases demonstrates how you can use Braze data tools to create an effective and efficient B2B data model that helps you target, trigger, personalize, and send messages to your business users. 
 
-Some use cases include:
+Some of the ways you can use Braze to create B2B data models include:
 
-- Mapping sales customer relationship management (CRM) IDs to Braze
-- Using Braze catalogs and catalogs API or catalogs Cloud Data Ingestion (CDI) to frequently update information about your accounts and opportunities
-- Using Connected Content and Braze CDI segments to directly query your data warehouse for data about accounts and opportunities 
+- [Mapping sales customer relationship management (CRM) IDs to Braze](#mapping-sales-crm-ids-to-braze)
+- [Using Braze catalogs and catalogs API or catalogs Cloud Data Ingestion (CDI) to frequently update information about your accounts and opportunities](#using-catalogs-for-accounts-and-opportunities)
+- [Using Connected Content and Braze CDI segments to directly query your data warehouse for data about accounts and opportunities](#using-connected-content-for-accounts-and-opportunities) 
 
-Before we cover the use cases, let's go over several concepts and terms you should know.
+Before we cover the above use cases, let's go over several concepts and terms you should know.
 
 There are four primary B2B objects that you need to execute B2B campaigns.
 
