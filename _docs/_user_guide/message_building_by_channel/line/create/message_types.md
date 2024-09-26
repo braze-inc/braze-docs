@@ -22,7 +22,7 @@ LINE access is in beta and only available in select Braze packages. Reach out to
 
 When you compose a LINE message, you can drag-and-drop message types into the composer and then customize them.
 
-![][5]{: style="max-width:40%;"}
+![Message types panel with message types to drag into the composer editor, including text, image, rich message, and card-based message.][5]{: style="max-width:40%;"}
 
 ## Text
 
@@ -33,7 +33,7 @@ Use cases include:
 - Send personalized birthday greetings with unique promotion cards
 - Share quick updates about upcoming events
 
-![][1]{: style="max-width:40%;"}
+![A text message reminding the user not to forget about a Black Friday party and the potential to save up to 80% before midnight.][1]{: style="max-width:40%;"}
 
 ## Image
 
@@ -44,7 +44,7 @@ Use cases include:
 - Highlight end-of-season promotions to encourage users to stock up on next year's winter clothes with great deals
 - Start a visual countdown to a storewide annual sale
 
-![][2]{: style="max-width:40%;"}
+![An image message promoting a toaster sale.][2]{: style="max-width:40%;"}
 
 ### URL image
 
@@ -69,7 +69,7 @@ Use cases include:
 - Present an interactive menu that starts an combo order by selecting an item
 - Lay out multiple promotions for users to choose by selecting a grid square
 
-![][3]
+![A four-square rich message with photos of different sandwiches in the composer editor.][3]
 
 ### Image map
 
@@ -102,7 +102,7 @@ Use cases include:
 - Highlight this season's best-selling jackets
 - Present a sampling of cooking tools and gadgets that are included in a kit
 
-![][4]
+![A card-based message with at least two cards that promote bread and sandwiches in the composer editor.][4]
 
 | **Message specifications** | **Recommended properties** |
 |--------------------------|----------------------------|
