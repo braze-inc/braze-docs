@@ -366,7 +366,7 @@ if (user && isLoggedIn && lineUserId) {
 1. LINE sends Braze a follow event.
 2. Braze creates an anonymous user profile with the LINE ID, `line_id` user alias, and LINE subscription group status of `subscribed`.
 3. The user receives a LINE message with a link to your website and app and logs in. Their user profile is now known.
-4. The anonymous user profile that was created is identified and is merged onto the user’s known user profile. The known user profile now contains the LINE ID and has a subscription status of `subscribed`.
+4. The anonymous user profile that was created is identified and is merged through the [/users/identify endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_identify/) onto the user’s known user profile. The known user profile now contains the LINE ID and has a subscription status of `subscribed`.
 5. (Optional) The user receives a LINE message with the coupon code and Braze logs the send to the Braze user profile.
 
 ## Creating LINE test users in Braze
