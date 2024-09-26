@@ -188,8 +188,6 @@ The storage size for the free version of catalogs is up to 100&nbsp;MB. You can 
 At a company level, the maximum storage for Catalogs Pro is based on the size of catalog data. The storage size options are: 5&nbsp;GB, 10&nbsp;GB, or 15&nbsp;GB. Note that the free version's storage (100&nbsp;MB) is included in each of these plans.
 
 [1]: {% image_buster /assets/img_archive/catalog_CSV_upload.png %}
-[3]: {% image_buster /assets/img_archive/catalog_image_link1.png %}
-[4]: {% image_buster /assets/img_archive/catalog_image_link2.png %}
 [5]: {% image_buster /assets/img_archive/catalog_CSV_example.png %}
 [7]: {% image_buster /assets/img_archive/create_catalog_option.png %}
 [9]: {% image_buster /assets/img_archive/catalog_data_type.png %}
@@ -197,4 +195,3 @@ At a company level, the maximum storage for Catalogs Pro is based on the size of
 [12]: {% image_buster /assets/img_archive/add_catalog_fields.png %}
 [13]: {% image_buster /assets/img_archive/add_catalog_items.png %}
 [14]: {% image_buster /assets/img_archive/in_browser_catalog.png %}
-[10]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/using_liquid/#assigning-variables

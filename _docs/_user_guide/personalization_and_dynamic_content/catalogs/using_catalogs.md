@@ -45,7 +45,7 @@ This renders as the following:
 
 ### Multiple items
 
-You aren't limited to just one item in a single message! Simply insert the additional catalog items and information to display using the **Add Personalization** modal. Note that you can add up to three catalog items only. 
+You aren't limited to just one item in a single message. You can use the **Add Personalization** modal to add up to three catalog items at a time. To add more items to your message, select **Add Personalization** in the message composer and select the additional catalog items and information to display.
 
 Check out this example where we add the `id` of three games, Tales, Teslagrad, and Acaratus, for **Catalog Items** and select `title` for **Information to Display**.
 
@@ -215,3 +215,6 @@ Catalog Liquid tags can't be used recursively inside catalogs.
 
 [1]: {% image_buster /assets/img_archive/use_catalog_personalization.png %}
 [2]: {% image_buster /assets/img_archive/catalog_multiple_items.png %}
+[3]: {% image_buster /assets/img_archive/catalog_image_link1.png %}
+[4]: {% image_buster /assets/img_archive/catalog_image_link2.png %}
+[10]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/using_liquid/#assigning-variables
