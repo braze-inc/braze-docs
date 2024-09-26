@@ -49,8 +49,7 @@ Use cases include:
 ### URL image
 
 Use URL images for use cases that incorporate:
-- Liquid dynamic images
-    - Include the Liquid in your image source attribute. For example, you can insert {% raw %} `https://example.com/images/?imageBanner={{first_name}}` {% endraw %} as the image URL to include a user's first name in the image. 
+- Liquid dynamic images by including the Liquid in your image source attribute. For example, you can insert {% raw %} `https://example.com/images/?imageBanner={{first_name}}` {% endraw %} as the image URL to include a user's first name in the image.
 - [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/)
 - [Braze catalogs]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/)
 
