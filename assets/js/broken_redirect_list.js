@@ -1062,7 +1062,6 @@ validurls['/docs/developer_guide/platform_integration_guides/ios/initial_sdk_set
 validurls['/docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/installation_methods/'] = '/docs/developer_guide/platform_integration_guides/legacy_sdks/ios/initial_sdk_setup/installation_methods/';
 validurls['/docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/ios_sdk_integration/'] = '/docs/developer_guide/platform_integration_guides/legacy_sdks/ios/initial_sdk_setup/ios_sdk_integration/';
 validurls['/docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/other_sdk_customizations/'] = '/docs/developer_guide/platform_integration_guides/legacy_sdks/ios/initial_sdk_setup/other_sdk_customizations/';
-validurls['/docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/'] = '/docs/developer_guide/platform_integration_guides/legacy_sdks/ios/initial_sdk_setup/';
 validurls['/docs/developer_guide/platform_integration_guides/ios/ios_16/'] = '/docs/developer_guide/platform_integration_guides/legacy_sdks/ios/ios_16/';
 validurls['/docs/developer_guide/platform_integration_guides/ios/news_feed/customization/badges/'] = '/docs/developer_guide/platform_integration_guides/legacy_sdks/ios/news_feed/customization/badges/';
 validurls['/docs/developer_guide/platform_integration_guides/ios/news_feed/customization/custom_styling/'] = '/docs/developer_guide/platform_integration_guides/legacy_sdks/ios/news_feed/customization/custom_styling/';
