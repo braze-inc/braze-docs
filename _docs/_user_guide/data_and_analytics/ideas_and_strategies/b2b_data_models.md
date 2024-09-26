@@ -109,7 +109,7 @@ Now that your opportunity and account details are ccounted for as Braze catalogs
       "name" : "account_linked",
       "time" : "2013-07-16T19:20:45+01:00",
       "properties": {
-        "account_id": "xyz123
+        "account_id": "xyz123"
       }
     }
   ]
