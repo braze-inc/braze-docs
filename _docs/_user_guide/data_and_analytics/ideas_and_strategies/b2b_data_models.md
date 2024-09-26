@@ -76,6 +76,8 @@ We recommend creating one catalog for your accounts and one for your opportuniti
 
 #### Braze object: Catalog > Account catalog
 
+The table below includes a few examples of fields you can map over from your CRM's account object. You can map over any field that is included in your CRM's account object.
+
 | CRM field | CRM object (Salesforce) | Braze field |
 | --- | --- | --- |
 | `id` | Account | `id` |
@@ -84,6 +86,8 @@ We recommend creating one catalog for your accounts and one for your opportuniti
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 }
 
 #### Braze object: Catalog > Opportunity catalog
+
+The table below includes a few examples of fields you can map over from your CRM's opportunity object. You can map over any field that is included in your CRM's opportunity object.
 
 | CRM field | CRM object (Salesforce) | Braze field |
 | --- | --- | --- |
