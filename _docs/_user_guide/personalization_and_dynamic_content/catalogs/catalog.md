@@ -195,4 +195,3 @@ At a company level, the maximum storage for Catalogs Pro is based on the size of
 [12]: {% image_buster /assets/img_archive/add_catalog_fields.png %}
 [13]: {% image_buster /assets/img_archive/add_catalog_items.png %}
 [14]: {% image_buster /assets/img_archive/in_browser_catalog.png %}
-[10]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/using_liquid/#assigning-variables

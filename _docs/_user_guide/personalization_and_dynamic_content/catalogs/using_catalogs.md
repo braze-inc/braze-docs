@@ -217,3 +217,4 @@ Catalog Liquid tags can't be used recursively inside catalogs.
 [2]: {% image_buster /assets/img_archive/catalog_multiple_items.png %}
 [3]: {% image_buster /assets/img_archive/catalog_image_link1.png %}
 [4]: {% image_buster /assets/img_archive/catalog_image_link2.png %}
+[10]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/using_liquid/#assigning-variables
