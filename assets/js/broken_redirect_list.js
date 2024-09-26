@@ -1094,7 +1094,7 @@ validurls['/docs/developer_guide/platform_integration_guides/macOS/'] = '/docs/d
 
 validurls['/docs/developer_guide/platform_integration_guides/ios/content_cards/'] = '/docs/developer_guide/platform_integration_guides/legacy_sdks/ios/content_cards/';
 validurls['/docs/developer_guide/platform_integration_guides/ios/in-app_messaging/'] = '/docs/developer_guide/platform_integration_guides/legacy_sdks/ios/in-app_messaging/';
-validurls['/docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/'] = '/docs/developer_guide/platform_integration_guides/legacy_sdks/ios/initial_sdk_setup/';
+validurls['/docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/'] = '/docs/developer_guide/platform_integration_guides/legacy_sdks/ios/initial_sdk_setup/overview/';
 validurls['/docs/developer_guide/platform_integration_guides/ios/news_feed/'] = '/docs/developer_guide/platform_integration_guides/legacy_sdks/ios/news_feed/';
 validurls['/docs/developer_guide/platform_integration_guides/tvos/'] = '/docs/developer_guide/platform_integration_guides/legacy_sdks/tvos/';
 
