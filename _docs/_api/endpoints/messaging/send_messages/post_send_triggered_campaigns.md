@@ -48,9 +48,11 @@ Authorization: Bearer YOUR-REST-API-KEY
   "recipients": (optional, array; if not provided and broadcast is not set to `false`, message will send to the entire segment targeted by the campaign)
     [
       {
-      // Either "external_user_id" or "user_alias" is required. Requests must specify only one.
+      // Either "external_user_id" or "user_alias" or "email" is required. Requests must specify only one.
       "user_alias": (optional, user alias object) user alias of user to receive message,
       "external_user_id": (optional, string) external identifier of user to receive message,
+      "email": (optional, string) email address of user to receive message,
+      "prioritization": (optional, array) prioritization array; required when using email,
       "trigger_properties": (optional, object) personalization key-value pairs that will apply to this user (these key-value pairs will override any keys that conflict with the parent trigger_properties),
       "send_to_existing_only": (optional, boolean) defaults to true, can't be used with user aliases; if set to `false`, an attributes object must also be included,
       "attributes": (optional, object) fields in the attributes object will create or update an attribute of that name with the given value on the specified user profile before the message is sent and existing values will be overwritten
@@ -82,6 +84,10 @@ Authorization: Bearer YOUR-REST-API-KEY
 - The recipients array may contain up to 50 objects, with each object containing a single `external_user_id` string and `trigger_properties` object.
 - When `send_to_existing_only` is `true`, Braze will only send the message to existing users. However, this flag can't be used with user aliases. 
 - When `send_to_existing_only` is `false`, an attribute must be included. Braze will create a user with the `id` and attributes before sending the message.
+
++{% alert important %}
++Specifying a recipient via email address is currently in early access. Contact your customer success manager if you're interested in participating in this early access.
++{% endalert %}
 
 A user's subscription group status can be updated via the inclusion of a `subscription_groups` parameter within the `attributes` object. For more details, refer to [User attributes object]({{site.baseurl}}/api/objects_filters/user_attributes_object).
 
