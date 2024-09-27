@@ -359,9 +359,11 @@ if (user && isLoggedIn && lineUserId) {
 }
 ```
 
-##### Workflow
+#### Workflows
 
-**Scenario:** An existing user follows your channel on LINE.
+##### Existing user follows your LINE channel
+
+**Scenario:** An existing user in Braze follows your channel on LINE.
 
 1. LINE sends Braze a follow event.
 2. Braze creates an anonymous user profile with the LINE ID, `line_id` user alias, and LINE subscription group status of `subscribed`.
