@@ -11,7 +11,7 @@ tool: Canvas
 
 > Use the lapsing user template to remind users of the value your brand brings to them, and encourage their return with exciting offers and incentives based on their past engagements.
 
-This article will walk you through a use case for the lapsing user template, which is designed for the retention and loyalty step of the user lifecycle. When you’re finished, you’ll have created a Canvas that encourages users to return to your app with promotions that vary based on their behavior, such as whether they started a session in your app after receiving a promotional message.
+This article will walk you through a use case for the **Lapsing User** template, which is designed for the retention and loyalty step of the user lifecycle. When you’re finished, you’ll have created a Canvas that encourages users to return to your app with promotions that vary based on their behavior, such as whether they started a session in your app after receiving a promotional message.
 
 ## Prerequisites
 
@@ -74,7 +74,7 @@ The only setting we’ll change is what to do when a message triggers during qui
 
 ### Step 5: Customize your Canvas
 
-Now we’ll build our Canvas by customizing the templated steps:
+Now, we’ll build our Canvas by customizing the templated steps:
 
 1. Customize the first email that will send to all users who haven’t visited our app in over 30 days. For our use case, we’ll customize an email that tells users they’ll unlock new perks when they visit our app today. 
 
@@ -86,8 +86,8 @@ Now we’ll build our Canvas by customizing the templated steps:
 ![][7]
 
 {: start="3"}
-3. Keep the default for the decision split component called “Sessions?”, which defines the “>1 Session” group as users who’ve used our app more than once in the last calendar day.
-4. Customize the email message component for users who fall into the “>1 Session” group. In our use case, we’ll thank users for visiting our app and highlight perks that they’ve unlocked.
+3. Keep the default for the Decision Split step called “Sessions?”, which defines the “>1 Session” group as users who’ve used our app more than once in the last calendar day.
+4. Customize the Message step for users who fall into the “>1 Session” group. In our use case, we’ll thank users for visiting our app and highlight perks that they’ve unlocked.
 5. Make sure our Google Audience sync is set up in the user update step, so that we update and sync the user data of users who had multiple sessions after receiving our first email.
 Keep the default for the [Experiment Path]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step#experiment-paths) component called “A/B Test”. This will randomly send one of two promotions (that we will customize in the next step) to users who’ve had fewer than two sessions. Over time, the promotion with the best performance will be sent more often.
 6. Customize the two promotions that will send to users as part of the Experiment Path. In our use case, we’ll make one a 20% promotion for a three-month subscription and the other a 10% promotion for a one-month subscription.
@@ -96,7 +96,11 @@ Keep the default for the [Experiment Path]({{site.baseurl}}/user_guide/engagemen
 
 ### Step 6: Launch your Canvas
 
-After testing and reviewing our Canvas to make sure it behaves as expected, we’ll launch it by selecting **Launch Canvas**. Now our users who haven’t visited our app in over 30 days and have subscribed to our messaging channels will receive emails encouraging them to return!
+After testing and reviewing our Canvas to make sure it works as expected, we’ll launch it by selecting **Launch Canvas**. Now our users who haven’t visited our app in over 30 days and have subscribed to our messaging channels will receive emails encouraging them to return!
+
+{% alert tip %}
+Check out our [Pre and post-launch checklist]({{site.baseurl}}/user_guide/engagement_tools/canvas/ideas_and_strategies/pre_post_launch_checklist/#things-to-consider-before-launch) for things to consider before and after you launch a Canvas.
+{% endalert %}
 
 [1]: {% image_buster /assets/img/canvas_templates/lapsing_user_1.png %}
 [2]: {% image_buster /assets/img/canvas_templates/lapsing_user_2.png %}

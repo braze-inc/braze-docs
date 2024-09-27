@@ -11,7 +11,7 @@ tool: Canvas
 
 > Use the back-in-stock template to create messages that target users who have previously viewed or expressed interest in an item that was out of stock but is now available for purchase. This helps users obtain the products they want by engaging them at the critical moment when a product returns to availability.
 
-This article will walk you through a use case for the Back In Stock template, which is designed for the conversion step of the user lifecycle. When you’re finished, you’ll have created a Canvas that sends a push (web or mobile), SMS, or email to users when an item is back in stock, and up to two reminders.
+This article will walk you through a use case for the **Back In Stock** template, which is designed for the conversion step of the user lifecycle. When you’re finished, you’ll have created a Canvas that sends a push (web or mobile), SMS, or email to users when an item is back in stock, and up to two reminders.
 
 ## Prerequisites
 
@@ -88,7 +88,7 @@ We’ll keep the default subscription settings, so we only send to users who hav
 
 ### Step 5: Customize your Canvas
 
-Now we’ll build our Canvas by customizing the channels and content that will send to users. Because we’re using all four of the template channels (Mobile and web push, SMS, and email) and using the [Intelligent Channel]({{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_channel/) filter, we don’t need to add or remove any. 
+Now, we’ll build our Canvas by customizing the channels and content that will send to users. Because we’re using all four of the template channels (Mobile and web push, SMS, and email) and using the [Intelligent Channel]({{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_channel/) filter, we don’t need to add or remove any. 
 
 We’ll begin our customization by going through each message component to update the content.
 
@@ -102,7 +102,11 @@ We’ll begin our customization by going through each message component to updat
 
 ### Step 6: Launch your Canvas
 
-After testing and reviewing our Canvas to make sure it behaves as expected, we’ll launch it by selecting **Launch Canvas**. Now our users who’ve favorited our Classic Straight Leg jeans and have subscribed to our messaging channels will receive notifications when they’re back in stock!
+After testing and reviewing our Canvas to make sure it works as expected, we’ll launch it by selecting **Launch Canvas**. Now our users who’ve favorited our Classic Straight Leg jeans and have subscribed to our messaging channels will receive notifications when they’re back in stock!
+
+{% alert tip %}
+Check out our [Pre and post-launch checklist]({{site.baseurl}}/user_guide/engagement_tools/canvas/ideas_and_strategies/pre_post_launch_checklist/#things-to-consider-before-launch) for things to consider before and after you launch a Canvas.
+{% endalert %}
 
 [1]: {% image_buster /assets/img/canvas_templates/back_in_stock_1.png %}
 [2]: {% image_buster /assets/img/canvas_templates/back_in_stock_2.png %}
