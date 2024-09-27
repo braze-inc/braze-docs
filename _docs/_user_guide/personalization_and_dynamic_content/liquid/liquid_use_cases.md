@@ -636,7 +636,7 @@ This use case checks if a user has performed a custom event three times, and if 
 
 {% raw %}
 ```liquid
-{% assign cadence = {{custom_attribute.${example}}} | minus: 1 | modulo: 3 %}
+{% assign cadence = custom_attribute.${example} | minus: 1 | modulo: 3 %}
 {% if custom_attribute.${example} == blank %}
 {% abort_message("Error calculating cadence") %}
 {% elsif cadence != 0 %}
