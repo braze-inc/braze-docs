@@ -74,27 +74,50 @@ There are two methods to create and manage your business objects in Braze.
 
 We recommend creating one catalog for your accounts and one for your opportunities, and updating them frequently by sending Braze updates through our catalogs API or catalogs Cloud Data Ingestion (CDI). When creating these catalogs, make sure the `id` (first column) of your catalog matches the `id` in your sales CRM system. 
 
-#### Braze object: Catalog > Account catalog
+#### Braze objects
 
-The table below includes a few examples of fields you can map over from your CRM's account object. You can map over any field that is included in your CRM's account object.
+The table below includes a few examples of fields you can map over from your CRM's account and opportunity objects. You can map over any field that is included in your CRM's objects.
 
-| CRM field | CRM object (Salesforce) | Braze field |
-| --- | --- | --- |
-| `id` | Account | `id` |
-| `AccountName` | Account | `AccountName` |
-| `Type` | Account | `Type` |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 }
-
-#### Braze object: Catalog > Opportunity catalog
-
-The table below includes a few examples of fields you can map over from your CRM's opportunity object. You can map over any field that is included in your CRM's opportunity object.
-
-| CRM field | CRM object (Salesforce) | Braze field |
-| --- | --- | --- |
-| `id` | Opportunity | `id` | 
-| `OpportunityName` | Opportunity | `OpportunityName` |
-| `Territory` | Opportunity | `Territory` |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 }
+<table border="1">
+  <tr>
+    <th><b>Braze object</b></th>
+    <th><b>CRM field (Salesforce)</b></th>
+    <th><b>CRM object (Salesforce)</b></th>
+    <th><b>Braze field</b></th>
+  </tr>
+  <tr>
+    <td rowspan="3">Catalog &gt; Account catalog</td>
+    <td><code>id</code></td>
+    <td><code>account</code></td>
+    <td><code>id</code></td>
+  </tr>
+  <tr>
+    <td><code>AccountName</code></td>
+    <td><code>account</code></td>
+    <td><code>Account Name</code></td>
+  </tr>
+  <tr>
+    <td><code>Type</code></td>
+    <td><code>account</code></td>
+    <td><code>Type</code></td>
+  </tr>
+<tr>
+    <td rowspan="3">Catalog &gt; Opportunity catalog</td>
+    <td><code>id</code></td>
+    <td><code>opportunity</code></td>
+    <td><code>id</code></td>
+  </tr>
+  <tr>
+    <td><code>OpportunityName</code></td>
+    <td><code>opportunity</code></td>
+    <td><code>Opportunity Name</code></td>
+  </tr>
+  <tr>
+    <td><code>Territory</code></td>
+    <td><code>opportunity</code></td>
+    <td><code>Territory</code></td>
+  </tr>
+</table>
 
 #### Relating business objects to user profiles
 
@@ -120,7 +143,7 @@ Now that your opportunity and account details are ccounted for as Braze catalogs
 }
 ```
 
-### Using Connected Content for accounts and opportunities
+### Using connected sources for accounts and opportunities
 
 Connected sources are data tables that are hosted by you in your own data warehouse and queried by Braze CDI segments. Unlike catalogs, instead of replicating your business objects (accounts and opportunities) in Braze, you're keeping them in your data warehouse and using your warehouse as the source of truth. 
 
