@@ -13,21 +13,21 @@ tool: Canvas
 guide_featured_title: "Section articles"
 guide_featured_list:
   - name: Abandoned Intent
-    link: /docs/user_guide/canvas/ideas_and_strategies/abandoned_intent/
+    link: /docs/user_guide/engagement_tools/canvas/ideas_and_strategies/abandoned_intent/
     image: /assets/img/braze_icons/users-right.svg
   - name: Back In Stock
-    link: /docs/user_guide/canvas/ideas_and_strategies/back_in_stock/
+    link: /docs/user_guide/engagement_tools/canvas/ideas_and_strategies/back_in_stock/
     image: /assets/img/braze_icons/shopping-cart-03.svg
   - name: Feature Adoption
-    link: /docs/user_guide/canvas/ideas_and_strategies/feature_adoption/
+    link: /docs/user_guide/engagement_tools/canvas/ideas_and_strategies/feature_adoption/
     image: /assets/img/braze_icons/message-square-02.svg
   - name: Lapsing User
-    link: /docs/user_guide/canvas/ideas_and_strategies/lapsing_user/
+    link: /docs/user_guide/engagement_tools/canvas/ideas_and_strategies/lapsing_user/
     image: /assets/img/braze_icons/target-05.svg
   - name: Onboarding
-    link: /docs/user_guide/canvas/ideas_and_strategies/onboarding/
+    link: /docs/user_guide/engagement_tools/canvas/ideas_and_strategies/onboarding/
     image: /assets/img/braze_icons/user-check-01.svg
   - name: Purchase Feedback
-    link: /docs/user_guide/canvas/ideas_and_strategies/purchase_feedback/
+    link: /docs/user_guide/engagement_tools/canvas/ideas_and_strategies/purchase_feedback/
     image: /assets/img/braze_icons/annotation-question.svg
 ---
