@@ -41,7 +41,7 @@ Access query templates by selecting **Create SQL Query** > **Query Template** wh
 
 See [Query templates]({{site.baseurl}}/user_guide/data_and_analytics/query_builder/query_templates/) for a list of available templates.
 
-### Data timeline
+### Data timeframe
 
 All queries surface data from the last 60 days. 
 
