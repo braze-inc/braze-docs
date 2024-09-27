@@ -31,9 +31,9 @@ This use case shows how to calculate a user's app anniversary based on their ini
 ```liquid
 {% assign this_month = 'now' | date: "%B" %} 
 {% assign this_day = 'now' | date: "%d" %}
-{% assign anniversary_month = custom_attribute.${registration_date}}} | date: "%B" %}
-{% assign anniversary_day = custom_attribute.${registration_date}}} | date: "%d" %}
-{% assign anniversary_year = custom_attribute.${registration_date}}} | date: "%Y" %}
+{% assign anniversary_month = {{custom_attribute.${registration_date}}} | date: "%B" %}
+{% assign anniversary_day = {{custom_attribute.${registration_date}}} | date: "%d" %}
+{% assign anniversary_year = {{custom_attribute.${registration_date}}} | date: "%Y" %}
 
 {% if this_month == anniversary_month %} 
 {% if this_day == anniversary_day %} 
@@ -636,7 +636,7 @@ This use case checks if a user has performed a custom event three times, and if 
 
 {% raw %}
 ```liquid
-{% assign cadence = custom_attribute.${example} | minus: 1 | modulo: 3 %}
+{% assign cadence = {{custom_attribute.${example}}} | minus: 1 | modulo: 3 %}
 {% if custom_attribute.${example} == blank %}
 {% abort_message("Error calculating cadence") %}
 {% elsif cadence != 0 %}
