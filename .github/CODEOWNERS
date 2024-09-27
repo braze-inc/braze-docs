@@ -15,3 +15,7 @@
 # Liquid use case library: Validate that new and updated use cases are tested before merging them in. Rachel will validate. Josh is added as code owner in case Rachel is out of office to avoid blockers.
 
 /_docs/_user_guide/personalization_and_dynamic_content/liquid/liquid_use_cases.md @josh-mccrowell-braze @rachel-feinberg
+
+# Ingestion Endpoints: Ingestion owns Data Transformation templates for the following endpoints and needs to be notified of any interface changes
+
+/_docs/_api/endpoints/user_data/post_user_track.md @Appboy/ingestion
