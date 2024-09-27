@@ -20,7 +20,7 @@ guide_featured_list:
     image: /assets/img/braze_icons/shopping-cart-03.svg
   - name: Feature Adoption
     link: /docs/user_guide/engagement_tools/canvas/ideas_and_strategies/feature_adoption/
-    image: /assets/img/braze_icons/message-square-02.svg
+    image: /assets/img/braze_icons/flag-02.svg
   - name: Lapsing User
     link: /docs/user_guide/engagement_tools/canvas/ideas_and_strategies/lapsing_user/
     image: /assets/img/braze_icons/target-05.svg

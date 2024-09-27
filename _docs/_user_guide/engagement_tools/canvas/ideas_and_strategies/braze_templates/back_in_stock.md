@@ -52,7 +52,7 @@ Let’s keep the entry schedule as **Action-Based** so that users will enter our
 
 We’ll make two adjustments to this step:
 
-1. Select the Catalog that contains information about our Classic Straight Leg jeans, which we’ve named “Straight Leg Pants”. 
+1. Select the catalog that includes information about our Classic Straight Leg jeans, which we’ve named “Straight Leg Pants”. 
 
 ![][3]
 
