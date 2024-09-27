@@ -45,10 +45,6 @@ See [Query templates]({{site.baseurl}}/user_guide/data_and_analytics/query_build
 
 The AI Query Builder leverages [GPT](https://openai.com/gpt-4), powered by OpenAI, to recommend SQL for your query.
 
-{% alert note %}
-The AI Query Builder is currently available as a beta feature. Contact your customer success manager if you’re interested in participating in this beta trial.
-{% endalert %}
-
 ![][2]{: style="max-width:60%;" }
 
 To generate SQL with the AI Query Builder:
