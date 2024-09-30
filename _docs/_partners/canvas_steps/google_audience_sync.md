@@ -87,7 +87,7 @@ After you have synced to Braze, the following consent attributes will be availab
 - `$google_ad_user_data`
 - `$google_ad_personalization`
 
-In any Canvas where you're targeting EEA, UK, and Switzerland end users using a Google Audience Sync to add users to an audience, you need to exclude these users whenever both consent attributes are any value that isn't `true`. This can be achieved by segmenting these users when the consent values are both set to `true`. This also ensures the more accurate analytics of users synced since we know Google is going to reject these users from the audiences. Note that if you're using Google Audience Sync to remove users from an audience, consent attributes are not required.
+In any Canvas where you're targeting EEA, UK, and Switzerland end users using a Google Audience Sync to add users to an audience, you need to exclude these users whenever both consent attributes are any value that isn't `true`. This can be achieved by segmenting these users when the consent values are set to `true`. This also ensures that the more accurate analytics of users are synced since we know Google will reject these users from the audiences. Note that if you're using Google Audience Sync to remove users from an audience, consent attributes are not required.
 
 ## Integration
 
