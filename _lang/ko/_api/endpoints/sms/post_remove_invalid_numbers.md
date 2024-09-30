@@ -9,7 +9,7 @@ description: "이 문서에서는 잘못된 전화번호 제거 Braze 엔드포�
 
 ---
 {% api %}
-# 유효하지 않은 전화번호 삭제
+# 유효하지 않은 전화번호 제거
 {% apimethod post %}
 /sms/invalid_phone_numbers/remove
 {% endapimethod %}
@@ -41,11 +41,11 @@ Authorization: Bearer YOUR-REST-API-KEY
 }
 ```
 
-## 요청 매개 변수
+## 요청 매개변수
 
-| 매개 변수 | 필수 | 데이터형 | 설명 |
+| 매개변수 | 필수 | 데이터 유형 | 설명 |
 | ----------|-----------| ---------|------ |
-| `phone_number` | 필수 | e.164 형식의 문자열 배열 | 수정할 수 있는 최대 50개의 전화 번호 배열입니다. |
+| `phone_number` | 필수 | e.164 형식의 문자열 배열 | 최대 50개의 전화번호 배열을 수정할 수 있습니다. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ## 요청 예시
