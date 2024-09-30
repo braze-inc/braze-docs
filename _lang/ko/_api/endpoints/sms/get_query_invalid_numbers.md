@@ -17,24 +17,24 @@ description: "이 문서에서는 유효하지 않은 전화번호를 조회하�
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#81ceae19-15d1-4ac1-ad22-a6b86a92456d {% endapiref %}
 
-## 전제 조건
+## 필수 구성 요소
 
 이 엔드포인트를 사용하려면 `sms.invalid_phone_numbers` 권한이 있는 [API 키]({{site.baseurl}}/api/basics#rest-api-key/)가 필요합니다.
 
-## 요금 제한
+## 사용량 제한
 
 {% multi_lang_include rate_limits.md endpoint='default' %}
 
 ## 요청 매개변수
 
-| 매개변수 | 필수 | 데이터 유형 | 설명 | 설명
+| 매개변수 | 필수 | 데이터 유형 | 설명 |
 | ----------|-----------| ----------|----- |
-| `start_date` | 선택 사항 <br>(참고 참조) | 유효하지 않은 전화번호를 검색할 범위의 시작 날짜는 `end_date`보다 이전이어야 하는 YYYY-MM-DD 형식의 문자열입니다. 이는 API에서 UTC 시간 기준 자정으로 처리됩니다. |
-| `end_date` | 선택 사항 <br>(참고 참조) | YYYY-MM-DD 형식의 문자열 | 잘못된 전화번호를 검색할 범위의 종료일입니다. 이는 API에서 UTC 시간 기준 자정으로 처리됩니다. |
+| `start_date` | 선택 사항 <br>(참고 참조) | YYYY-MM-DD 형식의 문자열| 유효하지 않은 전화번호를 검색할 범위의 시작 날짜는 `end_date` 보다 이전이어야 합니다. 이는 API에서 UTC 시간 기준 자정으로 처리됩니다. |
+| `end_date` | 선택 사항 <br>(참고 참조) | YYYY-MM-DD 형식의 문자열 | 유효하지 않은 전화번호를 검색할 범위의 종료일입니다. 이는 API에서 UTC 시간 기준 자정으로 처리됩니다. |
 | `limit` | 선택 사항 | 정수 | 반환되는 결과 수를 제한하는 선택적 필드입니다. 기본값은 100, 최대값은 500입니다. |
-| `offset` | 선택 사항 | 정수 | 검색할 목록의 시작 지점(선택 사항)입니다. |
-| `phone_numbers` | 선택 사항 <br>(참고) | e.164 형식의 문자열 배열 | 제공된 전화번호가 유효하지 않은 것으로 확인되면 반환합니다. |
-| `reason` | 선택 사항 <br>(참고 참조) | 문자열 | 사용 가능한 값은 "provider\_error"(휴대폰이 SMS를 수신할 수 없음을 나타내는 공급자 오류) 또는 "deactivated"(휴대폰 번호가 비활성화되었음을 나타내는 공급자 오류) 입니다. 생략하면 모든 사유가 반환됩니다. |
+| `offset` | 선택 사항 | 정수 | 검색할 목록의 시작점(선택 사항)입니다. |
+| `phone_numbers` | 선택 사항 <br>(참고 참조) | e.164 형식의 문자열 배열 | 제공된 전화번호가 유효하지 않은 것으로 확인되면 해당 전화번호를 반환해 드립니다. |
+| `reason` | 선택 사항 <br>(참고 참조) | 문자열 | 사용 가능한 값은 "provider_error"(제공업체 오류로 인해 휴대폰에서 SMS를 수신할 수 없음) 또는 "deactivated"(휴대폰 번호가 비활성화됨)입니다. 생략하면 모든 사유가 반환됩니다. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 {% alert note %}
