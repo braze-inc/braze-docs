@@ -78,7 +78,16 @@ If an EEA previously provided consent for both signals, that data will continue 
 * While you can't explicitly set a user as unspecified, if you send a `null` or `nil` value or any value that isn't `true` or `false`, Braze will pass this user to Google as `UNSPECIFIED`.
 * New users added or updated without specifying either consent attribute will be synced to Google with those consent attributes marked as unspecified.
 
-If you attempt to sync an EEA user without the necessary consent fields and granted status, Google will reject this and not serve ads to this end user. In addition, if an ad is served to an EEA user without their explicit consent, you may be liable and could be at financial risk. To avoid this, we suggest sending campaigns with segment filters that only include EEA, UK, and Switzerland users with `true` Google consent attributes. For more details regarding the EU User Consent Policy for Customer Match upload partners, see Google’s [FAQs](https://support.google.com/google-ads/answer/14310715). 
+If you attempt to sync an EEA user without the necessary consent fields and granted status, Google will reject this and not serve ads to this end user. In addition, if an ad is served to an EEA user without their explicit consent, you may be liable and could be at financial risk. To avoid this, we suggest sending campaigns with segment filters that only include EEA, UK, and Switzerland users with `true` Google consent attributes. For more details regarding the EU User Consent Policy for Customer Match upload partners, see Google’s [FAQs](https://support.google.com/google-ads/answer/14310715).
+
+### Setting up your Canvas
+
+After you have synced to Braze, the following consent attributes will be available on your user profiles and for segmentation:
+
+- `$google_ad_user_data`
+- `$google_ad_personalization`
+
+In any Canvas where you're targeting EEA, UK, and Switzerland end users using a Google Audience Sync to add users to an audience, you need to exclude these users whenever both consent attributes are any value that isn't `true`. This can be achieved by segmenting these users when the consent values are both set to `true`. This also ensures the more accurate analytics of users synced since we know Google is going to reject these users from the audiences. Note that if you're using Google Audience Sync to remove users from an audience, consent attributes are not required.
 
 ## Integration
 
