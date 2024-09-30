@@ -11,7 +11,7 @@ description: "이 참조 문서에서는 Braze에서 사용되는 다양한 스�
 
 > 캠페인 및 캔버스 일정 생성 엔드포인트의 매개변수는 전송 엔드포인트의 매개변수를 반영하고 `schedule` 매개변수를 추가하여 타겟 사용자가 메시지를 수신할 시기를 지정할 수 있습니다. `schedule` 객체에 `time` 매개변수만 포함하면 모든 사용자에게 해당 시간에 메시지가 전송됩니다.
 
-`in_local_time`을 `true`로 설정하면 모든 시간대에서 시간 매개변수가 지나간 경우 오류 응답이 표시됩니다. `at_optimal_time` 을 true로 설정하면 사용자가 제공한 시간과 관계없이 지정된 날짜에 [최적의 시간에][33] 메시지를 받게 됩니다. 현지 시간 또는 최적 시간 전송을 사용하는 경우 시간 매개변수 값에 시간대 지정자를 입력하지 마세요(예: `"2015-02-20T13:14:47-05:00"` 대신 `"2015-02-20T13:14:47"`).
+`in_local_time`을 `true`로 설정하면 모든 시간대에서 시간 매개변수가 지나간 경우 오류 응답이 표시됩니다. `at_optimal_time` 을 true로 설정하면 사용자가 제공한 시간과 관계없이 지정된 날짜에 최적의 시간에 메시지를 받게 됩니다. 현지 시간 또는 최적 시간 전송을 사용하는 경우 시간 매개변수 값에 시간대 지정자를 제공하지 마세요(예: `"2015-02-20T13:14:47-05:00"` 대신 `"2015-02-20T13:14:47"` 사용).
 
 응답에는 나중에 예약한 메시지를 취소하거나 업데이트해야 할 경우를 대비하여 저장해야 하는 `schedule_id`가 제공됩니다.
 
@@ -21,7 +21,7 @@ description: "이 참조 문서에서는 Braze에서 사용되는 다양한 스�
 
 ```json
 "schedule": {
-  "time": (required, datetime as ISO 8601 string) time to send the message,
+  "time": (required, datetime as ISO 8601 string) time to send the message in UTC,
   "in_local_time": (optional, bool),
   "at_optimal_time": (optional, bool),
 }
