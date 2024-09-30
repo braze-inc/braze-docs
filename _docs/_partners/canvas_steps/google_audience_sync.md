@@ -78,7 +78,7 @@ If an EEA previously provided consent for both signals, that data will continue 
 * While you can't explicitly set a user as unspecified, if you send a `null` or `nil` value or any value that isn't `true` or `false`, Braze will pass this user to Google as `UNSPECIFIED`.
 * New users added or updated without specifying either consent attribute will be synced to Google with those consent attributes marked as unspecified.
 
-If you attempt to sync an EEA user without the necessary consent fields and granted status, Google will reject this and not serve ads to this end user. In addition, if an ad is served to an EEA user without their explicit consent, you may be liable and could be at financial risk. To avoid this, we suggest sending campaigns with segment filters that only include EEA, UK, and Switzerland users with `true` Google consent attributes. For more details regarding the EU User Consent Policy for Customer Match upload partners, see Google’s [FAQs](https://support.google.com/google-ads/answer/14310715).
+If you attempt to sync an EEA user without the necessary consent fields and granted status, Google will reject this and not serve ads to this user. In addition, if an ad is served to an EEA user without their explicit consent, you may be liable and could be at financial risk. To avoid this, we suggest sending campaigns with segment filters that only include EEA, UK, and Switzerland users with `true` Google consent attributes. For more details regarding the EU User Consent Policy for Customer Match upload partners, see Google’s [FAQs](https://support.google.com/google-ads/answer/14310715).
 
 ### Setting up your Canvas
 
