@@ -45,14 +45,14 @@ Authorization: Bearer YOUR_REST_API_KEY
 }
 ```
 
-### 요청 매개 변수
+### 요청 매개변수
 
-| 매개 변수 | 필수 | 데이터형 | 설명 |
+| 매개변수 | 필수 | 데이터 유형 | 설명 |
 | --------- | ---------| --------- | ----------- |
-| `user_aliases` | 필수 | 새 사용자 별칭 객체의 배열 | [사용자 별칭 개체]({{site.baseurl}}/api/objects_filters/user_alias_object/)를ㄹ 참조하세요.<br><br> `alias_name` 및 `alias_label`에 대한 자세한 내용은 [사용자 별칭]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/#user-aliases) 문서를 확인하세요.|
+| `user_aliases` | 필수 | 새 사용자 별칭 객체 배열 | [사용자 별칭 개체를]({{site.baseurl}}/api/objects_filters/user_alias_object/) 참조하세요.<br><br> 자세한 내용은 `alias_name` 및 `alias_label` 에서 [사용자 별칭]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/#user-aliases) 문서를 참조하세요.|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
-### 새 사용자 별칭 개체 사양이 있는 끝점 요청 본문
+### 새로운 사용자 별칭 객체 사양이 포함된 엔드포인트 요청 본문
 
 ```json
 {
