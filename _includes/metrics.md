@@ -1,5 +1,5 @@
 {% if include.metric == "AMP Clicks" %}
-*AMP Clicks* is the total number of clicks in your AMP HTML email, cumulative of the HTML, plaintext, and AMP HTML versions of the email.
+<i>AMP Clicks</i> is the total number of clicks in your AMP HTML email, cumulative of the HTML, plaintext, and <span style="white-space: nowrap">AMP HTML</span> versions of the email.
 {% endif %}
 
 {% if include.metric == "Audience" %}
@@ -7,11 +7,19 @@
 {% endif %}
 
 {% if include.metric == "Bounces" %}
-*Bounces* is the total number of unsuccessful messages. This could occur because there isn’t a valid push token, the email addresses were incorrect or deactivated, or the user unsubscribed after the campaign was launched. An email bounce for customers using SendGrid consists of hard bounces, spam, and emails sent to invalid addresses.
+*Bounces* is the total number of messages that were unsuccessfully delivered to the intended recipients. This could occur because there isn't a valid push token, the user unsubscribed after the campaign was launched, or the email address is inaccurate or deactivated.
+{% endif %}
+
+{% if include.metric == "Hard Bounce" %}
+A *Hard Bounce* is when an email fails to deliver to the recipient due to a permanent delivery error. A hard bounce might occur because the domain name doesn't exist or because the recipient is unknown. If an email receives a hard bounce, we will stop any future requests to this email address.
+{% endif %}
+
+{% if include.metric == "Soft Bounce" %}
+A *Soft Bounce* is when an email fails to deliver to the recipient due to a temporary delivery error, even though the recipient’s email address is valid. A soft bounce might occur because the recipient's inbox is full, the server was down, or the message was too large for the recipient's inbox. If an email receives a soft bounce, we will usually retry within 72 hours, but the number of retry attempts varies from receiver to receiver.
 {% endif %}
 
 {% if include.metric == "Body Click" %}
-Push Story Notifications record a body click when the notification is clicked. It will not be recorded when a message is expanded, or for action button clicks.
+Push Story Notifications record a *Body Click* when the notification is clicked. It will not be recorded when a message is expanded, or for action button clicks.
 {% endif %}
 
 {% if include.metric == "Body Clicks" %}

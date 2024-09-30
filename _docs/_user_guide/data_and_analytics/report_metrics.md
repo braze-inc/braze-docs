@@ -24,7 +24,7 @@ tool: Reports
 Email
 {% endapitags %}
 
-The total number of users who clicked into the AMP version of your AMP HTML Email.
+{% multi_lang_include metrics.md metric='AMP Clicks' %}
 
 {% endapi %}
 
@@ -36,7 +36,7 @@ The total number of users who clicked into the AMP version of your AMP HTML Emai
 All
 {% endapitags %}
 
-The percentage of users who received a particular message. This number is received from Braze.
+{% multi_lang_include metrics.md metric='Audience' %}
 
 {% endapi %}
 
@@ -48,7 +48,7 @@ The percentage of users who received a particular message. This number is receiv
 Email, Web Push, iOS Push
 {% endapitags %}
 
-The total number of unsuccessful messages. This could occur because there isn't a valid push token, the email addresses were incorrect or deactivated, or the user unsubscribed after the campaign was launched. An email bounce for customers using SendGrid consists of hard bounces, spam, and emails sent to invalid addresses.
+{% multi_lang_include metrics.md metric='Bounces' %}
 
 <span class="calculation-line">Calculation: (Bounces) / (Sends)</span>
 
@@ -62,7 +62,7 @@ The total number of unsuccessful messages. This could occur because there isn't 
 iOS Push, Android Push
 {% endapitags %}
 
-Push Story Notifications record a body click when the notification is clicked. It will not be recorded when a message is expanded, or for action button clicks.
+{% multi_lang_include metrics.md metric='Body Click' %}
 
 <span class="calculation-line">Calculation: (Body Clicks) / (Impressions)</span>
 
@@ -76,10 +76,7 @@ Push Story Notifications record a body click when the notification is clicked. I
 In-App Message
 {% endapitags %}
 
-Occurs when someone clicks on any of the following in-app message types:
-- Slide-up
-- Modal
-- Fullscreen that has no buttons
+{% multi_lang_include metrics.md metric='Body Clicks' %}
 
 <span class="calculation-line">Calculation: (Body Clicks) / (Impressions)</span>
 

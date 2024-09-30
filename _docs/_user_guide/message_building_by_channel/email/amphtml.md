@@ -195,13 +195,32 @@ By wrapping your content around the `raw` tag, the Braze processing engine will 
 
 ## Metrics and analytics
 
-| Metric | Details |
-|---|---|
-| Total Opens | Total opens for the HTML and plaintext versions of your AMP email. |
-| Total Clicks | Total clicks in the HTML and plaintext versions of your AMP email. |
-| AMP Opens | Total count for opens in your AMP HTML email and AMP HTML versions of the email. |
-| AMP Clicks | Total count for clicks in your AMP HTML email, cumulative count of the HTML, plaintext, and AMP HTML versions of the email. |
-{: .reset-td-br-1 .reset-td-br-2}  
+<table>
+    <thead>
+        <tr>
+            <th>Metric</th>
+            <th>Details</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><span style="white-space: nowrap">Total Opens</span></td>
+            <td>Total opens for the HTML and plaintext versions of your AMP email.</td>
+        </tr>
+        <tr>
+            <td>Total Clicks</td>
+            <td>Total clicks in the HTML and plaintext versions of your AMP email.</td>
+        </tr>
+        <tr>
+            <td>AMP Opens</td>
+            <td>Total count for opens in your AMP HTML email and AMP HTML versions of the email.</td>
+        </tr>
+        <tr>
+            <td>AMP Clicks</td>
+            <td>{% multi_lang_include metrics.md metric='AMP Clicks' %}</td>
+        </tr>
+    </tbody>
+</table>
 
 ## Testing and troubleshooting
 
