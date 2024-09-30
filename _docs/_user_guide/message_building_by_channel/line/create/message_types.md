@@ -53,7 +53,7 @@ Use URL images for use cases that incorporate:
 - [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/) by pulling images directly from your web server or publicly accessible APIs
 - [Braze catalogs]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/) by accessing images from imported CSV files and API endpoints
 
-| **Image specifications** | **Recommended properties** |
+| **Specifications** | **Recommended properties** |
 |--------------------------|----------------------------|
 | Image file URL length | 2,000 characters maximum  |
 | Image format          | PNG, JPEG             |
@@ -71,9 +71,9 @@ Use cases include:
 
 ![A four-square rich message with photos of different sandwiches in the composer editor.][3]
 
-### Image map
+### Image map 
 
-| **Image specifications** | **Recommended properties** |
+| **Specifications** | **Recommended properties** |
 |--------------------------|----------------------------|
 | Image file URL length | 2,000 characters maximum  |
 | Image format          | PNG (can be transparent), JPEG             |
@@ -81,15 +81,15 @@ Use cases include:
 | File size     |  10&nbsp;MB maximum |
 {: .reset-td-br-1 .reset-td-br-2}
 
-### URI link
+### URI link 
 
-| **Image specifications** | **Recommended properties** |
+| **Specifications** | **Recommended properties** |
 |--------------------------|----------------------------|
 | Character count      | 1,000 maximum |
 | Schemes              | HTTP, HTTPS, LINE, tel |
 {: .reset-td-br-1 .reset-td-br-2}
 
-### Text
+### Text 
 
 A text rich message can contain up to 400 characters.
 
@@ -104,14 +104,19 @@ Use cases include:
 
 ![A card-based message with at least two cards that promote bread and sandwiches in the composer editor.][4]
 
-| **Message specifications** | **Recommended properties** |
+### Message
+
+| **Specifications** | **Recommended properties** |
 |--------------------------|----------------------------|
 | Columns                  | 10 maximum |
 | Aspect ratio             | Rectangle: 1.51:1 <br> Square: 1:1  |
 | Title                    | 40 characters maximum
 {: .reset-td-br-1 .reset-td-br-2}
 
-| **Image specifications** | **Recommended properties** |
+
+### Image
+
+| **Specifications** | **Recommended properties** |
 |--------------------------|----------------------------|
 | Image URL                 | 2,000 characters maximum |
 | Image format              | JPEG or PNG |
@@ -119,7 +124,10 @@ Use cases include:
 | File size                 | 1 MB |
 {: .reset-td-br-1 .reset-td-br-2}
 
-| **Text specifications** | **Recommended properties** |
+
+### Text
+
+| **Specifications** | **Recommended properties** |
 |-------------------------|----------------------------|
 | Characters              | 120 maximum (no image or title) <br> 60 maximum (message with an image or title)  |
 | Actions                 | 3 maximum |
