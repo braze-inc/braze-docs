@@ -22,11 +22,11 @@ description: "이 문서에서는 API 전용 Braze 엔드포인트를 통해 즉
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#946cb701-96e3-48d7-868c-f079785b6d24 {% endapiref %}
 
-## 전제 조건
+## 필수 구성 요소
 
 이 엔드포인트를 사용하려면 `messages.send` 권한으로 API 키를 생성해야 합니다.
 
-## 요금 제한
+## 사용량 제한
 
 {% multi_lang_include rate_limits.md endpoint='send endpoints' category='message send endpoint' %}
 
@@ -68,18 +68,18 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ## 요청 매개변수
 
-| 매개변수 | 필수 | 데이터 유형 | 설명 | 설명
+| 매개변수 | 필수 | 데이터 유형 | 설명 |
 | --------- | ---------| --------- | ----------- |
-|`broadcast`| 선택 사항 | 부울 | 캠페인 또는 캔버스가 타겟팅하는 전체 세그먼트에 메시지를 보낼 때 `broadcast` 을 true로 설정해야 합니다. 이 매개변수의 기본값은 false입니다(2017년 8월 31일 기준). <br><br> `broadcast` 을 true로 설정하면 `recipients` 목록을 포함할 수 없습니다. 그러나 이 플래그를 실수로 설정하면 예상보다 많은 대상에게 메시지를 보낼 수 있으므로 `broadcast: true` 을 설정할 때는 주의하세요. |
-|`external_user_ids` | 선택 사항 | 문자열 배열 | [외부 사용자 ID]({{site.baseurl}}/api/objects_filters/user_attributes_object/#braze-user-profile-fields) 참조. |
-|`user_aliases`| 선택 사항 | 사용자 별칭 개체의 배열| [사용자 별칭]({{site.baseurl}}/api/objects_filters/user_alias_object/) 개체를 참조하세요. |
-|`segment_id `| 선택 사항 | 문자열 | [세그먼트 식별자]({{site.baseurl}}/api/identifier_types/) 참조. |
-|`audience`| 선택 사항 | 연결된 대상 개체 | [연결된 대상]({{site.baseurl}}/api/objects_filters/connected_audience/) 보기. |
-|`campaign_id`| 선택 사항* | 문자열 | 자세한 내용은 [캠페인 식별자를]({{site.baseurl}}/api/identifier_types/) 참조하세요. <br><br>\*Braze 대시보드에서 캠페인 통계(예: 전송, 클릭, 바운스 등)를 추적하려는 경우 필수입니다. |
-|`send_id`| 선택 사항 | 문자열 | [전송 식별자]({{site.baseurl}}/api/identifier_types/) 참조 |
-|`override_frequency_capping`| 선택 사항 | 부울 | 캠페인에 대해 `frequency_capping` 무시, 기본값은 `false`입니다. |
-|`recipient_subscription_state`| 선택 사항 | 문자열 | 옵트인한 사용자만(`opted_in`), 구독했거나 옵트인한 사용자만(`subscribed`) 또는 구독하지 않은 사용자를 포함한 모든 사용자(`all`)에게 메시지를 보내려면 이 옵션을 사용합니다. <br><br>`all` 사용자를 사용하면 트랜잭션 이메일 메시징에 유용합니다. 기본값은 `subscribed`입니다. |
-|`messages`| 선택 사항 | 메시징 개체 | [사용 가능한 메시징 개체]({{site.baseurl}}/api/objects_filters/#messaging-objects) 보기. |
+|`broadcast`| 선택 사항 | 부울 | 캠페인 또는 캔버스가 타겟팅하는 전체 세그먼트에 메시지를 보낼 때는 `broadcast` 을 true로 설정해야 합니다. 이 매개변수의 기본값은 false입니다(2017년 8월 31일 기준). <br><br> `broadcast`가 true로 설정하면 `recipients` 목록을 포함할 수 없습니다. 그러나 이 플래그를 실수로 설정하면 예상보다 많은 대상에게 메시지를 보낼 수 있으므로 `broadcast: true` 을 설정할 때는 주의하세요. |
+|`external_user_ids` | 선택 사항 | 문자열 배열 | [외부 사용자 ID를]({{site.baseurl}}/api/objects_filters/user_attributes_object/#braze-user-profile-fields) 참조하세요. |
+|`user_aliases`| 선택 사항 | 사용자 별칭 객체 배열| [사용자 별칭 개체를]({{site.baseurl}}/api/objects_filters/user_alias_object/) 참조하세요. |
+|`segment_id `| 선택 사항 | 문자열 | [세그먼트 식별자를]({{site.baseurl}}/api/identifier_types/) 참조하세요. |
+|`audience`| 선택 사항 | 연결된 대상 개체 | [연결된 오디언스]({{site.baseurl}}/api/objects_filters/connected_audience/) 보기. |
+|`campaign_id`| 선택 사항* | 문자열 | 자세한 내용은 [캠페인 식별자를]({{site.baseurl}}/api/identifier_types/) 참조하세요. <br><br>\*Braze 대시보드에서 캠페인 통계(예: 전송, 클릭, 바운스 등)를 추적하려는 경우 필수 항목입니다. |
+|`send_id`| 선택 사항 | 문자열 | [식별자 보내기]({{site.baseurl}}/api/identifier_types/) 참조 |
+|`override_frequency_capping`| 선택 사항 | 부울 | 캠페인의 경우 `frequency_capping` 을 무시하고 기본값은 `false` 입니다. |
+|`recipient_subscription_state`| 선택 사항 | 문자열 | 이를 사용하여 수신 동의한 사용자(`opted_in`), 구독했거나 수신 동의한 사용자(`subscribed`) 또는 구독하지 않은 사용자를 포함한 모든 사용자(`all`)에게만 메시지를 보낼 수 있습니다. <br><br>`all` 사용자를 사용하면 트랜잭션 이메일 메시징에 유용합니다. 기본값은 `subscribed` 입니다. |
+|`messages`| 선택 사항 | 메시징 객체 | [사용 가능한 메시징 개체를]({{site.baseurl}}/api/objects_filters/#messaging-objects) 참조하세요. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ## 요청 예시
