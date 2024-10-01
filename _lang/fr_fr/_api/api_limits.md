@@ -11,7 +11,7 @@ page_type: reference
 
 > L’infrastructure API Braze est conçue pour gérer des volumes élevés de données sur l’ensemble de notre base de clients. À cette fin, nous appliquons des limites de débit à l’API par espace de travail. 
 
-Une limite de débit correspond au nombre de demandes que l’API peut recevoir sur une période donnée. De nombreux incidents de déni de service basés sur la charge dans les grands systèmes sont involontaires, causés par des erreurs dans les logiciels ou les configurations, et non par des attaques malveillantes. Les limites de taux vérifient que de telles erreurs ne privent pas nos clients des ressources de l'API Braze. Si trop de demandes sont envoyées dans un délai donné, vous risquez de recevoir des réponses d’erreur avec un code de statut de `429`, qui indique que la limite de débit a été atteinte.
+Une limite de débit correspond au nombre de demandes que l’API peut recevoir sur une période donnée. De nombreux incidents de déni de service basés sur la charge dans les grands systèmes sont involontaires, causés par des erreurs dans les logiciels ou les configurations, et non par des attaques malveillantes. Les limites de débit permettent de vérifier que de telles erreurs ne privent pas nos clients des ressources de l'API de Braze. Si trop de demandes sont envoyées dans un délai donné, vous risquez de recevoir des réponses d’erreur avec un code de statut de `429`, qui indique que la limite de débit a été atteinte.
 
 {% alert warning %}
 Les limites de débit de l’API sont sujettes à modification en fonction de l’utilisation propre à notre système. Nous encourageons des limites raisonnables lors de l’appel d’API afin d’éviter tout dommage ou toute mauvaise utilisation.
@@ -25,27 +25,25 @@ Le tableau suivant répertorie les limites de débit d’API par défaut pour di
 Les requêtes qui ne figurent pas dans ce tableau partagent une limite de débit totale par défaut de 250 000 requêtes par heure.
 {% endalert %}
 
-| Type de requête | Limite de débit d’API par défaut |
+| Type de demande | Limite de débit par défaut de l’API |
 | --- | --- |
-| [`/users/track`][10] | **Requêtes :** 50 000 demandes par minute.<br><br>**Traitement par lot :** 75 événements, 75 achats et 75 attributs par requête d'API. Voir Demandes de suivi utilisateur du traitement par lots[](#batch-user-track) pour en savoir plus.
-| [`/users/export/ids`][11] | 2 500 requêtes par minute. |
-| [`/users/delete`][12]<br>[][13]<br>[][45]<br>[][14]<br>[`/users/merge`][44] | 20 000 requêtes par minute, partagées entre les endpoints. |
-| [`/users/external_id/rename`][20] | 1 000 requêtes par minute. |
-| [`/users/external_id/remove`][21] | 1 000 requêtes par minute. |
-| [`/events/list`][15] | 1 000 requêtes par heure, partagées avec l’endpoint `/purchases/product_list`. |
-| [`/purchases/product_list`][16] | 1 000 requêtes par heure, partagées avec l’endpoint `/events/list`. |
-| [`/campaigns/data_series`][17.3] | 50 000 requêtes par minute. |
-| [`/messages/send`][17] | Les appels de diffusion ne peuvent pas faire l'objet de plus de 250 requêtes par minute (lorsque l'on spécifie uniquement un segment ou une audience connectée). Sinon, 250 000 demandes par heure.
-| [`/campaigns/trigger/send`][17.1] | Les appels de diffusion ne peuvent pas faire l'objet de plus de 250 requêtes par minute (lorsque l'on spécifie uniquement un segment ou une audience connectée). Sinon, 250 000 demandes par heure.
-| [`/canvas/trigger/send`][17.2] | Les appels de diffusion ne peuvent pas faire l'objet de plus de 250 requêtes par minute (lorsque l'on spécifie uniquement un segment ou une audience connectée). Sinon, 250 000 demandes par heure.
-| [`/sends/id/create`][18] | 100 requêtes par jour. |
-| [`/subscription/status/set`][19] | 5 000 requêtes par minute. |
-| [`/preference_center/v1/{preferenceCenterExternalId}/url/{userId}`][26]<br>[][27]<br>[`/preference_center/v1/{preferenceCenterExternalId}`][28] | 1 000 requêtes par minute, par espace de travail. |
-<br>[`/preference_center/v1/{preferenceCenterExternalId}`][30] | 10 requêtes par minute, par espace de travail. |
-| [`/catalogs/{catalog_name}`][31]<br>[][32]<br>[`/catalogs`][33] | 50 requêtes par minute, partagées entre les endpoints. |
-| [`/catalogs/{catalog_name}/items`][34]<br>[][35]<br>[`/catalogs/{catalog_name}/items`][36] | 16 000 requêtes par minute, partagées entre les endpoints. |
-| [`/catalogs/{catalog_name}/items/{item_id}`][37]<br>[][38]<br>[][39]<br>[][40]<br>[`/catalogs/{catalog_name}/items/{item_id}`][41] | 50 requêtes par minute, partagées entre les endpoints. |
-| [`/scim/v2/Users/{id}`][22]<br>[][43]<br>[][25]<br>[][24]<br>[`/scim/v2/Users/`][23] | 5 000 requêtes par jour, par entreprise, partagées entre les endpoints. |
+| [`/users/track`][10] | **Demandes :** 50 000 demandes par minute.<br><br>**Traitement par lot :** 75 événements, 75 achats et 75 attributs par requête d'API. Pour en savoir plus, consultez la rubrique [Mise en lot des demandes de suivi des utilisateurs](#batch-user-track). |
+| [`/users/export/ids`][11] | 2 500 demandes par minute. |
+| [`/users/delete`][12]<br>[`/users/alias/new`][13]<br>[`/users/alias/update`][45]<br>[`/users/identify`][14]<br>[`/users/merge`][44] | 20 000 demandes par minute, partagées entre les endpoints. |
+| [`/users/external_id/rename`][20] | 1 000 demandes par minute. |
+| [`/users/external_id/remove`][21] | 1 000 demandes par minute. |
+| [`/events/list`][15] | 1 000 demandes par heure, partagées avec l’endpoint `/purchases/product_list`. |
+| [`/purchases/product_list`][16] | 1 000 demandes par heure, partagées avec l’endpoint `/events/list`. |
+| [`/campaigns/data_series`][17.3] | 50 000 demandes par minute. |
+| [`/messages/send`][17]<br>[`/campaigns/trigger/send`][17.1]<br>[`/canvas/trigger/send`][17.2]| 250 requêtes par minute pour les appels de diffusion (lorsque vous ne spécifiez qu'un segment ou une audience connectée). Sinon, 250 000 requêtes par heure réparties entre les endpoints. |
+| [`/sends/id/create`][18] | 100 demandes par jour. |
+| [`/subscription/status/set`][19] | 5 000 demandes par minute. |
+| [`/preference_center/v1/{preferenceCenterExternalId}/url/{userId}`][26]<br>[`/preference_center/v1/list`][27]<br>[`/preference_center/v1/{preferenceCenterExternalId}`][28] | 1 000 demandes par minute, par espace de travail. |
+| [`/preference_center/v1`][29]<br>[`/preference_center/v1/{preferenceCenterExternalId}`][30] | 10 demandes par minute, par espace de travail. |
+| [`/catalogs/{catalog_name}`][31]<br>[`/catalogs`][32]<br>[`/catalogs`][33] | 50 demandes par minute, partagées entre les endpoints. |
+| [`/catalogs/{catalog_name}/items`][34]<br>[`/catalogs/{catalog_name}/items`][35]<br>[`/catalogs/{catalog_name}/items`][36] | 16 000 requêtes par minute réparties entre les endpoints. |
+| [`/catalogs/{catalog_name}/items/{item_id}`][37]<br>[`/catalogs/{catalog_name}/items/{item_id}`][38]<br>[`/catalogs/{catalog_name}/items`][39]<br>[`/catalogs/{catalog_name}/items/{item_id}`][40]<br>[`/catalogs/{catalog_name}/items/{item_id}`][41] | 50 demandes par minute, partagées entre les endpoints. |
+| [`/scim/v2/Users/{id}`][22]<br>[`/scim/v2/Users?filter={userName@example.com}`][43]<br>[`/scim/v2/Users/{id}`][25]<br>[`/scim/v2/Users/{id}}`][24]<br>[`/scim/v2/Users/`][23] | 5 000 demandes par jour, partagées entre les endpoints. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 <!-- Add during CDI endpoints GA
@@ -56,7 +54,7 @@ Les requêtes qui ne figurent pas dans ce tableau partagent une limite de débit
 
 ## Traitement des demandes d’API par lot
 
-Les API de Braze sont conçues pour prendre en charge la mise en lots. Grâce au traitement par lot, Braze peut récupérer autant de données que possible en un seul appel d’API afin de limiter le nombre d’appels d’API à passer. Il est plus efficace pour Braze de traiter les données par lots que de les traiter par appel. Par exemple, la gestion de 1 000 appels d’API par lots nécessite moins de ressources que la gestion de 75 000 appels individuels. L’utilisation du traitement par lot est extrêmement importante pour les applications qui peuvent nécessiter plus de 75 000 appels par heure.
+Les API de Braze sont créées pour prendre en charge la mise en lots. Grâce au traitement par lot, Braze peut récupérer autant de données que possible en un seul appel d’API afin de limiter le nombre d’appels d’API à passer. Il est plus efficace pour Braze de traiter les données par lots que de les traiter par appel. Par exemple, la gestion de 1 000 appels d’API par lots nécessite moins de ressources que la gestion de 75 000 appels individuels. L’utilisation du traitement par lot est extrêmement importante pour les applications qui peuvent nécessiter plus de 75 000 appels par heure.
 
 {% alert note %}
 Selon les besoins des clients qui utilisent les capacités de traitement par lot de l’API, des augmentations de limite de débit API REST peuvent être envisagées.
@@ -74,11 +72,11 @@ Les demandes adressées à cet endpoint commencent généralement à traiter dan
 
 ### Demandes de traitement par lot aux endpoints de messagerie
 
-Une seule demande aux [][1]endpoints de messagerie peut atteindre l’un des éléments suivants :
+Une seule demande adressée aux [endpoints de messages][1] peut atteindre l'un des éléments suivants :
 
 - Jusqu’à 50 `external_ids` spécifiques, chacun avec des paramètres de message individuels
 - Un segment de toute taille créé dans le tableau de bord de Braze, spécifié par son `segment_id`
-- Les utilisateurs qui correspondent à des filtres d'audience supplémentaires de n'importe quelle taille, définis dans la demande en tant qu'objet d ['audience connecté][2].
+- Les utilisateurs qui correspondent à des filtres d'audience supplémentaires de toute taille, définis dans la demande comme un objet d'[audience connecté.][2] 
 
 ### Exemple de demande de lot
 
@@ -108,16 +106,16 @@ curl --location --request POST 'https://rest.iad-01.braze.com/v2/subscription/st
 
 Chaque demande API envoyée à Braze renvoie les informations suivantes dans les en-têtes de réponse :
 
-Nom de l'en-tête | Description
+Nom d’en-tête             | Description
 ----------------------- | -----------------------
 `X-RateLimit-Limit`     | Nombre maximum de demandes que vous pouvez effectuer dans un intervalle spécifié (votre limite de débit).
 `X-RateLimit-Remaining` | Nombre de demandes restant dans la fenêtre de limite de débit actuelle.
 `X-RateLimit-Reset`     | Heure à laquelle la fenêtre de limite de débit actuelle se réinitialise en secondes d’époque UTC.
 {: .reset-td-br-1 .reset-td-br-2}
 
-Ces informations sont intentionnellement incluses dans l’en-tête de la réponse à la demande API plutôt que sur le tableau de bord de Braze. Cela permet à votre système de mieux réagir en temps réel lorsque vous interagissez avec notre API. Par exemple, si la valeur `X-RateLimit-Remaining` chute en dessous d’un certain seuil, vous voudrez peut-être ralentir l’envoi pour vous assurer que tous les e-mails transactionnels partent. Ou, si elle atteint zéro, vous voudrez peut-être suspendre tous les envois jusqu’à ce que le temps spécifié dans `X-RateLimit-Reset` s’écoule.
+Ces informations sont intentionnellement incluses dans l’en-tête de la réponse à la demande API plutôt que sur le tableau de bord de Braze. Cela permet à votre système de mieux réagir en temps réel lorsque vous interagissez avec notre API. Par exemple, si la valeur de `X-RateLimit-Remaining` passe en dessous d'un certain seuil, vous pouvez ralentir l'envoi pour vous assurer que tous les e-mails transactionnels sont envoyés. Ou, si elle atteint zéro, vous voudrez peut-être suspendre tous les envois jusqu’à ce que le temps spécifié dans `X-RateLimit-Reset` s’écoule.
 
-Si vous avez des questions sur les limites d’API, contactez votre gestionnaire du succès des clients ou ouvrez un [][support]ticket d’assistance.
+Si vous avez des questions sur les limites de l'API, contactez votre gestionnaire satisfaction client ou ouvrez un [ticket d'assistance.][support]
 
 ### Délai optimal entre les endpoints
 
@@ -125,9 +123,9 @@ Si vous avez des questions sur les limites d’API, contactez votre gestionnaire
 Nous vous recommandons de laisser un délai de 5 minutes entre des appels d’endpoint consécutifs pour réduire les possibilités d’erreur.
 {% endalert %}
 
-Il est crucial de comprendre le délai optimal entre les endpoints lors de la réalisation d’appels consécutifs vers l’API Braze. Des problèmes surviennent lorsque les endpoints dépendent de la réussite du traitement d’autres endpoints, et s’ils sont appelés trop tôt, ils peuvent provoquer des erreurs. Par exemple, si vous assignez un alias à un utilisateur via notre endpoint `/user/alias/new`, puis que vous appuyez sur cet alias pour envoyer un événement personnalisé via notre endpoint `/users/track`, combien de temps devrez-vous attendre ?
+Il est crucial de comprendre le délai optimal entre les endpoints lors de la réalisation d’appels consécutifs vers l’API Braze. Des problèmes surviennent lorsque les endpoints dépendent de la réussite du traitement d’autres endpoints, et s’ils sont appelés trop tôt, ils peuvent provoquer des erreurs. Par exemple, si vous attribuez un alias à un utilisateur par l'intermédiaire de notre point d'accès `/user/alias/new`, puis que vous utilisez cet alias pour envoyer un événement personnalisé par l'intermédiaire de notre point d'accès `/users/track`, combien de temps devez-vous attendre ?
 
-Dans des conditions normales, le temps pour que la cohérence éventuelle de nos données se produise est de 10 à 100 ms (1/10 d’une seconde). Cependant, il peut arriver que cette cohérence prenne plus de temps, c'est pourquoi nous te recommandons de prévoir un délai de 5 minutes entre les appels suivants afin de minimiser la probabilité d'erreur.
+Dans des conditions normales, le temps pour que la cohérence éventuelle de nos données se produise est de 10 à 100 ms (1/10 d’une seconde). Toutefois, dans certains cas, il faut plus de temps pour que cette cohérence se produise. Nous vous recommandons donc de prévoir un délai de 5 minutes entre les appels suivants afin de minimiser la probabilité d'une erreur.
 
 [1]: {{site.baseurl}}/api/endpoints/messaging/
 [2]: {{site.baseurl}}/api/objects_filters/connected_audience/
