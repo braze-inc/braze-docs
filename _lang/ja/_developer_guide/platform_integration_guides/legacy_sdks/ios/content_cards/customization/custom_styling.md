@@ -16,13 +16,13 @@ noindex: true
 ## デフォルト画像を上書きする
 
 {% alert important %}
-iOS アプリ内メッセージまたはコンテンツカード内の画像を表示するために Braze UI を使用しようとしている場合は、 の統合が必要です。
+iOS アプリ内メッセージまたはコンテンツカード内の画像を表示するために Braze UI を使用しようとしている場合は、`SDWebImage` の統合が必要です。
 {% endalert %}
 
 Braze では、クライアントが既存のデフォルト画像を独自のカスタム画像に置き換えることができます。そのためには、カスタム画像で新しい `png` ファイルを作成し、アプリの画像バンドルに追加します。次に、ファイルの名前を画像の名前に変更して、ライブラリー内の既定の画像をオーバーライドします。また、さまざまなスマートフォンのサイズに対応できるよう、`@2x` と `@3x` のバージョンの画像を必ずアップロードしてください。コンテンツカードでオーバーライド可能な画像は以下の通りです。
 
 - プレースホルダ画像： `appboy_cc_noimage_lrg`
-- アイコン画像をピン留めする： `appboy_cc_icon_pinned`
+- 固定されたアイコンの画像： `appboy_cc_icon_pinned`
 
 コンテンツカードには、ダッシュボードに入力できるコンテンツ (メッセージテキスト、画像 URL、リンク、すべてのキーと値のペアなど) の最大サイズが 2 KB という制限があるため、送信する前にサイズを確認してください。このサイズを超えるとカードを送信できなくなります。
 
@@ -35,7 +35,7 @@ Xamarin の iOS の統合では、デフォルト画像のオーバーライド�
 ユーザーデバイスでダークモードが有効になっている場合に、コンテンツカードの UI でダークテーマスタイルが採用されないようにするには、`ABKContentCardsTableViewController.enableDarkTheme` プロパティを設定します。`enableDarkTheme` プロパティには、`ABKContentCardsTableViewController` インスタンス上で直接アクセスするか、独自の UI に最適な `ABKContentCardsViewController.contentCardsViewController` プロパティ経由でアクセスできます。
 
 {% tabs %}
-{% tab 目標-C %}
+{% tab OBJECTIVE-C %}
 
 ```objc
 // Accessing enableDarkTheme via ABKContentCardsViewController.contentCardsViewController.
@@ -56,7 +56,7 @@ Xamarin の iOS の統合では、デフォルト画像のオーバーライド�
 ```
 
 {% endtab %}
-{% tab 速い %}
+{% tab SWIFT %}
 
 ```swift
 // Accessing enableDarkTheme via ABKContentCardsViewController.contentCardsViewController.
