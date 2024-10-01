@@ -17,7 +17,7 @@ description: "Cet article présente en détail l’endpoint Braze Afficher les m
 > Utilisez cet endpoint pour obtenir des informations sur vos modèles d’e-mail.
 
 {% alert important %}
-Les modèles construits à l'aide de l'éditeur de glisser-déposer pour les courriels ne sont pas acceptés.
+Les modèles créés à l'aide de l'éditeur par glisser-déposer pour l'e-mail ne sont pas acceptés.
 {% endalert %}
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#e98d2d5b-62fe-4358-b391-9fe9e460d0ac {% endapiref %}
@@ -31,9 +31,9 @@ Pour utiliser cet endpoint, vous aurez besoin d'une [clé API]({{site.baseurl}}/
 
 ## Paramètres de demande
 
-| Paramètre - Requis - Type de données - Description - Paramètre - Requis - Type de données - Description - Paramètre - Requis - Type de données - Description
+| Paramètre | Requis | Type de données | Description |
 |---|---|---|---|
-| `email_template_id` | Requis | Chaîne | Voir l'[identifiant API du modèle d'email]({{site.baseurl}}/api/identifier_types/). |
+| `email_template_id`  | Requis | Chaîne de caractères | Voir l'[identifiant API du modèle d'e-mail]({{site.baseurl}}/api/identifier_types/). |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ## Exemple de demande
