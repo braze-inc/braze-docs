@@ -9,7 +9,7 @@ description: "Cet article présente en détail l’endpoint Braze Supprimer des 
 
 ---
 {% api %}
-#  : supprimer des Canvas planifiés déclenchés par API
+# Supprimer les toiles planifiées déclenchées par l'API
 {% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %}
 /canvas/trigger/schedule/delete
 {% endapimethod %}
@@ -22,7 +22,7 @@ Les messages ou déclencheurs planifiés qui sont supprimés peu de temps avant 
 
 ## Conditions préalables
 
-Pour utiliser cet endpoint, vous aurez besoin d’une [clé API]({{site.baseurl}}/api/basics#rest-api-key/) avec l'autorisation `canvas.trigger.schedule.delete`.
+Pour utiliser cet endpoint, vous aurez besoin d'une [clé API]({{site.baseurl}}/api/basics#rest-api-key/) avec l’autorisation `canvas.trigger.schedule.delete`.
 
 ## Limite de débit
 
@@ -44,10 +44,10 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ## Paramètres de demande
 
-| Paramètre - Requis - Type de données - Description - Paramètre - Requis - Type de données - Description - Paramètre - Requis - Type de données - Description
+| Paramètre | Requis | Type de données | Description |
 | --------- | ---------| --------- | ----------- |
-| `canvas_id`| Obligatoire | Chaîne de caractères | Voir [Identifiant Canvas]({{site.baseurl}}/api/identifier_types/). |
-| `schedule_id` | Requis | Chaîne | Le `schedule_id` à supprimer (obtenu à partir de la réponse à la création de l'horaire). |
+| `canvas_id`| Requis | Chaîne de caractères | Voir [Identifiant Canvas]({{site.baseurl}}/api/identifier_types/). |
+| `schedule_id` | Requis | Chaîne de caractères | Le `schedule_id` à supprimer (obtenu à partir de la réponse pour créer une planification). |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 
