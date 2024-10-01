@@ -42,10 +42,10 @@ Un objet Achat est un objet qui passe par l’API lorsqu’un achat a été effe
 
 - [ID utilisateur externe]({{site.baseurl}}/api/basics/#user-ids)
 - [Identifiant d’application]({{site.baseurl}}/api/identifier_types/)
-- [][20]Wiki du code de devise ISO 4217
-- [][22]Wiki du code horaire ISO 8601
+- [ISO 4217 Code des devises Wiki][20]
+- [ISO 8601 Time Code Wiki][22]
 
-## Identifiant product\_id pour l’achat
+## Identifiant product_id pour l’achat
 
 Dans l'objet Achat, le `product_id` est un identifiant pour l'achat (tel que `Product Name` ou `Product Category`) :
 
@@ -60,7 +60,7 @@ Cela permet de faciliter l’identification des produits pour la segmentation et
 
 ### Journaliser les achats au niveau de la commande
 
-Si tu veux enregistrer les achats au niveau de la commande plutôt qu'au niveau du produit, tu peux utiliser le nom de la commande ou la catégorie de la commande comme `product_id` (par exemple `Online Order` ou `Completed Order`).
+Si vous souhaitez enregistrer les achats au niveau de la commande plutôt qu'au niveau du produit, vous pouvez utiliser le nom de la commande ou la catégorie de commande comme `product_id` (par exemple `Online Order` ou `Completed Order`).
 
 Par exemple, pour enregistrer des achats au niveau de la commande dans le SDK Web :
 
@@ -95,25 +95,25 @@ Les valeurs de propriété peuvent être l’un des types de données suivants 
 
 | Type de données | Description |
 | --- | --- |
-| Nombres | En tant que [nombres entiers](https://en.wikipedia.org/wiki/Integer) ou [flottants](https://en.wikipedia.org/wiki/Floating-point_arithmetic) |
-| Booleans |  |
-| Formatées sous forme de chaînes de caractères au format [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) ou `yyyy-MM-dd'T'HH:mm:ss:SSSZ`. Non pris en charge dans les tableaux.
-| Chaînes de caractères | 255 caractères ou moins. |
-| Les tableaux ne peuvent pas contenir de dates. |
-| Les objets seront ingérés sous forme de chaînes de caractères. |
+| Chiffres | Sous forme d'[entiers](https://en.wikipedia.org/wiki/Integer) ou de [float](https://en.wikipedia.org/wiki/Floating-point_arithmetic) |
+| Booléens |  |
+| Datetimes | Formatés sous forme de chaînes de caractères au format [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) ou `yyyy-MM-dd'T'HH:mm:ss:SSSZ`. Non pris en charge dans les tableaux. |
+| Chaînes de caractères | 255 caractères ou moins. |
+| Tableaux | Les tableaux ne peuvent pas inclure des dates/horodatages. |
+| Objets | Les objets seront ingérés en tant que chaînes de caractères. |
 {: .reset-td-br-1 .reset-td-br-2}
 
-Les objets de propriété d’événement qui contiennent des valeurs de tableau ou d’objet peuvent avoir une charge utile de propriété d’événement de 50 Ko maximum.
+Les objets de propriété d'événement qui contiennent des valeurs de tableau ou d'objet peuvent avoir une charge utile de propriété d'événement allant jusqu'à 50 Ko.
 
 ### Propriétés d’achat
 
-Les []({{site.baseurl}}/user_guide/data_and_analytics/custom_data/purchase_events/#purchase-properties)propriétés d’achat peuvent toutefois être utilisées pour déclencher des messages et pour la personnalisation à l’aide de Liquid, ce qui vous permet également de segmenter en fonction de ces propriétés.
+Les [propriétés d'achat]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/purchase_events/#purchase-properties) peuvent être utilisées pour déclencher des messages et pour la personnalisation à l'aide de Liquid, ce qui vous permet également de segmenter en fonction de ces propriétés.
 
 ### Conventions de nommage des propriétés d’achat
 
-Il est important de noter que cette fonctionnalité est activée **par produit, et non par achat. Par exemple, si un client a un volume élevé de produits distincts, mais qui ont tous les mêmes propriétés, la segmentation devient plutôt inutile.
+Il est important de noter que cette fonctionnalité est activée **par produit**, et non par achat. Par exemple, si un client possède un grand nombre de produits distincts, mais que chacun d'entre eux possède les mêmes propriétés, la segmentation n'a plus beaucoup de sens.
 
-C’est pourquoi, dans ce cas, nous vous recommandons d’utiliser les noms de produits au « niveau du groupe », plutôt que quelque chose de granulaire lors de la définition des structures de données. Par exemple, une société de billetterie doit avoir des produits pour un « aller simple », un « aller-retour », un « multi-ville », et non des transactions spécifiques telles que « transaction 123 », « transaction 046 », etc. Ou, par exemple, avec l’événement d’achat « nourriture », il serait préférable de définir les propriétés comme « gâteau » et « sandwich ».
+C’est pourquoi, dans ce cas, nous vous recommandons d’utiliser les noms de produits au « niveau du groupe », plutôt que quelque chose de granulaire lors de la définition des structures de données. Par exemple, une société de vente de billets de train devrait avoir des produits pour "voyage simple", "voyage aller-retour", "multi-villes", et non des transactions spécifiques telles que la "transaction 123" ou la "transaction 046". Par exemple, pour l'événement d'achat "nourriture", il serait préférable que les propriétés soient "gâteau" et "sandwich".
 
 ### Exemple d’objet Achat
 ```html
@@ -166,9 +166,9 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ## Objets Achat, objets d’événement et webhooks
 
-À l’aide de l’exemple fourni, nous pouvons voir que quelqu’un a acheté un sac à dos avec les propriétés : couleur, monogramme, durée d’achat, taille et marque. Nous pouvons ensuite créer des segments avec ces [propriétés][2] en utilisant les [propriétés des événements d'achat][2] ou envoyer des messages personnalisés par le biais d'un canal à l'aide de Liquid. Par exemple, « Bonjour **Ann F.**, merci d'avoir acheté ce **sac à dos rouge de taille moyenne** pour **40 euros** ! Merci d'avoir fait tes achats chez **Backpack Locker**!"
+À l’aide de l’exemple fourni, nous pouvons voir que quelqu’un a acheté un sac à dos avec les propriétés : couleur, monogramme, durée d’achat, taille et marque. Nous pouvons ensuite créer des segments avec ces propriétés en utilisant les [propriétés d'event d'achat][2] ou envoyer des messages personnalisés par le biais d'un canal à l'aide de Liquid. Par exemple, « Bonjour **Ann F.**, merci d'avoir acheté ce **sac à dos rouge de taille moyenne** pour **40 euros** ! Merci d'avoir acheté chez **Backpack Locker**!"
 
-Si vous souhaitez enregistrer, stocker et suivre les propriétés avec lesquelles segmenter, vous devez les configurer comme attributs personnalisés. Pour ce faire, tu peux utiliser les [extensions de segment]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/), qui te permettent de cibler les utilisateurs en fonction d'un événement personnalisé ou d'un comportement d'achat stocké pendant toute la durée de vie de ce profil d'utilisateur.
+Si vous souhaitez enregistrer, stocker et suivre les propriétés avec lesquelles segmenter, vous devez les configurer comme attributs personnalisés. Pour ce faire, vous pouvez utiliser les [extensions de segments]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/), qui vous permettent de cibler les utilisateurs en fonction d'un événement personnalisé ou d'un comportement d'achat stocké pendant toute la durée de vie de ce profil utilisateur.
 
 [2]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/purchase_events/#purchase-properties
 [20]: http://en.wikipedia.org/wiki/ISO_4217 "Code devise ISO 4217"
