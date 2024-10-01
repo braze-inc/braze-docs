@@ -39,7 +39,11 @@ Select **Braze templates**. Next to **Feature Adoption**, select **Apply Templat
 
 <!-- Is a conversion event different from the custom event for the new feature that's used in the previous step? If so, how? -->
 
-<!-- UX note: I keep seeing alerts in my template that i need a conversion event, but it doesn't point me to where that is or what that is. after searching in braze docs, none of the pages that mention conversion events actually show an image of this feature so i still don't know what i'm looking for. -->
+<!--
+UX note: I keep seeing alerts in my template that i need a conversion event, but it doesn't point me to where that is or what that is. after searching in braze docs, none of the pages that mention conversion events actually show an image of this feature so i still don't know what i'm looking for. 
+
+Follow up: I was able to figure this out. See the next paragraph below for how to do this.
+-->
 
 To use an experiment path, you need to define a conversion event. Ideally, the conversion event is the event that signals feature adoption. If the top window isn't already open, select **Expand**. Next to **Conversion Events**, select **Edit**.
 
