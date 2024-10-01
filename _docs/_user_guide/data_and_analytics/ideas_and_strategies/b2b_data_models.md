@@ -76,7 +76,10 @@ For this use case, we recommend creating one catalog for your accounts and one f
 
 #### Step 1: Map over your CRM fields 
 
-The table below includes a few examples of fields you can map over from your CRM's account and opportunity objects. In this use case, Salesforce is the example CRM system. You can map over any field that is included in your CRM's objects.
+The tables below includes a few examples of fields you can map over from your CRM's account and opportunity objects. In this use case, Salesforce is the example CRM system. You can map over any field that is included in your CRM's objects.
+
+{% tabs %}
+{% tab Account catalog %}
 
 <table border="1">
   <tr>
@@ -101,7 +104,19 @@ The table below includes a few examples of fields you can map over from your CRM
     <td><code>account</code></td>
     <td><code>Type</code></td>
   </tr>
-<tr>
+</table>
+
+{% endtab %}
+{% tab Opportunity catalog %}
+
+<table border="1">
+  <tr>
+    <th><b>Braze object</b></th>
+    <th><b>Braze field</b></th>
+    <th><b>CRM object (Salesforce)</b></th>
+    <th><b>CRM field (Salesforce)</b></th>
+  </tr>
+  <tr>
     <td rowspan="3">Catalog &gt; Opportunity catalog</td>
     <td><code>id</code></td>
     <td><code>opportunity</code></td>
@@ -118,6 +133,9 @@ The table below includes a few examples of fields you can map over from your CRM
     <td><code>Territory</code></td>
   </tr>
 </table>
+
+{% endtab %}
+{% endtabs %}
 
 #### Step 2: Relate your business objects to user profiles
 
