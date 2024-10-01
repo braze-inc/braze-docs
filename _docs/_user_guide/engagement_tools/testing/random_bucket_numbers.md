@@ -13,13 +13,13 @@ tool:
 
 # Random bucket numbers
 
-> A random bucket number is a user attribute that can be used to create uniformly distributed segments of random users. When a user profile is created in Braze, that user is automatically assigned a random bucket number between 0 and 9999 (inclusive). You can leverage these segments to test the effectiveness of multiple campaigns or Canvases on groups of users over time.
+> A random bucket number is a user attribute that can be used to create uniformly distributed segments of random users. When a user profile is created in Braze, that user is automatically assigned a random bucket number between 0 and 9999 (inclusive). You can use these segments to test the effectiveness of multiple campaigns or Canvases on groups of users over time.
 
 ## Overview
 
 Random bucket numbers are used in your Global Control Group&#8212;a group of users who don't receive any campaigns or Canvases. Braze randomly selects multiple ranges of random bucket numbers and includes users from those selected buckets. 
 
-If you have a Global Control Group set up and want to use random bucket numbers for other uses, check out [Things to watch out for]({{site.baseurl}}/user_guide/engagement_tools/testing/global_control_group/#things-to-watch-for).
+If you have a Global Control Group set up and want to use random bucket numbers for other use cases, check out [Things to watch out for]({{site.baseurl}}/user_guide/engagement_tools/testing/global_control_group/#things-to-watch-for).
 
 ### When to use random bucket numbers
 
@@ -53,7 +53,7 @@ Random audience re-entry can be useful for [A/B testing]({{site.baseurl}}/user_g
 1. [Create your segment]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment).
 2. Define the random buckets. In your campaign or Canvas, use the random bucket filter to split your audience into different groups. For example, you can specify exactly two random buckets to split your audience into (50% of users per bucket).
 3. In the **Target Audiences** section of your campaign or Canvas, specify the random bucket settings. This allows Braze to automatically assign users to the appropriate buckets based on the defined percentages.
-4. Set up logic that allows users to re-enter the segment. For example, you can allow users to re-enter th segment if they haven't engaged with an app for 15 days.
+4. Set up logic that allows users to re-enter the segment. For example, you can allow users to re-enter the segment if they haven't engaged with an app for 15 days.
 5. Launch your campaign and monitor the performance of each bucket. You can analyze metrics such as engagement rates and conversion rates to determine how effective random audience re-entry is with your use case.
 
 
