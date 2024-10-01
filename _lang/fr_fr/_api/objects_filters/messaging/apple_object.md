@@ -11,7 +11,7 @@ description: "Cet article de référence répertorie et explique les différents
 
 # Objet Notification push Apple
 
-> L'objet `apple_push` te permet de définir ou de demander des informations relatives au contenu Apple Push et Apple Push Alert via nos [points de terminaison de messagerie]({{site.baseurl}}/api/endpoints/messaging).
+> L'objet `apple_push` vous permet de définir ou de demander des informations relatives au contenu Apple Push et Apple Push Alert par l'intermédiaire de nos [points d'envoi de messages.]({{site.baseurl}}/api/endpoints/messaging)
 
 ## Objet Notification push Apple
 
@@ -35,14 +35,14 @@ description: "Cet article de référence répertorie et explique les différents
    "mutable_content": (optional, boolean) if true, Braze will add the mutable-content flag to the payload and set it to 1. The mutable-content flag is automatically set to 1 when sending a rich notification, regardless of the value of this parameter.
    "send_to_most_recent_device_only": (optional, boolean) defaults to false, if set to true, Braze will only send this push to a user's most recently used iOS device, rather than all eligible iOS devices,
    "category": (optional, string) the iOS notification category identifier for displaying push action buttons,
-   "buttons" : (optional, array of Apple Push Action Button Objects) push action buttons to display
+   "buttons" : (optional, array of Apple push action button objects) push action buttons to display
 }
 ```
 
 Vous devez inclure un objet Notification push Apple dans `messages` si vous souhaitez que les utilisateurs ciblés reçoivent une notification push sur leurs appareils iOS. Le nombre total d’octets dans votre chaîne de caractères `alert`, objet `extra` et vos autres paramètres facultatifs ne doit pas dépasser 1912. L’API de messagerie renvoie une erreur si vous dépassez la taille de message autorisée par Apple. Les messages incluant les clés `ab` ou `aps` dans l’objet `extra` seront rejetés.
 
 {% alert note %}
-Si tu envoies l'objet Apple Push dans le cadre d'une activité en direct, assure-toi d'inclure ta chaîne `sound` dans l'objet `alert`.
+Si vous envoyez l'objet Apple Push dans le cadre d'une ligne/en production/instantanée, veillez à inclure votre chaîne de caractères `sound` dans l'objet `alert`.
 {% endalert %}
 
 ### Objet Notification push Apple pour les alertes
@@ -68,15 +68,15 @@ Vous devez inclure le champ `category` dans l’objet Notification push Apple po
 
 ### Objet Boutons d’action de notification push Apple pour les boutons par défaut de Braze
 
-| Identificateur de catégorie | Texte du bouton | Identificateur de l'action du bouton | Actions autorisées |
+| Identifiant de catégorie   | Texte du bouton | Identifiant d’action du bouton | Actions autorisées         |
 |-----------------------|-------------|--------------------------|-------------------------|
-| `ab_cat_accept_decline` | Acceptation | `ab_pb_accept` | OPEN\_APP, URI, ou DEEP\_LINK
-| `ab_cat_accept_decline` | Déclin | `ab_pb_decline` | CLOSE |
-| `ab_cat_yes_no` | Oui | `ab_pb_yes` | OPEN\_APP, URI ou DEEP\_LINK
-| `ab_cat_yes_no` | Non | `ab_pb_no` | CLOSE |
-| `ab_cat_confirm_cancel` | Confirmer | `ab_pb_confirm` | OPEN\_APP, URI ou DEEP\_LINK
-| `ab_cat_confirm_cancel` | Annuler | `ab_pb_cancel` | CLOSE |
-| `ab_cat_more` | Plus | `ab_pb_more` | OPEN\_APP, URI, or DEEP\_LINK |
+| `ab_cat_accept_decline` | Accepter      | `ab_pb_accept`             | OPEN_APP, URI ou DEEP_LINK |
+| `ab_cat_accept_decline` | Refuser     | `ab_pb_decline`            | FERMER                   |
+| `ab_cat_yes_no`         | Oui         | `ab_pb_yes`                | OPEN_APP, URI ou DEEP_LINK |
+| `ab_cat_yes_no`         | Non          | `ab_pb_no`                 | FERMER                   |
+| `ab_cat_confirm_cancel` | Confirmer     | `ab_pb_confirm`            | OPEN_APP, URI ou DEEP_LINK |
+| `ab_cat_confirm_cancel` | Annuler      | `ab_pb_cancel`             | FERMER                   |
+| `ab_cat_more`           | Plus        | `ab_pb_more`               | OPEN_APP, URI ou DEEP_LINK |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ```json
