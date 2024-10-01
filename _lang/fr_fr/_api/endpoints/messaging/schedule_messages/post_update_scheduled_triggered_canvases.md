@@ -1,6 +1,6 @@
 ---
-nav_title: "POST :  : Mettre à jour des Canvas planifiés déclenchés par API"
-article_title: "POST :  : Mettre à jour des Canvas planifiés déclenchés par API"
+nav_title: "POST : Mise à jour des canevas déclenchés par l'API planifiée"
+article_title: "POST : Mise à jour des canevas déclenchés par l'API planifiée"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
@@ -9,7 +9,7 @@ description: "Cet article présente en détail l’endpoint Braze Mettre à jour
 
 ---
 {% api %}
-#  : Mettre à jour des Canvas planifiés déclenchés par API
+# Mise à jour des Canvases déclenchées par l'API planifiée
 {% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %}
 /canvas/trigger/schedule/update
 {% endapimethod %}
@@ -18,11 +18,11 @@ description: "Cet article présente en détail l’endpoint Braze Mettre à jour
 
 Ceci vous permet de décider quelle action doit déclencher l’envoi du message. Vous pouvez indiquer les `trigger_properties` qui seront modélisées dans le message lui-même.
 
-Notez que pour envoyer des messages avec cet endpoint, vous devez avoir un ID Canvas créé lorsque vous élaborez un []({{site.baseurl}}/api/identifier_types/#canvas-api-identifier)Canvas.
+Notez que pour envoyer des messages avec ce point de terminaison, vous devez avoir un ID Canvas, créé lorsque vous construisez un [Canvas]({{site.baseurl}}/api/identifier_types/#canvas-api-identifier).
 
-Toute planification écrasera complètement celle que vous avez établie dans la demande de création de planification ou dans les demandes de mise à jour de planification précédentes.
-  Par exemple, si vous indiquez initialement `"schedule" : {"time" : "2015-02-20T13:14:47", "in_local_time" : true}` et, que dans votre mise à jour, vous renseignez `"schedule" : {"time" : "2015-02-20T14:14:47"}`, votre message sera envoyé à l’heure indiquée (UTC), et non à l’heure locale de l’utilisateur.
-  Les déclencheurs planifiés qui sont mis à jour peu de temps avant ou pendant la période où ils sont censés être envoyés seront mis à jour dans les meilleurs délais, de sorte que les changements de dernière minute pourraient être appliqués à tous, certains ou aucun de vos utilisateurs ciblés.
+Toute planification écrasera complètement celle que vous avez établie dans la demande de création de planification ou dans les demandes de mise à jour de planification précédentes. 
+  - Par exemple, si vous indiquez initialement `"schedule" : {"time" : "2015-02-20T13:14:47", "in_local_time" : true}` et, que dans votre mise à jour, vous renseignez `"schedule" : {"time" : "2015-02-20T14:14:47"}`, votre message sera envoyé à l’heure indiquée (UTC), et non à l’heure locale de l’utilisateur. 
+  - Les déclencheurs planifiés qui sont mis à jour peu de temps avant ou pendant la période où ils sont censés être envoyés seront mis à jour dans les meilleurs délais, de sorte que les changements de dernière minute pourraient être appliqués à tous, certains ou aucun de vos utilisateurs ciblés.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#8fdf158b-ce20-41d8-80e4-a9300a6706d4 {% endapiref %}
 
@@ -53,11 +53,11 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ## Paramètres de demande
 
-| Paramètre | Obligatoire | Type de données | Descriptif |
+| Paramètre | Requis | Type de données | Description |
 | --------- | ---------| --------- | ----------- |
-|`canvas_id`|Obligatoire|Chaîne| Voir [Identifiant de canevas]({{site.baseurl}}/api/identifier_types/). |
-| `schedule_id` | Facultatif | Chaîne | La `schedule_id` mise à jour (obtenue à partir de la réponse pour créer un calendrier). |
-`schedule`| | Obligatoire | Objet | Voir [objet de planification]({{site.baseurl}}/api/objects_filters/schedule_object/). |
+|`canvas_id`|Requis|Chaîne de caractères| Voir [identifiant de Canvas]({{site.baseurl}}/api/identifier_types/). |
+| `schedule_id` | Facultatif | Chaîne de caractères | Le `schedule_id` à mettre à jour (obtenu à partir de la réponse pour créer une planification). |
+|`schedule` | Requis | Objet | Voir [objet de l'horaire]({{site.baseurl}}/api/objects_filters/schedule_object/). |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ## Exemple de demande
