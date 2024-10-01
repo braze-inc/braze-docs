@@ -18,5 +18,10 @@
 
 # Ingestion Endpoints: Ingestion owns Data Transformation templates for the following endpoints. They are added as codeowners so they can watch for changes to these endpoints. So their codeownership doesn't block style changes to the docs, Lydia is added as a codeowner as the primary API tech writer. In case she's out, the rest of the Docs Team is also added so that changes are not inappropriately blocked.
 
-/_docs/_api/endpoints/user_data/post_user_track.md @braze-inc/ingestion @lydia-xie @braze-inc/docs-team
-/_docs/_api/endpoints/messaging/send_messages/post_send_messages.md @braze-inc/ingestion @lydia-xie @braze-inc/docs-team
+/_docs/_api/endpoints/user_data/post_user_track.md @Appboy/ingestion @lydia-xie @braze-inc/docs-team
+/_docs/_api/endpoints/messaging/send_messages/post_send_messages.md @Appboy/ingestion @lydia-xie @braze-inc/docs-team
+/_docs/_api/endpoints/catalogs/catalog_items/synchronous/delete_catalog_item.md @Appboy/ingestion @lydia-xie @braze-inc/docs-team
+/_docs/_api/endpoints/catalogs/catalog_items/synchronous/put_update_catalog_item.md @Appboy/ingestion @lydia-xie @braze-inc/docs-team
+/_docs/_api/endpoints/catalogs/catalog_items/synchronous/patch_catalog_item.md @Appboy/ingestion @lydia-xie @braze-inc/docs-team
+/_docs/_api/endpoints/messaging/send_messages/post_send_triggered_campaigns.md @Appboy/ingestion @lydia-xie @braze-inc/docs-team
+/_docs/_api/endpoints/messaging/send_messages/post_send_triggered_canvases.md @Appboy/ingestion @lydia-xie @braze-inc/docs-team
