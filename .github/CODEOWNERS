@@ -16,7 +16,7 @@
 
 /_docs/_user_guide/personalization_and_dynamic_content/liquid/liquid_use_cases.md @josh-mccrowell-braze @rachel-feinberg
 
-# Ingestion Endpoints: Ingestion owns Data Transformation templates for the following endpoints and needs to be notified of any interface changes
+# Ingestion Endpoints: Ingestion owns Data Transformation templates for the following endpoints. They are added as codeowners so they can watch for changes to these endpoints. So their codeownership doesn't block style changes to the docs, Lydia is added as a codeowner as the primary API tech writer. In case she's out, the rest of the Docs Team is also added so that changes are not inappropriately blocked.
 
-/_docs/_api/endpoints/user_data/post_user_track.md @Appboy/ingestion @lydia-xie @braze-inc/docs-team
-/_docs/_api/endpoints/messaging/send_messages/post_send_messages.md @Appboy/ingestion @lydia-xie @braze-inc/docs-team
+/_docs/_api/endpoints/user_data/post_user_track.md @braze-inc/ingestion @lydia-xie @braze-inc/docs-team
+/_docs/_api/endpoints/messaging/send_messages/post_send_messages.md @braze-inc/ingestion @lydia-xie @braze-inc/docs-team
