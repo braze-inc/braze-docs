@@ -15,9 +15,9 @@ description: "Cet article présente en détail l’endpoint Braze Supprimer un c
 /scim/v2/Users/{id}
 {% endapimethod %}
 
-> Utilisez ce point de terminaison pour supprimer définitivement un utilisateur de tableau de bord existant en spécifiant la ressource `id` renvoyée par la méthode SCIM [`POST`]({{site.baseurl}}/scim/post_create_user_account/) . 
+> Utilisez cet endpoint pour supprimer définitivement un utilisateur de tableau de bord existant en spécifiant la ressource `id` renvoyée par la méthode SCIM [`POST`]({{site.baseurl}}/scim/post_create_user_account/) . 
 
-Cela revient à supprimer un utilisateur dans la section **Gérer les utilisateurs** du tableau de bord Braze. Pour plus d’informations sur la manière d’obtenir un jeton SCIM, consultez la section [Provisionnement automatisé des utilisateurs]({{site.baseurl}}/scim/automated_user_provisioning/).
+Cette opération est similaire à la suppression d'un utilisateur dans la section **Utilisateurs de l'entreprise** du tableau de bord Braze. Pour plus d’informations sur la manière d’obtenir un jeton SCIM, consultez la section [Provisionnement automatisé des utilisateurs]({{site.baseurl}}/scim/automated_user_provisioning/).
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#9c7c71ea-afd6-414a-99d1-4eb1fe274f16 {% endapiref %}
 
@@ -31,9 +31,9 @@ Pour utiliser cet endpoint, vous aurez besoin d’un jeton SCIM. Pour plus d’i
 
 ## Paramètres de chemin
 
-| Paramètre | Obligatoire | Type de données | Descriptif |
+| Paramètre | Requis | Type de données | Description |
 |---|---|---|---|
-| `id` | Obligatoire | Chaîne | L’ID de ressource de l’utilisateur. Ce paramètre est renvoyé par les méthodes `POST` `/scim/v2/Users/` ou `GET` `/scim/v2/Users?filter=userName eq "user@test.com"`. |
+| `id` | Requis | Chaîne de caractères | L’ID de ressource de l’utilisateur. Ce paramètre est renvoyé par les méthodes `POST` `/scim/v2/Users/` ou `GET` `/scim/v2/Users?filter=userName eq "user@test.com"`. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
 ## Corps de la demande
@@ -62,14 +62,14 @@ Content-Type: text/html; charset=UTF-8
 ```
 
 Si cet ID ne correspond à aucun développeur dans Braze, l’endpoint répondra avec :
-\`\`\`json
+```json
 HTTP/1.1 404 Not Found
 Content-Type: text/html; charset=UTF-8
 
 {
-"schemas": ["urn:ietf:params:scim:api:messages:2.0:Error"],
-"detail": "User not found",
-"status": 404
+    "schemas": ["urn:ietf:params:scim:api:messages:2.0:Error"],
+    "detail": "User not found",
+    "status": 404
 }
-    \`\`\`
-    {% endapi %}
+```
+{% endapi %}
