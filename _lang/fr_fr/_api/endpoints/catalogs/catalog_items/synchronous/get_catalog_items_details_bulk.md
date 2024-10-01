@@ -29,18 +29,18 @@ Pour utiliser cet endpoint, vous aurez besoin d'une [clé API]({{site.baseurl}}/
 
 ## Paramètres de chemin
 
-| Paramètre | Obligatoire | Type de données | Descriptif |
+| Paramètre | Requis | Type de données | Description |
 |---|---|---|---|
-| `catalog_name` | Obligatoire | Chaîne | Nom du catalogue. |
+| `catalog_name` | Requis | Chaîne de caractères | Nom du catalogue. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
 ## Paramètres de recherche
 
 Notez que chaque appel de cet endpoint retournera 50 produits. Pour un catalogue comportant plus de 50 produits, utilisez l’en-tête `Link` pour extraire les données de la page suivante, comme indiqué dans l’exemple de réponse ci-dessous.
 
-| Paramètre | Obligatoire | Type de données | Descriptif |
+| Paramètre | Requis | Type de données | Description |
 |---|---|---|---|
-| `cursor` | Facultatif | Chaîne | Détermine la pagination des éléments du catalogue. |
+| `cursor` | Facultatif | Chaîne de caractères | Détermine la pagination des produits du catalogue. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
 ## Paramètres de demande
@@ -118,7 +118,7 @@ Link: </catalogs/all_restaurants/items?cursor=c2tpcDow>; rel="prev",</catalogs/a
 
 ### Exemple de réponse échouée
 
-Le code de statut `400` pourrait renvoyer le corps de réponse suivant. Consultez la `400`résolution des problèmes[](#troubleshooting) pour plus d’informations concernant les erreurs que vous pourriez rencontrer.
+Le code de statut `400` pourrait renvoyer le corps de réponse suivant. Consultez la résolution des problèmes[](#troubleshooting) pour plus d’informations concernant les erreurs que vous pourriez rencontrer.
 
 ```json
 {
@@ -142,10 +142,10 @@ Le code de statut `400` pourrait renvoyer le corps de réponse suivant. Consulte
 
 Le tableau suivant répertorie les erreurs renvoyées possibles et les étapes de résolution des problèmes associées.
 
-| Erreur | Dépannage |
+| Erreur | Résolution des problèmes |
 | --- | --- |
 | `catalog-not-found` | Vérifiez que le nom du catalogue est valide. |
-Vérifiez que votre  est valide.
+| `invalid-cursor` | Vérifiez que votre `cursor` est valide. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% endapi %}
