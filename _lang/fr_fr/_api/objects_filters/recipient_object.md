@@ -13,7 +13,7 @@ description: "Cet article de référence explique les différents composants de 
 
 `external_user_id` ou `user_alias` est requis dans cet objet. **Les demandes ne doivent en spécifier qu’un seul des deux.**
 
-L'objet destinataire te permet de combiner l'[objet alias de l'utilisateur]({{site.baseurl}}/api/objects_filters/user_alias_object/), l'[objet propriétés du déclencheur]({{site.baseurl}}/api/objects_filters/trigger_properties_object/) et l'[objet propriétés de l'entrée dans le Canvas]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object/).
+L'objet destinataire vous permet de combiner l'[objet alias d'utilisateur]({{site.baseurl}}/api/objects_filters/user_alias_object/), l'[objet propriétés du déclencheur]({{site.baseurl}}/api/objects_filters/trigger_properties_object/) et l'[objet propriétés de l'entrée dans le canvas.]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object/)
 
 ## Corps de l’objet
 
@@ -33,7 +33,7 @@ L'objet destinataire te permet de combiner l'[objet alias de l'utilisateur]({{si
 
 Lorsque vous effectuez un appel d’API avec l’objet Destinataire, **s’il existe un destinataire dupliqué ciblant la même adresse (par ex. e-mail, notification push), l’utilisateur sera dédupliqué**, ce qui signifie que les utilisateurs identiques seront supprimés. Il n’en restera qu’un. 
 
-Par exemple, si le même `external_user_id` est utilisé, un seul message sera reçu. Envisagez de passer plusieurs appels d’API si vous avez besoin d’une solution de contournement pour ce comportement.
+Par exemple, si le même `external_user_id` est utilisé, un seul message sera reçu. Envisagez de faire plusieurs appels à l'API si vous avez besoin d'une solution de contournement pour ce comportement.
 
 ```json
 {"campaign_id":"#####","recipients":[
