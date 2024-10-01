@@ -76,7 +76,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/track' \
             "email": "test@braze.com",
             "string_attribute": "fruit",
             "boolean_attribute_1": true,
-            "integer_attribute": 25,
+            "integer_attribute": 26,
             "array_attribute": [
                 "banana",
                 "apple"
