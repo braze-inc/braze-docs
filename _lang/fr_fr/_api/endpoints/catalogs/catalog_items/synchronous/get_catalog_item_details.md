@@ -29,10 +29,10 @@ Pour utiliser cet endpoint, vous aurez besoin d'une [clé API]({{site.baseurl}}/
 
 ## Paramètres de chemin
 
-| Paramètre - Requis - Type de données - Description - Paramètre - Requis - Type de données - Description - Paramètre - Requis - Type de données - Description
+| Paramètre | Requis | Type de données | Description |
 |---|---|---|---|
-| `catalog_name` | Obligatoire | Chaîne | Nom du catalogue. |
-| `item_id` | Requis | Chaîne | L'identifiant de l'article du catalogue. |
+| `catalog_name` | Requis | Chaîne de caractères | Nom du catalogue. |
+| `item_id` | Requis | Chaîne de caractères | L’ID du produit du catalogue. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
 ## Paramètres de demande
@@ -74,7 +74,7 @@ Le code de statut `200` pourrait renvoyer le corps de réponse suivant.
 
 ### Exemple de réponse échouée
 
-Le code de statut `404` pourrait renvoyer la réponse suivante. Reporte-toi à la rubrique [Dépannage](#troubleshooting) pour plus d'informations sur les erreurs que tu peux rencontrer.
+Le code de statut `404` pourrait retourner la réponse suivante. Consultez la résolution des problèmes[](#troubleshooting) pour plus d’informations concernant les erreurs que vous pourriez rencontrer.
 
 ```json
 {
@@ -101,7 +101,7 @@ Le tableau suivant répertorie les erreurs renvoyées possibles et les étapes d
 | Erreur | Résolution des problèmes |
 | --- | --- |
 | `catalog-not-found` | Vérifiez que le nom du catalogue est valide. |
-| `item-not-found` | Vérifie que l'article se trouve dans le catalogue. |
+| `item-not-found` | Vérifiez que ce produit est dans le catalogue. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% endapi %}
