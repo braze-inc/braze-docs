@@ -25,11 +25,11 @@ description: "이 문서에서는 사용자 별칭 Braze 엔드포인트 업데�
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#a084b843-b3cd-43f0-bfb1-ef7bada839c5 {% endapiref %}
 
-## 전제 조건
+## 필수 구성 요소
 
 이 엔드포인트를 사용하려면 `users.alias.update` 권한이 있는 [API 키]({{site.baseurl}}/api/api_key/)가 필요합니다.
 
-## 요금 제한
+## 사용량 제한
 
 {% multi_lang_include rate_limits.md endpoint='users alias update' %}
 
@@ -48,9 +48,9 @@ Authorization: Bearer YOUR_REST_API_KEY
 
 ### 요청 매개변수
 
-| 매개변수 | 필수 | 데이터 유형 | 설명 | 설명
+| 매개변수 | 필수 | 데이터 유형 | 설명 |
 | --------- | --------- | --------- | ----------- |
-| `alias_updates` | 필수 | 업데이트 사용자 별칭 객체 배열 | [사용자 별칭 객체]({{site.baseurl}}/api/objects_filters/user_alias_object/) 참조.<br><br> `old_alias_name`, `new_alias_name`, `alias_label`에 대한 자세한 내용은 [사용자 별칭]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/#user-aliases)을 참조하세요. |
+| `alias_updates` | 필수 | 업데이트 사용자 별칭 객체 배열 | [사용자 별칭 개체를]({{site.baseurl}}/api/objects_filters/user_alias_object/) 참조하세요.<br><br> `old_alias_name`, `new_alias_name`, `alias_label` 에 대한 자세한 내용은 [사용자 별칭을]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/#user-aliases) 참조하세요. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ### 업데이트 사용자 별칭 객체 사양이 포함된 엔드포인트 요청 본문

@@ -13,22 +13,22 @@ guide_top_text: "Braze 번역 엔드포인트를 사용하여 캠페인과 캔�
 
 guide_featured_title: ""
 guide_featured_list:
-  - name: "GET: View Translations for a Campaign"
+  - name: "GET: 캠페인 번역 보기"
     link: /docs/api/endpoints/translations/get_bulk_translations_campaigns/
     image: /assets/img/braze_icons/message-plus-square.svg
-  - name: "GET: View Translations for a Canvas"
+  - name: "GET: 캔버스에 대한 번역 보기"
     link: /docs/api/endpoints/translations/get_bulk_translations_canvases/
     image: /assets/img/braze_icons/message-plus-square.svg
-  - name: "GET: View Translation for a Campaign"
+  - name: "GET: 캠페인에 대한 번역 보기"
     link: /docs/api/endpoints/translations/get_translation_campaign/
     image: /assets/img/braze_icons/message-plus-square.svg
-  - name: "GET: View Translation for a Canvas"
+  - name: "GET: 캔버스에 대한 번역 보기"
     link: /docs/api/endpoints/translations/get_translation_canvas/
     image: /assets/img/braze_icons/message-plus-square.svg
-  - name: "PUT: Update Translation in a Campaign"
+  - name: "PUT: 캠페인에서 번역 업데이트"
     link: /docs/api/endpoints/translations/put_update_translation_campaign/
     image: /assets/img/braze_icons/target-04.svg
-  - name: "PUT: Update Translation in a Canvas"
+  - name: "PUT: 캔버스에서 번역 업데이트"
     link: /docs/api/endpoints/translations/put_update_translation_canvas/
     image: /assets/img/braze_icons/target-04.svg
 ---

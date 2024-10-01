@@ -28,7 +28,7 @@ description: "이 참고 문서에서는 Braze WhatsApp 객체의 다양한 구�
 
 ### 메시지 유형
 
-#### template\_message
+#### template_message
 
 ```json
 {
@@ -82,7 +82,7 @@ description: "이 참고 문서에서는 Braze WhatsApp 객체의 다양한 구�
 
 ##### 버튼 변수 개체
 
-`button_variables` 개체를 사용하면 WhatsApp 템플릿에서 버튼 변수의 값을 지정할 수 있습니다. 각 키는 지정된 값으로 대체할 WhatsApp 템플릿 변수 인덱스(인덱되지 않음)입니다.
+`button_variables` 개체를 사용하면 WhatsApp 템플릿에서 버튼 변수에 대한 값을 지정할 수 있습니다. 각 키는 지정된 값으로 대체할 WhatsApp 템플릿 변수 인덱스(인덱되지 않음)입니다.
 
 ```json
 {
@@ -100,7 +100,7 @@ description: "이 참고 문서에서는 Braze WhatsApp 객체의 다양한 구�
 }
 ```
 
-#### text\_response\_message
+#### text_response_message
 
 ```json
 {
@@ -118,7 +118,7 @@ description: "이 참고 문서에서는 Braze WhatsApp 객체의 다양한 구�
 }
 ```
 
-#### text\_image\_response\_message
+#### text_image_response_message
 
 ```json
 {
@@ -136,7 +136,7 @@ description: "이 참고 문서에서는 Braze WhatsApp 객체의 다양한 구�
 }
 ```
 
-#### quick\_reply\_response\_message
+#### quick_reply_response_message
 
 ```json
 {

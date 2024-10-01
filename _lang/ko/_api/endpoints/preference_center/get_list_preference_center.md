@@ -1,6 +1,6 @@
 ---
-nav_title: "GET: 기본 설정 센터 목록"
-article_title: "GET: 기본 설정 센터 목록"
+nav_title: "GET: 목록 환경 설정 센터"
+article_title: "GET: 목록 환경 설정 센터"
 search_tag: Endpoint
 page_order: 2
 layout: api_page
@@ -14,11 +14,11 @@ description: "이 문서에서는 목록 환경설정 센터 Braze 엔드포인�
 /preference_center/v1/list
 {% endapimethod %}
 
-> 이 엔드포인트를 사용하여 사용 가능한 기본 설정 센터를 나열하십시오.
+> 이 엔드포인트를 사용하여 사용 가능한 환경 설정 센터를 나열하십시오.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#dd8f6667-5eba-4e19-a29e-ba74644c0b8e {% endapiref %}
 
-## 사전 요구 사항
+## 필수 구성 요소
 
 이 엔드포인트를 사용하려면 `preference_center.list` 권한이 있는 [API 키]({{site.baseurl}}/api/basics#rest-api-key/)가 필요합니다.
 
@@ -26,11 +26,11 @@ description: "이 문서에서는 목록 환경설정 센터 Braze 엔드포인�
 
 이 엔드포인트의 사용량 제한은 워크스페이스당 분당 1,000개 요청입니다.
 
-## 경로 및 요청 파라미터
+## 경로 및 요청 매개변수
 
-이 엔드포인트에는 경로 또는 요청 파라미터가 없습니다.
+이 엔드포인트에는 경로 또는 요청 매개변수가 없습니다.
 
-## 예제 요청
+## 예시 요청
 
 ```
 curl --location -g --request GET https://rest.iad-01.braze.com/preference_center/v1/list \

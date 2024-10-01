@@ -48,13 +48,13 @@ Authorization: Bearer YOUR-REST-API-KEY
 }
 ```
 
-## 요청 매개 변수
+## 요청 매개변수
 
-| 매개 변수 | 필수 | 데이터형 | 설명 |
+| 매개변수 | 필수 | 데이터 유형 | 설명 |
 | --------- | ---------| --------- | ----------- |
-|`campaign_id`|필수|문자열| [캠페인 식별자]({{site.baseurl}}/api/identifier_types/) |
-| `schedule_id` | 필수 | 문자열 | 업데이트할 `schedule_id`(일정을 만들기 위한 응답에서 가져옴). |
-|`schedule` | 필수 | 객체 | [스케줄 객체]({{site.baseurl}}/api/objects_filters/schedule_object/)를 참조하세요. |
+|`campaign_id`|필수|문자열| [캠페인 식별자]({{site.baseurl}}/api/identifier_types/) 보기|
+| `schedule_id` | 필수 | 문자열 | 업데이트할 `schedule_id` (스케줄을 만들기 위한 응답에서 얻은 값)입니다. |
+|`schedule` | 필수 | 객체 | [일정 개체를]({{site.baseurl}}/api/objects_filters/schedule_object/) 참조하세요. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ## 요청 예시

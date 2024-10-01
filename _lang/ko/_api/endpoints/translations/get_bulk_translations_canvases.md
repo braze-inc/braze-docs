@@ -21,17 +21,17 @@ description: "이 문서에서는 캔버스 엔드포인트의 목록 번역에 
 API를 통해 캔버스에 대한 번역 보기는 현재 얼리 액세스 중입니다. 얼리 액세스에 참여하려면 Braze 계정 매니저에게 문의하세요.
 {% endalert %}
 
-## 전제 조건
+## 필수 구성 요소
 
 이 엔드포인트를 사용하려면 `canvas.translations.get` 권한이 있는 [API 키]({{site.baseurl}}/api/basics#rest-api-key/)가 필요합니다.
 
-## 요금 제한
+## 사용량 제한
 
 이 엔드포인트의 사용량 제한은 시간당 250,000건의 요청입니다.
 
 ## 경로 매개변수
 
-| 매개변수 | 필수 | 데이터 유형 | 설명 | 설명
+| 매개변수 | 필수 | 데이터 유형 | 설명 |
 | --------- | ---------| --------- | ----------- |
 |`canvas_id`| 필수 | 문자열 | 캔버스의 ID입니다. |
 |`step_id`| 필수 | 문자열 | 캔버스 단계의 ID입니다. |
@@ -49,7 +49,7 @@ curl --location --request GET 'https://rest.iad-03.braze.com/canvas/translations
 
 이 엔드포인트에 대한 상태 코드 응답은 `200`, `400`, `404`, `429` 등 네 가지가 있습니다.
 
-## 성공 응답 예시
+## 성공 응답의 예
 
 `200` 상태 코드는 다음과 같은 응답 헤더와 본문을 반환할 수 있습니다.
 
@@ -74,7 +74,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 }
 ```
 
-## 오류 응답 예시
+## 오류 응답의 예
 
 `400` 상태 코드는 다음과 같은 응답 본문을 반환할 수 있습니다. 발생할 수 있는 오류에 대한 자세한 내용은 [문제 해결을](#troubleshooting) 참조하세요.
 
@@ -92,14 +92,14 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 다음 표에는 반환될 수 있는 오류와 관련 문제 해결 단계가 나와 있습니다.
 
-| 오류 메시지 | 문제 해결 | 도움말
+| 오류 메시지                           | 문제 해결                                                                    |
 |-----------------------------------------|------------------------------------------------------------------------------------|
 | `INVALID_CAMPAIGN_ID`                   | 캠페인 ID가 번역 중인 캠페인과 일치하는지 확인합니다.                   |
-| `INVALID_MESSAGE_VARIATION_ID` | 메시지 ID가 올바른지 확인합니다.                                                |
-| `MESSAGE_NOT_FOUND` | 번역할 메시지를 확인합니다.                                           |
-| `MULTI_LANGUAGE_NOT_ENABLED`            | 워크스페이스에 대한 다국어 설정이 켜져 있지 않습니다.                       |
+| `INVALID_MESSAGE_VARIATION_ID`          | 메시지 ID가 올바른지 확인합니다.                                                |
+| `MESSAGE_NOT_FOUND`                     | 번역할 메시지를 확인합니다.                                           |
+| `MULTI_LANGUAGE_NOT_ENABLED`            | 작업 공간에 대한 다국어 설정이 켜져 있지 않습니다.                       |
 | `MULTI_LANGUAGE_NOT_ENABLED_ON_MESSAGE` | 이메일 캠페인 또는 이메일이 포함된 캔버스 메시지만 번역할 수 있습니다.             |
-| `UNSUPPORTED_CHANNEL` | 이메일 캠페인의 메시지 또는 이메일이 포함된 캔버스 메시지만 번역할 수 있습니다. |
+| `UNSUPPORTED_CHANNEL`                   | 이메일 캠페인의 메시지 또는 이메일이 포함된 캔버스 메시지만 번역할 수 있습니다. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% endapi %}
