@@ -15,7 +15,7 @@ description: "Cet article présente en détail l’endpoint Braze Éditer un pro
 /catalogs/{catalog_name}/items/{item_id}
 {% endapimethod %}
 
-> Utilisez ce point de terminaison pour modifier un élément existant dans votre catalogue.
+> Utilisez cet endpoint pour modifier un élément existant dans votre catalogue.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#e35976ae-ff77-42b7-b691-a883c980d8c0 {% endapiref %}
 
@@ -29,17 +29,17 @@ Pour utiliser cet endpoint, vous aurez besoin d'une [clé API]({{site.baseurl}}/
 
 ## Paramètres de chemin
 
-| Paramètre | Obligatoire | Type de données | Descriptif |
+| Paramètre | Requis | Type de données | Description |
 |---|---|---|---|
-| `catalog_name` | Obligatoire | Chaîne | Nom du catalogue. |
-| `item_id` | Obligatoire | Chaîne | L’ID de l’élément de catalogue. |
+| `catalog_name` | Requis | Chaîne de caractères | Nom du catalogue. |
+| `item_id` | Requis | Chaîne de caractères | L’ID du produit du catalogue. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
 ## Paramètres de demande
 
-| Paramètre | Obligatoire | Type de données | Descriptif |
+| Paramètre | Requis | Type de données | Description |
 |---|---|---|---|
-| `items` | Obligatoire | Tableau | Un tableau qui contient des objets élément. Les objets Produits devraient contenir les champs qui existent dans le catalogue à l’exception du champ `id`. Un seul objet de produit est autorisé par requête.
+| `items` | Requis | Tableau | Un tableau qui contient certains objets Produit. Les objets Produits devraient contenir les champs qui existent dans le catalogue à l’exception du champ `id`. Un seul objet de produit est autorisé par requête. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
 ## Exemple de demande
@@ -57,11 +57,24 @@ curl --location --request PATCH 'https://rest.iad-03.braze.com/catalogs/restaura
         "Latitude": 33.6112,
         "Longitude": -117.8711
       },
+      "Top_Dishes": {
+        "$add": [
+          "Biscuits",
+          "Coleslaw"
+        ],
+        "$remove": [
+          "French Fries"
+        ]
+      },
       "Open_Time": "2021-09-03T09:03:19.967+00:00"
     }
   ]
 }'
 ```
+
+{% alert note %}
+Les opérateurs `$add` et `$remove` ne s'appliquent qu'aux champs de type tableau et ne sont pris en charge que par les endpoints PATCH.
+{% endalert %}
 
 ## Réponse
 
@@ -79,7 +92,7 @@ Le code de statut `200` pourrait renvoyer le corps de réponse suivant.
 
 ### Exemple de réponse échouée
 
-Le code de statut `400` pourrait renvoyer le corps de réponse suivant. Consultez la `400`résolution des problèmes[](#troubleshooting) pour plus d’informations concernant les erreurs que vous pourriez rencontrer.
+Le code de statut `400` pourrait renvoyer le corps de réponse suivant. Consultez la résolution des problèmes[](#troubleshooting) pour plus d’informations concernant les erreurs que vous pourriez rencontrer.
 
 ```json
 {
@@ -103,22 +116,22 @@ Le code de statut `400` pourrait renvoyer le corps de réponse suivant. Consulte
 
 Le tableau suivant répertorie les erreurs renvoyées possibles et les étapes de résolution des problèmes associées.
 
-| Erreur | Dépannage |
+| Erreur | Résolution des problèmes |
 | --- | --- |
-| `arbitrary-error` | Une erreur arbitraire s'est produite. Veuillez réessayer ou contacter l’Assistance[]({{site.baseurl}}/support_contact/).
+| `arbitrary-error` | Une erreur arbitraire est survenue. Veuillez réessayer ou contacter l'[assistance.]({{site.baseurl}}/support_contact/) |
 | `catalog-not-found` | Vérifiez que le nom du catalogue est valide. |
-| `filtered-set-field-too-long` | La valeur du champ est utilisée dans un ensemble filtré qui dépasse la limite de caractères pour un élément. |
+| `filtered-set-field-too-long` | La valeur du champ est utilisée dans un ensemble filtré qui dépasse la limite de caractères pour un produit. |
 | `id-in-body` | Un ID de produit existe déjà dans le catalogue. |
 | `ids-too-large` | La limite de caractères pour chaque ID de produit est de 250 caractères. |
-| `invalid-ids` | Les caractères pris en charge pour les noms d'ID d'élément sont les lettres, les chiffres, les traits d'union et les traits de soulignement. |
-| `invalid-fields` | Confirmez que les champs de la demande existent dans le catalogue. |
-| `invalid-keys-in-value-object` | Les clés d'objet d'élément ne peuvent pas inclure `.` ou `$`. |
-| `item-not-found` | Vérifiez que l'article est dans le catalogue. |
+| `invalid-ids` | Les caractères pris en charge pour les ID de produits sont les lettres, les nombres, les tirets et les traits de soulignement. |
+| `invalid-fields` | Confirmez que les champs de la requête existent dans le catalogue. |
+| `invalid-keys-in-value-object` | Les clés d’objet de produit ne peuvent pas inclure `.` ou `$`. |
+| `item-not-found` | Vérifiez que ce produit est dans le catalogue. |
 | `item-array-invalid` | `items` doit être un tableau d’objets. |
-| `items-too-large` | La limite de caractères pour chaque élément est de 5 000 caractères. |
-| `request-includes-too-many-items` | Vous ne pouvez modifier qu'un seul produit de catalogue par requête. |
-| `too-deep-nesting-in-value-object` | Les objets élément ne peuvent pas avoir plus de 50 niveaux d’imbrication. |
-| `unable-to-coerce-value` | Les types d'éléments ne peuvent pas être convertis. |
+| `items-too-large` | La limite de caractères pour chaque produit est de 5 000 caractères. |
+| `request-includes-too-many-items` | Vous ne pouvez modifier qu’un produit de catalogue par requête. |
+| `too-deep-nesting-in-value-object` | Les objets de produit ne peuvent pas avoir plus de 50 niveaux d’imbrication. |
+| `unable-to-coerce-value` | Les types de produits ne peuvent pas être convertis. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% endapi %}
