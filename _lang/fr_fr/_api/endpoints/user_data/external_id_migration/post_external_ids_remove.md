@@ -1,6 +1,6 @@
 ---
-nav_title: "POST : Supprimer l’ID externe"
-article_title: "POST : Supprimer l’ID externe"
+nav_title: "POST : Supprimer l'ID externe"
+article_title: "POST : Supprimer l'ID externe"
 search_tag: Endpoint
 page_order: 2
 layout: api_page
@@ -47,9 +47,9 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ### Paramètres de demande
 
-| Paramètre | Obligatoire | Type de données | Descriptif |
+| Paramètre | Requis | Type de données | Description |
 | --------- | ---------| --------- | ----------- |
-| `external_ids` | Obligatoire | Tableau de chaînes | Identifiants externes que les utilisateurs doivent supprimer. |
+| `external_ids` | Requis | Tableau de chaînes de caractères | Identifiants externes pour les utilisateurs à supprimer. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ## Exemple de demande
@@ -80,9 +80,9 @@ La réponse confirmera toutes les suppressions réussies et les suppressions inf
 ```
 
 Le champ `message` renverra `success` pour toutes les demandes valides. Des erreurs plus spécifiques sont saisies dans le tableau `removal_errors`. Le champ `message` renvoie une erreur dans les cas suivants :
-Clé API non valide
-\- Tableau vide `external_ids`
-- `external_ids` Matrice de plus de 50 éléments
-Atteinte de la limite de débit (plus de 1 000 requêtes/minute)
+- Clé API non valide
+- Tableau `external_ids` vide
+- Tableau `external_ids` avec plus de 50 éléments
+- Atteinte de la limite de débit (plus de 1 000 requêtes/minute)
 
 {% endapi %}
