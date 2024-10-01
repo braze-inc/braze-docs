@@ -37,9 +37,13 @@ Results from each report can be generated once a day. If you run the same report
 
 ### Query templates
 
-All query templates surface data from the last 60 days. Access templates by selecting **Create SQL Query** > **Query Template** when first creating a report.
+Access query templates by selecting **Create SQL Query** > **Query Template** when first creating a report.
 
 See [Query templates]({{site.baseurl}}/user_guide/data_and_analytics/query_builder/query_templates/) for a list of available templates.
+
+### Data timeframe
+
+All queries surface data from the last 60 days. 
 
 ## Generating SQL with the AI Query Builder
 
