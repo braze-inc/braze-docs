@@ -1,6 +1,6 @@
 ---
-nav_title: "GET :  : Exporter l’analyse d’événements personnalisés"
-article_title: "GET :  : Exporter l’analyse d’un événement personnalisé"
+nav_title: "GET : Exportation d'analyses d'événements personnalisés (si utilisés comme adjectifs)"
+article_title: "GET : Exportation d'analyses/analytiques d'événements personnalisés (si utilisés)"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
@@ -30,12 +30,12 @@ Pour utiliser cet endpoint, vous aurez besoin d'une [clé API]({{site.baseurl}}/
 
 | Paramètre| Requis | Type de données | Description |
 | -------- | -------- | --------- | ----------- |
-| `event` | Requis | Chaîne | Le nom de l'événement personnalisé pour lequel les analyses doivent être renvoyées. |
-| `length` | Requis | Integer | Nombre maximum d'unités (jours ou heures) avant `ending_at` à inclure dans la série renvoyée. Doit être compris entre 1 et 100 (inclus).
-| `unit` | Facultatif | Chaîne de caractères | Unité de temps entre les points de données. Peut être `day` ou `hour`, la valeur par défaut est `day`.  |
-| `ending_at` | Facultatif | Datetime <br>(Chaîne de caractères [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601)) | Date à laquelle la série de données doit se terminer. Par défaut, l’heure de la demande.
-| `app_id` | Facultatif | Chaîne | Identifiant de l'API de l'appli récupéré sur la page [Clés API]({{site.baseurl}}/user_guide/administrative/app_settings/api_settings_tab/) pour limiter les analyses à une appli spécifique. |
-| `segment_id` | Facultatif | Chaîne de caractères | Voir [identifiant API de segment]({{site.baseurl}}/api/identifier_types/). ID de segment indiquant le segment à analyser pour lequel l’analyse d’événement doit être renvoyée.
+| `event` | Requis | Chaîne de caractères | Le nom de l’événement personnalisé pour lequel renvoyer l’analyse. |
+| `length` | Requis | Entier | Nombre maximum d’unités (jours ou heures) avant `ending_at` à inclure dans la série renvoyée. Doit être compris entre 1 et 100 (inclus). |
+| `unit` | Facultatif | Chaîne de caractères | Unité de temps entre les points de données. Peut être `day` ou `hour`, valeur par défaut `day`.  |
+| `ending_at` | Facultatif | DateTime <br>[(](https://en.wikipedia.org/wiki/ISO_8601) chaîne de caractères[ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) ) | Date à laquelle la série de données doit se terminer. Par défaut, l’heure de la demande. |
+| `app_id` | Facultatif | Chaîne de caractères | Identifiant de l'API de l'application récupéré à partir de la page [Clés API]({{site.baseurl}}/user_guide/administrative/app_settings/api_settings_tab/) pour limiter l'analyse/analytique à une application spécifique. |
+| `segment_id` | Facultatif | Chaîne de caractères | Voir l'[identifiant API du segment.]({{site.baseurl}}/api/identifier_types/) ID de segment indiquant le segment à analyser pour lequel l’analyse d’événement doit être renvoyée. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 
@@ -66,10 +66,10 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ### Codes de réponse des erreurs fatales {#fatal-export}
 
-Pour connaître les codes d'état et les messages d'erreur associés qui seront renvoyés si ta demande rencontre une erreur fatale, réfère-toi à [Erreurs fatales et réponses]({{site.baseurl}}/api/errors/#fatal-errors).
+Pour connaître les codes d'état et les messages d'erreur associés qui seront renvoyés si votre demande rencontre une erreur fatale, reportez-vous à la section [Erreurs fatales et réponses.]({{site.baseurl}}/api/errors/#fatal-errors)
 
 {% alert tip %}
-Pour obtenir de l'aide sur les exportations CSV et API, consulte la rubrique [Dépannage des exportations]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/).
+Pour obtenir de l’aide sur les exportations CSV et de l’API, consultez la section [Résolution des problèmes d’exportation]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/).
 {% endalert %}
 
 {% endapi %}
