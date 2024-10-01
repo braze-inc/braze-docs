@@ -27,12 +27,12 @@ Pour utiliser cet endpoint, vous aurez besoin d'une [clé API]({{site.baseurl}}/
 
 ## Paramètres de demande
 
-| Paramètre - Requis - Type de données - Description - Paramètre - Requis - Type de données - Description - Paramètre - Requis - Type de données - Description
+| Paramètre | Requis | Type de données | Description |
 |---|---|---|---|
-| `modified_after` | Facultatif | Chaîne de caractères au format [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) | Récupérer uniquement les modèles mis à jour à l’heure donnée ou après. |
-| `modified_before` | Facultatif | Chaîne au format [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) | Récupère uniquement les modèles mis à jour au plus tard à l'heure donnée. |
-| `limit` | Facultatif | Nombre positif | Nombre maximum de modèles à récupérer. Par défaut à 100 si non renseigné, avec une valeur maximale acceptable de 1 000.
-| `offset` | Facultatif | Nombre positif | Nombre de modèles à sauter avant de renvoyer le reste des modèles qui correspondent aux critères de recherche. |
+| `modified_after`  | Facultatif | Chaîne de caractères au format [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601)  | Récupérer uniquement les modèles mis à jour à l’heure donnée ou après. |
+| `modified_before`  |  Facultatif | Chaîne de caractères au format [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601)  | Récupérer uniquement les modèles mis à jour à l’heure donnée ou avant. |
+| `limit` | Facultatif | Nombre positif | Nombre maximum de modèles à récupérer. Par défaut à 100 si non renseigné, avec une valeur maximale acceptable de 1 000. |
+| `offset`  |  Facultatif | Nombre positif | Nombre de modèles à ignorer avant de renvoyer le reste des modèles qui correspondent aux critères de recherche. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ## Exemple de demande
@@ -44,7 +44,7 @@ curl --location --request GET 'https://rest.iad-01.braze.com/templates/email/lis
 ## Réponse 
 
 {% alert important %}
-Les modèles créés à l’aide de l’éditeur Drag & Drop pour les e-mails ne sont pas fournis dans cette réponse.
+Les modèles créés à l'aide de l'éditeur par glisser-déposer pour l'e-mail ne sont pas fournis dans cette réponse.
 {% endalert %}
 
 ```json
