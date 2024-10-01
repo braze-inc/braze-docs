@@ -1,6 +1,6 @@
 ---
-nav_title: "GET : Exporter les informations relatives à la campagne"
-article_title: "GET : Exporter les informations relatives à la campagne"
+nav_title: "GET : Exporter les détails de la campagne"
+article_title: "GET : Exporter les détails de la campagne"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
@@ -16,7 +16,7 @@ description: "Cet article présente en détail l’endpoint Braze Exporter les i
 
 > Utilisez cet endpoint pour récupérer des informations pertinentes sur une campagne spécifique, qui peuvent être identifiées par le `campaign_id`. 
 
-Si vous souhaitez récupérer les données de Canvas, reportez-vous à l’endpoint []({{site.baseurl}}/api/endpoints/export/canvas/get_canvas_details/)Exporter les informations relatives au Canvas.
+Si vous souhaitez récupérer les données du Canvas, reportez-vous au point de terminaison [Exporter les détails du Canvas]({{site.baseurl}}/api/endpoints/export/canvas/get_canvas_details/).
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#aad2a811-7237-43b1-9d64-32042eabecd9 {% endapiref %}
 
@@ -32,7 +32,7 @@ Pour utiliser cet endpoint, vous aurez besoin d'une [clé API]({{site.baseurl}}/
 
 | Paramètre | Requis | Type de données | Description |
 | --------- | -------- | --------- | ----------- |
-| `campaign_id` | Obligatoire | Chaîne | Voir [Identifiant API de campagne]({{site.baseurl}}/api/identifier_types/).<br><br> Le `campaign_id` pour les campagnes API se trouvent sur la page [Clés API]({{site.baseurl}}/user_guide/administrative/app_settings/api_settings_tab/) et sur la page **Détails de la campagne** dans votre tableau de bord ; ou vous pouvez utiliser le [point de terminaison de la liste des campagnes d'exportation](#campaign-list-endpoint). |
+| `campaign_id` | Requis | Chaîne de caractères | Voir l'[identifiant API de la campagne.]({{site.baseurl}}/api/identifier_types/)<br><br> Vous trouverez l'adresse `campaign_id` pour les campagnes API sur la page [Clés API]({{site.baseurl}}/user_guide/administrative/app_settings/api_settings_tab/) et sur la page **Détails de la campagne** dans votre tableau de bord ; vous pouvez également utiliser l'[endpoint Exporter la liste des campagnes.](#campaign-list-endpoint) |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ## Exemple de demande 
@@ -172,7 +172,7 @@ La réponse `messages` contiendra des informations sur chaque message. Voici des
 
 #### WhatsApp
 
-##### Messages modèles
+##### Messages types
 
 ```json
 {
@@ -187,7 +187,7 @@ La réponse `messages` contiendra des informations sur chaque message. Voici des
 }
 ```
 
-##### Message de réponse
+##### Messages d'envoi de messages
 
 ```json
 {
@@ -283,7 +283,7 @@ Le tableau `conversion_behaviors` contiendra des informations sur chaque comport
 ```
 
 {% alert tip %}
-Pour obtenir de l’aide sur les exportations CSV et de l’API, consultez la section Résolution des problèmes d’exportation[]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/).
+Pour obtenir de l’aide sur les exportations CSV et de l’API, consultez la section [Résolution des problèmes d’exportation]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/).
 {% endalert %}
 
 {% endapi %}
