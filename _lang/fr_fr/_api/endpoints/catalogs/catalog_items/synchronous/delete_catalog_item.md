@@ -29,10 +29,10 @@ Pour utiliser cet endpoint, vous aurez besoin d'une [clé API]({{site.baseurl}}/
 
 ## Paramètres de chemin
 
-| Paramètre | Obligatoire | Type de données | Descriptif |
+| Paramètre | Requis | Type de données | Description |
 |---|---|---|---|
-| `catalog_name` | Obligatoire | Chaîne | Nom du catalogue. |
-| `item_id` | Obligatoire | Chaîne | ID de l’élément de catalogue. |
+| `catalog_name` | Requis | Chaîne de caractères | Nom du catalogue. |
+| `item_id` | Requis | Chaîne de caractères | L’ID du produit du catalogue. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
 ## Paramètres de demande
@@ -63,7 +63,7 @@ Le code de statut `202` pourrait renvoyer le corps de réponse suivant.
 
 ### Exemple de réponse échouée
 
-Le code de statut `400` pourrait renvoyer le corps de réponse suivant. Consultez la `400`résolution des problèmes[](#troubleshooting) pour plus d’informations concernant les erreurs que vous pourriez rencontrer.
+Le code de statut `400` pourrait renvoyer le corps de réponse suivant. Consultez la résolution des problèmes[](#troubleshooting) pour plus d’informations concernant les erreurs que vous pourriez rencontrer.
 
 ```json
 {
@@ -87,11 +87,11 @@ Le code de statut `400` pourrait renvoyer le corps de réponse suivant. Consulte
 
 Le tableau suivant répertorie les erreurs renvoyées possibles et les étapes de résolution des problèmes associées.
 
-| Erreur | Dépannage |
+| Erreur | Résolution des problèmes |
 | --- | --- |
-| `arbitrary-error` | Une erreur arbitraire s’est produite. Veuillez réessayer ou contacter l’Assistance[]({{site.baseurl}}/support_contact/).
+| `arbitrary-error` | Une erreur arbitraire est survenue. Veuillez réessayer ou contacter l'[assistance.]({{site.baseurl}}/support_contact/) |
 | `catalog-not-found` | Vérifiez que le nom du catalogue est valide. |
-| `item-not-found` | Vérifiez que l’élément à supprimer existe dans votre catalogue. |
+| `item-not-found` | Vérifiez que le produit à supprimer existe dans votre catalogue. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% endapi %}
