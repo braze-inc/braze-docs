@@ -20,7 +20,7 @@ description: "Cet article présente en détail l’endpoint Braze Supprimer les 
 
 ## Conditions préalables
 
-Pour utiliser cet endpoint, vous aurez besoin d’une [clé API]({{site.baseurl}}/api/basics#rest-api-key/) avec l'autorisation `messages.schedule.delete`.
+Pour utiliser cet endpoint, vous aurez besoin d'une [clé API]({{site.baseurl}}/api/basics#rest-api-key/) avec l’autorisation `messages.schedule.delete`.
 
 ## Limite de débit
 
@@ -41,9 +41,9 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ## Paramètres de demande
 
-| Paramètre | Obligatoire | Type de données | Descriptif |
+| Paramètre | Requis | Type de données | Description |
 | --------- | ---------| --------- | ----------- |
-| `schedule_id` | Obligatoire | Chaîne | Le `schedule_id` to delete (obtenu à partir de la réponse pour créer un planning). |
+| `schedule_id` | Requis | Chaîne de caractères | Le `schedule_id` à supprimer (obtenu à partir de la réponse pour créer une planification). |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ## Exemple de demande
