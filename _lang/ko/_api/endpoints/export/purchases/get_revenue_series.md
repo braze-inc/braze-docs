@@ -16,7 +16,7 @@ description: "이 문서에서는 매출 데이터 내보내기 Braze 엔드포�
 
 > 이 엔드포인트를 사용하여 일정 기간 동안 앱에서 지출한 총 금액을 반환합니다.
 
-{% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#f6e05f9a-13c0-4d66-8caa-4a376d25749f{% 엔다피레프 %}
+{% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#f6e05f9a-13c0-4d66-8caa-4a376d25749f{% endapiref %}
 
 ## 필수 구성 요소
 
