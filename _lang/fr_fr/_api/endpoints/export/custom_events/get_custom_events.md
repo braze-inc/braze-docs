@@ -1,6 +1,6 @@
 ---
-nav_title: "GET :  : Exporter la liste des événements personnalisés"
-article_title: "GET :  : Exporter la liste des événements personnalisés"
+nav_title: "GET : Exporter la liste des événements personnalisés"
+article_title: "GET : Exporter la liste des événements personnalisés"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
@@ -28,9 +28,9 @@ Pour utiliser cet endpoint, vous aurez besoin d'une [clé API]({{site.baseurl}}/
 
 ## Paramètres de demande
 
-| Paramètre| Obligatoire | Type de données | Descriptif |
+| Paramètre| Requis | Type de données | Description |
 | -------- | -------- | --------- | ----------- |
-| `page` | Facultatif | Entier | La page des noms d’événements à renvoyer est par défaut à 0 (renvoie le premier ensemble de 250 maximum). |
+| `page` | Facultatif | Entier | La page des noms d’événement à renvoyer, par défaut sur 0 (renvoie le premier ensemble jusqu’à 250 éléments). |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ## Exemple de demande
@@ -57,7 +57,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ### Codes de réponse des erreurs fatales {#fatal-export}
 
-Pour les codes de statut et les messages d’erreur associés qui seront renvoyés si votre demande rencontre une erreur fatale, consultez la section []({{site.baseurl}}/api/errors/#fatal-errors)Erreurs fatales et réponses.
+Pour les codes d'état et les messages d'erreur associés qui seront renvoyés si votre demande rencontre une erreur fatale, consultez [Erreurs fatales et réponses]({{site.baseurl}}/api/errors/#fatal-errors).
 
 {% alert tip %}
 Pour obtenir de l’aide sur les exportations CSV et de l’API, consultez la section [Résolution des problèmes d’exportation]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/).
