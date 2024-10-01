@@ -18,15 +18,15 @@ description: "Cet article présente en détail l’endpoint Braze Répertorier l
 
 Ces groupes seront disponibles sur la page des **groupes d'abonnement**. La réponse de cet endpoint inclura l’ID externe et le statut abonné, désabonné, ou inconnu pour le groupe d’abonnement spécifique demandé dans l’appel d’API. Cette option permet de mettre à jour le statut du groupe d’abonnement dans les appels d’API ultérieurs ou de l’afficher sur une page Web hébergée.
 
-Si tu veux voir des exemples ou tester ce point de terminaison pour les **groupes d'abonnement par courriel**:
+Si vous souhaitez voir des exemples ou tester cet endpoint pour les **groupes d'abonnement e-mail**:
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#488c8923-fa44-4124-9245-036d13c615f2 {% endapiref %}
 
-Si tu veux voir des exemples ou tester ce point de terminaison pour les **groupes d'abonnement SMS**:
+Si vous souhaitez voir des exemples ou tester cet endpoint pour les **groupes d'abonnement SMS**:
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#4b8515b8-067f-41fd-b213-8bb2d18b1557 {% endapiref %}
 
-Si tu veux voir des exemples ou tester ce point de terminaison pour les **groupes WhatsApp**:
+Si vous souhaitez voir des exemples ou tester cet endpoint pour **WhatsApp Groups :**
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#4b8515b8-067f-41fd-b213-8bb2d18b1557 {% endapiref %}
 
@@ -40,16 +40,16 @@ Pour utiliser cet endpoint, vous aurez besoin d'une [clé API]({{site.baseurl}}/
 
 ## Paramètres de demande
 
-| Paramètre - Requis - Type de données - Description - Paramètre - Requis - Type de données - Description - Paramètre - Requis - Type de données - Description
+| Paramètre | Requis | Type de données | Description |
 |---|---|---|---|
-| [`subscription_group_id`]({{site.baseurl}}/api/identifier_types/?tab=subscription%20group%20ids)  | Obligatoire | Chaîne | Le site `id` de ton groupe d'abonnement. |
-| `external_id` | Obligatoire* | Chaîne | Le `external_id` de l'utilisateur (doit comprendre au moins un et au plus 50 `external_ids`). <br><br>Lorsqu’un `external_id` et un `email`/`phone` sont transmis, seuls le ou les `external_id`(s) fournis seront appliqués à la requête. |
-| `email` | Obligatoire* | Chaîne de caractères | L'adresse e-mail de l'utilisateur. Il peut être transmis comme un tableau de chaînes de caractères avec un maximum de 50 éléments.<br><br> Envoyer une adresse e-mail et un numéro de téléphone en même temps (sans `external_id`) entraînera une erreur. |
-| `phone` | Obligatoire* | Chaîne au format [E.164](https://en.wikipedia.org/wiki/E.164) | Le numéro de téléphone de l'utilisateur. Si l’e-mail n’est pas inclus, vous devez ajouter au moins un numéro de téléphone (avec un maximum de 50).<br><br> Envoyer une adresse e-mail et un numéro de téléphone en même temps (sans `external_id`) entraînera une erreur. |
+| [`subscription_group_id`]({{site.baseurl}}/api/identifier_types/?tab=subscription%20group%20ids)  | Requis | Chaîne de caractères | L’`id` de votre groupe d’abonnement. |
+| `external_id`  |  Obligatoire* | Chaîne de caractères | L’`external_id` de l’utilisateur (maximum 50 `external_ids`, minimum 1). <br><br>Lorsqu’un `external_id` et un `email`/`phone` sont transmis, seuls le ou les `external_id`(s) fournis seront appliqués à la requête. |
+| `email` | Obligatoire* | Chaîne de caractères | L’adresse e-mail de l’utilisateur. Il peut être transmis comme un tableau de chaînes de caractères avec un maximum de 50 éléments.<br><br> Envoyer une adresse e-mail et un numéro de téléphone en même temps (sans `external_id`) entraînera une erreur. |
+| `phone` | Obligatoire* | Chaîne de caractères dans [E.164](https://en.wikipedia.org/wiki/E.164) format | Le numéro de téléphone de l’utilisateur. Si l’e-mail n’est pas inclus, vous devez ajouter au moins un numéro de téléphone (avec un maximum de 50).<br><br> Envoyer une adresse e-mail et un numéro de téléphone en même temps (sans `external_id`) entraînera une erreur. |
 
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
-\*Un de `external_id` ou `email` ou `phone` est requis pour chaque utilisateur.
+\*Chaque utilisateur doit disposer d'une des options suivantes : `external_id`, `email` ou `phone`.
 
 - Pour les groupes d'abonnement aux SMS et à WhatsApp, un `external_id` ou un `phone` est nécessaire.  Lorsque les deux sont soumis, seul l’`external_id` est utilisé pour l'interrogation et le numéro de téléphone est appliqué à cet utilisateur.
 - Pour les groupes d’abonnement aux e-mails, `external_id` ou `email` est nécessaire.  Lorsque les deux sont soumis, seul l’`external_id` est utilisé pour la requête et l’adresse e-mail est appliquée à cet utilisateur.
@@ -57,14 +57,14 @@ Pour utiliser cet endpoint, vous aurez besoin d'une [clé API]({{site.baseurl}}/
 ## Exemple de demande 
 
 {% tabs %}
-{% tab Multiple Users %}
+{% tab Utilisateurs multiples %}
 {% raw %}
 ```
 https://rest.iad-03.braze.com/subscription/status/get?subscription_group_id={{subscription_group_id}}&external_id[]=1&external_id[]=2
 ```
 {% endraw %}
 {% endtab %}
-{% tab SMS and WhatsApp %}
+{% tab SMS et WhatsApp %}
 {% raw %}
 ```
 curl --location -g --request GET 'https://rest.iad-01.braze.com/subscription/status/get?subscription_group_id={{subscription_group_id}}&phone=+11112223333' \
@@ -72,7 +72,7 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/subscription/sta
 ```
 {% endraw %}
 {% endtab %}
-{% tab Email %}
+{% tab E-mail %}
 {% raw %}
 ```
 curl --location -g --request GET 'https://rest.iad-01.braze.com/subscription/status/get?subscription_group_id={{subscription_group_id}}&email=example@braze.com' \
