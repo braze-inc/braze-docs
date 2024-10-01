@@ -61,10 +61,6 @@ Within this flow, you will:
 2. Create your WhatsApp Business profile.
 3. Verify your WhatsApp Business number.<br><br>
 
-{% alert note %}
-WhatsApp Business Accounts (WABA) cannot be shared with multiple Business Solution Providers. You will need a specific WABA for each Braze workspace.
-{% endalert %}	
-
 After the setup is complete, a dedicated WhatsApp subscription group will be created for your users.
 
 ### Step 3: Create WhatsApp templates

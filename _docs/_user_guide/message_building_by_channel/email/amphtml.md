@@ -90,12 +90,12 @@ Refer to these additional resources:
 {% tabs %}
   {% tab Essentials %}
 
-These are what makes an AMP HTML email...AMP'ed! Each of these elements is required in the body of your AMP email.
+These are what make an AMP HTML email...AMP'ed! Each of these elements is required in the body of your AMP email.
 
 | Component | Description | Example |
 |---------|--------------|---------|
 | Identification <br><br> `⚡4email` or `amp4email`| Identifies your email as an AMP HTML email. | `<!doctype html>` <br> `<html ⚡4email>` <br> `<head>` |
-| Load AMP runtime <br><br> `<script>` | Allows AMP to fun within your email using JavaScript. | `<script async src="https://cdn.ampproject.org/v0.js"></script>`|
+| Load AMP runtime <br><br> `<script>` | Allows AMP to run in your email using JavaScript. | `<script async src="https://cdn.ampproject.org/v0.js"></script>`|
 | CSS Boilerplate | Hides content until AMP is loaded. <br> Email providers who support AMP emails enforce security checks that only allow vetted AMP scripts to run in their clients. | `<style amp4email-boilerplate>body{visibility:hidden}</style>` |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
@@ -158,18 +158,18 @@ Some examples include:
 * Dynamically updating items in the feed
 * Article bookmark email
 
-Using this component, users can submit or clear field values. Also, depending on how you set up your email, you can give additional prompts to users, such as whether or not the survey submission was successful, or render the responses from your users showing results of the survey (such as a voting campaign).
+Using this component, users can submit or clear field values. Also, depending on how you set up your email, you can give additional prompts to users, such as whether or not the survey submission was successful, or render the responses from your users showing survey results (such as a voting campaign).
 
 {% endtab %}
 {% tab Collapsable Content %}
 
 Expand your content sections using the `<amp-accordion>` component. This component allows you to display collapsible and expandable content sections providing a way for viewers to glance at the content outline and jump to any section. 
 
-If you tend to send long educational articles or personalized recommendations, this provides a way for viewers to glance at the content outline and jump to any section or specific product recommendation to get more details. This can be particularly helpful for mobile users where even a couple of sentences into a section requires scrolling.
+If you tend to send long educational articles or personalized recommendations, this provides a way for viewers to glance at the content outline and jump to any section or specific product recommendation to get more details. This can be particularly helpful for mobile users where even a few sentences into a section require scrolling.
 {% endtab %}
 {% tab Image Heavy Emails %}
 
-If you tend to send emails with a lot of professional photos like retail brands, you can use the `<amp-image-lightbox>` component that allows users to engage with an image that appeals to them. When the user clicks the image, this component displays the image in the center of the message creating a lightbox effect. 
+If you tend to send emails with many professional photos like retail brands, you can use the `<amp-image-lightbox>` component that allows users to engage with an image that appeals to them. When the user clicks the image, this component displays the image in the center of the message creating a lightbox effect. 
 
 In addition, the `<amp-image-lightbox>` component allows the user to view a detailed image description. You can use the same component for more than one image. For example, if you have multiple images included in your email when the user clicks either image, the image displays in the lightbox.
 

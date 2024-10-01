@@ -9,7 +9,7 @@ tool: Currents
 search_rank: 6
 ---
 
-These schemas only apply to the flat file event data we send to Data Warehouse partners (Google Cloud Storage, Amazon S3, and Microsoft Azure Blob Storage). For schemas that apply to the other partners, refer to our list of [available partners]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/available_partners/) and check their respective pages.
+These schemas only apply to the flat file event data we send to Data Warehouse Storage partners (Google Cloud Storage, Amazon S3, and Microsoft Azure Blob Storage). For schemas that apply to the other partners, refer to our list of [available partners]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/available_partners/) and check their respective pages.
 
 Contact your account manager or open a [support ticket]({{site.baseurl}}/braze_support/) if you need access to additional event entitlements. If you can't find what you need in this article, check out our [Customer Behavior Events Library]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/customer_behavior_events/) or our [Currents sample data examples](https://github.com/Appboy/currents-examples/tree/master/sample-data).
 
@@ -1414,7 +1414,6 @@ This event occurs when a user views a Content Card.
   "canvas_variation_name": (optional, string) name of the Canvas variation the user is in if from a Canvas,
   "canvas_step_id": (optional, string) ID of the step for this message if from a Canvas,
   "canvas_step_name": (optional, string) name of the Canvas step this event belongs to,
-  "canvas_name": (optional, string) name of the Canvas,
   "timezone": (optional, string) IANA time zone of the user at the time of the event,
   "device_id": (optional, string) ID of the device on which the event occurred,
   "platform": (optional, string) platform of the device (one of 'ios', 'android', 'web', 'kindle', 'tvos', OR 'roku'),
@@ -1638,7 +1637,7 @@ This event occurs when an SMS is sent to the carrier.
   "canvas_variation_name": (optional, string) name of the Canvas variation the user is in if from a Canvas,
   "canvas_step_id": (optional, string) ID of the step for this message if from a Canvas,
   "canvas_step_name": (optional, string) name of the Canvas step this event belongs to,
-  "send_id": (optional, string) message send ID this message belongs to
+  "send_id": (optional, string) message send ID this message belongs to (SMS Sends events only)
 }
 ```
 {% endapi %}
@@ -1651,7 +1650,7 @@ This event occurs when an SMS is sent to the carrier.
 SMS, Delivery
 {% endapitags %}
 
-This event occurs when an SMS was successfully delivered to the users mobile phone.
+This event occurs when an SMS was successfully delivered to the user's mobile phone.
 
 ```json
 // SMS Delivery: users.messages.sms.Delivery
@@ -1676,7 +1675,7 @@ This event occurs when an SMS was successfully delivered to the users mobile pho
   "canvas_variation_name": (optional, string) name of the Canvas variation the user is in if from a Canvas,
   "canvas_step_id": (optional, string) ID of the step for this message if from a Canvas,
   "canvas_step_name": (optional, string) name of the Canvas step this event belongs to,
-  "send_id": (optional, string) message send ID this message belongs to
+  "send_id": (optional, string) message send ID this message belongs to (SMS Sends events only)
 }
 ```
 {% endapi %}
@@ -1716,7 +1715,7 @@ This event occurs when an SMS send gets rejected by the carrier, this can happen
   "message_variation_name": (optional, string) the name of the message variation if from a campaign,
   "canvas_step_id": (optional, string) ID of the step for this message if from a Canvas,
   "canvas_step_name": (optional, string) name of the Canvas step this event belongs to,
-  "send_id": (optional, string) ID of the message if specified for the campaign (See Send Identifier under API Identifier Types)
+  "send_id": (optional, string) message send ID this message belongs to (SMS Sends events only)
 }
 ```
 {% endapi %}
@@ -1756,7 +1755,7 @@ This event occurs when an SMS experiences delivery failure. Use this event and t
   "canvas_variation_name": (optional, string) name of the Canvas variation the user is in if from a Canvas,
   "canvas_step_id": (optional, string) ID of the step for this message if from a Canvas,
   "canvas_step_name": (optional, string) name of the Canvas step this event belongs to,
-  "send_id": (optional, string) message send ID this message belongs to
+  "send_id": (optional, string) message send ID this message belongs to (SMS Sends events only)
 }
 ```
 {% endapi %}

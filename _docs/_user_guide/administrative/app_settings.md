@@ -26,6 +26,9 @@ guide_featured_list:
   - name: Internal Groups
     link: /docs/user_guide/administrative/app_settings/internal_groups_tab/
     image: /assets/img/braze_icons/users-01.svg
+  - name: Identifier Field-Level Encryption
+    link: /docs/user_guide/data_and_analytics/field_level_encryption/
+    image: /assets/img/braze_icons/mail-01.svg
 
 guide_menu_title: "Workspace settings"
 guide_menu_list:

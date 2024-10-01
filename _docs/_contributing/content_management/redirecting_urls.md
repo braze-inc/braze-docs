@@ -107,3 +107,33 @@ description: "If you're new to the Braze SDK, learn how to get started."
 local_redirect:
   building-from-source: '/docs/developer_guide/getting_started/#using-our-install-script'
 ```
+
+## Testing redirects
+
+You can use [`bdocs`]({{site.baseurl}}/contributing/bdocs) to lists all of the old URLs you set up using a base URL of your choice.
+
+{% tabs local %}
+{% tab usage example %}
+The following example uses the [Sage AI rebrand PR](https://github.com/braze-inc/braze-docs/pull/8040).
+
+```terminal
+$ git checkout bd-3442
+$ ./bdocs redirects https://braze-docs-gtcavota9-braze.vercel.app/
+https://braze-docs-gtcavota9-braze.vercel.app/docs/user_guide/sage_ai/
+https://braze-docs-gtcavota9-braze.vercel.app/docs/user_guide/sage_ai/predictive_suite/
+https://braze-docs-gtcavota9-braze.vercel.app/docs/user_guide/sage_ai/predictive_suite/predictive_churn
+https://braze-docs-gtcavota9-braze.vercel.app/docs/user_guide/sage_ai/predictive_suite/predictive_churn/creating_a_churn_prediction/
+https://braze-docs-gtcavota9-braze.vercel.app/docs/user_guide/sage_ai/predictive_suite/predictive_churn/prediction_analytics/
+https://braze-docs-gtcavota9-braze.vercel.app/docs/user_guide/sage_ai/predictive_suite/predictive_churn/prediction_analytics/prediction_quality/
+https://braze-docs-gtcavota9-braze.vercel.app/docs/user_guide/sage_ai/predictive_suite/predictive_churn/messaging_users/
+https://braze-docs-gtcavota9-braze.vercel.app/docs/user_guide/sage_ai/predictive_suite/predictive_churn/prediction_faq/
+https://braze-docs-gtcavota9-braze.vercel.app/docs/user_guide/sage_ai/predictive_suite/predictive_events/
+https://braze-docs-gtcavota9-braze.vercel.app/docs/user_guide/sage_ai/predictive_suite/predictive_events/creating_an_event_prediction/
+https://braze-docs-gtcavota9-braze.vercel.app/docs/user_guide/sage_ai/predictive_suite/predictive_events/prediction_analytics/
+```
+{% endtab %}
+{% endtabs %}
+
+{% alert tip %}
+If you're using VS Code, hold **CMD** while right-clicking a link to open it in your default browser. Because these are the old links, they should all redirect to the new URL specified in the redirect file. If it doesn't, there's an issue with the redirect.
+{% endalert %}

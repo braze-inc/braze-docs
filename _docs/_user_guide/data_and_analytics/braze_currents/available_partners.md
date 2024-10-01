@@ -16,14 +16,12 @@ tool: Currents
 Naming conventions for events that flow for one partner from Braze may not match other partners. For example, the Currents email open event in Segment is `Email Opened`, while in Mixpanel, it is `Email Open`.
 {% endalert %}
 
-## Data warehouses
+## Data warehouse storage
 [![Braze Learning course]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/introduction-to-data-warehouses){: style="float:right;width:120px;border:0;" class="noimgborder"}
-Data warehouses offer a collection source for all the information streamed from Currents. These partners can either act as warehouses (for flat file storage) or used to power business intelligence tools, machine learning algorithms, get insights on marketing performance, and more.
+Data warehouse storage offers a collection source for all the information streamed from Currents. These partners can either act as warehouses (for flat file storage) or used to power business intelligence tools, machine learning algorithms, get insights on marketing performance, and more.
 
 * [Amazon S3][1]
-
 * [Google Cloud Storage][2]
-
 * [Microsoft Azure Blob Storage][3]
 
 We're so confident in the power of Currents and data warehouses together, [we use it ourselves]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/how_braze_uses_currents/)!
@@ -33,15 +31,10 @@ We're so confident in the power of Currents and data warehouses together, [we us
 These customer data platforms collect and route information from multiple sources to a variety of other locations to empower you to utilize Braze data in the best ways possible.
 
 * [mParticle][6]
-
 * [Segment][7]
-
 * [Tealium][8]
-
 * [Treasure Data][10]
-
 * [RudderStack][9]
-
 
 ## Behavioral analytics
 

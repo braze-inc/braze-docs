@@ -8,7 +8,7 @@ description: "This reference page notes the operators that Liquid supports, as w
 
 # Operators
 
-Liquid supports many [operators][25] that can be used in your conditional statements.
+Liquid supports many [operators][25] that can be used in your conditional statements. Note that parentheses are invalid characters in Liquid and prevents your tags from working.
 
 |   Syntax| Operator Description|
 |---------|-----------|
