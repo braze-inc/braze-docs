@@ -15,7 +15,7 @@ description: "Cet article présente en détail l’endpoint Braze Créer des mod
 
 > Utilisez cet endpoint pour créer des modèles d’e-mail sur le tableau de bord de Braze. 
 
-Ces modèles seront disponibles sur la page **Modèles et médias**. La réponse de cet endpoint comprend un champ pour `email_template_id`, qui peut être utilisé pour mettre à jour le modèle lors des appels d’API suivants.
+Ces modèles seront disponibles sur la page **Modèles et médias.**  La réponse de cet endpoint comprend un champ pour `email_template_id`, qui peut être utilisé pour mettre à jour le modèle lors des appels d’API suivants.
 
 Le statut de l’abonnement aux e-mails des utilisateurs peut être mis à jour et récupéré via Braze à l’aide d’une API RESTful. Vous pouvez utiliser l’API pour configurer une synchronisation bidirectionnelle entre Braze et d’autres systèmes de messagerie ou votre propre base de données. Toutes les demandes d’API sont faites sur HTTPS.
 
@@ -49,15 +49,15 @@ Authorization: Bearer YOUR_REST_API_KEY
 
 ## Paramètres de demande
 
-| Paramètre - Requis - Type de données - Description - Paramètre - Requis - Type de données - Description - Paramètre - Requis - Type de données - Description
+| Paramètre | Requis | Type de données | Description |
 | --------- | ---------| --------- | ----------- |
-|`template_name`|Required|String|Nom de ton modèle d'email.|
-|`subject`|Required|String|Ligne d'objet du modèle de courriel.|
-|`body`|Obligatoire|Chaîne de caractères|Le corps du modèle d’e-mail pouvant inclure du HTML.|
+|`template_name`|Requis|Chaîne de caractères|Nom de votre modèle d’e-mail|
+|`subject`|Requis|Chaîne de caractères|Ligne Objet du modèle d’e-mail.|
+|`body`|Requis|Chaîne de caractères|Corps du modèle d’e-mail pouvant inclure du HTML.|
 |`plaintext_body`|Facultatif|Chaîne de caractères|Une version en texte brut du corps du modèle d’e-mail.|
 |`preheader`|Facultatif|Chaîne de caractères|Accroche d’e-mail utilisée pour générer des aperçus chez certains clients.|
-Les balises doivent déjà exister.|`tags`|Optionnel|Chaîne|Les [balises]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/tags/) doivent déjà exister.|
-|`should_inline_css`|Optionnel|Booléen|Activer ou désactiver la fonction `inline_css` par modèle. Si non renseigné, Braze utilisera le paramètre par défaut de l’AppGroup. `true` ou `false` est attendu.|
+|`tags`|Facultatif|Chaîne de caractères|Les [étiquettes]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/tags/) doivent déjà exister.|
+|`should_inline_css`|Facultatif|Valeur booléenne|Active ou désactive la fonction `inline_css` par modèle. S'il n'est pas fourni, Braze utilisera le paramètre par défaut pour le groupe d'applications. `true` ou `false` est attendu.|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 
@@ -82,12 +82,12 @@ Le tableau suivant répertorie les erreurs renvoyées possibles et les étapes d
 
 | Erreur | Résolution des problèmes |
 | --- | --- |
-| Le nom du modèle est obligatoire | Saisis un nom de modèle. |
-| Les balises doivent être un tableau | Les balises doivent être formatées comme un tableau de chaînes de caractères, par exemple `["marketing", "promotional", "transactional"]`. |
-| Assure-toi que tes balises sont entre guillemets (`""`). |
+| Le nom du modèle est obligatoire | Saisissez un nom de modèle. |
+| Les balises doivent être un tableau | Les balises doivent être un tableau de chaînes de caractères, par exemple `["marketing", "promotional", "transactional"]`. |
+| Toutes les balises doivent être des chaînes de caractères | Assurez-vous que vos balises sont comprises entre des guillemets (`""`). |
 | Certaines balises sont introuvables | Pour ajouter une balise lors de la création d’un modèle d’e-mail, la balise doit déjà exister dans Braze. |
-| L'email doit avoir des noms de blocs de contenu valides | L'email peut contenir des blocs de contenu qui n'existent pas dans cet environnement. |
-| Valeur invalide pour `should_inline_css`. `true` ou `false` était attendu | Ce paramètre accepte uniquement les valeurs booléennes (vrai ou faux). Assure-toi que la valeur de `should_inline_css` n'est pas encapsulée entre guillemets (`""`), ce qui a pour effet d'envoyer la valeur sous forme de chaîne de caractères. |
+| L’e-mail doit comporter des noms de bloc de contenu valides | L’e-mail peut contenir des blocs de contenu qui n’existent pas dans cet environnement. |
+| Valeur non valide pour `should_inline_css`. `true` ou `false` était attendu | Ce paramètre accepte uniquement les valeurs booléennes (vrai ou faux). Assurez-vous que la valeur de `should_inline_css` n’est pas comprise entre des guillemets (`""`), sinon la valeur est envoyée comme chaîne de caractères. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% endapi %}
