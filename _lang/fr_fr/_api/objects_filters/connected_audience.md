@@ -55,53 +55,53 @@ Ce filtre vous permet de segmenter en fonction de l’attribut personnalisé d�
 
 Le type de données de l’attribut personnalisé détermine les comparaisons qui sont valides pour un filtre donné.
 
-| Type d'attribut personnalisé | Comparaisons autorisées |
+| Type d’attribut personnalisé | Comparaisons autorisées |
 | ---------------------| --------------- |
-| Chaîne | `equals`, `not_equal`, `matches_regex`, `does_not_match_regex`, `exists`, `does_not_exist` |
+| Chaîne de caractères | `equals`, `not_equal`, `matches_regex`, `does_not_match_regex`, `exists`, `does_not_exist` |
 | Tableau | `includes_value`, `does_not_include_value`, `exists`, `does_not_exist` |
 | Numérique | `equals`, `not_equal`, `greater_than`, `greater_than_or_equal_to`, `less_than`, `less_than_or_equal_to`, `exists`, `does_not_exist` |
-| Boolean | `equals`, `does_not_equal`, `exists`, `does_not_exist` |
-| Temps | `less_than_x_days_ago`, `greater_than_x_days_ago`, `less_than_x_days_in_the_future`, `greater_than_x_days_in_the_future`, `after`, `before`, `exists`, `does_not_exist` |
+| Valeur booléenne | `equals`, `does_not_equal`, `exists`, `does_not_exist` |
+| Date | `less_than_x_days_ago`, `greater_than_x_days_ago`, `less_than_x_days_in_the_future`, `greater_than_x_days_in_the_future`, `after`, `before`, `exists`, `does_not_exist` | 
 {: .reset-td-br-1 .reset-td-br-2}
 
 #### Mises en garde dans la comparaison des attributs
 
 | Comparaison | Considérations supplémentaires |
 | --- | --- |
-| `value` | La `value` n’est pas nécessaire lors de l’utilisation des comparaisons `exists` ou `does_not_exist`. `value` doit être une chaîne de caractères ISO 8601 DateHeure lors de l'utilisation des comparaisons `before` et `after`. |
-|`matches_regex` | Lors de l'utilisation de la comparaison `matches_regex`, la valeur transmise doit être une chaîne de caractères. Pour en savoir plus sur l'utilisation des expressions régulières avec Braze, reportez-vous à [Expressions régulières]({{site.baseurl}}/user_guide/engagement_tools/segments/regex/#regex-with-braze) et [types de données d'attributs personnalisés]({{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#custom-attribute-data-types). |
+| `value` | Le `value` n'est pas nécessaire lors de l'utilisation des comparaisons `exists` ou `does_not_exist`. `value` doit être une chaîne datetime ISO 8601 lors de l'utilisation des comparaisons `before` et `after`. |
+|`matches_regex` | Lors de l’utilisation de la comparaison `matches_regex`, la valeur transmise doit être une chaîne de caractères. Pour en savoir plus sur l'utilisation des expressions régulières avec Braze, consultez [Expressions régulières]({{site.baseurl}}/user_guide/engagement_tools/segments/regex/#regex-with-braze) et [Types de données d'attributs personnalisés]({{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#custom-attribute-data-types). |
 {: .reset-td-br-1 .reset-td-br-2}
 
 #### Exemple d’attribut personnalisé
 
-\`\`\`json
+```json
 {
-"custom_attribute":
-{
-"custom_attribute_name": "eye_color",
-"comparison": "equals",
-"value": "blue"
+  "custom_attribute":
+    {
+      "custom_attribute_name": "eye_color",
+      "comparison": "equals",
+      "value": "blue"
+    }
 }
-  
 
 {
-"custom_attribute":
-{
-"custom_attribute_name": "favorite_foods",
-"comparison": "includes_value",
-"value": "pizza"
+  "custom_attribute":
+  {
+    "custom_attribute_name": "favorite_foods",
+    "comparison": "includes_value",
+    "value": "pizza"
+  }
 }
-  
 
 {
-"custom_attribute":
-{
-"custom_attribute_name": "last_purchase_time",
-"comparison": "less_than_x_days_ago",
-"value": 2
+  "custom_attribute":
+  {
+    "custom_attribute_name": "last_purchase_time",
+    "comparison": "less_than_x_days_ago",
+    "value": 2
+  }
 }
-  
-  \`\`\`
+```
 ### Filtre d’abonnement aux notifications push
 
 Ce filtre vous permet de segmenter en fonction du statut d’abonnement aux notifications push d’un utilisateur.
