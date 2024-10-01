@@ -1,6 +1,6 @@
 ---
-nav_title: "GET :  : Exporter les analyses de campagne"
-article_title: "GET :  : Exporter les analyses de campagne"
+nav_title: "GET : Exporter l'analyse/analytique de la campagne (si utilisée comme adjectif)"
+article_title: "GET : Exporter l'analyse/analytique de la campagne (si utilisée comme adjectif)"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
@@ -11,7 +11,7 @@ description: "Cet article présente en détail l’endpoint Braze Exporter les a
 {% api %}
 # Exporter les analyses de campagne
 {% apimethod get %}
-/campaigns/data_series
+/campagnes/séries_de_données
 {% endapimethod %}
 
 > Utilisez cet endpoint pour récupérer quotidiennement une série de diverses statistiques pour une campagne sur la durée. 
@@ -30,11 +30,11 @@ Pour utiliser cet endpoint, vous aurez besoin d'une [clé API]({{site.baseurl}}/
 
 ## Paramètres de demande
 
-| Paramètre | Obligatoire | Type de données | Descriptif |
+| Paramètre | Requis | Type de données | Description |
 | --------- | -------- | --------- | ----------- |
-| `campaign_id` | Obligatoire | Chaîne | Voir [Identifiant de l’API de la campagne]({{site.baseurl}}/api/identifier_types/).<br><br> Les campagnes d’API `campaign_id` sont disponibles sur la page [Clés API]({{site.baseurl}}/user_guide/administrative/app_settings/api_settings_tab/) et la page **Détails** de la campagne dans votre tableau de bord, ou vous pouvez utiliser le [point de terminaison Campagnes de liste]({{site.baseurl}}/api/endpoints/export/campaigns/get_campaigns/). |
-| `length` | Obligatoire | Entier | Nombre maximum de jours avant `ending_at` à inclure dans la série retournée. Doit être compris entre 1 et 100 (inclus).
-| `ending_at` | Facultatif | Date/heure <br>(chaîne [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) ) | Date à laquelle la série de données doit se terminer. Par défaut, l’heure de la demande.
+| `campaign_id` | Requis | Chaîne de caractères | Voir l'[identifiant API de la campagne.]({{site.baseurl}}/api/identifier_types/)<br><br> Vous trouverez l'adresse `campaign_id` pour les campagnes API sur la page [Clés API]({{site.baseurl}}/user_guide/administrative/app_settings/api_settings_tab/) et la page **Détails de la campagne** dans votre tableau de bord, ou vous pouvez utiliser l'[endpoint Liste des campagnes.]({{site.baseurl}}/api/endpoints/export/campaigns/get_campaigns/) |
+| `length` | Requis | Entier | Nombre maximum de jours avant `ending_at` à inclure dans la série renvoyée. Doit être compris entre 1 et 100 (inclus). |
+| `ending_at` | Facultatif | DateTime <br>[(](https://en.wikipedia.org/wiki/ISO_8601) chaîne de caractères[ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) ) | Date à laquelle la série de données doit se terminer. Par défaut, l’heure de la demande. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ## Exemple de demande 
@@ -288,7 +288,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 Les types de messages possibles sont `email`, `in_app_message`, `webhook`, `android_push`, `ios_push`, `kindle_push` et `web_push`. Tous les types de messages des notifications push auront les mêmes statistiques que celles d’`android_push`.
 
 {% alert tip %}
-Pour obtenir de l’aide sur les exportations CSV et de l’API, consultez la section Résolution des problèmes d’exportation[]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/).
+Pour obtenir de l’aide sur les exportations CSV et de l’API, consultez la section [Résolution des problèmes d’exportation]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/).
 {% endalert %}
 
 {% endapi %}
