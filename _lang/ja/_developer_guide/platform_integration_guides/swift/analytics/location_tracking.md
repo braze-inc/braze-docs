@@ -20,7 +20,7 @@ Tool:
 位置情報の追跡を有効にするには、アプリケーション構成ページの \[**一般**] タブで `BrazeLocation` モジュールを追加します。
 
 {% tabs %}
-{% tab 速い %}
+{% tab SWIFT %}
 
 `AppDelegate.swift` ファイルの先頭にある `BrazeLocation` モジュールをインポートします。Braze の構成に `BrazeLocationProvider` インスタンスを追加し、構成に対するすべての変更が `Braze(configuration:)` を呼び出す前に実行されるようにします。利用可能な構成については、`Braze.Configuration.Location` を参照してください。
 
@@ -56,7 +56,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 ```
 
 {% endtab %}
-{% tab 目標-C %}
+{% tab OBJECTIVE-C %}
 
 `AppDelegate.m` ファイルの先頭にある `BrazeLocation` モジュールをインポートします。Braze の構成に `BrazeLocationProvider` インスタンスを追加し、構成に対するすべての変更が Braze(configuration:) を呼び出す前に実行されるようにします。利用可能な構成については、`BRZConfigurationLocation` を参照してください。
 
@@ -113,7 +113,7 @@ static Braze *_braze = nil;
 
 
 {% tabs %}
-{% tab 速い %}
+{% tab SWIFT %}
 
 ```swift
 AppDelegate.braze?.user.setLastKnownLocation(latitude:latitude,
@@ -129,7 +129,7 @@ AppDelegate.braze?.user.setLastKnownLocation(latitude:latitude,
 ```
 
 {% endtab %}
-{% tab 目標-C %}
+{% tab OBJECTIVE-C %}
 
 ```objc
 [AppDelegate.braze.user setLastKnownLocationWithLatitude:latitude

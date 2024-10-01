@@ -21,7 +21,7 @@ braze.changeUser(YOUR_USER_ID_STRING);
 ```
 
 {% alert warning %}
-**ユーザーがログアウトしたときに`changeUser()` 。**`changeUser()`を静的なデフォルト値に設定すると、ユーザーが再度ログインするまで、すべてのユーザーアクティビティがそのデフォルト「ユーザー」に関連付けられます。
+**ユーザーがログアウトしたときに `changeUser()` を呼び出さないでください。**`changeUser()`を静的なデフォルト値に設定すると、ユーザーが再度ログインするまで、すべてのユーザーアクティビティがそのデフォルト「ユーザー」に関連付けられます。
 {% endalert %}
 
 ユーザーがログアウトした際にユーザーIDを変更することは、以前ログインしていたユーザーをターゲットとしたリエンゲージメントキャンペーンができなくなるため、お勧めしない。同じデバイスに複数のユーザーが存在することが予想されるものの、アプリがログアウト状態の間にそのうちの1ユーザーのみをターゲットにする場合は、ログアウト中にターゲットにするユーザー ID を個別に追跡し、アプリのログアウトプロセスの中でそのユーザー ID に戻すことをお勧めします。
@@ -42,5 +42,5 @@ braze.changeUser(YOUR_USER_ID_STRING);
 
 [1]: {{site.baseurl}}/developer_guide/rest_api/user_data/#user-data
 [2]: {{site.baseurl}}/api/endpoints/messaging/
-[4]: https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#changeuser "Javadocs（ジャバドックス"
+[4]: https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#changeuser "Javadocs"
 [5]: {{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/#user-aliases

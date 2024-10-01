@@ -50,19 +50,19 @@ HTML アプリ内メッセージは、`IInAppMessage` のもう 1 つのサブ�
 {% tab Slideup %}
 [`Slideup`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/-in-app-message-slideup/index.html) アプリ内メッセージは、画面の上部または下部から「スライドアップ」または「スライドダウン」するため、このような名前が付けられています。画面の一部分だけを覆い、効果的で邪魔にならないメッセージング機能を提供します。
 
-![&quot を表示している電話機のスクリーンの下部からスライドするアプリ内メッセージは複雑です。カスタムエンゲージメントは。&quot ではありません。バックグラウンドでは、ウェブページの右下隅に表示されるのと同じアプリ内メッセージです。]({% image_buster /assets/img/slideup-behavior.gif %}){: style="border:0px;"}
+![携帯電話の画面の下部からスライドして表示されるアプリ内メッセージに「人間は複雑だ」と表示されています。カスタムエンゲージメントは、そうであってはなりません。バックグラウンドには、同じアプリ内メッセージが Web ページの下端に表示されています。]({% image_buster /assets/img/slideup-behavior.gif %}){: style="border:0px;"}
 
 {% endtab %}
-{% tab モーダル %}
+{% tab Modal %}
 [`Modal`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/-in-app-message-modal/index.html) アプリ内メッセージは画面中央に表示され、半透明のパネルに囲まれます。より重要なメッセージングの場合に有用で、2 つのクリックアクションと分析対応ボタンを装備できます。
 
-![&quot を表示する電話機の画面中央のモーダル アプリ内メッセージは複雑です。カスタムエンゲージメントは。&quot ではありません。バックグラウンドでは、ウェブページの中央に同じアプリ内メッセージが表示されます。]({% image_buster /assets/img/modal-behavior.gif %}){: style="border:0px;"}
+![携帯電話の画面中央のモーダルアプリ内メッセージに「人間は複雑だ」と表示されています。カスタムエンゲージメントは、そうであってはなりません。バックグラウンドには、同じアプリ内メッセージが Web ページの中央に表示されます。]({% image_buster /assets/img/modal-behavior.gif %}){: style="border:0px;"}
 
 {% endtab %}
 {% tab フルスクリーン %}
 [`Full`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/-in-app-message-full/index.html) アプリ内メッセージは、ユーザーコミュニケーションの内容とインパクトを最大化するのに有効です。`full` アプリ内メッセージの上半分には画像が含まれ、下半分にはテキストと最大 2 つのクリックアクションと分析対応ボタンが表示されます。
 
-![フルスクリーンのアプリ内メッセージは、電話機のスクリーン全体に表示されます。"Humans は複雑です。カスタムエンゲージメントは。&quot ではありません。バックグラウンドでは、主にウェブページの中央に同じアプリ内メッセージが表示されます。]({% image_buster /assets/img_archive/In-App_Full.png %})
+![携帯電話の画面全体にわたって表示される全画面表示のアプリ内メッセージに「人間は複雑だ」と表示されています。カスタムエンゲージメントは、そうであってはなりません。バックグラウンドには、同じアプリ内メッセージが Web ページの中央に大きく表示されています。]({% image_buster /assets/img_archive/In-App_Full.png %})
 
 {% endtab %}
 {% tab カスタムHTML %}

@@ -31,9 +31,9 @@ Braze は、[Amazon Device Messaging (ADM)][14] を使用して Amazon デバイ
   <bool name="com_braze_push_adm_messaging_registration_enabled">true</bool>
   ```
 
-## ステップ2:ユニティの更新 AndroidManifest.xml
+## ステップ2:Unity AndroidManifest.xml の更新
 
-もしあなたのアプリが`AndroidManifest.xml` 、テンプレートとして以下を使うことができる。そうでない場合は、すでに`AndroidManifest.xml` をお持ちの場合、以下の欠落しているセクションのいずれかが、既存の`AndroidManifest.xml` に追加されていることを確認すること。
+アプリに `AndroidManifest.xml` がない場合、以下をテンプレートとして使用できます。そうでない場合は、すでに`AndroidManifest.xml` をお持ちの場合、以下の欠落しているセクションのいずれかが、既存の`AndroidManifest.xml` に追加されていることを確認すること。
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -77,7 +77,7 @@ Braze は、[Amazon Device Messaging (ADM)][14] を使用して Amazon デバイ
 
 ## ステップ3:ADM API キーを保存する
 
-まず、[アプリ用のADM API Keyを取得する][11]。 次に、ADM APIキーを`api_key.txt` という名前のファイルに保存し、プロジェクトの [`Assets/`][54] ] フォルダに保存する。
+まず、[アプリの ADM API キーを取得][11]します。 次に、ADM API キーを `api_key.txt` という名前のファイルに保存し、そのファイルをプロジェクトの [`Assets/`][54] フォルダーに保存します。
 
 Amazon は、末尾の改行などの空白文字が `api_key.txt` に含まれている場合、キーを認識しません。
 
@@ -95,9 +95,9 @@ preBuild.dependsOn(copyAmazon)
 
 ## ステップ4: ADMジャーを追加する
 
-必要なADM Jarファイルは、\[Unity JAR documentation][53]]に従ってプロジェクトの任意の場所に配置することができる。
+必要な ADM Jar ファイルは、\[Unity JAR ドキュメント][53]に従って、プロジェクト内のいずれかの場所に置かれています。
 
-## ステップ5:BrazeダッシュボードにクライアントシークレットとクライアントIDを追加する
+## ステップ5:クライアントシークレットとクライアント ID を Braze ダッシュボードに追加する
 
 最後に、[ステップ 1][2] で取得したクライアントシークレットとクライアント ID を Braze ダッシュボードの \[**設定の管理**] ページに追加する必要があります。
 

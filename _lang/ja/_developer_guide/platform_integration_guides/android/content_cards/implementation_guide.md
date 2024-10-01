@@ -172,7 +172,7 @@ public class Tile extends ContentCardable {
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
-{% tab タイプを特定する %}
+{% tab タイプの識別 %}
 {% subtabs global %}
 {% subtab Kotlin %}
 **タイプの識別**<br>
@@ -255,7 +255,7 @@ enum ContentCardClass {
 ## カスタムカードレンダリング{#customizing-card-rendering-for-android}
 
 {% tabs local %}
-{% tab アンドロイド・ビュー・システム %}
+{% tab Android View System %}
 
 次のリストは、`recyclerView`でカードをレンダリングする方法の変更について示しています。`IContentCardsViewBindingHandler`インターフェイスは、すべてのコンテンツカードのレンダリング方法を定義します。これをカスタマイズして、必要なものを変更することができます。
 
@@ -460,7 +460,7 @@ fragment.setContentCardsViewBindingHandler(viewBindingHandler)
 このトピックに関するその他の関連リソースは、[Android Data Binding](https://medium.com/google-developers/android-data-binding-recyclerview-db7c40d9f0e4) に関するこの記事で入手できます。
 
 {% endtab %}
-{% tab ジェットパック・コンポーズ %}
+{% tab Jetpack Compose %}
 Jetpack Compose でカードを完全にカスタマイズする場合、カスタムの Composable 関数を作成すると次のようになります。
 
 1. Composable をレンダリングし、`true`を返します。
@@ -502,7 +502,7 @@ ContentCardsList(
 
 ## カードの却下
 
-Swipe-to-Dismiss機能の無効化は、\[`card.isDismissibleByUser()`][9] ]メソッドによってカードごとに行われる。カードは、\[`ContentCardsFragment.setContentCardUpdateHandler()`][8] ]メソッドを使って表示前にインターセプトすることができる。
+スワイプして閉じる機能を無効にするには、\[`card.isDismissibleByUser()`][9] メソッドを使用してカードごとに行います。カードは、\[`ContentCardsFragment.setContentCardUpdateHandler()`][8] メソッドを使って表示前にインターセプトできます。
 
 ## ダークテーマのカスタマイズ
 
@@ -517,7 +517,7 @@ Swipe-to-Dismiss機能の無効化は、\[`card.isDismissibleByUser()`][9] ]メ�
 #### **実装コンポーネント**<br><br>
 
 {% tabs %}
-{% tab コトリン %}
+{% tab Kotlin %}
 **カスタムオブジェクトによるロギングメソッドの呼び出し**<br>
 `ContentCardable` ベースクラス内で、必要に応じて`BrazeManager`を直接呼び出すことができます。この例では、オブジェクトがコンテンツカードから取得された場合、`cardData`プロパティは NULL 以外になります。 
 
@@ -555,7 +555,7 @@ override fun getView(position: Int, convertView: View?, parent: ViewGroup?): Vie
     }
 ```
 {% endtab %}
-{% tab ジャワ %}
+{% tab Java %}
 **カスタムオブジェクトによるロギングメソッドの呼び出し**<br>
 `ContentCardable` ベースクラス内で、必要に応じて`BrazeManager`を直接呼び出すことができます。この例では、オブジェクトがコンテンツ・カードから来たものであれば、`cardData` プロパティが非NULLになることを覚えておいてほしい。 
 ```java
@@ -605,7 +605,7 @@ public View getView(int position, View convertView, ViewGroup parent) {
 
 {% details ContentCardKeyヘルパーファイル %}
 {% tabs %}
-{% tab コトリン %}
+{% tab Kotlin %}
 ```kotlin
 companion object Keys{
         const val idString = "idString"
@@ -616,7 +616,7 @@ companion object Keys{
     }
 ```
 {% endtab %}
-{% tab ジャワ %}
+{% tab Java %}
 ```java
 public static final String IDSTRING = "idString";
 public static final String CREATED = "created";

@@ -28,7 +28,7 @@ channel:
 
 ### サウンドファイルを変換する
 
-afconvert ツールを使用して、サウンドを変換できます。たとえば、16 ビットリニアPCM システムサウンドSubmarine.aiff をCAF ファイルのIMA4 オーディオに変換するには、ターミナルで次のコマンドを使用します。
+afconvert ツールを使用して、サウンドを変換できます。たとえば、16ビットリニア PCM システムサウンド Submarine.aiff を CAF ファイルの IMA4オーディオに変換するには、ターミナルで次のコマンドを使用します。
 
 ```bash
 afconvert /System/Library/Sounds/Submarine.aiff ~/Desktop/sub.caf -d ima4 -f caff -v
@@ -40,10 +40,10 @@ QuickTime Player でサウンドを開き、\[**ムービー**] メニューか�
 
 ## ステップ2:サウンドのプロトコルURL を指定する
 
-アプリ内のサウンドファイルの場所に送信するプロトコルURL を指定する必要があります。これには2 つの方法があります。
+アプリ内のサウンドファイルの場所にリダイレクトするプロトコル URL を指定する必要があります。これには2 つの方法があります。
 
 * [Appleプッシュオブジェクト][1]の`sound`パラメータを使用して、URLをBrazeに渡します。
-* ダッシュボードで指定します。[push composer][2]で**Settings**を選択し、**Sound**フィールドにプロトコールURLを入力します。 
+* ダッシュボードで URL を指定します。[push composer][2]で**Settings**を選択し、**Sound**フィールドにプロトコールURLを入力します。 
 
 ![Braze ダッシュボードのプッシュコンポーザー][8]
 

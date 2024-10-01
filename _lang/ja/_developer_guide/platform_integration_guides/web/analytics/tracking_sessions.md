@@ -3,7 +3,7 @@ nav_title: セッションを追跡する
 article_title: ウェブのセッションをトラッキングする
 platform: Web
 page_order: 0
-description: "このリファレンスでは、ウェブのセッションを追跡する方法について説明する。"
+description: "この参考記事では、Web のセッションを追跡する方法について説明します。"
 
 ---
 
@@ -13,7 +13,7 @@ description: "このリファレンスでは、ウェブのセッションを追
 
 ## セッションライフサイクル
 
-デフォルトでは、セッションは`braze.openSession()` が最初にコールされたときに開始され、少なくとも30分間操作がない限りオープンされたままになる。これは、ユーザーがサイトを離れて30分以内に戻ってきた場合、同じセッションが継続されることを意味する。30分が経過した後に彼らが戻ってきた場合、「セッションを閉じる」データポイントが、彼らが離れて移動した時間のために自動的に生成され、新しいセッションが開かれる。
+デフォルトでは、セッションは `braze.openSession()` が最初に呼び出されたときに開始され、少なくとも30分間非アクティブになるまで開いたままになります。つまり、ユーザーがサイトから移動し、30分以内に戻った場合、同じセッションが続行されます。30分が経過した後にユーザーが戻った場合、ユーザーが離れた時間に応じて「セッション終了」のデータポイントが自動的に生成され、新しいセッションが開きます。
 
 {% alert note %}
 新しいセッションを強制する必要がある場合、ユーザーを変更することで強制が可能になります。
@@ -21,7 +21,7 @@ description: "このリファレンスでは、ウェブのセッションを追
 
 ## セッションタイムアウトをカスタマイズする
 
-セッションのタイムアウトをカスタマイズするには、`initialize`]\[session_tracking_5] ] 関数に`sessionTimeoutInSeconds` オプションを渡す。`sessionTimeoutInSeconds` の最小値は 1 秒です。
+セッションタイムアウトをカスタマイズするには、`sessionTimeoutInSeconds` オプションを [`initialize`][session_tracking_5] 関数に渡します。`sessionTimeoutInSeconds` の最小値は 1 秒です。
 
 ```js
 // Sets the session timeout to 15 minutes instead of the default 30
@@ -34,7 +34,7 @@ braze.initialize('YOUR-API-KEY-HERE', { sessionTimeoutInSeconds: 900 });
 
 ユーザーを介してセッションを検出するには、ダッシュボードでユーザーを見つけ、ユーザープロファイルの \[**アプリの利用状況**] に移動します。セッション指標が想定どおりに増加していることを確認することで、セッショントラッキングが機能していることを確認できます。
 
-![] 【session_tracking_7】セッション数、アプリが最初に使われた時間、最後に使われた時間を示すユーザー・プロフィール・コンポーネント。]{: style="max-width:50%"}
+![発生したセッション数、アプリが最初に使用された日時、最後に使用された日時を示すユーザープロファイルコンポーネント。]\[session_tracking_7]{: style="max-width:50%"}
 
 \[session_tracking_1] ： {{ site.baseurl }}/developer_guide/platform_integration_guides/swift/initial_sdk_setup/overview/#customizing-braze-on-startup
 \[session_tracking_3] ： {{ site.baseurl }}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/#step-2-configure-the-braze-sdk-in-appboyxml

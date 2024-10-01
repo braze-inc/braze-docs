@@ -42,7 +42,7 @@ Xcode を使用して `Info.plist` ファイルを編集します。
 
 ## ステップ2:スキーム許可リストの追加
 
-URLスキームを`canOpenURL(_:)`に渡すには、`LSApplicationQueriesSchemes`キーをアプリのInfo.plistファイルに追加する必要があります。この許可リストに含まれないスキームを呼び出そうとすると、デバイスのログにエラーが記録され、ディープリンクは開かれません。以下はこのエラーの例です。
+`LSApplicationQueriesSchemes` キーをアプリの Info.plist ファイルに追加して、`canOpenURL(_:)` に渡す URL スキームを宣言する必要があります。この許可リストに含まれないスキームを呼び出そうとすると、デバイスのログにエラーが記録され、ディープリンクは開かれません。以下はこのエラーの例です。
 
 ```
 <Warning>: -canOpenURL: failed for URL: "yourapp://deeplink" – error: "This app is not allowed to query for scheme yourapp"

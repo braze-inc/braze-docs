@@ -14,7 +14,7 @@ noindex: true
 
 ## SDK の初期化{#initializing-ios-google-tag-provider}
 
-Braze iOS SDKは、Google Tag Manager][5]内で設定されたタグによって初期化および制御できます。
+Braze iOS SDK は、\[Google Tag Manager]][5] 内で設定されたタグによって初期化および制御できます。
 
 Google Tag Manager を使用する前に、まず [SDK の初期設定][1]を行ってください。
 
@@ -28,7 +28,7 @@ Google Tag Manager を使用する前に、まず [SDK の初期設定][1]を行
 
 最初に、`played song` である「イベント名」を検索するトリガーを作成します
 
-![Google Tag Manager のカスタムトリガーは、「イベント名」が「再生された曲」と等しい場合にいくつかのイベントをトリガーするように設定されています。][3]
+![「eventName」が「played song」である場合に一部のイベントに対してトリガーするよう設定された Google Tag Manager のカスタムトリガー。][3]
 
 次に、新しいタグ (「Function Call」) を作成し、この記事で後述する[カスタムタグプロバイダー](#adding-ios-google-tag-provider)のクラスパスを入力します。 
 
@@ -42,7 +42,7 @@ Google Tag Manager を使用する前に、まず [SDK の初期設定][1]を行
 この例のカスタムタグプロバイダーは、これらのキーを使用して、Google Tag Manager からのデータ受信時に実行するアクションと Braze に送信するイベント名を決定します。
 {% endalert %}
 
-![Google Tag Manager のタグには、クラスパスとキーと値のペアフィールドがあります。このタグは、以前に作成された「再生された曲」トリガーでトリガーされるように設定されています。][4]
+![classpath フィールドと、キーと値のペアフィールドを含む Google Tag Manager のタグ。このタグは、以前に作成された「再生された曲」トリガーでトリガーされるように設定されています。][4]
 
 また、追加のキーと値のペア引数をタグに含めることもできます。この引数は、カスタムイベントプロパティとして Braze に送信されます。`eventName` および `actionType` は、カスタムイベントプロパティで無視されません。次のサンプルタグでは、`genre` を渡します。これは、Google Tag Manager でタグ変数を使用して定義されており、アプリでロギングしたカスタムイベントから取得されます。
 
