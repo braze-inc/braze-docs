@@ -21,14 +21,14 @@ noindex: true
 次の UI デリゲートメソッドは、アプリ内メッセージが `ABKInAppMessageViewController` に提供されるたびに呼び出され、アプリがアプリ内メッセージの表示のためにカスタムビューコントローラーを Braze に渡せるようにします。
 
 {% tabs %}
-{% tab 目標-C %}
+{% tab OBJECTIVE-C %}
 
 ```objc
 - (ABKInAppMessageViewController *)inAppMessageViewControllerWithInAppMessage:(ABKInAppMessage *)inAppMessage;
 ```
 
 {% endtab %}
-{% tab 速い %}
+{% tab swift %}
 
 ```swift
 func inAppMessageViewControllerWithInAppMessage(inAppMessage: ABKInAppMessage!) -> ABKInAppMessageViewController!

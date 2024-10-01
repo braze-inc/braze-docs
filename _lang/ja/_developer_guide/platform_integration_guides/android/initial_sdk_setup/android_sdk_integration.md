@@ -42,7 +42,7 @@ dependencies {
 }
 ```
 
-次の例は、依存関係行を配置する `build.gradle` 内の場所を示しています。なお、例で使用しているバージョンは古いバージョンです。最新バージョンのBraze Android SDKについては、\[Braze Android SDKリリース][60]をご覧ください。
+次の例は、依存関係行を配置する `build.gradle` 内の場所を示しています。なお、例で使用しているバージョンは古いバージョンです。Braze Android SDK の最新バージョンについては、\[Braze Android SDK リリース][60] にアクセスしてください。
 
 ![Android Studioが「build.gradle」を表示しています。このスクリーンショットでは、依存関係のコードがファイルの下部に追加されています。][32]
 
@@ -70,7 +70,7 @@ Gradle 同期を実行してプロジェクトをビルドし、[依存関係の
 </resources>
 ```
 
-## ステップ3:AndroidManifest.xmlに必要な権限を追加する
+## ステップ3:AndroidManifest.xml に必要な権限を追加する
 API キーを追加したので、次の権限を `AndroidManifest.xml` に追加する必要があります。
 
 ```xml
@@ -86,11 +86,11 @@ Android M のリリースにより、Android はインストール時権限モ�
 
 ### アクティビティライフサイクルコールバックの統合
 
-`openSession()`、`closeSession()`、\[`ensureSubscribedToInAppMessageEvents()`][64]、および`InAppMessageManager`登録への呼び出しは、オプションで自動的に処理されます。
+`openSession()`、`closeSession()`、\[`ensureSubscribedToInAppMessageEvents()`][64]、および `InAppMessageManager` 登録の呼び出しは、オプションで自動的に処理されます。
 
 #### アクティビティライフサイクルコールバックを登録する
 
- クラスの  メソッドに次のコードを追加します。
+`onCreate()` クラスの `Application` メソッドに次のコードを追加します。
 
 {% tabs %}
 {% tab JAVA %}
@@ -120,7 +120,7 @@ class MyApplication : Application() {
 {% endtab %}
 {% endtabs %}
 
-パラメータに関する詳細は、SDKリファレンスドキュメントをご覧ください \[`BrazeActivityLifecycleCallbackListener`][63]。
+\[`BrazeActivityLifecycleCallbackListener`][63] で使用できるパラメーターの詳細については、SDK リファレンスドキュメントを参照してください。
 
 ## ステップ5:位置情報の追跡を有効にする
 

@@ -8,7 +8,7 @@ hidden: true
 
 # ブレイズ・アクション ディープリンク
 
-> Braze Actionsを使えば、「ディープリンク」を使ってネイティブSDKの機能を実行できる。<br><br>Brazeダッシュボードには、アプリ内メッセージやコンテンツカードで使用できるいくつかの標準的なクリックアクション（Request Push Permission、Log Custom Event、Log Custom Attribute）が含まれている。<br><br>その他のすべてのアクション、または複数のアクションを組み合わせる場合は、このガイドを使用して独自のBraze Actionディープリンクを構築する。
+> Braze Actionsを使えば、「ディープリンク」を使ってネイティブSDKの機能を実行できる。<br><br>Braze ダッシュボードには、いくつかの標準的なクリック時アクション (プッシュ通知の権限を要求、カスタムイベントをログに記録、カスタム属性をログに記録) が含まれており、アプリ内メッセージやコンテンツカードで使用することができます。<br><br>その他のすべてのアクション、または複数のアクションを組み合わせる場合は、このガイドを使用して独自のBraze Actionディープリンクを構築する。
 
 ## SDKサポート
 
@@ -16,11 +16,11 @@ hidden: true
 
 `brazeActions://` ディープリンク・スキームは、アプリ内メッセージやコンテンツ・カード内にディープリンクやリダイレクト・オプションがあれば、どこでも使用できる。
 
-HTMLアプリ内メッセージの場合は、代わりに [`Javascript Bridge`]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/#javascript-bridge)ディープリンクはHTMLメッセージタイプではサポートされていないからだ。
+HTML アプリ内メッセージの場合、HTML メッセージタイプではディープリンクはサポートされていないため、代わりに [`Javascript Bridge`]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/#javascript-bridge) を使用してください。
 
 ## スキーマ
 
-`container` 、1つのアクションタイプに複数のアクション`steps` を含めることができる。`container` のないシングルステップも有効である。
+複数のアクションの `steps` を `container` アクションタイプに含めることができます。`container` を含まない単一のステップも有効です。
 
 ```json
 {
@@ -29,7 +29,7 @@ HTMLアプリ内メッセージの場合は、代わりに [`Javascript Bridge`]
 }
 ```
 
-個々の`step` には、アクション`type` とオプションの配列`args` が含まれる：
+個々の `step` には、アクションの `type` とオプションの `args` 配列が含まれています。
 
 ```json
 {
@@ -38,7 +38,7 @@ HTMLアプリ内メッセージの場合は、代わりに [`Javascript Bridge`]
 }
 ```
 
-## ユーアールアイ 
+## URI 
 
 Braze ActionsのURIスキームは`brazeActions://v1/{base64encodedJsonString}` 。
 
@@ -79,10 +79,10 @@ function encode(input) {
 
 ## 対応アクション
 
-|タイプ|アーギュ|
+|タイプ|引数|
 |--|--|
 |`container`|実行する他のアクションの配列|
-|`logCustomEvent`|1. `event name`<br>2\.`event properties JSON object` （オプション）|
+|`logCustomEvent`|1. `event name`<br>2. `event properties JSON object` (オプション)|
 |`setEmailNotificationSubscriptionType`|`"opted_in" | "subscribed" | "unsubscribed"`|
 |`setPushNotificationSubscriptionType`|`"opted_in" | "subscribed" | "unsubscribed"`|
 |`setCustomUserAttribute`|1. `attribute_name`<br>2. `attribute_value`|

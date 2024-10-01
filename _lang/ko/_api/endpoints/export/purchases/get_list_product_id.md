@@ -1,6 +1,6 @@
 ---
-nav_title: "GET: 제품 ID 내보내기"
-article_title: "GET: 제품 ID 내보내기"
+nav_title: "GET: 내보내기 제품 ID"
+article_title: "GET: 내보내기 제품 ID"
 search_tag: Endpoint
 page_order: 1
 layout: api_page
@@ -14,26 +14,26 @@ description: "이 문서에서는 제품 ID 내보내기 Braze 엔드포인트�
 /purchases/product_list
 {% endapimethod %}
 
-> 이 엔드포인트를 사용하여 페이지가 지정된 제품 ID 목록을 반환합니다.
+> 이 엔드포인트를 사용하여 페이지 매김된 제품 ID 목록을 반환합니다.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#dff4ed40-81f5-451d-9d44-accc0e932285{% endapiref %}
 
-## 전제 조건
+## 필수 구성 요소
 
 이 엔드포인트를 사용하려면 `purchases.product_list` 권한이 있는 [API 키]({{site.baseurl}}/api/basics#rest-api-key/)가 필요합니다.
 
-## 요금 제한
+## 사용량 제한
 
 {% multi_lang_include rate_limits.md endpoint='purchases product list' %}
 
 ## 요청 매개변수
 
-| 매개변수 | 필수 | 데이터 유형 | 설명 | 설명
+| 매개변수 | 필수 | 데이터 유형 | 설명 |
 |---|---|---|---|
-| `page` | 선택 사항 | 문자열 | 보려는 제품 목록의 페이지입니다. |
+| `page` | 선택 사항 | 문자열 | 보고 싶은 제품 목록 페이지입니다. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
-## 요청 예시
+## 예시 요청
 
 {% raw %}
 ```

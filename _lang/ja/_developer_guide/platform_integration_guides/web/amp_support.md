@@ -4,7 +4,7 @@ article_title: Web 向けの AMP サポート
 platform: Web
 page_order: 5
 page_type: reference
-description: "このリファレンス記事では、AMP の Web サポートと、AMP ページへの Braze の統合方法について説明します。"
+description: "この参考記事では、Web の AMP サポートと、AMP ページに Braze を統合する方法について説明します。"
 
 ---
 
@@ -14,9 +14,9 @@ description: "このリファレンス記事では、AMP の Web サポートと
 このセクションは、AMPページにBrazeを統合しようとしている場合を除いて、統合する必要はありません。
 {% endalert %}
 
-> このリファレンス記事では、AMP の Web サポートと、AMP ページへの Braze の統合方法について説明します。Accelerated Mobile Pages (AMP) は、JavaScript の使用を制限することを含む特定の標準を強制することによって、モバイルデバイスでのページ読み込み時間を改善するために設計された Google 支援のプロジェクトです。
+> この参考記事では、Web の AMP サポートと、AMP ページに Braze を統合する方法について説明します。Accelerated Mobile Pages (AMP) は、JavaScript の使用を制限するなど、特定の基準を適用することで、モバイル端末のページ読み込み時間を改善するように設計された Google が支援するプロジェクトです。
 
-その結果、Braze SDK を AMP ページに読み込むことができません。ただし、AMP プロジェクトには Web プッシュをサポートするコンポーネントが用意されています。[次の指示](https://www.ampproject.org/docs/reference/components/amp-web-push)は、そのコンポーネントを設定する方法を詳述し、`amp-web-push`コンポーネントに関する次のドキュメントを参照します。
+その結果、Braze SDK を AMP ページに読み込むことはできません。ただし、AMP プロジェクトには Web プッシュをサポートするコンポーネントが用意されています。[以下の手順](https://www.ampproject.org/docs/reference/components/amp-web-push) では、そのコンポーネントを設定し、`amp-web-push` コンポーネントに関する以下のドキュメントを参照する方法を説明しています。
 
 ## ステップ 1:AMP Web プッシュスクリプトを含める
 
@@ -44,7 +44,7 @@ description: "このリファレンス記事では、AMP の Web サポートと
 
 ## ステップ 3:ダウンロードヘルパーiFrameと許可ダイアログ
 
-AMP Web プッシュコンポーネントは、プッシュサブスクリプションを処理するポップアップを作成することで機能します。その結果、プロジェクトにいくつかのヘルパーファイルを含める必要があります。ヘルパー[ファイルiframe.html](https://cdn.ampproject.org/v0/amp-web-push-helper-frame.html)をダウンロードして、[許可dialog.html](https://cdn.ampproject.org/v0/amp-web-push-permission-dialog.html)ファイルをダウンロードして、サイトに保存してください。 
+AMP Web プッシュコンポーネントは、プッシュサブスクリプションを処理するポップアップを作成することで機能します。その結果、プロジェクトにいくつかのヘルパーファイルを含める必要があります。[helper-iframe.html](https://cdn.ampproject.org/v0/amp-web-push-helper-frame.html) ファイルおよび [permission-dialog.html](https://cdn.ampproject.org/v0/amp-web-push-permission-dialog.html) ファイルをダウンロードして、サイトに保存してください。 
 
 ## ステップ 4:サービスワーカーファイルを作成する
 
@@ -66,6 +66,6 @@ service-worker-url="FILE_PATH_TO_YOUR_SERVICE_WORKER?apiKey={YOUR_API_KEY}&baseU
 >
 ```
 
-特に、`service-worker-URL`はクエリパラメータとして`apiKey`と`baseUrl`（https://dev.appboy.com/api/v3）を追加する必要があります。
+特に、`service-worker-URL` はクエリパラメーターして `apiKey` と `baseUrl` (https://dev.appboy.com/api/v3) を追加する必要があります。
 
-AMPページでプッシュサブスクリプションとサブスクリプション解除の設定が完了しました。 
+AMP ページでプッシュサブスクリプションとサブスクリプション解除の設定が完了しました。 

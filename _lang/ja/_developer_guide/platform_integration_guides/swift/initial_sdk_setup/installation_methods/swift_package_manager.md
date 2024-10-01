@@ -3,13 +3,13 @@ nav_title: Swift Package Manager
 article_title: iOS 向け Swift Package Manager の統合
 platform: Swift
 page_order: 1
-description: "このチュートリアルでは、iOS用のSwiftパッケージマネージャーを使用してBraze Swift SDKをインストールする方法について説明します。"
+description: "このチュートリアルでは、iOS 用 Swift Package Manager を使用した Braze Swift SDK のインストールについて説明します。"
 
 ---
 
 # Swift Package Manager の統合
 
-> Swift SDKを[Swift Package Manager][1]（SPM）を介してインストールすると、インストールプロセスの大部分が自動化されます。このプロセスを開始する前に、[バージョン情報][2]を確認して、Brazeがサポートされていることを確認してください。
+> [Swift Package Manager][1] (SPM) 経由で Swift SDK をインストールすると、インストールプロセスの大部分が自動化されます。このプロセスを開始する前に、[バージョン情報][2]を確認し、お使いの環境が Braze でサポートされていることを確認してください。
 
 ## 依存関係をプロジェクトに追加する
 
@@ -23,17 +23,17 @@ description: "このチュートリアルでは、iOS用のSwiftパッケージ�
 バージョン7.4.0から、Braze SWIFT SDKには、[静的XCFrameworks](https://github.com/braze-inc/braze-swift-sdk-prebuilt-static)および[ダイナミックなXCFrameworks](https://github.com/braze-inc/braze-swift-sdk-prebuilt-dynamic)としての追加の配布チャネルがあります。これらの形式のいずれかを使用したい場合は、それぞれのリポジトリのインストール手順に従ってください。
 {% endalert %}
 
-テキストフィールドにiOS SWIFT SDKリポジトリのURLを入力してください `https://github.com/braze-inc/braze-swift-sdk`。**依存関係ルール**セクションで、SDKバージョンを選択します。最後に、**パッケージを追加**をクリックします。
+iOS Swift SDK リポジトリーのURL `https://github.com/braze-inc/braze-swift-sdk` をテキストフィールドに入力します。**依存関係ルール**セクションで、SDKバージョンを選択します。最後に、**パッケージを追加**をクリックします。
 
 ![][4]
 
 ### パッケージの選択
 
-Braze SWIFT SDKは、機能をスタンドアロンライブラリに分離し、開発者がプロジェクトにインポートする機能をよりコントロールできるようにします。
+Braze Swift SDK は、開発者がどの機能をプロジェクトにインポートするかをより詳細に制御できるように、機能をスタンドアロンライブラリーに分離しています。
 
 | パッケージ | 詳細 |
 | ------- | ------- |
-| `BrazeKit` | メインSDKライブラリーは、分析とプッシュ通知をサポートします。 |
+| `BrazeKit` | 分析とプッシュ通知をサポートする主な SDK ライブラリー |
 | `BrazeLocation` | 位置情報ライブラリーは、位置情報分析とジオフェンス監視をサポートします。 |
 | `BrazeUI` | アプリ内メッセージおよびコンテンツカード用のBraze提供のユーザーインターフェイスライブラリー。 |
 {: .ws-td-nw-1}

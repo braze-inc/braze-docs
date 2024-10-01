@@ -40,7 +40,7 @@ Braze では、デフォルトユーザー属性以外にも、複数の異な�
 
 ### カスタム属性値の設定
 {% tabs %}
-{% tab ブール値 %}
+{% tab Boolean %}
 ```brightscript
 m.Braze.setCustomAttribute("boolAttribute", true)
 ```
@@ -56,7 +56,7 @@ m.Braze.setCustomAttribute("floatAttribute", 3.5)
 ```
 Braze では、FLOAT 値と DOUBLE 値がデータベースでまったく同じく処理されます。
 {% endtab %}
-{% tab 文字列 %}
+{% tab String %}
 ```brightscript
 m.Braze.setCustomAttribute("stringAttribute", "stringValue")
 ```
@@ -109,9 +109,9 @@ SDK から、ユーザーに対して以下のメールのサブスクリプシ�
 
 | サブスクリプションのステータス | 定義 |
 | ------------------- | ---------- |
-| `OptedIn` | サブスクライブされ、明示的にオプトイン |
+| `OptedIn` | 配信登録済み、かつ明示的にオプトイン済み |
 | `Subscribed` | 購読済み、ただし明示的に選択されていない |
-| `UnSubscribed` | サブスクライブされていない、および/または明示的にオプトアウトされた |
+| `UnSubscribed` | 配信停止済みまたは明示的にオプトアウト済み、あるいはその両方 |
 {: .reset-td-br-1 .reset-td-br-2}
 
 >  これらの型は `BrazeConstants().SUBSCRIPTION_STATES` に属します

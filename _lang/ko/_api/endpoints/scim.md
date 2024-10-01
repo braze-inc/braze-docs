@@ -14,19 +14,19 @@ guide_top_text: "[SCIM(교차 도메인 ID 관리 시스템)](http://www.simplec
 
 guide_featured_title: ""
 guide_featured_list:
-  - name: "POST: Create Dashboard User Account"
+  - name: "POST: 대시보드 사용자 계정 만들기"
     link: /docs/post_create_user_account/
     image: /assets/img/braze_icons/plus-circle.svg
-  - name: "GET: Look Up Existing Dashboard User Account"
+  - name: "GET: 기존 대시보드 사용자 계정 조회"
     link: /docs/get_see_user_account_information/
     image: /assets/img/braze_icons/eye.svg
-  - name: "GET: Search Existing Dashboard User Account by Email"
+  - name: "GET: 이메일로 기존 대시보드 사용자 계정 검색"
     link: /docs/get_search_existing_dashboard_user_email/
     image: /assets/img/braze_icons/eye.svg
-  - name: "PUT: Update Dashboard User Account"
+  - name: "PUT: 대시보드 사용자 계정 업데이트"
     link: /docs/post_update_existing_user_account/
     image: /assets/img/braze_icons/pencil-01.svg
-  - name: "DELETE: Remove Dashboard User Account"
+  - name: "DELETE: 대시보드 사용자 계정 제거"
     link: /docs/delete_existing_dashboard_user/
     image: /assets/img/braze_icons/trash-01.svg
 ---

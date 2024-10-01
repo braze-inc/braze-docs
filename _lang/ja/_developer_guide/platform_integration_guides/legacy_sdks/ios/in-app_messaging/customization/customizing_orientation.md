@@ -19,7 +19,7 @@ noindex: true
 すべてのアプリ内メッセージの向きを固定するには、`ABKInAppMessageUIController` で `supportedOrientationMask` プロパティを設定します。アプリが `startWithApiKey:inApplication:withLaunchOptions:` を呼び出した後に、次のコードを追加します。
 
 {% tabs %}
-{% tab 目標-C %}
+{% tab OBJECTIVE-C %}
 
 ```objc
 // Set fixed in-app message orientation to portrait.
@@ -29,7 +29,7 @@ id<ABKInAppMessageUIControlling> inAppMessageUIController = [Appboy sharedInstan
 ```
 
 {% endtab %}
-{% tab 速い %}
+{% tab swift %}
 
 ```swift
 // Set fixed in-app message orientation to portrait
@@ -49,7 +49,7 @@ if let controller = Appboy.sharedInstance()?.inAppMessageController.inAppMessage
 または、メッセージごとに方向を設定することもできます。これを行うには、[アプリ内メッセージデリゲート][1]を設定します。次に、`beforeInAppMessageDisplayed:` デリゲートメソッドで、`ABKInAppMessage` の `orientation` プロパティを設定します。
 
 {% tabs %}
-{% tab 目標-C %}
+{% tab OBJECTIVE-C %}
 
 ```objc
 // Set inAppMessage orientation to portrait
@@ -60,7 +60,7 @@ inAppMessage.orientation = ABKInAppMessageOrientationLandscape;
 ```
 
 {% endtab %}
-{% tab 速い %}
+{% tab swift %}
 
 ```swift    
   // Set inAppMessage orientation to portrait

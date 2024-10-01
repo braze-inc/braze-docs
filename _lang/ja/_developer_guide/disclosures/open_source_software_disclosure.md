@@ -19,7 +19,7 @@ Braze サービスには、オープンソースライセンスの下での使�
 
 このオープンソースコードのリスト (以下「リスト」といいます) は、特定の日付で本サービス内のオープンソースコードを特定する Braze によってライセンスされたサードパーティソフトウェアを使用して、Braze によってすぐに生成されたものであり、特定の時点のみの公開を目的としています。したがって、本リストは随時更新され、完全ではない可能性があります。お客様が Braze サービス内で使用されるオープンソースコードを改変しないことを前提とし、Braze サービスの利用にあたっては、オープンソースライセンスに準じてお客様の知的財産権を第三者に付与したり、オープンソースソフトウェアライセンスに準じてお客様のソースコードの第三者への提供を義務付けたりすることはありません。Braze は、リストまたはその正確性や完全性、あるいはそのようなオープンソースコードやサービスに対するお客様の改変の結果として生じる義務に関して、明示的または黙示的かを問わず、いかなる表明または保証も行いません。Braze のサービスを利用することにより、お客様がそのような改変を行った結果生じるいかなる損害、またはそれによって生じるいかなる義務に対しても、特別損害、結果的損害、付随的損害、その他の直接的または間接的な損害などを含み、Braze は一切の責任を負わないことに同意するものとします。
 
-* ACE -Ajax.org Cloud9 Editor BSD 3条項「新規」または「改訂」ライセンス
+* ACE - Ajax.org Cloud9 Editor BSD 3-clause「New」または「Revised」 License
 * ACE BSD 3-clause「New」または「Revised」License
 * Amazon Device Messaging Amazon
 * Android Support Library Apache 2.0
@@ -34,18 +34,18 @@ Braze サービスには、オープンソースライセンスの下での使�
 * JavaScript Date Format MIT License
 * Knockout JS MIT License
 * Leaflet-MiniMap BSD 2-clause「Simplified」License
-* Leaflet.draw MITライセンス
-* Leaflet.markercluster MITライセンス
+* Leaflet.draw MIT License
+* Leaflet.markercluster MIT License
 * LessCss Apache License 2.0
-* Lex.Db マサチューセッツ工科大学
-* Microsoft.Bcl マイクロソフト
-* Microsoft.Bcl.Build マイクロソフト
-* Microsoft.Net.Http マイクロソフト
+* Lex.Db MIT
+* Microsoft.Bcl Microsoft
+* Microsoft.Bcl.Build Microsoft
+* Microsoft.Net.Http Microsoft
 * Moment JavaScript Date Library MIT License
-* Newtonsoft.Json マサチューセッツ工科大学
+* Newtonsoft.Json MIT
 * NodaTime Apache 2.0
 * Prime31 Unity Activity Unity
-* プロトバフ https://github.com/protocolbuffers/protobuf/blob/master/LICENSE
+* Protobuf https://github.com/protocolbuffers/protobuf/blob/master/LICENSE
 * SDWebImage MIT License
 * SDWebImage MIT
 * ZipArchive Minizip/MIT (https://github.com/mattconnolly/ZipArchive/blob/master/LICENSE)
@@ -93,7 +93,7 @@ Braze サービスには、オープンソースライセンスの下での使�
 * capybara-webkit MIT
 * carhartl's jquery-cookie MIT License
 * cerberus-ruby unknown
-* cheet.js MITライセンス
+* cheet.js MIT License
 * chef Apache 2.0
 * chef-config Apache 2.0
 * chef-zero Apache 2.0
@@ -166,37 +166,37 @@ Braze サービスには、オープンソースライセンスの下での使�
 * github.com/gorilla/mux BSD 3条項「新規」または「改訂」ライセンス
 * github.com/jolestar/go-commons-pool Apache License 2.0
 * github.com/jpillora/backoff MITライセンス
-* github.com/mattn/go-xmpp BSD 3条項「新規」または「改訂」ライセンス
-* github.com/newrelic/goo-agent (BSD 3-clause Clear License)
+* github.com/mattn/go-xmpp BSD 3-clause 「New」または「Revised」 License
+* github.com/newrelic/go-agent (BSD 3-clause Clear License)
 * github.com/newrelic/go-agent/internal (BSD 3-clause Clear License)
-* github.com/newrelic/go-agent/internal?(BSD 3-clause Clear License, 42%)
+* github.com/newrelic/go-agent/internal ?(BSD 3-clause Clear License、42%)
 * github.com/orcaman/concurrent-map MITライセンス
-* github.com/pborman/uuid BSD 3条項「新規」または「改訂」ライセンス
-* github.com/pkg/errors BSD 2条項「簡易」ライセンス
+* github.com/pborman/uuid BSD 3-clause 「New」または「Revised」 License
+* github.com/pkg/errors BSD 2-clause 「Simplified」 License
 * github.com/satori/go.uuid MIT License (98%)
 * github.com/sideshow/apns2 MITライセンス
 * github.com/sideshow/apns2/vendor/github.com/dgrijalva/jwt-go MITライセンス
-* github.com/sideshow/apns2/vendor/golang.org/x/crypto/pkcs12/internal/rc2 BSD 3条項「新規」または「改訂」ライセンス
-* github.com/sideshow/apns2/vendor/golang.org/x/net BSD 3条項「新規」または「改訂」ライセンス
-* github.com/sideshow/apns2/vendor/golang.org/x/text BSD 3条項「新規」または「改訂」ライセンス
+* github.com/sideshow/apns2/vendor/golang.org/x/crypto/pkcs12/internal/rc2 BSD 3-clause 「New」または「Revised」 License
+* github.com/sideshow/apns2/vendor/golang.org/x/net BSD 3-clause 「New」または「Revised」 License
+* github.com/sideshow/apns2/vendor/golang.org/x/text BSD 3-clause 「New」または「Revised」 License
 * github.com/sirupsen/logrus MITライセンス
 * github.com/stretchr/testify MITライセンス (94%)
 * github.com/stretchr/testify/vendor/github.com/davecgh/go-spew/spew ISCライセンス (98%)
-* github.com/stretchr/testify/vendor/github.com/pmezard/go-difflib/difflib BSD 3条項「新規」または「改訂」ライセンス
+* github.com/stretchr/testify/vendor/github.com/pmezard/go-difflib/difflib BSD 3-clause 「New」または「Revised」 License
 * github.com/stretchr/testify/vendor/github.com/stretchr/objx MITライセンス
 * globalid MIT
-* golang.org/x/crypto/hkdf BSD 3条項「新規」または「改訂」ライセンス
-* golang.org/x/crypto/ssh/terminal BSD 3条項「新規」または「改訂」ライセンス
-* golang.org/x/net BSD 3条項「新規」または「改訂」ライセンス
-* golang.org/x/sys/unix BSD 3条項「新規」または「改訂」ライセンス
-* golang.org/x/text BSD 3条項「新規」または「改訂」ライセンス
-* golang.org/x/time/rate BSD 3条項「新規」または「改訂」ライセンス
+* golang.org/x/crypto/hkdf BSD 3-clause 「New」または「Revised」 License
+* golang.org/x/crypto/ssh/terminal BSD 3-clause 「New」または「Revised」 License
+* golang.org/x/net BSD 3-clause 「New」または「Revised」 License
+* golang.org/x/sys/unix BSD 3-clause 「New」または「Revised」 License
+* golang.org/x/text BSD 3-clause 「New」または「Revised」 License
+* golang.org/x/time/rate BSD 3-clause 「New」または「Revised」 License
 * google-protobuf New BSD
 * googleapis-common-protos-types Apache 2.0
 * googleauth Apache 2.0
-* gopkg.in/mgo.v2/bson BSD 2条項「簡易」ライセンス
-* gopkg.in/mgo.v2/internal/json BSD 3条項「新規」または「改訂」ライセンス
-* gopkg.in/mgo.v2/internal/scram BSD 2条項「簡易」ライセンス
+* gopkg.in/mgo.v2/bson BSD 2-clause 「Simplified」 License
+* gopkg.in/mgo.v2/internal/json BSD 3-clause 「New」または「Revised」 License
+* gopkg.in/mgo.v2/internal/scram BSD 2-clause 「Simplified」 License
 * gradle Apache 2.0
 * grape MIT
 * grease MIT

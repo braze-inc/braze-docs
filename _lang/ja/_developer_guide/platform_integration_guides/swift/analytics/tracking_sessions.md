@@ -27,7 +27,7 @@ SDK では、以下のセッションセマンティクスに基づいて、Braz
 [`init(configuration)`][session_tracking_1] に渡された `configuration` オブジェクトで、`sessionTimeout` を希望する整数値に設定できます。
 
 {% tabs %}
-{% tab 速い %}
+{% tab SWIFT %}
 
 ```swift
 // Sets the session timeout to 60 seconds
@@ -40,7 +40,7 @@ let braze = Braze(configuration: configuration)
 AppDelegate.braze = braze
 ```
 {% endtab %}
-{% tab オブジェクティブシー %}
+{% tab OBJECTIVE-C %}
 
 ```objc
 // Sets the session timeout to 60 seconds
@@ -63,18 +63,18 @@ AppDelegate.braze = braze;
 
 ## セッショントラッキングをテストする
 
-ユーザー経由でセッションを検出するには、ダッシュボードでユーザーを見つけ、ユーザープロファイルの「**セッションの概要**」に移動する。「セッション」指標が想定どおりに増加していることを確認することで、セッショントラッキングが機能していることを確認できます。アプリ固有の詳細は、ユーザーが複数のアプリを使用した後に表示される。
+ユーザー経由でセッションを検出するには、ダッシュボードでユーザーを見つけ、ユーザープロファイルの「**セッションの概要**」に移動する。「セッション」指標が想定どおりに増加していることを確認することで、セッショントラッキングが機能していることを確認できます。アプリ固有の詳細は、ユーザーが複数のアプリを使用した後に表示されます。
 
 ![]\[session_tracking_7] セッション数、最終使用日、初使用日を示すユーザープロファイルのセッション概要セクション。]{: style="max-width:40%;"}
 
-アプリ別の詳細は、ユーザーが複数のアプリを使用している場合にのみ表示される。
+アプリ別の詳細は、ユーザーが複数のアプリを使用した場合にのみ表示されます。
 
 ## セッション更新の購読
 
-セッションの更新をリッスンするには [`subscribeToSessionUpdates(_:)`][1]メソッドを使う。セッション開始と終了のイベントは、アプリがフォアグラウンドで実行されているときのみ記録される。セッション終了イベントにコールバックを登録し、アプリがバックグラウンドになった場合、アプリが再びフォアグラウンドになったときにコールバックが起動する。ただし、セッションの継続時間は、アプリを開くかフォアグラウンドにしてから、アプリを閉じるかバックグラウンドにするまでの時間として測定される。
+セッションの更新をリッスンするには、[`subscribeToSessionUpdates(_:)`][1] メソッドを使用します。セッション開始と終了のイベントは、アプリがフォアグラウンドで実行されているときのみ記録される。セッション終了イベントにコールバックを登録し、アプリがバックグラウンドになった場合、アプリが再びフォアグラウンドになったときにコールバックが起動する。ただし、セッションの継続時間は、アプリを開くかフォアグラウンドにしてから、アプリを閉じるかバックグラウンドにするまでの時間として測定されます。
 
 {% tabs %}
-{% tab 速い %}
+{% tab SWIFT %}
 ```swift
 // This subscription is maintained through a Braze cancellable, which will observe changes until the subscription is cancelled.
 // You must keep a strong reference to the cancellable to keep the subscription active.
@@ -90,7 +90,7 @@ let cancellable = AppDelegate.braze?.subscribeToSessionUpdates { event in
 ```
 {% endtab %}
 
-{% tab オブジェクティブシー %}
+{% tab OBJECTIVE-C %}
 ```objc
 // This subscription is maintained through a Braze cancellable, which will observe changes until the subscription is cancelled.
 // You must keep a strong reference to the cancellable to keep the subscription active.

@@ -20,11 +20,11 @@ description: "이 문서에서는 ID 보내기 만들기 Braze 엔드포인트�
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#74a04e53-659f-4473-abc5-0f6f735550ff {% endapiref %}
 
-## 전제 조건
+## 필수 구성 요소
 
 이 엔드포인트를 사용하려면 `sends.id.create` 권한으로 API 키를 생성해야 합니다.
 
-## 요금 제한
+## 사용량 제한
 
 {% multi_lang_include rate_limits.md endpoint='sends id create' %}
 
@@ -44,10 +44,10 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ## 요청 매개변수
 
-| 매개변수 | 필수 | 데이터 유형 | 설명 | 설명
+| 매개변수 | 필수 | 데이터 유형 | 설명 |
 | --------- | ---------| --------- | ----------- |
-| `campaign_id` | 필수 | 문자열 | [캠페인 식별자]({{site.baseurl}}/api/identifier_types/) 참조. |
-|`send_id`| 선택 사항 | 문자열 | [전송 식별자]({{site.baseurl}}/api/identifier_types/) 참조. |
+| `campaign_id` | 필수 | 문자열 | [캠페인 식별자를]({{site.baseurl}}/api/identifier_types/) 참조하세요. |
+|`send_id`| 선택 사항 | 문자열 | [식별자 전송을]({{site.baseurl}}/api/identifier_types/) 참조하세요. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ## 요청 예시
@@ -63,7 +63,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/sends/id/create' \
 
 ## 응답
 
-### 성공 응답 예시
+### 성공 응답의 예
 
 ```json
 Content-Type: application/json

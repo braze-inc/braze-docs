@@ -20,24 +20,24 @@ description: "이 문서에서는 환경설정 센터 URL Braze 엔드포인트 
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#0bc750ff-068e-4391-897e-6eddca2561cd {% endapiref %}
 
-## 전제 조건
+## 필수 구성 요소
 
 이 엔드포인트를 사용하려면 `preference_center.user.get` 권한이 있는 [API 키]({{site.baseurl}}/api/basics#rest-api-key/)가 필요합니다.
 
-## 요금 제한
+## 사용량 제한
 
-이 엔드포인트는 워크스페이스당 분당 1,000건의 요청으로 사용량 제한이 있습니다.
+이 엔드포인트에는 워크스페이스당 분당 1,000개 요청의 사용량 제한이 있습니다.
 
 ## 경로 매개변수
 
-| 매개변수 | 필수 | 데이터 유형 | 설명 | 설명
+| 매개변수 | 필수 | 데이터 유형 | 설명 |
 | --------- | ---------| --------- | ----------- |
 |`preferenceCenterExternalID`| 필수 | 문자열 | 환경설정 센터의 ID입니다. |
 |`userID`| 필수 | 문자열 | 사용자 ID입니다. |
 
 ## 요청 매개변수
 
-| 매개변수 | 필수 | 데이터 유형 | 설명 | 설명
+| 매개변수 | 필수 | 데이터 유형 | 설명 |
 | --------- | ---------| --------- | ----------- |
 |`preference_center_api_id`| 필수 | 문자열 | 환경설정 센터의 ID입니다. |
 |`external_id`| 필수 | 문자열 | 사용자의 외부 ID입니다. |

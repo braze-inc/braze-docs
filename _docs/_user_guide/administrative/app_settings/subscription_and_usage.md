@@ -80,7 +80,7 @@ This graph shows your data point usage across apps.
 
 ![App Level Total Data Point Usage shows data points used for each app.][14]
 
-Select one of the totals to view the **Data Point Usage Over Time** table, which shows your weekly data point totals for each workspace.
+Select one of the totals to view the **Data Point Usage Over Time** table, which shows your weekly data point totals for each workspace.  Rows that have a blank **App Name** column represent data points that aren't associated with any app (such as data points used in requests that don't specify an `app_id`).
 
 ![Data Point Usage Over Time showing total weekly data points for two workspaces.][15]
 
@@ -98,7 +98,7 @@ This graph allows you to view how data point usage is spread across different ev
 
 #### Data point usage over time
 
-This graph gives you the ability to quickly see your total data point usage versus your allotted amount of data points. 
+This graph gives you the ability to quickly see your total data point usage versus your allotted amount of data points.
 
 ![Data Point Usage over time contrasting current billing cycle allotted data points with running total][8]{: style="max-width:90%;"}
 

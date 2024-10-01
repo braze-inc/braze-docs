@@ -10,7 +10,7 @@ channel:
   - in-app messages
 
 guide_top_header: "iOS アプリ内メッセージのカスタマイズ"
-guide_top_text: "Brazeのアプリ内メッセージタイプはすべて、メッセージ、画像、<a href='http://fortawesome.github.io/Font-Awesome/'>Font Awesome</a>アイコン、クリックアクション、分析、編集可能なスタイル、カスタム表示オプション、カスタム配信オプションなど、高度なカスタマイズが可能だ。<a href='/docs/user_guide/message_building_by_channel/in-app_messages/create/'>ダッシュボードから</a>アプリ内メッセージごとに複数のオプションを設定できる。さらに、Braze は、様々なユースケースとニーズを満たすために、複数のレベルの高度なカスタマイズを提供します。"
+guide_top_text: "Brazeのアプリ内メッセージタイプはすべて、メッセージ、画像、<a href='http://fortawesome.github.io/Font-Awesome/'>Font Awesome</a>アイコン、クリックアクション、分析、編集可能なスタイル、カスタム表示オプション、カスタム配信オプションなど、高度なカスタマイズが可能だ。<a href='/docs/user_guide/message_building_by_channel/in-app_messages/create/'>ダッシュボード内</a>からアプリ内メッセージごとに複数のオプションを設定できます。さらに、Braze は、様々なユースケースとニーズを満たすために、複数のレベルの高度なカスタマイズを提供します。"
 description: "このランディングページでは、デリゲートの設定、オリエンテーションのカスタマイズ、カスタム表示処理など、Braze iOS SDK のアプリ内メッセージのカスタマイズオプションについて説明します。"
 
 guide_featured_title: "セクションの記事"

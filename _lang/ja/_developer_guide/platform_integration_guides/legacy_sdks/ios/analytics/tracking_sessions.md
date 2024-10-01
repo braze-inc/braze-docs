@@ -29,7 +29,7 @@ Braze iOS SDK v3.14.1から、Info.plist ファイルを使用してセッショ
 または、[`startWithApiKey`][session_tracking_1] に渡される `appboyOptions` オブジェクト内の `ABKSessionTimeoutKey` キーを目的の整数値に設定することもできます。
 
 {% tabs %}
-{% tab 目標-C %}
+{% tab OBJECTIVE-C %}
 
 ```objc
 // Sets the session timeout to 60 seconds
@@ -40,7 +40,7 @@ Braze iOS SDK v3.14.1から、Info.plist ファイルを使用してセッショ
 ```
 
 {% endtab %}
-{% tab 速い %}
+{% tab SWIFT %}
 
 ```swift
 // Sets the session timeout to 60 seconds

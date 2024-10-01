@@ -151,7 +151,7 @@ In the event that Meta modifies its pricing or packaging for WhatsApp, Braze res
 | WhatsApp - United Arab Emirates Service | 5 |
 | WhatsApp - United Arab Emirates Utility | 4.2 |
 | WhatsApp - United Kingdom Authentication | 9.5 |
-| WhatsApp - United Kingdom Marketing | 18.5 |
+| WhatsApp - United Kingdom Marketing | 14 |
 | WhatsApp - United Kingdom Service | 10.5 |
 | WhatsApp - United Kingdom Utility | 5.8 |
 {: .reset-td-br-1 .reset-td-br-2}

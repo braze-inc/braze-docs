@@ -33,9 +33,9 @@ Braze ダッシュボードで、\[**設定**] ナビゲーションの下にあ
 
 ## ステップ3:Huawei メッセージング SDK をアプリに統合する
 
-ファーウェイは\[Android統合コードラボ][13] ]を提供し、ファーウェイ・メッセージング・サービスをアプリケーションに統合する詳細を説明している。以下の手順に従って開始してください。
+Huawei は、Huawei Messaging Service をアプリケーションに統合する \[Android 統合codelab][13] を提供しています。以下の手順に従って開始してください。
 
-コードラボが完了したら、プッシュトークンを取得してBraze SDKにメッセージを転送するためのカスタム\[Huawei Message Service][14] ]を作成する必要がある。
+codelab が完了したら、カスタムの \[Huawei Message Service][14] を作成してプッシュトークンを取得し、メッセージを Braze SDK に転送する必要があります。
 
 {% tabs %}
 {% tab JAVA %}
@@ -120,7 +120,7 @@ class CustomPushService: HmsMessageService() {
 
 Braze ダッシュボードの Huawei アプリは Android プッシュプラットフォーム上に構築されているため、すべての Android ユーザー (Firebase Cloud Messaging および Huawei Mobile Services) にプッシュを送信するか、キャンペーンオーディエンスを特定のアプリにセグメント化するかを柔軟に選択できます。
 
-Huaweiアプリのみにプッシュを送信するには、\[新しいセグメントを作成し、][15] 、**アプリセクション**内でHuaweiアプリを選択する。
+Huawei アプリのみにプッシュを送信するには、\[新しいセグメントを作成][15] して、\[**アプリ**] セクション内で Huawei アプリを選択します。
 
 ![][8]
 
@@ -138,7 +138,7 @@ Huaweiアプリのみにプッシュを送信するには、\[新しいセグメ
 [6]: {% image_buster /assets/img/huawei/huawei-test-push-composer.png %}
 [7]: {% image_buster /assets/img/huawei/huawei-test-send.png %}
 [8]: {% image_buster /assets/img/huawei/huawei-segmentation.png %}
-[9]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/setting_user_ids/#assigning-a-user-id
+/developer_ guide/platform_integration_guides/android/analytics/setting_user_ids/#assigning-a-user-id
 [10]: {{site.baseurl}}/user_guide/message_building_by_channel/push/push_reporting/
 [12]: {% image_buster /assets/img/huawei/huawei-dashboard-credentials.png %}
 [13]: https://developer.huawei.com/consumer/en/codelab/HMSPushKit/index.html

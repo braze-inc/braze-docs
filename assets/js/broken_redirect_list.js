@@ -129,7 +129,7 @@ validurls['/docs/email_spam_testing/'] = '/docs/user_guide/message_building_by_c
 validurls['/docs/link_templates/'] = '/docs/user_guide/message_building_by_channel/email/templates/link_template/';
 validurls['/docs/user_guide/message_building_by_channel/email/link_templates/'] = '/docs/user_guide/message_building_by_channel/email/templates/link_template/';
 
-validurls['/docs/app_settings/'] = '/docs/user_guide/administrative/app_settings/developer_console/api_settings_tab/#api-settings-tab';
+validurls['/docs/app_settings/'] = '/docs/user_guide/administrative/app_settings/api_settings_tab/';
 validurls['/docs/best_practices/'] = '/docs/help/home/';
 validurls['/docs/campaigns/ideas_and_strategies/'] = '/docs/user_guide/engagement_tools/campaigns/ideas_and_strategies/active_user_campaigns/';
 validurls['/docs/campaigns/scheduling_and_organizing/'] = '/docs/user_guide/engagement_tools/campaigns/scheduling_and_organizing/scheduling_your_campaign/';
@@ -1206,5 +1206,6 @@ validurls['/docs/developer_guide/platform_integration_guides/legacy_sdks/ios/ini
 validurls['/docs/pick_up_where_you_left_off'] = '/docs/user_guide/data_and_analytics/analytics/home_dashboard/#pick-up-where-you-left-off';
 
 validurls['/docs/templating_catalog_items_liquid/'] = '/docs/user_guide/personalization_and_dynamic_content/catalogs/catalog/#using-liquid';
+validurls['/docs/developer_guide/platform_integration_guides/swift/initial_sdk_setup/overviewother_sdk_customizations/#optional-idfa-collection/'] = '/docs/developer_guide/platform_integration_guides/legacy_sdks/ios/initial_sdk_setup/other_sdk_customizations/#optional-idfa-collection';
 
 // validurls['OLD'] = 'NEW';

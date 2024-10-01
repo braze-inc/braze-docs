@@ -1,6 +1,6 @@
 ---
-nav_title: "GET: 목록 카탈로그 항목 세부 정보"
-article_title: "GET: 목록 카탈로그 항목 세부 정보"
+nav_title: "GET: 카탈로그 항목 세부 정보 나열"
+article_title: "GET: 카탈로그 항목 세부 정보 나열"
 search_tag: Endpoint
 page_order: 2
 
@@ -10,12 +10,12 @@ description: "이 문서에서는 목록 카탈로그 항목 세부 정보 Braze
 
 ---
 {% api %}
-# 목록 카탈로그 항목 세부 정보
+# 카탈로그 항목 세부 정보 나열
 {% apimethod get %}
 /catalogs/{catalog_name}/items/{item_id}
 {% endapimethod %}
 
-> 이 끝점을 사용하여 카탈로그 항목과 해당 콘텐츠를 반환합니다.
+> 이 엔드포인트를 사용하여 카탈로그 항목과 해당 콘텐츠를 반환합니다.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#52c6631c-7366-48e5-9e0e-16de7b6285cc {% endapiref %}
 
@@ -27,9 +27,9 @@ description: "이 문서에서는 목록 카탈로그 항목 세부 정보 Braze
 
 {% multi_lang_include rate_limits.md endpoint='synchronous catalog item' %}
 
-## 경로 매개 변수
+## 경로 매개변수
 
-| 매개 변수 | 필수 | 데이터형 | 설명 |
+| 매개변수 | 필수 | 데이터 유형 | 설명 |
 |---|---|---|---|
 | `catalog_name` | 필수 | 문자열 | 카탈로그의 이름입니다. |
 | `item_id` | 필수 | 문자열 | 카탈로그 항목의 ID입니다. |
@@ -49,11 +49,11 @@ curl --location --request GET 'https://rest.iad-03.braze.com/catalogs/restaurant
 
 ## 응답
 
-이 엔드포인트에 대한 상태 코드 응답은 `200` 및 `404` 두 가지가 있습니다.
+이 엔드포인트에 대한 상태 코드 응답은 `200` 및 `404` 두 가지입니다.
 
 ### 성공 응답의 예
 
-`200` 상태 코드는 다음 응답 본문을 반환할 수 있습니다.
+`200` 상태 코드는 다음과 같은 응답 본문을 반환할 수 있습니다.
 
 ```json
 {
@@ -74,7 +74,7 @@ curl --location --request GET 'https://rest.iad-03.braze.com/catalogs/restaurant
 
 ### 오류 응답의 예
 
-`404` 상태 코드는 다음 응답을 반환할 수 있습니다. 발생할 수 있는 오류에 대한 자세한 내용은 [문제 해결](#troubleshooting) 을 참조하십시오.
+`404` 상태 코드는 다음 응답을 반환할 수 있습니다. 발생할 수 있는 오류에 대한 자세한 내용은 [문제 해결을](#troubleshooting) 참조하세요.
 
 ```json
 {
@@ -101,7 +101,7 @@ curl --location --request GET 'https://rest.iad-03.braze.com/catalogs/restaurant
 | 오류 | 문제 해결 |
 | --- | --- |
 | `catalog-not-found` | 카탈로그 이름이 유효한지 확인합니다. |
-| `item-not-found` | 항목이 카탈로그에 있는지 확인합니다. |
+| `item-not-found` | 해당 품목이 카탈로그에 있는지 확인합니다. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% endapi %}

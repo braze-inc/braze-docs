@@ -1,15 +1,19 @@
 ---
-nav_title: Required Information for 10DLC Application
-permalink: /10dlc_application/
-hidden: true
+nav_title: 10DLC Application
+article_title: Required Information for 10DLC application
+alias: /10dlc_application/
 page_type: reference
+description: "This article covers the company and SMS campaign information Braze needs if you're working with us to register your 10DLC."
+channel:
+  - SMS
 ---
 
 # Required information for 10DLC application
 
-Customers who purchase from Braze assistance with registering their 10DLC are required to submit to Braze answers to all of the information requested at the email further below, as agreed upon in the applicable contract between Customer and Braze.
+If you’ve purchased help from Braze to register your 10DLC, you’ll need to send us all the required information listed to the email below, as agreed in your contract with us.
 
-The information, including any relevant screenshots and attachments, must be submitted to [smsapplications@braze.com](mailto:smsapplications@braze.com). If you have questions about 10DLC, please refer to the [Braze SMS 10DLC guide]({{site.baseurl}}/assets/pdf/SMS_10DLC_Guide.pdf) or reach out to your Braze customer success manager.
+Please include any relevant screenshots and attachments and send everything to [smsapplications@braze.com](mailto:smsapplications@braze.com). If you have any questions about 10DLC, check out the [Braze SMS 10DLC guide]({{site.baseurl}}/assets/pdf/SMS_10DLC_Guide.pdf) or contact your Braze customer success manager.
+
 
 ## Company Information (10DLC)
 

@@ -9,7 +9,7 @@ channel:
 
 guide_top_header: "Swift Push カスタマイズ"
 guide_top_text: ""
-description: "このランディングページは、Swift push カスタマイズに関連するすべての事柄のホームページです。"
+description: "このランディングページには、Swift のプッシュカスタマイズに関連するすべての情報が掲載されています。"
 
 guide_featured_title: "セクションの記事"
 guide_featured_list:

@@ -18,11 +18,11 @@ description: "이 문서에서는 스팸 목록에서 이메일 주소 제거 Br
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#1614a82f-510a-4c37-95a6-8207a125e487 {% endapiref %}
 
-## 전제 조건
+## 필수 구성 요소
 
 이 엔드포인트를 사용하려면 `email.spam.remove` 권한이 있는 [API 키]({{site.baseurl}}/api/basics#rest-api-key/)가 필요합니다.
 
-## 요금 제한
+## 사용량 제한
 
 {% multi_lang_include rate_limits.md endpoint='default' %}
 
@@ -40,9 +40,9 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ## 요청 매개변수
 
-| 매개변수 | 필수 | 데이터 유형 | 설명 | 설명
+| 매개변수 | 필수 | 데이터 유형 | 설명 |
 | ----------|-----------| --------|------- |
-| `email` | 필수 입력 사항 | 문자열 또는 배열 | 수정할 이메일 주소 문자열 또는 수정할 이메일 주소의 최대 50개 배열입니다. |
+| `email` | 필수 | 문자열 또는 배열 | 수정할 이메일 주소를 문자열로 입력하거나 수정할 이메일 주소를 최대 50개까지 배열할 수 있습니다. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ## 요청 예시
