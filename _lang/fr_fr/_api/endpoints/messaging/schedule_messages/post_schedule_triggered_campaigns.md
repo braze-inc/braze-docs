@@ -1,6 +1,6 @@
 ---
-nav_title: "POST : Planifier des campagnes déclenchées par API"
-article_title: "POST : Planifier des campagnes déclenchées par API"
+nav_title: "POST : Planifier des campagnes déclenchées par l'API"
+article_title: "POST : Planifier des campagnes déclenchées par l'API"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
@@ -14,11 +14,11 @@ description: "Cet article présente en détail l’endpoint Braze Planifier des 
 /campaigns/trigger/schedule/create
 {% endapimethod %}
 
-> Utilisez ce point de terminaison pour envoyer des messages de campagne créés par un tableau de bord via une diffusion déclenchée par l’API, ce qui vous permet de décider quelle action doit déclencher l’envoi du message. 
+> Utilisez cet endpoint pour envoyer des messages de campagne créés dans le tableau de bord via une réception/distribution déclenchée par l'API, ce qui vous permet de décider quelle action doit déclencher l'envoi du message. 
 
 Vous pouvez indiquer les `trigger_properties` qui seront modélisées dans le message lui-même.
 
-Notez que pour envoyer des messages avec cet endpoint, vous devez avoir un ID de campagne créé lorsque vous élaborez une []({{site.baseurl}}/api/identifier_types/)campagne déclenchée par API[]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/api_triggered_delivery/).
+Notez que pour envoyer des messages avec cet endpoint, vous devez disposer d'un [ID de campagne]({{site.baseurl}}/api/identifier_types/), créé lorsque vous créez une [campagne déclenchée par l'API]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/api_triggered_delivery/).
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#b7e61de7-f2c2-49c9-9e46-b85a0aa01bba {% endapiref %}
 
@@ -59,15 +59,15 @@ Authorization: Bearer YOUR-REST-API-KEY
 ```
 ## Paramètres de demande
 
-| Paramètre | Obligatoire | Type de données | Descriptif |
+| Paramètre | Requis | Type de données | Description |
 | --------- | ---------| --------- | ----------- |
-|`campaign_id`|Obligatoire|Chaîne| Voir [l’identifiant de la campagne]({{site.baseurl}}/api/identifier_types/)|
-| `send_id` | Facultatif | Chaîne | Voir [Identificateur d’envoi]({{site.baseurl}}/api/identifier_types/). |
-| `recipients` | Facultatif | Tableau d’objets destinataires | Voir [l’objet recipients]({{site.baseurl}}/api/objects_filters/recipient_object/). |
-| `audience` | Facultatif | Objet d’audience connectée | Voir [l’audience connectée]({{site.baseurl}}/api/objects_filters/connected_audience/). |
-|`broadcast`| Facultatif | Booléen | Vous devez définir `broadcast` sur « true » lorsque vous envoyez un message à un segment entier qui est ciblé par une campagne ou un canvas. Ce paramètre est défini sur Faux par défaut (au 31 août 2017). <br><br> Si `broadcast` est défini sur « true », une liste `recipients` ne peut pas être incluse. Cependant, faites attention lors de la configuration de  car en configurant involontairement cet indicateur, vous pourriez envoyer votre message à une audience plus importante que prévue.
-| `trigger_properties` | Facultatif | Objet | Paires clé-valeur de personnalisation pour tous les utilisateurs de cet envoi. Voir [Propriétés du déclencheur]({{site.baseurl}}/api/objects_filters/trigger_properties_object/). |
-| `schedule` | Obligatoire | Objet Planification | Voir [objet de planification]({{site.baseurl}}/api/objects_filters/schedule_object/). |
+|`campaign_id`|Requis|Chaîne de caractères| Voir [identifiant de campagne]({{site.baseurl}}/api/identifier_types/)|
+| `send_id` | Facultatif | Chaîne de caractères | Voir [identifiant d'envoi]({{site.baseurl}}/api/identifier_types/). | 
+| `recipients` | Facultatif | Tableau des objets Destinataires | Voir [objet destinataire]({{site.baseurl}}/api/objects_filters/recipient_object/). |
+| `audience` | Facultatif | Objet Audience connectée | Voir [audience connectée]({{site.baseurl}}/api/objects_filters/connected_audience/). |
+|`broadcast`| Facultatif | Valeur booléenne | Vous devez définir `broadcast` sur « true » lorsque vous envoyez un message à un segment entier qui est ciblé par une campagne ou un Canvas. Ce paramètre est défini sur Faux par défaut (au 31 août 2017). <br><br> Si `broadcast` est défini sur « true », une liste `recipients` ne peut pas être incluse. Cependant, faites attention lors de la configuration de `broadcast: true` car en configurant involontairement cet indicateur, vous pourriez envoyer votre message à une audience plus importante que prévue. |
+| `trigger_properties` | Facultatif | Objet | Personnalisation des paires clé-valeur pour tous les utilisateurs de cet envoi. Voir les [propriétés du déclencheur]({{site.baseurl}}/api/objects_filters/trigger_properties_object/). |
+| `schedule` | Requis | Objet Planification | Voir [objet de planification]({{site.baseurl}}/api/objects_filters/schedule_object/). |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ## Exemple de demande
