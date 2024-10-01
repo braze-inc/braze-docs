@@ -1,6 +1,6 @@
 ---
-nav_title: "GET : Exporter le résumé analyse des données de Canvas"
-article_title: "GET : Exporter le résumé analyse des données de Canvas"
+nav_title: "GET : Exporter les données du canvas Résumé des analyses"
+article_title: "GET : Exporter les données du canvas Résumé des analyses"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
@@ -11,7 +11,7 @@ description: "Cet article présente en détail l’endpoint Braze Exporter le r�
 {% api %}
 # Exporter le résumé analyse des données de Canvas
 {% apimethod get %}
-/canvas/data_summary
+/toile/résumé_des_données
 {% endapimethod %}
 
 > Utilisez cet endpoint pour exporter des cumuls de données de série temporelles pour un Canvas, fournissant ainsi un résumé concis des résultats de Canvas.
@@ -28,15 +28,15 @@ Pour utiliser cet endpoint, vous aurez besoin d'une [clé API]({{site.baseurl}}/
 
 ## Paramètres de demande
 
-| Paramètre | Obligatoire | Type de données | Descriptif |
+| Paramètre | Requis | Type de données | Description |
 | --------- | -------- | --------- | ----------- |
-| `canvas_id` | Obligatoire | Chaîne | Voir [Identifiant de l’API Canvas]({{site.baseurl}}/api/identifier_types/). |
-| `ending_at` | Obligatoire | Date/heure <br>(Chaîne de caractères [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601)) | Date à laquelle l’exportation des données doit se terminer. Par défaut, l’heure de la demande.
-| `starting_at` | Facultatif* | Date/heure <br>(Chaîne de caractères [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601)) | Date à laquelle l’exportation de données doit commencer. <br><br>`length` `starting_at` ou  est nécessaire.
-| `length` | Facultatif* | Chaîne | Nombre maximum de jours avant `ending_at` à inclure dans la série retournée. Doit être compris entre 1 et 14 (inclus). <br><br>\* L’un ou `length` `starting_at` l’autre est requis. |
-| `include_variant_breakdown` | Facultatif | Booléen | Indique s’il faut ou non inclure les statistiques de variantes (valeur par défaut ). `false`  |
-| `include_step_breakdown` | Facultatif | Booléen | Indique s’il faut inclure ou non les statistiques d’étape `false`(valeur par défaut ). |
-| `include_deleted_step_data` | Facultatif | Booléen | Inclure ou non les statistiques d'étapes pour les étapes supprimées (la valeur par défaut est `false`). |
+| `canvas_id` | Requis | Chaîne de caractères | Voir [identifiant de l'API Canvas]({{site.baseurl}}/api/identifier_types/). |
+| `ending_at` | Requis | DateTime <br>(string [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601)) | Date à laquelle l’exportation de données doit se terminer. Par défaut, l’heure de la demande. |
+| `starting_at` | Optionnel* | DateTime <br>(string [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601)) | Date à laquelle l’exportation de données doit commencer. <br><br>Soit `length` ou `starting_at` est requis. |
+| `length` | Optionnel* | Chaîne de caractères | Nombre maximum de jours avant `ending_at` à inclure dans la série renvoyée. Doit être compris entre 1 et 14 (inclus). <br><br>Soit `length` ou `starting_at` est requis. |
+| `include_variant_breakdown` | Facultatif | Valeur booléenne | S’il faut inclure ou non des statistiques de variante (par défaut sur `false`).  |
+| `include_step_breakdown` | Facultatif | Valeur booléenne | S’il faut inclure ou non des statistiques d’étape (par défaut sur `false`). |
+| `include_deleted_step_data` | Facultatif | Valeur booléenne | S’il faut inclure ou non des statistiques d’étape pour les étapes supprimées (par défaut sur `false`). |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ## Exemple de demande
@@ -97,7 +97,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 ```
 
 {% alert tip %}
-Pour obtenir de l’aide sur les exportations CSV et de l’API, consultez la section Résolution des problèmes d’exportation[]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/).
+Pour obtenir de l’aide sur les exportations CSV et de l’API, consultez la section [Résolution des problèmes d’exportation]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/).
 {% endalert %}
 
 {% endapi %}
