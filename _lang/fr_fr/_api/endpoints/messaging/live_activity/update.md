@@ -15,9 +15,9 @@ description: "Cet article présente en détail l’endpoint Mettre à jour l’a
 /messages/live_activity/update
 {% endapimethod %}
 
-> Utilisez ce point de terminaison pour mettre à jour et mettre fin [aux activités en direct]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/live_activities/live_activities/) affichées par votre application iOS. Cet endpoint nécessite une configuration supplémentaire.
+> Utilisez cet endpoint pour mettre à jour et terminer les [activités en direct]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/live_activities/live_activities/) affichées par votre application iOS. Cet endpoint nécessite une configuration supplémentaire.
 
-Après avoir enregistré une activité en direct, vous pouvez transmettre une charge utile JSON pour mettre à jour votre service Apple Push Notification (APN). Consultez la documentation d'Apple sur [la mise à jour de votre activité en direct avec des charges utiles de notification push](https://developer.apple.com/documentation/activitykit/updating-and-ending-your-live-activity-with-activitykit-push-notifications) pour plus d'informations.
+Après avoir enregistré une activité en direct, vous pouvez passer une charge utile JSON pour mettre à jour votre service de notification push Apple (APNs). Consultez la documentation d'Apple sur [la mise à jour de votre activité en direct avec des charges utiles de notification push](https://developer.apple.com/documentation/activitykit/updating-and-ending-your-live-activity-with-activitykit-push-notifications) pour plus d'informations.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#2300226e-f26a-4154-9bcc-5883f1f294cd {% endapiref %}
 
@@ -48,15 +48,15 @@ Pour utiliser cet endpoint, vous devrez effectuer les opérations suivantes :
 
 ## Paramètres de demande
 
-| Paramètre | Obligatoire | Type de données | Descriptif |
+| Paramètre | Requis | Type de données | Description |
 |---|---|---|---|
-| `app_id` | Obligatoire | Chaîne | [Identifiant de l'API]({{site.baseurl}}/api/identifier_types/#the-app-identifier) de l'application récupéré à partir de la page [Clés API]({{site.baseurl}}/user_guide/administrative/app_settings/api_settings_tab/) . |
-| `activity_id` | Obligatoire | Chaîne | Lorsque vous enregistrez votre activité en direct en utilisant [`launchActivity`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/liveactivities-swift.class), vous utilisez le `pushTokenTag` paramètre pour nommer le jeton push de l’activité dans une chaîne personnalisée.<br><br>Ensemble `activity_id` à cette chaîne personnalisée pour définir quelle activité en direct vous souhaitez mettre à jour. |
-| `content_state` | Obligatoire | Objet | Vous définissez les paramètres `ContentState` lorsque vous créez votre activité en direct. Transmettez les valeurs mises à jour pour votre `ContentState` en utilisant cet objet.<br><br>Le format de cette requête doit correspondre à la forme que vous avez initialement définie.
-| `end_activity` | Facultatif | Booléen | Si `true`, cette demande met fin à l'activité en direct. |
-| `dismissal_date` | Facultatif | Dateheure <br>(Chaîne de caractères [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601)) | Ce paramètre définit le moment de suppression de l’activité en direct de l’interface utilisateur. Si cette fois est dans le passé et `end_activity` est `true`, l'activité en direct sera immédiatement supprimée.<br><br> Si `end_activity` est `false` ou omis, ce paramètre met uniquement à jour l'activité en direct.|
-| `stale_date` | Facultatif | Dateheure <br>(Chaîne de caractères [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601)) | Ce paramètre indique au système quand le contenu de l’activité en direct devient obsolète dans l’interface utilisateur. |
-| `notification` | Facultatif | Objet | Inclure un [`apple_push`]({{site.baseurl}}/api/objects_filters/messaging/apple_object/) objet pour définir une notification push. Le comportement de cette notification push dépend du fait que l’utilisateur soit actif ou utilise un appareil proxy. {::nomarkdown}<ul><li>Si une <code>notification</code> est incluse et que l'utilisateur est actif sur son iPhone lorsque la mise à jour est livrée, l'interface utilisateur d'activité en direct mise à jour glissera vers le bas et s'affichera comme une notification push.</li><li>Si une <code>notification</code> est incluse et que l'utilisateur n'est pas actif sur son iPhone, son écran s'allumera pour afficher l'interface utilisateur d'activité en direct mise à jour sur son écran de verrouillage.</li><li>L' <code>alerte de notification</code> ne s'affichera pas comme une notification push standard. De plus, si un utilisateur dispose d'un appareil proxy, comme une Apple Watch, l' <code>alerte</code> y sera affichée.</li></ul>{:/} |
+| `app_id` | Requis | Chaîne de caractères | Identifiant [API]({{site.baseurl}}/api/identifier_types/#the-app-identifier) récupéré depuis la page [Clés API]({{site.baseurl}}/user_guide/administrative/app_settings/api_settings_tab/).  |
+| `activity_id` | Requis | Chaîne de caractères | Lorsque vous enregistrez votre Activité en direct en utilisant [`launchActivity`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/liveactivities-swift.class), vous utilisez le paramètre `pushTokenTag` pour nommer le jeton push de l'Activité avec une chaîne personnalisée.<br><br>Définissez l’`activity_id` vers cette chaîne de caractères personnalisée pour définir l’activité en direct que vous souhaitez mettre à jour. |
+| `content_state` | Requis | Objet | Vous définissez les paramètres `ContentState` lorsque vous créez votre activité en direct. Transmettez les valeurs mises à jour pour votre `ContentState` en utilisant cet objet.<br><br>Le format de cette requête doit correspondre à la forme que vous avez initialement définie. |
+| `end_activity` | Facultatif | Valeur booléenne | Si `true`, cette requête met fin à l’activité en direct. |
+| `dismissal_date` | Facultatif | DateTime <br>chaîne ([ISO-8601](https://en.wikipedia.org/wiki/ISO_8601)) | Ce paramètre définit le moment de suppression de l’activité en direct de l’interface utilisateur. Si cette heure est dans le passé et `end_activity` est `true`, l'Activité en direct sera supprimée immédiatement.<br><br> Si `end_activity` est `false` ou omis, ce paramètre met uniquement à jour l'Activité en direct.|
+| `stale_date` | Facultatif | DateTime <br>chaîne ([ISO-8601](https://en.wikipedia.org/wiki/ISO_8601)) | Ce paramètre indique au système quand le contenu de l’activité en direct devient obsolète dans l’interface utilisateur. |
+| `notification` | Facultatif | Objet | Inclure un [`apple_push`]({{site.baseurl}}/api/objects_filters/messaging/apple_object/) objet pour définir une notification push. Le comportement de cette notification push dépend du fait que l’utilisateur soit actif ou utilise un appareil proxy. {::nomarkdown}<ul><li>Si un <code>notification</code> est inclus et que l’utilisateur est actif sur son iPhone lorsque la mise à jour est livrée, l’interface utilisateur de l’activité en direct mise à jour glissera vers le bas et s’affichera comme une notification push.</li><li>Si un <code>notification</code> est inclus et que l’utilisateur n’est pas actif sur son iPhone, son écran s’allume pour afficher l’interface utilisateur de l’activité en direct mise à jour sur son écran de verrouillage.</li><li>Le paramètre <code>notification alert</code> ne s’affichera pas comme une notification push standard. De plus, si un utilisateur dispose d’un appareil proxy, comme une Apple Watch, le <code>alert</code> s’affichera ici.</li></ul>{:/} |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
 ## Exemple de demande
@@ -100,7 +100,7 @@ Un code de statut `201` est renvoyé si la requête a été formatée correcteme
 
 ### Exemple de réponse échouée
 
-La classe du code de statut `4XX` indique une erreur client. Reportez-vous à l' [article Erreurs et réponses de l'API]({{site.baseurl}}/api/errors/) pour plus d'informations sur les erreurs que vous pouvez rencontrer.
+La classe du code de statut `4XX` indique une erreur client. Reportez-vous à l'article [erreurs et réponses de l'API]({{site.baseurl}}/api/errors/) pour plus d'informations sur les erreurs que vous pouvez rencontrer.
 
 Le code de statut `400` pourrait renvoyer le corps de réponse suivant. 
 
