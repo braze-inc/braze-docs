@@ -76,10 +76,12 @@ For this use case, we recommend creating one catalog for your accounts and one f
 
 #### Step 1: Map over your CRM fields 
 
-The tables below includes a few examples of fields you can map over from your CRM's account and opportunity objects. In this use case, Salesforce is the example CRM system. You can map over any field that is included in your CRM's objects.
+The tables below include a few examples of fields you can map over from your CRM's account and opportunity objects.
 
 {% tabs %}
 {% tab Account catalog %}
+
+In this use case, Salesforce is the example CRM system. You can map over any field that is included in your CRM's objects.
 
 <table border="1">
   <tr>
@@ -89,7 +91,7 @@ The tables below includes a few examples of fields you can map over from your CR
     <th><b>CRM field (Salesforce)</b></th>
   </tr>
   <tr>
-    <td rowspan="3">Catalog &gt; Account catalog</td>
+    <td rowspan="4">Catalog &gt; Account catalog</td>
     <td><code>id</code></td>
     <td><code>account</code></td>
     <td><code>id</code></td>
@@ -104,10 +106,19 @@ The tables below includes a few examples of fields you can map over from your CR
     <td><code>account</code></td>
     <td><code>Type</code></td>
   </tr>
+  <tr>
+    <td><code>OTHER_FIELDS</code></td>
+    <td><code>OTHER_OBJECTS</code></td>
+    <td><code>OTHER_FIELDS</code></td>
+  </tr>
 </table>
+
+![Table of Salesforce accounts with respective information, such as billing address and account owner.]({% image_buster /assets/img/b2b/sf_accounts.png %})
 
 {% endtab %}
 {% tab Opportunity catalog %}
+
+In this use case, Salesforce is the example CRM system. You can map over any field that is included in your CRM's objects.
 
 <table border="1">
   <tr>
@@ -117,7 +128,7 @@ The tables below includes a few examples of fields you can map over from your CR
     <th><b>CRM field (Salesforce)</b></th>
   </tr>
   <tr>
-    <td rowspan="3">Catalog &gt; Opportunity catalog</td>
+    <td rowspan="4">Catalog &gt; Opportunity catalog</td>
     <td><code>id</code></td>
     <td><code>opportunity</code></td>
     <td><code>id</code></td>
@@ -131,8 +142,15 @@ The tables below includes a few examples of fields you can map over from your CR
     <td><code>Territory</code></td>
     <td><code>opportunity</code></td>
     <td><code>Territory</code></td>
+  <tr>
+    <td><code>OTHER_FIELDS</code></td>
+    <td><code>OTHER_OBJECTS</code></td>
+    <td><code>OTHER_FIELDS</code></td>
+  </tr>
   </tr>
 </table>
+
+![Table of Salesforce opportunities with respective information, such as billing address and account owner.]({% image_buster /assets/img/b2b/sf_opportunities.png %})
 
 {% endtab %}
 {% endtabs %}
