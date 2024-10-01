@@ -609,7 +609,7 @@ This is the total number of delivered emails that have been opened by a single u
 All
 {% endapitags %}
 
-The number of unique daily recipients, or users who received a particular message in a day. This number is received from Braze.
+The number of unique daily recipients, or users who received a particular message in a day. This number is received from Braze and is based on the `user_id`.
 
 <span class="calculation-line">Calculation: Count</span>
 
