@@ -1,6 +1,6 @@
 ---
-nav_title: "POST : Suivi utilisateur"
-article_title: "POST : Suivi utilisateur"
+nav_title: "POST : Suivre les utilisateurs"
+article_title: "POST : Suivre les utilisateurs"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
@@ -14,10 +14,10 @@ description: "Cet article présente en détail l’endpoint Braze Suivi utilisat
 /users/track
 {% endapimethod %}
 
-> Utilisez ce point de terminaison pour enregistrer des événements et des achats personnalisés et mettre à jour les attributs du profil utilisateur.
+> Utilisez cet endpoint pour enregistrer les événements et les achats personnalisés et mettre à jour les attributs du profil utilisateur.
 
 {% alert note %}
-Braze traite les données transmises via l’API à leur valeur nominale et les clients ne devraient transmettre des deltas (modification des données) que pour minimiser la consommation inutile de points de données. Pour en savoir plus, consultez Points de données[]({{site.baseurl}}/user_guide/data_and_analytics/data_points/).
+Braze traite les données transmises via l'API à leur valeur nominale, et les clients ne doivent transmettre que des deltas (données changeantes) afin de minimiser la consommation inutile de points de données. Pour en savoir plus, consultez la rubrique [Points de données]({{site.baseurl}}/user_guide/data_and_analytics/data_points/).
 {% endalert %}
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#4cf57ea9-9b37-4e99-a02e-4373c9a4ee59 {% endapiref %}
@@ -55,16 +55,16 @@ Pour chaque composant de requête répertorié dans le tableau suivant, l'un des
 
 | Paramètre | Requis | Type de données | Description |
 | --------- | ---------| --------- | ----------- |
-| `attributes` | Facultatif | Tableau d'objets d'attributs | Voir [l'objet Attributs utilisateur]({{site.baseurl}}/api/objects_filters/user_attributes_object/) |
-| `events` | Facultatif | Tableau d'objets événementiels | Voir [l'objet événements]({{site.baseurl}}/api/objects_filters/event_object/) |
-| `purchases` | Facultatif | Tableau d'objets d'achat | Voir [Objet Achats]({{site.baseurl}}/api/objects_filters/purchase_object/) |
+| `attributes` | Facultatif | Tableau d’objets Attributs | Voir [objet attributs de l'utilisateur]({{site.baseurl}}/api/objects_filters/user_attributes_object/) |
+| `events` | Facultatif | Tableau d’objets Événement | Voir l'[objet "événements"]({{site.baseurl}}/api/objects_filters/event_object/). |
+| `purchases` | Facultatif | Tableau d’objets Achat | Voir les [achats d'objets]({{site.baseurl}}/api/objects_filters/purchase_object/) |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ## Exemple de requêtes
 
-### Mettre à jour un profil utilisateur par adresse e-mail
+### Mise à jour d'un profil utilisateur par adresse e-mail
 
-À l’aide de l’endpoint `/users/track`, vous pouvez mettre à jour un profil utilisateur par adresse e-mail. 
+Vous pouvez mettre à jour un profil utilisateur par adresse e-mail en utilisant l'endpoint `/users/track`. 
 
 ```
 curl --location --request POST 'https://rest.iad-01.braze.com/users/track' \
@@ -135,12 +135,12 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/track' \
 }'
 ```
 
-### Mettre à jour un profil utilisateur par numéro de téléphone
+### Mise à jour d'un profil utilisateur par numéro de téléphone
 
-Vous pouvez mettre à jour un profil utilisateur par numéro de téléphone en utilisant l’endpoint `/users/track`. Ce point de terminaison ne fonctionne que si vous incluez un numéro de téléphone valide.
+Vous pouvez mettre à jour un profil utilisateur par numéro de téléphone en utilisant l’endpoint `/users/track`. Cet endpoint ne fonctionne que si vous indiquez un numéro de téléphone valide.
 
 {% alert important %}
-Si vous incluez une demande à la fois par e-mail et par téléphone, Braze utilisera l'e-mail comme identifiant.
+Si vous incluez une demande avec à la fois un e-mail et un téléphone, Braze utilisera l'e-mail comme identifiant.
 {% endalert %}
 
 ```
@@ -162,11 +162,11 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/track' \
     ],
 }'
 ```
-### Définir des groupes d'abonnement
+### Définir les groupes d'abonnement
 
-Cet exemple montre comment créer un utilisateur et définir son groupe d'abonnement dans l'objet d'attributs utilisateur. 
+Cet exemple montre comment créer un utilisateur et définir son groupe d'abonnement dans l'objet attributs de l'utilisateur. 
 
-La mise à jour du statut d’abonnement avec cet endpoint mettra à jour l’utilisateur spécifié par son `external_id` (comme User1) et mettre à jour le statut de l’abonnement de tous les utilisateurs ayant le même e-mail que cet utilisateur (Utilisateur1).
+La mise à jour de l'état de l'abonnement avec cet endpoint mettra à jour l'utilisateur spécifié par son `external_id` (par exemple User1) et mettra à jour l'état de l'abonnement de tous les utilisateurs ayant le même e-mail que cet utilisateur (User1).
 
 ```
 curl --location --request POST 'https://rest.iad-01.braze.com/users/track' \
@@ -222,7 +222,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/track' \
 
 ## Réponses
 
-Lorsque vous utilisez l'une des requêtes API mentionnées ci-dessus, vous devriez recevoir l'une des trois réponses générales suivantes : un [message réussi](#successful-message), un [message réussi avec des erreurs non fatales](#successful-message-with-non-fatal-errors)ou un [message avec des erreurs fatales](#message-with-fatal-errors).
+Lorsque vous utilisez l'une des requêtes API susmentionnées, vous devriez recevoir l'une des trois réponses générales suivantes : un [message de réussite](#successful-message), un [message de réussite avec des erreurs non fatales](#successful-message-with-non-fatal-errors) ou un [message avec des erreurs fatales](#message-with-fatal-errors).
 
 ### Message réussi
 
@@ -271,25 +271,27 @@ Si votre message contient une erreur fatale, vous recevrez la réponse suivante�
 
 ### Codes de réponse des erreurs fatales
 
-Pour les codes de statut et les messages d’erreur associés qui seront renvoyés si votre demande rencontre une erreur fatale, consultez la section []({{site.baseurl}}/api/errors/#fatal-errors)Erreurs fatales et réponses.
+Pour connaître les codes d'état et les messages d'erreur associés qui seront renvoyés si votre demande rencontre une erreur fatale, reportez-vous à la section [Erreurs fatales et réponses.]({{site.baseurl}}/api/errors/#fatal-errors)
 
-Si vous recevez l'erreur « à condition que l'id\_externe soit sur liste noire et non autorisé », votre demande peut avoir inclus un « utilisateur factice ». Pour plus d’informations, consultez []({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_archival/#spam-blocking)Blocage des courriers indésirables. 
+Si vous recevez le message d'erreur "provided external_id is blacklistted and disallowed", il se peut que votre demande contienne un "utilisateur fictif". Pour plus d'informations, reportez-vous à la section [Blocage des spams.]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_archival/#spam-blocking) 
 
 ## Foire aux questions
+
+{% multi_lang_include email-via-sms-warning.md %}
 
 ### Que se passe-t-il lorsque plusieurs profils avec la même adresse e-mail sont trouvés ?
 Si l’`external_id` existe, le profil le plus récemment mis à jour avec un ID externe sera utilisé en priorité pour les mises à jour. Si l’`external_id` n’existe pas, le profil le plus récemment mis à jour sera utilisé en priorité pour les mises à jour.
 
 ### Que se passe-t-il si aucun profil avec l’adresse e-mail n’existe actuellement ?
-Un nouveau profil sera créé ainsi qu’un utilisateur par e-mail uniquement. Aucun alias ne sera créé. Le champ e-mail sera défini sur test@braze.com, comme indiqué dans l’exemple de requête pour mettre à jour un profil utilisateur par adresse e-mail.
+Un nouveau profil sera créé, ainsi qu'un utilisateur exclusivement par e-mail. Aucun alias ne sera créé. Le champ e-mail sera défini sur test@braze.com, comme indiqué dans l'exemple de demande de mise à jour d'un profil utilisateur par l'adresse e-mail.
 
 ### Comment utiliser `/users/track` pour importer des données utilisateur héritées ?
-Vous pouvez soumettre des données via l'API Braze pour un utilisateur qui n'a pas encore utilisé votre application mobile pour générer un profil utilisateur. Si l’utilisateur se sert ultérieurement de l’application, toutes les informations qui suivent son identification via le SDK seront fusionnées avec le profil utilisateur existant que vous avez créé via l’appel d’API. Tout comportement utilisateur enregistré de manière anonyme par le SDK avant l'identification sera perdu lors de la fusion avec le profil utilisateur généré par l'API existant.
+Vous pouvez soumettre des données via l'API de Braze pour un utilisateur qui n'a pas encore utilisé votre application mobile afin de générer un profil utilisateur. Si l’utilisateur se sert ultérieurement de l’application, toutes les informations qui suivent son identification via le SDK seront fusionnées avec le profil utilisateur existant que vous avez créé via l’appel d’API. Tout comportement de l'utilisateur enregistré de manière anonyme par le SDK avant l'identification sera perdu lors de la fusion avec le profil utilisateur existant généré par l'API.
 
-L’outil de segmentation inclura ces utilisateurs, qu’ils aient utilisé l’application ou pas. Si vous souhaitez exclure les utilisateurs téléchargés via l’API utilisateur qui n’ont pas encore utilisé l’application, ajoutez simplement le filtre : `Session Count > 0`.
+L’outil de segmentation inclura ces utilisateurs, qu’ils aient utilisé l’application ou pas. Si vous souhaitez exclure les utilisateurs téléchargés via l'API utilisateur qui n'ont pas encore utilisé l'application, ajoutez le filtre `Session Count > 0`.
 
 ### Comment `/users/track` gère-t-il les événements en double ?
 
-Chaque objet événement du tableau événements représente une occurrence unique d'un événement personnalisé par un utilisateur à un moment donné. Cela signifie que chaque événement ingéré dans Braze possède son propre ID d'événement, de sorte que les événements « en double » sont traités comme des événements distincts et uniques.
+Chaque objet d'événement du tableau d'objets représente une occurrence unique d'un événement personnalisé par un utilisateur à un moment donné. Cela signifie que chaque événement intégré dans Braze possède son propre ID, de sorte que les événements "dupliqués" sont traités comme des événements distincts et uniques.
 
 {% endapi %}
