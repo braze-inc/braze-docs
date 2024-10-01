@@ -15,7 +15,7 @@ description: "Cet article présente en détail l’endpoint Braze Effectuer une 
 scim/v2/Users?filter=userName%20eq%20"user%40test.com"
 {% endapimethod %}
 
-> Utilisez cet endpoint pour rechercher un compte utilisateur du tableau de bord existant en spécifiant leur e-mail dans les paramètres du filtre de recherche. 
+> Utilisez cet endpoint pour rechercher un compte utilisateur de tableau de bord existant en spécifiant son e-mail dans le paramètre de requête du filtre. 
 
 Veuillez prendre en compte que, lorsque le paramètre de recherche est encodé par URL, il s’affichera ainsi :
 
@@ -33,9 +33,9 @@ Pour utiliser cet endpoint, vous aurez besoin d’un jeton SCIM. Pour plus d’i
 
 ## Paramètres de chemin
 
-| Paramètre | Obligatoire | Type de données | Descriptif |
+| Paramètre | Requis | Type de données | Description |
 |---|---|---|---|
-| `userName@example.com` | Obligatoire | Chaîne | L’e-mail de l’utilisateur. |
+| `userName@example.com` | Requis | Chaîne de caractères | L’adresse e-mail de l’utilisateur. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
 ## Paramètres de demande
