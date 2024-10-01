@@ -22,7 +22,7 @@ Vous pouvez spécifier jusqu’à 50 fusions par requête. Cet endpoint est asy
 
 ## Conditions préalables
 
-Pour utiliser cet endpoint, vous aurez besoin d'une [clé API]({{site.baseurl}}/api/api_key/) avec l'autorisation `users.merge`.
+Pour utiliser cet endpoint, vous aurez besoin d'une [clé API]({{site.baseurl}}/api/api_key/) avec l’autorisation `users.merge`.
 
 ## Limite de débit
 
@@ -45,18 +45,18 @@ Authorization: Bearer YOUR_REST_API_KEY
 
 | Paramètre | Requis | Type de données | Description |
 |---|---|---|---|
-| `merge_updates` | Obligatoire | Tableau | Un tableau d'objets. Chaque objet doit contenir un objet  et un objet `identifier_to_merge`, qui doivent tous les deux référencer un utilisateur soit avec un `identifier_to_keep` soit un `external_id`.
+| `merge_updates` | Requis | Tableau | Un tableau d’objets. Chaque objet doit contenir un objet `identifier_to_merge` et un objet `identifier_to_keep`, qui doivent chacun référencer un utilisateur par `external_id`, `user_alias`, `phone_number` ou `email`. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
 ### Comportement de fusion
 
-Le comportement documenté ci-dessous est vrai pour toutes les fonctionnalités de Braze qui *ne sont pas* optimisées par Snowflake. Les fusions d'utilisateurs ne seront pas reflétées pour l'onglet **Historique de la messagerie**, les extensions de segment, le générateur de requêtes et les courants.
+Le comportement documenté ci-dessous est vrai pour toutes les fonctionnalités de Braze qui *ne sont pas* optimisées par Snowflake. Les fusions d'utilisateurs ne seront pas prises en compte pour l'onglet **Historique des messages**, les extensions de segments, le générateur de requêtes et les actualités.
 
 {% alert important %}
 Cet endpoint ne garantit pas que la séquence des objets `merge_updates` soit mise à jour.
 {% endalert %}
 
-Ce point de terminaison fusionnera n'importe lequel des champs suivants s'ils ne sont pas trouvés sur l'utilisateur cible :
+Cet endpoint fusionnera n'importe lequel des champs suivants s'ils ne sont pas trouvés dans l'utilisateur cible :
 
 - Prénom
 - Nom
@@ -68,11 +68,12 @@ Ce point de terminaison fusionnera n'importe lequel des champs suivants s'ils ne
 - Ville d’origine
 - Pays
 - Langue
+- Informations sur l’appareil
 - Décompte des sessions (la somme des sessions des deux profils)
 - Date de la première session (Braze choisira la date la plus ancienne parmi les deux)
 - Date de la dernière session (Braze choisira la date la plus récente parmi les deux)
 - Attributs personnalisés (les attributs personnalisés existants sur le profil cible sont conservés et incluront les attributs personnalisés qui n'existaient pas sur le profil cible).
-- Données sur les événements personnalisés et les événements d'achat
+- Données d'événements personnalisés et d'événements d'achat
 - Propriétés de l’événement d’achat et personnalisées pour la segmentation « X fois en Y jours » (où X <= 50 et Y <= 30)
 - Résumé des événements personnalisés pouvant être segmentés
   - Nombre d’événements (la somme des deux profils)
@@ -83,29 +84,35 @@ Ce point de terminaison fusionnera n'importe lequel des champs suivants s'ils ne
 - Date du premier achat (Braze choisira la date la plus ancienne parmi les deux)
 - Date du dernier achat (Braze choisira la date la plus récente parmi les deux)
 - Résumés des applications
-- Champs Last\_X\_at (Braze mettra à jour les champs si les champs de profil orphelins sont plus récents).
-- Données d'interaction de la campagne (Braze choisira les champs de date les plus récents).
+- Champs Last_X_at (Braze mettra à jour les champs si les champs du profil orphelins sont plus récents).
+- Données d'interaction de la campagne (Braze choisira les champs de date les plus récents)
 - Résumés du flux de travail (Braze choisira les champs de date les plus récents)
 - Message et historique d’engagement du message
 
 Les données de session ne seront fusionnées que si l’application existe sur les deux profils utilisateurs.
 
-#### Comportement de la date de l'événement personnalisé et de la date de l'événement d'achat
-Note que ces champs fusionnés mettront à jour les filtres "pour X événements dans Y jours". Pour les événements d’achat, ces filtres incluent « nombre d’achats en Y jours » et « argent dépensé au cours des Y derniers jours ».
+{% alert note %}
+Lors de la fusion d'utilisateurs, l'utilisation de l'endpoint `/users/merge` fonctionne de la même manière que la [méthode`changeUser()` ](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#changeuser).
+{% endalert %}
 
-### Fusionner les utilisateurs par e-mail
+#### Comportement personnalisé de la date de l'événement et de la date de l'événement d'achat
 
-Si un `email` est spécifié comme identifiant, une valeur `prioritization` supplémentaire est requise dans l'identifiant. `prioritization` doit être un tableau spécifiant l'utilisateur à fusionner s'il y a plusieurs utilisateurs trouvés. `prioritization` est un tableau ordonné, ce qui signifie que si plus d'un utilisateur correspond à un ordre de priorité, la fusion n'aura pas lieu.
+Ces champs fusionnés mettront à jour les filtres « pour X événements en Y jours ». Pour les événements d’achat, ces filtres incluent « nombre d’achats en Y jours » et « argent dépensé au cours des Y derniers jours ».
 
-Les valeurs autorisées pour le tableau sont : `identified`, `unidentified`, `most_recently_updated`. `most_recently_updated` signifie que la priorité est donnée à l'utilisateur qui a effectué la dernière mise à jour.
+### Fusionner les utilisateurs par e-mail ou par numéro de téléphone
+
+Si un identifiant `email` ou `phone_number` est spécifié, une valeur supplémentaire `prioritization` est requise dans l'identifiant. `prioritization` doit être un tableau spécifiant l'utilisateur à fusionner s'il y a plusieurs utilisateurs trouvés. `prioritization` est un tableau ordonné, ce qui signifie que si plus d'un utilisateur correspond à un ordre de priorité, la fusion n'aura pas lieu.
+
+Les valeurs autorisées pour le tableau sont les suivantes : `identified`, `unidentified`, `most_recently_updated`. `most_recently_updated` signifie que la priorité est accordée à l'utilisateur ayant effectué la dernière mise à jour.
 
 Une seule des options suivantes peut exister à la fois dans le tableau de priorisation :
-- `identified` se réfère à la priorisation d'un utilisateur avec une `external_id`
-- `unidentified` désigne le fait d'accorder la priorité à un utilisateur sans `external_id`
+- `identified` Il s'agit de donner la priorité à un utilisateur ayant une `external_id`
+- `unidentified` Il s'agit de donner la priorité à un utilisateur qui n'a pas de `external_id`
 
 ## Exemple de requêtes
 
 ### Demande de base
+
 Il s'agit d'un corps de requête basique pour montrer le modèle de la requête.
 
 ```json
@@ -151,9 +158,9 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/merge' \
 }'
 ```
 
-### Fusionner les utilisateurs non identifiés
+### Fusionner des utilisateurs non identifiés
 
-La requête suivante fusionnerait l'utilisateur non identifié le plus récemment mis à jour et dont l'adresse e-mail est « john.smith@braze.com » avec l'utilisateur dont l’`external_id` est « john ». L'utilisation de `most_recently_updated` permet de filtrer la requête pour afficher un seul utilisateur non identifié. Ainsi, s'il y avait deux utilisateurs non identifiés avec cette adresse électronique, un seul serait fusionné avec l'utilisateur avec `external_id` "john".
+`external_id` La demande suivante fusionnerait l'utilisateur non identifié dont l'adresse e-mail est "john.smith@braze.com" avec l'utilisateur dont l'adresse e-mail est " john ". L'utilisation de `most_recently_updated` permet de filtrer la requête pour afficher un seul utilisateur non identifié. Ainsi, s'il y avait deux utilisateurs non identifiés avec cette adresse e-mail, un seul serait fusionné dans l'utilisateur avec `external_id` "john".
 
 ```json
 curl --location --request POST 'https://rest.iad-01.braze.com/users/merge' \
@@ -177,7 +184,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/merge' \
 
 ### Fusionner un utilisateur non identifié avec un utilisateur identifié
 
-L'exemple suivant fusionne l'utilisateur non identifié le plus récemment mis à jour et dont l'adresse e-mail est « john.smith@braze.com » avec l'utilisateur identifié le plus récemment mis à jour et dont l'adresse e-mail est « john.smith@braze.com ». L'utilisation de `most_recently_updated` filtre les requêtes pour afficher un seul utilisateur (un utilisateur non identifié pour `identifier_to_merge` et un utilisateur identifié pour `identifier_to_keep`).
+L'exemple suivant fusionne l'utilisateur non identifié dont l'adresse e-mail est "john.smith@braze.com" avec l'utilisateur identifié dont l'adresse e-mail est "john.smith@braze.com". L'utilisation de `most_recently_updated` filtre les requêtes pour afficher un seul utilisateur (un utilisateur non identifié pour `identifier_to_merge` et un utilisateur identifié pour `identifier_to_keep`).
 
 ```json
 curl --location --request POST 'https://rest.iad-01.braze.com/users/merge' \
@@ -200,9 +207,9 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/merge' \
 }'
 ```
 
-### Fusionner un utilisateur non identifié sans inclure la priorisation most\_recently\_updated
+### Fusionner un utilisateur non identifié sans inclure la priorisation most_recently_updated
 
-S'il y a deux utilisateurs non identifiés avec l'adresse électronique "john.smith@braze.com", cet exemple de demande ne fusionne aucun utilisateur puisqu'il y a deux utilisateurs non identifiés avec cette adresse électronique. Cette requête fonctionne uniquement s'il n'y a qu'un seul utilisateur non identifié dont l'adresse e-mail est « john.smith@braze.com ».
+S'il y a deux utilisateurs non identifiés avec l'adresse e-mail "john.smith@braze.com", cet exemple de demande ne fusionne aucun utilisateur puisqu'il y a deux utilisateurs non identifiés avec cette adresse e-mail. Cette demande ne fonctionne que s'il n'y a qu'un seul utilisateur non identifié dont l'adresse e-mail est "john.smith@braze.com".
 
 ```json
 curl --location --request POST 'https://rest.iad-01.braze.com/users/merge' \
@@ -240,7 +247,7 @@ Le code de statut `202` pourrait renvoyer le corps de réponse suivant.
 
 ### Exemple de réponse échouée
 
-Le code de statut `400` pourrait renvoyer le corps de réponse suivant. Reporte-toi à la rubrique [Dépannage](#troubleshooting) pour plus d'informations sur les erreurs que tu peux rencontrer.
+Le code de statut `400` pourrait renvoyer le corps de réponse suivant. Consultez la résolution des problèmes[](#troubleshooting) pour plus d’informations concernant les erreurs que vous pourriez rencontrer.
 
 ```json
 {
@@ -254,10 +261,10 @@ Le tableau suivant répertorie les messages d’erreur possibles.
 
 | Erreur | Résolution des problèmes |
 | --- |
-| `'merge_updates' must be an array of objects` | Vérifie que `merge_updates` est un tableau d'objets. |
-| `a single request may not contain more than 50 merge updates` | Vous pouvez spécifier jusqu'à 50 mises à jour de fusion dans une seule requête. |
-| `identifiers must be objects with an 'external_id' property that is a string, 'user_alias' property that is an object, or 'email' property that is a string` | Vérifie les identifiants dans ta demande. |
-| `'merge_updates' must only have 'identifier_to_merge' and 'identifier_to_keep'` | Vérifie que `merge_updates` ne contient que les deux objets `identifier_to_merge` et `identifier_to_keep`. |
+| `'merge_updates' must be an array of objects` | Vérifiez que `merge_updates` est un tableau d'objets. |
+| `a single request may not contain more than 50 merge updates` | Vous pouvez spécifier jusqu’à 50 fusions dans une seule requête. |
+| `identifiers must be objects with an 'external_id' property that is a string, 'user_alias' property that is an object, or 'email' property that is a string` | Vérifiez les identifiants dans votre requête. |
+| `'merge_updates' must only have 'identifier_to_merge' and 'identifier_to_keep'` | Vérifiez que `merge_updates` ne contient que les deux objets `identifier_to_merge` et `identifier_to_keep`. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% endapi %}
