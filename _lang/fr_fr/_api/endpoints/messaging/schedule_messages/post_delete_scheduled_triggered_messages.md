@@ -44,10 +44,10 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ## Paramètres de demande
 
-| Paramètre | Obligatoire | Type de données | Descriptif |
+| Paramètre | Requis | Type de données | Description |
 | --------- | ---------| --------- | ----------- |
-| `campaign_id`| Obligatoire | Chaîne | Voir [l’identifiant de la campagne]({{site.baseurl}}/api/identifier_types/). |
-| `schedule_id` | Obligatoire | Chaîne | Le `schedule_id` to delete (obtenu à partir de la réponse pour créer un planning). |
+| `campaign_id`| Requis | Chaîne de caractères | Voir [identifiant de campagne]({{site.baseurl}}/api/identifier_types/). |
+| `schedule_id` | Requis | Chaîne de caractères | Le `schedule_id` à supprimer (obtenu à partir de la réponse pour créer une planification). |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 
