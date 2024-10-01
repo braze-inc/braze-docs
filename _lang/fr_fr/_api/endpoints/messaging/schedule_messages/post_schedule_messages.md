@@ -14,9 +14,9 @@ description: "Cet article présente en détail l’endpoint Braze Créer des mes
 /messages/schedule/create
 {% endapimethod %}
 
-> Utilise ce point de terminaison pour programmer l'envoi d'une campagne, d'un Canvas ou d'un autre message à une heure désignée et te fournit un identifiant pour référencer ce message pour les mises à jour. 
+> Cet endpoint permet de planifier l'envoi d'une campagne, d'un Canvas ou d'un autre message à une heure donnée et fournit un identifiant permettant de référencer ce message pour les mises à jour. 
 
-Si vous souhaitez cibler un segment, un enregistrement de votre demande sera stocké dans la [](https://dashboard.braze.com/app_settings/developer_console/activitylog/)Console de développement après l’envoi de tous les messages planifiés.
+Si vous ciblez un segment, un enregistrement de votre demande sera stocké dans la [console de développement](https://dashboard.braze.com/app_settings/developer_console/activitylog/) après l'envoi de tous les messages planifiés.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#25272fb8-bc39-41df-9a41-07ecfd76cb1d {% endapiref %}
 
@@ -51,7 +51,7 @@ Authorization: Bearer YOUR-REST-API-KEY
   "override_messaging_limits": (optional, bool) ignore frequency capping rules, defaults to false,
   "recipient_subscription_state": (optional, string) use this to send messages to only users who have opted in ('opted_in'), only users who have subscribed or are opted in ('subscribed') or to all users, including unsubscribed users ('all'), the latter being useful for transactional email messaging. Defaults to 'subscribed',
   "schedule": { 
-    "time": (required, datetime as ISO 8601 string) time to send the message,
+    "time": (required, datetime as ISO 8601 string) time to send the message in UTC,
     "in_local_time": (optional, bool),
     "at_optimal_time": (optional, bool),
   },
@@ -70,20 +70,20 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ## Paramètres de demande
 
-| Paramètre - Requis - Type de données - Description - Paramètre - Requis - Type de données - Description - Paramètre - Requis - Type de données - Description
+| Paramètre | Requis | Type de données | Description |
 | --------- | ---------| --------- | ----------- |
-|`broadcast`| Facultatif | Booléen | Tu dois donner la valeur true à `broadcast` lorsque tu envoies un message à un segment entier ciblé par une campagne ou un Canvas. Ce paramètre est défini sur Faux par défaut (au 31 août 2017). <br><br> Si `broadcast` est défini sur « true », une liste `recipients` ne peut pas être incluse. Cependant, fais attention lorsque tu définis `broadcast: true`, car si tu définis ce drapeau sans le vouloir, tu risques d'envoyer ton message à un public plus large que prévu. |
-| `external_user_ids` | Facultatif | Tableau de chaînes de caractères | Voir l'[identifiant de l'utilisateur externe]({{site.baseurl}}/api/objects_filters/user_attributes_object/#braze-user-profile-fields). |
-| `user_aliases` | Facultatif | Tableau d'objets d'alias d'utilisateur | Voir [objet d'alias d'utilisateur]({{site.baseurl}}/api/objects_filters/user_alias_object/). |
-| `audience` | Facultatif | Objet d’audience connectée | Voir [Audience connectée]({{site.baseurl}}/api/objects_filters/connected_audience/). |
-| `segment_id` | Facultatif | Chaîne de caractères | Voir [Identifiant de segment]({{site.baseurl}}/api/identifier_types/). |
-| `campaign_id`|Optionnel|Chaîne| Voir l'[identifiant de la campagne]({{site.baseurl}}/api/identifier_types/). |
-| `recipients` | Facultatif | Tableau d'objets destinataires | Voir l'[objet destinataire]({{site.baseurl}}/api/objects_filters/recipient_object/). |
-| `send_id` | Facultatif | Chaîne de caractères | Voir [Identifiant d’envoi]({{site.baseurl}}/api/identifier_types/). |
-| `override_messaging_limits` | Facultatif | Booléen | Ignorer les limites de taux globales pour les campagnes, la valeur par défaut est false |
-|`recipient_subscription_state`| Facultatif | Chaîne de caractères | Cette option permet d'envoyer des messages uniquement aux utilisateurs qui ont choisi de participer (`opted_in`), uniquement aux utilisateurs qui se sont abonnés ou qui ont choisi de participer (`subscribed`) ou à tous les utilisateurs, y compris les utilisateurs qui ne se sont pas abonnés (`all`). <br><br>Appliquer l’option `all` pour les utilisateurs est utile pour les e-mails transactionnels. La valeur par défaut est `subscribed`. |
-| `schedule` | Requis | Objet de planification | Voir [objet de planification]({{site.baseurl}}/api/objects_filters/schedule_object/) |
-| `messages` | Facultatif | Objet de messagerie | Voir les [objets de messagerie disponibles]({{site.baseurl}}/api/objects_filters/#messaging-objects). |
+|`broadcast`| Facultatif | Valeur booléenne | Vous devez définir `broadcast` sur « true » lorsque vous envoyez un message à un segment entier qui est ciblé par une campagne ou un Canvas. Ce paramètre est défini sur Faux par défaut (au 31 août 2017). <br><br> Si `broadcast` est défini sur « true », une liste `recipients` ne peut pas être incluse. Cependant, faites attention lors de la configuration de `broadcast: true` car en configurant involontairement cet indicateur, vous pourriez envoyer votre message à une audience plus importante que prévue. |
+| `external_user_ids` | Facultatif | Tableau de chaînes de caractères | Voir [identifiant d'utilisateur externe]({{site.baseurl}}/api/objects_filters/user_attributes_object/#braze-user-profile-fields). |
+| `user_aliases` | Facultatif | Tableau des objets Alias utilisateur | Voir l'[objet alias d'utilisateur]({{site.baseurl}}/api/objects_filters/user_alias_object/). |
+| `audience` | Facultatif | Objet Audience connectée | Voir [audience connectée]({{site.baseurl}}/api/objects_filters/connected_audience/). |
+| `segment_id` | Facultatif | Chaîne de caractères | Voir [identifiant de segmentation]({{site.baseurl}}/api/identifier_types/). |
+| `campaign_id`|Facultatif|Chaîne de caractères| Voir [identifiant de campagne]({{site.baseurl}}/api/identifier_types/). |
+| `recipients` | Facultatif | Tableau des objets Destinataires | Voir [objet destinataire]({{site.baseurl}}/api/objects_filters/recipient_object/). |
+| `send_id` | Facultatif | Chaîne de caractères | Voir [identifiant d'envoi]({{site.baseurl}}/api/identifier_types/). | 
+| `override_messaging_limits` | Facultatif | Valeur booléenne | Ignorer les limites de débit globales pour les campagnes, définies sur Faux par défaut |
+|`recipient_subscription_state`| Facultatif | Chaîne de caractères | Utilisez cette option pour envoyer des messages uniquement aux utilisateurs qui ont confirmé l’abonnement (`opted_in`), aux utilisateurs qui ont souscrit à ou confirmé l’abonnement (`subscribed`) ou à tous les utilisateurs, y compris les utilisateurs désabonnés (`all`). <br><br>Appliquer l’option `all` pour les utilisateurs est utile pour les e-mails transactionnels. Par défaut, `subscribed`. |
+| `schedule` | Requis | Objet Planification | Voir [objet de planification]({{site.baseurl}}/api/objects_filters/schedule_object/) |
+| `messages` | Facultatif | Objet Messagerie | Voir les [objets d'envoi de messages disponibles]({{site.baseurl}}/api/objects_filters/#messaging-objects). |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ## Exemple de demande
