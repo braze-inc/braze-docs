@@ -25,7 +25,7 @@ noindex: true
 
 オーディオデータは AIFF、WAV、または CAF ファイルにパッケージできます。Xcode で、サウンドファイルをアプリケーションバンドルの非ローカライズリソースとしてプロジェクトに追加します。
 
-afconvert ツールを使用して、サウンドを変換できます。例えば、16ビットのリニアPCMシステム・サウンドSubmarine.aiff をCAFファイルのIMA4オーディオに変換するには、ターミナルで次のコマンドを使う：
+afconvert ツールを使用して、サウンドを変換できます。たとえば、16ビットリニア PCM システムサウンド Submarine.aiff を CAF ファイルの IMA4オーディオに変換するには、ターミナルで次のコマンドを使用します。
 
 ```bash
 afconvert /System/Library/Sounds/Submarine.aiff ~/Desktop/sub.caf -d ima4 -f caff -v
@@ -37,11 +37,11 @@ QuickTime Player でサウンドを開き、\[**ムービー**] メニューか�
 
 ## ステップ2:ダッシュボードにサウンドのプロトコル URL を指定する
 
-サウンドはアプリ内でローカルにホストする必要があります。プッシュコンポーザーの \[**サウンド**] フィールドで、アプリ内のサウンドファイルにリダイレクトするプロトコル URL を指定する必要があります。このフィールドに「default」を指定すると、デフォルトの通知音がデバイスで再生されます。これは、以下のスクリーンショットのように、\[messaging API][25] ]、またはプッシュ・コンポーザーの**\[Settings]**にあるダッシュボードから指定することができる：
+サウンドはアプリ内でローカルにホストする必要があります。プッシュコンポーザーの \[**サウンド**] フィールドで、アプリ内のサウンドファイルにリダイレクトするプロトコル URL を指定する必要があります。このフィールドに「default」を指定すると、デフォルトの通知音がデバイスで再生されます。これは、以下のスクリーンショットに示すように、プッシュコンポーザーの \[messaging API]][25] または \[**設定**] にあるダッシュボードを使用して指定できます。
 
 ![][8]
 
-指定したサウンドファイルが存在しない場合、またはキーワード「default」を入力した場合は、Braze では、デバイスのデフォルトのアラートサウンドが使用されます。ダッシュボードとは別に、\[メッセージングAPI][12] を使ってサウンドを設定することもできる。詳細については、Apple Developer Documentationの\[preparation custom alert sounds][9] ]を参照のこと。
+指定したサウンドファイルが存在しない場合、またはキーワード「default」を入力した場合は、Braze では、デバイスのデフォルトのアラートサウンドが使用されます。ダッシュボードとは別に、\[messaging API][12] でサウンドを設定することもできます。詳細については、\[カスタムアラートサウンドの準備][9] に関する Apple 開発者のドキュメントを参照してください。
 
 [8]: {% image_buster /assets/img_archive/sound_push_ios.png %}
 [9]: https://developer.apple.com/library/content/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/SupportingNotificationsinYourApp.html
