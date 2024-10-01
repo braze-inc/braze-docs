@@ -18,4 +18,5 @@
 
 # Ingestion Endpoints: Ingestion owns Data Transformation templates for the following endpoints and needs to be notified of any interface changes
 
-/_docs/_api/endpoints/user_data/post_user_track.md @Appboy/ingestion
+/_docs/_api/endpoints/user_data/post_user_track.md @Appboy/ingestion @lydia-xie @braze-inc/docs-team
+/_docs/_api/endpoints/messaging/send_messages/post_send_messages.md @Appboy/ingestion @lydia-xie @braze-inc/docs-team
