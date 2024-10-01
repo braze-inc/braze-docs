@@ -31,16 +31,16 @@ Pour utiliser cet endpoint, vous aurez besoin d'une [clé API]({{site.baseurl}}/
 
 ## Paramètres de chemin
 
-| Paramètre | Obligatoire | Type de données | Descriptif |
+| Paramètre | Requis | Type de données | Description |
 |---|---|---|---|
-| `catalog_name` | Obligatoire | Chaîne | Nom du catalogue. |
+| `catalog_name` | Requis | Chaîne de caractères | Nom du catalogue. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
 ## Paramètres de demande
 
-| Paramètre | Obligatoire | Type de données | Descriptif |
+| Paramètre | Requis | Type de données | Description |
 |---|---|---|---|
-| `items` | Obligatoire | Tableau | Un tableau qui contient des objets élément. Les objets Produit doivent contenir un `id` faisant référence aux produits que Braze doit supprimer. Jusqu’à 50 objets sont autorisés par requête.
+| `items` | Requis | Tableau | Un tableau qui contient certains objets Produit. Les objets Produit doivent contenir un `id` faisant référence aux produits que Braze doit supprimer. Jusqu’à 50 objets sont autorisés par requête. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
 ## Exemple de demande
@@ -74,7 +74,7 @@ Le code de statut `202` pourrait renvoyer le corps de réponse suivant.
 
 ### Exemple de réponse échouée
 
-Le code de statut `400` pourrait renvoyer le corps de réponse suivant. Consultez la `400`résolution des problèmes[](#troubleshooting) pour plus d’informations concernant les erreurs que vous pourriez rencontrer.
+Le code de statut `400` pourrait renvoyer le corps de réponse suivant. Consultez la résolution des problèmes[](#troubleshooting) pour plus d’informations concernant les erreurs que vous pourriez rencontrer.
 
 ```json
 {
@@ -94,15 +94,15 @@ Le code de statut `400` pourrait renvoyer le corps de réponse suivant. Consulte
 
 Le tableau suivant répertorie les erreurs renvoyées possibles et les étapes de résolution des problèmes associées.
 
-| Erreur | Dépannage |
+| Erreur | Résolution des problèmes |
 | --- | --- |
 | `catalog-not-found` | Vérifiez que le nom du catalogue est valide. |
-| `catalog-not-found` | Les ID de produit ne peuvent pas contenir plus de 250 caractères. |
-|  `catalog-not-found` | Vérifiez que les ID de produit dans la requête sont uniques. |
-|<b> </b>`catalog-not-found`<b> | </b>Les ID de produit doivent être de type chaîne de caractères. |
-| `items-missing-ids` |Il y a des produits qui n’ont pas d’ID de produit. Vérifiez que chaque produit possède un ID de produit.
-Ces ID de produit peuvent uniquement inclure des lettres, des chiffres, des traits d’union et des traits de soulignement.
-| `invalid-ids` | Votre requête contient trop de produits. La limite de produit par requête est de 50.
+| `ids-too-large` | Les ID de produit ne peuvent pas contenir plus de 250 caractères. |
+| `ids-not-unique` | Vérifiez que les ID de produit dans la requête sont uniques. |
+| `ids-not-strings` | Les ID de produit doivent être de type chaîne de caractères. |
+| `items-missing-ids` | Il y a des produits qui n’ont pas d’ID de produit. Vérifiez que chaque produit possède un ID de produit. |
+| `invalid-ids` | Ces ID de produit peuvent uniquement inclure des lettres, des chiffres, des traits d’union et des traits de soulignement. |
+| `request-includes-too-many-items` | Votre requête contient trop de produits. La limite de produit par requête est de 50. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% endapi %}
