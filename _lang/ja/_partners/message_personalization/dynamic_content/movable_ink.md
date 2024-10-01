@@ -166,7 +166,7 @@ Braze プラットフォームで、クリエイティブなタグをメール�
 - **イメージが読み込むしない**:"merge タグ s"は、必ずBraze ダッシュボードの対応するLiquid フィールドs に置き換えてください。例: {% raw %}```https://mi-msg.com/p/rp/image.png?mi_u=%%email%%```{% endraw %} {% raw %}```https://mi-msg.com/p/rp/image.png?mi_u={{${email_address}}}```{% endraw %}。
 
 ### AndroidでGIFを表示するのに問題がありますか?
-- Androidには、実施にあたってGIFの支援が必要である。この設定がない場合は、Android\[アプリ内メッセージ customization]\[GIFsupport] 記事]に従ってください。
+- Androidには、実施にあたってGIFの支援が必要である。この設定がない場合は、Android[アプリ内メッセージ customization][GIFsupport] 記事に従ってください。
 
 [1]: https://www.movableink.com/
 [datasource]: ({% image_buster /assets/img/movable_ink/movable_ink1.png %})
