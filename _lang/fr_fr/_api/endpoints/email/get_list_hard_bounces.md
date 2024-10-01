@@ -11,7 +11,7 @@ description: "Cet article présente en détail l’endpoint Braze Interroger ou 
 {% api %}
 # Extraire les e-mails ayant reçu un échec d'envoi définitif
 {% apimethod get %}
-/email/hard_bounces
+/email/rebonds_durs
 {% endapimethod %}
 
 > Utilisez cet endpoint pour extraire une liste d’adresses e-mail ayant rejeté définitivement vos e-mails au cours d'une certaine période.
@@ -28,13 +28,13 @@ Pour utiliser cet endpoint, vous aurez besoin d'une [clé API]({{site.baseurl}}/
 
 ## Paramètres de demande
 
-| Paramètre - Requis - Type de données - Description - Paramètre - Requis - Type de données - Description - Paramètre - Requis - Type de données - Description
+| Paramètre | Requis | Type de données | Description |
 | ----------|-----------| ----------|----- |
-| `start_date` | Facultatif<br>(voir note) | Chaîne au format AAAA-MM-JJ| Date de début de la plage de récupération des hard bounces, doit être antérieure à `end_date`. Ce traitement est effectué à minuit (UTC) par l’API.
-| `end_date` | Optional<br>(voir note) | Chaîne au format AAAA-MM-JJ | Date de fin de la plage de récupération des rebonds. Ce traitement est effectué à minuit (UTC) par l’API.
-| `limit` | Facultatif | Entier | Champ facultatif pour limiter le nombre de résultats renvoyés. Par défaut à 100, le maximum est 500.
-| `offset` | Facultatif | Entier | Facultatif point de départ de la liste à partir duquel la recherche doit s'effectuer. |
-Facultatif<br>(voir note) | Chaîne de caractères | Si elle est fournie, nous indiquerons si l'utilisateur a subi un rebond. Vérifie que les chaînes du courrier électronique sont correctement formatées. |
+| `start_date` | Facultatif<br>(voir la note) | Chaîne de caractères au format YYYY-MM-DD| Date de début de la période pour récupérer les échecs d'envoi définitifs. Doit être antérieure à `end_date`. Ce traitement est effectué à minuit (UTC) par l’API. |
+| `end_date` | Facultatif<br>(voir la note) | Chaîne de caractères au format YYYY-MM-DD | Date de fin de la période d'extraction des échecs d'envoi définitifs. Ce traitement est effectué à minuit (UTC) par l’API. |
+| `limit` | Facultatif | Entier | Champ facultatif pour limiter le nombre de résultats renvoyés. Par défaut à 100, le maximum est 500. |
+| `offset` | Facultatif | Entier | Point de départ facultatif dans la liste où récupérer les informations. |
+| `email` | Facultatif<br>(voir la note) | Chaîne de caractères | S’il est fourni, nous enverrons un message indiquant si l’utilisateur a reçu un échec d'envoi définitif ou non. Vérifiez que les chaînes d'e-mails sont correctement formatées. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 {% alert note %}
