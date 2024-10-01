@@ -20,15 +20,15 @@ Warning! Don't make any changes to this document without approval from the legal
 
 ## Conservation des données gérée par les clients via le tableau de bord ou l’API de Braze
 
-Braze permet à ses clients de supprimer eux-mêmes des profils d’utilisateurs et des données d’attributs entiers de leur groupe d'applications.
+Braze permet à ses clients de supprimer eux-mêmes des profils utilisateurs entiers et des données d'attribut à partir de leur espace de travail.
 
-Cela signifie que vous pouvez :
-\- Supprimer les profils d’utilisateurs à l’aide du [endpoint d’API de suppression d’utilisateur]({{site.baseurl}}/api/endpoints/user_data/post_user_delete/) de Braze
-\- Supprimer (annuler) ou modifier les attributs des profils d’utilisateurs à l’aide du [endpoint d’API de suivi des utilisateurs]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) de Braze.
+Cela signifie que vous pouvez : 
+- Supprimez des profils utilisateurs à l'aide de l'[endpoint API Delete user de]({{site.baseurl}}/api/endpoints/user_data/post_user_delete/) Braze [.]({{site.baseurl}}/api/endpoints/user_data/post_user_delete/) 
+- Supprimer (null) ou modifier des attributs sur des profils utilisateurs en utilisant l'[endpoint de l'API]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) Braze [Track user.]({{site.baseurl}}/api/endpoints/user_data/post_user_track/)
 
 Les événements comportementaux ne peuvent pas être supprimés d’un profil d’utilisateur (événements personnalisés, sessions, campagnes, achats). Pour supprimer ces événements, vous devez supprimer l’ensemble du profil utilisateur.
 
-Pour des raisons de respect de la vie privée, vous pouvez être amené à supprimer toutes les données personnelles relatives à un utilisateur à la demande de ce dernier. Vous pouvez trouver des instructions sur notre []({{site.baseurl}}/help/dp-technical-assistance/#the-right-to-erasure)page d’assistance technique en matière de protection des données.
+Pour des raisons de respect de la vie privée, vous pouvez être amené à supprimer toutes les données personnelles relatives à un utilisateur à la demande de ce dernier. Vous trouverez des instructions sur notre page d'[assistance technique relative à la protection des données]({{site.baseurl}}/help/dp-technical-assistance/#the-right-to-erasure).
 
 {% alert note %}
 Un utilisateur peut avoir plusieurs profils, et vous devrez peut-être supprimer plusieurs profils pour supprimer toutes les données relatives à un seul utilisateur. Suivez les instructions de la page d’assistance technique sur la protection des données pour supprimer complètement toutes les données concernant un utilisateur.
@@ -38,7 +38,7 @@ Un utilisateur peut avoir plusieurs profils, et vous devrez peut-être supprimer
 
 #### Base de données Braze : Archivage/suppression automatique des utilisateurs inactifs
 
-Chaque semaine, Braze exécute un processus visant à supprimer les utilisateurs inactifs et dormants des services Braze. En général, il s’agit d’utilisateurs qui ne peuvent pas être contactés (par ex., qui n’ont pas d’adresse e-mail, de numéro de téléphone, de jetons de notification push, qui n’utilisent pas vos applications et ne se rendent pas sur vos sites Internet), n’ont pas eu d’activité enregistrée sur leur profil utilisateur et n’ont pas reçu de message ni n’ont été contactés pour utiliser Braze. Ceci est mis en place pour respecter les principes et recommandations du RGPD. Vous pouvez en savoir plus sur ce processus sur notre page []({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_archival/)Définitions de l’archivage utilisateur.
+Chaque semaine, Braze exécute un processus visant à supprimer les utilisateurs inactifs et dormants des services Braze. En général, il s'agit d'utilisateurs qui ne sont pas joignables (par exemple, qui n'ont pas d'adresse e-mail, pas de numéro de téléphone, pas de jeton push, qui n'utilisent pas vos apps ou ne visitent pas vos sites web), qui n'ont eu aucune activité enregistrée sur leur profil utilisateur et qui n'ont pas reçu de message ou n'ont pas été engagés avec l'utilisation de Braze. Ceci est mis en place pour respecter les principes et recommandations du RGPD. Vous pouvez en savoir plus sur ce processus en consultant notre page consacrée [aux définitions de l'archivage utilisateur]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_archival/).
 
 {% alert note %}
 Les clients ont un contrôle total sur le statut inactif ou dormant des utilisateurs et peuvent empêcher l’archivage des profils utilisateurs en enregistrant un point de donnée à intervalle régulier. Braze Canvas offre la possibilité de le faire automatiquement, ce qui vous permet de désactiver efficacement cette fonctionnalité pour certains ou pour tous vos utilisateurs inactifs ou dormants. 
@@ -46,7 +46,7 @@ Les clients ont un contrôle total sur le statut inactif ou dormant des utilisat
 
 #### Données sur les interactions de campagne et de Canvas 
 
-Les données d’interaction de messagerie font référence à la façon dont un utilisateur interagit avec une campagne ou un canevas qu’il a reçu (par exemple, lorsqu’un utilisateur ouvre la campagne A ou qu’un utilisateur reçoit la variante A). Ces données sont utilisées pour le reciblage. Pour en savoir plus sur la disponibilité des données d’interaction de messagerie, consultez [À propos de la disponibilité des données d’interaction de messagerie]({{site.baseurl}}/messaging_interaction_data/).
+Les données d'interaction des messages se réfèrent à la manière dont un utilisateur interagit avec une campagne ou une variante du canvas qu'il a reçu (par exemple, lorsqu'un utilisateur ouvre la campagne A ou qu'un utilisateur reçoit la variante A). Ces données sont utilisées à des fins de reciblage. Pour en savoir plus sur la disponibilité des données d’interaction de messagerie, consultez [À propos de la disponibilité des données d’interaction de messagerie]({{site.baseurl}}/messaging_interaction_data/).
 
 ## Conservation des données gérée par Braze
 
