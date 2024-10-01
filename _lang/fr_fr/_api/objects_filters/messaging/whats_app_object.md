@@ -10,7 +10,7 @@ description: "Cet article de référence explique les différents composants de 
 
 # Objet WhatsApp
 
-> L’objet `whats_app` vous permet de modifier ou de créer des messages WhatsApp via nos [terminaux de messagerie]({{site.baseurl}}/api/endpoints/messaging).
+> L'objet `whats_app` vous permet de modifier ou de créer des messages WhatsApp via nos [points d'extrémité de messagerie.]({{site.baseurl}}/api/endpoints/messaging)
 
 ## Objet WhatsApp
 
@@ -28,7 +28,7 @@ description: "Cet article de référence explique les différents composants de 
 
 ### Types de messages
 
-#### template\_message
+#### template_message
 
 ```json
 {
@@ -100,7 +100,7 @@ Actuellement, une seule variable de bouton peut être spécifiée, à savoir le 
 }
 ```
 
-#### text\_response\_message
+#### text_response_message
 
 ```json
 {
@@ -118,7 +118,7 @@ Actuellement, une seule variable de bouton peut être spécifiée, à savoir le 
 }
 ```
 
-#### text\_image\_response\_message
+#### text_image_response_message
 
 ```json
 {
@@ -136,7 +136,7 @@ Actuellement, une seule variable de bouton peut être spécifiée, à savoir le 
 }
 ```
 
-#### quick\_reply\_response\_message
+#### quick_reply_response_message
 
 ```json
 {
