@@ -1,6 +1,6 @@
 ---
-nav_title: "POST :  : Exporter le profil utilisateur par identifiant"
-article_title: "POST :  : Exporter le profil utilisateur par identifiant"
+nav_title: "POST : Exporter le profil utilisateur par identifiant"
+article_title: "POST : Exporter le profil utilisateur par identifiant"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
@@ -49,15 +49,15 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ## Paramètres de demande
 
-| Paramètre | Obligatoire | Type de données | Descriptif |
+| Paramètre | Requis | Type de données | Description |
 |-----|-----|-----|-----|
-`external_ids`| | Facultatif | Tableau de chaînes | Identifiants externes pour les utilisateurs que vous souhaitez exporter. |
-`user_aliases`| | Facultatif | Tableau d’objet alias utilisateur | [Alias utilisateur]({{site.baseurl}}/api/objects_filters/user_alias_object/) à exporter. |
-`device_id`| | Facultatif | Chaîne de caractères | Identifiant d’appareil, tel que renvoyé par diverses méthodes SDK, telles que `getDeviceId`. |
-`braze_id`| | Facultatif | Chaîne de caractères | Identifiant Braze d’un utilisateur particulier. |
-`email_address`| | Facultatif | Chaîne | Adresse e-mail de l’utilisateur. |
-`phone`| | Facultatif | Chaîne au format [E.164](https://en.wikipedia.org/wiki/E.164) | Numéro de téléphone de l’utilisateur. |
-`fields_to_export`| | Facultatif | Tableau de chaînes | Nom des champs de données utilisateur à exporter. Par défaut sur Tous, si non renseigné.
+|`external_ids` | Facultatif | Tableau de chaînes de caractères | Identifiants externes des utilisateurs que vous souhaitez exporter. |
+|`user_aliases` | Facultatif | Tableau d’objets Alias utilisateur | [Alias de l']({{site.baseurl}}/api/objects_filters/user_alias_object/) utilisateur pour les utilisateurs à exporter. |
+|`device_id` | Facultatif | Chaîne de caractères | L’identifiant d’appareil, tel que renvoyé par diverses méthodes SDK, telles que `getDeviceId`. |
+|`braze_id` | Facultatif | Chaîne de caractères | Identifiant Braze d’un utilisateur particulier. |
+|`email_address` | Facultatif | Chaîne de caractères | Adresse e-mail de l’utilisateur. |
+|`phone` | Facultatif | Chaîne de caractères dans [E.164](https://en.wikipedia.org/wiki/E.164) format | Numéro de téléphone de l’utilisateur. |
+|`fields_to_export` | Facultatif | Tableau de chaînes de caractères | Nom des champs de données utilisateur à exporter. Par défaut sur Tous, si non renseigné. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ## Exemple de demande
@@ -85,36 +85,36 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/export/ids' 
 
 Voici une liste des `fields_to_export` valides. Utiliser `fields_to_export` pour minimiser les données renvoyées peut améliorer le temps de réponse de cet endpoint d’API :
 
-| Champ à exporter | Type de données | Descriptif |
+| Champ à exporter | Type de données | Description |
 |---|---|---|
-| `apps` | Matrice | Applications pour lesquelles cet utilisateur a enregistré des sessions, ce qui inclut les champs :<br><br>- `name` : nom de l’application<br>- `platform` : plateforme de l’application telle qu’iOS, Android ou Web<br>- `version` : numéro ou nom de version de l’application <br>- `sessions` : nombre total de sessions pour cette application<br>- `first_used` : date de la première session<br>- `last_used` : date de la dernière session<br><br>Tous les champs sont des chaînes de caractères.
-| `attributed_campaign` | Chaîne | Données des [intégrations d’attribution]({{site.baseurl}}/partners/message_orchestration/attribution), le cas échéant. Identifiant d’une campagne donnée.
-| `attributed_source` | Chaîne | Données des [intégrations d’attribution]({{site.baseurl}}/partners/message_orchestration/attribution), le cas échéant. Identifiant de la plateforme sur laquelle était l’annonce.
-| `attributed_adgroup` | Chaîne | Données des [intégrations d’attribution]({{site.baseurl}}/partners/message_orchestration/attribution), le cas échéant. Identifiant pour un sous-groupe optionnel sous la campagne.
-| `attributed_ad` | Chaîne | Données des [intégrations d’attribution]({{site.baseurl}}/partners/message_orchestration/attribution), le cas échéant. Identifiant pour un sous-groupe optionnel sous la campagne et le groupe d’annonce.
-| `braze_id` | Chaîne | Identifiant utilisateur unique spécifique à l’appareil défini par Braze pour cet utilisateur. |
-| `country` | Chaîne | Pays de l’utilisateur utilisant la norme [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) . |
-| `created_at` | Chaîne | Date et heure de création du profil utilisateur, au format ISO 8601. |
-| `custom_attributes` | Objet | Paires clé-valeur d’attribut personnalisées pour cet utilisateur. |
-| `custom_events` | Matrice | Événements personnalisés attribués à cet utilisateur au cours des 90 derniers jours. |
-| `devices` | Matrice | Informations sur l’appareil de l’utilisateur, qui peuvent inclure les éléments suivants selon la plate-forme :<br><br>- `model` : Nom du modèle de l’appareil<br>- `os` : Système d’exploitation de l’appareil<br>- `carrier` : Fournisseur de services de l’appareil, si disponible<br>- `idfv` : (iOS) Identifiant de l’appareil Braze, l’identifiant Apple pour le vendeur<br>- `idfa` : (iOS) Identifiant publicitaire, s’il existe<br>- `device_id` : (Android) Identifiant de l’appareil Braze<br>- `google_ad_id` : (Android) Identifiant publicitaire Google Play, s’il existe<br>- `roku_ad_id` : (Roku) Identifiant publicitaire Roku<br>- `ad_tracking_enabled` : -  : Si le suivi des annonces est activé sur l’appareil, peut être True ou False
-| `dob` | Chaîne | Date de naissance de l’utilisateur au format `YYYY-MM-DD`. |
-| `email` | Chaîne | Adresse e-mail de l’utilisateur. |
-| `external_id` | Chaîne | Identifiant utilisateur unique pour les utilisateurs identifiés. |
-| `first_name` | Chaîne | Prénom de l’utilisateur. |
-| `gender` | Chaîne | Sexe de l’utilisateur. Les valeurs possibles sont :<br><br>- `M` : masculin<br>- `F` : féminin<br>- `O` : autre<br>- `N` : sans objet<br>- `P` : préfère ne pas répondre<br>- `nil`: inconnu |
-| `home_city` | Chaîne | Ville de résidence de l’utilisateur. |
-| `language` | Chaîne | Langue de l’utilisateur dans la norme ISO-639-1. |
+| `apps` | Tableau | Les applications pour lesquelles l’utilisateur a enregistré des sessions, ce qui comprend les champs :<br><br>- `name` : nom de l’application<br>- `platform` : plateforme de l’application telle qu’iOS, Android ou Web<br>- `version` : numéro ou nom de version de l’application <br>- `sessions` : nombre total de sessions pour cette application<br>- `first_used` : date de la première session<br>- `last_used` : date de la dernière session<br><br>Tous les champs sont des chaînes de caractères. |
+| `attributed_campaign` | Chaîne de caractères | Données provenant des [intégrations d'attribution]({{site.baseurl}}/partners/message_orchestration/attribution), si elles sont configurées. Identifiant d’une campagne donnée. |
+| `attributed_source` | Chaîne de caractères | Données provenant des [intégrations d'attribution]({{site.baseurl}}/partners/message_orchestration/attribution), si elles sont configurées. Identifiant de la plateforme sur laquelle était l’annonce. |
+| `attributed_adgroup` | Chaîne de caractères | Données provenant des [intégrations d'attribution]({{site.baseurl}}/partners/message_orchestration/attribution), si elles sont configurées. Identifiant pour un sous-groupe optionnel sous la campagne. |
+| `attributed_ad` | Chaîne de caractères | Données provenant des [intégrations d'attribution]({{site.baseurl}}/partners/message_orchestration/attribution), si elles sont configurées. Identifiant d'un sous-groupement facultatif en dessous de la campagne et du groupe d'annonces. |
+| `braze_id` | Chaîne de caractères | Identifiant utilisateur unique spécifique à l’appareil défini par Braze pour cet utilisateur. |
+| `country` | Chaîne de caractères | Pays de l'utilisateur selon la norme [ISO 3166-1 alpha-2.](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)  |
+| `created_at` | Chaîne de caractères | Date et heure de la création du profil utilisateur au format ISO 8601. |
+| `custom_attributes` | Objet | Paires clé-valeur de l’attribut personnalisé de cet utilisateur. |
+| `custom_events` | Tableau | Événements personnalisés attribués à cet utilisateur dans les 90 derniers jours. |
+| `devices` | Tableau | Informations sur l’appareil de l’utilisateur qui devraient contenir les éléments suivants selon la plateforme :<br><br>- `model` : Nom du modèle de l’appareil<br>- `os` : Système d’exploitation de l’appareil<br>- `carrier` : Fournisseur de services de l’appareil, si disponible<br>- `idfv`: (iOS) Identifiant de l'appareil Braze, l'identifiant Apple pour le vendeur, s'il existe.<br>- `idfa` : (iOS) Identifiant publicitaire, s’il existe<br>- `device_id` : (Android) Identifiant de l’appareil Braze<br>- `google_ad_id` : (Android) Identifiant publicitaire Google Play, s’il existe<br>- `roku_ad_id` : (Roku) Identifiant publicitaire Roku<br>- `ad_tracking_enabled` : Si le suivi des annonces est activé sur l’appareil, peut être vrai ou faux |
+| `dob` | Chaîne de caractères | Date de naissance de l’utilisateur au format `YYYY-MM-DD`. |
+| `email` | Chaîne de caractères | Adresse e-mail de l’utilisateur. |
+| `external_id` | Chaîne de caractères | Identifiant utilisateur unique pour les utilisateurs identifiés. |
+| `first_name` | Chaîne de caractères | Prénom de l’utilisateur. |
+| `gender` | Chaîne de caractères | Genre de l’utilisateur. Les valeurs possibles sont :<br><br>- `M` : masculin<br>- `F` : féminin<br>- `O` : autre<br>- `N` : sans objet<br>- `P` : préfère ne pas répondre<br>- `nil` : inconnu |
+| `home_city` | Chaîne de caractères | Ville de résidence de l’utilisateur. |
+| `language` | Chaîne de caractères | Langue de l’utilisateur à la norme ISO-639-1. |
 | `last_coordinates` | Tableau de floats | Dernier emplacement de l’appareil de l’utilisateur, au format `[longitude, latitude]`. |
-| `last_name` | Chaîne | Nom de famille de l’utilisateur. |
-| `phone` | Chaîne | Numéro de téléphone de l’utilisateur au format E.164. |
-| `purchases` | Matrice | Achats effectués par cet utilisateur au cours des 90 derniers jours. |
-| `push_tokens` | Matrice | Identifiant anonyme unique qui spécifie où envoyer les notifications d’une application. |
-| `random_bucket` | Entier | [Numéro de compartiment aléatoire]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/customer_behavior_events#random-bucket-number-event) de l’utilisateur, utilisé pour créer des segments uniformément répartis d’utilisateurs aléatoires. |
-| `time_zone` | Chaîne | Fuseau horaire de l’utilisateur dans le même format que la base de données des fuseaux horaires de l’IANA. |
-| `total_revenue` | Float | Revenus totaux attribués à cet utilisateur. Les revenus totaux sont calculés à partir des achats réalisés par l’utilisateur pendant la fenêtre de conversion pour les campagnes et les Canvas qu’il a reçus.
-| `uninstalled_at` | Horodatage | Date et heure auxquelles l’utilisateur désinstalle l’application. Absent si l’application n’a pas été désinstallée.
-| `user_aliases` | Objet | [Alias utilisateur]({{site.baseurl}}/api/objects_filters/user_alias_object#user-alias-object-specification) contenant le `alias_name` et `alias_label`, si existe. |
+| `last_name` | Chaîne de caractères | Nom de famille de l’utilisateur. |
+| `phone` | Chaîne de caractères | Numéro de téléphone de l'utilisateur au format E.164. |
+| `purchases` | Tableau | Achats réalisés par cet utilisateur au cours des 90 derniers jours. |
+| `push_tokens` | Tableau | Identifiant anonyme unique qui spécifie où envoyer les notifications d'une app. |
+| `random_bucket` | Entier | [Numéro de compartiment aléatoire]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/customer_behavior_events#random-bucket-number-event) de l'utilisateur, utilisé pour créer des segments uniformément distribués d'utilisateurs aléatoires. |
+| `time_zone` | Chaîne de caractères | Fuseau horaire de l’utilisateur au même format que la base de données de fuseaux horaires IANA. |
+| `total_revenue` | Float | Revenus totaux attribués à cet utilisateur. Les revenus totaux sont calculés à partir des achats réalisés par l’utilisateur pendant la fenêtre de conversion pour les campagnes et les Canvas qu’il a reçus. |
+| `uninstalled_at` | Date/heure | Date et heure de désinstallation de l’application par l’utilisateur. Absent si l’application n’a pas été désinstallée. |
+| `user_aliases` | Objet | [Objet aliasing de l'utilisateur]({{site.baseurl}}/api/objects_filters/user_alias_object#user-alias-object-specification) contenant les adresses `alias_name` et `alias_label`, si elles existent. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 Sachez que l’endpoint `/users/export/ids` extraira l’intégralité du profil utilisateur de cet utilisateur, y compris les données telles que toutes les campagnes et les Canvas reçus, tous les événements personnalisés et tous les achats effectués, et tous les attributs personnalisés. Par conséquent, cet endpoint est plus lent que les autres endpoints d’API REST.
@@ -133,14 +133,14 @@ Authorization: Bearer YOUR-REST-API-KEY
 }
 ```
 
-Pour un exemple de données accessibles via cet endpoint, voir l’exemple suivant.
+L'exemple suivant illustre les données accessibles via cet endpoint.
 
-### Exemple de sortie de fichier d’exportation utilisateur
+### Exemple de sortie d'un fichier d'exportation utilisateur
 
 Objet Exportation utilisateur (nous inclurons le moins de données possible. S’il manque un champ de l’objet, il doit être considéré comme nul, faux ou vide) :
 
 {% tabs %}
-{% tab All fields %}
+{% tab Tous les domaines %}
 
 ```json
 {
@@ -280,7 +280,7 @@ Objet Exportation utilisateur (nous inclurons le moins de données possible. S�
 ```
 
 {% endtab %}
-{% tab Sample output %}
+{% tab Exemple de sortie %}
 
 ```json
 {
