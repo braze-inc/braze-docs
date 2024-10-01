@@ -1,6 +1,6 @@
 ---
-nav_title: "GET : Exporter les informations relatives au segment"
-article_title: "GET : Exporter les informations relatives au segment"
+nav_title: "GET : Détails de la segmentation des exportations"
+article_title: "GET : Détails de la segmentation des exportations"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
@@ -28,9 +28,9 @@ Pour utiliser cet endpoint, vous aurez besoin d'une [clé API]({{site.baseurl}}/
 
 ## Paramètres de demande
 
-| Paramètre | Obligatoire | Type de données | Descriptif |
+| Paramètre    | Requis | Type de données | Description            |
 | ------------ | -------- | --------- | ---------------------- |
-| `segment_id` | Obligatoire | Chaîne | Voir [Identifiant de l'API de segment]({{site.baseurl}}/api/identifier_types/).<br><br> Le `segment_id` pour un segment donné peut être trouvé sur la page [Clés API]({{site.baseurl}}/user_guide/administrative/app_settings/api_settings_tab/) de votre compte Braze ou vous pouvez utiliser le [point de terminaison de la liste de segments d'exportation]({{site.baseurl}}/api/endpoints/export/segments/get_segment/). |
+| `segment_id` | Requis | Chaîne de caractères | Voir l'[identifiant API du segment.]({{site.baseurl}}/api/identifier_types/)<br><br> Vous trouverez l'adresse `segment_id` pour un segment donné sur la page des [clés API de]({{site.baseurl}}/user_guide/administrative/app_settings/api_settings_tab/) votre compte Braze ou vous pouvez utiliser l'[endpoint Exporter la liste des segments]({{site.baseurl}}/api/endpoints/export/segments/get_segment/).  |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ## Exemple de demande
@@ -59,7 +59,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 ```
 
 {% alert tip %}
-Pour obtenir de l’aide sur les exportations CSV et de l’API, consultez la section Résolution des problèmes d’exportation[]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/).
+Pour obtenir de l’aide sur les exportations CSV et de l’API, consultez la section [Résolution des problèmes d’exportation]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/).
 {% endalert %}
 
 {% endapi %}
