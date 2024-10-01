@@ -13,7 +13,7 @@ description: "Cet article de référence explique les différents composants de 
 
 # Objet Notification push Kindle et FireOS
 
-> L'objet `kindle_push` te permet de modifier ou de créer des notifications push Kindle et FireOS via nos [points de terminaison de messagerie]({{site.baseurl}}/api/endpoints/messaging).
+> L'objet `kindle_push` vous permet de modifier ou de créer des notifications push Kindle et FireOS via nos [points d'extrémité de messages.]({{site.baseurl}}/api/endpoints/messaging)
 
 ```json
 {
