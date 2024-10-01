@@ -12,7 +12,7 @@ description: "Cet article présente en détail l’endpoint Braze Supprimer un c
 {% api %}
 # Supprimer un catalogue
 {% apimethod delete %}
-/catalogs/{catalog_name}
+/catalogues/{nom_du_catalogue}
 {% endapimethod %}
 
 > Utilisez cet endpoint pour supprimer un catalogue.
@@ -29,9 +29,9 @@ Pour utiliser cet endpoint, vous aurez besoin d'une [clé API]({{site.baseurl}}/
 
 ## Paramètres de chemin
 
-| Paramètre | Obligatoire | Type de données | Descriptif |
+| Paramètre | Requis | Type de données | Description |
 |---|---|---|---|
-| `catalog_name` | Obligatoire | Chaîne | Nom du catalogue. |
+| `catalog_name` | Requis | Chaîne de caractères | Nom du catalogue. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
 ## Exemple de demande
@@ -48,7 +48,7 @@ Deux réponses de code de statut existent pour cet endpoint : `200` et `404`.
 
 ### Exemple de réponse réussie
 
-Le code d'état `200` pourrait renvoyer le corps de réponse suivant :
+Le code de statut `200` pourrait renvoyer le corps de réponse suivant :
 
 ```json
 {
@@ -58,7 +58,7 @@ Le code d'état `200` pourrait renvoyer le corps de réponse suivant :
 
 ### Exemple de réponse échouée
 
-Le code d'état `404` pourrait renvoyer le corps de réponse suivant. Reportez-vous à [Dépannage](#troubleshooting) pour plus d'informations sur les erreurs que vous pourriez rencontrer.
+Le code de statut `404` pourrait renvoyer le corps de réponse suivant. Consultez la résolution des problèmes[](#troubleshooting) pour plus d’informations concernant les erreurs que vous pourriez rencontrer.
 
 ```json
 {
@@ -82,7 +82,7 @@ Le code d'état `404` pourrait renvoyer le corps de réponse suivant. Reportez-v
 
 Le tableau suivant répertorie les erreurs renvoyées possibles et les étapes de résolution des problèmes associées.
 
-| Erreur | Dépannage |
+| Erreur | Résolution des problèmes |
 | --- | --- |
 | `catalog-not-found` | Vérifiez que le nom du catalogue est valide. |
 {: .reset-td-br-1 .reset-td-br-2}
