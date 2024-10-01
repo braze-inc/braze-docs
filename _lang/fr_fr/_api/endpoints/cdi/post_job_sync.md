@@ -1,6 +1,6 @@
 ---
-nav_title: "POST : Synchronisation du déclencheur"
-article_title: "POST : Synchronisation du déclencheur"
+nav_title: "POST : Synchronisation des déclencheurs"
+article_title: "POST : Synchronisation des déclencheurs"
 search_tag: Endpoint
 page_order: 2
 alias: /api/cdi/post_trigger_sync/
@@ -15,7 +15,7 @@ description: "Cet article présente en détail l’endpoint Braze Déclencher la
 /cdi/integrations/{integration_id}/sync
 {% endapimethod %}
 
-> Utilise ce point de terminaison pour déclencher une synchronisation pour une intégration donnée.
+> Utilisez cet endpoint pour déclencher une synchronisation pour une intégration donnée.
 
 {% alert note %}
 Pour utiliser cet endpoint, vous devrez générer une clé API avec l’autorisation `cdi.integration_sync`.
@@ -29,7 +29,7 @@ Pour utiliser cet endpoint, vous devrez générer une clé API avec l’autorisa
 
 | Paramètre | Requis | Type de données | Description |
 |---|---|---|---|
-| `integration_id` | Obligatoire | Chaîne | ID d'intégration. |
+| `integration_id` | Requis | Chaîne de caractères | ID d'intégration. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
 ## Exemple de demande
@@ -58,11 +58,11 @@ Le tableau suivant répertorie les erreurs renvoyées possibles et les étapes d
 
 | Erreur | Résolution des problèmes |
 | --- | --- |
-| `400 Invalid integration ID` | Vérifie que ton `integration_id` est valide. |
-| `404 Integration not found` | Il n'existe pas d'intégration pour l'ID d'intégration donné. Assure-toi que ton identifiant d'intégration est valide. |
-| `429 Another job is in progress` | Une synchronisation est actuellement en cours pour cette intégration. Essaie à nouveau une fois la synchronisation terminée. |
+| `400 Invalid integration ID` | Vérifiez que votre `integration_id` est valide. |
+| `404 Integration not found` | Il n'existe pas d'intégration pour l'ID d'intégration donné. Assurez-vous que votre ID d'intégration est valide. |
+| `429 Another job is in progress` | Une synchronisation est actuellement en cours pour cette intégration. Réessayez une fois la synchronisation terminée. |
 {: .reset-td-br-1 .reset-td-br-2}
 
-Pour les codes d'état supplémentaires et les messages d'erreur associés, tu peux te référer à [Erreurs fatales et réponses]({{site.baseurl}}/api/errors/#fatal-errors).
+Pour connaître les autres codes d'état et les messages d'erreur associés, veuillez vous reporter à la section [Erreurs fatales et réponses.]({{site.baseurl}}/api/errors/#fatal-errors)
 
 {% endapi %}
