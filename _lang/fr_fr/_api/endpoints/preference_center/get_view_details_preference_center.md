@@ -28,9 +28,9 @@ Cet endpoint a une limitation du débit de 1 000 requêtes par minute, par esp
 
 ## Paramètres de chemin
 
-| Paramètre | Obligatoire | Type de données | Descriptif |
+| Paramètre | Requis | Type de données | Description |
 | --------- | ---------| --------- | ----------- |
-|`preferenceCenterExternalID`| Obligatoire | Chaîne | L’ID de votre centre de préférences. |
+|`preferenceCenterExternalID`| Requis | Chaîne de caractères | L’ID de votre centre de préférences. |
 
 ## Paramètres de demande
 
