@@ -10,7 +10,7 @@ description: "Cet article de référence explique les différents composants de 
 
 # Objet E-mail
 
-> L’objet `email` vous permet de modifier ou de créer des e-mails via nos [endpoints de messagerie]({{site.baseurl}}/api/endpoints/messaging).
+> L'objet `email` vous permet de modifier ou de créer des e-mails par l'intermédiaire de nos [points d'envoi de messages.]({{site.baseurl}}/api/endpoints/messaging)
 
 ## Objet E-mail
 
@@ -36,7 +36,7 @@ description: "Cet article de référence explique les différents composants de 
 ```
 
 - [Identifiant d’application]({{site.baseurl}}/api/identifier_types/)
-- Pour plus d’informations et les meilleures pratiques sur les accroches, consultez notre article d’aide sur le style des corps de message.
+- Pour plus d'informations et de bonnes pratiques sur les accroches, consultez notre article d'aide sur \[email body styling][46].
 
 {% alert warning %}
 Braze recommande d’éviter d’utiliser les liens Google Drive pour les `url` de pièces jointes, car cela peut bloquer les appels de nos serveurs pour obtenir le fichier ce qui empêche l’envoi d’e-mails.
@@ -46,7 +46,7 @@ Les types de fichiers joints valides comprennent : `txt`, `csv`, `log`, `css`, 
 
 Un `email_template_id` peut être récupéré au bas des modèles d’e-mail créés avec l’éditeur HTML. Voici un exemple de ce à quoi ressemble cet ID :
 
-![Section Identifiant API d'un modèle d'e-mail HTML][31]
+![Section Identifiant API d’un modèle d’e-mail HTML][31]
 
 ## Exemple d’objet d’e-mail avec pièce jointe
 
@@ -65,13 +65,13 @@ Un `email_template_id` peut être récupéré au bas des modèles d’e-mail cr�
 }
 ```
 
-## Authentification pour les pièces jointes des courriers électroniques
+## Authentification des pièces jointes aux e-mails
 
 {% alert important %}
-L'authentification pour les pièces jointes des fichiers de courrier électronique dans ce point de terminaison est actuellement en accès anticipé. Contactez votre gestionnaire de compte Braze si vous souhaitez participer à l’accès anticipé.
+L'authentification des pièces jointes aux e-mails dans cet endpoint est actuellement en accès anticipé. Contactez votre gestionnaire de compte Braze si vous souhaitez participer à l’accès anticipé.
 {% endalert %}
 
-1. Accédez à **Paramètres** > **Contenu connecté** et cliquez sur **Ajouter des informations d'identification** pour ajouter vos informations d'authentification.
+1. Naviguez vers **Paramètres** > **Contenu connecté** et cliquez sur **Ajouter un justificatif** pour ajouter vos justificatifs d'authentification.
 2. Entrez un nom, puis ajoutez un nom d'utilisateur et un mot de passe.
 3. Dans l'objet E-mail de l’endpoint `/messages/send`, incluez une propriété `basic_auth_credential` spécifiant le nom de l’identifiant dans les détails de la pièce jointe. Reportez-vous à l'exemple suivant avec le nom d’identifiant `company_basic_auth_credential_name` :
 
@@ -95,4 +95,4 @@ L'authentification pour les pièces jointes des fichiers de courrier électroniq
 ```
 
 [31]: {% image_buster /assets/img_archive/email_template_id.png %}
-[46] : {{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices/guidelines_and_tips/#body-styling
+[46]: {{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices/guidelines_and_tips/#body-styling
