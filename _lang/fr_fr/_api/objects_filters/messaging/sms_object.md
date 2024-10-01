@@ -9,7 +9,7 @@ description: "Cet article de référence explique les différents composants de 
 ---
 # Objet SMS
 
-> L'objet `sms` te permet de modifier ou de créer des messages SMS via nos [points de terminaison de messagerie]({{site.baseurl}}/api/endpoints/messaging).
+> L'objet `sms` vous permet de modifier ou de créer des messages SMS via nos [points d'envoi de messages.]({{site.baseurl}}/api/endpoints/messaging)
 
 ```json
 {
