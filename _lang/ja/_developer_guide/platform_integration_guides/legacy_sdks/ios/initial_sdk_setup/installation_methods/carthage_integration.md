@@ -41,7 +41,7 @@ binary "https://raw.githubusercontent.com/Appboy/appboy-ios-sdk/master/appboy_io
 github "Appboy/Appboy-iOS-SDK" "<BRAZE_IOS_SDK_VERSION>"
 ```
 
-`<BRAZE_IOS_SDK_VERSION>` を "x.y.z" 形式のBraze iOS SDKの[適切なバージョンに置き換えて][4]くださ い。
+`<BRAZE_IOS_SDK_VERSION>` は「x.y.z」形式の[適切なバージョン][4]の Braze iOS SDK に置き換えてください。
 
 ## 次のステップ:
 
