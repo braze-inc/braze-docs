@@ -22,7 +22,7 @@ Si votre charge utile POST a été acceptée par nos serveurs, les messages réu
 }
 ```
 
-Notez que la réussite signifie que la charge utile de l’API RESTful a été correctement créée et transmise à notre notification push ou à nos e-mails ou autres services de messagerie. Cela ne signifie pas que les messages ont effectivement été délivrés, car des facteurs supplémentaires pourraient empêcher la délivrance du message (par exemple, un appareil pourrait être hors ligne, le jeton push pourrait être rejeté par les serveurs d'Apple, tu pourrais avoir fourni un identifiant d'utilisateur inconnu).
+Notez que la réussite signifie que la charge utile de l’API RESTful a été correctement créée et transmise à notre notification push ou à nos e-mails ou autres services de messagerie. Cela ne signifie pas que les messages ont effectivement été envoyés, car des facteurs supplémentaires peuvent empêcher l'envoi du message (par exemple, un appareil peut être hors ligne, le jeton push peut être rejeté par les serveurs d'Apple, vous pouvez avoir fourni un ID utilisateur inconnu).
 
 Si votre message est réussi, mais que vous avez des erreurs non fatales, vous recevrez la réponse suivante :
 
@@ -50,15 +50,15 @@ Les analyses sont toujours disponibles pour les campagnes. De plus, les analyses
 }
 ```
 
-L’ID d’envoi fourni peut être utilisé comme paramètre pour que l’envoi/l’endpoint `/send/data_series` extrait des analyses spécifiques.
+L'ID d'envoi fourni peut être utilisé comme paramètre pour l'endpoint `/send/data_series` afin d'obtenir des analyses/analytiques spécifiques à l'envoi.
 
 ## Erreurs
 
 L’élément du code d’état d’une réponse serveur est un numéro à 3 chiffres où le premier chiffre du code définit la classe de réponse.
 
-- La **classe 2XX** du code d'état (non fatal) indique que **ta demande** a été reçue, comprise et acceptée avec succès.
+- Le code d'état de **classe 2XX** (non fatal) indique que **votre demande** a été reçue, comprise et acceptée avec succès.
 - La **classe 4XX** du code de statut (fatal) indique une **erreur du client**. Reportez-vous au tableau des erreurs fatales pour obtenir une liste complète des codes d’erreur et descriptions de la classe 4XX.
-- La **classe 5XX** du code de statut (fatal) indique une **erreur du serveur**. Il y a plusieurs causes potentielles : p. ex., le serveur auquel vous essayez d’accéder est incapable d’exécuter la demande, le serveur est en cours de maintenance et est donc incapable d’exécuter la demande, ou le serveur connaît un niveau élevé de trafic. Dans ce cas, nous vous recommandons de réessayer votre demande avec un délai exponentiel. En cas d'incident ou de panne, Braze n'est pas en mesure de lire à nouveau un appel d’API REST qui a échoué pendant la fenêtre d'incident. Vous devrez réessayer les appels qui ont échoué pendant la fenêtre d'incident.
+- La **classe 5XX** du code de statut (fatal) indique une **erreur du serveur**. Il y a plusieurs causes possibles, par exemple, le serveur auquel vous essayez d'accéder n'est pas en mesure d'exécuter la requête, le serveur fait l'objet d'une maintenance qui l'empêche d'exécuter la requête, ou le serveur connaît des niveaux élevés de trafic. Dans ce cas, nous vous recommandons de réessayer votre demande avec un délai exponentiel. En cas d'incident ou de panne, Braze n'est pas en mesure de lire à nouveau un appel d’API REST qui a échoué pendant la fenêtre d'incident. Vous devrez réessayer les appels qui ont échoué pendant la fenêtre d'incident.
 
 ### Erreurs fatales
 
@@ -70,30 +70,30 @@ Tous les codes d’erreur suivants indiquent qu’aucun message ne sera envoyé.
 {% endalert %}
 {% raw %}
 
-| Code d'erreur | Description |
+| Code d’erreur | Description |
 |---|---|
-| `5XX Internal Server Error` | Réessaie ta demande avec un backoff exponentiel.
-| `400 Bad Request` | Mauvaise syntaxe.|
-| `400 No Recipients` | La requête ne contient ni ID externes ni ID de segment ni jetons de notification push.|
-| `400 Invalid Campaign ID` | Aucune campagne API de messagerie n'a été trouvée pour l'identifiant de campagne que tu as fourni.|
-| `400 Message Variant Unspecified` | Tu as fourni un identifiant de campagne mais pas d'identifiant de variation de message.|
-| `400 Invalid Message Variant` | Tu as fourni un identifiant de campagne valide, mais l'identifiant de variation du message ne correspond à aucun des messages de cette campagne.
-| `400 Mismatched Message Type` | Tu as fourni une variante du mauvais type de message pour au moins un de tes messages.
-| `400 Invalid Extra Push Payload` | Vous fournissez la clé `extra` pour `apple_push` ou `android_push` mais il ne s'agit pas d'un dictionnaire.|
-| `400 Max Input Length Exceeded` | Causé par l'appel de plus de 75 ID externes lors de l'utilisation de l’endpoint `/users/track`.|
-| `400 The max number of external_ids and aliases per request was exceeded` | Causé par l'appel de plus de 50 identifiants externes.|
-| `400 The max number of ids per request was exceeded` | Causé par l'appel de plus de 50 identifiants externes.|
-| `400 No message to send` | Aucune charge utile n'est spécifiée pour le message.
-`400 Slideup Message Length Exceeded` | Le message de la diapositive contient plus de 140 caractères.
-| `400 Apple Push Length Exceeded` | La charge utile JSON est supérieure à 1 912 octets.|
-| `400 Android Push Length Exceeded` | La charge utile JSON est supérieure à 4 000 octets.|
-| `400 Bad Request` | Impossible d'analyser `send_at` datetime.|
-| `400 Bad Request` | Dans ta demande, `in_local_time` est vrai mais `time` est passé dans le fuseau horaire de ton entreprise.|
-| `401 Unauthorized` | Clé API invalide |
-| `403 Forbidden` | Le plan tarifaire n'est pas pris en charge, ou le compte est autrement inactivé.|
-| `403 Access Denied` | La clé API REST que vous utilisez n'a pas les autorisations suffisantes, vérifiez les autorisations de la clé API dans la page **Paramètres**.|
+| `5XX Internal Server Error` | Réessayer votre demande avec des délais exponentiels.|
+| `400 Bad Request` | Syntaxe incorrecte.|
+| `400 No Recipients` | Il n'y a pas d'ID externe ou d'ID de segmentation, ni de jetons de poussée dans la demande.|
+| `400 Invalid Campaign ID` | Aucune campagne API d'envoi de messages n'a été trouvée pour l'ID de campagne que vous avez fourni.|
+| `400 Message Variant Unspecified` | Vous fournissez un ID de campagne mais aucun ID de variation de message.|
+| `400 Invalid Message Variant` | Vous avez fourni un ID de campagne valide, mais l’ID de modification de message ne correspond pas à l’un des messages de cette campagne.|
+| `400 Mismatched Message Type` | Vous avez fourni une variation de message du mauvais type de message pour au moins un de vos messages.|
+| `400 Invalid Extra Push Payload` | Vous fournissez la clé `extra` pour `apple_push` ou `android_push` mais ce n’est pas un dictionnaire.|
+| `400 Max Input Length Exceeded` | Causé par l'appel de plus de 75 ID externes lors de l'atteinte de l'endpoint `/users/track`.|
+| `400 The max number of external_ids and aliases per request was exceeded` | Causé par l'appel de plus de 50 ID externes.|
+| `400 The max number of ids per request was exceeded` | Causé par l'appel de plus de 50 ID externes.|
+| `400 No message to send` | Aucune charge utile n’est spécifiée pour le message.|
+| `400 Slideup Message Length Exceeded` | Le message Slideup contient plus de 140 caractères.|
+| `400 Apple Push Length Exceeded` | La charge utile JSON est supérieure à 1 912 octets.|
+| `400 Android Push Length Exceeded` | La charge utile JSON est supérieure à 4 000 octets.|
+| `400 Bad Request` | Impossible d’analyser l’horodatage `send_at`.|
+| `400 Bad Request` | Dans votre demande, `in_local_time` est vrai, mais `time` est passé dans le fuseau horaire de votre entreprise.|
+| `401 Unauthorized` | Clé API non valide |
+| `403 Forbidden` | Le plan tarifaire n'est pas pris en charge ou le compte est désactivé.|
+| `403 Access Denied` | La clé API REST que vous utilisez ne dispose pas d'autorisations suffisantes, vérifiez les autorisations de la clé API sous la page **Paramètres.** |
 | `404 Not Found` | URL non valide. |
-| `429 Rate Limited` | Dépassement de la limite de débit. |
+| `429 Rate Limited` | Limite de débit dépassée. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% endraw %}
