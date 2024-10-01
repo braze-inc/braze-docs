@@ -28,9 +28,9 @@ Cet endpoint a une limitation du débit de 10 requêtes par minute, par espace 
 
 ## Paramètres de chemin
 
-| Paramètre - Requis - Type de données - Description - Paramètre - Requis - Type de données - Description - Paramètre - Requis - Type de données - Description
+| Paramètre | Requis | Type de données | Description |
 | --------- | ---------| --------- | ----------- |
-|`preferenceCenterExternalID`| Requis | Chaîne | L'identifiant de ton centre de préférences. |
+|`preferenceCenterExternalID`| Requis | Chaîne de caractères | L’ID de votre centre de préférences. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 
@@ -55,13 +55,13 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ## Paramètres de demande
 
-| Paramètre - Requis - Type de données - Description - Paramètre - Requis - Type de données - Description - Paramètre - Requis - Type de données - Description
+| Paramètre | Requis | Type de données | Description |
 | --------- | ---------| --------- | ----------- |
-|`preference_center_page_html`| Requis | Chaîne | Le code HTML de la page du centre de préférences. |
-|`preference_center_title`| Facultatif | Chaîne | Le titre du centre de préférences et des pages de confirmation. Si aucun titre n’est précisé, le titre des pages passera par défaut à « Centre de préférences ».
-|`confirmation_page_html`| Requis | Chaîne | Le code HTML de la page de confirmation. |
-|`state` | Facultatif | Chaîne | Choisis `active` ou `draft`.
-|`options` | Facultatif | Objet | Attributs : `meta-viewport-content`. Lorsqu'elle est présente, une balise méta `viewport` sera ajoutée à la page avec `content= <value of attribute>`. |
+|`preference_center_page_html`| Requis | Chaîne de caractères | L’HTML de la page du centre de préférences. |
+|`preference_center_title`| Facultatif | Chaîne de caractères | Le titre des pages du centre de préférences et de confirmation. Si aucun titre n’est précisé, le titre des pages passera par défaut à « Centre de préférences ». |
+|`confirmation_page_html`| Requis | Chaîne de caractères | L’HTML de la page de confirmation. |
+|`state` | Facultatif | Chaîne de caractères | Choisir `active` ou `draft`.|
+|`options` | Facultatif | Objet | Attributs : `meta-viewport-content`. Le cas échéant, une étiquette méta `viewport` sera ajoutée à la page avec `content= <value of attribute>`. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ## Exemple de demande
