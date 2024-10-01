@@ -10,7 +10,7 @@ description: "Cet article de référence répertorie et explique les différents
 ---
 # Objet Notification push Web
 
-> L’objet `web_push` vous permet de définir ou de demander des informations relatives au contenu des push web et des alertes push web via nos [points de terminaison de messagerie]({{site.baseurl}}/api/endpoints/messaging).
+> L'objet `web_push` vous permet de définir ou de demander des informations relatives au contenu de web push et d'alertes web push via nos [points d'envoi de messages.]({{site.baseurl}}/api/endpoints/messaging)
 
 ## Objet Notification push Web
 
@@ -26,7 +26,7 @@ description: "Cet article de référence répertorie et explique les différents
    "require_interaction": (optional, boolean) whether to require the user to dismiss the notification, supported on Mac Chrome,
    "time_to_live": (optional, integer (seconds)),
    "send_to_most_recent_device_only" : (optional, boolean) defaults to false, if set to true, Braze will only send this push to a user's most recently used browser, rather than all eligibles browsers,
-   "buttons" : (optional, array of Web Push Action Button Objects) push action buttons to display
+   "buttons" : (optional, array of Web push action button objects) push action buttons to display
 }
 ```
 
