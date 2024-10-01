@@ -10,7 +10,7 @@ description: "Cet article de référence explique les différents composants de 
 
 # Objet Carte de contenu
 
-> L'objet `content_card` te permet de modifier ou de créer des cartes de contenu par l'intermédiaire de nos [points d'accès de messagerie]({{site.baseurl}}/api/endpoints/messaging).
+> L'objet `content_card` vous permet de créer des cartes de contenu par l'intermédiaire de nos [points d'envoi de messages.]({{site.baseurl}}/api/endpoints/messaging)
 
 ```json
 {
