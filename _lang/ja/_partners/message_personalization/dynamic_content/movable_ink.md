@@ -91,7 +91,7 @@ Movable Inkには、テキスト、画像などの要素をドラッグ＆ドロ
 
 キャンペーンを終了する前に、ダイナミックな画像をプレビューし、クエリパラメータをテストして、画像が表示されるときの見た目を確認してください。完了すると、ダイナミックなURLが生成され、それをBrazeに挿入できます！
 
-Movable Ink プラットフォームの使用方法の詳細については、[Movable Inkサポートセンター][サポートを参照してください]
+Movable Inkプラットフォームの使用方法の詳細については、[Movable Inkサポートセンター][サポート]を参照してください。
 
 ### ステップ 3:Movable Ink コンテンツ URL を取得
 
@@ -164,19 +164,14 @@ Brazeプラットフォームで、クリエイティブタグをメール本文
 - **アプリ内メッセージとコンテンツカード**:各インプレッションの画像URLが一意であることを確認してください。これは、各URLが異なるように適切なLiquidを追加することで実行できます。[アプリ内およびコンテンツカードメッセージの指示][指示]をご覧ください。 
 - **画像 not loading**:必ずすべての「マージタグ」をBrazeダッシュボードの対応するLiquidフィールドに置き換えてください。例えば: {% raw %}```https://mi-msg.com/p/rp/image.png?mi_u=%%email%%```{% endraw %} と {% raw %}```https://mi-msg.com/p/rp/image.png?mi_u={{${email_address}}}```{% endraw %}。
 
-### ダイナミック"画像が正しく表示されない。どんなチャネルで苦労していますか？
-- **プッシュ通知**Movable Ink "画像 URL の前に、空のロジックがあることを確認します。<br>{% raw %}```{% if true %}{% endif %}https://movable-ink-image-url-goes-here```{% endraw %}
-- **In-アプリとコンテンツカード**:"画像 URL がインプレッションごとに一意であることを確認します。これは、それぞれのURL が違うように、アプリの適切なリキッドを終了することによって行うことができます。\[in-アプリ and コンテンツカード messages instructions]\[instructions]]を参照してください。 
-- **イメージが読み込むしない**:"merge タグ s"は、必ずBraze ダッシュボードの対応するLiquid フィールドs に置き換えてください。例: {% raw %}```https://mi-msg.com/p/rp/image.png?mi_u=%%email%%```{% endraw %} {% raw %}```https://mi-msg.com/p/rp/image.png?mi_u={{${email_address}}}```{% endraw %}。
-
-### AndroidでGIFを表示するのに問題がありますか?
-- Androidには、実施にあたってGIFの支援が必要である。この設定がない場合は、Android[アプリ内メッセージ customization][GIFsupport] 記事に従ってください。
+#### AndroidでGIFを表示するのに問題がありますか？
+- Androidは実装にGIFサポートを必要とします。Androidの[アプリ内メッセージカスタマイズ][GIFサポート]記事に従って、この設定がない場合は設定してください。
 
 [1]: https://www.movableink.com/
-[datasource]: ({% image_buster /assets/img/movable_ink/movable_ink1.png %})
-[support]: https://support.movableink.com/
-[GIFsupport]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/in-app_messaging/customization/gifs/
-[Instructions]: {{site.baseurl}}/partners/message_personalization/dynamic_content/movable_ink/#step-4-braze-experience
+[データソース]: ({% image_buster /assets/img/movable_ink/movable_ink1.png %})
+[サポート]: https://support.movableink.com/
+[GIFサポート]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/in-app_messaging/customization/gifs/
+[指示]: {{site.baseurl}}/partners/message_personalization/dynamic_content/movable_ink/#step-4-braze-experience
 [1]: ({% image_buster /assets/img/movable_ink/android.png %})
 [2]: ({% image_buster /assets/img/movable_ink/ios.png %})
 [3]: ({% image_buster /assets/img/movable_ink/web.png %})
