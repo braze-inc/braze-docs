@@ -24,6 +24,7 @@ You must include an Android push object in `messages` if you want users you have
    "message_variation_id": (optional, string) used when providing a campaign_id to specify which message variation this message should be tracked under (must be an Android Push Message),
    "notification_channel_id": (optional, string) the channel ID the notification will be sent with,
    "priority": (optional, integer) the notification priority value,
+   "android_priority": (optional, string) the FCM sender priority,
    "send_to_sync": (optional, if set to true we will throw an error if "alert" or "title" is set),
    "collapse_key": (optional, string) the collapse key for this message,
    // Specifying "default" in the sound field will play the standard notification sound
@@ -47,6 +48,7 @@ You can send "Big Picture" notifications by specifying the key `appboy_image_url
 | Parameter | Details |
 | --------- | ------- |
 | `priority` | This parameter will accept values from `-2` to `2`, where `-2` represents "MIN" priority and `2` represents "MAX". `0` is the "DEFAULT" value. <br> <br> Any values sent outside of that range will default to 0. For more information on which priority level to use, see [Android notification priority]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/customization/advanced_settings#notification-priority). |
+| `android_priority` | This parameter will accept values either "normal" or "high" to specify the FCM sender priority. By default, notification messages are sent with high priority, and data messages are sent with normal priority.<br><br> For more information on how different value will impact the delivery, see [Android message priority](https://firebase.google.com/docs/cloud-messaging/android/message-priority). |
 | `collapse_key` | FCM can simultaneously store only up to four collapse keys per device. If you use more than four collapse keys, FCM does not make any guarantees as to which ones will be kept. Braze uses one of these by default for campaigns, so make sure to specify only up to three additional collapse keys for Android messages. |
 | `push_icon_image_url` | The value for the large icon parameter should be a URL that links to where your image is hosted. <br> <br> Images need to be cropped to a 1:1 aspect ratio and should be at least 40x40. |
 | `notification_channel` | If this is not specified, Braze will attempt to send the notification payload with the [dashboard fallback][45] channel ID. For more, see [Notification channels][44] and refer to the steps for [defining notification channels][43] during integration. |
