@@ -29,9 +29,9 @@ Pour utiliser cet endpoint, vous aurez besoin d’un jeton SCIM. Pour plus d’i
 
 ## Paramètres de chemin
 
-| Paramètre | Obligatoire | Type de données | Descriptif |
+| Paramètre | Requis | Type de données | Description |
 |---|---|---|---|
-| `id` | Obligatoire | Chaîne | L’ID de ressource de l’utilisateur. Ce paramètre est renvoyé par les méthodes `POST` `/scim/v2/Users/` ou `GET` `/scim/v2/Users?filter=userName eq "user@test.com"`. |
+| `id` | Requis | Chaîne de caractères | L’ID de ressource de l’utilisateur. Ce paramètre est renvoyé par les méthodes `POST` `/scim/v2/Users/` ou `GET` `/scim/v2/Users?filter=userName eq "user@test.com"`. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
 ## Corps de la demande
