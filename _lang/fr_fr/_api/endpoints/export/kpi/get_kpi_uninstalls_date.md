@@ -1,6 +1,6 @@
 ---
-nav_title: "GET :  : Exporter les indicateurs clé de performance pour les désinstallations quotidiennes d’application par date"
-article_title: "GET :  : Exporter les indicateurs clé de performance pour les désinstallations quotidiennes d’application par date"
+nav_title: "GET : Exporter les KPI pour les désinstallations quotidiennes d'applications par date"
+article_title: "GET : Exporter les KPI pour les désinstallations quotidiennes d'applications par date"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
@@ -28,11 +28,11 @@ Pour utiliser cet endpoint, vous aurez besoin d'une [clé API]({{site.baseurl}}/
 
 ## Paramètres de demande
 
-| Paramètre| Obligatoire | Type de données | Descriptif |
+| Paramètre| Requis | Type de données | Description |
 | -------- | -------- | --------- | ----------- |
-| `length` | Obligatoire | Entier | Nombre maximum de jours avant `ending_at` à inclure dans la série retournée. Doit être compris entre 1 et 100 (inclus).
-| `ending_at` | Facultatif | Date/heure <br>(chaîne [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) ) | Date à laquelle la série de données doit se terminer. Par défaut, l’heure de la demande.
-| `app_id` | Facultatif | Chaîne | Identificateur d’API d’application récupéré à partir de la page [Clés d’API]({{site.baseurl}}/user_guide/administrative/app_settings/api_settings_tab/) . En cas d’exclusion, les résultats de toutes les applications de l’espace de travail seront renvoyés. |
+| `length` | Requis | Entier | Nombre maximum de jours avant `ending_at` à inclure dans la série renvoyée. Doit être compris entre 1 et 100 (inclus). |
+| `ending_at` | Facultatif | DateTime <br>(string [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601)) | Date à laquelle la série de données doit se terminer. Par défaut, l’heure de la demande. |
+| `app_id` | Facultatif | Chaîne de caractères | Identifiant de l'API de l'application récupéré à partir de la page [Clés API]({{site.baseurl}}/user_guide/administrative/app_settings/api_settings_tab/). Si exclu, les résultats de toutes les applications dans l'espace de travail seront renvoyés. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ## Exemple de demande
