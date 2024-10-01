@@ -15,7 +15,7 @@ description: "Cet article présente en détail l’endpoint Braze Lister des cat
 /catalogs
 {% endapimethod %}
 
-> Utilise ce point de terminaison pour renvoyer une liste de catalogues dans un espace de travail.
+> Utilisez cet endpoint pour obtenir la liste des catalogues d'un espace de travail.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#7d65fb86-ccf7-423f-9eb2-f68ab36df824 {% endapiref %}
 
