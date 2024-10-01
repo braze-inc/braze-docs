@@ -48,11 +48,11 @@ Authorization: Bearer YOUR-REST-API-KEY
 ```
 ## Paramètres de demande
 
-| Paramètre | Obligatoire | Type de données | Descriptif |
+| Paramètre | Requis | Type de données | Description |
 | --------- | ---------| --------- | ----------- |
-| `schedule_id` | Obligatoire | Chaîne | La `schedule_id` mise à jour (obtenue à partir de la réponse pour créer un calendrier). |
-`schedule`| | Facultatif | Objet | Voir [objet de planification]({{site.baseurl}}/api/objects_filters/schedule_object/). |
-`messages`| | Facultatif | Objet | Voir [les objets de messagerie disponibles]({{site.baseurl}}/api/objects_filters/#messaging-objects). |
+| `schedule_id` | Requis | Chaîne de caractères | Le `schedule_id` à mettre à jour (obtenu à partir de la réponse pour créer une planification). |
+|`schedule` | Facultatif | Objet | Voir [objet de l'horaire]({{site.baseurl}}/api/objects_filters/schedule_object/). |
+|`messages` | Facultatif | Objet | Voir [les objets de messagerie disponibles]({{site.baseurl}}/api/objects_filters/#messaging-objects). |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ## Exemple de demande
