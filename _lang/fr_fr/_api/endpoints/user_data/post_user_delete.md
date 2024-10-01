@@ -5,11 +5,11 @@ search_tag: Endpoint
 page_order: 5
 layout: api_page
 page_type: reference
-description: "Cet article décrit les détails de l’endpoint Braze Suppression de l’utilisateur."
+description: "Cet article décrit les détails de l'endpoint Braze pour supprimer des utilisateurs."
 
 ---
 {% api %}
-# Supprimer des utilisateurs
+# Supprimer les utilisateurs
 {% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %}
 /users/delete
 {% endapimethod %}
@@ -19,7 +19,7 @@ description: "Cet article décrit les détails de l’endpoint Braze Suppression
 Vous pouvez inclure jusqu’à 50 `external_ids`, `user_aliases`, ou `braze_ids` dans une seule demande. Seul un des `external_ids`, `user_aliases`, ou `braze_ids` peut être inclus dans une seule demande.
 
 {% alert warning %}
-La suppression des profils utilisateur ne peut pas être annulée. Cette action supprimera définitivement les utilisateurs susceptibles de provoquer des écarts dans vos données. Pour en savoir plus sur ce qui se passe lorsque vous [supprimez un profil utilisateur via l’API]({{site.baseurl}}/help/help_articles/api/delete_user/) , consultez notre documentation d’aide.
+La suppression des profils utilisateur ne peut pas être annulée. Cette action supprimera définitivement les utilisateurs susceptibles de provoquer des écarts dans vos données. En savoir plus sur ce qui se passe lorsque vous [supprimez un profil utilisateur via l'API]({{site.baseurl}}/help/help_articles/api/delete_user/) dans notre documentation d'aide.
 {% endalert %}
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#22e91d00-d178-4b4f-a3df-0073ecfcc992 {% endapiref %}
@@ -48,12 +48,21 @@ Authorization: Bearer YOUR_REST_API_KEY
 ```
 ### Paramètres de demande
 
-| Paramètre | Obligatoire | Type de données | Descriptif |
-| --------- | ---------| --------- | ----------- |
-| `external_ids` | Facultatif | Tableau de chaînes | Identifiants externes à supprimer par les utilisateurs. |
-| `user_aliases` | Facultatif | Tableau d’objet alias utilisateur | [Alias utilisateur]({{site.baseurl}}/api/objects_filters/user_alias_object/) à supprimer. |
-| `braze_ids` | Facultatif | Tableau de chaînes | Braze les identificateurs utilisateur pour que les utilisateurs les suppriment. |
+| Paramètre      | Requis | Type de données                  | Description                                                                                      |
+| -------------- | -------- | -------------------------- | ------------------------------------------------------------------------------------------------ |
+| `external_ids` | Facultatif | Tableau de chaînes de caractères           | Identifiants externes pour les utilisateurs à supprimer.                                                    |
+| `user_aliases` | Facultatif | Tableau d’objets Alias utilisateur | [Alias utilisateur]({{site.baseurl}}/api/objects_filters/user_alias_object/) pour les utilisateurs à supprimer. |
+| `braze_ids`    | Facultatif | Tableau de chaînes de caractères           | Identifiants utilisateur de Braze pour les utilisateurs à supprimer.                                                  |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+
+### Suppression des utilisateurs par e-mail
+Si un `email` est spécifié comme identifiant, une valeur `prioritization` supplémentaire est requise dans l'identifiant. Le `prioritization` est un tableau ordonné et doit spécifier quel utilisateur supprimer si plusieurs utilisateurs sont trouvés. Cela signifie que la suppression des utilisateurs ne se produira pas si plus d'un utilisateur correspond à une priorisation.
+
+Les valeurs autorisées pour le tableau sont : `identified`, `unidentified`, `most_recently_updated`. `most_recently_updated` fait référence à la priorisation de l'utilisateur mis à jour le plus récemment.
+
+Une seule des options suivantes peut exister dans le tableau de priorisation à la fois :
+- `identified` fait référence à la priorisation d'un utilisateur avec un `external_id`
+- `unidentified` fait référence à la priorisation d'un utilisateur sans un `external_id`
 
 ## Exemple de demande
 ```
@@ -69,6 +78,12 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/delete' \
     },
     {
       "alias_name": "user_alias2", "alias_label": "alias_label2"
+    }
+  ],
+  "email_addresses": [
+    {
+      "email": "john.smith@braze.com",
+      "prioritization": ["unidentified", "most_recently_updated"]
     }
   ]
 }'
