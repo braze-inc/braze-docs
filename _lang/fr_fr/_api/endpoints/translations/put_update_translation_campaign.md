@@ -10,12 +10,12 @@ description: "Cet article présente en détail l’endpoint Braze Mettre à jour
 ---
 
 {% api %}
-# Mettre à jour la traduction dans une campagne
+# Mise à jour de la traduction dans une campagne
 {% apimethod put %}
-/campaigns/translations
+/campagnes/traductions
 {% endapimethod %}
 
-> Utilise ce point de terminaison pour mettre à jour plusieurs traductions pour une campagne.
+> Utilisez cet endpoint pour mettre à jour plusieurs traductions pour une campagne.
 
 {% alert important %}
 La mise à jour d'une traduction dans une campagne via l'API est actuellement en accès anticipé. Contactez votre gestionnaire de compte Braze si vous souhaitez participer à l’accès anticipé.
@@ -35,9 +35,9 @@ Cet endpoint n’a pas de chemin de paramètres.
 
 ## Paramètres de demande
 
-| Paramètre - Requis - Type de données - Description - Paramètre - Requis - Type de données - Description - Paramètre - Requis - Type de données - Description
+| Paramètre | Requis | Type de données | Description |
 | --------- | ---------| --------- | ----------- |
-|`locale_id`| Obligatoire | Chaîne de caractères | ID du paramètre régional. |
+|`locale_id`| Requis | Chaîne de caractères | L'ID de la locale. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ## Exemple de demande
@@ -68,7 +68,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ### Exemple de réponse échouée
 
-Le code de statut `400` pourrait renvoyer le corps de réponse suivant. Consultez la `400`résolution des problèmes[](#troubleshooting) pour plus d’informations concernant les erreurs que vous pourriez rencontrer.
+Le code de statut `400` pourrait renvoyer le corps de réponse suivant. Consultez la résolution des problèmes[](#troubleshooting) pour plus d’informations concernant les erreurs que vous pourriez rencontrer.
 
 ```json
 {
@@ -85,18 +85,18 @@ Le code de statut `400` pourrait renvoyer le corps de réponse suivant. Consulte
 
 Le tableau suivant répertorie les erreurs renvoyées possibles et les étapes de résolution des problèmes associées.
 
-| Message d'erreur
+| Message d’erreur                           | Résolution des problèmes                                                                    |
 |-----------------------------------------|------------------------------------------------------------------------------------|
-| `INVALID_CAMPAIGN_ID`                   | Vérifiez que l’ID de campagne correspond à la campagne que vous traduisez.                   |
-| `INVALID_LOCALE_ID` | Confirme que ton identifiant local existe dans la traduction de ton message.                         |
-| `INVALID_MESSAGE_VARIATION_ID` | Confirme que l'identifiant de ton message est correct.                                                |
+| `INVALID_CAMPAIGN_ID`                   | Confirmez que l'ID de la campagne correspond à la campagne que vous traduisez.                   |
+| `INVALID_LOCALE_ID`                     | Confirmez que votre ID local existe dans la traduction de votre message.                         |
+| `INVALID_MESSAGE_VARIATION_ID`          | Confirmez que l'ID de votre message est correct.                                                |
 | `INVALID_TRANSLATION_OBJECT`            | Les ID de traduction ne correspondent pas ou le texte traduit dépasse les limites.                  |
-| `MESSAGE_NOT_FOUND`                     | Vérifiez le message à traduire.                                           |
-| `LOCALE_NOT_FOUND` | Confirme que le paramètre local existe dans tes paramètres multilingues.                         |
-| `MISSING_TRANSLATIONS` | Les ID de traduction doivent correspondre au message.                                         |
-| `MULTI_LANGUAGE_NOT_ENABLED` | Les paramètres multilingues ne sont pas activés pour ton espace de travail.                       |
-| `MULTI_LANGUAGE_NOT_ENABLED_ON_MESSAGE` | Seules les campagnes d’e-mails ou les messages de canvas avec e-mails peuvent être traduits.             |
-| `UNSUPPORTED_CHANNEL`                   | Seuls les messages des campagnes d’e-mails ou les messages de canvas avec e-mails peuvent être traduits. |
+| `MESSAGE_NOT_FOUND`                     | Vérifiez que le message à traduire.                                           |
+| `LOCALE_NOT_FOUND`                      | Confirmez que le paramètre local existe dans vos paramètres multilingues.                         |
+| `MISSING_TRANSLATIONS`                  | Les ID de traduction doivent correspondre au message.                                         |
+| `MULTI_LANGUAGE_NOT_ENABLED`            | Les paramètres multilingues ne sont pas activés pour votre espace de travail.                       |
+| `MULTI_LANGUAGE_NOT_ENABLED_ON_MESSAGE` | Seules les campagnes de communication par e-mail ou les messages canvas contenant des e-mails peuvent être traduits.             |
+| `UNSUPPORTED_CHANNEL`                   | Seuls les messages des campagnes de communication par e-mail ou les envois de canvas par e-mail peuvent être traduits. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% endapi %}
