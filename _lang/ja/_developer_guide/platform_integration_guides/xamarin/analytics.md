@@ -1,18 +1,18 @@
 ---
 nav_title: 分析
-article_title: キサマリンの分析
+article_title: Xamarin 向けの分析
 platform: 
   - Xamarin
   - iOS
   - Android
 page_order: 4
-description: "ここでは、ザマリンプラットフォームのiOS、Android、およびFireOS 分析について説明します。"
+description: "この記事では、Xamarin プラットフォームの iOS、Android、および FireOS の分析について説明します。"
 
 ---
  
-# キサマリン分析
+# Xamarin 分析
 
-> ザマリンプラットフォームの分析を生成および確認する方法について説明します。
+> Xamarin プラットフォーム用の分析を生成および確認する方法について説明します。
 
 ## セッショントラッキング
 
@@ -49,7 +49,7 @@ App.braze?.ChangeUser("user_id");
 Braze.GetInstance(this).LogCustomEvent("event_name");
 ```
 
-イベント"トラッキングのベストプラクティスとインターフェイスs の詳細な説明については、[Androidインテグレーション命令]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/tracking_custom_events/)を参照してください。
+イベントトラッキングのベストプラクティスとインターフェイスの詳細については、[Android の統合手順]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/tracking_custom_events/)を参照してください。
 
 {% endtab %}
 {% tab iOS %}
@@ -57,14 +57,14 @@ Braze.GetInstance(this).LogCustomEvent("event_name");
 App.braze?.LogCustomEvent("event_name");
 ```
 
-イベント"トラッキングのベストプラクティスとインターフェイスの詳細については、[iOS統合手順]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/tracking_custom_events/)を参照してください。
+イベントトラッキングのベストプラクティスとインターフェイスの詳細については、[iOS 統合手順]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/tracking_custom_events/)を参照してください。
 
 {% endtab %}
 {% endtabs %}
 
 ## 購入のロギング
 
-`LogPurchase` を使用してアプリ内の購買を記録し、収益を経時的に、また収益源間で追跡し、ユーザーs をその生涯価値でSegmentします。
+`LogPurchase` を使用してアプリ内での購入を記録して、売上を経時的にトラッキングしたり、売上源を横断してトラッキングしたりできます。また、ユーザーを生涯価値でセグメント化することもできます。
 
 Braze は複数の通貨での購入に対応しています。米ドル以外の通貨でレポートする購入は、レポートされた日付の為替レートに基づいて米ドル単位でダッシュボードに表示されます。
 
@@ -74,7 +74,7 @@ Braze は複数の通貨での購入に対応しています。米ドル以外�
 Braze.GetInstance(this).LogPurchase("product_id", "USD", new Java.Math.BigDecimal(3.50));
 ```
 
-収益"トラッキングのベストプラクティスとインターフェイスsの詳細な説明については、[Androidインテグレーションの手順]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/logging_purchases/)を参照してください。
+売上のトラッキングのベストプラクティスとインターフェイスの詳細については、[Android の統合手順]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/logging_purchases/)を参照してください。
 
 {% endtab %}
 {% tab iOS %}
@@ -82,7 +82,7 @@ Braze.GetInstance(this).LogPurchase("product_id", "USD", new Java.Math.BigDecima
 App.braze?.LogPurchase("product_id", "USD", 3.50);
 ```
 
-収益"トラッキングのベストプラクティスとインターフェイスの詳細については、[iOS統合手順]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/logging_purchases/)を参照してください。
+売上のトラッキングのベストプラクティスとインターフェイスの詳細については、[iOS の統合手順]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/logging_purchases/)を参照してください。
 
 {% endtab %}
 {% endtabs %}
@@ -93,7 +93,7 @@ App.braze?.LogPurchase("product_id", "USD", 3.50);
 
 ### 予約済みのキー
 
-以下のキーは予約であり、**cannot**は購買物件として使用できます。
+以下のキーは予約されているため、購入プロパティとして使用**できません**。
 
 - `time`
 - `product_id`
@@ -104,7 +104,7 @@ App.braze?.LogPurchase("product_id", "USD", 3.50);
 
 ## カスタム属性を記録する
 
-Braze には、ユーザーに属性を割り当てるメソッドが用意されています。ダッシュボード上のこれらの属性sに従って、ユーザーsをフィルターおよびSegmentすることができます。
+Braze には、ユーザーに属性を割り当てるメソッドが用意されています。ダッシュボード上のこれらの属性に従って、ユーザーのフィルター処理とセグメント化を行うことができます。
 
 ### デフォルトのユーザー属性
 
@@ -139,7 +139,7 @@ App.braze?.User.SetFirstName("first_name");
 
 ### カスタムユーザー属性
 
-Braze では、事前に定義されたユーザー 属性方法に加えて、`SetCustomUserAttribute` を使用してアプリのアプリケーションからデータを追跡するカスタム属性も提供されています。
+Braze は、定義済みのユーザー属性メソッドに加えて、`SetCustomUserAttribute` を使用してアプリケーションのデータを追跡するカスタム属性も提供しています。
 
 {% tabs %}
 {% tab Android %}
@@ -147,7 +147,7 @@ Braze では、事前に定義されたユーザー 属性方法に加えて、`
 Braze.GetInstance(this).CurrentUser.SetCustomUserAttribute("custom_attribute_key", true);
 ```
 
-属性 "トラッキングのベストプラクティスとインターフェイス sの詳細な説明については、[Androidインテグレーション命令]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/setting_custom_attributes/)を参照してください。
+属性のトラッキングのベストプラクティスとインターフェイスの詳細については、[Android の統合手順]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/setting_custom_attributes/)を参照してください。
 
 {% endtab %}
 {% tab iOS %}
@@ -156,7 +156,7 @@ Braze.GetInstance(this).CurrentUser.SetCustomUserAttribute("custom_attribute_key
 App.braze?.User.SetCustomAttributeWithKey("custom_attribute_key", true);
 ```
 
-属性 "トラッキングのベストプラクティスとインターフェイスの詳細については、[iOS統合手順]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/setting_custom_attributes/)を参照してください。
+属性のトラッキングのベストプラクティスとインターフェイスの詳細については、[iOS の統合手順]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/setting_custom_attributes/)を参照してください。
 
 {% endtab %}
 {% endtabs %}
@@ -166,12 +166,12 @@ App.braze?.User.SetCustomAttributeWithKey("custom_attribute_key", true);
 ログと"トラッキング 分析の例については、[ Android MAUI][4] および[iOS MAUI][5] のサンプルアプリを参照してください。
 
 {% tabs %}
-{% tab アンドロイド %}
-詳細については、[Android積分命令]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/location_tracking/)を参照してください。
+{% tab Android %}
+詳細については、[Android の統合手順]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/location_tracking/)を参照してください。
 {% endtab %}
 
-{% tab イオス %}
-ローカル"トラッキングに対応するには、[iOS を参照してください。バックグラウンドの場所](http://developer.xamarin.com/guides/cross-platform/application_fundamentals/backgrounding/part_4_ios_backgrounding_walkthroughs/location_walkthrough/)と[iOS統合命令]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/advanced_use_cases/locations_and_geofences/)を使用します。
+{% tab ios %}
+ローカルトラッキングをサポートするには、[ iOS を参照してください。バックグラウンドの場所](http://developer.xamarin.com/guides/cross-platform/application_fundamentals/backgrounding/part_4_ios_backgrounding_walkthroughs/location_walkthrough/)と[iOS統合命令]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/advanced_use_cases/locations_and_geofences/)を使用します。
 {% endtab %}
 {% endtabs %}
 
