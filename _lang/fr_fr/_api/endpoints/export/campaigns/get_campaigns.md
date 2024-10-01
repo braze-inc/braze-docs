@@ -1,6 +1,6 @@
 ---
-nav_title: "GET :  : Exporter la liste des campagnes"
-article_title: "GET :  : Exporter la liste des campagnes"
+nav_title: "GET : Exporter la liste des campagnes"
+article_title: "GET : Exporter la liste des campagnes"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
@@ -30,12 +30,12 @@ Pour utiliser cet endpoint, vous aurez besoin d'une [clé API]({{site.baseurl}}/
 
 ## Paramètres de demande
 
-| Paramètre | Obligatoire | Type de données | Descriptif |
+| Paramètre | Requis | Type de données | Description |
 | --------- | -------- | --------- | ----------- |
-| `page` | Facultatif | Entier | La page des campagnes à renvoyer est par défaut 0 (renvoie le premier ensemble de 100 maximum). |
-| `include_archived` | Facultatif | Booléen | Que ce soit pour inclure ou non les campagnes archivées, la valeur par défaut est false. |
-| `sort_direction` | Facultatif | Chaîne de caractères | - Trier l’heure de création de la plus récente à la plus ancienne : indiquer la valeur `desc`.<br> \- Trier l’heure de création de la plus ancienne à la plus récente : indiquer la valeur `asc`. <br><br>Si `sort_direction` n’est pas inclus, l’ordre par défaut est de la plus ancienne à la plus récente.
-| `last_edit.time[gt]` | Facultatif | Temps | Filtre les résultats et renvoie uniquement les campagnes qui ont été modifiées plus longtemps que la durée fournie jusqu'à présent. Le format est .
+| `page` | Facultatif | Entier | La page des campagnes à renvoyer, par défaut sur 0 (renvoie le premier ensemble jusqu’à 100 éléments). |
+| `include_archived` | Facultatif | Valeur booléenne | S’il faut inclure ou non des campagnes archivées, par défaut sur Faux. |
+| `sort_direction` | Facultatif | Chaîne de caractères | \- Trier l’heure de création de la plus récente à la plus ancienne : indiquer la valeur `desc`.<br> \- Trier l’heure de création de la plus ancienne à la plus récente : indiquer la valeur `asc`. <br><br>Si `sort_direction` n’est pas inclus, l’ordre par défaut est de la plus ancienne à la plus récente. |
+| `last_edit.time[gt]` | Facultatif | Date | Filtre les résultats et renvoie uniquement les campagnes qui ont été modifiées au-delà de l’heure indiquée jusqu’à maintenant. Le format est `yyyy-MM-DDTHH:mm:ss`. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ## Exemple de demande
@@ -66,7 +66,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 ```
 
 {% alert tip %}
-Pour obtenir de l’aide sur les exportations CSV et de l’API, consultez la section Résolution des problèmes d’exportation[]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/).
+Pour obtenir de l’aide sur les exportations CSV et de l’API, consultez la section [Résolution des problèmes d’exportation]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/).
 {% endalert %}
 
 {% endapi %}
