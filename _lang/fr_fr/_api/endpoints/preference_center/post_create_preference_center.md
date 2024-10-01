@@ -14,7 +14,7 @@ description: "Cet article précise des détails concernant l’endpoint de Braze
 /preference_center/v1
 {% endapimethod %}
 
-> Utilise ce point de terminaison pour créer un centre de préférences afin de permettre aux utilisateurs de gérer leurs préférences en matière de notification pour tes campagnes de courrier électronique. Reporte-toi à [Créer un centre de préférences via l'API]({{site.baseurl}}/user_guide/message_building_by_channel/email/preference_center/overview/#create-a-preference-center-via-api) pour connaître les étapes de construction d'un centre de préférences généré par l'API.
+> Utilisez cet endpoint pour créer un centre de préférences permettant aux utilisateurs de gérer leurs préférences en matière de notification pour vos campagnes d'e-mail. Reportez-vous à la section [Créer un centre de préférences via l'API]({{site.baseurl}}/user_guide/message_building_by_channel/email/preference_center/overview/#create-a-preference-center-via-api) pour savoir comment créer un centre de préférences généré par l'API.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#e15d7065-2cbc-4eb3-ae16-32efe43357a6 {% endapiref %}
 
@@ -48,14 +48,14 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ## Paramètres de demande
 
-| Paramètre - Requis - Type de données - Description - Paramètre - Requis - Type de données - Description - Paramètre - Requis - Type de données - Description
+| Paramètre | Requis | Type de données | Description |
 | --------- | ---------| --------- | ----------- |
-|`name`| Requis | Chaîne | Le nom du centre de préférences qui répond aux exigences suivantes : <br>\- Comprend uniquement des lettres, des chiffres, des traits d’union et des traits de soulignement <br>\- N’a pas d’espaces
-|`preference_center_title`| Facultatif | Chaîne | Le titre du centre de préférences et des pages de confirmation. Si aucun titre n’est précisé, le titre des pages passera par défaut à « Centre de préférences ».
-|`preference_center_page_html`| Requis | Chaîne | Le code HTML de la page du centre de préférences. |
-|`confirmation_page_html`| Requis | Chaîne | Le code HTML de la page de confirmation. |
-|`state` | Facultatif | Chaîne de caractères | Choisis `active` ou `draft`. La valeur par défaut est `active` si elle n'est pas spécifiée. |
-|`options` | Facultatif | Objet | Attributs : `meta-viewport-content`. Lorsqu'elle est présente, une balise méta `viewport` sera ajoutée à la page avec `content= <value of attribute>`. |
+|`name`| Requis | Chaîne de caractères | Le nom du centre de préférences qui se conforme aux exigences suivantes : <br>\- Comprend uniquement des lettres, des chiffres, des traits d’union et des traits de soulignement <br>\- N’a pas d’espaces |
+|`preference_center_title`| Facultatif | Chaîne de caractères | Le titre des pages du centre de préférences et de confirmation. Si aucun titre n’est précisé, le titre des pages passera par défaut à « Centre de préférences ». |
+|`preference_center_page_html`| Requis | Chaîne de caractères | L’HTML de la page du centre de préférences. |
+|`confirmation_page_html`| Requis | Chaîne de caractères | L’HTML de la page de confirmation. |
+|`state` | Facultatif | Chaîne de caractères | Choisir `active` ou `draft`. Défini par défaut sur `active` si cela n’est pas spécifié. |
+|`options` | Facultatif | Objet | Attributs : `meta-viewport-content`. Le cas échéant, une étiquette méta `viewport` sera ajoutée à la page avec `content= <value of attribute>`. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 {% alert note %}
@@ -70,18 +70,18 @@ Référez-vous aux balises Liquid suivantes qui peuvent être intégrées à vot
 
 #### État d’abonnement utilisateur
 
-| Liquide | Description |
+| Liquid | Description |
 | --------- | ---------|
-|`{{subscribed_state.${email_global}}}`| Obtient l'état global de l'abonnement à l'email pour l'utilisateur (tel que "opted_in", "subscribed", ou "unsubscribed". |
-|`{{subscribed_state.${<subscription_group_id>}}}`| Obtenir l'état d'abonnement du groupe d'abonnement spécifié pour l'utilisateur (tel que "abonné" ou "désabonné"). |
+|`{{subscribed_state.${email_global}}}`| Obtenir l'état global de l'abonnement à l'e-mail pour l'utilisateur (tel que "opted_in", "subscribed", ou "unsubscribed"). |
+|`{{subscribed_state.${<subscription_group_id>}}}`| Obtenir l'état abonné du groupe d'abonnement spécifié pour l'utilisateur (tel que "abonné" ou "désabonné"). |
 {: .reset-td-br-1 .reset-td-br-2}
 
 #### Saisies de formulaire et action
 
-| Liquide | Description |
+| Liquid | Description |
 | --------- | ---------|
-|`{% form_field_name :email_global_state %}`| Indique qu'un élément d'entrée de formulaire spécifique correspond à l'état d'abonnement global de l'utilisateur à l'email. L’état de sélection de l’utilisateur devrait être «  », « abonné » ou « désabonné » lorsque le formulaire est soumis avec des données de sélection pour l’état global d’abonnement aux e-mails. S'il s'agit d'une case à cocher, l'utilisateur sera soit « opted\_in », soit « désabonné ». Pour un input caché, l’état « abonné » sera aussi valide.
-|`{% form_field_name :subscription_group <subscription_group_id> %}`| Indique qu'un élément de saisie de formulaire spécifique correspond à un groupe d'abonnement donné. L’état de sélection de l’utilisateur devrait être « abonné » ou « désabonné » lorsque le formulaire est soumis avec des données de sélection pour un groupe d’abonnement particulier.
+|`{% form_field_name :email_global_state %}`| Indique qu’un élément de saisie de formulaire particulier correspond à l’état global d’abonnement aux e-mails de l’utilisateur. L'état de sélection de l'utilisateur doit être "opted_in", "abonné" ou "désabonné" lorsque le formulaire est abonné avec des données de sélection pour l'état d'abonnement global à l'e-mail. S'il s'agit d'une case à cocher, l'utilisateur sera soit « opted_in », soit « désabonné ». Pour un input caché, l’état « abonné » sera aussi valide. |
+|`{% form_field_name :subscription_group <subscription_group_id> %}`| Indique qu’un élément de saisie de formulaire particulier correspond à un groupe d’abonnement particulier. L’état de sélection de l’utilisateur devrait être « abonné » ou « désabonné » lorsque le formulaire est soumis avec des données de sélection pour un groupe d’abonnement particulier. |
 |`{{preference_center_submit_url}}`| Produit une URL pour la soumission du formulaire. |
 {: .reset-td-br-1 .reset-td-br-2}
 
@@ -102,15 +102,15 @@ Référez-vous aux balises Liquid suivantes qui peuvent être intégrées à vot
 ```
 {% endraw %}
 
-### HTML avec les entrées de formulaire 
+### HTML avec entrées de formulaire 
 
 {% raw %}
-\`\`\`
+```
 <!doctype html>
 <html lang="en">
   <head>
     <meta name="robots" content="noindex" />
-    <title>Préférences des e-mails</title>
+    <title>Email Preferences</title>
     <script type="text/javascript">
       window.onload = () => {
         const globalUnsubscribed = '{{subscribed_state.${email_global}}}' == "unsubscribed";
@@ -185,24 +185,24 @@ Référez-vous aux balises Liquid suivantes qui peuvent être intégrées à vot
             style="color: #3accdd; font-size: 27px; font-weight: 400; margin-bottom: 40px; margin-top: 0"
             align="center"
           >
-            Gérer les préférences en matière de courrier électronique
+            Manage Email Preferences
           </h1>
           <p class="intro-text" style="font-size: 14px; margin-bottom: 20px" align="center">
-            Sélectionnez les e-mails que vous souhaitez recevoir.
+            Select the emails that you want to receive.
           </p>
         </div>
 
         <form action="{{ preference_center_submit_url }}" method="post" accept-charset="UTF-8">
           <div>
             <h3 style="font-size: 15px; margin-bottom: 15px; margin-left: 5px; margin-top: 40px">
-              Adresse e-mail : <span class="displayed-email" style="font-weight: 400">{{${email_address}}}</span>
+              Email Address: <span class="displayed-email" style="font-weight: 400">{{${email_address}}}</span>
             </h3>
           </div>
           <div class="subscription-groups-holder" style="margin-bottom: 20px"><div class="row" style="border-top-width: 1px; border-top-color: #dddde2; border-top-style: solid; background-color: #fff; padding: 15px 10px 14px;border-bottom: 1px solid rgb(221, 221, 226);">
   <label style="color: #27368f; cursor: pointer; font-size: 15px; font-weight: 700;">
     <input type="checkbox" id="checkbox-3d2ae07a-f2ff-4318-bdff-e394f2d3a4ec" class="sub_group" style="margin-right: 4px;">
     <input type="hidden" name="{% form_field_name :subscription_group 3d2ae07a-f2ff-4318-bdff-e394f2d3a4ec %}" id="value-3d2ae07a-f2ff-4318-bdff-e394f2d3a4ec" />
-    Sous-groupe 1
+    Sub Group 1
   </label>
   <p class="subscription-group" style="font-size: 13px; line-height: 1.4em; min-height: 20px; padding-right: 20px; margin: 0 0 3px 23px;">
     
@@ -212,7 +212,7 @@ Référez-vous aux balises Liquid suivantes qui peuvent être intégrées à vot
   <label style="color: #27368f; cursor: pointer; font-size: 15px; font-weight: 700;">
     <input type="checkbox" id="checkbox-7d89bdc3-4aa1-4592-8b8a-4c8b7161c875" class="sub_group" style="margin-right: 4px;">
     <input type="hidden" name="{% form_field_name :subscription_group 7d89bdc3-4aa1-4592-8b8a-4c8b7161c875 %}" id="value-7d89bdc3-4aa1-4592-8b8a-4c8b7161c875" />
-    Sous-groupe 2
+    Sub Group 2
   </label>
   <p class="subscription-group" style="font-size: 13px; line-height: 1.4em; min-height: 20px; padding-right: 20px; margin: 0 0 3px 23px;">
     
@@ -222,7 +222,7 @@ Référez-vous aux balises Liquid suivantes qui peuvent être intégrées à vot
   <label style="color: #27368f; cursor: pointer; font-size: 15px; font-weight: 700;">
     <input type="checkbox" id="checkbox-5444d32e-2815-4258-964c-b9690d4ccb94" class="sub_group" style="margin-right: 4px;">
     <input type="hidden" name="{% form_field_name :subscription_group 5444d32e-2815-4258-964c-b9690d4ccb94 %}" id="value-5444d32e-2815-4258-964c-b9690d4ccb94" />
-    Sous-groupe 3
+    Sub Group 3
   </label>
   <p class="subscription-group" style="font-size: 13px; line-height: 1.4em; min-height: 20px; padding-right: 20px; margin: 0 0 3px 23px;">
     
@@ -238,7 +238,7 @@ Référez-vous aux balises Liquid suivantes qui peuvent être intégrées à vot
                 id="value-global"
                 name="{% form_field_name :email_global_state %}"
               />
-              <i> Se désabonner de tous les types d’e-mails ci-dessus </i>
+              <i> Unsubscribe from all of the above types of emails </i>
             </label>
           </div>
 
@@ -246,7 +246,7 @@ Référez-vous aux balises Liquid suivantes qui peuvent être intégrées à vot
             <input
               class="save"
               type="submit"
-              value="Sauvegarde"
+              value="Save"
               style="
                 background-color: rgb(71, 204, 163);
                 color: #fff;
