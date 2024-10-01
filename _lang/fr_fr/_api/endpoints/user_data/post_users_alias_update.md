@@ -1,6 +1,6 @@
 ---
-nav_title: "POST : Mettre à jour l’alias d’utilisateur"
-article_title: "POST : Mettre à jour l’alias d’utilisateur"
+nav_title: "POST : Mise à jour de l'alias d'utilisateur"
+article_title: "POST : Mise à jour de l'alias d'utilisateur"
 search_tag: Endpoint
 page_order: 2
 layout: api_page
@@ -50,7 +50,7 @@ Authorization: Bearer YOUR_REST_API_KEY
 
 | Paramètre | Requis | Type de données | Description |
 | --------- | --------- | --------- | ----------- |
-| `alias_updates` | Requis | Tableau d'objets d'alias d'utilisateur de mise à jour | Voir l'[objet d'alias d'utilisateur]({{site.baseurl}}/api/objects_filters/user_alias_object/).<br><br> Pour plus d'informations sur `old_alias_name`, `new_alias_name` et `alias_label`, voir [Alias utilisateurs]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/#user-aliases). |
+| `alias_updates` | Requis | Tableau des objets alias utilisateur mis à jour | Voir l'[objet alias d'utilisateur]({{site.baseurl}}/api/objects_filters/user_alias_object/).<br><br> Pour plus d'informations sur `old_alias_name`, `new_alias_name`, et `alias_label`, reportez-vous à la section [Alias de l'utilisateur]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/#user-aliases). |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ### Corps de demande d’endpoint avec spécification de l’objet de mise à jour d’alias utilisateur
