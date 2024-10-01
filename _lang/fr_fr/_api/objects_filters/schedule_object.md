@@ -9,9 +9,9 @@ description: "Cet article de référence répertorie et explique l’objet Plani
 
 # Objet Planification
 
-> Les paramètres des points de terminaison de la campagne et de la création du calendrier Canvas reflètent ceux du point de terminaison d'envoi et ajoutent le paramètre `schedule`, qui te permet de spécifier à quel moment tu veux que les utilisateurs ciblés reçoivent ton message. Si vous incluez uniquement le paramètre `time` dans l’objet `schedule`, tous vos utilisateurs recevront des messages à ce moment-là.
+> Les paramètres des points de terminaison de la campagne et de la création de la planification Canvas reflètent ceux du point de terminaison d'envoi et ajoutent le paramètre `schedule`, qui vous permet de spécifier le moment où vous souhaitez que les utilisateurs ciblés reçoivent votre message. Si vous incluez uniquement le paramètre `time` dans l’objet `schedule`, tous vos utilisateurs recevront des messages à ce moment-là.
 
-Si vous définissez `in_local_time` sur `true`, vous obtiendrez une réponse d’erreur si le paramètre Time est passé dans tous les fuseaux horaires. Si tu définis `at_optimal_time` comme étant vrai, tes utilisateurs recevront le message à la date désignée au [moment optimal][33] pour eux (indépendamment de l'heure que tu as indiquée). Lorsque tu utilises l'envoi de l'heure locale ou optimale, ne fournis pas de désignateurs de fuseaux horaires dans la valeur du paramètre de l'heure (par exemple, donne-nous simplement `"2015-02-20T13:14:47"` au lieu de `"2015-02-20T13:14:47-05:00"`).
+Si vous définissez `in_local_time` sur `true`, vous obtiendrez une réponse d’erreur si le paramètre Time est passé dans tous les fuseaux horaires. Si vous attribuez la valeur "true" à `at_optimal_time`, vos utilisateurs recevront le message à la date désignée et à l'heure optimale (quelle que soit l'heure que vous avez indiquée). Lorsque vous utilisez l'envoi de l'heure locale ou optimale, n'indiquez pas les désignateurs de fuseaux horaires dans la valeur du paramètre de temps (par exemple, utilisez `"2015-02-20T13:14:47"` au lieu de `"2015-02-20T13:14:47-05:00"`).
 
 La réponse vous fournira un `schedule_id` que vous devez enregistrer au cas où vous auriez ultérieurement besoin d’annuler ou de mettre à jour le message que vous planifiez :
 
@@ -21,7 +21,7 @@ Insérez cet objet si nécessaire pour planifier vos messages.
 
 ```json
 "schedule": {
-  "time": (required, datetime as ISO 8601 string) time to send the message,
+  "time": (required, datetime as ISO 8601 string) time to send the message in UTC,
   "in_local_time": (optional, bool),
   "at_optimal_time": (optional, bool),
 }
