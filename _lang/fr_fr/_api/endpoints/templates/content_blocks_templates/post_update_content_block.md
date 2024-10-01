@@ -14,7 +14,7 @@ description: "Cet article présente en détail l’endpoint Braze Mettre à jour
 /content_blocks/update
 {% endapimethod %}
 
-> Utilise ce point de terminaison pour mettre à jour un [bloc de contenu]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/content_blocks/).
+> Utilisez cet endpoint pour mettre à jour un [bloc de contenu]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/content_blocks/).
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#4782239a-cb60-4217-9de0-51411434d57d {% endapiref %}
 
@@ -45,14 +45,14 @@ Authorization: Bearer YOUR_REST_API_KEY
 
 ## Paramètres de demande
 
-| Paramètre - Requis - Type de données - Description - Paramètre - Requis - Type de données - Description - Paramètre - Requis - Type de données - Description
+| Paramètre | Requis | Type de données | Description |
 |---|---|---|---|
-`content_block_id`	(Obligatoire)	Chaîne de caractères | L'identifiant API de votre bloc de contenu.
-| `name` | Facultatif | Chaîne | Nom du bloc de contenu. Doit contenir moins de 100 caractères.
-| `description` | Facultatif | Chaîne de caractères | Description du bloc de contenu. Doit contenir moins de 250 caractères.
-| `content` | Facultatif | Chaine | Contenu HTML ou texte dans les blocs de contenu.
-| `state` | Facultatif | Chaîne de caractères | Choisis `active` ou `draft`. La valeur par défaut est `active` si elle n'est pas spécifiée. |
-| `tags` | Facultatif | Tableau de chaînes de caractères | Les [balises]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/tags/) doivent déjà exister. |
+| `content_block_id`|	Requis |	Chaîne de caractères | L'identifiant API de votre bloc de contenu.|
+| `name` | Facultatif | Chaîne de caractères | Nom du bloc de contenu. Doit contenir moins de 100 caractères. |
+| `description` | Facultatif | Chaîne de caractères | Description du bloc de contenu. Doit contenir moins de 250 caractères. |
+| `content` | Facultatif | Chaîne de caractères | Contenu HTML ou texte dans les blocs de contenu.
+| `state` | Facultatif | Chaîne de caractères | Choisir `active` ou `draft`. Défini par défaut sur `active` si cela n’est pas spécifié. |
+| `tags` | Facultatif | Tableau de chaînes de caractères | Les [étiquettes]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/tags/) doivent déjà exister. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ## Exemple de demande
@@ -89,24 +89,24 @@ Le tableau suivant répertorie les erreurs renvoyées possibles et les étapes d
 
 | Erreur | Résolution des problèmes |
 | --- | --- |
-`Content cannot be blank`
-| `Content must be a string` | Assure-toi que ton contenu est entre guillemets (`""`). |
-| `Content must be smaller than 50kb` | Le contenu de votre bloc de contenu doit être inférieur à 50 ko. |
-| `Content contains malformed liquid` | Le liquide fourni n'est pas valide ou analysable. Réessayez avec un langage Liquid valide ou contactez-nous pour obtenir de l’aide.
+| `Content cannot be blank` |
+| `Content must be a string` | Assurez-vous que votre contenu est compris entre des guillemets (`""`). |
+| `Content must be smaller than 50kb` | Le contenu de votre bloc de contenu doit être inférieur à 50 Ko. |
+| `Content contains malformed liquid` | Le langage Liquid fourni n’est pas valide ou pas analysable. Réessayez avec un langage Liquid valide ou contactez-nous pour obtenir de l’aide. |
 | `Content Block cannot be referenced within itself` |
 | `Content Block description cannot be blank` |
-| `Content Block description must be a string` | Assure-toi que la description de ton bloc de contenu est entre guillemets (`""`). |
+| `Content Block description must be a string` | Assurez-vous que la description de votre bloc de contenu est comprise entre des guillemets (`""`). |
 | `Content Block description must be shorter than 250 characters` |
 | `Content Block name cannot be blank` |
 | `Content Block name must be shorter than 100 characters` |
-| `Content Block name can only contain alphanumeric characters` | Les noms des blocs de contenu peuvent inclure l'un des caractères suivants : les lettres (majuscules ou minuscules) `A` à `Z`, les chiffres `0` à `9`, les tirets `-` et les traits de soulignement `_`. Le nom ne peut pas contenir de caractères non alphanumériques comme les emojis, `!`, `@`, `~`, `&` et d'autres caractères « spéciaux ». |
-| `Content Block with this name already exists` | Essaie un autre nom. |
+| `Content Block name can only contain alphanumeric characters` | Les noms de bloc de contenu peuvent comprendre l’un des caractères suivants : les lettres (majuscules ou minuscules) de `A` à `Z`, les chiffres de `0` à `9`, les tirets `-`, et les traits de soulignement `_`. Il ne peut pas contenir de caractères non alphanumériques comme des émojis, `!`, `@`, `~`, `&` et d’autres caractères « spéciaux ». |
+| `Content Block with this name already exists` | Essayez un autre nom. |
 | `Content Block name cannot be updated for active Content Blocks` |
 | `Content Block state must be either active or draft` |
 | `Active Content Block can not be updated to Draft. Create a new Content Block.` |
-| `Tags must be an array` | Les balises doivent être formatées comme un tableau de chaînes de caractères, par exemple `["marketing", "promotional", "transactional"]`. |
-| `All tags must be strings` | Assure-toi que tes balises sont entre guillemets (`""`). |
-`Some tags could not be found` | Pour ajouter une balise lors de la création d'un bloc de contenu, la balise doit déjà exister dans Braze. |
+| `Tags must be an array` | Les balises doivent être un tableau de chaînes de caractères, par exemple `["marketing", "promotional", "transactional"]`. |
+| `All tags must be strings` | Assurez-vous que vos balises sont comprises entre des guillemets (`""`). |
+| `Some tags could not be found` | Pour ajouter une balise lors de la création d’un bloc de contenu, la balise doit déjà exister dans Braze. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 
