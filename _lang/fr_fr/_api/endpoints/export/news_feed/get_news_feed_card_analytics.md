@@ -1,6 +1,6 @@
 ---
-nav_title: "GET :  : Exporter l’analyse des cartes de fil d’actualité"
-article_title: "GET :  : Exporter l’analyse des cartes de fil d’actualité"
+nav_title: "GET : Exportation du fil d'actualité Analyse des cartes (si utilisé comme carte adjective d'actualité)"
+article_title: "GET : Exportation du fil d'actualité Analyse des cartes (si utilisé comme carte adjective d'actualité)"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
@@ -32,12 +32,12 @@ Pour utiliser cet endpoint, vous aurez besoin d'une [clé API]({{site.baseurl}}/
 
 ## Paramètres de demande
 
-| Paramètre - Requis - Type de données - Description - Paramètre - Requis - Type de données - Description - Paramètre - Requis - Type de données - Description
+| Paramètre   | Requis | Type de données | Description |
 | ----------- | -------- | --------- | ----------- |
-| `card_id` | Requis | Chaîne | Voir l'[identifiant de l'API de la carte]({{site.baseurl}}/api/identifier_types/). <br><br> Le site `card_id` pour une carte donnée se trouve sur la page des [clés API]({{site.baseurl}}/user_guide/administrative/app_settings/api_settings_tab/) et sur la page des détails de la carte dans ton tableau de bord, ou tu peux utiliser le [point de terminaison Exporter la liste des cartes du fil d'actualité]({{site.baseurl}}/api/endpoints/export/news_feed/get_news_feed_cards/).|
-| `length` | Requis | Integer | Nombre maximum d'unités (jours ou heures) avant `ending_at` à inclure dans la série renvoyée. Doit être compris entre 1 et 100 (inclus).
-| `unit` | Facultatif | Chaîne de caractères | Unité de temps entre les points de données. Peut être  ou , valeur par défaut .
-| `ending_at` | Facultatif | Datetime <br>(Chaîne de caractères [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601)) | Date à laquelle la série de données doit se terminer. Par défaut, l’heure de la demande.
+| `card_id` | Requis | Chaîne de caractères | Voir l'[identifiant API de la carte]({{site.baseurl}}/api/identifier_types/). <br><br> Vous trouverez le site `card_id` pour une carte donnée sur la page des [clés API]({{site.baseurl}}/user_guide/administrative/app_settings/api_settings_tab/) et sur la page des détails de la carte dans votre tableau de bord, ou vous pouvez utiliser le [point de terminaison Exporter la liste des cartes du fil d'actualité]({{site.baseurl}}/api/endpoints/export/news_feed/get_news_feed_cards/).|
+| `length` | Requis | Entier | Nombre maximum d’unités (jours ou heures) avant `ending_at` à inclure dans la série renvoyée. Doit être compris entre 1 et 100 (inclus). |
+| `unit` | Facultatif | Chaîne de caractères | Unité de temps entre les points de données. Peut être `day` ou `hour`, valeur par défaut `day`.  |
+| `ending_at` | Facultatif | DateTime <br>[(](https://en.wikipedia.org/wiki/ISO_8601) chaîne de caractères[ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) ) | Date à laquelle la série de données doit se terminer. Par défaut, l’heure de la demande. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ## Exemple de demande
@@ -69,7 +69,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 ```
 
 {% alert tip %}
-Pour obtenir de l’aide sur les exportations CSV et de l’API, consultez la section Résolution des problèmes d’exportation[]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/).
+Pour obtenir de l’aide sur les exportations CSV et de l’API, consultez la section [Résolution des problèmes d’exportation]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/).
 {% endalert %}
 
 {% endapi %}
