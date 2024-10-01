@@ -1,6 +1,6 @@
 ---
-nav_title: "GET : Afficher les traductions d’une campagne"
-article_title: "GET : Afficher les traductions d’une campagne"
+nav_title: "GET : Afficher les traductions d'une campagne"
+article_title: "GET : Afficher les traductions d'une campagne"
 search_tag: Endpoint
 page_order: 1
 
@@ -10,15 +10,15 @@ description: "Cet article décrit en détail l’endpoint Afficher les traductio
 ---
 
 {% api %}
-# Afficher les traductions d’une campagne
+# Voir les traductions pour une campagne
 {% apimethod get %}
-/campaigns/translations
+/campagnes/traductions
 {% endapimethod %}
 
-> Utilisez ce point de terminaison pour afficher toutes les traductions de chaque variante de message d’une campagne.
+> Utilisez ce point de terminaison pour voir toutes les traductions de chaque variante de message dans une campagne.
 
 {% alert important %}
-L’affichage des traductions des messages de campagne via l’API est actuellement en accès anticipé. Contactez votre gestionnaire de compte Braze si vous souhaitez participer à l’accès anticipé.
+La visualisation des traductions des messages de campagne via l'API est actuellement en accès anticipé. Contactez votre gestionnaire de compte Braze si vous souhaitez participer à l’accès anticipé.
 {% endalert %}
 
 ## Conditions préalables
@@ -31,9 +31,9 @@ Cet endpoint a une limitation du débit de 250 000 requêtes par jour.
 
 ## Paramètres de chemin
 
-| Paramètre | Obligatoire | Type de données | Descriptif |
+| Paramètre | Requis | Type de données | Description |
 | --------- | ---------| --------- | ----------- |
-|`campaign_id`| Requis pour la traduction d’une campagne | Chaîne de caractères | L’ID de votre campagne. |
+|`campaign_id`| Requis pour traduire une campagne | Chaîne de caractères | L'ID de votre campagne. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ## Exemple de demande
@@ -46,7 +46,7 @@ curl --location --request GET 'https://rest.iad-03.braze.com/campaign/translatio
 
 ## Réponse
 
-Il existe quatre réponses de code d’état pour ce point de terminaison : `200`, `400`, `404`et `429`.
+Quatre réponses de code de statut existent pour cet endpoint : `200`, `400`, `404` et `429`.
 
 ## Exemple de réponse réussie
 
@@ -75,7 +75,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ## Exemple de réponse échouée
 
-Le code de statut `400` pourrait renvoyer le corps de réponse suivant. Consultez la `400`résolution des problèmes[](#troubleshooting) pour plus d’informations concernant les erreurs que vous pourriez rencontrer.
+Le code de statut `400` pourrait renvoyer le corps de réponse suivant. Consultez la résolution des problèmes[](#troubleshooting) pour plus d’informations concernant les erreurs que vous pourriez rencontrer.
 
 ```json
 {
@@ -91,14 +91,14 @@ Le code de statut `400` pourrait renvoyer le corps de réponse suivant. Consulte
 
 Le tableau suivant répertorie les erreurs renvoyées possibles et les étapes de résolution des problèmes associées.
 
-| Message d’erreur | Dépannage |
+| Message d’erreur                           | Résolution des problèmes                                                                    |
 |-----------------------------------------|------------------------------------------------------------------------------------|
-| `INVALID_CAMPAIGN_ID`                   | Vérifiez que l’ID de campagne correspond à la campagne que vous traduisez.                   |
-| `INVALID_MESSAGE_VARIATION_ID`          | Vérifiez que l’ID de votre message est correct.                                                |
-| `MESSAGE_NOT_FOUND`                     | Vérifiez le message à traduire.                                           |
+| `INVALID_CAMPAIGN_ID`                   | Confirmez que l'ID de la campagne correspond à la campagne que vous traduisez.                   |
+| `INVALID_MESSAGE_VARIATION_ID`          | Confirmez que votre identifiant de message est correct.                                                |
+| `MESSAGE_NOT_FOUND`                     | Vérifiez que le message à traduire.                                           |
 | `MULTI_LANGUAGE_NOT_ENABLED`            | Les paramètres multilingues ne sont pas activés pour votre espace de travail.                       |
-| `MULTI_LANGUAGE_NOT_ENABLED_ON_MESSAGE` | Seules les campagnes d’e-mails ou les messages de canvas avec e-mails peuvent être traduits.             |
-| `UNSUPPORTED_CHANNEL`                   | Seuls les messages des campagnes d’e-mails ou les messages de canvas avec e-mails peuvent être traduits. |
+| `MULTI_LANGUAGE_NOT_ENABLED_ON_MESSAGE` | Seules les campagnes par e-mail ou les messages Canvas avec des e-mails peuvent être traduits.             |
+| `UNSUPPORTED_CHANNEL`                   | Seuls les messages dans les campagnes par e-mail ou les messages Canvas avec des e-mails peuvent être traduits. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% endapi %}
