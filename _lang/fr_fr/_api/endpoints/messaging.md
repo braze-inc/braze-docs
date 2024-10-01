@@ -25,59 +25,59 @@ description: "Cette page d’accueil liste les endpoints Braze d’envoi de mess
 page_type: landing
 
 guide_top_header: "Endpoints de messagerie"
-guide_top_text: "L’API de messagerie Braze vous offre deux options pour envoyer des messages à vos utilisateurs. Tu peux fournir le contenu des messages et la configuration dans la demande API avec les points de terminaison <code class='highlighter-rouge'>/messages/send</code> et `/messages/schedule`. Sinon, tu peux gérer les détails de ton message avec une campagne déclenchée par l'API dans le tableau de bord de Braze et simplement contrôler quand et à qui il est envoyé avec les points de terminaison `/campaigns/trigger/send` et `/campaigns/trigger/schedule`. Les sections suivantes détailleront la spécification de la demande pour les deux méthodes. <br> <br>De la même manière que pour les autres campagnes, tu peux limiter le nombre de fois qu'un utilisateur donné peut recevoir une campagne API de messagerie en configurant les [paramètres de rééligibilité](/docs/guide_utilisateur/engagement_tools/campagnes/construction_campagnes/delivery_types/api_triggered_delivery/#re-eligibility-with-api-triggered-campaigns) dans le tableau de bord de Braze. Braze ne délivrera pas de messages API aux utilisateurs qui ne sont pas redevenus éligibles pour la campagne, quel que soit le nombre de demandes API envoyées. <br> <br>Les points d'extrémité Envoyer un message te permettent d'envoyer des messages immédiats aux utilisateurs désignés. Si tu cibles un segment, un enregistrement de ta demande sera stocké dans le **Journal d'activité des messages**. Utilise les points de terminaison Programmer un message pour envoyer des messages à une heure désignée, et modifier ou annuler les messages que tu as déjà programmés."
+guide_top_text: "L’API de messagerie Braze vous offre deux options pour envoyer des messages à vos utilisateurs. Vous pouvez fournir le contenu et la configuration du message dans la demande d'API à l'aide de l'attribut <code class='highlighter-rouge'>/messages/send</code> et les endpoints `/messages/schedule`. Vous pouvez également gérer les détails de votre message avec une campagne déclenchée par l'API dans le tableau de bord de Braze et contrôler simplement quand et à qui il est envoyé avec les endpoints `/campaigns/trigger/send` et `/campaigns/trigger/schedule`. Les sections suivantes détaillent la spécification de demande pour les deux méthodes. <br> <br> De la même manière que pour les autres campagnes, vous pouvez limiter le nombre de fois qu'un utilisateur donné peut recevoir une campagne API de messages en configurant les [paramètres de rééligibilité](/docs/user_guide/engagement_tools/campagnes/building_campaigns/delivery_types/api_triggered_delivery/#re-eligibility-with-api-triggered-campaigns) dans le tableau de bord de Braze. Braze ne livrera pas de messages API aux utilisateurs qui ne sont pas rééligibles pour la campagne, quel que soit le nombre de demandes API envoyées. <br> <br> Les endpoints d'envoi de messages vous permettent d'envoyer des messages immédiats à des utilisateurs désignés. Si vous ciblez un segmentation, un enregistrement de votre demande sera stocké dans le **Journal d'activité des messages**. Utilisez les endpoints Schedule Message pour envoyer des messages à une heure donnée, et pour modifier ou annuler des messages que vous avez déjà planifiés."
 
-guide_featured_title: "Endpoints de planification des messages"
+guide_featured_title: "Points d'extrémité des messages de planification"
 guide_featured_list:
-  - name: "GET: List Upcoming Scheduled Campaigns and Canvases"
+  - name: "GET : Répertorier les campagnes et Canvas planifiés à venir"
     link: /docs/api/endpoints/messaging/schedule_messages/get_messages_scheduled/
     image: /assets/img/braze_icons/calendar-date.svg
-  - name: "POST: Delete Scheduled Messages"
+  - name: "POST : Supprimer les messages planifiés"
     link: /docs/api/endpoints/messaging/schedule_messages/post_delete_scheduled_messages/
     image: /assets/img/braze_icons/calendar-minus-01.svg
-  - name: "POST: Delete Scheduled API-Triggered Campaigns"
+  - name: "POST : Supprimer des campagnes planifiées déclenchées par API"
     link: /docs/api/endpoints/messaging/schedule_messages/post_delete_scheduled_triggered_messages/
     image: /assets/img/braze_icons/calendar-minus-01.svg
-  - name: "POST: Delete Scheduled API-Triggered Canvases"
+  - name: "POST : Supprimer des Canvas planifiés déclenchés par API"
     link: /docs/api/endpoints/messaging/schedule_messages/post_delete_scheduled_triggered_canvases/
     image: /assets/img/braze_icons/calendar-minus-01.svg
-  - name: "POST: Schedule Messages"
+  - name: "POST : Planifier les messages"
     link: /docs/api/endpoints/messaging/schedule_messages/post_schedule_messages/
     image: /assets/img/braze_icons/calendar-plus-01.svg
-  - name: "POST: Schedule API-Triggered Campaign Messages"
+  - name: "POST : Planifier des messages de campagne déclenchés par API"
     link: /docs/api/endpoints/messaging/schedule_messages/post_schedule_triggered_campaigns/
     image: /assets/img/braze_icons/calendar-check-02.svg
-  - name: "POST: Schedule API-Triggered Canvas Messages"
+  - name: "POST : Planifier des messages Canvas déclenchés par API"
     link: /docs/api/endpoints/messaging/schedule_messages/post_schedule_triggered_canvases/
     image: /assets/img/braze_icons/calendar-check-02.svg
-  - name: "POST: Update Scheduled Messages"
+  - name: "POST : Mettre à jour les messages planifiés"
     link: /docs/api/endpoints/messaging/schedule_messages/post_update_scheduled_messages/
     image: /assets/img/braze_icons/calendar-date.svg
-  - name: "POST: Update Scheduled API-Triggered Campaign Messages"
+  - name: "POST : Mettre à jour les messages de campagnes planifiés déclenchés par API"
     link: /docs/api/endpoints/messaging/schedule_messages/post_update_scheduled_triggered_campaigns/
     image: /assets/img/braze_icons/calendar-date.svg
-  - name: "POST: Update Scheduled API-Triggered Canvas Messages"
+  - name: "POST : Mettre à jour des messages Canvas planifiés déclenchés par API"
     link: /docs/api/endpoints/messaging/schedule_messages/post_update_scheduled_triggered_canvases/
     image: /assets/img/braze_icons/calendar-check-02.svg
 
 guide_menu_title: "Send messages endpoints"
 guide_menu_list:
-  - name: "POST: Create Send IDs"
+  - name: "POST : Créer des ID d’envoi"
     link: /docs/api/endpoints/messaging/send_messages/post_create_send_ids/
     image: /assets/img/braze_icons/user-square.svg
-  - name: "POST: Send Messages Immediately"
+  - name: "POST : Envoyer les messages immédiatement"
     link: /docs/api/endpoints/messaging/send_messages/post_send_messages/
     image: /assets/img/braze_icons/send-01.svg
-  - name: "POST: Send API-Triggered Campaign Messages Immediately"
+  - name: "POST : Envoyer immédiatement les messages de campagnes déclenchés par API"
     link: /docs/api/endpoints/messaging/send_messages/post_send_triggered_campaigns/
     image: /assets/img/braze_icons/inbox-01.svg
-  - name: "POST: Send API-Triggered Canvas Messages Immediately"
+  - name: "POST : Envoyer immédiatement les messages Canvas déclenchés par API"
     link: /docs/api/endpoints/messaging/send_messages/post_send_triggered_canvases/
     image: /assets/img/braze_icons/inbox-01.svg
 
 guide_menu_title2: "Live Activity endpoints"
 guide_menu_list2:
-  - name: "POST: Update Live Activity"
+  - name: "POST : Mettre à jour l’activité en direct"
     link: /docs/api/endpoints/messaging/live_activity/update/
     image: /assets/img/braze_icons/tablet-01.svg
 ---
