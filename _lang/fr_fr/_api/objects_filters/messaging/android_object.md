@@ -10,11 +10,11 @@ description: "Cet article de référence répertorie et explique les différents
 ---
 # Objet Android
 
-> L'objet `android_push` te permet de définir ou de demander des informations relatives au contenu Android Push et Android Push Alert via nos [points de terminaison de messagerie]({{site.baseurl}}/api/endpoints/messaging).
+> L'objet `android_push` vous permet de définir ou de demander des informations relatives au contenu Android Push et Android Push Alert par le biais de nos [points d'extrémité de messages.]({{site.baseurl}}/api/endpoints/messaging)
 
 ## Objet Notification push Android
 
-Tu dois inclure un objet Android push dans `messages` si tu veux que les utilisateurs que tu as ciblés reçoivent un push sur leurs appareils Android. Le nombre total d'octets de ta chaîne `alert` et de ton objet `extra` ne doit pas dépasser 4 000. L’API de messagerie renvoie une erreur si vous dépassez la taille de message autorisée par Google.
+Vous devez inclure un objet Android push dans `messages` si vous voulez que les utilisateurs que vous avez ciblés reçoivent un push sur leurs appareils Android. Le nombre total d'octets de votre chaîne de caractères `alert` et de votre objet `extra` ne doit pas dépasser 4 000. L’API de messagerie renvoie une erreur si vous dépassez la taille de message autorisée par Google.
 
 ```json
 {
@@ -35,22 +35,22 @@ Tu dois inclure un objet Android push dans `messages` si tu veux que les utilisa
    "push_icon_image_url": (optional, string) an image URL for the large icon,
    "accent_color": (optional, integer) accent color to be applied by the standard Style templates when presenting this notification, an RGB integer value,
    "send_to_most_recent_device_only": (optional, boolean) defaults to false, if set to true, Braze will only send this push to a user's most recently used Android device, rather than all eligible Android devices,
-   "buttons" : (optional, array of Android Push Action Button Objects) push action buttons to display
-   "conversation_data" : (optional, Android Conversation Push Object) the data to be displayed via Conversation Push.
+   "buttons" : (optional, array of Android push action button objects) push action buttons to display
+   "conversation_data" : (optional, Android Conversation Push Object) the data to be displayed through Conversation Push.
 }
 ```
 
-Vous pouvez envoyer des notifications « Big Picture » en spécifiant la clé `appboy_image_url` dans l’objet `extra`. La valeur de `appboy_image_url` doit être une URL qui renvoie à l’emplacement où votre image est hébergée. Les images doivent être recadrées au format 2:1 et doivent avoir une taille d'au moins 600 x 300 px. Les images utilisées pour les notifications ne s’afficheront que sur les appareils exécutant Jelly Bean (Android 4.1) ou une version supérieure.
+Vous pouvez envoyer des notifications « Big Picture » en spécifiant la clé `appboy_image_url` dans l’objet `extra`. La valeur de `appboy_image_url` doit être une URL qui renvoie à l’emplacement où votre image est hébergée. Les images doivent être recadrées à un rapport hauteur/largeur de 2:1 et doivent avoir une taille minimale de 600 x 300 px. Les images utilisées pour les notifications ne s’afficheront que sur les appareils exécutant Jelly Bean (Android 4.1) ou une version supérieure.
 
 ### Informations relatives aux paramètres supplémentaires
 
-INFORMATIONS SUR LES PARAMÈTRES
+| Paramètre | Détails |
 | --------- | ------- |
-`priority` | Ce paramètre accepte les valeurs entre `-2` et `2`, où `-2` représente la priorité « MIN » et `2` représente la priorité « MAX ». `0` est la valeur « PAR DÉFAUT ». <br> <br> Toutes les valeurs envoyées en dehors de cette plage prendront la valeur 0 par défaut. Pour plus d'informations sur le niveau de priorité à utiliser, voir [Priorité des notifications Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/customization/advanced_settings#notification-priority). |
-`collapse_key` | FCM peut stocker simultanément jusqu’à quatre clés de réduction par appareil. Si vous utilisez plus de quatre clés de réduction, FCM ne donne aucune garantie quant à celles qui seront conservées. Braze utilise l’un de ces éléments par défaut pour les campagnes, assurez-vous donc de ne spécifier que jusqu’à trois clés de réduction supplémentaires pour les messages Android.
-| `push_icon_image_url` | La valeur du paramètre de la grande icône doit être une URL qui renvoie à l'endroit où ton image est hébergée. <br> <br> Les images doivent être recadrées selon un apport hauteur/largeur  1:1 et mesurer au moins 40x40.
-| `notification_channel` | Si cela n'est pas spécifié, Braze tentera d'envoyer la charge utile de la notification avec l'ID du canal de [repli du tableau de bord][45]. Pour en savoir plus, consultez les [canaux de notification][44] et reportez-vous aux étapes de la [définition des canaux de notification][43] pendant l’intégration. |
-| `send_to_sync` | Pour plus d'informations sur les messages `send_to_sync`, consultez les [notifications silencieuses Android][28]. |
+| `priority` | Ce paramètre accepte les valeurs entre `-2` et `2`, où `-2` représente la priorité « MIN » et `2` représente la priorité « MAX ». `0` est la valeur « PAR DÉFAUT ». <br> <br> Toutes les valeurs envoyées en dehors de cette plage prendront la valeur 0 par défaut. Pour plus d'informations sur le niveau de priorité à utiliser, voir [Priorité des notifications Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/customization/advanced_settings#notification-priority). |
+| `collapse_key` | FCM peut stocker simultanément jusqu’à quatre clés de réduction par appareil. Si vous utilisez plus de quatre clés de réduction, FCM ne donne aucune garantie quant à celles qui seront conservées. Braze utilise l’un de ces éléments par défaut pour les campagnes, assurez-vous donc de ne spécifier que jusqu’à trois clés de réduction supplémentaires pour les messages Android. |
+| `push_icon_image_url` | La valeur du paramètre des grandes icônes doit être une URL qui renvoie à l’emplacement où votre image est hébergée. <br> <br> Les images doivent être recadrées selon un apport hauteur/largeur  1:1 et mesurer au moins 40x40. |
+| `notification_channel` | Si cela n'est pas spécifié, Braze tentera d'envoyer la charge utile de la notification avec l'ID du canal de [repli du tableau de bord][45]. Pour en savoir plus, consultez la section [Canaux de notification][44] et reportez-vous aux étapes de [définition des canaux de notification][43] lors de l'intégration. |
+| `send_to_sync` | Pour plus d'informations sur les messages `send_to_sync`, consultez [les notifications Android silencieuses][28]. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## Objet Bouton d’action push Android
@@ -68,7 +68,7 @@ INFORMATIONS SUR LES PARAMÈTRES
 
 {% sdk_min_versions android:15.0.0 %}
 
-Les concepts de ce message correspondent à ceux de la documentation [Android People et Conversations][46] push.
+Les concepts présentés dans ce message correspondent à ceux de la documentation [Android People et Conversations][46] push.
 
 ```json
 {
