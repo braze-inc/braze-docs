@@ -1,6 +1,6 @@
 ---
-nav_title: "POST : Dupliquer une campagne"
-article_title: "POST : Dupliquer une campagne"
+nav_title: "POST : Campagnes en double"
+article_title: "POST : Campagnes en double"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
@@ -11,10 +11,10 @@ description: "Cet article présente en détail l’endpoint Dupliquer des campag
 {% api %}
 # Dupliquer des campagnes via l'API
 {% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %}
-/campaigns/duplicate
+/campagnes/duplicate
 {% endapimethod %}
 
-> Utilise ce point de terminaison pour dupliquer les campagnes. Ce point de terminaison de l'API est similaire à la [duplication des campagnes dans le tableau de bord de Braze][1].
+> Utilisez cet endpoint pour dupliquer des campagnes. Cet endpoint de l'API est similaire à la [duplication des campagnes dans le tableau de bord de Braze][1].
 
 {% alert important %}
 La duplication d'une campagne via l'API est actuellement en accès anticipé. Contactez votre gestionnaire de compte Braze si vous souhaitez participer à l’accès anticipé.
@@ -45,17 +45,17 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ## Paramètres de demande
 
-| Paramètre - Requis - Type de données - Description - Paramètre - Requis - Type de données - Description - Paramètre - Requis - Type de données - Description
+| Paramètre | Requis | Type de données | Description |
 | --------- | ---------| --------- | ----------- |
-| `Catalogues`campaign_id`                       | Créez et gérez des catalogues et des éléments de catalogue à référencer dans vos campagnes Braze.    |
-|`name`| Obligatoire | Chaîne de caractères | Le nom de la campagne résultante. |
-|`description`| Facultatif | Chaîne | Le champ de description de la campagne résultante. |
+|`campaign_id`| Requis | Chaîne de caractères | Voir [identifiant de campagne]({{site.baseurl}}/api/identifier_types/). |
+|`name`| Requis | Chaîne de caractères | Le nom de la campagne résultante. |
+|`description`| Facultatif | Chaîne de caractères | Le champ de description de la campagne résultante. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 
 ## Réponse
 
-Cet endpoint renverra un code de statut `202` et la création de la campagne se fera de manière asynchrone. Tu peux utiliser le [téléchargement d'événements de sécurité][2] pour voir les enregistrements de la date à laquelle les campagnes ont été dupliquées et par quelle clé API.
+Cet endpoint renverra un code de statut `202` et la création de la campagne se fera de manière asynchrone. Vous pouvez utiliser le [téléchargement d'événements de sécurité][2] pour consulter les enregistrements relatifs à la duplication des campagnes et à la clé API utilisée.
 
 
 
