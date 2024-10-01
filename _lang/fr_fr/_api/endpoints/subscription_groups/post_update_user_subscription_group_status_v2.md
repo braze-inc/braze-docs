@@ -18,21 +18,21 @@ channel:
 
 > Utilisez cet endpoint pour mettre à jour en masse le statut d’abonnement jusqu’à 50 utilisateurs sur le tableau de bord de Braze. 
 
-Vous pouvez accéder au groupe d'abonnement `subscription_group_id` en accédant à la page **Groupe d'abonnements** .
+Vous pouvez accéder au site `subscription_group_id` d'un groupe d' **abonnement** en accédant à la page **Groupe d'abonnements**.
 
-Si vous souhaitez voir des exemples ou tester ce point de terminaison pour **les groupes d'abonnement par courrier électronique** :
+Si vous souhaitez voir des exemples ou tester cet endpoint pour les **groupes d'abonnement e-mail**:
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#b1b9a0e0-6329-4df2-a465-53347f410662 {% endapiref %}
 
-Si vous souhaitez voir des exemples ou tester ce point de terminaison pour **les groupes d'abonnement SMS** :
+Si vous souhaitez voir des exemples ou tester cet endpoint pour les **groupes d'abonnement SMS**:
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#81a5fe65-588b-4b61-82d8-5ce68b681409 {% endapiref %}
 
-Si vous souhaitez voir des exemples ou tester ce point de terminaison pour **les groupes WhatsApp**:
+Si vous souhaitez voir des exemples ou tester cet endpoint pour **WhatsApp Groups :**
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#81a5fe65-588b-4b61-82d8-5ce68b681409 {% endapiref %}
 
-## Conditions préalables
+## Pré-requis
 
 Pour utiliser cet endpoint, vous aurez besoin d'une [clé API]({{site.baseurl}}/api/basics#rest-api-key/) avec l’autorisation `subscription.status.set`.
 
@@ -63,18 +63,18 @@ Authorization: Bearer YOUR-REST-API-KEY
 \* Notez que vous ne pouvez pas inclure à la fois les paramètres `emails` et `phones`. De plus, `emails`, `phones` et `external_ids` peuvent tous être envoyés individuellement.
 
 {% alert tip %}
-Lors de la création de nouveaux utilisateurs via le [`/users/track` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track/), vous pouvez définir des groupes d'abonnement dans l'objet d'attributs utilisateur, ce qui vous permet de créer un utilisateur et de définir l'état du groupe d'abonnement dans un seul appel d'API.
+Lorsque vous créez de nouveaux utilisateurs via l'[endpoint`/users/track` ]({{site.baseurl}}/api/endpoints/user_data/post_user_track/), vous pouvez définir des groupes d'abonnement dans l'objet des attributs de l'utilisateur, ce qui vous permet de créer un utilisateur et de définir l'état du groupe d'abonnement en un seul appel d'API.
 {% endalert %}
 
 ## Paramètres de demande
 
-| Paramètre | Obligatoire | Type de données | Descriptif |
+| Paramètre | Requis | Type de données | Description |
 |---|---|---|---|
-| [`subscription_group_id`]({{site.baseurl}}/api/identifier_types/?tab=subscription%20group%20ids) | Obligatoire | Chaîne | Le `id` de votre groupe d'abonnement. |
-| `subscription_state` | Obligatoire | Chaîne | Les valeurs disponibles sont `unsubscribed` (pas dans le groupe d'abonnement) ou `subscribed` (dans le groupe d'abonnement). |
-| `external_ids` | Obligatoire* | Tableau de chaînes | Le `external_id` du ou des utilisateurs, peut inclure jusqu'à 50 `id`s. |
-| `emails` | Obligatoire* | Chaîne ou tableau de chaînes | L'adresse e-mail de l'utilisateur peut être transmise sous forme de tableau de chaînes. Doit inclure au moins une adresse e-mail (maximum 50). <br><br>Si plusieurs utilisateurs (`external_id`) dans le même espace de travail partagent la même adresse e-mail, tous les utilisateurs qui partagent l'adresse e-mail sont mis à jour avec les modifications du groupe d'abonnement. |
-| `phones` | Obligatoire* | Chaîne au format [E.164](https://en.wikipedia.org/wiki/E.164) | Les numéros de téléphone de l’utilisateur peuvent être transmis sous forme de tableau de chaînes. Doit inclure au moins un numéro de téléphone (maximum 50).
+| [`subscription_group_id`]({{site.baseurl}}/api/identifier_types/?tab=subscription%20group%20ids) | Requis | Chaîne de caractères | L’`id` de votre groupe d’abonnement. |
+| `subscription_state` | Requis | Chaîne de caractères | Les valeurs disponibles sont `unsubscribed` (pas dans le groupe d’abonnement) ou `subscribed` (dans le groupe d’abonnement). |
+| `external_ids` | Obligatoire* | Tableau de chaînes de caractères | L’`external_id` de l’utilisateur ou des utilisateurs (50 `id`s max). |
+| `emails` | Obligatoire* | Chaîne de caractères ou tableau de chaînes de caractères | L’adresse e-mail de l’utilisateur peut être transmise comme un tableau de chaînes de caractères. Doit inclure au moins une adresse e-mail (maximum 50). <br><br>Si plusieurs utilisateurs (`external_id`) du même espace de travail partagent la même adresse e-mail, tous les utilisateurs qui partagent l'adresse e-mail sont mis à jour avec les modifications apportées au groupe d'abonnement. |
+| `phones` | Obligatoire* | Chaîne de caractères dans [E.164](https://en.wikipedia.org/wiki/E.164) format | Les numéros de téléphone de l’utilisateur, peuvent être transmis comme un tableau de chaînes de caractères. Doit inclure au moins un numéro de téléphone (maximum 50). |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
 {% alert note %}
