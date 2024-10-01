@@ -14,7 +14,7 @@ description: "Cet article présente en détail l’endpoint Braze Répertorier l
 /content_blocks/list
 {% endapimethod %}
 
-> Utilisez ce point de terminaison pour répertorier vos informations sur [les blocs de contenu]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/content_blocks/) existants.
+> Utilisez cet endpoint pour dresser la liste des informations relatives à vos [blocs contenus]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/content_blocks/) existants.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#6d87048f-68fd-46c9-aa15-3a970e99540e {% endapiref %}
 
@@ -27,12 +27,12 @@ Pour utiliser cet endpoint, vous aurez besoin d'une [clé API]({{site.baseurl}}/
 
 ## Paramètres de demande
 
-| Paramètre | Obligatoire | Type de données | Descriptif |
+| Paramètre | Requis | Type de données | Description |
 |---|---|---|---|
-| `modified_after`  | Facultatif | Chaîne au format [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) | Récupérer uniquement les blocs de contenu mis à jour à l’heure indiquée ou après. |
-| `modified_before`  |  Facultatif | Chaîne au format [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) | Récupérez uniquement les blocs de contenu mis à jour au plus tard à l’heure indiquée. |
-| `limit` | Facultatif | Nombre positif | Nombre maximal de blocs de contenu à récupérer. Par défaut à 100 si non renseigné, avec une valeur maximale acceptable de 1 000.
-| `offset`  |  Facultatif | Nombre positif | Nombre de blocs de contenu à ignorer avant de renvoyer le reste des modèles qui correspondent aux critères de recherche. |
+| `modified_after`  | Facultatif | Chaîne de caractères au format [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601)  | Récupérer uniquement les blocs de contenu mis à jour à partir de l'heure donnée. |
+| `modified_before`  |  Facultatif | Chaîne de caractères au format [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601)  | Récupérer uniquement les blocs de contenu mis à jour au plus tard à l'heure donnée. |
+| `limit` | Facultatif | Nombre positif | Nombre maximum de blocs de contenu à récupérer. Par défaut à 100 si non renseigné, avec une valeur maximale acceptable de 1 000. |
+| `offset`  |  Facultatif | Nombre positif | Nombre de blocs de contenu à ignorer avant de renvoyer le reste des modèles correspondant aux critères de recherche. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ## Exemple de demande
@@ -67,16 +67,16 @@ Authorization: Bearer YOUR_REST_API_KEY
 
 Le tableau suivant répertorie les erreurs renvoyées possibles et les étapes de résolution des problèmes associées.
 
-| Erreur | Dépannage |
+| Erreur | Résolution des problèmes |
 | --- | --- |
-| `Modified after time is invalid` | La date fournie n’est pas une date valide ou analysable. Reformatez cette valeur sous forme de chaîne au format ISO 8601 (`yyyy-mm-ddThh:mm:ss.ffffff`). |
-| `Modified before time is invalid` | La date fournie n’est pas une date valide ou analysable. Reformatez cette valeur sous forme de chaîne au format ISO 8601 (`yyyy-mm-ddThh:mm:ss.ffffff`). |
-| `Modified after time must be earlier than or the same as modified before time.` | Définir la valeur `modified_after` sur une heure antérieure à l’heure `modified_before`.
-| `Content Block number limit is invalid` | Le paramètre `limit` doit être un entier (nombre positif) supérieur à 0\. |
-| `Content Block number limit must be greater than 0` | Définir le paramètre `limit` sur un entier supérieur à 0\. |
-| `Content Block number limit exceeds maximum of 1000` | Définir le paramètre `limit` sur un entier inférieur à 1000\. |
-| `Offset is invalid` | Le paramètre `offset` doit être un entier supérieur à 0\. |
-| Le décalage doit être supérieur à 0 | Définir le paramètre `offset` sur un entier supérieur à 0. |
+| `Modified after time is invalid` | La date fournie n’est pas une date valide ou analysable. Reformater cette valeur en tant que chaîne de caractères au format ISO 8601 (`yyyy-mm-ddThh:mm:ss.ffffff`). |
+| `Modified before time is invalid` | La date fournie n’est pas une date valide ou analysable. Reformater cette valeur en tant que chaîne de caractères au format ISO 8601 (`yyyy-mm-ddThh:mm:ss.ffffff`). |
+| `Modified after time must be earlier than or the same as modified before time.` | Modifier la valeur `modified_after` à une heure antérieure à l’heure `modified_before`. |
+| `Content Block number limit is invalid` | Le paramètre `limit` doit être un entier (nombre positif) supérieur à 0. |
+| `Content Block number limit must be greater than 0` | Modifier le paramètre `limit` à un entier supérieur à 0. |
+| `Content Block number limit exceeds maximum of 1000` | Modifier le paramètre `limit` à un entier inférieur à 1 000. |
+| `Offset is invalid` | Le paramètre `offset` doit être un entier supérieur à 0. |
+| Le décalage doit être supérieur à 0 | Modifier le paramètre `offset` à un entier supérieur à 0. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% endapi %}
