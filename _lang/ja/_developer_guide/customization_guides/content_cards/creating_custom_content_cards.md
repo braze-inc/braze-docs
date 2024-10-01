@@ -36,7 +36,7 @@ Brazeには、`imageOnly`、`captionedImage`、`classic`、`classicImage`、`con
 ### ステップ1:カスタム UI を作成する 
 
 {% tabs %}
-{% tab アンドロイド %}
+{% tab Android %}
 
 まず、独自のカスタムフラグメントを作成します。デフォルトの[`ContentCardFragment`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards/-content-cards-fragment/index.html)は、デフォルトのコンテンツカードタイプのみに対応するよう設計されていますが、良い出発点です。
 
@@ -46,7 +46,7 @@ Brazeには、`imageOnly`、`captionedImage`、`classic`、`classicImage`、`con
 まず、独自のカスタムビューコントローラーコンポーネントを作成します。デフォルトの[`BrazeContentCardUI.ViewController`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazecontentcardui/viewcontroller)は、デフォルトのコンテンツカードタイプのみに対応するよう設計されていますが、良い出発点です。
 
 {% endtab %}
-{% tab ウェブ %}
+{% tab Web %}
 
 まず、カードのレンダリングに使用するカスタム HTML コンポーネントを作成します。 
 
@@ -59,7 +59,7 @@ Brazeには、`imageOnly`、`captionedImage`、`classic`、`classicImage`、`con
 
 ### ステップ3:分析を実装する
 
-コンテンツカードのインプレッション数、クリック数、却下数は、カスタムビューに自動的に記録されません。Brazeダッシュボード分析にすべてのメトリクスを適切にログバックするために、[それぞれの方法を実装する][3]必要がある。
+コンテンツカードのインプレッション数、クリック数、却下数は、カスタムビューに自動的に記録されません。すべての指標が Braze ダッシュボードの分析に適切に記録されるように、[それぞれのメソッドを実装][3]する必要があります。
 
 ## コンテンツカードの配置
 
@@ -84,7 +84,7 @@ Brazeには、`imageOnly`、`captionedImage`、`classic`、`classicImage`、`con
 
 新規購読者のクーポンのキーと値のペアの例は次のとおりです。
 
-- title:無制限のゲームを申し込む
+- title:無制限のゲームに登録する
 - body: 夏の終わりスペシャル - Politer ゲームが10%オフ
 - buttonText: 今すぐ購読する
 - style: promo
@@ -96,12 +96,12 @@ Brazeには、`imageOnly`、`captionedImage`、`classic`、`classicImage`、`con
 
 それぞれの値を扱うことになります。`body`、`title`、`buttonText`などのキーは、マーケターが設定できる単純な文字列値を持つ場合があります。`terms`のようなキーは、法務部門が承認したフレーズの小さなコレクションを提供する値を持つ場合があります。アプリやサイトで`style`や`class_type`をどのようにレンダリングするかを決めることになります。 
 
-{% details アンドロイドについての詳しい説明 %}
+{% details Android に関する詳細説明 %}
 
 Android と FireOS SDK では、メッセージセンターのロジックは Braze のキーと値のペアが提供する`class_type`値によって駆動されます。[`createContentCardable`]({{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/implementation_guide)メソッドを使用すると、これらのクラスタイプをフィルタリングして識別できます。
 
 {% tabs %}
-{% tab コトリン %}
+{% tab Kotlin %}
 **クリック時の動作に`class_type`を使用する**<br>
 コンテンツカードのデータをカスタムクラスにインフレートするときに、データの`ContentCardClass`プロパティを使用して、データの格納に使用する具象サブクラスを決定します。
 
@@ -149,7 +149,7 @@ override fun onCreate(savedInstanceState: Bundle?) {
     }
 ```
 {% endtab %}
-{% tab ジャワ %}
+{% tab Java %}
 **クリック時の動作に`class_type`を使用する**<br>
 コンテンツカードのデータをカスタムクラスにインフレートするときに、データの`ContentCardClass`プロパティを使用して、データの格納に使用する具象サブクラスを決定します。
 
@@ -227,7 +227,7 @@ protected void onCreate(Bundle savedInstanceState) {
 
 そうは言っても、さまざまな方法で追加の表示ロジックを注文して適用することができます。たとえば、配列から最初の5つのコンテンツカードオブジェクトを選択したり、キーと値のペアを導入して条件付きロジックを構築したりできます。
 
-セカンダリの Content Cards フィードとしてカルーセルを実装している場合は、[デフォルトの Content Card フィードをカスタマイズする]({{site.baseurl}}/developer_guide/customization_guides/content_cards/customizing_feed/#multiple-feeds)を参照し、 キーと値のペアに基づいて正しいフィードにカードをソートする方法を習得しよう。
+セカンダリコンテンツカードフィードとしてカルーセルを実装する場合は、[デフォルトのコンテンツカードフィードのカスタマイズ]({{site.baseurl}}/developer_guide/customization_guides/content_cards/customizing_feed/#multiple-feeds)を参照して、キーと値のペアに基づいてカードを正しいフィードにソートする方法を確認してください。
 
 ### バナー
 
