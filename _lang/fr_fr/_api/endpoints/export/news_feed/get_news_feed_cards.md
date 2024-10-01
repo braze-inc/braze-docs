@@ -1,6 +1,6 @@
 ---
-nav_title: "GET :  : Exporter la liste des cartes de fil d’actualités"
-article_title: "GET :  : Exporter la liste des cartes de fil d’actualités"
+nav_title: "GET : Exporter la liste des cartes du fil d'actualité"
+article_title: "GET : Exporter la liste des cartes du fil d'actualité"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
@@ -26,7 +26,7 @@ Le Fil d’actualité est obsolète. Braze recommande aux clients qui utilisent 
 
 ## Conditions préalables
 
-Pour utiliser cet endpoint, vous aurez besoin d’une [clé API]({{site.baseurl}}/api/basics#rest-api-key/) avec l’autorisation `feed.list`.
+Pour utiliser cet endpoint, vous aurez besoin d'une [clé API]({{site.baseurl}}/api/basics#rest-api-key/) avec l’autorisation `feed.list`.
 
 ## Limite de débit
 
@@ -36,9 +36,9 @@ Pour utiliser cet endpoint, vous aurez besoin d’une [clé API]({{site.baseurl}
 
 | Paramètre | Requis | Type de données | Description |
 | --------- | -------- | --------- | ----------- |
-| `page` | Facultatif | Entier | La page de cartes à renvoyer est par défaut à 0 (renvoie le premier jeu de 100 maximum). |
-| `include_archived` | Facultatif | Booléen | S’il faut inclure ou non les cartes archivées, la valeur par défaut est false. |
-| `sort_direction` | Facultatif | Chaîne | - Trier l’heure de création du plus récent au plus ancien : passez la valeur `desc`.<br> \- Trier l’heure de création de la plus ancienne à la plus récente : indiquer la valeur `asc`. <br><br>Si `sort_direction` n’est pas inclus, l’ordre par défaut est de la plus ancienne à la plus récente.
+| `page` | Facultatif | Entier   | La page des cartes à renvoyer, par défaut sur 0 (renvoie le premier ensemble jusqu’à 100 éléments). |
+| `include_archived` | Facultatif | Valeur booléenne   | S’il faut inclure ou non des cartes archivées, par défaut sur Faux. |
+| `sort_direction` | Facultatif | Chaîne de caractères | \- Trier l’heure de création de la plus récente à la plus ancienne : indiquer la valeur `desc`.<br> \- Trier l’heure de création de la plus ancienne à la plus récente : indiquer la valeur `asc`. <br><br>Si `sort_direction` n’est pas inclus, l’ordre par défaut est de la plus ancienne à la plus récente. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ## Exemple de demande
@@ -67,7 +67,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 ```
 
 {% alert tip %}
-Pour obtenir de l’aide sur les exportations CSV et de l’API, consultez la section Résolution des problèmes d’exportation[]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/).
+Pour obtenir de l’aide sur les exportations CSV et de l’API, consultez la section [Résolution des problèmes d’exportation]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/).
 {% endalert %}
 
 {% endapi %}
