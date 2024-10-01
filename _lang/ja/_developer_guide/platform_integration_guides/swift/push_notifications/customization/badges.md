@@ -3,7 +3,7 @@ nav_title: バッジ
 article_title: iOS のプッシュ通知バッジ数
 platform: Swift
 page_order: 2
-description: "この記事では、SWIFT SDKのiOSバッジカウントの実装方法について説明します。"
+description: "この記事では、SWIFT SDK 用のiOS バッジ数の実装方法について説明します。"
 channel:
   - push
 
