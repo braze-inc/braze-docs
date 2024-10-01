@@ -1,6 +1,6 @@
 ---
-nav_title: "POST : Renommer des ID externes"
-article_title: "POST : Renommer des ID externes"
+nav_title: "POST : Renommer l'ID externe"
+article_title: "POST : Renommer l'ID externe"
 search_tag: Endpoint
 page_order: 1
 layout: api_page
@@ -20,7 +20,7 @@ Vous pouvez envoyer jusqu’à 50 objets renommés par demande.
 
 Cet endpoint définit un nouvel `external_id` (principal) pour l’utilisateur et rend son `external_id` existant obsolète. Cela signifie que l’utilisateur peut être identifié par l’un ou l’autre des `external_id` jusqu’à ce que celui qui est obsolète soit supprimé. La présence de plusieurs ID externes permet de prévoir une période de migration pour que les versions antérieures de vos applications qui utilisent l’ancien schéma de nommage des ID externes ne s’interrompent pas. 
 
-Une fois que ton ancien schéma de nommage n'est plus utilisé, nous te recommandons vivement de supprimer les identifiants externes obsolètes à l'aide du [point de terminaison`/users/external_ids/remove` ]({{site.baseurl}}/api/endpoints/user_data/external_id_migration/post_external_ids_remove).
+Une fois que votre ancien schéma de nommage n'est plus utilisé, nous vous recommandons vivement de supprimer les ID externes obsolètes à l'aide de l'[endpoint`/users/external_ids/remove`.]({{site.baseurl}}/api/endpoints/user_data/external_id_migration/post_external_ids_remove)
 
 {% alert warning %}
 Assurez-vous de supprimer les ID externes obsolètes à l’aide de l’endpoint `/users/external_ids/remove` plutôt que `/users/delete`. L’envoi d’une demande à `/users/delete` avec l’ID externe obsolète supprime entièrement le profil utilisateur et ne peut pas être annulé.
@@ -51,9 +51,9 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ## Paramètres de demande
 
-| Paramètre - Requis - Type de données - Description - Paramètre - Requis - Type de données - Description - Paramètre - Requis - Type de données - Description
+| Paramètre | Requis | Type de données | Description |
 | --------- | ---------| --------- | ----------- |
-| `external_id_renames` | Obligatoire | Tableau des objets Renommer des identifiants externes | Afficher l’exemple de requête et les limitations suivantes pour la structure de l’objet Renommer des identifiants externes. |
+| `external_id_renames` | Requis | Tableau des objets Renommer des identifiants externes | Afficher l’exemple de demande et les limitations suivantes pour la structure de l’objet Renommer des identifiants externes. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 - Le `current_external_id` doit être l’ID principal de l’utilisateur et ne peut pas être un ID obsolète
@@ -87,10 +87,10 @@ La réponse confirmera tous les renommages réussis et les renommages infructueu
 ```
 
 Le champ `message` renverra `success` pour toutes les demandes valides. Des erreurs plus spécifiques sont saisies dans le tableau `rename_errors`. Le champ `message` renvoie une erreur dans les cas suivants :
-Clé API non valide
-\- Tableau vide `external_id_renames` 
-- `external_id_renames` tableau avec plus de 50 objets
-Atteinte de la limite de débit (plus de 1 000 requêtes/minute)
+- Clé API non valide
+- Tableau `external_id_renames` vide
+- Tableau `external_id_renames` avec plus de 50 objets
+- Atteinte de la limite de débit (plus de 1 000 requêtes/minute)
 
 ## Foire aux questions
 
@@ -101,12 +101,12 @@ Non, puisque le nombre d’utilisateurs restera le même, ils auront simplement 
 Non, étant donné que l’utilisateur est toujours le même et que tous ses comportements historiques sont toujours liés à lui.
 
 **Est-il possible de l’exécuter sur des espaces de travail de développement/préproduction ?**<br>
-Oui. Nous recommandons vivement de lancer une migration de test sur un groupe d'applications de développement ou de préproduction, et de veiller à ce que tout se soit bien passé avant d’exécuter sur les données de production.
+Oui. En fait, nous vous recommandons vivement d'effectuer un test de migration sur un espace de travail de développement ou de mise à disposition, et de vous assurer que tout s'est bien déroulé avant d'exécuter la migration sur les données de production.
 
 **Est-ce que cela consomme des points de données ?**<br>
 Cette fonctionnalité ne coûte pas de points de données.
 
 **Quel est le délai d’obsolescence recommandé ?**<br>
-Nous n’avons pas de limite stricte sur la durée de conservation des ID externes obsolètes, mais nous vous recommandons vivement de les supprimer une fois qu’il n’y a plus besoin de référencer les utilisateurs par l’ID obsolète.
+Nous n'avons pas de limite stricte quant à la durée pendant laquelle vous pouvez conserver des ID externes dépréciés, mais nous vous recommandons vivement de les supprimer lorsqu'il n'est plus nécessaire de référencer les utilisateurs par l'ID déprécié.
 
 {% endapi %}
