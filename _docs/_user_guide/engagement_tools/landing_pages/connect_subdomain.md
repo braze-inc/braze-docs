@@ -1,38 +1,38 @@
 ---
-nav_title: Connecting a Subdomain
-article_title: Connecting a Subdomain
-description: "This article covers how to connect your third-party domain's subdomains to your Braze account."
+nav_title: Connecting a Custom Domain
+article_title: Connecting a Custom Domain
+description: "This article covers how to connect your third-party domain to your Braze account."
 page_order: 1
-alias: /landing_pages/connect_subdomain/
+alias: /landing_pages/connect_domain/
 ---
 
-# Connecting a subdomain
+# Connecting a custom domain
 
-> If you own a domain through a third-party service, you can connect its subdomains to your Braze account. You can then use subdomains with your Braze-hosted landing pages to brand and customize your URLs. 
+> If you own a domain through a third-party service, you can connect it to your Braze account. You can then use this domain with your Braze-hosted landing pages to brand and customize your URLs. 
 
 {% alert note %}
 Landing pages are currently in beta. Contact your Braze account manager if you’re interested in participating in this beta.
 {% endalert %}
 
-To connect a subdomain to your Braze account, have an administrator follow the steps below.
+To connect a custom domain to your Braze account, have an administrator follow the steps below.
 
 1. Go to **Settings** > **Landing Page Settings**.
-2. Enter the subdomain you want to connect and select **Submit**.
+2. Enter the domain you want to connect and select **Submit**.
 3. Copy and paste the **TXT** and **CNAME** records into the relevant settings of your domain provider account.
 4. Return to the Braze dashboard to verify the connection.
 
 ![Landing Page Settings page with one TXT and two CNAME records listed with their respective names and values.][1]
 
 {% alert note %}
-Depending on your domain provider, the subdomain connection can take up to 48 hours. When the process is complete, we’ll update your **Landing Page Settings** page.
+Depending on your domain provider, the domain connection can take up to 48 hours. When the process is complete, we’ll update your **Landing Page Settings** page.
 {% endalert %}
 
-## Using your subdomain
+## Using your custom domain
 
-After your subdomain verification is complete, you can use your subdomain for your Braze-hosted landing pages by default. For example, if you connect the subdomain `promo.example.com`, you can add a URL to your landing page that looks like `promo.example.com/holiday-sale`.
+After your domain verification is complete, you can use your domain for your Braze-hosted landing pages by default. For example, if you connect the domain `promo.example.com`, you can add a URL to your landing page that looks like `promo.example.com/holiday-sale`.
 
 {% alert note %}
-Contact your customer success manager if you need to remove your subdomain.
+Contact your customer success manager if you need to remove your custom domain.
 {% endalert %}
 
 ## Resources from domain providers
@@ -48,14 +48,14 @@ Listed below are resources for creating and managing DNS records with commonly u
 
 ## Troubleshooting 
 
-### My subdomain connection failed
+### My custom domain connection failed
 
-Verify that your subdomain was entered correctly and that it matches what you submitted to Braze from your domain provider account. If it's correct and matches, check the TXT and CNAME records provided by Braze. They should match the records you entered into your domain provider account.
+Verify that your domain was entered correctly and that it matches what you submitted to Braze from your domain provider account. If it's correct and matches, check the TXT and CNAME records provided by Braze. They should match the records you entered into your domain provider account.
 
 ## Frequently asked questions
 
-### Can I connect multiple subdomains to my workspace or connect one subdomain to multiple workspaces?
+### Can I connect multiple domains to my workspace or connect one domain to multiple workspaces?
 
-No, you currently can only connect one subdomain to a workspace.
+No, you currently can only connect one domain to a workspace.
 
 [1]: {% image_buster /assets/img/landing_pages/connect_subdomain.png %}
