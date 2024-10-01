@@ -1,12 +1,12 @@
 ---
 nav_title: 購入のロギング
-article_title: Unityの購買の記録
+article_title: Unity の購入のロギング
 platform: 
   - Unity
   - iOS
   - Android
 page_order: 3
-description: "このリファレンス記事では、Unity プラットフォーム での購買の記録方法について説明します。"
+description: "この参考記事では、Unity プラットフォームで購入を記録する方法について説明します。"
 
 ---
  
@@ -18,19 +18,19 @@ Braze は複数の通貨での購入に対応しています。ドル以外の�
 
 実施にあたっては、まずカスタムイベントs、カスタム属性s、購買イベントが提供するセグメンテーション選択肢の事例を[ベストプラクティス][5]で検討すること。
 
-この機能を使用するには、アプリで正常に購入した後に次のメソッド呼び出しを追加します。
+この機能を使用するには、アプリ内購入が正常に完了した後で次のメソッド呼び出しを追加します。
 
 ```csharp
 AppboyBinding.LogPurchase("product_id", "currencyCode", price(decimal));
 ```
 
-このメソッドは、数量が1 の購入を記録します。別の数量を渡す場合は、以下のメソッドを呼び出すことができます。
+このメソッドは、数量が1の購入を記録します。別の数量を渡す場合は、以下のメソッドを呼び出すことができます。
 
 ```csharp
 AppboyBinding.LogPurchase("product_id", "currencyCode", price(decimal), quantity(int));
 ```
 
-数量は100 以下である必要があります。Braze では、購入プロパティーの`Dictionary` を渡すことで、購入に関するメタデータの追加もサポートしています。
+数量は100以下である必要があります。Braze では、購入プロパティの `Dictionary` を渡すことによる、購入に関するメタデータの追加もサポートしています。
 
 ```csharp
 AppboyBinding.LogPurchase("product_id", "currencyCode", price(decimal), quantity(int), properties(Dictionary<string, object>));
@@ -43,7 +43,7 @@ AppboyBinding.LogPurchase("product_id", "currencyCode", price(decimal), quantity
 
 以下のコードs は、サポートされている通貨記号です。これ以外の通貨コードを指定すると警告が記録され、SDK でその他のアクションは実行されません。
 
-- USD、AED、ALL、AMD、ANG、AOA、ARS、AWG、AZN、BAM BD、BND、BD、BD、BND、BD、BD、BT、BD、BT、BD、BT、BZD、CY、CYP、CYP、CUP、CYP、CUP、CUP、CYP、GBP、GGP、GGS、GNF、GNF、GYD、HRK、HUF、IDR、IMP、IQD、IRR、ISK、JEP、JOD、JPOD、KGS、KHR、KMF、KPW、KYD、KZD LBP、LBP、LK、LBP、LK、LBP、LYL、LBP、LK、LK、LB、LK、MK、MNT、MWR、MWN、MZN、NGN、NIO、NOK、NPR、PAB、PEN、PHP、PKR、PKR、PLN、QAR、RUB、RWF、RWF、SBD、SCR、SGD、SL、SRD、SVC、SYP、SZL、TJS、TT、TND、TRY、TWD、TZS、UYU、UZS、VEF、VND UV、WST、XAG、XAU、XCD、XDR、XOF、XPF、XPT、YER、ZMK、ZWL。
+- USD、AED、AFN、ALL、AMD、ANG、AOA、ARS、AUD、AWG、AZN、BAM、BBD、BDT、BGN、BHD、BIF、BMD、BND、BOB、BRL、BSD、BTC、BTN、BWP、BYR、BZD、CAD、CDF、CHF、CLF、CLP、CNY、COP、CRC、CUC、CUP、CVE、CZK、DJF、DKK、DOP、DZD、EEK、EGP、ERN、ETB、EUR、FJD、FKP、GBP、GEL、GGP、GHS、GIP、GMD、GNF、GTQ、GYD、HKD、HNL、HRK、HTG、HUF、IDR、ILS、IMP、INR、IQD、IRR、ISK、JEP、JMD、JOD、JPY、KES、KGS、KHR、KMF、KPW、KRW、KWD、KYD、KZT、LAK、LBP、LKR、LRD、LSL、LTL、LVL、LYD、MAD、MDL、MGA、MKD、MMK、MNT、MOP、MRO、MTL、MUR、MVR、MWK、MXN、MYR、MZN、NAD、NGN、NIO、NOK、NPR、NZD、OMR、PAB、PEN、PGK、PHP、PKR、PLN、PYG、QAR、RON、RSD、RUB、RWF、SAR、SBD、SCR、SDG、SEK、SGD、SHP、SLL、SOS、SRD、STD、SVC、SYP、SZL、THB、TJS、TMT、TND、TOP、TRY、TTD、TWD、TZS、UAH、UGX、UYU、UZS、VEF、VND、VUV、WST、XAF、XAG、XAU、XCD、XDR、XOF、XPD、XPF、XPT、YER、ZAR、ZMK、ZMW、およびZWL。
 
 ## サンプルコード
 
