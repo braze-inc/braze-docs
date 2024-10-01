@@ -41,9 +41,9 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ## Paramètres de demande
 
-| Paramètre - Requis - Type de données - Description - Paramètre - Requis - Type de données - Description - Paramètre - Requis - Type de données - Description
+| Paramètre | Requis | Type de données | Description |
 | -----------|----------| --------|------- |
-| `email` | Requis | Chaîne ou tableau | Chaîne d'adresses électroniques à mettre en liste de blocage, ou un tableau de 50 adresses électroniques au maximum à mettre en liste de blocage. |
+| `email` | Requis | Chaîne de caractères ou tableau | Adresse e-mail par chaîne de caractères ou un tableau de 50 adresses e-mail à ajouter à la liste de blocage. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ## Exemple de demande
