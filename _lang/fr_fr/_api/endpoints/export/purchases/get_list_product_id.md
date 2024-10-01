@@ -1,6 +1,6 @@
 ---
-nav_title: "GET :  : Exporter les ID de produit"
-article_title: "GET :  : Exporter les ID de produit"
+nav_title: "GET : Exporter les ID des produits"
+article_title: "GET : Exporter les ID des produits"
 search_tag: Endpoint
 page_order: 1
 layout: api_page
@@ -28,9 +28,9 @@ Pour utiliser cet endpoint, vous aurez besoin d'une [clé API]({{site.baseurl}}/
 
 ## Paramètres de demande
 
-| Paramètre | Obligatoire | Type de données | Descriptif |
+| Paramètre | Requis | Type de données | Description |
 |---|---|---|---|
-| `page` | Facultatif | Chaîne | La page de votre liste de produits que vous souhaitez consulter. |
+| `page` | Facultatif | Chaîne de caractères | La page de votre liste de produits que vous souhaitez consulter. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ## Exemple de demande
@@ -57,5 +57,5 @@ Authorization: Bearer YOUR-REST-API-KEY
 {% endapi %}
 
 {% alert tip %}
-Pour obtenir de l’aide sur les exportations CSV et de l’API, consultez la section Résolution des problèmes d’exportation[]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/).
+Pour obtenir de l’aide sur les exportations CSV et de l’API, consultez la section [Résolution des problèmes d’exportation]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/).
 {% endalert %}
