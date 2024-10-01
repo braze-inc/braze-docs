@@ -10,12 +10,12 @@ description: "Cet article présente en détail l’endpoint Braze Lister des int
 
 ---
 {% api %}
-# Intégration de listes
+# Intégrations de listes
 {% apimethod get %}
 /cdi/integrations
 {% endapimethod %}
 
-> Utilisez ce point de terminaison pour renvoyer une liste des intégrations existantes.
+> Utilisez cet endpoint pour obtenir une liste des intégrations existantes.
 
 
 {% alert note %}
@@ -28,11 +28,11 @@ Pour utiliser cet endpoint, vous devrez générer une clé API avec l’autorisa
 
 ## Paramètres de recherche
 
-Chaque appel à ce point de terminaison renvoie 10 éléments. Pour une liste avec plus de 10 intégrations, utilisez l’en-tête `Link` pour récupérer les données de la page suivante, comme indiqué dans l’exemple de réponse.
+Chaque appel à cet endpoint renverra 10 éléments. Pour une liste comportant plus de 10 intégrations, utilisez l'en-tête `Link` pour récupérer les données à la page suivante, comme le montre l'exemple de réponse.
 
 | Paramètre | Requis | Type de données | Description |
 |---|---|---|---|
-| `cursor` | Facultatif | Chaîne | Détermine la pagination de la liste d’intégration. |
+| `cursor` | Facultatif | Chaîne de caractères | Détermine la pagination de la liste d'intégration. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
 ## Exemple de demande
@@ -92,11 +92,11 @@ Link: </cdi/integrations?cursor=c2tpcDow>; rel="prev",</cdi/integrations?cursor=
 
 Le tableau suivant répertorie les erreurs renvoyées possibles et les étapes de résolution des problèmes associées.
 
-| Erreur | Dépannage |
+| Erreur | Résolution des problèmes |
 | --- | --- |
 | `400 Invalid cursor` | Vérifiez que votre `cursor` est valide. |
 {: .reset-td-br-1 .reset-td-br-2}
 
-Pour obtenir des codes d’état supplémentaires et les messages d’erreur associés, reportez-vous à [la section Erreurs et réponses fatales]({{site.baseurl}}/api/errors/#fatal-errors).
+Pour connaître les autres codes d'état et les messages d'erreur associés, reportez-vous à la section [Erreurs fatales et réponses.]({{site.baseurl}}/api/errors/#fatal-errors)
 
 {% endapi %}
