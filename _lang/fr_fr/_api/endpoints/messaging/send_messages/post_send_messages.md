@@ -14,7 +14,7 @@ description: "Cet article présente en détail l’endpoint Braze Envoyer des me
 /messages/send
 {% endapimethod %}
 
-> Utilise ce point de terminaison pour envoyer des messages immédiats aux utilisateurs désignés via l'API de Braze. 
+> Utilisez cet endpoint pour envoyer des messages immédiats aux utilisateurs désignés via l'API de Braze. 
 
 Veillez à inclure les objets Messagerie dans votre corps pour finaliser vos demandes.
 
@@ -68,18 +68,18 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ## Paramètres de demande
 
-| Paramètre - Requis - Type de données - Description - Paramètre - Requis - Type de données - Description - Paramètre - Requis - Type de données - Description
+| Paramètre | Requis | Type de données | Description |
 | --------- | ---------| --------- | ----------- |
-|`broadcast`| Facultatif | Booléen | Tu dois donner la valeur true à `broadcast` lorsque tu envoies un message à un segment entier ciblé par une campagne ou un Canvas. Ce paramètre est défini sur Faux par défaut (au 31 août 2017). <br><br> Si `broadcast` est défini sur « true », une liste `recipients` ne peut pas être incluse. Cependant, faites attention lors de la configuration de `broadcast: true`car en configurant involontairement cet indicateur, vous pourriez envoyer votre message à une audience plus importante que prévue.
-|`external_user_ids` | Facultatif | Tableau de chaînes de caractères | Voir l'[ID de l'utilisateur externe]({{site.baseurl}}/api/objects_filters/user_attributes_object/#braze-user-profile-fields). |
-|`user_aliases`| Facultatif | Tableau d'objets d'alias d'utilisateur| Voir l'[objet d'alias d'utilisateur]({{site.baseurl}}/api/objects_filters/user_alias_object/). |
-|`segment_id `| Facultatif | Chaîne de caractères | Voir [Identifiant de segment]({{site.baseurl}}/api/identifier_types/). |
-| `audience` | Facultatif | Objet d’audience connectée | Voir [Audience connectée]({{site.baseurl}}/api/objects_filters/connected_audience/). |
-|`campaign_id`| Facultatif* | Chaîne de caractères | Voir [Identifiant de campagne]({{site.baseurl}}/api/identifier_types/) pour plus d'informations. <br><br>\*Nécessaire si tu souhaites suivre les statistiques de la campagne (par exemple, les envois, les clics, les rebonds, etc.) sur le tableau de bord de Braze. |
-|`send_id`| Facultatif | Chaîne de caractères | Voir [Identifiant d’envoi]({{site.baseurl}}/api/identifier_types/) |
-|`override_frequency_capping`| Facultatif | Booléen | Ignorer `frequency_capping` pour les campagnes, la valeur par défaut est `false`. |
-Utilisez cette option pour envoyer des messages uniquement aux utilisateurs qui ont confirmé l’abonnement (), aux utilisateurs qui ont souscrit à ou confirmé l’abonnement () ou à tous les utilisateurs, y compris les utilisateurs désabonnés (). <br><br>Appliquer l’option `all` pour les utilisateurs est utile pour les e-mails transactionnels. La valeur par défaut est `subscribed`. |
-|`messages`| Facultatif | Objets de messagerie | Voir les [objets de messagerie disponibles]({{site.baseurl}}/api/objects_filters/#messaging-objects). |
+|`broadcast`| Facultatif | Valeur booléenne | Vous devez définir `broadcast` sur « true » lorsque vous envoyez un message à un segment entier qui est ciblé par une campagne ou un Canvas. Ce paramètre est défini sur Faux par défaut (au 31 août 2017). <br><br> Si `broadcast` est défini sur « true », une liste `recipients` ne peut pas être incluse. Cependant, faites attention lors de la configuration de `broadcast: true` car en configurant involontairement cet indicateur, vous pourriez envoyer votre message à une audience plus importante que prévue. |
+|`external_user_ids` | Facultatif | Tableau de chaînes de caractères | Voir [ID externe]({{site.baseurl}}/api/objects_filters/user_attributes_object/#braze-user-profile-fields). |
+|`user_aliases`| Facultatif | Tableau des objets Alias utilisateur| Voir l'[objet alias d'utilisateur]({{site.baseurl}}/api/objects_filters/user_alias_object/). |
+|`segment_id `| Facultatif | Chaîne de caractères | Voir [identifiant de segmentation]({{site.baseurl}}/api/identifier_types/). |
+|`audience`| Facultatif | Objet Audience connectée | Voir [audience connectée]({{site.baseurl}}/api/objects_filters/connected_audience/). |
+|`campaign_id`| En option* | Chaîne de caractères | Pour plus d'informations, voir l'[identifiant de la campagne]({{site.baseurl}}/api/identifier_types/). <br><br>\*Nécessaire si vous souhaitez suivre les statistiques de la campagne (par exemple, les envois, les clics, les rebonds, etc.) sur le tableau de bord de Braze. |
+|`send_id`| Facultatif | Chaîne de caractères | Voir [identifiant d'envoi]({{site.baseurl}}/api/identifier_types/) |
+|`override_frequency_capping`| Facultatif | Valeur booléenne | Ignorez `frequency_capping` pour les campagnes, la valeur par défaut est `false`. |
+|`recipient_subscription_state`| Facultatif | Chaîne de caractères | Utilisez cette option pour envoyer des messages uniquement aux utilisateurs qui ont confirmé l’abonnement (`opted_in`), aux utilisateurs qui ont souscrit à ou confirmé l’abonnement (`subscribed`) ou à tous les utilisateurs, y compris les utilisateurs désabonnés (`all`). <br><br>Appliquer l’option `all` pour les utilisateurs est utile pour les e-mails transactionnels. Par défaut, `subscribed`. |
+|`messages`| Facultatif | Objets Messagerie | Voir les [objets d'envoi de messages disponibles]({{site.baseurl}}/api/objects_filters/#messaging-objects). |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ## Exemple de demande
