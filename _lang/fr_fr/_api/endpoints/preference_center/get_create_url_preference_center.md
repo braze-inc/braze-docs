@@ -30,17 +30,17 @@ Cet endpoint a une limitation du débit de 1 000 requêtes par minute, par esp
 
 ## Paramètres de chemin
 
-| Paramètre | Obligatoire | Type de données | Descriptif |
+| Paramètre | Requis | Type de données | Description |
 | --------- | ---------| --------- | ----------- |
-|`preferenceCenterExternalID`| Obligatoire | Chaîne | L’ID de votre centre de préférences. |
-|`userID`| Obligatoire | Chaîne | L’ID utilisateur. |
+|`preferenceCenterExternalID`| Requis | Chaîne de caractères | L’ID de votre centre de préférences. |
+|`userID`| Requis | Chaîne de caractères | L'ID utilisateur. |
 
 ## Paramètres de demande
 
-| Paramètre | Obligatoire | Type de données | Descriptif |
+| Paramètre | Requis | Type de données | Description |
 | --------- | ---------| --------- | ----------- |
-|`preference_center_api_id`| Obligatoire | Chaîne | L’ID de votre centre de préférences. |
-|`external_id`| Obligatoire | Chaîne | ID externe d’un utilisateur. |
+|`preference_center_api_id`| Requis | Chaîne de caractères | L’ID de votre centre de préférences. |
+|`external_id`| Requis | Chaîne de caractères | L’ID externe pour un utilisateur. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ## Exemple de demande
@@ -61,5 +61,5 @@ curl --location --request GET 'https://rest.iad-01.braze.com/preference_center/v
 {% endapi %}
 
 {% alert note %}
-Ce point de terminaison génère uniquement des URL pour le nouveau centre de préférences (tels que les centres de préférences créés via l’API ou l’éditeur glisser-déposer).
+Ce point de terminaison génère uniquement des URL pour le nouveau centre de préférences (comme les centres de préférences créés via l'API ou l'éditeur par glisser-déposer).
 {% endalert %}
