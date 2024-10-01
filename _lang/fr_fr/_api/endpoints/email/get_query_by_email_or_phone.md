@@ -1,28 +1,28 @@
 ---
-nav_title: "GET : Répertorier l’état de l’abonnement avec l’adresse e-mail ou le numéro de téléphone"
-article_title: "GET : Répertorier l’état de l’abonnement avec l’adresse e-mail ou le numéro de téléphone"
+nav_title: "GET : Liste de l'État d'abonnement avec l'adresse e-mail ou le numéro de téléphone"
+article_title: "GET : Liste de l'État d'abonnement avec l'adresse e-mail ou le numéro de téléphone"
 search_tag: Endpoint
 page_order: 2
 hidden: true
 layout: api_page
 page_type: reference
-description: "Cet article décrit les détails de l’état d’abonnement à la liste avec une adresse e-mail ou un point de terminaison Braze de numéro de téléphone."
+description: "Cet article présente les détails de l'état de l'abonnement à la liste avec une adresse e-mail ou un numéro de téléphone du point de terminaison Braze."
 
 ---
 {% api %}
-# Répertorier l’état de l’abonnement avec une adresse e-mail ou un numéro de téléphone
+# Liste de l'état de l'abonnement avec une adresse e-mail ou un numéro de téléphone
 {% apimethod get %}
-/users/subscription
+/utilisateurs/abonnement
 {% endapimethod %}
 
-> Utilisez ce point de terminaison pour renvoyer la valeur de l’état de l’abonnement en fonction d’une adresse e-mail ou d’un numéro de téléphone.
+> Utilisez cet endpoint pour renvoyer la valeur de l'état de l'abonnement en fonction d'une adresse e-mail ou d'un numéro de téléphone.
 
 ## Paramètres de demande
 
-| Paramètre | Obligatoire | Type de données | Descriptif |
+| Paramètre | Requis | Type de données | Description |
 | --- | --- | --- | --- |
-| `email` | Oui | Chaîne | L’adresse e-mail de l’utilisateur (doit inclure au moins une adresse et au maximum 50 adresses). |
-| `phone` | Oui | Chaîne | Le numéro de téléphone de l’utilisateur (doit inclure au moins un numéro de téléphone et au maximum 50 numéros de téléphone). Nous vous recommandons de le fournir au format E.164\. |
+| `email` | Oui | Chaîne de caractères | L'adresse e-mail de l'utilisateur (doit comprendre au moins une adresse et au plus 50 adresses). |
+| `phone` | Oui | Chaîne de caractères | Le numéro de téléphone de l'utilisateur (doit comprendre au moins un numéro de téléphone et au plus 50 numéros de téléphone). Nous vous recommandons de fournir ces informations sous le format E.164. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ## Exemple de demande
