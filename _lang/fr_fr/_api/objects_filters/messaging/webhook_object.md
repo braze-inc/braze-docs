@@ -11,7 +11,7 @@ description: "Cet article de référence présente l’objet Webhook de Braze."
 
 # Objet Webhook
 
-> L’objet `webhook` vous permet de modifier ou de créer des messages webhook via nos [points de terminaison de messagerie]({{site.baseurl}}/api/endpoints/messaging).
+> L'objet `webhook` vous permet de modifier ou de créer des messages webhook via nos [points d'envoi de messages.]({{site.baseurl}}/api/endpoints/messaging)
 
 ```json
 {
