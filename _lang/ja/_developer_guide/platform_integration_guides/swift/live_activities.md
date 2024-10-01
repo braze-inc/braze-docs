@@ -1,5 +1,5 @@
 ---
-nav_title: ライブ活動
+nav_title: ライブアクティビティ
 page_order: 4
 config_only: true
 noindex: true
