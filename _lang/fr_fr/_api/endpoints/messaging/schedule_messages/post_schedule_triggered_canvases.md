@@ -1,6 +1,6 @@
 ---
-nav_title: "POST : Planifier des Canvas déclenchés par API"
-article_title: "POST : Planifier des Canvas déclenchés par API"
+nav_title: "POST : Planification des toiles déclenchées par l'API"
+article_title: "POST : Planification des toiles déclenchées par l'API"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
@@ -14,11 +14,11 @@ description: "Cet article présente en détail l’endpoint Braze Planifier des 
 /canvas/trigger/schedule/create
 {% endapimethod %}
 
-> Utilisez ce point de terminaison pour planifier des messages Canvas via une remise déclenchée par l’API, ce qui vous permet de décider quelle action doit déclencher l’envoi du message. 
+> Utilisez cet endpoint pour planifier des messages Canvas via une réception/distribution déclenchée par l'API, ce qui vous permet de décider quelle action doit déclencher l'envoi du message. 
 
 Vous pouvez indiquer les `canvas_entry_properties` qui seront modélisées dans les messages envoyés dès les premières étapes du Canvas.
 
-Notez que pour envoyer des messages avec cet endpoint, vous devez avoir un ID Canvas créé lorsque vous élaborez un []({{site.baseurl}}/api/identifier_types/#canvas-api-identifier)Canvas.
+Notez que pour envoyer des messages avec cet endpoint, vous devez disposer d'un [ID Canvas]({{site.baseurl}}/api/identifier_types/#canvas-api-identifier), créé lorsque vous créez un Canvas.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#4bc75890-b807-405d-b226-5aca284e6b7d {% endapiref %}
 
@@ -60,14 +60,14 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ## Paramètres de demande
 
-| Paramètre | Obligatoire | Type de données | Descriptif |
+| Paramètre | Requis | Type de données | Description |
 | --------- | ---------| --------- | ----------- |
-|`canvas_id`|Obligatoire|Chaîne| Voir [Identifiant de canvas]({{site.baseurl}}/api/identifier_types/). |
-| `recipients` | Facultatif | Tableau d’objets destinataires | Voir [l’objet recipients]({{site.baseurl}}/api/objects_filters/recipient_object/). |
-| `audience` | Facultatif | Objet d’audience connectée | Voir [l’audience connectée]({{site.baseurl}}/api/objects_filters/connected_audience/). |
-|`broadcast`| Facultatif | Booléen | Vous devez définir `broadcast` sur « true » lorsque vous envoyez un message à un segment entier qui est ciblé par une campagne ou un canvas. Ce paramètre est défini sur Faux par défaut (au 31 août 2017). <br><br> Si `broadcast` est défini sur « true », une liste `recipients` ne peut pas être incluse. Cependant, soyez prudent lors de la définition `broadcast: true`de , car le réglage involontaire de cet indicateur peut vous amener à envoyer votre message à un public plus large que prévu. |
-| `canvas_entry_properties` | Facultatif | Objet | Paires clé-valeur de personnalisation pour tous les utilisateurs de cet envoi. Voir [Objet Propriétés d’entrée de canevas]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object). |
-| `schedule` | Obligatoire | Objet Planification | Voir [objet de planification]({{site.baseurl}}/api/objects_filters/schedule_object/). |
+|`canvas_id`|Requis|Chaîne de caractères| Voir [Identifiant Canvas]({{site.baseurl}}/api/identifier_types/). |
+| `recipients` | Facultatif | Tableau des objets Destinataires | Voir [objet destinataire]({{site.baseurl}}/api/objects_filters/recipient_object/). |
+| `audience` | Facultatif | Objet Audience connectée | Voir [audience connectée]({{site.baseurl}}/api/objects_filters/connected_audience/). |
+|`broadcast`| Facultatif | Valeur booléenne | Vous devez définir `broadcast` sur « true » lorsque vous envoyez un message à un segment entier qui est ciblé par une campagne ou un Canvas. Ce paramètre est défini sur Faux par défaut (au 31 août 2017). <br><br> Si `broadcast` est défini sur « true », une liste `recipients` ne peut pas être incluse. Cependant, faites attention lors de la configuration de `broadcast: true` car en configurant involontairement cet indicateur, vous pourriez envoyer votre message à une audience plus importante que prévue. |
+| `canvas_entry_properties` | Facultatif | Objet | Personnalisation des paires clé-valeur pour tous les utilisateurs de cet envoi. Voir l'[objet des propriétés de l'entrée Canvas]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object). |
+| `schedule` | Requis | Objet Planification | Voir [objet de planification]({{site.baseurl}}/api/objects_filters/schedule_object/). |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ## Exemple de demande
