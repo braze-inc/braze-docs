@@ -15,9 +15,9 @@ description: "Cet article présente en détail l’endpoint Braze Mettre à jour
 /scim/v2/Users/{id}
 {% endapimethod %}
 
-> Utilise ce point de contact pour mettre à jour un compte d'utilisateur de tableau de bord existant en spécifiant la ressource `id` renvoyée par la méthode SCIM [`POST`]({{site.baseurl}}/scim/post_create_user_account/) . 
+> Utilisez cet endpoint pour mettre à jour un compte utilisateur de tableau de bord existant en spécifiant la ressource `id` renvoyée par la méthode SCIM [`POST`]({{site.baseurl}}/scim/post_create_user_account/) . 
 
-Il te permet de mettre à jour les noms et prénoms, les autorisations (pour définir les autorisations au niveau de l'entreprise, de l'espace de travail et de l'équipe) et le département.
+Il vous permet de mettre à jour les noms et prénoms, les autorisations (pour définir les autorisations au niveau de l'entreprise, de l'espace de travail et de l'équipe) et le département.
 
 Pour des raisons de sécurité, `userName` (adresse e-mail) ne peut pas actuellement être mis à jour à l’aide de cet endpoint. Si vous souhaitez modifier le `userName` (adresse e-mail) d'un utilisateur, contactez l'[assistance]({{site.baseurl}}/support_contact/).
 
@@ -25,7 +25,7 @@ Pour des raisons de sécurité, `userName` (adresse e-mail) ne peut pas actuelle
 
 ## Conditions préalables
 
-Pour utiliser cet endpoint, vous aurez besoin d’un jeton SCIM. Pour plus d'informations, reporte-toi à la rubrique [Approvisionnement automatisé des utilisateurs]({{site.baseurl}}/scim/automated_user_provisioning/).
+Pour utiliser cet endpoint, vous aurez besoin d’un jeton SCIM. Pour plus d’informations, consultez la section [Provisionnement automatisé des utilisateurs]({{site.baseurl}}/scim/automated_user_provisioning/).
 
 ## Limite de débit
 
@@ -33,9 +33,9 @@ Pour utiliser cet endpoint, vous aurez besoin d’un jeton SCIM. Pour plus d'inf
 
 ## Paramètres de chemin
 
-| Paramètre - Requis - Type de données - Description - Paramètre - Requis - Type de données - Description - Paramètre - Requis - Type de données - Description
+| Paramètre | Requis | Type de données | Description |
 |---|---|---|---|
-| `id` | Requis | Chaîne | L'identifiant de la ressource de l'utilisateur. Ce paramètre est renvoyé par les méthodes `POST` `/scim/v2/Users/` ou `GET` `/scim/v2/Users?filter=userName eq "user@test.com"`. |
+| `id` | Requis | Chaîne de caractères | L’ID de ressource de l’utilisateur. Ce paramètre est renvoyé par les méthodes `POST` `/scim/v2/Users/` ou `GET` `/scim/v2/Users?filter=userName eq "user@test.com"`. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
 ## Corps de la demande
@@ -80,12 +80,12 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ## Paramètres de demande
 
-| Paramètre - Requis - Type de données - Description - Paramètre - Requis - Type de données - Description - Paramètre - Requis - Type de données - Description
+| Paramètre | Requis | Type de données | Description |
 | --------- | -------- | --------- | ----------- |
-| `schemas` | Requis | Tableau de chaînes de caractères | Nom de schéma SCIM 2.0 attendu pour l'objet utilisateur. |
-| `name` | Requis | Objet JSON | Cet objet contient le prénom et le nom de famille de l'utilisateur. |
-| `department` | Obligatoire | Chaîne | Chaîne de département valide provenant de la [documentation sur les chaînes de département]({{site.baseurl}}/scim_api_appendix/#department-strings). |
-| `permissions` | Requis | Objet JSON | Objet de permissions tel que décrit dans la [documentation de l'objet de permissions]({{site.baseurl}}/scim_api_appendix/#permissions-object). |
+| `schemas` | Requis | Tableau de chaînes de caractères | Nom du schéma SCIM 2.0 attendu pour l’objet Utilisateur. |
+| `name` | Requis | Object JSON | Cet objet contient le prénom et le nom de famille de l’utilisateur. |
+| `department` | Requis | Chaîne de caractères | Chaîne de [caractères]({{site.baseurl}}/scim_api_appendix/#department-strings) valide du département, tirée de la [documentation sur les chaînes de caractères du département]({{site.baseurl}}/scim_api_appendix/#department-strings). |
+| `permissions` | Requis | Object JSON | Objet de permissions tel que décrit dans la [documentation de l'objet de permissions]({{site.baseurl}}/scim_api_appendix/#permissions-object). |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 
@@ -155,16 +155,16 @@ curl --location --request PUT 'https://rest.iad-01.braze.com/scim/v2/Users/dfa24
 ### États relatifs aux d’erreur
 Si un utilisateur avec cet ID n’existe pas dans Braze, l’endpoint répondra avec :
 
-\`\`\`json
+```json
 HTTP/1.1 404 Not Found
 Content-Type: text/html; charset=UTF-8
 
 {
-"schemas": ["urn:ietf:params:scim:api:messages:2.0:Error"],
-"detail": "User not found",
-"status": 404
+    "schemas": ["urn:ietf:params:scim:api:messages:2.0:Error"],
+    "detail": "User not found",
+    "status": 404
 }
-    \`\`\`
+```
 
 {% endapi %}
 
