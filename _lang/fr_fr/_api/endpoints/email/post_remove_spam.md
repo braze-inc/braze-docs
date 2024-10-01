@@ -20,7 +20,7 @@ description: "Cet article présente en détail l’endpoint Braze Supprimer les 
 
 ## Conditions préalables
 
-Pour utiliser cet endpoint, vous aurez besoin d’une [clé API]({{site.baseurl}}/api/basics#rest-api-key/) avec l'autorisation `email.spam.remove`.
+Pour utiliser cet endpoint, vous aurez besoin d'une [clé API]({{site.baseurl}}/api/basics#rest-api-key/) avec l’autorisation `email.spam.remove`.
 
 ## Limite de débit
 
@@ -40,9 +40,9 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ## Paramètres de demande
 
-| Paramètre - Requis - Type de données - Description - Paramètre - Requis - Type de données - Description - Paramètre - Requis - Type de données - Description
+| Paramètre | Requis | Type de données | Description |
 | ----------|-----------| --------|------- |
-| `email` | Obligatoire | Chaîne ou tableau | Chaîne de l'adresse électronique à modifier, ou un tableau de 50 adresses électroniques au maximum à modifier. |
+| `email` | Requis | Chaîne de caractères ou tableau | Envoyez une adresse e-mail par chaîne de caractères ou un tableau de 50 adresses e-mail pour effectuer des modifications. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ## Exemple de demande
