@@ -22,7 +22,7 @@ Braze iOS SDK は、各プッシュアクションボタンの URL 処理サポ�
 
 ## ステップ1:Braze のデフォルトプッシュカテゴリーの追加
 
-\[push][36] に登録する] ときに、以下のコードを使用してデフォルトのプッシュカテゴリを登録します。
+\[プッシュ登録][36] を行うときに、次のコードを使用してデフォルトのプッシュカテゴリーに登録します。
 
 {% tabs %}
 {% tab OBJECTIVE-C %}
@@ -40,7 +40,7 @@ UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTy
 ```
 
 {% endtab %}
-{% tab 迅速 %}
+{% tab SWIFT %}
 
 ```swift
 // For UserNotification.framework (iOS 10+ only)
@@ -76,7 +76,7 @@ UIApplication.shared.registerUserNotificationSettings(settings)
 ```
 
 {% endtab %}
-{% tab 迅速 %}
+{% tab SWIFT %}
 
 ```swift
 Appboy.sharedInstance()?.userNotificationCenter(center,
@@ -99,7 +99,7 @@ UnNotification フレームワークを使用していない場合は、プッ�
 ```
 
 {% endtab %}
-{% tab 迅速 %}
+{% tab SWIFT %}
 
 ```swift
 Appboy.sharedInstance()?.getActionWithIdentifier(identifier,
@@ -122,14 +122,14 @@ Appboy.sharedInstance()?.getActionWithIdentifier(identifier,
 
 その後、これらのカテゴリーをダッシュボードからプッシュ通知に割り当てて、デザインのアクションボタン構成をトリガーできます。デバイスに表示される `LIKE_CATEGORY` を活用する例を次に示します。
 
-![2 つのプッシュアクションボタンs " unlike" および" like" を表示するプッシュメッセージ。][17]
+![「いいねを取り消す」と「いいね」の2つのプッシュアクションボタンを表示するプッシュメッセージ][17]
 
 
 [13]: {% image_buster /assets/img_archive/iOS8Action.gif %}
-[14]: https://developer.apple.com/reference/usernotifications/unnotificationcategory "カテゴリDocs"
+[14]: https://developer.apple.com/reference/usernotifications/unnotificationcategory 「カテゴリードキュメント」
 [17]: {% image_buster /assets/img_archive/push_example_category.png %}
-[36]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/#step-4-register-push-tokens-with-braze
-[37]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/customization/action_buttons/#push-category-customization
+guide/platform_integration_guides/ios/push_notifications/integration/#step-4-register-push-tokens-with-braze {{site.baseurl}}/developer_
+ [37]:{{site.baseurl}}guide/platform_integration_guides/ios/push_notifications/customization/action_buttons/#push-category-customization
 [39]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/#step-5-enable-push-handling
 [31]: https://developer.apple.com/documentation/usernotifications/unnotificationcategory
 [2]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/customization/action_buttons/
