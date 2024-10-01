@@ -1,6 +1,6 @@
 ---
-nav_title: "GET : Exporter les informations relatives à la carte de fil d’actualité"
-article_title: "GET : Exporter les informations relatives à la carte de fil d’actualité"
+nav_title: "GET : Détails de la carte de fil d'actualité pour l'exportation"
+article_title: "GET : Détails de la carte de fil d'actualité pour l'exportation"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
@@ -32,9 +32,9 @@ Pour utiliser cet endpoint, vous aurez besoin d'une [clé API]({{site.baseurl}}/
 
 ## Paramètres de demande
 
-| Paramètre | Obligatoire | Type de données | Descriptif |
+| Paramètre | Requis | Type de données | Description            |
 | --------- | -------- | --------- | ---------------------- |
-| `card_id` | Obligatoire | Chaîne | Voir [Identifiant API de la carte]({{site.baseurl}}/api/identifier_types/). <br><br> Le `card_id` pour une carte donnée se trouve sur la page [Clés API]({{site.baseurl}}/user_guide/administrative/app_settings/api_settings_tab/) et sur la page des détails de la carte dans votre tableau de bord, ou vous pouvez utiliser le [point de terminaison de la liste Exporter les cartes de fil d’actualité]({{site.baseurl}}/api/endpoints/export/news_feed/get_news_feed_cards/).|
+| `card_id` | Requis | Chaîne de caractères | Voir l'[identifiant API de la carte]({{site.baseurl}}/api/identifier_types/). <br><br> Vous trouverez le site `card_id` pour une carte donnée sur la page des [clés API]({{site.baseurl}}/user_guide/administrative/app_settings/api_settings_tab/) et sur la page des détails de la carte dans votre tableau de bord, ou vous pouvez utiliser le [point de terminaison Exporter la liste des cartes du fil d'actualité]({{site.baseurl}}/api/endpoints/export/news_feed/get_news_feed_cards/).|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ## Exemple de demande
