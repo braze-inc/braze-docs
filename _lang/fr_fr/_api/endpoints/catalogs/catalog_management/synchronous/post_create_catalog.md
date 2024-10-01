@@ -29,18 +29,18 @@ Pour utiliser cet endpoint, vous aurez besoin d'une [clé API]({{site.baseurl}}/
 
 ## Paramètres de demande
 
-| Paramètre | Obligatoire | Type de données | Descriptif |
+| Paramètre | Requis | Type de données | Description |
 |---|---|---|---|
-| `catalogs` | Obligatoire | Matrice | Tableau contenant des objets catalogue. Un seul objet Catalogue est autorisé pour cette requête.
+| `catalogs` | Requis | Tableau | Un tableau qui contient des objets Catalogue. Un seul objet Catalogue est autorisé pour cette requête. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
 ### Paramètres de l’objet Catalogue
 
-| Paramètre | Obligatoire | Type de données | Descriptif |
+| Paramètre | Requis | Type de données | Description |
 |---|---|---|---|
-| `name` | Obligatoire | Chaîne | Nom du catalogue que vous souhaitez créer. |
-| `description` | Obligatoire | Chaîne | Description du catalogue que vous souhaitez créer. |
-| `fields` | Obligatoire | Matrice | Tableau d’objets dans lequel l’objet contient des clés `name` et `type`. |
+| `name` | Requis | Chaîne de caractères | Le nom du catalogue que vous voulez créer. |
+| `description` | Requis | Chaîne de caractères | La description du catalogue que vous voulez créer. |
+| `fields` | Requis | Tableau | Un tableau d’objets dans lequel l’objet contient les clés `name` et `type`. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
 ## Exemple de demande
@@ -81,6 +81,10 @@ curl --location --request POST 'https://rest.iad-03.braze.com/catalogs' \
         {
           "name": "Location",
           "type": "object"
+        },
+        {
+          "name": "Top_Dishes",
+          "type": "array"
         },
         {
           "name": "Created_At",
@@ -135,6 +139,10 @@ Le code de statut `201` pourrait renvoyer le corps de réponse suivant.
           "type": "object"
         },
         {
+          "name": "Top_Dishes",
+          "type": "array"
+        },
+        {
           "name": "Created_At",
           "type": "time"
         }
@@ -150,7 +158,7 @@ Le code de statut `201` pourrait renvoyer le corps de réponse suivant.
 
 ### Exemple de réponse échouée
 
-Le code de statut `400` pourrait renvoyer le corps de réponse suivant. Consultez la `400`résolution des problèmes[](#troubleshooting) pour plus d’informations concernant les erreurs que vous pourriez rencontrer.
+Le code de statut `400` pourrait renvoyer le corps de réponse suivant. Consultez la résolution des problèmes[](#troubleshooting) pour plus d’informations concernant les erreurs que vous pourriez rencontrer.
 
 ```json
 {
@@ -174,21 +182,21 @@ Le code de statut `400` pourrait renvoyer le corps de réponse suivant. Consulte
 
 Le tableau suivant répertorie les erreurs renvoyées possibles et les étapes de résolution des problèmes associées.
 
-| Erreur | Dépannage |
+| Erreur | Résolution des problèmes |
 | --- | --- |
-| `catalog-array-invalid` `catalogs` | doit être un tableau d’objets. |
-| `catalog-name-already-exists` | Le catalogue portant ce nom existe déjà. |
-| `catalog-name-too-large`  | La limite de caractères pour un nom de catalogue est de 250. |
+| `catalog-array-invalid` | `catalogs` doit être un tableau d’objets. |
+| `catalog-name-already-exists` | Un catalogue avec ce nom existe déjà. |
+| `catalog-name-too-large`  | La limite de caractères d’un nom de catalogue est de 250. |
 | `description-too-long` | La limite de caractères pour la description est de 250. |
 | `field-names-not-unique` | Le même nom de champ est référencé deux fois. |
-| `field-names-too-large` | La limite de caractères pour un nom de champ est de 250. |
-| `id-not-first-column` | Le `id` doit être le premier champ du tableau. Vérifiez que le type est une chaîne de caractères.
-| `invalid-catalog-name` | Le nom du catalogue ne peut inclure que des lettres, des chiffres, des traits d’union et des traits de soulignement. |
-| `invalid-field-names` | Les champs ne peuvent inclure que des lettres, des chiffres, des traits d’union et des traits de soulignement. |
-| `invalid-field-types` | Assurez-vous que les types de champs sont valides. |
-| `invalid-fields` `fields` | n’est pas formaté correctement. |
-| `too-many-catalog-atoms` | Vous ne pouvez créer qu’un seul catalogue par demande. |
-| `too-many-fields` | La limite du nombre de champs est de 500. |
+| `field-names-too-large` | La limite de caractères d’un nom de champ est de 250. |
+| `id-not-first-column` | Le champ `id` doit être le premier champ dans le tableau. Vérifiez que le type est une chaîne de caractères. |
+| `invalid-catalog-name` | Le nom de catalogue peut uniquement inclure des chiffres, des lettres, des traits d’union et des traits de soulignement. |
+| `invalid-field-names` | Les champs peuvent uniquement inclure des chiffres, des lettres, des traits d’union et des traits de soulignement. |
+| `invalid-field-types` | Assurez-vous que les types des champs sont valides. |
+| `invalid-fields` | `fields` n’est pas formaté correctement. |
+| `too-many-catalog-atoms` | Vous ne pouvez créer qu’un catalogue par requête. |
+| `too-many-fields` | Le nombre de champs est limité à 500. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% endapi %}
