@@ -1,6 +1,6 @@
 ---
-nav_title: "GET : Lister l'état de la synchronisation des travaux"
-article_title: "GET : Lister l'état de la synchronisation des travaux"
+nav_title: "GET : Liste de l'état de synchronisation des travaux"
+article_title: "GET : Liste de l'état de synchronisation des travaux"
 search_tag: Endpoint
 page_order: 1
 alias: /api/cdi/get_job_sync/
@@ -10,12 +10,12 @@ description: "Cet article présente en détail l’endpoint Braze Répertorier l
 
 ---
 {% api %}
-# Liste l'état de la synchronisation des tâches
+# Liste de l'état de synchronisation des travaux
 {% apimethod get %}
 /cdi/integrations/{integration_id}/job_sync_status
 {% endapimethod %}
 
-> Utilise ce point de terminaison pour renvoyer une liste des états de synchronisation passés pour une intégration donnée.
+> Utilisez cet endpoint pour renvoyer une liste des états de synchronisation passés pour une intégration donnée.
 
 {% alert note %}
 Pour utiliser cet endpoint, vous devrez générer une clé API avec l’autorisation `cdi.integration_job_status`.
@@ -29,16 +29,16 @@ Pour utiliser cet endpoint, vous devrez générer une clé API avec l’autorisa
 
 | Paramètre | Requis | Type de données | Description |
 |---|---|---|---|
-| `integration_id` | Requis | Chaîne | ID d'intégration. |
+| `integration_id` | Requis | Chaîne de caractères | ID d'intégration. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
 ## Paramètres de recherche
 
-Chaque appel à ce point d'extrémité renverra 10 éléments. Pour une intégration avec plus de 10 synchronisations, utilise l'en-tête `Link` pour récupérer les données sur la page suivante, comme le montre l'exemple de réponse suivant.
+Chaque appel à cet endpoint renverra 10 éléments. Pour une intégration avec plus de 10 synchronisations, utilisez l'en-tête `Link` pour récupérer les données sur la page suivante, comme le montre l'exemple de réponse suivant.
 
 | Paramètre | Requis | Type de données | Description |
 |---|---|---|---|
-| `cursor` | Facultatif | Chaîne | Détermine la pagination de l'état de synchronisation. |
+| `cursor` | Facultatif | Chaîne de caractères | Détermine la pagination de l'état de synchronisation. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
 ## Exemple de demande
@@ -89,13 +89,13 @@ Link: </cdi/integrations/00000000-0000-0000-0000-000000000000/job_sync_status?cu
 }
 ```
 
-| job\_status | Explication |
+| état_du_travail | Explication |
 | --- | --- |
 | `running` | Le travail est en cours d'exécution. |
 | `success` | Toutes les lignes ont été synchronisées avec succès. |
-| `partial` | Certaines lignes n'ont pas pu être synchronisées en raison d'erreurs. |
+| `partial` | Certaines lignes n'ont pas été synchronisées en raison d'erreurs. |
 | `error` | Aucune ligne n'a été synchronisée. |
-| `config_error` | Il y a eu une erreur dans la configuration de l'intégration. Vérifie ta configuration d'intégration. |
+| `config_error` | Une erreur s'est produite dans la configuration de l'intégration. Vérifiez votre configuration d'intégration. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## Résolution des problèmes
@@ -104,10 +104,10 @@ Le tableau suivant répertorie les erreurs renvoyées possibles et les étapes d
 
 | Erreur | Résolution des problèmes |
 | --- | --- |
-| `400 Invalid cursor` | Vérifie que ton `cursor` est valide. |
-| `400 Invalid integration ID` | Vérifie que ton `integration_id` est valide. |
+| `400 Invalid cursor` | Vérifiez que votre `cursor` est valide. |
+| `400 Invalid integration ID` | Vérifiez que votre `integration_id` est valide. |
 {: .reset-td-br-1 .reset-td-br-2}
 
-Pour les codes d'état supplémentaires et les messages d'erreur associés, tu peux te référer à [Erreurs fatales et réponses]({{site.baseurl}}/api/errors/#fatal-errors).
+Pour connaître les autres codes d'état et les messages d'erreur associés, veuillez vous reporter à la section [Erreurs fatales et réponses.]({{site.baseurl}}/api/errors/#fatal-errors)
 
 {% endapi %}
