@@ -16,7 +16,7 @@ description: "Cet article présente en détail l’endpoint Braze Mettre des e-m
 {% endapimethod %}
 
 {% alert important %}
-Braze a publié l’endpoint []({{site.baseurl}}/api/endpoints/email/post_blocklist/)`/email/blocklist` avec la même fonctionnalité que l’endpoint `/email/blacklist`. Nous te recommandons d'utiliser plutôt le point de terminaison `/email/blocklist`.
+Braze a publié le [`/email/blocklist` point de terminaison]({{site.baseurl}}/api/endpoints/email/post_blocklist/) avec la même fonctionnalité que le point de terminaison `/email/blacklist`. Nous vous recommandons d'utiliser plutôt le point de terminaison `/email/blocklist`.
 {% endalert %}
 
 > Utilisez cet endpoint pour désinscrire un utilisateur des e-mails et le marquer comme rejeté définitivement.
@@ -46,9 +46,9 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ## Paramètres de demande
 
-| Paramètre - Requis - Type de données - Description - Paramètre - Requis - Type de données - Description - Paramètre - Requis - Type de données - Description
+| Paramètre | Requis | Type de données | Description |
 | -----------|----------| --------|------- |
-| `email` | Obligatoire | Chaîne ou tableau | Chaîne d'adresses électroniques à mettre sur liste noire, ou un tableau de 50 adresses électroniques au maximum à mettre sur liste noire. |
+| `email` | Requis | Chaîne de caractères ou tableau | Envoyez une adresse e-mail par chaîne de caractères ou un tableau de 50 adresses e-mail à la liste noire. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ## Exemple de demande
