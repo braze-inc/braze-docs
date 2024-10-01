@@ -11,7 +11,7 @@ description: "Cet article explique l’objet Propriétés d’entrées de Canvas
 
 # Objet Propriétés d’entrées de Canvas
 
-> Lorsque vous utilisez l’un des endpoints pour déclencher ou programmer un Canvas via l’API, vous pouvez fournir une carte des clés et des valeurs pour personnaliser les messages envoyés dès les premières étapes de votre Canvas, dans l’espace de nom `canvas_entry_properties`.
+> Lors de l'utilisation de l'un des points de terminaison pour déclencher ou planifier un Canvas via l'API, vous pouvez fournir une carte de clés et de valeurs pour personnaliser les messages envoyés par les premières étapes de votre Canvas, dans l'espace de noms `canvas_entry_properties`.
 
 {% alert note %}
 La limite maximale de taille de l’objet Propriétés d’entrées de Canvas est de 50 Ko.
