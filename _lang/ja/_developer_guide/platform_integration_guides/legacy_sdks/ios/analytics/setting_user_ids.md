@@ -23,14 +23,14 @@ noindex: true
 ユーザーが識別されたらすぐに (通常はログイン後)、次の呼び出しを行ってユーザー ID を設定する必要があります。
 
 {% tabs %}
-{% tab 目標-C %}
+{% tab OBJECTIVE-C %}
 
 ```objc
 [[Appboy sharedInstance] changeUser:@"YOUR_USER_ID_STRING"];
 ```
 
 {% endtab %}
-{% tab 速い %}
+{% tab swift %}
 
 ```swift
 Appboy.sharedInstance()?.changeUser("YOUR_USER_ID")
