@@ -16,7 +16,7 @@ description: "이 문서에서는 구매 수 Braze 엔드포인트 내보내기�
 
 > 이 엔드포인트를 사용하여 시간 범위 동안 앱의 총 구매 횟수를 반환합니다.
 
-{% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#6ac59282-d231-4317-88df-f7f12169b94e{% 엔다피레프 %}
+{% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#6ac59282-d231-4317-88df-f7f12169b94e{% endapiref %}
 
 ## 필수 구성 요소
 
