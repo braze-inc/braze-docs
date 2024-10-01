@@ -13,17 +13,17 @@ description: "Cet article présente les détails concernant l’endpoint Supprim
 {% api %}
 # Supprimer le statut d’abonnement par adresse e-mail ou numéro de téléphone
 {% apimethod delete %}
-/users/subscription
+/utilisateurs/abonnement
 {% endapimethod %}
 
-> Utilise ce point de terminaison pour supprimer la valeur de l'état de l'abonnement en fonction d'une adresse électronique ou d'un numéro de téléphone.
+> Utilisez cet endpoint pour supprimer la valeur de l'état de l'abonnement basée sur une adresse e-mail ou un numéro de téléphone.
 
 ## Paramètres de demande
 
-| Paramètre - Requis - Type de données - Description - Paramètre - Requis - Type de données - Description - Paramètre - Requis - Type de données - Description
+| Paramètre | Requis | Type de données | Description |
 | --- | --- | --- | --- |
-| `email` | Oui | Chaîne | L'adresse électronique de l'utilisateur (doit comprendre au moins une adresse et au plus 50 adresses). |
-| `phone` | Oui | Chaîne de caractères | Le numéro de téléphone de l’utilisateur (doit comprendre au moins un et au maximum 50 numéros de téléphone). Il est recommandé de fournir cette information au format E.164\. |
+| `email` | Oui | Chaîne de caractères | L'adresse e-mail de l'utilisateur (doit comprendre au moins une adresse et au plus 50 adresses). |
+| `phone` | Oui | Chaîne de caractères | Le numéro de téléphone de l'utilisateur (doit comprendre au moins un numéro de téléphone et au plus 50 numéros de téléphone). Nous vous recommandons de fournir ces informations sous le format E.164. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ## Exemple de demande
