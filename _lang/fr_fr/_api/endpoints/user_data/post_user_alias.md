@@ -18,7 +18,7 @@ description: "Cet article présente en détail l’endpoint Braze Créer un nouv
 
 Vous pouvez spécifier jusqu’à 50 alias de l’utilisateur par requête.
 
-**L'ajout d'un alias d'utilisateur pour un utilisateur existant** nécessite un `external_id` à inclure dans le nouvel objet alias utilisateur. Si un `external_id` indiqué dans l’objet qu’aucun utilisateur ne possède cet `external_id`, l’alias ne sera ajouté à aucun utilisateur. Faute d’un `external_id`, un utilisateur sera créé quand même, mais il devra être identifié ultérieurement. Vous pouvez le faire en utilisant l’« identification des utilisateurs » et l’endpoint `users/identify`.
+L'**ajout d'un alias d'utilisateur pour un utilisateur existant** nécessite qu'une adresse `external_id` soit incluse dans le nouvel objet alias d'utilisateur. Si un `external_id` indiqué dans l’objet qu’aucun utilisateur ne possède cet `external_id`, l’alias ne sera ajouté à aucun utilisateur. Faute d’un `external_id`, un utilisateur sera créé quand même, mais il devra être identifié ultérieurement. Vous pouvez le faire en utilisant l’« identification des utilisateurs » et l’endpoint `users/identify`.
 
 **La création d'un nouvel utilisateur alias uniquement** nécessite que l’`external_id` soit omis du nouvel objet Alias d’utilisateur. Une fois l’utilisateur créé, utilisez l’endpoint `/users/track` pour associer l’utilisateur alias uniquement aux attributs, événements et achats, et l’endpoint `/users/identify` pour identifier l’utilisateur avec un `external_id`.
 
@@ -47,9 +47,9 @@ Authorization: Bearer YOUR_REST_API_KEY
 
 ### Paramètres de demande
 
-| Paramètre | Obligatoire | Type de données | Descriptif |
+| Paramètre | Requis | Type de données | Description |
 | --------- | ---------| --------- | ----------- |
-| `user_aliases` | Obligatoire | Tableau de nouveaux objets alias utilisateur | Voir [l'objet alias utilisateur]({{site.baseurl}}/api/objects_filters/user_alias_object/).<br><br> Pour plus d'informations sur `alias_name` et `alias_label`, consultez notre documentation [sur les alias d'utilisateur]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/#user-aliases) .|
+| `user_aliases` | Requis | Objets Tableau des nouveaux alias utilisateur | Voir l'[objet alias d'utilisateur]({{site.baseurl}}/api/objects_filters/user_alias_object/).<br><br> Pour plus d'informations sur `alias_name` et `alias_label`, consultez notre documentation sur les [alias de l'utilisateur]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/#user-aliases).|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ### Corps de demande d’endpoint avec spécification de l’objet Nouvel alias utilisateur
