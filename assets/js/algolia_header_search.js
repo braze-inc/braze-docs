@@ -125,6 +125,10 @@ $(document).ready(function () {
       }
     }
 
+<form id="header-search-form" role="search">
+  <label for="header-search-input" class="search-label">Search everything</label>
+  <div id="header-search-panel"></div>
+</form>
 
     if ("title" in item) {
       title = item.title
