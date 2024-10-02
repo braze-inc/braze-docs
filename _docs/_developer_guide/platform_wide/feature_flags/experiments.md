@@ -52,7 +52,7 @@ Though you specified default properties when you originally set up your feature 
 
 To edit, add, or remove additional default properties, edit the feature flag itself from **Messaging** > **Feature Flags**.
 
-When a variant is disabled, the SDK will return an empty array of feature flag properties for the given feature flag. 
+When a variant is disabled, the SDK will return an empty properties object for the given feature flag. 
 
 ## Step 3: Choose users to target
 
