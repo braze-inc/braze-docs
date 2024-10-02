@@ -28,7 +28,7 @@ This is the description of the endpoint. API descriptions usually start with "Us
 ## 사용량 제한
 
 <!-- The rate limit of the endpoint. This pulls from /includes/rate_limits/ and displays specific endpoint limits based on the endpoint provided -->
-{% multi_lang_include rate_limits.md 엔드포인트='default' %}
+{% multi_lang_include rate_limits.md endpoint='default' %}
 
 ## 요청 매개변수
 
