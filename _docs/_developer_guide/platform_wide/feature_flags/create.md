@@ -92,7 +92,7 @@ By default, Feature flags are always disabled, which allows you to separate your
 Do not set your rollout traffic above 0% until you are ready for your new feature to go live. When you initially define your feature flag in the dashboard, leave this setting at 0%.
 {% endalert %}
 
-## Verifying the feature flag {#enabled}
+## Using the "enabled" field for your feature flags {#enabled}
 
 Once you have defined your feature flag, configure your app or site to check whether or not it is enabled for a particular user. When it is enabled, you'll set some action or reference the feature flag's variable properties based on your use case. The Braze SDK provides getter methods to pull your feature flag's status and its properties into your app. 
 
