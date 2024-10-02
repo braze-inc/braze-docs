@@ -37,52 +37,6 @@ For **Brand personality**, think about what makes your brand unique. Include tra
 | Brand archetype          | The archetype that represents your brand’s persona (The Hero, The Creator, and so on).    | We embody the ‘Explorer’ archetype, always seeking new challenges and adventures. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
-{% details Other elements to consider %}
-
-Consider including additional details about your brand kit, such as your product, brand promise, purpose, and user personas to help the AI copywriter stay on-brand with every piece of content.
-
-#### Product
-
-| **Characteristic**       | **Definition**                                                                       | **Example**                                                        |
-|--------------------------|--------------------------------------------------------------------------------------|--------------------------------------------------------------------|
-| Value propositions       | Key benefits your products or services offer.                                         | We provide cutting-edge technology solutions that simplify complex tasks. |
-| Product features         | Important features of your products.                                                  | Our software is user-friendly with an intuitive interface designed for efficiency. |
-| Product experience       | The overall experience customers should have when using your products.                | We aim to make our product experience seamless and enjoyable, with a focus on user empowerment. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
-
-#### Promise
-
-| **Characteristic**       | **Definition**                                                                       | **Example**                                                        |
-|--------------------------|--------------------------------------------------------------------------------------|--------------------------------------------------------------------|
-| Brand promise            | What your brand promises to deliver to customers every time.                          | We promise to always provide top-notch customer service and high-quality products. |
-| Positioning statement    | How your brand is positioned in the market and what makes you different.              | We position ourselves as the leading provider of eco-friendly packaging solutions. |
-| Tagline                  | Your brand’s tagline and its significance.                                            | Our tagline, ‘Innovating for a better tomorrow,’ captures our commitment to sustainability. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
-
-#### Purpose
-
-| **Characteristic**       | **Definition**                                                                       | **Example**                                                        |
-|--------------------------|--------------------------------------------------------------------------------------|--------------------------------------------------------------------|
-| Purpose                  | The reason your brand exists; the big picture.                                        | Our purpose is to make sustainable living accessible to everyone. |
-| Vision                   | The future you are working to create.                                                 | Our vision is a world where all businesses operate sustainably.   |
-| Mission                  | Specific actions your brand is taking to achieve its purpose.                        | Our mission is to innovate sustainable products that reduce environmental impact. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
-
-#### Personas
-
-| **Characteristic**       | **Definition**                                                                       | **Example**                                                        |
-|--------------------------|--------------------------------------------------------------------------------------|--------------------------------------------------------------------|
-| Personality              | The personality traits of your ideal customer.                                        | Our ideal customer is curious, tech-savvy, and values innovation. |
-| Values                   | Values that your customers hold and that align with your brand.                      | Our customers value sustainability and ethical business practices. |
-| Pastimes                 | Hobbies or interests your customers typically have.                                   | They enjoy outdoor activities, exploring new technology, and participating in community events. |
-| Habitat                  | Where your customers live or work (urban, rural, digital spaces).                     | Our customers are primarily urban professionals who are active on digital platforms. |
-| Lifestyles               | The kind of lifestyle your customers lead.                                            | They lead busy, on-the-go lifestyles but prioritize making environmentally conscious choices. |
-| Professions              | Industries or job roles your customers typically work in.                             | Our customers work in tech, design, and creative industries.     |
-| Demographics             | Relevant demographic information like age, gender, income level, etc.                | Our primary demographic is millennials, aged 25-40, with a focus on middle to upper-income levels. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
-
-{% enddetails %}
-
 ### Step 3: Define language that should be avoided (optional)
 
 For **Exclusions**, list any language or style that doesn’t align with your brand. For example, you might want to avoid "sarcasm," "negative attitudes," or "condescending" tones.
