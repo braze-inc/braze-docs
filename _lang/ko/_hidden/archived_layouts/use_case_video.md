@@ -40,7 +40,7 @@ noindex: true
 
 # 사용 사례 이름
 
-{% multi_lang_include video.html id="XY5uXoKIvFY" align="오른쪽" %}
+{% multi_lang_include video.html id="XY5uXoKIvFY" align="right" %}
 
 > 사용 사례 템플릿에 오신 것을 환영합니다! 여기에서 Braze 사용 사례를 작성하는 데 필요한 모든 것을 찾을 수 있습니다. 이 첫 번째 섹션에서는 몇 문장으로 사용 사례를 설명해야 합니다. "이 사용 사례에서는 푸시, 이메일 등을 사용하여 휴면 사용자를 콘텐츠에 다시 유도하는 방법을 살펴봅니다."와 같은 내용이 될 수 있습니다.
 >
