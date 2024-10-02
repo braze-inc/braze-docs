@@ -11,31 +11,48 @@ tool: Canvas
 
 > This template is designed to gain critical insight into how your customers interact with your brand and ensure they continue to have positive experiences. By leveraging personalized communication and a structured set of messages, you can continue to build and foster your customer relationships.
 
-## Tutorial overview
+## Meet the class
 
-In this tutorial, you'll learn how to use the **Purchase feedback** template, which is intended for the $PLACEHOLDER stage of the user lifecycle, to gain critical insight into how your customers interact with your app $PLACEHOLDER-APP-NAME, a $PLACEHOLDER-APP-DESCRIPTION. After this article, you'll have $PLACEHOLDER-ACCOMPLISHMENTS.
+In this tutorial, you'll work alongside **Decorumsoft**, a mobile video game developer founded in 1981 who recently launched "Proxy War 3: War of Thirst". Due to the game's critical success, they want to start gauging interest for their upcoming expansion: "Liquid Mirage".
 
-As a member of the marketing team at $PLACEHOLDER-COMPANY, your goal is to $PLACEHOLDER-GOALS. To do so, you want to focus on $PLACEHOLDER-STEPS.
+Together, you'll learn how to use the **Purchase Feedback** template to gain critical insight into how customers interact with your app during the conversion stage of the user lifecycle. When you're finished, you'll be able to:
+
+- Create follow-up feedback messages
+- Customize your action path
+- Build ad retargeting pipelines
+- Use webhooks to trigger support cases
 
 ## Prerequisites
 
-Before you start, you'll need to:
+Before you start, you'll need to complete the following:
 
-- [Create a custom attribute value]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#managing-custom-attributes) for $PLACEHOLDER-WHY?
-- An ad account?
-- $PLACEHOLDER
+|Prerequisite|Description|
+|------------|-----------|
+|Custom attribute|You can create a custom attribute value in the Braze dashboard. For more information, see [Managing custom attributes]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#managing-custom-attributes).|
+|Ad account|$PLACEHOLDER. For more information, see [$PLACEHOLDER](). |
+{: .reset-td-br-1 .reset-td-br-2}
 
-## Step 1: Choose the template
+## Customizing the template
+
+### Step 1: Choose and rename the template
 
 When you [create a new Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas), select **Use a Canvas Template**.
 
-![ALT_TEXT]()
+![ALT_TEXT]({% image_buster /assets/img/canvas_templates/use_a_canvas_template.png %})
 
-Select **Braze templates**. Next to **Post-Purchase Feedback**, select **Apply Template**.
+Select **Braze templates**, then next to **Feature Adoption**, select **Apply Template**.
 
-![ALT_TEXT]()
+![ALT_TEXT]({% image_buster /assets/img/canvas_templates/post_purchase_feedback/select_post_purchase_feedback_template.png %})
 
-## Step 2: Write a follow-up feedback message
+To rename the Canvas, select **Edit** next to the existing Canvas name.
+
+![ALT_TEXT]({% image_buster /assets/img/canvas_templates/post_purchase_feedback/select_edit_details.png %})
+
+Enter a new name for your Canvas. Decorumsoft named theirs to match the upcoming expansion, "Liquid Mirage". When you're finished, select **Save Draft**.
+
+![ALT_TEXT]({% image_buster /assets/img/canvas_templates/post_purchase_feedback/enter_new_canvas_name.png %})
+
+### Step 2: Write a follow-up feedback message
 
 <!-- Since IAM requires pre-set up, lets remove IAM references and only use email -->
 
@@ -63,7 +80,7 @@ Next, select **Email**. Fill out your sending info, then select **Edit message**
 
 When you're finished, select **Done**.
 
-## Step 3: Add custom attributes to the action path
+### Step 3: Add custom attributes to the action path
 
 Next add the custom attribute [you created earlier](#prerequisites) to each sentiment CTA link, so you can capture which option the user choose when they gave feedback. To add custom attributes:
 
@@ -79,13 +96,13 @@ Next add the custom attribute [you created earlier](#prerequisites) to each sent
 {:start="3"}
 3. When you're finished select **Done**, then **Save as draft**.
 
-## Step 4: Create messages for each feedback path
+### Step 4: Create messages for each feedback path
 
 Why $PLACEHOLDER? Under the **Feedback Action** step, create a message for **Good feedback**, **Bad feedback**, and **Everyone else** by selecting **Messages** and filling out a message. When you're finished select **Done**, then **Save as draft**.
 
 ![ALT_TEXT]()
 
-## Step 4: Set up ad retargeting
+### Step 5: Set up ad retargeting
 
 Before you can set up ad retargeting, you need to select a partner for Audience Sync. To choose a partner, under **Ad Retargeting**, select **Audience Sync**.
 
@@ -103,7 +120,7 @@ Choose one or more of the listed partners. If you have Audience Sync Pro, you ca
 
 ![ALT_TEXT]() 
 
-## Step 5: Set up webhook support cases
+### Step 6: Set up webhook support cases
 
 Why $PLACEHOLDER? Under **Support Case Creation**, select **Messages**.
 
@@ -125,7 +142,7 @@ Compose your Webhook. $PLACEHOLDER company wrote the following:
 
 When you're finished select **Done**, then **Save as draft**.
 
-## Step 6: Test and launch the Canvas
+### Step 7: Test and launch the Canvas
 
 Before you launch your Canvas, its always best practice to test it first. <!-- (Does testing actually send to someone?) --> To start testing, select **Test Canvas**.
 

@@ -11,31 +11,48 @@ tool: Canvas
 
 > This template is designed to drive usage of your new features, existing products, additional offerings, or any other area you'd like your customers to experience. By leveraging personalized communication and a structured set of messages, you can seamlessly introduce new features to users and get valuable feedback from them.
 
-## Tutorial overview
+## Meet the class
 
-In this tutorial, you'll learn how to use the **Feature adoption** template, which is intended for the retention and loyalty stages of the user lifecycle, to drive usage of a new feature in your app $PLACEHOLDER-APP-NAME, a $PLACEHOLDER-APP-DESCRIPTION. Your new feature is $PLACEHOLDER-FEATURE. After this article, you'll have $PLACEHOLDER-ACCOMPLISHMENTS.
+In this tutorial, you'll work alongside **Calorie Rocket**, a food delivery app for when you need your calories and you need 'em fast. Recently they launched Cruise Control, a feature for scheduling recurring food deliveries, and they're looking to start tracking feature adoption and user sentiment in Braze.
 
-As a member of the marketing team at $PLACEHOLDER-COMPANY, your goal is to $PLACEHOLDER-GOALS. To do so, you want to focus on $PLACEHOLDER-STEPS.
+Together, you'll learn how to use the **Feature Adoption** template, so you can drive usage for new features during the retention and loyalty stages of the user lifecycle. When you're finished, you'll be able to:
+
+- Create conversion events
+- Exclude specific users from entering a Canvas
+- Customize your action path
+- Collect user feedback
 
 ## Prerequisites
 
-Before you start, you'll need to:
+Before you start, you'll need to complete the following:
 
-- [Create a custom event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/#managing-custom-events) for your new feature
-- $PLACEHOLDER
-- $PLACEHOLDER
+|Prerequisite|Description|
+|------------|-----------|
+|Custom attribute|You can create a custom attribute value in the Braze dashboard. For more information, see [Managing custom attributes]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#managing-custom-attributes).|
+|||
+{: .reset-td-br-1 .reset-td-br-2}
 
-## Step 1: Choose the template
+## Customizing the template
+
+### Step 1: Choose the template
 
 When you [create a new Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas), select **Use a Canvas Template**.
 
-![ALT_TEXT]()
+![ALT_TEXT]({% image_buster /assets/img/canvas_templates/use_a_canvas_template.png %})
 
-Select **Braze templates**. Next to **Feature Adoption**, select **Apply Template**.
+Select **Braze templates**, then next to **Feature Adoption**, select **Apply Template**.
 
-![ALT_TEXT]()
+![ALT_TEXT]({% image_buster /assets/img/canvas_templates/feature_adoption/select_feature_adoption_template.png %})
 
-## Step 2: Define a conversion event
+To rename the Canvas, select **Edit** next to the existing Canvas name.
+
+![ALT_TEXT]({% image_buster /assets/img/canvas_templates/post_purchase_feedback/select_edit_details.png %})
+
+Enter a new name for your Canvas. Calorie Rocket named theirs to match their new feature for scheduling recurring deliveries, Cruise Control. When you're finished, select **Save Draft**.
+
+![ALT_TEXT]({% image_buster /assets/img/canvas_templates/post_purchase_feedback/enter_new_canvas_name.png %})
+
+### Step 2: Define a conversion event
 
 <!-- Is a conversion event different from the custom event for the new feature that's used in the previous step? If so, how? -->
 
@@ -51,7 +68,7 @@ To use an experiment path, you need to define a conversion event. Ideally, the c
 
 Under **Assign Conversion Events**, select **Add Conversion Event** and fill out your conversion event. When you're finished, select **Save as draft**.
 
-## Step 3: Exclude existing users
+### Step 3: Exclude existing users
 
 First, edit your entry rules to exclude users who have already used it. This is important because $PLACEHOLDER. To do so, under **Entry Rules**, select **Audience**, then add a new filter using the [custom event you created for this feature](#prerequisites).
 
@@ -63,7 +80,7 @@ When you're finished, select **Save as draft**.
 
 <!-- Should we show them out to set up exit criteria? -->
 
-## Step 4: Add events to the action path
+### Step 4: Add events to the action path
 
 Why $PLACEHOLDER? Under **Action Path**, select **Activated Feature**, then choose a custom event.
 
@@ -83,7 +100,7 @@ Under **Assess Usage**, select **Used Feature >3x**, then choose a custom event.
 
 ![ALT_TEXT]()
 
-## Step 5: Create a feedback survey
+### Step 5: Create a feedback survey
 
 <!-- Since IAM requires pre-set up, lets remove IAM references and only use email -->
 
@@ -111,7 +128,7 @@ Next, select **Email**. Fill out your sending info, then select **Edit message**
 
 When you're finished, select **Done**.
 
-## Step 6: Create an FAQ
+### Step 6: Create an FAQ
 
 Why $PLACEHOLDER? Under **FAQ Copy**, select **Messages**, then write your FAQ message. To use a Braze template, select **Choose new template**.
 
@@ -119,7 +136,7 @@ For example, $PLACEHOLDER company wrote the following:
 
 ![ALT_TEXT]()
 
-## Step 7: Create a reminder
+### Step 7: Create a reminder
 
 Why $PLACEHOLDER? Under **Reminder Copy**, select **Messages**.
 
@@ -129,7 +146,7 @@ For example, $PLACEHOLDER company wrote the following:
 
 ![ALT_TEXT]()
 
-## Step 8: Test and launch the Canvas
+### Step 8: Test and launch the Canvas
 
 Before you launch your Canvas, its always best practice to test it first. <!-- (Does testing actually send to someone?) --> To start testing, select **Test Canvas**.
 
