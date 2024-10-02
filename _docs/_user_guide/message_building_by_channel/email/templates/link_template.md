@@ -14,7 +14,7 @@ channel:
 
 > Link templates allow you to append parameters or prepend URLs to all links in an email message.
 
-Link templates are most often used in these following use cases:
+Link templates are most often used in these scenarios:
 
 1. Appending Google Analytics query parameters to all links in a given email message
 2. Prepending a URL to all links in a given email message
@@ -25,27 +25,31 @@ Link templates are an optional feature. If **Email Link Templates** is missing f
 
 ## Creating a link template
 
-![][11]{: style="float:right;max-width:20%;"}
-
 You can create an unlimited number of link templates to support your various needs. To create a link template:
 
 1. Go to **Templates** > **Email Link Templates**. 
-2. Click **Create Link Template**.
+2. Select **Create link template**.
 
 {% alert note %}
 If you are using the [older navigation]({{site.baseurl}}/navigation), this page is located at **Engagement** > **Templates & Media** > **Link Templates**.
 {% endalert %}
 
-There are two types of link templates you can create:
+{:start="3"}
+3. Give your link template a name.
+4. (Optional) Add a template description.
+
+Next, there are two types of link templates you can create:
 
 - [Link template that inserts before a URL](#prepend-link-template)
 - [Link template that inserts after a URL](#append-link-template)
 
+{% alert note %}
 When using link templates and [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/), Liquid must only be added within the body tag to ensure consistent rendering.
+{% endalert %}
 
 ### Prepend: Create a link template that inserts before a URL {#prepend-link-template}
 
-If you want to add a string or URL before the links in your email message, create a new link template and set the **Template Position** to **Before URL**. Next, enter a string that will always get prepended to your URL. 
+To add a string or URL before the links in your email message, select **Before URL** for **Template position**. Next, enter a string that will always get prepended to your URL. 
 
 A preview section is provided to give you an example of the insertion process.
 
@@ -53,7 +57,7 @@ A preview section is provided to give you an example of the insertion process.
 
 ### Append: Create a link template that inserts after a URL {#append-link-template}
 
-If you want to add query parameters after a URL in your email message, create a new link template and set the **Template Position** to **After URL**. Next, enter query parameters (`value=something`) to the end of each URL.
+To add query parameters after a URL in your email message, select **After URL** for **Template Position**. Next, enter query parameters (`value=something`) to the end of each URL.
 
 You can have multiple parameters appended to the end of a URL.
 
