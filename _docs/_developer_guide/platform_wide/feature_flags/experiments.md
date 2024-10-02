@@ -52,6 +52,8 @@ Though you specified default properties when you originally set up your feature 
 
 To edit, add, or remove additional default properties, edit the feature flag itself from **Messaging** > **Feature Flags**.
 
+When a variant is disabled, the SDK will return an empty array of feature flag properties for the given feature flag. 
+
 ## Step 3: Choose users to target
 
 Next, you need to [target users]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/targeting_users/) by choosing segments or filters to narrow down your audience. Segment membership is calculated when feature flags are refreshed for a given user.
