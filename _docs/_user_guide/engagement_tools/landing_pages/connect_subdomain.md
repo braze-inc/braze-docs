@@ -1,14 +1,14 @@
 ---
-nav_title: Bring your own domain
-article_title: Bring your own domain
-description: "This article covers how to connect your own domain to Braze landing pages."
+nav_title: Connecting Your Domain
+article_title: Connecting Your Domain
+description: "This article covers how to connect your own custom domain to Braze landing pages."
 page_order: 1
 alias: /landing_pages/connect_subdomain/
 ---
 
-# Conencting your own domain
+# Connecting your domain
 
-> If you own a domain you can connect it to your Braze landing pages in order to brand and customize your URLs. 
+> Connect your own domain to your Braze workspace to customize your landing page URLs with your brand.
 
 {% alert note %}
 Landing pages are currently in beta. Contact your Braze account manager if you’re interested in participating in this beta.
@@ -24,12 +24,12 @@ To connect a domain or subdomain to your Braze account, have an administrator fo
 ![Landing Page Settings page with one TXT and two CNAME records listed with their respective names and values.][1]
 
 {% alert note %}
-Depending on your domain provider, the connection can take up to 48 hours. When the process is complete, we’ll update your **Landing Page Settings** page and all references to your landing page URLs.
+Depending on your domain provider, the connection can take up to 48 hours. When the process is complete, we’ll start using your custom domain for your landing pages in the Braze dashboard.
 {% endalert %}
 
-## Using your custom domain
+## Using your domain in Braze
 
-After your domain verification is complete it will be used by default in Braze. For example, if you connect the subdomain `forms.example.com`, your landing page URLs will be updated to look like `forms.example.com/holiday-sale`.
+After your domain verification is completed, it will be used by default in Braze. For example, if you connect the subdomain `forms.example.com`, your landing page URLs will be updated to look like `forms.example.com/holiday-sale`.
 
 {% alert note %}
 Custom domain deletion is coming soon. Contact your customer success manager if you need to remove your subdomain.
