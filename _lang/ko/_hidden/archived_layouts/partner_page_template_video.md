@@ -40,7 +40,7 @@ noindex: true
 
 # \[파트너 이름]
 
-{% multi_lang_include video.html ID="XY5uXoKIvFY" align="right" %}
+{% multi_lang_include video.html id="XY5uXoKIvFY" align="right" %}
 
 > 파트너 페이지 템플릿에 오신 것을 환영합니다! 여기에서 파트너 페이지를 만드는 데 필요한 모든 것을 찾을 수 있습니다. 첫 번째 섹션에서는 첫 번째 문단에서 파트너를 한두 문장으로 설명해야 합니다. 또한, 그 파트너의 주요 사이트에 대한 링크를 포함하세요.
 
