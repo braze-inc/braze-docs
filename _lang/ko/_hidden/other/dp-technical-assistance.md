@@ -117,7 +117,7 @@ Braze 서비스에서 최종사용자를 삭제하면 `external_id`에 정의된
             <li>USERS_MESSAGES_CONTENTCARD</li>
             <li>USERS_MESSAGES_EMAIL_SEND</li>
             <li>USERS_MESSAGES_PUSHNOTIFICATION_SEND</li>
-            <li>사용자_메시지_푸시 알림_재시도 보내기_공유</li>
+            <li>USERS_MESSAGES_PUSHNOTIFICATION_RETRYSEND_SHARED</li>
             <li>USERS_MESSAGES_WEBHOOK_SEND</li>
             <li>USERS_MESSAGES_SMS_SEND</li>
             <li>향후 메시지 보내기 이벤트</li>
