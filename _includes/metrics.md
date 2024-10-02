@@ -39,23 +39,11 @@ Push Story Notifications record a <i>Body Click</i> when the notification is cli
 {% endif %}
 
 {% if include.metric == "Click-to-Open Rate" %}
-<i>Click-to-Open Rate</i> is the percentage of opened emails that were clicked, and is only available in the [Report Builder]({{site.baseurl}}/user_guide/data_and_analytics/reporting/report_builder/).
+<i>Click-to-Open Rate</i> is the percentage of delivered emails that have been opened by a single user or machine at least once, and is only available in the [Report Builder]({{site.baseurl}}/user_guide/data_and_analytics/reporting/report_builder/).
 {% endif %}
 
 {% if include.metric == "Confirmed Deliveries" %}
 <i>Confirmed Deliveries</i> are when the carrier has confirmed the SMS was delivered to the target phone number. As a Braze customer, deliveries are charged toward your SMS allotment. 
-{% endif %}
-
-{% if include.metric == "Audience %" %}
-<i>Audience %</i> is the percentage of users who received a particular variant.
-{% endif %}
-
-{% if include.metric == "Bounces % or Bounce Rate" %}
-<i>Bounces %</i> or <i>Bounce Rate</i> is the percentage of messages that were unsuccessfully sent or designated as "returned" or "not received" from send services used or not received by the intended emailable users.
-{% endif %}
-
-{% if include.metric == "Click to Open Rate" %}
-<i>Click to Open Rate</i> is the percentage of unique emails opened that have been clicked at least once.
 {% endif %}
 
 {% if include.metric == "Confidence" %}
@@ -162,10 +150,6 @@ Push Story Notifications record a <i>Body Click</i> when the notification is cli
 <i>Spam</i> is the total number of emails delivered that were marked as "spam." Braze automatically unsubscribes users that marked an email as spam, and those users won't be targeted by future emails.
 {% endif %}
 
-{% if include.metric == "Spam % or Spam Rate" %}
-<i>Spam %</i> or <i>Spam Rate</i> is the percentage of emails delivered that were marked or otherwise designated as "spam." Braze automatically unsubscribes users that marked an email as spam, and those users won't be targeted by future emails.
-{% endif %}
-
 {% if include.metric == "Survey Page Dismissals" %}
 <i>Survey Page Dismissals</i> is the total clicks on the close (x) button on the survey question page of a [simple survey]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/templates/simple_survey/).
 {% endif %}
@@ -200,10 +184,6 @@ Push Story Notifications record a <i>Body Click</i> when the notification is cli
 For LINE, this is tracked after a minimum threshold of 20 messages per day has been reached.
 {% endif %}
 
-{% if include.metric == "Unique Clicks % or Click Rate" %}
-<i>Unique Clicks %</i> or <i>Click Rate</i> is the distinct number of recipients who have clicked within a message at least once. This is tracked over a seven day period for email.
-{% endif %}
-
 {% if include.metric == "Unique Dismissals" %}
 <i>Unique Dismissals</i> is the number of users who have dismissed Content Cards from a campaign. A user dismissing a Content Card from a campaign multiple times represents one unique dismissal.
 {% endif %}
@@ -216,16 +196,8 @@ For LINE, this is tracked after a minimum threshold of 20 messages per day has b
 <i>Unique Opens</i> is the total number of delivered emails that have been opened by a single user at least once and are tracked over a seven-day period.
 {% endif %}
 
-{% if include.metric == "Unique Opens % or Unique Open Rate" %}
-<i>Unique Opens %</i> or <i>Unique Open Rate</i> is the percentage of delivered emails that have been opened by a single user at least once. This is tracked over a seven-day period.
-{% endif %}
-
 {% if include.metric == "Unique Recipients" %}
 <i>Unique Recipients</i> is the number of unique daily recipients, or users who received a particular message in a day. This number is received from Braze.
-{% endif %}
-
-{% if include.metric == "Unsubscribers % or Unsub Rate" %}
-<i>Unsubscribers %</i> or <i>Unsub Rate</i> is the percentage of messages delivered which resulted in an unsubscription. Unsubscriptions occur when a user clicks on the Braze unsubscribe link.
 {% endif %}
 
 {% if include.metric == "Unsubscribers or Unsub" %}

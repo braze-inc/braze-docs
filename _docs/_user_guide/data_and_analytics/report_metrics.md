@@ -38,6 +38,8 @@ All
 
 {% multi_lang_include metrics.md metric='Audience' %}
 
+<span class="calculation-line">Calculation: (Number of Recipients in Variant) / (Unique Recipients)</span>
+
 {% endapi %}
 
 {% api %}
@@ -50,23 +52,19 @@ Email, Web Push, iOS Push
 
 {% multi_lang_include metrics.md metric='Bounces' %} This could occur because there isn't a valid push token, the user unsubscribed after the campaign was launched, or the email address is inaccurate or deactivated.
 
-<span class="calculation-line">Calculation: (Bounces) / (Sends)</span>
-
-{% endapi %}
-
-{% api %}
-
-### Bounces % or Bounce Rate
-
-{% apitags %}
-Email, Web Push, iOS Push
-{% endapitags %}
-
-{% multi_lang_include metrics.md metric='Bounces % or Bounce Rate' %}
-
-This could occur because there is not a valid push token, the email addresses were incorrect or deactivated, or the user unsubscribed after the campaign was launched.
-
 An email bounce for customers using SendGrid consists of hard bounces, spam (`spam_report_drops`), and emails sent to invalid addresses (`invalid_emails`).
+
+For email, *Bounce %* or *Bounce Rate* is the percentage of messages that were unsuccessfully sent or designated as "returned" or "not received" from send services used or not received by the intended emailable users.
+
+{::nomarkdown}
+<span class="calculation-line">
+    Calculation:
+    <ul>
+        <li><b>Bounces:</b> Count</li>
+        <li><b>Bounce % or Bounce Rate %:</b> (Sends - Bounces) / (Sends)</li>
+    </ul>
+</span>
+{:/}
 
 {% endapi %}
 
@@ -250,7 +248,15 @@ Email, Web Push, iOS Push, Android Push, WhatsApp
 
 {% multi_lang_include metrics.md metric='Deliveries' %} For emails, *Deliveries* is the total number of messages (Sends) successfully sent to and received by emailable parties.
 
-<span class="calculation-line">Calculation: Count</span>
+{::nomarkdown}
+<span class="calculation-line">
+    Calculation:
+    <ul>
+        <li><b>Deliveries:</b> Count</li>
+        <li><b>Deliveries %:</b> (Sends - Bounces) / (Sends)</li>
+    </ul>
+</span>
+{:/}
 
 {% endapi %}
 
@@ -279,6 +285,20 @@ iOS Push
 {% multi_lang_include metrics.md metric='Direct Opens' %}
 
 <span class="calculation-line">Calculation: (Direct Opens) / (Deliveries)</span>
+
+{% endapi %}
+
+{% api %}
+
+### Emailable
+
+{% apitags %}
+Email
+{% endapitags %}
+
+{% multi_lang_include metrics.md metric='Emailable' %}
+
+<span class="calculation-line">Calculation: Count</span>
 
 {% endapi %}
 
@@ -425,15 +445,25 @@ SMS
 
 {% endapi %}
 
+### Revenue
+
+{% apitags %}
+Email
+{% endapitags %}
+
+{% multi_lang_include metrics.md metric='Revenue' %}
+
+{% endapi %}
+
 {% api %}
 
-### Sends
+### Sends or Messages Sent
 
 {% apitags %}
 Content Cards, Email, In-App Message, Web Push, iOS Push, Android Push, Webhook, SMS, WhatsApp, LINE
 {% endapitags %}
 
-{% multi_lang_include metrics.md metric='Sends' %}  This metric is provided by Braze.
+{% multi_lang_include metrics.md metric='Sends or Messages Sent' %}  This metric is provided by Braze. Note that upon launching a scheduled campaign, this metric will include all messages sent, regardless of whether they have been sent out yet due to rate limiting.
 
 {% alert tip %}
 For Content Cards, this metric is calculated differently depending on what you selected for [Card creation]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/create/card_creation/).
@@ -657,7 +687,15 @@ Email, LINE
 
 {% multi_lang_include metrics.md metric='Unique Opens' %} For LINE, this is tracked after a minimum threshold of 20 messages per day has been reached.
 
-<span class="calculation-line">Calculation: (Unique Opens) / (Deliveries)</span>
+{::nomarkdown}
+<span class="calculation-line">
+    Calculation:
+    <ul>
+        <li><b>Unique Opens:</b> Count</li>
+        <li><b>Unique Opens % or Unique Open Rate:</b> (Unique Opens) / (Deliveries)</li>
+    </ul>
+</span>
+{:/}
 
 {% endapi %}
 
@@ -672,6 +710,28 @@ All
 {% multi_lang_include metrics.md metric='Unique Recipients' %}
 
 <span class="calculation-line">Calculation: Count</span>
+
+{% endapi %}
+
+{% api %}
+
+### Unsubscribers or Unsub
+
+{% apitags %}
+Email
+{% endapitags %}
+
+{% multi_lang_include metrics.md metric='Unsubscribers or Unsub' %}
+
+{::nomarkdown}
+<span class="calculation-line">
+    Calculation:
+    <ul>
+        <li><b>Unsubscribers or Unsub:</b> Count</li>
+        <li><b>Unsubscribers % or Unsub Rate:</b> (Unsubscribes) / (Deliveries)</li>
+    </ul>
+</span>
+{:/}
 
 {% endapi %}
 

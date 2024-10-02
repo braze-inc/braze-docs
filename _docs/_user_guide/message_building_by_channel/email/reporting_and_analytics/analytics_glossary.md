@@ -1,43 +1,85 @@
 ---
 nav_title: Email Analytics Glossary
-article_title: Email Analytics Glossary 
+article_title: Email Analytics Glossary
+layout: report_metrics
 page_order: 0
-layout: glossary_page
-glossary_top_header: "Email analytics glossary"
-glossary_top_text: "These are terms you'll find in the analytics section of your email campaign or Canvas, post-launch. Search for the metrics you need in this glossary. <br><br> This glossary does not necessarily include metrics you might see in Currents or in other downloaded reports outside of your Braze account."
-
+excerpt_separator: ""
+page_type: glossary
 description: "This glossary includes the terms you will find in the analytics section of your email campaign or Canvas, post-launch. This glossary does not include Currents metrics."
-channel:
+glossary_top_text: "These are terms you'll find in the analytics section of your email campaign or Canvas, post-launch. Search for the metrics you need in this glossary. <br><br> This glossary does not necessarily include metrics you might see in Currents or in other downloaded reports outside of your Braze account."
+channel: 
   - email
+---
 
-glossaries:
-  - name: "Variation"
-    description: Variation of a campaign, differing as defined by the creator.
-    calculation: Count
-  - name: "Emailable"
-    description: Users who have an email address on record and have explicitly opted in or subscribed.
-    calculation: Count
-  - name: "Audience %"
-    description: Percentage of users who received a particular variant.
-    calculation: Number of Recipients in Variant / Unique Recipients
-  - name: "Unique Recipients"
-    description: Unique Daily Recipients. The number of users who received a particular message in a day. This number is received from Braze.
-    calculation: Count
-  - name: "Sends or Messages Sent"
-    description: The total number of messages sent in an email campaign. This number is received from Braze. Note that upon launching a scheduled campaign, this metric will include all messages sent, regardless of whether they have been sent out yet due to rate limiting.
-    calculation: Count
-  - name: "Deliveries"
-    description: The total number of messages (Sends) successfully sent to and received by emailable parties.
-    calculation: Sends - Bounces
-  - name: "Deliveries %"
-    description: The total number of messages (Sends) successfully sent to and received by emailable parties.
-    calculation: (Sends - Bounces) / (Sends)
-  - name: "Bounces"
-    description: The total number of messages that were unsuccessfully sent or designated as "returned" or "not received" from send services used or not received by the intended emailable users. This could occur because there is not a valid push token, the email addresses were incorrect or deactivated, or the user unsubscribed after the campaign was launched. <br><br> <b>Hard Bounces</b>&#58; A hard bounce is an email message that has been returned to the sender because the recipient's address is invalid. A hard bounce might occur because the domain name doesn't exist or because the recipient is unknown. If an email has received a hard bounce, we will stop any future requests to this email address. <br><br><b>Soft Bounces</b>&#58; A soft bounce is an email message that gets as far as the recipient's mail server but is bounced back undelivered before it gets to the recipient. A soft bounce might occur because the recipient's inbox is full, the server was down, or the message was too large for the recipient's inbox. If an email has received a soft bounce, we will usually retry within a 72 hour period, but the number of retry attempts varies from receiver to receiver. <br><br> You can also track hard and soft bounces in the <a href='/docs/user_guide/administrative/app_settings/developer_console/message_activity_log_tab/#message-activity-log-tab'>Message Activity Log</a>. <br><br><i> An email bounce for customers using SendGrid consists of hard bounces, spam, and emails sent to invalid addresses. </i>
-    calculation: Count
-  - name: "Bounces % or Bounce Rate"
-    description: The percentage of messages that were unsuccessfully sent or designated as "returned" or "not received" from send services used or not received by the intended emailable users. This could occur because there is not a valid push token, the email addresses were incorrect or deactivated, or the user unsubscribed after the campaign was launched. <br> <i> An email bounce for customers using SendGrid consists of hard bounces, spam (`spam_report_drops`), and emails sent to invalid addresses (`invalid_emails`). </i>
-    calculation: Bounces / Sends
+<style>
+  .calculation-line {
+    color: #76848C;
+    font-size: 14px;
+  }
+</style>
+
+### Variation
+
+{% multi_lang_include metrics.md metric='Variation' %}
+
+<span class="calculation-line">Calculation: Count</span>
+
+### Emailable
+
+{% multi_lang_include metrics.md metric='Emailable' %}
+
+<span class="calculation-line">Calculation: Count</span>
+
+### Audience %
+
+{% multi_lang_include metrics.md metric='Audience' %}
+
+<span class="calculation-line">Calculation: (Number of Recipients in Variant) / (Unique Recipients)</span>
+
+### Unique Recipients
+
+{% multi_lang_include metrics.md metric='Unique Recipients' %} This number is received from Braze.
+
+<span class="calculation-line">Calculation: Count</span>
+
+### Sends or Messages Sent
+
+{% multi_lang_include metrics.md metric='Sends or Messages Sent' %}  This metric is provided by Braze.
+
+<span class="calculation-line">Calculation: Count</span>
+
+### Deliveries
+
+{% multi_lang_include metrics.md metric='Deliveries' %} For emails, *Deliveries* is the total number of messages (Sends) successfully sent to and received by emailable parties.
+
+<span class="calculation-line">Calculation: (Sends) - (Bounces) </span>
+
+### Deliveries %
+
+{% multi_lang_include metrics.md metric='Deliveries %' %}
+
+<span class="calculation-line">Calculation: (Sends - Bounces) / (Sends) </span>
+
+### Bounces
+
+{% multi_lang_include metrics.md metric='Bounces' %} 
+
+For email, *Bounce %* or *Bounce Rate* is the percentage of messages that were unsuccessfully sent or designated as "returned" or "not received" from send services used or not received by the intended emailable users.
+
+An email bounce for customers using SendGrid consists of hard bounces, spam (`spam_report_drops`), and emails sent to invalid addresses (`invalid_emails`).
+
+{::nomarkdown}
+<span class="calculation-line">
+    Calculation:
+    <ul>
+        <li><b>Bounces:</b> Count</li>
+        <li><b>Bounce % or Bounce Rate %:</b> (Bounces) / (Sends)</li>
+    </ul>
+</span>
+{:/}
+
+  
+
   - name: "Spam"
     description: The total number of emails delivered that were marked as "spam." Braze automatically unsubscribes users that marked an email as spam, and those users won't be targeted by future emails.
     calculation: (Marked as Spam) / (Sends)
