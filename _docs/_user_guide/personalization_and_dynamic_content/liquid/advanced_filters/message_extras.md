@@ -49,8 +49,8 @@ Any other input that doesn't match the aforementioned tag standard may fail to p
 - If your key-values exceed 1&nbsp;KB, they'll truncate. 
 - Whitespace will count toward the character count. Note that Braze omits the leading and trailing whitespaces.
 - The resulting JSON will output only string values.
-- Liquid variables can be included as a key or value, but Liquid tags are not supported directly. 
-  - For example, {% raw %}```{% assign value = '123' %} {% assign key = 'test' %} {% message_extras :key {{key}} :value {{value}} %}```{% endraw %}
+- You can include Liquid variables as a key or value, but you can't use other Liquid tags within `message_extras`.
+  - For example, you could use the following Liquid: {% raw %}```{% assign value = '123' %} {% assign key = 'test' %} {% message_extras :key {{key}} :value {{value}} %}```{% endraw %}
 
 ## Frequently asked questions
 

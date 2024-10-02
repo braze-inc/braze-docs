@@ -1,14 +1,14 @@
 ---
 page_order: 1
 nav_title: カスタマイズ
-article_title: アプリ内メッセージのカスタマイズ
+article_title: Web アプリ内メッセージのカスタマイズ
 layout: dev_guide
 
 platform: Web
 
 channel: in-app messages
 
-guide_top_header: "アプリ内メッセージのカスタマイズ"
+guide_top_header: "Web アプリ内メッセージのカスタマイズ"
 guide_top_text: ""
 description: "このランディングページでは、Braze Web SDKのアプリ内メッセージのカスタマイズオプション（カスタムスタイリング、メッセージの削除、インプレッションとクリックの記録など）について説明する。"
 

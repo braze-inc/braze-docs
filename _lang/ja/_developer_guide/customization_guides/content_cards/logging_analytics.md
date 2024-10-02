@@ -9,7 +9,7 @@ toc_headers: "h2"
 
 # 分析のロギング 
 
-> コンテンツカードを完全にカスタマイズして表示したい場合は、独自のコンテンツカードプレゼンテーション UI を実装できます。ただし、インプレッション、クリック、離脱などのデータは、デフォルトのカードモデルを使用する場合にのみ自動的に処理されます。完全なカスタム UI を実装する場合、このデータを手動で処理する必要があります。そのためには、カスタム UI に Braze データモデルのデータを入力し、インプレッションやクリックなどの分析を手動で記録します。分析の記録方法を理解すると、Brazeの顧客が[カスタムコンテンツカードを作成する]({{site.baseurl}}/developer_guide/customization_guides/content_cards/creating_custom_content_cards)一般的な方法がわかります。 
+> コンテンツカードを完全にカスタマイズして表示したい場合は、独自のコンテンツカードプレゼンテーション UI を実装できます。ただし、インプレッション、クリック、離脱などのデータは、デフォルトのカードモデルを使用する場合にのみ自動的に処理されます。完全なカスタム UI を実装する場合、このデータを手動で処理する必要があります。そのためには、カスタム UI に Braze データモデルのデータを入力し、インプレッションやクリックなどの分析を手動で記録します。分析の記録方法を理解したら、Braze の顧客が[カスタムコンテンツカードを作成する]({{site.baseurl}}/developer_guide/customization_guides/content_cards/creating_custom_content_cards)一般的な方法がわかります。 
 
 ## カード更新のリスニング
 
@@ -243,7 +243,7 @@ BrazeContentCardsManager.getInstance().contentCardsActionListener = object : ICo
 {% endsubtabs %}
 
 {% alert important %}
-カスタムUIでコントロールバリアントコンテンツカードを処理するには、[`com.braze.models.cards.Card`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/index.html)オブジェクトを渡し、他のコンテンツカードタイプと同様に`logImpression`メソッドを呼び出します。オブジェクトは、ユーザーがコントロールカードを見たときに分析に通知するために、コントロールインプレッションを暗黙的にログに記録します。{% endalert %}
+カスタム UI でコントロールバリアントコンテンツカードを処理するには、[`com.braze.models.cards.Card`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/index.html) を渡した後、他のコンテンツカードタイプと同様に `logImpression` メソッドを呼び出します。オブジェクトはコントロールインプレッションを暗黙的にログに記録して、ユーザーがいつコントロールカードを表示したかを分析に通知します。{% endalert %}
 
 {% endtab %}
 {% tab iOS %}
@@ -287,7 +287,7 @@ contentCardsController.delegate = delegate;
 {% endsubtabs %}
 
 {% alert important %}
-カスタムUIでコントロールバリアントコンテンツカードを処理するには、[`Braze.ContentCard.Control`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcard/control(_:))オブジェクトを渡し、他のコンテンツカードタイプと同様に`logImpression`メソッドを呼び出します。オブジェクトは、ユーザーがコントロールカードを見たときに分析に通知するために、コントロールインプレッションを暗黙的に記録します。
+カスタム UI でコントロールバリアントコンテンツカードを処理するには、[`Braze.ContentCard.Control`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcard/control(_:)) を渡した後、他のコンテンツカードタイプと同様に `logImpression` メソッドを呼び出します。オブジェクトはコントロールインプレッションを暗黙的にログに記録して、ユーザーがいつコントロールカードを表示したかを分析に通知します。
 {% endalert %}
 {% endtab %}
 

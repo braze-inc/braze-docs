@@ -26,14 +26,14 @@ channel:
 - [`IInAppMessageViewWrapperFactory`][88] - [アプリ内メッセージビューの階層操作のカスタム管理](#custom-view-wrapper-factory)
 
 {% alert note %}
-この記事には、廃止予定のニュースフィードの情報が含まれています。Braze は、ニュースフィードツールを使っている顧客には、コンテンツカードのメッセージングチャネルに移行することを勧めています。詳しくは[マイグレーションガイド]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/)をご覧ください。
+この記事には、廃止予定のニュースフィードの情報が含まれています。Braze では、News Feed ツールを使用するお客様は、コンテンツカードメッセージングチャネルに移動することを推奨しています。これは、より柔軟でカスタマイズ可能で、信頼性が高いチャネルです。詳しくは[マイグレーションガイド]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/)をご覧ください。
 {% endalert %}
 
 ## カスタムマネージャーリスナー
 
 `BrazeInAppMessageManager`は、アプリ内メッセージの表示とライフサイクルを自動的に処理します。メッセージのライフサイクルをより詳細に制御する必要がある場合は、カスタムマネージャーリスナーを設定すると、アプリ内メッセージライフサイクルのさまざまなポイントでアプリ内メッセージオブジェクトを受け取ることができ、その表示を自分で処理したり、さらなる処理を実行したり、ユーザーの動作に反応したり、オブジェクトの[エクストラ][14]などを処理したりすることができます。
 
-### ステップ1: アプリ内メッセージマネージャーリスナーを実装する
+### ステップ 1:アプリ内メッセージマネージャーリスナーを実装する
 
 [`IInAppMessageManagerListener`][21]を実装するクラスを作成します。
 
@@ -43,7 +43,7 @@ channel:
 
 `IInAppMessageManagerListener`には、メッセージ自体またはいずれかのボタンのクリックに対するデリゲートメソッドも含まれます。一般的なユースケースは、ボタンやメッセージがクリックされたときにメッセージをインターセプトしてさらに処理する場合です。
 
-### ステップ2: アプリ内メッセージビューのライフサイクルメソッドにフックする (オプション)
+### ステップ2:アプリ内メッセージビューのライフサイクルメソッドにフックする (オプション)
 
 [`IInAppMessageManagerListener`][21]インターフェイスには、アプリ内メッセージビューのライフサイクルの異なるポイントで呼び出されるアプリ内メッセージビューメソッドがあります。これらのメソッドは次の順序で呼び出されます。
 
@@ -58,7 +58,7 @@ channel:
 これらのメソッドの実装は必須ではありません。これらは単にアプリ内のメッセージビューのライフサイクルを追跡し、通知するために提供されています。これらのメソッドの実装は空にしておいても機能的には問題ありません。
 {% endalert %}
 
-### ステップ3: Braze にアプリ内メッセージマネージャリスナーを使用するように指示する
+### ステップ 3:Braze にアプリ内メッセージマネージャリスナーを使用するように指示する
 
 `IInAppMessageManagerListener`を作成したら、`BrazeInAppMessageManager.getInstance().setCustomInAppMessageManagerListener()`を呼び出して`BrazeInAppMessageManager`に対し
 デフォルトのリスナーの代わりにカスタムの`IInAppMessageManagerListener`を使用するよう指示します。
@@ -94,9 +94,9 @@ override fun beforeInAppMessageDisplayed(inAppMessageBase: IInAppMessage): InApp
 | `InAppMessageOperation` 戻り値 | 動作 |
 | -------------------------- | -------- |
 | `DISPLAY_NOW` | メッセージが表示される |
-| `DISPLAY_LATER` | メッセージはスタックに戻され、次の機会に表示される。 |
+| `DISPLAY_LATER` | メッセージはスタックに返され、次に利用可能な機会に表示されます。 |
 | `DISCARD` | メッセージは破棄される |
-| `null` | メッセージは無視される。このメソッドは `null` |
+| `null` | メッセージは無視される。このメソッドは `null` を**返しません** |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 詳細については、[`InAppMessageOperation.java`][45]を参照してください。
@@ -111,7 +111,7 @@ Android では、アプリ内メッセージで`logClick`と`logImpression`を�
 アプリ内メッセージがスタックに置かれたら、[`BrazeInAppMessageManager.getInstance().requestDisplayInAppMessage()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage/-braze-in-app-message-manager/request-display-in-app-message.html)を呼び出すことでいつでもそのメッセージの取得と表示を要求できます。このメソッドは、Braze に対しスタックから次に利用可能なアプリ内メッセージを表示するように要求します。
 {% endalert %}
 
-### ステップ 4ダークテーマの動作のカスタマイズ (オプション){#android-in-app-message-dark-theme-customization}
+### ステップ 4:ダークテーマの動作のカスタマイズ (オプション){#android-in-app-message-dark-theme-customization}
 
 デフォルトの`IInAppMessageManagerListener`ロジックでは、`beforeInAppMessageDisplayed()`の場合システム設定がチェックされ、条件付きで次のコードでメッセージのダークテーマスタイルが有効になります。
 
@@ -145,7 +145,7 @@ override fun beforeInAppMessageDisplayed(inAppMessage: IInAppMessage): InAppMess
 
 Braze のアプリ内メッセージタイプには、ほとんどのカスタムユースケースをカバーする汎用性があります。しかし、デフォルトのタイプを使用する代わりにアプリ内メッセージの視覚的な外観を完全に定義したい場合、Braze ではカスタムビューファクトリを設定することで行うことができます。
 
-### ステップ1: アプリ内メッセージビューファクトリを実装する
+### ステップ 1:アプリ内メッセージビューファクトリを実装する
 
 [`IInAppMessageViewFactory`][87]を実装するクラスを作成します。
 
@@ -194,7 +194,7 @@ class CustomInAppMessageViewFactory : IInAppMessageViewFactory {
 {% endtab %}
 {% endtabs %}
 
-### ステップ2: Braze にアプリ内メッセージビューファクトリを使用するように指示する
+### ステップ2:Braze にアプリ内メッセージビューファクトリを使用するように指示する
 
 `IInAppMessageViewFactory`を作成したら、`BrazeInAppMessageManager.getInstance().setCustomInAppMessageViewFactory()`を呼び出して`BrazeInAppMessageManager`に対し
 デフォルトのビューファクトリの代わりにカスタムの`IInAppMessageViewFactory`を使用するよう指示します。
@@ -213,7 +213,7 @@ Braze への他の呼び出しの前に、`Application.onCreate()`に`IInAppMess
 
 アプリ内メッセージにはアニメーションの動作がプリセットされています。`Slideup`メッセージは画面にスライドし、`full`や`modal`メッセージはフェードインおよびフェードアウトします。アプリ内メッセージにカスタムアニメーションの動作を定義する場合、Braze ではカスタムアニメーションファクトリを設定することで行うことができます。
 
-### ステップ1: アプリ内のメッセージアニメーションファクトリを実装する
+### ステップ 1:アプリ内のメッセージアニメーションファクトリを実装する
 
 [`IInAppMessageAnimationFactory`][20]を実装するクラスを作成します。
 
@@ -261,7 +261,7 @@ class CustomInAppMessageAnimationFactory : IInAppMessageAnimationFactory {
 {% endtab %}
 {% endtabs %}
 
-### ステップ2: Braze にアプリ内メッセージビューファクトリを使用するように指示する
+### ステップ2:Braze にアプリ内メッセージビューファクトリを使用するように指示する
 
 `IInAppMessageAnimationFactory`を作成したら、`BrazeInAppMessageManager.getInstance().setCustomInAppMessageAnimationFactory()`を呼び出して`BrazeInAppMessageManager`に対し
 デフォルトのアニメーションの代わりにカスタムの`IInAppMessageAnimationFactory`を使用するよう指示します。
@@ -272,7 +272,7 @@ Braze への他の呼び出しの前に、[`Application.onCreate()`][82]に`IInA
 
 Braze SDK にはデフォルトの`DefaultHtmlInAppMessageActionListener`クラスがあり、カスタムリスナーが定義されていない場合に使用され、適切なアクションを自動的に実行します。ユーザーがカスタムの HTML アプリ内メッセージ内のさまざまなボタンを操作する方法をより詳細に制御する必要がある場合は、カスタム`IHtmlInAppMessageActionListener`クラスを実装します。
 
-### ステップ1: カスタムの HTML アプリ内メッセージアクションリスナーを実装する
+### ステップ 1:カスタムの HTML アプリ内メッセージアクションリスナーを実装する
 
 [`IHtmlInAppMessageActionListener`][86]を実装するクラスを作成します。
 
@@ -350,7 +350,7 @@ class CustomHtmlInAppMessageActionListener(private val mContext: Context) : IHtm
 {% endtab %}
 {% endtabs %}
 
-### ステップ2: Braze に HTML アプリ内メッセージアクションリスナーの使用を指示する
+### ステップ2:Braze に HTML アプリ内メッセージアクションリスナーの使用を指示する
 
 `IHtmlInAppMessageActionListener`を作成したら、`BrazeInAppMessageManager.getInstance().setCustomHtmlInAppMessageActionListener()`を呼び出して、デフォルトのアクションリスナーの代わりにカスタム`IHtmlInAppMessageActionListener`を使用するように`BrazeInAppMessageManager`に指示します。
 
@@ -373,7 +373,7 @@ BrazeInAppMessageManager.getInstance().setCustomHtmlInAppMessageActionListener(C
 
 `BrazeInAppMessageManager`は、デフォルトで[`DefaultInAppMessageViewWrapper`][89]を使用して、既存のアクティビティビュー階層へのアプリ内メッセージモデルの配置を自動的に処理します。アプリ内メッセージをビュー階層に配置する方法をカスタマイズする必要がある場合は、カスタムの[`IInAppMessageViewWrapperFactory`][88]を使用する必要があります。
 
-### ステップ1: アプリ内メッセージビューラッパーファクトリを実装する
+### ステップ 1:アプリ内メッセージビューラッパーファクトリを実装する
 
 [`IInAppMessageViewWrapperFactory`][88]を実装し、[`IInAppMessageViewWrapper`][90]を返すクラスを作成します。
 
@@ -442,7 +442,7 @@ class CustomInAppMessageViewWrapper(inAppMessageView: View,
 {% endtab %}
 {% endtabs %}
 
-### ステップ2: Braze にカスタムビューラッパーファクトリを使用するように指示する
+### ステップ2:Braze にカスタムビューラッパーファクトリを使用するように指示する
 
 [`IInAppMessageViewWrapper`][90]を作成したら、[`BrazeInAppMessageManager.getInstance().setCustomInAppMessageViewWrapperFactory()`][91]を呼び出して、デフォルトのビューラッパーファクトリの代わりにカスタムの[`IInAppMessageViewWrapperFactory`][88]を使用するように`BrazeInAppMessageManager`に指示します。
 

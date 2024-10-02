@@ -58,7 +58,7 @@ This method returns the total number of currently active Content Cards. Cards ar
 ```
 
 {% endtab %}
-{% tab 迅速 %}
+{% tab SWIFT %}
 
 ```swift
 func applicationDidEnterBackground(_ application: UIApplication)
@@ -77,7 +77,7 @@ func applicationDidEnterBackground(_ application: UIApplication)
 ```
 
 {% endtab %}
-{% tab 迅速 %}
+{% tab SWIFT %}
 
 ```swift
 UIApplication.shared.applicationIconBadgeNumber = Appboy.sharedInstance()?.feedController.unreadCardCount(forCategories: ABKCardCategory.all) ?? 0
@@ -96,7 +96,7 @@ UIApplication.shared.applicationIconBadgeNumber = Appboy.sharedInstance()?.feedC
 ```
 
 {% endtab %}
-{% tab 迅速 %}
+{% tab SWIFT %}
 
 ```swift
 UIApplication.shared.applicationIconBadgeNumber = 0
@@ -107,7 +107,7 @@ UIApplication.shared.applicationIconBadgeNumber = 0
 
 詳細については、`Appboy.h` の[ヘッダーファイル][15]を参照してください。
 
-[15]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/include/Appboy.h "Appboy.h ヘッダファイル"
+[15]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/include/Appboy.h "Appboy.h ヘッダーファイル"
 [42]: {% image_buster /assets/img_archive/badge_example.png %} 「バッジの例」
 [44]: http://appboy.github.io/appboy-ios-sdk/docs/interface_a_b_k_feed_controller.html "abk フィード コントロールler"
 [45]: {% image_buster /assets/img_archive/newsfeed_badges.png %}

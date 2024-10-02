@@ -1,6 +1,6 @@
 ---
 nav_title: Google Tag Manager
-article_title: Webのグーグルタグマネージャ
+article_title: Google Tag Manager for Web
 platform: Web
 page_order: 20
 description: "ここでは、Googleタグマネージャを使用してBrazeをWeb サイトにデプロイする方法について説明します。"
@@ -9,26 +9,26 @@ description: "ここでは、Googleタグマネージャを使用してBrazeをW
 
 # Google Tag Manager
 
-> ここでは、Googleタグマネージャ(GTM)を使用してWeb サイトにBraze Web SDKを追加する方法について、ステップごとに説明します。[Google タグマネージャ][2]を使用すると、実稼働コードの解放や開発を必要とせずに、Web サイト上のタグをリモートで追加、削除、および編集できます。
+> ここでは、Google Tag Manager (GTM) を使用して Web サイトに Braze Web SDK を追加する手順について説明します。[Google タグマネージャ][2]を使用すると、実稼働コードの解放や開発を必要とせずに、Web サイト上のタグをリモートで追加、削除、および編集できます。
 
 Braze によって構築された2 つのGoogle タグマネージャテンプレート、[初期化タグ](#initialization-tag) と[アクションタグ](#actions-tag) があります。
 
-どちらのタグも、\[Googleのコミュニティギャラリー][15]]から、またはコミュニティテンプレートから新しいタグを追加するときにBrazeを検索することで、ワークスペースに追加できます。
+どちらのタグも、\[Google のコミュニティギャラリー][15] からワークスペースに追加するか、コミュニティテンプレートから新しいタグを追加する際に Braze を検索することで追加できます。
 
 ![ギャラリー検索の"画像]\[gtm-community-gallery-search]
 
-## Google EU ユーザー同意ポリシーを更新
+## 更新された Google EU ユーザー同意ポリシー
 
 {% alert important %}
-Googleは[EUユーザー同意ポリシー](https://www.google.com/about/company/user-consent-policy/)を[Digital Markets Act (DMA)</この新たな変更は、広告主に対し、一定の事項を自社及び英国のエンドユーザーに開示するとともに、その同意を得ることを要求するものである。詳細については、次のドキュメントを参照してください。
+Google は、2024年3月6日に発効した[デジタル市場法 (DMA)](https://ads-developers.googleblog.com/2023/10/updates-to-customer-match-conversion.html) の変更に対応して、[EU ユーザーの同意ポリシー](https://www.google.com/about/company/user-consent-policy/)を更新しています。この新しい変更により、広告主は EEA および英国のエンドユーザーに特定の情報を開示し、必要な同意を得る必要があります。詳細については、次のドキュメントを参照してください。
 {% endalert %}
 
-Google のEU ユーザー同意ポリシーの一部として、次のブールカスタム属性s をユーザープロファイル s にログに記録する必要があります。
+Google のEU ユーザー同意ポリシーの一部として、次のブール値カスタム属性をユーザープロファイルに記録する必要があります。
 
 - `$google_ad_user_data`
 - `$google_ad_personalization`
 
-GTM インテグレーションを使用してこれらを設定する場合、カスタム属性 s でカスタムHTML タグを作成する必要があります。以下は、これらの値を(文字列としてではなく)ブールデータ型としてログに記録する方法の例です。
+GTM 統合を使用してこれらを設定する場合、カスタム属性でカスタム HTML タグを作成する必要があります。以下は、これらの値を(文字列としてではなく)ブールデータ型としてログに記録する方法の例です。
 
 ```js
 <script>
@@ -36,7 +36,7 @@ window.braze.getUser().setCustomUserAttribute("$google_ad_personalization", true
 </script>
 ```
 
-詳細については、[Audience Sync to Google]({{site.baseurl}}/partners/canvas_steps/google_audience_sync/)を参照してください。
+詳細については、[オーディエンスを Google に同期する]({{site.baseurl}}/partners/canvas_steps/google_audience_sync/)を参照してください。
 
 ## 初期化タグテンプレート {#initialization-tag}
 
@@ -46,46 +46,46 @@ window.braze.getUser().setCustomUserAttribute("$google_ad_personalization", true
 
 オプションで、Google タグマネージャをプッシュ送信できるようにするには、まず[push integration]({{site.baseurl}}/developer_guide/platform_integration_guides/web/push_notifications/integration/) のガイドラインに従い、以下の手順を実行します。
 1. サイトのサービスワーカーを設定し、サイトのルートディレクトリに配置します
-2. ブラウザ登録を設定する- サービスワーカーが設定されたら、`braze.requestPushPermission()` メソッドをアプリまたはカスタムHTML タグ(GTM ダッシュボードを使用) でネイティブに設定する必要があります。また、SDKが初期化された後にタグが起動されるようにする必要があります。
+2. ブラウザ登録を設定する- サービスワーカーが設定されたら、`braze.requestPushPermission()` メソッドをアプリまたはカスタムHTML タグ(GTM ダッシュボードを使用) でネイティブに設定する必要があります。また、SDK が初期化された後にタグが実行されるようにする必要があります。
 
 ### ステップ2:初期化タグの選択
 
 コミュニティーテンプレートギャラリーでBrazeを検索し、**Braze初期化タグ**を選択します。
 
-![Braze 初期化タグの設定設定を示すダイアログボックス。設定は"タグ type" " API キー" " &API エンドポイント" " " SDK version" " 外部ユーザー ID" " Safari Web プッシュ ID".]\[gtm-initialization-タグ]
+![Braze 初期化タグの構成設定を示すダイアログボックス。含まれる設定は、「タグのタイプ」、「API キー」、「API エンドポイント」、「SDK バージョン」、「外部ユーザー ID」、「Safari Web プッシュ ID」です。]\[gtm-initialization-tag]
 
-### ステップ 3:設定の設定
+### ステップ 3:設定の構成
 
 Braze API アプリ 識別子キーとSDKエンドポイントを入力します。これは、ダッシュボードの**設定の管理** ページにあります。Web SDKの最新の`major.minor` バージョンを入力します。たとえば、最新バージョンが`4.1.2` の場合、`4.1` と入力します。SDK版の一覧は、\[changelog]\[changelog]] で表示できます。
 
 ### ステップ 4:初期化オプションの選択
 
-\[Initial setup][7] ガイドで説明されている追加の初期化オプションのオプションセットから選択します。
+\[初期設定][7] ガイドで説明されている追加の初期化オプションのオプションセットから選択します。
 
 ### ステップ 5: 検証とQA
 
-このタグをデプロイしたら、適切なインテグレーションを確認する方法が2 つあります。
+このタグを展開したら、次の2つの方法で適切な統合を確認できます。
 
 1. Googleタグマネージャの\[デバッグツール]\[gtm-debugging-tool]]を使用すると、設定したページまたはイベントでBraze初期化タグがトリガーされていることがわかります。
-2. Braze へのネットワークリクエストが表示され、グローバル`window.braze` ライブラリーがウェブページで定義されます。
+2. Braze に対して行われたネットワークリクエストが表示され、グローバル `window.braze` ライブラリが Web ページで定義されます。
 
 ## アクションタグテンプレート {#actions-tag}
 
-Brazeアクションタグテンプレートでは、プライバシー要件のトリガー カスタムイベント、購入の追跡、ユーザー IDの変更、"トラッキングの停止または再開を行うことができます。
+Braze アクションタグテンプレートを使用すると、カスタムイベントのトリガー、購入の追跡、ユーザー ID の変更、プライバシー要件の追跡の停止または再開を行うことができます。
 
-![]\[gtm-アクションs-タグ]
+![]\[gtm-actions-tag]
 
-### ユーザー外部識別子の変更 {#external-id}
+### ユーザー外部 ID の変更 {#external-id}
 
 **Change User**タグ型は、[`changeUser`method](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#changeuser)を呼び出します。 
 
-このタグは、ユーザーがログインするとき、または一意の`external_id` 識別子で識別されるときに使用します。
+このタグは、ユーザーがログインするとき、または一意の `external_id` 識別子で識別されるときに使用します。
 
 現行のユーザーの一意のID を**外部ユーザー ID** フィールドに入力してください。通常は、Web サイトから送信されたデータレイヤー変数を使用して入力します。
 
-![Braze アクションタグ設定設定を示すダイアログボックス。含まれる設定は、" タグ type" および" 外部ユーザー ID".]\[gtm-change-ユーザー]
+![Braze アクションタグ構成設定を示すダイアログボックス。含まれる設定は、「タグのタイプ」と「外部ユーザーID」です。]\[gtm-change-user]
 
-### 履歴カスタムイベントs {#custom-events}
+### カスタムイベントをログに記録する{#custom-events}
 
 **カスタムイベント**タグ型は、[`logCustomEvent`メソッド](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#logcustomevent)を呼び出します。
 
@@ -95,15 +95,15 @@ Brazeアクションタグテンプレートでは、プライバシー要件の
 
 イベントプロパティを追加するには、**Add Row** ボタンを使用します。
 
-![Braze アクションタグ設定設定を示すダイアログボックス。含まれる設定は、" タグ type"(カスタムイベント)、" event name"(ボタンをクリック)、"event properties".]\[gtm-custom-event] です]
+![Braze アクションタグ構成設定を示すダイアログボックス。含まれる設定は、「タグタイプ」 (カスタムイベント)、「イベント名」 (ボタンクリック)、および「イベントプロパティ」です。]\[gtm-カスタムイベント]
 
-### Eコマースイベント {#ecommerce}
+### e コマースイベント {#ecommerce}
 
-サイトが標準\[e コマース event]\[e コマース]データレイヤーアイテムをGoogle タグマネージャに記録する場合、**E-commerce Purchase**タグ種別を使用できます。このアクション型では、`items`の一覧で送信されたアイテムごとに、個別の"purchase"がBrazeで記録されます。
+サイトで標準の \[e コマースイベント]\[e コマース] データ層アイテムを使用して購入を Googleタグマネージャに記録する場合は、**e コマース購入**タグタイプを使用できます。このアクションタイプでは、`items` のリストで送信されたアイテムごとに個別の「購入」を Braze に記録します。
 
 購入プロパティリストでキーを指定することで、購入プロパティとして含める追加のプロパティの名前を指定することもできます。Brazeは、一覧に追加した購入プロパティーのログに記録されている個々の`item` 内を検索します。
 
-たとえば、e コマースの給与読み込むに次の`items` が含まれているとします。
+たとえば、e コマースのペイロードには次の `items` が含まれているとします。
 
 ```
 items: [{
@@ -115,7 +115,7 @@ items: [{
 }]
 ```
 
-購入プロパティとして`item_brand` と`item_name` のみを渡す場合は、これら2 つのフィールドs を購入プロパティテーブルに追加します。プロパティを指定しない場合、\[`logPurchase`]\[log-purchase] Braze の呼び出しで購入プロパティは送信されません。
+`item_brand` と `item_name` だけを購入プロパティとして渡す場合は、これら2つのフィールドを購入プロパティテーブルに追加するだけです。プロパティを指定しない場合、\[`logPurchase`]\[log-purchase] Braze の呼び出しで購入プロパティは送信されません。
 
 ### 購入の追跡 {#purchases}
 
@@ -127,13 +127,13 @@ items: [{
 
 購入プロパティを追加するには、**Add Row** ボタンを使用します。
 
-![Braze アクションタグ設定設定を示すダイアログボックス。設定は" タグ type" " external ID" " &price" " &cuot; &currency コード" " quantity" および" purchase properties".<]
+![Braze アクションタグ構成設定を示すダイアログボックス。含まれる設定は、「タグのタイプ」、「外部 ID」、「価格」、「通貨コード」、「数量」、および「購入プロパティ」です。]\[gtm-purchase]
 
-### "トラッキングの停止と再開 {#stop-tracking}
+### トラッキングの停止と再開 {#stop-tracking}
 
-Braze "トラッキングがプライバシー上の理由でウェブ"トラッキングをオプトアウトしたことを示すユーザーが表示された後など、Web サイトでBraze "トラッキングを無効にしたり、再有効にしたりする必要が生じることがあります。
+場合によっては、たとえば、ユーザーがプライバシー上の理由でウェブトラッキングをオプトアウトしたことを示した後などに、Web サイトで Braze トラッキングを無効または再度有効にする必要があります。
 
-ウェブ"トラッキングを無効または再有効にするには、**Disable "トラッキング**または**Resume "トラッキング**タグ型を使用します。これら2 つのオプションは、[`disableSDK`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#disablesdk) および[`enableSDK`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#enablesdk) を呼び出します。
+Web トラッキングを無効または再度有効にするには、それぞれ**トラッキング無効**タグタイプまたは**トラッキング再開**タグタイプを使用します。これら2 つのオプションは、[`disableSDK`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#disablesdk) および[`enableSDK`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#enablesdk) を呼び出します。
 
 ### カスタムユーザー 属性 {#custom-attributes}
 
@@ -151,11 +151,11 @@ window.braze.getUser().setCustomUserAttribute("attribute name", "attribute value
 GTM テンプレートでは、イベントまたは購買のネストされたプロパティは使用できません。前述のHTMLを使用して、ネストされたプロパティーを必要とするすべての行動または購入を記録できます。
 {% endalert %}
 
-### 基準ユーザー 属性s {#standard-attributes}
+### 標準ユーザー属性 {#standard-attributes}
 
-ユーザ定義ユーザー 属性s と同じ方法で、ユーザーの名などのスタンダードユーザー 属性をログに記録する必要があります。標準属性項目に渡す値が、\[ユーザクラス][16] ドキュメントで指定された期待される形式と一致することを確認します。
+ユーザーの名などの標準ユーザー属性は、カスタムユーザー属性と同じ方法でログに記録する必要があります。標準属性に渡す値が、\[ユーザークラス][16] のドキュメントで指定されている予期される形式と一致していることを確認します。
 
-たとえば、性別属性では、`"m" | "f" | "o" | "u" | "n" | "p"` のいずれかの値を使用できます。したがって、ユーザーの性別を女性に設定するには、次の内容のカスタムHTML タグを作成します。
+たとえば、性別属性は、値として次のいずれかを使用できます。`"m" | "f" | "o" | "u" | "n" | "p"`したがって、ユーザーの性別を女性に設定するには、次の内容のカスタムHTML タグを作成します。
 
 ```html
 <script>
@@ -165,7 +165,7 @@ window.braze.getUser().setGender("f")
 
 ## コンテンツカードの統合
 
-Google Tag Manager を使用して[コンテンツカード]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/about/) メッセージング チャネルを統合するステップがいくつかあります。Google Tag Manager は、[ Braze CDN]({{site.baseurl}}/developer_guide/platform_integration_guides/web/initial_sdk_setup#install-cdn) (当社Web SDKのバージョン) をWeb サイト コードに直接注入することで機能します。これは、コンテンツカードを実装する場合を除き、Google Tag Manager なしでSDKを統合した場合と同様に、すべてのSDK方法を利用できることを意味します。
+Google Tag Manager を使用して[コンテンツカード]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/about/)メッセージングチャネルを統合するには、いくつかの追加ステップがあります。Google Tag Manager は、[ Braze CDN]({{site.baseurl}}/developer_guide/platform_integration_guides/web/initial_sdk_setup#install-cdn) (当社Web SDKのバージョン) をWeb サイト コードに直接注入することで機能します。これは、コンテンツカードを実装する場合を除き、Google Tag Manager なしでSDKを統合した場合と同様に、すべてのSDK方法を利用できることを意味します。
 
 ### オプション 1: GTM を使用した統合
 
@@ -177,15 +177,15 @@ Google Tag Manager を使用して[コンテンツカード]({{site.baseurl}}/us
 </script>
 ```
 
-![コンテンツカード フィード.]\[gtm-content-カード s を示すカスタムHTML タグのGoogle タグマネージャでのタグ設定]
+![コンテンツカードフィードを表示するカスタム HTML タグの Google Tag Manager のタグ設定。]\[gtm-content-cards]
 
-### オプション 2: Web サイトに直接的に統合する
+### オプション 2: Web サイトに直接統合する
 
-コンテンツ・カードとそのフィードのアプリ・イヤーのカスタマイズを自由にするために、コンテンツ・カードをネイティブ・Web サイトに直接的に統合することができます。これには、スタンダードフィードユーザーインターフェイスを使用する方法と、カスタムフィードユーザーインターフェイスを作成する方法の2 つのアプリ侵害があります。
+コンテンツカードとそのフィードの外観をより自由にカスタマイズするために、コンテンツカードをネイティブ Web サイトに直接統合できます。これには、標準フィード UI を使用する方法と、カスタムフィード UI を作成する方法の2つの方法があります。
 
 #### 基準フィード
 
-[スタンダードフィード UI]({{site.baseurl}}/developer_guide/platform_integration_guides/web/content_cards/integration/#standard-feed-ui)を実装する場合、Brazeメソッドはメソッドの先頭に`window.`を追加する必要があります。たとえば、`braze.showContentCards` は代わりに`window.braze.showContentCards` にする必要があります。
+[スタンダードフィード UI]({{site.baseurl}}/developer_guide/platform_integration_guides/web/content_cards/integration/#standard-feed-ui)を実装する場合、Brazeメソッドはメソッドの先頭に`window.`を追加する必要があります。たとえば、`braze.showContentCards` の代わりに `window.braze.showContentCards` にする必要があります。
 
 #### カスタムフィードユーザーインターフェイス
 
@@ -201,13 +201,13 @@ body .ab-feed {
 
 ## テンプレートのアップグレードと更新 {#upgrading}
 
-Braze Web SDKの最新バージョンにアップグレードするには、Googleタグマネージャダッシュボードで次の3つのステップを実行します。
+Braze Web SDK の最新バージョンにアップグレードするには、Google Tag Manager ダッシュボードで次の3つのステップを実行します。
 
-1. **アップデートタグ テンプレート**<br>ワークスペース内の**Templates** ページに移動します。更新が利用可能であることを示すアイコンが表示されます。<br><br>![更新が表示されるテンプレートページ]\[gtm-更新-available]<br><br>そのアイコンをクリックし、変更を確認した後、**Accept Update**をクリックします。<br><br>![新旧のタグ テンプレート s をボタンと"Accept 更新"]\[gtm-accept-更新]<br><br>
-2. **アップデートバージョン番号**<br>タグ テンプレートが更新されたら、Braze初期化タグを編集し、最新の`major.minor`バージョンにSDKバージョンを更新します。たとえば、最新バージョンが`4.1.2` の場合、`4.1` と入力します。SDK版の一覧は、\[changelog]\[changelog]] で表示できます。<br><br>![SDK Version]\[gtm-version-number]を変更するためのインプットフィールドを持つBraze初期化テンプレート]<br><br>
-3. **QAおよび発行**<br>Google タグマネージャの\[デバッグツール]\[gtm-debugging-tool]] を使用して、新しいSDKが動作していることを確認してから、タグコンテナーに更新を公開します。
+1. **タグテンプレートを更新する**<br>ワークスペース内の**Templates** ページに移動します。更新が利用可能であることを示すアイコンが表示されます。<br><br>![更新が利用可能であることを示すテンプレートページ]\[gtm-update-available]<br><br>そのアイコンをクリックし、変更を確認した後、**Accept Update**をクリックします。<br><br>![古いタグテンプレートと新しいタグテンプレートを比較する画面。「更新を受け入れる」ボタンがあります。]\[gtm-accept-update]<br><br>
+2. **バージョン番号を更新する**<br>タグテンプレートが更新されたら、Braze 初期化タグを編集し、SDK バージョンを最新の `major.minor` バージョンに更新します。たとえば、最新バージョンが`4.1.2` の場合、`4.1` と入力します。SDK版の一覧は、\[changelog]\[changelog]] で表示できます。<br><br>![SDK Version]\[gtm-version-number]を変更するためのインプットフィールドを持つBraze初期化テンプレート]<br><br>
+3. **QA および公開**<br>Google Tag Manager の \[デバッグツール]\[gtm-debugging-tool] を使用して、新しい SDK が動作していることを確認してから、タグコンテナーに更新を公開します。
 
-## ステップのトラブルシューティング {#troubleshooting}
+## トラブルシューティングのステップ {#troubleshooting}
 
 ### タグデバッグを有効にする {#debugging}
 
@@ -217,17 +217,17 @@ Braze Web SDKの最新バージョンにアップグレードするには、Goog
 
 ### デバッグモードに入る
 
-Google Tag Manager の統合をデバッグするもう1 つの方法は、Google の\[プレビューモード][14] 機能を使用することです。
+Google Tag Manager の統合をデバッグするもう1つの方法は、Google の \[プレビューモード][14] 機能を使用することです。
 
-これにより、ウェブページのデータレイヤーからトリガーされたBraze タグに送信されている値を特定し、どのタグがトリガーされたか、またはされなかったかを説明することができます。
+これにより、Web ページのデータレイヤーから、トリガーされた Braze 各タグに送信されている値を特定できるほか、トリガーされたタグとトリガーされなかったタグについても確認できます。
 
-![Braze 初期化タグの概要ページには、タグの概要が表示されます。これには、どのタグがトリガー ed.]\[gtm-タグ-debug-mode]
+![Braze 初期化タグの概要ページには、トリガーされたタグに関する情報など、タグの概要が表示されます。]\[gtm-tag-debug-mode]
 
 ### 詳細ログの有効化
 
-Braze テクニカルサポートがテスト中にログにアクセスできるようにするには、Google タグマネージャインテグレーションで詳細ログを有効にします。これらのログは、ブラウザーの[開発者ツール](https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools) の**コンソール** タブでアプリ取得されます。
+Braze テクニカルサポートがテスト中にログにアクセスできるようにするには、Google Tag Manager 統合で詳細ログを有効にします。これらのログは、ブラウザーの[開発者ツール](https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools)の \[**コンソール**] タブに表示されます。
 
-Googleタグマネージャインテグレーションで、Braze初期化タグに移動し、**Web SDKログを有効にする**を選択します。
+Google Tag Manager 統合で、Braze 初期化タグに移動し、\[**Web SDK ログを有効にする**] を選択します。
 
 ![Web SDKログを有効にするオプションがオンになっているBraze初期化タグサマリページ。]\[gtm-verbose-logging]]
 

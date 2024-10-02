@@ -18,7 +18,7 @@ description: "このリファレンス記事では、REST API、クラウドデ�
 
 HTMLの場合は、Braze Liquidフィルタ(`strip_html`)を使って、レンダリングされたテキストをHTMLエスケープすることもできる。以下に例を示します。
 
-{% tabs ローカル %}
+{% tabs local %}
 {% tab インプット %}
 {% raw %}
 ```liquid
@@ -59,7 +59,7 @@ Brazeの\[Cloud Data Ingestion][14] ]を使って、ユーザー属性をイン�
 
 インポートで `external_id` を指定すると、Braze は、同じ `external_id` を持つ既存のユーザーを更新します。`external_id` が見つからない場合は、その external_id を持つ新規ユーザーを作成します。
 
-**ダウンロードする**\[CSVインポートテンプレート]\[テンプレート]
+**ダウンロード:** \[CSV インポートのテンプレート]\[テンプレート］
 
 ### ユーザーエイリアスを使用するインポート
 
@@ -72,7 +72,7 @@ Brazeの\[Cloud Data Ingestion][14] ]を使って、ユーザー属性をイン�
 
 | user_alias_name | user_alias_label | last_name | email | sample_attribute |
 | --- | --- | --- | --- | --- |
-| 182736485 | my_alt_identifier | スミス | smith@user.com | TRUE |
+| 182736485 | my_alt_identifier | Smith | smith@user.com | TRUE |
 | 182736486 | my_alt_identifier | グエン | nguyen@user.com | FALSE |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
@@ -82,7 +82,7 @@ Brazeの\[Cloud Data Ingestion][14] ]を使って、ユーザー属性をイン�
 既存のユーザーがすでに `external_id` を持っている場合、CSV インポートを使用して `user_alias_name` を更新することはできません。この場合、関連する `user_alias_name` を持つ新規ユーザープロファイルが作成されます。エイリアスのみを持つユーザーを `external_id` に関連付けるには、[ユーザーの識別エンドポイント]({{site.baseurl}}/api/endpoints/user_data/post_user_identify/)を使用します。
 {% endalert %}
 
-**ダウンロードする**\[CSVエイリアス・インポート・テンプレート]\[template_alias]
+**ダウンロード:** \[CSV によるエイリアスインポートのテンプレート]\[template_alias］
 
 ### Braze ID を使用するインポート
 
@@ -145,7 +145,7 @@ CSVインポートまたはAPIを通じてユーザーに`language` または`co
 | `email_subscribe` | string | 利用可能な値は、`opted_in` （電子メールメッセージの受信を明示的に登録）、`unsubscribed` （電子メールメッセージの受信を明示的に拒否）、`subscribed` （受信も拒否もしていない）である。 | いいえ |
 | `push_subscribe` | string | 利用可能な値は、`opted_in` （プッシュメッセージの受信を明示的に登録）、`unsubscribed` （プッシュメッセージの受信を明示的に拒否）、`subscribed` （受信も拒否もしていない）である。 | いいえ |
 | `time_zone` | string | タイムゾーンは、IANAタイムゾーンデータベースと同じフォーマットでBrazeに渡さなければならない（例えば、`America/New_York` または`Eastern Time (US & Canada)` ）。  | いいえ |
-| `date_of_first_session`<br><br> `date_of_last_session`| string | 以下のISO 8601フォーマットのいずれかで渡される： {::nomarkdown}<ul> <li> 「YYYY-MM-DD」 </li> <li> 「YYYY-MM-DDTHH:MM:SS+00:00」 </li> <li> 「YYYY-MM-DDTHH:MM:SSZ」 </li> <li> 「YYYY-MM-DDTHH:MM:SS」(2019-11-20T18:38:57 など) </li> </ul> {:/} | いいえ |
+| `date_of_first_session`<br><br> `date_of_last_session`| string | 以下のISO 8601フォーマットのいずれかで渡される： {::nomarkdown}<ul> <li> 「YYYY-MM-DD」 </li> <li> "YYYY-MM-DDTHH:MM:SS+00:00" </li> <li> "YYYY-MM-DDTHH:MM:SSZ" </li> <li> 「YYYY-MM-DDTHH:MM:SS」(2019-11-20T18:38:57 など) </li> </ul> {:/} | いいえ |
 | `subscription_group_id` | string | サブスクリプション・グループの`id` 。この識別子は、ダッシュボードの購読グループページで確認できる。 | いいえ |
 | `subscription_state` | string | `subscription_group_id` で指定されたサブスクリプショングループのサブスクリプション状態。許可される値は、`unsubscribed` （サブスクリプション・グループに属さない）または`subscribed` （サブスクリプション・グループに属する）である。 | `subscription_group_id` 、強く推奨する。 |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
@@ -203,13 +203,13 @@ CSVインポートまたはAPIを通じてユーザーに`language` または`co
     <td class="tg-0pky">A8i3mkd99</td>
     <td class="tg-0pky">Colby</td>
     <td class="tg-0pky">6ff593d7-cf69-448b-aca9-abf7d7b8c273</td>
-    <td class="tg-0pky">subscribed</td>
+    <td class="tg-0pky">配信登録済み</td>
   </tr>
   <tr>
     <td class="tg-0pky">k2LNhj8Ks</td>
     <td class="tg-0pky">Tom</td>
     <td class="tg-0pky">aea02307-a91e-4bc0-abad-1c0bee817dfa</td>
-    <td class="tg-0pky">subscribed</td>
+    <td class="tg-0pky">配信登録済み</td>
   </tr>
 </tbody>
 </table>
@@ -312,5 +312,5 @@ Braze では、列の各値が同じデータ型である必要があります�
  {{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/
 [14]: {{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/
 \[errors]:#common-errors
-\[テンプレート] ： {% image_buster /assets/download_file/braze-user-import-template-csv.xlsx %}
+\[template]: {% image_buster /assets/download_file/braze-user-import-template-csv.xlsx %}
 \[template_alias]: {% image_buster /assets/download_file/braze-user-import-alias-template-csv.xlsx %}

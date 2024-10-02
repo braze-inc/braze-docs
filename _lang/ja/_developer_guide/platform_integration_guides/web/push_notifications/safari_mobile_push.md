@@ -1,6 +1,6 @@
 ---
-nav_title: サファリ・モバイル・ウェブ・プッシュ
-article_title: サファリ・モバイル・ウェブ・プッシュ
+nav_title: Safari Mobile の Web プッシュ
+article_title: Safari Mobile の Web プッシュ
 platform: Web
 channel: push
 page_order: 5
@@ -11,11 +11,11 @@ search_rank: 3
 
 # Safariモバイルウェブプッシュ（iOSおよびiPadOS）
 
-> [Safari v16.4は][safari-release-notes]モバイル・ウェブ・プッシュに対応しており、iOSとiPadOSのプッシュ通知でモバイル・ユーザーを再度エンゲージできるようになった。<br><br>この記事では、サファリのモバイルプッシュを設定するために必要な手順を説明する。
+> [Safari v16.4][safari-release-notes] はモバイルウェブプッシュに対応しており、iOS と iPadOS のプッシュ通知でモバイルユーザーを再度エンゲージできるようになりました。<br><br>この記事では、サファリのモバイルプッシュを設定するために必要な手順を説明する。
 
 ## 統合のステップ
 
-まず、標準的な[ウェブプッシュ統合ガイドを][web-push-integration]読み、それに従ってほしい。以下の手順は、iOSとiPadOSサポートのSafariでウェブプッシュをサポートするためにのみ必要である。
+まず、標準的な [Web プッシュ統合ガイド][web-push-integration]を読み、それに従ってください。以下のステップは、iOS と iPadOS サポートの Safari で Web プッシュをサポートするためにのみ必要です。
 
 ### ステップ1:マニフェスト・ファイルを作成する {#manifest}
 
@@ -49,21 +49,21 @@ search_rank: 3
 
 ### ステップ3:サービスワーカーを追加する {#service-worker}
 
-Web[プッシュ統合ガイドに][service-worker]記載されているように、WebサイトにBrazeサービスワーカーライブラリをインポートしたサービスワーカーファイルがなければならない。
+[Web プッシュ統合ガイド][service-worker]で説明されているように、Web サイトには Braze service-worker ライブラリをインポートするサービスワーカーファイルが必要です。
 
 ### ステップ4: ホーム画面に追加する {#add-to-homescreen}
 
 ChromeやFirefoxのような主要ブラウザとは異なり、あなたのウェブサイトがユーザーのホーム画面に追加されていない限り、サファリiOS/iPadOSでプッシュ許可をリクエストすることはできない。 
 
-[ホームスクリーンに追加][add-to-homescreen]機能は、ユーザーがあなたのウェブサイトをブックマークし、貴重なホームスクリーンの領域にあなたのアイコンを追加することができる。
+\[[ホーム画面に追加][add-to-homescreen]] 機能を使用すると、ユーザーはあなたの Web サイトをブックマークし、あなたのサイトのアイコンをホーム画面に追加できます。
 
 ![ウェブサイトをブックマークし、ホーム画面に保存するオプションを表示するiPhone][1]{: style="max-width:40%"}
 
 ### ステップ5:ネイティブのプッシュプロンプトを表示する {#push-prompt}
-アプリがホーム画面に追加されると、ユーザーがアクション（ボタンのクリックなど）を起こしたときにプッシュ許可をリクエストできるようになる。これは [`requestPushPermission`][requestPushPermission]メソッドを使うか、[コードなしのプッシュ・プライマー・アプリ内メッセージを][push-primer]使うことができる。
+アプリがホーム画面に追加されると、ユーザーがアクション（ボタンのクリックなど）を起こしたときにプッシュ許可をリクエストできるようになる。これを行うには、[`requestPushPermission`][requestPushPermission] メソッドを使用するか、[コードなしのプッシュプライマーのアプリ内メッセージ][push-primer]を使用します。
 
 {% alert note %}
-プロンプトを受け入れるか拒否するかを選択したら、プロンプトを再び表示できるようにするには、ウェブサイトを削除してホーム画面に再インストールする必要がある。
+プロンプトを受け入れるか拒否したら、プロンプトを再び表示できるようにするには、Web サイトを削除してホーム画面に再インストールする必要があります。
 {% endalert %}
 
 ![通知を「許可する」か「許可しない」かを尋ねるプッシュ・プロンプトが表示される。][2]{: style="max-width:40%"}
@@ -85,7 +85,7 @@ button.onclick = function(){
 
 ## 次のステップ:
 
-次に、自分自身に[テスト・メッセージを送って][test-message]、統合を検証する。統合が完了したら、[プッシュオプトイン][push-primer]率を最適化するために、[コードなしのプッシュプライマーメッセージを][push-primer]使用することができる。
+次に、自分自身に[テスト・メッセージを送って][test-message]、統合を検証する。統合が完了したら、プッシュオプトイン率を最適化するために、[コードなしのプッシュプライマーメッセージを][push-primer]使用することができる。
 
 [webkit-release-notes]: https://webkit.org/blog/13878/web-push-for-web-apps-on-ios-and-ipados/
 [safari-release-notes]: https://developer.apple.com/documentation/safari-release-notes/safari-16_4-release-notes

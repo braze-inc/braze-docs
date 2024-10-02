@@ -29,14 +29,14 @@ Push Story 機能を使用するには、`UNNotification` フレームワーク�
 Xcode によって新しいターゲットが生成され、次のようなファイルが自動的に作成されるはずです。
 
 {% tabs %}
-{% tab 目標-C %}
+{% tab OBJECTIVE-C %}
 
 - `NotificationViewController.h`
 - `NotificationViewController.m`
 - `MainInterface.storyboard`
 
 {% endtab %}
-{% tab 速い %}
+{% tab swift %}
 
 - `NotificationViewController.swift`
 - `MainInterface.storyboard`
@@ -63,7 +63,7 @@ Push Story 機能では、メインアプリターゲットの ［**機能**］ 
 ## ステップ4: Push Story フレームワークをアプリに追加する
 
 {% tabs ローカル %}
-{% tab スイフト・パッケージ・マネージャー %}
+{% tab Swift Package Manager %}
 
 [Swift Package Manager の統合ガイド]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/installation_methods/swift_package_manager/)に従って、`AppboyPushStory` を `Notification Content Extension` に追加します。
 
@@ -72,7 +72,7 @@ Push Story 機能では、メインアプリターゲットの ［**機能**］ 
 ![]({% image_buster /assets/img/ios/push_story/spm2.png %})
 
 {% endtab %}
-{% tab ココアポッズ %}
+{% tab CocoaPods %}
 
 次の行を Podfile に追加します。
 
@@ -94,7 +94,7 @@ Podfile を更新したら、ターミナル内で Xcode アプリプロジェ�
 ![]({% image_buster /assets/img/ios/push_story/manual1.png %})
 
 {% alert important %}
-に**「埋め込まない**」が選択されていることを確認する。 **AppboyPushStory.xcframework**が選択されていることを確認する。
+\[**埋め込み**] 列の下で、**AppboyPushStory.xcframework** に対して \[**埋め込まない**] が選択されていることを確認します。
 {% endalert %}
 
 **\[ビルド設定] > \[その他のリンカーフラグ]** でプロジェクトの `Notification Content Extension` に `-ObjC` フラグを追加します。
@@ -105,7 +105,7 @@ Podfile を更新したら、ターミナル内で Xcode アプリプロジェ�
 ## ステップ5:通知ビューコントローラーを更新する
 
 {% tabs %}
-{% tab 目標-C %}
+{% tab OBJECTIVE-C %}
 
 `NotificationViewController.h` で、次の行を追加して新しいプロパティを追加し、ヘッダーファイルをインポートします。
 
@@ -144,7 +144,7 @@ Podfile を更新したら、ターミナル内で Xcode アプリプロジェ�
 ```
 
 {% endtab %}
-{% tab 速い %}
+{% tab swift %}
 
 `NotificationViewController.swift` で、次の行を追加してヘッダーファイルをインポートします。
 
@@ -198,8 +198,8 @@ class NotificationViewController: UIViewController, UNNotificationContentExtensi
 `Notification Content Extension` の `Info.plist` ファイルを開き、`NSExtension \ NSExtensionAttributes` で以下のキーを追加および変更します。
 
 `UNNotificationExtensionCategory` = `ab_cat_push_story_v2` (`String` タイプ)
- =  ( タイプ)
- =  ( タイプ)
+`UNNotificationExtensionDefaultContentHidden` = `YES` (`Boolean` タイプ)
+`UNNotificationExtensionInitialContentSizeRatio` = `0.65` (`Number` タイプ)
 
 ![][12]
 
@@ -210,7 +210,7 @@ class NotificationViewController: UIViewController, UNNotificationContentExtensi
 Braze インスタンスの設定に使用する `appboyOptions` 辞書で、`ABKPushStoryAppGroupKey` エントリを追加し、値をワークスペース API 識別子に設定します。
 
 {% tabs %}
-{% tab 目標-C %}
+{% tab OBJECTIVE-C %}
 
 ```objc
 NSMutableDictionary *appboyOptions = [NSMutableDictionary dictionary];
@@ -222,7 +222,7 @@ appboyOptions[ABKPushStoryAppGroupKey] = @"YOUR-APP-GROUP-IDENTIFIER";
 ```
 
 {% endtab %}
-{% tab 速い %}
+{% tab swift %}
 
 ```swift
 let appboyOptions: [AnyHashable: Any] = [

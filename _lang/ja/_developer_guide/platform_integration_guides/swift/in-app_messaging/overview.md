@@ -3,7 +3,7 @@ nav_title: 統合
 article_title: iOS 向けアプリ内メッセージの概要
 platform: Swift
 page_order: 0
-description: "この記事では、iOSのアプリ内メッセージングのタイプ、期待される動作、そしてSwift SDKのいくつかの使用例について説明する。"
+description: "この記事では、Swift SDK に関する、iOS のアプリ内メッセージングの種類、期待される動作、いくつかのユースケースについて説明します。"
 channel:
   - in-app messages
 
@@ -29,9 +29,9 @@ Braze は現在、以下のアプリ内メッセージタイプをデフォル�
 
 各アプリ内メッセージタイプは、コンテンツ、画像、アイコン、クリックアクション、分析、表示、配信に渡って高度にカスタマイズできます。
 
-アプリ内メッセージのプロパティと使い方の全リストは、[`InAppMessage` クラスのドキュメントを](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/inappmessage)参照のこと。
+アプリ内メッセージのプロパティと使用法の完全なリストについては、[`InAppMessage` クラスのドキュメント](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/inappmessage)を参照してください。
 
-すべてのアプリ内メッセージは、`Braze.InAppMessage` の列挙型であり、すべてのアプリ内メッセージの基本動作と特徴を定義している。各アプリ内メッセージの種類と対応する詳細は、以下のタブに記載されている。
+すべてのアプリ内メッセージは、`Braze.InAppMessage` の列挙型であり、これによりすべてのアプリ内メッセージの基本動作と特徴が定義されます。アプリ内メッセージの各種類と対応する詳細が以下のタブに示されています。
 
 ### メッセージタイプ別に予想される動作
 
@@ -42,7 +42,7 @@ Braze は現在、以下のアプリ内メッセージタイプをデフォル�
 
 [`Slideup`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/inappmessage/slideup-swift.struct) アプリ内メッセージは、画面の上部または下部から「スライドアップ」または「スライドダウン」するため、このような名前が付けられています。画面の一部分だけを覆い、効果的で邪魔にならないメッセージング機能を提供します。
 
-![]({% image_buster /assets/img/slideup-spec.png %}){: style="max-width:35%;border:none;"}
+![電話機の画面の上部と下部にスライド式で表示されたアプリ内メッセージ。]({% image_buster /assets/img/slideup-spec.png %}){: style="max-width:35%;border:none;"}
 
 
 {% endtab %}
@@ -50,26 +50,26 @@ Braze は現在、以下のアプリ内メッセージタイプをデフォル�
 
 [`Modal`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/inappmessage/modal-swift.struct) アプリ内メッセージは画面中央に表示され、半透明のパネルに囲まれます。よりクリティカルなメッセージングに有用で、最大2つのアナリティクス対応ボタンを装備できる。
 
-![]({% image_buster /assets/img/modal-header-text.png %}){: style="max-width:35%;border:none;"}
+![電話機の画面の中央に表示されたモーダルアプリ内メッセージ。]({% image_buster /assets/img/modal-header-text.png %}){: style="max-width:35%;border:none;"}
 
 {% endtab %}
-{% tab モーダルイメージ %}
+{% tab モーダル画像 %}
 
 [`Modal Image`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/inappmessage/modalimage-swift.struct) アプリ内メッセージは画面中央に表示され、半透明のパネルに囲まれます。これらのメッセージは、ヘッダーやメッセージテキストがないことを除けば、`Modal` タイプに似ている。よりクリティカルなメッセージングに有用で、最大2つのアナリティクス対応ボタンを装備できる。
 
-![]({% image_buster /assets/img/modal-full-image.png %}){: style="max-width:35%;border:none;"}
+![電話機の画面の中央に表示されたモーダル画面のアプリ内メッセージ。]({% image_buster /assets/img/modal-full-image.png %}){: style="max-width:35%;border:none;"}
 
 {% endtab %}
 {% tab フルスクリーン %}
 
-[`Full`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/inappmessage/full-swift.struct) アプリ内メッセージは、ユーザーコミュニケーションの内容とインパクトを最大化するのに有効です。`Full` 、アプリ内メッセージの上半分には画像が表示され、下半分にはテキストと最大2つのアナリティクス対応ボタンが表示される。
+[`Full`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/inappmessage/full-swift.struct) アプリ内メッセージは、ユーザーコミュニケーションの内容とインパクトを最大化するのに有効です。`Full` アプリ内メッセージの上半分には画像が含まれ、下半分にはテキストと最大2つの分析対応ボタンが表示されます。
 
 ![携帯電話の画面全体に表示されるフルスクリーンのアプリ内メッセージ。]({% image_buster /assets/img/full-screen-header-text.png %}){: style="max-width:35%;border:none;"}
 
 {% endtab %}
 {% tab フルスクリーン画像 %}
 
-[`Full Image`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/inappmessage/fullimage-swift.struct) アプリ内メッセージは、ヘッダーやメッセージテキストがないことを除けば、`Full` アプリ内メッセージと似ている。このメッセージ・タイプは、ユーザー・コミュニケーションの内容とインパクトを最大化するのに役立つ。`Full Image` 、アプリ内メッセージには画面全体に広がる画像が含まれ、オプションで最大2つのアナリティクス対応ボタンを表示できる。
+[`Full Image`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/inappmessage/fullimage-swift.struct) アプリ内メッセージは、ヘッダーやメッセージテキストがないことを除けば、`Full` アプリ内メッセージと似ている。このメッセージタイプは、ユーザーコミュニケーションの内容とインパクトを最大化するのに有効です。`Full Image` アプリ内メッセージには画面全体に広がる画像が含まれ、オプションで最大2つの分析対応ボタンが表示されます。
 
 ![携帯電話の画面全体に表示されるフルスクリーン画像のアプリ内メッセージ。]({% image_buster /assets/img/full-screen-image.png %}){: style="max-width:35%;border:none;"}
 
@@ -85,11 +85,11 @@ Braze は現在、以下のアプリ内メッセージタイプをデフォル�
 現在、iOS と Android のプラットフォームでは、iFrame でのカスタム HTML アプリ内メッセージの表示はサポートしていません。
 
 {% endtab %}
-{% tab コントロール %}
+{% tab Control %}
 
-[`Control`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/inappmessage/control-swift.struct) アプリ内メッセージはUIコンポーネントを含まず、主に分析目的で使用される。このタイプは、コントロールグループに送信されたアプリ内メッセージの受信を確認するために使用される。
+[`Control`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/inappmessage/control-swift.struct) アプリ内メッセージには UI コンポーネントは含まれず、主に分析用に使用されます。このタイプは、コントロールグループに送信されたアプリ内メッセージの受信を確認するために使用される。
 
-インテリジェント・セレクションおよびコントロール・グループの詳細については、[インテリジェント・セレクションを]({{site.baseurl}}/user_guide/sage_ai/intelligence/intelligent_selection/)参照のこと。
+インテリジェントセレクションとコントロールグループについては、[インテリジェントセレクション]({{site.baseurl}}/user_guide/sage_ai/intelligence/intelligent_selection/)を参照してください。
 
 {% endtab %}
 {% endtabs %}

@@ -7,7 +7,7 @@ platform:
   - iOS
   - Android
 page_order: 5
-description: "このリファレンス記事では、カードの解析、ニュースフィードデータの受信、分析など、Unityプラットフォームのニュースフィード統合について説明する。"
+description: "このリファレンス記事では、カードの解析、ニュースフィードデータの受信、分析など、Unity プラットフォームのニュースフィード統合について説明します。"
 
 ---
 
@@ -21,17 +21,17 @@ description: "このリファレンス記事では、カードの解析、ニュ
 
 ## Unityでニュースフィードのデータを受信する
 
-Unityのゲーム・オブジェクトを登録して、ニュース・フィード・カードの受信を通知することができる。 
+Unity ゲームオブジェクトを登録して、ニュースフィードカードの受信について通知を受けることができます。 
 
 iOSでは、Brazeコンフィギュレーションエディターからゲームオブジェクトリスナーを設定することを推奨する。
 
-`com_braze_feed_listener_callback_method_name` `com_braze_feed_listener_game_object_name` Androidでは、Unityプロジェクトの`braze.xml` 。
+ご使用の Android で、Unity プロジェクトの `braze.xml`で `com_braze_feed_listener_callback_method_name` と `com_braze_feed_listener_game_object_name` を設定します。
 
-どちらのプラットフォームでも、実行時にゲーム・オブジェクト・リスナーを設定するには、`AppboyBinding.ConfigureListener()` を使い、`BrazeUnityMessageType.NEWS_FEED` を指定する。
+どちらかのプラットフォームでゲームオブジェクトのリスナーを実行時に設定するには、`AppboyBinding.ConfigureListener()` を使用し、`BrazeUnityMessageType.NEWS_FEED` を指定します。
 
 ## カードを解析する
 
-ゲームオブジェクトのコールバックで受信した`string` メッセージは、あらかじめ用意されている[Feed][11]オブジェクトにパースされる。
+ゲームオブジェクトコールバックで受信した受信 `string` メッセージは、事前に指定された[フィード][11]オブジェクトに解析できます。このオブジェクトには、便宜上、[カード][12]オブジェクトの一覧があります。
 
 詳細は以下の例を参照のこと：
 
@@ -62,7 +62,7 @@ AppboyBinding.RequestFeedRefreshFromCache()
 
 ## 分析
 
-Brazeが直接表示しないカードについては、クリック数とインプレッション数を手動で記録する必要がある。
+Braze によって直接表示されないカードについては、クリックとインプレッションを手動でログに記録する必要があります。
 
 `LogClick()` と`LogImpression()` on[Card][12]を使って、特定のカードのクリック数とインプレッション数を記録する。
 

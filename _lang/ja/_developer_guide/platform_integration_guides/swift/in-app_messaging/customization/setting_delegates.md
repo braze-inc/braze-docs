@@ -16,15 +16,15 @@ channel:
 ## 前提条件
 
 `BrazeInAppMessageUIDelegate` を使用するには:
-* デフォルトの [`BrazeInAppMessageUI`][1]`inAppMessagePresenter`の実装を使用している必要がある。 
-* `BrazeUI` ライブラリをプロジェクトに含める必要がある。
+* デフォルトの [`BrazeInAppMessageUI`][1] 実装を `inAppMessagePresenter` として使用する必要があります。 
+* `BrazeUI` ライブラリーをプロジェクトに含める必要があります。
 
 ## アプリ内メッセージデリゲートの設定
 
 次のサンプルコードに従って、Braze インスタンスで [`BrazeInAppMessageUIDelegate`][34] デリゲートオブジェクトを設定します。
 
 {% tabs %}
-{% tab 速い %}
+{% tab SWIFT %}
 
 まず、`BrazeInAppMessageUIDelegate` プロトコルと、対応する必要なメソッドを実装します。以下の例では、このプロトコルをアプリケーションの `AppDelegate` クラスに実装しています。
 
@@ -43,7 +43,7 @@ AppDelegate.braze?.inAppMessagePresenter = inAppMessageUI
 ```
 
 {% endtab %}
-{% tab 目標-C %}
+{% tab OBJECTIVE-C %}
 
 まず、`BrazeInAppMessageUIDelegate` プロトコルと、対応する必要なメソッドを実装します。以下の例では、このプロトコルをアプリケーションの `AppDelegate` クラスに実装しています。
 
@@ -81,7 +81,7 @@ AppDelegate.braze.inAppMessagePresenter = inAppMessageUI;
 すべてのアプリ内メッセージは、デバイスの向きに関係なく特定の向きで表示されるように設定できます。好みの向きを設定するには、`inAppMessage(_:prepareWith:)` [デリゲートメソッド](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazeinappmessageuidelegate/inappmessage(_:preparewith:)-11fog)を使用して `PresentationContext` で `preferredOrientation` プロパティを設定します。 
 
 {% tabs %}
-{% tab 速い %}
+{% tab SWIFT %}
 
 たとえば、好みの向きとして縦を作成するには以下を設定します。
 
@@ -95,7 +95,7 @@ func inAppMessage(
 ```
 
 {% endtab %}
-{% tab 目標-C %}
+{% tab OBJECTIVE-C %}
 
 `inAppMessage(_:prepareWith:)` メソッドは、Objective-C では利用できません。
 
@@ -117,7 +117,7 @@ func inAppMessage(
 向きをメッセージごとに設定することもできます。このプロパティでは、各メッセージに使用可能なすべての方向タイプが定義されます。そのためには、該当する `Braze.InAppMessage` で `orientation` プロパティを設定します。
 
 {% tabs %}
-{% tab 速い %}
+{% tab SWIFT %}
 
 ```swift
 // Set inAppMessage orientation to support any configuration
@@ -131,7 +131,7 @@ inAppMessage.orientation = .landscape
 ```
 
 {% endtab %}
-{% tab 目標-C %}
+{% tab OBJECTIVE-C %}
 
 ```objc
 // Set inAppMessage orientation to support any configuration
@@ -154,7 +154,7 @@ inAppMessage.orientation = BRZInAppMessageRawOrientationLandscape;
 ボタンがあるアプリ内メッセージの種類では、`buttons` プロパティに追加の `themes` オブジェクトがあります。ボタンでダークモードのスタイルが採用されないようにするには、[`map(_:)`](https://developer.apple.com/documentation/swift/array/map(_:)-87c4d) を使用して `dark` テーマがない `light` テーマのボタンの新しい配列を作成できます。
 
 {% tabs %}
-{% tab 速い %}
+{% tab SWIFT %}
 
 ```swift
 func inAppMessage(
@@ -214,7 +214,7 @@ func inAppMessage(
 ```
 
 {% endtab %}
-{% tab 目標-C %}
+{% tab OBJECTIVE-C %}
 
 `inAppMessage(_:prepareWith:)` メソッドは、Objective-C では利用できません。
 
@@ -225,7 +225,7 @@ func inAppMessage(
 
 アプリ内メッセージのボタン情報にアクセスするか、クリック動作をオーバーライドするには、[`BrazeInAppMessageUIDelegate.inAppMessage(_:shouldProcess:)`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazeinappmessageuidelegate/inappmessage(_:shouldprocess:buttonid:message:view:)-122yi) を実装します。`true` を返して Braze にクリックアクションの処理を許可するか、`false` を返して動作をオーバーライドします。
 {% tabs %}
-{% tab 速い %}
+{% tab SWIFT %}
 
 ```swift
   func inAppMessage(
@@ -263,7 +263,7 @@ func inAppMessage(
 ```
 
 {% endtab %}
-{% tab 目標-C %}
+{% tab OBJECTIVE-C %}
 ```objc
 - (BOOL)inAppMessage:(BrazeInAppMessageUI *)ui
        shouldProcess:(enum BRZInAppMessageRawClickAction)clickAction
@@ -303,7 +303,7 @@ func inAppMessage(
 利用可能なアプリ内メッセージをユーザーエクスペリエンスの特定のポイントで表示するかどうかをコントロールできます。全画面でのゲーム中や読み込み画面など、アプリ内メッセージを表示させたくない状況がある場合は、保留中のアプリ内メッセージを遅延させるか、破棄することができます。アプリ内メッセージのタイミングをコントロールするには、`inAppMessage(_:displayChoiceForMessage:)` [デリゲートメソッド](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazeinappmessageuidelegate/inappmessage(_:displaychoiceformessage:)-9w1nb)を使用して `BrazeInAppMessageUI.DisplayChoice` プロパティを設定します。 
 
 {% tabs %}
-{% tab 速い %}
+{% tab SWIFT %}
 
 ```swift
 func inAppMessage(
@@ -313,7 +313,7 @@ func inAppMessage(
 ```
 
 {% endtab %}
-{% tab 目標-C %}
+{% tab OBJECTIVE-C %}
 
 ```objc
 - (enum BRZInAppMessageUIDisplayChoice)inAppMessage:(BrazeInAppMessageUI *)ui displayChoiceForMessage:(BRZInAppMessageRaw *)message
@@ -326,9 +326,9 @@ func inAppMessage(
 
 | ディスプレイの選択                      | 動作                                                                                                                    |
 | ----------------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
-| `.now`                              | メッセージはすぐに表示される。これはデフォルト値である。                                                       |
+| `.now`                              | メッセージはすぐに表示される。これはデフォルト値です。                                                       |
 | `.reenqueue`                        | メッセージは表示されず、スタックの一番上に戻される。                                       |
-| `.later`                            | メッセージは表示されず、スタックの一番上に戻される。(非推奨。`.reenqueue`) |
+| `.later`                            | メッセージは表示されず、スタックの一番上に戻される。(非推奨、`.reenqueue` を使用してください) |
 | `.discard`                          | メッセージは破棄され、表示されない。                                                                    |
 {: .reset-td-br-1 .reset-td-br-2}
 

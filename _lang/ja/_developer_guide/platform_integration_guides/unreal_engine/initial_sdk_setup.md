@@ -1,6 +1,6 @@
 ---
 nav_title: SDK の初期セットアップ
-article_title: アンリアル・エンジンのSDK初期セットアップ
+article_title: Unreal Engine の SDK 初期設定
 platform: Unreal Engine
 page_order: 0
 page_type: reference
@@ -10,19 +10,19 @@ search_rank: 1
 
 # SDK の初期セットアップ
 
-> Braze Unreal Engineプラグインを使用すると、最先端のリアルタイムエンジンおよびエディタであるUnreal Engineと統合することができる。Unreal Engine 4で構築したiOSおよびAndroidアプリで、ユーザーを測定し、エンゲージすることができる。 
+> Braze Unreal Engine プラグインを使用すると、最先端のリアルタイムエンジンおよびエディターである Unreal Engine と統合できます。Unreal Engine 4で構築したiOSおよびAndroidアプリで、ユーザーを測定し、エンゲージすることができる。 
 
 このプラグインを使えば、こんなこともできる：
-* アプリやゲーム内のセッションを測定・追跡する
-* アプリ内課金とカスタムイベントを追跡する
+* アプリやゲーム内のセッションを測定、追跡する
+* アプリ内購入とカスタムイベントを追跡する
 * 標準およびカスタム属性でユーザープロファイルを更新する
 * プッシュ通知を送信する
-* Unrealアプリを大規模なCanvasジャーニーと統合する
+* Unreal アプリを大規模なキャンバスジャーニーと統合する
 * アプリ内の行動に基づいて、EメールやSMSなどのクロスチャネルメッセージを送信する。
 
-Braze Unreal Engineプラグインの詳細については、[GitHubリポジトリを][1]参照のこと。
+Braze Unreal Engine プラグインの詳細については、[GitHub リポジトリ][1]を参照してください。
 
-![Braze Unreal SDK プラグインを Unreal Engine UI で見る。][2]
+![Unreal Engine UI に表示された Braze Unreal SDK プラグイン。][2]
 
 [1]: https://github.com/braze-inc/braze-unreal-sdk
 [2]: {% image_buster /assets/img/unreal_engine/EnablePlugin.png %}

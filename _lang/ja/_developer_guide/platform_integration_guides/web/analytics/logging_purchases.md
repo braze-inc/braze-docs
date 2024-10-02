@@ -1,10 +1,10 @@
 ---
 nav_title: 購入のロギング
-article_title: Webの購入の記録
+article_title: Web の購入のロギング
 platform: Web
 page_order: 4
 page_type: reference
-description: "この記事では、Webの購入を記録し、それらの購入にプロパティを追加する方法について説明します。"
+description: "この記事では、Web に関して、購入を記録し、それらの購入にプロパティを追加する方法について説明します。"
 
 ---
  
@@ -16,7 +16,7 @@ Braze は複数の通貨での購入に対応しています。ドル以外の�
 
 実装前に、カスタムイベント、カスタム属性、および購入イベントによって提供されるセグメンテーションオプションの例を[ベストプラクティス][3]で確認してください。
 
-この機能を使用するには、アプリでの購入が成功した後に[`logPurchase()`][8]呼び出しを追加します。`quantity`は100以下でなければなりません。
+この機能を使用するには、アプリでの購入が成功した後に[`logPurchase()`][8]呼び出しを追加します。`quantity` は100以下でなければなりません。
 
 ```javascript
 braze.logPurchase(product_id, price, "USD", quantity);
@@ -28,7 +28,7 @@ braze.logPurchase(product_id, price, "USD", quantity);
 
 #### オブジェクトのフォーマット
 
-キーは`string`オブジェクトであり、値は`string`、`numeric`、`boolean`、または`Date`オブジェクトである可能性があります。
+キーは `string` オブジェクトであり、値は `string`、`numeric`、`boolean`、または `Date` オブジェクトになります。
 
 ```javascript
 braze.logPurchase(product_id, price, "USD", quantity, {key: "value"});

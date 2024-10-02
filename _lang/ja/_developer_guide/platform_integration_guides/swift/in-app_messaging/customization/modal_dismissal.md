@@ -15,14 +15,14 @@ channel:
 たとえば、モーダル画像のアプリ内メッセージに対してこの機能を有効にする場合は、以下を設定します。
 
 {% tabs %}
-{% tab 速い %}
+{% tab SWIFT %}
 
 ```swift
 BrazeInAppMessageUI.ModalImageView.Attributes.defaults.dismissOnBackgroundTap = true
 ```
 
 {% endtab %}
-{% tab 目標-C %}
+{% tab OBJECTIVE-C %}
 
 `Attributes` によるカスタマイズは Objective-C では使用できません。
 
@@ -33,8 +33,8 @@ BrazeInAppMessageUI.ModalImageView.Attributes.defaults.dismissOnBackgroundTap = 
 
 | `DismissModalOnOutsideTap` | 説明 |
 |----------|-------------|
-| `true`         | モーダルなアプリ内メッセージは、外側のタップで解除される。     |
-| `false`        | デフォルトでは、モーダルなアプリ内メッセージは外部タップでは解除されない。 |
+| `true`         | モーダルアプリ内メッセージは、外部タップで閉じられます。     |
+| `false`        | デフォルトでは、モーダルアプリ内メッセージは外部タップをしても閉じられません。 |
 {: .reset-td-br-1 .reset-td-br-2}
 
 アプリ内メッセージのカスタマイズの詳細については、こちらの[記事](https://braze-inc.github.io/braze-swift-sdk/documentation/braze/in-app-message-customization)を参照してください。

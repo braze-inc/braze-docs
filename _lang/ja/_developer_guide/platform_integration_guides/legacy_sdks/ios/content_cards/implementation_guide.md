@@ -14,7 +14,7 @@ noindex: true
 
 <br>
 {% alert important %}
-基本的なコンテンツカード開発者統合ガイドをお探しですか?]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/content_cards/integration/).
+基本的なコンテンツカード開発者統合ガイドをお探しですか?[こちら]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/content_cards/integration/). でご確認ください。
 {% endalert %}
 
 # コンテンツカード実装ガイド
@@ -32,7 +32,7 @@ noindex: true
 これらのコードに関する考慮事項をしっかりと理解したら、[ユースケース](#sample-use-cases)をチェックして、カスタムオブジェクトの実装を開始します。
 
 {% tabs local %}
-{% tab コンテンツカード可能 %}
+{% tab ContentCardable %}
 {% subtabs global %}
 {% subtab Swift %}
 **ContentCardable プロトコル**<br>
@@ -83,7 +83,7 @@ extension ContentCardData: Equatable {
 {% endsubtab %}
 {% subtab Objective-C %}
 **ContentCardable プロトコル**<br>
-`ContentCardData` 、`ContentCardClassType` enumとともに`ABKContentCard` データを表すオブジェクト。`ABKContentCard` メタデータを持つカスタムオブジェクトをインスタンス化するために使用されるイニシャライザー。
+`ABKContentCard` メタデータを使用してカスタムオブジェクトをインスタンス化するために使用されるイニシャライザである `ContentCardClassType` enum と共に `ABKContentCard` データを表す `ContentCardData` オブジェクト。
 ```objc
 @protocol ContentCardable <NSObject>
  
@@ -224,7 +224,7 @@ typedef NS_ENUM(NSInteger, ContentCardClassType) {
 {% endsubtabs %}
 {% endtab %}
 
-{% tab コンテンツカードを扱う %}
+{% tab コンテンツカードを処理する %}
 {% subtabs global %}
 {% subtab Swift %}
 **コンテンツカードの要求**<br>
@@ -490,7 +490,7 @@ func contentCardable(with metaData: [ContentCardKey: Any], for classType: Conten
 メッセージセンターロジックは、Braze のキーと値のペアによって提供される `contentCardClassType` によって駆動されます。`addContentCardToView`メソッドを使用すると、これらのクラス型をフィルタリングして識別することができます。
 
 {% tabs %}
-{% tab スウィフト %}
+{% tab Swift %}
 **クリック時の動作に `class_type` を使用する**<br>
 メッセージをクリックすると、`ContentCardClassType` が次の画面の入力方法を制御します。
 ```swift
@@ -529,7 +529,7 @@ func addContentCardToView(with message: Message) {
 ##### 分析をログに記録する準備ができましたか。
 [以下のセクション](#logging-impressions-clicks-and-dismissals)を参照して、データのフローがどうあるべきかを理解してください。
 
-![画面左下には、50％プロモーションを示すインタラクティブなコンテンツカードが表示される。クリック後、カートにプロモーションが適用される。][6]{: style="border:0;"}{: style="float:right;max-width:45%;border:0;margin-left:15px;"} 
+![画面左下に50%のプロモーションを示すインタラクティブなコンテンツカードが表示されている。クリックすると、カートにプロモーションが適用されます。][6]{: style="border:0;"}{: style="float:right;max-width:45%;border:0;margin-left:15px;"} 
 
 ### インタラクティブコンテンツカード
 <br>
@@ -559,7 +559,7 @@ func addContentCardToView(with message: Message) {
 #### 実装コンポーネント<br><br>
 
 {% tabs %}
-{% tab スウィフト %}
+{% tab Swift %}
 **分析のロギング**<br>
 ロギングメソッドは、`ContentCardable` プロトコルに準拠するオブジェクトから直接呼び出すことができます。
 ```swift
@@ -621,7 +621,7 @@ extension BrazeManager {
 
 {% details ContentCardKeyヘルパーファイル %}
 {% tabs %}
-{% tab スウィフト %}
+{% tab Swift %}
 ```swift
 enum ContentCardKey: String {
   case idString

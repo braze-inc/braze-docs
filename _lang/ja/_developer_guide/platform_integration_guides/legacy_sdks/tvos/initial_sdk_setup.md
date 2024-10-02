@@ -83,7 +83,7 @@ pod install
 最後に、\[**設定の管理**] ページの正しい値で `YOUR-API-KEY` を更新します。
 
 {% endtab %}
-{% tab 迅速 %}
+{% tab SWIFT %}
 
 Braze SDK を CocoaPods または Carthage と統合する場合は、次のコード行を `AppDelegate.swift` ファイルに追加します。
 
@@ -116,15 +116,15 @@ Appboy.start(withApiKey: "YOUR-API-KEY", in:application, withLaunchOptions:launc
 2019 年 12 月をもって、カスタムエンドポイントは提供されなくなりました。既存のカスタムエンドポイントがある場合は、それを引き続き使用できます。詳細については、<a href="{{site.baseurl}}/api/basics/#endpoints">利用可能なエンドポイントのリスト</a>を参照してください。
 {% endalert %}
 
-Braze担当者は、すでに\[正しいエンドポイント]({{ site.baseurl }}/user_guide/を通知しているはずです。administrative/access_braze/sdk_endpoints/).
+Braze 担当者は、\[正しいエンドポイント]({{ site.baseurl }}/user_guide/administrative/access_braze/sdk_endpoints/).についてすでに通知しているはずです。
 
 #### コンパイル時のエンドポイント構成 (推奨)
 既存のカスタムエンドポイントが指定されている場合:
-- Braze iOS SDK v3.0.2 以降では、`Info.plist` を使用してカスタムエンドポイントを設定できます。`Appboy` ディクショナリを Info.plist ファイルに追加します。`Appboy` 辞書内で、`https://sdk.iad-01.braze.com` 文字列サブエントリを追加し、値をカスタムエンドポイント URL の権限 (たとえば、`sdk.iad-01.braze.com` ではなく `Endpoint`) に設定します。
+- Braze iOS SDK v 3.0.2以降では、`Info.plist` ファイルを使用してカスタムエンドポイントを設定できます。`Appboy` ディクショナリを Info.plist ファイルに追加します。`Appboy` 辞書内で、`https://sdk.iad-01.braze.com` 文字列サブエントリを追加し、値をカスタムエンドポイント URL の権限 (たとえば、`sdk.iad-01.braze.com` ではなく `Endpoint`) に設定します。
 
 #### ランタイムエンドポイント構成
 既存のカスタムエンドポイントが指定されている場合:
-- Braze iOS SDK v3.17.0+ 以降では、`appboyOptions` パラメータの`ABKEndpointKey` から`startWithApiKey:inApplication:withLaunchOptions:withAppboyOptions:` にエンドポイントの設定を上書きできます。値をカスタムエンドポイント URL 権限に設定します (例: `https://sdk.iad-01.braze.com` ではなく `sdk.iad-01.braze.com`)。
+- Braze iOS SDK v 3.17.0以降では、`startWithApiKey:inApplication:withLaunchOptions:withAppboyOptions:` に渡される `appboyOptions` パラメーター内の `ABKEndpointKey` を使用してエンドポイントの設定をオーバーライドできます。値をカスタムエンドポイント URL 権限に設定します (例: `https://sdk.iad-01.braze.com` ではなく `sdk.iad-01.braze.com`)。
 
 {% alert note %}
 `ABKAppboyEndpointDelegate` を使用した実行時のエンドポイントの設定サポートは、Braze iOS SDK v 3.17.0 で削除されました。既に `ABKAppboyEndpointDelegate` を使用している場合は、Braze iOS SDK バージョン v3.14.1 から v3.16.0 では、`getApiEndpoint()` メソッドの `dev.appboy.com` への参照を `sdk.iad-01.braze.com` への参照に置き換える必要があります。
@@ -158,7 +158,7 @@ pod update
 ```
 
 {% endtab %}
-{% tab 迅速 %}
+{% tab SWIFT %}
 
 `AppDelegate.swift` の `application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool` メソッド内に、次の Braze メソッドを追加します。
 
@@ -183,7 +183,7 @@ Appboy.start(withApiKey: "YOUR-API-KEY",
 
 Braze起動キーの一覧については、[Appboy.h][apple_initial_setup_5]を参照してください。
 
-## Appboy.sharedInstance() およびSwift nullability
+## Appboy.sharedInstance() および Swift の nullability
 一般的な慣例とは多少異なりますが、`Appboy.sharedInstance()` シングルトンはオプションです。これは、`startWithApiKey:` が呼び出さられる前は `sharedInstance` が `nil` であり、遅延初期化を使用できる非標準で無効ではない実装がいくつかあるためです。
 
 Appboy の `sharedInstance` (標準実装) にアクセスする前に `didFinishLaunchingWithOptions:` デリゲートで `startWithApiKey:` を呼び出すと、`Appboy.sharedInstance()?.changeUser("testUser")` のようなオプションのチェーンを使用して、煩雑なチェックを回避できます。これは、非 null `sharedInstance` を想定した Objective-C 実装と同等になります。

@@ -20,7 +20,7 @@ description: "このリファレンス記事では、Swift SDK のカスタム�
 以下は名属性の設定例です。
 
 {% tabs %}
-{% tab 迅速 %}
+{% tab swift %}
 
 ```swift
 AppDelegate.braze?.user.set(firstName: "first_name")
@@ -55,7 +55,7 @@ Braze では、デフォルトユーザー属性以外にも、複数の異な�
 ### 文字列値のカスタム属性
 
 {% tabs %}
-{% tab 迅速 %}
+{% tab swift %}
 
 ```swift
 AppDelegate.braze?.user.setCustomAttribute(key: "your_attribute_key", value: "your_attribute_value")
@@ -74,7 +74,7 @@ AppDelegate.braze?.user.setCustomAttribute(key: "your_attribute_key", value: "yo
 ### 整数値のカスタム属性
 
 {% tabs %}
-{% tab 迅速 %}
+{% tab swift %}
 
 ```swift
 AppDelegate.braze?.user.setCustomAttribute(key: "your_attribute_key", value: yourIntegerValue)
@@ -95,7 +95,7 @@ AppDelegate.braze?.user.setCustomAttribute(key: "your_attribute_key", value: you
 Braze では、データベース内での `float` 値と `double` 値の扱いが同じです。
 
 {% tabs %}
-{% tab 迅速 %}
+{% tab swift %}
 
 ```swift
 AppDelegate.braze?.user.setCustomAttribute(key: "your_attribute_key", value: yourDoubleValue)
@@ -114,7 +114,7 @@ AppDelegate.braze?.user.setCustomAttribute(key: "your_attribute_key", value: you
 ### ブール値のカスタム属性
 
 {% tabs %}
-{% tab 迅速 %}
+{% tab swift %}
 
 ```swift
 AppDelegate.braze?.user.setCustomAttribute("your_attribute_key", value: yourBoolValue)
@@ -133,7 +133,7 @@ AppDelegate.braze?.user.setCustomAttribute("your_attribute_key", value: yourBool
 ### 日付値のカスタム属性
 
 {% tabs %}
-{% tab 迅速 %}
+{% tab swift %}
 
 ```swift
 AppDelegate.braze?.user.setCustomAttribute("your_attribute_key", dateValue:yourDateValue)
@@ -155,7 +155,7 @@ AppDelegate.braze?.user.setCustomAttribute("your_attribute_key", dateValue:yourD
 
 
 {% tabs %}
-{% tab 迅速 %}
+{% tab swift %}
 
 ```swift
 // Setting a custom attribute with an array value
@@ -188,7 +188,7 @@ AppDelegate.braze?.user.removeFromCustomAttributeArray(key: "array_name", value:
 カスタム属性は、次のメソッドを使用して設定を解除することもできます。
 
 {% tabs %}
-{% tab 迅速 %}
+{% tab swift %}
 
 ```swift
 AppDelegate.braze?.user.unsetCustomAttribute(key: "your_attribute_key")
@@ -209,7 +209,7 @@ AppDelegate.braze?.user.unsetCustomAttribute(key: "your_attribute_key")
 このコードは、インクリメントカスタム属性の例です。カスタム属性の値は、正または負の整数か、long 値でインクリメントできます。
 
 {% tabs %}
-{% tab 迅速 %}
+{% tab swift %}
 
 ```swift
 AppDelegate.braze?.user.incrementCustomUserAttribute(key: "your_attribute_key", by: incrementIntegerValue)
@@ -243,9 +243,9 @@ REST API を使用してユーザー属性を設定することもできます�
 
 | サブスクリプションのステータス | 定義 |
 | ------------------- | ---------- |
-| `optedIn` | サブスクライブされ、明示的にオプトイン |
+| `optedIn` | 配信登録済み、かつ明示的にオプトイン済み |
 | `subscribed` | 購読済み、ただし明示的に選択されていない |
-| `unsubscribed` | サブスクライブされていない、および/または明示的にオプトアウトされた |
+| `unsubscribed` | 配信停止済みまたは明示的にオプトアウト済み、あるいはその両方 |
 {: .reset-td-br-1 .reset-td-br-2}
 
 アプリにプッシュ通知の送信を許可するユーザーは、iOS で明示的なオプトインが必要であるため、ステータス `optedIn` にデフォルト設定されます。
@@ -255,7 +255,7 @@ REST API を使用してユーザー属性を設定することもできます�
 ### メールサブスクリプションの設定
 
 {% tabs %}
-{% tab 迅速 %}
+{% tab swift %}
 
 ```swift
 AppDelegate.braze?.user.set(emailSubscriptionState: Braze.User.SubscriptionState)
@@ -274,7 +274,7 @@ AppDelegate.braze?.user.set(emailSubscriptionState: Braze.User.SubscriptionState
 ### プッシュ通知サブスクリプションの設定
 
 {% tabs %}
-{% tab 迅速 %}
+{% tab swift %}
 
 ```swift
 AppDelegate.braze?.user.set(pushNotificationSubscriptionState: Braze.User.SubscriptionState)

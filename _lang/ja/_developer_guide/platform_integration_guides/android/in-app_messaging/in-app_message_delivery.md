@@ -25,7 +25,7 @@ channel:
 
 ## 配信セマンティクス
 
-ユーザーが対象となるすべてのアプリ内メッセージは、セッション開始時にユーザーのデバイスに配信されます][84]。配信時に、SDK はアセットをプリフェッチしてトリガー時にすぐに利用できるようにし、表示遅延を最小限に抑えます。
+ユーザーが受信できるすべてのアプリ内メッセージは、\[セッション開始][84] 時にユーザーのデバイスに配信されます。配信時に、SDK はアセットをプリフェッチしてトリガー時にすぐに利用できるようにし、表示遅延を最小限に抑えます。
 
 トリガーイベントに複数の適格なアプリ内メッセージが関連付けられている場合、最も優先度の高いアプリ内メッセージのみが配信されます。
 
@@ -49,7 +49,7 @@ channel:
 
 ### ステップ1:サイレントプッシュを受信するプッシュコールバックを作成する
 
-特定のサイレントプッシュ通知をリッスンするには、カスタムプッシュコールバックを登録します。詳細については、\[標準のAndroidプッシュ統合][78]をご参照ください。
+特定のサイレントプッシュ通知をリッスンするには、カスタムプッシュコールバックを登録します。詳細については、\[標準 Android プッシュ統合][78] を参照してください。
 
 配信されるアプリ内メッセージに関して 2 つのイベントが記録されます。1 つはサーバーによって記録され、もう 1 つはカスタムプッシュコールバック内から記録されます。同じイベントが重複しないようにするには、プッシュコールバック内からログに記録されるイベントは、サーバー送信イベントと同じ名前ではなく、「アプリ内メッセージトリガーイベント」などの一般的な命名規則に従う必要があります。そうしないと、単一のユーザーアクションについてログに記録される重複イベントによって、セグメンテーションとユーザーデータが影響を受ける可能性があります。
 
@@ -98,7 +98,7 @@ Braze.getInstance(applicationContext).subscribeToPushNotificationEvents { event 
 
 プッシュキャンペーンにはキーと値のペアエクストラを含める必要があります。これは、このプッシュキャンペーンが SDK カスタムイベントを記録するために送信されることを示します。このイベントは次のアプリ内メッセージをトリガーするために使用されます。
 
-![キーと値のペアの2つのセット:IS_SERVER_EVENT set to "true", and CAMPAIGN_NAME set to "example キャンペーン name".][76]{: style="max-width:70%;" }
+![キーと値のペアの2つのセット:IS_SERVER_EVENT は「true」に設定され、CAMPAIGN_NAME は「キャンペーン名の例」に設定されます。][76]{: style="max-width:70%;" }
 
 前出のプッシュコールバックサンプルコードは、キーと値のペアを認識して、適切な SDK カスタムイベントをログに記録します。
 
@@ -168,5 +168,5 @@ BrazeInAppMessageManager.getInstance().addInAppMessage(inAppMessage)
 [75]: {% image_buster /assets/img_archive/serverSentPush.png %}
 [76]: {% image_buster /assets/img_archive/kvpConfiguration.png %}
 [77]: {% image_buster /assets/img_archive/iam_event_trigger.png %}
-[78]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/integration/standard_integration/#android-push-listener-callback
+ [78]:{{site.baseurl}}guide/platform_integration_guides/android/push_notifications/android/integration/standard_integration/#android-push-listener-callback
 [84]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/tracking_sessions/#session-lifecycle

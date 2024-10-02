@@ -15,7 +15,7 @@ description: "このリファレンス記事では、Google Tag Manager を初�
 
 ## SDK の初期化{#initializing-android-google-tag-provider}
 
-Braze Android SDK は、Google Tag Manager][5] 内で設定されたタグによって初期化および制御できます。
+Braze Android SDK は、\[Google Tag Manager][5] 内で設定されたタグによって初期化および制御できます。
 
 この実装の前提条件として、[Android SDK の統合][1]が完了している必要があります。
 
@@ -29,7 +29,7 @@ Braze Android SDK は、Google Tag Manager][5] 内で設定されたタグによ
 
 最初に、`played song` である「イベント名」を検索するトリガーを作成します
 
-![Google Tag Manager のカスタムトリガーは、「イベント名」が「再生された曲」と等しい場合にいくつかのイベントをトリガーするように設定されています。][3]
+![「eventName」が「played song」である場合に一部のイベントに対してトリガーするよう設定された Google Tag Manager のカスタムトリガー。][3]
 
 次に、新しいタグ (「Function Call」) を作成し、この記事で後述する[カスタムタグプロバイダー](#adding-android-google-tag-provider)のクラスパスを入力します。
 
@@ -43,7 +43,7 @@ Braze Android SDK は、Google Tag Manager][5] 内で設定されたタグによ
 この例のカスタムタグプロバイダーは、これらのキーを使用して、Google Tag Manager からデータを受信したときに Braze に送信するアクションと送信するイベント名を決定します。
 {% endalert %}
 
-![Google Tag Manager のタグには、クラスパスとキーと値のペアフィールドがあります。このタグは、以前に作成された「再生された曲」トリガーでトリガーされるように設定されています。][4]
+![classpath フィールドと、キーと値のペアフィールドを含む Google Tag Manager のタグ。このタグは、以前に作成された「再生された曲」トリガーでトリガーされるように設定されています。][4]
 
 また、追加のキーと値のペア引数をタグに含めることもできます。この引数は、カスタムイベントプロパティとして Braze に送信されます。`eventName` および `actionType` は、カスタムイベントプロパティで無視されません。次のサンプルタグでは、`genre` で引数を渡します。これは、Google Tag Manager でタグ変数を使用して定義されており、アプリでロギングしたカスタムイベントから取得されます。
 
@@ -412,5 +412,5 @@ BrazeGtmTagProvider.setApplicationContext(this.applicationContext)
 [2]: https://developers.google.com/tag-manager/android/v5/
 [3]: {% image_buster /assets/img/android_google_tag_manager/gtm_android_trigger.png %}
 [4]: {% image_buster /assets/img/android_google_tag_manager/gtm_android_function_call_tag.png %}
-[5]: https://tagmanager.google.com/
+ https://tagmanager.google.com/
 [6]: {% image_buster /assets/img/android_google_tag_manager/gtm_android_eventname_variable.png %}

@@ -42,7 +42,7 @@ Braze には、ベースモデルを共有する4つのユニークなコンテ�
 |`getExtras()` | このカードのKey-Valueエクストラのマップを返す。|
 |`getCreated()`  | カードの作成時刻をBrazeからunixタイムスタンプで返す。|
 |`getIsPinned` | カードがピン留めされているかどうかを示すブール値を返す。|
-|`getOpenUriInWebView()`  | このカードの Uris を開くべきかどうかを示すブール値を返す。 <br> をBraze WebViewに表示するかどうか。|
+|`getOpenUriInWebView()`  | このカードの Uris を開くべきかどうかを示すブール値を返す。 <br> Braze WebView で開くべきかどうか|
 |`getExpiredAt()` | カードの有効期限を取得する。|
 |`getIsRemoved()` | エンドユーザーがこのカードを退会したかどうかを示すブール値を返す。|
 |`getIsDismissible()`  | カードがピン留めされているかどうかを示すブール値を返す。|
@@ -55,7 +55,7 @@ Braze には、ベースモデルを共有する4つのユニークなコンテ�
 |プロパティ | 説明 |
 |---|---|
 |`getImageUrl()` | カードの画像のURLを返す。|
-|`getUrl()` | カードがクリックされた後に開かれるURLを返す。これはHTTP(s)URLまたはプロトコルURLである。|
+|`getUrl()` | カードがクリックされた後に開かれるURLを返す。HTTP (s) URL でもプロトコル URL でもかまいません。|
 |`getDomain()` | プロパティ URL のリンクテキストを返す。|
 {: .reset-td-br-1 .reset-td-br-2}
 
@@ -68,7 +68,7 @@ Braze には、ベースモデルを共有する4つのユニークなコンテ�
 |`getImageUrl()` | カードの画像のURLを返す。|
 |`getTitle()` | カードのタイトルテキストを返す。|
 |`getDescription()` | カードの本文を返す。|
-|`getUrl()` | カードがクリックされた後に開かれるURLを返す。これはHTTP(s)URLまたはプロトコルURLである。|
+|`getUrl()` | カードがクリックされた後に開かれるURLを返す。HTTP (s) URL でもプロトコル URL でもかまいません。|
 |`getDomain()` | プロパティ URL のリンクテキストを返す。 |
 {: .reset-td-br-1 .reset-td-br-2}
 
@@ -80,9 +80,9 @@ Braze には、ベースモデルを共有する4つのユニークなコンテ�
 |---|---|
 |`getTitle()` | カードのタイトルテキストを返す。 |
 |`getDescription()` | カードの本文を返す。 |
-|`getUrl()` | カードがクリックされた後に開かれるURLを返す。これはHTTP(s)URLまたはプロトコルURLである。 | 
+|`getUrl()` | カードがクリックされた後に開かれるURLを返す。HTTP (s) URL でもプロトコル URL でもかまいません。 | 
 |`getDomain()` | プロパティ URL のリンクテキストを返す。 |
-|`getImageUrl()` | クラシックなShort News Cardにのみ適用される。 |
+|`getImageUrl()` | カードの画像の URL を返します。クラシックショートニュースカードにのみ適用されます。 |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## カードメソッド
@@ -93,7 +93,7 @@ Braze には、ベースモデルを共有する4つのユニークなコンテ�
 |---|---|
 |`logImpression()` | 特定のカードのインプレッションを手動でBrazeに記録する。 |
 |`logClick()` | 特定のカードのBrazeへのクリックを手動で記録する。 |
-|`setIsDismissed()` | 特定のカードのBrazeへの解雇を手動で記録する。カードがすでに却下済みとしてマークされている場合、そのカードを再度却下済みとしてマークすることはできません。 |
+|`setIsDismissed()` | 特定のカードの消去を手動で Braze に記録します。カードがすでに却下済みとしてマークされている場合、そのカードを再度却下済みとしてマークすることはできません。 |
 {: .reset-td-br-1 .reset-td-br-2}
 
 [1]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/index.html

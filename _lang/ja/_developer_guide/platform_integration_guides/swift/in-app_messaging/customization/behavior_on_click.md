@@ -15,7 +15,7 @@ channel:
 この動作をカスタマイズするために、以下のサンプルを参照して `clickAction` プロパティを変更できます。
 
 {% tabs %}
-{% tab 速い %}
+{% tab SWIFT %}
 
 ```swift
 func inAppMessage(
@@ -29,7 +29,7 @@ func inAppMessage(
 ```
 
 {% endtab %}
-{% tab 目標-C %}
+{% tab OBJECTIVE-C %}
 
 `inAppMessage(_:prepareWith:)` メソッドは、Objective-C では利用できません。
 
@@ -40,11 +40,11 @@ func inAppMessage(
 
 `Braze.InAppMessage` の`clickAction` プロパティは `.none` にデフォルト設定されていますが、次のうちいずれかの値に設定できます。
 
-| `ClickAction` | オン・クリックの行動 |
+| `ClickAction` | クリック時動作 |
 | -------------------------- | -------- |
 | `.url(URL, useWebView: Bool)` | 指定されたURLを外部ブラウザで開く。`useWebView` が`true` に設定されていれば、ウェブビューで開く。 |
 | `.newsFeed` | メッセージがクリックされるとニュースフィードが表示され、メッセージは解除される。<br><br>**注:**ニュースフィードは非推奨になります。詳しくは[マイグレーション・ガイドを]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/)チェックしてほしい。 |
-| `.none` | クリックするとメッセージが消える。 |
+| `.none` | クリックするとメッセージが却下されます。 |
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% alert important %}
@@ -56,7 +56,7 @@ func inAppMessage(
 アプリ内メッセージがクリックされると、次の [`BrazeInAppMessageUIDelegate`][34] デリゲートメソッドが呼び出されます。アプリ内メッセージボタンと HTML アプリ内メッセージボタン（リンク）のクリックについては、ボタン ID がオプションのパラメータとして提供されます。
 
 {% tabs %}
-{% tab 速い %}
+{% tab SWIFT %}
 
 ```swift
 func inAppMessage(
@@ -69,7 +69,7 @@ func inAppMessage(
 ```
 
 {% endtab %}
-{% tab 目標-C %}
+{% tab OBJECTIVE-C %}
 
 ```objc
 - (BOOL)inAppMessage:(BrazeInAppMessageUI *)ui

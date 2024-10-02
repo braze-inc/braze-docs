@@ -18,7 +18,7 @@ description: "このリファレンス記事では、Unity プラットフォー
 
 ## デフォルトユーザー属性の割り当て
 
-ユーザー 属性sを割り当てるには、BrazeBBindingオブジェクトでアプリの適切なメソッドを呼び出す必要があります。以下は、このメソッドを使用して呼び出すことができる組み込み属性s の一覧です。
+ユーザー属性を割り当てるには、共有 BrazeBinding オブジェクトで適切なメソッドを呼び出す必要があります。以下は、このメソッドを使用して呼び出すことができる組み込み属性s の一覧です。
 
 ### 名
 `AppboyBinding.SetUserFirstName("first name");`
@@ -26,10 +26,10 @@ description: "このリファレンス記事では、Unity プラットフォー
 ### 姓
 `AppboyBinding.SetUserLastName("last name");`
 
-### ユーザメール
+### ユーザーのメールアドレス
 `AppboyBinding.SetUserEmail("email@email.com");`
 
->  Braze 経由でメールを送信していない場合でも、アドレスをメールに設定することは価値があります。電子メールを使用すると、個々のユーザープロファイルの検索や問題の発生時のトラブルシューティングが容易になります。
+>  Braze 経由でメールを送信していない場合でも、メールアドレスを設定しておくと便利です。電子メールを使用すると、個々のユーザープロファイルの検索や問題の発生時のトラブルシューティングが容易になります。
 
 ### 性別
 `AppboyBinding.SetUserGender(Appboy.Models.Gender);`
@@ -40,10 +40,10 @@ description: "このリファレンス記事では、Unity プラットフォー
 ### ユーザー国
 `AppboyBinding.SetUserCountry("country name");`
 
-### ユーザーホームシティ
+### ユーザーの市区町村
 `AppboyBinding.SetUserHomeCity("city name");`
 
-### ユーザメール サブスクリプション
+### ユーザーのメールサブスクリプション
 `AppboyBinding.SetUserEmailNotificationSubscriptionType(AppboyNotificationSubscriptionType);`
 
 ### ユーザプッシュサブスクリプション
@@ -55,7 +55,7 @@ description: "このリファレンス記事では、Unity プラットフォー
 ## カスタムユーザー属性の割り当て
 
 Braze では、デフォルトユーザー属性以外にも、複数の異なるデータ型を使用してカスタム属性を定義できます。
-これらの属性のセグメンテーションオプションの詳細については、["Best Practices" ドキュメント][1] を参照してください。
+これらの各属性で使用できるセグメンテーションオプションの詳細については、このセクション内の「[ベストプラクティス][1]」ドキュメントを参照してください。
 
 ### カスタム属性値を設定する
 
@@ -77,14 +77,14 @@ AppboyBinding.IncrementCustomUserAttribute("key", increment(int))
 ```
 
 {% endtab %}
-{% tab ダブル %}
+{% tab Double %}
 
 ```csharp
 AppboyBinding.SetCustomUserAttribute("custom double attribute key", 'double value');
 ```
 
 {% endtab %}
-{% tab 文字列 %}
+{% tab String %}
 
 ```csharp
 AppboyBinding.SetCustomUserAttribute("custom string attribute key", "string custom attribute");
@@ -133,24 +133,24 @@ REST API を使用してユーザー属性を設定することもできます�
 
 ## ユーザーサブスクリプションの設定
 
-ユーザーs(メールまたはプッシュ)のサブスクリプションを設定するには、以下の関数を呼び出します     
-`AppboyBinding.SetUserEmailNotificationSubscriptionType()` または`AppboyBinding.SetPushNotificationSubscriptionType()`。これらの関数はどちらも引数としてパラメータ`Appboy.Models.AppboyNotificationSubscriptionType` を取ります。この型には、次の 3 つの状態があります。
+ユーザーのサブスクリプション (メールまたはプッシュ) を設定するには、以下の関数を呼び出します。     
+それぞれ `AppboyBinding.SetUserEmailNotificationSubscriptionType()` または`AppboyBinding.SetPushNotificationSubscriptionType()`。これらの関数はどちらも引数としてパラメータ`Appboy.Models.AppboyNotificationSubscriptionType` を取ります。この型には、次の 3 つの状態があります。
 
 | サブスクリプションのステータス | 定義 |
 | ------------------- | ---------- |
-| `OPTED_IN` | サブスクライブされ、明示的にオプトイン |
+| `OPTED_IN` | 配信登録済み、かつ明示的にオプトイン済み |
 | `SUBSCRIBED` | 購読済み、ただし明示的に選択されていない |
-| `UNSUBSCRIBED` | サブスクライブされていない、および/または明示的にオプトアウトされた |
+| `UNSUBSCRIBED` | 配信停止済みまたは明示的にオプトアウト済み、あるいはその両方 |
 {: .reset-td-br-1 .reset-td-br-2}
 
->  ユーザー s プッシュ通知 s を送信するために明示的なオプトインは必要ありません。ユーザーがプッシュ登録されると、デフォルトで`OPTED_IN`ではなく`SUBSCRIBED`に設定されます。詳細については、[ サブスクリプションs と明示的なopt-ins][10] の実装に関するドキュメントを参照してください。
+>  Windows では、ユーザーにプッシュ通知を送る際に明示的なオプトインは必要ありません。ユーザーがプッシュ登録されると、デフォルトで `OPTED_IN` ではなく `SUBSCRIBED` に設定されます。詳細については、[ サブスクリプションs と明示的なopt-ins][10] の実装に関するドキュメントを参照してください。
 
 - `EmailNotificationSubscriptionType`
   - 有効なメールアドレスを受信すると、ユーザは自動的に`SUBSCRIBED` に設定されます。ただし、明示的なオプトインプロセスを確立し、ユーザーから明示的な同意を受け取ったときにこの値を`OPTED_IN` に設定することをお勧めします。詳細については、[ユーザーサブスクリプションの変更][8]のドキュメントを参照してください。
 - `PushNotificationSubscriptionType`
   - ユーザは、有効なプッシュ登録時に自動的に`SUBSCRIBED` に設定されます。ただし、明示的なオプトインプロセスを確立し、ユーザーから明示的な同意を受け取ったときにこの値を`OPTED_IN` に設定することをお勧めします。詳細については、[ユーザーサブスクリプションの変更][8]のドキュメントを参照してください。
 
->  これらのタイプは、`Appboy.Models.AppboyNotificationSubscriptionType` に該当します。
+>  これらのタイプは `Appboy.Models.AppboyNotificationSubscriptionType` に属します
 
 ## サンプルコード
 

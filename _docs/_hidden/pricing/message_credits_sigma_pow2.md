@@ -2648,8 +2648,8 @@ Column definitions are as follows:
         <td>WhatsApp</td>
         <td>7.5</td>
         <td>United Kingdom Marketing</td>
-        <td>1.85</td>
-        <td>13.88</td>
+        <td>1.40</td>
+        <td>10.50</td>
     </tr>
     <tr>
         <td>WhatsApp</td>

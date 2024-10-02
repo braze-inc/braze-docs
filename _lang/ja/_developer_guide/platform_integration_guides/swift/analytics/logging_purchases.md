@@ -11,7 +11,7 @@ description: "このリファレンス記事では、アプリ内購入と売上
 
 アプリ内での購入を記録して、売上を経時的にトラッキングしたり、売上源を横断してトラッキングしたりできます。また、ユーザーを生涯価値でセグメント化することもできます。
 
-Braze では、複数の通貨での購入がサポートされています。米ドル以外の通貨でレポートする購入は、レポートされた日付の為替レートに基づいて米ドル単位でダッシュボードに表示されます。
+Braze は複数の通貨での購入に対応しています。ドル以外の通貨でレポートする購入は、レポートされた日付の為替レートに基づいてドルでダッシュボードに表示されます。
 
 実装前に、[ベストプラクティス][5]のカスタムイベント、カスタム属性、および購入イベントによって提供されるセグメンテーションオプションの例と、[イベント命名規則]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/event_naming_conventions/)のメモを必ず確認しておいてください。
 
@@ -20,14 +20,14 @@ Braze では、複数の通貨での購入がサポートされています。�
 この機能を使用するには、アプリ内購入が正常に完了した後でこのメソッド呼び出しを追加します。
 
 {% tabs %}
-{% tab 速い %}
+{% tab SWIFT %}
 
 ```swift
 AppDelegate.braze?.logPurchase(productID: "product_id", currency: "USD", price: price)
 ```
 
 {% endtab %}
-{% tab 目標-C %}
+{% tab OBJECTIVE-C %}
 
 ```objc
 [AppDelegate.braze logPurchase:"product_id"
@@ -51,20 +51,20 @@ AppDelegate.braze?.logPurchase(productID: "product_id", currency: "USD", price: 
 ### 数量の追加
 顧客が 1 回のチェックアウト手続きで同じ購入を複数回行う場合は、購入に数量を追加できます。これを行うには、数量として `Int` を渡します。
 
-* SDKが購入を記録するためには、数量入力は\[0, 100] ] の範囲内でなければならない。
+* SDK で購入を記録するには、数量入力が \[0, 100] の範囲内である必要があります。
 * 数量入力のないメソッドは、デフォルトの数量の値が 1 になります。
 
-詳細については、[iOS クラスのドキュメント][7]を参照してください。
+詳細については、[iOSクラスのドキュメント][7] を参照してください。
 
 {% tabs %}
-{% tab 速い %}
+{% tab SWIFT %}
 
 ```swift
 AppDelegate.braze?.logPurchase(productId: "product_id", currency: "USD", price: price, quantity: quantity, properties: ["key1":"value1"])
 ```
 
 {% endtab %}
-{% tab 目標-C %}
+{% tab OBJECTIVE-C %}
 
 ```objc
 [AppDelegate.braze logPurchase:productId
