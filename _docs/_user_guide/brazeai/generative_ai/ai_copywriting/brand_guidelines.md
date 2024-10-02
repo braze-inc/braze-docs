@@ -21,7 +21,7 @@ Follow these steps to create brand guidelines in the AI copywriting assistant.
 3. Enter a name for this guideline. It will be the label you see in the previous selection.
 4. For **When will you use these brand guidelines?**, add details to help your colleagues (and future you) understand the context for using this guideline.
 
-![Brand guideline creation view"][1]
+![Brand guideline creation view.][1]
 
 ### Step 2: Describe your brand personality
 
