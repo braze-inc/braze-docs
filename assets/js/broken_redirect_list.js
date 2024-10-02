@@ -1208,4 +1208,6 @@ validurls['/docs/pick_up_where_you_left_off'] = '/docs/user_guide/data_and_analy
 validurls['/docs/templating_catalog_items_liquid/'] = '/docs/user_guide/personalization_and_dynamic_content/catalogs/catalog/#using-liquid';
 validurls['/docs/developer_guide/platform_integration_guides/swift/initial_sdk_setup/overviewother_sdk_customizations/#optional-idfa-collection/'] = '/docs/developer_guide/platform_integration_guides/legacy_sdks/ios/initial_sdk_setup/other_sdk_customizations/#optional-idfa-collection';
 
+validurls['/docs/user_csv_lambda/'] = '/docs/user_guide/data_and_analytics/cloud_ingestion';
+
 // validurls['OLD'] = 'NEW';
