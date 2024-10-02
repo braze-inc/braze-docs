@@ -90,6 +90,5 @@ At this point, your basic integration should be complete. Braze should now be co
 
 ## Additional resources
 
-Our [SDK reference documentation][1] provides additional information and guidance on each SDK symbol.
+Our [SDK reference documentation](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/ "full iOS class documentation") provides additional information and guidance on each SDK symbol.
 
-[1]: https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/ "full iOS class documentation"

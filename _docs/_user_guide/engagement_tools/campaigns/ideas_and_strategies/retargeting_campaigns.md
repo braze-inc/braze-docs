@@ -83,7 +83,7 @@ Use this filter to find users who are or are not in the control group of your ta
 
 ### In Canvas Control Group 
 
-Use this filter to find users who are or are not in the control group of your target Canvas, which can be selected in the drop-down.
+Use this filter to find users who are or are not in the control group of your target Canvas, which can be selected in the dropdown.
 
 ![][19]
 

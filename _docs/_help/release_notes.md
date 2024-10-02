@@ -54,6 +54,143 @@ guide_featured_list:
 > <br>
 > For more information on any of the updates listed in this section, reach out to your account manager or [open a support ticket]({{site.baseurl}}/help/support/). You can also check out [our SDK Changelogs]({{site.baseurl}}/developer_guide/platform_integration_guides/sdk_changelogs/) to see more information on our monthly SDK releases, updates, and improvements.
 
+## September 17, 2024 release
+
+### Data flexibility
+
+#### Braze Cloud Data Ingestion for S3
+
+You can use [Cloud Data Ingestion (CDI) for S3]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/file_storage_integrations/#aws-definitions) to directly integrate one or more S3 buckets in your AWS account with Braze. When new files are published to S3, a message is posted to SQS, and Braze Cloud Data Ingestion takes in those new files.
+
+#### Increased rate limit
+
+The rate limit for the [/users/export/ids]({{site.baseurl}}/api/endpoints/export/user_data/post_users_identifier) request type has increased to 2,500 requests per minute.
+
+#### Monthly active users CY 24-25
+
+For customers who have purchased Monthly Active Users - CY 24-25, Braze manages different rate limits on its `/users/track` endpoint. For details, refer to [POST: Track Users]({{site.baseurl}}/api/endpoints/user_data/post_user_track/#monthly-active-users-cy-24-25). 
+
+### Unlocking creativity
+
+#### Templating catalog items including Liquid
+
+{% multi_lang_include release_type.md release="Early access" %}
+
+Use the `:rerender` flag in a Liquid tag to [render a catalog item's Liquid content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/catalog/#using-liquid). For example, if you render the following Liquid content:
+
+{% raw %}
+```liquid
+Hi ${first_name}
+{% catalog_items Messages greet_msg :rerender %}
+{{ items[0].Welcome_Message }}
+```
+{% endraw %}
+
+This will display as the following:
+
+{% raw %}
+```
+Hi Peter,
+Welcome to our store, Peter!
+```
+{% endraw %}
+
+### Robust channels
+
+#### WhatsApp response messages
+
+{% multi_lang_include release_type.md release="General availability" %}
+
+You can use [response messages]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/whatsapp_campaign/create#response-messages) to reply to inbound WhatsApp messages from your users. These messages are built in-app on Braze during your composition experience and can be edited at any time. You can use Liquid to match the response message language to the appropriate users.
+
+#### Canvas templates
+
+{% multi_lang_include release_type.md release="General availability" %}
+
+Create [Canvas templates]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_templates/) to refine your messaging by creating a consistent framework that can be easily customized to fit your specific goals across your Canvases.
+
+#### Landing pages
+
+{% multi_lang_include release_type.md release="Beta" %}
+
+Braze [landing pages]({{site.baseurl}}/user_guide/engagement_tools/landing_pages) are standalone webpages that can drive your user acquisition and engagement strategy.
+
+#### Changes since last viewed
+
+You can view the number of updates to your [Canvases]({{site.baseurl}}/user_guide/engagement_tools/canvas/testing_canvases/measuring_and_testing_with_canvas_analytics/#changes-since-last-viewed), campaigns, and [segments]({{site.baseurl}}/user_guide/engagement_tools/segments/managing_segments/#changes-since-last-viewed) by other members of your team by referring to the *Changes Since Last Viewed* metric on the respective overview pages (such as the overview page for an [email campaign]({{site.baseurl}}/user_guide/message_building_by_channel/email/reporting_and_analytics/email_reporting#changes-since-last-viewed)). 
+
+#### Troubleshooting webhook and Connected Content requests 
+
+[This article]({{site.baseurl}}/help/help_articles/api/webhook_connected_content_errors) covers how to troubleshoot webhook and Connected Content error codes, including what the errors are and steps to resolve them.
+
+### New Braze partnerships
+
+#### Inbox Monster - Analytics
+
+[Inbox Monster]({{site.baseurl}}/partners/data_and_infrastructure_agility/analytics/inbox_monster/) is an inbox signals platform that helps enterprise brands land every send. It's an integrated suite of solutions for deliverability, creative rendering, and SMS monitoring, that empowers modern customer relationship managment (CRM) teams and ends the sending scaries.
+
+#### SessionM - Loyalty
+
+[SessionM]({{site.baseurl}}/partners/message_orchestration/channel_extensions/loyalty/sessionm/) is a customer engagement and loyalty platform that provides campaign management features and loyalty management solutions to help marketers drive targeted outreach to increase engagement and profitability.
+
+### AI and ML automation
+
+#### Trending item recommendations
+
+In addition to the "AI Personalized" model, the [AI item recommendations]({{site.baseurl}}/user_guide/sage_ai/recommendations/about_item_recommendations/#trending) feature also includes a recommendation model for "Trending", which features items that had the most positive momentum when it comes to recent user interactions.
+
+### Settings
+
+#### Roles
+
+{% multi_lang_include release_type.md release="General availability" %}
+
+[Roles]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/#creating-a-role) allow for more structure by bundling together your individual custom permissions with workspace access controls. This is especially useful if you have many brands or regional workspaces in one dashboard. With roles, you can add dashboard users to the right workspaces and directly grant them the associated permissions. 
+
+#### Security event report
+
+We added a complete list of the [security events]({{site.baseurl}}/user_guide/administrative/app_settings/company_settings/security_settings/#downloading-a-security-event-report) that may appear in your downloaded security report event.
+
+#### Message usage report
+
+{% multi_lang_include release_type.md release="Early access" %}
+
+The [message usage dashboard]({{site.baseurl}}/message_usage/) provides self-service insights into your SMS and WhatsApp credit usage for a comprehensive view of historical and current usage compared against contract allotments. These insights can reduce your confusion and help you make adjustments to prevent overage risks.
+
+### SDK
+
+#### Delayed initialization for the Braze Swift SDK
+
+Set up [delayed initialization]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/advanced_use_cases/delayed_initialization/) to initialize your Braze Swift SDK asynchronously while ensuring push notification handling is preserved. This can be useful when you need to set up other services before initializing the SDK, such as fetching configuration data from a server, or waiting for user consent.
+
+### SDK updates
+
+The following SDK updates have been released. Breaking updates are listed below; all other updates can be found by checking the corresponding SDK changelogs.
+
+- [Android SDK 32.1.0](https://github.com/braze-inc/braze-android-sdk/blob/master/CHANGELOG.md#3210)
+- [Segment Kotlin SDK 2.0.0](https://github.com/braze-inc/braze-segment-kotlin/blob/main/CHANGELOG.md#200)
+- [Swift SDK 10.1.0](https://github.com/braze-inc/braze-swift-sdk/blob/main/CHANGELOG.md#1010)
+- [React Native SDK 12.1.0](https://github.com/braze-inc/braze-react-native-sdk/blob/master/CHANGELOG.md#1210)
+- [Cordova SDK 10.0.0](https://github.com/braze-inc/braze-cordova-sdk/blob/master/CHANGELOG.md#1000)
+    - This version now requires Cordova Android 13.0.0.
+    - Refer to the [Cordova release announcement](https://cordova.apache.org/announcements/2024/05/23/cordova-android-13.0.0.html) for a full list of project dependency requirements.- Updated the native Android bridge [from Braze Android SDK 30.3.0 to 32.1.0](https://github.com/braze-inc/braze-android-sdk/compare/v30.3.0...v32.1.0#diff-06572a96a58dc510037d5efa622f9bec8519bc1beab13c9f251e97e657a9d4ed).
+    - Updated the native iOS bridge [from Braze Swift SDK 9.2.0 to 10.1.0](https://github.com/braze-inc/braze-swift-sdk/compare/9.2.0...10.1.0#diff-06572a96a58dc510037d5efa622f9bec8519bc1beab13c9f251e97e657a9d4ed).
+- [Swift SDK 10.2.0](https://github.com/braze-inc/braze-swift-sdk/blob/main/CHANGELOG.md#1020)
+- [Unity 7.0.0](https://github.com/braze-inc/braze-unity-sdk/blob/master/CHANGELOG.md#700)
+    - Updated the native Android bridge [from Braze Android SDK 30.3.0 to 32.1.0](https://github.com/braze-inc/braze-android-sdk/compare/v30.3.0...v32.1.0#diff-06572a96a58dc510037d5efa622f9bec8519bc1beab13c9f251e97e657a9d4ed).
+    - Updated the native iOS bridge [from Braze Swift SDK 9.0.0 to 10.1.0](https://github.com/braze-inc/braze-swift-sdk/compare/9.0.0...10.1.0#diff-06572a96a58dc510037d5efa622f9bec8519bc1beab13c9f251e97e657a9d4ed).
+- [Braze Segment Swift Plugin 4.0.0](https://github.com/braze-inc/braze-segment-swift/blob/main/CHANGELOG.md#400)
+    - Updates the Braze Swift SDK bindings to require releases from the `10.2.0+` SemVer denomination.
+        - This allows compatibility with any version of the Braze SDK from `10.2.0` up to, but not including, `11.0.0`.
+        - Refer to the changelog entry for [`10.0.0`](https://github.com/braze-inc/braze-swift-sdk/blob/main/CHANGELOG.md#1000) for more information on potential breaking changes.
+- [Flutter SDK 11.0.0](https://pub.dev/packages/braze_plugin/changelog#1100)
+    - Updates the native Android bridge [from Braze Android SDK 30.4.0 to 32.1.0](https://github.com/braze-inc/braze-android-sdk/compare/v30.4.0...v32.1.0#diff-06572a96a58dc510037d5efa622f9bec8519bc1beab13c9f251e97e657a9d4ed).
+        - Changes the behavior of `wipeData()` on Android to retain external subscriptions (like `subscribeToContentCards()`) after being called.
+    - Updates the native iOS bridge [from Braze Swift SDK 9.0.0 to 10.2.0](https://github.com/braze-inc/braze-swift-sdk/compare/9.0.0...10.2.0#diff-06572a96a58dc510037d5efa622f9bec8519bc1beab13c9f251e97e657a9d4ed).
+- [Swift SDK 10.3.0](https://github.com/braze-inc/braze-swift-sdk/blob/main/CHANGELOG.md#1030)
+- [Unity 7.1.0](https://github.com/braze-inc/braze-unity-sdk/blob/master/CHANGELOG.md#710)
+- [React Native SDK 12.2.0](https://github.com/braze-inc/braze-react-native-sdk/blob/master/CHANGELOG.md#1220)
+
 ## August 20, 2024 release
 
 ### New use cases
@@ -64,7 +201,7 @@ You can bring in any type of data into a catalog. Typically, the data is metadat
 
 #### Intelligence Suite
 
-The Intelligence Suite provides powerful features to analyze user history and campaign and Canvas performance, then make automatic adjustments to increase engagement, viewership, and conversions. For a few examples of how these features can benefit different industries, check out our [use cases]({{site.baseurl}}/user_guide/sage_ai/intelligence).
+The Intelligence Suite provides powerful features to analyze user history and campaign and Canvas performance, then make automatic adjustments to increase engagement, viewership, and conversions. For a few examples of how these features can benefit different industries, check out our [use cases]({{site.baseurl}}/user_guide/brazeai/intelligence).
 
 ### Home dashboard update
 
@@ -114,7 +251,7 @@ You must acquire your phone number yourself, as Braze won't provision the number
 
 ### New Braze partnerships
 
-#### ZenDesk Chat - Instant Chat
+#### Zendesk Chat - Instant Chat
 
 The Braze and [Zendesk Chat]({{site.baseurl}}/partners/zendesk_chat/) integration uses webhooks from each platform to set up a two-way SMS conversation. When a user requests support, a ticket is created in Zendesk. Agent responses are forwarded to Braze through an API-triggered SMS campaign, and user replies are sent back to Zendesk.
 
@@ -253,9 +390,9 @@ Previoulsy, you could find and merge duplicate users in Braze individually or in
 
 {% multi_lang_include release_type.md release="Beta" %}
 
-The Sage AI Liquid Assistant is a chat assistant powered by Sage AI that helps generate the Liquid you need to personalize message content. You can generate Liquid from templates, receive personalized Liquid suggestions, and optimize existing Liquid with the support of Sage AI. The AI Liquid Assistant also provides annotations explaining the Liquid used, so you can increase your understanding of Liquid and learn to write your own.
+The AI Liquid Assistant is a chat assistant powered by BrazeAI<sup>TM</sup> that helps generate the Liquid you need to personalize message content. You can generate Liquid from templates, receive personalized Liquid suggestions, and optimize existing Liquid with the support of BrazeAI<sup>TM</sup>. The AI Liquid Assistant also provides annotations explaining the Liquid used, so you can increase your understanding of Liquid and learn to write your own.
 
-To get started, see [AI Liquid assistant]({{site.baseurl}}/user_guide/sage_ai/generative_ai/ai_liquid).
+To get started, see [AI Liquid assistant]({{site.baseurl}}/user_guide/brazeai/generative_ai/ai_liquid).
  
 ### SDK
  
@@ -421,7 +558,7 @@ On the Braze dashboard, your Canvases are grouped by their status. Check out the
 
 {% multi_lang_include release_type.md release="General availability" %}
 
-You can now create and apply [brand guidelines]({{site.baseurl}}/user_guide/sage_ai/generative_ai/ai_copywriting/brand_guidelines/) to customize the style of copy generated by the AI copywriting assistant to fit your brand's voice. Set up multiple guidelines for different scenarios to ensure your tone always matches the context.
+You can now create and apply [brand guidelines]({{site.baseurl}}/user_guide/brazeai/generative_ai/ai_copywriting/brand_guidelines/) to customize the style of copy generated by the AI copywriting assistant to fit your brand's voice. Set up multiple guidelines for different scenarios to ensure your tone always matches the context.
  
 ### New Braze partnerships
 
@@ -588,13 +725,13 @@ Now you can remote start your live activities on iOS using the [`/messages/live_
 
 {% multi_lang_include release_type.md release="Early access" %}
 
-With Sage AI by Braze, you can now calculate the most popular products or create personalized AI recommendations for a specific catalog. For more information, see [About item recommendations]({{site.baseurl}}/user_guide/sage_ai/recommendations/about_item_recommendations/).
+With BrazeAI<sup>TM</sup>, you can now calculate the most popular products or create personalized AI recommendations for a specific catalog. For more information, see [About item recommendations]({{site.baseurl}}/user_guide/brazeai/recommendations/about_item_recommendations/).
 
 #### QA in-app message content
 
 {% multi_lang_include release_type.md release="General availability" %}
 
-Previously, you could perform quality assurance on your SMS and push notification content using Sage AI in the Braze dashboard. Now, you can [QA in-app message content]({{site.baseurl}}/user_guide/sage_ai/generative_ai/ai_content_qa/) too.
+Previously, you could perform quality assurance on your SMS and push notification content using BrazeAI<sup>TM</sup> in the Braze dashboard. Now, you can [QA in-app message content]({{site.baseurl}}/user_guide/brazeai/generative_ai/ai_content_qa/) too.
 
 ### New Braze partnerships
 
@@ -642,7 +779,7 @@ Visit the [SQL table reference]({{site.baseurl}}/user_guide/engagement_tools/seg
 
 #### Tone control for AI copywriting
 
-You can now choose a [message tone]({{site.baseurl}}/user_guide/sage_ai/generative_ai/ai_copywriting/#steps) to determine the style of the copy generated with the AI copywriting assistant.
+You can now choose a [message tone]({{site.baseurl}}/user_guide/brazeai/generative_ai/ai_copywriting/#steps) to determine the style of the copy generated with the AI copywriting assistant.
 
 ### Robust channels
 
@@ -705,118 +842,3 @@ The following SDK updates have been released. Breaking updates are listed below;
     - `BrazePlugin.getFeatureFlag(id)` will now return `null` if the feature flag does not exist.
     - `BrazePlugin.subscribeToFeatureFlagsUpdates(function)` will only trigger when a refresh request completes with success or failure, and upon initial subscription if there was previously cached data from the current session.
     - Removed the deprecated method `registerAppboyPushMessages`. Use `setRegisteredPushToken` instead.
-
-## February 6, 2024 release
-
-### Braze privacy manifest
-
-Braze has released our own privacy manifest, along with new flexible APIs that automatically reroute declared tracking data to dedicated `-tracking` endpoints. For more information, see the [Braze privacy manifest]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/privacy_manifest).
-
-### Google EU User Consent Policy
-
-Google is updating their [EU User Consent Policy](https://www.google.com/about/company/user-consent-policy/) in response to changes to the [Digital Markets Act (DMA)](https://ads-developers.googleblog.com/2023/10/updates-to-customer-match-conversion.html), which goes into effect March 6, 2024. This new change requires advertisers to disclose certain information to their EEA and UK end users, as well as obtain necessary consents from them. As part of this upcoming change, you can [collect both consent signals in Braze as custom attributes]({{site.baseurl}}/partners/canvas_steps/google_audience_sync/#collecting-consent-for-eea-and-uk-end-users). Braze will sync the data from these custom attributes to the appropriate consent fields in Google.
-
-### Data flexibility
-
-#### Google Firebase Cloud Messaging (FCM) API
-
-{% multi_lang_include release_type.md release="General availability" %}
-
-You now can [migrate from Google’s deprecated Cloud Messaging API to their fully-supported Firebase Cloud Messaging (FCM) API]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/migrating_to_firebase_cloud_messaging/). 
-
-#### Braze Cloud Data Ingestion (CDI) endpoints
-
-{% multi_lang_include release_type.md release="General availability" %}
-
-Use Braze CDI endpoints to:
-- [Return a list of existing integrations]({{site.baseurl}}/api/endpoints/cdi/get_integration_list/).
-- [Return a list of past sync statuses]({{site.baseurl}}/api/endpoints/cdi/get_job_sync_status/) for a given integration.
-- [Trigger a sync]({{site.baseurl}}/api/endpoints/cdi/post_job_sync/) for a given integration.
-
-#### Braze Cloud Data Ingestion (CDI) support for Databricks
-
-Braze CDI support for catalogs is now available for [Databricks sources]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/sync_catalogs_data/#step-2-integrate-cloud-data-ingestion-with-catalog-data).
-
-#### Manual Swift SDK integration
-
-We added the [Manual integration]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/initial_sdk_setup/installation_methods/manual_integration) article to the integration guides to describe how to manually integrate the Swift SDK without the use of a package manager.
-
-#### Deprecations
-
-On January 11, 2024, Braze stopped serving messages and collecting data from Windows apps and Baidu apps.
-
-### Unlocking creativity
-
-#### SQL Segment Extensions use cases
-
-The [SQL Segment Extensions use cases]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/use_cases) library contains tested queries for SQL Segment Extensions that you can use for inspiration when creating your own SQL queries.
-
-### Robust channels
-
-#### Custom Code blocks
-
-{% multi_lang_include release_type.md release="General availability" %}
-
-[Custom Code blocks]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/editor_blocks/#custom-code) allow you to add, edit, or delete HTML, CSS, and JavaScript for an in-app message.
-
-#### Reduce payload size of push notifications
-
-The new help article [Notification Payload Size]({{site.baseurl}}/help/help_articles/push/reducing_payload_size#reducing-push-notification-payload-size) provides some tips to reduce the payload size of your push notifications if you're unable to launch a campaign or Canvas step due to push payload size limits.
-
-#### Add BCC addresses to your campaign or Canvas
-
-{% multi_lang_include release_type.md release="General availability" %}
-
-You can append a [BCC address]({{site.baseurl}}/user_guide/administrative/app_settings/email_settings/?tab=bcc%20address#outbound-email-settings) to an email message. This will send an identical copy of the message your user receives to your BCC inbox. This allows you to retain copies of messages you sent your users for compliance requirements or customer support issues.
-
-#### One-click unsubscribe links for emails
-
-Using a [list-unsubscribe header]({{site.baseurl}}/user_guide/administrative/app_settings/email_settings/#list-unsubscribe-header) allows your recipients to unsubscribe with one click from marketing emails by displaying an **Unsubscribe** button within the mailbox UI, and not the message body.
-
-### New Braze partnerships
-
-#### Criteo - Canvas Audience Sync
-
-Using the [Braze Audience Sync to Criteo]({{site.baseurl}}/partners/canvas_steps/criteo_audience_sync/), brands can elect to add user data from their own Braze integration to Criteo customer lists to deliver advertisements based upon behavioral triggers, segmentation and more. Any criteria you’d normally use to trigger a message (push, email, SMS, webhook, etc.) in a Braze Canvas based upon your user data can now be used to trigger an ad to that user in your Criteo customer lists.
-
-#### Movable Ink - Dynamic content
-
-The [Movable Ink]({{site.baseurl}}/partners/message_personalization/dynamic_content/movable_ink#movable-ink) Customer Data API integration allows marketers to activate customer event data stored in Braze to generate personalized content within Movable Ink.
-
-#### Scuba Analytics - Analytics
-
-[Scuba Analytics]({{site.baseurl}}/partners/data_and_infrastructure_agility/analytics/scuba#scuba-analytics) is a full-stack, machine-learning-powered data collaboration platform designed for high-velocity time-series data. Scuba allows you to selectively export users (also called actors) and load them into your Braze platform. In Scuba, custom actor properties are used to analyze behavioral trends, activate your data across various platforms, and conduct predictive modeling using machine learning.
-
-### SDK updates
- 
-The following SDK updates have been released. Breaking updates are listed below; all other updates can be found by checking the corresponding SDK changelogs.
- 
-- [Expo Plugin 2.0.0](https://github.com/braze-inc/braze-expo-plugin/blob/main/CHANGELOG.md)
-    - Bumps the iOS minimum platform version to `13.4`, per the [Expo SDK 50 requirements](https://expo.dev/changelog/2024/01-18-sdk-50).
-    - This version requires version [8.3.0+](https://github.com/braze-inc/braze-react-native-sdk/releases/tag/8.3.0) of the Braze React Native SDK to fully support Expo SDK 50.
-- [React Native SDK 8.3.0](https://github.com/braze-inc/braze-react-native-sdk/blob/8.3.0/CHANGELOG.md)
-- [Unity SDK 5.1.0](https://github.com/braze-inc/braze-unity-sdk/blob/master/CHANGELOG.md)
-- [Android SDK 30.0.0](https://github.com/braze-inc/braze-android-sdk/blob/master/CHANGELOG.md)
-    - WebViews used for In-App Messages have been updated to use `WebViewAssetLoader`.
-        - `WebSettings.allowFileAccess` is now set to false in `InAppMessageHtmlBaseView` and `BrazeWebViewActivity`.
-        - If you are using your own `InAppMessageWebViewClient` or `InAppMessageHtmlBaseView`, please compare them against the original classes to make sure you're implementation is correctly loading the assets.
-        - If you are not using custom classes, everything will work as before.
-- [Braze Swift SDK 6.6.2](https://github.com/braze-inc/braze-swift-sdk/blob/6.6.2/CHANGELOG.md)
-- [Braze Swift SDK 7.6.0](https://github.com/braze-inc/braze-swift-sdk/releases/tag/7.6.0)
-- [Xamarin SDK Version 3.0.0](https://github.com/braze-inc/braze-xamarin-sdk/blob/master/CHANGELOG.md)
-    - The NuGet package has been renamed from `AppboyPlatformXamariniOSBinding` to [`BrazePlatform.BrazeiOSBinding`](https://www.nuget.org/packages/BrazePlatform.BrazeiOSBinding/).
-        - To use the updated package, replace any instances of using `AppboyPlatformXamariniOSBinding;` with: using Braze;
-    - This version requires using .NET 6+ and removes support for projects using the Xamarin framework. See [Microsoft's policy](https://dotnet.microsoft.com/en-us/platform/support/policy/xamarin) around the end of support for Xamarin.
-    - Updated the Android binding from [Braze Android SDK 26.3.2 to 29.0.1](https://github.com/braze-inc/braze-android-sdk/compare/v26.3.1...v29.0.1#diff-06572a96a58dc510037d5efa622f9bec8519bc1beab13c9f251e97e657a9d4ed).
-- [Xamarin SDK 4.0.0](https://github.com/braze-inc/braze-xamarin-sdk/blob/master/CHANGELOG.md)
-    - This version updates the iOS binding to use the [Braze Swift SDK](https://github.com/braze-inc/braze-swift-sdk/). Most iOS public APIs have changed, please refer to our [migration guide](https://braze-inc.github.io/braze-swift-sdk/documentation/braze/appboy-migration-guide/) (Swift) for guidance about replacement to use. We provide compatibility bindings to keep making use of the old public APIs.
-        - The iOS binding is now composed of multiple modules:
-            - **BrazeKit:** Main SDK library providing support for analytics and push notifications (nuget: [Braze.iOS.BrazeKit](https://www.nuget.org/packages/Braze.iOS.BrazeKit)).
-            - BrazeUI: Braze-provided user interface library for In-App Messages and Content Cards (nuget: [Braze.iOS.BrazeUI](https://www.nuget.org/packages/Braze.iOS.BrazeUI)).
-            - BrazeLocation: Location library providing support for location analytics and geofence monitoring (nuget: [Braze.iOS.BrazeLocation](https://www.nuget.org/packages/Braze.iOS.BrazeLocation)).
-            - BrazeKitCompat: Compatibility library with support for pre-4.0.0 APIs (nuget: [Braze.iOS.BrazeKitCompat](https://www.nuget.org/packages/Braze.iOS.BrazeKitCompat)).
-            - BrazeUICompat: Compatibility library with support for pre-4.0.0 UI APIs (nuget: [Braze.iOS.BrazeUICompat](https://www.nuget.org/packages/Braze.iOS.BrazeUICompat)).
-        - Refer to the BrazeiOSMauiSampleApp for the new integration, and to BrazeiOSMauiCompatSampleApp for usage of the compatibility modules.
-    - Updated the iOS binding to the [Braze Swift SDK 7.6.0](https://github.com/braze-inc/braze-swift-sdk/releases/tag/7.6.0).
-    - The iOS binding requires using .NET 7 for compatibility with Xcode 15.
-- [Xamarin SDK 4.0.1](https://github.com/braze-inc/braze-xamarin-sdk/blob/master/CHANGELOG.md)

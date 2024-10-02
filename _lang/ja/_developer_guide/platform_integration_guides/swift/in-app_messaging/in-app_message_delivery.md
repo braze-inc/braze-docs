@@ -28,7 +28,7 @@ Braze でアプリ内メッセージを表示できるようにするには、 `
 `BrazeInAppMessageUI` クラスにアクセスするには、`BrazeUI` ライブラリーをインポートする必要があることに注意してください。
 
 {% tabs %}
-{% tab swift %}
+{% tab SWIFT %}
 
 ```swift
 AppDelegate.braze?.inAppMessagePresenter = BrazeInAppMessageUI()
@@ -53,12 +53,12 @@ AppDelegate.braze.inAppMessagePresenter = [[BrazeInAppMessageUI alloc] init];
 
 ## トリガー間の最小時間間隔
 
-デフォルトでは、高品質のユーザー エクスペリエンスを確保するために、アプリ内メッセージのレートが30秒に1回に制限されています。
+デフォルトでは、高品質のユーザーエクスペリエンスを促進するため、アプリ内メッセージのレートが30秒に1回に制限されています。
 
 この値は、 Braze 構成の `triggerMinimumTimeInterval` プロパティを設定することで上書きできます。Braze インスタンスを初期化する前に、必ずこの値を設定してください。`triggerMinimumTimeInterval` を、アプリ内メッセージ間の最小時間 (秒) として使用する整数値に設定します。
 
 {% tabs %}
-{% tab swift %}
+{% tab SWIFT %}
 
 ```swift
 let configuration = Braze.Configuration(
@@ -99,7 +99,7 @@ Braze で特定のイベントに一致するトリガーを検出できない�
 - セッションが開始される
 - プッシュ通知からアプリを開く
 
-アプリ内メッセージのトリガーイベントが発生すると、そのイベントは「スタック」に配置されます。 複数のアプリ内メッセージがスタック内にあり、表示を待機している場合、Braze は最後に受信したアプリ内メッセージを最初に表示します (後入れ先出し)。
+アプリ内メッセージのトリガーイベントが発生すると、そのイベントは「スタック」に配置されます。複数のアプリ内メッセージがスタック内にあり、表示を待機している場合、Braze は最後に受信したアプリ内メッセージを最初に表示します (後入れ先出し)。
 
 ユーザーにアプリ内メッセージを受信する資格がある場合、`BrazeInAppMessagePresenter` により、アプリ内メッセージスタックから最新のアプリ内メッセージがリクエストされます。スタックはメモリに保存されたアプリ内メッセージのみを保持し、一時停止モードからアプリを起動するまでの間にクリアされます。
 
@@ -117,7 +117,7 @@ Braze で特定のイベントに一致するトリガーを検出できない�
 
 トリガーされたアプリ内メッセージは、次の状況では破棄されます。
 
-- `inAppMessage(_:displayChoiceForMessage:)` [デリゲートメソッド](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazeinappmessageuidelegate/inappmessage(_:displaychoiceformessage:)-9w1nb)が `.discard` を返しました。
+- `inAppMessage(_:displayChoiceForMessage:)` [デリゲートメソッド](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazeinappmessageuidelegate/inappmessage(_:displaychoiceformessage:)-9w1nb)が `.discard` を返した。
 - アプリ内メッセージのアセット (画像または ZIP ファイル) のダウンロードに失敗しました。
 - アプリ内メッセージを表示する準備ができていますが、タイムアウト時間が経過しました。
 - デバイスの向きが、トリガーされたアプリ内メッセージの向きと一致しません。
@@ -131,7 +131,7 @@ Braze で特定のイベントに一致するトリガーを検出できない�
 独自のアプリ内メッセージを作成すると、分析の追跡をオプトアウトすることになり、`message.context` を使用してクリックとインプレッションのロギングを手動で処理する必要があることに注意してください。
 
 {% tabs %}
-{% tab swift %}
+{% tab SWIFT %}
 
 ```swift
 let customInAppMessage = Braze.InAppMessage.slideup(
@@ -165,7 +165,7 @@ customInAppMessage.themes = @{
 たとえば、アプリ内メッセージの表示をそのエクストラの内容に基づいてカスタマイズするケースを考えてみましょう。`extras` プロパティでキーと値のペアにアクセスし、実行に使用するカスタムロジックを定義します。
 
 {% tabs %}
-{% tab swift %}
+{% tab SWIFT %}
 
 ```swift
 let customization = message.extras["custom-display"] as? String

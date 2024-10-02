@@ -1,6 +1,6 @@
 ---
-nav_title: "웹후크 오브젝트"
-article_title: 웹후크 메시징 객체
+nav_title: "웹훅 개체"
+article_title: 웹훅 메시징 개체
 page_order: 13
 page_type: reference
 channel: 
@@ -9,9 +9,9 @@ description: "이 참조 문서에서는 Braze 웹훅 객체를 간략하게 설
 
 ---
 
-# 웹후크 객체
+# 웹훅 객체
 
-> `webhook`객체를 사용하면 [메시징 엔드포인트를]({{site.baseurl}}/api/endpoints/messaging) 통해 웹후크 메시지를 수정하거나 생성할 수 있습니다.
+> `webhook` 개체를 사용하면 [메시징 엔드포인트를]({{site.baseurl}}/api/endpoints/messaging) 통해 웹훅 메시지를 수정하거나 생성할 수 있습니다.
 
 ```json
 {

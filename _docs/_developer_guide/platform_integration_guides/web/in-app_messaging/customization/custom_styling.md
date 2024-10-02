@@ -23,11 +23,11 @@ For instance, the following is an example override that will cause an in-app mes
   }
 ```
 
-See the [JSDocs][2] for more information.
+See the [JSDocs](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.inappmessage.html) for more information.
 
 ## In-app message default z-index
 
-By default, in-app messages are displayed using `z-index: 9001`. This is configurable using the `inAppMessageZIndex ` [initialization option][41] in the scenario that your website styles elements with higher values than that.
+By default, in-app messages are displayed using `z-index: 9001`. This is configurable using the `inAppMessageZIndex ` [initialization option](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#initializationoptions) in the scenario that your website styles elements with higher values than that.
 
 ```javascript
 braze.initialize("YOUR-API-KEY", {
@@ -40,6 +40,3 @@ braze.initialize("YOUR-API-KEY", {
 This option was introduced in Web SDK v3.3.0. Older SDKs must be upgraded to use this option.
 {% endalert %}
 
-[2]: https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.inappmessage.html
-[15]: https://fontawesome.com/?from=io
-[41]: https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#initializationoptions

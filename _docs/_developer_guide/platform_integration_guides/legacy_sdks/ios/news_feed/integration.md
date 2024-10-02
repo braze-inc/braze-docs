@@ -69,7 +69,7 @@ private func feedUpdated(_ notification: Notification) {
 {% endtab %}
 {% endtabs %}
 
-If you want to change the card data after it's been sent by Braze, we recommend storing (deep copy) the card data locally, updating it, and displaying it yourself. The cards are accessible via [`ABKFeedController`][44].
+If you want to change the card data after it's been sent by Braze, we recommend storing (deep copy) the card data locally, updating it, and displaying it yourself. The cards are accessible via [`ABKFeedController`](http://appboy.github.io/appboy-ios-sdk/docs/interface_a_b_k_feed_controller.html "abk feed controller").
 
 ## News Feed model
 
@@ -217,10 +217,6 @@ self.present(newsFeed, animated: true, completion: nil)
 {% endtab %}
 {% endtabs %}
 
-For view controller examples, check out our [News Feed sample app][3].
+For view controller examples, check out our [News Feed sample app](https://github.com/Appboy/appboy-ios-sdk/tree/master/Samples/NewsFeed/BrazeNewsFeedSample).
 
-[1]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/in-app_messaging/customization/setting_delegates/
-[2]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/in-app_messaging/customization/behavior_on_click/#customizing-in-app-message-body-clicks
-[3]: https://github.com/Appboy/appboy-ios-sdk/tree/master/Samples/NewsFeed/BrazeNewsFeedSample
-[44]: http://appboy.github.io/appboy-ios-sdk/docs/interface_a_b_k_feed_controller.html "abk feed controller"
 

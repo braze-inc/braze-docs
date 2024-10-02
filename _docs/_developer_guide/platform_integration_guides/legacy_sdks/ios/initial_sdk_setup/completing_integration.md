@@ -140,7 +140,7 @@ This method is called with the following parameters:
 - `launchOptions` – The options `NSDictionary` that you get from `application:didFinishLaunchingWithOptions:`.
 - `appboyOptions` – An optional `NSDictionary` with startup configuration values for Braze.
 
-See [Appboy.h][1] for a list of Braze startup keys.
+See [Appboy.h](https://github.com/braze-inc/braze-ios-sdk/blob/master/AppboyKit/include/Appboy.h) for a list of Braze startup keys.
 
 ## Appboy.sharedInstance() and Swift nullability
 Differing somewhat from common practice, the `Appboy.sharedInstance()` singleton is optional. This is because `sharedInstance` is `nil` before `startWithApiKey:` is called, and there are some non-standard but not-invalid implementations in which a delayed initialization can be used.
@@ -149,7 +149,5 @@ If you call `startWithApiKey:` in your `didFinishLaunchingWithOptions:` delegate
 
 ## Additional resources
 
-Full [iOS class documentation][2] is available to provide additional guidance on any SDK methods.
+Full [iOS class documentation](http://appboy.github.io/appboy-ios-sdk/docs/annotated.html "full iOS class documentation") is available to provide additional guidance on any SDK methods.
 
-[1]: https://github.com/braze-inc/braze-ios-sdk/blob/master/AppboyKit/include/Appboy.h
-[2]: http://appboy.github.io/appboy-ios-sdk/docs/annotated.html "full iOS class documentation"

@@ -19,11 +19,11 @@ Braze SDK バージョン3.1.1 では、HTML をデバイスに送信し、プ�
 
 この例は、以下の HTML でレンダリングされます。
 
-\`\`\`html
+```html
 <p><span style="color: #99cc00;">M</span>u<span style="color: #008080;">lti</span>Colo<span style="color: #ff6600;">r</span> <span style="color: #000080;">P</span><span style="color: #00ccff;">u</span><span style="color: #ff0000;">s</span><span style="color: #808080;">h</span></p>
 ```
 
-\`\`\`html
+```html
 <p><em>test</em> <span style="text-decoration: underline; background-color: #ff6600;"><strong>message</strong></span></p>
 ```
 
@@ -45,7 +45,7 @@ Android OS では、プッシュ通知で有効な HTML 要素 / タグが制限
 
 **または** 
 
-[\`BrazeConfig\`][2] に以下を追加します。
+`BrazeConfig`][2] に以下を追加する：
 
 {% tabs %}
 {% tab JAVA %}

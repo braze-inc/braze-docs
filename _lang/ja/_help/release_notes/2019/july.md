@@ -3,93 +3,93 @@ nav_title: 7月
 page_order: 6
 noindex: true
 page_type: update
-description: "この記事には2019年7月のリリースノートが含まれています。"
+description: "この記事は、2019年7月のリリースノートを含んでいます。"
 ---
 
 # 2019年7月
 
 {% alert update %}
-Brazeは今月、**2**回の製品リリースサイクルを持っていました！最新リリースは上部に記載されており、以前のリリースはこのページのさらに下に[開始します](#earlier-this-month)！
+Brazeは今月、2回(その通り-**2回**)の商品発売がありました!最新のリリースが最上位に記録され、前のページ[ がさらにこのページ](#earlier-this-month) から始まります!
 {% endalert %}
 
 ## SAML/SSO
 
-[シングルサインオン]({{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/)（SSO）は、企業にBrazeダッシュボードへのアクセスを制御するための安全で集中化された方法を提供します。要するに、1つの資格情報セットを使用して、Brazeを含むさまざまなアプリケーションにアクセスできます。
+[シングルサインオン]({{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/) (SSO) は、企業がBraze ダッシュボードへのアクセスをコントロールするための安全で集中的な方法を提供します。要するに、1 組の認証情報 s を使用して、Braze を含むさまざまなアプリアプリケーションにアクセスできます。
 
-さらに、[OAuth 2.0 を使用した Google サインインのサポート<1>に加えて、企業は Security Assertion Markup Language (SAML) サポートを備えた SSO を希望しています。これにより、[Azure Active Directory]({{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/azure_ad/)や[Okta]({{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/okta/)などの大手アイデンティティプロバイダー（IdP）とシームレスに統合でき、最新の業界標準（SAML 2.0）をサポートします。
+OAuth 2.0 サポート を使用した[Google サインインに加えて、企業はSecurity Assertion Markup Language (SAML) サポートのSSO を希望しています。これにより、[Azure Active Directory]({{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/azure_ad/) および[Okta]({{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/okta/) を含む大規模なID プロバイダ(IdP) とシームレスに統合できます。これは、最新の業界標準(SAML 2.0) に対応しています。
 
-Brazeはサポートしています:
+Brazeサポート:
 - [OneLogin]({{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/onelogin/)
 - [Azure Active Directory]({{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/azure_ad/)
 - [Okta]({{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/okta/)
 
-## Adjust イベント API キーを表示
+## Adjust行事API キー番組
 
-Adjust のパートナーページを更新して、この API キーを顧客が利用できるようにしました。
+このAPI キーを顧客 s にアクセスできるようにするために、更新 d Adjust のパートナページがあります。
 
-## 新しいパートナー
+## 新パートナーズ
 
-新しいパートナーが私たちのAlloysプログラムに参加し、Docsに追加されました！こんにちはと言ってください：
-- [Fivetran]({{site.baseurl}}/partners/fivetran/)
+いくつかの新しいパートナーが私たちのAlloysプログラムに参加し、私たちのDocsに追加されました！こんにちは。
+- [ファイブトラン]({{site.baseurl}}/partners/fivetran/)
 - [Talon.One]({{site.baseurl}}/partners/talonone/)
 - [Voucherify]({{site.baseurl}}/partners/voucherify/)
 
-## キャンペーン詳細の改善
+## キャンペーン内容改善
 
-拡張されたキャンペーンの詳細は、...待ってください...**キャンペーンの詳細**セクションに表示されます**キャンペーン**ページ！
+拡張キャンペーンの詳細が、**キャンペーン**ページの。..wait it...**キャンペーン詳細**セクションに表示されます!
 
-## セグメントで自分のものだけを表示 & キャンバス
+## Segment s & amp; Canvas では地雷のみを表示します
 
-「自分のものだけ表示」チェックフィルターは**キャンペーン**ページで非常に人気があります。その結果、このオプションをキャンバスおよびSegmentリストにも追加します！
+"Show Only Mine" **Campaigns**ページのチェックフィルターは、非常に人気があることが証明されています。その結果、キャンバスとセグメントリストにもこのオプションを追加しています!
 
 ### 昇進動作
 
-ユーザーが1つのキャンバスステップから次のステップに進むタイミングを選択できるようになりました。これらのオプションには「メッセージ送信済み」と「遅延後の全オーディエンス」が含まれます。
+ユーザーがあるキャンバスステップから次のキャンバスに進むと、[を選択できるようになりました。これらのオプションには、"Message Sent"および"Entire Audience After Delay"が含まれます。
 
 ### キャンバスのアプリ内メッセージ
 
-[アプリ内メッセージ]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/in-app_messages_in_canvas/)は現在キャンバスで利用可能です！キャンバスステップを追加し、利用可能なチャネルを参照してアプリ内メッセージを追加します。
+[In-アプリ messages]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/in-app_messages_in_canvas/)がキャンバスで利用可能になりました!キャンバスステップを追加し、使用可能なチャネルs を参照してアプリ内メッセージを追加します。
 
-# 今月初め
+# 今月上旬
 
-## ユーザープロファイル画像削除
+## ユーザプロファイル "画像の削除
 
-Brazeユーザープロファイルおよびユーザー検索に表示されるユーザープロファイル画像を削除しています。
+Braze ユーザープロファイル s とユーザー 検索で表示されているユーザープロファイル画像を削除しています。
 
-## コンテンツカードのコネクテッドコンテンツ
+## コンテンツカードの接続コンテンツ
 
-[コネクテッドコンテンツ]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/about_connected_content/#about-connected-content)の文字列と機能を[コンテンツカード]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/overview/)で使用できるようになりました。
+[Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/about_connected_content/#about-connected-content)文字列と機能を[Content Cards]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/overview/)で使用できるようになりました。
 
-コネクテッドコンテンツ calls to external servers will happen when a カード is actually sent, not when the カード is viewed by the ユーザー.メールと同様に、ダイナミックなコンテンツは実際にカードが表示されるときではなく、送信時に計算および決定されます。
+外部サーバへの接続されたコンテンツコールは、カードが実際に送信されたときにアプリします。カードがユーザによって表示されたときではありません。メールと同様に、ダイナミックなの内容は、実際に表示されるときではなく、送信時に計算され決定されます。
 
-## Null "返信先" address
+## Null & quot; 返信先" 住所
 
-顧客は現在、Brazeの**メール設定**ページまたは[API]({{site.baseurl}}/api/endpoints/messaging/#email-object-specification)を使用して、メールメッセージの「返信先」アドレスに`null`値を設定できます。 使用すると、返信は記載された「差出人」アドレスに送信されます。 「From」アドレスフィールドを`dan@emailaddress.com`としてパーソナライズできるようになり、顧客はDanに直接返信することができます。
+顧客は、メールメッセージの" 返信先" address に`null` 値を設定できるようになりました。Braze の** メール Settings** ページから、または[API]({{site.baseurl}}/api/endpoints/messaging/#email-object-specification) を使用して設定します。 使用すると、リストされた"From"アドレスに返信が送信されます。 "From"address フィールドを`dan@emailaddress.com`としてパーソナライズできるようになりました。そして、あなたの顧客sは直接Danに返信することができます。
 
-メールメッセージの「返信先」アドレスに`null`値を設定するには、ナビゲーションの**設定の管理**に移動し、**メール設定**タブに移動します。**送信メール設定**セクションまでスクロールし、デフォルトのアドレスとして**「返信先」を除外し、「From」に返信を送信**を選択します。
+メール メッセージの"返信先-" address に`null` 値を設定するには、ナビゲーションで**Manage Settings** に移動し、** メール Settings** タブを選択します。**Outbound Email Settings**セクションまでスクロールし、**Exclude "Reply-To"を選択し、返信を"From"**にデフォルトアドレスとして送信します。
 
-## キャンペーンの比較
+## キャンペーン比較
 
-Braze で複数のキャンペーンを一度に見て、それらの相対的なパフォーマンスを比較し、一つのウィンドウで並べて表示します！
+[複数のキャンペーンsを一度に見て、それらの相対パフォーマンス]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/comparing_campaigns/)をBrazeで並べて-1つのウィンドウで比較しましょう!
 
-## テンプレート dispatch ID into messages with Liquid
+## Template dispatch ID をLiquid でメッセージに送信する
 
 {% alert note %}
-Canvasとキャンペーンの間での`dispatch_id`の動作は異なります。なぜなら、BrazeはCanvasのステップ（エントリステップはスケジュール可能ですが）を「スケジュールされた」場合でもトリガーイベントとして扱うためです。キャンバスとキャンペーンでの[`dispatch_id`行動]({{site.baseurl}}/help/help_articles/data/dispatch_id/)について詳しく学びましょう。
+`dispatch_id` の動作は、キャンバスとキャンペーン s 間で異なります。これは、Braze では、キャンバスステップs (エントリ ステップ s (スケジュールされた可能) を除く) が、"スケジュールされた" であっても、トリガーのed イベントとして扱われるためです。[`dispatch_id` ビヘイビア]({{site.baseurl}}/help/help_articles/data/dispatch_id/) の詳細については、キャンバスとキャンペーン s を参照してください。
 {% endalert %}
 
-メッセージ内からメッセージの送信を追跡したい場合（たとえば、URL内など）、`dispatch_id`にテンプレートを使用できます。このフォーマットは、サポートされているパーソナライゼーションタグのリストの[キャンバス属性]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/)の下にあります。
+(URL などで) メッセージ内からのメッセージの配信を追跡する場合は、`dispatch_id` をテンプレートできます。この書式は、サポートされているパーソナライゼーション タグの一覧[Canvas Attributes]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/)にあります。
 
-これはちょうど`api_id`のように動作します。キャンペーン作成時に`api_id`が利用できないため、プレースホルダーとしてテンプレート化され、`dispatch_id_for_unsent_campaign`としてプレビューされます。IDはメッセージが送信される前に生成され、送信時に含まれます。
+これは`api_id` と同じように動作します。この場合、`api_id` はキャンペーン作成時には使用できないため、プレースホルダとしてd がテンプレートされ、`dispatch_id_for_unsent_campaign` としてプレビューされます。ID はメッセージが送信される前に生成され、送信時間として含まれます。
 
 {% alert warning %}
-Liquidテンプレートの`dispatch_id_for_unsent_campaign`はアプリ内メッセージでは機能しません。なぜなら、アプリ内メッセージには`dispatch_id`がないからです。
+アプリ内メッセージ には`dispatch_id` がないため、`dispatch_id_for_unsent_campaign` のリキッドテンプレートはアプリ内メッセージs では機能しません。
 {% endalert %}
 
-## 「自分のもののみを表示」設定が持続する
+## "Show Only Mine" 設定は持続します
 
-「自分のもののみ表示」フィルターは、キャンペーングリッド上で**キャンペーン**ページにアクセスするたびにオンのままになります。
+"Show Only Mine"キャンペーン表枠のフィルターは、**キャンペーン s**ページにアクセスするたびに表示されます。
 
-## AB テスト更新
+## A/B試験更新s
 
-ユーザー指定の割合のキャンペーンのオーディエンスに、最大8つのバリアント（およびオプションのコントロール）を含む一度限りの[A/Bテスト]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/multivariate_testing/)を送信し、事前にスケジュールされた時間に残りのオーディエンスに最適なバリアントを送信できます。
+1 回限りの[A/B テスト]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/multivariate_testing/) に最大8 つのバリアント(およびオプションのコントロール)を付けて、ユーザーが指定したキャンペーンのタグe のオーディエンスに送信し、最適なオーディエンスをプレスケジュールされた時に残りのオーディエンスに送信できます。

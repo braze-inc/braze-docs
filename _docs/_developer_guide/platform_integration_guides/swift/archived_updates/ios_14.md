@@ -18,10 +18,10 @@ As of iOS 14.5, **IDFA** collection and [certain data sharing](https://developer
 
 #### Summary of iOS 14 breaking changes
 
-- Apps targeting iOS 14 / Xcode 12 must use our [official iOS 14 release][1].
-- Geofences are [no longer supported by iOS][4] for users who choose the new  _approximate location_ permission.
+- Apps targeting iOS 14 / Xcode 12 must use our [official iOS 14 release](https://github.com/Appboy/appboy-ios-sdk/releases/tag/3.27.0).
+- Geofences are [no longer supported by iOS](https://developer.apple.com/documentation/corelocation/cllocationmanager/3600215-accuracyauthorization) for users who choose the new  _approximate location_ permission.
 - Use of the "Last Known Location" targeting features will require an upgrade to Braze iOS SDK v3.26.1+ for compatibility with _approximate location_ permission. Note that if you are using Xcode 12, you will need to upgrade to at least v3.27.0.
-- As of iOS 14.5, IDFA collection and [certain data sharing][5] require the new [AppTrackingTransparency](https://developer.apple.com/documentation/apptrackingtransparency) Framework permission prompt.
+- As of iOS 14.5, IDFA collection and [certain data sharing](https://developer.apple.com/app-store/user-privacy-and-data-use/#permission-to-track) require the new [AppTrackingTransparency](https://developer.apple.com/documentation/apptrackingtransparency) Framework permission prompt.
 - If you use the "Ad Tracking Enabled" field for campaign targeting or analytics, you will need to upgrade to Xcode 12 and use the new AppTrackingTransparency framework to report users' opt-in status.
 
 ## Upgrade summary
@@ -40,7 +40,7 @@ table td {
 
 |If Your App Uses:|Upgrade Recommendation|Description|
 |------|--------|---|
-|Xcode 12|**Upgrade to iOS SDK v3.27 or later**|Customers using Xcode 12 must use v3.27.0+ for compatibility. If you experience any issues or questions related to our iOS 14 compatibility, open a new [GitHub issue][2].|
+|Xcode 12|**Upgrade to iOS SDK v3.27 or later**|Customers using Xcode 12 must use v3.27.0+ for compatibility. If you experience any issues or questions related to our iOS 14 compatibility, open a new [GitHub issue](https://github.com/Appboy/appboy-ios-sdk/issues).|
 |Most Recent Location| **Upgrade to iOS SDK v3.26.1 or later**|If you use the Most Recent Location targeting feature and are still using Xcode 11, you should upgrade to at least iOS SDK v3.26.1 which supports the new  _Approximate Location_ feature. Older SDKs will not be able to reliably collect location when a user upgrades to iOS 14 _and_ choose Approximate Location.<br><br>Even though your app might not target iOS 14, your users may upgrade to iOS 14 and begin to use the new location accuracy option. Apps that do not upgrade to iOS SDK v3.26.1+ will not be able to reliably collect location attributes when users provide their _approximate location_  on iOS 14 devices.|
 |IDFA Ad Tracking ID| **Upgrade to Xcode 12 and iOS SDK v3.27 may be required**|Sometime in 2021, Apple will begin to require a permission prompt for the collection of the IDFA. At that time, apps must upgrade to Xcode 12 and use the new `AppTrackingTransparency` framework in order to continue collecting IDFA. If you pass IDFA to the Braze SDK you must also upgrade to v3.27.0+ at that time.<br><br>Apps that do not use the new iOS 14 APIs will be unable to collect IDFA, and will instead collect a blank ID (`00000000-0000-0000-0000-000000000000`) after Apple begins to enforce this change in 2021. For more information on whether or not this applies to your app, see [IDFA details](#idfa).|
 
@@ -57,7 +57,7 @@ When requesting location permission, users will now have a choice to provide the
 
 #### Geofences {#geofences}
 
-Geofences are [no longer supported by iOS][4] for users who choose the new  _approximate location_ permission. While no updates are required for your Braze SDK integration, you may need to adjust your [location-based marketing strategy](https://www.braze.com/blog/geofencing-geo-targeting-beaconing-when-to-use/) for campaigns that rely on geofences.
+Geofences are [no longer supported by iOS](https://developer.apple.com/documentation/corelocation/cllocationmanager/3600215-accuracyauthorization) for users who choose the new  _approximate location_ permission. While no updates are required for your Braze SDK integration, you may need to adjust your [location-based marketing strategy](https://www.braze.com/blog/geofencing-geo-targeting-beaconing-when-to-use/) for campaigns that rely on geofences.
 
 #### Location targeting {#location-tracking}
 
@@ -140,7 +140,3 @@ Note that this is not an exhaustive list. If you manually collect other informat
 
 To learn more about this feature, see [Apple's Privacy and Data Use](https://developer.apple.com/app-store/user-privacy-and-data-use/).
 
-[1]: https://github.com/Appboy/appboy-ios-sdk/releases/tag/3.27.0
-[2]: https://github.com/Appboy/appboy-ios-sdk/issues
-[4]: https://developer.apple.com/documentation/corelocation/cllocationmanager/3600215-accuracyauthorization
-[5]: https://developer.apple.com/app-store/user-privacy-and-data-use/#permission-to-track

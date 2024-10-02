@@ -3,24 +3,24 @@ nav_title: 8月
 page_order: 6
 noindex: true
 page_type: update
-description: "この記事には2018年8月のリリースノートが含まれている。"
+description: "この記事は、2018年8月のリリースノートを含んでいます。"
 ---
 # 2018年8月
 
-## iOS 12の通知グループ
+## iOS 12 通知群
 
-最近リリースされたiOS 12では、アプリケーションのグループ化通知（Androidの通知チャネルに似ている）がサポートされている。[Brazeでは、メッセージ作成画面を使って、このグループ化機能をiOSで利用することができる。]({{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/#notification-groups)
+最近のiOS 12 リリースでは、アプリ版の通知のグループ化(Android 通知チャンネルに似ています) がサポートされています。[Braze では、メッセージ作成画面を使用してこのグループ化機能をiOS で利用できます。]({{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/#notification-groups)
 
-## プッシュストーリーのトリガー
+## プッシュストーリートリガー中
 
-プッシュストーリースライドの特定のページクリックに基づいてユーザー群をリターゲティングすることができるようになった。**Interacted with Campaignの**追加フィルターを使用する。
+プッシュストーリースライドのページクリックに基づいてs をリターゲティングする ユーザーできるようになりました。**Campaign**とのインタラクションには、追加のフィルターを使用します。
 
 ## 匿名ユーザーからのS3およびAzureデータイベント
 
-Amazon S3とMicrosoft Azureにデータをエクスポートする顧客は、匿名ユーザーのイベントを含めることができるようになった。この機能は、新規に作成されたすべての統合ではデフォルトでオンになるが、既存のすべての統合ではオフのままである。ご質問がある場合は、アカウントマネージャーに連絡するか、[サポートチケットを][support]開封する。
+Amazon S3 およびMicrosoft Azure にデータをエクスポートするお客様は、匿名ユーザーからのイベントを含めることができます。この機能は、新しく作成されたすべての統合で有効にデフォルトされますが、既存のすべての統合で無効のままになります。ご不明な点がございましたら、アカウントマネージャーまでお問い合わせいただくか、[サポートチケット][support]を開封してください。
 
-## Mixpanel Cohortsの統合
+## Mixpanelコホート統合
 
-BrazeとMixpanelの両方の顧客が、[Mixpanelコホートを]({{site.baseurl}}/partners/insights/behavioral_analytics/mixpanel_for_currents/#mixpanel-cohort-import)統合し、[セグメントフィルターとしてBrazeに送信]({{site.baseurl}}/partners/insights/behavioral_analytics/mixpanel_for_currents/#mixpanel-cohort-import)できるようになった。一度だけ手動でエクスポートするか、2時間ごとにダイナミックなエクスポートを設定することができる。更新されたユーザーはそれぞれデータポイントとしてカウントされるが、Mixpanelは最後の同期以降の変更のみを送信する。
+Braze とMixpanel の両方の顧客が統合できるようになり、[ Mixpanel コホートをSegment フィルター s]({{site.baseurl}}/partners/insights/behavioral_analytics/mixpanel_for_currents/#mixpanel-cohort-import) としてBraze に送信します。1 回限りの手動エクスポートを設定するか、2 時間ごとにダイナミックなエクスポートを設定できます。それぞれの更新 d ユーザーはデータポイントとしてカウントされますが、ミックスパネルは前回の同期以降の変更のみを送信します。
 
 [support]: {{site.baseurl}}/braze_support/

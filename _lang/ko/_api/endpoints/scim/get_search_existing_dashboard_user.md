@@ -1,6 +1,6 @@
 ---
-nav_title: "GET: 이메일로 기존 대시보드 사용자 계정 검색"
-article_title: "GET: 이메일로 기존 대시보드 사용자 계정 검색"
+nav_title: "GET: 기존 대시보드 사용자 계정을 이메일로 검색"
+article_title: "GET: 기존 대시보드 사용자 계정을 이메일로 검색"
 alias: /get_search_existing_dashboard_user_email/
 search_tag: Endpoint
 page_order: 4
@@ -17,7 +17,7 @@ scim/v2/Users?filter=userName%20eq%20"user%40test.com"
 
 > 이 엔드포인트를 사용하면 필터 쿼리 매개 변수에 이메일을 지정하여 기존 대시보드 사용자 계정을 조회할 수 있습니다. 
 
-쿼리 매개 변수가 URL로 인코딩되면 다음과 같이 읽습니다.
+쿼리 매개변수가 URL로 인코딩될 때 다음과 같이 읽힙니다:
 
 `/scim/v2/Users?filter=userName%20eq%20%22user@test.com%22`
 
@@ -25,20 +25,20 @@ scim/v2/Users?filter=userName%20eq%20"user%40test.com"
 
 ## 필수 구성 요소
 
-이 엔드포인트를 사용하려면 SCIM 토큰이 필요합니다. 자세한 내용은 [자동화된 사용자 프로비저닝]({{site.baseurl}}/scim/automated_user_provisioning/)을 참조하십시오.
+이 엔드포인트를 사용하려면 SCIM 토큰이 필요합니다. 자세한 내용은 [자동 사용자 프로비저닝]({{site.baseurl}}/scim/automated_user_provisioning/)을 참조하세요.
 
 ## 사용량 제한
 
 {% multi_lang_include rate_limits.md endpoint='look up dashboard user email' %}
 
-## 경로 매개 변수
+## 경로 매개변수
 
-| 매개 변수 | 필수 | 데이터형 | 설명 |
+| 매개변수 | 필수 | 데이터 유형 | 설명 |
 |---|---|---|---|
-| `userName@example.com` | 필수 | 문자열 | 사용자의 이메일입니다. |
+| `userName@example.com` | 필수 | 문자열 | 사용자의 이메일. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
-## 요청 매개 변수
+## 요청 매개변수
 
 ```json
 Content-Type: application/json
@@ -46,7 +46,7 @@ X-Request-Origin: YOUR-REQUEST-ORIGIN-HERE
 Authorization: Bearer YOUR-REST-API-KEY
 ```
 
-## 요청 예시
+## 예시 요청
 ```json
 curl --location --request GET \ 'https://rest.iad-01.braze.com/scim/v2/Users?filter=userName%20eq%20%22user@test.com%22' \
 --header 'Content-Type: application/json' \

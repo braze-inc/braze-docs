@@ -11,7 +11,7 @@ tool:
 
 # Channel performance dashboard
 
-> Channel performance dashboards allow you to view aggregate performance metrics for an entire channel, from both campaigns and Canvases. These dashboards are currently available for email and SMS.
+> Channel performance dashboards show aggregate performance metrics for an entire channel, from both campaigns and Canvases. These dashboards are currently available for email and SMS.
 
 {% alert note %}
 If you are using the [older navigation]({{site.baseurl}}/navigation), the channel performance dashboards are located under **Overview**.
@@ -19,17 +19,22 @@ If you are using the [older navigation]({{site.baseurl}}/navigation), the channe
 
 ![Email performance dashboard displaying email channel engagement from the last thirty days.][1]
 
+You can view the following dashboards:
+- [Email performance dashboard](#email-performance-dashboard)
+- [Email insights dashboard](#email-insights-dashboard)
+- [SMS performance dashboard](#sms-performance-dashboard)
+
 ## Email performance dashboard
 
-To use your email performance dashboard, go to **Analytics** > **Email Performance**, and select the date range for the period you want to view data. Your date range can be up to one year in the past.
+View your email performance dashboard by going to **Analytics** > **Email Performance**, and selecting the date range for the period you want to view data. Your date range can be up to one year in the past.
 
-### Metrics calculations
+### How metrics are calculated
 
 ![][2]{: style="max-width:40%;float:right;margin-left:15px;border:none;"}
 
 The calculations for different metrics in the email performance dashboard are the same as those on an individual message level (such as campaign analytics). On this dashboard, the metrics are aggregated across all campaigns and Canvases for the date range you've selected. To learn more about these definitions, refer to [Email metrics]({{site.baseurl}}/user_guide/message_building_by_channel/email/reporting_and_analytics/email_reporting#email-metrics).
 
-Each tile shows the rate metric first, followed by the count metric (with the exception of _Sends_, which displays the count metric followed by the average per day). For example, the unique clicks tile contains the _Unique click rate_ from your selected time period and the count of the total number of unique clicks from that time period. Each tile also shows the [comparison to the last period](#comparison-to-last-period-change-in-totals-or-rates).
+Each tile shows the rate metric first, followed by the count metric (with the exception of *Sends*, which displays the count metric followed by the average per day). For example, the unique clicks tile contains the *Unique click rate* from your selected time period and the count of the total number of unique clicks from that time period. Each tile also shows the [comparison to the last period](#comparison-to-last-period-change-in-totals-or-rates).
 
 | Metric | Type | Calculation |
 | --- | --- | ---- |
@@ -43,15 +48,15 @@ Each tile shows the rate metric first, followed by the count metric (with the ex
 | Unique click to open rate | Rate | (Total number of unique clicks across each day in the date range) / (Total number of unique opens across each day in the date range) |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
-## Email Insights dashboard 
+## Email insights dashboard 
 
-The Email Insights dashboard helps you track and better understand where and when your customers are interacting with your emails. These reports can provide rich and granular data on how to optimize your emails to drive greater engagement. The Email Insights dashboard includes up to the last six months of data. To access the dashboard, go to **Analytics** > **Email Performance** > **Email Insights**.
+The email insights dashboard tracks where and when your customers are interacting with your emails. These reports can provide rich and granular data on how to optimize your emails to drive greater engagement. The email insights dashboard includes up to the last six months of data. To access the dashboard, go to **Analytics** > **Email Performance** > **Email Insights**.
 
 ### Engagement by Device
 
 The **Engagement by Device** report provides a breakdown of what devices your users are using to engage with your email. This data tracks email engagement across mobile, desktop, tablet, and other device types. 
 
-The "Other" category includes any user string that cannot be identified as desktop, mobile, or tablet. For example, television, car, video game console, OTT, and similar. This may also include null or empty values.
+The "Other" category includes any user string that cannot be identified as desktop, mobile, or tablet. For example, television, car, video game console, OTT (over-the-top or streaming), and similar. This may also include null or empty values.
 
 ![Enagement by Device report that shows the number of clicks for mobile, desktop, tablet, and other. The most number of clicks occurs on mobile devices.]({% image_buster /assets/img/engagement_by_device_type.png %}){: style="max-width:70%;"}
 
@@ -83,7 +88,7 @@ For more information on analytics for your emails, check out [Email reporting]({
 
 To use your SMS performance dashboard, go to **Analytics** > **SMS Performance**, and select the date range for the period you want to view data. Your date range can be up to one year in the past.
 
-### Metrics calculations
+### How metrics are calculated
 
 ![][2]{: style="max-width:40%;float:right;margin-left:15px;border:none;"}
 
@@ -112,11 +117,13 @@ You can filter the data on your dashboard using the following filter options:
 
 ![Filter options on the Channel Performance Dashboard where you can select a tag and list of Canvases to filter by.][3]
 
-## Comparison to last period: Change in totals or rates
+## Comparing time periods
 
 The channel performance dashboard automatically compares the time period you have selected in the date range versus the prior time period totaling the same number of days. For example, if you choose "Last 7 Days" as your date range in the dashboard, the comparison to the last period will compare the metrics from the last seven days against the seven days prior. If you select a custom date range—let's say May 10 to May 15, which is six days' worth of data—the dashboard will compare the metrics from across those days to the metrics from May 4 to May 9.
 
 The comparison is the percentage change between the last and current periods, calculated by taking the difference between the two periods and dividing it by the metric from the last period.
+
+### Viewing changes in total counts and rates
 
 You can switch between **Show Change in Totals**—which compares the total counts (such as the number of emails delivered) between the two periods—and **Show Change in Rates**—which compares the rates (such as the delivery rate).
 

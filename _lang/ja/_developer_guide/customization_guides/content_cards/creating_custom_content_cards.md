@@ -14,7 +14,7 @@ platform:
 
 # カスタムコンテンツカードの作成
 
-> この記事では、カスタムコンテンツカードを実装するときに使用する基本的なアプローチと、バナー画像、メッセージ受信トレイ、画像のカルーセルの3つの一般的なユースケースについて説明します。コンテンツカードカスタマイズガイドの他の記事をすでに読み、デフォルトでできること、カスタムコードが必要なことを理解していることを前提としている。特に、カスタム・コンテンツカードの[分析ログの記録]({{site.baseurl}}/developer_guide/customization_guides/content_cards/logging_analytics)方法を理解することである。 
+> この記事では、カスタムコンテンツカードを実装するときに使用する基本的なアプローチと、バナー画像、メッセージ受信トレイ、画像のカルーセルの3つの一般的なユースケースについて説明します。コンテンツ・カードのカスタマイズ・ガイドの他の記事をすでに読んで、デフォルトでできることと、カスタム・コードが必要なことを理解していることを前提としている。特に、カスタム・コンテンツ・カードの[アナリティクスを記録]({{site.baseurl}}/developer_guide/customization_guides/content_cards/logging_analytics)する方法を理解することである。 
 
 Brazeには、`imageOnly`、`captionedImage`、`classic`、`classicImage`、`control`といったさまざまな[コンテンツカードタイプ][1]が用意されています。これらは実装の出発点として使用でき、ルックアンドフィールを調整できます。 
 
@@ -33,7 +33,7 @@ Brazeには、`imageOnly`、`captionedImage`、`classic`、`classicImage`、`con
 2. データの更新をリッスンする
 3. 分析を手動でログに記録する
 
-### ステップ1: カスタム UI を作成する 
+### ステップ1:カスタム UI を作成する 
 
 {% tabs %}
 {% tab Android %}
@@ -53,13 +53,13 @@ Brazeには、`imageOnly`、`captionedImage`、`classic`、`classicImage`、`con
 {% endtab %}
 {% endtabs %}
 
-### ステップ2: カードの更新情報を購読する
+### ステップ2:カードの更新情報を購読する
 
 次に、カードの更新時に[データ更新を購読][6]するコールバック関数を登録します。 
 
-### ステップ3: 分析を実装する
+### ステップ3:分析を実装する
 
-コンテンツカードのインプレッション数、クリック数、却下数は、カスタムビューに自動的に記録されません。Brazeダッシュボード分析にすべてのメトリクスを適切にログバックするために、[それぞれの方法を実装][3]する必要がある。
+コンテンツカードのインプレッション数、クリック数、却下数は、カスタムビューに自動的に記録されません。すべての指標が Braze ダッシュボードの分析に適切に記録されるように、[それぞれのメソッドを実装][3]する必要があります。
 
 ## コンテンツカードの配置
 
@@ -80,23 +80,23 @@ Brazeには、`imageOnly`、`captionedImage`、`classic`、`classicImage`、`con
 - body: Politer Weekly のプロファイルに興味のある内容を追加して、個人的な読書レコメンデーションを手に入れましょう。
 - style: info
 - class_type: notification_center
-- card_priority: 1
+- card_priority:1
 
 新規購読者のクーポンのキーと値のペアの例は次のとおりです。
 
-- title:無制限ゲームのサブスクライバーになる
+- title:無制限のゲームに登録する
 - body: 夏の終わりスペシャル - Politer ゲームが10%オフ
 - buttonText: 今すぐ購読する
 - style: promo
 - class_type: notification_center
-- card_priority: 2
+- card_priority:2
 - terms: new_subscribers_only
 
 マーケターは、このコンテンツカードを一部の新規ユーザーにのみ提供することができます。 
 
 それぞれの値を扱うことになります。`body`、`title`、`buttonText`などのキーは、マーケターが設定できる単純な文字列値を持つ場合があります。`terms`のようなキーは、法務部門が承認したフレーズの小さなコレクションを提供する値を持つ場合があります。アプリやサイトで`style`や`class_type`をどのようにレンダリングするかを決めることになります。 
 
-{% details Androidについての詳しい説明 %}
+{% details Android に関する詳細説明 %}
 
 Android と FireOS SDK では、メッセージセンターのロジックは Braze のキーと値のペアが提供する`class_type`値によって駆動されます。[`createContentCardable`]({{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/implementation_guide)メソッドを使用すると、これらのクラスタイプをフィルタリングして識別できます。
 
@@ -227,7 +227,7 @@ protected void onCreate(Bundle savedInstanceState) {
 
 そうは言っても、さまざまな方法で追加の表示ロジックを注文して適用することができます。たとえば、配列から最初の5つのコンテンツカードオブジェクトを選択したり、キーと値のペアを導入して条件付きロジックを構築したりできます。
 
-セカンダリのコンテンツカードフィードとしてカルーセルを実装している場合は、[デフォルトのコンテンツカードフィードをカスタマイズ]({{site.baseurl}}/developer_guide/customization_guides/content_cards/customizing_feed/#multiple-feeds)する を参照し、 キーと値のペアに基づいて正しいフィードにカードをソートする方法を学ぶ。
+セカンダリコンテンツカードフィードとしてカルーセルを実装する場合は、[デフォルトのコンテンツカードフィードのカスタマイズ]({{site.baseurl}}/developer_guide/customization_guides/content_cards/customizing_feed/#multiple-feeds)を参照して、キーと値のペアに基づいてカードを正しいフィードにソートする方法を確認してください。
 
 ### バナー
 

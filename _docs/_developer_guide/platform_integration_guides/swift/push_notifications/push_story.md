@@ -11,7 +11,7 @@ channel:
 
 # Push Stories
 
-> [Push Stories][5] allow marketers to use photo carousel functionality to create a sequence of pages within a push notification. These pages consist of an image, click action, title, and description. 
+> [Push Stories]({{site.baseurl}}/user_guide/message_building_by_channel/push/advanced_push_options/push_stories/) allow marketers to use photo carousel functionality to create a sequence of pages within a push notification. These pages consist of an image, click action, title, and description. 
 
 Setting up Push Stories for your iOS app requires additional steps beyond integrating standard push notifications, which are outlined in this article.
 
@@ -21,13 +21,13 @@ The following SDK versions is required to receive Push Stories:
 
 {% sdk_min_versions swift:5.0.0 %}
 
-Ensure that you have followed the [push notification integration tutorial][1] to enable push in your app. As part of this task, you should have implemented the `UNNotification` framework, which is required for this feature.
+Ensure that you have followed the [push notification integration tutorial]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/integration/) to enable push in your app. As part of this task, you should have implemented the `UNNotification` framework, which is required for this feature.
 
 ## Step 1: Adding the Notification Content Extension target {#notification-content-extension}
 
 In your app project, go to menu **File > New > Target** and add a new `Notification Content Extension` target and activate it.
 
-![][2]
+![]({% image_buster /assets/img/swift/push_story/add_content_extension.png %})
 
 Xcode should generate a new target for you and create files automatically for you including:
 
@@ -38,7 +38,7 @@ Xcode should generate a new target for you and create files automatically for yo
 
 In Xcode, add the Background Modes capability using the **Signing & Capabilities** pane to the main app target. Select both the **Background fetch** and **Remote notifications** checkboxes.
 
-![][3]
+![]({% image_buster /assets/img/swift/push_story/enable_background_mode.png %})
 
 ### Adding an App Group
 
@@ -152,7 +152,7 @@ Open the `Info.plist` file of the `Notification Content Extension`, then add and
 
 Your `Info.plist` file should match the following image:
 
-![][12]
+![]({% image_buster /assets/img/swift/push_story/notificationcontentextension_plist.png %})
 
 ## Step 6: Updating the Braze integration in your main app {#update-braze}
 
@@ -165,9 +165,3 @@ configuration.push.appGroup = "REPLACE_WITH_APPGROUP"
 let braze = Braze(configuration: configuration)
 ```
 
-[1]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/integration/
-[2]: {% image_buster /assets/img/swift/push_story/add_content_extension.png %}
-[3]: {% image_buster /assets/img/swift/push_story/enable_background_mode.png %}
-[4]: {% image_buster /assets/img/swift/push_story/add_app_groups.png %}
-[5]: {{site.baseurl}}/user_guide/message_building_by_channel/push/advanced_push_options/push_stories/
-[12]: {% image_buster /assets/img/swift/push_story/notificationcontentextension_plist.png %}

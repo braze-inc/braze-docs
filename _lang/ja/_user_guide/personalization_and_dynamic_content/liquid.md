@@ -4,68 +4,66 @@ article_title: Liquid
 page_order: 0
 layout: dev_guide
 search_rank: 3
-guide_top_header: "Liquid タグを使用したパーソナライゼーション"
-guide_top_text: "Braze は、特定のユーザーの値を自動的にメッセージに置き換えることができます。補間された値を使用することを Braze に通知するには、式を 2 組の中括弧内に入れます。これらの括弧内では、置換するユーザー値は、前にドル記号が付いた追加の括弧セットで囲む必要があります。<br><br>Liquid の詳細については、ガイド付きの <b><a href='https://learning.braze.com/path/dynamic-personalization-with-liquid'>Dynamic Personalization with Liquid</a></b> Braze 学習パスをご覧ください。"
-description: "このランディング ページでは、サポートされているパーソナライズ タグ、フィルター、デフォルト値の設定など、Liquid に関するあらゆる情報を取り上げます。"
+guide_top_header: "液体タグを使用したカスタマイズ"
+guide_top_text: "Braze は、指定されたユーザーの値を自動的にメッセージに置き換えます。中括弧の2組の内側に式を置き、補間値を使用していることをBrazeに通知します。これらの括弧内では、置換するユーザーの数値は、先頭にドル記号を付けた括弧で囲む必要があります。<br><br>Liquidの詳細については、ガイド付きの<b><a href='https://learning.braze.com/path/dynamic-personalization-with-liquid'>Liquid</a></b>Braze 学習 パスでダイナミックパーソナライゼーションをご覧ください!"
+description: "このランディングページでは、サポートされているパーソナライゼーション タグs、フィルターs、設定 デフォルトバリューなど、リキッドのすべてを網羅しています。"
 
-guide_featured_title: "セクション記事"
+guide_featured_title: "セクションの記事"
 guide_featured_list:
-- name: Using Liquid
+- name: 液体の使用
   link: /docs/user_guide/personalization_and_dynamic_content/liquid/using_liquid/
-  fa_icon: fas fa-flask
-- name: Supported Personalization Tags
+  image: /assets/img/braze_icons/beaker-02.svg
+- name: サポートされているカスタマイズタグ
   link: /docs/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/
-  fa_icon: fas fa-tag
-- name: Operators
+  image: /assets/img/braze_icons/tag-01.svg
+- name: 演算子
   link: /docs/user_guide/personalization_and_dynamic_content/liquid/operators/
-  fa_icon: fas fa-code
-- name: Filters
+  image: /assets/img/braze_icons/code-02.svg
+- name: フィルター
   link: /docs/user_guide/personalization_and_dynamic_content/liquid/filters/
-  fa_icon: fas fa-filter
-- name: Advanced Filters
+  image: /assets/img/braze_icons/flag-02.svg
+- name: 詳細フィルタ
   link: /docs/user_guide/personalization_and_dynamic_content/liquid/advanced_filters/
-  fa_icon: fas fa-cog
-- name: Setting Default Values
+  image: /assets/img/braze_icons/settings-01.svg
+- name: デフォルト値の設定
   link: /docs/user_guide/personalization_and_dynamic_content/liquid/setting_default_values/
-  fa_icon: fas fa-table
-- name: Conditional Messaging Logic
+  image: /assets/img/braze_icons/table.svg
+- name: 条件付きメッセージロジック
   link: /docs/user_guide/personalization_and_dynamic_content/liquid/conditional_logic/
-  fa_icon: fas fa-columns
-- name: Aborting Messages
+  image: /assets/img/braze_icons/columns-01.svg
+- name: メッセージの中止
   link: /docs/user_guide/personalization_and_dynamic_content/liquid/aborting_messages/
-  fa_icon: fas fa-undo
-- name: Liquid Use Cases
+  image: /assets/img/braze_icons/refresh-ccw-01.svg
+- name: 液体使用例
   link: /docs/user_guide/personalization_and_dynamic_content/liquid/liquid_use_cases/
-  fa_icon: fas fa-list-ul
-- name: Frequently Asked Questions
+  image: /assets/img/braze_icons/list.svg
+- name: よくある質問
   link: /docs/user_guide/personalization_and_dynamic_content/liquid/faq/
-  fa_icon: fas fa-question
+  image: /assets/img/braze_icons/annotation-question.svg
   
 ---
 
-## Liquidについて
+## 液体について
 
-> Liquid は、Shopify によって開発され、Ruby で記述されたオープンソースのテンプレート言語です。Braze では、Liquid を使用して、ユーザーのプロファイルのデータをメッセージにテンプレート化します。 
+> Liquidは、Shopifyが開発し、ルビーで書かれた開封ソースのテンプレート語です。Brazeでは、リキッドを使用してユーザーのプロファイルからデータをメッセージにテンプレートします。 
 
-たとえば、整数データ型のカスタム属性をユーザー プロファイルから取得し、その値を最も近い整数に丸めることができます。Liquid の構文と使用方法の詳細については、[**「サポートされているパーソナライズ タグ」**][1]を参照してください。
+たとえば、整数データタイプのユーザープロファイルからカスタム属性を取得し、その値を最も近い整数に丸めることができます。リキッドのシンタックスと使用方法については、[**対応パーソナライゼーション タグs**][1]を参照してください。
 
-Liquid テンプレート言語は、オブジェクト、タグ、フィルターの使用をサポートしています。
+リキッドテンプレーティング言語は、オブジェクト、タグs、およびフィルターs の使用をサポートします。
 
-- [**オブジェクトを使用する**]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/) と、メッセージにパーソナライズされた属性を挿入できます。
-- [**タグを使用すると**]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/) 、メッセージにデータを挿入し、条件付きロジックを使用してアウトラインの条件が満たされた場合にメッセージを送信できます。たとえば、タグを使用して、「if」ステートメントなどのインテリジェントなロジックをキャンペーンに含めることができます。
-- [**フィルターを使用すると**]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/filters/) 、パーソナライズされた属性と動的コンテンツを再フォーマットできます。たとえば、*2016-09-07 08:43:50 UTC*などのタイムスタンプを、*September 7, 2016*などの日付に変換できます。
+- [**オブジェクト**]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/)を使用すると、メッセージにパーソナライズされた 属性sを挿入できます。
+- [**タグ**]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/)を使用すると、メッセージングにデータを挿入し、アウトライン条件が満たされている場合に条件ロジックを使用してメッセージを送信できます。たとえば、タグsを使用して、"if"文などのインテリジェントロジックをキャンペーンsに含めることができます。
+- [**フィルタ**]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/filters/) では、パーソナライズされた 属性s とダイナミックなの内容を再フォーマットできます。たとえば、*2016-09-07 08:43:50 UTC* などのタイムスタンプを、*September 7, 2016* などの日付に変換できます。
 
 {% alert warning %}
-Braze は現在、Shopify の Liquid を 100% サポートしているわけではなく、ドキュメントで概要を説明している特定の部分のみをサポートしています。エラーやサポートされていない Liquid の使用のリスクを軽減するために、メッセージを送信する前に Liquid を使用してすべてのメッセージをテストすることを強くお勧めします。
+Brazeは現在、Shopify社のリキッドの100%を支持しておらず、当社のドキュメントで概説しようとした特定の部分のみを支持しています。エラーの危険を減らすため、またはサポートされていない液体を使用するために、すべてのメッセージを液体でテストしてから送信することを強くお勧めします。
 {% endalert %}
 
-### Liquid 5の新機能
+### Liquid 5
 
-Braze は **、Shopify の Liquid 5**までの Liquid のサポートを更新しました。 
+Braze は、**Shopify** からのLiquid 5 までのLiquid をサポートします。リキッドインプリメンテーションでは、シンタックスパーソナライゼーション タグタイプと空白コントロールがサポートされます。タグの詳細については、[構文タグs]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/#syntax-tags)を参照してください。
 
-Liquid 実装では、構文のパーソナライズ タグ タイプと空白の制御がサポートされています。特定のタグの詳細については、 [構文タグ]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/#syntax-tags)を参照してください。
-
-次の新しい配列フィルターと数式フィルターは、メッセージングを作成するときに Liquid で使用できます。
+次の新しい配列と演算フィルターは、メッセージングの構築時にリキッドで使用できます。
 - `at_least`
 - `at_most`
 - `compact`
@@ -73,21 +71,32 @@ Liquid 実装では、構文のパーソナライズ タグ タイプと空白�
 - `sort_natural`
 - `where`
 
-定義については、 [フィルターの]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/filters/) 記事を参照してください。
+定義については、[Filters]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/filters/)の記事を参照してください。
+
+### 流動更新s
+
+各Liquid エレメントはカラーに対応しており、Liquid エディターでLiquid を一目で区別できます。
+
+![]({% image_buster /assets/img/liquid_color_code.png %})
+
+また、パーソナライズされたを作成する際に、カスタム属性s、属性の名前などにプレディケーティブリキッドを活用することもできます。
+
+![]({% image_buster /assets/img/liquid_auto_complete.gif %}){: style="max-width:70%;"}
+
 
 ## 知っておくべき用語
 
-これらの用語は、[**Shopify のドキュメント**](https://shopify.github.io/liquid/basics/introduction/) から当社のサポート レベルに基づいて再解釈されます。
+これらの用語は、サポートレベルに基づいて、[**Shopifyのドキュメント**](https://shopify.github.io/liquid/basics/introduction/)から再解釈されます。
 
 {% raw %}
 
 | 用語 | 定義 | 例 |  
 |---|---|---|
-| Liquid | Shopify によって作成され、Ruby で記述された、一般的に使用される顧客向けテンプレート言語。動的コンテンツの読み込み/取得に使用されます。 | `{{${first_name}}}` メッセージにユーザーのファーストネームを挿入します。 |
-| オブジェクト | 変数の表記と、メッセージ内のコンテンツを表示する場所を Liquid に指示する目的の変数名の場所。 | `{{${city}}}` ユーザーの都市名をメッセージに挿入します。 |
-| 条件付きロジック タグ | タグはロジックを作成し、メッセージ コンテンツのフローを制御します。Braze では、条件付きロジック タグを使用して、特定の定義済み基準に基づいてメッセージの例外とバリエーションを作成します。 | ```{% if ${language} == 'en' %}``` ユーザーが言語として「英語」を指定した場合、指定された方法でメッセージが送信されます。 |
-| フィルター | Liquid オブジェクトの出力を変更、絞り込み、または再フォーマットするために使用されます。数学演算を作成するためによく使用されます。 | ```{{"Big Sale" | upcase}}``` メッセージ内で「Big Sale」という単語が「BIG SALE」と表示されます。 |
-| 演算子 | メッセージ内で、ユーザーが受信するメッセージに影響を与える依存関係や条件を作成するために使用されます。 | ユーザーがタグ付きメッセージで定義された条件を満たしている場合 `{% custom_attribute.${Total_Revenue} > 0%}`、メッセージを受け取ります。そうでない場合は、設定内容に応じて、別の指定されたメッセージが送信されます (または送信されません)。 |
+| Liquid | Shopify によって作成され、ルビーで書かれた、一般的に使用される、顧客に面したテンプレート。ダイナミックなの内容を読み込む/プルするために使用されます。 | `{{${first_name}}}` ユーザーの名をメッセージに挿入します。 |
+| オブジェクト | 変数のデノテーションと、メッセージ内のコンテンツを表示する場所をLiquid に伝える目的の変数名の場所。 | `{{${city}}}` ユーザーの都市を伝言メモに挿入します。 |
+| 条件付きロジックタグ | タグはロジックを作成し、メッセージ内容の流れをコントロールします。Braze では、条件付きロジックタグを使用して、事前定義された特定の条件に基づいて、メッセージに例外やバリエーションを作成します。 | ```{% if ${language} == 'en' %}``` ユーザーが"English"を指定した場合、指定された方法でメッセージをトリガーします。 |
+| フィルター | 液体オブジェクトの出力を変更、狭め、または再フォーマットするために使用します。多くの場合、数学演算を作成するために使用されます。 | ```{{"Big Sale" | upcase}}``` "Big Sale"という単語が、メッセージの中でear as "BIG SALE"をアプリします。 |
+| 演算子 | メッセージで使用され、ユーザーが受信するメッセージに影響を与える可能性のある依存関係または基準を作成します。 | ユーザーが、`{% custom_attribute.${Total_Revenue} > 0%}` のメッセージタグで定義された条件を満たしている場合、メッセージを受信します。設定されていない場合は、設定した内容に応じて、別の指定されたメッセージが受信されます(または受信されません)。 |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 {% endraw %}

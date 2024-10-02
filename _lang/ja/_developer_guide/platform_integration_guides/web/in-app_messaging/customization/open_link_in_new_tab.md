@@ -1,19 +1,19 @@
 ---
-nav_title: リンクを新しいタブで開く
-article_title: アプリ内メッセージリンクをウェブの新しいタブで開く
+nav_title: 新規タブでリンクを開く
+article_title: Web の新規タブでアプリ内メッセージリンクを開く
 platform: Web
 channel: in-app messages
 page_order: 8
 page_type: reference
-description: "この記事では、Web アプリケーションの新しいタブで開くようにアプリ内メッセージ リンクを設定する方法について説明します。"
+description: "ここでは、ウェブアプリ用の新しいタブで開封へのアプリ内メッセージリンクを設定する方法について説明します。"
 
 ---
 
-# リンクを新しいタブで開く
+# 新しいタブでリンクを開く
 
-> この記事では、Web アプリケーションの新しいタブで開くようにアプリ内メッセージ リンクを設定する方法について説明します。
+> ここでは、ウェブアプリ用の新しいタブで開封へのアプリ内メッセージリンクを設定する方法について説明します。
 
-アプリ内メッセージリンクを新しいタブで開くように設定するには、 `openInAppMessagesInNewTab` オプション `true` アプリ内メッセージのクリックからのすべてのリンクを新しいタブまたはウィンドウで強制的に開きます。
+新しいタブでアプリ内メッセージのリンクが開くように設定するには、`openInAppMessagesInNewTab` オプションを `true` に設定して、アプリ内メッセージでのクリックによるすべてのリンク先が新しいタブまたはウィンドウで開くように強制します。
 
 ```javascript
 braze.initialize('api-key', { openInAppMessagesInNewTab: true} );

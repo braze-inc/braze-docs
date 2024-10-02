@@ -1,37 +1,37 @@
 ---
-nav_title: "メーリングリストとアドレス"
-article_title: メーリングリストとアドレスエンドポイント
+nav_title: "電子メールリストとアドレス"
+article_title: 電子メールリストとアドレス エンドポイント
 search_tag: Endpoint
 page_order: 1
 layout: dev_guide
 
-description: "このランディングページでは、Brazeのメーリングリストについて説明し、エンドポイントに対処します。"
+description: "このランディングページでは、Brazeの電子メールリストとアドレスのエンドポイントについて説明し、一覧表示する。"
 page_type: landing
 
-guide_top_header: "メーリングリストとアドレスエンドポイント"
-guide_top_text: "このエンドポイントのセットを使用して、ユーザーのメールサブスクリプションステータスを更新し、Braze APIを使用してBrazeと他のメールシステムまたは独自のデータベースとの間の双方向同期を設定できます。"
+guide_top_header: "電子メールリストとアドレス エンドポイント"
+guide_top_text: "このエンドポイントセットを使用して、ユーザーのメールサブスクリプションステータスを更新できます。Braze API を使用して、Braze と他のメールシステムまたは独自のデータベースとの間で双方向同期を設定することができます。"
 
 guide_featured_title: ""
 guide_featured_list:
-  - name: "GET: List Hard Bounces"
+  - name: "取得:ハードバウンドのリスト"
     link: /docs/api/endpoints/email/get_list_hard_bounces/
-    fa_icon: fas fa-reply-all
-  - name: "GET: Query Unsubscribed Email Addresses"
+    image: /assets/img/braze_icons/message-plus-square.svg
+  - name: "取得:配信停止になっているメールアドレスの照会"
     link: /docs/api/endpoints/email/get_query_unsubscribed_email_addresses/
-    fa_icon: fas fa-envelope
-  - name: "POST: Change Email Subscription Status"
+    image: /assets/img/braze_icons/mail-01.svg
+  - name: "POST:メールサブスクリプションステータスの変更"
     link: /docs/api/endpoints/email/post_email_subscription_status/
-    fa_icon: fas fa-at
-  - name: "POST: Remove Hard Bounces"
+    image: /assets/img/braze_icons/at-sign.svg
+  - name: "POST:ハードバウンスの削除"
     link: /docs/api/endpoints/email/post_remove_hard_bounces/
-    fa_icon: fas fa-reply-all
-  - name: "POST: Remove Spam"
+    image: /assets/img/braze_icons/message-plus-square.svg
+  - name: "POST:スパムを除去する"
     link: /docs/api/endpoints/email/post_remove_spam/
-    fa_icon: fas fa-envelope-open
-  - name: "POST: Blocklist Email"
+    image: /assets/img/braze_icons/mail-04.svg
+  - name: "POST:ブロックリストのEメール"
     link: /docs/api/endpoints/email/post_blocklist/
-    fa_icon: fas fa-envelope-open
+    image: /assets/img/braze_icons/mail-04.svg
 ---
 {% comment %}
-email\_sync.md からのリダイレクト
+email_sync.mdからリダイレクトする。
 {% endcomment %}

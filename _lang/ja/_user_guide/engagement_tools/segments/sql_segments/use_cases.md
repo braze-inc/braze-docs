@@ -315,34 +315,34 @@ GROUP BY
 メッセージ
 {% endapitags %}
 
-\`\`\`sql
-WITH user\_email\_counts AS (
-  SELECT
-    USER\_ID,
-    COUNT(\*) AS total\_emails,
-    DATEDIFF(day, MIN(TO\_DATE(DATE\_TRUNC('day', TO\_TIMESTAMP\_NTZ(TIME)))), MAX(TO\_DATE(DATE\_TRUNC('day', TO\_TIMESTAMP\_NTZ(TIME))))) AS days
-  FROM USERS\_MESSAGES\_EMAIL\_SEND\_SHARED
-  GROUP BY USER\_ID
-  HAVING COUNT(USER\_ID) > 1
+```sql
+WITH user_email_counts AS (
+  SELECT 
+    USER_ID,
+    COUNT(*) AS total_emails,
+    DATEDIFF(day, MIN(TO_DATE(DATE_TRUNC('day', TO_TIMESTAMP_NTZ(TIME)))), MAX(TO_DATE(DATE_TRUNC('day', TO_TIMESTAMP_NTZ(TIME))))) AS days
+  FROM USERS_MESSAGES_EMAIL_SEND_SHARED
+  GROUP BY USER_ID
+  HAVING COUNT(USER_ID) > 1
 ),
 
--- 次に、各ユーザーが毎日受け取る平均メール数を計算します
-user\_daily\_average AS (
-  SELECT
-    USER\_ID,
+-- Then, calculate the average number of emails received by each user daily
+user_daily_average AS (
+  SELECT 
+    USER_ID,
     days,
-    ケース
-      WHEN days = 0 THEN total\_emails 　ユーザーが1日にすべてのメールを受信した場合、そのユーザーの平均はメールの総数です
-      ELSE total\_emails/days -- それ以外の場合は、メールの総数を日数で割ったものです
-    END AS daily\_average
-  FROM user\_email\_counts
+    CASE 
+      WHEN days = 0 THEN total_emails  -- If the user received all emails in one day, the average for that user is the total number of emails
+      ELSE total_emails / days  -- Otherwise, it's the total number of emails divided by the number of days
+    END AS daily_average
+  FROM user_email_counts
 )
 
--- 1日平均の合計は、すべてのユーザーの平均です
-SELECT
-  AVG(daily\_average)
-FROM user\_daily\_average;
-\`\`\`
+-- The total daily average is the average of all users
+SELECT 
+  AVG(daily_average)
+FROM user_daily_average;
+```
 
 {% alert tip %}
 SMS メッセージの場合は、クエリの `USERS_MESSAGES_EMAIL_SEND_SHARED` を `USERS_MESSAGES_SMS_SEND_SHARED` に置き換えます。プッシュ通知の場合は、クエリの `USERS_MESSAGES_EMAIL_SEND_SHARED` を`USERS_MESSAGES_SMS_SEND_SHARED` に置き換えます
@@ -355,33 +355,33 @@ SMS メッセージの場合は、クエリの `USERS_MESSAGES_EMAIL_SEND_SHARED
 メッセージ
 {% endapitags %}
 
-\`\`\`sql
-WITH user\_email\_counts AS (
-  SELECT
-    USER\_ID,
-    COUNT(\*) AS total\_emails,
-    DATEDIFF(week, MIN(TO\_DATE(DATE\_TRUNC('week', TO\_TIMESTAMP\_NTZ(TIME)))), MAX(TO\_DATE(DATE\_TRUNC('week', TO\_TIMESTAMP\_NTZ(TIME))))) AS weeks
-  FROM USERS\_MESSAGES\_EMAIL\_SEND\_SHARED
-  GROUP BY USER\_ID
-  HAVING COUNT(USER\_ID) > 1
+```sql
+WITH user_email_counts AS (
+  SELECT 
+    USER_ID,
+    COUNT(*) AS total_emails,
+    DATEDIFF(week, MIN(TO_DATE(DATE_TRUNC('week', TO_TIMESTAMP_NTZ(TIME)))), MAX(TO_DATE(DATE_TRUNC('week', TO_TIMESTAMP_NTZ(TIME))))) AS weeks
+  FROM USERS_MESSAGES_EMAIL_SEND_SHARED
+  GROUP BY USER_ID
+  HAVING COUNT(USER_ID) > 1
 ),
 
--- 次に、各ユーザーが毎週受信する平均メール数を計算します
-user\_weekly\_average AS (
-  SELECT
-    USER\_ID,
-    ケース
-      WHEN weeks = 0 THEN total\_emails -- ユーザーが同じ週にすべてのメールを受信した場合、平均はメールの総数です
-      ELSE total\_emails/weeks -- それ以外の場合は、メールの総数を週数で割ったものです
-    END AS weekly\_average
-  FROM user\_email\_counts
+-- Then, calculate the average number of emails received by each user weekly
+user_weekly_average AS (
+  SELECT 
+    USER_ID,
+    CASE 
+      WHEN weeks = 0 THEN total_emails  -- If the user received all emails in the same week, the average is the total number of emails
+      ELSE total_emails / weeks  -- Otherwise, it's the total number of emails divided by the number of weeks
+    END AS weekly_average
+  FROM user_email_counts
 )
 
--- 週平均の合計は、全ユーザーの平均です
-SELECT
-  AVG(weekly\_average) AS average\_weekly\_emails
-FROM user\_weekly\_average;
-\`\`\`
+-- The total weekly average is the average of all users
+SELECT 
+  AVG(weekly_average) AS average_weekly_emails
+FROM user_weekly_average;
+```
 {% alert tip %}
 SMS メッセージの場合は、クエリの `USERS_MESSAGES_EMAIL_SEND_SHARED` を `USERS_MESSAGES_SMS_SEND_SHARED` に置き換えます。プッシュ通知の場合は、クエリの `USERS_MESSAGES_EMAIL_SEND_SHARED` を`USERS_MESSAGES_SMS_SEND_SHARED` に置き換えます
 {% endalert %}

@@ -3,24 +3,24 @@ nav_title: 10月
 page_order: 3
 noindex: true
 page_type: update
-description: "この記事には2016年10月のリリースノートが含まれている。"
+description: "この記事には2016年10月のリリースノートが含まれています。"
 ---
 
 # 2016年10月
 
-## 新しいセキュリティ設定
-パスワードの有効期限ルール、パスワードの長さルール、パスワードの複雑さルール、ダッシュボードのIPログイン許可リスト、2要素認証など、Brazeに強化されたセキュリティ機能を追加した。
+## 新しいセキュリティー設定s
+Brazeには、パスワードの有効期限ルール、パスワードの長さルール、パスワードの複雑さルール、ダッシュボード IP ログインの許可、2 要素認証などのセキュリティ機能が追加されています。
 
-> 更新だ：**会社設定**ページからアクセスできるBrazeの**セキュリティ設定には**、パスワードの再利用性と有効期限に関するルールも含まれている。
+> 更新:Braze の**Security Settings** は、**Company Settings** ページからアクセスでき、パスワードの再利用と有効期限の規則も含まれています。
 
-## インポート後のCSVダウンロード
-Brazeユーザーが最近インポートしたユーザーのCSVをダウンロードできるようになった。これにより、システムからのデータ同期がより可視化される。[CSVインポートについての]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/)学習。
+## インポート後のCSV ダウン読み込む
+Braze ユーザー s は、最近インポートしたユーザーのCSV を読み込むできるようになりました。これにより、システムからのデータ同期の可視性が向上します。詳細については、[CSV importing]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/) を参照してください。
 
-## 記念フィルター
-[誕生日フィルターに]({{site.baseurl}}/user_guide/Engagement_Tools/Segments/Segmentation_Filters/)加え、Brazeはアニバーサリーフィルターをサポートし、ロイヤリティのマイルストーンやリフィルのお知らせなど、カレンダーの日付に基づいてユーザーをターゲットにすることができるようになった！セグメンテーション・ページで「カスタム属性の日付」フィルターを選択して、この機能にアクセスする。[フィルターについて]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/#segmentation-filters)もっと学習しよう。
+## 記念日フィルター
+[バースデーフィルター]({{site.baseurl}}/user_guide/Engagement_Tools/Segments/Segmentation_Filters/)に加えて、Brazeは記念日フィルターをサポートするようになりました。これにより、ロイヤルティのマイルストーンのカレンダー日に基づいてユーザーの目標を設定したり、通知を補充したりすることができます!この機能にアクセスするには、セグメントページで"カスタム属性とクォートの日付; フィルターを選択します。[フィルター s]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/#segmentation-filters) について詳しく説明します。
 
-## フリークエンシーキャップ更新
-以前は、フリークエンシーキャップの制限を無視したキャンペーンやキャンバスも、フリークエンシーキャップの対象となった。デフォルトでは、フリークエンシーキャップに従わない新規キャンペーンやキャンバスは、フリークエンシーキャップにもカウントされないように動作を変更した。これはキャンペーンとキャンバスごとに設定できます。[フリークエンシーキャップについて]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/rate-limiting/#frequency-capping)詳しく学習する。
+## 頻度キャップ 更新s
+以前は、フリークエンシーキャップの制約を無視したキャンペーンまたはキャンバスは、依然として度数制限にカウントされます。このビヘイビアを変更したのは、新しいキャンペーンや、周波数上限に従わないキャンバスをデフォルトすることで、それらのビヘイビアにも反映されないようにするためです。これはキャンペーンとキャンバスごとに設定できます。[フリークエンシーキャップ]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/rate-limiting/#frequency-capping) について詳しく説明します。
 
-## アプリ内メッセージのカラープロファイル
-アプリ内メッセージに[カラープロファイルを]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/#color-profile)追加し、顧客がBrazeで新しいメッセージを作成する際にブランド配色を再利用できるようになった。
+## アプリ中の本文のカラープロファイルs
+アプリ内メッセージ s に[color プロファイル s]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/#color-profile) を追加しました。これにより、顧客 s は、Braze で新しいメッセージを作成するときに、オンブランドのカラースキームを再利用できます。

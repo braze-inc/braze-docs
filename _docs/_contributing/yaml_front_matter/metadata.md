@@ -10,16 +10,14 @@ noindex: true
 
 > These are the metadata keys that can be added to a page's YAML front matter. For more general information, see [About content management]({{site.baseurl}}/contributing/content_management/#pages).
 
-To add metadata to a Markdown file, you'll need to add Jekyll's front matter syntax to the beginning of your file.
+## Applying metadata
+
+To apply metadata to your page, add Jekyll's front matter syntax to the beginning of your Markdown file.
 
 ```markdown
 ---
 METADATA_KEY: METADATA_VALUE
 ---
-
-# Getting started with Braze Docs
-
-If you're new to Braze Docs or docs-as-code, start with our tutorial.
 ```
 
 Replace the following:
@@ -29,6 +27,20 @@ Replace the following:
 | `METADATA_KEY`   | The key representing a supported metadata type. Replace with a [metadata key](#required-keys) from the following section. |
 | `METADATA_VALUE` | The value assigned to the metadata key. Check a metadata key's supported values in the following section.                 |
 {: .reset-td-br-1 .reset-td-br-2}
+
+Your page should be similar to the following:
+
+```markdown
+---
+nav_title: Getting started
+article_title: Getting started with Braze Docs
+description: "If you're new to Braze Docs, start with this step-by-step tutorial."
+---
+
+# Getting started with Braze Docs
+
+If you're new to Braze Docs or docs-as-code, start with our tutorial.
+```
 
 ## Required keys
 
@@ -226,7 +238,7 @@ permalink: /support_contact/docs_team/
 
 ### Page layout
 
-The `layout` key is used to set the layout for a page. If `layout` is not set, the `default` layout will be used. This key accepts any of the following `string` values.
+The `layout` key is used to set the layout for a page. If `layout` is not set, the `default` layout will be used. This key accepts any of the following `string` values. For a description and example of each layout, see [Page layouts]({{site.baseurl}}/contributing/yaml_front_matter/page_layouts/).
 
 - `api_page`
 - `dev_guide`
@@ -235,8 +247,6 @@ The `layout` key is used to set the layout for a page. If `layout` is not set, t
 - `glossary_page`
 - `blank_config`
 - `redirect`
-
-For more information about each value, see [Page layouts]({{site.baseurl}}/contributing/yaml_front_matter/page_layouts/).
 
 {% tabs local %}
 {% tab usage example %}

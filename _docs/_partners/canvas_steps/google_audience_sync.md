@@ -12,7 +12,7 @@ page_order: 2
 # Audience Sync to Google
 
 {% alert important %}
-Google is updating their [EU User Consent Policy](https://www.google.com/about/company/user-consent-policy/) in response to changes to the [Digital Markets Act (DMA)](https://ads-developers.googleblog.com/2023/10/updates-to-customer-match-conversion.html), which is in effect as of March 6, 2024. This new change requires advertisers to disclose certain information to their EEA and UK end users, as well as obtain necessary consents from them. Review the following documentation to learn more.
+Google is updating their [EU User Consent Policy](https://www.google.com/about/company/user-consent-policy/) in response to changes to the [Digital Markets Act (DMA)](https://ads-developers.googleblog.com/2023/10/updates-to-customer-match-conversion.html), which is in effect as of March 6, 2024. This new change requires advertisers to disclose certain information to their EEA, UK, and Switzerland end users, as well as obtain necessary consents from them. Review the following documentation to learn more.
 {% endalert %}
 
 The Braze Audience Sync to Google integration enables brands to extend the reach of their cross-channel customer journeys to Google Search, Google Shopping, Gmail, YouTube, and Google Display. Using your first-party customer data, you can securely deliver ads based on dynamic behavioral triggers, segmentation, and more. Any criteria you'd typically use to trigger a message (for example, push, email, or SMS) as part of a Braze Canvas can be used to trigger an ad to that user via Google's [Customer Match](https://support.google.com/google-ads/answer/6379332?hl=en).
@@ -37,25 +37,25 @@ You must ensure the following items are created and completed before setting up 
 | Requirement | Origin | Description |
 | ----------- | ------ | ----------- |
 | Google Ads Account | [Google](https://support.google.com/google-ads/answer/6366720?hl=en) | An active Google ads account for your brand.<br><br>If you're looking to share an audience across multiple managed accounts, you can upload your audiences into your [manager account](https://support.google.com/google-ads/answer/6139186). |
-| Google Ads Terms and Google Ads Policies | [Google](https://support.google.com/adspolicy/answer/54818?hl=en) | You must accept and ensure you comply with [Google’s Ad Terms](https://payments.google.com/u/0/paymentsinfofinder?hostOrigin=aHR0cHM6Ly9wYXltZW50cy5nb29nbGUuY29tOjQ0Mw..&sri=-40) and [Google’s Ad Policies](https://support.google.com/adspolicy/answer/6008942?sjid=15557182366992806023-NC), which include the [EU User Consent Policy](https://www.google.com/about/company/user-consent-policy/), as applicable to you, in your use of Braze Audience Sync.<br><br>Consult with your Legal Team on Google’s new EU User Consent Policy to ensure you are collecting appropriate consent in order to use Google Ads’ services for your EEA/UK end users. |
+| Google Ads Terms and Google Ads Policies | [Google](https://support.google.com/adspolicy/answer/54818?hl=en) | You must accept and ensure you comply with [Google’s Ad Terms](https://payments.google.com/u/0/paymentsinfofinder?hostOrigin=aHR0cHM6Ly9wYXltZW50cy5nb29nbGUuY29tOjQ0Mw..&sri=-40) and [Google’s Ad Policies](https://support.google.com/adspolicy/answer/6008942?sjid=15557182366992806023-NC), which include the [EU User Consent Policy](https://www.google.com/about/company/user-consent-policy/), as applicable to you, in your use of Braze Audience Sync.<br><br>Consult with your Legal Team on Google’s new EU User Consent Policy to ensure you are collecting appropriate consent in order to use Google Ads’ services for your EEA, UK, and Switzerland end users. |
 | Google Customer Match | [Google](https://support.google.com/google-ads/answer/6299717) |  Customer Match is not available for all advertisers.<br><br>**To use Customer Match, your account must have:**<br>• A good history of policy compliance<br>• A good payment history<br>• At least 90 days history in Google Ads<br>• More than USD 50,000 total lifetime spend. For advertisers whose accounts are managed in currencies other than USD, your spend amount will be converted to USD using the average monthly conversion rate for that currency.<br><br>If your account does not meet these criteria, then your account is currently ineligible to use Customer Match.<br><br>Connect with your Google Ads representative for more guidance on Customer Match availability for your account. |
-| Google Consent Signals | [Google](https://support.google.com/google-ads/answer/14310715) |  If you want to serve ads to EEA end users using Google’s Customer Match service, you’ll need to pass Braze the following custom attributes (boolean) as part of Google’s  EU User Consent Policy. More details can be found under [Collecting consent for EEA and UK end users](#collecting-consent-for-eea-and-uk-end-users): <br> - `$google_ad_user_data` <br> - `$google_ad_personalization` |
+| Google Consent Signals | [Google](https://support.google.com/google-ads/answer/14310715) |  If you want to serve ads to EEA end users using Google’s Customer Match service, you’ll need to pass Braze the following custom attributes (boolean) as part of Google’s  EU User Consent Policy. More details can be found under [Collecting consent for EEA, UK, and Switzerland end users](#collecting-consent-for-eea-uk-and-switzerland-end-users): <br> - `$google_ad_user_data` <br> - `$google_ad_personalization` |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 When using Braze SDKs to collect consent signals, ensure you meet the following minimum versions:
 
 {% sdk_min_versions swift:7.6.0 android:1.3.2 web:3.0.0 %}
 
-### Collecting consent for EEA and UK end users
+### Collecting consent for EEA, UK, and Switzerland end users
 
-Google’s EU User Consent Policy requires advertisers to disclose the following to their EEA and UK end users, as well as obtain their consent for such:
+Google’s EU User Consent Policy requires advertisers to disclose the following to their EEA, UK, and Switzerland end users, as well as obtain their consent for such:
 
 * The use of cookies or other local storage where legally required; and
 * The collection, sharing, and use of their personal data for personalization of ads.
 
-This does not affect US end users or any other end users located outside of the EEA or the UK. Consult with your legal team on Google’s new EU User Consent Policy to ensure you are collecting appropriate consent in order to use Google Ads’ services for your EEA and UK end users.
+This does not affect US end users or any other end users located outside of the EEA, the UK, or Switzerland. Consult with your legal team on Google’s new EU User Consent Policy to ensure you are collecting appropriate consent in order to use Google Ads’ services for your EEA, UK, and Switzerland end users.
 
-Under the Digital Markets Act (DMA) requirements in effect as of March 6, 2024, advertisers must pass consent for EEA end users (excluding UK) when sharing data with Google. As part of this change, you can collect both consent signals in Braze as the following boolean custom attributes:
+Under the Digital Markets Act (DMA) requirements in effect as of March 6, 2024, advertisers must pass consent for EEA, UK, and Switzerland end users when sharing data with Google. As part of this change, you can collect both consent signals in Braze as the following boolean custom attributes:
 
 * `$google_ad_user_data`
 * `$google_ad_personalization`
@@ -78,7 +78,16 @@ If an EEA previously provided consent for both signals, that data will continue 
 * While you can't explicitly set a user as unspecified, if you send a `null` or `nil` value or any value that isn't `true` or `false`, Braze will pass this user to Google as `UNSPECIFIED`.
 * New users added or updated without specifying either consent attribute will be synced to Google with those consent attributes marked as unspecified.
 
-If you attempt to sync an EEA user without the necessary consent fields and granted status, Google will reject this and not serve ads to this end user. In addition, if an ad is served to an EEA user without their explicit consent, you may be liable and could be at financial risk. For more details regarding the EU User Consent Policy for Customer Match upload partners, see Google’s [FAQs](https://support.google.com/google-ads/answer/14310715). 
+If you attempt to sync an EEA user without the necessary consent fields and granted status, Google will reject this and not serve ads to this user. In addition, if an ad is served to an EEA user without their explicit consent, you may be liable and could be at financial risk. To avoid this, we suggest sending campaigns with segment filters that only include EEA, UK, and Switzerland users with `true` Google consent attributes. For more details regarding the EU User Consent Policy for Customer Match upload partners, see Google’s [FAQs](https://support.google.com/google-ads/answer/14310715).
+
+### Setting up your Canvas
+
+After you have synced to Braze, the following consent attributes will be available on your user profiles and for segmentation:
+
+- `$google_ad_user_data`
+- `$google_ad_personalization`
+
+In any Canvas where you're targeting EEA, UK, and Switzerland end users using a Google Audience Sync to add users to an audience, you need to exclude these users whenever both consent attributes are any value that isn't `true`. This can be achieved by segmenting these users when the consent values are set to `true`. This also ensures that the more accurate analytics of users are synced since we know Google will reject these users from the audiences. Note that if you're using Google Audience Sync to remove users from an audience, consent attributes are not required.
 
 ## Integration
 

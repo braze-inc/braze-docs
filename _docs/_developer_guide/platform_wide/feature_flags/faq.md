@@ -51,7 +51,7 @@ For example, with Braze feature flags, you can roll out a new Customer Loyalty p
 
 Product teams can use feature flags to perform gradual rollouts or soft launches of new features in order to monitor key performance indicators and customer feedback before making it available to all users.
 
-Product teams can use [feature flag properties][properties] to remotely populate content in an app, such as deep links, text, imagery, or other dynamic content.
+Product teams can use [feature flag properties]({{site.baseurl}}/developer_guide/platform_wide/feature_flags/create/#properties) to remotely populate content in an app, such as deep links, text, imagery, or other dynamic content.
 
 Using the Canvas Feature Flag step, Product teams can also run an A/B split test to measure how a new feature impacts conversion rates compared to users with the feature disabled. 
 
@@ -89,7 +89,7 @@ No, the SDK must be initialized to download and synchronize feature flags for th
 
 ### How frequently does the SDK refresh feature flags? {#refresh-frequency}
 
-Feature flags are refreshed at session start and when changing active users. Feature flags can also be manually refreshed using the SDK's [refresh method][refreshing]. Feature flag refreshes are rate limited to once every five minutes (subject to change).
+Feature flags are refreshed at session start and when changing active users. Feature flags can also be manually refreshed using the SDK's [refresh method]({{site.baseurl}}/developer_guide/platform_wide/feature_flags/create/#refreshing). Feature flag refreshes are rate limited to once every five minutes (subject to change).
 
 Keep in mind that good data practices recommend not refreshing feature flags too quickly (with potential rate limiting if done so), so it's best only to refresh before a user interacts with new features or periodically in the app if necessary.
 
@@ -101,12 +101,9 @@ Yes, after feature flags are refreshed, they are stored locally on the user's de
 
 Feature flags may be refreshed mid-session. There are scenarios where you may want to update your app if certain variables or your configuration should change. There are other scenarios where you may not want to update your app, to avoid a shocking change in how your UI is rendered.
 
-To control this, [listen for updates][listen-for-updates] to feature flags and determine whether to re-render your app based on which feature flags have changed. 
+To control this, [listen for updates]({{site.baseurl}}/developer_guide/platform_wide/feature_flags/create/#updates) to feature flags and determine whether to re-render your app based on which feature flags have changed. 
 
 ## Additional questions?
 
 Have questions or feedback? Email our team: [feature-flags-feedback@braze.com](mailto:feature-flags-feedback@braze.com).
 
-[properties]: {{site.baseurl}}/developer_guide/platform_wide/feature_flags/create/#properties
-[refreshing]: {{site.baseurl}}/developer_guide/platform_wide/feature_flags/create/#refreshing
-[listen-for-updates]: {{site.baseurl}}/developer_guide/platform_wide/feature_flags/create/#updates

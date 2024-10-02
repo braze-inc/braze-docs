@@ -11,7 +11,7 @@ description: "このリファレンス記事では、Swift SDK のカスタム�
 
 > Braze では、ユーザーに属性を割り当てるメソッドが提供されています。ダッシュボードでこれらの属性に基づき、ユーザーをフィルターおよびセグメント化できます。
 
-実装前に、[ベストプラクティス][1]のカスタムイベント、カスタム属性、および購入イベントによって提供されるセグメンテーションオプションの例と、[イベント命名規則]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/event_naming_conventions/)のメモを必ず確認してください。
+実装前に、[ベストプラクティス][1]のカスタムイベント、カスタム属性、および購入イベントによって提供されるセグメンテーションオプションの例と、[イベント命名規則]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/event_naming_conventions/)のメモを必ず確認しておいてください。
 
 ## デフォルトユーザー属性の割り当て
 
@@ -92,7 +92,7 @@ AppDelegate.braze?.user.setCustomAttribute(key: "your_attribute_key", value: you
 
 ### double 値のカスタム属性
 
-Braze では、`float` 値と `double` 値がデータベース内で同じく処理されます。
+Braze では、データベース内での `float` 値と `double` 値の扱いが同じです。
 
 {% tabs %}
 {% tab swift %}
@@ -151,7 +151,7 @@ AppDelegate.braze?.user.setCustomAttribute("your_attribute_key", dateValue:yourD
 
 ### 配列値のカスタム属性
 
-[カスタム属性配列][8]内の要素の最大数は、25にデフォルト設定されています。要素の最大数を超える配列は、含まれる要素が最大数になるよう切り捨てられます。個別の配列の最大数は、100まで増やすことができます。この最大数を増やす必要がある場合は、カスタマーサービスマネージャーに連絡してください。 
+[カスタム属性配列][8]内の要素の最大数は、デフォルトで 25 に設定されています。要素の最大数を超える配列は、含まれる要素が最大数になるよう切り捨てられます。個々の配列の最大数は、100 まで増やすことができます。この最大数を増やす必要がある場合は、カスタマーサービスマネージャーに連絡してください。 
 
 
 {% tabs %}
@@ -204,7 +204,7 @@ AppDelegate.braze?.user.unsetCustomAttribute(key: "your_attribute_key")
 {% endtab %}
 {% endtabs %}
 
-### インクリメント/デクリメントカスタム属性
+### カスタム属性のインクリメント / デクリメント
 
 このコードは、インクリメントカスタム属性の例です。カスタム属性の値は、正または負の整数か、long 値でインクリメントできます。
 
@@ -239,18 +239,18 @@ REST API を使用してユーザー属性を設定することもできます�
 
 ## ユーザーサブスクリプションの設定
 
-ユーザーのサブスクリプション (メールまたはプッシュ) を設定するには、それぞれ関数 `set(emailSubscriptionState:)` または `set(pushNotificationSubscriptionState:)` を呼び出します。これらの関数では、いずれも引数として列挙型 `Braze.User.SubscriptionState` が使用されます。この型には、次の3つの状態があります。
+ユーザーのサブスクリプション (メールまたはプッシュ) を設定するには、それぞれ関数 `set(emailSubscriptionState:)` または `set(pushNotificationSubscriptionState:)` を呼び出します。これらの関数では、いずれも引数として列挙型 `Braze.User.SubscriptionState` が使用されます。この型には、次の 3 つの状態があります。
 
-| サブスクリプションステータス | 定義 |
+| サブスクリプションのステータス | 定義 |
 | ------------------- | ---------- |
-| `optedIn` | サブスクリプション登録済み、かつ明示的にオプトイン済み |
-| `subscribed` | サブスクリプション登録済み、ただし明示的なオプトイン未実行 |
-| `unsubscribed` | 配信停止済みおよび/または明示的にオプトアウト済み |
+| `optedIn` | 配信登録済み、かつ明示的にオプトイン済み |
+| `subscribed` | 購読済み、ただし明示的に選択されていない |
+| `unsubscribed` | 配信停止済みまたは明示的にオプトアウト済み、あるいはその両方 |
 {: .reset-td-br-1 .reset-td-br-2}
 
 アプリにプッシュ通知の送信を許可するユーザーは、iOS で明示的なオプトインが必要であるため、ステータス `optedIn` にデフォルト設定されます。
 
-ユーザーは、有効なメールアドレスを取得すると自動的に `subscribed` に設定されます 。ただし、明示的なオプトインのプロセスを確立し、ユーザーから明示的な同意を得た時点でこの値を `optedIn` に設定することをお勧めします。詳細については、「[ユーザーサブスクリプションの管理]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/)」を参照してください。
+ユーザーは、有効なメールアドレスを取得すると自動的に `subscribed` に設定されます。ただし、明示的なオプトインのプロセスを確立し、ユーザーから明示的な同意を得た時点でこの値を `optedIn` に設定することをお勧めします。詳細については、「[ユーザーサブスクリプションの管理]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/)」を参照してください。
 
 ### メールサブスクリプションの設定
 

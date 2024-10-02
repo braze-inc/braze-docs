@@ -17,24 +17,25 @@ description: "このランディングページでは、カスタムスタイル
 
 guide_featured_title: "セクションの記事"
 guide_featured_list:
-  - name: Custom Styling
+  - name: カスタムスタイル
     link: /docs/developer_guide/platform_integration_guides/android/news_feed/customization/custom_styling/
-    fa_icon: fa fa-paint-brush
-  - name: Handling Clicks Manually
+    image: /assets/img/braze_icons/brush-02.svg
+  - name: クリックの手動処理
     link: /docs/developer_guide/platform_integration_guides/android/news_feed/customization/click_listener/
-    fa_icon: fa fa-mouse-pointer
-  - name: Key-Value Pairs
+    image: /assets/img/braze_icons/navigation-pointer-01.svg
+  - name: キーと値のペア
     link: /docs/developer_guide/platform_integration_guides/android/news_feed/customization/key_value_pairs/
-    fa_icon: fa fa-code
-  - name: Read & Unread Indicators
+    image: /assets/img/braze_icons/code-square-01.svg
+
+  - name: 既読 / 未読インジケーター
     link: /docs/developer_guide/platform_integration_guides/android/news_feed/customization/read_and_unread/
-    fa_icon: fa fa-book
-  - name: Badges
+    image: /assets/img/braze_icons/book-closed.svg
+  - name: バッジ
     link: /docs/developer_guide/platform_integration_guides/android/news_feed/customization/badges/
-    fa_icon: fa fa-id-badge
-  - name: GIFs
+    image: /assets/img/braze_icons/key-01.svg
+  - name: GIF
     link: /docs/developer_guide/platform_integration_guides/android/news_feed/customization/gifs/
-    fa_icon: fa-solid fa-file-image
+    image: /assets/img/braze_icons/image-01.svg
 
 
 ---

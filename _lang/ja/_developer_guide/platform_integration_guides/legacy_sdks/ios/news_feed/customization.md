@@ -15,12 +15,12 @@ description: "このランディングページでは、カスタムスタイル
 
 guide_featured_title: "セクションの記事"
 guide_featured_list:
-  - name: Custom Styling
+  - name: カスタムスタイリング
     link: /docs/developer_guide/platform_integration_guides/ios/news_feed/customization/custom_styling/
-    fa_icon: fa fa-paint-brush
-  - name: Badges
+    image: /assets/img/braze_icons/brush-02.svg
+  - name: バッジ
     link: /docs/developer_guide/platform_integration_guides/ios/news_feed/customization/badges/
-    fa_icon: fa fa-id-badge
+    image: /assets/img/braze_icons/key-01.svg
 
 
 

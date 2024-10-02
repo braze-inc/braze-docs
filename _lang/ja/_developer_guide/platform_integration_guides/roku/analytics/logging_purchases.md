@@ -18,7 +18,7 @@ Braze は複数の通貨での購入に対応しています。ドル以外の�
 
 ## 購入と売上のトラッキング
 
-この機能を使用するには、アプリで正常な購入後にこのメソッド呼び出しを追加します。
+この機能を使用するには、アプリ内購入が正常に完了した後でこのメソッド呼び出しを追加します。
 
 ```brightscript
 m.Braze.logPurchase("product_id", "currency_code", Double price, Integer quantity)
@@ -34,7 +34,7 @@ m.Braze.logPurchase("product_id", "currency_code", Double price, Integer quantit
 m.Braze.logPurchase("product_id", "currency_code", Double price, Integer quantity, {"stringPropKey" : "stringPropValue", "intPropKey" : Integer intPropValue})
 ```
 
-### 注文レベルで購入を記録する
+### 注文レベルでの購入記録
 商品レベルではなく、注文レベルで購入を記録したい場合、注文名または注文カテゴリを `product_id` として使用できます。詳細については、[購入オブジェクトの仕様]({{site.baseurl}}/api/objects_filters/purchase_object/#product-id-naming-conventions)を参照してください。 
 
 ### REST API

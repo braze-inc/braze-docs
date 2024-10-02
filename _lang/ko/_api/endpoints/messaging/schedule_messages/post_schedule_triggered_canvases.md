@@ -22,11 +22,11 @@ Canvas의 첫 번째 단계에서 전송되는 메시지에 템플릿이 지정�
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#4bc75890-b807-405d-b226-5aca284e6b7d {% endapiref %}
 
-## 전제 조건
+## 필수 구성 요소
 
 이 엔드포인트를 사용하려면 `canvas.trigger.schedule.create` 권한이 있는 [API 키]({{site.baseurl}}/api/basics#rest-api-key/)가 필요합니다.
 
-## 요금 제한
+## 사용량 제한
 
 {% multi_lang_include rate_limits.md endpoint='default' category='message endpoints' %}
 
@@ -60,14 +60,14 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ## 요청 매개변수
 
-| 매개변수 | 필수 | 데이터 유형 | 설명 | 설명
+| 매개변수 | 필수 | 데이터 유형 | 설명 |
 | --------- | ---------| --------- | ----------- |
-|`canvas_id`|필수| 문자열| [캔버스 식별자를]({{site.baseurl}}/api/identifier_types/) 참조하세요. |
-| `recipients` | 선택 사항 | 수신자 개체의 배열 | [수신자 개체]({{site.baseurl}}/api/objects_filters/recipient_object/) 보기. |
-| `audience` | 선택 사항 | 연결된 대상 개체 | [연결된 대상]({{site.baseurl}}/api/objects_filters/connected_audience/) 보기. |
-|`broadcast`| 선택 사항 | 부울 | 캠페인 또는 캔버스가 타겟팅하는 전체 세그먼트에 메시지를 보낼 때 `broadcast`를 true로 설정해야 합니다. 이 매개변수의 기본값은 false입니다(2017년 8월 31일 기준). <br><br> `broadcast` 을 true로 설정하면 `recipients` 목록을 포함할 수 없습니다. 그러나 이 플래그를 실수로 설정하면 예상보다 많은 대상에게 메시지를 보낼 수 있으므로 `broadcast: true` 을 설정할 때는 주의하세요. |
-| `canvas_entry_properties` | 선택 사항 | 개체 | 이 전송의 모든 사용자에 대한 개인화 키-값 페어입니다. [캔버스 항목 속성 개체]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object)를 참조하세요. |
-| `schedule` | 필수 | 일정 개체 | [일정 개체]({{site.baseurl}}/api/objects_filters/schedule_object/) 보기. |
+|`canvas_id`|필수|문자열| [캔버스 식별자를]({{site.baseurl}}/api/identifier_types/) 참조하세요. |
+| `recipients` | 선택 사항 | 수신자 객체 배열 | [수신자 거부]({{site.baseurl}}/api/objects_filters/recipient_object/) 참조. |
+| `audience` | 선택 사항 | 연결된 대상 개체 | [연결된 오디언스]({{site.baseurl}}/api/objects_filters/connected_audience/) 보기. |
+|`broadcast`| 선택 사항 | 부울 | 캠페인 또는 캔버스가 타겟팅하는 전체 세그먼트에 메시지를 보낼 때는 `broadcast` 을 true로 설정해야 합니다. 이 매개변수의 기본값은 false입니다(2017년 8월 31일 기준). <br><br> `broadcast`가 true로 설정하면 `recipients` 목록을 포함할 수 없습니다. 그러나 이 플래그를 실수로 설정하면 예상보다 많은 대상에게 메시지를 보낼 수 있으므로 `broadcast: true` 을 설정할 때는 주의하세요. |
+| `canvas_entry_properties` | 선택 사항 | 객체 | 이 전송의 모든 사용자에 대한 개인화 키-값 쌍입니다. [캔버스 항목 속성 개체를]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object) 참조하십시오. |
+| `schedule` | 필수 | 스케줄 객체 | [일정 개체를]({{site.baseurl}}/api/objects_filters/schedule_object/) 참조하세요. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ## 요청 예시
@@ -143,7 +143,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/canvas/trigger/sch
 
 ## 응답
 
-### 성공 응답 예시
+### 성공 응답의 예
 
 ```
 Content-Type: application/json

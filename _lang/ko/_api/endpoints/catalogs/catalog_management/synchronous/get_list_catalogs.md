@@ -19,11 +19,11 @@ description: "이 문서에서는 목록 카탈로그 Braze 엔드포인트에 �
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#7d65fb86-ccf7-423f-9eb2-f68ab36df824 {% endapiref %}
 
-## 전제 조건
+## 필수 구성 요소
 
 이 엔드포인트를 사용하려면 `catalogs.get` 권한이 있는 [API 키]({{site.baseurl}}/api/basics#rest-api-key/)가 필요합니다.
 
-## 요금 제한
+## 사용량 제한
 
 {% multi_lang_include rate_limits.md endpoint='synchronous catalog' %}
 
@@ -41,7 +41,7 @@ curl --location --request GET 'https://rest.iad-03.braze.com/catalogs' \
 
 ## 응답
 
-### 성공 응답 예시
+### 성공 응답의 예
 
 `200` 상태 코드는 다음과 같은 응답 본문을 반환할 수 있습니다.
 

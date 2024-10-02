@@ -13,7 +13,7 @@ Tool:
 
 # Location and geofences
 
-> [Geofences]({{site.baseurl}}/user_guide/engagement_tools/locations_and_geofences#about-locations-and-geofences/) are only available in select Braze packages. For access, create a [support ticket][support] or speak with your Braze customer success manager.
+> [Geofences]({{site.baseurl}}/user_guide/engagement_tools/locations_and_geofences#about-locations-and-geofences/) are only available in select Braze packages. For access, create a [support ticket]({{site.baseurl}}/braze_support/) or speak with your Braze customer success manager.
 
 To support geofences for Android:
 
@@ -22,7 +22,7 @@ To support geofences for Android:
 
 ## Step 1: Update build.gradle
 
-Add `android-sdk-location` to your app-level `build.gradle`. Also, add the Google Play Services [location package][3] using the Google Play Services [setup guide][10]:
+Add `android-sdk-location` to your app-level `build.gradle`. Also, add the Google Play Services [location package](https://developers.google.com/android/reference/com/google/android/gms/location/package-summary) using the Google Play Services [setup guide](https://developers.google.com/android/guides/setup):
 
 ```
 dependencies {
@@ -98,7 +98,7 @@ Braze.getInstance(context).requestLocationInitialization()
 
 This will cause the SDK to request geofences from Braze servers and initialize geofence tracking.
 
-See [`RuntimePermissionUtils.java`][4] in our sample application for an example implementation.
+See [`RuntimePermissionUtils.java`](https://github.com/braze-inc/braze-android-sdk/blob/master/droidboy/src/main/java/com/appboy/sample/util/RuntimePermissionUtils.kt) in our sample application for an example implementation.
 
 {% tabs %}
 {% tab JAVA %}
@@ -280,7 +280,7 @@ Braze.configure(applicationContext, brazeConfigBuilder.build())
 
 #### Part 2: Manually request Braze geofence with GPS coordinate
 
-Braze Geofences are manually requested via the [`requestGeofences()`][11] method:
+Braze Geofences are manually requested via the [`requestGeofences()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-i-braze/request-geofences.html) method:
 
 {% tabs %}
 {% tab JAVA %}
@@ -309,8 +309,3 @@ Note that Braze syncs geofences to devices using background push. In most cases,
 
 However, note that if your application is stopped, receiving a background push will launch it in the background and its `Application.onCreate()` method will be called. If you have a custom `Application.onCreate()` implementation, you should defer automatic server calls and any other actions you would not want to be triggered by background push.
 
-[3]: https://developers.google.com/android/reference/com/google/android/gms/location/package-summary
-[4]: https://github.com/braze-inc/braze-android-sdk/blob/master/droidboy/src/main/java/com/appboy/sample/util/RuntimePermissionUtils.kt
-[10]: https://developers.google.com/android/guides/setup
-[11]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-i-braze/request-geofences.html
-[support]: {{site.baseurl}}/braze_support/

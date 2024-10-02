@@ -15,14 +15,14 @@ search_rank: 0.9
 
 A push notification is an out-of-app alert that appears on the user's screen when an important update occurs. Push notifications are a valuable way to provide your users with time-sensitive and relevant content to re-engage them with your app.
 
-ADM (Amazon Device Messaging) is not supported on non-Amazon devices. To test Kindle push, you must have a [FireOS device][32]. Check out our [help article][8] for additional best practices.
+ADM (Amazon Device Messaging) is not supported on non-Amazon devices. To test Kindle push, you must have a [FireOS device](https://developer.amazon.com/appsandservices/apis/engage/device-messaging/tech-docs/04-integrating-your-app-with-adm). Check out our [help article]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/fireos/troubleshooting/) for additional best practices.
 
-Braze sends push notifications to Amazon devices using [Amazon Device Messaging (ADM)][14].
+Braze sends push notifications to Amazon devices using [Amazon Device Messaging (ADM)](https://developer.amazon.com/public/apis/engage/device-messaging).
 
 ## Step 1: Enable ADM
 
-1. Create an account with the [Amazon Apps & Games Developer Portal][10] if you have not already done so.
-2. Obtain [OAuth credentials (Client ID and Client Secret) and an ADM API key][11].
+1. Create an account with the [Amazon Apps & Games Developer Portal](https://developer.amazon.com/public) if you have not already done so.
+2. Obtain [OAuth credentials (Client ID and Client Secret) and an ADM API key](https://developer.amazon.com/public/apis/engage/device-messaging/tech-docs/02-obtaining-adm-credentials).
 3. Enable **Automatic ADM Registration Enabled** in the Unity Braze Configuration window. 
   - Alternatively, you may add the following line to your `res/values/braze.xml` file to enable ADM registration:
 
@@ -93,7 +93,7 @@ Lastly, add intent filters to handle `REGISTRATION` and `RECEIVE` intents from A
 
 ## Step 3: Store your ADM API key
 
-First, save your ADM API key to a file named `api_key.txt` and save it in your project's [`Assets/Plugins/Android/assets`][54] folder. Next, [obtain an ADM API Key for your app][11].
+First, save your ADM API key to a file named `api_key.txt` and save it in your project's [`Assets/Plugins/Android/assets`][54] folder. Next, [obtain an ADM API Key for your app](https://developer.amazon.com/public/apis/engage/device-messaging/tech-docs/02-obtaining-adm-credentials).
 
 Amazon will not recognize your key if `api_key.txt` contains any white space characters, such as a trailing line break.
 
@@ -107,17 +107,17 @@ To enable Braze to automatically open your app and any deep links when a push no
 <bool name="com_braze_handle_push_deep_links_automatically">true</bool>
 ```
 
-If you want to custom handle deep links, you will need to create a push callback that listens for push received and opened intents from Braze. See [Custom handling push receipts and opens][52] in the Android push documentation for more information.
+If you want to custom handle deep links, you will need to create a push callback that listens for push received and opened intents from Braze. See [Custom handling push receipts and opens]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/integration/standard_integration/#android-push-listener-callback) in the Android push documentation for more information.
 
 ## Step 5: Add Client Secret and Client ID to Braze dashboard
 
-Lastly, you must add the Client Secret and Client ID you obtained in [Step 1][2] to the Braze dashboard's **Manage Settings** page.
+Lastly, you must add the Client Secret and Client ID you obtained in [Step 1](#step-1-enable-adm) to the Braze dashboard's **Manage Settings** page.
 
-![][34]
+![]({% image_buster /assets/img_archive/fire_os_dashboard.png %})
 
 ## Manual push registration
 
-Braze does not recommend using manual registration, but if you need to handle ADM registration yourself, add the following in your [braze.xml][12]:
+Braze does not recommend using manual registration, but if you need to handle ADM registration yourself, add the following in your [braze.xml](https://developer.amazon.com/public/apis/engage/device-messaging/tech-docs/03-setting-up-adm):
 
 ```xml
 <!-- This will disable automatic registration for ADM via the Braze SDK-->
@@ -144,7 +144,7 @@ Braze.getInstance(context).registeredPushToken = registration_id
 
 ## ADM extras
 
-Users may send custom key-value pairs with a Kindle push message as `extras` for [deep linking][29], tracking URLs, etc. Unlike in Android push, Kindle push users may not use Braze reserved keys as keys when defining `extra` key-value pairs.
+Users may send custom key-value pairs with a Kindle push message as `extras` for [deep linking]({{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/deep_linking/), tracking URLs, etc. Unlike in Android push, Kindle push users may not use Braze reserved keys as keys when defining `extra` key-value pairs.
 
 Reserved Keys Include:
 
@@ -159,13 +159,3 @@ Reserved Keys Include:
 
 If a Kindle reserved key is detected, Braze returns `Status Code 400: Kindle Push Reserved Key Used`.
 
-[2]: #step-1-enable-adm
-[8]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/fireos/troubleshooting/
-[10]: https://developer.amazon.com/public
-[11]: https://developer.amazon.com/public/apis/engage/device-messaging/tech-docs/02-obtaining-adm-credentials
-[12]: https://developer.amazon.com/public/apis/engage/device-messaging/tech-docs/03-setting-up-adm
-[14]: https://developer.amazon.com/public/apis/engage/device-messaging
-[29]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/deep_linking/
-[32]: https://developer.amazon.com/appsandservices/apis/engage/device-messaging/tech-docs/04-integrating-your-app-with-adm
-[34]: {% image_buster /assets/img_archive/fire_os_dashboard.png %}
-[52]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/integration/standard_integration/#android-push-listener-callback

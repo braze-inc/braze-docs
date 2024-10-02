@@ -108,6 +108,10 @@ Also, as subscription state changes do not consume data points, updating the `em
 
 #### Billable data points
 
+{% alert important %}
+Adding, removing, or updating the following data types will incur a billable data point.
+{% endalert %}
+
 <style>
 table th:nth-child(1) {
     width: 20%;

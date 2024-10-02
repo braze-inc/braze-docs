@@ -145,7 +145,7 @@ How long to run your experiment before reshuffling control group membership depe
 
 To determine the appropriate length of time for your experiment, consider what questions you're hoping to answer. For instance, are you looking to see if there's a difference in sessions? If so, think about how often your users have sessions organically. Brands whose users have sessions every day can run shorter experiments than brands whose users have sessions only a couple of times a month. 
 
-Or, you might be interested in purchasing behaviors, so your experiment would most likely need to run for longer than an experiment where you're examining sessions since it's likely your users make purchases less frequently.
+Or, you might be interested in a custom event, so your experiment may need to run for longer than an experiment where you're examining sessions if it's likely your users trigger that custom event less frequently.
 
 {% alert tip %}
 The longer you hold the same control group out the more they diverge from the treatment group, which can create bias. Resetting the Global Control Group rebalances the population.

@@ -18,11 +18,11 @@ description: "이 문서에서는 하드 바운스된 이메일 주소 제거 Br
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#7b87a884-fa20-4085-b9f1-18363103575f {% endapiref %}
 
-## 전제 조건
+## 필수 구성 요소
 
 이 엔드포인트를 사용하려면 `email.bounce.remove` 권한이 있는 [API 키]({{site.baseurl}}/api/basics#rest-api-key/)가 필요합니다.
 
-## 요금 제한
+## 사용량 제한
 
 {% multi_lang_include rate_limits.md endpoint='default' %}
 
@@ -41,12 +41,12 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ## 요청 매개변수
 
-| 매개변수 | 필수 | 데이터 유형 | 설명 | 설명
+| 매개변수 | 필수 | 데이터 유형 | 설명 |
 | ----------|-----------| ---------|------ |
-| `email` | 필수 입력 사항 | 문자열 또는 배열 | 수정할 이메일 주소 문자열 또는 수정할 이메일 주소의 최대 50개 배열입니다. |
+| `email` | 필수 | 문자열 또는 배열 | 수정할 문자열 이메일 주소 또는 수정할 최대 50개의 이메일 주소 배열. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
-## 요청 예시
+## 예시 요청
 ```
 curl --location --request POST 'https://rest.iad-01.braze.com/email/bounce/remove' \
 --header 'Content-Type: application/json' \

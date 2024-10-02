@@ -3,19 +3,19 @@ nav_title: 2月
 page_order: 11
 noindex: true
 page_type: update
-description: "この記事には2019年2月のリリースノートが含まれています。"
+description: "この記事には2019年2月のリリースノートが含まれている。"
 ---
 # 2019年2月
 
-## メールサブスクリプショングループ
+## 電子メール購読グループ
 
-[サブスクリプショングループ]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#subscription-groups) は、上記の [グローバルサブスクリプションステータス]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/) からオーディエンスをさらに絞り込むためのセグメントフィルターです。これらのグループは、エンドユーザーに対してより細かいサブスクリプションオプションを提供する機能を提供します。
+[サブスクリプショングループは]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#subscription-groups)、上記の[グローバルサブスクリプションステートから]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/)さらにオーディエンスを絞り込むことができるセグメントフィルタである。これらのグループは、エンドユーザーにより詳細な購読オプションを提示する能力を提供する。
 
-例えば、複数のカテゴリのメールキャンペーンを送信する場合、顧客に対して、当社の[ユーザー設定センター](#email-preference-center)を使用して、単一のページからそれらのグループを一括で購読または配信停止するオプションを提供できます。
+例えば、複数のカテゴリのメールキャンペーンを配信している場合、[メールプレファレンスセンターを](#email-preference-center)利用することで、1つのページから一括で購読または購読解除を行うことができる。
 
-Brazeダッシュボードに保存されているサブスクリプショングループをプログラムで管理するために、[サブスクリプショングループREST API]({{site.baseurl}}/developer_guide/rest_api/subscription_group_api/)を使用して**サブスクリプショングループ**ページにアクセスします。
+[Subscription Group REST APIを]({{site.baseurl}}/developer_guide/rest_api/subscription_group_api/)使用して、Brazeダッシュボード上の**Subscription Group**ページに保存したSubscription Groupをプログラムで管理する。
 
-## メールユーザー設定センター
+## Eメール・プリファレンス・センター
 
-[メールユーザー設定センター]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#email-preference-center)は、どのユーザーが特定のグループのニュースレターを受け取るかを管理する簡単な方法です。作成した各サブスクリプショングループは、ユーザー設定センターリストに追加されます。ユーザー設定センターの名前をクリックして、インタラクティブなプレビューを表示します。
+[メールプレファレンスセンターは]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#email-preference-center)、どのユーザーが特定のニュースレターグループを受信するかを管理する簡単な方法である。あなたが作成した各購読グループは、プリファレンスセンターのリストに追加される。プリファレンス・センターの名前をクリックすると、インタラクティブなプレビューが表示される。
 

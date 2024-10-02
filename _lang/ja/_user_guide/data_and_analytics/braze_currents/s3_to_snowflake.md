@@ -69,52 +69,52 @@ SET
     file_format = currents.public.currents_avro;
 ```
 
-\`\`\`sql
+```sql
 CREATE OR REPLACE PIPE
-  pipe\_users\_messages\_pushnotification\_open
-    auto\_ingest=true AS
+  pipe_users_messages_pushnotification_open
+    auto_ingest=true AS
 
 COPY INTO
-  users\_messages\_pushnotification\_open
+  users_messages_pushnotification_open
           FROM
            (SELECT
              $1:id::STRING,
-             $1:user\_id::STRING,
-             $1:external\_user\_id::STRING,
+             $1:user_id::STRING,
+             $1:external_user_id::STRING,
               $1:time::INT,
               $1:timezone::STRING,
-              $1:app\_id::STRING,
-              $1:campaign\_id::STRING,
+              $1:app_id::STRING,
+              $1:campaign_id::STRING,
               $1:campaign_name::STRING,
-              $1:message\_variation\_id::STRING,
-              $1:canvas\_id::STRING,
+              $1:message_variation_id::STRING,
+              $1:canvas_id::STRING,
               $1:canvas_name::STRING,
-              $1:canvas\_variation\_id::STRING,
-              $1:canvas\_step\_id::STRING,
-              $1:canvas\_step\_message\_variation\_id::STRING,
+              $1:canvas_variation_id::STRING,
+              $1:canvas_step_id::STRING,
+              $1:canvas_step_message_variation_id::STRING,
               $1:platform::STRING,
-              $1:os\_version::STRING,
-              $1:device\_model::STRING,
-              $1:send\_id::STRING,
-              $1:device\_id::STRING,
-              $1:button\_action\_type::STRING,
-              $1:button\_string::STRING
+              $1:os_version::STRING,
+              $1:device_model::STRING,
+              $1:send_id::STRING,
+              $1:device_id::STRING,
+              $1:button_action_type::STRING,
+              $1:button_string::STRING
 
               FROM
-@currents.public.braze\_data/currents/dataexport.prod-01.S3.integration.INTEGRATION_ID_GOES_HERE/event_type=users.messages.pushnotification.Open/);
-\`\`\`
+@currents.public.braze_data/currents/dataexport.prod-01.S3.integration.INTEGRATION_ID_GOES_HERE/event_type=users.messages.pushnotification.Open/);
+```
 
 最後に、`show pipes;` コマンドを使用して SQS 情報を表示します。このパイプは自動取り込みパイプとして作成されたため、SQS キューの名前は `NOTIFICATION_CHANNEL` という新しい列に表示されます。
 
 #### ステップ 2: バケットイベントの作成
 
-AWSで、新しい Snowflake ステージの対応するバケットに移動します。次に、[**プロパティ**] タブの [**イベント**] に移動します。
+AWSで、新しい Snowflake ステージの対応するバケットに移動します。次に、\[**プロパティ**] タブの \[**イベント**] に移動します。
 
-![AWS の [プロパティ] タブ][1]{: height="50%" width="50%"}
+![AWSプロパティ」タブ][1]{: height="50%" width="50%"}
 
 必要に応じて、Currents データの各セット ([メッセージング]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/message_engagement_events/)、[ユーザー行動]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/customer_behavior_events/))、またはその両方に対して新規イベントを作成します。
 
-![AWS での新規イベントの作成][2]{: height="50%" width="50%"}
+![AWSで新しいイベントを作成する][2]{: height="50%" width="50%"}
 
 オブジェクト作成通知のチェックボックスをオンにして、フォーム下部の ARN (Snowflake の通知チャンネル列) を確認します。
 
@@ -129,7 +129,7 @@ Braze Currents は特定のデータ型を持つ特定のフィールドを介�
 {% endalert %}
 
 {% tabs %}
-  {% tab User Behavior Events %}
+  {% tab ユーザー行動イベント %}
 
 まず、Currents スキーマから次の構造を使用して、継続的に読み込むテーブル `INTO` を作成します。
 
@@ -155,44 +155,44 @@ CREATE TABLE
 ```
 
 次に、`auto_ingest` パイプを作成し、以下の項目を指定します。
-1\.読み込み先のテーブル
+1. 読み込み先のテーブル
 2. 以下のテーブルに読み込む方法
 
-\`\`\`sql
+```sql
 CREATE OR REPLACE PIPE
-  pipe\_users\_behaviors\_app\_firstsession
-    auto\_ingest=true AS
+  pipe_users_behaviors_app_firstsession
+    auto_ingest=true AS
 
 COPY INTO
-  users\_behaviors\_app\_firstsession
+  users_behaviors_app_firstsession
           FROM
             (SELECT
               $1:id::STRING,
-              $1:user\_id::STRING,
-              $1:external\_user\_id::STRING,
-              $1:app\_id::STRING,
+              $1:user_id::STRING,
+              $1:external_user_id::STRING,
+              $1:app_id::STRING,
               $1:time::INT,
-              $1:session\_id::STRING,
+              $1:session_id::STRING,
               $1:gender::STRING,
               $1:country::STRING,
               $1:timezone::STRING,
               $1:language::STRING,
-              $1:device\_id::STRING,
-              $1:sdk\_version::STRING,
+              $1:device_id::STRING,
+              $1:sdk_version::STRING,
               $1:platform::STRING,
-              $1:os\_version::STRING,
-              $1:device\_model::STRING
+              $1:os_version::STRING,
+              $1:device_model::STRING
 
               FROM
-@currents.public.braze\_data/currents/dataexport.prod-01.S3.integration.INTEGRATION_ID_GOES_HERE/event_type=users.behaviors.app.FirstSession/);
-\`\`\`
+@currents.public.braze_data/currents/dataexport.prod-01.S3.integration.INTEGRATION_ID_GOES_HERE/event_type=users.behaviors.app.FirstSession/);
+```
 
 {% alert warning %}
 すべてのイベントタイプについて、`CREATE TABLE` コマンドと `CREATE PIPE` コマンドを繰り返す必要があります。
 {% endalert %}
 
  {% endtab %}
- {% tab Messaging Events %}
+ {% tab メッセージング・イベント %}
 
 まず、Currents スキーマから次の構造を使用して、継続的に読み込むテーブル `INTO` を作成します。
 
@@ -224,43 +224,43 @@ CREATE TABLE
 ```
 
 次に、AUTO 連続読み込みパイプを作成し、以下の項目を指定します。
-1\.読み込み先のテーブル
+1. 読み込み先のテーブル
 2. 以下のテーブルに読み込む方法
 
-\`\`\`sql
+```sql
 CREATE OR REPLACE PIPE
-  pipe\_users\_messages\_pushnotification\_open
-    auto\_ingest=true AS
+  pipe_users_messages_pushnotification_open
+    auto_ingest=true AS
 
 COPY INTO
-  users\_messages\_pushnotification\_open
+  users_messages_pushnotification_open
           FROM
            (SELECT
              $1:id::STRING,
-             $1:user\_id::STRING,
-             $1:external\_user\_id::STRING,
+             $1:user_id::STRING,
+             $1:external_user_id::STRING,
               $1:time::INT,
               $1:timezone::STRING,
-              $1:app\_id::STRING,
-              $1:campaign\_id::STRING,
+              $1:app_id::STRING,
+              $1:campaign_id::STRING,
               $1:campaign_name::STRING,
-              $1:message\_variation\_id::STRING,
-              $1:canvas\_id::STRING,
+              $1:message_variation_id::STRING,
+              $1:canvas_id::STRING,
               $1:canvas_name::STRING,
-              $1:canvas\_variation\_id::STRING,
-              $1:canvas\_step\_id::STRING,
-              $1:canvas\_step\_message\_variation\_id::STRING,
+              $1:canvas_variation_id::STRING,
+              $1:canvas_step_id::STRING,
+              $1:canvas_step_message_variation_id::STRING,
               $1:platform::STRING,
-              $1:os\_version::STRING,
-              $1:device\_model::STRING,
-              $1:send\_id::STRING,
-              $1:device\_id::STRING,
-              $1:button\_action\_type::STRING,
-              $1:button\_string::STRING
+              $1:os_version::STRING,
+              $1:device_model::STRING,
+              $1:send_id::STRING,
+              $1:device_id::STRING,
+              $1:button_action_type::STRING,
+              $1:button_string::STRING
 
               FROM
-@currents.public.braze\_data/currents/dataexport.prod-01.S3.integration.INTEGRATION_ID_GOES_HERE/event_type=users.messages.pushnotification.Open/);
-\`\`\`
+@currents.public.braze_data/currents/dataexport.prod-01.S3.integration.INTEGRATION_ID_GOES_HERE/event_type=users.messages.pushnotification.Open/);
+```
 
 {% alert warning %}
 すべてのイベントタイプについて、`CREATE TABLE` コマンドと `CREATE PIPE` コマンドを繰り返す必要があります。

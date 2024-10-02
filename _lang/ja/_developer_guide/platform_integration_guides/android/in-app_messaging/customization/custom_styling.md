@@ -17,7 +17,7 @@ channel:
 
 デフォルトのスタイルは、Braze SDK の[`styles.xml`][6]ファイルで確認できます。
 
-\`\`\`xml
+```xml
   <style name="Braze"/>
   <style name="Braze.InAppMessage"/>
   <style name="Braze.InAppMessage.Header">
@@ -44,9 +44,9 @@ Braze では、[フォントファミリガイド][79]を使用してカスタ�
 
 例えば、アプリ内メッセージボタンテキストのフォントを更新するには、`Braze.InAppMessage.Button`スタイルをオーバーライドし、カスタムフォントファミリを参照します。属性値は、`res/font`ディレクトリのフォントファミリを指す必要があります。
 
-以下はカスタムフォントファミリ`my_custom_font_family`を使用した切り詰めた例で、最後の行で参照されています。
+以下は、最後の行でカスタムフォントファミリ `my_custom_font_family` が参照されている部分的なコード例です。
 
-\`\`\`xml
+```xml
   <style name="Braze.InAppMessage.Button">
     <item name="android:layout_height">wrap_content</item>
     ...

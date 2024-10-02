@@ -12,7 +12,7 @@ tool:
 
 # Report Builder
 
-> The Report Builder allows you to compare the results of multiple campaigns or Canvases in a single view so that you can easily determine which engagement strategies most impacted your key metrics. For both campaigns and Canvases, you're able to export your data and save your report to view in the future.
+> The Report Builder allows you to compare the results of multiple campaigns or Canvases in a single view so that you can easily determine which engagement strategies most impacted your key metrics. For both campaigns and Canvases, you're able to export your data and save your report to view in the future.<br><br>For a descriptive list of the metrics you'll find in your reports, refer to the [Report Metrics Glossary][16].
 
 ![Campaign Comparison Example][5]{: style="max-width:80%;"}
 
@@ -43,7 +43,7 @@ If you are using the [older navigation]({{site.baseurl}}/navigation), you can fi
 
 Click **Create New Report** and select either a campaign comparison report or a Canvas comparison report.
 
-If you choose to run a report on campaigns, you can select between a **Manual** or **Automated** report. Reports may contain either campaigns or Canvases, but not both together. Any campaigns and Canvases that have last sent messages within the past 6 months will be eligible for a report.
+If you choose to run a report on campaigns, you can select between a **Manual** or **Automated** report. Reports may contain either campaigns or Canvases, but not both together. Any campaigns and Canvases that have last sent messages within the past 12 months will be eligible for a report.
 
 ![Campaign dashboard][6]{: style="max-width:80%;"}
 

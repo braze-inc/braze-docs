@@ -18,7 +18,5 @@ channel: news feed
 News Feed is being deprecated. Braze recommends that customers who use our News Feed tool move over to our Content Cards messaging channel—it's more flexible, customizable, and reliable. Check out the [migration guide]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) for more.
 {% endalert %}
 
-For information on how to integrate the News Feed into your Xamarin app, see the [Android integration instructions][1] and [iOS integration instructions][2].
+For information on how to integrate the News Feed into your Xamarin app, see the [Android integration instructions]({{site.baseurl}}/developer_guide/platform_integration_guides/android/news_feed/integration/) and [iOS integration instructions]({{site.baseurl}}/developer_guide/platform_integration_guides/legacy_sdks/ios/news_feed/integration).
 
-[1]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/news_feed/integration/
-[2]: {{site.baseurl}}/developer_guide/platform_integration_guides/legacy_sdks/ios/news_feed/integration

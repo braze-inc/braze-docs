@@ -8,52 +8,52 @@ alias: "/help/release_notes/2022/january/"
 ---
 # 2021年12月
 
-## セグメンテーションのエンドポイントごとにユーザーをエクスポートするように更新された。
+## セグメント・エンドポイントごとにユーザーをエクスポートするように更新
 
-2021年12月より、セ[グメンテーション別ユーザーのエクスポートのエンドポイントに]({{site.baseurl}}/api/endpoints/export/user_data/post_users_segment/)以下の変更が適用される：
+2021年12月より、[セグメント別ユーザー・エクスポート・エンドポイントについて]({{site.baseurl}}/api/endpoints/export/user_data/post_users_segment/)、以下の変更が適用される：
 
 1. このAPIリクエストの`fields_to_export` フィールドは必須となる。すべてのフィールドをデフォルトにするオプションは削除される。
 2. `custom_events` 、`purchases` 、`campaigns_received` 、`canvases_received` のフィールドには、過去90日間のデータのみが含まれる。
 
-## Currentsメッセージエンゲージメントイベントの新しいプロパティ
+## カレントのメッセージ・エンゲージメント・イベントの新しいプロパティ
 
-一部の[メッセージ・エンゲージメント・イベントに]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events/)新しいプロパティが追加された。この更新は、以下のCurrentsメッセージエンゲージメントイベントと、それらを使用するすべてのパートナーに適用される：
+一部の[メッセージ・エンゲージメント・イベントに]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events/)新しいプロパティが追加された。このアップデートは、以下のCurrentsメッセージエンゲージメントイベントと、それらを使用するすべてのパートナーに適用される：
 
 - `LINK_ID`,`LINK_ALIAS` を加える：
-  - メールクリック（全送信先）
+  - Eメールクリック（すべての宛先）
 - `USER_AGENT` ：
-  - メール開封
-  - メールクリック
-  - スパムとしてメールをマークする
+  - Eメールオープン
+  - Eメールクリック
+  - 迷惑メールとしてマークする
 - `MACHINE_OPEN` ：
-  - メール開封
+  - Eメールオープン
 
-## ニューリキッドパーソナライゼーションタグ
+## 新リキッド名入れタグ
 
-以下のLiquidタグでフォアグラウンドプッシュを有効にしているユーザーをターゲットにできるようになった：
+以下のリキッドタグで、フォアグラウンドプッシュを有効にしているユーザーをターゲットにできるようになった：
 
 {% raw %}
 - `{{most_recently_used_device.${foreground_push_enabled}}}`
 - `{{targeted_device.${foreground_push_enabled}}}`
 {% endraw %}
 
-詳しくは、[サポートされたパーソナライゼーション・タグを]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/)参照のこと。
+詳しくは、[サポートされるパーソナライズタグを]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/)参照のこと。
 
-## Webhookについて
+## ウェブフックについて
 
-Webhookは強力で柔軟なツールだが、少しわかりにくいかもしれない。Webhookとは何なのか、Brazeでどのように使うことができるのか気になる方は、[Webhookについての]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/understanding_webhooks/)新しい記事をチェックしよう。
+Webhookは強力で柔軟なツールだが、少しわかりにくいかもしれない。Webhookとは何なのか、Brazeでどのように使えるのか気になる方は、[Webhookについての]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/understanding_webhooks/)新しい記事をチェックしよう。
 
 ## Amazon Personalize
 
-Amazon Personalizeは、Amazonの機械学習によるレコメンデーションシステムを一日中利用できるようなものだ。20年以上にわたるレコメンデーションの経験に基づくAmazon Personalizeは、リアルタイムでパーソナライズされた商品やコンテンツのレコメンデーション、ターゲットマーケティングプロモーションを可能にし、カスタマーエンゲージメントの向上を実現する。 
+Amazon Personalizeは、Amazonの機械学習によるレコメンデーションシステムを一日中利用できるようなものだ。20年以上にわたるレコメンデーションの経験に基づき、Amazon Personalizeは、リアルタイムでパーソナライズされた商品やコンテンツのレコメンデーション、およびターゲットを絞ったマーケティングプロモーションを可能にすることで、顧客エンゲージメントを向上させることができる。 
 
-さらに詳しく知りたい方は、[Amazon Personalizeの]({{site.baseurl}}/partners/message_personalization/dynamic_content/amazon_personalize/amazon_personalize/)新しい記事をご覧いただき、Amazon Personalizeが提供するユースケース、Amazon Personalizeが扱うデータ、サービスの設定方法、そしてパーソナライゼーションとBrazeの統合方法についてご理解いただきたい。
+さらに詳しく知りたい方は、[Amazon Personalizeの]({{site.baseurl}}/partners/message_personalization/dynamic_content/amazon_personalize/amazon_personalize/)新しい記事を参照し、Amazon Personalizeが提供するユースケース、Amazon Personalizeが扱うデータ、サービスの設定方法、Brazeとの統合方法について理解しよう。
 
-## 新しいBrazeパートナーシップ
+## 新しいブレイズ・パートナーシップ
 
-### Yotpo - eコマース
+### Yotpo - Eコマース
 
-[Yotpoと]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/yotpo/)Brazeの統合により、メールやBraze内の他のコミュニケーションチャネルで、製品に関する星評価、トップレビュー、視覚的なユーザー生成コンテンツをダイナミックな方法で取得し、表示することができる。また、顧客レベルのロイヤルティデータをメールやその他のコミュニケーション手段に含めることで、よりパーソナライズされたインタラクションを実現し、売上とロイヤルティを高めることができる。
+[Yotpoと]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/yotpo/)Brazeの統合により、Braze内のEメールやその他のコミュニケーションチャンネルで、製品に関する星評価、トップレビュー、視覚的なユーザー生成コンテンツを動的に取得し、表示することができる。また、顧客レベルのロイヤルティデータをEメールやその他のコミュニケーション手段に含めることで、よりパーソナライズされたインタラクションを実現し、売上とロイヤルティを高めることができる。
 
 ### Zeotap - 顧客データプラットフォーム
 

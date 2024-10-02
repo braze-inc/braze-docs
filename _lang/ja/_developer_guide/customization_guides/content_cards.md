@@ -17,19 +17,19 @@ description: "このランディングページは、Braze SDK コンテンツ�
 
 guide_featured_title: "セクションの記事"
 guide_featured_list:
-  - name: Customizing Content Card Styles
+  - name: コンテンツカードスタイルのカスタマイズ
     link: /docs/developer_guide/customization_guides/content_cards/customizing_styles
     image: /assets/img/braze_icons/brush-02.svg
-  - name: Customizing Content Card Behavior
+  - name: コンテンツカードの動作のカスタマイズ
     link: /docs/developer_guide/customization_guides/content_cards/customizing_behavior/
     image: /assets/img/braze_icons/settings-01.svg
-  - name: Customizing the Default Content Card Feed
+  - name: デフォルトのコンテンツカードフィードのカスタマイズ
     link: /docs/developer_guide/customization_guides/content_cards/customizing_feed/
     image: /assets/img/braze_icons/book-closed.svg
-  - name: Logging Analytics 
+  - name: 分析のロギング 
     link: /docs/developer_guide/customization_guides/content_cards/logging_analytics/
     image: /assets/img/braze_icons/navigation-pointer-01.svg
-  - name: Creating Custom Content Cards
+  - name: カスタムコンテンツカードの作成
     link: /docs/developer_guide/customization_guides/content_cards/creating_custom_content_cards
     image: /assets/img/braze_icons/switch-horizontal-01.svg
 ---

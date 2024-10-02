@@ -19,7 +19,7 @@ Braze サービスには、オープンソースライセンスの下での使�
 
 このオープンソースコードのリスト (以下「リスト」といいます) は、特定の日付で本サービス内のオープンソースコードを特定する Braze によってライセンスされたサードパーティソフトウェアを使用して、Braze によってすぐに生成されたものであり、特定の時点のみの公開を目的としています。したがって、本リストは随時更新され、完全ではない可能性があります。お客様が Braze サービス内で使用されるオープンソースコードを改変しないことを前提とし、Braze サービスの利用にあたっては、オープンソースライセンスに準じてお客様の知的財産権を第三者に付与したり、オープンソースソフトウェアライセンスに準じてお客様のソースコードの第三者への提供を義務付けたりすることはありません。Braze は、リストまたはその正確性や完全性、あるいはそのようなオープンソースコードやサービスに対するお客様の改変の結果として生じる義務に関して、明示的または黙示的かを問わず、いかなる表明または保証も行いません。Braze のサービスを利用することにより、お客様がそのような改変を行った結果生じるいかなる損害、またはそれによって生じるいかなる義務に対しても、特別損害、結果的損害、付随的損害、その他の直接的または間接的な損害などを含み、Braze は一切の責任を負わないことに同意するものとします。
 
-* ACE - Ajax.org Cloud9 Editor BSD 3-clause「New」または「Revised」License
+* ACE - Ajax.org Cloud9 Editor BSD 3-clause「New」または「Revised」 License
 * ACE BSD 3-clause「New」または「Revised」License
 * Amazon Device Messaging Amazon
 * Android Support Library Apache 2.0
@@ -63,12 +63,12 @@ Braze サービスには、オープンソースライセンスの下での使�
 * archive-zip MIT
 * arel MIT
 * ast MIT
-* attr\_encrypted MIT
+* attr_encrypted MIT
 * authority MIT
 * authy MIT
 * avro Apache 2.0
 * avro Apache License 2.0 (Apache-2.0)
-* avro\_turf MIT
+* avro_turf MIT
 * aws-sdk Apache 2.0
 * aws-sdk-core Apache 2.0
 * aws-sdk-resources Apache 2.0
@@ -81,7 +81,7 @@ Braze サービスには、オープンソースライセンスの下での使�
 * bootsnap MIT
 * bootstrap-notify MIT License
 * bson Apache 2.0
-* bson\_ext unknown
+* bson_ext unknown
 * builder MIT
 * bundler MIT
 * byebug BSD
@@ -99,9 +99,9 @@ Braze サービスには、オープンソースライセンスの下での使�
 * chef-zero Apache 2.0
 * childprocess MIT
 * chromedriver-helper MIT
-* ci\_reporter MIT
-* ci\_reporter unknown
-* climate\_control MIT
+* ci_reporter MIT
+* ci_reporter unknown
+* climate_control MIT
 * cliver MIT
 * cocaine MIT
 * codecov unknown
@@ -114,25 +114,25 @@ Braze サービスには、オープンソースライセンスの下での使�
 * commonjs MIT
 * concurrent-ruby MIT
 * configatron MIT
-* connection\_pool MIT
+* connection_pool MIT
 * cookiejar unknown
 * crack MIT
 * crass MIT
-* css\_parser MIT
+* css_parser MIT
 * currencies MIT
 * daemons MIT
 * dalli MIT
 * databasedotcom MIT
 * ddtrace New BSD
-* descendants\_tracker MIT
-* desk\_api BSD 3-Clause License
+* descendants_tracker MIT
+* desk_api BSD 3-Clause License
 * devise MIT
 * devise-authy MIT
 * diff-lcs MIT, Artistic-2.0, GPL-2.0+
 * digest-crc MIT
 * docile MIT
 * domReady (MIT License OR BSD 2-clause「Simplified」License)
-* domain\_name Simplified BSD, New BSD, Mozilla Public License 2.0
+* domain_name Simplified BSD, New BSD, Mozilla Public License 2.0
 * eco MIT
 * eco-source unknown
 * em-http-request MIT
@@ -150,53 +150,53 @@ Braze サービスには、オープンソースライセンスの下での使�
 * excon MIT
 * execjs MIT
 * extlz4 Simplified BSD
-* factory\_bot MIT
-* factory\_bot\_rails MIT
+* factory_bot MIT
+* factory_bot_rails MIT
 * faker MIT
 * Faraday MIT
-* fast\_blank MIT
+* fast_blank MIT
 * ffi New BSD
 * ffi-yajl MIT
 * fuzzyurl MIT
 * gRPC Apache 2.0
-* github.com/Appboy/worker-pools MIT License
-* github.com/cenkalti/backoff MIT License
-* github.com/dgrijalva/jwt-go MIT License
-* github.com/diegobernardes/ttlcache MIT License
-* github.com/gorilla/mux BSD 3-clause "New" or "Revised" License
+* github.com/Appboy/worker-pools MIT ライセンス
+* github.com/cenkalti/backoff MITライセンス
+* github.com/dgrijalva/jwt-go MIT ライセンス
+* github.com/diegobernardes/ttlcache MITライセンス
+* github.com/gorilla/mux BSD 3条項「新規」または「改訂」ライセンス
 * github.com/jolestar/go-commons-pool Apache License 2.0
-* github.com/jpillora/backoff MIT License
-* github.com/mattn/go-xmpp BSD 3-clause "New" or "Revised" License
+* github.com/jpillora/backoff MITライセンス
+* github.com/mattn/go-xmpp BSD 3-clause 「New」または「Revised」 License
 * github.com/newrelic/go-agent (BSD 3-clause Clear License)
 * github.com/newrelic/go-agent/internal (BSD 3-clause Clear License)
-* github.com/newrelic/go-agent/internal ? (BSD 3-clause Clear License, 42%)
-* github.com/orcaman/concurrent-map MIT License
-* github.com/pborman/uuid BSD 3-clause "New" or "Revised" License
-* github.com/pkg/errors BSD 2-clause "Simplified" License
+* github.com/newrelic/go-agent/internal ?(BSD 3-clause Clear License、42%)
+* github.com/orcaman/concurrent-map MITライセンス
+* github.com/pborman/uuid BSD 3-clause 「New」または「Revised」 License
+* github.com/pkg/errors BSD 2-clause 「Simplified」 License
 * github.com/satori/go.uuid MIT License (98%)
-* github.com/sideshow/apns2 MIT License
-* github.com/sideshow/apns2/vendor/github.com/dgrijalva/jwt-go MIT License
-* github.com/sideshow/apns2/vendor/golang.org/x/crypto/pkcs12/internal/rc2 BSD 3-clause "New" or "Revised" License
-* github.com/sideshow/apns2/vendor/golang.org/x/net BSD 3-clause "New" or "Revised" License
-* github.com/sideshow/apns2/vendor/golang.org/x/text BSD 3-clause "New" or "Revised" License
-* github.com/sirupsen/logrus MIT License
-* github.com/stretchr/testify MIT License (94%)
-* github.com/stretchr/testify/vendor/github.com/davecgh/go-spew/spew ISC License (98%)
-* github.com/stretchr/testify/vendor/github.com/pmezard/go-difflib/difflib BSD 3-clause "New" or "Revised" License
-* github.com/stretchr/testify/vendor/github.com/stretchr/objx MIT License
+* github.com/sideshow/apns2 MITライセンス
+* github.com/sideshow/apns2/vendor/github.com/dgrijalva/jwt-go MITライセンス
+* github.com/sideshow/apns2/vendor/golang.org/x/crypto/pkcs12/internal/rc2 BSD 3-clause 「New」または「Revised」 License
+* github.com/sideshow/apns2/vendor/golang.org/x/net BSD 3-clause 「New」または「Revised」 License
+* github.com/sideshow/apns2/vendor/golang.org/x/text BSD 3-clause 「New」または「Revised」 License
+* github.com/sirupsen/logrus MITライセンス
+* github.com/stretchr/testify MITライセンス (94%)
+* github.com/stretchr/testify/vendor/github.com/davecgh/go-spew/spew ISCライセンス (98%)
+* github.com/stretchr/testify/vendor/github.com/pmezard/go-difflib/difflib BSD 3-clause 「New」または「Revised」 License
+* github.com/stretchr/testify/vendor/github.com/stretchr/objx MITライセンス
 * globalid MIT
-* golang.org/x/crypto/hkdf BSD 3-clause "New" or "Revised" License
-* golang.org/x/crypto/ssh/terminal BSD 3-clause "New" or "Revised" License
-* golang.org/x/net BSD 3-clause "New" or "Revised" License
-* golang.org/x/sys/unix BSD 3-clause "New" or "Revised" License
-* golang.org/x/text BSD 3-clause "New" or "Revised" License
-* golang.org/x/time/rate BSD 3-clause "New" or "Revised" License
+* golang.org/x/crypto/hkdf BSD 3-clause 「New」または「Revised」 License
+* golang.org/x/crypto/ssh/terminal BSD 3-clause 「New」または「Revised」 License
+* golang.org/x/net BSD 3-clause 「New」または「Revised」 License
+* golang.org/x/sys/unix BSD 3-clause 「New」または「Revised」 License
+* golang.org/x/text BSD 3-clause 「New」または「Revised」 License
+* golang.org/x/time/rate BSD 3-clause 「New」または「Revised」 License
 * google-protobuf New BSD
 * googleapis-common-protos-types Apache 2.0
 * googleauth Apache 2.0
-* gopkg.in/mgo.v2/bson BSD 2-clause "Simplified" License
-* gopkg.in/mgo.v2/internal/json BSD 3-clause "New" or "Revised" License
-* gopkg.in/mgo.v2/internal/scram BSD 2-clause "Simplified" License
+* gopkg.in/mgo.v2/bson BSD 2-clause 「Simplified」 License
+* gopkg.in/mgo.v2/internal/json BSD 3-clause 「New」または「Revised」 License
+* gopkg.in/mgo.v2/internal/scram BSD 2-clause 「Simplified」 License
 * gradle Apache 2.0
 * grape MIT
 * grease MIT
@@ -209,12 +209,12 @@ Braze サービスには、オープンソースライセンスの下での使�
 * hkdf MIT
 * htmlentities MIT
 * http-cookie MIT
-* http\_parser.rb MIT
+* http_parser.rb MIT
 * httparty MIT
 * httpclient ruby
 * i18n MIT
-* ice\_cube MIT
-* ice\_nine MIT
+* ice_cube MIT
+* ice_nine MIT
 * inflection MIT
 * iniparse MIT
 * io-like MIT
@@ -238,16 +238,16 @@ Braze サービスには、オープンソースライセンスの下での使�
 * lograge MIT
 * loofah MIT
 * mail MIT
-* market\_bot MIT
+* market_bot MIT
 * maxminddb MIT
 * memoist MIT
-* method\_source MIT
+* method_source MIT
 * mime-types MIT, Artistic 2.0, GPL-2
 * MIME-types MIT
 * mime-types-data MIT
 * mimemagic MIT
-* mini\_mime MIT
-* mini\_portile2 MIT
+* mini_mime MIT
+* mini_portile2 MIT
 * minitest MIT
 * mixlib-archive Apache 2.0
 * mixlib-authentication Apache 2.0
@@ -258,10 +258,10 @@ Braze サービスには、オープンソースライセンスの下での使�
 * mongo Apache 2.0
 * mongoid MIT
 * mongoid-paperclip MIT
-* mono\_logger MIT
+* mono_logger MIT
 * msgpack Apache 2.0
-* multi\_json MIT
-* multi\_xml MIT
+* multi_json MIT
+* multi_xml MIT
 * multipart-post MIT
 * mustermann MIT
 * mustermann-grape MIT
@@ -272,7 +272,7 @@ Braze サービスには、オープンソースライセンスの下での使�
 * net-ssh-multi MIT
 * net-telnet ruby
 * netrc MIT
-* newrelic\_rpm New Relic
+* newrelic_rpm New Relic
 * nio4r MIT
 * nokogiri MIT
 * nokogumbo Apache 2.0
@@ -286,7 +286,7 @@ Braze サービスには、オープンソースライセンスの下での使�
 * omniauth-google-oauth2 MIT
 * omniauth-oauth2 MIT
 * omniauth-saml MIT
-* orm\_adapter MIT
+* orm_adapter MIT
 * os MIT
 * paperclip MIT
 * parallel MIT
@@ -297,12 +297,12 @@ Braze サービスには、オープンソースライセンスの下での使�
 * pmckee11-redis-lock MIT
 * poltergeist MIT
 * pond MIT
-* power\_assert 2-clause BSDL, Ruby's
+* power_assert 2-clause BSDL, Ruby's
 * powerpack MIT
 * premailer New BSD
 * proxifier MIT
-* public\_suffix MIT
-* push\_package MIT
+* public_suffix MIT
+* push_package MIT
 * pusher MIT
 * pusher-js MIT License
 * pusher-signature MIT
@@ -343,9 +343,9 @@ Braze サービスには、オープンソースライセンスの下での使�
 * rspec-mocks MIT
 * rspec-rails MIT
 * rspec-support MIT
-* rspec\_junit\_formatter MIT
+* rspec_junit_formatter MIT
 * rubocop MIT
-* rubocop-checkstyle\_formatter MIT
+* rubocop-checkstyle_formatter MIT
 * rubocop-rspec MIT
 * ruby-kafka Apache 2.0
 * ruby-prof Simplified BSD
@@ -353,16 +353,16 @@ Braze サービスには、オープンソースライセンスの下での使�
 * ruby-saml MIT
 * rubyzip Simplified BSD
 * rufus-scheduler MIT
-* safe\_yaml MIT
+* safe_yaml MIT
 * sanitize MIT
 * sass MIT
 * sass-rails MIT
 * sawyer MIT
 * scala BSD 3-Clause
-* scrub\_rb MIT
+* scrub_rb MIT
 * selenium-webdriver Apache
 * sendgrid-rails MIT
-* sendgrid\_toolkit MIT
+* sendgrid_toolkit MIT
 * sentry-raven Apache 2.0
 * serverspec MIT
 * sfl ruby
@@ -372,7 +372,7 @@ Braze サービスには、オープンソースライセンスの下での使�
 * sidekiq LGPL
 * sidekiq-pro Commercial
 * signet Apache 2.0
-* simple\_oauth MIT
+* simple_oauth MIT
 * simplecov MIT
 * simplecov-html MIT
 * sinatra MIT
@@ -395,7 +395,7 @@ Braze サービスには、オープンソースライセンスの下での使�
 * therubyracer MIT
 * thin GPLv2+、Ruby 1.8
 * thor MIT
-* thread\_safe Apache 2.0
+* thread_safe Apache 2.0
 * thrift Apache 2.0
 * tilt MIT
 * tins MIT
@@ -404,8 +404,8 @@ Braze サービスには、オープンソースライセンスの下での使�
 * tzinfo MIT
 * uglifier MIT
 * unf 2-clause BSDL
-* unf\_ext MIT
-* unicode-display\_width MIT
+* unf_ext MIT
+* unicode-display_width MIT
 * unicorn GPL-2.0+, Ruby-1.8
 * url MIT
 * uuidtools Apache 2.0
@@ -419,7 +419,7 @@ Braze サービスには、オープンソースライセンスの下での使�
 * websocket-extensions MIT
 * wmi-lite Apache 2.0
 * xpath MIT
-* zendesk\_api Apache 2.0
+* zendesk_api Apache 2.0
 * zookeeper MIT
 
 ## ライセンスの説明

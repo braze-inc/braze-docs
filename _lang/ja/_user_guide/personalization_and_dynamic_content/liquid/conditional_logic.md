@@ -2,22 +2,22 @@
 nav_title: 条件付きメッセージング・ロジック
 article_title: 条件付きリキッドメッセージ・ロジック
 page_order: 6
-description: "この参考記事では、キャンペーンでタグをどのように使用できるか、また使用すべきかについて説明します。"
+description: "この参考記事では、キャンペーンでタグをどのように使用できるか、また使用すべきかについて解説している。"
 
 ---
 
 # 条件付きメッセージング・ロジック
 
-> [タグ][7]を使用すると、メッセージングキャンペーンにプログラミングロジックを含めることができます。タグは、条件文の実行だけでなく、変数の代入やコードブロックの反復といった高度な使用例にも使用できる。
+> \[タグ][7] を使えば、メッセージング・キャンペーンにプログラミング・ロジックを含めることができる。タグは、条件文の実行だけでなく、変数の代入やコードブロックの反復のような高度なユースケースにも使うことができる。
 
 {% raw %}
-タグは`{% %}` で包まなければならない。
+タグは`{% %}` で囲む必要がある。
 {% endraw %}
 
 {% alert tip %}
-Brazeは、Liquid構文が正しくフォーマットされている場合、緑と紫で起動するカラーフォーマットを搭載しています。緑色の書式はタグを識別するのに役立ち、紫色の書式はパーソナライズされた部分を強調します。
+あなたの生活を少し楽にするために、Brazeはリキッド構文を正しくフォーマットした場合、緑と紫で起動するカラーフォーマットを搭載している。緑色の書式はタグを識別するのに役立ち、紫色の書式はパーソナライズされた部分を強調する。
 <br><br>
-もし、条件付きメッセージングを使うのに苦労しているのであれば、カスタム属性や他のリキッド要素を挿入する前に、条件構文を書き出してみてください。
+もし条件付きメッセージングを使うのに苦労しているなら、カスタム属性や他のリキッド要素を挿入する前に、条件構文を書き出してみてほしい。
 <br><br>
 例えば、まずメッセージ・フィールドに以下を追加する：  
 {% raw %}
@@ -27,9 +27,9 @@ Brazeは、Liquid構文が正しくフォーマットされている場合、緑
 {% endif %}
 ```
 
-緑色でハイライトされていることを確認し、`X` を選択したリキッドまたはコネクテッド・コンテンツに置き換え、メッセージ欄の隅にある青色の`+` を使用し、`0` を希望する値に置き換えてください。
+緑色でハイライトされていることを確認し、`X` を選択したリキッドまたはコネクテッド・コンテンツに置き換え、メッセージ・フィールドの隅にある青色の`+` を使用し、`0` を希望する値に置き換える。
 <br><br>
-そして、`else` 条件文の間に、必要に応じてメッセージのバリエーションを追加する：
+そして、`else` の条件文の間に、必要に応じてメッセージのバリエーションを追加する：
 ```liquid
 {% if {{custom_attribute.${total_spend}}} >0 %}
 Thanks for purchasing! Here's another 10% off!
@@ -42,7 +42,7 @@ Buy now! Would 5% off convince you?
 
 ## 条件論理
 
-条件文のような多くのタイプの[インテリジェント・ロジック][1]をメッセージに含めることができます。キャンペーンを国際化するために[条件][8]を使用する次の例を参照してください：
+][1] 、条件文のような多くのタイプの\[インテリジェント・ロジック]をメッセージに含めることができる。キャンペーンを国際化するために\[conditionals][8] ]を使用した次の例を参照のこと：
 {% raw %}
 
 ```liquid
@@ -59,13 +59,13 @@ This is a message from Braze! This is going to go to anyone who did not match th
 
 ### ステップ・バイ・ステップの例
 
-この例では、"if"、"elsif"、"else "ステートメントを含むタグを使用して、国際化されたコンテンツを配信しています。
+この例では、"if"、"elsif"、"else "ステートメントを持つタグを使って、国際化されたコンテンツを配信している。
 
 ```liquid
 {% if ${language} == 'en' %}
 This is a message in English from Braze!
 ```
-顧客の言語が英語の場合、最初の条件が満たされ、顧客は英語のメッセージを受け取ります。
+顧客の言語が英語の場合、最初の条件が満たされ、顧客は英語のメッセージを受け取る。
 
 ```liquid
 {% elsif ${language} == 'es' %}
@@ -74,35 +74,35 @@ Este es un mensaje en español de Braze !
 这是一条来自Braze的中文消息。
 ```
 
-条件文はいくつでも指定できる。次の条件は、前の条件が満たされない場合にチェックされる。この例では、顧客のデバイスが英語に設定されていない場合、このコードは顧客のデバイスがスペイン語または中国語に設定されているかどうかを確認します。お客様のデバイスがこれらの条件のいずれかに該当する場合、該当する言語でメッセージが表示されます。
+条件文はいくつでも指定できる。前の条件が満たされない場合、次の条件がチェックされる。この例では、顧客のデバイスが英語に設定されていない場合、このコードは顧客のデバイスがスペイン語または中国語に設定されているかどうかを確認する。顧客のデバイスがこれらの条件のいずれかに当てはまる場合、顧客は該当する言語でメッセージを受け取る。
 
 ```liquid
 {% else %}
 This is a message from Braze! This is going to go to anyone who did not match the other specified languages!
 ```
 
-条件ロジックに`{% else %}` 。設定した条件のどれにも当てはまらない場合、`{% else %}` ステートメントで送信すべきメッセージを指定する。この場合、お客様の言語が英語、スペイン語、中国語でない場合、デフォルトは英語になります。
+条件ロジックに`{% else %}` 。設定した条件のどれにも当てはまらない場合、`{% else %}` ステートメントで送信すべきメッセージを指定する。この場合、顧客の言語が英語、スペイン語、中国語でない場合、デフォルトは英語になる。
 
 ```liquid
 {% endif %}
 ```
 
-`{% endif %}` タグは、条件ロジックが終了したことを知らせる。を含める必要があります。
-`{% endif %}`  タグを、条件付きロジックを持つメッセージに使用することができます。条件ロジックに`{% endif %}` タグを含めないと、Brazeがメッセージを解析できないため、エラーが発生します。
+`{% endif %}` 、条件ロジックが終了したことを知らせる。を含めなければならない。
+`{% endif %}`  タグを、条件付きロジックを持つメッセージに使用する。条件ロジックに`{% endif %}` タグを含めないと、Brazeがメッセージを解析できず、エラーになる。
 
 {% endraw %}
 
-## null、nil、空白の属性値の処理
+## null、nil、および空白の属性値を処理する
 
-条件ロジックは、ユーザープロファイルに設定されていない属性値を考慮するのに便利な方法です。
+条件ロジックは、ユーザープロファイルに設定されていない属性値を考慮するのに便利な方法である。
 
 ### NULL および NIL 属性値
 
-nullまたはnil値は、カスタム属性の値が設定されていない場合に発生します。例えば、まだファーストネームを設定していないユーザーは、Brazeにファーストネームが記録されません。
+nullまたはnil値は、カスタム属性の値が設定されていない場合に発生する。例えば、まだファーストネームを設定していないユーザーは、Brazeにファーストネームが記録されない。
 
-状況によっては、姓が設定されているユーザーと姓が設定されていないユーザーに対して、まったく異なるメッセージを送りたい場合があります。
+状況によっては、ファーストネームを設定しているユーザーと設定していないユーザーとで、まったく異なるメッセージを送りたい場合もあるだろう。
 
-以下のタグを使用すると、"first name "属性がNULLのユーザーに対するメッセージを指定することができます：
+以下のタグは、"first name "属性がNULLのユーザーに対するメッセージを指定することができる：
 
 {% raw %}
 ```liquid
@@ -123,15 +123,15 @@ Hey {{${first_name} | default: 'there'}}, we're having a sale! Hurry up and get 
 {% endif %}
 ```
 
-したがって、上の例では、null属性値は設定されていないファーストネームを参照しており、それは文字列となります。
+したがって、上の例では、null属性値は設定されていないファーストネームを参照していることになる。
 
 {% endraw %}
 
 ### 空白の属性値
 
-空白の値は、ユーザー・プロファイルの属性が設定されていないか、空白文字列（` ` ）が設定されているか、`false` として設定されている場合に発生します。リキッド処理エラーを避けるため、ブランク値は他の変数より先にチェックすべきである。
+空白の値は、ユーザープロファイルの属性が設定されていないか、空白文字列（` ` ）が設定されているか、`false` として設定されている場合に発生する。リキッド処理エラーを避けるため、ブランク値は他の変数より先にチェックすべきである。
 
-以下のタグを使用すると、"first name "属性が空白のユーザーに対するメッセージを指定できます。
+以下のタグは、"first name "属性が空白のユーザーに対するメッセージを指定することができる。
 
 {% raw %}
 ```liquid
@@ -141,21 +141,21 @@ Hey {{${first_name} | default: 'there'}}, we're having a sale! Hurry up and get 
 ```
 {% endraw %} 
 
-## カスタム属性の参照
+## カスタム属性を参照する
 
-カスタム属性を作成][2]したら、リキッドメッセージでカスタム属性を参照できます。
+カスタム属性を作成\[][2]]したら、リキッドメッセージングでこれらのカスタム属性を参照できる。
 
-条件付きロジックを使用する場合、正しい構文を使用していることを確認するために、カスタム属性のデータ型を知っておく必要があります。ダッシュボードの**カスタム属性**ページから、カスタム属性に関連付けられているデータタイプを探し、各データタイプに記載されている以下の例を参照してください。
+条件付きロジックを使用する場合、正しい構文を使用していることを確認するために、カスタム属性のデータ型を知っておく必要がある。ダッシュボードの**カスタム属性**ページから、カスタム属性に関連するデータタイプを探し、各データタイプに記載されている以下の例を参照する。
 
-カスタム属性のデータ型を選択します。この例では、Favorite\_Category属性のデータ型をstringとしています。{: style="max-width:80%;"}
+![カスタム属性のデータ型を選択する。この例では、Favorite_Category属性のデータ型が文字列であることを示している。][20]{: style="max-width:80%;"}
 
 {% alert tip %}
-文字列と配列にはアポストロフィが必要だが、ブーリアンと整数にはアポストロフィがない。
+文字列と配列にはアポストロフィが必要だが、ブーリアンと整数にはアポストロフィはない。
 {% endalert %}
 
 #### ブール値
 
-[ブーリアン][9]はバイナリ値であり、`true` または`false` のいずれかに設定することができ、例えば`registration_complete: true` のように設定することができる。ブール値はアポストロフィで囲まない。
+`registration_complete: true`[][9] はバイナリ値であり、`true` または`false` のいずれかに設定することができる。ブール値にはアポストロフィは付かない。
 
 {% raw %}
 
@@ -167,7 +167,7 @@ Hey {{${first_name} | default: 'there'}}, we're having a sale! Hurry up and get 
 
 #### 数値
 
-[Numbers][10]は数値で、整数または浮動小数点数である。例えば、ユーザーは`shoe_size: 10` や`levels_completed: 287` を持っているかもしれない。数値はアポストロフィで囲まない。
+\[][10] は数値であり、整数または浮動小数点数である。例えば、ユーザーは`shoe_size: 10` や`levels_completed: 287` を持っているかもしれない。数値にはアポストロフィは付かない。
 
 {% raw %}
 
@@ -187,9 +187,9 @@ Hey {{${first_name} | default: 'there'}}, we're having a sale! Hurry up and get 
 
 {% endraw %}
 
-#### 文字列
+#### string
 
-文字列][11]は英数字で構成され、ユーザーに関するデータの一部を保存します。例えば、`favorite_color: red` または`phone_number: 3025981329` 。文字列の値にはアポストロフィをつけなければならない。
+文字列][11] は英数字で構成され、ユーザーに関するデータの一部を保存する。例えば、`favorite_color: red` または`phone_number: 3025981329` 。文字列の値にはアポストロフィをつけなければならない。
 
 {% raw %}
 
@@ -199,11 +199,11 @@ Hey {{${first_name} | default: 'there'}}, we're having a sale! Hurry up and get 
 
 {% endraw %}
 
-文字列の場合、Liquidの中で"=="または "contains "の両方を使用できます。
+文字列の場合、Liquidでは"=="と "contains "の両方を使うことができる。
 
 #### 配列
 
-配列][12]は、ユーザーに関する情報のリストです。例えば、あるユーザーが`last_viewed_shows: stranger things, planet earth, westworld`.配列の値にはアポストロフィをつけなければならない。
+配列][12] は、ユーザーに関する情報のリストである。例えば、ユーザーは`last_viewed_shows: stranger things, planet earth, westworld` を持っているかもしれない。配列の値はアポストロフィで囲む必要がある。
 
 {% raw %}
 
@@ -213,11 +213,11 @@ Hey {{${first_name} | default: 'there'}}, we're having a sale! Hurry up and get 
 
 {% endraw %}
 
-配列の場合は "contains "を使わなければならず、"=="は使えない。 
+配列の場合、"contains "を使わなければならず、"=="は使えない。 
 
-#### 時間
+#### 時刻
 
-イベントがいつ発生したかを示すタイムスタンプ。[Time][13]値を条件ロジックで使用するには、[math filter][5]が必要です。
+イベントが発生した時刻を示すタイムスタンプ。条件ロジックで使用するには、\[Time][13] value must have a \[math filter][5] on them.
 
 {% raw %}
 
@@ -229,14 +229,14 @@ Hey {{${first_name} | default: 'there'}}, we're having a sale! Hurry up and get 
 
 
 [36]:{% image_buster /assets/img/value_null.png %}
-[1]: http：//docs.shopify.com/themes/liquid-documentation/basics
-[2]:{{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#managing-custom-attributes
-[5]:{{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/filters/#math-filters
+[1]: http://docs.shopify.com/themes/liquid-documentation/basics
+[2]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#managing-custom-attributes
+[5]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/filters/#math-filters
 [7]: https://docs.shopify.com/themes/liquid-documentation/tags
-[8]: http：//docs.shopify.com/themes/liquid-documentation/tags/control-flow-tags "Control Flow Tags"
-[9]:{{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#booleans
-[10]:{{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#numbers
-[11]:{{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#strings
-[12]:{{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#arrays
-[13]:{{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#time
+[8]: http://docs.shopify.com/themes/liquid-documentation/tags/control-flow-tags 「コントロール・フロー・タグ
+[9]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#booleans
+[10]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#numbers
+[11]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#strings
+[12]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#arrays
+[13]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#time
 [20]: {% image_buster /assets/img_archive/custom_attribute_data_type.png %}

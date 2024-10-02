@@ -12,7 +12,7 @@ description: "This reference article covers user data collection including what 
 
 Before completing your Braze implementation, your marketing team and your development team should discuss your marketing goals. When deciding what you want to track, and how you want to track it with Braze, it's useful to consider these goals and work backward from there. 
 
-Reference our case of a [Taxi/Ride-Sharing App][16] at the end of this guide for an example of this process.
+Reference our case of a [Taxi/Ride-Sharing App](#example-case) at the end of this guide for an example of this process.
 
 ## Automatically collected data
 
@@ -40,9 +40,9 @@ Custom events are actions taken by your users; they're best suited for tracking 
 
 Braze notes the number of times these events have occurred as well as the last time they were performed by each user for segmentation. On the **Custom Events** analytics page, you can view in aggregate how often each custom event occurs, as well as by segment over time for more detailed analysis. This is particularly useful to view how your campaigns have affected custom event activity by looking at the gray lines Braze overlays on the time-series to indicate the last time a campaign was sent.
 
-![A custom event analytics graph showing stats on users who added a credit card and made a search across a period of a thirty days.][8]
+![A custom event analytics graph showing stats on users who added a credit card and made a search across a period of a thirty days.]({% image_buster /assets/img_archive/custom_event_analytics_example.png %} "custom_event_analytics_example.png")
 
-> [Incrementing custom attributes][10] can be used to keep a counter on a user action similar to a custom event. However, you will not be able to view custom attribute data in a time-series. User actions that do not need to be analyzed in time-series should be recorded via this method.
+> [Incrementing custom attributes]({{site.baseurl}}/api/endpoints/messaging/) can be used to keep a counter on a user action similar to a custom event. However, you will not be able to view custom attribute data in a time-series. User actions that do not need to be analyzed in time-series should be recorded via this method.
 
 ### Custom event storage
 
@@ -54,9 +54,9 @@ With custom event properties, Braze allows you to set properties on custom event
 
 For example, if an ecommerce application wanted to send a message to a user when they abandon their cart, it could additionally improve its target audience and allow for increased campaign personalization by adding a custom event property of the 'cart value' of users' carts.
 
-![A custom event example that will send a campaign to a user who has abandoned their cart and left the cart value at more than 100 and less than 200.][18]
+![A custom event example that will send a campaign to a user who has abandoned their cart and left the cart value at more than 100 and less than 200.]({% image_buster /assets/img_archive/customEventProperties.png %} "customEventProperties.png")
 
-Custom event properties can also be used for personalization within the messaging template. Any campaign using [Action-Based Delivery][19] with a trigger event can use custom event properties from that event for messaging personalization. If a gaming application wanted to send a message to users who had completed a level, it could further personalize the message with a property for the time it took users to complete that level. In this example, the message is personalized for three different segments using [conditional logic]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/conditional_logic/). The custom event property called ``time_spent``, can be included in the message by calling ``{% raw %} {{event_properties.${time_spent}}} {% endraw %}``.
+Custom event properties can also be used for personalization within the messaging template. Any campaign using [Action-Based Delivery]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/) with a trigger event can use custom event properties from that event for messaging personalization. If a gaming application wanted to send a message to users who had completed a level, it could further personalize the message with a property for the time it took users to complete that level. In this example, the message is personalized for three different segments using [conditional logic]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/conditional_logic/). The custom event property called ``time_spent``, can be included in the message by calling ``{% raw %} {{event_properties.${time_spent}}} {% endraw %}``.
 
 {% raw %}
 ```liquid
@@ -140,7 +140,7 @@ The following table describes available segmentation options for array attribute
 | Check if the array attribute **is empty** | **IS EMPTY** | **N/A** |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
->  We use [Perl compatible regular expressions (PCRE)][11].
+>  We use [Perl compatible regular expressions (PCRE)](http://www.regextester.com/pregsyntax.html).
 
 #### Dates
 Time attributes are useful for storing the last time a specific action was taken, so you can offer content specific re-engagement messaging to your users.
@@ -166,7 +166,7 @@ The following table describes available segmentation options for time attributes
 #### Numbers {#integers}
 Numeric attributes have a wide variety of use cases. Incrementing number custom attributes are useful for storing the number of times a given action or event has occurred. Standard numbers have all sorts of usages, such as recording shoe size, waist size, or the number of times a user has viewed a certain product feature or category.
 
-> Money spent should not be recorded by this method. Rather it should be recorded via our [purchase methods][4].
+> Money spent should not be recorded by this method. Rather it should be recorded via our [purchase methods]({{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#purchase-events--revenue-tracking).
 
 The following table describes available segmentation options for numeric attributes.
 
@@ -212,7 +212,7 @@ The following table describes available segmentation options for purchase events
 | Check if the purchase occurred **exactly X (Max = 50) number of times** | **EXACTLY** | in the past **Y Days (Y = 1,3,7,14,21,30)** |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
->  If you would like to segment on the number of times a specific purchase has occurred, you should also record that purchase individually as an [incrementing custom attribute][12].
+>  If you would like to segment on the number of times a specific purchase has occurred, you should also record that purchase individually as an [incrementing custom attribute](#integers).
 
 ## Taxi/ride-sharing app use case {#example-case}
 For this example, let's consider a ride-sharing app that wants to decide what user data to collect. The following questions and brainstorming process are a great model for marketing and development teams to follow. By the end of this exercise, both teams should have a solid understanding of what custom events and attributes make sense to collect in order to help meet their goal.
@@ -260,7 +260,7 @@ Adding these attributes would afford you the ability to send campaigns to users,
 
 1. Remind users who haven't logged on in seven days but who have a promotional credit that their credit exists and they should come back to the app to use it!
 2. Message users who give low driver ratings to get direct customer feedback to see why they didn't enjoy their rides.
-3. Use our [message templating and personalization features][17] to drag the unique promotion code attribute into messaging directed at users.
+3. Use our [message templating and personalization features]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/) to drag the unique promotion code attribute into messaging directed at users.
 
 ## Best practices
 
@@ -279,8 +279,8 @@ Adding these attributes would afford you the ability to send campaigns to users,
 User IDs should be set for each of your users. These should be unchanging and accessible when a user opens the app. We **strongly recommend** providing this identifier as it will allow you to:
 
 - Track your users across devices and platforms, improving the quality of your behavioral and demographic data.
-- Import data about your users using our [user data API][9].
-- Target specific users with our [messaging API][10] for both general and transactional messages.
+- Import data about your users using our [user data API]({{site.baseurl}}/api/endpoints/user_data/).
+- Target specific users with our [messaging API]({{site.baseurl}}/api/endpoints/messaging/) for both general and transactional messages.
 
 User IDs must be less than 512 characters long and should be private and not easily obtained (for example, not a plain email address or username). If such an identifier is not available, Braze will assign a unique identifier to your users, but you will lack the capabilities listed for user IDs. You should avoid setting user IDs for users for whom you lack a unique identifier that is tied to them as an individual. Passing a device identifier offers no benefit versus the automatic anonymous user tracking Braze offers by default. The following are some examples of suitable and unsuitable user IDs.
 
@@ -302,7 +302,7 @@ These should not be used as user IDs:
 #### Give custom events and attributes readable names
 Imagine you're a marketer who begins using Braze a year or two after implementation, reading a dropdown list full of names like "usr_no_acct" without further context may be intimidating. Giving your event and attributes identifiable and readable names will make things easier for all users of your platform. Consider the following best-practices:
 
-- Do not begin a custom event with a numeric character. The drop-down list is sorted alphabetically and beginning with a numerical character makes it more difficult to segment by your filter of choice
+- Do not begin a custom event with a numeric character. The dropdown list is sorted alphabetically and beginning with a numerical character makes it more difficult to segment by your filter of choice
 - Try not to use obscure abbreviations or technical jargon where possible
   - Example: `usr_ctry` may be fine as a variable name for a user's country within a piece of code, but the custom attribute should be sent to Braze as something like `user_country` to lend some clarity to a marketer using the dashboard down the line.
 
@@ -349,13 +349,3 @@ The following keys are reserved and cannot be used as custom event properties:
 
 If only a single generic name field exists for a user (for example, 'JohnDoe'), you can assign this entire title to your user's First Name attribute. Additionally, you can attempt to parse out both the first and last name of the user using spaces, but this latter method carries the potential risk of misnaming some of your users.
 
-[4]: {{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#purchase-events--revenue-tracking
-[8]: {% image_buster /assets/img_archive/custom_event_analytics_example.png %} "custom_event_analytics_example.png"
-[9]: {{site.baseurl}}/api/endpoints/user_data/
-[10]: {{site.baseurl}}/api/endpoints/messaging/
-[11]: http://www.regextester.com/pregsyntax.html
-[12]: #integers
-[16]: #example-case
-[17]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/
-[18]: {% image_buster /assets/img_archive/customEventProperties.png %} "customEventProperties.png"
-[19]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/

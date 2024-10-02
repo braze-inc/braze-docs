@@ -1,123 +1,132 @@
 ---
 nav_title: エクスポート
-article_title: エンドポイントのエクスポート
+article_title: エクスポートエンドポイント
 search_tag: Endpoint
 page_order: 2
 
 layout: dev_guide
 
 #Required
-description: "このランディングページでは、Brazeエクスポートエンドポイントについて説明し、一覧表示します。"
+description: "このランディングページでは、Brazeエクスポートエンドポイントについて説明し、一覧表示しています。"
 page_type: landing
 
-guide_top_header: "エンドポイントのエクスポート"
-guide_top_text: "このエンドポイントのコレクションを使用すると、KPI、News Feed カード、アプリセッション、ユーザー、セグメント、キャンペーン、キャンペーン、およびキャンバスのさまざまなレベルの詳細にアクセスおよびエクスポートできます。<br><href='/docs/user_guide/administrative/access_braze_instances/' target='blank'>Braze instance</a><a href='/docs/api/api_key/'target='_blank'>API key</a>a href='/docs/api/identifier_types/'target='_blank'&"
+guide_top_header: "エクスポートエンドポイント"
+guide_top_text: "このエンドポイントのコレクションを使用すると、KPI、ニュースフィードカード、アプリセッション、ユーザー、セグメント、キャンペーン、およびキャンバスに関するさまざまなレベルの詳細にアクセスしてエクスポートできます。<br> <br> パラメータとリクエストボディを作成する際には、<a href='/docs/user_guide/administrative/access_braze/braze_instances/' target='_blank'>Brazeインスタンス</a>、<a href='/docs/api/api_key/' target='_blank'>API キー</a>、および<a href='/docs/api/identifier_types/' target='_blank'>API 識別子</a>を確認してください。"
 
-guide_featured_title: "キャンペーンエンドポイントのエクスポート"
+guide_featured_title: "エクスポートキャンペーンエンドポイント"
 guide_featured_list:
-  - name: "GET: Campaign Analytics"
+  - name: "取得:キャンペーン分析"
     link: /docs/api/endpoints/export/campaigns/get_campaign_analytics/
-    fa_icon: far fa-chart-bar
-  - name: "GET: Campaign Details"
+    image: /assets/img/braze_icons/bar-chart-01.svg
+  - name: "取得:キャンペーンの詳細"
     link: /docs/api/endpoints/export/campaigns/get_campaign_details/
-    fa_icon: far fa-chart-bar
-  - name: "GET: Campaigns List"
+    image: /assets/img/braze_icons/bar-chart-01.svg
+  - name: "取得:キャンペーン一覧"
     link: /docs/api/endpoints/export/campaigns/get_campaigns/
-    fa_icon: far fa-chart-bar
-  - name: "GET: Send Analytics"
+    image: /assets/img/braze_icons/bar-chart-01.svg
+  - name: "取得:分析を送信"
     link: /docs/api/endpoints/export/campaigns/get_send_analytics/
-    fa_icon: far fa-chart-bar
+    image: /assets/img/braze_icons/bar-chart-01.svg
 
 guide_menu_title: "Export Canvas endpoints"
 guide_menu_list:
-  - name: "GET: Canvas Data Series Analytics"
+  - name: "取得:キャンバス データ シリーズ 分析"
     link: /docs/api/endpoints/export/canvas/get_canvas_analytics/
-    fa_icon: fas fa-project-diagram
-  - name: "GET: Canvas Analytics Summary"
+    image: /assets/img/braze_icons/dataflow-03.svg
+  - name: "取得:キャンバス分析の要約"
     link: /docs/api/endpoints/export/canvas/get_canvas_analytics_summary/
-    fa_icon: fas fa-project-diagram
-  - name: "GET: Canvas Details"
+    image: /assets/img/braze_icons/dataflow-03.svg
+  - name: "取得:キャンバスの詳細"
     link: /docs/api/endpoints/export/canvas/get_canvas_details/
-    fa_icon: fas fa-project-diagram
-  - name: "GET: Canvas List"
+    image: /assets/img/braze_icons/dataflow-03.svg
+  - name: "取得:キャンバスリスト"
     link: /docs/api/endpoints/export/canvas/get_canvases/
-    fa_icon: fas fa-project-diagram
+    image: /assets/img/braze_icons/dataflow-03.svg
 
 guide_menu_title2: "Export custom events endpoints"
 guide_menu_list2:
-  - name: "GET: Custom Events List"
+  - name: "取得:カスタムイベント"
+    link: /docs/api/endpoints/export/custom_events/get_custom_events_data/
+    image: /assets/img/braze_icons/line-chart-up-01.svg
+  - name: "取得:カスタムイベントリスト"
     link: /docs/api/endpoints/export/custom_events/get_custom_events/
-    fa_icon: fas fa-chart-line
-  - name: "GET: Custom Event Analytics"
+    image: /assets/img/braze_icons/line-chart-up-01.svg
+  - name: "取得:カスタムイベント分析"
     link: /docs/api/endpoints/export/custom_events/get_custom_events_analytics/
-    fa_icon: fas fa-chart-line
+    image: /assets/img/braze_icons/line-chart-up-01.svg
 
 guide_menu_title3: "Export KPI endpoints"
 guide_menu_list3:
-  - name: "GET: KPIs for Daily New Users by Date"
+  - name: "取得:日別の新規ユーザーの日次 KPI"
     link: /docs/api/endpoints/export/kpi/get_kpi_daily_new_users_date/
-    fa_icon: fas fa-bullseye
-  - name: "GET: KPIs for Daily Active Users by Date"
+    image: /assets/img/braze_icons/target-04.svg
+  - name: "取得:日付ごとのデイリーアクティブユーザーのKPI"
     link: /docs/api/endpoints/export/kpi/get_kpi_dau_date/
-    fa_icon: fas fa-bullseye
-  - name: "GET: KPIs for Monthly Active Users Over Last 30 Days"
+    image: /assets/img/braze_icons/target-04.svg
+  - name: "取得:過去30日間の月間アクティブユーザーのKPI"
     link: /docs/api/endpoints/export/kpi/get_kpi_mau_30_days/
-    fa_icon: fas fa-bullseye
-  - name: "GET: KPIs for Uninstalls by Date"
+    image: /assets/img/braze_icons/target-04.svg
+  - name: "取得:日付ごとのアンインストールのKPI"
     link: /docs/api/endpoints/export/kpi/get_kpi_uninstalls_date/
-    fa_icon: fas fa-bullseye
+    image: /assets/img/braze_icons/target-04.svg
 
 guide_menu_title4: "Export News Feed endpoints"
 guide_menu_list4:
-  - name: "GET: News Feed Card Engagement Stats"
+  - name: "取得:ニュースフィード カード エンゲージメント 統計"
     link: /docs/api/endpoints/export/news_feed/get_news_feed_card_analytics/
-    fa_icon: fas fa-stream
-  - name: "GET: News Feed Card Details"
+    image: /assets/img/braze_icons/download-cloud-01.svg
+  - name: "取得:ニュースフィードカード詳細"
     link: /docs/api/endpoints/export/news_feed/get_news_feed_card_details/
-    fa_icon: fas fa-stream
-  - name: "GET: News Feed Card List"
+    image: /assets/img/braze_icons/download-cloud-01.svg
+  - name: "取得:ニュースフィードカードリスト"
     link: /docs/api/endpoints/export/news_feed/get_news_feed_cards/
-    fa_icon: fas fa-stream
+    image: /assets/img/braze_icons/download-cloud-01.svg
 
 guide_menu_title5: "Export purchase endpoints"
 guide_menu_list5:
-  - name: "GET: Product IDs List"
+  - name: "取得:製品IDリスト"
     link: /docs/api/endpoints/export/purchases/get_list_product_id/
-    fa_icon: fas fa-list
-  - name: "GET: Number of Purchases"
+    image: /assets/img/braze_icons/list.svg
+  - name: "取得:購入数"
     link: /docs/api/endpoints/export/purchases/get_number_of_purchases/
-    fa_icon: fas fa-list
-  - name: "GET: Revenue Data by Time"
+    image: /assets/img/braze_icons/list.svg
+  - name: "取得:時間別収益データ"
     link: /docs/api/endpoints/export/purchases/get_revenue_series/
-    fa_icon: fas fa-list
+    image: /assets/img/braze_icons/list.svg
 
 guide_menu_title6: "Export segment endpoints"
 guide_menu_list6:
-  - name: "GET: Segment List"
+  - name: "取得:セグメントリスト"
     link: /docs/api/endpoints/export/segments/get_segment/
-    fa_icon: fas fa-users
-  - name: "GET: Segment Analytics"
+    image: /assets/img/braze_icons/users-01.svg
+  - name: "取得:セグメント分析"
     link: /docs/api/endpoints/export/segments/get_segment_analytics/
-    fa_icon: fas fa-users
-  - name: "GET: Segment Details"
+    image: /assets/img/braze_icons/users-01.svg
+  - name: "取得:Segment 詳細"
     link: /docs/api/endpoints/export/segments/get_segment_details/
-    fa_icon: fas fa-users
+    image: /assets/img/braze_icons/users-01.svg
 
 guide_menu_title7: "Export sessions endpoint"
 guide_menu_list7:
-  - name: "GET: App Sessions Time-Series Data"
+  - name: "取得:アプリセッションの時系列データ"
     link: /docs/api/endpoints/export/sessions/get_sessions_analytics/
-    fa_icon: fas fa-tablet-alt
+    image: /assets/img/braze_icons/tablet-01.svg
 
 guide_menu_title8: "Export user data endpoints"
 guide_menu_list8:
-  - name: "POST: User Data by Identifier"
+  - name: "POST:識別子によるユーザーデータ"
     link: /docs/api/endpoints/export/user_data/post_users_identifier/
-    fa_icon: fas fa-user
-  - name: "POST: User Data by Segment"
+    image: /assets/img/braze_icons/users-01.svg
+  - name: "POST:Segmentによるユーザーデータ"
     link: /docs/api/endpoints/export/user_data/post_users_segment/
-    fa_icon: fas fa-user
-  - name: "POST: User Data by Global Control Group"
+    image: /assets/img/braze_icons/users-01.svg
+  - name: "POST:グローバルコントロールグループによるユーザーデータ"
     link: /docs/api/endpoints/export/user_data/post_users_global_control_group/
-    fa_icon: fas fa-user
+    image: /assets/img/braze_icons/users-01.svg
+
+guide_menu_title9: "Export custom attributes endpoints"
+guide_menu_list9:
+  - name: "取得:カスタム属性"
+    link: /docs/api/endpoints/export/custom_attributes/get_custom_attributes/
+    image: /assets/img/braze_icons/line-chart-up-01.svg
 ---

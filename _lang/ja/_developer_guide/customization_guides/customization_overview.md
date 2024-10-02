@@ -16,9 +16,9 @@ Braze SDK は強力なツールキットですが、高いレベルでは2つの
 
 すべての Braze コンポーネントは、アクセシブルで、適応性があり、カスタマイズできるように作られています。そのため、デフォルトの`BrazeUI`コンポーネントから始め、ブランドのニーズやユースケースに合わせてカスタマイズすることをお勧めします。Braze では、カスタマイズを、関連する労力と提供される柔軟性のレベルに基づいて、3つの異なるアプローチに分類しています。これらのアプローチは「ハイハイ」、「歩く」、「走る 」と呼ばれています。
 
-- **ハイハイ:** 基本的なスタイリングオプションを活用して、手間をかけずに素早く実装します。
-- **歩く:** デフォルトのテンプレートにカスタムスタイルを追加して、ブランド体験によりマッチさせます。
-- **走る:** スタイルから動作、クロスチャネル接続まで、メッセージングのあらゆる部分をカスタマイズします。
+- **ハイハイ:**基本的なスタイリングオプションを活用して、手間をかけずに素早く実装します。
+- **歩く:**デフォルトのテンプレートにカスタムスタイルを追加して、ブランド体験によりマッチさせます。
+- **走る:**スタイルから動作、クロスチャネル接続まで、メッセージングのあらゆる部分をカスタマイズします。
 
 <style>
 table {
@@ -30,11 +30,11 @@ table td {
 </style>
 
 {% tabs %}
-{% tab Crawl %}
+{% tab ハイハイ %}
 
-![Sample finance app showing Captioned Image and Image Only Content Cards]({% image_buster/assets/img_archive/cc_pyrite_crawl.png %}){: style="max-width:35%;float:right;margin-left:15px;border:none;"}
+![キャプション付き画像と画像のみのコンテンツカードを表示するサンプル金融アプリ]({% image_buster/assets/img_archive/cc_pyrite_crawl.png %}){: style="max-width:35%;float:right;margin-left:15px;border:none;"}
 
-「ハイハイ」のアプローチは、マーケターに直接カスタマイズの力を与えます。Braze のメッセージングチャンネルをアプリやサイトに統合するためには、前もって軽い開発作業が必要ですが、この方法ならすぐに稼働させることができます。 
+「ハイハイ」のアプローチは、マーケターに直接カスタマイズの力を与えます。Braze のメッセージングチャンネルをアプリやサイトに統合するには、前もって軽い開発作業が必要ですが、この方法であればすぐに稼働させることができます。 
 
 マーケターは、ダッシュボードを通じてメッセージの内容、オーディエンス、タイミングを決定します。しかし、スタイリングの選択肢は限られています。このアプローチは、開発者のリソースが限られているチームや、シンプルなコンテンツを素早く共有したいチームに最適です。 
 
@@ -74,9 +74,9 @@ table td {
 </table>
 
 {% endtab %}
-{% tab Walk %}
+{% tab 歩く %}
 
-![Sample finance app showing Content Cards with customization]({% image_buster/assets/img_archive/cc_pyrite_walk.png %}){: style="max-width:35%;float:right;margin-left:15px;border:none;"}
+![カスタマイズされたコンテンツカードを表示するサンプルの金融アプリ]({% image_buster/assets/img_archive/cc_pyrite_walk.png %}){: style="max-width:35%;float:right;margin-left:15px;border:none;"}
 
 「歩く」のアプローチでは、アプリやサイトのブランディングに合わせて、マーケティングチームと開発チームの両方が参加します。 
 
@@ -120,9 +120,9 @@ table td {
 </table>
 
 {% endtab %}
-{% tab Run %}
+{% tab 走る %}
 
-![Sample finance app showing custom Content Cards with email capture]({% image_buster/assets/img_archive/cc_pyrite_run.png %}){: style="max-width:35%;float:right;margin-left:15px;border:none;"}
+![メールキャプチャでカスタムのコンテンツカードを示す金融アプリの例]({% image_buster/assets/img_archive/cc_pyrite_run.png %}){: style="max-width:35%;float:right;margin-left:15px;border:none;"}
 
 「走る」のアプローチでは、開発者が主導権を握り、ユーザーエクスペリエンスを完全にコントロールします。カスタムコードは、メッセージがどのように見えるか、どのように動作するか、他のメッセージングチャンネルとどのように相互作用するか (プッシュ通知に基づいてコンテンツカードをトリガーするなど) を指示します。
 

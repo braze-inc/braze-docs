@@ -17,7 +17,7 @@ noindex: true
 To support geofences for iOS:
 
 1. Your integration must support background push notifications.
-2. Braze Geofences [must be enabled][1] through the SDK either implicitly by enabling location collection or explicitly by enabling geofence collection. They are not enabled by default.
+2. Braze Geofences [must be enabled]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/location_tracking/#enabling-automatic-location-tracking) through the SDK either implicitly by enabling location collection or explicitly by enabling geofence collection. They are not enabled by default.
 
 {% alert important %}
 As of iOS 14, Geofences do not work reliably for users who choose to give their approximate location permission.
@@ -25,13 +25,13 @@ As of iOS 14, Geofences do not work reliably for users who choose to give their 
 
 ## Step 1: Enable background push
 
-To fully utilize our geofence syncing strategy, you must have [background push][6] enabled in addition to completing the standard push integration.
+To fully utilize our geofence syncing strategy, you must have [background push]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/silent_push_notifications/#use-silent-remote-notifications-to-trigger-background-work) enabled in addition to completing the standard push integration.
 
 ## Step 2: Enable geofences
 
 By default, geofences are enabled based on whether automatic location collection is enabled. You can enable geofences using the `Info.plist` file. Add the `Braze` dictionary to your `Info.plist` file. Inside the `Braze` dictionary, add the `EnableGeofences` boolean subentry and set the value to `YES`. Note that prior to Braze iOS SDK v4.0.2, the dictionary key `Appboy` must be used in place of `Braze`.
 
-You can also enable geofences at app startup time via the [`startWithApiKey:inApplication:withLaunchOptions:withAppboyOptions`][4] method. In the `appboyOptions` dictionary, set `ABKEnableGeofencesKey` to `YES`. For example:
+You can also enable geofences at app startup time via the [`startWithApiKey:inApplication:withLaunchOptions:withAppboyOptions`](https://appboy.github.io/appboy-ios-sdk/docs/interface_appboy.html#aa9f1bd9e4a5c082133dd9cc344108b24) method. In the `appboyOptions` dictionary, set `ABKEnableGeofencesKey` to `YES`. For example:
 
 {% tabs %}
 {% tab OBJECTIVE-C %}
@@ -58,7 +58,7 @@ Appboy.start(withApiKey: "YOUR-API-KEY",
 
 ## Step 3: Check for Braze background push
 
-Braze syncs geofences to devices using background push notifications. Follow the [iOS customization][7] article to ensure that your application does not take any unwanted actions upon receiving Braze geofence sync notifications.
+Braze syncs geofences to devices using background push notifications. Follow the [iOS customization]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/customization/ignoring_internal_push/) article to ensure that your application does not take any unwanted actions upon receiving Braze geofence sync notifications.
 
 ## Step 4: Add NSLocationAlwaysUsageDescription to your Info.plist
 
@@ -108,7 +108,7 @@ For locations to work correctly, you should also confirm that your app is not us
 
 Starting in iOS SDK version 3.21.3, you can disable geofences from being automatically requested. You can do this by using the `Info.plist` file. Add the `Braze` dictionary to your `Info.plist` file. Inside the `Braze` dictionary, add the `DisableAutomaticGeofenceRequests` boolean subentry and set the value to `YES`.
 
-You can also disable automatic geofence requests at app startup time via the [`startWithApiKey:inApplication:withLaunchOptions:withAppboyOptions`][4] method. In the `appboyOptions` dictionary, set `ABKDisableAutomaticGeofenceRequestsKey` to `YES`. For example:
+You can also disable automatic geofence requests at app startup time via the [`startWithApiKey:inApplication:withLaunchOptions:withAppboyOptions`](https://appboy.github.io/appboy-ios-sdk/docs/interface_appboy.html#aa9f1bd9e4a5c082133dd9cc344108b24) method. In the `appboyOptions` dictionary, set `ABKDisableAutomaticGeofenceRequestsKey` to `YES`. For example:
 
 {% tabs %}
 {% tab OBJECTIVE-C %}
@@ -159,9 +159,4 @@ Appboy.sharedInstance()?.requestGeofences(withLongitude: longitude, latitude: la
 {% endtab %}
 {% endtabs %}
 
-[1]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/location_tracking/#enabling-automatic-location-tracking
-[4]: https://appboy.github.io/appboy-ios-sdk/docs/interface_appboy.html#aa9f1bd9e4a5c082133dd9cc344108b24
-[6]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/silent_push_notifications/#use-silent-remote-notifications-to-trigger-background-work
-[7]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/customization/ignoring_internal_push/
-[support]: {{site.baseurl}}/braze_support/
 

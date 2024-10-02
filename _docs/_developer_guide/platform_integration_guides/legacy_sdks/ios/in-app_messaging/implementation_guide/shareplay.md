@@ -17,17 +17,17 @@ noindex: true
 
 > SharePlay is a newly released feature that enables iOS 15 FaceTime users to have a shared media experience across their devices, offering real-time audio and video syncing. SharePlay is a great way for users to experience content with friends and family, offering Braze customers an additional avenue for video content and opportunities to introduce new users to your application.
 
-![SharePlay][6]{: style="border:0;margin-top:10px;"}
+![SharePlay]({% image_buster /assets/img/shareplay/shareplay6.png %}){: style="border:0;margin-top:10px;"}
 ## Overview
 
 The new `GroupActivities` framework released by Apple as part of the iOS 15 update allows you to leverage FaceTime by integrating SharePlay into your applications with the help of Braze in-app messages.
-![SharePlay][3]{: style="float:right;max-width:30%;margin-left:15px;margin-top:10px;"}
+![SharePlay]({% image_buster /assets/img/shareplay/shareplay3.png %}){: style="float:right;max-width:30%;margin-left:15px;margin-top:10px;"}
 
 When users initiate a SharePlay video in a FaceTime call, an "Open" button will appear at the top of everyone's screen. When opened, audio and video will sync across all compatible devices, allowing users to watch videos together in real-time. Those who do not have the app downloaded will be redirected to the App Store.
 
 **Synced Media Playback**<br>
 With synced media playback, if one person pauses the SharePlay video, it will be paused across all devices. <br><br>
-![SharePlay][5]{: style="border:0"}
+![SharePlay]({% image_buster /assets/img/shareplay/shareplay7.png %}){: style="border:0"}
 
 ## Integration
 
@@ -130,7 +130,7 @@ When you prepare to play the media item, each group activity has three states of
 
 When the state comes back as `activationPreferred`, that is your cue to activate the rest of the group activity lifecycle. 
 
-![SharePlay][1]{: style="border:0;"}
+![SharePlay]({% image_buster /assets/img/shareplay/shareplay.png %}){: style="border:0;"}
 
 ### Step 4: Launch in-app message from SharePlay API
 
@@ -218,9 +218,3 @@ override func viewDidLoad() {
 {% endtab %}
 {% endtabs %}
 
-[1]: {% image_buster /assets/img/shareplay/shareplay.png %}
-[2]: {% image_buster /assets/img/shareplay/shareplay2.png %}
-[3]: {% image_buster /assets/img/shareplay/shareplay3.png %}
-[4]: {% image_buster /assets/img/shareplay/shareplay4.png %}
-[5]: {% image_buster /assets/img/shareplay/shareplay7.png %}
-[6]: {% image_buster /assets/img/shareplay/shareplay6.png %}

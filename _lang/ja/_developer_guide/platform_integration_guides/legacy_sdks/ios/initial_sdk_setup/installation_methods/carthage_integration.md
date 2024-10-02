@@ -43,7 +43,7 @@ github "Appboy/Appboy-iOS-SDK" "<BRAZE_IOS_SDK_VERSION>"
 
 `<BRAZE_IOS_SDK_VERSION>` は「x.y.z」形式の[適切なバージョン][4]の Braze iOS SDK に置き換えてください。
 
-## 次のステップ
+## 次のステップ:
 
 指示に従って[統合を完了][5]します。
 
